@@ -9,18 +9,16 @@ search_tag: Partner
 
 # Fullstory
 
-Fullstory’s behavioral data platform helps technology leaders make better, more informed decisions. By injecting digital behavioral data into their analytics stack, our patented technology unlocks the power of quality behavioral data at scale–transforming every digital visit into actionable insights. 
+Fullstory’s behavioral data platform helps technology leaders make better, more informed decisions. By injecting digital behavioral data into their analytics stack, Fullstory's patented technology unlocks the power of quality behavioral data at scale–transforming every digital visit into actionable insights. 
 
-<-- Only include the following line if the partner manages the integration. If Braze manages the integration, don’t include it. -->
 *This integration is maintained by Fullstory*
 
 ## About this integration
-<-- Highlight the relationship between your company and Braze and how this partnership helps your customers. →
-Fullstory insights can be leveraged in Braze to build moment-to-moment pictures of a users website or app experience to deliver hyper-contextual messaging. Fullstory’s Session Summary API makes it possible to capture detailed meta data on a users browsing behaviour for use in Braze messaging, which is particularly powerful when leveraged in a multi-step messaging journey like a Canvas. 
+You can leverage Fullstory insights in Braze to build moment-to-moment pictures of a user's website or app experience to deliver hyper-contextual messaging. Fullstory’s Session Summary API makes it possible to capture detailed metadata on a user's browsing behaviour for use in Braze messaging, which is particularly powerful when leveraged in a multi-step messaging journey like a Canvas. 
 
-The real-time value of Fullstory’s Session Summary data is best leveraged through Connected Content. By using connected content in a Canvas Context step, Fullstory’s data can be stored throughout a users Canvas journey for use in any subsequent Canvas steps. This also avoids the need to write this data to a Braze user profile through Custom events or attributes. 
+The real-time value of Fullstory’s Session Summary data is best leveraged through Connected Content. By using connected content in a Canvas Context step, you can store Fullstory’s data throughout a user's Canvas journey for use in any subsequent Canvas steps. This also avoids the need to write this data to a Braze user profile through custom events or attributes. 
 
- In the example below, Canvas Context data is leveraged in an Agent AI Canvas step to generate the optimal message to encourage a user to pick back up an abandoned cart. However the data can be leveraged to personalize the message directly, to determine the users journey via audience paths, or to determine the copy or assets used in subsequent messaging steps.
+In the following example, Canvas Context data is leveraged in an Agent AI Canvas step to generate the optimal message to encourage a user to pick back up an abandoned cart. However, you can leverage the data to personalize the message directly, to determine the users journey via audience paths, or to determine the copy or assets used in subsequent messaging steps.
 
 
 ADDITIONAL_INFORMATION.
