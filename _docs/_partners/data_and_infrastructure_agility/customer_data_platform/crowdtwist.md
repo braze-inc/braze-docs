@@ -72,7 +72,7 @@ let brazecall = {
      //Remember that you will need to include an appropriate identifier for your attribute or event object from data available in Oracle Crowdtwist. This could be an external ID, braze id, User alias, phone or email address for attribute or event objects
      "external_id": payload.thirdPartyId,
      "email": payload.emailAddress,
-   // **Important** If you want to allow Oracle Crowdtwist events to create users in Braze set the value of “_update_existing_only” to false.Otherwise, set this value to TRUE in your event and attribute objects.
+   // **Important** If you want to allow Oracle Crowdtwist events to create users in Braze set the value of “_update_existing_only” to false. Otherwise, set this value to TRUE in your event and attribute objects.
      "_update_existing_only": false,
      "crowdtwist_loyalty_points": payload.redeemablePoints,
  //In this example, the “tierInfo” object from Crowdtwist is transformed into a Braze Nested Custom Attribute. We use the “_merge_objects” value to avoid duplications in a data-point efficient manner.
