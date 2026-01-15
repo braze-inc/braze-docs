@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Odicci と Braze の統合
+# OdicciとBrazeを統合する
 
 > Braze をロイヤルティ主導のオムニチャネルエクスペリエンスを通じて顧客の獲得、エンゲージメント、維持を可能にするプラットフォームである [Odicci](https://www.odicci.com/) と統合する方法を説明します。
 
