@@ -59,11 +59,13 @@ Cloud Data Ingestion supports the following data types:
 
 ## Data point usage
 
-Data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/) for more information. 
+For customers who have purchased Monthly Active Users CY 24-25, data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/) for more information. 
 
 {% alert important %}
 Braze Cloud Data Ingestion counts toward the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
 {% endalert %}
+
+For customers on MAU-based pricing (FY'26 pricing and later), there is no data point billing, and Cloud Data Ingestion is fully included with all platform editions.
 
 ## Product limitations
 
