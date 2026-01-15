@@ -372,4 +372,8 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/cloudinary/
 - name: LILT
   url: /docs/partners/lilt/
+- name: 記事全文
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
+- name: オラクル・クラウドツイスト
+  url: /docs/partners/crowdtwist
 ---

@@ -1,12 +1,12 @@
 ---
-nav_title: セッションを追跡する
-article_title: Braze SDK を使用したセッションの追跡
+nav_title: トラックセッションs
+article_title: Braze SDKを使ってセッションを追跡する
 page_order: 3.3
 description: "Braze SDK を使用してセッションを追跡する方法について説明します。"
 
 ---
 
-# セッションを追跡する
+# トラックセッションs
 
 > Braze SDK を使用してセッションを追跡する方法について説明します。
 
