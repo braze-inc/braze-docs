@@ -3,9 +3,9 @@ nav_title: Global control group
 article_title: Global Control Group Reporting
 page_type: reference
 description: "This page covers the reporting metrics found on the Global Control Group Reporting page in the dashboard."
+page_order: 6.6
 tool: 
   - Reports
-
 ---
 
 # Global Control Group Report

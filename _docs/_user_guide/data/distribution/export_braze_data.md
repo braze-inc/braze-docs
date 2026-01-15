@@ -28,9 +28,6 @@ guide_menu_list:
   - name: Message Archiving
     link: /docs/user_guide/data/export_braze_data/message_archiving/
     image: /assets/img/braze_icons/clock-rewind.svg
-  - name: Export Custom Event Data
-    link: /docs/user_guide/data/export_braze_data/
-    image: /assets/img/braze_icons/settings-01.svg
   - name: Export APIs
     link: /docs/user_guide/data/export_braze_data/export_custom_event_data/
     image: /assets/img/braze_icons/server-01.svg
