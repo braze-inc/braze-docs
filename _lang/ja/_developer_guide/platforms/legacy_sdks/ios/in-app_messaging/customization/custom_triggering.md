@@ -1,6 +1,6 @@
 ---
 nav_title: カスタムトリガー
-article_title: iOS 用アプリ内メッセージトリガーのカスタマイズ
+article_title: iOSのアプリ内メッセージトリガーをカスタマイズする
 platform: iOS
 page_order: 7
 description: "この参考記事では、iOS アプリケーションのアプリ内メッセージングのカスタムトリガーについて説明します。"
