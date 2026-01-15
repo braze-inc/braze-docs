@@ -1,12 +1,12 @@
 ---
 nav_title: アクセシビリティ
-article_title: Braze でアクセシブルなメッセージを作成する
+article_title: Braze でのアクセシブルメッセージの作成
 page_order: 10.1
 page_type: reference
 description: "この参考記事では、マーケティング・コンテンツにおいてアクセシビリティを考慮することが重要な理由と、Brazeでアクセシブルなメッセージを作成する方法について説明する。"
 ---
 
-# Braze でアクセシブルなメッセージを作成する
+# Braze でのアクセシブルメッセージの作成
 
 > マーケティングコンテンツにおいてアクセシビリティを考慮することが重要な理由と、Brazeでアクセシブルなメッセージを作成する方法を理解する。より詳しいガイダンスについては、Brazeラーニングの[アクセシブル・メッセージング基礎](https://learning.braze.com/accessible-messaging-foundations)コースをチェックしよう。
 
