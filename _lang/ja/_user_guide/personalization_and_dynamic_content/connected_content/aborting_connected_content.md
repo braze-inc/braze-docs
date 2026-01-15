@@ -1,11 +1,11 @@
 ---
 nav_title: 接続されたコンテンツを中止する
-article_title: 接続されたコンテンツを中止する
+article_title: コネクテッドコンテンツを中止する
 page_order: 2
 description: "この参考記事では、コネクテッド・コンテンツにおけるメッセージ中止のベスト・プラクティスをいくつか取り上げている。"
 ---
 
-# コネクテッドコンテンツの中止{#aborting-connected-content}
+# コネクテッドコンテンツを中止する {#aborting-connected-content}
 
 > Liquid テンプレートを使用する場合、条件付きロジックでメッセージを中止できます。このページでは、ベストプラクティスについて説明します。
 
