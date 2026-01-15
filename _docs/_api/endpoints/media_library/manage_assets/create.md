@@ -47,7 +47,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `name` parameter provided | The `name` value is used as the asset name in the media library |
 | `name` parameter excluded | The original filename from the URL or uploaded file is used |
 
-#### Multi-file uploads (zip folders)
+#### Zip file uploads
 
 | Scenario | Result |
 |----------|--------|
