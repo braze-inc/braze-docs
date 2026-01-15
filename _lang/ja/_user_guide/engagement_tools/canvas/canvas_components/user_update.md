@@ -124,7 +124,7 @@ tool: Canvas
 
 ユーザーの更新ステップを使用して、`canvas_entry_property` を永続的に保存できます。例えば、アイテムがカートに追加されたときにトリガーされるイベントがあるとします。カートに追加された最新のアイテムの ID を保存し、それをリマーケッティングキャンペーンに使用できます。パーソナライゼーション機能を使用して、キャンバスのエントリプロパティを取得し、属性に保存します。
 
-![ユーザー更新ステップ。アイテムIDで属性"most_recent_cart_item" を更新する。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
+![アイテムIDで属性"most_recent_cart_item" を更新するユーザー更新ステップ。]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### パーソナライゼーション
 
