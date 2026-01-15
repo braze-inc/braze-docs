@@ -140,4 +140,32 @@ The expected response shape:
 
 if uploading a zip folder with multiple assets, `new_asset` will be an array containing all of the new assets.
 
+```json
+{ 
+    "new_asset": [
+        {
+            "id": (String) the asset id,
+            "created_at": (Integer) the unix timestamp of when the asset was created,
+            "name": (String) the name of the asset,
+            "size": (Integer) the byte size of the asset,
+            "territory_ids": (Array<String>) the team/territory IDs the asset is assigned to, empty if workspace-wide,
+            "app_group_id": (String) the workspace ID the asset belongs to,
+            "created_by": (String | null) the developer ID who created the asset, null if created via API key,
+            "last_edited_by": (String | null) the developer ID who last edited the asset,
+            "src": (String | null) the source of the asset,
+            "url": (String) the URL to access the asset,
+            "type": (String) the MIME type of the asset (e.g., "image/png", "image/jpeg"),
+            "known_width": (Integer | null) the width of the image in pixels,
+            "known_height": (Integer | null) the height of the image in pixels,
+            "ratio": (Number | null) the aspect ratio of the image (width / height),
+            "ext": (String) the file extension (e.g., "png", "jpg", "gif")
+        },
+        ...other new assets,
+        ],
+    "errors": (Array) if uploading a zip file, this array contains errors for individual files that failed,
+    "dashboard_url": (String) the URL to view this asset in the Braze dashboard,
+    "message": (String) "success" if the request was successful
+}
+```
+
 {% endapi %}
