@@ -1,6 +1,6 @@
 ---
 nav_title: テストの作成
-article_title: 多変量テストと AB テストの作成
+article_title: 多変量およびA/B 検定の作成
 page_order: 1
 page_type: reference
 description: "この記事では、Braze で多変量テストと AB テストを作成する方法について説明します。"
@@ -9,7 +9,7 @@ local_redirect: #optimizations
   optimizations: '/docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/'
 ---
 
-# 多変量テストと AB テストの作成 {#creating-tests}
+# 多変量およびA/B テストの作成 {#creating-tests}
 
 > 単一のチャネルと単一の装置を対象とするすべてのキャンペーンに対して、[多変量またはA/Bテスト]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)を作成できます。たとえば、プッシュキャンペーンに多変量 またはA/B テストを使用する場合、同じキャンペーン内の両方のデバイスタイプではなく、iOS デバイスのみを対象にするか、デバイスのみをAndroidすることができます。
 
