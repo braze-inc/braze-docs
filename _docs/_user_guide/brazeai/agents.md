@@ -52,12 +52,13 @@ Agents are configured with instructions (system prompts) that define how they be
 During the beta period, the following limitations apply:
 
 - Each agent has a default daily execution limit of 50,000 runs, which can be increased up to a maximum of 100,000 runs per day.
-- Each run must complete within 30 seconds. After 30 seconds, the agent will return a null response where it is used.
+- By default, each run must complete within 15 seconds. After 15 seconds, the agent returns a `null` response where it is used. 
+    - If your agents consistently time out, contact your Braze account manager to increase this limit.
 - Input data is limited to 25 KB per request. Longer inputs are truncated.
 
 ## Next steps
 
 Now that you know about Braze Agents, you’re ready for the next steps:
 
-- [Creating custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
-- [Deploying custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)
+- [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
+- [Deploy custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)

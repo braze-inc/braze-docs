@@ -32,7 +32,7 @@ The Braze SDK automatically captures user-level data, giving you key metrics for
 
 ## In-app messaging
 
-Use the SDK to compose and send in-app messages directly. You can choose slideup, modal, or fullscreen messages based on your campaign strategy. For composition details, refer to [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Use the SDK to compose and send in-app messages directly. You can choose slideup, modal, or fullscreen messages based on your campaign strategy. For composition details, refer to [Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
 ![Push displayed on a web browser]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track users (synchronous)"
-article_title: "POST: Track Users (Synchronous)"
+nav_title: "POST: Create and update users (synchronous)"
+article_title: "POST: Create and update users (Synchronous)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,7 +9,7 @@ description: "This article outlines details about the synchronous Track user Bra
 
 ---
 {% api %}
-# Track users (synchronous)
+# Create and update users (synchronous)
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track/sync
 {% endapimethod %}

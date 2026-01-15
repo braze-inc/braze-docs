@@ -75,7 +75,7 @@ When using rate limiting with an A/B test, the rate limit isn't applied to the c
 
 ### Delivery speed rate limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages, which means Braze will send no more than your rate-limited setting within a minute.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you can specify a per-minute rate limit for sending messages, which means Braze sends no more than your rate-limited setting within a minute.
 
 When targeting users during campaign creation, you can navigate to **Target Audiences** (for campaigns) or **Send Settings** (for Canvas) to select a rate limit (in various increments from as low as 10 to as high as 500,000 messages per minute).
 
@@ -97,16 +97,45 @@ Be wary of delaying time-sensitive messages with this form of rate limiting in r
 
 #### Multichannel campaigns
 
-When sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. As a result, the following may occur:
+When sending a multi-channel campaign with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the campaign does not exceed the rate limit. For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze sends a total of 10,000 messages per minute across email and SMS.
 
-- The total number of messages sent per minute could be more than the rate limit. 
-    - For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze can send a max of 20,000 total messages each minute (10,000 email and 10,000 SMS).
-- Users could receive the different channels at different times, and it is not predictable which channel they will get first. 
-    - For example, if you send a campaign that contains an email and an SMS, you may have 10,000 users with valid phone numbers and 50,000 users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the SMS in the first batch of sends and the email in the last batch of sends, almost nine hours later.
+![The option to limit the rate at which the campaign sends, selected with 500,000 messages per minute.]({% image_buster /assets/img_archive/multichannel_campaigns_rate_limit.png %}){: style="max-width:50%;"} 
 
 #### Canvas delivery speed rate limiting {#canvas-delivery-speed}
 
-When sending a Canvas with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze will send a total of 10,000 messages per minute across email and SMS.
+When sending a Canvas with a speed rate limit, the rate limit is shared between all channels and all Canvas steps. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze sends a total of 10,000 messages per minute across email and SMS.
+
+#### Channel-based rate limits
+
+As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, you can select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas.
+
+![Separate rate limits for two channels, webhook and SMS/MMS/RCS, with 5,000 and 2,500 messages per minute respectively.]({% image_buster /assets/img_archive/channel_rate_limits.png %}){: style="max-width:70%;"} 
+
+##### Push notifications
+
+For campaigns or Canvases with push platforms (like Android, iOS, Web Push, or Kindle), you can select **Push notifications** to enforce a rate limit that is shared between all push platforms in your campaign or Canvas.
+
+![The channel dropdown with options for push platforms and push notifications.]({% image_buster /assets/img_archive/push_notifications_rate_limit.png %}){: style="max-width:30%;"} 
+
+{% alert note %}
+If you select a limit for push notifications, you can't set individual push channel rate limits. Likewise, if you select limits for individual push channels, you can't set shared push notification limits.
+{% endalert %}
+
+##### Rate limiting considerations
+
+Some notes to keep in mind when configuring rate limits and what behavior you should expect:
+
+- SMS sends are subject to a rate limit of 50,000 per subscription group. Some SMS providers may enforce other limits.
+- The following messages will not be throttled by or counted towards the rate limit:
+    - Test sends
+    - Seed groups
+    - Content Cards configured to create "at first impression" (This will be controlled by the rate of app impressions. Refer to [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences) for more information on the differences between Card Creation options.)
+- Delivery rate speed limits aren't supported for the following:
+    - SMS autoresponses
+    - SLA-backed messages (such as [Transactional Email]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign))
+    - In-app messages
+    - Feature flags
+    - Banners
 
 #### Rate limiting and Connected Content retries
 
@@ -184,16 +213,16 @@ Global frequency capping is scheduled based on the user's time zone, and is calc
 {% tabs %}
 {% tab Use case 1 %}
 
-Let's say that you set a frequency capping rule which asks that your user receive no more than three push notification campaigns or Canvas components per week from all campaign or Canvas components.
+Let's say that you set a frequency capping rule which asks that your user receive no more than three push notification campaigns or Canvas steps per week from all campaign or Canvas steps.
 
 If your user is slated to receive three push notifications, two in-app messages, and one Content Card this week, they will receive all of those messages.
 
 {% endtab %}
 {% tab Use case 2 %}
 
-This scenario uses the following frequency capping rules:
+This scenario uses a frequency capping rule for users to receive no more than two push notification campaigns or Canvas steps per week from all campaign or Canvas steps.
 
-**When following scenario occurs:**
+**When the following scenario occurs:**
 
 - A user triggers the same campaign, `Campaign ABC` three times over the course of a week.
 - This user triggers `Campaign ABC` once on Monday, once on Wednesday, and once on Thursday.
@@ -229,7 +258,7 @@ Canvases are tagged at the Canvas level, as opposed to tagging by component. So,
 
 #### Conflicting rules
 
-When rules conflict, the most restrictive, applicable frequency capping rule will be applied to your users. For example, let's say you have the following rules:
+When rules conflict, the most restrictive, applicable frequency capping rule is applied to your users. For example, let's say you have the following rules:
 
 1. No more than one push notification campaign or Canvas component per week from all campaign and Canvas components. <br>**AND**
 2. No more than three push notification campaigns or Canvas components per week with the tag `promotional`.
@@ -240,7 +269,7 @@ In this example, your user will not receive more than one push notification camp
 
 #### Tag count
 
-Frequency capping by tag rules compute at the time a message sends. This means that frequency capping by tag only counts tags that are currently on the campaigns or Canvases that a user received in the past. It does not count the tags that were on the campaigns or Canvases during the time they were sent but have since been removed. It will count if a tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
+Frequency capping by tag rules compute at the time a message sends. This means that frequency capping by tag only counts tags that are currently on the campaigns or Canvases that a user received in the past. It does not count the tags that were on the campaigns or Canvases during the time they were sent but have since been removed. It counts if a tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
 
 ##### Use case
 
@@ -257,8 +286,8 @@ Consider the following campaigns and frequency capping by tag rule:
 
 | Action | Result |
 |---|---|
-| The `promotional` tag is removed from **Campaign A** after your user received the message, but before **Campaign B has sent.** | Your user will receive **Campaign B**.|
-| The `promotional` tag is mistakenly removed from **Campaign A** after your user received the message. <br> The tag is added back to **Campaign A** on Tuesday, before **Campaign B** is sent. | Your user will not receive **Campaign B**. |
+| The `promotional` tag is removed from **Campaign A** after your user received the message, but before **Campaign B has sent.** | Your user receives **Campaign B**.|
+| The `promotional` tag is mistakenly removed from **Campaign A** after your user received the message. <br> The tag is added back to **Campaign A** on Tuesday, before **Campaign B** is sent. | Your user does not receive **Campaign B**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Sending at large scales {#sending-at-large-scales}
@@ -271,11 +300,11 @@ For example, if your frequency capping by tag rule is:
 
 And you send the user more than 100 emails from campaigns and Canvas steps with frequency capping turned on over the course of a week, more than two emails may be sent to the user.
 
-Because 100 messages per channel are more messages than most brands send to their users, it's unlikely that you will be impacted by this limitation. To avoid this limitation, you can set a cap for the maximum number of emails you'd like your users to receive over the course of a week.
+Because 100 messages per channel are more messages than most brands send to their users, it's unlikely to be impacted by this limitation. To avoid this limitation, you can set a cap for the maximum number of emails you'd like your users to receive over the course of a week.
 
 For example, you might set up the following rule:
 
 > No more than three email campaigns or Canvas components per week from all campaign and Canvas steps.
 
-This rule will ensure that no users receive more than 100 emails per week because, at most, users will receive three emails per week from campaigns or Canvas components with frequency capping turned on.
+This rule determines that no users receive more than 100 emails per week because, at most, users receive three emails per week from campaigns or Canvas components with frequency capping turned on.
 

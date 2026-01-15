@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an email
-article_title: Creating an Email with Custom HTML
+nav_title: Create an email
+article_title: Create an Email with Custom HTML
 page_order: 1
 description: "This reference article covers how to create an email using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign or Canvas."
 tool:
@@ -10,7 +10,7 @@ channel:
 search_rank: 1  
 ---
 
-# Creating an email with custom HTML
+# Create an email with custom HTML
 
 > Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. 
 
@@ -234,7 +234,7 @@ You can also set the campaign's duration, specify [Quiet Hours]({{site.baseurl}}
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that segment population looks like right now, including how many users within that segment are reachable through email. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that segment population looks like, including how many users within that segment are reachable through email. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% multi_lang_include target_audiences.md %}
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Transferring data from Amazon S3 to Snowflake
-article_title: Transferring Data from Amazon S3 to Snowflake
+nav_title: Transfer data from Amazon S3 to Snowflake
+article_title: Transfer Data from Amazon S3 to Snowflake
 page_order: 7
 page_type: tutorial
 description: "This how-to article will walk you through transferring data from cloud storage (like Amazon S3) to a warehouse (like Snowflake) using the Extract, Transform, Load (ETL) process."
@@ -8,7 +8,7 @@ tool: Currents
 
 ---
 
-# Transferring data from Amazon S3 to Snowflake
+# Transfer data from Amazon S3 to Snowflake
 
 > If your data currently sits in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the Extract, Load, Transform (ELT) process. This page covers how to do so.
 

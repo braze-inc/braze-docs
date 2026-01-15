@@ -1,6 +1,6 @@
 ---
-nav_title: Customizing messages
-article_title: Customizing in-app messages for the Braze SDK
+nav_title: Customize messages
+article_title: Customize in-app messages for the Braze SDK
 page_order: 0.1
 description: "Learn how to set up in-app messages for the Braze SDK."
 platform: 
@@ -10,7 +10,7 @@ platform:
   - Web
 ---
 
-# Customizing in-app messages
+# Customize in-app messages
 
 > Learn how to customize in-app messages for the Braze SDK. For advanced styling techniques, check out our tutorial for [customizing message styling using key-value pairs]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
 

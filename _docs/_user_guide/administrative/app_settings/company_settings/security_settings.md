@@ -287,7 +287,7 @@ The following attributes can be designated as PII and hidden from Braze users wh
 
 ### Limited areas
 
-The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table.
+The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table. Removing PII permissions from a user can impact usability beyond these listed areas.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |

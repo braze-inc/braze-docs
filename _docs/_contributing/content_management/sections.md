@@ -1,12 +1,12 @@
 ---
 nav_title: Sections
-article_title: Managing Sections
+article_title: Manage sections
 description: "Learn how to create and order sections on Braze Docs."
 page_order: 2
 noindex: true
 ---
 
-# Managing sections
+# Manage sections
 
 > Learn how to create and order sections on Braze Docs. To create, modify, or delete an individual page instead, see [Pages]({{site.baseurl}}/contributing/content_management/pages/). For general information about sections, see [About content management]({{site.baseurl}}/contributing/content_management/#sections).
 

@@ -11,7 +11,7 @@ Before you start, you'll need the following:
 | Prerequisite | Description |
 |--------------|-------------|
 | Braze API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
-| MCP client | Currently, only [Claude](https://claude.ai/), [Cursor](https://cursor.com/), and [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) are officially supported. You'll need an account for one of these clients to use the Braze MCP server. |
+| MCP client | [Claude](https://claude.ai/), [Cursor](https://cursor.com/), and [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) are officially supported. You must have an account for one of these clients to use the Braze MCP server. |
 | Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that's pre-installed on your computer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -29,7 +29,7 @@ Open your terminal application, paste the following command, then press <kbd>Ent
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-The output will be similar to the following:
+The output is similar to the following:
 
 ```bash
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -50,7 +50,7 @@ everything's installed!
 irm https://astral.sh/uv/install.ps1 | iex
 ```
 
-The output will be similar to the following:
+The output is similar to the following:
 
 ```powershell
 PS C:\Users\YourUser> irm https://astral.sh/uv/install.ps1 | iex
@@ -224,7 +224,7 @@ When you configure your MCP client, you'll need your API key's identifier and yo
 
 ### Step 4: Configure your MCP client {#configure-client}
 
-Configure your MCP client using our pre-provided configuration file.
+Configure your MCP client using the pre-provided configuration file.
 
 {% tabs %}
 {% tab Claude %}
@@ -316,7 +316,7 @@ You should see the `braze` server listed with the tools and schema available for
 
 ### Step 5: Send a test prompt
 
-Now that you've set up the Braze MCP server, try sending a test prompt to your MCP client. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+After you set up the Braze MCP server, try sending a test prompt to your MCP client. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}

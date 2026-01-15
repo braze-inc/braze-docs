@@ -1,6 +1,6 @@
 ---
 nav_title: Back-in-stock notifications
-article_title: Setting up back-in-stock notifications
+article_title: Set up back-in-stock notifications
 page_order: 2
 description: "Learn how to set up back-in-stock notifications using your catalog and custom events, so you can automatically subscribe customers to receive notifications when an item is back in stock."
 ---

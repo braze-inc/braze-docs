@@ -1,6 +1,6 @@
 ---
-nav_title: Embedding GIFs
-article_title: Embedding GIFs in Content Cards
+nav_title: Embed GIFs
+article_title: Embed GIFs in Content Cards
 page_order: 5
 description: "Learn how to embed GIFs into Content Cards using the Braze SDK."
 channel:
@@ -12,7 +12,7 @@ platform:
   - FireOS
 ---
 
-# Embedding GIFs in Content Cards
+# Embed GIFs in Content Cards
 
 > Learn how to embed GIFs into Content Cards using the Braze SDK.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an MMS campaign
-article_title: Creating an MMS Campaign
+nav_title: Create an MMS campaign
+article_title: Create an MMS Campaign
 page_order: 2
 description: "This reference article covers the steps involved in creating, sending, and previewing an MMS message."
 page_type: reference
@@ -12,7 +12,7 @@ channel:
 search_rank: 1  
 ---
 
-# Creating an MMS campaign
+# Create an MMS campaign
 
 > This article contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, refer to the [SMS composer]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/create/).
 

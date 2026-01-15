@@ -1,13 +1,13 @@
 ---
 nav_title: Troubleshooting
-article_title: Troubleshooting Braze Access
+article_title: Troubleshoot Braze Access
 page_order: 8
 page_type: reference
 description: "This article guides you through troubleshooting issues you may have when trying to access Braze."
 
 ---
 
-# Troubleshooting Braze access
+# Troubleshoot Braze access
 
 > This article helps you troubleshooting issues you may have when trying to access Braze.
 

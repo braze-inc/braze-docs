@@ -22,12 +22,13 @@ To create a Message component, first add a step to your Canvas. Drag and drop th
 ### Step 1: Select your messaging channel
 
 You can select from the following messaging channels: 
+- Banners (in early access)
 - Content Cards
 - Email
 - LINE
 - Push notifications
 - SMS/MMS/RCS
-- In-app messages 
+- In-app messages
 - Webhook
 - WhatsApp
 

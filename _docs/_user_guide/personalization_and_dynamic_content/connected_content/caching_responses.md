@@ -1,11 +1,11 @@
 ---
 nav_title: Caching responses
-article_title: Caching Connected Content Responses
+article_title: Cache Connected Content Responses
 page_order: 2.5
 description: "This article covers how to cache Connected Content responses across different campaigns or messages in the same workspace to optimize sending speeds."
 ---
 
-# Caching Connected Content responses
+# Cache Connected Content responses
 
 > Connected Content responses can be cached across different campaigns or messages (in the same workspace) to optimize send speeds.
 
