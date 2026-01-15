@@ -122,7 +122,7 @@ The expected response shape:
             "created_at": (Integer) the unix timestamp of when the asset was created,
             "name": (String) the name of the asset,
             "size": (Integer) the byte size of the asset,
-            "src": (String | null) the source of the asset (OAuth application name if uploaded via OAuth),
+            "src": (String | null) the source of the asset,
             "url": (String) the URL to access the asset,
             "type": (String) the MIME type of the asset (e.g., "image/png", "image/jpeg"),
             "known_width": (Integer | null) the width of the image in pixels,
