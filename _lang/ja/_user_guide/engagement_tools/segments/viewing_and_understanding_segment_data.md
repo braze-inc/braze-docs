@@ -1,6 +1,6 @@
 ---
 nav_title: セグメントデータ
-article_title: セグメントデータの表示と把握
+article_title: セグメントデータの表示と理解
 page_order: 4
 page_type: reference
 description: "このページでは、Brazeダッシュボードのセグメンテーションセクションについて説明し、提供される統計の概要を記載する。"
@@ -16,7 +16,7 @@ tool:
 
 ## セグメントとメンバーシップのデータへのアクセス
 
-Braze ダッシュボードの [**セグメント**] ページには、すべてのセグメントの要約が表示され、それぞれの詳細データを調べることができます。このページでは、セグメント名を検索して選択すると、そのデータの編集と表示を行うことができます。セグメンテーションの作成方法については、[セグメンテーションの作成を]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment)参照のこと。
+Braze ダッシュボードの [**セグメント**] ページには、すべてのセグメントの要約が表示され、それぞれの詳細データを調べることができます。このページでは、セグメント名を検索して選択すると、そのデータの編集と表示を行うことができます。Segmentの作成方法については、[Segmentの作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment)を参照してください。
 
 ![[セグメント] ページ]({% image_buster /assets/img_archive/segments.png %})
 
