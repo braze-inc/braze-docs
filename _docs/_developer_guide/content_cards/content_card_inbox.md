@@ -173,6 +173,143 @@ class ContentCardsActivity : ComponentActivity() {
 
 ```
 
+```kotlin file=ContentCardInboxCompose.kt
+import android.content.Intent
+import android.net.Uri
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.braze.Braze
+import com.braze.events.ContentCardsUpdatedEvent
+import com.braze.events.IEventSubscriber
+import com.braze.models.cards.*
+
+class ContentCardsComposeActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            MaterialTheme {
+                ContentCardInbox()
+            }
+        }
+    }
+}
+
+@Composable
+fun ContentCardInbox() {
+    val context = LocalContext.current
+    var cards by remember { mutableStateOf<List<Card>>(emptyList()) }
+    val loggedImpressions = remember { mutableSetOf<String>() }
+
+    DisposableEffect(Unit) {
+        val subscriber = IEventSubscriber<ContentCardsUpdatedEvent> { event ->
+            cards = event.allCards.filter { !it.isControl }
+        }
+
+        Braze.getInstance(context).subscribeToContentCardsUpdates(subscriber)
+        Braze.getInstance(context).requestContentCardsRefresh(false)
+
+        onDispose {
+            Braze.getInstance(context)
+                .removeSingleSubscription(subscriber, ContentCardsUpdatedEvent::class.java)
+        }
+    }
+
+    Column(modifier = Modifier.fillMaxSize()) {
+        Text(
+            text = "Message Inbox",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 8.dp)
+        )
+
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = 16.dp)
+        ) {
+            items(cards, key = { it.id }) { card ->
+                ContentCardItem(
+                    card = card,
+                    onImpression = {
+                        if (!loggedImpressions.contains(card.id)) {
+                            card.logImpression()
+                            loggedImpressions.add(card.id)
+                        }
+                    },
+                    onClick = {
+                        card.logClick()
+                        card.url?.let {
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(it)))
+                        }
+                    }
+                )
+            }
+        }
+    }
+}
+
+@Composable
+fun ContentCardItem(
+    card: Card,
+    onImpression: () -> Unit,
+    onClick: () -> Unit
+) {
+    // Log impression when the card becomes visible
+    LaunchedEffect(card.id) {
+        onImpression()
+    }
+
+    val title = when (card) {
+        is CaptionedImageCard -> card.title
+        is ShortNewsCard -> card.title
+        is TextAnnouncementCard -> card.title
+        else -> null
+    }
+    val description = when (card) {
+        is CaptionedImageCard -> card.description
+        is ShortNewsCard -> card.description
+        is TextAnnouncementCard -> card.description
+        else -> null
+    }
+
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp)
+            .clickable { onClick() }
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            title?.let {
+                Text(
+                    text = it,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+            }
+            description?.let {
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = it,
+                    fontSize = 14.sp
+                )
+            }
+        }
+    }
+}
+```
+
 !!step
 lines-MainApplication.kt=12
 
@@ -182,31 +319,41 @@ To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-content_card_inbox.xml=1-24
+lines-ContentCardInboxCompose.kt=51-64
 
 #### 2. Build a UI view
 
 We're using Android's [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) to display Content Cards in this tutorial, but we recommend building a UI with classes and components that suit your use case(s). Braze provides UI by default, but here we create a custom view to have full control over the appearance and behavior.
 
+For Jetpack Compose, we use a [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists>) to display Content Cards in a scrollable list.
+
 !!step
 lines-ContentCardInboxActivity.kt=29-35,40-42,44
+lines-ContentCardInboxCompose.kt=38-49
 
 #### 3. Subscribe to Content Card updates
 
 Use [`subscribeToContentCardsUpdates`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-content-cards-updates.html?query=abstract%20fun%20subscribeToContentCardsUpdates(subscriber:%20IEventSubscriber%3CContentCardsUpdatedEvent%3E)>) to allow your UI to respond when new Content Cards are available. Here, subscribers are registered and removed within the activity lifecycle hooks.
 
+For Jetpack Compose, we use a [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) to manage the subscription lifecycle, ensuring proper cleanup when the composable leaves the composition.
+
 !!step
 lines-ContentCardInboxActivity.kt=73-84
+lines-ContentCardInboxCompose.kt=91-107
+
 #### 4. Build a custom inbox UI
 
-Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
+Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`, or with Jetpack Compose's `Card` and `Column` composables.
 
 !!step
 lines-ContentCardInboxActivity.kt=90,93
+lines-ContentCardInboxCompose.kt=66-72,85-88
+
 #### 5. Track impressions and clicks
 
 You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) methods available for Content Cards.
 
-Impressions should only be logged once when a card is viewed by the user. Here, we use a naive mechanism to guard against duplicate logs with a per-card flag. Note that you may need to think through the view lifecycle of your app, as well as use case, so ensure impressions are logged correctly.
+Impressions should only be logged once when a card is viewed by the user. Here, we use a naive mechanism to guard against duplicate logs with a per-card flag. In Compose, we use `LaunchedEffect` to log impressions when a card becomes visible. Note that you may need to think through the view lifecycle of your app, as well as use case, so ensure impressions are logged correctly.
 
 
 {% endscrolly %}
