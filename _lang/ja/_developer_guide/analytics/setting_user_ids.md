@@ -1,12 +1,12 @@
 ---
-nav_title: ユーザー ID の設定
-article_title: Braze SDKによるユーザーIDの設定
+nav_title: ユーザーIDを設定する
+article_title: Braze SDKでユーザーIDを設定する。
 page_order: 1.1
 description: "Braze SDKでユーザーIDを設定する方法を学習する。"
 
 ---
 
-# ユーザー ID の設定
+# ユーザーIDを設定する
 
 > Braze SDKでユーザーIDを設定する方法を学習する。これは、デバイスやプラットフォームを超えてユーザーを追跡し、[ユーザーデータAPIを通じて]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)ユーザーデータをインポートし、[メッセージングAPIを通じて]({{site.baseurl}}/api/endpoints/messaging/)ターゲットメッセージを送信するための一意の識別子である。ユーザーに固有の ID を割り当てない場合、Braze は代わりに匿名 ID を割り当てますが、あなたが割り当てるまでこれらの機能を使用することはできません。
 
