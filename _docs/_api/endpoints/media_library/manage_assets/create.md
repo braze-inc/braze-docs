@@ -29,8 +29,8 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`asset_url`| Required | String | A publicly accessible URL for the asset to be uploaded into Braze. |
-|`asset_file`| Required | Binary | Binary file data. |
+|`asset_url`| Optional | String | A publicly accessible URL for the asset to be uploaded into Braze. |
+|`asset_file`| Optional | Binary | Binary file data. |
 |`name`| Optional | String | A name to appear in the media library for this asset. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
