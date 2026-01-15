@@ -1,6 +1,6 @@
 ---
-nav_title: iOS SDK トラッキングを無効にする
-article_title: iOS の SDK トラッキングを無効にする
+nav_title: iOS SDKトラッキングを無効にする
+article_title: iOSのSDK追跡を無効にする
 platform: iOS
 page_order: 8
 description: "この記事では、iOS アプリケーションのデータ収集を無効にする方法を説明します。"
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOS のデータ収集を無効にする
+# iOSのデータ収集を無効にする
 
 データプライバシー規制に準拠するために、iOS SDK のデータトラッキングアクティビティは [`disableSDK`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a8d3b78a98420713d8590ed63c9172733) メソッドを使用して完全に停止できます。このメソッドによってすべてのネットワーク接続がキャンセルされ、Braze SDK は Braze サーバーにデータを渡しません。後でデータ収集を再開する場合は、[`requestEnableSDKOnNextAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a781078a40a3db0de64ac82dcae3b595b) メソッドを使用します。
 
