@@ -77,8 +77,9 @@ Operatorは、検索エンジンではなく、会話と考えてください。
 以下のGPT モデルから選択して、Operator でさまざまなリクエストタイプに使用できます。
 
 - [GPT-5 ナノ](https://platform.openai.com/docs/models/gpt-5-nano)
-- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini) (デフォルト)
+- [GPT-5 ミニ](https://platform.openai.com/docs/models/gpt-5-mini)
 - [GPT-5](https://platform.openai.com/docs/models/gpt-5)
+- [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1) (デフォルト)
 
 ![異なるGPT モデルを選択するためのドロップダウン。]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
 
