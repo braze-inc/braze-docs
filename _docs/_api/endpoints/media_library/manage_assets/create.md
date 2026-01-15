@@ -15,7 +15,7 @@ description: "This article outlines details about the `POST /media_library/creat
 /media_library/create
 {% endapimethod %}
 
-> Use this endpoint to add an asset to the Braze media library from an externally hosted URL or binary file data
+> Use this endpoint to add an asset to the Braze media library from an externally hosted URL or binary file data. This API currently supports images or zip folders containing images.
 
 ## Prerequisites
 
