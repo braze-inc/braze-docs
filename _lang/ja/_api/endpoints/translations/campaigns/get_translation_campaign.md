@@ -15,7 +15,7 @@ description: "この記事では、「キャンペーンのすべての翻訳を
 /campaigns/translations
 {% endapimethod %}
 
-> キャンペーンの各メッセージバリアントのすべての翻訳を表示するには、このエンドポイントを使用する。
+> キャンペーンの各メッセージバリアントのすべての翻訳を表示するには、このエンドポイントを使用する。変換機能の詳細については、[メッセージのロケール]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)を参照してください。
 
 {% alert important %}
 このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
@@ -31,10 +31,10 @@ description: "この記事では、「キャンペーンのすべての翻訳を
 
 ## クエリーパラメーター
 
-| パラメータ | required | データ型 | 説明 |
+| パラメータ | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`| 必須 | 文字列 | キャンペーンのID。 |
-|`message_variation_id`| 必須 | string | メッセージバリエーションの ID。 |
+|`campaign_id`| 必須かどうか | 文字列 | キャンペーンのID。 |
+|`message_variation_id`| 必須かどうか | string | メッセージバリエーションの ID。 |
 |`locale_id`| オプション | string | レスポンスをフィルターするロケールUUID。 |
 | `post_launch_draft_version`| オプション | ブール値 | `true` の場合、最新のライブパブリッシュバージョンではなく、最新の下書きバージョンが返されます。デフォルトは`false` で、最新のライブバージョンが返されます。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -96,7 +96,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translati
 
 ### エラー応答例
 
-ステータスコード `400` は、次の応答本文を返す可能性があります。遭遇する可能性のあるエラーの詳細については、「[トラブルシューティング](#troubleshooting)」を参照のこと。
+ステータスコード `400` は、次の応答本文を返す可能性があります。
 
 ```json
 {
