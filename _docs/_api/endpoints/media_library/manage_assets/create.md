@@ -60,7 +60,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --header 'Content-Type: application/json' \
---data '{"asset_url":"https://cdn.example.com/assets/cat.jpg", "name":"Cat Graphic"}'
+--data '{"asset_url": "https://cdn.example.com/assets/cat.jpg", "name": "Cat Graphic"}'
 ```
 
 ```
