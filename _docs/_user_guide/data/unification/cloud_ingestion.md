@@ -65,7 +65,6 @@ For customers on data points-based billing, data point billing for Cloud Data In
 Braze Cloud Data Ingestion counts toward the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
 {% endalert %}
 
-For customers on MAU-based pricing (FY'26 pricing and later), there is no data point billing, and Cloud Data Ingestion is fully included with all platform editions.
 
 ## Product limitations
 
