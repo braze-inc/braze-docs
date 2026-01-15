@@ -138,4 +138,6 @@ The expected response shape:
 }
 ```
 
+if uploading a zip folder with multiple assets, `new_asset` will be an array containing all of the new assets.
+
 {% endapi %}
