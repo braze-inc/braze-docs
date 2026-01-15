@@ -125,7 +125,14 @@ The expected response shape:
             "ext": (String) the file extension (e.g., "png", "jpg", "gif")
         }
     ],
-    "errors": (Array) if uploading a zip file, this array contains errors for individual files that failed,
+    "errors": [
+        {
+            "name": (String) the name of the asset,
+            "size": (Integer) the byte size of the asset,
+            "ext": (String) the file extension (e.g., "png", "jpg", "gif").
+            "error": (String) the error which occured,
+        }
+    ],
     "dashboard_url": (String) the URL to view this asset in the Braze dashboard
 }
 ```
