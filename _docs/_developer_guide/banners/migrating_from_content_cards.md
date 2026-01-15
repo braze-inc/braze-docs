@@ -50,10 +50,9 @@ Consider migrating to Banners if you're using Content Cards for:
 
 Continue using Content Cards if you need:
 
-- Displaying multiple cards together in a scrollable feed or list interface
-- Card-based message centers where users can view, interact with, and manage multiple messages
-- Advanced interactions like swiping between cards, individual card dismissal, or card-specific actions
-- Implementing custom logic to filter, sort, or organize cards based on complex criteria
+- Feed Experiences: Any use case involving multiple scrollable messages or a card-based "Inbox".
+- Specific Features: Messages that require Connected Content or Promotional Codes, as Banners do not support these natively.
+- Triggered Delivery: Use cases strictly requiring API-triggered or action-based delivery that cannot be converted to segment-based logic
 
 ## Migration guide
 
@@ -670,6 +669,12 @@ BrazeBannerView(
 
 When migrating from Content Cards to Banners, be aware of the following limitations:
 
+### Migrating Triggered Messages
+Banners only support scheduled delivery campaigns. To migrate a message that was previously API-triggered or action-based, convert it to segment-based targeting:
+
+* **Example**: Instead of triggering a "Complete Profile" card via API, create a segment for users who signed up in the last 7 days but have not completed their profile.
+* **Real-time Eligibility**: Users will qualify or disqualify for the Banner instantly at each refresh based on their segment membership.
+
 ### Feature differences
 
 | Feature | Content Cards | Banners |
@@ -698,6 +703,11 @@ When migrating from Content Cards to Banners, be aware of the following limitati
 | **Content Updates** |
 | Liquid logic refresh | ❌ On initial load only | ✅ Refreshes on every session |
 | Eligibility refresh | ❌ On initial load only | ✅ Refreshes on every session |
+
+### System Constraints
+
+* **Active Messages**: Maximum 10 active messages per placement.
+* **Batch Requests**: Maximum 10 placement IDs per refresh request; requests beyond this are truncated.
 
 ### SDK limitations
 
