@@ -102,6 +102,10 @@ Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%}
 
 Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
 
+{% alert important %}
+If you want to include images in your messages using catalog data, your catalog must include a field named `image_url`. This is required for images to display properly in push notifications and other messaging channels. You can then reference it using {%raw%}``{{ items[0].image_url }}``{%endraw%}.
+{% endalert %}
+
 ## Considerations
 
 - Users are subscribed for 90 days. If an item does not drop in price in 90 days, the user is removed from the subscription.
