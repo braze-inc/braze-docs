@@ -66,6 +66,8 @@ Write your message using personalization (such as Liquid or Connected Content) a
 
 ![LINE composer with a message displayed in the preview.]({% image_buster /assets/img/line/line_composer.png %})
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 ### Tips
 
 #### Using Liquid

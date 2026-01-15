@@ -246,6 +246,8 @@ Liquid personalization is not supported for image blocks and button link type fi
 
 You can choose to include dynamic images in your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 ### Text direction
 
 When composing your message, you can toggle the text direction between left-to-right to right-to-left by selecting the respective **Text direction** button. You might use this option when creating messages in languages like Arabic and Hebrew.

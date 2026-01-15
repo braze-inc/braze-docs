@@ -99,6 +99,8 @@ RCS media messages allow you to use engaging media formats that aren't possible 
 
 ![RCS composer with an option to upload a media file.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### File specifications
 
 | File type | Specifications |

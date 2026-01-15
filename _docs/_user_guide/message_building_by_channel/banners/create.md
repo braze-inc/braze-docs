@@ -75,6 +75,8 @@ To customize your message's background properties, border settings, and more, se
 
 ![Style panel of the Banner composer.]({% image_buster /assets/img/banners/banner_card_styles.png %})
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Step 3.2: Define on-click behavior (optional)
 
 When a user clicks a link in the Banner, you can choose to navigate them deeper into your app or redirect them to another webpage. Additionally, you can choose to [log a custom attribute or event]({{site.baseurl}}/developer_guide/analytics/), which updates your user's profile with custom data when they click the Banner.

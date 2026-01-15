@@ -93,6 +93,8 @@ If you're adding copy in a language that is written right-to-left, note that the
 
 If you added variables while creating the WhatsApp template in the Meta Business Manager, those variables will show up as blank spaces in the message composer. Replace these blank spaces with Liquid or plain text. To use plain text, use the format "text here" encased by double braces. If you opted to include images when building your template, you can upload or add images from the media library or by referencing an image URL.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 Note that disabled text fields (highlighted gray) cannot be edited as they are part of the approved WhatsApp template. If you would like to make updates to the disabled text, you must edit your template and get it reapproved.
 
 {% alert tip %}

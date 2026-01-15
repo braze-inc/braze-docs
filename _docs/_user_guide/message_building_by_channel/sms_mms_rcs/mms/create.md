@@ -40,6 +40,7 @@ Creating an MMS message requires your subscription group to be configured for MM
 
 ![The "Compose" tab to write your message.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 ### Image specifications
 
 | **Image Specifications** | **Recommended Properties** |

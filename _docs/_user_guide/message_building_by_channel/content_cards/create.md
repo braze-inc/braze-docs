@@ -88,6 +88,8 @@ Write anything you want. There are no limits, but the faster you can get your me
 
 Add an image to your Content Card by selecting **Add Image** or providing an image URL. Selecting **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements, so be sure to check what those are before commissioning or making an image from scratch! Keep in mind that Content Card message fields are limited to 2&nbsp;KB in total size.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Pin to top
 
 A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you can't retroactively update its pinned option. Changing this option after a campaign has been sent will only affect future sends.
