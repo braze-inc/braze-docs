@@ -34,7 +34,9 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 |`name`| Optional | String | A name to appear in the media library for this asset. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+{% alert important %}
 `asset_url` and `asset_file` are mutually exclusive, you should only include one of them in your API request.
+{% endalert %}
 
 ### How we name files
 
