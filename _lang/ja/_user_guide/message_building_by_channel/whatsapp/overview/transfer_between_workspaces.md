@@ -1,7 +1,7 @@
 ---
 nav_title: ワークスペース間の移動
 article_title: ワークスペース間で電話番号とサブスクリプショングループを転送する
-page_order: 4
+page_order: 5
 description: "WhatsApp 電話番号とサブスクリプショングループをワークスペース間で移行する方法。"
 page_type: reference
 channel:
