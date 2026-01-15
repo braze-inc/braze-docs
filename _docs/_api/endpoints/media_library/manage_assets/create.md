@@ -119,15 +119,9 @@ The expected response shape:
 { 
     "new_assets": [
         {
-            "created_at": (Integer) the unix timestamp of when the asset was created,
             "name": (String) the name of the asset,
             "size": (Integer) the byte size of the asset,
-            "src": (String | null) the source of the asset,
             "url": (String) the URL to access the asset,
-            "type": (String) the MIME type of the asset (e.g., "image/png", "image/jpeg"),
-            "known_width": (Integer | null) the width of the image in pixels,
-            "known_height": (Integer | null) the height of the image in pixels,
-            "ratio": (Number | null) the aspect ratio of the image (width / height),
             "ext": (String) the file extension (e.g., "png", "jpg", "gif")
         }
     ],
