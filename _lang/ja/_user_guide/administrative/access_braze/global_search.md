@@ -1,12 +1,12 @@
 ---
-nav_title: Braze ダッシュボードの検索
-article_title: Braze ダッシュボードの検索
+nav_title: Braze ダッシュボードを検索する
+article_title: Brazeダッシュボードの検索
 page_order: 0.5
 page_type: reference
 description: "Braze のグローバル検索について学習しましょう。"
 ---
 
-# Braze ダッシュボードの検索
+# Braze ダッシュボードを検索する
 
 検索バーを使用して、Braze ダッシュボード内で作業やその他の情報を検索できます。検索バーは Braze ダッシュボードの最上部にあります。検索バーをクリックするか、Windows の場合は <kbd>Ctrl</kbd>+<kbd>K</kbd> キー、Mac の場合は <kbd>⌘</kbd>+<kbd>K</kbd> を押すと、検索バーに直接ジャンプします。
 
