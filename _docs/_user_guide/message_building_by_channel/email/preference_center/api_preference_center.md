@@ -143,7 +143,7 @@ No. If you see the message "Your Email Body does not include an unsubscribe link
 
 ### How do I update the default browser icon?
 
-By default, the icon next to the browser tab name (favicon) uses the Braze logo. To add a custom favicon, you set it via the `links-tags` attribute in your Create or Update [Preference Center API call]({{site.baseurl}}/api/endpoints/preference_center). Braze will then inject the {% raw %}`<link rel="icon" ...>`{% endraw %} tag into the hosted page for you.
+By default, the icon next to the browser tab name (favicon) uses the Braze logo. To add a custom favicon, you set it via the `links-tags` attribute in your Create or Update [Preference Center API call]({{site.baseurl}}/api/endpoints/preference_center). Braze then injects the {% raw %}`<link rel="icon" ...>`{% endraw %} tag into the hosted page for you.
 
 {% raw %}
 ```
