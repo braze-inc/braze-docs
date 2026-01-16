@@ -96,9 +96,9 @@ When creating new users using the [`/users/track` endpoint]({{site.baseurl}}/api
 
 {% alert important %}
 **Identifier selection**: 
-- To update both email and SMS subscription groups in a single API call, use `external_ids` only. You cannot include both `emails` and `phones` in the same request.
-- If you want to use `emails` or `phones` instead of `external_ids`, you must make separate API calls—one for email subscription groups and one for SMS subscription groups.
-- You can send `emails`, `phones`, or `external_ids` individually, but you cannot include both `emails` and `phones` in the same request.
+- To update both email and SMS subscription groups in a single API call, use `external_ids`. You cannot include both `emails` and `phones` in the same request.
+- If you use `emails` or `phones` instead of `external_ids`, make separate API calls—one for email subscription groups and one for SMS subscription groups.
+- You can send `emails`, `phones`, or `external_ids` individually.
 {% endalert %}
 
 ### Example requests
