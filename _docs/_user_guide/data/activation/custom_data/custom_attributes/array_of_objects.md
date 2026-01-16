@@ -27,6 +27,18 @@ For more information on using arrays of objects for user attributes objects, ref
 
 ## API example
 
+### Operation processing order
+
+When a single `/users/track` request includes multiple operations (`$add`, `$remove`, and `$update`) for array-type custom attributes, Braze processes them in the following order:
+
+1. Add
+2. Remove
+3. Update
+
+This means that if you include both `$remove` and `$add` operations in the same request, the remove operation is processed first, but the add operation happens before any updates. As a result, you cannot rely on `$remove` followed by `$add` as an upsert mechanism, since the add operation doesn't happen after the remove.
+
+For example, if you try to remove an object and add a new object with the same identifier in a single request, the add happens first, then the remove may delete what you just added.
+
 {% tabs local %}
 {% tab Create %}
 
@@ -196,6 +208,12 @@ When including fields like timestamps in an array of objects, use the `$time` fo
 {% alert tip %}
 For more information, see [Nested Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/nested_custom_attribute_support).
 {% endalert %}
+
+### Invalid nested custom attributes
+
+When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
+
+For more details, see [How does /users/track handle invalid nested custom attributes?]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes) in the `/users/track` endpoint documentation.
 
 ## SDK example
 
