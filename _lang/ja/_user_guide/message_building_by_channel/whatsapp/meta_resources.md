@@ -1,7 +1,7 @@
 ---
 nav_title: メタリソース
 article_title: メタリソース
-page_order: 11
+page_order: 12
 description: "この記事では、WhatsAppインテグレーションの理解を深めるために役立つメタドキュメント、情報、およびリソースについて説明します。"
 page_type: reference
 channel:

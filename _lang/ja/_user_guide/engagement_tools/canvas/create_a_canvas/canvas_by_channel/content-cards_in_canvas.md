@@ -51,7 +51,7 @@ channel: content cards
 
 コンテンツカードは、ユーザーが購入を完了するか、カスタムイベントを実行する時点で削除できます。削除イベントとして、[**カスタムイベントを実行**] または [**購入**] のいずれかを選択できます。次に [**イベントを追加**] を選択します。
 
-!["ブレスレット "を購入したユーザーのカードを削除するトリガーで "Remove cards when users complete a purchase or perform a custom event. "を選択した。]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
+!["ブレスレット "を購入したユーザーのカードを削除するトリガーで、"Remove cards when users complete a purchase or perform a custom event. "を選択した。]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## レポートと分析
 

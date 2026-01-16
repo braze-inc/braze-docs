@@ -168,7 +168,7 @@ Brazeは、アーカイブされたグループのユーザーの状態変更を
 
 誤って購読を解除してしまった場合に備えて、ユーザーが購読を再開できるよう、ランディングページに再購読リンク（{% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %} など）を設けることをお勧めする。
 
-!["お別れして残念です！"のプレビューがあるカスタム配信停止ページ。]({% image_buster /assets/img/custom_unsubscribe.png %})
+!["お名残惜しいです！"のプレビュー付きカスタム配信停止ページ。]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### カスタムオプトインページを作成する
 
