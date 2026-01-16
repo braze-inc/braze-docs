@@ -21,9 +21,9 @@ Yes. Go to the **Preview and Test** section of the drag-and-drop editor and turn
 
 ### How can I change the email padding on mobile without updating the padding in the web view?
 
-You cannot edit the padding for mobile and web views exclusively, so any edits are reflected in both views. As a workaround, you can add CSS logic that sets the padding based on different screen sizes. However, you cannot accomplish this using the drag-and-drop editor. We suggest exporting the HTML file and using the HTML editor instead.
+You cannot edit the padding for mobile and web views exclusively, so any edits are reflected in both views. As a workaround, you can add CSS logic that sets the padding based on different screen sizes. However, you cannot accomplish this using the drag-and-drop editor. Export the HTML file and use the HTML editor instead.
 
-### How to optimize a row of buttons to remain horizontal on desktop and mobile?
+### How can I optimize a row of buttons to remain horizontal on desktop and mobile?
 
 When building an email using the drag-and-drop editor, you may create a row of call-to-action buttons and find that they transpose to a vertical orientation on mobile when originally created horizontally. To retain the same format across device sizes, create two separate rows with styling settings optimized for desktop and mobile, hiding those rows depending on the device that is rendering the email.
 
