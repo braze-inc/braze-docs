@@ -59,7 +59,7 @@ Cloud Data Ingestion supports the following data types:
 
 ## User identifiers for data ingestion
 
-When syncing user data through Cloud Data Ingestion, you can identify users using one or more of the following identifier types. Each row in your source table should contain only one identifier, but your table can include columns for one, two, three, four, or all five identifier types.
+When syncing user data through Cloud Data Ingestion, you can identify users using one or more of the following identifier types. Each row in your source table should contain a value for only one identifier type at a time, but your table can include columns for one, two, three, four, or all five identifier types.
 
 | Identifier | Description |
 |------------|-------------|
