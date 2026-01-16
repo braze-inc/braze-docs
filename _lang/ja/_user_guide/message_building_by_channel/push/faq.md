@@ -1,7 +1,7 @@
 ---
 nav_title: よくある質問
 article_title: プッシュ通知の FAQ
-page_order: 80
+page_order: 25
 description: "この記事では、プッシュキャンペーンを設定する際に生じる、よくある質問を取り上げる。"
 page_type: FAQ
 channel:

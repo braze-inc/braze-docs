@@ -1,5 +1,5 @@
 ---
-nav_title: ワークスペース間のコピー
+nav_title: ワークスペース間の複製
 article_title: ワークスペース間でのコピー
 page_order: 4.5
 alias: "/copying_to_workspaces/"
