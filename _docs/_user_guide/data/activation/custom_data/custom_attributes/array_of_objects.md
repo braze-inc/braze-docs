@@ -35,7 +35,7 @@ When a single `/users/track` request includes multiple operations (`$add`, `$rem
 2. Remove
 3. Update
 
-This means that if you include both `$remove` and `$add` operations in the same request, the add operation is processed before the remove operation. As a result, you cannot rely on `$remove` followed by `$add` as an upsert mechanism, since the add operation doesn't happen after the remove.
+This means that if you include both `$remove` and `$add` operations in the same request, the add operation is processed before the remove operation. As a result, you cannot rely on `$remove` followed by `$add` as an upsert mechanism, since the add operation doesn't happen after the remove operation.
 
 For example, if you try to remove an object and add a new object with the same identifier in a single request, the add happens first, then the remove may delete what you just added.
 
