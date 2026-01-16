@@ -1,0 +1,126 @@
+---
+nav_title: The dashboard
+article_title: The Braze dashboard
+page_order: 2
+page_type: reference
+description: "---"
+
+---
+
+# The Braze dashboard
+
+> The Braze dashboard is your central workspace for building, managing, and analyzing customer engagement. It brings together messaging tools, audience insights, segmentation, and real-time performance data in one place.
+
+## Access your dashboard
+
+To get started, [sign in to your Braze account]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account). Your access and permissions are based on your assigned user permissions, review the [list of permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to learn more.
+
+## Navigate Braze
+
+Braze navigation is designed to help you efficiently access features and content across devices. There are two levels of navigation in the Braze dashboard: global header and side navigation.
+
+The global header is always visible at the top of the screen. It provides quick access to essential tools and settings, including:
+
+- Search
+- Support and community links
+- [Dashboard language]({{site.baseurl}}/user_guide/administrative/access_braze/language/)
+- Notifications
+- Account settings
+- [BrazeAI Operator™]({{site.baseurl}}/user_guide/brazeai/operator/)
+
+### Using the side navigation
+
+The vertical menu on the left organizes Braze tools by function and keeps your most-used items within reach. Select a main menu item to reveal its options in a stacked vertical layout. 
+
+![Workspace switcher in Braze dashboard]({% image_buster /assets/img/workspace_switcher.png %}){: style="max-width:35%;float:right;margin-left:15px"}
+
+#### Workspace switcher
+
+Located at the top of the side navigation, the workspace switcher lets you move between different workspaces in your Braze instance. The active workspace is highlighted.
+
+[Workspaces]({{site.baseurl}}/user_guide/getting_started/workspaces) help organize content by brand, region, product line, or team. Each workspace includes its own data, campaigns, and settings. Your access can vary between workspaces. For example, you might have editing access in one workspace and view-only access in another.
+
+#### Minimizing the side navigation
+
+To reduce visual clutter, especially during tasks like designing a Canvas, you can minimize the side navigation panel. Press **Minimize menu** to collapse it. Even when minimized, hover over any icon to view tooltips with menu item names. This helps you move quickly between tools while keeping your workspace clean.
+
+![Minimize and maximize menu icons]({% image_buster /assets/img/minimize_expand_menu.png %}){: style="max-width:60%;border:none"}
+
+#### Responsive navigation
+
+The navigation adapts seamlessly to different screen sizes. On smaller screens, the side navigation collapses automatically. Press <i class="fa-solid fa-bars" aria-label="Open navigation menu"></i> to open the menu when needed. 
+
+![On smaller screens, the side navigation collapses automatically. Tapping the menu icon opens navigation options.]({% image_buster /assets/img/navigation/navigation_small_screens.png %}){: style="max-width: 80%;border:none"}
+
+## Search your dashboard
+
+The global search bar, located in the header, is the fastest way to find content across your Braze dashboard. Select to open the search interface and jump directly to what you need. 
+
+![Global search open with no search terms entered, showing recently open pages.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
+
+Your recently opened content appears below the search bar. This includes any campaign, Canvas, template, or page you’ve recently interacted with—making it easy to return to your work.
+
+### What can you search for?
+
+You can search for the following items and actions:
+
+- Campaign names
+- Canvas names
+- Content Blocks
+- Segment names
+- Email template names
+- Pages within Braze (including synonyms)
+
+{% alert tip %}
+To search for exact text, put your search term in quotations (""). For example, searching for [“all users”] will return all items that contain the exact phrase “all users” in their name.
+{% endalert %}
+
+### Content type and status tags
+
+Each result is labeled with a tag indicating its content type—such as campaign, Canvas, or segment—and its status (active, archived, stopped).
+
+### Filter for active and draft content
+
+By default, search includes active, draft, and archived items. Use the **Show active and draft only** toggle to narrow your results.
+
+![The "Show active and draft only" toggle.]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
+
+### Keyboard shortcuts
+
+You can move through search results using your keyboard.
+
+<style>
+  div.small_table + table {
+    max-width: 60%;
+  }
+table th:nth-child(1),
+table th:nth-child(2),
+table td:nth-child(1),
+table td:nth-child(2), {
+    width:20%;
+}
+table td {
+    word-break: break-word;
+}
+</style>
+
+<div class="small_table"></div>
+
+| Action                      | Keyboard shortcut                                                             |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| Open the search menu        | {::nomarkdown} <ul> <li> Mac: <kbd>⌘</kbd>&nbsp;+&nbsp;<kbd>K</kbd> </li> <li>Windows: <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>K</kbd> </li> </ul> {:/}  |
+| Move between search results | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
+| Select a search result      | <kbd>Enter</kbd>    |
+| Close the search menu       | <kbd>Esc</kbd>  |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+
+## Accessibility in the dashboard
+
+The Braze dashboard uses brand colors that meet WCAG AA standards for color contrast. This supports an inclusive experience for all users and aligns with accessibility best practices.
+
+## Sharing feedback
+
+Want to tell us what you think? You can share feedback about navigation, accessibility, usability, visual design, and more. Open the **Support** menu in the global header and select **Share feedback**. We review all feedback to help improve your Braze experience.
+
+
