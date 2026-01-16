@@ -62,3 +62,13 @@ Now that you know about Braze Agents, you’re ready for the next steps:
 
 - [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
 - [Deploy custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)
+
+**Model Providers as Sub-processors or Third Party Providers:**
+
+Where Customer uses an integration with models provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLMs will be acting as a Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. 
+
+If Customers chooses to bring their own API Key to integrate with Braze AI functionality, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
+How is my data used and sent to Braze-provided LLMs?
+In order to generate AI output through Braze AI features that Braze identifies as leveraging Braze-provided LLMs (“Output”), Braze will send your system prompt or any other input, as applicable (“Input”) to Braze-provided LLM. Data sent to the applicable Braze-provided LLM is not used to train or improve the Braze-provided LLM. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
+
+The Braze-provided LLM for Braze Agents, identified as “Auto”, uses Google Gemini models. Google retains Inputs and Outputs submitted through Braze for 55 days, after which the data is deleted
