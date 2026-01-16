@@ -29,10 +29,10 @@ To use this endpoint, you'll need to generate an API key with the `cdi.integrati
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `integration_id` | Required | String | Integration ID. See [Finding your integration ID](#finding-your-integration-id) for details. |
+| `integration_id` | Required | String | Integration ID. See [Find your integration ID](#find-your-integration-id) for details. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-## Finding your integration ID
+### Find your integration ID
 
 You can find the `integration_id` by going to **Data Settings** > **Cloud Data Ingestion** and selecting your sync. The `integration_id` is located in the URL of the sync details page. For example, in the URL `https://dashboard-01.braze.com/integrations/cloud_data_ingestion/00000000-0000-0000-0000-000000000000`, the `integration_id` is `00000000-0000-0000-0000-000000000000`.
 ## Query parameters
