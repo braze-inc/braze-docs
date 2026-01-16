@@ -103,7 +103,8 @@ For further assistance with Canvas and campaign troubleshooting, be sure to cont
 - **Content Card refresh**: By default, Braze refreshes Content Card requests as they sync at session start, on feed down swipe (mobile), and when the cards view is opened if the last refresh was over one minute ago.
 - **Caching Content Cards**: Content Card caching options can be found in our [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) and [Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards) docs. 
 - **Frequency capping**: Frequency capping does not apply to Content Cards.
-- **Impressions**: Impressions are generally logged when a card is seen. For example, if you have a full inbox of Content Cards, an impression will not be logged until the user scrolls to the specific Content Card. There are some nuances between the Web, Android, and iOS platforms.  
+- **Impressions**: Impressions are generally logged when a card is seen. For example, if you have a full inbox of Content Cards, an impression will not be logged until the user scrolls to the specific Content Card. There are some nuances between the Web, Android, and iOS platforms.
+- **SDK sessions and card creation**: For users without sessions from the SDK, Content Cards will not be created even if the users meet the segment criteria. However, if a user already has a session on one platform (for example, Android), Content Cards with platform-specific click actions (for example, iOS-specific actions) will still be created, and the user can view those Content Cards on the other platform once they have a session there. Refer to [Card creation]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) for more information on when cards are created.  
 
 ## In-app messages
 
