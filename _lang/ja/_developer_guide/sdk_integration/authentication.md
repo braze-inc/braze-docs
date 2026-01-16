@@ -1,7 +1,7 @@
 ---
 page_order: 1.2
 nav_title: 認証
-article_title: Braze SDK の認証の設定
+article_title: Braze SDKの認証設定
 description: "この参考記事では、SDK 認証と、Braze SDK でこの機能を有効にする方法について説明します。"
 platform:
   - iOS
@@ -10,7 +10,7 @@ platform:
   
 ---
 
-# SDK 認証のセットアップ
+# SDK認証の設定
 
 > SDK 認証を使用すると、ログインしているユーザーの代わりに行われた SDK リクエストに対して (サーバー側で生成された) 暗号証明を提供できます。
 

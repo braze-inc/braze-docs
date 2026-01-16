@@ -1,6 +1,6 @@
 ---
 nav_title: Tapcart
-article_title: Tapcart と Braze の統合
+article_title: タップカートとBrazeを統合する
 description: "Tapcart と Braze の統合について説明します。"
 alias: /partners/tapcart/
 page_type: partner
