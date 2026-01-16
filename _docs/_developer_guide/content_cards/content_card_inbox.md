@@ -206,7 +206,7 @@ Impressions should only be logged once when a card is viewed by the user. We use
 
 {% endscrolly %}
 
-## Making an Inbox with Content Cards for Android
+## Making an Inbox with Content Cards for Android (Recyclerview)
 
 {% scrolly %}
 
