@@ -95,8 +95,6 @@ The [HTTP method]({{site.baseurl}}/user_guide/message_building_by_channel/webhoo
 
 The request body is the information that will be sent to the URL that you specified. You can  create the body of your webhook request with JSON key-value pairs or raw text.
 
-{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
-
 ##### JSON key-value pairs
 
 JSON key-value pairs allow you to easily write a request for an endpoint that expects a JSON format. You can only use this with an endpoint that expects a JSON request. For example, if your key is `message_body`, the corresponding value might be `Your order just arrived!`. After you've entered your key-value pair, the composer will configure your request in JSON syntax, and a preview of your JSON request will automatically populate.

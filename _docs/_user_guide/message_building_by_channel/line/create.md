@@ -66,13 +66,13 @@ Write your message using personalization (such as Liquid or Connected Content) a
 
 ![LINE composer with a message displayed in the preview.]({% image_buster /assets/img/line/line_composer.png %})
 
-{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
-
 ### Tips
 
 #### Using Liquid
 
 If you plan to use Liquid, be sure to include a default value for your personalization. This will prevent recipients with incomplete user profiles from receiving a blank placeholder. For example, instead of a user receiving the message "Hi, !", they might receive the message "Hi, new subscriber!".
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 #### Creating right-to-left messages
 
