@@ -14,7 +14,7 @@ layout: scrolly
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## Making an Inbox with Content Cards for Android (Compose)
+## Making an inbox with Content Cards for Android (Compose)
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
