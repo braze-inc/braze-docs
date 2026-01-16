@@ -49,7 +49,7 @@ With the design in hand, the team will work with you to identify and complete an
 
 ### Step 3: Set up your delivery platform
 
-Next, the AI Expert Service team will help you set up your marketing automation platform. While the decisioning studio works best with Braze, a variety of other platforms are supported&#8212;contact your AI Expert Service team for additional resources.
+Next, the AI Expert Service team will help you set up your customer engagement platform. While the decisioning studio works best with Braze, a variety of other platforms are supported&#8212;contact your AI Expert Service team for additional resources.
 
 {% tabs local %}
 {% tab Braze %}

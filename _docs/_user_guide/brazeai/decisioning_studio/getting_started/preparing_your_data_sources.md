@@ -31,9 +31,9 @@ The conversion asset describes what happened to the customer after orchestration
 | Requirement | Why? |
 |-------------|------|
 | Each record contains a unique customer identifier that is consistent with all data assets | Decisioning Studio needs to track the individual customer journey from recommendation, through activation, to conversion. |
-| Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for model training and metric calculation. |
-| If using a non-binary (e.g., converted vs. unconverted) target metric, the target metric value is provided with each conversion event | Decisioning Studio uses the target metric value to generate training experiences to appropriately reward/penalize the model based on the outcomes of the recommended actions. |
-| If conversions can be uniquely attributed to communications (e.g., coupon redemption), fields needed to match conversions to activations are provided | If a conversion event can be tied to a particular communication, this allows for clean and precise attribution. Direct attribution provides the clearest signal to the model, but if not possible (as is often the case), proximity-based attribution will be used. |
+| Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for agent training and metric calculation. |
+| If using a non-binary (e.g., converted vs. unconverted) target metric, the target metric value is provided with each conversion event | Decisioning Studio uses the target metric value to generate training experiences to appropriately reward/penalize the agent based on the outcomes of the recommended actions. |
+| If conversions can be uniquely attributed to communications (e.g., coupon redemption), fields needed to match conversions to activations are provided | If a conversion event can be tied to a particular communication, this allows for clean and precise attribution. Direct attribution provides the clearest signal to the agent, but if not possible (as is often the case), proximity-based attribution will be used. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### 2. Engagement data
@@ -43,8 +43,8 @@ The engagement asset describes customer interactions, including clicks, opens, a
 | Requirement | Why? |
 |-------------|------|
 | Each record contains a unique customer identifier that is consistent with all data assets | Decisioning Studio needs to track engagement events for each individual customer. |
-| Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for model training and metric calculation. |
-| If clicks, opens, or other engagement data can be uniquely attributed to communications, fields needed to match engagement to activations are provided | As with conversion data, if engagement can be tied to a particular communication, this allows for clean and precise attribution. Direct attribution provides the clearest signal to the model. |
+| Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for agent training and metric calculation. |
+| If clicks, opens, or other engagement data can be uniquely attributed to communications, fields needed to match engagement to activations are provided | As with conversion data, if engagement can be tied to a particular communication, this allows for clean and precise attribution. Direct attribution provides the clearest signal to the agent. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### 3. Activations data
@@ -58,7 +58,7 @@ Engagement data and activations data are very commonly found in the same data as
 | Requirement | Why? |
 |-------------|------|
 | Each record contains a unique customer identifier that is consistent with all data assets | Decisioning Studio needs to track the individual customer journey from recommendation, through activation, to conversion. |
-| Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for model training and metric calculation. |
-| Fields needed to match communication content to activation events are provided (e.g., event_id) | Correctly matching communication characteristics to sends is necessary for model attribution and training. |
+| Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for agent training and metric calculation. |
+| Fields needed to match communication content to activation events are provided (e.g., event_id) | Correctly matching communication characteristics to sends is necessary for agent attribution and training. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 

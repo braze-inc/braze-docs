@@ -61,6 +61,8 @@ If there is customer data that you would want to use for Decisioning Studio that
 - Microsoft Fabric
 - AWS S3
 
+For the full list of supported sources, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion).
+
 Once you are satisfied with the data you are sending into the Braze Data Platform, contact your AI Decisioning Services team to discuss which fields on the Customer Profile and Custom Attributes should be used for AI Decisioning.
 
 To streamline this process, create a list of Braze user profile attributes that you think best represent your customers' behaviors that should be used in Decisioning Studio (see the [list of available fields]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/#fields-to-export)). Your services team can also help you conduct discovery sessions to decide which fields are most appropriate for AI Decisioning.
@@ -120,17 +122,17 @@ If this is feasible, we can provide a GCS bucket to export customer data to.
 
 ## Best practices
 
-- **Descriptive column names**: Customer data should have clear, descriptive column names
+- **Descriptive column names**: Customer data should have clear, descriptive column names. Ideally, a data dictionary should be provided.
 - **Incremental updates**: Incremental files are preferable vs. snapshots of the whole customer history every day
 - **Consistent identifiers**: Each record must contain a unique customer identifier that is consistent across all data assets
-- **Include timestamps**: Records should have associated timestamps for accurate attribution and model training
+- **Include timestamps**: Records should have associated timestamps for accurate attribution and agent training
 
 ## Custom integrations
 
 Other options or completely custom data pipelines are possible. These may require additional Services work or Engineering work from your team. To determine what is feasible and optimal, work with your AI Decisioning Services team.
 
 {% alert important %}
-This guide explains the most common integration patterns. Information Security will still need to vet all connection points and Solutions Consultants will be available to assist with implementation.
+This guide explains the most common integration patterns. Information Security will still need to vet all connection points and Solutions Consultants will be available to advise on the implementation.
 {% endalert %}
 
 ## Next steps

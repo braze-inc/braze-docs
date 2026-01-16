@@ -54,7 +54,7 @@ Use case audiences are typically defined in a Customer Engagement Platform (such
 2. Provide the Segment ID to your AI Decisioning Services team.
 
 {% alert note %}
-For Braze, multiple segments can be combined to create the audience, and Decisioning Studio can ingest a segment for a Business-as-Usual comparator campaign. All of these patterns are acceptable.
+For Braze, we can ingest multiple segments and combine them to create the audience. Decisioning Studio can ingest on a segment for a Business-as-Usual comparator campaign. All of these patterns are acceptable.
 {% endalert %}
 
 {% endtab %}

@@ -87,9 +87,9 @@ Refer to the following table for more details about this report:
 {% endtab %}
 
 {% tab shaps %}
-The **SHAPs** report uses the Shapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation model. Each point on the chart represents one SHAP and the distribution of the points represent a general sense of a feature's directional impact.
+The **SHAPs** report uses the Shapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation agent. Each point on the chart represents one SHAP and the distribution of the points represent a general sense of a feature's directional impact.
 
-![SHAPs report chart displaying a horizontal bar graph with multiple colored bars representing different features or variables. Each bar shows the impact of a feature on the recommendation model, with the x-axis labeled SHAP value and the y-axis listing feature names such as Recency, Frequency, and Channel. The chart visualizes how each feature contributes positively or negatively to the model's predictions.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
+![SHAPs report chart displaying a horizontal bar graph with multiple colored bars representing different features or variables. Each bar shows the impact of a feature on the recommendation agent, with the x-axis labeled SHAP value and the y-axis listing feature names such as Recency, Frequency, and Channel. The chart visualizes how each feature contributes positively or negatively to the agent's predictions.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -108,7 +108,7 @@ The outbound diagnostics report shows the daily volume of recommendations genera
 
 {% tab inbound %}
 
-The inbound diagnostics report monitors the health of your data feeds into BrazeAI™. It tracks details like file counts, sizes, and row volumes for each asset, helping you confirm that data is flowing in as expected and troubleshoot issues before they affect your models or campaigns.
+The inbound diagnostics report monitors the health of your data feeds into BrazeAI™. It tracks details like file counts, sizes, and row volumes for each asset, helping you confirm that data is flowing in as expected and troubleshoot issues before they affect your agents or campaigns.
 
 You can use the dropdown to select different chart metrics, like average file size or file count.
 
@@ -132,16 +132,16 @@ Refer to the following table for more details about each metric in the inbound r
 
 ### Timeline
 
-The timeline report provides a visual record of key events alongside your performance metrics. These events include model runs, configuration changes, guardrail updates, and more. Annotations appear directly on uplift charts and in a dedicated timeline tab, giving you instant context for shifts in results without needing to track down historical changes.
+The timeline report provides a visual record of key events alongside your performance metrics. These events include agent runs, configuration changes, guardrail updates, and more. Annotations appear directly on uplift charts and in a dedicated timeline tab, giving you instant context for shifts in results without needing to track down historical changes.
 
-![Timeline report showing a chart with performance metrics over time. Key events such as model runs, configuration changes, and guardrail updates are marked as icons along the timeline. Below the chart, a table lists events with columns for date, type, label, details, and visibility in charts.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
+![Timeline report showing a chart with performance metrics over time. Key events such as agent runs, configuration changes, and guardrail updates are marked as icons along the timeline. Below the chart, a table lists events with columns for date, type, label, details, and visibility in charts.]({% image_buster /assets/img/decisioning_studio/reporting_timeline.png %})
 
 To compare performance between two groups, use the dropdowns to select your desired comparison criteria. Refer to the following table for more details:
 
 | Field | Description |
 |-------|-------------|
 | Date | The date when the event occurred. |
-| Type | The category of event, such as system update, model run, or configuration change. |
+| Type | The category of event, such as system update, agent run, or configuration change. |
 | Label | The name or identifier given to the event. |
 | Details | Additional information that describes the event. |
 | Visible in Charts | Indicates whether the event is displayed in related charts. |
