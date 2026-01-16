@@ -562,7 +562,7 @@ lines-main.js=96-99,101
 
 #### 3\.コンテンツカード更新を購読する
 
-コンテンツカードリスナーにサブスクライブして最新の更新s を受信し、[`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) を呼び出して、そのユーザーの最新のコンテンツカードをリクエストします。
+コンテンツカードリスナーにサブスクライブして最新の更新s を受信し、[`requestContentCardsRefresh()`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh>) を呼び出して、そのユーザーの最新のコンテンツカードをリクエストします。または、`openSession()` の前にサブスクライバーを呼び出して、セッションの起動時に自動的にリフレッシュします。 
 
 !!step
 lines-main.js=64,67,70-74

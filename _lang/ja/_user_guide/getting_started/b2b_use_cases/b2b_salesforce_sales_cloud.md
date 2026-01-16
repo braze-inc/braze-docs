@@ -1,12 +1,12 @@
 ---
 nav_title: Salesforce Sales Cloud
-article_title: Salesforce Sales Cloud を使ってリードを管理する
+article_title: Salesforce Sales Cloudでリードを管理する
 page_order: 3
 page_type: reference
 description: "Braze の Webhook を使用して、Salesforce sobjects/Lead エンドポイントを通して Salesforce Sales Cloud でリードを作成および更新する方法を学びます。"
 ---
 
-# Salesforce Sales Cloud を使ってリードを管理する
+# Salesforce Sales Cloudでリードを管理する
 
 > [Salesforce](https://www.salesforce.com/) は、リードジェネレーション、オポチュニティ追跡、アカウント管理など、企業が営業プロセス全体を管理できるように設計された、世界有数のクラウドベースのカスタマーリレーションシップマネジメント (CRM) プラットフォームです。<br><br>このページでは、Braze Webhook を使用して、コミュニティから投稿された統合を通じて Salesforce Sales Cloud でリードを作成および更新する方法を紹介します。
 

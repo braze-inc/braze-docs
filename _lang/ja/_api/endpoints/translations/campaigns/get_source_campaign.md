@@ -15,7 +15,7 @@ description: "この記事では、キャンペーン翻訳ソースエンドポ
 /キャンペーン/翻訳/ソース
 {% endapimethod %}
 
-> キャンペーンの翻訳タグのデフォルト翻訳ソースをすべて表示するには、このエンドポイントを使用する。を持つ値である。 {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}
+> キャンペーンの翻訳タグのデフォルト翻訳ソースをすべて表示するには、このエンドポイントを使用する。これらは{% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %} 内の値である。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
 
 {% alert important %}
 このエンドポイントは現在早期アクセス中である。早期アクセスへの参加に興味がある方は、Brazeのアカウントマネージャーに連絡を。
