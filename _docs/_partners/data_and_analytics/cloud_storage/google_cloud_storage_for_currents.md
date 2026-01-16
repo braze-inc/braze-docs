@@ -118,7 +118,7 @@ To verify these permissions in the Braze dashboard, go to the **Google Cloud Sto
 Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage.
+- All dashboard reports and CSV reports will be sent to the user's email for download (no storage permissions required) and backed up on Data Storage.
 
 {% alert important %}
 **JSON format requirement**: For JSON exports, Braze uses JSONL (newline-delimited JSON) format, where each line contains a separate JSON object. This format differs from standard JSON, which is a single JSON array or object. Each line in the exported file is a valid JSON object, but the file as a whole is not a single valid JSON document. When processing these files, parse each line individually as a separate JSON object rather than attempting to parse the entire file as a single JSON document.
