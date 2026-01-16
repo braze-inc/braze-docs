@@ -211,7 +211,7 @@ For more information, see [Nested Custom Attributes]({{site.baseurl}}/user_guide
 
 ### Invalid nested custom attributes
 
-When a nested custom attribute contains any invalid values (such as invalid time formats or null values), Braze drops all nested custom attribute updates in the request from processing. This applies to all nested structures within that specific attribute. To ensure successful processing, verify that all values within nested custom attributes are valid before sending.
+When a nested custom attribute contains any invalid values (such as invalid time formats or null values), all nested custom attribute updates in the request are not processed. This applies to all nested structures within that specific attribute. For successful processing, verify that all values within nested custom attributes are valid before sending.
 
 For more details, see [How does /users/track handle invalid nested custom attributes?]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#how-does-userstrack-handle-invalid-nested-custom-attributes) in the `/users/track` endpoint documentation.
 
