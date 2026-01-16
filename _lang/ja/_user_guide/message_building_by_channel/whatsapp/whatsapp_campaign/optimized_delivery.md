@@ -16,7 +16,7 @@ channel:
 
 最適化された配信を行うWhatsAppメッセージは、ダイナミックなエンゲージメントベースの配信を提供するMetaの[Marketing Messages API for WhatsApp（MM](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp)API for WhatsApp）を使用して送信される。つまり、エンゲージメントの高いメッセージ（例えば、読まれやすく、クリックされやすいメッセージ）は、エンゲージメントの高いユーザーにより多く届くことになる。WhatsAppでは、期待され、関連性があり、タイムリーなメッセージはエンゲージメントが高いと判断され、読まれたりクリックされたりする可能性が高くなる。 
 
-ブランドはMM API for WhatsAppを利用することで、Cloud APIと同等以上の配信性を期待できる。Metaによると、インドでは、エンゲージメントの高いマーケティングメッセージは、クラウドAPIと比較して最大9％多く配信された。なお、WhatsAppのMM APIは100％の配信性を保証するものではない。
+ブランドはMM API for WhatsAppを利用することで、Cloud APIと同等以上の配信性を期待できる。Metaによると、インドでは、エンゲージメントの高いマーケティングメッセージは、クラウドAPIと比較して、配信されたメッセージが最大9％増加した。なお、WhatsAppのMM APIは100％の配信性を保証するものではない。
 
 ### 地域の空室状況
 
@@ -25,7 +25,7 @@ channel:
 ## 最適化された配信の設定
 
 1. Brazeで、**Partner Integrations**>**Technology Partners**> WhatsAppに進む。
-2. **最適化された配信で送信を最適化する**」のセクションで、[埋め込みサインアップワークフローを]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)トリガーする**アップグレード**設定を選択する。
+2. **最適化された配信で送信を最適化する**」セクションで、[埋め込みサインアップワークフローを]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)トリガーする**アップグレード**設定を選択する。
 
 ![WhatsApp メッセージの統合セクションには、最適化された配信で送信を最適化するオプションがある。]({% image_buster /assets/img/whatsapp/whatsapp_messaging_integration.png %})
 
@@ -43,7 +43,7 @@ channel:
 
 ## キャンペーンとキャンバスで最適化された配信を使用する
 
-最適化された配信は、**マーケティングメッセージに**使われるべきである。Brazeは、**ユーティリティ、認証、サービス、レスポンスメッセージの**最適化された配信オプションを自動的に削除する。 
+最適化された配信は**マーケティングメッセージに**使われるべきである。Brazeは、**ユーティリティ、認証、サービス、レスポンスメッセージの**最適化された配信オプションを自動的に削除する。 
 
 ### 配送方法を選択する
 

@@ -202,7 +202,7 @@ CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 
 ソース・テーブルを作成する際には、以下を参照のこと：
 
-| フィールド名 | タイプ | required |
+| フィールド名 | タイプ | 必須かどうか |
 | :---- | :---- | :---- |
 | `UPDATED_AT` | タイムスタンプ | はい |
 | `PROPERTIES` | JSON | はい |
@@ -211,7 +211,7 @@ CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 | `ALIAS_LABEL` | 文字列 | NULL 許容 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-スキーマとテーブルには好きな名前をつけることができるが、カラム名は前述の定義と一致させる必要がある。
+スキーマとテーブルには好きな名前を付けることができるが、カラム名は前述の定義と一致させる必要がある。
 
 * `UPDATED_AT`:この行が更新または追加された時刻。前回の同期以降に追加または更新された行のみが同期される。  
 * `external_id` 、または`alias_name` 、`alias_label` のいずれかをユーザー識別子列とする。これらは、キャンバスのメッセージングをトリガーしたいユーザーを識別する。  
@@ -301,7 +301,7 @@ GO
 1. 送信先のキャンバスをキャンバスのトリガーに設定する。新しいキャンバスを作成するか、既存のAPIトリガーキャンバスを選択する。APIトリガー配信スケジュールタイプでキャンバスを作成する方法については、[エントリースケジュールタイプを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types)参照のこと。
 2. APIトリガー配信スケジュールタイプを選択した後、キャンバスのセットアップを続行し、キャンバスを構築する。キャンバスは、単純なシングルメッセージの送信から、複数のステップを持つ複雑な顧客ワークフローまで、幅広く対応できる。
 3. キャンバス・ステップの中で、[キャンバス・エントリー・プロパティを使って]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)、ソース・テーブルから同期する予定のプロパティ・フィールドでメッセージをパーソナライズさせる。
-  * 例えば、ステップ1で、`account_balance` のプロパティフィールドをインストルメント化した場合、メッセージをパーソナライズするために、次のようなLiquidテンプレートを使うことになる：`\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
+  * 例えば、ステップ1で、`account_balance` のプロパティフィールドをインストルメント化した場合、メッセージをパーソナライズするために、以下のリキッドテンプレートを使うことになる：`\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
 5. キャンバスを構築したら、それを起動し、[ステップ](#step-3-create-your-zero-copy-sync)3に進む。
 
 #### ステップ 3:ゼロコピー・シンクを作成する
