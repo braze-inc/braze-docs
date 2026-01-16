@@ -11,7 +11,7 @@ description: "The Braze dashboard is your central workspace for building, managi
 
 > The Braze dashboard is our web interface at [dashboard.braze.com](https://dashboard.braze.com/) or [dashboard.braze.eu](https://dashboard.braze.eu/)
 
-The Braze dashboard is your central space for building, managing, and analyzing customer engagement. It brings together messaging tools, audience insights, segmentation, and real-time performance data in one place.
+Use the Braze dashboard to plan campaigns, launch and manage messages, explore audience insights, adjust segmentation, and review real-time performance and engagement metrics from a single interface.
 
 ## Access your dashboard
 
