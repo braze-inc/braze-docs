@@ -30,7 +30,7 @@ Only make updates to your account schema when the sync is paused or not schedule
 - If `DELETED` is `true`, the account is deleted.
 - Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
 - Fields not in your accounts schema are dropped; update the schema before syncing new fields.
-- You can refresh, resume, or pause a sync by hovering over the sync name and select the relevant action.
+- You can refresh, resume, or pause a sync by hovering over the sync name and selecting the relevant action.
 
 ## Sync your account data
 
