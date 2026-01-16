@@ -3,23 +3,25 @@ nav_title: The dashboard
 article_title: The Braze dashboard
 page_order: 2
 page_type: reference
-description: "---"
+description: "The Braze dashboard is your central workspace for building, managing, and analyzing customer engagement. It brings together messaging tools, audience insights, segmentation, and real-time performance data in one place."
 
 ---
 
 # The Braze dashboard
 
-> The Braze dashboard is your central workspace for building, managing, and analyzing customer engagement. It brings together messaging tools, audience insights, segmentation, and real-time performance data in one place.
+> The Braze dashboard is our web interface at [dashboard.braze.com](https://dashboard.braze.com/) or [dashboard.braze.eu](https://dashboard.braze.eu/)
+
+The Braze dashboard is your central space for building, managing, and analyzing customer engagement. It brings together messaging tools, audience insights, segmentation, and real-time performance data in one place.
 
 ## Access your dashboard
 
-To get started, [sign in to your Braze account]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account). Your access and permissions are based on your assigned user permissions, review the [list of permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions) to learn more.
+To get started, [sign in to your Braze account]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account). Your access to pages within the dashboard and permission to perform certain actions are based on your assigned [user permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#list-of-permissions). If you need help with your permissions, contact your Braze administrators.
 
 ## Navigate Braze
 
 Braze navigation is designed to help you efficiently access features and content across devices. There are two levels of navigation in the Braze dashboard: global header and side navigation.
 
-The global header is always visible at the top of the screen. It provides quick access to essential tools and settings, including:
+The global header is almost always visible at the top of the screen. It provides quick access to essential tools and settings, including:
 
 - Search
 - Support and community links

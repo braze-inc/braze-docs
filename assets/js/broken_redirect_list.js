@@ -3221,4 +3221,7 @@ validurls['/docs/user_guide/brazeai/predictive_events/prediction_analytics/#purc
 
 validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/delete_users/';
 
+validurls['/docs/user_guide/administrative/access_braze/navigation/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
+validurls['/docs/user_guide/administrative/access_braze/global_search/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
+
 // validurls['OLD'] = 'NEW';
