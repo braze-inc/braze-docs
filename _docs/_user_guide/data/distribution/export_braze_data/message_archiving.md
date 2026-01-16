@@ -10,7 +10,7 @@ description: "This reference article covers message archiving, a feature that al
 
 # Message archiving
 
-> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container or Google Cloud Storage bucket. <br><br> This article covers how to set up message archiving, JSON payloads references, and frequently asked questions.
+> Message archiving lets you save a copy of messages sent to users for archival or compliance purposes to your AWS S3 bucket, Azure Blob Storage container, or Google Cloud Storage bucket. <br><br> This article covers how to set up message archiving, JSON payload references, and frequently asked questions.
 
 Message archiving is available as an add-on feature. To get started with message archiving, contact your Braze customer success manager.
 
@@ -73,14 +73,14 @@ If you don't see **Message Archiving** in **Settings**, confirm that your compan
 
 ## File references
 
-The following are references of the JSON payload delivered to your cloud storage bucket each time a message is sent. Refer to our code example repository for [message archive sample files](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
+The following are references to the JSON payload delivered to your cloud storage bucket each time a message is sent. Refer to our code example repository for [message archive sample files](https://github.com/braze-inc/braze-examples/tree/main/message-archiving).
 
 {% tabs %}
 {% tab Email %}
 
 ```json
 {
-  "version" : 1, //numerical version of the json structure
+  "version": 1, //numerical version of the JSON structure
   "to": ToAddress, ("customer@example.com")
   "subject": SubjectLine ("20% off coupon inside!"),
   "from_name": DisplayName ("Braze"),
@@ -100,7 +100,7 @@ The following are references of the JSON payload delivered to your cloud storage
   "attachments": Array of JSON Objects containing 'bytes' and 'file_name', // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_name": String, // will only be available if the message is from Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
@@ -115,7 +115,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
 
 ```json
 {
-  "version" : 1 //numerical version of the json structure
+  "version": 1 //numerical version of the JSON structure
   "to": PhoneNumber, ("+15555555555"),
   "body": Body ("Hi there!"),
   "subscription_group": SubscriptionGroupExternalId,
@@ -130,7 +130,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
   "message_variation_id": MessagVariationApiId, // may not be available
   "user_id": String,
   "campaign_name": String, // will only be available if the message is from a campaign
-  "canvas_name": String, // will only be available if the message is a from Canvas
+  "canvas_name": String, // will only be available if the message is from Canvas
   "canvas_step_name": String, // will only be available if the message is from a Canvas
   "external_id": String
 }
@@ -141,7 +141,7 @@ The `extras` field referred to in this payload is from the key-value pairs added
 
 ```json
 {
-  "version" : 1, //numerical version of the json structure
+  "version": 1, //numerical version of the JSON structure
   "to": PushToken,
   "payload": JsonOfEntirePushPayload,
   "platform": one of "android_push" | "ios_push" | "kindle_push" | "web_push",
@@ -176,7 +176,7 @@ When a message is sent outside of a campaign or Canvas, the campaign ID in the f
 
 ### How do I find more information about this send?
 
-You can use either the `external_id` or `dispatch_id` in conjunction with the `user_id` to cross-reference the templated message with our Currents data to find more information like the timestamp it was delivered, whether the user opened or clicked the message, and more.
+You can use either the `external_id` or `dispatch_id` in conjunction with the `user_id` to cross-reference the templated message with our Currents data to find more information, like the timestamp it was delivered, whether the user opened or clicked the message, and more.
 
 ### How are retries handled?
 
@@ -184,7 +184,7 @@ If your cloud storage bucket is unreachable, Braze will retry up to three times 
 
 ### What happens if my credentials are invalid?
 
-If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credentials issues.
+If your cloud storage credentials become invalid at any point, Braze won't be able to save any messages to your cloud storage bucket, and those messages will be lost. We recommend configuring your [notification preferences]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/notification_preferences/) for Amazon Web Services, Google Cloud Services, or Azure (Microsoft Cloud Services) so you'll receive alerts for any credential issues.
 
 ### Why does my archive file's `sent_at` timestamp differ slightly from the sent timestamp in Currents?
 
@@ -198,3 +198,6 @@ No. If you're interested in creating these specific buckets, submit [product fee
 
 The data is written to a `sent_messages` section of the bucket. Refer to [How it works](#how-it-works) for more details.
 
+### Can I use message archiving to group files into different workspaces?
+
+No. Message archiving doesn't support grouping files based on workspaces. Instead, you can determine which workspace the campaign or Canvas step API ID belongs to, and then group them based on that information.
