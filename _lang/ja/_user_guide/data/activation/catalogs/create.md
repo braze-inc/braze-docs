@@ -125,7 +125,7 @@ CSVファイルをアップロードしてカタログを作成する。`id`、`
 
 次に、このカタログに"games_catalog" と名前を付け、**Process カタログ** ボタンを選択します。その後、Brazeはカタログを作成する前に、カタログにエラーがないかチェックする。
 
-!["games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
+![という名前のカタログ "games_catalog".]({% image_buster /assets/img_archive/catalog_new_name.png %}){: style="max-width:85%;"}
 
 カタログが作成された後は、この名前を編集することはできないことに注意してほしい。カタログを削除してから、同じカタログ名を使用して更新後のバージョンを再びアップロードできます。
 
@@ -149,7 +149,7 @@ CSVファイルをアップロードしてカタログを作成する。`id`、`
 また、[カタログネーム](#template-catalog-names)でテンプレートsを使用して、言語やキャンペーンなどの変数に基づいてカタログネームをダイナミックな生成することもできます。
 {% endalert %}
 
-!["my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
+![という名前のカタログ "my_catalog".]({% image_buster /assets/img_archive/in_browser_catalog.png %}){: style="max-width:80%;"}
 
 ### ステップ 2:カタログを作成する
 
