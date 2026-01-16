@@ -35,6 +35,8 @@ Braze and Survicate work together to cover a range of feedback use cases, helpin
 | Requirement | Description |
 | ----------- | ----------- |
 | Survicate account | You need a Survicate account to activate this integration. |
+| Braze REST API key | A Braze REST API key with the permission `users.track`. <br><br> This can be created in the Braze dashboard from **Settings** > **APIs and Identifiers**. |
+| Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Key features of the integration
@@ -118,13 +120,14 @@ Display the first question directly in the email's body to start the survey from
 
 ![paste the code from the Launch tab of your survey to the HTML field]({% image_buster /assets/img/survicate/survicate_11.gif %})
 
+{% alert note %}
 Braze displays in-app messages in an iframe by default while the app's background is blocked. To allow interaction with your app, while Survicate surveys appear, you must:
 
 - Add `opts.useBrazeIframeClipper = true` to your Survicate-Braze snippet.
-​
 - Install the `@survicate/braze-bridge-npm` [package](https://www.npmjs.com/package/@survicate/braze-bridge-npm) in the file where you initialize Braze and use the `initBrazeBridge` function.
 
 You can find a sample snippet and React implementation [on Survicate's developers' site](https://developers.survicate.com/javascript/installation/#braze).
+{% endalert %}
 
 {: start="3"}
 3. In your Braze campaign, set up the Target and Assign steps. When complete, your campaign is ready to launch. In the Review step, you can see how the campaign looks. The survey appears on your website in the place specified in the Survicate panel, as described above.
