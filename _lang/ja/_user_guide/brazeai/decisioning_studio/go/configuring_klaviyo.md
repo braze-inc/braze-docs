@@ -1,5 +1,5 @@
 ---
-nav_title: Klaviyoで構成する
+nav_title: Klaviyoで設定する
 article_title: KlaviyoでBrazeAI Decisioning Studioを設定する
 page_order: 3
 description: "BrazeAI Decisioning<sup>StudioTM</sup>Goで使用するKlaviyo Flowの設定方法を学ぶ。"
@@ -89,7 +89,7 @@ BrazeAI Decisioning Studio™ Goポータルでは、テンプレートはプレ
 !["メールの詳細 "セクションで "テンプレートを選択 "オプションを選択する。]({% image_buster /assets/img/decisioning_studio_go/flow3.png %})
 
 {: start="3"}
-3\.ベーステンプレートを探して選択する。BrazeAI Decisioning Studio™ Goポータルの**使用するリソース**セクションで、テンプレート名からテンプレートを検索できる。
+3\.ベースとなるテンプレートを探し、選択する。BrazeAI Decisioning Studio™ Goポータルの**使用するリソース**セクションで、テンプレート名からテンプレートを検索できる。
 
 ![Klaviyoのベーステンプレートの例。]({% image_buster /assets/img/decisioning_studio_go/flow4.png %})
 
@@ -125,7 +125,7 @@ BrazeAI Decisioning Studio™ Goポータルでは、テンプレートはプレ
 
 {: start="3"}
 3\.**メールの詳細**で、**テンプレートの選択を**選択する。
-4. ベーステンプレートを探して選択する。BrazeAI Decisioning Studio™ Goポータルの**使用するリソース**セクションで、ベーステンプレート名からテンプレートを検索できる。
+4. ベースとなるテンプレートを探し、選択する。BrazeAI Decisioning Studio™ Goポータルの**使用するリソース**セクションで、ベーステンプレート名からテンプレートを検索できる。
 5. **テンプレートを使用**＞**保存を**選択する。
 6. **件名には** {% raw %}`{{event.SubjectLine}}`{% endraw %} と入力する。
 7. **Sender name（送信者名**）と**Sender email address（送信者メールアドレス**）には、使用したい詳細を入力する。
@@ -151,7 +151,7 @@ BrazeAI Decisioning Studio™ Goポータルでは、テンプレートはプレ
 4. 新しいトリガースプリットの**Yes**Branchに**Email**ノードをドラッグ＆ドロップする。
 5. [ステップ3.](#step-31-add-your-email-template)1のステップ1～5を繰り返し、対応するテンプレートを選択する。
 5. **件名を** {% raw %}`{{event.SubjectLine}}`{% endraw %} に設定し、**最近メールしたプロファイルをスキップする**チェックボックスのチェックを外す。
-6. 実験者が使用しているベーステンプレートごとに、**トリガー分割**ノードと**メール**ノードが1つずつできるまで、このプロセスを繰り返す。最後のトリガー・スプリットでは、"No "ブランチには何も入っていないはずだ。
+6. 実験者が使用するベーステンプレートごとに、**トリガー分割**ノードと**メール**ノードが1つずつできるまで、このプロセスを繰り返す。最後のトリガー・スプリットでは、"No "ブランチには何も入っていないはずだ。
 
 ![複数のメールノードに分岐する複数のトリガー分岐ノードを持つKlaviyoフロー。]({% image_buster /assets/img/decisioning_studio_go/flow10.png %})
 
