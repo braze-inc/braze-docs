@@ -48,6 +48,8 @@ tool: Canvas
 - `event_properties` は先頭のメッセージステップで使用できません。代わりに、`canvas_entry_properties` を使用するか、`event_properties` を含むメッセージステップの**前に**、対応するイベントを持つアクションパスステップを追加する必要があります。 
 - アクションパスステップに [SMS インバウンドメッセージを送信しました] または [WhatsApp インバウンドメッセージを送信しました] トリガーが含まれている場合、後続のキャンバスステップに SMS または WhatsApp Liquid プロパティを含めることができます。これは、キャンバスでのイベントプロパティの動作を反映します。こうすることで、メッセージを活用して、ユーザープロファイルや会話メッセージに関するファーストパーティデータを保存し、参照することができる。
 
+{% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
+
 ### イベントプロパティのタイムスタンプ
 
 アクション ベースのキャンバスで[ datetime type]({{site.baseurl}}/user_guide/data/custom_data/custom_events/#custom-event-properties) from [ トリガー event properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) のタイムスタンプを使用している場合、タイムスタンプはUTC に正規化されます。いくつかの例外については、以下で詳しく説明します。

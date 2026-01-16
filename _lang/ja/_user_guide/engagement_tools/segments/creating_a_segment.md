@@ -1,6 +1,6 @@
 ---
 nav_title: セグメントを作成する
-article_title: セグメントの作成
+article_title: セグメントを作成する
 page_order: 0
 page_type: tutorial
 description: "この記事では、Braze を使用してセグメントを設定・作成する手順について説明します。"
@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segmentの作成
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Segmentを作成する
 
 > セグメンテーションにより、人口統計、行動、または技術的な特徴やアクションに基づいてユーザーをターゲットすることができます。セグメンテーションとメッセージングの自動化を創造的かつインテリジェントに使用することで、ユーザーをファーストタッチから長期顧客へとシームレスに移行できます。セグメントは、データの変更に応じてリアルタイムで更新されます。また、ターゲットおよびメッセージングの目的で必要な数のセグメントを作成できます。
 
