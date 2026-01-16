@@ -15,7 +15,7 @@ toc_headers: h2
 
 With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. If you need syncs to occur more frequently than 15 minutes, contact your customer success manager or consider using REST API calls for real-time data ingestion.
 
-When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
+When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data is reflected in Braze.
 
 ## Use cases
 
@@ -84,12 +84,11 @@ Braze Cloud Data Ingestion counts toward the available rate limit, so if you're 
 
 | Limitation            | Description                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Number of integrations | There is no limit on how many integrations you can set up. However, you will only be able to set up one integration per table or view.                                             |
-| Number of rows         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows will be stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
+| Number of integrations | There is no limit on how many integrations you can set up. However, you can set up only one integration per table or view.                                             |
+| Number of rows         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows are stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
 | Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
-| Payload size           | Each row can contain a payload of up to 1 MB. Payloads greater than 1&nbsp;MB will be rejected, and the error "Payload was greater than 1MB" will be logged to the sync log along with the associated external ID and truncated payload. |
+| Payload size           | Each row can contain a payload of up to 1 MB. Payloads greater than 1 MB are rejected, and the error "Payload was greater than 1MB" is logged to the sync log along with the associated external ID and truncated payload. |
 | Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
 | Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
-| Source region       | Braze will connect to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
+| Source region       | Braze connects to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
