@@ -332,7 +332,7 @@ A notification informs you whether your credentials have been successfully valid
 
 ## Export behavior
 
-Users that have integrated a cloud data storage solution and are trying to export APIs, dashboard reports, or CSV reports experience the following:
+Users who have integrated a cloud data storage solution and export APIs, dashboard reports, or CSV reports experience the following:
 
 - All API exports do not return a download URL in the response body and must be retrieved through data storage.
 - All dashboard reports and CSV reports are sent to the user's email for download (no storage permissions required) and backed up on Data Storage.
