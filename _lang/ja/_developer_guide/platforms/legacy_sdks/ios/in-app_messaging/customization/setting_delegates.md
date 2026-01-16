@@ -1,6 +1,6 @@
 ---
-nav_title: デリゲートの設定
-article_title: iOS 向けのアプリ内メッセージデリゲートの設定
+nav_title: 出席者を設定する
+article_title: iOS 用のアプリ内メッセージデリゲートの設定
 platform: iOS
 page_order: 2
 description: "この参考記事では、iOS アプリケーションのアプリ内メッセージングデリゲートの設定について説明します。"
@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# デリゲートの設定
+# 出席者を設定する
 
 アプリ内メッセージの表示と配信のカスタマイズは、オプションのデリゲートを設定することでコードで実行できます。
 

@@ -57,12 +57,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`name`| 必須 | 文字列 | 次の条件を満たすユーザー設定センターの名前。<br>\- 文字、数字、ハイフン、およびアンダースコアのみを含む <br>\- スペースがない |
+|`name`| 必須かどうか | 文字列 | 次の条件を満たすユーザー設定センターの名前。<br>\- 文字、数字、ハイフン、およびアンダースコアのみを含む <br>\- スペースがない |
 |`preference_center_title`| オプション | 文字列 | ユーザー設定センターおよび確定ページのタイトル。タイトルが指定されていない場合、ページのタイトルはデフォルトで「ユーザー設定センター」になります。 |
-|`preference_center_page_html`| 必須 | 文字列 | ユーザー設定センター画面のHTMLです。 |
-|`confirmation_page_html`| 必須 | 文字列 | 確定画面のHTML。 |
+|`preference_center_page_html`| 必須かどうか | 文字列 | ユーザー設定センター画面のHTMLです。 |
+|`confirmation_page_html`| 必須かどうか | 文字列 | 確定画面のHTML。 |
 |`state` | オプション | 文字列 | `active` または`draft` を選択する。指定がない場合のデフォルトは`active` である。 |
 |`options` | オプション | オブジェクト | 属性:<br>`meta-viewport-content`:存在する場合、`viewport` メタタグが`content= <value of attribute>` でページに追加されます。<br><br> `link-tags`:ページのファビコンを設定します。設定すると、rel 属性を持つ`<link>` タグがページに追加されます。  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
