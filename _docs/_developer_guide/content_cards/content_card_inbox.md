@@ -2,7 +2,7 @@
 nav_title: "Tutorial: Content Card Inboxes"
 article_title: "Tutorial: Making an Inbox with Content Cards"
 description: ""
-page_order: 1
+page_order: 6
 layout: scrolly
 ---
 
@@ -179,14 +179,14 @@ lines-ContentCardsInboxScreen.kt=47-69
 
 #### 2. Build a UI view
 
-For Jetpack Compose, we use a [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>) to display Content Cards in a scrollable list.
+For Jetpack Compose, use a [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>) to display Content Cards in a scrollable list.
 
 !!step
 lines-ContentCardsInboxScreen.kt=25-37
 
 #### 3. Subscribe to Content Card updates
 
-We use a [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) to manage the subscription lifecycle, ensuring proper cleanup when the composable leaves the composition.
+Use a [`DisposableEffect`](<https://developer.android.com/develop/ui/compose/side-effects#disposableeffect>) to manage the subscription lifecycle, ensuring proper cleanup when the composable leaves the composition.
 
 !!step
 lines-ContentCardsInboxScreen.kt=84-95
@@ -202,11 +202,11 @@ lines-ContentCardsInboxScreen.kt=57,62
 
 You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) methods available for Content Cards.
 
-Impressions should only be logged once when a card is viewed by the user. We use `LaunchedEffect` to log impressions when a card becomes visible. Note that you may need to think through the view lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
+Impressions should only be logged once when a card is viewed by the user. Use `LaunchedEffect` to log impressions when a card becomes visible. Note that you may need to consider the view lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
 {% endscrolly %}
 
-## Making an Inbox with Content Cards for Android (RecyclerView)
+## Making an inbox with Content Cards for Android (RecyclerView)
 
 {% scrolly %}
 
@@ -375,7 +375,7 @@ lines-content_card_inbox.xml=1-24
 
 #### 2. Build a UI view
 
-We're using Android's [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) to display Content Cards in this tutorial, but we recommend building a UI with classes and components that suit your use case(s). Braze provides UI by default, but here we create a custom view to have full control over the appearance and behavior.
+In this tutorial, we use Android's [`RecyclerView`](<https://developer.android.com/develop/ui/views/layout/recyclerview>) to display Content Cards, but we recommend building a UI with classes and components that suits your use case. Braze provides the UI by default, but this tutorial guides you to create a custom view to customize the appearance and behavior.
 
 !!step
 lines-ContentCardInboxActivity.kt=29-35,40-42,44
@@ -389,7 +389,7 @@ lines-ContentCardInboxActivity.kt=73-84
 
 #### 4. Build a custom inbox UI
 
-Using the content card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
+Using the Content Card [attributes](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html>) such as `title`, `description`, and `url` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Android's native `RecyclerView`.
 
 !!step
 lines-ContentCardInboxActivity.kt=90,93
@@ -398,14 +398,14 @@ lines-ContentCardInboxActivity.kt=90,93
 
 You can log impressions and clicks using the [`logImpressions`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-impression.html>) and [`logClick`](<https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/log-click.html>) methods available for Content Cards.
 
-Impressions should only be logged once when a card is viewed by the user. Here, we use a naive mechanism to guard against duplicate logs with a per-card flag. Note that you may need to think through the view lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
+Impressions should only be logged once when a card is viewed by the user. Here, we use a naive mechanism to guard against duplicate logs with a per-card flag. Note that you may need to consider the view lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
 {% multi_lang_include developer_guide/prerequisites/swift.md %} You'll also need to [enable in-app messages for Swift]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages).
 
-## Making an Inbox with Content Cards for Swift
+## Making an inbox with Content Cards for Swift
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
@@ -541,7 +541,7 @@ lines-BrazeInboxView.swift=5
 
 #### 2. Build a UI View
 
-We're using Swift's [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller) in this tutorial, but we recommend building a UI with classes and components that suit your use case(s).
+In this tutorial, we use Swift's [`UITableViewController`](https://developer.apple.com/documentation/uikit/uitableviewcontroller), but we recommend building a UI with classes and components that suits your use case.
 
 !!step
 lines-BrazeInboxView.swift=15-20
@@ -555,7 +555,7 @@ lines-BrazeInboxView.swift=34-35
 
 #### 4. Build a custom inbox UI
 
-Using the content card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) such as `title`, `description`, and `imageUrl` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Swift's native table APIs.
+Using the Content Card [`attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) such as `title`, `description`, and `imageUrl` allows you to build Content Cards to match your specific UI requirements. In this case, we're building an inbox with Swift's native table APIs.
 
 !!step
 lines-BrazeInboxView.swift=8,43,49-56
@@ -566,14 +566,14 @@ You can log impressions and clicks using the [`logClick(using:)`](<https://braze
 
 Additionally, you can use [`logDismissed(using:)`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/logdismissed(using:)/>) for dismissals.
 
-Impressions should only be logged once when viewed by the user. Here, a naive mechanism using a `Set` and `willDisplay` is used to achieve this. Note that you may need to think through the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
+Impressions should only be logged once when viewed by the user. Here, a naive mechanism using a `Set` and `willDisplay` is used to achieve this. Note that you may need to consider the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab web %}
 {% multi_lang_include developer_guide/prerequisites/web.md %} However, no additional setup is required.
 
-## Making an Inbox with Content Cards for Web
+## Making an inbox with Content Cards for Web
 
 {% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
 
@@ -739,14 +739,14 @@ lines-main.js=3-4,9
 
 #### 1. Enable debugging (optional)
 
-To make troubleshooting easier while developing, consider enabling debugging. You can also run braze web SDK methods in the console if you wish.
+To make troubleshooting easier while developing, consider enabling debugging. Optionally, you can also run Braze Web SDK methods in the console.
 
 !!step
 lines-index.html=1-44
 
 #### 2. Build the UI
 
-Create a UI for the inbox page. Here, we're building a basic HTML page, which includes a `div` with the id `cards-list`. This will be used as the target container for rendering Content Cards.
+Create a UI for the inbox page. Here, we're building a basic HTML page, which includes a `div` with the id `cards-list`. This is used as the target container for rendering Content Cards.
 
 !!step
 lines-main.js=96-99,101
@@ -760,7 +760,7 @@ lines-main.js=64,67,70-74
 
 #### 4. Build the inbox elements
 
-Using the content card [attributes](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) such as `title`, `description`, and `url` allows you to display Content Cards to match your specific UI requirements.
+Using the Content Card [attributes](<https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.classiccard.html>) such as `title`, `description`, and `url` allows you to display Content Cards to match your specific UI requirements.
 
 !!step
 lines-main.js=22-25,28-43,84,91
@@ -771,7 +771,7 @@ You can log impressions and clicks using the [`logContentCardImpressions`](<http
 
 Additionally, you can use [`logCardDismissal`](<https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcarddismissal>) for dismissals.
 
-Impressions should only be logged once when viewed by the user. Here, an `IntersectionObserver` plus a `Set` keyed by `card.id` prevents duplicate logs. Note that you may need to think through the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
+Impressions should only be logged once when viewed by the user. Here, an `IntersectionObserver` plus a `Set` keyed by `card.id` prevents duplicate logs. Note that you may need to consider the UI lifecycle of your app, as well as use case, to ensure impressions are logged correctly.
 
 {% endscrolly %}
 {% endsdktab %}
