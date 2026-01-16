@@ -319,7 +319,7 @@ To make troubleshooting easier while developing, consider enabling debugging.
 
 !!step
 lines-content_card_inbox.xml=1-24
-lines-ContentCardInboxCompose.kt=51-64
+lines-ContentCardInboxCompose.kt=229-235
 
 #### 2. Build a UI view
 
@@ -329,7 +329,7 @@ For Jetpack Compose, we use a [`LazyColumn`](<https://developer.android.com/deve
 
 !!step
 lines-ContentCardInboxActivity.kt=29-35,40-42,44
-lines-ContentCardInboxCompose.kt=38-49
+lines-ContentCardInboxCompose.kt=215-227
 
 #### 3. Subscribe to Content Card updates
 
@@ -339,7 +339,7 @@ For Jetpack Compose, we use a [`DisposableEffect`](<https://developer.android.co
 
 !!step
 lines-ContentCardInboxActivity.kt=73-84
-lines-ContentCardInboxCompose.kt=91-107
+lines-ContentCardInboxCompose.kt=215-227
 
 #### 4. Build a custom inbox UI
 
@@ -347,7 +347,7 @@ Using the content card [attributes](<https://braze-inc.github.io/braze-android-s
 
 !!step
 lines-ContentCardInboxActivity.kt=90,93
-lines-ContentCardInboxCompose.kt=66-72,85-88
+lines-ContentCardInboxCompose.kt=263-310,274-285
 
 #### 5. Track impressions and clicks
 
