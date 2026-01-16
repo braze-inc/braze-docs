@@ -53,10 +53,7 @@ The default settings are:
 - Block all public access
 - Disable bucket versioning
 - SSE-S3 encryption
-
-{% alert important %}
-SSE-S3 (Amazon S3 managed keys) is the only supported server-side encryption type. Amazon KMS (Key Management Service) encryption is not supported.
-{% endalert %}
+  - SSE-S3 is the only supported server-side encryption type. Amazon KMS encryption is not supported.
 
 Take note of the region you've created the bucket in, as you will create an SQS queue in the same region in the next step.
 
