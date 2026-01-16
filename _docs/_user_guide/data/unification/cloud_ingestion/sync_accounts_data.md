@@ -30,6 +30,7 @@ Only make updates to your account schema when the sync is paused or not schedule
 - If `DELETED` is `true`, the account is deleted.
 - Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
 - Fields not in your accounts schema are dropped; update the schema before syncing new fields.
+- You can refresh, resume, or pause a sync by hovering over the sync name and select the relevant action.
 
 ## Sync your account data
 
@@ -80,8 +81,6 @@ To integrate your data source with your data warehouse:
 8. Add the public key from the dashboard to the user you created. This requires a user with `SECURITYADMIN` access or higher in Snowflake. 
 9. Select **Test Connection** to confirm the setup. 
 10. When you're finished, save the sync.
-
-To refresh, resume, or pause a sync, hover over the sync name and select the relevant action.
 
 {% endsubtab %}
 {% subtab Redshift %}
