@@ -179,7 +179,7 @@ lines-ContentCardsInboxScreen.kt=47-69
 
 #### 2. Build a UI view
 
-For Jetpack Compose, we use a [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists>) to display Content Cards in a scrollable list.
+For Jetpack Compose, we use a [`LazyColumn`](<https://developer.android.com/develop/ui/compose/lists#lazy>) to display Content Cards in a scrollable list.
 
 !!step
 lines-ContentCardsInboxScreen.kt=25-37
