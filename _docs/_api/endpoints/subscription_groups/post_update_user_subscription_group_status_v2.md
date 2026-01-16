@@ -18,23 +18,23 @@ channel:
 
 > Use this endpoint to batch update the subscription state of up to 50 users on the Braze dashboard.
 
-You can access a subscription group's `subscription_group_id` by navigating to the **Subscriptions Group** page.
+You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Groups** page.
 
-If you want to see examples or test this endpoint for **Email Subscription Groups**:
+To see examples or test this endpoint for **Email Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b1b9a0e0-6329-4df2-a465-53347f410662 {% endapiref %}
 
-If you want to see examples or test this endpoint for **SMS Subscription Groups**:
+To see examples or test this endpoint for **SMS Subscription Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
-If you want to see examples or test this endpoint for **WhatsApp Groups**:
+To see examples or test this endpoint for **WhatsApp Groups**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81a5fe65-588b-4b61-82d8-5ce68b681409 {% endapiref %}
 
 ## Prerequisites
 
-To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
+To use this endpoint, you need an [API key]({{site.baseurl}}/api/basics#rest-api-key/) with the `subscription.status.set` permission.
 
 {% alert note %}
 If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
@@ -44,7 +44,7 @@ If you're interested in using this endpoint with [LINE subscription groups]({{si
 
 The V2 endpoint differs from the [V1 endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) in the following ways:
 
-- **Multiple subscription groups**: V2 allows you to update multiple subscription groups in a single API request, while V1 only supports one subscription group per request.
+- **Multiple subscription groups**: V2 lets you update multiple subscription groups in a single API request, while V1 supports only one subscription group per request.
 - **Update both email and SMS in one call**: When using `external_ids`, you can update both email and SMS subscription groups for the same users in a single API call. With V1, you must make separate API calls for email and SMS subscription groups.
 - **Using email or phone identifiers**: If you use `emails` or `phones` instead of `external_ids`, you cannot update both email and SMS subscription groups in the same request. You must make separate API calls—one for email subscription groups and one for SMS subscription groups.
 
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   ]
 }
 ```
-\* Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
+\* Note that you cannot include both `emails` and `phones` parameters. You can send `emails`, `phones`, or `external_ids` individually.
 
 {% alert tip %}
 When creating new users using the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), you can set subscription groups within the user attributes object, which allows you to create a user and set the subscription group state in one API call.
@@ -90,8 +90,8 @@ When creating new users using the [`/users/track` endpoint]({{site.baseurl}}/api
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_ids` | Required* | Array of strings | The `external_id` of the user or users,  may include up to 50 `id`s. |
 | `emails` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, all users that share the email address are updated with the subscription group changes. |
-| `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone numbers of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). Phone numbers must be in E.164 format (for example, `+12223334444`). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes.|
-| `use_double_opt_in_logic` | Optional | Boolean | If this parameter is omitted or set to `false`, users won't be entered into the SMS double opt-in workflow. |
+| `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | You can pass user phone numbers as an array of strings. Must include at least one phone number (up to 50). Phone numbers must be in E.164 format (for example, `+12223334444`). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes.|
+| `use_double_opt_in_logic` | Optional | Boolean | If this parameter is omitted or set to `false`, users are not entered into the SMS double opt-in workflow. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert important %}
