@@ -34,7 +34,7 @@ After your IPs, domains, subdomains, and IP pools are configured, we'll send you
 
 {% multi_lang_include dns_records.md %}
 
-After Braze provides your DNS records, be sure to add them promptly. Domain verification is time-bound, and if records are added too late, verification may fail even if the DNS records later resolve correctly. If your DNS records appear correct but verification fails, contact the Braze Onboarding or Support team to reinitiate verification.
+After Braze provides your DNS records, add them as soon as your DNS or IT team is able. Domain verification is time-bound, and if records are added too late, verification may fail even if the DNS records later resolve correctly. If your DNS records appear correct but verification fails, contact the Braze Onboarding or Support team to reinitiate verification.
 
 ### Next steps
 
@@ -69,7 +69,7 @@ Next, add the TXT and CNAME records from the bottom of the page to your DNS prov
 
 ![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
-If verification fails with an error indicating the hostname is not reachable, this does not always mean your DNS records are missing or incorrect. Verification attempts can fail if DNS records were added after the original verification window or before DNS propagation completed. If your DNS records resolve correctly but verification still fails, try verifying again or contact Braze Support for assistance.
+If verification fails and you believe your DNS records are correct, contact Braze Support for assistance.
 
 {% alert important %}
 The sending domain must be a subordinate to a domain you own. For example, if you own "example.com", a subdomain could be "mail.example.com", which allows you to use the sending address "@mail.example.com".
