@@ -68,7 +68,7 @@ Live monitoring will alert you in the Braze dashboard if any of your active doma
 
 ## Assigning custom domains to subscription groups
 
-After they're configured, custom domains can be assigned to one or multiple SMS, RCS, and WhatsApp subscription groups. 
+After they're configured, custom domains can be assigned to one or multiple SMS, RCS, and WhatsApp subscription groups.
 
 1. Go to **Audience** > **Subscription Group Management**.
 2. Find and select your subscription group in the list.
