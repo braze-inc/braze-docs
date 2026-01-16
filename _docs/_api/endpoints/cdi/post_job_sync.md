@@ -29,7 +29,7 @@ To use this endpoint, you must generate an API key with the `cdi.integration_syn
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `integration_id` | Required | String | Integration ID. You can find this ID in the URL when viewing an integration in the Braze dashboard. The URL format is `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
+| `integration_id` | Required | String | Integration ID. This is found in the URL when viewing an integration in the Braze dashboard. The URL format is `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Example request
