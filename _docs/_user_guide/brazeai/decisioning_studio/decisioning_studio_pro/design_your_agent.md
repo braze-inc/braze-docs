@@ -82,9 +82,9 @@ See the [Klaviyo documentation](https://help.klaviyo.com/hc/en-us/articles/11500
 {% endtab %}
 {% tab Other Platforms %}
 
-**Other Cloud Solutions (Google Cloud Storage, Azure, and AWS)**
+**Google Cloud Storage**
 
-If the audience is not currently stored in Braze, SFMC, or Klaviyo, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Services bucket. We can also support export to AWS or Azure (although GCS is preferable).
+If the audience is not currently stored in Braze, SFMC, or Klaviyo, then the next best step is to configure an automated export directly to a Braze-controlled Google Cloud Services bucket.
 
 To determine whether this is feasible, refer to the documentation for your Martech platform. For example, mParticle offers a [native integration with Google Cloud Storage](https://www.mparticle.com/integration/google-cloud-storage/). If this is the case, we can provide a GCS bucket to export audience data to.
 
@@ -117,10 +117,6 @@ A few best practices for designing Decisioning Studio agents:
 1. **Maximize data richness**: The more information agents have about your customers, the better they will perform.
 2. **Diversify actions**: The more diverse the set of actions the agent can take, the more it can personalize its strategy for each user.
 3. **Minimize constraints**: The fewer constraints on your agents, the better. Constraints should be designed to respect business rules while freeing agent-led experimentation as much as possible.
-
-## Custom integrations
-
-Other options or completely custom audience builds are possible. These may require additional Services work or Engineering work from your team. To determine what is feasible and optimal, work with the AI Decisioning Services team.
 
 ## Next steps
 
