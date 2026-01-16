@@ -102,7 +102,7 @@ For example, you can add {% raw %}`{{custom_attribute.${support_agent}}}`{% endr
 
 [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-open-tracking-pixel/){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
-The email opening tracking pixel is an invisible 1 x 1&nbsp;px image that automatically gets inserted into your email HTML. If a user's email client makes a request to our tracking pixel, the request can contain information such as the IP address, user agent, and timestamp. This pixel also helps Braze detect whether your users have opened your email. Email open information can be very useful, helping users determine effective marketing strategies by understanding the corresponding open rates.
+The email opening tracking pixel is an invisible 1 x 1&nbsp;px image that Braze inserts into your email HTML. This pixel helps Braze detect whether your users have opened your email. When a user's email client makes a request to our tracking pixel, the request can contain information such as the IP address, user agent, and timestamp. Email open information can be very useful, helping you determine effective marketing strategies by understanding the corresponding open rates.
 
 ### Placing the tracking pixel
 
