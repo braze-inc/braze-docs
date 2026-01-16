@@ -1,7 +1,7 @@
 ---
 nav_title: Conversion events
 article_title: Conversion Events
-page_order: 4
+page_order: 3
 page_type: reference
 description: "This reference article defines conversion events, how to use them to define your success metrics in Braze, and how to use these events to see how engaged your users are."
 tool:
