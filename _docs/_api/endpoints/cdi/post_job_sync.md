@@ -18,7 +18,7 @@ description: "This article outlines details about the Trigger sync Braze endpoin
 > Use this endpoint to trigger a sync for a given integration.
 
 {% alert note %}
-To use this endpoint, you'll need to generate an API key with the `cdi.integration_sync` permission.
+To use this endpoint, you must generate an API key with the `cdi.integration_sync` permission.
 {% endalert %}
 
 ## Rate limit
@@ -63,6 +63,6 @@ The following table lists possible returned errors and their associated troubles
 | `429 Another job is in progress` | There is a sync currently running for this integration. Try again after the sync has completed. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For additional status codes and associated error messages, please refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
+For additional status codes and associated error messages, refer to [Fatal errors & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}
