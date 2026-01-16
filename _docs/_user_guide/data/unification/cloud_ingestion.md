@@ -17,6 +17,10 @@ With Braze Cloud Data Ingestion (CDI), you set up an integration between your da
 
 When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data will be reflected in Braze.
 
+### Finding your integration ID
+
+You can find your integration ID in the URL when viewing an integration in the Braze dashboard. Navigate to **Data Settings** > **Cloud Data Ingestion** and select an integration. The integration ID appears in the URL in the format `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. You can use this ID when making API calls to trigger syncs or check sync status.
+
 ## Use cases
 
 With Braze Cloud Data Ingestion capabilities, you can:
