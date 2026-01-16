@@ -40,6 +40,18 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 If you're interested in using this endpoint with [LINE subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), contact your customer success manager.
 {% endalert %}
 
+## Differences from V1
+
+The V2 endpoint differs from the [V1 endpoint]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) in the following ways:
+
+- **Multiple subscription groups**: V2 allows you to update multiple subscription groups in a single API request, while V1 only supports one subscription group per request.
+- **Update both email and SMS in one call**: When using `external_ids`, you can update both email and SMS subscription groups for the same users in a single API call. With V1, you must make separate API calls for email and SMS subscription groups.
+- **Using email or phone identifiers**: If you use `emails` or `phones` instead of `external_ids`, you cannot update both email and SMS subscription groups in the same request. You must make separate API calls—one for email subscription groups and one for SMS subscription groups.
+
+{% alert important %}
+**Phone number format**: Phone numbers must be in [E.164 format](https://en.wikipedia.org/wiki/E.164) (for example, `+12223334444`). Phone numbers that are not in E.164 format are rejected.
+{% endalert %}
+
 ## Rate limit
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
@@ -78,17 +90,20 @@ When creating new users using the [`/users/track` endpoint]({{site.baseurl}}/api
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_ids` | Required* | Array of strings | The `external_id` of the user or users,  may include up to 50 `id`s. |
 | `emails` | Required* | String or array of strings | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a maximum of 50). <br><br>If multiple users (`external_id`) in the same workspace share the same email address, all users that share the email address are updated with the subscription group changes. |
-| `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone numbers of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes.|
+| `phones` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone numbers of the user, can be passed as an array of strings. Must include at least one phone number (up to 50). Phone numbers must be in E.164 format (for example, `+12223334444`). <br><br>If multiple users (`external_id`) in the same workspace share the same phone number, then all users that share the phone number are updated with the same subscription group changes.|
 | `use_double_opt_in_logic` | Optional | Boolean | If this parameter is omitted or set to `false`, users won't be entered into the SMS double opt-in workflow. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
-{% alert note %}
-Note that you cannot include both `emails` and `phones` parameters. Also, `emails`, `phones`, and `external_ids` can all be sent individually.
+{% alert important %}
+**Identifier selection**: 
+- To update both email and SMS subscription groups in a single API call, use `external_ids` only. You cannot include both `emails` and `phones` in the same request.
+- If you want to use `emails` or `phones` instead of `external_ids`, you must make separate API calls—one for email subscription groups and one for SMS subscription groups.
+- You can send `emails`, `phones`, or `external_ids` individually, but you cannot include both `emails` and `phones` in the same request.
 {% endalert %}
 
 ### Example requests
 
-The following example uses `external_id` to make one API call for email and SMS.
+The following example uses `external_ids` to update both email and SMS subscription groups in a single API call. This is only possible when using `external_ids`—you cannot update both email and SMS subscription groups in one call when using `emails` or `phones`.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/v2/subscription/status/set' \
