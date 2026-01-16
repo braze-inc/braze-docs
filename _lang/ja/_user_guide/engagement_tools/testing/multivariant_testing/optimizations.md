@@ -1,12 +1,12 @@
 ---
 nav_title: 最適化
-article_title: 勝者バリアントまたはパーソナライズされたバリアントによる AB テストの最適化
+article_title: 勝者バリアントまたはパーソナライズされたバリアントでABテストを最適化する
 page_order: 1
 page_type: reference
 description: "多変量テストと AB テストを作成する際に、勝者バリアントまたはパーソナライズされたバリアントを使用する方法について説明します。"
 ---
 
-# 勝者バリアントまたはパーソナライズされたバリアントによる AB テストの最適化
+# 勝者バリアントまたはパーソナライズされたバリアントによるABテストの最適化
 
 1回送信するようにスケジュールされたメール、プッシュ、Webhook、SMS、WhatsApp キャンペーンの [AB テストを作成する]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/)際に、最適化を選択できます。最適化には2つのオプションがあります。**勝利バリアント**と**パーソナライズされたバリアント**。
 
