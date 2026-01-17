@@ -25,7 +25,9 @@ You cannot edit the padding for mobile and web views exclusively, so any edits a
 
 ### How can I optimize a row of buttons to remain horizontal on desktop and mobile?
 
-When building an email using the drag-and-drop editor, you may create a row of call-to-action buttons and find that they transpose to a vertical orientation on mobile when originally created horizontally. To retain the same format across device sizes, create two separate rows with styling settings optimized for desktop and mobile, hiding those rows depending on the device that is rendering the email.
+When building an email using the drag-and-drop editor, if you create a horizontal row of call-to-action buttons, you may find that the buttons are changed to a vertical orientation on mobile. 
+
+To retain the same format across device sizes, we recommend creating a separate row with CTA buttons that have padding optimized for mobile and are set to hide the row on a desktop device. Having two separate rows means that you can set the desired padding for the best text rendering on desktop and mobile devices.
 
 
 ### Can I adjust the row height in the drag-and-drop editor?
