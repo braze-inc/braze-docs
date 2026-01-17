@@ -70,7 +70,8 @@ braze.initialize('YOUR-API-KEY-HERE', {
     allowUserSuppliedJavascript: false, // set to `true` to support custom HTML messages
 });
 
-// optionally show all in-app messages without custom handling
+// Enable automatic display of in-app messages
+// Required if you want in-app messages to display automatically when triggered
 braze.automaticallyShowInAppMessages();
 
 // if you use Content Cards
@@ -87,6 +88,10 @@ if (isLoggedIn){
 // `openSession` should be called last - after `changeUser` and `automaticallyShowInAppMessages`
 braze.openSession();
 ```
+
+{% alert important %}
+**In-App Message Display**: To display in-app messages automatically when they're triggered, you must call `braze.automaticallyShowInAppMessages()`. Without this call, in-app messages won't display automatically. If you want to manage message display manually, remove this call and use `braze.subscribeToInAppMessage()` instead. For more information, see [In-app message delivery]({{site.baseurl}}/developer_guide/in_app_messages/delivery/).
+{% endalert %}
 
 {% alert important %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
@@ -247,6 +252,7 @@ If you use RequireJS or other AMD module-loaders we recommend self-hosting a cop
 ```javascript
 require(['path/to/braze.min.js'], function(braze) {
   braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT' });
+  // Required if you want in-app messages to display automatically
   braze.automaticallyShowInAppMessages();
   braze.openSession();
 });
