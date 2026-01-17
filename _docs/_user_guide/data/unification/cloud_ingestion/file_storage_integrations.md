@@ -163,12 +163,14 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 {: start="2"}
 2. Copy the Braze AWS account ID from your Braze dashboard. Go to **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import**.
 
-3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox, and enter an external ID for Braze to use. To generate this external ID, go to your Braze dashboard and navigate to **Partner Integrations** > **Currents**, select **Create New Current** (or **Create New Test Current**), then select **Amazon S3**. In the **Credentials** section, you will see an automatically generated **Braze External ID** under the **AWS Role ARN** option—copy and use this value in AWS. Select **Next** when complete. 
+3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox.
+4. In Braze, go to **Partner Integrations** > **Currents**, select **Create New Current** (or **Create New Test Current**), then select **Amazon S3**. In the **Credentials** section, copy the automatically generated **Braze External ID**. 
+5. In AWS, paste the external ID and then select **Next**.
 
 <br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
-{: start="4"}
-4. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+{: start="5"}
+5. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
 
 <br><br>![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
 
@@ -176,8 +178,8 @@ Give the role a name and a description, and select **Create Role**.
 
 <br><br>![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
-{: start="5"}
-5. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
+{: start="6"}
+6. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
 
 ## Setting up Cloud Data Ingestion in Braze
 
