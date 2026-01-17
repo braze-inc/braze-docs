@@ -34,6 +34,14 @@ Features for Braze Agents include:
 
 Agents are configured with instructions (system prompts) that define how they behave. When an agent runs, it uses your instructions along with any data you pass in to generate a response. 
 
+### When to use Braze Agents
+
+Agents are very good at personalizing content on the fly using a user’s specific context. For example, if an agent knows a particular user’s favorite ice cream flavor is chocolate and favorite topping is gummy bears, it can come up with push copy specific to that combination for that user as they pass through the Canvas.
+
+However, the agent does not learn through trial and error, and it has no idea of an ultimate marketing goal it is looking to measure and maximize. Even if you tell it to generally write copy that drives conversions, it has no mechanism to “monitor” for the conversion impact of its agentic writing and integrate that data back into future agentic calls. You can think of this as “vibe” decisioning, not reward-based AI Decisioning.
+
+In contrast, other BrazeAI tools are designed to maximize metrics that they are measuring. For example, agents are very good at qualitatively assessing how a user’s characteristics factor into their likelihood or propensity to do a certain event or like a certain product. However, since the agent doesn’t learn through trial and error, it has no idea of how to measure its accuracy in predicting likelihoods and improving the signal over time. As such, using Predictive Suite will outperform the Agent Step when judged on accuracy of its predictions and improvements over time.
+
 ### Key concepts
 
 | Term | Definition |
