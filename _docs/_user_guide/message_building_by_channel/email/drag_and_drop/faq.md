@@ -21,7 +21,7 @@ Yes. Go to the **Preview and Test** section of the drag-and-drop editor and turn
 
 ### How can I change the email padding on mobile without updating the padding in the web view?
 
-You cannot edit the padding for mobile and web views exclusively, so any edits are reflected in both views. As a workaround, you can add CSS logic that sets the padding based on different screen sizes. However, you cannot accomplish this using the drag-and-drop editor. Export the HTML file and use the HTML editor instead.
+You cannot edit the padding for mobile and web views exclusively, so any edits are reflected in both views. However, you can add CSS logic in the HTML editor that sets the padding based on different screen sizes. This isn't supported in the drag-and-drop editor, so you can export the HTML file and use the HTML editor instead.
 
 ### How can I optimize a row of buttons to remain horizontal on desktop and mobile?
 
