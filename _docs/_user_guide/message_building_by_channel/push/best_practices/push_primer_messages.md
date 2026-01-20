@@ -193,7 +193,7 @@ When a user has multiple devices with different push subscription states, using 
 The recommended solution is to use the no-code push primer (the "Request Push Permission" button action) with no additional push status segmentation filters.
 
 {% alert important %}
-**Automatic suppression**: The no-code push primer automatically suppresses on devices that already have an active push token. The SDK checks if a user on their specific device already has a push token. If it finds that the user has already opted in (for example, from a previous request or via device settings), it automatically suppresses the in-app message without the need for any additional segmentation filters. The primer shows in all other scenarios, including if a user is provisionally opted into push.
+**Automatic suppression**: The no-code push primer automatically suppresses on devices that already have an active push token. The SDK checks if a user on their specific device already has a push token. If the SDK finds that the user has already opted in (for example, from a previous request or via device settings), the SDK automatically suppresses the in-app message without the need for any additional segmentation filters. The primer shows in all other scenarios, including if a user is provisionally opted into push.
 {% endalert %}
 
 The benefit of using the no-code push primer is that the functionality is supported by the Braze SDK. Because the SDK can detect the push token status on the specific device where the message is being displayed, you don't need to rely on profile-level segmentation filters that may exclude users with multiple devices.
