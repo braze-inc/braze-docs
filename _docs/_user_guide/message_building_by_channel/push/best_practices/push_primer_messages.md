@@ -148,11 +148,11 @@ When a user has multiple devices with different push subscription states, using 
 - Device B: iOS, not opted in to push
 
 **Segment filters that don't work:**
-- `Push enabled = false` - User is push enabled on their Android device, so they don't fall into the segment. The iOS device isn't targeted.
-- `Push subscription status is not opted in` - User is push enabled on their Android device, so they don't fall into the segment. The iOS device isn't targeted.
+- `Push enabled = false` - User is push enabled on their Android device, so they don't fall into the segment. The segment doesn't include the iOS device.
+- `Push subscription status is not opted in` - User is push enabled on their Android device, so they don't fall into the segment. The segment doesn't include the iOS device.
 
 **Segment filters that work:**
-- `Push enabled for iOS = false` - User is push enabled on their Android device, but we're only targeting iOS devices, so the user falls into the segment. The iOS device is targeted.
+- `Push enabled for iOS = false` - User is push enabled on their Android device, but we're only targeting iOS devices, so the user falls into the segment. The segment includes the iOS device.
 
 {% enddetails %}
 
