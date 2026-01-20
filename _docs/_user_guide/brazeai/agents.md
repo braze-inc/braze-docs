@@ -71,7 +71,7 @@ Now that you know about Braze Agents, you’re ready for the next steps:
 - [Create custom agents]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/)
 - [Deploy custom agents]({{site.baseurl}}/user_guide/brazeai/agents/deploying_agents/)
 
-**Model Providers as Sub-processors or Third Party Providers:**
+## Model Providers as Sub-processors or Third Party Providers
 
 Where Customer uses an integration with models provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLMs will be acting as a Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. 
 
