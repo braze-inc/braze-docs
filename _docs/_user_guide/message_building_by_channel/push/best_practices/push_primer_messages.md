@@ -180,9 +180,9 @@ When a user has multiple devices with different push subscription states, push s
 - Device C: Not opted in to push
 
 **Segment filters that don't work:**
-- `Push enabled = false` - Device A is opted in to push, so the user doesn't fall into the segment. Devices B and C aren't targeted.
-- `Push enabled for app > X = false` - Device A is opted in to push on the specified app, so the user doesn't fall into the segment. Devices B and C aren't targeted.
-- `Push subscription status is not opted in` - Device A is opted in to push, so the user doesn't fall into the segment. Devices B and C aren't targeted.
+- `Push enabled = false` - Device A is opted in to push, so the user doesn't fall into the segment. The segment doesn't include Devices B and C.
+- `Push enabled for app > X = false` - Device A is opted in to push on the specified app, so the user doesn't fall into the segment. The segment doesn't include Devices B and C.
+- `Push subscription status is not opted in` - Device A is opted in to push, so the user doesn't fall into the segment. The segment doesn't include Devices B and C.
 
 **Result:** Using any combination of these push filters leaves at least one device untargeted.
 
@@ -196,7 +196,7 @@ The recommended solution is to use the no-code push primer (the "Request Push Pe
 **Automatic suppression**: The no-code push primer automatically suppresses on devices that already have an active push token. The SDK checks if a user on their specific device already has a push token. If the SDK finds that the user has already opted in (for example, from a previous request or via device settings), the SDK automatically suppresses the in-app message without the need for any additional segmentation filters. The primer shows in all other scenarios, including if a user is provisionally opted into push.
 {% endalert %}
 
-The benefit of using the no-code push primer is that the functionality is supported by the Braze SDK. Because the SDK can detect the push token status on the specific device where the message is being displayed, you don't need to rely on profile-level segmentation filters that may exclude users with multiple devices.
+The benefit of using the no-code push primer is that the functionality is supported by the Braze SDK. Because the SDK can detect the push token status on the specific device that displays the message, you don't need to rely on profile-level segmentation filters that may exclude users with multiple devices.
 
 #### Considerations
 
