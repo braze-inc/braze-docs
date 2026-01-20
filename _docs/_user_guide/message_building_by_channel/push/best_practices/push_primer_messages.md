@@ -184,7 +184,7 @@ When a user has multiple devices with different push subscription states, using 
 - `Push enabled for app > X = false` - Device A is opted in to push on the specified app, so the user doesn't fall into the segment. Devices B and C aren't targeted.
 - `Push subscription status is not opted in` - Device A is opted in to push, so the user doesn't fall into the segment. Devices B and C aren't targeted.
 
-**Result:** Using any combination of these push filters results in at least one device not being targeted.
+**Result:** Using any combination of these push filters leaves at least one device untargeted.
 
 {% enddetails %}
 
