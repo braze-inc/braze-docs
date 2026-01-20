@@ -122,8 +122,6 @@ Here's what this looks like when the Liquid is rendered:
 
 ![Example Content Card with catalog Liquid tags rendered.]({% image_buster /assets/img_archive/catalog_image_link2.png %}){: style="max-width:50%" }
 
-{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
-
 ### Templating catalog items
 
 You can also use templating to dynamically pull catalog items based on custom attributes. For example, let's say a user has the custom attribute `wishlist`, which contains an array of game IDs from your catalog.
