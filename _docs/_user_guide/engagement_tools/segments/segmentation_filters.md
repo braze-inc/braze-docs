@@ -464,7 +464,11 @@ glossaries:
     tags:
       - Devices
   - name: Device OS
-    description: Segments your users that have one or more devices with the specified operating system. To segment users by a range of operating systems, use the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number"> Device OS Version Number</a> filter.
+    description: Segments your users that have one or more devices with the specified operating system. To segment users by a range of operating systems, use the <a href="/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number">Device OS Version Number</a> filter.
+    tags:
+      - Devices
+  - name: Device OS Version Number
+    description: Segments your users that have one or more devices with an operating system version that is within a specified range. For example, you can target users who have an iOS operating system version that is above or equal to 26.0.
     tags:
       - Devices
   - name: Most Recent Device Locale
@@ -481,10 +485,6 @@ glossaries:
       - Devices   
   - name: Web Browser
     description: Segments your users by the web browser they use to access your website.
-    tags:
-      - Devices
-  - name: Device OS Version Number
-    description: Segments your users that have one or more devices with an operating system version that is within a specified range. For example, you can target users who have an iOS operating system version that is above or equal to 26.0.
     tags:
       - Devices
   - name: Device IDFA
