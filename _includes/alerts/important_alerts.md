@@ -77,7 +77,7 @@ If you're participating in the Canvas Context early access, Canvas entry propert
 {% if include.alert == 'dynamic image URL' %}
 
 {% alert important %}
-You can pull in dynamic images by using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in the **URL** or **Add from URL** field, but your image URL must begin with `https://`. Using `http://` will crash your app.
+You can pull in dynamic images by using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in the **URL** or **Add from URL** field, but your image URL must begin with `https://`. Using `http://` may cause issues with your message.
 {% endalert %}
 
 {% endif %}
