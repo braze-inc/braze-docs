@@ -119,7 +119,13 @@ While the ideal time will vary, Braze suggests waiting until a user completes so
 
 ## Step 5: Target users
 
-The goal of a push primer campaign is to prompt users on any device where they have not yet granted push permissions. This can include first-time users or existing users who get a new device or reinstall your application. To correctly target your push primer campaign, add a filter where `Foreground Push Enabled For App is false`. This filter identifies individual app installations that are not yet opted in to foreground push notifications.
+The goal of a push primer campaign is to prompt users on any device where they have not yet granted push permissions. This can include first-time users or existing users who get a new device or reinstall your application.
+
+{% alert important %}
+**Automatic suppression with no-code push primer**: If you use the no-code push primer (the "Request Push Permission" button action), you don't need to add push subscription filters to your segmentation. The SDK automatically suppresses the in-app message on devices that already have an active push token, regardless of the user's push status on other devices. For more information about targeting users with multiple devices, see [Targeting users with multiple devices](#targeting-users-with-multiple-devices).
+{% endalert %}
+
+If you're not using the no-code push primer, add a filter where `Foreground Push Enabled For App is false`. This filter identifies individual app installations that are not yet opted in to foreground push notifications.
 
 {% alert important %} 
 Using a user-level filter like `Push Subscription Status is not Opted In` will exclude users who are already opted-in on another device, preventing them from receiving the prompt on their new device. 
@@ -127,7 +133,88 @@ Using a user-level filter like `Push Subscription Status is not Opted In` will e
 
 Beyond that, you can decide what additional segments you feel are most appropriate. For example, you might target users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
 
+### Targeting users with multiple devices
+
+Because Braze captures user data at the profile level rather than the device level, targeting users who own multiple devices can be challenging. Push subscription filters in segmentation include or exclude users based on a single device's subscription state rather than the specific targeted device's subscription state. Additionally, provisional states on iOS add complexity, as these devices technically have foreground push tokens, but users aren't explicitly opted in.
+
+#### The problem with push subscription filters
+
+When a user has multiple devices with different push subscription states, using push subscription filters in your segmentation can result in some devices not being targeted. Consider these scenarios:
+
+{% details Scenario 1: User has two devices on different platforms %}
+
+**User has two devices:**
+- Device A: Android, opted in to push
+- Device B: iOS, not opted in to push
+
+**Segment filters that won't work:**
+- `Push enabled = false` - User is push enabled on their Android device, so they won't fall into the segment. The iOS device won't be targeted.
+- `Push subscription status is not opted in` - User is push enabled on their Android device, so they won't fall into the segment. The iOS device won't be targeted.
+
+**Segment filters that work:**
+- `Push enabled for iOS = false` - User is push enabled on their Android device, but we're only targeting iOS devices, so the user falls into the segment. The iOS device will be targeted.
+
+{% enddetails %}
+
+{% details Scenario 2: User has two iOS devices with different states %}
+
+**User has two iOS devices:**
+- Device A: Opted in to push
+- Device B: Provisionally enabled but not opted in
+
+**Segment filters that won't work:**
+- `Push enabled = false` - Device A is opted in to push, so the user won't fall into the segment. Device B won't be targeted.
+- `Provisionally opted in = true` - Device A is fully opted in, which means they're not in a provisional state. The user won't fall into the segment. Device B won't be targeted.
+- `Push enabled for app > iOS = false` - Device A is opted in to push on iOS, so the user won't fall into the segment. Device B won't be targeted.
+- `Push subscription status is not opted in` - Device A is opted in to push, so the user won't fall into the segment. Device B won't be targeted.
+
+**Result:** Using any combination of these push filters results in at least one device not being targeted.
+
+{% enddetails %}
+
+{% details Scenario 3: User has three or more devices on the same OS %}
+
+**User has three devices:**
+- Device A: Opted in to push
+- Device B: Not opted in to push
+- Device C: Not opted in to push
+
+**Segment filters that won't work:**
+- `Push enabled = false` - Device A is opted in to push, so the user won't fall into the segment. Devices B and C won't be targeted.
+- `Push enabled for app > X = false` - Device A is opted in to push on the specified app, so the user won't fall into the segment. Devices B and C won't be targeted.
+- `Push subscription status is not opted in` - Device A is opted in to push, so the user won't fall into the segment. Devices B and C won't be targeted.
+
+**Result:** Using any combination of these push filters results in at least one device not being targeted.
+
+{% enddetails %}
+
+#### Solution: Use the no-code push primer
+
+The recommended solution is to use the no-code push primer (the "Request Push Permission" button action) with no additional push status segmentation filters.
+
+{% alert important %}
+**Automatic suppression**: The no-code push primer automatically suppresses on devices that already have an active push token. The SDK checks if a user on their specific device already has a push token. If it finds that the user has already opted in (for example, from a previous request or via device settings), it automatically suppresses the in-app message without the need for any additional segmentation filters. The primer shows in all other scenarios, including if a user is provisionally opted into push.
+{% endalert %}
+
+The benefit of using the no-code push primer is that the functionality is supported by the Braze SDK. Because the SDK can detect the push token status on the specific device where the message is being displayed, you don't need to rely on profile-level segmentation filters that may exclude users with multiple devices.
+
+#### Considerations
+
+**No-code push primer required**: You must use the no-code push primer for automatic suppression to work. If you set up custom logic or deep links instead of using the "Request Push Permission" button action, the SDK won't be able to identify that you're trying to display a push primer. This results in displaying the message regardless of that device's subscription state.
+
+**Suppressing for users who opted out**: You may want to suppress the in-app message for users who have explicitly opted out of push (for example, from the native request or device settings) and retarget those users with a separate nurture campaign. To do this, use the following Liquid logic in combination with the no-code primer:
+
+{% raw %}
+```liquid
+{% if targeted_device.${foreground_push_enabled} == false %} 
+{% abort_message('user turned off push notifications') %} 
+{% endif %}
+- message goes here -
+```
+{% endraw %}
+
+The `targeted_device` Liquid filter looks only at the device where the message is being displayed, rather than the user profile. If this specific device doesn't have a foreground push token, we know that the user turned off push notifications. New users are technically in an "unknown state" (they don't have a push token yet), so this Liquid filter still allows you to target them, as `foreground_push_enabled` doesn't have a value yet.
+
 ## Step 6: Conversion events
 
 Braze suggests default settings for conversions, but you may want to set up [conversion events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) surrounding push primers.
-
