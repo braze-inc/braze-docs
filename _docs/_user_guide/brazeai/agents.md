@@ -75,7 +75,7 @@ Now that you know about Braze Agents, you’re ready for the next steps:
 
 Where Customer uses an integration with models provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLMs will be acting as a Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. 
 
-If Customers chooses to bring their own API key to integrate with Braze AI functionality, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
+If Customer chooses to bring their own API key to integrate with Braze AI functionality, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
 
 ### How is my data used and sent to Braze-provided LLMs?
 
