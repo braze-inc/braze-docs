@@ -126,7 +126,7 @@ const handleItemInteraction = (itemId) => {
 ### Server-side integration (MCP server)
 
 <!-- For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT app requests and tool calls. -->
-If you also need a server-side integration for message functionality on your MCP server, contact <span style="white-space:nowrap;">`mcp-product@braze.com`</span>. For tracking events and purchases from your MCP server, use our [REST API]({{site.baseurl}}/api/home).
+If you also need a server-side integration for messaging functionality on your MCP server, contact <span style="white-space:nowrap;">`mcp-product@braze.com`</span>. For tracking events and purchases from your MCP server, use our [REST API]({{site.baseurl}}/api/home).
 
 <!-- #### Import the Braze functions
 
