@@ -13,10 +13,10 @@ description: "このランディングページは、ダッシュボードキャ
 
 guide_featured_title: "よく読まれている記事"
 guide_featured_list:
-  - name: セグメントの作成
+  - name: セグメントを作成する
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: セグメントの管理
+  - name: セグメンテーションの管理
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
   - name: セグメンテーションフィルター

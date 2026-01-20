@@ -1,7 +1,7 @@
 ---
 nav_title: Copy across workspaces
 article_title: Copy Across Workspaces
-page_order: 4.5
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "This reference article provides an overview of how to copy campaigns and Canvases to different workspaces."

@@ -447,7 +447,7 @@ function countLength(type, s) {
 }
 
 関数getCharacterEncoding(char, type) { を実行する。
-  if (タイプ === "ucs2") return "ucs2"；
+  if (type === "ucs2") return "ucs2"；
   if (type === "gsm") return "gsm"；
 
   // 自動検出の場合、文字がGSM-7設定にあるかどうかをチェックする。

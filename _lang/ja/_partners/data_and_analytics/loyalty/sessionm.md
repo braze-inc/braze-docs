@@ -23,7 +23,7 @@ search_tag: Partner
 | SessionM | SessionM Core REST API キー | インスタンスとBraze統合に関連付けられたSessionM APIキー。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは SessionM ダッシュボードの**デジタルプロパティ**から作成できます。 |
 | SessionM | SessionM Core REST APIのシークレット | インスタンスとBraze統合に関連付けられたSessionM APIシークレット。このキーは、タグを含むすべてのコアベースのコールに使用できる。これは SessionM ダッシュボードの**デジタルプロパティ**から作成できます。 |
 | SessionM | SessionM Connect RESTエンドポイント | エンドポイントは、インスタンスのSessionM URLに依存する。SessionMテクニカルアカウントマネージャーまたはデリバリーチームに連絡する。 |
-| SessionM | SessionM Connect REST認可文字列 | インスタンスに関連付けられたSessionM Connect Basic Authorization 文字列。この認証文字列は、get_user_offers. を含む、すべての接続ベースの通話に使用できる。この認証文字列を提供 するには、SessionMのテクニカルアカウントマネージャーまたはデリバリーチームに連絡すること。 |
+| SessionM | SessionM Connect REST認可文字列 | インスタンスに関連付けられたSessionM Connect Basic Authorization 文字列。この認証文字列は、get_user_offers. を含む、すべての接続ベースの通話に使用できる。この認証文字列を提供 するには、SessionMのテクニカルアカウントマネージャーかデリバリーチームに連絡すること。 |
 | SessionM | SessionM Connect RESTの小売（店）ID。 | インスタンスに関連付けられている特定の顧客に対する一意の GUID 識別子。SessionMテクニカルアカウントマネージャーまたはデリバリーチームに連絡する。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 

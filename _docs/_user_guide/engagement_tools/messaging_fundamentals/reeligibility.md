@@ -1,7 +1,7 @@
 ---
 nav_title: Re-eligibility
 article_title: Re-eligibility
-page_order: 8
+page_order: 10
 page_type: reference
 description: "This reference article defines re-eligibility for campaigns and Canvases."
 tool:

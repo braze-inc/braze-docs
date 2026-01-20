@@ -188,7 +188,7 @@ If there are two carts, add both to the merged user. Re-enqueue the Canvas if it
 
 | Property name | Required | Data type | Description | 
 |---|---|---|---|
-| `cart_id` | Yes | String | Unique identifier for the cart. If no value is passed, we'll determine a default value (shared across cart, checkout, and order events) for the user cart mapping. |
+| `cart_id` | Yes | String | If you are not using a third-party platform that provides a `cart_id`, you can use the [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Yes | Float | Total monetary value of the cart. | 
 | `currency` | Yes | String | The currency in which the product price is listed (such as "USD" or "EUR") in [ISO 4217 format](https://www.iso.org/iso-4217-currency-codes.html). |
 | `products` | Yes | Array |  |
@@ -364,7 +364,7 @@ Similar to the `ecommerce.cart_updated` event, this event allows you to leverage
 | Property name | Required | Data type | Description | 
 |---|---|---|---|
 | `checkout_id` | Yes | String | Unique identifier for the checkout. |
-| `cart_id` | No | String | Unique identifier for the cart. If no value is passed, we'll determine a default value (shared across cart, checkout, and order events) for the user cart mapping.. | 
+| `cart_id` | No | String | If you are not using a third-party platform that provides a `cart_id`, you can use the [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
 | `total_value` | Yes | Float | Total monetary value of the cart. |
 | `currency` | Yes | String | Currency in which the cart is valued. |
 | `products` | Yes | Array of objects |  |
@@ -530,7 +530,7 @@ You can use the order placed event to trigger when a customer successfully compl
 | Property name | Required | Data type | Description | 
 |---|---|---|---|
 | `order_id` | Yes | String | Unique identifier for the order placed. |
-| `cart_id` | No | String | Unique identifier for the cart. If no value is passed, we'll determine a default value (shared across cart, checkout, and order events) for the user cart mapping. |
+| `cart_id` | No | String | If you are not using a third-party platform that provides a `cart_id`, you can use the [Braze session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
 | `total_value` | Yes | Float | Total monetary value of the cart. | 
 | `currency` | Yes | String | Currency in which the cart is valued. |
 | `total_discounts` | No | Float | Total amount of discounts applied to the order. | 

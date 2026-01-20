@@ -1,12 +1,12 @@
 ---
-nav_title: 解約予測の作成
-article_title: 解約予測の作成
+nav_title: チャーン予測の作成
+article_title: チャーン予測の作成
 description: "この記事では、Braze ダッシュボード内で解約予測を作成する方法について説明します。"
 page_order: 1.1
 
 ---
 
-# 解約予測の作成
+# チャーン予測の作成
 
 > Braze ダッシュボード内で解約予測を作成する方法について説明します。
 
