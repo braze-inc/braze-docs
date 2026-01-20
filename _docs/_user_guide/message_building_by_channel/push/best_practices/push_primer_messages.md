@@ -163,12 +163,12 @@ When a user has multiple devices with different push subscription states, using 
 - Device B: Provisionally enabled but not opted in
 
 **Segment filters that don't work:**
-- `Push enabled = false` - Device A is opted in to push, so the user doesn't fall into the segment. Device B isn't targeted.
-- `Provisionally opted in = true` - Device A is fully opted in, which means they're not in a provisional state. The user doesn't fall into the segment. Device B isn't targeted.
-- `Push enabled for app > iOS = false` - Device A is opted in to push on iOS, so the user doesn't fall into the segment. Device B isn't targeted.
-- `Push subscription status is not opted in` - Device A is opted in to push, so the user doesn't fall into the segment. Device B isn't targeted.
+- `Push enabled = false` - Device A is opted in to push, so the user doesn't fall into the segment. The segment doesn't include Device B.
+- `Provisionally opted in = true` - Device A is fully opted in, which means they're not in a provisional state. The user doesn't fall into the segment. The segment doesn't include Device B.
+- `Push enabled for app > iOS = false` - Device A is opted in to push on iOS, so the user doesn't fall into the segment. The segment doesn't include Device B.
+- `Push subscription status is not opted in` - Device A is opted in to push, so the user doesn't fall into the segment. The segment doesn't include Device B.
 
-**Result:** Using any combination of these push filters results in at least one device not being targeted.
+**Result:** Using any combination of these push filters results in the segment excluding at least one device.
 
 {% enddetails %}
 
