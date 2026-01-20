@@ -213,7 +213,7 @@ The benefit of using the no-code push primer is that the functionality is suppor
 ```
 {% endraw %}
 
-The `targeted_device` Liquid filter looks only at the device where the message is being displayed, rather than the user profile. If this specific device doesn't have a foreground push token, we know that the user turned off push notifications. New users are technically in an "unknown state" (they don't have a push token yet), so this Liquid filter still allows you to target them, as `foreground_push_enabled` doesn't have a value yet.
+The `targeted_device` Liquid filter looks only at the device where the message is being displayed, rather than the user profile. On that device, `foreground_push_enabled` is set to `true` when there is an active foreground push token and set to `false` when the operating system reports that push notifications have been disabled (for example, the user explicitly turned them off). For completely new devices that haven't responded to a push permission state yet, `foreground_push_enabled` is unset and has no value. Because the Liquid condition checks for `{% raw %}``false`{% endraw %} specifically, it suppresses the primer only for devices with an explicit opt-out, while devices in this unknown state still qualify and can receive the push primer.
 
 ## Step 6: Conversion events
 
