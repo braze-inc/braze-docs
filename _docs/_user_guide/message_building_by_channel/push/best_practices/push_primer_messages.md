@@ -139,7 +139,7 @@ Because Braze captures user data at the profile level rather than the device lev
 
 #### The problem with push subscription filters
 
-When a user has multiple devices with different push subscription states, using push subscription filters in your segmentation can result in some devices not being targeted. Consider these scenarios:
+When a user has multiple devices with different push subscription states, push subscription filters in your segmentation may fail to target some devices. Consider these scenarios:
 
 {% details Scenario 1: User has two devices on different platforms %}
 
