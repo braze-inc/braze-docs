@@ -13,3 +13,11 @@ You don't need a Context step to reference properties from the triggering event 
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == 'catalog data images' %}
+
+{% alert tip %}
+To pull in images for catalog trigger items, your catalog must include a field named `image_url`. You can then reference it using {%raw%}``{{ items[0].image_url }}``{%endraw%}.
+{% endalert %}
+
+{% endif %}
