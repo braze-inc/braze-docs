@@ -84,7 +84,7 @@ To set this up:
 Then, you can return to your agent and select your model.
 
 {% alert important %}
-When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API Key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
+When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
 {% endalert %}
 
 ## Writing instructions
