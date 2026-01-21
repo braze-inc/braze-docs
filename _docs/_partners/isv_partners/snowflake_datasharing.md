@@ -67,7 +67,7 @@ A row is added to `CHANGELOGS_CANVAS_SHARED` when a Canvas is saved and any of t
 
 A row is added to `SNAPSHOTS_CANVAS_STEP_SHARED` when:
 - The Canvas is launched, OR
-- A snapshottable field on the canvas step is changed (for example, when a new channel is added to a message step)
+- A snapshottable field on the Canvas step is changed (for example, when a new channel is added to a message step)
 
 {% alert important %}
 **Content changes do not trigger snapshots**: Changing content within a message step (such as email body text, subject lines, or push notification copy) does not trigger a snapshot. Only structural changes to snapshottable fields (like adding a new channel) create a new row.
