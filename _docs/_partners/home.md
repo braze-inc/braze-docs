@@ -336,7 +336,7 @@ valid_partner_list:
 - name: SessionM
   url: /docs/partners/sessionm/
 - name: Tapcart
-  url: /docs/partners/tapcart
+  url: /docs/partners/tapcart/
 - name: Mention Me
   url: /docs/partners/mention_me/
 - name: Just Words
