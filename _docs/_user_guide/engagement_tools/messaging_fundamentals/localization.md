@@ -1,7 +1,7 @@
 ---
 nav_title: Localization
 article_title: Localization
-page_order: 7
+page_order: 8
 description: "This reference article covers the basics of localization, lists the benefits of different orchestration approaches across campaigns and Canvases, and lists different ways users can handle personalization in their messaging."
 tool:
     - Campaigns

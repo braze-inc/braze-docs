@@ -1,6 +1,6 @@
 ---
-nav_title: カスタムイベントのトラッキング
-article_title: iOS のカスタムイベントのトラッキング
+nav_title: トラックカスタムイベントs
+article_title: iOSのカスタムイベントを追跡する
 platform: iOS
 page_order: 2
 description: "このリファレンス記事では、iOS アプリケーションのカスタムイベントを追加して追跡する方法について説明します。"
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# iOS のカスタムイベントの追跡
+# iOSのカスタムイベントを追跡する
 
 Braze でカスタムイベントを記録することで、アプリの使用パターンに関する詳細を把握し、ダッシュボードでのアクションによってユーザーをセグメント化できます。
 

@@ -1,6 +1,6 @@
 ---
-nav_title: IPとドメインの設定
-article_title: IPとドメインを設定する
+nav_title: IPとドメインを設定する
+article_title: IPとドメインの設定
 page_order: 0
 page_type: tutorial
 channel: email

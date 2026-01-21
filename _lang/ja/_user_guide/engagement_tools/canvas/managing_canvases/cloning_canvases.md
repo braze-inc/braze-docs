@@ -1,6 +1,6 @@
 ---
 nav_title: キャンバスの複製
-article_title: キャンバスの複製
+article_title: 複製キャンバス
 page_order: 3
 alias: "/cloning_canvases/"
 description: "この参考記事では、従来のキャンバスエディタからキャンバスフローのワークフローにキャンバスを複製する方法について説明します。"

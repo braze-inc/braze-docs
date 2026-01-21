@@ -1,6 +1,6 @@
 ---
 nav_title: コネクテッドコンテンツを使用したデータの取得
-article_title: コネクテッドコンテンツと Voucherify を使用したデータの取得
+article_title: Voucherifyでコネクテッドコンテンツからデータを取得する
 page_order: 2
 alias: /partners/voucherify/connected_content/
 description: "このリファレンス記事では、Braze コネクテッドコンテンツを使用して Voucherify API からデータを取得し、特定の Braze セグメントにメッセージを送信する方法について説明します。"
@@ -8,7 +8,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# コネクテッドコンテンツを使用したデータの取得
+# コネクテッド・コンテンツでデータを取得する
 
 > Braze コネクテッドコンテンツを使用して、Voucherify API からデータを取得し、特定の Braze セグメントにメッセージを送信できます。このリファレンス記事では、Voucherify クーポンの発行、新しい紹介者の招待、ロイヤルティカードの残高の取得などのために、コネクテッドコンテンツスクリプトを設定する方法などを紹介します。
 
