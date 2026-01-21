@@ -38,33 +38,24 @@ Hi Valued User, thanks for using the App!
 
 ### Liquid rendering with HTML and plaintext
 
-When using Liquid in email messages that contain both HTML and plaintext versions, it's important to understand how Liquid interacts with the plaintext generation process.
+When using Liquid in email messages that contain both HTML and plaintext versions, it's important to understand how Liquid interacts with the auto-generated plaintext process.
 
 #### Order of operations
 
-When Braze sends an email with both HTML and auto-generated plaintext, the plaintext version is derived from the HTML before Liquid is rendered. This means:
+When Braze sends an email with both HTML and auto-generated plaintext, the following sequence occurs:
 
-1. The auto-generated plaintext version is created from your HTML content first
-2. Liquid tags are then evaluated and rendered in both versions
+1. HTML comments (`<!-- -->`) and their content are removed from the HTML to create the plaintext version
+2. Liquid tags are then evaluated and rendered in both the HTML and plaintext versions
+
+This means that any Liquid tags nested within HTML comments will be removed during step 1, before Liquid processing begins. As a result, these tags will not appear in the plaintext version of the message.
 
 {% alert note %}
 This order of operations applies specifically to auto-generated plaintext. If you create a custom plaintext version separately, Liquid will process normally in both HTML and plaintext versions.
 {% endalert %}
 
-#### HTML comments and plaintext
+#### Best practice
 
-Because content within HTML comments (`<!-- -->`) should not be included in the plaintext version of a message, it is excluded by default when the auto-generated plaintext is created. This has an important implication for Liquid:
-
-- If Liquid tags are nested within HTML comments, they will not appear in the plaintext version of the message
-- The HTML-stripping parser removes comment blocks (and any Liquid within them) before the plaintext is finalized
-
-#### Processing plaintext with Liquid
-
-The auto-generated plaintext generation process removes HTML comments before Liquid is evaluated. As a result:
-
-- HTML comments and any content within them (including Liquid tags) are stripped during the plaintext generation step
-- After plaintext is generated, Liquid processing occurs separately on both the HTML and plaintext versions
-- To ensure Liquid renders in both HTML and plaintext, place Liquid tags outside of HTML comments
+To ensure Liquid renders in both HTML and plaintext versions when using auto-generated plaintext, place Liquid tags outside of HTML comments.
 
 ## Supported values to substitute
 
