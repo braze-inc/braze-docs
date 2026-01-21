@@ -67,6 +67,10 @@ First, select the general type of event you'd like to use:
 | **Clicks email**        | A user is counted as having converted when they click a link within the email (only for email campaigns).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+{% alert important %}
+**Nested properties limitation**: You cannot use nested properties in conversion events. For example, if `product_code` or `product_name` are nested properties within a `products` array (such as `products[].product_code`), you cannot use them to check if a specific product purchase has been made in a conversion event. While you can use nested properties in segment extensions, they are not supported for conversion event filtering.
+{% endalert %}
+
 Set your conversion deadline. This is the maximum amount of time that may pass to consider a conversion. You have the option of allowing up to a 30-day window during which the conversion will be counted if the user takes the specified action.
 
 ![The "Makes Purchase" conversion event type as an example to record conversions for users who make any purchase. This has a conversion deadline of 12 hours.]({% image_buster /assets/img_archive/conversion_event_selection.png %})
