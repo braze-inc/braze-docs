@@ -46,6 +46,28 @@ Braze can track data for a user throughout their journey with you, from the time
 This person-centric user profile database allows for real-time, interactive speed. Braze pre-computes values when data arrives and stores the results in our lightweight document format for fast retrieval. And because the platform was designed this way from the ground up, it is ideal for most messaging use cases—especially combined with other data concepts like Connected Content, product catalogs, and nested attributes. 
 {% endalert %}
 
+### Data source breakdown
+
+Braze uses different data storage systems for varopis features. Understanding which features use which data sources is important for data management and troubleshooting:
+
+**MongoDB-powered features:**
+- Custom events (tracked via SDK and API)
+- Custom attributes
+- User profiles
+- Purchase events
+- Most segmentation and targeting features
+
+**Snowflake-powered features:**
+- [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
+- [Prediction Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
+- [Personalized Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) and [Personalized Variant]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
+- [AI Personalized Item Recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
+- [Estimated Real Open Rate]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (does not use custom events)
+
+{% alert important %}
+**Data removal considerations**: Custom events are stored in MongoDB and are separate from Snowflake data. If you need to remove erroneous custom event data, you must address it in MongoDB. Snowflake-powered features (like Segment Extensions and Intel features) use data from Snowflake, which is handled separately. Removing data from one system does not automatically remove it from the other.
+{% endalert %}
+
 ### Backend data sources via the Braze API
 Braze can pull data from user databases, offline transactions, and data warehouses through our [REST API]({{site.baseurl}}/api/endpoints/user_data). 
 
