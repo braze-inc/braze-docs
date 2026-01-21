@@ -83,7 +83,7 @@ We recommend segmenting your domains so that corporate mail is sent through your
 
 ## Best practices
 
-All of the consequences of not IP warming can be avoided if you follow these IP warming best practices.
+You can avoid all the consequences of not IP warming by following these best practices:
 
 ### Start with small sending volumes of email
 
