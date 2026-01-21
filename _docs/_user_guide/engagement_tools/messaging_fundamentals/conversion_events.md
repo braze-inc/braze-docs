@@ -68,7 +68,7 @@ First, select the general type of event you'd like to use:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% alert important %}
-**Nested properties are not supported in conversion events**. You cannot use nested properties in conversion events. For example, if `product_code` or `product_name` are nested properties within a `products` array (such as `products[].product_code`), you cannot use them to check if a specific product purchase has been made in a conversion event. While you can use nested properties in segment extensions, they are not supported for conversion event filtering.
+**Nested properties are not supported in conversion events**. You cannot use nested properties in conversion events. For example, if `product_code` or `product_name` are nested properties within a `products` array (such as `products[].product_code`), you cannot use them to check if a specific product purchase has been made in a conversion event.
 {% endalert %}
 
 Set your conversion deadline. This is the maximum amount of time that can pass before Braze considers a conversion. You can set a window of up to 30 days during which Braze counts the conversion if the user takes the specified action.
