@@ -3,12 +3,13 @@ nav_title: Mermaid Diagrams
 article_title: Contributing Mermaid Diagrams
 description: "Learn how to create and contribute Mermaid diagrams to Braze Docs."
 page_order: 7
+noindex: true
 search_tag: Contributing
 ---
 
 # Contributing Mermaid diagrams
 
-> Mermaid diagrams help visualize complex workflows, system architectures, and process flows in technical documentation. This guide will show you how to create and contribute Mermaid diagrams to the Braze Docs.
+> Mermaid diagrams help visualize complex workflows, system architectures, and process flows in technical documentation. This guide shows you how to create and contribute Mermaid diagrams to the Braze Docs.
 
 ## Why use Mermaid diagrams?
 
@@ -41,7 +42,7 @@ For a complete list of supported diagrams, see [Mermaid's diagram syntax](https:
 
 ### Step 2: Write the diagram code
 
-Create a Mermaid diagram by wrapping your diagram code in ` ```mermaid ` code fences. The following snippet displays an example of how you can use Mermaid.
+Create a Mermaid diagram by wrapping your diagram code in `\`\`\`mermaid` code fences. The following snippet displays an example of how you can use Mermaid.
 
 ```mermaid
 ---
@@ -57,7 +58,7 @@ flowchart TD
     E -->|No| G[Skip user]
 ```
 
-The code above will render as a visual flowchart.
+The code above renders as a visual flowchart.
 
 **Breakdown of the example**
 
@@ -72,7 +73,7 @@ Reference the following list for more information on the components of the Merma
 
 When adding a Mermaid diagram to a Braze Docs file:
 
-1. Place the diagram code within ` ```mermaid ` code fences
+1. Place the diagram code within `\`\`\`mermaid` code fences
 2. Include the configuration block at the top with `theme: neutral`
 3. Ensure proper indentation if using the diagram within tabs or other components
 
