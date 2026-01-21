@@ -366,7 +366,7 @@ valid_partner_list:
 - name: LILT
   url: /docs/partners/lilt/
 - name: Fullstory
-  url: /docs/partners/message_personalization/dynamic_contƒent/personalized_recommendations/fullstory
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 - name: Oracle Crowdtwist
   url: /docs/partners/crowdtwist/
 - name: Blings
