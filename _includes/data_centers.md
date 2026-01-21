@@ -51,6 +51,7 @@
 |EU-02| `https://dashboard-02.braze.eu` | `https://rest.fra-02.braze.eu` | `sdk.fra-02.braze.eu` |
 |AU-01| `https://dashboard.au-01.braze.com`| `https://rest.au-01.braze.com` | `sdk.au-01.braze.com` |
 |ID-01| `https://dashboard.id-01.braze.com`| `https://rest.id-01.braze.com` | `sdk.id-01.braze.com` |
+|JP-01| `https://dashboard.jp-01.braze.com` | `https://rest.jp-01.braze.com` | `sdk.jp-01.braze.com` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 {% endif %}
 
