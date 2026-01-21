@@ -322,7 +322,7 @@ valid_partner_list:
 - name: Notify
   url: /docs/partners/notify/
 - name: Odicci
-  url: /docs/partners/odicci
+  url: /docs/partners/odicci/
 - name: Pinterest
   url: /docs/partners/canvas_steps/pinterest_audience_sync/
 - name: Snapchat
