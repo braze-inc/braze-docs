@@ -99,7 +99,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 ```
 
 {% alert important %}
-**`influenced_opens` field**: In the API response, the `influenced_opens` field represents the total number of opens, including both direct opens and influenced opens combined. This differs from the Braze dashboard, where "influenced opens" refers only to influenced opens (not direct opens). The API field name uses a legacy naming convention and should be interpreted as total opens.
+**`influenced_opens` field**: In the API response, the `influenced_opens` field represents the total number of opens (both direct and influenced opens combined). In the Braze dashboard, 'influenced opens' refers only to influenced opens, excluding direct opens. This is due to a legacy naming convention in the API.
 {% endalert %}
 
 {% alert tip %}
