@@ -77,7 +77,7 @@ A row is added to `SNAPSHOTS_CANVAS_STEP_SHARED` when:
 
 ### SNAPSHOTS_CANVAS_VARIATION_SHARED
 
-A row is added to `SNAPSHOTS_CANVAS_VARIATION_SHARED` when fields in the top-level canvas variation are changed. This table tracks changes to the canvas variation itself, not individual message steps.
+A row is added to `SNAPSHOTS_CANVAS_VARIATION_SHARED` when fields in the top-level Canvas variation are changed. This table tracks changes to the Canvas variation itself, not individual message steps.
 
 ### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
 
