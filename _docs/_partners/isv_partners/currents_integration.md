@@ -457,17 +457,17 @@ The following HTTP status codes will be recognized by our connector client:
     <tr>
       <td><code>401</code></td>
       <td>Unauthorized</td>
-      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2-5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
     </tr>
     <tr>
       <td><code>403</code></td>
       <td>Forbidden</td>
-      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2-5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
     </tr>
     <tr>
       <td><code>404</code></td>
       <td>Not Found</td>
-      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2–5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
+      <td>The connector was configured with invalid credentials. Event data will be re-sent after a delay of 2-5 minutes. If unresolved within 48 hours, the event data will be dropped.</td>
     </tr>
     <tr>
       <td><code>413</code></td>
