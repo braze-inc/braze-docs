@@ -39,6 +39,10 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `include_deleted_step_data` | Optional | Boolean | Whether or not to include step statistics for deleted steps (defaults to `false`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+{% alert important %}
+**Timezone difference**: The Braze dashboard displays Canvas analytics in UTC+2. To get data that matches the dashboard, adjust your `starting_at` and `ending_at` parameters accordingly when using this endpoint.
+{% endalert %}
+
 ## Example request
 {% raw %}
 ```
@@ -79,7 +83,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
             {
               "sent": (int) the number of sends,
               "opens": (int) the number of opens,
-              "influenced_opens": (int) the number of influenced opens,
+              "influenced_opens": (int) the total number of opens (includes both direct opens and influenced opens),
               "bounces": (int) the number of bounces
               ... (more stats for channel)
             }
@@ -93,6 +97,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
   "message": (required, string) the status of the export, returns 'success' when completed without errors
 }
 ```
+
+{% alert important %}
+**`influenced_opens` field**: In the API response, the `influenced_opens` field represents the total number of opens, including both direct opens and influenced opens combined. This differs from the Braze dashboard, where "influenced opens" refers only to influenced opens (not direct opens). The API field name is a legacy naming convention and should be interpreted as total opens.
+{% endalert %}
 
 {% alert tip %}
 For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).
