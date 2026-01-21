@@ -72,7 +72,7 @@ A row is added to `SNAPSHOTS_CANVAS_STEP_SHARED` when:
 {% alert important %}
 **Content changes do not trigger snapshots**: Changing content within a message step (such as email body text, subject lines, or push notification copy) does not trigger a snapshot. Only structural changes to snapshottable fields (like adding a new channel) create a new row.
 
-**Draft Canvases are not tracked**: This table tracks only changes to active (launched) Canvases. Updates to message steps in Draft Canvases are not captured in `SNAPSHOTS_CANVAS_STEP_SHARED`. You cannot get the latest updated message step for Draft Canvases through Snowflake Data Sharing.
+**Draft Canvases are not tracked**: This table tracks only changes to active (launched) Canvases. Updates to message steps in Draft Canvases are not captured in `SNAPSHOTS_CANVAS_STEP_SHARED`. Snowflake Data Sharing does not provide the most recently updated message step for Draft Canvases.
 {% endalert %}
 
 ### SNAPSHOTS_CANVAS_VARIATION_SHARED
