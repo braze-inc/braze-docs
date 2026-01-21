@@ -104,7 +104,7 @@ This section describes the main differences between card creation at campaign la
   <tr>
     <td class="leftHeader">Processing time</td>
   <td class="tg-0pky">Braze creates cards for every eligible user in the segment at launch time. For large audiences, select <b>At First Impression</b> so cards are available more quickly after launch.</td>
-  <td class="tg-0pky">Braze creates a card the first time a user tries to view it, so it may take 1–2 seconds to display on the first impression.</td>
+  <td class="tg-0pky">Braze creates a card the first time a user tries to view it, so it may take 1-2 seconds to display on the first impression.</td>
   </tr>
 </tbody>
 </table>
@@ -121,7 +121,7 @@ Braze recommends not changing how cards are created after a campaign has launche
 
 For large audiences, select the option to create cards at first impression so cards are available quickly after launch. Campaigns triggered on session start may also benefit from moving to create at first impression (available through scheduled delivery) to improve performance.
 
-When cards are created at first impression, it may take 1–2 seconds for the cards to process. The length of this processing time depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
+When cards are created at first impression, it may take 1-2 seconds for the cards to process. The length of this processing time depends on various factors, such as the card size and the complexity of the message templating options. For example, the processing time for cards using Connected Content will be at least as long as the Connected Content response time.
 
 ### Previous SDK versions
 
