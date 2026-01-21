@@ -1,7 +1,7 @@
 ---
 nav_title: Approvals
 article_title: Approvals
-page_order: 2
+page_order: 1
 page_type: reference
 description: "This reference article gives an overview of the various statuses a campaign and Canvas can have and what they mean."
 tool:
