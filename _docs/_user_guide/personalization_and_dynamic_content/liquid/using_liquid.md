@@ -44,8 +44,12 @@ When using Liquid in email messages that contain both HTML and plaintext version
 
 When Braze sends an email with both HTML and auto-generated plaintext, the plaintext version is derived from the HTML before Liquid is rendered. This means:
 
-1. The plaintext version is generated from your HTML content first
+1. The auto-generated plaintext version is created from your HTML content first
 2. Liquid tags are then evaluated and rendered in both versions
+
+{% alert note %}
+This order of operations applies specifically to auto-generated plaintext. If you create a custom plaintext version separately, Liquid will process normally in both HTML and plaintext versions.
+{% endalert %}
 
 #### HTML comments and plaintext
 
@@ -56,10 +60,10 @@ Because content within HTML comments (`<!-- -->`) should not be included in the 
 
 #### Processing plaintext with Liquid
 
-The plaintext generation process doesn't understand Liquid in the context of HTML structure. As a result:
+The auto-generated plaintext generation process removes HTML comments before Liquid is evaluated. As a result:
 
-- Liquid tags in HTML comments are treated as regular text when generating the plaintext
-- Because they are in a comment block, they are stripped out along with the comment
+- HTML comments and any content within them (including Liquid tags) are stripped during the plaintext generation step
+- After plaintext is generated, Liquid processing occurs separately on both the HTML and plaintext versions
 - To ensure Liquid renders in both HTML and plaintext, place Liquid tags outside of HTML comments
 
 ## Supported values to substitute
