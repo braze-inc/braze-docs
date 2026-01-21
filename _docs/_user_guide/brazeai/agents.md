@@ -27,7 +27,7 @@ Use agents for personalizing content on the fly using a user’s specific contex
 
 However, the agent does not learn through trial and error, and it has no idea of an ultimate marketing goal it is looking to measure and maximize. Even if you tell it to generally write copy that drives conversions, it has no mechanism to “monitor” for the conversion impact of its agentic writing and integrate that data back into future agentic calls. You can think of this as “vibe” decisioning, not reward-based AI Decisioning.
 
-In contrast, other BrazeAI tools are designed to maximize the metrics that they are measuring. For example, agents are very good at qualitatively assessing how a user’s characteristics factor into their likelihood or propensity to do a certain event or like a certain product. However, because the agent doesn’t learn through trial and error, it has no idea of how to measure its accuracy in predicting likelihoods and improving the signal over time. As such, using Predictive Suite outperforms the Agent Step when judged on the accuracy of its predictions and improvements over time.
+In contrast, other BrazeAI tools are designed to maximize the metrics that they are measuring. For example, agents are very good at qualitatively assessing how a user’s characteristics factor into their likelihood or propensity to do a certain event or like a certain product. However, because the agent doesn’t learn through trial and error, it has no idea of how to measure its accuracy in predicting likelihoods and improving the signal over time. As such, using Predictive Suite outperforms the Agent step when judged on the accuracy of its predictions and improvements over time.
 
 ## Features
 
