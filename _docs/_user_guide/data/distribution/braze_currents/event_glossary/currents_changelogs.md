@@ -7,7 +7,29 @@ tool: Currents
 
 # Currents changelog
 
-## Changes in Version 4 (release date null)
+## Changes in Version 5 (release date 2026-02-04)
+
+* Added new event type `agentconsole.AgentExecuted`.
+
+* Added new event type `agentconsole.ToolInvocation`.
+
+* Added new event type `users.messages.email.Retry`.
+
+* Added new event type `users.messages.line.Retry`.
+
+* Added new event type `users.messages.pushnotification.Retry`.
+
+* Added new event type `users.messages.sms.Retry`.
+
+* Added new event type `users.messages.webhook.Retry`.
+
+* Added new event type `users.messages.whatsapp.Retry`.
+
+* Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
+    * Added new `long` field `time_ms`: Time in millisecond when the event happened
+
+
+## Changes in Version 4 (release date 2026-01-07)
 
 * Field changes to event type `users.behaviors.pushnotification.TokenStateChange`:
     * Added new `string` field `push_token`: Push token of the event
@@ -29,7 +51,7 @@ tool: Currents
     * Added new `string` field `canvas_step_message_variation_id`: API ID of the Canvas step message variation this user received
 
 
-## Changes in Version 3 (release date null)
+## Changes in Version 3 (release date 2025-10-08)
 
 * Added new event type `users.messages.line.Abort`.
 
