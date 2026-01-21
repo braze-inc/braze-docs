@@ -106,7 +106,7 @@ Seed Groups send to each email variant once and are delivered the first time you
 If your campaign is multivariate and your variant has a 0% send percentage, it isn't sent to Seed Groups. Additionally, if the variant has already been sent and hasn't been updated to resend in **Edit Seed Groups** on the **Target** step, it isn't sent again by default.
 
 {% alert note %}
-If you have a recurring campaign and any one of the variants is updated, choose to send again to only the updated variants or all variants, or turn off Seed Group sending upon update.
+If you have a recurring campaign and any one of the variants is updated, you can choose to send again to only the updated variants or all variants, or turn off Seed Group sending upon update.
 {% endalert %}
 
 ![The "Email seed test" Seed Group selected to be sent the Variant 1 email campaign.]({% image_buster /assets/img_archive/seed_group_campaign.png %})
