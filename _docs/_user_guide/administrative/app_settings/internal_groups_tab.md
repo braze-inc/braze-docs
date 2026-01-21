@@ -98,7 +98,7 @@ If your Seed Group members report not seeing the message in their inbox, check t
 When composing an email campaign, edit your Seed Groups in the **Target Audiences** section of the editor.
 
 {% alert important %}
-**Automatically attach seed groups**: If you configure a Seed Group to automatically attach to all campaigns using the seed group options, this setting applies only to new campaigns you create. When you copy a campaign that already has seed groups configured, the automatically attach setting does not apply to the copied campaign. You must manually apply your desired seed groups to the copied campaign in the **Target Audiences** section.
+**Automatically attach seed groups**: If you configure a Seed Group to automatically attach to all campaigns, it only applies to new campaigns. It does not apply when you copy existing campaigns. You must manually apply your desired seed groups to the copied campaign in the **Target Audiences** section.
 {% endalert %}
 
 Seed Groups send to each email variant once and are delivered the first time your user receives that particular variant. For scheduled messages, this typically is the first time the campaign launches. For action-based or API-triggered campaigns, this is the time the first user is sent a message.
