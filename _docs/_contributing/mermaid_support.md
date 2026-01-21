@@ -1,5 +1,5 @@
 ---
-nav_title: Mermaid Diagrams
+nav_title: Mermaid diagrams
 article_title: Contributing Mermaid Diagrams
 description: "Learn how to create and contribute Mermaid diagrams to Braze Docs."
 page_order: 7
@@ -42,8 +42,11 @@ For a complete list of supported diagrams, see [Mermaid's diagram syntax](https:
 
 ### Step 2: Write the diagram code
 
-Create a Mermaid diagram by wrapping your diagram code in `\`\`\`mermaid` code fences. The following snippet displays an example of how you can use Mermaid.
+Create a diagram in Markdown by wrapping your [Mermaid diagram syntax](https://mermaid.js.org/syntax/flowchart.html) in code fences. The following snippet displays an example of how you can use Mermaid to create a flowchart. You can reference how the flowchart renders in the **RENDERED** tab. This shows the visual representation of the Mermaid diagram syntax. 
 
+{% tabs %}
+{% tab Code %}
+````
 ```mermaid
 ---
 config:
@@ -57,10 +60,27 @@ flowchart TD
     E -->|Yes| F[Send message]
     E -->|No| G[Skip user]
 ```
+````
+{% endtab %}
 
-The code above renders as a visual flowchart.
+{% tab Rendered %}
+```mermaid
+---
+config:
+  theme: neutral
+---
+flowchart TD
+    A[API request received] --> B{Valid campaign ID?}
+    B -->|Yes| C[Evaluate audience criteria]
+    B -->|No| D[Return 400 error]
+    C --> E{User matches segment?}
+    E -->|Yes| F[Send message]
+    E -->|No| G[Skip user]
+```
+{% endtab %}
+{% endtabs %}
 
-**Breakdown of the example**
+#### Diagram components
 
 Reference the following list for more information on the components of the Mermaid diagram in the previous section.
 - **Configuration block**: Sets the theme to `neutral`
@@ -69,15 +89,7 @@ Reference the following list for more information on the components of the Merma
 - **Connections**: Arrows (`-->`) show the flow between elements
 - **Labels**: Text after `|` adds labels to connections
 
-### Step 3: Add the diagram to your documentation
-
-When adding a Mermaid diagram to a Braze Docs file:
-
-1. Place the diagram code within `\`\`\`mermaid` code fences
-2. Include the configuration block at the top with `theme: neutral`
-3. Ensure proper indentation if using the diagram within tabs or other components
-
-### Step 4: Test your diagram
+### Step 3: Test your diagram
 
 Before submitting your contribution:
 
@@ -90,21 +102,11 @@ You can also test your Mermaid syntax using the [Mermaid Live Editor](https://me
 
 ## Best practices
 
-Follow these best practices when creating Mermaid diagrams for Braze Docs:
-
-### Configuration
-
-- **Always use `theme: neutral`** for consistency across Braze Docs
-- Include the configuration block at the start of your diagram
-
-```mermaid
----
-config:
-  theme: neutral
----
-```
+Follow the best practices in this section when creating and contributing Mermaid diagrams for Braze Docs.
 
 ### Diagram structure
+
+Keep your diagrams organized and easy to understand:
 
 - Keep diagrams simple and focused on a single concept or workflow
 - Use clear, concise labels for nodes and connections
@@ -113,10 +115,14 @@ config:
 
 ### Styling
 
+Apply visual consistency throughout your diagrams:
+
 - Use consistent node shapes for similar elements (rectangles for processes, diamonds for decisions)
 - Apply custom styling sparingly and only when necessary for clarity
 
 ### Accessibility
+
+Ensure your diagrams are accessible to all users:
 
 - Provide descriptive text before or after diagrams to explain the workflow
 - Use meaningful labels that make sense without additional context
@@ -124,7 +130,7 @@ config:
 
 ## Next steps
 
-Now that you know how to create Mermaid diagrams, you're ready to contribute to Braze Docs! For help with the contribution process, see:
+Now that you know how to create Mermaid diagrams, you're ready to contribute to Braze Docs! For more information on the contribution process, see:
 
 - [Your first contribution]({{site.baseurl}}/contributing/your_first_contribution/)
 - [Generating a preview]({{site.baseurl}}/contributing/generating_a_preview/)
