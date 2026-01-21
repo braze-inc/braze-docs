@@ -42,7 +42,7 @@ For a complete list of supported diagrams, see [Mermaid's diagram syntax](https:
 
 ### Step 2: Write the diagram code
 
-Create a diagram in Markdown by wrapping your [Mermaid diagram syntax](https://mermaid.js.org/syntax/flowchart.html) in code fences. The following snippet displays an example of how you can use Mermaid to create a flowchart. You can reference how the flowchart renders in the **RENDERED** tab. This shows the visual representation of the Mermaid diagram syntax.  
+Create a diagram in Markdown by wrapping your [Mermaid diagram syntax](https://mermaid.js.org/syntax/flowchart.html) in code fences. The following snippet displays an example of how you can use Mermaid to create a flowchart. You can reference how the flowchart renders in the **RENDERED** tab. This shows the visual representation of the Mermaid diagram syntax. 
 
 {% tabs %}
 {% tab Code %}
