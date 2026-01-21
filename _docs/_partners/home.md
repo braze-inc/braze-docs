@@ -294,7 +294,7 @@ valid_partner_list:
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: SEEN
-  url: /docs/partners/seen
+  url: /docs/partners/seen/
 - name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
