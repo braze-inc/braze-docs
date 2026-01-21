@@ -37,7 +37,7 @@ Hi Valued User, thanks for using the App!
 ```
 
 {% alert important %}
-HTML comments (`<!-- -->`) are removed before any Liquid is read, so Liquid tags within HTML comments **will not** render in your message. For proper rendering, make sure all the Liquid tags you want to use are outside of HTML comments.
+HTML comments (`<!-- -->`) are removed before any Liquid is read, so Liquid tags within HTML comments **do not** render in your message. For proper rendering, make sure all the Liquid tags you want to use are outside of HTML comments.
 {% endalert %}
 
 ## Supported values to substitute
