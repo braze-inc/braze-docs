@@ -61,7 +61,7 @@ Similar to sending a preview test of a message, the Content Test Group saves you
 [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/) test messages can only be sent to valid phone numbers in the database.
 {% endalert %}
 
-Select individual Braze users or as many internal groups to send the message to. If your message includes any Liquid or other dynamic personalization, Braze uses the attributes available for each user to personalize the message contents. For users who have no attributes, Braze uses the default value set.
+Select individual Braze users or any number of internal groups to send the message to. If your message includes any Liquid or other dynamic personalization, Braze uses the attributes available for each user to personalize the message contents. For users who have no attributes, Braze uses the default value set.
 
 Additionally, if you preview the message as a random user, a custom user, or an existing user, you can send that previewed version instead. Clearing the checkbox lets you send based on each user's attributes versus the previewed version.
 
