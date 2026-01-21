@@ -8,7 +8,7 @@ search_rank: 2
 
 # [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Using Liquid
 
-> This article will show how you can use a variety of user attributes to dynamically insert personal information into your messaging.
+> This article shows how you can use a variety of user attributes to dynamically insert personal information into your messaging.
 
 Liquid is an open-source template language developed by Shopify and written in Ruby. You can use it in Braze to pull user profile data into your messages and customize that data. For example, you can use Liquid tags to create conditional messages, such as sending different offers based on a user's subscription anniversary date. Additionally, filters can manipulate data, like formatting a user's registration date from a timestamp into a more readable format, such as "January 15, 2022." For further details on Liquid syntax and its capabilities, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -36,26 +36,9 @@ Or...
 Hi Valued User, thanks for using the App!
 ```
 
-### Liquid rendering with HTML and plaintext
-
-When using Liquid in email messages that contain both HTML and plaintext versions, it's important to understand how Liquid interacts with the auto-generated plaintext process.
-
-#### Order of operations
-
-When Braze sends an email with both HTML and auto-generated plaintext, the following sequence occurs:
-
-1. HTML comments (`<!-- -->`) and their content are removed from the HTML to create the plaintext version
-2. Liquid tags are then evaluated and rendered in both the HTML and plaintext versions
-
-This means that any Liquid tags nested within HTML comments will be removed during step 1, before Liquid processing begins. As a result, these tags will not appear in the plaintext version of the message.
-
-{% alert note %}
-This order of operations applies specifically to auto-generated plaintext. If you create a custom plaintext version separately, Liquid will process normally in both HTML and plaintext versions.
+{% alert important %}
+HTML comments (`<!-- -->`) are removed before any Liquid is read, so Liquid tags within HTML comments **will not** render in your message. For proper rendering, make sure all the Liquid tags you want to use are outside of HTML comments.
 {% endalert %}
-
-#### Best practice
-
-To ensure Liquid renders in both HTML and plaintext versions when using auto-generated plaintext, place Liquid tags outside of HTML comments.
 
 ## Supported values to substitute
 
