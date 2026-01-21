@@ -546,7 +546,6 @@ You can use the order placed event to trigger when a customer successfully compl
 | `metadata` | No | Object | Additional metadata field about the product that the customer wants to add for their use cases. For Shopify, we will add SKU. <br> This will have a limit based on our general event properties limit of 50kb. |
 | `sku` | No | String | (Shopify only) Shopify SKU. This can be configured as the catalog ID field. |
 | `source` | Yes | String | Source the event is derived from. (For Shopify, this is storefront). |
-| `metadata` | No | Object |  |
 | `order_status_url` | No | String | URL to view the status of the order. |
 | `order_number` | No | String | (Shopify only) Unique order number for the order placed. |
 | `tags` | No | Array | (Shopify only) Order tags
