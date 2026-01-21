@@ -370,7 +370,7 @@ valid_partner_list:
 - name: Oracle Crowdtwist
   url: /docs/partners/crowdtwist/
 - name: Blings
-  url: /docs/partners/blings
+  url: /docs/partners/blings/
 - name: Google Audience Sync
   url: /docs/google_audience_sync/ 
 - name: Optimizely
