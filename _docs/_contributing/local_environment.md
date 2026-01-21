@@ -154,8 +154,12 @@ If you have multiple versions of Node.js installed, use `asdf` for version manag
 brew install asdf
 ```
 
-Next, install the dependencies for Braze Docs. These are small programs used to generate your local Braze Docs site. This requires [Bundler 2 or higher](https://bundler.io/guides/bundler_2_upgrade.html). Verify your current version with `bundle --version`. Upgrade to the latest version with `gem install bundler`.
+Next, install the dependencies for Braze Docs. These dependencies are small programs that generate your local Braze Docs site.
 
+- Make sure you have [Bundler 2 or higher](https://bundler.io/guides/bundler_2_upgrade.html).
+- Verify your current Bundler version:
+  ```bash
+  bundle --version
 ```bash
 bundle install && asdf install
 ```
