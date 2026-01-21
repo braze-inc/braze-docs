@@ -19,12 +19,16 @@ platform:
 
 ## Why migrate to Banners?
 
+- If your engineering team is building or maintaining custom Content Cards, migrating to Banners can reduce that ongoing investment. Banners let marketers control the UI directly, freeing developers for other work.
+- If you're launching new homepage messages, onboarding flows, or persistent announcements, start with Banners rather than building on Content Cards. You'll benefit from real-time personalization, no 30-day expiration, no size limit, and native prioritization from day one.
+- If you're working around the 30-day expiration limit, managing complex re-eligibility logic, or frustrated by stale personalization, Banners solves these problems natively.
+
 Banners offer several advantages over Content Cards for banner-style messaging:
 
 ### Accelerated production
 
-- **No engineering support required**: Marketers can build custom messages using a drag-and-drop editor and custom HTML without requiring developer assistance for customization
-- **Simplified customization**: No need for complex key-value pair (KVP) designs for customization
+- **Reduced on-going engineering support required**: Marketers can build custom messages using a drag-and-drop editor and custom HTML without requiring developer assistance for customization
+- **Flexible customization options**: Design directly in the editor, use HTML or leverage existing data models with custom properties
 
 ### Better UX
 
@@ -34,17 +38,16 @@ Banners offer several advantages over Content Cards for banner-style messaging:
 
 ### Persistence
 
-- **No expiration limit**: Banners do not have a 30-day expiration limit like Content Cards, allowing for true persistence of messages
+- **No expiration limit**: Banner campaigns do not have a 30-day expiration limit like Content Cards, allowing for true persistence of messages
 
 ## When to migrate
 
 Consider migrating to Banners if you're using Content Cards for:
 
-- **Single banner messages at specific locations**: Messages that appear at fixed placements (e.g., top of page, navigation bar, sidebar)
-- **Announcements or promotional messages**: One-time or ongoing promotional content that needs to persist beyond 30 days
-- **Persistent inline messaging**: Messages that should remain visible without requiring a feed interface
-- **Marketer-driven customization**: Use cases where marketers need to frequently update content without developer assistance
-- **Context-specific messaging**: Messages that should appear in specific contexts rather than a general feed
+- Homepage heroes, product page promotions, checkout offers
+- Persistent navigation announcements or sidebar messages
+- Always-on messages running longer than 30 days
+- Messages where you want real-time personalization and eligibility
 
 ## When to keep Content Cards
 
@@ -52,7 +55,7 @@ Continue using Content Cards if you need:
 
 - Feed Experiences: Any use case involving multiple scrollable messages or a card-based "Inbox".
 - Specific Features: Messages that require Connected Content or Promotional Codes, as Banners do not support these natively.
-- Triggered Delivery: Use cases strictly requiring API-triggered or action-based delivery that cannot be converted to segment-based logic
+- Triggered Delivery: Use cases strictly requiring API-triggered or action-based delivery. Note: While Banners don’t support API-triggered or action-based delivery, real-time eligibility evaluation means users instantly qualify/disqualify based on segment membership at each refresh.
 
 ## Migration guide
 
