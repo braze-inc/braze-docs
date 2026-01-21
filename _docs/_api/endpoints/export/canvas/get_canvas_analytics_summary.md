@@ -40,11 +40,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-<<<<<<< HEAD
 **Timezone alignment**: Braze Dashboard analytics are aggregated daily in your company's configured time in the dashboard. Ensure your timestamps align with this timezone to ensure stats match the dashboard. For example, if your company time is UTC+2, then the timestamp should be 12AM UTC+2.
-=======
-**Timezone difference**: The Braze dashboard displays Canvas analytics in the time zone you configured in Braze. For example, if your `company_time` is UTC+2, then the timestamp would be 12AM UTC+2.
->>>>>>> 56000f9e7aeb41114c124deb77b3d8e7476ca07d
 {% endalert %}
 
 ## Example request
