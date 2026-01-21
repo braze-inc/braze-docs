@@ -114,6 +114,6 @@ The **Message Activity Log** shows test logs for these messaging channels:
 - LINE
 - Webhook
 
-The following channels don't have test send logs: email, Content Cards, in-app messages, and push.
+Test send logs are not available for the following channels: email, Content Cards, in-app messages, and push.
 
 Test send logs are prefixed with "[TEST SEND]", but it's not guaranteed that all test send logs will have the prefix (for example, Connected Content errors don't have the prefix).
