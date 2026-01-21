@@ -49,18 +49,18 @@ When Braze sends an email with both HTML and auto-generated plaintext, the plain
 
 #### HTML comments and plaintext
 
-Because content within HTML comments (`<!-- -->`) shouldn't be included in the plaintext version of your message, it is excluded by default when the auto-generated plaintext is created. This has an important implication for Liquid:
+Because content within HTML comments (`<!-- -->`) shouldn't be included in the plaintext version of a message, it is excluded by default when the auto-generated plaintext is created. This has an important implication for Liquid:
 
-- If you nest Liquid tags within HTML comments, they will not appear in the plaintext version of your message
+- If Liquid tags are nested within HTML comments, they will not appear in the plaintext version of the message
 - The HTML-stripping parser removes comment blocks (and any Liquid within them) before the plaintext is finalized
 
 #### Processing plaintext with Liquid
 
-The plaintext generation process doesn't understand Liquid in the context of your HTML structure. As a result:
+The plaintext generation process doesn't understand Liquid in the context of HTML structure. As a result:
 
 - Liquid tags in HTML comments are treated as regular text when generating the plaintext
 - Because they're in a comment block, they're stripped out along with the comment
-- To ensure Liquid renders in both HTML and plaintext, place your Liquid tags outside of HTML comments
+- To ensure Liquid renders in both HTML and plaintext, place Liquid tags outside of HTML comments
 
 ## Supported values to substitute
 
