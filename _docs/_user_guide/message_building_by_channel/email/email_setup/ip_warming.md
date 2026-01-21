@@ -59,7 +59,7 @@ Day | # of Emails to be Sent
 
 We suggest warming up to your peak sending. That is to say, if you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to.
 
-Once warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week, may negatively affect your delivery metrics and sender reputation. 
+After IP warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is expected, but reaching the desired volume, then only doing a mass blast once a week, may negatively affect your delivery metrics and sender reputation. 
 
 {% alert important %}
 Most ISPs only store reputation data for 30 days. If you go a month without sending any messages, you'll have to repeat the IP warming process.
