@@ -374,7 +374,7 @@ valid_partner_list:
 - name: Google Audience Sync
   url: /docs/google_audience_sync/ 
 - name: Optimizely
-  url: /docs/partners/optimizely
+  url: /docs/partners/optimizely/
 - name: OtherLevels
   url: /docs/partners/otherlevels
 ---
