@@ -376,5 +376,5 @@ valid_partner_list:
 - name: Optimizely
   url: /docs/partners/optimizely/
 - name: OtherLevels
-  url: /docs/partners/otherlevels
+  url: /docs/partners/otherlevels/
 ---
