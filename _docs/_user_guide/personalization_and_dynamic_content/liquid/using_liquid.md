@@ -36,6 +36,32 @@ Or...
 Hi Valued User, thanks for using the App!
 ```
 
+### Liquid rendering with HTML and plaintext
+
+When using Liquid in email messages that contain both HTML and plaintext versions, it's important to understand how Liquid interacts with the plaintext generation process.
+
+#### Order of operations
+
+When Braze sends an email with both HTML and auto-generated plaintext, the plaintext version is derived from the HTML before Liquid is rendered. This means:
+
+1. The plaintext version is generated from your HTML content first
+2. Liquid tags are then evaluated and rendered in both versions
+
+#### HTML comments and plaintext
+
+Because content within HTML comments (`<!-- -->`) shouldn't be included in the plaintext version of your message, it is excluded by default when the auto-generated plaintext is created. This has an important implication for Liquid:
+
+- If you nest Liquid tags within HTML comments, they will not appear in the plaintext version of your message
+- The HTML-stripping parser removes comment blocks (and any Liquid within them) before the plaintext is finalized
+
+#### Processing plaintext with Liquid
+
+The plaintext generation process doesn't understand Liquid in the context of your HTML structure. As a result:
+
+- Liquid tags in HTML comments are treated as regular text when generating the plaintext
+- Because they're in a comment block, they're stripped out along with the comment
+- To ensure Liquid renders in both HTML and plaintext, place your Liquid tags outside of HTML comments
+
 ## Supported values to substitute
 
 The following values can be substituted into a message, depending on their availability:
