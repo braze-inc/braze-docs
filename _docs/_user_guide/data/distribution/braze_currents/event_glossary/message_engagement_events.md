@@ -56,8 +56,24 @@ Certain events return a `platform` value that specifies the platform of the user
 Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
 
+{% alert important %}
+`dispatch_id` is deprecated and will be removed in the next Currents release for these events:
+
+<ul>
+  <li>Campaign Conversion</li>
+  <li>Campaign Control Group Enrollment</li>
+  <li>Content Card Click</li>
+  <li>Content Card Dismiss</li>
+  <li>Content Card Impression</li>
+  <li>Content Card Send</li>
+  <li>In-App Message Click</li>
+  <li>In-App Message Impression</li>
+</ul>
+
+{% endalert %}
+
 {% alert note %}
-Objects related to Canvas Flow have IDs that can be used for grouping and translated to human-readable names through the [Export Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
+Objects related to Canvas have IDs that can be used for grouping and translated to human-readable names through the [Export Canvas details endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/).
 {% endalert %}
 
 {% alert note %}
