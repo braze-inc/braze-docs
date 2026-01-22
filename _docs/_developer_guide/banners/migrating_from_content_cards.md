@@ -387,12 +387,7 @@ Both Content Cards and Banners automatically track analytics when using their de
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-  if (!card.isControl) {
     braze.logContentCardImpressions([card]);
-  } else {
-    // Still log impressions for control cards
-    braze.logContentCardImpressions([card]);
-  }
 });
 
 // Manual click logging required for custom implementations
@@ -699,17 +694,17 @@ Banners only support scheduled delivery campaigns. To migrate a message that was
 | Native prioritization | ❌ Requires custom logic | ✅ Built-in prioritization |
 | **User Interaction** |
 | Manual dismissal | ✅ Supported | ❌ Not supported |
-| Pinned cards | ✅ Supported | ❌ Not supported |
+| Pinned cards | ✅ Supported | N/A |
 | **Analytics** |
 | Automatic analytics (default UI) | ✅ Supported | ✅ Supported |
 | Priority Sorting | ❌ Not supported | ✅ Supported | 
 | **Content Updates** |
-| Liquid logic refresh | ❌ On initial load only | ✅ Refreshes on every session |
-| Eligibility refresh | ❌ On initial load only | ✅ Refreshes on every session |
+| Liquid templating refresh | ❌ Once per card at send/launch | ✅ Refreshes on every refresh |
+| Eligibility refresh | ❌ Once per card at send/launch | ✅ Refreshes on every session |
 
-### System Constraints
+### Product Limits
 
-* **Active Messages**: Maximum 10 active messages per placement.
+* **Active Messages**: Maximum 25 active messages per placement.
 * **Batch Requests**: Maximum 10 placement IDs per refresh request; requests beyond this are truncated.
 
 ### SDK limitations
