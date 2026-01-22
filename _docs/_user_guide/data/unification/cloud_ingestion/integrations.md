@@ -259,7 +259,7 @@ You can name the project, dataset, and table as you'd like, but the column names
 
 CDI supports partitions for BigQuery. If you partition by a function of `UPDATED_AT` (for example, at the granularity of a day, week, or hour, depending on the size of your dataset), BigQuery can prune the data it needs to scan. This improves performance and efficiency for very large tables.
 
-We don't recommend partitioning by any other fields. Test different configurations to find the best setup for your specific data.
+Don't partition by any other fields. Test different configurations to find the best setup for your specific data.
 
 All CDI queries currently filter by `UPDATED_AT`, but this behavior isn't guaranteed to remain unchanged. Don't design your table schema to require that queries include this clause.
 
