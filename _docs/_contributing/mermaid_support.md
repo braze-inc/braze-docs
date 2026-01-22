@@ -4,7 +4,6 @@ article_title: Contributing Mermaid Diagrams
 description: "Learn how to create and contribute Mermaid diagrams to Braze Docs."
 page_order: 7
 noindex: true
-noindex: true
 search_tag: Contributing
 ---
 
