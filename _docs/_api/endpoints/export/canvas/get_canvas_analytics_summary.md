@@ -40,7 +40,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-**Timezone alignment**: Braze Dashboard analytics are aggregated daily in your company's configured time in the dashboard. Ensure your timestamps align with this timezone to ensure stats match the dashboard. For example, if your company time is UTC+2, then the timestamp should be 12AM UTC+2.
+**Time zone alignment:** Braze Dashboard analytics are aggregated daily in your company's configured time zone in the dashboard. Make sure your timestamps align with your company's time zone so that your stats match the dashboard. For example, if your company time is UTC+2, then the timestamp should be 12AM UTC+2.
 {% endalert %}
 
 ## Example request
@@ -99,7 +99,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 ```
 
 {% alert important %}
-**`influenced_opens` field**: In the API response, the `influenced_opens` field represents the total number of opens (both direct and influenced opens combined). In the Braze dashboard, 'influenced opens' refers only to influenced opens, excluding direct opens. This is due to a legacy naming convention in the API.
+**`influenced_opens` field:** In the API response, the `influenced_opens` field represents the total number of opens (both direct and influenced opens combined). In the Braze dashboard, 'influenced opens' refers only to influenced opens, excluding direct opens. This is due to a legacy naming convention in the API.
 {% endalert %}
 
 {% alert tip %}
