@@ -475,7 +475,7 @@ In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, sele
 Input the information for your Redshift data warehouse and source table. If you're using a private network tunnel, toggle the slider and input the tunnel information. Then, proceed to the next step. 
 
 {% alert note %}
-Only alphanumerics and underscores are allowed for database names.
+In the Braze dashboard, the **Database name** field only accepts letters (A–Z, a–z), numbers (0–9), and underscores (_), even though Amazon Redshift supports additional characters in database identifiers.
 {% endalert %}
 
 ![The "Create new import sync" page for Redshift in the Braze dashboard, set to Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
