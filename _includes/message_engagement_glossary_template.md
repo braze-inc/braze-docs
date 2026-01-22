@@ -57,7 +57,7 @@ Currents will drop events with excessively large payloads of greater than 900&nb
 {% endalert %}
 
 {% alert important %}
-`dispatch_id` is deprecated and will be removed in the next Currents release for these events:
+`dispatch_id` is deprecated and will be removed for these events in a Currents release in March 2026:
 
 <ul>
   <li>Campaign Conversion</li>
