@@ -48,7 +48,7 @@ This person-centric user profile database allows for real-time, interactive spee
 
 ### Data source breakdown
 
-Braze uses different data storage systems for varopis features. Understanding which features use which data sources is important for data management and troubleshooting:
+Braze uses different data storage systems for various features. Understanding which features use which data sources is important for data management and troubleshooting:
 
 **MongoDB-powered features:**
 - Custom events (tracked via SDK and API)
