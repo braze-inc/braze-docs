@@ -24,9 +24,9 @@ search_tag: Contributing
 
 Before creating Mermaid diagrams for Braze Docs, you should:
 
-- Have a basic understanding of Markdown syntax
-- Be familiar with the [contribution workflow]({{site.baseurl}}/contributing/your_first_contribution/)
-- Review the [Mermaid documentation](https://mermaid.js.org/) for syntax reference
+- Have a basic understanding of Markdown syntax.
+- Be familiar with the [contribution workflow]({{site.baseurl}}/contributing/your_first_contribution/).
+- Review the [Mermaid documentation](https://mermaid.js.org/) for syntax reference.
 
 ## Create a Mermaid diagram
 
