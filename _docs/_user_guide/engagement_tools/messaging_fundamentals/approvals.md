@@ -79,7 +79,16 @@ You must have the ["Approve and Deny Canvases" permission]({{site.baseurl}}/user
 After approval statuses are set on the **Summary** step, any subsequent changes made to the Canvas reset all approval statuses when saved. This applies to any changes made either in a draft Canvas or a post-launch Canvas. For example, if you only make changes to the target audience, the **Summary** step reverts approval statuses for all sections back to the default state, pending.
 
 {% alert note %}
-**Approval status and saving:** Approval status is automatically saved immediately when you approve a section. The **Save** button saves the Canvas itself, not the approval status. If you approve a section and then click **Save** on the Canvas, all approval statuses reset to pending, even if you didn't make any changes to the Canvas. To preserve your approvals, approve the sections you need without clicking **Save** on the Canvas.
+**Approval status and saving**
+
+- When you click **Approve** for a section on the **Summary** step, that approval is saved immediately.
+- The **Save** button saves changes to the Canvas content and settings, not the approval status.
+
+To avoid losing approvals:
+
+1. Make any Canvas edits you need, then click **Save**.
+2. After the Canvas finishes saving, approve the relevant sections on the **Summary** step.
+3. Click **Save** again only if you make additional Canvas changes after approval. If you change the Canvas and save, all approval statuses reset to pending.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
