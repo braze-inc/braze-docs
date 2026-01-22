@@ -169,6 +169,10 @@ The iOS operating system may [gate notifications]({{site.baseurl}}/developer_gui
 
 To add a key-value pair to an in-app message, select the **Settings** tab in the message composer, select **Add New Pair**, and specify your key-value pairs.
 
+{% alert note %}
+Key-value pairs can only be set in the **Settings** tab of the traditional editor. Setting key-value pairs isn't possible through the drag-and-drop editor.
+{% endalert %}
+
 ![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### API-triggered campaigns
