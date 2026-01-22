@@ -15,7 +15,7 @@ channel: email
 
 ## How it works
 
-Braze validates an email address when it is updated, imported via API, CSV upload, SDK, or modified in the dashboard. Email addresses cannot include whitespace. If you use the API, whitespace returns a `400` error.
+Braze validates an email address when it is updated, imported by API, CSV upload, SDK, or modified in the dashboard. Email addresses cannot include whitespace. If you use the API, whitespace returns a `400` error.
 
 Braze rejects certain characters and marks the address invalid. If an email bounces, Braze marks the address invalid and does not change subscription status. If the email body contains non-standard [ASCII](https://en.wikipedia.org/wiki/ASCII) characters, Braze doesn't send the email.
 
