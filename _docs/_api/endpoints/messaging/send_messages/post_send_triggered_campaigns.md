@@ -93,15 +93,15 @@ A user's subscription group status can be updated using the inclusion of a `subs
 You can trigger campaign messages to specific segments using the `segment_id` parameter. This allows you to send API-triggered campaigns to users within a segment that is already configured in your campaign's target audience settings. The following payload shows an example of how to use the `segment_id` to achieve this:
 
 ```json
-{  
-  "campaign_id": "9c4ad1f2-3b7e-4d8a-9f2c-7e8a1b3c4d5f",  
-  "segment_id": "5f1e2d3c-4b5a-6e7f-8a9b-0c1d2e3f4a5b", 
+{
+  "campaign_id": "campaign_identifier",
+  "segment_id": "segment_identifier",
   "broadcast": true
 }
 ```
 
 {% alert important %}
-When using `segment_id`, ensure you set `"broadcast": true`. This is a requiement when the `recipients` array is not included in the payload. Without this parameter, the API will return a 400 Bad Request response. The `segment_id` must match the API identifier of the segment defined in your campaign's target audience settings. Using an incorrect or mismatched segment ID will result in a failed request.
+When using `segment_id`, ensure you set `"broadcast": true`. This is a requirement when the `recipients` array is not included in the payload. Without this parameter, the API will return a 400 Bad Request response. The `segment_id` must match the API identifier of the segment defined in your campaign's target audience settings. Using an incorrect or mismatched segment ID will result in a failed request.
 {% endalert %}
 
 ## Example request

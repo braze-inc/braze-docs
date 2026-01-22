@@ -82,14 +82,14 @@ Customers using the API for server-to-server calls may need to allowlist the app
 If you include both specific users in your API call and a target segment in the dashboard, Braze sends the message to specifically the user profiles that are both in the API call and qualify for the segment filters.
 {% endalert %}
 
-## Trigger canvas messages with segment ID
+## Trigger Canvas messages with segment ID
 
 You can trigger Canvas messages to specific segments using the `segment_id` parameter. This allows you to send API-triggered messages to users within a segment that is already configured in your Canvas. The following payload shows an example of how to use the `segment_id` to achieve this:
 
 ```json
-{  
-  "canvas_id": "9c4ad1f2-3b7e-4d8a-9f2c-7e8a1b3c4d5f",  
-  "segment_id": "5f1e2d3c-4b5a-6e7f-8a9b-0c1d2e3f4a5b",  
+{
+  "canvas_id": "canvas_identifier",
+  "segment_id": "segment_identifier",
   "broadcast": true
 }
 ```
