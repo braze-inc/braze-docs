@@ -167,8 +167,11 @@ The iOS operating system may [gate notifications]({{site.baseurl}}/developer_gui
 
 ## In-app messages
 
-You can add a key-value pair to an in-app message in the [traditional editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) by selecting the **Settings** tab, selecting **Add New Pair**, and then specifying your key-value pairs. Key-value pairs can not be set through the drag-and-drop editor.
+You can add a key-value pair to an in-app message in the [traditional editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) by selecting the **Settings** tab, selecting **Add New Pair**, and then specifying your key-value pairs.
 
+{% alert note %}
+Key-value pairs cannot be set through the drag-and-drop editor for in-app messages.
+{% endalert %}
 ![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### API-triggered campaigns
