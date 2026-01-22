@@ -12,12 +12,10 @@ channel:
 
 # Inbox Vision
 
-> In Inbox Vision, you can customize which email clients are included in your preview. Choose from our list of popular clients, like Gmail and Yahoo, or build your own list tailored to your audience.
-
-To use Inbox Vision, your email must include a subject line. Consider how your email can render differently on the desktop versus on mobile devices. As you review these previews, you can check that your email appears as intended.
+> Inbox Vision lets you view your emails from the perspective of various email clients and mobile devices. For example, you can test dark and light mode differences to confirm your emails render as intended.
 
 {% alert important %}
-Every company has 750 previews per calendar month shared across all workspaces. Each preview shows how your email appears in a particular email client and device combination. For example, `Gmail.com Chrome | Windows 10` is counted as one preview. When the preview capacity is reached, you must wait until the following month for your preview capacity to reset. Contact your account manager if you have any questions about this capacity.
+Inbox Vision may not work if your email content relies on templating information such as user profile data. Braze templates an empty user when sending emails for this feature.<br><br>Add default values to any Liquid in your email message. Without defaults you may receive a false positive or the test may fail.
 {% endalert %}
 
 ## Considerations
@@ -28,39 +26,50 @@ You can resolve this by adding default values or any values to the Liquid in you
 
 Your company has a limit on how many emails you can preview with Inbox Vision. You can monitor this in the **Email Previews** tab of Inbox Vision.
 
-## Previewing your emails
+Include a subject line and a valid sending domain to view previews. Be mindful of desktop versus mobile rendering differences. Use the previews to confirm the email appears as intended.
 
-To test your email message in Inbox Vision, do the following:
+To test your email message in Inbox Vision:
 
 1. Go to your drag-and-drop editor or HTML email editor.
 2. In your editor, select **Preview & Test**.
 3. Select **Inbox Vision**.
-4. In the **Preview settings** section, you can select the email clients to render your preview and save this group for future runs by enabling “Remember Selection”. Otherwise, Braze defaults to the top 20 most popular previews. These previews are grouped by clients.
+4. Select **Run Inbox Vision**. This takes up to ten minutes.
+5. Next, select a tile to view the preview in more detail. These previews are grouped into these sections: **Web Clients**, **Application Clients**, and **Mobile Clients**.
 
 ![The option to select email clients to preview.]({% image_buster /assets/img/select_email_preview_inbox_vision.png %}){: style="max-width:85%;"}
 
 {:start="5"}
 5. Select **Run Inbox Vision**. This may take between two to ten minutes to complete.
 
-![Email previews for mobile clients on Gmail and iOS.]({% image_buster /assets/img/inbox_vision_previews.png %})
+{% alert note %}
+Inbox Vision doesn't support email messages that include [abort logic]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages) because these emails render as static content.
+{% endalert %}
 
-{:start="6"}
-6. Make changes to a template, if necessary.
-7. Select **Re-run Test** to see the updated previews.
+### Previewing as a user
+
+When you preview as a random user, Inbox Vision doesn't save user-specific settings or attributes (such as name or preferences). When you select a custom user, the Inbox Vision preview may differ from other previews because it uses specific user data.
+
+## Code analysis
+
+Code analysis highlights potential HTML issues, shows the number of occurrences, and indicates unsupported HTML elements.
+
+### Viewing code analysis information
+
+Find this information on the **Inbox Vision** tab by selecting <i class="fas fa-list"></i> **List view**. List view is available only for HTML email templates. For drag-and-drop templates, use previews to resolve issues instead.
+
+![Example code analysis on the Inbox Vision preview.]({% image_buster /assets/img_archive/inboxvision2.png %})
 
 {% alert note %}
-Inbox Vision isn’t supported if your email message includes abort logic, as these emails are rendered as static content.
+Code analysis can appear faster than the preview for a particular client because Braze waits until the email arrives before taking the screenshot.
 {% endalert %}
 
 ## Spam testing
 
-Spam testing attempts to predict whether your email will land in spam folders or your customers’ inboxes. Spam testing runs across major spam filters, such as IronPort, SpamAssassin, and Barracuda, as well as major internet service provider (ISP) filters such as Gmail.com and Outlook.com.
-
-![Spam Test Result table with three columns: Name, Status, and Type. There is a list of spam filters and ISP filters that have passed spam testing, indicating that the email campaign will not land in the spam folder.]({% image_buster /assets/img_archive/email_spam_testing.png %})
+Spam testing predicts whether your email lands in spam folders or inboxes. Braze runs tests across major spam filters (IronPort, SpamAssassin, Barracuda) and major ISP filters (Gmail.com, Outlook.com).
 
 ### Viewing spam test results
 
-To check your spam test results, do the following:
+To check your spam test results:
 
 1. Select the **Spam Testing** tab in the **Inbox Vision** section. The **Spam Test Result** table lists the spam filter name, status, and type.
 2. Review these results and make any adjustments to your email campaign.
@@ -68,23 +77,23 @@ To check your spam test results, do the following:
 
 ## Accessibility testing
 
-Accessibility testing in Inbox Vision highlights accessibility issues that may exist with your email to provide insight into which elements are not meeting accessibility standards. It analyzes your email content against some Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)). WCAG is a set of internationally recognized technical standards developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities. 
+Accessibility testing highlights potential accessibility issues in your email and shows which elements don't meet standards. Braze analyzes content against select Web Content Accessibility Guidelines ([WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)), a set of internationally recognized standards developed by the W3C to make web content more accessible.
 
 ### How it works
 
-When you run an Inbox Vision test, the tool automatically checks for common email accessibility issues in the [WCAG 2.2 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa), such as missing alt text, insufficient color contrast, and improper heading structure, then categorizes the severity of each issue to help you prioritize fixes. 
+When you run Inbox Vision, Braze automatically checks for common accessibility issues in the [WCAG 2.2 AA rule set](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2&currentsidebar=%23col_customize&levels=aaa) (such as missing alt text, insufficient color contrast, improper heading structure) and categorizes severity to help you prioritize fixes. 
 
 {% alert important %}
-Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers), however Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
+Accessibility Testing may be used to support Customer's compliance efforts of regulations or laws such as the [European Accessibility Act](https://www.braze.com/resources/articles/european-accessibility-at-what-it-means-for-marketers); however, Customer acknowledges that Braze makes no representations or warranties with respect to whether or not use of Accessibility Testing satisfies Customer's compliance obligations, and disclaims all liability in relation thereto.
 {% endalert %}
 
 ### Viewing accessibility testing results
 
-Accessibility testing generates results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Each rule is categorized using POUR (Perceivable, Operable, Understandable, Robust), which are the four main principles behind WCAG.
+Accessibility testing generates results for each rule as passed, failed, or needs review in the **Accessibility Testing** tab. Braze categorizes each rule using POUR (Perceivable, Operable, Understandable, Robust), the four principles behind WCAG.
 
 #### POUR categories
 
-Issues are categorized under the four foundational [POUR principles](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility): Perceivable, Operable, Understandable, and Robust. Each principle addresses a different aspect of accessible design.
+Inbox Vision categorizes issues under the four foundational [POUR principles](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility): Perceivable, Operable, Understandable, and Robust.
 
 | Principle | Definition |
 | --- | --- |
@@ -96,7 +105,7 @@ Issues are categorized under the four foundational [POUR principles](https://www
 
 #### Severity levels
 
-Inbox Vision classifies accessibility issues by severity to help you prioritize remediation efforts.
+Inbox Vision classifies accessibility issues by severity to help you prioritize remediation.
 
 | Status | Definition |
 | --- | --- |
@@ -109,8 +118,7 @@ Inbox Vision classifies accessibility issues by severity to help you prioritize 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-The email drag-and-drop editor currently does not support setting a document `<title>` element. As a result, the accessibility scanner always fails this check.<br><br>
-We're tracking this limitation for future improvements. If this affects your workflows or your users, [share your feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) so we can prioritize the most impactful fixes.
+The drag-and-drop editor does not support setting a document `<title>` element, so the accessibility scanner always fails this check.<br><br>This limitation is tracked for future improvements. If this affects your workflows or your users, [share your feedback]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/#sharing-feedback) so we can prioritize impactful fixes.
 {% endalert %}
 
 ### Understanding automated accessibility testing
@@ -137,4 +145,4 @@ We suggest running Inbox Vision when the email message is production-ready or cl
 
 Running Inbox Vision every time you make a single edit or change can quickly consume previews. We suggest making all the necessary changes to the email first, and then running Inbox Vision to preview how all your changes can affect the rendering of your email across environments.
 
-These practices help conserve previews by focusing on high-impact client previews and minimizing redundant or unused previews.
+Braze runs tests through actual email clients and works to ensure renderings are accurate. If you consistently see an issue with a client, open a [support ticket]({{site.baseurl}}/braze_support/).
