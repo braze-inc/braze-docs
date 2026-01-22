@@ -702,7 +702,7 @@ Banners only support scheduled delivery campaigns. To migrate a message that was
 | Pinned cards | ✅ Supported | ❌ Not supported |
 | **Analytics** |
 | Automatic analytics (default UI) | ✅ Supported | ✅ Supported |
-| Custom filtering/sorting | ✅ Supported | ❌ Not supported |
+| Priority Sorting | ❌ Not supported | ✅ Supported | 
 | **Content Updates** |
 | Liquid logic refresh | ❌ On initial load only | ✅ Refreshes on every session |
 | Eligibility refresh | ❌ On initial load only | ✅ Refreshes on every session |
