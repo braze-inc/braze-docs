@@ -143,13 +143,13 @@ Selecting the **CSV Export Email Addresses** option will only download data for 
 
 Yes, use the filter `api_id:YOUR_API_ID` on the **Campaigns** page to search for a campaign by its API identifier. Refer to [searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) to learn more.
 
-### Why does whitespace appear differently in input fields versus displayed text?
+### Why does whitespace appear differently in input fields versus displayed text? 
 
-Whitespace handling differs between input fields and displayed text components due to CSS styling. In text components with CSS `white-space: normal` (the default), multiple consecutive spaces collapse into a single space when displayed. This is standard HTML behavior for rendered text.
+Whitespace handling differs between input fields and displayed text components due to CSS styling. In text components with CSS `white-space: normal` (the default), multiple consecutive spaces collapse into a single space when displayed. This is standard HTML behavior for rendered text. 
 
-Input fields preserve multiple spaces exactly as entered, because users need to see and edit the exact spacing for accurate data entry. This means that text with multiple spaces may appear differently when viewed in an input field (where all spaces are preserved) versus when displayed in other parts of the dashboard (where CSS may collapse multiple spaces).
+Input fields preserve multiple spaces exactly as entered, because users need to see and edit the exact spacing for accurate data entry. This means that text with multiple spaces may appear differently when viewed in an input field (where all spaces are preserved) versus when displayed in other parts of the dashboard (where CSS may collapse multiple spaces). 
 
-For example, if you enter a campaign name or UTM parameter with multiple spaces in an input field, you see all spaces preserved. However, when that same text appears in search results, campaign lists, or other text components, multiple spaces may appear as a single space due to CSS whitespace handling.
+For example, if you enter a campaign name or UTM parameter with multiple spaces in an input field, you see all spaces preserved. However, when that same text appears in search results, campaign lists, or other text components, multiple spaces may appear as a single space due to CSS whitespace handling. 
 
 ### What is the difference between API campaigns and API-triggered campaigns?
 
