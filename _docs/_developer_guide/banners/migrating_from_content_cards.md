@@ -193,6 +193,10 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 
 ### 2. Displaying content
 
+{% alert note %}
+Content Cards can be manually rendered with custom UI logic, whereas Banners can only be rendered with the out-of-the-box SDK methods.
+{% endalert %}
+
 #### Content Cards approach
 
 {% tabs %}
@@ -464,6 +468,11 @@ braze.logContentCardClicked(card);
 
 {% tabs %}
 {% tab Web %}
+
+{% alert important %}
+Analytics are automatically tracked when using insertBanner(). Manual logging should not be used when using insertBanner().
+{% endalert %}
+
 ```javascript
 // Analytics are automatically tracked when using insertBanner()
 // Manual logging should not be used when using insertBanner()
@@ -477,6 +486,11 @@ braze.logBannerClick("global_banner", buttonId);
 ```
 {% endtab %}
 {% tab Android %}
+
+{% alert important %}
+Analytics are automatically tracked when using BannerView. Manual logging should not be used when using BannerView.
+{% endalert %}
+
 ```kotlin
 // Analytics are automatically tracked when using BannerView
 // Manual logging should not be used for default BannerView
@@ -490,6 +504,11 @@ Braze.getInstance(context).logBannerClick("global_banner", buttonId);
 ```
 {% endtab %}
 {% tab Swift %}
+
+{% alert important %}
+Analytics are automatically tracked when using BannerUIView. Manual logging should not be used for default BannerUIView.
+{% endalert %}
+
 ```swift
 // Analytics are automatically tracked when using BannerUIView
 // Manual logging should not be used for default BannerUIView
@@ -505,6 +524,11 @@ braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
 ```
 {% endtab %}
 {% tab React Native %}
+
+{% alert important %}
+Analytics are automatically tracked when using BrazeBannerView. No manual logging required.
+{% endalert %}
+
 ```javascript
 // Analytics are automatically tracked when using BrazeBannerView
 // No manual logging required
@@ -514,6 +538,11 @@ braze.banners.logClick(placementId: "global_banner", buttonId: buttonId)
 ```
 {% endtab %}
 {% tab Flutter %}
+
+{% alert important %}
+Analytics are automatically tracked when using BrazeBannerView. No manual logging required.
+{% endalert %}
+
 ```dart
 // Analytics are automatically tracked when using BrazeBannerView
 // No manual logging required
