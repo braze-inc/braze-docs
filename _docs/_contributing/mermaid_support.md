@@ -117,8 +117,8 @@ Keep your diagrams organized and easy to understand:
 
 Apply visual consistency throughout your diagrams:
 
-- Use consistent node shapes for similar elements (rectangles for processes, diamonds for decisions)
-- Apply custom styling sparingly and only when necessary for clarity
+- Use consistent node shapes for similar elements (such as rectangles for processes and diamonds for decisions).
+- Apply custom styling sparingly and only when necessary for clarity.
 
 ### Accessibility
 
