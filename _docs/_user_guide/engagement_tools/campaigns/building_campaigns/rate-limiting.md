@@ -95,21 +95,17 @@ The rate limit is applied at the start of the message send attempt. When there a
 Be wary of delaying time-sensitive messages with this form of rate limiting in relation to the total number of users in a segment. For example, if the segment contains 30 million users but we set the rate limit to 10,000 per minute, a large portion of your user base won’t receive the message until the following day.
 {% endalert %}
 
-#### Multichannel campaigns
+#### Multichannel campaigns and Canvases
 
-When sending a multi-channel campaign with a speed rate limit, the rate limit is shared between channels. This means the total number of messages sent per minute from the campaign does not exceed the rate limit. For example, if your campaign has a rate limit of 10,000 per minute and uses email and SMS, Braze sends a total of 10,000 messages per minute across email and SMS.
+When setting a delivery speed rate limit for a multi-channel campaign or Canvas, you can choose to set either a shared rate limit or a channel-based limit.
+
+When a multichannel campaign or Canvas uses a shared rate limit, this means the total number of messages sent per minute from the campaign or Canvas does not exceed the rate limit. For example, if your Canvas has a rate limit of 500,000 per minute and contains email and SMS message steps, Braze sends a total of 500,000 messages per minute across email and SMS.
 
 ![The option to limit the rate at which the campaign sends, selected with 500,000 messages per minute.]({% image_buster /assets/img_archive/multichannel_campaigns_rate_limit.png %}){: style="max-width:50%;"} 
 
-#### Canvas delivery speed rate limiting {#canvas-delivery-speed}
+When a multichannel campaign or Canvas uses channel-based rate limiting, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas.
 
-When sending a Canvas with a speed rate limit, the rate limit is shared between all channels and all Canvas steps. This means the total number of messages sent per minute from the Canvas will not exceed the rate limit. For example, if your Canvas has a rate limit of 10,000 per minute and uses email and SMS, Braze sends a total of 10,000 messages per minute across email and SMS.
-
-#### Channel-based rate limits
-
-As an alternative to a rate limit that gets shared across an entire multi-channel campaign or Canvas, you can select a specific rate limit per channel. In this case, the rate limit will apply to each of your selected channels. For example, you can set your campaign or Canvas to send a maximum of 5,000 webhooks and 2,500 SMS messages per minute across the campaign or Canvas.
-
-![Separate rate limits for two channels, webhook and SMS/MMS/RCS, with 5,000 and 2,500 messages per minute respectively.]({% image_buster /assets/img_archive/channel_rate_limits.png %}){: style="max-width:70%;"} 
+![Separate rate limits for two channels, webhook and SMS/MMS/RCS, with 5,000 and 2,500 messages per minute respectively.]({% image_buster /assets/img_archive/channel_rate_limits.png %}){: style="max-width:70%;"}
 
 ##### Push notifications
 
@@ -119,6 +115,14 @@ For campaigns or Canvases with push platforms (like Android, iOS, Web Push, or K
 
 {% alert note %}
 If you select a limit for push notifications, you can't set individual push channel rate limits. Likewise, if you select limits for individual push channels, you can't set shared push notification limits.
+{% endalert %}
+
+{% alert important %}
+**Rate Limit Interface Updates**
+Braze updated the rate-limiting interface to provide more transparency and control on how rate limits apply to multichannel campaigns and Canvases.
+
+* **Existing campaigns and Canvses:** All existing campaigns and Canvases have been migrated to this interface. Their delivery behavior remains exactly the same, though the dashboard now explicitly displays whether the campaign uses shared or per-channel logic. 
+* **New campaigns and Canvases:** For all new campaigns and Canvases, you will now see a manual toggle to choose your preferred rate limit logic. Going forward, make sure to select the rate limiting behavior that aligns with your intended behavior when setting or updating a campaign or Canvas rate limit.
 {% endalert %}
 
 ##### Rate limiting considerations
