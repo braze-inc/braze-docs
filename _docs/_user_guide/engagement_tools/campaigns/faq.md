@@ -40,9 +40,9 @@ For example, should you have a Canvas that has both iOS and web push notificatio
 
 ### Why can the number of conversions exceed the number of unique users for multichannel campaigns?
 
-For multichannel campaigns, Braze counts conversions per channel, not per user. This means if a user receives messages on multiple channels (for example, both email and push) and performs the conversion action after receiving messages on each channel, Braze counts multiple conversions—one for each channel. As a result, the conversion count can exceed the number of unique users who converted.
+For multichannel campaigns, Braze counts conversions per channel, not per user. When a user performs a single conversion action within the conversion window, Braze attributes that conversion to each channel from which the user received a message. This means that if a user receives messages on multiple channels (for example, both email and push) and converts, Braze counts multiple conversions, one for each channel. As a result, the total conversion count can exceed the number of unique users who converted.
 
-For example, if a multichannel campaign sends both an email and a push notification to a user, and that user performs the conversion action after receiving both messages, Braze counts this as two conversions (one attributed to email and one attributed to push), even though it's the same user.
+For example, if a multichannel campaign sends both an email and a push notification to a user, and that user performs one conversion action after receiving both messages and within the conversion window, Braze counts this as two conversions, one attributed to email and one attributed to push, even though it is a single action by the same user.
 
 ### Why does my campaign have a smaller reachable user base than the segment that I'm using for the campaign?
 
