@@ -118,8 +118,8 @@ If you select a limit for push notifications, you can't set individual push chan
 {% endalert %}
 
 {% alert important %}
-**Updates to rate-limiting interface**
-Braze updated the rate-limiting interface to provide more transparency and control on how rate limits apply to multichannel campaigns and Canvases.
+**Updates to rate-limiting interface**<br>
+Braze updated the rate-limiting interface to provide more transparency and control on how rate limits apply to multichannel campaigns and Canvases.<br>
 
 * **Existing campaigns and Canvases:** All existing campaigns and Canvases have been migrated to this interface. Their delivery behavior remains the same, though the dashboard now explicitly displays whether the campaign uses shared or per-channel logic. 
 * **New campaigns and Canvases:** For all new campaigns and Canvases, there is a manual toggle to choose your preferred rate limit logic. Make sure to select the rate-limiting behavior that aligns with your intended behavior when setting or updating a campaign or Canvas rate limit.
