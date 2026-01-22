@@ -62,9 +62,9 @@ You must have the ["Approve and Deny Campaigns" permission]({{site.baseurl}}/use
 - Self-approve the campaign
 - Approve and launch the campaign
 - Approve but not launch the campaign (a different user with the "Send Campaigns, Canvases" permission can launch the campaign)
-- Neither approve or launch the campaign
+- Neither approve nor launch the campaign
 
-After approval statuses are set on the **Summary** step, any subsequent changes made to the campaign reset all approval statuses when saved. This applies to any changes made either in a draft campaign or a post-launch campaign. For example, if you only make changes to the target audience, the **Summary** step reverts approval statuses for all sections back to the default state, pending.
+After approval statuses are set on the **Summary** step, any subsequent changes made to the campaign reset all approval statuses when saved. This applies to any changes made either in a draft campaign or a post-launch campaign. For example, if you only make changes to the target audience, the **Summary** step reverts approval statuses for all sections back to the default state, **Pending Approval**.
 
 {% endtab %}
 
@@ -74,9 +74,9 @@ You must have the ["Approve and Deny Canvases" permission]({{site.baseurl}}/user
 - Self-approve the Canvas
 - Approve and launch the Canvas
 - Approve but not launch the Canvas (a different user with the "Send Campaigns, Canvases" permission can launch the Canvas)
-- Neither approve or launch the Canvas
+- Neither approve nor launch the Canvas
 
-After approval statuses are set on the **Summary** step, any subsequent changes made to the Canvas reset all approval statuses when saved. This applies to any changes made either in a draft Canvas or a post-launch Canvas. For example, if you only make changes to the target audience, the **Summary** step reverts approval statuses for all sections back to the default state, pending.
+After approval statuses are set on the **Summary** step, any subsequent changes made to the Canvas reset all approval statuses when saved. This applies to any changes made either in a draft Canvas or a post-launch Canvas. For example, if you only make changes to the target audience, the **Summary** step reverts approval statuses for all sections back to the default state, **Pending Approval**.
 
 {% alert note %}
 **Approval status and saving**
@@ -88,7 +88,7 @@ To avoid losing approvals:
 
 1. Make any Canvas edits you need, then click **Save**.
 2. After the Canvas finishes saving, approve the relevant sections on the **Summary** step.
-3. Click **Save** again only if you make additional Canvas changes after approval. If you change the Canvas and save, all approval statuses reset to pending.
+3. Click **Save** again only if you make additional Canvas changes after approval. If you change the Canvas and save, all approval statuses reset to **Pending Approval**.
 {% endalert %}
 {% endtab %}
 {% endtabs %}
