@@ -254,8 +254,16 @@ You can name the project, dataset, and table as you'd like, but the column names
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile is prioritized for updates.
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
-{% alert tip %}
-Braze queries your BigQuery tables in your own project (using the predefined schema) with predicates on `UPDATED_AT`. Partitioning large tables by `UPDATED_AT` with an appropriate granularity (for example, daily granularity) lets BigQuery prune partitions so only relevant data is scanned. This may help improve performance and lower cost. Refer to [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) for more information.
+{% alert important %}
+**BigQuery partitioning**
+
+CDI supports partitions for BigQuery. If you partition by a function of `UPDATED_AT` (for example, at the granularity of a day, week, or hour, depending on the size of your dataset), BigQuery can prune the data it needs to scan. This improves performance and efficiency for very large tables.
+
+We don't recommend partitioning by any other fields. Test different configurations to find the best setup for your specific data.
+
+All CDI queries currently filter by `UPDATED_AT`, but this behavior isn't guaranteed to remain unchanged. Don't design your table schema to require that queries include this clause.
+
+For more information, refer to the [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
 {% endalert %}
 
 #### Step 1.2: Create a Service Account and grant permissions 
