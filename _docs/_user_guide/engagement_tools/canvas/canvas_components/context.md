@@ -43,7 +43,6 @@ Each Canvas entry redefines context variables based on the latest entry data and
 - Each variable requires a unique name (letters, numbers, underscores only, up to 100 characters).
 - The total size of all variables in a step cannot exceed 50 KB.
 - Variables passed in using API triggers share the same namespace as those created in Context steps; redefining a variable in a Context step overrides the API value.
-- W
 
 For more details and advanced usage, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
