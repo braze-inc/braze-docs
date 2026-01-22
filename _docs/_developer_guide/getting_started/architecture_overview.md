@@ -65,7 +65,7 @@ Braze uses different data storage systems for various features. Understanding wh
 - [Estimated Real Open Rate]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (does not use custom events)
 
 {% alert important %}
-**Data removal considerations**: Custom events are stored in MongoDB and are separate from Snowflake data. If you need to remove erroneous custom event data, you must address it in MongoDB. Snowflake-powered features (like Segment Extensions and Intel features) use data from Snowflake, which is handled separately. Removing data from one system does not automatically remove it from the other.
+**Data removal considerations**: Custom events are stored in MongoDB and are separate from Snowflake data. If you need to remove erroneous custom event data, you must address it in MongoDB. Snowflake-powered features (like SQL Segment Extensions and other Snowflake-powered features) use data from Snowflake, which is handled separately. Removing data from one system does not automatically remove it from the other.
 {% endalert %}
 
 ### Backend data sources via the Braze API
