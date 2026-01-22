@@ -18,19 +18,19 @@ Das [Analytics Tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking
 
 Um diese Berichte auszuführen, gehen Sie wie folgt vor:
 1. Wählen Sie in **Query Builder** die Option, einen neuen SQL-Bericht mit einem Template zu erstellen. 
-2. Filtern Sie Templates für diejenigen, bei denen die Metriken Aufschlüsselungen von Segmenten enthalten, die sind:
+2. Wählen Sie **Segmentaufschlüsselungen** für die Metriken aus. Dadurch werden Templates für diejenigen gefiltert, bei denen die Metriken Aufschlüsselungen von Segmenten enthalten, die sind:
 - Metriken für die E-Mail Performance nach Segmenten
 - E-Mail-Engagement-Metriken für Varianten oder Schritte nach Segment
 - Käufe und Umsatz nach Segment
 - Käufe und Umsatz für Varianten oder Schritte nach Segment
 - Push-Performance nach Segment
 
-![Die Seite Aufschlüsselung der Segmente enthält einen SQL-Editor, ein seitliches Panel mit Tabs für Variablen, verfügbare Datentabellen, Abfrageverlauf und den KI Query Builder sowie einen Ergebnisbereich.]({% image_buster /assets/img_archive/segment_breakdown.png %})
+![Die Seite Segmentaufschlüsselung enthält einen SQL-Editor, ein seitliches Panel mit Tabs für Variablen, verfügbare Datentabellen, Abfrageverlauf und den KI Query Builder sowie einen Ergebnisbereich.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 ## Vorlagen für Berichte
 
 {% tabs %}
-{% tab Metriken für das Engagement bei E-Mails nach Segmenten %}
+{% tab Email engagement metrics by segment %}
 
 ### Anzeigen von Metriken für Kampagnen oder Canvase {#campaign-canvas-email}
 
@@ -75,7 +75,7 @@ Ihre Ergebnisse zeigen die Metriken für das E-Mail Engagement nach Segmenten f�
 
 {% endtab %}
 
-{% tab Einkäufe und Einnahmen nach Segmenten %}
+{% tab Purchases and revenue by segment %}
 ### Anzeigen von Metriken für Kampagnen oder Canvase
 
 Um die Metriken zu Käufen und Umsätzen für eine bestimmte Kampagne oder ein bestimmtes Canvas nach Segmenten aufzuschlüsseln, verwenden Sie den Tab [Variablen](#variables), um Folgendes anzugeben:
@@ -105,7 +105,7 @@ Alle Metriken verwenden eindeutige E-Mail Empfänger:innen als Nenner.
 
 Nehmen wir zum Beispiel an, ein Segment enthält 10 Nutzer:innen und fünf von ihnen haben nach Erhalt Ihrer E-Mail einen Kauf getätigt. Wenn einer dieser fünf einen Kauf getätigt hat, nachdem er auf Ihre E-Mail geklickt hat, würde Ihre "Eindeutige Kaufrate bei Erhalt" 50% und Ihre "Eindeutige Kaufrate bei Klick" 10% betragen.
 
-![Der Bericht zeigt Metriken für E-Mails, darunter eindeutige Käufe bei Erhalt, Einnahmen bei Erhalt, eindeutige Käufe bei Klick, Einnahmen bei Klick, eindeutige Empfänger und eindeutige Klicks auf E-Mails.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
+Der Bericht zeigt Metriken für E-Mails, darunter eindeutige Käufe bei Erhalt, Einnahmen bei Erhalt, eindeutige Käufe bei Klick, Einnahmen bei Klick, eindeutige Empfänger und eindeutige Klicks auf E-Mails.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
 
 #### Ergebnisse
 
@@ -133,7 +133,7 @@ Ihre Ergebnisse zeigen die Metriken nach Segmenten für die von Ihnen ausgewähl
 - **Kolumnen:** Metriken zum Kauf
 
 {% endtab %}
-{% tab Top- oder Bottom-Messaging für E-Mail Engagement %}
+{% tab Top or bottom messaging for email engagement %}
 
 ### Anzeige der Metriken für die besten oder schlechtesten Performer
 
@@ -167,7 +167,7 @@ Um diesen Bericht anzuzeigen, müssen Sie die folgenden Variablen auf dem Tab **
 Ihre Ergebnisse zeigen die obersten (oder untersten) Kampagnen, Canvase oder Canvas-Schritte, die Sie ausgewählt haben. Wenn Sie z.B. die Top 10 Kampagnen für die Klickrate ausgewählt haben, werden Ihre Ergebnisse die Top 10 Kampagnen in der Reihenfolge der höchsten bis niedrigsten Klickrate anzeigen. In Ihren Spalten werden alle Metriken für das Engagement per E-Mail für jede Zeile (Kampagnen, Canvase oder Nachrichtenschritte) angezeigt.
 
 {% endtab %}
-{% tab Messaging für Einkäufe oben oder unten %}
+{% tab Top or bottom messaging for purchases %}
 
 ### Anzeige der Metriken für die besten oder schlechtesten Performer
 
@@ -204,7 +204,7 @@ Nehmen wir zum Beispiel an, ein Segment enthält 10 Nutzer:innen und fünf von i
 Ihre Ergebnisse zeigen die obersten (oder untersten) Kampagnen, Canvase oder Canvas-Schritte, die Sie ausgewählt haben. Wenn Sie z.B. die Top 10 Kampagnen für "Umsatz bei Klick" ausgewählt haben, werden Ihre Ergebnisse die Top 10 Kampagnen in der Reihenfolge vom höchsten zum niedrigsten "Umsatz bei Klick" anzeigen. In Ihren Spalten werden alle Metriken für jede Zeile (Kampagnen, Canvase oder Nachrichtenschritte) angezeigt.
 
 {% endtab %}
-{% tab Push-Performance nach Segmenten %}
+{% tab Push performance by segment %}
 
 ### Anzeigen von Push-Metriken für Segmente
 

@@ -147,6 +147,15 @@ Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/a
 
 {% endif %}
 
+{% if include.category == "send messages endpoints" %}
+
+Os endpoints da Braze aceitam [solicitações de API em lote]({{site.baseurl}}/api/api_limits/#batching-api-requests). Uma única solicitação para os endpoints de envio de mensagens pode alcançar qualquer um dos seguintes itens:
+
+- Até 50 sites específicos `external_ids`, cada um com parâmetros de mensagens individuais
+- Um segmento de público de qualquer tamanho, definido na solicitação como um objeto [de público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/) 
+
+{% endif %}
+
 <!---Additional if statement for Translation endpoints-->
 
 {% if include.endpoint == "translation endpoints" %}

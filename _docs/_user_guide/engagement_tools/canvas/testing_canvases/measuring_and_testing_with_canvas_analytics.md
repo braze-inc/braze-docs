@@ -88,12 +88,12 @@ The Canvas summary will show two conversions while the individual steps will sho
 Now, let's say we have a Canvas with Quiet Hours and the following events occur:
 
 1. User A enters a Canvas.
-2. The first step is a Delay step within the set Quiet Hours, so the message is supressed.
+2. The first step is a Delay step within the set Quiet Hours, so the message is suppressed.
 3. User A performs the conversion event.
 
 User A will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
 
-For our last example, let's say we have a Canvas with re-eligiblity turned on. If a re-eligible user performs the conversion event on the first entry and second entry, two conversions will be counted.
+For our last example, let's say we have a Canvas with re-eligibility turned on. If a re-eligible user performs the conversion event on the first entry and second entry, two conversions will be counted.
 
 ### Funnel report
 

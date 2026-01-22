@@ -1,6 +1,6 @@
 ---
-nav_title: Creating geofences
-article_title: Creating Geofences
+nav_title: Create geofences
+article_title: Create Geofences
 page_order: 1
 page_type: reference
 toc_headers: h2

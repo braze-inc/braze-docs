@@ -97,6 +97,10 @@ In any Canvas where you're targeting EEA, UK, and Switzerland end users using a 
 
 ### Step 1: Connect Google account
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Google Ads to your Braze account.
+{% endalert %}
+
 To get started, go to **Partner Integrations** > **Technology Partners** > **Google Ads** and select **Connect Google Ads**. You'll be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
 After successfully connecting your Google Ads account, you'll be taken back to your Google Ads partner page. You'll then be prompted to select which ad accounts you want to access in the Braze workspace.

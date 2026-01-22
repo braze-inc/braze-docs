@@ -15,7 +15,7 @@ search_tag: Partner
 
 ## About the integration
 
-The Swym and Braze integration empowers you to deliver highly personalized, event-driven marketing campaigns that convert shopper intent into sales. Use the integration to make it easy for shoppers to pick up where they left off, to collaborate with others throughout their shopping journey, and to deploy high-performance retargeting campaigns.
+The Swym and Braze integration lets you deliver personalized, event-driven marketing campaigns that convert shopper intent into sales. Use the integration so shoppers can pick up where they left off, collaborate with others throughout their shopping journey, and receive high-performance retargeting campaigns.
 
 ## Prerequisites
 

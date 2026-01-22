@@ -3,8 +3,8 @@
 ## メッセージの種類
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/android.md %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/android.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## データモデル
@@ -25,7 +25,7 @@
 |`zippedAssetsUrl` | HTMLコンテンツを表示するために準備されたzip圧縮された資産。                                                                    |
 |`useWebView`      | ボタンをクリックしたアクションがウェブビューを使ってリダイレクトされるかどうかを示す。                                            |
 |`duration`        | メッセージの表示時間。                                                                                          |
-|`clickAction`     | ボタンのクリックアクションのタイプ。3つのタイプは次のとおりです。`NEWS_FEED`、`URI`、そして `NONE`。                                     |
+|`clickAction`     | ボタンのクリックアクションのタイプ。タイプは、`URI`、および`NONE` です。                                     |
 |`dismissType`     | メッセージのクローズタイプ。2つのタイプは次のとおりです。`SWIPE` および`AUTO_DISMISS`。                                                 |
 |`messageType`     | SDKがサポートするアプリ内メッセージタイプ。4つのタイプは次のとおりです。`SLIDEUP`、`MODAL`、`FULL` および `HTML_FULL`。          |
 |`extras`          | メッセージエクストラ辞書。デフォルト値：`[:]`.                                                                   |
@@ -44,7 +44,7 @@
 |`text`            | ボタンのテキスト。                                                                                                     |
 |`uri`             | ボタンをクリックするアクションに関連するURI。                                                                            |
 |`useWebView`      | ボタンをクリックしたアクションがウェブビューを使ってリダイレクトされるかどうかを示す。                                                 |
-|`clickAction`     | ユーザーがボタンをクリックしたときに処理されるクリックアクションのタイプ。3つのタイプは次のとおりです。`NEWS_FEED`、`URI`、そして `NONE`。 |
+|`clickAction`     | ユーザーがボタンをクリックしたときに処理されるクリックアクションのタイプ。タイプは、`URI`、および`NONE` です。 |
 |`id`              | メッセージのボタンID。                                                                                               |
 |`toString()`      | String表現としてのボタン。                                                                                      |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

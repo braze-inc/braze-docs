@@ -33,7 +33,7 @@ Aplicamos un límite de velocidad de 1000 solicitudes por minuto a este punto fi
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-A partir del 28 de octubre de 2024, aplicamos un límite de velocidad base de 3.000 solicitudes cada tres segundos a este punto final para todos los clientes. Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que se puede actualizar un máximo de 225 usuarios en una sola llamada. Además, el mismo perfil de usuario puede ser actualizado por varios objetos.
+A partir del 28 de octubre de 2024, aplicamos un límite de velocidad base de 3.000 solicitudes cada tres segundos a este punto final para todos los clientes. Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que se puede actualizar a un máximo de 225 usuarios en una sola llamada. Además, el mismo perfil de usuario puede ser actualizado por varios objetos.
 
 Se aplican límites diferentes a los clientes que han comprado **Usuarios activos al mes - CY 24-25**. Para más detalles sobre estos límites, consulta [Usuarios activos al mes - Límites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
 
@@ -137,7 +137,7 @@ Este punto final tiene un límite de velocidad de 100 peticiones por minuto.
 
 <!---Additional if statement for Messaging endpoints-->
 
-{% if include.category == "puntos finales de mensajería" %}
+{% if include.category == "message endpoints" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 
@@ -147,9 +147,18 @@ Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseur
 
 {% endif %}
 
+{% if include.category == "send messages endpoints" %}
+
+Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
+
+- Hasta 50 `external_ids` específicos, cada uno con parámetros de mensaje individuales
+- Un segmento de audiencia de cualquier tamaño, definido en la solicitud como un objeto de [audiencia conectado]({{site.baseurl}}/api/objects_filters/connected_audience/) 
+
+{% endif %}
+
 <!---Additional if statement for Translation endpoints-->
 
-{% if include.endpoint == "puntos finales de traducción" %}
+{% if include.endpoint == "translation endpoints" %}
 
 Este punto final tiene un límite de velocidad de 250.000 peticiones por minuto.
 
@@ -157,7 +166,7 @@ Este punto final tiene un límite de velocidad de 250.000 peticiones por minuto.
 
 <!---Additional if statement for /messages/send endpoint-->
 
-{% if include.category == "punto final de envío de mensajes" %}
+{% if include.category == "message send endpoint" %}
 
 Los puntos finales de Braze admiten [solicitudes de API por lotes]({{site.baseurl}}/api/api_limits/#batching-api-requests). Una única solicitud a los puntos finales de mensajería puede llegar a cualquiera de los siguientes elementos:
 

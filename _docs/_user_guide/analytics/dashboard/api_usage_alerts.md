@@ -124,7 +124,7 @@ This alert configuration notifies you when errors occur for API triggered campai
 
 | Endpoint | API key | Response code | Threshold condition | Threshold volume | Within |
 | --- | --- | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | All API keys | `4XX` and `5XX` | Greated than or equal to | 1 | 1 hour |
+| {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | All API keys | `4XX` and `5XX` | Greater than or equal to | 1 | 1 hour |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 

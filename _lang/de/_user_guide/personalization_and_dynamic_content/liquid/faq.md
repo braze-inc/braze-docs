@@ -32,7 +32,7 @@ Unter [Unterstützte Personalisierungs-Tags]({{site.baseurl}}/user_guide/persona
 
 Sie können Variablen mit dem Tag `assign` erstellen und zuweisen. Dadurch wird eine Variable im Nachrichten-Editor erstellt, auf die Sie auch in Ihrer Nachricht referenzieren können.
 
-### Werden durch die Verwendung von Liquid Datenpunkte verbraucht?
+### Werden mit Liquid Datenpunkte aufgezeichnet?
 
 Nein.
 
@@ -72,9 +72,9 @@ Die Abbruchlogik ermöglicht es Ihnen, den Versand einer Nachricht zu stoppen, w
 
 For-Schleifen werden auch als [Iterations-Tags](https://shopify.github.io/liquid/tags/iteration/) bezeichnet. Die Verwendung der for-Schleifenlogik in Ihren Liquid Snippets erlaubt es Ihnen, Liquid-Blöcke zu durchlaufen, bis eine Bedingung erfüllt ist. 
 
-In Braze könnte dies für die Überprüfung von Artikeln in einem angepassten Attribut oder einer Liste von Werten und Objekten verwendet werden, die von einer [Katalog-]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [Auswahl-]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) oder [Connected-Content-Aufrufantwort]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) zurückgegeben werden. Insbesondere können Sie die For-Loop-Logik als Teil Ihres Messagings verwenden, um zu prüfen, ob ein Produkt auf Lager ist oder ob ein Produkt eine Mindestbewertung hat. 
+In Braze könnte dies für die Überprüfung von Artikeln in einem angepassten Attribut oder einer Liste von Werten und Objekten verwendet werden, die von einer [Katalog-]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [Auswahl-]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) oder [Connected-Content-Aufrufantwort]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) zurückgegeben werden. Insbesondere können Sie die For-Loop-Logik als Teil Ihres Messagings verwenden, um zu prüfen, ob ein Produkt auf Lager ist oder ob ein Produkt eine Mindestbewertung hat. 
 
-Nehmen wir zum Beispiel an, Sie haben einen Katalog namens "Spiele", der eine Auswahl namens "cheap_games" enthält. Um die Titel der Spiele in "cheap_games" zu ermitteln, können Sie dieses Liquid Snippet verwenden:
+Nehmen wir an, Sie haben einen Katalog mit dem Namen "Spiele", der eine Auswahl mit dem Namen "cheap_games". enthält. Um die Titel der Spiele in "cheap_games", zu finden, können Sie dieses Liquid Snippet verwenden:
 
 {% raw %}
 ```liquid

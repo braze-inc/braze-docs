@@ -51,14 +51,18 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 
 Connected Content employs an unhealthy host detection mechanism to detect when the target host experiences a high rate of significant slowness or overload, resulting in timeouts, too many requests, or other outcomes that prevent Braze from successfully communicating with the target endpoint. It acts as a safeguard to reduce unnecessary load that may be causing the target host to struggle. It also serves to stabilize Braze infrastructure and maintain fast messaging speeds.
 
-If the target host experiences a high rate of significant slowness or overload, Braze temporarily will halt requests to the target host for one minute, instead simulating responses indicating the failure. After one minute, Braze will probe the host's health using a small number of requests before resuming requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
+If the target host experiences a high rate of significant slowness or overload, Braze will temporarily halt requests to the target host for one minute, instead simulating responses indicating the failure. After one minute, Braze will probe the host's health using a small number of requests before resuming requests at full speed if the host is found to be healthy. If the host is still unhealthy, Braze will wait another minute before trying again.
 
 If requests to the target host are halted by the unhealthy host detector, Braze will continue to render messages and follow your Liquid logic as if it received an error response code. If you want to ensure that these Connected Content requests are retried when they're halted by the unhealthy host detector, use the `:retry` option. For more information on the `:retry` option, see [Connected Content retries]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 If you believe the unhealthy host detection may be causing issues, contact [Braze Support]({{site.baseurl}}/support_contact/).
 
+{% alert note %}
+You can allowlist specific URLs to be used for Connected Content. To access this feature, contact your customer success manager.
+{% endalert %}
+
 {% alert tip %}
-Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more on how to troubleshoot common error codes.
+Visit [Troubleshooting webhook and Connected Content requests]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) to learn more about how to troubleshoot common error codes.
 {% endalert %}
 
 ## Allowing for efficient performance
@@ -103,10 +107,6 @@ If you delete a credential, keep in mind that any Connected Content calls trying
 {% endalert %}
 
 ### Using token authentication
-
-{% alert important %} 
-The token authentication credential type is currently in early access. Contact your Braze account manager if you're interested in participating in this early access. 
-{% endalert %}
 
 When using Braze Connected Content, you may find that certain APIs require a token instead of a username and password. Braze can also store credentials that hold token authentication header values.
 
@@ -182,7 +182,7 @@ You can edit the credential name for authentication types.
 
 ## Connected Content IP allowlisting
 
-When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP allowlisting, you can verify that Connected Content requests are actually coming from Braze, adding an additional layer of security.
+When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers' or third parties' servers to pull back data. With IP allowlisting, you can verify that Connected Content requests are actually coming from Braze, adding a layer of security.
 
 Braze will send Connected Content requests from the following IP ranges. The listed ranges are automatically and dynamically added to any API keys that have been opted in for allowlisting. 
 

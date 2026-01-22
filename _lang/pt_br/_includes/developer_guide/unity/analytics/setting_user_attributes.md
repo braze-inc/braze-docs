@@ -2,27 +2,93 @@
 
 ## Atribuições padrão do usuário
 
-Para definir as atribuições do usuário, é necessário chamar o método apropriado no objeto `BrazeBinding`. A seguir, há uma lista de atribuições internas que podem ser chamadas usando esse método.
+### Métodos predefinidos
 
-| Atributo                 | Exemplo de código |
-|---------------------------|-------------|
-| Nome                | `AppboyBinding.SetUserFirstName("first name");` |
-| Sobrenome                 | `AppboyBinding.SetUserLastName("last name");` |
-| E-mail do usuário                | `AppboyBinding.SetUserEmail("email@email.com");` |
-| Gênero                    | `AppboyBinding.SetUserGender(Appboy.Models.Gender);` |
-| Data de nascimento                | `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");` |
-| País do usuário              | `AppboyBinding.SetUserCountry("country name");` |
-| Cidade de origem do usuário            | `AppboyBinding.SetUserHomeCity("city name");` |
-| Envio de e-mail para o usuário   | `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| Inscrição push do usuário    | `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| Número de telefone do usuário         | `AppboyBinding.SetUserPhoneNumber("phone number");` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+O Braze fornece métodos predefinidos para configurar as seguintes atribuições de usuário usando o objeto `BrazeBinding`. Para saber mais, consulte o [arquivo de declaração do Braze Unity](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
+
+- Nome
+- Sobrenome
+- E-mail do usuário
+- Gênero
+- Data de nascimento
+- País do usuário
+- Cidade de origem do usuário
+- Envio de e-mail para o usuário
+- Inscrição push do usuário
+- Número de telefone do usuário
+
+### Definição de atribuições padrão
+
+Para definir uma atribuição padrão, chame o método relevante no objeto `BrazeBinding`.
+
+{% tabs local %}
+{% tab Nome %}
+```csharp
+BrazeBinding.SetUserFirstName("first name");
+```
+{% endtab %}
+{% tab Sobrenome %}
+```csharp
+BrazeBinding.SetUserLastName("last name");
+```
+{% endtab %}
+{% tab e-mail %}
+```csharp
+BrazeBinding.SetUserEmail("email@email.com");
+```
+{% endtab %}
+{% tab Gênero %}
+```csharp
+BrazeBinding.SetUserGender(Appboy.Models.Gender);
+```
+{% endtab %}
+{% tab Data de nascimento %}
+```csharp
+BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
+```
+{% endtab %}
+{% tab País %}
+```csharp
+BrazeBinding.SetUserCountry("country name");
+```
+{% endtab %}
+{% tab Cidade natal %}
+```csharp
+BrazeBinding.SetUserHomeCity("city name");
+```
+{% endtab %}
+{% tab Envio de e-mail %}
+```csharp
+BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Inscrição por push %}
+```csharp
+BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Número de telefone %}
+```csharp
+BrazeBinding.SetUserPhoneNumber("phone number");
+```
+{% endtab %}
+{% endtabs %}
+
+### Desativação de atribuições padrão
+
+Para cancelar a definição de uma atribuição de usuário padrão, passe `null` para o método relevante.
+
+```csharp
+BrazeBinding.SetUserFirstName(null);
+```
 
 ## Atributos personalizados do usuário
 
 Além dos atributos padrão de usuários, o Braze também permite definir atributos personalizados usando vários tipos de dados diferentes. Para saber mais sobre a opção de segmentação de cada atributo, consulte [Coleta de dados de usuários]({{site.baseurl}}/developer_guide/analytics).
 
 ### Definindo atributos personalizados
+
+Para definir um atributo personalizado, use o método correspondente para o tipo de atributo: 
 
 {% tabs %}
 {% tab String %}
@@ -93,7 +159,7 @@ Os valores de atributos personalizados têm um comprimento máximo de 255 caract
 
 ### Desativação de atributos personalizados
 
-Para cancelar a definição de um atributo personalizado de usuário, use o seguinte método:
+Para cancelar a definição de um atributo personalizado, passe a chave do atributo relevante para o método `UnsetCustomUserAttribute`. 
 
 ```csharp
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:ユーザーのサブスクリプション・グループ・ステータスを更新する V2"
+nav_title: "POST:ユーザーサブスクリプショングループのステータスを更新する v2"
 alias: /post_update_user_subscription_group_status_v2/
 layout: api_page
 page_type: reference
@@ -16,7 +16,7 @@ channel:
 /v2/subscription/status/set
 {% endapimethod %}
 
-> このエンドポイントを使用して、Braze ダッシュボード上で最大50ユーザーのサブスクリプション状態を一括更新します。 
+> このエンドポイントを使用して、Braze ダッシュボード上で最大50ユーザーのサブスクリプション状態を一括更新します。
 
 **サブスクリプショングループ**ページに移動すると、サブスクリプショングループの `subscription_group_id` にアクセスできます。
 
@@ -34,13 +34,17 @@ channel:
 
 ## 前提条件
 
-このエンドポイントを使用するには、[API キー]({{site.baseurl}}/api/basics#rest-api-key/)と`subscription.status.set`の権限が必要です。
+このエンドポイントを使用するには、`subscription.status.set` 権限を持つ [API キー]({{site.baseurl}}/api/basics#rest-api-key/)が必要です。
+
+{% alert note %}
+このエンドポイントを[LINEサブスクリプショングループで]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/)使用することに興味がある場合は、カスタマーサクセスマネージャーに連絡すること。
+{% endalert %}
 
 ## レート制限
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
 
-## 要求本文:
+## Request body
 
 ```
 Content-Type: application/json

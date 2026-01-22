@@ -1,13 +1,13 @@
 ---
-nav_title: Creating a formula
-article_title: Creating a Formula
+nav_title: Create a formula
+article_title: Create a Formula
 page_order: 1.2
 page_type: reference
 description: "This reference article covers creating and managing formulas, which help you easily understand complex relationships that exist in your data."
 tool: Reports
 
 ---
-# Creating a formula
+# Create a formula
 
 > When viewing analytics in Braze, you can combine multiple data points to get valuable insights into your user data. These are referred to as formulas. Use formulas to normalize your time series data based on your total number of monthly active users (MAU) and daily active users (DAU). 
 

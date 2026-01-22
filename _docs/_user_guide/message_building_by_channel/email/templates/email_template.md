@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an email template
-article_title: Creating an Email Template
+nav_title: Create an email template
+article_title: Create an Email Template
 page_order: 0
 description: "This reference article covers how to create, customize, and manage email templates."
 tool:
@@ -11,7 +11,7 @@ alias: "/dnd/email_template/"
 search_rank: 1
 ---
 
-# Creating an email template
+# Create an email template
 
 > The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 

@@ -11,7 +11,7 @@ React Native Braze SDKを統合することで、基本的な分析機能を提�
 SDKバージョン6.0.0から、BrazeはReact Native Turbo Moduleを使用しており、New Architectureとレガシーブリッジアーキテクチャの両方に対応している。
 
 {% alert warning %}
-あなたのiOSアプリが`RCTAppDelegate` に準拠し、前回の`AppDelegate` のセットアップに従っている場合は、Turboモジュールのイベントをサブスクライバーする際にクラッシュが発生しないように、[Complete native setupの](#reactnative_step-2-complete-native-setup)サンプルを確認してほしい。
+あなたのiOSアプリが`RCTAppDelegate` に準拠し、前回の`AppDelegate` のセットアップに従っている場合は、Turboモジュールのイベントをサブスクライバーする際にクラッシュが発生しないように、[Complete native setupの](#reactnative_step-2-complete-native-setup)サンプルを見直すこと。
 {% endalert %}
 
 ## React Native SDKを統合する
@@ -20,7 +20,7 @@ SDKバージョン6.0.0から、BrazeはReact Native Turbo Moduleを使用して
 
 SDKを統合するには、React Nativeバージョン0.71以降が必要である。サポートされているバージョンの完全なリストについては、 [React Native SDK GitHub リポジトリ](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support)を参照してください。
 
-### ステップ1:Braze ライブラリーを統合する
+### ステップ 1: Braze ライブラリーの統合
 
 {% tabs local %}
 {% tab npm %}
@@ -35,20 +35,20 @@ yarn add @braze/react-native-sdk
 {% endtab %}
 {% endtabs %}
 
-### ステップ2:セットアップオプションを選択する
+### ステップ 2:セットアップオプションを選択する
 
 Braze SDKは、Braze Expoプラグインまたはネイティブレイヤーのいずれかを使用して管理できる。Expoプラグインを使えば、ネイティブレイヤーにコードを書くことなく、特定のSDK機能を設定できる。アプリのニーズに最も適したオプションを選択しよう。
 
 {% tabs %}
 {% tab Expo %}
-#### ステップ 2.1:Braze Expo プラグインのインストール
+#### ステップ2.1: Braze Expo プラグインのインストール
 
 Braze React Native SDK のバージョンが1.37.0以降であることを確認してください。サポートされているバージョンの全リストは、[Braze React Native](https://github.com/braze-inc/braze-expo-plugin?tab=readme-ov-file#version-support)リポジトリをチェックしてほしい。
 
 Braze Expoプラグインをインストールするには、以下のコマンドを実行する：
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### ステップ 2.2:app.json にプラグインを追加する
@@ -80,6 +80,7 @@ expo install @braze/expo-plugin
 | `enableBrazeIosRichPush`                      | ブーリアン | iOSのみ。iOSのリッチプッシュ機能を有効にするかどうか。                                                                                                  |
 | `enableBrazeIosPushStories`                   | ブーリアン | iOSのみ。iOSのBraze Push Storiesを有効にするかどうか。                                                                                                  |
 | `iosPushStoryAppGroup`                        | ストリング  | iOSのみ。iOSのプッシュストーリーズに使われているアプリ群だ。                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | ブーリアン | iOSのみ。デバイスIDにランダムに生成されたUUIDを使用するかどうか。                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 構成例:
@@ -125,7 +126,7 @@ expo install @braze/expo-plugin
 アプリケーションを事前にビルドすることで、Braze Expoプラグインが動作するために必要なネイティブファイルが生成される。
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 [Expo ドキュメント](https://docs.expo.dev/workflow/customizing/)の指定に従い、アプリケーションを実行します。コンフィギュレーション・オプションに変更を加えると、アプリケーションのプリビルドと再実行が必要になることを覚えておいてほしい。
@@ -133,7 +134,7 @@ expo prebuild
 
 {% tab Android %}
 
-#### ステップ 2.1:リポジトリの追加
+#### ステップ2.1: リポジトリの追加
 
 最上位プロジェクト `build.gradle` で、`buildscript` > `dependencies` から以下を追加します。
 
@@ -156,8 +157,8 @@ Braze サーバーに接続するには、プロジェクトの `res/values` フ
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -229,7 +230,7 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### ステップ 2.1:(オプション) ダイナミック XCFramework に関する Podfile の構成
+#### ステップ2.1: (オプション) ダイナミック XCFramework に関する Podfile の構成
 
 BrazeUI などの特定の Braze ライブラリーを Objective-C++ ファイルにインポートするには、`#import` 構文を使用する必要があります。Braze Swift SDKのバージョン7.4.0以降、バイナリにはこの構文と互換性のある[ダイナミック XCFramework としてのオプションの配布チャネル](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic)があります。
 
@@ -249,10 +250,10 @@ React Native ではライブラリーがネイティブプラットフォーム�
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### ステップ 2.3:Braze SDK の構成
@@ -357,7 +358,7 @@ static Braze *_braze = nil;
 import Braze from "@braze/react-native-sdk";
 ```
 
-### ステップ4:統合をテストする（オプション）
+### ステップ 4: 統合をテストする（オプション）
 
 SDKの統合をテストするには、アプリで以下のコードを呼び出して、どちらのプラットフォームでもユーザーの新しいセッションを開始する。
 

@@ -1,5 +1,5 @@
 ---
-nav_title: ドキュメントのリクエスト
+nav_title: ドキュメント請求
 permalink: "/request/"
 hide_nav: true
 layout: basic
@@ -194,6 +194,10 @@ hide_toc: true
     textarea {
       border-radius: 0 !important;
     }
+    #doc_release_notes_label {
+      font-size: 12pt !important;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+    }
     #doc_verify_label {
       font-size: 12pt !important;
       font-family: Sailec W00 Regular,Arial,sans-serif;
@@ -258,55 +262,32 @@ hide_toc: true
     .drop-down-sel:focus, .drop-down-sel:active, .drop-down-sel:hover,.drop-down-sel:focus-visible {
       border-color: rgb(0, 130, 148);
     }
-    .request_info {
+    .inline_text {
       display: flex;
-      min-height: 38px;
-      font-family: Sailec W00 Bold, Arial, sans-serif;
-      font-size: 12px;
-      background-color: rgb(255, 255, 255);
-      border-width: 1px 1px 1px 8px;
-      border-style: solid;
-      border-image: initial;
-      border-radius: 3px;
-      padding: 6px 12px 6px 8px;
-      border-color: rgb(13, 175, 197);
-      margin-bottom: 24px;
-    }
-    .request_info_image {
-      border-radius:50%;
-      height:28px;
-      width:28px;
-      min-width: 28px;
-      min-height: 28px;
-      background-color: rgb(196, 240, 245);
-      display: flex;
-      -webkit-box-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      align-items: center;
-      margin-right: 6px
+      font-family: Sailec, Arial, sans-serif;
+      font-size: 10pt;
     }
     #braze_internal {
-  		width: 100%;
-  		text-align: center;
-  		background-color: #FFEEE3;
-  		padding: 10px;
+      width: 100%;
+      text-align: center;
+      background-color: #FFEEE3;
+      padding: 10px;
       height: 45px;
       font-family: Sailec W00 Bold, Arial, sans-serif;
       font-size: 12tpt;
-  		position: absolute;
+      position: absolute;
       left: 0;
       top: 60px;
-  		z-index: 10;
+      z-index: 10;
       color: #D45F24;
-  	}
-  	#braze_internal a {
-  	  color: #27368F;
-  	  text-decoration: none;
-  	}
-  	#braze_internal a:hover{
-  	  color: #27368F;
-  	}
+    }
+    #braze_internal a {
+      color: #27368F;
+      text-decoration: none;
+    }
+    #braze_internal a:hover{
+      color: #27368F;
+    }
   </style>
   <script type="text/javascript">
     ! function(e, i) {
@@ -386,6 +367,36 @@ hide_toc: true
     $(document).ready(function() {
       var braze_internal = $('#braze_internal').remove();
       $('#header_nav').after(braze_internal);
+      
+      // Handle Form Element visibility
+      function toggleFormElements() {
+        var selectedValue = $('#doc_urgent').val();
+        if (selectedValue === 'suggestion') {
+            $('[id^="disclosure"]').show();
+            $('#doc_release_notes_group').hide();
+            $('[id^="resource_urls"]').hide();
+            $('#doc_verify_div').show();
+        } else if (selectedValue === 'feature') {
+            $('#disclosure-warning').hide();
+            $('#resource_urls').show();
+            $('#doc_verify_div').show();
+            $('#doc_release_notes_group').show();
+        } else {
+            $('#doc_release_notes_group').hide();
+            $('#doc_verify_div').show();
+            $('[id^="disclosure"]').hide();
+            $('[id^="resource_urls"]').hide();
+        }
+      }
+      
+      // Show/hide disclosures on page load
+      toggleFormElements();
+      
+      // Show/hide disclosures when selection changes
+      $('#doc_urgent').change(function() {
+        toggleFormElements();
+      });
+      
       $('#doc_form').submit(function(e) {
         $('#submit_progress').css('display','inline');
         $('#submit_text').html('Submitting');
@@ -404,7 +415,7 @@ hide_toc: true
           $('#doc_div').hide();
           $('#doc_thankyou').show();
           $('#doc_thankyou_msg').fadeTo(800,0,function(){
-              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will reach out to you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
+              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will contact you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
           });
         });
 
@@ -427,29 +438,36 @@ hide_toc: true
           </div>
           <div class="row">
             <div class="col">
-              <div class="form-group" id="doc_name_div">
-                <label for="doc_name" id="doc_name_label">Name</label>
-                <input type="text" name="Name" id="doc_name" maxlength="80" required="required" value="" placeholder="Enter your name" class="form-control" />
-              </div>
+              <input type='hidden' name='Name' value='' />
               <div class="form-group" id="doc_urgent_div">
               <div class="form-check">
                 <label class="form-check-label" for="doc_urgent" style="display: block;">
                 Request Type
                 </label>
               <select id="doc_urgent" name="Request_Type" class="drop-down-sel">
-              <option value="urgent">Urgent: Raise smoke on the Doc Site or request a high-priority change</option>
-              <option value="feature_release">Feature update: Communicate new or updated product features with Tech Writing and Braze Learning</option>
-              <option value="standard" selected="selected">Standard: I have a suggestion, question about, or update to an article</option>
+              <option value="urgent">Urgent: I am raising smoke about an issue on Braze Docs or have a high-priority update</option>
+              <option value="feature">Feature: I have a new feature or new behavior for an existing feature</option>
+              <option value="suggestion" selected="selected">Suggestion: I have a proposed improvement or need clarification for an article</option>
               </select>
 
               </div>
+            
+              <div style="height: 12px;"></div>
+
+              <div id="disclosure-warning" class="alert alert-important" role="alert">
+                <div class="alert-msg">
+                  <b>Important: </b>
+                  Copilot will author this suggestion, and it will be reviewed by the Docs team. Confirm that <strong>no customer-specific information</strong> or <strong>links</strong> are included.
+                </div>
               </div>
+              </div>
+
               <div class="form-group">
                 <label for="doc_due_date" id="doc_due_date_label">Due date (optional)</label>
                 <div class="sublabel">If this request is time-sensitive or related to a feature release, please enter a due date.</div>
                 <div class="input-group">
                   <input type="date" class="form-control" id="doc_due_date" maxlength="80" name="Due_Date" value="" />
-                  </div>
+                </div>
               </div>
               <div class="form-group">
 
@@ -466,16 +484,24 @@ hide_toc: true
               </div>
 
               <div class="form-group" id="doc_request_url">
-                <label for="doc_request" id="doc_request_url_label">URL</label>
+                <label for="doc_request" id="doc_request_url_label">Braze URL</label>
                 <input type="url" name="Request_Url" id="doc_request_url" maxlength="180" required="required" value="" placeholder="e.g., https://www.braze.com/docs/" class="form-control" />
               </div>
 
               <div class="form-group">
 
                 <label for="doc_description" id="doc_description_label" style="margin-bottom:6px;line-height:1.2;">Description</label>
-                <div class="sublabel">What needs to be done for you to consider this request complete? Include links to any resources such as drive folders of images, relevant Slack threads, Confluence articles, and any relevant links that might need to be included in the documentation.</div>
+                <div class="sublabel" style="margin-bottom:6px;">Provide as much detail as possible about the requested update.</div>
                 <textarea name="Description" class="form-control" id="doc_description" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
                   rows="7"></textarea>
+              </div>
+
+              <div class="form-group" id="resource_urls">
+                <label for="resource_urls" id="resource_urls_label">Resource URLs</label>
+                 <div class="sublabel" style="margin-bottom:6px;">Include URLs from Confluence, Productboard, Google Docs, Jira, or any other resources about this feature.</div>
+                <textarea name="Resource_Urls" class="form-control" id="resource_urls" data-toggle="popover" data-trigger="focus" data-placement="top" data-content=""
+                  rows="2" ></textarea>
+
               </div>
 
               <div class="form-group">
@@ -493,12 +519,17 @@ hide_toc: true
               </label>
               </div>
               </div>
-
-              <div class="request_info"><div class="request_info_image">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' data-icon='info' data-prefix='fas' style='background:%23c4f0f5' viewBox='0 0 192 512'%3E%3Cpath d='M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z' style='background:%23008294%3Bfill:%23008294'/%3E%3C/svg%3E" width="16" height="16" />
+              <div class="form-group" id="doc_release_notes_group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Y" id="doc_release_notes" name="Release_Notes">
+                <label class="form-check-label" for="doc_release_notes" id="doc_release_notes_label">
+                  <span></span> Include in release notes
+                </label>
               </div>
-              Please wait up to ten seconds after submitting for your request to process.</div>
-
+              </div>              
+              <div class="inline_text">
+              Please wait up to ten seconds after submitting for your request to process.
+              </div>
               <button type="submit" name="Submit Question" value="Submit" class="btn" id="ticket_submit_button" role="button">
 
               <div id="submit_progress"><div class="lds-ring"><div></div><div></div><div></div><div></div></div></div>

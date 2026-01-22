@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Track users (synchronous)"
-article_title: "POST: Track Users (Synchronous)"
+nav_title: "POST: Create and update users (synchronous)"
+article_title: "POST: Create and update users (Synchronous)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,22 +9,22 @@ description: "This article outlines details about the synchronous Track user Bra
 
 ---
 {% api %}
-# Track users (synchronous)
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
+# Create and update users (synchronous)
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track/sync
 {% endapimethod %}
 
 > Use this endpoint to record custom events and purchases and update user profile attributes synchronously. This endpoint functions similarly to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which updates user profiles asynchronously.
 
 {% alert important %}
-This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in this beta. 
+This endpoint is currently in beta. Contact your Braze account manager if you’re interested in participating in this beta.
 {% endalert %}
 
 ## Synchronous and asynchronous API calls
 
-In an asynchronous call, the API will return the status code `201`, indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
+In an asynchronous call, the API returns the status code `201`, indicating that your request was successfully received, understood, and accepted. However, this does not mean that your request has been fully completed.
 
-In a synchronous call, the API will return a status code `201`, indicating that your request was successfully received, understood, accepted, and completed. The call response will show select user profile fields as a result of the operation.
+In a synchronous call, the API returns a status code `201`, indicating that your request was successfully received, understood, accepted, and completed. The call response shows select user profile fields as a result of the operation.
 
 This endpoint has a lower rate limit than the `/users/track` endpoint (see [rate limit](#rate-limit) below). Each `/users/track/sync` request can contain only  one event object, one attribute object, **or** one purchase object. This endpoint should be reserved for user profile updates where a synchronous call is needed. For a healthy implementation, we recommend using `/users/track/sync` and `/users/track` together.
 
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Request parameters
 
 {% alert important %}
-For each request component listed in the following table, one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone` is required.
+For each request component listed in the following table, you must include one of `external_id`, `user_alias`, `braze_id`, `email`, or `phone`.
 {% endalert %}
 
 | Parameter | Required | Data Type | Description |
@@ -74,14 +74,14 @@ When using this endpoint's [request parameters](#request-parameters), you should
 
 ### Successful message
 
-Successful messages will return the following response, which includes information about the user profile data that was updated.
+Successful messages return the following response, which includes information about the user profile data that Braze updated.
 
 ```json
 {
     "users": (optional, object), the identifier of the user in the request. May be empty if no users are found and _update_existing_only key is set to true,
-        "custom_attributes": (optional, object), the custom attributes as a result of the request. Only custom attributes from the request will be listed,
-        "custom_events": (optional, object), the custom events as a result of the request. Only custom events from the request will be listed,
-        "purchase_events": (optional, object), the purchase events as a result of the request. Only purchase events from the request will be listed,
+        "custom_attributes": (optional, object), the custom attributes as a result of the request. Braze lists only custom attributes from the request,
+        "custom_events": (optional, object), the custom events as a result of the request. Braze lists only custom events from the request,
+        "purchase_events": (optional, object), the purchase events as a result of the request. Braze lists only purchase events from the request,
     },
     "message": "success"
 ```
@@ -146,7 +146,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Update a custom event by email
@@ -201,7 +201,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Update a purchase event by user alias
@@ -215,8 +215,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 --data-raw '{
   "purchases" : [
     {
-      "user_alias" : { 
-          "alias_name" : "device123", 
+      "user_alias" : {
+          "alias_name" : "device123",
           "alias_label" : "my_device_identifier"
       }
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
@@ -225,13 +225,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
       "price" : 219.98,
       "time" : "2022-12-06T19:20:45+01:00",
       "properties" : {
-          "products" : [ 
+          "products" : [
             {
               "name": "Monitor",
               "category": "Gaming",
               "product_amount": 19.99
             },
-            { 
+            {
               "name": "Gaming Keyboard",
               "category": "Gaming ",
               "product_amount": 199.99
@@ -249,8 +249,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 {
     "users": [
         {
-          "user_alias" : { 
-            "alias_name" : "device123", 
+          "user_alias" : {
+            "alias_name" : "device123",
             "alias_label" : "my_device_identifier"
           },
           "purchase_events": [
@@ -264,18 +264,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ## Frequently asked questions
 
 ### Should I use the asynchronous or synchronous endpoint?
 
-For most profile updates, the `/users/track` endpoint will work best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
+For most profile updates, the `/users/track` endpoint works best because of its higher rate limit and flexibility to let you batch requests. However, the `/users/track/sync` endpoint is useful if you're experiencing race conditions due to rapid, consecutive requests for the same user.
 
 ### Does the response time differ from the `/users/track` endpoint?
 
-With a synchronous call, the API waits until the request is completed to return a response. As a result, synchronous requests will take longer on average than asynchronous requests to `/users/track`. For the majority of requests, you can expect a response within seconds.
+With a synchronous call, the API waits until Braze completes the request to return a response. As a result, synchronous requests take longer on average than asynchronous requests to `/users/track`. For the majority of requests, you can expect a response within seconds.
 
 ### Can I send multiple requests at the same time?
 

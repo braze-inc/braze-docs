@@ -15,7 +15,6 @@ channel:
 
 > Erfahren Sie mehr über Push Max und wie Sie diese Funktion nutzen können, um die Zustellbarkeit von Android-Push-Benachrichtigungen an [chinesische OEM-Geräte]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/) potenziell zu verbessern.
 
-
 ## Was ist Push Max?
 
 Push Max verstärkt Android-Push-Benachrichtigungen, indem es fehlgeschlagene Push-Benachrichtigungen verfolgt und die Push-Benachrichtigung erneut sendet, wenn es wahrscheinlicher ist, dass der Benutzer sie erhält.
@@ -26,7 +25,7 @@ Einige Android-Geräte chinesischer Originalhersteller (OEMs) wie Xiaomi, OPPO u
 
 - Nur für Android-Push-Benachrichtigungen verfügbar
 - Nicht unterstützt für aktionsbasierte oder API-ausgelöste Nachrichten
-- Nicht unterstützt, wenn die Option, [nur an das zuletzt verwendete Gerät des Benutzers zu senden]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options), ausgewählt ist
+- Nicht unterstützt, wenn die Option, [nur an das zuletzt verwendete Gerät des Benutzers zu senden]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options), ausgewählt ist
 
 ## Voraussetzungen
 
@@ -37,7 +36,7 @@ Push-Benachrichtigungen, die mit Push Max gesendet werden, werden nur Geräten z
 ## Push Max verwenden
 
 {% tabs %}
-{% tab Kampagnen %}
+{% tab Campaigns %}
 
 So verwenden Sie Push Max in Ihrer Kampagne:
 
@@ -46,7 +45,7 @@ So verwenden Sie Push Max in Ihrer Kampagne:
 3. Gehen Sie zum Schritt **Lieferung planen**.
 4. Wählen Sie **Senden mit Push Max**.
 
-![Android Push Zustellbarkeit im Schritt Zeitplan Zustellung mit der Option "Senden mit Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+\![Android Push Zustellbarkeit im Schritt Zustellung planen mit der Option "Mit Push Max senden".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
@@ -58,7 +57,7 @@ So verwenden Sie Push Max in Ihrem Canvas:
 3. Gehen Sie auf die Registerkarte **Zustellungseinstellungen**.
 4. Wählen Sie **Senden mit Push Max**.
 
-![Tab "Zustellungseinstellungen" eines Android-Push-Nachrichtenschritts mit der Option "Senden mit Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
+\![Tab Zustellungseinstellungen eines Android Push Message Schrittes mit der Option "Senden mit Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -73,9 +72,9 @@ Push Max funktioniert am besten, wenn [Intelligent Timing]({{site.baseurl}}/user
 
 Time-to-Live (TTL) kann fehlgeschlagene Push-Benachrichtigungen an Firebase Cloud Messaging (FCM) tracken und die Benachrichtigung erneut versuchen, wenn die:der Nutzer:in sie wahrscheinlich erhalten wird.
 
-Standardmäßig ist Time to Live auf 28 Tage eingestellt, das ist das Maximum. Sie können die Standard-TTL für alle neuen Android-Push-Nachrichten unter **Einstellungen** > **Arbeitsbereich-Einstellungen** > **Push Time to Live (TTL)** verringern oder Sie können die Anzahl der Tage für jede einzelne Nachricht auf der Registerkarte **Einstellungen** konfigurieren, wenn Sie eine Android-Push-Benachrichtigung verfassen.
+Standardmäßig ist Time to Live auf 28 Tage eingestellt, das ist das Maximum. Sie können die Standard TTL für alle neuen Android Push-Nachrichten unter **Einstellungen** > **Workspace-Einstellungen** > **Push-Einstellungen** verringern, oder Sie können die Anzahl der Tage pro Nachricht auf dem Tab **Einstellungen** konfigurieren, wenn Sie eine Android Push-Benachrichtigung verfassen.
 
-![Das Feld "Time-to-Live" ist auf 28 Tage eingestellt.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+\![Time to Live-Feld auf 28 Tage eingestellt.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## Was Sie wissen sollten
 

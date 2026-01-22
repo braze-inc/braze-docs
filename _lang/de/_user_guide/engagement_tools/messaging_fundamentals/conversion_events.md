@@ -28,6 +28,7 @@ Konversionsereignisse ermöglichen es, Nutzeraktionen auf einen bestimmten Punkt
 - Die Konversion erfolgt pro Benutzer, nicht pro Gerät. Das bedeutet, dass ein Benutzer nur einmal als Konversionsereignis gezählt wird, auch wenn eine Nachricht an mehrere Geräte gesendet wird. Ein weiteres Beispiel: Nehmen wir an, eine Kampagne hat nur ein Conversion-Ereignis, nämlich "Tätigt einen Kauf". Wenn ein Nutzer, der diese Kampagne erhält, innerhalb der Umwandlungsfrist zwei separate Käufe tätigt, wird nur eine Umwandlung gezählt.
 - Wenn ein Benutzer ein Konversionsereignis innerhalb der Frist für zwei separate Kampagnen oder Canvases durchführt, wird diese Konversion bei beiden registriert.
 - Eine Konversion wird auch dann festgestellt, wenn ein Benutzer das jeweilige Konversionsereignis im Fenster durchführt, auch wenn er die Nachricht nicht geöffnet oder angeklickt hat.
+- Bei Canvase funktioniert das Tracking der Konversion auf der Grundlage der endgültigen Konversionsfrist, die beginnt, wenn ein Nutzer:innen das Canvas betritt, und nicht auf der Grundlage der einzelnen Nachrichten. Das bedeutet, dass Konversionen auch bei Verzögerungen zwischen Nachrichten in Canvas gezählt werden können.
 
 ### Primäres Konversionsereignis
 
@@ -65,7 +66,7 @@ Wählen Sie zunächst den allgemeinen Ereignistyp aus, den Sie verwenden möchte
 
 Setzen Sie sich eine Konversionsfrist. Das ist die maximale Zeitspanne, die bis zur Konversion vergehen darf. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen einzuräumen, in dem es als Konversion zählt, wenn der Benutzer die angegebene Aktion durchführt.
 
-![Der Ereignistyp "Kauf tätigen" erfasst z. B. Benutzer als Konversion, die einen Kauf tätigen. Für die Konversion gilt eine Frist von 12 Stunden.]({% image_buster /assets/img_archive/conversion_event_selection.png %})
+![Der Konversions-Event-Typ "Tätigt einen Kauf" als Beispiel für die Aufzeichnung von Konversionen für Nutzer:innen, die einen Kauf tätigen. Die Frist beträgt 12 Stunden.]({% image_buster /assets/img_archive/conversion_event_selection.png %})
 
 Nachdem Sie Ihre Konversions-Events ausgewählt haben, fahren Sie mit der Kampagnenerstellung fort und beginnen mit dem Versand Ihrer Kampagne.
 
@@ -79,6 +80,6 @@ Wenn bei der Erstellung der Kampagne keine Konversionsereignisse ausgewählt wer
 
 Bei Nachrichten mit mehreren Varianten können Sie außerdem die Anzahl und relative Häufigkeit der Konversionsereignisse für Ihre Kontrollgruppe und die einzelnen Varianten einsehen.
 
-![Vier Konversions-Events, die Konversionen verfolgen, basierend darauf, wann ein Kauf innerhalb von drei Stunden getätigt wurde, innerhalb von zwei Stunden ein Kauf getätigt wurde, innerhalb von 30 Minuten eine Sitzung begonnen wurde und innerhalb von 25 Minuten eine Sitzung begonnen wurde.]({% image_buster /assets/img_archive/conversion_event_details.png %})
+![Vier Konversions-Events, die Konversionen tracken, basierend darauf, wann ein Kauf innerhalb von drei Stunden getätigt wurde, ein Kauf innerhalb von zwei Stunden getätigt wurde, eine Sitzung innerhalb von 30 Minuten begonnen wurde und eine Sitzung innerhalb von 25 Minuten begonnen wurde.]({% image_buster /assets/img_archive/conversion_event_details.png %})
 
 

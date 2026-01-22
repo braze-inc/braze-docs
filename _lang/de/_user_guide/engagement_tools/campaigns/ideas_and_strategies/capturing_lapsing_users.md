@@ -23,33 +23,27 @@ Zunächst erstellen wir ein Segment, um Nutzer anzusprechen, die Ihre App in den
 - **Zuletzt verwendet App** vor mehr als 2 Wochen
 - **Zuletzt verwendet App** vor weniger als 3 Wochen
 
-![][1]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse1.png %}){: style="max-width:70%;"}
 
 Benennen Sie das Segment mit einem einprägsamen Namen, z.B. "Verlorene Nutzer - 2 Wochen". Da wir die Kampagne so einrichten, dass sie wöchentlich wiederholt wird, wollen wir sicherstellen, dass mindestens eine Woche lang Nutzer im Segment erfasst werden. Aus diesem Grund haben wir Nutzer ausgewählt, die die App zuletzt vor zwei bis drei Wochen verwendet haben.
 
 ## Schritt 2: Eine Kampagne erstellen
 
-Klicken Sie anschließend auf **Kampagne erstellen** und wählen Sie die Art der Kampagne, die wir an dieses Segment senden werden. In diesem Beispiel erstellen wir eine neue [Push-Kampagne][6].
+Klicken Sie anschließend auf **Kampagne erstellen** und wählen Sie die Art der Kampagne, die wir an dieses Segment senden werden. In diesem Beispiel erstellen wir eine neue [Push-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
 
-![][5]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse2.png %}){: style="max-width:70%;"}
 
 Wir nennen die Kampagne „Nachricht an passive Nutzer:innen – 2 Wochen“ und erstellen dann den Content unserer Nachricht. In diesem Beispiel richten wir uns nur an iOS-Nutzer:innen, aber Sie können Braze für Android- und iOS-Push-Benachrichtigungen verwenden. 
 
 Je näher der Zeitpunkt liegt, an dem ein Nutzer das letzte Mal in der App war, desto wichtiger ist es, dass sie aktuell und relevant ist. Wenn Sie einem Nutzer eine Nachricht schicken, nachdem er die App zwei Wochen lang nicht genutzt hat, ist es wichtig, dass Sie relevante Inhalte präsentieren und die Vorteile der App hervorheben.
 
-![][2]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse3.png %}){: style="max-width:70%;"}
 
-Als Nächstes erstellen wir einen wiederkehrenden Zeitplan, um unsere wöchentliche Nachricht donnerstags um 17:45 Uhr zu versenden. Dazu verwenden wir [Zustellung in der lokalen Zeitzone][4] ] in den **zeitbasierten Planungsoptionen**. Wir empfehlen Ihnen, Ihre Sitzungsgrafik zu betrachten, um Nutzer:innen kurz vor Zeiten hoher Nutzung anzusprechen. So stellen Sie sicher, dass Sie die Menschen dann ansprechen, wenn sie die App am ehesten nutzen. Sie können dies später ändern und Ihre ursprüngliche Hypothese testen.
+Als Nächstes erstellen wir einen wiederkehrenden Zeitplan für den Versand unserer wöchentlichen Nachricht donnerstags um 17:45 Uhr unter Verwendung der [Zustellung zur Ortszeit]({{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer) in den **zeitbasierten Planungsoptionen**. Wir empfehlen Ihnen, Ihre Sitzungsgrafik zu betrachten, um Nutzer:innen kurz vor Zeiten hoher Nutzung anzusprechen. So stellen Sie sicher, dass Sie die Menschen dann ansprechen, wenn sie die App am ehesten nutzen. Sie können dies später ändern und Ihre ursprüngliche Hypothese testen.
 
-![][3]{: style="max-width:70%;"}
+![]({% image_buster /assets/img_archive/2weeklapse4.png %}){: style="max-width:70%;"}
 
 ## Schritt 3: Kampagne starten
 
 Jetzt sind Sie bereit, die Kampagne zu senden. Bestätigen Sie die Einstellungen auf der letzten Seite des Composers und klicken Sie auf **Kampagne starten**!
 
-[1]: {% image_buster /assets/img_archive/2weeklapse1.png %}
-[2]: {% image_buster /assets/img_archive/2weeklapse3.png %}
-[3]: {% image_buster /assets/img_archive/2weeklapse4.png %}
-[4]: {{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer
-[5]: {% image_buster /assets/img_archive/2weeklapse2.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message

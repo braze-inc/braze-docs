@@ -1,5 +1,5 @@
 ---
-nav_title: "Push Action-Buttons"
+nav_title: "Push-Action-Buttons"
 article_title: Push Action-Buttons
 page_order: 1
 page_type: reference
@@ -11,23 +11,24 @@ channel:
 
 # Push-Action-Buttons
 
-![Eine iOS-Push-Benachrichtigung mit zwei Schaltflächen für Push-Aktionen: Akzeptieren und Ablehnen.][1]{: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Eine iOS Push-Benachrichtigung mit zwei Push-Action-Buttons: Akzeptieren und Ablehnen.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Mit Push-Aktionsschaltflächen können Sie Inhalte und Aktionen für Schaltflächen festlegen, wenn Sie Braze iOS- und Android-Push-Benachrichtigungen verwenden. Mit Aktionsschaltflächen können Ihre Nutzer direkt von einer Benachrichtigung aus mit Ihrer App interagieren, ohne dass sie in eine App-Erfahrung klicken müssen.
 
 ## Erstellen von Action-Buttons
 
-Jede interaktive Schaltfläche kann zu einer Webseite oder einem Deeplink führen oder die App öffnen. Sie können Ihre Push-Aktionsschaltflächen im Abschnitt **On-Click Behavior** des Push Message Composers im Dashboard festlegen.
+Jede interaktive Schaltfläche kann zu einer Webseite oder einem Deeplink führen oder die App öffnen. 
 
-{% alert important %}
-Wenn Sie sowohl iOS als auch Android in einer einzigen Kampagne ansprechen möchten, erstellen Sie eine Multichannel-Kampagne. Push-Action-Buttons werden beim Targeting von [Quick-Push-Kampagnen]({{site.baseurl}}/quick_push) sowohl für iOS als auch für Android nicht unterstützt.
-{% endalert %}
+- Für standardmäßige Push-Kampagnen können Sie Ihre Push-Action-Buttons im Abschnitt **On-Click-Verhalten** des Nachrichten-Editors im Dashboard festlegen.
+- Für [schnelle Push-Kampagnen]({{site.baseurl}}/quick_push) können Aktions-Buttons für jede Plattform separat auf dem Tab **Einstellungen** konfiguriert werden.
 
+{% tabs %}
+{% tab iOS %}
 ### iOS {#ios}
 
 Um Action-Buttons in Ihren iOS Push-Nachrichten zu verwenden, gehen Sie wie folgt vor:
 
-1. Erstellen Sie eine [iOS-Push-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) und aktivieren Sie Aktionsschaltflächen auf der Registerkarte **Verfassen**.
+1. Aktivieren Sie Aktions-Buttons auf dem Tab **Verfassen** für eine Standardkampagne oder auf dem Tab **Einstellungen** für einen schnellen Push.
 2. Wählen Sie Ihre **iOS-Benachrichtigungskategorie** aus den folgenden verfügbaren Tastenkombinationen:
  - Zustimmen/Ablehnen
  - Ja/Nein
@@ -35,17 +36,18 @@ Um Action-Buttons in Ihren iOS Push-Nachrichten zu verwenden, gehen Sie wie folg
  - Mehr
  - Vorregistrierte benutzerdefinierte iOS-Kategorie
 
-![Dropdown-Menü der iOS-Benachrichtigungskategorie.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![iOS Benachrichtigungskategorie Dropdown-Menü.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
 Aufgrund der Handhabung von Schaltflächen durch iOS müssen Sie bei der Einrichtung von Push-Aktionsschaltflächen zusätzliche Integrationsschritte durchführen, die in unserer [Entwicklerdokumentation]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories) beschrieben werden. Insbesondere müssen Sie entweder iOS-Kategorien konfigurieren oder aus bestimmten Standard-Schaltflächenoptionen auswählen. Bei Android-Integrationen funktionieren diese Schaltflächen automatisch.
 {% endalert %}
-
+{% endtab %}
+{% tab Android %}
 ### Android {#android}
 
 Um Aktionsschaltflächen in Ihren Android-Push-Nachrichten zu verwenden, gehen Sie wie folgt vor:
 
-1. Erstellen Sie eine [Android-Push-Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) und aktivieren Sie Benachrichtigungsschaltflächen auf der Registerkarte **Verfassen**.
+1. Aktivieren Sie Aktions-Buttons auf dem Tab **Verfassen** für eine Standardkampagne oder auf dem Tab **Einstellungen** für einen schnellen Push.
 2. Wählen Sie <i class="fas fa-plus-circle"></i> **Schaltfläche hinzufügen** und geben Sie den Text Ihres Buttons und das **Verhalten beim Klicken** an. Sie können aus den folgenden verfügbaren Aktionen wählen:
   - App öffnen
   - Weiterleitung zu Web-URL
@@ -59,7 +61,7 @@ Sie können bis zu drei Tasten in Ihrem Push hinzufügen.
 
 Im Gegensatz zu den iOS-Tasten, die gestapelt sind, werden die Android-Tasten nebeneinander in einer Reihe angezeigt. Das heißt, je mehr Buttons Sie hinzufügen (bis zu drei), desto weniger Platz haben Sie für die Kopie der Buttons. 
 
-![Push-Action-Buttons für Android mit abgeschnittenem Text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
+![Android Push-Action-Buttons mit verkürztem Text.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 In der folgenden Tabelle sehen Sie, wie viele Zeichen Sie hinzufügen können, bevor Ihre Button-Kopie abgeschnitten wird, je nachdem, wie viele Buttons Sie haben:
 
@@ -69,6 +71,6 @@ In der folgenden Tabelle sehen Sie, wie viele Zeichen Sie hinzufügen können, b
 | (2 %) | 20 Zeichen |
 | 3 | 11 Zeichen |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% endtab %}
+{% endtabs %}
 
-
-[1]: {% image_buster /assets/img_archive/push_action_example.png %}

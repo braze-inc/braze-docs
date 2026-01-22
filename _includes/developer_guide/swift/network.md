@@ -21,7 +21,7 @@ To minimize server load, Braze performs periodic flushes of new user data every 
 When the `RequestPolicy` enum value is `manual`, it performs the same as automatic request processing, except:
 
 - Custom attributes and custom event data are not automatically flushed to the server throughout the user session.
-- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, geofences, and location tracking. For more details, see the `Braze.Configuration.Api.RequestPolicy.manual` [documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual). When these internal requests are made, locally stored custom attributes and custom event data may be flushed to the Braze server, depending on the request type.
+- Braze will still perform automatic network requests for internal features, such as requesting in-app messages, Liquid templating in in-app messages, geofences, and location tracking. For more details, see the `Braze.Configuration.Api.RequestPolicy.manual` [documentation](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/api-swift.class/requestpolicy-swift.enum/manual). When these internal requests are made, Braze may flush locally stored custom attributes and custom event data to the Braze server, depending on the request type.
 {% endtab %}
 {% endtabs %}
 

@@ -1,5 +1,5 @@
 ---
-nav_title: IP Erwärmung
+nav_title: IP-Warming
 article_title: IP Erwärmung
 page_order: 1
 page_type: reference
@@ -61,7 +61,7 @@ Die meisten ISPs speichern Reputationsdaten nur für 30 Tage. Wenn Sie einen Mon
 
 Unsere integrierte Funktion zur Nutzereinschränkung ist ein nützliches Hilfsmittel, um Ihnen beim Warming Ihrer IP-Adresse zu helfen. Nachdem Sie bei der Kampagnenerstellung die gewünschten Nachrichtensegmente ausgewählt haben, wählen Sie im Schritt [Zielbenutzer]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) das Dropdown-Menü **Erweiterte Optionen**, um Ihre Benutzer einzuschränken. Mit fortschreitendem Warming können Sie dieses Limit schrittweise erhöhen, um das Volumen der von Ihnen gesendeten E-Mails zu steigern.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Segmentierung von Subdomains
 
@@ -93,12 +93,12 @@ Nutzen Sie unseren [Zeitplan für das IP-Warming](#ip-warming-schedules), um Ihr
 
 ### Bereinigen Sie Ihre E-Mail-Listen
 
-Vergewissern Sie sich, dass Ihre E-Mail-Liste bereinigt ist und keine alten oder ungeprüften E-Mail-Adressen enthält. Es ist ideal, wenn Sie sicherstellen, dass Sie sowohl [CASL- als auch CAN-SPAM-konform ][40] sind.
+Vergewissern Sie sich, dass Ihre E-Mail-Liste bereinigt ist und keine alten oder ungeprüften E-Mail-Adressen enthält. Es ist ideal, wenn Sie sicherstellen, dass Sie sowohl [CASL- als auch CAN-SPAM-konform]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) sind.
 
 ### Überwachen Sie Ihre Absender-Reputation
 
 Achten Sie bei der Durchführung des IP-Warming-Prozesses darauf, dass Sie Ihre Absender-Reputation sorgfältig überwachen. Diese spezifischen Metriken sind wichtig zu beobachten:
-- **Absprungraten:** Wenn eine Kampagne eine Rücklaufquote von mehr als 3–5 % aufweist, sollten Sie die Qualität Ihrer Liste anhand der Richtlinien in unserem Artikel „Keep It Clean: The Importance of Email List Hygiene][43]. Darüber hinaus sollten Sie eine [Sunset-Policy][46] in Erwägung ziehen, um den Versand von E-Mails an nicht aktivierte oder inaktive E-Mail-Adressen einzustellen.
+- **Absprungraten:** Wenn eine Kampagne zu mehr als 3-5% abprallt, sollten Sie die Sauberkeit Ihrer Liste überprüfen, indem Sie die Richtlinien in unserem [Keep It Clean befolgen: The Importance of Email List Hygiene](https://www.braze.com/blog/email-list-hygiene/). Außerdem sollten Sie eine [Sunsetting-Richtlinie]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) in Betracht ziehen, um das Mailen von nicht aktivierten oder inaktiven E-Mail-Adressen einzustellen.
 - **Spam-Berichte:** Wenn eine Kampagne zu mehr als 0,08% als Spam gemeldet wird, sollten Sie den Inhalt, den Sie versenden, neu bewerten, überprüfen, ob er auf eine interessierte Zielgruppe ausgerichtet ist, und sicherstellen, dass Ihre E-Mails so formuliert sind, dass sie deren Interesse wecken.
 - **Öffnungsraten:** Öffnungsraten sind ein nützlicher Indikator für die Platzierung im Posteingang. Wenn Ihre einmaligen Öffnungsraten über 25% liegen, haben Sie wahrscheinlich eine hohe Platzierung im Posteingang, was auf einen guten Ruf des Absenders hinweist.
 
@@ -110,9 +110,3 @@ Braze empfiehlt, [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intell
 Es ist normal, dass E-Mails während der IP-Warming-Phase an den Spam-Ordner gesendet werden, da Ihre Domain und IP noch keinen positiven Ruf aufgebaut haben. Wenn eine E-Mail in Ihrem Spam-Ordner landet, muss Ihr E-Mail-Administrator Ihre Braze-Sendedomäne und IP-Adresse zur Liste der erlaubten Mails in Ihrem Unternehmen hinzufügen.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-[43]: https://www.braze.com/blog/email-list-hygiene/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

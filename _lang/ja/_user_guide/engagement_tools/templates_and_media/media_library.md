@@ -31,13 +31,13 @@ tool: Media
 * アップロードする画像またはフォルダーをドラッグ＆ドロップする
 * 画像を削除する
 
-\![メディアライブラリページ。ファイルをドラッグ＆ドロップまたはアップロードするための[ライブラリにアップロード]セクションがあります。メディアライブラリには、アップロードされたコンテンツのリストもあります。]({% image_buster /assets/img_archive/media_library_main.png %})
+![メディアライブラリページ。ファイルをドラッグ＆ドロップしてアップロードするための [ライブラリにアップロード] セクションがあります。メディアライブラリには、アップロードされたコンテンツのリストもあります。]({% image_buster /assets/img_archive/media_library_main.png %})
 
 後で Braze でメッセージの下書きを作成するときに、メディアライブラリから画像を取り込むことができます。
 
-\![メッセージ作成画面によってメディアライブラリにアクセスする一般的な方法が2つあります。そのうちの1つでは、「画像とGIF」というタイトルの付いたメールドラッグ＆ドロップエディターと「メディアライブラリから追加」ボタンが表示されます。もう一方は、プッシュやアプリ内メッセージなどの標準的なエディターが表示され、「メディア」というタイトルと「画像写真追加」のボタンがある。]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
+![メディアライブラリにアクセスするための一般的な 2 つの方法 (メッセージ作成画面によって異なる)。そのうちの1つでは、「画像とGIF」というタイトルの付いたメールドラッグ＆ドロップエディターと「メディアライブラリから追加」ボタンが表示されます。もう1 つは、プッシュおよびアプリ内メッセージs などの標準エディタと、タイトル"Media"ボタンから"Add Image"を表示します。]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
-{% alert tip %} メディアライブラリーに関する詳しいヘルプは、[テンプレート& メディアFAQを]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)参照のこと。 {% endalert %}
+{% alert tip %} メディアライブラリーの詳細については、[テンプレート&メディアFAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)を参照してください。 {% endalert %}
 
 ## 画像の仕様
 

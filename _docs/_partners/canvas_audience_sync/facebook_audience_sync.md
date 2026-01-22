@@ -46,6 +46,10 @@ You'll need to confirm that you have the following items created and completed b
 
 ### Step 1: Connect to Facebook
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Facebook to your Braze account.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Facebook**. Under Facebook Audience Export, select **Connect Facebook**.
 
 ![Facebook technology page in Braze that includes an Overview section and Facebook Audience Export section with the Connected Facebook button.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:85%;"}

@@ -48,7 +48,7 @@ WhatsApp のユーザーには、`subscribed` と `unsubscribed` の 2 つの購
 
 - 次の例のように、REST API を介して購読ステータスを更新する [Braze-to-Braze Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) を作成します。
 
-Webhook作成画面にPOSTメソッドでメッセージを送る。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
+![Webhook コンポーザーに POST メソッドでメッセージを作成する。]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 競合を回避するため、Webhook の後のフォローアップメッセージングは、最初のキャンバスの結果 (ユーザーがキャンバスのバリエーションに入って、現在 WhatsApp の購読グループに属している、など) によってトリガーされる 2 番目のキャンバスに含める必要があります。
 
@@ -76,7 +76,7 @@ Webhook作成画面にPOSTメソッドでメッセージを送る。]({% image_b
 	}
 	```
 
-\![ユーザー更新ステップにアドバンスドJSONエディターステップを追加した。]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
+![ユーザー更新ステップにアドバンスドJSONエディターステップを追加した。]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 ユーザーの購読ステータスの更新には最大 60 秒かかることがあります。

@@ -29,6 +29,25 @@ Before you can access, create, and publish landing pages, you either need admini
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
+## Adding Google Tag Manager to a landing page
+
+To add Google Tag Manager to your landing pages, add a **Custom Code** block to your landing page in the drag-and-drop editor, then insert the Tag Manager code into the block. Make sure to add a data layer before the Tag Manager code, such as in this example:
+
+```
+<script>
+window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXX');</script>
+<!-- End Google Tag Manager -->
+```
+
+For details on implementing Google Tag Manager, see [Google's documentation](https://developers.google.com/tag-platform/tag-manager/datalayer#installation).
+
 ## Frequently asked questions
 
 ### What's the maximum size for landing pages?
@@ -46,4 +65,3 @@ Yes. Use the **Custom Code** block in the drag-and-drop editor to add or edit HT
 ### Can I create a webhook inside a landing page?
 
 No, this isn't currently supported.
-

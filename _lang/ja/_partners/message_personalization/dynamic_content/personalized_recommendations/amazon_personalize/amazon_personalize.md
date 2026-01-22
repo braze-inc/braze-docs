@@ -11,9 +11,9 @@ search_tag: Partner
 <!--
 {% multi_lang_include video.html id="xFZ3HMleYYE" align="right" %}
 -->
-> Amazon Personalizeは、Amazonの機械学習によるレコメンデーションシステムを一日中利用できるようなものだ。20年以上にわたるレコメンデーションの経験に基づき、Amazon Personalizeは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、およびターゲットを絞ったマーケティングプロモーションを可能にすることで、顧客エンゲージメントを向上させることができる。
+> [Amazon Personalize](https://aws.amazon.com/personalize/)は、あなた自身の一日中のAmazonマシンラーニングレコメンドシステムを持つようなものです。20年以上にわたるレコメンデーションの経験に基づき、Amazon Personalizeは、リアルタイムでパーソナライズされた商品やコンテンツのレコメンデーション、およびターゲットを絞ったマーケティングプロモーションを可能にすることで、顧客エンゲージメントを向上させることができる。
 
-_この統合は、Amazon Personalizeによって維持されます。_
+_この統合は Amazon Personalize によって管理されます。_
 
 ## 統合について
 
@@ -31,7 +31,7 @@ Amazon Personalizeは、機械学習とあなたが定義したアルゴリズ�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% tabs %}
-{% tab 使用例 %}
+{% tab Use Cases %}
 
 **ユースケース**
 
@@ -43,7 +43,7 @@ Amazon Personalizeは、機械学習とあなたが定義したアルゴリズ�
 以下のガイドでは、ユーザー個別のおすすめレシピに焦点を当てる。
 
 {% endtab %}
-{% tab データセット %}
+{% tab Datasets %}
 
 **データセット**
 
@@ -150,6 +150,6 @@ This seems like a great fit for you:
 
 タイトル、画像、URLのリンクを含めると、コンテンツカードの完成形はこのようになる：
 
-![コネクテッド・コンテンツがメッセージ本文と「画像を追加」フィールドに追加されたキャンペーンの画像。この画像は、「ウェブURLへのリダイレクト」フィールドに追加されたコネクテッドコンテンツ・ロジックも示しており、ユーザーをレコメンデーション URL にリンクさせています。]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
+![コネクテッド・コンテンツがメッセージ本文と「画像を追加」フィールドに追加されたキャンペーンの画像。この画像は、「ウェブURLへのリダイレクト」フィールドに追加されたコネクテッド・コンテンツ・ロジックも示しており、ユーザーをレコメンデーションURLにリンクさせている。]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
 
 

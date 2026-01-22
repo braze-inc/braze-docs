@@ -10,10 +10,10 @@ page_order: 5
 
 # 永続的なエントリプロパティ
 
-> キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされる際、キャンバスワークフローの各ステップでのパーソナライゼーションに、API 呼び出し、カスタムイベント、購入イベントからのメタデータを使用することができます。これらのプロパティを使えば、よりキュレーションされたメッセージを送ることができる。
+> キャンバスがカスタムイベント、購入、または API 呼び出しによってトリガーされる際、キャンバスワークフローの各ステップでのパーソナライゼーションに、API 呼び出し、カスタムイベント、購入イベントからのメタデータを使用することができます。これらのプロパティーを使用して、さらにキュレートd メッセージを送信できます。
 
 {% alert important %}
-永続エントリー・プロパティは、オリジナルのキャンバス・エディタの成果物であるため、歴史的な参照のために残っている用語への非推奨の参照がある。現在の更新キャンバス・エディターについては、[キャンバス・エントリー・プロパティとイベント・プロパティを]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)参照のこと。
+永続的なエントリプロパティーは、元のキャンバスエディターのアーティファクトであるため、履歴参照のために残っている用語への推奨されないリファレンスがあります。現行の更新d キャンバスエディタについては、[キャンバスエントリプロパティとイベントプロパティ]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties)を参照してください。
 {% endalert %}
 
 ## エントリプロパティを使用する
@@ -79,15 +79,15 @@ url -X POST \
     }' \
 ```
  
-このリクエストでは、「food allergies」のグローバル値は「none」です。Customer_123, 、値は "dairy "である。リキッドスニペット{%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} を含むこのキャンバスのメッセージは、Customer_123 は "dairy"、それ以外は "none "でテンプレートされる。 
+このリクエストでは、「food allergies」のグローバル値は「none」です。Customer_123, の場合、値は"dairy" です。このキャンバスのメッセージには、リキッドスニペット{%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} が含まれています。"dairy" Customer_123 および"none" は、他のすべてのユーザーにテンプレートされます。 
 
 ## ユースケース
 
 ユーザーが e コマースサイトでアイテムをブラウズした後に、そのアイテムをカートに追加しないときにトリガーされるキャンバスがある場合、キャンバスの最初のステップを、アイテムの購入に興味があるかどうかを尋ねるプッシュ通知にすることができます。製品名は、{% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-\![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 2 番目のステップでは、ユーザーがカートにアイテムを追加したにもかかわらず、まだ購入していない場合、別のプッシュ通知を送信してチェックアウトするように促すことができます。`product_name` エントリプロパティは、引き続き {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %} を使用して参照できます。
 
-\![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 

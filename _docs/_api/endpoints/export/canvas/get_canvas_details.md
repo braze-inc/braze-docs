@@ -50,8 +50,6 @@ All Canvas steps have a `next_paths` field, which is an array of `{name, next_st
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

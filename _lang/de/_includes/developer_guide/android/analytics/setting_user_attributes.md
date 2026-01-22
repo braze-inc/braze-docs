@@ -2,6 +2,26 @@
 
 ## Standard-Nutzerattribute
 
+### Vordefinierte Methoden
+
+Braze bietet vordefinierte Methoden zum Festlegen der folgenden Nutzer:innen-Attribute innerhalb der [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) Klasse. Spezifikationen zur Methode finden Sie in [unserer KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+
+- Vorname
+- Nachname
+- Land
+- Sprache
+- Geburtsdatum
+- E-Mail
+- Geschlecht
+- Wohnort
+- Telefonnummer
+
+{% alert note %}
+Alle String-Werte wie Vorname, Nachname, Land und Wohnort sind auf 255 Zeichen begrenzt.
+{% endalert %}
+
+### Einstellung von Standardattributen
+
 Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `getCurrentUser()` auf Ihrer Braze-Instanz auf, um eine Referenz auf den aktuellen Nutzer:innen Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
 
 {% tabs %}
@@ -28,21 +48,33 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-Braze bietet vordefinierte Methoden zum Einstellen der folgenden Nutzer:in-Attribute innerhalb der [Klasse BrazeUser](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Spezifikationen zur Methode finden Sie in [unserer KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+### Standardattribute zurücksetzen
 
-- Vorname
-- Nachname
-- Land
-- Sprache
-- Geburtsdatum
-- E-Mail
-- Geschlecht
-- Wohnort
-- Telefonnummer
+Um ein Nutzer:in-Attribut zu deaktivieren, übergeben Sie `null` an die entsprechende Methode.
 
-{% alert note %}
-Alle String-Werte wie Vorname, Nachname, Land und Wohnort sind auf 255 Zeichen begrenzt.
-{% endalert %}
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Angepasste Nutzerattribute
 
@@ -78,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Ganzzahlen %}
+{% tab Ganze Zahlen %}
 So passen Sie ein angepasstes Attribut mit einem `int` Wert an:
 
 {% subtabs global %}
@@ -296,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Zurücksetzen eines benutzerdefinierten Attributs
+### Angepasste Attribute nicht anpassen
 
-Benutzerdefinierte Attribute können auch mit der folgenden Methode deaktiviert werden:
+Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `unsetCustomUserAttribute`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -321,6 +353,43 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 }
 ```
 
+{% endtab %}
+{% endtabs %}
+
+### Verschachtelte angepasste Attribute
+
+Sie können auch Eigenschaften innerhalb angepasster Attribute verschachteln. Im folgenden Beispiel wird ein `favorite_book` Objekt mit verschachtelten Eigenschaften als angepasstes Attribut auf das Nutzerprofil gesetzt. Weitere Einzelheiten finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+{% tabs %}
+{% tab JAVA %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
 {% endtab %}
 {% endtabs %}
 

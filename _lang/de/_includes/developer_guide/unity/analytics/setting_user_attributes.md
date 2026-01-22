@@ -2,27 +2,93 @@
 
 ## Standard-Nutzerattribute
 
-Um Nutzer:innen-Attribute festzulegen, müssen Sie die entsprechende Methode für das Objekt `BrazeBinding` aufrufen. Im Folgenden finden Sie eine Liste der integrierten Attribute, die mit dieser Methode aufgerufen werden können.
+### Vordefinierte Methoden
 
-| Attribut                 | Code Beispiel |
-|---------------------------|-------------|
-| Vorname                | `AppboyBinding.SetUserFirstName("first name");` |
-| Nachname                 | `AppboyBinding.SetUserLastName("last name");` |
-| Nutzer-E-Mail                | `AppboyBinding.SetUserEmail("email@email.com");` |
-| Geschlecht                    | `AppboyBinding.SetUserGender(Appboy.Models.Gender);` |
-| Geburtsdatum                | `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");` |
-| Benutzerland              | `AppboyBinding.SetUserCountry("country name");` |
-| Heimatort des Nutzers            | `AppboyBinding.SetUserHomeCity("city name");` |
-| E-Mail-Abonnement des Nutzers   | `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| Benutzer-Push-Abonnement    | `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| Telefonnummer des Nutzers         | `AppboyBinding.SetUserPhoneNumber("phone number");` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Braze bietet vordefinierte Methoden, um die folgenden Nutzer:innen-Attribute mit Hilfe des `BrazeBinding` Objekts einzustellen. Weitere Informationen finden Sie in der [Braze Unity Deklarationsdatei](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
+
+- Vorname
+- Nachname
+- Nutzer-E-Mail
+- Geschlecht
+- Geburtsdatum
+- Benutzerland
+- Heimatort des Nutzers
+- E-Mail-Abonnement des Nutzers
+- Benutzer-Push-Abonnement
+- Telefonnummer des Nutzers
+
+### Einstellung von Standardattributen
+
+Um ein Standardattribut festzulegen, rufen Sie die entsprechende Methode für das Objekt `BrazeBinding` auf.
+
+{% tabs local %}
+{% tab Vorname %}
+```csharp
+BrazeBinding.SetUserFirstName("first name");
+```
+{% endtab %}
+{% tab Nachname %}
+```csharp
+BrazeBinding.SetUserLastName("last name");
+```
+{% endtab %}
+{% tab E-Mail %}
+```csharp
+BrazeBinding.SetUserEmail("email@email.com");
+```
+{% endtab %}
+{% tab Geschlecht %}
+```csharp
+BrazeBinding.SetUserGender(Appboy.Models.Gender);
+```
+{% endtab %}
+{% tab Geburtsdatum %}
+```csharp
+BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
+```
+{% endtab %}
+{% tab Land %}
+```csharp
+BrazeBinding.SetUserCountry("country name");
+```
+{% endtab %}
+{% tab Heimatstadt %}
+```csharp
+BrazeBinding.SetUserHomeCity("city name");
+```
+{% endtab %}
+{% tab Abo per E-Mail %}
+```csharp
+BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Push-Abonnement %}
+```csharp
+BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Rufnummer %}
+```csharp
+BrazeBinding.SetUserPhoneNumber("phone number");
+```
+{% endtab %}
+{% endtabs %}
+
+### Standardattribute zurücksetzen
+
+Um ein Standardattribut für Nutzer:innen zu deaktivieren, übergeben Sie `null` an die entsprechende Methode.
+
+```csharp
+BrazeBinding.SetUserFirstName(null);
+```
 
 ## Angepasste Nutzerattribute
 
 Zusätzlich zu den standardmäßigen Nutzer:innen-Attributen können Sie in Braze auch angepasste Attribute unter Verwendung verschiedener Datentypen definieren. Weitere Informationen zu den Segmentierungsoptionen der einzelnen Attribute finden Sie unter [Nutzer:innen-Datenerfassung]({{site.baseurl}}/developer_guide/analytics).
 
 ### Anpassen der Attribute
+
+Um ein angepasstes Attribut festzulegen, verwenden Sie die entsprechende Methode für den Attributtyp: 
 
 {% tabs %}
 {% tab String %}
@@ -93,7 +159,7 @@ Angepasste Attributwerte haben eine maximale Länge von 255 Zeichen; längere We
 
 ### Angepasste Attribute nicht anpassen
 
-Um ein angepasstes Attribut eines Nutzers:innen wieder aufzuheben, verwenden Sie die folgende Methode:
+Um ein angepasstes Attribut wieder freizugeben, übergeben Sie den entsprechenden Attributschlüssel an die Methode `UnsetCustomUserAttribute`. 
 
 ```csharp
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");

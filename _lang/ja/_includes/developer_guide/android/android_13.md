@@ -14,7 +14,7 @@ Android 13に備えるには、Braze SDK を[最新バージョン (v21.0.0以�
 
 Android 13では、ユーザーがプッシュ通知を送信するアプリを管理する方法に[大きな変更](https://developer.android.com/about/versions/13/changes/notification-permission)が導入されています。Android 13では、アプリはプッシュ通知を表示する前にアクセス許可を取得する必要があります。 
 
-![アンドロイドのプッシュメッセージで、「Kitchenerieからの通知を許可しますか」という問いかけがあり、メッセージの下に「許可する」と「許可しない」の2つのボタンがある。]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
+![Kitchenerieからのプッシュ通知を許可しますか」というAndroidのプッシュメッセージで、メッセージの下に「許可する」と「許可しない」の2つのボタンがある。]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
 この新しいアクセス許可は、iOS および Web プッシュと同様のパターンに従い、許可の取得を1回試行するだけです。ユーザーが`Don't Allow`を選択した場合、またはプロンプトを無視すると、アプリは再度許可を求めることができなくなります。
 

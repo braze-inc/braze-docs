@@ -1,7 +1,7 @@
 ---
 nav_title: Meta-Ressourcen
 article_title: Meta-Ressourcen
-page_order: 81
+page_order: 11
 description: "In diesem Artikel finden Sie hilfreiche Informationen von Meta zur WhatsApp-Integration."
 page_type: reference
 channel:
@@ -22,6 +22,22 @@ In der folgenden Meta-Dokumentation finden Sie Anleitungen zu Anzeigenamen, Tele
 - [Qualitätsbewertung](https://www.facebook.com/business/help/896873687365001)
 
 ## WhatsApp-Produktupdates
+
+### April 2025: Pause für Marketing Nachrichten an US-Telefonnummern
+*Letztes Update August 2025*
+
+Meta unterbricht die Zustellung aller Marketing Template Nachrichten an Nutzer:innen von WhatsApp, die eine Telefonnummer in den USA haben (eine Nummer, die sich aus einer `+1` Vorwahl und einer US-Vorwahl zusammensetzt). Es gibt keinen aktuellen Zeitplan, wann diese Pause aufgehoben werden soll. 
+
+Jeder Versuch, ein Template an einen Nutzer:innen von WhatsApp mit einer US-Telefonnummer zu senden, führt zu der Fehlermeldung `131049`.
+
+### März 2025: Nutzerspezifische Werbetemplate-Nachrichtenlimits
+*Letztes Update August 2025*
+
+Meta begrenzt die Anzahl der Marketing Template Nachrichten, die ein Nutzer:innen innerhalb eines bestimmten Zeitraums in allen Unternehmen erhalten kann, und beginnt mit Nachrichten, die mit geringerer Wahrscheinlichkeit gelesen werden. 
+
+Eine Ausnahme ist, dass eine Person, die auf eine Nachricht des Marketings antwortet, ein 24-Stunden-Fenster für den Kund:in-Dienst öffnet. Marketing Nachrichten, die innerhalb dieses Zeitfensters gesendet werden, werden nicht auf das Limit einer Person angerechnet.
+
+Das spezifische Limit variiert je nach Nutzer:innen, abhängig von ihrem Engagement. Erfahren Sie [hier](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits) mehr über die Beschränkungen von WhatsApps Marketing Template Nachrichten pro Nutzer:innen. 
 
 ### Januar 2025: WhatsApp pausiert den Versand von Werbenachrichten an Nutzer:innen in den USA ab dem 1\. April
 *Letzte Änderung: Januar 2025*

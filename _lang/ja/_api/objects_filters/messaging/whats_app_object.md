@@ -19,14 +19,14 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
   "app_id": (required, string) see App Identifier,
   "subscription_group_id": (required, string) the ID of your subscription group,
   "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under,
-  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message),
+  "message_type": (required, string) the type of WhatsApp message being sent under the `message` key (template_message | text_response_message | text_image_response_message | quick_reply_response_message | list_response_message | flow_response_message),
   "message": (required, object) The message object that must include the required fields based on the selected `message_type`. Below are the specific message structures for each type. Refer to the relevant message type for the required fields and their format.
 }
 ```
 
 - [アプリ識別子]({{site.baseurl}}/api/identifier_types/)
 
-### メッセージの種類
+### メッセージタイプ
 
 #### template_message
 
@@ -209,9 +209,9 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
 
 ##### 制約
 
-- **list_sections**: 少なくとも 1 つのセクションが必要です。
-- **list_rows**: すべてのセクションで最大 10 行まで含めることができます。
-- **row_description**: 各列のオプション。
+- **list_sections**:少なくとも 1 つのセクションが必要です。
+- **list_rows**:すべてのセクションで最大 10 行まで含めることができます。
+- **row_description**:各列のオプション。
 
 ##### 例
 
@@ -249,5 +249,49 @@ description: "この参考記事では、Braze WhatsApp オブジェクトのさ
       }
     ]
   }
+}
+```
+
+#### flow_response_message
+
+`flow_response_message` 型では、フローベースのメッセージをWhatsAppで送信できます。このメッセージタイプには、受信者が完了できる対話式フローが含まれています。
+
+```json
+{
+  "header_text": (optional, string) the header text of the message to send,
+  "body": (required, string) the body of the message to send,
+  "footer": (optional, string) the footer of the message to send,
+  "flow_button": (required, object) the flow button object that contains:
+    "caption": (required, string) the text that will appear on the flow button,
+    "flow_id": (required, string) the unique identifier of the WhatsApp Flow,
+  "generate_custom_attribute": (optional, boolean) whether to save flow response on the user profile and generate a custom attribute upon responding to this flow message
+}
+```
+
+##### フローボタンオブジェクト
+
+```json
+{
+  "caption": (required, string) The text displayed on the button,
+  "flow_id": (required, string) The ID of the flow
+}
+```
+
+##### 制約
+
+- **flow_button**:caption と`flow_id` の両方を含める必要があります。
+- **キャプション**:最大20 文字。
+- **flow_id**:発行済みの有効なフローID である必要があります。
+
+##### 例
+
+```json
+{
+  "body": "Please complete your order details",
+  "flow_button": {
+    "caption": "Start Order",
+    "flow_id": "594425479261596"
+  },
+  "generate_custom_attribute": true
 }
 ```

@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Connecting LiveRamp, Snowflake, and Braze
+# Connect LiveRamp, Snowflake, and Braze
 
 > Learn how to connect LiveRamp, Snowflake, and Braze, so you can create highly personalized and relevant marketing campaigns by reducing the time to insights, breaking down data silos, and optimizing customer engagement. This integration enhances data-driven marketing by providing actionable person-based insights and consolidating consumer touchpoints for better audience segmentation and timely campaigns. It also leverages benchmarks powered by Snowflake to help refine your marketing strategies against industry standards.
 

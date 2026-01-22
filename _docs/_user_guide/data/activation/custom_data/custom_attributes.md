@@ -50,15 +50,21 @@ There are two ways you can remove custom attributes from user profiles:
 * Select the custom attribute name to be removed in a [User Update step]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/#removing-custom-attributes).
 * Set the `null` value in your API request to the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track).
 
-### Viewing usage reports
+### Exporting data
+
+To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
+
+## Viewing usage reports
 
 The usage report lists all the Canvases, campaigns, and segments using a specific custom attribute. This list doesn't include uses of Liquid. 
 
 You can view up to 100 usage reports at a time by selecting the checkboxes next to the respective custom attributes and then selecting **View usage report**.
 
-### Exporting data
+### Values tab
 
-To export the list of custom attributes as a CSV file, select **Export all** at the top of the page. The CSV file will be generated, and a download link will be emailed to you.
+When viewing a usage report, select the **Values** tab to view the top values of the selected custom attributes based on a sample of approximately 250,000 users. Note that because the results are sampled from a subset of users, the sample won't include all existing values. This means the **Values** tab shouldn't be used for troubleshooting or for use cases that require incorporating data from all users.
+
+![Usage report for selected custom attributes with an opened "Values" tab showing a pie chart of country attribute values, such as "US" and "PR".]({% image_buster /assets/img/usage_report_values.png %}){: style="max-width:80%;"}
 
 ## Setting custom attributes
 
@@ -71,7 +77,7 @@ The following lists methods across various platforms that are used to set custom
 - [Web]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-attributes)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
+- [.NET MAUI (formerly Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/)
 
 {% enddetails %}

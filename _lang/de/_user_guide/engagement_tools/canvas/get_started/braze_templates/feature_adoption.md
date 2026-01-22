@@ -29,14 +29,14 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 1. Wählen Sie **Bearbeiten** neben dem Namen der Vorlage.
 
-![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
+\![Der aktuelle Titel und die Beschreibung des Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Aktualisieren Sie den Namen des Canvas, um anzugeben, dass das Canvas für das Targeting von Nutzer:innen gedacht ist, um deren Feedback zu sammeln.
 3\. Aktualisieren Sie die Beschreibung, um klarzustellen, dass das Canvas dazu dient, Benutzer zu ermutigen, Feedback zu übermitteln und die Stimmung der Benutzer für die neue Funktion Tempomat zu verfolgen.
 4\. Fügen Sie den Tag **Feature-Übernahme** hinzu, damit wir auf der Canvas-Startseite danach filtern können.
 
-![Der neue Name und die Beschreibung für das Canvas. In der neuen Beschreibung heißt es: A feature adoption Canvas to track adoption and user sentiment for Cruise Control, a feature for scheduling recurring food deliveries.']({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
+\![Der neue Name und die Beschreibung für das Canvas. In der neuen Beschreibung heißt es: A feature adoption Canvas to track adoption and user sentiment for Cruise Control, a feature for scheduling recurring food deliveries.']({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
 ### Schritt 2: Konversions-Event zuweisen
 
@@ -47,7 +47,7 @@ Als nächstes fügen wir ein Konversions-Event für unser Canvas hinzu, um die �
 3. Wählen Sie unser angepasstes Event `scheduled_delivery` aus.
 4. Wir werden die Frist für die Umstellung auf drei Tage festsetzen.
 
-![Das Konversions-Event-Fenster im Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
+\![Das Konversions-Event-Fenster im Canvas.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Entry-Zeitplan anpassen
 
@@ -69,7 +69,7 @@ Lassen Sie uns nun unsere Zielgruppe einrichten, indem wir die folgenden Details
 2. Entfernen Sie die zusätzlichen Filter der Vorlage. 
 3. Erstellen Sie diesen Filter mit unserem benutzerdefinierten Ereignis: `Has scheduled_delivery for exactly 0 times`. Dies erlaubt es uns, Nutzer:innen, die das Feature bereits verwendet haben, vom Zugang zu unserem Canvas auszuschließen.
 
-![Das Segment für alle Nutzer:innen, die den Tempomat nicht benutzt haben.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
+\![Das Segment für alle Nutzer:innen, die den Tempomat nicht benutzt haben.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
 
 {: start="4"}
 4\. Da Calorie Rocket zuvor einigen Benutzern erlaubt hat, die neue Funktion Cruise Control zu testen, werden wir die Ausstiegskriterien aktualisieren, um diese Benutzer von der Teilnahme am Canvas auszuschließen.
@@ -86,14 +86,14 @@ Als Nächstes erstellen wir den ersten Aktions-Pfad, der anzeigen soll, ob unser
 
 1. Da die Funktion Cruise Control erst verfügbar ist, nachdem eine Bestellung in den Warenkorb gelegt wurde, nennen wir die erste Aktionsgruppe **In den Warenkorb gelegt** und wählen `added_to_cart` für das benutzerdefinierte Ereignis.
 
-![Der Name der Aktionsgruppe wurde auf „Zum Warenkorb hinzugefügt“ und „Angepasstes Event durchführen“ auf „added_to_cart“ gesetzt.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
+\![Der Name der Aktionsgruppe wurde auf "In den Warenkorb gelegt" und das "Angepasste Event durchführen" auf "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Behalten Sie die zweite App-Gruppe **Taken Tour** bei, da wir auswerten möchten, ob Nutzer:innen eine Tour durch die App gemacht haben. Wenn ja, werden sie zum zweiten Aktions-Pfad vorgebracht.
 3\. Für den nachfolgenden Aktionspfad mit dem Namen **Nutzung bewerten** ersetzen Sie **Genutzte Funktion >3x** durch **Gesehene Tempomateinstellungen**.
 4\. Wählen Sie das Dropdown-Menü **Angepasstes Event durchführen** und dann `scheduled_delivery` für das angepasste Event aus.
 
-![Der Name der Aktionsgruppe wurde auf „Verwendetes Feature >3x“ und „Angepasstes Event durchführen“ auf „scheduled_delivery“ gesetzt.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
+\![Der Name der Aktionsgruppe wurde auf 'Verwendetes Feature >3x' und das Feld 'Angepasstes Event durchführen' auf 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
 
 #### Feedback-Umfrage einrichten
 

@@ -51,7 +51,7 @@ Wenn der oder die Nutzer:in eine E-Mail-Adresse eingibt, die nicht akzeptierte S
 
 Um sicher zu gehen, dass jeder, der sich in Ihre Liste eingetragen hat, dies auch wirklich beabsichtigt und die richtige E-Mail-Adresse angegeben hat, empfehlen wir Ihnen, von jedem, der sich über Ihr E-Mail-Anmeldeformular eingetragen hat, eine zweite Bestätigung einzuholen, indem Sie einen [Double Opt-in](https://www.braze.com/resources/articles/embracing-the-email-double-opt-in) Flow versenden.
 
-Canvas Flow ist eine Möglichkeit, dies einzurichten:
+Eine der Möglichkeiten, wie Sie dies einrichten können, ist Canvas:
 
 1. Erstellen Sie ein Canvas, das auf Aktionen basiert, und richten Sie es so ein, dass es ausgelöst wird, wenn ein Nutzer:innen eine E-Mail Adresse zu Braze hinzufügt. Stellen Sie sicher, dass Sie auch Nutzer:innen ansprechen können, die neu auf der Plattform sind (z. B. indem Sie ein Segment ohne Filter im Canvas verwenden).
 2. Erstellen Sie einen Schritt für eine E-Mail Nachricht mit einem CTA, der einen Hyperlink zu dem {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} Liquid-Tag enthält. Dadurch wird der Status des E-Mail-Abonnements des Nutzers oder der Nutzerin in `opted_in` geändert, wenn er oder sie auf die Schaltfläche klickt.

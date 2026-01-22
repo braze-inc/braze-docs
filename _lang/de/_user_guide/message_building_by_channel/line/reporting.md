@@ -6,8 +6,7 @@ description: "Dieser Referenzartikel behandelt die bei Braze verwendeten LINE-Me
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # LINE Berichterstattung
@@ -40,7 +39,7 @@ Um die Wirkung einer einzelnen LINE-Botschaft zu messen, können Sie einem A/B-T
 
 Das **LINE-Performance-Panel** zeigt Ihnen, wie gut Ihre Nachricht in verschiedenen Bereichen abgeschnitten hat. Die Metriken in diesem Bereich variieren je nach dem von Ihnen gewählten Nachrichtenkanal und je nachdem, ob Sie einen multivariaten Test durchführen oder nicht. Sie können auf das Symbol <i class="fa fa-eye preview-icon"></i> **Vorschau** klicken, um Ihre Nachricht für jede Variante oder jeden Kanal zu sehen.
 
-![Das Panel "LINE Performance" zeigt Metriken für zwei Varianten an.][1]
+\![Das Panel "LINE Performance" zeigt Metriken für zwei Varianten an.]({% image_buster /assets/img/line/line_performance.png %})
 
 Wenn Sie Ihre Ansicht vereinfachen möchten, wählen Sie **\+ Spalten hinzufügen/entfernen** und löschen Sie alle gewünschten Metriken. Standardmäßig werden alle Metriken angezeigt.
 
@@ -72,4 +71,3 @@ Das Panel **Details zum Konversions-Event** zeigt Ihnen die Performance Ihrer Ko
 Das Panel **Konversionskorrelation** gibt Ihnen Aufschluss darüber, welche Benutzerattribute und Verhaltensweisen die von Ihnen für Kampagnen festgelegten Ergebnisse fördern oder beeinträchtigen. Weitere Informationen finden Sie unter [Umrechnungskorrelation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

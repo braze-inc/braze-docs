@@ -19,7 +19,7 @@ guide_featured_list:
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
 - name: Editor-Blöcke
-  link: /docs/dnd/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=email
   image: /assets/img/braze_icons/align-left.svg
 - name: Globale Stileinstellungen
   link: /docs/dnd/global_style_settings/
@@ -28,6 +28,11 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   image: /assets/img/braze_icons/inbox-01.svg
 
+guide_menu_title: "Other articles"
+guide_menu_list:
+- name: Drag-and-Drop Product Blocks
+  link: /docs/dnd_product_blocks/
+  image: /assets/img/braze_icons/columns-01.svg
 
 ---
 <br><br>

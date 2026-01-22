@@ -21,21 +21,21 @@ Wenn eine Benutzersuche doppelte Profile ergibt, können Sie jedes Profil einzel
 
 Wählen Sie in Braze **Audience** > **User Search**.
 
-![Die Kachel "Benutzersuche" wird im Navigationsmenü hervorgehoben.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:90%;"}
+![Die Kachel "Nutzersuche" wird im Navigationsmenü hervorgehoben.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 Geben Sie eine eindeutige Kennung für das doppelte Profil ein, z. B. eine E-Mail-Adresse oder Telefonnummer, und wählen Sie dann **Suchen**.
 
-![Die Seite "Benutzersuche" im Braze Dashboard mit einer in die Suchleiste eingegebenen E-Mail.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
+![Die Seite "Nutzersuche" im Braze-Dashboard.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:60%;"}
 
 ### Schritt 2: Duplikate zusammenführen
 
 Um die Zusammenführung zu starten, wählen Sie **Duplikate zusammenführen**.
 
-![Eines der Profile des doppelten Benutzers.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:55%;"}
+![Eines der doppelten Profile der Nutzer:in.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 Wählen Sie, welches Benutzerprofil Sie behalten und welches Sie zusammenführen möchten, und wählen Sie dann **Profile zusammenführen**. Wiederholen Sie diesen Vorgang, bis Sie alle doppelten Profile zusammengeführt haben.
 
-![Die individuelle Zusammenführungsseite für ein Duplikatprofil.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![Die individuelle Zusammenführungsseite für ein dupliziertes Profil.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Doppelte Benutzerprofile können nach dem Zusammenführen nicht wiederhergestellt werden.
@@ -49,22 +49,22 @@ Wenn Sie doppelte Benutzer stapelweise zusammenführen, sucht Braze nach Profile
 
 Gehen Sie im Braze-Dashboard auf **Zielgruppe** > **Zielgruppe verwalten**.
 
-![Die Kachel "Zielgruppe verwalten" wird im Navigationsmenü hervorgehoben.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:90%;"}
+![Die Kachel "Zielgruppe verwalten" wird im Navigationsmenü hervorgehoben.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
 ### Schritt 2: Vorschau der Ergebnisse (optional)
 
 Um eine Vorschau der Ergebnisse zu erhalten, bevor Sie die Duplikate zusammenführen, gehen Sie auf **Doublettenliste erstellen**.
 
-![Die Seite "Zielgruppe verwalten" mit der markierten Option "Doublettenliste erstellen".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %})
+![Die Seite "Zielgruppe verwalten" mit der hervorgehobenen Option "Liste der Duplikate generieren".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %})
 
 Braze erstellt Ihre Vorschau und sendet sie als CSV-Datei an Ihre E-Mail-Adresse.
 
-![Eine E-Mail von Braze mit einem Link zu der generierten CSV-Datei.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/example_email.png %}){: style="max-width:60%;"}
+![Eine E-Mail von Braze mit einem Link zur generierten CSV-Datei.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/example_email.png %}){: style="max-width:60%;"}
 
 Im folgenden Beispiel verwendet Braze die externe Benutzer-ID, um doppelte Profile zu erkennen und zu entscheiden, welches beibehalten werden soll. Wenn diese Profile zusammengeführt werden, verwendet Braze das Profil mit der externen ID als neues primäres Benutzerprofil.
 
 {% tabs local %}
-{% tab Beispiel csv-Datei %}
+{% tab example csv file %}
 | E-Mail Adresse | Externe ID | Telefonnummer | Braze ID | Bezeichner für Regel | Zu behaltendes Profil | Zusammenzuführendes Profil |
 | ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
 | alex@company.com | A8i3mkd99 | (555) 123-4567 | 65fcaa547f470494d1370 | email | TRUE | FALSE |
@@ -86,7 +86,7 @@ Wenn Sie mit den Ergebnissen der Vorschau zufrieden sind, gehen Sie auf**Alle Do
 Doppelte Benutzerprofile können nach dem Zusammenführen nicht wiederhergestellt werden.
 {% endalert %}
 
-![Die Seite "Zielgruppe verwalten" mit markierter Option "Alle Doubletten zusammenführen".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
+![Die Seite "Zielgruppe verwalten" mit markierter Option "Alle Duplikate zusammenführen".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_merge_profiles.png %}){: style="max-width:70%;"}
 
 ## Regelbasierte Zusammenführung
 
@@ -100,7 +100,7 @@ Sie können Regeln verwenden, um zu steuern, wie doppelte Profile bei der Zusamm
 - **Beheben Sie Verknüpfungen wie**: Erstellungsdatum, Aktualisierungsdatum, Letzte Sitzung
 - **Prioritäten setzen**: Neueste, Älteste
 
-![Die Leiste "Regeln bearbeiten" mit Abschnitten zur Auswahl von Optionen für "Profil zur Weiterführung" und "Verknüpfungen auflösen".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %})
+![Das Panel "Regeln bearbeiten" mit Abschnitten zum Auswählen von Optionen für "Profil beibehalten" und "Verknüpfungen auflösen".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
 
 Sie könnten zum Beispiel das Profil mit der Telefonnummer behalten. Wenn mehrere Benutzer dieselbe Telefonnummer haben, können Sie Verbindungen über das Feld **Aktualisierungsdatum** auflösen und dem zuletzt aktualisierten Benutzer Priorität einräumen.
 
@@ -120,13 +120,9 @@ Doppelte Benutzerprofile können nach dem Zusammenführen nicht wiederhergestell
 
 Ähnlich wie bei der regelbasierten Zusammenführung können Sie bei der zeitgesteuerten Zusammenführung die Zusammenführung von Nutzerprofilen auf täglicher Basis anhand vorkonfigurierter Regeln automatisieren.
 
-{% alert important %}
-Der Zeitplan für die Zusammenführung befindet sich im Early Access. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an der Teilnahme an diesem frühen Zugang interessiert sind.
-{% endalert %}
-
 ![Die Seite "Zielgruppe verwalten" mit dem Button "Zeitplan".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
 
-Nachdem das Feature aktiviert wurde, weist Braze automatisch einen Zeitschlitz zu, um den Zusammenführungsprozess täglich durchzuführen. Sie können die geplante Zusammenführung jederzeit deaktivieren. Braze benachrichtigt die Administratoren Ihres Workspace 24 Stunden vor der geplanten Zusammenführung und gibt Ihnen eine Erinnerung und Zeit, um die Konfiguration zu überprüfen.
+Nach dem Einschalten des Features weist Braze automatisch einen Zeitschlitz zu, um den Zusammenführungsprozess täglich um ca. 12 Uhr in der Zeitzone des Nutzer:innen durchzuführen. Sie können die geplante Zusammenführung jederzeit deaktivieren. Braze benachrichtigt die Administratoren Ihres Workspace 24 Stunden vor der geplanten Zusammenführung und gibt Ihnen eine Erinnerung und Zeit, um die Konfiguration zu überprüfen.
 
 {% alert warning %}
 Doppelte Benutzerprofile können nach dem Zusammenführen nicht wiederhergestellt werden.

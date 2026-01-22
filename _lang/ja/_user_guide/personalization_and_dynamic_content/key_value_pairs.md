@@ -76,7 +76,7 @@ Braze のメッセージ作成画面は、**alert** と**そのプロパティ**
 
 これらの値は、プッシュ・メッセージを作成する際に**Settings**タブで入力することができる。[**アラートオプション**] を選択し、新しいキーと値のエントリに自動的に入力される、キーのアラートディクショナリーキーを選択します。
 
-\![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
+![]({% image_buster /assets/img_archive/keyvalue_automatickeys.png %})
 {% raw %}
 BrazeがAPNにプッシュ通知を送信する際、ペイロードはJSONとしてフォーマットされる。
 
@@ -111,7 +111,7 @@ BrazeがAPNにプッシュ通知を送信する際、ペイロードはJSONと�
 
 ```aps``` ライブラリーのペイロード値のほかに、カスタムのキーと値のペアをユーザーのデバイスに送信できます。これらのペアの値は、ディクショナリ（オブジェクト）、配列、文字列、数値、ブーリアンというプリミティブな型に限定される。
 
-\![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
+![]({% image_buster /assets/img_archive/keyvalue_enterpairs.png %})
 
 カスタムキーと値のペアのユースケースには、内部メトリクスの保持やユーザーインターフェイスのコンテキストの設定が含まれるが、これらに限定されるものではない。Brazeでは、追加のキーと値のペアをプッシュ通知とともに送信し、[extrasキー]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/customization/advanced_settings/#extracting-data-from-push-key-value-pairs)内のアプリケーションで使用することができる。別のキーを使いたい場合は、アプリがこのカスタムキーを扱えることを確認すること。
 
@@ -151,7 +151,7 @@ Braze では、`extras` として知られるカスタム定義の文字列キ�
 
 アンドロイドのプッシュ通知は、FCMメッセージオプションでさらにカスタマイズできる。これには、[通知の優先順位]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#notification-priority)、[音]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings/#sounds)、遅延、寿命、折りたたみ可能性などが含まれる。これらの値は、プッシュ・メッセージを作成する際に**Settings**タブで指定することができる。Braze メッセージ作成画面でこれらのオプションを設定する方法の詳細については、[プッシュ通知の詳細設定]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#android_settings)を参照してください。
 
-\![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
+![]({% image_buster /assets/img_archive/keyvalue_androidkeys.png %})
 
 ### サイレントプッシュ通知
 
@@ -169,7 +169,7 @@ iOSオペレーティングシステムは、一部の機能（アンインス�
 
 アプリ内メッセージにキーと値のペアを追加するには、メッセージ作成画面で**設定**タブを選択し、**新しいペアを追加を**選択し、キーと値のペアを指定する。
 
-\![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
+![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### API トリガーキャンペーン
 
@@ -183,12 +183,12 @@ SparkPostとSendGridの両方が、電子メールのキーと値のペアをサ
 メールがバウンスされた場合、SparkPost または SendGrid にキーと値のペアは配信されません。
 {% endalert %}
 
-\![Brazeのメッセージ作成画面の送信情報タブ。]({% image_buster /assets/img_archive/keyvalue_email.png %})
+![Brazeのメールメッセージ作成画面の [送信情報] タブ。]({% image_buster /assets/img_archive/keyvalue_email.png %})
 
 ## コンテンツカードによって促進された
 
 コンテンツカードにキーと値のペアを追加するには、Braze のメッセージ作成画面の [**設定**] タブに移動し、[**新しいペアを追加**] を選択します。
 
-\![コンテンツカードにキーと値のペアを追加する。]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
+![コンテンツ・カードにキーと値のペアを追加する]({% image_buster /assets/img_archive/kvp_content_cards.png %}){: style="max-width:70%;"}
 
 

@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: WhatsApp FAQ
-page_order: 80
+page_order: 10
 description: "Dieser Artikel behandelt einige der am häufigsten gestellten Fragen, die bei der Einrichtung von WhatsApp-Kampagnen auftreten."
 page_type: FAQ
 channel:
@@ -34,7 +34,9 @@ Ja, Sie müssen immer noch ein WhatsApp-Geschäftskonto erstellen. Wir empfehlen
 Nachdem Sie den eingebetteten Anmeldevorgang abgeschlossen haben, können Sie auf Ihr Konto unter business.facebook.com zugreifen, indem Sie zum [Bereich WhatsApp](https://business.facebook.com/wa/manage/home) navigieren. 
 
 #### Kann ich mehrere WABAs mit Braze verbinden? 
-Ja, Sie können eine WABAs pro Workspace verbinden. Sie können also mehrere WABAs mit mehreren Ihrer Braze-Arbeitsbereiche verbinden. Wenn Sie z.B. verschiedene Arbeitsbereiche für verschiedene Marken oder verschiedene Arbeitsbereiche für verschiedene Länder haben, kann jeder mit einem eigenen WABA verbunden sein.
+Ja, Sie können bis zu 10 WhatsApp Business-Konten pro Workspace hinzufügen, und jedes Business-Konto kann unter einem anderen Meta Business Manager:in verschachtelt werden.
+
+![Diagramm des Braze- und WhatsApp-Ökosystems, das zeigt, wie Workspaces und WhatsApp Business-Konten miteinander verbunden sind: Sie können eine Abo-Gruppe mit einer Telefonnummer, mehrere WhatsApp Business-Konten mit einem Workspace und einen Workspace mit mehreren Meta Business-Portfolios verbinden.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### WhatsApp Geschäftskonto Telefonnummern 
 

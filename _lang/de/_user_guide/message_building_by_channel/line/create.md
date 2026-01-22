@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen einer LINE-Nachricht
+nav_title: Erstellen einer LINE Nachricht
 article_title: Erstellen einer LINE-Nachricht
 page_order: 1
 description: "Dieser Artikel beschreibt, wie Sie eine LINE Nachrichten-Kampagne oder ein Canvas erstellen."
@@ -30,7 +30,7 @@ Wenn Sie LINE-Nachrichten von Braze aus versenden, wird das Nachrichtenguthaben 
 Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 **Schritte:**
 
@@ -53,9 +53,9 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 1. [Erstellen Sie Ihr Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) mit dem Canvas Composer.
 2. Wenn Sie den Canvas eingerichtet haben, fügen Sie im Canvas Builder einen Schritt hinzu. Geben Sie Ihrem Schritt einen klaren und aussagekräftigen Namen.
 3. Wählen Sie einen [Zeitplan für den Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/time_based_canvas/#schedule-delay) und geben Sie bei Bedarf eine Verzögerung an.
-4. Filtern Sie Ihre Zielgruppe für diesen Schritt nach Bedarf. Sie können den Empfängerkreis mit Segmenten und zusätzlichen Filtern weiter eingrenzen. Die Zielgruppen-Optionen werden nach der Verzögerung zum Zeitpunkt des Versendens der Nachrichten überprüft.
+4. Filtern Sie Ihre Zielgruppe für diesen Schritt nach Bedarf. Sie können den Empfängerkreis mit Segmenten und zusätzlichen Filtern weiter eingrenzen. Die Zielgruppenoptionen werden mit einer gewissen Verzögerung zum Versandzeitpunkt überprüft.
 5. Legen Sie das [Fortschrittsverhalten]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) fest.
-6. Wählen Sie andere Messaging-Kanäle, die Sie mit Ihrer Nachricht verknüpfen möchten.
+6. Wählen Sie weitere Messaging-Kanäle für Ihre Nachricht aus.
 
 {% endtab %}
 {% endtabs %}
@@ -64,7 +64,7 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 
 Schreiben Sie Ihre Nachricht nach Bedarf mit Personalisierung (z. B. Liquid oder Connected-Content). LINE lässt bis zu fünf Sprechblasen pro Nachricht zu, die in einem der verfügbaren Nachrichten-Layouts erscheinen können: Text, Bild, Rich oder Card-based.
 
-![LINE composer mit einer in der Vorschau angezeigten Nachricht.][1]
+![LINE-Editor mit einer Nachricht, die in der Vorschau angezeigt wird.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Tipps
 
@@ -80,12 +80,12 @@ Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend d
 
 Wechseln Sie auf die Registerkarte **Test**, um eine Test-LINE-Nachricht an Inhaltstestgruppen oder einzelne Benutzer zu senden oder eine Vorschau der Nachricht als Benutzer direkt in Braze anzuzeigen.
 
-![Der Tab "Tests" zeigt eine Vorschau auf eine Testnachricht an.][2]
+![Der Tab "Tests" zeigt eine Vorschau auf eine Testnachricht an.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Schritt 4: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 Bauen Sie den Rest Ihrer Kampagne auf. In den folgenden Abschnitten erfahren Sie mehr darüber, wie Sie unsere Tools zur Erstellung von LINE-Nachrichten am besten einsetzen.
 
@@ -97,7 +97,7 @@ Sie können die Zustellung steuern, z. B. indem Sie Nutzer:innen erlauben, [sic
 
 ### Wählen Sie Nutzer:innen als Zielgruppe aus
 
-[Stellen Sie Nutzer:innen durch die Auswahl von Segmenten oder Filtern gezielt zusammen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/), um Ihre Zielgruppe einzugrenzen. Sie sollten bereits die Abonnementgruppe ausgewählt haben, die die Nutzer nach der Ebene oder Kategorie der Kommunikation mit Ihnen eingrenzt. 
+[Stellen Sie Nutzer:innen durch die Auswahl von Segmenten oder Filtern gezielt zusammen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/), um Ihre Zielgruppe einzugrenzen. Sie sollten bereits die Abonnementgruppe ausgewählt haben, die die Nutzer nach der Ebene oder Kategorie der Kommunikation mit Ihnen eingrenzt. 
 
 Wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen Sie dieses Segment optional mit unseren [Filtern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) weiter ein. Sie erhalten automatisch einen Überblick über die ungefähre Zusammensetzung dieses Segments. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
 
@@ -127,5 +127,3 @@ Nachdem Sie den letzten Teil Ihrer Kampagne oder Ihres Canvas erstellt haben, ü
 Sehen Sie sich als nächstes die [LINE-Berichterstattung]({{site.baseurl}}/line/reporting/) an, um zu erfahren, wie Sie auf die Ergebnisse Ihrer LINE-Kampagnen zugreifen können.
 
 
-[1]: {% image_buster /assets/img/line/line_composer.png %}
-[2]: {% image_buster /assets/img/line/test_preview.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Datenmodelle
+nav_title: Daten Modelle
 article_title: Erstellen eines B2B-Datenmodells
 page_order: 0
 page_type: reference
@@ -42,9 +42,12 @@ Es gibt zwei Methoden zur Erstellung und Verwaltung Ihrer Geschäftsobjekte in B
 
 | Methode | Beschreibung |
 | --- | --- |
-| [Kataloge]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | Dies sind unabhängige Datenobjekte (ergänzende Datenobjekte) zum primären Benutzerprofil in Braze. In einem B2B-Kontext würden Sie wahrscheinlich Kataloge für Ihre Kunden und Opportunities haben. |
+| [Kataloge]({{site.baseurl}}/user_guide/data/activation/catalogs) | Dies sind unabhängige Datenobjekte (ergänzende Datenobjekte) zum primären Benutzerprofil in Braze. In einem B2B-Kontext würden Sie wahrscheinlich Kataloge für Ihre Kunden und Opportunities haben. |
 | [Verbundene Quellen]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | Diese erlauben es Braze, Ihr Data Warehouse direkt abzufragen. Wahrscheinlich synchronisieren Sie Ihre Lead-, Kontakt-, Opportunity- und Account-Objekte bereits regelmäßig mit Ihrem Data Warehouse, sodass Sie die Segmentierung von Braze direkt auf dieses Data Warehouse verweisen und es in einer Null-Kopie-Umgebung aktivieren können. |
 {: .reset-td-br-1 .reset-td-br-2 }
+
+{% tabs %}
+{% tab Catalogs %}
 
 ### Option 1: Verwenden Sie Kataloge für Accounts und Opportunities
 
@@ -56,8 +59,8 @@ Bei dieser Option empfehlen wir Ihnen, einen Katalog für Ihre Konten und einen 
 
 In den nachstehenden Tabellen finden Sie einige Beispiele für Felder, die Sie aus den Konto- und Opportunity-Objekten Ihres CRM übernehmen können.
 
-{% tabs %}
-{% tab Kontokatalog %}
+{% subtabs %}
+{% subtab Account catalog %}
 
 In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jedes Feld, das in den Objekten Ihres CRM enthalten ist, abbilden.
 
@@ -71,32 +74,32 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
   <tr>
     <td rowspan="4">Katalog > Kontokatalog</td>
     <td><code>id</code></td>
-    <td><code>account</code></td>
+    <td><code>Konto</code></td>
     <td><code>id</code></td>
   </tr>
   <tr>
-    <td><code>AccountName</code></td>
-    <td><code>account</code></td>
-    <td><code>Account Name</code></td>
+    <td><code>Kontoname</code></td>
+    <td><code>Konto</code></td>
+    <td><code>Konto Name</code></td>
   </tr>
   <tr>
-    <td><code>Type</code></td>
-    <td><code>account</code></td>
-    <td><code>Type</code></td>
+    <td><code>Typ</code></td>
+    <td><code>Konto</code></td>
+    <td><code>Typ</code></td>
   </tr>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>account</code></td>
+    <td><code>Konto</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
 </table>
 
 ##### Beispieltabelle der zugeordneten Kontofelder
 
-![Tabelle der Salesforce-Konten mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber:in.]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![Tabelle der Salesforce-Konten mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
-{% endtab %}
-{% tab Gelegenheitskatalog %}
+{% endsubtab %}
+{% subtab Opportunity catalog %}
 
 In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jedes Feld, das in den Objekten Ihres CRM enthalten ist, abbilden.
 
@@ -110,21 +113,21 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
   <tr>
     <td rowspan="4">Katalog > Opportunity-Katalog</td>
     <td><code>id</code></td>
-    <td><code>opportunity</code></td>
+    <td><code>Opportunity</code></td>
     <td><code>id</code></td>
   </tr>
   <tr>
     <td><code>OpportunityName</code></td>
-    <td><code>opportunity</code></td>
+    <td><code>Opportunity</code></td>
     <td><code>Opportunity Name</code></td>
   </tr>
   <tr>
-    <td><code>Territory</code></td>
-    <td><code>opportunity</code></td>
-    <td><code>Territory</code></td>
+    <td><code>Territorium</code></td>
+    <td><code>Opportunity</code></td>
+    <td><code>Territorium</code></td>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>opportunity</code></td>
+    <td><code>Opportunity</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
   </tr>
@@ -132,16 +135,21 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
 
 ##### Beispieltabelle der zugeordneten Opportunity-Felder
 
-![Tabelle der Salesforce-Opportunitys mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber:in.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![Tabelle der Salesforce Opportunities mit den entsprechenden Informationen wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab Connected sources %}
 
 ### Option 2: Nutzen Sie verknüpfte Quellen für Accounts und Opportunities
 
-Angeschlossene Quellen sind Datentabellen, die von Ihnen in Ihrem eigenen Data Warehouse gehostet werden und von Braze [CDI-Segmenten]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) abgefragt werden. Im Gegensatz zu Katalogen würden Sie Ihre Geschäftsobjekte (Konten und Opportunities) nicht in Braze duplizieren, sondern in Ihrem Data Warehouse aufbewahren und Ihr Warehouse als Quelle der Wahrheit nutzen.
+Angeschlossene Datenquellen sind Datentabellen, die von Ihnen in Ihrem eigenen Data Warehouse gehostet werden und von Braze [CDI Segment-Erweiterungen]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) abgefragt werden. Im Gegensatz zu Katalogen würden Sie Ihre Geschäftsobjekte (Konten und Opportunities) nicht in Braze duplizieren, sondern in Ihrem Data Warehouse aufbewahren und Ihr Warehouse als Quelle der Wahrheit nutzen.
 
 Wie Sie angeschlossene Quellen einrichten, erfahren Sie unter [Einbindung angeschlossener Quellen]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
+
+{% endtab %}
+{% endtabs %}
 
 ## Schritt 2: Verknüpfen Sie Ihre Geschäftsobjekte mit Benutzerprofilen
 
@@ -169,7 +177,10 @@ Nachdem Sie Ihre IDs synchronisiert haben, müssen Sie Ihre Braze-Benutzerprofil
 
 ### Schritt 2.2: Erstellen Sie eine Beziehung zwischen Benutzerprofilen und Ihren Geschäftsobjekten
 
-#### Option 1: Bei der Verwendung von Katalogen für Geschäftsobjekte
+{% tabs %}
+{% tab Catalogs %}
+
+#### Option 1: Bei der Verwendung von Katalogen
 
 Da Ihre Opportunity- und Kontodaten nun als Braze-Kataloge erfasst sind, müssen Sie eine Beziehung zwischen diesen Katalogen und den Benutzerprofilen herstellen, an die Sie Nachrichten senden möchten. Derzeit sind dafür zwei Schritte erforderlich:
 
@@ -201,8 +212,14 @@ Da Ihre Opportunity- und Kontodaten nun als Braze-Kataloge erfasst sind, müssen
 }
 ```
 
+{% endtab %}
+{% tab Connected sources %}
+
 #### Option 2: Bei Verwendung angeschlossener Quellen
 
 Eine der Tabellen Ihrer verbundenen Quelle sollte eine `user_id` enthalten, die mit der `external_user_id` übereinstimmt, die in Braze für Ihre Benutzer eingestellt wurde. Die obige Einrichtung des Nutzerprofils verwendet Ihren Lead und `contact_ids` als `external_id`, daher sollten Sie sicherstellen, dass Ihre Lead-/Kontakttabellen diese IDs enthalten.
 
 Wir empfehlen, nicht nur sicherzustellen, dass die IDs übereinstimmen, sondern auch grundlegende Daten auf Kontoebene wie `account_id`, `opportunity_id` und sogar allgemeine firmenbezogene Attribute wie `industry` in die Benutzerprofile zu schreiben, um eine effiziente Segmentierung und Personalisierung zu ermöglichen.
+
+{% endtab %}
+{% endtabs %}

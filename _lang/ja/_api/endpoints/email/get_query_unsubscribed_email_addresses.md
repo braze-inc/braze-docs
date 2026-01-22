@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:配信停止になっているメールアドレスのリストを照会"
+nav_title: "取得:配信停止になっているメールアドレスのリストの照会"
 article_title: "取得:配信停止になっているメールアドレスのリストを照会"
 search_tag: Endpoint
 page_order: 3
@@ -32,7 +32,7 @@ description: "この記事では、配信停止になっているメールの照
 
 | パラメーター | required | データ型 | 説明 |
 | ----------|-----------| ---------|------ |
-| `start_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列| 配信停止を取得する範囲の開始日で、end_date よりも前である必要があります。これは、API によって UTC 時間の午前 0 時として扱われます。 |
+| `start_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列| 配信停止を取得する範囲の開始日。end_date. より前でなければならない。API では UTC 時間の午前 0 時として扱われる。 |
 | `end_date` | オプション <br>(注を参照) | YYYY-MM-DD形式の文字列 | 配信停止を取得する範囲の終了日。これは、API によって UTC 時間の午前 0 時として扱われます。 |
 | `limit` | オプション | 整数 | 返される結果の数を制限するためのオプション・フィールド。デフォルトは100で、最大は500です。 |
 | `offset` | オプション | 整数 | 取得先となるリスト内のオプションの開始点。 |
@@ -57,8 +57,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?
 エントリは降順で表示されます。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

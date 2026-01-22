@@ -24,7 +24,7 @@ tool: Canvas
 
 終了条件には例外イベントが含まれます。例外イベントは、ユーザーがキャンバスから退出する結果となる可能性がある特定のアクションです。
 
-\![商品をブラウズしたが、まだカートに追加したり、発注したりしていないユーザーを再びエンゲージするために設定された終了基準。]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
+![商品をブラウズしたが、カートに追加していない、または発注していないユーザーを再びエンゲージするために設定された終了基準。]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### 例外イベントの選択 {#exception-events}
 
@@ -95,6 +95,6 @@ tool: Canvas
 4. **フィルターについては**、「**購買行動**」＞「**購買回数**」＞「**購入商品**」を選択する。
 5. フィルターグループを`backpack-example exactly 1` に設定する。つまり、バックパック製品を購入したユーザーはキャンバスから退出することになる。
 
-\![Exit Criteria 設定 s with " Make Any Purchase" 例外イベントとして、ユーザーが購入した場合、このキャンバスを終了します。]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
+![終了基準設定s を&quot で;すべての購入&クォートを行います;例外イベントとして、ユーザーが購入を行った場合、このキャンバスを終了します。]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 

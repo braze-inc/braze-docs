@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Singular
 
-> Singularは、アトリビューション、コスト集計、マーケティング分析、クリエイティブレポート、ワークフローの自動化を実現する統合マーケティング分析プラットフォームである。
+> [Singularは](https://www.singular.net/)、アトリビューション、コスト集計、マーケティング分析、クリエイティブレポート、ワークフローオートメーションを提供する統合マーケティング分析プラットフォームである。
 
 _この統合は Singular によって管理されます。_
 
@@ -43,14 +43,14 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-2023年2月までは、Singular アトリビューション統合は、iOS アトリビューションデータを照合するための主な識別子として IDFV を使用していました。Objective-C を使用している Braze のお客様は、サービスが中断されることはないため、インストール時に Braze `device_id` を取得して Singular に送信する必要はありません。
+2023年2月以前は、Singularのアトリビューション統合は、iOSアトリビューションデータを照合するための主要識別子としてIDFV（Identifier for Vendor）を使用していた。OBJECTIVE-Cを使用しているBraze顧客は、サービスの中断がないため、インストール時にBraze`device_id` を取得し、Singularに送信する必要はない。
 {% endalert%}
 
 Swift SDK v5.7.0+ を使用しているお客様は、相互識別子として IDFV を引き続き使用するには、`useUUIDAsDeviceId` フィールドが `false` に設定されていることを確認する必要があります。これにより、統合が中断されることがなくなります。 
 
 `true` に設定している場合、Brazeが iOS アトリビューションを適切に照合できるように、アプリのインストール時に Singular に Braze`device_id` を渡すために、Swift用の iOS デバイス ID マッピングを実装する必要があります。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Objective-C %}
 
 ```objc
@@ -78,7 +78,7 @@ Brazeで、[**パートナー連携**] > [**テクノロジーパートナー**]
 
 ここでは、REST エンドポイントが見つかり、Brazeデータインポートキーが生成されます。キーが生成されたら、新しいキーを作成するか、既存のキーを無効にできます。 
 
-統合を完了するには、データインポートキーとRESTエンドポイントをSingularアカウントマネージャーに提供する必要がある。<br><br>![Singular テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されます。]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
+統合を完了するには、データインポートキーとRESTエンドポイントをSingularアカウントマネージャーに提供する必要がある。<br><br>![Singular テクノロジーページにある「インストールアトリビューションのデータインポート」ボックス。このボックスには、データインポートキーと REST エンドポイントが表示されている。]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### ステップ3:統合を確認する
 
@@ -94,11 +94,11 @@ FacebookおよびX（旧Twitter）キャンペーンのアトリビューショ�
 
 Brazeのキャンペーンでクリック追跡リンクを使用すると、どのキャンペーンがアプリのインストールやリエンゲージメントを促進しているかを簡単に確認できる。その結果、マーケティング活動をより効果的に測定できるようになり、ROI を最大化するためにどこにリソースを投資すべきかについて、データに基づいた意思決定ができるようになります。
 
-Singularクリック・トラッキング・リンクを使い始めるには、[ドキュメントを](https://support.singular.net/hc/en-us/articles/360030934212-Singular-Links-FAQ?navigation_side_bar=true)参照すること。SingularのクリックトラッキングリンクをBrazeのキャンペーンに直接挿入することができる。その後、Singularは[確率的アトリビューション手法を用いて](https://support.singular.net/hc/en-us/articles/115000526963-Understanding-Singular-Mobile-App-Attribution?navigation_side_bar=true)、リンクをクリックしたユーザーをアトリビュートする。Brazeキャンペーンからの帰属の精度を高めるために、Singularトラッキングリンクにデバイス識別子を付加することをお勧めする。これにより、リンクをクリックしたユーザーの属性が決定的になる。
+Singularクリック・トラッキング・リンクを使い始めるには、[ドキュメントを](https://support.singular.net/hc/en-us/articles/360030934212-Singular-Links-FAQ?navigation_side_bar=true)参照すること。SingularのクリックトラッキングリンクをBrazeのキャンペーンに直接挿入することができる。その後、Singularは[確率的アトリビューション手法を用いて](https://support.singular.net/hc/en-us/articles/115000526963-Understanding-Singular-Mobile-App-Attribution?navigation_side_bar=true)、リンクをクリックしたユーザーをアトリビュートする。Brazeキャンペーンからの帰属の精度を高めるために、Singularトラッキングリンクにデバイス識別子を付加することをお勧めする。これにより、リンクをクリックしたユーザーを決定論的に属性付けします。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab Android %}
-Android の場合、Braze ではお客様が [Google 広告 ID (GAID) 収集]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)にオプトインできます。GAID はまた、Singular SDK統合によってネイティブに収集されます。以下のLiquidロジックを利用することで、SingularクリックトラッキングリンクにGAIDを含めることができる：
+Androidの場合、Brazeを使用すると、顧客は[Google広告IDコレクション（GAID）]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)にオプトインできます。GAID はまた、Singular SDK統合によってネイティブに収集されます。以下のLiquidロジックを利用することで、SingularクリックトラッキングリンクにGAIDを含めることができる：
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}

@@ -1,16 +1,16 @@
 ---
-nav_title: 테스트 캠페인
+nav_title: 캠페인 테스트
 article_title: 테스트 캠페인
 layout: dev_guide
 guide_top_header: "테스트 캠페인"
-guide_top_text: "캠페인을 보내기 전에 항상 메시지를 테스트해야 합니다. 캠페인이 잘 진행되었는지, 향후 캠페인에 긍정적인 영향을 미칠 수 있는지 항상 결과를 살펴봐야 합니다.<br><br> 여기에서 테스트 메시지 보내기, A/B 테스트 수행 등 캠페인 테스트에 대한 리소스를 찾을 수 있습니다."
+guide_top_text: "캠페인을 보내기 전에 항상 메시지를 테스트해야 합니다. 캠페인이 잘 진행되었고 향후 캠페인에 긍정적인 영향을 미칠 수 있도록 항상 결과를 확인해야 합니다.<br><br> 여기에서 테스트 메시지 보내기, A/B 테스트 수행 등 캠페인 테스트에 대한 리소스를 찾을 수 있습니다."
 page_order: 4
 
 tool: 
   - Campaigns
   - Reports
 page_type: landing
-description: "이 랜딩 페이지에서는 캠페인 테스트 및 팁을 확인할 수 있습니다. 여기에서 테스트 메시지 보내기, A/B 테스트 수행 등 캠페인 테스트에 대한 리소스를 찾을 수 있습니다."
+description: "이 랜딩 페이지에서는 캠페인 테스트와 팁을 확인할 수 있습니다. 여기에서 테스트 메시지 보내기, A/B 테스트 수행 등 캠페인 테스트에 대한 리소스를 찾을 수 있습니다."
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
@@ -26,7 +26,7 @@ guide_featured_list:
 
 guide_menu_title: "Additional articles"
 guide_menu_list:
-  - name: 캠페인 분석 
+  - name: 캠페인 분석
     link: /docs/user_guide/analytics/reporting/campaign_analytics/
     image: /assets/img/braze_icons/pie-chart-01.svg
   - name: 리텐션 보고서

@@ -24,6 +24,17 @@ If a user qualifies for multiple Banner campaigns that share the same placement,
 
 Banners are different from Content Cards, meaning you can’t use Banners and Content Cards in the same feed. To replace existing Content Card feeds with Banners, you’ll need to [create placements in your app or website]({{site.baseurl}}/developer_guide/banners/placements/).
 
+## Can I trigger a banner based on user actions?
+
+While Banners do not support [action-based delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery), you can target users based on their past actions using segmentation and priority.
+
+For example, to show a special Banner only to users who have completed a `purchase` event:
+1. **Targeting:** In your campaign, target a segment of users who have performed the custom event `purchase` at least once.
+2. **Priority:** If you have a general Banner for all users and this specific Banner for purchasers targeting the same placement, set the specific Banner's priority to **High** and the general Banner to **Medium** or **Low**.
+
+When the user starts a new session or refreshes Banners after performing the action, Braze evaluates their eligibility. If they match the "Purchase" segment, the high-priority Banner will be displayed.
+
+
 ## Can users manually dismiss a Banner?
 
 No. Users cannot manually dismiss Banners. However, you can control Banner visibility by managing user segment eligibility. When a user no longer meets the targeting criteria for a Banner campaign, they won't see it again on their next session.

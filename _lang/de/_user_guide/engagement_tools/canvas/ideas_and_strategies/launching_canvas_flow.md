@@ -1,5 +1,5 @@
 ---
-nav_title: Starten mit Canvas Flow
+nav_title: Starten mit Canvas flow
 article_title: Starten mit Canvas Flow
 page_order: 3
 description: "Dieser Referenzartikel beschreibt, wie Sie ein mit Canvas Flow erstelltes Canvas vor dem Start vorbereiten und testen."
@@ -22,7 +22,7 @@ Berücksichtigen Sie die [Race Conditions]({{site.baseurl}}/user_guide/engagemen
 
 Um an einem Canvas teilzunehmen, müssen Nutzer:innen vor dem Entry-Zeitplan zur Zielgruppe gehören, unabhängig davon, ob das Canvas geplant, aktionsbasiert oder API-gesteuert ist. 
 
-![][1]{: style="max-width:75%;"}
+\![Ein aktionsbasiertes Canvas, das Nutzer:innen einträgt, wenn sie während der Ortszeit eines Nutzers vom 30\. April 2025 um 12 Uhr bis zum 7\. Mai 2025 um 12 Uhr einen Kauf tätigen.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Beachten Sie, dass Nutzer:innen, die sich nach dem Start des Canvas für Ihre Zielgruppe qualifizieren, nicht am Canvas teilnehmen.
 
@@ -83,9 +83,32 @@ Mit dem Schritt [Entscheidungsaufteilung]({{site.baseurl}}/user_guide/engagement
 
 Nachdem Sie die Feinheiten Ihres Canvas überprüft haben, sehen Sie sich unter [Versenden von Test-Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) verschiedene Methoden an, die Sie nutzen können, um Ihr Canvas mit Testbenutzern zu testen.
 
+## Checkliste für den Start
+
+### Verfügbarkeit der Nutzer:innen prüfen
+
+- Stellen Sie sicher, dass Ihre Nutzer:innen Ihre Segmentierungskriterien erfüllen.
+- Bestätigen Sie, dass ihr Abo "abonniert" oder "Opt-in" ist und ihr Push-Token existiert. Wenn Sie diese als Eingangsregeln für Canvas hinzugefügt haben, ist es möglich, dass die Nutzer:innen zwischen dem Eingang in Ihr Canvas und dem Erhalt des Nachrichten-Schritts abgemeldet wurden.
+- Bestätigen Sie, dass sie mit Ihren Canvas-Sendeeinstellungen übereinstimmen. (Wenn Nutzer:in "Abonnent:in" sind, die Einstellungen aber auf "Opt-in" stehen, werden Nutzer:in nicht für den Kanal freigeschaltet.)
+- Wenn das globale Frequency-Capping für Ihr Canvas aktiviert ist, überprüfen Sie, ob Ihre Regeln die Anzahl der Nachrichten begrenzen, die jeder Nutzer:innen von einem bestimmten Kanal erhalten kann.
+- Wenn die Ruhezeiten aktiviert sind, kann die Sendezeit Ihrer Nachrichten beeinträchtigt werden, d.h. Ihre Nachricht wird möglicherweise zum nächsten verfügbaren Zeitpunkt (wenn die Ruhezeiten enden) gesendet oder ganz abgebrochen.
+- Prüfen Sie die Verfügbarkeit von Nutzer:innen für zusätzliche Filter in Ihrem Canvas-Schritt.
+
+### Bestätigen Sie, dass sie das erforderliche angepasste Event oder den Kauf durchgeführt haben
+
+- Prüfen Sie, ob es eine Race-Condition gibt, die sich auf die Nachrichten auswirkt, die Nutzer:innen erhalten, wenn sie mehrere Aktionen gleichzeitig triggern.
+- Vergewissern Sie sich, dass es in dem Schritt keine spezifischen Filter gibt, die Nutzer:innen am Empfang der Nachricht gehindert haben könnten.
+- Suchen Sie nach Konflikten zwischen verschiedenen Schritten innerhalb desselben Canvas. Nutzer:innen, die die Nachricht nicht erhalten haben, könnten zum Beispiel durch einen Filter gestoppt werden, der den Abschluss eines anderen Schritts in einem anderen Branch verlangt.
+- Bestätigen Sie, dass Nutzer:innen zusätzliche Überprüfungsregeln erfüllen.
+- Bestätigen Sie, dass der Canvas-Schritt zum Zeitpunkt des Sendens mit dem vorhergehenden Schritt verbunden war.
+
+### Bestätigen Sie, dass Ihr Canvas korrekt gespeichert wird und alle Schritte gültig sind
+
+Wenn Ihr Canvas nicht geladen wird und nicht vorankommt, kann dies daran liegen, dass eine frühere Version des Canvas nicht richtig gespeichert wurde und ungültige Schritte enthält. Sie können das Canvas vom Dashboard aus duplizieren. Wenn das Problem persistent ist, öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/).
+
 ## Fehlersuche
 
-{% details Warum erhalten meine Benutzer meine Canvas-Nachrichten nicht? %}
+{% details Why are my users not receiving my Canvas messages? %}
 **Verfügbarkeit der Nutzer:innen prüfen**
 - Stellen Sie sicher, dass sie Ihre Segmentierungskriterien erfüllen.
 - Bestätigen Sie, dass der Status Ihres Push-Abos "abonniert" oder "Opt-in" ist **und dass** der Status **"Push Enablement** " auf "wahr" gesetzt ist. Wenn Sie diese als Canvas-Entry-Regeln hinzugefügt haben, ist es möglich, dass die Nutzer:innen zwischen der Eingabe Ihres Canvas und dem Erhalt der Nachricht abgemeldet wurden.
@@ -102,4 +125,3 @@ Nachdem Sie die Feinheiten Ihres Canvas überprüft haben, sehen Sie sich unter 
 - Bestätigen Sie, dass der Canvas-Schritt zum Zeitpunkt des Sendens mit dem vorhergehenden Schritt verbunden war.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

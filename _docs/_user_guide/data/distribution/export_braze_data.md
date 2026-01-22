@@ -1,6 +1,6 @@
 ---
-nav_title: Exporting Braze data
-article_title: Exporting Braze Data
+nav_title: Export Braze data
+article_title: Export Braze Data
 page_order: 6
 layout: dev_guide
 guide_top_header: "Exporting Braze Data"
@@ -56,7 +56,7 @@ guide_menu_list2:
   - name: Braze Currents
     link: /docs/user_guide/data/braze_currents/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Setting up Currents
+  - name: Set Up Currents
     link: /docs/user_guide/data/braze_currents/setting_up_currents/
     image: /assets/img/braze_icons/building-01.svg
   - name: How Braze uses Currents

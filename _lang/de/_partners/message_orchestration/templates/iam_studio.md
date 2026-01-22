@@ -66,7 +66,7 @@ Als nächstes erstellen Sie Ihre personalisierte In-App-Nachricht, indem Sie ang
 ![Das IAM Studio UI mit den Optionen zur Anpassung der Ereignis-/Attribut-Protokollierung. Diese Optionen beinhalten das Protokoll des Nutzer:in-Verhaltens.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
 {% tab Protokollierung und Tracking %}
-![Das IAM Studio UI zeigt die Optionen zum Anpassen der Schriftart an. Diese Optionen beinhalten, dass Nutzer:in den Schriftstil anpassen können.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
+![Das IAM Studio UI zeigt die Optionen zum Anpassen der Schriftart an. Diese Optionen beinhalten, dass Nutzer:in den Schriftstil anpassen können.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png %})
 {% endtab %}
 {% endtabs %}
 

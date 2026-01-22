@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### Desativação de um atributo personalizado
+#### Desativação de atributos personalizados
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){

@@ -15,3 +15,19 @@ Um die angepasste Shopify Integration zu verwenden, referenzieren Sie auf die [E
 {% endtabs %}
 
 {% endif %}
+
+{% if include.section == "Liquid promotion codes with Currents" %}
+
+Sie können [`message_extras`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/) mit [Aktionscodes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) kombinieren, um Informationen über Aktionscodes an Currents zu senden. Verwenden Sie den Tag `capture`, um den Aktionscode in einer Variablen zu speichern, und referenzieren Sie diese Variable dann in `message_extras`:
+
+{% raw %}
+```liquid
+{% capture code %}
+{% promotion('puttshacktest2') %}
+{% endcapture %}
+Use {{code}} for an exclusive discount!
+{% message_extras :key cardscode :value {{code}} %}
+```
+{% endraw %}
+
+{% endif %}

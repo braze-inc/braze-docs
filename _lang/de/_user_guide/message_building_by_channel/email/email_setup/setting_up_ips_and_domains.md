@@ -63,7 +63,7 @@ Eine Sender-Domain wird in der „Von“-Adresse verwendet, wenn eine E-Mail ges
 
 Als nächstes fügen Sie die TXT- und CNAME-Einträge unten auf der Seite zu Ihrem DNS-Anbieter hinzu. Kehren Sie dann zum Braze Dashboard zurück und klicken Sie auf **Überprüfen**.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
 
 {% alert important %}
 Die sendende Domain muss einer Domain untergeordnet sein, die Sie besitzen. Wenn Sie z. B. „example.com“ besitzen, könnte eine Subdomain „mail.example.com“ sein, die es Ihnen ermöglicht, die Sendeadresse „@mail.example.com“ zu verwenden.
@@ -85,4 +85,3 @@ Beachten Sie, dass zusätzliche Domains, die hinzugefügt wurden, nicht im Absch
 
 Nachdem Ihre Absenderüberprüfung abgeschlossen ist, empfehlen wir Ihnen die IP-Erwärmung, damit Ihre Nachrichten mit einer gleichbleibend hohen Rate den Posteingang des Empfängers erreichen. Wenden Sie sich nach Abschluss dieser Einrichtung an das Braze Onboarding-Team, um zu überprüfen, ob Ihre Domains und [IP-Adresse]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) funktionieren.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}

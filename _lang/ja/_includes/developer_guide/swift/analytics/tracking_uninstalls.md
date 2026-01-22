@@ -1,10 +1,10 @@
 ## アンインストール追跡の設定
 
-### ステップ1:バックグラウンドのプッシュを有効にする
+### ステップ 1: バックグラウンドのプッシュを有効にする
 
 Xcode プロジェクトで、[**Capabilities**] に移動し、[**Background Modes**] が有効になっていることを確認します。詳しくは、[サイレント・プッシュ]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift)通知を参照のこと。
 
-### ステップ2: 内部プッシュ通知を無視する
+### ステップ 2:内部プッシュ通知を無視する
 
 Swift Braze SDKは、バックグラウンドプッシュ通知を使用してアンインストール追跡分析を収集する。プッシュ通知が送信されたときにアプリが不要なアクションを起こさないようにするには、[内部プッシュ通知が無視される]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift#swift_ignoring-internal-push-notifications)ようにする必要がある。
 

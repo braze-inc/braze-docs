@@ -20,9 +20,9 @@ Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Person
 | -------------  | ---- |
 | Standardattribute | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Geräteattribute | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [E-Mail-Listen-Attribute][43] | `{{${set_user_to_unsubscribed_url}}}` <br>Dieses Tag ersetzt das bisherige Tag `{{${unsubscribe_url}}}`. Das ältere Tag funktioniert zwar auch in bereits erstellten E-Mails, aber wir empfehlen Ihnen, stattdessen das neuere Tag zu verwenden. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
-| [SMS-Attribute][48] | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| [WhatsApp-Attribute][46] | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>E-Mail-Liste Attribute</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Dieses Tag ersetzt das bisherige Tag `{{${unsubscribe_url}}}`. Das ältere Tag funktioniert zwar auch in bereits erstellten E-Mails, aber wir empfehlen Ihnen, stattdessen das neuere Tag zu verwenden. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS Attribute</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp Attribute</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
 | Kampagnenattribute | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Canvas-Attribute | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Canvas Schritt Attribute | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -31,7 +31,8 @@ Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Person
 | Event-Eigenschaften <br> (Diese sind an Ihren Workspace angepasst.)| `{{event_properties.${your_custom_event_property}}}` |
 | Canvas-Kontextvariablen | `{{context}}` |
 | Angepasste Attribute <br> (Diese sind an Ihren Workspace angepasst.) | `{{custom_attribute.${your_custom_attribute}}}` |
-| [API-Trigger-Eigenschaften][75] |`{{api_trigger_properties}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API triggern Eigenschaften</a> |`{{api_trigger_properties}}` |
+| Entry-Eigenschaften für Canvas | `{{canvas_entry_properties.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
@@ -46,7 +47,7 @@ In diesem Hilfeartikel erfahren Sie mehr darüber, [wie sich einige dieser Attri
 
 Das Verhalten für die folgenden Tags unterscheidet sich zwischen Canvas und Kampagnen:
 {% raw %}
-- `dispatch_id` Das Verhalten unterscheidet sich, da Braze Canvas-Schritte als getriggerte Ereignisse behandelt, auch wenn sie "geplant" sind (mit Ausnahme der Eingangsschritte, die geplant werden können). Weitere Informationen finden Sie unter [Versand-ID-Verhalten][50].
+- `dispatch_id` Das Verhalten unterscheidet sich, da Braze Canvas-Schritte als getriggerte Ereignisse behandelt, auch wenn sie "geplant" sind (mit Ausnahme der Eingangsschritte, die geplant werden können). Wenn Sie mehr darüber erfahren möchten, lesen Sie bitte [Dispatch ID behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - Wenn Sie das Tag `{{campaign.${name}}}` mit Canvas verwenden, wird der Name der Canvas-Komponente angezeigt. Wenn Sie dieses Tag mit Kampagnen verwenden, wird der Name der Kampagne angezeigt.
 {% endraw %}
 
@@ -62,7 +63,7 @@ Sie können die folgenden Attribute für das letzte Gerät des Nutzers über all
 |`{{most_recently_used_device.${id}}}` | Der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. |
 | `{{most_recently_used_device.${carrier}}}` | Der zuletzt verwendete Telefondienstanbieter des Geräts, falls verfügbar. Beispiele hierfür sind „Verizon“ und „Orange“. |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Ob auf dem Gerät die Anzeigenverfolgung aktiviert ist oder nicht. Dies ist ein boolescher Wert (`true` oder `false`). |
-| `{{most_recently_used_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertising (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung konfiguriert ist][40]. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
+| `{{most_recently_used_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertisers (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) konfiguriert ist. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
 | `{{most_recently_used_device.${google_ad_id}}}` | Bei Android-Geräten ist dieser Wert der Google Play Advertising Identifier, wenn Ihre Anwendung mit unserer optionalen Google Play Advertising ID-Sammlung konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
 | `{{most_recently_used_device.${roku_ad_id}}}` | Bei Roku-Geräten ist dieser Wert der Roku Advertising Identifier, der erfasst wird, wenn Ihre Anwendung mit Braze konfiguriert wird. Bei Geräten, die nicht von Roku stammen, ist dieser Wert gleich Null. |
 | `{{most_recently_used_device.${model}}}` | Der Modellname des Geräts, falls verfügbar. Beispiele sind "iPhone 6S" und "Nexus 6P" und "Firefox". |
@@ -99,10 +100,10 @@ Für Push-Benachrichtigungen und In-App-Kanäle für Nachrichten können Sie die
 
 |Taggen | Beschreibung |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Dies ist der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. |
+| `{{targeted_device.${id}}}` | Dies ist der Bezeichner des Braze-Geräts. Unter iOS kann dies der Apple Identifier for Vendor (IDFV) oder eine UUID sein. Bei Android und anderen Plattformen handelt es sich um eine zufällig generierte UUID. Wenn ein Nutzer:innen zum Beispiel fünf Geräte hat, wird ein Sendeversuch für alle fünf Geräte unternommen, wobei jeder den entsprechenden Bezeichner des Geräts verwendet. Wenn eine Nachricht so konfiguriert ist, dass sie an das zuletzt verwendete Gerät eines Nutzers:innen gesendet wird, erfolgt nur ein Sendeversuch an das über Braze identifizierte zuletzt verwendete Gerät. |
 | `{{targeted_device.${carrier}}}` | Der zuletzt verwendete Telefondienstanbieter des Geräts, falls verfügbar. Beispiele hierfür sind „Verizon“ und „Orange“. |
-| `{{targeted_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertising (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung konfiguriert ist][40]. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
-| `{{targeted_device.${google_ad_id}}}` | Bei Android-Geräten ist dieser Wert der Google Play Advertising Identifier, wenn Ihre Anwendung mit unserer [optionalen Google Play Advertising ID-Sammlung] konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
+| `{{targeted_device.${idfa}}}` | Bei iOS-Geräten ist dieser Wert der Identifier for Advertisers (IDFA), wenn Ihre Anwendung mit unserer [optionalen IDFA-Sammlung]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) konfiguriert ist. Bei Nicht-iOS-Geräten ist dieser Wert gleich Null. |
+| `{{targeted_device.${google_ad_id}}}` | Bei Android Geräten ist dieser Wert der Google Play Advertising Bezeichner, wenn Ihre Anwendung mit unserer [optionalen Google Play Advertising ID Sammlung] konfiguriert ist. Bei Nicht-Android-Geräten ist dieser Wert gleich Null. |
 | `{{targeted_device.${roku_ad_id}}}` | Bei Roku-Geräten ist dieser Wert der Roku Advertising Identifier, der erfasst wird, wenn Ihre Anwendung mit Braze konfiguriert wird. Bei Geräten, die nicht von Roku stammen, ist dieser Wert gleich Null. |
 | `{{targeted_device.${model}}}` | Der Modellname des Geräts, falls verfügbar. Beispiele sind "iPhone 6S" und "Nexus 6P" und "Firefox". |
 | `{{targeted_device.${os}}}` | Das Betriebssystem des Geräts, falls verfügbar. Beispiele sind "iOS 9.2.1" und "Android (Lollipop)" und "Windows". |
@@ -116,11 +117,11 @@ Da es eine so große Bandbreite an Geräteträgern, Modellnamen und Betriebssyst
 
 Darüber hinaus ist es möglich, dass Braze bei Push-Benachrichtigungen unter bestimmten Umständen nicht in der Lage ist, das mit der Push-Benachrichtigung verbundene Gerät zu erkennen, z.B. wenn das Push-Token über die API importiert wurde, was dazu führt, dass die Werte für diese Nachrichten `null` sind.
 
-![Beispiel für die Verwendung des Standardwerts "there" bei der Verwendung einer Vornamenvariable in einer Push-Nachricht.][4]
+![Beispiel für die Verwendung des Standardwerts "there" bei Verwendung einer Variable für den Vornamen in einer Push Nachricht.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### Verwendung einer bedingten Logik anstelle eines Standardwerts
 
-Unter bestimmten Umständen können Sie sich dafür entscheiden, [bedingte Logik][17] ] zu verwenden, anstatt einen Standardwert festzulegen. Mit der bedingten Logik können Sie Nachrichten versenden, die sich je nach dem Wert eines benutzerdefinierten Attributs unterscheiden. Darüber hinaus können Sie eine bedingte Logik verwenden, um Nachrichten][18] an Kund:innen mit null oder leeren Attributwerten abzubrechen. 
+Unter bestimmten Umständen können Sie sich für die Verwendung einer [bedingten Logik]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) entscheiden, anstatt einen Standardwert festzulegen. Mit der bedingten Logik können Sie Nachrichten versenden, die sich je nach dem Wert eines benutzerdefinierten Attributs unterscheiden. Außerdem können Sie bedingte Logik verwenden, um Nachrichten an Kund:in mit null oder leeren Attribut-Werten [abzubrechen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/). 
 
 #### Anwendungsfall
 
@@ -154,7 +155,7 @@ In diesem Fall gibt es zwei Optionen, die möglicherweise besser funktionieren a
    {% endif %}
    ```
 
-In diesem Anwendungsfall erhält ein:e Nutzer:in mit einem nicht ausgefüllten oder leeren Vornamen die Nachricht „Vielen Dank für den Download“. Sie sollten einen [Standardwert][47] für den Vornamen einfügen, um sicherzustellen, dass Ihr Kunde im Falle eines Fehlers nicht Liquid sieht.
+In diesem Anwendungsfall erhält ein:e Nutzer:in mit einem nicht ausgefüllten oder leeren Vornamen die Nachricht „Vielen Dank für den Download“. Sie sollten einen [Standardwert]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/) für den Vornamen einfügen, um sicherzustellen, dass Ihr Kund:in im Falle eines Fehlers nicht Liquid sieht.
 
 {% endraw %}
 
@@ -162,7 +163,7 @@ In diesem Anwendungsfall erhält ein:e Nutzer:in mit einem nicht ausgefüllten o
 
 Sie können das Tag `assign` verwenden, um eine Variable im Nachrichten-Editor zu erstellen. Wir empfehlen, einen eindeutigen Namen für Ihre Variable zu verwenden. Wenn Sie eine Variable mit einem ähnlichen Namen wie die unterstützten Tags für die Personalisierung erstellen (z.B. `language`), kann dies Ihre Messaging-Logik beeinträchtigen.
 
-Nachdem Sie eine Variable erstellt haben, können Sie diese Variable in Ihrer Nachrichtenlogik oder Nachricht referenzieren. Dieses Tag ist nützlich, wenn Sie Content, der von unserer Funktion [Connected-Content][4] zurückgegeben wird, neu formatieren möchten. Weitere Informationen finden Sie in der Shopify-Dokumentation über [variable Tags][31].
+Nachdem Sie eine Variable erstellt haben, können Sie diese Variable in Ihrer Nachrichtenlogik oder Nachricht referenzieren. Dieses Tag ist nützlich, wenn Sie Content, der von unserer Funktion [Connected-Content]({% image_buster /assets/img_archive/personalized_firstname_.png %}) zurückgegeben wird, neu formatieren möchten. Weitere Informationen finden Sie in der Shopify-Dokumentation über [variable Tags](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
 {% alert tip %}
 Haben Sie das Gefühl, dass Sie in jeder Nachricht die gleichen Variablen zuweisen? Anstatt den `assign` Tag immer wieder auszuschreiben, können Sie diesen Tag als Inhaltsblock speichern und ihn stattdessen am Anfang Ihrer Nachricht einfügen.
@@ -216,17 +217,17 @@ In diesem Anwendungsfall überprüfen wir die ersten fünf Einträge im Array de
 
 Dann senden wir die Verkaufsnachricht, wenn `converse_viewer` wahr ist. Andernfalls brechen wir die Nachricht ab.
 
-Dies ist ein einfaches Beispiel dafür, wie Iterations-Tags im Braze Message Composer verwendet werden können. Weitere Informationen finden Sie in der Dokumentation von Shopify zu [Iterations-Tags][32].
+Dies ist ein einfaches Beispiel dafür, wie Iterations-Tags im Braze Message Composer verwendet werden können. Weitere Informationen finden Sie in der Dokumentation von Shopify zu [Iterations-Tags](https://docs.shopify.com/themes/liquid/tags/iteration-tags).
 
 ## Syntax-Tags
 
-Syntax-Tags können verwendet werden, um zu steuern, wie Liquid gerendert wird. Sie können das Tag `echo` verwenden, um einen Ausdruck zurückzugeben. Dies ist dasselbe wie das Umschließen eines Ausdrucks mit geschweiften Klammern, nur dass Sie dieses Tag innerhalb von Liquid-Tags verwenden können. Sie können auch das `liquid` Tag verwenden, um einen Block von Liquid ohne Trennzeichen auf jedem Tag zu haben. Jedes Tag muss in einer eigenen Zeile stehen, wenn Sie das Tag `liquid` verwenden. Weitere Informationen und Beispiele finden Sie in der Shopify-Dokumentation zu [Syntax-Tags][33].
+Syntax-Tags können verwendet werden, um zu steuern, wie Liquid gerendert wird. Sie können das Tag `echo` verwenden, um einen Ausdruck zurückzugeben. Dies ist dasselbe wie das Umschließen eines Ausdrucks mit geschweiften Klammern, nur dass Sie dieses Tag innerhalb von Liquid-Tags verwenden können. Sie können auch das `liquid` Tag verwenden, um einen Block von Liquid ohne Trennzeichen auf jedem Tag zu haben. Jedes Tag muss in einer eigenen Zeile stehen, wenn Sie das Tag `liquid` verwenden. Weitere Informationen und Beispiele finden Sie in der Shopify-Dokumentation zu [Syntax-Tags](https://shopify.dev/api/liquid/tags#syntax-tags).
 
-Mit [whitespace control][49] können Sie Leerzeichen um Ihre Tags entfernen und so das Aussehen der Liquid-Ausgabe noch besser steuern.
+Mit der [Whitespace-Kontrolle](https://shopify.github.io/liquid/basics/whitespace/) können Sie Leerzeichen um Ihre Tags herum entfernen und so das Aussehen der Liquid-Ausgabe weiter kontrollieren.
 
 ## HTTP-Statuscodes {#http-personalization}
 
-Sie können den HTTP-Status aus einem Aufruf von [Connected Content][38] verwenden, indem Sie ihn zunächst als lokale Variable speichern und dann die Taste `__http_status_code__` verwenden. Zum Beispiel:
+Sie können den HTTP-Status aus einem Aufruf von [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) verwenden, indem Sie ihn zunächst als lokale Variable speichern und dann die Taste `__http_status_code__` verwenden. Zum Beispiel:
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}
@@ -293,20 +294,5 @@ It is between 2:00:00 pm and 2:59:59 pm PT!
 
 {% endraw %}
 
-[30]: https://shopify.dev/api/liquid/tags#syntax-tags
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[33]: https://shopify.dev/api/liquid/tags#syntax-tags
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[4]: {% image_buster /assets/img_archive/personalized_firstname_.png %}
-[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
-[18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
-[43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
-[47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
-[48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
-[49]: https://shopify.github.io/liquid/basics/whitespace/
-[50]: {{site.baseurl}}/help/help_articles/data/dispatch_id/
-[75]: {{site.baseurl}}/api/objects_filters/trigger_properties_object/

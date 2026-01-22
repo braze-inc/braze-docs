@@ -1,5 +1,5 @@
 ---
-nav_title: SAML SSO-Einrichtung
+nav_title: SAML SSO Einrichtung
 article_title: SAML SSO-Einrichtung
 page_order: 0
 page_type: tutorial
@@ -52,9 +52,9 @@ Geben Sie auf derselben Seite Folgendes ein:
 
 | Anforderung | Details |
 |---|---|
-| `SAML Name` | Dieser Text wird auf der Schaltfläche auf dem Anmeldebildschirm angezeigt.<br>Meist der Name Ihres Identitätsanbieters, also z. B. "Okta". |
-| `Target URL` | Wird nach der Einrichtung von Braze bei Ihrem IdP angegeben.<br> Einige IdP bezeichnen sie auch als SSO-URL oder SAML-2.0-Endpunkt. |
-| `Certificate` | Das `x.509` Zertifikat, das von Ihrem Identitätsanbieter bereitgestellt wird.|
+| SAML-Name | Dieser Text wird als Button-Text auf dem Anmeldebildschirm angezeigt.<br>Meist der Name Ihres Identitätsanbieters, also z. B. "Okta". |
+| Ziel-URL | Wird nach der Einrichtung von Braze bei Ihrem IdP angegeben.<br> Einige IdP bezeichnen sie auch als SSO-URL oder SAML-2.0-Endpunkt. |
+| Zertifikat | Das `x.509` Zertifikat, das von Ihrem Identitätsanbieter bereitgestellt wird.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Achten Sie darauf, dass Ihr `x.509`-Zertifikat diesem Format entspricht, wenn Sie es in das Dashboard aufnehmen:
@@ -65,13 +65,13 @@ Achten Sie darauf, dass Ihr `x.509`-Zertifikat diesem Format entspricht, wenn Si
 -----END CERTIFICATE-----
 ```
 
-![Öffnen der Sicherheitseinstellungen und Hinzufügen von SAML SSO-Details]({% image_buster /assets/img/samlsso.gif %})
+![SAML SSO Einstellungen mit dem ausgewählten Umschalter.]({% image_buster /assets/img/samlsso.png %})
 
 ### Schritt 3: Bei Braze anmelden
 
 Speichern Sie Ihre Sicherheitseinstellungen und melden Sie sich ab. Melden Sie sich dann wieder bei Ihrem Identitätsanbieter an.
 
-![Dashboard-Anmeldebildschirm mit aktiviertem SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![Dashboard Anmeldebildschirm mit SSO Enablement]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Einrichten Ihres RelayState
 
@@ -91,7 +91,7 @@ Personen, die SSO nutzen, können nicht mehr wie bisher ihr Passwort verwenden. 
 
 Sie können die Angehörigen Ihrer Organisation auf eine Anmeldung per Google SSO oder SAML SSO beschränken. Um die Einschränkungen zu aktivieren, öffnen Sie die **Sicherheitseinstellungen** und wählen Sie entweder **Anmeldung nur per Google SSO** oder **Anmeldung nur mit angepasstem SAML SSO**.
 
-![Abschnitt zu Authentifizierungsregeln in den Sicherheitseinstellungen]({% image_buster /assets/img/sso3.png %})
+![Beispiel für die Einrichtung des Bereichs "Authentifizierungsregeln" mit einer Mindestlänge des Passworts von 8 Zeichen und einer 3-fachen Wiederverwendbarkeit des Passworts. Die Passwörter laufen nach 180 Tagen ab, und die Nutzer:innen werden nach 1.440 Minuten Inaktivität abgemeldet.]({% image_buster /assets/img/sso3.png %})
 
 Wenn Sie die Einschränkungen aktivieren, können sich die Braze-Benutzer Ihres Unternehmens nicht mehr mit einem Passwort anmelden, selbst wenn sie sich zuvor mit einem Passwort angemeldet haben.
 
@@ -120,15 +120,15 @@ Wählen Sie den SAML-Tracer in der Navigationsleiste Ihres Browsers aus. Vergewi
 
 Wählen Sie **Exportieren**. Für **Cookie-Filter-Profil auswählen** wählen Sie **Keine**. Wählen Sie dann **Exportieren**. Nun wird eine JSON-Datei generiert, die Sie zur weiteren Fehlerbehebung an den Braze-Support senden können.
 
-![Menü "SAML-Trace-Einstellungen exportieren" mit der Auswahl "Keine".]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+!["SAML-Trace-Einstellungen exportieren" mit der ausgewählten Option "Keine".]({% image_buster /assets/img/export_saml_trace_preferences.png %})
 
 ## Fehlersuche
 
 ### Ist die E-Mail Adresse des Nutzers:innen korrekt eingerichtet?
 
-Wenn Sie die Fehlermeldung `ERROR_CODE_SSO_INVALID_EMAIL` erhalten, ist die E-Mail Adresse des Nutzers:innen ungültig. Vergewissern Sie sich in der SAML-Ablaufverfolgung, dass das Feld `saml2:Attribute Name="email"` mit der E-Mail Adresse übereinstimmt, die der Nutzer:in für die Anmeldung verwendet. Wenn Sie Microsoft Entra ID verwenden, lautet die Abbildung des Attributs `email = user.userprincipalname`.
+Wenn Sie die Fehlermeldung `ERROR_CODE_SSO_INVALID_EMAIL` erhalten, ist die E-Mail Adresse des Nutzers:innen ungültig. Vergewissern Sie sich in der SAML-Ablaufverfolgung, dass das Feld `saml2:Attribute Name="email"` mit der E-Mail Adresse übereinstimmt, die der Nutzer:in für die Anmeldung verwendet. Wenn Sie Microsoft Entra ID (früher Azure Active Directory) verwenden, lautet die Abbildung der Attribute `email = user.userprincipalname`.
 
-Bei der E-Mail Adresse wird zwischen Groß- und Kleinschreibung unterschieden. Sie muss genau mit der Adresse übereinstimmen, die in Braze eingerichtet wurde, einschließlich der in Ihrem Identitätsanbieter (wie Okta, OneLogin, Azure Active Directory und andere) konfigurierten Adresse.
+Bei der E-Mail Adresse wird zwischen Groß- und Kleinschreibung unterschieden. Sie muss genau mit der Adresse übereinstimmen, die in Braze eingerichtet wurde, einschließlich der in Ihrem Identitätsanbieter (wie Okta, OneLogin, Microsoft Entra ID und andere) konfigurierten Adresse.
 
 Andere Fehler, die darauf hinweisen, dass Sie Probleme mit der E-Mail Adresse des Nutzers:innen haben, sind
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: Die E-Mail Adresse des Nutzers:innen ist nicht im Dashboard enthalten.

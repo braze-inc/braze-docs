@@ -21,7 +21,7 @@ Für jede Kampagne prüft Braze eine Liste von Attributen und Benutzerverhalten 
 
 Um eine Konversions-Korrelationsanalyse durchzuführen, wählen Sie das Konversions-Event von Interesse aus dem Dropdown-Menü aus.
 
-![Das Panel "Konversions-Korrelation" zeigt ein Beispiel, bei dem "Wählen Sie ein Konversions-Event" auf "Primäres Konversions-Event - A" mit der Event-Einstellung "Kauf innerhalb von 12 Stunden getätigt (beliebiges Produkt)" eingestellt ist.][1]
+Das Panel "Konversions-Korrelation" zeigt ein Beispiel, bei dem "Wählen Sie ein Konversions-Event" auf "Primäres Konversions-Event - A" eingestellt ist und die Ereigniseinstellung "Kauf innerhalb von 12 Stunden getätigt (Jedes Produkt)" lautet.]({% image_buster /assets/img/convcorr.png %})
 
 ## Was wird kontrolliert?
 
@@ -52,4 +52,3 @@ Wir prüfen die statistische Signifikanz mit Hilfe des [Wilson-Konfidenzinterval
 
 Dann berechnen wir für jede der Variablen auch die Rate, mit der Nutzer:innen mit dem betreffenden Attribut oder Verhalten mit 95%iger Sicherheit konvertiert sind. Indem wir dies durch den Basissatz teilen, können wir das Verhältnis messen. Wenn der Wert viel größer als 1 ist, ist die Wahrscheinlichkeit höher, dass Nutzer mit diesem Attribut oder Verhalten konvertieren. Wenn es viel weniger ist, sind sie unwahrscheinlicher. Wir zeigen den Wert des Verhältnisses selbst in der Tabelle an. Der Wert wird nur angezeigt, wenn er weit genug von 1 entfernt ist, um mit einem Konfidenzniveau von 95 % signifikant zu sein.
 
-[1]: {% image_buster /assets/img/convcorr.png %}

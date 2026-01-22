@@ -9,7 +9,7 @@ hidden: true
 > `User-Agent` ヘッダーの構文など、パートナー API 連携の要件についてご紹介します。
 
 {% alert important %}
-これまで、パートナーは API リクエストのパートナーフィールドに名前を追加する必要がありました。このフォーマットはサポートされなくなり、現在は `User-Agent` ヘッダーが必要となりました。
+これまで、パートナーは API リクエストのパートナーフィールドに名前を追加する必要がありました。このフォーマットはサポートされなくなり、`User-Agent` ヘッダーが必要となった。
 {% endalert %}
 
 ## ユーザーエージェント
@@ -21,7 +21,7 @@ hidden: true
 `User-Agent` ヘッダーは以下のフォーマット ([RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#page-46) 標準と同様) に従う必要があります。
 
 ```bash
-User-Agent: partner-OrganizationName-ProductName/ProductVersion
+User-Agent: partner-OrganizationName
 ```
 
 以下を置き換えます。
@@ -29,8 +29,6 @@ User-Agent: partner-OrganizationName-ProductName/ProductVersion
 | placeholder | 説明 |
 |-------------|-------------|
 | `OrganizationName` | Pascal ケースでフォーマットされた組織名。 |
-| `ProductName` | Pascal ケースでフォーマットされた製品名。 |
-| `ProductVersion` | 製品のバージョン番号。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### 例
@@ -38,7 +36,7 @@ User-Agent: partner-OrganizationName-ProductName/ProductVersion
 たとえば、Snowflake のクラウドデータ取り込みの場合、以下が正しいユーザーエージェントとされます。
 
 ```bash
-User-Agent: partner-Snowflake-CloudDataIngestion/179
+User-Agent: partner-Snowflake
 ```
 
 しかし、以下の場合はトラフィックの送信元が明確に特定されないため、正しくないとされます。

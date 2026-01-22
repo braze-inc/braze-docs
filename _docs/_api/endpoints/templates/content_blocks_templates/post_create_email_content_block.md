@@ -70,8 +70,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,

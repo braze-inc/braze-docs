@@ -42,6 +42,10 @@ You must ensure the following items are created, completed, and/or accepted befo
 
 ### Step 1: Connect to Pinterest
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Pinterest to your Braze account.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. Under Pinterest Audience Sync, select **Connect Pinterest**.
 
 ![Pinterest technology page in Braze that includes an Overview section and Pinterest Audience Sync section with the Connected Pinterest button.]({% image_buster /assets/img/pinterest/pinterest1.png %}){: style="max-width:80%;"}

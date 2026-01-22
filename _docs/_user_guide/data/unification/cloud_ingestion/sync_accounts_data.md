@@ -1,13 +1,13 @@
 ---
 nav_title: Sync and delete account data
-article_title: Syncing account data using CDI
+article_title: Sync account data using CDI
 page_order: 4
 page_type: reference
 description: "Learn how to sync your Braze account data using CDI."
 
 ---
 
-# Syncing account data using CDI
+# Sync account data using CDI
 
 > Learn how to sync your Braze account data using CDI.
 
@@ -30,8 +30,9 @@ Only make updates to your account schema when the sync is paused or not schedule
 - If `DELETED` is `true`, the account is deleted.
 - Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
 - Fields not in your accounts schema are dropped; update the schema before syncing new fields.
+- You can refresh, resume, or pause a sync by hovering over the sync name and selecting the relevant action.
 
-## Syncing your account data
+## Sync your account data
 
 You can sync your account data using CDI through a data warehouse or a file storage.
 
@@ -274,7 +275,7 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Creating a sync view
+## Create a sync view
 
 Creating a sync view in your data warehouse lets the source refresh automatically without needing to rewrite additional queries.
 

@@ -2,6 +2,7 @@
 nav_title: Nachrichten von rechts nach links
 article_title: Erstellen von Nachrichten von rechts nach links
 page_order: 1
+alias: /right_to_left_messages/
 page_type: reference
 description: "Auf dieser Seite finden Sie bewährte Verfahren für die Erstellung von Nachrichten in Braze, die von rechts nach links gelesen werden."
 ---
@@ -40,7 +41,7 @@ So erstellen Sie Ihre Nachricht von rechts nach links in Braze:
 
 Die Methode des Kopierens und Einfügens von Push-Nachrichten kann bei längeren Push-Benachrichtigungen eine Herausforderung darstellen, da längere Inhalte auf einem mobilen Gerät möglicherweise in mehreren Zeilen dargestellt werden. Wenn Sie Ihren Nachrichtentext von außerhalb von Braze kopieren (z.B. ein Word-Dokument) und direkt in Braze einfügen, können sich die Satzausrichtung und die Wortplatzierung ändern. Um dieses Szenario zu vermeiden, kopieren Sie in Raten und fügen Sie einen Zeilenumbruch ein. Kopieren Sie zum Beispiel die ersten fünf Wörter und fügen Sie einen Zeilenumbruch ein, kopieren Sie die nächsten fünf Wörter, fügen Sie einen Zeilenumbruch ein und so weiter.
 
-Die Vorschau- und Testfunktionen sind für Nachrichten von links nach rechts konzipiert. Nachrichten von rechts nach links werden daher im Bereich **Vorschau & Test** nicht korrekt dargestellt, aber auf den Nutzer:innen-Geräten korrekt, wenn deren Einstellungen dafür konfiguriert sind. Wir empfehlen Ihnen, Nachrichten an sich selbst in einer Live-Umgebung zu senden, um zu überprüfen, ob sie je nach den Einstellungen Ihres Geräts korrekt wiedergegeben werden.
+Die Vorschau- und Testfunktionen sind für Nachrichten von links nach rechts ausgelegt. Daher werden Nachrichten von rechts nach links im Bereich **Vorschau & Test** nicht korrekt dargestellt, aber auf Nutzer:innen, wenn deren Einstellungen dafür konfiguriert sind. Wir empfehlen Ihnen, Nachrichten an sich selbst in einer Live-Umgebung zu senden, um zu überprüfen, ob sie je nach den Einstellungen Ihres Geräts korrekt wiedergegeben werden.
 
 ### Bidirektionaler Text
 

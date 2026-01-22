@@ -25,6 +25,7 @@ Wenn Sie SendGrid als E-Mail-Anbieter verwenden, können Sie E-Mails an Apple se
 2. Gehen Sie auf die Seite **Zertifikate, Bezeichner & Profile**.
 3. Wählen Sie **Dienste** > **Mit Apple für E-Mail-Kommunikation anmelden**.
 4. Fügen Sie im Abschnitt **E-Mail-Quellen** die Domains und Subdomains hinzu.
+- Die Adresse sollte wie folgt formatiert werden: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (ein Beispiel ist: `bounces+1234567@braze.online.docs.com`). 
 
 Wenn Ihre gewünschte „Von“-Adresse eine `abmail`-Adresse ist, fügen Sie diese in Ihre Subdomain ein. Verwenden Sie zum Beispiel `abmail.docs.braze.com` anstelle von `docs.braze.com`.
 

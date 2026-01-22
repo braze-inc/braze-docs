@@ -261,11 +261,11 @@ Zum Beispiel:
 <a href=”https://www.example.com” data-msys-sublink="open-in-app">
 ```
 
-Stellen Sie dann sicher, dass Ihre App so eingerichtet ist, dass sie den angepassten Pfad richtig verarbeiten kann. Lesen Sie den SparkPost-Artikel über die [Verwendung von SparkPost Click Tracking für Deeplinks](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). Dieser Artikel enthält Beispiel-Code für [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost) und Android.
+Stellen Sie dann sicher, dass Ihre App so eingerichtet ist, dass sie den angepassten Pfad richtig verarbeiten kann. Lesen Sie den SparkPost-Artikel über die [Verwendung von SparkPost Click Tracking für Deeplinks](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#preferred-solution-using-sparkpost-click-tracking-on-deep-links). Dieser Artikel enthält Beispiel-Code für [iOS](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#ios-swift-forwarding-clicks-to-sparkpost) und [Android](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve#forwarding-clicks-from-android-to-sparkpost).
 
 ### Deaktivieren des Trackings von Klicks auf einer Link-zu-Link-Basis
 
-Sie können das Tracking von Klicks für bestimmte Links deaktivieren, indem Sie Ihrer E-Mail Nachricht im HTML-Editor oder den Komponenten im Drag-and-Drop-Editor HTML-Code hinzufügen.
+Sie können das Tracking von Klicks für bestimmte Links deaktivieren, indem Sie Ihrer Nachricht für den HTML-Editor oder einem HTML-Block für den Drag-and-Drop-Editor einen HTML-Code hinzufügen.
 
 #### SendGrid
 
@@ -281,6 +281,14 @@ Wenn Ihr E-Mail-Dienst SparkPost ist, verwenden Sie den HTML Code `data-msys-cli
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+Wenn Ihr E-Mail-Dienstanbieter Amazon SES ist, verwenden Sie den HTML Code `ses:no-track` wie folgt:
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### Drag-and-Drop-Editor
@@ -303,7 +311,7 @@ Wählen Sie für das angepasste Attribut Folgendes aus:
 - **Name:** `data-msys-clicktrack`
 - **Wert:** `0`
 
-![Ein angepasstes Attribut für einen Textlink.][2]{: style="max-width:60%;"}
+![Ein angepasstes Attribut für einen Textlink.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Angepasstes Attribut für einen Button oder ein Bild
 
@@ -323,7 +331,7 @@ Wählen Sie für das angepasste Attribut Folgendes aus:
 - **Wert:** `0`
 - **Typ:** Link
 
-![Ein angepasstes Attribut für einen Button.][1]{: style="max-width:60%;"}
+![Ein angepasstes Attribut für einen Button.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### Fehlerbehebung bei universellen Links mit Click-Tracking
 
@@ -345,5 +353,3 @@ Stellen Sie sicher, dass Sie die richtigen Definitionen für die Domains haben, 
 - **iOS:** Überprüfen Sie die Associated Domains, die in Xcode für Ihre App eingerichtet wurden[(Schritt 1c]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c)). Vergewissern Sie sich, dass die Domain für das Click Tracking in dieser Liste enthalten ist.
 - **Android:** Öffnen Sie die App-Infoseite (drücken Sie lange auf das App-Symbol und klicken Sie auf ⓘ). Suchen Sie im Info-Menü der App den Eintrag **Standardmäßig öffnen** und tippen Sie darauf. Dies sollte einen Bildschirm mit allen überprüften Links anzeigen, die die App öffnen darf. Vergewissern Sie sich, dass die Domain für das Click Tracking in dieser Liste enthalten ist.
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

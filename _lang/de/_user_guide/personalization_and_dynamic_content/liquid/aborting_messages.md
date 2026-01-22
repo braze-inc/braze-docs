@@ -8,7 +8,7 @@ description: "Dieser Referenzartikel behandelt den Abbruch von Liquid-Nachrichte
 
 # Nachrichten abbrechen
 
-> Optional können Sie Liquid-Nachrichten innerhalb von Bedingungen abbrechen. In diesem Referenzartikel finden Sie einige Beispiele dafür, wie diese Funktion in Marketingkampagnen eingesetzt werden kann.
+> Optionally, you can use the `abort_message("optional reason for aborting")` Liquid message tag within conditionals to prevent sending a message to a user. In diesem Referenzartikel finden Sie einige Beispiele dafür, wie diese Funktion in Marketingkampagnen eingesetzt werden kann.
 
 {% alert note %}
 Wenn ein Nachrichtenschritt in einem Canvas abgebrochen wird, verlässt die:der Nutzer:in den Canvas **nicht** und **fährt** mit dem nächsten Schritt fort.
@@ -59,15 +59,12 @@ Sie können die abgebrochene Nachricht auch in Ihrem Nachrichten-Aktivitätsprot
 ```
 {% endraw %}
 
-![Fehlerprotokoll in der Entwicklungskonsole mit der Abbruchmeldung "Sprache war null".][26]
+![Nachrichten-Fehlerprotokoll in der Entwickler:in der Entwicklungskonsole mit der Abbruchnachricht "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Abfrage für abgebrochene Nachrichten
 
 Sie können den [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) oder Ihr eigenes Data Warehouse, sofern es mit Braze verbunden ist, verwenden, um nach bestimmten Abbruchmeldungen zu suchen, die ausgelöst werden, wenn die Liquid-Logik den Abbruch einer Meldung verursacht.
 
-[15]: {% image_buster /assets/img_archive/liquid_abort.png %}
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
-[32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+## Considerations
+
+The `abort_message()` Liquid message tag prevents messages from sending to users, meaning the message won't display on user profiles, and won't count toward deliveries or frequency capping.

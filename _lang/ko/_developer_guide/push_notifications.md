@@ -50,10 +50,6 @@ description: "이 랜딩 페이지에서는 푸시 알림에 관한 모든 것�
 {% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/push_notifications.md %}
-{% endsdktab %}
-
 {% sdktab xamarin %}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}

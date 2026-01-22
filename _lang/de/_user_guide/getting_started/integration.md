@@ -47,7 +47,7 @@ Teilen Sie Ihren Entwicklern mit, welche Kanäle Sie verwenden möchten, um sich
 | Push | Erfordert eine SDK-Implementierung für die korrekte Handhabung von Messaging-Zugangsdaten und Push-Token. |
 | E-Mail | Dies ist ein völlig anderer Prozess. Weitere Einzelheiten zur Integration finden Sie im Abschnitt [E-Mail-Einrichtung]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/). |
 | Content-Cards | Um mit [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) zu beginnen, wenden Sie sich an Ihren Braze Customer Success Manager. |
-| SMS & MMS | Weitere Einzelheiten zur Integration finden Sie im Abschnitt [SMS-Einrichtung]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_setup/). |
+| SMS & MMS | Weitere Einzelheiten zur Integration finden Sie im Abschnitt [SMS-Einrichtung]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending/). |
 | Webhooks | Erfordert eine SDK-Implementierung sowie kanalspezifische Schritte. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -82,6 +82,6 @@ Wir haben sogar spezielle Anweisungen zum [Testen Ihrer Android- oder FireOS-Int
 
 Denken Sie daran, dass eine abgeschlossene Implementierung nicht automatisch bedeutet, dass Sie Millionen von Nachrichten auf einmal versenden können. Das Versenden von einer Million Push-Nachrichten könnte Ihre App zerstören, wenn jeder Kunde gleichzeitig auf denselben Link klickt. Wir empfehlen Ihnen, die Kapazität Ihrer internen Einrichtung für die Bearbeitung von Anfragen von Braze zu besprechen, bevor Sie auf die Schaltfläche **Senden** klicken. Auf dieser Grundlage können Sie dann Ihre [Ratenbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting) festlegen.
 
-![]({% image_buster/assets/img/torchie/firebrands.png %}){: style="max-width:15%;float:right;margin-left:15px;border:none;"}
+\![]({% image_buster/assets/img/torchie/firebrands.png %}){: style="max-width:15%;float:right;margin-left:15px;border:none;"}
 
 Wenn Sie sich mit Braze vertraut gemacht haben, können Sie bei Braze Firebrands mitmachen. Braze Firebrands ist unsere Kundencommunity. Wir wollen Vordenker und Pioniere zusammenbringen, die Braze nutzen, um ihr Kundenerlebnis und ihr Marketing zu modernisieren. Möchten Sie mehr erfahren? [Jetzt mitmachen](https://brazefirebrands.splashthat.com/).

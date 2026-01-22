@@ -1,5 +1,5 @@
 ---
-nav_title: Exportprotokoll
+nav_title: Protokoll exportieren
 article_title: Exportprotokoll
 page_order: 15
 page_type: reference
@@ -12,20 +12,17 @@ description: "Auf dieser Seite finden Sie das Exportprotokoll, mit dem Sie den S
 
 Sie finden das Exportprotokoll, indem Sie zu **Einstellungen** > **Exportprotokoll** gehen. Hier können Sie frühere Exporte, den Namen der exportierten Segmente, den Status jedes Exports, die Quelle jedes Exports und den Start- und Endzeitpunkt jedes Exports einsehen. 
 
-![Die Exportprotokolle mit einer Liste der abgeschlossenen Exporte.][1]
+![Die Exportprotokolle mit einer Liste der abgeschlossenen Exporte.]({% image_buster /assets/img/export_logs.png %})
 
 ## Stornieren eines anstehenden Exports
 
 Sie können ausstehende Exporte direkt auf der Seite **Exportprotokoll** abbrechen, indem Sie das Menü <i class="fas fa-ellipsis-vertical"></i> und dann **Export abbrechen** auswählen oder die **Export ID** auswählen und dann auf der Seite des Exports **Export abbrechen** auswählen.
 
-![Das Exportprotokoll zeigt einen ausstehenden Export und die Option "Export abbrechen" an.][2]
+![Das Exportprotokoll zeigt einen ausstehenden Export und die Option "Export abbrechen" an.]({% image_buster /assets/img/export_logs_cancel.png %})
 
 ## Freigabe eines bestimmten Exportprotokolls
 
 Geben Sie ein Exportprotokoll frei, indem Sie die **Export ID** auswählen und dann **Protokoll freigeben** wählen.
 
-![Ein Dropdown-Fenster mit dem Link zum Teilen der Seite.][3]{: style="max-width:45%;"}
+![Ein Dropdown-Fenster mit dem Link zum Teilen der Seite.]({% image_buster /assets/img/export_logs_share.png %}){: style="max-width:45%;"}
 
-[1]: {% image_buster /assets/img/export_logs.png %}
-[2]: {% image_buster /assets/img/export_logs_cancel.png %}
-[3]: {% image_buster /assets/img/export_logs_share.png %}

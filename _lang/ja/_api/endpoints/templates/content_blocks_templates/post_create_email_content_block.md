@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:コンテンツ・ブロックを作成する"
+nav_title: "POST:コンテンツブロックを作成する"
 article_title: "POST:コンテンツ・ブロックを作成する"
 search_tag: Endpoint
 page_order: 4
@@ -44,11 +44,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
-| `name` | 必須 | 文字列 | コンテンツブロックの名前。100 文字未満でなければなりません。 |
+| `name` | 必須かどうか | 文字列 | コンテンツブロックの名前。100 文字未満でなければなりません。 |
 | `description` | オプション | 文字列 | コンテンツブロックの説明。250 文字未満でなければなりません。 |
-| `content` | 必須 | 文字列 | コンテンツブロック内のHTMLまたはテキストコンテンツ。 |
+| `content` | 必須かどうか | 文字列 | コンテンツブロック内のHTMLまたはテキストコンテンツ。 |
 | `state` | オプション | 文字列 | `active` または`draft` を選択する。指定がない場合のデフォルトは`active` である。 |
 | `tags` | オプション | 文字列の配列 | [タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)はすでに存している必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -70,8 +70,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,
@@ -89,7 +87,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 | `Content cannot be blank` | |
 | `Content must be a string` | コンテンツが引用符 (`""`) で囲まれていることを確認する。 |
 | `Content must be smaller than 50kb` | コンテンツブロックのコンテンツは合計 50KB 未満である必要があります。 |
-| `Content contains malformed liquid` | 指定されたリキッドは有効でも解析可能でもない。有効な Liquid を使用してもう一度やり直すか、サポートにお問い合わせください。 |
+| `Content contains malformed liquid` | 指定されたリキッドは有効でも解析可能でもない。有効な Liquid で再試行するか、サポートに連絡する。 |
 | `Content Block cannot be referenced within itself` | |
 | `Content Block description cannot be blank` | |
 | `Content Block description must be a string` | コンテンツ・ブロックの説明が引用符 (`""`) で囲まれていることを確認する。 |

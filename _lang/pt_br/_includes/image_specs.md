@@ -61,7 +61,7 @@ Todas as mensagens no app têm um tamanho de imagem recomendado de 500 KB, taman
 
 | Tipo | Proporção | Qualidade da imagem | Notas |
 | --- | --- | --- | --- |
-| Modal (somente imagem) | 1:1 | Alta resolução de 1200 x 2000 px <br> Resolução mínima de 600 x 600 px | A mensagem será redimensionada para se ajustar a imagens com a maioria das proporções. |
+| Modal (somente imagem) | 1:1 | Resolução máxima recomendada: 1200 x 2000 px <br> Resolução mínima: 600 x 600 px | A mensagem será redimensionada para se ajustar a imagens com a maioria das proporções. A resolução máxima recomendada tem uma proporção de 3:5, o que pode não proporcionar os melhores resultados. Embora imagens maiores possam ser usadas, elas podem levar a tempos de carregamento mais longos. <br> A proporção ideal para imagens é de 1:1, e o não cumprimento dessa proporção pode disparar um aviso durante o upload. Esse aviso é uma sugestão para obter os melhores resultados e não impede que se faça upload de imagens maiores. |
 | Modal com texto | 29:10 | Alta resolução 1450 x 500 px <br> Resolução mínima de 600 x 205 px | As imagens altas serão reduzidas e centralizadas horizontalmente. Imagens largas serão cortadas nas bordas esquerda e direita. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 

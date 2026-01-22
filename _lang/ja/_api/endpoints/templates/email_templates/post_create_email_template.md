@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:メールテンプレートの作成"
+nav_title: "POST:Eメールテンプレートを作成する"
 article_title: "POST:メールテンプレートを作成する"
 search_tag: Endpoint
 page_order: 4
@@ -15,7 +15,7 @@ description: "この記事では、BrazeのEメールテンプレート作成エ
 
 > BrazeダッシュボードでEメールテンプレートを作成するには、このエンドポイントを使用する。
 
-これらのテンプレートは、**「テンプレート＆メディア**」ページで利用できるようになる。このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
+これらのテンプレートは、**テンプレート& メディア**ページで利用できるようになる。このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | パラメーター | required | データ型 | 説明 |
 | --------- | ---------| --------- | ----------- |
-|`template_name`|required|文字列|メールテンプレートの名前|
+|`template_name`|必須|文字列|メールテンプレートの名前|
 |`subject`|必須|文字列|メールテンプレートの件名|
 |`body`|必須|文字列|HTMLを含む可能性のあるメールテンプレート本文。|
 |`plaintext_body`|オプション|文字列|メールテンプレート本文のプレーンテキストバージョン。|
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 
-## 例のリクエスト
+## リクエスト例
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/create' \
 --header 'Content-Type: application/json' \
@@ -77,8 +77,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 ## 回答例
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
   "message": "success"

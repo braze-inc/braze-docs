@@ -3,7 +3,7 @@ nav_title: "RCS"
 article_title: リッチ・コミュニケーション・サービス（RCS）について
 alias: /about_rcs/
 page_type: reference
-page_order: 14
+page_order: 15
 description: "この参考記事では、RCSチャネルの一般的なユースケースと、RCSチャネルを使用できるようにするために必要な要件について説明する。"
 ---
 

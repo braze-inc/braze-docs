@@ -11,7 +11,7 @@ Before you start, you'll need the following:
 | Prerequisite | Description |
 |--------------|-------------|
 | Braze API Key | A Braze API key with the required permissions. You'll create a new key when you [set up your Braze MCP server](#create-api-key). |
-| MCP Client | Currently, only [Claude](https://claude.ai/) and [Cursor](https://cursor.com/) are officially supported. You'll need an account for one of these clients to use the Braze MCP server. |
+| MCP client | [Claude](https://claude.ai/), [Cursor](https://cursor.com/), and [Google Gemini CLI](https://docs.cloud.google.com/gemini/docs/codeassist/gemini-cli) are officially supported. You must have an account for one of these clients to use the Braze MCP server. |
 | Terminal | A terminal app so you can run commands and install tooling. Use your preferred terminal app or the one that's pre-installed on your computer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -29,7 +29,7 @@ Open your terminal application, paste the following command, then press <kbd>Ent
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-The output will be similar to the following:
+The output is similar to the following:
 
 ```bash
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -50,7 +50,7 @@ everything's installed!
 irm https://astral.sh/uv/install.ps1 | iex
 ```
 
-The output will be similar to the following:
+The output is similar to the following:
 
 ```powershell
 PS C:\Users\YourUser> irm https://astral.sh/uv/install.ps1 | iex
@@ -72,7 +72,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 {% details List of read-only, non-PII permissions %}
 #### Campaigns
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/campaigns/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_analytics) | `campaigns.data_series` |
 | [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details) | `campaigns.details` |
@@ -82,7 +82,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Canvas
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics) | `canvas.data_series` |
 | [`/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary) | `canvas.data_summary` |
@@ -92,7 +92,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Catalogs
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/catalogs`]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs) | `catalogs.get` |
 | [`/catalogs/{catalog_name}/items`]({{site.baseurl}}/api/endpoints/catalogs/catalog_items/synchronous/get_catalog_items_details_bulk) | `catalogs.get_items` |
@@ -101,7 +101,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Cloud Data Ingestion
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/cdi/integrations`]({{site.baseurl}}/api/endpoints/cdi/get_integration_list) | `cdi.integration_list` |
 | [`/cdi/integrations/{integration_id}/job_sync_status`]({{site.baseurl}}/api/endpoints/cdi/get_job_sync_status) | `cdi.integration_job_status` |
@@ -109,7 +109,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Content Blocks
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/content_blocks/list`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks) | `content_blocks.list` |
 | [`/content_blocks/info`]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_see_email_content_blocks_information) | `content_blocks.info` |
@@ -117,14 +117,14 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Custom Attributes
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/custom_attributes`]({{site.baseurl}}/api/endpoints/export/custom_attributes/get_custom_attributes) | `custom_attributes.get` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Events
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/events/list`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events) | `events.list` |
 | [`/events/data_series`]({{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events_analytics) | `events.data_series` |
@@ -133,7 +133,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### KPIs
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/kpi/new_users/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_daily_new_users_date) | `kpi.new_users.data_series` |
 | [`/kpi/dau/data_series`]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_dau_date) | `kpi.dau.data_series` |
@@ -143,14 +143,14 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Messages
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled) | `messages.schedule_broadcasts` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Preference Center
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/preference_center/v1/list`]({{site.baseurl}}/api/endpoints/preference_center/get_list_preference_center) | `preference_center.list` |
 | [`/preference_center/v1/{preferenceCenterExternalID}`]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center) | `preference_center.get` |
@@ -158,7 +158,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Purchases
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/purchases/product_list`]({{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id) | `purchases.product_list` |
 | [`/purchases/revenue_series`]({{site.baseurl}}/api/endpoints/export/purchases/get_revenue_series) | `purchases.revenue_series` |
@@ -167,7 +167,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Segments
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/segments/list`]({{site.baseurl}}/api/endpoints/export/segments/get_segment) | `segments.list` |
 | [`/segments/data_series`]({{site.baseurl}}/api/endpoints/export/segments/get_segment_analytics) | `segments.data_series` |
@@ -176,28 +176,28 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Sends
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/sends/data_series`]({{site.baseurl}}/api/endpoints/export/campaigns/get_send_analytics) | `sends.data_series` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 #### Sessions
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics) | `sessions.data_series` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### SDK Authentication Keys
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | `sdk_authentication.keys` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 #### Subscription
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/subscription/status/get`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status) | `subscription.status.get` |
 | [`/subscription/user/status`]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups) | `subscription.groups.get` |
@@ -205,7 +205,7 @@ Braze MCP server supports 38 read-only endpoints that do not return data from Br
 
 #### Templates
 
-| Endpoint | Required Permission |
+| Endpoint | Required permission |
 |----------|---------------------|
 | [`/templates/email/list`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates) | `templates.email.list` |
 | [`/templates/email/info`]({{site.baseurl}}/api/endpoints/templates/email_templates/get_see_email_template_information) | `templates.email.info` |
@@ -224,45 +224,16 @@ When you configure your MCP client, you'll need your API key's identifier and yo
 
 ### Step 4: Configure your MCP client {#configure-client}
 
-Configure your MCP client using our pre-provided configuration file.
+Configure your MCP client using the pre-provided configuration file.
 
 {% tabs %}
 {% tab Claude %}
-In [Claude Desktop](https://claude.ai/download), go to **Settings** > **Developer** > **Edit Config**, then add the following snippet:
+Set up your MCP server using the [Claude Desktop](https://claude.ai/download) connector directory. 
 
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "key-identifier",
-        "BRAZE_BASE_URL": "rest-endpoint"
-      }
-    }
-  }
-}
-```
+1. In Claude Desktop, go to **Settings** > **Connectors** > **Browse Connectors** > **Desktop Extensions** > **Braze MCP Server** > **Install**.
+2. Enter your API key and base URL.
+3. Save the configuration and restart Claude Desktop.
 
-Replace `key-identifier` and `rest-endpoint` with the corresponding values from the **API Keys** page in Braze. Your configuration should be similar to the following:
-
-```json
-{
-  "mcpServers": {
-    "braze": {
-      "command": "uvx",
-      "args": ["--native-tls", "braze-mcp-server@latest"],
-      "env": {
-        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
-        "BRAZE_BASE_URL": "https://torchie.braze.com"
-      }
-    }
-  }
-}
-```
-
-When you're finished, save the configuration and restart Claude Desktop.
 {% endtab %}
 
 {% tab Cursor %}
@@ -302,11 +273,50 @@ Replace `key-identifier` and `rest-endpoint` with the corresponding values from 
 
 When you're finished, save the configuration and restart Cursor.
 {% endtab %}
+{% tab Gemini CLI %}
+Gemini CLI reads user settings from `~/.gemini/settings.json`. If this doesn't exist, you can create it by running the following in your terminal:
+
+```powershell
+mkdir -p ~/.gemini
+nano ~/.gemini/settings.json
+```
+
+Next, replace `yourname` with the exact string before `@BZXXXXXXXX` in your terminal prompt. Then, replace `key-identifier` and `rest-endpoint` with the corresponding values from the **API Keys** page in Braze. 
+
+Your configuration should be similar to the following:
+
+```json
+{
+  "mcpServers": {
+    "braze": {
+      "command": "/Users/yourname/.local/bin/uvx",
+      "args": ["--native-tls", "braze-mcp-server@latest"],
+      "env": {
+        "BRAZE_API_KEY": "2e8b-3c6c-d12e-bd75-4f0e2a8e5c71",
+        "BRAZE_BASE_URL": "https://torchie.braze.com"
+      }
+    }
+  }
+}
+```
+
+When you're finished, save the configuration and restart Gemini CLI. Then, in Gemini, run the following commands to verify that the Braze MCP server is listed and that the tools and schema are available for use:
+
+```powershell
+gemini
+/mcp
+/mcp desc
+/mcp schema
+```
+
+You should see the `braze` server listed with the tools and schema available for use.
+
+{% endtab %}
 {% endtabs %}
 
 ### Step 5: Send a test prompt
 
-Now that you've set up the Braze MCP server, try sending a test prompt to your MCP client. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
+After you set up the Braze MCP server, try sending a test prompt to your MCP client. For other examples and best practices, see [Using the Braze MCP server]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/usage/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/usage/){% endif %}.
 
 {% tabs %}
 {% tab Claude %}
@@ -315,6 +325,10 @@ Now that you've set up the Braze MCP server, try sending a test prompt to your M
 
 {% tab Cursor %}
 !['What are my available Braze functions' being asked and answered in Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+{% endtab %}
+
+{% tab Gemini CLI %}
+![What are my available Braze functions? being asked and answered in Gemini CLI.]({% image_buster /assets/img/mcp_server/gemini_cli/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 

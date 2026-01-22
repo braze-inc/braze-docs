@@ -9,7 +9,7 @@ tool: Currents
 
 ---
  
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel
+# [![Braze ラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"} Mixpanel
 
 > [Mixpanel](https://mixpanel.com/) はビジネス分析プラットフォームであり、Mixpanel から他のプラットフォームにイベントをエクスポートして、より深い解析を実行できます。収集されたデータは、カスタムレポートの作成やユーザーエンゲージメントとリテンションの測定に使用できます。
 
@@ -39,9 +39,9 @@ Mixpanel ダッシュボードで、新規または既存のプロジェクト�
 
 Braze で \*\*[Currents] > [**\+ Currents を作成**] > [**Mixpanel エクスポートを作成**] に移動します。表示されているフィールドに、統合名、連絡先メール、Mixpanel API シークレット、Mixpanel トークンを入力します。次に、追跡したいイベントを選択する。利用可能なイベントのリストが提供される。最後に [**Currents を起動**] をクリックします。
 
-![Braze Mixpanel Currents ページ。このページには、インテグレーションの名前、連絡先メール、APIシークレット、およびMixpanelエクスポートトークンのフィールドが含まれます。Currents ページの下半分には、送信可能なCurrents イベントが表示されている。]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
+![Braze Mixpanel Currents ページ。このページには、インテグレーションの名前、連絡先メール、APIシークレット、およびMixpanelエクスポートトークンのフィールドが含まれます。Currentsページの下半分には、送信可能なCurrentsイベントがリストされている。]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
-{% tab 注 %}
+{% tab note %}
 詳細については、Mixpanel の[統合に関するドキュメント](https://help.mixpanel.com/hc/en-us/articles/360001243663)を参照してください。
 {% endtab %}
 

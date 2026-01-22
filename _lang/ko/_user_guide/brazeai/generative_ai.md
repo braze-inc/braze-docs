@@ -1,11 +1,11 @@
 ---
-nav_title: 생성형 AI
-article_title: 생성형 AI
+nav_title: 제너레이티브 AI
+article_title: 제너레이티브 AI
 page_order: 20
 layout: dev_guide
-guide_top_header: "생성형 AI"
-guide_top_text: "<sup>BrazeAITM</sup>은 효율성과 창의성을 높이는 데 도움이 되는 다양한 자동화 생성 AI 기능을 제공합니다. 일상적인 카피라이팅 작업, 콘텐츠 개선, 이미지 제작에 소요되는 시간을 줄이면서 매력적인 크로스채널 고객 경험을 창출하세요."
-description: "<sup>BrazeAITM</sup>은 효율성과 창의성을 높이는 데 도움이 되는 다양한 자동화 생성 AI 기능을 제공합니다."
+guide_top_header: "제너레이티브 AI"
+guide_top_text: "<sup>BrazeAITM은</sup> 효율성과 창의성을 높이는 데 도움이 되는 다양한 자동화 생성 AI 기능을 제공합니다. 일상적인 카피라이팅 작업, 콘텐츠 다듬기, 이미지 제작에 소요되는 시간을 줄이면서 매력적인 크로스채널 고객 경험을 창출하세요."
+description: "<sup>BrazeAITM은</sup> 효율성과 창의성을 높이는 데 도움이 되는 다양한 자동화 생성 AI 기능을 제공합니다."
 
 guide_featured_title: "기능"
 guide_featured_list:
@@ -24,7 +24,7 @@ guide_featured_list:
 - name: SQL 쿼리 빌더
   link: /docs/user_guide/analytics/query_builder/
   image: /assets/img/braze_icons/tool-01.svg
-- name: SQL Segment Extensions
+- name: SQL 세그먼트 확장
   link: /docs/sql_segments/
   image: /assets/img/braze_icons/users-01.svg
 

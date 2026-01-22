@@ -20,5 +20,5 @@ description: "このリファレンス記事では、開封ピクセルとクリ
 
 参考までに、この情報はユーザープロファイルのメール**連絡設定**に反映され、**エンゲージメント**タブにあります。
 
-\![メール開封を送信し、ユーザーのプロファイルの「エンゲージメント」タブにある"トラッキング画素フィールドを選択します]({% image_buster /assets/img_archive/open_click_user_profile.png %}){: style="max-width:60%;"}
+![メール開封およびクリックトラッキングピクセルフィールドは、ユーザーのプロファイルのエンゲージメントタブにあります]({% image_buster /assets/img_archive/open_click_user_profile.png %}){: style="max-width:60%;"}
 

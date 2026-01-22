@@ -1,5 +1,5 @@
 ---
-nav_title: FA アイコン付き MS LP
+nav_title: FAアイコン付きMS LP
 layout: dev_guide
 
 page_order: 1.3

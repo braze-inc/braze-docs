@@ -70,7 +70,7 @@ Use Dynamic Content to target different promotions and messages to different use
 5. Set the priorities for your variations using the up and down arrows. <br><br> 
 6. Priorities determine which variation is served when a user is eligible for more than one experience.
 
-### Step 3: Integrate your Email with Braze
+### Step 3: Integrate your email with Braze
 
 This integration allows you to add personalized recommendation widgets and dynamic content powered by Dynamic Yield into your Braze email campaigns. Embedding these campaigns into Braze campaigns is done with a simple embed code that you paste into the Braze email editor.
 

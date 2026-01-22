@@ -33,7 +33,7 @@
 3. Dependendo das circunstâncias, as mensagens no app baixarão ou carregarão imagens relevantes do disco antes de serem exibidas. Se estiver em uma conexão de rede lenta ou em dispositivos de performance muito baixa, esse processo poderá demorar. Certifique-se de que suas imagens sejam otimizadas para serem tão pequenas quanto possível.
 {% endcase %}
 
-Para uma discussão mais aprofundada sobre esses cenários, visite a [seção de solução de problemas avançada](#troubleshooting-in-app-advanced).
+Para uma discussão mais aprofundada sobre esses cenários, visite a <a id="troubleshooting-in-app-advanced">seção de solução de problemas avançada</a>.
 
 ## Problemas com impressões e análise de dados de cliques
 
@@ -50,7 +50,7 @@ Se você tiver definido um delegado de mensagem no app para lidar manualmente co
 
 1. Os disparos levam tempo para serem sincronizados com o dispositivo no início da sessão, portanto, pode haver uma condição de corrida se os usuários registrarem um evento ou uma compra logo após iniciarem uma sessão. Uma possível solução alternativa poderia ser alterar a campanha para disparar a partir do início da sessão e, em seguida, segmentar o evento ou a compra pretendida. Note que isso entregaria a mensagem no app no próximo início de sessão após a ocorrência do evento.
 
-2. Se a campanha for disparada por um início de sessão ou por um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique esses dados nas páginas [Overview (Visão geral]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) ) (para dados de sessão) ou [Custom Events (Eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting) ):
+2. Se a campanha for disparada por um início de sessão ou por um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique esses dados nas páginas [Overview (Visão geral)]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (para dados de sessão) ou [Custom Events (Eventos personalizados)]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
 ![Página de eventos personalizados mostrando um gráfico do número de vezes que o evento personalizado Added to Favorites ocorreu em um período de um mês]({% image_buster /assets/img_archive/trouble5.png %})
 
@@ -64,7 +64,7 @@ Se você tiver definido um delegado de mensagem no app para lidar manualmente co
 
 ## Solução de problemas avançada {#troubleshooting-in-app-advanced}
 
-A maioria dos problemas com mensagens no app pode ser dividida em duas categorias principais: entrega e exibição. Para solucionar o motivo pelo qual uma mensagem no app esperada não foi exibida em seu dispositivo, confirme se a [mensagem no app foi entregue ao dispositivo](#troubleshooting-in-app-message-delivery) e, em seguida, [solucione o problema da exibição da mensagem](#troubleshooting-in-app-message-display).
+A maioria dos problemas com mensagens no app pode ser dividida em duas categorias principais: entrega e exibição. Para solucionar o motivo pelo qual uma mensagem no app esperada não foi exibida em seu dispositivo, confirme se a <a id="troubleshooting-in-app-message-delivery">mensagem no app foi entregue ao dispositivo</a> e, em seguida, <a id="troubleshooting-in-app-message-display">solucione o problema da exibição da mensagem</a>.
 
 ### Solução de problemas de entrega {#troubleshooting-in-app-message-delivery}
 

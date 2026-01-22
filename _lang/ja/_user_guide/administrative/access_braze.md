@@ -11,7 +11,7 @@ description: "このランディングページには、Braze アカウントま
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Braze のナビゲーション
+- name: Brazeをナビゲートする
   link: /docs/user_guide/administrative/access_braze/navigation/
   image: /assets/img/braze_icons/list.svg
 - name: ダッシュボードを検索する
@@ -20,7 +20,7 @@ guide_featured_list:
 - name: API と SDK のエンドポイント
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
-- name: アカウントへのアクセス
+- name: アカウントにアクセスする
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
   image: /assets/img/braze_icons/user-circle.svg
 - name: 言語設定

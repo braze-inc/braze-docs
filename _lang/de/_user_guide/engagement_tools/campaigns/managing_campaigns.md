@@ -12,9 +12,6 @@ description: "Diese Landing Page behandelt die Verwaltung von Kampagnen. Hier fi
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-  - name: Kopieren über Arbeitsbereiche hinweg
-    link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/copying_to_workspace
-    image: /assets/img/braze_icons/copy-04.svg
   - name: Ändern Sie Ihre Kampagne nach dem Start
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/
     image: /assets/img/braze_icons/edit-05.svg
@@ -30,9 +27,15 @@ guide_menu_list:
   - name: Genehmigungs-Workflow
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
+  - name: Messaging-Regeln für die Freigabe
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    image: /assets/img/braze_icons/check-square.svg
   - name: Kampagnen archivieren
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Kopieren über Arbeitsbereiche hinweg
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Kampagnen duplizieren
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg

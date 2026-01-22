@@ -20,7 +20,7 @@ Sie können die Details Ihrer Kampagne oder Ihres Canvas im letzten Schritt Ihre
 Wenn Ihr Administrator den Genehmigungs-Workflow aktiviert hat, muss jeder Abschnitt der Zusammenfassung von einem Nutzer:innen mit den entsprechenden Rechten genehmigt werden, bevor die Nachricht gestartet werden kann. Der Standard-Status für jeden Abschnitt ist " **Pending Approval"**.
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab campaign %}
 Um eine Kampagne einführen zu können, müssen Sie diese Schlüsselkomponenten genehmigen:
 
 - **Nachrichten:** Dies ist die Nachricht der Kampagne.
@@ -29,7 +29,7 @@ Um eine Kampagne einführen zu können, müssen Sie diese Schlüsselkomponenten 
 - **Konversions-Events:** Dies ist die Metrik, die Sie für das Engagement und die Berichterstattung tracken.
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 Um ein Canvas zu starten, müssen Sie diese Schlüsselkomponenten genehmigen:
 
 - **Konversions-Events:** Dies ist die Metrik, die Sie für das Engagement und die Berichterstattung tracken.
@@ -43,8 +43,8 @@ Um ein Canvas zu starten, müssen Sie diese Schlüsselkomponenten genehmigen:
 ## Einschalten des Genehmigungs-Workflows
 
 Standardmäßig ist die Einstellung für den Genehmigungs-Workflow für Kampagnen und Canvase deaktiviert. Um dieses Feature zu aktivieren, gehen Sie zu **Einstellungen** > **Genehmigungs-Workflow** und wählen Sie das entsprechende Umschalten aus:
-- **Verwenden Sie den Genehmigungsworkflow für alle Kampagnen in [Ihrem Workspace]**
-- **Genehmigungsworkflow für alle Canvase in [Ihrem Workspace] verwenden]**
+- **Genehmigungsworkflow für alle Kampagnen in [Ihrem Workspace] verwenden**
+- **Genehmigungs-Workflow für alle Canvase in [Ihrem Workspace] verwenden**
 
 {% alert important %}
 Die Genehmigung von Kampagnen wird im Erstellungsworkflow für [API-Kampagnen]({{site.baseurl}}/api/api_campaigns) und [Transaktions-E-Mail-Kampagnen]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign) nicht unterstützt.
@@ -55,11 +55,11 @@ Die Genehmigung von Kampagnen wird im Erstellungsworkflow für [API-Kampagnen]({
 Nachdem der Genehmigungs-Workflow aktiviert wurde, müssen Sie die Nutzer:innen des Dashboards dazu berechtigen, die Kampagnen und Canvase sofort zu genehmigen oder abzulehnen. Beide Berechtigungen können auch auf Workspaces oder [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) angewendet oder zu einem [Berechtigungssatz]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#permission-sets) hinzugefügt werden.
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab campaign %}
 Sie müssen über die [ Berechtigung "Kampagnen genehmigen und ablehnen"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions) verfügen. Diese Berechtigung steuert, wer den Genehmigungsstatus einer Kampagne aktualisieren kann. Es ist möglich, Komponenten einer Kampagne selbst zu genehmigen.
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 Sie müssen über die [ Berechtigung "Canvase genehmigen und ablehnen"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions) verfügen. Ein Benutzer mit dieser Berechtigung kann jede der folgenden Aktionen im Canvas-Workflow ausführen:
 
 - Genehmigen Sie das Canvas, aber starten Sie es nicht

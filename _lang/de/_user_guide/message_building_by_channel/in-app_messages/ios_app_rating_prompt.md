@@ -24,7 +24,7 @@ Apple verlangt zwar, dass Sie die systemeigene Eingabeaufforderung verwenden, ab
 
 Mit diesem Ansatz möchten Sie die Benutzer dazu ermutigen, den App Store zu besuchen, um eine Bewertung abzugeben. Erstellen Sie dazu eine In-App-Kampagne, die [Deeplinks]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) zum App Store enthält.
 
-![Zwei mobile Bildschirme nebeneinander. Die erste ist eine In-App-Nachricht, die den Benutzer auffordert, die App im App Store zu bewerten. Die zweite ist die iOS App Store Seite für diese App.][1]
+![Zwei mobile Bildschirme nebeneinander. Die erste ist eine In-App-Nachricht, die den Benutzer auffordert, die App im App Store zu bewerten. Die zweite ist die iOS App Store Seite für diese App.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Ansatz 2: Soft Priming
 
@@ -32,7 +32,7 @@ Wenn Sie nicht möchten, dass Nutzer:innen Ihre App verlassen, können Sie sie z
 
 Detaillierte Schritte finden Sie unter [Aufforderung zur Überprüfung im App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![Zwei In-App-Nachrichten nebeneinander. Die erste veranlasst den Benutzer, die App zu bewerten, indem er gefragt wird, ob er einen Moment Zeit hat, die App zu bewerten. Die zweite ist die native iOS App Store-Bewertungs-Prompt, die eine Skala von fünf Sternen anzeigt, die der oder die Nutzer:in auswählen kann, um die App zu bewerten.][2]
+![Zwei In-App-Nachrichten nebeneinander. Die erste veranlasst den Benutzer, die App zu bewerten, indem er gefragt wird, ob er einen Moment Zeit hat, die App zu bewerten. Die zweite ist die native iOS App Store-Bewertungs-Prompt, die eine Skala von fünf Sternen anzeigt, die der oder die Nutzer:in auswählen kann, um die App zu bewerten.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 Die Benutzer geben eine Bewertung über die native App Store-Bewertungsabfrage ab und können eine Bewertung schreiben und abgeben, ohne die App zu verlassen.
 
@@ -44,5 +44,3 @@ Als Alternative zum Soft Priming können Sie auch direkt die Bewertungsaufforder
 Erstellen Sie keine angepassten HTML-In-App-Nachrichten, die einen nativen iOS-App-Bewertungs-Prompt imitieren, da dies gegen die Richtlinien von Apple verstößt.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}

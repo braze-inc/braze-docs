@@ -44,8 +44,6 @@ https://rest.iad-01.braze.com/purchases/product_list?page=1
 ## Response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "products": [
     "product_name" (string), the name of the product

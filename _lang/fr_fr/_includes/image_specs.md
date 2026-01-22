@@ -61,7 +61,7 @@ Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une tail
 
 | Type | Rapport hauteur/largeur | Qualité de l’image | Remarques |
 | --- | --- | --- | --- |
-| Modale (image seulement) | 1:1 | Haute résolution 1200 x 2000 px <br> Résolution minimale 600 x 600 px | Le message sera redimensionné pour s’adapter à la plupart des tailles d'image. |
+| Modale (image seulement) | 1:1 | Résolution maximale recommandée : 1200 x 2000 px <br> Résolution minimale : 600 x 600 px | Le message sera redimensionné pour s’adapter à la plupart des tailles d'image. La résolution maximale recommandée a un rapport hauteur/largeur de 3:5, ce qui peut ne pas donner des résultats optimaux. Bien que les images plus grandes soient utilisables, elles peuvent entraîner des temps de chargement plus longs. <br> Le rapport hauteur/largeur idéal pour les images est de 1:1\. Le non-respect de ce rapport peut déclencher un avertissement lors du téléchargement. Cet avertissement est une suggestion pour de meilleurs résultats et n'empêche pas le téléchargement d'images plus grandes. |
 | Fenêtre modale avec texte | 29:10 | Haute résolution 1450 x 500 px <br> Résolution minimale 600 x 205 px | Les images hautes seront réduites et centrées horizontalement. Les images larges seront rognées sur les bords gauche et droit. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -90,47 +90,52 @@ table td {
 </style>
 
 <table>
-  <tr>
-    <th>Type d’image</th>
-    <th>Rapport hauteur/largeur</th>
-    <th>Qualité de l’image</th>
-    <th>Taille maximale de l'image</th>
-    <th>Types de fichier</th>
-    <th>Remarques</th>
-  </tr>
-  <tr>
-    <td>iOS</td>
-    <td>2:1 (recommandé)</td>
-    <td>1038 x 1038 px maximum</td>
-    <td>5 MB</td>
-    <td>PNG, JPEG, GIF</td>
-    <td>À compter du mois de janvier 2020, les notifications push enrichies pour iOS peuvent gérer des images de 1 038 x1 038 px tant que leur taille est inférieure à 10 Mo, mais nous recommandons d’utiliser des fichiers aussi petits que possible. En pratique, l’envoi de fichiers volumineux peut entraîner une surcharge inutile du réseau et rendre les échecs de téléchargement plus courants.<br><br>Pour plus d'informations, consultez la rubrique <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">Notifications enrichies pour iOS</a>.</td>
-  </tr>
-  <tr>
-    <td>Icône push Android</td>
-    <td>1:1</td>
-    <td>N/A</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Image de notification élargie sous Android</td>
-    <td>2:1</td>
-    <td>Petites : 512 x 256 px<br>Intermédiaire : 1024 x 512 px<br>Grandes : 2048 x 1024 px</td>
-    <td>500 KB</td>
-    <td>PNG, JPEG</td>
-    <td>Utilisé dans les <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">notifications riches d'Android</a>.</td>
-  </tr>
-  <tr>
-    <td>Image d'inclinaison Android</td>
-    <td>3:2</td>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>PNG, JPEG</td>
-    <td>Pour plus de détails, consultez la section <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Notifications push d’images insérées pour Android</a>.</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Type d’image</th>
+      <th>Rapport hauteur/largeur</th>
+      <th>Pixels maximums</th>
+      <th>Taille maximale de l'image</th>
+      <th>Types de fichier</th>
+      <th>Remarques</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iOS</td>
+      <td>2:1 (recommandé)</td>
+      <td>1038 x 1038</td>
+      <td>5 MB</td>
+      <td>PNG, JPEG, GIF</td>
+      <td>À compter du mois de janvier 2020, les notifications push enrichies pour iOS peuvent gérer des images de 1 038 x1 038 px tant que leur taille est inférieure à 10 Mo, mais nous recommandons d’utiliser des fichiers aussi petits que possible. En pratique, l’envoi de fichiers volumineux peut entraîner une surcharge inutile du réseau et rendre les échecs de téléchargement plus courants.<br><br>Pour plus d'informations, consultez la rubrique <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/">Notifications enrichies pour iOS</a>.</td>
+    </tr>
+    <tr>
+      <td>Icône push Android</td>
+      <td>1:1</td>
+      <td>N/A</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Image de notification élargie sous Android</td>
+      <td>2:1</td>
+      <td><b>Petites :</b><br>512 x 256<br><br><b>Intermédiaire :</b><br>1024 x 512<br><br><b>Grandes :</b><br>2048 x 1024</td>
+      <td>500 KB</td>
+      <td>PNG, JPEG</td>
+      <td>Utilisé dans les <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/">notifications riches d'Android</a>.</td>
+    </tr>
+    <tr>
+      <td>Image d'inclinaison Android</td>
+      <td>3:2</td>
+      <td>N/A</td>
+      <td>S.O.</td>
+      <td>PNG, JPEG</td>
+      <td>Pour plus de détails, consultez la section <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/inline_image_push/">Notifications push d’images insérées pour Android</a>.</td>
+    </tr>
+  </tbody>
 </table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4  .reset-td-br-5 .reset-td-br-6 role="presentation"}
 
 {% endif %}
 

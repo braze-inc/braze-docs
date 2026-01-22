@@ -50,10 +50,6 @@ description: "Essa landing page é o lar de todos os assuntos relacionados a not
 {% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/push_notifications.md %}
-{% endsdktab %}
-
 {% sdktab xamarin %}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}

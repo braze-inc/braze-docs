@@ -24,11 +24,11 @@ Nach dem SDK-Upgrade muss auch ein Upgrade der Nutzer-App durchgeführt werden. 
 ## Übersicht
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 Sie können wählen, wann Braze eine Karte im Schritt **Zustellung** erstellt, wenn Sie eine neue [Content Card Kampagne]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) mit geplanter Zustellung erstellen.
 
-![Unter Content-Card-Einstellungen bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation.png %})
+![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation.png %})
 
 Die folgenden Optionen sind verfügbar:
 
@@ -42,7 +42,7 @@ Unabhängig von der von Ihnen gewählten Option beginnt der Countdown für das A
 
 Sie können wählen, wann Braze eine Karte auf der Registerkarte **Nachrichtenkanäle** eines [Inhaltskarten-Nachrichtenschritts]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) erstellt.
 
-![Unter Content-Card-Einstellungen bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
+![Abschnitt Content-Card-Steuerung bei der Bearbeitung der Zustellung einer geplanten Content-Card.]({% image_buster /assets/img_archive/card_creation_canvas.png %})
 
 Die folgenden Optionen sind verfügbar:
 
@@ -89,7 +89,7 @@ In diesem Abschnitt werden die wichtigsten Unterschiede zwischen der Kartenerste
   <tr>
     <td class="leftHeader">Zielgruppe</td>
     <td class="tg-0pky">Braze wertet die Zielgruppenzugehörigkeit aus, wenn die Kampagne gesendet wird.<br><br>Neue und anonyme Nutzer:innen werden nicht auf ihre Zielgruppenzugehörigkeit hin geprüft, wenn sie versuchen, die Karte nach dem Kampagnenversand anzusehen. Bei wiederkehrenden Kampagnen erfolgt dies im nächsten Wiederholungsintervall.</td>
-    <td class="tg-0pky">Braze ermittelt die Zielgruppenzugehörigkeit, wenn Ihre App das nächste Mal geöffnet wird (Sitzungsbeginn, <a href="#campaign_note">nur Kampagnen*</a>).<br><br> Diese Einstellung hat eine größere Reichweite, da neue oder anonyme Benutzer immer auf ihre Berechtigung geprüft werden, wenn sie versuchen, die Karte einzusehen. Außerdem erfolgt kein Rate-Limiting (Begrenzung der Empfängeranzahl), wenn "erste Impression" eingestellt ist<a href="#campaign_note">(nur Kampagnen*</a>).</td>
+    <td class="tg-0pky">Braze ermittelt die Zielgruppenzugehörigkeit, wenn Ihre App das nächste Mal geöffnet wird (Sitzungsbeginn, <a href="#campaign_note">nur Kampagnen*</a>).<br><br> Diese Einstellung hat eine größere Reichweite, da neue oder anonyme Benutzer immer auf ihre Berechtigung geprüft werden, wenn sie versuchen, die Karte einzusehen. <br><br>Außerdem ist das Rate-Limiting (Begrenzung der Anzahl der Personen, die die Karte erhalten) nicht anwendbar, wenn es auf den ersten Eindruck eingestellt ist.</td>
   </tr>
   <tr>
     <td class="leftHeader">Personalisierung</td>
@@ -127,6 +127,3 @@ Wenn Karten beim ersten Abdruck erstellt werden, kann es 1-2 Sekunden dauern, bi
 
 Wenn die Nutzer-App eine ältere SDK-Version verwendet, werden Content-Cards je nach Erstellungsart dennoch gesendet. Allerdings dauert es dann länger, bis die Karten erscheinen – manchmal bis zur nächsten Content-Card-Synchronisierung.
 
-[1]: {% image_buster /assets/img_archive/card_creation.png %}
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/
-[3]: https://www.braze.com/resources/articles/whats-an-app-session-anyway

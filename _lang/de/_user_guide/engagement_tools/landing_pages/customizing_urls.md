@@ -13,6 +13,8 @@ page_order: 1
 
 Wenn Sie [Ihre Domain mit Braze verbinden](#connecting-your-domain-to-braze), wird sie als Standard Domain für alle Landing Pages verwendet. Wenn Sie beispielsweise die Subdomain `forms.example.com` einbinden, würden Ihre Landing Page URLs nun `forms.example.com/holiday-sale` lauten.
 
+Die Anzahl der angepassten Domains, die Sie mit Ihrem Braze-Konto verbinden können, hängt von Ihrer [Tarifstufe]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/#plan-tiers) ab. Um Ihr Limit zu erhöhen, wenden Sie sich an Ihren Braze-Konto Manager:in.
+
 ## Ihre Domain mit Braze verbinden
 
 Um eine Domain mit Ihrem Braze-Konto zu verbinden, lassen Sie einen Administrator die folgenden Schritte ausführen.
@@ -22,7 +24,7 @@ Um eine Domain mit Ihrem Braze-Konto zu verbinden, lassen Sie einen Administrato
 3. Kopieren Sie die **TXT-** und **CNAME-Einträge** und fügen Sie sie in die DNS-Einstellungen Ihres Domain-Providers ein.
 4. Kehren Sie zum Braze-Dashboard zurück, um die Verbindung zu überprüfen.
 
-![Seite „Startseiteneinstellungen“ mit einem TXT- und zwei CNAME-Einträgen, die mit ihren jeweiligen Namen und Werten aufgeführt sind.][1]
+![Landing Page-Einstellungsseite mit einem TXT- und zwei CNAME-Einträgen, die mit ihren jeweiligen Namen und Werten aufgeführt sind.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Je nach Ihrem Domainanbieter kann die Verbindung bis zu 48 Stunden dauern. Wenn der Prozess abgeschlossen ist, verwenden wir Ihre benutzerdefinierte Domain für Ihre Landing Pages im Braze Dashboard.
@@ -71,4 +73,3 @@ Nein, Sie können derzeit nur eine Subdomain mit einem Arbeitsbereich verbinden.
 
 Nein, Sie können keine Subdomains verwenden, die bereits in Gebrauch sind. Diese Subdomains sind zwar gültig, können aber nicht für Landing Pages verwendet werden, wenn sie bereits anderen Zwecken zugewiesen sind oder DNS-Einträge haben, die mit den erforderlichen CNAME-Einträgen in Konflikt stehen.
 
-[1]: {% image_buster /assets/img/landing_pages/connect_subdomain.png %}

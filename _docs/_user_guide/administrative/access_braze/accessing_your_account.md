@@ -1,13 +1,13 @@
 ---
-nav_title: Accessing your account
-article_title: Accessing Your Account
-page_order: 2
+nav_title: Access your account
+article_title: Access Your Account
+page_order: 0
 page_type: reference
 description: "This article covers how to get your Braze account, how to log in after granted access, and how to go about resetting your Braze password."
 
 ---
 
-# Accessing your account
+# Access your account
 
 > This article covers how to get your Braze account, how to log in after being granted access, and how to troubleshoot your dashboard access and dashboard performance.
 
@@ -130,11 +130,11 @@ An admin should reset the 2FA for the affected user by doing the following:
 4. Confirm the 2FA reset when prompted.
 5. If the reset doesn't immediately resolve the issue, clear your cookies and cache.
 
-Braze cannot reset 2FA on behalf of users for security reasons, so if the admin is unable to reset 2FA, a support ticket should be created.
+Braze cannot reset 2FA on behalf of users for security reasons, so if the admin is unable to reset 2FA, create a support ticket.
 
 #### Considerations
 
-- If 2FA is enforced at the company level: After the reset, the user will be prompted to set up their 2FA again the next time they log in.
+- If 2FA is enforced at the company level: After the reset, Braze prompts the user to set up their 2FA again the next time they log in.
 - If 2FA is not enforced at the company level: The user will log into the dashboard without needing to set up 2FA again. If they wish to enable 2FA, they can do so in Account Settings.
 
 {% alert note %}

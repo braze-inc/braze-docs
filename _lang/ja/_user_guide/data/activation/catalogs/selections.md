@@ -11,7 +11,7 @@ description: "この記事では、Braze キャンペーンでデータを参照
 
 [カタログ]({{site.baseurl}}/user_guide/data/activation/catalogs/)を作成した後、Braze キャンペーンや推奨事項にセレクションを組み込むことで、カタログデータをさらに参照することができます。
 
-\![サンプルカタログの選択部分。]({% image_buster /assets/img_archive/catalog_selections1.png %})
+![カタログ例の「セレクション」セクション。]({% image_buster /assets/img_archive/catalog_selections1.png %})
 
 ## 知っておくべきこと
 
@@ -44,7 +44,7 @@ description: "この記事では、Braze キャンペーンでデータを参照
 これらのフィルター設定ではコネクテッドコンテンツLiquidはサポートされていません。
 {% endalert %}
 
-\![属性がリキッドカスタム属性に設定されているカタログ選択の設定をフィルターします。]({% image_buster /assets/img_archive/catalog_selections7.png %})
+![属性がリキッドカスタム属性に設定されているカタログ選択のフィルタ設定。]({% image_buster /assets/img_archive/catalog_selections7.png %})
 
 ## メッセージングで選択範囲を使用する
 
@@ -58,7 +58,7 @@ description: "この記事では、Braze キャンペーンでデータを参照
 5. **表示する情報**」では、カタログのどのフィールドを各アイテムに含めるかを選択する。
 6. [**コピー**] アイコンを選択し、メッセージ内の必要な場所に Liquid を貼り付けます。
 
-\![パーソナライゼーションの追加モーダルには、次の選択肢があります。"Catalog Items" for "Personalization Type", "Games" for "Catalog Name", "Selections" for "Selection Type", "game_selection" for "Selection", and "title" and "description_en" for "Information to Display".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
+![以下のセレクションがある「パーソナライゼーションの追加」モーダル: "Catalog Items" for "Personalization Type", "Games" for "Catalog Name", "Selections" for "Selection Type", "game_selection" for "Selection", and "title" and "description_en" for "Information to Display".]({% image_buster /assets/img_archive/catalog_selections6.png %}){: style="max-width:70%;"}
 
 ## ユースケース
 
@@ -66,18 +66,18 @@ description: "この記事では、Braze キャンペーンでデータを参照
 
 食事宅配サービスの食事名、価格、画像、食事のカテゴリーなどの情報をカタログに使用し、ユーザーが最近閲覧したカテゴリーに基づいて3つの食事を推薦するセレクションを作成することができる。
 
-\![2つのフィルターsを持つ食事配送サービスの選択例:食事として商品の種類を識別するものと、最後に表示されたカテゴリを識別するもの。セレクションは、3つの結果が返される順番がランダムになるように設定されている。]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
+![食事宅配サービスの選択例で、2つのフィルターがある。1つは商品タイプを食事として識別するもの、もう1つはカテゴリーを最近閲覧されたものとして識別するものである。セレクションは、3つの結果が返される順番がランダムになるように設定されている。]({% image_buster /assets/img_archive/catalog_selections2.png %}){: style="max-width:90%;"}
 
 このカタログと選択をキャンペーンで使用するには、キャンペーンを構築する際のメッセージ構成セクションで**パーソナライゼーションの追加**モーダルを使用する。この例では、食事宅配サービスの情報が掲載されたカタログと、最近閲覧したカテゴリーに基づく食事の推薦を選択した。これにより、食事名と価格を表示することができます。メッセージをさらに構築するには、セレクションを使って最初のおすすめ料理の画像を追加することもできます。
 
-\![ヘッダー &quot を含むコンテンツカード。メッセージ構成セクションで"recommendations_be_recent_category" を選択して、これらの高評価の食事を愛します!&quot。]]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
+![ヘッダー &quot を含むコンテンツカード。メッセージコンポジションセクションで"recommendations_be_recent_category" を選択して、これらの高評価の食事を愛します!"。]({% image_buster /assets/img_archive/catalog_selections3.png %}){: style="max-width:90%;"}
 
 例えば、最近見たカテゴリーが「チキン」であるユーザーがいるとする。設定されたパーソナライゼーションとコンテンツカードキャンペーンを使って、このユーザーにチキンを含む3つのおすすめ料理を送ることができる。
 
-\![チャーグリルレモンチキンを"画像したコンテンツカードと、ユーザーの直近の視聴カテゴリーに基づいた鶏肉を含む3つの食事の推薦の一覧。]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
+![チャーグリルのレモンチキンを"画像したコンテンツカードと、ユーザーの直近の観賞カテゴリーに基づいた鶏肉を含む3つの食事の推薦の一覧。]({% image_buster /assets/img_archive/catalog_selections4.png %}){: style="max-width:90%;"}
 
 同じパーソナライゼーションを使えば、最近見たカテゴリーが「牛肉」であるユーザーに対して、おすすめの食事を3つ送ることもできる。
 
-\![牛肉ストロガノフの"画像付きコンテンツカード、およびユーザーの直近に閲覧されたカテゴリーに基づく牛肉を含む2つの食事推奨の一覧。]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
+![ビーフ・ストロガノフの画像を使ったコンテンツ・カードと、ユーザーが最近見たカテゴリーに基づいた、ビーフを含むおすすめ料理2品のリスト。]({% image_buster /assets/img_archive/catalog_selections5.png %}){: style="max-width:90%;"}
 
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-article_title: Troubleshooting Segments
+article_title: Troubleshoot Segments
 page_order: 12
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "This reference article covers troubleshooting steps and considerations to keep in mind while using segments."
 ---
 
-# Troubleshooting segments
+# Troubleshoot segments
 
 ## Errors
 
@@ -39,22 +39,14 @@ This banner displays at the top of a campaign or Canvas list whenever active or 
 
 ![Error banner that says 4 active or stopped Canvases exceed the audience complexity threshold.]({% image_buster /assets/img/segment/audience_complexity_threshold_banner.png %})
 
-### Filter exceeds 10,000 characters or is too long to save
+### Filter exceeds 10,000 bytes or is too long to save
 
-Braze limits individual segment filters to a maximum of 10,000 characters. A warning appears whenever an individual filter exceeds 10,000 characters, whether the filter is within a segment or added directly to campaign or Canvas. 
-
-{% tabs %}
-{% tab Segment error %}
+Braze limits individual segment filters to a maximum of 10,000 bytes, which is equivalent to 10,000 English characters or 3,333 Japanese characters. A warning appears whenever an individual filter exceeds 10,000 bytes, whether the filter is within a segment or added directly to campaign or Canvas. 
 
 ![Error banner for a filter that has a value that exceeds 10,000 characters.]({% image_buster /assets/img/segment/filter_error.png %})
 
-{% endtab %}
-{% tab Canvas or campaign error %}
-
 ![Error for a custom attribute filter, `menu_item`, which has an attribute value that exceeds 10,000 characters.]({% image_buster /assets/img/segment/segment_filter_error.png %})
 
-{% endtab %}
-{% endtabs %}
 
 This error occurs very rarely, but when it does occur, it’s typically with regex filters that target a list of user IDs or email addresses. In that case, you can follow these steps to convert the filters to a CSV:
 

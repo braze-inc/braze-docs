@@ -1,4 +1,4 @@
-{% details テンプレートを表示 %}
+{% details Show template %}
 {% raw %}
 `````markdown
 ---

@@ -2,9 +2,25 @@
 
 ## Standard-Nutzerattribute
 
+### Vordefinierte Methoden
+
+Braze stellt vordefinierte Methoden zum Festlegen der folgenden Nutzerattribute in der [Klasse `User`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) bereit:
+
+- Vorname
+- Nachname
+- Sprache
+- Land
+- Geburtsdatum
+- E-Mail
+- Geschlecht
+- Heimatstadt
+- Telefonnummer
+
+### Einstellung von Standardattributen
+
 {% tabs %}
-{% tab Standardimplementierung %}
-Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `getCurrentUser()` auf Ihrer Braze-Instanz auf, um eine Referenz auf den aktuellen Nutzer:innen Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
+{% tab Methoden verwenden %}
+Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `getUser()` auf Ihrer Braze-Instanz auf, um eine Referenz auf den aktuellen Nutzer:innen Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
 
 {% subtabs local %}
 {% subtab First name %}
@@ -38,22 +54,34 @@ window.braze.getUser().setGender("f")
 {% endtab %}
 {% endtabs %}
 
-Braze stellt vordefinierte Methoden zum Festlegen der folgenden Nutzerattribute in der [Klasse `User`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) bereit:
+### Standardattribute zurücksetzen
 
-- Vorname
-- Nachname
-- Sprache
-- Land
-- Geburtsdatum
-- E-Mail
-- Geschlecht
-- Heimatstadt
-- Telefonnummer
+Um ein Standardattribut für Nutzer:innen zu deaktivieren, übergeben Sie `null` an die entsprechende Methode. Zum Beispiel:
+
+{% tabs local %}
+{% tab Vorname %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endtab %}
+{% tab Geschlecht %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endtab %}
+{% tab Geburtsdatum %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endtab %}
+{% endtabs %}
 
 ## Angepasste Nutzerattribute
 
+### Anpassen der Attribute
+
 {% tabs %}
-{% tab Standardimplementierung %}
+{% tab Methoden verwenden %}
 Zusätzlich zu den Standardattributen können Sie auch [angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) für Ihre Nutzer:innen festlegen. Die vollständigen Spezifikationen der Methode finden Sie in [unseren JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
@@ -154,12 +182,28 @@ Die GTM-Vorlage unterstützt keine verschachtelten Eigenschaften für Ereignisse
 {% endtab %}
 {% endtabs %}
 
-### Zurücksetzen eines benutzerdefinierten Attributs
+### Angepasste Attribute nicht anpassen
 
-Angepasste Attribute können deaktiviert werden, indem ihr Wert auf `null` gesetzt wird.
+Um ein angepasstes Attribut zu deaktivieren, übergeben Sie `null` an die entsprechende Methode.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
+```
+
+### Verschachtelte angepasste Attribute
+
+Sie können auch Eigenschaften innerhalb angepasster Attribute verschachteln. Im folgenden Beispiel wird ein `favorite_book` Objekt mit verschachtelten Eigenschaften als angepasstes Attribut auf das Nutzerprofil gesetzt. Weitere Einzelheiten finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const favoriteBook = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publishing_date: "1937"
+};
+
+braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
 ```
 
 ### Verwendung der REST API

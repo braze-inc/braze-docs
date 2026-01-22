@@ -33,7 +33,7 @@
 3. Je nach den Umständen laden In-App-Nachrichten die entsprechenden Bilder vor der Anzeige entweder herunter oder laden sie von der Festplatte. Wenn Sie über eine langsame Netzwerkverbindung oder ein sehr leistungsschwaches Gerät verfügen, kann dieser Vorgang einige Zeit dauern. Achten Sie darauf, dass Ihre Bilder so klein wie möglich sind.
 {% endcase %}
 
-Eine ausführlichere Diskussion dieser Szenarien finden Sie im [Abschnitt Erweiterte Fehlerbehebung](#troubleshooting-in-app-advanced).
+Eine ausführlichere Diskussion dieser Szenarien finden Sie im <a id="troubleshooting-in-app-advanced">Abschnitt Erweiterte Fehlerbehebung</a>.
 
 ## Probleme mit Impressionen und Click Analytics
 
@@ -64,7 +64,7 @@ Wenn Sie einen Delegaten für In-App-Nachrichten so eingestellt haben, dass er d
 
 ## Erweiterte Fehlerbehebung {#troubleshooting-in-app-advanced}
 
-Die meisten Probleme mit In-App-Nachrichten lassen sich in zwei Hauptkategorien unterteilen: Zustellung und Anzeige. Um herauszufinden, warum eine erwartete In-App-Nachricht nicht auf Ihrem Gerät angezeigt wurde, bestätigen Sie, dass die [In-App-Nachricht an das Gerät übermittelt wurde](#troubleshooting-in-app-message-delivery), und [beheben Sie dann das Problem mit der Anzeige der Nachricht](#troubleshooting-in-app-message-display).
+Die meisten Probleme mit In-App-Nachrichten lassen sich in zwei Hauptkategorien unterteilen: Zustellung und Anzeige. Um herauszufinden, warum eine erwartete In-App-Nachricht nicht auf Ihrem Gerät angezeigt wurde, bestätigen Sie, dass die <a id="troubleshooting-in-app-message-delivery">In-App-Nachricht an das Gerät übermittelt wurde</a>, und <a id="troubleshooting-in-app-message-display">beheben Sie dann das Problem mit der Anzeige der Nachricht</a>.
 
 ### Fehlerbehebung bei der Zustellung {#troubleshooting-in-app-message-delivery}
 

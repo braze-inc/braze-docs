@@ -79,55 +79,6 @@ Con los botones de acción de notificación, las intenciones `BRAZE_PUSH_INTENT_
 Crea tu receptor de notificaciones push en `Application.onCreate` para asegurarte de que se desencadena cuando un usuario final toca una notificación mientras tu aplicación está en estado finalizado.
 {% endalert %}
 
-## Fuentes personalizadas
-
-### Paso 1: Crear una familia tipográfica
-
-A continuación se muestra un ejemplo de definición de familia de fuentes personalizada utilizando la [guía de familias de fuentes](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family). Para este ejemplo, utilizamos la [fuente Bungee Shade](https://fonts.google.com/specimen/Bungee+Shade).
-
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <!--Note: You must declare both sets of attributes
-      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
-
-  <font android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="@font/bungeeshade"
-
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:font="@font/bungeeshade"/>
-</font-family>
-```
-
-Después de almacenar la definición de la familia tipográfica en `/res/font/bungee_font_family.xml`, podemos referirnos a ella en XML como `@font/bungee_font_family`.
-
-### Paso 2: Haz referencia a tu familia tipográfica
-
-Ahora que la familia de fuentes está creada, puedes anular los predeterminados de estilo Braze en tu `styles.xml` para incluir referencias a la familia de fuentes.
-
-Por ejemplo, la siguiente sustitución de estilos utilizaría la familia de fuentes `bungee` para todos los mensajes dentro de la aplicación Braze.
-
-```html
-<style name="Braze.InAppMessage">
-  <item name="android:fontFamily">@font/bungee_font_family</item>
-  <item name="fontFamily">@font/bungee_font_family</item>
-</style>
-
-<style name="Braze.Cards">
-  <item name="android:fontFamily">@font/another_custom_font_family</item>
-  <item name="fontFamily">@font/another_custom_font_family</item>
-</style>
-```
-
-{% alert warning %}
-Ambos atributos de estilo `android:fontFamily` y `fontFamily` deben estar configurados para mantener la compatibilidad en todas las versiones del SDK.
-{% endalert %}
-
 ## Personalizar la visualización de notificaciones {#customization-display}
 
 ### Paso 1: Crea tu fábrica de notificaciones personalizada
@@ -224,9 +175,9 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## Renderizado del texto multiplicador
+## Renderizado de texto multicolor
 
-En la versión 3.1.1 del SDK de Braze, se puede enviar HTML a un dispositivo para mostrar texto multiplicador en las notificaciones push.
+En la versión 3.1.1 del SDK de Braze, se puede enviar HTML a un dispositivo para mostrar texto multicolor en las notificaciones push.
 
 ![Un mensaje push de Android "Mensaje de prueba push multicolor" en el que las letras son de distintos colores, están en cursiva y tienen un color de fondo.]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
@@ -387,7 +338,7 @@ Puedes mostrar una imagen más grande dentro de tu notificación push de Android
 
 ### Compatibilidad
 
-Aunque puedes enviar imágenes en línea a cualquier dispositivo, los dispositivos y SDK que no cumplan las versiones mínimas mostrarán en su lugar una imagen estándar. Para que las imágenes en línea se muestren correctamente, se necesita el SDK de Android Braze v10.0.0+ y un dispositivo que ejecute Android M+.
+Aunque puedes enviar imágenes en línea a cualquier dispositivo, los dispositivos y SDK que no cumplan las versiones mínimas mostrarán en su lugar una imagen estándar. Para que las imágenes en línea se muestren correctamente, se necesita el SDK de Android Braze v10.0.0+ y un dispositivo que ejecute Android M+. El SDK también debe estar habilitado para que la imagen se renderice.
 
 {% alert note %}
 Los dispositivos con Android 12 se mostrarán de forma diferente debido a los cambios en los estilos personalizados de las notificaciones push.
@@ -421,13 +372,13 @@ El campo **Tiempo de vida** (TTL) te permite establecer un tiempo personalizado 
 
 El texto de resumen te permite establecer texto adicional en la vista ampliada de notificaciones. También sirve como pie de foto para las notificaciones con imágenes.
 
-![Un mensaje Android con el título "¡Saludos de Appboy!", el mensaje "¡Este es el cuerpo del mensaje! Incluso puedes añadir emojis." y texto resumen "Este es el texto resumen."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Un mensaje Android con el título "Este es el título de la notificación" y el texto resumen "Este es el texto resumen de la notificación"]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-El texto resumido se mostrará bajo el cuerpo del mensaje en la vista ampliada.
+El texto resumido se mostrará bajo el cuerpo del mensaje en la vista ampliada. 
+
+![Un mensaje Android con el título "Este es el título de la notificación" y el texto resumen "Este es el texto resumen de la notificación"]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Para las notificaciones push que incluyan imágenes, el texto del mensaje se mostrará en la vista contraída, mientras que el texto del resumen se mostrará como pie de imagen cuando se expanda la notificación. 
-
-![Un mensaje Android con el título "Appboy!", el mensaje "Este es el cuerpo del mensaje.." y el texto de resumen "y este es el Texto de Resumen".]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### URIs personalizadas {#custom-uri}
 
@@ -445,7 +396,7 @@ El nivel de prioridad de una notificación push afecta a cómo se muestra su not
 
 En Android O, la prioridad de notificación pasó a ser una propiedad de los canales de notificación. Tendrás que trabajar con tu desarrollador para definir la prioridad de un canal durante su configuración y luego utilizar el panel de control para seleccionar el canal adecuado al enviar tus sonidos de notificación. Para los dispositivos que ejecutan versiones de Android anteriores a O, es posible especificar un nivel de prioridad para las notificaciones de Android mediante el panel de Braze y la API de mensajería. 
 
-Para enviar mensajes a toda tu base de usuarios con una prioridad específica, te recomendamos que especifiques indirectamente la prioridad a través de [la configuración del canal de notificación](https://developer.android.com/training/notify-user/channels#importance) (para dirigirte a dispositivos O+) *y* envíes la prioridad individual desde el panel (para dirigirte a dispositivos <O).
+Para enviar mensajes a toda tu base de usuarios con una prioridad específica, te recomendamos que especifiques indirectamente la prioridad mediante la [configuración del canal de notificación](https://developer.android.com/training/notify-user/channels#importance) (para dirigirte a dispositivos O+) *y* envíes la prioridad individual desde el panel (para dirigirte a dispositivos <O).
 
 Los niveles de prioridad que puedes establecer en las notificaciones push de Android o Fire OS son:
 

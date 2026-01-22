@@ -28,7 +28,7 @@ Braze と Recurly の使用に関する追加の詳細については、[Recurly
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Recurly アカウント | このパートナーシップを活用するには、Brazeフィーチャーフラグが有効になっているエリート[Recurly](https://recurly.com/)サブスクリプションプランが必要です。Recurly プラットフォームでクレジット請求書を有効化する必要もあります。|
-| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。Recurly は `users.track` エンドポイントのみを使用するため、この権限のみで Recurly 専用キーをプロビジョニングすることをお勧めします。 |
+| Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Braze ダッシュボードの [**設定**] > [**API キー**] で作成できます。Recurlyは`users.track` エンドポイントのみを使用するため、この権限のみを持つRecurly固有のキーをプロビジョニングすることを推奨する。 |
 | Braze RESTエンドポイント | [あなたのRESTエンドポイントURL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)。エンドポイントは、インスタンスのBraze URLに依存する。 |
 
 ## 統合

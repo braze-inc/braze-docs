@@ -37,7 +37,7 @@ yarn add @braze/react-native-sdk
 
 ### Step 2: Choose a setup option
 
-You can manage the Braze SDK using the Braze Expo plugin or through one of the native layers. With the Expo plugin, you can configure certain SDK features without writing code in the any of native layers. Choose whichever option best meets your app's needs.
+You can manage the Braze SDK using the Braze Expo plugin or through one of the native layers. With the Expo plugin, you can configure certain SDK features without writing code in any of the native layers. Choose whichever option best meets your app's needs.
 
 {% tabs %}
 {% tab Expo %}
@@ -80,6 +80,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `enableBrazeIosRichPush`                      | boolean | iOS only. Whether to enable rich push features for iOS.                                                                                                  |
 | `enableBrazeIosPushStories`                   | boolean | iOS only. Whether to enable Braze Push Stories for iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | boolean | iOS only. Whether the device ID will use a randomly generated UUID.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Example configuration:
@@ -263,6 +264,7 @@ cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 Import the Braze SDK at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API [key]({{site.baseurl}}/api/identifier_types/) and [endpoint]({{site.baseurl}}/api/basics/#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:

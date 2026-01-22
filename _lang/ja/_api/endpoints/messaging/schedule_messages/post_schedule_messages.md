@@ -10,7 +10,7 @@ description: "この記事では、「スケジュールされたメッセージ
 ---
 {% api %}
 # スケジュールされたメッセージの作成
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /messages/schedule/create
 {% endapimethod %}
 
@@ -30,7 +30,7 @@ description: "この記事では、「スケジュールされたメッセージ
 
 ## レート制限
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## 要求本文:
 
@@ -49,7 +49,6 @@ Authorization: Bearer YOUR-REST-API-KEY
   "external_user_ids": (optional, array of strings) see external user identifier,
   "user_aliases": (optional, array of user alias object) see user alias,
   "audience": (optional, connected audience object) see connected audience,
-  "segment_id": (optional, string) see segment identifier,
   "campaign_id": (optional, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,

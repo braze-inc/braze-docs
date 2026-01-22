@@ -17,7 +17,7 @@ tool:
 - [中断したところから再開](#pick-up-where-you-left-off)
 - [パフォーマンスの概要](#peformance-overview)
 
-\![Brazeでのホームダッシュボード。]({% image_buster /assets/img_archive/home_dashboard.png %})
+![Braze のホームダッシュボード。]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## 中断したところから再開
 
@@ -29,25 +29,25 @@ Braze ダッシュボードでは、最近編集または作成したファイ�
 **キャンペーン、キャンバス、またはSegmentを編集または作成した後に、** セクションアプリをオフにした場所を選択します。
 {% endalert %}
 
-\![キャンバス下書き、有効なSegment、および&quot 内のキャンペーン 下書き;オフ" セクションを終了した場所を選択します。]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+![[中断したところから再開] セクションのキャンバスの下書き、アクティブなセグメント、およびキャンペーンの下書き。]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## パフォーマンスの概要
 
 デフォルトでは、**Performance overview** セクションには、すべてのアプリおよびサイトの過去30 日間のデータが表示されます。指標はすべて、選択した日付範囲に基づいて計算されます。
 
-\![ホームダッシュボードの日付レンジとアプリ フィールドs。]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![ホームダッシュボードの日付範囲とアプリフィールド。]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 パーセンテージは、*Monthly Active Users*(MAU)を除き、前の日付範囲と比較して現在の日付範囲に基づいて計算されます。この場合、範囲ではなく前の期間の最終日が使用されます。 
 
 例えば、日付範囲を [**過去 7 日間**] に設定し、[*1 日あたりのアクティブユーザー数*] に増加率が 1.8% と表示された場合、先週と比較して今週の 1 日あたりのアクティブユーザー数が 1.8% 増加したことを意味します。
 
-\![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### 内訳の表示
 
 パフォーマンス概要統計の各行に対して**Show Breakdown**を選択し、指定された日付範囲の各統計値を表示します。
 
-\![展開]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+![展開]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## 利用可能な統計値
 
@@ -72,9 +72,34 @@ MAU の数値の横にある割合は、前期に対する今期の MAU の変�
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### MAU計算規則
+
+MAU計算は、ACキュレートと一貫した請求を確実にするために、具体的な規則に従います。
+
+- **計算タイミング**:1 日に1 回、12:05 UTC で30 日のスナップショットとして計算されます。カウントは遡及的に変更されません。
+- **匿名プロファイルs**:少なくとも1 つのセッションがログに記録されている場合は、**only** をカウントします。
+- **識別プロファイルs**:存在すると自動的にカウントされます。
+- **孤立プロファイルs**:別のユーザーにマージされた重複は、**not** カウントされます。
+- **CSV アップロードs**:ユーザは、`date_of_first_session` または`date_of_last_session` が指定された場合、または後でセッションを記録した場合にのみ、CSV 数によってアップロードされます。
+- **API 削除**:API を使用してユーザーを削除しても、MAU はすぐに更新されません。カウントの自己修正は、次の月周期で行われます。
+
 {% alert note %}
 匿名ユーザーも MAU にカウントされます。モバイルデバイスの場合、匿名ユーザーはデバイスによって決まります。Web ユーザーの場合、匿名ユーザーはブラウザーのキャッシュによって決まります。
 {% endalert %}
+
+#### MAU計算例
+
+次のサンプルでは、さまざまなユーザー アクションを使用してMAU を計算する方法を示します。
+
+| ステップ | アクション (Action) | 即時MAU変更 | 合計 |
+|------|--------|----------------------|-----------------|
+| 1 | **匿名ユーザ1**を作成し、セッションを記録する | +1 | 1 |
+| 2 | 識別**匿名ユーザ1**(プロファイルは識別されたものに変換されます) | 0 | 1 |
+| 3 | **匿名ユーザ2**を作成し、セッションを記録する | +1 | 2 |
+| 4 | **匿名ユーザ2**を**ユーザ1と同じ人物**として識別します(ユーザ2は孤立します) | –1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+MAU スナップショットは1 日に1 回計算され、遡って変更されることはありません。この例題では、ステップ 3 の翌日のMAU 数は、後にユーザ2 が孤立したとしても、永続的に2 のままです。ただし、後続の日数のMAU 数は、孤立していないユーザーのみを反映します。30 日間のウィンドウ内では、孤立していないユーザーは1 つしか残らないため、このフローは最終的に1 つのMAU を消費します。
 
 ### 1 日あたりのアクティブユーザー数
 

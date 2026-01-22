@@ -50,7 +50,7 @@ excerpt_separator: ""
 Post,Email,Create,Template,REST,API
 {% endapitags %}
 
-メールテンプレートREST APIを使用して、Brazeダッシュボードのテンプレート＆メディアページに保存したメールテンプレートをプログラムで管理します。Brazeは、メールテンプレートを作成および更新するための2つのエンドポイントを提供します。
+メールテンプレートREST APIを使用して、Brazeダッシュボードに保存したメールテンプレートをTemplates& Mediaページでプログラム的に管理する。Brazeは、メールテンプレートを作成および更新するための2つのエンドポイントを提供します。
 
 このエンドポイントからの応答には`email_template_id`のフィールドが含まれており、後続のAPI呼び出しでテンプレートを更新するために使用できます。
 
@@ -147,7 +147,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 {% api %}
 ## 3 キャンペーン トリガー 送信
-{% apimethod post %}campaigns/trigger/send{% endapimethod %}
+{% apimethod post %}キャンペーン/トリガー/送信{% endapimethod %}
 {% apitags %}Post, Campaigns, Trigger,Send{% endapitags %}
 
 API トリガー配信を使用すると、メッセージの内容を Braze ダッシュボード内に保存し、メッセージが送信されるタイミングと送信先を API 経由で指定できます。 
@@ -265,26 +265,26 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | ユーザープロファイル フィールド | データ型仕様 |
 | ---| --- |
-| country | (文字列) 国コードは [ISO-3166-1 alpha-2 規格][17] で Braze に渡す必要があります。 |
-| current_location | (オブジェクト) {"longitude": -73.991443, "latitude": 40.753824} の形式 |
+| country | (文字列) 国コードを[ISO-3166-1 alpha-2規格][17]でBrazeに渡すことを要求する。 |
+| current_location | (オブジェクト) {"longitude": -73.991443, "latitude"：40.753824} |
 | date_of_first_session | （ユーザーが初めてアプリを使用した日付）ISO 8601形式または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式の文字列。 |
 | date_of_last_session | （ユーザーが最後にアプリを使用した日付）ISO 8601形式または`yyyy-MM-dd'T'HH:mm:ss:SSSZ`形式の文字列。 |
 | dob | （生年月日）「YYYY-MM-DD」の形式の文字列。例えば、1980-12-21。 |
 | email | (string) |
-| email_subscribe | (文字列) 使用できる値は、「opted_in」 (メールメッセージを受信するように明示的に登録)、「unsubscribed」 (メールメッセージの受信を明示的に拒否)、「subscribed」 (明示的に登録も拒否もしていない) です。  |
+| email_subscribe | (文字列) 利用可能な値は、"opted_in" (明示的にメールメッセージの受信を登録)、"配信停止"(明示的にメールメッセージの受信を拒否)、"購読"(受信も拒否もしていない)。  |
 | external_id | (文字列) 一意のユーザー識別子。 |
 | Facebook | `id`（文字列）、`likes`（文字列の配列）、`num_friends`（整数）のいずれかを含むハッシュ。 |
 | first_name | (string) |
 | gender | (文字列) 「M」、「F」、「O」 (その他)、「N」 (該当なし)、「P」 (言いたくない) または「nil」 (不明)。 |
 | home_city | (string) |
 | image_url | （文字列）ユーザープロファイルに関連付ける画像のURL。 |
-| language | (文字列) 言語は [ISO-639-1 規格][24] で Braze に渡す必要があります。<br>[受け入れ可能な言語のリスト][1]|
+| language | (文字列)は、[ISO-639-1規格][24]でBrazeに渡される言語を要求している。<br>[受け入れ可能な言語のリスト](/docs/user_guide/data_and_analytics/user_data_collection/language_codes/)|
 | last_name | (string) |
 |marked_email_as_spam_at| （文字列）ユーザーのメールがスパムとしてマークされた日付。ISO 8601形式またはyyyy-MM-dd'T'HH:mm:ss:SSSZ形式で表示されます。|
 | phone | (string) |
-| push_subscribe | (文字列) 使用できる値は、「opted_in」 (プッシュメッセージを受信するように明示的に登録)、「unsubscribed」 (プッシュメッセージの受信を明示的に拒否)、「subscribed」 (明示的に登録も拒否もしていない) です。  |
+| push_subscribe | (文字列) 利用可能な値は、"opted_in" (プッシュメッセージの受信を明示的に登録)、"配信停止"(プッシュメッセージの受信を明示的に拒否)、"購読"(受信も拒否もしていない)。  |
 | push_tokens | オブジェクトの配列は`app_id`と`token`の文字列です。このトークンが関連付けられているデバイスに`device_id`を任意で提供することができます。例えば、`[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`。提供されない場合は、`device_id`がランダムに生成されます。 |
-| time_zone | (文字列) [IANA タイムゾーンデータベース][26] (たとえば、「アメリカ/ニューヨーク」または「東部標準時 (アメリカ & カナダ)」) からのタイムゾーン名。有効なタイムゾーン値のみが設定されます。 |
+| time_zone | (文字列) [IANAタイムゾーンデータベース][26]のタイムゾーン名(例えば、"America/New_York" または "Eastern Time (US& Canada)")。有効なタイムゾーン値のみが設定されます。 |
 | ツイッター | `id` (整数)、`screen_name` (文字列、X (旧Twitter) ハンドル)、`followers_count` (整数)、`friends_count` (整数)、`statuses_count` (整数) のいずれかを含むハッシュ。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

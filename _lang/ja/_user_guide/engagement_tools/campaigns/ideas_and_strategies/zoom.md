@@ -33,7 +33,7 @@ POST: `/meetings/{webinarId}/registrants`
 
 URL のパラメーターを使用してユーザーデータを渡し、ページの読み込み時に実行される API 呼び出しを作成して、ユーザーをウェビナーに追加します。
 
-\![名、姓、メールアドレス、市区町村を含むようにLiquidテンプレートを使用したメッセージ。]({% image_buster /assets/img/zoom/zoom1.png %})
+![名、姓、Eメールアドレス、市区町村を含むLiquidテンプレートを使用したEメールメッセージ。]({% image_buster /assets/img/zoom/zoom1.png %})
 
 これで、ユーザーが Braze プロファイルにすでに存在する詳細でウェビナーに登録されます。
 
@@ -44,17 +44,17 @@ URL のパラメーターを使用してユーザーデータを渡し、ペー�
 
 	ウェビナーのランディングページにリンクアウトするボタンのクリック時動作を設定します。<br>
 
-	\![ボタンがクリックされるとウェビナーにリンクする。]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
+	![ボタンがクリックされるとウェビナーにリンクする。]({% image_buster /assets/img/zoom/zoom2.png %})<br><br>
 
 	プッシュからボタンクリックで登録するユーザーのためのランディングページの簡単な例です。登録した内容をユーザーに知らせ、登録を確認します。<br>
 
-	\![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
+	![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
 
 
 2. アプリ内メッセージやボタンクリックによってトリガーされる Webhook キャンペーンを作成します。<br><br>
  	Braze プロファイルの既存のユーザーデータを使用して、ユーザーをウェビナーに登録します。<br>
 
-	\![特定のキャンペーンのボタンをクリックしたユーザーに送られるアクションベースのキャンペーン。]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
+	![特定のキャンペーンのボタンをクリックしたユーザーに送られるアクションベースのキャンペーン。]({% image_buster /assets/img/zoom/zoom6.png %})<br><br>
 
 	Zoom エンドポイントへの Webhook 呼び出しの例。<br>
 	{% raw %}
@@ -81,16 +81,16 @@ URL のパラメーターを使用してユーザーデータを渡し、ペー�
 
 	ウェビナー・ランディング・ページにリンクするボタンのクリック時の動作を設定する。<br>
 
-	\![ボタンがクリックされるとウェビナーにリンクする。]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
+	![ボタンがクリックされるとウェビナーにリンクする。]({% image_buster /assets/img/zoom/zoom3.png %})<br><br>
 
 	アプリ内メッセージからボタンクリックで登録するユーザーのためのランディングページの簡単な例です。登録した内容をユーザーに知らせ、登録を確認します。<br>
 
-	\![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
+	![]({% image_buster /assets/img/zoom/zoom4.png %})<br><br>
 
 2. アプリ内メッセージやボタンクリックによってトリガーされる Webhook キャンペーンを作成します。<br><br>
 	Braze プロファイルの既存のユーザーデータを使用して、ユーザーをウェビナーに登録します。<br>
 
-	\![![特定のキャンペーンのボタンをクリックしたユーザーに送られるアクションベースのキャンペーン。]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+	![特定のキャンペーンのボタンをクリックしたユーザーに送られるアクションベースのキャンペーン。]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
 
 	Zoom エンドポイントへの Webhook 呼び出しの例。<br>
 	{% raw %}

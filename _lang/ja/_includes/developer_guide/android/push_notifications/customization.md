@@ -1,6 +1,6 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} [プッシュ通知の設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)も必要です。
+{% multi_lang_include developer_guide/prerequisites/android.md %} [プッシュ通知の設定も]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android)必要だ。
 
-## プッシュイベントにコールバックを使用する {#push-callback}
+## プッシュ・イベントにコールバックを使う {#push-callback}
 
 Braze には、プッシュ通知が受信されたとき、開かれたとき、または却下されたときのための [`subscribeToPushNotificationEvents()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/subscribe-to-push-notification-events.html) コールバックが用意されています。アプリケーションが実行されていないときに発生するイベントを見逃さないように、このコールバックを `Application.onCreate()` に配置することをお勧めします。
 
@@ -79,58 +79,9 @@ Braze.getInstance(context).subscribeToPushNotificationEvents { event ->
 `Application.onCreate` でプッシュ通知リスナーを作成し、アプリが終了状態にある間にエンドユーザーが通知をタップした後にリスナーがトリガーされるようにします。
 {% endalert %}
 
-## フォントのカスタマイズ
+## 通知表示をカスタマイズする {#customization-display}
 
-### ステップ1:フォントファミリの作成
-
-以下は、[フォントファミリガイド](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#font-family)を使用したカスタムフォントファミリ定義の例です。この例では、[Bungee Shade フォント](https://fonts.google.com/specimen/Bungee+Shade)を使用します。
-
-```html
-<?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:app="http://schemas.android.com/apk/res-auto">
-
-  <!--Note: You must declare both sets of attributes
-      so that your fonts load on devices running Android 8.0 (API level 26) or lower.
-      See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
-
-  <font android:fontStyle="normal"
-        android:fontWeight="400"
-        android:font="@font/bungeeshade"
-
-        app:fontStyle="normal"
-        app:fontWeight="400"
-        app:font="@font/bungeeshade"/>
-</font-family>
-```
-
-フォントファミリの定義を`/res/font/bungee_font_family.xml`に保存したら、XML でそれを`@font/bungee_font_family`として参照できます。
-
-### ステップ2:フォントファミリを参照する
-
-フォントファミリが作成されたので、`styles.xml`の Braze スタイルのデフォルトをオーバーライドして、フォントファミリへの参照を含めることができます。
-
-例えば、次のスタイルのオーバーライドでは、すべての Braze アプリ内メッセージに`bungee`フォントファミリが使用されます。
-
-```html
-<style name="Braze.InAppMessage">
-  <item name="android:fontFamily">@font/bungee_font_family</item>
-  <item name="fontFamily">@font/bungee_font_family</item>
-</style>
-
-<style name="Braze.Cards">
-  <item name="android:fontFamily">@font/another_custom_font_family</item>
-  <item name="fontFamily">@font/another_custom_font_family</item>
-</style>
-```
-
-{% alert warning %}
-すべての SDK バージョン間で互換性を維持するには、`android:fontFamily`と`fontFamily`両方のスタイル属性を設定する必要があります。
-{% endalert %}
-
-## 通知表示のカスタマイズ {#customization-display}
-
-### ステップ1:カスタム通知ファクトリーを作成する
+### ステップ 1: カスタム通知ファクトリーを作成する
 
 サーバー側では面倒な方法や利用できない方法でプッシュ通知をカスタマイズしたい場合があります。通知表示を完全に制御できるよう追加された機能により、独自の [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) を定義して Braze で表示する通知オブジェクトを作成できるようになりました。
 
@@ -204,7 +155,7 @@ setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFa
 ゼロから独自の通知を作成するのは高度なユースケースです。十分なテストを行い、Braze のプッシュ機能を深く理解した上で行うようにしてください。たとえば、通知がプッシュ通知の開封数を正しくログに記録することを確認する必要があります。
 {% endalert %}
 
-カスタム [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) の設定を解除し、プッシュのデフォルトの Braze 処理に戻すには、`null` をカスタム通知ファクトリー設定機能に渡します。
+カスタム [ の設定を解除し、プッシュのデフォルトの Braze 処理に戻すには、`IBrazeNotificationFactory` をカスタム通知ファクトリー設定機能に渡します。
 
 {% tabs %}
 {% tab JAVA %}
@@ -224,11 +175,11 @@ setCustomBrazeNotificationFactory(null)
 {% endtab %}
 {% endtabs %}
 
-## マルチプライヤテキストのレンダリング
+## マルチカラー・テキストをレンダリングする
 
-Braze SDK バージョン3.1.1 では、HTML をデバイスに送信し、プッシュ通知でマルチプライヤーテキストをレンダリングできます。
+Braze SDKバージョン3.1.1では、HTMLをデバイスに送信し、プッシュ通知でマルチカラーのテキストをレンダリングできる。
 
-![Android のプッシュメッセージ「マルチカラー・プッシュ・テスト・メッセージ」。文字の色が異なり、イタリック体で、バックグラウンドカラーが与えられている。]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
+![文字に複数の異なる色、斜体、背景色が指定された、Android プッシュ通知メッセージ「マルチカラープッシュテストメッセージ」。]({% image_buster /assets/img/multicolor_android_push.png %}){: style="max-width:40%;"}
 
 この例は、以下の HTML でレンダリングされます。
 
@@ -238,13 +189,13 @@ Braze SDK バージョン3.1.1 では、HTML をデバイスに送信し、プ�
 <p><em>test</em> <span style="text-decoration: underline; background-color: #ff6600;"><strong>message</strong></span></p>
 ```
 
-Android では、プッシュ通知で有効なHTML 要素とタグが制限されていることに注意してください。たとえば、`marquee` は使用できません。
+Androidは、プッシュ通知で有効なHTML要素やタグを制限していることを覚えておいてほしい。たとえば、`marquee` は使用できません。
 
 {% alert important %}
-マルチカラーテキストレンダリングはデバイス固有であり、Android デバイスまたはバージョンに基づいて表示されない場合があります。
+マルチカラーテキストレンダリングはデバイスに依存するため、Androidデバイスやバージョンによっては表示されない場合がある。
 {% endalert %}
 
-プッシュ通知でマルチカラーテキストをレンダリングするには、`braze.xml` または`BrazeConfig` を更新します。
+プッシュ通知のテキストをマルチカラーにするには、`braze.xml` を更新するか、`BrazeConfig` ：
 
 {% tabs local %}
 {% tab braze.xml %}
@@ -282,9 +233,9 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-### サポートされるHTMLタグ
+### サポートされているHTMLタグ
 
-現在、Google は、Android でサポートされているHTML タグを直接ドキュメントにリストしていません。この情報は、[Git リポジトリの`Html.java` ファイル](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java) でのみ確認できます。この情報はこのファイルから取得され、サポートされているHTML タグは変更される可能性があるため、次の表を参照するときは、この点に注意してください。
+現在のところ、GoogleはAndroidでサポートされているHTMLタグをドキュメントに直接記載していない。この情報は[Gitリポジトリの`Html.java` 。](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/text/Html.java)この情報はこのファイルから引用されたものであり、サポートされるHTMLタグは変更される可能性がある。
 
 <table>
   <thead>
@@ -296,21 +247,21 @@ Braze.configure(this, brazeConfig)
   </thead>
   <tbody>
     <tr>
-      <td rowspan="7">基本的なテキストスタイル</td>
+      <td rowspan="7">基本的なテキストのスタイリング</td>
       <td><code>&lt;b&gt;</code>,<code>&lt;strong&gt;</code></td>
-      <td>太字のテキスト</td>
+      <td>太字</td>
     </tr>
     <tr>
       <td><code>&lt;i&gt;</code>,<code>&lt;em&gt;</code></td>
-      <td>斜体テキスト</td>
+      <td>イタリック体</td>
     </tr>
     <tr>
       <td><code>&lt;u&gt;</code></td>
-      <td>テキストの下線</td>
+      <td>テキストに下線を引く</td>
     </tr>
     <tr>
       <td><code>&lt;s&gt;</code>,<code>&lt;strike&gt;</code>,<code>&lt;del&gt;</code></td>
-      <td>テキストを取り消す</td>
+      <td>取り消し線付きのテキスト</td>
     </tr>
     <tr>
       <td><code>&lt;sup&gt;</code></td>
@@ -318,7 +269,7 @@ Braze.configure(this, brazeConfig)
     </tr>
     <tr>
       <td><code>&lt;sub&gt;</code></td>
-      <td>添え字テキスト</td>
+      <td>サブスクリプション・テキスト</td>
     </tr>
     <tr>
       <td><code>&lt;tt&gt;</code></td>
@@ -327,7 +278,7 @@ Braze.configure(this, brazeConfig)
     <tr>
       <td rowspan="3">サイズ/フォント</td>
       <td><code>&lt;big&gt;</code>,<code>&lt;small&gt;</code></td>
-      <td>相対テキストサイズの変更</td>
+      <td>相対的なテキストサイズの変更</td>
     </tr>
     <tr>
       <td><code>&lt;font color="..."&gt;</code></td>
@@ -335,10 +286,10 @@ Braze.configure(this, brazeConfig)
     </tr>
     <tr>
       <td><code>&lt;span&gt;</code> (インラインCSS付き)</td>
-      <td>インラインスタイル(e.g.、色、背景)</td>
+      <td>インラインスタイル (e.g., color, background)</td>
     </tr>
     <tr>
-      <td rowspan="4">段落&amp;アンプ;ブロック</td>
+      <td rowspan="4">パラグラフ＆ブロック</td>
       <td><code>&lt;p&gt;</code>,<code>&lt;div&gt;</code></td>
       <td>ブロックレベルのセクション</td>
     </tr>
@@ -352,56 +303,56 @@ Braze.configure(this, brazeConfig)
     </tr>
     <tr>
       <td><code>&lt;ul&gt;</code> + <code>&lt;li&gt;</code></td>
-      <td>行頭記号付きの順序なしリスト</td>
+      <td>箇条書きの順序なしリスト</td>
     </tr>
     <tr>
-      <td>表題</td>
+      <td>見出し</td>
       <td><code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code></td>
-      <td>見出し(各種サイズ)</td>
+      <td>見出し（各種サイズ）</td>
     </tr>
     <tr>
-      <td rowspan="2">リンク&amp;アンプ;画像</td>
+      <td rowspan="2">リンクと画像, 写真</td>
       <td><code>&lt;a href="..."&gt;</code></td>
-      <td>クリック可能なリンク</td>
+      <td>クリッカブルリンク</td>
     </tr>
     <tr>
       <td><code>&lt;img src="..."&gt;</code></td>
       <td>インライン画像</td>
     </tr>
     <tr>
-      <td>その他インライン</td>
+      <td>その他のインライン</td>
       <td><code>&lt;em&gt;</code>,<code>&lt;strong&gt;</code>、<code>&lt;dfn&gt;</code>,<code>&lt;cite&gt;</code></td>
-      <td>斜体または太字の同義語</td>
+      <td>イタリックまたはボールドの類義語</td>
     </tr>
   </tbody>
 </table>
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-## インラインイメージのレンダリング
+## インライン画像のレンダリング
 
-### CDI の仕組み
+### 仕組み
 
-インラインイメージプッシュを使用して、Androidプッシュ通知内に大きなイメージを表示できます。この設計により、ユーザーは画像を拡大するために手動でプッシュを拡大する必要がなくなります。通常の Android プッシュ通知とは異なり、インライン画像プッシュ画像の縦横比は 3:2 です。
+インライン画像プッシュを使えば、Androidのプッシュ通知の中に大きな画像を表示することができる。この設計により、ユーザーは画像を拡大するために手動でプッシュを拡大する必要がなくなります。通常の Android プッシュ通知とは異なり、インライン画像プッシュ画像の縦横比は 3:2 です。
 
 ![]({% image_buster /assets/img/android/push/inline_image_push_android_1.png %}){: style="max-width:50%;"}
 
 ### 互換性
 
-インラインイメージを任意のデバイスに送信できますが、最小バージョンを満たさないデバイスとSDK には、代わりに標準イメージが表示されます。インラインイメージを正しく表示するには、Android Braze SDK v10.0.0+ とAndroid M+ を実行するデバイスの両方が必要です。
+インライン画像はどんなデバイスにも送ることができるが、最低バージョンを満たしていないデバイスやSDKでは、代わりに標準画像が表示される。インライン画像を正しく表示するには、Android Braze SDK v10.0.0+とAndroid M+を搭載した端末の両方が必要である。画像をレンダリングするには、SDKもイネーブルメントでなければならない。
 
 {% alert note %}
 Android 12 を実行しているデバイスでは、カスタムプッシュ通知スタイルの変更によりレンダリングが異なります。
 {% endalert %}
 
-### インラインイメージプッシュの送信
+### インライン画像プッシュを送信する
 
 Android プッシュメッセージを作成する場合、この機能は [**通知タイプ**] ドロップダウンで使用できます。
 
-![「通知タイプ」ドロップダウン (標準のプッシュプレビューの上) の場所を示すプッシュキャンペーンエディター。]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
+![プッシュ通知タイプ」ドロップダウンの場所を示すプッシュキャンペーンエディター（標準のプッシュプレビューの上）。]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
 
 ## 設定
 
-Braze ダッシュボード経由で送信されるAndroid プッシュ通知には、多くの詳細設定が利用可能です。この記事では、これらの機能とそれらを効果的に使用する方法について説明します。
+ダッシュボードから送信されるAndroidプッシュ通知には、多くの詳細設定が用意されている。この記事では、これらの機能とそれらを効果的に使用する方法について説明します。
 
 ![]({% image_buster /assets/img_archive/android_advanced_settings.png %})
 
@@ -421,13 +372,13 @@ Braze ダッシュボード経由で送信されるAndroid プッシュ通知に
 
 要約テキストを使用すると、拡張通知ビューに追加のテキストを設定できます。画像付きの通知のキャプションとしても機能します。
 
-![Androidのメッセージで、タイトルが"Greetings from Appboy!"、メッセージ"これはメッセージ本文です!emojis." およびsummary text "これは要約テキストです。"]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![タイトルは "This is the title for the notification. "で、要約テキストは "This is the summary text for the notification. "である。]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-要約テキストは、展開されたビューのメッセージ本文の下に表示されます。
+要約テキストは、展開されたビューのメッセージ本文の下に表示されます。 
+
+![タイトルは "This is the title for the notification. "で、要約テキストは "This is the summary text for the notification. "である。]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 画像を含むプッシュ通知の場合、折りたたまれたビューにはメッセージテキストが表示され、通知が展開されると、要約テキストが画像のキャプションとして表示されます。 
-
-!["Appboy!"というタイトルのAndroidメッセージ、メッセージ"これはメッセージ本文。。"および要約テキスト"これはSummary Text."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### カスタム URI {#custom-uri}
 
@@ -443,9 +394,9 @@ Braze ダッシュボード経由で送信されるAndroid プッシュ通知に
 
 プッシュ通知の優先度レベルは、通知トレイ内で他の通知と比較して通知がどのように表示されるかに影響します。また、通常のメッセージや優先度の低いメッセージは、バッテリー寿命を延ばすために遅延がわずかに長くなったり、バッチ処理で送信されたりするのに対し、優先度の高いメッセージは常に即座に送信されるため、配信の速度と方法にも影響する可能性があります。
 
-Android O では、通知の優先度が通知チャネルのプロパティになりました。開発者と協力して設定中にチャネルの優先度を定義し、ダッシュボードを使用して通知音を送信するときに適切なチャネルを選択する必要があります。Android before O を実行しているデバイスでは、Braze ダッシュボードとメッセージングAPI を使用してAndroid 通知の優先レベルを指定できます。 
+Android O では、通知の優先度が通知チャネルのプロパティになりました。開発者と協力して設定中にチャネルの優先度を定義し、ダッシュボードを使用して通知音を送信するときに適切なチャネルを選択する必要があります。Android O以前のバージョンを実行しているデバイスでは、ダッシュボードとメッセージングAPIを介してAndroid通知の優先レベルを指定することができる。 
 
-特定の優先度でフルユーザーベースにメッセージを送信するには、[通知チャネル設定](https://developer.android.com/training/notify-user/channels#importance) (ターゲットO+ デバイスへ) *および* によって優先度を間接的に指定し、個々の優先度をダッシュボード(<O デバイスへ) から送信することをお勧めします。
+全ユーザー群に特定の優先順位をメッセージングするには、[通知チャネル設定から](https://developer.android.com/training/notify-user/channels#importance)優先順位を間接的に指定し（O+デバイスをターゲットにする）*、*ダッシュボードから個々の優先順位を送信する（<Oデバイスをターゲットにする）ことを推奨する。
 
 Android または Fire OS プッシュ通知で設定できる優先度レベルは次のとおりです。
 
@@ -458,7 +409,7 @@ Android または Fire OS プッシュ通知で設定できる優先度レベル
 | 最小      | コンテキストまたは背景情報 | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-詳細については、Googleの[Android通知](http://developer.android.com/design/patterns/notifications.html)ドキュメントを参照してください。
+詳細については、Googleの[Android通知](http://developer.android.com/design/patterns/notifications.html)ドキュメントを参照のこと。
 
 ### サウンド {#sounds}
 
@@ -470,4 +421,4 @@ Android O より前のバージョンを実行しているデバイスの場合�
 
 完全なサウンドリソース URI (例: `android.resource://com.mycompany.myapp/raw/mysound`) をダッシュ​​ボードプロンプトに入力します。
 
-特定のサウンドでフルユーザーベースをメッセージするには、[通知チャネル設定](https://developer.android.com/training/notify-user/channels) (ターゲットO+ デバイスへ) *および* によってサウンドを間接的に指定し、ダッシュボードから個別のサウンド(ターゲット<O デバイスへ)を送信することをお勧めします。
+特定のサウンドを全ユーザー群にメッセージングするには、[通知チャネル](https://developer.android.com/training/notify-user/channels)設定で間接的にサウンドを指定し（O+デバイスをターゲットにする）*、*ダッシュボードから個々のサウンドを送信する（<Oデバイスをターゲットにする）ことを推奨する。

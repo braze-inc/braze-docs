@@ -22,7 +22,7 @@ search_rank: 1
 | デバイス属性 | `{{most_recently_used_device.${carrier}}}`<br> `{{most_recently_used_device.${id}}}`<br> `{{most_recently_used_device.${idfa}}}`<br> `{{most_recently_used_device.${model}}}`<br> `{{most_recently_used_device.${os}}}`<br> `{{most_recently_used_device.${platform}}}`<br> `{{most_recently_used_device.${google_ad_id}}}`<br> `{{most_recently_used_device.${roku_ad_id}}}`<br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>メールリストの属性</a> | `{{${set_user_to_unsubscribed_url}}}`<br>このタグは、以前の `{{${unsubscribe_url}}}` タグを置き換えるものです。古いタグは以前に作成されたEメールでも機能するが、代わりに新しいタグを使用することをお勧めする。<br><br> `{{${set_user_to_subscribed_url}}}`<br> `{{${set_user_to_opted_in_url}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS属性</a> | `{{sms.${inbound_message_body}}}`<br> `{{sms.${inbound_media_urls}}}` |
-| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp 属性</a> | `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp 属性</a> | `{{whats_app.${inbound_message_body}}}`<br> `{{whats_app.${inbound_media_urls}}}`<br> `{{whats_app.${inbound_flow_response}}}`<br> `{{whats_app.${inbound_product_id}}}`<br> `{{whats_app.${inbound_catalog_id}}}` |
 | キャンペーン属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
 | キャンバスの属性 | `{{canvas.${name}}}`<br> `{{canvas.${api_id}}}`<br> `{{canvas.${variant_name}}}`<br> `{{canvas.${variant_api_id}}}` |
 | キャンバス・ステップの属性 | `{{campaign.${api_id}}}`<br> `{{campaign.${dispatch_id}}}`<br> `{{campaign.${name}}}`<br> `{{campaign.${message_name}}}`<br> `{{campaign.${message_api_id}}}` |
@@ -96,7 +96,7 @@ User is in list of apps
 
 ## ターゲットデバイス情報
 
-プッシュ通知およびアプリ内メッセージチャネルの場合、メッセージの送信先デバイスの以下の属性でテンプレートを作成できます。つまり、プッシュ通知またはアプリ内メッセージに、メッセージが表示されているデバイスのデバイス属性を含めることができます。これらの属性はコンテンツカードでは機能しないことに注意しよう。 
+プッシュ通知、アプリ内メッセージ、バナーでは、メッセージを送信するデバイスのアトリビューションを以下のようにテンプレート化できる。つまり、プッシュ通知、アプリ内メッセージ、またはバナーは、メッセージが読まれる端末の端末属性を含むことができる。これらの属性はコンテンツカードでは機能しないことに注意しよう。 
 
 |タグ | 説明 |
 |------------------|---|
@@ -117,7 +117,7 @@ User is in list of apps
 
 さらに、プッシュ通知では、プッシュトークンが API を介してインポートされた場合など、特定の状況下で Braze がプッシュ通知に添付されたデバイスを判別できないことがあります。その結果、これらのメッセージの値は `null` になります。
 
-\![プッシュ・メッセージで名変数を使用する際、デフォルト値として "there "を使用する例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![プッシュ・メッセージでファーストネーム変数を使うときにデフォルト値「there」を使う例。]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### デフォルト値の代わりに条件付きロジックを使う
 

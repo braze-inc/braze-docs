@@ -1,5 +1,5 @@
 ---
-nav_title: HTML-In-App-Nachrichten
+nav_title: HTML In-App-Nachrichten
 article_title: Benutzerdefinierte HTML-In-App-Nachrichten
 page_order: 0
 page_type: reference
@@ -21,7 +21,7 @@ In-App-Nachrichten im HTML-Format ermöglichen eine größere Kontrolle über da
 - Interaktive Komponenten
 - Benutzerdefinierte Animationen
 
-Benutzerdefinierte HTML-Nachrichten können die Methoden von [JavaScript Bridge](#javascript-bridge) verwenden, um Ereignisse zu protokollieren, benutzerdefinierte Attribute zu setzen, die Nachricht zu schließen und vieles mehr! In unserem [GitHub-Repository][2] finden Sie detaillierte Anleitungen zur Verwendung und Anpassung von HTML-In-App-Nachrichten für Ihre Bedürfnisse sowie eine Reihe von HTML5-Vorlagen für In-App-Nachrichten, die Ihnen den Einstieg erleichtern.
+Benutzerdefinierte HTML-Nachrichten können die Methoden von [JavaScript Bridge](#javascript-bridge) verwenden, um Ereignisse zu protokollieren, benutzerdefinierte Attribute zu setzen, die Nachricht zu schließen und vieles mehr! In unserem [GitHub-Repository](https://github.com/braze-inc/in-app-message-templates) finden Sie detaillierte Anleitungen zur Verwendung und Anpassung von HTML-In-App-Nachrichten für Ihre Bedürfnisse sowie eine Reihe von HTML5-Vorlagen für In-App-Nachrichten, die Ihnen den Einstieg erleichtern.
 
 {% alert note %}
 Um In-App-Nachrichten im HTML-Format über das Web SDK zu aktivieren, müssen Sie Braze die Initialisierungsoption `allowUserSuppliedJavascript` zur Verfügung stellen, zum Beispiel `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Dies dient der Sicherheit, da HTML-In-App-Nachrichten JavaScript ausführen können. Daher muss ein Website-Administrator sie aktivieren.
@@ -82,7 +82,7 @@ Die folgenden JavaScript-Methoden werden in Braze HTML-In-App-Nachrichten unters
 </style>
 
 {% alert note %}
-Sie können Liquid als Referenz für die Einfügung in JavaScript-Bridge-Methoden nicht verwenden <code>customAttributes</code> in JavaScript Bridge-Methoden.
+Sie können Liquid nicht referenzieren, um <code>customAttributes</code> in JavaScript Bridge-Methoden einzufügen.
 {% endalert %}
 
 {% multi_lang_include archive/appboyBridge.md %}
@@ -155,11 +155,7 @@ Da dieser Nachrichtentyp nur von bestimmten neueren SDK-Versionen empfangen werd
 
 ### Erstellen einer Kampagne {#instructions}
 
-Wenn Sie eine In-App-Nachricht mit einem **benutzerdefinierten Code** erstellen, wählen Sie **HTML-Upload mit Vorschau** als benutzerdefinierten Typ. Wenn Sie zuvor noch keine In-App-Nachricht mit angepasstem Code (live oder als Entwurf) erstellt haben, wird diese Option automatisch angewendet und Sie brauchen keine Auswahl zu treffen.
-
-![Erstellen einer In-App-Nachricht, die sowohl an Mobilgeräte als auch an Webbrowser gesendet wird, wobei „Nachrichtentyp“ auf „Angepasster Code“ und „Angepasster Typ“ auf „HTML-Upload mit Vorschau“ eingestellt ist.]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
-
-Denken Sie daran, dass die Nutzer:innen Ihrer mobilen App auf die unterstützten SDK-Versionen upgraden müssen, um diese Nachricht zu erhalten. Wir empfehlen Ihnen, [die Nutzer:innen dazu anzuhalten]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/), ihre mobilen Apps zu aktualisieren, bevor Sie Kampagnen starten, die von neueren Braze-SDK-Versionen abhängen.
+Die Nutzer:innen Ihrer mobilen App müssen auf die unterstützten SDK-Versionen upgraden, um eine In-App-Nachricht **mit angepasstem Code** zu erhalten. Wir empfehlen Ihnen, [die Nutzer:innen dazu anzuhalten]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/), ihre mobilen Apps zu aktualisieren, bevor Sie Kampagnen starten, die von neueren Braze-SDK-Versionen abhängen.
 
 #### Asset-Dateien
 
@@ -197,24 +193,20 @@ Andernfalls bewegen Sie den Mauszeiger über ein Asset aus der Liste und wählen
 
 Änderungen, die Sie im HTML-Code vornehmen, werden automatisch im Vorschaufenster angezeigt, während Sie tippen. Alle [`brazeBridge` JavaScript](#bridge)-Methoden, die Sie in Ihrem HTML-Code verwenden, werden die Nutzerprofile während der Vorschau im Dashboard nicht aktualisieren.
 
-Sie können die **Editoreinstellungen** so konfigurieren, dass Sie den Textumbruch einschalten, die Schriftgröße ändern oder ein Farbthema auswählen können. Der Code-Editor enthält verschiedene Farbthemen für die Syntaxhervorhebung, die Ihnen dabei helfen, potenzielle Codefehler direkt im Message Composer zu erkennen und Ihren Code besser zu organisieren (mit Leerzeichen oder Tabulatoren - je nachdem, auf welcher Seite Sie stehen).
-
-![Optionen zur Syntaxhervorhebung in der Dropdown-Liste „Editor-Einstellungen“ beim Verfassen einer HTML-In-App-Nachricht.]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
-
 {% alert tip %}
-Sie können <kbd>Strg</kbd> + <kbd>F</kbd> (Windows) oder <kbd>Befehl</kbd> + <kbd>F</kbd> (Mac) im HTML-Editor drücken, um Ihren Code zu durchsuchen!
+Sie können <i class="fa-solid fa-magnifying-glass"></i> **Suche** im HTML-Editor auswählen, um in Ihrem Code zu suchen!
 {% endalert %}
 
 ### Button-Tracking {#button-tracking-improvements}
 
-Sie können die Performance innerhalb Ihrer In-App-Nachricht mit angepasstem Code mit Hilfe der [`brazeBridge.logClick(button_id)`][1]-JavaScript-Methode verfolgen. Dies erlaubt Ihnen das programmatische Tracking von „Button 1“, „Button 2“ und „Text-Klicks“ mit `brazeBridge.logClick("0")`, `brazeBridge.logClick("1")` bzw. `brazeBridge.logClick()`.
+Sie können die Performance innerhalb Ihrer In-App-Nachricht mit angepasstem Code mit Hilfe der [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/)-JavaScript-Methode verfolgen. Dies erlaubt Ihnen das programmatische Tracking von „Button 1“, „Button 2“ und „Text-Klicks“ mit `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')` bzw. `brazeBridge.logClick()`.
 
 | Klicks     | Methode                       |
 | ---------- | ---------------------------- |
-| Button 1   | `brazeBridge.logClick("0")` |
-| Button 2   | `brazeBridge.logClick("1")` |
+| Button 1   | `brazeBridge.logClick('0')` |
+| Button 2   | `brazeBridge.logClick('1')` |
 | Text-Klick | `brazeBridge.logClick()`    |
-| Angepasstes Button-Tracking |`brazeBridge.logClick("your custom name here")`|
+| Angepasstes Button-Tracking |`brazeBridge.logClick('your custom name here')`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -227,7 +219,11 @@ Sie können mehrere Button-Klick-Ereignisse pro Impression tracken. Um eine Nach
 <a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
 ``` 
 
-Sie können auch neue benutzerdefinierte Schaltflächennamen verfolgen - bis zu 100 einzigartige Namen pro Kampagne. Zum Beispiel: `brazeBridge.logClick("blue button")` oder `brazeBridge.logClick("viewed carousel page 3")`.
+Sie können auch neue benutzerdefinierte Schaltflächennamen verfolgen - bis zu 100 einzigartige Namen pro Kampagne. Zum Beispiel: `brazeBridge.logClick('blue button')` oder `brazeBridge.logClick('viewed carousel page 3')`.
+
+{% alert tip %}
+Wenn Sie JavaScript-Methoden innerhalb eines `onclick` Attributs verwenden, schließen Sie String-Werte in einfache Anführungszeichen ein, um Konflikte mit dem HTML-Attribut mit doppelten Anführungszeichen zu vermeiden.
+{% endalert %}
 
 #### Beschränkungen
 
@@ -246,10 +242,8 @@ Sie können auch neue benutzerdefinierte Schaltflächennamen verfolgen - bis zu 
 
    | Vor | Nach |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_b3ac9b9a-1e67-447b-ae88-0a5e31690c18/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_6b3a38d7-4d09-4521-9203-cbbfeec2596f/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_a91c3faa-3a4d-4126-827b-a010e6091bd6/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_2706b934-ec15-4441-b5a6-1f5f0403fb4d/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_a1d3e2cf-b927-4d01-a548-bae775c1b9c5/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code><a href="braze://close">Close Button</a></code>|<code><a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()">Schließen Button</a></code>|
+   |<code><a href="braze://close?abButtonId=0">Close Button</a></code>|<code><a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()">Schließen Button</a></code>|
+   |<code><a href="app://deeplink?abButtonId=0">Track Button 1</a></code>|<code><a href="app://deeplink" onclick="brazeBridge.logClick('0')">Track Button 1</a></code>|
+   |<code><script><br>location.href = "braze://close?abButtonId=1"<br></script></code>|<code><script><br>window.addEventListener("ab.BridgeReady", function(){<br>  brazeBridge.logClick("1");<br>  brazeBridge.closeMessage();<br>});<br></script></code>|
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[2]: https://github.com/braze-inc/in-app-message-templates

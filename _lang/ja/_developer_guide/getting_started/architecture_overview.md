@@ -40,7 +40,7 @@ Braze は、Snowflake、Kafka、MongoDB、および Redis を活用したスト�
 Braze は、ユーザーが匿名である時点から、アプリにログインして既知の状態になるまで、ユーザーのデータを追跡できます。ユーザーIDは、Brazeでは`external_id`と呼ばれ、各ユーザーに設定する必要があります。これらは変更されず、ユーザーがアプリを開いたときにアクセスできるようにする必要があり、デバイスやプラットフォームを超えてユーザーを追跡できるようにします。ベストプラクティスについては、[ユーザーライフサイクルに関する記事]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)を参照してください。
 {% endalert %}
 
-![Braze はAPI からバックエンドデータソースを、SDK からフロントエンドデータソースを、Braze クラウドデータ取り込みやパートナー連携からデータウェアハウスのデータをインポートします。このデータは Braze API を通じてエクスポートされます]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }
+![Braze はAPI からバックエンドデータソースを、SDK からフロントエンドデータソースを、Braze クラウドデータ取り込みやパートナー連携からデータウェアハウスのデータをインポートします。このデータはBraze API ]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }を通じてエクスポートされます
 
 {% alert note %}
 このユーザー中心のユーザープロファイルデータベースにより、リアルタイムでインタラクティブなスピードが実現します。Brazeはデータが到着したときに値を事前に計算し、結果を高速に取得するために軽量なドキュメント形式で保存します。そして、プラットフォームは最初からこのように設計されているため、ほとんどのメッセージングのユースケースに理想的です。特に、コネクテッドコンテンツ、製品カタログ、ネストされた属性などの他のデータ概念と組み合わせると効果的です。

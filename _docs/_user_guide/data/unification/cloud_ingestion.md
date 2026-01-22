@@ -3,38 +3,96 @@ nav_title: Cloud Data Ingestion
 article_title: Braze Cloud Data Ingestion
 alias: /cloud_ingestion/
 description: "This reference article covers Braze Cloud Data Ingestion sources and data setup recommendations."
-layout: dev_guide
 page_order: 0.1
-page_type: landing
-
-guide_top_header: "Braze Cloud Data Ingestion"
-guide_top_text: "<h2>What is it?</h2>Braze Cloud Data Ingestion (CDI) lets you set up a direct connection from your data storage solution to Braze to sync relevant user or catalog data and delete users. When synced to Braze, this data can be used for personalization or segmentation. Cloud Data Ingestion supports complex data structures, including nested JSON and arrays of objects. <br><br>**Braze Cloud Data Ingestion capabilities:**<br> - Create an integration directly from your data warehouse or file storage solution to Braze in minutes.<br>- Securely sync user data, including attributes, events, and purchases from your data warehouse to Braze.<br>- Combine Cloud Data Ingestion with Currents or Snowflake Data Sharing to close the data loop.<br><br>**Cloud Data Ingestion can sync data from**:<br> - Amazon Redshift<br> - Databricks<br> - Google BigQuery<br> - Microsoft Fabric<br> - S3<br> - Snowflake"
-
-guide_featured_title: "Section articles"
-guide_featured_list:
-  - name: Overview and Best Practices
-    link: /docs/user_guide/data/unification/cloud_ingestion/overview/
-    image: /assets/img/braze_icons/users-01.svg
-  - name: Connected Sources
-    link: /docs/user_guide/data/unification/cloud_ingestion/connected_sources/
-    image: /assets/img/braze_icons/server-01.svg
-  - name: Data Warehouse Integrations
-    link: /docs/user_guide/data/unification/cloud_ingestion/integrations/
-    image: /assets/img/braze_icons/cloud-blank-01.svg
-  - name: File Storage Integrations
-    link: /docs/user_guide/data/unification/cloud_ingestion/file_storage_integrations/
-    image: /assets/img/braze_icons/folder.svg 
-  - name: Zero-copy Personalization
-    link: /docs/user_guide/data/unification/cloud_ingestion/zero_copy_sync/
-    image: /assets/img/braze_icons/tag-01.svg
-  - name: Sync Catalogs Data
-    link: /docs/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/
-    image: /assets/img/braze_icons/refresh-ccw-02.svg
-  - name: Delete Users with CDI
-    link: /docs/user_guide/data/unification/cloud_ingestion/delete_users/
-    image: /assets/img/braze_icons/trash-01.svg
-  - name: Frequently Asked Questions
-    link: /docs/user_guide/data/unification/cloud_ingestion/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
+toc_headers: h2
 ---
 
+# Braze Cloud Data Ingestion
+
+> Braze Cloud Data Ingestion (CDI) allows you to set up a direct connection from your data storage solution to sync relevant user data and other non-user data to Braze. This data can then be used for personalization or segmentation to power your marketing use cases. Cloud Data Ingestion’s flexible integration supports complex data structures, including nested JSON and arrays of objects.
+
+## How it works
+
+With Braze Cloud Data Ingestion (CDI), you set up an integration between your data warehouse instance and Braze workspace to sync data on a recurring basis. This sync runs on a schedule you set, and each integration can have a different schedule. Syncs can run as frequently as every 15 minutes or as infrequently as once per month. If you need syncs to occur more frequently than 15 minutes, contact your customer success manager or consider using REST API calls for real-time data ingestion.
+
+When a sync runs, Braze directly connects to your data warehouse instance, retrieves all new data from the specified table, and updates the corresponding data on your Braze dashboard. Each time the sync runs, any updated data is reflected in Braze.
+
+### Finding your integration ID
+
+You can find your integration ID in the URL when viewing an integration in the Braze dashboard. Navigate to **Data Settings** > **Cloud Data Ingestion** and select an integration. The integration ID appears in the URL in the format `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. For example, if your URL is `https://dashboard-01.braze.com/integrations/cloud_data_ingestion/abc123xyz`, your integration ID is `abc123xyz`. You can use this ID when making API calls to trigger syncs or check sync status.
+
+## Use cases
+
+With Braze Cloud Data Ingestion capabilities, you can:
+
+- Create a simple integration directly from your data warehouse or file storage solution to Braze in just a few minutes.
+- Securely sync user data, including attributes, events, and purchases from your data warehouse to Braze.
+- Close the data loop with Braze by combining Cloud Data Ingestion with Currents or Snowflake Data Sharing.
+
+In addition, [Connected Sources]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/connected_sources) are a zero-copy alternative. You can have Braze directly query your data warehouse or file storage solution to construct CDI segments &#8212;all without copying the underlying data to Braze.
+
+## Supported data sources
+
+Cloud Data Ingestion can sync data from:
+
+   - Amazon Redshift
+   - Databricks 
+   - Google BigQuery
+   - Microsoft Fabric
+   - Snowflake
+   - Amazon S3
+
+## Supported data types 
+
+Cloud Data Ingestion supports the following data types:
+
+### User data
+- User attributes, including:
+   - Nested custom attributes
+   - Arrays of objects
+   - Subscription statuses
+- Custom events
+- Purchase events
+- User deletion requests
+
+### Non-user objects
+- Catalog items
+
+### Zero-copy messaging
+- Connected Sources
+
+## User identifiers for data ingestion
+
+When syncing user data through Cloud Data Ingestion, you can identify users using one or more of the following identifier types. Each row in your source table should contain a value for only one identifier type at a time, but your table can include columns for one, two, three, four, or all five identifier types.
+
+| Identifier | Description |
+|------------|-------------|
+| `EXTERNAL_ID` | The external ID that identifies the user profile to create or update. This should match the `external_id` value used in Braze. |
+| `ALIAS_NAME` and `ALIAS_LABEL` | These two columns create a user alias object. `alias_name` should be a unique identifier, and `alias_label` specifies the type of alias. Users may have multiple aliases with different labels but only one `alias_name` per `alias_label`. |
+| `BRAZE_ID` | The Braze user identifier generated by the Braze SDK. New users cannot be created using a Braze ID through Cloud Data Ingestion. To create new users, specify an external user ID or user alias. |
+| `EMAIL` | The user's email address. If multiple profiles with the same email address exist, the most recently updated profile is prioritized for updates. If you include both email and phone, email is used as the primary identifier. |
+| `PHONE` | The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile is prioritized for updates. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+For detailed information about setting up tables with these identifiers, refer to the [Data Warehouse integrations]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/integrations/) documentation.
+
+## Data point usage
+
+For customers on data points-based billing, data point billing for Cloud Data Ingestion is equivalent to billing for updates through the [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track#user-track). Refer to [Data points]({{site.baseurl}}/user_guide/data/data_points/) for more information. 
+
+{% alert important %}
+Braze Cloud Data Ingestion counts toward the available rate limit, so if you're sending data using another method, the rate limit is combined between the Braze API and Cloud Data Ingestion.
+{% endalert %}
+
+## Product limitations
+
+| Limitation            | Description                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Number of integrations | There is no limit on how many integrations you can set up. However, you can set up only one integration per table or view.                                             |
+| Number of rows         | By default, each run can sync up to 500 million rows. Any syncs with more than 500 million new rows are stopped. If you need a higher limit than this, contact your Braze customer success manager or Braze Support. |
+| Attributes per row     | Each row should contain a single user ID and a JSON object with up to 250 attributes. Each key in the JSON object counts as one attribute (that is, an array counts as one attribute). |
+| Payload size           | Each row can contain a payload of up to 1 MB. Payloads greater than 1 MB are rejected, and the error "Payload was greater than 1MB" is logged to the sync log along with the associated external ID and truncated payload. |
+| Data type              | You can sync user attributes, events, and purchases through Cloud Data Ingestion.                                                                                                  |
+| Braze region           | This product is available in all Braze regions. Any Braze region can connect to any source data region.                                                                              |
+| Source region       | Braze connects to your data warehouse or cloud environment in any region or cloud provider.                                                                                        |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

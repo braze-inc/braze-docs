@@ -67,8 +67,8 @@ AudienceStreamを使う最初のステップは、属性を作成することだ
 
 #### 属性とバッジの例
 
-{% tabs ローカル %}
-{% tab 属性 %}
+{% tabs local %}
+{% tab Attribute %}
 
 すべての完了した注文 (購入イベント) での顧客の累積支出額 (`order_total`) を計算する訪問者属性「Lifetime Order Value」を作成します。Tealium アカウントで生涯注文額を設定するには、次の手順に従います。
 
@@ -85,7 +85,7 @@ AudienceStreamを使う最初のステップは、属性を作成することだ
 これで、すべての顧客に生涯注文額属性が関連付けられます。
 
 {% endtab %}
-{% tab バッジ %}
+{% tab Badge %}
 
 バッジを作成することで、ユーザーが共有する特定の属性によってユーザーを分類し、ターゲットを絞ることができる。次の例では、「Lifetime Order Value」が$500を超えるユーザーに対して VIP バッジを作成します。
 
@@ -125,7 +125,7 @@ Tealium のホームページから、サイドバーナビゲーションの [*
 
 #### 構成
 
-次に、**設定**ダイアログが表示される。ページ下部の [**Add Connector**] を選択します。コネクタに名前を付け、Braze APIエンドポイントとBraze REST APIキーをここに入力する。
+次に、**設定**ダイアログが表示される。ページ下部の [**Add Connector**] を選択します。コネクターに名前を付け、Braze エンドポイントと Braze REST API キーを指定します。
 
 ![]({% image_buster /assets/img/tealium/create_configuration.png %}){: style="max-width:70%;"}
 
@@ -144,7 +144,7 @@ Tealium のホームページから、サイドバーナビゲーションの [*
 {% endalert %}
 
 {% tabs local %}
-{% tab ユーザーの追跡 (バッチと非バッチ) %}
+{% tab Track User - Batch and Non-Batch %}
 
 このアクションを使用すると、ユーザー、イベント、購入属性をすべて1回のアクションで追跡できます。Track User アクションは AudienceStream と EventStream の両方で同じですが、Tealium はAudienceStream アクションでユーザー属性のマッピングを設定し、EventStream アクションでイベントと購入のマッピングを設定することを推奨しています。
 
@@ -152,10 +152,10 @@ Tealium のホームページから、サイドバーナビゲーションの [*
 | ---------- | ----------- |
 | ユーザー ID | このフィールドを使用して、Tealium のユーザー ID フィールドを Braze の対応するフィールドにマッピングします。1 つ以上のユーザー ID 属性をマップします。複数のID が指定されている場合、最初の非ブランク値は、次の優先順位に基づいて選択されます。External ID、Braze ID、エイリアス名、エイリアスラベル。<br><br>\- プッシュトークンs をインポートする場合は、外部ID とBraze ID を指定しないでください。<br>\- ユーザーエイリアスを指定する場合、エイリアス名とエイリアスラベルの両方を設定する必要があります。<br><br>詳細については、Braze[`/users/track` エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) を参照してください。 |
 | ユーザ属性 | 既存の Braze のユーザープロファイルのフィールド名を使用して、Braze ダッシュボードのユーザープロファイル値を更新するか、独自のカスタム[ユーザー属性]({{site.baseurl}}/api/objects_filters/user_attributes_object/)データをユーザープロファイルに追加します。<br><br>\- デフォルトでは、新規ユーザーが存在しない場合は作成されます。<br>\- 設定では、** 更新 Existing Only** to `true` で、存在するユーザーs のみが更新d になり、新しいユーザーは作成されません。<br>\- Tealium 属性が空の場合、その属性は NULL に変換され、Braze ユーザープロファイルから削除されます。ユーザー属性を削除する目的で Braze に NULL 値を送信すべきでない場合は、エンリッチメントを使用してください。 |
-| Modify user attributes | このフィールドを使用して、特定のユーザー 属性を増減します<br><br>\- 整数属性は、正の整数または負の整数でインクリメントできます。<br>\- 配列属性s は、既存の配列に数値を追加または削除することで修正できます。 |
-| イベント | イベントは、タイムスタンプの時点で特定のユーザーによりカスタムイベントが1回発生したことを表します。このフィールドは、Braze [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)の属性と同様にイベント属性を追跡、マッピングする場合に使用します。<br><br>\- イベント属性 `Name` は、マッピングされたすべてのイベントで必要です。<br>\- イベント属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新しいイベントは存在しない場合に作成されます。`Update Existing Only` を`true` に設定すると、既存のイベントのみが更新され、新規のイベントは作成されません。<br>\- 配列型属性s をマップして、複数のイベントを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各イベントに適用できます。 |
-| Event template | ボディデータで参照するイベントテンプレートを指定します。テンプレートを使用してデータを変換してから、Brazeに送信できます。詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。 |
-| Event template variable | イベントテンプレート変数をデータ入力として指定します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
+| ユーザー属性の変更 | このフィールドを使用して、特定のユーザー 属性を増減します<br><br>\- 整数属性は、正の整数または負の整数でインクリメントできます。<br>\- 配列属性s は、既存の配列に数値を追加または削除することで修正できます。 |
+| イベント | イベントは、タイムスタンプの時点で特定のユーザーによりカスタムイベントが 1回発生したことを表します。このフィールドは、Braze [イベントオブジェクト]({{site.baseurl}}/api/objects_filters/event_object/)の属性と同様にイベント属性を追跡、マッピングする場合に使用します。<br><br>\- イベント属性 `Name` は、マッピングされたすべてのイベントで必要です。<br>\- イベント属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新しいイベントは存在しない場合に作成されます。`Update Existing Only` を`true` に設定すると、既存のイベントのみが更新され、新規のイベントは作成されません。<br>\- 配列型属性s をマップして、複数のイベントを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各イベントに適用できます。 |
+| イベントテンプレート | ボディデータで参照するイベントテンプレートを指定します。テンプレートを使用してデータを変換してから、Brazeに送信できます。詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。 |
+| イベントテンプレート変数 | イベントテンプレート変数をデータ入力として指定します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
 | 購入 | このフィールドは、Braze [購入オブジェクト]({{site.baseurl}}/api/objects_filters/purchase_object/)の属性と同様に購入属性を追跡、マッピングする場合に使用します。<br><br>\- 購入属性 `Product ID`、`Currency`、`Price` は、マッピングされたすべての購入に必要です。<br>\- 購入属性 `Time` は、明示的にマッピングされていない限り、自動的に現時点の時刻に設定されます。<br>\- デフォルトでは、新規購入が存在しない場合は作成されます。`Update Existing Only` を`true` に設定すると、既存の購入のみが更新され、新規購入は作成されません。<br>\- 配列型属性s をマップして、複数の購入アイテムを追加します。配列型の属性s は等しい長さでなければなりません。<br>\- 単一値属性を使用できます。単一値属性は各アイテムに適用されます。|
 | 購買テンプレート | テンプレートを使用して、Brazeに送信する前にデータを変換できます。<br>\- ネストされたオブジェクトサポートが必要な場合は、購入テンプレートを定義します。<br>\- 購入テンプレートを定義すると、アクションの購入セクションで設定された設定は無視されます。<br>\- 詳細については、Tealiumの[テンプレートガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/)を参照してください。|
 | 購買テンプレート変数 | 商品テンプレートの項目を入力します。詳細については、Tealiumの[テンプレート変数ガイド](https://docs.tealium.com/server-side/connectors/webhook-connectors/template-variables/)を参照してください。 |
@@ -164,7 +164,7 @@ Tealium のホームページから、サイドバーナビゲーションの [*
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab ユーザーの削除 - 非バッチ %}
+{% tab Delete User - Non-Batch %}
 
 このアクションでは、Braze ダッシュボードからユーザーを削除できます。
 
@@ -176,7 +176,7 @@ Tealium のホームページから、サイドバーナビゲーションの [*
 ![]({% image_buster /assets/img/tealium/track_user_delete2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab ユーザーサブスクリプショングループステータスの更新 - 非バッチ %}
+{% tab Update User Subscription Group Status - Non-Batch %}
 この操作により、Braze SMSまたはEメール購読グループからユーザーを追加または削除することができる。
 
 | パラメーター | 説明 |
@@ -221,7 +221,7 @@ Tealium の [Trace ツールの詳しい実装手順については、Tealium �
 
 ## 潜在データポイント 超過料金s
 
-Tealium から Braze を統合するときに、誤ってデータ超過料金が生じる主な状況が3つあります。
+Tealium から Braze を統合するときに、誤ってデータ超過料金が生じる主な状況が 3つあります。
 
 #### 重複したデータを送信する - 属性のBraze差分のみを送信する
 Tealiumはユーザー属性のBrazeデルタを送信しない。例えば、ユーザーのファーストネーム、Eメール、携帯電話番号を追跡するEventStreamアクションがある場合、Tealiumはアクションがトリガーされるたびに、3つの属性すべてをBrazeに送信する。Tealium は、変更された内容や更新された内容を探してその情報のみを送信することはありません。<br><br> 

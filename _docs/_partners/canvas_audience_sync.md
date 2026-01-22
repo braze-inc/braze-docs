@@ -4,7 +4,7 @@ article_title: Canvas Audience Sync
 page_order: 8
 
 guide_top_header: "Canvas Audience Sync"
-guide_top_text: "The Braze Audience Sync feature helps you extend the reach of your campaigns to many of the top social and advertising technologies. This landing page is where developers and marketers can find resources on available Canvas sync partners."
+guide_top_text: "The Braze Audience Sync feature extends the reach of your campaigns to many of the top social and advertising technologies. This landing page is where developers and marketers can find resources on available Canvas sync partners."
 description: "This landing page is where developers and marketers can find resources on available Canvas sync partners."
 
 layout: dev_guide

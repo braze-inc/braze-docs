@@ -34,7 +34,7 @@ Braze のカスタム属性を使用すると、ユーザープロファイル�
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_enter_API_key.png %}){: style="max-width:60%;margin-top:15px;margin-left:25px;margin-bottom:15px;"}
 
 
-## ステップ2:コード配布
+## ステップ 2:コード配布
 
 接続されると、Brazeのユーザープロファイルのカスタム属性にコードを割り当てる新しいVoucherify [配布](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work)を開始できます。後で、受け取った属性をコードと一緒にBrazeキャンペーンで使用できます。
 
@@ -49,10 +49,10 @@ Braze にコードを配布するには、2 つのモードを使用できます
 
 手動モードと自動モードの両方で、Voucherify は固有のコードをその属性とともに送信し、それらをユーザープロファイルの Braze カスタム属性に割り当てます。
 
-![カスタム属性にフィールドをマッピングする]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
+![フィールドをカスタム属性にマップする]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 
 {% tabs %}
-{% tab マニュアルディストリビューション %}
+{% tab Manual distribution %}
 
 マニュアルモードは、選択されたオーディエンスにコードを割り当てる一度限りのアクションです。ダッシュボードの [**Distribution**] に移動し、プラス記号を使ってディストリビューションマネージャーを実行し、[**Manual Message**] を選択します。
 
@@ -77,7 +77,7 @@ Braze にコードを配布するには、2 つのモードを使用できます
 _すべてのマニュアルディストリビューションは10分遅れで送信されることに注意してください。_
 
 {% endtab %}
-{% tab 自動ワークフロー %}
+{% tab Automatic Workflow %}
 
 Voucherifyは、次のトリガーに応じてBrazeにコードを自動的にプッシュできます:
 

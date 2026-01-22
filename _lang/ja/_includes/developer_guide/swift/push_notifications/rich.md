@@ -2,7 +2,7 @@
 
 ## リッチプッシュ通知の設定
 
-### ステップ1:サービス拡張の作成
+### ステップ 1: サービス拡張の作成
 
 [ 通知 サービス拡張](https://developer.apple.com/reference/usernotifications/unnotificationserviceextension) を作成するには、Xコード で**File > New > Target** に移動し、** 通知 サービス拡張** を選択します。
 
@@ -29,9 +29,9 @@
 
 [Swift Package Manager の統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/)に従って、以下を実行して `BrazeNotificationService` を `Notification Service Extension` に追加します。
 
-1. Xコードでは、フレームワークとライブラリの下で、<i class="fas fa-plus"></i>追加アイコンを選択してフレームワークを追加します。<br><br>![プラスアイコンは、Xcode のフレームワークとライブラリの下にあります。]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
+1. Xコードでは、フレームワークとライブラリの下で、<i class="fas fa-plus"></i>追加アイコンを選択してフレームワークを追加します。<br><br>![プラスアイコンはXcodeのフレームワークとライブラリーの下にある。]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
-2. "BrazeNotificationService"フレームワークを選択します。<br><br>![開いたモーダルで「BrazeNotificationService」フレームワークを選択できます。]({% image_buster /assets/img_archive/rich_notification2.png %})
+2. "BrazeNotificationService"フレームワークを選択します。<br><br>![BrazeNotificationServiceフレームワークは、開封されたモーダルで選択できる。]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}
@@ -63,7 +63,7 @@ Podfile を更新したら、ターミナル内で Xcode アプリプロジェ�
 
 {% endtab %}
 
-{% tab マニュアル %}
+{% tab Manual %}
 
 `BrazeNotificationService.xcframework` を`Notification Service Extension` に追加するには、[手動統合]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual/) を参照してください。
 

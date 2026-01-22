@@ -26,11 +26,11 @@ Kampagnenwarnungen sind für die folgenden Kampagnen verfügbar:
 
 Navigieren Sie zur Analytics-Seite Ihrer Kampagne, um mit der Einrichtung Ihrer Benachrichtigung zu beginnen. Wenn Sie **Alarm einrichten** wählen, können Sie obere und untere Alarmschwellen sowie die Alarmempfänger und -kanäle festlegen.
 
-![Dialogfeld Kampagnenüberwachung mit zwei Schaltflächen: Abbrechen und Speichern.][2]
+\![Dialogfenster Kampagnenüberwachung mit zwei Buttons: Abbrechen und Speichern.]({% image_buster /assets/img_archive/campaign_alerts.png %})
 
 Für eine geplante wiederkehrende Kampagne können Sie obere und untere Schwellenwerte für die Nachrichten festlegen, die bei jedem Versand der Kampagne gesendet werden. Für eine ausgelöste Kampagne können Sie obere und untere Schwellenwerte für die Anzahl der stündlich und täglich versendeten Nachrichten festlegen.
 
-Sie können eine E-Mail-Benachrichtigung, eine Webhook-Benachrichtigung oder beides einrichten. Webhook-Benachrichtigungen können sehr nützlich sein, da Sie damit eine Benachrichtigung an einen Slack-Kanal senden können. Weitere Informationen zur Integration von Kampagnen-Benachrichtigungen in Slack finden Sie in unserer [Dokumentation][1].
+Sie können eine E-Mail-Benachrichtigung, eine Webhook-Benachrichtigung oder beides einrichten. Webhook-Benachrichtigungen können sehr nützlich sein, da Sie damit eine Benachrichtigung an einen Slack-Kanal senden können. Weitere Informationen zur Integration von Kampagnen-Benachrichtigungen in Slack finden Sie in unserer [Dokumentation]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration).
 
 {% alert note %}
 Wenn Sie Kampagnenwarnungen für zukünftige Kampagnen einstellen, können Sie Aktualisierungen vor Beginn und nach Ende der Kampagne erhalten. Dies liegt daran, dass Kampagnenwarnungen so lange gesendet werden, bis die Kampagne manuell gestoppt wird.
@@ -48,5 +48,3 @@ Nachfolgend finden Sie Beispielnutzdaten für den Body eines Webhooks für Kampa
 "campaign_api_id":"fe787bc5-d13f-4123-b22f-3bd48f9fc407","upper_threshold":0,"lower_threshold":500,"value":4}}
 ```
 
-[1]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration
-[2]: {% image_buster /assets/img_archive/campaign_alerts.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Vorschau der Benutzerpfade
+nav_title: "Vorschau der Nutzer:in"
 article_title: Vorschau der Benutzerpfade
 page_order: 0.3
 alias: /preview_user_paths/
@@ -19,7 +19,7 @@ Befolgen Sie diese Schritte, um eine Vorschau der User Journey zu erhalten:
 1. Gehen Sie zu Ihrem Canvas Builder. Speichern Sie alle nicht gespeicherten Änderungen und beheben Sie alle Fehler.
 2. Wählen Sie **Testleinwand** in der Fußzeile.
 3. Wählen Sie einen Testbenutzer.
-4. (optional) Wählen Sie einen Empfänger für den Test.
+4. (Optional) Wählen Sie einen Empfänger:in für den Test aus.
 5. Wählen Sie **Test ausführen**.
 
 Sie können eine Vorschau erstellen, wenn Sie keine Berechtigung zur Bearbeitung eines Canvas haben. Diese wird ggf. mit ungesicherten Änderungen ausgeführt.
@@ -101,11 +101,9 @@ Webhooks werden ausgeführt, wenn Testnachrichten gesendet werden, nicht aber be
 
 In diesem Szenario wird das Canvas so eingerichtet, dass es Nutzer anspricht, die noch keine Sitzung in einer App hatten. Diese Journey enthält einen Nachrichtenschritt mit einer Begrüßungsmail, eine Verzögerung um einen Tag und den Schritt "Zielgruppenpfade", der sich wiederum in zwei Pfade gliedert: Benutzer mit mindestens einer Sitzung und alle anderen. Je nach Zielgruppenpfadzugehörigkeit des Benutzers wird der nächste Nachrichtenschritt gesendet.
 
-![Ein Beispiel für ein Canvas mit einem Nachrichten-Schritt, einem Verzögerungs-Schritt, einem Zielgruppen-Pfad-Schritt und zwei Nachrichten-Schritten.][1]{:style="max-width:70%"}
+![Ein Beispiel für ein Canvas mit einem Nachrichten-Schritt, einem Verzögerungs-Schritt, einem Zielgruppen-Pfad-Schritt und zwei Nachrichten-Schritten.]({% image_buster /assets/img/preview_user_path_example.png %}){:style="max-width:70%"}
 
 Da der Testbenutzer die Zulassungskriterien für den Canvas erfüllt, kann er diesen betreten und die User Journey durchlaufen. Da unser Testbenutzer die App jedoch seit einem Kalendertag nicht mehr geöffnet hat, wird er den Weg über "Alle anderen" fortsetzen und eine Push-Benachrichtigung mit folgendem Inhalt erhalten: "Letzte Chance! Erledigen Sie Ihre erste Aufgabe und erhalten Sie einen exklusiven Bonus."
 
-![Der Abschnitt "Testergebnisse", der anzeigt, dass der Testnutzer:innen die Eingangskriterien erfüllt hat, bietet eine Zusammenfassung seiner Reise, einschließlich der Schritte, die er gesendet wurde.][2]
+![Der Abschnitt "Testergebnisse", der anzeigt, dass der Testnutzer:in die Eingabekriterien erfüllt hat und eine Zusammenfassung seiner Reise bietet, einschließlich der Schritte, die er gesendet wurde.]({% image_buster /assets/img/preview_user_path_results_example.png %})
 
-[1]: {% image_buster /assets/img/preview_user_path_example.png %}
-[2]: {% image_buster /assets/img/preview_user_path_results_example.png %}
