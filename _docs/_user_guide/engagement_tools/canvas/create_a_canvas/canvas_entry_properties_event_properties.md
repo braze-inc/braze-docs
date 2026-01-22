@@ -43,10 +43,9 @@ You can no longer create or duplicate Canvases using the original editor. This a
 
 ### Things to know
 
-- Canvas entry properties are only available for reference in Liquid. To filter on the properties within the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
-- For in-app message channels, you can reference `canvas_entry_properties` and `event_properties` in a Canvas.
+- Canvas entry properties are only available for reference in Liquid. To filter on the properties in the Canvas, use [event property segmentation]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/) instead.
+- For in-app message channels, you can reference `canvas_entry_properties` and `event_properties` in a Canvas. `event_properties` can be accessed when included in the first Canvas step because it's trigger-based.
 - You can't use `event_properties` in the lead Message step. Instead, you can use `canvas_entry_properties` or add an Action Paths step with the corresponding event **before** the Message step that includes `event_properties`.
-    - For in-app messages, `event_properties` can be accessed when included in a leading Canvas step because it's trigger-based.
 - When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
