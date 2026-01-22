@@ -1,7 +1,7 @@
 ---
 nav_title: Accessibility
 article_title: Build Accessible Messages in Braze
-page_order: 10.1
+page_order: 0.5
 page_type: reference
 description: "This reference article explains why accessibility is important to consider in your marketing content, and how you can build accessible messages in Braze."
 ---
