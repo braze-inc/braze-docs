@@ -37,6 +37,10 @@ These graphs can show monthly active users, monthly unique visitors, and email s
 
 Contract details list the start and end date of your current contract with Braze.
 
+#### Considerations
+
+If your contract uses Monthly Unique Visitors (MUV) and you change to a contract that only uses Monthly Active Users (MAU), your historical data will still appear in the MUV graph and your new data will only appear in the MAU graph. For example, if your contract ends in October, the MUV graph shows data up until the end of September.
+
 ## Most used events and attributes by app
 
 Under **Most Used Events and Attributes By App**,  you can check the drivers of your attribute and custom event data point usage. 
