@@ -121,7 +121,7 @@ CSVファイルをアップロードしてカタログを作成する。`id`、`
 このデータタイプは、カタログをセットアップした後は編集できない。
 {% endalert %}
 
-![4 つのカタログ列名:"id"、"title"、"price"、"image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}{: style="max-width:85%;"}
+![4 つのカタログ列名:"id"、"title"、"price"、"image_link".]({% image_buster /assets/img_archive/catalog_data_type.png %}){: style="max-width:85%;"}
 
 次に、このカタログに"games_catalog" と名前を付け、**Process カタログ** ボタンを選択します。その後、Brazeはカタログを作成する前に、カタログにエラーがないかチェックする。
 
