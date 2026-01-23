@@ -101,7 +101,7 @@ Configure the webhook as follows:
   - `Authorization`: Bearer `{Seen_API_TOKEN}`
   - `Content-Type`: `application/json`
 
->You can generate an [API token](https://docs.seen.io/authorization) in the Seen Platform under Workspace settings. You can also reach out to your Seen Customer Success Manager for assistance.
+  > You can generate an [API token](https://docs.seen.io/authorization) in the Seen Platform under Workspace settings. You can also reach out to your Seen Customer Success Manager for assistance.
 
 - To test the webhook with a user, switch to the **Test** tab.
 - After you confirm that the test works as intended, complete the webhook setup.
