@@ -46,15 +46,15 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | `name`           | Required | String    | The name of the catalog selection. |
 | `description`    | Optional | String    | A description of the catalog selection. |
 | `external_id`    | Required | String    | A unique identifier for the selection. |
-| `source`         | Required | String    | The source of the catalog data. For Shopify catalogs, this must be set to `"Shopify"`. |
-| `filters`        | Optional | Array    | An array of filter objects to apply to the catalog items. You can specify up to four filters per request. If no filters are provided, all items from the catalog will be included. |
+| `source`         | Required | String    | The source of the catalog data. For Shopify catalogs, use `"Shopify"`. For custom catalogs, use `"custom"`. |
+| `filters`        | Optional | Array    | An array of filter objects to apply to the catalog items. You can specify up to four filters per request. If no filters are provided, all items from the catalog are included. |
 | `results_limit`  | Optional | Integer   | The maximum number of results to return. Must be a number between 1 and 50. |
-| `sort_field`     | Optional | String    | The field to sort results by. This must be paired with `sort_order`. If both `sort_field` and `sort_order` are not present, the results will be randomized. |
-| `sort_order`     | Optional | String    | The order to sort results. Accepted values are `"asc"` (ascending) or `"desc"` (descending). This must be paired with `sort_field`. If both `sort_field` and `sort_order` are not present, the results will be randomized. |
+| `sort_field`     | Optional | String    | The field to sort results by. This must be paired with `sort_order`. If both `sort_field` and `sort_order` are not present, the results are randomized. |
+| `sort_order`     | Optional | String    | The order to sort results. Accepted values are `"asc"` (ascending) or `"desc"` (descending). This must be paired with `sort_field`. If both `sort_field` and `sort_order` are not present, the results are randomized. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-The `sort_field` and `sort_order` parameters must be used together. If you provide one without the other, or if you omit both parameters, the selection results will be returned in a randomized order.
+The `sort_field` and `sort_order` parameters must be used together. If you provide one without the other, or if you omit both parameters, the selection results are returned in a randomized order.
 {% endalert %}
 
 ## Example Request
@@ -100,7 +100,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-You can specify a maximum of four filters per selection request. Filters are applied in the order they appear in the array.
+The API supports a maximum of four filters per selection request. In the Braze dashboard, you can add up to 10 filters per selection. Filters are applied in the order they appear in the array.
 {% endalert %}
 
 ## Response
