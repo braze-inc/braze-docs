@@ -25,7 +25,7 @@ Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> *
 
 ![Window to add a new Team.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
 
-Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#testing-with-Teams) by creating a development Team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on the product.
+Enter the **Team Name**. If desired, use the **Define Team** field to select a custom attribute, location, or language to further define what user data the Team has access to. For example, a possible use case is to perform [testing with Teams](#test-with-teams) by creating a development Team that only has access to test users, identified by a custom attribute. Another use case is to restrict communication with users based on the product.
 
 If a Team is defined by a custom attribute, language, or country, you can then use the Team to filter end-users for features like campaigns, Canvases, Content Cards, segments, and more. For more, see [Assigning Team tags](#tags-and-filters).
 
