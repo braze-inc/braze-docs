@@ -127,7 +127,7 @@ Refer to [Data types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create
 
 ### Delays in sending with Connected Content
 
-When the Connected Content fails, all successful users are advanced immediately, and failed users are retried separately. When all retries fail for a Context step, the users exit the Canvas.
+When Connected Content fails, successful users advance immediately, and failed users are retried separately. When all retries fail for a Context step, the users exit the Canvas.
 
 ## Frequently asked questions
 
