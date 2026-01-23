@@ -161,6 +161,17 @@ The `extras` field contains the key-value pairs configured in the **Email Extras
 }
 ```
 
+{% alert important %}
+**Push payload structure variations**: The `payload` field in push notification archives contains the entire push payload as sent to the device. Push payload structures can vary significantly depending on the message type, platform, and configuration. For example:
+
+- **iOS push notifications** may have different structures for rich notifications (with `alert` objects containing `title` and `body`) versus simple notifications (with `alert` as a string).
+- **Android push notifications** may have different structures for rich notifications (with structured fields like `a` and `t`) versus simple notifications (with `payload` as a string).
+
+Additionally, test sends from the dashboard may produce different payload structures than production messages.
+
+The JSON payload format isn't guaranteed to remain consistent across all messages or over time. When parsing archived push payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}
 
