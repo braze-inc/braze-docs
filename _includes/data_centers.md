@@ -20,6 +20,13 @@
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endif %}
 
+{% if include.datacenters == "JP" %}
+| Dashboard URL | REST endpoint | SDK endpoint |
+| --- | --- | --- |
+| `https://dashboard.jp-01.braze.com` | `https://rest.jp-01.braze.com` | `sdk.jp-01.braze.com` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{% endif %}
+
 {% if include.datacenters == "US" %}
 | Dashboard URL | REST endpoint | SDK endpoint |
 | --- | --- | --- |
@@ -127,6 +134,11 @@ For instance `ID-01`, these are the relevant IP addresses:
 - `16.78.14.134`
 - `16.78.162.208`
 - `43.218.73.35`
+{% endsubtab %}
+{% subtab Japan (JP) %}
+For instance `JP-01`, these are the relevant IP addresses:
+
+
 {% endsubtab %}
 {% endsubtabs %}
 {% endif %}
