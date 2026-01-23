@@ -70,9 +70,7 @@ A row is added to `SNAPSHOTS_CANVAS_STEP_SHARED` when:
 - A snapshottable field on the Canvas step is changed (for example, when a new channel is added to a message step)
 
 {% alert important %}
-**Content changes do not trigger snapshots**: Changing content within a message step (such as email body text, subject lines, or push notification copy) does not trigger a snapshot. Only structural changes to snapshottable fields (like adding a new channel) create a new row.
-
-**Draft Canvases are not tracked**: This table tracks only changes to active (launched) Canvases. Updates to message steps in Draft Canvases are not captured in `SNAPSHOTS_CANVAS_STEP_SHARED`. Snowflake Data Sharing does not provide the most recently updated message step for Draft Canvases.
+**Content changes do not trigger snapshots**: Changing content within a message step (such as email body text, subject lines, or push notification copy) does not trigger a snapshot. Only structural changes to snapshottable fields (like adding a new channel) create a new row in `SNAPSHOTS_CANVAS_STEP_SHARED`, regardless of whether the Canvas is in draft or launched.
 {% endalert %}
 
 ### SNAPSHOTS_CANVAS_VARIATION_SHARED
@@ -81,7 +79,9 @@ A row is added to `SNAPSHOTS_CANVAS_VARIATION_SHARED` when fields in the top-lev
 
 ### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
 
-A row is added to `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` when campaign message variations are updated. Unlike Canvas step snapshots, this table tracks both active and draft campaigns.
+A row is added to `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` when:
+- The campaign is launched, OR
+- Snapshottable fields in campaign message variations are changed (for both active and draft campaigns)
 
 ### CHANGELOGS_CAMPAIGN_SHARED
 
