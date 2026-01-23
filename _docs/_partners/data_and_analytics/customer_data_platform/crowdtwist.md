@@ -32,7 +32,7 @@ For example, use a Data Push to pass relevant custom events and attributes to Br
 | --- | --- |
 | Oracle Crowdtwist account | An [Oracle Crowdtwist Account](https://www.oracle.com/uk/cx/marketing/customer-loyalty/) is required to take advantage of this partnership. |
 | Braze Data Transformation Endpoint| This integration relies on Braze's [Data Transformation Tool]({{site.baseurl}}/user_guide/data/data_transformation/overview). When you create a Data Transformation, Braze generates a unique endpoint that you can add as a destination for Crowdtwist's Data Push.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
@@ -42,13 +42,13 @@ Braze and Oracle Crowdtwist have created [Data Transformation templates]({{site.
 
 Navigate to **Data Settings > Data Transformation > Create Transformations > Use a Template** > and select the “BRAZE <> CROWDTWIST” template of your choice. 
 
-You find four templates—one each for transforming User Profile, User Activity, and User Redemption events, and a master template that uses conditional logic to apply to various Data Push events.
+You will find four templates—one each for transforming User Profile, User Activity, and User Redemption events, and a master template that uses conditional logic to apply to various Data Push events.
 
-As shown in [Oracle Crowdtwist's Data Push documentation](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/DataPush.html), Data Push objects contain different metadata, so each requires their own transformation code to create appropriate Braze objects. The master template illustrates how to set up a single Data Transformation to accept each of the three types of objects and creates an appropriate output with values from each object.
+As shown in [Oracle Crowdtwist's Data Push documentation](https://docs.oracle.com/en/cloud/saas/marketing/crowdtwist-develop/Developers/DataPush.html), Data Push objects contain different metadata, so each requires its own transformation code to create appropriate Braze objects. The master template illustrates how to set up a single Data Transformation to accept each of the three types of objects and creates an appropriate output with values from each object.
 
 ## Step 2: Update and Test Template
 
-Below you see the annotated templates. The body of these templates is designed to apply to the `/users/track` destination. Annotations are marked by the `//` line-start and green text, and you can delete them without affecting the operation of the transformation code. 
+Below, you’ll see the annotated templates. The body of these templates is designed to apply to the `/users/track` destination. Annotations are marked by the `//` line-start and green text, and you can delete them without affecting the operation of the transformation code. 
 
 The transformation uses JavaScript, which builds an object called "brazecall". This object is where you create the request body that is sent to a Braze REST API endpoint. For guidance on the required structures of the requests to these destinations, see the links in the "destinations" section.    
 
@@ -74,6 +74,7 @@ let brazecall = {
      "_update_existing_only": false,
      "crowdtwist_loyalty_points": payload.redeemablePoints,
  //In this example, the "tierInfo" object from Crowdtwist is transformed into a Braze Nested Custom Attribute. Use the "_merge_objects" value to avoid duplications in a data point efficient manner.
+ //The "tierinfo_current_level" attribute is a flat Braze custom attribute, while "tierInfo" below is a nested object mirroring the Crowdtwist payload; the difference in capitalization is intentional.
      "tierinfo_current_level": payload.tierInfo.currentLevel,
      "_merge_objects" : true,
      "tierInfo" : {
@@ -124,15 +125,14 @@ let brazecall = {
      "properties": {
        "description": payload.description,
        "date_assigned": payload.dateAwarded
-     },
-           "_update_existing_only": true
+     }
    }
  ]
 };
 return brazecall;
 ```
-{%endtab%}
-{%tab Redemption Event Template %}
+{% endtab %}
+{% tab Redemption Event Template %}
 ```javascript
 let brazecall = {
  "attributes": [
@@ -150,7 +150,7 @@ return brazecall;
 
 ```
 {%endtab%}
-{%tab Master Template %}
+{% tab Master Template %}
 ```javascript
 //The master template uses JavaScript's conditional operators to determine the output of the Data Transformation. This example shows how to apply JavaScript to your transformation to allow for a dynamic range of sources or inputs. 
 
@@ -160,7 +160,7 @@ if (payload.tierInfo) {
 let brazecall = {
  "attributes": [
    {
-     "external_id": payload.third_party_id,
+     "external_id": payload.thirdPartyId,
      "email": payload.emailAddress,
      "_update_existing_only": false,
      "crowdtwist_loyalty_points": payload.redeemablePoints,
@@ -207,8 +207,7 @@ return brazecall;
      "properties": {
        "description": payload.description,
        "date_assigned": payload.dateAwarded
-     },
-           "_update_existing_only": true
+     }
    }
  ]
 };
@@ -232,12 +231,12 @@ return brazecall;
 }
 
 ```
-{%endtab%}
+{% endtab %}
 {% endtabs %}
 
 ### Destinations
 
-The templates in this guide are created to deliver to the "Track Users" destination, but you can design your template to send to any of the endpoints listed in [Braze's Data Transformation guide]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/#step-2-create-a-transformation ), with the support of the associated [REST API documentation]({{site.baseurl}}/api/home).
+The templates in this guide are created to deliver to the "Track Users" destination, but you can design your template to send to any of the endpoints listed in [Braze's Data Transformation guide]({{site.baseurl}}/user_guide/data/data_transformation/creating_a_transformation/#step-2-create-a-transformation), with the support of the associated [REST API documentation]({{site.baseurl}}/api/home).
 
 ### Testing
 
@@ -247,7 +246,7 @@ After you modify the template to your liking, you must validate that it operates
 
 When you're happy with the object you see in the "output" field, click **Activate** so that the Data Transformation endpoint is ready to accept data. 
 
-You find your Data Transformation's webhook URL on the left-hand side panel. Copy this and use it for configuration within Oracle Crowdtwist's Integration Hub.
+You'll find your Data Transformation's webhook URL on the left-hand side panel. Copy this and use it for configuration within Oracle Crowdtwist's Integration Hub.
 
 {% alert important %}
 The Braze Data Transformation endpoints have a rate limit of 1000 requests per minute. Consider the speed at which you want this data made available in Braze, and speak to your Braze Account Manager if you require a higher Data Transformation rate limit.

@@ -34,7 +34,7 @@ _この統合はJasperによって維持されています。_
 | Braze RESTエンドポイント | RESTエンドポイントのURL。具体的なエンドポイントは、インスタンスのBraze URL によって異なります。[Braze API の基本を参照してください。詳細は、エンドポイント]({{site.baseurl}}/api/basics#endpoints) ドキュメントを参照してください。 |
 {: .reset-td-br-1 .rest-td-br-2 role=“presentation” }
 
-## 統合方法
+## 連携方法
 
 ジャスパーでコンテンツを生成し、Braze テンプレートs を更新するには、次の2 つの方法があります。
 

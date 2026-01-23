@@ -9,7 +9,7 @@ search_rank: 2
 
 # 解約予測
 
-> Braze Predictive SuiteのツールであるPredictive Churnを使えば、ビジネスにとっての解約予測を定義し、維持したいユーザーを特定することができる。予測を作成すると、Braze は解約したユーザーと解約しなかったユーザーの両方の過去の行動のパターンを分析してリスクのあるユーザーを認識するように、[勾配ブースティング決定木](https://en.wikipedia.org/wiki/Gradient_boosting)を使用して機械学習モデルをトレーニングします。
+> Predictive Predictive SuiteのツールであるPredictive Churnを使えば、ビジネスにとっての解約予測を定義し、維持したいユーザーを特定することができる。予測を作成すると、Braze は解約したユーザーと解約しなかったユーザーの両方の過去の行動のパターンを分析してリスクのあるユーザーを認識するように、[勾配ブースティング決定木](https://en.wikipedia.org/wiki/Gradient_boosting)を使用して機械学習モデルをトレーニングします。
 
 {% alert tip %}
 詳細については、「[解約の定義]({{site.baseurl}}/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)」と「[予測対象ユーザー]({{site.baseurl}}/user_guide/brazeai/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)」を参照してください。

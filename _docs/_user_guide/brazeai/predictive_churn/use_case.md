@@ -42,7 +42,7 @@ The model then begins training, analyzing behaviors like recent sessions, freque
 
 ## Step 2: Segment users by churn risk
 
-After the model finishes training, Braze assigns each eligible user a [Churn Risk Score]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/#churn_score) between 0–100. 
+After the model finishes training, Braze assigns each eligible user a [Churn Risk Score]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/#churn_score) between 0-100. 
 
 To determine a starting threshold for targeting, Camila uses the prediction audience slider to preview how many users fall into each score range and how accurate the prediction is at that level. She balances coverage and precision based on expected true positives. Based on this, she decides to target risk scores higher than 70. 
 

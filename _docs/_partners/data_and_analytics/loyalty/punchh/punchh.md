@@ -208,7 +208,7 @@ Events required:
 - Reward event
 - Guest event
 Considerations:
-- Execution delay, recommend that the guest add a 5–10-minute delay
+- Execution delay, recommend that the guest add a 5-10-minute delay
 
 ![A user segment is configured in punch, and guests sign up for a loyalty program. After this, the guest event, if triggered, and the Braze messaging campaign is triggered. Next, the Punchh sign-up gifting campaign is triggered after 10 minutes, triggering the reward event and optional follow-up message.]({% image_buster /assets/img/punchh/usecase3.png %})
 {% endtab %}

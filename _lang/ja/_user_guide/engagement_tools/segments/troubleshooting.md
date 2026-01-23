@@ -1,6 +1,6 @@
 ---
 nav_title: トラブルシューティング
-article_title: トラブルシューティング セグメント
+article_title: セグメントのトラブルシューティング
 page_order: 12
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "この参考記事では、トラブルシューティングの手順と、セグメントを使用する際の留意点について解説する。"
 ---
 
-# セグメントのトラブルシューティング
+# Segmentのトラブルシューティング
 
 ## エラー数
 

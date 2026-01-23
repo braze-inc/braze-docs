@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: WhatsAppに関するよくある質問
-page_order: 10
+page_order: 11
 description: "この記事では、WhatsAppキャンペーンの設定時によくある質問のいくつかに対処します。"
 page_type: FAQ
 channel:
