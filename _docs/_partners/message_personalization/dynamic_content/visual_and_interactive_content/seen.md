@@ -65,7 +65,7 @@ Because Journey responses are configurable, it’s important that the output fie
 ---
 
 ## Rate limit
-The Seen API currently accepts 100 calls per 10 seconds.
+The Seen API accepts up to 100 calls every 10 seconds.
 
 ---
 
