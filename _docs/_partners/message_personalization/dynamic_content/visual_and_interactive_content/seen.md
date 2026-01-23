@@ -77,7 +77,7 @@ If you have multiple video campaigns with Seen, repeat the process to connect Br
 
 ### Step 1: Create a webhook campaign to send data to Seen
 
-Create a new [Webhook Campaign](https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks) in Braze.
+Create a new [Webhook Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) in Braze.
 
 Configure the webhook as follows:
 
@@ -144,7 +144,7 @@ If your use case requires additional attributes, include them in the response an
 
 Use Braze Data Transformations to ingest the Seen Journey response and store video assets on the user profile.
 
-1. Create the following [custom attributes](https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) in Braze:
+1. Create the following [custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) in Braze:
    - `player_url`
    - `email_thumbnail_url`
 2. Navigate to **Data Settings** → **Data Transformation** and click **Create transformation**
