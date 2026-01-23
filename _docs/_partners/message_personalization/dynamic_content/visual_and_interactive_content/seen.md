@@ -36,7 +36,7 @@ Before you begin, ensure you have the following:
 | Seen Platform access | A Seen Platform subscription or active Seen campaign is required. You will need access to your Workspace settings to retrieve your Workspace ID and generate an API token. |
 | Braze Data Transformation Webhook URL | Braze Data Transformation will be used to reformat the incoming data from Seen so it can be accepted by Braze’s /users/track endpoint. |
 | Braze user data | Video personalization requires user-level data. Ensure the relevant attributes are available in Braze and that you pass **braze_id** as the unique identifier. |
-{: .reset-td-br-1 .reset-td-br-2}
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ---
 
