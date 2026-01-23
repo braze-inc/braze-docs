@@ -117,7 +117,7 @@ To configure your Journey:
 
 1. Create a new Journey in the Seen Platform
 2. Add a **Trigger node** and select the `On Create` trigger  
-   This ensures the Journey starts when Braze sends data to Seen. Create and add any [segmentation](https://docs.seen.io/segments) logic within your workscapse if needed.
+   This ensures the Journey starts when Braze sends data to Seen. Create and add any [segmentation](https://docs.seen.io/segments) logic within your workspace if needed.
 3. Build your logic using the following nodes as needed:
    - **Conditional node**: Route users based on attribute values (for example, plan type or region)
    - **Project node**: Apply dynamic video personalization using the incoming data
