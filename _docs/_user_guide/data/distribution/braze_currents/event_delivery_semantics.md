@@ -20,7 +20,7 @@ This content **only applies to the flat file event data we send to Data Warehous
 
 ## Test events
 
-When you set up a Currents integration, Braze sends test events to verify the connection with your storage bucket. These test events are designed to validate that your integration can receive and process data correctly.
+When you set up a Currents integration, Braze sends test events to verify the connection with your storage bucket. These test events validate that your integration can receive and process data correctly.
 
 {% alert important %}
 **Test event data format:** Test events contain placeholder values that match the correct data types for each field, but they don't contain realistic or accurate data. For example, a `timezone` field may contain a UUID-like string instead of a valid timezone identifier (such as "America/Chicago"), and other fields like `campaign_name` and `ip_pool` may also contain placeholder values rather than actual data.
