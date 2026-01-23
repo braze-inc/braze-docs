@@ -1,7 +1,7 @@
 ---
 nav_title: Open Loyalty
 article_title: Open Loyalty
-description: "Braze and Open Loyalty integration allows you to sync loyalty data—such as points balance, tier changes, and expiry warnings—directly into Braze in real-time."
+description: "The Braze and Open Loyalty integration allows you to sync loyalty data—such as points balance, tier changes, and expiry warnings—directly into Braze in real-time."
 alias: /partners/openloyalty/
 page_type: partner
 search_tag: Partner
@@ -9,15 +9,15 @@ search_tag: Partner
 
 # Open Loyalty
 
-Braze and Open Loyalty integration allows you to sync loyalty data—such as points balance, tier changes, and expiry warnings—directly into Braze in real-time. This enables you to trigger personalized messages (Email, Push, SMS) immediately when a user's loyalty status changes.
+> [Open Loyalty](https://www.openloyalty.io/) is a cloud-based loyalty program platform that enables you to build and manage customer loyalty and rewards programs. The Braze and Open Loyalty integration allows you to sync loyalty data—such as points balance, tier changes, and expiry warnings—directly into Braze in real-time. This enables you to trigger personalized messages (Email, Push, SMS) when a user's loyalty status changes.
 
-*This integration is maintained by Open Loyalty*
+_This integration is maintained by Open Loyalty_
 
-## About this integration
+## About the integration
 
 This integration uses **Braze Data Transformations** to capture webhooks from Open Loyalty and map them to Braze User Profiles.
 
-* **Real-time Updates:** Push loyalty events (Points Earned, Tier Upgrades) to Braze instantly.
+* **Real-time Updates:** Push loyalty events (Points Earned, Tier Upgrades) to Braze.
 * **Personalization:** Use loyalty attributes (Current Balance, Next Tier Name) in your Braze templates.
 * **Bi-directional:** Update Open Loyalty customer custom attributes based on Braze engagement data.
 
@@ -32,9 +32,9 @@ This integration covers two main data flows:
 
 Before you start, you need the following:
 
-| Prerequisite | Description |
+| Requirement | Description |
 | :--- | :--- |
-| Open Loyalty Account | You must be an Admin on an Open Loyalty Tenant. |
+| Open Loyalty account | An Admin account on an Open Loyalty Tenant is required to take advantage of this partnership. |
 | Open Loyalty REST API Key | An Open Loyalty REST API Key (for integrations where data is sent from Braze to Open Loyalty). <br><br> Create this in **Settings > Admins > API Keys**. |
 | Braze REST API Key | A Braze REST API key with `users.track` permissions. <br><br> Create this key in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze Data Transformation | Access to the "Data Settings" tab in Braze to configure webhook listeners. |
@@ -42,7 +42,7 @@ Before you start, you need the following:
 | Tenant ID | Your Open Loyalty Tenant ID (required for Outbound updates). |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation”}
 
-## Integrating Open Loyalty
+## Integration
 
 The primary integration involves syncing Open Loyalty webhook events to Braze using Data Transformations.
 
@@ -77,7 +77,7 @@ Tell Open Loyalty to send specific events to the URL you just generated.
 
 ### Step 3: Configure the Data Transformation
 
-Now you must write the JavaScript logic in Braze to map the incoming Open Loyalty payload to Braze properties.
+Next, write the JavaScript logic in Braze to map the incoming Open Loyalty payload to Braze properties.
 
 1.  In Braze, open the data transformation you created in Step 1.
 2.  Trigger the event in Open Loyalty (e.g., change a member's points or assign a tier) to generate a sample payload in the **Webhook details** pane.
@@ -88,7 +88,7 @@ Now you must write the JavaScript logic in Braze to map the incoming Open Loyalt
 const data = payload.data;
 
 // 2. Construct the Braze API body
-```let brazecall = {
+let brazecall = {
   "events": [
     {
       // CRITICAL: Map the identifier (e.g., loyaltyCardNumber -> external_id)
@@ -119,18 +119,14 @@ return brazecall;
 
 ## Using Open Loyalty with Braze
 
-
 Once the Inbound integration is complete, you can also configure **Outbound Updates** to modify Open Loyalty members based on Braze behavior.
-
 
 ### Step 1: Configure Braze Webhook Campaign
 
-
 This process uses Braze Webhooks to send a `PATCH` request to the Open Loyalty Member API (e.g., to add a "VIP" label).
 
-
 1.  In Braze, create a new **Webhook Campaign** (or use a Webhook within a Canvas).
-2.  Click on **Compose Webhook**.
+2.  Click **Compose Webhook**.
 3.  **Webhook URL**: Construct the URL using your Open Loyalty instance, Tenant ID, and the Braze Liquid variable for the user ID.
     * Format: `https://<YOUR_OL_INSTANCE>/api/<TENANT_ID>/member/loyaltyCardNumber={{${user_id}}}`
 4.  **Request Method**: `PATCH`
