@@ -169,7 +169,7 @@ The `extras` field contains the key-value pairs configured in the **Email Extras
 
 Additionally, test sends from the dashboard may produce different payload structures than production messages.
 
-The JSON payload format isn't guaranteed to remain consistent across all messages or over time. When parsing archived push payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
+The JSON payload format can vary between messages and may change over time. When parsing archived push payloads, don't assume a fixed structure or expect the same fields to always be present. Implement flexible parsing logic that handles various payload formats.
 {% endalert %}
 
 {% endtab %}
