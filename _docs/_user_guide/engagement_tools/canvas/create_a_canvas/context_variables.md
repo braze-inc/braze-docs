@@ -171,7 +171,7 @@ Use the same data type for your context variable and comparison. For example, if
 
 Using "Day of year" for absolute dates can produce incorrect or unexpected results because the calculation ignores the year component. For example, if you're comparing a contract end date in April 2026 to determine if it's within 63 days, using "Day of year" may incorrectly match dates because it only compares day numbers (119 vs 359) without considering that April 2026 is actually 188 days away.
 
-**Rule of thumb**: Does the date repeat every year? **Yes** → Use "Day of year". **No** → Use "Time".
+**General guideline**: Does the date repeat every year? **Yes** → Use "Day of year". **No** → Use "Time".
 {% endalert %}
 
 Here is an example of a context variable filter comparing the context variable `product_name` to the regex `/braze/`.
