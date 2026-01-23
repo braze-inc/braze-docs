@@ -279,23 +279,17 @@ You can set it to `null` if you want to omit an attribute from a user's profile.
 
 Make incremental updates to your data so you can prevent unintentional overwrites when simultaneous updates are made.
 
-In the following example, a user has two attributes:
-- Color: "Green"
-- Size: "Large"
+{% alert important %}
+**Updates to different attributes:** In the vast majority of cases, if two updates don't impact the same attributes on a user, they have entirely independent results. For example, if you update a user's `Color` attribute and separately update their `Size` attribute, both updates should be applied correctly, even if they occur within seconds of each other.
 
-Then Braze receives the following two updates to that user simultaneously:
-- Request 1: Change color to "Red"
-- Request 2: Change size to "Medium"
+**Updates to the same attribute:** Race conditions can occur when multiple updates target the same attribute within seconds of each other (or up to five minutes in extreme cases such as system downtimes). In these rare cases, one update may overwrite another.
 
-Because Request 1 occurs first, the user's attributes are updated to the following:
-- Color: "Red"
-- Size: "Large"
+**Object array operators:** The only exceptions to independent updates are with the `$add`, `$remove`, and `$update` operators for object arrays, where updates to the same array may interact with each other.
 
-However, when Request 2 occurs, Braze starts with the original attribute values ("Green" and "Large"), then updates the user's attributes to the following:
-- Color: "Green"
-- Size: "Medium"
+**Events:** Race conditions don't affect events because each event is unique and has a timestamp associated with it.
+{% endalert %}
 
-When the requests are finished, Request 2 will overwrite the update from Request 1, so it's best to stagger your updates so you can prevent requests from being overwritten.
+To minimize the risk of race conditions when updating the same attributes, stagger your updates so that multiple updates for a single user are spaced apart (multiple rows apart) or in different sync runs.
 
 ### Create a JSON string from another table
 
