@@ -19,7 +19,7 @@ Teams are not available on all Braze contracts. To access this feature, contact 
 
 {% multi_lang_include permissions.md content="Differences" %}
 
-## Create Teams
+## Create Teams {#creating-teams}
 
 Go to **Settings** > **Internal Teams** and select <i class="fas fa-plus"></i> **Add Team**.
 
