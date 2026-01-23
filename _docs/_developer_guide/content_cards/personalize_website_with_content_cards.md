@@ -17,16 +17,16 @@ The benefits of creating this service include:
 
 - Non-technical Braze users populate personalized content for users once implemented - no need for separate engineering releases for every website content update!
 - Each user can see their own version of your website, creating a more personalized, one-to-one user experience.
-- Content Cards can be triggered based off of user actions and/or personalized based off of user data.
+- Content Cards can be triggered based on user actions and/or personalized based on user data.
 
 Follow the steps on this page to set up Content Cards in the Braze platform, and manually retrieve and display them on your website with a custom implementation.
 
 ## Prerequisites
 
-To implement this solution, you will need to the following:
+To implement this solution, you need the following:
 
 - Access to the Braze Content Cards product
-- Intermediate knowledge of Javascript to code the custom display of Content Cards
+- Intermediate knowledge of JavaScript to code the custom display of Content Cards
 
 ## Step 1: Create your Content Card campaigns in the Braze dashboard
 
@@ -34,17 +34,18 @@ To implement this solution, you will need to the following:
 2. **Compose Your Card**:
    - **Title and Description**: Enter the title and description for your Content Card. These fields are what users will see on your website.
    - **Image and URL** (optional): Add an image and a URL that the card will link to when clicked.
-   - **Personalize Attributes**: Use custom attributes to personalize the content. For example, you can use tags like {% raw %}`{{first_name}}`{% endraw %} to dynamically insert user-specific data.
+   - **Personalize Attributes**: Use custom attributes to personalize the content. For example, you can use tags like {% raw %}`{{${first_name}}}`{% endraw %} to dynamically insert user-specific data.
 3. **Target Your Audience**: Define the audience for your Content Card. Use segmentation to target specific user groups based on their behavior or attributes.
-4. **Choose Delivery**: Choose when or how the Content Card should be delivered. You can set it to be sent immediately, schedule it for a later time, or trigger it based upon a certain action.
+4. **Choose Delivery**: Choose when or how the Content Card should be delivered. You can set it to be sent immediately, schedule it for a later time, or trigger it based on a certain action.
 
 ## Step 2: Integrate Braze Content Cards into Your Website with Custom Implementation
 
-1. **Include Braze Web SDK**: Ensure that the Braze Web SDK is integrated into your website. This involves adding the Braze JavaScript library to your website's codebase.
+1. **Include Braze Web SDK**: Integrate the Braze Web SDK into your website. This involves adding the Braze JavaScript library to your website's codebase.
 2. **Initialize the SDK**:
    - Use the `braze.initialize` function to set up the SDK with your Braze API key and other configuration options.
 3. **Manually Retrieve Content Card Data**:
    - Use the `braze.subscribeToContentCardsUpdates` method to fetch Content Cards from Braze. This method allows you to access the data model of the Content Cards directly, extracting the JSON data structure that contains all the card details such as title, description, image URL, and any custom attributes.
+   - Call `braze.requestContentCardsRefresh()` to trigger an immediate fetch of Content Cards after subscribing to updates.
 4. **Custom Display Logic**:
    - Implement a custom function to parse the Content Card data model. This function should extract the necessary fields and format them according to your website's design requirements.
    - Create custom HTML elements and styles to display the Content Card data. This allows you to have full control over how the content is presented on your website.
@@ -63,16 +64,37 @@ To implement this solution, you will need to the following:
       if (!card.isControl) { // Ensure it's not a control card
         const cardElement = document.createElement('div');
         cardElement.className = 'content-card';
-        cardElement.innerHTML = `
-          <h2>${card.title}</h2>
-          <p>${card.cardDescription}</p>
-          <img src="${card.imageUrl}" alt="${card.title}">
-          <a href="${card.url}" target="_blank">Learn More</a>
-        `;
+        
+        const title = document.createElement('h2');
+        title.textContent = card.title || '';
+        cardElement.appendChild(title);
+        
+        const description = document.createElement('p');
+        description.textContent = card.description || '';
+        cardElement.appendChild(description);
+        
+        if (card.imageUrl) {
+          const img = document.createElement('img');
+          img.src = card.imageUrl;
+          img.alt = card.title || '';
+          cardElement.appendChild(img);
+        }
+        
+        if (card.url) {
+          const link = document.createElement('a');
+          link.href = card.url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = 'Learn More';
+          cardElement.appendChild(link);
+        }
+        
         container.appendChild(cardElement);
       }
     });
   });
+  
+  braze.requestContentCardsRefresh();
 </script>
 ```
 
