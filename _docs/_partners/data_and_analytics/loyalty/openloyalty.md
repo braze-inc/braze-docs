@@ -2,7 +2,7 @@
 nav_title: Open Loyalty
 article_title: Open Loyalty
 description: "Braze and Open Loyalty integration allows you to sync loyalty data—such as points balance, tier changes, and expiry warnings—directly into Braze in real-time."
-alias: /partners/open_loyalty/
+alias: /partners/openloyalty/
 page_type: partner
 search_tag: Partner
 ---
