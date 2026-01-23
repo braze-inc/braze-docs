@@ -178,7 +178,7 @@ By default, frequency capping is toggled on when new campaigns are created. From
 
 This time frame can be measured in minutes, days, or weeks (seven days), with a maximum duration of 30 days.
 
-Each line of frequency caps is connected using the `AND` operator, and you can add up to 10 rules per workspace. You can include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week. Note that aborted messages do not count towards frequency capping.
+Each line of frequency caps is connected using the `AND` operator, and you can add up to 10 rules per workspace. You can include multiple caps for the same message types. For instance, you can cap users to no more than one push per day and no more than three pushes per week. Note that aborted messages do not count toward frequency capping.
 
 ![Frequency capping section with lists of campaigns and Canvases that rules will and will not apply to.]({% image_buster /assets/img_archive/rate_limiting_overview_2.png %}){: style="max-width:90%;"} 
 
