@@ -19,9 +19,9 @@ Braze supports two different S3 authentication and authorization methods for set
 
 This method generates a secret key and an access key ID that allows Braze to authenticate as a user on your AWS account to write data to your bucket.
 
-### Step 1: Create an in-app message user
+### Step 1: Create an Identity and Access Management (IAM) user
 
-To retrieve your secret access key and access key ID, you’ll need to create an in-app message user, following the instructions in [Setting up your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
+To retrieve your secret access key and access key ID, you’ll need to create an IAM user, following the instructions in [Setting up your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
 
 ### Step 2: Get credentials
 
