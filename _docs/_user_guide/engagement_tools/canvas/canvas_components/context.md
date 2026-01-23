@@ -155,7 +155,7 @@ No.
 
 Yes, this impacts `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`. In all circumstances, we recommend using Liquid `time_zone` filters for timestamps to be represented in the desired timezone.
 
-Here is an example of how to do this:
+Here's an example of how to do this:
 
 | Liquid in Message step | Output | Is this the way to represent time zones correctly in Liquid? |
 |---|---|---|
