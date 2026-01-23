@@ -63,7 +63,7 @@ Continue using Content Cards if you need:
 
 Before migrating, ensure your Braze SDK meets the minimum version requirements:
 
-{% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.4.0 reactnative:17.0.1 flutter:16.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 ### 1. Subscribing to updates
 
