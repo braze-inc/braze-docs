@@ -269,13 +269,13 @@ Foreground notification handling works differently depending on your platform an
 {% tab iOS %}
 For iOS, foreground notification handling is the same as the native Swift integration. Call `handleForegroundNotification(notification:)` inside your `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` implementation.
 
-For complete details and code examples, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#swift_handling-foreground-notifications) in the Swift push notifications documentation.
+For complete details and code examples, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift#handling-foreground-notifications) in the Swift push notifications documentation.
 {% endtab %}
 
 {% tab Android %}
 For Android, foreground notification handling is the same as the native Android integration. Call `BrazeFirebaseMessagingService.handleBrazeRemoteMessage` inside your `FirebaseMessagingService.onMessageReceived` method.
 
-For complete details and code examples, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#android_handling-foreground-notifications) in the Android push notifications documentation.
+For complete details and code examples, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) in the Android push notifications documentation.
 {% endtab %}
 
 {% tab Expo %}
