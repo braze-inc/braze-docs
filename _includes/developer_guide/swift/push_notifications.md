@@ -362,7 +362,7 @@ Create your push notification subscription in `application(_:didFinishLaunchingW
 
 ## Handling foreground notifications
 
-By default, when a push notification arrives while your app is in the foreground, iOS will not display it automatically. To display push notifications in the foreground and track them with Braze analytics, call the `handleForegroundNotification(notification:)` method inside your `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` implementation.
+By default, when a push notification arrives while your app is in the foreground, iOS does not display it automatically. To display push notifications in the foreground and track them with Braze analytics, call the `handleForegroundNotification(notification:)` method inside your `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` implementation.
 
 ### How it works
 

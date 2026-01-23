@@ -87,7 +87,7 @@ After adding your custom push service, add the following to your `AndroidManifes
 
 By default, when a push notification arrives while your app is in the foreground, Huawei displays it automatically. To have Braze process the push notification payload (for analytics tracking, deep link handling, and custom processing), route the incoming push data to Braze inside your `HmsMessageService.onMessageReceived` method.
 
-When you call `BrazeHuaweiPushHandler.handleHmsRemoteMessageData`, Braze determines if the payload is a Braze push notification and, if so, creates and displays the notification. For more information, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#android_handling-foreground-notifications) in the Android push notifications documentation.
+When you call `BrazeHuaweiPushHandler.handleHmsRemoteMessageData`, Braze determines if the payload is a Braze push notification and, if so, creates and displays the notification. For more information, see [Handling foreground notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android#handling-foreground-notifications) in the Android push notifications documentation.
 
 For a complete example, see the [Huawei handler reference](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-huawei-push-handler/index.html) in the Braze Android SDK documentation.
 
