@@ -38,7 +38,6 @@ Before you begin, you need the following:
 | Braze user data | Video personalization requires user-level data. Ensure the relevant attributes are available in Braze and that you pass **braze_id** as the unique identifier. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
----
 
 
 
