@@ -23,7 +23,6 @@ Seen supports automated, personalized video delivery across the customer lifecyc
 - **Loyalty and upsell**: Highlight personalized offers or usage milestones
 - **Win-back and churn prevention**: Re-engage inactive users with tailored video content
 
----
 
 ## Prerequisites
 
