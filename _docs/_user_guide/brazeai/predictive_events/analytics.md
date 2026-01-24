@@ -94,4 +94,4 @@ Correlation data for preview predictions will be partially hidden. A purchase is
 
 If you're unable to create a prediction for a custom event, this may be due to insufficient sample size. Braze estimates the number of users who have performed the event, and if enough users haven't used the event isn't, the sample may not find sufficient data to train the model. In this case, the system may extrapolate to no users, preventing prediction creation.
 
-To create a successful prediction, ensure a sufficient number of users in your prediction audience performed your target custom event. The exact threshold varies, but events with very low usage across your user base may not provide enough data for reliable model training.
+To create a successful prediction, make sure that a sufficient number of users in your prediction audience have performed your target custom event. The exact threshold varies, but events with very low usage across your user base may not provide enough data for reliable model training.
