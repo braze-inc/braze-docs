@@ -128,6 +128,7 @@ Because the response payload is configurable, ensure the following fields are re
 | `id` | Must match the `braze_id` sent from Braze |
 | `player_url` | Unique URL for the personalized video player |
 | `email_thumbnail_url` | URL of the generated video thumbnail |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 If your use case requires additional attributes, include them in the response and map them in Braze.
 
