@@ -62,7 +62,6 @@ Because Journey responses are configurable, ensure the output fields returned by
 ## Rate limit
 The Seen API accepts up to 100 calls every 10 seconds.
 
----
 
 ## Integration
 
