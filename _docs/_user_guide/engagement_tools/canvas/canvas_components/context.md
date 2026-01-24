@@ -152,7 +152,7 @@ When Connected Content fails in a Context step, successful users advance immedia
 
 **Processing time**: The time it takes to process all users through a Context step depends on:
 - The number of users entering the step
-- Whether Connected Content is used (and its response time)
+- The use of Connected Content (and its response time)
 - The batch size (default 1,000 users per batch)
 
 If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches process in parallel, so ensure your endpoint can handle concurrent requests from multiple batches.
