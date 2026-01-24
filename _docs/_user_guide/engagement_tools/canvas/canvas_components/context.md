@@ -66,7 +66,7 @@ To define a context variable:
 2. Select a [data type](#context-variable-types).
 3. Write a Liquid expression manually or use **Add Personalization** to create a Liquid snippet from pre-existing attributes.
 4. Select **Preview** to check the value of your context variable.
-5. (Optional) To add more variables, select **Add Context variable** and repeat steps 1–4.
+5. (Optional) To add additional variables, select **Add Context variable** and repeat steps 1-4.
 6. When you're finished, select **Done**.
 
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).

@@ -88,7 +88,7 @@ The following are references to the JSON payload delivered to your cloud storage
   "html_body": HtmlBody,
   "plaintext_body": PlainTextBody,
   "amp_body": AMPEmailBody,
-  "extras": Extra hash—for SendGrid users, this will be passed to SendGrid as Unique Arguments,
+  "extras": Hash of key-value pairs from Email Extras configured in the email editor,
   "headers": HashOfHeaders,
   "sent_at": UnixTimestamp,
   "dispatch_id": DispatchIdFromBraze,
@@ -106,7 +106,7 @@ The following are references to the JSON payload delivered to your cloud storage
 }
 ```
 
-The `extras` field referred to in this payload is from the key-value pairs added in the **Email Extras** field when composing an email. For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
+The `extras` field contains the key-value pairs configured in the **Email Extras** field when composing an email in the HTML editor. Email extras work for all email service providers (including SendGrid and Sparkpost) and are included in archived messages regardless of which provider is used. For more information on configuring email extras, see [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#adding-email-extras). For sending data back to Currents, refer to [Message extras]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras/).
 
 ![]({% image_buster /assets/img_archive/email_extras.png %}){: style="max-width:60%" }
 
