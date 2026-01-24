@@ -132,7 +132,6 @@ Because the response payload is configurable, ensure the following fields are re
 
 If your use case requires additional attributes, include them in the response and map them in Braze.
 
----
 
 ### Step 3: Create a Data Transformation to receive data from Seen
 
