@@ -131,7 +131,7 @@ When Connected Content fails, successful users advance immediately, and failed u
 
 ## Frequently asked questions
 
-### What is changing when Canvas Context becomes generally available?
+### What changes when Canvas Context becomes generally available?
 
 When Canvas Context becomes generally available, the following details apply:
 
