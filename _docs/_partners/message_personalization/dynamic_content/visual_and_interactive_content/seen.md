@@ -14,7 +14,6 @@ layout: dev_guide
 >
 > The Braze and Seen integration lets you send user data from Braze to Seen, dynamically generate personalized videos, and return video assets—such as a unique player URL and thumbnail—back into Braze for use in campaigns and Canvases.
 
----
 
 ## Use cases
 
