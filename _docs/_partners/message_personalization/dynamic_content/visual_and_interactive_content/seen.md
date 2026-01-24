@@ -5,7 +5,6 @@ description: "Seen enables personalized video experiences at scale, helping bran
 alias: /partners/seen/
 page_type: partner
 search_tag: Partner
-layout: dev_guide
 ---
 
 # Seen
