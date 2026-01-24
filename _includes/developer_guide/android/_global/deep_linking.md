@@ -144,7 +144,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 ## Customizing WebView activity {#Custom_Webview_Activity}
 
-When website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
+When Braze opens website deeplinks inside the app, the deeplinks are handled by [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
 
 {% alert note %}
 For custom HTML in-app messages, links configured with `target="_blank"` open in the device's default web browser and are not handled by `BrazeWebViewActivity`.
