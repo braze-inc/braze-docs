@@ -37,6 +37,23 @@ Each context variable requires a name, a data type, and a value (set using Liqui
 
 Each Canvas entry redefines context variables based on the latest entry data and Canvas setup, allowing users to have multiple active journeys with their own context. For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
 
+### User processing and batching
+
+Context steps process users in batches to optimize performance. When users enter a Context step, Braze processes them in batches of 1,000 users by default. These batches are processed in parallel, but within each batch, users are processed sequentially.
+
+This means:
+- **Parallel batch processing**: Multiple batches of 1,000 users are processed simultaneously, allowing large audiences to be handled efficiently.
+- **Sequential processing within batches**: Within each batch, users are processed one after another. If your Context step includes [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) calls, each user's Connected Content request must complete before the next user in that batch is processed.
+- **Independent batch progression**: Each batch progresses independently. When a batch completes processing, those users advance to the next step immediately, even if other batches are still processing. This means users from different batches may reach subsequent steps at different times.
+
+**Example**: If 3,500 users enter a Context step with Connected Content that takes 650ms per user:
+- Braze creates approximately 4 batches of users (612, 802, 1,000, 880, and 120 users in this example).
+- Each batch processes users sequentially, so a batch of 1,000 users takes approximately 11 minutes (1,000 × 650ms).
+- Batches complete at different times, so users trickle into the next step as their batch finishes.
+- The first users may reach the next step several minutes before the last users, depending on batch size and Connected Content response times.
+
+Without Connected Content, Context steps process much faster because there are no external API calls to wait for.
+
 ## Considerations
 
 - You can define up to 10 context variables per Context step.
@@ -127,7 +144,18 @@ Refer to [Data types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create
 
 ### Delays in sending with Connected Content
 
-When Connected Content fails, successful users advance immediately, and failed users are retried separately. When all retries fail for a Context step, the users exit the Canvas.
+When Connected Content fails in a Context step, successful users advance immediately to the next step, while failed users are retried separately. This means a batch doesn't wait for all users to succeed before progressing—successful users move forward as soon as their Connected Content call completes.
+
+**Retry behavior**: Context steps (and all Canvas steps) use Canvas-specific retry mechanisms, not the standard Connected Content retry behavior. If a Connected Content call fails, Braze retries the step approximately 13 times with exponential backoff. If all retries fail, the user exits the Canvas.
+
+**Note**: The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
+
+**Processing time**: The time it takes to process all users through a Context step depends on:
+- The number of users entering the step
+- Whether Connected Content is used (and its response time)
+- The batch size (default 1,000 users per batch)
+
+If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches process in parallel, so ensure your endpoint can handle concurrent requests from multiple batches.
 
 ## Frequently asked questions
 
