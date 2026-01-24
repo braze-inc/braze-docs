@@ -48,7 +48,7 @@ This means:
 
 **Example**: If 3,500 users enter a Context step with Connected Content that takes 650ms per user:
 - Braze creates approximately 4 batches of users (612, 802, 1,000, 880, and 120 users in this example).
-- Each batch processes users sequentially, so a batch of 1,000 users takes approximately 11 minutes (1,000 × 650ms).
+- Each batch processes users sequentially, so a batch of 1,000 users takes approximately 10.8 minutes (650 seconds; 1,000 × 650ms).
 - Batches complete at different times, so users trickle into the next step as their batch finishes.
 - The first users may reach the next step several minutes before the last users, depending on batch size and Connected Content response times.
 
