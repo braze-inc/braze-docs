@@ -58,7 +58,6 @@ Journeys are composed of **nodes**, each with a specific function:
 
 Because Journey responses are configurable, ensure the output fields returned by Seen match the attributes expected by your Braze Data Transformation.
 
----
 
 ## Rate limit
 The Seen API accepts up to 100 calls every 10 seconds.
