@@ -102,7 +102,6 @@ Configure the webhook as follows:
 - To test the webhook with a user, switch to the **Test** tab.
 - After confirming the test works as intended, complete the webhook setup.
 
----
 
 ### Step 2: Configure a Journey in the Seen Platform
 
