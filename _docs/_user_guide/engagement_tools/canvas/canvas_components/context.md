@@ -47,7 +47,7 @@ This means:
 - **Independent batch progression**: Each batch progresses independently. When a batch completes processing, those users advance to the next step immediately, even if other batches are still processing. This means users from different batches may reach subsequent steps at different times.
 
 **Example**: If 3,500 users enter a Context step with Connected Content that takes 650ms per user:
-- Braze creates approximately 4 batches of users (612, 802, 1,000, 880, and 120 users in this example).
+- Braze creates approximately 4 batches of users (for example, three batches of 1,000 users and one batch of 500 users).
 - Each batch processes users sequentially, so a batch of 1,000 users takes approximately 11 minutes (1,000 × 650ms).
 - Batches complete at different times, so users trickle into the next step as their batch finishes.
 - The first users may reach the next step several minutes before the last users, depending on batch size and Connected Content response times.
