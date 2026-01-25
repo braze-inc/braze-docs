@@ -9,9 +9,47 @@ description: "This article covers how to cache Connected Content responses acros
 
 > Connected Content responses can be cached across different campaigns or messages (in the same workspace) to optimize send speeds.
 
-Braze doesn’t permanently log or store Connected Content responses. If you explicitly choose to store a Connected Content call response as a Liquid variable, Braze only stores this in-memory, meaning on temporary storage that’s deleted after a short period of time, to render the Liquid variable and send the message.
+Braze doesn’t permanently log or store Connected Content **response bodies**. During message rendering, responses can be held temporarily (for example, in memory and in cache) so Braze can render Liquid and send the message.
 
-To prevent caching, you can specify `:no_cache`, which may cause increased network traffic. To help troubleshoot and monitor system health, Braze may also log Connected Content calls that fail (such as `404` and `429`). These logs are kept for up to 30 days.
+To prevent caching, you can specify `:no_cache`, which may cause increased network traffic. To help troubleshoot and monitor system health, Braze logs Connected Content request metadata (such as the fully rendered request URL and response status code) for successful and failed calls. These logs are kept for up to 30 days.
+
+{% details Connected Content rendering and data handling (advanced) %}
+This section provides a more detailed, end-to-end view of how Braze renders Liquid and Connected Content and where data can exist temporarily before a message is sent. This may help with privacy and data-handling reviews.
+
+#### What is (and isn’t) stored
+
+- **Connected Content response body**: Not permanently stored by Braze. It can be held temporarily in memory and (when caching is enabled) stored in cache with a time-to-live (TTL).
+- **Connected Content request metadata** (for example, fully rendered URL, HTTP status code, response duration): Logged for troubleshooting and monitoring. These logs are kept for up to 30 days.
+- **Final rendered message**: Exists in memory during rendering. It may also be stored elsewhere depending on your configuration and channel (for example, Message Archiving or Content Cards).
+
+#### Rendering flow (high level)
+
+1. A background worker renders the Liquid template for a message at send time.
+2. Connected Content tags are evaluated during Liquid rendering.
+3. For each Connected Content tag, Braze checks a multi-tier cache. If no cached value exists (or caching is disabled), Braze calls your endpoint and receives the response.
+4. The response is injected into the Liquid template and the message is fully rendered.
+5. The rendered message is sent to the channel provider and then to the end user.
+
+#### Where Connected Content responses can live temporarily
+
+Braze uses a multi-tier cache for Connected Content responses with TTLs between **5 minutes (minimum)** and **4 hours (maximum)** (depending on your use of `:cache_max_age` and other caching rules):
+
+- **In-process memory cache**: Transient cache within the worker process. Data can live only for the duration of the job (up to ~11 minutes based on worker timeout).
+- **Local machine cache**: A per-worker cache (for example, a local Memcached instance).
+- **Cluster-wide cache**: A distributed cache shared across workers (for example, a Memcached cluster).
+
+These cache layers are volatile and can evict data earlier than the configured TTL.
+
+#### What changes when you use `:no_cache`
+
+If you use `:no_cache`, the Connected Content response body is not stored in Memcached. It lives only in the worker process memory for the duration of the rendering job (up to ~11 minutes).
+
+#### Where the final rendered output can live
+
+- **Message Archiving**: If Message Archiving is enabled, Braze may write the final rendered message to your configured cloud storage bucket. If your Connected Content response is included in the rendered message, it will be included in the archived copy.
+- **End user devices**: Once delivered, the fully rendered message content can persist on end-user devices for an unknown amount of time.
+- **Content Cards**: Rendered content for Content Cards is stored in a Braze database until the card expires.
+{% enddetails %}
 
 ## Default cache settings
 
