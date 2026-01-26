@@ -60,7 +60,7 @@ The "capture" tag and a connected content request are used to make a POST reques
   "app_token": "YOUR_DOTS.ECO_APP_TOKEN",  
   "impact_qty": 1,  
   "remote_user_id": "{{${user_id} | default: ${braze_id}}}",  
-  "allocation_id": YOUR_DOTS.ECO_ALLOCATION_ID  
+  "allocation_id": "YOUR_DOTS.ECO_ALLOCATION_ID"  
 }  
 {% endcapture %}
 
