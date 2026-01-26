@@ -52,40 +52,64 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 
 The SNAPSHOTS and CHANGELOGS tables track changes to campaigns and Canvases. Understanding when these tables are updated is important for querying the most recent message variations and Canvas configurations.
 
-### CHANGELOGS_CANVAS_SHARED
+### CHANGELOGS_CAMPAIGN_SHARED
 
-A row is added to `CHANGELOGS_CANVAS_SHARED` when a Canvas is saved and any of the following snapshottable fields are changed:
-- Conversion events
-- Canvas name
-- Canvas variation
+A row is added to `CHANGELOGS_CAMPAIGN_SHARED` when:
+- The campaign is launched, OR
+- Any of the following snapshottable fields are changed:
+  - Name
+  - Actions (including message content changes)
+  - Conversion behaviors
 
 {% alert important %}
-**Message step changes do not trigger updates**: Changes to message steps (content, design, etc.) do not add rows to `CHANGELOGS_CANVAS_SHARED`. Only changes to the snapshottable fields listed previously trigger a snapshot and add a row to this table.
+Save or update post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the campaign or apply the post-launch draft changes to the active campaign.
 {% endalert %}
+
+### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
+
+`SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` is derived from `CHANGELOGS_CAMPAIGN_SHARED`. This table extracts and flattens the actions column from `CHANGELOGS_CAMPAIGN_SHARED` into individual message variation records. It is updated accordingly when `CHANGELOGS_CAMPAIGN_SHARED` is updated.
+
+### CHANGELOGS_CANVAS_SHARED
+
+A row is added to `CHANGELOGS_CANVAS_SHARED` when:
+- The Canvas is launched, OR
+- Any of the following snapshottable fields are changed:
+  - Name
+  - Conversion behaviors
+  - Variations (percentage, first step assignments, variation names)
+
+{% alert important %}
+Save or update post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+{% endalert %}
+
+### SNAPSHOTS_CANVAS_VARIATION_SHARED
+
+`SNAPSHOTS_CANVAS_VARIATION_SHARED` is derived from `CHANGELOGS_CANVAS_SHARED`. This table uses the same extraction pattern as `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` and is updated accordingly when `CHANGELOGS_CANVAS_SHARED` is updated.
 
 ### SNAPSHOTS_CANVAS_STEP_SHARED
 
 A row is added to `SNAPSHOTS_CANVAS_STEP_SHARED` when:
 - The Canvas is launched, OR
-- A snapshottable field on the Canvas step is changed (for example, when a new channel is added to a message step)
+- The active Canvas is updated (post-launch draft applied), OR
+- Any of the following snapshottable fields are changed:
+  - Name
+  - Actions (including message content changes within message variations)
 
 {% alert important %}
-**Content changes do not trigger snapshots**: Changing content within a message step (such as email body text, subject lines, or push notification copy) does not trigger a snapshot. Only structural changes to snapshottable fields (like adding a new channel) create a new row in `SNAPSHOTS_CANVAS_STEP_SHARED`, regardless of whether the Canvas is in draft or launched.
+Saving post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
 {% endalert %}
 
-### SNAPSHOTS_CANVAS_VARIATION_SHARED
+### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
 
-A row is added to `SNAPSHOTS_CANVAS_VARIATION_SHARED` when fields in the top-level Canvas variation are changed. This table tracks changes to the Canvas variation itself, not individual message steps.
+A row is added to `SNAPSHOTS_CANVAS_FLOW_STEP_SHARED` when:
+- The Canvas is launched, OR
+- The active Canvas is updated (post-launch draft applied), OR
+- Any of the following snapshottable fields are changed:
+  - Name
 
-### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
-
-A row is added to `SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED` when:
-- The campaign is launched, OR
-- Snapshottable fields in campaign message variations are changed (for both active and draft campaigns)
-
-### CHANGELOGS_CAMPAIGN_SHARED
-
-A row is added to `CHANGELOGS_CAMPAIGN_SHARED` when snapshottable fields in a campaign are changed (similar to how `CHANGELOGS_CANVAS_SHARED` works for Canvases).
+{% alert important %}
+Saving post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+{% endalert %}
 
 ## General Data Protection Regulation (GDPR) compliance
 
