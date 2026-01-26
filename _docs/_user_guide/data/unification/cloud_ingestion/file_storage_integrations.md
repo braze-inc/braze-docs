@@ -299,7 +299,7 @@ For examples of all supported file types, refer to the sample files in [braze-ex
 
 CDI will only process files that are added after the sync is created. In this process, Braze looks for new files to be added, which triggers a new message to SQS. This will kick off a new sync to process the new file.
 
-You can use existing files to validate that Braze can access your bucket and detect files to ingest, but they are not be synced to Braze. For the CDI to process them, you must re-upload to S3 any existing files that you want synced. 
+You can use existing files to validate that Braze can access your bucket and detect files to ingest, but they are not synced to Braze. For the CDI to process them, you must re-upload to S3 any existing files that you want synced. 
 
 ### Handling unexpected file errors
 
