@@ -2,7 +2,7 @@
 nav_title: DOTS.ECO  
 article_title: DOTS.ECO  
 description: "This reference article outlines the partnership between Braze and DOTS.ECO."  
-alias: /partners/DOTS.ECO/  
+alias: /partners/dots.eco/  
 page_type: partner  
 search_tag: Partner  
 ---
@@ -123,4 +123,5 @@ Connected Content errors can be reviewed in the Braze Dashboard under Settings >
 * **422 Error (Unprocessable entity)**: App Token, Impact quantity is invalid  
 * **401 Error**: Auth token is wrong or missing  
 * **No image preview in Messages step**: Please validate the attributes by clicking “Send Test to User” in the User Update step. Then test the preview with the same user
+
 
