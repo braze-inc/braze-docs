@@ -13,7 +13,7 @@ description: "Learn how BrazeAI Decisioning Studio Go connects to your customer 
 
 Unlike Decisioning Studio Pro, which supports direct data integrations with various sources, Decisioning Studio Go accesses customer data through your CEP. This means:
 
-- **Audience data** is pulled directly from segments or lists defined in your CEP (Braze, Salesforce Marketing Cloud, or Klaviyo)
+- **Audience data** is pulled directly from segments or lists defined in your CEP (Braze, Salesforce Marketing Cloud, or Klaviyo) and can only include certain predefined attributes (not 1P data)
 - **Engagement data** (opens, clicks, sends) is captured through automated queries or native integrations with your CEP
 - **No additional data pipeline setup** is required beyond what you configure in your CEP
 
@@ -54,11 +54,10 @@ Make sure your Braze Currents export includes data from any campaigns you want t
 
 For Salesforce Marketing Cloud integrations, Decisioning Studio Go requires:
 
-1. **Data Extensions**: Your audience must be defined in a Data Extension that Decisioning Studio Go can access.
+1. **Data Extensions**: Your audience must be defined in a Data Extension that Decisioning Studio Go can access. Use the SubscriberKey as the primary user identifier.
 
-2. **SQL Query Automation**: You'll set up automated SQL queries to export subscriber and engagement data to Data Extensions that Decisioning Studio Go reads daily.
 
-3. **Tracking Events access**: The app package you configure must have permissions to read tracking events (opens, clicks, sends).
+2. **Tracking Events access**: As long as Installed App Package enables us to do the end-to-end automated setup, there is not additional configuration required. 
 
 The data extensions and SQL queries are configured as part of the [orchestration setup]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
 
@@ -80,7 +79,6 @@ For Klaviyo integrations, Decisioning Studio Go requires:
 
 ## Best practices
 
-- **Enrich your customer profiles**: The more information available in your CEP about your customers, the better the agent can personalize. Consider adding behavioral data, purchase history, and preference attributes to your customer profiles.
 - **Keep data fresh**: Ensure your audience segments and customer data are updated regularly (at minimum, daily) so the agent works with current information.
 - **Include relevant attributes**: Think about what customer characteristics might influence which messages resonate—demographics, engagement history, purchase behavior, and lifecycle stage are all valuable signals.
 

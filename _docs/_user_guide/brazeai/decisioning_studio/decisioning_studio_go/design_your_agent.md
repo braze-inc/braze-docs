@@ -20,6 +20,7 @@ Decisioning Studio Go is a self-service platform with streamlined capabilities c
 | **Success metric** | Clicks only | Any business metric (revenue, conversions, ARPU, etc.) |
 | **Dimensions** | Limited action bank | Unlimited dimensions |
 | **CEPs supported** | Braze, SFMC, Klaviyo | Any CEP (native + custom) |
+| **Customer data** | Engagement only | All 1P Data |
 | **Setup** | Self-service | AI Decisioning Services support |
 | **Experiment groups** | Go + Random Control + optional BAU | Fully customizable |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
@@ -66,14 +67,7 @@ Consider creating a dedicated segment for your Decisioning Studio Go experimente
 
 ### Step 2: Select your dimensions
 
-Dimensions are the "levers" the agent can pull to personalize the customer experience. In Go, the available dimensions include:
-
-| Dimension | Description | Example |
-|-----------|-------------|---------|
-| **Email template** | Which email template to send | Template A vs. Template B vs. Template C |
-| **Subject line** | The email subject line | "Don't miss out!" vs. "Just for you" |
-| **Send time** | When to send the message | Morning vs. Afternoon vs. Evening |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+Dimensions are the "levers" the agent can pull to personalize the customer experience. These include creative dimensions like subject line and hero image as well as send-type dimensions like the frequency of emails or time of day. 
 
 {% alert note %}
 The specific dimensions available depend on your CEP and how your campaigns are configured. Work with the templates and content you've set up in your CEP.

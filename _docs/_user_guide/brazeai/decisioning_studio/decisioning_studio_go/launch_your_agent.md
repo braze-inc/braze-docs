@@ -69,10 +69,6 @@ After validating your experiment design, gather the following details to set up 
 
 If you don't have an existing audience that tracks your BAU audience, you must create one.
 
-{% alert note %}
-**For Braze customers only:** Make sure your Braze Currents export to Decisioning Studio Go includes data from your BAU campaigns.
-{% endalert %}
-
 ### Considerations
 
 - **Click KPIs only**: Similar to Decisioning Studio Go more generally, BAU reporting only covers click KPIs, not conversion KPIs.
@@ -100,7 +96,7 @@ Allow at least 2-4 weeks of data collection before drawing conclusions about per
 
 If your agent isn't performing as expected:
 
-1. **Verify orchestration**: Ensure your CEP integration is active and campaigns/journeys are running.
+1. **Verify orchestration**: Ensure your CEP integration is active and campaigns/journeys are running and global capps or similar rules are interfering with orchestration. 
 2. **Check data flow**: Confirm that audience data and engagement data are being captured correctly.
 3. **Review experiment groups**: Ensure proper random assignment and no overlap between groups.
 4. **Contact support**: Reach out to Braze Support for further assistance.
