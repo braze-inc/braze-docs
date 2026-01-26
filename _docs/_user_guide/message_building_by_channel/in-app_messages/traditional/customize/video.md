@@ -39,7 +39,7 @@ To support iOS devices:
 - You must include the `playsinline` attribute because full screen playback is not supported at this time.
 - **Auto-play is not guaranteed on iOS**. iOS playback behavior depends on `WKWebView` and OS-level media policies, and may require a user gesture even when `autoplay` and `muted` are set. Test your HTML in-app message on your target iOS versions and devices.
 
-If auto-play is required and your tests show it doesn’t work out of the box, you can customize the `WKWebViewConfiguration` used by HTML in-app messages to adjust the media playback user-action requirement (for example, by setting `mediaTypesRequiringUserActionForPlayback`). This requires SDK-level customization. For Swift resources, see [Customize in-app messages for the Braze SDK]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=swift) and [Adding the Braze JavaScript interface to WebViews for Swift]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/?sdktab=swift).
+If auto-play is required and your tests show it doesn’t work out of the box, you can customize the `WKWebViewConfiguration` used by HTML in-app messages to adjust the media playback user-action requirement, for example by setting the `mediaTypesRequiringUserActionForPlayback` property. This requires SDK-level customization. For Swift resources, see [Customize in-app messages for the Braze SDK]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=swift) and [Adding the Braze JavaScript interface to WebViews for Swift]({{site.baseurl}}/developer_guide/in_app_messages/html_messages/?sdktab=swift).
 
 ## Web considerations
 
