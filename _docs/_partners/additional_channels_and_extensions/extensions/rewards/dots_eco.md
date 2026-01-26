@@ -15,7 +15,7 @@ _This integration is maintained by DOTS.ECO_
 
 ## About this integration
 
-Braze and DOTS.ECO work together to connect customer engagement journeys to real-world impact rewards. From a Braze Canvas or Campaign step, you can trigger a DOTS.ECO certificate creation request using connected content. DOTS.ECO returns certificate metadata (such as certificate URL and image URL), which can be stored on the Braze user profile as custom attributes and reused across channels like in-app messages, content cards, and push notifications
+Braze and DOTS.ECO work together to connect customer engagement journeys to real-world impact rewards. From a Braze Canvas or Campaign step, you can trigger a DOTS.ECO certificate creation request using connected content. DOTS.ECO returns certificate metadata (such as certificate URL and image URL), which can be stored on the Braze user profile as custom attributes and reused across channels like in-app messages, content cards, and push notifications.
 
 ## Use cases
 
@@ -114,7 +114,7 @@ This allows teams to personalize in-app messages, content cards, or push notific
 
 ## Troubleshooting
 
-Connected Content errors can be reviewed in the Braze Dashboard under Settings > Message Activity Log 
+Connected Content errors can be reviewed in the Braze Dashboard under Settings > Message Activity Log. 
 
 * **Connected Content returns empty**: Verify that the `:save result` tag is set and references all relevant fields  
 * **Attributes not showing in the “messages” step**:   
