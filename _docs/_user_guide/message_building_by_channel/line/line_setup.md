@@ -28,7 +28,7 @@ You'll need the following to integrate LINE with Braze:
 Sending LINE messages from Braze draws from your account's Message Credits.
 
 {% alert note %}
-**Setting `native_line_id`**: You can set `native_line_id` by sending user updates to Braze (for example, with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). If your client-side SDK doesn’t expose `native_line_id` as a first-class field, set it server-side using one of these methods.
+**Setting `native_line_id`**: You can set `native_line_id` by sending user updates to Braze (for example, with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). If your client-side SDK doesn’t have a dedicated field for `native_line_id`, send it in server-side user updates using one of these methods.
 {% endalert %}
 
 ## Types of LINE accounts
