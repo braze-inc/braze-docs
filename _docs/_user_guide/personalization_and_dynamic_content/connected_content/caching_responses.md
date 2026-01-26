@@ -24,11 +24,13 @@ This section provides a more detailed, end-to-end view of how Braze renders Liqu
 
 #### Rendering flow (high level)
 
-1. A background worker renders the Liquid template for a message at send time.
+The following flow describes how Braze renders and sends messages for provider-based channels such as email, SMS, and push. SDK-delivered channels such as Content Cards use the same underlying Liquid and Connected Content rendering but differ in when the content is generated and how it is delivered.
+
+1. A background worker renders the Liquid template for a message when the message is prepared to be delivered.
 2. Connected Content tags are evaluated during Liquid rendering.
 3. For each Connected Content tag, Braze checks a multi-tier cache. If no cached value exists (or caching is disabled), Braze calls your endpoint and receives the response.
 4. The response is injected into the Liquid template and the message is fully rendered.
-5. The rendered message is sent to the channel provider and then to the end user.
+5. For provider-based channels, the rendered message is sent to the channel provider and then to the consumer. For SDK-delivered channels such as Content Cards, the rendered content is synced to the Braze SDK and can be generated at first impression or display time, at which point it is shown to the consumer.
 
 #### Where Connected Content responses can live temporarily
 
