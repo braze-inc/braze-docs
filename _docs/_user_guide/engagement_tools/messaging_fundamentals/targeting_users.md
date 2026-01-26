@@ -1,7 +1,7 @@
 ---
 nav_title: Target users
 article_title: Target Users
-page_order: 9
+page_order: 12
 page_type: reference
 description: "This reference article covers how to target your audience in your campaign and Canvas editors."
 tool:

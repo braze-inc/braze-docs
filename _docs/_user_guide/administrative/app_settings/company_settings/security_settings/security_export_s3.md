@@ -19,9 +19,9 @@ Braze supports two different S3 authentication and authorization methods for set
 
 This method generates a secret key and an access key ID that allows Braze to authenticate as a user on your AWS account to write data to your bucket.
 
-### Step 1: Create an in-app message user
+### Step 1: Create an Identity and Access Management (IAM) user
 
-To retrieve your secret access key and access key ID, you’ll need to create an in-app message user, following the instructions in [Setting up your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
+To retrieve your secret access key and access key ID, you’ll need to create an IAM user, following the instructions in [Setting up your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
 
 ### Step 2: Get credentials
 
@@ -36,7 +36,7 @@ To retrieve your secret access key and access key ID, you’ll need to create an
 
 ### Step 3: Create policy
 
-1. Go to **IAM** > **Policies** > **Create Policy** to add permissions for your user. 
+1. Go to **IAM** (Identity and Access Management) > **Policies** > **Create Policy** to add permissions for your user. 
 2. Select **Create Your Own Policy**, which gives limited permissions so Braze can only access the specified buckets.
 3. Specify a policy name of your choice.
 4. Input the following code snippet into the **Policy Document** section. Be sure to replace "INSERTBUCKETNAME" with your bucket name. Without these permissions, the integration will fail a credentials check and not be created.
@@ -92,7 +92,7 @@ The AWS role ARN method generates a role Amazon Resource Name (ARN) that allows 
 ### Step 1: Create policy
 
 1. Sign in to the AWS management console as an account administrator. 
-2. In the AWS console, go to the **IAM** section > **Policies**, and then select **Create Policy**.
+2. In the AWS console, go to the **IAM** (Identity and Access Management) section > **Policies**, and then select **Create Policy**.
 
 ![A page with a list of policies and button to "Create policy".]({% image_buster /assets/img/security_export/policies.png %})
 
@@ -135,7 +135,7 @@ The AWS role ARN method generates a role Amazon Resource Name (ARN) that allows 
 
 ![The "Security Event Download" page with populated Braze account and Braze external IDs.]({% image_buster /assets/img/security_export/security_event_download2.png %})
 
-4. In the AWS console, go to the **IAM** section > **Roles** > **Create Role**. 
+4. In the AWS console, go to the **IAM** (Identity and Access Management) section > **Roles** > **Create Role**. 
 5. Select **Another AWS Account** as the trusted entity selector type. 
 6. Provide your Braze account ID, check the **Require external ID** box, and then enter your Braze external ID. 
 7. Select **Next** when complete.

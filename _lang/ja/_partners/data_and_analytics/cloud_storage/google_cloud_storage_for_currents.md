@@ -14,7 +14,7 @@ search_tag: Partner
 > [Google Cloud Storage](https://cloud.google.com/storage/) は、Google が Cloud Computing 製品群の一部として提供する、非構造化データのための大規模拡張可能オブジェクトストレージソリューションです。
 
 {% alert important %}
-クラウドストレージプロバイダーを切り替える場合は、Brazeカスタマーサクセスマネージャーに連絡し、新しい統合の設定と検証についてさらにサポートを受けてください。
+クラウドストレージプロバイダーを切り替える場合は、Brazeカスタマーサクセスマネージャーに連絡して、新しい統合の設定と検証についてさらにサポートを受けてください。
 {% endalert %}
 
 Braze と Google Cloud Storage の統合により、Currents データを Google Cloud Storage にストリーミングできます。その後、ETL プロセス (抽出、変換、読み込み) を使用して、データを Google BigQuery などの他の場所に転送できます。
@@ -59,7 +59,7 @@ Google Cloud Platform Consoleで、**IAM& admin**>**Roles**>**\+ Create Roleと*
 
 #### ステップ 2.1: サービスアカウントを作成する
 
-Google Cloud Platform Consoleで、**IAM& admin**>**Service Accountsに**移動し、**Create Service Accountを**選択して新しいサービスアカウントを作成する。
+Google Cloud Platform Consoleで**IAM& admin**>**Service Accountsに**移動し、**Create Service Accountを**選択して新しいサービスアカウントを作成する。
 
 ![]({% image_buster /assets/img/gcs3.png %})
 

@@ -15,7 +15,7 @@ description: "この記事では、「キャンバス内の翻訳を更新」エ
 /canvas/translations
 {% endapimethod %}
 
-> このエンドポイントを使用して、キャンバスの複数の翻訳を更新します。
+> このエンドポイントを使用して、キャンバスの複数の翻訳を更新します。翻訳機能の詳細については、[メッセージのローカライゼーションを]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/)参照のこと。
 
 キャンバスを開始した後に翻訳を更新したい場合は、まず[メッセージを下書きとして保存]({{site.baseurl}}/post-launch_edits/)する必要があります。
 

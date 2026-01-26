@@ -28,7 +28,7 @@ search_tag: Partner
 | クラウディナリーアカウント  | この提携の事前タグを行うには、[クラウディナリアカウント](https://cloudinary.com/users/register_free?utm_source=braze+docs+page)が必要です  |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation”}
 
-## 統合方法
+## 連携方法
 
 {% alert tip %}
 これらの統合方法の一部では、`f_auto` および`q_auto` Cloudinary Transformations を使用します。これにより、["画像](https://cloudinary.com/documentation/image_transformations#banner) および[動画](https://cloudinary.com/documentation/video_manipulation_and_delivery#banner) アセットのビヘイビアとアプリの稼働率をより詳細にカスタマイズできます。Transformations を含めるようにCloudinary アセットリンクを変更する方法の詳細については、[Transformation URL 構造](https://cloudinary.com/documentation/image_transformations#transformation_url_structure) を参照してください。

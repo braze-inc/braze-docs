@@ -1,6 +1,6 @@
 ---
 nav_title: カタログ sの使用
-article_title: カタログを使う
+article_title: カタログの使用
 page_order: 1.5
 description: "この参考記事では、Liquidを通してBrazeのキャンペーンで非ユーザーデータを参照するためにカタログを使用する方法について説明する。"
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: コンテンツカードの作成
+nav_title: コンテンツカードを作成する
 article_title: コンテンツカードを作成する
 page_order: 0
 description: "この参考記事では、Braze のキャンペーンとキャンバスを使用してコンテンツカードを作成、構成、設定、送信する方法について説明します。"
@@ -141,7 +141,7 @@ search_rank: 3.9
 
 #### ターゲットとするユーザーを選択する
 
-次にセグメントまたはフィルターを選択して[ユーザーをターゲットに設定]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)し、オーディエンスを絞り込みます。そのアプリの近接Segment集団が現在どのように見えるかのプレビューが自動的に与えられます。正確なセグメントメンバーシップは常にメッセージが送信される直前に計算されることに注意してください。
+次に、[target ユーザー s]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/)で、Segment s またはフィルター s を選択してオーディエンスを絞り込みます。そのアプリの近接Segment集団がどのように見えるかのプレビューを自動的に受け取ります。メッセージが送信されるまでは、必ずSegmentメンバーシップが計算されることに注意してください。
 
 {% multi_lang_include target_audiences.md %}
 

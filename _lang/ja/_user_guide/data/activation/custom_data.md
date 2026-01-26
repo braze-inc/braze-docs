@@ -26,7 +26,7 @@ guide_featured_list:
   - name: イベントの命名規則
     link: /docs/user_guide/data/activation/custom_data/event_naming_conventions/
     image: /assets/img/braze_icons/list.svg
-  - name: カスタムデータの管理
+  - name: 顧客データの管理
     link: /docs/user_guide/data/activation/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: おすすめイベント
