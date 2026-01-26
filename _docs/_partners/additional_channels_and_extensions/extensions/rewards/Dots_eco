@@ -116,7 +116,7 @@ This allows teams to personalize in-app messages, content cards, or push notific
 
 Connected Content errors can be reviewed in the Braze Dashboard under Settings > Message Activity Log 
 
-* **Connected Content returns empty**: Verify that the *“:save result*” is set and references all relevant fields  
+* **Connected Content returns empty**: Verify that the `:save result` tag is set and references all relevant fields  
 * **Attributes not showing in the “messages” step**:   
   * Confirm that the attributes created in Braze UI have the exact same name as the ones created within the Connected Content  
     * In the User Update step, you can use the “*Preview and test*” tab to see if the attributes are populated. Then, send this test to a user and view them to make sure they are stored properly  
