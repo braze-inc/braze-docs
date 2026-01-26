@@ -83,6 +83,10 @@ To set this up:
 
 Then, you can return to your agent and select your model.
 
+{% alert important %}
+When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
+{% endalert %}
+
 ## Writing instructions
 
 Instructions are the rules or guidelines you give the agent (system prompt). They define how the agent should behave each time it runs. System instructions can be up to 25 KB.
