@@ -14,9 +14,9 @@ page_type: reference
 For more information on any of the updates listed on this page, contact your account manager or [open a support ticket]({{site.baseurl}}/user_guide/administrative/access_braze/support/). You can also check out our [SDK Changelogs]({{site.baseurl}}/developer_guide/changelogs) for more information about our monthly SDK releases, improvements, and breaking changes.
 {% endalert %}
 
-{% details February 3, 2026 %}
+{% details February 5, 2026 %}
 
-## February 3, 2026 release
+## February 5, 2026 release
 
 {% enddetails %}
 
