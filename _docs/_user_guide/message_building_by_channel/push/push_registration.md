@@ -51,6 +51,10 @@ An app or website can only have one push subscription per device. So when a user
 
 Because there isn't a way for push providers (APNs/FCM) to distinguish between multiple users on one device, we pass the push token to the last user who was logged in to determine which user to target on the device for push.
 
+{% alert tip %}
+If you see an error message in **Contact Settings** > **Push Changelog**, refer to [Common Push Error Messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) for explanations and next steps.
+{% endalert %}
+
 ## Push token registration
 
 Each device platform handles push token registration differently. Refer to the following for platform-specific details:
