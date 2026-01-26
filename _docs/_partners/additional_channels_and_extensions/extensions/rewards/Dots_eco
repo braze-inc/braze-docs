@@ -34,7 +34,7 @@ Before you start, you need the following:
 | Prerequisite       | Description |                          
 |-----------------------|-----------------|  
 | A DOTS.ECO account   | A DOTS.ECO account is required to take advantage of this partnership.  |  
-| A DOTS.ECO Authorisation Key   | The Connected Content request below requires a DOTS.ECO App Token, API Key and Allocation ID. To retrieve these, please reach out to your DOTS.ECO CSM.  |  
+| A DOTS.ECO Authorization Key   | The Connected Content request below requires a DOTS.ECO App Token, API Key and Allocation ID. To retrieve these, please reach out to your DOTS.ECO CSM.  |  
 | A Braze REST API key  | A Braze REST API key with `users.track` permissions. Create this key in the Braze dashboard from **Settings** > **API Keys**. |  
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance.  |
 
