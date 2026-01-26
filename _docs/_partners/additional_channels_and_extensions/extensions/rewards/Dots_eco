@@ -46,7 +46,7 @@ In the Braze dashboard, create a new Canvas that will trigger when a user comple
 
 Add a User Update step right after the entry step. This step will be used to call the DOTS.ECO API via Connected Content and store the returned certificate data on the user profile.
 
-### Step 2: Compose Advanced Json - A POST request to DOTS.ECO using Connected Content
+### Step 2: Compose Advanced JSON - A POST request to DOTS.ECO using Connected Content
 
 Inside the **User Update** step, switch to the **Advanced JSON Editor** and use Braze Connected Content to make a POST request to the DOTS.ECO certificate API.
 
