@@ -9,8 +9,8 @@ search_tag: Partner
 
 # DOTS.ECO  
 
-> DOTS.ECO enables brands to reward users with real-world environmental impact through trackable digital certificates. Each certificate can include key metadata like a shareable certificate URL and image URL, making it easy to deliver a proof-of-impact experience that users can view and revisit.
-_URL: https://dots.eco_
+> [DOTS.ECO](https://dots.eco) enables brands to reward users with real-world environmental impact through trackable digital certificates. Each certificate can include key metadata like a shareable certificate URL and image URL, making it easy to deliver a proof-of-impact experience that users can view and revisit.
+
 _This integration is maintained by DOTS.ECO_
 
 ## About this integration
@@ -123,5 +123,6 @@ Connected Content errors can be reviewed in the Braze Dashboard under Settings >
 * **422 Error (Unprocessable entity)**: App Token, Impact quantity is invalid  
 * **401 Error**: Auth token is wrong or missing  
 * **No image preview in Messages step**: Please validate the attributes by clicking “Send Test to User” in the User Update step. Then test the preview with the same user
+
 
 
