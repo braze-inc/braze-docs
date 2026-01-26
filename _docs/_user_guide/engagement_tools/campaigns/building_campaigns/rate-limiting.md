@@ -168,7 +168,7 @@ Connected Content requests are not rate-limited independently and will follow th
 - **Plan for 10–20% buffer** between your configured limit and the maximum rate you want to sustain (for example, target ~80–90% utilization during steady state).
 - **Measure over several minutes**, not a single minute, because sends can be uneven within a minute.
 
-If you consistently see materially lower throughput than expected (for example, well below ~80% for an extended period), check Connected Content response times, error rates (such as `429`), and retry behavior.
+If you consistently see significantly lower throughput than expected (for example, sustained below ~80% of the configured rate limit for several minutes), check Connected Content response times, error rates (such as `429`), and retry behavior.
 {% endalert %}
 
 ## About frequency capping
