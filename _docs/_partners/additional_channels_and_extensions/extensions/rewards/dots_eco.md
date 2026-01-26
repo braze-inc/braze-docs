@@ -97,7 +97,7 @@ This integration uses Braze Connected Content inside a Canvas **User Update** st
 
 Once the certificate attributes are stored on the user profile, they can be referenced in downstream Canvas message steps.
 
-![Dots.eco Flow]({% image_buster assets/img/dots_eco/dots.eco_flow %})  
+![Dots.eco Flow]({% image_buster assets/img/dots_eco/dots.eco_flow.png %})  
 
 ![Dots.eco Messages Step]({% image_buster assets/img/dots_eco/dotseco_messages.png %})  
 
