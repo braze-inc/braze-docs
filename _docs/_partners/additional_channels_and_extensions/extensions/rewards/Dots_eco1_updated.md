@@ -87,7 +87,7 @@ The request should be sent to:
 
 `https://impact.dots.eco/api/v1/certificate/add?format=sdk`
 
-![Dots.eco – User Update Step ]({% image_buster /assets/img/dots.eco/dotseco_user_update.png %})  
+![Dots.eco – User Update Step ]({% image_buster assets/img/dots_eco/dotseco_user_update.png %})  
 
 {% alert important %}  
 This integration uses Braze Connected Content inside a Canvas **User Update** step to call the DOTS.ECO API. Test requests with an API client (e.g., Postman) first to validate your token and payload.  
@@ -97,17 +97,17 @@ This integration uses Braze Connected Content inside a Canvas **User Update** st
 
 Once the certificate attributes are stored on the user profile, they can be referenced in downstream Canvas message steps.
 
-![Dots.eco Flow]({% image_buster /assets/img/dots.eco/dotseco_flow.png %})  
+![Dots.eco Flow]({% image_buster assets/img/dots_eco/dots.eco_flow %})  
 
-![Dots.eco Messages Step]({% image_buster /assets/img/dots.eco/dotseco_messages.png %})  
+![Dots.eco Messages Step]({% image_buster assets/img/dots_eco/dotseco_messages.png %})  
 
-![Dots.eco Messages – Compose Section]({% image_buster /assets/img/dots.eco/dotseco_messages_compose.png %})  
+![Dots.eco Messages – Compose Section]({% image_buster assets/img/dots_eco/dotseco_messages_compose.png %})  
 
 For example:  
 - Show the certificate image in an in-app message using `{{custom_attribute.certificate_image_url}}`  
 - Link to the hosted certificate using `{{custom_attribute.certificate_url}}`
 
-![Dots.eco Messages – On-click Behavior]({% image_buster /assets/img/dots.eco/ dotseco_messages_compose_onclickbehavior.png %})
+![Dots.eco Messages – On-click Behavior]({% image_buster assets/img/dots_eco/dotseco_messages_compose_onclickbehavior.png %})
 
 
 This allows teams to personalize in-app messages, content cards, or push notifications with real-world impact confirmation.
@@ -123,6 +123,7 @@ Connected Content errors can be reviewed in the Braze Dashboard under Settings >
 * **422 Error (Unprocessable entity)**: App Token, Impact quantity is invalid  
 * **401 Error**: Auth token is wrong or missing  
 * **No image preview in Messages step**: Please validate the attributes by clicking “Send Test to User” in the User Update step. Then test the preview with the same user
+
 
 
 
