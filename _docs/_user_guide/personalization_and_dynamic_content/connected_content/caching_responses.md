@@ -44,7 +44,7 @@ These cache layers are volatile and can evict data earlier than the configured T
 
 #### What changes when you use `:no_cache`
 
-If you use `:no_cache`, the Connected Content response body is not stored in Memcached. It lives only in the worker process memory for the duration of the rendering job (up to ~11 minutes).
+For endpoints that are not hosted inside Braze infrastructure, using `:no_cache` prevents the Connected Content response body from being stored in Memcached. In these cases, the response only lives in the worker process memory for the duration of the rendering job (up to ~11 minutes). For endpoints that resolve to hosts internal to Braze, responses may still be cached as described in [Cache busting](#cache-busting).
 
 #### Where the final rendered output can live
 
