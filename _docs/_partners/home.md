@@ -382,4 +382,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
 - name: Open Loyalty
   url: /docs/partners/openloyalty/
+- name: DOTS.ECO
+  url: /docs/partners/dots.eco/
 ---
