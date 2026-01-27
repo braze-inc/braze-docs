@@ -106,7 +106,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 `4XX` 상태 코드 클래스는 클라이언트 오류를 나타냅니다. 발생할 수 있는 오류에 대한 자세한 내용은 [API 오류 및 응답 문서를]({{site.baseurl}}/api/errors/) 참조하세요.
 
-`400` 상태 코드는 다음과 같은 응답 본문을 반환할 수 있습니다.
+`400` 상태 코드는 다음 응답 본문을 반환할 수 있습니다.
 
 ```json
 {
