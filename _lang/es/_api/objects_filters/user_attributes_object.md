@@ -71,7 +71,7 @@ Al especificar `push_token_import` como `true`:
 * El objeto atributo **debe** contener un token de notificaciones push
 * Si el token ya existe en Braze, se ignora la solicitud; de lo contrario, Braze crea un perfil de usuario anónimo temporal para cada token, para habilitarte a seguir enviando mensajes a estas personas.
 
-Tras la importación, cuando cada usuario inicia la versión habilitada para Braze de tu aplicación, Braze mueve automáticamente su token de notificaciones push importado a su perfil de usuario Braze y limpia el perfil temporal.
+Después de la importación, cuando cada usuario inicia la versión habilitada para Braze de tu aplicación, Braze mueve automáticamente su token de notificaciones push importado a su perfil de usuario Braze y limpia el perfil temporal.
 
 Braze comprueba una vez al mes si hay algún perfil anónimo con la bandera `push_token_import` que no tenga un token de notificaciones push. Si el perfil anónimo ya no tiene token de notificaciones push, Braze borra el perfil. Sin embargo, si el perfil anónimo aún tiene un token de notificaciones push, lo que sugiere que el usuario real aún no ha iniciado sesión en el dispositivo con dicho token push, Braze no hace nada.
 
