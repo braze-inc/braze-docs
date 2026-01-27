@@ -36,8 +36,8 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 ```
 
 - [Identificador do app]({{site.baseurl}}/api/identifier_types/)
-  - Qualquer `app_id` válido de um app configurado em seu espaço de trabalho funciona para todos os usuários em seu espaço de trabalho, independentemente de o usuário ter ou não o app específico em seu perfil.
-- Para saber mais e conhecer as práticas recomendadas sobre pré-cabeçalhos, consulte nosso artigo de ajuda sobre o [estilo do corpo do e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling).
+  - Qualquer `app_id` válido de um app configurado no seu espaço de trabalho funciona para todos os usuários no seu espaço de trabalho, independentemente de o usuário ter ou não o app específico em seu perfil.
+- Para saber mais e melhores práticas sobre pré-cabeçalhos, consulte nosso artigo de ajuda sobre [estilização do corpo do e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#body-styling).
 
 {% alert warning %}
 A Braze recomenda que você evite usar links do Google Drive para os seus anexos `url`, pois isso pode bloquear as chamadas dos nossos servidores para obter o arquivo e resultar no não envio da mensagem de e-mail.
@@ -47,7 +47,7 @@ Tipos de anexos válidos incluem: `txt`, `csv`, `log`, `css`, `ics`, `jpg`, `jpe
 
 Um `email_template_id` pode ser recuperado do rodapé de qualquer modelo de e-mail criado com o editor de HTML. O seguinte mostra um exemplo de como esse ID se parece:
 
-![Seção API Identifier de um modelo de e-mail HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"}
+![Seção de Identificador da API de um modelo de e-mail HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:70%;"}
 
 ## Exemplo de objeto de e-mail com anexo
 
