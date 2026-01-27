@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Atualizar o status do grupo de inscrições de usuários"
+nav_title: "POST: Atualizar o status do grupo de inscrições dos usuários"
 article_title: "POST: Atualizar o status do grupo de inscrições do usuário"
 search_tag: Endpoint
 page_order: 4
@@ -21,7 +21,7 @@ Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscriçõ
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
-Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscrições SMS e RCS**:
+Se você quiser ver exemplos ou testar este endpoint para **Grupos de Inscrição SMS e RCS**:
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
@@ -30,7 +30,7 @@ Se você quiser ver exemplos ou testar esse endpoint para **grupos de inscriçõ
 Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}/api/basics#rest-api-key/) com a permissão `subscription.status.set`.
 
 {% alert note %}
-Se estiver interessado em usar esse endpoint com [grupos de inscrições LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), entre em contato com o gerente de sucesso do cliente.
+Se você estiver interessado em usar este endpoint com [grupos de inscrição LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), entre em contato com seu gerente de sucesso do cliente.
 {% endalert %}
 
 ## Limite de taxa
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* Grupos de inscrições de SMS e RCS: O Braze aceita apenas `external_id` ou `phone`.
+\* Grupos de inscrição SMS e RCS: Braze aceita apenas `external_id` ou `phone`.
 
 {% endtab %}
 {% tab Email %}
@@ -92,7 +92,7 @@ Ao criar novos usuários usando o endpoint [/users/track]({{site.baseurl}}/api/e
 | `subscription_state` | Obrigatória | String | Os valores disponíveis são `unsubscribed` (não está no grupo de inscrições) ou `subscribed` (está no grupo de inscrições). |
 | `external_id` | Obrigatório* | Matriz de strings | O `external_id` do usuário ou dos usuários pode incluir até 50 `id`s. |
 | `email` | Obrigatório* | string ou array de strings | O endereço de e-mail do usuário pode ser passado como um vetor de strings. Deve incluir pelo menos um endereço de e-mail (com um máximo de 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo endereço de e-mail, o Braze atualizará todos os usuários que compartilham o endereço de e-mail com as alterações do grupo de inscrições. |
-| `phone` | Obrigatório* | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | O número de telefone do usuário pode ser passado como uma matriz de strings. Deve incluir pelo menos um número de telefone (até 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo número de telefone, o Braze atualizará todos os usuários que compartilham o número de telefone com as mesmas alterações no grupo de inscrições. |
+| `phone` | Obrigatório* | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | O número de telefone do usuário pode ser passado como uma matriz de strings. Deve incluir pelo menos um número de telefone (até 50). <br><br>Se vários usuários (`external_id`) no mesmo espaço de trabalho compartilharem o mesmo número de telefone, o Braze atualizará todos os usuários que compartilham o número de telefone com as mesmas alterações do grupo de inscrições. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplos de solicitações
@@ -138,7 +138,7 @@ O código de status `201` poderia retornar o seguinte corpo de resposta.
 ```
 
 {% alert important %}
-O ponto de extremidade aceita apenas o valor `email` ou `phone`, não ambos. Se você fornecer ambos, receberá esta resposta: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+O endpoint aceita apenas o valor `email` ou `phone`, não ambos. Se você fornecer ambos, receberá esta resposta: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}
