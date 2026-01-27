@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Após enviar esta carga útil, a resposta confirma que a Braze removeu com sucesso as três coleções do catálogo de louças da Kitchenerie.
+Depois de enviar essa carga útil, a resposta confirma que o Braze removeu com êxito as três coleções do catálogo de louças da Kitchenerie.
 
 ```json
 {
@@ -53,7 +53,7 @@ Na MovieCanon, uma empresa de serviços de streaming, a equipe de desenvolvedore
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Para realizar esta tarefa, a equipe de desenvolvedores precisa de uma chave de API com a `email.spam.remove` permissão para usar o endpoint `/email/spam/remove`. Este endpoint remove endereços de e-mail da lista de spam da Braze e da lista de spam mantida pelo provedor de e-mail da MovieCanon.
+Para realizar essa tarefa, a equipe de desenvolvedores precisa de uma chave de API com a permissão `email.spam.remove` para usar o endpoint `/email/spam/remove`. Esse endpoint remove endereços de e-mail da lista de spam do Braze e da lista de spam mantida pelo provedor de e-mail do MovieCanon.
 
 Para enviar essa solicitação, inclua um endereço de e-mail string ou um vetor de até 50 endereços de e-mail para modificar. Como a lista de e-mails a serem removidos é inferior a 50, o MovieCanon pode realizar essa tarefa com o seguinte corpo de solicitação:
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Após enviar esta carga útil com sucesso, esta resposta confirma que a Braze removeu os e-mails da lista de spam da MovieCanon.
+Depois de enviar essa carga útil com êxito, essa resposta confirma que o Braze removeu os e-mails da lista de spam do MovieCanon.
 
 ```json
 {
@@ -126,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Verificação das próximas campanhas e telas programadas
 
-O período mais movimentado do ano está se aproximando rapidamente para a Flash & Thread, uma marca de varejo que vende roupas e produtos de beleza online e em lojas. Sua equipe de marketing deseja verificar as próximas campanhas e canvas no dashboard do Braze antes de 31 de março de 2024, às 12 horas. Isso pode ser feito usando o [endpoint`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
+A época mais movimentada do ano está se aproximando rapidamente para a Flash & Thread, uma marca de varejo que vende roupas e produtos de beleza on-line e em lojas. Sua equipe de marketing deseja verificar as próximas campanhas e canvas no dashboard do Braze antes de 31 de março de 2024, às 12 horas. Isso pode ser feito usando o [endpoint`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
 
 Aqui está o exemplo de solicitação:
 
@@ -135,11 +135,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Este endpoint retorna a lista de campanhas e canvases futuras. A partir daqui, a equipe de marketing pode confirmar sua lista de mensagens consultando o campo `name` para as campanhas e Canvas na resposta.
+Esse ponto de extremidade retorna a lista de campanhas e telas futuras. A partir daqui, a equipe de marketing pode confirmar sua lista de mensagens consultando o campo `name` para as campanhas e Canvas na resposta.
 
 ## Visualização de uma Central de Preferências antiga
 
-A PoliterWeekly é uma revista digital cujos assinantes podem ser contatados por e-mail. Em um esforço para entender melhor a jornada do usuário de seus assinantes, a equipe de marketing deseja revisar os detalhes do centro de preferências da PoliterWeekly para verificar quando foi criado e atualizado pela última vez.
+A PoliterWeekly é uma revista digital cujos assinantes podem ser contatados por e-mail. Em um esforço para entender melhor a jornada do usuário de seus assinantes, a equipe de marketing deseja revisar os detalhes da Central de Preferências do PoliterWeekly para verificar quando ela foi criada e atualizada pela última vez.
 
 Usando o [ponto de extremidade`/preference_center/v1/{preferenceCenterExternalID}` ]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/), a equipe de marketing só precisa inserir a ID externa da Central de Preferências como parâmetro de jornada, que teria a seguinte aparência:
 
@@ -190,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Após enviar esta carga útil, a resposta confirma que a Braze removeu os números de telefone inválidos do CashBlastr da lista inválida da Braze.
+Depois de enviar essa carga útil, a resposta confirma que o Braze removeu os números de telefone inválidos da CashBlastr da lista de inválidos do Braze.
 
 ```json
 {
@@ -209,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Este endpoint também lista os status dos grupos de inscrições de um usuário para e-mail. Use-o para ver o status do grupo de inscrições para vários usuários.
+Esse ponto de extremidade também lista os status do grupo de inscrições para e-mail de um usuário. Use-o para ver o status do grupo de inscrições de vários usuários.
 
 ## Verificação de um modelo HTML para envio de mensagens por e-mail
 
@@ -235,4 +235,4 @@ Nesse cenário, a WorkFriends tem usado historicamente um modelo HTML Singular c
 
 {% enddetails %}
 
-Depois de revisar essas informações de modelo, a WorkFriends também pode usar o [endpoint`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) para atualizar o modelo de e-mail por meio da API. O modelo de e-mail no dashboard da Braze reflete essas edições.
+Depois de revisar essas informações de modelo, a WorkFriends também pode usar o [endpoint`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) para atualizar o modelo de e-mail por meio da API. O modelo de e-mail no dashboard do Braze reflete essas edições.
