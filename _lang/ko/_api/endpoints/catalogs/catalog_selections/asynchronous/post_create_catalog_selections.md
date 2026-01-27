@@ -76,7 +76,7 @@ curl --location --request POST 'https://rest.iad-03.braze.com/catalogs/restauran
 | `array`    | `includes value`, `does not include value`              |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Response
+## 응답
 
 이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
