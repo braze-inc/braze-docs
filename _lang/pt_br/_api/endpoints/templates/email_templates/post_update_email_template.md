@@ -16,7 +16,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Atualiz
 
 > Use esse endpoint para atualizar os modelos de e-mail no dashboard do Braze.
 
-É possível acessar o site `email_template_id` de um modelo de e-mail navegando até ele na **página Modelos e mídias.**  O [endpoint Criar modelo de e-mail]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) também retornará uma referência `email_template_id`.
+Você pode acessar o `email_template_id` de um modelo de e-mail navegando até a página **Modelos & Mídia**. O [endpoint Criar modelo de e-mail]({{site.baseurl}}/api/endpoints/templates/email_templates/post_create_email_template/) também retornará uma referência `email_template_id`.
 
 Todos os campos, exceto o `email_template_id`, são opcionais, mas você precisa especificar pelo menos um campo para atualizar.
 
