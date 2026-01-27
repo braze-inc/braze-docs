@@ -113,8 +113,8 @@ Pour la première tâche d'audit des canvas, utilisez l’[endpoint `/canvas/lis
 
 Passons à la tâche suivante. Celle-ci consiste à afficher le résumé analytique du premier canvas de la liste des canvas de Siege Valley Health. Pour ce faire, nous utiliserons l’[endpoint `/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) avec les paramètres de requête suivants :
 
-* `canvas_id`: "canvas_identifier_2"
-* `ending_at` : 2023-07-10T23:59:59
+* `canvas_id` : "canvas_identifier_2"
+* `ending_at` : 2023-07-10T23:59:59
 * `starting_at` : 2020-07-10T23:59:59
 
 Voici une demande d'exemple :
