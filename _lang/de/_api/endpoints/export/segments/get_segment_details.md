@@ -2,7 +2,7 @@
 nav_title: "GET: Details zum Segment Export"
 article_title: "GET: Details zum Segment Export"
 search_tag: Endpoint
-page_order: 4
+page_order: 2
 layout: api_page
 page_type: reference
 description: "Dieser Artikel beschreibt die Details des Endpunkts Export Segmente Braze."
@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Export Segment
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `segments.details`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -44,8 +44,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/segments/details
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
       "message": (required, string) the status of the export, returns 'success' when completed without errors,
       "created_at" : (string) the date created as ISO 8601 date,
