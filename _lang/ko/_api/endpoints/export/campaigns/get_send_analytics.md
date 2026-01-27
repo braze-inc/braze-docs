@@ -47,7 +47,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 ```
 {% endraw %}
 
-## Response
+## 응답
 
 ```json
 {
