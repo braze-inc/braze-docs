@@ -12,10 +12,10 @@ description: "Cet article présente en détail l’endpoint Braze Effectuer une 
 {% api %}
 # Effectuer une recherche par e-mail d’un compte utilisateur de tableau de bord existant
 {% apimethod get %}
-scim/v2/Users?filter=userName%20eq%20"user%40test.com"
+scim/v2/Users?filter=userName%20eq%20 "user%40test.com"
 {% endapimethod %}
 
-> Utilisez cet endpoint pour rechercher un compte utilisateur de tableau de bord existant en spécifiant son e-mail dans le paramètre de requête du filtre. 
+> Utilisez cet endpoint pour rechercher un compte utilisateur de tableau de bord existant en spécifiant son e-mail dans le paramètre de requête du filtre.
 
 Veuillez prendre en compte que, lorsque le paramètre de recherche est encodé par URL, il s’affichera ainsi :
 
@@ -79,11 +79,11 @@ curl --location --request GET \ 'https://rest.iad-01.braze.com/scim/v2/Users?fil
                         "team": [
                             {
                                 "teamId": "241adcd25789fabcded",
-                                "teamName": "Test Team",                  
+                                "teamName": "Test Team",
                                 "teamPermissions": ["admin"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         }
