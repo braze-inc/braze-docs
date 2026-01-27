@@ -43,7 +43,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/dau/data_ser
 ```
 {% endraw %}
 
-## Response
+## 응답
 
 ```json
 {
