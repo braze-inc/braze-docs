@@ -19,7 +19,7 @@ guide_featured_list:
   - name: "GET: Siehe Informationen zu E-Mail-Vorlagen"
     link: /docs/api/endpoints/templates/email_templates/get_see_email_template_information/
     image: /assets/img/braze_icons/copy-04.svg
-  - name: "POST: E-Mail-Vorlage erstellen"
+  - name: "POST: E-Mail-Template erstellen"
     link: /docs/api/endpoints/templates/email_templates/post_create_email_template/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "POST: E-Mail-Vorlage aktualisieren"
@@ -28,7 +28,7 @@ guide_featured_list:
 
 guide_menu_title: "Content Block template endpoints"
 guide_menu_list:
-  - name: "GET: Verfügbare Inhaltsblöcke auflisten"
+  - name: "GET: Verfügbare Content-Blöcke auflisten"
     link: /docs/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "GET: Siehe Verfügbare Inhaltsblockinformationen"
@@ -42,5 +42,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
-von email_templates.md umleiten
+umleiten von email_templates.md
 {% endcomment %}
