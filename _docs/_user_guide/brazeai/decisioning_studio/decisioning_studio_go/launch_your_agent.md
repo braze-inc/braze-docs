@@ -96,7 +96,7 @@ Allow at least 2-4 weeks of data collection before drawing conclusions about per
 
 If your agent isn't performing as expected:
 
-1. **Verify orchestration**: Ensure your CEP integration is active and campaigns/journeys are running and global capps or similar rules are interfering with orchestration. 
+1. **Verify orchestration**: Confirm that your CEP integration is active, campaigns and journeys are running, and that no global caps or similar rules are interfering with orchestration.
 2. **Check data flow**: Confirm that audience data and engagement data are being captured correctly.
 3. **Review experiment groups**: Ensure proper random assignment and no overlap between groups.
 4. **Contact support**: Reach out to Braze Support for further assistance.
