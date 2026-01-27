@@ -42,5 +42,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
-redirection depuis email_templates.md
+rediriger depuis email_templates.md
 {% endcomment %}
