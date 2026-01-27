@@ -6,11 +6,11 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint Braze do recurso de ID da conta de usuário do painel existente."
+description: "Este artigo descreve detalhes sobre o ponto de extremidade do Braze Look up an existing dashboard user account resource ID."
 ---
 
 {% api %}
-# Procure uma conta de usuário do painel existente pelo ID do recurso
+# Procure uma conta de usuário existente no dashboard por ID de recurso
 {% apimethod get %}
 /scim/v2/Users/{id}
 {% endapimethod %}
