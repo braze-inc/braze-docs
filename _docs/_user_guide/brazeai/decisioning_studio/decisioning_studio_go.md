@@ -8,7 +8,7 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 # BrazeAI Decisioning Studio™ Go
 
 ## About Decisioning Studio Go
-Decisioning Studio Go includes self-serve creative configuration with a limited action bank, engagement-based customer features only, optimization on clicks, and is only compatible with the following three Customer Engagement Platforms (CEP's): 
+Decisioning Studio Go includes self-serve creative configuration with a limited action bank, engagement-based customer features only, optimization on clicks, and is only compatible with the following three Customer Engagement Platforms (CEPs): 
 * Braze
 * Salesforce Marketing Cloud
 * Klaviyo
