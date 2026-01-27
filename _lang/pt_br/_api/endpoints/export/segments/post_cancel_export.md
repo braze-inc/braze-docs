@@ -5,16 +5,16 @@ search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o Cancelamento de exportações por endpoint do Braze por segmento."
+description: "Este artigo descreve detalhes sobre o ponto de extremidade Braze para cancelar exportações por segmento."
 
 ---
 {% api %}
 # Cancelar exportações por segmento
 {% apimethod post %}
-/export/segment/cancel
+/exportar/segmento/cancelar
 {% endapimethod %}
 
-> Use esse ponto de extremidade para cancelar todas as exportações em andamento com uma ID de segmento especificada.
+> Use este ponto de extremidade para cancelar todas as exportações em andamento com um ID de segmento especificado.
 
 ## Pré-requisitos
 
