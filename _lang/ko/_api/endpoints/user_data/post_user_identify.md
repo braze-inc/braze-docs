@@ -163,7 +163,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 자세한 내용은 `alias_name` 및 `alias_label` 에서 [사용자 별칭]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) 문서를 참조하세요.
 {% endalert %}
 
-## Response
+## 응답
 
 ```json
 {
