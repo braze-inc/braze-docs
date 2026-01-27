@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Consulte as informações sobre blocos de conteúdo"
+nav_title: "OBTER: Veja informações sobre Blocos de Conteúdo"
 article_title: "OBTER: Consulte Informações sobre blocos de conteúdo"
 search_tag: Endpoint
 page_order: 4
