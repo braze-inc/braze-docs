@@ -11,7 +11,7 @@ description: "Esta landing page explica e lista os endpoints de exportação do 
 page_type: landing
 
 guide_top_header: "Exportar pontos de extremidade"
-guide_top_text: "Com esta coleção de endpoints, você pode acessar e exportar vários níveis de detalhes sobre seus KPIs, sessões de app, usuários, segmentos, campanhas e canvas. <br> <br> Certifique-se de conhecer sua <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>instância do Braze</a>, <a href='/docs/api/api_key/' target='_blank'>a chave de API</a> e <a href='/docs/api/identifier_types/' target='_blank'>o identificador de API</a> ao criar seus parâmetros e corpos de solicitação."
+guide_top_text: "Com essa coleção de pontos de extremidade, é possível acessar e exportar vários níveis de detalhes sobre seus KPIs, sessões de app, usuários, segmentos, campanhas e Canvas. <br> <br> Certifique-se de conhecer sua <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>instância do Braze</a>, <a href='/docs/api/api_key/' target='_blank'>a chave de API</a> e <a href='/docs/api/identifier_types/' target='_blank'>o identificador de API</a> ao criar seus parâmetros e corpos de solicitação."
 
 guide_featured_title: "Exportar endpoints de campanha"
 guide_featured_list:
