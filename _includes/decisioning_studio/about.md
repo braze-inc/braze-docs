@@ -54,7 +54,7 @@ Think of it this way: a decisioning agent is the conductor orchestrating your en
 
 ### About this guide
 
-In this guide, you will first learn more about Decisioning Agents and how they work. Then you will first learn how to set up the self-service Decisioning Studio Go. After that, you will learn how to set up the full-service Decisioning Studio Pro. Finally, you will learn how to view reports and insights to understand the performance of your Decisioning Agents.
+In this guide, you first learn what decisioning agents are and how they work. Next, you set up the self-service Decisioning Studio Go, followed by the full-service Decisioning Studio Pro. Finally, you review reports and insights to understand the performance of your decisioning agents.
 
 ## Next steps
 
