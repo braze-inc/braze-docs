@@ -14,9 +14,9 @@ description: "이 문서에서는 외부 ID 제거 엔드포인트에 대한 자
 /users/external_ids/remove
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 더 이상 사용되지 않는 사용자의 이전 외부 ID를 제거하세요. 
+> 이 엔드포인트를 사용하여 더 이상 사용되지 않는 사용자의 이전 외부 ID를 제거하세요.
 
-요청당 최대 50개의 외부 ID를 보낼 수 있습니다. 
+요청당 최대 50개의 외부 ID를 보낼 수 있습니다.
 
 {% alert warning %}
 이 엔드포인트는 더 이상 사용되지 않는 ID를 완전히 제거하며 되돌릴 수 없습니다. 이 엔드포인트를 사용하여 시스템에서 사용자와 여전히 연결되어 있는 사용되지 않는 `external_ids` 을 제거하면 해당 사용자의 데이터를 영구적으로 찾을 수 없게 됩니다.
@@ -24,7 +24,7 @@ description: "이 문서에서는 외부 ID 제거 엔드포인트에 대한 자
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `users.external_ids.remove` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
 
@@ -70,7 +70,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 더 이상 사용되지 않는 ID만 제거할 수 있으며, 기본 외부 ID를 제거하려고 하면 오류가 발생합니다.
 {% endalert %}
 
-## 응답
+## Response
 
 응답은 모든 성공적인 제거와 실패한 제거를 관련 오류와 함께 확인합니다. `removal_errors` 필드의 오류 메시지는 원래 요청의 배열에 있는 인덱스를 참조합니다.
 
