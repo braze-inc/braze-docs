@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar blocos de conteúdo disponíveis"
+nav_title: "OBTER: Listar os blocos de conteúdo disponíveis"
 article_title: "OBTER: Listar blocos de conteúdo disponíveis"
 search_tag: Endpoint
 page_order: 4
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [
