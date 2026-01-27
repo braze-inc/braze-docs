@@ -16,7 +16,7 @@ description: "Este artigo traz informações sobre o o endpoint da Braze \"Exclu
 
 > Use esse endpoint para excluir qualquer perfil de usuário, especificando um identificador de usuário conhecido.
 
-Até 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` podem ser incluídos em uma única solicitação. Somente um dos sites `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` ou `phone_numbers` pode ser incluído em uma única solicitação. 
+Até 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` podem ser incluídos em uma única solicitação. Somente um dos sites `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` ou `phone_numbers` pode ser incluído em uma única solicitação.
 
 Se tiver um caso de uso que não possa ser resolvido com a exclusão de usuários em massa por meio da API, entre em contato com a [equipe de suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) para obter assistência.
 
@@ -54,11 +54,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 | Parâmetro         | Obrigatória | Tipo de dados                  | Descrição                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
-| `external_ids`    | Opcional | Matriz de strings           | Identificadores externos a serem excluídos.                                                    |
+| `external_ids`    | Opcional | Array de strings           | Identificadores externos a serem excluídos.                                                    |
 | `user_aliases`    | Opcional | Vetor de objeto de alias de usuário | [Aliases de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/) a serem excluídos. |
-| `braze_ids`       | Opcional | Matriz de strings           | Identificadores de usuário do Braze a serem excluídos.                                                  |
-| `email_addresses` | Opcional | Matriz de strings           | E-mails de usuários a serem excluídos. Para saber mais, consulte [Exclusão de usuários por e-mail](#deleting-users-by-email).                                                             |
-| `phone_numbers` | Opcional | Matriz de strings | Números de telefone do usuário a serem excluídos. |
+| `braze_ids`       | Opcional | Array de strings           | Identificadores de usuário do Braze a serem excluídos.                                                  |
+| `email_addresses` | Opcional | Array de strings           | E-mails de usuários a serem excluídos. Para saber mais, consulte [Exclusão de usuários por e-mail](#deleting-users-by-email).                                                             |
+| `phone_numbers` | Opcional | Array de strings | Números de telefone do usuário a serem excluídos. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ### Exclusão de usuários por endereços de e-mail e números de telefone
@@ -105,8 +105,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user IDs queued for deletion
 }
