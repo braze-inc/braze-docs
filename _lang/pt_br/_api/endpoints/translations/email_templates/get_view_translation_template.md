@@ -1,21 +1,21 @@
 ---
-nav_title: "OBTER: Exibir todas as traduções e localizações do modelo de e-mail"
-article_title: "OBTER: Exibir todas as traduções e localizações do modelo de e-mail"
+nav_title: "OBTER: Veja todas as traduções e locais para o modelo de e-mail"
+article_title: "OBTER: Veja todas as traduções e locais para o Modelo de E-mail"
 search_tag: Endpoint
 page_order: 3
 
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o ponto de extremidade Exibir todas as traduções e localizações para envio de e-mail."
+description: "Este artigo descreve detalhes sobre o endpoint Veja todas as traduções e locais para o Modelo de E-mail."
 ---
 
 {% api %}
-# Exibir todas as traduções e localizações de um modelo de e-mail
+# Veja todas as traduções e locais para um modelo de e-mail
 {% apimethod get %}
-/templates/email/translations/
+/templates/e-mail/traduções/
 {% endapimethod %}
 
-> Use esse ponto de extremidade para visualizar todas as traduções e localizações de um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Consulte [Localidades nas mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obter mais informações sobre os recursos de tradução.
+> Use este endpoint para ver todas as traduções e locais para um [modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Veja [Locais em mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para mais informações sobre recursos de tradução.
 
 {% alert important %}
 Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
@@ -33,11 +33,11 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro     | Obrigatória | Tipo de dados | Descrição                     |
 |---------------|----------|-----------|---------------------------------|
-| `template_id` | Obrigatória | String    | O ID de seu modelo de e-mail. |
+| `template_id` | Obrigatória | String    | O ID do seu modelo de e-mail. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do ponto de extremidade GET.
+Todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do endpoint GET.
 {% endalert %}
 
 ## Exemplo de solicitação
