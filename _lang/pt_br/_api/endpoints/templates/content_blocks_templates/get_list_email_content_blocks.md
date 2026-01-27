@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar os blocos de conteúdo disponíveis"
+nav_title: "OBTER: Listar blocos de conteúdo disponíveis"
 article_title: "OBTER: Listar blocos de conteúdo disponíveis"
 search_tag: Endpoint
 page_order: 4
