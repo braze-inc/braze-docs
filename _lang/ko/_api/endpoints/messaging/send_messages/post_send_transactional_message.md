@@ -31,7 +31,7 @@ description: "이 문서에서는 API 트리거 배달 Braze 엔드포인트를 
 
 이 엔드포인트를 사용하려면 `transactional.send` 권한으로 API 키를 생성해야 합니다.
 
-## 사용량 제한
+## 요금 제한
 
 {% multi_lang_include rate_limits.md endpoint='transactional email' %}
 
