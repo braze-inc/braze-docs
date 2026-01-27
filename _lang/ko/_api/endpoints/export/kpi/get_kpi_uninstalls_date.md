@@ -43,7 +43,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 ```
 {% endraw %}
 
-## Response
+## 응답
 
 ```json
 {
