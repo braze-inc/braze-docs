@@ -82,7 +82,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 {% endtab %}
 {% endtabs %}
 
-## Response
+## 응답
 
 모든 성공적인 응답은 구독 그룹의 상태 및 사용자 기록에 따라 `Subscribed`, `Unsubscribed` 또는 `Unknown` 로 반환됩니다.
 
