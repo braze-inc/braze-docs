@@ -15,7 +15,7 @@ description: "이 문서에서는 사용자의 구독 그룹 상태 Braze 엔드
 
 > 이 엔드포인트를 사용하여 Braze 대시보드에서 최대 50명의 사용자의 구독 상태를 일괄 업데이트할 수 있습니다.
 
-You can access a subscription group's `subscription_group_id` by navigating to the **Subscription Group** page.
+**구독 그룹 페이지**로 이동하여 구독 그룹 `subscription_group_id`에 액세스할 수 있습니다.
 
 **이메일 구독 그룹에** 대한 이 엔드포인트의 예제를 보거나 테스트하려면 다음과 같이 하세요:
 
