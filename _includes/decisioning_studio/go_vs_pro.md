@@ -1,6 +1,6 @@
 ## Decisioning Studio Go vs. Decisioning Studio Pro 
 
-Decisioning Studio currently offers two tiers: Go and Pro. Each tier is designed to meet different needs and use cases.
+Decisioning Studio offers two tiers: Go and Pro. Each tier is designed to meet different needs and use cases.
 
 ### Decisioning Studio Go
 
