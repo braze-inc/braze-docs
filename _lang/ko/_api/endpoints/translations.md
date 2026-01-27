@@ -53,7 +53,7 @@ guide_menu_list2:
 ---
 
 {% alert important %}
-Braze 번역 엔드포인트는 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
+Braze 번역 엔드포인트는 현재 얼리 액세스 중입니다. 얼리 액세스에 참여하려면 Braze 계정 매니저에게 문의하세요.
 {% endalert %}
 
 ## 번역 엔드포인트 작동 방식
