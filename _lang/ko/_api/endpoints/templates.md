@@ -42,5 +42,5 @@ guide_menu_list:
     image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
-redirect from email_templates.md
+email_templates.md에서 리디렉션
 {% endcomment %}
