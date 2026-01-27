@@ -46,11 +46,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id` | 필수 | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-|`send_id`| 선택 사항 | 문자열 | [식별자 보내기]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
+| `campaign_id` | Required | 문자열 | [캠페인 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+|`send_id`| Optional | 문자열 | [식별자 보내기]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 --header 'Content-Type: application/json' \
@@ -66,8 +66,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \
 ### 성공 응답의 예
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": "success",
   "send_id" : (string) the send identifier
