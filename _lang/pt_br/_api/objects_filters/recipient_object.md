@@ -11,9 +11,9 @@ description: "Este artigo de referência explica os diferentes componentes do ob
 
 > O objeto recipients permite que você solicite ou grave informações em nossos endpoints.
 
-Você deve incluir um dos sites `external_user_id`, `user_alias`, `braze_id`, ou `email` nesse objeto. **As solicitações devem especificar apenas uma.**
+Você deve incluir um dos `external_user_id`, `user_alias`, `braze_id` ou `email` neste objeto. **As solicitações devem especificar apenas uma.**
 
-O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/), o [objeto de propriedades do disparador]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), o [objeto de propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) e o [objeto de atribuições do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
+O objeto de destinatários permite combinar o [objeto de alias do usuário]({{site.baseurl}}/api/objects_filters/user_alias_object/), o [objeto de propriedades de disparo]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), o [objeto de propriedades de canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) e o [objeto de atributos do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object/).
 
 ## Corpo do objeto
 
@@ -31,7 +31,7 @@ O objeto destinatários permite combinar o [objeto de alias de usuário]({{site.
 }]
 ```
 
-Quando `send_to_existing_only` é `true`, o Braze envia a mensagem apenas para os usuários existentes. No entanto, não é possível usar esse sinalizador com aliases de usuário. Quando `send_to_existing_only` for `false`, você deverá incluir uma atribuição. O Braze cria um usuário com o endereço `id` e atribuições antes de enviar a mensagem.
+Quando `send_to_existing_only` é `true`, a Braze envia a mensagem apenas para usuários existentes. No entanto, você não pode usar essa flag com aliases de usuário. Quando `send_to_existing_only` é `false`, você deve incluir um atributo. A Braze cria um usuário com o `id` e atributos antes de enviar a mensagem.
 
 - [ID da Braze]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)
 - [Alias do usuário]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases)
@@ -41,7 +41,7 @@ Quando `send_to_existing_only` é `true`, o Braze envia a mensagem apenas para o
 
 ## Eliminação de objetos do destinatário
 
-Ao fazer uma chamada de API com o objeto recipient, **se houver um recipient duplicado direcionando para o mesmo endereço (ou seja, e-mail, push), o Braze deduplica o usuário**, o que significa que o Braze remove usuários idênticos, deixando um.
+Ao fazer uma chamada de API com o objeto de destinatário, **se existir um destinatário duplicado direcionando para o mesmo endereço (ou seja, e-mail, push), a Braze remove duplicatas do usuário**, o que significa que a Braze remove usuários idênticos, deixando apenas um.
 
 Por exemplo, se você usar o mesmo `external_user_id`, o usuário receberá apenas uma mensagem. Considere fazer várias chamadas à API se precisar de uma solução alternativa para esse comportamento.
 
