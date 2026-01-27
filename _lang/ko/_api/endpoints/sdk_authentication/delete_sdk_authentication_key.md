@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: SDK 인증 키 제거"
+nav_title: "DELETE: 소프트웨어 개발 키트 인증 키 제거"
 article_title: "DELETE: SDK 인증 키 제거"
 search_tag: Endpoint
 page_order: 3
