@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Atualizar campanhas agendadas disparadas por API"
+nav_title: "POST: Atualizar campanhas programadas disparadas pela API"
 article_title: "POST: Atualizar campanhas agendadas disparadas por API"
 search_tag: Endpoint
 page_order: 4
@@ -15,13 +15,13 @@ description: "Este artigo descreve os detalhes sobre o endpoint da Braze \"Atual
 
 > Use esse endpoint para atualizar campanhas programadas acionadas por API criadas no dashboard, permitindo que você decida qual ação deve disparar a mensagem a ser enviada.
 
-Você pode passar o endereço `trigger_properties` que será modelado na própria mensagem.
+Você pode inserir o endereço `trigger_properties` que o Braze modela na própria mensagem.
 
 Observe que, para enviar mensagens com esse ponto de extremidade, você deve ter um ID de campanha, criado ao criar uma [campanha disparada por API]({{site.baseurl}}/api/api_campaigns/).
 
-Qualquer programação substituirá completamente a que você forneceu na solicitação de criação de programação ou nas solicitações anteriores de atualização de programação. Por exemplo, se você definir originalmente o agendamento para `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` e depois atualizá-lo para `"schedule" : {"time" : "2015-02-20T14:14:47"}`, a mensagem será enviada no horário especificado em UTC, e não no fuso local do usuário.
+Qualquer programação substitui completamente a que você forneceu na solicitação de criação de programação ou nas solicitações anteriores de atualização de programação. Por exemplo, se você definir originalmente o agendamento para `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` e depois atualizá-lo para `"schedule" : {"time" : "2015-02-20T14:14:47"}`, o Braze enviará a mensagem no horário especificado em UTC, não no fuso local do usuário.
 
-Os disparos programados que forem atualizados muito perto ou durante o horário em que deveriam ser enviados serão atualizados com os melhores esforços para que as alterações de último segundo possam ser aplicadas a todos, alguns ou nenhum dos seus usuários direcionados. As atualizações não serão aplicadas se a programação original tiver usado o fuso local e a hora original já tiver passado em qualquer fuso horário.
+Os disparos programados que são atualizados perto ou durante o horário em que deveriam ser enviados são atualizados com os melhores esforços para que o Braze possa aplicar alterações de última hora a todos, alguns ou nenhum dos seus usuários direcionados. As atualizações não serão aplicadas se a programação original tiver usado o fuso local e a hora original já tiver passado em qualquer fuso horário.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
