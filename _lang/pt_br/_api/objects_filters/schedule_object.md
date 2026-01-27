@@ -9,7 +9,7 @@ description: "Este artigo de referência lista e explica os diferentes objetos d
 
 # Objeto de agendamento
 
-> Os parâmetros para os endpoints de criação de campanha e canva espelham os do endpoint de envio e adicionam o parâmetro `schedule`, que permite especificar quando você deseja que seus usuários-alvo recebam sua mensagem. Se você incluir apenas o parâmetro `time` no objeto `schedule`, as mensagens do Braze serão enviadas a todos os seus usuários naquele momento.
+> Os parâmetros para os endpoints de criação de campanha e canva espelham os do endpoint de envio e adicionam o parâmetro `schedule`, que permite especificar quando você deseja que seus usuários-alvo recebam sua mensagem. Se você incluir apenas o parâmetro `time` no objeto `schedule`, as mensagens Braze serão enviadas a todos os seus usuários naquele momento.
 
 Se você definir `in_local_time` como `true`, você receberá uma resposta de erro se o parâmetro de tempo tiver passado em todos os fusos horários. Se você definir `at_optimal_time` como verdadeiro, seus usuários receberão a mensagem na data designada no horário ideal (independentemente do horário que você fornecer). Ao usar o envio no horário local ou no horário ideal, não forneça designadores de fuso horário no valor do parâmetro de tempo (por exemplo, use `"2015-02-20T13:14:47"` em vez de `"2015-02-20T13:14:47-05:00"`).
 
