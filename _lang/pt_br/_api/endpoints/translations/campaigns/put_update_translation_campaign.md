@@ -15,9 +15,9 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Atualiz
 /campaigns/translations
 {% endapimethod %}
 
-> Use este endpoint para atualizar várias traduções para uma campanha. Consulte [Localidades nas mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obter mais informações sobre os recursos de tradução.
+> Use este endpoint para atualizar várias traduções para uma campanha. Veja [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
-Se quiser atualizar as traduções após o lançamento de uma campanha, será necessário [salvar a mensagem como rascunho]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) primeiro.
+Se você quiser atualizar as traduções após uma campanha ter sido lançada, precisará [salvar sua mensagem como um rascunho]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/) primeiro.
 
 {% alert important %}
 Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
@@ -40,13 +40,13 @@ Não há parâmetros de jornada para este endpoint.
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Obrigatória | String | O ID de sua campanha. |
-| `message_variation_id` | Obrigatória | String | O ID de sua variação de mensagem. |
-| `locale_id`| Obrigatória | String | A ID (UUID) da localização. |
-| `translation_map` | Obrigatória | Objeto | Objeto que contém as novas traduções. |
+| `message_variation_id` | Obrigatória | String | O ID da sua variação de mensagem. |
+| `locale_id`| Obrigatória | String | O ID (UUID) do local. |
+| `translation_map` | Obrigatória | Objeto | Objeto contendo as novas traduções. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do ponto de extremidade GET.
+Todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do endpoint GET.
 {% endalert %}
 
 ## Exemplo de solicitação
