@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 내보내기 캠페인 세부 정보"
+nav_title: "GET: 캠페인 세부 정보 내보내기"
 article_title: "GET: 내보내기 캠페인 세부 정보"
 search_tag: Endpoint
 page_order: 4
@@ -20,7 +20,7 @@ description: "이 문서에서는 내보내기 캠페인 세부 정보 Braze 엔
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `campaigns.details` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -32,7 +32,7 @@ description: "이 문서에서는 내보내기 캠페인 세부 정보 Braze 엔
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 내보내기 엔드포인트를](#campaign-list-endpoint) 사용할 수도 있습니다. |
+| `campaign_id` | Required | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요.<br><br> API 캠페인용 `campaign_id` 은 대시보드 내의 [API 키]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) 페이지와 **캠페인 세부정보** 페이지에서 찾을 수 있으며, [캠페인 목록 내보내기 엔드포인트를](#campaign-list-endpoint) 사용할 수도 있습니다. |
 | `post_launch_draft_version` | 선택 사항 | 부울 | 출시 후 초안이 있는 메시지의 경우 이 값을 `true` 으로 설정하면 사용 가능한 모든 초안 변경 사항이 표시됩니다. 기본값은 다음과 같습니다. `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -47,8 +47,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## 응답
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -89,7 +87,9 @@ Authorization: Bearer YOUR-REST-API-KEY
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 
@@ -219,7 +219,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 전환 행동
 
-`conversion_behaviors` 배열에는 캠페인에 대해 설정된 각 전환 이벤트 동작에 대한 정보가 포함됩니다. 이러한 행동은 캠페인에서 설정한 순서대로 진행됩니다. 예를 들어, 전환 이벤트 A는 배열의 첫 번째 항목이 되고 전환 이벤트 B는 두 번째 항목이 되는 식입니다. 다음은 전환 이벤트 동작 응답의 예시입니다:
+`conversion_behaviors` 배열에는 캠페인에 설정된 각 전환 이벤트 동작에 대한 정보가 포함되어 있습니다. 이러한 행동은 캠페인에서 설정한 순서대로 진행됩니다. 예를 들어 전환 이벤트 A가 배열의 첫 번째 항목이고 전환 이벤트 B가 두 번째 항목인 식으로 말이죠. 다음은 전환 이벤트 동작 응답의 예시입니다:
 
 #### 이메일 클릭
 
