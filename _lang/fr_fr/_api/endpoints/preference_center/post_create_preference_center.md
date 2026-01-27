@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Paramètres de demande
@@ -81,7 +81,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 
 | Liquid | Description |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Obtenir l'état global de l'abonnement à l'e-mail pour l'utilisateur (tel que "opted_in", "subscribed", ou "unsubscribed"). |
+|`{{subscribed_state.${email_global}}}`| Obtenir l'état global de l'abonnement à l'e-mail pour l'utilisateur (tel que "opted_in", "abonné" ou "désabonné"). |
 |`{{subscribed_state.${<subscription_group_id>}}}`| Obtenir l'état abonné du groupe d'abonnement spécifié pour l'utilisateur (tel que "abonné" ou "désabonné"). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -89,7 +89,7 @@ Référez-vous aux balises Liquid suivantes qui peuvent être intégrées à vot
 
 | Liquid | Description |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Indique qu’un élément de saisie de formulaire particulier correspond à l’état global d’abonnement aux e-mails de l’utilisateur. L'état de sélection de l'utilisateur doit être "opted_in", "abonné" ou "désabonné" lorsque le formulaire est abonné avec des données de sélection pour l'état d'abonnement global à l'e-mail. S'il s'agit d'une case à cocher, l'utilisateur sera soit « opted_in », soit « désabonné ». Pour un input caché, l’état « abonné » sera aussi valide. |
+|`{% form_field_name :email_global_state %}`| Indique qu’un élément de saisie de formulaire particulier correspond à l’état global d’abonnement aux e-mails de l’utilisateur. L'état de sélection de l'utilisateur doit être "opted_in", "abonné" ou "désabonné" lorsque le formulaire est soumis avec des données de sélection pour l'état global d'abonnement à l'e-mail. S'il s'agit d'une case à cocher, l'utilisateur sera soit "opted_in", soit "désabonné". Pour un input caché, l’état « abonné » sera aussi valide. |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| Indique qu’un élément de saisie de formulaire particulier correspond à un groupe d’abonnement particulier. L’état de sélection de l’utilisateur devrait être « abonné » ou « désabonné » lorsque le formulaire est soumis avec des données de sélection pour un groupe d’abonnement particulier. |
 |`{{preference_center_submit_url}}`| Produit une URL pour la soumission du formulaire. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
