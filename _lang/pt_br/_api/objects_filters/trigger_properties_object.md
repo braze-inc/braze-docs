@@ -1,5 +1,5 @@
 ---
-nav_title: "Objeto de propriedades de disparo"
+nav_title: "Objeto de propriedades do disparador"
 article_title: Objeto de propriedades do disparador da API
 page_order: 11
 page_type: reference
@@ -12,7 +12,7 @@ tool: Campaigns
 
 > Ao usar um dos pontos de extremidade para enviar uma campanha com entrega disparada por API, você pode fornecer um mapa de chaves e valores para personalizar sua mensagem.
 
-Se você fizer uma solicitação de API que contenha um objeto em `trigger_properties`, os valores desse objeto poderão ser referenciados em seu modelo de mensagem no namespace `api_trigger_properties`. Por exemplo, uma solicitação como esta poderia adicionar a palavra `"shoes"` a uma mensagem, acrescentando {% raw %}`{{api_trigger_properties.${product_name}}}`{% endraw %}. 
+Se você fizer uma solicitação de API que contenha um objeto em `trigger_properties`, os valores desse objeto poderão ser referenciados em seu modelo de mensagem no namespace `api_trigger_properties`. Por exemplo, uma solicitação como esta poderia adicionar a palavra `"shoes"` a uma mensagem, acrescentando {% raw %}`{{api_trigger_properties.${product_name}}}`{% endraw %}.
 
 Note que, embora as propriedades do disparador possam ser modeladas em mensagens, elas não são armazenadas automaticamente no perfil do usuário por padrão.
 
