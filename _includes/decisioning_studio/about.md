@@ -20,7 +20,7 @@ To learn more, or get started with Decisioning Studio, [book a call](https://www
 - **Personalize everything:** AI decisioning agents find the best message, product, incentive, channel, timing, and frequency for each individual customer
 - **Maximize any metric:** Clicks aren’t dollars. Use BrazeAI™ to pick the offers or incentives that maximize revenue, profit, CLV, or any other business KPI.
 - **Open the black box:** See how AI decisioning agents personalize for deep insights into the drivers of customer behavior
-- **Expert support all the way:** Decisioning Studio Pro includes support from our AI Decisioning Services team, which will tailor your decisioning agents to the the specific needs of your business.
+- **Expert support all the way:** Decisioning Studio Pro includes support from our AI Decisioning Services team, which will tailor your decisioning agents to the specific needs of your business.
 
 ## About Decisioning Studio
 
