@@ -18,7 +18,7 @@ description: "Este artigo descreve detalhes sobre o endpoint \"Renomear IDs exte
 
 Você pode enviar até 50 objetos de renomeação por solicitação.
 
-Esse ponto de extremidade define um novo `external_id` (primário) para o usuário e substitui o `external_id` existente. Isso significa que o usuário pode ser identificado por `external_id` até que o obsoleto seja removido. Ter múltiplos IDs externos permite um período de migração para que versões legadas de seus aplicativos que usam o esquema de nomenclatura de ID externo anterior não quebrem.
+Esse ponto de extremidade define um novo `external_id` (primário) para o usuário e substitui o `external_id` existente. Isso significa que o usuário pode ser identificado por `external_id` até que o obsoleto seja removido. Ter vários IDs externos permite um período de migração para que as versões legadas de seus apps que usam o esquema de nomenclatura de ID externo anterior não sejam interrompidas.
 
 Depois que o esquema de nomenclatura antigo não estiver mais em uso, é altamente recomendável remover IDs externas obsoletas usando o [ponto de extremidade`/users/external_ids/remove` ]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
@@ -107,8 +107,8 @@ Não, porque o usuário ainda é o mesmo, e todo o seu comportamento histórico 
 ### Ele pode ser executado em espaços de trabalho de desenvolvimento ou de preparação?
 Sim. Na verdade, é altamente recomendável executar uma migração de teste em um espaço de trabalho de preparação ou desenvolvimento e garantir que tudo corra bem antes de executar nos dados de produção.
 
-### Esse registro de dados pontos?
-Esse recurso não registra dados pontos.
+### Isso registra pontos de dados?
+Esse recurso não registra pontos de dados.
 
 ### Qual é o período de depreciação recomendado?
 Não temos um limite rígido de quanto tempo você pode manter IDs externas obsoletas, mas é altamente recomendável removê-las quando não houver mais necessidade de fazer referência aos usuários pela ID obsoleta.
