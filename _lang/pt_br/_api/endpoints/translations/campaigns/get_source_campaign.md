@@ -1,6 +1,6 @@
 ---
-nav_title: "OBTER: Veja os valores de origem padrão para as tags de tradução da campanha"
-article_title: "OBTER: Veja os valores de origem padrão para as tags de tradução da campanha"
+nav_title: "OBTER: Exibir valores de origem padrão para tags de tradução de campanha"
+article_title: "OBTER: Exibir valores de origem padrão para tags de tradução de campanha"
 search_tag: Endpoint
 page_order: 3
 
@@ -10,12 +10,12 @@ description: "Este artigo descreve detalhes sobre o endpoint de origem da tradu�
 ---
 
 {% api %}
-# Veja os valores de origem padrão para as tags de tradução de uma campanha
+# Exibir valores de origem padrão para as tags de tradução de uma campanha
 {% apimethod get %}
-/campanhas/traducoes/origem
+/campaigns/translations/source
 {% endapimethod %}
 
-> Use este endpoint para ver todas as fontes de tradução padrão para as tags de tradução de uma campanha. Estes são os valores dentro do {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Veja [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
+> Use esse ponto de extremidade para visualizar todas as fontes de tradução padrão para as tags de tradução de uma campanha. Esses são os valores no site {% raw %}`{% translation id %} source {% endtranslation %}`{% endraw %}. Consulte [Localidades nas mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obter mais informações sobre os recursos de tradução.
 
 {% alert important %}
 Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
@@ -34,13 +34,13 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`| Obrigatória | String | O ID de sua campanha. |
-|`message_variation_id`| Obrigatória | String | O ID da sua variação de mensagem. |
-|`locale_id`| Opcional | String | Um UUID de localidade para filtrar as respostas. |
-|`post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a versão mais recente do rascunho em vez da versão publicada mais recente. Padrão para `false` retornando a versão ao vivo mais recente.|
+|`message_variation_id`| Obrigatória | String | O ID de sua variação de mensagem. |
+|`locale_id`| Opcional | String | Um UUID de localização para filtrar as respostas. |
+|`post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a última versão de rascunho em vez da última versão publicada ao vivo. O padrão é `false`, que retorna a versão mais recente em tempo real.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do endpoint GET.
+Todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do ponto de extremidade GET.
 {% endalert %}
 
 ## Exemplo de solicitação
