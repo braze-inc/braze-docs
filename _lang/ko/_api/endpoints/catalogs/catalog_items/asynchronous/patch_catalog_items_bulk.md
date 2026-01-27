@@ -88,7 +88,7 @@ curl --location --request PATCH 'https://rest.iad-03.braze.com/catalogs/restaura
 `$add` 및 `$remove` 연산자는 배열 유형 필드에만 적용 가능하며 PATCH 엔드포인트에서만 지원됩니다.
 {% endalert %}
 
-## Response
+## 응답
 
 이 엔드포인트에 대한 상태 코드 응답은 `202`, `400`, `404` 의 세 가지가 있습니다 .
 
