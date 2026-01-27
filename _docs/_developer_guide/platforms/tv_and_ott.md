@@ -258,7 +258,7 @@ To target OTT apps for messaging, we recommend creating a segment specific to yo
 ## Headless UI {#custom-ui}
 
 {% alert important %}
-Platforms that support in-app messages or Content Cards via headless UI **do not** include any default UI or views, so be sure to implement your own custom UI.
+Platforms that support in-app messages or Content Cards through headless UI **do not** include any default UI or views. Build your own custom UI (such as for in-app messages) and then use the SDK-provided data models to populate those UIs.
 {% endalert %}
 
 With headless UI, Braze will deliver a data model, such as JSON, that your app can read and use within a UI your app controls. This data will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. For more information about custom handling messaging, see the following:
