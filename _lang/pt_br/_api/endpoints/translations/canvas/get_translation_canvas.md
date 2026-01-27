@@ -15,7 +15,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Ver tra
 /canvas/translations
 {% endapimethod %}
 
-> Use esse ponto de extremidade para fazer a prévia de uma mensagem traduzida para um Canva. Consulte [Localidades nas mensagens]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obter mais informações sobre os recursos de tradução.
+> Use este endpoint para prévia uma mensagem traduzida para um canva. Veja [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para saber mais sobre os recursos de tradução.
 
 {% alert important %}
 Esse ponto de extremidade está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
@@ -33,15 +33,15 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 | Parâmetro              | Obrigatória | Tipo de dados | Descrição                        |
 |------------------------|----------|-----------|------------------------------------|
-| `workflow_id`          | Obrigatória | String    | A ID da tela.              |
+| `workflow_id`          | Obrigatória | String    | O ID do canva.              |
 | `step_id`              | Obrigatória | String    | O ID de sua etapa do canva.        |
-|`message_variation_id`| Obrigatória | String | O ID de sua variação de mensagem. |
-| `locale_id`            | Opcional | String    | A ID (UUID) da localização.       |
-| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a última versão de rascunho em vez da última versão publicada ao vivo. O padrão é `false`, que retorna a versão mais recente em tempo real.
+|`message_variation_id`| Obrigatória | String | O ID da sua variação de mensagem. |
+| `locale_id`            | Opcional | String    | O ID (UUID) do local.       |
+| `post_launch_draft_version`| Opcional | Booleano | Quando `true` retorna a versão mais recente do rascunho em vez da versão publicada mais recente. Padrões para `false` retornando a versão ao vivo mais recente.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
-Todas as IDs de tradução são consideradas identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do ponto de extremidade GET.
+Todos os IDs de tradução são considerados identificadores únicos universais (UUIDs), que podem ser encontrados na resposta do endpoint GET.
 {% endalert %}
 
 ## Exemplo de solicitação
