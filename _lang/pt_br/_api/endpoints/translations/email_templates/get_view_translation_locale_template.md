@@ -10,7 +10,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Ver tradução espe
 ---
 
 {% api %}
-# Ver um tradução específica e local para o endpoint do modelo de e-mail
+# Ver um endpoint de tradução específica e local para o modelo de e-mail
 {% apimethod get %}
 /templates/translations/e-mail
 {% endapimethod %}
