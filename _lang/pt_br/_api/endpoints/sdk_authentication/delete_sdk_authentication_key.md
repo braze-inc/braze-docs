@@ -1,23 +1,23 @@
 ---
-nav_title: "DELETE: Remover chave de autenticação do SDK"
-article_title: "DELETE: Remover chave de autenticação do SDK"
+nav_title: "DELETE: Remover a chave de autenticação do SDK"
+article_title: "DELETE: Remover a chave de autenticação do SDK"
 search_tag: Endpoint
 page_order: 3
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint Braze para deletar a chave de autenticação do SDK."
+description: "Este artigo descreve detalhes sobre o endpoint do Braze da chave de autenticação do SDK Delete."
 ---
 
 {% api %}
-# Deletar chave de autenticação do SDK
+# Excluir a chave de autenticação do SDK
 {% apimethod delete %}
 /app_group/sdk_authentication/delete
 {% endapimethod %}
 
-> Use este endpoint para deletar uma chave de autenticação do SDK para seu app.
+> Use esse endpoint para excluir uma chave de autenticação do SDK para seu app.
 
 {% alert important %}
-A chave primária não pode ser deletada. Se você tentar deletar a chave primária, este endpoint retornará um erro.
+A chave primária não pode ser excluída. Se você tentar excluir a chave primária, esse ponto de extremidade retornará um erro.
 {% endalert %}
 
 ## Pré-requisitos
@@ -45,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | -------- | --------- | ----------- |
 | `app_id` | Obrigatória | String | O identificador da API do app. |
-| `key_id` | Obrigatória | String | O ID da chave de autenticação do SDK a ser deletada. |
+| `key_id` | Obrigatória | String | A ID da chave de autenticação do SDK a ser excluída. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemplo de solicitação
@@ -79,20 +79,20 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 
 | Parâmetro | Tipo de dados | Descrição |
 | --------- | --------- | ----------- |
-| `keys` | Vetor | Array de objetos de chave de autenticação do SDK restantes. |
-| `keys[].id` | String | O ID da chave de autenticação do SDK. |
+| `keys` | Vetor | Vetor de objetos restantes da chave de autenticação do SDK. |
+| `keys[].id` | String | A ID da chave de autenticação do SDK. |
 | `keys[].rsa_public_key` | String | A string da chave pública RSA. |
 | `keys[].description` | String | Descrição da chave de autenticação do SDK. |
-| `keys[].is_primary` | Booleano | Se esta chave é a chave primária de autenticação do SDK. |
+| `keys[].is_primary` | Booleano | Se essa chave é a chave primária de autenticação do SDK. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Regras de validação
 
-Este endpoint possui as seguintes regras de validação:
+Esse endpoint tem as seguintes regras de validação:
 
-- O `key_id` deve ser um ID válido de chave de autenticação do SDK.
-- O `app_id` deve ser um identificador de API de app válido.
+- O endereço `key_id` deve ser um ID de chave de autenticação do SDK válido.
+- O endereço `app_id` deve ser um identificador válido da API do app.
 - A chave de autenticação do SDK deve existir para o app especificado.
-- A chave primária de autenticação do SDK não pode ser deletada.
+- A chave primária de autenticação do SDK não pode ser excluída.
 
 {% endapi %}
