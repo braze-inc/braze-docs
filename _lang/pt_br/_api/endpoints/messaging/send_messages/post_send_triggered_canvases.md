@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Enviar Mensagens de Canva Usando Entrega Acionada por API"
+nav_title: "POST: Envie mensagens do canva usando entrega acionada por API"
 article_title: "POST: Enviar Mensagens de Canva Usando Entrega Acionada por API"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ Para usar esse endpoint, você precisará gerar uma chave de API com a permissã
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='send messages endpoints' %}
 
 ## Corpo da solicitação
 
@@ -40,9 +40,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
-  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
@@ -52,9 +51,9 @@ Authorization: Bearer YOUR-REST-API-KEY
       "external_user_id": (optional, string) external identifier of user to receive message,
       "email": (optional, string) email address of user to receive message,
       "prioritization": (optional, array) prioritization array; required when using email,
-      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent `canvas_entry_properties`)
+      "canvas_entry_properties": (optional, object) personalization key-value pairs that apply to this user (these key-value pairs override any keys that conflict with the parent `canvas_entry_properties`)
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases
-      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
+      "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
     }],
     ...
 }
@@ -64,22 +63,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`| Obrigatória | String | Veja [identificador da canva]({{site.baseurl}}/api/identifier_types/). |
-|`canvas_entry_properties`| Opcional | Objeto | Isso inclui [propriedades de entrada do canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Os pares de chave-valor de personalização se aplicarão a todos os usuários nesta solicitação. O objeto de propriedades de entrada do canva tem um limite máximo de tamanho de 50 KB. <br><br>**Nota:** Se você estiver participando do [acesso antecipado do Canvas Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/), este parâmetro é `context` e inclui propriedades de entrada do canva. |
+|`canvas_id`| Obrigatória | String | Consulte [Identificador do Canva]({{site.baseurl}}/api/identifier_types/). |
+|`canvas_entry_properties`| Opcional | Objeto | Isso inclui [as propriedades de entrada do Canva]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Os pares de valores-chave de personalização se aplicam a todos os usuários nessa solicitação. O objeto de propriedades de entrada do canva tem um limite máximo de tamanho de 50 KB. <br><br>**Nota:** Se estiver participando do [acesso antecipado ao Canvas Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/), esse parâmetro é `context` e inclui as propriedades de entrada do Canva. |
 |`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir essa flag inadvertidamente pode fazer com que você envie sua mensagem para um público maior do que o esperado. |
-|`segment_id `| Opcional | String | Consulte [identificador de segmento]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Opcional| Objeto do público conectado | Consulte [Público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Opcional | Vetor | Consulte o [objeto Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Se não fornecido e `broadcast` estiver definido como verdadeiro, a mensagem será enviada para todo o segmento alvo do canva.<br><br> O `recipients` array pode conter até 50 objetos, com cada objeto contendo uma única `external_user_id` string e um `canvas_entry_properties` objeto. Esta chamada requer um `external_user_id`, `user_alias` ou `email`. As solicitações devem especificar apenas uma. <br><br>Se `email` for o identificador, você deve incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) no objeto de destinatários. |
+|`recipients`| Opcional | Vetor | Consulte o [objeto Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Se não for fornecido e `broadcast` estiver definido como `true`, a mensagem será enviada para todo o segmento de mensagem direcionado pelo Canvas.<br><br> O `recipients` array pode conter até 50 objetos, com cada objeto contendo uma única `external_user_id` string e um `canvas_entry_properties` objeto. Essa chamada requer um `external_user_id`, `user_alias`, ou `email`. As solicitações devem especificar apenas uma. <br><br>Se `email` for o identificador, você deverá incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) no objeto de destinatários. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
-Para o parâmetro `recipients`, quando `send_to_existing_only` é `true`, Braze enviará a mensagem apenas para usuários existentes. No entanto, esse sinalizador não pode ser usado com aliases de usuário. <br><br>Se `send_to_existing_only` for `false`, um objeto de atribuição deverá ser incluído. Quando `send_to_existing_only` é `false` **e** um usuário com o `id` dado não existe, Braze criará um usuário com esse ID e atributos antes de enviar a mensagem.
+Para o parâmetro `recipients`, quando `send_to_existing_only` é `true`, o Braze envia apenas a mensagem para os usuários existentes. No entanto, esse sinalizador não pode ser usado com aliases de usuário. <br><br>Se `send_to_existing_only` for `false`, um objeto de atribuição deverá ser incluído. Quando `send_to_existing_only` é `false` **e** não existe um usuário com o `id` fornecido, o Braze cria um usuário com esse ID e atribuições antes de enviar a mensagem.
 {% endalert %}
 
 Os clientes que usam a API para chamadas de servidor para servidor talvez precisem listar o URL apropriado da API se estiverem protegidos por um firewall.
 
 {% alert note %}
-Se você incluir tanto usuários específicos na sua chamada de API quanto um segmento alvo no dashboard, a mensagem será enviada especificamente para os perfis de usuário que estão tanto na chamada de API quanto qualificam para os filtros de segmento.
+Se você incluir usuários específicos em sua chamada de API e um segmento de direcionamento no dashboard, o Braze enviará a mensagem especificamente para os perfis de usuário que estão na chamada de API e que se qualificam para os filtros de segmento.
 {% endalert %}
 
 ## Exemplo de solicitação
@@ -156,11 +154,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
 
 ## Detalhes da resposta
 
-As respostas do endpoint de envio de mensagens incluirão o `dispatch_id` da mensagem para referência de volta ao envio da mensagem. O endereço `dispatch_id` é o ID do envio de mensagens (ID exclusivo para cada "transmissão" enviada da plataforma Braze). Para saber mais, consulte [Comportamento do Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+As respostas do ponto de extremidade de envio de mensagens incluem o endereço `dispatch_id` da mensagem para referência ao envio da mensagem. O endereço `dispatch_id` é o ID do envio de mensagens (ID exclusivo para cada "transmissão" enviada da plataforma Braze). Para saber mais, consulte [Comportamento do Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 ### Exemplo de resposta bem-sucedida
 
-O código de status `201` pode retornar o seguinte corpo de resposta. Se o canva for arquivado, interrompido ou pausado, ele não será enviado por meio desse endpoint.
+O código de status `201` pode retornar o seguinte corpo de resposta. Se o Canvas for arquivado, interrompido ou pausado, ele não será enviado por meio desse ponto de extremidade.
 
 ```
 {
@@ -170,7 +168,7 @@ O código de status `201` pode retornar o seguinte corpo de resposta. Se o canva
 }
 ```
 
-Se o seu canva estiver arquivado, você verá a mensagem `notice`: "O Canva está arquivado. Desarquive o Canva para garantir que as solicitações de disparo tenham efeito." Se o canva não estiver ativo, você verá a mensagem `notice`: "O Canva está em pausa. Retome o Canva para garantir que as solicitações de disparo tenham efeito."
+Se o seu Canva estiver arquivado, você verá esta mensagem `notice`: "O Canva está arquivado. Desarquive o Canva para garantir que as solicitações de disparo tenham efeito." Se o Canva não estiver ativo, você verá esta mensagem `notice`: "O Canva está em pausa. Retome o Canva para garantir que as solicitações de disparo tenham efeito."
 
 Se sua solicitação encontrar um erro fatal, consulte [Erros e respostas]({{site.baseurl}}/api/errors/#fatal-errors) para obter o código e a descrição do erro.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Criar Central de Preferências"
+nav_title: "POST: Central de Preferências de e-mail"
 article_title: "POST: Criar Central de Preferências"
 search_tag: Endpoint
 page_order: 4
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Parâmetros de solicitação
@@ -81,7 +81,7 @@ Consulte as seguintes tags Liquid que podem ser incluídas no HTML para gerar o 
 
 | Liquid | Descrição |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Obtenha o status global de envio de e-mail para o usuário (como "opted_in", "subscribed" ou "unsubscribed"). |
+|`{{subscribed_state.${email_global}}}`| Obtenha o estado global de envio de e-mail inscrito para o usuário (como "opted_in", "subscribed" (inscrito) ou "unsubscribed" (cancelado inscrição). |
 |`{{subscribed_state.${<subscription_group_id>}}}`| Obtenha o estado de inscrição do grupo de inscrições especificado para o usuário (como "inscrito" ou "cancelado"). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -89,7 +89,7 @@ Consulte as seguintes tags Liquid que podem ser incluídas no HTML para gerar o 
 
 | Liquid | Descrição |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Indica que um elemento de entrada de formulário específico corresponde ao estado de assinatura de e-mail global do usuário. O estado de seleção do usuário deve ser "opted_in", "subscribed" ou "unsubscribed" quando o formulário for enviado com dados de seleção para o estado global de envio de e-mail subscrito. Se for uma caixa de seleção, o usuário será "aceitou" ou "cancelado inscrição". Para uma entrada oculta, o estado "inscrito" também será válido. |
+|`{% form_field_name :email_global_state %}`| Indica que um elemento de entrada de formulário específico corresponde ao estado de assinatura de e-mail global do usuário. O estado de seleção do usuário deve ser "opted_in", "subscribed" ou "unsubscribed" quando o formulário for enviado com dados de seleção para o estado global de envio de e-mail subscribed. Se for uma caixa de seleção, o usuário será "opted_in" ou "cancelará inscrição". Para uma entrada oculta, o estado "inscrito" também será válido. |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| Indica que um elemento de entrada de formulário específico corresponde a um determinado grupo de inscrições. O status de seleção do usuário deve ser "inscrito" ou "cancelado inscrição" quando o formulário for enviado com dados de seleção para um grupo de inscrições específico. |
 |`{{preference_center_submit_url}}`| Gera URL para envio de formulário. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

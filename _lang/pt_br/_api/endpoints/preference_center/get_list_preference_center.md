@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar Centros de Preferência"
+nav_title: "OBTER: Listar centros de preferência"
 article_title: "OBTER: Listar Centros de Preferência"
 search_tag: Endpoint
 page_order: 2

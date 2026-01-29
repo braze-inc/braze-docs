@@ -1,11 +1,11 @@
 ---
-nav_title: カタログ sの使用
+nav_title: カタログの使用
 article_title: カタログの使用
 page_order: 1.5
 description: "この参考記事では、Liquidを通してBrazeのキャンペーンで非ユーザーデータを参照するためにカタログを使用する方法について説明する。"
 ---
 
-# カタログ sの使用
+# カタログの使用
 
 > カタログを作成した後、[Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) を使用して、Braze キャンペーンの非ユーザーデータを参照できます。Liquidがサポートされているドラッグ・アンド・ドロップ・エディター内の任意の場所を含む、すべてのメッセージング・チャンネルでカタログを使用できる。
 
