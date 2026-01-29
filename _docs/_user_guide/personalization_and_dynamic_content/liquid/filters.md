@@ -79,7 +79,7 @@ Array filters are used to change the output of arrays.
 | [map](https://shopify.dev/api/liquid/filters/map)           | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
-| [slice](https://shopify.dev/api/liquid/filters/slice)        | Returns a substring starting at the specified index, or a subset of an array starting at the specified index.        | ✅  Yes   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | Returns a substring of a string or a subset of an array, starting at the specified index.                          | ✅  Yes   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Sorts the items in an array in case-insensitive alphabetical order.                                                | ✅  Yes   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
