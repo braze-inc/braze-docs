@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Senden Sie Nachrichten sofort und nur über die API"
+nav_title: "POST: Senden Sie Nachrichten sofort nur über die API"
 article_title: "POST: Senden Sie Nachrichten sofort und nur über die API"
 search_tag: Endpoint
 page_order: 4
@@ -77,10 +77,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
 |`external_user_ids` | Optional | String-Array | Siehe [externe Nutzer:in ID]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Optional | Array von Nutzer:innen-Alias-Objekten| Siehe [Nutzer-Alias Objekt]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-|`segment_id `| Optional | String | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id `| Optional | String | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Optional | Verbundenes Objekt der Zielgruppe | Siehe [verbundene Zielgruppe]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| Fakultativ* | String | Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/) für weitere Informationen. <br><br>\*Erforderlich, wenn Sie Statistiken zu Kampagnen (z.B. Sendungen, Klicks, Bounces usw.) auf dem Braze-Dashboard verfolgen möchten. |
-|`send_id`| Optional | String | Siehe [Bezeichner senden]({{site.baseurl}}/api/identifier_types/) |
+|`campaign_id`| Fakultativ* | String | Siehe [Bezeichner der Kampagne]({{site.baseurl}}/api/identifier_types/#campaign-identifier/) für weitere Informationen. <br><br>\*Erforderlich, wenn Sie die Metriken der Kampagne (wie z.B. _Sendungen_, _Klicks_ oder _Bounces_) auf dem Braze-Dashboard tracken möchten. |
+|`send_id`| Optional | String | Siehe [Bezeichner senden]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Optional | Boolesch | Ignorieren Sie `frequency_capping` für Kampagnen, standardmäßig ist `false` eingestellt. |
 |`recipient_subscription_state`| Optional | String | Verwenden Sie diese Option, um Nachrichten nur an Nutzer:in (`opted_in`), nur an Nutzer:in (`subscribed`) oder an alle Nutzer:in zu senden, auch an abgemeldete Nutzer (`all`), die sich angemeldet haben. <br><br>Die Verwendung von `all` Nutzer:innen ist nützlich für Transaktions-E-Mails Messaging. Standardmäßig ist `subscribed` eingestellt. |
 |`messages`| Optional | Messaging Objekte | Siehe [verfügbare Messaging-Objekte]({{site.baseurl}}/api/objects_filters/#messaging-objects). |
