@@ -1,5 +1,5 @@
 ---
-nav_title: "Internet Objekt"
+nav_title: "Web-Objekt"
 article_title: Internet Messaging Objekt
 page_order: 12
 page_type: reference
