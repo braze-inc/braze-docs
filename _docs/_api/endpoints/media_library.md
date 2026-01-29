@@ -9,7 +9,7 @@ description: "This landing page lists the Braze media library endpoints."
 page_type: landing
 
 guide_top_header: "Media Library Endpoints"
-guide_top_text: "Use the Braze media library endpoints to manage assets within Braze"
+guide_top_text: "Use the Braze media library endpoints to manage assets within Braze."
 
 guide_featured_title: "Manage Assets"
 guide_featured_list:
