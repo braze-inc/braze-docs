@@ -130,7 +130,7 @@ The expected response shape:
             "name": (String) the name of the asset,
             "size": (Integer) the byte size of the asset,
             "ext": (String) the file extension (e.g., "png", "jpg", "gif").
-            "error": (String) the error which occured,
+            "error": (String) the error which occurred,
         }
     ],
     "dashboard_url": (String) the URL to view this asset in the Braze dashboard
