@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Enviar campañas mediante entrega desencadenada por API"
-article_title: "POST: Enviar campañas mediante entrega desencadenada por API"
+nav_title: "PUBLICAR: Envía campañas mediante entrega desencadenada por API"
+article_title: "PUBLICAR: Enviar campañas mediante entrega desencadenada por API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -18,7 +18,7 @@ description: "Este artículo describe en detalle el punto final Braze de envío 
 
 La entrega desencadenada por API te permite alojar el contenido de los mensajes dentro del panel Braze, al tiempo que dictas cuándo se envía un mensaje y a quién mediante tu API.
 
-Si te diriges a un segmento, se almacenará un registro de tu solicitud en la [Consola para desarrolladores](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Para enviar mensajes con este punto final, debes tener un [ID de campaña](https://www.braze.com/docs/api/identifier_types/) creado al crear una [campaña desencadenada por la API]({{site.baseurl}}/api/api_campaigns/).
+Si te diriges a un segmento, se almacena un registro de tu solicitud en la [Consola para desarrolladores](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Para enviar mensajes con este punto final, debes tener un [ID de campaña](https://www.braze.com/docs/api/identifier_types/) creado al crear una [campaña desencadenada por la API]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -28,7 +28,7 @@ Para utilizar este punto final, deberás generar una clave de API con el permiso
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='send messages endpoints' %}
 
 ## Cuerpo de la solicitud
 
@@ -41,11 +41,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "campaign_id": (required, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
-  "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "trigger_properties": (optional, object) personalization key-value pairs that apply to all users in this request,
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, connected audience object) see connected audience,
-  // Including 'audience' will only send to users in the audience
-  "recipients": (optional, array; if not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the campaign)
+  // Including 'audience' sends to only users in the audience
+  "recipients": (optional, array; if not provided and broadcast is not set to `false`, message sends to the entire segment targeted by the campaign)
     [
       {
       // Either "external_user_id" or "user_alias" or "email" is required. Requests must specify only one.
@@ -53,16 +53,16 @@ Authorization: Bearer YOUR-REST-API-KEY
       "external_user_id": (optional, string) external identifier of user to receive message,
       "email": (optional, string) email address of user to receive message,
       "prioritization": (optional, array) prioritization array; required when using email,
-      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent trigger_properties),
+      "trigger_properties": (optional, object) personalization key-value pairs that apply to this user (these key-value pairs override any keys that conflict with the parent trigger_properties),
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
-      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
+      "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
     }
   ],
   "attachments": (optional, array) array of JSON objects that define the files you need attached, defined by "file_name" and "url",
     [
-      {  
+      {
        "file_name": (required, string) the name of the file you want to attach to your email, excluding the extension (for example, ".pdf"). Attach files up to 2 MB. This is required if you use "attachments",
-       "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension will be detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
+       "url": (required, string) the corresponding URL of the file you want to attach to your email. The file name's extension is detected automatically from the URL defined, which should return the appropriate "Content-Type" as a response header. This is required if you use "attachments",
       }
     ]
 }
@@ -74,16 +74,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Obligatoria|Cadena|Ver [identificador de campaña]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Opcional | Cadena | Ver [identificador de envío]({{site.baseurl}}/api/identifier_types/). |
-|`trigger_properties`| Opcional | Objeto | Ver [propiedades del desencadenante]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Los pares clave-valor de personalización se aplicarán a todos los usuarios de esta solicitud. |
+|`trigger_properties`| Opcional | Objeto | Ver [propiedades del desencadenante]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Los pares clave-valor de personalización se aplican a todos los usuarios de esta solicitud. |
 |`broadcast`| Opcional | Booleano | Debes establecer `broadcast` en verdadero cuando envíes un mensaje a un segmento completo al que se dirige una campaña o Canvas. Este parámetro está predeterminado como falso (a 31 de agosto de 2017). <br><br> Si `broadcast` tiene el valor true, no se puede incluir una lista `recipients`. Sin embargo, ten cuidado al configurar `broadcast: true`, ya que si lo haces involuntariamente puede que envíes tu mensaje a una audiencia mayor de la esperada. |
 |`audience`| Opcional | Objeto de audiencia conectado| Ver [audiencia conectada]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Opcional | Matriz | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>Si `send_to_existing_only` es `false`, debe incluirse un objeto de atributo.<br><br>Si no se proporciona `recipients` y `broadcast` está configurado como verdadero, el mensaje se enviará a todo el segmento al que se dirige la campaña. <br><br> Si `email` es el identificador, debes incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) en el objeto destinatario. |
+|`recipients`| Opcional | Matriz | Ver [objeto de destinatarios]({{site.baseurl}}/api/objects_filters/recipient_object/).<br><br>Si `send_to_existing_only` es `false`, debe incluirse un objeto de atributo.<br><br>Si no se proporciona `recipients` y `broadcast` está configurado como verdadero, el mensaje se envía a todo el segmento al que se dirige la campaña. <br><br> Si `email` es el identificador, debes incluir [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) en el objeto destinatario. |
 |`attachments`| Opcional | Matriz | Si `broadcast` está configurado como verdadero, no se puede incluir la lista `attachments`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 - La matriz de destinatarios puede contener hasta 50 objetos, cada uno de ellos con una única cadena `external_user_id` y un objeto `trigger_properties`.
-- Cuando `send_to_existing_only` es `true`, Braze sólo enviará el mensaje a los usuarios existentes. Sin embargo, esta bandera no puede utilizarse con alias de usuario.
-- Cuando `send_to_existing_only` es `false`, debe incluirse un atributo. Braze creará un usuario con la dirección `id` y los atributos antes de enviar el mensaje.
+- Cuando `send_to_existing_only` es `true` (predeterminado), Braze envía el mensaje sólo a los usuarios existentes. Cuando se establece en `false` y se proporciona un objeto de atributos, Braze crea un nuevo usuario si no existe ninguno. Ten en cuenta que la configuración de `send_to_existing_only` en `false` no es compatible con los alias de usuario: no se pueden crear nuevos usuarios sólo de alias a través de este punto final. Para enviar a un usuario sólo con alias, el usuario ya debe existir en Braze.
 
 El estado del grupo de suscripción de un usuario puede actualizarse mediante la inclusión de un parámetro `subscription_groups` dentro del objeto `attributes`. Para más detalles, consulta [Objeto de atributos de usuario]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
@@ -169,13 +168,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 
 ## Detalles de la respuesta
 
-Las respuestas del punto final de envío de mensajes incluirán la dirección `dispatch_id` del mensaje para que sirva de referencia al envío del mensaje. El `dispatch_id` es el ID del envío del mensaje, un ID único para cada transmisión enviada desde Braze. Al utilizar este punto final, recibes un único `dispatch_id` para todo un conjunto de usuarios por lotes. Para más información sobre `dispatch_id`, consulta nuestra documentación sobre [el comportamiento de Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Las respuestas del punto final de envío de mensajes incluyen la dirección `dispatch_id` del mensaje para que sirva de referencia al envío del mensaje. El `dispatch_id` es el ID del envío del mensaje, un ID único para cada transmisión enviada desde Braze. Al utilizar este punto final, recibes un único `dispatch_id` para todo un conjunto de usuarios por lotes. Para más información sobre `dispatch_id`, consulta nuestra documentación sobre [el comportamiento de Dispatch ID]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 Si tu solicitud encuentra un error fatal, consulta [Errores y respuestas]({{site.baseurl}}/api/errors/#fatal-errors) para ver el código de error y la descripción.
 
 ## Objeto de atribución para campañas
 
-Braze tiene un objeto de mensajería llamado `attributes` que te permitirá añadir, crear o actualizar atributos y valores de un usuario antes de enviarle una campaña desencadenada por la API. Utilizando el punto final `campaign/trigger/send` como esta llamada API procesará el objeto de atributos de usuario antes de procesar y enviar la campaña. Esto ayuda a minimizar el riesgo de que se produzcan problemas causados por [condiciones de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
+Braze tiene un objeto de mensajería llamado `attributes` que te permite añadir, crear o actualizar atributos y valores de un usuario antes de enviarle una campaña desencadenada por la API. Al utilizar el punto final `campaign/trigger/send`, esta llamada a la API procesa el objeto de atributos del usuario antes de procesar y enviar la campaña. Esto ayuda a minimizar el riesgo de que se produzcan problemas causados por [condiciones de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/).
 
 {% alert tip %}
 ¿Buscas la versión Canvas de este punto final? Echa un vistazo a [Enviar mensajes Canvas utilizando la entrega desencadenada por API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).
