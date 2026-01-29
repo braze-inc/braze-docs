@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Excluir campo do catálogo"
+nav_title: "DELETE: Excluir campo de catálogo"
 article_title: "DELETE: Excluir campo do catálogo"
 search_tag: Endpoint
 page_order: 1

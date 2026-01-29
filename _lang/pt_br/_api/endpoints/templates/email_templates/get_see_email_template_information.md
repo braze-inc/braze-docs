@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Ver Informações do Modelo de E-mail"
+nav_title: "OBTER: Veja as informações do modelo de e-mail"
 article_title: "OBTER: Ver Informações do Modelo de E-mail"
 search_tag: Endpoint
 page_order: 4
@@ -44,11 +44,9 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/templates/email/
 ```
 {% endraw %}
 
-## Resposta 
+## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": (string) Your email template's API Identifier,
   "template_name": (string) The name of your email template,

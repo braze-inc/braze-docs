@@ -28,7 +28,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Corpo da solicitação
 
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Obrigatória|String| Veja [identificador da canva]({{site.baseurl}}/api/identifier_types/). |
+|`canvas_id`|Obrigatória|String| Consulte [Identificador do Canva]({{site.baseurl}}/api/identifier_types/). |
 | `recipients` | Opcional | Matriz de objetos de destinatários | Veja [objetos de destinatários]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Opcional | Objeto de público conectado | Veja [público conectado]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Opcional | Booleano | Você deve definir `broadcast` como verdadeiro ao enviar uma mensagem para um segmento inteiro que uma campanha ou canva segmenta. O padrão desse parâmetro é false (a partir de 31 de agosto de 2017). <br><br> Se `broadcast` estiver definido como true, uma lista `recipients` não poderá ser incluída. No entanto, tenha cuidado ao definir `broadcast: true`, pois definir esta flag de forma não intencional pode fazer com que você envie sua mensagem para um público maior do que o esperado. |

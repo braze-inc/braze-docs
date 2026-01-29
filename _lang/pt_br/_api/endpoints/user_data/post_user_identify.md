@@ -21,15 +21,15 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Identif
 
 ## Como funciona?
 
-A chamada para `/users/identify` combina um perfil de usuário que é identificado por um alias (perfil somente de alias), endereço de e-mail (perfil somente de e-mail) ou número de telefone (perfil somente de número de telefone) com um perfil de usuário que tem um `external_id` (perfil identificado) e, em seguida, remove o perfil somente de alias. 
+A chamada para `/users/identify` combina um perfil de usuário que é identificado por um alias (perfil somente de alias), endereço de e-mail (perfil somente de e-mail) ou número de telefone (perfil somente de número de telefone) com um perfil de usuário que tem um `external_id` (perfil identificado) e, em seguida, remove o perfil somente de alias.
 
 A identificação de um usuário requer que um `external_id` seja incluído nos seguintes objetos:
 
 - `aliases_to_identify`
-- `emails_to_identify` 
+- `emails_to_identify`
 - `phone_numbers_to_identify`
 
-Se não houver um usuário com esse `external_id`, o `external_id` será adicionado ao registro do usuário aliasing, e o usuário será considerado identificado. Os usuários só podem ter um alias para um rótulo específico. Se um usuário já existir com o `external_id` e tiver um alias existente com o mesmo rótulo do perfil somente de alias, os perfis de usuário não serão combinados.
+Se não houver um usuário com esse `external_id`, o `external_id` será adicionado ao registro do usuário aliasing de usuário, e o usuário será considerado identificado. Os usuários podem ter apenas um alias para um rótulo específico. Se um usuário já existir com o `external_id` e tiver um alias existente com o mesmo rótulo do perfil somente de alias, os perfis de usuário não serão combinados.
 
 {% alert tip %}
 Para evitar a perda inesperada de dados ao identificar usuários, é altamente recomendável consultar primeiro [as práticas recomendadas de coleta de dados]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) para saber como capturar dados de usuários quando as informações de usuários com alias já estiverem presentes.
@@ -37,9 +37,9 @@ Para evitar a perda inesperada de dados ao identificar usuários, é altamente r
 
 ### Comportamento de mesclagem
 
-Por padrão, esse ponto de extremidade mesclará a seguinte lista de campos encontrados **exclusivamente** no usuário anônimo para o usuário identificado.
+Por padrão, esse ponto de extremidade mescla a seguinte lista de campos encontrados **exclusivamente** no usuário anônimo para o usuário identificado.
 
-{% details Lista de campos que são mesclados %}
+{% details List of fields that are merged %}
 - Nome
 - Sobrenome
 - E-mail
@@ -51,28 +51,28 @@ Por padrão, esse ponto de extremidade mesclará a seguinte lista de campos enco
 - País
 - Idioma
 - Contagem de sessões (a soma das sessões de ambos os perfis)
-- Data da primeira sessão (o Braze escolherá a data mais cedo entre as duas datas)
-- Data da última sessão (o Braze escolherá a data mais recente entre as duas datas)
+- Data da primeira sessão (o Braze escolhe a data mais cedo entre as duas datas)
+- Data da última sessão (o Braze escolhe a última data entre as duas datas)
 - Atributos personalizados
 - Dados de eventos personalizados e de eventos de compra
 - Propriedades de eventos personalizados e de eventos de compra para a segmentação "X vezes em Y dias" (onde X<=50 e Y<=30)
 - Resumo dos eventos personalizados segmentáveis
   - Contagem de eventos (a soma de ambos os perfis)
-  - O evento ocorreu pela primeira vez (o Braze escolherá a data mais antiga entre as duas datas)
-  - Evento ocorrido pela última vez (o Braze escolherá a data mais recente entre as duas datas)
+  - O evento ocorreu pela primeira vez (o Braze escolhe a data mais antiga entre as duas datas)
+  - Evento ocorrido pela última vez (o Braze escolhe a data mais recente entre as duas datas)
 - Total de compras no app em centavos (a soma de ambos os perfis)
 - Número total de compras (a soma de ambos os perfis)
-- Data da primeira compra (o Braze escolherá a data mais antiga entre as duas datas)
-- Data da última compra (o Braze escolherá a data mais recente entre as duas datas)
+- Data da primeira compra (o Braze escolhe a data mais antiga entre as duas datas)
+- Data da última compra (o Braze escolhe a data mais recente das duas datas)
 - Resumos do app
-- Campos Last_X_at (o Braze atualizará os campos se os campos do perfil órfão forem mais recentes)
-- Resumos de campanha (o Braze escolherá os campos de data mais recentes)
-- Resumos do fluxo de trabalho (o Braze escolherá os campos de data mais recentes)
+- Last_X_at campos (o Braze atualiza os campos se os campos do perfil órfão forem mais recentes)
+- Resumos de campanha (o Braze seleciona os campos de data mais recentes)
+- Resumos do fluxo de trabalho (o Braze seleciona os campos de data mais recentes)
 - Histórico de mensagens e de engajamento com mensagens
-- Contagem de eventos personalizados e eventos de compra e registros de data e hora da primeira e da última data 
-  - Esses campos mesclados atualizarão os filtros "para X eventos em Y dias". Para eventos de compra, esses filtros incluem "número de compras em Y dias" e "dinheiro gasto nos últimos Y dias".
+- Contagem de eventos personalizados e eventos de compra e registros de data e hora da primeira e da última data
+  - Esses campos mesclados atualizam os filtros "para X eventos em Y dias". Para eventos de compra, esses filtros incluem "número de compras em Y dias" e "dinheiro gasto nos últimos Y dias".
 - Dados de sessão se o app existir em ambos os perfis de usuário
-  - Por exemplo, se o usuário-alvo não tiver um resumo do aplicativo "ABCApp", mas o usuário original tiver, o usuário-alvo terá o resumo do aplicativo "ABCApp" em seu perfil após a mesclagem.
+  - Por exemplo, se o usuário-alvo não tiver um resumo do aplicativo "ABCApp", mas o usuário original tiver, o usuário-alvo terá o resumo do aplicativo "ABCApp" em seu perfil após o direcionamento.
 {% enddetails %}
 
 ## Pré-requisitos
@@ -166,8 +166,6 @@ Para saber mais sobre `alias_name` e `alias_label`, consulte nossa documentaçã
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"
