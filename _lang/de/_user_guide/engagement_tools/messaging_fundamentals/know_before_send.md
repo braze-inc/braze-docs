@@ -3,7 +3,7 @@ nav_title: "Wissen, bevor Sie senden"
 article_title: Informationen vor dem Versand
 description: "Nachdem Sie unseren Leitfaden für die Markteinführung gelesen haben, sollten Sie sich die folgende Liste mit den wichtigsten Tipps und Tricks für Content-Cards, E-Mail, In-App-Nachrichten, Push und SMS ansehen."
 alias: /know_before_send/
-page_order: 10.2
+page_order: 7
 tool:
     - Campaigns
     - Canvas
@@ -89,7 +89,7 @@ Wenn Sie weitere Unterstützung bei der Fehlerbehebung für Canvas und Kampagnen
 - **Beschränkungen:**  Derzeit werden die folgenden Features nicht unterstützt: Canvas-Integration, API-getriggerte und aktionsbasierte Kampagnen, Connected-Content, Aktionscodes, benutzergesteuerte Kündigungen und `catalog_items` unter Verwendung des [Tags`:rerender` ]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid).
 - **Testen:** Um den Testbanner anzuzeigen, muss das Gerät, das Sie verwenden, Push-Benachrichtigungen im Vordergrund empfangen können.
 - **Angepasstes HTML:** Nutzen Sie die [JS-Bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge), um Klicks zu protokollieren, wenn Sie angepasstes HTML verwenden, um Klick-Aktionen, wie Links und Buttons, zu definieren. Klick-Aktionen werden nur dann automatisch protokolliert, wenn Sie die vorgefertigten Komponenten im Drag-and-Drop-Editor verwenden.
-- **Anfrage zur Platzierung:** Bis zu 10 Platzierungen können in einer einzigen Anfrage an das SDK zurückgegeben werden. Jede Platzierung enthält das Banner mit der höchsten Priorität, für das ein Nutzer:innen in Frage kommt.
+- **Anfrage zur Platzierung:** In einer einzigen Anfrage zur Aktualisierung können bis zu 10 Platzierungen an das SDK zurückgegeben werden. Jede Platzierung enthält das Banner mit der höchsten Priorität, für das ein Nutzer:innen in Frage kommt.
 
 ## Content-Cards
 
@@ -103,7 +103,8 @@ Wenn Sie weitere Unterstützung bei der Fehlerbehebung für Canvas und Kampagnen
 - **Content-Card aktualisieren**: Standardmäßig aktualisiert Braze die Anfragen für Content-Cards bei der Synchronisierung zu Beginn der Sitzung, beim Wischen nach unten (mobil) und beim Öffnen der Kartenansicht, wenn die letzte Aktualisierung länger als eine Minute zurückliegt.
 - **Content-Cards zwischenspeichern**: Content-Card-Zwischenspeicheroptionen finden Sie in unseren [Android/FireOS-]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android) und [Internet-Dokumenten](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards). 
 - **Frequency-Capping**: Frequency-Capping gilt nicht für Content-Cards.
-- **Impressionen**: Impressionen werden in der Regel protokolliert, wenn eine Karte gesehen wird. Wenn Sie z.B. einen vollen Posteingang mit Content-Cards haben, wird eine Impression erst protokolliert, wenn der Nutzer:innen zu einer bestimmten Content-Card scrollt. Es gibt einige Unterschiede zwischen den Plattformen Internet, Android und iOS.  
+- **Impressionen**: Impressionen werden in der Regel protokolliert, wenn eine Karte gesehen wird. Wenn Sie z.B. einen vollen Posteingang mit Content-Cards haben, wird eine Impression erst protokolliert, wenn der Nutzer:innen zu einer bestimmten Content-Card scrollt. Es gibt einige Unterschiede zwischen den Plattformen Internet, Android und iOS.
+- **SDK-Sitzungen und Kartenerstellung**: Content-Cards werden nicht für Nutzer:innen ohne SDK-Sitzungen erstellt, auch wenn diese Nutzer:innen die Segmentierungskriterien erfüllen. Wenn ein Nutzer:innen jedoch bereits eine Android-Sitzung hat, werden weiterhin Content-Cards mit iOS-spezifischen Klick-Aktionen erstellt, und der Nutzer:innen kann diese Content-Cards auf iOS ansehen, sobald er dort eine Sitzung hat. Weitere Informationen darüber, wann Karten erstellt werden, finden Sie unter [Kartenerstellung]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/).  
 
 ## In-App-Nachrichten
 
