@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Crear nuevo alias de usuario"
-article_title: "POST: Crear nuevo alias de usuario"
+nav_title: "PUBLICAR: Crear nuevo alias de usuario"
+article_title: "PUBLICAR: Crear nuevo alias de usuario"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
@@ -81,8 +81,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

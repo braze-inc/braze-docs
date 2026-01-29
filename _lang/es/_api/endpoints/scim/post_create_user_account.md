@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Crear una nueva cuenta de usuario en el panel"
-article_title: "POST: Crear una nueva cuenta de usuario en el panel"
+nav_title: "PUBLICAR: Crear una nueva cuenta de usuario en el panel"
+article_title: "PUBLICAR: Crear una nueva cuenta de usuario en el panel"
 alias: /post_create_user_account/
 search_tag: Endpoint
 page_order: 4
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-SCIM-TOKEN-KEY
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
@@ -118,11 +118,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                 "appGroupPermissions": ["basic_access","send_campaigns_canvases"],
                 "team": [
                     {
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }'
@@ -154,11 +154,11 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                         "team": [
                             {
                                 "teamId": "2519dafcdba238ae7",
-                                "teamName": "Some Team",                  
+                                "teamName": "Some Team",
                                 "teamPermissions": ["export_user_data"]
                             }
                         ]
-                    } 
+                    }
                 ]
             },
             {
@@ -175,7 +175,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -187,7 +187,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                 "team": [
                     {
                          "teamId": "2519dafcdba238ae7",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["basic_access","export_user_data"]
                     }
                 ]
@@ -199,7 +199,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/scim/v2/Users' \
                         "appGroupPermissionSetName":  "Test Permission Set"
                     }
                 ]
-            } 
+            }
         ]
     }
 }

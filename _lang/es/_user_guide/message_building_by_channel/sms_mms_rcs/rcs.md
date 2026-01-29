@@ -3,7 +3,7 @@ nav_title: "RCS"
 article_title: Acerca de los Servicios de Comunicación Enriquecidos (RCS)
 alias: /about_rcs/
 page_type: reference
-page_order: 14
+page_order: 15
 description: "Este artículo de referencia cubre los casos de uso generales del canal RCS y los requisitos necesarios para que tu canal RCS esté listo para su uso."
 ---
 
@@ -21,7 +21,7 @@ A diferencia de las aplicaciones de mensajería de terceros, RCS aprovecha el en
 - **Información accionable:** Desbloquea información accionable con informes avanzados que realizan un seguimiento de los KPI críticos, permitiéndote optimizar las campañas en tiempo real e impulsar un éxito mensurable.
 - **Sinergia omnicanal:** Integra fácilmente RCS en tu estrategia global de marketing para entregar experiencias del cliente consistentes y a través de canales, amplificando la eficacia de la campaña y el ROI general.
 
-## Casos de uso
+## Ejemplos
 
 | Casos de uso | Descripción |
 | --- | --- |
@@ -39,15 +39,15 @@ A diferencia de las aplicaciones de mensajería de terceros, RCS aprovecha el en
 | Créditos de los mensajes | Ponte en contacto con tu administrador de cuentas Braze para confirmar que has adquirido créditos de mensajería en tu contrato. Los Créditos de mensajes son un elemento de contrato flexible que te permite comprar y asignar volumen de mensajería a través de varios canales, como SMS, MMS, RCS y WhatsApp. |
 | País elegible | Asegúrate de que estás enviando RCS a usuarios de uno de los países admitidos por Braze: Estados Unidos, Reino Unido, Alemania, México, Suecia, España, Singapur, Brasil, Francia, Italia, Colombia |
 | Remitente verificado RCS | El remitente que el destinatario ve en su dispositivo para identificar de dónde procede el mensaje. Un remitente verificado por RCS consiste en un nombre de empresa, una marca visual y una señal verificada. <br><br> Braze te ayudará a solicitar y registrarte como remitente verificado de RCS en las regiones elegibles. Tendrás que proporcionar a tu representante de Braze algunos datos básicos. |
-| Lista de usuarios con números de teléfono | Antes de empezar a enviar mensajes, debes añadir usuarios a tu cuenta. Además, debes conocer el tamaño aproximado de tu audiencia. Los usuarios y los números de teléfono pueden añadirse a Braze por varios métodos diferentes. Los números de teléfono deben tener un formato de 10 dígitos, así como un código de área del país. Para saber más, consulta [Números de teléfono de usuario]({{site.baseurl}}/user_phone_numbers/). |
+| Lista de usuarios con números de teléfono | Antes de empezar a enviar mensajes, debes añadir usuarios a tu cuenta. Además, debes conocer el tamaño aproximado de tu audiencia. Se pueden añadir usuarios y números de teléfono a Braze por varios métodos diferentes. Los números de teléfono deben tener un formato de 10 dígitos, así como el prefijo del país. Para saber más, consulta [Números de teléfono de usuario]({{site.baseurl}}/user_phone_numbers/). |
 | Palabras clave y respuestas | Todas las palabras clave base deben tener atribuidas respuestas antes de que puedas empezar a enviar mensajes. Braze procesará la adhesión voluntaria, la exclusión voluntaria y las palabras clave de ayuda automáticamente. Existen opciones de personalización y configuraciones adicionales de palabra clave-respuesta. Para saber más, consulta las [palabras clave de adhesión voluntaria y exclusión voluntaria]({{site.baseurl}}/optin_optout/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Términos que debes conocer
+## Términos que debe conocer
 
 | Plazo | Definición |
 |----|----|
-| Grupo de suscripción | Un grupo de usuarios suscritos a un caso de uso de mensajería específico. Cada grupo de suscripción está vinculado a uno o más "remitentes" de marca, que pueden ser remitentes verificados RCS, códigos SMS o ambos. Por ejemplo, si planeas enviar mensajes RCS transaccionales y promocionales, puedes optar por configurar dos grupos de suscripción con remitentes separados verificados por RCS en tu panel Braze. |
+| Grupo de suscripción | Un grupo de usuarios suscritos a un caso de uso de mensajería específico. Cada grupo de suscripción está vinculado a uno o varios "remitentes" de marca, que pueden ser remitentes verificados RCS, códigos SMS o ambos. Por ejemplo, si planeas enviar mensajes RCS transaccionales y promocionales, puedes optar por configurar dos grupos de suscripción con remitentes separados verificados por RCS en tu panel Braze. |
 | Remitente verificado por RCS | La entidad remitente de un mensaje RCS, o lo que el destinatario del mensaje RCS ve en su dispositivo para identificar de dónde procede el mensaje. Los remitentes verificados por RCS contienen un nombre de empresa, un pie de foto, una marca visual y una señal verificada. Después de proporcionar a Braze la información necesaria para el registro de remitentes RCS, nosotros nos encargamos del registro y de la configuración del grupo de suscripción. |
 | SMS alternativo | Si no se puede entregar un mensaje con RCS (por ejemplo, por falta de soporte de un operador en la región), Braze intentará entregar el mensaje a través de SMS cuando exista un código SMS dentro del grupo de suscripción. |
 | RCS básico | Mensajes de sólo texto de hasta 160 caracteres. Facturado como mensaje único. <br><br> Esta categoría sólo se utiliza en el modelo global. |

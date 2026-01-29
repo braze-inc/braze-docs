@@ -7,9 +7,9 @@ description: "Este artículo de referencia cubre varias plantillas Braze predise
 toc_headers: h2
 ---
 
-# Casos de uso del comercio electrónico
+# Cómo utilizar los eventos recomendados por eCommerce
 
-> Braze Canvas ofrece varias plantillas preconstruidas adaptadas específicamente para especialistas en marketing de comercio electrónico, lo que facilita la aplicación de estrategias esenciales. Esta página ofrece algunas plantillas clave que puedes utilizar para mejorar tus recorridos del cliente.
+> Esta página cubre cómo y dónde puedes utilizar los eventos recomendados de eCommerce en toda la plataforma, incluyendo cómo utilizar las plantillas Braze eCommerce Canvas.
 
 {% alert important %}
 [Los eventos recomendados por eCommerce]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) están actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente de Braze si estás interesado en participar en este acceso anticipado. <br><br>Si utilizas el nuevo conector de Shopify, los eventos recomendados de comercio electrónico estarán disponibles automáticamente a través de la integración.
@@ -21,303 +21,13 @@ Para utilizar una plantilla Canvas:
 1. Ve a **Mensajería** > **Canvas**.
 2. Selecciona **Crear lienzo** > **Utilizar una plantilla de lienzo**.
 3. Busca en la pestaña **Plantillas Braze** la plantilla que quieras utilizar. Puedes obtener una vista previa de una plantilla seleccionando su nombre.
-4. Selecciona **Aplicar plantilla** para la plantilla que quieras utilizar.<br><br>\!["Plantillas Canvas" página abierta a la pestaña "Plantillas Braze" y mostrando una lista de plantillas utilizadas recientemente y plantillas Braze seleccionables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. Selecciona **Aplicar plantilla** para la plantilla que quieras utilizar.<br><br>![La página "Plantillas Canvas" se abre en la pestaña "Plantillas Braze" y muestra una lista de las plantillas utilizadas recientemente y de las plantillas Braze seleccionables.]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
-## plantillas eCommerce
+## Plantillas Canvas para comercio electrónico
 
-- [Navegar abandonada](#abandoned-browse)
-- [Carrito abandonado](#abandoned-cart)
-- [Caja abandonada](#abandoned-checkout)
-- [Confirmación del pedido y cuestionario de opinión](#order-confirmation--feedback-survey)
+Braze ofrece cuatro plantillas Canvas de comercio electrónico.
 
-## Navegar abandonada
-
-Utiliza la plantilla de **navegación abandonada** para interactuar con usuarios que han navegado por productos pero no los han añadido al carrito ni han realizado un pedido.
-
-Una plantilla Canvas "Exploración abandonada" aplicada con "Reglas de entrada" ampliadas.]({% image_buster /assets/img_archive/abandoned_browse.png %})
-
-### Configurar
-
-En la página Lienzo, selecciona **Utilizar una plantilla de lienzo** > **Plantillas de Braze** y, a continuación, aplica la plantilla de **exploración Abandonado**. 
-
-#### Configuraciones predeterminadas
-
-Las siguientes configuraciones están preconfiguradas en tu Canvas:
-- Conceptos básicos 
-    - Nombre del lienzo: **Navegar abandonada**
-    - Evento de conversión: `ecommerce.order placed`
-        - Plazo de conversión: 3 días 
-- Horario de entrada 
-    - Basado en la acción cuando un usuario realiza el evento `ecommerce.product_viewed` 
-    - La hora de inicio es cuando creas la plantilla Canvas<br><br>\!["Opciones basadas en acciones" para el Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
-- Audiencia objetivo 
-    - Audiencia de entrada 
-        - El correo electrónico **no está en blanco**
-        - También puedes modificar los criterios de audiencia de entrada para adaptarlos a las necesidades de tu empresa
-    - Controles de entrada
-        - Los usuarios son elegibles para volver a entrar en este Canvas una vez finalizada toda la duración del mismo.
-    - Criterios de salida 
-        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started`, o `ecommerce.order_placed`<br><br>\![Controles de entrada y criterios de salida del Canvas.]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
-- Enviar configuración 
-    - Usuarios suscritos o con adhesión voluntaria 
-- Paso de retardo
-    - 1 hora de retraso
-- Paso de la mensajería 
-    - Revisa la plantilla de correo electrónico y el bloque HTML con un ejemplo de plantilla Liquid para añadir productos a tu mensaje en la plantilla preconstruida. Si utilizas tu propia plantilla de correo electrónico, también puedes hacer referencia a [variables Liquid](#message-personalization), como se demuestra en la sección siguiente.
-
-### Personalización de productos de navegación abandonada para correos electrónicos 
-
-Aquí tienes un ejemplo de cómo añadir un bloque HTML de producto para tu correo electrónico de navegación abandonada. 
-
-{% raw %}
-```java
-<table style="width:100%">
-  <tr>
-    <th><img src="{{context.${image_url}}}" width="200" height="200"><img></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{context.${product_name}}}</li>
-        <li>Price: ${{context.${price}}}</li>
-      </ul>
-    </th>
-  </tr>
-</table>
-```
-{% endraw %}
-
-#### URL del producto
-
-{% raw %}
-```liquid
-{{context.${product_url}}}
-```
-{% endraw %}    
-
-## Carrito abandonado
-
-Utiliza la plantilla **Carrito abandonado** para cubrir las posibles ventas perdidas de clientes que añadieron productos a su carrito pero no continuaron con la compra o no hicieron un pedido. 
-
-Una plantilla Canvas "Carrito abandonado" aplicada con "Reglas de entrada" ampliadas.]({% image_buster /assets/img_archive/abandoned_cart.png %})
-
-### Configurar
-
-En la página Canvas, selecciona **Utilizar una plantilla Canvas** > **Plantillas Braze** y, a continuación, aplica la plantilla **Carrito abandonado**. 
-
-#### Configuraciones predeterminadas
-
-Las siguientes configuraciones están preconfiguradas en tu Canvas:
-- Conceptos básicos 
-    - Nombre del lienzo: **Carrito abandonado**
-    - Evento de conversión: `ecommerce.order_placed`
-        - Plazo de conversión: 3 días 
-- Horario de entrada 
-    - Desencadenante basado en la acción cuando un usuario desencadena el **Evento Actualizar carro** (situado en el desplegable)
-    - La hora de inicio es cuando creas la plantilla Canvas<br><br>\!["Opciones basadas en acciones" para el Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
-- Audiencia objetivo 
-    - Audiencia de entrada 
-        - Ha utilizado estas aplicaciones **más de 0** veces 
-        - El correo electrónico **no está en blanco**
-    - Controles de entrada
-        - Los usuarios son inmediatamente elegibles de nuevo para la entrada en Canvas
-    - Criterios de salida 
-        - Realiza `ecommerce.cart_updated`, `ecommerce.checkout_started`, o `ecommerce.order_placed`<br><br>\![Controles de entrada y criterios de salida del Canvas.]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
-- Enviar configuración 
-    - Usuarios suscritos o con adhesión voluntaria 
-- Paso de retardo
-     - 4 horas de retraso
-- Paso de la mensajería 
-    - Revisa la plantilla de correo electrónico y el bloque HTML con un ejemplo de plantilla Liquid para añadir productos a tu mensaje en la plantilla preconstruida. Si utilizas tu propia plantilla de correo electrónico, también puedes hacer referencia a [variables Liquid](#message-personalization), como se demuestra en la sección siguiente.
-
-### Personalización del producto del carrito abandonado para correos electrónicos {#abandoned-cart-checkout}
-
-Los viajes de usuarios con carritos abandonados requieren una etiqueta de Liquid `shopping_cart` especial para la personalización del producto. 
-
-Aquí tienes un ejemplo de cómo añadir un bloque HTML con tu etiqueta de Liquid `shopping_cart` para añadir productos a tu correo electrónico. 
-
-{% raw %}
-```java
-<table style="width:100%">
-  {% shopping_cart {{context.${cart_id}}} %}
-  {% for item in shopping_cart.products %}
-  {% catalog_items <add_your_catalog_name> {{item.variant_id}} %}
-  <tr>
-    <th><img src="{{ items[0].variant_image_url }}" width="200" height="200"><img></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{ item.product_name }}</li>
-        <li>Price: ${{ item.price }}</li>
-        <li>Quantity: ${{ item.quantity }}</li>
-        <li>Variant ID: {{ item.variant_id }}</li>
-        <li>Product URL:{{ item.product_url }}</li>
-        <li>SKU: {{ item.metadata.sku }}</li>
-      </ul>
-    </th>
-  </tr>
-  {% endfor %}
-</table>
-```
-{% endraw %}
-
-{% alert note %}
-Si utilizas Shopify, añade el nombre de tu catálogo para obtener la URL de la imagen variante.
-{% endalert %}
-
-#### URL HTML del carrito
-
-Si quieres dirigir a los usuarios de vuelta a su carrito, puedes añadir una propiedad de eventos anidados bajo el objeto medata, como por ejemplo
-
-{% raw %}
-```liquid
-{{context.${metadata}.cart_url}}
-```
-{% endraw %}
-
-Si utilizas Shopify, crea la URL de tu carrito utilizando esta plantilla Liquid:
-
-{% raw %}
-```liquid
-{{context.${source}}}/checkouts/cn/{{context.${cart_id}}} 
-```
-{% endraw %}
-
-## Caja abandonada
-
-Utiliza la plantilla **Pago abandonado** para dirigirte a los clientes que iniciaron el proceso de pago pero lo abandonaron antes de realizar el pedido. 
-
-Una plantilla Canvas "Pago Abandonado" aplicada con "Reglas de entrada" ampliadas.]({% image_buster /assets/img_archive/abandoned_checkout.png %})
-
-### Configurar
-
-En la página Canvas, selecciona **Utilizar una plantilla Canvas** > **Plantillas Braze** y, a continuación, aplica la plantilla **Pago abandonado**. 
-
-#### Configuraciones predeterminadas
-
-Las siguientes configuraciones están preconfiguradas en tu Canvas:
-
-- Conceptos básicos 
-    - Nombre del lienzo: **Caja abandonada**
-    - Evento de conversión: `ecommerce.order_placed`
-        - Plazo de conversión: 3 días 
-- Horario de entrada 
-    - Acción desencadenante cuando un usuario realiza el evento `ecommerce.checkout_started` 
-    - La hora de inicio es cuando creas la plantilla Canvas<br><br>\!["Opciones basadas en acciones" para el Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
-- Audiencia objetivo 
-    - Audiencia de entrada 
-        - Ha utilizado estas aplicaciones **más de 0** veces 
-        - El correo electrónico **no está en blanco**
-    - Controles de entrada
-        - Los usuarios son inmediatamente elegibles de nuevo para la entrada en Canvas
-        - Criterios de salida 
-            - Realiza los eventos `ecommerce.order_placed` <br><br>\![Controles de entrada y criterios de salida del Canvas.]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
-- Enviar configuración 
-    - Usuarios suscritos o con adhesión voluntaria 
-- Paso de retardo
-    - 4 horas de retraso
-- Paso de la mensajería 
-    - Revisa la plantilla de correo electrónico y el bloque HTML con un ejemplo de plantilla Liquid para añadir productos a tu mensaje en la plantilla preconstruida. Si utilizas tu propia plantilla de correo electrónico, también puedes hacer referencia a [variables Liquid](#message-personalization), como se demuestra en la sección siguiente.
-
-### Personalización del pago abandonado para correos electrónicos
-
-Los recorridos de usuario de pago abandonado requieren una etiqueta de Liquid `shopping_cart` especial para la personalización del producto. 
-
-Aquí tienes un ejemplo de cómo añadir un bloque HTML con tu etiqueta de Liquid `shopping_cart` para añadir productos a tu correo electrónico. 
-
-{% raw %}
-```java
-<table style="width:100%">
-  {% shopping_cart {{context.${cart_id}}} :abort_if_not_abandoned false %}
-  {% for item in shopping_cart.products %}
-  {% catalog_items <add_your_catalog_name> {{item.variant_id}} %}
-  <tr>
-    <th><img src="{{ items[0].variant_image_url }}" width="200" height="200"><img></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{ item.product_name }}</li>
-        <li>Price: ${{ item.price }}</li>
-        <li>Quantity: ${{ item.quantity }}</li>
-        <li>Variant ID: {{ item.variant_id }}</li>
-        <li>Product URL:{{ item.product_url }}</li>
-        <li>SKU: {{ item.metadata.sku }}</li>
-      </ul>
-    </th>
-    {% endfor %}
-</table>
-```
-{% endraw %}
-
-#### URL de pago
-
-{% raw %}
-```liquid
-{{context.${metadata}.checkout_url}}
-```
-{% endraw %}
-
-## Confirmación del pedido y cuestionario de opinión
-
-Utiliza la plantilla de **cuestionario de opinión de confirmación de pedido & ** para confirmar el éxito de los pedidos y mejorar la satisfacción del cliente.
-
-Una plantilla Canvas de "Confirmación de pedido" aplicada con "Reglas de entrada" ampliadas.]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
-
-### Configurar
-
-En la página Canvas, selecciona **Utilizar una plantilla Canvas** > **Plantillas Braze** y, a continuación, aplica la plantilla de **encuesta de opinión de Confirmación de pedido & **. 
-
-#### Configuraciones predeterminadas
-
-Las siguientes configuraciones están preconfiguradas en tu Canvas:
-
-- Conceptos básicos 
-    - Nombre del lienzo: **Confirmación de pedido con cuestionario de opinión**
-    - Evento de conversión: `ecommerce.session_start`
-        - Plazo de conversión: 10 días 
-- Horario de entrada 
-    - Acción desencadenante cuando un usuario realiza el evento `ecommerce.cart_updated` 
-    - La hora de inicio es cuando creas la plantilla Canvas<br><br>\!["Opciones basadas en acciones" para el Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
-- Audiencia objetivo 
-    - Audiencia de entrada 
-        - Ha utilizado estas aplicaciones **más de 0** veces 
-        - El correo electrónico **no está en blanco**
-    - Controles de entrada
-        - Los usuarios son inmediatamente elegibles de nuevo para la entrada en Canvas
-    - Criterios de salida 
-        - No aplicable<br><br>\![Filtros y controles de entrada adicionales para el Canvas.]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
-- Enviar configuración 
-    - Usuarios suscritos o con adhesión voluntaria 
-- Paso de la mensajería 
-    - Revisa la plantilla de correo electrónico y el bloque HTML con un ejemplo de plantilla Liquid para añadir productos a tu mensaje en la plantilla preconstruida. Si utilizas tu propia plantilla de correo electrónico, también puedes hacer referencia a [variables Liquid](#message-personalization), como se demuestra en la sección siguiente.
-
-### Personalización de la confirmación del pedido para los correos electrónicos
-
-Aquí tienes un ejemplo de cómo añadir un bloque HTML de producto a tu confirmación de pedido después de realizar un pedido.
-
-{% raw %}
-```json
-<table style="width:100%">
-  {% for item in {{context.${products}}} %}
-  {% catalog_items <add_your_catalog_name> {{item.variant_id}} %}
-  <tr>
-    <th><img src="{{ items[0].variant_image_url }}" width="200" height="200" /></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{item.product_name}}</li>
-        <li>Price: {{item.price}}</li>
-        <li>Quantity: {{item.quantity}}</li>
-      </ul>
-    </th>
-  </tr>
-  {% endfor %}
-</table>
-```
-{% endraw %}
-
-#### URL del estado del pedido
-
-{% raw %}
-```liquid
-{{context.${metadata}.order_status_url}}
-```
-{% endraw %}
+{% multi_lang_include canvas/ecommerce_templates.md %}
 
 ## Personalización de mensajes
 
@@ -349,13 +59,13 @@ Dado que los eventos recomendados son eventos personalizados con más opiniones,
 
 ### Filtros de comercio electrónico
 
-Segmenta a tus usuarios con filtros de comercio electrónico, como **Fuente de comercio electrónico** e **Ingresos totales**, yendo a la sección **Comercio electrónico** dentro del segmentador.
+Segmenta a tus usuarios con filtros de comercio electrónico, como **Fuente de comercio electrónico** e **Ingresos totales**, yendo a la sección **de comercio electrónico** dentro del segmentador. 
 
-Desplegable de filtros de segmento con filtros "Comercio electrónico".]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+Para ver una lista de filtros de comercio electrónico y sus definiciones, consulta [Filtros de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) y selecciona la categoría de búsqueda "Comercio electrónico".
 
-{% alert important %}
-Con el tiempo, el evento de compra quedará obsoleto y se sustituirá por [los eventos recomendados por eCommerce]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/). Cuando esto ocurra, los filtros de segmento dejarán de aparecer en el comportamiento de compra. Para ver una lista completa de eventos de compra, consulta [Registrar eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
-{% endalert %}
+![Desplegable de filtros de segmento con filtros "Comercio electrónico".]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
+
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation for eCommerce filters' %}
 
 ## Propiedades de eventos anidados
 
@@ -363,13 +73,30 @@ Para segmentar por propiedades de eventos anidados, puedes aprovechar [las Exten
 
 ## Análisis
 
-{% alert note %}
-En este momento, la integración de Shopify no permite rellenar el [evento de compra]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) Braze. En consecuencia, los filtros de compra, las etiquetas de Liquid, las acciones desencadenantes y los análisis deben utilizar el evento ecommerce.order_placed.
-{% endalert %}
+### Informe de eventos personalizado
+
+Puedes hacer un seguimiento del volumen de eventos recomendados de comercio electrónico en el [informe Eventos personalizados]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics). Filtra por **Realizar evento personalizado** y, a continuación, especifica el [nombre]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) del [evento recomendado por eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) para ver su rendimiento a lo largo del tiempo.
+
+![Gráfico de Eventos personalizados que muestra los resultados de seis eventos seleccionados.]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
+
+### Informe de conversiones 
+
+### Informe de eventos personalizado
 
 Para crear un [informe de Eventos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) basado en quién ha realizado un evento admitido a través de la integración, puedes especificar el [nombre]({{site.baseurl}}/shopify_data_features/) concreto del [evento]({{site.baseurl}}/shopify_data_features/).
 
-Para obtener información sobre las tendencias relacionadas con los pedidos realizados desde tus Lienzos lanzados, tendrás que configurar un [Panel de Conversiones]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) y especificar tus Lienzos.
+### Dashboards
 
-Para casos de uso de informes más avanzados, puedes utilizar el [Generador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder/) Braze para generar informes personalizados. 
+#### Panel de conversiones
 
+Para obtener información sobre las tendencias relacionadas con los pedidos realizados desde tus Lienzos lanzados, configura un [panel de Conversiones]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard) y especifica tus Lienzos.
+
+#### Panel de ingresos de comercio electrónico
+
+Para obtener información sobre los ingresos atribuidos a la última campaña o Canvas con el que interactuó un usuario antes de hacer un pedido, utiliza el [panel de ingresos de comercio electrónico]({{site.baseurl}}/ecommerce_revenue_dashboard/) y selecciona una ventana de conversión.
+
+### Generador de consultas
+
+### Informe de ingresos 
+
+Para analizar los datos de estos nuevos eventos, ve al [Generador de paneles]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) y visualiza el [panel**Ingresos de comercio electrónico - Atribución del último toque**]({{site.baseurl}}/ecommerce_revenue_dashboard/).
