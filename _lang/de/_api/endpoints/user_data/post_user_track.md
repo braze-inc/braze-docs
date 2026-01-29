@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Nutzer:innen tracken"
-article_title: "POST: Nutzer:innen tracken"
+nav_title: "POST: Nutzer:innen erstellen und aktualisieren"
+article_title: "POST: Nutzer:innen erstellen und aktualisieren"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "Dieser Artikel beschreibt die Details des Tracking Nutzer:innen En
 
 ---
 {% api %}
-# Nutzer:innen tracken
+# Nutzer:innen erstellen und aktualisieren
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /benutzer:innen/track
 {% endapimethod %}
@@ -17,7 +17,7 @@ description: "Dieser Artikel beschreibt die Details des Tracking Nutzer:innen En
 > Verwenden Sie diesen Endpunkt, um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils zu aktualisieren.
 
 {% alert note %}
-Braze verarbeitet die über die API übergebenen Daten zum Nennwert, und Kunden sollten nur Deltas (sich ändernde Daten) übergeben, um den Verbrauch unnötiger Datenpunkte zu minimieren. Um mehr zu erfahren, referenzieren Sie auf [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/).
+Braze verarbeitet die über die API übergebenen Daten zum Nennwert und Kunden sollten nur Deltas (sich ändernde Daten) übergeben, um die unnötige Protokollierung von Datenpunkten zu minimieren. Um mehr zu erfahren, referenzieren Sie auf [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Parameter der Anfrage
 
 {% alert important %}
-Für jede in der folgenden Tabelle aufgeführte Komponente einer Anfrage ist eine der folgenden Angaben erforderlich: `external_id`, `user_alias`, `braze_id`, `email` oder `phone`.
+Für jede in der folgenden Tabelle aufgeführte Komponente der Anfrage müssen Sie eine der folgenden Angaben machen: `external_id`, `user_alias`, `braze_id`, `email`, oder `phone`.
 {% endalert %}
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
@@ -64,7 +64,7 @@ Für jede in der folgenden Tabelle aufgeführte Komponente einer Anfrage ist ein
 
 ### Update eines Nutzerprofils über eine E-Mail Adresse
 
-Über den Endpunkt `/users/track` können Sie ein Nutzerprofil per E-Mail aktualisieren. 
+Über den Endpunkt `/users/track` können Sie ein Nutzerprofil per E-Mail aktualisieren.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -164,7 +164,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 ### Abo-Gruppen festlegen
 
-Dieses Beispiel zeigt, wie Sie einen Nutzer:innen anlegen und seine Abo-Gruppe im Objekt Benutzerattribute festlegen. 
+Dieses Beispiel zeigt, wie Sie einen Nutzer:innen anlegen und seine Abo-Gruppe im Objekt Benutzerattribute festlegen.
 
 Das Aktualisieren des Abo-Status mit diesem Endpunkt aktualisiert den durch seine `external_id` angegebenen Nutzer (z.B. User1) und aktualisiert den Abo-Status aller Nutzer:innen mit der gleichen E-Mail wie dieser Nutzer (User1).
 
@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### Beispiel für eine Anfrage zur Erstellung eines Nutzers:in, der nur einen Alias hat
 
-Sie können den Endpunkt `/users/track` verwenden, um einen neuen Nutzer:innen mit einem Alias zu erstellen, indem Sie den Schlüssel `_update_existing_only` mit dem Wert `false` im Textkörper der Anfrage angeben. Wenn dieser Wert weggelassen wird, wird das Nutzerprofil, das nur einen Alias enthält, nicht erstellt. Die Verwendung eines Nutzers:innen mit Alias garantiert, dass nur ein Profil mit diesem Alias existiert. Dies ist besonders hilfreich, wenn Sie eine neue Integration erstellen, da es die Erstellung doppelter Nutzer:innen-Profile verhindert.
+Sie können den Endpunkt `/users/track` verwenden, um einen Nutzer:in zu erstellen, der nur einen Alias hat, indem Sie den Schlüssel `_update_existing_only` mit dem Wert `false` im Hauptteil der Anfrage angeben. Wenn Sie diesen Wert weglassen, erstellt Braze kein Nutzerprofil, das nur einen Alias enthält. Die Verwendung eines Nutzers:innen mit Alias stellt sicher, dass nur ein Profil mit diesem Alias existiert. Dies ist besonders hilfreich bei der Erstellung einer Integration, da Braze so keine doppelten Nutzerprofile erstellt.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -231,15 +231,15 @@ Erfolgreiche Nachrichten werden mit der folgenden Antwort beantwortet:
 ```json
 {
   "message": "success",
-  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
+  "attributes_processed": (optional, integer), if attributes are included in the request, this returns an integer of the number of external_ids with attributes that Braze queued for processing,
+  "events_processed": (optional, integer), if events are included in the request, this returns an integer of the number of events that Braze queued for processing,
+  "purchases_processed": (optional, integer), if purchases are included in the request, this returns an integer of the number of purchases that Braze queued for processing,
 }
 ```
 
 ### Erfolgreiche Nachricht mit nicht schwerwiegenden Fehlern
 
-Wenn Ihre Nachricht erfolgreich ist, aber nicht-schwerwiegende Fehler aufweist, wie z.B. ein ungültiges Ereignisobjekt aus einer langen Liste von Ereignissen, dann erhalten Sie die folgende Antwort:
+Wenn Ihre Nachricht erfolgreich ist, aber nicht schwerwiegende Fehler aufweist, wie z.B. ein ungültiges Ereignisobjekt aus einer langen Liste von Ereignissen, erhalten Sie folgende Antwort:
 
 ```json
 {
@@ -252,11 +252,11 @@ Wenn Ihre Nachricht erfolgreich ist, aber nicht-schwerwiegende Fehler aufweist, 
 }
 ```
 
-Bei Erfolgsnachrichten werden alle Daten, die nicht von einem Fehler im Array `errors` betroffen sind, weiterhin verarbeitet. 
+Bei Erfolgsmeldungen verarbeitet Braze weiterhin alle Daten, die nicht von einem Fehler im Array `errors` betroffen sind.
 
 ### Nachricht mit schwerwiegenden Fehlern
 
-Wenn Ihre Nachricht einen schwerwiegenden Fehler enthält, erhalten Sie die folgende Antwort:
+Wenn Ihre Nachricht einen schwerwiegenden Fehler aufweist, erhalten Sie die folgende Antwort:
 
 ```json
 {
@@ -271,22 +271,22 @@ Wenn Ihre Nachricht einen schwerwiegenden Fehler enthält, erhalten Sie die folg
 
 ### Schwerwiegende Fehler Antwortcodes
 
-Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
+Für Statuscodes und zugehörige Nachrichten, die Braze zurückgibt, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
-Wenn Sie die Fehlermeldung "provided external_id is blacklisted and disallowed" erhalten, hat Ihre Anfrage möglicherweise eine "Nutzer:innen-Attrappe" enthalten. Weitere Informationen finden Sie unter [Spam-Blockierung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+Wenn Sie die Fehlermeldung "provided external_id is blacklisted and disallowed" erhalten, hat Ihre Anfrage möglicherweise einen "Dummy Nutzer:innen" enthalten. Weitere Informationen finden Sie unter [Spam-Blockierung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 
 ## Häufig gestellte Fragen
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### Was passiert, wenn mehrere Profile mit derselben E-Mail Adresse gefunden werden?
-Wenn die `external_id` existiert, wird das zuletzt aktualisierte Profil mit einer externen ID bei Updates bevorzugt behandelt. Wenn das `external_id` nicht existiert, wird das zuletzt aktualisierte Profil für Updates bevorzugt.
+Wenn die `external_id` existiert, priorisiert Braze das zuletzt aktualisierte Profil mit einer externen ID für Updates. Wenn `external_id` nicht existiert, bevorzugt Braze das zuletzt aktualisierte Profil für Updates.
 
 ### Was passiert, wenn kein Profil mit der E-Mail Adresse existiert?
-Es wird ein neues Profil erstellt und ein Nutzer:in, der nur per E-Mail erreichbar ist. Ein Alias wird nicht erstellt. Das Feld E-Mail wird auf test@braze.com gesetzt, wie in der Beispielanfrage zum Update eines Nutzerprofils über die E-Mail-Adresse angegeben.
+Braze erstellt ein Profil und einen reinen E-Mail-Benutzer und setzt das Feld E-Mail auf test@braze.com, wie in der Beispielanfrage für das Update eines Nutzerprofils nach E-Mail-Adresse angegeben. Braze erstellt keine Aliasnamen.
 
 ### Wie verwenden Sie `/users/track`, um alte Nutzer:innen-Daten zu importieren?
-Sie können über die Braze API Daten für einen Nutzer:innen übermitteln, der Ihre mobile App noch nicht verwendet hat, um ein Nutzerprofil zu erstellen. Wenn der Nutzer:innen die Anwendung später nutzt, werden alle Informationen, die auf seine Identifizierung mit dem SDK folgen, mit dem bestehenden Nutzerprofil zusammengeführt, das Sie mit dem API-Aufruf erstellt haben. Jegliches Nutzerverhalten, das vom SDK vor der Identifizierung anonym aufgezeichnet wurde, geht bei der Zusammenführung mit dem bestehenden, von der API generierten Nutzerprofil verloren.
+Sie können über die Braze API Daten für einen Nutzer:innen übermitteln, der Ihre mobile App noch nicht verwendet hat, um ein Nutzerprofil zu erstellen. Wenn der Nutzer:innen die Anwendung später nutzt, werden alle Informationen, die auf seine Identifizierung mit dem SDK folgen, mit dem bestehenden Nutzerprofil zusammengeführt, das Sie mit dem API-Aufruf erstellt haben. Jegliches Nutzerverhalten, das vom SDK vor der Identifizierung anonym aufgezeichnet wurde, geht beim Zusammenführen mit dem bestehenden, von der API generierten Nutzerprofil verloren.
 
 Das Segmentierungs-Tool berücksichtigt diese Nutzer:innen unabhängig davon, ob sie sich mit der App beschäftigt haben. Wenn Sie Nutzer:innen ausschließen möchten, die über die User API hochgeladen wurden und sich noch nicht mit der App beschäftigt haben, fügen Sie den Filter `Session Count > 0` hinzu.
 
@@ -296,16 +296,30 @@ Jedes Event-Objekt im Event-Array repräsentiert ein einzelnes Vorkommen eines a
 
 ### Wie geht `/users/track` mit ungültigen, verschachtelten angepassten Attributen um?
 
-Wenn ein verschachteltes angepasstes Attribut ungültige Werte enthält (z.B. ungültige Zeitformate oder Nullwerte), werden alle verschachtelten angepassten Attribute in der Anfrage nicht verarbeitet. Dies gilt für alle verschachtelten Strukturen innerhalb dieses spezifischen Attributs. Um eine erfolgreiche Verarbeitung zu gewährleisten, überprüfen Sie vor dem Senden, ob alle Werte innerhalb der verschachtelten angepassten Attribute gültig sind.
+Wenn ein verschachteltes angepasstes Attribut ungültige Werte enthält (z.B. ungültige Zeitformate oder Nullwerte), lässt Braze alle verschachtelten Updates der angepassten Attribute in der Anfrage unbearbeitet. Dies gilt für alle verschachtelten Strukturen innerhalb dieses spezifischen Attributs. Um eine erfolgreiche Verarbeitung zu gewährleisten, überprüfen Sie vor dem Senden, ob alle Werte innerhalb der verschachtelten angepassten Attribute gültig sind.
 
-## Monatlich aktive Nutzer:innen CY 24-25
-Für Kunden, die Monatlich aktive:r Nutzer:innen - CY 24-25 erworben haben, verwaltet Braze verschiedene Rate-Limits auf seinem Endpunkt `/users/track`:
+## Monatlich aktive Nutzer:innen CY 24-25, Universal MAU, Web MAU und Mobile MAU
+
+Für Kund:innen mit neuen Preisen werden Rate-Limits auf Unternehmensebene durchgesetzt. Kund:innen können für Workspaces Rate-Limits für stündliche Limits festlegen, aber Burst-Limits werden weiterhin von allen Workspaces gemeinsam genutzt.
+
+Für Kunden, die monatlich aktive Nutzer:in CY 24-25, Universal MAU, Internet MAU oder Mobile MAU erworben haben, verwaltet Braze verschiedene Rate-Limits auf seinem Endpunkt `/users/track`:
 - Die stündlichen Rate-Limits richten sich nach der erwarteten Aktivität der Datenaufnahme auf Ihrem Konto, die von der Anzahl der monatlich aktiven Nutzer:innen, der Branche, der Saisonalität oder anderen Faktoren abhängen kann.
 - Zusätzlich zum stündlichen Limit setzt Braze ein Burst-Limit für die Anzahl der Anfragen durch, die alle drei Sekunden gesendet werden können.
-- Jede Anfrage kann bis zu 50 Updates für Attribute, Ereignisse oder Kauf-Objekte zusammenfassen.
+- Jede Anfrage kann bis zu 75 Updates für Attribute, Ereignisse oder Kauf-Objekte zusammenfassen.
 
-Aktuelle Grenzwerte auf der Grundlage der erwarteten Ingestion finden Sie im Dashboard unter **Einstellungen** > **APIs und Bezeichner** > **API-Nutzungs-Dashboard**. Wir können Rate-Limits ändern, um die Systemstabilität zu schützen oder einen höheren Datendurchsatz auf Ihrem Konto zu ermöglichen. Wenden Sie sich bitte an den Braze Support oder Ihren Customer-Success-Manager:in, wenn Sie Fragen oder Bedenken bezüglich der stündlichen oder sekündlichen Begrenzung von Anfragen und den Anforderungen Ihres Unternehmens haben.
+Aktuelle Grenzwerte auf der Grundlage der erwarteten Ingestion finden Sie im Dashboard unter **Einstellungen** > **APIs und Bezeichner** > **API-Nutzungs-Dashboard**. Wir können Rate-Limits ändern, um die Systemstabilität zu schützen oder einen höheren Datendurchsatz auf Ihrem Konto zu ermöglichen. Wenden Sie sich bitte an den Braze Support oder Ihren Customer-Success-Manager:in, wenn Sie Fragen oder Bedenken bezüglich des stündlichen oder sekündlichen Limits für Anfragen und die Bedürfnisse Ihres Unternehmens haben.
 
+### Rate-Limits für monatlich aktive Nutzer:in CY 24-25, Universal MAU, Internet MAU und Mobile MAU
 
+Alle Antworten ohne Rate-Limits (z.B. nicht`429`) enthalten die folgenden HTTP-Antwort-Header, die dem Client den Status des stündlichen Rate-Limits-Fensters anzeigen. Verwenden Sie diese Anfrage-Header, um Ihre Anfrage-Rate zu verwalten:
+
+| Name der Überschrift             | Beschreibung                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `X-RateLimit-Limit`     | Die Anzahl der zulässigen Anfragen pro Zeitspanne                                              |
+| `X-RateLimit-Remaining` | Die ungefähre Anzahl der verbleibenden Anfragen innerhalb eines Fensters                                |
+| `X-RateLimit-Reset`     | Die Anzahl der verbleibenden Sekunden, bevor das aktuelle Fenster zurückgesetzt wird                                    |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Beachten Sie, dass die Header `RateLimit-Limit`, `RateLimit-Remaining` und `RateLimit-Reset` nicht zurückgegeben werden, wenn Sie auf einen HTTP `429` Fehler stoßen. Wenn der Fehler auftritt, werden diese Header durch einen `X-Ratelimit-Retry-After` -Header ersetzt, der eine ganze Zahl zurückgibt, die die Anzahl der Sekunden angibt, bevor Sie wieder Anfragen stellen können.
 
 {% endapi %}

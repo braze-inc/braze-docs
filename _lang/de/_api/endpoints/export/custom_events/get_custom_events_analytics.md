@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Export angepasster 
 {% api %}
 # Exportieren Sie angepasste Events Analytics
 {% apimethod get %}
-/ereignisse/daten_serien
+/events/data_series
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine Reihe von Vorkommen eines angepassten Events in Ihrer App über einen bestimmten Zeitraum abzurufen.
@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Export angepasster 
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `events.data_series`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/events/data_seri
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -66,7 +64,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Schwerwiegende Fehler Antwortcodes {#fatal-export}
 
-Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
+Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

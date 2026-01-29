@@ -1,6 +1,6 @@
 ---
-nav_title: Messung der Größe eines Segments
-article_title: Messung der Segmentgröße
+nav_title: Größe der Segmente messen
+article_title: Segmentgröße messen
 page_order: 5
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "Auf dieser Seite erfahren Sie, wie Sie die Mitgliedschaft und Größe Ihres Segments überwachen können."
 ---
 
-# Messung der Größe eines Segments
+# Größe der Segmente messen
 
 > Auf dieser Seite erfahren Sie, wie Sie die Mitgliedschaft und Größe Ihres Segments überwachen können.
 
@@ -25,8 +25,8 @@ Es ist möglich, dass die Anzahl der Gesamtnutzer:innen von der Anzahl der Nutze
 ![Eine Tabelle mit der Gesamtzahl der erreichbaren Nutzer:innen, aufgeschlüsselt nach Nutzern:innen, die per E-Mail, iOS Push, Android Push, Web-Push und Kindle Push erreichbar sind.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 Damit ein:e Nutzer:in als über einen bestimmten Kanal erreichbar aufgeführt wird, muss er oder sie über beides verfügen:
-* Eine gültige E-Mail-Adresse oder ein Push-Token, das mit ihrem Profil verknüpft ist; und
-* Sie haben sich für Ihre App angemeldet oder abonniert.
+* Eine gültige E-Mail Adresse oder ein Push-Token, das mit ihrem Profil verknüpft ist, und
+* Opt-in oder Abonnent:in für Ihre App.
 
 Ein einzelner Benutzer kann zu verschiedenen erreichbaren Benutzergruppen gehören. So kann eine Nutzer:in beispielsweise sowohl eine gültige E-Mail-Adresse als auch ein gültiges Android-Push-Token haben und für beide angemeldet sein, aber kein zugehöriges iOS-Push-Token besitzen. Die Lücke zwischen der Gesamtzahl der erreichbaren Nutzer:innen und der Summe der verschiedenen Kanäle ist die Anzahl der Nutzer:innen, die sich für das Segment qualifiziert haben, aber über diese Kommunikationskanäle nicht erreichbar sind.
 
@@ -47,7 +47,7 @@ Für jede Filtergruppe können Sie die geschätzten erreichbaren Benutzer anzeig
 Sie können die geschätzten erreichbaren Nutzer:innen eines Segments, einschließlich der geschätzten Anzahl der Nutzer:innen für jeden Kanal, im Panel **Erreichbare Nutzer**:innen einsehen. Diese **Schätzung** zeigt Ihnen eine ungefähre Spanne für die Größe Ihres Segments und eine Schätzung, welcher Prozentsatz Ihrer gesamten Nutzer:innen-Basis in dieses Segment fällt. Beachten Sie, dass die geschätzten Statistiken 15 Minuten lang zwischengespeichert werden, es sei denn, Sie nehmen Änderungen an Ihrem Segment vor. In diesem Fall werden die geschätzten Statistiken automatisch aktualisiert. Sie können auch die genaue Anzahl der erreichbaren Nutzer:innen (sowohl für das Segment insgesamt als auch pro Kanal) anzeigen, indem Sie **Exakte Statistik berechnen** auswählen. 
 
 
-![Das Panel "Erreichbare Nutzer:innen" zeigt an, dass es schätzungsweise 2.3M-2.4M Nutzer:innen gibt.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
+![Das Panel "Erreichbare Nutzer:innen" zeigt an, dass es schätzungsweise 2,3-2,4 Millionen Nutzer:innen gibt.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
 
 ### Überlegungen zur Schätzung von Zählungen
 
@@ -75,6 +75,17 @@ Damit ein Nutzer:innen als über einen bestimmten Kanal erreichbar aufgelistet w
 - Eine gültige E-Mail Adresse oder ein Push-Token, das mit ihrem Profil verknüpft ist, und
 - Opt-in oder Abonnent:in für Ihre App.
 
+#### Angewandte Filter für kanalspezifisch erreichbare Nutzer:innen
+
+Die folgenden Filter werden bei der Ermittlung der erreichbaren Nutzer:innen für jeden Kanal angewendet.
+
+| Kanal | Filter |
+| --- | --- |
+| E-Mail | **E-Mail verfügbar** ist wahr. |
+| Push | **Foreground Push Enabled** ist wahr. |
+| SMS | **Abo-Gruppe** ist eine beliebige SMS Abo-Gruppe. **Ungültige Rufnummer** ist falsch. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Exakte Statistik berechnen 
 
 Um eine genaue Zählung der Nutzer:innen in Ihrem Segment zu erhalten, wählen Sie **Exakte Statistik berechnen** im Bereich **Erreichbare Nutzer:innen**.
@@ -82,6 +93,10 @@ Um eine genaue Zählung der Nutzer:innen in Ihrem Segment zu erhalten, wählen S
 Um die Statistiken für eine zuvor durchgeführte Berechnung zu aktualisieren, wählen Sie **Exakte Statistiken aktualisieren**. Das Datum, an dem diese Berechnung zuletzt durchgeführt wurde, wird automatisch aktualisiert.
 
 Beachten Sie, dass die Genauigkeit einer Berechnung nur 99,999% oder mehr beträgt. Bei großen Segmenten werden Sie also möglicherweise leichte Abweichungen feststellen - selbst bei der Berechnung exakter Statistiken -, was normal ist. Außerdem werden die exakten Statistikergebnisse 24 Stunden lang zwischengespeichert, es sei denn, Sie nehmen Änderungen an Ihrem Segment vor. In diesem Fall können Sie die exakten Statistiken neu berechnen.
+
+{% alert note %}
+Segmente, die gleichmäßig durch [zufällige Bucket-Nummern]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) aufgeteilt sind, haben nicht die gleiche Größe. Wenn Sie z.B. ein Segment mit dem Filter **Random Bucket # kleiner als 5000** und ein Segment mit dem Filter **Random Bucket # mindestens 5000** erstellen, ist es möglich und zu erwarten, dass die Segmentgrößen um bis zu einigen Prozentpunkten abweichen. Der Grund dafür ist, dass inaktive Nutzer:innen gelöscht werden und Nutzer:innen nicht erreichbar sind.
+{% endalert %}
 
 ![Das Panel "Erreichbare Nutzer:innen" mit einer Option zur Anzeige der Aufschlüsselung.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 
@@ -99,7 +114,7 @@ Sie können eine exakte Statistikberechnung abbrechen, indem Sie **Abbrechen** a
 
 Für alle Segmente können Sie ein Chart mit der geschätzten Mitgliederzahl der Segmente für jeden Tag anzeigen. Dieses Chart zeigt, wie sich die Größe Ihres Segments im Laufe der Zeit verändert hat. Verwenden Sie das Dropdown-Menü, um die Segmentzugehörigkeit nach Datumsbereich zu filtern.
 
-![Verwenden Sie das Dropdown-Menü Historische Mitgliedschaft, um die Mitgliedschaft in Segmenten nach Datumsbereich zu filtern.]({% image_buster /assets/img_archive/historical_membership2.png %})
+![Verwenden Sie das Dropdown-Menü „Bisherige Zugehörigkeit“, um die Segmentzugehörigkeit nach Datumsbereich zu filtern.]({% image_buster /assets/img_archive/historical_membership2.png %})
 
 Da das Ziel dieses Charts darin besteht, Ihnen ein Gefühl für die Gesamttrends der Segmentmitgliedschaft zu vermitteln, ist die tägliche Anzahl eine Schätzung, ähnlich wie die Segmentgröße eine Schätzung ist, bevor Sie **Exakte Statistik berechnen** auswählen. Und da dieses Diagramm Schätzungen anzeigt, ist es möglich, dass die Größe Ihres Segments in diesem Chart als "0" erscheint, obwohl die tatsächliche Größe (die nach dem Auswählen von **Genaue Statistiken berechnen** ermittelt werden kann) nicht "0" ist. Es ist besonders wahrscheinlich, dass das Chart eine Schätzung von "0" anzeigt, wenn Ihr Segment im Verhältnis zur Größe Ihrer Workspace-Population sehr klein ist.
 

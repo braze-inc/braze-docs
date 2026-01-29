@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Status des E-Mail-Abonnements ändern"
+nav_title: "POST: Status des E-Mail Abos ändern"
 article_title: "POST: Status des E-Mail-Abonnements ändern"
 search_tag: Endpoint
 page_order: 5
@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
 | `email` | Erforderlich | String oder Array | Zu ändernde String-E-Mail-Adresse oder ein Array mit bis zu 50 zu ändernden E-Mail-Adressen. |
-| `subscription_state` | Erforderlich | String | Entweder "abonniert", "abgemeldet" oder "opted_in". |
+| `subscription_state` | Erforderlich | String | Entweder "abonniert", "abgemeldet", oder "opted_in". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage

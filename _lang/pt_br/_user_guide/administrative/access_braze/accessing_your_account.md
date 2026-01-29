@@ -1,142 +1,142 @@
 ---
-nav_title: Acessando sua conta
-article_title: Acessando Sua Conta
-page_order: 2
+nav_title: Acesse sua conta
+article_title: Acesse sua conta
+page_order: 0
 page_type: reference
-description: "Este artigo cobre como obter sua conta Braze, como fazer login após ter acesso concedido e como redefinir sua senha Braze."
+description: "Este artigo aborda como obter sua conta Braze, como fazer o registro após a concessão de acesso e como redefinir sua senha Braze."
 
 ---
 
-# Acessando sua conta
+# Acesse sua conta
 
-> Este artigo cobre como obter sua conta Braze, como fazer login após ter acesso concedido e como solucionar problemas de acesso ao seu painel e desempenho do painel.
+> Este artigo aborda como obter sua conta Braze, como fazer o registro após a concessão de acesso e como solucionar problemas de acesso ao painel e de performance do painel.
 
-Se você é o primeiro usuário Braze da sua empresa e está fazendo login pela primeira vez, você receberá um e-mail de boas-vindas de `@alerts.braze.com` pedindo para confirmar seu e-mail e fazer login no primeiro dia do seu contrato.
+Se for o primeiro usuário Braze da sua empresa e estiver se registrando pela primeira vez, receberá um e-mail de boas-vindas de `@alerts.braze.com` solicitando que confirme seu e-mail e se registre no primeiro dia do seu contrato.
 
-Após confirmar sua conta, você pode adicionar usuários adicionais na página [Usuários da Empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) do seu painel. Todos os usuários receberão um e-mail pedindo para confirmar sua conta após serem adicionados.
+Depois de confirmar a sua conta, você pode adicionar outros usuários na página [Company Users (Usuários da empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) ) do seu dashboard. Todos os usuários receberão um e-mail solicitando a confirmação da conta depois de serem adicionados.
 
-Se você não é o primeiro usuário da conta Braze da sua empresa, entre em contato com o administrador da conta Braze da sua empresa e peça para criar sua conta. Você então receberá um e-mail de boas-vindas de `@alerts.braze.com` pedindo para confirmar seu e-mail e fazer login.
+Se você não for o primeiro usuário da conta Braze da sua empresa, entre em contato com o administrador da conta Braze da sua empresa e peça que ele crie a sua conta. Em seguida, você receberá um e-mail de boas-vindas do `@alerts.braze.com` solicitando a confirmação do seu e-mail e o registro.
 
-## Fazendo login
+## Login
 
-Vamos falar sobre como fazer login, seja a primeira vez ou a milionésima! Se você é o primeiro usuário da sua empresa, siga as orientações na seção anterior. Se não, você pode fazer login após o administrador Braze da sua empresa criar sua conta.
+Vamos falar sobre como fazer o registro, seja pela primeira vez ou pela milionésima! Se você for o primeiro usuário da sua empresa, siga as orientações da seção anterior. Caso contrário, você poderá registrar-se depois que o administrador do Braze de sua empresa criar sua conta.
 
-Você pode fazer login a partir do site inicial [Braze.com](https://www.braze.com), ou apenas usar a URL do seu painel que corresponde à sua [instância Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) específica. Para sua conveniência, a Braze tem várias opções de login único (SSO) como:
+Você pode fazer o registro a partir do [Braze.com](https://www.braze.com) ou simplesmente usar o URL do dashboard que corresponde à sua [instância específica da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). Para sua conveniência, o Braze tem várias opções de logon único (SSO), como:
 
-* [SSO SAML]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
-    * [Provisionamento SAML sob demanda]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit/)
-* [SSO Microsoft Entra]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
+* [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
+    * [Provisionamento SAML just-in-time]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit/)
+* [Microsoft Entra SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
 * [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 * [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
 
 {% alert note %}
-Depois de fazer login no Braze com SSO, você não pode mais usar sua senha para fazer login no painel.
+Depois de entrar no Braze com SSO, você não poderá mais usar sua senha para se registrar no dashboard.
 {% endalert %}
 
-## Navegadores suportados
+## Navegadores compatíveis
 
-O painel do Braze suporta os seguintes navegadores:
+O dashboard da Braze é compatível com os seguintes navegadores:
 - Chrome (versão 87 ou mais recente)
 - Firefox (versão 85 ou mais recente)
 - Safari (versão 15.4 ou mais recente)
 - Edge (versão 87 ou mais recente)
 
-Se o seu painel do Braze disser que você tem um erro inesperado e sua ferramenta de console do navegador mostrar o erro `ReferenceError: structuredClone is not defined`, seu navegador está desatualizado. Se esse erro continuar ocorrendo, desinstale e reinstale seu navegador.
+Se o seu dashboard Braze disser que você tem um erro inesperado e sua ferramenta de console do navegador mostrar o erro `ReferenceError: structuredClone is not defined`, seu navegador está desatualizado. Se esse erro continuar ocorrendo, desinstale e reinstale seu navegador.
 
-## Acessando vários painéis do Braze
+## Acesso a vários dashboards do Braze
 
-O Braze não permite que você registre o mesmo endereço de e-mail para vários usuários do painel no mesmo cluster (por exemplo, se você tiver dois painéis no US-01). Você pode usar o mesmo e-mail para criar contas em diferentes clusters (por exemplo, se você tiver um painel no US-01 e um no US-05). Se você precisar acessar vários painéis do Braze no mesmo cluster, você pode fazer o seguinte:
+O Braze não permite que você registre o mesmo endereço de e-mail para vários usuários de dashboards no mesmo cluster (por exemplo, se você tiver dois dashboards no US-01). É possível usar o mesmo e-mail para criar contas em clusters diferentes (por exemplo, se você tiver um dashboard na US-01 e outro na US-05). Se precisar acessar vários dashboards do Braze no mesmo cluster, você pode fazer o seguinte:
 
 ### Use aliases de e-mail
 
-Se seu provedor de e-mail for o Gmail, você pode criar aliases adicionando um sinal `+` seguido de qualquer texto ao seu endereço de e-mail. Por exemplo:
-- **Email original:** `rocky@gmail.com`
-- **Email alias:** `rocky+1@gmail.com`
+Se o seu provedor de e-mail for o Gmail, você poderá criar aliases adicionando um sinal `+` seguido de qualquer texto ao seu endereço de e-mail. Por exemplo:
+- **Origin e-mail:** `rocky@gmail.com`
+- **E-mail de apelido:** `rocky+1@gmail.com`
 
-Ambos os endereços de e-mail direcionarão e-mails para a mesma caixa de entrada, mas o Braze os reconhecerá como contas separadas quando você fizer login.
+Ambos os endereços de e-mail direcionarão os e-mails para a mesma caixa de entrada, mas o Braze os reconhecerá como contas separadas quando você fizer o registro.
 
-### Crie aliases separados com outros provedores
+### Criar aliases separados com outros provedores
 
-Se o seu provedor de e-mail não suportar `+` alias, você ainda pode criar aliases separados, como configurar `rocky@braze.com` para encaminhar para `rocky.lotito@braze.com`. Isso permite que vários endereços sejam direcionados para a mesma caixa de entrada, enquanto são reconhecidos como e-mails diferentes pelo Braze.
+Se o seu provedor de e-mail não suportar o envio de e-mails para `+`, você ainda poderá criar aliases separados, como, por exemplo, configurar `rocky@braze.com` para encaminhar para `rocky.lotito@braze.com`. Isso permite que vários endereços sejam canalizados para a mesma caixa de entrada e, ao mesmo tempo, sejam reconhecidos como e-mails diferentes pelo Braze.
 
-### Use desenvolvedores de várias empresas
+### Usar desenvolvedores de várias empresas
 
-O recurso de desenvolvedores de várias empresas permite o compartilhamento de uma única conta de usuário entre várias empresas. Os usuários podem alternar entre diferentes painéis de empresas a partir do menu de perfil do usuário.
+O recurso de desenvolvedores de várias empresas permite o compartilhamento de uma única conta de usuário entre várias empresas. Os usuários podem alternar entre diferentes dashboards da empresa no menu do perfil do usuário.
 
-Se você tiver SSO e quiser configurar desenvolvedores de várias empresas, precisará habilitar um ID de Entidade SAML personalizado configurando uma integração SAML SSO personalizada. Siga os passos em [Login iniciado pelo Provedor de Serviço (SP)]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), mas aplique essas alterações:
-- Altere **ID da Entidade** para `braze_dashboard_<companyID>` para cada integração de painel.
-- Entre em contato com seu gerente de sucesso do cliente ou gerente de conta para habilitar o `saml_sso_custom_entity_id` recurso de alternância para cada painel.
+Se você tiver SSO e quiser configurar desenvolvedores de várias empresas, precisará ativar uma ID de entidade personalizada SAML configurando uma integração SSO SAML personalizada. Siga as etapas do [login iniciado pelo prestador de serviço (SP)]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), mas aplique essas alterações:
+- Altere **o ID da entidade** para `braze_dashboard_<companyID>` para cada integração do dashboard.
+- Entre em contato com seu gerente de sucesso do cliente ou gerente de conta para ativar o flipper do recurso `saml_sso_custom_entity_id` para cada dashboard.
 
-### Considerações para o Login Único (SSO)
+### Considerações sobre logon único (SSO)
 
-Se você usar Login Único (SSO), esteja ciente de que ter vários endereços de e-mail diferentes pode levar a complicações. Confirme que suas configurações de SSO estão configuradas corretamente para evitar problemas de acesso.
+Se você usa logon único (SSO), saiba que ter vários endereços de e-mail diferentes pode causar complicações. Confirme se suas configurações de SSO estão definidas corretamente para evitar problemas de acesso.
 
-## Solução de Problemas
+## Solução de problemas
 
-### Redefinindo sua senha
+### Redefinição de sua senha
 
-Para redefinir sua senha, selecione o link **Esqueceu sua senha?** na página de login do painel. Você será solicitado a inserir seu e-mail para receber um link para redefinir sua senha.
+Para redefinir sua senha, selecione o link **Esqueceu sua senha?** na página de login do dashboard. Será solicitado que você insira seu e-mail para receber um link para redefinir sua senha.
 
-\![Login do painel com o prompt "Esqueceu sua senha?".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
+![Login no dashboard com prompt "Esqueceu sua senha?".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
 
-### Limpar o cache e os cookies do seu navegador
+### Limpar o cache e os cookies do navegador
 
-Se você está tendo problemas com o desempenho do painel, como seu painel ou a lista de desempenho de segmentos não carregando, tente limpar o cache e os cookies do seu navegador seguindo os passos para o seu respectivo navegador.
+Se você está tendo problemas com o desempenho do dashboard, como seu dashboard ou lista de desempenho de segmentos não carregando, tente limpar o cache e os cookies do seu navegador seguindo os passos para o seu respectivo navegador.
 
 {% alert important %}
-Limpar cookies fará com que você saia, portanto, o trabalho não salvo será perdido.
+Limpar cookies fará com que você saia, portanto, trabalhos não salvos serão perdidos.
 {% endalert %}
 
-- [Limpar cache & cookies no Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- [Limpar o cache & cookies no Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
 - [Limpar cookies no Safari no Mac](https://support.apple.com/en-gb/guide/safari/sfri11471/16.1/mac/13.0)
 - [Limpar cookies e dados do site no Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
 - [Excluir todos os cookies no Microsoft Edge](https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-view-allow-block-delete-and-use-168dab11-0753-043d-7c16-ede5947fc64d#bkmk_deleteallcookies)
 
-Se limpar o cache e os cookies do seu navegador não resolver seus problemas, entre em contato com [Suporte]({{site.baseurl}}/support_contact/).
+Se limpar o cache e os cookies do seu navegador não resolver seus problemas, entre em contato com o [Suporte]({{site.baseurl}}/support_contact/).
 
 ### Acessando o editor de arrastar e soltar
 
-Para a maioria dos usuários do Braze, o editor de arrastar e soltar deve carregar. No entanto, se você estiver usando uma VPN ou estiver atrás de um firewall, pode ser necessário permitir um domínio. Entre em contato com seu administrador de TI para verificar se `*.bz-rndr.com` está na lista de permissões.
+Para a maioria dos usuários do Braze, o editor de arrastar e soltar deve ser carregado. No entanto, se você estiver usando uma VPN ou estiver atrás de um firewall, talvez seja necessário colocar um domínio na lista de permissões. Entre em contato com o administrador de TI para verificar se o site `*.bz-rndr.com` está na lista de permissões.
 
-O editor pode ter problemas de carregamento devido ao seguinte:
+O editor pode apresentar problemas de carregamento devido ao seguinte:
 
-- **Erro transitório:** Essas são falhas temporárias que podem afetar a conectividade, comunicação ou transferência de dados. Felizmente, elas geralmente se resolvem sozinhas sem exigir intervenção significativa, pois são frequentemente causadas por condições de curta duração e não indicam problemas sistêmicos.
-- **Erro maior:** Isso pode envolver um problema subjacente de infraestrutura ou produto.  Você pode verificar nossa [página de status do sistema Braze](https://braze.statuspage.io/) pois provavelmente estamos cientes da situação e trabalhando ativamente para resolvê-la.
+- **Erro transitório:** São falhas temporárias que podem afetar a conectividade, a comunicação ou a transferência de dados. Felizmente, elas geralmente se resolvem sozinhas, sem necessidade de intervenção significativa, pois geralmente são causadas por condições de curta duração e não indicam problemas sistêmicos.
+- **Erro grave:** Isso pode envolver um problema subjacente de infraestrutura ou de produto.  Você pode verificar nossa [página de status do sistema Braze](https://braze.statuspage.io/), pois provavelmente estamos cientes da situação e trabalhando ativamente para resolvê-la.
 
 {% alert important %}
-Se você ainda estiver enfrentando problemas, [abra um chamado de suporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Antes de fazer isso, verifique se seu administrador de TI confirmou que `*.bz-rndr.com` está na lista de permissões do seu lado.
+Se ainda estiver com problemas, [abra um tíquete de suporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Antes de fazer isso, verifique se o administrador de TI confirmou que o site `*.bz-rndr.com` está na lista de permissões em seu local.
 {% endalert %}
 
-### Acessando o Braze Learning
+### Acessando o aprendizado do Braze
 
-Se você está enfrentando problemas para fazer login no Braze Learning e se encontra preso em um loop que o redireciona para o painel, siga os seguintes passos:
+Se estiver com problemas para registrar-se no Braze Learning e ficar preso em um loop que o redireciona para o dashboard, siga as etapas a seguir:
 
-1. Se você tiver várias contas Braze, fazer login com a conta errada duas vezes o enviará para o painel do Braze. Confirme se você está fazendo login na conta correta. 
-2. Se você tiver um bloqueador de anúncios, confirme se ele está desligado. Ele pode bloquear cookies necessários para a funcionalidade de login único.
-3. Vá para Configurações da Empresa > Configurações de Segurança e verifique se o login único (SSO) está ativado.
-4. Confirme que o perfil de usuário do seu painel inclui tanto um nome quanto um sobrenome. Não ter um sobrenome pode interromper o processo de login.
-5. Acesse o Braze Learning a partir do seu painel indo para **Suporte** > **Braze Learning**. 
-6. Se você continuar a ter problemas, considere recriar sua conta. Usuários que acessaram o Braze Learning durante a fase de teste gratuito podem ter dificuldades para acessá-lo agora.
+1. Se você tiver várias contas Braze, o registro com a conta errada duas vezes o enviará para o dashboard Braze. Confirme se está registrando a conta correta. 
+2. Se você tiver um bloqueador de anúncios, confirme se ele está desativado. Ele pode bloquear os cookies necessários para a funcionalidade de logon único.
+3. Acesse Configurações da empresa > Configurações de segurança e verifique se o logon único (SSO) está ativado.
+4. Confirme se o perfil de usuário do dashboard inclui um nome e um sobrenome. O fato de não ter um sobrenome pode atrapalhar o processo de login.
+5. Acesse o Braze Learning em seu dashboard, indo para **Suporte** > **Braze Learning**. 
+6. Se continuar a ter problemas, considere a possibilidade de recriar sua conta. Os usuários que acessaram o Braze Learning durante a fase de teste gratuito podem ter dificuldades para acessá-lo agora.
 
-### Problemas de autenticação de dois fatores (2FA)
+### Problemas com a autenticação de dois fatores (2FA)
 
-Se um usuário está enfrentando problemas com a Autenticação de Dois Fatores (2FA) e não consegue acessar o painel do Braze, pode ser devido a várias razões. Mais comumente, eles podem não ter mais acesso ao número de telefone registrado ou ao dispositivo onde o aplicativo Authy está instalado.
+Se um usuário estiver enfrentando problemas com a autenticação de dois fatores (2FA) e não conseguir acessar o dashboard do Braze, isso pode ser devido a vários motivos. Mais comumente, eles podem não ter mais acesso ao número de telefone registrado ou ao dispositivo em que o app Authy está instalado.
 
-Um administrador deve redefinir o 2FA para o usuário afetado fazendo o seguinte: 
+Um administrador deve redefinir a 2FA para o usuário afetado fazendo o seguinte: 
 
-1. Vá para **Gerenciar Usuários**.
-2. Selecione **Editar Usuário** para o usuário que está enfrentando problemas com 2FA.
-3. Escolha a opção para Redefinir 2FA.
-4. Confirme a redefinição de 2FA quando solicitado.
-5. Se a redefinição não resolver imediatamente o problema, limpe seus cookies e cache.
+1. Acesse **Gerenciar usuários**.
+2. Selecione **Editar usuário** para o usuário que está tendo problemas com a 2FA.
+3. Escolha a opção para redefinir a 2FA.
+4. Confirme a redefinição da 2FA quando solicitado.
+5. Se a redefinição não resolver o problema imediatamente, limpe os cookies e o cache.
 
-A Braze não pode redefinir o 2FA em nome dos usuários por razões de segurança, então, se o administrador não conseguir redefinir o 2FA, um ticket de suporte deve ser criado.
+O Braze não pode redefinir a 2FA em nome dos usuários por motivos de segurança, portanto, se o administrador não puder redefinir a 2FA, crie um ticket de suporte.
 
 #### Considerações
 
-- Se o 2FA for imposto no nível da empresa: Após a redefinição, o usuário será solicitado a configurar seu 2FA novamente na próxima vez que fizer login.
-- Se o 2FA não for imposto no nível da empresa: O usuário fará login no painel sem precisar configurar o 2FA novamente. Se desejarem habilitar o 2FA, podem fazê-lo nas Configurações da Conta.
+- Se a 2FA for aplicada em nível de empresa: Após a redefinição, o Braze solicita que o usuário configure a 2FA novamente na próxima vez que fizer o registro.
+- Se a 2FA não for aplicada em nível de empresa: O usuário fará o registro no dashboard sem precisar configurar a 2FA novamente. Se desejarem ativar a 2FA, poderão fazê-lo nas Configurações da conta.
 
 {% alert note %}
-Esse processo de redefinição também se aplica a usuários que foram bloqueados de suas contas devido a solicitações de muitos tokens na última hora.
+Esse processo de redefinição também se aplica a usuários que foram bloqueados em suas contas devido à solicitação de muitos tokens na última hora.
 {% endalert %}

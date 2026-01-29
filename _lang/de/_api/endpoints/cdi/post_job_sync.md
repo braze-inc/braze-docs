@@ -21,15 +21,15 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Trigger sync Bra
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `cdi.integration_sync` erstellen.
 {% endalert %}
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='cdi job sync' %}
 
 ## Pfad-Parameter
 
-| Parameter | Erforderlich | Daten Typ | Beschreibung |
+| Parameter | Erforderlich | Datentyp | Beschreibung |
 |---|---|---|---|
-| `integration_id` | Erforderlich | String | Integration ID. |
+| `integration_id` | Erforderlich | String | Integration ID. Sie finden dies in der URL, wenn Sie eine Integration im Braze-Dashboard anzeigen. Das URL-Format lautet `https://[instance].braze.com/integrations/cloud_data_ingestion/[integration_id]`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -56,13 +56,13 @@ Der Status Code `202` könnte den folgenden Antwortkörper zurückgeben:
 
 In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehler und die entsprechenden Schritte zur Fehlerbehebung.
 
-| Fehler | Fehlerbehebung |
+| Fehler | Fehlersuche |
 | --- | --- |
 | `400 Invalid integration ID` | Prüfen Sie, ob Ihre `integration_id` gültig ist. |
 | `404 Integration not found` | Für die angegebene Integration ID existiert keine Integration. Vergewissern Sie sich, dass Ihre Integration ID gültig ist. |
 | `429 Another job is in progress` | Für diese Integration wird derzeit eine Synchronisierung durchgeführt. Versuchen Sie es erneut, nachdem die Synchronisierung abgeschlossen ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
+Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

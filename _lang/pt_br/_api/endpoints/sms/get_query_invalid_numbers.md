@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Consulta de números de telefone inválidos"
+nav_title: "OBTER: Consulta de números telefônicos inválidos"
 article_title: "OBTER: Consulta de números de telefone inválidos"
 search_tag: Endpoint
 page_order: 1
@@ -34,7 +34,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 | `limit` | Opcional | Inteiro | Campo opcional para limitar o número de resultados retornados. O padrão é 100, o máximo é 500. |
 | `offset` | Opcional | Inteiro | Ponto inicial opcional na lista a ser recuperado. |
 | `phone_numbers` | Opcional <br>(ver nota) | Matriz de strings no formato e.164  | Se fornecido, devolveremos o número de telefone se ele for considerado inválido. |
-| `reason` | Opcional <br>(ver nota) | String | Os valores disponíveis são "provider_error" (o erro do provedor indica que o telefone não pode receber SMS) ou "deactivated" (o número de telefone foi desativado). Se omitido, todos os motivos são retornados. |
+| `reason` | Opcional <br>(ver nota) | String | Os valores disponíveis são "provider_error" (o erro do provedor indica que o telefone não pode receber SMS) ou "desativado" (o número de telefone foi desativado). Se omitido, todos os motivos são retornados. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 As entradas são listadas em ordem decrescente.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

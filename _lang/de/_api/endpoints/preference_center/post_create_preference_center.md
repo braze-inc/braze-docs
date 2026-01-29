@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Präferenz-Center erstellen"
+nav_title: "POST: Präferenzzentrum erstellen"
 article_title: "POST: Präferenz-Center erstellen"
 search_tag: Endpoint
 page_order: 4
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Einstellungszentrum
 {% api %}
 # Präferenzzentrum erstellen
 {% apimethod post %}
-/präferenz_zentrum/v1
+/preference_center/v1
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um ein Einstellungszentrum zu erstellen, mit dem Nutzer:innen ihre Benachrichtigungspräferenzen für Ihre E-Mail Kampagnen verwalten können. Unter [Erstellen eines Einstellungscenters mit API]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/#creating-a-preference-center-with-api) finden Sie Schritte, wie Sie ein API-generiertes Einstellungscenter erstellen.
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Parameter der Anfrage
@@ -81,7 +81,7 @@ Beachten Sie die folgenden Liquid-Tags, die Sie in Ihr HTML einfügen können, u
 
 | Liquid | Beschreibung |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| Ermittelt den globalen Status des Nutzers:in Bezug auf die abonnierten E-Mails (z.B. "opted_in", "subscribed" oder "unsubscribed"). |
+|`{{subscribed_state.${email_global}}}`| Ermittelt den globalen Status des Nutzers:in Bezug auf die abonnierten E-Mails (z.B. "opted_in", "abonniert" oder "abgemeldet"). |
 |`{{subscribed_state.${<subscription_group_id>}}}`| Ermittelt den Status des Abonnements der angegebenen Abo-Gruppe für den Nutzer:in (z.B. "abonniert" oder "abgemeldet"). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -89,7 +89,7 @@ Beachten Sie die folgenden Liquid-Tags, die Sie in Ihr HTML einfügen können, u
 
 | Liquid | Beschreibung |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| Zeigt an, dass ein bestimmtes Formulareingabeelement dem globalen E-Mail-Abonnement des Nutzers:in entspricht. Der Auswahlstatus des Nutzers:in sollte "opted_in", "Abonnent:in" oder "abgemeldet" sein, wenn das Formular mit Auswahldaten für den globalen E-Mail-Abonnentenstatus übermittelt wird. Wenn es sich um ein Kontrollkästchen handelt, wird der Nutzer:in entweder "opted_in" oder "abgemeldet". Bei einer ausgeblendeten Eingabe gilt auch der Status "abonniert". |
+|`{% form_field_name :email_global_state %}`| Zeigt an, dass ein bestimmtes Formulareingabeelement dem globalen E-Mail-Abonnement des Nutzers:in entspricht. Der Auswahlstatus des Nutzers sollte "opted_in", "Abonnent:in" oder "abgemeldet" sein, wenn das Formular mit Auswahldaten für den globalen E-Mail-Abonnentenstatus übermittelt wird. Wenn es sich um ein Kontrollkästchen handelt, wird der Nutzer:in entweder "opted_in" oder "abgemeldet". Bei einer ausgeblendeten Eingabe gilt auch der Status "abonniert". |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| Zeigt an, dass ein bestimmtes Formulareingabeelement einer bestimmten Abo-Gruppe entspricht. Der Auswahlstatus des Nutzers sollte entweder "abonniert" oder "abgemeldet" sein, wenn das Formular mit Auswahldaten für eine bestimmte Abo-Gruppe übermittelt wird. |
 |`{{preference_center_submit_url}}`| Erzeugt die URL für die Formularübermittlung. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

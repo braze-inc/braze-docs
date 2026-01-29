@@ -7,7 +7,7 @@ description: "Machen Sie sich mit den wichtigsten Konzepten vertraut, die Sie be
 
 ---
 
-# Erste Schritte: Braze Übersicht
+# Beginnen Sie: Braze Übersicht
 
 Willkommen bei Braze! Diese Artikelsammlung wird Ihnen den Einstieg in unsere Plattform erleichtern und Sie mit den wichtigsten Begriffen, Merkmalen und Funktionalitäten von Braze vertraut machen. Auf dieser Seite werden die wichtigsten Konzepte vorgestellt, die Sie bei der Arbeit mit Braze kennen müssen.
 
@@ -24,7 +24,7 @@ Lassen Sie uns gemeinsam die Macht von Braze entdecken.
 Braze ist eine Plattform zur Kundenbindung, die Marken jeder Größe dabei hilft, personalisierte und gezielte Kampagnen über verschiedene Kanäle zu erstellen. Braze gibt Ihnen die Möglichkeit, Ihren Kunden zuzuhören, zu verstehen, was ihr Verhalten signalisiert, und dann zu handeln, indem Sie Ihren Kunden die richtige Nachricht über den richtigen Kanal und zur richtigen Zeit schicken.
 
 {% alert tip %}
-Stellen Sie sicher, dass Sie [Ihre Kollegen zu Braze hinzufügen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users), damit sie die Plattform gemeinsam mit Ihnen erkunden können.
+Stellen Sie sicher, dass Sie [Ihre Kollegen zu Braze hinzufügen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/), damit sie die Plattform gemeinsam mit Ihnen erkunden können.
 {% endalert %}
 
 ## Benutzer und Segmente
