@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Actualizar lienzos programados desencadenados por la API"
-article_title: "POST: Actualizar lienzos programados desencadenados por la API"
+nav_title: "PUBLICAR: Actualizar lienzos programados desencadenados por la API"
+article_title: "PUBLICAR: Actualizar lienzos programados desencadenados por la API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -16,13 +16,13 @@ description: "En este artículo se describen los detalles del punto final Actual
 
 > Utiliza este punto final para actualizar los Lienzos programados desencadenados por la API que se crearon en el panel.
 
-Esto te permite decidir qué acción debe desencadenar el envío del mensaje. Puedes introducir `trigger_properties`, que se incluirá como plantilla en el propio mensaje.
+Esto te permite decidir qué acción desencadena el envío del mensaje. Puedes pasar en `trigger_properties` las plantillas de Braze al propio mensaje.
 
 Ten en cuenta que para enviar mensajes con este punto final, debes tener un ID de Canvas, creado cuando construyes un [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
-Cualquier horario sobrescribirá completamente el que hayas proporcionado en la solicitud de crear horario o en anteriores solicitudes de actualizar horario.
-  - Por ejemplo, si originalmente proporciona `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` y luego en su actualización proporciona `"schedule" : {"time" : "2015-02-20T14:14:47"}`, su mensaje ahora se enviará a la hora proporcionada en UTC, no en la hora local del usuario.
-  - Los desencadenantes programados que se actualicen muy cerca de la hora a la que debían enviarse, o durante la misma, se actualizarán con el máximo esfuerzo, por lo que los cambios de último segundo podrían aplicarse a todos, a algunos o a ninguno de sus usuarios objetivo.
+Cualquier horario sobrescribirá completamente el que haya proporcionado en la solicitud de creación de horario o en anteriores solicitudes de actualización de horario.
+  - Por ejemplo, si originalmente proporcionas `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` y luego en tu actualización proporcionas `"schedule" : {"time" : "2015-02-20T14:14:47"}`, Braze envía tu mensaje a la hora proporcionada en UTC, no en la hora local del usuario.
+  - Los desencadenantes programados que actualices cerca de la hora a la que debían enviarse o durante la misma se actualizan con el máximo esfuerzo, por lo que Braze puede aplicar cambios de último momento a todos, a algunos o a ninguno de tus usuarios objetivo.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 
