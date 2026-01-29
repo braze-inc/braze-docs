@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Liste verfügbarer E-Mail Templates"
+nav_title: "GET: Liste der verfügbaren E-Mail Templates"
 article_title: "GET: Liste verfügbarer E-Mail Templates"
 search_tag: Endpoint
 page_order: 4
@@ -41,15 +41,13 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
 ```
 
-## Antwort 
+## Antwort
 
 {% alert important %}
 Templates, die mit dem Drag-and-Drop-Editor für E-Mails erstellt wurden, werden in dieser Antwort nicht bereitgestellt.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": the number of templates returned
   "templates": [template with the following properties]:

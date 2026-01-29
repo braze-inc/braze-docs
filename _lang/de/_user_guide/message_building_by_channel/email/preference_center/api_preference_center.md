@@ -140,3 +140,39 @@ Dann könnten Sie über Currents herausfinden, welche Nutzer:innen Spanisch spre
 ### Sind sowohl Abmelde-Links als auch E-Mail-Präferenzzentren für den Versand erforderlich?
 
 Nein. Wenn Sie beim Verfassen einer E-Mail-Kampagne die Nachricht "Ihr E-Mail-Text enthält keinen Abmeldelink" sehen, wird diese Warnung erwartet, wenn sich Ihr Abmeldelink in einem Content-Block befindet.
+
+### Wie kann ich das Standard-Browsersymbol aktualisieren?
+
+Standardmäßig wird für das Symbol neben dem Namen des Browser Tabs (Favicon) das Braze Logo verwendet. Um ein angepasstes Favicon hinzuzufügen, legen Sie es über das Attribut `links-tags` in Ihrem Create oder Update [Preference Center API-Aufruf]({{site.baseurl}}/api/endpoints/preference_center) fest. Braze speist dann den Tag {% raw %}`<link rel="icon" ...>`{% endraw %} für Sie in die gehostete Seite ein.
+
+{% raw %}
+```
+{
+  "name": "MyPreferenceCenter",
+  "preference_center_title": "Email Preferences",
+  "preference_center_page_html": "<!doctype html> ...",
+  "confirmation_page_html": "<!doctype html> ...",
+  "state": "active",
+  "options": {
+    "links-tags": [
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "32x32",
+        "href": "https://yourcdn.com/path/to/favicon-32x32.png"
+      },
+      {
+        "rel": "shortcut icon",
+        "type": "image/x-icon",
+        "href": "https://yourcdn.com/path/to/favicon.ico"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://yourcdn.com/path/to/apple-touch-icon.png"
+      }
+    ]
+  }
+}
+```
+{% endraw %}
