@@ -23,7 +23,7 @@ Die Seite **Abrechnung** enthält die folgenden Registerkarten:
 
 ## Abos und Nutzung
 
-Die Registerkarte **Abonnements und Nutzung** enthält Nutzungsdiagramme und Ihre Vertragsdetails.
+Die Registerkarte **Abonnements und Nutzung** enthält Nutzungsdiagramme und Ihre Vertragsdetails. Die Daten auf dieser Seite werden täglich um 10:00 PM Eastern Time (ET) aktualisiert. Sie spiegelt nicht die Realtime-Aktivität wider.
 
 ### Diagramme zur Nutzung
 
@@ -36,6 +36,10 @@ Diese Diagramme können monatlich aktive Nutzer:innen, eindeutige Besucher:innen
 ### Vertragsdetails
 
 Unter Vertragsdetails finden Sie das Anfangs- und Enddatum Ihres aktuellen Vertrags mit Braze.
+
+#### Überlegungen
+
+Wenn Ihr Vertrag monatlich eindeutige Besucher (MUV) verwendet und Sie zu einem Vertrag wechseln, der nur monatlich aktive Nutzer:in (MAU) verwendet, erscheinen Ihre historischen Daten weiterhin im MUV-Diagramm und Ihre neuen Daten nur im MAU-Diagramm. Wenn Ihr Vertrag zum Beispiel im Oktober endet, zeigt das MUV-Diagramm Daten bis Ende September an.
 
 ## Meistgenutzte Events und Attribute nach App
 
@@ -53,7 +57,7 @@ Aufschlüsselungen wie diese können Ihnen helfen zu verstehen, welche Datenpunk
 
 Der Tab **Datenpunkt-Nutzung insgesamt** bietet einen detaillierten Einblick in Ihre Datenpunkt-Nutzung. Sie können alle Daten in diesem Bereich entweder nach Wochen oder Monaten aggregiert anzeigen.
 
-![Filtern der Datenpunkt-Nutzung nach Wochen]({% image_buster /assets/img/subscription_and_billing2.png %})
+![Filtern der Datenpunktverwendung nach Wochen]({% image_buster /assets/img/subscription_and_billing2.png %})
 
 ### Vertragsdetails
 
@@ -66,7 +70,7 @@ Die Felder in diesem Abschnitt sind wie folgt definiert:
 - **Datenpunkte-Kontingent:** Die Anzahl der Datenpunkte, die der Vertrag pro Abrechnungszeitraum vorsieht.
 - **Datenpunktnutzung gemäß Vertrag:** Eine kumulative Summe aller Datenpunkte, die während der Lifetime des Vertrags protokolliert wurden und in der nächsten Abrechnungsperiode nicht zurückgesetzt werden.
 
-![Abschnitt Vertragsdetails des Tabs Datenpunkt-Nutzung insgesamt]({% image_buster /assets/img/contract_details.png %})
+![Abschnitt "Vertragsdetails" auf dem Tab "Datenpunkt-Nutzung insgesamt"]({% image_buster /assets/img/contract_details.png %})
 
 ### Rechnungsdaten des Unternehmens
 
@@ -74,11 +78,11 @@ Die Felder in diesem Abschnitt sind wie folgt definiert:
 
 Dieses Diagramm zeigt die Nutzung Ihrer Datenpunkte in verschiedenen Anwendungen.
 
-![App Level Total Data Point Usage zeigt die für jede App verwendeten Datenpunkte an.]({% image_buster /assets/img/app_level_total.png %})
+!["Datenpunkt-Nutzung gesamt auf App-Ebene" zeigt die für jede App verwendeten Datenpunkte an.]({% image_buster /assets/img/app_level_total.png %})
 
 Wählen Sie eine der Summen aus, um die Tabelle **Datenpunktnutzung im Laufe der Zeit** anzuzeigen, in der die wöchentlichen Summen der Datenpunkte für jeden Arbeitsbereich aufgeführt sind.  Zeilen mit einer leeren Spalte **App-Name** stellen Datenpunkte dar, die keiner App zugeordnet sind (z. B. Datenpunkte, die in Anfragen verwendet werden, die keine `app_id` angeben).
 
-![Datenpunkt-Nutzung im Zeitverlauf mit den gesamten wöchentlichen Datenpunkten für zwei Workspaces.]({% image_buster /assets/img/data_point_usage_time.png %})
+![Datenpunkt-Nutzung im Laufe der Zeit mit den gesamten wöchentlichen Datenpunkten für zwei Workspaces.]({% image_buster /assets/img/data_point_usage_time.png %})
 
 #### Workspace Datenpunkt-Nutzung
 
@@ -90,11 +94,11 @@ Mit dieser Grafik können Sie die Gesamtnutzung der Datenpunkte eines Unternehme
 
 Anhand dieses Diagramms können Sie sehen, wie sich die Nutzung von Datenpunkten auf verschiedene Ereignisquellen verteilt, z. B. auf verschiedene API-Attribute, benutzerdefinierte Ereignisse und Sitzungen.
 
-Die Datenpunkt-Nutzung nach Ereignisquelle im Abrechnungszyklus zeigt die Zuordnung der Datenpunkte zu den verschiedenen Ereignisquellen an.]({% image_buster /assets/img/event_source_stats.png %})
+![Datenpunkt-Nutzung im Abrechnungszyklus nach Event-Quelle, wobei die Zuordnung der Datenpunkte zu den verschiedenen Event-Quellen angezeigt wird.]({% image_buster /assets/img/event_source_stats.png %})
 
 #### Datenpunkt-Nutzung im Laufe der Zeit
 
 Anhand dieses Diagramms können Sie schnell Ihre gesamte Datenpunkt-Nutzung im Vergleich zu der Ihnen zugeteilten Menge an Datenpunkten sehen.
 
-![Datenpunkt-Nutzung im Zeitverlauf, wobei die für den aktuellen Abrechnungszyklus zugeteilten Datenpunkte mit der laufenden Gesamtsumme verglichen werden]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
+![Datenpunktnutzung im Zeitverlauf, wobei die für den aktuellen Abrechnungszyklus zugewiesenen Datenpunkte der laufenden Gesamtzahl gegenübergestellt werden]({% image_buster /assets/img/company_data_point_usage_time.png %}){: style="max-width:90%;"}
 
