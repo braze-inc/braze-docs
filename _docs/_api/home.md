@@ -476,7 +476,7 @@ glossaries:
     tags:
       - SDK Authentication
   - name: <a href='/docs/api/endpoints/media_library/manage_assets/create/'>/media_library/create</a>
-    description: Upload an asset to the media library
+    description: Upload an asset to the media library.
     tags:
       - Media Library
 ---
