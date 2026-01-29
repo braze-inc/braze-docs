@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Excluir item de catálogo"
+nav_title: "DELETE: exclui item do catálogo"
 article_title: "DELETE: Excluir item de catálogo"
 search_tag: Endpoint
 page_order: 1
