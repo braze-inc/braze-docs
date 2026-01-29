@@ -114,7 +114,7 @@ When you initially integrate Braze, all users will look like new users because B
 {% endalert %}
 
 {% alert important %}
-Users associated with more than one app are counted separately for each app. This means a single user can contribute to the New Users count multiple times if they start sessions across different apps in your workspace.
+Users associated with more than one app are counted separately for each app. This means a single user can contribute to the *New Users* count multiple times if they start sessions across different apps in your workspace.
 {% endalert %}
 
 ### Stickiness
