@@ -1,9 +1,9 @@
 ---
-nav_title: "Tipos de identificadores de API"
+nav_title: "Tipos de identificadores da API"
 article_title: Tipos de identificadores de API
 page_order: 2.2
 toc_headers: h2
-description: "Este artigo de referência aborda os diferentes tipos de identificadores de API que existem no dashboard do Braze, onde você pode encontrá-los e para que são usados." 
+description: "Este artigo de referência aborda os diferentes tipos de identificadores de API que existem no dashboard do Braze, onde você pode encontrá-los e para que são usados."
 page_type: reference
 
 ---
@@ -12,23 +12,23 @@ page_type: reference
 
 > Este guia de referência aborda os diferentes tipos de identificadores de API que podem ser encontrados no dashboard da Braze, sua finalidade, onde você pode encontrá-los e como eles são normalmente usados. Para obter informações sobre as chaves da API REST ou as chaves da API do espaço de trabalho, consulte a [visão geral da API]({{site.baseurl}}/api/api_key/).
 
-Os seguintes identificadores podem ser usados para acessar seu modelo, canva, campanha ou segmento da API externa do Braze. Todas as mensagens devem seguir a codificação [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
+Os seguintes identificadores podem ser usados para acessar seu modelo, Canva, campanha ou segmento a partir da API externa do Braze. Todas as mensagens devem seguir a codificação [UTF-8](https://en.wikipedia.org/wiki/UTF-8).
 
 ## Identificador do app
 
-O identificador de aplicativo ou `app_id` é um parâmetro que associa a atividade a um app específico em seu espaço de trabalho. Ele designa com qual app dentro do espaço de trabalho você está interagindo. Por exemplo, você verá que terá um `app_id` para seu app para iOS, um `app_id` para seu app para Android e um `app_id` para sua integração na Web. No Braze, você pode descobrir que tem vários apps para a mesma plataforma nos vários tipos de plataforma suportados pelo Braze.
+O identificador de aplicativo ou `app_id` é um parâmetro que associa a atividade a um app específico em seu espaço de trabalho. Ele designa com qual app dentro do espaço de trabalho você está interagindo. Por exemplo, você descobre que tem um `app_id` para seu app para iOS, um `app_id` para seu app para Android e um `app_id` para sua integração na Web. No Braze, você pode descobrir que tem vários apps para a mesma plataforma nos vários tipos de plataforma suportados pelo Braze.
 
 ### Onde posso encontrá-lo?
 
 Há duas maneiras de localizar seu `app_id`:
 
 {% tabs local %}
-{% tab Identificadores de App %}
+{% tab App Identifiers %}
 Acessar **Configurações** > **APIs e Identificadores** > **Identificadores de Aplicativos**. Sua chave de API para cada app está listada na coluna **Identificador**.
 {% endtab %}
 
-{% tab Configurações do App %}
-Acessar **Configurações** > **Configurações do app**. Sua chave de API está listada ao lado do campo **Chave de API** na seção de configurações.
+{% tab App Settings %}
+Acesse **Configurações** > **Configurações do app**. Sua chave de API está listada ao lado do campo **Chave de API** na seção de configurações.
 
 {% endtab %}
 {% endtabs %}
@@ -38,14 +38,14 @@ Acessar **Configurações** > **Configurações do app**. Sua chave de API está
 Os identificadores de aplicativos no Braze são usados na integração do SDK e também são usados para fazer referência a um aplicativo específico nas chamadas da API REST. Com o `app_id`, é possível fazer muitas coisas, como extrair dados de um evento personalizado que ocorreu em um determinado app, recuperar estatísticas de desinstalação, estatísticas de novos usuários, estatísticas de DAU e estatísticas de início de sessão de um determinado app.
 
 {% alert tip %}
-Às vezes, você pode ser solicitado a fornecer um `app_id`, mas não está trabalhando com um app, porque é um campo legado específico de uma plataforma específica, você pode omitir este campo incluindo qualquer string de caracteres como um espaço reservado para este parâmetro obrigatório.
+Às vezes, pode ser que seja solicitado um `app_id`, mas você não está trabalhando com um app, porque é um campo legado específico para uma plataforma específica. Você pode omitir esse campo incluindo qualquer string de caracteres como espaço reservado para esse parâmetro obrigatório.
 {% endalert %}
 
 ### Vários identificadores de app
 
 Durante a configuração do SDK, o caso de uso mais comum para vários identificadores de app é separar esses identificadores para variantes de compilação de depuração e lançamento.
 
-Para alternar facilmente entre vários identificadores de app em suas compilações, recomendamos criar um arquivo `braze.xml` separado para cada [variante de build](https://developer.android.com/studio/build/build-variants.html) relevante. Uma variante de compilação é uma combinação de tipo de compilação e sabor do produto. Por padrão, um novo projeto Android é configurado com `debug` e `release` tipos de build e sem sabores de produto.
+Para alternar facilmente entre vários identificadores de app em suas compilações, recomendamos a criação de um arquivo `braze.xml` separado para cada [variante de compilação](https://developer.android.com/studio/build/build-variants.html) relevante. Uma variante de compilação é uma combinação de tipo de compilação e sabor do produto. Por padrão, um novo projeto Android é configurado com `debug` e `release` tipos de build e sem sabores de produto.
 
 Para cada variante de compilação relevante, crie um novo `braze.xml` para ela em `src/<build variant name>/res/values/`:
 
@@ -55,24 +55,24 @@ Para cada variante de compilação relevante, crie um novo `braze.xml` para ela 
 <string name="com_braze_api_key">{YOUR_BUILD_VARIANT_API_KEY}</string>
 </resources>
 ```
-Quando a variante de compilação for compilada, ela usará o novo identificador.
+Quando a variante de compilação é compilada, ela usa o novo identificador.
 
 ## Identificador do modelo
 
-Um identificador de [modelo]({{site.baseurl}}/api/endpoints/templates/) ou ID de modelo é uma chave aleatória gerada pelo Braze para um determinado modelo dentro do dashboard. Os IDs de modelo são exclusivos para cada modelo e podem ser usados para fazer referência a modelos por meio da API. 
+Um identificador de [modelo]({{site.baseurl}}/api/endpoints/templates/) ou ID de modelo é uma chave aleatória gerada pelo Braze para um determinado modelo dentro do dashboard. Os IDs de modelo são exclusivos para cada modelo e podem ser usados para fazer referência a modelos por meio da API.
 
-Modelos são ótimos se sua empresa contrata seus designs HTML para campanhas. Depois que os modelos foram construídos, você agora tem um modelo que não é específico para uma campanha, mas pode ser aplicado a uma série de campanhas, como um boletim informativo.
+Os modelos são ótimos se sua empresa contrata seus designs de HTML para campanhas. Depois que os modelos forem criados, você terá um modelo que não é específico para uma campanha, mas que pode ser aplicado a uma série de campanhas, como um boletim informativo.
 
 ### Onde posso encontrá-lo?
 
-Você pode encontrar seu ID de modelo de duas maneiras:
+Você pode encontrar o ID do modelo de duas maneiras:
 
 {% tabs local %}
-{% tab Modelos %}
-Acesse **Modelos**, selecione uma página de modelo e, em seguida, selecione um modelo pré-existente. Se o modelo que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página do modelo individual, você poderá encontrar o identificador do modelo.
+{% tab Templates %}
+Acesse **Modelos**, selecione uma página de modelo e, em seguida, selecione um modelo pré-existente. Se o modelo que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página do modelo individual, você pode encontrar o identificador do modelo.
 {% endtab %}
 
-{% tab Chaves de API %}
+{% tab API Keys %}
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
 {% endtab %}
@@ -85,9 +85,9 @@ Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece u
 
 ## Identificador de tela
 
-Um identificador [canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/) ou ID de canva é uma chave aleatória gerada pelo Braze para um determinado canva dentro do dashboard. As IDs do Canvas são exclusivas para cada Canvas e podem ser usadas para fazer referência a Canvases por meio da API. 
+Um identificador de [tela]({{site.baseurl}}/user_guide/engagement_tools/canvas/) ou ID de tela é uma chave aleatória gerada pelo Braze para uma determinada tela dentro do dashboard. As IDs do Canvas são exclusivas para cada Canvas e podem ser usadas para fazer referência a Canvases por meio da API.
 
-Tenha em mente que se você tiver um canva que possui variantes, existe um ID de canva geral, bem como IDs de canva de variantes individuais aninhados sob o canva principal. 
+Lembre-se de que, se você tiver um Canvas com variantes, haverá um ID geral do Canvas, bem como IDs de Canvas de variantes individuais aninhados sob o Canvas principal.
 
 ### Onde posso encontrá-lo?
 
@@ -99,25 +99,25 @@ Você pode encontrar seu ID do canva no dashboard. Acesse **Envio de mensagens**
 - Obtenha estatísticas agregadas de alto nível sobre a performance do Canva
 - Obter detalhes sobre um Canva específico
 - Com o Currents para trazer dados de nível de usuário para uma abordagem "mais ampla" do Canvas
-- Com entrega acionada por API para coletar estatísticas para mensagens transacionais
+- Com entrega disparada por API para coletar estatísticas de mensagens transacionais
 
 ## Identificador de campanha
 
-Um identificador [campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou ID de campanha é uma chave aleatória gerada pelo Braze para uma determinada campanha dentro do dashboard. Os IDs de campanha são exclusivos para cada campanha e podem ser usados para fazer referência a campanhas por meio da API. 
+Um identificador [de campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou ID de campanha é uma chave aleatória gerada pelo Braze para uma determinada campanha dentro do dashboard. Os IDs de campanha são exclusivos para cada campanha e podem ser usados para fazer referência a campanhas por meio da API.
 
-Tenha em mente que, se você tiver uma campanha que possui variantes, há tanto um ID de campanha geral quanto IDs de campanha de variantes individuais aninhados sob a campanha principal. 
+Tenha em mente que, se você tiver uma campanha que possui variantes, há tanto um ID de campanha geral quanto IDs de campanha de variantes individuais aninhados sob a campanha principal.
 
 ### Onde posso encontrá-lo?
 
 Você pode encontrar seu ID de campanha de duas maneiras:
 
 {% tabs local %}
-{% tab Campanhas %}
-Acesse **Envio de mensagens** > **Campanhas** e selecione uma campanha pré-existente. Se a campanha que você deseja ainda não existir, crie uma e salve-a. Na parte inferior da página da campanha individual, você poderá encontrar seu **Campaign API Identifier**.
+{% tab Campaigns %}
+Acesse **Envio de mensagens** > **Campanhas** e selecione uma campanha pré-existente. Se a campanha que você deseja ainda não existir, crie uma e salve-a. Na parte inferior da página da campanha individual, você pode encontrar seu **Campaign API Identifier**.
 
 {% endtab %}
 
-{% tab Chaves de API %}
+{% tab API Keys %}
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
 {% endtab %}
@@ -129,24 +129,24 @@ Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece u
 - Obtenha estatísticas agregadas de alto nível sobre a performance da campanha
 - Obter detalhes sobre uma campanha específica
 - Com o Currents para trazer dados de usuários para uma abordagem "mais ampla" das campanhas
-- Com entrega acionada por API para coletar estatísticas para mensagens transacionais
+- Com entrega disparada por API para coletar estatísticas de mensagens transacionais
 - Para [pesquisar uma campanha específica]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/#search-syntax) na página **Campaigns** usando o filtro `api_id:YOUR_API_ID`
 
 ## Identificador de segmento
 
-Um identificador [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) ou ID de segmento é uma chave aleatória gerada pelo Braze para um determinado segmento dentro do dashboard. As IDs de segmento são exclusivas para cada segmento e podem ser usadas para fazer referência a segmentos por meio da API. 
+Um identificador de [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) ou ID de segmento é uma chave aleatória gerada pelo Braze para um determinado segmento dentro do dashboard. As IDs de segmento são exclusivas para cada segmento e podem ser usadas para fazer referência a segmentos por meio da API.
 
 ### Onde posso encontrá-lo?
 
-Você pode encontrar seu ID de segmento de duas maneiras:
+Você pode encontrar sua ID de segmento de duas maneiras:
 
 {% tabs local %}
-{% tab Segmentos %}
-Acesse **Público** > **Segmentos** e selecione um segmento pré-existente. Se o segmento que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página de segmento individual, você poderá encontrar seu identificador de segmento.
+{% tab Segments %}
+Acesse **Público** > **Segmentos** e selecione um segmento pré-existente. Se o segmento que você deseja ainda não existir, crie um e salve-o. Na parte inferior da página de segmento individual, você pode encontrar seu identificador de segmento.
 
 {% endtab %}
 
-{% tab Chaves de API %}
+{% tab API Keys %}
 Acesse **Configurações** > **APIs e identificadores**. Aqui, o Braze oferece uma pesquisa de **identificadores adicionais de API**, onde você pode procurar identificadores específicos.
 
 {% endtab %}
@@ -165,7 +165,7 @@ Um identificador de envio, ou ID de envio, é uma chave gerada pelo Braze ou cri
 
 ### Onde posso encontrá-lo?
 
-As campanhas disparadas por API e API que são enviadas como um broadcast gerarão automaticamente um identificador de envio se um identificador de envio não for fornecido. Se você quiser especificar seu próprio identificador de envio, primeiro terá de criar um por meio do [endpoint`/sends/id/create` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/). O identificador precisa conter todos os caracteres ASCII e ter no máximo 64 caracteres. Você pode reutilizar um identificador de envio em vários envios da mesma campanha se quiser agrupar a análise desses envios.
+As campanhas disparadas por API e API que são enviadas como um broadcast geram automaticamente um identificador de envio se um identificador de envio não for fornecido. Se quiser especificar seu próprio identificador de envio, você deve primeiro criar um por meio do [ponto de extremidade`/sends/id/create` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/). O identificador precisa conter todos os caracteres ASCII e ter no máximo 64 caracteres. Você pode reutilizar um identificador de envio em vários envios da mesma campanha se quiser agrupar a análise desses envios.
 
 ### Para que ele pode ser usado?
 Envie e rastreie a performance das mensagens de forma programática, sem a criação de campanhas para cada envio.
