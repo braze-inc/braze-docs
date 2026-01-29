@@ -31,16 +31,16 @@ Camila empieza modelando el resultado que quiere evitar: que los usuarios se vue
 3. Para definir el abandono, selecciona `do not` y el evento personalizado `stream_started`, que indica una interacción activa.
 4. Establece la ventana de predicción en 14 días, lo que significa que el modelo identificará a los usuarios que probablemente pasen 14 días sin iniciar un nuevo flujo.
 
-\![Definición de abandono que muestra el abandono definido como un usuario que no realiza un evento personalizado "stream_started" en los últimos 14 días.]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
+![Definición de abandono que muestra el abandono definido como un usuario que no realiza un evento personalizado "stream_started" en los últimos 14 días.]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
 
 {:start="5"}
-5\. Selecciona una audiencia de predicción que incluya a todos los usuarios que hayan desencadenado eventos relevantes en los últimos 30 días, lo que proporciona al modelo suficiente comportamiento reciente del que aprender.
+5\. Selecciona una audiencia de predicción que incluya a todos los usuarios que hayan desencadenado eventos relevantes en los últimos 30 días, lo que proporciona al modelo un comportamiento reciente suficiente del que aprender.
 6\. Establece el programa de actualización de predicciones en semanal para que los resultados se mantengan actualizados.
 7\. Selecciona **Crear predicción**.
 
-A continuación, el modelo empieza a entrenarse, analizando comportamientos como las sesiones recientes, la frecuencia de visionado y las interacciones con el contenido para sacar a la luz patrones que predigan el abandono. Camila recibe un correo electrónico una hora después de que su predicción ha terminado el entrenamiento, así que lo abre en Braze y comprueba la puntuación de [calidad de la predicción]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#prediction_quality). Está etiquetado como "Bueno", lo que significa que es probable que las predicciones del modelo sean precisas y fiables. Confiada en el rendimiento del modelo, sigue adelante.
+A continuación, el modelo empieza a entrenarse, analizando comportamientos como las sesiones recientes, la frecuencia de visionado y las interacciones con el contenido para sacar a la luz patrones que predigan el abandono. Camila recibe un correo electrónico una hora después de que su predicción ha terminado de entrenarse, así que lo abre en Braze y comprueba la puntuación de [calidad de la predicción]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#prediction_quality). Está etiquetado como "Bueno", lo que significa que es probable que las predicciones del modelo sean precisas y fiables. Confiada en el rendimiento del modelo, sigue adelante.
 
-## Paso 2: Segmenta a los usuarios por riesgo de abandono
+## Paso 2: Segmenta a los usuarios por riesgo de abandono
 
 Cuando el modelo termina de entrenarse, Braze asigna a cada usuario elegible una [Puntuación de Riesgo de Abandono de]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/#churn_score) entre 0 y 100. 
 
@@ -50,20 +50,20 @@ Para determinar un umbral de partida para la segmentación, Camila utiliza el co
 2. Crea un [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) utilizando el [filtro Puntuación de riesgo de abandono]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#churn-risk-score) y selecciona la predicción de abandono que ha creado:
    - **Es probable que abandonen:** Puntuación superior al 70
 
-Filtrar por segmentos a los usuarios con una puntuación de riesgo de abandono superior a 70.]({% image_buster /assets/img/ai_use_cases/churn_risk_score.png %})
+![Filtrar por segmentos a los usuarios con una puntuación de riesgo de abandono superior a 70.]({% image_buster /assets/img/ai_use_cases/churn_risk_score.png %})
 
-## Paso 3: Dirígete a usuarios de riesgo con contenidos recurrentes de reactivación de la interacción
+## Paso 3: Dirígete a usuarios de riesgo con contenidos recurrentes de reactivación de la interacción
 
 Con su predicción y segmento listos, Camila configura una campaña recurrente que llega automáticamente a los usuarios que se ponen en riesgo cada semana.
 
-1. Camila crea una campaña recurrente y habilita [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), para que cada mensaje se entregue cuando cada usuario individual tenga más probabilidades de interactuar, en lugar de depender de un día y una hora fijos.
+1. Camila crea una campaña recurrente y habilita [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/), de modo que cada mensaje se entrega cuando cada usuario individual tiene más probabilidades de interactuar, en lugar de depender de un día y una hora fijos.
 2. Se dirige al segmento "Probable abandono" que acaba de crear.
 3. Configura el evento de conversión de la campaña en el evento personalizado `stream_started`, para hacer un seguimiento de cuántos usuarios vuelven realmente a ver el contenido.
 4. Camila elige el correo electrónico como canal principal: le da espacio para destacar múltiples selecciones de contenido personalizado en un formato visualmente rico sin demasiada presión. El correo electrónico incluye:
    - Una lista de visionado personalizada basada en [recomendaciones de artículos de IA]({{site.baseurl}}/user_guide/brazeai/recommendations/), seleccionada dinámicamente del catálogo de MovieCanon.
    - Una llamada a la acción que les lleve directamente a la aplicación.
 
-Esto garantiza que, cada semana, MovieCanon llegue sólo a los usuarios que necesitan un empujoncito: sin exceso de mensajería ni conjeturas.
+Esto garantiza que cada semana MovieCanon llegue sólo a los usuarios que necesitan un empujoncito, sin mensajes excesivos ni conjeturas.
 
 ### Ejemplo de correo electrónico
 
@@ -78,9 +78,9 @@ Al cabo de unas semanas, Camila comprueba [los análisis de]({{site.baseurl}}/us
 
 Ella ve:
 
-- *Tarifa abierta:* 31%
+- *Tasa de apertura:* 31 %
 - *Tasa de clics:* 15%
-- *Tasa de conversión* (flujo iniciado en 48 horas): 11%
+- *Tasa de conversión* (flujo iniciado en 48 horas): 11 %
 
 En comparación con la antigua campaña "Te echamos de menos" (en la que las tasas de conversión rondaban el 3%), este nuevo flujo reduce el abandono en el grupo objetivo en un 28%. Indaga en el [informe de embudo]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) para detectar dónde abandonan los usuarios. Aunque las tasas de clics y de apertura son altas, nota una ligera fricción entre los clics y la conversión, lo que le lleva a plantearse probar el texto de la CTA o experimentar con el diseño.
 

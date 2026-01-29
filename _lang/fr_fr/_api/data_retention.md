@@ -22,8 +22,8 @@ Warning! Don't make any changes to this document without approval from the legal
 
 Braze permet à ses clients de supprimer eux-mêmes des profils utilisateurs entiers et des données d'attribut à partir de leur espace de travail.
 
-Cela signifie que vous pouvez : 
-- Supprimez des profils utilisateurs à l'aide de l'[endpoint API Delete user de]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) Braze [.]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+Cela signifie que vous pouvez :
+- Supprimez des profils utilisateurs à l'aide de l'[endpoint API Delete user de]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) Braze [.]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 - Supprimer (null) ou modifier des attributs sur des profils utilisateurs en utilisant l'[endpoint de l'API]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Braze [Track user.]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Les événements comportementaux ne peuvent pas être supprimés d’un profil d’utilisateur (événements personnalisés, sessions, campagnes, achats). Pour supprimer ces événements, vous devez supprimer l’ensemble du profil utilisateur.
@@ -44,7 +44,7 @@ Chaque semaine, Braze exécute un processus visant à supprimer les utilisateurs
 Les clients ont un contrôle total sur le statut inactif ou dormant des utilisateurs et peuvent empêcher l’archivage des profils utilisateurs en enregistrant un point de donnée à intervalle régulier. Braze Canvas offre la possibilité de le faire automatiquement, ce qui vous permet de désactiver efficacement cette fonctionnalité pour certains ou pour tous vos utilisateurs inactifs ou dormants. 
 {% endalert %}
 
-#### Données sur les interactions de campagne et de Canvas 
+#### Données sur les interactions de campagne et de Canvas
 
 Les données d'interaction des messages se réfèrent à la manière dont un utilisateur interagit avec une campagne ou une variante du canvas qu'il a reçu (par exemple, lorsqu'un utilisateur ouvre la campagne A ou qu'un utilisateur reçoit la variante A). Ces données sont utilisées à des fins de reciblage. Pour en savoir plus sur la disponibilité des données d’interaction de messagerie, consultez [À propos de la disponibilité des données d’interaction de messagerie]({{site.baseurl}}/messaging_interaction_data/).
 

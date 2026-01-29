@@ -1,16 +1,16 @@
 ---
 nav_title: Accesibilidad
-article_title: Construir mensajes accesibles en Braze
-page_order: 10.1
+article_title: Construye mensajes accesibles en Braze
+page_order: 0.5
 page_type: reference
 description: "Este artículo de referencia explica por qué es importante tener en cuenta la accesibilidad en tus contenidos de marketing, y cómo puedes crear mensajes accesibles en Braze."
 ---
 
-# Construir mensajes accesibles en Braze
+# Construye mensajes accesibles en Braze
 
 > Comprende por qué es importante tener en cuenta la accesibilidad en tus contenidos de marketing, y cómo puedes crear mensajes accesibles en Braze. Para más orientación, consulta nuestro curso [Fundamentos de la mensajería accesible](https://learning.braze.com/accessible-messaging-foundations) en Braze Learning.
 
-Los contenidos de marketing que excluyen a las personas con discapacidad, aunque sea involuntariamente, pueden impedir que millones de personas interactúen con tu marca. La accesibilidad en marketing consiste en facilitar que todo el mundo experimente tu marketing, reciba y comprenda tu comunicación, y tenga la oportunidad de invertir en tu producto, servicio o marca, o de convertirse en fan de ellos. 
+Los contenidos de marketing que excluyen a las personas con discapacidad, aunque sea involuntariamente, pueden impedir que millones de personas interactúen con tu marca. La accesibilidad en marketing consiste en habilitar a todo el mundo para que experimente tu marketing, comprenda tu comunicación y tenga la oportunidad de invertir en tu producto, servicio o marca o convertirse en fan de ellos. 
 
 Cuando diseñes tu mensajería, tómate un tiempo extra para considerar cómo puedes hacer que tus diseños sean accesibles a todos tus clientes.
 
@@ -31,25 +31,25 @@ Apoyar la comunicación accesible significa permanecer abierto, curioso y dispue
 {% tabs local %}
 {% tab Visual %}
 
-Las discapacidades visuales pueden ir desde la pérdida de visión leve o moderada en uno o ambos ojos, hasta la pérdida sustancial o completa de visión en ambos ojos. Algunas personas tienen una sensibilidad reducida o nula a determinados colores o una sensibilidad aumentada a los colores brillantes.
+Las discapacidades visuales pueden ir desde la pérdida de visión leve o moderada en uno o ambos ojos hasta la pérdida sustancial o completa de visión en ambos ojos. Algunas personas tienen una sensibilidad reducida o nula a determinados colores o una sensibilidad aumentada a los colores brillantes.
 
 Para interactuar con tu contenido, estos usuarios necesitan tener la capacidad de:
 
 - Ampliar o reducir el tamaño del texto y las imágenes
 - Personaliza la configuración de fuentes, colores y espaciado
-- Escucha la síntesis de texto a voz del contenido (es decir, utiliza un lector de pantalla)
+- Escuchar la síntesis de texto a voz del contenido (es decir, utilizar un lector de pantalla)
 - Escucha las descripciones de audio del video
 - Leer texto utilizando Braille actualizable
 
 {% alert note %}
-- En todo el mundo, al menos 2.200 millones de personas tienen una deficiencia visual de cerca o de lejos (ver [OMS](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment))
+- En todo el mundo, al menos 2200 millones de personas tienen una deficiencia visual de cerca o de lejos (ver [OMS](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment))
 - Alrededor de 1 de cada 12 hombres y 1 de cada 200 mujeres tienen algún grado de deficiencia en la visión de los colores, lo que supone unos 300 millones de personas en el mundo (ver [NHS](https://www.nhs.uk/conditions/colour-vision-deficiency/)).
 {% endalert %}
 
 {% endtab %}
 {% tab Hearing %}
 
-Las discapacidades auditivas o auditivas pueden incluir deficiencias auditivas de leves a moderadas en uno o ambos oídos. Incluso una pérdida parcial de audición puede ser problemática en relación con el contenido de audio.
+Las discapacidades auditivas pueden incluir deficiencias auditivas de leves a moderadas en uno o ambos oídos. Incluso una pérdida parcial de audición puede ser problemática en relación con el contenido de audio.
 
 Para comprender tu contenido, estos usuarios se basan en:
 
@@ -76,7 +76,7 @@ Estos usuarios confían en la ayuda del teclado para activar la funcionalidad (a
 - Mecanismos para saltar bloques de contenido, como cabeceras de página o barras de navegación
 
 {% alert note %}
-Casi 2 millones de personas en EE.UU. viven con pérdida de miembros (ver [Coalición de Amputados](https://www.amputee-coalition.org/limb-loss-resource-center/resources-filtered/resources-by-topic/limb-loss-statistics/limb-loss-statistics/#1))
+Casi 2 millones de personas en EE. UU. viven con pérdida de extremidades (ver [Coalición de Amputados](https://www.amputee-coalition.org/limb-loss-resource-center/resources-filtered/resources-by-topic/limb-loss-statistics/limb-loss-statistics/#1))
 {% endalert %}
 
 {% endtab %}
@@ -133,7 +133,7 @@ Por último, hablemos de los detalles más sutiles: las cosas que ayudan a los u
 - **No te pases con los símbolos y emojis:** Los caracteres especiales y los emojis pueden hacer que tu contenido sea divertido, pero pueden ser confusos cuando los leen los lectores de pantalla. Utilízalos con moderación y asegúrate de que no sustituyen a un texto claro y descriptivo.
 - **Prueba de truncamiento:** Comprueba siempre tu texto [enviando un mensaje de prueba]({{site.baseurl}}/developer_guide/in_app_messages/sending_test_messages/) a un dispositivo para asegurarte de que no se trunca. Si tu mensaje se corta, esto te perjudica tanto a ti como a tu audiencia, ya que impide que tu contenido les llegue.
 
-### Botones
+### Botones de acción
 
 Utiliza **botones** para indicar una acción, como enviar un formulario o reproducir un carrusel. Si navegas a una nueva URL, considera utilizar un [enlace](#links) en su lugar.
 
@@ -210,7 +210,7 @@ Como con todo el contenido, que sea sencillo y con el menor número posible de p
 
 #### Evita estilizar los enlaces como botones
 
-Los editores de arrastrar y soltar de Braze producen HTML semántico predeterminado, por lo que los enlaces no tienen el estilo de los botones. Sin embargo, si trabajas con [HTML personalizado](#custom-html) o haces cambios a nivel de código, ten esto en cuenta:
+Los editores de arrastrar y soltar de Braze producen HTML semántico de forma predeterminada, por lo que los enlaces no tienen el estilo de los botones. Sin embargo, si trabajas con [HTML personalizado](#custom-html) o haces cambios a nivel de código, ten esto en cuenta:
 
 - **Los enlaces (`<a>`** ) responden a la tecla <kbd>Intro</kbd>.
 - **Los botones (`<button>`** ) responden a las teclas <kbd>Intro</kbd> y <kbd>Espacio</kbd>.
@@ -220,7 +220,7 @@ Estilizar un enlace para que parezca un botón puede confundir a las personas qu
 Utiliza el elemento adecuado para la acción:
 
 - Utiliza `<button>` para acciones, como enviar un formulario o abrir un modal.
-- Utiliza `<a>` para navegar, por ejemplo para enlazar a otra página o archivo.
+- Utiliza `<a>` para la navegación, como enlace a otra página o archivo.
 
 {% raw %}
 
@@ -241,7 +241,7 @@ Los objetivos táctiles son cualquier parte de tu mensaje que los usuarios tocan
 Cuando los objetivos táctiles son demasiado pequeños o están demasiado juntos, puede resultar frustrante o imposible para los usuarios con problemas de movilidad o destreza interactuar con tu mensaje. Mejorar esto puede ayudar a reducir los errores y crear una experiencia más fluida para todos.
 
 Esto es lo que debes tener en cuenta:
-- **Haz que sea fácil de pulsar.** Procura que el tamaño mínimo del objetivo táctil sea de 44 x 44 píxeles. Esto se ajusta a las directrices WCAG 2.2 para [objetivos táctiles](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) y a las normas comunes de usabilidad móvil.
+- **Utiliza un tamaño de diana táctil adecuado.** Procura que el tamaño mínimo del objetivo táctil sea de 44 x 44 píxeles. Esto se ajusta a las directrices WCAG 2.2 para [objetivos táctiles](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) y a las normas comunes de usabilidad móvil.
 - **Da un respiro a cada objetivo.** Si los objetivos de pulsación están demasiado juntos -como enlaces apilados o botones muy agrupados- puede ser fácil pasar por alto o pulsar el objetivo equivocado. Añade espaciado o relleno entre los elementos para evitarlo.
 - **No te fíes sólo de lo visual.** Incluso los iconos pequeños pueden hacerse más utilizables con un relleno adicional, que les permita cumplir los requisitos de tamaño mínimo sin alterar el diseño.
 - **Vista previa en el móvil.** Prueba tu mensaje en diferentes tamaños de pantalla y asegúrate de que los elementos interactivos son fáciles de usar.
@@ -449,14 +449,14 @@ Si una imagen funciona como un enlace o una llamada a la acción, describe la ac
 
 Si la imagen no tiene una finalidad, hazlo saber también. Las imágenes decorativas, como los logotipos, deben tener una etiqueta alt vacía (`alt=""`) para que los lectores de pantalla sepan que deben omitir su anuncio. Sin ella, normalmente se lee el nombre del archivo de imagen.
 
-### Videos
+### Vídeos
 
 Los videos son atractivos, pero si no son accesibles, corres el riesgo de excluir a parte de tu audiencia. Utiliza los siguientes consejos para que tus contenidos de video sean más inclusivos:
 
 - [Proporcionar subtítulos](#closed-captions)
 - [Proporcionar controles de reproducción](#playback-controls)
 - [Evita la reproducción automática](#no-auto-play)
-- [Evita el contenido intermitente o estroboscópico](#no-seizures)
+- [Evita los contenidos intermitentes o estroboscópicos](#no-seizures)
 
 #### Proporcionar subtítulos {#closed-captions}
 
@@ -484,7 +484,7 @@ Siempre que sea posible, evita configurar los videos para que se reproduzcan aut
 
 Deja que los usuarios elijan cuándo reproducir un video incluyendo controles claros.
 
-#### Evita el contenido intermitente o estroboscópico {#no-seizures}
+#### Evita los contenidos intermitentes o estroboscópicos {#no-seizures}
 
 No incluyas videos con efectos intermitentes o estroboscópicos, especialmente con una frecuencia elevada. Pueden desencadenar ataques en usuarios con epilepsia fotosensible y causar molestias a los demás.
 
@@ -495,7 +495,7 @@ Un contraste de color suficiente ayuda a garantizar que tus mensajes sean fácil
 - Relación de contraste de 4,5:1 para texto normal (piensa en el cuerpo del texto, botones y enlaces)
 - Relación de contraste 3:1 para texto grande (piensa en títulos y etiquetas grandes)
 
-Puedes probar tus elecciones de color utilizando la [herramienta de comprobación de contraste de WebAim](https://webaim.org/resources/contrastchecker/).
+Puedes probar tus elecciones de color con la [herramienta de comprobación de contraste de WebAim](https://webaim.org/resources/contrastchecker/).
 
 {% multi_lang_include accessibility/color.md %}
 
@@ -516,11 +516,11 @@ Si utilizas algún HTML personalizado en tu mensajería:
 Cuando utilices el editor de arrastrar y soltar de correo electrónico, el valor del idioma para el correo electrónico se puede establecer yendo a la pestaña **Configuración** y seleccionando el valor del idioma adecuado.
 {% endalert %}
 
-- Utiliza [atributos ARIA](#aria-attributes) para dar un contexto adicional. Estos atributos proporcionan información adicional a las tecnologías de asistencia, ayudando a aclarar la función, el estado o las propiedades de los elementos de la IU que, de otro modo, podrían no estar claros. 
+- Utiliza [atributos ARIA](#aria-attributes) para dar más contexto. Estos atributos proporcionan información adicional a las tecnologías de asistencia, ayudando a aclarar la función, el estado o las propiedades de los elementos de la IU que, de otro modo, podrían no estar claros. 
 
 ### Atributos ARIA
 
-Cuando utilices código personalizado en los editores de Braze, puedes utilizar Aplicaciones de Internet Ricas Accesibles[(ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)) para proporcionar soporte de accesibilidad adicional a los usuarios que dependen de tecnología de asistencia. Los roles y atributos ARIA ayudan a los lectores de pantalla a interpretar tu contenido con mayor claridad, especialmente cuando utilizas elementos que no transmiten significado por sí solos (como `<div>` o `<span>`).
+Cuando utilices código personalizado en los editores de Braze, puedes utilizar Aplicaciones de Internet Enriquecidas Accesibles[(ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)) para proporcionar soporte de accesibilidad adicional a los usuarios que dependen de tecnología de asistencia. Los roles y atributos ARIA ayudan a los lectores de pantalla a interpretar tu contenido con mayor claridad, especialmente cuando utilizas elementos que no transmiten significado por sí solos (como `<div>` o `<span>`).
 
 {% alert important %}
 Aunque ARIA está diseñada para hacer más accesible el contenido Web, si se utiliza incorrectamente, puede hacer más mal que bien. ARIA no sustituye al HTML semántico, sino que lo complementa, así que utiliza ARIA sólo cuando los elementos HTML nativos no satisfagan tus necesidades.
@@ -598,7 +598,7 @@ Los correos electrónicos creados en el editor de arrastrar y soltar tienen elem
 Para ayudarte a identificar y solucionar pronto los problemas de accesibilidad, Braze ofrece pruebas automatizadas de accesibilidad en las siguientes áreas:
 
 - [Buzón de entrada Visión]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) para los correos electrónicos
-- [Escáner de accesibilidad]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) para mensajes creados utilizando nuestro editor HTML (por ejemplo, mensajes HTML dentro de la aplicación, bloques de contenido HTML, [pies de página de correo electrónico personalizados]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [páginas de adhesión voluntaria por correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page) y [páginas para cancelar suscripción por correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
+- [Escáner de accesibilidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=in-app%20message#accessibility-scanner) para mensajes creados utilizando nuestro editor HTML (por ejemplo, mensajes HTML dentro de la aplicación, bloques de contenido HTML, [pies de página de correo electrónico personalizados]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), [páginas de adhesión voluntaria por correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page) y [páginas para cancelar suscripción por correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
 
 Estas pruebas comprueban si tu mensaje cumple las Pautas de Accesibilidad al Contenido en la Web[(WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/), un conjunto de normas técnicas reconocidas internacionalmente para el contenido accesible. Cualquier problema que pueda detectarse automáticamente se marca y se clasifica por gravedad para ayudarte a priorizar.
 

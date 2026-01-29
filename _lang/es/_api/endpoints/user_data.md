@@ -34,10 +34,10 @@ guide_featured_list:
   - name: "POST: Seguimiento de usuarios"
     link: /docs/api/endpoints/user_data/post_user_track/
     image: /assets/img/braze_icons/database-01.svg
-  - name: "POST: Seguimiento de usuarios (sincrónico)"
+  - name: "PUBLICAR: Seguimiento de usuarios (sincrónico)"
     link: /docs/api/endpoints/user_data/post_user_track_synchronous/
     image: /assets/img/braze_icons/database-01.svg
-  - name: "POST: Fusionar usuarios"
+  - name: "PUBLICAR: Fusionar usuarios"
     link: /docs/api/endpoints/user_data/post_users_merge/
     image: /assets/img/braze_icons/users-01.svg
 

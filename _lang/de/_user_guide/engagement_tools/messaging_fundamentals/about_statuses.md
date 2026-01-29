@@ -1,7 +1,7 @@
 ---
 nav_title: Status
 article_title: Kampagnen- und Canvas-Status
-page_order: 1
+page_order: 11
 description: "Lernen Sie die Status für Kampagnen und Canvase kennen und wie Sie sie im Dashboard verwenden können."
 tool:
     - Campaigns
@@ -16,13 +16,13 @@ tool:
 
 Um Ihre Kampagnen oder Canvase nach Status zu filtern, wählen Sie **Alle Status** und dann einen Status aus.
 
-\![Das Dropdown-Menü 'Alle Status' im Braze-Dashboard.]({% image_buster /assets/img/messaging_fundamentals/filter-by-status.png %}){: style="max-width:70%;"}
+![Das Dropdown-Menü 'Alle Status' auf dem Braze-Dashboard.]({% image_buster /assets/img/messaging_fundamentals/filter-by-status.png %}){: style="max-width:70%;"}
 
 ## Ändern des Status
 
 Um den Status einer Kampagne oder eines Canvas zu ändern, wählen Sie das Menü <i class="fas fa-ellipsis-vertical"></i> und dann einen Status aus.
 
-\![Eine Liste der Canvase im Braze-Dashboard, wobei das Menü für eine der Canvase geöffnet ist.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
+![Eine Liste der Canvase im Braze-Dashboard, wobei das Menü für einen der Canvase geöffnet ist.]({% image_buster /assets/img/messaging_fundamentals/change-status.png %})
 
 ## Verfügbare Stati
 
@@ -33,7 +33,7 @@ Dies sind die verfügbaren Status für Kampagnen und Canvase:
 | Aktiv | Aktive Kampagnen und Canvase werden gerade versendet. Standardmäßig sehen Sie aktive Kampagnen und Canvase auf den jeweiligen Seiten. |
 | Entwurf | Entwürfe von Kampagnen und Canvase werden gespeichert, aber nicht eingeführt. Um die Bearbeitung fortzusetzen und mit dem Senden zu beginnen, können Sie den Entwurf auswählen, indem Sie im Braze-Dashboard auf **Messaging** gehen und **Canvas** oder **Kampagnen** auswählen. |
 | Archiviert | Archivierte Kampagnen und Canvase sind Nachrichten, die nicht mehr gesendet werden. Diese Kampagnen und Canvase werden auch aus den statistischen Diagrammen auf der Website entfernt. [**Startseite**]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard) und [**Umsätze**]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report) Seiten entfernt.|
-| Angehalten | Angehaltene Kampagnen und Canvase werden pausiert, können aber weiterhin bearbeitet werden. Um fortzufahren, wählen Sie das Menü <i class="fas fa-ellipsis-vertical"></i> und dann **Fortsetzen**. Weitere Informationen finden Sie unter [Gestopptes Canvas-Verhalten](#stopped-canvas-behavior). |
+| Angehalten | Angehaltene Kampagnen und Canvase werden pausiert, können aber weiterhin bearbeitet werden. Um ein Canvas fortzusetzen, gehen Sie zum Schritt **Zusammenfassung** des Canvas-Erstellers und wählen Sie **Canvas fortsetzen**. Für Kampagnen wählen Sie das Menü <i class="fas fa-ellipsis-vertical"></i> und dann **Fortsetzen**. Weitere Informationen finden Sie unter [Gestopptes Canvas-Verhalten](#stopped-canvas-behavior). |
 | Ruhend | Wenn eine Kampagne oder ein Canvas keine Nachrichten mehr versendet, weist Braze ihr/ihm einen Leerlaufstatus zu, um die Sortierung und Verwaltung Ihrer Liste von Kampagnen und Canvase zu erleichtern. Sie können sehen, welche Kampagnen oder Canvase automatisch gestoppt werden und das zugehörige Stoppdatum. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -44,8 +44,9 @@ Wenn ein Canvas angehalten wird, geschieht Folgendes:
 - **Geplante Nachrichten:** Ihre geplanten Nachrichten werden nicht versendet, unabhängig von der Position eines Nutzers:innen im Canvas. Dazu gehören auch Nutzer:innen, die aufgrund von Rate-Limiting in der Warteschlange standen.
 - **E-Mails senden:** Der Versand von E-Mails wird möglicherweise nicht sofort eingestellt, da Ihr Dienstanbieter (ESP) Ihre bestehenden Anfragen weiter bearbeitet.
 - **Verzögerungsstufen:** Nutzer:innen, die sich in einem [Verzögerungsschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) befinden, verbleiben dort wie gewohnt, verlassen den Canvas jedoch, wenn der festgelegte Zeitraum endet.
+- **Entwurfsänderungen:** Alle Änderungsentwürfe für den Canvas werden verworfen, wenn der Canvas angehalten wird.
 
-Um den Canvas wieder aufzunehmen, wählen Sie das Menü <i class="fas fa-ellipsis-vertical"></i> und dann **Fortsetzen**. Wenn Sie die Funktion reaktivieren, werden alle zuvor gestoppten Nachrichten wie geplant gesendet - sofern der Zeitplan nicht bereits abgelaufen ist.
+Um das Canvas fortzusetzen, gehen Sie zum Schritt **Zusammenfassung** des Canvas-Erstellers und wählen Sie **Canvas fortsetzen**. Wenn Sie die Funktion reaktivieren, werden alle zuvor gestoppten Nachrichten wie geplant gesendet - sofern der Zeitplan nicht bereits abgelaufen ist.
 
 ## Bewährte Praktiken
 

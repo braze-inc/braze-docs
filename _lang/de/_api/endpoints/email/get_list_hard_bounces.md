@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Abfrage oder L
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `email.hard_bounces`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 Die Eingänge sind in absteigender Reihenfolge aufgeführt.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

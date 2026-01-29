@@ -13,7 +13,7 @@ description: "Cette page d’accueil répertorie les objets et filtres d’API B
 ## Objets et filtres
 
 - [Objet Propriétés d’entrées de Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Objet et filtre Audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Le filtre d'audience connecté & objet]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Objet Événement]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objet Achat]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objet Destinataire]({{site.baseurl}}/api/objects_filters/recipient_object/)

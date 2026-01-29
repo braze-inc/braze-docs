@@ -19,29 +19,29 @@ description: "Este artículo de referencia enumera y explica los diferentes obje
 {
    "badge": (optional, integer) the badge count after this message,
    "alert": (required unless content-available is true, string or Apple Push Alert Object) the notification message,
-   // Specifying "default" in the sound field will play the standard notification sound
+   // Specifying "default" in the sound field plays the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
    "extra": (optional, object) additional keys and values to be sent,
-   "content-available": (optional, boolean) if set, Braze will add the "content-available" flag to the push payload,
+   "content-available": (optional, boolean) if set, Braze adds the "content-available" flag to the push payload,
    "interruption_level": (optional, string: "passive", "active", "time-sensitive", or "critical") specifies the interruption level passed (iOS 15+),
    "relevance_score": (optional, float) specifies the relevance score between 0.0 and 1.0 used for grouping notification summaries (iOS 15+),
-   "expiry": (optional, ISO 8601 date string) if set, push messages will expire at the specified datetime,
+   "expiry": (optional, ISO 8601 date string) if set, push messages expire at the specified datetime,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
    "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to true,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an iOS Push Message),
-   "notification_group_thread_id": (optional, string) the notification group thread ID the notification will be sent with,
+   "notification_group_thread_id": (optional, string) the notification group thread ID the notification is sent with,
    "asset_url": (optional, string) content URL for rich notifications for devices using iOS 10 or higher,
    "asset_file_type": (required if asset_url is present, string) file type of the asset - one of "aif", "gif", "jpg", "m4a", "mp3", "mp4", "png", or "wav",
    "collapse_id": (optional, string) To update a notification on the user's device after you've issued it, send another notification with the same collapse ID you used previously
-   "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
-   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
+   "mutable_content": (optional, boolean) if true, Braze adds the mutable-content flag to the payload and sets it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
+   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze only sends this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
    "buttons" : (optional, array of Apple push action button objects) push action buttons to display,
    "apns_priority": (optional, integer) override the default apns_priority value using an integer between 1 and 10; use 10 for immediate delivery, 5 for power-aware delivery, and 1 to minimize power impact and avoid waking the device,
 }
 ```
 
-Debe incluir un objeto push de Apple en `messages` si desea que los usuarios a los que se ha dirigido reciban un push en sus dispositivos iOS. El número total de bytes de la cadena `alert`, el objeto `extra` y otros parámetros opcionales no debe exceder de 1912. La API de mensajería devolverá un error si supera el tamaño de mensaje permitido por Apple. Los mensajes que incluyan las claves `ab` o `aps` en el objeto `extra` serán rechazados.
+Debe incluir un objeto push de Apple en `messages` si desea que los usuarios a los que se ha dirigido reciban un push en sus dispositivos iOS. El número total de bytes de la cadena `alert`, el objeto `extra` y otros parámetros opcionales no debe exceder de 1912. La API de mensajería devuelve un error si superas el tamaño de mensaje permitido por Apple. Se rechazan los mensajes que incluyen las claves `ab` o `aps` en el objeto `extra`.
 
 {% alert note %}
 Si envía el objeto Apple Push como parte de una carga útil de actividades en directo, asegúrese de incluir la cadena `sound` en el objeto `alert`.
@@ -87,19 +87,19 @@ En la mayoría de los casos, `alert` puede especificarse como una cadena en un o
 
 ## Objeto de botón de acción para notificación push de Apple
 
-Debe incluir el campo `category` en el objeto push de Apple para utilizar los botones de acción push de iOS. Si incluye el campo `category`, se mostrarán todos los botones de acción de pulsación asociados; sólo incluya el campo `buttons` si desea definir adicionalmente las acciones de pulsación individuales de los botones. El SDK de Braze proporciona un conjunto de botones de acción para notificación push predeterminados que se muestran en la tabla siguiente. También puede utilizar sus propios botones si se han registrado en su aplicación.
+Debe incluir el campo `category` en el objeto push de Apple para utilizar los botones de acción push de iOS. Si incluyes el campo `category`, se mostrarán todos los botones de acción push asociados; incluye el campo `buttons` sólo si quieres definir adicionalmente las acciones de clic individuales de los botones. El SDK de Braze proporciona un conjunto de botones de acción para notificación push predeterminados que se muestran en la tabla siguiente. También puede utilizar sus propios botones si se han registrado en su aplicación.
 
 ### Objeto de botón de acción de Apple para los botones predeterminados de Braze
 
 | Identificador de categoría   | Texto del botón | Identificador de la acción del botón | Acciones permitidas         |
 |-----------------------|-------------|--------------------------|-------------------------|
-| `ab_cat_accept_decline` | Aceptar      | `ab_pb_accept`             | OPEN_APP, URI o DEEP_LINK |
+| `ab_cat_accept_decline` | Aceptar      | `ab_pb_accept`             | OPEN_APP, URI, o DEEP_LINK |
 | `ab_cat_accept_decline` | Rechazar     | `ab_pb_decline`            | CERRAR                   |
-| `ab_cat_yes_no`         | Sí         | `ab_pb_yes`                | OPEN_APP, URI o DEEP_LINK |
+| `ab_cat_yes_no`         | Sí         | `ab_pb_yes`                | OPEN_APP, URI, o DEEP_LINK |
 | `ab_cat_yes_no`         | No          | `ab_pb_no`                 | CERRAR                   |
-| `ab_cat_confirm_cancel` | Confirmar     | `ab_pb_confirm`            | OPEN_APP, URI o DEEP_LINK |
+| `ab_cat_confirm_cancel` | Confirmar     | `ab_pb_confirm`            | OPEN_APP, URI, o DEEP_LINK |
 | `ab_cat_confirm_cancel` | Cancelar      | `ab_pb_cancel`             | CERRAR                   |
-| `ab_cat_more`           | Más        | `ab_pb_more`               | OPEN_APP, URI o DEEP_LINK |
+| `ab_cat_more`           | Más        | `ab_pb_more`               | OPEN_APP, URI, o DEEP_LINK |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ```json

@@ -10,7 +10,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Update Nutzer:innen
 {% api %}
 # Nutzer:in aktualisieren
 {% apimethod post %}
-/users/alias/update
+/benutzer/alias/update
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um bestehende Nutzer:innen-Aliase zu aktualisieren.

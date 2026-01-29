@@ -1,5 +1,5 @@
 ---
-nav_title: "Objeto Web"
+nav_title: "Objeto web"
 article_title: Objeto de mensajería web
 page_order: 12
 page_type: reference

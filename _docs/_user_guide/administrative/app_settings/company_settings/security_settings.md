@@ -141,9 +141,11 @@ To download this report, do the following:
 
 1. Go to **Settings** > **Admin Settings**.
 2. Select the **Security Settings** tab and go to the **Security Event Download** section.
-2. Select **Download report**. 
+3. Select **Download report**. 
 
-This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
+This manual report download contains only the most recent 10,000 security events for your account.
+
+To export security events to Amazon S3 without this row limit, see [Security events export with Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Login and account

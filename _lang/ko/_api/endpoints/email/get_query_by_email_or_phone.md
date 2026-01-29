@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 이메일 주소 또는 전화번호로 구독 상태 나열하기"
+nav_title: "GET: 이메일 주소 또는 전화번호로 구독 상태 목록"
 article_title: "GET: 이메일 주소 또는 전화번호로 구독 상태 나열하기"
 search_tag: Endpoint
 page_order: 2
@@ -25,7 +25,7 @@ description: "이 문서에서는 이메일 주소 또는 전화번호가 있는
 | `phone` | 예 | 문자열 | 사용자의 전화번호(최소 1개에서 최대 50개의 전화번호를 포함해야 함). E.164 형식으로 제공하는 것이 좋습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions?phone=+12123355555&email=example%40braze.com' \
 --header 'Authorization: Bearer YOUR_REST_API_KEY'
@@ -36,8 +36,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 항목은 내림차순으로 나열됩니다.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

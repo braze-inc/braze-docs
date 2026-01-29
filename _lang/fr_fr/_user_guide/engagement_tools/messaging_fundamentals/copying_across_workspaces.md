@@ -1,7 +1,7 @@
 ---
 nav_title: Copie entre espaces de travail
 article_title: "Copier d'un espace de travail à l'autre"
-page_order: 4.5
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "Cet article de référence donne un aperçu de la manière de copier des campagnes et des toiles dans différents espaces de travail."
@@ -10,7 +10,7 @@ tool:
     - Canvas
 ---
 
-# Copie des campagnes et des toiles dans les espaces de travail
+# Copier les campagnes et les toiles dans tous les espaces de travail
 
 > La copie de campagnes entre espaces de travail vous permet d'accélérer la composition de vos messages en commençant par une copie d'une campagne dans un espace de travail différent. Cette page explique comment copier des campagnes dans différents espaces de travail et indique ce qui est copié et ce qui ne l'est pas.
 
@@ -44,7 +44,7 @@ Pour copier un canvas dans un autre espace de travail :
 
 1. Sélectionnez le menu <i class="fa-solid fa-ellipsis-vertical"></i> en regard du Canvas sélectionné.
 2. Sélectionnez **Copier dans l'espace de travail**. 
-3. Après la copie, vérifiez et testez votre Canvas pour confirmer que tous les champs fonctionnent correctement.
+3. Après la copie, vérifiez et testez votre canvas pour confirmer que tous les champs fonctionnent correctement.
 
 Lorsque vous copiez un canvas avec des étapes Audience Sync, les paramètres ne sont pas copiés dans l'espace de travail de destination, mais les étapes du parcours le sont.
 
@@ -63,9 +63,9 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Description | Territoires | 
-| Type | Tags | 
-| Actions (imbriquées) | Segmentations | 
-| Comportements de conversion (imbriqués) | Agréments | 
+| Type | Balises | 
+| Actions (imbriquées) | Segments | 
+| Comportements de conversion (imbriqués) | Approbations | 
 | Configurations de l'heure de repos | Planification des déclencheurs | 
 | Configurations de limite de fréquence | Résumés de campagne | 
 | État de l'abonnement du destinataire |  | 
@@ -79,9 +79,9 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Description | Territoires | 
-| Type | Tags | 
-| Actions (imbriquées) | Segmentations | 
-| Comportements de conversion (imbriqués) | Agréments | 
+| Type | Balises | 
+| Actions (imbriquées) | Segments | 
+| Comportements de conversion (imbriqués) | Approbations | 
 | Configurations de l'heure de repos | Planification des déclencheurs | 
 | Configurations de limite de fréquence | Résumés de Canvas | 
 | État de l'abonnement du destinataire |  | 
@@ -100,8 +100,8 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Type de comportement | ID de l'espace de travail |
-| Interaction avec la campagne |  ID de la campagne | 
-| Nom de l'événement personnalisé |  | 
+| Interaction avec la campagne |  ID de campagne | 
+| Nom de l’événement personnalisé |  | 
 | Nom du produit |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -111,8 +111,8 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Type de comportement | ID de l'espace de travail |
-| Interaction avec le canvas |  Canvas ID | 
-| Nom de l'événement personnalisé |  | 
+| Interaction avec le canvas |  ID du canvas | 
+| Nom de l’événement personnalisé |  | 
 | Nom du produit |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -127,8 +127,8 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Type de comportement | ID de l'espace de travail |
-| Interaction avec la campagne |  ID de la campagne | 
-| Nom de l'événement personnalisé |  | 
+| Interaction avec la campagne |  ID de campagne | 
+| Nom de l’événement personnalisé |  | 
 | Nom du produit |  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -138,22 +138,22 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Type de comportement | ID de l'espace de travail |
-| Interaction avec le canvas |  Canvas ID | 
-| Nom de l'événement personnalisé |  | 
+| Interaction avec le canvas |  ID du canvas | 
+| Nom de l’événement personnalisé |  | 
 | Nom du produit |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
 {% endtabs %}
 
-### Variations des messages
+### Variantes de messages
 
 {% tabs local %}
 {% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
-| Envoyer le pourcentage | ID API |
+| Envoyer le pourcentage | ID de l’API |
 | Type |  ID des groupes initiateurs | 
 |  |  ID des modèles de liens | 
 |  |  ID des groupes internes d'utilisateurs | 
@@ -164,7 +164,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 
 | Copié | Omis |
 |---|---|
-| Envoyer le pourcentage | ID API |
+| Envoyer le pourcentage | ID de l’API |
 | Type |  ID des groupes initiateurs | 
 |  |  ID des modèles de liens | 
 |  |  ID des groupes internes d'utilisateurs | 
@@ -181,10 +181,10 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 
 | Copié | Omis |
 |---|---|
-| Corps de l'e-mail | De l'adresse |
-| Envoi de messages supplémentaires |  Répondre à | 
+| Corps de l’e-mail | Adresse De |
+| Suppléments de message |  Répondre à | 
 | Titre |  CCI | 
-| Sujet |  Modèle de lien | 
+| Objet |  Modèles de liens | 
 |  |  Aliasage de lien |
 |  | Traductions |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -194,10 +194,10 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 
 | Copié | Omis |
 |---|---|
-| Corps de l'e-mail | De l'adresse |
-| Envoi de messages supplémentaires |  Répondre à | 
+| Corps de l’e-mail | Adresse De |
+| Suppléments de message |  Répondre à | 
 | Titre |  CCI | 
-| Sujet |  Modèle de lien | 
+| Objet |  Modèles de liens | 
 |  |  Aliasage de lien |
 |  | Traductions |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -205,7 +205,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 {% endtab %}
 {% endtabs %}
 
-### Corps de l'e-mail
+### Corps de l’e-mail
 
 {% tabs local %}
 {% tab campaigns %}
@@ -241,10 +241,10 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 
 | Copié | Omis |
 |---|---|
-| Corps de l'e-mail | ID de l'API |
+| Corps de l’e-mail | ID de l'API |
 | Description | ID des images | 
-| Sujet | Territoires | 
-| En-têtes | Tags | 
+| Objet | Territoires | 
+| En-têtes | Balises | 
 | | Traductions |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -253,10 +253,10 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 
 | Copié | Omis |
 |---|---|
-| Corps de l'e-mail | ID de l'API |
+| Corps de l’e-mail | ID de l'API |
 | Description | ID des images | 
-| Sujet | Territoires | 
-| En-têtes | Tags | 
+| Objet | Territoires | 
+| En-têtes | Balises | 
 | | Traductions |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -271,9 +271,9 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Nom | Aliasage de lien |
-| Description | clés API | 
+| Description | Clés API | 
 | Contenu | Territoires | 
-| Contenu HTML et glisser-déposer | Tags | 
+| Contenu HTML et glisser-déposer | Balises | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -282,9 +282,9 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Nom | Aliasage de lien |
-| Description | clés API | 
+| Description | Clés API | 
 | Contenu | Territoires | 
-| Contenu HTML et glisser-déposer | Tags | 
+| Contenu HTML et glisser-déposer | Balises | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -298,7 +298,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Corps | Service d'envoi de messages |
-| Raccourcissement des liens | Éléments de média VCF | 
+| Raccourcissement de lien | Éléments de média VCF | 
 | Suivi des clics |  | 
 | Articles de presse |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -309,7 +309,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 | Copié | Omis |
 |---|---|
 | Corps | Service d'envoi de messages |
-| Raccourcissement des liens | Éléments de média VCF | 
+| Raccourcissement de lien | Éléments de média VCF | 
 | Suivi des clics |  | 
 | Articles de presse |  | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -340,6 +340,6 @@ Si vous copiez une campagne ou un canevas comportant une étape de drapeau de fo
 
 ## Copier des messages avec des blocs de contenu
 
-Lorsque vous copiez une campagne dans plusieurs espaces de travail, les blocs de contenu ne sont pas copiés. Toutefois, un bloc de contenu peut être référencé dans l'espace de travail de destination s'il existe un bloc portant le même nom. Vous pouvez également créer le bloc de contenu (ou ces références liquides) dans l'espace de travail de destination afin d'éviter les erreurs lors du lancement d'une campagne.
+Lorsque vous copiez une campagne entre espaces de travail, les blocs de contenu ne sont pas copiés. Toutefois, un bloc de contenu peut être référencé dans l'espace de travail de destination s'il existe un bloc portant le même nom. Vous pouvez également créer le bloc de contenu (ou ces références liquides) dans l'espace de travail de destination afin d'éviter les erreurs lors du lancement d'une campagne.
 
 Pour les toiles qui font référence à un bloc de contenu, ce dernier doit d'abord être copié dans l'espace de travail de destination.

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Voir toutes les traductions et localisations pour Email Template"
+nav_title: "GET : Voir toutes les traductions et locales pour le modèle d'e-mail"
 article_title: "GET : Voir toutes les traductions et localisations pour Email Template"
 search_tag: Endpoint
 page_order: 3
@@ -15,7 +15,7 @@ description: "Cet article décrit les détails du point de terminaison Afficher 
 /templates/email/translations/
 {% endapimethod %}
 
-> Utilisez cet endpoint pour afficher toutes les traductions et locales d'un [modèle d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)
+> Utilisez cet endpoint pour afficher toutes les traductions et locales d'un [modèle d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) Pour plus d'informations sur les fonctionnalités de traduction, reportez-vous à la section [Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
 
 {% alert important %}
 Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -34,10 +34,11 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | Paramètre     | Requis | Type de données | Description                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Requis | Chaîne de caractères    | L'ID de votre modèle d'e-mail. |
-| `locale_id`   | Requis | Chaîne de caractères    | L'ID de la locale.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Notez que tous les ID de traduction sont considérés comme des identifiants uniques universels (UUID), qui peuvent être trouvés dans les paramètres de **prise en charge multilingue** ou dans la réponse à la demande.
+{% alert note %}
+Tous les ID de traduction sont considérés comme des identifiants uniques universels (UUID), qui peuvent être trouvés dans la réponse de l'endpoint GET.
+{% endalert %}
 
 ## Exemple de demande
 
@@ -45,6 +46,8 @@ Notez que tous les ID de traduction sont considérés comme des identifiants uni
 curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
+--Request Body
+--- template_id: "6ad1507f-ca10-44c4-95bf-6e4gay901kc5"
 ```
 
 ## Réponse
@@ -56,8 +59,6 @@ Quatre réponses de code de statut existent pour cet endpoint : `200`, `400`, `
 Le code de statut `200` pourrait retourner l’en-tête et le corps de réponse suivant.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -105,17 +106,5 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
     ]
 }
 ```
-
-## Résolution des problèmes
-
-Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
-
-| Message d’erreur                           | Résolution des problèmes                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | Confirmez que votre ID local existe dans la traduction de votre message.                         |
-| `LOCALE_NOT_FOUND`                      | Confirmez que le paramètre local existe dans vos paramètres multilingues.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | Les paramètres multilingues ne sont pas activés pour votre espace de travail.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Seuls les modèles d'e-mails et les campagnes d'e-mails, de push et de messages in-app ou les messages Canvas avec les e-mails peuvent être traduits.             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
