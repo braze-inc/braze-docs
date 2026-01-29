@@ -16,28 +16,28 @@ guide_featured_list:
   - name: "GET: Ver la traducción de una campaña"
     link: /docs/api/endpoints/translations/campaigns/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: Ver todas las traducciones de una campaña"
-    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "COLOCAR: Actualizar la traducción en una campaña"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
+  - name: "GET: Ver las traducciones predeterminadas de las fuentes de la campaña"
+    link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
+    image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title: "Canvas endpoints"
 guide_menu_list:
   - name: "GET: Ver la traducción de un Canvas"
     link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: Ver todas las traducciones de un Canvas"
-    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
-    image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "COLOCAR: Actualizar la traducción en un Canvas"
+  - name: "COLOCAR: Actualizar la traducción en un lienzo"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  
+  - name: "GET: Ver traducciones predeterminadas del Canvas"
+    link: /docs/api/endpoints/translations/canvas/get_source_canvas/
+    image: /assets/img/braze_icons/message-plus-square.svg
+
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "GET: Ver la traducción original"
+  - name: "GET: Ver las traducciones predeterminadas de la plantilla de correo electrónico"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: Ver traducción y localización específicas"
@@ -66,7 +66,7 @@ Antes de utilizar estos puntos finales, debes [añadir tus localizaciones]({{sit
 
 ### Cómo comprobar tus traducciones
 
-Hay dos formas de validar el soporte de traducción mediante la API y el panel de Braze en las campañas, los lienzos (incluidos los pasos individuales) y las plantillas de correo electrónico:
+Hay dos formas de validar el soporte de traducción mediante la API y el panel de Braze en campañas, lienzos (incluidos los pasos individuales) y plantillas de correo electrónico:
 
 - Durante la composición (antes del lanzamiento)
 - Después del lanzamiento (utilizando borradores posteriores al lanzamiento)
