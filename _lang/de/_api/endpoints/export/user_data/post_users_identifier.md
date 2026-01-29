@@ -11,12 +11,12 @@ description: "Dieser Artikel enthält Details zum Endpunkt Nutzer:innen nach Bez
 {% api %}
 # Nutzerprofil nach Bezeichner exportieren
 {% apimethod post %}
-/users/export/ids
+/benutzer/export/ids
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um Daten aus einem beliebigen Nutzerprofil zu exportieren, indem Sie einen Bezeichner für den Benutzer angeben.
 
-Bis zu 50 `external_ids` oder `user_aliases` können in einer einzigen Anfrage enthalten sein. Wenn Sie `device_id`, `email_address` oder `phone` angeben möchten, kann nur einer der Bezeichner pro Anfrage angegeben werden.
+Bis zu 50 `external_ids` oder `user_aliases` können in einer einzigen Anfrage enthalten sein. Wenn Sie `device_id`, `email_address` oder `phone` angeben möchten, kann nur einer dieser Bezeichner pro Anfrage angegeben werden.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export
+  "fields_to_export": (optional, array of strings) Name of user data fields to export
 }
 ```
 
@@ -61,8 +61,10 @@ Für Kund:in, die am oder nach dem 22\. August 2024 mit Braze Onboarding betrieb
 | `braze_id`         | Optional | String                                                        | Braze-Bezeichner für einen bestimmten Nutzer:in.                                                      |
 | `email_address`    | Optional | String                                                        | E-Mail Adresse des Nutzers:innen.                                                                       |
 | `phone`            | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) Format | Telefonnummer des Nutzers:innen.                                                                        |
-| `fields_to_export` | Erforderlich | String-Array                                              | Name der zu exportierenden Nutzerdatenfelder.                                                          |
+| `fields_to_export` | Fakultativ* | String-Array                                              | Name der zu exportierenden Nutzerdatenfelder.<br><br>\*Dieses Feld ist erforderlich, um das schnellere Rate-Limit von 40 Anfragen pro Sekunde zu verwenden. Wenn Sie diese Option auslassen, wird stattdessen das Standard Rate-Limits von 250 Anfragen pro Minute verwendet. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+\*Erforderlich für Kund:innen, die am oder nach dem 22\. August 2024 bei Braze onboarded haben.
 
 ## Beispiel Anfrage
 ```
@@ -130,8 +132,6 @@ Abhängig von den angefragten Daten reicht dieser API Endpunkt aufgrund des Rate
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,
@@ -146,7 +146,7 @@ Ein Beispiel für die Daten, die über diesen Endpunkt zugänglich sind, finden 
 Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt fehlt, wird angenommen, dass es null oder leer ist):
 
 {% tabs %}
-{% tab Alle Felder %}
+{% tab All fields %}
 
 ```json
 {
@@ -288,7 +288,7 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
 ```
 
 {% endtab %}
-{% tab Beispielhafte Ausgabe %}
+{% tab Sample output %}
 
 ```json
 {
@@ -416,7 +416,7 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Excluir envios de mensagens programadas"
+nav_title: "POST: Excluir envios de mensagens agendadas"
 article_title: "POST: Excluir envios de mensagens programadas"
 search_tag: Endpoint
 page_order: 4

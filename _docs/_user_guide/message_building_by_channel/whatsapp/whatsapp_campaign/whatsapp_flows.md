@@ -13,7 +13,7 @@ channel:
 
 # WhatsApp Flows
 
-> WhatsApp Flows is an enhancement to the existing WhatsApp channel, allowing you to create interactive and dynamic messaging experiences. This page provides step-by-step instructions for participating in the Early Access program and using WhatsApp Flows.
+> WhatsApp Flows is an enhancement to the existing WhatsApp channel, allowing you to create interactive and dynamic messaging experiences. This page provides step-by-step instructions for using WhatsApp Flows.
 
 ## Setting up WhatsApp Flows
 

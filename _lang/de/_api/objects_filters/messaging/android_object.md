@@ -1,5 +1,5 @@
 ---
-nav_title: "Android-Objekte"
+nav_title: "Android Objekte"
 article_title: Android Messaging Objekt
 page_order: 0
 page_type: reference
@@ -22,12 +22,12 @@ Sie müssen ein Android Push-Objekt in `messages` einbinden, wenn Sie möchten, 
    "title": (required, string) the title that appears in the notification drawer,
    "extra": (optional, object) additional keys and values to be sent in the push,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an Android Push Message),
-   "notification_channel_id": (optional, string) the channel ID the notification will be sent with,
+   "notification_channel_id": (optional, string) the channel ID the notification is sent with,
    "priority": (optional, integer) the notification priority value,
    "android_priority": (optional, string) the FCM sender priority,
-   "send_to_sync": (optional, if set to true we will throw an error if "alert" or "title" is set),
+   "send_to_sync": (optional, if set to true we throw an error if "alert" or "title" is set),
    "collapse_key": (optional, string) the collapse key for this message,
-   // Specifying "default" in the sound field will play the standard notification sound
+   // Specifying "default" in the sound field plays the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
    "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to false,
@@ -36,7 +36,7 @@ Sie müssen ein Android Push-Objekt in `messages` einbinden, wenn Sie möchten, 
    "notification_id": (optional, integer),
    "push_icon_image_url": (optional, string) an image URL for the large icon,
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
-   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
+   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze only sends this push to a user's most recently used Android device, rather than all eligible Android devices,
    "buttons" : (optional, array of Android push action button objects) push action buttons to display
    "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed through Conversation Push
 }
@@ -48,11 +48,11 @@ Sie können "Big Picture"-Benachrichtigungen senden, indem Sie den Schlüssel `a
 
 | Parameter | Details |
 | --------- | ------- |
-| `priority` | Dieser Parameter akzeptiert Werte von `-2` bis `2`, wobei `-2` für die Priorität "MIN" und `2` für "MAX" steht. `0` ist der "DEFAULT"-Wert. <br> <br> Alle Werte, die außerhalb dieses Bereichs gesendet werden, werden standardmäßig auf 0 gesetzt. Weitere Informationen darüber, welche Prioritätsstufe Sie verwenden sollten, finden Sie unter [Android Benachrichtigungspriorität]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
+| `priority` | Dieser Parameter akzeptiert Werte von `-2` bis `2`, wobei `-2` für die Priorität "MIN" und `2` für "MAX" steht. `0` ist der "DEFAULT"-Wert. <br> <br> Alle Werte, die außerhalb dieses Bereichs gesendet werden, sind standardmäßig 0. Weitere Informationen darüber, welche Prioritätsstufe Sie verwenden sollten, finden Sie unter [Android Benachrichtigungspriorität]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/customization/advanced_settings#notification-priority). |
 | `android_priority` | Dieser Parameter akzeptiert entweder die Werte `normal` oder `high`, um die Priorität des FCM Senders anzugeben. Standardmäßig werden Nachrichten mit der auf der Seite [Push-Einstellungen]({{site.baseurl}}/user_guide/administrative/app_settings/push_settings/#default-fcm-priority-for-android-campaigns) konfigurierten Standard-FCM-Priorität gesendet.<br><br> Weitere Informationen darüber, wie sich unterschiedliche Werte auf die Zustellung auswirken, finden Sie unter [Android Nachrichtenpriorität](https://firebase.google.com/docs/cloud-messaging/android/message-priority). |
-| `collapse_key` | FCM kann gleichzeitig nur bis zu vier Klappschlüssel pro Gerät speichern. Wenn Sie mehr als vier Collapse Keys verwenden, übernimmt FCM keine Garantie dafür, welche davon erhalten bleiben. Braze verwendet standardmäßig einen dieser Schlüssel für Kampagnen. Stellen Sie daher sicher, dass Sie nur bis zu drei zusätzliche Klappschlüssel für Android-Nachrichten angeben. |
+| `collapse_key` | FCM kann pro Gerät nur bis zu vier Klappschlüssel gleichzeitig speichern. Wenn Sie mehr als vier Collapse Keys verwenden, übernimmt FCM keine Garantie dafür, welche Schlüssel erhalten bleiben. Braze verwendet standardmäßig einen dieser Schlüssel für Kampagnen. Stellen Sie daher sicher, dass Sie nur bis zu drei zusätzliche Klappschlüssel für Android-Nachrichten angeben. |
 | `push_icon_image_url` | Der Wert für den Parameter "Großes Symbol" sollte eine URL sein, die auf den Ort verweist, an dem Ihr Bild gehostet wird. <br> <br> Die Bilder müssen auf ein Seitenverhältnis von 1:1 beschnitten werden und sollten mindestens 40x40 groß sein. |
-| `notification_channel` | Wenn dies nicht angegeben wird, versucht Braze, die Nutzdaten der Benachrichtigung mit der [Fallback-Kanal-ID des Dashboards]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel) zu senden. Weitere Informationen finden Sie unter [Benachrichtigungskanäle]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/) und in den Schritten zur [Definition von Benachrichtigungskanälen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels) während der Integration. |
+| `notification_channel` | Wenn dies nicht angegeben wird, versucht Braze, die Nutzdaten der Benachrichtigung mit der [Fallback-Kanal]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel) ID des [Dashboards]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/notification_channels/#dashboard-fallback-channel) zu senden. Weitere Informationen finden Sie unter [Benachrichtigungskanäle]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/) und in den Schritten zur [Definition von Benachrichtigungskanälen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels) während der Integration. |
 | `send_to_sync` | Weitere Informationen zu `send_to_sync` Nachrichten finden Sie unter [Stille Android-Benachrichtigungen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/#silent-push-notifications). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

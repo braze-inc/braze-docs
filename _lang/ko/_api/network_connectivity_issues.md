@@ -15,7 +15,7 @@ Braze API 엔드포인트는 DNS 정보를 기반으로 가장 가까운 POP로 
 
 소수의 방화벽이 Braze API 엔드포인트에 대한 연결을 방해하는 HTTPS/TLS 트래픽을 수정하거나 보호하려고 시도하는 것을 발견했습니다. 서버가 물리적 방화벽 뒤에 있는 경우 방화벽이나 라우터가 수행하는 HTTPS/TLS 가속 또는 수정을 비활성화하세요. 또한 CDN 제공업체에 아웃바운드 트래픽을 허용 목록에 추가하여(Fastly.com) 문제가 해결되는지 확인할 수 있습니다.
 
-간혹 SYN/ACK/RST 패킷을 필터링하는 설정으로 인해 문제가 발생할 수 있으므로 호스트에서 iptables를 사용하는 경우 아웃바운드 트래픽을 CDN 제공업체(Fastly.com)로 허용 목록에 추가하여 문제가 해결되는지 확인할 수 있습니다.
+간혹 SYN/ACK/RST 패킷을 필터링하는 설정으로 인해 문제가 발생할 수 있으므로 호스트에서 iptables를 사용하는 경우 CDN 제공업체(Fastly.com)로 아웃바운드 트래픽을 허용 목록에 추가하여 문제가 해결되는지 확인할 수 있습니다.
 
 Braze API 엔드포인트에 연결하는 데 여전히 네트워크 문제가 있는 경우 [MTR 테스트](https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2)와 문제가 발생한 동안 [Fastly Debug](http://www.fastly-debug.com/) 결과를 제공하고 지원 요청과 함께 제출하세요. 테스트 결과는 개발 머신이 아닌 Braze API 엔드포인트에 연결하는 데 문제가 있는 서버에서 얻어야 한다는 점에 유의하세요. 네트워크 캡처(tcpdump 또는 .pcap 파일)를 얻을 수 있다면 도움이 될 것입니다.
 

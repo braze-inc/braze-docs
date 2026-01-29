@@ -13,7 +13,7 @@ hidden: true
 > Learn how to delete an individual user or a segment of users directly through the Braze dashboard.
 
 {% alert important %}
-This feature is currently in early access. Contact your customer success manager if you're interested in participating.
+Early access for this feature is temporarily closed. Contact your customer success manager for more details.
 {% endalert %}
 
 ## Prerequisites

@@ -72,6 +72,17 @@ Bei den Eigenschaften kann es sich um jeden der folgenden Datentypen handeln:
 
 Objekte mit Event-Eigenschaften, die Array- oder Objektwerte enthalten, können eine Nutzlast für Event-Eigenschaften von bis zu 100 KB haben.
 
+### Reservierte Tasten
+
+Die folgenden Schlüssel sind reserviert und können nicht als benutzerdefinierte Ereigniseigenschaften verwendet werden:
+
+- `time`
+- `event_name`
+
+{% alert important %}
+Die Verwendung von reservierten Schlüsseln als Namen für angepasste Event-Eigenschaften führt zu API-Fehlern beim Senden von Anfragen an den Endpunkt `/users/track`.
+{% endalert %}
+
 ### Persistenz der Eigenschaften von Ereignissen
 
 Event-Eigenschaften dienen zum Filtern und zur Liquid Personalisierung von Nachrichten, die durch ihre übergeordneten Ereignisse getriggert werden. Standardmäßig werden sie nicht auf dem Braze Nutzerprofil persistent gehalten. Um die Werte von Event-Eigenschaften bei der Segmentierung zu verwenden, lesen Sie bitte den Abschnitt [Angepasste Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/), in dem die verschiedenen Ansätze zur langfristigen Speicherung von Werten für Event-Eigenschaften beschrieben werden.

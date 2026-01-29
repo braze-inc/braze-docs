@@ -33,7 +33,7 @@ Führen Sie diese Schritte aus, um Benachrichtigungen über Preissenkungen in ei
 
 1. Gehen Sie zu Ihrem Katalog und wählen Sie die Registerkarte **Einstellungen**.
 2. Wählen Sie den Schalter **Preissenkung**.
-3. Wenn die globalen Einstellungen des Katalogs nicht konfiguriert wurden, werden Sie aufgefordert, die angepassten Events und Eigenschaften einzurichten, die zum Auslösen von Benachrichtigungen verwendet werden. <br><br> ![Schublade für Katalogeinstellungen.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
+3. Wenn die globalen Einstellungen des Katalogs nicht konfiguriert wurden, werden Sie aufgefordert, die angepassten Events und Eigenschaften einzurichten, die zum Auslösen von Benachrichtigungen verwendet werden. <br><br> ![Katalogeinstellungen.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
 
 | Feld | Beschreibung |
 | --- | --- |
@@ -77,7 +77,7 @@ Hier ist ein Beispiel für ein angepasstes Event:
 3. Legen Sie die **Preissenkungsregel** fest. Diese Logik bestimmt, ob eine Benachrichtigung gesendet werden soll. Eine Preissenkung kann als prozentuale Preisänderung oder durch die Änderung des Wertes für das Preisfeld konfiguriert werden.
 4. Wählen Sie **Einstellungen speichern**.
 
-![Katalogeinstellungen, die das Feature der Preissenkung aktiviert zeigen. Die Preissenkungsregel ist eine Änderung von drei Prozent des ursprünglichen Preises.]({% image_buster /assets/img/price_drop_notifications.png %})
+![Katalogeinstellungen, die die aktivierte Preissenkungsfunktion anzeigen. Die Preissenkungsregel ist eine Änderung von drei Prozent des ursprünglichen Preises.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
 Die Benachrichtigungsregeln in diesen Einstellungen ersetzen nicht die Canvas-Benachrichtigungseinstellungen, wie z.B. Stille Stunden.
@@ -102,9 +102,10 @@ Die Verwendung von {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}
 
 Verwenden Sie diesen Liquid-Tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} am Anfang Ihrer Nachricht und verwenden Sie dann {%raw%}`{{items[0].<field_name>}}`{%endraw%}, um in der gesamten Nachricht auf Daten zu diesem Artikel zuzugreifen.
 
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
+
 ## Überlegungen
 
 - Benutzer sind für 90 Tage abonniert. Wenn der Preis eines Artikels innerhalb von 90 Tagen nicht sinkt, wird der Benutzer aus dem Abonnement entfernt.
 - Wenn Sie die Benachrichtigungsregel **Alle abonnierten Benutzer benachrichtigen** verwenden, wird Braze 100.000 Benutzer innerhalb von 10 Minuten benachrichtigen.
-- Braze verarbeitet 10 Anfragen zum Update von Katalogartikeln pro Minute. Endpunkte für Updates erlauben 50 Artikel-Updates pro Anfrage und unterstützen bis zu 500 Artikel-Updates pro Minute, die Back-in-Stock-Benachrichtigungen auslösen können.
-
+- Braze verarbeitet 10 Anfragen zum Update von Katalogartikeln pro Minute. Die Update-Endpunkte erlauben 50 Artikel-Updates pro Anfrage und unterstützen bis zu 500 Artikel-Updates pro Minute, die Back-in-Stock-Benachrichtigungen auslösen können.

@@ -10,11 +10,11 @@ description: "Esta sección incluye artículos relacionados con la Plataforma de
 
 > La plataforma de datos Braze es un conjunto completo y componible de capacidades de datos e integraciones de socios que te permite crear experiencias personalizadas e impactantes a lo largo del ciclo de vida del cliente, basadas en tres tareas a realizar relacionadas con los datos: [Unificación]({{site.baseurl}}/user_guide/data/unification) de [Datos]({{site.baseurl}}/user_guide/data/unification), [Activación de Datos]({{site.baseurl}}/user_guide/data/activation) y [Distribución de Datos]({{site.baseurl}}/user_guide/data/distribution).
 
-Utilizando una combinación de características de la plataforma de datos Braze, puedes aprovechar tus datos para crear mensajes significativos y específicos que respondan a lo que hacen tus clientes en tiempo real.
+Utilizando una combinación de características de la Plataforma de Datos Braze, puedes aprovechar tus datos para crear mensajes significativos y específicos que respondan a lo que hacen tus clientes en tiempo real.
 
 ## Unifica tus datos 
 
-Recopila y consolida datos propios de cualquier fuente, utilizando [API] y [SDK]. También puedes aprovechar nuestras herramientas de ingesta integradas, como [la Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion), para crear una integración sencilla directamente desde tu almacén de datos o solución de almacenamiento de archivos a Braze, o utilizar [la Transformación de datos]({{site.baseurl}}/user_guide/data/unification/data_transformation) para crear y gestionar integraciones de webhook para recopilar tus datos y transferirlos a Braze.
+Recopila y consolida datos propios de cualquier fuente utilizando [API]({{site.baseurl}}/api/home) y [SDK]({{site.baseurl}}/developer_guide/sdk_integration). También puedes utilizar herramientas de ingesta integradas, como [la Ingesta de datos en la nube]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion), para crear una integración directa desde tu almacén de datos o solución de almacenamiento de archivos a Braze, o utilizar [la Transformación de datos]({{site.baseurl}}/user_guide/data/unification/data_transformation) para crear y administrar integraciones de webhook para transferir datos a Braze.
 
 ## Activa tus datos
 

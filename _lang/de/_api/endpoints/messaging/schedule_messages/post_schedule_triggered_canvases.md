@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des durch die Schedule API g
 {% api %}
 # Zeitplan für API-getriggerte Canvase
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/canvas/trigger/schedule/create
+/canvas/trigger/zeitplan/erstellen
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um Zeitpläne für Canvas Nachrichten über eine API-getriggerte Zustellung zu erstellen. Dabei können Sie entscheiden, welche Aktion den Versand der Nachricht triggern soll.
@@ -28,7 +28,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Anfragetext
 

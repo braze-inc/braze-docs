@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Liste de l'État d'abonnement avec l'adresse e-mail ou le numéro de téléphone"
+nav_title: "GET : Indiquez l'état de l'abonnement avec l'adresse e-mail ou le numéro de téléphone"
 article_title: "GET : Liste de l'État d'abonnement avec l'adresse e-mail ou le numéro de téléphone"
 search_tag: Endpoint
 page_order: 2
@@ -36,8 +36,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 Les entrées sont répertoriées par ordre décroissant.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

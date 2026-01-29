@@ -63,7 +63,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 | Parámetro | Tipo de datos | Descripción |
 | --------- | --------- | ----------- |
-| `keys` | Matriz | Matriz de objetos clave de autenticación SDK. |
+| `keys` | Matriz | Matriz de objetos de clave de autenticación SDK. |
 | `keys[].id` | Cadena | El ID de la clave de autenticación SDK. |
 | `keys[].rsa_public_key` | Cadena | La cadena de clave pública RSA. |
 | `keys[].description` | Cadena | Descripción de la clave de autenticación SDK. |

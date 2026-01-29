@@ -1,23 +1,29 @@
 ---
-nav_title: Despliegue de agentes
-article_title: Despliegue de agentes personalizados
+nav_title: Despliega agentes
+article_title: Despliega agentes personalizados
 description: "Aprende a utilizar agentes personalizados en Braze después de crearlos."
 alias: /deploying-agents/
 ---
 
-# Despliegue de agentes personalizados
+# Despliega agentes personalizados
 
 > Aprende a utilizar agentes personalizados en pasos en Canvas o campos de catálogo después de crearlos. Para una introducción, ver [Agentes Braze]({{site.baseurl}}/user_guide/brazeai/agents/). 
 
 {% alert important %}
 Los Agentes Braze están actualmente en fase beta. Si necesitas ayuda para empezar, ponte en contacto con tu administrador del éxito del cliente.
-{% endalert %}  
+{% endalert %}
+
+## Uso del agente
+
+En la sección **Uso del** Agente de tu agente, puedes hacer referencia y navegar hasta donde se está utilizando activamente el agente en catálogos y Lienzos.
+
+![Sección Uso del Agente que muestra dos agentes activos y uno inactivo para los Lienzos.]( {% image_buster /assets/img/ai_agent/agent_usage.png %} )
 
 ## Agentes en Canvas  
 
 Puedes utilizar agentes como etapas de un recorrido para personalizar mensajes o guiar la toma de decisiones en tiempo real. Para conocer los pasos detallados de configuración, consulta [Paso Agente]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/agent_step/).
 
-### Casos de uso
+### Ejemplos
 
 | Casos de uso | Descripción |
 | --- | --- |
@@ -33,7 +39,7 @@ Puedes utilizar agentes como etapas de un recorrido para personalizar mensajes o
 
 Puedes aplicar un agente a los campos del catálogo para que genere o calcule automáticamente valores para cada fila. El agente también se ejecutará en las nuevas filas que se añadan al catálogo en el futuro. 
 
-### Casos de uso
+### Ejemplos
 
 | Casos de uso | Descripción |
 | --- | --- |
@@ -47,7 +53,7 @@ Puedes aplicar un agente a los campos del catálogo para que genere o calcule au
 
 ### Pasos
 
-\![Un paso de Agente en un campo del catálogo.]({% image_buster /assets/img/ai_agent/agent_in_catalog.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Un paso de Agente en un campo del catálogo.]({% image_buster /assets/img/ai_agent/agent_in_catalog.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Para añadir un agente al campo de tu catálogo
 
@@ -60,14 +66,41 @@ Para añadir un agente al campo de tu catálogo
 
 ### Cómo funcionan los agentes de catálogo  
 
-Tras el lanzamiento, el agente se ejecutará y evaluará cada fila, tomando las columnas seleccionadas en su contexto para producir una salida. Los agentes se ejecutan en todas las nuevas filas añadidas después de desplegar el agente. Si seleccionaste **Recalcular cuando se actualizan las filas del catálogo**, todos los valores de este campo se actualizarán si cambian los campos fuente existentes.  
+Tras el lanzamiento, el agente se ejecuta y evalúa cada fila, tomando las columnas seleccionadas en su contexto para producir una salida. Los agentes se ejecutan en todas las nuevas filas añadidas después de desplegar el agente. Si seleccionaste **Recalcular cuando se actualizan las filas del catálogo**, todos los valores de este campo se actualizan si cambian los campos fuente existentes.
+
+Puedes actualizar y editar los campos de tu catálogo que utilizan agentes. Para eliminar un agente de una columna, desmarca **Aplicar agente AI**. Esto convierte la columna en una columna no agéntica, y los campos conservan los últimos valores que el agente aplicó la última vez que se ejecutó en el catálogo.
+
+No se admiten las referencias circulares en los catálogos, lo que significa que no puede darse el siguiente escenario:
+
+- La Columna Agenética 1 utiliza la Columna Agenética 2 como entrada
+- La Columna Agenética 2 utiliza la Columna Agenética 1 como entrada
+
+![La opción de seleccionar "Aplicar agente IA" para un campo del catálogo.]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
-Durante el periodo beta, los agentes de catálogo están limitados a procesar valores de entrada de hasta 10 KB por fila, y sólo actualizarán las 10.000 primeras filas de un catálogo.
+Durante el periodo beta, los agentes de catálogo están limitados a procesar valores de entrada de hasta 25 KB por fila.
 {% endalert %}
+
+#### Definir campos de respuesta
+
+Si tu agente utiliza [campos]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#fields) como formato de salida, puedes seleccionar el campo correspondiente del agente para **Campo de respuesta** para utilizarlo en el campo del catálogo. 
+
+Supongamos que tienes un agente que añade descripciones de productos a un catálogo con los siguientes campos para estructurar el formato de salida:
+
+| Nombre del campo | Valor |
+| --- | --- |
+| **descripción** | Texto |
+| **confidence_score_out_of_ten** | Número |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Puedes añadir un campo llamado **product_description** a un catálogo y seleccionar **descripción** como **Campo de respuesta** para rellenar la columna con las descripciones del agente.
+
+![Un campo "product_description" con el agente "Descriptor" aplicado. Se selecciona la salida "descripción" como campo de respuesta.]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
+
+También puedes anular manualmente la celda generada por el agente seleccionando **Editar elemento** y actualizando la descripción generada por el agente con tus modificaciones. Para revertir tus ediciones a la descripción generada por el agente, selecciona el símbolo de actualizar en la celda.
 
 ### Tratamiento de errores en los catálogos  
 
 - Las invocaciones de catálogo fallidas no se reintentan.
-- Si la llamada de la API al proveedor del modelo fundacional devuelve algún error, como un error de clave de API no válida o un error de límite de velocidad, el valor del campo no se actualizará.   
-- Puedes revisar los registros del agente para ver los detalles de las ejecuciones fallidas.  
+- Si la llamada de la API al proveedor del modelo fundacional devuelve algún error, como un error de clave de API no válida o un error de límite de velocidad, el valor del campo no se actualiza.
+- Puedes revisar los registros del agente para ver los detalles de las ejecuciones fallidas.

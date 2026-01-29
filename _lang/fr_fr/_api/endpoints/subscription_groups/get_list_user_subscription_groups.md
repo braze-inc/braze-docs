@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Répertorier les groupes d’abonnement de l’utilisateur"
+nav_title: "GET : Liste des groupes subscription groups d'utilisateurs"
 article_title: "GET : Répertorier les groupes d’abonnement de l’utilisateur"
 search_tag: Endpoint
 page_order: 4
@@ -14,7 +14,7 @@ description: "Cet article présente en détail l’endpoint Braze Répertorier l
 /subscription/user/status
 {% endapimethod %}
 
-> Utilisez cet endpoint pour répertorier et obtenir les groupes d’abonnement d’un utilisateur donné.
+> Utilisez cet endpoint pour lister et obtenir les groupes d'abonnement avec l'historique d'un certain utilisateur.
 
 Si vous souhaitez voir des exemples ou tester cet endpoint pour les **groupes d'abonnement e-mail**:
 
@@ -51,15 +51,15 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 S’il existe plusieurs utilisateurs (plusieurs `external_ids`) qui partagent la même adresse e-mail, tous les utilisateurs seront renvoyés en tant qu’utilisateurs distincts (même s’ils ont la même adresse e-mail ou le même groupe d’abonnement).
 {% endalert %}
 
-## Exemple de demande 
+## Exemple de demande
 
 {% tabs %}
-{% tab Utilisateurs multiples %}
+{% tab Multiple Users %}
 {% raw %}
 `https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
 {% endraw %}
 {% endtab %}
-{% tab SMS et WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \
@@ -67,7 +67,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 ```
 {% endraw %}
 {% endtab %}
-{% tab E-mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=0' \
@@ -79,19 +79,51 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/use
 
 ## Exemple de réponse
 
+Seuls les groupes d'abonnement dont le statut d'abonnement a été mis à jour dans l'historique de l'utilisateur seront inclus dans une réponse positive. Cela signifie que les groupes d'abonnement nouvellement créés ne seront pas répertoriés.
+
 ```json
 {
-  "success": true,
-  "subscription_groups": [
-    {
-      "subscription_group_id": "group_id_1",
-      "subscription_status": "subscribed"
-    },
-    {
-      "subscription_group_id": "group_id_2",
-      "subscription_status": "unsubscribed"
-    }
-  ]
+    "users": [
+        {
+            "email": "test@example.com",
+            "phone": "50505050",
+            "external_id": "20500",
+            "subscription_groups": [
+                {
+                  "id": "ec2fcc919fca",
+                  "name": "ActivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "7d7af9dd5556",
+                  "name": "ReactivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "a5e84fd16220",
+                  "name": "MarketingGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "64d8cad9176c",
+                  "name": "TransactionalGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "b2134cd63942",
+                  "name": "BankerMarketingGroup",
+                  "channel": "sms",
+                  "status": "Subscribed"
+                }
+            ]
+        }
+    ],
+    "total_count": 1,
+    "message": "success"
 }
 ```
 

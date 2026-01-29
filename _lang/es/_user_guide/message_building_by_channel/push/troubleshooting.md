@@ -1,15 +1,15 @@
 ---
 nav_title: Solución de problemas
 article_title: Solución de problemas Push
-page_order: 23
+page_order: 24
 page_type: reference
 description: "Esta página contiene pasos para la solución de problemas relacionados con el canal de mensajería push."
 channel: push
 ---
 
-# Solución de problemas Push
+# Solucionar problemas push
 
-> Esta página te ayuda a solucionar varios problemas que puedas experimentar con el canal de mensajería Push.
+> Utiliza esta página para solucionar problemas con el canal de mensajería push.
 
 ## Faltan notificaciones push
 
@@ -17,7 +17,7 @@ channel: push
 
 - [Estado de la suscripción push](#push-subscription-status)
 - [Segmento](#segment)
-- [Tapas de notificación push](#push-notification-caps)
+- [Límites de la notificación push](#push-notification-caps)
 - [Límites de velocidad](#rate-limits)
 - [Estado del grupo de control](#control-group-status)
 - [Token de notificaciones push válido](#valid-push-token)
@@ -28,7 +28,7 @@ channel: push
 
 Los push sólo pueden enviarse a usuarios suscritos o con adhesión voluntaria. Comprueba tu perfil de usuario en la pestaña [Interacción]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de la sección **Perfil de usuario** para confirmar si estás registrado activamente para push en el espacio de trabajo que estás probando. Si estás registrado para varias aplicaciones, las encontrarás listadas en el campo **Push registrado para**:
 
-\![Push Registrado para]({% image_buster /assets/img_archive/trouble1.png %})
+![Push Registrado Para]({% image_buster /assets/img_archive/trouble1.png %})
 
 También puedes exportar los perfiles de usuario utilizando los puntos finales de exportación Braze:
 - [Usuarios por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier)
@@ -40,19 +40,19 @@ Cualquiera de los dos puntos finales devolverá un objeto token de notificacione
 
 Asegúrate de que entras en el segmento al que te diriges (si se trata de una campaña en vivo y no de una prueba). En el **perfil de usuario**, verás una lista de los segmentos en los que se encuentra actualmente el usuario. Recuerda que se trata de una variable en constante cambio, ya que la segmentación se actualiza en tiempo real.
 
-\![Lista de segmentos]({% image_buster /assets/img_archive/trouble2.png %})
+![Lista de segmentos]({% image_buster /assets/img_archive/trouble2.png %})
 
 También puedes confirmar que el usuario forma parte del segmento utilizando **la Búsqueda de usuarios** al crear un segmento.
 
-Sección de búsqueda de usuarios con un campo de búsqueda.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
+![Sección de búsqueda de usuarios con un campo de búsqueda.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
-#### Tapas de notificación push
+#### Límites de la notificación push
 
-Comprueba los límites globales de frecuencia. Es posible que no recibieras la notificación push porque tu espacio de trabajo tiene establecida una limitación de frecuencia global y ya has alcanzado el límite de notificaciones push para el periodo de tiempo especificado.
+Comprueba los límites globales de frecuencia. Es posible que no recibieras la notificación push porque tu espacio de trabajo tiene establecida una limitación de frecuencia global y ya has alcanzado tu límite de notificaciones push para el periodo de tiempo especificado.
 
 Puedes hacerlo activando la [limitación de frecuencia global]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#freq-cap-feat-over) en el panel. Si la campaña está configurada para cumplir las normas de limitación de frecuencia, habrá una serie de usuarios afectados por esta configuración
 
-Detalles de la campaña]({% image_buster /assets/img_archive/trouble3.png %})
+![Detalles de la campaña]({% image_buster /assets/img_archive/trouble3.png %})
 
 #### Límites de velocidad
 
@@ -86,7 +86,7 @@ Si tienes problemas con los enlaces de las notificaciones push que se abren ines
 
 En tu campaña o paso en Canvas, comprueba que la opción **Abrir URL Web dentro de la aplicación móvil** no está seleccionada. Si es así, borra la selección y relánzala. 
 
-\!["Comportamiento al hacer clic" campo de configuración de un push establecido en "Abrir URL web" con "Abrir URL web dentro de la aplicación móvil" sin marcar.]({% image_buster /assets/img/push_on_click.png %})
+![El campo "Comportamiento al hacer clic" de la configuración de un push establece "Abrir URL web" con "Abrir URL web dentro de la aplicación móvil" sin marcar.]({% image_buster /assets/img/push_on_click.png %})
 
 La interacción predeterminada para el comportamiento al hacer clic "Abrir URL Web" difiere según la versión del SDK. Para las versiones del SDK iOS 2.29.0 y Android 2.0.0 y superiores, esta opción está seleccionada por defecto y las URL web se abrirán en una vista web dentro de la aplicación. Antes de estas versiones, esta opción estaba desactivada por defecto y las URL web se abrían en el navegador web predeterminado del dispositivo.
 
@@ -108,7 +108,7 @@ Si tienes problemas con las notificaciones push en tu navegador, es posible que 
 {% tabs %}
 {% tab Chrome %}
 
-### Restablecer Chrome en el escritorio
+### Reiniciar Chrome en el escritorio
 
 1. Junto a tu URL en el navegador Chrome, selecciona el icono deslizante **Ver información del sitio**.
 2. En **Notificaciones**, selecciona **Restablecer permiso**.
@@ -145,7 +145,7 @@ Si no tienes una notificación de tu sitio abierta:
 
 1. Abre Chrome en Android.
 2. Pulsa en el menú <i class="fas fa-ellipsis-vertical"></i>.
-3. Ve a **Configuración** > **Configuración del sitio** > Notificaciones.
+3. Ve a **Configuración** > **Configuración del sitio** > **Notificaciones**.
 4. Comprueba que las notificaciones están configuradas en **Preguntar antes de enviar (recomendado)**.
 5. Encuentra tu sitio en la lista.
 6. Selecciona la entrada y pulsa **Borrar y Restablecer**.
@@ -178,11 +178,11 @@ Estos pasos son sólo para macOS, ya que Apple no admite Web Push para Safari en
 {% endalert %}
 
 1. Abre Safari.
-2. [En la barra de menús del Mac](https://support.apple.com/guide/mac-help/whats-in-the-menu-bar-mchlp1446/mac), ve a **Safari** > **Configuración** > **Sitios web** > Notificaciones.
-3. Selecciona tu centro de la lista.
+2. En la [barra de menús del Mac](https://support.apple.com/guide/mac-help/whats-in-the-menu-bar-mchlp1446/mac), ve a **Safari** > **Configuración** > **Sitios web** > **Notificaciones**.
+3. Selecciona tu sitio de la lista.
 4. Selecciona **Eliminar** para suprimir los permisos de notificación del sitio.
 5. A continuación, ve a **Privacidad** > **Gestionar datos del sitio web**.
-6. Selecciona tu centro de la lista.
+6. Selecciona tu sitio de la lista.
 7. Selecciona **Eliminar**, o para eliminar todos los datos del sitio, selecciona **Eliminar todo**.
 8. Selecciona **Hecho**.
 

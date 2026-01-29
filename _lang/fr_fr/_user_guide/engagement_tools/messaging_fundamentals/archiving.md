@@ -1,7 +1,7 @@
 ---
 nav_title: Archivage
 article_title: Archivage
-page_order: 3
+page_order: 2
 page_type: reference
 description: "Cet article de référence explique comment archiver vos campagnes et vos toiles."
 tool:
@@ -21,7 +21,7 @@ Lorsque vous archivez une campagne ou un Canvas, plus aucun message ne sera envo
 {% tab campaign %}
 Pour archiver une campagne :
 
-1. Allez dans **Envoi de messages** > Campagnes.
+1. Sélectionnez **Envoi de messages** > **Campagnes**.
 2. Passez la souris sur la ligne de la campagne et sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i>.
 3. Sélectionnez **Archive**.
 {% endtab %}
@@ -29,7 +29,7 @@ Pour archiver une campagne :
 {% tab canvas %}
 Pour archiver un Canvas :
 
-1. Allez dans **Messagerie** > **Canvas**.
+1. Allez dans **Messagerie** > **Canvas.**
 2. Passez la souris sur la ligne du canvas et sélectionnez le menu <i class="fas fa-ellipsis-vertical"></i>.
 3. Sélectionnez **Archive**.
 {% endtab %}
