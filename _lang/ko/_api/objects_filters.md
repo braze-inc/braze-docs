@@ -12,8 +12,8 @@ description: "이 랜딩 페이지에는 Braze API 호출에 사용되는 Braze 
 
 ## 개체 및 필터
 
-- [캔버스 항목 속성 개체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [연결된 대상 필터 및 개체]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [캔버스 항목 속성 객체]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
+- [연결된 오디언스 필터 & 개체]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [이벤트 객체]({{site.baseurl}}/api/objects_filters/event_object/)
 - [구매 객체]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [수신자 개체]({{site.baseurl}}/api/objects_filters/recipient_object/)

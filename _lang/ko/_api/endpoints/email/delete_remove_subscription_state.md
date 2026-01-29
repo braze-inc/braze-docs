@@ -26,7 +26,7 @@ description: "이 기사는 이메일 주소 또는 전화번호 Braze 엔드포
 | `phone` | 예 | 문자열 | 사용자의 전화번호(최소 1개에서 최대 50개의 전화번호를 포함해야 함). E.164 형식으로 제공하는 것이 좋습니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 
 ```json
 Content-Type: application/json
