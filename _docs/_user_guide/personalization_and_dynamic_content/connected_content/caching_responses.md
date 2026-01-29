@@ -16,29 +16,29 @@ To prevent caching, you can specify `:no_cache`, which may cause increased netwo
 {% details Connected Content rendering and data handling (advanced) %}
 This section provides a more detailed, end-to-end view of how Braze renders Liquid and Connected Content and where data can exist temporarily before a message is sent. This may help with privacy and data-handling reviews.
 
-#### What is (and isn’t) stored
+#### What is and isn’t stored
 
-- **Connected Content response body**: Not permanently stored by Braze. It can be held temporarily in memory and (when caching is enabled) stored in cache with a time-to-live (TTL).
-- **Connected Content request metadata** (for example, fully rendered URL, HTTP status code, response duration): Logged for troubleshooting and monitoring. These logs are kept for up to 30 days.
-- **Final rendered message**: Exists in memory during rendering. It may also be stored elsewhere depending on your configuration and channel (for example, Message Archiving or Content Cards).
+- **Connected Content response body:** Not permanently stored by Braze. It can be held temporarily in memory and, when caching is enabled, stored in cache with a time-to-live (TTL).
+- **Connected Content request metadata:** Request metadata, such as the fully rendered URL, HTTP status code, and response duration, are logged for troubleshooting and monitoring. These logs are kept for up to 30 days. 
+- **Final rendered message:** Exists in memory during rendering. This may also be stored elsewhere depending on your configuration and channel (for example, Message Archiving or Content Cards).
 
 #### Rendering flow (high level)
 
-The following flow describes how Braze renders and sends messages for provider-based channels such as email, SMS, and push. SDK-delivered channels such as Content Cards use the same underlying Liquid and Connected Content rendering but differ in when the content is generated and how it is delivered.
+The following flow describes how Braze renders and sends messages for provider-based channels such as email, SMS, and push. SDK-delivered channels like  Content Cards use the same underlying Liquid and Connected Content rendering but differ in when the content is generated and how it is delivered.
 
 1. A background worker renders the Liquid template for a message when the message is prepared to be delivered.
 2. Connected Content tags are evaluated during Liquid rendering.
 3. For each Connected Content tag, Braze checks a multi-tier cache. If no cached value exists (or caching is disabled), Braze calls your endpoint and receives the response.
 4. The response is injected into the Liquid template and the message is fully rendered.
-5. For provider-based channels, the rendered message is sent to the channel provider and then to the consumer. For SDK-delivered channels such as Content Cards, the rendered content is synced to the Braze SDK and can be generated at first impression or display time, at which point it is shown to the consumer.
+5. For provider-based channels, the rendered message is sent to the channel provider and then to the user. For SDK-delivered channels such as Content Cards, the rendered content is synced to the Braze SDK and can be generated at first impression or display time, at which point it is shown to the user.
 
 #### Where Connected Content responses can live temporarily
 
-Braze uses a multi-tier cache for Connected Content responses with TTLs between **5 minutes (minimum)** and **4 hours (maximum)** (depending on your use of `:cache_max_age` and other caching rules):
+Braze uses a multi-tier cache for Connected Content responses with TTLs between five minutes and four hours, depending on your use of `:cache_max_age` and other caching rules:
 
-- **In-process memory cache**: Transient cache within the worker process. Data can live only for the duration of the job (up to ~11 minutes based on worker timeout).
-- **Local machine cache**: A per-worker cache (for example, a local Memcached instance).
-- **Cluster-wide cache**: A distributed cache shared across workers (for example, a Memcached cluster).
+- **In-process memory cache:** Transient cache within the worker process. Data can live only for the duration of the job (up to ~11 minutes based on worker timeout).
+- **Local machine cache:** A per-worker cache, such as a local Memcached instance.
+- **Cluster-wide cache:** A distributed cache shared across workers, such as a Memcached cluster.
 
 These cache layers are volatile and can evict data earlier than the configured TTL.
 
@@ -48,9 +48,9 @@ For endpoints that are not hosted inside Braze infrastructure, using `:no_cache`
 
 #### Where the final rendered output can live
 
-- **Message Archiving**: If Message Archiving is enabled, Braze may write the final rendered message to your configured cloud storage bucket. If your Connected Content response is included in the rendered message, it will be included in the archived copy.
-- **End user devices**: Once delivered, the fully rendered message content can persist on end-user devices for an unknown amount of time.
-- **Content Cards**: Rendered content for Content Cards is stored in a Braze database until the card expires.
+- **Message Archiving:** If Message Archiving is enabled, Braze may write the final rendered message to your configured cloud storage bucket. If your Connected Content response is included in the rendered message, it will be included in the archived copy.
+- **User devices:** After delivery, the fully rendered message content can persist on user devices for an unknown amount of time.
+- **Content Cards:** Rendered content for Content Cards is stored in a Braze database until the card expires.
 {% enddetails %}
 
 ## Default cache settings
