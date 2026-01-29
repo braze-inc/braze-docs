@@ -1,5 +1,5 @@
 ---
-nav_title: Ingestion von Cloud-Daten
+nav_title: Datenaufnahme in der Cloud
 article_title: Cloud Data Ingestion Endpunkte
 search_tag: Endpoint
 page_order: 0.5
@@ -14,7 +14,7 @@ guide_top_text: "Verwenden Sie die Braze Cloud Data Ingestion Endpunkte, um Ihre
 
 guide_featured_title: ""
 guide_featured_list:
-  - name: "GET: Liste Integrationen"
+  - name: "GET: Listen-Integrationen"
     link: /docs/api/cdi/get_integration_list/
     image: /assets/img/braze_icons/list.svg
   - name: "GET: Job-Synchronisierungsstatus auflisten"
