@@ -106,7 +106,7 @@ Processing errors return a different response with error codes:
 | `ASSET_SIZE_EXCEEDS_LIMIT` | 400 | The file exceeds the maximum allowed size. Images have a 5 MB limit. |
 | `MEDIA_LIBRARY_LIMIT_REACHED` | 400 | The workspace has reached its maximum number of assets (200 by default for free trial companies, unlimited otherwise). The `meta` object includes the current `limit`. |
 | `ASSET_UPLOAD_FAILED` | 400 | The asset failed to upload due to processing issues. |
-| `GENERIC_ERROR` | 500 | An unexpected error occurred during upload. The `meta` object includes the `original_error` message for debugging Please try again or contact [Support]({{site.baseurl}}/support_contact/}}). |
+| `GENERIC_ERROR` | 500 | An unexpected error occurred during upload. The `meta` object includes the `original_error` message for debugging Please try again or contact [Support]({{site.baseurl}}/support_contact/)). |
 
 
 ## Response
