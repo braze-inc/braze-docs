@@ -50,7 +50,7 @@ description: "This reference article explains the different components of the Br
 The `header_variables` object lets you specify values for header variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
 
 {% alert note %}
-**Header type requirement:** You can use `header_variables` only with templates that have TEXT-type headers. For IMAGE headers, use `header_media_uri` instead. DOCUMENT, VIDEO, and other media header types are not supported by the `messages/send` API.
+You can use `header_variables` only with templates that have TEXT-type headers. For IMAGE headers, use `header_media_uri` instead. DOCUMENT, VIDEO, and other media header types are not supported by the `messages/send` API.<br><br>
 
 `header_image_uri` is used only for response message types (such as `quick_reply_response_message`), not template messages.
 {% endalert %}
