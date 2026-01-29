@@ -15,7 +15,7 @@ description: "Cet article présente les détails des traductions de mise à jour
 /templates/email/translations/
 {% endapimethod %}
 
-> Utilisez cet endpoint pour mettre à jour les traductions d'un [modèle d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates)
+> Utilisez cet endpoint pour mettre à jour les traductions d'un [modèle d'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) Pour plus d'informations sur les fonctionnalités de traduction, reportez-vous à la section [Locales dans les messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
 
 {% alert important %}
 Cet endpoint est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
@@ -39,28 +39,24 @@ Cet endpoint n’a pas de chemin de paramètres.
 | --------- | ---------| --------- | ----------- |
 | `template_id` | Requis | Chaîne de caractères | L'ID de votre modèle d'e-mail. |
 | `locale_id` | Requis | Chaîne de caractères | L'ID de la locale. |
-| `translations` | Requis | Chaîne de caractères | Le mappage des traductions pour votre modèle d'e-mail. |
+| `translations_map` | Requis | Chaîne de caractères | Le mappage des traductions pour votre modèle d'e-mail. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Notez que tous les ID de traduction sont considérés comme des identifiants uniques universels (UUID), qui peuvent être trouvés dans les paramètres de **prise en charge multilingue** ou dans la réponse à la requête GET.
+{% alert note %}
+Tous les ID de traduction sont considérés comme des identifiants uniques universels (UUID), qui peuvent être trouvés dans la réponse de l'endpoint GET.
+{% endalert %}
 
 ## Exemple de demande
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "template_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
-    "translations": [
-        {
-            "translation_map": {
-                "id_0": "¡Hola!",
-                "id_1": "Me llamo Jacky",
-                "id_2": "¿Dónde está la biblioteca?"
-            }
-        }
-    ]
+    "translation_map": {
+        "id_0": "¡Hola!",
+        "id_1": "Me llamo Jacky",
+        "id_2": "¿Dónde está la biblioteca?"
+    }
 }
 ```
 
@@ -90,20 +86,5 @@ Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consulte
 	]
 }
 ```
-
-
-## Résolution des problèmes
-
-Le tableau suivant répertorie les erreurs renvoyées possibles et les étapes de résolution des problèmes associées.
-
-| Message d’erreur  | Résolution des problèmes |
-|----|----------|
-| `The provided translations yielded errors when parsing. Please contact Braze for more information.` | Se produit lorsque le traducteur tiers fournit des traductions comportant des exceptions qui génèrent des erreurs Liquid. Contactez le service d'assistance de Braze pour obtenir de l'aide. |
-| `The provided translations are missing 'id_1', 'id_2'` | Les ID de traduction ne correspondent pas ou le texte traduit dépasse les limites. Par exemple, cela peut signifier qu'il manque des champs dans l'objet de traduction de la forme de la charge utile. Chaque message (lorsqu'il est activé pour le multilinguisme) devrait avoir un nombre spécifique de "blocs de traduction" avec un ID associé. S'il manque l'un des ID dans la charge utile fournie, celle-ci sera considérée comme un objet incomplet et entraînera une erreur. |
-| `The provided locale code does not exist.` | La charge utile du traducteur tiers contient un code régional qui n'existe pas dans Braze. |
-| `The provided translations have exceeded the maximum of 20MB.` | La charge utile fournie dépasse la limite de taille. |
-| `You have exceeded the maximum number of requests. Please try again later.` | Toutes les API de Braze intègrent une limite de débit, et cette erreur est automatiquement renvoyée lorsque le débit a dépassé le montant alloué pour ce jeton d'authentification. |
-| `This message does not support multi-language.` | Cela peut se produire lorsqu'un ID de message ne prend pas encore en charge les messages multilingues. Seuls les messages des canaux suivants peuvent être traduits : push, messages in-app et e-mail. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
