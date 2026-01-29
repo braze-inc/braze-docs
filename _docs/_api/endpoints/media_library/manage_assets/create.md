@@ -25,7 +25,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## Query parameters
+## Request Body
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
