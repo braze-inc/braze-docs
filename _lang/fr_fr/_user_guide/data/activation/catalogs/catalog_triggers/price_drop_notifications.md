@@ -10,9 +10,9 @@ description: "Cet article de référence décrit comment créer des notification
 
 > Cette page explique comment fonctionnent les notifications de baisse de prix et comment vous pouvez les configurer et les utiliser. En combinant les notifications de baisse de prix via les catalogues de Braze et un Canvas, vous pouvez avertir les clients lorsque le prix d'un article a baissé.
 
-## Comment cela fonctionne-t-il ?
+## Fonctionnement
 
-Lorsqu'un utilisateur déclenche un événement personnalisé pour un article, nous l'abonnons automatiquement pour qu'il reçoive des notifications de baisse de prix pour cet article. Lorsque le prix de l'article répond à votre règle d'inventaire (telle qu'une baisse supérieure à 50 %), tous les abonnés pourront recevoir des notifications par le biais d'une campagne ou d'un canvas. Cependant, seuls les utilisateurs ayant opté pour les notifications recevront des notifications. 
+Lorsqu'un utilisateur déclenche un événement personnalisé pour un produit, nous l'abonnons automatiquement pour qu'il reçoive des notifications de baisse de prix pour ce produit. Lorsque le prix du produit correspond à votre règle d'inventaire (par exemple, une baisse supérieure à 50 %), tous les abonnés pourront recevoir des notifications par le biais d'une campagne ou d'un canvas. Cependant, seuls les utilisateurs ayant opté pour les notifications recevront des notifications. 
 
 ## Définition d'un événement personnalisé pour les notifications de baisse de prix
 
@@ -31,16 +31,16 @@ Les propriétés de l'événement sont envoyées en même temps que l'utilisateu
 
 Suivez ces étapes pour configurer les notifications de baisse de prix dans un catalogue spécifique.
 
-1. Accédez à votre catalogue et sélectionnez l'onglet **Paramètres**.
+1. Accédez à votre catalogue et sélectionnez l'onglet **Paramètres.** 
 2. Basculer vers la **baisse des prix**.
-3. Si les paramètres du catalogue global n'ont pas été configurés, vous serez invité à définir les événements personnalisés et les propriétés qui seront utilisés pour déclencher les notifications. <br><br> \![Tiroir des paramètres du catalogue.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
+3. Si les paramètres du catalogue global n'ont pas été configurés, vous serez invité à définir les événements personnalisés et les propriétés qui seront utilisés pour déclencher les notifications. <br><br> ![Tiroir des paramètres du catalogue.]({% image_buster /assets/img/catalog_settings_drawer.png %}){: style="max-width:70%;"}
 
-| Champ d'application | Description |
+| Champ | Description |
 | --- | --- |
-| **Catalogue de repli** | Le catalogue utilisé pour l'abonnement s'il n'y a pas de propriété `catalog_name` dans l'événement personnalisé. |
-| **Événement personnalisé pour s'abonner** | L'événement personnalisé utilisé pour abonner un utilisateur aux notifications du catalogue. Lorsque cet événement se produit, l'utilisateur qui l'a réalisé sera abonné. |
-| **Événement personnalisé pour la désinscription** | L'événement personnalisé utilisé pour désinscrire un utilisateur des notifications. Cet événement est facultatif. Si l'utilisateur n'effectue pas cet événement, il sera désabonné au bout de 90 jours ou lorsque l'événement de baisse de prix se déclenchera, selon ce qui se produira en premier. |
-| **Propriété d'événement ID de l'article** | La propriété de l'événement personnalisé ci-dessus utilisée pour déterminer l'élément d'un abonnement ou d'un désabonnement. Cette propriété de l'événement personnalisé doit contenir un ID d'article existant dans un catalogue. L'événement personnalisé doit contenir une propriété `catalog_name` pour spécifier le catalogue dans lequel se trouve cet article. |
+| **Catalogue de secours** | Le catalogue utilisé pour l'abonnement s'il n'y a pas de propriété `catalog_name` dans l'événement personnalisé. |
+| **Événement personnalisé pour s'abonner** | L'événement personnalisé utilisé pour abonner un utilisateur aux notifications du catalogue. Lorsque cet événement se produit, l'utilisateur qui l'a effectué est abonné. |
+| **Événement personnalisé pour le désabonnement** | L'événement personnalisé utilisé pour désinscrire un utilisateur des notifications. Cet événement est facultatif. Si l'utilisateur n'effectue pas cet événement, il sera désabonné au bout de 90 jours ou lorsque l'événement de baisse de prix se déclenchera, selon ce qui se produira en premier. |
+| **Propriété d’événement de l’ID d’événement** | La propriété de l'événement personnalisé ci-dessus utilisée pour déterminer l'élément d'un abonnement ou d'un désabonnement. Cette propriété de l'événement personnalisé doit contenir un ID d'article existant dans un catalogue. L'événement personnalisé doit contenir une propriété `catalog_name` pour spécifier le catalogue dans lequel se trouve cet article. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Voici un exemple d'événement personnalisé :
@@ -73,11 +73,11 @@ Voici un exemple d'événement personnalisé :
     - **Notifier tous les utilisateurs abonnés :** Informez tous les clients en attente lorsque le prix de l'article baisse.
     - **Fixer des limites de notification :** Notifiez un nombre déterminé de clients selon la période de notification que vous avez configurée. Braze informera le nombre de clients spécifié par incréments jusqu'à ce qu'il n'y ait plus de clients à informer ou jusqu'à ce que le prix de l'article augmente à nouveau. Votre taux de notification ne peut pas dépasser 10 000 utilisateurs par minute.<br>
 
-2. Définissez le **champ Prix dans le catalogue**. Il s'agit du champ du catalogue qui sera utilisé pour déterminer le prix de l'article. Il doit s'agir d'un type de nombre.
+2. Définissez le **champ Prix dans le catalogue**. Il s'agit du champ du catalogue qui sera utilisé pour déterminer le prix du produit. Il doit s'agir d'un type de nombre.
 3. Définissez la **règle de baisse des prix**. Il s'agit de la logique utilisée pour déterminer si une notification doit être envoyée. Une baisse de prix peut être configurée en pourcentage de variation de prix ou en fonction de la variation de la valeur du champ de prix.
 4. Sélectionnez **Enregistrer les paramètres**.
 
-Les paramètres du catalogue qui montrent que la fonctionnalité de baisse des prix est activée. La règle de la baisse des prix est une modification de 3 % du prix d'origine.]({% image_buster /assets/img/price_drop_notifications.png %})
+![Paramètres du catalogue qui montrent que la fonctionnalité de baisse des prix est activée. La règle de la baisse des prix est une modification de 3 % du prix d'origine.]({% image_buster /assets/img/price_drop_notifications.png %})
 
 {% alert important %}
 Les règles de notification de ces paramètres ne remplacent pas les paramètres de notification de Canvas, tels que les heures calmes.
@@ -88,23 +88,24 @@ Les règles de notification de ces paramètres ne remplacent pas les paramètres
 Après avoir configuré les notifications de baisse de prix dans un catalogue, suivez les étapes suivantes pour utiliser ces notifications pour un Canvas.
 
 1. Mettez en place un Canvas basé sur l'action.
-2. Sélectionnez **Perform Price Drop Event** comme déclencheur.
+2. Sélectionnez **Effectuer un événement de baisse de prix** comme déclencheur.
 3. Sélectionnez le nom du catalogue contenant les notifications de baisse de prix.
 4. Continuez à [configurer]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) votre Canvas comme vous le feriez.
 
 Désormais, vos clients seront avertis lorsque le prix d'un article baissera.
 
-### Utilisation du liquide
+### Utilisation de Liquid
 
-Pour obtenir des tags détaillés sur l'article du catalogue dont le prix a baissé, vous pouvez utiliser l'étiquette Liquid `canvas_entry_properties` pour accéder à la page `item_id`. 
+Pour obtenir des tags détaillés sur le produit du catalogue dont le prix a baissé, vous pouvez utiliser l'étiquette Liquid `canvas_entry_properties` pour accéder à l’`item_id`. 
 
 L'utilisation de {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} renvoie l'ID de l'article dont le prix a baissé. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} renvoie la valeur du prix de l'article avant la mise à jour, et {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} renvoie la nouvelle valeur du prix après la mise à jour. 
 
-Utilisez cette étiquette Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} en tête de votre message, puis utilisez {%raw%}`{{items[0].<field_name>}}`{%endraw%} pour accéder aux données relatives à cet élément tout au long du message.
+Utilisez cette étiquette Liquid {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} en tête de votre message, puis utilisez {%raw%}`{{items[0].<field_name>}}`{%endraw%} pour accéder aux données relatives à ce produit tout au long du message.
+
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
 ## Considérations
 
-- Les utilisateurs sont abonnés pour 90 jours. Si le prix d'un article ne baisse pas dans les 90 jours, l'utilisateur est radié de l'abonnement.
+- Les utilisateurs sont abonnés pour 90 jours. Si le prix d'un produit ne baisse pas dans les 90 jours, l'utilisateur est radié de l'abonnement.
 - Lorsque vous utilisez la règle de notification **Notifier tous les utilisateurs abonnés**, Braze notifie 100 000 utilisateurs en 10 minutes.
-- Braze traitera 10 demandes de mise à jour d'éléments de catalogue par minute. Les endpoints de mise à jour permettent de mettre à jour 50 articles par demande, ce qui permet de mettre à jour jusqu'à 500 articles par minute et de déclencher des notifications de rupture de stock.
-
+- Braze traitera 10 demandes de mise à jour d'éléments de catalogue par minute. Les endpoints de mise à jour autorisent 50 mises à jour d'articles par demande, ce qui permet de prendre en charge jusqu'à 500 mises à jour d'articles par minute pouvant déclencher des notifications de rupture de stock.

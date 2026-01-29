@@ -1,11 +1,11 @@
 ---
-nav_title: Blocs éditeurs
+nav_title: Blocs éditeur
 article_title: "Blocs de l'éditeur par glisser-déposer"
 alias: "/dnd/editor_blocks/"
 channel: 
 - email
 - in-app messages
-page_order: 1
+page_order: 6
 description: "Cet article de référence couvre les différents blocs de l'éditeur qui sont fournis dans l'éditeur par glisser-déposer pour les e-mails et les messages in-app."
 tool: Media
 ---
