@@ -34,7 +34,6 @@ For example, to show a special Banner only to users who have completed a `purcha
 
 When the user starts a new session or refreshes Banners after performing the action, Braze evaluates their eligibility. If they match the "Purchase" segment, the high-priority Banner will be displayed.
 
-
 ## Can users manually dismiss a Banner?
 
 No. Users cannot manually dismiss Banners. However, you can control Banner visibility by managing user segment eligibility. When a user no longer meets the targeting criteria for a Banner campaign, they won't see it again on their next session.
@@ -59,4 +58,4 @@ No. However, most Liquid tags are supported for Banner messages, except for `cat
 
 ## Can I capture click events?
 
-Click events are only captured if an on-click action is set on a `logClick` element and is called using the [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge).
+Banner clicks are tracked automatically when the Braze display module is being used. For more information, refer to [`logBannerClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logbannerclick).
