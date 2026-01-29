@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Abo-Gruppensta
 {% api %}
 # Abo-Gruppenstatus des Nutzers:innen auflisten
 {% apimethod get %}
-/subscription/status/get
+/abo/status/get
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um den Status eines Nutzers:innen in einer Abo-Gruppe abzurufen.
@@ -54,17 +54,17 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 - Für SMS- und WhatsApp-Abo-Gruppen ist entweder `external_id` oder `phone` erforderlich.  Wenn beide übermittelt werden, wird nur die `external_id` für die Abfrage verwendet und die Telefonnummer wird diesem Nutzer:innen zugeordnet.
 - Für E-Mail Abo-Gruppen ist entweder `external_id` oder `email` erforderlich.  Wenn beide eingegeben werden, wird nur die `external_id` für die Abfrage verwendet und die E-Mail wird auf diese Nutzer:innen angewendet.
 
-## Beispiel Anfrage 
+## Beispiel Anfrage
 
 {% tabs %}
-{% tab Mehrere Nutzer:innen %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS und WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab E-Mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 Alle erfolgreichen Antworten geben `Subscribed`, `Unsubscribed` oder `Unknown` zurück, je nach Status und Nutzer:innen-Verlauf mit der Abo-Gruppe.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert note %}
+Wenn sich ein Nutzer:innen global abmeldet, wird er von jeder Abo-Gruppe abgemeldet. Dieser Endpunkt gibt den letzten Abo-Status für jede Abo-Gruppe zurück. Dies ist das erwartete Verhalten, denn wenn der Nutzer:in sich selbst ein neues Abonnement abschließt, setzt Braze den Status jedes Abos zurück.
+{% endalert %}
 
 {% endapi %}
