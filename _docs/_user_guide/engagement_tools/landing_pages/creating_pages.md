@@ -139,9 +139,7 @@ If your confirmation page opens in a new tab, a user who returns to the original
 {% endalert %}
 
 {% alert important %}
-**iOS Safari pop-up blocker**: If you configure a button with **Submit form when button is clicked** enabled and use **On-click Behavior** to open a web URL in a new tab, iOS Safari's built-in pop-up blocker may prevent the navigation from working. This occurs because form submission followed by opening a new tab is treated as a pop-up.
-
-To avoid this issue, configure buttons with form submission to open the resulting URL in the same tab (not a new tab). Buttons without form submission can open URLs in new tabs without issues.
+If you configure a button with **Submit form when button is clicked** enabled and use **On-click Behavior** to open a web URL in a new tab, iOS Safari's built-in pop-up blocker may prevent the navigation from working. This occurs because form submission followed by opening a new tab is treated as a pop-up.<br><br>To avoid this issue, configure buttons with form submission to open the resulting URL in the same tab (not a new tab). Buttons without form submission can open URLs in new tabs without issues.
 {% endalert %}
 
 ### Step 5: Preview the page
