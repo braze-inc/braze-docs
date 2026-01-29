@@ -12,7 +12,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Katalog löschen Br
 {% api %}
 # Katalog löschen
 {% apimethod delete %}
-/Kataloge/{Katalog_name}
+/catalogs/{catalog_name}
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um einen Katalog zu löschen.
