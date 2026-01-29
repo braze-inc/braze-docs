@@ -39,7 +39,7 @@ guide_menu_list2:
     image: /assets/img/braze_icons/user-circle.svg
 
 guide_menu_title3: "Synchronous catalog items endpoints"
-guide_menu_list3:  
+guide_menu_list3:
   - name: "DELETE: Eliminar elemento del catálogo"
     link: /docs/api/endpoints/catalogs/catalog_items/synchronous/delete_catalog_item/
     image: /assets/img/braze_icons/edit-05.svg
@@ -61,7 +61,7 @@ guide_menu_list3:
 
 guide_menu_title4: "Asynchronous catalog fields endpoints"
 guide_menu_list4:
-  - name: "POST: Crear campos de catálogo"
+  - name: "PUBLICAR: Crear campos de catálogo"
     link: /docs/api/endpoints/catalogs/catalog_fields/asynchronous/post_create_catalog_fields/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: "DELETE: Borrar campo de catálogo"
