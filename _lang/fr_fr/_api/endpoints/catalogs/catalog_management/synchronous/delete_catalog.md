@@ -12,7 +12,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 {% api %}
 # Supprimer un catalogue
 {% apimethod delete %}
-/catalogues/{nom_du_catalogue}
+/catalogs/{catalog_name}
 {% endapimethod %}
 
 > Utilisez cet endpoint pour supprimer un catalogue.
@@ -58,7 +58,7 @@ Le code de statut `200` pourrait renvoyer le corps de réponse suivant :
 
 ### Exemple de réponse échouée
 
-Le code de statut `404` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `404` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {
