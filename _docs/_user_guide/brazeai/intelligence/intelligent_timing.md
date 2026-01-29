@@ -190,7 +190,7 @@ However, Intelligent Timing is set to deliver at 2 pm, which has already passed.
 
 ### Preview chart showing few users with optimal times
 
-Braze needs a certain amount of engagement data to make a good estimate. If there isn't enough session data or the targeted users have little to no clicks or opens (such as new users), Braze will default to the fallback time. Depending on your configuration, this could be either the most popular app time or a custom fallback time.
+If there aren't enough relevant events for a user (for example, new users with little to no engagement), Braze uses the configured fallback setting—either your custom fallback time or the most popular time to use the app among all users.
 
 ### Impact of time zone on Intelligent Timing delivery
 
@@ -240,7 +240,7 @@ Intelligent Timing schedules messages during each user’s “most engaged hour�
 
 #### What are the fallback calculations if there is not enough data?
 
-If no data is available for a user, Intelligent Timing uses the fallback time in your message settings. 
+If there are no relevant events for a user, Intelligent Timing uses the configured fallback setting in your message settings—either a specific custom fallback time or the most popular time to use the app among all users. 
 
 ### Campaigns
 
@@ -250,7 +250,7 @@ Braze calculates the optimal time at midnight in Samoa time, one of the first ti
 
 #### Why is my Intelligent Timing campaign showing little to no sends?
 
-Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (such as new users), Intelligent Timing may default to the workspace's most popular hour on that day of the week. If there isn't enough information about the workspace, we fall back to a default time of 5 pm. You can also choose to set a specific fallback time.
+If there isn't enough relevant engagement data for a user (for example, new users with little to no clicks or opens), Intelligent Timing uses the configured fallback setting—either your custom fallback time or the most popular time to use the app among all users.
 
 #### Why is my Intelligent Timing campaign sending past the scheduled date?
 
