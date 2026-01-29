@@ -18,6 +18,16 @@ Currents for Data Storage is a continuous stream of data from our platform to a 
 This content **only applies to the flat file event data we send to Data Warehouse Storage partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)**. <br><br>For content that applies to other partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) and check their respective pages.
 {% endalert %}
 
+## Test events
+
+When you set up a Currents integration, click **Send Test Events** to verify the connection with your storage bucket. These test events validate that your integration can receive and process data correctly.
+
+{% alert important %}
+**Test event data format:** Test events contain placeholder values that match the correct data types for each field, but they don't contain realistic or accurate data. For example, a `timezone` field may contain a UUID-like string instead of a valid timezone identifier (such as "America/Chicago"), and other fields like `campaign_name` and `ip_pool` may also contain placeholder values rather than actual data.<br>
+
+This is expected behavior. Test events are primarily for testing the connection and integration setup, not for validating data accuracy. To see real events with accurate data, use a test Currents integration to send actual event data through your pipeline.
+{% endalert %}
+
 ## At-least-once delivery
 
 As a high-throughput system, Currents provides an "at-least-once" delivery of events, meaning that duplicate events can occasionally be written to your storage bucket. This can happen when events are reprocessed from our queue for any reason.

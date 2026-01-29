@@ -5,7 +5,7 @@ alias: "/dnd/editor_blocks/"
 channel: 
 - email
 - in-app messages
-page_order: 1
+page_order: 6
 description: "Dieser referenzierte Artikel behandelt die verschiedenen Editor-Blöcke, die im Drag-and-Drop-Editor für E-Mails und In-App-Nachrichten zur Verfügung stehen."
 tool: Media
 ---
