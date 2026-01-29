@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Crear artículo de catálogo"
-article_title: "POST: Crear artículo de catálogo"
+nav_title: "PUBLICAR: Crear elemento del catálogo"
+article_title: "PUBLICAR: Crear artículo de catálogo"
 search_tag: Endpoint
 page_order: 5
 
@@ -108,7 +108,7 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
+La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
 
 | Error | Solución de problemas |
 | --- | --- |
