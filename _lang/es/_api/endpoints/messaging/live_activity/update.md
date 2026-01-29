@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Actualizar la actividad en directo"
-article_title: "POST: Actualizar la actividad en directo"
+nav_title: "PUBLICAR: Actualiza la actividad en vivo"
+article_title: "PUBLICAR: Actualizar la actividad en directo"
 search_tag: Endpoint
 page_order: 1
 
@@ -18,6 +18,8 @@ description: "En este artículo se describen los detalles del punto final Actual
 > Utilice este punto final para actualizar y finalizar [las Actividades en Directo]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift) mostradas por su aplicación iOS. Este punto final requiere una configuración adicional.
 
 Después de registrar una Live Activity, puede pasar una carga JSON para actualizar su servicio de Notificaciones Push de Apple (APNs). Para más información, consulte la documentación de Apple sobre la [actualización de Live Activity con cargas útiles de notificaciones push](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications).
+
+Si `content-available` no está configurado, la prioridad predeterminada del servicio de notificaciones push de Apple (APN) es 10. Si `content-available` está configurado, esta prioridad es 5. Consulta el [objeto push de Apple]({{site.baseurl}}/api/objects_filters/messaging/apple_object) para más detalles.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -104,7 +106,7 @@ Se devuelve un código de estado `201` si la solicitud se ha formateado correcta
 
 La clase de código de estado `4XX` indica un error del cliente. Consulte el [artículo Errores y respuestas de la API]({{site.baseurl}}/api/errors/) para obtener más información sobre los errores que puede encontrar.
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. 
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta.
 
 ```json
 {
