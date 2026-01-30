@@ -299,7 +299,8 @@ class BrazeReactDelegate: NSObject, BrazeDelegate {
   /// This delegate method determines whether to open a given URL.
   /// Reference the context to get additional details about the URL payload.
   func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
-    if context.url.host?.lowercased() == "YOUR_DOMAIN_HOST" {
+    if let host = context.url.host,
+       host.caseInsensitiveCompare("YOUR_DOMAIN_HOST") == .orderedSame {
       // Sample custom handling of universal links
       let application = UIApplication.shared
       let userActivity = NSUserActivity(activityType: NSUserActivityTypeBrowsingWeb)
