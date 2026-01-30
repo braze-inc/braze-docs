@@ -1,8 +1,8 @@
 ---
 page_order: 2.5
-nav_title: ""
-article_title: ""
-description: ""
+nav_title: Feature-Flags
+article_title: Feature-Flags für das Braze SDK
+description: "Dieser Referenzartikel enthält eine Übersicht über Feature-Flags, einschließlich der Voraussetzungen und Anwendungsfälle."
 tool: Feature Flags
 platform:
   - iOS
@@ -16,3 +16,4 @@ platform:
 
 ---
 
+{% multi_lang_include feature_flags/feature_flags.md %}
