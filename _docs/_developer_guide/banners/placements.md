@@ -532,47 +532,7 @@ This is similar to the [JavaScript bridge]({{site.baseurl}}/user_guide/message_b
 
 If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
 
-Use the `logClick()` method on the Banner object:
-
-{% tabs local %}
-{% tab Web %}
-```javascript
-const banner = braze.getBanner("placement_id");
-if (banner) {
-  // When the user clicks your custom UI element
-  banner.logClick();
-}
-```
-{% endtab %}
-{% tab Swift %}
-```swift
-AppDelegate.braze?.banners.getBanner(for: "placement_id") { banner in
-  // When the user clicks your custom UI element
-  banner?.logClick()
-}
-```
-{% endtab %}
-{% tab Android %}
-{% subtabs %}
-{% subtab Kotlin %}
-```kotlin
-val banner = Braze.getInstance(context).getBanner("placement_id")
-// When the user clicks your custom UI element
-banner?.logClick()
-```
-{% endsubtab %}
-{% subtab Java %}
-```java
-Banner banner = Braze.getInstance(context).getBanner("placement_id");
-if (banner != null) {
-  // When the user clicks your custom UI element
-  banner.logClick();
-}
-```
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% endtabs %}
+Use the `logClick()` method on the Banner object.
 
 ## Dimensions and sizing
 
