@@ -144,7 +144,7 @@ valid_partner_list:
 - name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: LINE
-  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/
 - name: LinkedIn Audience Sync
   url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
