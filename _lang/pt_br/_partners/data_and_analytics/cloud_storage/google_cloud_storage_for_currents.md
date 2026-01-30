@@ -24,7 +24,7 @@ A integração entre Braze e o Google Cloud Storage permite enviar dados do Curr
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Conta do Google Cloud Storage | É necessário ter uma conta do Google Cloud Storage para usar a parceria. |
-| Currents | Para exportar dados de volta para o Google Cloud Storage, é necessário que [o Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) esteja configurado em sua conta. |
+| Currents | Para exportar dados de volta para o Google Cloud Storage, você precisa ter [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) configurado para sua conta. Currents não é necessário se você estiver apenas configurando o arquivamento de mensagens. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
@@ -35,7 +35,7 @@ Isso pode ser feito usando as instruções a seguir, que o orientarão na criaç
 
 ### Etapa 1: Criar função
 
-Crie uma nova função no Console do Google Cloud Platform navegando até **IAM e admin** > **Funções** > **\+ Criar função**.
+Crie um novo papel em seu Console do Google Cloud Platform navegando até **IAM & admin** > **Funções** > **\+ Criar Papel**.
 
 ![]({% image_buster /assets/img/gcs1.png %})
 
@@ -59,13 +59,13 @@ Quando terminar, selecione **Criar**.
 
 #### Etapa 2.1: Crie a conta de serviço
 
-Crie uma nova conta de serviço no Console do Google Cloud Platform navegando até **IAM e admin** > **Contas de serviço** e selecionando **Criar conta de serviço**.
+Crie uma nova conta de serviço em seu Console do Google Cloud Platform navegando até **IAM & admin** > **Contas de Serviço** e selecionando **Criar Conta de Serviço**.
 
 ![]({% image_buster /assets/img/gcs3.png %})
 
 Em seguida, dê um nome à conta de serviço e conceda a ela acesso à função personalizada recém-criada.
 
-![Na Google Cloud Platform, na página de criação de serviços, digite o nome do seu papel no campo "Selecionar um Papel".]({% image_buster /assets/img/gcs4.png %})
+![Na Google Cloud Platform, na página de criação de serviços, digite o nome de sua função no campo "Select a Role" (Selecionar uma função).]({% image_buster /assets/img/gcs4.png %})
 
 #### Etapa 2.2: Criar uma chave
 
@@ -80,10 +80,10 @@ Na Braze, navegue até **Currents** > **\+ Create Current** > **Google Cloud Sto
 Em seguida, faça upload de sua chave privada JSON em **GCS JSON Credentials** (Credenciais JSON do GCS) e forneça o nome do bucket do CGS e o prefixo do GCS (opcional). 
 
 {% alert important %}
-É importante manter seu arquivo de credenciais atualizado; se as credenciais do conector expirarem, o conector deixará de enviar eventos. Se isso persistir por mais de **48 horas**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
+É importante manter seu arquivo de credenciais atualizado; se as credenciais do conector expirarem, o conector deixará de enviar eventos. Se isso persistir por mais de **5 dias**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
 {% endalert %}
 
-![A página do Google Cloud Storage Currents no Braze. Nesta página existem campos para nome da integração, e-mail de contato, credencial JSON do GCS, nome do bucket do GCS e prefixo.]({% image_buster /assets/img/gcs6.png %})
+![A página do Google Cloud Storage Currents no Braze. Nessa página, há campos para o nome da integração, o e-mail de contato, a credencial JSON do GCS, o nome do bucket do GCS e o prefixo.]({% image_buster /assets/img/gcs6.png %})
 
 Por fim, role até a parte inferior da página e selecione quais eventos de engajamento com mensagens ou eventos de comportamento do cliente você gostaria de exportar. Quando concluído, inicie seu Current.
 
@@ -99,7 +99,7 @@ Certifique-se de inserir o valor JSON completo que é [gerado pelo Google Cloud]
 
 ![A página do Google Cloud Storage no dashboard da Braze.]({% image_buster /assets/img/gcs7.png %}){: style="max-width:70%;"}
 
-### Etapa 5: Teste suas credenciais da conta de serviço (opcional)
+### Etapa 5: Teste suas credenciais de conta de serviço (opcional)
 
 Sua conta de serviço do Google Cloud IAM deve ter as seguintes permissões:
 
@@ -109,16 +109,22 @@ Sua conta de serviço do Google Cloud IAM deve ter as seguintes permissões:
 - `storage.objects.get`
 - `storage.buckets.get`
 
-Para verificar essas permissões no dashboard da Braze, vá para a página **Google Cloud Storage**, em seguida, selecione **Testar Credenciais**.
+Para verificar essas permissões no painel da Braze, vá para a página **Google Cloud Storage**, em seguida, selecione **Testar Credenciais**.
 
-![A seção de credenciais do Google Cloud Storage no dashboard da Braze.]({% image_buster /assets/img/gcs8.png %}){: style="max-width:70%;"}
+![A seção de credenciais do Google Cloud Storage no painel da Braze.]({% image_buster /assets/img/gcs8.png %}){: style="max-width:70%;"}
 
 ## Comportamento de exportação
 
 Os usuários que integraram uma solução de armazenamento de dados na nuvem e estão tentando exportar APIs, relatórios de dashboard ou relatórios CSV terão a seguinte experiência:
 
 - Todas as exportações da API não retornarão um URL para baixar no corpo da resposta e devem ser recuperadas por meio do armazenamento de dados.
-- Todos os relatórios dashboard e CSV serão enviados para o e-mail dos usuários para serem baixados (não são necessárias permissões de armazenamento) e armazenados em backup no Data Storage.
+- Todos os relatórios de dashboard e relatórios CSV serão enviados para o e-mail do usuário para download (nenhuma permissão de armazenamento necessária) e serão salvos no Armazenamento de Dados.
+
+{% alert important %}
+**Requisito de formato JSON**: Para exportações JSON, o Braze usa o formato JSONL (JSON delimitado por nova linha), onde cada linha contém um objeto JSON separado. Esse formato difere do JSON padrão, que é um único array ou objeto JSON. Cada linha no arquivo exportado é um objeto JSON válido, mas o arquivo como um todo não é um único documento JSON válido. Ao processar esses arquivos, analise cada linha individualmente como um objeto JSON separado, em vez de tentar analisar o arquivo inteiro como um único documento JSON.
+
+As exportações Currents usam o formato Apache Avro (`.avro` arquivos), não JSON. Esse requisito de formato JSON se aplica a exportações de dados de dashboard e exportações de API que usam o formato JSON.
+{% endalert %}
 
 ## Solução de problemas
 
