@@ -36,7 +36,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration =
@@ -65,7 +65,7 @@ if customization == "colorful-slideup" {
 ```
 
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
@@ -111,7 +111,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 ```
 
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (void)handleExtrasFromPush:(NSDictionary *)userInfo {
@@ -135,7 +135,7 @@ Debido a que se utiliza un mensaje push para registrar un evento personalizado r
 
 Crea una [campaña push silenciosa]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift) que se desencadene a través del evento enviado por el servidor. 
 
-![Una campaña de mensajería dentro de la aplicación basada en acciones que se entregará a los usuarios cuyos perfiles de usuario tengan el evento personalizado "evento_servidor".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Una campaña de mensajería dentro de la aplicación basada en acciones que se entregará a los usuarios cuyos perfiles de usuario tengan el evento personalizado "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 La campaña push debe incluir extras de par clave-valor, que indiquen que esta campaña push se envía para registrar un evento personalizado del SDK. Este evento se utilizará para desencadenar el mensaje dentro de la aplicación.
 
@@ -151,7 +151,7 @@ Crea tu campaña de mensajes dentro de la aplicación visible para el usuario en
 
 En el siguiente ejemplo, el mensaje específico dentro de la aplicación que se va a desencadenar se ha configurado enviando la propiedad del evento como parte del push silencioso inicial.
 
-![Una campaña de mensajes dentro de la aplicación de entrega basada en acciones que se entregará a los usuarios que realicen el evento personalizado "Desencadenante de mensajes dentro de la aplicación" donde "nombre_campaña" es igual a "Ejemplo de nombre de campaña de IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Una campaña de entrega basada en acciones de mensajes dentro de la aplicación que se entregará a los usuarios que realicen el evento personalizado "Desencadenante de mensajes dentro de la aplicación" donde "campaign_name" es igual a "Ejemplo de nombre de campaña de IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Ten en cuenta que estos mensajes dentro de la aplicación sólo se desencadenarán si se recibe el push silencioso mientras la aplicación está en primer plano.
@@ -182,7 +182,7 @@ AppDelegate.braze?.inAppMessagePresenter?.present(message: customInAppMessage)
 ```
 
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZInAppMessageRaw *customInAppMessage = [[BRZInAppMessageRaw alloc] init];
