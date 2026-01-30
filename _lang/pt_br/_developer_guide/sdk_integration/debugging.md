@@ -11,7 +11,7 @@ description: "Saiba como usar o depurador do Braze SDK para solucionar problemas
 
 ## Pré-requisitos
 
-Para usar o depurador do SDK do Braze, você precisará das permissões "Ver PII" e "Ver Perfis de Usuários em Conformidade com PII". Para baixar os logs da sua sessão de depuração, você também precisará da permissão "Exportar Dados de Usuários". Além disso, seu Braze SDK precisa atender ou apontar para as seguintes versões mínimas: 
+Para usar o depurador do SDK do Braze, você precisará das permissões "Ver PII" e "Ver Perfis de Usuários em Conformidade com PII." Para baixar os logs da sua sessão de depuração, você também precisará da permissão "Exportar Dados de Usuários." Além disso, seu Braze SDK precisa atender ou apontar para as seguintes versões mínimas: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
