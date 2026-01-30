@@ -15,7 +15,7 @@ Como é possível acessar dados de IPI por meio desse recurso, você deve ter pe
 Há dois tipos de editores SQL para escolher ao criar sua extensão de segmento SQL: o SQL Editor e o Incremental SQL Editor.
 
 - **Atualização completa:** Toda vez que seu segmento for atualizado, o Braze consultará todos os dados disponíveis para atualizar seu segmento, o que usará mais créditos do que as atualizações incrementais. As extensões de atualização completa podem regenerar automaticamente a associação diariamente, mas não podem ser atualizadas usando a atualização incremental.
-- **Atualização incremental:** A atualização incremental calcula apenas os dados dos últimos dois dias, o que é mais econômico e usa menos créditos a cada vez. Ao criar um segmento SQL de atualização incremental, você pode configurá-lo para regenerar automaticamente a associação diariamente. Isso permite que você defina seu segmento para atualizar automaticamente a associação diariamente, o que ajuda a reduzir o custo de uma atualização diária de dados para as extensões de segmento do SQL.
+- **Atualização incremental:** A atualização incremental é uma maneira mais econômica de configurar sua consulta, embora a configuração envolva mais algumas [etapas](#step-2-write-your-sql). Se for possível concluir essas etapas adicionais ao construir seu segmento, vale a pena escolher essa opção porque sua consulta será executada usando menos créditos. 
 - **Gerador de IA SQL:** O IA SQL Generator permite que você escreva um prompt em linguagem simples e o transforma em uma consulta de SQL para o seu segmento. É uma maneira rápida de começar sem precisar escrever o SQL por conta própria.
 
 {% alert tip %}
@@ -23,7 +23,7 @@ Você pode fazer uma atualização manual completa em todos os segmentos SQL cri
 {% endalert %}
 
 {% tabs local %}
-{% tab Atualização completa %}
+{% tab Full refresh %}
 
 Para criar uma extensão de segmento SQL totalmente atualizada:
 
@@ -35,9 +35,9 @@ Para criar uma extensão de segmento SQL totalmente atualizada:
 4. Salve sua extensão de segmento.
 
 {% endtab %}
-{% tab Atualização incremental %}
+{% tab Incremental refresh %}
 
-O editor SQL de atualização incremental permite que as agregações de consultas do usuário ocorram por data para um evento dentro de um determinado período de tempo. Para criar uma extensão de segmento SQL de atualização incremental:
+Para criar uma extensão de segmento SQL de atualização incremental:
 
 1. Acesse **Público** > **Extensões de segmento**.
 
@@ -57,7 +57,7 @@ Se estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/admini
 
 {% endtab %}
 
-{% tab Gerador de IA SQL %}
+{% tab AI SQL Generator %}
 
 {% alert note %}
 O gerador de IA SQL está atualmente disponível como um recurso beta. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar dessa avaliação beta.
@@ -101,7 +101,7 @@ Observe que as tabelas disponíveis para consulta contêm apenas dados de evento
 {% endalert %} 
 
 {% tabs %}
-{% tab Editor SQL %}
+{% tab SQL Editor %}
 
 Além disso, seu SQL deve obedecer às seguintes regras:
 
@@ -122,14 +122,14 @@ Além disso, sua consulta de SQL padrão deve obedecer às seguintes regras:
 
 - Você não pode usar as declarações do `DECLARE`.
 {% endtab %}
-{% tab Editor SQL incremental %}
+{% tab Incremental SQL Editor %}
 
 Todas as consultas de atualização incremental consistem em duas partes: uma consulta e detalhes do esquema.
 
 1. No editor, escreva uma consulta que selecione `user_id`s de sua tabela desejada.
 2. Adicione detalhes do esquema selecionando um **Operador**, **Número de vezes** e **Período de tempo** nos campos acima do editor. A consulta verificará se a soma da coluna agregada atende a uma determinada condição especificada pelos espaços reservados {% raw %}`{{operator}}` e `{{number of times}}`{% endraw %}. Isso funciona de forma semelhante ao fluxo de trabalho para a criação de extensões de segmento clássicas.<br><br>
    - **Operador:** Indique se o evento ocorreu mais do que, menos do que ou igual a um número de ocorrências.<br>
-   ![Campo do operador com "Mais de" selecionado.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
+   ![Campo do operador com a opção "Mais de" selecionada.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
    - **Número de vezes:** Quantas vezes você gostaria de avaliar o evento em relação ao operador.<br>
    ![Número de vezes com "5" inserido.]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
    - **Período:** Número de dias, de 1 a 730, em que você deseja verificar as instâncias do evento. Esse período de tempo se refere a dias passados em relação ao dia atual. O exemplo a seguir mostra a consulta de usuários que realizaram o evento mais de 5 vezes nos últimos 365 dias.<br>
@@ -186,7 +186,7 @@ Por exemplo, para direcionar usuários que tenham menos de três compras, primei
 A menos que esteja direcionando especificamente para usuários com zero eventos, não será necessário inverter o SQL. Se **Invert SQL** for selecionado, confirme se o recurso é necessário e se o segmento corresponde ao público desejado. Por exemplo, se uma consulta direcionar usuários com pelo menos um evento, ela só direcionará usuários com zero eventos quando invertida.
 {% endalert %}
 
-![Extensão de segmento denominada "Clicou em 1 a 4 e-mails nos últimos 30 dias" com a opção de inverter o SQL selecionado.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
+![Extensão de segmento denominada "Clicou em 1-4 e-mails nos últimos 30 dias" com a opção de inverter o SQL selecionada.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
 
 ## Atualização da associação de segmentos
 
@@ -202,7 +202,7 @@ Na página **Extensões de segmento**, os segmentos gerados usando SQL são indi
 
 Selecione uma extensão de segmento SQL para visualizar onde a extensão está sendo usada, arquivar a extensão ou [atualizar manualmente a associação do segmento](#refreshing-segment-membership).
 
-![A seção Uso de mensagens do editor SQL mostra onde o segmento de mensagens SQL está sendo usado.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
+![A seção Uso de mensagens do editor SQL mostra onde o segmento SQL está sendo usado.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
 
 ### Designar configurações de atualização
 
@@ -222,7 +222,7 @@ Para economizar créditos, faça uma prévia de sua consulta para garantir que e
 
 Seus créditos serão redefinidos para 5 no primeiro dia de cada mês, às 12 horas UTC. Você pode monitorar o uso do seu crédito durante o mês no painel de uso de créditos. Na página **Extensões de segmento**, clique em <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage**.
 
-![Painel Uso de crédito SQL na página de extensões de segmento SQL]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
+![Painel Uso de crédito do SQL na página Extensões de segmento do SQL]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
 
 O seguinte ocorrerá quando seus créditos chegarem a zero:
 
