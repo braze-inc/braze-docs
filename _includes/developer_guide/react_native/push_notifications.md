@@ -218,7 +218,7 @@ Braze.getInitialPushPayload(pushPayload => {
 Braze provides this workaround since React Native's Linking API does not support this scenario due to a race condition on app startup.
 {% endalert %}
 
-#### Step 3.3 Enable Universal Links (optional)
+#### Step 3.3: Enable Universal Links (optional)
 
 To enable [universal linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, implement a Braze delegate that determines whether to open a given URL, then register it with your Braze instance.
 
