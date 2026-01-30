@@ -155,6 +155,8 @@ Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is
 
 For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
 
+{% subtabs local %}
+{% subtab Objective-C %}
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -173,6 +175,33 @@ For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `di
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 ```
+{% endsubtab %}
+{% subtab Swift %}
+```swift
+func application(
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+) -> Bool {
+  self.moduleName = "BrazeProject"
+  self.initialProps = [:]
+
+  let configuration = Braze.Configuration(apiKey: apiKey, endpoint: endpoint)
+  configuration.triggerMinimumTimeInterval = 1
+  configuration.logger.level = .info
+  let braze = BrazeReactBridge.perform(
+    #selector(BrazeReactBridge.initBraze(_:)),
+    with: configuration
+  ).takeUnretainedValue() as! Braze
+  AppDelegate.braze = braze
+
+  registerForPushNotifications()
+  BrazeReactUtils.shared().populateInitialPayload(fromLaunchOptions: launchOptions)
+
+  return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 
 #### Step 3.2: Handle deep links from a closed state
 
@@ -195,7 +224,11 @@ Braze provides this workaround since React Native's Linking API does not support
 
 #### Step 3.3 Enable Universal Links (optional)
 
-To enable [universal linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
+To enable [universal linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, implement a Braze delegate that determines whether to open a given URL, then register it with your Braze instance.
+
+{% subtabs local %}
+{% subtab Objective-C %}
+Create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
 
 ```objc
 #import <Foundation/Foundation.h>
@@ -256,6 +289,58 @@ Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOp
   braze.delegate = self.brazeDelegate;
 }
 ```
+{% endsubtab %}
+{% subtab Swift %}
+Create a `BrazeReactDelegate.swift` file in your `iOS` directory and add the following. Replace `YOUR_DOMAIN_HOST` with your actual domain.
+
+```swift
+import Foundation
+import BrazeKit
+import UIKit
+
+class BrazeReactDelegate: NSObject, BrazeDelegate {
+
+  /// This delegate method determines whether to open a given URL.
+  /// Reference the context to get additional details about the URL payload.
+  func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
+    if context.url.host?.lowercased() == "YOUR_DOMAIN_HOST" {
+      // Sample custom handling of universal links
+      let application = UIApplication.shared
+      let userActivity = NSUserActivity(activityType: NSUserActivityTypeBrowsingWeb)
+      userActivity.webpageURL = context.url
+      // Routes to the `continueUserActivity` method, which should be handled in your AppDelegate.
+      application.delegate?.application?(
+        application,
+        continue: userActivity,
+        restorationHandler: { _ in }
+      )
+      return false
+    }
+    // Let Braze handle links otherwise
+    return true
+  }
+}
+```
+
+Then, in your `AppDelegate.swift`, keep a strong reference to the delegate and assign it to Braze in `didFinishLaunchingWithOptions`:
+
+```swift
+// Keep a strong reference to the BrazeDelegate so it is not deallocated.
+private var brazeDelegate: BrazeReactDelegate?
+
+func application(
+  _ application: UIApplication,
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+) -> Bool {
+  // Other setup code (e.g., Braze initialization)
+
+  brazeDelegate = BrazeReactDelegate()
+  braze?.delegate = brazeDelegate
+  return true
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 
 For an example integration, reference our sample app [here](https://github.com/braze-inc/braze-react-native-sdk/blob/master/BrazeProject/ios/BrazeProject/AppDelegate.mm).
 {% endtab %}
