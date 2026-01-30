@@ -250,7 +250,7 @@ Braze calculates the optimal time at midnight in Samoa time, one of the first ti
 
 #### Why is my Intelligent Timing campaign showing little to no sends?
 
-If there isn't enough relevant engagement data for a user (for example, new users with little to no clicks or opens), Intelligent Timing uses the configured fallback setting—either your custom fallback time or the most popular time to use the app among all users.
+If there aren't enough relevant events for a user (for example, new users with little to no clicks or opens), Intelligent Timing uses the configured fallback setting—either your custom fallback time or the most popular time to use the app among all users.
 
 #### Why is my Intelligent Timing campaign sending past the scheduled date?
 
