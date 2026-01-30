@@ -27,7 +27,7 @@ Unlock new combinations of user journeys with [Canvas components]({{site.baseurl
 
 {% alert note %}
 Canvas steps can move users only forward in the flow. You cannot configure a Canvas to link a step to a previous step, as this would send users backwards. This validation ensures users progress in a single direction through your Canvas.
-{% endalert %} 
+{% endalert %}
 
 ## Create richer messages
 
