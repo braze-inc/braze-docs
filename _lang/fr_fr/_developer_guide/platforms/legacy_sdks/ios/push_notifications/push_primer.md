@@ -1,9 +1,9 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: "Premières notifications push"
+article_title: Premières notifications push pour iOS
 page_order: 6
 page_type: reference
-description: ""
+description: "Cet article de référence traite de l’intégration des premières notifications push iOS."
 platform: iOS
 channel:
   - push
@@ -11,18 +11,18 @@ noindex: true
 alias: /push_primer/
 ---
 
+{% multi_lang_include deprecations/objective-c.md %}
 
+# Intégration de premières notifications push
 
-# 
+Les campagnes de premières notifications push encouragent vos utilisateurs à activer les notifications push sur leur appareil pour votre application. Obtenir la permission des utilisateurs d’envoyer des messages directement sur leurs appareils peut être complexe, mais nos guides peuvent vous aider ! Ce guide montre les étapes que les développeurs doivent suivre pour intégrer les planifications de notifications push.
 
-  
+## Étape 1 : Ajouter un extrait de code dans le fichier AppDelegate.m
 
-##  
+Ajoutez la ligne de code suivante à votre fichier `AppDelegate.m` à la place de l’intégration standard :
 
-
-
-
-
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -50,8 +50,8 @@ if (@available(iOS 10.0, *)) {
     }
   }
 ```
-
-
+{% endtab %}
+{% tab swift %}
 
 ```swift
 if #available(iOS 10, *) {
@@ -76,15 +76,15 @@ if #available(iOS 10, *) {
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
+## Étape 2 : Ajouter un vérificateur d'événements personnalisé au fichier AppDelegate.m
 
+L’extrait de code suivant vérifie si un événement personnalisé doit être déclenché. Ajoutez la ligne de code suivante à votre `AppDelegate.m` :
 
-##  
-
- 
-
-
-
+{% tabs %}
+{% tab OBJECTIVE-C %}
 ```objc
 if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -104,8 +104,8 @@ if (@available(iOS 10.0, *)) {
     }
   }
 ```
-
-
+{% endtab %}
+{% tab swift %}
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -125,17 +125,17 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
+## Étape 3 : Configurer un gestionnaire de liens profonds
 
+Placez l’extrait de code suivant à l’intérieur du code de gestion de votre lien ciblé. Vous devez uniquement exécuter ce code de lien profond pour amorcer les notifications push dans le message in-app.
 
-##  
+Consultez [Personnalisation de la gestion des liens]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization) pour plus d’informations sur les liens profonds.
 
- 
-
-
-
-
-
+{% tabs %}
+{% tab OBJECTIVE-C %}
 ```objc
   // ...
   // check that this deep link relates to the push prompt
@@ -155,8 +155,8 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
       [sharedApplication registerForRemoteNotifications];
   }
 ```
-
-
+{% endtab %}
+{% tab swift %}
 
 ```swift
   // ...
@@ -175,5 +175,5 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
     UIApplication.shared.registerForRemoteNotifications()
   }
 ```
-
-
+{% endtab %}
+{% endtabs %}
