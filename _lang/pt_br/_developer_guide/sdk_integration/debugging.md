@@ -11,7 +11,7 @@ description: "Saiba como usar o depurador do Braze SDK para solucionar problemas
 
 ## Pré-requisitos
 
-Para usar o depurador do Braze SDK, você precisará das permissões `View PII` e `View User Profiles PII Compliant`. Além disso, seu Braze SDK precisa atender ou apontar para as seguintes versões mínimas: 
+Para usar o depurador do SDK do Braze, você precisará das permissões "Ver PII" e "Ver Perfis de Usuários em Conformidade com PII". Para baixar os logs da sua sessão de depuração, você também precisará da permissão "Exportar Dados de Usuários". Além disso, seu Braze SDK precisa atender ou apontar para as seguintes versões mínimas: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -29,17 +29,17 @@ Antes de iniciar a sessão de depuração, feche o app que está apresentando pr
 
 No Braze, acesse **Settings (Configurações)** e, em **Setup and Testing (Configuração e teste)**, selecione **SDK Debugger (Depurador SDK)**.
 
-![A seção "Setup and Testing" (Configuração e teste) com "SDK Debugger" destacado.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![A seção "Configuração e Teste" com "Depurador do SDK" destacado.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 Selecione **Criar sessão de depuração**.
 
-![A página "SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
+![A página "Depurador do SDK".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
 ### Etapa 3: Selecione um usuário
 
 Pesquise um usuário usando seu endereço de e-mail, `external_id`, alias de usuário ou token por push. Quando estiver pronto para iniciar a sessão, selecione **Select User (Selecionar usuário)**.
 
-![A página de depuração do usuário selecionado.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
+![A página de depuração para o usuário selecionado.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
 ### Etapa 4: Reabra o app
 
@@ -57,7 +57,7 @@ Quando estiver reproduzindo o erro, certifique-se de seguir as etapas de reprodu
 
 Quando terminar as etapas de reprodução, selecione **Encerrar sessão** > **Fechar**.
 
-![A sessão de depuração mostra o botão "End Session" (Finalizar sessão).]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
+![A sessão de depuração mostrando o botão "Encerrar Sessão".]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
 Pode levar alguns minutos para gerar os registros, dependendo da duração da sessão e da conectividade da rede.
@@ -67,4 +67,4 @@ Pode levar alguns minutos para gerar os registros, dependendo da duração da se
 
 Após a sessão, é possível exportar os registros da sessão como um arquivo CSV. Além disso, outras pessoas podem usar seu **ID de sessão** para procurar sua sessão de depuração, portanto, não é necessário enviar seus registros diretamente.
 
-![A página de depuração com "Exportar registros" e "Copiar ID da sessão" é mostrada após a sessão.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![A página de depuração com "Exportar Logs" e "Copiar ID da Sessão" mostrados após a sessão.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
