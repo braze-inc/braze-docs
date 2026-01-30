@@ -319,21 +319,28 @@ class BrazeReactDelegate: NSObject, BrazeDelegate {
 }
 ```
 
-Then, in your `AppDelegate.swift`, keep a strong reference to the delegate and assign it to Braze in `didFinishLaunchingWithOptions`:
+Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOptions` of your project's `AppDelegate.swift` file.
 
 ```swift
-// Keep a strong reference to the BrazeDelegate so it is not deallocated.
-private var brazeDelegate: BrazeReactDelegate?
+import BrazeKit
 
-func application(
-  _ application: UIApplication,
-  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
-) -> Bool {
-  // Other setup code (e.g., Braze initialization)
-
-  brazeDelegate = BrazeReactDelegate()
-  braze?.delegate = brazeDelegate
-  return true
+class AppDelegate: UIResponder, UIApplicationDelegate {
+  
+  static var braze: Braze?
+  
+  // Keep a strong reference to the BrazeDelegate so it is not deallocated.
+  private var brazeDelegate: BrazeReactDelegate?
+  
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+  ) -> Bool {
+    // Other setup code (e.g., Braze initialization)
+    
+    brazeDelegate = BrazeReactDelegate()
+    AppDelegate.braze?.delegate = brazeDelegate
+    return true
+  }
 }
 ```
 {% endsubtab %}
