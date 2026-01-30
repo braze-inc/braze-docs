@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Curso de Aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Começando: Visão geral da plataforma
+# [![Curso de Aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Introdução: Visão geral da plataforma
 
 > Este artigo aborda as partes básicas e os recursos da plataforma Braze. Os links deste artigo se conectam a tópicos essenciais do Braze. 
 
@@ -68,7 +68,7 @@ Os dados armazenados no Braze são retidos e podem ser usados para segmentação
 
 ### Análise de dados do app
 
-O dashboard do Braze exibe gráficos atualizados em tempo real com base em métricas de análise e eventos personalizados que você instrumenta. Medidas e otimizações consistentes usando Testes A/B, relatórios personalizados, análise de dados e inteligência automatizada ajudam a apoiar o engajamento e a diferenciação do cliente.
+O dashboard do Braze exibe gráficos atualizados em tempo real com base em métricas de análise e eventos personalizados que você instrumenta. Medidas e otimizações consistentes usando testes A/B, relatórios personalizados, análise de dados e inteligência automatizada ajudam a apoiar o engajamento e a diferenciação do cliente.
 
 ### Segmentação de usuários
 
@@ -109,7 +109,7 @@ Depois de definir um segmento, as ferramentas de mensagens privadas do Braze per
 
 ## Integração do Braze
 
-Braze é projetado para integração rápida. O tempo médio para valor é de seis semanas em nossa base de clientes. Para mais informações sobre o processo de integração, veja [Começando: Visão geral da integração]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+O Braze é projetado para integração rápida. O tempo médio para valor é de seis semanas em nossa base de clientes. Para mais informações sobre o processo de integração, veja [Introdução: Visão geral da integração]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Recursos para adicionar aos favoritos
 
