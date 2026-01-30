@@ -22,8 +22,8 @@ A tabela a seguir descreve como os usuários podem usar cada tipo de bloco de ed
 |Espaçador| Adiciona espaço, ou "padding", entre outros blocos. |
 |Imagem| Insere uma imagem da [biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Vídeo| Cria um link para o conteúdo do vídeo. |
-|Mídia social| Insira o ícone da plataforma de redes sociais. Imagens personalizadas podem ser feitas upload para ícones específicos da marca. |
-|Ícones| Insere um ícone. É possível fazer upload de imagens personalizadas. Um ícone de espaço reservado de grandes dimensões será usado até que uma imagem seja feita upload. |
+|Mídia social| Insira o ícone da plataforma de redes sociais. Você pode fazer upload de imagens personalizadas para ícones específicos da marca. |
+|Ícones| Insere um ícone. Você pode fazer upload de imagens personalizadas. O Braze usa um ícone de espaço reservado de grandes dimensões até que você faça upload de uma imagem. |
 |HTML| Insere HTML bruto. Recomendado para [Liquid]({{site.baseurl}}/liquid/), como Connected Content ou declarações condicionais. | 
 |Menu| Cria um menu flexível para a mensagem que você está projetando. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
@@ -176,7 +176,7 @@ Consulte a tabela a seguir para obter detalhes sobre o bloco do editor `Icons`.
 |Espaçamento entre as letras| Modifica a distância entre cada caractere. |
 |Tamanho do ícone| Determina o tamanho de seu ícone. |
 |Espaçamento entre ícones| Modifica o espaço do ícone. |
-|Preenchimento do ícone| Modifica o preenchimento do ícone. |
+|Preenchimento de ícones| Modifica o preenchimento do ícone. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### HTML

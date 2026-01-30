@@ -1,6 +1,6 @@
 ---
 nav_title: Comportamento
-article_title: Personalização do comportamento dos cartões de conteúdo
+article_title: Personalize o comportamento dos Cartões de Conteúdo
 page_order: 2
 description: "Este guia de implementação aborda a alteração do comportamento dos cartões de conteúdo, a adição de extras como pares de chave/valor à sua carga útil e receitas de personalizações comuns."
 channel:
@@ -12,9 +12,9 @@ platform:
   - Web
 ---
 
-# Personalização do comportamento dos cartões de conteúdo
+# Personalize o comportamento dos Cartões de Conteúdo
 
-> Este guia de implementação aborda a alteração do comportamento dos cartões de conteúdo, a adição de extras como pares de chave/valor à sua carga útil e receitas de personalizações comuns. Para obter a lista completa dos tipos de cartões de conteúdo, consulte [Sobre cartões de conteúdo]({{site.baseurl}}/developer_guide/content_cards/). 
+> Este guia de implementação aborda a alteração do comportamento dos cartões de conteúdo, a adição de extras como pares de chave/valor à sua carga útil e receitas de personalizações comuns. Para a lista completa de tipos de cartões de conteúdo, veja [Sobre Cartões de Conteúdo]({{site.baseurl}}/developer_guide/content_cards/). 
 
 ## Pares de valores chave
 
@@ -25,7 +25,12 @@ Não recomendamos o envio de valores JSON aninhados como pares de valores-chave.
 {% endalert %}
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Os pares de valores-chave são armazenados em objetos <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> como `extras`. Eles podem ser usados para enviar dados para baixo junto com um cartão para tratamento posterior pelo aplicativo. Ligue para `card.extras` para acessar esses valores.
+
+{% endtab %}
+{% tab android %}
 
 Os pares de valores-chave são armazenados em objetos <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> como `extras`. Eles podem ser usados para enviar dados para baixo junto com um cartão para tratamento posterior pelo aplicativo. Chamada <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> para acessar esses valores.
 
@@ -33,11 +38,6 @@ Os pares de valores-chave são armazenados em objetos <a href="https://braze-inc
 {% tab swift %}
 
 Os pares de valores-chave são armazenados em objetos <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> como `extras`. Eles podem ser usados para enviar dados para baixo junto com um cartão para tratamento posterior pelo aplicativo. Chamada <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> para acessar esses valores.
-
-{% endtab %}
-{% tab web %}
-
-Os pares de valores-chave são armazenados em objetos <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> como `extras`. Eles podem ser usados para enviar dados para baixo junto com um cartão para tratamento posterior pelo aplicativo. Ligue para `card.extras` para acessar esses valores.
 
 {% endtab %}
 {% endtabs %}
@@ -58,10 +58,10 @@ O exemplo à direita mostra um feed com uma lista híbrida de itens que são pre
 
 As [campanhas disparadas por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) são uma boa estratégia a ser empregada quando os valores de um cartão dependem de fatores externos para determinar o conteúdo a ser exibido para o usuário. Por exemplo, para exibir conteúdo suplementar, defina pares de valores-chave usando o Liquid. É preciso saber qual é o `class_type` no momento da configuração.
 
-![Os pares de valores-chave para o caso de uso de cartões de conteúdo suplementar. Neste exemplo, diferentes aspectos do cartão, como "tile_id", "tile_deeplink" e "tile_title", são definidos usando o Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Os pares de valores-chave para o caso de uso de cartões de conteúdo suplementar. Neste exemplo, diferentes aspectos do cartão, como "tile_id", "tile_deeplink", e "tile_title", são definidos usando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ## Cartões de conteúdo como conteúdo interativo
-![Um cartão de conteúdo interativo mostrando uma promoção de 50% aparece no canto inferior esquerdo da tela. Após ser clicado, uma promoção será aplicada ao carrinho.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![Um cartão de conteúdo interativo mostrando uma promoção de 50% aparece no canto inferior esquerdo da tela. Depois de clicado, uma promoção será aplicada ao carrinho.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 Os cartões de conteúdo podem ser aproveitados para criar experiências dinâmicas e interativas para seus usuários. No exemplo à direita, temos um pop-up de cartão de conteúdo que aparece no checkout, oferecendo aos usuários promoções de última hora. Cartões bem posicionados como esse são uma ótima maneira de dar aos usuários um "empurrãozinho" em direção a ações específicas. 
 
@@ -73,7 +73,7 @@ Os pares de valores-chave para esse caso de uso incluem `discount_percentage` de
 
 ## Emblemas de cartões de conteúdo
 
-![Uma tela inicial do iPhone mostrando um app de amostra do Braze chamado Swifty com um emblema vermelho exibindo o número 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Uma tela de início do iPhone mostrando um app de amostra da Braze chamado Swifty, com um emblema vermelho exibindo o número 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Os emblemas são ícones pequenos, ideais para chamar a atenção do usuário. O uso de emblemas para alertar o usuário sobre o novo conteúdo do Content Card pode atrair os usuários de volta ao seu app e aumentar as sessões.
 
@@ -82,7 +82,18 @@ Os emblemas são ícones pequenos, ideais para chamar a atenção do usuário. O
 Você pode exibir o número de cartões de conteúdo não lidos que seu usuário tem como um emblema no ícone do seu app. 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Você pode solicitar o número de cartões não lidos a qualquer momento, ligando para o telefone:
+
+```javascript
+braze.getCachedContentCards().getUnviewedCardCount();
+```
+
+Em seguida, você pode usar essas informações para exibir um emblema que indica quantos cartões de conteúdo não lidos existem. Para saber mais, consulte a <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">documentação de referência do SDK</a>.
+
+{% endtab %}
+{% tab android %}
 
 Você pode solicitar o número de cartões não lidos a qualquer momento, ligando para o telefone:
 
@@ -146,17 +157,6 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab web %}
-
-Você pode solicitar o número de cartões não lidos a qualquer momento, ligando para o telefone:
-
-```javascript
-braze.getCachedContentCards().getUnviewedCardCount();
-```
-
-Em seguida, você pode usar essas informações para exibir um emblema que indica quantos cartões de conteúdo não lidos existem. Para saber mais, consulte a <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">documentação de referência do SDK</a>.
-
 {% endtab %}
 {% endtabs %}
 

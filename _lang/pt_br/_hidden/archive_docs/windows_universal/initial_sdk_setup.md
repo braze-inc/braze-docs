@@ -13,11 +13,11 @@ hidden: true
 
 O Braze SDK fornecerá uma API para relatar informações a serem usadas em análise de dados, segmentação e engajamento, bem como a capacidade de registrar usuários para notificações por push e receber notificações.
 
->  O Windows Universal SDK também é compatível com os apps Xamarin Windows.
+>  O Windows Universal SDK também é compatível com os apps do Windows .NET MAUI.
 
 ## Etapa 1: Instale o SDK por meio do gerenciador de pacotes NuGet
 
-O Windows Universal SDK é instalado por meio do [NuGet Package Manager][14]. Para instalar o Braze Windows SDK via NuGet:
+O Windows Universal SDK é instalado por meio do [NuGet Package Manager](http://www.nuget.org/). Para instalar o Braze Windows SDK via NuGet:
 
 1. Clique com o botão direito do mouse no arquivo de projeto
 2. Clique em "Manage NuGet Packages" (Gerenciar pacotes NuGet)
@@ -48,7 +48,7 @@ Depois de adicionar esse snippet, não se esqueça de modificar as seguintes pro
 ## Etapa 3: Configuração do package.appxmanifest
 
 Na guia "Capabilities" (Recursos), verifique se a opção `Internet (Client)` está marcada.
-![][18]
+![]({% image_buster /assets/img_archive/internet_client.png %})
 
 ## Etapa 4: Edição da classe do app
 
@@ -74,9 +74,7 @@ Appboy.SharedInstance.CloseSession();
 
 ## Integração básica de SDK concluída
 
-Agora, o Braze deve estar coletando dados do seu aplicativo. Consulte os artigos a seguir sobre como registrar [atribuições]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/), [eventos]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events) e [compras]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases) em nosso SDK e como instrumentar o envio de mensagens push.
+Agora, o Braze deve estar coletando dados do seu aplicativo. Consulte os artigos a seguir sobre como registrar [atribuições]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/), [eventos]({{site.baseurl}}/developer_guide/analytics/logging_events/) e [compras]({{site.baseurl}}/developer_guide/analytics/logging_purchases/) em nosso SDK e como instrumentar o envio de mensagens push.
 
 >  Se estiver usando o projeto Braze Unity no mesmo app, talvez seja necessário qualificar totalmente as chamadas na Braze como "AppboyPlatform.Universal.Appboy"
 
-[14]: http://www.nuget.org/
-[18]: {% image_buster /assets/img_archive/internet_client.png %}

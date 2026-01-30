@@ -51,9 +51,9 @@ Se os [APNs](https://developer.apple.com/library/content/documentation/Networkin
 
 ## Utilização dos registros de erros do push
 
-Braze fornece um registro de erros de notificação por push dentro do **Registro de Atividade de Mensagens**. Este registro de erro fornece uma variedade de avisos que podem ser muito úteis para identificar por que suas campanhas não estão funcionando como esperado. Ao clicar em uma mensagem de erro, o sistema redirecionará você para a documentação relevante que ajudará a solucionar um incidente específico.
+Braze fornece um registro de erros de notificação por push dentro do **Registro de Atividade de Mensagens**. Este registro de erro fornece uma variedade de avisos que podem ser muito úteis para identificar por que suas campanhas não estão funcionando como esperado. Clicar em uma mensagem de erro irá redirecioná-lo para a documentação relevante para ajudá-lo a solucionar um incidente específico.
 
-![Registros de erros push exibindo a hora em que o erro ocorreu, o nome do app, o canal, o tipo de erro e a mensagem de erro.]({% image_buster /assets/img_archive/message_activity_log.png %})
+![Logs de erro de push exibindo a hora em que o erro ocorreu, o nome do app, o canal, o tipo de erro e a mensagem de erro.]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 Os erros comuns que podem ser vistos aqui incluem notificações específicas do usuário, como ["Received Unregistered Sending to Push Token".](#received-unregistered-sending)
 
@@ -116,7 +116,7 @@ Verifique o perfil do usuário para o qual você está tentando enviar uma mensa
 
 O seguinte indicaria um problema com o registro de push ou que o token do usuário foi retornado ao Braze como inválido pelo APNs após ser pushado:
 
-![Um perfil de usuário exibindo as configurações de contato de um usuário. Aqui, você pode ver em quais apps o push está registrado.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![Um perfil de usuário exibindo as configurações de contato de um usuário. Aqui, você pode ver para quais apps o push está registrado.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## As mensagens push não estão sendo enviadas
 

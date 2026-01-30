@@ -1,4 +1,4 @@
-{% if include.page == "testing" %}[バナーメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#compose-a-banner)の作成中に、{% elsif include.page == "campaigns" %}Select{% endif %} **プレビュー**を選択してバナーをプレビューするか、テストメッセージを送信します。
+{% if include.page == "testing" %}[バナーメッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#compose-a-banner)の作成中に、{% elsif include.page == "campaigns" %}Select{% endif %} **プレビュー**を選択してバナーをプレビューするか、テストメッセージを送信します。
 
 ![バナーコンポーザーのプレビュータブ。]({% image_buster /assets/img/banners/select_preview.png %}){: style="max-width:50%;"}
 

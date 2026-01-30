@@ -1,8 +1,8 @@
 ---
-nav_title: Deep linking
-article_title: Deep linking em cartões de conteúdo
+nav_title: Deep links
+article_title: Deep Linking em Cartões de Conteúdo
 page_order: 4
-description: "Saiba como fazer deep linking em um cartão de conteúdo usando o SDK do Braze."
+description: "Aprenda como fazer deep link dentro de um Cartão de Conteúdo usando o SDK Braze."
 channel:
   - content cards
 platform:
@@ -12,20 +12,20 @@ platform:
   - FireOS
 ---
 
-# Deep linking em cartões de conteúdo
+# Deep Linking em Cartões de Conteúdo
 
-> Saiba como fazer deep linking em um cartão de conteúdo usando o SDK do Braze. Para saber mais sobre deep links, consulte [O que é deep linking?]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)
+> Aprenda como fazer deep link dentro de um Cartão de Conteúdo usando o SDK Braze. Para saber mais sobre deep links, confira [O que é deep linking?]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
 
 {% sdktabs %}
+{% sdktab web %}
+Neste momento, deep links de Cartões de Conteúdo não são suportados para o SDK Web Braze.
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/deep_linking.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/deep_linking.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-No momento, os deep linkings do cartão de conteúdo não são compatíveis com o SDK do Braze.
 {% endsdktab %}
 {% endsdktabs %}
