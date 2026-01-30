@@ -326,6 +326,8 @@ import BrazeKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
+  static var braze: Braze?
+  
   // Keep a strong reference to the BrazeDelegate so it is not deallocated.
   private var brazeDelegate: BrazeReactDelegate?
   
