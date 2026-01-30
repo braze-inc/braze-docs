@@ -1,14 +1,14 @@
-{%- 댓글 -%} LLM용 복사 버튼 - 마크다운 콘텐츠가 처리된 개발자 가이드 페이지에만 표시 {%- endcomment -%} {%- if page.llm_markdown_content 및 page.llm_markdown_content != "" -%}
+{%- comment -%} LLM 버튼 복사 - 처리된 마크다운 콘텐츠가 있는 개발자 가이드 페이지에만 표시 {%- endcomment -%} {%- if page.llm_markdown_content and page.llm_markdown_content != "" -%}
 <div id="copy-for-llm-container" class="copy-for-llm-wrapper">
   <button 
     id="copy-for-llm-btn" 
     class="btn btn-outline-secondary btn-sm copy-for-llm-button"
     data-markdown-content="{{ page.llm_markdown_content | escape }}"
-    title="이 페이지를 마크다운으로 복사하여 더 쉽게 LLM 처리하기"
-  > <i class="fas fa-copy" aria-hidden="true"></i> <span class="copy-for-llm-text">LLM용 복사</span> </button> <button 
+    title="이 페이지를 마크다운으로 복사하여 LLM 처리를 쉽게 하세요"
+  > <i class="fas fa-copy" aria-hidden="true"></i> <span class="copy-for-llm-text">LLM 복사</span> </button> <button 
     id="view-markdown-btn" 
     class="btn btn-outline-secondary btn-sm copy-for-llm-button"
-    title="새 탭에서 이 페이지를 마크다운으로 보기"
+    title="이 페이지를 새 탭에서 마크다운으로 보기"
   > <i class="fas fa-eye" aria-hidden="true"></i> <span class="copy-for-llm-text">마크다운으로 보기</span> </button> <!-- Success/Error feedback -->
   <div id="copy-for-llm-feedback" class="copy-for-llm-feedback" style="display: none;">
     <span class="copy-for-llm-message"></span>
