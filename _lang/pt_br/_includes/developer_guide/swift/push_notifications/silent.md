@@ -6,9 +6,9 @@ O sistema operacional iOS pode bloquear notificações para alguns recursos. Se 
 
 ## Configurando notificações por push silenciosas
 
-Para usar notificações por push silenciosas para disparar trabalho em segundo plano, você deve configurar seu app para receber notificações mesmo quando estiver em segundo plano. Para fazer isso, adicione a capacidade de Modos de Fundo usando o painel **Assinatura e Capacidades** ao alvo principal do app no Xcode. Selecione a caixa de seleção **Notificações remotas**.
+Para usar notificações por push silenciosas para disparar trabalho em segundo plano, você deve configurar seu app para receber notificações mesmo quando estiver em segundo plano. Para fazer isso, adicione o recurso Background Modes usando o painel **Signing & Capabilities** ao destino principal do app no Xcode. Selecione a caixa de seleção **Notificações remotas**.
 
-![O Xcode mostra a caixa de seleção do modo "notificações remotas" em "capacitações".]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
+![Xcode mostrando a caixa de seleção do modo "notificações remotas" em "capacidades".]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
 
 Mesmo com o modo de fundo de notificações remotas ativado, o sistema não iniciará seu app em segundo plano se o usuário tiver forçado o encerramento do aplicativo. O usuário deve iniciar explicitamente o aplicativo ou reiniciar o dispositivo antes que o app possa ser lançado automaticamente em segundo plano pelo sistema.
 
@@ -28,7 +28,7 @@ A `content-available` flag pode ser definida no dashboard da Braze, assim como d
 Anexar tanto um título quanto um corpo de texto com `content-available=1` não é recomendado porque pode levar a um comportamento indefinido. Para garantir que uma notificação seja realmente silenciosa, exclua tanto o título quanto o corpo de texto ao definir a sinalização`content-available` para `1.` Para mais detalhes, consulte a [documentação oficial da Apple sobre atualizações em segundo plano](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app).
 {% endalert %}
 
-![O painel do Braze mostra a caixa de seleção "content-available" (conteúdo disponível) encontrada na guia "settings" (configurações) do criador do push.]({% image_buster /assets/img_archive/remote_notification.png %} "content available" (conteúdo disponível))
+![O dashboard do Braze mostrando a caixa de seleção "content-available" encontrada na guia "settings" do criador de push.]({% image_buster /assets/img_archive/remote_notification.png %} "content available")
 
 Ao enviar uma notificação por push silenciosa, você também pode querer incluir alguns dados na carga útil da notificação, para que seu aplicativo possa referenciar o evento. Isso pode economizar algumas solicitações de rede e aumentar a capacidade de resposta do seu app.
 
@@ -66,7 +66,7 @@ func application(_ application: UIApplication,
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 
 ```objc
