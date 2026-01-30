@@ -1,27 +1,28 @@
 ---
-nav_title: "Push Primer"
-article_title: Push Primer für iOS
+nav_title: ""
+article_title: ""
 page_order: 6
 page_type: reference
-description: "Dieser Referenzartikel beschreibt die Integration von iOS-Push Primern."
+description: ""
 platform: iOS
 channel:
   - push
 noindex: true
+alias: /push_primer/
 ---
 
-{% multi_lang_include deprecations/objective-c.md %}
 
-# Push Primer-Integration
 
-Push-Primer-Kampagnen ermutigen Ihre Nutzer, Push auf ihrem Gerät für Ihre App zu aktivieren. Die Erlaubnis von Nutzern einzuholen, um Nachrichten direkt an ihre Geräte zu senden, kann kompliziert sein, aber unsere Anleitungen können Ihnen dabei helfen! Dieser Leitfaden beschreibt die von Entwicklern durchzuführenden Schritte für die Integration von Push Priming.
+# 
 
-## Schritt 1: Snippet in die Datei AppDelegate.m einfügen
+  
 
-Fügen Sie die folgende Codezeile anstelle der Standardintegration in Ihre `AppDelegate.m` Datei ein:
+##  
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+
+
+
+
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -49,8 +50,8 @@ if (@available(iOS 10.0, *)) {
     }
   }
 ```
-{% endtab %}
-{% tab schnell %}
+
+
 
 ```swift
 if #available(iOS 10, *) {
@@ -75,15 +76,15 @@ if #available(iOS 10, *) {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
-## Schritt 2: Benutzerdefiniertes Ereignisprüfprogramm an die Datei AppDelegate.m anhängen
 
-Das folgende Code-Snippet prüft, ob ein angepasstes Event ausgelöst werden muss. Fügen Sie die folgende Codezeile in Ihr `AppDelegate.m` ein.
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+##  
+
+ 
+
+
+
 ```objc
 if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -103,8 +104,8 @@ if (@available(iOS 10.0, *)) {
     }
   }
 ```
-{% endtab %}
-{% tab schnell %}
+
+
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -124,17 +125,17 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
 
-## Schritt 3: Deeplink-Handler einrichten
 
-Platzieren Sie das folgende Code-Snippet im Deeplink-Handling-Code. Sie sollten diesen Deeplinking-Code nur für Ihre Push-Primer-In-App-Nachricht ausführen.
 
-Weitere Informationen über Deep Linking finden Sie unter [Anpassung der Linkbehandlung]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization).
+##  
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+ 
+
+
+
+
+
 ```objc
   // ...
   // check that this deep link relates to the push prompt
@@ -154,8 +155,8 @@ Weitere Informationen über Deep Linking finden Sie unter [Anpassung der Linkbeh
       [sharedApplication registerForRemoteNotifications];
   }
 ```
-{% endtab %}
-{% tab schnell %}
+
+
 
 ```swift
   // ...
@@ -174,5 +175,5 @@ Weitere Informationen über Deep Linking finden Sie unter [Anpassung der Linkbeh
     UIApplication.shared.registerForRemoteNotifications()
   }
 ```
-{% endtab %}
-{% endtabs %}
+
+
