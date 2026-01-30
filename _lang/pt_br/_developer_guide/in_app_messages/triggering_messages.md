@@ -1,8 +1,8 @@
 ---
 nav_title: Mensagens de gatilho
-article_title: Dispare mensagens no app através do SDK Braze
+article_title: Acione mensagens no app através do SDK Braze
 page_order: 0.2
-description: "Saiba como disparar mensagens no app através do SDK Braze."
+description: "Aprenda como acionar mensagens no app através do SDK Braze."
 platform: 
   - Android
   - FireOS
@@ -10,18 +10,18 @@ platform:
   - Web
 ---
 
-# Dispare mensagens no app
+# Acione mensagens no app
 
-> Saiba como disparar mensagens no app através do SDK Braze.
+> Aprenda como acionar mensagens no app através do SDK Braze.
 
-## Gatilhos de mensagem e entrega
+## Gatilhos e entrega de mensagens
 
-As mensagens no app são disparadas quando o SDK registra um dos seguintes tipos de eventos personalizados: `Session Start`, `Push Click`, `Any Purchase`, `Specific Purchase` e `Custom Event` (os dois últimos contendo filtros de propriedade robustos).
+As mensagens no app são acionadas quando o SDK registra um dos seguintes tipos de eventos personalizados: `Session Start`, `Push Click`, `Any Purchase`, `Specific Purchase` e `Custom Event` (os dois últimos contendo filtros de propriedade robustos).
 
-No início da sessão de um usuário, o Braze entregará todas as mensagens no app elegíveis para seu dispositivo, enquanto simultaneamente pré-carrega ativos para minimizar a latência de exibição. Se o evento de gatilho tiver mais de uma mensagem no app elegível, apenas a mensagem com a maior prioridade será entregue. Para saber mais, veja [O Ciclo de Vida da Sessão]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/#about-the-session-lifecycle).
+No início da sessão de um usuário, o Braze entregará todas as mensagens no app elegíveis para seu dispositivo, enquanto simultaneamente pré-carrega ativos para minimizar a latência de exibição. Se o evento de gatilho tiver mais de uma mensagem no app elegível, apenas a mensagem com a maior prioridade será entregue. Para mais informações, veja [Lifecycle da Sessão]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/#about-the-session-lifecycle).
 
 {% alert note %}
-Mensagens no app não podem ser disparadas através da API ou por eventos da API—apenas eventos personalizados registrados pelo SDK. Para saber mais sobre registro, veja [Registro de Eventos Personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
+Mensagens no app não podem ser acionadas através da API ou por eventos da API—apenas eventos personalizados registrados pelo SDK. Para saber mais sobre registro, veja [Registro de Eventos Personalizados]({{site.baseurl}}/developer_guide/analytics/logging_events/).
 {% endalert %}
 
 ## Pares de valores chave
@@ -103,7 +103,7 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 
 ## Desabilitando gatilhos automáticos
 
-Por padrão, as mensagens no app são disparadas automaticamente. Para desabilitar isso:
+Por padrão, as mensagens no app são acionadas automaticamente. Para desabilitar isso:
 
 {% tabs %}
 
@@ -134,7 +134,7 @@ braze.subscribeToInAppMessage(function(inAppMessage) {
 Se você chamar `braze.showInAppMessage` sem remover `braze.automaticallyShowInAppMessages()`, as mensagens podem ser exibidas duas vezes.
 {% endalert %}
 
-Para um controle mais avançado sobre o tempo das mensagens, incluindo adiar e restaurar mensagens disparadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+Para um controle mais avançado sobre o tempo das mensagens, incluindo adiamento e restauração de mensagens acionadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab android %}
@@ -148,7 +148,7 @@ Para um controle mais avançado sobre o tempo das mensagens, incluindo exibiçã
 1. Implemente o delegado `BrazeInAppMessageUIDelegate` em seu app. Para um guia completo, consulte [Tutorial: UI de Mensagem no App](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui).
 2. Atualize seu método delegado `inAppMessage(_:displayChoiceForMessage:)` para retornar `.discard`.
 
-Para um controle mais avançado sobre o tempo das mensagens, incluindo adiar e restaurar mensagens disparadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
+Para um controle mais avançado sobre o tempo das mensagens, incluindo adiamento e restauração de mensagens acionadas, consulte nosso [Tutorial: Adiar e restaurar mensagens disparadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).
 {% endtab %}
 
 {% tab flutter %}
@@ -235,7 +235,7 @@ Neste momento, o SDK Web Braze não suporta a ativação manual de mensagens usa
 {% endtab %}
 
 {% tab android %}
-Para disparar uma mensagem no app usando um evento enviado pelo servidor, envie uma notificação push silenciosa para o dispositivo, o que permite que um retorno de chamada personalizado registre um evento baseado no SDK. Esse evento então disparará a mensagem no app voltada para o usuário.
+Para disparar uma mensagem no app usando um evento enviado pelo servidor, envie uma notificação por push silenciosa para o dispositivo, o que permite que um retorno de chamada personalizado registre um evento baseado no SDK. Esse evento então disparará a mensagem no app voltada para o usuário.
 
 #### Etapa 1: Crie um retorno de chamada push para receber o push silencioso
 
@@ -300,7 +300,7 @@ Crie sua campanha de mensagem no app visível para o usuário no dashboard da Br
 
 No exemplo a seguir, a mensagem no app específica a ser acionada foi configurada enviando a propriedade do evento como parte do push silencioso inicial.
 
-![Uma campanha de entrega baseada em ação onde uma mensagem no app será disparada quando "campaign_name" for igual a "Exemplo de nome da campanha IAM."]({% image_buster /assets/img_archive/iam_event_trigger.png %})
+![Uma campanha de entrega baseada em ação onde uma mensagem no app será disparada quando "campaign_name" for igual a "exemplo de nome da campanha IAM".]({% image_buster /assets/img_archive/iam_event_trigger.png %})
 
 Se um evento enviado pelo servidor for registrado enquanto o app não estiver em primeiro plano, o evento será registrado, mas a mensagem no app não será exibida. Caso você queira que o evento seja postergado até que o aplicativo esteja em primeiro plano, uma verificação deve ser incluída no seu receptor de push personalizado para dispensar ou postergar o evento até que o app tenha entrado em primeiro plano.
 {% endtab %}
@@ -351,7 +351,7 @@ Crie uma [campanha de push silenciosa]({{site.baseurl}}/developer_guide/push_not
 
 A campanha de push precisa incluir extras de pares chave-valor, que indicam que esta campanha de push é enviada para registrar um evento personalizado do SDK. Este evento será usado para disparar a mensagem no app.
 
-![Uma campanha de mensagem no app baseada em ação que tem dois pares chave-valor. "CAMPAIGN_NAME" definido como "Exemplo de nome da mensagem no app", e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Uma campanha de mensagem no app baseada em ação que tem dois pares chave-valor. "CAMPAIGN_NAME" definido como "exemplo de nome da mensagem no app", e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 O código dentro do método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` verifica a chave `IS_SERVER_EVENT` e registra um evento personalizado do SDK se estiver presente.
 
@@ -363,7 +363,7 @@ Crie sua campanha de mensagem no app visível para o usuário no dashboard da Br
 
 No exemplo a seguir, a mensagem no app específica a ser acionada foi configurada enviando a propriedade do evento como parte do push silencioso inicial.
 
-![Uma campanha de mensagem no app baseada em ação que será entregue aos usuários que realizam o evento personalizado "Disparador de mensagem no app" onde "campaign_name" é igual a "Exemplo de Nome da Campanha IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Uma campanha de mensagem no app baseada em ação que será entregue aos usuários que realizam o evento personalizado "Disparar mensagem no app" onde "campaign_name" é igual a "Exemplo de Nome da Campanha IAM".]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 Note que essas mensagens no app só serão disparadas se o push silencioso for recebido enquanto o aplicativo estiver em primeiro plano.
