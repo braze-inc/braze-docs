@@ -1,9 +1,9 @@
 ---
-nav_title: ""
-article_title: ""
+nav_title: "Push primer"
+article_title: Manual do Push para iOS
 page_order: 6
 page_type: reference
-description: ""
+description: "Este artigo de referência aborda como integrar os primers push do iOS."
 platform: iOS
 channel:
   - push
@@ -11,18 +11,18 @@ noindex: true
 alias: /push_primer/
 ---
 
+{% multi_lang_include deprecations/objective-c.md %}
 
+# Integração do push primer
 
-# 
+Campanhas de push primer incentivam os usuários a ativar os pushes do seu app nos dispositivos deles. Obter a permissão dos usuários para enviar mensagens diretamente para seus dispositivos pode ser complexo, mas nossos guias podem ajudar! Este guia mostra as etapas que os desenvolvedores devem seguir para integrar push primers.
 
-  
+## Etapa 1: Adicionar snippet no arquivo AppDelegate.m 
 
-##  
+Adicione a seguinte linha de código ao seu arquivo `AppDelegate.m` no lugar da integração padrão:
 
-
-
-
-
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -50,8 +50,8 @@ if (@available(iOS 10.0, *)) {
     }
   }
 ```
-
-
+{% endtab %}
+{% tab swift %}
 
 ```swift
 if #available(iOS 10, *) {
@@ -76,15 +76,15 @@ if #available(iOS 10, *) {
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
+## Etapa 2: Anexar o verificador de eventos personalizado ao arquivo AppDelegate.m 
 
+O seguinte trecho de código verifica se um evento personalizado precisa ser disparado. Adicione a seguinte linha de código em seu site `AppDelegate.m`.
 
-##  
-
- 
-
-
-
+{% tabs %}
+{% tab OBJECTIVE-C %}
 ```objc
 if (@available(iOS 10.0, *)) {
     UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -104,8 +104,8 @@ if (@available(iOS 10.0, *)) {
     }
   }
 ```
-
-
+{% endtab %}
+{% tab swift %}
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -125,17 +125,17 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
+## Etapa 3: Configurar um manipulador de deep links
 
+Coloque o seguinte trecho de código em seu código de manipulação de deep links. Você só deve executar esse código de deep link para a mensagem no app do seu push primer.
 
-##  
+Para saber mais sobre deep links, consulte a [personalização do manuseio de links]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization).
 
- 
-
-
-
-
-
+{% tabs %}
+{% tab OBJECTIVE-C %}
 ```objc
   // ...
   // check that this deep link relates to the push prompt
@@ -155,8 +155,8 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
       [sharedApplication registerForRemoteNotifications];
   }
 ```
-
-
+{% endtab %}
+{% tab swift %}
 
 ```swift
   // ...
@@ -175,5 +175,5 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
     UIApplication.shared.registerForRemoteNotifications()
   }
 ```
-
-
+{% endtab %}
+{% endtabs %}
