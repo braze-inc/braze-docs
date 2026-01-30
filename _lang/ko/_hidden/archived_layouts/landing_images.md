@@ -1,5 +1,5 @@
 ---
-nav_title: SS LP with Images
+nav_title: 이미지가 있는 Ss lp
 layout: dev_guide
 
 page_order: 1.1
