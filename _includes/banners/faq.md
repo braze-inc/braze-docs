@@ -59,4 +59,9 @@ No. However, most Liquid tags are supported for Banner messages, except for `cat
 
 ## Can I capture click events?
 
-Click events are only captured if an on-click action is set on a `logClick` element and is called using the [JS bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge).
+Yes. How click events are captured depends on how your Banner is rendered:
+
+- **Standard SDK insertion:** If you use the SDK's insertion methods (such as `insertBanner` on Web), clicks are tracked automatically.
+- **Custom Code Blocks:** If you're using the Custom Code editor in the Braze dashboard to build your Banner, call `brazeBridge.logClick()` from within your HTML. This works the same as the [JavaScript bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) for HTML in-app messages.
+
+For more information, see [Logging clicks]({{site.baseurl}}/developer_guide/banners/placements/#logging-clicks).
