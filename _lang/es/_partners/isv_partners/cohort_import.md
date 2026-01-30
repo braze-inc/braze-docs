@@ -25,6 +25,7 @@ Braze aloja nuestra aplicación en varios clústeres repartidos por Estados Unid
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
 | AU-01 | `https://rest.au-01.braze.com`  |
+| ID-01 | `https://rest.id-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## URL del punto final
@@ -124,9 +125,9 @@ Consulte en la tabla siguiente los códigos de error específicos de los puntos 
 |  | `created_at` debe ser una hora válida como cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)  |
 | `401` | Clave API de socio no válida |
 |  | Secreto de cliente no válido |
-|  | Socio no habilitado para cliente con secreto de cliente: **<secreto de cliente>.** |
+|  | Socio no habilitado para cliente con secreto de cliente: **<client secret>** |
 |  | Acceso no autorizado |
 | `423` | Recurso bloqueado |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para solucionar problemas adicionales, consulte [Errores y respuestas]({{site.baseurl}}/api/errors/), que cubre los distintos errores y respuestas del servidor que pueden surgir al utilizar la API Braze.
+Para una solución de problemas adicional, consulta [Errores & Respuestas]({{site.baseurl}}/api/errors/), que cubre los distintos errores y respuestas del servidor que pueden surgir al utilizar la API de Braze.

@@ -30,7 +30,7 @@ Braze will notify the company contact and creator of the extension if this setti
 
 #### 새로고침 설정 선택하기
 
-![새로고침 주기를 주 단위로, 시작 시간을 오전 10시로, 요일을 월요일로 선택한 새로고침 간격 설정]({% image_buster /assets/img/segment/segment_interval_settings.png %}){: style="max-width:50%;"}
+![새로고침 주기를 주 단위로, 시작 시간을 오전 10시로, 요일을 월요일로 선택한 새로고침 간격 설정입니다.]({% image_buster /assets/img/segment/segment_interval_settings.png %}){: style="max-width:50%;"}
 
 **새로고침 간격 설정** 패널에서 시간별, 일별, 주별 또는 월별 중에서 이 세그먼트 확장을 새로고침할 주기를 선택할 수 있습니다. 또한 새로고침을 수행할 특정 시간(회사 표준 시간대)을 선택해야 합니다:
 
@@ -57,7 +57,7 @@ Braze will notify the company contact and creator of the extension if this setti
 세그먼트 확장이 오래되면 예약된 새로고침은 자동으로 비활성화됩니다. 세그먼트 확장은 다음 기준을 충족하는 경우 오래된 것입니다:
 
 - 활성 캠페인이나 캔버스에서 사용되지 않음
-- 활성 캠페인 또는 캔버스에 있는 세그먼트에서는 사용되지 않습니다.
+- 활성 캠페인 또는 캔버스에 있는 세그먼트에서 사용되지 않음
 - [분석 추적이]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking#segment-analytics-tracking) 켜져 있는 세그먼트에서는 사용되지 않습니다.
 - 7일 이상 수정되지 않음
 - 7일 이상 캠페인이나 캔버스(초안 포함) 또는 세그먼트에 추가되지 않은 경우

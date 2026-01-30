@@ -159,7 +159,7 @@ Google Tag Manager fonctionne en injectant le [réseau de diffusion de Braze]({{
 ### Mise en place des cartes de contenu
 
 {% tabs local %}
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Pour une intégration standard du flux de la carte de contenu, vous pouvez utiliser une étiquette **HTML personnalisée** dans Google Tag Manager. Ajoutez ce qui suit à votre balise HTML personnalisée, ce qui activera le flux de carte de contenu standard :
 
 ```html
@@ -168,10 +168,10 @@ Pour une intégration standard du flux de la carte de contenu, vous pouvez utili
 </script>
 ```
 
-![Configuration dans Google Tag Manager d'une étiquette HTML personnalisée qui affiche le flux de la carte de contenu.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
+![Configuration de balise dans Google Tag Manager d’une balise HTML personnalisée montrant le flux de carte de contenu.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
 {% endtab %}
 
-{% tab manuel %}
+{% tab manual %}
 Pour obtenir plus de libertés pour personnaliser l’apparence de vos cartes de contenu et leurs flux, vous pouvez intégrer directement les cartes de contenu dans votre site Internet natif. Vous pouvez suivre deux approches dans ce domaine : utiliser l’IU de flux standard ou créer une IU de flux personnalisée.
 
 {% subtabs local %}
@@ -198,8 +198,8 @@ body .ab-feed {
 
 Pour obtenir la dernière version du SDK Web de Braze, effectuez les trois étapes suivantes dans votre tableau de bord Google Tag Manager :
 
-1. **Mise à jour du modèle de balise**<br>Accédez à la page **Modèles** de votre espace de travail. Vous devez y voir une icône indiquant qu’une mise à jour est disponible.<br><br>![Modèles de page indiquant qu'une mise à jour est disponible]({% image_buster /assets/img/web-gtm/gtm-update-available.png %})<br><br>Cliquez sur cette icône et, après avoir révisé la modification, cliquez sur **Accepter la mise à jour**.<br><br>![Un écran comparant les anciens et les nouveaux modèles d'étiquettes avec un bouton pour "Accepter la mise à jour"]({% image_buster /assets/img/web-gtm/gtm-accept-update.png %})<br><br>
-2. **Mise à jour du numéro de version**<br>Une fois votre modèle de balise mis à jour, modifiez la balise d’initialisation Braze et mettez à jour la version SDK sur la version la plus récente`major.minor`. Par exemple, si la dernière version est `4.1.2`, saisissez `4.1`. Vous pouvez consulter la liste des versions du SDK dans notre [journal des modifications](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md).<br><br>![Modèle d'initialisation de Braze avec un champ de saisie pour changer la version du SDK]({% image_buster /assets/img/web-gtm/gtm-version-number.png %})<br><br>
+1. **Mise à jour du modèle de balise**<br>Accédez à la page **Modèles** de votre espace de travail. Vous devez y voir une icône indiquant qu’une mise à jour est disponible.<br><br>![Page des modèles indiquant qu’une mise à jour est disponible]({% image_buster /assets/img/web-gtm/gtm-update-available.png %})<br><br>Cliquez sur cette icône et, après avoir révisé la modification, cliquez sur **Accepter la mise à jour**.<br><br>![Un écran comparant l’ancien et le nouveau modèle de balise avec un bouton « Accepter la mise à jour »]({% image_buster /assets/img/web-gtm/gtm-accept-update.png %})<br><br>
+2. **Mise à jour du numéro de version**<br>Une fois votre modèle de balise mis à jour, modifiez la balise d’initialisation Braze et mettez à jour la version SDK sur la version la plus récente`major.minor`. Par exemple, si la dernière version est `4.1.2`, saisissez `4.1`. Vous pouvez consulter la liste des versions du SDK dans notre [journal des modifications](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md).<br><br>![Modèle d’initialisation Braze avec un champ de saisie permettant de modifier la version SDK]({% image_buster /assets/img/web-gtm/gtm-version-number.png %})<br><br>
 3. **AQ et publication**<br>Vérifiez que la nouvelle version du SDK fonctionne à l'aide de l' [outil de débogage](https://support.google.com/tagmanager/answer/6107056?hl=en) de Google Tag Manager avant de publier une mise à jour de votre conteneur d'étiquettes.
 
 ### Résolution des problèmes{#troubleshooting}
@@ -208,7 +208,7 @@ Pour obtenir la dernière version du SDK Web de Braze, effectuez les trois étap
 
 Chaque modèle de balise de Braze dispose d’une case à cocher facultative **Débogage de balises GTM** qui peut être utilisée pour enregistrer les messages de débogage sur la console JavaScript de votre page Web.
 
-![L'outil de gestion de Google Tag Manager]({% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %})
+![Outil de débogage de Google Tag Manager]({% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %})
 
 #### Entrer dans le mode débogage
 
@@ -216,7 +216,7 @@ Un autre moyen de déboguer l'intégration de Google Tag Manager est d'utiliser 
 
 Cela permet d'identifier les valeurs envoyées par la couche de données de votre page web à chaque étiquette Braze déclenchée et d'expliquer quelles étiquettes ont été déclenchées ou non.
 
-![La page de résumé de l'étiquette d'initialisation de Braze fournit un aperçu de l'étiquette, y compris des informations sur les tags qui ont été déclenchés.]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
+![La page de résumé de la balise d’initialisation Braze fournit un aperçu de la balise, y compris des informations sur les balises déclenchées.]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
 
 #### Activer la jounalisation verbeuse
 
@@ -224,6 +224,6 @@ Pour permettre à l’assistance technique de Braze de soutenir les journaux d�
 
 Dans votre intégration Google Tag Manager, accédez à votre balise d’initialisation Braze et sélectionnez **Activer la journalisation du SDK Web**.
 
-![La page de résumé de l'étiquette d'initialisation de Braze avec l'option Activer la journalisation du SDK Web activée.]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %})
+![La page de résumé de la balise d’initialisation Braze avec l’option Activer la journalisation du SDK Web allumée]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %}).
 
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md

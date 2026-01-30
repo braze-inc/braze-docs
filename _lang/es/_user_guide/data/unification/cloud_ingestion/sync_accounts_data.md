@@ -12,7 +12,7 @@ description: "Aprende a sincronizar los datos de tu cuenta Braze utilizando CDI.
 > Aprende a sincronizar los datos de tu cuenta Braze utilizando CDI.
 
 {% alert important %}
-[Los objetos de cuenta](https://braze.com/unlisted_docs/account_opportunity_object/) están actualmente en fase beta, lo que es necesario para utilizar esta característica. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la beta.
+[Los objetos de cuenta](https://braze.com/unlisted_docs/account_opportunity_object/) están en fase beta y son necesarios para utilizar esta característica. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en la beta.
 {% endalert %}
 
 ## Requisitos previos
@@ -30,8 +30,9 @@ Sólo realiza actualizaciones en el esquema de tu cuenta cuando la sincronizaci�
 - Si `DELETED` es `true`, la cuenta se elimina.
 - La sincronización no registra puntos de datos, pero todos los datos sincronizados cuentan para el uso total de tus cuentas, medido por el total de datos almacenados: no hay necesidad de limitarse sólo a los datos modificados.
 - Los campos que no estén en el esquema de tus cuentas se descartan; actualiza el esquema antes de sincronizar nuevos campos.
+- Puedes actualizar, reanudar o pausar una sincronización pasando el ratón por encima del nombre de la sincronización y seleccionando la acción correspondiente.
 
-## Sincronizar los datos de tu cuenta
+## Sincroniza los datos de tu cuenta
 
 Puedes sincronizar los datos de tu cuenta utilizando CDI a través de un almacén de datos o un almacenamiento de archivos.
 
@@ -58,7 +59,7 @@ Para integrar tu origen de datos con tu almacén de datos:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -100,7 +101,7 @@ Para integrar tu origen de datos con tu almacén de datos:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -216,7 +217,7 @@ Para integrar tu origen de datos con tu almacén de datos:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).

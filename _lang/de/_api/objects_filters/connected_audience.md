@@ -1,5 +1,5 @@
 ---
-nav_title: "Verbundene Zielgruppe Filter &amp; Objekt"
+nav_title: "Verbundenes Publikum Filter &amp; Objekt"
 article_title: API Verbundenes Zielgruppen-Objekt
 page_order: 3
 page_type: reference
@@ -9,7 +9,7 @@ description: "Dieser Artikel erklärt die verschiedenen Komponenten des Objekts 
 
 # Verbundenes Objekt der Zielgruppe
 
-> Ein verbundenes Zielgruppen-Objekt ist ein SELEKTOR, der die Zielgruppe identifiziert, an die die Nachricht gesendet werden soll. 
+> Ein verbundenes Zielgruppenobjekt identifiziert die Zielgruppe Ihrer Nachricht. Wenn Sie beispielsweise angepasste Attribute verwenden, um jede Kategorie und jede Fernsehsendung, die ein Nutzer:innen favorisiert hat, zu tracken, können Sie mit Hilfe von Connected Audiences automatisch eine Push-Benachrichtigung oder eine E-Mail an alle Personen senden, die eine Sendung favorisiert haben, sobald eine neue Folge veröffentlicht wird - ohne dass Sie für jede Sendung ein Segment einrichten müssen.
 
 Dieses Objekt besteht entweder aus einem einzelnen verbundenen Zielgruppen-Filter oder aus mehreren verbundenen Zielgruppen-Filtern in einem logischen Ausdruck unter Verwendung der Operatoren `AND` oder `OR`.
 
@@ -34,7 +34,7 @@ Dieses Objekt besteht entweder aus einem einzelnen verbundenen Zielgruppen-Filte
 
 ## Verbundene Zielgruppen-Filter
 
-Die Kombination mehrerer angepasster Attribut-Filter ergibt einen Zielgruppen-Filter, der in Kombination mit den Operatoren `AND` und `OR` einen Filter für eine verbundene Zielgruppe erzeugt.
+Durch die Kombination mehrerer angepasster Attribut-Filter mit den Operatoren `AND` und `OR` entsteht ein zusammenhängender Zielgruppen-Filter.
 
 ### Angepasste Attribute Filter
 
@@ -61,7 +61,7 @@ Der Datentyp des angepassten Attributs bestimmt die Vergleiche, die für einen b
 | Array | `includes_value`, `does_not_include_value`, `exists`, `does_not_exist` |
 | Numerisch | `equals`, `not_equal`, `greater_than`, `greater_than_or_equal_to`, `less_than`, `less_than_or_equal_to`, `exists`, `does_not_exist` |
 | Boolesch | `equals`, `does_not_equal`, `exists`, `does_not_exist` |
-| Uhrzeit | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
+| Uhrzeit | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Vorbehalte beim Vergleich von Attributen
@@ -142,7 +142,7 @@ Mit diesem Filter können Sie auf der Grundlage des Status des E-Mail-Abos eines
 
 ### Zuletzt verwendeter App Filter
 
-Dieser Filter lässt eine Segmentierung zu, die darauf basiert, wann der Nutzer:innen die App das letzte Mal benutzt hat. Diese Filter enthalten zwei Felder:
+Dieser Filter lässt eine Segmentierung zu, die darauf basiert, wann der Nutzer:innen die App zuletzt benutzt hat. Diese Filter enthalten zwei Felder:
 
 #### Filter Gehäuse
 ```json
@@ -160,4 +160,4 @@ Dieser Filter lässt eine Segmentierung zu, die darauf basiert, wann der Nutzer:
 
 ### Überlegungen
 
-Verbundene Zielgruppen können Benutzer nicht nach Standardattributen, angepassten Events, Segmenten oder Customer-Engagement-Events filtern. Um diese Filter zu verwenden, empfehlen wir, sie in ein Zielgruppen-Segment einzubinden und dieses Segment dann in der Option [`segment_id`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters).
+Verbundene Zielgruppen können Benutzer nicht nach Standardattributen, angepassten Events, Segmenten oder Customer-Engagement-Events filtern. Um diese Filter zu verwenden, empfehlen wir, sie in ein Zielgruppen-Segment einzubinden und dieses Segment dann im Parameter `segment_id` für den [Endpunkt`/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#request-parameters) anzugeben. Wenn Sie andere Endpunkte verwenden, müssen Sie das Segment zunächst im Braze-Dashboard zur API-getriggerten Kampagne oder zum Canvas hinzufügen.

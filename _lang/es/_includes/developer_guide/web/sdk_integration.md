@@ -4,21 +4,25 @@ El SDK de Web Braze te permite recopilar análisis y mostrar mensajes enriquecid
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-## Integración del SDK Web
+## Integrar el SDK Web
 
 Puedes integrar el SDK Braze Web utilizando los siguientes métodos. Para más opciones, consulta [otros métodos de integración](#web_other-integration-methods).
 
-- **Integración basada en códigos:** Integra el SDK de Web Braze directamente en tu código base utilizando tu administrador de paquetes preferido o la CDN de Braze. Esto te dará un control total sobre cómo se carga y configura el SDK.
+- **Integración basada en códigos:** Integra el SDK de Web Braze directamente en tu código base utilizando tu administrador de paquetes preferido o la CDN de Braze. Esto te da un control total sobre cómo se carga y configura el SDK.
 - **Google Tag Manager:** Una solución sin código que te permite integrar el SDK de Web Braze sin modificar el código de tu sitio. Para más información, consulta [Google Tag Manager con el SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/google_tag_manager/).
 
+{% alert important %}
+Recomendamos utilizar el [método de integración NPM]({{site.baseurl}}/developer_guide/sdk_integration/?subtab=package%20manager&sdktab=web). Las ventajas incluyen el almacenamiento local de las bibliotecas SDK en tu sitio web, la inmunidad frente a las extensiones de bloqueo de anuncios y la contribución a tiempos de carga más rápidos como parte de la compatibilidad con el bundler.
+{% endalert %}
+
 {% tabs local %}
-{% tab integración basada en código %}
+{% tab code-based integration %}
 ### Paso 1: Instala la biblioteca Braze
 
 Puedes instalar la biblioteca Braze utilizando uno de los siguientes métodos. Sin embargo, si tu sitio web utiliza `Content-Security-Policy`, revisa la [Política de Seguridad de Contenidos]({{site.baseurl}}/developer_guide/platforms/web/content_security_policy/) antes de continuar.
 
 {% alert important %}
-Aunque la mayoría de los bloqueadores de anuncios no bloquearán el SDK de la Web de Braze, se sabe que algunos bloqueadores de anuncios más restrictivos causan problemas.
+Aunque la mayoría de los bloqueadores de anuncios no bloquean el SDK de la Web de Braze, se sabe que algunos bloqueadores de anuncios más restrictivos causan problemas.
 {% endalert %}
 
 {% subtabs %}
@@ -46,6 +50,11 @@ const braze = require("@braze/web-sdk");
 Añade el SDK Braze Web directamente a tu HTML haciendo referencia a nuestro script alojado en CDN, que carga la biblioteca de forma asíncrona.
 
 <script src="{{site.baseurl}}/assets/js/embed.js?target=https%3A%2F%2Fgithub.com%2Fbraze-inc%2Fbraze-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
+
+{% alert important %}
+La configuración predeterminada de **Evitar el seguimiento de sitios cruzados** en Safari puede impedir que se muestren tipos de mensajes dentro de la aplicación, como pancartas y tarjetas de contenido, cuando utilizas el método de integración CDN. Para evitar este problema, utiliza el método de integración NPM para que Safari no clasifique estos mensajes como tráfico entre sitios y tus usuarios Web puedan verlos en todos los navegadores compatibles.
+{% endalert %}
+
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -61,7 +70,8 @@ braze.initialize('YOUR-API-KEY-HERE', {
     allowUserSuppliedJavascript: false, // set to `true` to support custom HTML messages
 });
 
-// optionally show all in-app messages without custom handling
+// Enable automatic display of in-app messages
+// Required if you want in-app messages to display automatically when triggered
 braze.automaticallyShowInAppMessages();
 
 // if you use Content Cards
@@ -78,6 +88,10 @@ if (isLoggedIn){
 // `openSession` should be called last - after `changeUser` and `automaticallyShowInAppMessages`
 braze.openSession();
 ```
+
+{% alert important %}
+**Visualización de mensajes dentro de la aplicación**: Para mostrar mensajes dentro de la aplicación automáticamente cuando se desencadenan, debes llamar a `braze.automaticallyShowInAppMessages()`. Sin esta llamada, los mensajes dentro de la aplicación no se muestran automáticamente. Si quieres gestionar manualmente la visualización de mensajes, elimina esta llamada y utiliza en su lugar `braze.subscribeToInAppMessage()`. Para más información, consulta [Entrega de mensajes dentro de la aplicación]({{site.baseurl}}/developer_guide/in_app_messages/delivery/).
+{% endalert %}
 
 {% alert important %}
 Los usuarios anónimos en dispositivos móviles o Web pueden contabilizarse en tu [MAU]({{site.baseurl}}/user_guide/data_and_analytics/reporting/understanding_your_app_usage_data/#monthly-active-users). Como resultado, puede que quieras cargar o inicializar condicionalmente el SDK para excluir a estos usuarios de tu recuento de MAU.
@@ -98,8 +112,8 @@ Para habilitar rápidamente el registro, puedes añadir `?brazeLogging=true` com
 #### Registro básico
 
 {% tabs local %}
-{% tab antes de la inicialización %}
-Utiliza `enableLogging` para registrar mensajes básicos de depuración en la consola de JavaScript antes de que se inicialice el SDK.
+{% tab before initialization %}
+Utiliza `enableLogging` para registrar mensajes básicos de depuración en la consola JavaScript antes de que se inicialice el SDK.
 
 ```javascript
 enableLogging: true
@@ -116,7 +130,7 @@ braze.openSession();
 ```
 {% endtab %}
 
-{% tab después de la inicialización %}
+{% tab after initialization %}
 Utiliza `braze.toggleLogging()` para registrar mensajes básicos de depuración en la consola de JavaScript después de inicializar el SDK. Tu método debe ser similar al siguiente
 
 ```javascript
@@ -136,7 +150,7 @@ Los registros básicos son visibles para todos los usuarios, así que considera 
 
 #### Registro personalizado
 
-Utiliza `setLogger` para registrar mensajes de depuración personalizados en la consola JavaScript. A diferencia de los registros básicos, estos registros no son visibles para los usuarios.
+Utiliza `setLogger` para registrar mensajes de depuración personalizados en la consola de JavaScript. A diferencia de los registros básicos, estos registros no son visibles para los usuarios.
 
 ```javascript
 setLogger(loggerFunction: (message: STRING) => void): void
@@ -156,21 +170,21 @@ braze.openSession();
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
-Cuando hagas referencia al SDK de Braze Web desde nuestra red de entrega de contenidos, por ejemplo, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (como recomiendan nuestras instrucciones de integración predeterminadas), tus usuarios recibirán actualizaciones menores (correcciones de errores y características compatibles con versiones anteriores, versiones `a.a.a` a `a.a.z` en los ejemplos anteriores) automáticamente cuando actualicen tu sitio.
+Cuando haces referencia al SDK Braze Web desde nuestra red de entrega de contenidos, por ejemplo, `https://js.appboycdn.com/web-sdk/a.a/braze.min.js` (como recomiendan nuestras instrucciones de integración predeterminadas), tus usuarios reciben actualizaciones menores (correcciones de errores y características compatibles con versiones anteriores, versiones `a.a.a` a `a.a.z` en los ejemplos anteriores) automáticamente cuando actualizan tu sitio.
 
-Sin embargo, cuando publicamos cambios importantes, te pedimos que actualices el SDK Braze Web manualmente para asegurarte de que nada en tu integración se verá afectado por los cambios de última hora. Además, si descargas nuestro SDK y lo alojas tú mismo, no recibirás ninguna actualización de versión automáticamente y deberás actualizarlo manualmente para recibir las últimas características y correcciones de errores.
+Sin embargo, cuando publicamos cambios importantes, te pedimos que actualices el SDK Braze Web manualmente para asegurarte de que los cambios de última hora no afecten a tu integración. Además, si descargas nuestro SDK y lo alojas tú mismo, no recibirás ninguna actualización de versión automáticamente y deberás actualizarlo manualmente para recibir las últimas características y correcciones de errores.
 
 Puedes mantenerte al día de nuestra última versión [siguiendo nuestra fuente de versiones](https://github.com/braze-inc/braze-web-sdk/tags.atom) con el lector RSS o el servicio que prefieras, y consultar [nuestro registro de cambios](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) para conocer el historial completo de versiones de nuestro SDK para la Web. Para actualizar el SDK Web de Braze:
 
 - Actualiza la versión de la biblioteca Braze cambiando el número de versión de `https://js.appboycdn.com/web-sdk/[OLD VERSION NUMBER]/braze.min.js`, o en las dependencias de tu administrador de paquetes.
 - Si tienes integrado el push web, actualiza el archivo del prestador de servicios en tu sitio: por defecto, se encuentra en `/service-worker.js`, en el directorio raíz de tu sitio, pero la ubicación puede estar personalizada en algunas integraciones. Debes acceder al directorio raíz para alojar un archivo de prestador de servicios.
 
-Estos dos archivos deben actualizarse coordinadamente para que funcionen correctamente.
+Debes actualizar estos dos archivos de forma coordinada para que funcionen correctamente.
 
 ## Otros métodos de integración
 
 ### Páginas móviles aceleradas (AMP)
-{% details Ver más %}
+{% details See more %}
 #### Paso 1: Incluir script de notificación push web AMP
 
 Añade la siguiente etiqueta de script asíncrono a tu cabecera:
@@ -197,7 +211,7 @@ Añade un widget al cuerpo de tu HTML que permita a los usuarios suscribirse y c
 
 #### Paso 3: Añade `helper-iframe` y `permission-dialog`
 
-El componente AMP Web Push crea una ventana emergente para gestionar las suscripciones push, por lo que tendrás que añadir los siguientes archivos de ayuda a tu proyecto para habilitar esta característica:
+El componente AMP Web Push crea una ventana emergente para gestionar las suscripciones push, por lo que debes añadir los siguientes archivos de ayuda a tu proyecto para habilitar esta característica:
 
 - [`helper-iframe.html`](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html)
 - [`permission-dialog.html`](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html)
@@ -238,6 +252,7 @@ Si utilizas RequireJS u otros cargadores de módulos AMD, te recomendamos que au
 ```javascript
 require(['path/to/braze.min.js'], function(braze) {
   braze.initialize('YOUR-API-KEY-HERE', { baseUrl: 'YOUR-SDK-ENDPOINT' });
+  // Required if you want in-app messages to display automatically
   braze.automaticallyShowInAppMessages();
   braze.openSession();
 });
@@ -261,7 +276,7 @@ Al utilizar Jest, es posible que aparezca un error similar a `SyntaxError: Unexp
 
 ### Marcos SSR {#ssr}
 
-Si utilizas un marco de renderizado del lado del servidor (SSR) como Next.js, puedes encontrar errores porque el SDK está pensado para ejecutarse en un entorno de navegador. Puedes resolver estos problemas importando dinámicamente el SDK.
+Si utilizas un marco de renderizado del lado del servidor (SSR) como Next.js, puedes encontrarte con errores porque el SDK está pensado para ejecutarse en un entorno de navegador. Puedes resolver estos problemas importando dinámicamente el SDK.
 
 Puedes conservar las ventajas de la arborescencia al hacerlo exportando las partes del SDK que necesites en un archivo aparte y luego importando dinámicamente ese archivo en tu componente.
 
@@ -305,7 +320,7 @@ useEffect(() => {
 
 Tealium iQ ofrece una integración básica de Braze llave en mano. Para configurar la integración, busca Braze en la interfaz de gestión de etiquetas de Tealium y proporciona la clave de API de SDK Web desde tu panel.
 
-Para obtener más información o ayuda detallada sobre la configuración de Tealium, consulta nuestra [documentación sobre integración]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) o ponte en contacto con tu director de cuentas de Tealium.
+Para obtener más detalles o ayuda en profundidad sobre la configuración de Tealium, consulta nuestra [documentación sobre integración]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) o ponte en contacto con tu director de cuentas de Tealium.
 
 ### Vite {#vite}
 

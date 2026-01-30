@@ -12,10 +12,10 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Braze-ID für 
 {% api %}
 # Suchen Sie ein bestehendes Dashboard-Benutzerkonto nach der ID einer Ressource
 {% apimethod get %}
-/scim/v2/Users/{id}
+/scim/v2/Benutzer:innen/{id}
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard Nutzer:in-Konto zu suchen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) Methode zurückgegeben wird. 
+> Verwenden Sie diesen Endpunkt, um ein bestehendes Dashboard Nutzer:in-Konto zu suchen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) Methode zurückgegeben wird.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#3df40764-8f74-4532-aed3-ab8a6cb92122 {% endapiref %}
 
@@ -23,7 +23,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Braze-ID für 
 
 Um diesen Endpunkt zu verwenden, benötigen Sie ein SCIM-Token. Sie verwenden die Herkunft Ihres Dienstes in der Kopfzeile `X-Request-Origin`. Weitere Informationen finden Sie unter [Automatisierte Bereitstellung von Nutzer:innen]({{site.baseurl}}/scim/automated_user_provisioning/).
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='look up dashboard user' %}
 
@@ -79,7 +79,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                                 "permissions": ["basic_access","publish_cards"]
                             }
                         ]
-                    } 
+                    }
                 ]
             }
         ],
@@ -91,11 +91,11 @@ curl --location --request GET 'https://rest.iad-01.braze.com/scim/v2/Users/dfa24
                 "team": [
                     {
                          "teamId": "241adcd25789fabcded",
-                         "teamName": "Test Team",                  
+                         "teamName": "Test Team",
                          "teamPermissions": ["admin"]
                     }
                 ]
-            } 
+            }
         ]
     }
 }

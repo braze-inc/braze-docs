@@ -1,6 +1,6 @@
 ---
 nav_title: Fuente
-article_title: Personalizar la fuente de las tarjetas de contenido
+article_title: Personaliza la fuente de las tarjetas de contenido
 page_order: 3
 description: "Este artículo trata de las opciones de personalización de la fuente de la tarjeta de contenido."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Personalizar la fuente de las tarjetas de contenido
+# Personaliza la fuente de las tarjetas de contenido
 
 > Una fuente de tarjetas de contenido es la secuencia de tarjetas de contenido en tus aplicaciones móviles o Web. Este artículo cubre la configuración de cuándo se actualiza la fuente, el orden de las tarjetas, la gestión de múltiples fuentes y los mensajes de error de "fuente vacía". Para ver la lista completa de tipos de tarjetas de contenido, consulta [Acerca de las tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/). 
 
@@ -36,6 +36,21 @@ Para mostrar dinámicamente tarjetas de contenido actualizadas sin actualizarlas
 Para actualizar manualmente la fuente a una hora determinada:
 
 {% tabs %}
+{% tab web %}
+
+Solicita una actualización manual de las tarjetas de contenido de Braze desde el SDK Web en cualquier momento llamando a [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
+
+También puedes llamar a [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) para obtener todas las tarjetas actualmente disponibles desde la última actualización de las Tarjetas de Contenido. 
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+function refresh() {
+  braze.requestContentCardsRefresh();    
+}
+```
+
+{% endtab %}
 {% tab android %}
 
 Solicita una actualización manual de las tarjetas de contenido de Braze desde el SDK de Android en cualquier momento llamando a [`requestContentCardsRefresh`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html). 
@@ -91,21 +106,6 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-Solicita una actualización manual de las tarjetas de contenido de Braze desde el SDK Web en cualquier momento llamando a [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
-
-También puedes llamar a [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) para obtener todas las tarjetas actualmente disponibles desde la última actualización de las Tarjetas de Contenido. 
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-function refresh() {
-  braze.requestContentCardsRefresh();    
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Límite de velocidad
@@ -117,7 +117,7 @@ Braze utiliza un algoritmo de contenedor de tokens para aplicar los siguientes l
 - `subscribeToContentCards()` seguirá devolviendo tarjetas almacenadas en caché aunque la tasa esté limitada
 
 {% alert important %}
-El límite global de la red SDK es de 30 peticiones cada 30 segundos. Tenlo en cuenta cuando realices pruebas automatizadas o controles de calidad manuales.
+El SDK de Braze también aplica límites de velocidad para el rendimiento y la fiabilidad. Tenlo en cuenta cuando realices pruebas automatizadas o controles de calidad manuales. Para más información, consulta [los límites de velocidad del SDK de Braze]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/).
 {% endalert %}
 
 ## Personalizar el pedido de tarjeta mostrado
@@ -125,14 +125,25 @@ El límite global de la red SDK es de 30 peticiones cada 30 segundos. Tenlo en c
 Puedes cambiar el orden en que se muestran tus tarjetas de contenido. Esto te permite ajustar la experiencia del usuario dando prioridad a determinados tipos de contenido, como las promociones sensibles al tiempo.
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Personaliza el orden de visualización de las tarjetas de contenido en tu fuente utilizando el parámetro [`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards) de `showContentCards():`. Por ejemplo:
+
+```javascript
+braze.showContentCards(null, (cards) => {
+  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
+});
+```
+
+{% endtab %}
+{% tab android %}
 {% subtabs %}
 {% subtab android view controller %}
 El sitio [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) se basa en un [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) para gestionar cualquier ordenación o modificación de las tarjetas de contenido antes de que se muestren en la fuente. Se puede configurar un controlador de actualizaciones personalizado a través de [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) en tu `ContentCardsFragment`.
 
 El siguiente es el predeterminado `IContentCardsUpdateHandler` y puede utilizarse como punto de partida para su personalización:
 
-{% details Mostrar ejemplo Java %}
+{% details Show Java example %}
 ```java
 public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
 
@@ -200,7 +211,7 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
 ```
 {% enddetails %}
 
-{% details Mostrar ejemplo Kotlin %}
+{% details Show Kotlin example %}
 ```kotlin
 class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
@@ -327,17 +338,6 @@ La personalización a través de `BrazeContentCardUI.ViewController.Attributes` 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-Personaliza el orden de visualización de las tarjetas de contenido en tu fuente utilizando el parámetro [`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards) de `showContentCards():`. Por ejemplo:
-
-```javascript
-braze.showContentCards(null, (cards) => {
-  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
-});
-```
-
-{% endtab %}
 {% endtabs %}
 
 ## Mensaje personalizado de "fuente vacía".
@@ -347,7 +347,12 @@ Cuando un usuario no tiene derecho a ninguna tarjeta de contenido, el SDK muestr
 ![Un mensaje de error de fuente vacía que dice "Este es un mensaje personalizado de estado vacío".]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+El SDK Web no permite sustituir el lenguaje "fuente vacía" mediante programación. Puedes optar por sustituirlo cada vez que se muestre la fuente, pero no es recomendable porque la fuente puede tardar en actualizarse y el texto vacío de la fuente no se mostrará inmediatamente. 
+
+{% endtab %}
+{% tab android %}
 {% subtabs %}
 {% subtab android view system %}
 
@@ -423,11 +428,6 @@ Si quieres actualizar este mensaje en diferentes idiomas de localización, busca
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-El SDK Web no permite sustituir el lenguaje "fuente vacía" mediante programación. Puedes optar por sustituirlo cada vez que se muestre la fuente, pero no es recomendable porque la fuente puede tardar en actualizarse y el texto vacío de la fuente no se mostrará inmediatamente. 
-
-{% endtab %}
 {% endtabs %}
 
 ## Implementación de múltiples fuentes
@@ -445,7 +445,35 @@ En este ejemplo, estableceremos un par clave-valor con la clave `feed_type` que 
 Una vez asignados los pares clave-valor, crea una fuente con una lógica que muestre las tarjetas que deseas mostrar y filtre las tarjetas de otros tipos. En este ejemplo, sólo mostraremos las tarjetas cuyo par clave-valor coincida con `feed_type: "Transactional"`.
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+El siguiente ejemplo mostrará la fuente Tarjetas de contenido para las tarjetas de tipo `Transactional`:
+
+```javascript
+
+/**
+ * @param {String} feed_type - value of the "feed_type" KVP to filter
+ */
+function showCardsByFeedType(feed_type) {
+  braze.showContentCards(null, function(cards) {
+    return cards.filter((card) => card.extras["feed_type"] === feed_type);
+  });
+}
+```
+
+A continuación, puedes alternar tu fuente personalizada:
+
+```javascript
+// show the "Transactional" feed when this button is clicked
+document.getElementById("show-transactional-feed").onclick = function() {
+  showCardsByFeedType("Transactional"); 
+};
+```
+
+Para más información, consulta la [documentación del método SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
+
+{% endtab %}
+{% tab android %}
 {% subtabs %}
 {% subtab android view system %}
 
@@ -455,7 +483,7 @@ Por predeterminado, la fuente de la tarjeta de contenido se muestra en un format
 
 Puedes filtrar las tarjetas de contenido implementando una función personalizada [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) utilizando los pares clave-valor establecidos por [`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) en el panel, y modificándolo después para eliminar de la lista las tarjetas que no coincidan con el valor de `feed_type` que estableciste anteriormente.
 
-{% details Mostrar ejemplo Java %}
+{% details Show Java example %}
 ```java
 private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desiredFeedType) {
   return new IContentCardsUpdateHandler() {
@@ -496,7 +524,7 @@ private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desi
 ```
 {% enddetails %}
 
-{% details Mostrar ejemplo Kotlin %}
+{% details Show Kotlin example %}
 ```kotlin
 private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsUpdateHandler {
   return IContentCardsUpdateHandler { event ->
@@ -538,7 +566,7 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
 
 Después de crear un [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)crea un [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) que lo utilice. Esta fuente personalizada puede utilizarse como cualquier otra `ContentCardsFragment`. En las distintas partes de tu aplicación, muestra distintas fuentes de tarjetas de contenido en función de la clave proporcionada en el panel. Cada fuente `ContentCardsFragment` tendrá un conjunto único de tarjetas mostradas gracias a la configuración personalizada `IContentCardsUpdateHandler` de cada fragmento.
 
-{% details Mostrar ejemplo Java %}
+{% details Show Java example %}
 ```java
 // We want a Content Cards feed that only shows "Transactional" cards.
 ContentCardsFragment customContentCardsFragment = new ContentCardsFragment();
@@ -546,7 +574,7 @@ customContentCardsFragment.setContentCardUpdateHandler(getUpdateHandlerForFeedTy
 ```
 {% enddetails %}
 
-{% details Mostrar ejemplo Kotlin %}
+{% details Show Kotlin example %}
 ```kotlin
 // We want a Content Cards feed that only shows "Transactional" cards.
 val customContentCardsFragment = ContentCardsFragment()
@@ -609,33 +637,5 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-El siguiente ejemplo mostrará la fuente Tarjetas de contenido para las tarjetas de tipo `Transactional`:
-
-```javascript
-
-/**
- * @param {String} feed_type - value of the "feed_type" KVP to filter
- */
-function showCardsByFeedType(feed_type) {
-  braze.showContentCards(null, function(cards) {
-    return cards.filter((card) => card.extras["feed_type"] === feed_type);
-  });
-}
-```
-
-A continuación, puedes alternar tu fuente personalizada:
-
-```javascript
-// show the "Transactional" feed when this button is clicked
-document.getElementById("show-transactional-feed").onclick = function() {
-  showCardsByFeedType("Transactional"); 
-};
-```
-
-Para más información, consulta la [documentación del método SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
-
 {% endtab %}
 {% endtabs %}

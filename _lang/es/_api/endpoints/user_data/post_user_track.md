@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Seguimiento de usuarios"
-article_title: "POST: Seguimiento de usuarios"
+nav_title: "PUBLICAR: Crear y actualizar usuarios"
+article_title: "PUBLICAR: Crear y actualizar usuarios"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -9,7 +9,7 @@ description: "En este artículo se describen los detalles del punto final Realiz
 
 ---
 {% api %}
-# Rastrear usuarios
+# Crear y actualizar usuarios
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
 /users/track
 {% endapimethod %}
@@ -17,7 +17,7 @@ description: "En este artículo se describen los detalles del punto final Realiz
 > Utiliza este punto final para registrar eventos personalizados y compras, y actualizar los atributos del perfil de usuario.
 
 {% alert note %}
-Braze procesa los datos pasados a través de la API en su valor nominal, y los clientes sólo deben pasar deltas (datos cambiantes) para minimizar el consumo innecesario de puntos de datos. Para saber más, consulta [Puntos de datos]({{site.baseurl}}/user_guide/data/data_points/).
+Braze procesa los datos pasados a través de la API en su valor nominal, y los clientes sólo deben pasar deltas (datos cambiantes) para minimizar el registro innecesario de puntos de datos. Para saber más, consulta [Puntos de datos]({{site.baseurl}}/user_guide/data/data_points/).
 {% endalert %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Parámetros de la solicitud
 
 {% alert important %}
-Para cada componente de la solicitud que aparece en la tabla siguiente, se requiere uno de los siguientes: `external_id`, `user_alias`, `braze_id`, `email`, o `phone`.
+Para cada componente de la petición que aparece en la tabla siguiente, debes incluir uno de los siguientes: `external_id`, `user_alias`, `braze_id`, `email` o `phone`.
 {% endalert %}
 
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
@@ -64,7 +64,7 @@ Para cada componente de la solicitud que aparece en la tabla siguiente, se requi
 
 ### Actualizar un perfil de usuario por correo electrónico
 
-Puedes actualizar el perfil de un usuario por correo electrónico utilizando el punto final `/users/track`. 
+Puedes actualizar el perfil de un usuario por correo electrónico utilizando el punto final `/users/track`.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -140,7 +140,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 Puedes actualizar un perfil de usuario por número de teléfono utilizando el punto final `/users/track`. Este punto final sólo funciona si incluyes un número de teléfono válido.
 
 {% alert important %}
-Si incluyes una solicitud tanto en `email` como en `phone`, Braze utilizará el correo electrónico como identificador.
+Si incluyes una solicitud tanto en `email` como en `phone`, Braze utiliza el correo electrónico como identificador.
 {% endalert %}
 
 ```
@@ -164,9 +164,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 ```
 ### Configurar grupos de suscripción
 
-Este ejemplo muestra cómo crear un usuario y establecer su grupo de suscripción dentro del objeto de atributos de usuario. 
+Este ejemplo muestra cómo crear un usuario y establecer su grupo de suscripción dentro del objeto de atributos de usuario.
 
-La actualización del estado de suscripción con este punto final actualizará al usuario especificado por su `external_id` (como Usuario1) y actualizará el estado de suscripción de cualquier usuario con el mismo correo electrónico que ese usuario (Usuario1).
+La actualización del estado de suscripción con este punto final actualiza al usuario especificado por su `external_id` (como Usuario1) y actualiza el estado de suscripción de cualquier usuario con el mismo correo electrónico que ese usuario (Usuario1).
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -198,7 +198,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ### Ejemplo de solicitud para crear un usuario sólo con alias
 
-Puedes utilizar el punto final `/users/track` para crear un nuevo usuario de sólo alias estableciendo la clave `_update_existing_only` con un valor de `false` en el cuerpo de la solicitud. Si se omite este valor, no se creará el perfil de usuario de sólo alias. Utilizar un usuario de sólo alias garantiza que existirá un perfil con ese alias. Esto es especialmente útil cuando se crea una nueva integración, ya que evita la creación de perfiles de usuario duplicados.
+Puedes utilizar el punto final `/users/track` para crear un usuario de sólo alias estableciendo la clave `_update_existing_only` con un valor de `false` en el cuerpo de la solicitud. Si omites este valor, Braze no crea el perfil de usuario de sólo alias. Utilizar un usuario de sólo alias garantiza que exista un perfil con ese alias. Esto es especialmente útil al crear una integración, ya que evita que Braze cree perfiles de usuario duplicados.
 
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
@@ -226,14 +226,14 @@ Al utilizar cualquiera de las solicitudes de API mencionadas, deberías recibir 
 
 ### Mensaje correcto
 
-Los mensajes correctos recibirán la siguiente respuesta:
+Los mensajes exitosos reciben la siguiente respuesta:
 
 ```json
 {
   "message": "success",
-  "attributes_processed": (optional, integer), if attributes are included in the request, this will return an integer of the number of external_ids with attributes that were queued to be processed,
-  "events_processed": (optional, integer), if events are included in the request, this will return an integer of the number of events that were queued to be processed,
-  "purchases_processed": (optional, integer), if purchases are included in the request, this will return an integer of the number of purchases that were queued to be processed,
+  "attributes_processed": (optional, integer), if attributes are included in the request, this returns an integer of the number of external_ids with attributes that Braze queued for processing,
+  "events_processed": (optional, integer), if events are included in the request, this returns an integer of the number of events that Braze queued for processing,
+  "purchases_processed": (optional, integer), if purchases are included in the request, this returns an integer of the number of purchases that Braze queued for processing,
 }
 ```
 
@@ -252,7 +252,7 @@ Si tu mensaje tiene éxito pero tiene errores no fatales, como un objeto de even
 }
 ```
 
-En el caso de mensajes con éxito, se seguirán procesando los datos no afectados por un error en la matriz `errors`. 
+Para los mensajes de éxito, Braze sigue procesando todos los datos no afectados por un error en la matriz `errors`.
 
 ### Mensaje con errores fatales
 
@@ -271,24 +271,24 @@ Si tu mensaje tiene un error fatal, recibirás la siguiente respuesta:
 
 ### Códigos de respuesta de error fatal
 
-Para conocer los códigos de estado y los mensajes de error asociados que se devolverán si tu solicitud encuentra un error fatal, consulta [Errores fatales y respuestas.]({{site.baseurl}}/api/errors/#fatal-errors)
+Para conocer los códigos de estado y los mensajes de error asociados que devuelve Braze si tu solicitud encuentra un error fatal, consulta [Errores fatales & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
-Si recibes el error "provided external_id is blacklisted and disallowed", es posible que tu solicitud haya incluido un "usuario ficticio". Para más información, consulta [Bloqueo de correo no deseado]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+Si recibes el error "provided external_id is blacklisted and disallowed", es posible que tu solicitud haya incluido un "usuario ficticio". Para más información, consulta [Bloqueo de correo no deseado]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking).
 
 ## Preguntas más frecuentes
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### ¿Qué ocurre cuando se encuentran varios perfiles con la misma dirección de correo electrónico?
-Si existe `external_id`, el perfil actualizado más recientemente con un ID externo tendrá prioridad para las actualizaciones. Si no existe `external_id`, se dará prioridad al perfil actualizado más recientemente.
+Si existe `external_id`, Braze da prioridad al perfil actualizado más recientemente con un ID externo para las actualizaciones. Si el `external_id` no existe, Braze da prioridad al perfil actualizado más recientemente para las actualizaciones.
 
-### ¿Qué ocurre si no existe actualmente ningún perfil con la dirección de correo electrónico?
-Se creará un nuevo perfil y un usuario sólo por correo electrónico. No se creará un alias. El campo de correo electrónico se configurará en test@braze.com, como se indica en el ejemplo de solicitud de actualización de un perfil de usuario por correo electrónico.
+### ¿Qué ocurre si no existe ningún perfil con la dirección de correo electrónico?
+Braze crea un perfil y un usuario sólo por correo electrónico y establece el campo de correo electrónico en test@braze.com, como se indica en el ejemplo de solicitud de actualización de un perfil de usuario por dirección de correo electrónico. Braze no crea un alias.
 
 ### ¿Cómo se utiliza `/users/track` para importar datos de usuario heredados?
-Puedes enviar datos a través de la API de Braze de un usuario que aún no haya utilizado tu aplicación móvil para generar un perfil de usuario. Si el usuario utiliza posteriormente la aplicación, toda la información posterior a su identificación mediante el SDK se fusionará con el perfil de usuario existente que creaste mediante la llamada a la API. Cualquier comportamiento de usuario registrado anónimamente por el SDK antes de la identificación se perderá al fusionarse con el perfil de usuario existente generado por la API.
+Puedes enviar datos a través de la API de Braze de un usuario que aún no haya utilizado tu aplicación móvil para generar un perfil de usuario. Si el usuario utiliza posteriormente la aplicación, toda la información posterior a su identificación mediante el SDK se fusiona con el perfil de usuario existente que creaste mediante la llamada a la API. Cualquier comportamiento de usuario registrado anónimamente por el SDK antes de la identificación se pierde al fusionarse con el perfil de usuario existente generado por la API.
 
-La herramienta de segmentación incluirá a estos usuarios independientemente de si han interactuado o no con la aplicación. Si quieres excluir a los usuarios subidos mediante la API de usuario que aún no han interactuado con la aplicación, añade el filtro `Session Count > 0`.
+La herramienta de segmentación incluye a estos usuarios independientemente de si han interactuado o no con la aplicación. Si quieres excluir a los usuarios subidos mediante la API de usuario que aún no han interactuado con la aplicación, añade el filtro `Session Count > 0`.
 
 ### ¿Cómo gestiona `/users/track` los eventos duplicados?
 
@@ -296,16 +296,30 @@ Cada objeto evento de la matriz de eventos representa una única ocurrencia de u
 
 ### ¿Cómo gestiona `/users/track` los atributos personalizados anidados no válidos?
 
-Cuando un atributo personalizado anidado contiene algún valor no válido (como formatos de hora no válidos o valores nulos), todas las actualizaciones de atributos personalizados anidados de la solicitud se eliminarán del procesamiento. Esto se aplica a todas las estructuras anidadas dentro de ese atributo específico. Para garantizar el éxito del proceso, comprueba que todos los valores de los atributos personalizados anidados son válidos antes de enviarlos.
+Cuando un atributo personalizado anidado contiene algún valor no válido (como formatos de hora no válidos o valores nulos), Braze elimina del procesamiento todas las actualizaciones de atributos personalizados anidados de la solicitud. Esto se aplica a todas las estructuras anidadas dentro de ese atributo específico. Para garantizar el éxito del proceso, comprueba que todos los valores de los atributos personalizados anidados son válidos antes de enviarlos.
 
-## Usuarios activos al mes CY 24-25
-Para los clientes que hayan comprado Usuarios activos al mes - CY 24-25, Braze gestiona diferentes límites de velocidad en su punto final `/users/track`:
+## Usuarios activos mensuales CY 24-25, MAU universal, MAU Web y MAU móvil
+
+Para los clientes con nuevas tarifas, los límites de velocidad se aplican a nivel de empresa. Los clientes pueden establecer límites de velocidad en el espacio de trabajo para los límites horarios, pero los límites de ráfaga se siguen compartiendo entre todos los espacios de trabajo.
+
+Para los clientes que hayan comprado Usuarios Activos Mensuales CY 24-25, MAU Universal, MAU Web o MAU Móvil, Braze gestiona diferentes límites de velocidad en su punto final `/users/track`:
 - Los límites de velocidad por hora se establecen en función de la actividad prevista de ingesta de datos en tu cuenta, que puede corresponder al número de usuarios activos al mes que hayas comprado, al sector, a la estacionalidad o a otros factores.
 - Además del límite horario, Braze aplica un límite de ráfagas al número de solicitudes que pueden enviarse cada tres segundos.
-- Cada solicitud puede contener hasta 50 actualizaciones combinadas de objetos de atributo, evento o compra.
+- Cada solicitud puede contener hasta 75 actualizaciones combinadas de objetos de atributo, evento o compra.
 
 Los límites actuales basados en la ingesta prevista se pueden encontrar en el panel en **Configuración** > **API e identificadores** > **Panel de uso de API**. Podemos modificar los límites de velocidad para proteger la estabilidad del sistema o permitir un mayor caudal de datos en tu cuenta. Ponte en contacto con el soporte de Braze o con tu administrador del éxito del cliente si tienes preguntas o dudas sobre el límite de solicitudes por hora o por segundo y las necesidades de tu empresa.
 
+### Cabeceras de límite de velocidad para usuarios activos mensuales CY 24-25, MAU universales, MAU Web y MAU móviles
 
+Todas las respuestas sin límite de tasa (como las que no son`429`) contienen las siguientes cabeceras de respuesta HTTP que indican al cliente el estado de la ventana de límite de velocidad por hora. Utiliza estos encabezados para administrar tu tasa de solicitud:
+
+| Nombre de la cabecera             | Descripción                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `X-RateLimit-Limit`     | El número de solicitudes permitidas por periodo de tiempo                                              |
+| `X-RateLimit-Remaining` | El número aproximado de solicitudes que quedan dentro de una ventana                                |
+| `X-RateLimit-Reset`     | El número de segundos restantes antes de que se reinicie la ventana actual                                    |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+Ten en cuenta que las cabeceras `RateLimit-Limit`, `RateLimit-Remaining` y `RateLimit-Reset` no se devuelven cuando se produce un error HTTP `429`. Cuando se produce el error, esas cabeceras se sustituyen por una cabecera `X-Ratelimit-Retry-After` que devuelve un número entero que indica el número de segundos que faltan para que puedas empezar a hacer peticiones.
 
 {% endapi %}

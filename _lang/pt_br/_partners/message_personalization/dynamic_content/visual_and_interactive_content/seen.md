@@ -1,127 +1,167 @@
 ---
-nav_title: VISTO
-article_title: VISTO
-description: "Este artigo de referência descreve a parceria entre o Braze e a SEEN, uma plataforma de criação de vídeos personalizados para aumentar o engajamento ao longo da jornada do cliente."
+nav_title: Visto
+article_title: Visto
+description: "Visto permite experiências de vídeo personalizadas em grande escala, ajudando marcas a aumentar o engajamento ao longo da jornada do cliente."
 alias: /partners/seen/
 page_type: partner
 search_tag: Partner
 ---
 
-# VISTO
+# Visto
 
-> A [SEEN](https://seen.io/) é uma plataforma de personalização de vídeo que permite que as empresas criem e desenvolvam vídeos com base em seus clientes para proporcionar uma experiência mais envolvente. Com o SEEN, você pode criar um vídeo com base em seus dados, personalizá-lo em escala na nuvem e distribuí-lo onde for melhor.
+> [Visto](https://seen.io) permite que marcas criem e entreguem experiências de vídeo personalizadas em grande escala. Com o Visto, você pode projetar um vídeo em torno dos seus dados, personalizá-lo em grande escala na nuvem e, em seguida, distribuí-lo onde funciona melhor.
+>
+> A integração entre Braze e Visto permite que você envie dados de usuários do Braze para o Visto, gere vídeos personalizados dinamicamente e retorne ativos de vídeo—como uma URL de player única e miniatura—de volta ao Braze para uso em campanhas e Canvas.
+
 
 ## Casos de uso
 
-O SEEN oferece personalização automatizada de vídeo em toda a jornada do cliente. Os usos comuns incluem integração, fidelidade, inscrever-se e conversão, recuperar e combater o churn.
+O Visto suporta entrega automatizada de vídeo personalizado ao longo do ciclo de vida do cliente, incluindo:
+
+- **Integração**: Dê as boas-vindas a novos usuários com vídeos personalizados para seu perfil ou contexto de inscrição
+- **Conversão e ativação**: Reforce ações-chave com mensagens de vídeo contextuais
+- **Fidelidade e upsell**: Destaque ofertas personalizadas ou marcos de uso
+- **Recuperar e prevenção de churn**: Reengaje usuários inativos com conteúdo de vídeo personalizado
+
 
 ## Pré-requisitos
 
-Antes de começar, você precisará do seguinte:
+Antes de começar, você precisa do seguinte:
 
-| Pré-requisito          | Descrição                                                                                                                                |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| Uma campanha SEEN   | É necessária uma campanha SEEN para aproveitar essa parceria.                                                                     |
-| Fonte de dados   | Você precisará enviar dados ao SEEN para personalizar seus vídeos. Certifique-se de que todos os dados relevantes estejam disponíveis no Braze e que você passe os dados com **braze_id** como identificador. |
-| URL do webhook de transformação de dados do Braze   | A transformação de dados do Braze será usada para reformatar os dados de entrada do SEEN para que possam ser aceitos pelo endpoint /users/track do Braze. |
+| Pré-requisito | Descrição |
+|--------------|-------------|
+| Acesso à Plataforma Visto | Você precisa de uma assinatura da Plataforma Visto ou de uma campanha ativa do Visto. Você precisa de acesso às configurações do seu Espaço de Trabalho para recuperar seu ID de Espaço de Trabalho e gerar um token de API. |
+| URL do webhook de transformação de dados do Braze | A Transformação de Dados do Braze reformata os dados recebidos do Visto para que possam ser aceitos pelo endpoint /users/track do Braze. |
+| Dados de usuários do Braze | A personalização de vídeo requer dados em nível de usuário. Certifique-se de que os atributos relevantes estejam disponíveis no Braze e que você passe **braze_id** como o identificador único. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+
+
+
+## Como funcionam as Jornadas Vistas
+
+O Seen usa [Jornadas](https://docs.seen.io/journey) para controlar como os dados recebidos são processados e como as saídas de vídeo são geradas.
+
+Uma Jornada é um fluxo de trabalho configurável que:
+- Recebe dados de sistemas externos (como o Braze)
+- Aplica lógica e regras de personalização
+- Gera um vídeo e ativos associados
+- Retorna uma carga útil de resposta configurável
+
+As Jornadas são compostas por **nós**, cada um com uma função específica:
+
+- **Node de Disparo**: Define como e quando uma Jornada começa (para integrações com o Braze, use um `On Create` disparador)
+- **Node Condicional**: Roteia usuários através de diferentes caminhos lógicos com base nos valores dos dados
+- **Node de Projeto**: Aplica personalização dinâmica de vídeo usando os dados recebidos
+- **Node de Player**: Gera uma URL de player de vídeo única
+- **Node de Webhook**: Define a carga útil de resposta enviada de volta ao Braze
+
+Como as respostas da Jornada são configuráveis, certifique-se de que os campos de saída retornados pelo Seen correspondam aos atributos esperados pela sua Transformação de Dados do Braze.
+
 
 ## Limite de taxa
+A API Seen aceita até 100 chamadas a cada 10 segundos.
 
-Atualmente, a API do SEEN aceita 1.000 chamadas por hora.
 
-## Integração do SEEN com o Braze
+## Integração
 
-No exemplo a seguir, enviaremos os dados de usuários ao SEEN para geração de vídeo e receberemos um link de landing page exclusivo e uma miniatura personalizada e exclusiva de volta ao Braze para distribuição. Este exemplo usa um webhook POST para enviar dados ao SEEN e uma transformação de dados para receber os dados de volta ao Braze. Se você tiver várias campanhas de vídeo com o SEEN, repita o processo para conectar o Braze a todas as campanhas de vídeo.
+Neste exemplo, a Braze envia dados de usuários para a Seen para gerar um vídeo personalizado. A Seen então retorna uma URL única do player de vídeo e uma URL de miniatura, que são armazenadas como atributos personalizados na Braze para uso no envio de mensagens.
 
-{% alert tip %}
-Se tiver algum problema, entre em contato com o gerente de sucesso do cliente da SEEN para obter assistência.
-{% endalert %}
+Se você tiver várias campanhas de vídeo com a Seen, repita o processo para conectar a Braze com todas as campanhas de vídeo.
 
-### Etapa 1: Criar uma campanha de webhook
+### Etapa 1: Crie uma campanha de webhook para enviar dados para a Seen
 
-Crie uma nova [campanha de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) no Braze. Dê um nome à sua campanha e consulte a tabela a seguir para criar seu webhook:
+Crie uma nova [Campanha de Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) na Braze.
+
+Configure o webhook da seguinte forma:
+
+- **URL do webhook**:  
+  `https://next.seen.io/v1/workspaces/{WORKSPACE_ID}/data`  
+  Encontre seu ID de Espaço de Trabalho nas configurações da Plataforma Seen.
+
+- **Método HTTP**: POST
+- **Corpo da solicitação**: Texto bruto  
+  Use o seguinte exemplo como ponto de partida. Consulte a [documentação de criação de dados da Seen](https://docs.seen.io/create-data) para mais informações.
 
 {% raw %}
-<table>
-  <thead>
-    <tr>
-      <th><strong>Campo</strong></th>
-      <th><strong>Informações</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>URL do webhook</strong></td>
-      <td>Use o seguinte URL de webhook. Você receberá seu <code>campaign_slug</code> do SEEN para chamar o endpoint correto.<br><br><code>https://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</code></td>
-    </tr>
-    <tr>
-      <td><strong>Método HTTP</strong></td>
-      <td>Use o <code>POST</code> método.</td>
-    </tr>
-    <tr>
-      <td><strong>Corpo da solicitação</strong></td>
-      <td>Digite o corpo da solicitação em um texto bruto semelhante ao seguinte.<br><br><pre><code>[
-    {
-    "first_name":"{{${first_name}}}",
-    "last_name":"{{${last_name}}}",
-    "email":"{{${email_address}}}",
-    "customer_id":"{{${braze_id}}}"
-    }
-]</code></pre><br>Para saber mais, consulte <a href="https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/overview/tvy2F5tS3JRM7DfcHwz5fK#request-content">API do SEEN</a>.</td>
-    </tr>
-    <tr>
-      <td><strong>Cabeçalhos da solicitação</strong></td>
-      <td>Use as informações a seguir para preencher os cabeçalhos de sua solicitação:<br>- <strong>Autorização:</strong> <code>Token {token}</code><br>- <strong>Content-Type:</strong> <code>application/json</code><br><br>Você receberá seu token de autenticação do SEEN.</td>
-    </tr>
-  </tbody>
-</table>
+```json
+{
+  "first_name": "{{${first_name}}}",
+  "last_name": "{{${last_name}}}",
+  "email": "{{${email_address}}}",
+  "id": "{{${braze_id}}}"
+}
+```
 {% endraw %}
+- **Cabeçalhos de solicitação**:
+  - `Authorization`: Portador `{Seen_API_TOKEN}`
+  - `Content-Type`: `application/json`
+
+  > Gere um [token de API](https://docs.seen.io/authorization) na Plataforma Seen nas configurações do Espaço de Trabalho. Você pode entrar em contato com seu gerente de sucesso do cliente da Seen para obter assistência.
+
+- Para testar o webhook com um usuário, mude para a guia **Teste**.
+- Após confirmar que o teste funciona como pretendido, complete a configuração do webhook.
+
+
+### Etapa 2: Configure uma Jornada na Plataforma Seen
+
+A Seen usa [Jornadas](https://docs.seen.io/journey) para definir como os dados recebidos são processados, personalizados e retornados à Braze.  
+Cada Jornada é um fluxo de trabalho configurável composto por nós que permitem controlar tanto a lógica de geração de vídeo quanto a carga útil da resposta.
+
+Para configurar sua Jornada:
+
+1. Crie uma nova Jornada na Plataforma Seen
+2. Adicione um **nó de Trigger** e selecione o `On Create` trigger  
+   Isso garante que a Jornada comece quando a Braze enviar dados para o Seen. Crie e adicione qualquer lógica de [segmentação](https://docs.seen.io/segments) dentro do seu espaço de trabalho, se necessário.
+3. Construa sua lógica usando os seguintes nós conforme necessário:
+   - **Node Condicional**: Roteie usuários com base nos valores de atributo (por exemplo, tipo de plano ou região)
+   - **Node de Projeto**: Aplique personalização dinâmica de vídeo usando os dados recebidos
+   - **Node de Player**: Gere uma URL única do player de vídeo
+4. Adicione um **nó de Webhook** para definir a resposta enviada de volta para a Braze
+
+#### Requisitos de resposta do nó Webhook
+
+Como a carga útil da resposta é configurável, certifique-se de que os seguintes campos sejam retornados para suportar a Transformação de Dados da Braze descrita na próxima etapa:
+
+| Campo | Descrição |
+|------|-------------|
+| `id` | Deve corresponder ao `braze_id` enviado pela Braze |
+| `player_url` | URL única para o player de vídeo personalizado |
+| `email_thumbnail_url` | URL da miniatura do vídeo gerado |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Agora é possível testar o webhook com um usuário, alternando para a guia **Teste**.
+Se o seu caso de uso exigir atributos adicionais, inclua-os na resposta e mapeie-os na Braze.
 
-Se tudo estiver funcionando como planejado, acesse o Braze e defina a taxa de envio da campanha como 10 **mensagens por minuto**. Dessa forma, você não excederá o limite de frequência do SEEN de 1.000 chamadas por hora.
 
-### Etapa 2: Criar transformação de dados
+### Etapa 3: Crie uma Transformação de Dados para receber dados do Seen
 
-1. Crie novos campos de [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) para `landing_page_url` e `email_thumbnail_url`. Essas são as duas atribuições que usaremos neste exemplo.
-2. Abra [Transformação de dados]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) em **Configurações de dados** e selecione **Criar transformação**.
-3. Dê um nome à sua transformação e, em seguida, selecione **Iniciar do zero** e defina **Destino** como **POST: Rastreamento de usuários**.
-4. Selecione **Compartilhar a URL do webhook com o SEEN**.
-5. Você pode usar o código abaixo como ponto de partida para a transformação:
+Use as Transformações de Dados da Braze para ingerir a resposta da Jornada Seen e armazenar ativos de vídeo no perfil do usuário.
+
+1. Crie os seguintes [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) na Braze:
+   - `player_url`
+   - `email_thumbnail_url`
+2. Navegue até **Configurações de Dados** → **Transformação de Dados** e clique em **Criar transformação**
+3. Configure a transformação:
+   - **Começar do zero**
+   - **Destino** → POST: rastreia usuários
+4. Compartilhe a URL do webhook gerado com o Seen, ou adicione-a diretamente ao **nó do Webhook** da Jornada
+5. Use o seguinte código de transformação:
 
 ```javascript
 let brazecall = {
   "attributes": [
     {
-      "braze_id": payload.customer_id,
+      "braze_id": payload.id,
       "_update_existing_only": true,
-      "landing_page_url": payload.landing_page_url,
+      "player_url": payload.player_url,
       "email_thumbnail_url": payload.email_thumbnail_url
     }
   ]
 };
 return brazecall;
 ```
-{% alert note %}
-Se você quiser incluir outros dados, certifique-se de incluí-los também. Lembre-se de discutir também com o SEEN para que a carga útil do retorno de chamada inclua todos os campos necessários.
-{% endalert %}
 
 {: start="6"}
-6\. Envie uma carga útil de teste para o endpoint fornecido. Se quiser usar a carga útil de retorno de chamada definida na [documentação do SEEN](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp), você mesmo poderá enviá-la com o [Postman](https://www.postman.com/) ou outro serviço semelhante:
-
-```json
-{
-        "customer_id": "101",
-        "campaign_slug": "onboarding",
-        "landing_page_url": "your.subdomain.com/v/12345",
-        "video_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/output.m3u8",
-        "thumbnail_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/thumbnail.jpg",
-        "email_thumbnail_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/email_thumbnail.jpg"
-       
-}
-```
-
-{: start="7"}
-7\. Selecione **Validate (Validar)** para garantir que tudo funcione como planejado.
+6\. Envie uma carga útil de teste para o endpoint fornecido. Envie dados para a Plataforma Seen para executar sua Jornada, ou envie a carga útil diretamente para a Braze com [Postman](https://www.postman.com/) ou outro serviço similar.
+7\. Selecione **Validar** para garantir que tudo funcione como pretendido.
 8\. Selecione **Save** and **Activate** (Salvar e ativar).

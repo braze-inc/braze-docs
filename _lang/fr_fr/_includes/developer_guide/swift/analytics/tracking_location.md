@@ -1,6 +1,6 @@
 ## Enregistrement de l'emplacement/localisation actuel
 
-### Étape 1 : Configurez votre projet
+### Étape 1 : Configurez votre projet
 
 {% alert important %}
 Lors de l'utilisation des fonctionnalités d'emplacement/localisation de Braze, il incombe à votre application de demander l'autorisation d'utiliser les services de localisation. Ne manquez pas de consulter le site [Apple Developer : Demande d'autorisation pour les services d'emplacement/localisation de l'utilisateur](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services).

@@ -1,6 +1,6 @@
 ---
 page_order: 2
-nav_title: Anpassung
+nav_title: Customization
 article_title: iOS Content-Card-Anpassung
 layout: dev_guide
 

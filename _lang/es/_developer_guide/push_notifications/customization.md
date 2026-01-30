@@ -1,12 +1,12 @@
 ---
 page_order: 0.1
-nav_title: Mensajes personalizados
-article_title: Personalización de las notificaciones push para el SDK de Braze
+nav_title: Personalizar mensajes
+article_title: Personaliza las notificaciones push para el SDK de Braze
 channel:
   - push notifications
 ---
 
-# Personalizar las notificaciones push
+# Personaliza las notificaciones push
 
 > Aprende a personalizar las notificaciones push para el SDK de Braze.
 

@@ -21,19 +21,35 @@ Pour en savoir plus, consultez [Braze Perspectives](https://www.braze.com/perspe
 
 ## Certification ISO 27001
 
-![Certification ISO du graphisme]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
+![Graphique de certification ISO]({% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_Braze dispose d'une certification de conformité à la [norme ISO 27001](https://www.iso.org/isoiec-27001-information-security.html) en date du 18 décembre 2018 et renouvelée au 20 août 2024. Expire le 15 décembre 2027._
+_Braze dispose d'une certification de conformité à la [norme ISO 27001](https://www.iso.org/standard/27001) en date du 18 décembre 2018 et renouvelée au 29 août 2025. Expire le 15 décembre 2027._
 
-Toute tierce partie souhaitant vérifier de manière indépendante l'état de la certification de Braze peut consulter l' [annuaire des certificats de Schellman](https://www.schellman.com/certificate-directory?certificateNumber=1504855-8) ou [voir notre certificat ici.]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf)
+Toute tierce partie souhaitant vérifier de manière indépendante l'état de la certification de Braze peut consulter l' [annuaire des certificats de Schellman](https://www.schellman.com/certificate-directory?certificateNumber=1504855-9) ou [voir notre certificat ici.]({{site.baseurl}}/assets/pdf/Braze_ISO_Cert.pdf)
 
 ## Examen SOC 2
 
-![SOC 2 examen graphique]({% image_buster /assets/img/SOC2.png %}){: height="25%" width="25%" style="border:0px;"}
+![Graphique de l'examen SOC 2]({% image_buster /assets/img/SOC2.png %}){: height="25%" width="25%" style="border:0px;"}
 
-_Date/Période de la dernière révision : Du 1er juillet 2023 au 30 juin 2024_
+_Date/Période de la dernière révision : Du 1er juillet 2024 au 30 juin 2025_
 
-Braze a passé avec succès l'examen SOC 2 de type 2 pour la _sécurité_ et la _disponibilité_, réalisé par le cabinet d'experts-comptables indépendant [Schellman & Company, LLC.](https://www.schellman.com/)
+Braze a passé avec succès l'examen SOC 2 de type 2 pour la _sécurité_ et la _disponibilité_, réalisé par le cabinet indépendant d'experts-comptables [Schellman & Company, LLC.](https://www.schellman.com/)
+
+## Évaluation de TISAX
+
+![Graphique TISAX.]({% image_buster /assets/img/tisax.png %}){: height="25%" width="25%" style="border:0px;"}
+
+Braze s'engage à maintenir les normes les plus élevées en matière de sécurité de l'information et de protection des données et a passé avec succès une évaluation TISAX de niveau 3 (AL3). Ces résultats d'évaluation et la délivrance des labels correspondants reflètent notre engagement à maintenir le plus haut niveau d'assurance en matière de sécurité de l'information et de protection des données. Les participants actuels à TISAX peuvent vérifier nos résultats d'évaluation pour les objectifs d'évaluation et emplacements suivants via le portail de l'Association ENX en utilisant les informations d'identification suivantes :
+
+- **Nom de l’entreprise :** Braze
+- **Scope ID :** SNCM4K
+- **ID d'évaluation :** AMH9TZ-1
+- **Objectifs de l'évaluation :** \* Protection des données conformément à l'art. du RGPD de l'UE. 28 ("Processeur")
+    - Protection des données avec des catégories spéciales de données personnelles
+    - Haute disponibilité
+    - Très haute disponibilité
+    - Confidentiel
+    - Strictement confidentiel
 
 ## HIPAA
 

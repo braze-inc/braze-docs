@@ -19,7 +19,7 @@ Sie können optional einen POST-Body bereitstellen, indem Sie `:body` angeben, g
 Connected-Content zwischenspeichert standardmäßig auch keine POST-Aufrufe. Sie können dieses Verhalten aktualisieren, indem Sie `:cache_max_age` zum Connected-Content-POST-Aufruf hinzufügen.
 
 {% tabs %}
-{% tab Standard Content-Typ %}
+{% tab Default content-type %}
 
 {% raw %}
 ```js
@@ -28,7 +28,7 @@ Connected-Content zwischenspeichert standardmäßig auch keine POST-Aufrufe. Sie
 {% endraw %}
 
 {% endtab %}
-{% tab Anwendung/JSON Content-Typ %}
+{% tab Application/JSON Content-Type %}
 
 {% raw %}
 ```js

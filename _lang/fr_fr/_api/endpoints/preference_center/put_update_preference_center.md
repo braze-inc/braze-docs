@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Paramètres de demande
@@ -72,7 +72,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`preference_center_title`| Facultatif | Chaîne de caractères | Le titre des pages du centre de préférences et de confirmation. Si aucun titre n’est précisé, le titre des pages passera par défaut à « Centre de préférences ». |
 |`confirmation_page_html`| Requis | Chaîne de caractères | L’HTML de la page de confirmation. |
 |`state` | Facultatif | Chaîne de caractères | Choisir `active` ou `draft`.|
-|`options` | Facultatif | Objet | Attributs : <br>`meta-viewport-content` : Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`.<br><br> `link-tags` : Définissez un favicon pour la page. Lorsque cette option est activée, une étiquette `<link>` avec un attribut rel est ajoutée à la page.  |
+|`options` | Facultatif | Objet | Attributs : <br>`meta-viewport-content` : Le cas échéant, une étiquette méta `viewport` sera ajoutée à la page avec `content= <value of attribute>`.<br><br> `link-tags` : Définissez un favicon pour la page. Lorsque cette option est activée, une étiquette `<link>` avec un attribut rel est ajoutée à la page.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande

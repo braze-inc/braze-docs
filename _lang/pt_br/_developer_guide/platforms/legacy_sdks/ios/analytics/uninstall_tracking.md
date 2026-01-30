@@ -1,5 +1,5 @@
 ---
-nav_title: Uninstall Tracking
+nav_title: Desinstalar o rastreamento
 article_title: Desinstalar o rastreamento para iOS
 platform: iOS
 page_order: 7

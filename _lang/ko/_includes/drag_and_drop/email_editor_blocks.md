@@ -22,8 +22,8 @@
 |공백| 다른 블록 사이에 공간, 즉 '패딩'을 추가합니다. |
 |이미지| [미디어 라이브러리에서]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) 이미지를 삽입합니다. | 
 |Video| 동영상 콘텐츠에 대한 링크를 생성합니다. |
-|소셜| 소셜 미디어 플랫폼 아이콘을 삽입합니다. 브랜드별 아이콘에 대한 사용자 지정 이미지를 업로드할 수 있습니다. |
-|아이콘| 아이콘을 삽입합니다. 사용자 지정 이미지를 업로드할 수 있습니다. 이미지가 업로드될 때까지 대형 플레이스홀더 아이콘이 사용됩니다. |
+|소셜| 소셜 미디어 플랫폼 아이콘을 삽입합니다. 브랜드별 아이콘에 대한 커스텀 이미지를 업로드할 수 있습니다. |
+|아이콘| 아이콘을 삽입합니다. 커스텀 이미지를 업로드할 수 있습니다. Braze는 이미지를 업로드할 때까지 대형 입력 안내 아이콘을 사용합니다. |
 |HTML| 원시 HTML을 삽입합니다. 연결된 콘텐츠 또는 조건문과 같은 [Liquid에]({{site.baseurl}}/liquid/) 권장됩니다. | 
 |메뉴| 디자인 중인 메시지에 맞는 유연한 메뉴를 만듭니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
@@ -120,7 +120,7 @@
 |맞춤| Orients the image to either the left, center or right of the block. |
 |Liquid가 있는 이미지| [Liquid]({{site.baseurl}}/liquid/) 로직을 사용하여 동일한 콘텐츠 블록 내에서 서로 다른 이미지를 동적으로 설정할 수 있습니다. |
 |URL| Set an image using the address to where it's hosted. |
-|대체 텍스트| A short description of the image that gives users the same information that's shown in the image. This is essential for screen-reader accessability or when the image fails to load. |
+|대체 텍스트| A short description of the image that gives users the same information that's shown in the image. 이는 화면 리더 접근성을 위해 또는 이미지가 로드되지 않을 때 필수적입니다. |
 |모서리가 둥근 이미지| Render the image with rounded corners. By default, images are rendered with squared corners. |
 |Action| Triggers an action when the user clicks the image.|
 |차단 옵션| Sets padding around the image block. |

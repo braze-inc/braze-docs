@@ -51,7 +51,7 @@ table td {
 
 ![정확한 위치]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
-#### 개요
+#### Overview
 
 위치 권한을 요청할 때 사용자는 _정확한 위치_(이전 동작)를 제공하거나 새로운 _대략적인 위치_를 제공할 수 있습니다. 대략적인 위치는 정확한 좌표 대신 사용자가 위치한 더 큰 반경을 반환합니다.
 

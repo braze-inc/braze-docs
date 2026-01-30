@@ -4,13 +4,13 @@
 
 Les téléphones récents fabriqués par [Huawei](https://huaweimobileservices.com/) sont équipés des services mobiles Huawei (HMS), un service utilisé pour envoyer des notifications push au lieu de recourir à Firebase Cloud Messaging (FCM) de Google.
 
-### Étape 1 : Enregistrer un compte de développeur Huawei
+### Étape 1 : Enregistrer un compte de développeur Huawei
 
 Avant de commencer, vous devrez vous enregistrer et configurer un [compte de développeur Huawei](https://developer.huawei.com/consumer/en/console). Dans votre compte Huawei, allez dans **Mes projets > Paramètres du projet > Informations sur l'application**, et notez les adresses `App ID` et `App secret`.
 
 ![]({% image_buster /assets/img/huawei/huawei-credentials.png %})
 
-### Étape 2 : Créer une nouvelle application Huawei dans le tableau de bord de Braze
+### Étape 2 : Créer une nouvelle application Huawei dans le tableau de bord de Braze
 
 Dans le tableau de bord de Braze, allez dans **Paramètres de l'application**, répertorié sous la navigation **Paramètres**.
 
@@ -22,7 +22,7 @@ Une fois que votre nouvelle application Braze a été créée, trouvez les param
 
 ![]({% image_buster /assets/img/huawei/huawei-dashboard-credentials.png %})
 
-### Étape 3 : Intégrer le SDK de messagerie Huawei à votre application
+### Étape 3 : Intégrer le SDK de messagerie Huawei à votre application
 
 Huawei a fourni un [codelab d'intégration Android](https://developer.huawei.com/consumer/en/codelab/HMSPushKit/index.html) détaillant l'intégration du Huawei Messaging Service dans votre application. Suivez ces étapes pour commencer.
 
@@ -95,7 +95,7 @@ Dans la page **Campagnes**, créez une nouvelle campagne et choisissez **Notific
 
 Après avoir nommé votre campagne, choisissez **Android Push** comme plateforme de push.
 
-![Le compositeur de création de campagne affiche les plates-formes de poussée disponibles.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
+![Le compositeur de création de campagne affichant les plates-formes de poussée disponibles.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
 
 Ensuite, composez votre campagne de notification push avec un titre et un message.
 
@@ -103,7 +103,7 @@ Ensuite, composez votre campagne de notification push avec un titre et un messag
 
 Dans l'onglet **Test**, entrez votre ID utilisateur, que vous avez défini dans votre application à l'aide de la [méthode`changeUser(USER_ID_STRING)` ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id), et cliquez sur **Envoyer le test** pour envoyer un push de test.
 
-![L'onglet test du compositeur de création de campagne montre que vous pouvez vous envoyer un message test en indiquant votre ID utilisateur et en le saisissant dans le champ "Ajouter des utilisateurs individuels".]({% image_buster /assets/img/huawei/huawei-test-send.png %})
+![L'onglet test du compositeur de création de campagne montre que vous pouvez vous envoyer un message test à vous-même en fournissant votre ID utilisateur et en le saisissant dans le champ "Ajouter des utilisateurs individuels".]({% image_buster /assets/img/huawei/huawei-test-send.png %})
 
 À ce stade, vous devriez recevoir une notification push de test sur votre appareil Huawei (HMS) de la part de Braze.
 

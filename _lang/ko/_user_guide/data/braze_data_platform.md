@@ -14,7 +14,7 @@ description: "이 섹션에는 Braze 데이터 플랫폼과 관련된 문서가 
 
 ## 데이터 통합 
 
-API] 및 [SDK]를 사용하여 모든 소스에서 퍼스트파티 데이터를 수집하고 통합하세요. 또한 [Cloud 데이터]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) 수집과 같은 기본 제공 수집 도구를 활용하여 데이터 웨어하우스 또는 파일 스토리지 솔루션에서 Braze로 직접 간단한 통합을 만들거나, [데이터 변환을]({{site.baseurl}}/user_guide/data/unification/data_transformation) 사용하여 웹훅 통합을 구축하고 관리하여 데이터를 수집하여 Braze로 전송할 수 있습니다.
+[API와]({{site.baseurl}}/api/home) [SDK를]({{site.baseurl}}/developer_guide/sdk_integration) 사용하여 모든 소스에서 퍼스트파티 데이터를 수집하고 통합하세요. [Cloud 데이터]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion) 수집과 같은 기본 제공 수집 도구를 사용해 데이터 웨어하우스 또는 파일 스토리지 솔루션에서 Braze로 직접 통합하거나, [데이터 변환을]({{site.baseurl}}/user_guide/data/unification/data_transformation) 사용해 데이터를 Braze로 전송하기 위한 웹훅 통합을 구축 및 관리할 수도 있습니다.
 
 ## 데이터 활성화
 

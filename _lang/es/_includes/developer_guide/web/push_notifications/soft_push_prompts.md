@@ -10,7 +10,7 @@ Alternativamente, si quieres incluir una gestión personalizada especial, en lug
 Esto puede hacerse sin necesidad de personalizar el SDK utilizando nuestro [nuevo primer push sin código]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 {% endalert %}
 
-## Configuración de los avisos soft push
+## Configuración de los avisos push suaves
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -29,7 +29,7 @@ En tu integración de SDK de Braze, busca y elimina cualquier llamada a `automat
 
 ### Paso 3: Integración de actualizaciones
 
-Por último, sustituye la llamada eliminada por el siguiente fragmento de código:
+Por último, sustituye la llamada eliminada por el siguiente fragmento de código. Llama a `subscribeToInAppMessage()` antes de llamar a `openSession()`. Esto garantiza que tu receptor de mensajes dentro de la aplicación se registra a tiempo para recibir el primer mensaje push.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

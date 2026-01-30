@@ -1,6 +1,6 @@
 ---
-nav_title: Suivre des sessions
-article_title: Suivi des sessions pour Windows Universal
+nav_title: Sessions de suivi
+article_title: Sessions de suivi pour Windows Universal
 platform: Windows Universal
 page_order: 0
 description: "Cet article de référence explique comment suivre des sessions sur la plateforme Windows Universal."
@@ -22,12 +22,6 @@ Notre intégration Windows enregistre l’ouverture de session lorsque l’appli
 
 Pour détecter les sessions à l’aide de votre utilisateur, recherchez-le sur le tableau de bord et naviguez jusqu’à « Utilisation de l’application » dans le profil utilisateur. Vous pouvez confirmer que le suivi de session fonctionne en vérifiant que la métrique « session » augmente lorsque vous vous y attendez.
 
-![Un profil utilisateur montrant l'utilisation d'une application sous forme de 25 sessions, dont la dernière utilisation remonte à deux heures et la première à vingt jours][session_tracking_7]
+![Un profil utilisateur montrant l’utilisation de l’application à 25 sessions, dernière utilisation il y a deux heures et première utilisation il y a vingt jours]({% image_buster /assets/img_archive/test_session.png %})
 
-[session_tracking_1]: {{ site.baseurl }}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overview#customizing-braze-on-startup
-[session_tracking_3]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-appboyxml
-[session_tracking_5]: https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize
-[session_tracking_6]: http://msdn.microsoft.com/en-us/library/windows/apps/hh464925.aspx
-[session_tracking_7]: {% image_buster /assets/img_archive/test_session.png %}
-[session_tracking_8]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
 

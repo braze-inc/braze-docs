@@ -1,11 +1,11 @@
 ---
-nav_title: Bloques de editor
+nav_title: Bloques de edición
 article_title: Bloques de editor de arrastrar y soltar
 alias: "/dnd/editor_blocks/"
 channel: 
 - email
 - in-app messages
-page_order: 1
+page_order: 6
 description: "Este artículo de referencia cubre los diferentes bloques de editor que se proporcionan en el editor de arrastrar y soltar para correo electrónico y mensajes dentro de la aplicación."
 tool: Media
 ---

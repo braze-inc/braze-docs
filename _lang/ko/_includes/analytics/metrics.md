@@ -55,7 +55,7 @@
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>클릭-열람율</i>은 단일 사용자 또는 기계가 최소한 한 번 클릭한 열린 이메일의 비율이며, <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더</a>에서만 사용할 수 있습니다.
+<i>열람율</i>는 단일 사용자 또는 기계가 최소한 한 번 클릭한 열린 이메일의 비율이며, <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더</a>에서만 사용할 수 있습니다.
 {% endif %}
 
 {% if include.metric == "Close Message" %}
@@ -251,7 +251,7 @@
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>고유 클릭</i> 수는 메시지 내의 링크를 한 번 이상 클릭한 수신자의 고유한 수이며 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id로</a> 측정됩니다.
+<i>고유 클릭 수</i>는 메시지 내의 링크를 최소한 한 번 클릭한 수신자의 고유한 수이며, <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>에 의해 측정됩니다.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
@@ -261,7 +261,7 @@
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>고유 노출 횟수</i>는 주어진 캠페인에서 메시지를 본 총 사용자 수입니다. 노출 횟수는 메시지가 사용자의 화면에 보일 때만 기록됩니다.
+<i>고유 노출 횟수</i>는 특정 캠페인에서 메시지를 조회한 총 사용자 수입니다. 노출 횟수는 메시지가 사용자 화면에 보일 때만 기록됩니다.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}

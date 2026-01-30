@@ -1,7 +1,7 @@
 ---
 nav_title: Mehrere Geschäftskonten
 article_title: Mehrere WhatsApp Geschäftskonten und Telefonnummern
-page_order: 2
+page_order: 3
 description: "Dieser Referenzartikel beschreibt die Schritte zum Hinzufügen von WhatsApp Business-Konten und Telefonnummern."
 page_type: reference
 channel:
@@ -26,7 +26,7 @@ Sie können bis zu 10 WhatsApp Business-Konten pro Arbeitsbereich hinzufügen. D
 
 1. Gehen Sie zu **Technologie Partner** > **WhatsApp** und wählen Sie **WhatsApp Business-Konto hinzufügen**. 
 
-![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![Bereich WhatsApp-Messaging-Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Gehen Sie den Anmeldevorgang durch. Eine detaillierte Schritt-für-Schritt-Anleitung finden Sie unter [WhatsApp Embedded Signup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
@@ -51,7 +51,7 @@ Sie können bis zu 20 Abonnementgruppen (und sendende Telefonnummern) pro WhatsA
 
 1. Gehen Sie zu **Technologie Partner** > **WhatsApp** und wählen Sie **Abo-Gruppe und Nummer hinzufügen**.
 
-![WhatsApp Messaging Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder zum Hinzufügen einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![Bereich WhatsApp-Messaging-Integration mit Optionen zum Hinzufügen eines Geschäftskontos oder einer Abo-Gruppe und einer Nummer.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Gehen Sie den Anmeldevorgang durch. <br><br> Im Schritt **Wählen Sie Ihr WhatsApp Business-Konto** wählen Sie Ihr bestehendes WhatsApp Business-Konto aus und fügen eine neue Telefonnummer hinzu. Diese Nummer muss alle Anforderungen an eine WhatsApp-Telefonnummer erfüllen, einschließlich der, dass sie nicht für andere WhatsApp-Konten registriert ist.

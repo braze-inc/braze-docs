@@ -12,7 +12,7 @@ Braze JavaScript 인터페이스를 사용하면 앱 내 커스텀 웹뷰 내에
 앱의 WebView에서 Braze 기능을 사용하려면 WebView에 Braze JavaScript 인터페이스를 추가하면 됩니다. 인터페이스가 추가되면 [사용자 가이드에 동일한 API를 사용할 수 있습니다: HTML 인앱 메시지]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) 는 커스텀 웹뷰 내에서 사용할 수 있습니다.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 String javascriptString = BrazeFileUtils.getAssetFileStringContents(context.getAssets(), "braze-html-bridge.js");
@@ -23,7 +23,7 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge");
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 val javascriptString = context.assets.getAssetFileStringContents("braze-html-bridge.js")
@@ -53,3 +53,19 @@ YouTube 및 기타 HTML5 콘텐츠는 HTML 인앱 메시지에서 재생할 수 
     </div>
 </body>
 ```
+
+## 딥링크 사용하기
+
+Android HTML 인앱 메시지에서 딥링크 또는 외부 링크를 사용할 때는 자바스크립트에서 `brazeBridge.closeMessage()` 을 **호출하지 마** 세요. 소프트웨어 개발 키트의 내부 로직은 인앱 메시지가 링크로 리디렉션되면 자동으로 해당 메시지를 닫습니다. `brazeBridge.closeMessage()` 으로 전화하면 이 프로세스가 방해되어 사용자가 앱으로 돌아왔을 때 메시징이 응답하지 않을 수 있습니다. 
+
+다음은 코드 스니펫의 딥링크 예시입니다:
+
+{% raw %}
+```javascript
+<script>
+document.querySelectorAll('[data-button-id]').forEach(function (node)
+Unknown macro: { node.addEventListener('click', function () { brazeBridge.logClick(node.dataset.buttonId); brazeBridge.closeMessage(); }); }
+);
+</script>
+```
+{% endraw %}

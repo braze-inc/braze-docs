@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Flags nos canvas
+nav_title: Flags de recursos no canva
 page_order: 30
 noindex: true
 tool: Feature Flags

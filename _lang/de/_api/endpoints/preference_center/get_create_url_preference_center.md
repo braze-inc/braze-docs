@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: URL des Präferenzzentrums generieren"
+nav_title: "GET: URL für das Einstellungszentrum generieren"
 article_title: "GET: URL des Präferenzzentrums generieren"
 search_tag: Endpoint
 page_order: 1
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Generate prefe
 {% api %}
 # URL für das Einstellungszentrum generieren
 {% apimethod get %}
-/Präferenz_center/v1/{preferenceCenterExternalID}/url/{userID}
+/preference_center/v1/{preferenceCenterExternalID}/url/{userID}
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine URL für ein Einstellungszentrum zu generieren.

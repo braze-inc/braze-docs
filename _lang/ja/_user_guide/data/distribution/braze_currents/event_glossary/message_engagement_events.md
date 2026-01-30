@@ -3834,7 +3834,7 @@ Abort, Content Cards
 {% endapi %}
 
 {% api %}
-## イベントの中止をメールする {#email-abort-events}
+## イベントを中止するメール {#email-abort-events}
 
 {% apitags %}
 Abort, Email
@@ -5421,7 +5421,7 @@ Abort, Email
 {% endapi %}
 
 {% api %}
-## イベントをメールで送信する {#email-send-events}
+## メール送信イベント {#email-send-events}
 
 {% apitags %}
 メール、送信
@@ -5850,7 +5850,7 @@ Abort, Email
 このイベントは、エンドユーザーがメールの [配信停止] をクリックしたときに発生します。
 
 {% alert important %}
-`Unsubscribe` イベントは、ユーザーがメール内の配信停止リンク（メール本文またはフッター内の通常の配信停止リンク、または[list-unsubscribe ヘッダーを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)使用）をクリックしたときに発生する特殊なクリックイベントであり、ユーザーが配信停止に状態を変更したときには発生しない。サブスクリプションの状態変更が、APIまたはカスタム(非Braze)サブスクリプション解除リンクで送信された場合、Currentsのイベントはトリガーされない。
+`Unsubscribe` イベントは、ユーザーがメール内の配信停止リンク（メール本文またはフッター内の通常の配信停止リンク、または[list-unsubscribe ヘッダーを]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings#include-a-list-unsubscribe-header)使用）をクリックしたときに発生する特殊なクリックイベントであり、ユーザーが配信停止に状態を変更したときには発生しない。サブスクリプションの状態変更がAPI経由で送信された場合、またはカスタム（Braze以外）の配信停止リンクで送信された場合、Currentsのメール配信停止イベントはトリガーされない。
 {% endalert %}
 
 {% tabs %}
@@ -6048,7 +6048,7 @@ Abort, Email
 フィーチャーフラッグ、インプレッション
 {% endapitags %}
 
-このイベントは、ユーザーがあなたの機能とインタラクションする機会があったとき、または機能が無効になっている場合（A/Bテストのコントロールグループの場合）、インタラクションする可能性があったときに発生する。
+このイベントは、ユーザーがあなたの機能とインタラクションする機会があったとき、または機能が無効になっている場合（A/Bテストのコントロールグループの場合）にインタラクションできたときに発生する。
 
 フィーチャーフラグのインプレッションは、1セッションにつき1回のみ記録されます。
 
@@ -9952,7 +9952,7 @@ RCS、インバウンド受信
 RCS、リード
 {% endapitags %}
 
-このイベントは、ユーザーが自分のデバイスでRCSメッセージを開封したときに生成され、メッセージの内容を見た、または読んだことを示す。
+このイベントは、ユーザーが自分のデバイスでRCSメッセージを開封したときに生成され、メッセージコンテンツを見た、または読んだことを示す。
 
 {% tabs %}
 {% tab Cloud Storage %}

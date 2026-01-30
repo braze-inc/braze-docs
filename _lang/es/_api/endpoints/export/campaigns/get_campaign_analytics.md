@@ -14,7 +14,7 @@ description: "En este artículo se describen los detalles del punto final Export
 /campaigns/data_series
 {% endapimethod %}
 
-> Utiliza este punto final para recuperar una serie diaria de diversas estadísticas de una campaña a lo largo del tiempo. 
+> Utiliza este punto final para recuperar una serie diaria de diversas estadísticas de una campaña a lo largo del tiempo.
 
 Los datos devueltos incluyen cuántos mensajes se enviaron, se abrieron, se clicaron o se convirtieron por canal de mensajería.
 
@@ -37,7 +37,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | `ending_at` | Opcional | Fecha y hora <br>(cadena [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Fecha en la que debe finalizar la serie de datos. De forma predeterminada, la hora de la solicitud. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Ejemplo de solicitud 
+## Ejemplo de solicitud
 
 {% raw %}
 ```
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ### Respuesta multicanal
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -126,21 +124,21 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "whats_app": [
                     {
                       "variation_api_id": (string) the variation API identifier,
-                      "sent": (int) the number of sends, 
+                      "sent": (int) the number of sends,
                       "delivered": (int) the number of delivered messages,
                       "failed": (int) the number of failed deliveries,
                       "read": (int) the number of opened messages
                     },
                 ],
                 "content_cards" : [
-                  { 
-                    "variation_api_id": (string) the variation API identifier, 
-                    "sent": (int) the number of sends, 
-                    "total_clicks": (int) the number of total clicks, 
-                    "total_dismissals": (int) the number of total dismissals, 
-                    "total_impressions": (int) the number of total impressions, 
-                    "unique_clicks": (int) the number of unique clicks, 
-                    "unique_dismissals": (int) the number of unique dismissals, 
+                  {
+                    "variation_api_id": (string) the variation API identifier,
+                    "sent": (int) the number of sends,
+                    "total_clicks": (int) the number of total clicks,
+                    "total_dismissals": (int) the number of total dismissals,
+                    "total_impressions": (int) the number of total impressions,
+                    "unique_clicks": (int) the number of unique clicks,
+                    "unique_dismissals": (int) the number of unique dismissals,
                     "unique_impressions": (int) the number of unique impressions
                   }
                 ],
@@ -154,8 +152,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### Respuesta multivariante
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {

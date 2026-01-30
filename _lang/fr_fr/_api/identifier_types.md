@@ -3,7 +3,7 @@ nav_title: "Types d’identifiant API"
 article_title: Types d’identifiant API
 page_order: 2.2
 toc_headers: h2
-description: "Cet article de référence traite des différents types d'identifiants d'API qui existent dans le tableau de bord de Braze, de l'endroit où vous pouvez les trouver et de leur utilité." 
+description: "Cet article de référence traite des différents types d'identifiants d'API qui existent dans le tableau de bord de Braze, de l'endroit où vous pouvez les trouver et de leur utilité."
 page_type: reference
 
 ---
@@ -14,20 +14,20 @@ page_type: reference
 
 Les identifiants suivants peuvent être utilisés pour accéder à votre modèle, Canvas, campagne ou segment à partir de l'API externe de Braze. Tous les messages doivent respecter le codage [UTF-8.](https://en.wikipedia.org/wiki/UTF-8) 
 
-## Identifiant d’application
+## Identifiant de l'application
 
-L'identifiant de l'application ou `app_id` est un paramètre qui associe l'activité à une application spécifique dans votre espace de travail. Il désigne l'application avec laquelle vous interagissez au sein de l'espace de travail. Par exemple, vous pouvez avoir un `app_id` pour votre application iOS, un `app_id` pour votre application Android et un `app_id` pour votre intégration Web. Chez Braze, il se peut que vous disposiez de plusieurs applications pour la même plateforme sur les différents types de plateformes que Braze prend en charge.
+L'identifiant de l'application ou `app_id` est un paramètre qui associe l'activité à une application spécifique dans votre espace de travail. Il désigne l'application avec laquelle vous interagissez au sein de l'espace de travail. Par exemple, vous constatez que vous avez un `app_id` pour votre application iOS, un `app_id` pour votre application Android et un `app_id` pour votre intégration web. Chez Braze, il se peut que vous disposiez de plusieurs applications pour la même plateforme sur les différents types de plateformes que Braze prend en charge.
 
 ### Où puis-je le trouver ?
 
 Il existe deux façons de localiser votre `app_id`:
 
 {% tabs local %}
-{% tab Identificateurs d'applications %}
+{% tab App Identifiers %}
 Allez dans **Paramètres** > **API et identifiants** > **Identifiants d'application**. Votre clé API pour chaque application est indiquée dans la colonne **Identifiant**.
 {% endtab %}
 
-{% tab Paramètres de l'application %}
+{% tab App Settings %}
 Allez dans **Réglages** > **Réglages de l'application**. Votre clé API est indiquée à côté du champ **Clé API** dans la section des paramètres.
 
 {% endtab %}
@@ -55,11 +55,11 @@ Pour chaque variante de version pertinente, créez un nouveau `braze.xml` pour e
 <string name="com_braze_api_key">{YOUR_BUILD_VARIANT_API_KEY}</string>
 </resources>
 ```
-Lorsque la variante de version est compilée, elle utilisera le nouvel identifiant.
+Lorsque la variante est compilée, elle utilise le nouvel identifiant.
 
 ## Identifiant du modèle
 
-Un identifiant de [modèle]({{site.baseurl}}/api/endpoints/templates/) ou ID de modèle est une clé aléatoire générée par Braze pour un modèle donné au sein du tableau de bord. Les ID de modèle sont uniques pour chaque modèle et peuvent être utilisés pour référencer les modèles via l’API. 
+Un identifiant de [modèle]({{site.baseurl}}/api/endpoints/templates/) ou ID de modèle est une clé aléatoire générée par Braze pour un modèle donné au sein du tableau de bord. Les ID de modèle sont uniques pour chaque modèle et peuvent être utilisés pour référencer les modèles via l’API.
 
 Les modèles sont très utiles si votre entreprise sous-traite vos conceptions HTML pour des campagnes. Une fois les modèles créés, vous disposez maintenant d'un modèle qui n'est pas spécifique à une campagne mais qui peut être appliqué à une série de campagnes, comme une lettre d'information.
 
@@ -68,11 +68,11 @@ Les modèles sont très utiles si votre entreprise sous-traite vos conceptions H
 Vous pouvez trouver l'ID de votre modèle de deux façons :
 
 {% tabs local %}
-{% tab Modèles %}
-Cliquez sur **Modèles**, puis sélectionnez une page modèle et choisissez un modèle préexistant. Si le modèle que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page de modèle individuel, vous trouverez votre identifiant de modèle.
+{% tab Templates %}
+Cliquez sur **Modèles**, puis sélectionnez une page modèle et choisissez un modèle préexistant. Si le modèle que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du modèle individuel, vous trouverez l'identifiant de votre modèle.
 {% endtab %}
 
-{% tab Clés API %}
+{% tab API Keys %}
 Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une recherche d'**identifiants d'API supplémentaires** qui vous permet de rechercher des identifiants spécifiques.
 
 {% endtab %}
@@ -85,9 +85,9 @@ Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une rec
 
 ## Identifiant Canvas
 
-Un identifiant de [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) ou ID Canvas est une clé aléatoire générée par Braze pour un Canvas donné au sein du tableau de bord. Les ID de Canvas sont uniques pour chaque Canvas et peuvent être utilisés pour référencer des Canvas via l’API. 
+Un identifiant de [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) ou ID Canvas est une clé aléatoire générée par Braze pour un Canvas donné au sein du tableau de bord. Les ID de Canvas sont uniques pour chaque Canvas et peuvent être utilisés pour référencer des Canvas via l’API.
 
-Gardez à l'esprit que si vous avez un canvas avec des variantes, il existe un ID global pour le canvas ainsi que des ID individuels pour les variantes, imbriqués dans le canvas principal. 
+Gardez à l'esprit que si vous avez un canvas avec des variantes, il existe un ID global pour le canvas ainsi que des ID individuels pour les variantes, imbriqués dans le canvas principal.
 
 ### Où puis-je le trouver ?
 
@@ -103,21 +103,21 @@ Vous pouvez trouver votre ID de Canvas dans le tableau de bord. Allez dans **Mes
 
 ## Identifiant de campagne
 
-Un identifiant de [campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou ID de campagne est une clé aléatoire générée par Braze pour une campagne donnée dans le tableau de bord. Les ID de campagne sont uniques pour chaque campagne et peuvent être utilisés pour référencer des campagnes via l’API. 
+Un identifiant de [campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou ID de campagne est une clé aléatoire générée par Braze pour une campagne donnée dans le tableau de bord. Les ID de campagne sont uniques pour chaque campagne et peuvent être utilisés pour référencer des campagnes via l’API.
 
-Gardez à l'esprit que si vous avez une campagne avec des variantes, il y a à la fois un ID de campagne global et des ID de campagne de variante individuels imbriqués sous la campagne principale. 
+Gardez à l'esprit que si vous avez une campagne avec des variantes, il y a à la fois un ID de campagne global et des ID de campagne de variante individuels imbriqués sous la campagne principale.
 
 ### Où puis-je le trouver ?
 
 Vous pouvez trouver votre ID de campagne de deux façons :
 
 {% tabs local %}
-{% tab Campagnes %}
-Allez dans **Envoi de messages** > **Campagnes** et sélectionnez une campagne préexistante. Si la campagne que vous souhaitez n’existe pas encore, créez-en une et enregistrez-la. Au bas de la page de la campagne individuelle, vous pourrez trouver votre **identifiant API de campagne.**
+{% tab Campaigns %}
+Allez dans **Envoi de messages** > **Campagnes** et sélectionnez une campagne préexistante. Si la campagne que vous souhaitez n’existe pas encore, créez-en une et enregistrez-la. Au bas de la page de la campagne individuelle, vous trouverez l'**identifiant de** votre **API de campagne.**
 
 {% endtab %}
 
-{% tab Clés API %}
+{% tab API Keys %}
 Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une recherche d'**identifiants d'API supplémentaires** qui vous permet de rechercher des identifiants spécifiques.
 
 {% endtab %}
@@ -134,19 +134,19 @@ Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une rec
 
 ## Identifiant de segment
 
-Un identifiant de [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) ou ID de segment est une clé aléatoire générée par Braze pour un segment donné au sein du tableau de bord. Les ID de segment sont uniques pour chaque segment et peuvent être utilisés pour référencer les segments via l’API. 
+Un identifiant de [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) ou ID de segment est une clé aléatoire générée par Braze pour un segment donné au sein du tableau de bord. Les ID de segment sont uniques pour chaque segment et peuvent être utilisés pour référencer les segments via l’API.
 
 ### Où puis-je le trouver ?
 
 Vous pouvez trouver votre ID de segmentation de deux façons :
 
 {% tabs local %}
-{% tab Segmentations %}
-Allez dans **Audience** > **Segments** et sélectionnez un segment préexistant. Si le segment que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du segment individuel, vous trouverez votre identifiant de segment.
+{% tab Segments %}
+Allez dans **Audience** > **Segments** et sélectionnez un segment préexistant. Si le segment que vous voulez n’existe pas encore, créez-en un et enregistrez-le. Au bas de la page du segment individuel, vous trouverez l'identifiant de votre segment.
 
 {% endtab %}
 
-{% tab Clés API %}
+{% tab API Keys %}
 Allez dans **Paramètres** > **API et identifiants**. Ici, Braze propose une recherche d'**identifiants d'API supplémentaires** qui vous permet de rechercher des identifiants spécifiques.
 
 {% endtab %}
@@ -165,7 +165,7 @@ Un identifiant d'envoi, ou ID d'envoi, est une clé générée par Braze ou cré
 
 ### Où puis-je le trouver ?
 
-Les API et campagnes déclenchées par API qui sont envoyées en tant que diffusion génèrent automatiquement un identifiant d’envoi si un identifiant d’envoi n’est pas fourni. Si vous souhaitez spécifier votre propre identifiant d'envoi, vous devrez d'abord en créer un via l'[endpoint`/sends/id/create`.]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) L’identifiant ne peut comporter que des caractères ASCII et ne peut faire plus de 64 caractères. Vous pouvez réutiliser un identifiant d’envoi sur plusieurs envois de la même campagne si vous souhaitez regrouper les analyses de ces envois.
+Les campagnes API et déclenchées par l'API qui sont envoyées en tant que diffusion génèrent automatiquement un identifiant d'envoi si aucun identifiant d'envoi n'est fourni. Si vous souhaitez spécifier votre propre identifiant d'envoi, vous devez d'abord en créer un via l'[endpoint`/sends/id/create` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/). L’identifiant ne peut comporter que des caractères ASCII et ne peut faire plus de 64 caractères. Vous pouvez réutiliser un identifiant d’envoi sur plusieurs envois de la même campagne si vous souhaitez regrouper les analyses de ces envois.
 
 ### À quoi cela sert-il ?
 Envoyer et suivre par programme les performances des messages, sans création de campagne pour chaque envoi.
