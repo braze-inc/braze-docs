@@ -60,7 +60,7 @@ description: "この記事では、接続オーディエンスオブジェクト
 | 文字列 | `equals``not_equal`,`matches_regex`,`does_not_match_regex`,`exists` 、 `does_not_exist` |
 | 配列 | `includes_value``does_not_include_value`,`exists` 、 `does_not_exist` |
 | 数値 | `equals``not_equal`,`greater_than`,`greater_than_or_equal_to`,`less_than`,`less_than_or_equal_to`,`exists` 、 `does_not_exist` |
-| ブール値 | `equals``does_not_equal`,`exists` 、 `does_not_exist` |
+| ブール値 | `equals``not_equal`,`exists` 、 `does_not_exist` |
 | 時刻 | `less_than_x_days_ago``greater_than_x_days_ago`,`less_than_x_days_in_the_future`,`greater_than_x_days_in_the_future`,`after`,`before`,`exists` 、 `does_not_exist` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
