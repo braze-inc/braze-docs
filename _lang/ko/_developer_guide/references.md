@@ -3,6 +3,7 @@ nav_title: 참조 및 샘플 앱
 article_title: "Braze SDK 참조, 리포지토리 및 샘플 앱"
 page_order: 5.5
 description: "각 Braze SDK에 속한 참조 문서, GitHub 리포지토리 및 샘플 앱의 목록입니다."
+toc_headers: h2
 ---
 
 # 참조, 리포지토리 및 샘플 앱
@@ -25,17 +26,16 @@ description: "각 Braze SDK에 속한 참조 문서, GitHub 리포지토리 및 
 | 리액트 네이티브 SDK  | [선언 파일](https://github.com/braze-inc/braze-react-native-sdk/blob/master/src/index.d.ts)                   | [GitHub 리포지토리](https://github.com/braze-inc/braze-react-native-sdk) | [샘플 앱](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) |
 | Roku SDK          | N/A                                                                                                                                                         | [GitHub 리포지토리](https://github.com/braze-inc/braze-roku-sdk)            | [샘플 앱](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)            |
 | Unity SDK         | [선언 파일](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs)     | [GitHub 리포지토리](https://github.com/braze-inc/braze-unity-sdk)          | [샘플 앱](https://github.com/braze-inc/braze-unity-sdk/tree/master/unity-samples)          |
-| 언리얼 엔진 SDK | N/A                                                                                                                                                         | [GitHub 리포지토리](https://github.com/braze-inc/braze-unreal-sdk)        | [샘플 앱](https://github.com/braze-inc/braze-unreal-sdk/tree/master/BrazeSample)        |
-| Xamarin SDK       | N/A                                                                                                                                                         | [GitHub 리포지토리](https://github.com/braze-inc/braze-xamarin-sdk)      | [샘플 앱](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
+| .NET MAUI 소프트웨어 개발 키트(이전 Xamarin)      | N/A                                                                                                                                                         | [GitHub 리포지토리](https://github.com/braze-inc/braze-xamarin-sdk)      | [샘플 앱](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 샘플 앱 빌드
 
 {% tabs %}
-{% tab Android %}
+{% tab android %}
 ### "드로이드보이" 만들기
 
-Android SDK 깃허브 리포지토리 내 테스트 [애플리케이션브레이즈](https://github.com/braze-inc/braze-android-sdk "안드로이드 깃허브 리포지토리의") 이름은 Droidboy입니다. 다음 지침에 따라 프로젝트와 함께 모든 기능을 갖춘 사본을 빌드합니다.
+[Android SDK GitHub 저장소](https://github.com/braze-inc/braze-android-sdk) 내의 테스트 애플리케이션은 Droidboy입니다. 다음 지침에 따라 프로젝트와 함께 모든 기능을 갖춘 사본을 빌드합니다.
 
 1. 새 [워크스페이스]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration)를 생성하고Braze API 식별자 키를 기록합니다.<br><br>
 2. `/droidboy/res/values/braze.xml` 내의 적절한 위치(각각 `com_braze_push_fcm_sender_id` 및 `com_braze_api_key`라는 문자열의 태그 사이)에 FCM 발신자 ID와 Braze API 식별자 키를 복사합니다.<br><br>
