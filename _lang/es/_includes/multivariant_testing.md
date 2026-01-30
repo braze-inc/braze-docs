@@ -10,7 +10,7 @@ Si tiene varias variantes que desea dividir por igual, también debe asegurarse 
 
 Al ejecutar una prueba A/B en mensajes dentro de la aplicación, puede parecer que tus análisis muestran una distribución de variantes mayor entre una variante y otra, aunque tengan una división porcentual uniforme. Por ejemplo, considere el siguiente gráfico de *Destinatarios Únicos* para la Variante A y la Variante C.
 
-![Gráfico de Receptores Únicos para dos variantes con una forma similar entre la Variante A y la Variante C, donde la Variante A tiene un mayor número de Receptores Únicos por día]({% image_buster /assets/img/variant_distribution_iam.png %})
+![Gráfico de Destinatarios Únicos para dos variantes con una forma similar entre la Variante A y la Variante C, donde la Variante A tiene un mayor recuento de Destinatarios Únicos por día]({% image_buster /assets/img/variant_distribution_iam.png %})
 
 La variante A tiene un mayor número de *destinatarios únicos* que la variante C. Esto no se debe a la distribución de variantes, sino a cómo se calculan *los destinatarios únicos* para los mensajes dentro de la aplicación. Para los mensajes in-app, *los Destinatarios Únicos* son en realidad *Impresiones Únicas*, que es el número total de personas que recibieron y vieron el mensaje in-app. Esto significa que si un usuario no recibe el mensaje por cualquier motivo o decide no verlo, no se incluye en el recuento de *Destinatarios Únicos*, y la distribución de variantes puede aparecer sesgada.
 

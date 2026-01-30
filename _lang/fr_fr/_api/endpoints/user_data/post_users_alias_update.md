@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mise à jour de l'alias d'utilisateur"
+nav_title: "POST : Mettre à jour l’alias d’utilisateur"
 article_title: "POST : Mise à jour de l'alias d'utilisateur"
 search_tag: Endpoint
 page_order: 2

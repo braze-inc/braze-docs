@@ -1,5 +1,5 @@
 ---
-nav_title: Zustellung von In-App-Nachrichten
+nav_title: In-App-Nachricht Zustellung
 article_title: In-App Nachrichtenzustellung für iOS
 platform: iOS
 page_order: 3
@@ -48,7 +48,7 @@ Sie können diesen Wert über `ABKMinimumTriggerTimeIntervalKey` im Parameter `a
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:[ABKMinimumTriggerTimeIntervalKey : 5])
@@ -115,7 +115,7 @@ Wenn Sie eine In-App-Nachricht zu anderen Zeiten in Ihrer App anzeigen möchten,
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
@@ -140,7 +140,7 @@ In-App-Nachrichten können auch lokal in der App erstellt und über Braze angeze
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
   let customInAppMessage = ABKInAppMessageSlideup.init()

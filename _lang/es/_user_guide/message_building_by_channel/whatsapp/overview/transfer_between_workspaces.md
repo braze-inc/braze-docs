@@ -1,7 +1,7 @@
 ---
 nav_title: Transferencia entre espacios de trabajo
 article_title: Transfiere números de teléfono y grupos de suscripción entre espacios de trabajo
-page_order: 4
+page_order: 5
 description: "Este artículo de referencia explica cómo transferir tu número de teléfono de WhatsApp y tus grupos de suscripción entre espacios de trabajo."
 page_type: reference
 channel:
@@ -27,16 +27,16 @@ Para archivar un grupo de suscripción de WhatsApp, sigue estos pasos:
 2. Ve a **Audiencia** > **Gestión de grupos de suscripción** y busca el grupo de suscripción asociado al número de teléfono de WhatsApp que quieres mover.
 3. Pasa el ratón por encima del estado del grupo de suscripción y selecciona <i class="fa-solid fa-box-archive"></i> **Archivo**, que marcará el grupo de suscripción como inactivo pero no lo eliminará.
 
-Aparece el botón "Archivar" al pasar el ratón por encima del estado "Activo" de un grupo de suscripción.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
+![Botón "Archivar" que aparece al pasar el ratón sobre el estado "Activo" de un grupo de suscripción.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
 
-### Paso 2: Integrar el número de teléfono de WhatsApp en el nuevo espacio de trabajo
+### Paso 2: Integrar el número de teléfono de WhatsApp en el nuevo espacio de trabajo
 
 1. Ve al espacio de trabajo al que quieras mover el número de teléfono de WhatsApp.
 2. Ve a **Integraciones de socios** > **Socios tecnológicos** > **WhatsApp** y, a continuación, desplázate hasta la sección **Integración de mensajería de WhatsApp**. 
 3. Selecciona la opción **Crear nuevo grupo de suscripción y número de teléfono**
 4. Comienza el proceso de integración, durante el cual puedes seleccionar el número de teléfono del grupo de suscripción archivado.
 
-### Paso 3: Verifica la integración
+### Paso 3: Verifica la integración
 
 1. Tras completar la integración, confirma que el número de teléfono de WhatsApp está ahora asociado al grupo de suscripción en el nuevo espacio de trabajo.
 2. Prueba para confirmar que se pueden enviar y recibir mensajes a través de ese número de teléfono de WhatsApp.

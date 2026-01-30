@@ -1,24 +1,24 @@
 ### Mensajes de deslizamiento hacia arriba dentro de la aplicación
 
-[`Slideup`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} Los mensajes dentro de la aplicación se llaman así porque "se deslizan hacia arriba" o "se deslizan hacia abajo" desde la parte superior o inferior de la pantalla.  Cubren una pequeña parte de la pantalla y proporcionan una capacidad de mensajería eficaz y no intrusiva.
+[\`Slideup\`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} los mensajes dentro de la aplicación se llaman así porque "se deslizan hacia arriba" o "se deslizan hacia abajo" desde la parte superior o inferior de la pantalla.  Cubren una pequeña parte de la pantalla y proporcionan una capacidad de mensajería eficaz y no intrusiva.
 
 ![Ejemplo de deslizamiento hacia arriba]({% image_buster /assets/img_archive/In-App_Slideup.png %})
 
 ### Mensajes modales dentro de la aplicación
 
-[`Modal`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} Los mensajes dentro de la aplicación aparecen en el centro de la pantalla y están enmarcados por un panel translúcido. Útiles para la mensajería más crítica, pueden equiparse con hasta dos botones de acción de clic y habilitación de análisis.
+[\`Modal\`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} Los mensajes dentro de la aplicación aparecen en el centro de la pantalla y están enmarcados por un panel translúcido. Útiles para la mensajería más crítica, pueden equiparse con hasta dos botones de acción de clic y habilitación de análisis.
 
 ![Ejemplo modal]({% image_buster /assets/img_archive/In-App_Modal.png %})
 
 ### Mensajes completos dentro de la aplicación
 
-[`Full`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} Los mensajes dentro de la aplicación son útiles para maximizar el contenido y el impacto de tu comunicación con el usuario.  La mitad superior de un mensaje dentro de la aplicación `full` contiene una imagen y la mitad inferior muestra texto, así como hasta dos botones de acción de clic y habilitación de análisis.
+[\`Full\`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} Los mensajes dentro de la aplicación son útiles para maximizar el contenido y el impacto de tu comunicación con el usuario.  La mitad superior de un mensaje dentro de la aplicación `full` contiene una imagen y la mitad inferior muestra texto, así como hasta dos botones de acción de clic y habilitación de análisis.
 
 ![Ejemplo completo]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 ### Mensajes HTML completos dentro de la aplicación
 
-[`HTML Full`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} Los mensajes dentro de la aplicación son útiles para crear contenidos totalmente personalizados para el usuario. El contenido HTML completo de los mensajes dentro de la aplicación, definido por el usuario, se muestra en {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} y puede contener opcionalmente otros contenidos enriquecidos, como imágenes y fuentes, lo que permite un control total sobre el aspecto y la funcionalidad de los mensajes.
+[\`HTML Full\`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} Los mensajes dentro de la aplicación son útiles para crear contenidos totalmente personalizados para el usuario. El contenido HTML completo de los mensajes dentro de la aplicación, definido por el usuario, se muestra en {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} y puede contener opcionalmente otros contenidos enriquecidos, como imágenes y fuentes, lo que permite un control total sobre el aspecto y la funcionalidad de los mensajes.
 
  {% if include.platform == "iOS" %}
 El siguiente ejemplo muestra un mensaje HTML completo paginado dentro de la aplicación:
@@ -38,9 +38,9 @@ El contenido completo de los mensajes dentro de la aplicación se muestra en un 
 
 La siguiente documentación se refiere al producto Braze `In-App Messaging`, también conocido como "mensajes dentro de la aplicación desencadenados", que se marcan como se resalta a continuación en el desplegable "Crear campaña":
 
-![Creador de mensajes dentro de la aplicación]({% image_buster /assets/img_archive/trigger-iam-composer.png %})
+![Compositor de mensajes dentro de la aplicación]({% image_buster /assets/img_archive/trigger-iam-composer.png %})
 
-También puedes consultar la documentación de nuestro producto obsoleto [`Original In-App Messaging`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages).
+También puedes consultar la documentación de nuestro producto obsoleto [\`Original In-App Messaging\`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages).
 
 #### Tipos de desencadenantes
 

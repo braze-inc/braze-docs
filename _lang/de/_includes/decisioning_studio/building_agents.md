@@ -1,4 +1,4 @@
-# Agenten erstellen
+# Aufbau von KI-Entscheidungsagenten
 
 > Erfahren Sie, wie Sie einen Agenten für BrazeAI Decisioning Studio™ erstellen, damit Sie personalisierte Experimente automatisieren und Ergebnisse wie Konversionen, Bindung oder Umsatz optimieren können – ohne manuelle A/B-Tests.
 
@@ -16,7 +16,7 @@ So erstellen Sie einen guten Agenten:
 - Legen Sie fest, welche Dimensionen getestet werden sollen, z. B. Angebot, Betreffzeile, Kreativität, Kanal oder Sendezeitpunkt.
 - Wählen Sie die Optionen für jede Dimension aus, z. B. E-Mail oder SMS oder tägliche oder wöchentliche Häufigkeit.
 
-![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Beispieldiagramm eines Studioagenten zur Entscheidungsfindung für Empfehlungen in E-Mails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Beispiel-Agenten
 
@@ -32,7 +32,7 @@ Bevor Sie einen Agenten erstellen können, müssen Sie [das BrazeAI Decisioning 
 
 ### Schritt 1: AI Expert Services kontaktieren
 
-Das Team von AI Expert Services wird eng mit Ihnen zusammenarbeiten, um Ihren Entscheidungsagenten zu konzipieren und zu erstellen. Wenn Sie es noch nicht getan haben, sollten Sie [Kontakt aufnehmen](https://www.braze.com/get-started/) und den Anfang machen.
+Das Team von AI Expert Services wird eng mit Ihnen zusammenarbeiten, um Ihren Entscheidungsagenten zu konzipieren und zu erstellen. Wenn Sie es noch nicht getan haben, [nehmen Sie Kontakt mit uns auf](https://www.braze.com/get-started/), um loszulegen.
 
 Sie werden die folgenden Schritte gemeinsam ausführen, um einen angepassten Agenten zu erstellen, der genau auf Sie zugeschnitten ist.
 

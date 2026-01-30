@@ -1,5 +1,5 @@
 ---
-nav_title: "Objeto de evento"
+nav_title: "Objeto del evento"
 article_title: Objeto de evento API
 page_order: 6
 page_type: reference
@@ -62,7 +62,7 @@ Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
 
 | Tipo de datos | Descripción |
 | --- | --- |
-| Números | Como [enteros](https://en.wikipedia.org/wiki/Integer) o [flotantes](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Números | Como [números enteros](https://en.wikipedia.org/wiki/Integer) o [flotantes](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booleanos | `true` o `false` |
 | Fechas y horas | Deben formatearse como cadenas en el formato [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) o en cualquiera de los siguientes formatos: <br>- `yyyy-MM-ddTHH:mm:ss:SSSZ` <br>- `yyyy-MM-ddTHH:mm:ss` <br>- `yyyy-MM-dd HH:mm:ss` <br>- `yyyy-MM-dd` <br>- `MM/dd/yyyy` <br>- `ddd MM dd HH:mm:ss.TZD YYYY` <br><br>No se admite dentro de matrices. <br><br>Ten en cuenta que la "T" es un indicador de tiempo, no un marcador de posición, y no debe cambiarse ni eliminarse. <br><br>Los atributos de tiempo sin zona horaria serán predeterminados a medianoche UTC (y se formatearán en el panel como el equivalente a medianoche UTC en la zona horaria de la empresa). <br><br> Los eventos con marcas de tiempo en el futuro serán predeterminados a la hora actual.  |
 | Cadenas | 255 caracteres o menos. |
@@ -71,6 +71,17 @@ Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Los objetos de propiedades del evento que contienen valores de matrices u objetos pueden tener una carga útil de propiedades del evento de hasta 100 KB.
+
+### Claves reservadas
+
+Las siguientes claves están reservadas y no pueden utilizarse como propiedades del evento personalizado:
+
+- `time`
+- `event_name`
+
+{% alert important %}
+El uso de claves reservadas como nombres de propiedades de eventos personalizados provocará errores de API al enviar solicitudes al punto final `/users/track`.
+{% endalert %}
 
 ### Persistencia de las propiedades del evento
 

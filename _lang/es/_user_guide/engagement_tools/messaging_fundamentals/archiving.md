@@ -1,7 +1,7 @@
 ---
 nav_title: Archivo
 article_title: Archivo
-page_order: 3
+page_order: 2
 page_type: reference
 description: "Este artículo de referencia explica cómo archivar tus campañas y Lienzos."
 tool:
@@ -21,7 +21,7 @@ Cuando archives una campaña o Canvas, no se entregarán más mensajes y no se m
 {% tab campaign %}
 Para archivar una campaña:
 
-1. Ve a **Mensajes** > Campañas.
+1. Ve a **Mensajes** > **Campañas**.
 2. Pasa el ratón por encima de la fila de la campaña y selecciona el menú <i class="fas fa-ellipsis-vertical"></i>.
 3. Selecciona **Archivo**.
 {% endtab %}

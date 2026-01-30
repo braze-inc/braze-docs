@@ -1,6 +1,6 @@
 ---
-nav_title: Angepasste Display-Behandlung
-article_title: Anpassen der Handhabung der Anzeige von In-App-Nachrichten für iOS
+nav_title: Angepasste Handhabung der Anzeige
+article_title: Anpassen der Anzeige von In-App-Nachrichten für iOS
 platform: iOS
 page_order: 4
 description: "Dieser referenzierte Artikel behandelt die angepasste Handhabung von In-App-Nachrichten für Ihre iOS-Anwendung."
@@ -24,7 +24,7 @@ Wenn die [`ABKInAppMessageControllerDelegate`](https://github.com/Appboy/appboy-
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!) -> ABKInAppMessageDisplayChoice
@@ -43,7 +43,7 @@ Wenn Sie nur die Methode [`ABKInAppMessageUIDelegate`](https://github.com/Appboy
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func beforeInAppMessageDisplayed(inAppMessage: ABKInAppMessage!, withKeyboardIsUp keyboardIsUp: Bool) -> ABKInAppMessageDisplayChoice
@@ -98,7 +98,7 @@ Um zu verhindern, dass In-App-Nachrichten das Design des Dark Mode übernehmen, 
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 // ABKInAppMessageControllerDelegate
@@ -140,7 +140,7 @@ Die Protokollierung der Impressionen und Klicks von In-App-Nachrichten erfolgt n
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 // Registers that a user has viewed an in-app message with the Braze server.
@@ -163,7 +163,7 @@ Außerdem sollten Sie die Klicks auf Buttons in den Unterklassen von `ABKInAppMe
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 // Logs button click analytics

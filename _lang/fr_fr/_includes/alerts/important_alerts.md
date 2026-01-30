@@ -37,7 +37,15 @@ Certains navigateurs, comme les applications Naver Android et iOS, ne prennent p
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-Les plans de suppression progressive de l'événement d'achat seront annoncés à la fin de l'année 2025. À long terme, l'événement d'achat sera remplacé par de nouveaux [événements recommandés par l'eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), qui s'accompagneront de fonctionnalités améliorées en matière de segmentation, de rapports, d'analyse/analyse, etc. Cependant, les nouveaux événements eCommerce ne prendront pas en charge les fonctionnalités existantes liées à l'événement d'achat, telles que la valeur à vie (LTV) ou les rapports sur les chiffres d'affaires dans les Canvases ou les campagnes. Pour obtenir une liste complète des fonctionnalités liées aux événements d'achat, reportez-vous à la section [Enregistrement des événements d'achat]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+Les plans de suppression progressive de l'événement d'achat seront annoncés en 2026. L'événement d'achat sera finalement remplacé par de nouveaux [événements recommandés pour le commerce électronique]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), qui s'accompagneront de fonctionnalités améliorées en matière de segmentation, de rapports, d'analyse/analyse, etc. Cependant, les nouveaux événements eCommerce ne prendront pas en charge les fonctionnalités existantes liées à l'événement d'achat, telles que la valeur à vie (LTV) ou les rapports sur les chiffres d'affaires dans les Canvases ou les campagnes. Pour obtenir une liste complète des fonctionnalités liées aux événements d'achat, reportez-vous à la section [Enregistrement des événements d'achat]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Purchase event deprecation for eCommerce filters' %}
+
+{% alert important %}
+Les plans de suppression progressive de l'événement d'achat seront annoncés en 2026. L'événement d'achat sera finalement remplacé par de nouveaux [événements recommandés pour le commerce électronique]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), qui s'accompagneront de fonctionnalités améliorées en matière de segmentation, de rapports, d'analyse/analyse, etc. Dans ce cas, les filtres de segmentation ne s'afficheront plus sous le comportement d'achat. Pour obtenir une liste complète des événements d'achat, reportez-vous à la section [Enregistrement des événements d'achat]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
 {% endalert %}
 
 {% endif %}
@@ -61,7 +69,7 @@ L'intégration de Shopify prend en charge les webhooks de création et de mise �
 {% if include.alert == 'context variable' %}
 
 {% alert important %}
-Si vous participez à l'accès anticipé à Canvas Context, les propriétés d'entrée de Canvas font partie des variables de contexte de Canvas. Cela signifie que `canvas_entry_properties` est maintenant référencé comme `context`. Chaque variable de contexte comprend un nom, un type de données et une valeur qui peut inclure Liquid. Actuellement, `canvas_entry_properties` est toujours rétrocompatible. Pour plus de détails, voir [Contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) et [objet contextuel Canvas]({{site.baseurl}}/api/objects_filters/context_object).
+Si vous participez à l'accès anticipé à Canvas Context, les propriétés d'entrée de Canvas font partie des variables de contexte de Canvas. Cela signifie que `canvas_entry_properties` est maintenant référencé comme `context`. Chaque variable de contexte comprend un nom, un type de données et une valeur qui peut inclure Liquid. Actuellement, `canvas_entry_properties` est toujours rétrocompatible. Pour plus de détails, reportez-vous à la section [Objet des propriétés d'entrée du]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/) [contexte]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) et du [canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endalert %}
 
 {% endif %}

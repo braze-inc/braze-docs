@@ -140,3 +140,39 @@ ${unsubscribe_url}
 ### 配信停止リンクとユーザー設定センターの両方が送信に必要か？
 
 いいえ。配信停止リンクがコンテンツブロック内にある場合、メールキャンペーンの作成中に「メール本文に配信停止のリンクが含まれていません」というメッセージが表示されます。
+
+### デフォルト ブラウザーアイコンを更新するには?
+
+デフォルトでは、ブラウザタブ名(ファビコン)の横にあるアイコンはBrazeのロゴを使用します。カスタムファビコンを追加するには、Create またはUpdate [Preference Center API call]({{site.baseurl}}/api/endpoints/preference_center) の`links-tags` 属性で設定します。次に、Braze は{% raw %}`<link rel="icon" ...>`{% endraw %} タグをホストページに挿入します。
+
+{% raw %}
+```
+{
+  "name": "MyPreferenceCenter",
+  "preference_center_title": "Email Preferences",
+  "preference_center_page_html": "<!doctype html> ...",
+  "confirmation_page_html": "<!doctype html> ...",
+  "state": "active",
+  "options": {
+    "links-tags": [
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "32x32",
+        "href": "https://yourcdn.com/path/to/favicon-32x32.png"
+      },
+      {
+        "rel": "shortcut icon",
+        "type": "image/x-icon",
+        "href": "https://yourcdn.com/path/to/favicon.ico"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://yourcdn.com/path/to/apple-touch-icon.png"
+      }
+    ]
+  }
+}
+```
+{% endraw %}

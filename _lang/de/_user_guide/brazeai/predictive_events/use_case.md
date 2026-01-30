@@ -1,13 +1,13 @@
 ---
 nav_title: Anwendungsfall
 article_title: Anwendungsfälle Prognosen für Abo-Upgrades
-description: "Dieses Beispiel zeigt, wie eine fiktive Marke Braze Predictive Events verwendet, um die Ergebnisse zu definieren, die für ihr Unternehmen wichtig sind - wie das Upgraden auf eine Profi-Mitgliedschaft - und gezielte Strategien zu entwickeln, die die Ergebnisse verbessern."
+description: "Dieses Beispiel zeigt, wie eine fiktive Marke Braze Predictive Events verwendet, um die Ergebnisse zu definieren, die für ihr Geschäft wichtig sind - wie das Upgraden auf eine Profi-Mitgliedschaft - und gezielte Strategien zu entwickeln, die die Ergebnisse verbessern."
 page_type: tutorial
 ---
 
 # Anwendungsfälle: Prognosen für Abo-Upgrades mit intelligentem Targeting
 
-> Dieses Beispiel zeigt, wie eine fiktive Marke Braze Predictive Events verwendet, um die Ergebnisse zu definieren, die für ihr Unternehmen wichtig sind - wie das Upgraden auf eine Profi-Mitgliedschaft - und gezielte Strategien zu entwickeln, die die Ergebnisse verbessern. 
+> Dieses Beispiel zeigt, wie eine fiktive Marke Braze Predictive Events verwendet, um die Ergebnisse zu definieren, die für ihr Geschäft wichtig sind - wie das Upgraden auf eine Profi-Mitgliedschaft - und gezielte Strategien zu entwickeln, die die Ergebnisse verbessern. 
 
 Nehmen wir an, Jordan ist ein Strateg:in bei Steppington, einer App für Gesundheit und Fitness mit kostenlosen und kostenpflichtigen Angeboten. Das Team von Jordan hat sich zum Ziel gesetzt, die Upgrades für den Pro-Tarif zu erhöhen, ohne die gesamte kostenlose Nutzer:innen-Basis mit Nachrichten über Rabatte zu bombardieren. Gegenwärtig erhalten alle Nutzer:innen der kostenlosen Version nach sieben Tagen ein Angebot mit dem Titel "Try Pro for 50% off". Das führt zwar zu einigen Konversionen (ca. 5 % in 7 Tagen), aber auch zu übermäßiger Reichweite - einschließlich Rabatten für Nutzer:innen, die wahrscheinlich ohnehin upgraden würden.
 
@@ -27,14 +27,14 @@ Jordan beginnt mit der Definition des Ergebnisses, das für seine upgraden Strat
 3. Als Targeting Event wählt er sein angepasstes Event: `upgraded_to_pro`.
 4. Jordan setzt das Prognosefenster auf 7 Tage, legt einen Zeitplan für das Update fest und erstellt die Prognose.
 
-![Prognose-Einstellungen mit Definition, Fenster, Zielgruppe und Zeitplan für das Update der Prognose.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
+![Einstellungen für Prognosen, die die Definition, das Fenster, die Zielgruppe und den Zeitplan für das Update der Prognose anzeigen.]({% image_buster /assets/img/ai_use_cases/prediction_settings.png %})
 
-## Schritt 2: Segmentierung der Nutzer:innen auf der Grundlage der Wahrscheinlichkeit eines Upgrades
+## Schritt 2: Segmentierung der Nutzer:innen nach der Wahrscheinlichkeit eines Upgrades
 
 Nachdem das Training abgeschlossen ist, vergibt Braze für jede in Frage kommende Nutzer:innen einen [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0-100). Jordan verwendet diese Bewertung, um Segmente zu erstellen - eines für Nutzer:innen mit hoher Absicht, die keinen Rabatt benötigen, und ein weiteres für Nutzer:innen, die ohne Unterstützung wahrscheinlich nicht konvertieren werden.
 
 1. Jordan navigiert zu Segmente in Braze.
-2. Er erstellt zwei [Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) unter Verwendung des [Event Likelihood Score Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) und wählt die von ihm erstellte Prognose aus. Die beiden Segmente sind:
+2. Er erstellt zwei [Segmente]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) mit dem [Event Likelihood Score Filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) und wählt die von ihm erstellte Prognose aus. Die beiden Segmente sind:
   - **Wahrscheinlich wird er upgraden:** Ergebnis mehr als 70
   - **Braucht einen Anstoß zum upgraden:** Punktzahl mehr als 40 und weniger als 70
 
@@ -42,7 +42,7 @@ Nachdem das Training abgeschlossen ist, vergibt Braze für jede in Frage kommend
 Prognostische Filter können mit beliebigen anderen Nutzer:innen-Attributen oder Verhaltensweisen kombiniert werden. Jordan plant, diese Segmente auf der Grundlage von Nutzerinteressen weiter zu verfeinern, z.B. indem er Nutzern:innen, die häufig Fitness Tracking Features verwenden, Priorität einräumt. Damit hat er vier Untergruppen, die er genauer ansprechen kann, was es zulässig macht, Inhalte und Nachrichten auf die Bedürfnisse der einzelnen Nutzer:innen abzustimmen.
 {% endalert %}
 
-![Segmentierung mit zwei Filtern für die Ereigniswahrscheinlichkeitsbewertung.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
+![Segmenterstellung mit zwei Filtern für die Ereigniswahrscheinlichkeitsbewertung.]({% image_buster /assets/img/ai_use_cases/event_likelihood_score.png %})
 
 ## Schritt 3: Personalisieren Sie Messaging nach Absicht
 
@@ -57,7 +57,7 @@ Jordan [erstellt ein Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas
 - Nutzer:innen mit geringer Absicht, die sich auf Fitness konzentrieren
 - Geringe Absicht, andere Nutzer:innen
 
-![Canvas Zielgruppen-Pfad mit vier Pfaden für jede Absichtsart.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
+![Canvas Zielgruppen-Pfade mit vier Pfaden für jede Absichtsart.]({% image_buster /assets/img/ai_use_cases/canvas_paths_by_intent.png %})
 
 Außerdem setzt er das Canvas-Konversions-Event auf das angepasste Event `upgraded_to_pro`, so dass Braze die upgraden Konversionen automatisch verfolgt, wenn die Nutzer:innen den Fluss durchlaufen.
 
@@ -88,13 +88,13 @@ Diese Nutzer:innen beschäftigen sich mit den Fitness Features, haben aber noch 
 
 - **Betreffzeile:** Sind Sie bereit, intelligenter zu trainieren? Testen Sie Pro mit 50% Rabatt
 - **Überschrift:** Ihr Workout-Upgrade wartet schon
-- **Text:** Pro bietet Ihnen alles, was Sie brauchen, um stark zu werden - einfach zu befolgende Trainingspläne, Expertentipps und echtes Tracking Ihrer Fortschritte. Testen Sie es jetzt für 50% Rabatt und kündigen Sie jederzeit.
+- **Text:** Pro bietet Ihnen alles, was Sie brauchen, um stark zu werden - einfach zu befolgende Trainingspläne, Expertentipps und echtes Tracking Ihrer Fortschritte. Testen Sie es jetzt mit 50% Rabatt und kündigen Sie jederzeit.
 - **CTA:** Erhalten Sie 50% Rabatt auf Pro
 
 {% endtab %}
 {% tab Low intent, other %}
 
-Diese Nutzer:innen zeigen insgesamt wenig Engagement. Es ist unwahrscheinlich, dass sie ohne einen überzeugenden Anreiz upgraden. Daher verfolgt die Nachricht einen einfachen Ansatz, bei dem die Vorteile im Vordergrund stehen, mit einem Rabatt und einer sanften Sprache, die zur Erkundung ohne Druck einlädt.
+Diese Nutzer:innen zeigen insgesamt wenig Engagement. Es ist unwahrscheinlich, dass sie ohne einen überzeugenden Anreiz upgraden. Daher verfolgt die Nachricht einen einfachen Ansatz, bei dem die Vorteile im Vordergrund stehen, mit einem Preisnachlass und einer sanften Sprache, die zur Erkundung ohne Druck einlädt.
 
 - **Betreffzeile:** 50% Rabatt auf Pro-just für dieses Wochenende
 - **Überschrift:** Bereit, wenn Sie es sind
@@ -131,7 +131,7 @@ E-Mail Performance nach Pfad:
    - *Konversionsrate:* 6%
    - Angebot mit 50% Rabatt
 
-Im Vergleich zu der vorherigen Kampagne des Teams, bei der ein pauschaler Rabatt nach 7 Tagen zu nur 5 % Konversion und zu viel Messaging führte, zeigt der gezielte Ansatz eine deutliche Steigerung in allen Gruppen, mit verbesserter Effizienz und weniger unnötigen Rabatten.
+Im Vergleich zur vorherigen Kampagne des Teams, bei der ein pauschaler Rabatt nach 7 Tagen zu nur 5 % Konversion und zu viel Messaging führte, zeigt der gezielte Ansatz eine deutliche Steigerung in allen Gruppen, mit verbesserter Effizienz und weniger unnötigen Rabatten.
 
 Der [Funnel-Bericht]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) zeigt auch eine deutliche Verringerung der Absprungrate bei den wichtigsten Schritten, insbesondere bei Nutzern:innen mit geringer Absicht, die personalisierte Nachrichten erhalten haben. Mehr Nutzer:innen öffnen, klicken und upgraden - ein Beweis für den Wert von Targeting, das auf Absichten basiert.
 
@@ -141,4 +141,4 @@ Jordan nutzt diese Insights, um:
 - Überprüfen Sie die Rabattschwelle für Nutzer:innen mit mittlerer Absicht
 - Verfeinern Sie die Segmentierung auf der Grundlage zusätzlicher Verhaltensweisen wie der Ansicht von Inhalten oder der Nutzung von Features in der App.
 
-Mit Prognosen und einer mehrschichtigen Segmentierung verfügt sein Team nun über eine skalierbare Strategie, die das Messaging an die Absichten und das Verhalten der Nutzer:innen anpasst und so für mehr Upgrades sorgt und gleichzeitig das Vertrauen in die Marke bewahrt.
+Mit Prognosen und einer mehrschichtigen Segmentierung verfügt sein Team jetzt über eine skalierbare Strategie, die das Messaging an die Absichten und das Verhalten der Nutzer:innen anpasst und so für mehr Upgrades sorgt und gleichzeitig das Vertrauen in die Marke bewahrt.

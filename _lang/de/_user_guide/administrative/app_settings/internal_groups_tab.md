@@ -3,7 +3,7 @@ nav_title: Interne Gruppen
 article_title: Interne Gruppe
 page_order: 10
 page_type: reference
-description: "Dieser referenzierte Artikel behandelt interne Gruppen, eine großartige Möglichkeit, um beim Testen der SDK-Integration Insights in die SDK- oder API-Protokolle Ihres Testgeräts zu erhalten."
+description: "Dieser referenzierte Artikel beschreibt interne Gruppen, eine großartige Möglichkeit, um beim Testen der SDK-Integration Insights in die SDK- oder API-Protokolle Ihres Testgeräts zu erhalten."
 
 ---
 
@@ -17,11 +17,11 @@ Wir empfehlen Ihnen auch unseren Braze-Lernkurs [Testen und Fehlerbehebung](http
 
 ## Voraussetzungen
 
-Bevor Sie interne Gruppen erstellen und verwalten können, benötigen Sie die [Berechtigung Access Dev Console]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) für Ihren Workspace.
+Um interne Gruppen zu erstellen und zu verwalten, benötigen Sie die [Berechtigung Access Dev Console]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) für Ihren Workspace.
 
 ## Erstellen einer internen Gruppe
 
-Um eine interne Gruppe zu erstellen, gehen Sie wie folgt vor: 
+So erstellen Sie eine interne Gruppe: 
 
 1. Gehen Sie zu **Einstellungen** > **Interne Gruppen**.
 2. Wählen Sie **Interne Gruppe erstellen**.
@@ -30,16 +30,16 @@ Um eine interne Gruppe zu erstellen, gehen Sie wie folgt vor:
 
 | Gruppe Typ         | Beschreibung                                                                                 |
 |--------------------|---------------------------------------------------------------------------------------------|
-| **Nutzer-Event-Gruppe**   | Dient zum Überprüfen von Ereignissen oder Protokollen von Ihrem Testgerät.                                    |
-| **Content-Testgruppe** | Kann für Push-, E-Mail- und In-App-Nachrichten verwendet werden, um eine gerenderte Kopie der Nachricht zu versenden. |
+| **Nutzer-Event-Gruppe**   | Verwenden Sie dies, um Ereignisse oder Protokolle von Ihrem Testgerät zu überprüfen.                                    |
+| **Content-Testgruppe** | Verwenden Sie diese Funktion für Push-, E-Mail- und In-App-Nachrichten, um eine gerenderte Kopie der Nachricht zu versenden. |
 | **Seed-Gruppe**         | Sendet beim Versenden automatisch eine Kopie der E-Mail an alle Mitglieder der Seed-Gruppe.               |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![Eine interne Gruppe mit dem Namen "E-Mail-Testgruppe".]({% image_buster /assets/img_archive/internal_group.png %})
+![Eine interne Gruppe mit dem Namen "E-Mail-Testgruppe".]({% image_buster /assets/img_archive/internal_group.png %})
 
 ### Hinzufügen von Testnutzer:innen
 
-Nachdem Sie Ihre interne Gruppe erstellt haben, können Sie Testnutzer:innen als Mitglieder dieser Gruppe hinzufügen. 
+Nachdem Sie Ihre interne Gruppe erstellt haben, fügen Sie Testnutzer:innen als Mitglieder dieser Gruppe hinzu. 
 
 1. Wählen Sie auf der Verwaltungsseite Ihrer internen Gruppe **Testnutzer:in hinzufügen**.
 2. Wählen Sie eine der folgenden Methoden zum Suchen und Auswählen Ihrer Testnutzer:innen.
@@ -47,35 +47,35 @@ Nachdem Sie Ihre interne Gruppe erstellt haben, können Sie Testnutzer:innen als
 | Methode                  | Beschreibung                                                                                                                                                                                                                                          |
 |-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Identifizierte:n Nutzer:in hinzufügen** | Suchen Sie den Nutzer:innen anhand seiner externen ID, seiner E-Mail Adresse, seiner Telefonnummer oder seines Push-Tokens.                                                                                                                                                           |
-| **Anonyme:n Nutzer:in hinzufügen**  | Suche nach IP-Adresse. Geben Sie dann für alle Testnutzer:innen einen Namen ein. Dies ist der Name, mit dem alle [Event-Benutzerprotokolle]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) auf der Seite [Event-Benutzerprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) verknüpft werden. |
+| **Anonyme:n Nutzer:in hinzufügen**  | Suche nach IP-Adresse. Geben Sie dann für jeden hinzugefügten Testnutzer:in einen Namen ein. Dies ist der Name, mit dem alle [Event-Benutzerprotokolle]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) auf der Seite [Event-Benutzerprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) verknüpft sind. |
 | **Nutzer:innen per Masseneintrag hinzufügen**      | Kopieren Sie eine Liste von E-Mail-Adressen oder externen IDs und fügen Sie sie ein. Sie können nur Nutzer:innen hinzufügen, die bereits auf dem Dashboard bekannt sind. Weitere Informationen finden Sie unter [Nutzer:in importieren]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).          |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![Interne Gruppe Einstellungen beim Erstellen einer neuen internen Gruppe]({% image_buster /assets/img_archive/internal_group_add_user.png %})
+![Interne Gruppe Einstellungen beim Erstellen einer neuen internen Gruppe]({% image_buster /assets/img_archive/internal_group_add_user.png %})
 
 ### Inhalt Testgruppen
 
-Ähnlich wie beim Versenden eines Vorschautests einer Nachricht spart Ihnen die Inhaltstestgruppe Zeit und ermöglicht es Ihnen, Tests an eine vordefinierte Liste von Braze-Benutzern gleichzeitig zu senden. Diese Funktion ist für Push, In-App-Nachrichten, SMS, E-Mail und Content-Cards in Braze verfügbar. Nur Gruppen, die als Content-Test-Gruppen getaggt sind, sind in der Vorschau einer Nachricht verfügbar.
+Ähnlich wie beim Versenden einer Vorschau einer Nachricht sparen Sie mit der Content Test Group Zeit und können Tests an eine vordefinierte Liste von Braze Nutzer:innen gleichzeitig starten. Diese Funktion ist für Push, In-App-Nachrichten, SMS, E-Mail und Content-Cards in Braze verfügbar. Nur Gruppen, die als Content-Test-Gruppen getaggt sind, sind im Vorschaubereich einer Nachricht verfügbar.
 
 {% alert note %}
 [SMS-Testnachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/) können nur an gültige Telefonnummern in der Datenbank gesendet werden.
 {% endalert %}
 
-Sie können einzelne Braze Nutzer:innen oder beliebig viele interne Gruppen auswählen, an die Sie die Nachricht senden möchten. Wenn Ihre Nachricht ein Liquid oder eine andere dynamische Personalisierung enthält, verwendet Braze die für jeden Nutzer:innen verfügbaren Attribute, um den Inhalt der Nachricht zu personalisieren. Für Nutzer:innen, die keine Attribute haben, verwendet Braze den eingestellten Standardwert.
+Wählen Sie einzelne Braze Nutzer:innen oder eine beliebige Anzahl interner Gruppen aus, an die Sie die Nachricht senden möchten. Wenn Ihre Nachricht ein Liquid oder eine andere dynamische Personalisierung enthält, verwendet Braze die für jeden Nutzer:innen verfügbaren Attribute, um den Inhalt der Nachricht zu personalisieren. Für Nutzer:innen, die keine Attribute haben, verwendet Braze den Standardwertsatz.
 
-Wenn Sie außerdem eine Vorschau der Nachricht als zufälliger Benutzer, angepasster Nutzer:innen oder bestehender Nutzer:innen anzeigen, können Sie stattdessen diese Vorschauversion versenden. Wenn Sie das Kontrollkästchen deaktivieren, können Sie den Versand auf der Grundlage der Attribute des jeweiligen Benutzers und nicht auf der Grundlage der Vorschauversion vornehmen.
+Wenn Sie außerdem eine Vorschau der Nachricht als zufälliger Benutzer, angepasster Nutzer:innen oder bestehender Nutzer:innen anzeigen, können Sie stattdessen diese Vorschauversion versenden. Wenn Sie das Kontrollkästchen deaktivieren, können Sie die Attribute der einzelnen Nutzer:innen im Vergleich zur Vorschau verwenden.
 
-Wenn Sie einen IP-Pool zum Versenden einer E-Mail verwenden, können Sie auswählen, von welchem IP-Pool die E-Mail versendet werden soll, indem Sie den Pool aus der verfügbaren Dropdown-Liste auswählen.
+Wenn Sie einen IP-Pool verwenden, um eine E-Mail zu versenden, wählen Sie den IP-Pool aus, von dem die E-Mail gesendet werden soll, indem Sie den Pool aus der Dropdown-Liste auswählen.
 
-\![Der Bereich Test des In-App-Nachricht-Editors, um die Testgruppe für Inhalte auszuwählen.]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:60%" }
+![Der Bereich Test des In-App-Nachricht-Editors, um die Testgruppe für Inhalte auszuwählen.]({% image_buster /assets/img_archive/content_test_preview.png %}){: style="max-width:60%" }
 
 ### Seed-Gruppen
 
-Seed-Gruppen werden nur für den E-Mail-Kanal unterstützt. Sie können Nutzer:innen zu einer Seed-Gruppe hinzufügen, um Kopien jeder E-Mail Variante der Nachricht an alle Mitglieder der Gruppe zu senden.
+Seed-Gruppen werden nur für den E-Mail-Kanal unterstützt. Fügen Sie Nutzer:innen zu einer Seed-Gruppe hinzu, um Kopien jeder E-Mail Variante der Nachricht an alle Mitglieder der Gruppe zu senden.
 
-Seed-Gruppen sind für API-Kampagnen nicht verfügbar, aber Sie können Seed-Gruppen über einen API-getriggerten Eingang in die Kampagne aufnehmen. Sie können damit Metriken zur Zustellbarkeit messen und Ihre E-Mail-Inhalte für historische und archivarische Zwecke aufbewahren. 
+Seed-Gruppen sind für API-Kampagnen nicht verfügbar, aber Sie können Seed-Gruppen über einen API-getriggerten Eingang in die Kampagne aufnehmen. Verwenden Sie dies, um Metriken zur Zustellbarkeit zu messen und Ihre E-Mail-Inhalte für historische und archivarische Zwecke zu speichern. 
 
-Nachdem Sie eine interne Gruppe erstellt und mit Tags versehen haben, um sie als Seed-Gruppe zu verwenden, können Sie sie im Schritt **Zielgruppen** des Kampagnen-Editors oder im Schritt **Sendeeinstellungen** in einem Canvas auswählen. 
+Nachdem Sie eine interne Gruppe erstellt und mit Tags versehen haben, um sie als Seed-Gruppe zu verwenden, wählen Sie sie im Schritt **Target Audiences** des Kampagnen-Editors oder im Schritt **Send Settings** in einem Canvas aus. 
 
 Bei gesendeten E-Mails wird `[SEED]` an den Anfang der Betreffzeile der E-Mail angehängt. Beachten Sie, dass dies bei E-Mails **nicht der Fall ist**:
 
@@ -85,15 +85,23 @@ Bei gesendeten E-Mails wird `[SEED]` an den Anfang der Betreffzeile der E-Mail a
 - Frequency-Capping der Auswirkungen.
 - Berücksichtigen Sie die Rate-Limits für die Zustellung oder beeinflussen Sie diese.
 
+#### Abo-Verhalten
+
+Seed-Sendungen sind für die interne Qualitätssicherung und Überprüfung gedacht. Sie umgehen also absichtlich die Abo-Prüfung für die Nutzer:innen des Dashboards. Das bedeutet, dass Nutzer:innen mit gültigen E-Mail-Adressen, die Teil einer Seed-Gruppe sind, die Nachricht auch dann erhalten, wenn sie nicht angemeldet sind. Allerdings muss die Nachricht so konfiguriert sein, dass sie Seed-Kopien an diese Gruppe sendet.
+
 {% alert tip %}
 Wenn die Mitglieder Ihrer Seed-Gruppe berichten, dass sie die Nachricht nicht in ihrem Posteingang sehen, überprüfen Sie, ob sie in der internen Gruppe aufgeführt sind, ob Ihre Betreffzeilen unterschiedlich sind und ob Google Mail die Nachrichten nicht gebündelt hat, oder lassen Sie sie ihre Spam-Ordner überprüfen.
 {% endalert %}
 
 #### Für Kampagnen
 
-Wenn Sie eine E-Mail Kampagne erstellen, können Sie Ihre Seed-Gruppen im Bereich **Zielgruppen** des Editors bearbeiten.
+Wenn Sie eine E-Mail Kampagne erstellen, bearbeiten Sie Ihre Seed-Gruppen im Bereich **Target Audiences** des Editors.
 
-Seed-Gruppen werden für jede E-Mail-Variante einmal versendet und werden zugestellt, wenn Ihr Benutzer diese bestimmte Variante zum ersten Mal erhält. Bei geplanten Nachrichten ist dies in der Regel der erste Zeitpunkt, an dem die Kampagne startet. Bei aktionsbasierten oder API-ausgelösten Kampagnen ist dies der Zeitpunkt, an dem der erste Nutzer eine Nachricht erhält.
+{% alert important %}
+Wenn Sie eine Seed-Gruppe so konfigurieren, dass sie automatisch an alle Kampagnen angehängt wird, gilt sie nur für neue Kampagnen. Sie gilt nicht, wenn Sie bestehende Kampagnen kopieren. Sie müssen Ihre gewünschten Seed-Gruppen manuell auf die kopierte Kampagne im Bereich **Zielgruppen** anwenden.
+{% endalert %}
+
+Seed-Gruppen werden für jede E-Mail-Variante einmal versendet und werden zugestellt, wenn Ihr Benutzer diese bestimmte Variante zum ersten Mal erhält. Bei geplanten Nachrichten ist dies in der Regel der erste Zeitpunkt, an dem die Kampagne startet. Bei aktionsbasierten oder API-getriggerten Kampagnen ist dies der Zeitpunkt, an dem dem ersten Nutzer:innen eine Nachricht gesendet wird.
 
 Wenn Ihre Kampagne multivariat ist und Ihre Variante einen Sendeanteil von 0% hat, wird sie nicht an Seed-Gruppen gesendet. Wenn die Variante bereits versendet wurde und nicht unter **Seed-Gruppen bearbeiten** im Schritt **Ziel** aktualisiert wurde, wird sie außerdem standardmäßig nicht erneut versendet.
 
@@ -101,11 +109,10 @@ Wenn Ihre Kampagne multivariat ist und Ihre Variante einen Sendeanteil von 0% ha
 Wenn Sie eine wiederkehrende Kampagne haben und eine der Varianten aktualisiert wird, können Sie wählen, ob Sie nur an die aktualisierten Varianten oder an alle Varianten erneut senden möchten, oder ob Sie den Versand an die Seed-Gruppe beim Update deaktivieren möchten.
 {% endalert %}
 
-\![Die Seed-Gruppe "E-Mail-Seed-Test" wurde ausgewählt, um die E-Mail-Kampagne der Variante 1 zu erhalten.]({% image_buster /assets/img_archive/seed_group_campaign.png %})
+![Die Seed-Gruppe "E-Mail-Seed-Test" wurde ausgewählt, um die E-Mail-Kampagne der Variante 1 zu erhalten.]({% image_buster /assets/img_archive/seed_group_campaign.png %})
 
 #### Für Canvas
 
-Seed-Gruppen in Canvas funktionieren ähnlich wie jede getriggerte Kampagne. Braze erkennt automatisch alle Schritte, die eine E-Mail-Nachricht enthalten, und sendet an diese, wenn Ihr Benutzer zum ersten Mal diesen bestimmten E-Mail-Schritt erreicht.
+Seed-Gruppen in Canvas funktionieren ähnlich wie jede getriggerte Kampagne. Braze erkennt automatisch alle Schritte, die eine Nachricht per E-Mail enthalten, und sendet an diese, wenn Ihr Nutzer:innen zum ersten Mal diesen bestimmten Schritt per E-Mail erreicht.
 
-Wenn ein E-Mail-Schritt aktualisiert wurde, nachdem die Seed-Gruppe gemailt wurde, wird die Option angeboten, nur an aktualisierte Schritte zu senden, an alle Schritte oder die Seeds zu deaktivieren.
-
+Wenn ein E-Mail-Schritt aktualisiert wurde, nachdem die Seed-Gruppe gemailt wurde, bietet Braze die Möglichkeit, nur an aktualisierte Schritte zu senden, an alle Schritte oder die Seeds zu deaktivieren.

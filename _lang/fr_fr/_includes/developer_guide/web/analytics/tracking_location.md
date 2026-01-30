@@ -24,7 +24,7 @@ Désormais, lorsque des données sont envoyées à Braze, le SDK peut automatiqu
 
 Pour suivre en continu l'emplacement/localisation d'un utilisateur pendant le chargement d'une page, utilisez la méthode de géolocalisation de l'API [`watchPosition()`](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition) de l'API de géolocalisation. L'appel de cette méthode invitera immédiatement l'utilisateur à autoriser ou non le suivi (à moins qu'il ne l'ait déjà fait).
 
-En cas d'abonnement, un rappel de succès sera désormais invoqué chaque fois que leur emplacement/localisation sera mis à jour.
+En cas d'abonnement, un rappel de réussite sera désormais invoqué chaque fois que leur emplacement/localisation sera mis à jour.
 
 ```javascript
 function success(position) {

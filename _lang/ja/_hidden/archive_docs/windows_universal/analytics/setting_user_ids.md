@@ -1,13 +1,13 @@
 ---
-nav_title: ユーザー ID の設定
-article_title: Windows UniversalのユーザーIDを設定する
+nav_title: ユーザーIDを設定する
+article_title: WindowsユニバーサルのユーザーIDを設定する
 platform: Windows Universal
 page_order: 1
 description: "このリファレンス記事では、WindowsユニバーサルプラットフォームでユーザーIDを設定する方法について説明する。"
 hidden: true
 ---
 
-# ユーザー ID の設定
+# ユーザーIDを設定する
 {% multi_lang_include archive/windows_deprecation.md %}
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}

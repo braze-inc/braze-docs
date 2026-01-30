@@ -1,17 +1,19 @@
 ---
-nav_title: "Suppression d'utilisateurs"
-article_title: "Suppression d'utilisateurs"
+nav_title: Supprimer les utilisateurs
+article_title: Supprimer les utilisateurs
 page_order: 4.2
 toc_headers: h2
-description: "Découvrez comment supprimer un utilisateur individuel ou un segment d'utilisateurs directement via le tableau de bord Braze." 
+description: "Découvrez comment supprimer un utilisateur individuel ou un segment d'utilisateurs directement via le tableau de bord Braze."
+alias: /delete_users/
+hidden: true
 ---
 
-# Suppression d'utilisateurs
+# Supprimer les utilisateurs
 
 > Découvrez comment supprimer un utilisateur individuel ou un segment d'utilisateurs directement via le tableau de bord Braze.
 
 {% alert important %}
-Cette fonctionnalité est actuellement en accès anticipé. Contactez votre gestionnaire de satisfaction client si vous souhaitez participer.
+L'accès anticipé à cette fonctionnalité est temporairement fermé. Contactez votre gestionnaire satisfaction client pour plus de détails.
 {% endalert %}
 
 ## Conditions préalables
@@ -37,7 +39,7 @@ Vous pouvez supprimer un [utilisateur individuel](#delete-individual) ou un [seg
 
 Pour supprimer un utilisateur individuel de Braze, allez dans **Audience** > **Rechercher des utilisateurs**, puis recherchez et sélectionnez un utilisateur. Si vous supprimez un profil utilisateur en double, vérifiez que vous avez sélectionné le bon.
 
-La page 'Recherche d'utilisateurs' dans Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
+![La page "Recherche d'utilisateurs" dans Braze.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/search_user.png %}){: style="max-width:75%;"}
 
 {% alert warning %}
 Les suppressions effectuées par un seul utilisateur sont permanentes : les fichiers ne peuvent pas être récupérés après leur suppression.  
@@ -45,7 +47,7 @@ Les suppressions effectuées par un seul utilisateur sont permanentes : les fich
 
 Sur la page de son profil, sélectionnez <i class="fa-solid fa-ellipsis-vertical"></i> **Afficher les options** > **Supprimer l'utilisateur.** Gardez à l'esprit que la suppression complète de l'utilisateur dans Braze peut prendre quelques minutes.
 
-Un utilisateur dans Braze avec le menu des ellipses verticales ouvert, montrant l'option de suppression de l'utilisateur.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
+![Un utilisateur dans Braze avec le menu à ellipses verticales ouvert, montrant l'option de suppression de l'utilisateur.]({% image_buster /assets/img/audience_management/deleting_users/delete_user.png %}){: style="max-width:85%;"}
 
 ### Suppression d'une segmentation {#delete-segment}
 
@@ -53,15 +55,15 @@ Si vous ne l'avez pas encore fait, [créez une segmentation]({{site.baseurl}}/us
 
 Dans Braze, allez dans **Audience** > **Gérer l'audience**, puis sélectionnez l'onglet **Supprimer des utilisateurs.** 
 
-L'onglet "Supprimer des utilisateurs" dans la section "Gérer l'audience" du tableau de bord de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![L'onglet "Supprimer des utilisateurs" dans la section "Gérer l'audience" du tableau de bord de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 Sélectionnez **Supprimer des utilisateurs**, choisissez le segment à supprimer, puis sélectionnez **Suivant.**
 
-\![Une fenêtre pop-up avec un segment choisi pour la suppression.]({% image_buster /assets/img/audience_management/deleting_users/choose_segment_to_delete.png %}){: style="max-width:75%;"}
+![Une fenêtre pop-up avec un segment choisi pour la suppression.]({% image_buster /assets/img/audience_management/deleting_users/choose_segment_to_delete.png %}){: style="max-width:75%;"}
 
 Tapez **DELETE** pour confirmer votre demande, puis sélectionnez **Delete users**.
 
-La page de confirmation avec 'DELETE' tapé dans la case de confirmation.]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
+![La page de confirmation avec "DELETE" tapé dans la case de confirmation.]({% image_buster /assets/img/audience_management/deleting_users/confirm_segment_delete.png %}){: style="max-width:75%;"}
 
 Les utilisateurs de ce segment ne seront pas supprimés immédiatement. Au lieu de cela, ils seront marqués comme étant en attente de suppression pendant les 7 prochains jours. Passé ce délai, elles seront supprimées et nous vous enverrons un e-mail pour vous en informer.
 
@@ -73,15 +75,15 @@ Pour s'assurer que ces utilisateurs précis sont supprimés indépendamment des 
 
 Vous disposez d'un délai de 7 jours pour annuler les segmentations en cours. Pour annuler, allez dans **Audience** > **Gérer l'audience**, puis sélectionnez l'onglet **Supprimer les utilisateurs.** 
 
-L'onglet "Supprimer des utilisateurs" dans la section "Gérer l'audience" du tableau de bord de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![L'onglet "Supprimer des utilisateurs" dans la section "Gérer l'audience" du tableau de bord de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 En regard d'une segmentation en attente de suppression, sélectionnez <i class="fa-solid fa-eye"></i> pour ouvrir les détails de l'enregistrement de suppression.
 
-Une segmentation est en cours dans l'onglet 'Supprimer des utilisateurs'.]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![Suppression d'un segment en attente dans l'onglet "Supprimer des utilisateurs".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 Dans les détails de l'enregistrement de suppression, sélectionnez **Annuler suppression**.
 
-La fenêtre 'Détails de l'enregistrement de suppression' dans l'onglet 'Supprimer des utilisateurs'.]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
+![La fenêtre "Détails de l'enregistrement de suppression" de l'onglet "Supprimer des utilisateurs".]({% image_buster /assets/img/audience_management/deleting_users/deletion_record_details.png %}){: style="max-width:55%;"}
 
 {% alert tip %}
 Lorsque la suppression en bloc d'utilisateurs est en cours, vous pouvez l'annuler à tout moment. Toutefois, les utilisateurs déjà supprimés avant l'annulation ne peuvent pas être rétablis.
@@ -91,7 +93,7 @@ Lorsque la suppression en bloc d'utilisateurs est en cours, vous pouvez l'annule
 
 Vous pouvez vérifier l'état d'une suppression à l'aide des [filtres d'](#segment-filters) [audience](#manage-audience), de la page de [gestion de l'audience](#manage-audience) ou des [rapports d'événements de sécurité](#security-event-report).
 
-### Filtres de segmentation
+### Filtres de segment
 
 Lorsque vous demandez la suppression d'un segment d'utilisateurs, un [filtre de segment]({{site.baseurl}}/user_guide/engagement_tools/segments/managing_segments/#filters) appelé **Suppression en attente** est automatiquement créé. Vous pouvez l'utiliser pour :
 
@@ -107,27 +109,27 @@ Pour obtenir la liste exacte des utilisateurs qui seront supprimés, utilisez pl
 
 Allez dans **Audience** > **Gérer l'audience**, puis sélectionnez l'onglet **Supprimer des utilisateurs.** 
 
-L'onglet "Supprimer des utilisateurs" dans la section "Gérer l'audience" du tableau de bord de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
+![L'onglet "Supprimer des utilisateurs" dans la section "Gérer l'audience" du tableau de bord de Braze.]({% image_buster /assets/img/audience_management/deleting_users/delete_users_tab.png %}){: style="max-width:85%;"}
 
 Sur cette page, vous trouverez les informations générales suivantes pour toutes les suppressions en cours et en attente :
 
-| Champ d'application | Description |
+| Champ | Description |
 |-------|-------------|
-| Date de la demande | La date à laquelle la demande a été faite à l'origine. Utilisez-le avec le filtre **Suppression en cours** pour obtenir la liste des profils en cours de suppression. |
+| Date de la demande | La date à laquelle la demande a été faite à l'origine. Utilisez-le avec le filtre **Suppression en attente** pour obtenir la liste des profils en attente de suppression. |
 | Demandeur | L'utilisateur qui a initié la demande de suppression. |
 | Nom du segment | Nom du segment utilisé pour sélectionner les utilisateurs en attente de suppression. |
-| Statut | Indique si la demande de suppression est en attente, en cours ou terminée. |  
+| État | Indique si la demande de suppression est en attente, en cours ou terminée. |  
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Pour plus de détails sur une demande spécifique, sélectionnez <i class="fa-solid fa-eye"></i> pour afficher les détails de l'enregistrement de suppression. Vous pouvez également y [annuler les suppressions de segments en cours](#cancel).
 
-Une segmentation est en cours dans l'onglet 'Supprimer des utilisateurs'.]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
+![Suppression d'un segment en attente dans l'onglet "Supprimer des utilisateurs".]({% image_buster /assets/img/audience_management/deleting_users/pending_deletion.png %})
 
 ### Rapport sur les événements de sécurité
 
 Vous pouvez également vérifier l'état des suppressions précédentes en téléchargeant un rapport d'événement de sécurité. Pour plus d'informations, voir [Paramètres de sécurité]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/#security-event-report).
 
-## Questions fréquemment posées {#faq}
+## Foire aux Questions {#faq}
 
 ### Puis-je supprimer des segmentations comptant plus de 100 millions d'utilisateurs ?
 
@@ -135,7 +137,7 @@ Non. Vous ne pouvez pas supprimer les segmentations qui comptent plus de 100 mil
 
 ### La fusion automatisée des utilisateurs a-t-elle une incidence sur la suppression des utilisateurs ?
 
-Si une fusion planifiée inclut des profils utilisateurs en attente de suppression, Braze ignore ces profils et ne les fusionne pas. Pour fusionner ces profils, vous devez les empêcher d'être supprimés.
+Si une fusion planifiée comprend des profils utilisateurs en attente de suppression, Braze ignore ces profils et ne les fusionne pas. Pour fusionner ces profils, vous devez les empêcher d'être supprimés.
 
 ### Qu'advient-il des données envoyées aux utilisateurs en attente de suppression ?
 

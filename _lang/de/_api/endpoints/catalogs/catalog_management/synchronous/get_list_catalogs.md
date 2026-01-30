@@ -12,7 +12,7 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Kataloge aufl
 {% api %}
 # Kataloge auflisten
 {% apimethod get %}
-/catalogs
+/Kataloge
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um eine Liste der Kataloge in einem Arbeitsbereich zurückzugeben.
@@ -23,7 +23,7 @@ description: "Dieser Artikel beschreibt Details zum Braze-Endpunkt Kataloge aufl
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `catalogs.get`.
 
-## Preisgrenze
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
@@ -43,7 +43,7 @@ curl --location --request GET 'https://rest.iad-03.braze.com/catalogs' \
 
 ### Beispiel für eine erfolgreiche Antwort
 
-Der Statuscode `200` könnte den folgenden Antwortkörper zurückgeben.
+Der Status Code `200` könnte den folgenden Antwortkörper zurückgeben.
 
 ```json
 {

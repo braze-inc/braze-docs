@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 목록 환경 설정 센터"
+nav_title: "GET: 선호 센터 목록"
 article_title: "GET: 목록 환경 설정 센터"
 search_tag: Endpoint
 page_order: 2
@@ -18,7 +18,7 @@ description: "이 기사는 Braze 엔드포인트에 대한 목록 기본 설정
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dd8f6667-5eba-4e19-a29e-ba74644c0b8e {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `preference_center.list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 

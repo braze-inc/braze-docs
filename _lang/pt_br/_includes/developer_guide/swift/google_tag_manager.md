@@ -2,7 +2,7 @@
 
 ## Uso do Google Tag Manager para Swift
 
-No exemplo a seguir, um app de streaming de música deseja registrar diferentes eventos à medida que os usuários ouvem as músicas. Usando o Google Tag Manager para iOS, eles podem controlar quais fornecedores terceirizados do Braze recebem esse evento e criar tags específicas para o Braze.
+No exemplo a seguir, um app de streaming de música deseja registrar diferentes eventos à medida que os usuários ouvem as músicas. Usando o Google Tag Manager para iOS, eles podem controlar quais dos fornecedores terceirizados do Braze recebem esse evento e criar tags específicas para o Braze.
 
 ### Etapa 1: Criar um disparador para eventos personalizados
 
@@ -18,13 +18,13 @@ Em seguida, crie uma nova tag (também conhecida como "Chamada de função") e i
 Ao enviar um evento personalizado, defina `actionType` como `logEvent` e defina um valor para `eventName` para que o Braze receba o nome correto do evento e a ação a ser tomada.
 {% endalert %}
 
-![Uma tag no Google Tag Manager com classpath e campos de par de valores chave. Esta tag está configurada para disparar com o gatilho "música tocada" criado anteriormente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
+![Uma tag no Google Tag Manager com classpath e campos de par de valores chave. Essa tag é definida para disparar com o acionador "música tocada" criado anteriormente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 Você também pode incluir argumentos adicionais de pares de valores-chave na tag, que serão enviados como propriedades de eventos personalizados para o Braze. `eventName` e `actionType` não serão ignorados nas propriedades de eventos personalizados. Na tag do exemplo a seguir, passe em `genre`, que foi definida usando uma variável de tag no Google Tag Manager e originada do evento personalizado registrado no app.
 
 A propriedade do evento `genre` é enviada ao Google Tag Manager como uma variável "Firebase - Event Parameter", pois o Google Tag Manager para iOS usa o Firebase como camada de dados.
 
-![Uma variável no Google Tag Manager onde "genre" é adicionado como um parâmetro de evento para a tag "Braze - Evento de Música Tocada".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
+![Uma variável no Google Tag Manager em que o "gênero" é adicionado como um parâmetro de evento para a tag "Braze - Played Song Event".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
 
 Quando um usuário reproduzir uma música no app, registre um evento no Firebase e no Google Tag Manager usando o nome do evento de análise de dados do Firebase que corresponda ao nome do disparo da tag, `played song`:
 
@@ -38,7 +38,7 @@ Analytics.logEvent("played song", parameters: parameters)
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"genre" : @"pop",
@@ -61,7 +61,7 @@ let parameters: [String: Any] = ["customAttributeKey": "favoriteSong",
 FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
 ```
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"customAttributeKey" : @"favoriteSong",
@@ -84,7 +84,7 @@ let parameters: [String: Any] = ["externalUserId": "favorite userId"]
 Analytics.logEvent(withName:"changeUser", parameters: parameters)
 ```
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"externalUserId" : userId};
@@ -103,7 +103,7 @@ Depois que o Google Tag Manager estiver instalado em seu app, adicione um proved
 
 Não se esqueça de notar o "Class Path" (caminho da classe) para o arquivo - é isso que você digitará ao configurar uma tag no console do [Google Tag Manager](https://tagmanager.google.com/).
 
-Este exemplo destaca uma das muitas maneiras de estruturar seu provedor de tags personalizadas. Especificamente, ele mostra como determinar qual método do SDK do Braze deve ser chamado com base no par de valores-chave `actionType` enviado pela tag GTM. Este exemplo pressupõe que você atribuiu a instância da Braze como uma variável no AppDelegate.
+Este exemplo destaca uma das muitas maneiras de estruturar seu provedor de tags personalizadas. Especificamente, ele mostra como determinar qual método do Braze SDK deve ser chamado com base no par de valores-chave `actionType` enviado pela tag GTM. Este exemplo pressupõe que você atribuiu a instância da Braze como uma variável no AppDelegate.
 
 Os `actionType` suportados neste exemplo são `logEvent`, `customAttribute` e `changeUser`, mas você pode preferir alterar a forma como seu provedor de tags trata os dados do Google Tag Manager.
 {% tabs %}
@@ -182,7 +182,7 @@ final class BrazeGTMTagManager : NSObject, TAGCustomFunction {
 }
 ```
 {% endtab %}
-{% tab OBJECTIVO-C %}
+{% tab OBJECTIVE-C %}
 Adicione o seguinte código ao seu arquivo `BrazeGTMTagManager.h`:
 
 ```obj-c

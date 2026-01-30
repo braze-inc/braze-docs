@@ -1,5 +1,5 @@
 ---
-nav_title: Localisations et géorepérages
+nav_title: Emplacements/localisations et géorepérages
 article_title: Localisations et géorepérages pour iOS
 platform: iOS
 page_order: 6
@@ -27,14 +27,14 @@ Depuis iOS 14, les géorepérages ne fonctionnent pas de manière fiable pour l
 
 Pour utiliser pleinement notre stratégie de synchronisation par géorepérage, vous devez activer le [push en arrière-plan]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work) en plus de réaliser l'intégration push standard.
 
-## Étape 2 : Activer les géorepérages
+## Étape 2 : Activer les géorepérages
 
 Par défaut, les géorepérages sont activées en fonction de l’activation ou non de la collecte automatique des emplacements. Vous pouvez activer les géorepérages en utilisant le fichier `Info.plist`. Ajouter le dictionnaire `Braze` à votre fichier `Info.plist`. À l’intérieur du dictionnaire `Braze`, ajoutez la sous-entrée booléenne `EnableGeofences` et réglez la valeur sur `YES`. Notez qu’avant le SDK Braze pour iOS v4.0.2, la clé du dictionnaire `Appboy` doit être utilisée à la place de `Braze`.
 
 Vous pouvez également activer les géorepérages au démarrage de l'application à l'aide de la méthode [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) méthode. Dans le dictionnaire `appboyOptions`, paramétrez `ABKEnableGeofencesKey` sur `YES`. Par exemple :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -72,7 +72,7 @@ La fonctionnalité Géorepérages est uniquement fonctionnelle quand l’autoris
 Pour demander l’autorisation de localisation `Always`, utilisez le code suivant :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
@@ -111,7 +111,7 @@ Pour que les localisations fonctionnent correctement, vous devez également vér
 Vous pouvez également désactiver les demandes automatiques de géorepérage au démarrage de l’application via la méthode [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24). Dans le dictionnaire `appboyOptions`, paramétrez `ABKDisableAutomaticGeofenceRequestsKey` sur `YES`. Par exemple :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -142,7 +142,7 @@ Lorsque le SDK Braze demande aux géorepérages de surveiller depuis le backend,
 Pour contrôler l’emplacement signalé par le SDK afin de recevoir les géorepérages les plus pertinentes, à partir de la version 3.21.3 du SDK iOS, vous pouvez demander manuellement des géorepérages en fournissant la latitude et la longitude d’une localisation. Il est recommandé de désactiver les demandes automatiques de géorepérage lors de l’utilisation de cette méthode. Pour ce faire, utilisez le code suivant :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] requestGeofencesWithLongitude:longitude

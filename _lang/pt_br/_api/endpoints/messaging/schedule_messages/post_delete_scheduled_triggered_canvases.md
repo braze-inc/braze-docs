@@ -16,7 +16,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Excluir telas progr
 
 > O ponto de extremidade de exclusão de agendamento permite cancelar uma mensagem que você agendou anteriormente por meio de Canvas disparados pela API antes que ela seja enviada.
 
-As mensagens programadas ou os disparos que forem excluídos muito perto ou durante o horário em que deveriam ser enviados serão atualizados com os melhores esforços, de modo que as exclusões de último segundo poderão ser aplicadas a todos, alguns ou nenhum dos usuários direcionados.
+As mensagens programadas ou os disparos que são excluídos perto ou durante o horário em que deveriam ser enviados são atualizados com os melhores esforços, de modo que o Braze pode aplicar exclusões de último segundo a todos, alguns ou nenhum de seus usuários direcionados.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parâmetro | Obrigatória | Tipo de dados | Descrição |
 | --------- | ---------| --------- | ----------- |
-| `canvas_id`| Obrigatória | String | Veja [identificador da canva]({{site.baseurl}}/api/identifier_types/). |
+| `canvas_id`| Obrigatória | String | Consulte [Identificador do Canva]({{site.baseurl}}/api/identifier_types/). |
 | `schedule_id` | Obrigatória | String | O endereço `schedule_id` a ser excluído (obtido da resposta à programação de criação). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 

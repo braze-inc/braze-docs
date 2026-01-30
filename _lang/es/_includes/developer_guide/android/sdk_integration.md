@@ -13,8 +13,8 @@ repositories {
 A continuación, añade Braze a tus dependencias.
 
 {% tabs local %}
-{% tab sólo base %}
-Si no piensas utilizar componentes de interfaz de usuario Braze, añade el siguiente código a tu página `build.gradle`. Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
+{% tab base only %}
+Si no piensas utilizar componentes Braze UI, añade el siguiente código a tu página `build.gradle`. Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
 dependencies {
@@ -24,7 +24,7 @@ dependencies {
 ```
 {% endtab %}
 
-{% tab con componentes ui %}
+{% tab with ui components %}
 Si piensas utilizar componentes de interfaz de usuario Braze más adelante, añade el siguiente código a tu sitio `build.gradle`.  Sustituye `SDK_VERSION` por la versión actual de tu SDK Braze para Android. Para ver la lista completa de versiones, consulta [el Registro de cambios]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
@@ -82,7 +82,7 @@ Mientras está habilitada la inicialización retardada, se cancelan todas las co
 La inicialización retardada está desactivada por predeterminado. Para habilitarlo, utiliza una de las siguientes opciones:
 
 {% tabs %}
-{% tab Archivo XML Braze %}
+{% tab Braze XML file %}
 En el archivo `braze.xml` de tu proyecto, establece `com_braze_enable_delayed_initialization` en `true`.
 
 ```xml
@@ -90,7 +90,7 @@ En el archivo `braze.xml` de tu proyecto, establece `com_braze_enable_delayed_in
 ```
 {% endtab %}
 
-{% tab En tiempo de ejecución %}
+{% tab At runtime %}
 Para habilitar la inicialización retardada en tiempo de ejecución, utiliza el siguiente método.
 
 {% subtabs %}
@@ -121,7 +121,7 @@ Cuando se habilita la inicialización retardada, los análisis push se ponen en 
 Para poner en cola explícitamente los análisis push, elige una de las siguientes opciones:
 
 {% tabs %}
-{% tab Archivo XML Braze %}
+{% tab Braze XML file %}
 En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics_behavior` en `QUEUE`:
 
 ```xml
@@ -129,7 +129,7 @@ En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics
 ```
 {% endtab %}
 
-{% tab En tiempo de ejecución %}
+{% tab At runtime %}
 Añade `QUEUE` a tu [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) método:
 
 {% subtabs %}
@@ -156,7 +156,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 Para abandonar los análisis push, elige una de las siguientes opciones:
 
 {% tabs %}
-{% tab Archivo XML Braze %}
+{% tab Braze XML file %}
 En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics_behavior` en `DROP`: 
 
 ```xml
@@ -164,7 +164,7 @@ En tu archivo `braze.xml`, establece `com_braze_delayed_initialization_analytics
 ```
 {% endtab %}
 
-{% tab En tiempo de ejecución %}
+{% tab At runtime %}
 Añade `DROP` al [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) método:
 
 {% subtabs %}
@@ -249,7 +249,7 @@ Para ver la lista de parámetros disponibles, consulta [`BrazeActivityLifecycleC
 También puedes utilizar [el Depurador SDK]({{site.baseurl}}/developer_guide/debugging) para diagnosticar problemas del SDK.
 {% endalert %}
 
-Si tienes problemas durante las pruebas, habilita el [registro detallado](#android_enabling-logs) y utiliza logcat para detectar las llamadas a `openSession` y `closeSession` que faltan en tus actividades.
+Si tienes problemas durante las pruebas, habilita el [registro detallado](#android_enabling-logs) y utiliza logcat para detectar las llamadas a `openSession` y `closeSession` que falten en tus actividades.
 
 1. En Braze, ve a **Resumen**, selecciona tu aplicación y, en el desplegable **Mostrar datos para**, elige **Hoy**.
     ![La página "Resumen" en Braze, con el campo "Mostrar datos para" ajustado a "Hoy".]({% image_buster /assets/img_archive/android_sessions.png %})
@@ -380,7 +380,7 @@ Habilita los registros detallados antes de cualquier otra llamada en `Applicatio
 {% endalert %}
 
 {% tabs local %}
-{% tab Aplicación %}
+{% tab Application %}
 Para habilitar los registros directamente en tu aplicación, añade lo siguiente al método `onCreate()` de tu aplicación antes de cualquier otro método.
 
 {% subtabs local %}

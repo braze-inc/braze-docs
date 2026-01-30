@@ -1,6 +1,6 @@
 ## Mise en place d'un suivi des désinstallations
 
-### Étape 1 : Mise en place du FCM
+### Étape 1 : Mise en place du FCM
 
 Le SDK Android Braze utilise Firebase Cloud Messaging (FCM) pour envoyer des notifications push silencieuses, qui sont utilisées pour collecter des analyses/analytiques de suivi de désinstallation. Si ce n'est pas déjà fait, [configurez]({{site.baseurl}}/developer_guide/platforms/android/push_notifications/#setting-up-push-notifications) ou [migrez vers l']({{site.baseurl}}/developer_guide/push_notifications/?sdktab=android) API Firebase Cloud Messaging pour les notifications push.
 

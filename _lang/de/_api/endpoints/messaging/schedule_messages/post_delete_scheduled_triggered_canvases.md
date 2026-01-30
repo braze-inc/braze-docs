@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Geplante, API-getriggerte Canvase löschen"
+nav_title: "POST: Löschen Sie geplante, durch APIs getriggerte Canvase"
 article_title: "POST: Geplante, API-getriggerte Canvase löschen"
 search_tag: Endpoint
 page_order: 4
@@ -11,12 +11,12 @@ description: "Dieser Artikel beschreibt die Details des durch APIs getriggerten 
 {% api %}
 # Löschen Sie geplante, durch APIs getriggerte Canvase
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/canvas/trigger/schedule/delete
+/canvas/triggern/zeitplan/loeschen
 {% endapimethod %}
 
 > Mit dem Endpunkt Zeitplan löschen können Sie eine Nachricht stornieren, die Sie zuvor mit API-getriggerten Canvase geplant haben, bevor sie versendet wurde.
 
-Geplante Nachrichten oder Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, gelöscht werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Löschungen in letzter Sekunde für alle, einige oder keinen Ihrer Targeting Nutzer:innen vorgenommen werden können.
+Geplante Nachrichten oder Trigger, die kurz vor oder während der Zeit, zu der sie gesendet werden sollten, gelöscht werden, werden nach bestem Wissen und Gewissen aktualisiert, so dass Braze möglicherweise in letzter Sekunde alle, einige oder keinen Ihrer Targeting Nutzer:innen löscht.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 

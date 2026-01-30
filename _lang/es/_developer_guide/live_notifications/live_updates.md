@@ -6,6 +6,7 @@ description: "Aprende a configurar las Actualizaciones en vivo para el SDK Braze
 platform: 
   - Android
   - FireOS
+hidden: true
 ---
 
 # Actualizaciones en vivo para Android

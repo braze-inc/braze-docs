@@ -18,7 +18,7 @@ channel: email
 
 Diese Methode bestätigt, dass die IP-Adresse, von der aus Braze E-Mails versendet, berechtigt ist, in Ihrem Namen E-Mails zu versenden. SPF ist Ihre Basisauthentifizierung und wird durch die Veröffentlichung der Texteinträge in den DNS-Einstellungen erreicht. Der empfangende Server überprüft die DNS-Einträge und stellt fest, ob sie authentisch sind. Diese Methode dient dazu, den E-Mail-Absender zu überprüfen.
 
-Ihr SPF-Eintrag wird eingerichtet, wenn Braze Ihre IPs und Domains konfiguriert - abgesehen vom Hinzufügen der DNS-Einträge, die wir Ihnen zur Verfügung stellen, ist keine weitere Aktion erforderlich.
+Braze richtet Ihren SPF-Eintrag ein, wenn wir Ihre IPs und Domains konfigurieren. Außer dem Hinzufügen der DNS-Einträge, die wir Ihnen zur Verfügung stellen, brauchen Sie nichts weiter zu unternehmen.
 
 ### Domain Keys Identified Mail (DKIM)
 
@@ -26,13 +26,13 @@ Diese Methode bestätigt, dass Ihre Braze-Domain berechtigt ist, E-Mails in Ihre
 
 Braze signiert die E-Mail mit Ihrem geheimen privaten Schlüssel. Die ISP überprüfen die Signatur anhand des öffentlichen Schlüssels in Ihrem benutzerdefinierten DNS-Eintrag. Keine zwei Signaturen sind exakt gleich, und nur mit Ihrem öffentlichen Schlüssel kann die Signatur des privaten Schlüssels verifiziert werden.
 
-Ihr DKIM-Eintrag wird eingerichtet, wenn Braze Ihre IPs und Domains konfiguriert - abgesehen vom Hinzufügen der DNS-Einträge, die wir Ihnen zur Verfügung stellen, sind keine weiteren Maßnahmen erforderlich.
+Braze richtet Ihren DKIM-Eintrag ein, wenn wir Ihre IPs und Domains konfigurieren. Außer dem Hinzufügen der DNS-Einträge, die wir Ihnen zur Verfügung stellen, brauchen Sie nichts weiter zu unternehmen.
 
 ### Domänenbasierte Nachrichtenauthentifizierung, Berichterstattung und Konformität (DMARC)
 
 [Domain-based Message Authentication, Reporting & Conformance (DMARC)](https://dmarc.org/) ist ein E-Mail-Authentifizierungsprotokoll, mit dem Absender die Legitimität ihrer Nachrichten nachweisen können, was das Vertrauen der Mailbox-Empfänger stärkt und die Annahme von Nachrichten fördert. Mit DMARC können E-Mail-Absender festlegen, wie mit E-Mails verfahren werden soll, die nicht per Sender Policy Framework (SPF) oder Domain Keys Identified Mail (DKIM) authentifiziert worden sind. Dabei wird überprüft, ob sowohl die SPF- als auch die DKIM-Prüfung bestanden worden sind. 
 
-Absender können Postfachanbieter anweisen, wie sie mit E-Mails verfahren sollen, die ihre Signatur- oder Authentifizierungsprüfung nicht bestanden haben. Fehlversuche können darauf hindeuten, dass Dritte versuchen, Sie oder Ihre E-Mail zu imitieren. Absender können Mailbox-Anbieter anweisen, Mails abzulehnen oder in Quarantäne zu stellen, und sogar automatische Berichte über Mails senden, die nicht geprüft wurden. Auf diese Weise können Mailbox-Anbieter Spammer besser identifizieren und verhindern, dass böswillige E-Mails in die Postfächer eindringen. Gleichzeitig werden falsch-positive Ergebnisse minimiert und bessere Authentifizierungsberichte für mehr Transparenz auf dem Markt bereitgestellt.
+Absender weisen Mailbox-Anbieter an, wie sie mit E-Mails umgehen sollen, die die Signatur- oder Authentifizierungsprüfung nicht bestehen. Fehlschläge können auf Spoofing hinweisen. Sie können Provider anweisen, fehlerhafte E-Mails abzulehnen oder in Quarantäne zu stellen und automatisierte Berichte zu versenden. Dies hilft Anbietern, Spammer zu identifizieren, bösartige E-Mails zu blockieren, Fehlalarme zu minimieren und die Transparenz der Authentifizierungsberichte zu verbessern.
 
 #### Funktionsweise
 
@@ -40,7 +40,7 @@ Für DMARC müssen Sie einen DMARC-Eintrag in Ihrem Domain Naming System (DNS) v
 
 Ein DMARC-Eintrag weist E-Mail-Server außerdem an, XML-Berichte an die im DMARC-Datensatz angegebene E-Mail-Adresse zurückzuschicken. Die Berichte geben Aufschluss darüber, wie sich Ihre E-Mails durch das System bewegen und ermöglichen die Erkennung von Versuchen, Ihre E-Mail-Domain für den Versand von E-Mails zu nutzen.
 
-Die Richtlinie in Ihrem DMARC-Eintrag teilt dem teilnehmenden E-Mail-Empfängerserver mit, wie mit E-Mails verfahren werden soll, die SPF und DKIM nicht bestehen, aber behaupten, von Ihrer Domain zu stammen. Braze empfiehlt, eine DMARC-Richtlinie für die Root-Domain festzulegen, die dann auf alle Subdomains angewendet wird. Das bedeutet, dass für alle aktuellen und neuen Subdomains in Zukunft keine zusätzliche Einrichtung erforderlich ist. Es gibt drei Arten von Richtlinien, die Sie festlegen können:
+Legen Sie eine DMARC-Richtlinie für die Root Domain fest, so dass sie für alle Subdomains gilt. Dadurch wird eine zusätzliche Einrichtung auf aktuellen und zukünftigen Subdomains vermieden. Sie können eine der folgenden Richtlinien festlegen:
 
 | Richtlinie | Impact |
 | --- | --- |
@@ -63,5 +63,5 @@ Wenn Sie zum Beispiel Google Mail verwenden, gehen Sie folgendermaßen vor:
 2. Wählen Sie **Original anzeigen**.
 3. Prüfen Sie, ob der **DMARC**-Status auf "PASS" lautet.
 
-![Eine E-Mail, die den DMARC-Wert "PASS" enthält.]({% image_buster /assets/img_archive/dmarc_example.png %})
+![Eine E-Mail, die als DMARC-Wert "PASS" enthält.]({% image_buster /assets/img_archive/dmarc_example.png %})
 

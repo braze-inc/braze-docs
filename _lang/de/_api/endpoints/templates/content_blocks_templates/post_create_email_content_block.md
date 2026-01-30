@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Content-Blöck
 {% api %}
 # Content-Block erstellen
 {% apimethod post %}
-/inhalt_blöcke/erstellen
+/content_blocks/create
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um einen [Content-Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) zu erstellen.
@@ -21,7 +21,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Content-Blöck
 ## Voraussetzungen
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/api_key/) mit der Berechtigung `content_blocks.create`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -70,8 +70,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/cre
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) Your newly generated block id,
   "liquid_tag": (string) The generated block tag from the Content Block name,
@@ -89,7 +87,7 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `Content cannot be blank` | |
 | `Content must be a string` | Achten Sie darauf, dass Ihr Inhalt in Anführungszeichen (`""`) eingeschlossen ist. |
 | `Content must be smaller than 50kb` | Der Inhalt Ihres Content-Blocks muss insgesamt weniger als 50 KB groß sein. |
-| `Content contains malformed liquid` | Das angegebene Liquid ist ungültig oder nicht parsbar. Versuchen Sie es erneut mit einem gültigen Liquid oder wenden Sie sich an den Support. |
+| `Content contains malformed liquid` | Das angegebene Liquid ist ungültig oder nicht parsbar. Versuchen Sie es erneut mit einem gültigen Liquid oder kontaktieren Sie den Support. |
 | `Content Block cannot be referenced within itself` | |
 | `Content Block description cannot be blank` | |
 | `Content Block description must be a string` | Achten Sie darauf, dass die Beschreibung Ihres Content-Blocks in Anführungszeichen (`""`) eingeschlossen ist. |

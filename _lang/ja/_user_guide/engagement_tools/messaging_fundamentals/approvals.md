@@ -1,7 +1,7 @@
 ---
 nav_title: 承認
 article_title: 承認
-page_order: 2
+page_order: 1
 page_type: reference
 description: "このリファレンス記事では、キャンペーンとキャンバスが持つことのできるさまざまなステータスと、その意味について概要を説明します。"
 tool:

@@ -10,16 +10,16 @@ description: "Cette page d'atterrissage abrite tout ce qui concerne les notifica
 > [Les notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) vous permettent d'envoyer des notifications depuis votre appli lorsque des événements importants se produisent. Vous pouvez envoyer une notification push lorsque vous avez de nouveaux messages instantanés à envoyer, des alertes d’actualité à envoyer ou le dernier épisode de l’émission télévisée préférée de votre utilisateur prêt à être téléchargé pour un visionnage hors ligne. Ils sont également plus efficaces que la récupération en arrière-plan, car votre application n'est lancée que lorsque c'est nécessaire.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/push_notifications.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/push_notifications.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab android tv %}
@@ -50,7 +50,7 @@ description: "Cette page d'atterrissage abrite tout ce qui concerne les notifica
 {% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin)%}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}
 {% endsdktabs %}

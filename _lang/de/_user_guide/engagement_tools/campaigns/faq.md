@@ -38,6 +38,12 @@ Eine mögliche Erklärung könnte sein, dass die Kampagne oder Canvas die Wieder
 
 Wenn Sie z.B. ein Canvas haben, das sowohl iOS- als auch Web-Push-Benachrichtigungen enthält, könnte ein bestimmter Benutzer mit einem mobilen und einem Desktop-Gerät mehr als eine Nachricht erhalten.
 
+### Warum kann die Zahl der Konversionen bei Multichannel-Kampagnen die Zahl der eindeutigen Nutzer:innen übersteigen?
+
+Bei Kampagnen mit mehreren Kanälen zählt Braze die Konversionen pro Kanal, nicht pro Nutzer:innen. Wenn ein Nutzer eine einzelne Konversion innerhalb des Konversionsfensters durchführt, attributiert Braze diese Konversion jedem Kanal, von dem der Nutzer eine Nachricht erhalten hat. Das heißt, wenn ein Nutzer:innen Nachrichten über mehrere Kanäle erhält (z.B. sowohl E-Mail als auch Push) und konvertiert, zählt Braze mehrere Konversionen, eine für jeden Kanal. Daher kann die Gesamtzahl der Konversionen die Anzahl der eindeutigen Nutzer:innen übersteigen, die konvertiert haben.
+
+Wenn eine Multichannel-Kampagne beispielsweise sowohl eine E-Mail als auch eine Push-Benachrichtigung an einen Nutzer sendet und dieser Nutzer eine Konversion durchführt, nachdem er beide Nachrichten erhalten hat und innerhalb des Konversionsfensters, zählt Braze dies als zwei Konversionen, von denen eine der E-Mail und eine der Push-Benachrichtigung zugerechnet wird, obwohl es sich um eine einzige Aktion desselben Nutzers handelt.
+
 ### Warum hat meine Kampagne eine kleinere erreichbare Nutzerbasis als das Segment, das ich für die Kampagne verwende?
 
 Wenn Sie eine [globale Kontrollgruppe]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) eingerichtet haben, verhindert dies, dass ein bestimmter Prozentsatz Ihrer erreichbaren Zielgruppe Kampagnen erhält. Das bedeutet, dass die Anzahl der erreichbaren Nutzer für Ihr Segment manchmal größer sein kann als die Anzahl der erreichbaren Nutzer für Ihre Kampagne, selbst wenn die Kampagne dasselbe Segment verwendet.
@@ -136,6 +142,14 @@ Wenn Sie die Option **CSV-Export von E-Mail-Adressen** wählen, werden nur Daten
 ### Kann ich nach einer Kampagne anhand ihrer API-Kennung suchen?
 
 Ja, verwenden Sie den Filter `api_id:YOUR_API_ID` auf der Seite **Kampagnen**, um nach einer Kampagne anhand ihrer API-Kennung zu suchen. Weitere Informationen finden Sie unter [Suche nach Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/).
+
+### Warum werden Leerzeichen in Eingabefeldern anders dargestellt als in angezeigtem Text? 
+
+Die Behandlung von Leerzeichen unterscheidet sich zwischen Eingabefeldern und angezeigten Textkomponenten aufgrund des CSS-Stylings. In Textkomponenten mit dem Standard-CSS `white-space: normal` werden mehrere aufeinanderfolgende Leerzeichen bei der Anzeige zu einem einzigen Leerzeichen zusammengefasst. Dies ist das Standardverhalten von HTML für gerenderten Text. 
+
+Eingabefelder behalten mehrere Leerzeichen genau so bei, wie Sie sie eingeben, denn Sie müssen die genauen Abstände sehen und bearbeiten können, um die Daten korrekt einzugeben. Das bedeutet, dass Text mit mehreren Leerzeichen anders aussehen kann, wenn er in einem Eingabefeld angezeigt wird (wo alle Leerzeichen erhalten bleiben), als wenn er in anderen Teilen des Dashboards angezeigt wird (wo CSS mehrere Leerzeichen ausblenden kann). 
+
+Wenn Sie zum Beispiel einen Kampagnennamen oder einen UTM-Parameter mit mehreren Leerzeichen in ein Eingabefeld eingeben, bleiben alle Leerzeichen erhalten. Wenn derselbe Text jedoch in Suchergebnissen, Kampagnenlisten oder anderen Textkomponenten erscheint, können mehrere Leerzeichen aufgrund der CSS-Whitespace-Behandlung als ein einziges Leerzeichen erscheinen. 
 
 ### Was ist der Unterschied zwischen API-Kampagnen und API-getriggerten Kampagnen?
 

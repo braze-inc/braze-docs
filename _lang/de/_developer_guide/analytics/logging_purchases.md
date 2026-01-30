@@ -1,6 +1,6 @@
 ---
-nav_title: Käufe protokollieren
-article_title: Protokollierung von Einkäufen über das Braze SDK
+nav_title: Einkäufe protokollieren
+article_title: Einkäufe über das Braze SDK protokollieren
 page_order: 3.2
 description: "Erfahren Sie, wie Sie Einkäufe über das Braze SDK protokollieren können."
 
@@ -14,11 +14,28 @@ description: "Erfahren Sie, wie Sie Einkäufe über das Braze SDK protokollieren
 Für Wrapper-SDKs, die nicht aufgeführt sind, verwenden Sie stattdessen die entsprechende native Android- oder Swift-Methode.
 {% endalert %}
 
+Jede gemeldete Nicht-USD-Währung wird in Braze in USD angezeigt, basierend auf dem Wechselkurs an dem Tag, an dem sie gemeldet wurde. Um eine Konversion zu verhindern, codieren Sie die Währung fest in USD.
+
 ## Käufe und Einnahmen protokollieren
 
 Um Käufe und Umsätze zu protokollieren, rufen Sie `logPurchase()` nach einem erfolgreichen Kauf in Ihrer App auf. Wenn der Bezeichner des Produkts leer ist, wird der Kauf nicht in Braze protokolliert.
 
 {% tabs %}
+{% tab web %}
+Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
+
+```javascript
+braze.logPurchase(product_id, price, "USD", quantity);
+```
+
+Wenn Sie stattdessen Google Tag Manager verwenden möchten, können Sie den Tag-Typ **Purchase** verwenden, um die [Methode`logPurchase` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) aufzurufen. Verwenden Sie dieses Tag, um Käufe zu tracken, und schließen Sie optional Kauf-Eigenschaften ein. Um dies zu tun:
+
+1. Die Felder **Produkt-ID** und **Preis** sind erforderlich.
+2. Verwenden Sie den Button **Zeile hinzufügen**, um Kauf-Eigenschaften hinzuzufügen.
+
+![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Enthaltene Einstellungen sind "Tag-Typ", "externe ID", "Preis", "Währungscode", "Menge" und "Kauf-Details".]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -48,7 +65,7 @@ Braze.getInstance(context).logPurchase(
 {% endsubtabs %}
 {% endtab %}
 
-{% tab schnell %}
+{% tab swift %}
 {% subtabs %}
 {% subtab swift %}
 
@@ -69,21 +86,6 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Internet %}
-Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
-
-```javascript
-braze.logPurchase(product_id, price, "USD", quantity);
-```
-
-Wenn Sie stattdessen Google Tag Manager verwenden möchten, können Sie den Tag-Typ **Purchase** verwenden, um die [Methode`logPurchase` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) aufzurufen. Verwenden Sie dieses Tag, um Käufe zu tracken, und schließen Sie optional Kauf-Eigenschaften ein. Um dies zu tun:
-
-1. Die Felder **Produkt-ID** und **Preis** sind erforderlich.
-2. Verwenden Sie den Button **Zeile hinzufügen**, um Kauf-Eigenschaften hinzuzufügen.
-
-![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Zu den Einstellungen gehören "Tag-Typ", "Externe ID", "Preis", "Währungscode", "Menge" und "Kauf-Eigenschaften".]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
-{% endtab %}
-
 {% tab cordova %}
 
 ```javascript
@@ -94,7 +96,7 @@ BrazePlugin.logPurchase("PRODUCT_ID", 10, "USD", 5, properties);
 
 {% endtab %}
 
-{% tab flattern %}
+{% tab flutter %}
 
 ```dart
 braze.logPurchase(productId, currencyCode, price, quantity, properties: properties);
@@ -102,7 +104,7 @@ braze.logPurchase(productId, currencyCode, price, quantity, properties: properti
 
 {% endtab %}
 
-{% tab React Native %}
+{% tab react native %}
 
 ```javascript
 Braze.logPurchase(productId, price, currencyCode, quantity, properties);
@@ -118,18 +120,10 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
-```
-
-{% endtab %}
-
-{% tab Unreal Engine %}
-
-```cpp
-UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 ```
 
 {% endtab %}
@@ -144,54 +138,7 @@ UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 Sie können Metadaten über Käufe hinzufügen, indem Sie ein Wörterbuch mit den Werten `Int`, `Double`, `String`, `Bool` oder `Date` übergeben.
 
 {% tabs %}
-{% tab android %}
-{% subtabs %}
-{% subtab java %}
-
-```java
-BrazeProperties purchaseProperties = new BrazeProperties();
-purchaseProperties.addProperty("key", "value");
-Braze.getInstance(context).logPurchase(..., purchaseProperties);
-```
-
-{% endsubtab %}
-{% subtab kotlin %}
-
-```kotlin
-val purchaseProperties = BrazeProperties()
-purchaseProperties.addProperty("key", "value")
-Braze.getInstance(context).logPurchase(..., purchaseProperties)
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-
-{% tab schnell %}
-{% subtabs %}
-{% subtab swift %}
-
-```swift
-let purchaseProperties = ["key": "value"]
-AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price, properties: purchaseProperties)
-```
-
-{% endsubtab %}
-{% subtab objective-c %}
-
-```objc
-NSDictionary *purchaseProperties = @{@"key": @"value"};
-[AppDelegate.braze logPurchase:@"product_id"
-                      currency:@"USD"
-                         price:price
-                   properties:purchaseProperties];
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-
-{% tab Internet %}
+{% tab web %}
 Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
 
 ```javascript
@@ -217,6 +164,53 @@ items: [{
 Wenn Sie nur `item_brand` und `item_name` als Kaufeigenschaften übergeben möchten, fügen Sie einfach diese beiden Felder zur Tabelle der Kaufeigenschaften hinzu. Wenn Sie keine Eigenschaften angeben, werden auch keine Kauf-Eigenschaften im Aufruf [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) an Braze gesendet.
 {% endtab %}
 
+{% tab android %}
+{% subtabs %}
+{% subtab java %}
+
+```java
+BrazeProperties purchaseProperties = new BrazeProperties();
+purchaseProperties.addProperty("key", "value");
+Braze.getInstance(context).logPurchase(..., purchaseProperties);
+```
+
+{% endsubtab %}
+{% subtab kotlin %}
+
+```kotlin
+val purchaseProperties = BrazeProperties()
+purchaseProperties.addProperty("key", "value")
+Braze.getInstance(context).logPurchase(..., purchaseProperties)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab swift %}
+{% subtabs %}
+{% subtab swift %}
+
+```swift
+let purchaseProperties = ["key": "value"]
+AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: price, properties: purchaseProperties)
+```
+
+{% endsubtab %}
+{% subtab objective-c %}
+
+```objc
+NSDictionary *purchaseProperties = @{@"key": @"value"};
+[AppDelegate.braze logPurchase:@"product_id"
+                      currency:@"USD"
+                         price:price
+                   properties:purchaseProperties];
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
 {% tab cordova %}
 
 ```javascript
@@ -227,7 +221,7 @@ BrazePlugin.logPurchase("PRODUCT_ID", 10, "USD", 5, properties);
 
 {% endtab %}
 
-{% tab flattern %}
+{% tab flutter %}
 
 ```dart
 braze.logPurchase(productId, currencyCode, price, quantity, properties: {"key": "value"});
@@ -235,7 +229,7 @@ braze.logPurchase(productId, currencyCode, price, quantity, properties: {"key": 
 
 {% endtab %}
 
-{% tab React Native %}
+{% tab react native %}
 
 ```javascript
 Braze.logPurchase(productId, price, currencyCode, quantity, { key: "value" });
@@ -251,7 +245,7 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 
 ```csharp
 Dictionary<string, object> purchaseProperties = new Dictionary<string, object>
@@ -259,17 +253,6 @@ Dictionary<string, object> purchaseProperties = new Dictionary<string, object>
     { "key", "value" }
 };
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), purchaseProperties);
-```
-
-{% endtab %}
-
-{% tab Unreal Engine %}
-
-```cpp
-TMap<FString, FString> PurchaseProperties;
-PurchaseProperties.Add(TEXT("key"), TEXT("value"));
-
-UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quantity, PurchaseProperties);
 ```
 
 {% endtab %}

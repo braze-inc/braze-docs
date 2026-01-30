@@ -28,7 +28,7 @@ search_rank: 4
 
 <br>
 
-Sie können diesem Leitfaden folgen oder sich bei [Braze Lernangebote](https://learning.braze.com) Lernangebote ansehen, wie z.B. unsere Lernpfade [für Marketer](https://learning.braze.com/path/marketer) und [Entwickler](https://learning.braze.com/path/developer):in.
+Sie können diesem Leitfaden folgen, oder Sie können sich bei [Braze Learning](https://learning.braze.com) nach geführten Kursen umsehen, wie z.B. unsere Lernpfade [für Marketer](https://learning.braze.com/path/marketer) und [Entwickler](https://learning.braze.com/path/developer).
 
 
 <br><br>

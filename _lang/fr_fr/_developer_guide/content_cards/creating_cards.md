@@ -1,5 +1,5 @@
 ---
-nav_title: Création de cartes
+nav_title: Créer des cartes
 article_title: Créer des cartes de contenu
 page_order: 0
 description: "Cet article couvre les composants de la création d'une interface utilisateur personnalisée pour les cartes de contenu."
@@ -14,31 +14,33 @@ platform:
 
 # Créer des cartes de contenu
 
-> Cet article présente l'approche de base que vous utiliserez lors de la mise en œuvre de cartes de contenu type bannière, ainsi que trois cas d'utilisation courants : des images de bannière, une boîte de réception de messages et un carrousel d'images. Il suppose que vous avez déjà lu les autres articles du guide de personnalisation de la carte de contenu pour comprendre ce qui peut être fait par défaut et ce qui nécessite un code personnalisé. Il est particulièrement utile de comprendre comment [enregistrer les analyses/analytiques]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) pour vos cartes de contenu personnalisées. 
+> Cet article présente l'approche de base que vous utiliserez pour mettre en œuvre des cartes de contenu personnalisées, ainsi que trois cas d'utilisation courants. Il suppose que vous avez déjà lu les autres articles du guide de personnalisation de la carte de contenu pour comprendre ce qui peut être fait par défaut et ce qui nécessite un code personnalisé. Il est particulièrement utile de comprendre comment [enregistrer les analyses/analytiques]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) pour vos cartes de contenu personnalisées. 
+
+{% multi_lang_include banners/content_card_alert.md %}
 
 ## Création d'une carte
 
 ### Étape 1 : Créer une IU personnalisée 
 
 {% tabs local %}
-{% tab Android %}
-
-Tout d'abord, créez votre propre fragment personnalisé. Le [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) par défaut n'est conçu que pour gérer les types de cartes de contenu par défaut, mais il constitue un bon point de départ.
-
-{% endtab %}
-{% tab iOS %}
-
-Tout d'abord, créez votre propre composant de contrôleur de visualisation personnalisé. Le [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) par défaut n'est conçu que pour gérer les types de cartes de contenu par défaut, mais il constitue un bon point de départ.
-
-{% endtab %}
-{% tab Web %}
+{% tab web %}
 
 Tout d'abord, créez votre composant HTML personnalisé qui sera utilisé pour afficher les cartes. 
 
 {% endtab %}
+{% tab android %}
+
+Tout d'abord, créez votre propre fragment personnalisé. Le [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) par défaut n'est conçu que pour gérer les types de cartes de contenu par défaut, mais il constitue un bon point de départ.
+
+{% endtab %}
+{% tab swift %}
+
+Tout d'abord, créez votre propre composant de contrôleur de visualisation personnalisé. Le [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) par défaut n'est conçu que pour gérer les types de cartes de contenu par défaut, mais il constitue un bon point de départ.
+
+{% endtab %}
 {% endtabs %}
 
-### Étape 2 : S'abonner aux mises à jour de la carte
+### Étape 2 : S'abonner aux mises à jour de la carte
 
 Ensuite, enregistrez une fonction de rappel pour [vous abonner aux mises à jour des données]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#listening-for-card-updates) lorsque les cartes sont actualisées. 
 
@@ -54,11 +56,11 @@ Pour tester votre carte de contenu :
 2. Dans Braze, allez dans **Campagnes**, puis [créez une nouvelle campagne de cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
 3. Dans votre campagne, sélectionnez **Test**, puis saisissez l'adresse `user-id` de l'utilisateur test. Lorsque vous êtes prêt, sélectionnez **Envoyer le test.** Vous pourrez bientôt lancer une carte de contenu sur votre appareil.
 
-![Une campagne de cartes de contenu de Braze montrant que vous pouvez ajouter votre propre ID d'utilisateur en tant que destinataire test pour tester votre carte de contenu.]({% image_buster /assets/img/react-native/content-card-test.png %} "Test de campagne de cartes de contenu")
+![Une campagne de carte de contenu Braze indiquant que vous pouvez ajouter votre propre ID utilisateur en tant que destinataire de test pour tester votre carte de contenu.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## Placements des cartes de contenu
 
-Les cartes de contenu peuvent être utilisées de différentes manières. Trois applications courantes consistent à les utiliser comme centre de message, bannière publicitaire ou carrousel d'images. Pour chacun de ces placements, vous attribuerez des [paires clé-valeur]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (la propriété `extras` dans le modèle de données) à vos cartes de contenu et, en fonction des valeurs, vous ajusterez dynamiquement le comportement, l'apparence ou la fonctionnalité de la carte au cours de l'exécution. 
+Les cartes de contenu peuvent être utilisées de différentes manières. Trois applications courantes consistent à les utiliser comme centre de message, comme annonce d'image dynamique ou comme carrousel d'images. Pour chacun de ces placements, vous attribuerez des [paires clé-valeur]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (la propriété `extras` dans le modèle de données) à vos cartes de contenu et, en fonction des valeurs, vous ajusterez dynamiquement le comportement, l'apparence ou la fonctionnalité de la carte au cours de l'exécution. 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -73,19 +75,19 @@ Par exemple, vous pouvez créer deux cartes de message : un appel à l'action po
 Les clés telles que `body`, `title` et `buttonText` peuvent comporter des valeurs de chaînes de caractères simples que vos marketeurs peuvent définir. Les clés telles que `terms` peuvent avoir des valeurs qui fournissent une petite collection de phrases approuvées par votre service juridique. Les clés telles que `style` et `class_type` ont des valeurs de chaînes de caractères que vous pouvez définir pour déterminer le rendu de votre carte sur votre application ou votre site.
 
 {% tabs local %}
-{% tab Recommandations de lecture %}
+{% tab Reading recommendations %}
 Paires clé-valeur pour la carte de recommandation de lecture :
 
 | Clé         | Valeur                                                                |
 |------------|----------------------------------------------------------------------|
 | `body`       | Ajoutez vos centres d'intérêt à votre profil Politer Weekly pour obtenir des recommandations de lecture personnalisées. |
 | `style`      | info                                                                 |
-| `class_type` | centre_de_notification                                                 |
+| `class_type` | notification_center                                                 |
 | `card_priority` | 1                                                                 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
-{% tab Coupon pour les nouveaux utilisateurs abonnés %}
+{% tab New subscriber coupon %}
 Paires clé-valeur pour un nouveau coupon d'utilisateur abonné :
 
 | Clé         | Valeur                                                            |
@@ -94,14 +96,14 @@ Paires clé-valeur pour un nouveau coupon d'utilisateur abonné :
 | `body`       | Offre spéciale de fin d'été - 10 % de réduction sur les jeux Politer              |
 | `buttonText` | S'abonner                                                    |
 | `style`      | promotion                                                            |
-| `class_type` | centre_de_notification                                              |
+| `class_type` | notification_center                                              |
 | `card_priority` | 2                                                              |
-| `terms`      | nouveaux_abonnés_seulement                                             |
+| `terms`      | new_subscribers_only                                             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 {% endtabs %}
 
-{% details Informations complémentaires pour Android %}
+{% details Additional information for Android %}
 
 Dans le SDK Android et FireOS, la logique du centre de messages est pilotée par la valeur `class_type` qui est fournie par les paires clé-valeur de Braze. En utilisant la méthode [`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/), vous pouvez filtrer et identifier ces types de classes.
 
@@ -237,8 +239,8 @@ Pour mettre en place un carrousel de cartes de contenu :
 Si vous implémentez un carrousel en tant que flux secondaire de cartes de contenu, veillez à [trier les cartes dans le flux approprié à l'aide de paires clé-valeur]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 {% endalert %}
 
-### Bannière
+### Image seulement
 
-Les cartes de contenu n'ont pas besoin de ressembler à des "cartes". Par exemple, les cartes de contenu peuvent prendre la forme d'une bannière dynamique qui s'affiche de manière continue sur votre page d'accueil ou en haut des pages désignées.
+Les cartes de contenu n'ont pas besoin de ressembler à des "cartes". Par exemple, les cartes de contenu peuvent prendre la forme d'une image dynamique qui s'affiche en permanence sur votre page d'accueil ou en haut des pages désignées.
 
-Pour ce faire, vos marketeurs créeront une campagne ou une étape du canvas avec un type de carte de contenu **Image Only.**  Ensuite, définissez les paires clé-valeur qui conviennent à l'utilisation des [cartes de contenu en tant que contenu supplémentaire]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).
+Pour ce faire, vos marketeurs créeront une campagne ou une étape du canvas avec une carte de contenu de type **Image Only.**  Ensuite, définissez les paires clé-valeur qui conviennent à l'utilisation des [cartes de contenu en tant que contenu supplémentaire]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).

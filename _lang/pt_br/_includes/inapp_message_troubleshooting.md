@@ -52,7 +52,7 @@ Se você tiver definido um delegado de mensagem no app para lidar manualmente co
 
 2. Se a campanha for disparada por um início de sessão ou por um evento personalizado, é preciso garantir que esse evento ou sessão esteja ocorrendo com frequência suficiente para disparar a mensagem. Verifique esses dados nas páginas [Overview (Visão geral)]({{site.baseurl}}/user_guide/data_and_analytics/analytics/understanding_your_app_usage_data/#understanding-your-app-usage-data) (para dados de sessão) ou [Custom Events (Eventos personalizados)]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting):
 
-![Página de eventos personalizados mostrando um gráfico do número de vezes que o evento personalizado Added to Favorites ocorreu em um período de um mês]({% image_buster /assets/img_archive/trouble5.png %})
+![A página Eventos personalizados mostra um gráfico do número de vezes que o evento personalizado Adicionado aos favoritos ocorreu em um período de um mês]({% image_buster /assets/img_archive/trouble5.png %})
 
 ### As impressões são mais baixas do que costumavam ser
 
@@ -60,7 +60,7 @@ Se você tiver definido um delegado de mensagem no app para lidar manualmente co
 
 ![Link para visualizar o changelog na página Detalhes da campanha com sete alterações desde a última vez que o usuário visualizou a campanha]({% image_buster /assets/img_archive/trouble4.png %})
 
-2. Certifique-se de não reutilizar seu evento de gatilho em uma campanha de mensagens no app separada com uma prioridade mais alta.
+2. Certifique-se de não ter reutilizado seu evento de gatilho em uma campanha de mensagens no app separada com uma prioridade mais alta.
 
 ## Solução de problemas avançada {#troubleshooting-in-app-advanced}
 
@@ -75,10 +75,10 @@ O SDK solicita mensagens no app dos servidores da Braze no início da sessão. P
 1. Adicione-se como um [usuário teste]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) no dashboard.
 2. Configure uma campanha de mensagens no app direcionada ao seu usuário.
 3. Confira se uma nova sessão está ocorrendo em seu aplicativo.
-4. Use o [registro de usuários de eventos]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para verificar se o dispositivo está solicitando mensagens no app no início da sessão. Encontre a solicitação do SDK associada ao evento de início de sessão do usuário teste.
+4. Use o registro [event user logs]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para verificar se o dispositivo está solicitando mensagens no app no início da sessão. Encontre a solicitação do SDK associada ao evento de início de sessão do usuário teste.
   - Se o seu app foi projetado para solicitar mensagens no app disparadas, você deverá ver `trigger` no campo **Respostas solicitadas** em **Dados de resposta**.
   - Se o seu app foi projetado para solicitar mensagens originais no app, você deverá ver `in_app` no campo **Respostas solicitadas** em **Dados de resposta**.
-5. Use os registros de usuários de eventos]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para verificar se as mensagens no app corretas estão sendo retornadas nos dados de resposta.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. Use o [registro de usuários de eventos]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para verificar se as mensagens no app corretas estão sendo retornadas nos dados de resposta.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 ##### Solução de problemas de mensagens que não estão sendo solicitadas
 
@@ -91,11 +91,11 @@ Se suas mensagens no app não estiverem sendo solicitadas, seu app pode não est
 Se suas mensagens no app não estiverem sendo retornadas, é provável que haja um problema de direcionamento de campanha:
 
 1. Seu segmento não contém seu usuário.
-  - Verifique a guia [\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) do seu usuário para ver se o segmento correto aparece em **Segments (Segmentos)**.
+  - Verifique a guia [\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) do seu usuário para ver se o segmento correto aparece em **Segments (Segmentos**).
 2. Seu usuário já recebeu anteriormente a mensagem no app e não era elegível para recebê-la novamente.
-  - Verifique as [configurações de reelegibilidade da campanha]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) na etapa **Delivery (Entrega)** do **criador da campanha** e certifique-se de que as configurações de reelegibilidade estejam alinhadas com sua configuração de teste.
+  - Verifique as [configurações de reelegibilidade da campanha]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) na etapa **Entrega** do **criador da campanha** e certifique-se de que as configurações de reelegibilidade estejam alinhadas com sua configuração de teste.
 3. Seu usuário atingiu o limite de frequência da campanha.
-  - Verifique as configurações de limite de frequência da campanha]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) e certifique-se de que estejam alinhadas com sua configuração de teste.
+  - Verifique as configurações da campanha [limite de frequência]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) e certifique-se de que estejam alinhadas com sua configuração de teste.
 4. Se havia um grupo de controle na campanha, seu usuário pode ter caído no grupo de controle.
   - É possível verificar se isso aconteceu criando um segmento com um filtro de variante de campanha recebida, em que a variante de campanha está definida como **Controle**, e verificando se o usuário se enquadra nesse segmento.
   - Ao criar campanhas para fins de teste de integração, é importante não aceitar a adição de um grupo de controle.

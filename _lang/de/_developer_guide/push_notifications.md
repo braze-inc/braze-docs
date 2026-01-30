@@ -10,16 +10,16 @@ description: "Auf dieser Landing Page finden Sie alles rund um Push-Benachrichti
 > [Push-Benachrichtigungen]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) ermöglichen es Ihnen, von Ihrer App aus Benachrichtigungen über wichtige Ereignisse zu versenden. Sie können eine Push-Benachrichtigung senden, wenn Sie neue Nachrichten zugestellt haben, aktuelle Nachrichten senden oder die neueste Folge der Lieblingssendung Ihres Nutzers:innen zum Herunterladen für die Offline-Nutzung bereitstellen. Sie sind auch effizienter als Hintergrundabrufe, da Ihre Anwendung nur bei Bedarf gestartet wird.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/push_notifications.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/push_notifications.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/push_notifications.md %}
 {% endsdktab %}
 
 {% sdktab android tv %}
@@ -50,7 +50,7 @@ description: "Auf dieser Landing Page finden Sie alles rund um Push-Benachrichti
 {% multi_lang_include developer_guide/unity/push_notifications.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin)%}
 {% multi_lang_include developer_guide/xamarin/push_notifications.md %}
 {% endsdktab %}
 {% endsdktabs %}

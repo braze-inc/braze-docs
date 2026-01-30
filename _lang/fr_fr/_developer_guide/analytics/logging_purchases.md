@@ -1,12 +1,12 @@
 ---
-nav_title: Enregistrer les achats
-article_title: Enregistrement des achats via le SDK de Braze
+nav_title: Achats de journaux
+article_title: Enregistrer les achats via le SDK de Braze
 page_order: 3.2
 description: "Découvrez comment enregistrer des achats via le SDK de Braze."
 
 ---
 
-# Enregistrer les achats
+# Achats de journaux
 
 > Apprenez à enregistrer les achats in-app via le SDK de Braze, afin de pouvoir déterminer vos chiffres d'affaires au fil du temps et selon les différentes sources. Vous pourrez ainsi segmenter les utilisateurs [en fonction de leur valeur vie en]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking) utilisant des événements personnalisés, des attributs personnalisés et des événements d'achat.
 
@@ -14,11 +14,28 @@ description: "Découvrez comment enregistrer des achats via le SDK de Braze."
 Pour les SDK wrapper non répertoriés, utilisez plutôt la méthode native Android ou Swift correspondante.
 {% endalert %}
 
+Toute devise autre que le dollar américain s'affichera dans Braze en dollars américains, sur la base du taux de change en vigueur à la date de la déclaration. Pour éviter la conversion des devises, codifiez en dur la devise en USD.
+
 ## Enregistrement des achats et des chiffres d'affaires
 
 Pour enregistrer les achats et les chiffres d'affaires, appelez `logPurchase()` après un achat réussi dans votre application. Si l’identifiant du produit est vide, l’achat ne sera pas enregistré sur Braze.
 
 {% tabs %}
+{% tab web %}
+Pour une implémentation standard du SDK Web, vous pouvez utiliser la méthode suivante :
+
+```javascript
+braze.logPurchase(product_id, price, "USD", quantity);
+```
+
+Si vous souhaitez utiliser Google Tag Manager à la place, vous pouvez utiliser le type d'étiquette **Purchase** pour appeler la [méthode`logPurchase` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase). Utilisez cette balise pour suivre les achats avec Braze, y compris, en option, les propriétés d’achat. Pour ce faire :
+
+1. Les champs **ID produit** et **Prix** sont obligatoires.
+2. Utilisez le bouton **Ajouter une ligne** pour ajouter des propriétés d'achat.
+
+![Une boîte de dialogue affichant les paramètres de configuration de la balise d’action de Braze. Les paramètres inclus sont les suivants : « type de balise », « ID externe », « prix », « code de devise », « quantité » et « propriétés d’achat ».]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -69,21 +86,6 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-Pour une implémentation standard du SDK Web, vous pouvez utiliser la méthode suivante :
-
-```javascript
-braze.logPurchase(product_id, price, "USD", quantity);
-```
-
-Si vous souhaitez utiliser Google Tag Manager à la place, vous pouvez utiliser le type d'étiquette **Purchase** pour appeler la [méthode`logPurchase` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase). Utilisez cette balise pour suivre les achats avec Braze, y compris, en option, les propriétés d’achat. Pour ce faire :
-
-1. Les champs **ID produit** et **Prix** sont obligatoires.
-2. Utilisez le bouton **Ajouter une ligne** pour ajouter des propriétés d'achat.
-
-![Une boîte de dialogue affichant les paramètres de configuration de la balise d’action de Braze. Les paramètres inclus sont le "type d'étiquette", l'"ID externe", le "prix", le "code devise", la "quantité" et les "propriétés d'achat".]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
-{% endtab %}
-
 {% tab cordova %}
 
 ```javascript
@@ -94,7 +96,7 @@ BrazePlugin.logPurchase("PRODUCT_ID", 10, "USD", 5, properties);
 
 {% endtab %}
 
-{% tab Flutter %}
+{% tab flutter %}
 
 ```dart
 braze.logPurchase(productId, currencyCode, price, quantity, properties: properties);
@@ -102,7 +104,7 @@ braze.logPurchase(productId, currencyCode, price, quantity, properties: properti
 
 {% endtab %}
 
-{% tab React native %}
+{% tab react native %}
 
 ```javascript
 Braze.logPurchase(productId, price, currencyCode, quantity, properties);
@@ -118,18 +120,10 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
-```
-
-{% endtab %}
-
-{% tab moteur irréel %}
-
-```cpp
-UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 ```
 
 {% endtab %}
@@ -144,6 +138,32 @@ UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 Vous pouvez ajouter des métadonnées sur les achats en transmettant un dictionnaire contenant les valeurs `Int`, `Double`, `String`, `Bool` ou `Date`.
 
 {% tabs %}
+{% tab web %}
+Pour une implémentation standard du SDK Web, vous pouvez utiliser la méthode suivante :
+
+```javascript
+braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
+```
+
+Si votre site enregistre les achats à l'aide de l'élément de couche de données d'[événement e-commerce](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) standard dans Google Tag Manager, vous pouvez utiliser le type d'étiquette **E-commerce Purchase.**  Ce type d’action enregistre un « achat » séparé dans Braze pour chaque article envoyé dans la liste de `items`.
+
+Vous pouvez également préciser les noms supplémentaires des propriétés que vous souhaitez inclure comme propriétés d’achat en spécifiant leurs clés dans la liste des Propriétés d’achat. Veuillez remarquer que Braze observe la personne `item` qui est enregistrée pour toute propriété d’achat que vous ajoutez à la liste.
+
+Par exemple, si l'on considère la charge utile suivante pour le commerce électronique :
+
+```
+items: [{
+  item_name: "5 L WIV ECO SAE 5W/30",
+  item_id: "10801463",
+  price: 24.65,
+  item_brand: "EUROLUB",
+  quantity: 1
+}]
+```
+
+Si vous souhaitez transmettre uniquement`item_brand` et `item_name` comme propriétés d’achat, il vous suffit d’ajouter ces deux champs au tableau des propriétés d’achat. Si vous ne fournissez pas de propriétés, aucune propriété d'achat ne sera envoyée dans l'appel à Braze. [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) à Braze.
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -191,32 +211,6 @@ NSDictionary *purchaseProperties = @{@"key": @"value"};
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-Pour une implémentation standard du SDK Web, vous pouvez utiliser la méthode suivante :
-
-```javascript
-braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
-```
-
-Si votre site enregistre les achats à l'aide de l'élément de couche de données d'[événement e-commerce](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) standard dans Google Tag Manager, vous pouvez utiliser le type d'étiquette **E-commerce Purchase.**  Ce type d’action enregistre un « achat » séparé dans Braze pour chaque article envoyé dans la liste de `items`.
-
-Vous pouvez également préciser les noms supplémentaires des propriétés que vous souhaitez inclure comme propriétés d’achat en spécifiant leurs clés dans la liste des Propriétés d’achat. Veuillez remarquer que Braze observe la personne `item` qui est enregistrée pour toute propriété d’achat que vous ajoutez à la liste.
-
-Par exemple, si l'on considère la charge utile suivante pour le commerce électronique :
-
-```
-items: [{
-  item_name: "5 L WIV ECO SAE 5W/30",
-  item_id: "10801463",
-  price: 24.65,
-  item_brand: "EUROLUB",
-  quantity: 1
-}]
-```
-
-Si vous souhaitez transmettre uniquement`item_brand` et `item_name` comme propriétés d’achat, il vous suffit d’ajouter ces deux champs au tableau des propriétés d’achat. Si vous ne fournissez pas de propriétés, aucune propriété d'achat ne sera envoyée dans l'appel à Braze. [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) à Braze.
-{% endtab %}
-
 {% tab cordova %}
 
 ```javascript
@@ -227,7 +221,7 @@ BrazePlugin.logPurchase("PRODUCT_ID", 10, "USD", 5, properties);
 
 {% endtab %}
 
-{% tab Flutter %}
+{% tab flutter %}
 
 ```dart
 braze.logPurchase(productId, currencyCode, price, quantity, properties: {"key": "value"});
@@ -235,7 +229,7 @@ braze.logPurchase(productId, currencyCode, price, quantity, properties: {"key": 
 
 {% endtab %}
 
-{% tab React native %}
+{% tab react native %}
 
 ```javascript
 Braze.logPurchase(productId, price, currencyCode, quantity, { key: "value" });
@@ -251,7 +245,7 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 
 ```csharp
 Dictionary<string, object> purchaseProperties = new Dictionary<string, object>
@@ -262,22 +256,11 @@ AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), purchase
 ```
 
 {% endtab %}
-
-{% tab moteur irréel %}
-
-```cpp
-TMap<FString, FString> PurchaseProperties;
-PurchaseProperties.Add(TEXT("key"), TEXT("value"));
-
-UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quantity, PurchaseProperties);
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Ajout d’une quantité
 
-Par défaut, `quantity` est défini comme `1`. Toutefois, vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois lors d'un même passage en caisse. Pour ajouter une quantité, transmettez à `quantity` une valeur `Int` comprise dans l'intervalle de `[0, 100]`.
+Par défaut, `quantity` est défini comme `1`. Toutefois, vous pouvez ajouter une quantité à vos achats si les clients effectuent le même achat plusieurs fois lors d'un même passage en caisse. Pour ajouter une quantité, transmettez une valeur `Int` à `quantity`.
 
 ### Utiliser l'API REST
 

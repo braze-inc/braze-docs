@@ -10,7 +10,7 @@
 
 먼저 `played song` 과 동일한 `eventName` 을 찾는 트리거를 만듭니다.
 
-![Google 태그 관리자의 사용자 지정 트리거는 '이벤트 이름'이 '재생된 노래'와 같을 때 일부 이벤트에 대해 트리거되도록 설정합니다.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
+![Google Tag Manager의 커스텀 트리거는 'eventName'이 'played song'과 같을 때 일부 이벤트에 대해 트리거되도록 설정됩니다.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
 그런 다음 새 태그("함수 호출"이라고도 함)를 만들고 이 글의 뒷부분에 설명된 [커스텀 태그 제공업체의](#adding-ios-google-tag-provider) 클래스 경로를 입력합니다. 이 태그는 `played song` 이벤트를 기록할 때 트리거됩니다. `eventName` 이 `played song` 으로 설정되어 있으므로 Braze에 기록되는 커스텀 이벤트 이름으로 사용됩니다.
 
@@ -20,7 +20,7 @@
 
 ![클래스 경로 및 키-값 페어 필드에서 Google Tag Manager의 태그. 이 태그는 이전에 생성된 'played song' 트리거로 트리거되도록 설정됩니다.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
-태그에 추가적인 키-값 페어 인수를 포함할 수 있습니다. 그러면 Braze에 커스텀 이벤트 속성정보로 전송됩니다. `eventName` 및 `actionType`은 커스텀 이벤트 속성정보에 대해 무시되지 않습니다. 다음 예제 태그에서는 Google Tag Manager의 태그 변수를 사용하여 정의하고 앱에 기록된 커스텀 이벤트에서 소싱한 `genre` 을 전달합니다.
+태그에 추가적인 키-값 페어 인수를 포함할 수 있습니다. 그러면 Braze에 커스텀 이벤트 속성정보로 전송됩니다. `eventName` 및 `actionType`은 커스텀 이벤트 속성정보에 대해 무시되지 않습니다. 다음 예제 태그에서는 Google Tag Manager에서 태그 변수를 사용하여 정의하고 앱에 기록된 커스텀 이벤트에서 소싱한 `genre` 을 전달합니다.
 
 `genre` 이벤트 속성정보는 iOS용 Google Tag Manager가 데이터 레이어로 Firebase를 사용하기 때문에 'Firebase - 이벤트 매개변수' 변수로 Google Tag Manager에 전송됩니다.
 

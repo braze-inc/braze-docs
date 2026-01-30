@@ -60,7 +60,7 @@ Erstellen Sie in derselben Datei das Konfigurationsobjekt von Braze in der Metho
 ```swift
 static var braze: Braze? = nil
 
-func application(
+override func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
 ) -> Bool {

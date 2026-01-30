@@ -19,7 +19,7 @@ hidden : true
 
 인앱 메시지와 관련된 이전 정보를 검토합니다. 현재 인앱 메시지 생성에 대한 최신 정보를 확인하려면 [인앱 메시지 개요 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/)를 참조하세요.
 
-{% details 전체 화면 %}
+{% details Fullscreen %}
 가장 매력적이지만 사용자의 화면 전체를 덮기 때문에 가장 방해가 되는 광고이기도 합니다. 크고 풍부한 이미지를 표시하는 데 적합하며 중요한 새 기능이나 만료되는 프로모션과 같은 매우 중요한 정보를 전달하는 데 유용할 수 있습니다. 사용자 경험을 방해할 수 있으므로 최우선 순위 콘텐츠에만 제한적으로 사용하세요.
 
 ![전체 화면 메시지]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
@@ -33,7 +33,7 @@ hidden : true
 - 키-값 쌍
 
 {% enddetails %}
-{% details  모달 %}
+{% details  Modal %}
 이러한 메시지는 사용자가 여전히 앱 UI의 일부를 볼 수 있으므로 전체 화면 메시지만큼 방해가 되지 않습니다. 모달 메시지에는 여전히 버튼과 이미지가 포함되어 있으므로 보다 인터랙티브하고 시각적인 캠페인을 원한다면 슬라이드업보다 모달 메시지가 더 나은 옵션이 될 수 있습니다. 앱 업데이트, 긴급하지 않은 거래 및 이벤트와 같이 우선순위가 중간 정도인 콘텐츠에 적합합니다.
 
 ![모달 메시지]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
@@ -48,7 +48,7 @@ hidden : true
 
 {% enddetails %}
 
-{% details 전통적인 슬라이드업 %}
+{% details Traditional Slideup %}
 색상과 배지 아이콘을 어떻게 사용하느냐에 따라 주의를 끌 수 있지만, 가장 방해가 적은 메시지 유형입니다. 앱 경험을 일시 중지하지 않고 지속적인 탐색을 허용하므로 신규 사용자를 온보딩하고 특정 인앱 기능으로 안내할 때 사용할 수 있는 메시지 형식일 수 있습니다.
 
 ![슬라이드업 메시지]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
@@ -68,9 +68,9 @@ hidden : true
 
 ## 웹
 
-이렇게 하면 더욱 커스텀된 인앱 메시지에 대한 이전 정보를 검토할 수 있습니다. 현재 인앱 메시지 생성에 대한 최신 정보를 확인하려면 [사용자 지정 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/)를 참조하세요.
+이렇게 하면 더욱 커스텀된 인앱 메시지에 대한 이전 정보를 검토할 수 있습니다. 현재 인앱 메시지 생성에 대한 최신 정보를 확인하려면 [사용자 지정 설명서]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/)를 참조하세요.
 
-{% details 이메일 캡처 메시지 %}
+{% details Email capture message %}
 이메일 캡처 메시지를 사용하면 사이트 사용자에게 이메일 주소를 제출하도록 쉽게 유도할 수 있으며, 이후에는 모든 메시징 캠페인에서 사용할 수 있도록 Braze 시스템 내에서 해당 이메일 주소를 사용할 수 있습니다.
 
 ![이메일 캡처 메시지]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
@@ -87,9 +87,9 @@ hidden : true
 
 {% enddetails %}
 
-{% details 사용자 지정 HTML 메시지 %}
+{% details Custom HTML Message %}
 
-Braze의 기본 인앱 메시지는 다양한 방식으로 맞춤 설정할 수 있지만, HTML, CSS 및 JavaScript를 사용하여 디자인하고 구축한 메시지를 사용하면 캠페인의 모양과 느낌을 더욱 효과적으로 제어할 수 있습니다. 몇 가지 간단한 구성으로 필요에 따라 맞춤 기능과 브랜딩을 사용할 수 있습니다. HTML 인앱 메시지를 사용하면 메시지의 모양과 느낌을 더 잘 제어할 수 있으며, HTML5에서 지원되는 모든 것은 Braze에서도 지원됩니다.
+Braze의 기본값 인앱 메시지는 다양한 방식으로 커스텀할 수 있지만, HTML, CSS, JavaScript를 사용하여 디자인하고 구축한 메시지를 사용하면 캠페인의 룩앤필을 더욱 효과적으로 제어할 수 있습니다. 간단한 구성으로 커스텀 기능과 브랜딩을 필요에 맞게 사용할 수 있습니다. HTML 인앱 메시지를 사용하면 메시지의 모양과 느낌을 더 잘 제어할 수 있으며, HTML5에서 지원되는 모든 것은 Braze에서도 지원됩니다.
 
 **JavaScript Bridge(appboyBridge)**
 
@@ -103,7 +103,7 @@ HTML 인앱 메시지는 사용자가 링크가 있는 요소를 클릭하거나
 
 {% enddetails %}
 
-{% details HTML 인앱 메시지 템플릿 %}
+{% details HTML In App-Message Templates %}
 
 시작하는 데 도움이 되는 HTML5 인앱 메시지 템플릿 세트를 준비했습니다. 이러한 템플릿을 사용하고 필요에 맞게 사용자 지정하는 방법에 대한 자세한 지침이 포함된 [GitHub 리포지토리](https://github.com/braze-inc/in-app-message-templates)를 확인하세요.
 
@@ -153,19 +153,16 @@ Braze는 여러 가지 이유로 이미지와 HTML 에셋의 압축을 가능한
 
 - HTML 에셋 ZIP 폴더에 글꼴 파일을 포함하지 않고 애플리케이션이나 웹사이트에 포함된 참조 글꼴을 사용하여 HTML 인앱 메시지를 사용자 지정할 수 있습니다.
 - HTML 에셋 ZIP에 불필요하거나 중복되는 CSS 또는 JavaScript가 포함되어 있지 않은지 확인하세요.
-- 모든 이미지에 [ImageOptim][25]을 사용하면 품질 저하 없이 이미지를 가능한 최소 크기로 압축할 수 있습니다.
+- 모든 이미지에 [ImageOptim](https://imageoptim.com/)을 사용하면 품질 저하 없이 이미지를 가능한 최소 크기로 압축할 수 있습니다.
 
 ### iPhone 5 사양
 
-![iPhone 5 사양][18]
+![iPhone 5 사양]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %})
 
 ### iPhone 6 사양
 
-![iPhone 6 사양][19]
+![iPhone 6 사양]({% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %})
 
 
-[18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}
 
-[19]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %}
 
-[25]: https://imageoptim.com/

@@ -18,7 +18,7 @@ Dies sind die SDK-Versionen, die Sie mindestens benötigen, um Feature-Flags ver
 
 Verwenden Sie Feature-Flags, um Features schrittweise für eine Stichprobenpopulation zu aktivieren. Sie können zum Beispiel ein neues Feature zuerst für Ihre VIP Nutzer:innen einführen. Diese Strategie mindert die Risiken, die mit der gleichzeitigen Bereitstellung neuer Features für alle verbunden sind, und hilft, Fehler frühzeitig zu erkennen.
 
-![Bewegtes Bild des Rollout-Verkehrsschiebers, der von 0 auf 100 % geht.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
+![Bewegtes Bild des Rollout-Traffic-Schiebereglers, der von 0% auf 100% geht.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
 
 Nehmen wir zum Beispiel an, wir haben beschlossen, unserer App einen neuen Link "Live Chat Support" hinzuzufügen, um den Dienst für unsere Kund:in zu beschleunigen. Wir könnten dieses Feature für alle Kund:innen auf einmal freigeben. Eine breite Veröffentlichung birgt jedoch Risiken, wie z.B.: 
 
@@ -35,7 +35,7 @@ Mit den Feature-Flags von Braze können wir das Feature stattdessen schrittweise
 
 Um dieses Feature schrittweise einzuführen, [erstellen Sie ein Feature-Flag]({{site.baseurl}}/developer_guide/feature_flags/create/) namens "Live Chat Widget".
 
-![Feature-Flag-Details für ein Beispiel mit dem Namen "Live Chat Widget". Die ID lautet enable_live_chat. Dieses Feature-Flag beschreibt, dass das Live Chat Widget auf der Support-Seite angezeigt wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Feature-Flag-Details für ein Beispiel mit dem Namen "Live Chat Widget". Die ID lautet enable_live_chat.. Die Beschreibung dieses Feature-Flags besagt, dass das Live-Chat-Widget auf der Support-Seite angezeigt wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 In unserem Code für die App wird der Button **Start Live Chat** nur angezeigt, wenn das Feature-Flag von Braze aktiviert ist:
 
@@ -219,7 +219,7 @@ liveChatView.promoText = featureFlag?.stringProperty("text")
 
 Jetzt, am Tag vor Thanksgiving, müssen wir nur noch die Werte dieser Eigenschaften im Braze-Dashboard ändern.
 
-![Feature-Flag mit Link- und Texteigenschaften, die auf eine Thanksgiving-Verkaufsseite verweisen.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
+![Feature-Flag mit Link- und Texteigenschaften, die zu einer Thanksgiving-Verkaufsseite führen.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
 
 Das nächste Mal, wenn jemand die App lädt, sieht er die neuen Thanksgiving-Angebote.
 
@@ -231,11 +231,11 @@ Nehmen wir an, dass wir ein neues Kundenbindungs-Programm für unsere Nutzer:inn
 
 Um die Einführung von Features und Messaging effektiv zu koordinieren, erstellen wir ein neues Feature-Flag namens `show_loyalty_program`. In der ersten Phase der Veröffentlichung werden wir Canvas die Kontrolle darüber überlassen, wann und für wen das Feature-Flag aktiviert wird. Für den Moment belassen wir den Rollout-Prozentsatz bei 0 % und wählen keine Targeting-Segmente aus.
 
-![Ein Feature-Flag mit dem Namen Loyalty Rewards Program. Die ID show_loyalty_program und die Beschreibung, dass dies das neue Kundenbindungs-Programm auf dem Startbildschirm und der Profil-Seite anzeigt.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![Ein Feature-Flag mit dem Namen Loyalty Rewards Program. Die ID lautet show_loyalty_program, und die Beschreibung, dass damit das neue Kundenbindungs-Programm auf dem Startbildschirm und der Profil-Seite angezeigt wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
 Anschließend erstellen wir in Canvas einen [Feature-Flag-Schritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/), der das Feature-Flag `show_loyalty_program` für unser Segment "Hochwertige Kunden" aktiviert:
 
-![Ein Beispiel für ein Canvas mit einem Schritt zur Segmentierung der Zielgruppe, bei dem das Segment der hochwertigen Kunden das Feature-Flag show_loyalty_program aktiviert wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![Ein Beispiel für ein Canvas mit einem Audience Split-Schritt, bei dem das Segment der hochwertigen Kund:in das Feature-Flag show_loyalty_program aktiviert wird.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 Die Nutzer:innen dieses Segments werden nun das neue Kundenbindungs-Programm sehen, und nach dessen Aktivierung werden automatisch eine E-Mail und eine Umfrage verschickt, damit unser Team Feedback einholen kann.
 

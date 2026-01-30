@@ -144,7 +144,13 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 ## Personnalisation de l'activité WebView {#Custom_Webview_Activity}
 
-Par défaut, lorsque les liens profonds du site Internet sont ouverts à l’intérieur de l’application par Braze, ils sont gérés par [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html). Pour modifier ceci :
+Lorsque Braze ouvre des liens profonds vers des sites web à l'intérieur de l'application, les liens profonds sont gérés par [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
+
+{% alert note %}
+Pour les messages in-app personnalisés en HTML, les liens configurés avec `target="_blank"` s'ouvrent dans le navigateur web par défaut de l'appareil et ne sont pas gérés par `BrazeWebViewActivity`.
+{% endalert %}
+
+Pour modifier ceci :
 
 1. Créez une nouvelle activité qui gère l’URL cible de `Intent.getExtras()` avec la clé `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`. Pour un exemple, voir [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
 2. Ajoutez cette activité à `AndroidManifest.xml` et définir `exported` sur `false`.
@@ -217,7 +223,7 @@ Pour gérer les liens profonds lorsque vous utilisez Jetpack Compose avec NavHos
         )
     }
     ```
-3. En fonction de l'architecture de votre application, il se peut que vous deviez également gérer la nouvelle intention envoyée à votre activité actuelle.
+3. En fonction de l'architecture de votre application, il se peut que vous deviez également gérer la nouvelle intention envoyée à votre activité en cours.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {

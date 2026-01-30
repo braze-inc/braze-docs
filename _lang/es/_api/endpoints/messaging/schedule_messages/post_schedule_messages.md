@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Crear mensajes programados"
-article_title: "POST: Crear mensajes programados"
+nav_title: "PUBLICAR: Crear mensajes programados"
+article_title: "PUBLICAR: Crear mensajes programados"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -30,7 +30,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Cuerpo de la solicitud
 
@@ -49,7 +49,6 @@ Authorization: Bearer YOUR-REST-API-KEY
   "external_user_ids": (optional, array of strings) see external user identifier,
   "user_aliases": (optional, array of user alias object) see user alias,
   "audience": (optional, connected audience object) see connected audience,
-  "segment_id": (optional, string) see segment identifier,
   "campaign_id": (optional, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,

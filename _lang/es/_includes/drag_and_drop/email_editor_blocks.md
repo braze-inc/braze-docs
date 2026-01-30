@@ -2,7 +2,7 @@
 
 Los bloques de editor se encuentran en la sección **Contenido** para los mensajes de correo electrónico. Para utilizar un bloque de edición, arrastre un bloque de edición dentro de una columna en el editor de arrastrar y soltar. Se ajustará automáticamente al ancho de la columna. Cada bloque del editor tiene sus propios ajustes, como el control granular del relleno.
 
-Para más información sobre cómo utilizar y personalizar estos bloques de editor en tu correo electrónico, consulta [Otras personalizaciones]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations).
+Para obtener más información sobre cómo utilizar y personalizar estos bloques de editor en tu correo electrónico, consulta [Otras personalizaciones]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#other-customizations).
 
 {% alert tip %}
 También puedes añadir [atributos personalizados]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/) a cualquier URL dentro de los bloques de editor `Image`, `Button` o `Text`.
@@ -22,8 +22,8 @@ La siguiente tabla describe cómo los usuarios pueden utilizar cada tipo de bloq
 |Espaciador| Añade espacio, o "relleno", entre otros bloques. |
 |Imagen| Inserta una imagen de la [biblioteca multimedia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Video| Crea un enlace al contenido del vídeo. |
-|Social| Inserta el icono de la plataforma de medios sociales. Se pueden cargar imágenes personalizadas para iconos específicos de la marca. |
-|Iconos| Inserta un icono. Se pueden cargar imágenes personalizadas. Se utilizará un icono de gran tamaño hasta que se cargue una imagen. |
+|Social| Inserta el icono de la plataforma de medios sociales. Puedes subir imágenes personalizadas para iconos específicos de la marca. |
+|Iconos| Inserta un icono. Puedes subir imágenes personalizadas. Braze utiliza un icono de marcador de posición de gran tamaño hasta que subas una imagen. |
 |HTML| Inserta HTML sin formato. Recomendado para [Liquid]({{site.baseurl}}/liquid/), como Contenido conectado o declaraciones condicionales. | 
 |Menú| Crea un menú flexible para el mensaje que estás diseñando. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
