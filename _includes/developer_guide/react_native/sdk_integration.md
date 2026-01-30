@@ -121,6 +121,51 @@ Example configuration:
 }
 ```
 
+##### Configuring Android push notification icons {#android-push-icons}
+
+When using `androidNotificationLargeIcon` and `androidNotificationSmallIcon`, follow these best practices to ensure proper icon display:
+
+###### Icon placement and format
+
+Place your icon files in your React Native project directory (for example, `assets/images/`), then configure Expo to copy them into the Android `drawable` folders during the build process. The Expo plugin will reference these icons using Android's drawable resource system.
+
+###### Icon requirements
+
+- **Small icon**: Must be a white silhouette on a transparent background (this is an Android platform requirement)
+- **Large icon**: Can be a full-color image
+- **Format**: PNG format is recommended
+- **Naming**: Use lowercase letters, numbers, and underscores only (for example, `my_large_icon.png`)
+
+###### Configuration in app.json
+
+Use the `@drawable/` prefix followed by the filename _without_ the file extension. For example, if your icon file is named `large_icon.png`, reference it as `@drawable/large_icon`:
+
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "@braze/expo-plugin",
+        {
+          "androidNotificationLargeIcon": "@drawable/large_icon",
+          "androidNotificationSmallIcon": "@drawable/small_icon"
+        }
+      ]
+    ]
+  }
+}
+```
+
+{% alert important %}
+Do not use relative file paths (such as `src/assets/images/icon.png`) or include the file extension when referencing icons. The Expo plugin requires the `@drawable/` prefix to properly locate the icons in the Android native folders after the prebuild process.
+{% endalert %}
+
+###### How it works
+
+The Expo plugin automatically handles copying your icon files from your React Native project to the appropriate Android `drawable` directories during the build process. This ensures the icons are available as Android drawable resources, which is why the `@drawable/` prefix is required.
+
+For more information on Android notification icons, see [Android's notification icon guidelines](https://developer.android.com/develop/ui/views/notifications#icon).
+
 #### Step 2.3: Build and run your application
 
 Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
