@@ -1,5 +1,5 @@
 ---
-nav_title: 캔버스의 기능 플래그
+nav_title: 캔버스의 피처 플래그
 page_order: 30
 noindex: true
 tool: Feature Flags

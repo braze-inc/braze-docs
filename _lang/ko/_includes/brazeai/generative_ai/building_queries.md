@@ -10,27 +10,27 @@
 
 새 쿼리를 만들려면 **분석** > **쿼리 빌더로** 이동한 다음 **SQL 쿼리 만들기를** 선택합니다.
 
-!["SQL 쿼리 만들기" 드롭다운에 있는 "쿼리 템플릿" 및 "SQL 편집기" 옵션]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
+!["SQL 쿼리 만들기" 드롭다운에 있는 "쿼리 템플릿" 및 "SQL 편집기" 옵션입니다.]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
 
 쿼리를 작성하는 데 영감이나 도움이 필요하다면 **쿼리 템플릿을** 선택하고 [미리 만들어진 템플릿을]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/) 선택하세요. 빈 쿼리로 시작하려면 **SQL 편집기를** 선택합니다.
 
 보고서는 현재 날짜와 시간으로 자동으로 이름이 지정됩니다. 이름 위에 마우스를 올리고 <i class="fas fa-pencil" alt="Edit"></i>을 선택하여 SQL 쿼리에 의미 있는 이름을 지정하세요.
 
-![보고서 이름 예시: "2025년 5월 채널 참여도"]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
+![보고서 이름 예시: "2025년 5월 채널 참여도".]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
 
 ### 2단계: 쿼리 구축
 
 쿼리를 구축할 때 AI의 도움을 받거나 직접 구축할 수 있습니다.
 
 {% tabs local %}
-{% tab BrazeAI 사용하기 %}
+{% tab Using BrazeAI %}
 AI 쿼리 빌더는 [GPT](https://openai.com/gpt-4)를 활용하여 OpenAI에서 제공하는 SQL을 추천합니다. AI 쿼리 빌더를 사용하여 SQL을 생성하는 방법:
 
 1. 쿼리 빌더에서 보고서를 만든 후 **AI 쿼리 빌더** 탭을 선택합니다.
 2. 프롬프트를 입력하거나 샘플 프롬프트를 선택하고 **생성**을 선택하여 프롬프트를 SQL로 번역하십시오.
 3. 생성된 SQL을 검토하여 올바른지 확인한 다음 **편집기에 삽입**을 선택합니다.
 
-![The SQL AI query builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![SQL AI 쿼리 빌더.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 #### Tips
 
@@ -41,7 +41,7 @@ AI 쿼리 빌더는 [GPT](https://openai.com/gpt-4)를 활용하여 OpenAI에서
 \##{% multi_lang_include brazeai/generative_ai/policy.md %}
 {% endtab %}
 
-{% tab 혼자서 %}
+{% tab On My Own %}
 [Snowflake syntax](https://docs.snowflake.com/en/sql-reference)를 사용하여 SQL 쿼리를 작성하십시오. 전체 테이블 및 쿼리할 수 있는 열 목록은 [테이블 참조]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)를 참조하십시오.
 
 쿼리 빌더 내에서 테이블 세부 정보를 보려면:
@@ -96,11 +96,11 @@ LIMIT 100
 
 ### 3단계: 보고서 생성
 
-쿼리 구축을 마쳤으면 **쿼리 실행을** 선택합니다. 오류나 [보고 시간 초과가](#report-timeouts) 없는 경우 쿼리에서 CSV 파일이 생성됩니다.
+쿼리 구축을 마쳤으면 **쿼리 실행을** 선택합니다. 오류나 [보고서 시간 초과가](#report-timeouts) 없는 경우 쿼리에서 CSV 파일이 생성됩니다.
 
 CSV 보고서를 다운로드하려면 **내보내기를** 선택합니다.
 
-![쿼리 빌더가 템플릿 쿼리 "채널 인게이지먼트 및 매출 지난 30일 동안"에 대한 결과를 보여줍니다.]({% image_buster /assets/img_archive/query_builder.png %})
+![템플릿 쿼리 "지난 30일 동안의 채널 참여도 및 매출"에 대한 결과를 보여주는 쿼리 빌더.]({% image_buster /assets/img_archive/query_builder.png %})
 
 {% alert important %}
 각 보고서는 하루에 한 번만 결과를 생성할 수 있습니다. 같은 리포트를 하루에 여러 번 실행하면 각 보고서에서 동일한 결과를 볼 수 있습니다.
@@ -128,6 +128,6 @@ Snowflake 크레딧은 기능 간에 공유되지 않습니다. 예를 들어 SQ
 
 크레딧은 Braze SQL 편집기에서 보고서를 작성, 편집 또는 저장할 때 사용되지 않습니다. 크레딧은 매월 1일 한국 시간 09:00에 5로 초기화됩니다. 쿼리 빌더 페이지 상단에서 월간 크레딧 사용량을 모니터링할 수 있습니다.
 
-![이번 달에 사용한 크레딧 금액을 보여주는 쿼리 빌더]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
+![쿼리 빌더는 이번 달에 사용된 크레딧 양을 보여줍니다.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
 
 크레딧 한도에 도달하면 쿼리를 실행할 수 없지만 SQL 보고서를 생성, 편집 및 저장할 수 있습니다. 쿼리 빌더 크레딧을 더 구매하려면 계정 매니저에게 문의하세요.
