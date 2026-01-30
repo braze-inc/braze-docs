@@ -10,16 +10,16 @@ Las notificaciones push tienen una tasa limitada, así que no tengas miedo de en
 
 ### Paso 2: Habilitar las capacidades push
 
-En Xcode, ve a la sección **Firma y capacidades** del objetivo principal de la aplicación y añade la capacidad de notificaciones push.
+En Xcode, ve a la sección **Firma & Capacidades** del objetivo principal de la aplicación y añade la capacidad de notificaciones push.
 
-![La sección "Firma y capacidades" en un proyecto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![La sección "Firma & Capacidades" en un proyecto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
 ### Paso 3: Configurar la gestión push
 
 Puedes utilizar el SDK de Swift para automatizar el procesamiento de las notificaciones remotas recibidas de Braze. Esta es la forma más sencilla de gestionar las notificaciones push y es el método de gestión recomendado.
 
 {% tabs local %}
-{% tab Automático %}
+{% tab Automatic %}
 #### Paso 3.1: Habilitar la automatización en la propiedad push
 
 Para habilitar la integración push automática, establece la propiedad `automation` de la configuración de `push` en `true`:
@@ -335,7 +335,7 @@ Ten en cuenta que los eventos push recibidos sólo se desencadenarán para las n
 
 {% endtab %}
 
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
@@ -384,7 +384,7 @@ Braze es compatible con la gestión de pasarelas de APN dinámicas para notifica
 
 Cuando una aplicación iOS se integra con el SDK Braze Swift, envía datos relacionados con el dispositivo, incluyendo [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) a la API del SDK Braze, si está disponible. El valor `apns_gateway` indica si la aplicación está utilizando el entorno APN de desarrollo (`dev`) o de producción (`prod`).
 
-Braze también almacena el valor de puerta de enlace notificado para cada dispositivo. Si se recibe un nuevo valor de puerta de enlace válido, Braze actualiza automáticamente el valor almacenado.
+Braze también almacena el valor de puerta de enlace comunicado para cada dispositivo. Si se recibe un nuevo valor de puerta de enlace válido, Braze actualiza automáticamente el valor almacenado.
 
 Cuando Braze envía una notificación push:
 
