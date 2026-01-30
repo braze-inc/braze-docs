@@ -188,12 +188,8 @@ func application(
   let configuration = Braze.Configuration(apiKey: apiKey, endpoint: endpoint)
   configuration.triggerMinimumTimeInterval = 1
   configuration.logger.level = .info
-  let braze = BrazeReactBridge.perform(
-    #selector(BrazeReactBridge.initBraze(_:)),
-    with: configuration
-  ).takeUnretainedValue() as! Braze
+  let braze = BrazeReactBridge.initBraze(configuration)
   AppDelegate.braze = braze
-
   registerForPushNotifications()
   BrazeReactUtils.shared().populateInitialPayload(fromLaunchOptions: launchOptions)
 
