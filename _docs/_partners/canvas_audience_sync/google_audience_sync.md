@@ -145,7 +145,7 @@ Add a component in your Canvas, then select **Audience Sync**.
 - **Mobile Advertiser ID**: Select either iOS IDFA or Android GAID. Due to Google’s Customer Match requirements, you can't have both mobile advertiser IDs in the same customer lists.
 
 {% alert note %}
-**About the "Missing Mobile Ad IDs? Let's fix that." banner:** When you sync to an audience using iOS IDFA or Android GAID as the field to match, this banner may appear in the step editor. This banner is **informational, not an error**. It reminds you to confirm that the mobile ad ID field you're matching on exists in your audience data (for example, that users in the Canvas path have the corresponding identifier collected). You can dismiss it after you've verified your data.
+**About the "Missing Mobile Ad IDs? Let's fix that." banner:** When you sync to an audience using iOS IDFA or Android GAID as the field to match, this message may appear in the step editor. It is **informational, not an error**. It reminds you to confirm that the mobile ad ID field you're matching on exists in your audience data (for example, that users in the Canvas path have the corresponding identifier collected). You can dismiss it after you've verified your data.
 {% endalert %}
 
 {: start="4"}
