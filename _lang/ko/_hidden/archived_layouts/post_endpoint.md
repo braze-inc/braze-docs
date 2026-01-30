@@ -31,7 +31,7 @@ This is the description of the endpoint. API descriptions usually start with "Us
 <!-- The rate limit of the endpoint. This pulls from /includes/rate_limits/ and displays specific endpoint limits based on the endpoint provided -->
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
-## 요청 본문
+## Request Body
 
 <!--This is where you can give more information about your endpoint request body. -->
 
