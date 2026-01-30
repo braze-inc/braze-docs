@@ -12,10 +12,10 @@ tool: Canvas
 
 # Context
 
-> Context steps allow you to create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
+> Context steps let you create and update one or more variables for a user as they move through a Canvas. For example, if you have a Canvas that manages seasonal discounts, you can use a context variable to store a different discount code each time a user enters the Canvas.
 
 {% alert important %}
-Context steps are currently in early access. Contact your Braze account manager if you're interested in participating in this early access.<br><br>Note that opting into the Canvas Context step early access updates how timestamps are handled across all your Canvases. To learn more about this, refer to [Time zone consistency standardization](#time-zone-consistency-standardization).
+Context steps are in early access. Contact your Braze account manager if you're interested in participating in this early access.<br><br>Note that opting into the Canvas Context step early access updates how timestamps are handled across all your Canvases. To learn more, see [Time zone consistency standardization](#time-zone-consistency-standardization).
 {% endalert %}
 
 ## What are context variables?
@@ -24,7 +24,7 @@ Context variables are temporary pieces of information you can create and use as 
 
 For example, imagine a customer browsing your website adds a product to their cart. You can use a context variable to remember which product they added, then send them personalized reminders about that specific item if they don't complete their purchase.
 
-Context variables exist only for that specific Canvas journey. They don't change the customer's profile permanently and won't appear in other Canvases. This makes them perfect for temporary information that's relevant only to a specific campaign or workflow.
+Context variables exist only for that specific Canvas journey. They don't change the customer's profile permanently and don't appear in other Canvases. This makes them perfect for temporary information that's relevant only to a specific campaign or workflow.
 
 For a full reference on context variables, including data types, usage, and best practices, see the [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
@@ -32,7 +32,7 @@ For a full reference on context variables, including data types, usage, and best
 
 If you've used Canvas entry properties before, you might wonder how context variables are different. The key difference is flexibility and control:
 
-- **Canvas entry properties** are set when someone enters a Canvas (via an event or API call) and remain the same throughout their journey.
+- **Canvas entry properties** are set when someone enters a Canvas (through an event or API call) and remain the same throughout their journey.
 - **Context variables** can be set at entry *or* updated at any point in the Canvas using a Context step.
 
 {% alert note %}
@@ -47,7 +47,7 @@ You can use context variables in two main scenarios:
 
 ### Triggered Canvases
 
-Context variables are automatically available in action-based (triggered) Canvases. When an event triggers the Canvas, any properties from that event can be used as context variables throughout the journey.
+Context variables are automatically available in action-based (triggered) Canvases. When an event triggers the Canvas, you can use any properties from that event as context variables throughout the journey.
 
 For example, if a "Product Viewed" event includes a `product_name` property, you can reference it as {% raw %}`{{context.${product_name}}}`{% endraw %} in your messages.
 
@@ -55,7 +55,7 @@ For example, if a "Product Viewed" event includes a `product_name` property, you
 
 ![A Context step as the first step of a Canvas.]({% image_buster /assets/img/context_step3.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-You can add a Context step anywhere in your Canvas to create or update context variables. Within a Context step, define up to 10 context variables. These variables can be used to personalize delays, segment users dynamically, and enrich messaging throughout the Canvas.
+You can add a Context step anywhere in your Canvas to create or update context variables. Within a Context step, define up to 10 context variables. You can use these variables to personalize delays, segment users dynamically, and enrich messaging throughout the Canvas.
 
 You can set context variables in two ways:
 
@@ -65,10 +65,10 @@ You can set context variables in two ways:
 Each context variable requires a name, a data type, and a value (set using Liquid or the Add Personalization tool). When defined, reference context variables throughout the Canvas using the format: {% raw %}`{{context.${variable_name}}}`{% endraw %}.
 
 {% alert important %}
-**Important:** When referencing context variables, always use the format {% raw %}`{{context.${variable_name}}}`{% endraw %} with the dollar sign and curly braces. <br><br>The format {% raw %}`{{context.variable_name}}`{% endraw %} (without `${}`) may work in the first message step but will *not* persist to subsequent steps. This is because Braze's system needs the `${}` syntax to detect and preserve variables across multiple steps in your Canvas.
+**Important:** When referencing context variables, always use the format {% raw %}`{{context.${variable_name}}}`{% endraw %} with the dollar sign and curly braces. <br><br>The format {% raw %}`{{context.variable_name}}`{% endraw %} (without `${}`) may work in the first message step but does *not* persist to subsequent steps. This is because Braze's system needs the `${}` syntax to detect and preserve variables across multiple steps in your Canvas.
 {% endalert %}
 
-Each Canvas entry redefines context variables based on the latest entry data and Canvas setup, allowing users to have multiple active journeys with their own context. For example, if a customer has two upcoming flights, they'll have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
+Each Canvas entry redefines context variables based on the latest entry data and Canvas setup, allowing users to have multiple active journeys with their own context. For example, if a customer has two upcoming flights, they have two separate journey states running simultaneously&#8212;each with its own flight-specific context variables like departure time and destination. This allows you to send personalized reminders about their 2 pm flight to New York while sending different updates about their 8 am flight to Los Angeles tomorrow, so that each message stays relevant to the specific booking.
 
 ## Creating a Context step
 
@@ -224,7 +224,7 @@ This change is part of a broader effort to create a more predictable and consist
 
 No.
 
-#### Will this change impact Canvas entry properties?
+#### Does this change impact Canvas entry properties?
 
 Yes, this impacts `canvas_entry_properties` if the `canvas_entry_property` is being used in an action-based Canvas and the property type is `time`. In all circumstances, we recommend using Liquid `time_zone` filters for timestamps to be represented in the desired timezone.
 
