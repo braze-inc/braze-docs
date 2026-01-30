@@ -249,7 +249,7 @@ Prime31 プラグインで Braze Unity プラグインを使用するには、Pr
 
 ### アマゾン・デバイス・メッセージング（ADM）
 
-Brazeは、Unityアプリへの[ADMプッシュの](https://developer.amazon.com/public/apis/engage/device-messaging)統合をサポートしている。ADMプッシュを統合したい場合は、ADM APIキーを含む`api_key.txt` というファイルを作成し、`Plugins/Android/assets/` フォルダに置く。 ADMとBrazeの統合の詳細については、[ADMプッシュ統合手順を]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=unity)参照。
+Brazeは、Unityアプリへの[ADMプッシュの](https://developer.amazon.com/public/apis/engage/device-messaging)統合をサポートしている。ADMプッシュを統合したい場合は、ADM APIキーを含む`api_key.txt` というファイルを作成し、`Plugins/Android/assets/` フォルダに置く。 ADMとBrazeの統合の詳細については、[ADMプッシュ統合の説明を]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=unity)参照のこと。
 
 ### Braze Unityプレーヤーの拡張（Androidのみ） {#extend-unity-player}
 
