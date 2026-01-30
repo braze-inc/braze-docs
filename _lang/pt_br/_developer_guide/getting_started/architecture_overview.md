@@ -77,7 +77,7 @@ O Braze captura automaticamente dados primários de fontes de dados de front-end
 ### Integrações com parceiros
 A Braze tem mais de 150 parceiros tecnológicos, que chamamos de "Alloys". Você pode complementar seus Data Feeds por meio de uma rede significativamente robusta de [tecnologias interoperáveis e APIs de dados.]({{site.baseurl}}/partners/home) 
 
-### Conexão direta com o armazém através da Ingestão de Dados em Nuvem do Braze
+### Conexão direta com o armazém através da Ingestão de Dados na Nuvem do Braze
 É possível enviar dados de clientes de seu data warehouse para a plataforma por meio da [Ingestão de dados para nuvem da Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/) em apenas alguns minutos, permitindo a sincronização de atributos, eventos e compras relevantes do usuário. A integração da ingestão de dados para a nuvem oferece suporte a estruturas de dados complexas, incluindo JSON aninhado e vetores de objetos.
 
 A ingestão de dados na nuvem pode sincronizar dados do Snowflake, Amazon Redshift, Databricks e Google BigQuery.
