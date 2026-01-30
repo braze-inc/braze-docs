@@ -127,7 +127,13 @@ When using `androidNotificationLargeIcon` and `androidNotificationSmallIcon`, fo
 
 ###### Icon placement and format
 
-Place your icon files in your React Native project directory (for example, `assets/images/`), then configure Expo to copy them into the Android `drawable` folders during the build process. The Expo plugin will reference these icons using Android's drawable resource system.
+To use custom push notification icons with the Braze Expo plugin:
+
+1. Create your icon files following Android's requirements (detailed below)
+2. Place them in your project's Android native directories at `android/app/src/main/res/drawable-<density>/` (for example, `android/app/src/main/res/drawable-mdpi/`, `drawable-hdpi/`, etc.)
+3. Alternatively, if you're managing assets in your React Native directory, you can use Expo's [app.json icon configuration](https://docs.expo.dev/versions/latest/config/app/#icon) or create an [Expo config plugin](https://docs.expo.dev/config-plugins/introduction/) to copy the icons to the Android drawable folders during prebuild
+
+The Braze Expo plugin will reference these icons using Android's drawable resource system.
 
 ###### Icon requirements
 
@@ -162,7 +168,7 @@ Do not use relative file paths (such as `src/assets/images/icon.png`) or include
 
 ###### How it works
 
-The Expo plugin automatically handles copying your icon files from your React Native project to the appropriate Android `drawable` directories during the build process. This ensures the icons are available as Android drawable resources, which is why the `@drawable/` prefix is required.
+The Braze Expo plugin references your icon files from the Android `drawable` directories. When you run `npx expo prebuild`, Expo generates the native Android project structure. Your icons must be present in the Android `drawable` folders (either placed manually or copied via a config plugin) before the build process. The plugin then configures the Braze SDK to use these drawable resources by their names (without path or extension), which is why the `@drawable/` prefix is required in your configuration.
 
 For more information on Android notification icons, see [Android's notification icon guidelines](https://developer.android.com/develop/ui/views/notifications#icon).
 
