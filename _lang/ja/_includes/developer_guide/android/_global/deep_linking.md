@@ -144,7 +144,13 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 ## WebView アクティビティのカスタマイズ {#Custom_Webview_Activity}
 
-デフォルトでは、Braze によってアプリ内でウェブサイトのディープリンクが開かれると、[`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html)によって処理されます。これを変更するには、以下を行います。
+Braze 開封 s がアプリ内のディープリンクをWeb サイトする場合、ディープリンクは[`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html) によって処理されます。
+
+{% alert note %}
+カスタムHTML アプリ内メッセージs の場合、機器のデフォルトウェブブラウザで`target="_blank"` 開封で設定されたリンクは、`BrazeWebViewActivity` で処理されません。
+{% endalert %}
+
+これを変更するには、以下を行います。
 
 1. キー`com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA`で`Intent.getExtras()`から対象の URL を扱うアクティビティを新規作成します。例については、[`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt)を参照してください。
 2. そのアクティビティを`AndroidManifest.xml`に追加し、`exported`を`false`に設定します。
