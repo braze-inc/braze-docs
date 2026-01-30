@@ -24,7 +24,7 @@ A integração da Braze e do Microsoft Azure Blob Storage permite exportar dados
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Microsoft Azure e conta de armazenamento do Azure | Uma conta de armazenamento Microsoft Azure e Azure é necessária para usar esta parceria. |
-| Currents | Para exportar dados para o Currents, você deve ter o [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) configurado na sua conta. |
+| Currents | Para exportar dados para o Currents, você deve ter o [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) configurado na sua conta. O Currents não é necessário se você estiver configurando apenas o arquivamento de mensagens. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integração
@@ -65,9 +65,9 @@ Na Braze, navegue para **Currents > + Create Current > Azure Blob Data Export** 
 
 Em seguida, forneça a string de conexão, o nome do contêiner e o prefixo do BlobStorage (opcional).
 
-![A página do Currents do armazenamento do Microsoft Azure Blob na Braze. Nesta página, existem campos para o nome da integração, e-mail de contato, string de conexão, nome do contêiner e prefixo.]({% image_buster /assets/img/maz.png %})
+![A página do Currents do armazenamento do Microsoft Azure Blob na Braze. Nessa página, há campos para o nome da integração, e-mail do contato, string de conexão, nome do contêiner e prefixo.]({% image_buster /assets/img/maz.png %})
 
-Por fim, role até o final da página e selecione quais eventos de engajamento com mensagem ou eventos de comportamento do cliente você gostaria de exportar. Quando concluído, lance seu Current.
+Por fim, role até a parte inferior da página e selecione quais eventos de engajamento com mensagens ou eventos de comportamento do cliente você gostaria de exportar. Quando concluído, lance seu Current.
 
 ### Etapa 5: Configurar exportação de dados do Azure
 
@@ -80,7 +80,7 @@ Na Braze, navegue para **Integrações com Parceiros** > **Parceiros de tecnolog
 
 Em seguida, confira se a caixa **Definir como o destino padrão de exportação de dados** está marcada, pois isso garantirá que seus dados exportados sejam enviados para o Azure. Quando concluído, salve sua integração.
 
-![A página de exportação de dados do Microsoft Azure no Braze. Nesta página, existem campos para string de conexão, nome do contêiner e prefixo.]({% image_buster /assets/img/azure_data_export.png %})
+![A página de exportação de dados do Microsoft Azure no Braze. Nessa página, há campos para string de conexão, nome do contêiner e prefixo.]({% image_buster /assets/img/azure_data_export.png %})
 
 {% alert important %}
 É importante manter sua string de conexão atualizada; se as credenciais do seu conector expirarem, o conector parará de enviar eventos. Se isso persistir por mais de **48 horas**, os eventos do conector serão descartados e os dados serão permanentemente perdidos.
@@ -91,4 +91,10 @@ Em seguida, confira se a caixa **Definir como o destino padrão de exportação 
 Os usuários que integraram uma solução de armazenamento de dados na nuvem e estão tentando exportar APIs, relatórios de dashboard ou relatórios CSV terão a seguinte experiência:
 
 - Todas as exportações de API não retornarão um URL de download no corpo da resposta e devem ser recuperadas através do armazenamento de dados.
-- Todos os relatórios do dashboard e relatórios CSV serão enviados para o e-mail do usuário para baixar (sem necessidade de permissões de armazenamento) e serão copiados para o armazenamento de dados. 
+- Todos os relatórios do dashboard e relatórios CSV serão enviados para o e-mail do usuário para baixar (sem necessidade de permissões de armazenamento) e serão copiados para o armazenamento de dados.
+
+{% alert important %}
+**Requisito de formato JSON**: Para exportações JSON, o Braze usa o formato JSONL (JSON delimitado por LINE), em que cada linha contém um objeto JSON separado. Esse formato é diferente do JSON padrão, que é um único vetor ou objeto JSON. Cada linha do arquivo exportado é um objeto JSON válido, mas o arquivo como um todo não é um único documento JSON válido. Ao processar esses arquivos, analise cada linha individualmente como um objeto JSON separado, em vez de tentar analisar o arquivo inteiro como um único documento JSON.
+
+As exportações do Currents usam o formato Apache Avro (arquivos`.avro` ), não JSON. Esse requisito de formato JSON se aplica às exportações de dados do dashboard e às exportações de API que usam o formato JSON.
+{% endalert %}
