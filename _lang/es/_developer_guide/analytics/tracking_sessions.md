@@ -1,12 +1,12 @@
 ---
 nav_title: Seguimiento de sesiones
-article_title: Seguimiento de sesiones a través del SDK de Braze
+article_title: Seguimiento de sesiones a través del SDK Braze
 page_order: 3.3
 description: "Aprende a hacer un seguimiento de las sesiones a través del SDK de Braze."
 
 ---
 
-# Sesiones de seguimiento
+# Seguimiento de sesiones
 
 > Aprende a hacer un seguimiento de las sesiones a través del SDK de Braze.
 
@@ -23,7 +23,11 @@ Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el mét
 Para suscribirte a las actualizaciones de la sesión, utiliza el método `subscribeToSessionUpdates()`.
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+En este momento, la suscripción a las actualizaciones de sesión no es compatible con el SDK de Web Braze.
+{% endtab %}
+
+{% tab android %}
 {% subtabs %}
 {% subtab java %}
 
@@ -107,10 +111,6 @@ BRZCancellable *cancellable = [AppDelegate.braze subscribeToSessionUpdates:^(BRZ
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-
-{% tab Web %}
-En este momento, la suscripción a las actualizaciones de sesión no es compatible con el SDK de Web Braze.
-{% endtab %}
 {% endtabs %}
 
 ### Paso 2: Seguimiento de la sesión de prueba (opcional)
@@ -128,6 +128,15 @@ Los detalles específicos de la aplicación sólo se muestran a los usuarios que
 Puedes cambiar el tiempo que transcurre antes de que una sesión caduque automáticamente.
 
 {% tabs %}
+{% tab web %}
+Por defecto, el tiempo de espera de la sesión está predeterminado en `30` minutos. Para cambiar esto, pasa la opción `sessionTimeoutInSeconds` a tu [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) función. Puede establecerse en cualquier número entero mayor o igual que `1`. 
+
+```js
+// Sets the session timeout to 15 minutes instead of the default 30
+braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
+```
+{% endtab %}
+
 {% tab android %}
 Por defecto, el tiempo de espera de la sesión está predeterminado en `10` segundos. Para cambiar esto, abre tu archivo `braze.xml` y añade el parámetro `com_braze_session_timeout`. Puede establecerse en cualquier número entero mayor o igual que `1`.
 
@@ -167,15 +176,6 @@ AppDelegate.braze = braze;
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab Web %}
-Por defecto, el tiempo de espera de la sesión está predeterminado en `30` minutos. Para cambiar esto, pasa la opción `sessionTimeoutInSeconds` a tu [`initialize`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) función. Puede establecerse en cualquier número entero mayor o igual que `1`. 
-
-```js
-// Sets the session timeout to 15 minutes instead of the default 30
-braze.initialize('YOUR-API-KEY-HERE', { sessionTimeoutInSeconds: 900 });
-```
 {% endtab %}
 {% endtabs %}
 
