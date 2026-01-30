@@ -1,5 +1,5 @@
 ---
-nav_title: Deep linking
+nav_title: Deep links
 article_title: deep linking para iOS
 platform: iOS
 page_order: 0
@@ -69,7 +69,7 @@ Para saber mais, consulte [a documentação da Apple](https://developer.apple.co
 Depois de ativar seu app, o iOS chamará o método [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc). O argumento importante é o objeto [NSURL](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL).
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
@@ -102,7 +102,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
 Para usar links universais, certifique-se de que você adicionou um domínio registrado às capacidades do seu app e fez o upload de um `apple-app-site-association` arquivo. Em seguida, implemente o método `application:continueUserActivity:restorationHandler:` no seu `AppDelegate`. Por exemplo:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application
@@ -164,7 +164,7 @@ A conformidade com ATS é aplicada para links abertos dentro do app móvel (noss
 Você pode lidar com ATS de uma das três maneiras a seguir:
 
 #### Confirme se todos os links estão em conformidade com ATS (recomendado)
-Sua integração com a Braze pode atender aos requisitos do ATS garantindo que quaisquer links existentes que você direcione os usuários (através de mensagens no app e campanhas de push) atendam aos requisitos do ATS. Embora existam maneiras de contornar as restrições do ATS, recomendamos verificar se todos os URLs vinculados estão em conformidade com o ATS. Dada a ênfase crescente da Apple à segurança de aplicativos, as seguintes abordagens para permitir exceções ATS podem não ser compatíveis.
+Sua integração com a Braze pode satisfazer os requisitos do ATS garantindo que quaisquer links existentes que você direcione os usuários (através de mensagens no app e campanhas de push) atendam aos requisitos do ATS. Embora existam maneiras de contornar as restrições do ATS, recomendamos verificar se todos os URLs vinculados estão em conformidade com o ATS. Dada a ênfase crescente da Apple à segurança de aplicativos, as seguintes abordagens para permitir exceções ATS podem não ser compatíveis.
 
 Uma ferramenta SSL pode ajudá-lo a identificar problemas de segurança do servidor web. Esse [teste de servidor SSL](https://www.ssllabs.com/ssltest/index.html) da Qualys, Inc. fornece um item de linha especificamente para a conformidade com o Apple ATS 9 e o iOS 9.
 
@@ -214,7 +214,7 @@ A partir do SDK da Braze para iOS v2.21.0, o SDK codifica percentualmente os lin
 Para decodificar um link codificado, use o `NSString` método [`stringByRemovingPercentEncoding`](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding). Nota que você também precisa retornar `YES` no `ABKURLDelegate` e que uma chamada para ação é necessária para disparar o manuseio do URL pelo app. Por exemplo:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
@@ -253,7 +253,7 @@ O protocolo `ABKURLDelegate` pode ser usado para personalizar o tratamento de UR
 #### Exemplo de integração: ABKURLDelegate
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)handleAppboyURL:(NSURL *)url fromChannel:(ABKChannel)channel withExtras:(NSDictionary *)extras {
@@ -296,7 +296,7 @@ O iOS pode levar os usuários do seu app para a sua página no aplicativo de con
 3. Se você estiver usando links profundos baseados em esquemas personalizados, adicione o seguinte código ao seu método `application:openURL:options:`:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app
