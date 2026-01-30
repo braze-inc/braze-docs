@@ -1,5 +1,5 @@
 ---
-nav_title: Resumen de la plataforma
+nav_title: resumen de la plataforma
 article_title: Resumen de la plataforma
 page_order: 1
 description: "En este artículo se cubren las partes básicas y las capacidades de la plataforma Braze. Los enlaces de este artículo conectan con temas esenciales de Braze."
@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# Primeros pasos de [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}: resumen de la plataforma
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} Primeros pasos: resumen de la plataforma
 
 > En este artículo se cubren las partes básicas y las capacidades de la plataforma Braze. Los enlaces de este artículo conectan con temas esenciales de Braze. 
 
@@ -25,11 +25,11 @@ Echa un vistazo a nuestro [curso de aprendizaje gratuito para desarrolladores](h
 
 ## ¿Qué es Braze?
 
-Braze es una plataforma de interacción con los clientes. Esto significa simplemente que Braze te ayuda a escuchar a tus usuarios, a comprender sus acciones y comportamientos, y a actuar en consecuencia. La plataforma Braze tiene tres componentes principales: el SDK, el panel y la API REST.
+Braze es una plataforma de interacción con los clientes. Recoge los datos de los usuarios, muestra sus acciones y comportamientos, y te permite actuar en consecuencia. La plataforma tiene tres componentes principales: el SDK, el panel y la API REST.
 
 Si eres especialista en marketing y buscas un resumen más general de Braze, consulta la [sección Introducción para especialistas en marketing]({{site.baseurl}}/user_guide/getting_started/overview/).
 
-![Braze tiene diferentes capas. En total, consta del SDK, la API, el panel y las integraciones de socios. Cada una de ellas aporta partes de una capa de ingesta de datos, una capa de clasificación, una capa de orquestación, una capa de personalización y una capa de acción. La capa de acción tiene varios canales, como push, mensajes dentro de la aplicación, Catálogo Conectado, webhook, SMS y correo electrónico.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
+![Braze tiene diferentes capas. En total, consta del SDK, la API, el panel y las integraciones de socios. Cada una de ellas aporta partes de una capa de ingesta de datos, una capa de clasificación, una capa de orquestación, una capa de personalización y una capa de acción. La capa de acción tiene varios canales, como push, mensajes dentro de la aplicación, Catálogo conectado, webhook, SMS y correo electrónico.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
 
 ### SDK
 
@@ -64,11 +64,11 @@ Para saber más sobre las partes y piezas de Braze, echa un vistazo: [Cómo empe
 
 Los datos almacenados en Braze se conservan y pueden utilizarse para segmentación, personalización y orientación mientras seas cliente de Braze. Eso te permite actuar sobre los datos de perfil de usuario (por ejemplo, la actividad de la sesión o las compras) hasta que decidas eliminar esa información. Por ejemplo, un servicio de streaming podría hacer un seguimiento de los contenidos vistos por cada suscriptor desde su primer día en el servicio (aunque fuera hace muchos años) y utilizar esos datos para impulsar la mensajería relevante.
 
-![Un segmento en el panel de Braze llamado "Compradores recientes" yuxtapuesto junto a una pantalla de teléfono que muestra un correo electrónico de "Las mejores recomendaciones para Linda".]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
+![Un segmento en el panel de Braze llamado "Compradores recientes" yuxtapuesto junto a una pantalla de teléfono que muestra un correo electrónico de "Principales recomendaciones para Linda".]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
 
 ### Análisis de la aplicación
 
-El panel de Braze muestra gráficos que se actualizan en tiempo real basándose en una serie de métricas de análisis, así como en eventos personalizados que instrumentas en tu aplicación. Medir y optimizar constantemente tus campañas con pruebas A/B, informes y análisis personalizados e inteligencia automatizada te ayuda a mantener la interacción con los clientes y a destacar entre los competidores de tu sector.
+El panel de Braze muestra gráficos actualizados en tiempo real basados en métricas de análisis y eventos personalizados que tú instrumentas. La medición y optimización coherentes mediante pruebas A/B, informes personalizados, análisis e inteligencia automatizada ayudan a respaldar tu interacción con los clientes y tu diferenciación.
 
 ### Segmentación de usuarios
 
@@ -89,7 +89,7 @@ Después de definir un segmento, las herramientas de mensajería Braze te permit
 | [Mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Envía notificaciones discretas dentro de la aplicación utilizando la interfaz de usuario nativa personalizada de Braze. |
 | [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Desencadena automáticamente notificaciones push de campañas de mensajería o noticias utilizando el servicio de notificaciones push de Apple (APN) para iOS o Firebase Cloud Messaging (FCM) para Android. |
 | [SMS, MMS y RCS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs). | Utiliza SMS, MMS o RCS para enviar notificaciones de transacciones, compartir promociones, enviar recordatorios y mucho más. |
-| [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Envía notificaciones al navegador web, aunque tus usuarios no estén activos en tu sitio. |
+| [Notificación push web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Envía notificaciones al navegador web, aunque tus usuarios no estén activos en tu sitio. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Utiliza webhooks para desencadenar acciones no relacionadas con la aplicación, proporcionando a otros sistemas y aplicaciones datos en tiempo real. |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) | Conecta directamente con tus usuarios y clientes aprovechando la popular plataforma de mensajería entre iguales: WhatsApp. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -99,9 +99,9 @@ Después de definir un segmento, las herramientas de mensajería Braze te permit
 ### Componentes personalizables
 
 {% gallery %}
-{{site.baseurl}}/assets/img/getting-started/crawl-example.png <br> Todos los componentes de Braze están diseñados para ser accesibles, adaptables y personalizables. Puedes empezar con Braze utilizando los componentes predeterminados de `BrazeUI` y personalizándolos para adaptarlos a las necesidades de tu marca y a tus casos de uso.
-{{site.baseurl}}/assets/img/getting-started/walk-example.png <br> Para ir más allá de las opciones predeterminadas, puedes escribir código personalizado para actualizar el aspecto de un canal de mensajería para que se ajuste más a tu marca. Esto incluye cambiar el tipo de letra, el tamaño de letra y los colores de un componente. Los especialistas en marketing mantienen el control de la audiencia, el contenido, el comportamiento al hacer clic y la caducidad directamente en el panel de Braze.
-{{site.baseurl}}/assets/img/getting-started/run-example.png <br> También puedes crear componentes completamente personalizados para controlar el aspecto de tu mensajería, cómo se comporta y cómo interactúan con otros canales de mensajería (por ejemplo, desencadenar una tarjeta de contenido basada en una notificación push). Braze proporciona métodos SDK que te permiten registrar métricas como impresiones, clics y descartes en el panel de Braze. Cada canal de mensajería dispone de un artículo de análisis para facilitar esta tarea.
+{{site.baseurl}}/activos/img/puesta en marcha/crawl-example.png <br> Todos los componentes de Braze están diseñados para ser accesibles, adaptables y personalizables. Puedes empezar con Braze utilizando los componentes predeterminados de `BrazeUI` y personalizándolos para adaptarlos a las necesidades de tu marca y a tus casos de uso.
+{{site.baseurl}}/activos/img/puesta en marcha/caminarexample.png <br> Para ir más allá de las opciones predeterminadas, puedes escribir código personalizado para actualizar el aspecto de un canal de mensajería para que se ajuste más a tu marca. Esto incluye cambiar el tipo de letra, el tamaño de letra y los colores de un componente. Los especialistas en marketing mantienen el control de la audiencia, el contenido, el comportamiento al hacer clic y la caducidad directamente en el panel de Braze.
+{{site.baseurl}}/activos/img/inicio/ejecución-example.png <br> También puedes crear componentes completamente personalizados para controlar el aspecto de tu mensajería, cómo se comporta y cómo interactúan con otros canales de mensajería (por ejemplo, desencadenar una tarjeta de contenido basada en una notificación push). Braze proporciona métodos SDK que te permiten registrar métricas como impresiones, clics y descartes en el panel de Braze. Cada canal de mensajería dispone de un artículo de análisis para facilitar esta tarea.
 {% endgallery %}
 
 <br>
@@ -109,7 +109,7 @@ Después de definir un segmento, las herramientas de mensajería Braze te permit
 
 ## Integración de Braze
 
-Braze está diseñado para ponerse en marcha rápida y fácilmente. Nuestro tiempo medio de creación de valor es de seis semanas en nuestra base de clientes de cientos de marcas. Para más información sobre el proceso de integración, consulta: [Cómo empezar: Resumen de la integración]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+Braze está diseñado para una integración rápida. El plazo medio de obtención de valor es de seis semanas en toda nuestra base de clientes. Para más información sobre el proceso de integración, consulta [Primeros pasos: Visión general de la integración]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Recursos para marcar
 
