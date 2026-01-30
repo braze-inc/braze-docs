@@ -240,7 +240,7 @@ Intelligent Timing schedules messages during each user’s “most engaged hour�
 
 #### What are the fallback calculations if there is not enough data?
 
-If there are no relevant events for a user, Intelligent Timing uses the configured fallback setting in your message settings—either a specific custom fallback time or the most popular time to use the app among all users. 
+If there are no relevant events for a user, Intelligent Timing uses the configured fallback setting in your message settings—either a custom fallback time or the most popular time to use the app among all users. 
 
 ### Campaigns
 
