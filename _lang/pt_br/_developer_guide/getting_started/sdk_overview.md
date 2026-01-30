@@ -29,7 +29,7 @@ O SDK da Braze foi projetado para ser discreto e não interferir em outros SDKs 
 
 ## Análise de dados padrão e tratamento de sessões
 
-Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e do fim da sessão, todos os outros dados rastreados automaticamente não contam para o uso de seus pontos de dados.
+Certos dados de usuários são coletados automaticamente pelo nosso SDK—por exemplo, Primeiro Uso do App, Último Uso do App, Contagem Total de Sessões, Sistema Operacional do Dispositivo, etc. Se você seguir nossos guias de integração para implementar nossos SDKs, poderá aproveitar esta [coleta de dados padrão]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Verificar esta lista pode ajudá-lo a evitar armazenar as mesmas informações sobre os usuários mais de uma vez. Com exceção do início e do fim da sessão, todos os outros dados rastreados automaticamente não contam para o uso dos seus pontos de dados.
 
 {% alert note %}
 Todos os nossos recursos são configuráveis, mas é uma boa ideia implementar completamente o modelo padrão de coleta de dados.
