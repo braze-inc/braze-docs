@@ -21,15 +21,15 @@ Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el mét
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+La compatibilidad con GIF está incluida por defecto en la integración del SDK Web.
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/gifs.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-En este momento, los GIF de tarjeta de contenido no son compatibles con el SDK de Web Braze.
 {% endsdktab %}
 {% endsdktabs %}
