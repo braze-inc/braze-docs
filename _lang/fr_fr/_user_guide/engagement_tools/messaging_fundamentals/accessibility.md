@@ -1,18 +1,18 @@
 ---
 nav_title: Accessibilité
 article_title: Créer des messages accessibles en Braze
-page_order: 10.1
+page_order: 0.5
 page_type: reference
-description: "Cet article de référence explique pourquoi il est important de prendre en compte l'accessibilité dans votre contenu marketing, et comment vous pouvez créer des messages accessibles dans Braze."
+description: "Cet article de référence explique pourquoi il est important de prendre en compte l’accessibilité dans votre contenu marketing et comment vous pouvez créer des messages accessibles dans Braze."
 ---
 
 # Créer des messages accessibles en Braze
 
 > Comprenez pourquoi l'accessibilité est importante à prendre en compte dans votre contenu marketing, et comment vous pouvez créer des messages accessibles dans Braze. Pour plus de conseils, consultez notre cours d'apprentissage sur [les fondements de l'envoi de messages accessibles](https://learning.braze.com/accessible-messaging-foundations) sur Braze.
 
-Un contenu marketing qui exclut les personnes handicapées, même involontairement, peut empêcher des millions de personnes d'interagir avec votre marque. L'accessibilité en marketing consiste à faire en sorte que tout le monde puisse faire l'expérience de votre marketing, recevoir et comprendre votre communication, et avoir la possibilité d'investir dans votre produit, votre service ou votre marque ou d'en devenir fan. 
+Le contenu marketing qui exclut les personnes présentant un handicap, même involontairement, peut empêcher des millions de personnes d’interagir avec votre marque. L'accessibilité en marketing consiste à permettre à chacun de faire l'expérience de votre marketing, de comprendre votre communication et d'avoir la possibilité d'investir dans votre produit, votre service ou votre marque ou d'en devenir fan. 
 
-Lors de la conception de vos messages, prenez le temps de réfléchir à la manière dont vous pouvez rendre vos créations accessibles à tous vos clients.
+Lorsque vous concevez vos envois de message, prenez le temps de réfléchir à la façon dont vous pouvez rendre vos conceptions accessibles à tous vos clients.
 
 {% alert important %}
 Ce contenu est destiné à servir d'orientation générale et ne garantit pas la conformité aux normes d'accessibilité telles que les WCAG. Braze propose des outils qui facilitent la création de messages plus accessibles, mais il vous incombe de veiller à ce que votre contenu final réponde aux exigences applicables. L'accessibilité est un sujet complexe qui comporte de nombreux éléments mobiles. De nombreuses entreprises travaillent avec des spécialistes de l'accessibilité ou des consultants pour s'assurer que leur contenu, leur conception et leurs pratiques de développement répondent aux besoins de tous les utilisateurs.
@@ -24,22 +24,22 @@ Soutenir la communication accessible signifie rester ouvert, curieux et désireu
 
 {% multi_lang_include accessibility/feedback.md %}
 
-## Domaines de handicap à prendre en compte
+## Domaines d’invalidité à envisager
 
-*Cette section est partiellement adaptée de [W3C : Capacités et obstacles divers](https://www.w3.org/WAI/people-use-web/abilities-barriers/).*
+*Cette section est partiellement adaptée de [W3C : Capacités et obstacles divers](https://www.w3.org/WAI/people-use-web/abilities-barriers/).*
 
 {% tabs local %}
 {% tab Visual %}
 
-Les handicaps visuels peuvent aller d'une perte légère ou modérée de la vision d'un œil ou des deux yeux à une perte substantielle ou complète de la vision des deux yeux. Certaines personnes ont une sensibilité réduite ou inexistante à certaines couleurs ou une sensibilité accrue aux couleurs vives.
+Les handicaps visuels peuvent varier d’une perte de vision légère ou modérée dans un œil ou les deux yeux, à une perte de vision importante ou complète dans les deux yeux. Certaines personnes ont une sensibilité réduit ou absente pour certaines couleurs ou ont une sensibilité plus fortes aux couleurs vives.
 
-Pour interagir avec votre contenu, ces utilisateurs doivent pouvoir.. :
+Pour interagir avec votre contenu, ces utilisateurs ont besoin de :
 
 - Agrandir ou réduire la taille du texte et des images
-- Personnaliser les paramètres des polices, des couleurs et de l'espacement
-- Écouter une synthèse vocale du contenu (c'est-à-dire utiliser un lecteur d'écran)
-- Écouter les descriptions audio des vidéos
-- Lire un texte en braille actualisable
+- Personnaliser les paramètres des polices, couleurs et espacement
+- Écouter une synthèse vocale du contenu (c’est-à-dire, utiliser un lecteur d’écran)
+- Écouter des descriptions audio de la vidéo
+- Lire le texte à l’aide de braille actualisable
 
 {% alert note %}
 - Dans le monde, au moins 2,2 milliards de personnes souffrent d'une déficience visuelle de près ou de loin (voir [OMS](https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment)).
@@ -49,31 +49,31 @@ Pour interagir avec votre contenu, ces utilisateurs doivent pouvoir.. :
 {% endtab %}
 {% tab Hearing %}
 
-Les handicaps auditifs peuvent inclure une déficience auditive légère à modérée d'une ou des deux oreilles. Une perte d'audition, même partielle, peut être problématique en ce qui concerne le contenu audio.
+Les handicaps de l'ouïe ou de l'audition peuvent inclure une déficience auditive légère à modérée dans une oreille ou les deux. Même une perte d’audition partielle peut s’avérer problématique en ce qui concerne le contenu audio.
 
-Pour comprendre votre contenu, ces utilisateurs s'appuient sur :
+Pour comprendre votre contenu, ces utilisateurs comptent sur :
 
-- Transcriptions et sous-titres de contenus audio
-- Les lecteurs multimédias qui affichent des sous-titres et proposent des options permettant d'ajuster la taille et les couleurs du texte des sous-titres.
-- Options permettant d'arrêter, de mettre en pause et de régler le volume du contenu audio (indépendamment du volume du système).
-- Un son de premier plan de haute qualité qui se distingue clairement de tout bruit de fond.
+- Transcriptions et légendes du contenu audio
+- Des lecteurs multimédia qui affichent des légendes et fournissent des options pour ajuster la taille du texte et les couleurs des légendes
+- Options d’arrêt, de pause et d’ajustement du volume du contenu audio (indépendamment du volume du système)
+- Audio de premier plan de haute qualité, clairement reconnaissable par rapport aux bruits de fond
 
 {% alert note %}
-- Aux États-Unis, une personne sur huit (13 %, soit 30 millions) âgée de 12 ans ou plus souffre d'une perte auditive dans les deux oreilles, d'après les examens auditifs standard.
+- Une personne sur huit aux États-Unis (13 % ou 30 millions) âgée de 12 ans ou plus présente une perte auditive dans les deux oreilles, selon les examens d’audition standard
 - Environ 15 % des adultes américains (37,5 millions) âgés de 18 ans et plus déclarent avoir des problèmes d'audition (voir [NIH](https://www.nidcd.nih.gov/health/statistics/quick-statistics-hearing)).
 {% endalert %}
 
 {% endtab %}
 {% tab Physical %}
 
-Les handicaps physiques peuvent inclure la faiblesse et les limitations du contrôle musculaire ou de la sensation, les troubles articulaires, les douleurs qui entravent les mouvements et les membres manquants.
+Les handicaps physiques peuvent comprendre une faiblesse et des limitations dans le contrôle ou la sensation musculaire, des troubles articulaires, des douleurs qui gênent les mouvements et des membres manquants.
 
-Ces utilisateurs comptent sur la prise en charge du clavier pour activer les fonctionnalités (même s'ils n'utilisent pas un clavier standard). Pour interagir avec votre contenu, ces utilisateurs ont besoin :
+Ces utilisateurs s’appuient sur le support clavier pour activer la fonctionnalité (même s’ils n’utilisent pas de clavier standard). Pour interagir avec votre contenu, ces utilisateurs ont besoin de :
 
-- Grandes zones cliquables
-- Temps suffisant pour accomplir les tâches
-- Indicateurs visibles de l'orientation actuelle
-- Mécanismes permettant de sauter des blocs de contenu, comme les en-têtes de page ou les barres de navigation.
+- Larges zones cliquables
+- Suffisamment de temps pour terminer les tâches
+- Indicateurs visibles du sujet actuel
+- Mécanismes permettant de sauter des blocs de contenu, comme des en-têtes de page ou des barres de navigation
 
 {% alert note %}
 Près de 2 millions de personnes aux États-Unis vivent avec une perte de membre (voir [Amputee Coalition](https://www.amputee-coalition.org/limb-loss-resource-center/resources-filtered/resources-by-topic/limb-loss-statistics/limb-loss-statistics/#1)).
@@ -82,16 +82,16 @@ Près de 2 millions de personnes aux États-Unis vivent avec une perte de membre
 {% endtab %}
 {% tab Cognitive %}
 
-Les troubles cognitifs, d'apprentissage et neurologiques impliquent la neurodiversité et les troubles neurologiques, ainsi que des troubles du comportement et de la santé mentale qui ne sont pas nécessairement neurologiques. Elles peuvent affecter n'importe quelle partie du système nerveux et avoir un impact sur la façon dont les personnes entendent, bougent, voient, parlent et comprennent les informations.
+Les troubles cognitifs, d’apprentissage et neurologiques impliquent la neurodiversité et les troubles neurologiques, ainsi que les troubles comportementaux et mentaux qui ne sont pas nécessairement neurologiques. Ils peuvent affecter n’importe quelle partie du système nerveux et influencer la façon dont les personnes entendent, se déplacent, voient, parlent et comprennent les informations.
 
-En fonction des besoins individuels, ces utilisateurs s'appuient sur :
+Selon leurs besoins individuels, ces utilisateurs comptent sur :
 
-- Un contenu clairement structuré
-- Étiquetage cohérent des formulaires, boutons et autres contenus
-- Des prédictions sur les ciblages des liens et l'interaction globale
-- Différentes façons de naviguer, telles que des menus et des barres de recherche
-- Paramètres permettant de désactiver les contenus clignotants ou distrayants.
-- Un texte plus simple soutenu par des images
+- Contenu clairement structuré
+- Étiquetage cohérent des formulaires, des boutons et autres contenus
+- Cibles de liens prévisibles et interaction globale
+- Différentes façons de naviguer, comme les menus et les barres de recherche
+- Paramètres pour désactiver le clignotement ou un contenu provoquant des distractions
+- Texte plus simple soutenu par des images
 
 
 {% alert note %}
@@ -103,9 +103,9 @@ En fonction des besoins individuels, ces utilisateurs s'appuient sur :
 {% endtab %}
 {% endtabs %}
 
-## Meilleures pratiques
+## Bonnes pratiques
 
-La création d'un contenu accessible ne doit pas être une tâche insurmontable. De petits choix réfléchis peuvent faire une grande différence. Cette section présente des conseils pratiques qui permettent à un plus grand nombre de personnes de lire vos messages, d'y naviguer et d'interagir avec eux. Qu'il s'agisse d'ajuster votre texte, de styliser vos boutons ou d'ajouter un texte alt aux images, chaque modification contribue à une expérience plus inclusive. Voyons ce qu'il en est.
+La création d'un contenu accessible ne doit pas être une tâche insurmontable. De petits choix réfléchis peuvent faire une grande différence. Cette section présente des conseils pratiques qui permettent à un plus grand nombre de personnes de lire vos messages, d'y naviguer et d'interagir avec eux. Qu'il s'agisse d'ajuster votre texte, de styliser vos boutons ou d'ajouter un texte alt aux images, chaque modification s'ajoute à une expérience plus inclusive. Voyons ce qu'il en est.
 
 ### Contenu
 
@@ -120,14 +120,14 @@ Commençons par les fondations. Lorsque votre contenu a une structure claire, il
 
 Une fois votre structure en place, l'étape suivante consiste à s'assurer que vos mots sont faciles à lire. Cela signifie que les choses doivent rester simples, scannables et agréables à lire quel que soit l'appareil utilisé et les besoins de l'utilisateur.
 
-- **Rédigez des phrases courtes et claires :** Les phrases courtes sont faciles à comprendre pour tout le monde, en particulier pour les personnes qui utilisent des lecteurs d'écran ou qui ont des difficultés à traiter des informations complexes. Écrire à un niveau de lecture de la septième année des États-Unis. Vous pouvez utiliser des ressources telles que [Hemingway App](https://hemingwayapp.com/) pour vérifier le niveau de lecture de votre texte.
+- **Rédigez des phrases courtes et claires :** Les phrases courtes sont faciles à comprendre pour tout le monde, en particulier pour les personnes qui utilisent des lecteurs d'écran ou qui ont des difficultés à traiter des informations complexes. Écrivez à un niveau de lecture équivalent à la cinquième en France. Vous pouvez utiliser des ressources telles que [Hemingway App](https://hemingwayapp.com/) pour vérifier le niveau de lecture de votre texte.
 - **Choisissez une taille de police et un espacement lisibles :** Un texte trop petit peut être difficile à lire, surtout sur un téléphone portable. Utilisez au moins 14 px pour le corps du texte. Agrandissez les titres pour que les utilisateurs puissent voir clairement la différence. Un espacement plus important entre les lignes (environ 1,5 ligne) et les paragraphes améliore la lisibilité, en particulier pour les personnes ayant des besoins visuels ou cognitifs.
 - **Évitez les textes justifiés :** Le texte justifié crée un espacement inégal entre les mots, ce qui rend la lecture difficile pour les personnes souffrant de dyslexie ou de troubles cognitifs. Pensez à aligner à gauche le contenu qui s'étend sur plus de deux lignes pour les langues allant de gauche à droite ou à droite pour les [langues allant de droite à gauche]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages).
 - **Utilisez les caractères gras, italiques et majuscules avec parcimonie :** Le fait de mettre trop d'emphase sur le texte rend la lecture difficile, en particulier pour les personnes souffrant de dyslexie ou de déficiences visuelles. Restez simple.
 
 #### Clarté et facilité d'utilisation
 
-Enfin, parlons des détails les plus fins, ceux qui aident les utilisateurs non seulement à voir votre contenu, mais aussi à le comprendre et à interagir avec lui. 
+Enfin, parlons des détails les plus fins, ceux qui permettent aux utilisateurs non seulement de voir votre contenu, mais aussi de le comprendre et d'interagir avec lui. 
 
 - **Identifiez clairement les liens et les boutons :** Veillez à ce que le texte de votre [lien](#links) et de votre [bouton](#buttons) explique clairement ce qui se passe ensuite. Il aide les personnes qui utilisent des lecteurs d'écran ou qui naviguent avec un clavier à savoir à quoi s'attendre.
 - **Allez-y doucement avec les symboles et les emojis :** Les caractères spéciaux et les emojis peuvent rendre votre contenu ludique, mais ils peuvent être source de confusion lorsqu'ils sont lus par des lecteurs d'écran. Utilisez-les avec parcimonie et veillez à ce qu'ils ne remplacent pas un texte clair et descriptif.
@@ -197,16 +197,16 @@ Utilisez des liens pour la navigation, par exemple pour diriger les utilisateurs
 
 #### Rédigez un texte de lien descriptif
 
-Rédigez un texte de lien qui décrit clairement où le lien mènera l'utilisateur. Les utilisateurs de lecteurs d'écran sautent souvent d'un lien à l'autre pour parcourir le contenu ; veillez donc à ce que le texte de votre lien puisse se suffire à lui-même. Évitez les phrases telles que "cliquez ici", "plus" et "cliquez pour plus de détails", car elles sont ambiguës lorsqu'elles sont lues hors contexte.
+Écrivez le texte du lien qui décrit clairement l’endroit où se rendra l’utilisateur. Les utilisateurs de lecteurs d’écran passent souvent d’un lien à l’autre pour parcourir le contenu, assurez-vous donc que votre texte de lien s’explique de lui-même. Évitez les expressions comme « cliquez ici », « plus » et « cliquez pour obtenir des détails », car ils sont ambigus lorsqu’ils sont lus hors du contexte.
 
-Par exemple, réfléchissez à la manière dont vous pourriez rédiger un lien permettant de consulter un bulletin météorologique.
+Par exemple, réfléchissez à la manière dont vous pourriez rédiger un lien pour afficher un rapport météorologique.
 
 | Mauvais  | Mieux | Le meilleur |
 | --- | --- | --- | 
-| Cliquez ici | Cliquez ici pour accéder à la météo du jour | Météo du jour |
+| Cliquez ici | Cliquez ici pour accéder aux conditions météorologiques d’aujourd’hui | Météo d’aujourd’hui |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Comme pour tout autre contenu, il convient de rester simple et d'éviter autant que possible les mots superflus.
+Comme avec tout contenu, faites en sorte qu’il soit direct avec le moins de mots supplémentaires possible.
 
 #### Évitez de styliser les liens comme des boutons
 
@@ -219,7 +219,7 @@ Le fait de donner à un lien l'apparence d'un bouton peut perturber les personne
 
 Utilisez le bon élément pour l'action :
 
-- Utilisez `<button>` pour les actions, comme l'envoi d'un formulaire ou l'ouverture d'une fenêtre modale, etc.
+- Utilisez `<button>` pour les actions, comme la soumission d'un formulaire ou l'ouverture d'une fenêtre modale, etc.
 - Utilisez `<a>` pour la navigation, par exemple pour créer un lien vers une autre page ou un autre fichier.
 
 {% raw %}
@@ -241,7 +241,7 @@ Les cibles tactiles sont toutes les parties de votre message sur lesquelles les 
 Lorsque les cibles tactiles sont trop petites ou trop proches les unes des autres, il peut être frustrant, voire impossible, pour les utilisateurs ayant des problèmes de mobilité ou de dextérité d'interagir avec votre message. L'amélioration de cet aspect peut contribuer à réduire les erreurs et à créer une expérience plus fluide pour tout le monde.
 
 Voici ce qu'il faut retenir :
-- **Faites en sorte qu'il soit facile de tapoter.** Visez une taille minimale de 44 x 44 pixels pour les cibles tactiles. Ceci est conforme aux directives WCAG 2.2 pour les [ciblages tactiles](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) et aux normes courantes d'utilisabilité mobile.
+- **Utilisez une taille de ciblage adéquate.** Visez une taille minimale de 44 x 44 pixels pour les cibles tactiles. Ceci est conforme aux directives WCAG 2.2 pour les [ciblages tactiles](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) et aux normes courantes de convivialité mobile.
 - **Donnez à chaque cible une marge de manœuvre.** Si les cibles de tapotement sont trop proches les unes des autres, comme des liens empilés ou des boutons étroitement groupés, il peut être facile de les manquer ou de tapoter sur la mauvaise cible. Ajoutez de l'espacement ou du rembourrage entre les éléments pour éviter cela.
 - **Ne vous fiez pas uniquement aux images.** Même les petites icônes peuvent être rendues plus utilisables grâce à un rembourrage supplémentaire, ce qui leur permet de respecter les exigences minimales en matière de taille sans modifier la mise en page.
 - **Prévisualisation sur mobile.** Testez votre message sur différentes tailles d'écran et assurez-vous que les éléments interactifs sont faciles à utiliser.
@@ -472,7 +472,7 @@ Les sous-titres peuvent être basculés, ce qui permet aux utilisateurs de chois
 
 #### Fournir des contrôles de lecture {#playback-controls}
 
-Veillez à ce que votre vidéo intégrée comporte des commandes de lecture accessibles, telles que lecture, pause, sourdine et recherche, afin que les utilisateurs puissent interagir avec elle de la manière qui leur convient le mieux.
+Assurez-vous que votre vidéo intégrée comporte des commandes de lecture accessibles (lecture, pause, sourdine et recherche) afin que les utilisateurs puissent interagir avec elle de la manière qui leur convient le mieux.
 
 #### Évitez la lecture automatique {#no-auto-play}
 
@@ -488,7 +488,7 @@ Laissez les utilisateurs choisir le moment de la lecture d'une vidéo en incluan
 
 N'incluez pas de vidéos avec des effets de clignotement ou de stroboscopie, surtout à haute fréquence. Ceux-ci peuvent déclencher des crises chez les utilisateurs souffrant d'épilepsie photosensible et provoquer une gêne chez les autres.
 
-### Contraste des couleurs
+### Contraste de couleurs
 
 Un contraste de couleurs suffisant permet de s'assurer que vos messages sont faciles à lire pour tout le monde, y compris les personnes malvoyantes ou celles qui regardent votre contenu dans des conditions lumineuses ou difficiles. Visez des taux de contraste conformes aux [exigences du niveau AA des WCAG 2.2 :](https://www.w3.org/TR/WCAG/#contrast-minimum)
 
@@ -501,10 +501,10 @@ Vous pouvez tester vos choix de couleurs à l'aide de l'[outil de vérification 
 
 ### HTML personnalisé
 
-Si vous utilisez un code HTML personnalisé dans votre message :
+Si vous utilisez un HTML personnalisé dans vos envois de message :
 
-- Utilisez du [HTML sémantique](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML). Cela signifie qu'il faut utiliser les bons éléments HTML pour l'usage auquel ils sont destinés au lieu de styliser un élément pour qu'il ressemble à un autre. La plupart des éléments HTML créent leur propre support d'accessibilité.
-- Définissez l'[attribut`lang` ](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang) dans votre HTML pour identifier la langue dans laquelle votre contenu est rédigé. Les lecteurs d'écran utilisent des bibliothèques de sons différentes pour chaque langue, en fonction de la prononciation et des caractéristiques de cette langue. Si cela n'est pas spécifié, un lecteur d'écran suppose que le contenu est écrit dans la langue par défaut que l'utilisateur a choisie lors de la configuration du lecteur d'écran. Si le message n'est pas rédigé dans la langue par défaut, le lecteur d'écran risque de ne pas prononcer le message correctement. 
+- Utilisez du [HTML sémantique](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML). Cela signifie d’utiliser les éléments HTML appropriés pour leur objectif prévu plutôt que de formater un élément pour qu’il ressemble à un autre. La plupart des éléments HTML ont leur propre support d’accessibilité intégré.
+- Définissez l'[attribut`lang` ](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/lang) dans votre HTML pour identifier la langue dans laquelle votre contenu est rédigé. Les lecteurs d’écran utilisent différentes bibliothèques sonores pour chaque langue en fonction de la prononciation et des caractéristiques de celle-ci. Si cela n'est pas spécifié, un lecteur d'écran suppose que le contenu est écrit dans la langue par défaut que l'utilisateur a choisie lors de la configuration du lecteur d'écran. Si le message n'est pas rédigé dans la langue par défaut, le lecteur d'écran risque de ne pas prononcer le message correctement. 
 
 {% raw %}
 ```html
@@ -536,7 +536,7 @@ Voici quelques exemples particulièrement utiles dans les contextes d'envoi de m
 
 #### aria-label
 
-`aria-label` ajoute un nom accessible aux éléments qui n'ont pas de texte visible. Si vous utilisez une icône sans texte (comme une poubelle ou un "X" pour fermer), une personne utilisant un lecteur d'écran ne saura pas ce qu'elle fait, à moins que vous ne l'étiquiez. `aria-label` donne une voix à cette icône.
+`aria-label` ajoute un nom accessible aux éléments qui n'ont pas de texte visible. Si vous utilisez une icône sans texte (comme une poubelle ou un "X" pour fermer), une personne utilisant un lecteur d'écran ne saura pas ce qu'elle fait - à moins que vous ne l'étiquiez. `aria-label` donne une voix à cette icône.
 
 {% raw %}
 ```html
@@ -598,7 +598,7 @@ Les e-mails créés dans l'éditeur par glisser-déposer ont des éléments de p
 Pour vous aider à identifier et à résoudre rapidement les problèmes d'accessibilité, Braze propose des tests d'accessibilité automatisés dans les domaines suivants :
 
 - [Boîte de réception Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#accessibility-testing) pour les e-mails
-- [Scanner d'accessibilité]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/#accessibility-scanner) pour les messages créés à l'aide de notre éditeur HTML (par exemple, les messages in-app en HTML, les blocs de contenu en HTML, les [pieds de page des e-mails personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), les [pages d'abonnement aux e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page) et les [pages de désabonnement aux e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
+- [Scanner d'accessibilité]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=in-app%20message#accessibility-scanner) pour les messages créés à l'aide de notre éditeur HTML (par exemple, les messages in-app en HTML, les blocs de contenu en HTML, les [pieds de page des e-mails personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer), les [pages d'abonnement aux e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-opt-in-page) et les [pages de désabonnement aux e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#creating-a-custom-unsubscribe-page)).
 
 Ces tests comparent votre message aux normes[WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/)(Web Content Accessibility Guidelines), un ensemble de normes techniques internationalement reconnues pour l'accessibilité des contenus. Tous les problèmes qui peuvent être détectés automatiquement sont signalés et classés par ordre de gravité pour vous aider à établir des priorités.
 

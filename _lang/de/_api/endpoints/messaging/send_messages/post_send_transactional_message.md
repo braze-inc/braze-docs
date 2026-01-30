@@ -20,7 +20,7 @@ description: "Dieser Artikel beschreibt den Endpunkt Senden von Transaktions-E-M
 Dieser Endpunkt wird bei der Erstellung einer Braze [Transaktions-E-Mail-Kampagne]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) und der entsprechenden Kampagnen ID verwendet.
 
 {% alert important %}
-Transaktions-E-Mails sind derzeit als Teil ausgewählter Braze-Pakete verfügbar. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, um weitere Einzelheiten zu erfahren.
+Transaktions-E-Mails sind derzeit als Teil ausgewählter Braze-Pakete verfügbar. Kontaktieren Sie Ihren Customer-Success-Manager:in von Braze für weitere Informationen.
 {% endalert %}
 
 Ähnlich wie beim [Endpunkt für getriggerte Kampagnen]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) können Sie mit diesem Kampagnentyp den Inhalt von Nachrichten innerhalb des Braze-Dashboards unterbringen und gleichzeitig festlegen, wann und an wen eine Nachricht über Ihre API gesendet wird. Im Gegensatz zum Endpunkt Getriggerte Kampagne senden, der eine Zielgruppe oder ein Segment akzeptiert, an das Nachrichten gesendet werden sollen, muss eine Anfrage an diesen Endpunkt einen einzelnen Nutzer:innen entweder durch `external_user_id` oder `user_alias` spezifizieren, da dieser Kampagnentyp für 1:1-Nachrichten wie Bestellbestätigungen oder die Rücksetzung von Passwörtern gedacht ist.
@@ -52,13 +52,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "external_send_id": (optional, string) see the following request parameters,
-  "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
+  "trigger_properties": (optional, object) personalization key-value pairs that apply to the user in this request,
   "recipient": (required, object)
     {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User alias object) User alias of the user to receive message,
       "external_user_id": (optional, string) External identifier of user to receive message,
-      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
+      "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
     }
 }
 ```
@@ -67,9 +67,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | --------- | ---------| --------- | ----------- |
-|`external_send_id`| Optional | String |  Ein Base64-kompatibler String. Überprüft anhand der folgenden Regex:<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>In diesem optionalen Feld können Sie einen internen Bezeichner für diese bestimmte Sendung angeben, der in den Ereignissen enthalten ist, die vom Transactional HTTP Event Postback gesendet werden. Wenn Sie diesen Bezeichner weitergeben, wird er auch als Deduplizierungsschlüssel verwendet, den Braze für 24 Stunden speichert. <br><br>Die Übergabe desselben Bezeichners in einer anderen Anfrage führt 24 Stunden lang nicht zu einer neuen Instanz einer Sendung von Braze.|
-|`trigger_properties`|Optional|Objekt|Siehe [Eigenschaften des Auslösers]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Schlüssel-Wert-Paare für die Personalisierung, die für den Nutzer:innen in dieser Anfrage gelten sollen. |
-|`recipient`|Erforderlich|Objekt| Der Nutzer:in, dem Sie diese Nachricht zukommen lassen möchten. Kann `attributes` und ein einzelnes `external_user_id` oder `user_alias` enthalten.<br><br>Beachten Sie, dass, wenn Sie eine externe ID angeben, die noch nicht in Braze existiert, durch die Übergabe von Feldern an das `attributes` Objekt dieses Nutzerprofil in Braze erstellt wird und diese Nachricht an den neu erstellten Nutzer gesendet wird. <br><br>Wenn Sie mehrere Anfragen an denselben Nutzer mit unterschiedlichen Daten im Objekt `attributes` senden, werden die Attribute `first_name`, `last_name` und `email` synchron aktualisiert und als Template in Ihre Nachricht eingefügt. Angepasste Attribute verfügen nicht über diesen Schutz. Seien Sie also vorsichtig, wenn Sie einen Nutzer:innen über diese API aktualisieren und verschiedene Werte für angepasste Attribute in schneller Folge übergeben.|
+|`external_send_id`| Optional | String |  Ein Base64-kompatibler String. Überprüft anhand der folgenden Regex:<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>Mit diesem optionalen Feld können Sie einen internen Bezeichner für diese bestimmte Sendung übergeben, der in Ereignissen enthalten ist, die vom HTTP-Ereignis Postback der Transaktion gesendet werden. Bei der Übergabe wird dieser Bezeichner auch als Deduplizierungsschlüssel verwendet, den Braze für 24 Stunden speichert. <br><br>Die Übergabe desselben Bezeichners in einer anderen Anfrage führt 24 Stunden lang nicht zu einer neuen Instanz einer Sendung von Braze.|
+|`trigger_properties`|Optional|Objekt|Siehe [Eigenschaften des Auslösers]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Schlüssel-Wert-Paare der Personalisierung, die für den Nutzer:innen in dieser Anfrage gelten. |
+|`recipient`|Erforderlich|Objekt| Der Nutzer:in, dem Sie diese Nachricht zukommen lassen möchten. Kann `attributes` und ein einzelnes `external_user_id` oder `user_alias` enthalten.<br><br>Beachten Sie, dass, wenn Sie eine externe ID angeben, die noch nicht in Braze existiert, durch die Übergabe von Feldern an das Objekt `attributes` dieses Nutzerprofil in Braze erstellt wird und diese Nachricht an den neu erstellten Nutzer gesendet wird. <br><br>Wenn Sie mehrere Anfragen an denselben Nutzer mit unterschiedlichen Daten im Objekt `attributes` senden, werden die Attribute `first_name`, `last_name` und `email` synchron aktualisiert und als Template in Ihre Nachricht eingefügt. Angepasste Attribute verfügen nicht über diesen Schutz. Seien Sie also vorsichtig, wenn Sie einen Nutzer:innen über diese API aktualisieren und verschiedene Werte für angepasste Attribute in schneller Folge übergeben.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Beispiel Anfrage
@@ -122,7 +122,7 @@ Der Endpunkt kann in einigen Fällen auch einen Fehlercode und eine von Menschen
 | `You do not have permission to access this resource` | Der verwendete API-Schlüssel hat keine Berechtigung, diese Aktion durchzuführen |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Die meisten Endpunkte bei Braze verfügen über eine Rate-Limits-Implementierung, die einen 429er Code als Antwort zurückgibt, wenn Sie zu viele Anfragen gestellt haben. Der Endpunkt für den Transaktionsversand funktioniert anders: Wenn Sie das Ihnen zugewiesene Rate-Limit überschreiten, nimmt unser System die API-Aufrufe weiterhin auf, gibt Erfolgscodes zurück und versendet die Nachrichten. Diese Nachrichten unterliegen jedoch möglicherweise nicht den vertraglichen SLAs für das Feature. Bitte kontaktieren Sie uns, wenn Sie weitere Informationen über diese Funktion benötigen.
+Die meisten Endpunkte bei Braze verfügen über eine Rate-Limits-Implementierung, die einen 429er Code als Antwort zurückgibt, wenn Sie zu viele Anfragen gestellt haben. Der Endpunkt für den Transaktionsversand funktioniert anders: Wenn Sie das Ihnen zugewiesene Rate-Limit überschreiten, nimmt unser System weiterhin die API-Aufrufe auf, gibt Erfolgscodes zurück und versendet die Nachrichten. Allerdings unterliegen diese Nachrichten möglicherweise nicht dem vertraglichen SLA für das Feature. Wenden Sie sich an den Braze-Support, wenn Sie weitere Informationen zu dieser Funktion benötigen.
 
 ## Transaktionelles HTTP-Ereignis Postback
 

@@ -19,7 +19,7 @@ description: "이 문서에서는 목록 통합 Braze 엔드포인트에 대한 
 
 
 {% alert note %}
-이 엔드포인트를 사용하려면 `cdi.integration_list` 권한으로 API 키를 생성해야 합니다.
+이 엔드포인트를 사용하려면 `cdi.integration_list` 권한이 있는 API 키를 생성해야 합니다.
 {% endalert %}
 
 ## 사용량 제한
@@ -32,7 +32,7 @@ description: "이 문서에서는 목록 통합 Braze 엔드포인트에 대한 
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 |---|---|---|---|
-| `cursor` | 선택 사항 | 문자열 | 통합 목록의 페이지 매김을 결정합니다. |
+| `cursor` | Optional | 문자열 | 통합 목록의 페이지 매김을 결정합니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 요청 예시
@@ -90,13 +90,13 @@ Link: </cdi/integrations?cursor=c2tpcDow>; rel="prev",</cdi/integrations?cursor=
 
 ## 문제 해결
 
-다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
+다음 표에는 가능한 반환 오류와 관련된 문제 해결 단계가 나와 있습니다.
 
 | 오류 | 문제 해결 |
 | --- | --- |
 | `400 Invalid cursor` | `cursor` 주소가 유효한지 확인합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-추가 상태 코드 및 관련 오류 메시지는 [치명적인 오류 및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
+추가 상태 코드 및 관련 오류 메시지는 [심각한 오류 & 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
 {% endapi %}

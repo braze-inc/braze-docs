@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Update Preference Center"
+nav_title: "PUT: Update des Einstellungszentrums"
 article_title: "PUT: Update Preference Center"
 search_tag: Endpoint
 page_order: 5
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Update a prefe
 {% api %}
 # Update des Einstellungszentrums
 {% apimethod put %}
-/Präferenz_center/v1/{preferenceCenterExternalID}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um ein Einstellungszentrum zu aktualisieren.
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Parameter der Anfrage

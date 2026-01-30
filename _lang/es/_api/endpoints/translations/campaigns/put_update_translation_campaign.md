@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Actual
 /campaigns/translations
 {% endapimethod %}
 
-> Utilice este punto final para actualizar varias traducciones de una campaña.
+> Utilice este punto final para actualizar varias traducciones de una campaña. Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
 
 Si quieres actualizar las traducciones después de lanzar una campaña, primero tendrás que [guardar tu mensaje como borrador]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/).
 
@@ -41,18 +41,19 @@ No hay parámetros de ruta para este punto final.
 | --------- | ---------| --------- | ----------- |
 | `campaign_id` | Obligatoria | Cadena | El ID de su campaña. |
 | `message_variation_id` | Obligatoria | Cadena | El ID de la variación de tu mensaje. |
-| `locale_name` | Obligatoria | Cadena | El nombre de la localización. |
+| `locale_id`| Obligatoria | Cadena | El ID (UUID) de la localización. |
+| `translation_map` | Obligatoria | Objeto | Objeto que contiene las nuevas traducciones. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Ten en cuenta que todos los ID de traducción se consideran identificadores únicos universales (UUID), que puedes encontrar en la configuración **de Soporte multilingüe** o en la respuesta de la solicitud GET.
+{% alert note %}
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+{% endalert %}
 
 ## Ejemplo de solicitud
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
-    "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab", // CAMPAIGNS ONLY
+    "campaign_id": "e24404b3-3626-4de0-bdec-06935f3aa0ab",
     "message_variation_id": "f14404b3-3626-4de0-bdec-06935f3aa0ad",
     "locale_id": "h94404b3-3626-4de0-bdec-06935f3aa0ad",
     "translation_map": {
@@ -86,20 +87,5 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 	]
 }
 ```
-
-
-## Solución de problemas
-
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
-
-| Mensaje de error  | Solución de problemas |
-|----|----------|
-| `The provided translations yielded errors when parsing. Please contact Braze for more information.` | Ocurre cuando el traductor externo proporciona traducciones con excepciones que generan errores Liquid. Ponte en contacto con el soporte de Braze para obtener más ayuda. |
-| `The provided translations are missing 'id_1', 'id_2'` | Los ID de traducción no coinciden o el texto traducido supera los límites. Por ejemplo, esto podría significar que a la forma de la carga útil le faltan campos en el objeto de traducción. Cada mensaje (cuando está habilitado para la multiidioma) debe tener un número determinado de "bloques de traducción" con un ID asociado. Si a la carga útil proporcionada le falta alguno de los ID, se considerará un objeto incompleto y dará lugar a un error. |
-| `The provided locale code does not exist.` | La carga útil del traductor externo contiene un código de localización que no existe en Braze. |
-| `The provided translations have exceeded the maximum of 20MB.` | La carga útil proporcionada supera el límite de tamaño. |
-| `You have exceeded the maximum number of requests. Please try again later.` | Todas las API de Braze tienen un límite de tasa incorporado, y este error se devolverá automáticamente cuando la tasa haya superado la cantidad asignada para este token de autenticación. |
-| `This message does not support multi-language.` | Esto puede ocurrir cuando un ID de mensaje aún no admite mensajes en varios idiomas. Sólo se pueden traducir los mensajes de los siguientes canales: push, mensajes dentro de la aplicación y correo electrónico. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

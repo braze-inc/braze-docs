@@ -1,7 +1,7 @@
 ---
 nav_title: ワークスペース間の複製
 article_title: ワークスペース間でのコピー
-page_order: 4.5
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "この参考記事では、キャンペーンとキャンバスを異なるワークスペースにコピーする方法の概要を説明する。"

@@ -1,5 +1,5 @@
 ---
-nav_title: "Cas d'utilisation de l'API"
+nav_title: "cas d'utilisation de l'API"
 article_title: "Cas d'utilisation de l'API"
 description: "Que vous soyez un développeur chevronné ou un marketeur avec des ressources de développement minimales, cet article de référence est conçu pour vous aider à comprendre comment exploiter la puissance de l'API REST de Braze pour accomplir diverses tâches et améliorer votre stratégie d'engagement client."
 page_type: reference
@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Après l'envoi de cette charge utile, la réponse suivante confirme que les trois collections ont été supprimées avec succès du catalogue de vaisselle de Kitchenerie.
+Après l'envoi de cette charge utile, la réponse confirme que Braze a réussi à supprimer les trois collections du catalogue de vaisselle de Kitchenerie.
 
 ```json
 {
@@ -53,7 +53,7 @@ Chez MovieCanon, une entreprise de services de streaming, l'équipe de développ
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Pour accomplir cette tâche, l'équipe de développeurs aura besoin d'une clé API avec l'autorisation `email.spam.remove` pour utiliser l’endpoint `/email/spam/remove`. Cet endpoint supprime les adresses e-mails de la liste des courriers indésirables de Braze et de la liste des courriers indésirables gérée par le fournisseur de messagerie de MovieCanon.
+Pour accomplir cette tâche, l'équipe de développeurs a besoin d'une clé API avec l'autorisation `email.spam.remove` pour utiliser l'endpoint `/email/spam/remove`. Cet endpoint supprime les adresses e-mail de la liste des spams de Braze et de la liste des spams gérée par le fournisseur de messagerie de MovieCanon.
 
 Pour envoyer cette demande, incluez soit une adresse e-mail sous forme de chaîne, soit un tableau de jusqu'à 50 adresses e-mail à modifier. Comme le nombre des e-mails à supprimer est inférieur à 50, MovieCanon peut accomplir cette tâche avec le corps de requête suivant :
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Après avoir envoyé cette charge utile avec succès, cette réponse confirme que les e-mails ont été retirés de la liste des courriers indésirables de MovieCanon.
+Après l'envoi réussi de cette charge utile, cette réponse confirme que Braze a supprimé les e-mails de la liste des spams de MovieCanon.
 
 ```json
 {
@@ -84,10 +84,8 @@ Plongeons dans la façon dont Siege Valley Health peut accomplir ces deux tâche
 
 Pour la première tâche d'audit des canvas, utilisez l’[endpoint `/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) pour exporter une liste de canvas qui comprend le nom et les étiquettes. Voici un exemple de demande :
 
-{% details Voici la réponse que l'équipe marketing de Siege Valley Health recevrait. %}
+{% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
@@ -115,8 +113,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Passons à la tâche suivante. Celle-ci consiste à afficher le résumé analytique du premier canvas de la liste des canvas de Siege Valley Health. Pour ce faire, nous utiliserons l’[endpoint `/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) avec les paramètres de requête suivants :
 
-* `canvas_id`: "canvas_identifier_2"
-* `ending_at` : 2023-07-10T23:59:59
+* `canvas_id` : "canvas_identifier_2"
+* `ending_at` : 2023-07-10T23:59:59
 * `starting_at` : 2020-07-10T23:59:59
 
 Voici une demande d'exemple :
@@ -128,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Vérifier les campagnes et canvas planifiés à venir
 
-La période la plus chargée de l'année approche à grands pas pour Flash & Thread, une marque de vente au détail de vêtements et de produits de beauté en ligne et en magasin. Son équipe marketing souhaite vérifier les campagnes et les canvas à venir depuis le tableau de bord de Braze avant le 31 mars 2024 à 12 heures. Cette tâche peut être effectuée au moyen de l’[endpoint `/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). 
+La période la plus chargée de l'année approche à grands pas pour Flash & Thread, une marque de retail qui vend des vêtements et des produits de beauté en ligne et en magasin. Son équipe marketing souhaite vérifier les campagnes et les canvas à venir depuis le tableau de bord de Braze avant le 31 mars 2024 à 12 heures. Cette tâche peut être effectuée au moyen de l’[endpoint `/messages/scheduled_broadcasts`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
 
 Voici la demande d'exemple :
 
@@ -137,7 +135,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Ce point de terminaison renverra la liste des campagnes et des toiles à venir. À partir de là, l'équipe marketing peut confirmer sa liste de messages en se référant au champ `name` pour les campagnes et les Canvases dans la réponse.
+Cet endpoint renvoie la liste des campagnes et des toiles à venir. À partir de là, l'équipe marketing peut confirmer sa liste de messages en se référant au champ `name` pour les campagnes et les Canvases dans la réponse.
 
 ## Affichage d'un ancien centre de préférences
 
@@ -150,7 +148,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-{% details Voici la réponse que l'équipe marketing de PoliterWeekly recevrait. %}
+{% details Here’s the response the PoliterWeekly marketing team would receive. %}
 
 ```json
 {
@@ -160,7 +158,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "updated_at": "2024-08-15T15:00:00",
   "preference_center_title": "Manage Your PoliterWeekly Notification Preferences",
   "preference_center_page_html": "<!DOCTYPE html><html><head><title>Your PoliterWeekly Newsletter Preferences</title><style>body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }.container { max-width: 600px; margin: auto; }h1 { color: #333; }.preference { margin-bottom: 20px; }.preference label { font-size: 16px; }.preference input[type=\"checkbox\"] { margin-right: 10px; }.submit-btn { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }</style></head><body><div class=\"container\"><h1>Manage your notification preferences</h1><p>Select the types of updates you wish to receive from us:</p><form id=\"preferencesForm\"><div class=\"preference\"><label><input type=\"checkbox\" name=\"newsUpdates\" checked> News Updates</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"editorialPicks\"> Editorial Picks</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"events\"> Events & Webinars</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"specialOffers\"> Special Offers & Promotions</label></div><button type=\"submit\" class=\"submit-btn\">Save Preferences</button></form></div><script>document.getElementById('preferencesForm').addEventListener('submit', function(e) {e.preventDefault();alert('Your preferences have been saved!');});</script></body></html>",
-  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Your preferences have been updated successfully.</p></body></html>",
+  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Braze updated your preferences successfully.</p></body></html>",
   "redirect_page_html": null,
   "preference_center_options": {
     "meta-viewport-content": "width=device-width, initial-scale=1"
@@ -192,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Après l'envoi de cette charge utile, la réponse suivante confirme que les numéros de téléphone invalides de CashBlastr ont été supprimés de la liste des invalides de Braze.
+Après l'envoi de cette charge utile, la réponse confirme que Braze a supprimé les numéros de téléphone non valides de CashBlastr de la liste des numéros non valides de Braze.
 
 ```json
 {
@@ -211,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Ce point de terminaison répertorie également les statuts des groupes d'abonnement d'un utilisateur pour les e-mails et peut être utilisé pour voir le statut des groupes d'abonnement pour plusieurs utilisateurs.
+Cet endpoint répertorie également les statuts du groupe d'abonnement d'un utilisateur pour l'e-mail. Utilisez-le pour connaître le statut du groupe d'abonnement de plusieurs utilisateurs.
 
 ## Vérification d'un modèle HTML pour la messagerie électronique
 
@@ -219,11 +217,9 @@ Chez WorkFriends, un réseau social qui aide à établir des connexions entre le
 
 Dans ce scénario, WorkFriends a historiquement utilisé un modèle HTML unique avec son ancienne marque. Dans un effort pour aligner son identité de marque, WorkFriends veut vérifier s'il y a des informations utiles dans ce modèle HTML à exploiter avant de passer à un nouveau modèle.
 
-{% details Voici la réponse que l'équipe WorkFriends recevrait. %}
+{% details Here’s the response that the WorkFriends team would receive. %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "WorkFriends_Email_Template_ID",
   "template_name": "Promo template",
@@ -239,4 +235,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-Après avoir examiné ces informations de modèle, WorkFriends peut également utiliser le [`/templates/email/update` point de terminaison]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) pour mettre à jour le modèle d'e-mail via l'API. Le modèle d'email dans le tableau de bord Braze reflétera ces modifications.
+Après avoir examiné ces informations de modèle, WorkFriends peut également utiliser le [`/templates/email/update` point de terminaison]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) pour mettre à jour le modèle d'e-mail via l'API. Le modèle d'e-mail dans le tableau de bord de Braze reflète ces modifications.
