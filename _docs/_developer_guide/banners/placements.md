@@ -510,7 +510,7 @@ Braze automatically logs impressions for Banners that are in view when you use S
 
 ## Logging clicks
 
-The method used to log Banner clicks depends on how your Banner content is created.
+The method used to log Banner clicks depends on how your Banner is rendered and where your click handler is located.
 
 ### Standard Banner content (automatic)
 
@@ -527,6 +527,52 @@ If your Banner uses the **Custom Code** editor block in the Braze dashboard, you
 ```
 
 This is similar to the [JavaScript bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) used for HTML in-app messages. The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
+
+### Custom UI implementations (headless)
+
+If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
+
+Use the `logClick()` method on the Banner object:
+
+{% tabs local %}
+{% tab Web %}
+```javascript
+const banner = braze.getBanner("placement_id");
+if (banner) {
+  // When the user clicks your custom UI element
+  banner.logClick();
+}
+```
+{% endtab %}
+{% tab Swift %}
+```swift
+AppDelegate.braze?.banners.getBanner(for: "placement_id") { banner in
+  // When the user clicks your custom UI element
+  banner?.logClick()
+}
+```
+{% endtab %}
+{% tab Android %}
+{% subtabs %}
+{% subtab Kotlin %}
+```kotlin
+val banner = Braze.getInstance(context).getBanner("placement_id")
+// When the user clicks your custom UI element
+banner?.logClick()
+```
+{% endsubtab %}
+{% subtab Java %}
+```java
+Banner banner = Braze.getInstance(context).getBanner("placement_id");
+if (banner != null) {
+  // When the user clicks your custom UI element
+  banner.logClick();
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Dimensions and sizing
 
