@@ -1,25 +1,25 @@
 ---
-nav_title: Monitoramento de localização
-article_title: Monitoramento de localização por meio do SDK do Braze
+nav_title: Rastrear local
+article_title: Rastrear local através do SDK Braze
 page_order: 3.4
-description: "Saiba como rastrear o local por meio do Braze SDK."
+description: "Aprenda como rastrear local através do SDK Braze."
 
 ---
 
-# Monitoramento de localização
+# Rastrear local
 
-> Saiba como rastrear o local por meio do Braze SDK.
+> Aprenda como rastrear local através do SDK Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/analytics/tracking_location.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/analytics/tracking_location.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/analytics/tracking_location.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/analytics/tracking_location.md %}
 {% endsdktab %}
 {% endsdktabs %}
