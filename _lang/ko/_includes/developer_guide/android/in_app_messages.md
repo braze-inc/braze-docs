@@ -8,16 +8,16 @@
 
 ## 인앱 메시지 활성화
 
-### 1단계: 등록 `BrazeInAppMessageManager`
+### 1단계: `BrazeInAppMessageManager` 등록하기
 
 인앱 메시지 표시는 [`BrazeInAppMessageManager`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html) 클래스에 의해 관리됩니다. 앱의 모든 활동을 `BrazeInAppMessageManager`에 등록해야 인앱 메시지 보기를 보기 계층 구조에 추가할 수 있습니다. 이를 달성하는 방법에는 두 가지가 있습니다:
 
 {% tabs local %}
-{% tab 자동으로 %}
+{% tab automatically %}
 [활동 수명 주기 콜백 통합]({{site.baseurl}}/developer_guide/sdk_integration#android_step-4-enable-user-session-tracking)은 인앱 메시지 등록을 자동으로 처리하므로 추가 통합이 필요하지 않습니다. 이것은 인앱 메시지 등록을 처리하는 권장 방법입니다.
 {% endtab %}
 
-{% tab 수동으로 %}
+{% tab manually %}
 {% alert warning %}
 자동 등록을 위한 활동 생명주기 콜백을 사용하는 경우, 이 단계를 완료하지 마십시오.
 {% endalert %}
