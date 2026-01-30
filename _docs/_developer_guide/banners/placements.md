@@ -510,19 +510,15 @@ Braze automatically logs impressions for Banners that are in view when you use S
 
 ## Logging clicks
 
-The method used to log Banner clicks depends on how your Banner is rendered.
+The method used to log Banner clicks depends on how your Banner content is created.
 
-### Using `insertBanner` (automatic)
+### Standard Banner content (automatic)
 
-If you're using SDK methods to insert Banners (such as `braze.insertBanner()` on Web or the `BannerView` class on mobile), analytics events are handled automatically. The SDK attaches click listeners to your Banner, and no additional code is needed.
+If you're using SDK methods to insert Banners (such as `braze.insertBanner()` on Web or the `BannerView` class on mobile) and your Banner uses standard editor components (images, buttons, text), clicks are tracked automatically. The SDK attaches click listeners to these elements, and no additional code is needed.
 
-{% alert warning %}
-Do not manually call click-logging methods in combination with `insertBanner`. Doing so is redundant and may lead to inaccurate reporting or double-counting.
-{% endalert %}
+### Custom Code Blocks
 
-### Using Custom Code Blocks
-
-If you're designing a Banner with the Custom Code option in the Braze dashboard and writing your own HTML and JavaScript, use `brazeBridge.logClick()` to log clicks from within that code. For example:
+If your Banner uses the **Custom Code** editor block in the Braze dashboard, you must use `brazeBridge.logClick()` to log clicks from within that custom HTML. This applies even when using `insertBanner()` to render the Banner, because the SDK cannot automatically attach listeners to elements inside your custom code.
 
 ```html
 <button onclick="brazeBridge.logClick()">
