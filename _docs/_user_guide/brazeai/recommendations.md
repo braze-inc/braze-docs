@@ -383,3 +383,7 @@ Note that recommendations operate independently and don’t have any knowledge o
 ### Do existing recommendations train weekly after upgrading to Item Recommendations Pro?
 
 Yes, but only after their next scheduled update. Existing recommendations don’t switch to weekly training and daily prediction immediately upon upgrading to Item Recommendations Pro. However, they will adopt the new schedule automatically at their next retraining cycle. For example, if a recommendation was last trained on February 1 and is set to retrain every 30 days, it will adopt the new weekly schedule after its next update on March 2.
+
+### How can I make all aggregate dimension recommendations expire at once?
+
+Aggregate dimensions (dimensions with an action valid period) normally expire a set number of days after a recommendation is received. If you need to expire all recommendations for all customers on a specific date so that everyone receives new predictions for those dimensions, this is an advanced operation that involves updating recommendation expiration and then excluding the affected training experiences from model training so that model quality is not impacted. Contact Braze Support or your customer success manager for guidance and the appropriate procedure for your setup.
