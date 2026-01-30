@@ -14,7 +14,7 @@ search_tag: Partner
 > [Google Cloud Storage](https://cloud.google.com/storage/) ist ein massiv skalierbarer Objektspeicher für unstrukturierte Daten, der von Google als Teil der Cloud Computing Produkt Suite angeboten wird.
 
 {% alert important %}
-Wenn Sie zwischen Cloud-Speicheranbietern wechseln, wenden Sie sich an Ihren Customer-Success-Manager von Braze, um weitere Unterstützung bei der Einrichtung und Validierung Ihrer neuen Integration zu erhalten.
+Wenn Sie zwischen Cloud-Speicheranbietern wechseln, wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, um weitere Unterstützung bei der Einrichtung und Validierung Ihrer neuen Integration zu erhalten.
 {% endalert %}
 
 Die Integration von Braze und Google Cloud Storage erlaubt es Ihnen, Daten von Currents zu Google Cloud Storage zu streamen. Sie können später einen ETL-Prozess (Extract, Transform, Load) verwenden, um Ihre Daten an andere Standorte zu übertragen, z. B. Google BigQuery.
@@ -24,7 +24,7 @@ Die Integration von Braze und Google Cloud Storage erlaubt es Ihnen, Daten von C
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
 | Google Cloud Storage Konto | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein Google Cloud Storage-Konto. |
-| Currents | Um Daten zurück in Google Cloud Storage zu exportieren, müssen Sie [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) für Ihr Konto eingerichtet haben. |
+| Currents | Um Daten zurück in Google Cloud Storage zu exportieren, müssen Sie [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) für Ihr Konto eingerichtet haben. Currents ist nicht erforderlich, wenn Sie nur die Archivierung von Nachrichten einrichten möchten. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -65,7 +65,7 @@ Erstellen Sie ein neues Dienstkonto in Ihrer Google Cloud Platform-Konsole, inde
 
 Als nächstes geben Sie dem Dienstkonto einen Namen und gewähren ihm Zugriff auf Ihre neu erstellte angepasste Rolle.
 
-![In der Google Cloud Platform geben Sie auf der Seite zum Erstellen von Diensten den Namen Ihrer Rolle in das Feld "Rolle auswählen" ein.]({% image_buster /assets/img/gcs4.png %})
+![In der Google Cloud Platform geben Sie auf der Seite "Dienste erstellen" den Namen Ihrer Rolle in das Feld "Rolle auswählen" ein.]({% image_buster /assets/img/gcs4.png %})
 
 #### Schritt 2.2: Einen Schlüssel erstellen
 
@@ -80,10 +80,10 @@ Navigieren Sie in Braze zu **Currents** > **\+ Create Current** > **Google Cloud
 Als nächstes laden Sie Ihren Private Key im JSON-Format unter **GCS JSON Credentials** hoch und geben den Bucket-Namen und das GCS-Präfix (optional) an. 
 
 {% alert important %}
-Es ist wichtig, dass Sie Ihre Zugangsdaten immer auf dem neuesten Stand halten. Wenn die Zugangsdaten für Ihren Konnektor ablaufen, sendet der Konnektor keine Ereignisse mehr. Wenn dieser Zustand länger als **48 Stunden** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Es ist wichtig, dass Sie Ihre Zugangsdaten immer auf dem neuesten Stand halten. Wenn die Zugangsdaten für Ihren Konnektor ablaufen, sendet der Konnektor keine Ereignisse mehr. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
-![Die Google Cloud Storage Currents Seite in Braze. Auf dieser Seite gibt es Felder für den Namen der Integration, die Zugangsdaten per E-Mail, die GCS JSON-Zugangsdaten, den Bucket-Namen und das Präfix.]({% image_buster /assets/img/gcs6.png %})
+![Die Google Cloud Storage Currents Seite in Braze. Auf dieser Seite gibt es Felder für den Integrationsnamen, die E-Mail des Kontakts, die GCS JSON-Zugangsdaten, den Bucket-Namen und das Präfix.]({% image_buster /assets/img/gcs6.png %})
 
 Scrollen Sie schließlich zum Ende der Seite und wählen Sie aus, welche Nachrichten-Engagement-Events oder Kundenverhalten-Events Sie exportieren möchten. Wenn Sie fertig sind, starten Sie Ihren Current.
 
@@ -118,7 +118,13 @@ Um diese Berechtigungen im Braze-Dashboard zu überprüfen, gehen Sie auf die Se
 Nutzer:innen, die eine Lösung zur Speicherung von Daten in der Cloud integriert haben und versuchen, APIs, Dashboard-Berichte oder CSV-Berichte zu exportieren, werden folgende Probleme haben:
 
 - Alle API-Exporte geben keine Download-URL im Antwortkörper zurück und müssen über den Datenspeicher abgerufen werden.
-- Alle Dashboard-Berichte und CSV-Berichte werden zum Download an die E-Mail des Nutzers:innen gesendet (keine Speicherberechtigung erforderlich) und auf dem Datenspeicher gesichert.
+- Alle Dashboard-Berichte und CSV-Berichte werden an die E-Mail des Nutzers:innen zum Download gesendet (keine Speicherberechtigung erforderlich) und auf dem Datenspeicher gesichert.
+
+{% alert important %}
+**JSON-Format erforderlich**: Für JSON-Exporte verwendet Braze das JSONL-Format (newline-delimited JSON), bei dem jede Zeile ein eigenes JSON-Objekt enthält. Dieses Format unterscheidet sich vom Standard-JSON, das ein einzelnes JSON-Array oder -Objekt ist. Jede Zeile in der exportierten Datei ist ein gültiges JSON-Objekt, aber die Datei als Ganzes ist kein einzelnes gültiges JSON-Dokument. Wenn Sie diese Dateien verarbeiten, parsen Sie jede Zeile einzeln als separates JSON-Objekt, anstatt zu versuchen, die gesamte Datei als ein einziges JSON-Dokument zu parsen.
+
+Currents exportiert im Apache Avro-Format (`.avro` Dateien), nicht in JSON. Diese Anforderung an das JSON-Format gilt für Dashboard-Datenexporte und API-Exporte, die das JSON-Format verwenden.
+{% endalert %}
 
 ## Fehlersuche
 
