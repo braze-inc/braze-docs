@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# Primeros pasos de [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}: Resumen de la integración
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Primeros pasos: Resumen de la integración
 
 > En este artículo se ofrece un resumen básico del proceso de incorporación.
 
@@ -44,7 +44,7 @@ La fase de descubrimiento y planificación dura, en promedio, unas seis semanas.
 Durante el periodo de incorporación de tu empresa, Braze organizará sesiones de resumen técnico. Recomendamos encarecidamente a los ingenieros que asistan a estas sesiones. Las sesiones de resumen técnico te ofrecen la oportunidad de mantener conversaciones sobre la escalabilidad de la arquitectura de la plataforma y ver ejemplos prácticos de cómo empresas de tu tamaño han tenido éxito anteriormente con casos de uso similares.
 {% endalert %}
 
-![Iconos para diferentes canales, como correo electrónico, carrito de la compra, imágenes, geolocalización, etc.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
+![Iconos para distintos canales, como correo electrónico, carrito de la compra, imágenes, geolocalización, etc.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### Planificación de campañas
 
@@ -225,9 +225,9 @@ Realizarás un seguimiento de las actualizaciones de la plataforma Braze a trav�
 
 ## Límites de velocidad SDK 
 
-### Usuarios activos al mes CY 24-25 
+### Usuarios activos mensuales CY 24-25, MAU universal, MAU Web y MAU móvil  
 
-Para los clientes que han comprado Usuarios activos al mes - CY 24-25, Braze aplica límites de tasa en el servidor a las solicitudes de API utilizadas por nuestros SDK para actualizar sesiones, atributos de usuario, eventos y otros datos de perfil del usuario. Esto se hace para garantizar la estabilidad de la plataforma y mantener un servicio rápido y fiable. 
+Para los clientes que han comprado Usuarios Activos Mensuales CY 24-25, MAU Universal, MAU Web y MAU Móvil, Braze aplica límites de tasa en el servidor a las solicitudes de API utilizadas por nuestros SDK para actualizar sesiones, atributos de usuario, eventos y otros datos de perfil de usuario. Esto se hace para garantizar la estabilidad de la plataforma y mantener un servicio rápido y fiable. 
 
 * Los límites de velocidad por hora se establecen en función del tráfico de SDK previsto en tu cuenta, que puede corresponder al número de usuarios activos al mes (MAU) que hayas adquirido, al sector, a la estacionalidad o a otros factores. Cuando se alcance el límite de velocidad por hora, Braze ralentizará las peticiones hasta la hora siguiente.
 * El SDK reintenta automáticamente todas las solicitudes con límite de tasa.
