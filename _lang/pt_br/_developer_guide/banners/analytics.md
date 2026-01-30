@@ -1,8 +1,8 @@
 ---
-nav_title: Análise de dados
-article_title: Análise de dados de banner
+nav_title: Análise de dados do Banner
+article_title: Análise de dados do Banner
 page_order: 3
-description: "Saiba como revisar a análise de dados de seus Banners, que inclui detalhes da campanha, performance da mensagem e performance histórica."
+description: "Aprenda a revisar a análise de dados dos seus Banners, que inclui detalhes da campanha, desempenho da mensagem e desempenho histórico."
 channel:
   - banners
 tool:
@@ -10,8 +10,8 @@ tool:
 noindex: true
 ---
 
-# Análise de dados de banner
+# Análise de dados do Banner
 
-> Saiba como revisar a análise de dados de seus Banners, que inclui detalhes da campanha, performance da mensagem e performance histórica. Para saber mais sobre informações gerais, consulte [Sobre banners]({{site.baseurl}}/developer_guide/banners).
+> Aprenda a revisar a análise de dados dos seus Banners, que inclui detalhes da campanha, desempenho da mensagem e desempenho histórico. Para mais informações gerais, veja [Sobre Banners]({{site.baseurl}}/developer_guide/banners).
 
-{% multi_lang_include campaign_analytics.md channel="banner" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="banner" %}
