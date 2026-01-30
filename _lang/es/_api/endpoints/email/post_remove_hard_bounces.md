@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Eliminar correos electrónicos de rebote duro"
-article_title: "POST: Eliminar correos electrónicos de rebote duro"
+nav_title: "PUBLICAR: Eliminar los correos electrónicos de rebote duro"
+article_title: "PUBLICAR: Eliminar correos electrónicos de rebote duro"
 search_tag: Endpoint
 page_order: 6
 layout: api_page

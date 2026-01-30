@@ -1,7 +1,7 @@
 ---
 nav_title: Archivierung
 article_title: Archivierung
-page_order: 3
+page_order: 2
 page_type: reference
 description: "Dieser referenzierte Artikel beschreibt, wie Sie Ihre Kampagnen und Canvase archivieren können."
 tool:

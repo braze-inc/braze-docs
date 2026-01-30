@@ -24,7 +24,7 @@ Sie können diesen Endpunkt verwenden, um eine bidirektionale Synchronisierung z
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `email.unsubscribe`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -32,7 +32,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
 | ----------|-----------| ---------|------ |
-| `start_date` | Optional <br>(siehe Anmerkung) | String im Format JJJJ-MM-TT| Startdatum des Bereichs zum Abrufen der Abmeldungen, muss vor dem Enddatum liegen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
+| `start_date` | Optional <br>(siehe Anmerkung) | String im Format JJJJ-MM-TT| Startdatum des Bereichs zum Abmelden von Abonnements, muss vor end_date. liegen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
 | `end_date` | Optional <br>(siehe Anmerkung) | String im Format JJJJ-MM-TT | Enddatum des Bereichs zum Abrufen der Abmeldungen. Dies wird von der API als Mitternacht in UTC-Zeit behandelt. |
 | `limit` | Optional | Integer | Optionales Feld zur Begrenzung der Anzahl der zurückgegebenen Ergebnisse. Standardmäßig sind es 100, maximal 500. |
 | `offset` | Optional | Integer | Optionaler Anfangspunkt in der Liste, ab dem abgerufen werden soll. |
@@ -57,8 +57,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?
 Die Eingänge sind in absteigender Reihenfolge aufgeführt.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

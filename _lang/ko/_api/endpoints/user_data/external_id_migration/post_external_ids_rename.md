@@ -14,11 +14,11 @@ description: "이 문서에서는 외부 ID 이름 바꾸기 엔드포인트에 
 /users/external_ids/rename
 {% endapimethod %}
 
-> 이 엔드포인트를 사용하여 사용자의 외부 ID 이름을 변경할 수 있습니다. 
+> 이 엔드포인트를 사용하여 사용자의 외부 ID 이름을 변경할 수 있습니다.
 
-요청당 최대 50개의 개체 이름 바꾸기를 보낼 수 있습니다. 
+요청당 최대 50개의 개체 이름 바꾸기를 보낼 수 있습니다.
 
-이 엔드포인트는 사용자에 대해 새(기본) `external_id` 을 설정하고 기존 `external_id` 을 더 이상 사용하지 않도록 설정합니다. 즉, 더 이상 사용되지 않는 사용자 아이디가 제거될 때까지 `external_id` 로 사용자를 식별할 수 있습니다. 여러 개의 외부 ID를 사용하면 이전 외부 ID 명명 스키마를 사용하는 이전 버전의 앱이 중단되지 않도록 마이그레이션 기간을 가질 수 있습니다. 
+이 엔드포인트는 사용자에 대해 새(기본) `external_id` 을 설정하고 기존 `external_id` 을 더 이상 사용하지 않도록 설정합니다. 즉, 더 이상 사용되지 않는 사용자 아이디가 제거될 때까지 `external_id` 로 사용자를 식별할 수 있습니다. 여러 개의 외부 ID를 사용하면 이전 외부 ID 명명 스키마를 사용하는 앱의 레거시 버전이 중단되지 않도록 마이그레이션 기간을 가질 수 있습니다.
 
 이전 명명 스키마를 더 이상 사용하지 않는 경우 [`/users/external_ids/remove` 엔드포인트를]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove) 사용하여 더 이상 사용되지 않는 외부 ID를 제거하는 것이 좋습니다.
 
@@ -28,7 +28,7 @@ description: "이 문서에서는 외부 ID 이름 바꾸기 엔드포인트에 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `users.external_ids.rename` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
 
@@ -96,10 +96,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 - `external_id_renames` 50개 이상의 객체가 있는 배열
 - 속도 제한에 도달(분당 1,000건 이상의 요청)
 
-## 자주 묻는 질문
+## Frequently asked questions
 
 ### 이것이 MAU에 영향을 미치나요?
-아니요, 사용자 수는 동일하게 유지되므로 새로운 `external_id` 을 갖게 됩니다.
+아니요, 사용자 수는 동일하게 유지되므로 새 `external_id`.
 
 ### 사용자 행동이 기록적으로 변하나요?
 아니요, 사용자는 여전히 동일하며 모든 과거 행동이 여전히 사용자와 연결되어 있기 때문입니다.
@@ -107,8 +107,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 ### 개발 또는 스테이징 워크스페이스에서 실행할 수 있나요?
 예. 실제로 스테이징 또는 개발 작업 공간에서 테스트 마이그레이션을 실행하고 프로덕션 데이터에서 실행하기 전에 모든 것이 원활하게 진행되었는지 확인하는 것이 좋습니다.
 
-### 데이터 포인트가 소모되나요?
-이 기능은 데이터 포인트 비용이 들지 않습니다.
+### 데이터 포인트를 기록하나요?
+이 기능은 데이터 포인트를 기록하지 않습니다.
 
 ### 권장 사용 중단 기간은 어떻게 되나요?
 사용되지 않는 외부 ID를 얼마나 오래 보관할 수 있는지에 대한 엄격한 제한은 없지만, 더 이상 사용되지 않는 ID로 사용자를 참조할 필요가 없어진 후에는 삭제하는 것이 좋습니다.

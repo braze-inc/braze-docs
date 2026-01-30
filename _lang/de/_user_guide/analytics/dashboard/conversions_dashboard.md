@@ -1,5 +1,5 @@
 ---
-nav_title: Konversions-Dashboard
+nav_title: Dashboard für Konversionen
 article_title: Konversions-Dashboard
 alias: "/conversions_dashboard_v2/"
 description: "Mit dem Dashboard für Konversionen können Sie Konversionen über Kampagnen, Canvase und Kanäle hinweg analysieren und dabei verschiedene Attributionsmethoden verwenden."
@@ -48,6 +48,20 @@ Um die Konversionen eines Events zu berechnen, das nicht als Konversion-Event in
 {% alert note %}
 Wenn Sie ein angepasstes Event auswählen, wird das Dropdown-Menü **Konversions-Event** auf der Seite nicht angezeigt und Sie müssen den Bericht erneut ausführen, um die Konversionen für verschiedene angepasste Events anzuzeigen.
 {% endalert %}
+
+### Überlegungen
+
+Damit ein Nutzer:innen in dem Bericht gezählt wird, muss er die folgenden Kriterien innerhalb des ausgewählten Datumsbereichs erfüllen:
+1. Geben Sie den Canvas oder die Kampagne ein.
+2. Protokollieren Sie eine [Attribution-Methode]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+3. Führen Sie das Konversions-Event durch.
+
+Nehmen wir an, ein Nutzer:innen macht Folgendes:
+1. Tritt am 30\. September in den Canvas ein.
+2. Protokolliert eine Attribution Methode am 1\. Oktober.
+3. Führt das Konversions-Event am 2\. Oktober durch.
+
+Dieser Nutzer:innen erscheint **nicht** in einem Bericht mit einem Datumsbereich vom 1\. Oktober bis zum 7\. Oktober. Das liegt daran, dass der Nutzer:innen den Canvas vor dem Berichtszeitraum betreten hat, obwohl das Konversions-Event innerhalb des definierten Datumsbereichs stattfand. Damit die Nutzer:innen in einem Bericht erscheinen, muss der Datumsbereich den 30\. September umfassen.
 
 ## Grundlegendes zu Ihrem Bericht
 
@@ -115,3 +129,21 @@ Um die Zeitreihendaten herunterzuladen, wählen Sie <i class="fas fa-bars"></i> 
 | --- | --- |
 | Berühren | Eine physische Interaktion oder ein Touchpoint mit einer Nachricht.<br><br>Zu den Berührungen können gehören:<br>{::nomarkdown}<ul><li>E-Mail-Klick</li><li>Push-Öffnung</li><li>Contend-Card-Klick</li><li>In-App-Nachricht-Klick</li><li>SMS Klick</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Fehlersuche
+
+### Warum habe ich niedrige Kampagnen- oder Canvas-Konversionen?
+
+Ihre Konversionen sind vielleicht nicht so hoch, wie Sie es erwarten, wenn Sie sie mit früheren Kampagnen oder Ihren Erwartungen vergleichen. Konversionen sind eine knifflige Angelegenheit, aber sie hängen von ein paar einfachen Funktionen in unserer Plattform ab: Event Tracking und Konversionsfristen.
+
+Zur Fehlerbehebung empfehlen wir Ihnen, Ihr Tracking von Ereignissen und Konversions-Fristen zu überprüfen.
+
+#### Tracking von Ereignissen
+
+Wenn eine Kampagne einen Sitzungsstart oder ein angepasstes Event auslöst, möchten Sie sicherstellen, dass dieses Event oder diese Sitzung häufig genug vorkommt, um die Nachricht zu triggern. Prüfen Sie das [Dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) für Sitzungsdaten oder Ihren [angepassten Events-Bericht]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/).
+
+#### Fristen für die Konversion
+
+Für jedes Konversions-Event, das Sie pro Kampagne auswählen, legen Sie die [Frist]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking) fest. Das bedeutet, dass Sie ein Zeitlimit festlegen, innerhalb dessen eine Konversion stattfinden muss, damit sie für die jeweilige Kampagne gezählt wird.
+
+Vergewissern Sie sich, dass Sie die [Regeln für das Konversion Tracking]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) gelesen haben, um die Metriken Ihrer Kampagne zu verstehen. Für Nutzer:innen Konversionen in Canvas referenzieren Sie bitte die [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 

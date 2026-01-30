@@ -27,7 +27,7 @@ So erstellen Sie einen API-Nutzungsalarm:
 2. Geben Sie einen Namen für Ihre Benachrichtigung ein und wählen Sie die REST API Endpunkte und API-Schlüssel, für die Sie eine Benachrichtigung erhalten möchten.
 3. Definieren Sie Ihre Alarmkriterien, indem Sie einen oder mehrere Response Codes auswählen und die [Alarmschwellenwerte](#api-usage-alert-thresholds) festlegen.
 4. Wenn Sie fertig sind, schalten Sie **Alert** um.
-    ![Ein Beispiel für einen API-Nutzungsalarm, der Benachrichtigungen sendet, wenn der Endpunkt Tracking Nutzer:innen innerhalb einer Stunde um 100 Prozent steigt.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
+    ![Ein Beispiel für eine API-Nutzungswarnung, die Benachrichtigungen sendet, wenn der Endpunkt Tracking Nutzer:innen innerhalb einer Stunde um 100 Prozent steigt.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
 
 ## Schwellenwerte für Alarme {#api-usage-alert-thresholds}
 
@@ -66,11 +66,11 @@ Wenn Sie Ihre Alarmkriterien definieren, können Sie die folgenden Schwellenwert
 
 ## Einrichten von Alarmbenachrichtigungen
 
-Sie können eine E-Mail-Benachrichtigung, eine Webhook-Benachrichtigung oder beides einrichten. Webhook-Benachrichtigungen können für Anwendungsfälle wie das Senden einer Benachrichtigung an externe Plattformen, z. B. an einen Slack-Kanal, sehr nützlich sein. Ein Beispiel finden Sie in unserer [Dokumentation](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) über die Integration von Benachrichtigungen mit Slack für unsere Benachrichtigungseinstellungen.
+Sie können eine E-Mail-Benachrichtigung, eine Webhook-Benachrichtigung oder beides einrichten. Webhook-Benachrichtigungen können für Anwendungsfälle wie das Senden einer Benachrichtigung an externe Plattformen, z. B. einen Slack-Kanal, sehr nützlich sein. Ein Beispiel finden Sie in unserer [Dokumentation](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) über die Integration von Benachrichtigungen mit Slack für unsere Benachrichtigungseinstellungen.
 
-![Es wird eine E-Mail an die ausgewählte E-Mail gesendet, wenn das Kriterium für den Alarm erreicht ist.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
+![Es wird eine E-Mail an die ausgewählte E-Mail gesendet, wenn die Kriterien für den Alarm erreicht sind.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
-### Probe-Nutzlast {#payload}
+### Probe Nutzlast {#payload}
 
 Nachfolgend finden Sie ein Beispiel für die Nutzdaten eines Webhooks für einen API-Nutzungsalarm.
 
@@ -98,7 +98,7 @@ Nachfolgend finden Sie ein Beispiel für die Nutzdaten eines Webhooks für einen
 
 ### Beispiel-Warnungen
 
-Hier finden Sie einige Möglichkeiten, wie Sie Ihre Konfigurationen für API-Nutzungswarnungen so einrichten können, dass Sie in den folgenden Szenarien benachrichtigt werden.
+Im Folgenden finden Sie einige Möglichkeiten, wie Sie Ihre API-Nutzungsalarm-Konfigurationen so einrichten können, dass Sie in den folgenden Szenarien benachrichtigt werden.
 
 {% tabs local %}
 {% tab api health %}
@@ -124,7 +124,7 @@ Diese Warnkonfiguration benachrichtigt Sie, wenn Fehler bei API-getriggerten Kam
 
 | Endpunkt | API-Schlüssel | Antwortcode | Grenzwert-Bedingung | Grenzwert-Volumen | Innerhalb |
 | --- | --- | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li><code>/kampagnen/triggern/senden</code></li><li><code>/canvas/triggern/senden</code></li><li><code>/nachrichten/senden</code></li></ul>{:/} | Alle API-Schlüssel | `4XX` und `5XX` | Größer als oder gleich | (1 %) | 1 Stunde |
+| {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | Alle API-Schlüssel | `4XX` und `5XX` | Größer als oder gleich | (1 %) | 1 Stunde |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 

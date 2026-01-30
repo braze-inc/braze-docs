@@ -35,7 +35,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/dishwar
 }'
 ```
 
-Tras enviar esta carga útil, la siguiente respuesta confirma que las tres colecciones se han eliminado correctamente del catálogo de vajillas de Kitchenerie.
+Tras enviar esta carga útil, la respuesta confirma que Braze ha eliminado correctamente las tres colecciones del catálogo de vajillas de Kitchenerie.
 
 ```json
 {
@@ -53,7 +53,7 @@ En MovieCanon, una empresa de servicios de streaming, el equipo de desarrollador
 - delilah.york@example.com
 - evergreen.rebecca@example.com
 
-Para llevar a cabo esta tarea, el equipo de desarrolladores necesitará una clave de API con el permiso `email.spam.remove` para utilizar el punto final `/email/spam/remove`. Este punto final elimina direcciones de correo electrónico de la lista de correo no deseado de Braze y de la lista de correo no deseado mantenida por el proveedor de correo electrónico de MovieCanon.
+Para realizar esta tarea, el equipo de desarrolladores necesita una clave de API con el permiso `email.spam.remove` para utilizar el punto final `/email/spam/remove`. Este punto final elimina direcciones de correo electrónico de la lista de correo no deseado de Braze y de la lista de correo no deseado mantenida por el proveedor de correo electrónico de MovieCanon.
 
 Para enviar esta solicitud, incluye una dirección de correo electrónico de cadena o una matriz de hasta 50 direcciones de correo electrónico para modificar. Como la lista de correos electrónicos a eliminar es inferior a 50, MovieCanon puede realizar esta tarea con el siguiente cuerpo de solicitud:
 
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Tras enviar esta carga útil con éxito, esta respuesta confirma que los correos han sido eliminados de la lista de correo no deseado de MovieCanon.
+Tras enviar esta carga útil con éxito, esta respuesta confirma que Braze eliminó los correos electrónicos de la lista de correo no deseado de MovieCanon.
 
 ```json
 {
@@ -84,10 +84,8 @@ Veamos cómo Siege Valley Health puede llevar a cabo estas dos tareas utilizando
 
 Para la primera tarea de auditoría de Lienzos, utiliza el [punto final`/canvas/list` ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) para exportar una lista de Lienzos que incluya el nombre y las etiquetas. He aquí un ejemplo de solicitud:
 
-{% details Esta es la respuesta que recibiría el equipo de marketing de Siege Valley Health. %}
+{% details Here’s the response that the Siege Valley Health marketing team would receive. %}
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{
@@ -115,7 +113,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Pasemos a la siguiente tarea de ver el resumen de análisis del primer Canvas de la lista de Canvas de Siege Valley Health. Para ello, utilizaríamos el [punto final`/canvas/data_summary` ]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary/) con los siguientes parámetros de solicitud:
 
-* `canvas_id`: "identificador_lienzo_2"
+* `canvas_id`: "canvas_identifier_2"
 * `ending_at`: 2023-07-10T23:59:59
 * `starting_at`: 2020-07-10T23:59:59
 
@@ -128,7 +126,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summ
 
 ## Comprobación de las próximas campañas y lonas programadas
 
-Se acerca la época más ajetreada del año para Flash & Thread, una marca minorista que vende ropa y productos de belleza en línea y en tiendas. Su equipo de marketing quiere comprobar las próximas campañas y Lienzos desde el panel de Braze antes del 31 de marzo de 2024, a las 12 h. Para ello, se puede utilizar el [punto final`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/). 
+La época más ajetreada del año se acerca rápidamente para Flash & Thread, una marca de comercio minorista que vende ropa y productos de belleza en línea y en tiendas. Su equipo de marketing quiere comprobar las próximas campañas y Lienzos desde el panel de Braze antes del 31 de marzo de 2024, a las 12 h. Para ello, se puede utilizar el [punto final`/messages/scheduled_broadcasts` ]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/get_messages_scheduled/).
 
 Este es el ejemplo de solicitud:
 
@@ -137,7 +135,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-Este punto final devolverá la lista de próximas campañas y Lienzos. A partir de aquí, el equipo de marketing puede confirmar su lista de mensajes consultando el campo `name` para las campañas y Lienzos en la respuesta.
+Este punto final devuelve la lista de próximas campañas y Lienzos. A partir de aquí, el equipo de marketing puede confirmar su lista de mensajes consultando el campo `name` para las campañas y Lienzos en la respuesta.
 
 ## Ver un centro de preferencias antiguo
 
@@ -150,7 +148,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-{% details Ésta es la respuesta que recibiría el equipo de marketing de PoliterWeekly. %}
+{% details Here’s the response the PoliterWeekly marketing team would receive. %}
 
 ```json
 {
@@ -160,7 +158,7 @@ curl --location -g --request GET https://rest.iad-01.braze.com/preference_center
   "updated_at": "2024-08-15T15:00:00",
   "preference_center_title": "Manage Your PoliterWeekly Notification Preferences",
   "preference_center_page_html": "<!DOCTYPE html><html><head><title>Your PoliterWeekly Newsletter Preferences</title><style>body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }.container { max-width: 600px; margin: auto; }h1 { color: #333; }.preference { margin-bottom: 20px; }.preference label { font-size: 16px; }.preference input[type=\"checkbox\"] { margin-right: 10px; }.submit-btn { background-color: #007bff; color: white; padding: 10px 20px; border: none; cursor: pointer; }</style></head><body><div class=\"container\"><h1>Manage your notification preferences</h1><p>Select the types of updates you wish to receive from us:</p><form id=\"preferencesForm\"><div class=\"preference\"><label><input type=\"checkbox\" name=\"newsUpdates\" checked> News Updates</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"editorialPicks\"> Editorial Picks</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"events\"> Events & Webinars</label></div><div class=\"preference\"><label><input type=\"checkbox\" name=\"specialOffers\"> Special Offers & Promotions</label></div><button type=\"submit\" class=\"submit-btn\">Save Preferences</button></form></div><script>document.getElementById('preferencesForm').addEventListener('submit', function(e) {e.preventDefault();alert('Your preferences have been saved!');});</script></body></html>",
-  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Your preferences have been updated successfully.</p></body></html>",
+  "confirmation_page_html": "<!DOCTYPE html><html><head><title>PoliterWeekly Preferences Updated</title></head><body><h1>You're good to go!</h1><p>Braze updated your preferences successfully.</p></body></html>",
   "redirect_page_html": null,
   "preference_center_options": {
     "meta-viewport-content": "width=device-width, initial-scale=1"
@@ -192,7 +190,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-Tras enviar esta carga útil, la siguiente respuesta confirma que los números de teléfono no válidos de CashBlastr se han eliminado de la lista de inválidos de Braze.
+Tras enviar esta carga útil, la respuesta confirma que Braze ha eliminado los números de teléfono no válidos de CashBlastr de la lista de no válidos de Braze.
 
 ```json
 {
@@ -211,7 +209,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 
-Este punto final también enumera los estados del grupo de suscripción de un usuario por correo electrónico y puede utilizarse para ver el estado del grupo de suscripción de varios usuarios.
+Este punto final también enumera los estados del grupo de suscripción de un usuario para el correo electrónico. Úsala para ver el estado del grupo de suscripción de varios usuarios.
 
 ## Comprobación de una plantilla HTML para mensajería por correo electrónico
 
@@ -219,11 +217,9 @@ En WorkFriends, una red social que ayuda a crear conexiones entre trabajadores d
 
 En este escenario, WorkFriends ha utilizado históricamente una plantilla HTML singular con su marca heredada. En un esfuerzo por alinear su identidad de marca, WorkFriends quiere verificar si hay alguna información útil en esta plantilla HTML para aprovecharla antes de hacer la transición a una nueva plantilla.
 
-{% details Ésta es la respuesta que recibiría el equipo de WorkFriends. %}
+{% details Here’s the response that the WorkFriends team would receive. %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "WorkFriends_Email_Template_ID",
   "template_name": "Promo template",
@@ -239,4 +235,4 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 {% enddetails %}
 
-Después de revisar esta información de la plantilla, WorkFriends también puede utilizar el [punto final`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) para actualizar la plantilla de correo electrónico a través de la API. La plantilla de correo electrónico del panel de Braze reflejará estas modificaciones.
+Después de revisar esta información de la plantilla, WorkFriends también puede utilizar el [punto final`/templates/email/update` ]({{site.baseurl}}/api/endpoints/templates/email_templates/post_update_email_template/) para actualizar la plantilla de correo electrónico a través de la API. La plantilla de correo electrónico del panel de Braze refleja estas modificaciones.

@@ -20,7 +20,7 @@ description: "이 문서에서는 예정된 캠페인 목록과 캔버스 브레
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `messages.schedule_broadcasts` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -35,7 +35,7 @@ description: "이 문서에서는 예정된 캠페인 목록과 캔버스 브레
 | `end_time` | 필수 | [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 형식의 문자열 | 예정된 캠페인 및 캔버스를 검색할 범위의 종료일입니다. 이는 API에서 UTC 시간 기준 자정으로 처리됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 ## 응답
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
     {

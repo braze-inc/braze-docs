@@ -16,7 +16,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nutzer:innen l
 
 > Verwenden Sie diesen Endpunkt, um ein beliebiges Nutzerprofil zu löschen, indem Sie einen bekannten Bezeichner für Nutzer:in angeben.
 
-Bis zu 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` können in einer einzigen Anfrage enthalten sein. In einer Anfrage kann nur eine der Optionen `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` enthalten sein. 
+Bis zu 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` können in einer einzigen Anfrage enthalten sein. In einer Anfrage kann nur eine der Optionen `external_ids`, `user_aliases`, `braze_ids`, `email_addresses` oder `phone_numbers` enthalten sein.
 
 Wenn Sie einen Anwendungsfall haben, der nicht mit der Massenlöschung von Nutzer:innen über die API gelöst werden kann, wenden Sie sich bitte an das [Braze Support Team]({{site.baseurl}}/user_guide/administrative/access_braze/support/), um Hilfe zu erhalten.
 
@@ -105,8 +105,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user IDs queued for deletion
 }

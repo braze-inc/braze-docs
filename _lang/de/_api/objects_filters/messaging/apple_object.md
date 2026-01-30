@@ -1,5 +1,5 @@
 ---
-nav_title: "Apfel Objekt"
+nav_title: "Apple Objekt"
 article_title: Apple Messaging Objekt
 page_order: 1
 page_type: reference
@@ -19,22 +19,22 @@ description: "Dieser Artikel referenziert und erklärt die verschiedenen Apple O
 {
    "badge": (optional, integer) the badge count after this message,
    "alert": (required unless content-available is true, string or Apple Push Alert Object) the notification message,
-   // Specifying "default" in the sound field will play the standard notification sound
+   // Specifying "default" in the sound field plays the standard notification sound
    "sound": (optional, string) the location of a custom notification sound within the app,
    "extra": (optional, object) additional keys and values to be sent,
-   "content-available": (optional, boolean) if set, Braze will add the "content-available" flag to the push payload,
+   "content-available": (optional, boolean) if set, Braze adds the "content-available" flag to the push payload,
    "interruption_level": (optional, string: "passive", "active", "time-sensitive", or "critical") specifies the interruption level passed (iOS 15+),
    "relevance_score": (optional, float) specifies the relevance score between 0.0 and 1.0 used for grouping notification summaries (iOS 15+),
-   "expiry": (optional, ISO 8601 date string) if set, push messages will expire at the specified datetime,
+   "expiry": (optional, ISO 8601 date string) if set, push messages expire at the specified datetime,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
    "use_webview": (optional, boolean) whether to open the web URL inside the app if the action is "URI", defaults to true,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an iOS Push Message),
-   "notification_group_thread_id": (optional, string) the notification group thread ID the notification will be sent with,
+   "notification_group_thread_id": (optional, string) the notification group thread ID the notification is sent with,
    "asset_url": (optional, string) content URL for rich notifications for devices using iOS 10 or higher,
    "asset_file_type": (required if asset_url is present, string) file type of the asset - one of "aif", "gif", "jpg", "m4a", "mp3", "mp4", "png", or "wav",
    "collapse_id": (optional, string) To update a notification on the user's device after you've issued it, send another notification with the same collapse ID you used previously
-   "mutable_content": (optional, boolean) if true, Braze will add the mutable-content flag to the payload and set it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
-   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used iOS device, rather than all eligible iOS devices,
+   "mutable_content": (optional, boolean) if true, Braze adds the mutable-content flag to the payload and sets it to 1. The mutable-content flag is automatically set to 1 when sending a rich notification, regardless of the value of this parameter.
+   "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze only sends this push to a user's most recently used iOS device, rather than all eligible iOS devices,
    "category": (optional, string) the iOS notification category identifier for displaying push action buttons,
    "buttons" : (optional, array of Apple push action button objects) push action buttons to display,
    "apns_priority": (optional, integer) override the default apns_priority value using an integer between 1 and 10; use 10 for immediate delivery, 5 for power-aware delivery, and 1 to minimize power impact and avoid waking the device,
@@ -87,7 +87,7 @@ In den meisten Fällen kann `alert` als String in einem `apple_push` Objekt ange
 
 ## Apple Push-Action-Button Objekt
 
-Sie müssen das Feld `category` in das Apple Push-Objekt aufnehmen, um Push-Action-Buttons von iOS zu verwenden. Wenn Sie das Feld `category` einschließen, werden alle zugehörigen Push-Action-Buttons angezeigt. Schließen Sie das Feld `buttons` nur ein, wenn Sie zusätzlich die einzelnen Klick-Aktionen der Buttons definieren möchten. Das Braze SDK stellt Ihnen eine Reihe von Standard Push-Action-Buttons zur Verfügung, die Sie in der folgenden Tabelle finden. Sie können auch Ihre eigenen Buttons verwenden, wenn diese in Ihrer App registriert wurden.
+Sie müssen das Feld `category` in das Apple Push-Objekt aufnehmen, um Push-Action-Buttons von iOS zu verwenden. Wenn Sie das Feld `category` einbeziehen, werden alle zugehörigen Push-Action-Buttons angezeigt. Beziehen Sie das Feld `buttons` nur ein, wenn Sie zusätzlich die einzelnen Klick-Aktionen der Buttons definieren möchten. Das Braze SDK stellt Ihnen eine Reihe von Standard Push-Action-Buttons zur Verfügung, die Sie in der folgenden Tabelle finden. Sie können auch Ihre eigenen Buttons verwenden, wenn diese in Ihrer App registriert wurden.
 
 ### Apple Push-Action-Button Objekt für Braze Standard-Buttons
 
