@@ -1,5 +1,5 @@
 ---
-nav_title: Seguimiento de ubicación
+nav_title: Seguimiento de la ubicación
 article_title: Seguimiento de ubicación para Windows Universal
 platform: Windows Universal
 page_order: 6
@@ -8,7 +8,7 @@ tool: Location
 hidden: true
 ---
 
-# seguimiento de ubicación
+# Seguimiento de la ubicación
 {% multi_lang_include archive/windows_deprecation.md %}
 
 1. Asegúrate de que en tu archivo `Package.appxmanifest` está marcada la casilla `location`.
