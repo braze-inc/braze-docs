@@ -26,13 +26,13 @@ Para gerenciar os Feature Flags no dashboard, você precisará ser um administra
 
 Acesse **Envio de mensagens** > **Feature Flags** e selecione **Criar Feature Flag**.
 
-![Um banco de dados que mostra um sinalizador de recurso existente e como criar um novo.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
+![Uma tabela de dados que mostra um sinalizador de recurso existente e como criar um novo.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
 
 ### Etapa 2: Preencha os detalhes
 
 Em **Feature Flag details (Detalhes do sinalizador** de recurso), insira um nome, ID e descrição para seu sinalizador de recurso.
 
-![Um formulário que mostra que você pode adicionar um nome, ID, descrição e propriedades a um sinalizador de recurso.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+![Um formulário que mostra que você pode adicionar um nome, ID, descrição e propriedades a um Feature Flag.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
 
 | Campo        | Descrição                                                                |
@@ -45,10 +45,10 @@ Em **Feature Flag details (Detalhes do sinalizador** de recurso), insira um nome
 
 ### Etapa 2a: Criar propriedades personalizadas
 
-Em **Properties (Propriedades**), você pode, opcionalmente, criar propriedades personalizadas que seu app pode acessar por meio do Braze SDK quando seu recurso estiver ativado. É possível atribuir um valor de string, booleano, imagem, carimbo de data/hora, JSON ou um número a cada variável, bem como definir um valor padrão.
+Em **Properties (Propriedades**), você pode, opcionalmente, criar propriedades personalizadas que seu app pode acessar por meio do Braze SDK quando seu recurso estiver ativado. Você pode atribuir um valor de string, booleano, imagem, carimbo de data/hora, JSON ou um número a cada variável, bem como definir um valor padrão.
 
 {% tabs local %}
-{% tab exemplo %}
+{% tab example %}
 No exemplo a seguir, o feature flag mostra um banner de falta de estoque para uma loja de comércio eletrônico usando as propriedades personalizadas listadas: 
 
 |Nome da propriedade|Tipo|Valor|
@@ -71,7 +71,7 @@ Não há limite para o número de propriedades que você pode adicionar. No enta
 
 Antes de implementar um Feature Flag, é necessário escolher um [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuários para direcionamento. Selecione **Add Rule (Adicionar regra** ) no sinalizador recém-criado e, em seguida, use os menus suspensos filter group (grupo de filtros) e segment (segmento) para filtrar os usuários do seu público-alvo. Adicione vários filtros para restringir ainda mais seu público.
 
-![Uma caixa de texto rotulada como Rollout Traffic com a capacidade de adicionar segmentos e filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
+![Uma caixa de texto denominada Rollout Traffic com a capacidade de adicionar segmentos e filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Etapa 5: Definir o tráfego de lançamento {#rollout}
 
@@ -102,15 +102,15 @@ A avaliação sequencial continua até que um usuário se qualifique para uma re
 
 ### Regra "Todos os demais"
 
-A regra "Todos os outros" funciona como padrão. Se um usuário não se qualificar para nenhuma das regras anteriores, sua elegibilidade para o sinalizador de recurso será determinada pela configuração de alternância da regra "Everyone Else" (Todos os outros). Por exemplo, se a regra "Everyone Else" (Todos os outros) estiver desativada, no estado padrão, um usuário que não atender aos critérios de nenhuma outra regra não receberá o sinalizador de recurso no início da sessão.
+A regra "Todos os outros" funciona como padrão. Se um usuário não se qualificar para nenhuma regra anterior, sua elegibilidade para o sinalizador de recurso será determinada pela configuração de alternância da regra "Everyone Else" (Todos os outros). Por exemplo, se a regra "Everyone Else" (Todos os outros) estiver desativada, no estado padrão, um usuário que não atender aos critérios de nenhuma outra regra não receberá o sinalizador de recurso no início da sessão.
 
 ### Regras de reordenação
 
 Por padrão, as regras são ordenadas na sequência em que são criadas, mas você pode reordená-las arrastando-as e soltando-as no dashboard.
 
-![Uma imagem mostrando que um usuário pode adicionar uma regra a um sinalizador de recurso.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
+![Uma imagem mostrando que um usuário pode adicionar uma regra a um feature flag.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
 
-![Uma imagem mostrando um resumo de um sinalizador de recurso com várias regras adicionadas e uma regra para todos os outros.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
+![Uma imagem mostrando um resumo de um Feature Flag com várias regras adicionadas e uma regra para todos os outros.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
 
 ### Casos de uso do Feature Flag com várias regras
 
@@ -151,7 +151,7 @@ if (featureFlag?.enabled) {
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 let featureFlag = braze.featureFlags.featureFlag(id: "expanded_user_profile")
@@ -259,7 +259,7 @@ braze.logFeatureFlagImpression("expanded_user_profile");
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 braze.featureFlags.logFeatureFlagImpression(id: "expanded_user_profile")
@@ -348,7 +348,7 @@ const jsonProperty = featureFlag.getJsonProperty("footer_settings");
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 // Returns the Feature Flag instance
@@ -569,7 +569,7 @@ for(const feature of features) {
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 let features = braze.featureFlags.featureFlags
@@ -669,7 +669,7 @@ braze.refreshFeatureFlags(() => {
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 braze.featureFlags.requestRefresh { result in
@@ -751,7 +751,7 @@ braze.removeSubscription(subscriptionId);
 ```
 
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 // Create the feature flags subscription
@@ -879,11 +879,11 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 
 ## Verificação da elegibilidade do usuário
 
-Para verificar a quais sinalizadores de recursos um usuário é elegível no Braze, vá para **Público** > **Pesquisar usuários** e, em seguida, pesquise e selecione um usuário.
+Para verificar para quais sinalizadores de recursos um usuário é elegível no Braze, vá para **Público** > **Pesquisar usuários** e, em seguida, pesquise e selecione um usuário.
 
 Na guia **Feature Flags Eligibility (Elegibilidade de sinalizadores** de recursos), você pode filtrar a lista de sinalizadores de recursos elegíveis por plataforma, aplicativo ou dispositivo. Também é possível fazer uma prévia da carga útil que será retornada ao usuário selecionando <i class="fa-solid fa-eye"></i> ao lado de um sinalizador de recurso.
 
-![Uma imagem que mostra a tabela de Feature Flags a que um usuário é elegível.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
+![Uma imagem que mostra a tabela de sinalizadores de recursos para os quais um usuário é elegível.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
 
 ## Exibir o changelog
 
@@ -893,7 +893,7 @@ Para visualizar o changelog de um sinalizador de recurso, abra um sinalizador de
 
 Aqui, você pode verificar quando uma alteração ocorreu, quem fez a alteração, a qual categoria ela pertence e muito mais.
 
-![O changelog do sinalizador de recurso selecionado.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
+![O changelog do feature flag selecionado.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
 ## Segmentação com feature flags {#segmentation}
 
