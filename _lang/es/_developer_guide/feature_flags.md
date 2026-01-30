@@ -1,8 +1,8 @@
 ---
 page_order: 2.5
-nav_title: ""
-article_title: ""
-description: ""
+nav_title: Banderas de características
+article_title: Banderas de características para el SDK de Braze
+description: "Este artículo de referencia ofrece un resumen de los indicadores de características, incluidos los requisitos previos y los casos de uso."
 tool: Feature Flags
 platform:
   - iOS
@@ -16,3 +16,4 @@ platform:
 
 ---
 
+{% multi_lang_include feature_flags/feature_flags.md %}
