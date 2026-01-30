@@ -74,10 +74,6 @@ Each Canvas entry redefines context variables based on the latest entry data and
 
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
-## Creating a Context step
-
-{% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
-
 ### Step 1: Add a step
 
 Add a step to your Canvas, then drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button and select **Context**.
