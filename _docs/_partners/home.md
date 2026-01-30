@@ -145,6 +145,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+- name: LinkedIn Audience Sync
+  url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/
 - name: Shopify
