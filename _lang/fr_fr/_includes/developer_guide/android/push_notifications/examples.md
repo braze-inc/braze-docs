@@ -12,7 +12,7 @@ Vous pouvez utiliser l'interface [`IBrazeNotificationFactory`](https://braze-inc
 
 Dans cette section, vous serez le partenaire de Superb Owl, l'animateur d'un nouveau jeu télévisé dans lequel des équipes de sauvetage d'animaux sauvages s'affrontent pour savoir qui peut enregistrer le plus grand nombre de hiboux. Ils cherchent à exploiter les notifications de mise à jour en ligne dans leur application Android, afin d'afficher le statut d'un match en cours et d'effectuer des mises à jour dynamiques de la notification en temps réel.
 
-![La ligne/en production/instantanée que Superb Owl veut montrer, affiche un match en cours entre 'Wild Bird Fund' et 'Owl Rescue'. Nous sommes actuellement dans le quatrième quart-temps et le score est de 2-4 avec OWL en tête.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+![La ligne/en production/instantanée que Superb Owl veut montrer, affiche un match en cours entre 'Wild Bird Fund' et 'Owl Rescue'. Nous sommes dans le quatrième quart-temps et le score est de 2-4 avec OWL en tête.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
 ### Étape 1 : Ajouter une mise en page personnalisée
 
@@ -30,7 +30,7 @@ Vous pouvez ajouter une ou plusieurs présentations RemoteView de notification p
 Dans chaque fichier XML, créez une mise en page personnalisée. Superb Owl a créé les mises en page suivantes pour leurs mises en page RemoteView réduites et étendues :
 
 {% tabs local %}
-{% tab  Exemple : Mise en page réduite %}
+{% tab  Example: Collapsed layout %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,8 +48,8 @@ Dans chaque fichier XML, créez une mise en page personnalisée. Superb Owl a cr
 ```
 {% endtab %}
 
-{% tab Exemple : Disposition élargie %}
-{% details Montrer le code d'exemple %}
+{% tab Example: Expanded layout %}
+{% details Show the sample code %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -139,7 +139,7 @@ Dans votre application, créez un nouveau fichier nommé `MyCustomNotificationFa
 
 Dans l'exemple suivant, Superb Owl a créé une usine de notification personnalisée pour afficher une mise en page RemoteView pour les matchs en cours. Dans l' [étape suivante](#android_step-3-map-custom-data), ils créeront une nouvelle méthode appelée `getTeamInfo` pour mapper les données d'une équipe à l'activité.
 
-{% details Montrer le code d'exemple %}
+{% details Show the sample code %}
 ```kotlin
 import android.app.Notification
 import android.widget.RemoteViews
