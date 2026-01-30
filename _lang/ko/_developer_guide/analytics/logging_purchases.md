@@ -1,6 +1,6 @@
 ---
 nav_title: 구매 기록
-article_title: Braze SDK를 통해 구매를 기록하기
+article_title: Braze SDK를 통한 구매 기록
 page_order: 3.2
 description: "Braze SDK를 통해 구매를 기록하는 방법을 배우세요."
 
@@ -8,17 +8,34 @@ description: "Braze SDK를 통해 구매를 기록하는 방법을 배우세요.
 
 # 구매 기록
 
-> Braze SDK를 통해 인앱 구매를 기록하는 방법을 배우세요. 이를 통해 시간 경과에 따른 수익과 출처를 파악할 수 있습니다. 이를 통해 커스텀 이벤트, 커스텀 속성 및 구매 이벤트를 사용하여 사용자를 [생애주기 가치]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking)에 따라 세그먼트화할 수 있습니다.
+> Braze SDK를 통해 인앱 구매를 기록하는 방법을 배우세요. 이를 통해 시간 경과에 따른 수익과 출처를 확인할 수 있습니다. 이를 통해 사용자 [생애주기 가치]({{site.baseurl}}/developer_guide/analytics/#purchase-events--revenue-tracking)에 따라 세그먼트화할 수 있습니다. 커스텀 이벤트, 커스텀 속성 및 구매 이벤트를 사용하세요.
 
 {% alert note %}
-나열되지 않은 래퍼 SDK의 경우 관련 네이티브 Android 또는 Swift 메서드를 대신 사용하세요.
+목록에 없는 래퍼 SDK의 경우 관련 네이티브 Android 또는 Swift 메서드를 대신 사용하세요.
 {% endalert %}
+
+보고된 비-USD 통화는 보고된 날짜의 환율에 따라 Braze에서 USD로 표시됩니다. 통화 변환을 방지하기 위해 통화를 USD로 하드코딩하십시오.
 
 ## 구매 및 수익 기록하기
 
-구매 및 수익을 기록하려면 앱에서 성공적인 구매 후 `logPurchase()`를 호출하세요. 제품 식별자가 비어 있으면 구매가 Braze에 기록되지 않습니다.
+구매 및 수익을 기록하려면, 앱에서 성공적인 구매 후 `logPurchase()`을 호출하세요. 제품 식별자가 비어 있으면 구매가 Braze에 기록되지 않습니다.
 
 {% tabs %}
+{% tab web %}
+표준 웹 SDK 구현의 경우 다음 방법을 사용할 수 있습니다:
+
+```javascript
+braze.logPurchase(product_id, price, "USD", quantity);
+```
+
+대신 Google Tag Manager를 사용하려면, **구매** 태그 유형을 사용하여 [`logPurchase` 메서드](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase)를 호출할 수 있습니다. 이 태그를 사용하여 선택적으로 구매 속성정보를 포함한 Braze에 대한 구매를 추적합니다. 그렇게 하려면
+
+1. **제품 ID** 및 **가격** 필드는 필수 입력 사항입니다.
+2. **행 추가** 버튼을 사용하여 구매 속성을 추가합니다.
+
+![Braze 작업 태그 구성 설정을 보여주는 대화상자. 포함된 설정은 "태그 유형", "외부 ID", "가격", "통화 코드", "수량", 및 "구매 속성정보"입니다.]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -69,21 +86,6 @@ AppDelegate.braze?.logPurchase(productID: "product_id", currency: "USD", price: 
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 웹 %}
-표준 웹 SDK 구현을 위해 다음 메서드를 사용할 수 있습니다:
-
-```javascript
-braze.logPurchase(product_id, price, "USD", quantity);
-```
-
-대신 Google Tag Manager를 사용하려면 **구매** 태그 유형을 사용하여 [`logPurchase` 메서드](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase)를 호출할 수 있습니다. 이 태그를 사용하여 선택적으로 구매 속성정보를 포함한 Braze에 대한 구매를 추적합니다. 그렇게 하려면:
-
-1. **제품 ID** 및 **가격** 필드는 필수 입력 사항입니다.
-2. **행 추가** 버튼을 사용하여 구매 속성을 추가합니다.
-
-![Braze 작업 태그 구성 설정을 보여주는 대화상자. 포함된 설정은 '태그 유형', '외부 ID', '가격', '통화 코드', '수량', '구매 속성' 등입니다.]({% image_buster /assets/img/web-gtm/gtm-purchase.png %})
-{% endtab %}
-
 {% tab cordova %}
 
 ```javascript
@@ -118,18 +120,10 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 
 {% endtab %}
 
-{% tab 유니티 %}
+{% tab unity %}
 
 ```csharp
 AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal));
-```
-
-{% endtab %}
-
-{% tab 언리얼 엔진 %}
-
-```cpp
-UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 ```
 
 {% endtab %}
@@ -144,6 +138,32 @@ UBraze->LogPurchase(TEXT("product_id"), TEXT("USD"), price, quantity);
 `Int`, `Double`, `String`, `Bool` 또는 `Date` 값으로 채워진 사전을 전달하여 구매에 대한 메타데이터를 추가할 수 있습니다.
 
 {% tabs %}
+{% tab web %}
+표준 웹 SDK 구현의 경우 다음 방법을 사용할 수 있습니다:
+
+```javascript
+braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
+```
+
+사이트가 표준 [이커머스 이벤트](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) 데이터 레이어 항목을 사용하여 Google Tag Manager에 구매를 기록하는 경우, **이커머스 구매** 태그 유형을 사용할 수 있습니다. 이 작업 유형은 `items`의 목록에 전송된 각 항목에 대한 별도의 '구매'를 Braze에 기록합니다.
+
+구매 속성정보 목록에서 키를 지정하여 구매 속성정보로 포함할 추가 속성정보 이름을 지정할 수도 있습니다. Braze는 목록에 추가하는 모든 구매 자산에 대해 기록 중인 개별 `item` 내에서 확인합니다.
+
+예를 들어, 다음 전자상거래 페이로드가 주어졌습니다:
+
+```
+items: [{
+  item_name: "5 L WIV ECO SAE 5W/30",
+  item_id: "10801463",
+  price: 24.65,
+  item_brand: "EUROLUB",
+  quantity: 1
+}]
+```
+
+`item_brand` 및 `item_name`만 구매 속성정보로 전달하려면 구매 속성정보 테이블에 이 두 필드를 추가하면 됩니다. 속성을 제공하지 않으면 구매 속성이 전송되지 않습니다. [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) 호출로 전송되지 않습니다.
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -191,32 +211,6 @@ NSDictionary *purchaseProperties = @{@"key": @"value"};
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 웹 %}
-표준 웹 SDK 구현을 위해 다음 메서드를 사용할 수 있습니다:
-
-```javascript
-braze.logPurchase(product_id, price, "USD", quantity, {key: "value"});
-```
-
-사이트가 표준 [이커머스 이벤트](https://developers.google.com/analytics/devguides/collection/ga4/ecommerce?client_type=gtm) 데이터 레이어 항목을 사용하여 Google Tag Manager에 구매를 기록하는 경우, **이커머스 구매** 태그 유형을 사용할 수 있습니다. 이 작업 유형은 `items`의 목록에 전송된 각 항목에 대한 별도의 '구매'를 Braze에 기록합니다.
-
-구매 속성정보 목록에서 키를 지정하여 구매 속성정보로 포함할 추가 속성정보 이름을 지정할 수도 있습니다. Braze는 목록에 추가하는 모든 구매 자산에 대해 기록 중인 개별 `item` 내에서 확인합니다.
-
-예를 들어, 다음 전자상거래 페이로드가 주어졌습니다:
-
-```
-items: [{
-  item_name: "5 L WIV ECO SAE 5W/30",
-  item_id: "10801463",
-  price: 24.65,
-  item_brand: "EUROLUB",
-  quantity: 1
-}]
-```
-
-`item_brand` 및 `item_name`만 구매 속성정보로 전달하려면 구매 속성정보 테이블에 이 두 필드를 추가하면 됩니다. 속성을 제공하지 않으면 구매 속성이 전송되지 않습니다. [`logPurchase`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logpurchase) 호출로 전송되지 않습니다.
-{% endtab %}
-
 {% tab cordova %}
 
 ```javascript
@@ -251,7 +245,7 @@ m.Braze.logPurchase("product_id", "currency_code", Double price, Integer quantit
 
 {% endtab %}
 
-{% tab 유니티 %}
+{% tab unity %}
 
 ```csharp
 Dictionary<string, object> purchaseProperties = new Dictionary<string, object>
@@ -262,22 +256,11 @@ AppboyBinding.LogPurchase("product_id", "currencyCode", price(decimal), purchase
 ```
 
 {% endtab %}
-
-{% tab 언리얼 엔진 %}
-
-```cpp
-TMap<FString, FString> PurchaseProperties;
-PurchaseProperties.Add(TEXT("key"), TEXT("value"));
-
-UBraze->LogPurchaseWithProperties(TEXT("product_id"), TEXT("USD"), price, quantity, PurchaseProperties);
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### 수량 추가
 
-기본값으로, `quantity`은 `1`로 설정됩니다. 그러나 고객이 단일 체크아웃에서 동일한 구매를 여러 번 하는 경우 구매에 수량을 추가할 수 있습니다. 수량을 추가하려면 `[0, 100]`의 범위 내에 있는 `quantity`에 `Int` 값을 전달하십시오.
+기본값으로, `quantity`은 `1`로 설정됩니다. 그러나 고객이 단일 체크아웃에서 동일한 구매를 여러 번 하는 경우 구매에 수량을 추가할 수 있습니다. 수량을 추가하려면 `quantity`에 `Int` 값을 전달하십시오.
 
 ### REST API 사용
 
