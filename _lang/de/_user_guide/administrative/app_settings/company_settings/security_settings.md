@@ -141,9 +141,11 @@ Um diesen Bericht herunterzuladen, gehen Sie wie folgt vor:
 
 1. Gehen Sie zu **Einstellungen** > **Admin-Einstellungen**.
 2. Wählen Sie die Registerkarte **Sicherheitseinstellungen** und gehen Sie zum Abschnitt **Download von Sicherheitsereignissen**.
-2. Wählen Sie **Bericht herunterladen**. 
+3. Wählen Sie **Bericht herunterladen**. 
 
-Dieser Bericht enthält nur die letzten 10.000 Sicherheitsereignisse für Ihr Konto. Wenn Sie bestimmte Daten zu einem Event benötigen, wenden Sie sich an den technischen Support.
+Dieser manuelle Berichtsdownload enthält nur die letzten 10.000 Sicherheitsereignisse für Ihr Konto.
+
+Um Sicherheitsereignisse ohne diese Zeilenbegrenzung in Amazon S3 zu exportieren, siehe [Export von Sicherheitsereignissen mit Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Anmeldung und Konto

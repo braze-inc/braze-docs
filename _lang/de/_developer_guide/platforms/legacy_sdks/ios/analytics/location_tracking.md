@@ -37,7 +37,7 @@ Sie können das automatische Standort-Tracking beim Start der App auch über die
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.start(withApiKey: "YOUR-API-KEY",
@@ -73,7 +73,7 @@ Die folgenden beiden Methoden können verwendet werden, um den letzten bekannten
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy)

@@ -29,7 +29,7 @@ Um ein angepasstes Event zu protokollieren, wenn ein Nutzer einen Ort betritt, g
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logCustomEvent("Entered %@", visit.place.name)

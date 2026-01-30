@@ -59,10 +59,12 @@ Die folgenden Ereignisse werden in der Standard Integration standardmäßig akti
 
 | Braze empfohlene Veranstaltungen | Shopify angepasste Events | Angepasste Shopify-Attribute |
 | --- | --- | --- |
-| {::nomarkdown}<ul><li>Angesehenes Produkt</li><li>Warenkorb aktualisiert</li><li>Checkout gestartet</li><li>Bestellung aufgegeben</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_account_login</li><li>shopify_bezahlte_bestellung</li><li>shopify_bestellung_storniert</li><li>shopify_bestellung_erstattet</li><li>shopify_order_fulfilled</li><li>shopify_order_partially_fulfilled</li></ul>{:/} | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li><li>shopify_provinz</li></ul>{:/} |
+| {::nomarkdown}<ul><li>Angesehenes Produkt</li><li>Warenkorb aktualisiert</li><li>Checkout gestartet</li><li>Bestellung aufgegeben</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_account_login</li><li>shopify_paid_order</li><li>shopify_order_canceled</li><li>shopify_order_refunded</li><li>shopify_order_fulfilled</li><li>shopify_order_partially_fulfilled</li></ul>{:/} | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li><li>shopify_province</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2  .reset-td-br-3 role="presentation"}
 
 Weitere Informationen zu den Daten, die durch die Integration getrackt werden, finden Sie unter [Shopify Data Features]({{site.baseurl}}/shopify_data_features/).
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
 ### Historischer Aufbau der Verfüllung
 
@@ -74,7 +76,7 @@ Diese Tabelle enthält die Daten, die anfänglich über das Backfill geladen wer
 
 | Braze empfohlene Veranstaltungen | Shopify angepasste Events | Braze Standard Attribute | Braze Abo-Status |
 | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li>Bestellung aufgegeben</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_provinz</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail</li><li>Vorname</li><li>Nachname</li><li>Telefon</li><li>Ort</li><li>Land</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail Marketing Abos, die mit diesem Shopify Shop verbunden sind</li><li>SMS-Marketing Abos, die mit diesem Shopify Shop verbunden sind</li></ul>{:/} |
+| {::nomarkdown}<ul><li>Bestellung aufgegeben</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail</li><li>Vorname</li><li>Nachname</li><li>Telefon</li><li>Ort</li><li>Land</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail Marketing Abos, die mit diesem Shopify Shop verbunden sind</li><li>SMS-Marketing Abos, die mit diesem Shopify Shop verbunden sind</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 Wenn Ihre Shopify Kund:in-Datensätze in Braze geladen werden, wird die Shopify Kund:in-ID als externe ID von Braze verwendet. 
@@ -121,7 +123,7 @@ Mit den Braze SDKs können Sie angepasste Events oder angepasste Attribute verfo
   </tbody>
 </table>
 
-Durch das Tracking angepasster Daten erhalten Sie tiefere Insights in das Nutzerverhalten und können die Erfahrungen der Nutzer:innen noch besser personalisieren. Um angepasste Events zu implementieren, müssen Sie [den Code Ihres Schaufensterdesigns](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in der Datei `theme.liquid` bearbeiten. Vielleicht brauchen Sie die Hilfe Ihrer Entwickler:in.
+Das Tracking angepasster Daten bietet tiefere Insights in das Nutzerverhalten und unterstützt eine zusätzliche Personalisierung. Um angepasste Events zu implementieren, müssen Sie [den Code Ihres Schaufensterdesigns](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) in der Datei `theme.liquid` bearbeiten. Vielleicht brauchen Sie die Hilfe Ihrer Entwickler:in.
 
 Das folgende JavaScript-Snippet verfolgt zum Beispiel, ob der:die aktuelle Nutzer:in einen Newsletter abonniert hat, und protokolliert dies als angepasstes Event im individuellen Nutzerprofil in Braze:
 
@@ -139,7 +141,7 @@ braze.logCustomEvent(
 
 Das SDK muss auf dem Gerät eines Nutzers initialisiert werden (auf Aktivitäten warten), um Events oder angepasste Attribute zu protokollieren. Um mehr über die Protokollierung angepasster Daten zu erfahren, lesen Sie [User object](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) und [logCustomEvent object](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
-## Schritt 4: Konfigurieren Sie, wie Sie Nutzer:innen verwalten
+## Schritt 4: Konfigurieren Sie, wie Sie Nutzer:innen verwalten {#step-4}
 
 Wählen Sie Ihren `external_id` Typ aus der Dropdown-Liste aus. 
 
@@ -152,33 +154,79 @@ Die Verwendung einer E-Mail-Adresse oder einer gehashten E-Mail-Adresse als exte
 - **Risiko der Ausbeutung:** Wenn ein böswilliger Nutzer:innen seinen Webbrowser so verändert, dass er die E-Mail-Adresse einer anderen Person als externe ID verwendet, kann er möglicherweise auf sensible Nachrichten oder Kontoinformationen zugreifen.
 {% endalert %}
 
-Wenn Sie einen angepassten externen ID-Typ ausgewählt haben, fahren Sie mit den Schritten 4.1 und 4.2 fort. Andernfalls fahren Sie mit Schritt 4.3 fort.
+Standardmäßig wandelt Braze E-Mails von Shopify automatisch in Kleinbuchstaben um, bevor es sie als externe ID verwendet. Wenn Sie E-Mail oder gehashte E-Mail als externe ID verwenden, vergewissern Sie sich, dass Ihre E-Mail-Adressen auch in Kleinbuchstaben umgewandelt werden, bevor Sie sie als externe ID zuweisen oder bevor Sie sie aus anderen Datenquellen hashen. Dies hilft, Diskrepanzen bei externen IDs zu vermeiden und die Erstellung doppelter Nutzerprofile in Braze zu verhindern.
 
-### Schritt 4.1: Erstellen Sie eine angepasste `external_id`
+{% alert note %}
+Die nächsten Schritte hängen davon ab, welche externe ID Sie ausgewählt haben:<br><br>
+- **Wenn Sie einen angepassten externen ID-Typ ausgewählt haben:** Führen Sie die Schritte 4.1-4.3 aus, um Ihre angepasste externe ID-Konfiguration einzurichten.
+- **Wenn Sie die ID, E-Mail oder Hash-E-Mail von Shopify ausgewählt haben:** Überspringen Sie die Schritte 4.1-4.3 und fahren Sie direkt mit Schritt 4.4 fort.
+{% endalert %}
 
-Gehen Sie zunächst zu Shopify und erstellen Sie das Metafeld `braze.external_id`. Wir empfehlen Ihnen, die Schritte unter [Anpassen von Metafeldbeschreibungen](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions) zu befolgen. Geben Sie für **Namensraum und Schlüssel** `braze.external_id` ein. Für **Typ** empfehlen wir Ihnen, einen ID-Typ zu wählen.
+### Schritt 4.1: Erstellen Sie das Metafeld `braze.external_id` 
 
-Nachdem Sie das Metafelder erstellt haben, hören Sie auf [`customer/create` Webhooks](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks), damit Sie das Metafelder schreiben können, wenn eine neue Kund:in erstellt wird. Verwenden Sie dann die [Admin API](https://shopify.dev/docs/api/admin-graphql) oder die [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer), um alle Ihre zuvor erstellten Kund:in mit diesem Metafeld zu versehen.
+1. Gehen Sie in Ihrem Shopify Admin Panel zu **Einstellungen** > **Metafelder und Metaobjekte**.
+2. Wählen Sie **Kunden** > **Definition hinzufügen**.
+3. Geben Sie für **Name** `braze.external_id` ein. 
+4. Wählen Sie den automatisch generierten Namensraum und Schlüssel (`custom.braze_external_id`) aus, um ihn zu bearbeiten und in `braze.external_id` zu ändern.
+5. Wählen Sie unter **Typ** den **ID-Typ** aus.
 
-### Schritt 4.2: Einen Endpunkt erstellen
+Nachdem das Metafeld erstellt wurde, füllen Sie es für Ihre Kund:in aus. Wir empfehlen die folgenden Ansätze:
 
-Sie benötigen einen öffentlichen GET-Endpunkt, um Ihre externe ID abzurufen. Wenn Shopify das Metafeld nicht bereitstellen kann, ruft Braze diesen Endpunkt auf, um die externe ID abzurufen.
+- **Hören Sie sich die Webhooks zur Erstellung von Kund:in an:** Richten Sie einen Webhook ein, um auf die [Ereignisse von`customer/create` ](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) zu warten. Damit können Sie das Metafeld schreiben, wenn eine neue Kund:in angelegt wird.
+- **Füllen Sie bestehende Kund:in nach:** Verwenden Sie die [Admin API](https://shopify.dev/docs/api/admin-graphql) oder die [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer), um das Metafeld für zuvor erstellte Kund:innen zu füllen.
 
-Ein Beispiel für einen Endpunkt ist: `https://mystore.com/custom_id?shopify_customer_id=1234&email_address=raghav.narain@braze.com&shopify_storefront=dev-store.myshopify.com`
+### Schritt 4.2: Erstellen Sie einen Endpunkt zum Abrufen Ihrer externen ID
 
-#### Antwort
+Sie müssen einen öffentlichen Endpunkt erstellen, den Braze zum Abrufen der externen ID aufrufen kann. Dadurch kann Braze die ID in Szenarien abrufen, in denen Shopify das Metafeld `braze.external_id` nicht direkt bereitstellen kann.
 
-Braze erwartet einen `200` Status Code. Jeder andere Code wird als Fehler des Endpunkts betrachtet. Die Antwort sollte lauten:
+#### Endpunkt-Spezifikationen
 
-{% raw %}
-```json
-{ "external_id": "my_external_id" }
+**Methode:** GET
+
+Braze sendet die folgenden Parameter an Ihren Endpunkt:
+
+| Parameter            | Erforderlich | Datentyp | Beschreibung                                                      |
+|----------------------|----------|-----------|------------------------------------------------------------------|
+| shopify_customer_id  | Ja      | String    | Die Shopify ID des Kunden.                                         |
+| shopify_storefront   | Ja      | String    | Der Schaufenstername für die Anfrage. Ex: `<storefront_name>.myshopify.com` |
+| email_address        | Kein:e       | String    | Die E-Mail Adresse des angemeldeten Nutzers:in. <br><br>Dieses Feld kann in bestimmten Webhook-Szenarien fehlen. Ihre Endpunkt-Logik sollte hier Nullwerte berücksichtigen (z.B. holen Sie die E-Mail über shopify_customer_id, wenn Ihre interne Logik dies erfordert). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+#### Beispiel Endpunkt
+
+```http
+GET https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
 ```
-{% endraw %}
 
-Passen Sie die `shopify_customer_id` und die E-Mail Adresse mit Hilfe der Admin API oder der Customer API an, um sicherzustellen, dass die Parameterwerte mit den Kunden:in in Shopify übereinstimmen. Nach der Validierung können Sie auch die APIs verwenden, um das Metafeld `braze.external_id` abzurufen und den Wert der externen ID zurückzugeben.
+#### Erwartete Antwort
+Braze erwartet einen `200` Status Code, der die externe ID JSON zurückgibt:
+```json
+{
+  "external_id": "my_external_id"
+}
+```
 
-### Schritt 4.3: Sammeln Sie Ihre E-Mail- oder SMS-Opt-ins von Shopify (optional)
+#### Validierung
+Es ist wichtig, dass Sie überprüfen, ob `shopify_customer_id` und `email_address` (falls vorhanden) mit den Werten der Kund:in in Shopify übereinstimmen. Sie können die [Shopify Admin API](https://shopify.dev/docs/api/admin-graphql) oder die [Kund:in API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) verwenden, um diese Parameter zu validieren und das richtige `braze.external_id` Metafeld abzurufen.
+
+#### Versagensverhalten und Zusammenführung
+Jeder andere Status Code als `200` wird als Fehlschlag betrachtet.
+
+- **Auswirkungen der Verschmelzung:** Wenn der Endpunkt fehlschlägt (nicht`200` oder Timeout), kann Braze die externe ID nicht abrufen. Folglich wird die Zusammenführung zwischen dem Shopify Nutzer:in und dem Braze Nutzerprofil zu diesem Zeitpunkt nicht stattfinden.
+- **Wiederholungslogik:** Braze kann standardmäßig sofortige Wiederholungsversuche im Netzwerk unternehmen, aber wenn der Fehler weiterhin besteht, wird die Zusammenführung bis zum nächsten qualifizierenden Ereignis aufgeschoben (z.B. wenn der Nutzer:innen sein Profil aktualisiert oder einen Checkout abschließt).
+- **Unterstützbarkeit:** Um die rechtzeitige Zusammenführung von Nutzer:innen zu unterstützen, stellen Sie sicher, dass Ihr Endpunkt hochverfügbar ist und das optionale Feld `email_address` zuverlässig verarbeitet.
+
+### Schritt 4.3: Geben Sie Ihre externe ID ein
+
+Wiederholen Sie [Schritt 4](#step-4) und geben Sie Ihre Endpunkt-URL ein, nachdem Sie die angepasste externe ID als Ihren externen ID-Typ von Braze ausgewählt haben.
+
+#### Überlegungen
+
+- Wenn Ihre externe ID nicht generiert wird, wenn Braze eine Anfrage an Ihren Endpunkt sendet, verwendet die Integration standardmäßig die Shopify Kund:innen-ID, wenn die Funktion `changeUser` aufgerufen wird. Dieser Schritt ist entscheidend für die Zusammenführung des anonymen Nutzerprofils mit dem identifizierten Nutzerprofil. Daher kann es vorübergehend vorkommen, dass in Ihrem Workspace verschiedene Arten von externen IDs existieren.
+- Wenn die externe ID im Metafeld `braze.external_id` verfügbar ist, wird die Integration diese externe ID priorisieren und zuweisen. 
+    - Wenn die Shopify Kund:in ID zuvor als externe ID von Braze eingestellt war, wird sie durch den Wert des Metafelds `braze.external_id` ersetzt. 
+
+### Schritt 4.4: Sammeln Sie Ihre E-Mail- oder SMS-Opt-ins von Shopify (optional)
 
 Sie haben die Möglichkeit, Ihre Opt-ins für E-Mail- oder SMS-Marketing in Shopify zu sammeln. 
 
@@ -194,7 +242,7 @@ Wie in der [Übersicht von Shopify]({{site.baseurl}}/shopify_overview/) erwähnt
 
 ## Schritt 5: Produkte synchronisieren (optional)
 
-Sie können alle Produkte aus Ihrem Shopify Shop mit einem Braze Katalog synchronisieren, um die Personalisierung von Nachrichten zu vertiefen. Automatische Updates erfolgen nahezu in Realtime, so dass Ihr Katalog immer die neuesten Produktdaten enthält. Wenn Sie mehr darüber erfahren möchten, lesen Sie [Shopify Produkt-Synchronisation]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
+Sie können alle Produkte aus Ihrem Shopify Shop mit einem Braze Katalog synchronisieren, um die Personalisierung von Nachrichten zu vertiefen. Automatische Updates erfolgen nahezu in Realtime, so dass Ihr Katalog stets aktuelle Produktdaten enthält. Wenn Sie mehr darüber erfahren möchten, lesen Sie [Shopify Produkt-Synchronisation]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
 
 ![Schritt 4 der Einrichtung mit "Shopify Variant ID" als "Bezeichner für das Produkt im Katalog".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:80%;"}
 
@@ -205,7 +253,7 @@ Sie können In-App-Nachrichten auch ohne einen Entwickler:in aktivieren, indem S
 ![Einrichtungsschritt zur Aktivierung von Kanälen, wobei die verfügbare Option In-Browser Messaging ist.]({% image_buster /assets/img/Shopify/activate_channels_standard.png %})
 
 {% alert note %}
-Braze sammelt über In-Browser-Nachrichten Informationen über Besucher, wie z.B. E-Mail-Adressen und Telefonnummern. Diese Informationen werden dann an Shopify gesendet. Diese Daten helfen Händlern, die Besucher ihres Shops zu erkennen und ein personalisiertes Einkaufserlebnis zu schaffen. Weitere Einzelheiten finden Sie unter [Besucher-API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+Braze sammelt über In-Browser-Nachrichten Informationen über Besucher, wie z.B. E-Mail-Adressen und Telefonnummern. Diese Informationen werden an Shopify gesendet. Diese Daten ermöglichen es Händlern, Besucher ihres Shops zu erkennen und ein personalisiertes Einkaufserlebnis zu schaffen. Weitere Einzelheiten finden Sie unter [Besucher-API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
 {% endalert %}
 
 ### Unterstützung für zusätzliche SDK Kanäle
@@ -218,9 +266,7 @@ Um Content-Cards oder Feature-Flags hinzuzufügen, müssen Sie mit Ihren Entwick
 
 #### Web-Push-Benachrichtigungen
 
-Web-Push wird derzeit für die Shopify-Integration nicht unterstützt. Wenn Sie möchten, dass dies in Zukunft unterstützt wird, reichen Sie eine Anfrage für ein Produkt über das [Braze Produktportal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) ein.
-
-Wenn Sie möchten, dass dies in Zukunft unterstützt wird, stellen Sie eine Anfrage für ein Produkt über das Braze [Produktportal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
+Internet-Push wird für die Shopify-Integration derzeit nicht unterstützt. Um Support anzufordern, stellen Sie eine Anfrage für ein Produkt über das [Braze-Produktportal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
 ## Schritt 7: Einrichtung abschließen
 

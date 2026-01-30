@@ -8,6 +8,7 @@ platform: iOS
 channel:
   - push
 noindex: true
+alias: /push_primer/
 ---
 
 {% multi_lang_include deprecations/objective-c.md %}
@@ -50,7 +51,7 @@ if (@available(iOS 10.0, *)) {
   }
 ```
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 if #available(iOS 10, *) {
@@ -104,7 +105,7 @@ if (@available(iOS 10.0, *)) {
   }
 ```
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 ```swift
 if #available(iOS 10, *) {
   let center = UNUserNotificationCenter.current()
@@ -155,7 +156,7 @@ Weitere Informationen über Deep Linking finden Sie unter [Anpassung der Linkbeh
   }
 ```
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
   // ...

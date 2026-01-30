@@ -37,7 +37,15 @@ Es gibt bestimmte Browser, wie die Naver Android und iOS Apps, die das Braze Ein
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-Die Pläne zum Auslaufen des Kauf-Events werden Ende 2025 bekannt gegeben. Langfristig wird das Kauf-Event durch neue [empfohlene E-Commerce-Ereignisse]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) ersetzt werden, die mit verbesserten Features für Segmentierung, Berichterstattung, Analytics und mehr ausgestattet sein werden. Die neuen E-Commerce-Events unterstützen jedoch keine bestehenden Features im Zusammenhang mit dem Kauf-Event, wie z.B. Lifetime-Value (LTV) oder Umsatzberichte in Canvase oder Kampagnen. Eine vollständige Liste der Features im Zusammenhang mit Kauf-Ereignissen finden Sie unter [Protokollierung von Kauf-Ereignissen]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+Die Pläne, das Kauf-Event auslaufen zu lassen, werden 2026 bekannt gegeben. Das Kauf-Event wird schließlich durch neue [empfohlene E-Commerce-Events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) ersetzt, die mit erweiterten Features für Segmentierung, Reporting, Analytics und mehr ausgestattet sind. Die neuen E-Commerce-Events unterstützen jedoch keine bestehenden Features im Zusammenhang mit dem Kauf-Event, wie z.B. Lifetime-Value (LTV) oder Umsatzberichte in Canvase oder Kampagnen. Eine vollständige Liste der Features, die sich auf Kauf-Events beziehen, finden Sie unter [Protokollierung von Kauf-Events]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Purchase event deprecation for eCommerce filters' %}
+
+{% alert important %}
+Die Pläne, das Kauf-Event auslaufen zu lassen, werden 2026 bekannt gegeben. Das Kauf-Event wird schließlich durch neue [empfohlene E-Commerce-Events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/) ersetzt, die mit erweiterten Features für Segmentierung, Reporting, Analytics und mehr ausgestattet sind. In diesem Fall werden die Filter für die Segmente nicht mehr unter Kaufverhalten angezeigt. Eine vollständige Liste der Kauf-Events finden Sie unter [Kauf-Events protokollieren]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
 {% endalert %}
 
 {% endif %}
@@ -45,7 +53,7 @@ Die Pläne zum Auslaufen des Kauf-Events werden Ende 2025 bekannt gegeben. Langf
 {% if include.alert == 'S3 file bucket export' %}
 
 {% alert important %}
-In S3-Buckets gespeicherte Exportdateien werden automatisch gelöscht, nachdem der Download-Link abgelaufen ist (vier Stunden nach dem Versand der Export-E-Mail, sofern nicht anders angegeben).
+Die in S3-Buckets gespeicherten Exportdateien werden automatisch gelöscht, nachdem der Download-Link abgelaufen ist (vier Stunden nach dem Versand der Export-E-Mail, sofern nicht anders angegeben).
 {% endalert %} 
 
 {% endif %}
@@ -61,7 +69,7 @@ Die Shopify Integration unterstützt Webhooks zum Anlegen und Aktualisieren von 
 {% if include.alert == 'context variable' %}
 
 {% alert important %}
-Wenn Sie am Canvas-Kontext-Frühzugang teilnehmen, sind die Eingangs-Eigenschaften von Canvas Teil der Canvas-Kontextvariablen. Das bedeutet, dass `canvas_entry_properties` jetzt als `context` referenziert wird. Jede Kontextvariable enthält einen Namen, einen Datentyp und einen Wert, der Liquid enthalten kann. Derzeit ist `canvas_entry_properties` noch abwärtskompatibel. Weitere Einzelheiten finden Sie unter [Kontext]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) und [Canvas-Kontextobjekt]({{site.baseurl}}/api/objects_filters/context_object).
+Wenn Sie am Canvas-Kontext-Frühzugang teilnehmen, sind die Eingangs-Eigenschaften von Canvas Teil der Canvas-Kontextvariablen. Das bedeutet, dass `canvas_entry_properties` jetzt als `context` referenziert wird. Jede Kontextvariable enthält einen Namen, einen Datentyp und einen Wert, der Liquid enthalten kann. Derzeit ist `canvas_entry_properties` noch abwärtskompatibel. Weitere Einzelheiten finden Sie unter [Kontext]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) und [Canvas-Eingangs-Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endalert %}
 
 {% endif %}

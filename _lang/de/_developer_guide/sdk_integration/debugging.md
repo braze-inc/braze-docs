@@ -11,7 +11,7 @@ description: "Erfahren Sie, wie Sie den Braze SDK-Debugger verwenden, damit Sie 
 
 ## Voraussetzungen
 
-Um den Braze SDK Debugger zu verwenden, benötigen Sie die Berechtigungen `View PII` und `View User Profiles PII Compliant`. Außerdem muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder auf diese verweisen: 
+Um den Braze SDK Debugger zu verwenden, benötigen Sie die Berechtigungen "PII anzeigen" und "Nutzerprofile PII-konform anzeigen". Um Ihre Debugging-Sitzungsprotokolle herunterzuladen, benötigen Sie außerdem die Berechtigung "Nutzerdaten exportieren". Außerdem muss Ihr Braze SDK die folgenden Mindestversionen erfüllen oder auf diese verweisen: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -29,7 +29,7 @@ Bevor Sie mit der Fehlersuche beginnen, schließen Sie die App, bei der gerade e
 
 Gehen Sie in Braze zu **Einstellungen** und wählen Sie dann unter **Einrichtung und Testen** **SDK Debugger** aus.
 
-![Der Abschnitt "Einrichten und Tests" mit "SDK Debugger" hervorgehoben.]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![Der Abschnitt "Einrichtung und Tests" mit der Markierung "SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 Wählen Sie **Debugging-Sitzung erstellen**.
 
@@ -39,7 +39,7 @@ Wählen Sie **Debugging-Sitzung erstellen**.
 
 Suchen Sie nach einem Nutzer über die E-Mail Adresse, `external_id`, Nutzer-Alias oder Push-Token. Wenn Sie bereit sind, Ihre Sitzung zu starten, wählen Sie **Nutzer auswählen**.
 
-![Die Debugging-Seite für den ausgewählten Nutzer:innen.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
+![Die Debugging-Seite für den ausgewählten Nutzer:in.]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
 ### Schritt 4: App neu starten
 

@@ -20,6 +20,16 @@ platform:
 Standardmäßig erfasst Braze die folgenden Eigenschaften auf Geräteebene, um die Personalisierung von Nachrichten auf der Grundlage von Gerät, Sprache und Zeitzone zu ermöglichen:
 
 {% tabs %}
+{% tab web %}
+- `BROWSER`
+- `BROWSER_VERSION`
+- `LANGUAGE`
+- `OS`
+- `RESOLUTION`
+- `TIME_ZONE`
+- `USER_AGENT`
+{% endtab %}
+
 {% tab android %}
 - `AD_TRACKING_ENABLED`
 - `ANDROID_VERSION`
@@ -27,7 +37,7 @@ Standardmäßig erfasst Braze die folgenden Eigenschaften auf Geräteebene, um d
 - `IS_BACKGROUND_RESTRICTED`
 - `LOCALE`
 - `MODEL`
-- `NOTIFICIATION_ENABLED`
+- `NOTIFICATION_ENABLED`
 - `RESOLUTION`
 - `TIMEZONE`
 
@@ -36,7 +46,7 @@ Standardmäßig erfasst Braze die folgenden Eigenschaften auf Geräteebene, um d
 {% endalert %}
 {% endtab %}
 
-{% tab schnell %}
+{% tab swift %}
 - Netzbetreiber des Geräts (siehe Hinweis, dass [`CTCarrier` veraltet](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty/carrier) ist)
 - Gebietsschema des Geräts
 - Gerätemodell
@@ -54,21 +64,23 @@ Der Braze SDK sammelt IDFA nicht automatisch. Apps können optional die IDFA an 
 2. Um die IDFA (Identifier for Advertisers ) festzulegen, verwenden Sie [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
 {% endalert %}
 {% endtab %}
-
-{% tab Internet %}
-- `BROWSER`
-- `BROWSER_VERSION`
-- `LANGUAGE`
-- `OS`
-- `RESOLUTION`
-- `TIME_ZONE`
-- `USER_AGENT`
-{% endtab %}
 {% endtabs %}
 
 Standardmäßig sind alle Eigenschaften aktiviert. Sie können sie jedoch auch manuell aktivieren oder deaktivieren. Denken Sie daran, dass einige Features des Braze SDK bestimmte Eigenschaften erfordern (z.B. Zustellung zur Ortszeit und Zeitzone). Testen Sie also unbedingt Ihre Konfiguration, bevor Sie sie für die Produktion freigeben.
 
 {% tabs %}
+{% tab web %}
+Sie können zum Beispiel die Sprache des Geräts angeben, die in der Liste zugelassen werden soll. Weitere Informationen finden Sie unter der Option `devicePropertyAllowlist` für [`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
+
+```javascript
+import * as braze from"@braze/web-sdk";
+braze.initialize("API-KEY", {
+    baseUrl: "BASE-URL",
+    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
+});
+```
+{% endtab %}
+
 {% tab android %}
 Sie können zum Beispiel die Android-Betriebssystemversion und das Gebietsschema des Geräts angeben, die in der Liste zugelassen werden sollen. Weitere Informationen finden Sie in den [`setDeviceObjectAllowlistEnabled()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html) und [`setDeviceObjectAllowlist()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html) Methoden. 
 
@@ -79,7 +91,7 @@ new BrazeConfig.Builder()
 ```
 {% endtab %}
 
-{% tab schnell %}
+{% tab swift %}
 Sie können zum Beispiel die Zeitzone und die Gebietsschemasammlung angeben, die zugelassen werden sollen. Weitere Informationen finden Sie unter der [`devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) Eigenschaft des `configuration` Objekts.
 
 {% subtabs %}
@@ -101,18 +113,6 @@ configuration.devicePropertyAllowList = @[
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab Internet %}
-Sie können zum Beispiel die Sprache des Geräts angeben, die in der Liste zugelassen werden soll. Weitere Informationen finden Sie unter der Option `devicePropertyAllowlist` für [`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
-
-```javascript
-import * as braze from"@braze/web-sdk";
-braze.initialize("API-KEY", {
-    baseUrl: "BASE-URL",
-    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
-});
-```
 {% endtab %}
 {% endtabs %}
 

@@ -58,7 +58,7 @@ Die In-App-Nachrichtendaten werden automatisch von der Android-Ebene weitergelei
 
 Sie können In-App-Nachricht-Daten auf eine von zwei Arten weiterleiten:
 
-{% subtab ui deligate %}
+{% subtab UI Delegate %}
 
 1. Implementieren Sie den Delegaten `BrazeInAppMessageUIDelegate` wie im iOS-Artikel zum [Delegaten für In-App-Nachrichten](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c1-inappmessageui) beschrieben.
 
