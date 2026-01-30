@@ -98,7 +98,7 @@ The following data types may be stored as custom attributes:
 
 #### Strings (alphanumeric characters)
 
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 255 characters long.
+String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes are subject to the [length constraints](#length-constraints) for custom data (479 bytes; approximately 255 single-byte characters or about 3,300 characters for multi-byte scripts such as Japanese).
 
 The following table describes available segmentation options for string attributes.
 
@@ -348,7 +348,7 @@ Be mindful of the following limitations and constraints when implementing custom
 
 #### Length constraints
 
-All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
+Braze enforces a length limit in **bytes** (479 bytes) for custom event names, custom attribute names (keys), and custom event string values. Values that exceed this limit will be truncated. When expressed in characters, this is approximately 255 single-byte characters (e.g., ASCII), or approximately 3,300 characters for multi-byte scripts such as Japanese. Ideally, keep names and values as short as possible to improve network and battery performance for your app—if possible, limit them to 50 characters.
 
 #### Content constraints
 The following content will be trimmed programmatically from your attributes and events. Take care not to use the following:
