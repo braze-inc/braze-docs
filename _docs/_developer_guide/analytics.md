@@ -98,7 +98,7 @@ The following data types may be stored as custom attributes:
 
 #### Strings (alphanumeric characters)
 
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes are subject to the [length constraints](#length-constraints) for custom data (479 bytes; approximately 255 single-byte characters or about 3,300 characters for multi-byte scripts such as Japanese).
+String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes are subject to the [length constraints](#length-constraints) for custom data (479 bytes; approximately 255 single-byte characters or approximately 3,300 characters for multi-byte scripts such as Japanese).
 
 The following table describes available segmentation options for string attributes.
 
