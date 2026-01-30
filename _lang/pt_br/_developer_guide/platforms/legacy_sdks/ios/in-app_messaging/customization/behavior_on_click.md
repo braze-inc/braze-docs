@@ -1,6 +1,6 @@
 ---
-nav_title: Comportamento personalizado ao clicar
-article_title: Personalização do comportamento ao clicar em mensagens no app para iOS
+nav_title: Comportamento ao clicar personalizado
+article_title: Personalize o comportamento da mensagem no app ao clicar para iOS
 platform: iOS
 page_order: 5
 description: "Este artigo de referência aborda o comportamento personalizado ao clicar em mensagens no app para seu aplicativo iOS."
@@ -11,12 +11,12 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Personalização do comportamento da mensagem no app ao clicar
+# Personalize o comportamento da mensagem no app ao clicar
 
 A propriedade `inAppMessageClickActionType` no `ABKInAppMessage` define o comportamento da ação depois que a mensagem no app é clicada. Essa propriedade é somente leitura. Se quiser alterar o comportamento ao clicar na mensagem no app, você poderá chamar o seguinte método em `ABKInAppMessage`:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [inAppMessage setInAppMessageClickAction:clickActionType withURI:uri];
@@ -49,7 +49,7 @@ Para mensagens no app contendo botões, a mensagem `clickAction` também será i
 O seguinte método [`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h) é chamado quando uma mensagem no app é clicada:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL) onInAppMessageClicked:(ABKInAppMessage *)inAppMessage;
@@ -70,7 +70,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 Para cliques em botões de mensagens no app e botões de mensagens HTML no app (como links), [`ABKInAppMessageUIDelegate`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h) inclui os seguintes métodos delegados:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)onInAppMessageButtonClicked:(ABKInAppMessageImmersive *)inAppMessage
@@ -100,7 +100,7 @@ Cada método retorna um valor `BOOL` para indicar se a Braze deve continuar a ex
 Para acessar o tipo de ação de clique de um botão em um método delegado, você pode usar o seguinte código:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
@@ -127,7 +127,7 @@ if inAppMessage is ABKInAppMessageImmersive {
 {% endtab %}
 {% endtabs %}
 
-Quando uma mensagem no app tem botões, as únicas ações de clique que serão executadas são as do modelo `ABKInAppMessageButton`. O corpo da mensagem no app não será clicável, embora o modelo `ABKInAppMessage` tenha a ação de clique padrão atribuída.
+Quando uma mensagem no app tem botões, as únicas ações de clique que serão executadas são as do modelo `ABKInAppMessageButton`. O corpo da mensagem no app não será clicável, mesmo que o modelo `ABKInAppMessage` tenha a ação de clique padrão atribuída.
 
 ## Declarações de métodos
 

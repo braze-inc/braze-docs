@@ -1,30 +1,30 @@
 ---
-nav_title: Mensagens no app
-article_title: Mensagens no app para o SDK do Braze
+nav_title: Mensagem no app
+article_title: Mensagens no aplicativo para o SDK Braze
 platform: 
   - Android
   - FireOS
   - Swift
 page_order: 2.2
-description: "Saiba mais sobre mensagens no app e como configurá-las para o Braze SDK."
+description: "Saiba mais sobre mensagens no aplicativo e como configurá-las para o SDK Braze."
 
 ---
 
 # Mensagem no app
 
-> Saiba mais sobre mensagens no app e como configurá-las para o Braze SDK.
+> Saiba mais sobre mensagens no aplicativo e como configurá-las para o SDK Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/in_app_messages.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab android ott %}
@@ -55,7 +55,15 @@ description: "Saiba mais sobre mensagens no app e como configurá-las para o Bra
 {% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+## Próximos passos
+
+Pronto para se aprofundar? Confira estes tutoriais passo a passo:
+
+- Ajuste o tempo de entrega das mensagens [adiando e restaurando mensagens acionadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Refine o direcionamento das mensagens [definindo regras de exibição condicionais]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
+- Combine a aparência da sua marca [personalizando o estilo das mensagens com pares chave-valor]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).

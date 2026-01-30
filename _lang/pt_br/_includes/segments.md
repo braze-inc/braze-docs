@@ -62,7 +62,7 @@ As atualizações programadas são automaticamente desativadas quando uma extens
 - Não é modificado há mais de sete dias
 - Não foi adicionado a uma campanha ou Canva (incluindo rascunhos) ou segmento há mais de sete dias
 
-Se a atualização programada estiver desativada para uma extensão de segmento, essa extensão terá uma notificação informando isso.
+Se a atualização agendada estiver desativada para uma extensão de segmento, essa extensão terá uma notificação informando isso.
 
 ![Uma notificação informando que "As atualizações programadas foram desativadas para essa extensão porque ela não é usada em nenhuma campanha, canvas ou segmento ativo. A extensão do segmento foi desativada em 23 de fevereiro de 2025 às 12:00 AM."]({% image_buster /assets/img/segment/segment_extension_disabled.png %})
 

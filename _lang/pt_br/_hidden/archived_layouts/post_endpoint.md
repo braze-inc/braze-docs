@@ -13,7 +13,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# [Nome do endpoint]
+# [Nome do Endpoint]
 
 {% apimethod post %}
 /sms/invalid_phone_numbers/remove

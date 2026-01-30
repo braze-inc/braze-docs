@@ -10,8 +10,7 @@ Antes de poder usar esse recurso, você precisará [configurar o servidor Braze 
 
 ## Funções disponíveis da API do Braze
 
-Essas são as funções da API que seu cliente MCP referencia para interagir com o servidor Braze MCP:
-
+Seu cliente MCP faz referência às seguintes funções API para interagir com o servidor Braze MCP:
 ### Funções gerais
 
 | Função | Descrição |
@@ -33,7 +32,7 @@ Essas são as funções da API que seu cliente MCP referencia para interagir com
 
 | Função | Endpoint | Descrição |
 |----------|----------|-------------|
-| `get_canvas_list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases) | Exportar uma lista de telas com metadados. |
+| `get_canvas_list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases) | Exportar uma lista de Canvas com metadados. |
 | `get_canvas_details` | [`/canvas/details`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details) | Obtenha informações detalhadas sobre telas específicas. |
 | `get_canvas_data_summary` | [`/canvas/data_summary`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics_summary) | Obtenha análises resumidas da performance do Canva. |
 | `get_canvas_data_series` | [`/canvas/data_series`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_analytics) | Recupere dados de análises de séries temporais para Canvas. |
@@ -134,7 +133,7 @@ Essas são as funções da API que seu cliente MCP referencia para interagir com
 
 | Função | Endpoint | Descrição |
 |----------|----------|-------------|
-| `get_session_data_series` | [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics) | Dados de séries temporais para contagens de sessões do app. |
+| `get_session_data_series` | [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics) | Dados de série temporal para contagens de sessões do app. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ### Chaves de autenticação do SDK
