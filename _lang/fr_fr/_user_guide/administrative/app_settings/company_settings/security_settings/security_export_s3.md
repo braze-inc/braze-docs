@@ -8,7 +8,11 @@ description: "Cet article de référence explique comment exporter automatiqueme
 
 # Exportation d'événements de sécurité avec Amazon S3
 
-> Vous pouvez exporter automatiquement les événements de sécurité vers Amazon S3, un fournisseur de stockage en nuage, à l'aide d'une tâche quotidienne qui s'exécute à minuit UTC. Après la configuration, vous n'aurez plus besoin d'exporter manuellement les événements de sécurité à partir du tableau de bord. Cette tâche exportera les événements de sécurité des dernières 24 heures au format CSV vers votre espace de stockage S3 configuré. Le fichier CSV aura la même structure qu'un rapport exporté manuellement.
+> Vous pouvez exporter automatiquement les événements de sécurité vers Amazon S3, un fournisseur de stockage en nuage, à l'aide d'une tâche quotidienne qui s'exécute à minuit UTC. Après la configuration, vous n'avez pas besoin d'exporter manuellement les événements de sécurité à partir du tableau de bord. La tâche exporte les événements de sécurité des dernières 24 heures au format CSV vers votre espace de stockage S3 configuré. Le fichier CSV a la même structure qu'un rapport exporté manuellement.
+
+{% alert note %}
+La limite de 10 000 lignes ne s'applique qu'au téléchargement manuel de rapports CSV à partir du tableau de bord. Les exportations d'événements de sécurité vers S3 ne sont pas soumises à cette limite de lignes.
+{% endalert %}
 
 Braze prend en charge deux méthodes d'authentification et d'autorisation S3 différentes pour configurer l'exportation Amazon S3 :
 
