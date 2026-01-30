@@ -65,12 +65,12 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `firebaseCloudMessagingSenderId`              | string  | Android only. Your Firebase Cloud Messaging sender ID. Introduced in React Native SDK v1.38.0 and Expo Plugin v0.4.0.                                    |
 | `sessionTimeout`                              | integer | The Braze session timeout for your application in seconds.                                                                                               |
 | `enableSdkAuthentication`                     | boolean | Whether to enable the [SDK Authentication](https://www.braze.com/docs/developer_guide/platform_wide/sdk_authentication#sdk-authentication) feature.      |
-| `logLevel`                                    | integer | The log level for your application. The default log level is 8 and will minimally log info. To enable verbose logging for debugging, use log level 0.    |
+| `logLevel`                                    | integer | The log level for your application. The default log level is 8 and minimally logs info. To enable verbose logging for debugging, use log level 0.    |
 | `minimumTriggerIntervalInSeconds`             | integer | The minimum time interval in seconds between triggers. Defaults to 30 seconds.                                                                           |
 | `enableAutomaticLocationCollection`           | boolean | Whether automatic location collection is enabled (if the user permits).                                                                                  |
 | `enableGeofence`                              | boolean | Whether geofences are enabled.                                                                                                                           |
 | `enableAutomaticGeofenceRequests`             | boolean | Whether geofence requests should be made automatically.                                                                                                  |
-| `dismissModalOnOutsideTap`                    | boolean | iOS only. Whether a modal in-app message will be dismissed when the user clicks outside of the in-app message.                                           |
+| `dismissModalOnOutsideTap`                    | boolean | iOS only. Whether a modal in-app message is dismissed when the user clicks outside of the in-app message.                                           |
 | `androidHandlePushDeepLinksAutomatically`     | boolean | Android only. Whether the Braze SDK should automatically handle push deep links.                                                                         |
 | `androidPushNotificationHtmlRenderingEnabled` | boolean | Android only. Sets whether the text content in a push notification should be interpreted and rendered as HTML using `android.text.Html.fromHtml`.        |
 | `androidNotificationAccentColor`              | string  | Android only. Sets the Android notification accent color.                                                                                                |
@@ -80,7 +80,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `enableBrazeIosRichPush`                      | boolean | iOS only. Whether to enable rich push features for iOS.                                                                                                  |
 | `enableBrazeIosPushStories`                   | boolean | iOS only. Whether to enable Braze Push Stories for iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
-| `iosUseUUIDAsDeviceId`                        | boolean | iOS only. Whether the device ID will use a randomly generated UUID.                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | boolean | iOS only. Whether the device ID uses a randomly generated UUID.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Example configuration:
@@ -174,7 +174,7 @@ For more information on Android notification icons, see [Android's notification 
 
 #### Step 2.3: Build and run your application
 
-Prebuilding your application will generate the native files necessary for the Braze Expo plugin to work.
+Prebuilding your application generates the native files necessary for the Braze Expo plugin to work.
 
 ```bash
 npx expo prebuild
@@ -199,7 +199,7 @@ buildscript {
 }
 ```
 
-This will add Kotlin to your project.
+This adds Kotlin to your project.
 
 #### Step 2.2: Configure the Braze SDK
 
@@ -283,7 +283,7 @@ override fun onNewIntent(intent: Intent) {
 
 #### Step 2.1: (Optional) Configure Podfile for dynamic XCFrameworks
 
-To import certain Braze libraries, such as BrazeUI, into an Objective-C++ file, you will need to use the `#import` syntax. Starting in version 7.4.0 of the Braze Swift SDK, binaries have an [optional distribution channel as dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), which are compatible with this syntax.
+To import certain Braze libraries, such as BrazeUI, into an Objective-C++ file, you must use the `#import` syntax. Starting in version 7.4.0 of the Braze Swift SDK, binaries have an [optional distribution channel as dynamic XCFrameworks](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic), which are compatible with this syntax.
 
 If you'd like to use this distribution channel, manually override the CocoaPods source locations in your Podfile. Reference the sample below and replace `{your-version}` with the relevant version you wish to import:
 
