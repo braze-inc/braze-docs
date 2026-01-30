@@ -91,7 +91,7 @@ As notificações por push podem exibir informações específicas do usuário d
 
 Para configurar um push personalizado no dashboard, você deve registrar a categoria específica que deseja exibir e, em seguida, dentro dos pares chave-valor usando Liquid padrão, definir os atributos de usuário apropriados que você deseja que a mensagem mostre. Essas visualizações podem ser personalizadas com base em atribuições específicas de um perfil de usuário específico.
 
-![Quatro conjuntos de pares chave-valor, onde "next_session_name" e "next_session_complete_date" são definidos como uma propriedade de disparo da API usando Liquid, e "completed_session contagem" e "total_session_count" são definidos como um atributo de usuário personalizado usando Liquid.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![Quatro conjuntos de pares chave-valor, onde "next_session_name" e "next_session_complete_date" são definidos como uma propriedade de gatilho da API usando Liquid, e "completed_session contagem" e "total_session_count" são definidos como um atributo de usuário personalizado usando Liquid.]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
 
 #### Manuseio de pares de valores-chave
 
