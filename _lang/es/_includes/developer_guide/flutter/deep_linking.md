@@ -13,7 +13,7 @@ Antes de que puedas implementar la vinculación en profundidad en tu aplicación
 3. Configura la clave en `FlutterDeepLinkingEnabled`.
 4. Configura el tipo en `Boolean`.
 5. Configura el valor en `YES`.
-    ![Archivo `Info.plist` de un proyecto de ejemplo con el par clave-valor añadido.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Archivo Info.plist del proyecto Xcode")
+    ![Archivo \`Info.plist\` de un proyecto de ejemplo con el par clave-valor añadido.]({% image_buster /assets/img/flutter/flutter-ios-deep-link-info-plist.png %} "Xcode Project Info.plist File")
 {% endtab %}
 
 {% tab Android %}

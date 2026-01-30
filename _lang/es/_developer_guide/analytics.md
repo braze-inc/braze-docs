@@ -13,8 +13,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Análisis
@@ -27,7 +26,7 @@ Durante la implementación de Braze, asegúrate de discutir los objetivos de mar
 
 ## Datos recogidos automáticamente
 
-Nuestro SDK recopila automáticamente determinados datos de usuario, por ejemplo, la primera aplicación utilizada, la última aplicación utilizada, el recuento total de sesiones, el sistema operativo del dispositivo, etc. Si sigues nuestras guías de integración para implementar nuestros SDK, podrás aprovechar esta [recopilación de datos predeterminada]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Comprobar esta lista puede ayudarte a evitar almacenar la misma información sobre los usuarios más de una vez. A excepción del inicio y fin de sesión, el resto de datos de seguimiento automático no cuentan para tu asignación de puntos de datos.
+Nuestro SDK recopila automáticamente determinados datos de usuario, por ejemplo, la primera aplicación utilizada, la última aplicación utilizada, el recuento total de sesiones, el sistema operativo del dispositivo, etc. Si sigues nuestras guías de integración para implementar nuestros SDK, podrás aprovechar esta [recopilación de datos predeterminada]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Comprobar esta lista puede ayudarte a evitar almacenar la misma información sobre los usuarios más de una vez. A excepción del inicio y el final de la sesión, el resto de los datos de seguimiento automático no cuentan para el uso de punto de datos.
 
 Consulta nuestro artículo [de introducción al SDK]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) para permitir procesos de lista que bloqueen la recogida predeterminada de determinados elementos de datos.
 
@@ -51,7 +50,7 @@ Los eventos personalizados son acciones que realizan tus usuarios; son los más 
 
 Braze anota el número de veces que se han producido estos eventos, así como la última vez que los realizó cada usuario para la segmentación. En la página de análisis de **eventos personalizados**, puedes ver de forma agregada la frecuencia con la que se produce cada evento personalizado, así como por segmentos a lo largo del tiempo para un análisis más detallado. Esto es especialmente útil para ver cómo han afectado tus campañas a la actividad de los eventos personalizados, observando las líneas grises que Braze superpone en las series temporales para indicar la última vez que se envió una campaña.
 
-![Un gráfico de análisis de evento personalizado que muestra las estadísticas de los usuarios que añadieron una tarjeta de crédito y realizaron una búsqueda durante un periodo de treinta días.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
+![Un gráfico de análisis de eventos personalizado que muestra las estadísticas de los usuarios que añadieron una tarjeta de crédito y realizaron una búsqueda durante un periodo de treinta días.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 {% alert note %}
 [El incremento de atributos personalizados]({{site.baseurl}}/api/endpoints/messaging/) puede utilizarse para mantener un contador de una acción del usuario similar a un evento personalizado. Sin embargo, no podrás ver datos de atributos personalizados en una serie temporal. Las acciones de los usuarios que no necesiten analizarse en series temporales deben registrarse mediante este método.
@@ -74,7 +73,7 @@ Las propiedades del evento personalizado también pueden utilizarse para la pers
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players from around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
 Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
@@ -83,7 +82,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Las propiedades del evento personalizadas están diseñadas para ayudarte a personalizar tus mensajes o a crear campañas de entrega basadas en acciones granulares. Si quieres crear segmentos basados en la frecuencia y la frecuencia de las propiedades del evento, ponte en contacto con tu administrador del éxito del cliente o con nuestro equipo de soporte.
+Las propiedades del evento personalizadas están diseñadas para ayudarte a personalizar tus mensajes o a crear campañas de entrega basadas en acciones granulares. Si quieres crear segmentos basados en la periodicidad y frecuencia de las propiedades del evento, ponte en contacto con tu administrador del éxito del cliente o con nuestro equipo de soporte.
 
 ## Atributos personalizados
 
@@ -143,7 +142,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-El número máximo de elementos de las matrices de atributos personalizadas está predeterminado en 25. El máximo para matrices individuales puede aumentarse hasta 100 en el panel de Braze, en **Configuración de datos** > **Atributos personalizados**. Si deseas aumentar este máximo, ponte en contacto con tu administrador del servicio de atención al cliente. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla.
+El número máximo de elementos de las matrices de atributos personalizadas está predeterminado en 25. El máximo para matrices individuales puede aumentarse hasta 100 en el panel de Braze, en **Configuración de datos** > **Atributos personalizados**. Si deseas aumentar este máximo, ponte en contacto con el administrador del servicio de atención al cliente. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla.
 
 La tabla siguiente describe las opciones de segmentación disponibles para los atributos de la matriz.
 
@@ -325,7 +324,7 @@ No deben utilizarse como ID de usuario:
 - Dirección de correo electrónico
 - ID de usuario de otro proveedor externo
 
-{% multi_lang_include sdk_auth_alert.md %}
+{% multi_lang_include alerts/important_alerts.md alert='SDK auth' %}
 
 #### Dar nombres legibles a los eventos y atributos personalizados
 

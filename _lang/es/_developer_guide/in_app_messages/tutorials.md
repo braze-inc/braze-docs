@@ -15,8 +15,8 @@ guide_featured_list:
   - name: Mostrar condicionalmente
     link: /docs/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages
     image: /assets/img/braze_icons/zap-off.svg
-  - name: Aplazar y restaurar un mensaje dentro de la aplicación desencadenado
-    link: /docs/developer_guide/in_app_messages/tutorials/defer_triggered_messages
+  - name: Aplazar y restaurar mensajes desencadenados
+    link: /docs/developer_guide/in_app_messages/tutorials/deferring_triggered_messages
     image: /assets/img/braze_icons/watch-circle.svg
 ---
 

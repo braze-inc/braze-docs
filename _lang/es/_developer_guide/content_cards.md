@@ -15,17 +15,19 @@ platform:
 
 > Obtén información sobre las tarjetas de contenido para el SDK de Braze, incluidos los distintos modelos de datos y las propiedades específicas de las tarjetas disponibles para tu aplicación.
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/content_cards.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
@@ -48,7 +50,7 @@ platform:
 {% multi_lang_include developer_guide/unity/content_cards.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/content_cards.md %}
 {% endsdktab %}
 {% endsdktabs %}

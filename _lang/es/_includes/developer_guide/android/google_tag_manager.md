@@ -16,7 +16,7 @@ A continuación, crea una nueva etiqueta (también conocida como "Llamada a func
 
 En los parámetros personalizados de la etiqueta (también conocidos como los pares clave-valor), establece `eventName` en `played song`. Este será el nombre del evento personalizado registrado en Braze.
 
-![Una etiqueta en Google Tag Manager con classpath y campos de par clave-valor. Esta etiqueta se configura para desencadenar con el desencadenante "canción reproducida" creado previamente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
+![Una etiqueta en Google Tag Manager con classpath y campos de par clave-valor. Esta etiqueta está configurada para desencadenar con el desencadenador "canción reproducida" creado anteriormente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 {% alert important %}
 Cuando envíes un evento personalizado, asegúrate de configurar `actionType` en `logEvent`, y establece un valor para `eventName` para que Braze reciba el nombre correcto del evento y la acción a realizar.

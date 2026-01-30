@@ -145,7 +145,7 @@ implementation 'androidx.core:core:1.6.0'
 
 También puedes establecer estas dependencias utilizando el [Administrador de dependencias externas](https://github.com/googlesamples/unity-jar-resolver).
 
-#### Paso 3.4: Automatización de la integración de Unity con Android
+#### Paso 3.4: Automatización de la integración de Unity en Android
 
 Braze proporciona una solución nativa de Unity para automatizar la integración de Unity con Android. 
 
@@ -197,7 +197,7 @@ cd C:\PATH\TO\DIRECTORY\braze-unity-sdk
 
 ### Paso 2: Exportar paquete desde repositorio
 
-En primer lugar, inicia Unity y mantenlo en ejecución en segundo plano. A continuación, en la raíz del repositorio, ejecuta el siguiente comando para exportar el paquete a `braze-unity-sdk/unity-package/`.
+Primero, inicia Unity y mantenlo en ejecución en segundo plano. A continuación, en la raíz del repositorio, ejecuta el siguiente comando para exportar el paquete a `braze-unity-sdk/unity-package/`.
 
 {% tabs local %}
 {% tab MacOS %}

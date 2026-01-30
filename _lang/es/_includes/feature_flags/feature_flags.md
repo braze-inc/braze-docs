@@ -18,7 +18,7 @@ Estas son las versiones mínimas del SDK necesarias para empezar a utilizar las 
 
 Utiliza los indicadores de características para habilitar gradualmente características a una muestra de población. Por ejemplo, puedes hacer un lanzamiento suave de una nueva característica primero a tus usuarios VIP. Esta estrategia ayuda a mitigar los riesgos asociados con el envío de nuevas características a todo el mundo a la vez y ayuda a detectar los errores con antelación.
 
-![Imagen en movimiento del control deslizante de tráfico del rollout pasando del 0% al 100%.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
+![Imagen en movimiento del control deslizante de tráfico de despliegue pasando de 0% a 100%.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
 
 Por ejemplo, digamos que hemos decidido añadir un nuevo enlace de "Asistencia por chat en vivo" a nuestra aplicación para agilizar el servicio al cliente. Podríamos ofrecer esta característica a todos los clientes a la vez. Sin embargo, un lanzamiento amplio conlleva riesgos, como estos: 
 
@@ -35,7 +35,7 @@ Con las feature flags de Braze, podemos desplegar la característica gradualment
 
 Para desplegar gradualmente esta característica, podemos [crear una bandera de característica]({{site.baseurl}}/developer_guide/feature_flags/create/) llamada "Widget de chat en vivo".
 
-![Detalles de la feature flag de un ejemplo llamado Widget de Chat en vivo. El ID es enable_live_chat. La descripción de esta bandera de característica dice que el widget de chat en vivo se mostrará en la página de soporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Detalles de la feature flag de un ejemplo llamado Widget de Chat en vivo. El ID es enable_live_chat. La descripción de esta característica indica que el widget de chat en vivo se mostrará en la página de soporte.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 En el código de nuestra aplicación, sólo mostraremos el botón **Iniciar chat en vivo** cuando esté habilitada la bandera de la característica Braze:
 
@@ -140,7 +140,7 @@ Con las banderas de características, podemos dejar que Braze controle el conten
 
 Para configurar remotamente esta característica, crearemos una nueva bandera de característica llamada `navigation_promo_link` y definiremos las siguientes propiedades iniciales:
 
-![Bandera de característica con propiedades de enlace y texto que dirigen a una página de ventas genérica.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
+![Bandera de características con propiedades de enlace y texto que dirigen a una página de ventas genérica.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 En nuestra aplicación, utilizaremos métodos getter de Braze para recuperar las propiedades de esta bandera de característica y construir los enlaces de navegación basándonos en esos valores:
 
@@ -231,11 +231,11 @@ Supongamos que lanzamos un nuevo programa de recompensas de fidelización para n
 
 Para coordinar eficazmente el despliegue de características y la mensajería, crearemos una nueva feature flag llamada `show_loyalty_program`. Para nuestro lanzamiento inicial por fases, dejaremos que Canvas controle cuándo y para quién se habilita la bandera de la característica. Por ahora, dejaremos el porcentaje de despliegue en 0% y no seleccionaremos ningún segmento de destino.
 
-![Una feature flag con el nombre Programa de recompensas por fidelización. El ID es show_loyalty_program, y la descripción que esto muestra el nuevo programa de recompensas de fidelización en la pantalla de inicio y en la página de perfil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![Una feature flag con el nombre Programa de recompensas por fidelización. El ID es show_loyalty_program, y la descripción que muestra el nuevo programa de recompensas de fidelización en la pantalla de inicio y en la página de perfil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
 A continuación, en Canvas, crearemos un [paso en]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) Canvas que habilite la bandera de característica `show_loyalty_program` para nuestro segmento "Clientes de alto valor":
 
-![Un ejemplo de Canvas con un paso en Canvas de segmentación de audiencia en el que el segmento de clientes de alto valor activa la bandera de la característica show_loyalty_program.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![Un ejemplo de Canvas con un paso en Canvas de división de audiencias en el que el segmento de clientes de alto valor activa la bandera de característica show_loyalty_program.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 Ahora, los usuarios de este segmento empezarán a ver el nuevo programa de fidelización y, una vez habilitado, se enviarán automáticamente un correo electrónico y un cuestionario para ayudar a nuestro equipo a recabar opiniones.
 
@@ -310,9 +310,9 @@ if let featureFlag, featureFlag.enabled {
 
 Configuraremos nuestra prueba A/B en un [Experimento de bandera de características]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
-Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué flujo de pago dio lugar a una mayor tasa de conversión. {% multi_lang_include analytics/metrics.md metric='Tasa de conversión' %}
+Ahora, el 50% de los usuarios verán la experiencia antigua, mientras que el otro 50% verá la experiencia nueva. A continuación, podemos analizar las dos variantes para determinar qué flujo de pago dio lugar a una mayor tasa de conversión. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
-![Un experimento de bandera de características que divide el tráfico en dos grupos del 50%.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
+![Un experimento de bandera de características divide el tráfico en dos grupos del 50%.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
 Una vez determinado el ganador, podemos detener esta campaña y aumentar el porcentaje de despliegue de la característica al 100% para todos los usuarios, mientras nuestro equipo de ingeniería la codifica en la próxima versión de la aplicación.
 

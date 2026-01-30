@@ -5,3 +5,19 @@ Puedes utilizar [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == "Reference properties from triggering event" %}
+
+{% alert tip %}
+No necesitas un paso de Contexto para hacer referencia a propiedades del evento desencadenante en pasos para [rutas de audiencia]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) o [división de decisiones]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split). Puedes hacer referencia a las propiedades directamente en los grupos de filtros con el filtro **Variable contextual**. Asegúrate de seleccionar el tipo de datos correcto.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'catalog data images' %}
+
+{% alert tip %}
+Para extraer imágenes de los elementos desencadenantes del catálogo, éste debe incluir un campo llamado `image_url`. Luego puedes hacer referencia a él utilizando {%raw%}``{{ items[0].image_url }}``{%endraw%}.
+{% endalert %}
+
+{% endif %}

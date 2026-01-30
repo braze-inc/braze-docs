@@ -3,7 +3,7 @@
 ### Paso 1: Configura tu proyecto
 
 {% alert important %}
-Al utilizar las características de ubicación de Braze, tu aplicación es responsable de solicitar autorización para utilizar los servicios de ubicación. No dejes de consultar [Desarrollador de Apple: Solicitud de autorización a los servicios de ubicación del usuario](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services).
+Al utilizar las características de ubicación de Braze, tu aplicación es responsable de solicitar autorización para utilizar los servicios de ubicación. No dejes de consultar [Desarrollador de Apple: Solicitud de autorización a los servicios de ubicación de usuarios](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services).
 {% endalert %}
 
 Para habilitar el seguimiento de ubicación, abre tu proyecto de Xcode y selecciona tu aplicación. En la pestaña **General**, añade el módulo `BrazeLocation`.
@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 
 En tu archivo `AppDelegate.m`, importa el módulo `BrazeLocation` en la parte superior del archivo. Añade una instancia de `BrazeLocationProvider` a la configuración de Braze, asegurándote de que todos los cambios en la configuración se realizan antes de llamar a `Braze(configuration:)`. Consulta `BRZConfigurationLocation` para ver las configuraciones disponibles.
 
@@ -116,7 +116,7 @@ AppDelegate.braze?.user.setLastKnownLocation(latitude:latitude,
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setLastKnownLocationWithLatitude:latitude

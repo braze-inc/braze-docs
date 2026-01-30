@@ -1,4 +1,3 @@
-
 # Remitentes de SMS y RCS
 
 > Este artículo te guiará a través de conceptos importantes relacionados con el envío de números de teléfono con Braze.
@@ -6,7 +5,7 @@
 ## Tipos de remitentes de SMS y RCS
 
 {% tabs %}
-{% tab Remitente RCS-Verificado %}
+{% tab RCS-Verified Sender %}
 
 #### Remitente verificado por RCS
 
@@ -33,7 +32,7 @@ Un remitente verificado por RCS es una representación visual de tu marca que in
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Códigos abreviados SMS %}
+{% tab SMS Short Codes %}
 
 #### Códigos abreviados SMS
 
@@ -59,7 +58,7 @@ Un código abreviado es una secuencia memorable de 5-6 dígitos que permite a lo
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Códigos largos SMS %}
+{% tab SMS Long Codes %}
 
 #### Códigos largos SMS
 
@@ -85,7 +84,7 @@ Un código largo es un número de teléfono estándar que se utiliza para enviar
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab SMS Vanidad Código abreviado %}
+{% tab SMS Vanity Short Code %}
 
 #### Códigos abreviados de los SMS
 
@@ -114,7 +113,7 @@ Un código abreviado personalizado es un número de teléfono de 5-6 dígitos se
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab SMS ID alfanumérico del remitente %}
+{% tab SMS Alphanumeric Sender ID %}
 
 #### ID alfanumérico del remitente del SMS
 
@@ -138,7 +137,7 @@ Los ID de remitente alfanuméricos te permiten establecer el nombre de tu empres
 
 Para más información sobre el ID alfanumérico de remitente, ponte en contacto con tu administrador del éxito del cliente.
 {% endtab %}
-{% tab Número gratuito de SMS %}
+{% tab SMS Toll-Free Number %}
 
 #### Número gratuito habilitado para SMS
 
@@ -155,7 +154,7 @@ Un número de teléfono gratuito, o un número de teléfono gratuito, es un núm
 
 | Pros | Contras |
 | ---- | ---- | 
-| {::nomarkdown} <ul> <li> Debes registrarte antes de enviar. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Los números gratuitos son sólo los de EE.UU. y Canadá </li><li> El MMS no está habilitado </li> </ul> {:/} |
+| {::nomarkdown} <ul> <li> Debes registrarte antes de enviar. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Los números gratuitos sólo se admiten en EE.UU. y Canadá </li><li> MMS es compatible en EE.UU. y Canadá  </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 {% endtab %}

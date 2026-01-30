@@ -8,7 +8,11 @@ description: "Este artículo de referencia explica cómo exportar automáticamen
 
 # Exportación de eventos de seguridad con Amazon S3
 
-> Puedes exportar automáticamente los eventos de seguridad a Amazon S3, un proveedor de almacenamiento en la nube, con una tarea diaria que se ejecuta a medianoche UTC. Tras la configuración, no tendrás que exportar manualmente los eventos de seguridad desde el panel. La tarea exportará los eventos de seguridad de las últimas 24 horas en formato CSV a tu almacenamiento S3 configurado. El archivo CSV tendrá la misma estructura que un informe exportado manualmente.
+> Puedes exportar automáticamente los eventos de seguridad a Amazon S3, un proveedor de almacenamiento en la nube, con una tarea diaria que se ejecuta a medianoche UTC. Tras la configuración, no necesitas exportar manualmente los eventos de seguridad desde el panel. El trabajo exporta los eventos de seguridad de las últimas 24 horas en formato CSV a tu almacenamiento S3 configurado. El archivo CSV tiene la misma estructura que un informe exportado manualmente.
+
+{% alert note %}
+El límite de 10.000 filas sólo se aplica a la descarga manual de informes CSV desde el panel. Las exportaciones de eventos de seguridad a S3 no están sujetas a este límite de filas.
+{% endalert %}
 
 Braze admite dos métodos diferentes de autenticación y autorización de S3 para configurar la exportación a Amazon S3:
 

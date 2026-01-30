@@ -23,7 +23,7 @@ Estos son los tipos de mensajes dentro de la aplicación disponibles en Braze y 
 
 [`Modal Image`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/inappmessage/modalimage-swift.struct) Los mensajes dentro de la aplicación aparecen en el centro de la pantalla y están enmarcados por un panel translúcido. Estos mensajes son similares a los del tipo `Modal`, excepto que no tienen cabecera ni texto de mensaje. Útiles para una mensajería más crítica, pueden equiparse con hasta dos botones habilitados para análisis.
 
-![Un mensaje dentro de la aplicación con una imagen modal en el centro de la pantalla del teléfono.]({% image_buster /assets/img/modal-full-image.png %}){: style="max-width:35%;border:none;"}
+![Un mensaje modal de imagen dentro de la aplicación en el centro de la pantalla del teléfono.]({% image_buster /assets/img/modal-full-image.png %}){: style="max-width:35%;border:none;"}
 
 {% endsubtab %}
 {% subtab Fullscreen %}
