@@ -65,7 +65,7 @@ Fügen Sie in Ihrer `AppDelegate.m`-Datei  das folgende Snippet in Ihre Methode 
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Wenn Sie das Braze SDK mit CocoaPods oder Carthage integrieren, fügen Sie die folgende Codezeile in Ihre `AppDelegate.swift`-Datei ein:
 
@@ -101,7 +101,7 @@ Stellen Sie sicher, dass Sie Braze im Haupt-Thread Ihrer Anwendung initialisiere
 Beachten Sie, dass ab Dezember 2019 keine benutzerdefinierten Endpunkte mehr vergeben werden. Wenn Sie einen bereits bestehenden benutzerdefinierten Endpunkt haben, können Sie ihn weiterhin verwenden. Weitere Einzelheiten finden Sie in unserer <a href="{{site.baseurl}}/api/basics/#endpoints">Liste der verfügbaren Endpunkte</a>.
 {% endalert %}
 
-Ihre Braze-Vertretung sollte Sie bereits über den [richtigen Endpunkt]({{ site.baseurl }}/user_guide/ informiert haben.administrative/access_braze/sdk_endpoints/).
+Ihre Vertretung von Braze sollte Ihnen bereits den [richtigen Endpunkt]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)] mitgeteilt haben.
 
 #### Endpunktkonfiguration zur Kompilierzeit (empfohlen)
 Wenn ein bereits vorhandener angepasster Endpunkt...
@@ -117,7 +117,7 @@ Die Unterstützung für das Setzen von Endpunkten zur Laufzeit mit `ABKAppboyEnd
 {% endalert %}
 
 {% alert important %}
-Um Ihren spezifischen Cluster herauszufinden, fragen Sie bitte Ihren Customer-Success-Manager oder wenden Sie sich an unser Support-Team.
+Um Ihr spezifisches Cluster herauszufinden, fragen Sie Ihren Customer-Success-Manager:in oder kontaktieren Sie unser Support-Team.
 {% endalert %}
 
 ### SDK-Integration abgeschlossen
@@ -148,7 +148,7 @@ Fügen Sie in Ihrer `AppDelegate.m` Datei innerhalb Ihrer `application:didFinish
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Fügen Sie in `AppDelegate.swift` innerhalb Ihrer Methode `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` die folgende Braze-Methode hinzu:
 
