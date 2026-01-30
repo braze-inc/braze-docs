@@ -1,7 +1,7 @@
 ---
 page_order: 6
-nav_title: Invitations à la poussée douce
-article_title: Configuration des invites de poussée douce pour le SDK de Braze
+nav_title: Invitations à appuyer sur une touche de fonction
+article_title: Configurer les invites de poussée douce pour le SDK de Braze
 channel:
   - push notifications
 ---

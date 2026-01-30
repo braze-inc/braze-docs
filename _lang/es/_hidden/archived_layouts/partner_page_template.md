@@ -60,7 +60,7 @@ Los siguientes requisitos son los típicos que puedes necesitar de Braze. Recome
 
 ## [Tipo de integración] Integración
 
-Aquí es donde divides la integración en pasos. No te limites a escribir párrafos interminables: se trata de documentación técnica que utilizarán tanto especialistas en marketing como desarrolladores para poner en marcha la integración. Tu único objetivo en esta sección es escribir documentación descriptiva que ayude al usuario de Braze a realizar su trabajo. Con "Tipo de integración" en el título de la sección, nos referimos a indicar si se trata o no de una integración en paralelo, de servidor a servidor o "Fuera de la caja". Esto te habilita a tener múltiples secciones de integración si hay más de una forma de integrarse con este socio.
+Aquí es donde divides la integración en pasos. No te limites a escribir párrafos interminables: se trata de documentación técnica que utilizarán tanto especialistas en marketing como desarrolladores para poner en marcha la integración. Tu único objetivo en esta sección es escribir documentación descriptiva que ayude al usuario de Braze a realizar su trabajo. Con "Tipo de integración" en el título de la sección, queremos indicar si se trata de una integración en paralelo, de servidor a servidor o predeterminada. Esto te habilita a tener múltiples secciones de integración si hay más de una forma de integrarse con este socio.
 
 Si se trata de una integración de Currents, esta página debe estar ubicada en la sección Currents, y debe crearse una página de navegación correspondiente que redirija a esa ubicación en Currents.
 

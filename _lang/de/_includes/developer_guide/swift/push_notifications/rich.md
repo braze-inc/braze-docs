@@ -31,7 +31,7 @@ Nachdem Sie die [Anleitung zur Integration des Swift-Paketmanagers]({{site.baseu
 
 1. Wählen Sie in Xcode unter Frameworks und Bibliotheken das Symbol <i class="fas fa-plus"></i> "Hinzufügen" aus, um ein Framework hinzuzufügen. <br><br>![Das Plus-Symbol befindet sich unter Frameworks und Bibliotheken in Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
-2. Wählen Sie das Framework "BrazeNotificationService" aus. <br><br>![Das Framework "BrazeNotificationService" kann in dem sich öffnenden Modal ausgewählt werden.]({% image_buster /assets/img_archive/rich_notification2.png %})
+2. Wählen Sie das Framework "BrazeNotificationService" aus. <br><br>![In dem sich öffnenden Modal können Sie das Framework "BrazeNotificationService" auswählen.]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}

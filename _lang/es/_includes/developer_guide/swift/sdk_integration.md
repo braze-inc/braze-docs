@@ -118,7 +118,7 @@ pod install
 
 En este punto, deberías poder abrir el nuevo espacio de trabajo del proyecto Xcode creado por CocoaPods. Asegúrate de utilizar este espacio de trabajo de Xcode en lugar de tu proyecto de Xcode.
 
-![Una carpeta de Ejemplo de Braze ampliada para mostrar el nuevo `BrazeExample.workspace`.]({% image_buster /assets/img/braze_example_workspace.png %})
+![Una carpeta Ejemplo de Braze ampliada para mostrar el nuevo \`BrazeExample.workspace\`.]({% image_buster /assets/img/braze_example_workspace.png %})
 
 #### Actualizar el SDK con CocoaPods
 
@@ -134,7 +134,7 @@ pod update
 
 Ve a [la página de lanzamiento del SDK de Braze en GitHub](https://github.com/braze-inc/braze-swift-sdk/releases) y descarga `braze-swift-sdk-prebuilt.zip`.
 
-!["La página de lanzamiento del SDK de Braze en GitHub"]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
+!["La página de lanzamiento del SDK de Braze en GitHub".]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
 
 #### Paso 1.2: Elige tus marcos
 
@@ -178,10 +178,10 @@ A continuación, integra los XCFrameworks **dinámicos** o **estáticos** que [p
 
 En tu proyecto Xcode, selecciona tu objetivo de compilación y, a continuación, **General**. En **Frameworks, Bibliotecas y Contenido incrustado**, arrastra y suelta los [archivos que preparaste anteriormente](#swift_step-3-prepare-your-files).
 
-!["Un proyecto Xcode de ejemplo con cada biblioteca Braze configurada como 'Incrustar y firmar'"]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
+!["Un proyecto Xcode de ejemplo con cada biblioteca Braze configurada como 'Incrustar signo & '".]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
 {% alert note %}
-A partir del SDK de Swift 12.0.0, debes seleccionar siempre **Incrustar y firmar** para los XCFrameworks de Braze, tanto para las variantes estáticas como para las dinámicas. Esto garantiza que los recursos de los frameworks se incrusten correctamente en el paquete de tu aplicación.
+A partir del SDK Swift 12.0.0, debes seleccionar siempre **Incrustar & Sign** para los XCFrameworks de Braze, tanto para las variantes estáticas como para las dinámicas. Esto garantiza que los recursos de los frameworks se incrusten correctamente en el paquete de tu aplicación.
 {% endalert %}
 
 {% alert tip %}
@@ -360,7 +360,7 @@ El nivel de registro predeterminado para el SDK de Braze Swift es `.error`-tambi
 
 | Swift       | Objective-C              | Descripción                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (predeterminado) Registrar información de depuración + `.info` + `.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | Registrar información de depuración + `.info` + `.error`.              |
 | `.info`     | `BRZLoggerLevelInfo`     | Registra la información general del SDK (cambios de usuario, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Errores de registro.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | No se produce ningún registro.                                           |
@@ -385,7 +385,7 @@ let braze = Braze(configuration: configuration)
 ```
 
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey

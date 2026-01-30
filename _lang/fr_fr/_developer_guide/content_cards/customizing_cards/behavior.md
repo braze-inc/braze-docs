@@ -25,19 +25,19 @@ Nous vous déconseillons d'envoyer des valeurs JSON imbriquées sous forme de pa
 {% endalert %}
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Les paires clé-valeur sont stockées sur des objets de type <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> sous la forme de `extras`. Ces données peuvent être utilisées pour envoyer des données avec une carte pour une manipulation ultérieure par l’application. Appelez `card.extras` pour accéder à ces valeurs.
+
+{% endtab %}
+{% tab android %}
 
 Les paires clé-valeur sont stockées sur des objets de type <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> sous la forme de `extras`. Ces données peuvent être utilisées pour envoyer des données avec une carte pour une manipulation ultérieure par l’application. Appelez <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> pour accéder à ces valeurs.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Les paires clé-valeur sont stockées sur des objets de type <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> sous la forme de `extras`. Ces données peuvent être utilisées pour envoyer des données avec une carte pour une manipulation ultérieure par l’application. Appelez <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> pour accéder à ces valeurs.
-
-{% endtab %}
-{% tab Web %}
-
-Les paires clé-valeur sont stockées sur des objets de type <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> sous la forme de `extras`. Ces données peuvent être utilisées pour envoyer des données avec une carte pour une manipulation ultérieure par l’application. Appelez `card.extras` pour accéder à ces valeurs.
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +58,7 @@ L’exemple à droite montre un flux avec une liste hybride d’éléments qui s
 
 Les [campagnes déclenchées par l'API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) sont une bonne stratégie à employer lorsque les valeurs d'une carte dépendent de facteurs externes pour déterminer le contenu à afficher à l'utilisateur. Par exemple, pour afficher du contenu supplémentaire, définissez des paires clé-valeur à l'aide de Liquid. Notez que `class_type` doit être connu au moment de la configuration.
 
-![Les paires clé-valeur pour le cas d’usage des cartes de contenu supplémentaires. Dans cet exemple, différents aspects de la carte tels que "tile_id", "tile_deeplink" et "tile_title" sont définis à l'aide de Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Les paires clé-valeur pour le cas d’usage des cartes de contenu supplémentaires. Dans cet exemple, différents aspects de la carte tels que "tile_id", "tile_deeplink", et "tile_title" sont définis à l'aide de Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ## Les cartes de contenu en tant que contenu interactif
 ![Une carte de contenu interactive affichant une promotion de 50 % apparaît dans le coin en bas à gauche de l’écran. Après avoir cliqué, une promotion sera appliquée au panier.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
@@ -73,7 +73,7 @@ Les paires clé-valeur pour ce cas d’usage comprennent un ensemble `discount_p
 
 ## Badges de cartes de contenu
 
-![Écran d'accueil d'un iPhone montrant un exemple d'application Braze nommé Swifty avec un badge rouge affichant le nombre 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Écran d'accueil d'un iPhone montrant un exemple d'application Braze nommé Swifty avec un badge rouge affichant le chiffre 7]({% image_buster /assets/img/cc_implementation/ios-unread-badge.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Les badges sont de petites icônes idéales pour attirer l'attention d'un utilisateur. L'utilisation de badges pour alerter l'utilisateur sur le nouveau contenu de la carte de contenu peut inciter les utilisateurs à revenir sur votre application et augmenter le nombre de sessions.
 
@@ -82,7 +82,18 @@ Les badges sont de petites icônes idéales pour attirer l'attention d'un utilis
 Vous pouvez afficher le nombre de cartes de contenu non lues de votre utilisateur sous forme de badge sur l'icône de votre application. 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Vous pouvez à tout moment demander le nombre de cartes non lues en appelant :
+
+```javascript
+braze.getCachedContentCards().getUnviewedCardCount();
+```
+
+Vous pouvez ensuite utiliser ces informations pour afficher un badge indiquant le nombre de cartes de contenu non lues. Consultez la <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">documentation de référence du SDK</a> pour plus d'informations.
+
+{% endtab %}
+{% tab android %}
 
 Vous pouvez à tout moment demander le nombre de cartes non lues en appelant :
 
@@ -107,7 +118,7 @@ Vous pouvez ensuite utiliser ces informations pour afficher un badge indiquant l
 
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 L'exemple suivant utilise `braze.contentCards` pour demander et afficher le nombre de cartes de contenu non lues. Après la fermeture de l'application et la fin de la session de l'utilisateur final, ce code demande un décompte des cartes, en filtrant le nombre de cartes en fonction de la propriété `viewed`.
 
@@ -146,17 +157,6 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Vous pouvez à tout moment demander le nombre de cartes non lues en appelant :
-
-```javascript
-braze.getCachedContentCards().getUnviewedCardCount();
-```
-
-Vous pouvez ensuite utiliser ces informations pour afficher un badge indiquant le nombre de cartes de contenu non lues. Consultez la <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">documentation de référence du SDK</a> pour plus d'informations.
-
 {% endtab %}
 {% endtabs %}
 

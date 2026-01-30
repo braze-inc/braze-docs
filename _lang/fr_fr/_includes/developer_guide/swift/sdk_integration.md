@@ -11,7 +11,7 @@ Avant de commencer, vérifiez que votre environnement est pris en charge par la 
 Nous vous recommandons d'utiliser le [gestionnaire de paquets swift (SwiftPM](https://swift.org/package-manager/) ) ou [CocoaPods](http://cocoapods.org/) pour installer le SDK Swift de Braze. Vous pouvez également installer le SDK manuellement.
 
 {% tabs local %}
-{% tab Gestionnaire de paquets Swift %}
+{% tab Swift Package Manager %}
 #### Étape 1.1 : Importer la version SDK
 
 Ouvrez votre projet et naviguez vers les paramètres de votre projet. Sélectionnez l'onglet **Paquets Swift** et cliquez sur le bouton d'ajout <i class="fas fa-plus"></i> sous la liste des paquets.
@@ -69,7 +69,7 @@ Si vous êtes bloqué, consultez le guide de résolution des problèmes de Cocoa
 
 #### Étape 1.2 : Construction du Podfile
 
-Ensuite, créez un fichier dans le répertoire de votre projet Xcode nommé `Podfile`.
+Ensuite, créez un fichier dans votre répertoire de projet Xcode nommé `Podfile`.
 
 {% alert note %}
 À partir de la version 7.4.0, le SDK Braze Swift dispose de canaux de distribution supplémentaires sous la forme de [XCFrameworks statiques](https://github.com/braze-inc/braze-swift-sdk-prebuilt-static) et de [XCFrameworks dynamiques](https://github.com/braze-inc/braze-swift-sdk-prebuilt-dynamic). Si vous souhaitez utiliser l'un de ces formats à la place, suivez les instructions d'installation de leur dépôt respectif.
@@ -118,7 +118,7 @@ pod install
 
 À ce stade, vous devriez pouvoir ouvrir le nouvel espace de travail du projet Xcode créé par CocoaPods. Assurez-vous d’utiliser cet espace de travail Xcode au lieu de votre projet Xcode.
 
-![Un dossier d'exemple de Braze agrandi pour montrer le nouveau `BrazeExample.workspace`.]({% image_buster /assets/img/braze_example_workspace.png %})
+![Un dossier d'exemple de Braze s'est agrandi pour montrer le nouveau \`BrazeExample.workspace\`.]({% image_buster /assets/img/braze_example_workspace.png %})
 
 #### Mise à jour du SDK à l'aide de CocoaPods
 
@@ -129,12 +129,12 @@ pod update
 ```
 {% endtab %}
 
-{% tab Manual (Manuel) %}
+{% tab Manual %}
 #### Étape 1.1 : Téléchargez le SDK Braze
 
 Accédez à la [page du SDK Braze sur GitHub](https://github.com/braze-inc/braze-swift-sdk/releases), puis téléchargez `braze-swift-sdk-prebuilt.zip`.
 
-![Page du SDK Braze sur GitHub.]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
+!["La page de publication du SDK de Braze sur GitHub".]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
 
 #### Étape 1.2 : Choisissez vos frameworks
 
@@ -178,7 +178,7 @@ Ensuite, intégrez les XCFrameworks **dynamiques** ou **statiques** que vous [av
 
 Dans votre projet Xcode, sélectionnez votre cible de build, puis **Général**. Sous **Frameworks, bibliothèques et contenu intégré**, faites glisser et déposez les [fichiers que vous avez préparés précédemment](#swift_step-3-prepare-your-files).
 
-![Exemple de projet Xcode avec chaque bibliothèque Braze définie sur Intégrer et signer.]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
+!["Un exemple de projet Xcode avec chaque bibliothèque Braze réglée sur 'Embed & Sign.'"]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
 {% alert note %}
 À partir du SDK Swift 12.0.0, vous devez toujours sélectionner **Embed & Sign** pour les XCFrameworks de Braze, tant pour les variantes statiques que dynamiques. Cela permet de s'assurer que les ressources des frameworks sont correctement intégrées dans votre bundle d'application.
@@ -258,7 +258,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Objectif-C %}
+{% tab Objective-C %}
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Prepare the SDK for delayed initialization
@@ -360,7 +360,7 @@ Le niveau de journalisation par défaut pour le SDK Braze Swift est `.error`- c'
 
 | Swift       | Objectif-C              | Description                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (Par défaut) Enregistre les informations de débogage + `.info` + `.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | Enregistrer les informations de débogage + `.info` + `.error`.              |
 | `.info`     | `BRZLoggerLevelInfo`     | Enregistrer des informations générales sur le SDK (changements au niveau des utilisateurs, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Erreurs de journalisation.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | Aucun enregistrement n'a lieu.                                           |
@@ -385,7 +385,7 @@ let braze = Braze(configuration: configuration)
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:self.APIKey

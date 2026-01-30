@@ -11,7 +11,7 @@ Le tableau suivant décrit comment vous pouvez exploiter chaque type de bloc éd
 | Titre | Permet d'insérer un titre dans le message. |
 | Paragraphe | Permet d'insérer un paragraphe dans le message. |
 | Bouton | Ajoute un bouton standard. Les propriétés de ce bloc permettent de modifier, de configurer les liens et enregistrer les analyses. |
-| Bouton radio | Ajoute une liste d'options parmi lesquelles les utilisateurs peuvent choisir. Lorsqu'il est soumis, le profil utilisateur enregistre l'attribut personnalisé associé. |
+| Bouton radio | Ajoute une liste d'options parmi lesquelles les utilisateurs peuvent choisir. Lorsqu'il est soumis, le profil utilisateur enregistre l'attribut personnalisé associé, qui doit être une chaîne de caractères pour être enregistré. Les attributs personnalisés ayant d'autres types de données ne s'enregistrent pas dans le profil utilisateur. |
 | Image | Insère une image de la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). |
 | Lien | Insère un lien hypertexte sur lequel les utilisateurs peuvent cliquer pour naviguer vers une URL spécifiée. Ils peuvent être intégrés dans un texte ou être autonomes. |
 | Espaceur | Ajoute de l’espace ou une marge intérieure entre les autres blocs. |

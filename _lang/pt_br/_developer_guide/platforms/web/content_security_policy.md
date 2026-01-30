@@ -33,10 +33,10 @@ braze.initialize(apiKey, {
 
 ## Diretrizes {#directives}
 
-### Daqui a `connect-src` {#connect-src}
+### `connect-src` {#connect-src}
 
 {% alert warning %}
-Sua URL deve corresponder ao [endpoint de SDK API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) da opção de inicialização `baseUrl` escolhida.
+Seu URL deve corresponder ao [endpoint de SDK]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) da [API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) da opção de inicialização escolhida em `baseUrl`.
 {% endalert %}
 
 |URL|Informações|
@@ -44,7 +44,7 @@ Sua URL deve corresponder ao [endpoint de SDK API]({{site.baseurl}}/user_guide/a
 |`connect-src https://sdk.iad-01.braze.com`|Permite que o SDK se comunique com as APIs do Braze. Altere esse URL para corresponder ao [endpoint de SDK da API]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) para a opção de inicialização escolhida em `baseUrl`.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Daqui a `script-src` {#script-src}
+### `script-src` {#script-src}
 
 |URL|Informações|
 |---|-----------|
@@ -53,7 +53,7 @@ Sua URL deve corresponder ao [endpoint de SDK API]({{site.baseurl}}/user_guide/a
 |`script-src 'nonce-...'`<br>ou<br>`script-src 'unsafe-inline'`|Necessário para determinadas mensagens no app, como HTML personalizado.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Daqui a `img-src` {#img-src}
+### `img-src` {#img-src}
 
 |URL|Informações|
 |---|-----------|

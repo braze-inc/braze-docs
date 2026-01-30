@@ -1,5 +1,5 @@
 ---
-nav_title: "Objetos de la API SCIM y Apéndice"
+nav_title: "Objetos y apéndice de la API SCIM"
 article_title: Objetos de la API SCIM y Apéndice
 page_order: 8
 page_type: reference
@@ -32,6 +32,7 @@ Un objeto de permisos válido es un objeto JSON con los siguientes pares clave-v
 | Clave | Obligatoria | Tipo de datos | Descripción |
 | --- | --- | --- | --- |
 | `companyPermissions` | Opcional | Matriz | Matriz de cadenas de permisos a nivel de empresa de la tabla [Cadenas de permisos de empresa](#company), en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente. |
+| `roles` | Opcional | Matriz | Matriz de [objetos de rol](#role-object). |
 | `appGroup` | Obligatoria | Matriz | Matriz de [objetos de permiso del espacio de trabajo](#workspace-permission-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -69,6 +70,16 @@ Un objeto de permiso de equipo válido es un objeto JSON con los siguientes pare
 | `teamPermissions` | Obligatoria | Matriz | Matriz de cadenas de permisos a nivel de equipo de la tabla [de cadenas de permisos de equipos](#team), en la que la presencia de la cadena corresponde a que el usuario tiene el permiso correspondiente para el equipo especificado. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+## Objeto de rol
+
+Un objeto de rol válido es un objeto JSON con los siguientes pares clave-valor:
+
+| Clave | Obligatoria | Tipo de datos | Descripción |
+| --- | --- | --- | --- |
+| `roleName` | Opcional | Cadena | Nombre del rol que se está asignando al usuario. |
+| `roleId` | Obligatorio si falta `roleName`  | Cadena | ID del rol, que sirve como método alternativo para especificar el rol. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
 ## Anexo
 
 ### Cadenas de permisos de empresa {#company}
@@ -86,6 +97,7 @@ Un objeto de permiso de equipo válido es un objeto JSON con los siguientes pare
 | --- | --- |
 | Administrador | `admin` |
 | Campañas de Acceso, Lonas, Tarjetas, Segmentos, Mediateca | `basic_access` |
+| Aprobar y denegar Canvas | `approve_deny_campaigns` |
 | Enviar campañas, Canvas | `send_campaigns_canvases` |
 | Publicar tarjetas | `publish_cards` |
 | Editar segmentos | `edit_segments` |
@@ -116,6 +128,7 @@ Un objeto de permiso de equipo válido es un objeto JSON con los siguientes pare
 | --- | --- |
 | Administrador | `admin` |
 | Campañas de Acceso, Lonas, Tarjetas, Segmentos, Mediateca | `basic_access` |
+| Aprobar y denegar Canvas | `approve_deny_campaigns` |
 | Enviar campañas, Canvas | `send_campaigns_canvases` |
 | Publicar tarjetas | `publish_cards` |
 | Editar segmentos | `edit_segments` |

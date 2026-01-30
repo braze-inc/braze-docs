@@ -141,9 +141,11 @@ Elevated Accessは、Brazeダッシュボードで機密性の高いアクショ
 
 1. [**設定**] > [**管理者設定**] に移動します。
 2. [**セキュリティ設定**] タブを選択し、[**セキュリティイベントダウンロード**] セクションに移動します。
-2. [**レポートをダウンロード**] を選択します。 
+3. [**レポートをダウンロード**] を選択します。 
 
-このレポートには、自分のアカウントの最新 10,000 件のセキュリティイベントのみが含まれます。特定のイベントデータが必要な場合は、テクニカルサポートにお問い合わせください。
+この手動レポート・ダウンロードには、あなたのアカウントの最新の10,000件のセキュリティ・イベントのみが含まれている。
+
+この行数制限なしでセキュリティ・イベントをAmazon S3にエクスポートするには、[Amazon S3でのセキュリティ・イベントのエクスポートを]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/)参照のこと。
 
 {% details Reported security events %}
 ### ログインとアカウント
@@ -253,7 +255,7 @@ Elevated Accessは、Brazeダッシュボードで機密性の高いアクショ
 - 作成エージェント
 - 編集エージェント
 
-### BrazeAIオペレーター 
+### BrazeAI Operator 
 - BrazeAI Operatorのレスポンス要求
 - BrazeAIオペレーターが回答した。
 {% enddetails %}

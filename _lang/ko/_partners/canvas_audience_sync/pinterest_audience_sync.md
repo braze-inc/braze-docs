@@ -25,7 +25,7 @@ This feature allows brands to control what specific first-party data is shared w
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to Pinterest is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager.
+Braze Audience Sync to Pinterest is an Audience Sync Pro integration. 이 통합에 대한 자세한 정보는 Braze 계정 매니저에게 문의하십시오.
 {% endalert %}
 
 ## Prerequisites 
@@ -35,28 +35,32 @@ You must ensure the following items are created, completed, and/or accepted befo
 | --- | --- | --- |
 | Pinterest Business Hub | [Pinterest](https://www.pinterest.com/business/hub/) | A centralized tool to manage your brand's Pinterest assets (such as ad accounts, pages, apps). |
 | Pinterest ad account | [Pinterest](https://ads.pinterest.com/) | An active Pinterest ad account tied to your brand's Pinterest Business Hub.<br><br>Ensure that your Pinterest Business Hub admin has granted you admin permissions to the Pinterest ad accounts you plan to use with Braze. |
-| Pinterest terms & policies | Pinterest | Agree to comply with any of Pinterest’s required terms, policies, guidelines, and documentation related to your use of the Pinterest Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Terms of Service, Business Terms of Service, Privacy Policy, Developer and API Terms of Service, Ad Data Terms, Advertising Guidelines, Advertising Services Agreement, Community Guidelines, and Brand Guidelines. |
+| Pinterest 용어 & 정책 | Pinterest | Agree to comply with any of Pinterest’s required terms, policies, guidelines, and documentation related to your use of the Pinterest Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include: the Terms of Service, Business Terms of Service, Privacy Policy, Developer and API Terms of Service, Ad Data Terms, Advertising Guidelines, Advertising Services Agreement, Community Guidelines, and Brand Guidelines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration 
 
 ### Step 1: Connect to Pinterest
 
+{% alert important %}
+Pinterest를 Braze 계정에 연결하려면 ["관리자" 권한]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin)이 필요합니다.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Pinterest**. Under Pinterest Audience Sync, select **Connect Pinterest**.
 
-![Pinterest technology page in Braze that includes an Overview section and Pinterest Audience Sync section with the Connected Pinterest button.]({% image_buster /assets/img/pinterest/pinterest1.png %}){: style="max-width:80%;"}
+![브레이즈의 핀터레스트 기술 페이지로, 개요 섹션과 핀터레스트 오디언스 동기화 섹션이 포함되어 있으며, 연결된 핀터레스트 버튼이 있습니다.]({% image_buster /assets/img/pinterest/pinterest1.png %}){: style="max-width:80%;"}
 
 You'll then be redirected to the Pinterest OAuth page to authorize Braze for Ad Account Management and Audience Management.
 
 After selecting **Confirm**, you'll be redirected back into Braze to select which Pinterest ad accounts you wish to sync. 
 
-![A list of available ad accounts you can connect to Pinterest.]({% image_buster /assets/img/pinterest/pinterest2.png %}){: style="max-width:80%;"}
+![Pinterest에 연결할 수 있는 사용 가능한 광고 계정 목록.]({% image_buster /assets/img/pinterest/pinterest2.png %}){: style="max-width:80%;"}
 
 When successfully connected, you'll return to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![An updated version of the Pinterest technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/pinterest/pinterest3.png %}){: style="max-width:80%;"}
+![성공적으로 연결된 광고 계정을 보여주는 Pinterest 기술 파트너 페이지의 업데이트된 버전입니다.]({% image_buster /assets/img/pinterest/pinterest3.png %}){: style="max-width:80%;"}
 
-Your Pinterest connection will be applied at the Braze workspace level. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
+귀하의 Pinterest 연결은 Braze 작업 공간 수준에서 적용됩니다. If your Pinterest admin removes you from your Pinterest Business Hub or access to the connected Pinterest accounts, Braze will detect an invalid token. As a result, your active Canvases using Pinterest Audience components will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Add an Audience Sync Step with Pinterest
 
@@ -64,7 +68,7 @@ Add a component in your Canvas and select **Audience Sync**.
 
 ![]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
-### Step 3: Sync setup
+### 3단계: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -80,11 +84,11 @@ Then select your desired Pinterest ad account. Under the **Choose a New or Exist
 **Create a New Audience**<br>
 Enter a name for the new audience, select **Add Users to Audience**, and select which fields you would like to sync with Pinterest. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/audience_sync/pinterest_sync.png %})
+![Expanded view of the Custom Audience Canvas step. 여기에서 원하는 광고 계정을 선택하고 새로운 오디언스를 생성합니다.]({% image_buster /assets/img/audience_sync/pinterest_sync.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze는 오디언스가 성공적으로 생성되거나 오류가 발생할 경우 단계 편집기 상단에 알림을 표시합니다. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/audience_sync/pinterest_sync3.png %})
+![Canvas 구성 요소에서 새로운 오디언스가 생성된 후 나타나는 경고입니다.]({% image_buster /assets/img/audience_sync/pinterest_sync3.png %})
 
 When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync step.
 {% endtab %}
@@ -92,7 +96,7 @@ When you launch a Canvas with a new audience, Braze syncs users in near real-tim
 **Sync with an Existing Audience**<br>
 Braze also offers the ability to add users to existing Pinterest audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and add it to the audience. Braze will then add users in near real-time as they enter the Audience Sync step.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/audience_sync/pinterest_sync2.png %})
+![Expanded view of the Custom Audience Canvas step. 여기에서 원하는 광고 계정과 기존 오디언스를 선택합니다.]({% image_buster /assets/img/audience_sync/pinterest_sync2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -101,15 +105,15 @@ Braze also offers the ability to add users to existing Pinterest audiences to en
 
 Once you have configured your Audience Sync to Pinterest, launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on Pinterest. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
-You can view the audience on Pinterest by entering your ads manager account and selecting Audiences from the Ads dropdown. From the Audience page, you can see the size of each audience after it reaches ~100.
+You can view the audience on Pinterest by entering your ads manager account and selecting Audiences from the Ads dropdown. 오디언스 페이지에서 ~100에 도달한 이후 각 오디언스의 크기를 확인할 수 있습니다.
 
-![Audience details for a given Pinterest audience that includes audience name, audience ID, audience type, audience size.]({% image_buster /assets/img/pinterest/pinterest11.png %})
+![오디언스 이름, 오디언스 ID, 오디언스 유형, 오디언스 크기를 포함하는 지정된 Pinterest 오디언스의 오디언스 세부 정보.]({% image_buster /assets/img/pinterest/pinterest11.png %})
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze will sync these users in near real-time while respecting Pinterest's Marketing API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to Pinterest.
+사용자가 오디언스 동기화 단계에 도달하면 Braze는 Pinterest의 마케팅 API 속도 제한을 준수하면서 거의 실시간으로 동기화합니다. Braze는 Pinterest로 전송하기 전에 5초마다 가능한 많은 사용자를 배치하고 처리합니다.
 
-Pinterest's Segment API rate limit states no more than seven queries per second per user and 1,900 users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+Pinterest의 세그먼트 API 속도 제한은 사용자당 초당 7개의 쿼리와 요청당 1,900명의 사용자를 허용합니다. 고객이 이 한도에 도달하면 Braze는 최대 ~13시간 동안 동기화를 재시도합니다. 동기화가 여전히 불가능한 경우 Braze는 이러한 사용자를 사용자 오류 메트릭 아래에 나열합니다.
 
 ## Understanding analytics
 
@@ -146,7 +150,7 @@ Confirm with your Pinterest Business Hub admin that you have the appropriate per
 
 ### Why is my Canvas not allowed to launch?
 
-Ensure your Pinterest account successfully connects to Braze on the Pinterest partner page. Make sure you have selected an ad account, entered a name for the new audience, and selected fields to match.
+Ensure your Pinterest account successfully connects to Braze on the Pinterest partner page. 광고 계정을 선택하고, 새 오디언스의 이름을 입력하고, 일치시킬 필드를 선택했는지 확인합니다.
 
 ### Why can't I select my ad account for my Audience Sync step?
 

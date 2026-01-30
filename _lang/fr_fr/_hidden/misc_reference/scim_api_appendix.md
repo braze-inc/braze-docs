@@ -32,6 +32,7 @@ Un objet Autorisations valide est un objet JSON avec les paires clé-valeur suiv
 | Clé | Requis | Type de données | Description |
 | --- | --- | --- | --- |
 | `companyPermissions` | Facultatif | Tableau | Tableau de chaînes de caractères d’autorisations au niveau de l'entreprise provenant du tableau des [chaînes de caractères d’autorisations de l'entreprise](#company), dans lequel la présence de la chaîne correspond à l'utilisateur disposant de l’autorisation correspondante. |
+| `roles` | Facultatif | Tableau | Tableau d'[objets de rôle](#role-object). |
 | `appGroup` | Requis | Tableau | Tableau d'[objets d'autorisation de l'espace de travail](#workspace-permission-object). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -69,6 +70,16 @@ Un objet de permission d'équipe valide est un objet JSON avec les paires clé-v
 | `teamPermissions` | Requis | Tableau | Tableau de chaînes de caractères d’autorisations au niveau de l'équipe provenant du tableau des [chaînes de caractères d’autorisations des équipes](#team), dans lequel la présence de la chaîne correspond à l'utilisateur disposant de l’autorisation correspondante pour l'équipe spécifiée. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
+## Objet de rôle
+
+Un objet de rôle valide est un objet JSON avec les paires clé-valeur suivantes :
+
+| Clé | Requis | Type de données | Description |
+| --- | --- | --- | --- |
+| `roleName` | Facultatif | Chaîne de caractères | Nom du rôle attribué à l'utilisateur. |
+| `roleId` | Requis si l’`roleName` est absent | Chaîne de caractères | ID du rôle, servant de méthode alternative pour spécifier le rôle. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
 ## Annexes
 
 ### Chaînes de caractères d'autorisation de l'entreprise {#company}
@@ -86,6 +97,7 @@ Un objet de permission d'équipe valide est un objet JSON avec les paires clé-v
 | --- | --- |
 | Admin | `admin` |
 | Campagnes d’accès, Canvas, cartes, segments, bibliothèque multimédia | `basic_access` |
+| Approuver et supprimer des canvas | `approve_deny_campaigns` |
 | Envoyer des campagnes, des canvas | `send_campaigns_canvases` |
 | Publier des cartes | `publish_cards` |
 | Modifier les segments | `edit_segments` |
@@ -116,6 +128,7 @@ Un objet de permission d'équipe valide est un objet JSON avec les paires clé-v
 | --- | --- |
 | Admin | `admin` |
 | Campagnes d’accès, Canvas, cartes, segments, bibliothèque multimédia | `basic_access` |
+| Approuver et supprimer des canvas | `approve_deny_campaigns` |
 | Envoyer des campagnes, des canvas | `send_campaigns_canvases` |
 | Publier des cartes | `publish_cards` |
 | Modifier les segments | `edit_segments` |

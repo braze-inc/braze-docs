@@ -1,11 +1,11 @@
 ---
-nav_title: Einbinden des SDK
-article_title: Integration des Braze SDK
+nav_title: SDK integrieren
+article_title: Integrieren Sie das Braze SDK
 description: "Erfahren Sie, wie Sie das Braze SDK integrieren können."
 page_order: 2.0
 ---
 
-# ![Braze Logo]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Integration des Braze SDK
+# ![Braze Logo]({% image_buster /assets/Braze_Primary_Icon_BLACK.svg %}){: style="float:right;width:120px;border:0;" class="noimgborder"}Integrieren Sie das Braze SDK
 
 > Erfahren Sie, wie Sie das Braze SDK in Ihre mobile App integrieren können. Jedes SDK wird in seinem eigenen öffentlichen GitHub-Repository gehostet, das vollständig kompilierbare Beispiel-Apps enthält, mit denen Sie die Features von Braze testen oder neben Ihren eigenen Anwendungen implementieren können. Weitere Informationen finden Sie unter [Referenzen, Repositories und Beispiel-Apps]({{site.baseurl}}/developer_guide/references/). Weitere allgemeine Informationen über das SDK finden Sie unter [Erste Schritte: Übersicht über die Integration]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
@@ -14,16 +14,16 @@ page_order: 2.0
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/sdk_integration.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/sdk_integration.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/sdk_integration.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
@@ -46,12 +46,16 @@ page_order: 2.0
 {% multi_lang_include developer_guide/unity/sdk_integration.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
-{% multi_lang_include developer_guide/unreal_engine/sdk_integration.md %}
+{% sdktab .NET MAUI (Xamarin) %}
+{% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
-{% multi_lang_include developer_guide/xamarin/sdk_integration.md %}
+{% sdktab chatgpt apps %}
+{% multi_lang_include developer_guide/chatgpt_apps/sdk_integration.md %}
+{% endsdktab %}
+
+{% sdktab vega %}
+{% multi_lang_include developer_guide/vega/sdk_integration.md %}
 {% endsdktab %}
 {% endsdktabs %}
 

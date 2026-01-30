@@ -1,6 +1,6 @@
 ---
 nav_title: TV e OTT
-article_title: Integrações de TV e OTT para o Braze
+article_title: Integrações de TV e OTT para Braze
 page_order: 15
 
 description: "Este artigo detalhará os recursos de TV e OTT da Braze, integrações, plataformas disponíveis, entre outros."
@@ -14,7 +14,7 @@ platform:
 
 # Integrações de TV e OTT
 
-> À medida que a tecnologia evolui para novas plataformas e dispositivos, o seu envio de mensagens também pode evoluir com a Braze! O Braze oferece diferentes canais de engajamento para vários sistemas operacionais de TV e métodos de fornecimento de conteúdo OTT (Over-the-Top).
+> À medida que a tecnologia evolui para novas plataformas e dispositivos, o seu envio de mensagens também pode evoluir com a Braze! Braze oferece diferentes canais de engajamento para vários sistemas operacionais de TV e métodos de entrega de conteúdo Over-the-Top (OTT).
 
 ## Plataformas e recursos
 
@@ -258,7 +258,7 @@ Para direcionar apps OTT para envio de mensagens, recomendamos criar um segmento
 ## Headless UI {#custom-ui}
 
 {% alert important %}
-Plataformas que suportam mensagens no app ou Cartões de Conteúdo via interface de usuário sem cabeça **não** incluem qualquer interface de usuário ou visualizações padrão, então certifique-se de implementar sua própria interface de usuário personalizada.
+Plataformas que suportam mensagens in-app ou Cartões de Conteúdo através de UI headless **não** incluem qualquer UI ou visualizações padrão. Crie sua própria UI personalizada (como para mensagens in-app) e depois use os modelos de dados fornecidos pelo SDK para preencher essas UIs.
 {% endalert %}
 
 Com a Headless UI, a Braze fornecerá um modelo de dados, como JSON, que seu app pode ler e usar dentro de uma interface de usuário que seu app controla. Esses dados conterão os campos configurados no dashboard (título, corpo, texto do botão, cores, etc.) que seu app pode ler e exibir de acordo. Para saber mais sobre o envio de mensagens personalizadas, consulte:

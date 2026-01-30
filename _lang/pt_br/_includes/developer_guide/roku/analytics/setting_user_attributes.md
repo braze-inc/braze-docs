@@ -4,7 +4,7 @@
 
 ### Métodos predefinidos
 
-Braze fornece métodos predefinidos para definir os seguintes atributos de usuário usando o objeto `m.Braze`.
+O Braze fornece métodos predefinidos para definir os seguintes atributos de usuário usando o objeto `m.Braze`.
 
 - `FirstName`
 - `LastName`
@@ -21,47 +21,47 @@ Braze fornece métodos predefinidos para definir os seguintes atributos de usuá
 Para definir um atributo padrão, chame o método relevante no objeto `m.Braze`.
 
 {% tabs local %}
-{% tab Nome %}
+{% tab First name %}
 ```brightscript
 m.Braze.setFirstName("Alex")
 ```
 {% endtab %}
-{% tab Sobrenome %}
+{% tab Last name %}
 ```brightscript
 m.Braze.setLastName("Smith")
 ```
 {% endtab %}
-{% tab e-mail %}
+{% tab Email %}
 ```brightscript
 m.Braze.setEmail("alex@example.com")
 ```
 {% endtab %}
-{% tab Gênero %}
+{% tab Gender %}
 ```brightscript
 m.Braze.setGender("m") ' Accepts: "m", "f", "o", "n", "u", "p"
 ```
 {% endtab %}
-{% tab Data de nascimento %}
+{% tab Birth date %}
 ```brightscript
 m.Braze.setDateOfBirth(1990, 5, 15) ' Year, month, day
 ```
 {% endtab %}
-{% tab País %}
+{% tab Country %}
 ```brightscript
 m.Braze.setCountry("United States")
 ```
 {% endtab %}
-{% tab Idioma %}
+{% tab Language %}
 ```brightscript
 m.Braze.setLanguage("en")
 ```
 {% endtab %}
-{% tab Cidade natal %}
+{% tab Home city %}
 ```brightscript
 m.Braze.setHomeCity("New York")
 ```
 {% endtab %}
-{% tab Número de telefone %}
+{% tab Phone number %}
 ```brightscript
 m.Braze.setPhoneNumber("+1234567890")
 ```
@@ -83,7 +83,7 @@ m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
 {% endtab %}
 
-{% tab Inteiro %}
+{% tab Integer %}
 Para definir um atributo personalizado com um valor `integer`:
 
 ```brightscript
@@ -91,15 +91,15 @@ m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
 
-{% tab Pontos flutuantes %}
-Braze trata valores `float` e `double` exatamente da mesma forma. Para definir um atributo personalizado com qualquer um dos valores:
+{% tab Floating-points %}
+O Braze trata os valores `float` e `double` exatamente da mesma forma. Para definir um atributo personalizado com qualquer um dos valores:
 
 ```brightscript
 m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
 {% endtab %}
 
-{% tab Booleano %}
+{% tab Boolean %}
 Para definir um atributo personalizado com um valor `boolean`:
 
 ```brightscript
@@ -107,7 +107,7 @@ m.Braze.setCustomAttribute("boolAttribute", true)
 ```
 {% endtab %}
 
-{% tab Data %}
+{% tab Date %}
 Para definir um atributo personalizado com um valor `date`:
 
 ```brightscript
@@ -117,7 +117,7 @@ m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
 ```
 {% endtab %}
 
-{% tab Vetor %}
+{% tab Array %}
 Para definir um atributo personalizado com um valor `array`:
 
 ```brightscript
@@ -142,9 +142,9 @@ Este código é um exemplo de um atributo personalizado incrementando. Você pod
 m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 ```
 
-### Removendo atributos personalizados
+### Desconfigurando atributos personalizados
 
-Para remover um atributo personalizado, passe a chave do atributo relevante para o método `unsetCustomAttribute`.
+Para desconfigurar um atributo personalizado, passe a chave do atributo relevante para o método `unsetCustomAttribute`.
 
 ```brightscript
 m.Braze.unsetCustomAttribute("attributeName")
@@ -152,7 +152,7 @@ m.Braze.unsetCustomAttribute("attributeName")
 
 ### Usando a API REST
 
-Você também pode usar nossa API REST para definir ou remover atributos de usuários. Para saber mais, consulte [Endpoints de Dados de Usuários]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+Você também pode usar nossa API REST para definir ou desconfigurar atributos de usuário. Para saber mais, consulte [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
 ## Configuração de envios de e-mail
 

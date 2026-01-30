@@ -8,16 +8,16 @@ Otras ventajas de crear este servicio son:
 - Los mensajes enviados tendrán seguimiento e informes completos.
 - Los usuarios no técnicos de Braze pueden actualizar el contenido de los mensajes.
 - Los mensajes obedecen a los estados de adhesión voluntaria y exclusión voluntaria en los perfiles de usuario por configuración de campaña.
-- Tanto los datos de reservas como los de interacción con los mensajes pueden utilizarse para segmentar y dirigir a los usuarios mensajes adicionales. Por ejemplo, puedes reorientar a quienes no abran el mensaje recordatorio inicial con un recordatorio adicional antes de su cita.
+- Puedes utilizar tanto los datos de reservas como los de interacción con los mensajes para segmentar y dirigirte a los usuarios para enviarles mensajes adicionales. Por ejemplo, puedes reorientar a quienes no abran el mensaje recordatorio inicial con un recordatorio adicional antes de su cita.
 
 Sigue estos pasos para conseguir este caso de uso:
 1. [Escribir datos de próximas reservas en un perfil de usuario Braze](#step-1)
-2. [Configurar y lanzar un mensaje recordatorio de reserva](#step-2)
+2. [Configurar y lanzar un mensaje de recordatorio de reserva](#step-2)
 3. [Gestionar las reservas y cancelaciones actualizadas](#step-3)
 
 ## Paso 1: Escribir datos de próximas reservas en un perfil de usuario Braze {#step-1}
 
-Utiliza el punto final Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para escribir un [atributo personalizado anidado]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) en un perfil de usuario cada vez que se realice una reserva. Asegúrate de que el atributo personalizado anidado contiene toda la información que se necesitará para enviar y personalizar el mensaje recordatorio. En este caso de uso, llamaremos "viajes" al atributo personalizado anidado.
+Utiliza el punto final Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para escribir un [atributo personalizado anidado]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/) en un perfil de usuario cada vez que se realice una reserva. Asegúrate de que el atributo personalizado anidado contiene toda la información que necesitas para enviar y personalizar el mensaje recordatorio. En este caso de uso, llamaremos "viajes" al atributo personalizado anidado.
 
 ### Añadir reserva
 
@@ -72,7 +72,7 @@ Cuando un usuario actualiza una reserva, utiliza la siguiente estructura para la
 ### Eliminar reserva
 
 {% tabs %}
-{% tab /usuarios/punto final de seguimiento %}
+{% tab /users/track endpoint %}
 #### Envía datos a través del punto final `/users/track` 
 Cuando un usuario elimina una reserva, utiliza la siguiente estructura para la matriz de objetos para enviar los datos a Braze a través del punto final `/users/track`.
 
@@ -120,11 +120,11 @@ braze.getUser().setCustomUserAttribute("trips", json);
 {% endtab %}
 {% endtabs %}
 
-La reserva especificada se eliminará del atributo personalizado anidado en el perfil de usuario y mostrará las reservas restantes.
+Braze elimina la reserva especificada del atributo personalizado anidado en el perfil de usuario y muestra las reservas restantes.
 
 ![Un atributo personalizado anidado para un viaje a Londres.]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
-## Paso 2: Configurar y lanzar un mensaje recordatorio de reserva {#step-2}
+## Paso 2: Configurar y lanzar un mensaje de recordatorio de reserva {#step-2}
 
 ### Paso 2a: Crear una audiencia objetivo
 Crea una audiencia objetivo para recibir recordatorios utilizando la segmentación multicriterio. Por ejemplo, si quieres enviar un recordatorio dos días antes de la fecha de reserva, selecciona lo siguiente:
@@ -132,7 +132,7 @@ Crea una audiencia objetivo para recibir recordatorios utilizando la segmentaci�
 - Una fecha de inicio **en más de 1 día** y
 - Una fecha de inicio **en menos de 2 días** 
 
-![Un atributo personalizado anidado "viajes" con criterios para una fecha de inicio superior a un día e inferior a dos.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
+![Un atributo personalizado anidado "viajes" con criterios para una fecha de inicio superior a un día e inferior a dos días.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
 ### Paso 2b: Crea tu mensaje
 
@@ -155,7 +155,7 @@ You have the following booked in 2 days! Check the information below:
 
 ### Paso 2c: Lanza tu campaña
 
-Lanza la campaña para el mensaje de correo electrónico recordatorio. Ahora, cada vez que Braze reciba el atributo personalizado "viajes", se programará un mensaje según los datos incluidos en el objeto de la reserva correspondiente.
+Lanza la campaña para el mensaje de correo electrónico recordatorio. Ahora, cada vez que Braze recibe el atributo personalizado "viajes", Braze programa un mensaje según los datos incluidos en el objeto de la reserva respectiva.
 
 ## Paso 3: Gestionar las actualizaciones y cancelaciones de reservas {#step-3}
 
@@ -164,7 +164,7 @@ Ahora que envías mensajes recordatorios, puedes configurar mensajes de confirma
 ### Paso 3a: Enviar datos actualizados
 
 {% tabs %}
-{% tab /usuarios/seguimiento %}
+{% tab /users/track %}
 
 #### Envía datos a través del punto final `/users/track` 
 Utiliza el punto final Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para enviar un evento personalizado cuando un usuario actualice o cancele una reserva. En ese caso, introduce los datos necesarios en las propiedades del evento que confirmarán el cambio. 
@@ -256,7 +256,7 @@ Si el usuario de este caso de uso actualizara su viaje a Sydney, utilizarías el
 
 #### Reserva anulada
 
-Si el usuario de este caso de uso cancelara su viaje en Syndey, enviarías la siguiente llamada al punto final `/users/track`:
+Si el usuario de este caso de uso cancelara su viaje a Sydney, enviarías la siguiente llamada al punto final `/users/track`:
 
 {% raw %}
 ```json

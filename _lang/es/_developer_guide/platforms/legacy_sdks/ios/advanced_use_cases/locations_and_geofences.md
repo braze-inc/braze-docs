@@ -34,7 +34,7 @@ Por predeterminado, las geovallas se habilitan en función de si está habilitad
 También puedes habilitar geovallas al iniciar la aplicación mediante el método [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24) método. En el diccionario `appboyOptions`, establece `ABKEnableGeofencesKey` en `YES`. Por ejemplo:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -72,7 +72,7 @@ La función Geovallas solo funciona mientras se concede la autorización de ubic
 Para solicitar la autorización de ubicación `Always`, usa el siguiente código:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 CLLocationManager *locationManager = [[CLLocationManager alloc] init];
@@ -111,7 +111,7 @@ A partir de la versión 3.21.3 del SDK de iOS, puedes desactivar la solicitud au
 También puedes desactivar las solicitudes automáticas de geovallas al iniciar la aplicación mediante el método [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`](https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24). En el diccionario `appboyOptions`, establece `ABKDisableAutomaticGeofenceRequestsKey` en `YES`. Por ejemplo:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-API_KEY"
@@ -142,7 +142,7 @@ Cuando el SDK de Braze solicita geovallas para supervisar desde el backend, info
 Para controlar la ubicación que informa el SDK con el fin de recibir los geovallados más relevantes, a partir de la versión 3.21.3 del SDK de iOS, puedes solicitar manualmente geovallados proporcionando la latitud y longitud de una ubicación. Se recomienda desactivar las solicitudes automáticas de geovallas cuando utilices este método. Para ello, utiliza el siguiente código:
 
 {% tabs %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] requestGeofencesWithLongitude:longitude

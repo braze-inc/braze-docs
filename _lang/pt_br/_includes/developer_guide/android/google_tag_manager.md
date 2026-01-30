@@ -10,13 +10,13 @@ Os eventos personalizados são registrados com `actionType` definido como `logEv
 
 Para começar, crie um disparador que procure um "Nome do evento" igual a `played song`
 
-![Um gatilho personalizado no Google Tag Manager configurado para disparar para alguns eventos quando "nome do evento" é igual a "música tocada".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
+![Um gatilho personalizado no Google Tag Manager definido para disparar em alguns eventos quando "nome do evento" for igual a "música tocada".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
 Em seguida, crie uma nova tag (também conhecida como "Chamada de Função") e insira o caminho da classe do seu [provedor de tag personalizado](#adding-android-google-tag-provider) descrito mais adiante neste artigo. Esta tag será disparada quando você registrar o evento `played song`.
 
 Nos parâmetros personalizados da tag (também conhecidos como pares chave-valor), defina `eventName` como `played song`. Este será o nome do evento personalizado registrado na Braze.
 
-![Uma tag no Google Tag Manager com classpath e campos de par de valores chave. Esta tag está configurada para disparar com o gatilho "música tocada" criado anteriormente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
+![Uma tag no Google Tag Manager com classpath e campos de par de valores chave. Essa tag é definida para disparar com o acionador "música tocada" criado anteriormente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 {% alert important %}
 Ao enviar um evento personalizado, certifique-se de definir `actionType` como `logEvent` e defina um valor para `eventName` para que a Braze receba o nome do evento correto e a ação a ser tomada.
@@ -26,7 +26,7 @@ Você também pode incluir argumentos adicionais de pares de valores-chave na ta
 
 Como o Google Tag Manager para Android usa o Firebase como a camada de dados, a propriedade do evento `genre` é enviada ao Google Tag Manager como uma variável "Firebase - Parâmetro de Evento".
 
-![Uma variável no Google Tag Manager onde "genre" é adicionado como um parâmetro de evento para a tag "Braze - Evento de Música Tocada".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
+![Uma variável no Google Tag Manager em que o "gênero" é adicionado como um parâmetro de evento para a tag "Braze - Played Song Event".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
 
 Quando um usuário toca uma música no aplicativo, um evento será registrado através do Firebase e do Google Tag Manager usando o nome do evento de análise do Firebase que corresponde ao nome do disparador da tag, `played song`:
 
@@ -109,13 +109,13 @@ mFirebaseAnalytics.logEvent("changeUser", params)
 
 Com as tags e os disparadores configurados, você também precisará implementar o Google Tag Manager em seu app para Android, o que pode ser encontrado na [documentação](https://developers.google.com/tag-manager/android/v5/) do Google.
 
-Depois que o Google Tag Manager for instalado em seu aplicativo, adicione um provedor de tag personalizado para chamar métodos do SDK da Braze com base nas tags que você configurou dentro do Google Tag Manager.
+Depois que o Google Tag Manager estiver instalado em seu aplicativo, adicione um provedor de tag personalizado para chamar métodos do SDK da Braze com base nas tags que você configurou dentro do Google Tag Manager.
 
 Certifique-se de anotar o "Caminho da Classe" para o arquivo - é isso que você irá inserir ao configurar uma tag no console do [Google Tag Manager](https://tagmanager.google.com/).
 
 Este exemplo destaca uma das muitas maneiras de estruturar seu provedor de tag personalizado. Especificamente, mostra como determinar qual método do SDK da Braze chamar com base no par chave-valor `actionType` enviado da Tag do GTM.
 
-Os `actionType` mostrados neste exemplo são `logEvent`, `customAttribute` e `changeUser`, mas você pode preferir alterar como seu provedor de tag lida com dados do Google Tag Manager.
+Os `actionType` mostrados neste exemplo são `logEvent`, `customAttribute` e `changeUser`, mas você pode preferir mudar como seu provedor de tag lida com dados do Google Tag Manager.
 
 {% tabs %}
 {% tab JAVA %}

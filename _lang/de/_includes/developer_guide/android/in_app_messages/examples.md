@@ -407,7 +407,7 @@ Stellen Sie ein Layout bereit, das die standardmäßige Modal-In-App-Nachricht n
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <!-- giving the parent layout a white backround color will obscure the app behind the IAM. You could also do this within your custom view -->
+    <!-- giving the parent layout a white background color will obscure the app behind the IAM. You could also do this within your custom view -->
     <LinearLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center"> 
         <!-- ... -->
         <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
@@ -529,6 +529,6 @@ public void onBindViewHolder(OptionViewHolder holder, Int position) {
 {% endtabs %}
 
 #### Touch-Events in der In-App-Nachricht abfangen
-![Ein Android Gerät, das Reihen von Einstellungen und Umschaltern anzeigt. Die angepasste Ansicht verwaltet die Buttons. Alle Berührungen außerhalb der Button-Steuerelemente werden von der In-App-Nachricht verwaltet und verwerfen diese.]({% image_buster /assets/img/iam_implementation_guide_android.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
+![Ein Android Gerät, das Reihen von Einstellungen und Umschaltern anzeigt. Die angepasste Ansicht verwaltet die Buttons, und jede Berührung außerhalb der Button-Steuerelemente wird von der In-App-Nachricht verwaltet und beendet diese.]({% image_buster /assets/img/iam_implementation_guide_android.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
 Damit die angepassten Buttons für In-App-Nachricht richtig funktionieren, ist das Abfangen von Berührungen in der App entscheidend. Standardmäßig fügen alle In-App-Nachricht-Ansichten `onClick`-Listener zur Nachricht hinzu, sodass Nutzer Nachrichten ohne Buttons verwerfen können. Wenn Sie angepasste Steuerelemente hinzufügen, die auf Nutzereingaben reagieren sollen (z. B. angepasste Buttons), können Sie wie gewohnt einen `onClick`-Listener in der Ansicht registrieren. Bei Berührungen außerhalb der angepassten Steuerelemente wird die In-App-Nachricht wie gewohnt verworfen, während Berührungen, die von den angepassten Steuerelementen empfangen werden, Ihren `onClick`-Listener aufrufen. 
 

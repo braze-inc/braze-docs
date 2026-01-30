@@ -27,9 +27,9 @@ Mit diesem Feature können Marken kontrollieren, welche spezifischen First-Party
 
 ## Überlegungen zur Synchronisierung von Nutzer:innen und Rate-Limits
  
-Wenn Nutzer:innen den Audience Sync-Schritt erreichen, wird Braze diese Zielgruppen nahezu in Realtime synchronisieren und dabei die Rate-Limits der Facebook Marketing API beachten. In der Praxis bedeutet dies, dass Braze versuchen wird, alle 5 Sekunden so viele Nutzer:innen wie möglich zu verarbeiten, bevor diese an Facebook weitergeleitet werden. 
+Wenn Nutzer:innen den Schritt Audience Sync erreichen, synchronisiert Braze sie nahezu in Realtime und respektiert dabei die Rate-Limits der Facebook Marketing API. Braze stapelt und verarbeitet alle 5 Sekunden so viele Nutzer:innen wie möglich, bevor es sie an Facebook weiterleitet. 
 
-Das Rate-Limits der Marketing API von Facebook besagt, dass innerhalb einer Stunde nicht mehr als ~190.000 API-Anfragen für jedes Anzeigenkonto gestellt werden dürfen. Erreicht eine Braze-Kund:in dieses Rate-Limit, wird Braze-Canvas die Synchronisierung für bis zu ~13 Stunden wiederholen. Wenn die Synchronisierung nicht möglich ist, werden diese Nutzer:innen unter der Metriken Users Errored aufgeführt.
+Das Rate-Limits der Marketing API von Facebook erlaubt nicht mehr als ~190.000 API-Anfragen pro Anzeigenkonto in einem Zeitraum von einer Stunde. Erreicht eine Kund:in dieses Limit, wiederholt Braze die Synchronisierung für bis zu ~13 Stunden. Wenn die Synchronisierung immer noch nicht möglich ist, listet Braze diese Nutzer:innen in der Metrik Fehlerhafte Nutzer:innen auf.
 
 ## Voraussetzungen
 
@@ -46,13 +46,17 @@ Bevor Sie den Facebook Audience-Schritt in Canvas einrichten, müssen Sie sicher
 
 ### Schritt 1: Mit Facebook verbinden
 
+{% alert important %}
+Sie müssen die [ Berechtigung "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) haben, um Facebook mit Ihrem Braze-Konto zu verbinden.
+{% endalert %}
+
 Gehen Sie im Braze-Dashboard zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Facebook** aus. Wählen Sie unter Facebook Audience Export die Option **Facebook verbinden**.
 
 ![Facebook-Technologie-Seite in Braze mit einer Übersicht und einem Abschnitt für den Export von Facebook Audience mit dem Button Verbunden mit Facebook.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:85%;"}
 
-Es erscheint ein Facebook oAuth-Dialogfenster, um Braze zu autorisieren, angepasste Zielgruppen in Ihren Facebook-Anzeigenkonten zu erstellen.
+Ein Facebook oAuth-Dialogfenster erscheint, um Braze zu autorisieren, angepasste Zielgruppen in Ihren Facebook-Anzeigenkonten zu erstellen.
 
-![Das erste Facebook-Dialogfeld mit der Aufforderung "Verbinden Sie sich als X", wobei X Ihr Facebook-Benutzername ist.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![Das zweite Facebook-Dialogfeld mit der Aufforderung, Anzeigen für Ihre Werbekonten verwalten zu dürfen.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
+![Das erste Facebook-Dialogfeld mit der Aufforderung "Verbinden als X", wobei X Ihr Facebook-Benutzername ist.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![Das zweite Dialogfeld von Facebook, in dem Sie um die Erlaubnis gebeten werden, Anzeigen für Ihre Werbekonten zu verwalten.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 Nachdem Sie Braze mit Ihrem Facebook-Konto verknüpft haben, wählen Sie die Anzeigenkonten aus, die Sie in Ihrem Braze Workspace synchronisieren möchten. Wenn Sie verbunden sind, gelangen Sie zurück zur Partnerseite, wo Sie sehen können, welche Konten verbunden sind, und wo Sie bestehende Konten trennen können.
 
@@ -78,11 +82,11 @@ Bevor Sie Ihr Canvas einrichten, müssen Sie die folgenden Nutzungsbedingungen v
 
 Weitere Einzelheiten zur Überprüfung Ihres Facebook-Kontos bei der Integration finden Sie im [Abschnitt FAQ](#terms).
 
-### Schritt 3: Hinzufügen einer Facebook Audience Komponente in Canvas Flow
+### Schritt 3: Hinzufügen einer Facebook Audience-Komponente in Canvas
 
 Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie **Facebook Audience** aus.
 
-![Eine Liste von Komponenten, die dem Canvas hinzugefügt werden können.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![Die Audience Sync Komponente.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
+![Eine Liste von Komponenten, die dem Canvas hinzugefügt werden sollen.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![Die Komponente Audience Sync.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Schritt 4: Sync-Einrichtung
 
@@ -93,20 +97,20 @@ Wählen Sie den Button **Angepasste Zielgruppe** aus, um den Komponenteneditor z
 Wählen Sie das gewünschte Facebook-Anzeigenkonto aus. Geben Sie in der Dropdown-Liste **Neue oder bestehende Zielgruppe auswählen** den Namen einer neuen oder bestehenden Zielgruppe ein. 
 
 {% tabs %}
-{% tab Eine neue Zielgruppe erstellen %}
+{% tab Create a New Audience %}
 
 1. Geben Sie einen Namen für die neue angepasste Zielgruppe ein.
 2. Wählen Sie **Nutzer:innen zur Zielgruppe hinzufügen** und wählen Sie die Felder aus, die Sie mit Facebook synchronisieren möchten. 
 3. Wählen Sie dann **Zielgruppe erstellen**, um Ihre Zielgruppe zu speichern.
 
-![Einrichtung der Zielgruppen-Synchronisierung für eine Zielgruppe mit den entsprechenden Informationen zu E-Mail, Telefon, Vorname und Nachname.]({% image_buster /assets/img/audience_sync/fb_sync.png %})
+![Zielgruppensynchronisierung für eine Zielgruppe mit den entsprechenden Informationen zu E-Mail, Telefon, Vorname und Nachname.]({% image_buster /assets/img/audience_sync/fb_sync.png %})
 
 Sie werden oben im Schritt-Editor benachrichtigt, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn während dieses Vorgangs ein Fehler auftritt. Sie können diese Zielgruppe auch referenzieren, wenn Nutzer:in später in der Canvas-Reise entfernt werden, da die Zielgruppe im Entwurfsmodus erstellt wurde.
 
 Wenn Sie ein Canvas mit einer neuen Zielgruppe starten, erstellt Braze die neue angepasste Zielgruppe beim Start des Canvas und synchronisiert die Nutzer:innen anschließend nahezu in Realtime, wenn sie den Schritt zur Synchronisierung der Zielgruppe betreten.
 
 {% endtab %}
-{% tab Mit einer bestehenden Zielgruppe synchronisieren %}
+{% tab Sync with an Existing Audience %}
 
 Braze bietet die Möglichkeit, Nutzer:innen aus bestehenden angepassten Facebook Zielgruppen hinzuzufügen oder zu entfernen, um zu bestätigen, dass diese Zielgruppen aktuell sind. Um sich mit einer bestehenden Zielgruppe zu synchronisieren, gehen Sie wie folgt vor:
 
@@ -114,10 +118,10 @@ Braze bietet die Möglichkeit, Nutzer:innen aus bestehenden angepassten Facebook
 2. Wählen Sie, ob Sie **der Zielgruppe etwas hinzufügen** oder **aus der Zielgruppe entfernen** möchten. 
 3. Braze fügt Nutzer:innen nahezu in Realtime hinzu oder entfernt sie, sobald sie die Facebook Audience betreten. 
 
-![Einrichtung der Zielgruppen-Synchronisation zum Entfernen der Informationen zu E-Mail, Telefon, Vorname und Nachname.]({% image_buster /assets/img/audience_sync/fb_sync3.png %})
+![Zielgruppe synchronisieren, um die Informationen zu E-Mail, Telefon, Vorname und Nachname zu entfernen.]({% image_buster /assets/img/audience_sync/fb_sync3.png %})
 
 {% alert important %}
-Facebook verbietet es, Nutzer:innen aus angepassten Zielgruppen zu entfernen, wenn die Zielgruppen zu klein sind (in der Regel weniger als 1.000 Nutzer:innen). Infolgedessen kann Braze Nutzer:innen für eine Entfernung aus dem Schritt Audience Sync nicht synchronisieren, bis die Zielgruppe die entsprechende Zielgruppengröße erreicht hat.
+Facebook verbietet es, Nutzer:innen aus angepassten Zielgruppen zu entfernen, wenn die Zielgruppen zu klein sind (in der Regel weniger als 1.000 Nutzer:innen). Infolgedessen ist Braze nicht in der Lage, Nutzer:innen für eine Entfernung aus dem Schritt Audience Sync zu synchronisieren, bis die Zielgruppe die entsprechende Zielgruppengröße erreicht hat.
 {% endalert %}
 
 {% endtab %}
@@ -125,9 +129,9 @@ Facebook verbietet es, Nutzer:innen aus angepassten Zielgruppen zu entfernen, we
 
 ### Schritt 5: Canvas starten
 
-Nachdem Sie Ihre Facebook Audience-Komponente konfiguriert haben, ist es an der Zeit, das Canvas zu starten! Die neue angepasste Zielgruppe wird erstellt, und Nutzer:innen, die den Schritt Facebook Audience durchlaufen, werden in diese angepasste Zielgruppe auf Facebook weitergeleitet. Wenn Ihr Canvas nachfolgende Schritte enthält, werden Ihre Nutzer:innen zum nächsten Schritt in ihrer User Journey voranbringen.
+Nachdem Sie Ihre Facebook Audience-Komponente konfiguriert haben, ist es an der Zeit, das Canvas zu starten! Die neue angepasste Zielgruppe wird erstellt, und Nutzer:innen, die den Schritt Facebook Audience durchlaufen haben, werden in diese angepasste Zielgruppe auf Facebook weitergeleitet. Wenn Ihr Canvas nachfolgende Schritte enthält, werden Ihre Nutzer:innen zum nächsten Schritt in ihrer User Journey voranbringen.
 
-Der Tab **Verlauf** der angepassten Zielgruppe im Facebook Audience Manager zeigt die Anzahl der Nutzer:innen an, die von Braze an die Zielgruppe gesendet wurden. Wenn ein Nutzer:innen den Schritt erneut betritt, wird er erneut zu Facebook weitergeleitet.
+Der Tab **Verlauf** der angepassten Zielgruppe im Facebook Audience Manager zeigt die Anzahl der Nutzer:innen an, die von Braze an die Zielgruppe gesendet wurden. Wenn ein Nutzer:innen den Schritt erneut betritt, wird er erneut zu Facebook geschickt.
 
 ![Details zur Zielgruppe und der Tab Verlauf für eine bestimmte Facebook Zielgruppe, der eine Tabelle Verlauf der Zielgruppe mit Spalten für die Aktivität, Aktivitätsdetails, geänderte Artikel sowie Datum und Uhrzeit enthält.]({% image_buster /assets/img/fb_audience_sync/audience_history.png %}){: style="max-width:80%;"}
 
@@ -147,7 +151,7 @@ Die folgende Tabelle enthält Metriken und Beschreibungen, die Ihnen helfen, die
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
-Bei den Metriken für synchronisierte Nutzer:innen und Nutzer:innen mit Fehlern kommt es aufgrund der internen Verarbeitung zu einer Verzögerung bei der Berichterstattung.
+Es gibt eine Verzögerung in der Berichterstattung für Nutzer:innen und Nutzer:innen fehlerhafte Metriken aufgrund der internen Verarbeitung.
 {% endalert %}
 
 ## Häufig gestellte Fragen
@@ -178,12 +182,12 @@ Derzeit werden wertbasierte angepasste Zielgruppen von Braze nicht unterstützt.
 
 Sobald die E-Mail-Daten normalisiert sind, hasst Braze sie mit SHA256.
 
-**IDFA/AAID/phone:** Braze hasht mit SHA256. Die Zielgruppen, die wir synchronisieren, sind immer eine der folgenden:
+**IDFA/AAID/Telefon:** Braze hasht mit SHA256. Die Zielgruppen, die wir synchronisieren, sind immer eine der folgenden:
 
 - IDFA_SHA256
 - AAID_SHA256
 - EMAIL_SHA256
-- PHONE_SHA256\.
+- PHONE_SHA256.
 
 Was die Häufigkeit betrifft, so wird Braze nur dann personenbezogene Daten (PII) von Nutzern:innen hacken, wenn diese den Schritt der Audience Sync in der User Journey zur Vorbereitung der Synchronisierung betreten.
 
@@ -271,7 +275,7 @@ table td {
     </tr>
     <tr>
       <td><b>Zielgruppe nicht erreicht</b></td>
-      <td>Auf der Facebook Technologie-Partnerseite sehen Sie "Verbunden", aber im Schritt Facebook Audience Sync beim Synchronisieren einer Zielgruppe erscheint die Fehlermeldung "Failed to create audience "audience name". Die Autorisierung Ihres Facebook-Kontos ist fehlgeschlagen. Bitte besuchen Sie die Technologie-Partnerseite, um Ihr Konto erneut zu verbinden.</td>
+      <td>Auf der Facebook Technologie-Partnerseite sehen Sie "Verbunden", aber im Schritt Facebook Audience Sync beim Synchronisieren einer Zielgruppe erscheint die Fehlermeldung "Failed to create audience "audience name". Die Autorisierung Ihres Facebook-Kontos ist fehlgeschlagen. Besuchen Sie die Technologie-Partnerseite, um Ihr Konto erneut zu verbinden.</td>
       <td>Folgen Sie den Schritten in <a href='/docs/partners/canvas_steps/facebook_audience_sync/#audit-your-facebook-account'>diesem Abschnitt zur Fehlerbehebung</a>, um Ihr Konto auf Probleme zu überprüfen.
       </td>
     </tr>
@@ -310,7 +314,7 @@ Um Ihr Konto und Ihre ID zu finden, gehen Sie folgendermaßen vor:
 
 4. Lesen Sie die Bedingungen für angepasste Zielgruppen und wählen Sie **Akzeptieren** aus. Wir empfehlen Ihnen, sich zu vergewissern, für welches Konto die Bedingungen des Dienstes unterzeichnet werden, indem Sie die Dropdown-Liste oben in den Bedingungen verwenden.
 
-![Die Auswahlliste, die das Konto anzeigt, das die Bedingungen des Dienstes unterzeichnet.]({% image_buster /assets/img/fb_audience_sync/confirm_accept_tos.png %}){: style="max-width:90%;"}
+![Das Dropdown-Menü, das das Konto anzeigt, das die Bedingungen für den Dienst unterschreibt.]({% image_buster /assets/img/fb_audience_sync/confirm_accept_tos.png %}){: style="max-width:90%;"}
 
 {:start="5"}
 5\. Sie müssen **Akzeptieren** für die Bedingungen der Dienste auswählen. Danach sehen Sie diese Nachricht: "Sie haben diese Bedingungen für den Dienst im Namen von Braze akzeptiert".

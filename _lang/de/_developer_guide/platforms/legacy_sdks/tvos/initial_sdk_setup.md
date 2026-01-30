@@ -83,7 +83,7 @@ Fügen Sie in Ihrer `AppDelegate.m`-Datei  das folgende Snippet in Ihre Methode 
 Schließlich aktualisieren Sie `YOUR-API-KEY` mit dem korrekten Wert auf Ihrer Seite **Einstellungen verwalten**.
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Wenn Sie das Braze SDK mit CocoaPods oder Carthage integrieren, fügen Sie die folgende Codezeile in Ihre `AppDelegate.swift`-Datei ein:
 
@@ -116,14 +116,14 @@ Stellen Sie sicher, dass Sie Braze im Haupt-Thread Ihrer Anwendung initialisiere
 Ab Dezember 2019 werden keine benutzerdefinierten Endpunkte mehr vergeben. Wenn Sie einen bereits bestehenden benutzerdefinierten Endpunkt haben, können Sie diesen weiterhin verwenden. Weitere Einzelheiten finden Sie in unserer <a href="{{site.baseurl}}/api/basics/#endpoints">Liste der verfügbaren Endpunkte</a>.
 {% endalert %}
 
-Ihre Braze-Vertretung sollte Sie bereits über den [richtigen Endpunkt]({{ site.baseurl }}/user_guide/ informiert haben.administrative/access_braze/sdk_endpoints/).
+Ihre Vertretung von Braze sollte Ihnen bereits den [richtigen Endpunkt]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/)] mitgeteilt haben.
 
 #### Endpunktkonfiguration zur Kompilierzeit (empfohlen)
 Wenn ein bereits vorhandener benutzerdefinierter Endpunkt angegeben wird:
 - Ab Braze iOS SDK v3.0.2 können Sie einen angepassten Endpunkt mithilfe der Datei `Info.plist` festlegen. Fügen Sie das Wörterbuch `Appboy` zu Ihrer Datei Info.plist hinzu. Fügen Sie im `Appboy`-Dictionary den String-Untereintrag `Endpoint` hinzu und setzen Sie den Wert auf die Autorität Ihrer angepassten Endpunkt-URLs (z.B. `sdk.iad-01.braze.com`, nicht `https://sdk.iad-01.braze.com`).
 
 #### Laufzeit-Endpunkt-Konfiguration
-Wenn ein bereits vorhandener angepasster Endpunkt angegeben wird:
+Wenn ein bereits vorhandener benutzerdefinierter Endpunkt angegeben wird:
 - Ab Braze iOS SDK v3.17.0+ können Sie Ihren Endpunkt über den `ABKEndpointKey` innerhalb des `appboyOptions` Parameters, der an `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` übergeben wird, überschreiben. Setzen Sie den Wert auf Ihre angepasste Endpunkt-URL-Autorität (z. B. `sdk.iad-01.braze.com`, nicht `https://sdk.iad-01.braze.com`).
 
 {% alert note %}
@@ -158,7 +158,7 @@ Fügen Sie in Ihrer `AppDelegate.m` Datei innerhalb Ihrer `application:didFinish
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Fügen Sie in `AppDelegate.swift` innerhalb Ihrer Methode `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` die folgende Braze-Methode hinzu:
 

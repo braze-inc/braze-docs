@@ -28,7 +28,7 @@ Los objetos `windows_phone8_push` y `windows_universal_push` se utilizan para de
 
 ## Objeto push de Windows Universal
 
-Consulta el [catálogo de plantillas de mensajes toast][32] universales de Windows para conocer las opciones de `push_type`.
+Consulta el [catálogo de plantillas de mensajes toast](https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx) universales de Windows para conocer las opciones de `push_type`.
 
 ```json
 {
@@ -42,8 +42,5 @@ Consulta el [catálogo de plantillas de mensajes toast][32] universales de Windo
 }
 ```
 
-Para obtener más información sobre el uso del parámetro `extra_launch_string` para la [vinculación en profundidad][38], consulta [Vinculación en profundidad con Windows Universal.][37]
+Para obtener más información sobre el uso del parámetro `extra_launch_string` para la [vinculación en profundidad]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking), consulta [Vinculación en profundidad con Windows Universal.]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app)
 
-[32]: https://msdn.microsoft.com/en-us/library/windows/apps/hh761494.aspx
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/push_notifications/integration/#step-4-deep-linking-from-push-into-your-app
-[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking

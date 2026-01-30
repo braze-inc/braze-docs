@@ -41,7 +41,7 @@ Fournissez les informations d'identification suivantes :
 
 Après avoir saisi les informations d'identification, cliquez sur **Connecter**.
 
-![Connectez l'écran de Braze dans Antavo avec l'URL de l'instance, le jeton API et l'identifiant de l'application.]({% image_buster /assets/img/antavo/connect_braze.png %})
+![Connectez l'écran Braze dans Antavo à l'URL de l'instance, le jeton de l’API et l'identifiant de l'application.]({% image_buster /assets/img/antavo/connect_braze.png %})
 
 ### Étape 2 : Configurer le mappage des champs
 
@@ -64,10 +64,10 @@ Vous trouverez votre liste d'attributs personnalisés dans Braze sous **Paramèt
 
 Lorsqu'une valeur des champs configurés change dans Antavo, non seulement la synchronisation de cette seule valeur est déclenchée, mais chaque champ ajouté au mappage des champs est inclus dans la requête.
 
-![Sync Fields page in Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
+![Page de synchronisation des champs dans Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
-Pour minimiser la consommation de points de données, nous vous recommandons de ne mapper que les champs qui feront l'objet d'une action dans Braze.
+Pour minimiser l'utilisation des points de données, nous vous recommandons de ne mapper que les champs qui feront l'objet d'une action dans Braze.
 {% endalert %}
 
 #### Types de données pris en charge

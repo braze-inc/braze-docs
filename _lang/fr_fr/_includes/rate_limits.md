@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -33,11 +32,11 @@ Nous appliquons la limitation du débit de 1 000 requêtes par minute à cet e
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-À partir du 28 octobre 2024, nous appliquons une limite de vitesse de base de 3 000 requêtes par trois secondes à cet endpoint pour tous les clients. Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie qu’un maximum de 225 utilisateurs peuvent être mis à jour en un seul appel. En outre, un profil utilisateur unique peut être mis à jour par plusieurs objets.
+À partir du 28 octobre 2024, nous appliquons une limite de vitesse de base de 3 000 requêtes par trois secondes à cet endpoint pour tous les clients. Chaque demande `/users/track` peut contenir jusqu’à 75 objets d’événement, 75 objets d’attributs et 75 objets d’achats. Chaque objet (événement, attribut et tableau d’achat) peut mettre à jour un utilisateur chacun. Au total, cela signifie que vous pouvez mettre à jour jusqu'à 225 utilisateurs en un seul appel. En outre, vous pouvez mettre à jour un profil utilisateur unique avec plusieurs objets.
 
-Des limites différentes s'appliquent aux clients qui ont acheté le service **Utilisateurs actifs par mois - CY 24-25**. Pour plus de détails sur ces limites, voir [Utilisateurs actifs par mois - Limites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Des limites différentes s'appliquent aux clients qui ont acheté le service **Utilisateurs actifs par mois - CY 24-25**. Pour plus de détails sur ces limites, voir [Utilisateurs actifs par mois - Limites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-Consultez notre page sur les [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus de détails, et contactez votre gestionnaire du succès des clients si vous avez besoin d’élever votre limite.
+Consultez notre page sur les [limites de débit de l'API]({{site.baseurl}}/api/api_limits/) pour plus de détails, et contactez votre gestionnaire satisfaction client si vous avez besoin d'augmenter votre limite.
 
 <!---/users/export/ids-->
 
@@ -113,7 +112,7 @@ Les e-mails transactionnels de Braze ne sont pas soumis à une limitation du dé
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-Le nombre maximum quotidien d’identificateurs d’envoi personnalisés pouvant être créés via cet endpoint est de 100 pour un espace de travail donné. Chaque combinaison de `send_id` et `campaign_id` que vous créez est prise en compte dans votre limite quotidienne. Les en-têtes de réponse pour toute requête valide incluent le statut de limitation du débit actuel. Voir [Limites de débit de l’API]({{site.baseurl}}/api/api_limits/) pour plus de détails.
+Vous pouvez créer jusqu'à 100 identifiants d'envoi personnalisés par jour à l'aide de cet endpoint pour un espace de travail donné. Chaque combinaison de `send_id` et `campaign_id` que vous créez est prise en compte dans votre limite quotidienne. Les en-têtes de réponse pour toute demande valide comprennent l'état actuel de la limite de débit. Voir les [limites de débit de l'API]({{site.baseurl}}/api/api_limits/) pour plus de détails.
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}

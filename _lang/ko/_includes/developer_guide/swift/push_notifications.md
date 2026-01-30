@@ -1,4 +1,4 @@
-## 요금 제한
+## Rate limits
 
 푸시 알림은 전송 횟수에 제한이 있으므로 애플리케이션에 필요한 만큼 많이 보내는 것을 두려워하지 마세요. iOS 및 Apple 푸시 알림 서비스(APN) 서버가 알림 전송 빈도를 제어하므로 너무 많이 보내도 문제가 발생하지 않습니다. 푸시 알림이 제한되는 경우, 기기가 다음 번에 연결 유지 패킷을 보내거나 다른 알림을 받을 때까지 지연될 수 있습니다.
 
@@ -10,17 +10,17 @@
 
 ### 2단계: 푸시 기능 사용
 
-Xcode에서 기본 앱 대상의 **서명 및 기능** 섹션으로 이동하여 푸시 알림 기능을 추가합니다.
+Xcode에서 기본 앱 타겟의 **서명 & 기능** 섹션으로 이동하여 푸시 알림 기능을 추가합니다.
 
-![Xcode 프로젝트의 '서명 및 기능' 섹션]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![Xcode 프로젝트의 '서명 & 기능' 섹션.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
-### 3단계: 푸시 처리 설정
+### 3단계: 푸시 처리 설정하기
 
-Swift SDK를 사용하여 Braze에서 수신한 원격 알림의 처리를 자동화할 수 있습니다. 이는 푸시 알림을 처리하는 가장 간단한 방법이며 권장되는 처리 방법입니다.
+Swift 소프트웨어 개발 키트를 사용하여 Braze에서 수신한 원격 알림 처리를 자동화할 수 있습니다. 이는 푸시 알림을 처리하는 가장 간단한 방법이며 권장되는 처리 방법입니다.
 
 {% tabs local %}
-{% tab 자동 %}
-#### 3.1 단계: 푸시 속성에서 자동화 사용 설정
+{% tab Automatic %}
+#### 3.1 단계: 푸시 속성에서 자동화 인에이블먼트하기
 
 자동 푸시 통합을 활성화하려면 `push` 구성의 `automation` 속성정보를 `true`로 설정합니다.
 
@@ -84,7 +84,7 @@ configuration.push.automation.requestAuthorizationAtLaunch = NO;
 사용 가능한 모든 옵션은 [`Braze.Configuration.Push.Automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.class)을 참조하고, 자동화 동작에 대한 자세한 내용은 [`automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.property)을 참조하세요.
 {% endtab %}
 
-{% tab 매뉴얼 %}
+{% tab Manual %}
 {% alert note %}
 앱에 특정한 추가 동작을 위해 푸시 알림에 의존하는 경우 여전히 수동 푸시 알림 통합 대신 자동 푸시 통합을 사용할 수 있습니다. [`subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)) 메서드를 통해 Braze에서 처리된 원격 알림을 수신할 수 있습니다.
 {% endalert %}
@@ -174,7 +174,7 @@ AppDelegate.braze?.notifications.register(deviceToken: deviceToken)
 `application:didRegisterForRemoteNotificationsWithDeviceToken:` 위임 메서드는 `application.registerForRemoteNotifications()` 호출 후 항상 호출됩니다. <br><br>다른 푸시 서비스에서 Braze로 마이그레이션하고 사용자 기기가 이미 APN에 등록되어 있는 경우, 이 메서드는 다음에 메서드를 호출할 때 기존 등록에서 토큰을 수집하며, 사용자는 푸시에 다시 옵트인하지 않아도 됩니다.
 {% endalert %}
 
-#### 3.3 단계: 푸시 처리 사용
+#### Step 3.3: 푸시 처리 사용
 
 다음으로, 수신한 푸시 알림을 Braze에 전달합니다. 이 단계는 푸시 분석 및 링크 처리를 로깅하는 데 필요합니다. 애플리케이션의 메인 스레드에서 모든 푸시 연동 코드를 호출해야 합니다.
 
@@ -182,7 +182,7 @@ AppDelegate.braze?.notifications.register(deviceToken: deviceToken)
 
 {% subtabs %}
 {% subtab Swift %}
-Braze 기본 푸시 처리를 활성화하려면 앱의 `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` 메소드에 다음 코드를 추가하세요:
+Braze 기본값 푸시 처리를 인에이블하려면 앱의 `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` 메소드에 다음 코드를 추가하세요:
 
 ```swift
 if let braze = AppDelegate.braze, braze.notifications.handleBackgroundNotification(
@@ -208,7 +208,7 @@ completionHandler()
 {% endsubtab %}
 
 {% subtab OBJECTIVE-C %}
-Braze 기본 푸시 처리를 활성화하려면 애플리케이션의 `application:didReceiveRemoteNotification:fetchCompletionHandler:` 메소드에 다음 코드를 추가하세요:
+Braze 기본값 푸시 처리를 인에이블먼트하려면 애플리케이션의 `application:didReceiveRemoteNotification:fetchCompletionHandler:` 메소드에 다음 코드를 추가하세요:
 
 ```objc
 BOOL processedByBraze = AppDelegate.braze != nil && [AppDelegate.braze.notifications handleBackgroundNotificationWithUserInfo:userInfo
@@ -366,41 +366,41 @@ BRZCancellable *cancellable = [notifications subscribeToUpdatesWithPayloadTypes:
 
 ## 동적 APN 게이트웨이 관리
 
-동적 APN(Apple 푸시 알림 서비스) 게이트웨이 관리는 올바른 APN 환경을 자동으로 감지하여 iOS 푸시 알림의 안정성과 효율성을 향상시킵니다. 이전에는 푸시 알림을 위한 APN 환경(개발 또는 프로덕션)을 수동으로 선택해야 했기 때문에 잘못된 게이트웨이 구성, 배달 실패 및 `BadDeviceToken` 오류가 발생하는 경우가 있었습니다.
+동적 Apple 푸시 알림 서비스(APN) 게이트웨이 매니저는 올바른 APN 환경을 자동으로 감지하여 iOS 푸시 알림의 안정성과 효율성을 향상시킵니다. 이전에는 푸시 알림을 위한 APN 환경(개발 또는 프로덕션)을 수동으로 선택해야 했기 때문에 잘못된 게이트웨이 구성, 전달 실패 및 `BadDeviceToken` 오류가 발생하는 경우가 있었습니다.
 
-동적 APN 게이트웨이 관리를 사용하면 다음과 같은 이점이 있습니다:
+동적 APN 게이트웨이 관리가 가능합니다:
 
-- **안정성이 향상되었습니다:** 알림은 항상 올바른 APN 환경으로 전달되므로 전달 실패가 줄어듭니다.
+- **안정성이 향상되었습니다:** 알림은 항상 올바른 APN 환경으로 전달되므로 전달 실패를 줄일 수 있습니다.
 - **간소화된 구성:** 더 이상 APN 게이트웨이 설정을 수동으로 관리할 필요가 없습니다.
 - **오류 복원력:** 유효하지 않거나 누락된 게이트웨이 값은 정상적으로 처리되어 중단 없는 서비스를 제공합니다.
 
-### Prerequisites
+### 필수 조건
 
-Braze는 다음 SDK 버전 요구 사항과 함께 iOS에서 푸시 알림을 위한 동적 APN 게이트웨이 관리를 지원합니다:
+Braze는 다음 소프트웨어 개발 키트 버전 요구 사항과 함께 iOS에서 푸시 알림을 위한 동적 APN 게이트웨이 관리를 지원합니다:
 
 {% sdk_min_versions swift:10.0.0 %}
 
-### How it works
+### 작동 방식
 
-iOS 앱이 Braze Swift SDK와 통합되면 다음과 같은 디바이스 관련 데이터를 전송합니다. [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) 를 포함한 기기 관련 데이터를 Braze SDK API로 전송합니다(가능한 경우). `apns_gateway` 값은 앱이 개발(`dev`) 또는 프로덕션(`prod`) APN 환경을 사용하는지 여부를 나타냅니다.
+iOS 앱이 Braze Swift SDK와 통합되면 다음과 같은 기기 관련 데이터를 전송합니다. [`aps-environment`](https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment) 를 포함한 기기 관련 데이터를 Braze 소프트웨어 개발 키트 API로 전송합니다(사용 가능한 경우). `apns_gateway` 값은 앱이 개발자(`dev`) 또는 프로덕션(`prod`) APN 환경을 사용하는지 여부를 나타냅니다.
 
-Braze는 또한 각 디바이스에 대해 보고된 게이트웨이 값을 저장합니다. 유효한 새 게이트웨이 값이 수신되면 Braze는 저장된 값을 자동으로 업데이트합니다.
+Braze는 각 기기에 대해 보고된 게이트웨이 값도 저장합니다. 유효한 새 게이트웨이 값이 수신되면 Braze는 저장된 값을 자동으로 업데이트합니다.
 
-Braze에서 푸시 알림을 보내는 경우:
+Braze가 푸시 알림을 보내는 경우:
 
-- 디바이스에 대해 유효한 게이트웨이 값(개발 또는 프로덕트)이 저장되어 있으면, Braze는 이를 사용하여 올바른 APN 환경을 확인합니다.
-- 게이트웨이 값이 저장되지 않은 경우, Braze는 **앱 설정** 페이지에서 구성된 APN 환경으로 기본 설정됩니다.
+- 기기에 대해 유효한 게이트웨이 값(개발 또는 프로덕트)이 저장되어 있으면 Braze는 이를 사용하여 올바른 APN 환경을 결정합니다.
+- 게이트웨이 값이 저장되지 않은 경우, Braze는 **앱 설정** 페이지에 구성된 APN 환경으로 기본값을 설정합니다.
 
 ### Frequently asked questions
 
 #### 이 기능이 도입된 이유는 무엇인가요?
 
-동적 APN 게이트웨이 관리를 사용하면 올바른 환경이 자동으로 선택됩니다. 이전에는 APN 게이트웨이를 수동으로 구성해야 했기 때문에 `BadDeviceToken` 오류, 토큰 무효화 및 잠재적인 APN 속도 제한 문제가 발생할 수 있었습니다.
+동적 APN 게이트웨이 매니저를 사용하면 올바른 환경이 자동으로 선택됩니다. 이전에는 APN 게이트웨이를 수동으로 구성해야 했기 때문에 `BadDeviceToken` 오류, 토큰 무효화, 잠재적인 APN 속도 제한 문제가 발생할 수 있었습니다.
 
-#### 이것이 푸시 전송 성능에 어떤 영향을 미칠까요?
+#### 이것이 푸시 전달 성능/성과에 어떤 영향을 미칠까요?
 
-이 기능은 푸시 토큰을 항상 올바른 APN 환경으로 라우팅하여 잘못 구성된 게이트웨이로 인한 오류를 방지함으로써 전송 속도를 향상시킵니다.
+이 기능은 푸시 토큰을 항상 올바른 APN 환경으로 라우팅하여 잘못 구성된 게이트웨이로 인한 장애를 방지함으로써 전달 속도를 향상시킵니다.
 
 #### 이 기능을 비활성화할 수 있나요?
 
-동적 APN 게이트웨이 관리는 기본적으로 켜져 있으며 안정성 향상을 제공합니다. 수동 게이트웨이 선택이 필요한 특정 사용 사례가 있는 경우 [Braze 지원팀에]({{site.baseurl}}/user_guide/administrative/access_braze/support/) 문의하세요.
+동적 APN 게이트웨이 관리는 기본값으로 켜져 있으며 안정성 향상을 제공합니다. 수동 게이트웨이 선택이 필요한 특정 사용 사례가 있는 경우 [Braze 지원팀에]({{site.baseurl}}/user_guide/administrative/access_braze/support/) 문의하세요.

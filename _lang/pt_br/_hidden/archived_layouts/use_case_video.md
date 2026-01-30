@@ -1,5 +1,5 @@
 ---
-nav_title: Caso de Uso com Vídeo
+nav_title: Caso de uso com vídeo
 
 page_order: 7
 
@@ -129,6 +129,5 @@ Se você quiser saber mais sobre os assuntos discutidos no artigo, dê uma olhad
 
 ### Ainda está perdido?
 
-Se este artigo não ajudou, deixe seus comentários ou abra um [ticket de suporte][support]!
+Se este artigo não ajudou, deixe seus comentários ou abra um [ticket de suporte]({{site.baseurl}}/braze_support/)!
 
-[support]: {{site.baseurl}}/braze_support/

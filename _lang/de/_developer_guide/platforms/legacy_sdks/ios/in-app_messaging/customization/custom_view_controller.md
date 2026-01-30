@@ -1,5 +1,5 @@
 ---
-nav_title: Benutzerdefinierter View Controller
+nav_title: Angepasste Ansicht Controller
 article_title: In-App Nachricht in einem benutzerdefinierten View Controller für iOS
 platform: iOS
 page_order: 7
@@ -28,7 +28,7 @@ Die folgende UI-Delegate-Methode wird jedes Mal aufgerufen, wenn eine In-App-Nac
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func inAppMessageViewControllerWithInAppMessage(inAppMessage: ABKInAppMessage!) -> ABKInAppMessageViewController!

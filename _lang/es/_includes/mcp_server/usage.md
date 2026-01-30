@@ -1,12 +1,12 @@
 # Uso del servidor Braze MCP
 
-> Aprende a interactuar con tus datos Braze mediante lenguaje natural utilizando herramientas como Claude y Cursor. Para más información general, consulta [Servidor MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "desarrollador" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Aprende a interactuar con tus datos Braze mediante lenguaje natural utilizando herramientas como Claude y Cursor. Para más información general, consulta [Servidor MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## Requisitos previos
 
-Antes de poder utilizar esta característica, tendrás que [configurar el servidor Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "desarrollador" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
+Antes de poder utilizar esta característica, tendrás que [configurar el servidor MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## Buenas prácticas
 
@@ -20,41 +20,41 @@ Cuando utilices el servidor MCP de Braze mediante herramientas de lenguaje natur
 
 ## Ejemplos de uso
 
-Después de [configurar el servidor Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "desarrollador" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, puedes interactuar con Braze a través del lenguaje natural utilizando herramientas como Claude o Cursor. Aquí tienes algunos ejemplos para empezar:
+Después de [configurar el servidor MCP Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}, puedes interactuar con Braze a través del lenguaje natural utilizando herramientas como Claude o Cursor. Aquí tienes algunos ejemplos para empezar:
 
 ### ¿Cuáles son mis funciones Braze disponibles?
 
 {% tabs %}
 {% tab Claude %}
-![Pregunta "¿Cuáles son mis funciones Braze disponibles?" y responde en Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
+!["¿Cuáles son mis funciones Braze disponibles?" se pregunta y se responde en Claude.]({% image_buster /assets/img/mcp_server/claude/what_are_my_available_braze_functions.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Cuáles son mis funciones Braze disponibles' se pregunta y se responde en Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
+!['Cuáles son mis funciones Braze disponibles' se pregunta y responde en Cursor.]({% image_buster /assets/img/mcp_server/cursor/what_are_my_available_braze_functions.png %})
 {% endtab %}
 {% endtabs %}
 
-### Obtener detalles sobre un ID de Canvas
+### Obtener detalles sobre un Canvas ID
 
 {% tabs %}
 {% tab Claude %}
-![Pregunta y respuesta "Obtener detalles sobre un ID de Canvas" en Claude.]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %}){: style="max-width:85%;"}
+![En Claude se pregunta y se responde "Obtén información sobre un ID de Canvas".]({% image_buster /assets/img/mcp_server/claude/get_details_about_a_canvas_id.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-!['Obtener detalles sobre un ID de Canvas' que se pregunta y responde en Cursor.]({% image_buster /assets/img/mcp_server/cursor/get_details_about_a_canvas_id.png %})
+![Pregunta y respuesta "Obtener detalles sobre un ID de Canvas" en Cursor.]({% image_buster /assets/img/mcp_server/cursor/get_details_about_a_canvas_id.png %})
 {% endtab %}
 {% endtabs %}
 
-### Enséñame mis lienzos recientes
+### Muéstrame mis lienzos recientes
 
 {% tabs %}
 {% tab Claude %}
-![Pregunta y respuesta "Muestra mis lienzos recientes" en Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %}){: style="max-width:85%;"}
+!["Enseña mis lienzos recientes" se pregunta y se responde en Claude.]({% image_buster /assets/img/mcp_server/claude/show_my_recent_canvases.png %}){: style="max-width:85%;"}
 {% endtab %}
 
 {% tab Cursor %}
-![Pregunta y respuesta "Mostrar mis lienzos recientes" en Cursor.]({% image_buster /assets/img/mcp_server/cursor/show_me_my_recent_canvases.png %})
+!["Mostrar mis lienzos recientes" se pregunta y se responde en Cursor.]({% image_buster /assets/img/mcp_server/cursor/show_me_my_recent_canvases.png %})
 {% endtab %}
 {% endtabs %}
 

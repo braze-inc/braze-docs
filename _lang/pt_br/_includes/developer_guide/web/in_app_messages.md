@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} Entretanto, não é necessária nenhuma configuração adicional.
+{% multi_lang_include developer_guide/prerequisites/web.md %} No entanto, não é necessária nenhuma configuração adicional.
 
 ## Tipos de mensagens
 
@@ -11,7 +11,7 @@ Cada tipo de mensagem no app é personalizável em termos de conteúdo, imagens,
 
 As mensagens no app [`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.slideupmessage.html) têm esse nome porque, nas plataformas móveis, elas  tradicionalmente "deslizam para cima" ou "deslizam para baixo" do topo ou da parte inferior da tela. No Braze Web SDK, essas mensagens são exibidas mais como uma notificação no estilo Growl ou Toast para alinhar com o paradigma dominante da web. Eles cobrem uma pequena parte da tela e fornecem um recurso de envio de mensagens eficaz e não intrusivo.
 
-![Uma mensagem no app que desliza da parte inferior da tela do telefone exibindo "Os seres humanos são complicados. O engajamento personalizado não deveria ser." Em segundo plano, a mesma mensagem no app exibida no canto inferior de uma página da Internet.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Uma mensagem no app que desliza da parte inferior da tela do telefone exibindo "Os seres humanos são complicados. O engajamento personalizado não deveria ser." Em segundo plano, está a mesma mensagem no app exibida no canto inferior de uma página da Web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
 {% tab Modal %}
@@ -21,14 +21,14 @@ As mensagens no app [`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/clas
 ![Uma mensagem modal no app no centro da tela do telefone exibindo "Os seres humanos são complicados. O engajamento personalizado não deveria ser." No plano de fundo está a mesma mensagem no app exibida no centro de uma página da Internet.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
-{% tab Tela inteira %}
+{% tab Full Screen %}
 
 [`Full`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.fullscreenmessage.html) As mensagens no app são úteis para maximizar o conteúdo e o impacto da sua comunicação com o usuário. Em janelas de navegador estreitas (por exemplo, na web móvel), mensagem no app `full` ocupam toda a janela do navegador. Em janelas de navegador maiores, mensagens no app `full` aparecem de forma semelhante a mensagens no app `modal`. A metade superior de uma mensagem no app `full` contém uma imagem, e a metade inferior permite até oito linhas de texto, bem como até dois botões com ação de clique e habilitados para análise de dados.
 
-![Uma mensagem no app de tela cheia exibida em toda a tela do telefone mostrando: "Os humanos são complicados." O engajamento personalizado não deveria ser." No plano de fundo está a mesma mensagem no app exibida em grande parte no centro de uma página da Internet.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Uma mensagem no app de tela cheia exibida em toda a tela do telefone mostrando: "Os humanos são complicados." O engajamento personalizado não deveria ser." Em segundo plano está a mesma mensagem no app exibida em grande parte no centro de uma página da Web.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% endtab %}
-{% tab HTML personalizado %}
+{% tab Custom HTML %}
 
 [`HTML`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.htmlmessage.html) As mensagens no app são úteis para criar conteúdo totalmente personalizado para o usuário. O conteúdo HTML definido pelo usuário é exibido em um iFrame e pode conter conteúdos avançados, como imagens, fontes, vídeos e elementos interativos, permitindo controle total sobre a aparência e a funcionalidade da mensagem. Esses suportam uma interface JavaScript `brazeBridge` para chamar métodos no Braze Web SDK de dentro do HTML. Para saber mais, consulte nossas [práticas recomendadas]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
