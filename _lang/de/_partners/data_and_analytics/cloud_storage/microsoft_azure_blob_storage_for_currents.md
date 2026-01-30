@@ -14,7 +14,7 @@ search_tag: Partner
 > [Microsoft Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) ist ein massiv skalierbarer Objektspeicher für unstrukturierte Daten, der von Microsoft als Teil der Azure Produkt Suite angeboten wird.
 
 {% alert important %}
-Wenn Sie zwischen Cloud-Speicheranbietern wechseln, wenden Sie sich an Ihren Customer-Success-Manager von Braze, um weitere Unterstützung bei der Einrichtung und Validierung Ihrer neuen Integration zu erhalten.
+Wenn Sie zwischen Cloud-Speicheranbietern wechseln, wenden Sie sich an Ihren Customer-Success-Manager:in von Braze, um weitere Unterstützung bei der Einrichtung und Validierung Ihrer neuen Integration zu erhalten.
 {% endalert %}
 
 Die Integration von Braze und Microsoft Azure Blob Storage erlaubt es Ihnen, Daten zurück nach Azure zu exportieren und Daten von Currents zu streamen. Später können Sie einen ETL-Prozess (Extract, Transform, Load) verwenden, um Ihre Daten an andere Standorte zu übertragen.
@@ -24,7 +24,7 @@ Die Integration von Braze und Microsoft Azure Blob Storage erlaubt es Ihnen, Dat
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
 | Microsoft Azure und Azure Speicherkonto | Um die Vorteile dieser Partnerschaft nutzen zu können, benötigen Sie ein Microsoft Azure- und Azure-Storage-Konto. |
-| Currents | Um Daten nach Currents zu exportieren, müssen Sie [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) für Ihr Konto eingerichtet haben. |
+| Currents | Um Daten nach Currents zu exportieren, müssen Sie [Braze-Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) für Ihr Konto eingerichtet haben. Currents ist nicht erforderlich, wenn Sie nur die Archivierung von Nachrichten einrichten möchten. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
@@ -65,7 +65,7 @@ Navigieren Sie in Braze zu **Currents > + Create Current > Azure Blob Data Expor
 
 Als Nächstes geben Sie den String für die Verbindung, den Containernamen und das BlobStorage-Präfix (optional) an.
 
-![Die Microsoft Azure Blob-Speicher Currents Seite in Braze. Auf dieser Seite gibt es Felder für den Namen der Integration, die E-Mail des Kontakts, den Verbindungsstring, den Containernamen und das Präfix.]({% image_buster /assets/img/maz.png %})
+![Die Microsoft Azure Blob-Speicher Currents Seite in Braze. Auf dieser Seite gibt es Felder für den Namen der Integration, die E-Mail des Kontakts, den String für die Verbindung, den Containernamen und das Präfix.]({% image_buster /assets/img/maz.png %})
 
 Scrollen Sie schließlich zum Ende der Seite und wählen Sie aus, welche Nachrichten-Engagement-Events oder Kundenverhalten-Events Sie exportieren möchten. Wenn Sie fertig sind, starten Sie Ihren Current.
 
@@ -91,4 +91,10 @@ Es ist wichtig, den String für die Verbindung auf dem neuesten Stand zu halten.
 Nutzer:innen, die eine Lösung zur Speicherung von Daten in der Cloud integriert haben und versuchen, APIs, Dashboard-Berichte oder CSV-Berichte zu exportieren, werden folgende Probleme haben:
 
 - Alle API-Exporte geben keine Download-URL im Antwortkörper zurück und müssen über den Datenspeicher abgerufen werden.
-- Alle Dashboard-Berichte und CSV-Berichte werden zum Download an die E-Mail des Nutzers:innen gesendet (keine Speicherberechtigungen erforderlich) und auf dem Datenspeicher gesichert. 
+- Alle Dashboard-Berichte und CSV-Berichte werden zum Download an die E-Mail des Nutzers:innen gesendet (keine Speicherberechtigungen erforderlich) und auf dem Datenspeicher gesichert.
+
+{% alert important %}
+**JSON-Format erforderlich**: Für JSON-Exporte verwendet Braze das JSONL-Format (newline-delimited JSON), bei dem jede Zeile ein eigenes JSON-Objekt enthält. Dieses Format unterscheidet sich vom Standard-JSON, das ein einzelnes JSON-Array oder -Objekt ist. Jede Zeile in der exportierten Datei ist ein gültiges JSON-Objekt, aber die Datei als Ganzes ist kein einzelnes gültiges JSON-Dokument. Wenn Sie diese Dateien verarbeiten, parsen Sie jede Zeile einzeln als separates JSON-Objekt, anstatt zu versuchen, die gesamte Datei als ein einziges JSON-Dokument zu parsen.
+
+Currents exportiert im Apache Avro-Format (`.avro` Dateien), nicht in JSON. Diese Anforderung an das JSON-Format gilt für Dashboard-Datenexporte und API-Exporte, die das JSON-Format verwenden.
+{% endalert %}

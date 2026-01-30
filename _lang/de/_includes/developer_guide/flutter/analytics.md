@@ -59,7 +59,7 @@ Alle String-Werte wie Vorname, Nachname, Land und Heimatort sind auf 255 Zeichen
 Zusätzlich zu den standardmäßigen Nutzer:innen-Attributen können Sie in Braze auch angepasste Attribute unter Verwendung einer Reihe verschiedener Datentypen definieren:
 
 {% tabs %}
-{% tab Boolesch %}
+{% tab Boolean %}
 
 ```dart
 braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
@@ -89,7 +89,7 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 ```
 
 {% endtab %}
-{% tab Datum %}
+{% tab Date %}
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);

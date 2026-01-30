@@ -6,16 +6,16 @@ page_order: 3
 
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles sobre el punto final Ver todas las traducciones y localizaciones de Plantilla de correo electrónico."
+description: "En este artículo se describen los detalles del punto final Ver todas las traducciones y configuraciones regionales de la plantilla de correo electrónico."
 ---
 
 {% api %}
 # Ver todas las traducciones y localizaciones de una plantilla de correo electrónico
 {% apimethod get %}
-/templates/email/translations/
+/plantillas/correo electrónico/traducciones/
 {% endapimethod %}
 
-> Utiliza este punto final para ver todas las traducciones y localizaciones de una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
+> Utiliza este punto final para ver todas las traducciones y localizaciones de una [plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
 
 {% alert important %}
 Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
@@ -34,10 +34,11 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro     | Obligatoria | Tipo de datos | Descripción                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Obligatoria | Cadena    | El ID de tu plantilla de correo electrónico. |
-| `locale_id`   | Obligatoria | Cadena    | El ID de la configuración regional.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Ten en cuenta que todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la configuración **del soporte multilingüe** o en la respuesta a la solicitud.
+{% alert note %}
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+{% endalert %}
 
 ## Ejemplo de solicitud
 
@@ -45,6 +46,8 @@ Ten en cuenta que todos los ID de traducción se consideran identificadores úni
 curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
+--Request Body
+--- template_id: "6ad1507f-ca10-44c4-95bf-6e4gay901kc5"
 ```
 
 ## Respuesta
@@ -56,8 +59,6 @@ Hay cuatro respuestas de código de estado para este punto final: `200`, `400`, 
 El código de estado `200` podría devolver la siguiente cabecera y cuerpo de respuesta.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -105,17 +106,5 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
     ]
 }
 ```
-
-## Solución de problemas
-
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
-
-| Mensaje de error                           | Solución de problemas                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | Confirma que tu ID de configuración regional existe en la traducción de tu mensaje.                         |
-| `LOCALE_NOT_FOUND`                      | Confirma que la configuración regional existe en tu configuración multilingüe.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | La configuración multilingüe no está activada para tu espacio de trabajo.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Sólo se pueden traducir las plantillas de correo electrónico y las campañas de mensajería por correo electrónico, push y dentro de la aplicación, o los mensajes de Canvas con correos electrónicos.             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Soporte Smart TV
+nav_title: Compatible con Smart TV
 article_title: Soporte de Smart TV para la Web Braze SDK
 platform: Web
 page_order: 30

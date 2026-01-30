@@ -3,12 +3,16 @@ page_order: 0
 nav_title: Home
 layout: dev_guide
 guide_top_header: "Braze Entwicklerhandbuch"
-guide_top_text: "Hier finden Entwickler:in alles, was sie über das Braze SDK wissen müssen. Jedes SDK wird in seinem eigenen öffentlichen GitHub-Repository gehostet, das vollständig kompilierbare Beispiel-Apps enthält, mit denen Sie die Features von Braze testen oder neben Ihren eigenen Anwendungen implementieren können. Weitere Informationen finden Sie unter <a href='{{site.baseurl}}/developer_guide/references/'>Referenzen, Repositories und Beispiel-Apps</a>.<br><br>Möchten Sie sich mit anderen Entwickler:in vernetzen, lernen und sich von ihnen inspirieren lassen, die mit Braze arbeiten? Treten Sie der <a href='https://www.braze.com/dev-portal'>Braze Entwickler:in Community</a> bei!"
+guide_top_text: "Hier finden Entwickler:in alles, was sie über das Braze SDK wissen müssen. Jedes SDK wird in seinem eigenen öffentlichen GitHub-Repository gehostet, das vollständig kompilierbare Beispiel-Apps enthält, mit denen Sie die Features von Braze testen oder neben Ihren eigenen Anwendungen implementieren können. Weitere Informationen finden Sie unter <a href='https://www.braze.com/docs/developer_guide/references/'>Referenzen, Repositories und Beispiel-Apps</a>.<br><br>Möchten Sie sich mit anderen Entwickler:in vernetzen, lernen und sich von ihnen inspirieren lassen, die mit Braze arbeiten? Treten Sie der <a href='https://www.braze.com/dev-portal'>Braze Entwickler:in Community</a> bei!"
 article_title: Braze Entwicklerhandbuch
 description: "Auf dieser Landing Page finden Entwickler alle mit Braze verfügbaren Integrationen."
 
 guide_featured_title: "Ausgewählte Integrationen"
 guide_featured_list:
+- name: Internet
+  link: /docs/developer_guide/sdk_integration/?sdktab=web
+  image: /assets/img/braze_icons/globe-02.svg
+  nav_link: web
 - name: Android
   image: /assets/img/braze_icons/android.svg
   link: /docs/developer_guide/sdk_integration/?sdktab=android
@@ -16,10 +20,6 @@ guide_featured_list:
 - name: Schnell
   link: /docs/developer_guide/sdk_integration/?sdktab=swift
   image: /assets/img/braze_icons/swift.svg
-- name: Internet
-  link: /docs/developer_guide/sdk_integration/?sdktab=web
-  image: /assets/img/braze_icons/globe-02.svg
-  nav_link: web
 
 guide_menu_title: "All integrations"
 guide_menu_list:
@@ -47,12 +47,8 @@ guide_menu_list:
     link: /docs/developer_guide/sdk_integration/?sdktab=unity
     image: /assets/img/unity.png
     nav_link: unity
-  - name: Unreal Engine
-    link: /docs/developer_guide/sdk_integration/?sdktab=unreal%20engine
-    image: /assets/img/unreal.png
-    nav_link: unreal_engine
-  - name: Xamarin
-    link: /docs/developer_guide/sdk_integration/?sdktab=xamarin
+  - name: .NET MAUI (Xamarin)
+    link: /docs/developer_guide/sdk_integration/?sdktab=.net%20maui%20(xamarin)
     image: /assets/img/xamarin.png
     nav_link: xamarin
   - name: TV &amp; OTT

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exporter les KPI pour les désinstallations quotidiennes d'applications par date"
+nav_title: "GET : Exporter les KPI pour les désinstallations quotidiennes d’application par date"
 article_title: "GET : Exporter les KPI pour les désinstallations quotidiennes d'applications par date"
 search_tag: Endpoint
 page_order: 4
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

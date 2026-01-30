@@ -26,8 +26,7 @@ Derzeit haben einige SDKs keine spezielle referenzierte Dokumentation - aber wir
 | React Native SDK  | [Deklarationsdatei](https://github.com/braze-inc/braze-react-native-sdk/blob/master/src/index.d.ts)                   | [GitHub-Repository](https://github.com/braze-inc/braze-react-native-sdk) | [Beispiel-App](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) |
 | Roku SDK          | --                                                                                                                                                         | [GitHub-Repository](https://github.com/braze-inc/braze-roku-sdk)            | [Beispiel-App](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)            |
 | Unity SDK         | [Deklarationsdatei](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs)     | [GitHub-Repository](https://github.com/braze-inc/braze-unity-sdk)          | [Beispiel-App](https://github.com/braze-inc/braze-unity-sdk/tree/master/unity-samples)          |
-| Unreal Engine SDK | --                                                                                                                                                         | [GitHub-Repository](https://github.com/braze-inc/braze-unreal-sdk)        | [Beispiel-App](https://github.com/braze-inc/braze-unreal-sdk/tree/master/BrazeSample)        |
-| Xamarin SDK       | --                                                                                                                                                         | [GitHub-Repository](https://github.com/braze-inc/braze-xamarin-sdk)      | [Beispiel-App](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
+| .NET MAUI SDK (früher Xamarin)      | --                                                                                                                                                         | [GitHub-Repository](https://github.com/braze-inc/braze-xamarin-sdk)      | [Beispiel-App](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Eine App als Beispiel erstellen
@@ -59,7 +58,7 @@ Wenn Sie die Variable `ANDROID_HOME` nicht richtig gesetzt haben oder keinen `lo
 Weitere Informationen zum Build-System des Android SDK finden Sie unter[GitHub Repository README](https://github.com/braze-inc/braze-android-sdk/blob/master/README.md).
 {% endtab %}
 
-{% tab schnell %}
+{% tab swift %}
 ### Erstellen von Swift-Test-Apps
 
 Folgen Sie diesen Anweisungen, um unsere Testanwendungen zu erstellen und auszuführen.

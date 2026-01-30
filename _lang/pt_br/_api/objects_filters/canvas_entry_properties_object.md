@@ -1,5 +1,5 @@
 ---
-nav_title: "Objeto de propriedades de entrada de tela"
+nav_title: "Objeto de propriedades de entrada da tela"
 article_title: Objeto de propriedades de entrada de canvas da API
 page_order: 2
 page_type: reference

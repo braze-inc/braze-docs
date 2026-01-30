@@ -14,13 +14,13 @@ Speicherschemata gelten für die Flat File-Ereignisdaten, die wir an Data Wareho
 
 Wenden Sie sich an Ihren Account Manager:in oder öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/), wenn Sie Zugang zu zusätzlichen Veranstaltungsberechtigungen benötigen. Wenn Sie in diesem Artikel nicht finden, was Sie brauchen, sehen Sie sich unsere [Bibliothek für Kundenverhalten-Events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) oder unsere [Currents-Beispiele für Daten](https://github.com/Appboy/currents-examples/tree/master/sample-data) an.
 
-{% details Erläuterung der Ereignisstruktur für das Engagement von Nachrichten und der Plattformwerte %}
+{% details Explanation of message engagement event structure and platform values %}
 
 ### Event-Struktur
 
 Diese Aufschlüsselung der Ereignisse zeigt, welche Art von Informationen im Allgemeinen in einem Ereignis zum Engagement für Nachrichten enthalten sind. Mit einem soliden Verständnis seiner Komponenten können Ihre Entwickler:in und Ihr Business-Intelligence Strategie Team die eingehenden Currents Ereignisdaten nutzen, um datengestützte Berichte und Charts zu erstellen und andere wertvolle Metriken zu nutzen.
 
-![Aufschlüsselung eines Nachrichten-Engagements mit einem E-Mail-Abmelde-Ereignis mit den aufgeführten Eigenschaften, gruppiert nach benutzerspezifischen Eigenschaften, Kampagnen- oder Canvas-Tracking-Eigenschaften und ereignisspezifischen Eigenschaften]({% image_buster /assets/img/message_engagement_event.png %})
+![Aufschlüsselung eines Ereignisses zum Engagement für Nachrichten, das ein E-Mail-Abmelde-Ereignis zeigt, mit den aufgeführten Eigenschaften, gruppiert nach benutzerspezifischen Eigenschaften, Kampagnen- oder Canvas-Tracking-Eigenschaften und ereignisspezifischen Eigenschaften]({% image_buster /assets/img/message_engagement_event.png %})
 
 Nachrichten-Engagement-Ereignisse setzen sich aus **benutzerspezifischen** Eigenschaften, **Kampagnen/Canvas Tracking-Eigenschaften** und **ereignisspezifischen** Eigenschaften zusammen.
 

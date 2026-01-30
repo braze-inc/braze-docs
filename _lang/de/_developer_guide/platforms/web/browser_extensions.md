@@ -42,7 +42,7 @@ Braze kann in den folgenden Bereichen Ihrer Erweiterung eingesetzt werden:
 
 Für die Integration des Braze SDK (`braze.min.js`) als lokale Datei, die mit Ihrer Erweiterung gebündelt ist, sind in Ihrem `manifest.json` keine zusätzlichen Berechtigungen erforderlich. 
 
-Wenn Sie jedoch [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), verwenden oder das Braze SDK von einer externen URL aus referenzieren oder eine strenge Richtlinie für die Sicherheit von Inhalten für Ihre Erweiterung festgelegt haben, müssen Sie die [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) Einstellung in Ihrem `manifest.json` anpassen, um entfernte Skriptquellen zuzulassen.
+Wenn Sie jedoch [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) verwenden, das Braze SDK von einer externen URL aus referenzieren oder eine strenge Richtlinie für die Sicherheit von Inhalten für Ihre Erweiterung festgelegt haben, müssen Sie die [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) Einstellung in Ihrem `manifest.json` anpassen, um entfernte Skriptquellen zuzulassen.
 
 ## Erste Schritte
 
@@ -52,13 +52,13 @@ Bevor Sie beginnen, sollten Sie den [Leitfaden zur SDK-Ersteinrichtung ]({{site.
 
 Um das Braze Web SDK zu integrieren, müssen Sie zunächst eine Kopie der neuesten JavaScript Bibliothek herunterladen. Dazu können Sie NPM verwenden oder es direkt vom [Braze CDN](https://js.appboycdn.com/web-sdk/latest/braze.min.js) herunterladen.
 
-Wenn Sie es vorziehen, den [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) zu verwenden oder eine extern gehostete Kopie des Braze SDK zu nutzen, sollten Sie bedenken, dass das Laden externer Ressourcen eine Anpassung Ihrer [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) Einstellung in Ihrem `manifest.json` anpassen müssen.
+Wenn Sie es vorziehen, [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ] oder eine extern gehostete Kopie des Braze SDK zu verwenden, sollten Sie bedenken, dass das Laden externer Ressourcen eine Anpassung Ihrer [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) Einstellung in Ihrem `manifest.json` anpassen müssen.
 
 Kopieren Sie die Datei `braze.min.js` nach dem Download in das Verzeichnis Ihrer Erweiterung.
 
 ### Erweiterungs-Popups {#popup}
 
-Um Braze zu einem Erweiterungs-Popup hinzuzufügen, referenzieren Sie die lokale JavaScript-Datei in Ihrer `popup.html`, wie Sie es bei einer normalen Website tun würden. Wenn Sie Google Tag Manager verwenden, können Sie Braze stattdessen mit unseren [Google Tag Manager Templates]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) hinzufügen.
+Um Braze zu einem Erweiterungs-Popup hinzuzufügen, referenzieren Sie die lokale JavaScript-Datei in Ihrer `popup.html`, wie Sie es bei einer normalen Website tun würden. Wenn Sie den Google Tag Manager verwenden, können Sie Braze stattdessen mit unseren [Google Tag Manager templates]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ] hinzufügen.
 
 ```html
 <html>
@@ -110,5 +110,5 @@ Weitere Informationen zu den von uns unterstützten Initialisierungsoptionen fin
 
 ## Push
 
-Popup-Dialoge für Erweiterungen sind nicht für Push-Eingaben zulässig (sie haben keine URL-Leiste in der Navigation). Um also die Push-Erlaubnis im Popup-Dialog einer Erweiterung zu registrieren und anzufragen, müssen Sie eine alternative Domain verwenden, wie beschrieben in [Alternative Push-Domain]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
+Popup-Dialoge für Erweiterungen sind nicht für Push-Eingaben zulässig (sie haben keine URL-Leiste in der Navigation). Um also die Push-Erlaubnis im Popup-Dialog einer Erweiterung zu registrieren und anzufragen, müssen Sie eine alternative Domain verwenden, wie in [Alternative Push-Domain]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain) beschrieben.
 

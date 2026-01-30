@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Crear plantilla de correo electrónico"
-article_title: "POST: Crear plantillas de correo electrónico"
+nav_title: "PUBLICAR: Crear plantilla de correo electrónico"
+article_title: "PUBLICAR: Crear plantillas de correo electrónico"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -15,7 +15,7 @@ description: "En este artículo se describen los detalles del punto final Crear 
 
 > Utiliza este punto final para crear plantillas de correo electrónico en el panel Braze.
 
-Estas plantillas estarán disponibles en la **página Plantillas y medios.**  La respuesta de este punto final incluye un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
+Estas plantillas estarán disponibles en la página **Plantillas & Medios**. La respuesta de este punto final incluye un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
@@ -51,13 +51,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`template_name`|Obligatoria|Cadena|Nombre de tu plantilla de correo electrónico.|
 |`subject`|Obligatoria|Cadena|Línea del asunto de la plantilla de correo electrónico.|
-|`body`|Obligatoria|Cadena|Cuerpo de la plantilla de correo electrónico que puede incluir HTML.|
+|`body`|Obligatoria|Cadena|Cuerpo de la plantilla de correo electrónico que puede incluir HTML. Hasta 400 KB.|
 |`plaintext_body`|Opcional|Cadena|Una versión en texto plano del cuerpo de la plantilla de correo electrónico.|
 |`preheader`|Opcional|Cadena|Preencabezado de correo electrónico utilizado para generar vistas previas en algunos clientes.|
 |`tags`|Opcional|Cadena|[Las etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) ya deben existir.|
 |`should_inline_css`|Opcional|Booleano|Habilita o deshabilita la característica `inline_css` por plantilla. Si no se proporciona, Braze utilizará la configuración predeterminada para el grupo de aplicaciones. Se espera una de `true` o `false`.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
 
 ## Ejemplo de solicitud
 ```
@@ -77,8 +76,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 ## Ejemplo de respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
   "message": "success"

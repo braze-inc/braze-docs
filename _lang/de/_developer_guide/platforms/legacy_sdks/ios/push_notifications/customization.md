@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Anpassung
+nav_title: Customization
 article_title: iOS Push-Anpassung
 layout: dev_guide
 

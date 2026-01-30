@@ -1,5 +1,5 @@
 ---
-nav_title: 이미지가 포함된 MS LP
+nav_title: 이미지가 있는 Ms lp
 layout: dev_guide
 
 page_order: 1.4

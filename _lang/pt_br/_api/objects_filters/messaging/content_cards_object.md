@@ -1,5 +1,5 @@
 ---
-nav_title: "Objeto de cartão de conteúdo"
+nav_title: "Objeto do cartão de conteúdo"
 article_title: Objeto de envio e mensagem em cartão de conteúdo
 page_order: 4
 page_type: reference

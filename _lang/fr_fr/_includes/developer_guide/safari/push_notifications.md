@@ -40,7 +40,7 @@ Votre site Web doit disposer d’un fichier de service de traitement qui importe
 
 Les navigateurs populaires (tels que Safari, Chrome, FireFox et Edge) prennent tous en charge les notifications push web dans leurs versions ultérieures. Pour demander une autorisation push sur iOS ou iPadOS, votre site web doit être ajouté à l'écran d'accueil de l'utilisateur en sélectionnant **Partager vers** > **Ajouter à l'écran d'accueil**. [Ajouter à l'écran d'accueil](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) permet aux utilisateurs de mettre votre site web en signet, en ajoutant votre icône à leur précieux écran d'accueil.
 
-![Un iPhone montrant les options permettant de mettre un site web en signet et de l'enregistrer sur l'écran d'accueil]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
+![Un iPhone montrant les options permettant de mettre un site web en signet et de l'enregistrer sur l'écran d'accueil.]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
 ### Étape 5 : Afficher l’invite de notification push native {#push-prompt}
 Une fois l'application ajoutée à votre écran d'accueil, vous pouvez désormais demander une autorisation push lorsque l'utilisateur effectue une action (en cliquant sur un bouton, par exemple). Ceci peut être effectué à l’aide de la méthode [`requestPushPermission`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestpushpermission) ou à l'aide d'un [message in-app d'amorce de notification push sans code]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
@@ -49,7 +49,7 @@ Une fois l'application ajoutée à votre écran d'accueil, vous pouvez désormai
 Après avoir accepté ou refusé l'invitation, vous devez supprimer et réinstaller le site web sur votre écran d'accueil pour pouvoir afficher à nouveau l'invitation.
 {% endalert %}
 
-![Une notification push demandant d'"autoriser" ou de "ne pas autoriser" les notifications]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![Une notification push demandant d'autoriser ou de ne pas autoriser les notifications]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 Par exemple :
 

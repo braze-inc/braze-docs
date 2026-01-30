@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exportation Nombre d'achats"
+nav_title: "GET : Nombre d'achats à l'exportation"
 article_title: "GET : Exportation Nombre d'achats"
 search_tag: Endpoint
 page_order: 3
@@ -11,7 +11,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter le no
 {% api %}
 # Nombre d'achats à l'exportation
 {% apimethod get %}
-/achats/séries_quantités
+/purchases/quantity_series
 {% endapimethod %}
 
 > Utilisez cet endpoint pour renvoyer le nombre total d'achats dans votre appli sur une plage de temps.
@@ -47,8 +47,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/quantity_
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": (required, string) the status of the export, returns 'success' when completed without errors,
   "data" : [

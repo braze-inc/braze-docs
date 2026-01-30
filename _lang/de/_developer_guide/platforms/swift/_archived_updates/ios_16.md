@@ -1,5 +1,5 @@
 ---
-nav_title: Upgrade-Leitfaden für iOS 16
+nav_title: iOS 16 upgraden Anleitung
 article_title: Upgrade-Leitfaden für iOS 16
 page_order: 7
 platform: 

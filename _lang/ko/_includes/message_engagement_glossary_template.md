@@ -14,13 +14,13 @@ search_rank: 6
 
 Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. 이 문서에서 필요한 내용을 찾을 수 없는 경우 [고객 행동 이벤트 라이브러리]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) 또는 [커런츠 샘플 데이터 예시](https://github.com/Appboy/currents-examples/tree/master/sample-data)를 확인하세요.
 
-{% details 메시지 참여 이벤트 구조 및 플랫폼 가치에 대한 설명 %}
+{% details Explanation of message engagement event structure and platform values %}
 
 ### 이벤트 구조
 
 이 이벤트 분석은 일반적으로 메시지 인게이지먼트 이벤트에 어떤 유형의 정보가 포함되는지 보여줍니다. 구성 요소에 대한 확실한 이해를 바탕으로 개발자와 비즈니스 인텔리전스 전략 팀은 수신되는 Currents 이벤트 데이터를 사용하여 데이터 기반 보고서와 차트를 만들고 다른 유용한 데이터 메트릭을 활용할 수 있습니다.
 
-![사용자별 속성, 캠페인 또는 캔버스 추적 속성, 이벤트별 속성별로 그룹화된 이메일 수신 거부 이벤트를 보여주는 메시지 인게이지먼트 이벤트의 분석]({% image_buster /assets/img/message_engagement_event.png %})
+![사용자별 속성, 캠페인 또는 캔버스 추적 속성, 이벤트별 속성별로 그룹화된 나열된 속성과 함께 이메일 탈퇴 이벤트를 보여주는 메시지 참여 이벤트의 세부 정보]({% image_buster /assets/img/message_engagement_event.png %})
 
 메시지 참여 이벤트는 **사용자별** 속성, **캠페인/캔버스 추적** 속성, **이벤트별** 속성으로 구성됩니다.
 
@@ -63,13 +63,13 @@ Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_s
 {% alert note %}
 특정 필드는 캠페인이나 캔버스가 업데이트된 후 가장 최근 상태를 표시하는 데 시간이 더 걸릴 수 있습니다. 이러한 필드는 다음과 같습니다:
 <ul>
-  <li>"캠페인_이름"</li>
-  <li>"캔버스_이름"</li>
-  <li>"캔버스_스텝_이름"</li>
-  <li>"전환_행동"</li>
-  <li>"캔버스_변형_이름"</li>
-  <li>"실험_분할_이름"</li>
-  <li>"메시지_변형_이름"</li>
+  <li>"campaign_name"</li>
+  <li>"canvas_name"</li>
+  <li>"canvas_step_name"</li>
+  <li>"conversion_behavior"</li>
+  <li>"canvas_variation_name"</li>
+  <li>"experiment_split_name"</li>
+  <li>"message_variation_name"</li>
 </ul>
 완전한 일관성이 필요한 경우 이러한 필드에 대한 마지막 업데이트 후 한 시간 정도 기다렸다가 사용자에게 메시지를 보내는 것이 좋습니다.
 {% endalert %}

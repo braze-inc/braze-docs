@@ -32,9 +32,9 @@ noindex: true
 
 ## Étape 1 : Téléchargez votre jeton APN
 
- %} developer_guide/swift/apns_token.md
+{% multi_lang_include developer_guide/swift/apns_token.md %}
 
-## Étape 2 : Activer les fonctionnalités de notification push
+## Étape 2 : Activer les fonctionnalités de notification push
 
 Dans les paramètres de votre projet, assurez-vous que sous l'onglet **Capacités**, votre capacité de **notifications push** est basculée.
 
@@ -42,7 +42,7 @@ Dans les paramètres de votre projet, assurez-vous que sous l'onglet **Capacité
 
 Si vous disposez de certificats push distincts pour le développement et la production, veillez à décocher la case **Gérer automatiquement la signature** dans l'onglet **Général**. Cela vous permettra de choisir différents profils d’approvisionnement pour chaque configuration, car la fonction de signature de code automatique de Xcode ne s’applique qu’aux signatures de développement.
 
-![Les paramètres du projet Xcode affichant l’onglet « General » (Généralités). Dans cet onglet, l'option "Gérer automatiquement la signature" est décochée.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
+![Les paramètres du projet Xcode affichant l’onglet « General » (Généralités). Dans cet onglet, l’option « Automatically manage signing » (Gérer automatiquement la signature) est décochée.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
 ## Étape 3 : Inscrivez-vous aux notifications push
 
@@ -63,7 +63,7 @@ L’exemple de code suivant inclut l’intégration pour l’authentification de
 {% endalert %}
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
@@ -121,7 +121,7 @@ Vous devez attribuer votre objet délégué à l’aide de `center.delegate = se
 Si vous utilisez l’infrastructure `UserNotifications`, ajoutez le code suivant à la méthode `application:didFinishLaunchingWithOptions:` de votre délégué d’application.
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeAlert | UIUserNotificationTypeSound) categories:nil];
@@ -148,7 +148,7 @@ UIApplication.shared.registerForRemoteNotifications()
 Une fois l’enregistrement des APN terminé, la méthode suivante doit être modifiée pour transmettre le résultat `deviceToken` à Braze pour que l’utilisateur soit activé pour les notifications push :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 Ajoutez le code suivant à votre méthode `application:didRegisterForRemoteNotificationsWithDeviceToken:` :
 
@@ -181,7 +181,7 @@ Le code suivant transmet les notifications push reçues à Braze et est nécessa
 Lors de la conception avec iOS 10+, nous vous recommandons d’intégrer l’infrastructure `UserNotifications` et de procéder comme suit :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 Ajoutez le code suivant à la méthode `application:didReceiveRemoteNotification:fetchCompletionHandler:` de votre application :
 
@@ -261,10 +261,10 @@ Si vous cliquez sur la notification de premier plan, la notification push iOS 10
 
 iOS 10 a mis à jour les comportements de sorte qu’il ne soit plus appelé `application:didReceiveRemoteNotification:fetchCompletionHandler:` lorsqu’une notification push est cliqué. Pour cette raison, si vous ne mettez pas à jour la création sur iOS 10+ et utilisez l’infrastructure `UserNotifications`, vous devez utiliser Braze des deux délégués de style ancien, ce qui constitue une rupture par rapport à notre intégration précédente.
 
-Pour les applications conçues avec des SDK < iOS 10, suivez les instructions suivantes :
+Pour les apps créées à partir des SDK < iOS 10, utilisez les instructions suivantes :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 Pour activer le suivi d’ouverture sur les notifications push, ajoutez le code suivant à la méthode `application:didReceiveRemoteNotification:fetchCompletionHandler:` de votre application :
 

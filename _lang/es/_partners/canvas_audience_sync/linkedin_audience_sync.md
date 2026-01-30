@@ -32,16 +32,20 @@ Debes asegurarte de que tienes los siguientes elementos creados, completados o a
 | Requisito | Origin | Descripción |
 | --- | --- | --- |
 | Cuenta publicitaria en LinkedIn | [LinkedIn](https://www.linkedin.com/campaignmanager) | Una cuenta publicitaria activa en LinkedIn vinculada a tu marca.<br><br>Asegúrate de que has aceptado las condiciones pertinentes de LinkedIn para acceder a esa cuenta y utilizarla, y de que tu administrador de LinkedIn te ha concedido los permisos adecuados para gestionar Audiencias. |
-| Términos y políticas de LinkedIn | LinkedIn | Aceptas cumplir cualquiera de los términos, políticas, directrices y documentación requeridos por LinkedIn en relación con tu uso de la Sincronización de audiencias de LinkedIn, incluidos los términos, políticas, directrices y documentación incorporados por referencia a los mismos, que pueden incluir los de LinkedIn: Condiciones de los servicios, Acuerdo de anuncios, Acuerdo de procesamiento de datos y Directrices de la comunidad profesional. |
+| Términos de LinkedIn & Políticas | LinkedIn | Aceptas cumplir cualquiera de los términos, políticas, directrices y documentación requeridos por LinkedIn en relación con tu uso de la Sincronización de audiencias de LinkedIn, incluidos los términos, políticas, directrices y documentación incorporados por referencia a los mismos, que pueden incluir los de LinkedIn: Condiciones de los servicios, Acuerdo de anuncios, Acuerdo de procesamiento de datos y Directrices de la comunidad profesional. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integración
 
 ### Paso 1: Conéctate a LinkedIn
 
+{% alert important %}
+Debes tener el [ permiso "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) para conectar LinkedIn a tu cuenta Braze.
+{% endalert %}
+
 En el panel de Braze, ve a **Socios tecnológicos** y selecciona **LinkedIn**. En la sección **Sincronizar audiencia de LinkedIn**, selecciona **Conectar LinkedIn**.
 
-![La página de tecnología de LinkedIn en Braze incluye una sección de resumen y otra de sincronización con la audiencia de LinkedIn con el botón de LinkedIn conectado.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}
+![La página de tecnología de LinkedIn en Braze incluye una sección de resumen y otra de sincronización de audiencia de LinkedIn con el botón LinkedIn conectado.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}
 
 A continuación, se te redirigirá a la página LinkedIn OAuth para que autorices a Braze los permisos relacionados con tu integración de Sincronización de audiencia. Cuando hayas seleccionado **Confirmar**, se te redirigirá de nuevo a Braze para que selecciones las cuentas de anuncios de LinkedIn con las que deseas sincronizar. 
 
@@ -63,7 +67,7 @@ Si has recopilado el [IDFA de iOS a través del SDK de Braze]({{site.baseurl}}/d
 
 Si estás recopilando `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, o cualquier otro atributo personalizado relevante, debes incluirlos dentro de tus criterios de entrada en Canvas como filtro:
 
-![Un Canvas con una audiencia de entrada de "opted_in_marketing" igual a "true".]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
+![Un Canvas con una audiencia de entrada de "opted_in_marketing" es igual a "verdadero".]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
 
 Para saber más sobre cómo cumplir estas leyes de Protección de Datos dentro de la plataforma Braze, consulta la [Asistencia Técnica sobre Protección de Datos]({{site.baseurl}}/dp-technical-assistance/).
 
@@ -71,20 +75,20 @@ Para saber más sobre cómo cumplir estas leyes de Protección de Datos dentro d
 
 Añade un componente en tu Canvas y selecciona Sincronizar audiencia. Haga clic en el botón **Público personalizado** para abrir el editor de componentes.
 
-![El editor Canvas con la lista de componentes disponibles.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![El componente de Sincronización de Audiencias seleccionado.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
+![El editor de Canvas con la lista de componentes disponibles.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![El componente de Sincronización de Audiencias seleccionado.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
 
 ### Paso 4: Configuración de la sincronización
 
 Selecciona **LinkedIn** como socio de Sincronización de audiencia deseado.
 
-![Los detalles de "Configurar la sincronización de la audiencia" con los múltiples socios a elegir.]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
+![Los detalles de "Configurar sincronización de audiencia" con los múltiples socios a elegir.]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
 
 A continuación, selecciona la cuenta de anuncios de LinkedIn que desees. En el desplegable **Elegir una audiencia nueva o existente**, escribe el nombre de una audiencia nueva o existente.
 
 ![Sincronización de la audiencia con LinkedIn con Braze seleccionada como cuenta publicitaria.]({% image_buster /assets/img/linkedin/linkedin20.png %})
 
 {% tabs %}
-{% tab Crear una nueva audiencia %}
+{% tab Create a New Audience %}
 
 **Crear una nueva audiencia**<br>
 Introduce un nombre para la nueva audiencia, selecciona **Añadir usuarios a la audiencia** y selecciona los campos que deseas sincronizar con LinkedIn. Para esta integración, actualmente admitimos lo siguiente: 
@@ -94,16 +98,16 @@ Introduce un nombre para la nueva audiencia, selecciona **Añadir usuarios a la 
 
 A continuación, guarda tu audiencia haciendo clic en el botón **Crear audiencia** situado en la parte inferior del editor de pasos.
 
-![Un ejemplo de audiencia de "clientes potenciales" con la cuenta de anuncios Braze seleccionada, la audiencia de "clientes potenciales", la acción para añadir usuarios a la audiencia y el correo electrónico, el GAID de Android y el nombre y apellidos como campos que deben coincidir.]({% image_buster /assets/img/linkedin/linkedin10.png %})
+![Un ejemplo de audiencia de "clientes potenciales" con la cuenta de anuncios Braze seleccionada, la audiencia de "clientes potenciales", la acción para añadir usuarios a la audiencia, y el correo electrónico, el GAID de Android y el nombre y apellidos como campos que deben coincidir.]({% image_buster /assets/img/linkedin/linkedin10.png %})
 
-Los usuarios recibirán una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si surgen errores durante este proceso. Los usuarios también pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
+Braze muestra una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si se producen errores. Los usuarios pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
 
 ![Confirmación de que se ha creado la audiencia de "clientes potenciales".]({% image_buster /assets/img/linkedin/linkedin9.png %})
 
 Cuando lanzas un Canvas con una nueva audiencia, Braze sincroniza a los usuarios casi en tiempo real a medida que entran en el componente Sincronización de Audiencias.
 
 {% endtab %}
-{% tab Sincronización con un público existente %}
+{% tab Sync with an Existing Audience %}
 
 **Sincronízate con una audiencia existente**<br>
 Braze también ofrece la posibilidad de añadir usuarios a las audiencias existentes de LinkedIn para confirmar que dichas audiencias están actualizadas. Para sincronizar con una audiencia existente, escribe el nombre de la audiencia existente en el desplegable y selecciona **Añadir a la audiencia**. A continuación, Braze añadirá usuarios casi en tiempo real a medida que entren en el componente Audience Sync.
@@ -119,13 +123,13 @@ Una vez que hayas configurado la Sincronización de tu Audiencia con LinkedIn, �
 
 Puedes ver la audiencia en LinkedIn entrando en tu cuenta de publicidad y seleccionando **Audiencias** en la sección **Activos** de la navegación. En la página **Audiencias**, puedes ver el tamaño de cada audiencia después de alcanzar más de 300 miembros.
 
-![Página de LinkedIn que enumera las siguientes métricas para la audiencia dada.]({% image_buster /assets/img/linkedin/linkedin8.png %})
+![Página de LinkedIn que muestra las siguientes métricas para la audiencia dada.]({% image_buster /assets/img/linkedin/linkedin8.png %})
 
 ## Consideraciones sobre la sincronización de usuarios y el límite de velocidad
 
-A medida que los usuarios alcancen el Paso de sincronización de audiencia, Braze sincronizará a estos usuarios casi en tiempo real respetando los límites de velocidad de la API de LinkedIn. En la práctica, Braze intentará procesar por lotes el mayor número de usuarios cada 5 segundos antes de enviarlos a LinkedIn.
+A medida que los usuarios alcanzan el paso Sincronización de audiencia, Braze los sincroniza casi en tiempo real respetando los límites de velocidad de la API de LinkedIn. Braze procesa por lotes el mayor número posible de usuarios cada 5 segundos antes de enviarlos a LinkedIn.
 
-El límite de velocidad de la API de LinkedIn establece no más de diez consultas por segundo y 100.000 usuarios por solicitud. Si un cliente de Braze alcanza este límite de velocidad, Braze the Canvas reintentará la sincronización durante unas 13 horas. Si la sincronización no es posible, estos usuarios aparecen en la lista de la métrica Users Errored.
+El límite de velocidad de la API de LinkedIn no permite más de diez consultas por segundo y 100.000 usuarios por solicitud. Si un cliente alcanza este límite, Braze reintenta la sincronización durante un máximo de unas 13 horas. Si la sincronización sigue sin ser posible, Braze lista a estos usuarios en la métrica Usuarios erróneos.
 
 ## Comprender los análisis
 
@@ -170,7 +174,7 @@ Puedes desconectar y volver a conectar tu cuenta de LinkedIn en la página del s
 
 ### ¿Por qué no se puede iniciar mi Canvas?
 
-Confirma que tu cuenta publicitaria de LinkedIn se ha conectado correctamente a Braze en la página del socio de LinkedIn. A continuación, asegúrate de haber seleccionado una cuenta de publicidad, introducido un nombre para la nueva audiencia y seleccionado los campos que coincidan.
+Confirma que tu cuenta publicitaria de LinkedIn se ha conectado correctamente a Braze en la página del socio de LinkedIn. A continuación, asegúrate de haber seleccionado una cuenta publicitaria, introducido un nombre para la nueva audiencia y seleccionado los campos que coincidan.
 
 ### ¿Cómo sé si los usuarios se han emparejado después de pasar los usuarios a LinkedIn?
 

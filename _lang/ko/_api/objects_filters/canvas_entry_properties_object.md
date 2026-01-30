@@ -1,5 +1,5 @@
 ---
-nav_title: "캔버스 항목 속성 개체"
+nav_title: "캔버스 항목 속성 객체"
 article_title: API 캔버스 엔트리 속성 객체
 page_order: 2
 page_type: reference

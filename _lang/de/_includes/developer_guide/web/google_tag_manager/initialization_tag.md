@@ -6,17 +6,17 @@ Bevor Sie diese Methode der Integration nutzen können, müssen Sie [ein Konto u
 
 Wählen Sie in [Google Tag Manager:](https://tagmanager.google.com/)in Ihren Workspace und wählen Sie dann **Templates** aus. Wählen Sie im Bereich **Tag-Vorlage** die Option **Galerie suchen** aus.
 
-![Die Templates-Seite für einen beispielhaften Workspace in Google Tag Manager.]({% image_buster /assets/img/web-gtm/search_tag_template_gallery.png %}){: style="max-width:95%;"}
+![Die Templates-Seite für einen beispielhaften Workspace in Google Tag Manager:in.]({% image_buster /assets/img/web-gtm/search_tag_template_gallery.png %}){: style="max-width:95%;"}
 
 ### Schritt 2: Fügen Sie das Template für den Tag der Initialisierung hinzu
 
-Suchen Sie in der Galerie der Templates nach `braze-inc` und wählen Sie **Braze Initialization Tag** aus.
+Suchen Sie in der Template-Galerie nach `braze-inc` und wählen Sie dann **Braze Initialization Tag** aus.
 
-![Die Template-Galerie mit den verschiedenen 'braze-inc' Templates.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
+![Die Template-Galerie mit den verschiedenen 'braze-inc'-Templates.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
 
 Wählen Sie **Zum Workspace hinzufügen** > **Hinzufügen**.
 
-![Die Seite 'Braze Initialization Tag' im Google Tag Manager.]({% image_buster /assets/img/web-gtm/add_to_workspace.png %}){: style="max-width:70%;"}
+![Die Seite 'Braze Initialization Tag' in Google Tag Manager:in.]({% image_buster /assets/img/web-gtm/add_to_workspace.png %}){: style="max-width:70%;"}
 
 ### Schritt 3: Konfigurieren Sie den Tag
 
@@ -26,7 +26,7 @@ Wählen Sie im Bereich **Templates** Ihre neu hinzugefügte Vorlage aus.
 
 Wählen Sie das Bleistiftsymbol aus, um das Dropdown-Menü **Tag-Konfiguration** zu öffnen.
 
-![Die Kachel "Tag-Konfiguration" mit dem Bleistift-Symbol.]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
+![Die Kachel Tag-Konfiguration mit dem Bleistift-Symbol.]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
 
 Geben Sie die erforderlichen Mindestinformationen ein:
 

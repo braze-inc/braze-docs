@@ -1,5 +1,5 @@
 ---
-nav_title: "Objeto de propiedades de entrada en Canvas"
+nav_title: "Objeto de propiedades de entrada del lienzo"
 article_title: Objeto de propiedades de entrada de API de Canvas
 page_order: 2
 page_type: reference
@@ -14,7 +14,7 @@ description: "Este artículo explica el objeto de propiedades de entrada Braze C
 > Cuando utilices uno de los puntos finales para desencadenar o programar un Canvas a través de la API, puedes proporcionar un mapa de claves y valores para personalizar los mensajes enviados por los primeros pasos de tu Canvas, en el espacio de nombres `canvas_entry_properties`.
 
 {% alert note %}
-El objeto Propiedades de entrada del Canvas tiene un límite de tamaño máximo de 50 KB.
+El objeto Propiedades de entrada del lienzo tiene un límite de tamaño máximo de 50 KB.
 {% endalert %}
 
 ## Cuerpo del objeto

@@ -83,7 +83,7 @@ Además de los atributos predeterminados de usuario, Braze también te permite d
 ### Establecer atributos personalizados
 
 {% tabs local %}
-{% tab Cadena %}
+{% tab String %}
 Para establecer un atributo personalizado con un valor `string`:
 
 {% subtabs global %}
@@ -110,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Enteros %}
+{% tab Integers %}
 Para establecer un atributo personalizado con un valor `int`:
 
 {% subtabs global %}
@@ -169,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Puntos flotantes %}
+{% tab Floating-points %}
 Para establecer un atributo personalizado con un valor `float`:
 
 {% subtabs global %}
@@ -223,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Booleano %}
+{% tab Boolean %}
 Para establecer un atributo personalizado con un valor `boolean`:
 
 {% subtabs global %}
@@ -251,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Fecha %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -289,7 +289,7 @@ Las fechas pasadas a Braze con este método deben estar en el formato [ISO 8601]
 {% endalert %}
 
 {% endtab %}
-{% tab Matriz %}
+{% tab Array %}
 
 El número máximo de elementos de las matrices de atributos personalizadas está predeterminado en 25. El máximo para matrices individuales puede aumentarse hasta 100 en el panel de Braze, en **Configuración de datos** > **Atributos personalizados**. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla. Para obtener más información sobre las matrices de atributos personalizadas y su comportamiento, consulta nuestra documentación sobre [Matrices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
 

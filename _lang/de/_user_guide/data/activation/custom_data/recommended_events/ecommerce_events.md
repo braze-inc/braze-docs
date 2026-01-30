@@ -188,7 +188,7 @@ Wenn es zwei Warenkörbe gibt, fügen Sie beide dem zusammengeführten Nutzer:in
 
 | Eigenschaftsname | Erforderlich | Datentyp | Beschreibung | 
 |---|---|---|---|
-| `cart_id` | Ja | String | Eindeutiger Bezeichner für den Warenkorb. Wenn kein Wert übergeben wird, legen wir einen Standardwert für die Abbildung des Nutzer:innen-Warenkorbs fest (der für alle Warenkorb-, Checkout- und Bestell-Ereignisse gilt). |
+| `cart_id` | Ja | String | Wenn Sie keine Plattform eines Drittanbieters verwenden, die eine `cart_id` bereitstellt, können Sie die [Braze Session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. |
 | `total_value` | Ja | Gleitkommazahl | Gesamtwert des Warenkorbs. | 
 | `currency` | Ja | String | Die Währung, in der der Preis des Produkts angegeben ist (z.B. "USD" oder "EUR"), im [Format ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
 | `products` | Ja | Array |  |
@@ -364,7 +364,7 @@ Sie können das Ereignis "Checkout started" verwenden, um Kunden:in zu retargete
 | Eigenschaftsname | Erforderlich | Datentyp | Beschreibung | 
 |---|---|---|---|
 | `checkout_id` | Ja | String | Eindeutiger Bezeichner für den Checkout. |
-| `cart_id` | Kein:e | String | Eindeutiger Bezeichner für den Warenkorb. Wenn kein Wert übergeben wird, legen wir einen Standardwert für die Abbildung des Nutzer:in-Warenkorbs fest (der für alle Warenkorb-, Checkout- und Bestell-Ereignisse gilt). | 
+| `cart_id` | Kein:e | String | Wenn Sie keine Plattform eines Drittanbieters verwenden, die eine `cart_id` bereitstellt, können Sie die [Braze Session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. | 
 | `total_value` | Ja | Gleitkommazahl | Gesamtwert des Warenkorbs. |
 | `currency` | Ja | String | Währung, in der der Warenkorb bewertet wird. |
 | `products` | Ja | Array von Objekten |  |
@@ -530,7 +530,7 @@ Sie können das Ereignis "Bestellung aufgegeben" verwenden, um zu triggern, wenn
 | Eigenschaftsname | Erforderlich | Datentyp | Beschreibung | 
 |---|---|---|---|
 | `order_id` | Ja | String | Eindeutiger Bezeichner für die aufgegebene Bestellung. |
-| `cart_id` | Kein:e | String | Eindeutiger Bezeichner für den Warenkorb. Wenn kein Wert übergeben wird, legen wir einen Standardwert für die Abbildung des Nutzer:innen-Warenkorbs fest (der für alle Warenkorb-, Checkout- und Bestell-Ereignisse gilt). |
+| `cart_id` | Kein:e | String | Wenn Sie keine Plattform eines Drittanbieters verwenden, die eine `cart_id` bereitstellt, können Sie die [Braze Session ID]({{site.baseurl}}/developer_guide/analytics/tracking_sessions) verwenden. |
 | `total_value` | Ja | Gleitkommazahl | Gesamtwert des Warenkorbs. | 
 | `currency` | Ja | String | Währung, in der der Warenkorb bewertet wird. |
 | `total_discounts` | Kein:e | Gleitkommazahl | Gesamtbetrag der auf die Bestellung angewandten Rabatte. | 
@@ -546,12 +546,11 @@ Sie können das Ereignis "Bestellung aufgegeben" verwenden, um zu triggern, wenn
 | `metadata` | Kein:e | Objekt | Zusätzliches Metadatenfeld über das Produkt, das der Kund:in für seine Anwendungsfälle hinzufügen möchte. Für Shopify werden wir SKU hinzufügen. <br> Das Limit basiert auf unserem allgemeinen Limit für Event-Eigenschaften von 50kb. |
 | `sku` | Kein:e | String | (nur Shopify) Shopify SKU. Dies kann als Feld für die Katalog ID konfiguriert werden. |
 | `source` | Ja | String | Quelle, aus der das Ereignis stammt. (Bei Shopify ist dies die Storefront). |
-| `metadata` | Kein:e | Objekt |  |
 | `order_status_url` | Kein:e | String | URL, um den Status der Bestellung einzusehen. |
 | `order_number` | Kein:e | String | (nur Shopify) Eindeutige Bestellnummer für die aufgegebene Bestellung. |
 | `tags` | Kein:e | Array | (nur Shopify) Tags für Bestellungen
 | `referring_site` | Kein:e | String | (nur Shopify) Die Website, von der die Bestellung stammt (z.B. Meta). |
-| `payment_gateway_names` | Kein:e | Array | (nur Shopify) Quelle des Bezahlsystems (z.B. Point of Sale oder Mobile). |
+| `payment_gateway_names` | Kein:e | Array | (nur Shopify) Quelle des Zahlungssystems (z.B. Point of Sale oder Mobile). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Beispielhafte Objekte

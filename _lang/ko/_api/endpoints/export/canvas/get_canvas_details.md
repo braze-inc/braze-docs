@@ -18,7 +18,7 @@ description: "이 기사는 Export Canvas 세부정보 Braze 엔드포인트에 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `canvas.details` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -30,7 +30,7 @@ description: "이 기사는 Export Canvas 세부정보 Braze 엔드포인트에 
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | 필수 | 문자열 | [캔버스 API 식별자]({{site.baseurl}}/api/identifier_types/) 참조 |
+| `canvas_id` | Required | 문자열 | [캔버스 API 식별자]({{site.baseurl}}/api/identifier_types/) 참조 |
 | `post_launch_draft_version` | 선택 사항 | 부울 | 출시 후 초안이 있는 캔버스의 경우, 이를 `true`로 설정하면 사용 가능한 초안 변경 사항이 표시됩니다. 기본값은 `false`입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## 응답
 
 {% alert note %}
-모든 캔버스 단계에는 `next_paths` 필드가 있으며, 이는 `{name, next_step_id}` 데이터의 배열입니다. 전체 단계 및 메시지 단계의 경우 `next_step_ids` 필드가 존재하지만 다른 캔버스 흐름 단계에 대한 데이터는 포함되지 않습니다.
+모든 캔버스 단계에는 `next_paths` 필드가 있으며, 이는 `{name, next_step_id}` 데이터의 배열입니다. 메시지 단계의 경우 `next_step_ids` 필드가 표시되지만 다른 캔버스 단계에 대한 데이터는 포함되지 않습니다.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

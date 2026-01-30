@@ -6,4 +6,4 @@ Stille Benachrichtigungen sind über die Braze [Messaging API]({{site.baseurl}}/
 
 Stille Benachrichtigungen sind auch im Dashboard verfügbar. Um eine stille Benachrichtigung zu senden, stellen Sie sicher, dass das Titel- und Textfeld der Benachrichtigung leer sind (siehe Abbildung):
 
-![]({% image_buster /assets/img_archive/SilentPushExample.png %} "Beispiel für stille Push-Benachrichtigungen -- Android")
+![]({% image_buster /assets/img_archive/SilentPushExample.png %} "Silent Push Notification Example -- Android")

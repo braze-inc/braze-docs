@@ -57,7 +57,7 @@ Weitere Informationen finden Sie in der [Dokumentation von Apple](https://develo
 Nachdem Sie die App aktiviert haben, ruft iOS die Methode [`application:openURL:options:`](https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc) auf. Das wichtige Argument ist das [NSURL-Objekt](https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL).
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -111,11 +111,11 @@ Die ATS-Konformität wird für Links durchgesetzt, die innerhalb der mobilen App
 Sie können ATS auf eine der folgenden Arten handhaben, aber wir empfehlen, **die ATS-Anforderungen** zu erfüllen.
 
 {% tabs local %}
-{% tab Erfüllen Sie %}
+{% tab Comply %}
 Ihre Integration in Braze kann die ATS-Anforderungen erfüllen, indem Sie sicherstellen, dass alle bestehenden Links, zu denen Sie Nutzer weiterleiten (z. B. durch In-App-Nachrichten und Push-Kampagnen), die ATS-Anforderungen erfüllen. Es gibt zwar Möglichkeiten, die ATS-Beschränkungen zu umgehen, aber unsere Empfehlung ist sicherzustellen, dass alle verlinkten URLs ATS-konform sind. Da Apple immer mehr Wert auf die Sicherheit von Anwendungen legt, werden die folgenden Ansätze zur Zulassung von ATS-Ausnahmen von Apple nicht garantiert unterstützt.
 {% endtab %}
 
-{% tab Teilweise deaktivieren %}
+{% tab Partially disable %}
 Sie können zulassen, dass eine Teilmenge von Links mit bestimmten Domains oder Schemata als Ausnahmen von den ATS-Regeln behandelt werden. Ihre Integration in Braze erfüllt die ATS-Anforderungen, wenn jeder Link, den Sie in einem Messaging-Kanal von Braze verwenden, entweder ATS-konform ist oder mit einer Ausnahme behandelt wird.
 
 Um eine Domain als Ausnahme des ATS hinzuzufügen, fügen Sie Folgendes in die Datei `Info.plist` Ihrer App ein:
@@ -141,7 +141,7 @@ Um eine Domain als Ausnahme des ATS hinzuzufügen, fügen Sie Folgendes in die D
 Weitere Informationen finden Sie in Apples Artikel über [Sicherheitsschlüssel für den Transport von Apps](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33).
 {% endtab %}
 
-{% tab Vollständig deaktivieren %}
+{% tab Fully disable %}
 Sie können ATS ganz abschalten. Beachten Sie, dass dies aufgrund des verlorenen Sicherheitsschutzes und der zukünftigen iOS-Kompatibilität nicht zu empfehlen ist. Um ATS zu deaktivieren, fügen Sie Folgendes in die Datei `Info.plist` Ihrer App ein:
 
 ```html
@@ -161,7 +161,7 @@ Das SDK kodiert Links in Prozent, um gültige `URL`s zu erstellen. Alle Link-Zei
 Um einen verschlüsselten Link zu dekodieren, verwenden Sie die `String`-Eigenschaft [`removingPercentEncoding`](https://developer.apple.com/documentation/swift/stringprotocol/removingpercentencoding). Sie müssen auch `true` in `BrazeDelegate.braze(_:shouldOpenURL:)` eingeben. Um die Verarbeitung der URL durch Ihre App zu triggern, ist ein Aufruf zur Aktion erforderlich. Zum Beispiel:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -195,7 +195,7 @@ Um Nutzer aus Ihrer App in die iOS-Einstellungen zu bringen:
 3. Wenn Sie angepasste schemabasierte Deeplinks verwenden, fügen Sie den folgenden Code zu Ihrer `application:openURL:options:`-Methode hinzu:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -262,7 +262,7 @@ Das SDK fragt die `apple-app-site-association`-Datei Ihrer Domain nicht ab. Es u
 Hier ist ein Beispiel mit `BrazeDelegate`. Weitere Informationen finden Sie unter [Braze Swift SDK referenzieren](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate).
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {

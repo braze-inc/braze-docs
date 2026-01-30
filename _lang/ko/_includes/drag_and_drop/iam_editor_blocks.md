@@ -11,7 +11,7 @@
 | 제목 | Enters a title text into the message. |
 | 단락  | Enters a paragraph text into the message. |
 | 버튼 | 표준 버튼을 추가합니다. 이 블록의 속성을 사용하면 편집, 링크 설정 및 분석 로깅을 수행할 수 있습니다. |
-| Radio Button | 사용자가 선택할 수 있는 옵션 목록을 추가합니다. 제출되면 사용자 프로필은 관련 사용자 지정 속성을 기록합니다. |
+| Radio Button | 사용자가 선택할 수 있는 옵션 목록을 추가합니다. 제출되면 고객 프로필에 관련 커스텀 속성이 기록되며, 이 속성은 문자열로 저장되어야 합니다. 다른 데이터 유형이 포함된 커스텀 속성은 사용자 프로필에 저장되지 않습니다. |
 | 이미지 | [미디어 라이브러리에서]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) 이미지를 삽입합니다. |
 | 링크 | Inserts a hyperlink that users can click to navigate to a specified URL. Can be embedded within text or standalone. |
 | 공백 | 다른 블록 사이에 공간이나 패딩을 추가합니다. |
@@ -20,7 +20,7 @@
 | 이메일 캡처 | Inserts a form field for email addresses. When submitted, the email address is added to that user's profile in Braze. |
 | Dropdown      | Inserts a dropdown with a pre-defined list of items from which users can select one. You can add any custom attribute strings to the list. |
 | Checkbox      | Inserts a checkbox. If the user checks the box, the block's attribute is set to `true`. If left unchecked, its attribute is set to `false`. |
-| 체크박스 그룹| 사용자는 제시된 여러 선택지 중에서 선택할 수 있습니다. 값은 정의된 배열 커스텀 속성에 설정되거나 추가됩니다. |
+| 확인란 그룹| 사용자는 제시된 여러 선택지 중에서 선택할 수 있습니다. 값은 정의된 배열 커스텀 속성에 설정되거나 추가됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## 등록정보
@@ -96,7 +96,7 @@
 
 | Property | 설명 |
 | --- | --- |
-| 구독 그룹 | 사용자가 전화번호를 수집하여 가입할 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/) (모든 국가의 번호를 수집할 수 있는 옵션 포함) |
+| 구독 그룹 | 사용자의 전화번호를 수집하여 가입할 [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) 또는 [WhatsApp 구독 그룹]({{site.baseurl}}/whatsapp_subscription_groups/) (모든 국가의 번호를 수집할 수 있는 옵션 포함) |
 | Text alignment | 텍스트를 왼쪽, 가운데, 오른쪽 또는 맞춤으로 정렬하도록 이동합니다. |
 | Placeholder text | A placeholder phone number to display |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

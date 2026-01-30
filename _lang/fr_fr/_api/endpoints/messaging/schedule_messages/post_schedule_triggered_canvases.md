@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Planification des toiles déclenchées par l'API"
+nav_title: "POST : Planifier des Canvas déclenchés par API"
 article_title: "POST : Planification des toiles déclenchées par l'API"
 search_tag: Endpoint
 page_order: 4
@@ -28,7 +28,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 
 ## Limite de débit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Corps de la demande
 

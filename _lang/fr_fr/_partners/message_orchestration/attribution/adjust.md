@@ -43,7 +43,7 @@ Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplica
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
+Prior to February 2023, our Adjust attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation because there is no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -74,19 +74,19 @@ Si vous prévoyez d'envoyer des événements post-installation d'Adjust vers Bra
 
 Dans Braze, accédez à **Intégrations** > **Partenaires technologiques** et sélectionnez **Adjust**. 
 
-Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés dans l'étape suivante lors de la configuration d'un postback dans le tableau de bord d'Adjust.<br><br>![Cette image montre la boîte "Importation de données pour attribution d'installation" disponible dans la page de la technologie Adjust. Dans cette boîte, la clé d'importation des données et l'endpoint REST sont affichés.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
+Ici, vous trouverez l’endpoint REST et générerez votre clé d'importation des données Braze. Une fois la clé générée, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation des données et l'endpoint REST sont utilisés dans l'étape suivante lors de la configuration d'un postback dans le tableau de bord d'Adjust.<br><br>![Cette image montre la boîte "Importation de données pour attribution d'installation" disponible dans la page de la technologie Adjust. Dans cette zone, vous pouvez voir la clé d'importation des données et l’endpoint REST.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Étape 3 : Configurer Braze dans Adjust
 
 1. Dans le tableau de bord d'Adjust, accédez à **Paramètres de l'application** et accédez à **Configuration des partenaires**, puis **Ajouter des partenaires**.
 2. Sélectionnez **Braze (anciennement Appboy)** et fournissez la clé d'importation des données et l'endpoint REST de Braze.
-3. Cliquez sur **enregistrer et fermer**.
+3. Cliquez sur **Enregistrer & Fermer**.
 
-### Étape 4 : Confirmez l'intégration
+### Étape 4 : Confirmez l'intégration
 
-Une fois que Braze reçoit les données d'attribution d’Adjust, l'indicateur d’état de connexion de la page des partenaires technologiques d’Adjust dans Braze passera de "Non connecté" à "Connecté". Un horodatage de la dernière requête réussie sera également inclus. 
+Après que Braze a reçu des données d'attribution de Adjust, l'indicateur de connexion d'état sur la page des partenaires technologiques de Adjust dans Braze passe de " Non connecté " à " Connecté " et inclut un horodatage de la dernière demande réussie.
 
-Notez que cela ne se produira pas tant que nous n'aurons pas reçu les données relatives à une installation attribuée. Les installations organiques, qui doivent être exclues du système de communication automatisé d’Adjust, sont ignorées par notre API et ne sont pas comptabilisées pour déterminer si une connexion a été établie avec succès.
+Ce statut ne change que lorsque Braze reçoit des données sur une attribution d'installation. Braze ignore les installations organiques (il les exclut du postback d'Adjust) et ne les compte pas lorsqu'il détermine si la connexion est réussie.
 
 ## Champs de données disponibles
 

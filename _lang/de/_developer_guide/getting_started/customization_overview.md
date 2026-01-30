@@ -1,5 +1,5 @@
 ---
-nav_title: Anpassungen Übersicht
+nav_title: Anpassungsübersicht
 article_title: Anpassungen Übersicht
 page_order: 10
 description: "Dieser Referenzartikel behandelt die wesentlichen Konzepte zur Anpassung und Erweiterung der Messaging-Kanäle des SDK."
@@ -34,7 +34,7 @@ table td {
 {% tabs %}
 {% tab Crawl %}
 
-![Beispiel einer Finanz-App, die Karten mit Bildunterschriften und nur Bildinhalt zeigt]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Beispiel einer Finanz-App mit Content-Cards mit Bildunterschriften und nur Bild]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Beim Crawl-Ansatz haben die Marketer die Anpassung in der Hand. Zwar ist im Vorfeld ein gewisser Entwicklungsaufwand erforderlich, um die Nachrichtenkanäle von Braze in Ihre App oder Website zu integrieren, aber mit diesem Ansatz können Sie schneller mit der Arbeit beginnen. 
 
@@ -78,7 +78,7 @@ Marketer bestimmen über das Dashboard den Inhalt, die Zielgruppe und den Zeitpu
 {% endtab %}
 {% tab Walk %}
 
-![Beispiel für eine Finanz-App mit Inhaltskarten und Anpassungen]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Beispiel für eine Finanz-App mit Content-Cards mit Anpassung]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Der Walk-Ansatz ist ein hybrider Ansatz für die Implementierung, bei dem sowohl Marketing- als auch Entwicklerteams zusammenarbeiten, um das Branding Ihrer App oder Website anzupassen. 
 
@@ -124,7 +124,7 @@ Marketer behalten weiterhin die Kontrolle über die Zielgruppe, den Inhalt, das 
 {% endtab %}
 {% tab Run %}
 
-![Beispiel einer Finanz-App mit benutzerdefinierten Inhaltskarten und E-Mail-Erfassung]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Beispiel für eine Finanz-App mit angepassten Content-Cards und E-Mail-Erfassung]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Beim Run-Ansatz übernehmen die Entwickler die Führung und haben die volle Kontrolle über das Nutzererlebnis. Der benutzerdefinierte Code bestimmt, wie die Nachrichten aussehen, wie sie sich verhalten und wie sie mit anderen Nachrichtenkanälen interagieren (z. B. Auslösen einer Content Card auf der Grundlage einer Push-Benachrichtigung).
 

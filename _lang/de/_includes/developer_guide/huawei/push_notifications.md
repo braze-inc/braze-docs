@@ -95,7 +95,7 @@ Erstellen Sie auf der Seite **Kampagnen** eine neue Kampagne und wählen Sie **P
 
 Nachdem Sie Ihre Kampagne benannt haben, wählen Sie **Android Push** als Push-Plattform.
 
-![Der Composer für die Erstellung von Kampagnen, der die verfügbaren Push-Plattformen anzeigt.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
+![Der Composer zur Erstellung von Kampagnen, der die verfügbaren Push-Plattformen anzeigt.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
 
 Als nächstes stellen Sie Ihre Push-Kampagne mit einem Titel und einer Nachricht zusammen.
 
@@ -103,7 +103,7 @@ Als nächstes stellen Sie Ihre Push-Kampagne mit einem Titel und einer Nachricht
 
 Geben Sie auf dem Tab **Test** Ihre Nutzer:innen ID ein, die Sie in Ihrer App mit der [Methode`changeUser(USER_ID_STRING)` ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id) festgelegt haben, und klicken Sie auf **Test senden**, um einen Push zu senden.
 
-![Der Tab "Test" im Composer zur Erstellung von Kampagnen zeigt Ihnen, dass Sie eine Nachricht an sich selbst senden können, indem Sie Ihre Nutzer-ID in das Feld "Einzelne Nutzer hinzufügen" eingeben.]({% image_buster /assets/img/huawei/huawei-test-send.png %})
+![Auf dem Tab "Test" im Composer zur Erstellung von Kampagnen können Sie eine Nachricht an sich selbst senden, indem Sie Ihre Nutzer:innen ID in das Feld "Einzelne Nutzer hinzufügen" eingeben.]({% image_buster /assets/img/huawei/huawei-test-send.png %})
 
 Zu diesem Zeitpunkt sollten Sie eine Push-Benachrichtigung von Braze auf Ihrem Huawei (HMS) Gerät erhalten.
 

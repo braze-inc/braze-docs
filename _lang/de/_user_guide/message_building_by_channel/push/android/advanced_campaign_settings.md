@@ -154,7 +154,7 @@ Android-Push-Benachrichtigungen bieten ein optionales Feld, mit dem Sie festlege
 
 Außerdem können Android-Nutzer die Anzeige von Push-Benachrichtigungen auf dem Sperrbildschirm deaktivieren, indem sie die Datenschutzeinstellungen für Benachrichtigungen auf ihrem Gerät ändern. Diese Einstellung setzt die Sichtbarkeit der Push-Benachrichtigung außer Kraft.
 
-![Dashboard Push-Prioritätsstandort mit Enablement der Sichtbarkeit und Einstellung auf Privat.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Dashboard Push-Prioritätsort mit aktivierter Sichtbarkeit und der Einstellung Privat.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Unabhängig von der Sichtbarkeit werden alle Benachrichtigungen auf dem Sperrbildschirm des Benutzers angezeigt, wenn die Datenschutzeinstellung für Benachrichtigungen auf dem Gerät **Alle Inhalte anzeigen** lautet (Standardeinstellung). Ebenso werden Benachrichtigungen nicht auf dem Sperrbildschirm angezeigt, wenn der Datenschutz für Benachrichtigungen auf **Nicht anzeigen** eingestellt ist. Die Sichtbarkeit wirkt sich nur aus, wenn der Datenschutz für Ihre Benachrichtigungen auf **Sensible Inhalte ausblenden** eingestellt ist.
 

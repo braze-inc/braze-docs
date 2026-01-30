@@ -1,7 +1,7 @@
 ---
 nav_title: Duplicando
 article_title: Duplicando
-page_order: 5
+page_order: 5.5
 page_type: reference
 description: "Este artículo de referencia explica cómo duplicar tus campañas y tus Lienzos."
 tool:
@@ -25,7 +25,7 @@ También puedes [copiar tu campaña]({{site.baseurl}}/user_guide/engagement_tool
 {% tab campaign %}
 Para duplicar una campaña:
 
-1. Ve a **Mensajes** > Campañas.
+1. Ve a **Mensajes** > **Campañas**.
 2. Pasa el ratón por encima de la campaña y selecciona <i class="fas fa-gear"></i> **Más acciones**.
 3. Selecciona **Duplicar**.
 {% endtab %}

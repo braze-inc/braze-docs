@@ -1,6 +1,6 @@
 ---
-nav_title: Medición del tamaño del segmento
-article_title: Medir el tamaño de los segmentos
+nav_title: Medir el tamaño del segmento
+article_title: Medir el tamaño del segmento
 page_order: 5
 page_type: reference
 tool: 
@@ -8,46 +8,46 @@ tool:
 description: "Esta página explica cómo puedes controlar el número de miembros y el tamaño de tu segmento."
 ---
 
-# Medición del tamaño del segmento
+# Medir el tamaño del segmento
 
 > Esta página explica cómo puedes controlar el número de miembros y el tamaño de tu segmento.
 
 ## Cálculo de la pertenencia a un segmento
 
-Braze actualiza la pertenencia del usuario a un segmento a medida que los datos se envían a nuestros servidores y se procesan, normalmente de forma instantánea. La pertenencia a un segmento de un usuario no cambiará hasta que se haya procesado esa sesión. Por ejemplo, un usuario que cae en un segmento de usuarios caducados cuando se inicia la sesión por primera vez, saldrá inmediatamente del segmento de usuarios caducados cuando se procese la sesión.
+Braze actualiza la pertenencia a un segmento del usuario a medida que los datos se envían a nuestros servidores y se procesan, normalmente de forma instantánea. La pertenencia a un segmento de un usuario no cambiará hasta que se haya procesado esa sesión. Por ejemplo, un usuario que cae en un segmento de usuarios caducados cuando se inicia la sesión por primera vez, será desplazado inmediatamente fuera del segmento de usuarios caducados cuando se procese la sesión.
 
 ### Cálculo del total de usuarios accesibles
 
-Cada segmento muestra el número total de usuarios que pertenecen a ese segmento. Al filtrar por **Usuarios de todas las aplicaciones**, también muestra algunos de los canales de mensajería más utilizados (como el push web o el correo electrónico) y el número de usuarios accesibles para esos canales específicos. 
+Cada segmento muestra el número total de usuarios que son miembros de ese segmento. Al filtrar por **Usuarios de todas las aplicaciones**, también muestra algunos de los canales de mensajería más utilizados (como el push web o el correo electrónico) y el número de usuarios accesibles para esos canales específicos. 
 
-Es posible que el número de usuarios totales sea distinto del número de usuarios alcanzables por cada canal. Además, no todos los canales aparecen en la tabla de usuarios accesibles. Por ejemplo, las tarjetas de contenido, los webhooks y WhatsApp no se muestran en el desglose. Esto significa que el recuento total de usuarios alcanzables podría ser mayor que la suma de los usuarios de cada canal mostrado.
+Es posible que el número de usuarios totales sea diferente del número de usuarios alcanzables por cada canal. Además, no todos los canales aparecen en la tabla de usuarios accesibles. Por ejemplo, las tarjetas de contenido, los webhooks y WhatsApp no se muestran en el desglose. Esto significa que el recuento total de usuarios alcanzables podría ser mayor que la suma de los usuarios de cada canal mostrado.
 
-Tabla que muestra el total de usuarios accesibles desglosado por usuarios accesibles por correo electrónico, push de iOS, push de Android, push web y push de Kindle.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
+![Una tabla que muestra el total de usuarios accesibles desglosado por usuarios accesibles por correo electrónico, push de iOS, push de Android, push web y push de Kindle.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
-Para que un usuario aparezca como accesible a través de un canal determinado, debe tener ambos:
-* Una dirección de correo electrónico válida o un token de notificaciones push asociado a su perfil; y
-* Adhesión voluntaria o suscriptor a tu aplicación.
+Para que un usuario figure como localizable a través de un canal determinado, debe tener ambos:
+* Una dirección de correo electrónico válida o un token de notificaciones push asociado a su perfil, y
+* Adhesión voluntaria o suscripción a tu aplicación.
 
 Un mismo usuario puede pertenecer a diferentes grupos de usuarios accesibles. Por ejemplo, un usuario puede tener tanto una dirección de correo electrónico como un token de notificaciones push de Android válidos y estar adherido a ambos, pero no tener ningún token de notificaciones push de iOS asociado. La diferencia entre el total de usuarios accesibles y la suma de los distintos canales es el número de usuarios que cumplen los requisitos para el segmento, pero no son accesibles a través de esos canales de comunicación.
 
-## Estadísticas del tamaño de los segmentos
+## Estadísticas sobre el tamaño de los segmentos
 
 Las estadísticas estimadas se aproximan mediante el muestreo de sólo una parte de tu segmento, por lo que es de esperar que los tamaños estimados sean mayores o menores que el valor real, y que los espacios de trabajo más grandes tengan márgenes de error potencialmente mayores. Para obtener un recuento exacto de los usuarios de tu segmento, selecciona **Calcular estadísticas exactas**. La pertenencia exacta a un segmento siempre se calculará antes de que un segmento se vea afectado por un mensaje enviado en una campaña o Canvas. 
 
 Braze proporciona las siguientes estadísticas sobre el tamaño de los segmentos. 
 
-### Estadísticas del filtro
+### Estadísticas de filtrado
 
-Para cada grupo de filtrar, puedes ver los usuarios alcanzables estimados. Selecciona **Ampliar estadísticas adicionales del embudo** para ver un desglose por canales.
+Para cada grupo de filtros, puede ver los usuarios accesibles estimados. Seleccione **Ampliar estadísticas adicionales del embudo** para ver un desglose por canales.
 
-\![Un grupo de filtrado con un filtro para usuarios que hayan tenido exactamente una sesión de recuento.]({% image_buster /assets/img_archive/segment_filter_stats.png %}){: style="max-width:80%;"}
+![Un grupo de filtrado con un filtro para usuarios que han tenido exactamente un recuento de sesiones.]({% image_buster /assets/img_archive/segment_filter_stats.png %}){: style="max-width:80%;"}
 
 ## Estimación de usuarios alcanzables
 
 Puedes ver los usuarios alcanzables estimados de todo un segmento, incluyendo los recuentos de usuarios estimados para cada canal, en el panel lateral **Usuarios alcanzables**. Esta **estimación** te muestra un rango aproximado para el tamaño de tu segmento, y una estimación de qué porcentaje de tu base global de usuarios pertenece a este segmento. Ten en cuenta que las estadísticas estimadas se almacenan en caché durante 15 minutos, a menos que realices modificaciones en tu segmento, en cuyo caso las estadísticas estimadas se actualizarán automáticamente. También puedes ver un recuento exacto de los usuarios alcanzables (tanto para el segmento en general como por canal) seleccionando **Calcular estadísticas exactas**. 
 
 
-El panel "Usuarios accesibles" indica que hay entre 2,3 y 2,4 millones de usuarios estimados.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
+![El panel "Usuarios accesibles" indica que hay entre 2,3 y 2,4 millones de usuarios estimados.]({% image_buster /assets/img_archive/reachable_users_side_panel.png %})
 
 ### Consideraciones para el recuento de estimaciones
 
@@ -57,7 +57,7 @@ Si tienes una gran población de usuarios en tu espacio de trabajo, puede que ve
 
 Los segmentos muy pequeños tendrán un rango estimado que incluye 0, lo que significa que el porcentaje del total de usuarios puede redondearse a 0. En estos casos, **Calcular estadísticas exactas** te ayudará a ver un recuento exacto del tamaño de tu segmento, que en realidad puede no ser 0.
 
-\![El panel lateral "Usuarios accesibles".]({% image_buster /assets/img_archive/reachable_users_panel.png %})
+![El panel lateral "Usuarios accesibles".]({% image_buster /assets/img_archive/reachable_users_panel.png %})
 
 ### Usuarios alcanzables por canal
 
@@ -75,6 +75,17 @@ Para que un usuario aparezca como accesible a través de un canal determinado, d
 - Una dirección de correo electrónico válida o un token de notificaciones push asociado a su perfil, y
 - Adhesión voluntaria o suscripción a tu aplicación.
 
+#### Filtros aplicados para usuarios alcanzables específicos del canal
+
+Los siguientes filtros se aplican a cada canal cuando se determinan los usuarios alcanzables.
+
+| Canal | Filtro |
+| --- | --- |
+| Correo electrónico | **El correo electrónico Disponible** es verdadero. |
+| Push | **La habilitación de push en primer plano** es verdadera. |
+| SMS | **Grupo de suscripción** es cualquier grupo de suscripción a SMS. **Número de teléfono no válido** es falso. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Calcular estadísticas exactas 
 
 Para ver un recuento exacto del número de usuarios de tu segmento, selecciona **Calcular estadísticas exactas** en el panel **Usuarios alcanzables**.
@@ -83,23 +94,27 @@ Para actualizar las estadísticas de un cálculo que hayas ejecutado previamente
 
 Ten en cuenta que la precisión de un cálculo es sólo del 99,999% o superior. Por eso, en los segmentos grandes, puedes notar ligeras variaciones -incluso al calcular estadísticas exactas-, lo cual es un comportamiento normal. Además, los resultados de las estadísticas exactas se almacenan en caché durante 24 horas, a menos que realices modificaciones en tu segmento, en cuyo caso puedes volver a calcular las estadísticas exactas.
 
-\![El panel "Usuarios accesibles" con una opción para mostrar el desglose.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
+{% alert note %}
+Los segmentos divididos uniformemente por [números de contenedor aleatorios]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) no tendrán el mismo tamaño. Por ejemplo, si creas un segmento con el filtro **Cubo aleatorio nº** **inferior a 5000** y otro segmento con el filtro **Cubo aleatorio nº superior a 5000**, es posible y esperable que los tamaños de los segmentos varíen hasta en unos pocos puntos porcentuales. Esto se debe a situaciones como la eliminación de usuarios inactivos o la imposibilidad de acceder a usuarios.
+{% endalert %}
+
+![El panel "Usuarios accesibles" con una opción para mostrar el desglose.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 
 Las estadísticas a nivel de filtro siempre serán estimadas, aunque calcules las estadísticas exactas. **Calcular** estadísticas exactas sólo calcula las estadísticas exactas a nivel de segmento, no a nivel de filtro o grupo de filtros. Este cálculo puede tardar unos minutos en ejecutarse. Los espacios de trabajo más grandes, en particular, pueden requerir períodos más largos para completar los cálculos. Puedes hacer un seguimiento de tu progreso en la barra de progreso del panel de **usuarios de Reachable**. Cuando se prevea que un cálculo va a durar más de cinco minutos, Braze te enviará los resultados por correo electrónico. 
 
 Braze da prioridad a un cálculo a la vez por espacio de trabajo, por lo que ejecutar varios cálculos a la vez provocará retrasos. Puedes seleccionar **Ver cola de cálculo** para ver qué segmentos van por delante del tuyo, su progreso y su iniciador, y hacerte una idea de cuándo puede priorizarse tu cálculo.
 
-Cola de cálculo con un cálculo.]({% image_buster /assets/img_archive/calculation_queue.png %})
+![Una cola de cálculo con un cálculo.]({% image_buster /assets/img_archive/calculation_queue.png %})
 
 Puedes cancelar un cálculo estadístico exacto seleccionando **Cancelar**. Esto puede ser beneficioso si hay varios cálculos en la cola y quieres dar prioridad a otro cálculo en primer lugar. 
 
-\![Un cálculo activo con la opción de cancelar]({% image_buster /assets/img_archive/cancel_calculation.png %}){: style="max-width:25%"}
+![Un cálculo activo con la opción de cancelar]({% image_buster /assets/img_archive/cancel_calculation.png %}){: style="max-width:25%"}
 
 ## Visualización del tamaño histórico de los miembros del segmento
 
-Para todos los segmentos, puedes ver un gráfico de afiliación histórica que muestra la afiliación estimada del segmento para cada día. Este gráfico muestra cómo ha cambiado el tamaño de tu segmento a lo largo del tiempo. Utiliza el desplegable para filtrar la pertenencia a un segmento por intervalo de fechas.
+Para todos los segmentos, puedes ver un gráfico de afiliación histórica que muestra la afiliación estimada del segmento para cada día. Este gráfico muestra cómo ha cambiado el tamaño de tu segmento a lo largo del tiempo. Utilice el menú desplegable para filtrar los miembros del segmento por intervalo de fechas.
 
-\![Utiliza el desplegable Afiliación histórica para filtrar la afiliación a segmentos por intervalo de fechas.]({% image_buster /assets/img_archive/historical_membership2.png %})
+![Utilice el desplegable Afiliación histórica para filtrar la afiliación a segmentos por intervalo de fechas.]({% image_buster /assets/img_archive/historical_membership2.png %})
 
 Como el objetivo de este gráfico es darte una idea de las tendencias generales de pertenencia a un segmento, el recuento diario es una estimación, de forma similar a como el tamaño del segmento es una estimación antes de que selecciones **Calcular estadísticas exactas**. Y como este gráfico muestra estimaciones, es posible que el tamaño de tu segmento aparezca como "0" en este gráfico, aunque su tamaño real (que puede determinarse tras seleccionar **Calcular estadísticas exactas**) no sea "0". Es especialmente probable que el gráfico muestre una estimación de "0" si tu segmento es muy pequeño en relación con el tamaño de la población de tu espacio de trabajo.
 
@@ -115,7 +130,7 @@ Todas las estimaciones pueden ser superiores o inferiores al valor indicado en a
 
 El recuento de afiliados puede cambiar significativamente por diversas razones, como las que figuran en este cuadro.
 
-| Razón | Ejemplo |
+| Causa | Ejemplo |
 | --- | --- |
 | Comportamiento normal del usuario | Los usuarios se suscriben tras una campaña especialmente exitosa. |
 | Los usuarios se importan por CSV | Se importó un archivo CSV de usuarios que aumentó significativamente el número de miembros del segmento. |

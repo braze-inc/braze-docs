@@ -23,7 +23,7 @@ Bei der Initialisierung von `ContentCardable`-Instanzen aus dem Braze SDK verwen
 Nachdem Sie diese Hinweise zur Code-Anpassung kennengelernt haben, sollten Sie sich unsere [Anwendungsfälle](#sample-use-cases) ansehen, damit Sie mit der Implementierung Ihrer eigenen angepassten Objekte beginnen können.
 
 {% tabs local %}
-{% tab Keine Karten-Abhängigkeiten %}
+{% tab No Card Dependencies %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Keine `Card` Abhängigkeiten**<br>
@@ -117,7 +117,7 @@ public class ContentCardData{
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Benutzerdefinierte Objekte %}
+{% tab Custom Objects %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Benutzerdefinierter Objekt-Initialisierer**<br>
@@ -164,7 +164,7 @@ public class Tile extends ContentCardable {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Identifizieren von Typen %}
+{% tab Identifying Types %}
 {% subtabs global %}
 {% subtab Kotlin %}
 **Identifizieren von Typen**<br>
@@ -595,7 +595,7 @@ Für eine Steuerelementvariante Content Card sollte dennoch ein benutzerdefinier
 
 ## Hilfsdateien
 
-{% details ContentCardKey Hilfedatei %}
+{% details ContentCardKey Helper File %}
 {% tabs %}
 {% tab Kotlin %}
 ```kotlin

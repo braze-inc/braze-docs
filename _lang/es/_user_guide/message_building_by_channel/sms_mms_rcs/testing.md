@@ -1,0 +1,9 @@
+---
+nav_title: Prueba
+noindex: true
+layout: redirect
+redirect_to: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/?tab=sms%2Fmms%20and%20rcs
+page_order: 13
+channel:
+  - SMS
+---

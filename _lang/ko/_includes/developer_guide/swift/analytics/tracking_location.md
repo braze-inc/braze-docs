@@ -1,12 +1,12 @@
-## 현재 위치 기록하기
+## 현재 위치 로깅하기
 
 ### 1단계: 프로젝트 구성
 
 {% alert important %}
-Braze 위치 기능을 사용할 때, 위치 서비스 사용 권한을 요청하는 것은 애플리케이션의 책임입니다. [Apple Developer를 검토하세요: 사용자 위치 서비스에 인증 요청하기](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services).
+Braze 위치 기능을 사용할 때, 위치 서비스 사용 권한을 요청하는 것은 애플리케이션의 책임입니다. [Apple 개발자를 검토하세요: 사용자 위치 서비스에 인증 요청하기](https://developer.apple.com/documentation/corelocation/requesting-authorization-to-use-location-services).
 {% endalert %}
 
-위치 추적을 사용하려면 Xcode 프로젝트를 열고 앱을 선택합니다. **일반** 탭에서 `BrazeLocation` 모듈을 추가합니다.
+위치 추적을 인에이블하려면 Xcode 프로젝트를 열고 앱을 선택합니다. **일반** 탭에서 `BrazeLocation` 모듈을 추가합니다.
 
 {% tabs %}
 {% tab swift %}
@@ -97,7 +97,7 @@ static Braze *_braze = nil;
 
 ### 2단계: 사용자 위치 기록
 
-다음으로, 사용자의 마지막으로 알려진 위치를 Braze에 기록합니다. 다음 예제에서는 `AppDelegate` 에 Braze 인스턴스를 변수로 할당했다고 가정합니다.
+다음으로 사용자의 마지막으로 알려진 위치를 Braze에 기록합니다. 다음 예제에서는 `AppDelegate` 에 Braze 인스턴스를 변수로 할당했다고 가정합니다.
 
 {% tabs %}
 {% tab swift %}

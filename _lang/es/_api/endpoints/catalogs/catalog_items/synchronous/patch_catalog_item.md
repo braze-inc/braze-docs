@@ -1,5 +1,5 @@
 ---
-nav_title: "PARCHE: Editar artículo del catálogo"
+nav_title: "PARCHE: Editar elemento del catálogo"
 article_title: "PARCHE: Editar artículo del catálogo"
 search_tag: Endpoint
 page_order: 4
@@ -114,7 +114,7 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
+La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
 
 | Error | Solución de problemas |
 | --- | --- |

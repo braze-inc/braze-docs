@@ -22,52 +22,52 @@ Braze propose des méthodes prédéfinies pour définir les attributs utilisateu
 Pour définir un attribut par défaut, appelez la méthode correspondante sur l'objet `BrazeBinding`.
 
 {% tabs local %}
-{% tab Prénom %}
+{% tab First name %}
 ```csharp
 BrazeBinding.SetUserFirstName("first name");
 ```
 {% endtab %}
-{% tab Nom de famille %}
+{% tab Last name %}
 ```csharp
 BrazeBinding.SetUserLastName("last name");
 ```
 {% endtab %}
-{% tab E-mail %}
+{% tab Email %}
 ```csharp
 BrazeBinding.SetUserEmail("email@email.com");
 ```
 {% endtab %}
-{% tab Genre %}
+{% tab Gender %}
 ```csharp
 BrazeBinding.SetUserGender(Appboy.Models.Gender);
 ```
 {% endtab %}
-{% tab Date de naissance %}
+{% tab Birth date %}
 ```csharp
 BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
 ```
 {% endtab %}
-{% tab Pays %}
+{% tab Country %}
 ```csharp
 BrazeBinding.SetUserCountry("country name");
 ```
 {% endtab %}
-{% tab Ville d'origine %}
+{% tab Home city %}
 ```csharp
 BrazeBinding.SetUserHomeCity("city name");
 ```
 {% endtab %}
-{% tab Abonnement à l'e-mail %}
+{% tab Email subscription %}
 ```csharp
 BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Abonnement poussé %}
+{% tab Push subscription %}
 ```csharp
 BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab Numéro de téléphone %}
+{% tab Phone number %}
 ```csharp
 BrazeBinding.SetUserPhoneNumber("phone number");
 ```
@@ -91,7 +91,7 @@ Outre les attributs par défaut, Braze vous permet de définir des attributs per
 Pour définir un attribut personnalisé, utilisez la méthode correspondant au type d'attribut : 
 
 {% tabs %}
-{% tab Chaîne de caractères %}
+{% tab String %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
@@ -99,7 +99,7 @@ AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string cust
 
 {% endtab %}
 
-{% tab Entier %}
+{% tab Integer %}
 
 ```csharp
 // Set Integer Attribute
@@ -117,7 +117,7 @@ AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double valu
 
 {% endtab %}
 
-{% tab Booléen %}
+{% tab Boolean %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
@@ -140,7 +140,7 @@ Les dates transmises à Braze doivent être au format [ISO 8601](http://en.wikip
 
 {% endtab %}
 
-{% tab Réseau %}
+{% tab Array %}
 
 ```csharp
 // Setting An Array

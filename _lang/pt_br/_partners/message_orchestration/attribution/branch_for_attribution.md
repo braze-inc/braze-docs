@@ -52,7 +52,7 @@ Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(c
 #### iOS
 
 {% alert important %}
-Antes de fevereiro de 2023, nossa integração de atribuição da Branch usava o IDFV como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes da Braze que usam Objective-C busquem o `device_id` da Braze e o enviem para a Branch na instalação, pois não haverá interrupção do serviço.
+Antes de fevereiro de 2023, nossa integração de atribuição de Filial usava o Identificador de Fornecedor (IDFV) como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes do Braze que usam Objective C busquem o Braze `device_id` e o enviem para a Branch durante a instalação, pois não há interrupção do serviço.
 {% endalert%}
 
 Para quem usa o SWIFT SDK v5.7.0+, se você deseja continuar usando o IDFV como o identificador mútuo, confirme se o campo `useUUIDAsDeviceId` está definido como `false` para que não haja interrupção da integração. 
@@ -60,7 +60,7 @@ Para quem usa o SWIFT SDK v5.7.0+, se você deseja continuar usando o IDFV como 
 Se estiver definido como `true`, implemente o mapeamento de ID do dispositivo iOS para SWIFT a fim de passar o `device_id` da Braze para a Branch na instalação do app para que a Braze possa corresponder adequadamente as atribuições do iOS.
 
 {% tabs local %}
-{% tab Objective C %}
+{% tab Objective-C %}
 ```objc
 [braze deviceIdOnQueue:dispatch_get_main_queue() completion:^(NSString * _Nonnull deviceId) {
   [[Branch getInstance] setRequestMetadataKey:@"$braze_install_id" value:deviceId];
@@ -68,7 +68,7 @@ Se estiver definido como `true`, implemente o mapeamento de ID do dispositivo iO
 }];
 ```
 {% endtab %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 braze.deviceId { deviceId in
@@ -84,7 +84,7 @@ braze.deviceId { deviceId in
 
 Na Braze, navegue até **Integrações de parceiros** > **Parceiros de tecnologia** e selecione **Branch**. 
 
-Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o endpoint REST são usados na próxima etapa ao configurar um postback no dashboard da Branch.<br><br>![Esta imagem mostra a caixa "Importação de dados para instalar atribuição" encontrada na página de tecnologia da Branch. Nessa caixa, você verá a chave de importação de dados e o ponto de extremidade REST.]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
+Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o endpoint REST são usados na próxima etapa ao configurar um postback no dashboard da Branch.<br><br>![Esta imagem mostra a caixa "Importação de dados para instalar atribuição" encontrada na página de tecnologia da Branch. Essa caixa contém chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: Configurar Data Feeds
 
@@ -95,11 +95,11 @@ Aqui você encontra o endpoint REST e gera sua chave de importação de dados da
 
 ### Etapa 4: Confirmar a integração
 
-Depois que a Braze receber os dados de atribuição da Branch, o indicador de status da conexão na página de parceiros de tecnologia da Branch na Braze mudará de "Não conectado" para "Conectado". Um carimbo de data/hora da última solicitação bem-sucedida também será incluído. 
+Depois que o Braze receber dados de atribuição da Branch, o indicador de status da conexão na página de parceiros de tecnologia da Branch no Braze mudará de "Não conectado" para "Conectado" e incluirá um registro de data e hora da última solicitação bem-sucedida.
 
-Observe que isso não acontecerá até recebermos dados sobre uma instalação atribuída. Instalações orgânicas, que devem ser excluídas do postback da Branch, são ignoradas pela nossa API e não são contadas ao determinar se uma conexão bem-sucedida foi estabelecida.
+Esse status é alterado somente depois que o Braze recebe dados sobre uma atribuição de instalação. O Braze ignora as instalações orgânicas (as exclui do postback da Branch) e não as conta ao determinar se a conexão foi bem-sucedida.
 
-## Dados de atribuição do Facebook e X (anteriormente Twitter)
+## Dados de atribuição do Facebook e do X (antigo Twitter)
 
 Os dados de atribuição para campanhas do Facebook e do X (antigo Twitter) não estão disponíveis por meio de nossos parceiros. Essas fontes de mídia não permitem que seus parceiros compartilhem dados de atribuição com terceiros e, portanto, nossos parceiros não podem enviar esses dados para a Braze.
 

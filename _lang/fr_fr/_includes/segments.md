@@ -4,7 +4,7 @@ La taille de la population cible qui s'est affichée dans une campagne ou un Can
 Cela peut se produire pour plusieurs raisons :
 
 - Lorsqu'un groupe de contrôle global s'applique à une campagne ou à un Canvas, les utilisateurs de ce groupe de contrôle global sont exclus du décompte des utilisateurs joignables.
-- La taille de la population cible d'une campagne ou d'un Canvas exclut les utilisateurs qui ne sont pas joignables par les différents canaux de messages ; le comportement diffère d'un canal à l'autre. Par exemple, l'audience atteignable pour une campagne ou un Canvas exclut les utilisateurs qui sont désabonnés, marqués comme spam (pour les e-mails) ou qui ont fait l'objet d'un échec provisoire d'envoi (pour les e-mails). Cependant, le segment lui-même n'exclut que les abonnements lorsqu'il indique le nombre estimé d'utilisateurs pouvant être joints par e-mail. 
+- La taille de la population cible d'une campagne ou d'un Canvas exclut les utilisateurs qui ne sont pas joignables par les différents canaux de messages ; le comportement diffère d'un canal à l'autre. Par exemple, l'audience atteignable pour une campagne ou un Canvas exclut les utilisateurs qui sont désabonnés, marqués comme spam (pour les e-mails) ou qui ont fait l'objet d'un échec provisoire d'envoi (pour les e-mails). Cependant, le segment lui-même n'exclut que les abonnements lorsqu'il indique le nombre estimé d'utilisateurs atteignables par e-mail. 
 - Braze n'envoie des messages SMS qu'aux utilisateurs faisant partie du groupe d'abonnement sélectionné. Par conséquent, la population ciblée par SMS pour une campagne ou un canvas exclura également tous les utilisateurs qui ne font pas partie du groupe d'abonnement sélectionné.
 
 {% endif %}
@@ -30,7 +30,7 @@ Braze informera le contact de l'entreprise et le créateur de l'extension si ce 
 
 #### Sélectionner vos paramètres d'actualisation
 
-![Intervalle d'actualisation Paramètres avec une fréquence d'actualisation hebdomadaire, une heure de début de 10 heures et le lundi sélectionné comme jour.]({% image_buster /assets/img/segment/segment_interval_settings.png %}){: style="max-width:50%;"}
+![Paramètres d'intervalle d'actualisation avec une fréquence d'actualisation hebdomadaire, une heure de début de 10 heures et le lundi sélectionné comme jour.]({% image_buster /assets/img/segment/segment_interval_settings.png %}){: style="max-width:50%;"}
 
 Dans le panneau **Paramètres d'intervalle d'actualisation**, vous pouvez sélectionner la fréquence à laquelle cette extension de segmentation sera actualisée : toutes les heures, tous les jours, toutes les semaines ou tous les mois. Vous devrez également sélectionner l'heure spécifique (dans le fuseau horaire de votre entreprise) à laquelle l'actualisation doit avoir lieu, par exemple :
 
@@ -64,8 +64,8 @@ Les actualisations planifiées sont automatiquement désactivées lorsqu'une ext
 
 Si l'actualisation planifiée est désactivée pour une extension de segments, une notification l'indique pour cette extension.
 
-![Une notification indiquant que "Les actualisations planifiées ont été désactivées pour cette extension car elle n'est pas utilisée dans des campagnes, des canevas ou des segments actifs". L'extension de segmentation a été désactivée le 23 février 2025 à 12h00."]({% image_buster /assets/img/segment/segment_extension_disabled.png %})
+![Une notification indiquant que "Les actualisations planifiées ont été désactivées pour cette extension car elle n'est pas utilisée dans des campagnes, des canevas ou des segments actifs". L'extension de segments a été désactivée le 23 février 2025 à 0h00\. "]({% image_buster /assets/img/segment/segment_extension_disabled.png %})
 
-Lorsque vous êtes prêt à utiliser une extension de segment périmée, passez en revue les paramètres d'actualisation, sélectionnez la planification d'actualisation qui correspond à votre cas d'utilisation, puis enregistrez toutes les modifications.
+Lorsque vous êtes prêt à utiliser une extension de segment périmée, passez en revue les paramètres d'actualisation, sélectionnez la planification d'actualisation qui correspond à votre cas d'utilisation, puis enregistrez les modifications.
 
 {% endif %}

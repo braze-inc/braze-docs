@@ -1,5 +1,5 @@
 ---
-nav_title: "Objet alias utilisateur"
+nav_title: "Objet Alias utilisateur"
 article_title: Objet Alias utilisateur API
 page_order: 11
 page_type: reference
