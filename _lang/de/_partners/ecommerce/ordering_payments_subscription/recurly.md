@@ -82,11 +82,11 @@ Für ein effektives Customer-Engagement müssen Sie in Braze [angepasste Events 
 
 Da Recurly den Endpunkt Braze `/users/track` verwendet, unterliegt die Integration den standardmäßigen Rate-Limits von Braze von 50.000 Anfragen pro Minute.
 
-Recurly bündelt bestimmte Abo-Lebenszyklusereignisse als einzelne API-Aufrufe an Braze, um die Anzahl der Aufrufe zu reduzieren.
+Recurly fasst bestimmte Abo-Lebenszyklus-Ereignisse in einzelnen API-Aufrufen an Braze zusammen, um die Anzahl der Anfragen zu reduzieren.
 
-- Die Erstellung mehrerer Abos zur gleichen Zeit wird gebündelt und in einer einzigen Anfrage an Braze gesendet.
-- Wenn für ein Konto mehrere Abos gleichzeitig verlängert werden, wird jede dieser Verlängerungen in einer einzigen Anfrage zusammengefasst.
-- Lebenszyklusereignisse des gleichen Modells werden in einer einzigen Anfrage gesendet. Ein Beispiel: Eine neu erstellte Rechnung mit einer Zahlung würde eine einzige API-Anfrage mit den beiden angepassten Events `Recurly Invoice Created` und `Recurly Successful Payment` senden.
+- Recurly bündelt und versendet mehrere gleichzeitig erstellte Abos in einer einzigen Anfrage.
+- Recurly fasst mehrere gleichzeitige Verlängerungen für ein Konto in einer einzigen Anfrage zusammen.
+- Recurly sendet Ereignisse aus dem Lebenszyklus von Abos mit demselben Modell in einer einzigen Anfrage. Eine neu erstellte Rechnung mit einer Zahlung führt beispielsweise zu einer API-Anfrage, die sowohl die angepassten Events `Recurly Invoice Created` als auch `Recurly Successful Payment` enthält.
 
 Stapel werden in Gruppen von bis zu 75 Ereignissen auf einmal an Braze gesendet. Wenn zum Beispiel 100 Abos auf einmal erstellt werden, würde Recurly zwei API-Anfragen an Braze stellen. Weitere Informationen finden Sie unter [Stapeln von Nutzer:innen Tracking-Anfragen]({{site.baseurl}}/api/api_limits/#batch-user-track).
 
