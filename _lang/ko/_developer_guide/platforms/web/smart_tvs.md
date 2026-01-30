@@ -15,7 +15,7 @@ description: "이 문서에서는 Braze 웹 SDK를 사용하여 스마트 TV(삼
 전체 기술 참조는 [JavaScript 설명서](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html)를 참조하세요. 또는 TV에서 실행되는 웹 SDK를 확인하려면 [샘플 앱](https://github.com/Appboy/smart-tv-sample-apps)을 참조하세요.
 {% endalert %}
 
- %} developer_guide/prerequisites/web.md
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
 ## 웹브레이즈 SDK 구성
 
