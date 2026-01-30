@@ -31,7 +31,7 @@ Es gibt zwar keine Beschränkungen für die Anzahl der Textzeichen, die Sie in e
 Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maximale Bildgröße von 5 MB und unterstützen die Dateitypen PNG, JPEG und GIF.
 
 {% tabs %}
-{% tab Porträt %}
+{% tab Portrait %}
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ Alle In-App-Nachrichten haben eine empfohlene Bildgröße von 500 KB, eine maxim
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Landschaft %}
+{% tab Landscape %}
 
 | Typ | Seitenverhältnis | Bildqualität | Anmerkungen |
 | --- | --- | --- | --- |
