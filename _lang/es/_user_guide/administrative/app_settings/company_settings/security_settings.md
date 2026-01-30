@@ -141,9 +141,11 @@ Para descargar este informe, haga lo siguiente:
 
 1. Vaya a **Configuración** > **Configuración del administrador**.
 2. Seleccione la pestaña **Configuración de seguridad** y vaya a la sección **Descarga de eventos de seguridad**.
-2. Seleccione **Descargar informe**. 
+3. Seleccione **Descargar informe**. 
 
-Este informe sólo contiene los 10.000 eventos de seguridad más recientes de su cuenta. Si necesita datos de eventos específicos, póngase en contacto con el servicio de asistencia técnica.
+Esta descarga manual de informes sólo contiene los 10.000 eventos de seguridad más recientes de tu cuenta.
+
+Para exportar eventos de seguridad a Amazon S3 sin este límite de filas, consulta [Exportación de eventos de seguridad con Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Iniciar sesión y cuenta
