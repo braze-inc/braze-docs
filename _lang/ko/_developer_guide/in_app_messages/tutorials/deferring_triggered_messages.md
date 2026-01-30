@@ -98,7 +98,7 @@ lines-index.js=13-15
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Android에 대한 [인앱 메시지를 활성화해야 합니다.]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages)
+{% multi_lang_include developer_guide/prerequisites/android.md %} Android에 대한 [앱 내 메시지 활성화]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages)도 필요합니다.
 
 ## Android용 트리거된 메시지 연기 및 복원하기
 
@@ -254,7 +254,7 @@ lines-MainActivity.kt=29
 {% endscrolly %}
 {% endsdktab %}
 {% sdktab swift %}
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Swift에 대한 [인앱 메시지를 활성화해야 합니다.]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages)
+{% multi_lang_include developer_guide/prerequisites/swift.md %} Swift에 대한 [앱 내 메시지 활성화]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=swift#swift_enabling-in-app-messages)도 필요합니다.
 
 ## Swift용 트리거된 메시지 지연 및 복원
 
