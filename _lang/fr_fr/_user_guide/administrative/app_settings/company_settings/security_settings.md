@@ -141,9 +141,11 @@ Pour télécharger ce rapport, procédez comme suit :
 
 1. Allez dans **Paramètres** > **Paramètres d'administration**.
 2. Sélectionnez l'onglet **Paramètres de sécurité** et accédez à la section **Téléchargement des événements de sécurité**.
-2. Sélectionnez **Télécharger le rapport**. 
+3. Sélectionnez **Télécharger le rapport**. 
 
-Ce rapport contient uniquement les 10 000 événements de sécurité les plus récents pour votre compte. Si vous avez besoin de données d’événements spécifiques, contactez l’assistance technique.
+Ce rapport manuel ne contient que les 10 000 événements de sécurité les plus récents pour votre compte.
+
+Pour exporter des événements de sécurité vers Amazon S3 sans cette limite de lignes, voir [Exportation d'événements de sécurité avec Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Identifiant et compte
