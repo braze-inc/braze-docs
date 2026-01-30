@@ -103,7 +103,7 @@ override func setUpUI() {
 Interfaces personalizadas podem ser fornecidas registrando classes personalizadas para cada tipo de cartão desejado. 
 
 ![Um cartão de conteúdo de banner. Um cartão de conteúdo de banner mostra uma imagem à direita do banner com o texto "Obrigado por baixar o Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![Um cartão de conteúdo de imagem legendada. Um cartão de conteúdo com legenda mostra uma imagem do Braze com a legenda sobreposta na parte inferior "Obrigado por baixar o Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![Um cartão de conteúdo de imagem legendada. Um cartão de conteúdo legendado mostra uma imagem do Braze com a legenda sobreposta na parte inferior "Obrigado por baixar o Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![Um cartão de conteúdo clássico. Um cartão de conteúdo clássico mostra uma imagem no centro do cartão com as palavras "Obrigado por baixar o Braze Demo" abaixo.]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze fornece três modelos de cartão de conteúdo (banner, imagem legendada e clássico). Como alternativa, se você quiser fornecer suas próprias interfaces personalizadas, consulte os seguintes trechos de código:
