@@ -1,8 +1,8 @@
 ---
 nav_title: Localização
-article_title: Localização para o Braze Swift SDK
+article_title: Localização para o SDK Swift do Braze
 page_order: 3.50
-description: "Saiba mais sobre a localização do Braze SDK."
+description: "Saiba mais sobre localização para o SDK do Braze."
 platform:
   - Android
   - FireOS
@@ -11,12 +11,12 @@ platform:
 
 # Localização
 
-> Saiba mais sobre a localização e os idiomas suportados para o Braze SDK, para que você possa se conectar com seus usuários em todo o mundo.
+> Saiba mais sobre localização e idiomas suportados para o SDK do Braze, para que você possa se conectar com seus usuários em todo o mundo. Para orientações sobre como configurar mensagens localizadas, consulte [Localização]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/) em nossa seção de fundamentos de envio de mensagens.
 
 ## Sobre localização
 
-Além do inglês, o Braze oferece suporte a vários idiomas para as mensagens integradas do SDK exibidas em seu app.
+Além do inglês, o Braze suporta vários idiomas para mensagens do SDK exibidas em seu app. 
 
-Quando o idioma do telefone do usuário for definido como um dos idiomas suportados, as mensagens do SDK integrado serão traduzidas para esse idioma. Por exemplo, se o seu app exibir uma mensagem para problemas de conectividade, ela será traduzida para o idioma escolhido.
+Quando o idioma do telefone de um usuário está definido para um dos idiomas suportados, as mensagens do SDK que estão incluídas por padrão para o canal de envio de mensagens serão traduzidas para esse idioma. Por exemplo, se seu app exibe uma mensagem sobre problemas de conectividade, ela será traduzida para o idioma escolhido pelo usuário.
 
 {% multi_lang_include supported_language_codes.md %}
