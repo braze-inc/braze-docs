@@ -1,5 +1,5 @@
 ---
-nav_title: Käufe protokollieren
+nav_title: Einkäufe protokollieren
 article_title: Käufe protokollieren für iOS
 platform: iOS
 page_order: 4
@@ -10,9 +10,9 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Käufe protokollieren für iOS
+# Log-Käufe für iOS
 
-Erfassen Sie In-App-Käufe, damit Sie Ihre Einnahmen im Laufe der Zeit und über verschiedene Einnahmequellen hinweg verfolgen und Ihre Nutzer nach ihrem Lebenszeitwert segmentieren können.
+Erfassen Sie In-App-Käufe, um Ihre Umsätze im Zeitverlauf über verschiedene Umsatzquellen hinweg zu tracken und Ihre Nutzer nach ihrem Lifetime-Value zu segmentieren.
 
 Braze unterstützt Einkäufe in mehreren Währungen. Einkäufe, die Sie in einer anderen Währung als dem USD melden, werden im Dashboard in USD auf der Grundlage des Wechselkurses an dem Tag, an dem sie gemeldet wurden, angezeigt.
 
@@ -32,7 +32,7 @@ atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
@@ -55,7 +55,7 @@ Weitere Einzelheiten finden Sie in der [Dokumentation zur iOS-Klasse](http://app
 ### Menge hinzufügen
 Sie können eine Menge zu Ihren Einkäufen hinzufügen, wenn Kunden denselben Einkauf mehrmals in einer einzigen Kasse tätigen. Sie können dies erreichen, indem Sie eine `NSUInteger` für die Menge eingeben.
 
-* Die eingegebene Menge muss im Bereich von [0, 100] liegen, damit das SDK einen Kauf protokollieren kann.
+* Die eingegebene Menge muss im Bereich [0, 100] liegen, damit das SDK einen Kauf protokollieren kann.
 * Methoden ohne Mengeneingabe haben standardmäßig den Mengenwert 1.
 * Methoden mit einer Mengeneingabe haben keinen Standardwert und **müssen** eine Mengeneingabe erhalten, damit das SDK einen Kauf protokollieren kann.
 
@@ -72,7 +72,7 @@ withProperties:@{@"key1":"value1"}];
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])

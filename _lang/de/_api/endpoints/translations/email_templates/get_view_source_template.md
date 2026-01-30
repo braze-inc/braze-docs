@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: View Source Translations for E-Mail Template"
+nav_title: "GET: View source translations for email template"
 article_title: "GET: View Source Translations for E-Mail Template"
 search_tag: Endpoint
 page_order: 1
@@ -15,7 +15,7 @@ description: "In diesem Artikel erfahren Sie mehr über die Quelltextübersetzun
 /templates/email/translations/source
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um die Quellübersetzungen für eine [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) einzusehen.
+> Verwenden Sie diesen Endpunkt, um die Quellübersetzungen für eine [E-Mail-Vorlage]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates) einzusehen. Weitere Informationen zu den Features für die Übersetzung finden Sie unter [Lokalisierung in Nachrichten]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/).
 
 {% alert important %}
 Dieser Endpunkt befindet sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
@@ -34,17 +34,16 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 | Parameter     | Erforderlich | Datentyp | Beschreibung                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Erforderlich | String    | Die ID für Ihr E-Mail Template. |
-| `locale_id`   | Erforderlich | String    | Die ID des Gebietsschemas.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-Beachten Sie, dass alle Übersetzungs-IDs als universelle eindeutige Bezeichner (UUIDs) gelten, die Sie in den Einstellungen für **die Mehrsprachenunterstützung** oder in der Antwort auf die Anfrage finden.
 
 ## Beispiel Anfrage
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source' \
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source?template_id={template_id}'
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
+--Request Body
+---template_id: "6ad1507f-ca10-44c4-95bf-aj39fm10fm1ps"
 ```
 
 ## Antwort
@@ -56,8 +55,6 @@ Es gibt vier Status Code Antworten für diesen Endpunkt: `200`, `400`, `404` und
 Der Status Code `200` könnte den folgenden Response Header und Body zurückgeben.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": {
         "translation_map": {
@@ -82,17 +79,5 @@ Der Status Code `400` könnte den folgenden Antwortkörper zurückgeben. Unter [
     ]
 }
 ```
-
-## Fehlersuche
-
-In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehler und die entsprechenden Schritte zur Fehlerbehebung.
-
-| Fehlermeldung                           | Fehlersuche                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | Vergewissern Sie sich, dass Ihre Lokalisierungs-ID in der Übersetzung Ihrer Nachrichten vorhanden ist.                         |
-| `LOCALE_NOT_FOUND`                      | Vergewissern Sie sich, dass das Gebietsschema in Ihren mehrsprachigen Einstellungen vorhanden ist.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | Die Mehrspracheneinstellungen sind für Ihren Workspace nicht aktiviert.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Nur E-Mail-Templates und E-Mail-, Push- und In-App-Nachricht-Kampagnen oder Canvas-Nachrichten mit E-Mails können übersetzt werden.             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

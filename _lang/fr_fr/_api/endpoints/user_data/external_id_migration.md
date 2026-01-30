@@ -1,5 +1,5 @@
 ---
-nav_title: Migration de l’ID externe
+nav_title: Migration ID externe
 article_title: "Migration de l’ID externe"
 search_tag: Endpoint
 page_order: 7

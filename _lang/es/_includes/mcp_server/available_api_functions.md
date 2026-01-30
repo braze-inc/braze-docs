@@ -1,17 +1,16 @@
 # Funciones del servidor Braze MCP
 
-> El servidor Braze MCP expone un conjunto de funciones API de sólo lectura que se mapean a puntos finales específicos de la API REST de Braze. Los clientes MCP como Claude y Cursor pueden llamar a estas funciones para recuperar datos sin acceder a la PII ni hacer cambios en tu espacio de trabajo. Para más información general, consulta [Servidor MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "desarrollador" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> El servidor Braze MCP expone un conjunto de funciones API de sólo lectura que se mapean a puntos finales específicos de la API REST de Braze. Los clientes MCP como Claude y Cursor pueden llamar a estas funciones para recuperar datos sin acceder a la PII ni realizar cambios en tu espacio de trabajo. Para más información general, consulta [Servidor MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## Requisitos previos
 
-Antes de poder utilizar esta característica, tendrás que [configurar el servidor Braze MCP]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "desarrollador" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
+Antes de poder utilizar esta característica, tendrás que [configurar el servidor MCP de Braze]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## Funciones disponibles de la API Braze
 
-Éstas son las funciones API a las que hace referencia tu cliente MCP para interactuar con el servidor MCP Braze:
-
+Tu cliente MCP hace referencia a las siguientes funciones API para interactuar con el servidor MCP Braze:
 ### Funciones generales
 
 | Función | Descripción |

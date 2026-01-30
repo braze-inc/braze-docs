@@ -457,17 +457,17 @@ Los siguientes códigos de estado HTTP serán reconocidos por nuestro cliente co
     <tr>
       <td><code>401</code></td>
       <td>No autorizado</td>
-      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se volverán a enviar tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
+      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se reenviarán tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
     </tr>
     <tr>
       <td><code>403</code></td>
       <td>Prohibido</td>
-      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se volverán a enviar tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
+      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se reenviarán tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
     </tr>
     <tr>
       <td><code>404</code></td>
       <td>No se ha encontrado</td>
-      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se volverán a enviar tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
+      <td>El conector se ha configurado con credenciales no válidas. Los datos del evento se reenviarán tras un retraso de 2-5 minutos. Si no se resuelve en 48 horas, se eliminarán los datos del evento.</td>
     </tr>
     <tr>
       <td><code>413</code></td>

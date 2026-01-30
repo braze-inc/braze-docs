@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exporter l'analyse/analytique de la campagne (si utilisée comme adjectif)"
+nav_title: "GET : Exporter les analyses de campagne"
 article_title: "GET : Exporter l'analyse/analytique de la campagne (si utilisée comme adjectif)"
 search_tag: Endpoint
 page_order: 4
@@ -11,10 +11,10 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les a
 {% api %}
 # Exporter les analyses de campagne
 {% apimethod get %}
-/campagnes/séries_de_données
+/campaigns/data_series
 {% endapimethod %}
 
-> Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée. 
+> Utilisez cet endpoint pour récupérer quotidiennement une série de diverses statistiques pour une campagne sur la durée.
 
 Les données renvoyées comprennent le nombre de messages envoyés, ouverts, cliqués ou convertis par canal de communication.
 
@@ -37,7 +37,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `ending_at` | Facultatif | DateTime <br>chaîne ([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601)) | Date à laquelle la série de données doit se terminer. Par défaut, l’heure de la demande. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Exemple de demande 
+## Exemple de demande
 
 {% raw %}
 ```
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ### Réponse multicanaux
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -126,21 +124,21 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "whats_app": [
                     {
                       "variation_api_id": (string) the variation API identifier,
-                      "sent": (int) the number of sends, 
+                      "sent": (int) the number of sends,
                       "delivered": (int) the number of delivered messages,
                       "failed": (int) the number of failed deliveries,
                       "read": (int) the number of opened messages
                     },
                 ],
                 "content_cards" : [
-                  { 
-                    "variation_api_id": (string) the variation API identifier, 
-                    "sent": (int) the number of sends, 
-                    "total_clicks": (int) the number of total clicks, 
-                    "total_dismissals": (int) the number of total dismissals, 
-                    "total_impressions": (int) the number of total impressions, 
-                    "unique_clicks": (int) the number of unique clicks, 
-                    "unique_dismissals": (int) the number of unique dismissals, 
+                  {
+                    "variation_api_id": (string) the variation API identifier,
+                    "sent": (int) the number of sends,
+                    "total_clicks": (int) the number of total clicks,
+                    "total_dismissals": (int) the number of total dismissals,
+                    "total_impressions": (int) the number of total impressions,
+                    "unique_clicks": (int) the number of unique clicks,
+                    "unique_dismissals": (int) the number of unique dismissals,
                     "unique_impressions": (int) the number of unique impressions
                   }
                 ],
@@ -154,8 +152,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### Réponse multivariées
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {

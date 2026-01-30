@@ -15,7 +15,7 @@ El comportamiento de estos filtros seguirá siendo en gran medida el mismo y se 
 
 La campaña que se muestra a continuación se envía a las 21:00 horas del 16 de abril. La segmentación de la audiencia es "Ha realizado más de 2 compras en los últimos 3 días".
 
-![Calendario de la campaña][1]
+![Calendario de la campaña]({% image_buster /assets/img/campaign-schuedule-example.png %})
 
 Las 21 h ET del 16 de abril son la 1 h UTC del 17 de abril.
 
@@ -41,7 +41,7 @@ Los días del calendario se utilizan cuando seleccionas "días" o "semanas" en `
 - `Every 1 day` limitará la limitación al día natural actual en la hora local de tu usuario (finalizando a medianoche hora local).
 - `Every 2 days` limitará la limitación a los días naturales anterior y actual en la hora local de tu usuario (finalizando a medianoche hora local del día natural actual).
 
-### Empresa y hora local
+### Empresa & Hora local
 
 El Día del Calendario actual en la zona horaria de la empresa cuenta como día `0`.
 
@@ -59,4 +59,3 @@ Braze tiene una categoría específica de filtros de segmentación llamada "Filt
 
 
 
-[1]:{% image_buster /assets/img/campaign-schuedule-example.png %}

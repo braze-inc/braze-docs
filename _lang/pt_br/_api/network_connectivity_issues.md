@@ -15,7 +15,7 @@ Os pontos de extremidade da API do Braze usam uma CDN que roteia o tráfego para
 
 Percebemos que alguns firewalls tentam modificar ou proteger o tráfego HTTPS/TLS, o que interfere nas conexões com os endpoints da API do Braze. Se seus servidores estiverem atrás de qualquer tipo de firewall físico, desative qualquer aceleração ou modificação de HTTPS/TLS que o firewall ou roteador esteja realizando. Além disso, você pode permitir a lista de tráfego de saída para nossos provedores de CDN (Fastly.com) para ver se isso resolve o problema.
 
-Ocasionalmente, as configurações do iptables que filtram os pacotes SYN/ACK/RST também podem causar problemas; portanto, se estiver usando o iptables no seu host, você também poderá listar o tráfego de saída para nossos provedores de CDN (Fastly.com) para ver se isso resolve o problema.
+Ocasionalmente, as configurações do iptables que filtram os pacotes SYN/ACK/RST também podem causar problemas; portanto, se você estiver usando o iptables em seu host, também poderá colocar na lista de permissões o tráfego de saída para nossos provedores de CDN (Fastly.com) para ver se isso resolve o problema.
 
 Se ainda estiver tendo problemas de rede com a conexão aos endpoints da Braze API, forneça um [teste MTR](https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2) e os resultados do [Fastly Debug](http://www.fastly-debug.com/) enquanto estiver enfrentando um problema e envie-os com sua solicitação de suporte. Note que os resultados do teste devem ser obtidos de um servidor que esteja tendo problemas para se conectar aos endpoints da API do Braze, e não de uma máquina de desenvolvimento. Uma captura de rede (tcpdump ou arquivo .pcap) também será útil se puder ser obtida.
 

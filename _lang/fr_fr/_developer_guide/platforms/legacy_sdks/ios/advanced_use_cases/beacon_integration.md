@@ -21,7 +21,7 @@ Une fois vos balises Infillion configurées et intégrées à votre application,
 Pour enregistrer un événement personnalisé lorsqu’un utilisateur accède à un endroit, saisissez ce code dans la méthode `didBeginVisit` :
 
 {% tabs %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance] logCustomEvent:@"Entered %@", visit.place.name];

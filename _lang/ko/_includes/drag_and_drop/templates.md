@@ -41,7 +41,7 @@
 
 {% if include.section == "email validation" %}
 
-사용자가 허용되지 않는 특수 문자가 포함된 이메일 주소를 입력하면 일반 오류 표시기가 표시되며 양식을 제출할 수 없습니다. 이 오류 메시지는 사용자 지정할 수 없습니다. **미리보기 및 테스트** 탭과 테스트 기기에서 오류 동작을 확인할 수 있습니다. [이메일 유효성 검사]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)에서 Braze가 이메일 주소 형식을 지정하는 방법에 대해 자세히 알아보세요.
+사용자가 허용되지 않는 특수 문자가 포함된 이메일 주소를 입력하면 일반 오류 표시기가 표시되며 양식을 제출할 수 없습니다. 이 오류 메시지는 사용자 지정할 수 없습니다. **미리보기 & 테스트** 탭과 테스트 기기에서 오류 동작을 확인할 수 있습니다. [이메일 유효성 검사]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)에서 Braze가 이메일 주소 형식을 지정하는 방법에 대해 자세히 알아보세요.
 
 {% endif %}
 

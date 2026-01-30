@@ -1,5 +1,5 @@
 ---
-nav_title: 구독 그룹
+nav_title: Subscription groups
 article_title: 구독 그룹 엔드포인트
 page_order: 7
 layout: dev_guide

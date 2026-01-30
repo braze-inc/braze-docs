@@ -13,8 +13,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Analyse
@@ -27,7 +26,7 @@ Lors de la mise en œuvre de Braze, n'oubliez pas de discuter des objectifs mark
 
 ## Données collectées automatiquement
 
-Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l’exception du début et de la fin de session, toutes les autres données automatiquement suivies ne sont pas prises en compte dans votre compte de points de données.
+Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans votre utilisation des points de données.
 
 Consultez notre article sur [l’amorce SDK]({{site.baseurl}}/developer_guide/getting_started/sdk_overview/) pour établir une liste des processus qui bloquent la collecte par défaut de certains éléments de données.
 
@@ -51,7 +50,7 @@ Les événements personnalisés sont des actions effectuées par vos utilisateur
 
 Braze indique le nombre de fois où ces événements ont eu lieu ainsi que la dernière fois qu’ils ont été exécutés par chaque utilisateur pour la segmentation. Sur la page d'analyse/analytique des **événements personnalisés**, vous pouvez visualiser la fréquence de chaque événement personnalisé de manière globale, ainsi que par segment au fil du temps pour une analyse plus détaillée. Ceci est particulièrement utile pour voir comment vos campagnes ont affecté les événements personnalisés, en regardant les lignes grises placées par Braze sur la série temporelle pour indiquer la dernière fois qu’une campagne a été envoyée.
 
-![Un graphique d'analyse des événements personnalisés montrant des statistiques sur les utilisateurs qui ont ajouté une carte de crédit et effectué une recherche sur une période de trente jours.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
+![Graphique d’analyse d’événements personnalisé affichant des statistiques sur les utilisateurs qui ont ajouté une carte de crédit et effectué une recherche sur une période de trente jours.]({% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png")
 
 {% alert note %}
 L'[incrémentation des attributs personnalisés]({{site.baseurl}}/api/endpoints/messaging/) peut être utilisée pour conserver un compteur sur une action de l'utilisateur similaire à un événement personnalisé. Cependant, vous ne pourrez pas afficher les données d’attribut personnalisées dans une série temporelle. Les actions de l’utilisateur qui ne doivent pas être analysées dans les séries temporelles doivent être enregistrées à l’aide de cette méthode.
@@ -67,14 +66,14 @@ Avec des propriétés d’événement personnalisé, Braze vous permet de défin
 
 Par exemple, si une application de commerce électronique souhaitait envoyer un message à un utilisateur lorsqu'il abandonne son panier, elle pourrait en outre améliorer son audience cible et permettre une personnalisation accrue de la campagne en ajoutant une propriété d'événement personnalisé de l'adresse `cart_value` des paniers des utilisateurs.
 
-![Un exemple d'événement personnalisé qui enverra une campagne à un utilisateur qui a abandonné son panier et dont la valeur du panier est supérieure à 100 et inférieure à 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
+![Exemple d’événement personnalisé qui enverra une campagne à un utilisateur ayant abandonné son panier et laissé la valeur du panier à plus de 100 et moins de 200.]({% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png")
 
 Les propriétés d'événement personnalisé peuvent également être utilisées pour personnaliser les messages. Toute campagne utilisant la [livraison par action]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) avec un événement déclencheur peut utiliser les propriétés d'événement personnalisées de cet événement pour la personnalisation des messages. Si un jeu souhaite envoyer un message aux utilisateurs qui ont terminé un niveau, il pourrait personnaliser le message avec une propriété pour le temps qu’il a fallu à l’utilisateur pour terminer le niveau. Dans cet exemple, le message est personnalisé pour trois segments différents à l'aide de la [logique conditionnelle]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/). La propriété d’événement personnalisée appelée ``time_spent`` peut être incluse dans le message en appelant ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% raw %}
 ```liquid
 {% if {{event_properties.${time_spent}}} < 600 %}
-Congratulations on beating that level so fast! Check out our online portal where you can play against top players fromm around the world!
+Congratulations on beating that level so fast! Check out our online portal where you can play against top players from around the world!
 {% elsif {{event_properties.${time_spent}}} < 1800 %}
 Don't forget to visit the town store between levels to upgrade your tools.
 {% else %}
@@ -83,7 +82,7 @@ Talk to villagers for essential tips on how to beat levels!
 ```
 {% endraw %}
 
-Les propriétés d’événement personnalisé sont conçues pour vous aider à personnaliser vos messages ou à élaborer des campagnes de diffusion granulaires à livraison par événement. Si vous souhaitez créer des segments basés sur la récence et la fréquence des propriétés d'événement, contactez votre gestionnaire de satisfaction client ou notre équipe d'assistance.
+Les propriétés d’événement personnalisé sont conçues pour vous aider à personnaliser vos messages ou à élaborer des campagnes de diffusion granulaires à livraison par événement. Si vous souhaitez créer des segments en fonction de la récence et de la fréquence des propriétés d'événement, contactez votre gestionnaire de satisfaction client ou notre équipe d'assistance.
 
 ## Attributs personnalisés
 
@@ -143,7 +142,7 @@ abUser.addToCustomAttributeArray('favorite_foods', 'pizza'); // => ['wings', 'pa
 abUser.addToCustomAttributeArray('favorite_foods', 'ice cream'); // => ['pasta', 'fries', 'pizza', 'ice cream']
 ```
 
-Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Paramètres des données** > **Attributs personnalisés**. Si vous souhaitez que cette limite soit augmentée, contactez votre gestionnaire de services clients. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments.
+Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Paramètres des données** > **Attributs personnalisés**. Si vous souhaitez que ce maximum soit augmenté, contactez votre gestionnaire de service à la clientèle. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments.
 
 Le tableau suivant décrit les options de segmentation disponibles pour les attributs de tableau.
 
@@ -325,11 +324,11 @@ Ne pas utiliser comme ID utilisateur :
 - Adresse e-mail
 - Un autre ID de fournisseur tiers
 
-{% multi_lang_include sdk_auth_alert.md %}
+{% multi_lang_include alerts/important_alerts.md alert='SDK auth' %}
 
 #### Donnez des noms et des noms lisibles des événements personnalisés
 
-Imaginez que vous êtes un marketeur qui commence à utiliser Braze un an ou deux après la mise en œuvre. Une liste déroulante remplie de noms comme « usrnoncpte » sans contexte supplémentaire peut être déconcertante. Donner des noms identifiables et lisibles à votre événement et à vos attributs facilitera les choses pour tous les utilisateurs de votre plateforme. Tenez compte des bonnes pratiques suivantes :
+Imaginez que vous soyez un marketeur qui commence à utiliser Braze un an ou deux après sa mise en œuvre, la lecture d'une liste déroulante remplie de noms tels que "usr_no_acct" sans autre contexte peut être intimidante. Donner des noms identifiables et lisibles à votre événement et à vos attributs facilitera les choses pour tous les utilisateurs de votre plateforme. Tenez compte des bonnes pratiques suivantes :
 
 - Ne commencez pas un événement personnalisé avec un caractère numérique. La liste déroulante est triée par ordre alphabétique et le fait de commencer par un caractère numérique rend plus difficile la segmentation par le filtre de votre choix
 - Essayez, dans la mesure du possible, de ne pas utiliser les abréviations obscures ou du jargon technique

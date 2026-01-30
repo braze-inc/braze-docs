@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen von Geofences
+nav_title: Geofences erstellen
 article_title: Geofences erstellen
 page_order: 1
 page_type: reference
@@ -32,7 +32,7 @@ Refer to the following table for common geofence terms and their descriptions.
 | Term | Description |
 |---|---|
 | Latitude and longitude | Der geographische Mittelpunkt des Geofence. |
-| Radius | Der Radius des Geofence in Metern, gemessen vom geografischen Zentrum. We recommend setting a minimum radius of 100–150 meters for all geofences. |
+| Radius | Der Radius des Geofence in Metern, gemessen vom geografischen Zentrum. Wir empfehlen, für alle GeoFences einen Mindestradius von 100-150 Metern festzulegen. |
 | Cooldown | Nutzer:innen erhalten durch Geofence getriggerte Benachrichtigungen, nachdem sie einzelne Geofences betreten oder verlassen haben. After a transition occurs, there is a pre-defined time during which that user may not perform the same transition on that individual geofence again. This time is called the "cooldown" and is pre-defined by Braze, and its main purpose is to prevent unnecessary network requests. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

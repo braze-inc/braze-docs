@@ -33,5 +33,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
-von email_sync.md umleiten
+umleiten von email_sync.md
 {% endcomment %}

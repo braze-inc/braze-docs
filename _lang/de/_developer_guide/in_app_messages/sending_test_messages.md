@@ -1,6 +1,6 @@
 ---
-nav_title: Testen einer Nachricht 
-article_title: Versenden einer Testnachricht für das Braze SDK
+nav_title: Testen einer Nachricht
+article_title: Senden Sie eine Testnachricht für das Braze SDK
 page_order: 10.0
 description: "Erfahren Sie, wie Sie eine Testnachricht für das Braze SDK versenden können."
 ---

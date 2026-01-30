@@ -14,13 +14,13 @@ Les schémas de stockage s'appliquent aux données d'événements sous forme de 
 
 Contactez votre gestionnaire de compte ou ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/) si vous avez besoin d'accéder à des droits d'événements supplémentaires. Si vous ne trouvez pas ce dont vous avez besoin dans cet article, consultez notre [bibliothèque d'événements de comportement client]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) ou nos [exemples de données Currents](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explication de la structure de l'événement d'engagement lié aux messages et des valeurs de la plateforme %}
+{% details Explanation of message engagement event structure and platform values %}
 
 ### Structure d’événement
 
 Cette ventilation des événements montre le type d’information généralement inclus dans un événement d’engagement de message. Avec une bonne compréhension de ses composants, vos développeurs et votre équipe BI peuvent utiliser les données d’événements Currents entrants pour créer des rapports et des graphiques axés sur les données, et tirer parti des précieux indicateurs de données fournis.
 
-![Décomposition d'un événement d'engagement de message montrant un événement de désinscription d'un e-mail avec les propriétés énumérées regroupées par propriétés spécifiques à l'utilisateur, propriétés de suivi de campagne ou de Canvas, et propriétés spécifiques à l'événement]({% image_buster /assets/img/message_engagement_event.png %}).
+![Ventilation d’un événement d’engagement de messages montrant un événement de désabonnement par e-mail avec les propriétés répertoriées groupées par propriétés spécifiques à l’utilisateur, par campagne ou par Canvas, et propriétés spécifiques à l’événement]({% image_buster /assets/img/message_engagement_event.png %})
 
 Les événements d'engagement aux messages se composent de propriétés **propres à l'utilisateur**, de propriétés de **suivi de la campagne/du canevas** et de propriétés **propres à l'événement**.
 
@@ -63,13 +63,13 @@ Les objets liés aux flux de canevas ont des ID qui peuvent être utilisés pour
 {% alert note %}
 Certains champs peuvent prendre plus de temps pour afficher leur état le plus récent après la mise à jour d'une campagne ou d'un canvas. Ces champs sont les suivants :
 <ul>
-  <li>"nom_de_la_campagne"</li>
-  <li>"nom_de_la_toile"</li>
-  <li>"nom_de_l'étape_de_la_toile"</li>
+  <li>"campaign_name"</li>
+  <li>"canvas_name"</li>
+  <li>"canvas_step_name"</li>
   <li>"conversion_behavior"</li>
-  <li>"nom_de_la_variation_de_la_toile"</li>
-  <li>"nom_de_l'expérience"</li>
-  <li>"nom_du_message"</li>
+  <li>"canvas_variation_name"</li>
+  <li>"experiment_split_name"</li>
+  <li>"message_variation_name"</li>
 </ul>
 Si une cohérence totale est requise, nous vous recommandons d'attendre une heure après la dernière mise à jour de ces champs avant d'envoyer vos messages à vos utilisateurs.
 {% endalert %}

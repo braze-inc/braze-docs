@@ -1,5 +1,5 @@
 ---
-nav_title: Anpassen des Feeds
+nav_title: Feed anpassen
 article_title: Content-Card-Feed für iOS anpassen
 platform: iOS
 page_order: 2
@@ -11,7 +11,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Anpassen des Content-Cards-Feeds
+# Den Content-Cards-Feed anpassen
 
 Sie können Ihre eigene Content-Cards-Schnittstelle erstellen, indem Sie `ABKContentCardsTableViewController` erweitern, um alle UI-Elemente und das Verhalten der Content-Cards anzupassen. Die Content-Card-Zellen können auch unterklassifiziert und dann programmatisch oder mithilfe eines angepassten Storyboards, das die neuen Klassen registriert, verwendet werden. Ein vollständiges Beispiel finden Sie in der Content-Cards [App](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp). 
 
@@ -102,9 +102,9 @@ override func setUpUI() {
 
 Angepasste Schnittstellen können durch die Registrierung von angepassten Klassen für jeden gewünschten Kartentyp bereitgestellt werden. 
 
-![Eine Banner-Content-Card. Eine Banner-Content-Card zeigt ein Bild rechts neben dem Banner mit dem Text "Thanks for downloading Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
-![Eine Content-Card mit Bildunterschrift. Eine hervorgehobene Content-Card zeigt ein Bild von Braze und unten den Schriftzug "Thanks for downloading Braze Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
-![Eine klassische Content-Card. Eine klassische Content-Card zeigt ein Bild in der Mitte der Karte und darunter die Worte "Vielen Dank für das Herunterladen der Braze-Demo".]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+![Eine Banner-Content-Card. Eine Banner-Content-Card zeigt ein Bild rechts neben dem Banner mit dem Text "Vielen Dank für das Herunterladen der Braze Demo!".]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![Eine Content-Card mit Bildunterschrift. Eine Content-Card mit Beschriftung zeigt ein Braze-Bild mit der über den Boden gelegten Beschriftung "Danke für das Herunterladen der Braze-Demo!". ]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![Eine klassische Content-Card. Eine klassische Content-Card zeigt ein Bild in der Mitte der Karte und darunter die Worte "Danke für das Herunterladen der Braze Demo".]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
 Braze bietet drei Content-Card-Templates (Banner, Bildunterschrift und klassisch). Wenn Sie eigene angepasste Schnittstellen bereitstellen möchten, referenzieren Sie die folgenden Code-Snippets:
 

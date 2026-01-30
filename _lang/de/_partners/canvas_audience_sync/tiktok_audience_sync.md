@@ -42,6 +42,10 @@ Sie müssen sicherstellen, dass die folgenden Artikel erstellt, vervollständigt
 
 ### Schritt 1: Mit TikTok verbinden
 
+{% alert important %}
+Sie müssen die [ Berechtigung "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) haben, um TikTok mit Ihrem Braze-Konto zu verbinden.
+{% endalert %}
+
 Gehen Sie im Braze-Dashboard zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **TikTok** aus. Wählen Sie unter TikTok Audience Sync **TikTok verbinden** aus.
 
 ![Die TikTok-Technologie-Seite in Braze enthält eine Übersicht und einen Abschnitt TikTok Audience Sync mit dem Button Connected TikTok.]({% image_buster /assets/img/tiktok/tiktok1.png %}){: style="max-width:75%;"}
@@ -56,7 +60,7 @@ Sobald die Verbindung erfolgreich hergestellt wurde, kehren Sie zur Partnerseite
 
 Ihre TikTok-Verbindung wird auf der Ebene der App-Gruppe von Braze angewendet. Wenn Ihr TikTok-Administrator Sie aus Ihrem TikTok Business Center oder dem Zugriff auf die verbundenen TikTok-Konten entfernt, erkennt Braze ein ungültiges Token. Infolgedessen werden Ihre aktiven Canvase, die TikTok Audience-Komponenten verwenden, Fehler anzeigen, und Braze kann die Nutzer:innen nicht synchronisieren.
 
-### Schritt 2: Hinzufügen einer TikTok Audience-Komponente in Canvas Flow
+### Schritt 2: Hinzufügen einer TikTok Audience-Komponente in Canvas
 
 Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie **Audience Sync**. 
 
@@ -75,21 +79,21 @@ Wählen Sie dann das gewünschte TikTok-Anzeigenkonto aus. Geben Sie in der Drop
 ![]({% image_buster /assets/img/tiktok/tiktok11.png %})
 
 {% tabs %}
-{% tab Eine neue Zielgruppe erstellen %}
+{% tab Create a New Audience %}
 
 **Eine neue Zielgruppe erstellen**<br>
 Geben Sie einen Namen für die neue Zielgruppe ein, wählen Sie **Nutzer:innen hinzufügen** und wählen Sie die Felder aus, die Sie mit TikTok synchronisieren möchten. Als nächstes speichern Sie Ihre Zielgruppe, indem Sie unten im Schritteditor auf den Button **Zielgruppe erstellen** klicken.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-Nutzer:innen werden im oberen Bereich des Schritteditors benachrichtigt, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn dabei Fehler auftreten. Nutzer:innen können diese Zielgruppe auch referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
+Braze zeigt am oberen Rand des Schritteditors eine Benachrichtigung an, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn Fehler auftreten. Nutzer:innen können diese Zielgruppe referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 
 Wenn Sie ein Canvas mit einer neuen Zielgruppe starten, synchronisiert Braze die Nutzer:innen nahezu in Realtime, sobald sie den Canvas-Schritt betreten.
 
 {% endtab %}
-{% tab Mit einer bestehenden Zielgruppe synchronisieren %}
+{% tab Sync with an Existing Audience %}
 
 **Mit einer bestehenden Zielgruppe synchronisieren**<br>
 Braze bietet auch die Möglichkeit, Nutzer:innen zu bestehenden Zielgruppen von TikTok hinzuzufügen, um sicherzustellen, dass diese Zielgruppen auf dem neuesten Stand sind. Um mit einer bestehenden Zielgruppe zu synchronisieren, geben Sie den Namen der bestehenden Zielgruppe in das Dropdown-Menü ein und **fügen Sie sie hinzu**. Braze fügt dann Nutzer:innen in nahezu Realtime hinzu, sobald sie den Schritt TikTok Audience betreten.
@@ -108,9 +112,9 @@ Sie können die Zielgruppen in TikTok einsehen, indem Sie Ihr **Ads Manager:in K
 
 ## Überlegungen zur Synchronisierung von Nutzer:innen und Rate-Limits
 
-Wenn Nutzer:innen den Audience Sync-Schritt erreichen, wird Braze diese Nutzer:innen nahezu in Realtime synchronisieren und dabei die Rate-Limits der Marketing API von TikTok respektieren. Das bedeutet, dass Braze versuchen wird, alle 5 Sekunden so viele Nutzer:innen wie möglich zu verarbeiten, bevor diese Nutzer:innen an TikTok weitergeleitet werden.
+Wenn Nutzer:innen den Schritt Audience Sync erreichen, synchronisiert Braze sie nahezu in Realtime und respektiert dabei die Rate-Limits der Marketing API von TikTok. Braze stapelt und verarbeitet alle 5 Sekunden so viele Nutzer:innen wie möglich, bevor es sie an TikTok weiterleitet.
 
-Das Segmente API Rate-Limits von TikTok besagt, dass nicht mehr als 50 Abfragen pro Sekunde und 10k Nutzer:innen pro Anfrage möglich sind. Erreicht eine Braze Kund:in dieses Rate-Limit, wird der Canvas die Synchronisierung für bis zu ~13 Stunden wiederholen. Wenn die Synchronisierung nicht möglich ist, werden diese Nutzer:innen unter der Metriken Users Errored aufgeführt.
+Das Segmente API Rate-Limits von TikTok lässt nicht mehr als 50 Abfragen pro Sekunde und 10k Nutzer:innen pro Anfrage zu. Erreicht eine Kund:in dieses Limit, wiederholt Braze die Synchronisierung für bis zu ~13 Stunden. Wenn die Synchronisierung immer noch nicht möglich ist, listet Braze diese Nutzer:innen in der Metrik Fehlerhafte Nutzer:innen auf.
 
 ## Analytics verstehen
 
@@ -159,4 +163,6 @@ Das liegt daran, dass in TikTok eine ID mit mehreren Nutzer:innen verbunden sein
 
 Außerdem zählt TikTok auch Nutzer:innen von Pangle als gematchte Nutzer:innen, was in einigen Fällen zu einer erhöhten Match-Rate führen kann. Wenn Sie die Zielgruppe jedoch für die Zustellung von Anzeigen verwenden, ist die tatsächliche Größe der zustellbaren Zielgruppe möglicherweise nicht so hoch wie die Größe der zugeordneten Nutzer:innen, da sie von der Platzierung und anderen Einflussfaktoren abhängt.
 
+### Warum erhalte ich eine E-Mail mit dem Betreff "Zielgruppe existiert nicht für Canvas"?
 
+Dies kann vorkommen, wenn die Zielgruppe, mit der Sie synchronisieren möchten, keine Streaming-Zielgruppe ist (z.B. wenn es sich um eine Lookalike-Zielgruppe oder eine Nutzer:innen-Zielgruppe handelt). Versuchen Sie, eine neue Zielgruppe über den Braze Audience Sync Canvas-Schritt zu erstellen.

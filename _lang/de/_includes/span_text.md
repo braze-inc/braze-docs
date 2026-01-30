@@ -10,4 +10,4 @@ Passen Sie die Eigenschaften der Spanne an, um Ihr Textstyling zu aktualisieren,
 - Textausrichtung und Farbe
 - Block padding
 
-![Panel für die Eigenschaften des Bereichs mit verschiedenen Optionen zum Update.]({% image_buster /assets/img/landing_pages/span_properties.png %}){: style="max-width:35%;"}
+![Panel für die Eigenschaften mit verschiedenen Optionen zum Update.]({% image_buster /assets/img/landing_pages/span_properties.png %}){: style="max-width:35%;"}

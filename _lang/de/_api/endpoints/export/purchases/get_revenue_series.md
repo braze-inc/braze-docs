@@ -11,7 +11,7 @@ description: "Dieser Artikel enthält Einzelheiten zum Endpunkt Export von Daten
 {% api %}
 # Exportieren Sie Umsatzdaten nach Zeit
 {% apimethod get %}
-/Einkäufe/Einnahmen_serien
+/purchases/revenue_series
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um die Gesamtausgaben in Ihrer App über einen bestimmten Zeitraum zu ermitteln.
@@ -47,8 +47,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/purchases/revenue_s
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "message": (required, string) the status of the export, returns 'success' when completed without errors,
   "data" : [

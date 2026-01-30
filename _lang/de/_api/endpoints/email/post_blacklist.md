@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Schwarze Liste E-Mails"
+nav_title: "POST: E-Mails auf die schwarze Liste setzen"
 article_title: "POST: Schwarze Liste E-Mails"
 search_tag: Endpoint
 page_order: 10

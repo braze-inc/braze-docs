@@ -11,7 +11,7 @@ description: "Apprenez à utiliser le débogueur du SDK de Braze, afin de pouvoi
 
 ## Conditions préalables
 
-Pour utiliser le débogueur Braze SDK, vous devez disposer des autorisations `View PII` et `View User Profiles PII Compliant`. En outre, votre SDK Braze doit être conforme ou pointer vers les versions minimales suivantes : 
+Pour utiliser le débogueur du SDK de Braze, vous devez disposer des autorisations "View PII" et "View User Profiles PII Compliant". Pour télécharger les journaux de votre session de débogage, vous devez également disposer de l'autorisation "Exporter les données de l'utilisateur". En outre, votre SDK Braze doit être conforme ou pointer vers les versions minimales suivantes : 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -25,7 +25,7 @@ Pour activer le débogage du SDK Braze, vous pouvez [utiliser un paramètre d'UR
 
 Avant de commencer votre session de débogage, fermez l'application qui pose problème. Vous pouvez relancer l'application au début de votre session.
 
-### Étape 2 : Créer une session de débogage
+### Étape 2 : Créer une session de débogage
 
 Dans Braze, allez dans **Settings**, puis sous **Setup and Testing**, sélectionnez **SDK Debugger**.
 
@@ -35,7 +35,7 @@ Sélectionnez **Créer une session de débogage**.
 
 ![La page "SDK Debugger".]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
-### Étape 3 : Sélectionnez un utilisateur
+### Étape 3 : Sélectionnez un utilisateur
 
 Recherchez un utilisateur à l'aide de son adresse e-mail, `external_id`, de son alias d'utilisateur ou de son jeton de poussée. Lorsque vous êtes prêt à démarrer votre session, sélectionnez **Sélectionner un utilisateur.**
 

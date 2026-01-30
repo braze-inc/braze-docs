@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Ungültige Telefonnummern abfragen"
+nav_title: "GET: Abfrage ungültiger Telefonnummern"
 article_title: "GET: Ungültige Telefonnummern abfragen"
 search_tag: Endpoint
 page_order: 1
@@ -34,7 +34,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 | `limit` | Optional | Integer | Optionales Feld zur Begrenzung der Anzahl der zurückgegebenen Ergebnisse. Standardmäßig sind es 100, maximal 500. |
 | `offset` | Optional | Integer | Optionaler Anfangspunkt in der Liste, ab dem abgerufen werden soll. |
 | `phone_numbers` | Optional <br>(siehe Anmerkung) | Array von Strings im Format e.164  | Wenn Sie eine Telefonnummer angeben, werden wir diese zurückschicken, wenn sie sich als ungültig erweist. |
-| `reason` | Optional <br>(siehe Anmerkung) | String | Verfügbare Werte sind "provider_error" (Providerfehler zeigt an, dass das Telefon keine SMS empfangen kann) oder "deactivated" (die Telefonnummer wurde deaktiviert). Wenn Sie diese Option auslassen, werden alle Gründe zurückgegeben. |
+| `reason` | Optional <br>(siehe Anmerkung) | String | Verfügbare Werte sind "provider_error" (Providerfehler zeigt an, dass das Telefon keine SMS empfangen kann) oder "deaktiviert" (die Telefonnummer wurde deaktiviert). Wenn Sie diese Option auslassen, werden alle Gründe zurückgegeben. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 Die Eingänge sind in absteigender Reihenfolge aufgeführt.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

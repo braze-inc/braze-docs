@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -33,11 +32,11 @@ Aplicamos un límite de velocidad de 1000 solicitudes por minuto a este punto fi
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-A partir del 28 de octubre de 2024, aplicamos un límite de velocidad base de 3.000 solicitudes cada tres segundos a este punto final para todos los clientes. Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que se puede actualizar a un máximo de 225 usuarios en una sola llamada. Además, el mismo perfil de usuario puede ser actualizado por varios objetos.
+A partir del 28 de octubre de 2024, aplicamos un límite de velocidad base de 3.000 solicitudes cada tres segundos a este punto final para todos los clientes. Cada solicitud `/users/track` puede contener hasta 75 objetos de evento, 75 objetos de atributo y 75 objetos de compra. Cada objeto (evento, atributo y matrices de compra) puede actualizar un usuario cada uno. En total, esto significa que puedes actualizar hasta 225 usuarios en una sola llamada. Además, puedes actualizar un único perfil de usuario con varios objetos.
 
-Se aplican límites diferentes a los clientes que han comprado **Usuarios activos al mes - CY 24-25**. Para más detalles sobre estos límites, consulta [Usuarios activos al mes - Límites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Se aplican límites diferentes a los clientes que han comprado **Usuarios activos al mes - CY 24-25**. Para más detalles sobre estos límites, consulta [Usuarios activos al mes - Límites CY 24-25]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-Consulta nuestra página sobre [los límites de velocidad de la API]({{site.baseurl}}/api/api_limits/) para obtener más detalles, y ponte en contacto con tu responsable de satisfacción de los clientes si necesitas aumentar tu límite.
+Consulta nuestra página sobre [los límites de velocidad de la API]({{site.baseurl}}/api/api_limits/) para obtener más detalles, y ponte en contacto con tu administrador del éxito del cliente si necesitas aumentar tu límite.
 
 <!---/users/export/ids-->
 
@@ -113,7 +112,7 @@ Los correos electrónicos transaccionales Braze no están sujetos a ningún lím
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-El número máximo diario de identificadores de envío personalizados que pueden crearse a través de este punto final es de 100 para un espacio de trabajo determinado. Cada combinación de `send_id` y `campaign_id` que crees contará para tu límite diario. Los encabezados de respuesta de cualquier solicitud válida incluyen el estado actual del límite de velocidad; para más detalles, consulta [los límites de velocidad de la API]({{site.baseurl}}/api/api_limits/).
+Puedes crear hasta 100 identificadores de envío personalizados al día utilizando este punto final para un espacio de trabajo determinado. Cada combinación de `send_id` y `campaign_id` que crees contará para tu límite diario. Los encabezados de respuesta de cualquier solicitud válida incluyen el estado actual del límite de velocidad. Para más detalles, consulta [los límites de velocidad API]({{site.baseurl}}/api/api_limits/).
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}

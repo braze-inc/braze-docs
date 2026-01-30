@@ -1,11 +1,11 @@
 ---
-nav_title: Resumen del SDK
+nav_title: Visión general del SDK
 article_title: Resumen del SDK para desarrolladores
 description: "Este artículo de referencia sobre la incorporación proporciona un resumen técnico para desarrolladores del SDK de Braze. Habla de los análisis predeterminados de los que hace seguimiento el SDK, del bloqueo de la recopilación automática de datos y de la versión en vivo del SDK de tu aplicación."
 page_order: 0
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Resumen del SDK para desarrolladores
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Resumen del SDK para desarrolladores
 
 > Antes de empezar a integrar los SDK de Braze, puede que te preguntes qué estás construyendo e integrando exactamente. Quizá tengas curiosidad por saber cómo puedes personalizar el SDK para adaptarlo aún más a tus necesidades. Este artículo puede ayudarte a responder a todas tus preguntas sobre el SDK. 
 
@@ -29,7 +29,7 @@ El SDK de Braze está diseñado para comportarse muy bien y no interferir en otr
 
 ## Análisis predeterminados y gestión de sesiones
 
-Nuestro SDK recopila automáticamente determinados datos de usuario, por ejemplo, la primera aplicación utilizada, la última aplicación utilizada, el recuento total de sesiones, el sistema operativo del dispositivo, etc. Si sigues nuestras guías de integración para implementar nuestros SDK, podrás aprovechar esta [recopilación de datos predeterminada]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Comprobar esta lista puede ayudarte a evitar almacenar la misma información sobre los usuarios más de una vez. A excepción del inicio y el final de la sesión, el resto de los datos de seguimiento automático no cuentan para tu asignación de puntos de datos.
+Nuestro SDK recopila automáticamente determinados datos de usuario, por ejemplo, la primera aplicación utilizada, la última aplicación utilizada, el recuento total de sesiones, el sistema operativo del dispositivo, etc. Si sigues nuestras guías de integración para implementar nuestros SDK, podrás aprovechar esta [recopilación de datos predeterminada]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Comprobar esta lista puede ayudarte a evitar almacenar la misma información sobre los usuarios más de una vez. A excepción del inicio y el final de la sesión, el resto de los datos de seguimiento automático no cuentan para el uso de punto de datos.
 
 {% alert note %}
 Todas nuestras características son configurables, pero es una buena idea implementar completamente el modelo predeterminado de recopilación de datos.
@@ -65,12 +65,12 @@ No se recomienda bloquear la recopilación de datos porque eliminar los datos de
 Recomendamos encarecidamente integrar completamente los SDK para aprovechar al máximo las capacidades de nuestro producto.
 
 {% tabs %}
-{% tab SDK Web %}
+{% tab Web SDK %}
 
 Puedes simplemente no integrar determinadas partes del SDK, o utilizar [`disableSDK`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#disablesdk) para un usuario. Este método sincronizará los datos registrados antes de que se llamara a `disableSDK()`, y hará que se ignoren todas las llamadas posteriores al SDK de la Web de Braze para esta página y para futuras cargas de páginas. Si deseas reanudar la recopilación de datos en un momento posterior, puedes utilizar el método [`enableSDK()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#enablesdk) para reanudar la recopilación de datos en el futuro. Puedes obtener más información al respecto en nuestro artículo [Desactivar el seguimiento Web]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=web).
 
 {% endtab %}
-{% tab SDK para Android %}
+{% tab Android SDK %}
 
 Puedes utilizar [`setDeviceObjectAllowlist`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):%20BrazeConfig.Builder) para configurar el SDK para que sólo envíe un subconjunto de claves o valores del objeto dispositivo según una lista de permitidos establecida. Esto debe habilitarse mediante [`setDeviceObjectAllowlistEnabled`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):%20BrazeConfig.Builder).
 
@@ -79,7 +79,7 @@ Si la lista de permitidos está vacía, **no se** enviarán datos de dispositivo
 {% endalert %}
 
 {% endtab %}
-{% tab SDK de Swift %}
+{% tab Swift SDK %}
 
 Puedes asignar un conjunto de campos elegibles a [`configuration.devicePropertyAllowList`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/devicepropertyallowlist) en tu `Braze.Configuration` para especificar una lista de permitidos para los campos del dispositivo que recoge el SDK. La lista completa de campos se define en [`Braze.Configuration.DeviceProperty`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/deviceproperty). Para desactivar la recopilación de todos los campos del dispositivo, establece el valor de esta propiedad en un conjunto vacío (`[]`).
 

@@ -34,10 +34,10 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 Um den Standort eines Nutzers kontinuierlich zu verfolgen, müssen Sie die Absicht Ihrer App, Standortdaten zu sammeln, erklären, indem Sie mindestens eine der folgenden Berechtigungen in Ihrer `AndroidManifest.xml` Datei hinzufügen.
 
-|Erlaubnis|Beschreibung|
+|Berechtigung|Beschreibung|
 |---|---|
 | `ACCESS_COARSE_LOCATION` | Verwendet den batterieeffizientesten, nicht-GPS-Anbieter (z.B. ein Heimnetzwerk). In der Regel reicht dies für die meisten Anforderungen an Standortdaten aus. Im Rahmen des Laufzeit-Berechtigungsmodells wird durch die Erteilung der Standort-Berechtigung implizit die Sammlung von Feinstandort-Daten genehmigt. |
-| `ACCESS_FINE_LOCATION`   | Enthält GPS-Daten für einen genaueren Standort. Im Rahmen des Laufzeit-Berechtigungsmodells umfasst die Erteilung der Standort-Berechtigung auch den Feinzugriff auf Standorte. |
+| `ACCESS_FINE_LOCATION`   | Enthält GPS-Daten für einen genaueren Standort. Im Rahmen des Laufzeit-Berechtigungsmodells umfasst die Erteilung von Standort-Berechtigungen auch den Feinzugriff auf Standorte. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Ihre `AndroidManifest.xml` sollte in etwa so aussehen wie die folgende:
@@ -55,10 +55,10 @@ Ihre `AndroidManifest.xml` sollte in etwa so aussehen wie die folgende:
 
 ## Deaktivieren des kontinuierlichen Trackings
 
-Sie können das kontinuierliche Tracking bei der Kompilierung oder zur Laufzeit deaktivieren.
+Sie können das kontinuierliche Tracking während der Kompilierung oder zur Laufzeit deaktivieren.
 
 {% tabs local %}
-{% tab Kompilierzeit %}
+{% tab compile time %}
 
 Um das kontinuierliche Standort-Tracking zur Kompilierungszeit zu deaktivieren, setzen Sie `com_braze_enable_location_collection` auf `false` in `braze.xml`:
 
@@ -67,7 +67,7 @@ Um das kontinuierliche Standort-Tracking zur Kompilierungszeit zu deaktivieren, 
 ```
 
 {% endtab %}
-{% tab Laufzeit %}
+{% tab runtime %}
 
 Um das kontinuierliche Standort-Tracking zur Laufzeit selektiv zu deaktivieren, verwenden Sie [`BrazeConfig`]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration):
 

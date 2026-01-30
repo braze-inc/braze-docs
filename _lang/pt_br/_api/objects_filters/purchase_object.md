@@ -1,5 +1,5 @@
 ---
-nav_title: "Objeto da compra"
+nav_title: "Objeto de compra"
 article_title: Objeto de compra da API
 page_order: 8
 page_type: reference
@@ -11,9 +11,11 @@ description: "Este artigo de referência explica os diferentes componentes de um
 
 > Este artigo explica os diferentes componentes de um objeto de compra, como usá-lo corretamente, as práticas recomendadas e os exemplos a serem extraídos.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 ## O que é um objeto de compra?
 
-Um objeto de compra é um objeto que é passado pela API quando uma compra é feita. Cada objeto de compra está localizado em um vetor de objetos, sendo que cada objeto é uma única compra de um determinado usuário em um determinado momento. O objeto de compra tem muitos campos diferentes que permitem que o backend do Braze armazene e use essas informações para personalização, coleta de dados e personalização.
+Um objeto de compra é um objeto que é passado pela API quando uma compra é feita. Cada objeto de compra está localizado em um vetor de objetos, sendo que cada objeto é uma única compra de um determinado usuário em um determinado momento. O objeto de compra possui muitos campos diferentes que permitem que o backend do Braze armazene e use essas informações para personalização, coleta de dados e personalização.
 
 ### Corpo do objeto
 
@@ -35,7 +37,7 @@ Um objeto de compra é um objeto que é passado pela API quando uma compra é fe
   "time" : (required, datetime as string in ISO 8601) Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
-  // Setting this flag to true will put the API in "Update Only" mode.
+  // Setting this flag to true puts the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean)
 }
@@ -57,7 +59,7 @@ No objeto de compra, o `product_id` é um identificador da compra (como `Product
 
 Na Braze, oferecemos algumas convenções gerais de nomenclatura para o objeto de compra `product_id`. Ao escolher `product_id`, a Braze sugere o uso de nomes simplistas, como o nome do produto ou a categoria do produto (em vez de SKUs), com a intenção de agrupar todos os itens registrados por esse `product_id`.
 
-Isso ajuda a tornar os produtos fáceis de identificar para segmentação e disparo.
+Isso ajuda a tornar os produtos mais fáceis de identificar para segmentação e acionamento.
 
 ### Registre as compras no nível do pedido
 
@@ -90,7 +92,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Objeto de propriedades de compra
 
-Os eventos personalizados e as compras podem ter propriedades de evento. Os valores das "propriedades" devem ser um objeto em que as chaves são os nomes das propriedades e os valores são os valores das propriedades. Os nomes de propriedades precisam ser strings não vazias até 255 caracteres, sem cifrões à esquerda. 
+Os eventos personalizados e as compras podem ter propriedades de evento. Os valores das "propriedades" devem ser um objeto em que as chaves são os nomes das propriedades e os valores são os valores das propriedades. Os nomes de propriedades precisam ser strings não vazias até 255 caracteres, sem cifrões à esquerda.
 
 Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
 
@@ -101,7 +103,7 @@ Os valores de propriedade podem ser qualquer um dos seguintes tipos de dados:
 | Datetimes | Formatado como strings no formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Não é compatível com matrizes. |
 | Strings | 255 caracteres ou menos. |
 | Matrizes | As matrizes não podem incluir datas e horários. |
-| Objetos | Os objetos serão ingeridos como strings. |
+| Objetos | Os objetos são ingeridos como strings. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem ter uma carga útil de propriedade de evento de até 50 KB.
@@ -112,12 +114,12 @@ Os objetos de propriedade de evento que contêm valores de vetor ou objeto podem
 
 #### Convenções de nomenclatura
 
-É importante notar que esse recurso é ativado **por produto**, não por compra. Por exemplo, se você tiver um grande volume de produtos distintos, mas cada um tiver as mesmas propriedades, a segmentação pode ser mais desnecessária.
+É importante notar que esse recurso está ativado **por produto**, não por compra. Por exemplo, se você tiver um alto volume de produtos distintos, mas cada um tiver as mesmas propriedades, a segmentação pode ser mais desnecessária.
 
-Nesse caso, recomendamos o uso de nomes de produtos em um "nível de grupo" em vez de algo granular ao definir estruturas de dados. Por exemplo, uma empresa de criação de bilhetes de trem deve ter produtos para "viagem única", "viagem de ida e volta", "várias cidades", e não transações específicas, como "transação 123" ou "transação 046". Como outro exemplo, com o evento de compra "comida", as propriedades seriam melhor definidas como "bolo" e "sanduíche".
+Neste caso, recomendamos usar nomes de produtos em um nível de "grupo" em vez de identificadores em nível de transação ao definir estruturas de dados. Por exemplo, uma empresa de criação de bilhetes de trem deve ter produtos para "viagem única", "viagem de ida e volta", "várias cidades", e não transações específicas, como "transação 123" ou "transação 046". Como outro exemplo, com o evento de compra "comida", as propriedades seriam melhor definidas como "bolo" e "sanduíche".
 
 {% alert important %}
-Note que os produtos podem ser adicionados por meio da Braze REST API. Por exemplo, se enviar uma chamada para o ponto de extremidade `/users/track` e incluir um novo ID de compra, um produto será criado automaticamente na seção **Configurações de dados** > **Produtos** do dashboard.
+Observe que os produtos podem ser adicionados através da API REST do Braze. Por exemplo, se você enviar uma chamada para o endpoint `/users/track` e incluir um novo ID de compra, o Braze cria automaticamente um produto na seção **Configurações de Dados** > **Produtos** do dashboard.
 {% endalert %}
 
 ### Exemplo de objeto de compra

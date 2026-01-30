@@ -29,9 +29,9 @@ Para ver un ejemplo, consulta el uso en [`NotificationService`](https://github.c
 
 Después de seguir la [guía de integración de Swift Package Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), añade `BrazeNotificationService` a tu `Notification Service Extension` haciendo lo siguiente:
 
-1. En Xcode, en marcos y bibliotecas, selecciona el ícono <i class="fas fa-plus"></i> añadir para añadir un framework. <br><br>![El ícono "más" se encuentra en frameworks y bibliotecas en Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
+1. En Xcode, en marcos y bibliotecas, selecciona el ícono <i class="fas fa-plus"></i> añadir para añadir un framework. <br><br>![El icono del signo más se encuentra en la sección de marcos y bibliotecas de Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
-2. Selecciona el marco "BrazeNotificationService". <br><br>![El "framework BrazeNotificationService se puede seleccionar en el modal que se abre.]({% image_buster /assets/img_archive/rich_notification2.png %})
+2. Selecciona el marco "BrazeNotificationService". <br><br>![El marco "BrazeNotificationService" se puede seleccionar en el modal que se abre.]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}

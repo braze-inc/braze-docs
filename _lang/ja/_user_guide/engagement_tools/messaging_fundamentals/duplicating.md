@@ -1,7 +1,7 @@
 ---
 nav_title: 複製
 article_title: 複製
-page_order: 5
+page_order: 5.5
 page_type: reference
 description: "この参照記事では、キャンペーンとキャンバスを複製する方法について説明します。"
 tool:

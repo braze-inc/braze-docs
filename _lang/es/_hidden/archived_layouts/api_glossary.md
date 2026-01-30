@@ -50,7 +50,7 @@ excerpt_separator: ""
 Publicar,Correo electrónico,Crear,Plantilla,REST,API
 {% endapitags %}
 
-Utiliza las API REST de plantillas de correo electrónico para administrar mediante programación las plantillas de correo electrónico que almacenaste en los paneles Braze, en la página Plantillas y medios. Braze proporciona dos puntos finales para crear y actualizar tus plantillas de correo electrónico.
+Utiliza las API REST de plantillas de correo electrónico para administrar mediante programación las plantillas de correo electrónico que almacenaste en los paneles de Braze, en la página Plantillas & Medios. Braze proporciona dos puntos finales para crear y actualizar tus plantillas de correo electrónico.
 
 La respuesta de este punto final incluye un campo para `email_template_id`, que puede utilizarse para actualizar la plantilla en posteriores llamadas a la API.
 
@@ -147,7 +147,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 {% api %}
 ## 3 Campañas Desencadenar envío
-{% apimethod post %}campaigns/trigger/send{% endapimethod %}
+{% apimethod post %}campañas/desencadenar/enviar{% endapimethod %}
 {% apitags %}Publicar, Campañas, Desencadenar,Enviar{% endapitags %}
 
 La entrega desencadenada por API te permite alojar el contenido de los mensajes dentro del panel de Braze, a la vez que dictas cuándo se envía un mensaje y a quién a través de tu API. 
@@ -266,25 +266,25 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Campo Perfil de usuario | Especificación del tipo de datos |
 | ---| --- |
 | country | (cadena) Requerimos que los códigos de país se pasen a Braze en la [norma ISO-3166-1 alfa-2][17]. |
-| current_location | (objeto) De la forma {"longitude": -73.991443, "latitude": 40.753824} |
-| fecha_de_primera_sesión | (fecha en la que el usuario utilizó la aplicación por primera vez) Cadena en formato ISO 8601 o en formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
-| fecha_de_última_sesión | (fecha en la que el usuario utilizó la aplicación por última vez) Cadena en formato ISO 8601 o en formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
+| current_location | (objeto) De la forma {"longitud": -73,991443, "latitud": 40.753824} |
+| date_of_first_session | (fecha en la que el usuario utilizó la aplicación por primera vez) Cadena en formato ISO 8601 o en formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
+| date_of_last_session | (fecha en la que el usuario utilizó la aplicación por última vez) Cadena en formato ISO 8601 o en formato `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
 | dob | (fecha de nacimiento) Cadena en formato "AAAA-MM-DD", por ejemplo, 1980-12-21. |
 | correo electrónico | (cadena) |
-| email_subscribe | (cadena) Los valores disponibles son "opted_in" (registrado explícitamente para recibir mensajes de correo electrónico), "unsubscribed" (excluido explícitamente de los mensajes de correo electrónico) y "subscribed" (ni opted in ni out).  |
+| email_subscribe | (cadena) Los valores disponibles son "opted_in" (se ha registrado explícitamente para recibir mensajes de correo electrónico), "unsubscribed" (se ha dado de baja explícitamente de los mensajes de correo electrónico) y "subscribed" (ni se ha dado de alta ni de baja).  |
 | external_id | (cadena) Del identificador único del usuario. |
 | Facebook | hash que contiene cualquiera de `id` (cadena), `likes` (matriz de cadenas), `num_friends` (entero). |
 | first_name | (cadena) |
 | gender | (cadena) "M", "F", "O" (otro), "N" (no procede), "P" (prefiere no decirlo) o nil (desconocido). |
 | home_city | (cadena) |
-| URL_imagen | (cadena) URL de la imagen que se asociará al perfil de usuario. |
-| language | (cadena) requerimos que el idioma se pase a Braze en la [norma ISO-639-1][24]. <br>[Lista de lenguas aceptadas][1]|
+| image_url | (cadena) URL de la imagen que se asociará al perfil de usuario. |
+| language | (cadena) requerimos que el idioma se pase a Braze en la [norma ISO-639-1][24]. <br>[Lista de lenguas aceptadas](/docs/user_guide/data_and_analytics/user_data_collection/language_codes/)|
 | last_name | (cadena) |
 |marked_email_as_spam_at| (cadena) Fecha en la que el correo electrónico del usuario fue marcado como correo no deseado. Aparece en formato ISO 8601 o en formato aaaa-MM-dd'T'HH:mm:ss:SSSZ.|
 | teléfono | (cadena) |
-| push_subscribe | (cadena) Los valores disponibles son "opted_in" (registrado explícitamente para recibir mensajes push), "unsubscribed" (excluido explícitamente de los mensajes push) y "subscribed" (ni opted in ni opted out).  |
+| push_subscribe | (cadena) Los valores disponibles son "opted_in" (registrado explícitamente para recibir mensajes push), "desuscrito" (optó explícitamente por no recibir mensajes push) y "suscrito" (ni optó por recibirlos ni por no recibirlos).  |
 | push_tokens | Matriz de objetos con `app_id` y cadena `token`. Opcionalmente, puedes proporcionar un `device_id` para el dispositivo al que está asociado este token, por ejemplo, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Si no se proporciona un `device_id`, se generará uno aleatoriamente. |
-| zona_horaria | (cadena) Del nombre de la zona horaria de la [Base de datos de zonas horarias de la IANA][26] (por ejemplo, "America/New_York" o "Eastern Time (US & Canada)"). Sólo se establecerán los valores de zona horaria válidos. |
+| time_zone | (cadena) Del nombre de la zona horaria de la [Base de datos de zonas horarias de IANA][26] (por ejemplo, "America/New_York" o "Eastern Time (US & Canada)"). Sólo se establecerán los valores de zona horaria válidos. |
 | twitter | Hash que contiene `id` (entero), `screen_name` (cadena, X (antes Twitter) handle), `followers_count` (entero), `friends_count` (entero), `statuses_count` (entero). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

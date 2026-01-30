@@ -21,15 +21,15 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Nutzer:innen i
 
 ## Funktionsweise
 
-Der Aufruf von `/users/identify` kombiniert ein Nutzerprofil, das durch einen Alias (Nur-Alias-Profil), eine E-Mail Adresse (Nur-E-Mail-Profil) oder eine Telefonnummer (Nur-Telefonnummer-Profil) identifiziert wird, mit einem Nutzerprofil, das über eine `external_id` (identifiziertes Profil) verfügt, und entfernt dann das Nur-Alias-Profil. 
+Der Aufruf von `/users/identify` kombiniert ein Nutzerprofil, das durch einen Alias (Nur-Alias-Profil), eine E-Mail Adresse (Nur-E-Mail-Profil) oder eine Telefonnummer (Nur-Telefonnummer-Profil) identifiziert wird, mit einem Nutzerprofil, das über eine `external_id` (identifiziertes Profil) verfügt, und entfernt dann das Nur-Alias-Profil.
 
 Die Identifizierung eines Nutzers:in erfordert eine `external_id`, die in den folgenden Objekten enthalten ist:
 
 - `aliases_to_identify`
-- `emails_to_identify` 
+- `emails_to_identify`
 - `phone_numbers_to_identify`
 
-Wenn es keinen Nutzer:in mit diesem `external_id` gibt, wird `external_id` zum Datensatz des Nutzer:innen hinzugefügt, und der Nutzer gilt als identifiziert. Nutzer:innen können nur einen Alias für ein bestimmtes Label haben. Wenn es bereits einen Nutzer:innen mit der Adresse `external_id` gibt, der einen Alias mit demselben Label wie das Profil "Nur Alias" hat, werden die Nutzerprofile nicht kombiniert.
+Wenn es keinen Nutzer:in mit diesem `external_id` gibt, wird `external_id` zum Datensatz des Nutzer:innen hinzugefügt und der Nutzer gilt als identifiziert. Nutzer:innen können nur einen Alias für ein bestimmtes Label haben. Wenn es bereits einen Nutzer:innen mit der Adresse `external_id` gibt, der einen Alias mit demselben Label wie das Profil "Nur Alias" hat, werden die Nutzerprofile nicht kombiniert.
 
 {% alert tip %}
 Um unerwartete Datenverluste bei der Identifizierung von Nutzer:innen zu vermeiden, empfehlen wir Ihnen dringend, zunächst die [Best Practices für die Datenerfassung]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) zu referenzieren, um zu erfahren, wie Sie Nutzerdaten erfassen können, wenn bereits Bezeichner-Alias-Informationen vorhanden sind.
@@ -37,9 +37,9 @@ Um unerwartete Datenverluste bei der Identifizierung von Nutzer:innen zu vermeid
 
 ### Verhalten bei der Zusammenführung
 
-Standardmäßig führt dieser Endpunkt die folgende Liste von Feldern, die **ausschließlich** beim anonymen Nutzer:in zu finden sind, mit dem identifizierten Nutzer zusammen.
+Standardmäßig führt dieser Endpunkt die folgende Liste von Feldern, die sich **ausschließlich** auf den anonymen Nutzer:in beziehen, mit dem identifizierten Nutzer zusammen.
 
-{% details Liste der Felder, die zusammengeführt werden %}
+{% details List of fields that are merged %}
 - Vorname
 - Nachname
 - E-Mail
@@ -52,27 +52,27 @@ Standardmäßig führt dieser Endpunkt die folgende Liste von Feldern, die **aus
 - Sprache
 - Anzahl der Sitzungen (die Summe der Sitzungen aus beiden Profilen)
 - Datum der ersten Sitzung (Braze wählt das frühere Datum der beiden Termine)
-- Datum der letzten Sitzung (Braze wählt das spätere Datum der beiden Termine)
+- Datum der letzten Sitzung (Braze wählt das spätere Datum der beiden Daten)
 - Angepasste Attribute
 - Angepasste Event- und Kauf-Event-Daten
-- Angepasste Event- und Kauf-Event-Eigenschaften für die Segmentierung "X mal in Y Tagen" (wobei X<=50 und Y<=30)
+- Angepasste Event- und Kauf-Event-Eigenschaften für die Segmentierung "X Mal in Y Tagen" (wobei X<=50 und Y<=30)
 - Segmentierbare Zusammenfassung angepasster Events
   - Anzahl der Ereignisse (die Summe aus beiden Profilen)
   - Das Ereignis ist zuerst eingetreten (Braze wählt das frühere Datum der beiden Daten)
-  - Letztes Ereignis (Braze wählt das spätere Datum der beiden Daten)
+  - Ereignis ist zuletzt eingetreten (Braze wählt das spätere der beiden Daten)
 - In-App-Käufe insgesamt in Cent (die Summe aus beiden Profilen)
 - Gesamtzahl der Käufe (die Summe aus beiden Profilen)
 - Datum des ersten Kaufs (Braze wählt das frühere der beiden Daten)
 - Datum des letzten Kaufs (Braze wählt das spätere Datum der beiden Daten)
 - App Zusammenfassungen
-- Last_X_at Felder (Braze aktualisiert die Felder, wenn die verwaisten Profilfelder neueren Datums sind)
+- Last_X_at Felder (Braze aktualisiert die Felder, wenn die verwaisten Profilfelder aktueller sind)
 - Kampagnen-Zusammenfassungen (Braze wählt die aktuellsten Datumsfelder aus)
 - Workflow-Zusammenfassungen (Braze wählt die aktuellsten Datumsfelder aus)
 - Verlauf des Messaging und des Engagements für Nachrichten
-- Angepasste Events und Kauf-Events mit Zählung und Zeitstempel für das erste und letzte Datum 
+- Angepasste Events und Kauf-Events mit Zählung und Zeitstempel für das erste und letzte Datum
   - Diese zusammengeführten Felder aktualisieren die Filter "für X Ereignisse in Y Tagen". Bei Kauf-Events umfassen diese Filter "Anzahl der Käufe in Y Tagen" und "Geldausgabe in den letzten Y Tagen".
 - Sitzungsdaten, wenn die App in beiden Nutzerprofilen vorhanden ist
-  - Wenn unsere Zielgruppe zum Beispiel keine App-Zusammenfassung für "ABCApp" hat, unser ursprünglicher Nutzer aber schon, dann hat der Nutzer:innen nach der Zusammenführung die App-Zusammenfassung "ABCApp" in seinem Profil.
+  - Wenn unsere Zielgruppe beispielsweise keine App-Zusammenfassung für "ABCApp" hat, unser ursprünglicher Nutzer aber schon, hat der Nutzer:innen nach der Zusammenführung die App-Zusammenfassung "ABCApp" in seinem Profil.
 {% enddetails %}
 
 ## Voraussetzungen
@@ -117,7 +117,7 @@ Eine der folgenden Angaben ist erforderlich: `aliases_to_identify`, `emails_to_i
 
 Wenn eine E-Mail-Adresse oder Telefonnummer als Bezeichner angegeben wird, müssen Sie auch `prioritization` in den Bezeichner aufnehmen.
 
-`prioritization` muss ein Array sein, das angibt, welcher Nutzer:innen zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden. `prioritization` ist ein geordnetes Array, d.h. wenn mehr als ein Nutzer:innen aus einer Priorisierung übereinstimmt, wird die Zusammenführung nicht durchgeführt.
+`prioritization` muss ein Array sein, das angibt, welcher Nutzer:innen zusammengeführt werden soll, wenn mehrere Nutzer:innen gefunden werden. `prioritization` ist ein geordnetes Array, d.h. wenn mehr als ein Nutzer:innen aus einer Priorisierung übereinstimmt, findet keine Zusammenführung statt.
 
 Die zulässigen Werte für das Array sind:
 
@@ -166,8 +166,6 @@ Weitere Informationen zu `alias_name` und `alias_label` finden Sie in unserer Do
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

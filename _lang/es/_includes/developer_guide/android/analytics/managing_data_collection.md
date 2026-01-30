@@ -188,4 +188,4 @@ Puedes utilizar el método [`wipeData()`](https://braze-inc.github.io/braze-andr
 
 ## Reanudar el seguimiento de los datos
 
-Para reanudar la recopilación de datos, puedes utilizar el método [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) método. Ten en cuenta que esto no restaurará los datos borrados previamente.
+Para reanudar la recopilación de datos, puedes utilizar el método [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) método. Ten en cuenta que esto no restaurará ningún dato borrado previamente.

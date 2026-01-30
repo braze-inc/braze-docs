@@ -27,7 +27,7 @@ Para crear una alerta de uso de la API:
 2. Introduce un nombre para tu alerta y elige los puntos finales de la API REST y las claves de API de las que te gustaría recibir una alerta.
 3. Define tus criterios de alerta eligiendo uno o varios códigos de respuesta y especificando los [umbrales de alerta](#api-usage-alert-thresholds).
 4. Cuando hayas terminado, alterna **Alerta habilitada**.
-    \![Un ejemplo de alerta de uso de la API que envía notificaciones cuando el punto final Seguimiento de usuarios aumenta un 100 por cien en el plazo de una hora.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
+    ![Un ejemplo de alerta de uso de la API que envía notificaciones cuando el punto final Seguimiento de usuarios aumenta un 100 por cien en el plazo de una hora.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
 
 ## Umbrales de alerta {#api-usage-alert-thresholds}
 
@@ -66,9 +66,9 @@ Cuando definas tus criterios de alerta, puedes ajustar los siguientes umbrales:
 
 ## Configuración de las notificaciones de alerta
 
-Puedes configurar una alerta por correo electrónico, una alerta webhook o ambas. Las alertas webhook pueden ser muy útiles para casos de uso como enviar una alerta a plataformas externas, como un canal de Slack. Para ver un ejemplo, consulta nuestra [documentación](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) sobre la integración de alertas con Slack para conocer nuestras preferencias de notificación.
+Puedes configurar una alerta por correo electrónico, una alerta por webhook o ambas. Las alertas webhook pueden ser muy útiles para casos de uso como enviar una alerta a plataformas externas, como un canal de Slack. Para ver un ejemplo, consulta nuestra [documentación](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) sobre la integración de alertas con Slack para conocer nuestras preferencias de notificación.
 
-Se enviará un correo electrónico al correo electrónico seleccionado cuando se alcancen los criterios de la alerta.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
+![Se enviará un correo electrónico al correo electrónico seleccionado cuando se alcancen los criterios de la alerta.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
 ### Muestra de carga útil {#payload}
 
@@ -104,16 +104,16 @@ Aquí tienes algunas formas de establecer las configuraciones de tus alertas de 
 {% tab api health %}
 Puedes configurar alertas para controlar el estado general de tu API. Por ejemplo, puedes configurar estas alertas cuando los errores de la API aumenten drásticamente, como un 20% respecto a la hora anterior.
 
-| Punto final | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
+| Punto de conexión | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
 | --- | --- | --- | --- | --- | --- |
-| Todos los puntos finales | Todas las claves de API | `4XX` y `5XX` | Aumento del 10%. | 10 | 1 hora |
+| Todos los puntos de conexión | Todas las claves de API | `4XX` y `5XX` | Aumento del 10%. | 10 | 1 hora |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 
 {% tab endpoint rate limit %}
 Recibe una alerta cuando tu espacio de trabajo alcance su límite de velocidad para el punto final `/users/track`. También puedes aplicar esta configuración a otros puntos finales Braze.
 
-| Punto final | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
+| Punto de conexión | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
 | --- | --- | --- | --- | --- | --- |
 | `/users/track` | Todas las claves de API | `429` | Mayor o igual que | 100 | 1 hora |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
@@ -122,18 +122,18 @@ Recibe una alerta cuando tu espacio de trabajo alcance su límite de velocidad p
 {% tab API-triggered campaigns %}
 Esta configuración de alerta te notifica cuando se producen errores en las campañas desencadenadas por la API y en los Lienzos, algunos de los cuales pueden ser de alta prioridad.
 
-| Punto final | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
+| Punto de conexión | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
 | --- | --- | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li><code>/campañas/desencadenar/enviar</code></li><li><code>/canvas/desencadenar/enviar</code></li><li><code>/mensajes/enviar</code></li></ul>{:/} | Todas las claves de API | `4XX` y `5XX` | Mayor o igual que | 1 | 1 hora |
+| {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | Todas las claves de API | `4XX` y `5XX` | Mayor o igual que | 1 | 1 hora |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 
 {% tab partner integrations %}
 Utiliza la siguiente configuración de alerta para recibir un aviso cuando una integración del socio deje de enviar datos a Braze.
 
-| Punto final | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
+| Punto de conexión | Clave de API | Código de respuesta | Condición de umbral | Volumen umbral | En |
 | --- | --- | --- | --- | --- | --- |
-| Todos los puntos finales | La clave de API utilizada para tu integración del socio | Todos los códigos de respuesta | Inferior o igual a | 0 | 1 día |
+| Todos los puntos de conexión | La clave de API utilizada para tu integración del socio | Todos los códigos de respuesta | Inferior o igual a | 0 | 1 día |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 {% endtabs %}

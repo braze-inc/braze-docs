@@ -1,6 +1,6 @@
 ---
 nav_title: Comportamiento
-article_title: Personalizar el comportamiento de las tarjetas de contenido
+article_title: Personaliza el comportamiento de las tarjetas de contenido
 page_order: 2
 description: "Esta guía de implementación trata sobre cómo cambiar el comportamiento de las tarjetas de contenido, cómo añadir extras como pares clave-valor a tu carga útil, y recetas para personalizaciones comunes."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Personalizar el comportamiento de las tarjetas de contenido
+# Personaliza el comportamiento de las tarjetas de contenido
 
 > Esta guía de implementación trata sobre cómo cambiar el comportamiento de las tarjetas de contenido, cómo añadir extras como pares clave-valor a tu carga útil, y recetas para personalizaciones comunes. Para ver la lista completa de tipos de tarjetas de contenido, consulta [Acerca de las tarjetas de contenido]({{site.baseurl}}/developer_guide/content_cards/). 
 
@@ -25,6 +25,11 @@ No recomendamos enviar valores JSON anidados como pares clave-valor. En su lugar
 {% endalert %}
 
 {% tabs %}
+{% tab web %}
+
+Los pares clave-valor se almacenan en objetos <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> como `extras`. Se pueden utilizar para enviar datos hacia abajo junto con una tarjeta para su posterior manipulación por la aplicación. Llama a `card.extras` para acceder a estos valores.
+
+{% endtab %}
 {% tab android %}
 
 Los pares clave-valor se almacenan en objetos <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> como `extras`. Se pueden utilizar para enviar datos hacia abajo junto con una tarjeta para su posterior manipulación por la aplicación. Llama a <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a> para acceder a estos valores.
@@ -33,11 +38,6 @@ Los pares clave-valor se almacenan en objetos <a href="https://braze-inc.github.
 {% tab swift %}
 
 Los pares clave-valor se almacenan en objetos <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> como `extras`. Se pueden utilizar para enviar datos hacia abajo junto con una tarjeta para su posterior manipulación por la aplicación. Llama a <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a> para acceder a estos valores.
-
-{% endtab %}
-{% tab Web %}
-
-Los pares clave-valor se almacenan en objetos <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> como `extras`. Se pueden utilizar para enviar datos hacia abajo junto con una tarjeta para su posterior manipulación por la aplicación. Llama a `card.extras` para acceder a estos valores.
 
 {% endtab %}
 {% endtabs %}
@@ -58,10 +58,10 @@ El ejemplo de la derecha muestra una fuente con una lista híbrida de elementos 
 
 [Las campañas desencadenadas por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) son una buena estrategia a emplear cuando los valores de una tarjeta dependen de factores externos para determinar qué contenido mostrar al usuario. Por ejemplo, para mostrar contenido complementario, establece pares clave-valor utilizando Liquid. Ten en cuenta que `class_type` debe conocerse en el momento de la configuración.
 
-![Los pares clave-valor para el caso de uso de las tarjetas de contenido suplementario. En este ejemplo, diferentes aspectos de la tarjeta como "tile_id", "tile_deeplink" y "tile_title" se configuran utilizando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![Los pares clave-valor para el caso de uso de las tarjetas de contenido suplementario. En este ejemplo, diferentes aspectos de la tarjeta, como "tile_id", "tile_deeplink", y "tile_title", se configuran utilizando Liquid.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ## Tarjetas de contenido como contenido interactivo
-![En la esquina inferior izquierda de la pantalla aparece una tarjeta de contenido interactiva que muestra una promoción del 50%. Después de hacer clic, se aplicará una promoción al carrito.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+![En la esquina inferior izquierda de la pantalla aparece una tarjeta de contenido interactiva que muestra una promoción del 50%. Tras hacer clic, se aplicará una promoción al carrito.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 Las tarjetas de contenido pueden aprovecharse para crear experiencias dinámicas e interactivas para tus usuarios. En el ejemplo de la derecha, tenemos una ventana emergente de una tarjeta de contenido que aparece en el momento de la compra y que ofrece a los usuarios promociones de última hora. Las tarjetas bien colocadas como ésta son una forma estupenda de dar a los usuarios un "empujoncito" hacia acciones específicas del usuario. 
 
@@ -82,6 +82,17 @@ Las señales son pequeños iconos ideales para llamar la atención del usuario. 
 Puedes mostrar el número de tarjetas de contenido no leídas que tiene tu usuario como una señal en el icono de tu aplicación. 
 
 {% tabs %}
+{% tab web %}
+
+Puedes solicitar el número de tarjetas no leídas en cualquier momento llamando por teléfono:
+
+```javascript
+braze.getCachedContentCards().getUnviewedCardCount();
+```
+
+Puedes utilizar esta información para mostrar una señal que indique cuántas tarjetas de contenido hay sin leer. Consulta <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">la documentación de referencia del SDK</a> para obtener más información.
+
+{% endtab %}
 {% tab android %}
 
 Puedes solicitar el número de tarjetas no leídas en cualquier momento llamando por teléfono:
@@ -146,17 +157,6 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-Puedes solicitar el número de tarjetas no leídas en cualquier momento llamando por teléfono:
-
-```javascript
-braze.getCachedContentCards().getUnviewedCardCount();
-```
-
-Puedes utilizar esta información para mostrar una señal que indique cuántas tarjetas de contenido hay sin leer. Consulta <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">la documentación de referencia del SDK</a> para obtener más información.
-
 {% endtab %}
 {% endtabs %}
 

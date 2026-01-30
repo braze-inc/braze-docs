@@ -9,7 +9,7 @@ Android SDK는 콘텐츠 카드, 인앱 메시지, 푸시 알림에서 Braze가 
 다음은 YouTube URL의 커스텀 동작 및 커스텀 의도 플래그로 기본 [`UriAction`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html) 동작을 재정의하는 예제입니다.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
@@ -48,7 +48,7 @@ public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
@@ -91,7 +91,7 @@ class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
 딥링크에서 앱 설정을 바로 열 수 있도록 하려면 커스텀 `BrazeDeeplinkHandler`가 필요합니다. 다음 예제에서는 `open_notification_page`라는 커스텀 키-값 페어를 통해 딥링크에서 앱 설정 페이지를 엽니다.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
@@ -116,7 +116,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
@@ -144,7 +144,13 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 
 ## WebView 활동 커스텀하기 {#Custom_Webview_Activity}
 
-기본적으로, 웹사이트 딥링크가 Braze에 의해 앱 내부에서 열리면 [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html)에 의해 처리됩니다. 이를 변경하려면:
+Braze가 앱 내에서 웹사이트 딥링크를 열면 딥링크는 [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
+
+{% alert note %}
+커스텀 HTML 인앱 메시지의 경우 `target="_blank"` 로 구성된 링크는 기기의 기본값 웹 브라우저에서 열리며 `BrazeWebViewActivity` 에서는 처리되지 않습니다.
+{% endalert %}
+
+이를 변경하려면:
 
 1. `com.braze.Constants.BRAZE_WEBVIEW_URL_EXTRA` 키를 사용하여 `Intent.getExtras()`에서 대상 URL을 처리하는 새 활동을 생성합니다. 예를 보려면 [`BrazeWebViewActivity.kt`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.kt).
 2. 해당 활동을 `AndroidManifest.xml`에 추가하고 `exported`를 `false`로 설정합니다.
@@ -155,7 +161,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
     ```
 3. `BrazeConfig` [빌더 객체에서](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html) 사용자 지정 활동을 설정합니다. 빌더를 구축한 후 빌더를 [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html) 에 전달하고 [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()).
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 BrazeConfig brazeConfig = new BrazeConfig.Builder()
@@ -166,7 +172,7 @@ Braze.configure(this, brazeConfig);
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 val brazeConfig = BrazeConfig.Builder()

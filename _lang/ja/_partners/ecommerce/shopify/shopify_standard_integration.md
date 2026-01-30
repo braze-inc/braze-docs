@@ -177,41 +177,44 @@ braze.logCustomEvent(
 
 ### ステップ4.2：外部ID を取得するエンドポイントを作成する
 
-外部ID を取得するためにBraze が呼び出すことができる公開エンドポイントを作成する必要があります。これは、Shopify が`braze.external_id` メタフィールドを提供できない場合に必須です。 
+外部ID を取得するためにBraze が呼び出すことができる公開エンドポイントを作成する必要があります。これにより、Brazeは、Shopifyが`braze.external_id`メタフィールドを直接的に提供できない場合にIDを取得できます。
 
 #### エンドポイント仕様
 
-**方法:** `GET`
+**メソッド:**GET
 
-| パラメータ | 説明 |
-| --- | --- |
-| `shopify_customer_id` | Shopify 顧客 ID。 |
-| `email_address` | ログインユーザーのメールの住所。 |
-| `shopify_storefront` | リクエストのストアフロント。 |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Brazeは、次のパラメータをエンドポイントに送信します。
+
+| パラメーター            | 必須かどうか | データ型 | 説明                                                      |
+|----------------------|----------|-----------|------------------------------------------------------------------|
+| shopify_customer_id  | はい      | string    | Shopify 顧客 ID。                                         |
+| shopify_storefront   | はい      | string    | リクエストのストアフロント名。例: `<storefront_name>.myshopify.com` |
+| email_address        | いいえ       | string    | ログインユーザーのメールの住所。<br><br>このフィールドは、特定のWebhook状況で欠落している可能性があります。エンドポイントロジックでは、ここでNULL 値を考慮する必要があります(たとえば、内部ロジックで必要な場合は、shopify_customer_id を使用してメールをフェッチします)。 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 #### サンプルエンドポイント
 
-```
-GET 
-https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
+```http
+GET https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
 ```
 
 #### 期待される反応
-
-Braze は `200` ステータスコードを待ち受けます。それ以外のコードは障害とみなされます。
-
-{% raw %}
+Braze は、外部ID JSON を返すステータス コードに`200` を期待します。
 ```json
-{ 
-    "external_id": "my_external_id" 
+{
+  "external_id": "my_external_id"
 }
 ```
-{% endraw %}
 
-{% alert important %}
-`shopify_customer_id` と`email_address` がShopify の顧客に一致することを検証することが大切です。[Admin API](https://shopify.dev/docs/api/admin-graphql)または[Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer)を使用して、これらのパラメータを検証し、`braze.external_id`メタフィールドを取得できます。
-{% endalert %}
+#### 検証
+`shopify_customer_id` と`email_address` (存在する場合) がShopify の顧客 に一致することを検証することが重要です。[ Shopify Admin API](https://shopify.dev/docs/api/admin-graphql) または[ Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) を使用してこれらのパラメータを検証し、正しい`braze.external_id` メタフィールドを取得できます。
+
+#### 障害動作とマージ
+`200` 以外のステータス コードは失敗と見なされます。
+
+- **マージの影響:**エンドポイントが失敗した場合(`200` 以外を返す、またはタイムアウトした場合)、Braze は外部ID を取得できません。したがって、Shopify ユーザーとBraze ユーザープロファイルの間のマージは、その時点でh en をアプリしません。
+- **再試行ロジック:**Brazeは、通常の即時ネットワーク再試行を試みることができますが、障害が継続する場合、マージは、次に該当するイベントまで延期されます(たとえば、次回ユーザー 更新がプロファイルを実行するか、チェックアウトを完了したとき)。
+- **サポート性:**タイムリーなユーザーマージに対応するには、エンドポイントが高可用性であり、オプションの`email_address` フィールドを適切に処理する必要があります。
 
 ### ステップ4.3：外部IDを入力
 

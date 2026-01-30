@@ -13,10 +13,10 @@ channel:
 
 Dans le tableau de bord de Braze, allez dans **Audience** > **Centres de préférences e-mail.**
 
-C'est ici que vous pouvez gérer et visualiser chaque groupe d'abonnements. Chaque groupe d'abonnement que vous créez est ajouté à cette liste de centres de préférences. Vous pouvez créer plusieurs centres de préférences.
+C'est ici que vous pouvez gérer et visualiser chaque groupe d'abonnements. Chaque groupe d'abonnement que vous créez est ajouté à cette liste de centres de préférences. Vous pouvez créer plusieurs centres de préférence.
 
 {% alert important %}
-Le centre de préférences est destiné à être utilisé dans le cadre du canal d'e-mail de Braze. Les liens du centre de préférences sont dynamiques en fonction de chaque utilisateur et ne peuvent pas être hébergés à l'extérieur.
+Le centre de préférences est destiné à être utilisé dans le cadre du canal d'e-mail de Braze. Les liens du centre de préférences sont dynamiques, basés sur chaque utilisateur et ne peuvent pas être hébergés en externe.
 {% endalert %}
 
 ## Créer un centre de préférences avec l'API
@@ -27,21 +27,21 @@ L'utilisation de Liquid vous permet de retrouver les noms de vos groupes d'abonn
 
 ### Conditions préalables
 
-| Exigence | Description |
+| Condition | Description |
 |---|---|
-| Centre de préférences activé | Votre tableau de bord de Braze dispose d'autorisations pour utiliser la fonctionnalité du centre de préférences. |
+| Activer un centre de préférence | Votre tableau de bord de Braze possède des permissions pour utiliser la fonctionnalité de centre de préférence. |
 | Espace de travail valide avec un groupe d'abonnement e-mail, SMS ou WhatsApp. | Un espace de travail avec des utilisateurs valides et un groupe d'abonnement par e-mail, SMS ou WhatsApp. |
 | Utilisateur valide | Un utilisateur avec une adresse e-mail et un ID externe. |
-| Clé API générée avec les autorisations du centre de préférences | Dans le tableau de bord de Braze, allez dans **Paramètres** > **Clés API** pour confirmer que vous avez accès à une clé API avec des autorisations de centre de préférences. |
+| Clé API générale avec des permissions de centre de préférence | Dans le tableau de bord de Braze, allez dans **Paramètres** > **Clés API** pour confirmer que vous avez accès à une clé API avec des autorisations de centre de préférences. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Étape 1 : Utilisez l'endpoint Créer un centre de préférences
+### Étape 1 : Utilisez l'endpoint Créer un centre de préférences
 
 Commençons par créer un centre de préférences à l'aide de l' [endpoint Créer un centre de préférences]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). Pour personnaliser votre centre de préférences, vous pouvez inclure du code HTML correspondant à votre image de marque dans les champs `preference_center_page_html` et `confirmation_page_html`.
 
-L'[endpoint Générer l'URL du centre de]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) préférences vous permet d'obtenir l'URL du centre de préférences pour un utilisateur spécifique en dehors d'un e-mail envoyé par Braze.
+L'[endpoint Générer l'URL du centre de préférences]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) vous permet d'obtenir l'URL du centre de préférences pour un utilisateur spécifique en dehors d'un e-mail envoyé par Braze.
 
-### Étape 2 : Inclure dans votre campagne d'e-mailing
+### Étape 2 : Inclure dans votre campagne d'e-mailing
 
 {% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
@@ -53,7 +53,7 @@ Pour placer un lien vers le centre de préférences dans vos e-mails, utilisez l
 ```
 {%endraw%}
 
-Vous pouvez également utiliser une combinaison de HTML qui inclut Liquid. Par exemple, vous pouvez coller l'URL suivante dans l'éditeur HTML ou l'éditeur par glisser-déposer. Vous verrez alors apparaître la présentation de base du centre de préférences, qui répertorie automatiquement tous les groupes d'abonnement e-mail. 
+Vous pouvez également utiliser une combinaison de HTML qui inclut Liquid. Par exemple, vous pouvez coller l'URL suivante dans l'éditeur HTML ou l'éditeur par glisser-déposer. Ceci affichera la mise en page de base du centre de préférence répertoriant automatiquement tous les groupes d'abonnement. 
 
 {% raw %}
 ```html
@@ -61,33 +61,33 @@ Vous pouvez également utiliser une combinaison de HTML qui inclut Liquid. Par e
 ```
 {%endraw%}
 
-Le centre de préférences comporte une case à cocher qui permettra à vos utilisateurs de se désabonner de tous les e-mails. Notez que vous ne pourrez pas enregistrer ces préférences si elles sont envoyées en tant que message test.
+Le centre de préférences dispose d’une case à cocher permettant à vos utilisateurs de se désabonner de tous les e-mails. Tenez compte du fait que vous ne pourrez pas sauvegarder ces préférences si elles sont envoyées en tant que message de test.
 
 {% alert important %}
 L'étiquette Liquid ci-dessus ne fonctionnera que lors du lancement d'une campagne ou d'un Canvas. L'envoi d'un e-mail de test ne génère pas de lien valide.
 {% endalert %}
 
-#### Modifier un centre de préférences
+#### Modifier un centre de préférence
 
-Vous pouvez modifier et mettre à jour votre centre de préférences en utilisant l'[endpoint Mettre à jour le centre de préférences]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/). 
+Vous pouvez modifier et mettre à jour votre centre de préférences en utilisant l'endpoint [Mettre à jour le centre de préférences]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/). 
 
-#### Identifier les centres de préférence et les détails
+#### Identifier les centres de préférences et leurs détails
 
 Pour identifier vos centres de préférences, utilisez le [point de terminaison Afficher les détails du centre de préférences]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) pour renvoyer des informations connexes telles que l'horodatage de la dernière mise à jour, l'ID du centre de préférences, etc.
 
 ## Personnalisation
 
-Braze gère les mises à jour de l'état des abonnements à partir du centre de préférences, ce qui permet à ce dernier de rester synchronisé. Cependant, vous pouvez également créer et héberger votre propre centre de préférences en utilisant les [API des groupes d'abonnement]({{site.baseurl}}/api/endpoints/subscription_groups/) avec les options suivantes.
+Braze gère les mises à jour du statut d’abonnement depuis le centre de préférences, ce qui le garde synchronisé. Cependant, vous pouvez également créer et héberger votre propre centre de préférences en utilisant les [API des groupes d'abonnement]({{site.baseurl}}/api/endpoints/subscription_groups/) avec les options suivantes.
 
-### Option 1 : Lien avec des paramètres de requête sous forme de chaîne de caractères
+### Option 1 : Lien avec des paramètres de requête sous forme de chaîne de caractères
 
-Utilisez les paires champ-valeur de la chaîne de caractères dans le corps de l'URL pour transmettre l'ID de l'utilisateur et la catégorie d'e-mail à la page afin que les utilisateurs n'aient qu'à confirmer leur choix de se désinscrire. Cette option est intéressante pour ceux qui stockent un identifiant d'utilisateur dans un format haché et qui ne disposent pas encore d'un centre d'abonnement.
+Utilisez les paires champ-valeur de la chaîne de caractères dans le corps de l’URL pour transmettre l’ID d’utilisateur et la catégorie d’e-mail à la page, afin que les utilisateurs n’aient qu’à confirmer leur choix de désabonnement. Cette option est valable pour ceux qui stockent un identifiant utilisateur dans un format haché et n’ont pas déjà de centre d’abonnement.
 
-Pour cette option, chaque catégorie d'e-mail nécessitera un lien de désabonnement spécifique :<br>
+Pour cette option, chaque catégorie de courrier électronique nécessitera son propre lien de désabonnement :<br>
 `http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
 
 {% alert tip %}
-Il est également possible de hacher l'ID externe de l'utilisateur au point d'envoi à l'aide d'un filtre Liquid. Cela convertira le site `user_id` en une valeur de hachage MD5, par exemple :
+Il est également possible de hacher l'ID externe de l'utilisateur au point d'envoi à l'aide d'un filtre Liquid. Cela convertira le `user_id` à une valeur de hachage MD5, par exemple :
 {% raw %}
 ```liquid
 {% assign my_string = {{${user_id}}} | md5 %}
@@ -96,11 +96,11 @@ My encoded string is: {{my_string}}
 {% endraw %}
 {% endalert %}
 
-### Option 2 : S'authentifier avec un jeton web JSON
+### Option 2 : S'authentifier avec un jeton web JSON
 
 Utilisez un [jeton web JSON](https://auth0.com/learn/json-web-tokens/) pour authentifier les utilisateurs auprès d'une partie de votre serveur web (par exemple, les préférences de compte) qui se trouve normalement derrière une couche d'authentification telle que l'identification par nom d'utilisateur et mot de passe. 
 
-Cette approche ne nécessite pas de paires de chaînes de caractères intégrées dans l'URL, car celles-ci peuvent être transmises dans la charge utile du jeton web JSON, par exemple :
+Cette approche ne nécessite pas de paires de valeur de chaîne de requête incorporées dans l’URL, car elles peuvent être transmises dans la charge utile du jeton Web JSON, par exemple :
 
 ```json
 {
@@ -110,7 +110,7 @@ Cette approche ne nécessite pas de paires de chaînes de caractères intégrée
 }
 ```
 
-## Questions fréquemment posées
+## Foire aux questions
 
 ### Je n'ai pas créé de centre de préférences. Pourquoi mon tableau de bord affiche-t-il "PreferenceCenterBrazeDefault" ?
 
@@ -140,3 +140,39 @@ Ensuite, grâce à Currents, vous pourriez identifier les utilisateurs qui parle
 ### L'envoi de liens de désinscription et de centres de préférences pour les e-mails est-il obligatoire ?
 
 Non. Si le message "Le corps de votre e-mail ne contient pas de lien de désabonnement" s'affiche lors de la composition d'une campagne e-mail, cet avertissement est attendu si votre lien de désabonnement se trouve dans un bloc de contenu.
+
+### Comment mettre à jour l'icône du navigateur par défaut ?
+
+Par défaut, l'icône située à côté du nom de l'onglet du navigateur (favicon) utilise le logo de Braze. Pour ajouter un favicon personnalisé, vous le définissez via l'attribut `links-tags` dans votre [appel API de]({{site.baseurl}}/api/endpoints/preference_center) création ou de mise à jour du [centre de préférences]({{site.baseurl}}/api/endpoints/preference_center). Braze injecte ensuite l'étiquette {% raw %}`<link rel="icon" ...>`{% endraw %} dans la page hébergée pour vous.
+
+{% raw %}
+```
+{
+  "name": "MyPreferenceCenter",
+  "preference_center_title": "Email Preferences",
+  "preference_center_page_html": "<!doctype html> ...",
+  "confirmation_page_html": "<!doctype html> ...",
+  "state": "active",
+  "options": {
+    "links-tags": [
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "32x32",
+        "href": "https://yourcdn.com/path/to/favicon-32x32.png"
+      },
+      {
+        "rel": "shortcut icon",
+        "type": "image/x-icon",
+        "href": "https://yourcdn.com/path/to/favicon.ico"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://yourcdn.com/path/to/apple-touch-icon.png"
+      }
+    ]
+  }
+}
+```
+{% endraw %}

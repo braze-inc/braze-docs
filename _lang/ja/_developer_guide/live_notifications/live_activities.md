@@ -325,7 +325,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 - [ライブ・アクティビティ プッシュ・トゥ・スタート トークン・チェンジ]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events)：プッシュ・トゥ・スタート（PTS）トークンがBrazeに追加または更新されたタイミングをトラッキング追跡し、ユーザーごとのトークンの登録と利用可能性を追跡できる。
 - [ライブ・アクティビティ更新トークン変更]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events)：ライブ・アクティビティ・アップデート（LAU）トークンの追加、更新、削除をトラッキング追跡する。
 - [ライブ・アクティビティを送る]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-send-events)：Brazeによってライブアクティビティが開始、更新、終了されるたびにログを記録する。
-- [ライブ活動の成果]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events)：Brazeから送信されるすべてのLive Activityについて、Appleプッシュ通知サービス（APN）への最終的な配信ステータスを示す。
+- [ライブ活動の成果]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events)：Brazeから送信されたライブアクティビティのAppleプッシュ通知サービス(APN)への最終配信ステータスを示す。
 
 ## よくある質問 (FAQ) {#faq}
 
@@ -385,7 +385,7 @@ Apple が提供するライブアクティビティ機能は、JavaScript では
 
 ライブアクティビティの Push-to-Start 通知を受信したら、Braze URL の `/push_token_tag` エンドポイントへの送信ネットワーク要求が表示され、`"tag"` フィールドの下に正しいアクティビティ ID が含まれていることを再確認します。
 
-最後に、更新ペイロードのライブ・アクティビティ属性タイプが、SDKメソッド呼び出しで使用されている正確な文字列とクラスと一致していることを確認し、`registerPushToStart` 。タイプミスを避けるために定数を使用する。  
+最後に、更新ペイロードのライブ・アクティビティの属性タイプが、SDKのメソッド呼び出しで使用されている正確な文字列とクラスと一致していることを確認する`registerPushToStart` 。タイプミスを避けるために定数を使用する。  
 
 #### `live_activity/update` エンドポイントを使おうとすると、アクセス拒否応答が表示されます。なぜでしょう？
 

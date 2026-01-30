@@ -30,7 +30,7 @@ Es wird davon abgeraten, einen Titel und einen Textkörper mit `content-availabl
 
 Das `content-available` Flag kann sowohl im Braze Dashboard als auch in unserem [Apple Push-Objekt]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in der [Messaging-API]({{site.baseurl}}/api/endpoints/messaging/) gesetzt werden.
 
-![Braze-Dashboard mit dem Kontrollkästchen "content-available" auf dem Tab "Einstellungen" des Push-Composers.]({% image_buster /assets/img_archive/remote_notification.png %} "Inhalt verfügbar")
+![Das Braze-Dashboard zeigt das Kontrollkästchen "Inhalt verfügbar" im Tab "Einstellungen" des Push Composers.]({% image_buster /assets/img_archive/remote_notification.png %} "content available")
 
 ## Triggern von Hintergrundarbeiten mit stillen Push-Benachrichtigungen
 
@@ -38,7 +38,7 @@ Stille Push-Benachrichtigungen können Ihre App aus dem Zustand "Angehalten" ode
 
 Wenn Sie stille Push-Benachrichtigungen verwenden möchten, um Hintergrundarbeit zu triggern, richten Sie das Flag `content-available` gemäß den vorhergehenden Anweisungen ohne Nachricht oder Ton ein. Richten Sie den Hintergrundmodus Ihrer App ein, um `remote notifications` auf dem Tab **Fähigkeiten** in Ihren Projekteinstellungen zu aktivieren. Eine Remote-Benachrichtigung ist einfach eine normale Push-Benachrichtigung mit dem Kennzeichen `content-available`. 
 
-![Xcode mit dem Kontrollkästchen für den Modus "remote notifications" unter "capabilities".]({% image_buster /assets/img_archive/background_mode.png %} "Hintergrundmodus aktiviert")
+![Xcode zeigt das Kontrollkästchen für den Modus "Fernbenachrichtigung" unter "Fähigkeiten" an.]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
 
 Für das [Uninstall-Tracking]({{site.baseurl}}/developer_guide/analytics/tracking_uninstalls/?sdktab=swift) ist die Aktivierung des Hintergrundmodus für Fernbenachrichtigungen erforderlich.
 

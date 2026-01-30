@@ -1,6 +1,6 @@
 ---
-nav_title: セッションを追跡する
-article_title: Windows Universal のセッションの追跡
+nav_title: トラッキング、 追跡セッション
+article_title: Windowsユニバーサルのトラッキング、 追跡セッション
 platform: Windows Universal
 page_order: 0
 description: "このリファレンス記事では、Windows ユニバーサルプラットフォームでセッションを追跡する方法について説明します。"
@@ -22,6 +22,6 @@ Windows 統合では、アプリが起動されるとセッションオープン
 
 ユーザーを介してセッションを検出するには、ダッシュボードでユーザーを見つけ、ユーザープロファイルの [アプリの利用状況] に移動します。セッショントラッキングが機能していることを確認するには、「セッション」メトリクスが期待どおりに増加することを確認します。
 
-![ユーザープロファイルでは、アプリの使用は25セッション、最後に使用したのは2時間前、最初に使用したのは20日前となっている。]({% image_buster /assets/img_archive/test_session.png %})
+![ユーザープロファイルでは、アプリの使用は25セッション、最後に使用されたのは2時間前、最初に使用されたのは20日前となっている。]({% image_buster /assets/img_archive/test_session.png %})
 
 

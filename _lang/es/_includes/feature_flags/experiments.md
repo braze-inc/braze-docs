@@ -80,7 +80,7 @@ Para editar, añadir o eliminar propiedades predeterminadas adicionales, edita l
 
 Utiliza uno de tus segmentos o filtros para elegir a tus [usuarios objetivo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Por ejemplo, puedes utilizar el filtro **Variante de indicador de característica recibida** para reorientar a los usuarios que ya han recibido una prueba A/B.
 
-![La página "Objetivo" en un experimento de bandera de característica con "Variante de bandera de característica recibida" resaltada en la barra de búsqueda del grupo de filtrado.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
+![La página "Objetivo" en un experimento de bandera de características con la "Variante de bandera de características recibida" resaltada en la barra de búsqueda del grupo de filtrado.]({% image_buster /assets/img/feature_flags/variant-filter-dropdown.png %}){: style="max-width:70%"}
 
 {% alert note %}
 La pertenencia a un segmento se calcula cuando se actualizan las banderas de características para un usuario determinado. Los cambios están disponibles cuando tu aplicación actualiza las banderas de características, o cuando se inicia una nueva sesión.

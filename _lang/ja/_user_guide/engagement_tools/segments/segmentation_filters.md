@@ -464,7 +464,11 @@ glossaries:
     tags:
       - Devices
   - name: デバイス OS
-    description: 指定のオペレーティングシステムを持つ 1 台以上のデバイスを持つユーザーをセグメント化します。
+    description: "指定のオペレーティングシステムを持つ 1 台以上のデバイスを持つユーザーをセグメント化します。s をさまざまなオペレーティングシステムでSegment ユーザーするには、<a href=\"/docs/user_guide/engagement_tools/segments/segmentation_filters#device-os-version-number\">Device OS Version Number</a>フィルターを使用します。"
+    tags:
+      - Devices
+  - name: デバイスの OS バージョン番号
+    description: 指定したレンジ内にあるオペレーティングシステム版を持つ1 つ以上のデバイスを持つユーザーをセグメント化します。たとえば、iOS オペレーティングシステムが26.0 以上のユーザーを対象にすることができます。
     tags:
       - Devices
   - name: 最新のデバイスロケール

@@ -71,7 +71,7 @@ Wählen Sie, ob Sie die angepassten Braze Events des Nutzers:innen anzeigen oder
 
 #### Eine Liste der Einkäufe anzeigen
 
-Wählen Sie, ob Sie eine Liste der vom Nutzer:innen gekauften Produkte anzeigen oder ausblenden möchten. Hier können Sie sehen, wie oft es gekauft wurde. Um das Datum des ersten und letzten Kaufs anzuzeigen, bewegen Sie den Mauszeiger über den Artikel. 
+Wählen Sie, ob Sie eine Liste der Produkte, die der Nutzer:in gekauft hat, anzeigen oder ausblenden möchten. Hier können Sie sehen, wie oft die Nutzer:innen das Produkt gekauft haben. Um das Datum des ersten und letzten Kaufs anzuzeigen, bewegen Sie den Mauszeiger über den Artikel. 
 
 ### Beispiel Integration
 

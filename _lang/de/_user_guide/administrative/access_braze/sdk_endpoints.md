@@ -1,7 +1,7 @@
 ---
 nav_title: API- und SDK-Endpunkte
 article_title: API und SDK Endpunkte
-page_order: 1
+page_order: 2.4
 page_type: reference
 description: "Dieser Referenzartikel listet die Dashboard-URLs, API-Endpunkte und SDK-Endpunkte für verfügbare Braze-Instanzen auf."
 

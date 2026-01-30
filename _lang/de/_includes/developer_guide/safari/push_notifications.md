@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/web.md %} Sie müssen auch [Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) für das Internet SDK [einrichten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web). Beachten Sie, dass Sie Push-Benachrichtigungen nur an iOS- und iPadOS-Nutzer:innen senden können, die [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) oder höher verwenden.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Sie müssen auch [Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) für das Internet SDK einrichten. Beachten Sie, dass Sie Push-Benachrichtigungen nur an iOS- und iPadOS-Nutzer:innen senden können, die [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) oder höher verwenden.
 
 ## Safari Push für Mobiltelefone einrichten
 
@@ -49,7 +49,7 @@ Nachdem die App zu Ihrem Startbildschirm hinzugefügt wurde, können Sie jetzt d
 Nachdem Sie die Aufforderung akzeptiert oder abgelehnt haben, müssen Sie die Website auf Ihrem Startbildschirm löschen und neu installieren, um die Aufforderung wieder anzeigen zu können.
 {% endalert %}
 
-![Eine Push-Abfrage mit der Aufforderung, Push-Benachrichtigungen zuzulassen oder nicht zuzulassen]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![Eine Push-Benachrichtigung mit der Aufforderung "Zulassen" oder "Nicht zulassen" Benachrichtigungen]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 Zum Beispiel:
 

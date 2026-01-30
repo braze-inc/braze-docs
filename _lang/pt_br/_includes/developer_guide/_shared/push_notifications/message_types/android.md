@@ -1,5 +1,5 @@
-{% tab Android %}
-O Braze oferece vários tipos de mensagens no app padrão, cada uma personalizável com mensagens, imagens, ícones [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2), ações de clique, análises de dados, esquemas de cores e muito mais.
+{% tab android %}
+O Braze oferece vários tipos de mensagens no app padrão, cada um personalizável com mensagens, imagens, ícones [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2), ações de clique, análises de dados, esquemas de cores e muito mais.
 
 Seu comportamento básico e suas características são definidos pela [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) em uma subclasse chamada [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). `IInAppMessage` também inclui uma subinterface, [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html)que permite adicionar [botões](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) de fechar, de ação de clique e de análise de dados ao seu app.
 
@@ -13,7 +13,7 @@ Lembre-se de que as mensagens no app que contêm botões incluirão a mensagem `
 
 O objeto de mensagem no app `slideup` estende [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html).
 
-![Uma mensagem no app que desliza da parte inferior da tela do telefone exibindo "Os seres humanos são complicados. O engajamento personalizado não deveria ser." Em segundo plano, a mesma mensagem no app exibida no canto inferior direito de uma página da Internet.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Uma mensagem no app que desliza da parte inferior da tela do telefone exibindo "Os seres humanos são complicados. O engajamento personalizado não deveria ser." Em segundo plano está a mesma mensagem no app exibida no canto inferior direito de uma página da Web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Modal %}
@@ -29,7 +29,7 @@ Esse tipo de mensagem é uma subclasse de [`InAppMessageImmersiveBase`](https://
 
 Esse tipo de mensagem estende [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html)dando-lhe a opção de adicionar funcionalidade personalizada às mensagens no app geradas localmente.
 
-![Uma mensagem no app de tela cheia exibida em toda a tela do telefone mostrando: "Os humanos são complicados." O engajamento personalizado não deveria ser." No plano de fundo está a mesma mensagem no app exibida em grande parte no centro de uma página da Internet.]({% image_buster /assets/img_archive/In-App_Full.png %})
+![Uma mensagem no app de tela cheia exibida em toda a tela do telefone mostrando: "Os humanos são complicados." O engajamento personalizado não deveria ser." Em segundo plano está a mesma mensagem no app exibida em grande parte no centro de uma página da Web.]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endsubtab %}
 {% subtab Custom HTML %}

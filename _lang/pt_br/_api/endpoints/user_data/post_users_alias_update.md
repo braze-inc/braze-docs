@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Atualizar alias de usuário"
+nav_title: "POST: Atualizar o alias do usuário"
 article_title: "POST: Atualizar alias de usuário"
 search_tag: Endpoint
 page_order: 2

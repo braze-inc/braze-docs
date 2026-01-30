@@ -11,7 +11,7 @@ Die folgende Tabelle zeigt, wie Sie die einzelnen Editor-Blöcke verwenden könn
 | Titel | Gibt einen Titeltext in die Nachricht ein. |
 | Absatz | Gibt einen Absatztext in die Nachricht ein. |
 | Button | Fügt eine Standard-Schaltfläche hinzu. Die Eigenschaften erlauben Bearbeitung, Link-Einrichtung und Analytics. |
-| Radio-Button | Fügt eine Liste von Optionen hinzu, aus der Nutzer:innen eine auswählen können. Bei der Übermittlung protokolliert das Nutzerprofil das zugehörige angepasste Attribut. |
+| Radio-Button | Fügt eine Liste von Optionen hinzu, aus der Nutzer:innen eine auswählen können. Bei der Übermittlung protokolliert das Nutzerprofil das zugehörige angepasste Attribut, das ein zu speichernder String sein muss. Angepasste Attribute mit anderen Datentypen werden nicht im Nutzerprofil gespeichert. |
 | Bild | Fügt ein Bild aus der [Mediathek]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) ein. |
 | Link | Fügt einen Hyperlink ein, auf den Nutzer:innen klicken können, um zu einer bestimmten URL zu navigieren. Kann in einen Text eingebettet oder eigenständig sein. |
 | Spacer | Fügt Leerraum oder Füllmaterial zwischen anderen Blöcken hinzu. |
@@ -131,7 +131,7 @@ Sie können eine Aktion zuweisen, die ausgeführt wird, wenn ein Nutzer:innen au
 
 ### Bild
 
-Die Spezifikationen für Bilder finden Sie in unseren [Spezifikationen für In-App-Nachricht-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages).
+Bildspezifikationen finden Sie in unseren [Spezifikationen für In-App-Nachricht-Bilder]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#in-app-messages).
 
 | Aktion | Beschreibung |
 | --- | --- |

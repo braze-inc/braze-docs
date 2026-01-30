@@ -11,7 +11,7 @@ Um die Darstellung von In-App-Nachrichten anzupassen und auf verschiedene Ereign
 Implementieren Sie zunächst das Protokoll `BrazeInAppMessageUIDelegate` und die gewünschten Methoden. In unserem Beispiel unten implementieren wir dieses Protokoll in der Klasse `AppDelegate` unserer Anwendung.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 ```swift
 extension AppDelegate: BrazeInAppMessageUIDelegate {
   // Implement your protocol methods here.
@@ -36,7 +36,7 @@ extension AppDelegate: BrazeInAppMessageUIDelegate {
 Weisen Sie das Objekt `delegate` auf der Instanz `BrazeInAppMessageUI` zu, bevor Sie diese In-App-Nachricht UI als Ihre `inAppMessagePresenter` zuweisen.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 ```swift
 let inAppMessageUI = BrazeInAppMessageUI()
 inAppMessageUI.delegate = self
@@ -83,7 +83,7 @@ Bei In-App-Nachrichten mit Buttons wird die `clickAction` der Nachricht ebenfall
 Um dieses Verhalten anzupassen, können Sie die Eigenschaft `clickAction` ändern. Ziehen Sie dazu das folgende Beispiel zurate:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func inAppMessage(
@@ -109,7 +109,7 @@ Die Methode `inAppMessage(_:prepareWith:)` ist in Objective-C nicht verfügbar.
 Wenn auf eine In-App-Nachricht geklickt wird, wird die folgende Delegate-Methode [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) aufgerufen: Für Klicks auf In-App-Nachrichten-Buttons und HTML-In-App Nachrichten-Buttons (Links) wird eine Button-ID als optionaler Parameter angegeben.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func inAppMessage(
@@ -139,7 +139,7 @@ func inAppMessage(
 Diese Methode gibt einen booleschen Wert zurück, der angibt, ob Braze die Klickaktion weiter ausführen soll.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func inAppMessage(
@@ -207,7 +207,7 @@ Um Ausblendungen durch Tippen außerhalb des Fensters zu aktivieren, können Sie
 Wenn Sie beispielsweise dieses Feature für modale In-App-Nachrichten mit Bildern aktivieren möchten, können Sie Folgendes konfigurieren:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = true
@@ -236,7 +236,7 @@ Weitere Einzelheiten zur Anpassung von In-App-Nachrichten finden Sie in diesem [
 Sie können die Ausrichtung Ihrer In-App-Nachrichten anpassen. Sie können eine neue Standardausrichtung für alle Nachrichten festlegen oder eine angepasste Ausrichtung für eine einzelne Nachricht einstellen.
 
 {% tabs local %}
-{% tab alle Nachrichten %}
+{% tab all messages %}
 Um eine Standard-Ausrichtung für alle In-App-Nachrichten zu wählen, verwenden Sie die [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) Methode die Eigenschaft `preferredOrientation` auf `PresentationContext`. 
 
 Zum Beispiel, um Hochformat als Standardausrichtung festzulegen:
@@ -266,7 +266,7 @@ func inAppMessage(
 {% endsubtabs %}
 {% endtab %}
 
-{% tab einzelne Nachricht %}
+{% tab single message %}
 Um die Ausrichtung für eine einzelne Nachricht festzulegen, ändern Sie die Eigenschaft `orientation` von `Braze.InAppMessage`:
 
 {% subtabs %}
@@ -317,7 +317,7 @@ Die Ausrichtung wird nur für die Präsentation der Nachricht verwendet. Nachdem
 Sie können steuern, ob eine verfügbare In-App-Nachricht an bestimmten Punkten des Nutzererlebnisses angezeigt werden soll. Wenn es Situationen gibt, in denen die In-App-Nachricht nicht angezeigt werden soll – z. B. während eines Spiels im Vollbildmodus oder auf einem Ladebildschirm – können Sie ausstehende In-App-Nachrichten verzögern oder ausblenden. Um das Timing von In-App-Nachrichten zu steuern, verwenden Sie die [Delegate-Methode](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) `inAppMessage(_:displayChoiceForMessage:)`, um die Eigenschaft `BrazeInAppMessageUI.DisplayChoice` festzulegen. 
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func inAppMessage(
@@ -368,7 +368,7 @@ Um zu verhindern, dass In-App-Nachrichten den Dark-Mode-Stil übernehmen, wenn a
 In-App-Nachrichten mit Buttons verfügen über ein zusätzliches `themes`-Objekt in der Eigenschaft `buttons`. Um zu verhindern, dass Schaltflächen das Styling des dunklen Modus übernehmen, können Sie mit [`map(_:)`](https://developer.apple.com/documentation/swift/array/map(_:)-87c4d) ein neues Array von Schaltflächen mit einem `light` Thema und keinem `dark` Thema erstellen.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func inAppMessage(
@@ -485,7 +485,7 @@ Setzen Sie zunächst die [`BrazeInAppMessageUIDelegate`]({{site.baseurl}}/develo
 Als Nächstes implementieren Sie die [Delegate-Methode](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) `inAppMessage(_:displayChoiceForMessage:)`, um die Standard Nachrichten des App Store zu deaktivieren.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Braze.InAppMessage) -> BrazeInAppMessageUI.DisplayChoice {
@@ -522,7 +522,7 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 Fügen Sie in Ihrem Code zur Behandlung von Deeplinks den folgenden Code hinzu, um den `{YOUR-APP-SCHEME}:app-store-review`-Deeplink zu verarbeiten. Beachten Sie, dass Sie `StoreKit` importieren müssen, um `SKStoreReviewController` zu verwenden:
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

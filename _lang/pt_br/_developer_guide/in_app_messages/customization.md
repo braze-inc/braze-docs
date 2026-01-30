@@ -1,8 +1,8 @@
 ---
-nav_title: Personalizando Mensagens
-article_title: Personalizando mensagens no aplicativo para o Braze SDK
+nav_title: Personalização de mensagens
+article_title: Personalize as mensagens no app para o Braze SDK
 page_order: 0.1
-description: "Aprenda como configurar mensagens no aplicativo para o Braze SDK."
+description: "Saiba como configurar mensagens no app para o SDK do Braze."
 platform: 
   - Android
   - FireOS
@@ -10,21 +10,21 @@ platform:
   - Web
 ---
 
-# Personalizando mensagens no aplicativo
+# Personalize as mensagens no app
 
-> Aprenda como personalizar mensagens no aplicativo para o Braze SDK.
+> Saiba como personalizar as mensagens no app para o SDK do Braze. Para obter técnicas avançadas de estilo, confira nosso tutorial para [personalizar o estilo de mensagens usando pares de valores-chave]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/in_app_messages/customization.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages/customization.md %}
 {% endsdktab %}
 
 {% sdktab react native %}

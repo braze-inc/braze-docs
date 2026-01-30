@@ -8,4 +8,4 @@ platform:
 description: "이 문서에서는 Android 13, SDK 업데이트, 푸시 권한 변경, SDK 호환성 등을 다룹니다."
 ---
 
- %} developer_guide/android/android_13.md
+{% multi_lang_include developer_guide/android/android_13.md %}
