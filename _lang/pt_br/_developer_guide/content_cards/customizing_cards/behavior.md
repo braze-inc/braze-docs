@@ -14,7 +14,7 @@ platform:
 
 # Personalize o comportamento dos Cartões de Conteúdo
 
-> Este guia de implementação aborda a alteração do comportamento dos cartões de conteúdo, a adição de extras como pares de chave/valor à sua carga útil e receitas de personalizações comuns. Para a lista completa de tipos de cartões de conteúdo, veja [Sobre os Cartões de Conteúdo]({{site.baseurl}}/developer_guide/content_cards/). 
+> Este guia de implementação aborda a alteração do comportamento dos cartões de conteúdo, a adição de extras como pares de chave/valor à sua carga útil e receitas de personalizações comuns. Para a lista completa de tipos de cartões de conteúdo, veja [Sobre Cartões de Conteúdo]({{site.baseurl}}/developer_guide/content_cards/). 
 
 ## Pares de valores chave
 
