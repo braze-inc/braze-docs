@@ -1,7 +1,7 @@
 ---
-nav_title: Configuration de la LIGNE
-article_title: LINE Configuration
-description: "Cet article explique comment configurer le canal Braze LINE, y compris les conditions préalables et les étapes suivantes suggérées."
+nav_title: Configuration de la ligne
+article_title: Configuration de la LIGNE
+description: "Cet article explique comment configurer le canal LINE de Braze, y compris les conditions préalables et les prochaines étapes suggérées."
 page_type: partner
 search_tag: Partner
 page_order: 0
@@ -11,34 +11,38 @@ alias: /line/line_setup/
 ---
 
 
-# Configuration de la LIGNE
+# Configuration de la ligne
 
 > Cet article explique comment configurer le canal LINE dans Braze, notamment comment configurer des utilisateurs, rapprocher les ID utilisateurs et créer des utilisateurs test LINE dans Braze.
 
 ## Conditions préalables
 
-Vous aurez besoin des éléments suivants pour intégrer LINE à Braze :
+Vous aurez besoin des éléments suivants pour intégrer LINE avec Braze :
 
 - [Compte professionnel LINE](https://www.linebiz.com/jp-en/manual/OfficialAccountManager/tutorial-steps/?list=7171)
 - Statut du compte Premium ou vérifié (nécessaire pour synchroniser les followers existants)
-   - Consultez [les lignes directrices de LINE concernant les comptes](https://terms2.line.me/official_account_guideline_oth)
-- [Compte de développeurs LINE](https://developers.line.biz/en/docs/line-developers-console/login-account/)
-- [Canal de l'API d'envoi de messages LINE](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
+   - Voir [Directives de comptes de LINE](https://terms2.line.me/official_account_guideline_oth)
+- [Compte développeurs LINE](https://developers.line.biz/en/docs/line-developers-console/login-account/)
+- [Canal de l’API d’envoi de messages LINE](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-L'envoi de messages LINE à partir de Braze est prélevé sur les crédits de messages de votre compte.
+L'envoi de messages LINE à partir de Braze puise dans les crédits de messages de votre compte.
+
+{% alert note %}
+**Réglage de `native_line_id`**: Vous pouvez définir `native_line_id` en envoyant des mises à jour d'utilisateurs à Braze (par exemple, avec le [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) l'endpoint, l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Si votre SDK côté client ne dispose pas d'un champ dédié à `native_line_id`, envoyez-le dans les mises à jour utilisateur côté serveur à l'aide de l'une des méthodes suivantes.
+{% endalert %}
 
 ## Types de comptes LINE
 
 | Type de compte | Description |
 | --- | --- |
-| Compte non vérifié | Un compte non révisé qui peut être obtenu par n'importe qui (personne physique ou morale). Ce compte est conseillé par un badge gris et n'apparaît pas dans les résultats de recherche de l'application LINE. |
-| Compte vérifié | Un compte qui a passé avec succès l'examen de LINE Yahoo. Ce compte est conseillé par un badge bleu et apparaîtra dans les résultats de recherche de l'application LINE.<br><br>Ce compte n'est disponible que pour les comptes basés au Japon, à Taïwan, en Thaïlande et en Indonésie.  |
-| Compte Premium | Un compte qui a passé avec succès l'examen de LINE Yahoo. Ce compte est conseillé par un badge vert et apparaîtra dans les résultats de recherche de l'application LINE. Ce type de compte est automatiquement accordé lors de la sélection, à la discrétion de LINE. |
+| Compte non vérifié | Un compte non vérifié qui peut être obtenu par n'importe qui (individu ou entreprise). Ce compte est représenté par un badge gris et n'apparaîtra pas dans les résultats de recherche dans l'application LINE. |
+| Compte vérifié | Un compte qui a passé le contrôle de LINE Yahoo. Ce compte est représenté par un badge bleu et apparaîtra dans les résultats de recherche dans l'application LINE.<br><br>Ce compte n'est disponible que pour les comptes basés au Japon, à Taïwan, en Thaïlande et en Indonésie.  |
+| Compte premium | Un compte qui a passé le contrôle de LINE Yahoo. Ce compte est représenté par un badge vert et apparaîtra dans les résultats de recherche de l'application LINE. Ce type de compte est automatiquement accordé lors du filtrage à la discrétion de LINE. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Type de compte requis
 
-Pour synchroniser les followers dans Braze, votre compte LINE doit être vérifié ou premium. Lorsque vous créez un compte, son statut par défaut est non vérifié. Vous devrez demander une vérification de votre compte.
+Pour synchroniser les abonnés dans Braze, votre compte LINE doit être vérifié ou premium. Lorsque vous créez un compte, son statut par défaut sera non vérifié. Vous devrez demander une vérification de compte.
 
 ### Demander un compte LINE vérifié
 
@@ -46,10 +50,10 @@ Pour synchroniser les followers dans Braze, votre compte LINE doit être vérifi
 Les comptes vérifiés ne sont disponibles que pour les comptes basés au Japon, à Taïwan, en Thaïlande et en Indonésie.
 {% endalert %}
 
-1. Sur la page du **compte officiel** LINE, sélectionnez **Paramètres**.
-2. Sous **Information Disclosure Verification Status**, sélectionnez **Request Account Verification**.
-3. Saisissez les informations requises.
-4. Attendez la notification des résultats de l'examen.
+1. Sur la page **Compte Officiel** LINE, sélectionnez **Paramètres**.
+2. Sous **Statut de vérification de la divulgation d'informations**, sélectionnez **Demander la vérification du compte**.
+3. Entrez les informations requises.
+4. Attendez une notification avec les résultats de la vérification.
 
 ## Intégration de LINE
 
@@ -61,7 +65,11 @@ Pour mettre en place des mises à jour cohérentes pour les utilisateurs, repren
 4. [Modifier les méthodes de mise à jour des utilisateurs](#step-4-change-your-user-update-methods)
 5. [(Facultatif) Fusionner les profils utilisateurs](#step-5-merge-profiles-optional)
 
-## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
+{% alert note %}
+Vous ne pouvez avoir qu'un seul compte LINE dans un même espace de travail. Si vous possédez plusieurs comptes LINE, nous vous recommandons d'utiliser chacun d'entre eux dans un espace de travail différent.
+{% endalert %}
+
+## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
 
 Cette étape est nécessaire si vous avez un utilisateur LINE existant et identifié, car Braze récupérera ensuite automatiquement l'état de son abonnement et mettra à jour le profil utilisateur correct. Si vous n'avez pas encore rapproché les utilisateurs avec leur ID LINE, sautez cette étape. 
 
@@ -73,41 +81,41 @@ Quelle que soit la méthode utilisée, mettez à jour le site `native_line_id` p
 L'état du groupe d'abonnement ne doit pas être spécifié et sera ignoré. LINE est la source de vérité pour l'état de l'abonnement des utilisateurs, qui sera synchronisé avec Braze soit par l'outil de synchronisation des abonnements, soit par des mises à jour d'événements.
 {% endalert %}
 
-## Étape 2 : Intégration du canal LINE
+## Étape 2 : Intégration du canal LINE
 
 Une fois que le processus d'intégration est terminé, Braze intègre automatiquement les followers LINE de ce canal dans Braze. Pour tous les LINE ID qui sont déjà associés à un profil d'utilisateur Braze, chaque profil sera mis à jour avec le statut "abonné", et tous les LINE ID restants généreront des utilisateurs anonymes. En outre, les nouveaux adeptes de votre chaîne LINE verront des profils utilisateurs non identifiés créés lorsqu'ils suivront la chaîne.
 
-### Étape 2.1 : Modifier les paramètres du webhook
+### Étape 2.1 : Modifier les paramètres du webhook
 
-1. Dans LINE, allez dans l'onglet **Messaging API** et modifiez **les paramètres de** votre **webhook**:
-   - Définissez l'**URL du webhook** à `https://anna.braze.com/line/events`.
-      - Braze changera automatiquement cette URL lors de l'intégration, en fonction du cluster de votre tableau de bord.
-   - Activez les options **Use webhook** et **Webhook redelivery**. <br><br> \![Page des paramètres du webhook pour vérifier ou modifier l'URL du webhook, basculer sur ou hors "Utiliser le webhook", "Redélivrance du webhook", et "Agrégation des statistiques d'erreur".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
-2. Prenez note des informations suivantes dans l'onglet **Fournisseurs**:
+1. Dans LINE, allez dans l'onglet **API de messagerie** et modifiez vos **paramètres de Webhook**:
+   - Définissez l'URL du **Webhook** sur `https://anna.braze.com/line/events`.
+      - Braze changera automatiquement cela en une URL différente lors de l'intégration, en fonction de votre cluster de tableau de bord.
+   - Activez **Utiliser le webhook** et **Rélivraison du webhook**. <br><br> ![Page des paramètres du webhook pour vérifier ou modifier l'URL du webhook, activer ou désactiver « Utiliser le webhook », « Renvoyer le webhook » et « Agrégation des statistiques d'erreurs ».]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
+2. Prenez note des informations suivantes dans l'onglet **Fournisseurs** :
 
-| Type d'information | Emplacements/localisation |
+| Type d'information | Localisation |
 | --- | --- |
-| ID du fournisseur | Sélectionnez votre fournisseur et allez dans **\*Paramètres** > **Informations de base** |
-| ID du canal | Sélectionnez votre fournisseur et allez dans **Chaînes** > votre chaîne > **Paramètres de base** |
-| Secret de polichinelle | Sélectionnez votre fournisseur et allez dans **Chaînes** > votre chaîne > **Paramètres de base**. |
-| Jeton d'accès au canal | Sélectionnez votre fournisseur, puis allez dans **Channels** > votre canal > **Messaging API**. S'il n'y a pas de jeton d'accès au canal, sélectionnez **Issue.** |
+| ID du fournisseur | Sélectionnez votre fournisseur, puis sélectionnez **Paramètres** > **Information de base** |
+| ID du canal | Sélectionnez votre fournisseur, puis sélectionnez **Canaux** > votre canal > **Paramètres de base** |
+| Secret de chaîne | Sélectionnez votre fournisseur et allez dans **Chaînes** > votre chaîne > **Paramètres de base**. |
+| Jeton d’accès au canal | Sélectionnez votre fournisseur, puis sélectionnez **Canaux** > votre canal > **API d’envoi de messages**. S'il n'y a pas de jeton d'accès au canal, sélectionnez **Problème**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {: start="3"}
-3\. Accédez à votre page **Paramètres** > **Paramètres de réponse** et procédez comme suit :
-   - Désactiver le **message d'accueil.** Cela peut être géré dans Braze par le biais d'un déclencheur sur le suivi.
-   - Désactivez les **messages de réponse automatique.** Tous les messages déclenchés doivent être envoyés par Braze. Cela ne vous empêchera pas d'envoyer des messages directement à partir de la console LINE.
-   - Activez les **webhooks**.
+3\. Accédez à votre **Paramètres** page > **Paramètres de réponse** et faites ce qui suit :
+   - Désactivez le **message de salutation**. Ceci peut être géré dans Braze via un déclencheur lors du suivi.
+   - Désactivez les **messages de réponse automatique**. Tous les messages déclenchés doivent passer par Braze. Cela ne vous empêchera pas d'envoyer directement depuis la console LINE.
+   - Activez les **Webhooks**.
 
-La page des paramètres de réponse contient des bascules permettant de déterminer comment votre compte traitera les chats.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
+![Page des paramètres de réponse avec des commutateurs pour la gestion des discussions par votre compte.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
-### Étape 2.2 : Générer des groupes d'abonnement LINE dans Braze
+### Étape 2.2 : Générer des groupes d'abonnement LINE dans Braze
 
-1. Allez sur la page des partenaires technologiques de Braze pour LINE et saisissez les informations que vous avez notées dans l'onglet des **fournisseurs de** LINE :
+1. Accédez à la page Partenaires technologiques de Braze pour LINE et saisissez les informations que vous avez notées dans votre onglet **Fournisseurs** :
    - ID du fournisseur
    - ID du canal
-   - Secret de polichinelle
-   - Jeton d'accès au canal
+   - Secret de chaîne
+   - Jeton d’accès au canal
 
 Si vous souhaitez ajouter une liste blanche d'adresses IP à votre compte LINE, ajoutez à votre liste d'autorisations toutes les adresses IP répertoriées pour votre cluster dans la [liste d'autorisations IP]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting).
 
@@ -115,18 +123,18 @@ Si vous souhaitez ajouter une liste blanche d'adresses IP à votre compte LINE, 
 Lors de l'intégration, veillez à vérifier que votre secret de canal est correct. S'il est incorrect, il peut y avoir des incohérences dans l'état de l'abonnement.
 {% endalert %}
 
-!page d'intégration des messages LINE avec section d'intégration LINE.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
+![Page d'intégration de messagerie LINE avec section d'intégration LINE.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
-2\. Une fois la connexion établie, Braze génère automatiquement un groupe d'abonnement Braze pour chaque intégration LINE ajoutée avec succès à votre espace de travail. <br><br> Toute modification apportée à votre liste de followers (comme les nouveaux followers ou les unfollowers) sera automatiquement poussée dans Braze.
+2\. Après la connexion, Braze générera automatiquement un groupe d'abonnement Braze pour chaque intégration LINE ajoutée avec succès à votre espace de travail. <br><br> Toute modification de votre liste d’abonnés (tels que de nouveaux abonnés ou des désabonnés) sera automatiquement transmise à Braze.
 
-!section LINE subscription groups affichant un groupe d'abonnement pour le canal "LINE".]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
+![Section des groupes d'abonnement LINE affichant un groupe d'abonnement pour le canal "LINE".]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
-## Étape 3 : Rapprocher les ID des utilisateurs
+## Étape 3 : Rapprocher les ID des utilisateurs
 
 Combinez les LINE ID de vos utilisateurs avec leurs profils utilisateurs Braze existants en suivant les étapes de la rubrique [Rapprochement des ID utilisateur.](#user-id-reconciliation)
 
-## Étape 4 : Modifiez vos méthodes de mise à jour des utilisateurs 
+## Étape 4 : Modifiez vos méthodes de mise à jour des utilisateurs 
 
 Si vous disposez déjà d'une méthode pour fournir des mises à jour d'utilisateurs à Braze, vous devrez la mettre à jour pour inclure le nouveau champ `native_line_id` afin que les mises à jour d'utilisateurs envoyées ultérieurement à Braze incluent ce champ.
 
@@ -172,7 +180,7 @@ Voici un exemple de charge utile à `/users/track` qui met à jour un profil uti
 ```
 {% endraw %}
 
-## Étape 5 : Fusionner les profils (facultatif)
+## Étape 5 : Fusionner les profils (facultatif)
 
 Comme décrit ci-dessus, il est possible que plusieurs profils utilisateurs existent avec la même adresse `native_line_id`. Si vos méthodes de mise à jour créent des profils utilisateurs en double, vous pouvez fusionner les profils utilisateurs non identifiés en profils utilisateurs identifiés avec l'endpoint `/user/merge`. 
 
@@ -215,7 +223,7 @@ Pour vous aider à gérer cela, Braze propose des outils et une logique qui pren
 {: start="2"}
 2\. **Mise à jour de l'événement :** Ils sont utilisés pour mettre à jour l'état de l'abonnement d'un utilisateur. Lorsque Braze reçoit des mises à jour d'événements utilisateur pour le canal LINE intégré et que l'événement est un suivi, le profil utilisateur aura un statut du groupe d'abonnement de `subscribed`. Si l'événement est un unfollow, le profil utilisateur aura un statut du groupe d'abonnement de `unsubscribed`.<br><br>\- Tous les profils utilisateurs de Braze ayant un `native_line_id` correspondant seront automatiquement mis à jour. <br>\- S'il n'existe pas de profil utilisateur correspondant à un événement, Braze [créera un utilisateur anonyme]({{site.baseurl}}/line/user_management/).
 
-## Cas d'utilisation
+## Cas d’utilisation
 
 Il s'agit de cas d'utilisation de la manière dont les utilisateurs peuvent être mis à jour après avoir suivi les étapes de configuration ci-dessus.
 
@@ -320,7 +328,7 @@ Pour obtenir l'ID LINE correct pour chaque utilisateur, configurez l'identifiant
 
 Cette méthode permet aux utilisateurs de lier leur compte LINE au compte utilisateur de votre application. Vous pouvez ensuite utiliser Liquid dans Braze, comme {% raw %}`{{line_id}}`{% endraw %}, pour créer une URL personnalisée pour l'utilisateur qui transmet son LINE ID à votre site Web ou à votre application, qui peut alors être associée à un utilisateur connu.
 
-1. Créez un Canvas basé sur une action qui repose sur un changement d'état de l'abonnement et qui se déclenche lorsqu'un utilisateur s'abonne à votre canal LINE.<br>!Canvas qui se déclenche lorsqu'un utilisateur s'abonne au canal LINE.]({% image_buster /assets/img/line/account_link_1.png %})
+1. Créez un Canvas basé sur une action qui repose sur un changement d'état de l'abonnement et qui se déclenche lorsqu'un utilisateur s'abonne à votre canal LINE.<br>![Canvas qui se déclenche lorsqu'un utilisateur s'abonne au canal LINE.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Créez un message incitant les utilisateurs à se connecter à votre site web ou à votre app, en transmettant l'ID LINE de l'utilisateur en tant que paramètre de requête (via Liquid), comme par exemple :
 
 ```
@@ -329,9 +337,9 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\. Créez un message de suivi qui transmet le code du coupon.
-4\. (Facultatif) Créez une campagne basée sur une action ou un canvas qui se déclenche lorsque l'utilisateur LINE est identifié pour lui envoyer son code de coupon. <br>!Campagne basée sur l'action qui se déclenche lorsque l'utilisateur de LINE est identifié.]({% image_buster /assets/img/line/account_link_2.png %})
+4\. (Facultatif) Créez une campagne basée sur une action ou un canvas qui se déclenche lorsque l'utilisateur LINE est identifié pour lui envoyer son code de coupon. <br>![Campagne basée sur des actions qui se déclenche lorsque l'utilisateur de LINE est identifié.]({% image_buster /assets/img/line/account_link_2.png %})
 
-#### Comment cela fonctionne-t-il ?
+#### Fonctionnement
 
 Une fois que l'utilisateur s'est connecté, une modification est apportée sur votre site web ou votre app afin que l'ID de l'utilisateur soit renvoyé à Braze pour l'associer à l'ID LINE qui a été transmis dans le cadre de l'URL, avec un exemple de code tel que :
 
@@ -375,12 +383,12 @@ if (user && isLoggedIn && lineUserId) {
 
 Vous pouvez tester votre canal LINE avant d'implémenter [la réconciliation des utilisateurs](#user-id-reconciliation) en créant un canevas ou une campagne "Qui suis-je".
 
-1. Créez un Canvas qui renvoie l'ID d'un utilisateur de Braze sur un mot déclencheur spécifique. <br><br>Exemple de déclencheur <br><br>\![Déclencheur pour envoyer la campagne aux utilisateurs qui ont envoyé une LIGNE entrante à un groupe d'abonnement spécifique.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Exemple de message<br><br>!LIGNE message indiquant l'ID de l'utilisateur de Braze.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
+1. Configurer un Canvas qui renvoie l'ID utilisateur Braze d'un utilisateur sur un mot déclencheur spécifique. <br><br>Déclencheur d'exemple <br><br>![Déclencheur pour envoyer la campagne aux utilisateurs qui ont envoyé un message entrant LINE à un groupe d'abonnement spécifique.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Message d'exemple<br><br>![Message LINE indiquant l'ID utilisateur Braze.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
-2. Dans Braze, vous pouvez utiliser l'ID de Braze pour rechercher des utilisateurs spécifiques et les modifier si nécessaire.
+2. Dans Braze, vous pouvez utiliser l'ID Braze pour rechercher des utilisateurs spécifiques et les modifier selon vos besoins.
 
 {% alert important %}
-Assurez-vous que le Canvas ne dispose pas d'un contrôle global ou de groupes de contrôle empêchant les envois.
+Assurez-vous que le Canvas n'a pas de contrôle global ou de groupes de contrôle empêchant les envois.
 {% endalert %}
 
 
