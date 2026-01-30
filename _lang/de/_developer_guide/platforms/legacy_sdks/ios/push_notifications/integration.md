@@ -42,7 +42,7 @@ Vergewissern Sie sich in Ihren Projekteinstellungen, dass auf der Registerkarte 
 
 Wenn Sie über getrennte Push-Zertifikate für Entwicklung und Produktion verfügen, müssen Sie auf der Registerkarte **Allgemein** das Kontrollkästchen **Signierung automatisch verwalten** deaktivieren. Auf diese Weise können Sie für jede Build-Konfiguration unterschiedliche Bereitstellungsprofile wählen, da das Feature zur automatischen Code-Signierung in Xcode nur für die Entwicklung gilt.
 
-![Xcode Projekteinstellungen mit der Registerkarte "Allgemein". In diesem Tab ist die Option "Signierung automatisch verwalten" deaktiviert.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
+![Xcode Projekteinstellungen mit der Registerkarte "Allgemein". In diesem Tab ist die Option "Signierung automatisch verwalten" nicht markiert.]({% image_buster /assets/img_archive/xcode8_auto_signing.png %})
 
 ## Schritt 3: Für Push-Benachrichtigungen registrieren
 
@@ -86,7 +86,7 @@ if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_9_x_Max) {
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 if #available(iOS 10, *) {
@@ -130,7 +130,7 @@ UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTy
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 let types : UIUserNotificationType = UIUserNotificationType.Badge | UIUserNotificationType.Sound | UIUserNotificationType.Alert
@@ -157,7 +157,7 @@ Fügen Sie den folgenden Code zu Ihrer Methode `application:didRegisterForRemote
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Fügen Sie den folgenden Code in die Methode `application(_:didRegisterForRemoteNotificationsWithDeviceToken:)` Ihrer App ein:
 
@@ -218,7 +218,7 @@ Um eine Push-Benachrichtigung anzuzeigen, während sich die App im Vordergrund b
 Wenn auf die Benachrichtigung im Vordergrund geklickt wird, wird der iOS 10 Push-Delegat `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` aufgerufen und Braze protokolliert ein Push-Klick-Event.
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Fügen Sie den folgenden Code in die Methode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` Ihrer App ein:
 
@@ -282,7 +282,7 @@ Um Push-Analytics unter iOS 10 zu unterstützen, müssen Sie außerdem den folge
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 Um die Nachverfolgung von geöffneten Push-Benachrichtigungen zu aktivieren, fügen Sie den folgenden Code in die Methode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` Ihrer App ein:
 
