@@ -1,8 +1,8 @@
 ---
 page_order: 2.5
-nav_title: ""
-article_title: ""
-description: ""
+nav_title: Indicateurs de fonctionnalité
+article_title: Indicateurs de fonctionnalité du SDK Braze
+description: "Cet article de référence couvre un aperçu des indicateurs de fonctionnalité, y compris les prérequis et les cas d’utilisation."
 tool: Feature Flags
 platform:
   - iOS
@@ -16,3 +16,4 @@ platform:
 
 ---
 
+{% multi_lang_include feature_flags/feature_flags.md %}
