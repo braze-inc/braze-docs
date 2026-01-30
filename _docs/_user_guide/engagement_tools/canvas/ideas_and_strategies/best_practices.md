@@ -23,7 +23,11 @@ Dive into the what, who, and why!
 Unlock new combinations of user journeys with [Canvas components]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/about/).
 - Split your users with [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) and build different workflows.
 - Space out your user journeys with a [Delay]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) step.
-- Add [standalone messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) anywhere you want in your Canvas flow. 
+- Add [standalone messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) anywhere you want in your Canvas flow.
+
+{% alert note %}
+Canvas steps can only move users forward in the flow. You cannot configure a Canvas to link a step to a previous step, as this would send users backwards. This validation ensures users progress in a single direction through your Canvas.
+{% endalert %} 
 
 ## Create richer messages
 
