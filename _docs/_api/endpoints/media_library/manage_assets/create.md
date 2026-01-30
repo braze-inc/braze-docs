@@ -49,42 +49,12 @@ Example request body for `asset_file`:
 
 The request body includes the following parameters:
 
-<table class="reset-td-br-1 reset-td-br-2 reset-td-br-3 reset-td-br-4" role="presentation" style="word-break: normal; overflow-wrap: normal; table-layout: fixed; width: 100%;">
-  <colgroup>
-    <col style="width: 20%;">
-    <col style="width: 15%;">
-    <col style="width: 15%;">
-    <col style="width: 50%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="text-align: center;">Parameter</th>
-      <th style="text-align: center;">Required</th>
-      <th style="text-align: center;">Data Type</th>
-      <th style="text-align: center;">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>asset_url</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td>A publicly accessible URL for the asset to be uploaded into Braze.</td>
-    </tr>
-    <tr>
-      <td><code>asset_file</code></td>
-      <td>Optional</td>
-      <td>Binary</td>
-      <td>Binary file data.</td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td>A name to appear in the media library for this asset.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Required | Data Type | Description |
+| --------- | -------- | --------- | ----------- |
+| `asset_url` | Optional | String | A publicly accessible URL for the asset to be uploaded into Braze. |
+| `asset_file` | Optional | Binary | Binary file data. |
+| `name` | Optional | String | A name to appear in the media library for this asset. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 {% alert important %}
 `asset_url` and `asset_file` are mutually exclusive, you must only include one of them in your API request.
@@ -96,53 +66,19 @@ This section explains how the endpoint assigns names to uploaded files based on 
 
 #### Single file uploads
 
-<table style="word-break: normal; overflow-wrap: normal; word-wrap: normal; hyphens: none; table-layout: fixed; width: 100%;">
-  <colgroup>
-    <col style="width: 35%;">
-    <col style="width: 65%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none; text-align: center;">Scenario</th>
-      <th style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none; text-align: center;">Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;"><code>name</code> parameter provided</td>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;">The <code>name</code> value is used as the asset name in the media library.</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;"><code>name</code> parameter excluded</td>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;">The original filename from the URL or uploaded file is used.</td>
-    </tr>
-  </tbody>
-</table>
+| Scenario | Result |
+| --- | --- |
+| `name` provided | The `name` value is used as the asset name in the media library. |
+| `name` excluded | The original filename from the URL or uploaded file is used. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" style="table-layout: fixed; width: 100%;" }
 
 #### ZIP file uploads
 
-<table style="word-break: normal; overflow-wrap: normal; word-wrap: normal; hyphens: none; table-layout: fixed; width: 100%;">
-  <colgroup>
-    <col style="width: 35%;">
-    <col style="width: 65%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none; text-align: center;">Scenario</th>
-      <th style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none; text-align: center;">Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;"><code>name</code> parameter provided</td>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;">The <code>name</code> value is used as a prefix, with an incrementing number appended as a suffix (for example, "My File 1", "My File 2", "My File 3").</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;"><code>name</code> parameter excluded</td>
-      <td style="word-break: normal; overflow-wrap: normal; word-wrap: normal; white-space: normal; hyphens: none;">Each file retains its original filename from within the ZIP file.</td>
-    </tr>
-  </tbody>
-</table>
+| Scenario | Result |
+| --- | --- |
+| `name` provided | The `name` value is used as a prefix, with an incrementing number appended as a suffix (for example, "My File 1", "My File 2", "My File 3"). |
+| `name` excluded | Each file retains its original filename from within the ZIP file. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" style="table-layout: fixed; width: 100%;" }
 
 ## Example request
 
@@ -182,37 +118,12 @@ Validation errors return a structure like this:
 
 This table lists possible validation errors.
 
-<table style="word-break: normal; overflow-wrap: normal; table-layout: fixed; width: 100%;">
-  <colgroup>
-    <col style="width: 15%;">
-    <col style="width: 35%;">
-    <col style="width: 50%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="word-break: normal; overflow-wrap: normal; white-space: normal; text-align: center;">HTTP Status</th>
-      <th style="word-break: normal; overflow-wrap: normal; white-space: normal; text-align: center;">Message</th>
-      <th style="word-break: normal; overflow-wrap: normal; white-space: normal; text-align: center;">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">400</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">"Either asset_url or asset_file must be provided."</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">No asset parameter was provided in the request.</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">400</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">"Both asset_url and asset_file cannot be provided. Please provide only one."</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">Both asset parameters were provided; only one is allowed.</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">403</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">"Media Library Public APIs are not enabled for this company."</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">Media library feature is not enabled for this workspace.</td>
-    </tr>
-  </tbody>
-</table>
+| HTTP Status | Message | Description |
+| --- | --- | --- |
+| 400 | "Either asset_url or asset_file must be provided." | No asset parameter was provided in the request. |
+| 400 | "Both asset_url and asset_file cannot be provided. Please provide only one." | Both asset parameters were provided; only one is allowed. |
+| 403 | "Media Library Public APIs are not enabled for this company." | Media library feature is not enabled for this workspace. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### Processing errors
 
@@ -228,47 +139,14 @@ Processing errors return a different response with error codes:
 
 This table lists possible processing errors.
 
-<table style="word-break: normal; overflow-wrap: normal; table-layout: fixed; width: 100%;">
-  <colgroup>
-    <col style="width: 30%;">
-    <col style="width: 15%;">
-    <col style="width: 55%;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th style="word-break: normal; overflow-wrap: normal; white-space: normal; text-align: center;">Error Code</th>
-      <th style="word-break: normal; overflow-wrap: normal; white-space: normal; text-align: center;">HTTP Status</th>
-      <th style="word-break: normal; overflow-wrap: normal; white-space: normal; text-align: center;">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;"><code>UNSUPPORTED_FILE_TYPE</code></td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">400</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">The uploaded file type is not supported. The <code>meta</code> object includes the <code>file_type</code> that was rejected.</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;"><code>ASSET_SIZE_EXCEEDS_LIMIT</code></td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">400</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">The file exceeds the maximum allowed size. Images have a 5 MB limit.</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;"><code>MEDIA_LIBRARY_LIMIT_REACHED</code></td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">400</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">The workspace has reached its maximum number of assets (200 by default for free trial companies, unlimited otherwise). The <code>meta</code> object includes the current <code>limit</code>.</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;"><code>ASSET_UPLOAD_FAILED</code></td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">400</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">The asset failed to upload due to processing issues.</td>
-    </tr>
-    <tr>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;"><code>GENERIC_ERROR</code></td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">500</td>
-      <td style="word-break: normal; overflow-wrap: normal; white-space: normal;">An unexpected error occurred during upload. The <code>meta</code> object includes the <code>original_error</code> message for debugging. Try again or contact <a href="{{site.baseurl}}/support_contact/">Support</a>.</td>
-    </tr>
-  </tbody>
-</table>
+| Error Code | HTTP Status | Description |
+| --- | --- | --- |
+| `UNSUPPORTED_FILE_TYPE` | 400 | The uploaded file type is not supported. The `meta` object includes the `file_type` that was rejected. |
+| `ASSET_SIZE_EXCEEDS_LIMIT` | 400 | The file exceeds the maximum allowed size. Images have a 5 MB limit. |
+| `MEDIA_LIBRARY_LIMIT_REACHED` | 400 | The workspace has reached its maximum number of assets (200 by default for free trial companies, unlimited otherwise). The `meta` object includes the current `limit`. |
+| `ASSET_UPLOAD_FAILED` | 400 | The asset failed to upload due to processing issues. |
+| `GENERIC_ERROR` | 500 | An unexpected error occurred during upload. The `meta` object includes the `original_error` message for debugging. Try again or contact [Support]({{site.baseurl}}/support_contact/). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 
 ## Response
