@@ -6,7 +6,7 @@ Pour personnaliser la présentation des messages in-app et réagir à divers év
 - Utilisez l'implémentation par défaut [`BrazeInAppMessageUI`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageui) comme `inAppMessagePresenter`. 
 - Incluez la bibliothèque `BrazeUI` dans votre projet.
 
-### Étape 1 : Mettre en œuvre le protocole `BrazeInAppMessageUIDelegate`  
+### Étape 1 : Mettre en œuvre le protocole `BrazeInAppMessageUIDelegate`  
 
 Tout d'abord, implémentez le protocole `BrazeInAppMessageUIDelegate` et toutes les méthodes correspondantes que vous souhaitez. Dans l'exemple ci-dessous, nous implémentons ce protocole dans la classe `AppDelegate` de notre application.
 
@@ -18,7 +18,7 @@ extension AppDelegate: BrazeInAppMessageUIDelegate {
 }
 ```
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 ```objc
 @interface AppDelegate () <BrazeInAppMessageUIDelegate>
 
@@ -43,7 +43,7 @@ inAppMessageUI.delegate = self
 AppDelegate.braze?.inAppMessagePresenter = inAppMessageUI
 ```
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 ```objc
 BrazeInAppMessageUI *inAppMessageUI = [[BrazeInAppMessageUI alloc] init];
 inAppMessageUI.delegate = self;
@@ -71,7 +71,6 @@ La propriété `clickAction` de votre `Braze.InAppMessage` est par défaut `.non
 | `ClickAction` | Comportement au clic |
 | -------------------------- | -------- |
 | `.url(URL, useWebView: Bool)` | Ouvre l'URL donné dans un navigateur externe. Si `useWebView` est définie sur `true`, elle s'ouvrira dans une vue Web. |
-| `.newsFeed` | Le fil d’actualité s’affiche lorsque l’on clique sur le message, et le message est rejeté.<br><br>**Remarque :** Le fil d'actualité est supprimé. Consultez le [guide de migration]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) pour plus de détails. |
 | `.none` | Le message sera rejeté lorsque vous cliquerez. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -98,7 +97,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 La méthode `inAppMessage(_:prepareWith:)` n'est pas disponible en Objective-C.
 
@@ -123,7 +122,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui
@@ -178,7 +177,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 ```objc
 - (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui
        shouldProcess:(enum BRZInAppMessageRawClickAction)clickAction
@@ -215,7 +214,7 @@ BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = 
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 La personnalisation via `Attributes` n'est pas disponible en Objective-C.
 
@@ -237,7 +236,7 @@ Pour plus de détails sur la personnalisation des messages in-app, consultez cet
 Vous pouvez personnaliser l'orientation de vos messages in-app. Vous pouvez définir une nouvelle orientation par défaut pour tous les messages ou définir une orientation personnalisée pour un seul message.
 
 {% tabs local %}
-{% tab tous les messages %}
+{% tab all messages %}
 Pour choisir une orientation par défaut pour tous les messages in-app, utilisez la méthode [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) pour définir la propriété `preferredOrientation` sur le site `PresentationContext`. 
 
 Par exemple, pour définir le portrait comme orientation par défaut :
@@ -267,7 +266,7 @@ func inAppMessage(
 {% endsubtabs %}
 {% endtab %}
 
-{% tab message unique %}
+{% tab single message %}
 Pour définir l'orientation d'un seul message, modifiez la propriété `orientation` de `Braze.InAppMessage`:
 
 {% subtabs %}
@@ -328,7 +327,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui displayChoiceForMessage:(BRZInAppMessageRaw *)message
@@ -429,7 +428,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (void)inAppMessage:(BrazeInAppMessageUI *)ui
@@ -477,7 +476,7 @@ Vous pouvez utiliser des messages in-app dans le cadre d'une campagne pour deman
 Étant donné que cet exemple d'invite remplace le comportement par défaut de Braze, nous ne pouvons pas assurer automatiquement le suivi des impressions en cas de mise en œuvre. Vous devez [enregistrer vos propres analyses/analytiques]({{site.baseurl}}/developer_guide/analytics/)(si elles sont utilisées en tant qu'adjectifs).
 {% endalert %}
 
-### Étape 1 : Définir le délégué du message in-app
+### Étape 1 : Définir le délégué du message in-app
 
 Tout d'abord, définissez l'élément [`BrazeInAppMessageUIDelegate`]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_setting-up-the-ui-delegate-required) dans votre application. 
 
@@ -501,7 +500,7 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
@@ -537,7 +536,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {

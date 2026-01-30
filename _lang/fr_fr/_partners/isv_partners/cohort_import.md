@@ -25,6 +25,7 @@ Braze héberge notre application sur plusieurs clusters aux États-Unis et dans 
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
 | AU-01 | `https://rest.au-01.braze.com`  |
+| ID-01 | `https://rest.id-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## URL des endpoints
@@ -124,9 +125,9 @@ Reportez-vous au tableau suivant pour les codes d'erreur spécifiques aux points
 |  | `created_at` doit être une heure valide sous forme de chaîne de caractères [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) |
 | `401` | Clé API partenaire non valide |
 |  | Secret client non valide |
-|  | Partenaire non activé pour le client avec un secret client :**<secret client>** |
+|  | Le partenaire n'est pas activé pour le client avec le secret du client : **<client secret>** |
 |  | Accès non autorisé |
 | `423` | Ressource verrouillée |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Pour une résolution des problèmes supplémentaires, reportez-vous à la section [Errors &]({{site.baseurl}}/api/errors/) Responses, qui couvre les différentes erreurs et réponses du serveur qui peuvent survenir lors de l'utilisation de l'API Braze.
+Pour une résolution des problèmes supplémentaire, reportez-vous à la section [Erreurs & Responses]({{site.baseurl}}/api/errors/), qui traite des différentes erreurs et réponses du serveur pouvant survenir lors de l'utilisation de l'API de Braze.

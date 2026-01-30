@@ -2,7 +2,7 @@
 
 ## Mise en place de notifications push riches
 
-### Étape 1 : Création d’une extension de service
+### Étape 1 : Création d’une extension de service
 
 Pour créer une [extension de service de notification](https://developer.apple.com/reference/usernotifications/unnotificationserviceextension), naviguez vers **Fichier > Nouveau > Cible** dans Xcode et sélectionnez **Extension de service de notification.**
 
@@ -25,13 +25,13 @@ Pour voir un exemple, reportez-vous à l'utilisation dans [`NotificationService`
 #### Ajouter le framework de notifications push enrichies à votre application
 
 {% tabs local %}
-{% tab Gestionnaire de paquets Swift %}
+{% tab Swift Package Manager %}
 
 Après avoir suivi le [Guide d'intégration du gestionnaire de paquets Swift]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/), ajoutez `BrazeNotificationService` à votre `Notification Service Extension` en procédant comme suit :
 
-1. Dans Xcode, sous Infrastructures et bibliothèques, sélectionnez l'icône d’ajout <i class="fas fa-plus"></i> pour ajouter un framework. <br><br>![L'icône plus est située sous Infrastructures et bibliothèques dans Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
+1. Dans Xcode, sous Infrastructures et bibliothèques, sélectionnez l'icône d’ajout <i class="fas fa-plus"></i> pour ajouter un framework. <br><br>![L'icône plus est située sous frameworks et emplacements dans Xcode.]({% image_buster /assets/img_archive/rich_notification.png %})<br><br>
 
-2. Sélectionnez le cadre "BrazeNotificationService". <br><br>![Le framework BrazeNotificationService peut être sélectionné dans la fenêtre modale qui s'ouvre.]({% image_buster /assets/img_archive/rich_notification2.png %})
+2. Sélectionnez le cadre "BrazeNotificationService". <br><br>![Le cadre "BrazeNotificationService" peut être sélectionné dans la fenêtre modale qui s'ouvre.]({% image_buster /assets/img_archive/rich_notification2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}
@@ -63,7 +63,7 @@ Après avoir mis à jour le Podfile, naviguez jusqu’au répertoire de votre pr
 
 {% endtab %}
 
-{% tab Manual (Manuel) %}
+{% tab Manual %}
 
 Pour ajouter `BrazeNotificationService.xcframework` à votre `Notification Service Extension`, voir [Intégration manuelle]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration?tab=manual/).
 

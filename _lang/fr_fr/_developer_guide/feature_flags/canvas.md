@@ -1,5 +1,5 @@
 ---
-nav_title: Drapeaux de fonctionnalité dans Canvas
+nav_title: Indicateurs de fonctionnalité dans Canvas
 page_order: 30
 noindex: true
 tool: Feature Flags

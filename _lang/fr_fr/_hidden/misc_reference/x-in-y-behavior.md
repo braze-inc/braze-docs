@@ -1,5 +1,5 @@
 ---
-nav_title: Comportement du filtre « X dans Y »
+nav_title: Comportement du filtre X dans Y
 permalink: /x-in-y-behavior/
 ---
 
@@ -15,7 +15,7 @@ Le comportement de ces filtres restera le plus souvent le même et sera défini 
 
 La campagne suivante est/sera envoyée à 21 h 00 le 16 avril. La segmentation de l’audience est « a effectué plus de 2 achats au cours des 3 derniers jours ».
 
-![Planification de campagne][1]
+![Planification de campagne]({% image_buster /assets/img/campaign-schuedule-example.png %})
 
 21 h00 ET le 16 avril, correspond à 1 h 00 UTC le 17 avril.
 
@@ -41,7 +41,7 @@ Les jours civils sont utilisés lorsque vous sélectionnez « jours » ou « 
 - `Every 1 day` limitera le plafonnement au jour civil actuel avec l’heure locale de votre utilisateur (prend fin à minuit heure locale).
 - `Every 2 days` limitera le plafonnement aux jours civils actuel et précédent avec l’heure local de votre utilisateur (prend fin à minuit, heure locale, du jour civil actuel).
 
-### Heure locale et de l’entreprise
+### Entreprise & Heure locale
 
 Le jour civil actuel dans le fuseau horaire de la société correspond au jour `0`.
 
@@ -59,4 +59,3 @@ Braze possède une catégorie spécifique de filtres de segmentation : les filt
 
 
 
-[1]:{% image_buster /assets/img/campaign-schuedule-example.png %}

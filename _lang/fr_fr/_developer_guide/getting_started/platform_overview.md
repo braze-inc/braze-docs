@@ -1,6 +1,6 @@
 ---
 nav_title: Aperçu de la plate-forme
-article_title: Aperçu de la plate-forme
+article_title: Aperçu de la plateforme
 page_order: 1
 description: "Cet article traite des composants et capacités de base de la plateforme Braze. Les liens de cet article renvoient à des rubriques essentielles de Braze."
 platform:
@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Démarrage : Aperçu de la plate-forme
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"} Mise en route : Aperçu de la plate-forme
 
 > Cet article traite des composants et capacités de base de la plateforme Braze. Les liens de cet article renvoient à des rubriques essentielles de Braze. 
 
@@ -25,11 +25,11 @@ Consultez notre [parcours d'apprentissage gratuit pour les développeurs](https:
 
 ## Qu’est-ce que Braze ?
 
-Braze est une plateforme d'engagement client. Cela signifie simplement que Braze vous aide à écouter vos utilisateurs, à comprendre leurs actions et leurs comportements, puis à agir en conséquence. La plateforme Braze se compose de trois éléments principaux : le SDK, le tableau de bord et l'API REST.
+Braze est une plateforme d'engagement client. Il ingère les données des utilisateurs, fait remonter à la surface les actions et les comportements des utilisateurs, et vous permet d'agir en conséquence. La plateforme se compose de trois éléments principaux : le SDK, le tableau de bord et l'API REST.
 
 Si vous êtes un spécialiste du marketing à la recherche d'un aperçu plus global de Braze, consultez plutôt la [section Démarrer pour les marketeurs]({{site.baseurl}}/user_guide/getting_started/overview/).
 
-![La Braze comporte différentes couches. De manière générale, la plateforme se compose du SDK, de l'API, du tableau de bord et des intégrations partenaires. Chacun de ces éléments contribue à une couche d'ingestion de données, une couche de classification, une couche d'orchestration, une couche de personnalisation et une couche d'action. La couche d'action dispose de plusieurs canaux, notamment les messages in-app, Connected Catalog, webhook, SMS et e-mail.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
+![La Braze comporte différentes couches. De manière générale, la plateforme se compose du SDK, de l'API, du tableau de bord et des intégrations partenaires. Chacun de ces éléments contribue à une couche d'ingestion de données, une couche de classification, une couche d'orchestration, une couche de personnalisation et une couche d'action. La couche d'action dispose de différents canaux, notamment les notifications push, les messages in-app, le catalogue connecté, le webhook, les SMS et les e-mails.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
 
 ### SDK
 
@@ -64,11 +64,11 @@ Pour en savoir plus sur les différentes parties de Braze, consultez le site : [
 
 Les données stockées dans Braze sont conservées et utilisables à des fins de segmentation, de personnalisation et de ciblage tant que vous êtes client de Braze. Cela vous permet d'agir sur les données du profil utilisateur (par exemple, l'activité de la session ou les achats) jusqu'à ce que vous décidiez de supprimer ces informations. Par exemple, un service de diffusion en continu pourrait suivre les contenus consultés par chaque abonné depuis son premier jour sur le service (même si cela remonte à plusieurs années) et utiliser ces données pour envoyer des messages pertinents.
 
-![Un segment du tableau de bord de Braze intitulé "Acheteurs récents" juxtaposé à un écran de téléphone affichant un e-mail "Top Recommandations pour Linda".]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
+![Un segment du tableau de bord de Braze intitulé « Acheteurs récents » juxtaposé à un écran de téléphone affichant un e-mail « Top recommandations pour Linda ».]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
 
 ### Analyse des applications
 
-Le tableau de bord de Braze affiche les graphiques mis à jour en temps réel sur la base d’un certain nombre de mesures d’analyse ainsi que d’événements personnalisés que vous avez utilisés dans votre application. La mesure et l'optimisation constantes de vos campagnes à l'aide de tests A/B, de rapports personnalisés et d'analyses/analytiques, ainsi que de renseignements automatisés vous aident à maintenir l'engagement des clients et à vous démarquer des concurrents dans votre espace.
+Le tableau de bord de Braze affiche des graphiques mis à jour en temps réel en fonction des indicateurs d'analyse/analytique et des événements personnalisés que vous instrumentalisez. La mesure et l'optimisation cohérentes à l'aide de tests A/B, de rapports personnalisés, d'analyses et d'informations automatisées contribuent à soutenir l'engagement et la différenciation de vos clients.
 
 ### Segmentation utilisateur
 
@@ -80,7 +80,7 @@ Pour en savoir plus sur nos modèles de données, voir : [Pour commencer : Pré
 
 Après avoir défini un segment, les outils de communication de messages de Braze vous permettent d'engager le dialogue avec vos utilisateurs de manière dynamique et personnalisée. Braze a été conçu avec un modèle de données indépendant des canaux et centré sur l'utilisateur. L'envoi de messages se fait à l'intérieur de votre application ou de votre site (comme l'envoi de messages in-app ou par le biais d'éléments graphiques tels que les carrousels de cartes de contenu et les bannières) ou en dehors de votre expérience sur l'application (comme les notifications push ou les e-mails). Par exemple, vos marketeurs peuvent envoyer une notification push et un e-mail à l’exemple de segment défini dans la section précédente.
 
-![Créez et déclenchez des messages personnalisés sur n'importe quel canal, que ce soit à l'extérieur ou à l'intérieur de votre appli ou site web.]({% image_buster /assets/img/getting-started/messaging-channels.png %}).{: style="border:none" }
+![Créez et déclenchez des messages personnalisés sur n'importe quel canal, que ce soit à l'extérieur ou à l'intérieur de votre appli ou site web.]({% image_buster /assets/img/getting-started/messaging-channels.png %}){: style="border:none" }
 
 | Canal                                                                                              | Description                                                                                                                                            |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -88,7 +88,7 @@ Après avoir défini un segment, les outils de communication de messages de Braz
 | [E-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Envoyez des messages HTML riches en créant votre e-mail à l'aide de l'éditeur de texte riche, de notre éditeur par glisser-déposer ou en téléchargeant l'un de vos modèles HTML existants. |
 | [in-app Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Envoyez des notifications in-app discrètes à l'aide de l'interface utilisateur native créée sur mesure par Braze. |
 | [Notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Déclenchez automatiquement des notifications push à partir de campagnes de communication ou d'actualités à l'aide du service de notification push d'Apple (APN) pour iOS ou de Firebase Cloud Messaging (FCM) pour Android. |
-| [SMS/MMS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/) | Utilisez les SMS/MMS pour envoyer des notifications transactionnelles, partager des promotions, envoyer des rappels, etc. |
+| [SMS, MMS et RCS\*.]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs) | Utilisez les SMS, MMS ou RCS pour envoyer des notifications transactionnelles, partager des promotions, envoyer des rappels, et plus encore. |
 | [Push Web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Envoyez des notifications au navigateur web, même si vos utilisateurs ne sont pas actuellement actifs sur votre site. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Utilisez les webhooks pour déclencher des actions hors application, en fournissant à d'autres systèmes et applications des données en temps réel. |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) | Entrez directement en contact avec vos utilisateurs et vos clients avec la plateforme de messagerie pair à pair très plébiscitée : WhatsApp. |
@@ -109,7 +109,7 @@ Après avoir défini un segment, les outils de communication de messages de Braz
 
 ## Intégration de Braze
 
-La plateforme Braze a été conçue pour être rapidement et facilement opérationnelle. Notre délai moyen de rentabilisation est de six semaines pour notre clientèle composée de centaines de marques. Pour en savoir plus sur le processus d'intégration, voir : [Pour commencer : Aperçu de l'intégration]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+Braze est conçu pour une intégration rapide. Le délai moyen de valorisation est de six semaines pour l'ensemble de notre clientèle. Pour en savoir plus sur le processus d'intégration, consultez [Getting Started : Aperçu de l'intégration]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Ressources à mettre en favoris
 

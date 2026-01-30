@@ -22,8 +22,8 @@ Le tableau suivant décrit comment les utilisateurs peuvent exploiter chaque typ
 |Espaceur| Ajoute de l’espace ou une marge intérieure entre les autres blocs. |
 |Image| Insère une image de la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). | 
 |Vidéo| Crée un lien vers le contenu vidéo. |
-|Réseaux sociaux| Insère l’icône de la plateforme des réseaux sociaux. Des images personnalisées peuvent être chargées pour des icônes spécifiques aux marques. |
-|Icônes| Insère une icône. Des images personnalisées peuvent être téléchargées. Une icône de marque substitutive surdimensionnée sera utilisée jusqu’à ce qu’une image soit chargée. |
+|Réseaux sociaux| Insère l’icône de la plateforme des réseaux sociaux. Vous pouvez télécharger des images personnalisées pour les icônes spécifiques à une marque. |
+|Icônes| Insère une icône. Vous pouvez télécharger des images personnalisées. Braze utilise une marque substitutive surdimensionnée jusqu'à ce que vous téléchargiez une image. |
 |HTML| Insère l’élément HTML brut. Recommandé pour les [liquides]({{site.baseurl}}/liquid/), tels que le contenu connecté ou les déclarations conditionnelles. | 
 |Menu| Crée un menu flexible pour le message que vous créez. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
@@ -112,7 +112,7 @@ Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `
 
 ### Image
 
-Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Image`. Pour les images dynamiques (images avec Liquid), vous devez définir une image de repli pour utiliser les paramètres de largeur automatique. Pour les spécifications de l'[image]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email), reportez-vous aux [spécifications de l'image de]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) notre [e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
+Reportez-vous au tableau suivant pour plus de détails sur le bloc éditeur de `Image`. Pour les images dynamiques (images avec Liquid), vous devez définir une image de repli pour utiliser les paramètres de largeur automatique. Pour les [spécifications de l'image]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email), reportez-vous aux [spécifications de l'image de]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email) notre [e-mail]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/image_specs/#email).
 
 | Propriétés | Description |
 |---|---|
