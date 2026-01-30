@@ -60,7 +60,7 @@ Si has configurado un delegado de mensajes dentro de la aplicación para que ges
 
 ![Enlace para ver el registro de cambios en la página Detalles de la campaña con siete cambios desde la última vez que el usuario vio la campaña]({% image_buster /assets/img_archive/trouble4.png %})
 
-2. Asegúrate de que no has reutilizado el evento desencadenante en una campaña de mensajes dentro de la aplicación con una prioridad más alta.
+2. Asegúrate de que no has reutilizado el evento desencadenante en una campaña de mensajes dentro de la aplicación con una prioridad mayor.
 
 ## Solución de problemas avanzada {#troubleshooting-in-app-advanced}
 
@@ -91,11 +91,11 @@ Si tus mensajes dentro de la aplicación no se solicitan, es posible que tu apli
 Si tus mensajes dentro de la aplicación no se devuelven, es probable que estés experimentando un problema de orientación de la campaña:
 
 1. Tu segmento no contiene a tu usuario.
-  - Comprueba la pestaña [\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de tu usuario para ver si aparece el segmento correcto en **Segmentos**.
+  - Comprueba la pestaña [\*\*Interacción**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de tu usuario para ver si aparece el segmento correcto en **Segmentos**.
 2. Tu usuario ha recibido previamente el mensaje dentro de la aplicación y no era elegible para volver a recibirlo.
   - Comprueba la [configuración de elegibilidad de la campaña]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) en el paso **Entrega** del **Compositor de campañas** y asegúrate de que la configuración de elegibilidad se ajusta a tu configuración de pruebas.
 3. Tu usuario alcanzó el límite de frecuencia de la campaña.
-  - Comprueba la configuración de la campaña [límite de frecuencia]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) y asegúrate de que coincide con la configuración de tus pruebas.
+  - Comprueba la configuración de la campaña [límite de frecuencia]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) y asegúrate de que se ajusta a tu configuración de pruebas.
 4. Si había un grupo de control en la campaña, tu usuario puede haber caído en el grupo de control.
   - Puedes comprobar si esto ha ocurrido creando un segmento con un filtro de variante de campaña recibida, en el que la variante de campaña esté configurada como **Control**, y comprobando si tu usuario cayó en ese segmento.
   - Cuando crees campañas para realizar pruebas de integración, asegúrate de no añadir un grupo de control.
