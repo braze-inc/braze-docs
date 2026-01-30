@@ -122,7 +122,7 @@ The endpoint may also return an error code and a human-readable message in some 
 | `You do not have permission to access this resource` | The API key used does not have permission to take this action |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Most endpoints at Braze have a rate limit implementation that returns a 429 response code if you have made too many requests. The transactional sending endpoint works differently—if you exceed your allotted rate limit, our system continues to ingest the API calls, return success codes, and send the messages; however, those messages may not be subject to the contractual SLA for the feature. Contact Braze Support if you need more information about this functionality.
+Most endpoints at Braze have a rate limit implementation that returns a 429 response code if you make too many requests. The transactional sending endpoint is paid in units per hour (for example, 50,000 per hour depending on your package). There is no separate per-endpoint rate limit for this endpoint: you can send beyond your allotted volume, but only the allotted volume is covered by SLA; requests above that allotment still send but are not covered by SLA. Requests to this endpoint count toward your [overall external API rate limit]({{site.baseurl}}/api/api_limits/). If you exceed that limit (for example, 250,000 requests per hour across all endpoints), Braze returns 429 and throttles requests until the limit resets. The transactional volume count resets each hour. Contact Braze Support if you need more information about this functionality.
 
 ## Transactional HTTP event postback
 
