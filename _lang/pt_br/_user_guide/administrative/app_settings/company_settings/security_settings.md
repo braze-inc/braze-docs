@@ -85,7 +85,7 @@ Uma redefinição pode resolver problemas comuns de autenticação, como problem
 
 ### Requisitos para 2FA no nível da empresa
 
-Primeiro, verifique se o 2FA está habilitado para seu dashboard acessando **Configurações da Empresa** > **Configurações de Segurança** > **Autenticação de Dois Fatores**. Se o botão estiver cinza, o 2FA não foi ativado para sua empresa e não é obrigatório para todos os usuários do dashboard.
+Primeiro, verifique se o 2FA está habilitado para seu dashboard indo em **Configurações da Empresa** > **Configurações de Segurança** > **Autenticação de Dois Fatores**. Se o botão estiver cinza, o 2FA não foi ativado para sua empresa e não é obrigatório para todos os usuários do dashboard.
 
 #### Opções do usuário quando o 2FA não é obrigatório
 
@@ -116,14 +116,14 @@ Se você encontrar problemas durante o processo de configuração e for redireci
 
 ### Configurando 2FA quando não é obrigatório
 
-Para ativar manualmente a autenticação de dois fatores (2FA) na sua conta Braze quando não é obrigatória, siga estas etapas:
+Para ativar manualmente a autenticação de dois fatores (2FA) na sua conta Braze quando não é obrigatório, siga estas etapas:
 
 1. Baixe um aplicativo de 2FA como Authy, Google Authenticator, Okta Verify ou similar da App Store (iOS), Google Play Store (Android) ou da web. Ou, se preferir configurar 2FA com e-mail ou SMS, pule para a etapa 2.
 2. No Braze, acesse Gerenciar Conta, role até a seção **Autenticação de Dois Fatores**, e selecione **Iniciar Configuração**.
 3. Digite sua senha no modal de login e selecione **Verificar Senha**.
 4. No modal de **Configuração de Autenticação de Dois Fatores**, insira seu número de telefone e selecione **Ativar**.
 5. Copie o código gerado de sete dígitos do seu aplicativo de 2FA, e-mail ou mensagem SMS, e volte para o Braze e cole no modal de **Configuração de Autenticação de Dois Fatores**. Selecione **Verificar**.
-6. (Opcional) Para evitar inserir 2FA nos próximos 30 dias, ative a opção **Lembrar desta conta por 30 dias**.
+6. (Opcional) Para evitar inserir 2FA pelos próximos 30 dias, ative a opção **Lembrar esta conta por 30 dias**.
 
 ## Elevated Access
 
@@ -133,7 +133,7 @@ Se um usuário não puder verificar novamente, ele será redirecionado para o po
 
 ![Alternância de acesso elevado.]({% image_buster /assets/img/elevated_access.png %})
 
-## Baixando um relatório de evento de segurança {#security-event-report}
+## Baixando um relatório de eventos de segurança {#security-event-report}
 
 O relatório de eventos de segurança é um relatório CSV de eventos de segurança, como convites para contas, remoções de contas, tentativas de login bem-sucedidas e com falha e outras atividades. Você pode usá-lo para realizar auditorias internas.
 
@@ -141,9 +141,11 @@ Para baixar esse relatório, faça o seguinte:
 
 1. Acesse **Configurações** > **Configurações administrativas**.
 2. Selecione a guia **Security Settings (Configurações de segurança** ) e acesse a seção **Security Event Download (Baixar eventos de segurança** ).
-2. Selecione **Baixar relatório**. 
+3. Selecione **Baixar relatório**. 
 
-Esse relatório contém apenas os 10.000 eventos de segurança mais recentes de sua conta. Se precisar de dados de eventos específicos, entre em contato com o suporte técnico.
+Este download de relatório manual contém apenas os 10.000 eventos de segurança mais recentes para sua conta.
+
+Para exportar eventos de segurança para a Amazon S3 sem esse limite de linha, veja [Exportação de eventos de segurança com Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Login e conta
@@ -161,14 +163,14 @@ Esse relatório contém apenas os 10.000 eventos de segurança mais recentes de 
 - Conta Removida
 - Status de Inscrição do Usuário Atualizado
 - Usuário Atualizado
-- Conta do Desenvolvedor Atualizada
+- Conta de Desenvolvedor Atualizada
 
 ### Acesso elevado
 - Fluxo de acesso elevado iniciado
 - Fluxo de acesso elevado concluído
 - Falha na verificação 2FA para acesso elevado
-- Acesso Elevado Habilitado
-- Acesso Elevado Desabilitado
+- Forçou a Aplicação de Acesso Elevado
+- Desativou a Aplicação de Acesso Elevado
 
 Campanha interrompida
 - Campanha Adicionada
@@ -214,7 +216,7 @@ Canva
 - Aplicativo adicionado
 - Configurações da Empresa Alteradas
 - Configurações de Segurança da Empresa Atualizadas
-- Exportação de Evento de Segurança Atualizada
+- Exportação de Evento de Segurança na Nuvem Atualizada
 - Domínio Personalizado de Páginas de Destino Adicionado
 - Domínio Personalizado de Páginas de Destino Removido
 - Domínio Personalizado Criado
@@ -240,7 +242,7 @@ Credencial push removida
 - Usuários Excluídos
 - Usuários Visualizados
 - Importação de Usuário Iniciada
-- Status do Grupo de Inscrições de Usuário Atualizado
+- Status do Grupo de Inscrições do Usuário Atualizado
 - Usuário excluído
 - Exclusão de Usuário Único Cancelada
 - Exclusão em Massa de Usuários Cancelada
@@ -260,10 +262,10 @@ Credencial push removida
 
 ## Visualização de informações de identificação pessoal (IPI) {#view-pii}
 
-A permissão **View IPI** só pode ser acessada por alguns usuários selecionados do Braze. Por padrão, todos os administradores têm sua permissão **Ver PII** ativada nas permissões de usuário. Isso significa que eles podem ver todos os atributos padrão e personalizados que sua empresa definiu como PII em todo o dashboard. Quando essa permissão é desativada para os usuários, esses usuários não poderão ver nenhum desses atributos.
+A permissão **View IPI** só pode ser acessada por alguns usuários selecionados do Braze. Por padrão, todos os administradores têm sua permissão **Ver PII** ativada nas permissões de usuário. Isso significa que eles podem ver todos os atributos padrão e personalizados que sua empresa definiu como PII em todo o painel. Quando essa permissão é desativada para os usuários, esses usuários não poderão ver nenhum desses atributos.
 
 {% alert note %}
-Você precisa da permissão **Ver PII** para usar [Construtor de Consultas]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), porque isso permite acesso direto a alguns dados de cliente.
+Você precisa da permissão **Ver PII** para usar [Construtor de Consultas]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), porque isso permite acesso direto a alguns dados de clientes.
 {% endalert %}
 
 Para conhecer os recursos de permissão de equipe existentes, consulte [Definição de permissões de usuário]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
@@ -271,10 +273,10 @@ Para conhecer os recursos de permissão de equipe existentes, consulte [Definiç
 ### Definição de IPI
 
 {% alert important %}
-Selecionar e definir certos campos como campos PII afeta apenas o que os Usuários podem ver no dashboard da Braze e não impacta como os dados do Usuário Final em tais campos PII são tratados.<br><br>Consulte sua equipe jurídica para alinhar as configurações do seu dashboard com quaisquer regulamentos e políticas de privacidade aplicáveis à sua empresa, incluindo aqueles relacionados à [retenção de dados]({{site.baseurl}}/data_retention/).
+Selecionar e definir certos campos como campos PII afeta apenas o que os Usuários podem ver no painel da Braze e não impacta como os dados do Usuário Final em tais campos PII são tratados.<br><br>Consulte sua equipe jurídica para alinhar as configurações do seu painel com quaisquer regulamentos e políticas de privacidade aplicáveis à sua empresa, incluindo aqueles relacionados à [retenção de dados]({{site.baseurl}}/data_retention/).
 {% endalert %}
 
-Você pode selecionar os campos que sua empresa designa como PII no dashboard. Para fazer isso, acesse **Configurações da Empresa** > **Configurações do Administrador** > **Configurações de Segurança**.
+Você pode selecionar os campos que sua empresa designa como PII no painel. Para fazer isso, acesse **Configurações da Empresa** > **Configurações do Administrador** > **Configurações de Segurança**.
 
 Os seguintes atributos podem ser designados como PII e ocultados de usuários da Braze que não têm permissões **Ver PII**.
 
@@ -287,7 +289,7 @@ Os seguintes atributos podem ser designados como PII e ocultados de usuários da
 
 ### Áreas limitadas
 
-O seguinte assume que todos os campos estão definidos como PII, e os usuários mencionados são aqueles que usam a plataforma Braze. Além disso, os atributos "precedentes" referem-se àqueles na tabela [Atributos PII potenciais](#potential-pii-attributes). Remover permissões PII de um usuário pode impactar a usabilidade além dessas áreas listadas.
+O seguinte assume que todos os campos estão definidos como PII, e os usuários mencionados são aqueles que usam a plataforma Braze. Além disso, atributos "precedentes" referem-se àqueles na tabela [Atributos PII potenciais](#potential-pii-attributes). Remover permissões PII de um usuário pode impactar a usabilidade além dessas áreas listadas.
 
 | Navegação no dashboard | Resultado | Notas |
 | -------------------- | ------ | ----- |
@@ -299,12 +301,12 @@ O seguinte assume que todos os campos estão definidos como PII, e os usuários 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-Ao visualizar uma mensagem, a permissão **Ver PII** não é aplicada, então os usuários podem ver os [atributos padrão precedentes](#potential-pii-attributes) se forem referenciados na mensagem através do Liquid.
+Ao visualizar uma mensagem, a permissão **Ver PII** não é aplicada, então os usuários podem ver os [atributos padrão anteriores](#potential-pii-attributes) se forem referenciados na mensagem através do Liquid.
 {% endalert %}
 
 ## Preferências de exclusão de dados 
 
-Você pode usar esta configuração para definir preferências sobre se a Braze deve excluir certos campos durante o processo de exclusão de usuários para eventos. Essas preferências impactam apenas os dados de usuários que o Braze excluiu. 
+Você pode usar esta configuração para definir preferências sobre se o Braze deve excluir certos campos durante o processo de exclusão de usuários para eventos. Essas preferências impactam apenas os dados de usuários que o Braze excluiu. 
 
 Quando um usuário é excluído, o Braze remove todos os PII dos dados de eventos, mas retém os dados anonimizados para fins de análise. Alguns campos definidos pelo usuário podem conter IPI se você enviar informações do usuário final para a Braze. Se esses campos contiverem PII, você pode optar por excluir os dados quando o Braze anonimiza os dados de eventos para usuários excluídos; se os campos não contiverem PII, você pode mantê-los para análise.
 
@@ -320,7 +322,7 @@ Você é responsável por determinar as preferências corretas para seu espaço 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
-**A exclusão é permanente!** Se você optar por remover quaisquer campos do Snowflake para usuários excluídos, a configuração se aplica a todos os dados históricos em seus espaços de trabalho e a quaisquer eventos de usuários excluídos no futuro. Depois que o Braze executar o processo para aplicar as configurações aos dados de eventos históricos para usuários excluídos, você **não pode restaurar** os dados.
+**A exclusão é permanente!** Se você optar por remover quaisquer campos do Snowflake para usuários excluídos, a configuração se aplica a todos os dados históricos em seus espaços de trabalho e a quaisquer eventos para usuários excluídos no futuro. Depois que o Braze executou o processo para aplicar as configurações aos dados de eventos históricos para usuários excluídos, você **não pode restaurar** os dados.
 {% endalert %}
 
 ### Configurar preferências
@@ -346,11 +348,11 @@ Se o problema persistir após essas etapas, entre em contato com [Suporte]({{sit
 
 ### Não é possível ativar a autenticação de dois fatores (2FA)
 
-Se 2FA estiver ativado, mas nada acontecer quando você selecionar o **Ativar** botão, pode ser devido ao seu navegador bloquear o redirecionamento necessário para enviar o código de verificação por SMS. Aqui estão os passos para solucionar esse problema:
+Se a 2FA estiver ativada, mas nada acontecer ao selecionar o botão **Ativar**, pode ser devido ao seu navegador bloquear o redirecionamento necessário para enviar o código de verificação por SMS. Aqui estão as etapas para solucionar esse problema:
 
 1. Suspenda temporariamente qualquer bloqueador de anúncios que você tenha ativado em seu navegador.
 2. Confirme que você ativou cookies de terceiros nas configurações do seu navegador.
-3. Tente configurar 2FA.
+3. Tente configurar a 2FA.
 
 ### Código de verificação não enviado
 
@@ -360,4 +362,4 @@ Se você encontrar problemas ao inserir seu número de telefone na página do Au
 2. Digite seu número de telefone e verifique o app Authy para quaisquer alterações ou notificações de SMS.
 3. Se você ainda não receber o SMS, tente usar uma conexão de rede diferente, como sua rede doméstica ou um Wi-Fi não corporativo. Redes corporativas podem ter políticas de segurança que interferem na entrega de SMS.
 
-Se os problemas persistirem, exclua o perfil antigo no app Authy e escaneie o código QR novamente para configurar 2FA. Certifique-se de que você desativou qualquer bloqueador de anúncios, ativou cookies de terceiros ou usou um navegador diferente antes de tentar a configuração novamente.
+Se os problemas persistirem, exclua o perfil antigo no app Authy e escaneie o código QR novamente para configurar a 2FA. Certifique-se de que você desativou qualquer bloqueador de anúncios, ativou cookies de terceiros ou usou um navegador diferente antes de tentar a configuração novamente.
