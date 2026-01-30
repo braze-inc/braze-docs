@@ -1,6 +1,6 @@
 ---
-nav_title: Media Library
-article_title: Media Library
+nav_title: Media library
+article_title: Media library
 page_order: 0
 page_type: reference
 description: "This reference article covers the media library. Here, you can learn how to manage your assets in a single, centralized location, generate image using AI, access media in your message composer."
