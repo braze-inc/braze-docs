@@ -1,5 +1,5 @@
 ---
-nav_title: Adiamento de envio de mensagens disparadas
+nav_title: Adiamento de mensagens disparadas
 article_title: "Tutorial: Adiamento e restauração de mensagens disparadas"
 description: ""
 page_order: 1
@@ -8,15 +8,101 @@ layout: scrolly
 
 # Tutorial: Adiamento e restauração de mensagens disparadas
 
-> Siga o código de exemplo neste tutorial para adiar e restaurar mensagens no app disparadas usando o Braze SDK.
+> Siga o código de exemplo neste tutorial para adiar e restaurar mensagens no app disparadas usando o SDK do Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} No entanto, não é necessária nenhuma configuração adicional.
+
+## Adiamento e restauração de mensagens disparadas pela internet
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  const shouldDefer = true; // customize for your own logic
+  if (shouldDefer) {
+    braze.deferInAppMessage(message);
+  } else {
+    braze.showInAppMessage(message);
+  }
+});
+
+// elsewhere in your app
+document.getElementById("button").onclick = function () {
+  const deferredMessage = braze.getDeferredInAppMessage();
+  if (deferredMessage) {
+    braze.showInAppMessage(deferredMessage);
+  }
+};
+```
+
+!!!etapa
+linhas-index.js=2
+
+#### 1\. Remover chamadas para `automaticallyShowInAppMessages()`
+
+Remova todas as chamadas para [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) pois elas substituirão qualquer lógica personalizada que você implementar posteriormente.
+
+!!!etapa
+linhas-index.js=6
+
+#### 2\. Ativar a depuração (opcional)
+
+Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
+
+!!!etapa
+linhas-index.js=9-16
+
+#### 3\. Assinar o manipulador de retorno de chamada de mensagem no app
+
+Registre um retorno de chamada com [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para receber uma mensagem sempre que uma mensagem no app for disparada.
+
+!!!etapa
+Linhas -index.js=11-12
+
+#### 4\. Adiar a instância `message` 
+
+Para adiar a mensagem, ligue para [`deferInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage). O Braze serializará e salvará essa mensagem para que você possa exibi-la em um carregamento de página futuro.
+
+!!!etapa
+Linhas -index.js=18-24
+
+#### 5\. Recuperar uma mensagem adiada anteriormente
+
+Para recuperar qualquer mensagem adiada anteriormente, chame [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage). 
+
+!!!etapa
+Linhas -index.js=21-23
+
+#### 6\. Exibir a mensagem adiada
+
+Depois de recuperar uma mensagem adiada, exiba-a passando-a para [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage).
+
+!!!etapa
+Linhas -index.js=13-15
+
+#### 7\. Exibir uma mensagem imediatamente
+
+Para mostrar uma mensagem em vez de adiá-la, chame [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) diretamente em seu retorno de chamada `subscribeToInAppMessage`.
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
 {% multi_lang_include developer_guide/prerequisites/android.md %} Você também precisará [ativar as mensagens no app para Android]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Adiamento e restauração de mensagens disparadas para Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Android" %}
 
 {% scrolly %}
 
@@ -116,49 +202,49 @@ fun ContentView() {
 }
 ```
 
-!!! etapa
+!!!etapa
 Linhas -MainApplication.kt=13-16
 
 #### 1\. Crie uma instância única do site `Application` 
 
 Use um objeto complementar para expor sua classe `Application` como um singleton, para que possa ser acessada posteriormente em seu código.
 
-!!! etapa
+!!!etapa
 linhas-MainApplication.kt=25
 
 #### 2\. Ativar a depuração (opcional)
 
 Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
 
-!!! etapa
+!!!etapa
 Linhas -MainApplication.kt=34-36
 
 #### 3\. Registrar retornos de chamada do ciclo de vida da atividade
 
 Registre o ouvinte padrão do Braze para lidar com o ciclo de vida das mensagens no app.
 
-!!! etapa
+!!!etapa
 Linhas -MainApplication.kt=39-49
 
 #### 4\. Configure um ouvinte de mensagens no app
 
 Use `BrazeInAppMessageManager` para definir um ouvinte personalizado que intercepta as mensagens antes de serem exibidas.
 
-!!! etapa
+!!!etapa
 Linhas -MainApplication.kt=43,46
 
 #### 5\. Criar lógica condicional
 
 Use o sinalizador `showMessage` para controlar o tempo - retorne `DISPLAY_NOW` para exibir a mensagem agora ou `DISPLAY_LATER` para adiá-la.
 
-!!! etapa
+!!!etapa
 Linhas -MainApplication.kt=52-55
 
 #### 6\. Criar um método para exibir mensagens adiadas
 
 Use `showDeferredMessage` para disparar a próxima mensagem no app. Quando `showMessage` for `true`, o ouvinte retornará `DISPLAY_NOW`.
 
-!!! etapa
+!!!etapa
 linhas-MainActivity.kt=29
 
 #### 7\. Dispare o método a partir de sua interface do usuário
@@ -172,7 +258,7 @@ Para exibir a mensagem previamente adiada, ligue para `showDeferredMessage(true)
 
 ## Adiamento e restauração de mensagens disparadas para o Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Swift" %}
 
 {% scrolly %}
 
@@ -258,134 +344,48 @@ struct ContentView: View {
 }
 ```
 
-!!! etapa
+!!!etapa
 linhas-AppDelegate.swift=5
 
 #### 1\. Implementar o `BrazeInAppMessageUIDelegate`
 
 Em sua classe `AppDelegate`, implemente o método [`BrazeInAppMessageUIDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate) para que você possa substituir o método `inAppMessage` posteriormente.
 
-!!! etapa
+!!!etapa
 linhas-AppDelegate.swift=19
 
 #### 2\. Ativar a depuração (opcional)
 
 Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
 
-!!! etapa
+!!!etapa
 Linhas -AppDelegate.swift=25-27
 
 #### 3\. Configure sua UI do Braze e delegue
 
 `BrazeInAppMessageUI()` renderiza mensagens no app por padrão. Ao atribuir o endereço `self` como seu delegado, você pode interceptar e tratar as mensagens antes que elas sejam exibidas. Não se esqueça de salvar a instância, pois você precisará dela mais tarde para restaurar as mensagens adiadas.
 
-!!! etapa
+!!!etapa
 Linhas -AppDelegate.swift=32-41
 
 #### 4\. Substituir o site `DisplayChoice` pela lógica condicional
 
 Substituir [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) para determinar quando uma mensagem deve ser exibida. Retorne `.now` para exibi-lo imediatamente ou `.reenqueue` para adiá-lo para mais tarde.
 
-!!! etapa
+!!!etapa
 Linhas -AppDelegate.swift=43-46
 
 #### 5\. Criar um método para mostrar mensagens adiadas
 
 Crie um método que chame `showDeferredMessage(true)` para exibir a próxima mensagem adiada na pilha. Quando chamado, `showMessage` é definido como `true`, fazendo com que o delegado retorne `.now`.
 
-!!! etapa
+!!!etapa
 linhas-ContentView.swift=1-14
 
 #### 5\. Dispare o método a partir de sua interface do usuário
 
 Para exibir a mensagem previamente adiada, ligue para `showDeferredMessage(true)` a partir da interface do usuário, como um botão ou toque.
 
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} Entretanto, não é necessária nenhuma configuração adicional.
-
-## Adiamento e restauração de mensagens disparadas pela internet
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  const shouldDefer = true; // customize for your own logic
-  if (shouldDefer) {
-    braze.deferInAppMessage(message);
-  } else {
-    braze.showInAppMessage(message);
-  }
-});
-
-// elsewhere in your app
-document.getElementById("button").onclick = function () {
-  const deferredMessage = braze.getDeferredInAppMessage();
-  if (deferredMessage) {
-    braze.showInAppMessage(deferredMessage);
-  }
-};
-```
-
-!!! etapa
-linhas-index.js=2
-
-#### 1\. Remover chamadas para `automaticallyShowInAppMessages()`
-
-Remova todas as chamadas para [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) pois elas substituirão qualquer lógica personalizada que você implementar posteriormente.
-
-!!! etapa
-linhas-index.js=6
-
-#### 2\. Ativar a depuração (opcional)
-
-Para facilitar a solução de problemas durante o desenvolvimento, considere a possibilidade de ativar a depuração.
-
-!!! etapa
-linhas-index.js=9-16
-
-#### 3\. Assinar o manipulador de retorno de chamada de mensagem no app
-
-Registre um retorno de chamada com [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) para receber uma mensagem sempre que uma mensagem no app for disparada.
-
-!!! etapa
-Linhas -index.js=11-12
-
-#### 4\. Adiar a instância `message` 
-
-Para adiar a mensagem, ligue para [`deferInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage). O Braze serializará e salvará essa mensagem para que você possa exibi-la em um carregamento de página futuro.
-
-!!! etapa
-Linhas -index.js=18-24
-
-#### 5\. Recuperar uma mensagem adiada anteriormente
-
-Para recuperar qualquer mensagem adiada anteriormente, chame [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage). 
-
-!!! etapa
-Linhas -index.js=21-23
-
-#### 6\. Exibir a mensagem adiada
-
-Depois de recuperar uma mensagem adiada, exiba-a passando-a para [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage).
-
-!!! etapa
-Linhas -index.js=13-15
-
-#### 7\. Exibir uma mensagem imediatamente
-
-Para mostrar uma mensagem em vez de adiá-la, chame [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) diretamente em seu retorno de chamada `subscribeToInAppMessage`.
 {% endscrolly %}
 {% endsdktab %}
 {% endsdktabs %}
