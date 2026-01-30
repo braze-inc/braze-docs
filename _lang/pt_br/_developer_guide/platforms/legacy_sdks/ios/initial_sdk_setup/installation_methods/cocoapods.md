@@ -22,10 +22,10 @@ Execute o seguinte comando para começar:
 $ sudo gem install cocoapods
 ```
 
-Se você tiver problemas com CocoaPods, consulte o [guia de solução de problemas](http://guides.cocoapods.org/using/troubleshooting.html) do CocoaPods.
+Se você tiver problemas com o CocoaPods, consulte o [guia de solução de problemas](http://guides.cocoapods.org/using/troubleshooting.html) do CocoaPods.
 
 {% alert note %}
-Se solicitado a substituir o executável `rake`, consulte as direções [Introdução](http://guides.cocoapods.org/using/getting-started.html) em CocoaPods.org para mais detalhes.
+Se for solicitado a substituir o executável `rake`, consulte as instruções [de introdução](http://guides.cocoapods.org/using/getting-started.html) em CocoaPods.org para obter mais detalhes.
 {% endalert %}
 
 ## Etapa 2: Construindo o arquivo de pod
@@ -63,7 +63,7 @@ pod install
 
 Nesse ponto, você deve conseguir abrir o novo espaço de trabalho do projeto Xcode criado pelo CocoaPods. Use esse espaço de trabalho do Xcode em vez de seu projeto do Xcode. 
 
-![Uma pasta Appboy Example expandida para mostrar o novo `AppbpyExample.workspace`.]({% image_buster /assets/img_archive/podsworkspace.png %})
+![Uma pasta Appboy Example expandida para mostrar o novo \`AppbpyExample.workspace\`.]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ## Próximos passos
 
