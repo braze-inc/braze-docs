@@ -4,7 +4,7 @@
 
 ## Lebenszyklus einer Sitzung
 
-Wenn Sie Braze mit der von uns empfohlenen [activity lifecycle callback integration] integriert haben ({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android), werden `openSession()` und `closeSession()` automatisch für jede Aktivität in Ihrer App aufgerufen. Standardmäßig werden Sitzungen unter Android beim ersten Aufruf von `openSession()` geöffnet und geschlossen, nachdem eine App länger als 10 Sekunden nicht mehr im Vordergrund war. Beachten Sie, dass der Aufruf von `closeSession()` eine Sitzung nicht sofort beendet. Vielmehr schließt die Sitzung nach 10 Sekunden, wenn der oder die Nutzer:in in der Zwischenzeit nicht `openSession()` aufruft (z. B. durch Navigieren zu einer anderen Aktivität).
+Wenn Sie Braze mit unserer empfohlenen [activity lifecycle callback integration]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android) integriert haben, werden `openSession()` und `closeSession()` automatisch für jede Aktivität in Ihrer App aufgerufen. Standardmäßig werden Sitzungen unter Android beim ersten Aufruf von `openSession()` geöffnet und geschlossen, nachdem eine App länger als 10 Sekunden nicht mehr im Vordergrund war. Beachten Sie, dass der Aufruf von `closeSession()` eine Sitzung nicht sofort beendet. Vielmehr schließt die Sitzung nach 10 Sekunden, wenn der oder die Nutzer:in in der Zwischenzeit nicht `openSession()` aufruft (z. B. durch Navigieren zu einer anderen Aktivität).
 
 Eine Android-Sitzung wird nach 10 Sekunden beendet, ohne dass eine Kommunikation mit der Host-Anwendung stattgefunden hat. Das heißt, wenn der oder die Nutzer:in die App verlässt und 9 Sekunden später zurückkehrt, wird die gleiche Sitzung fortgesetzt. Beachten Sie, dass, wenn eine Sitzung geschlossen wird, während der Nutzer:innen die App im Hintergrund hat, diese Daten möglicherweise erst dann auf den Server übertragen werden, wenn die App erneut geöffnet wird.
 
@@ -13,7 +13,7 @@ Wenn Sie eine neue Sitzung erzwingen müssen, können Sie dies tun, indem Sie de
 {% endalert %}
 
 ## Anpassen des Sitzungs-Timeouts
-Um das Sitzungs-Timeout anzupassen, fügen Sie `com_braze_session_timeout` zu Ihrer Datei [`braze.xml`]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml) hinzu. Der Mindestwert für `NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT` ist 1 Sekunde.
+Um den Sitzungs-Timeout anzupassen, fügen Sie `com_braze_session_timeout` zu Ihrer [`braze.xml`]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml) Datei hinzu. Der Mindestwert für `NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT` ist 1 Sekunde.
 
 ```xml
 <!-- The length of time before a session times out in seconds. The session manager will "re-open" otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
