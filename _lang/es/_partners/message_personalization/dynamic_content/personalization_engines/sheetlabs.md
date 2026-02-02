@@ -14,7 +14,7 @@ _Esta integración está mantenida por Sheetlabs._
 
 ## Sobre la integración
 
-La integración de Sheetlabs y Braze le permite aprovechar [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) para incluir las API de Sheetlabs en sus campañas de marketing Braze. Se suele utilizar para establecer un puente entre una hoja de cálculo de Google (que el equipo de marketing actualiza directamente) y las plantillas de Braze. Esto le permite conseguir más con las plantillas Braze, como traducciones o conjuntos más amplios de atributos personalizados.
+La integración de Sheetlabs y Braze te permite utilizar [Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) para incluir las API de Sheetlabs en tus campañas de marketing Braze. Se suele utilizar para establecer un puente entre una hoja de cálculo de Google (que el equipo de marketing actualiza directamente) y las plantillas de Braze. Esto le permite conseguir más con las plantillas Braze, como traducciones o conjuntos más amplios de atributos personalizados.
 
 ## Requisitos previos
 
