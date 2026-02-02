@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [actionable.me](https://actionable.me), construído pela equipe da Massive Rocket, uma agência de dados e CRM, é uma abordagem padronizada e automatizada para executar programas de CRM, fornecendo ferramentas e processos projetados para levar os clientes da Braze a obter valor de forma rápida, consistente e previsível. 
 
-_Essa integração é mantida por actionable.me._
+_Esta integração é mantida por actionable.me._
 
 ## Sobre a integração
 
@@ -54,9 +54,9 @@ Na Braze, navegue para **Configurações** > **Chaves de API**. Selecione **Cria
 
 ### Etapa 2: Forneça informações para a equipe actionable.me
 
-Para concluir a integração, forneça a chave da API REST e o [URL do endpoint REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) para sua equipe de operações da actionable.me. Em seguida, a actionable.me estabelece a conexão e avisa quando a configuração fica pronta. Ela também entrará em contato para começar a compartilhar insights.
+Para completar a integração, você deve fornecer sua chave da API REST e [URL do endpoint REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) para sua equipe de operações actionable.me. actionable.me então estabelecerá a conexão e entrará em contato com você após a configuração estar completa e estará em contato para começar a compartilhar insights.
 
-![A página actionable.me "add platform" (adicionar plataforma) que a equipe de operações actionable.me configurará.]({% image_buster /assets/img/actionableme/image2.png %})
+![A página "adicionar plataforma" da actionable.me da que a equipe de operações da actionable.me configurará.]({% image_buster /assets/img/actionableme/image2.png %})
 
 ## Solução de problemas
 
