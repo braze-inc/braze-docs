@@ -13,9 +13,9 @@ description: "Infórmate sobre las distintas opciones de importación de usuario
 
 Ten en cuenta que Braze no sanea, valida ni reformatea los datos HTML durante la importación, lo que significa que las etiquetas de script deben eliminarse de todos los datos de importación que utilices para la personalización Web.
 
-Cuando importes datos a Braze que estén destinados específicamente al uso de personalización en un navegador web, asegúrate de que estén desprovistos de HTML, JavaScript o cualquier otra etiqueta de secuencia de comandos que pueda aprovecharse maliciosamente cuando se representen en un navegador web.
+Al importar datos a Braze destinados específicamente al uso de personalización en un navegador web, asegúrese de que estén desprovistos de HTML, JavaScript o cualquier otra etiqueta de secuencia de comandos que pueda ser aprovechada de forma malintencionada al visualizarse en un navegador web.
 
-Alternativamente, para HTML, puedes utilizar los filtros Braze Liquid (`strip_html`) para escapar HTML del texto renderizado. Por ejemplo:
+Alternativamente, para HTML, puedes utilizar los filtros Braze Liquid (`strip_html`) para escapar caracteres HTML del texto representado. Por ejemplo:
 
 {% tabs local %}
 {% tab Input %}
@@ -36,7 +36,7 @@ Have you read Ulysses?
 
 ## Opciones de importación
 
-### Importación Braze CSV
+### Importación CSV de Braze
 
 Puedes utilizar la importación en CSV para registrar y actualizar los siguientes atributos de usuario y eventos personalizados. Para empezar, consulta [Importación de CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import).
 
@@ -47,17 +47,17 @@ Puedes utilizar la importación en CSV para registrar y actualizar los siguiente
 |Eventos personalizados|Eventos únicos de tu empresa que representan acciones de los usuarios.|`trip_booked`|50 MB|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-### Lambda importación de usuarios en CSV
+### Importación CSV de usuarios Lambda
 
-Puedes utilizar nuestro script de importación CSV de S3 Lambda sin servidor para cargar atributos de usuario en Braze. Esta solución funciona como un cargador de CSV en el que depositas tus CSV en un contenedor de S3, y los scripts los cargan a través de nuestra API.
+Puedes utilizar nuestro script de importación CSV de S3 Lambda sin servidor para cargar atributos de usuario en Braze. Esta solución funciona como un cargador de CSV en el que depositas tus CSV en un bucket de S3 y los scripts los cargan a través de nuestra API.
 
-Los tiempos de ejecución estimados para un archivo con 1.000.000 de filas deberían rondar los cinco minutos. Consulta [Atributo de usuario CSV a importación Braze](https://www.braze.com/docs/user_guide/data/cloud_ingestion/) para más información.
+Los tiempos de ejecución estimados para un archivo con 1.000.000 de filas deberían rondar los cinco minutos. Consulte [Importación de atributos de usuario CSV a Braze](https://www.braze.com/docs/user_guide/data/cloud_ingestion/) para obtener más información.
 
 ### API REST
 
 Utiliza el [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para registrar eventos personalizados, atributos de usuario y compras de usuarios.
 
-### Ingesta de datos en la nube
+### Ingesta de datos de Cloud
 
 Utiliza [la ingesta de datos en la nube]({{site.baseurl}}/user_guide/data/cloud_ingestion/) Braze para importar y mantener los atributos de los usuarios.
 
