@@ -4,7 +4,7 @@ article_title: Kreative Details
 page_order: 3.5
 layout: dev_guide
 guide_top_header: "Kreative Details"
-guide_top_text: "Bevor Sie mit unseren In-App-Nachrichten kreativ werden, sollten Sie einige der Richtlinien kennen. Alle Templates für In-App-Nachrichten sind so konzipiert, dass sie auf modernen Geräten unterschiedliche Textlängen und Bildgrößen anzeigen. Um sicherzustellen, dass Ihre Nachricht auf allen Handys, Tablets und Computern gut angezeigt wird, empfehlen wir Ihnen, die folgenden Richtlinien zu befolgen und <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>Ihre Nachrichten</a> vor der Veröffentlichung immer <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>zu testen</a>."
+guide_top_text: "Bevor Sie mit unseren In-App-Nachrichten kreativ werden, sollten Sie einige der Richtlinien kennen. Alle Templates für In-App-Nachrichten sind so konzipiert, dass sie auf modernen Geräten unterschiedliche Textlängen und Bildgrößen anzeigen. Um sicherzustellen, dass Ihre Nachricht auf allen Handys, Tablets und Computern gut angezeigt wird, empfehlen wir Ihnen, die folgenden Richtlinien zu befolgen und <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>Ihre Nachrichten</a> vor der Veröffentlichung immer <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>zu testen</a>."
 description: "Dieser Landing-Hub deckt die Design- und Content-Anforderungen für die drei Arten von In-App-Nachrichten ab: Modal, Slideup und Vollbild."
 
 channel:
@@ -50,7 +50,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 
 {% tabs %}{% tab Fullscreen %}
 
-![In-App-Nachricht im Vollbildmodus, die den Bildschirm einer App einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Bildschirmfüllende In-App-Nachricht, die einen App-Bildschirm einnimmt. Die Nachricht im Vollbildmodus enthält ein großes Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | --- |
@@ -64,7 +64,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 {% endtab %}
 {% tab Modal %}
 
-![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialog erscheint. Das Modal enthält ein Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Modale In-App-Nachricht, die in der Mitte einer App und Website als Dialogfeld angezeigt werden. Das Modal enthält ein Bild, eine Kopfzeile, einen Nachrichtentext und zwei Buttons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | ------ |
@@ -77,7 +77,7 @@ Im Allgemeinen empfiehlt Braze, Bilder zu verwenden, die auf einen 16:10-Bildsch
 {% endtab %}
 {% tab Slideup %}
 
-![Slideup In-App-Nachricht, die am unteren Rand des App-Bildschirms erscheint. Das Slideup enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Slideup-In-App-Nachricht, die am unteren Rand des App-Bildschirms angezeigt wird. Das Slideup enthält ein Symbolbild und eine kurze Nachricht.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | Layout | Asset-Größe | Anmerkungen |
 |--- | --- | --- |
