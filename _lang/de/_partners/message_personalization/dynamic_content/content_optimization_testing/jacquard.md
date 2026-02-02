@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Jacquard](https://www.jacquard.com/) vereint künstliche Intelligenz, Computerlinguistik und den Geist der Kundenorientierung, um die Markensprache in großem Umfang über Kanäle hinweg einzusetzen, die an die Stimme Ihrer Marke angepasst sind.
 
-Die von Jacquard X betriebene dynamische Optimierung nutzt Braze-Currents und Connected-Content, um über Webhooks Click-through-Informationen von Ihren Abonnent:innen zu sammeln. Jacquard verknüpft diese Ereignisse dann mit Ihren Sprachvarianten zur Realtime-Sprachoptimierung. 
+Dynamic Optimisation, powered by Jacquard X, nutzt Braze-Currents und Connected-Content, um über Webhooks Informationen zum Click-through von Ihren Abonnent:innen zu sammeln. Jacquard verknüpft diese Ereignisse dann mit Ihren Sprachvarianten zur Realtime-Sprachoptimierung. 
 
 ## Voraussetzungen
 
@@ -27,7 +27,7 @@ Die von Jacquard X betriebene dynamische Optimierung nutzt Braze-Currents und Co
 
 ### Schritt 1: Jacquard Amazon S3-Anmeldedaten anfragen
 
-Sie benötigen Jacquard, um einen speziellen Amazon S3-Bucket einzurichten, der Ihre Click Tracking-Ereignisse von Braze empfängt. Wenden Sie sich an Ihren Customer-Success-Manager:in, um diesen Prozess zu starten. Wenn der Bucket erstellt wird, erhalten Sie eindeutige Zugangsdaten, um Ihren Current zu erstellen. 
+Sie benötigen Jacquard, um einen speziellen Amazon S3-Bucket einzurichten, der Ihre Click Tracking-Ereignisse von Braze empfängt. Kontaktieren Sie Ihren Customer-Success-Manager:in, um diesen Prozess zu starten. Wenn der Bucket erstellt wird, erhalten Sie eindeutige Zugangsdaten, um Ihren Current zu erstellen. 
 
 ### Schritt 2: Currents erzeugen
 
@@ -40,14 +40,14 @@ Sie benötigen Jacquard, um einen speziellen Amazon S3-Bucket einzurichten, der 
 
 ### Schritt 3: Anfrage zur Entfernung von persönlich identifizierbaren Informationen (PII).
 
-Als Nächstes wenden Sie sich an das Team Ihres Braze-Kontos, um sicherzustellen, dass keine persönlich identifizierbaren Daten an Jacquard übermittelt werden.
+Wenden Sie sich dann an das Team Ihres Braze-Kontos, um sicherzustellen, dass keine personenbezogenen Daten an Jacquard übermittelt werden.
 
 Standardmäßig enthält der Current bestimmte PII-Attribute wie E-Mail und Adresse. Jacquard kann und wird keine PII erhalten. Daher ist es wichtig, dass Sie eine Anfrage an Ihr Braze-Konto Team stellen, um diese Funktion für alle an Jacquard weitergegebenen Daten zu deaktivieren.
 
 ### Schritt 4: Jacquard X Code Snippets 
 
-Wenden Sie sich an Ihr Jacquard-Team, um die erforderlichen Code-Snippets zu erhalten.
+Setzen Sie sich mit Ihrem Jacquard Team in Verbindung, um die erforderlichen Code Snippets zu erhalten.
 
-Diese Snippets nutzen [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) und ziehen, nachdem sie in Ihren E-Mails platziert wurden, dynamisch Sprache und ein Tracking-Pixel ein, so dass Jacquard Ihre Sprache in Realtime mit Jacquard X optimieren kann.
+Diese Snippets verwenden [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) und ziehen, nachdem sie in Ihren E-Mails platziert wurden, dynamisch Sprache und ein Tracking-Pixel ein, so dass Jacquard Ihre Sprache in Realtime mit Jacquard X optimieren kann.
 
 
