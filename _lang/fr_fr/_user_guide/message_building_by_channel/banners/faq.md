@@ -1,6 +1,6 @@
 ---
 nav_title: FAQ
-article_title: "Bannières : Questions fréquemment posées"
+article_title: "Bannières : Foire aux questions"
 page_order: 10
 description: "Voici les réponses aux questions fréquemment posées sur les bannières en Braze."
 channel:
