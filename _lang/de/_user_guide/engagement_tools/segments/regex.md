@@ -190,7 +190,7 @@ Verwenden Sie das Caret-Symbol (`^`), um zu kennzeichnen, womit der String begin
 
 Wenn Sie beispielsweise versuchen, Nutzer:innen zusammenzustellen, die in Städten leben, die mit „San“ beginnen, würde Ihre Regex `^San \w` lauten. Mit dieser Regex würden Sie erfolgreich Nutzer:innen aus Städten wie San Francisco, San Diego, San Jose usw. zusammenstellen.
 
-![Filter für einen Ort, der der Regex von "^San \\w" entspricht.]({% image_buster /assets/img/regex/regeximg2.png %})
+![Filter für einen Ort, der dem Regex von "^San \\w" entspricht.]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### Wie kann ich nach bestimmten Telefonnummern filtern?
 
@@ -206,6 +206,6 @@ Nehmen wir zum Beispiel an, Sie möchten Nutzer:innen nach Telefonnummer für ei
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![Filter für eine Telefonnummer, die mit der Regex von "^1?718\\d\\d\\d\\d\\d\\d\\d" übereinstimmt.]({% image_buster /assets/img/regex/regeximg3.png %})
+![Filter für eine Telefonnummer, die dem Regex von "^1?718\\d\\d\\d\\d\\d\\d" entspricht.]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
