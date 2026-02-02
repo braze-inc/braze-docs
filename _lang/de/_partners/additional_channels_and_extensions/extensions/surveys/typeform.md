@@ -21,7 +21,7 @@ Durch die Integration von Braze und Typeform können Sie:
 
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
-| Typeform-Konto | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein Typeform-Konto mit Zugriff auf Webhooks. |
+| Typeform-Konto | Sie benötigen ein Typeform-Konto mit Zugriff auf Webhooks, um die Vorteile dieser Partnerschaft zu nutzen. |
 | Braze Data Transformation | Eine [Datentransformations-URL]({{site.baseurl}}/data_transformation/) ist erforderlich, um Daten von Typeform zu erhalten. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -29,7 +29,7 @@ Durch die Integration von Braze und Typeform können Sie:
 
 ### Schritt 1: Richten Sie die Braze Data Transformation ein, um Webhooks von Typeform zu akzeptieren. {#step-1}
 
-{% multi_lang_include create_transformation.md Standort="typeform" %}
+{% multi_lang_include create_transformation.md location="typeform" %}
 
 ### Schritt 2: Typeform Webhooks einrichten
 
@@ -45,7 +45,7 @@ Senden Sie ein Testereignis an Ihre Datentransformation, indem Sie auf **Zustell
 
 ### Schritt 3: Schreiben Sie Code für die Transformation, um die von Ihnen gewählten Typeform-Ereignisse zu akzeptieren.
 
-In diesem Schritt transformieren Sie die Webhook-Nutzlast, die von Typeform gesendet wird, in einen Rückgabewert für ein JavaScript-Objekt.
+In diesem Schritt transformieren Sie die Webhook-Nutzdaten, die von Typeform gesendet werden, in einen Rückgabewert für ein JavaScript-Objekt.
 
 1. Aktualisieren Sie Ihre Datentransformation und vergewissern Sie sich, dass Sie die Typeform-Testnutzlast in den **Webhook-Details** sehen können.
 2. Aktualisieren Sie Ihren Code für die Datentransformation, um die von Ihnen gewählten Typeform-Ereignisse zu unterstützen.
@@ -337,7 +337,7 @@ Wenn Sie eine E-Mail Adresse als Bezeichner verwenden möchten, lesen Sie unsere
 {% endalert %}
 
 {% tabs local %}
-{% tab Eingabe %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -409,7 +409,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Ausgabe %}
+{% tab Output %}
 
 ```json
 {
@@ -474,10 +474,10 @@ return brazecall;
 
 Sie können Typeform Hidden Fields verwenden, um Daten in der Typeform Webhook-Nutzlast zu übergeben, wie z.B. die ID eines Nutzers:innen, ohne diese Informationen in der Typeform-Antwort weitergeben zu müssen.
 
-In diesem Beispiel-Template verwenden wir ein ausgeblendetes Feld "user_id" und übergeben dieses als `external_id` in die Payload der Anfrage `/users/track`. Obwohl wir "user_id" verwenden, können Sie die Felder an Ihre Bedürfnisse anpassen.
+In diesem Template-Beispiel verwenden wir ein "user_id" ausgeblendetes Feld und übergeben dieses als `external_id` in die Payload der Anfrage `/users/track`. Obwohl wir "user_id", verwenden, können die Felder an Ihre Bedürfnisse angepasst werden.
 
 {% tabs local %}
-{% tab Eingabe %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -549,7 +549,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Ausgabe %}
+{% tab Output %}
 
 ```json
 {
@@ -614,7 +614,7 @@ return brazecall;
 
 Nachdem Sie Ihre Datentransformation geschrieben haben, klicken Sie auf **Validieren**, um sicherzustellen, dass Ihr Code für die Datentransformation richtig formatiert ist und wie erwartet funktioniert. Dann speichern und aktivieren Sie Ihre Datentransformation.
 
-Einmal aktiviert, werden angepasste Event-Daten im Profil eines Nutzers protokolliert, wenn dieser Ihr Formular ausfüllt.
+Wenn diese Funktion aktiviert ist, werden angepasste Event-Daten im Profil eines Nutzers protokolliert, wenn dieser Ihr Formular ausfüllt.
 
 ![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 
