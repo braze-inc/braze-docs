@@ -1,4 +1,4 @@
-# Fazendo upgrade para o Android 13
+# Atualizando para Android 13
 
 > Este guia descreve as alterações relevantes introduzidas no Android 13 (2022) e as etapas de upgrade necessárias para a integração de seu SDK da Braze para Android.
 
@@ -14,7 +14,7 @@ Para se preparar para o Android 13, faça o upgrade do SDK da Braze para a [vers
 
 O Android 13 introduz uma [grande mudança](https://developer.android.com/about/versions/13/changes/notification-permission) na forma como os usuários gerenciam os apps que enviam notificações por push. No Android 13, os apps precisam obter permissão antes que as notificações por push possam ser exibidas. 
 
-![Uma mensagem push do Android perguntando "Allow Kitchenerie to send you notifications?" (Permitir que o Kitchenerie envie notificações para você) com dois botões "Allow" (Permitir) e "Don't allow" (Não permitir) na parte inferior da mensagem.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
+![Uma mensagem push do Android perguntando "Permitir que Kitchenerie envie notificações para você?" com dois botões "Permitir" e "Não permitir" na parte inferior da mensagem.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
 Essa nova permissão segue um padrão semelhante ao do iOS e do Web push, em que você só tem uma tentativa de obter permissão. Se um usuário escolher `Don't Allow` ou ignorar o prompt, seu app não poderá solicitar permissão novamente.
 
