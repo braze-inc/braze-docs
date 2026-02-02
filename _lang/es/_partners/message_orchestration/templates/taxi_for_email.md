@@ -16,7 +16,7 @@ _Esta integración la mantiene Taxi for Email._
 
 ## Sobre la integración
 
-La integración de Braze y Taxi aprovecha la sencilla pero potente sintaxis de Taxi para crear y exportar plantillas de correo electrónico inteligentes a Braze. 
+La integración de Braze y Taxi utiliza la sencilla pero potente sintaxis de Taxi para crear y exportar plantillas de correo electrónico inteligentes a Braze. 
 
 ## Requisitos previos
 
@@ -43,6 +43,6 @@ El campo de tu conector cambiará de color una vez que se hayan proporcionado lo
 
 ## Uso
 
-Encuentra tu plantilla Taxi subida en la sección **Plantillas y medios > Plantillas de correo electrónico de tu cuenta** de Braze.  Ya puedes utilizar esta plantilla de correo electrónico para empezar a enviar mensajes de interacción a tus clientes.
+Encuentra tu plantilla Taxi subida en la sección **Plantillas** de tu cuenta Braze ** & Media > Plantillas de correo electrónico**. Ya puede utilizar esta plantilla de correo electrónico para empezar a enviar mensajes atractivos a sus clientes.
 
 
