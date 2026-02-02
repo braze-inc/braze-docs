@@ -48,15 +48,15 @@ Folgen Sie den Aufforderungen auf dem Bildschirm **Zugangsdaten eingeben** und g
 #### Schritt 1: Einen Arbeitsablauf erstellen
 
 {% tabs %}
-{% tab Nutzer:innen Update %}
-1. Navigieren Sie im Menü OneTrust-Integrationen zu **Galerie** > **Braze** > **Hinzufügen**, um einen neuen Workflow zu erstellen.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+{% tab User Consent Update %}
+1. Navigieren Sie im OneTrust-Menü für Integrationen zu **Galerie** > **Braze** > **Hinzufügen**, um einen neuen Workflow zu erstellen.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Geben Sie einen Namen und eine E-Mail für die Benachrichtigung im Modal des Workflows an. Klicken Sie auf den Button **Erstellen**. Bei der Erstellung werden Sie zum Workflow Builder weitergeleitet. Ihr Braze-Workflow wird mit API-Aufrufen und Aktionen bestückt, die für die Bearbeitung von Löschanfragen verwendet werden können. <br><br>
 3. Wählen Sie im Workflow Builder die Aktion, die Sie im Workflow triggern möchten.<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
-{% tab Nutzer:in löschen %}
+{% tab User Deletion %}
 
-1. Navigieren Sie im Menü OneTrust-Integrationen zu **Galerie** > **Braze** > **Hinzufügen**, um einen neuen Workflow zu erstellen.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. Navigieren Sie im OneTrust-Menü für Integrationen zu **Galerie** > **Braze** > **Hinzufügen**, um einen neuen Workflow zu erstellen.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Geben Sie einen Namen und eine E-Mail für die Benachrichtigung im Modal des Workflows an. Klicken Sie auf den Button **Erstellen**. Bei der Erstellung werden Sie zum Workflow Builder weitergeleitet. Ihr Braze-Workflow wird mit API-Aufrufen und Aktionen bestückt, die für die Bearbeitung von Löschanfragen verwendet werden können. <br><br>
 3. Wählen Sie im Workflow Builder die Aktion, die Sie im Workflow triggern möchten.<br>![]({% image_buster /assets/img/onetrust/onetrust8.png %})
 {% endtab %}
@@ -64,7 +64,7 @@ Folgen Sie den Aufforderungen auf dem Bildschirm **Zugangsdaten eingeben** und g
 
 #### Schritt 2: Aktion auswählen
 {% tabs %}
-{% tab Nutzer:innen Update %}
+{% tab User Consent Update %}
 
 1. Wenn Sie fertig sind, klicken Sie auf **Fertig** und wählen Sie **Aktion hinzufügen**. Beachten Sie, dass die von Ihnen gewählte Aktion davon abhängt, welche Art von Einstellung aktualisiert werden soll und welchen Endpunkt Sie bevorzugen.
 - Um die globalen Abo-Einstellungen eines Nutzers zu aktualisieren, wählen Sie die Aktion **POST User Tracking - Attribute**.
@@ -72,7 +72,7 @@ Folgen Sie den Aufforderungen auf dem Bildschirm **Zugangsdaten eingeben** und g
 2. Wählen Sie die gewünschte Aktion, wählen Sie Ihre zuvor erstellten Braze-Zugangsdaten aus und klicken Sie auf **Weiter**.<br>![]({% image_buster /assets/img/onetrust/onetrust5.png %})
 
 {% endtab %}
-{% tab Nutzer:in löschen %}
+{% tab User Deletion %}
 
 1. Wenn Sie fertig sind, klicken Sie auf **Fertig** und wählen Sie **Aktion hinzufügen**.
 - Um einen Nutzer:innen aus Braze zu löschen, wählen Sie die Aktion **POST User Delete Action**.
@@ -83,7 +83,7 @@ Folgen Sie den Aufforderungen auf dem Bildschirm **Zugangsdaten eingeben** und g
 {% endtabs %}
 #### Schritt 3: Update Anfrage Körper
 {% tabs %}
-{% tab Nutzer:innen Update %}
+{% tab User Consent Update %}
 
 1. Aktualisieren Sie den Textkörper, um alle notwendigen dynamischen Werte aufzunehmen. Stellen Sie sicher, dass der Text der Aktion mit dem [Endpunkt`/users/track` ](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) und dem [Endpunkt`/subscription/status/set` ](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) übereinstimmt.
 2. Passen Sie den Workflow mit zusätzlichen Parametern oder bedingter Logik an die Anforderungen Ihres Unternehmens an.
@@ -96,7 +96,7 @@ Wenn Sie die OneTrust-Workflows verwenden, um die Einstellungen für Abo-Gruppen
 ![]({% image_buster /assets/img/onetrust/onetrust6.png %})
 
 {% endtab %}
-{% tab Nutzer:in löschen %}
+{% tab User Deletion %}
 
 1. Aktualisieren Sie den Textkörper, um alle notwendigen dynamischen Werte aufzunehmen. Stellen Sie sicher, dass der Text der Aktion mit dem [Endpunkt`/users/delete` ]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) übereinstimmt.
 2. Wenn Sie mit der Bearbeitung fertig sind, wählen Sie **Fertig stellen** und dann **Aktivieren**, um den Workflow zu aktivieren.
