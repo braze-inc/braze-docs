@@ -109,11 +109,11 @@ mFirebaseAnalytics.logEvent("changeUser", params)
 
 Com as tags e os disparadores configurados, você também precisará implementar o Google Tag Manager em seu app para Android, o que pode ser encontrado na [documentação](https://developers.google.com/tag-manager/android/v5/) do Google.
 
-Depois que o Google Tag Manager estiver instalado em seu aplicativo, adicione um provedor de tag personalizado para chamar métodos do SDK da Braze com base nas tags que você configurou dentro do Google Tag Manager.
+Após o Google Tag Manager ser instalado em seu aplicativo, adicione um provedor de tag personalizado para chamar métodos do SDK da Braze com base nas tags que você configurou dentro do Google Tag Manager.
 
 Certifique-se de anotar o "Caminho da Classe" para o arquivo - é isso que você irá inserir ao configurar uma tag no console do [Google Tag Manager](https://tagmanager.google.com/).
 
-Este exemplo destaca uma das muitas maneiras de estruturar seu provedor de tag personalizado. Especificamente, mostra como determinar qual método do SDK da Braze chamar com base no par chave-valor `actionType` enviado da Tag do GTM.
+Este exemplo destaca uma das muitas maneiras de estruturar seu provedor de tag personalizado. Especificamente, mostra como determinar qual método do SDK da Braze chamar com base no par chave-valor `actionType` enviado pela Tag do GTM.
 
 Os `actionType` mostrados neste exemplo são `logEvent`, `customAttribute` e `changeUser`, mas você pode preferir mudar como seu provedor de tag lida com dados do Google Tag Manager.
 
