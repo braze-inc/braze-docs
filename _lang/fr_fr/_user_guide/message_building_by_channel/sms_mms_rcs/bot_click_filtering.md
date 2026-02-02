@@ -12,9 +12,9 @@ channel:
 
 # Filtrage des clics des robots SMS et RCS
 
-> Le filtrage des clics de robots par SMS et RCS améliore l'analyse/analytique des campagnes et les flux de travail en excluant les clics de robots présumés. Un "bot click" désigne les clics automatisés sur des liens raccourcis dans les messages SMS et RCS, tels que ceux provenant de robots d'exploration du web, d'aperçus de liens Android et iOS, ou de logiciels de sécurité CPaaS. Cette fonctionnalité facilite l'établissement de rapports précis, la segmentation et l'orchestration pour engager les utilisateurs réels. <br><br> Pour le filtrage des clics des robots dans les campagnes d'e-mail, reportez-vous à la section [Filtrage des robots pour les e-mails]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/bot_filtering/).
+> Le filtrage des clics de robots par SMS et RCS améliore l'analyse/analytique des campagnes et les flux de travail en excluant les clics de robots présumés. Un "bot click" désigne les clics automatisés sur des liens raccourcis dans les messages SMS et RCS, tels que ceux provenant de robots d'exploration du web, d'aperçus de liens Android et iOS, ou de logiciels de sécurité CPaaS. Cette fonctionnalité facilite l'établissement de rapports précis, la segmentation et l'orchestration pour engager les utilisateurs réels. <br><br> Pour le filtrage des clics des robots dans les campagnes d'e-mail, reportez-vous à la section [Filtrage des robots pour les e-mails.]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/bot_filtering/)
 
-## Comment cela fonctionne-t-il ?
+## Fonctionnement
 
 Braze dispose d'un système de détection exclusif qui utilise plusieurs entrées pour identifier les clics suspectés de bot, également connus sous le nom d'interactions non humaines (INH). Les bot clics peuvent gonfler les taux d'engagement, ce qui fausse les indicateurs d'engagement. En les filtrant, Braze facilite la saisie de données fiables pour la prise de décision.
 
@@ -39,17 +39,17 @@ Les désabonnements dus à des clics de robots présumés ne sont pas affectés.
 
 Braze inclut les champs Currents suivants pour les événements de clic SMS :
 
-| Champ d'application | Type de données | Description |
+| Champ | Type de données | Description |
 | --- | --- | --- |
-| `is_suspected_bot_click` | Booléen | Indique si le clic est suspecté d'être un clic de robot. Renvoie `null` pour tous les utilisateurs jusqu'à ce que le filtrage des clics des robots soit activé pour votre entreprise. Lorsque cette option est activée, elle est alimentée par `true` ou `false` pour tous les nouveaux clics à venir. |
-| `suspected_bot_click_reason` | Chaîne de caractères, tableau | Indique la raison d'un clic suspecté d'être le fait d'un robot (par exemple `user_agent`). Se remplit même si le filtrage est désactivé, ce qui permet d'obtenir des informations sur les activités potentielles des robots. Ce champ est disponible globalement et indique une raison pour tous les utilisateurs, même si le filtrage des clics de robots n'est pas encore activé. Cela permet d'avoir des informations sur l'activité potentielle des robots avant d'activer le filtrage des clics des robots. |
+| `is_suspected_bot_click` | Valeur booléenne | Indique si le clic est suspecté d'être un clic de robot. Renvoie `null` pour tous les utilisateurs jusqu'à ce que le filtrage des clics des robots soit activé pour votre entreprise. Lorsque cette option est activée, elle est alimentée par `true` ou `false` pour tous les nouveaux clics à venir. |
+| `suspected_bot_click_reason` | Chaîne de caractères, tableau | Indique la raison d'un clic suspecté d'être le fait d'un robot (par exemple `user_agent`). Se remplit même si le filtrage est désactivé, ce qui permet d'obtenir des informations sur les activités potentielles des robots. Ce champ est disponible globalement et indique une raison pour tous les utilisateurs, même si le filtrage des clics de robots n'est pas encore activé. Cela permet d'obtenir des informations sur l'activité potentielle des robots avant d'activer le filtrage des clics des robots. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Modèle de générateur de requêtes
 
 Pour vous aider à analyser vos données, vous pouvez utiliser le modèle mobile préconstruit **Événements de clics SMS par des bots** dans [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/).
 
-## Questions fréquemment posées
+## Foire aux questions
 
 ### Quel est l'impact du filtrage des clics des robots sur les performances de la campagne ?
 
