@@ -31,7 +31,7 @@ Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und
 
 Hier finden Sie Ihren REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
-Um die Integration abzuschließen, müssen Sie Ihrem Tinyclues Data Operations Team den Datenimport-Schlüssel und den REST-Endpunkt zur Verfügung stellen. Tinyclues stellt dann die Verbindung her und meldet sich bei Ihnen, sobald die Einrichtung abgeschlossen ist.
+Um die Integration abzuschließen, müssen Sie Ihrem Tinyclues Data Operations Team den Datenimport-Schlüssel und den REST-Endpunkt zur Verfügung stellen. Tinyclues wird dann die Verbindung herstellen und Sie nach Abschluss der Einrichtung kontaktieren.
 
 ### Schritt 2: Exportieren Sie eine Kampagne von der Tinyclues Plattform
 
