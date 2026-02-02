@@ -1,12 +1,12 @@
 ---
 nav_title: Conexión a la API de datos de clientes
-article_title: Conexión a la API de datos de clientes de Movable Ink
+article_title: Conéctate a la API de datos de clientes de Movable Ink
 description: "Este artículo de referencia describe cómo conectarse para activar los datos de eventos de clientes almacenados en Braze para generar contenido personalizado en Movable Ink mediante la API de datos de clientes."
 page_type: partner
 search_tag: Partner
 ---
 
-# Conexión a la API de datos de clientes de Movable Ink
+# Conéctate a la API de datos de clientes de Movable Ink
 
 > La integración de la API de datos de clientes de Braze y Movable Ink permite a los profesionales del marketing activar los datos de eventos de clientes almacenados en Braze para generar contenido personalizado dentro de Movable Ink.
 
@@ -42,7 +42,7 @@ Para obtener más información sobre Stories, la API de datos de clientes de Mov
 
 1. En el campo **Webhook URL**, introduce la URL del punto final de Movable Ink.
 
-![Pestaña Componer del compositor de webhooks en Braze con la URL del punto final de Movable Ink y el cuerpo de la solicitud configurados como par clave-valor JSON.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
+![Pestaña Componer del compositor de webhooks en Braze con la URL del punto final de Movable Ink y el Cuerpo de la solicitud configurados como Pares clave/valor JSON.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
 
 {:start="2"}
 2\. Seleccione la pestaña **Configuración**.
@@ -156,7 +156,7 @@ Para más información, consulte los webhooks de ejemplo en [payloads de ejemplo
 ### Evento de vista del producto
 
 {% tabs local %}
-{% tab Ejemplo de evento de activación de Braze %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -190,7 +190,7 @@ Para más información, consulte los webhooks de ejemplo en [payloads de ejemplo
 {% endraw %}
 
 {% endtab %}
-{% tab Carga útil esperada de la solicitud de Movable Ink %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -226,7 +226,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 {% endraw %}
 {% endtab %}
-{% tab Ejemplo de webhook %}
+{% tab Example webhook %}
 
 En este ejemplo, se utiliza una dirección de correo electrónico con hash como `anonymous_id` para los usuarios que no disponen de `external_id`.
 
@@ -278,7 +278,7 @@ En este ejemplo, se utiliza una dirección de correo electrónico con hash como 
 ### Evento de vista de categoría
 
 {% tabs local %}
-{% tab Ejemplo de evento de activación de Braze %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -302,7 +302,7 @@ En este ejemplo, se utiliza una dirección de correo electrónico con hash como 
 {% endraw %}
 
 {% endtab %}
-{% tab Carga útil esperada de la solicitud de Movable Ink %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -328,7 +328,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 {% endraw %}
 
 {% endtab %}
-{% tab Ejemplo de webhook %}
+{% tab Example webhook %}
 
 Este ejemplo muestra un webhook que rastrea eventos sólo para usuarios conocidos (usuarios con un `external_id`).
 
@@ -361,7 +361,7 @@ Este ejemplo muestra un webhook que rastrea eventos sólo para usuarios conocido
 ### Identificar el evento
 
 {% tabs local %}
-{% tab Ejemplo de evento de activación de Braze %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -379,7 +379,7 @@ Este ejemplo muestra un webhook que rastrea eventos sólo para usuarios conocido
 
 {% endraw %}
 {% endtab %}
-{% tab Carga útil esperada de la solicitud de Movable Ink %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -398,7 +398,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 {% endraw %}
 {% endtab %}
-{% tab Ejemplo de webhook %}
+{% tab Example webhook %}
 
 En este ejemplo, se utiliza una dirección de correo electrónico con hash como `anonymous_id` para los usuarios que no disponen de `external_id`.
 
