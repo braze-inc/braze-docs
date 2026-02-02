@@ -59,7 +59,7 @@ Purchases.shared.setAttributes(["$brazeAliasName" : "name",
                              "$brazeAliasLabel" : "label"])
 ```
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 ```objc
 // Configure Purchases SDK
 [RCPurchases configureWithAPIKey:@"public_sdk_key" appUserID:@"my_app_user_id"];
