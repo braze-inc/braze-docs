@@ -142,9 +142,9 @@ Este código é um exemplo de um atributo personalizado incrementando. Você pod
 m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 ```
 
-### Desconfigurando atributos personalizados
+### Removendo atributos personalizados
 
-Para desconfigurar um atributo personalizado, passe a chave do atributo relevante para o método `unsetCustomAttribute`.
+Para remover um atributo personalizado, passe a chave do atributo relevante para o método `unsetCustomAttribute`.
 
 ```brightscript
 m.Braze.unsetCustomAttribute("attributeName")
@@ -152,7 +152,7 @@ m.Braze.unsetCustomAttribute("attributeName")
 
 ### Usando a API REST
 
-Você também pode usar nossa API REST para definir ou desconfigurar atributos de usuário. Para saber mais, consulte [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
+Você também pode usar nossa API REST para definir ou remover atributos de usuário. Para saber mais, consulte [User Data Endpoints]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data).
 
 ## Configuração de envios de e-mail
 
