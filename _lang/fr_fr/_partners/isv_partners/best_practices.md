@@ -20,7 +20,7 @@ En savoir plus sur la manière dont Braze recueille les données :
     - Dans l'endpoint [Identification de l'utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/), le champ `merge_behavior` peut être utilisé pour spécifier quelles données du profil d'alias utilisateur doivent être conservées dans le profil utilisateur connu.
     - Notez que pour que l'alias d'utilisateur soit un profil pouvant être envoyé, vous devez toujours inclure l'e-mail et/ou le téléphone comme attribut standard du profil.
 - `device_id`: Un identifiant spécifique à l'appareil, généré automatiquement. Un profil utilisateur peut être associé à plusieurs `device_ids`. Par exemple, un utilisateur qui s'est connecté à son compte sur son ordinateur professionnel, son ordinateur personnel, sa tablette et son application iOS aurait 4 `device_ids` associés à son profil.
-- Adresse e-mail et numéro de téléphone :
+- Adresse e-mail & Numéro de téléphone :
     - Pris en charge en tant qu'identifiant dans l'endpoint utilisateur de Braze track. 
     - Lorsque l'adresse e-mail ou le numéro de téléphone est utilisé comme identifiant dans une requête, trois résultats sont possibles :
         1. Si un utilisateur ayant cet e-mail/téléphone n'existe pas dans Braze, un profil utilisateur e-mail/téléphone uniquement sera créé et toutes les données de la requête seront ajoutées au profil.
@@ -92,7 +92,7 @@ Utilisez l'adresse e-mail comme identifiant dans l'endpoint de suivi de l'utilis
 }
 ```
 {% alert important %}
-Cette fonctionnalité est actuellement en accès anticipé.
+Cette fonctionnalité est en accès anticipé.
 {% endalert %}
 
 ## Synchronisation des données avec les profils utilisateurs
@@ -105,12 +105,12 @@ Cette fonctionnalité est actuellement en accès anticipé.
 - Comme pour l'endpoint de suivi des utilisateurs, les données peuvent être synchronisées avec les profils utilisateurs par le biais de l'ingestion de données dans le nuage. Lorsque vous utilisez cet outil, les attributs, les événements et les achats sont enregistrés dans les profils en configurant et en connectant la table ou la vue de l'entrepôt de données que vous souhaitez synchroniser avec l'espace de travail Braze souhaité.
 
 [Points de données]({{site.baseurl}}/user_guide/data/data_points/)
-- Braze dispose d'un modèle de consommation de points de données dans lequel des points de données sont générés par "écriture" dans le profil utilisateur, que la valeur ait changé ou non. C'est pourquoi nous vous recommandons de n'envoyer à Braze que les attributs qui ont été modifiés. 
+- Braze dispose d'un modèle de points de données dans lequel les points de données sont enregistrés par "écriture" dans le profil utilisateur, que la valeur ait changé ou non. C'est pourquoi nous vous recommandons de n'envoyer à Braze que les attributs qui ont été modifiés. 
 
 ## Envoi d'audiences d'utilisateurs à Braze
 
 [Documentation sur les partenaires de synchronisation de l'importation de la cohorte]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Les audiences d'utilisateurs peuvent être synchronisées vers Braze en tant que cohorte à l'aide des endpoints de l'API d'importation de cohorte de Braze. Plutôt que de stocker ces audiences dans le profil de l'utilisateur sous forme d'attributs, les clients peuvent créer et cibler cette cohorte à l'aide d'un filtre propre au partenaire dans notre outil de segmentation. Cela peut faciliter la recherche et le ciblage d'un segment particulier d'utilisateurs pour les clients.
+- Les audiences d'utilisateurs peuvent être synchronisées vers Braze en tant que cohorte à l'aide des endpoints de l'API d'importation de cohorte de Braze. Plutôt que de stocker ces audiences dans le profil de l'utilisateur sous forme d'attributs, les clients peuvent créer et cibler cette cohorte à l'aide d'un filtre propre au partenaire dans notre outil de segmentation. Vous pouvez ainsi trouver et cibler plus efficacement un segment particulier d'utilisateurs.
 - Les endpoints d'importation de la cohorte ne sont pas publics et sont spécifiques à chaque partenaire. Pour cette raison, les synchronisations avec les endpoints de la cohorte ne seront pas prises en compte dans les limites de débit de l'espace de travail d'un client. 
 
 [Suivi de l'utilisateur]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
@@ -118,7 +118,7 @@ Cette fonctionnalité est actuellement en accès anticipé.
 - Lorsque vous utilisez cet endpoint, assurez-vous que vous incluez la clé `partner` comme indiqué dans la [documentation de notre partenaire]({{site.baseurl}}/partners/isv_partners/api_partner).
 
 [Points de données]({{site.baseurl}}/user_guide/data/data_points/)<br>
-- Braze dispose d'un modèle de consommation de points de données dans lequel des points de données sont générés par "écriture" dans le profil utilisateur, que la valeur ait changé ou non.
+- Braze dispose d'un modèle de points de données dans lequel les points de données sont enregistrés par "écriture" dans le profil utilisateur, que la valeur ait changé ou non.
 - Les points de données proviennent à la fois de l'importation de la cohorte et des endpoints du suivi de l'utilisateur.
 
 ## Diffusion en continu des analyses d'engagement vers le partenaire
@@ -176,7 +176,7 @@ La polyvalence des contenus connectés en fait une fonctionnalité utilisée par
 - Localisation et traduction
 
 A savoir :
-- Les appels à l'API ne sont pas facturés par Braze et ne sont pas pris en compte dans le calcul de votre nombre de points de données.
+- Braze ne facture pas les appels à l'API et ceux-ci ne sont pas pris en compte dans votre consommation de points données.
 - Les réponses au contenu connecté sont limitées à 1 Mo.
 - Les appels au contenu connecté se feront lors de l'envoi du message, sauf pour les messages in-app, qui effectueront cet appel lors de la consultation du message.
 - Les appels de contenu connecté qui ne suivent pas redirects.Braze exigent que le temps de réponse du serveur soit inférieur à 2 secondes pour des raisons de performances ; si le serveur met plus de 2 secondes à répondre, le contenu ne sera pas inséré.
