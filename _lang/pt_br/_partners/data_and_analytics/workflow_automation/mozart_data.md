@@ -57,7 +57,7 @@ A integração é suportada tanto para a sincronização de dados do [Braze com 
 
 #### Etapa 2: Preencha o formulário do conector Fivetran
 
-Você será redirecionado para a página do conector Fivetran. Nessa página, preencha os campos indicados. Em seguida, clique em **Continue** > **Save & Test** (Continuar > Salvar e testar) para concluir o conector Fivetran.
+Você será redirecionado para a página do conector Fivetran. Nessa página, preencha os campos indicados. Em seguida, clique em **Continue** > **Save & Test** para concluir o conector Fivetran.
 
 O Fivetran começará a sincronizar os dados da sua conta da Braze com o data warehouse do Snowflake. Você pode acessar os dados de consulta do Mozart Data depois que o conector tiver concluído a sincronização. 
 
@@ -114,4 +114,4 @@ Usando os modelos de transformação ou os dados brutos sincronizados do Braze, 
 Isso pode ajudá-lo a tomar decisões mais informadas sobre estratégias de engajamento para melhorar a retenção de usuários. Tudo isso pode ser feito na interface do Mozart Data usando a ferramenta Consulta, onde você pode exportar os resultados para uma planilha do Google ou CSV para preparar uma apresentação.
 
 #### Business intelligence (BI)
-Pronto para visualizar e compartilhar seus insights com outros membros da equipe? A Mozart Data se integra a quase todas as ferramentas de BI. Se você ainda não tem uma ferramenta de BI, entre em contato com a Mozart Data para configurar uma conta gratuita da Metabase. 
+Pronto para visualizar e compartilhar seus insights com outros membros da equipe? A Mozart Data se integra a quase todas as ferramentas de BI. Se você ainda não tem uma ferramenta de BI, entre em contato com a Mozart Data para configurar uma conta gratuita do Metabase.
