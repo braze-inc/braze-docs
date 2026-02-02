@@ -1,4 +1,4 @@
-{%-atribuir hide_nav_filter = page.hide_nav_filter -%} {%-atribuir nav_level = page.nav_level -%} {%-a menos que hide_nav_filter -%} {%-atribuir hide_nav_filter = layout.hide_nav_filter -%} {%-fim a menos que -%} {%-a menos que nav_level -%} {%-atribuir nav_level = layout.nav_level -%} {%-fim a menos que -%} {%-a menos que nav_level -%} {%-atribuir nav_level = 2 -%} {%-fim a menos que -%} <button id="sidebar_toggle" class="btn btn-info d-print-none" href="#" aria-label="Alternar Navegação Lateral" title="Alternar Navegação Lateral"> <i class="fas fa-chevron-left"></i> </button> {%- a menos que hide_nav_filter -%}
+{%-atribuir hide_nav_filter = page.hide_nav_filter -%} {%-atribuir nav_level = page.nav_level -%} {%-a menos que hide_nav_filter -%} {%-atribuir hide_nav_filter = layout.hide_nav_filter -%} {%-endunless -%} {%-a menos que nav_level -%} {%-atribuir nav_level = layout.nav_level -%} {%-endunless -%} {%-a menos que nav_level -%} {%-atribuir nav_level = 2 -%} {%-endunless -%} <button id="sidebar_toggle" class="btn btn-info d-print-none" href="#" aria-label="Alternar Navegação Lateral" title="Alternar Navegação Lateral"> <i class="fas fa-chevron-left"></i> </button> {%- a menos que hide_nav_filter -%}
 <div id="nav_filter" class="flex-column flex-nowrap   ">
   <form id="filter-form"   >
     <div class="input-group">
@@ -11,15 +11,15 @@
 
   </form>
 </div>
-{%- fim a menos que -%}
+{%- endunless -%}
 
 <nav class="bd-links navbar navbar-expand-lg navbar-light" id="left_navmenu" aria-label="Navegação à Esquerda" title="Navegação à Esquerda">
   {%- a menos que hide_nav_filter -%}
     <div id="filter-msg"  class="flex-column flex-nowrap d-none"></div>
-  {%- fim a menos que -%} {%- atribuir coleção = page.collection -%} {%- se page.custom_collection -%} {%- atribuir coleção = page.custom_collection -%} {%- fim se -%} {%-UrlNavMenu {{nav_level}}|{{coleção}} -%}
+  {%-endunless -%} {%- atribuir collection = page.collection -%} {%- se page.custom_collection -%} {%- atribuir collection = page.custom_collection -%} {%- endif -%} {%-UrlNavMenu {{nav_level}}|{{collection}} -%}
 </nav>
 <div id="nav_bottom" style="">
-  Daqui a <!-- a href="https://www.braze.com/terms/" target="_blank"><div class="nav_bottom_item"><i class="fa fa-balance-scale"></i> LEGAL</div></a>
+  <!-- a href="https://www.braze.com/terms/" target="_blank"><div class="nav_bottom_item"><i class="fa fa-balance-scale"></i> LEGAL</div></a>
   <a href="https://learning.braze.com" target="_blank"><div class="nav_bottom_item"><i class="fa fa-flask"></i> Braze Learning </div></a --> <a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
     <div class="nav_bottom_item">
 
