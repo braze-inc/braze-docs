@@ -61,7 +61,7 @@ Als nächstes geben Sie im Schritt **Authentifizierung** Ihre Braze-Verbindungsd
 ![]({% image_buster /assets/img/adobe/braze-destination-authentication.png %}){: style="max-width:60%;"}
 
 ### Schritt 4: Ziel erstellen
-Wählen Sie **Ziel erstellen**. Ihr Ziel wurde erstellt. Sie können **Speichern & Beenden** wählen, um die Segmente später zu aktivieren, oder **Weiter**, um den Arbeitsablauf fortzusetzen und die zu aktivierenden Segmente auszuwählen. 
+Wählen Sie **Ziel erstellen**. Ihr Ziel wurde erstellt. Sie können **Speichern & Beenden** wählen, um Segmente später zu aktivieren, oder **Weiter**, um den Workflow fortzusetzen und Segmente zur Aktivierung auszuwählen. 
 
 ### Schritt 5: Segmente aktivieren
 Aktivieren Sie die Daten, die Sie in der Adobe Realtime CDP haben, indem Sie Segmente auf das Ziel Braze abbilden.
