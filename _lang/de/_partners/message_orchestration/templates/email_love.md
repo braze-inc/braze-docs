@@ -34,13 +34,13 @@ Wählen Sie im Plugin den Button **[+ Keine Vorlage ausgewählt]**, um einen neu
 
 Wählen Sie den von Ihnen erstellten Rahmen aus und fügen Sie Komponenten (Kopfzeilen, Content-Blöcke, CTAs und Fußzeilen) aus der Bibliothek **des** Plugins hinzu, um Ihre E-Mail zu strukturieren.
 
-![Die vorgefertigten Komponenten von E-Mail Love.]({% image_buster /assets/img/email_love/emaillove1_content.png %})
+![Die vorgefertigten Komponenten von Email Love.]({% image_buster /assets/img/email_love/emaillove1_content.png %})
 
 ### Schritt 4: Anpassen der Komponenten
 
 Ändern Sie die Komponenten mit den Figma-Werkzeugen, um Text, Bilder, Farben und Layout-Elemente anzupassen, damit das Design des Templates mit Ihrer Marke übereinstimmt. Wenn Sie eine Fußzeilenkomponente hinzufügen, wird beim Exportieren automatisch ein Link zum Abmelden von Braze eingefügt.
 
-![Anpassen von Komponenten in Figma.]({% image_buster /assets/img/email_love/emaillove2_components.png %})
+![Passen Sie die Komponenten in Figma an.]({% image_buster /assets/img/email_love/emaillove2_components.png %})
 
 ### Schritt 5: Exportieren Sie Ihr Template für E-Mails nach Braze
 
