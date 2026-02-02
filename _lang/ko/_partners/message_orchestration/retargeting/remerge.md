@@ -60,9 +60,9 @@ In the webhook URL, you must:
 - Use the `https://remerge.events/event` API to send your webhook events.
 - Set the event name. This name will appear in your [remerge.io](https://www.remerge.io/) dashboard.
 - Pass your app's unique application identifier for Android (such as "com.example") and iOS (such as "012345678") to remerge.
-- Define a key; Remerge will provide this.
+- 키를 정의합니다. Remerge에서 제공합니다.
 
-![The webhook URL and message preview shown in the Braze webhook builder.]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
+![Braze 웹훅 빌더에 표시되는 웹훅 URL 및 메시지 미리보기입니다.]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
 
 {% alert important %}
 Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Be aware that you may require user consent to collect this data.
@@ -76,9 +76,9 @@ The Remerge webhook requires an HTTP method and request header.
 - **Request Headers**:
   - **Content-Type**: application/json
 
-![The request headers, HTTP method, and message preview shown in the Braze webhook builder.]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
+![Braze 웹훅 빌더에 표시되는 요청 헤더, HTTP 메서드 및 메시지 미리보기.]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
 
-#### Request body
+#### 요청 본문
 
 You do not have to define a request body for this webhook.
 
