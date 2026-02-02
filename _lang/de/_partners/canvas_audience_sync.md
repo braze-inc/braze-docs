@@ -4,7 +4,7 @@ article_title: Canvas-Zielgruppensynchronisierung
 page_order: 8
 
 guide_top_header: "Canvas-Zielgruppensynchronisierung"
-guide_top_text: "Mit dem Braze Audience Sync Feature können Sie die Reichweite Ihrer Kampagnen auf viele der wichtigsten sozialen und Werbetechnologien ausweiten. Auf dieser Landing Page finden Entwickler:in und Marketer Ressourcen zu verfügbaren Canvas Sync Partnern."
+guide_top_text: "Das Braze Audience Sync Feature erweitert die Reichweite Ihrer Kampagnen auf viele der wichtigsten sozialen und Werbetechnologien. Auf dieser Landing Page finden Entwickler:in und Marketer Ressourcen zu verfügbaren Canvas Sync Partnern."
 description: "Auf dieser Landing Page finden Entwickler:in und Marketer Ressourcen zu verfügbaren Canvas Sync Partnern."
 
 layout: dev_guide
@@ -45,5 +45,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-Braze Audience Syncs zu Criteo, Pinterest, Snapchat und TikTok sind Audience Sync Pro Integrationen. Für weitere Informationen zu diesen Integrationen wenden Sie sich bitte an Ihren Braze-Konto Manager:in.
+Die Verfügbarkeit von Braze Audience Syncs mit Criteo, Pinterest, Snapchat und TikTok hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen.
 {% endalert %}
