@@ -1,6 +1,6 @@
 ---
 nav_title: Point de vue
-article: Thoughtspot
+article_title: Point de vue
 layout: redirect
 redirect_to: /docs/partners/thoughtspot/
 ---
