@@ -11,7 +11,7 @@ alias: /data_transformation/
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-  - name: Eine Transformation schaffen
+  - name: Erstellen Sie eine Transformation
     link: /docs/user_guide/data/unification/data_transformation/creating_a_transformation/
     image: /assets/img/braze_icons/flip-forward.svg
   - name: Anwendungsfälle
