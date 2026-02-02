@@ -1,6 +1,6 @@
 {% multi_lang_include developer_guide/prerequisites/flutter.md %}
 
-## 로그 메시지 데이터
+## 로깅 메시지 데이터
 
 `BrazeInAppMessage` 를 사용하여 분석을 기록하려면 원하는 분석 기능에 인스턴스를 전달합니다:
 
