@@ -31,7 +31,7 @@ Die Integration von Braze und Pypestream erlaubt es Ihnen, den End-to-End Kunden
 
 Die Partnerschaft zwischen Braze und Pypestream kann in Ihren Canvase genutzt werden, um gängige Anwendungsfälle zu realisieren:
 * **Intelligentes Retargeting**: Retargeting von Nutzern:innen mit Braze-Canvas nach ihrem Engagement mit Ihrer Marke, indem Sie alle über Pypestream erfassten Datenpunkte nutzen.
-* **Dynamisches Targeting**: Sprechen Sie bestehende und potenzielle Kunden auf der Grundlage ihrer spezifischen Kohorten und Segmente an und bedienen Sie sie mit maßgeschneiderten Konversationserlebnissen über Pypestream.
+* **Dynamisches Targeting**: Kontaktieren Sie bestehende und potenzielle Kunden auf der Grundlage ihrer spezifischen Kohorten und Segmente und bieten Sie ihnen über Pypestream maßgeschneiderte Gesprächserlebnisse.
 * **Kontextuelle Insights für Kund:innen**: Nachdem ein Endnutzer (bestehender oder potenzieller Kunde) sich auf Ihrer Website engagiert hat, kombinieren Sie die vom Pypestream Event Listener aufgenommenen Webseiten-Tags mit den in Braze gespeicherten Kundendaten, um eine vollständig personalisierte und kontextuelle Interaktion zu ermöglichen.
 
 ## Integration
@@ -280,5 +280,5 @@ class BrazeExample:
 
 ### Schritt 3: Update der Lösungsabläufe zur Umleitung bei Erfolg/Fehlschlag des Aktionsknotens
 
-Schließlich können Sie im Design jeder Lösung Nutzer:innen zu Knoten weiterleiten, je nachdem, ob der Aufruf der Action Node API erfolgreich war. Wenn der Aktionsknoten eine Fehlermeldung erhält, sollte der Endnutzer:in mit Vorsicht behandelt werden. 
+Schließlich können Sie im Design jeder Lösung Nutzer:innen zu Knoten weiterleiten, je nachdem, ob der Aufruf der Action Node API erfolgreich war. Wenn der Aktionsknoten eine Fehlermeldung erhält, sollte der Endnutzer:in mit Vorsicht behandelt werden.
 
