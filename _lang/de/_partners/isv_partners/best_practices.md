@@ -20,7 +20,7 @@ Erfahren Sie mehr darüber, wie Braze Daten sammelt:
     - Innerhalb des Endpunkts [Benutzeridentifikation]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) kann das Feld `merge_behavior` verwendet werden, um anzugeben, welche Daten aus dem Nutzer:in-Profil persistent sein sollen.
     - Beachten Sie, dass der Nutzer-Alias nur dann ein sendefähiges Profil ist, wenn Sie E-Mail und/oder Telefon als Standardattribut in das Profil aufnehmen.
 - `device_id`: Ein automatisch generierter, gerätespezifischer Bezeichner. Einem Nutzerprofil kann eine Reihe von `device_ids` zugeordnet sein. Ein Nutzer:in, der sich auf seinem Computer am Arbeitsplatz, auf seinem Computer zu Hause, auf seinem Tablet und in der iOS App in sein Konto eingeloggt hat, hat beispielsweise 4 `device_ids`, die mit seinem Profil verbunden sind.
-- E-Mail Adresse und Telefonnummer:
+- E-Mail Adresse & Telefonnummer:
     - Wird als Bezeichner im Tracking-Endpunkt von Braze für Nutzer:innen unterstützt. 
     - Wenn Sie die E-Mail Adresse oder Telefonnummern als Bezeichner in einer Anfrage verwenden, gibt es drei mögliche Ergebnisse:
         1. Wenn ein Nutzer:innen mit dieser E-Mail/Telefon nicht in Braze existiert, wird ein Nutzerprofil erstellt, das nur aus E-Mail/Telefon besteht, und alle Daten in der Anfrage werden dem Profil hinzugefügt.
@@ -92,7 +92,7 @@ Verwenden Sie die E-Mail Adresse als Bezeichner im Nutzer:innen Tracking Endpunk
 }
 ```
 {% alert important %}
-Diese Funktionalität befindet sich derzeit im Early Access.
+Diese Funktion befindet sich in der Early-Access-Phase.
 {% endalert %}
 
 ## Synchronisierung von Daten mit Nutzer:innen-Profilen
@@ -105,12 +105,12 @@ Diese Funktionalität befindet sich derzeit im Early Access.
 - Ähnlich wie beim Endpunkt für das Tracking von Nutzern können Daten über Cloud Data Ingestion mit Nutzerprofilen synchronisiert werden. Wenn Sie dieses Tool verwenden, werden Attribute, Ereignisse und Käufe in Profilen protokolliert, indem Sie die Data Warehouse-Tabelle oder -Ansicht, die Sie mit dem gewünschten Braze Workspace synchronisieren möchten, einrichten und verbinden.
 
 [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/)
-- Braze hat ein Datenpunkt-Verbrauchsmodell, bei dem Datenpunkte pro "Schreiben" in das Nutzerprofil anfallen, unabhängig davon, ob sich der Wert geändert hat. Aus diesem Grund empfehlen wir, dass nur die Attribute, die sich geändert haben, an Braze gesendet werden. 
+- Braze hat ein Datenpunktmodell, bei dem Datenpunkte per "Schreiben" in das Nutzerprofil protokolliert werden, unabhängig davon, ob sich der Wert geändert hat. Aus diesem Grund empfehlen wir, dass nur die Attribute, die sich geändert haben, an Braze gesendet werden. 
 
 ## Zielgruppen von Nutzer:innen an Braze senden
 
 [Kohortenimport Sync Partner Dokumentation]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Zielgruppen von Nutzern können über die Endpunkte der Braze Kohortenimport-API mit Braze als Kohorte synchronisiert werden. Anstatt diese Zielgruppen als Attribute im Benutzerprofil zu speichern, können Kunden diese Kohorte über einen von Partnern gebrandeten Filter in unserem Segmentierungs-Tool aufbauen und ansprechen. Dies kann das Auffinden und Targeting eines bestimmten Segments von Nutzer:innen für Kund:innen einfacher und leichter machen.
+- Zielgruppen von Nutzern können über die Endpunkte der Braze Kohortenimport-API mit Braze als Kohorte synchronisiert werden. Anstatt diese Zielgruppen als Attribute im Benutzerprofil zu speichern, können Kunden diese Kohorte über einen von Partnern gebrandeten Filter in unserem Segmentierungs-Tool aufbauen und ansprechen. So können Sie ein bestimmtes Segment von Nutzer:innen effizienter finden und targetieren.
 - Die Endpunkte für den Kohortenimport sind nicht öffentlich und werden von jedem Partner individuell festgelegt. Aus diesem Grund werden Synchronisierungen mit den Endpunkten der Kohorte nicht auf die Rate-Limits des Workspace eines Kunden angerechnet. 
 
 [Nutzer:innen verfolgen]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
@@ -118,7 +118,7 @@ Diese Funktionalität befindet sich derzeit im Early Access.
 - Wenn Sie diesen Endpunkt verwenden, vergewissern Sie sich, dass Sie den Schlüssel `partner` verwenden, wie in unserer [Dokumentation für Partner]({{site.baseurl}}/partners/isv_partners/api_partner) beschrieben.
 
 [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/)<br>
-- Braze hat ein Datenpunkt-Verbrauchsmodell, bei dem Datenpunkte pro "Schreiben" in das Nutzerprofil anfallen, unabhängig davon, ob sich der Wert geändert hat.
+- Braze hat ein Datenpunktmodell, bei dem Datenpunkte per "Schreiben" in das Nutzerprofil protokolliert werden, unabhängig davon, ob sich der Wert geändert hat.
 - Datenpunkte fallen sowohl beim Kohortenimport als auch beim Nutzer:in Tracking Endpunkten an.
 
 ## Streaming von Engagement Analytics zum Partner
@@ -176,7 +176,7 @@ Die Vielseitigkeit von Connected-Content macht dies zu einem Feature, das von vi
 - Lokalisierung und Übersetzung
 
 Dinge, die Sie beachten sollten:
-- Braze erhebt keine Gebühren für API-Aufrufe und wird nicht auf Ihr Datenpunkt-Kontingent angerechnet.
+- Braze erhebt keine Gebühren für API-Aufrufe und wird nicht auf Ihre Datenpunkt-Nutzung angerechnet.
 - Es gibt ein Limit von 1 MB für Connected-Content-Antworten.
 - Connected-Content-Aufrufe erfolgen, wenn die Nachricht gesendet wird, mit Ausnahme von In-App-Nachrichten, die diesen Aufruf tätigen, wenn die Nachricht angesehen wird.
 - Connected-Content-Aufrufe folgen nicht redirects.Braze verlangt aus Performance-Gründen, dass die Antwortzeit des Servers weniger als 2 Sekunden beträgt; wenn der Server länger als 2 Sekunden braucht, um zu antworten, wird der Inhalt nicht eingefügt.
