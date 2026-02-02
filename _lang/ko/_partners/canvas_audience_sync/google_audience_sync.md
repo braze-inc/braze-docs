@@ -91,35 +91,39 @@ After you have synced to Braze, the following consent attributes will be availab
 - `$google_ad_user_data`
 - `$google_ad_personalization`
 
-In any Canvas where you're targeting EEA, UK, and Switzerland end users using a Google Audience Sync to add users to an audience, you need to exclude these users whenever both consent attributes are any value that isn't `true`. This can be achieved by segmenting these users when the consent values are set to `true`. This also ensures that the more accurate analytics of users are synced, since we know Google will reject these users from the audiences. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
+EEA, UK 및 스위스 최종 사용자를 대상으로 Google Audience Sync를 사용하여 오디언스에 사용자를 추가하는 모든 캔버스에서, 두 개의 동의 속성이 `true`이 아닌 값일 때 이러한 사용자를 제외해야 합니다. 동의 값이 `true`로 설정될 때 이러한 사용자를 세분화하여 이 작업을 수행할 수 있습니다. 이것은 사용자의 보다 정확한 분석이 동기화되도록 보장합니다. 왜냐하면 Google이 이러한 사용자를 오디언스에서 거부할 것이라는 것을 알고 있기 때문입니다. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
 
 ## Integration
 
 ### Step 1: Connect Google account
 
+{% alert important %}
+Google Ads를 Braze 계정에 연결하려면 ["관리자" 권한]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin)이 있어야 합니다.
+{% endalert %}
+
 To get started, go to **Partner Integrations** > **Technology Partners** > **Google Ads** and select **Connect Google Ads**. You'll be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
 After successfully connecting your Google Ads account, you'll be taken back to your Google Ads partner page. You'll then be prompted to select which ad accounts you want to access in the Braze workspace.
 
-![A GIF that shows the workflow of a successful Google Ads account connection to Braze.]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
+![Braze에 성공적으로 Google Ads 계정을 연결하는 워크플로우를 보여주는 GIF입니다.]({% image_buster /assets/img/google_sync/googlesync.gif %}){: style="max-width:85%;"}
 
 #### Export iOS IDFA or Google Advertising IDs
 
-If you plan to export iOS IDFA or Google Advertising IDs in your audience sync, Google requires your iOS app ID and Android app ID within the requests. Under Google Audience Sync, select **Add Mobile Advertising IDs**, input your iOS app ID and Android app ID (app package name), and save each.
+If you plan to export iOS IDFA or Google Advertising IDs in your audience sync, Google requires your iOS app ID and Android app ID within the requests. Google 오디언스 동기화에서 **모바일 광고 ID 추가를** 선택하고 iOS 앱 ID와 Android 앱 ID(앱 패키지 이름)를 입력한 후 각각 저장합니다.
 
 <br><br>
-![The updated Google Ads technology page showing the Ad accounts connected, allowing you to re-sync accounts and add mobile advertising IDs.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
+![연결된 광고 계정을 보여주는 업데이트된 Google Ads 기술 페이지로, 계정을 다시 동기화하고 모바일 광고 ID를 추가할 수 있습니다.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 <br><br>
 
 If you have multiple apps in a single workspace, you can input any of your app IDs in the setup because mobile ad IDs for your users will be the same across multiple apps. This is because both the Android GAID and iOS IDFA are universal ad identifiers on the device and are not app-specific. To sync mobile ad IDs for users from a specific app, you can use segment filters ("Last Used Specific App" or Most Recent App Version") to target these users.
 
-### Step 2: Add a Google Audience step in Canvas Flow
+### 2단계: 캔버스에 Google Audience 단계를 추가하세요.
 
 Add a component in your Canvas, then select **Audience Sync**.
 
 ![The menu to select a Canvas component in the editor.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![The Audience Sync step added to the user journey.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
-### Step 3: Sync setup
+### 3단계: Sync setup
 
 1. Select **Custom Audience** to open the component editor.
 2. Select **Google** as the Audience Sync partner.
@@ -143,11 +147,11 @@ Add a component in your Canvas, then select **Audience Sync**.
 {: start="4"}
 4\. Next, save your audience by selecting the **Create Audience** button at the bottom of the step editor.
 
-![Expanded view of the Custom Audience Canvas component. Here, the desired Ad account is selected, a new audience is created, and the "customer contact info" checkbox is selected.]({% image_buster /assets/img/audience_sync/g_sync.png %})
+![Expanded view of the Custom Audience Canvas component. 여기에서 원하는 광고 계정을 선택하고, 새로운 오디언스를 생성하며, "고객 연락처 정보" 체크박스를 선택합니다.]({% image_buster /assets/img/audience_sync/g_sync.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
-![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/audience_sync/g_sync3.png %})
+![캔버스 구성 요소에서 새로운 오디언스가 생성된 후 나타나는 경고입니다.]({% image_buster /assets/img/audience_sync/g_sync3.png %})
 
 When you launch a Canvas with a new audience, Braze will create a new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Google Audience step. 
 
@@ -164,7 +168,7 @@ Braze also offers the ability to add or remove users from existing Google custom
 3. Braze will add or remove users in near real-time as they enter the Google Audience step. 
 4. After configuring your Google Audience step, select **Done**. Your Google Audience step will include details about the new audience.
 
-![Expanded view of the Custom Audience Canvas component. Here, the desired Ad account and existing audience are selected, as well as the "Add user to Audience" radio button.]({% image_buster /assets/img/audience_sync/g_sync2.png %})
+![Expanded view of the Custom Audience Canvas component. 여기에서 원하는 광고 계정과 기존 오디언스를 선택하고, "오디언스에 사용자 추가" 라디오 버튼도 선택합니다.]({% image_buster /assets/img/audience_sync/g_sync2.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -200,7 +204,7 @@ The following table includes metrics and descriptions to help you better underst
 
 ### Why can I not select multiple fields to match in my Google Audience Step configuration?
 
-Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact information (such as email and phone number). For more details, refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined).
+Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact information (such as email and phone number). 자세한 내용은 [Google의 고객 일치 설명서](https://support.google.com/google-ads/answer/7659867?hl=en#undefined)를 참조하세요.
 
 ### How long will it take for my audiences to sync in Google?
 
