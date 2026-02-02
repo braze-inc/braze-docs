@@ -2,13 +2,13 @@
 
 ## Integração de uma biblioteca de imagens personalizada
 
-### Etapa 1: Integrar SDWebImage
+### Etapa 1: Integre SDWebImage
 
-Integre o [repositório SDWebImage](https://github.com/SDWebImage/SDWebImage) em seu projeto Xcode.
+Integre o repositório [SDWebImage](https://github.com/SDWebImage/SDWebImage) ao seu projeto Xcode.
 
-### Etapa 2: Criar um novo arquivo Swift
+### Etapa 2: Crie um novo arquivo Swift
 
-Em seu projeto Xcode, crie um novo arquivo chamado `SDWebImageGIFViewProvider.swift` e importe o seguinte:
+No seu projeto Xcode, crie um novo arquivo chamado `SDWebImageGIFViewProvider.swift` e importe o seguinte:
 
 ```swift
 import UIKit
@@ -16,9 +16,9 @@ import BrazeUI
 import SDWebImage
 ```
 
-### Etapa 3: Adicionar `GIFViewProvider`
+### Etapa 3: Adicione `GIFViewProvider`
 
-Em seguida, adicione nossa amostra de SDWebImage [`GIFViewProvider`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/gifviewprovider/). Seu arquivo deve ser semelhante ao seguinte:
+Em seguida, adicione nosso exemplo SDWebImage [`GIFViewProvider`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/gifviewprovider/). Seu arquivo deve ser semelhante ao seguinte:
 
 ```swift
 import UIKit
@@ -50,7 +50,7 @@ extension GIFViewProvider {
 
 ### Etapa 4: Modifique seu `AppDelegate.swift`
 
-No site `AppDelegate.swift` de seu projeto, adicione suporte a GIF aos componentes `BrazeUI` usando `GIFViewProvider`. Seu arquivo deve ser semelhante ao seguinte:
+No `AppDelegate.swift` do seu projeto, adicione suporte a GIF aos seus componentes `BrazeUI` usando `GIFViewProvider`. Seu arquivo deve ser semelhante ao seguinte:
 
 ```swift
 import UIKit
