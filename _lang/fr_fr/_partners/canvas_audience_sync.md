@@ -3,8 +3,8 @@ nav_title: "Synchronisation de l'audience de Canvas"
 article_title: "Synchronisation de l'audience de Canvas"
 page_order: 8
 
-guide_top_header: "Synchronisation de l'audience de Canvas"
-guide_top_text: "La fonctionnalité de synchronisation de l’audience Braze vous permet d’étendre la portée de vos campagnes à de nombreuses technologies sociales et publicitaires de premier plan. C'est sur cette page que les développeurs et les marketeurs peuvent trouver des ressources sur les partenaires de synchronisation Canvas disponibles."
+guide_top_header: "Synchronisation d’audience Canvas"
+guide_top_text: "La fonctionnalité Braze Audience Sync étend la portée de vos campagnes à de nombreuses technologies sociales et publicitaires de premier plan. C'est sur cette page que les développeurs et les marketeurs peuvent trouver des ressources sur les partenaires de synchronisation Canvas disponibles."
 description: "C'est sur cette page que les développeurs et les marketeurs peuvent trouver des ressources sur les partenaires de synchronisation Canvas disponibles."
 
 layout: dev_guide
@@ -45,5 +45,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-Les synchronisations d'audience de Braze vers Criteo, Pinterest, Snapchat et TikTok sont des intégrations Audience Sync Pro. Pour plus d'informations sur ces intégrations, contactez votre gestionnaire de compte Braze.
+La disponibilité des synchronisations d'audience de Braze avec Criteo, Pinterest, Snapchat et TikTok dépend de votre forfait Braze. Contactez votre gestionnaire de compte ou votre gestionnaire satisfaction client pour commencer.
 {% endalert %}
