@@ -126,7 +126,7 @@ Para vincular o código do cupom em uma imagem:
 3. Incorpore seu link em uma tag HTML {% raw %}`<img>`{% endraw %}.
 
 {% tabs local %}
-{% tab exemplo de entrada %}
+{% tab example input %}
 {% raw %}
 ```liquid
 <img src="https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.png?sign={{jwt}}">
@@ -134,7 +134,7 @@ Para vincular o código do cupom em uma imagem:
 {% endraw %}
 {% endtab %}
 
-{% tab exemplo de saída %}
+{% tab example output %}
 ![Saída renderizada da tag de imagem do código do cupom.]({% image_buster /assets/img/punchh/punchh9.png %})
 {% endtab %}
 {% endtabs %}
