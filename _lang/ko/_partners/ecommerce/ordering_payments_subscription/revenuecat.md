@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by RevenueCat._
 
-## About the integration
+## 통합 정보
 
 The RevenueCat and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues.
 
@@ -111,11 +111,11 @@ After you've set up the RevenueCat purchases SDK and Braze SDK to have the same 
 1. Navigate to your project in the RevenueCat dashboard and find the **Integrations** card in the left menu. Select **\+ New**.
 2. Next, select **Braze** from the available integration and add your Braze instance and Braze REST API key. 
 3. Enter the event names that RevenueCat will send or choose the default event names. More details on available events can be found in [step 3](#configure-event-names).
-4. Select whether you want RevenueCat to report proceeds (after app store cut) or revenue (gross sales).
+4. RevenueCat에서 수익금(앱 스토어 삭감 후)을 보고할지, 매출(총 판매액)을 보고할지 선택합니다.
 
-![Braze settings in RevenueCat with fields for Braze instance, API key identifier, and sandbox identifier.]({% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %})
+![Braze 인스턴스, API 키 식별자, 샌드박스 식별자에 대한 필드가 있는 RevenueCat의 Braze 설정.]({% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %})
 
-### Step 3: Configure event names {#configure-event-names}
+### 3단계: Configure event names {#configure-event-names}
 
 Enter the event names that RevenueCat will send or select from the default event names by selecting **Use Default Event Names**. The events that RevenueCat supports sending are described in the following chart.
 
