@@ -1,5 +1,5 @@
 ---
-nav_title: "Spécifications de l'image"
+nav_title: Spécifications des images
 article_title: "Spécifications de l'image"
 page_order: 4.1
 
@@ -11,17 +11,17 @@ tool:
 
 ---
 
-# Spécifications de l'image
+# Spécifications des images
 
 > En général, les images de petite taille et de haute qualité se chargent plus rapidement. Nous vous recommandons donc d'utiliser la ressource la plus petite possible pour obtenir le résultat souhaité. Pour maximiser l'utilisation de votre image dans des canaux spécifiques, reportez-vous aux détails de cet article.
 
-Vous devriez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur une variété d'appareils pour confirmer que les zones les plus importantes de votre image et de votre message apparaissent comme prévu.
+Vous devriez toujours [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) sur une variété d'appareils pour confirmer que les zones les plus importantes de votre image et de votre message apparaissent comme prévu.
 
-{% alert tip %} Créez des ressources en toute confiance ! Nos modèles d'images de messages in-app et nos superpositions de zones de sécurité sont conçus pour s'adapter aux appareils de toutes tailles. [Téléchargez les modèles de conception ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
+{% alert tip %} Créez des ressources en toute confiance ! Nos modèles d'images de messages in-app et nos superpositions de zones de sécurité sont conçus pour s'adapter aux appareils de toutes tailles. [Téléchargez les modèles de conception ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
 
 {% multi_lang_include image_specs.md variable_name='payload size' %}
 
-## Messages in-app
+## in-app Messages
 
 {% multi_lang_include image_specs.md variable_name='in-app messages' %}
 
@@ -33,7 +33,7 @@ Braze prend en charge l'utilisation de [Font Awesome v4.3.0](https://fontawesome
 
 {% multi_lang_include image_specs.md variable_name='push notifications' %}
 
-## e-mail
+## E-mail
 
 {% multi_lang_include image_specs.md variable_name='email' %}
 
