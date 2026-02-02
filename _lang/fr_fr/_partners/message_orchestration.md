@@ -1,5 +1,5 @@
 ---
-nav_title: Orchestration des messages
+nav_title: "L'orchestration des messages"
 article_title: "Partenaires pour l'orchestration des messages"
 page_order: 2
 
@@ -17,9 +17,9 @@ valid_partner_list:
   url: /docs/partners/adjust/
 - name: Airbridge
   url: /docs/partners/airbridge/
-- name: Branche
+- name: Branch
   url: /docs/partners/branch_for_attribution/
-- name: Branche
+- name: Branch
   url: /docs/partners/branch_for_deeplinking/
 - name: Kochava
   url: /docs/partners/kochava/
@@ -88,7 +88,7 @@ valid_partner_list:
 - name: LIGNE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+  url: /docs/partners/ecommerce/shopify
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Knak
@@ -129,4 +129,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Jasper
+  url: /docs/partners/jasper/
 ---
