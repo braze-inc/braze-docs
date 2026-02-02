@@ -11,7 +11,7 @@ search_tag: Ketch
 
 > [Ketch](https://www.ketch.com) permite que as empresas sejam administradoras responsáveis por seus dados. A Ketch fornece operações de privacidade simplificadas e controle de dados completo, dinâmico e inteligente. 
 
-_Essa integração é mantida pela Ketch._
+_Esta integração é mantida pela Ketch._
 
 ## Sobre a integração
 
@@ -46,7 +46,7 @@ Procurando orientação sobre como criar grupos de inscrição? Confira nossos a
 4. Selecione a conexão Braze que você gostaria de usar para orquestrar os sinais de aceitação e recusa.
 5. Insira o Braze `subscription_group_id` para o grupo de inscrições ao qual você deseja enviar as preferências do usuário Ketch.
 
-![ID do grupo de inscrições do Braze.]({% image_buster /assets/img/ketch/ketch1.png %})
+![ID do grupo de inscrições da Braze.]({% image_buster /assets/img/ketch/ketch1.png %})
 
 {% alert note %}
 Para coletar e orquestrar sinais de aceitação e recusa de usuários, as identidades devem ser configuradas corretamente. A Ketch recomenda configurar o e-mail como o identificador para orquestrar os sinais de preferência do usuário para esta integração.
@@ -55,7 +55,7 @@ Para coletar e orquestrar sinais de aceitação e recusa de usuários, as identi
 
 ### Etapa 3: Configurar identidades
 
-Um usuário só pode ver a central de preferências de marketing quando a Ketch pode confirmar a identidade de preferência de marketing desse usuário. Se o Ketch não conseguir capturar a identidade do usuário corretamente, a página de preferências de marketing não será exibida para esse usuário, pois o Ketch não poderá gerenciar suas preferências de usuário.
+Um usuário só pode ver o central de preferências de marketing quando a Ketch pode confirmar a identidade de preferência de marketing desse usuário. Se a Ketch não conseguir capturar a identidade do usuário corretamente, então a página de preferências de marketing não aparece para esse usuário porque a Ketch não consegue gerenciar suas preferências.
 
 1. Para configurar a identidade de preferência de marketing, acessar a página **Configurações** no Ketch e clicar em **Espaço de identidade**. Você precisará criar um novo espaço de identidade ou editar um espaço de identidade existente para atribuir esse espaço de identidade como a identidade de preferência de marketing. Verifique se a tag Ketch implantada na propriedade captura corretamente esse espaço de identidade.
 2. Acesse **Experience Server** > **Properties** (Servidor de experiência > Propriedades) e edite a propriedade desejada. No nível de dados dessa propriedade, ative o espaço de identidade personalizado. Em seguida, configure como a identidade de preferência de marketing é capturada neste site.
