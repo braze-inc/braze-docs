@@ -1,12 +1,12 @@
 ---
-nav_title: Erstellen einer Event-Prognose
-article_title: Erstellen einer Event-Prognose
+nav_title: Eine Ereignisprognose erstellen
+article_title: Eine Ereignisprognose erstellen
 page_order: 1.1
 description: "In diesem Artikel erfahren Sie, wie Sie im Braze-Dashboard eine Event-Prognose erstellen."
 
 ---
 
-# Erstellen einer Event-Prognose
+# Erstellen Sie eine Prognose für ein Ereignis
 
 > Eine Prognose ist eine Instanz eines trainierten Modells des maschinellen Lernens und aller Parameter und Daten, die es verwendet. Um mehr über prognostizierte Events zu erfahren, lesen Sie die [Übersicht über prognostizierte Events]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
 
@@ -46,6 +46,10 @@ Ihre Zielgruppe für die Vorhersage ist die Gruppe von Nutzern, deren Wahrschein
 
 Je nach Anwendungsfall möchten Sie vielleicht Filter verwenden, um die Nutzer:innen zu bestimmen, die Sie für das Modell bewerten möchten. Wählen Sie dazu **Meine eigene Vorhersagezielgruppe definieren** und wählen Sie Ihre Zielgruppenfilter. Sie könnten sich zum Beispiel auf Nutzer konzentrieren, die Ihre App seit mindestens 30 Tagen nutzen, indem Sie den Filter "Erste Nutzung der App" auf 30 Tage setzen. Durch die Einrichtung dieser Zielgruppe teilen Sie Braze mit, dass Ihr Modell speziell von Nutzer:innen lernen soll, die (zum Zeitpunkt der Ausführung des Modells) die App mindestens 30 Tage lang genutzt haben.
 
+{% alert important %}
+Konzentrieren Sie Ihre Filter auf die für Ihren Anwendungsfall relevanten Nutzer:innen, wie aktive Nutzer:innen, neue Nutzer:innen, hochwertige Nutzer:innen oder Nutzer:innen in einem bestimmten Land. Vermeiden Sie es, Ihre Zielgruppe für Prognosen danach zu filtern, ob Nutzer:innen das Ereignis, das Sie vorhersagen, bereits durchgeführt haben. Die Zielgruppe für die Prognosen definiert, von wem das Modell lernen soll, nicht das Ergebnis des Ereignisses selbst. Das Modell muss sowohl Nutzer:innen, die das Ereignis abgeschlossen haben, als auch Nutzer:innen, die das Ereignis nicht abgeschlossen haben, beobachten, um genau zu lernen und die Wahrscheinlichkeit des zukünftigen Abschlusses des Ereignisses zu prognostizieren.
+{% endalert %}
+
 Die Zielgruppe für Prognosen definiert die Gruppe der Nutzer:innen, die das Modell für maschinelles Lernen betrachtet, um aus der Vergangenheit zu lernen. Braze zeigt Ihnen die geschätzte Größe Ihrer Prognosen-Zielgruppen an. Wenn Sie die gewünschte Zielgruppe angeben und die Mindestanforderungen für die Ausführung des Modells nicht erfüllen, versuchen Sie, einen breiteren Filter anzugeben oder die Option **Alle Nutzer**: **innen** zu verwenden. Denken Sie daran, dass Sie in vielen Anwendungsfällen keine bestimmte Zielgruppe für die Prognosen auswählen müssen. Wenn Ihr Anwendungsfall beispielsweise darin besteht, Nutzer:innen in der EU-Region anzusprechen, bei denen die Wahrscheinlichkeit des Abwanderns am größten ist, können Sie Ihr Modell auf alle Nutzer:innen anwenden und dann einen Filter für die EU-Region in das Segment der Kampagne aufnehmen.
 
 {% alert note %}
@@ -62,7 +66,7 @@ Wenn zum Beispiel das Event-Fenster auf 14 Tage eingestellt ist, dauert es 14 Ta
 
 ### Schritt 4: Wählen Sie den Aktualisierungszeitplan
 
-Das Modell des maschinellen Lernens generiert Ereigniswahrscheinlichkeitsbewertungen für Nutzer:innen. Diese Bewertungen werden nach dem Zeitplan aktualisiert, den Sie hier auswählen. Sie können Nutzer:innen auf der Grundlage ihres Event Likelihood Scores gezielt zusammenstellen. 
+Das Modell des maschinellen Lernens generiert Ereigniswahrscheinlichkeitsbewertungen für Nutzer:innen, und diese Bewertungen werden auf der Grundlage des Zeitplans, den Sie hier auswählen, aktualisiert. Sie können Nutzer:innen auf der Grundlage ihres Event Likelihood Scores gezielt zusammenstellen. 
 
 Wählen Sie die **maximale Häufigkeit der Aktualisierungen**, die Sie für sinnvoll halten. Wenn Sie zum Beispiel Käufe prognostizieren und eine wöchentliche Aktion planen, stellen Sie die Update-Häufigkeit auf **Wöchentlich** an einem Tag und zu einer Uhrzeit Ihrer Wahl ein.
 
