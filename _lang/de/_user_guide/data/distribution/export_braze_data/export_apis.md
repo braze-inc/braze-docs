@@ -12,7 +12,7 @@ platform: API
 
 > Diese Seite behandelt die Braze Export APIs, mit denen Sie eine JSON-Datei mit Dashboard-Daten exportieren können. Unter [Endpunkte exportieren]({{site.baseurl}}/api/endpoints/export/) finden Sie eine Liste der Daten, auf die Sie zugreifen können, einschließlich Anweisungen und Beispielcode für den Export.
 
-## Wann Sie Export APIs anstelle von CVS-Downloads verwenden sollten
+## Wann Sie Export APIs anstelle von CSV-Downloads verwenden sollten
 
 Es gibt einige Gründe, warum Sie diese Methode dem direkten Export einer CSV-Datei aus dem Dashboard vorziehen sollten:
 
