@@ -1,7 +1,7 @@
 ---
 nav_title: Eventos previstos
 article_title: Eventos previstos
-description: "Este artigo aborda Eventos Preditivos (anteriormente Compras Preditivas), uma ferramenta na Suite Preditiva da Braze que dá aos profissionais de marketing a capacidade de identificar e enviar mensagens para usuários com base na probabilidade de realizarem um evento."
+description: "Este artigo cobre Eventos Preditivos (anteriormente Compras Preditivas), uma ferramenta na Suite Preditiva da Braze que dá aos profissionais de marketing a capacidade de identificar e enviar mensagens para usuários com base na probabilidade de realizarem um evento."
 page_order: 2.1
 alias: /predictive_purchases/
 search_rank: 1
@@ -13,7 +13,7 @@ search_rank: 1
 
 ## Sobre os eventos preditivos
 
-Após uma previsão ser construída, os usuários recebem uma [pontuação de probabilidade]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) entre 0 e 100 que denota quão provável é que eles realizem o evento selecionado. Quanto maior a pontuação, maior a probabilidade de um usuário realizar esse evento. Os usuários também são classificados por categorias de probabilidade baixa, média e alta.
+Depois que uma previsão é construída, os usuários recebem uma [pontuação de probabilidade]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) entre 0 e 100 que denota quão provável é que eles realizem o evento selecionado. Quanto maior a pontuação, maior a probabilidade de um usuário realizar esse evento. Os usuários também são classificados por categorias de probabilidade baixa, média e alta.
 
 O valor real dos eventos preditivos está no uso dos resultados da previsão para criar um segmento ou uma campanha. Os profissionais de marketing podem criar campanhas direcionadas diretamente na página de **previsão** para obter resultados imediatos de aumento de receita ou salvar um segmento para uma futura campanha ou Canvas. Não tem certeza de quem deve ser o primeiro alvo? Leia nossas [considerações estratégicas]({{site.baseurl}}/user_guide/brazeai/predictive_events/messaging_users/#strategy) para o envio de mensagens aos usuários com base em sua pontuação de probabilidade.
 
