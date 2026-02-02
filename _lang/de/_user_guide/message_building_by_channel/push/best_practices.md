@@ -58,7 +58,7 @@ Die folgenden Elemente in Ihrem Push machen Ihre Push-Nutzlast aus:
 
 Um die Größe der Nutzlast zu reduzieren:
 
-- Fassen Sie sich mit Ihrer Nachricht kurz. Ein guter allgemeiner Leitfaden ist, dass Sie weniger als 40 Zeichen benötigen, um einen Nutzen zu erzielen.
+- Fassen Sie sich mit Ihrer Nachricht kurz. Ein guter allgemeiner Leitfaden ist, dass Sie weniger als 40 Zeichen verwenden sollten, um einen Nutzen zu erzielen.
 - Lassen Sie Leerzeichen und Zeilenumbrüche in Ihrer Kopie weg.
 - Überlegen Sie, wie Liquid beim Senden gerendert wird. Da die endgültige Darstellung einer Personalisierung in Liquid von Nutzer:innen zu Nutzer:innen unterschiedlich ist, kann Braze nicht feststellen, ob eine Push-Nutzlast die Größenbeschränkung überschreitet, wenn Liquid enthalten ist. Wenn Ihr Liquid eine kürzere Nachricht wiedergibt, dürfte das kein Problem sein. Wenn Ihr Liquid jedoch zu einer längeren Nachricht führt, kann es sein, dass Ihr Push das Limit für die Nutzlast überschreitet. Testen Sie Ihre Push Nachricht immer auf einem echten Gerät, bevor Sie sie an Nutzer:innen senden.
 - Erwägen Sie die Verkürzung von URLs mit einem URL-Verkürzer.
