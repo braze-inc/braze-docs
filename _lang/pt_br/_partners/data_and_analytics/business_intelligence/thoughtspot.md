@@ -10,7 +10,7 @@ search_tag: Partner
 
 # ThoughtSpot
 
-> A ThoughtSpot é a nuvem de análise moderna, uma plataforma de análise de última geração que fornece análise em tempo real para sua pilha de dados moderna, capacitando seus colegas, parceiros e clientes a transformar dados em insights práticos.
+> [A ThoughtSpot](https://www.thoughtspot.com/) é a nuvem de análise moderna, uma plataforma de análise de última geração que fornece análise em tempo real para sua pilha de dados moderna, capacitando seus colegas, parceiros e clientes a transformar dados em insights práticos.
 
 A integração Braze e ThoughtSpot aproveita os blocos TML da ThoughtSpot que permitem que os usuários do Braze acelerem a análise de dados de comportamento do usuário com modelos pré-construídos de planilhas e modelos. Essa integração ativa a capacidade de os usuários pesquisarem ilimitadamente os dados de interação do Braze e descobrirem insights práticos. 
 
