@@ -10,7 +10,7 @@ channel: push
 
 # Push Primer In-App Nachrichten
 
-![Push Primer In-App-Nachricht für Streaming-App. Die Benachrichtigung lautet "Erhalten Sie Push-Benachrichtigungen von Movie Cannon? Die Benachrichtigungen können neue Filme, Fernsehsendungen oder andere Hinweise enthalten und können jederzeit ausgeschaltet werden."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Push-Primer-In-App-Nachricht für die Streaming-App. Die Benachrichtigung lautet "Erhalten Sie Push-Benachrichtigungen von Movie Cannon? Die Benachrichtigungen können neue Filme, Fernsehsendungen oder andere Hinweise enthalten und können jederzeit ausgeschaltet werden."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Sie haben nur eine Chance, die Nutzer um ihre Zustimmung zu Push-Nachrichten zu bitten. Daher ist die Optimierung Ihrer Push-Registrierung entscheidend, um die Reichweite Ihrer Push-Nachrichten zu maximieren. Um dies zu erreichen, können Sie In-App-Nachrichten verwenden, um zu erklären, welche Art von Nachrichten Ihre Nutzer:innen erwarten können, wenn sie sich für die Teilnahme entscheiden, bevor Sie ihnen der native Push-Prompt zeigen. Dies wird als „Push Primer“ bezeichnet.
 
