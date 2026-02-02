@@ -1,7 +1,7 @@
 ---
 nav_title: Snowplow
 article_title: Snowplow
-description: "Este artículo de referencia describe la asociación entre Braze y Snowplow, una plataforma de recopilación de datos de código abierto, que permite reenviar eventos de Snowplow a Braze a través del etiquetado del lado del servidor de Google Tag Manager."
+description: "Este artículo de referencia describe la asociación entre Braze y Snowplow, una plataforma de infraestructura de datos, que te permite reenviar eventos de Snowplow a Braze en tiempo real utilizando el Reenvío de Eventos de Snowplow."
 alias: /partners/snowplow/
 page_type: partner
 search_tag: Partner
@@ -10,28 +10,30 @@ search_tag: Partner
 
 # Snowplow
 
-> [Snowplow](https://snowplowanalytics.com) es una plataforma escalable de código abierto para la recopilación de datos ricos, de alta calidad y baja latencia. Está diseñado para recopilar datos de comportamiento completos y de alta calidad para las empresas.
+> [Snowplow](https://snowplowanalytics.com) es una plataforma escalable para la recopilación de datos ricos, de alta calidad y baja latencia. Snowplow está diseñado para recopilar datos de comportamiento completos y de alta calidad para empresas.
 
 _Esta integración está mantenida por Snowplow._
 
 ## Sobre la integración
 
-La integración de Braze y Snowplow permite a los usuarios reenviar eventos de Snowplow a Braze a través del etiquetado del lado del servidor de Google Tag Manager. La etiqueta Braze del Quitanieves te permite enviar eventos a Braze y te ofrece flexibilidad y control adicionales:
-- Visibilidad total de todas las transformaciones de los datos
-- Capacidad para evolucionar en sofisticación con el tiempo
-- Todos los datos permanecen en tu nube privada hasta que decidas reenviarlos
-- Facilidad de configuración gracias a las numerosas bibliotecas de etiquetas y a la conocida interfaz de usuario de Google Tag Manager.
+La integración de Braze y Snowplow te habilita para reenviar eventos de Snowplow a Braze en tiempo real mediante la solución de Reenvío de Eventos de Snowplow. Esta integración te permite enviar eventos a Braze al tiempo que te ofrece flexibilidad y control. Concretamente, puedes
+- Filtra y transforma los eventos antes de enviarlos a Braze.
+- Mapea datos de eventos de Snowplow con atributos de usuario, eventos personalizados y compras de Braze.
+- Conserva todos los datos en tu nube privada hasta que decidas reenviarlos.
+- Despliega tú mismo la solución en tu cuenta existente de Snowplow en la nube. 
 
-Aproveche los ricos datos de comportamiento de Snowplow para impulsar potentes interacciones centradas en el cliente en Braze y enviar mensajes personalizados en tiempo real.
+El [reenvío de eventos](https://docs.snowplow.io/docs/destinations/forwarding-events/) de Snowplow es una característica adicional de pago disponible para los clientes de Snowplow. Para reenviar eventos a Braze sin este complemento, utiliza la [integración en](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) servidor de Google Tag Manager de Snowplow [.](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) 
+
+Aprovecha los ricos datos de comportamiento de Snowplow para impulsar potentes interacciones centradas en el cliente en Braze y entregar mensajes personalizados en tiempo real.
 
 ## Requisitos previos
 
-| Requisito | Descripción |
-| ----------- | ----------- |
-| Tubería quitanieves | Hay que poner en marcha una tubería quitanieves. |
-| Google Tag Manager en el servidor | Es necesario desplegar GTM-SS y configurar el [cliente Snowplow para GTM-SS](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/). |
-| Clave REST API de Braze | Una clave de API REST de Braze con permisos `users.track`. <br><br> Puede crearse en el panel Braze desde **Configuración** > **Claves API**. |
-| Punto final REST Braze | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final dependerá de la URL Braze de tu instancia. |
+| Requisito             | Descripción                                                                                                                                                                                                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tubería quitanieves       | Necesitas una tubería quitanieves en funcionamiento.                                                                                                                                                                                                                                          |
+| Acceso a la consola quitanieves | Debes tener acceso a la consola de Snowplow para configurar los reenviadores de eventos.                                                                                                                                                                                                                                |
+| Clave de API REST de Braze      | Una clave de API REST Braze con los siguientes permisos: `users.track`, `users.alias.new`, `users.identify`, `users.export.ids`, `users.merge`, `users.external_ids.rename`, y `users.alias.update`. <br><br> Puedes crearla en el panel de Braze desde **Configuración** > **Claves de API**. |
+| Punto final REST Braze     | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final depende de la URL Braze de tu instancia.                                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos prácticos
@@ -44,79 +46,44 @@ Cree audiencias dinámicas en Braze basadas en los datos de comportamiento de al
 
 ## Integración
 
-### Paso 1: Instalación de plantillas
+### Paso 1: Configura el destino en la Consola del Quitanieves
 
-#### Instalación manual
+Para crear el reenviador de eventos:
 
-1. Descarga el [`template.tpl`](https://github.com/snowplow/snowplow-gtm-server-side-braze-tag/blob/main/template.tpl) archivo de plantilla.
-2. Cree una nueva etiqueta en la sección **Plantillas** de un contenedor de servidor de Google Tag Manager.
-3. Haga clic en el menú **Más acciones** de la esquina superior derecha y seleccione **Importar**.
-4. Importe el archivo de plantilla descargado y guárdelo.
+1. En la Consola Quitanieves, navega hasta **Destinos** y selecciona **Crear nuevo destino**.
+2. Al configurar la conexión, selecciona **Braze** como tipo de conexión.
+3. Introduce tu clave de API Braze y el punto final de la API REST.
+4. Guarda la conexión.
 
-#### Galería del administrador de etiquetas
+### Paso 2: Configurar el reenviador de eventos
 
-Próximamente. Esta etiqueta está pendiente de aprobación para ser incluida en la galería GTM.
+Al configurar el reenviador, puedes elegir qué eventos Snowplow reenviar y mapearlos a tipos de objetos Braze:
 
-### Paso 2: Configuración de la etiqueta Braze
+1. **[Atributos del usuario]({{site.baseurl}}/api/objects_filters/user_attributes_object)**: Actualiza los datos de perfil de usuario y las propiedades personalizadas de usuario.
+2. **[Eventos personalizados]({{site.baseurl}}/api/objects_filters/event_object)**: Envía acciones y comportamientos de los usuarios.
+3. **[Compras]({{site.baseurl}}/api/objects_filters/purchase_object)**: Envía los datos de la transacción con los detalles del producto.
 
-Con la plantilla instalada, añada la etiqueta Braze a su contenedor GTM-SS.
+Para cada tipo de objeto, puedes configurar mapeados de campo para especificar cómo se mapean los datos de eventos Snowplow a los campos Braze. Consulta [la documentación Crear autocargadores](https://docs.snowplow.io/docs/destinations/forwarding-events/creating-forwarders/) de Snowplow para obtener instrucciones detalladas de instalación y configuración del mapeado de campos.
 
-1. En la pestaña **Etiqueta**, seleccione **Nueva** y, a continuación, seleccione la **etiqueta Braze** como configuración de etiqueta.
-2. Seleccione el desencadenante deseado para los eventos que desea reenviar a Braze.
-3. Introduzca los parámetros necesarios y configure su etiqueta (encontrará más detalles en la siguiente sección Personalización).
-4. Haga clic en **Guardar**.
+### Paso 3: Validar la integración
 
-## Personalización
+Confirma que los eventos están llegando a Braze comprobando las siguientes páginas en tu cuenta de Braze:
 
-### Parámetros obligatorios de la etiqueta
+1. **Generador de consultas**: En Braze, ve a **Análisis** > **Generador de consultas**. Puedes escribir consultas en las siguientes tablas para obtener una vista previa de los datos enviados desde el Quitanieves: `USER_BEHAVIORS_CUSTOMEVENT_SHARED` y `USERS_BEHAVIORS_PURCHASE_SHARED`.
+2. **Panel de uso de la API**: En Braze, ve a **Configuración** > **API e identificadores** para ver un gráfico del uso de la API a lo largo del tiempo. Puedes filtrar específicamente por la clave de API que utiliza Snowplow y ver tanto los éxitos como los fracasos.
 
-La siguiente tabla enumera los parámetros de etiqueta necesarios que debe incluir en la configuración de su etiqueta Braze.
+## Envío de propiedades personalizadas
 
-| Parámetro | Descripción |
-| --------- | ----------- |
-| Punto final de la API REST Braze | Establece la URL de tu [punto final]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) REST Braze. |
-| Clave API Braze | Establece tu [clave de API]({{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys) Braze que se incluirá en cada solicitud. |
-| Braze `external_id` | Establezca esta clave en la propiedad de evento de cliente que corresponda a la dirección `external_id` de sus usuarios y que se utilizará como [identificador de usuario Braze]({{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Puedes enviar propiedades personalizadas más allá de los campos estándar. La estructura depende del tipo de objeto Braze que estés utilizando:
 
-### Asignación de eventos
+- **Atributos del usuario**: Añadir como campos de nivel superior (por ejemplo, `subscription_tier`, `loyalty_points`)
+- **Propiedades del evento**: Anidado bajo el objeto `properties` (por ejemplo, `properties.plan_type`, `properties.feature_flag`)
+- **Propiedades de la compra**: Anidado bajo el objeto `properties` (por ejemplo, `properties.color`, `properties.size`)
 
-La siguiente tabla enumera las opciones de mapeo de eventos relativas al evento Quitanieves según lo reclamado por el [cliente Quitanieves](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/).
+Para los nombres de propiedades que contengan espacios, utiliza la notación de corchetes (por ejemplo, `["account type"]` o `properties["campaign source"]`).
 
-| Opción de asignación | Descripción |
-| --------- | ----------- |
-| Incluir autodescripción del evento | Activado por defecto. Indica si los datos del evento autodescriptivo Snowplow se incluirán en los objetos de propiedades del evento enviados a Braze. |
-| Reglas de contexto del evento quitanieves | Describe cómo la etiqueta Braze utilizará las entidades de contexto adjuntas a un evento Quitanieves. |
-| Extraer la entidad de la matriz si se trata de un solo elemento | Las entidades quitanieves siempre están en matrices, ya que se pueden adjuntar varias de la misma entidad a un evento. Esta opción seleccionará el único elemento de la matriz si ésta sólo contiene un único elemento. |
-| Incluir todas las entidades en el objeto de evento | Activado por defecto. Incluye todas las entidades de un evento dentro del objeto de propiedades del evento Braze. Desactive esta opción para seleccionar entidades individuales para su inclusión. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Consulta [la documentación del Objeto de Evento]({{site.baseurl}}/api/objects_filters/event_object) para obtener información detallada sobre los tipos de datos admitidos, los requisitos de denominación de las propiedades y los límites de tamaño de la carga útil.
 
-### Mapeado avanzado de eventos
+## Limitaciones
 
-#### Reglas de propiedad de los eventos
-
-Si desea incluir otras propiedades del evento cliente y asignarlas al evento Braze, haga referencia a las reglas de la tabla siguiente: 
-
-| Reglas de propiedad de los eventos | Descripción |
-| --------- | ----------- |
-| Incluir propiedades de eventos comunes | Activada por defecto, esta opción establece si se incluyen automáticamente las propiedades de evento de la [definición de evento común](https://developers.google.com/tag-platform/tag-manager/server-side/common-event-data) en las propiedades del evento Braze. |
-| Reglas adicionales de asignación de propiedades de usuario y propiedades de evento | Especifique la clave de propiedad del evento cliente y la clave de objeto de las propiedades a las que desea asignarla (o deje la clave asignada en blanco para mantener el mismo nombre). Aquí puede utilizar la notación de ruta clave (por ejemplo, `x-sp-tp2.p` para una plataforma de eventos Snowplow o `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` para un id de vista de página de eventos Snowplow (en el índice 0 de la matriz) o elegir propiedades que no sean Snowplow si utiliza un cliente alternativo.<br><br>Las reglas de asignación de propiedades de eventos rellenan el objeto de propiedades de eventos Braze.|
-| Incluir propiedades comunes de los usuarios| Activada por defecto, esta opción establece si se incluyen las propiedades `user_data` de la definición de evento común en el objeto de atributos de usuario Braze.|
-| Propiedad de la hora del evento | Esta opción le permite especificar la propiedad del evento cliente para rellenar la hora del evento (en formato ISO-8601) o dejarla vacía para utilizar la hora actual (comportamiento por defecto). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-### Asignación de entidades
-
-Usando la tabla de mapeo de entidades de Snowplow, las entidades pueden ser remapeadas para tener diferentes nombres en Braze e incluidas en propiedades de eventos, u objetos de atributos de usuario. 
-
-La entidad puede especificarse en dos formatos diferentes:
-- Coincidencia de versión principal: `x-sp-contexts_com_snowplowanalytics_snowplow_web_page_1` donde `com_snowplowanalytics_snowplow` es el proveedor del evento, `web_page` es el nombre del esquema y `1` es el número de versión principal. `x-sp-` también puede omitirse si se desea.
-- Coincidencia de esquema completa: `iglu:com.snowplowanalytics.snowplow/webPage/jsonschema/1-0-0`
-<br><br>
-
-| Opción de asignación de entidades | Descripción |
-| --------- | ----------- |
-| Incluir entidades no mapeadas en el evento | Al remapear o mover algunas entidades a atributos de usuario con la personalización anterior, esta opción permite garantizar que todas las entidades no mapeadas (como cualquier entidad que no se encuentre en las [reglas de propiedades del evento](#event-property-rules)) se incluirán en el objeto de propiedades del evento Braze. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-
+**Límites de velocidad:** Braze aplica un límite de velocidad de 3.000 llamadas a la API cada tres segundos para la API de seguimiento de usuarios. Como Snowplow no admite el procesamiento por lotes para los reenviadores de eventos, este límite de velocidad de la API también funciona como límite de tasa de eventos. Si tu caudal de entrada supera los 3.000 eventos cada tres segundos, puedes experimentar un aumento de la latencia.
