@@ -31,7 +31,7 @@ Grâce à cette intégration, vous pouvez :
 
 ## Envoi de courrier à l'aide des webhooks de Braze
 
-### Étape 1 : Choisissez un endpoint Lob
+### Étape 1 : Choisissez un endpoint Lob
 
 En fonction de ce que vous souhaitez faire dans Lob, vous devrez utiliser l'endpoint correspondant dans la requête HTTP de votre webhook. Pour des informations détaillées sur chaque endpoint, consultez la [documentation de référence de l'API de Lob.](https://lob.com/docs#intro)
 
@@ -60,9 +60,9 @@ Lob nécessite un en-tête HTTP pour l'autorisation et une méthode HTTP. Ce qui
   - **Autorisation**: De base `{{'<LOB_API_KEY>:' | base64_encode}}`
   - **Content-Type**: application/json
 
-![Code du corps de la requête et URL du webhook affichés dans l'onglet de composition du générateur webhook Braze.]({% image_buster /assets/img_archive/lob_full_request.png %})
+![Code du corps de la requête et URL du webhook affichés dans l'onglet de composition du générateur de webhook Braze.]({% image_buster /assets/img_archive/lob_full_request.png %})
 
-#### Corps de la demande
+#### Corps de la requête
 
 Voici un exemple de corps de requête pour l'endpoint Lob postcards. Bien que ce corps de requête soit fourni dans le modèle de base Lob de Braze, si vous souhaitez utiliser d'autres endpoints, vous devez ajuster vos champs Liquid en conséquence.
 
@@ -89,17 +89,17 @@ Voici un exemple de corps de requête pour l'endpoint Lob postcards. Bien que ce
 N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
 {% endalert %}
 
-![Un journal des erreurs indiquant l'heure, le nom de l'application, le canal et le message d'erreur. Le message d'erreur comprend le message d'alerte et le code d'état.]({% image_buster /assets/img_archive/error_log.png %})
+![Un journal des erreurs indiquant l'heure, le nom de l'application, le canal et le message d'erreur. Le message d'erreur contient l’alerte u message et le code d'état.]({% image_buster /assets/img_archive/error_log.png %})
 
 ## Partager des événements à l'aide des webhooks de Lob 
 
 [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview) vous permet de créer et de gérer des webhooks pour automatiser le flux de données depuis des plateformes externes vers Braze. Chaque transformation se voit attribuer un endpoint unique, que d'autres plateformes peuvent utiliser comme destination de leur webhook.
 
 {% alert important %}
-Le modèle de transformation des données de Lob envoie des événements à l'aide de votre [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), qui consomme des points de données dans Braze. Nous vous recommandons de fixer une limite de débit dans les paramètres de votre webhook Lob, afin d'éviter une surconsommation de données.
+Le modèle de transformation des données de Lob envoie des événements en utilisant votre [endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), qui enregistre les points données. Nous vous recommandons de fixer une limite de débit dans les paramètres de votre webhook de lobbying afin d'éviter l'enregistrement excessif de données.
 {% endalert %}
 
-### Étape 1 : Créer une transformation dans Braze
+### Étape 1 : Créer une transformation dans Braze
 
 1. Dans le tableau de bord de Braze, accédez à **Paramètres des données** > **Transformations de données**, puis sélectionnez **Créer une transformation.**
 2. Saisissez un nom court et descriptif pour votre transformation.
