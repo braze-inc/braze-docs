@@ -29,7 +29,7 @@ La API de personalización de Hightouch proporciona un punto final REST para uti
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab casos de uso %}
+{% tab Use Cases %}
 
 ### Ejemplos
 
@@ -42,7 +42,7 @@ Los casos de uso más comunes son:
 - **Recomendaciones basadas en datos financieros o médicos: los**datos financieros tienen requisitos estrictos que Hightouch cumple mediante sus [estrictas políticas de seguridad de datos](https://hightouch.com/docs/security/overview#compliance). Con Hightouch, puede crear segmentos de clientes basados en datos financieros o médicos sin exponer los atributos subyacentes utilizados en sus criterios de segmentación.
 
 {% endtab %}
-{% tab Conjuntos de datos %}
+{% tab Datasets %}
 
 ### Conjuntos de datos
 
@@ -68,7 +68,7 @@ Para más detalles, consulta la [documentación de](https://hightouch.com/docs) 
 Los modelos Hightouch definen qué datos extraer de su fuente. Para configurar un nuevo modelo, sigue estos pasos:
 
 1. En Hightouch, vaya a [**Resumen de modelos**](https://app.hightouch.com/models) > **Añadir modelo** y selecciona la fuente que acabas de conectar. <br><br>
-2. A continuación, elija un [método de modelización](https://hightouch.com/docs/models/creating-models). Como toda la información debe estar unida en una tabla, puede utilizar el selector visual de tablas para definirla. Como alternativa, puede escribir SQL para incluir sólo las columnas que desee o basarse en sus modelos dbt, Looker Looks o libros de trabajo Sigma existentes.<br><br>
+2. A continuación, elija un [método de modelización](https://hightouch.com/docs/models/creating-models). Como toda tu información debe estar unida en una sola tabla, puedes utilizar el selector visual de tablas para definirla. Como alternativa, puede escribir SQL para incluir sólo las columnas que desee o basarse en sus modelos dbt, Looker Looks o libros de trabajo Sigma existentes.<br><br>
 3. Antes de continuar, previsualiza tu modelo para asegurarte de que consulta los datos que te interesan. Por defecto, Braze limita la vista previa a los 100 primeros registros. Una vez validados los datos, haz clic en **Continuar**.<br><br>
 4. Nombre su modelo, por ejemplo, "Recomendaciones de usuarios".<br><br>
 5. Por último, seleccione una clave primaria y haga clic en **Finalizar**. Una clave primaria debe ser una columna con identificadores únicos. Este es también el campo que utilizará para llamar a la API de personalización para recuperar las recomendaciones de un usuario en particular.
