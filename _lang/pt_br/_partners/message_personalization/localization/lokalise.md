@@ -16,7 +16,7 @@ _Esta integração é mantida pelo Lokalise._
 
 ## Sobre a integração
 
-A integração entre a Braze e o Lokalise usa o conteúdo conectado para permitir que você insira facilmente conteúdo traduzido nas suas campanhas da Braze com base nas configurações de idioma do usuário.
+A integração do Braze e do Lokalise usa Conteúdo Conectado para permitir que você insira facilmente conteúdo traduzido em suas campanhas do Braze com base nas configurações de idioma do usuário.
 
 ## Pré-requisitos
 
@@ -66,7 +66,7 @@ Seu código de tradução deve aparecer no editor de projetos:
 
 Abra seu projeto do Lokalise e clique em **Apps**. Procure e instale o app da Braze. Você verá a seguinte tela:
 
-![Configuração do Braze na lista do Lokalise com o ID do projeto e a URL dos arquivos de tradução.]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
+![Configuração do Braze no Lokalise listando o ID do projeto e o URL dos arquivos de tradução.]({% image_buster /assets/img/lokalise/3_lokalise_braze_app.png %})
 
 No **URL do arquivo de tradução**, o Lokalise publica um arquivo JSON contendo todas as traduções para suas chaves no projeto. Você obterá um URL de arquivo de tradução para cada idioma-alvo do projeto. É por isso que os URLs de arquivo de tradução resultantes têm duas partes:
 
@@ -114,16 +114,20 @@ Por fim, salve o modelo de e-mail e faça uma prévia. Você deverá ver sua tra
 
 ## Perguntas frequentes
 
-**O que acontecerá se eu excluir sem querer uma chave do Lokalise?**<br>
+### O que acontecerá se eu excluir sem querer uma chave do Lokalise?
+
 A string correspondente no Braze não terá mais uma tradução.
 
-**Se eu tiver uma localidade `en` e substituí-la por `en-US` no Lokalise, a Braze a lerá como `en-US`?**<br>
+### Se eu tiver um `en` local, mas substituí-lo por `en-US` no Lokalise, o Braze irá lê-lo como `en-US`?
+
 Não, os códigos ISO de localização devem corresponder no Braze e no Lokalise.
 
-**Podemos usar a flag `:rerender` ao conectar o conteúdo do Lokalise?**<br>
+### Podemos usar a bandeira `:rerender` ao conectar o conteúdo do Lokalise?
+
 Sim, claro. Você pode consultar os documentos do Braze para saber como adicionar esse sinalizador.
 
-**Depois de atualizar o arquivo de tradução no Lokalise, por que não consigo ver nenhuma alteração no conteúdo traduzido na Braze?**<br>
+### Após atualizar o arquivo de tradução no Lokalise, por que não consigo ver nenhuma alteração no conteúdo traduzido no Braze?
+
 A Braze armazena em cache o conteúdo traduzido, que pode levar alguns minutos para ser atualizado. Se estiver testando suas campanhas e precisar ver os resultados das traduções imediatamente, poderá usar o parâmetro `:cache_max_age`, conforme explicado neste artigo de referência.
 
 
