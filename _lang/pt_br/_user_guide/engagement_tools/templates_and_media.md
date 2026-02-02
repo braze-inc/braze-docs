@@ -1,16 +1,16 @@
 ---
-nav_title: "Modelos e mídia"
-article_title: Modelos e mídia
+nav_title: "Modelos e mídias"
+article_title: Modelos e Mídia
 page_order: 5
 layout: dev_guide
-guide_top_header: "Modelos e mídia"
-guide_top_text: "A seção Modelos no Braze permite que você gerencie modelos e carregue imagens para mensagens em um único local centralizado. Você também pode consolidar e organizar seus modelos no painel para obter uma aparência coerente."
+guide_top_header: "Modelos e Mídia"
+guide_top_text: "A seção de Modelos no Braze permite que você gerencie modelos e faça upload de imagens para mensagens em um único local centralizado. Você também pode consolidar e organizar seus modelos no dashboard para uma aparência e sensação coerentes."
 search_rank: 2
 page_type: landing
 tool: 
 - Templates
 - Media
-description: "Essa página de destino abriga os modelos e os artigos de mídia. Aqui, você pode encontrar recursos sobre a biblioteca de mídia, como gerenciar modelos, fazer upload de imagens, criar blocos de conteúdo e muito mais."
+description: "É nesta landing page que ficam os artigos de Modelos e Mídia. Aqui, você pode encontrar recursos na biblioteca de mídia, como gerenciar modelos, fazer upload de imagens, criar Blocos de Conteúdo e mais."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
@@ -20,10 +20,10 @@ guide_featured_list:
   - name: Blocos de conteúdo
     link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: Modelos de tela
+  - name: Modelos de canva
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
     image: /assets/img/braze_icons/palette.svg
-  - name: Gerenciamento de modelos
+  - name: Gerenciar modelos
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
   - name: Perguntas frequentes
@@ -33,13 +33,13 @@ guide_featured_list:
 
 ## Sobre modelos e mídia
 
-É possível usar e gerenciar modelos e conteúdo criativo na seção **Modelos** para os seguintes recursos:
+Você pode usar e gerenciar modelos e conteúdo criativo na seção **Modelos** para os seguintes recursos:
 
 - **[Modelos de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
-- **[Blocos de conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
-- **[Modelos de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
-- **[Modelos de links]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
-- **[Perfis de cores de mensagens no aplicativo e modelos CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[Blocos de Conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
+- **[Modelos de Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[Modelos de link]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
+- **[Perfis de cores de mensagem no app e modelos CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
 - **[Gerenciar ativos na biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
