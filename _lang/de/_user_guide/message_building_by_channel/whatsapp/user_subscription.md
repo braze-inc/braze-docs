@@ -76,7 +76,7 @@ Um Wettlaufsituationen zu vermeiden, sollten alle auf den Webhook folgenden Nach
 	}
 	```
 
-Benutzer:in Update-Schritt mit einem erweiterten JSON-Editor-Schritt.]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
+![Schritt Nutzer:innen Update mit einem erweiterten JSON-Editor-Schritt.]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 Änderungen des nutzerspezifischen Abo-Status können bis zu 60 Sekunden dauern.
