@@ -21,7 +21,7 @@ Cuando envías mensajes LINE a través de Braze, Braze utiliza el atributo `nati
 Los ID de usuario de LINE son distintos según el proveedor de LINE. Un usuario concreto tendrá diferentes ID de usuario de LINE para cada proveedor al que siga. Es poco probable que los usuarios conozcan su ID de LINE (a diferencia de su correo electrónico o número de teléfono), ya que cambian para cada marca que siguen.
 {% endalert %}
 
-## Configuración de `native_line_id` attibute
+## Configuración del atributo `native_line_id` 
 
 Hay una serie de situaciones en las que `native_line_id` se configura en el perfil de usuario, que se describen a continuación.
 
@@ -29,7 +29,7 @@ Hay una serie de situaciones en las que `native_line_id` se configura en el perf
 | --- | --- | --- |
 |Un usuario sigue un canal LINE | No| Se crea un perfil de usuario anónimo (será necesario fusionarlo):<br> - `native_line_id` se ajusta al ID de LÍNEA del usuario <br>- `line_id` el alias de usuario se ajusta al ID de LÍNEA del usuario<br>\- El usuario está suscrito al grupo de suscripción Braze del canal |
 |Un usuario sigue un canal LINE| Sí | Todos los perfiles de usuario con la dirección `native_line_id`:<br>\- Están suscritos al grupo de suscripción Braze del canal|
-|La empresa utiliza la carga CSV de usuarios con una columna n`ative_line_id` | No| Si no existe ningún perfil de usuario para el `external_id` o alias de usuario especificado:<br>- `native_line_id` se ajusta al valor especificado<br> \- Todos los demás atributos especificados en el CSV se establecen en el perfil de usuario|
+|La empresa utiliza la carga CSV de usuarios con una columna `native_line_id` | No| Si no existe ningún perfil de usuario para el `external_id` o alias de usuario especificado:<br>- `native_line_id` se ajusta al valor especificado<br> \- Todos los demás atributos especificados en el CSV se establecen en el perfil de usuario|
 |La empresa utiliza la carga CSV de usuarios con una columna `native_line_id`  | Sí | Si existe un perfil de usuario para el `external_id` o alias de usuario especificado:<br>- `native_line_id` se ajusta al valor especificado<br>\- Todos los demás atributos especificados en el CSV se establecen en el perfil de usuario<br>\- Varios perfiles tienen el mismo `native_line_id` |
 | La empresa utiliza el punto final `/users/track` y especifica el atributo `native_line_id`  | No | Si no existe ningún perfil de usuario para el usuario especificado[(especificado por `external_id`, `user_alias`, `braze_id` o `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>- `native_line_id` se ajusta al valor especificado<br>\- Todos los demás atributos especificados en la solicitud se establecen en el perfil de usuario |
 | La empresa utiliza el punto final `/users/track` y especifica el atributo `native_line_id`  | Sí | Si existe un perfil de usuario para el usuario especificado[(especificado por `external_id`, `user_alias`, `braze_id` o `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>- `native_line_id` se ajusta al valor especificado<br>\- Todos los demás atributos especificados en la solicitud se establecen en el perfil de usuario<br>\- Varios perfiles tienen el mismo `native_line_id` |
@@ -43,5 +43,5 @@ Al visualizar un perfil de usuario en el panel de Braze, puedes ver si tiene el 
 
 Si se ha configurado `native_line_id`, se mostrará en **ID de usuario de LÍNEA**. De lo contrario, no aparecerá.
 
-\![Configuración del contacto de línea en la pestaña Interacción.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
+![Configuración del contacto de línea en la pestaña Interacción.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
