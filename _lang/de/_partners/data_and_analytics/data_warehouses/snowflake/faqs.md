@@ -16,6 +16,8 @@ Nein, das wird zur Zeit nicht unterstützt.
 Verwenden Sie die gemeinsame Nutzung von Daten für dieselbe Region in den folgenden Szenarien:
 - Ihr Snowflake-Konto befindet sich in US-EAST-1 (AWS) und Ihr Braze-Dashboard befindet sich in den USA.
 - Ihre Snowflake-Region liegt in EU-CENTRAL-1 und Ihre Braze-Dashboard-Region liegt in der EU.
+- Ihre Snowflake-Region befindet sich in AP-Southeast-2 (AWS) und Ihre Braze-Dashboard-Region ist in Australien.
+- Ihre Snowflake-Region befindet sich in AP-Südost-3 (AWS) und Ihre Braze-Dashboard-Region in Indonesien.
 
 Andernfalls nutzen Sie die gemeinsame Nutzung von Daten für eine andere Region. 
 
