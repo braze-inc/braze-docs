@@ -284,7 +284,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | 전화 | (문자열) |
 | push_subscribe | (문자열) 사용 가능한 값은 "opted_in" (푸시 메시지를 수신하도록 명시적으로 등록됨), "unsubscribed" (푸시 메시지 수신을 명시적으로 거부함), "subscribed" (가입도 거부도 아님)입니다.  |
 | push_tokens | `app_id` 및 `token` 문자열이 포함된 객체 배열입니다. 선택적으로 이 토큰이 연결된 기기에 `device_id`를 제공할 수 있습니다(예: `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`). `device_id`를 제공하지 않으면 무작위로 생성됩니다. |
-| time_zone | (문자열) [IANA 시간대 데이터베이스][26]의 시간대 이름 (예: "America/New_York" 또는 "동부 표준시 (미국 & 캐나다)"). 유효한 표준 시간대 값만 설정됩니다. |
+| time_zone | (문자열) [IANA 시간대 데이터베이스][26]의 시간대 이름 (예: "America/New_York" 또는 "Eastern Time (US & Canada)"). 유효한 표준 시간대 값만 설정됩니다. |
 | 트위터 | `id`(정수), `screen_name`(문자열, X(옛 트위터) 핸들), `followers_count`(정수), `friends_count`(정수), `statuses_count`(정수) 중 하나를 포함하는 해시입니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
