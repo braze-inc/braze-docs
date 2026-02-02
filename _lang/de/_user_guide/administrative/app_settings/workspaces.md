@@ -1,13 +1,13 @@
 ---
-nav_title: Arbeitsbereiche erstellen und verwalten
-article_title: Arbeitsbereiche erstellen und verwalten
+nav_title: Workspaces erstellen und verwalten
+article_title: Workspaces erstellen und verwalten
 page_order: 0
 page_type: reference
 description: "Dieser Artikel beschreibt, wie Sie Ihre Arbeitsbereiche erstellen, einrichten und verwalten."
 
 ---
 
-# Arbeitsbereiche erstellen und verwalten
+# Workspaces erstellen und verwalten
 
 > Dieser Artikel beschreibt, wie Sie Ihre Arbeitsbereiche erstellen, einrichten und verwalten. 
 
@@ -27,7 +27,7 @@ Sie können über das Dropdown-Menü Arbeitsbereich in der globalen Kopfzeile ne
 
 1. Wählen Sie das Dropdown-Menü Workspace und dann <i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> **Workspace erstellen**.
 
-\![Das Workspace-Dropdown mit dem Button "Workspace erstellen".]({% image_buster /assets/img/workspaces/workspace_create.png %}){: style="max-width:60%;"}
+![Das Workspace-Dropdown mit dem Button "Workspace erstellen".]({% image_buster /assets/img/workspaces/workspace_create.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Geben Sie Ihrem Arbeitsbereich einen Namen.
@@ -39,11 +39,11 @@ Vielleicht möchten Sie eine Namenskonvention festlegen, damit andere in Ihrem U
 {:start="3"}
 3\. Wählen Sie **Erstellen**. Es kann ein paar Sekunden dauern, bis Braze Ihren Arbeitsbereich erstellt hat.
 
-\!["Workspace erstellen"-Modal mit dem Namen "Upon Voyage US - Staging".]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
+![Modal "Workspace erstellen" mit dem Namen "Upon Voyage US - Staging".]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
 
 Sie werden zur Seite **App-Einstellungen** weitergeleitet, auf der Sie Ihre App-Instanzen hinzufügen können. Sie können diese Seite jederzeit über **Einstellungen** > **App-Einstellungen** aufrufen.
 
-\!["App-Einstellungen"-Seite für den Upon Voyage US - Staging Workspace mit einem Button zum Hinzufügen einer App.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
+![Seite "App-Einstellungen" für den Upon Voyage US - Staging Workspace mit einem Button zum Hinzufügen einer App.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
 
 ### Schritt 3: Fügen Sie Ihre App-Instanzen hinzu
 
@@ -52,7 +52,7 @@ Wir bezeichnen die verschiedenen Websites und Apps, die innerhalb eines Workspac
 1. Wählen Sie auf der Seite mit **den App-Einstellungen** **\+ App hinzufügen**.
 2. Geben Sie Ihrer App-Instanz einen Namen und wählen Sie aus, auf welcher Plattform oder welchen Plattformen diese App-Instanz läuft. Wenn Sie mehrere Plattformen auswählen, wird Braze eine App-Instanz für jede Plattform erstellen.
 
-\!["Neue App zu Upon Voyage US - Staging hinzufügen"-Modal mit Optionen zum Auswählen von App-Details.]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
+![Modal "Neue App zu Upon Voyage US - Staging hinzufügen" mit Optionen zum Auswählen der App-Details.]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
 
 {:start="3"}
 3\. Wählen Sie zur Bestätigung **App hinzufügen**.
@@ -61,7 +61,7 @@ Wir bezeichnen die verschiedenen Websites und Apps, die innerhalb eines Workspac
 
 Nachdem Sie Ihre App-Instanz hinzugefügt haben, haben Sie Zugang zu ihrem API-Schlüssel. Der API-Schlüssel wird verwendet, wenn Sie Anfragen zwischen Ihrer App-Instanz und der Braze API stellen. Der API-Schlüssel ist auch wichtig für die Integration des Braze SDK mit Ihrer App oder Website.
 
-\![Einstellungsseite für die Upon Voyage iOS App mit Feldern für den API-Schlüssel und den SDK-Endpunkt.]({% image_buster /assets/img/workspaces/app_api_key.png %})
+![Einstellungsseite für die Upon Voyage iOS App mit Feldern für den API-Schlüssel und den SDK-Endpunkt.]({% image_buster /assets/img/workspaces/app_api_key.png %})
 
 {% alert note %}
 Sie müssen für jede Version Ihrer App auf jeder Plattform separate App-Instanzen erstellen. Wenn Sie zum Beispiel eine kostenlose und eine Pro-Version Ihrer App für iOS und Android haben, erstellen Sie vier App-Instanzen in Ihrem Arbeitsbereich (kostenlose iOS-App, kostenlose Android-App, Pro-iOS-App und Pro-Android-App). So erhalten Sie vier API-Schlüssel, die Sie verwenden können, einen für jede App-Instanz.
@@ -73,7 +73,7 @@ Die Live-SDK-Version, die auf der Seite App-Einstellungen für eine bestimmte Ap
 
 Dieses Feld erscheint, nachdem Sie das Braze SDK in Ihre App oder Website integriert haben. Wenn eine neuere Version des Braze SDK für Ihre Plattform verfügbar ist, wird dies hier mit dem Tag "Neuere Version verfügbar" vermerkt.
 
-\!["Live SDK Version"-Abschnitt mit dem Feldwert "5.4.0" und einem Symbol, das besagt, dass eine neue Version verfügbar ist.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
+![Abschnitt "Live SDK Version" mit dem Feldwert "5.4.0" und einem Symbol, das besagt, dass eine neue Version verfügbar ist.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
 
 ### Schritt 4: Wiederholen Sie den Vorgang nach Bedarf
 
@@ -89,7 +89,7 @@ Wiederholen Sie die Schritte 2 und 3, um so viele Workspaces einzurichten, wie I
 
 Sie können bevorzugte Workspaces hinzufügen, um noch schneller auf die Workspaces zuzugreifen, die Sie am häufigsten verwenden.
 
-\![Workspace-Dropdown mit dem Tab für "Favorisierte Workspaces".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
+![Workspace-Dropdown mit dem Tab für "Favorisierte Workspaces".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
 
 So fügen Sie bevorzugte Arbeitsbereiche hinzu:
 
@@ -108,7 +108,7 @@ So benennen Sie Ihren Arbeitsbereich um:
 2. Bewegen Sie den Mauszeiger über den Namen Ihres Arbeitsbereichs und wählen Sie <i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i>.
 3. Geben Sie Ihrem Arbeitsbereich einen neuen Namen und wählen Sie dann <i class="fa-solid fa-square-check" style="color: #0b8294;"></i> **Speichern**.
 
-\![Das Bleistift-Symbol erscheint neben dem Namen des Workspace.]({% image_buster /assets/img/workspaces/workspace_rename.gif %}){: style="max-width:50%;"}
+![Das Bleistiftsymbol neben dem Namen des Workspaces.]({% image_buster /assets/img/workspaces/workspace_rename.gif %}){: style="max-width:50%;"}
 
 ### Löschen von Workspaces und App-Instanzen
 
@@ -123,7 +123,7 @@ Sie können keine App-Instanzen oder Workspaces löschen, die derzeit für das T
 Seien Sie vorsichtig beim Löschen von Arbeitsbereichen! Nachdem ein Workspace gelöscht wurde, kann er nicht wiederhergestellt werden.
 {% endalert %}
 
-\![Die Seite App-Einstellungen mit einem Button zum Löschen eines Workspace und einem Mülleimer-Symbol zum Löschen einer App.]({% image_buster /assets/img/workspaces/workspace_delete.png %})
+![Die Seite App-Einstellungen mit einem Button zum Löschen eines Workspace und einem Mülleimer-Symbol zum Löschen einer App.]({% image_buster /assets/img/workspaces/workspace_delete.png %})
 
 ## Häufig gestellte Fragen
 
@@ -151,7 +151,7 @@ Standardmäßig zielt ein Segment auf alle Apps und Websites im Workspace ab. So
 2. Für **gezielte Apps und Websites** wählen Sie **Benutzer aus bestimmten Apps**.
 3. Wählen Sie in der Dropdown-Liste **Spezifische Apps** Ihre App oder Website aus.
 
-Segment, das Nutzer:innen aus bestimmten Apps zusammenstellt.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
+![Segmente, die Nutzer:innen aus bestimmten Apps zusammenstellen.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
 
 Sie können dieses Segment dann zu Ihrer Nachricht hinzufügen und Ihre Zielgruppe bei Bedarf mit zusätzlichen Segmenten und Filtern weiter verfeinern.
 
