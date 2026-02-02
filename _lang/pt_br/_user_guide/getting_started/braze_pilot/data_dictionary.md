@@ -1,6 +1,6 @@
 ---
 nav_title: Dicionário de dados
-article_title: Dicionário de dados para piloto de brasagem
+article_title: Dicionário de dados para Braze Pilot
 page_order: 3
 page_type: reference
 description: "Este artigo de referência aborda brevemente as etapas de integração exigidas de seus engenheiros ou desenvolvedores."
@@ -8,20 +8,20 @@ description: "Este artigo de referência aborda brevemente as etapas de integra�
 
 # Dicionário de dados
 
-> Cada simulação de aplicativo no Braze Pilot é instrumentada para coletar uma variedade de eventos e atributos com base na atividade do usuário no aplicativo. 
+> Cada simulação de aplicativo no Braze Pilot é instrumentada para coletar uma variedade de eventos e atribuições com base na atividade do usuário no app. 
 
 ## A abordagem dos dados
 
-O aplicativo registra atributos e eventos personalizados típicos do setor representado pela marca fictícia. Você pode usar esses atributos para potencializar as demonstrações de uma variedade de casos de uso comuns.
-Em geral, todos os eventos e atributos são prefixados com um código curto que corresponde à simulação do aplicativo responsável pelos dados. Por exemplo:
+O app registra atributos personalizados e eventos típicos do setor representado pela marca fictícia. Você pode usar essas atribuições para potencializar as demonstrações de uma variedade de casos de uso comuns.
+Geralmente, todos os eventos e atribuições são prefixados com um código curto que corresponde à simulação do app responsável pelos dados. Por exemplo:
 
-- Todos os dados registrados pela simulação do aplicativo Steppington são prefixados com `st_`
-- Todos os dados registrados pela simulação do aplicativo PantsLabyrinth são prefixados com `pl_`
-- Todos os dados registrados pela simulação do aplicativo MovieCanon são prefixados com `mc_`
+- Todos os dados registrados pela simulação do app Steppington são prefixados com `st_`
+- Todos os dados registrados pela simulação do app PantsLabyrinth são prefixados com `pl_`
+- Todos os dados registrados pela simulação do app MovieCanon são prefixados com `mc_`
 
-## Lista de eventos e atributos registrados
+## Lista de eventos registrados e atribuições
 
-A tabela a seguir lista os eventos e atributos registrados pelo Braze Pilot.
+A tabela a seguir lista os eventos e atribuições registrados pelo Braze Pilot.
 
 <style>
 table td {
@@ -48,7 +48,7 @@ th:nth-child(5), td:nth-child(5) {
     <thead>
         <tr>
             <th>Nome</th>
-            <th>Aplicativo</th>
+            <th>App</th>
             <th>Tipo</th>
             <th>Propriedades</th>
             <th>Quando estiver registrado</th>
@@ -60,55 +60,55 @@ th:nth-child(5), td:nth-child(5) {
             <td>MovieCanon</td>
             <td>Evento</td>
             <td></td>
-            <td>Quando o usuário entra no aplicativo MovieCanon</td>
+            <td>Quando o usuário entra no app MovieCanon</td>
         </tr>
         <tr>
             <td><code>mc_watched_movie</code></td>
             <td>MovieCanon</td>
             <td>Evento</td>
-            <td><code>título: string</code></td>
+            <td><code>title: string</code></td>
             <td>Quando o usuário termina de assistir a um vídeo</td>
         </tr>
         <tr>
             <td><code>mc_viewed_movie_page</code></td>
             <td>MovieCanon</td>
             <td>Evento</td>
-            <td><code>título: string</code></td>
+            <td><code>title: string</code></td>
             <td>Quando o usuário visualiza uma página de filme</td>
         </tr>
         <tr>
             <td><code>pl_viewed_item</code></td>
-            <td>PantsLabyrinth</td>
+            <td>Pants Labyrinth</td>
             <td>Evento</td>
             <td><code>item_name: string</code></td>
             <td>Quando o usuário visualiza uma página de produto</td>
         </tr>
         <tr>
             <td><code>pl_entered_app</code></td>
-            <td>PantsLabyrinth</td>
+            <td>Pants Labyrinth</td>
             <td>Evento</td>
             <td></td>
-            <td>Quando o usuário entra no aplicativo PantsLabyrinth</td>
+            <td>Quando o usuário entra no app PantsLabyrinth</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_wishlist</code></td>
-            <td>PantsLabyrinth</td>
+            <td>Pants Labyrinth</td>
             <td>Evento</td>
             <td><code>item_name: string</code></td>
             <td>Quando o usuário adiciona um item à sua lista de desejos</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_cart</code></td>
-            <td>PantsLabyrinth</td>
+            <td>Pants Labyrinth</td>
             <td>Evento</td>
             <td><code>item_name: string</code></td>
             <td>Quando o usuário adiciona um item ao carrinho</td>
         </tr>
         <tr>
-            <td><code>&lt;purchase_event></code></td>
-            <td>PantsLabyrinth</td>
+            <td><code>&lt;purchase_event&gt;</code></td>
+            <td>Pants Labyrinth</td>
             <td>Evento</td>
-            <td><code>name: string</code><br><code>preço: número</code></td>
+            <td><code>name: string</code><br><code>price: number</code></td>
             <td>Quando o usuário conclui uma compra</td>
         </tr>
         <tr>
@@ -116,13 +116,13 @@ th:nth-child(5), td:nth-child(5) {
             <td>Steppington</td>
             <td>Evento</td>
             <td></td>
-            <td>Quando o usuário entra no aplicativo Steppington</td>
+            <td>Quando o usuário entra no app Steppington</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
             <td>Steppington</td>
             <td>Evento</td>
-            <td><code>class_type: string</code><br><code>calories_burned: número</code><br><code>workout_length: número</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>Quando o usuário conclui um exercício</td>
         </tr>
         <tr>
@@ -143,7 +143,7 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_completed_class</code></td>
             <td>Steppington</td>
             <td>Evento</td>
-            <td><code>class_type: string</code><br><code>calories_burned: número</code><br><code>workout_length: número</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>Quando o usuário conclui um exercício</td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_set_goal</code></td>
             <td>Steppington</td>
             <td>Evento</td>
-            <td><code>goal_name: string</code><br><code>meta: número</code><br><code>unidades: string</code></td>
+            <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
             <td>Quando o usuário seleciona o botão <strong>Start Free Trial</strong>.</td>
         </tr>
     </tbody>
