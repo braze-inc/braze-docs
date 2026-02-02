@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Nexla
 
-> [Nexla](https://www.nexla.com) est un leader des opérations de données unifiées et figure parmi les meilleurs fournisseurs du classement Gartner 2021. La plateforme Nexla permet de créer facilement des flux de données évolutifs, en garantissant des opérations de données gouvernées et sans friction, une meilleure collaboration et une plus grande agilité pour les équipes commerciales et chargées des données. Les équipes qui travaillent avec des données bénéficient d'une expérience unifiée sans code ou avec peu de code pour intégrer, transformer, provisionner et surveiller les données pour tous les cas d'utilisation. 
+> [Nexla](https://www.nexla.com) est un leader des opérations de données unifiées et figure parmi les meilleurs fournisseurs du classement Gartner 2021. La plateforme Nexla fournit des outils pour créer des flux de données évolutifs, offrant des opérations de données gouvernées, une collaboration et une agilité pour les équipes commerciales et de données. Les équipes qui travaillent avec des données bénéficient d'une expérience unifiée sans code ou avec peu de code pour intégrer, transformer, provisionner et surveiller les données pour tous les cas d'utilisation. 
 
 L'intégration de Braze et Nexla permet aux clients qui utilisent Currents de tirer parti de Nexla [pour]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) extraire, transformer et charger les données des lacs de données vers d'autres emplacements dans un format personnalisé, rendant ainsi les données facilement accessibles dans l'ensemble de votre écosystème.
 
@@ -23,9 +23,9 @@ L'intégration de Braze et Nexla permet aux clients qui utilisent Currents de ti
 | Endpoint REST Braze  | L'URL de votre endpoint REST. Votre endpoint dépendra de l'[URL de Braze pour votre instance]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d'utilisation
+## Cas d’utilisation
 
-La solution DaaP de Nexla, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), permet de travailler facilement avec des données de n'importe quel format sans se soucier des métadonnées. Lorsque vous configurez vos flux de données à destination ou en provenance de Braze avec Nexla, des outils sans code le rendent facile et disponible en quelques minutes. Une fois le flux de données défini sur une destination, Nexla surveillera votre flux et pourra prendre en charge n'importe quelle quantité de données.
+[Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), le produit de données en tant que tel de Nexla, permet de travailler avec des données de n'importe quel format sans avoir à gérer les métadonnées. Lorsque vous mettez en place des flux de données vers ou depuis Braze avec Nexla, des outils sans code sont disponibles en quelques minutes. Une fois que le flux de données est défini sur une destination, Nexla surveille le flux et s'adapte à n'importe quel volume de données.
 
 ## Intégration
 
@@ -41,7 +41,7 @@ Si vous n'avez pas encore de compte Nexla, rendez-vous sur le [site Web](https:/
 3. Sélectionnez **Ajouter un nouvel identifiant**, nommez-le et ajoutez votre clé API Braze et votre endpoint REST, puis **Enregistrer**.
 4. Enfin, sélectionnez vos données et cliquez sur **Enregistrer**. 
 
-Nexla va désormais rechercher dans la source toutes les données qu'elle trouve et générer un [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) à transformer ou à envoyer à destination.
+Nexla recherchera dans la source les données disponibles et générera un [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) à transformer ou à envoyer vers une destination.
 
 #### Si Braze est votre destination
 
