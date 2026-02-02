@@ -1,17 +1,17 @@
 ---
-nav_title: Rapports
-article_title: Rapport poussé
+nav_title: Reporting
+article_title: Communication de notification push
 page_order: 21
 page_type: reference
-description: "Cet article traite des rapports de push, que vous pouvez utiliser pour visualiser et analyser le succès de vos campagnes de push."
+description: "Cet article couvre les rapports des notifications push, que vous pouvez utiliser pour afficher et analyser le succès de vos campagnes de notification push."
 channel: push
 tool: Reports
 
 ---
 
-# Rapport poussé
+# Rapports des notifications push
 
-> Cet article traite des rapports de push, que vous pouvez utiliser pour visualiser et analyser le succès de vos campagnes de push.
+> Cet article couvre les rapports des notifications push, que vous pouvez utiliser pour afficher et analyser le succès de vos campagnes de notification push.
 
 {% multi_lang_include analytics/campaign_analytics.md channel="push" %}
 
