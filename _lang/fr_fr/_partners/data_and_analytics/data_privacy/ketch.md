@@ -46,7 +46,7 @@ Vous souhaitez obtenir des conseils sur la création de groupes d'abonnement ? 
 4. Sélectionnez la connexion Braze que vous souhaitez utiliser pour orchestrer les signaux d'abonnement et de retrait.
 5. Saisissez le `subscription_group_id` de Braze pour le groupe d'abonnement auquel vous souhaitez envoyer les préférences utilisateur de Ketch.
 
-![Braze Subscription groups ID.]({% image_buster /assets/img/ketch/ketch1.png %})
+![ID de groupe d'abonnement Braze.]({% image_buster /assets/img/ketch/ketch1.png %})
 
 {% alert note %}
 Afin de collecter et d'orchestrer les signaux d'abonnement et de désabonnement des utilisateurs, les identités doivent être correctement configurées. Ketch recommande de configurer l'e-mail comme identifiant pour orchestrer les signaux de préférence des utilisateurs pour cette intégration.
@@ -55,7 +55,7 @@ Afin de collecter et d'orchestrer les signaux d'abonnement et de désabonnement 
 
 ### Étape 3 : Configurer les identités
 
-Un utilisateur ne peut voir le centre de préférences marketing que lorsque Ketch peut confirmer l'identité de cet utilisateur en matière de préférences marketing. Si Ketch ne peut pas saisir correctement l'identité de l'utilisateur, la page des préférences marketing ne s'affichera pas pour cet utilisateur, car Ketch ne pourra pas gérer ses préférences.
+Un utilisateur ne peut voir que le centre de préférences marketing lorsque Ketch peut confirmer l'identité de cet utilisateur en matière de préférences marketing. Si Ketch ne peut pas saisir correctement l'identité de l'utilisateur, la page des préférences marketing n'apparaît pas à cet utilisateur car Ketch n'est pas en mesure de gérer ses préférences.
 
 1. Pour configurer l'identité des préférences marketing, accédez à la page **Paramètres** dans Ketch, puis cliquez sur **Espace d'identité.** Vous devrez soit créer un nouvel espace d'identité, soit modifier un espace d'identité existant pour assigner cet espace d'identité comme identité de préférence marketing. Vérifiez que l'étiquette Ketch déployée sur la propriété capture correctement cet espace d'identité.
 2. Allez dans **Experience Server** > **Propriétés**, et modifiez la propriété souhaitée. Sous la couche de données de cette propriété, veillez à activer l'espace d'identité personnalisé. Ensuite, configurez la manière dont l'identité du marketeur est capturée sur ce site.
