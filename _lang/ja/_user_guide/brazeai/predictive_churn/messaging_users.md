@@ -1,6 +1,6 @@
 ---
-nav_title: メッセージユーザー
-article_title: Predictive Churnのターゲットユーザー
+nav_title: ユーザーへのメッセージング
+article_title: 解約予測のターゲットユーザー
 description: "このリファレンス記事では、フィルターの実装や戦略的な考慮事項など、解約予測の作成後に考えられる次のステップについて説明します。"
 page_order: 1.2
 
