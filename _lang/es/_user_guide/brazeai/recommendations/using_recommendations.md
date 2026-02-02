@@ -1,13 +1,13 @@
 ---
 nav_title: Utilizar las recomendaciones
-article_title: Utilizar recomendaciones de artículos en tu mensajería
+article_title: Utiliza recomendaciones de artículos en tus mensajes
 description: "Este artículo describe cómo utilizar las recomendaciones de elementos en tu mensaje."
 page_order: 1.2
 ---
 
-# Utilizar recomendaciones de artículos en tu mensajería
+# Utiliza recomendaciones de artículos en tu mensajería
 
-> Una vez entrenada tu recomendación, puedes utilizar Liquid para obtener y mostrar los elementos recomendados en tus mensajes trabajando directamente con el objeto `product_recommendation` Liquid.
+> Una vez formada tu recomendación, puedes utilizar Liquid para obtener y mostrar los elementos recomendados en tus mensajes trabajando directamente con el objeto `product_recommendation` Liquid.
 
 {% alert tip %}
 Para un recorrido paso a paso, consulta nuestro curso de Braze Learning: [Crear experiencias personalizadas con IA](https://learning.braze.com/ai-item-recommendations-use-case/1996254).
@@ -25,7 +25,7 @@ Una vez finalizada la formación de tu recomendación, puedes personalizar tus m
 
 {% tabs local %}
 {% tab pre-formatted code %}
-\!["Añadir personalización" modal con la recomendación de artículos como tipo de personalización.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
+![Modalidad "Añadir personalización" con la recomendación de artículos como tipo de personalización.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 Puedes generar Liquid desde la sección **Añadir personalización** de tu creador de mensajes:
 
@@ -86,7 +86,7 @@ Las recomendaciones de IA devuelven varios productos como una matriz, donde `ite
 {% endtab %}
 {% endtabs %}
 
-### Paso 2: Haz referencia a una imagen (opcional)
+### Paso 2: Haz referencia a una imagen (opcional)
 
 Si el catálogo que recomiendas incluye enlaces de imágenes, puedes hacer referencia a ellos en tu mensaje. 
 
@@ -94,7 +94,7 @@ Si el catálogo que recomiendas incluye enlaces de imágenes, puedes hacer refer
 {% tab Drag-and-drop%}
 En el editor de arrastrar y soltar del correo electrónico, añade un bloque de imagen a tu correo electrónico y, a continuación, selecciona el bloque de imagen para abrir **Propiedades de imagen**.
 
-\![Panel de propiedades de la imagen en el editor de arrastrar y soltar]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
+![Panel de propiedades de la imagen en el editor de arrastrar y soltar]({% image_buster /assets/img/image_with_liquid.png %}){: style="max-width:45%"}
 
 Alterna **Imagen con Liquid** y, a continuación, añade lo siguiente al campo **URL dinámico**:
 
@@ -113,7 +113,7 @@ Sustituye lo siguiente:
 |`image_url_field`|El nombre del campo de tu catálogo que contiene las URL de las imágenes.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-Para incluir una imagen de marcador de posición en tus correos de vista previa y de prueba, selecciona **Elegir imagen** y, a continuación, elige una imagen de tu biblioteca multimedia o introduce la URL de una imagen de tu sitio de alojamiento.
+Para incluir una imagen de marcador de posición en tus correos electrónicos de vista previa y de prueba, selecciona **Elegir imagen** y, a continuación, elige una imagen de tu biblioteca multimedia o introduce la URL de una imagen de tu sitio de alojamiento.
 {% endtab %}
 
 {% tab HTML %}
