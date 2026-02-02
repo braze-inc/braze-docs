@@ -2,11 +2,11 @@
 nav_title: Verbinden mehrerer Shops
 article_title: Shopify Unterstützung mehrerer Shops
 alias: /shopify_connecting_multiple_stores/
-page_order: 5
+page_order: 6
 description: "Dieser referenzierte Artikel beschreibt, wie Sie mehrere Shopify Shops mit einem einzigen Workspace verbinden und konfigurieren können."
 ---
 
-# Mehrere Shopify Shops miteinander verbinden
+# Verbinden Sie mehrere Shopify Shops
 
 > Verbinden Sie mehrere Shopify Domains mit einem einzigen Workspace, um einen ganzheitlichen Überblick über Ihre Kund:innen in allen Märkten zu erhalten. Erstellen und starten Sie Automatisierungsprogramme und Journeys in einem einzigen Workspace, ohne doppelte Arbeit in den regionalen Shops.  
 
@@ -30,11 +30,11 @@ Nachdem Sie die Braze App in Ihrem Shopify Shop installiert und Ihren ersten Sho
 
 Für Ihren zusätzlichen regionalen Shopify Shop, wählen Sie **Einrichtung beginnen**.
 
-![Der Bereich "Einstellungen für die Integration" mit einem Button zum "Einrichten".]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
+![Der Bereich "Einstellungen für die Integration" mit einem Button "Mit der Einrichtung beginnen".]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
 
 Wie bei Ihrer ersten Shopify Integration können Sie zwischen einer Standard- oder angepassten Einrichtung wählen.
 
-!["Enablement der Braze SDKs" mit Optionen zur Implementierung des Braze Internet SDK mit der Standard- oder angepassten Einrichtung.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
+!["Aktivieren Sie die Braze SDKs" mit Optionen zur Implementierung des Braze Internet SDK mit der Standard- oder angepassten Einrichtung.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
 
 Wählen Sie die Option, die Ihren Bedürfnissen am besten entspricht:
 
@@ -69,7 +69,7 @@ Wenn ein Nutzerprofil synchronisiert wird, werden die folgenden Felder zusammeng
 - Angepasste Event- und Kauf-Event-Daten
 - Angepasste Event-Eigenschaften für die Segmentierung (z.B. "X Mal in Y Tagen", wobei X ≤ 50 und Y ≤ 30)
 - Anzahl der Ereignisse (kombiniert aus beiden Profilen)
-- Datum des ersten und des letzten Ereignisses (Braze wählt das früheste und das späteste Datum aus)
+- Datum des ersten und letzten Ereignisses (Braze wählt das früheste und jüngste Datum aus)
 - Daten zur Interaktion mit der Kampagne (jüngste Datumsfelder)
 - Workflow-Zusammenfassungen (jüngste Datumsfelder)
 - Verlauf der Nachrichten und des Engagements
@@ -80,14 +80,14 @@ Wenn ein Nutzerprofil synchronisiert wird, werden die folgenden Felder zusammeng
 Sie können wählen, ob Sie Abonnent:in direkt über Braze (in Ihren Shopify Konnektor-Einstellungen) oder über API- und SDK-Alternativen, die Daten von Shopify synchronisieren, sammeln möchten.
 
 {% tabs local %}
-{% tab Shopify Konnektor %}
+{% tab Shopify connector %}
 Im Schritt **Nutzer:innen verwalten** Ihrer Shopify Konnektor-Einstellungen können Sie Braze verwenden, um Opt-ins von E-Mail- und SMS-Abonnenten zu sammeln und sie in einer speziellen Abo-Gruppe zu organisieren:
 
 1. Erstellen Sie für jeden Shop, den Sie verbinden, eine eindeutige Abo-Gruppe. So erhalten Sie genaue Daten darüber, woher die Abonnent:innen kommen.
 2. Aktivieren Sie die Erfassung von E-Mail- und SMS-Abonnenten.
 {% endtab %}
 
-{% tab Braze API oder SDKs %}
+{% tab Braze API or SDKs %}
 Alternativ können Sie die Opt-in-Informationen für E-Mail- und SMS-Marketing direkt von Shopify aus über die Braze API oder SDKs synchronisieren.
 
 |Option|Ressourcen|
