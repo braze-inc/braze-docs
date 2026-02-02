@@ -30,7 +30,7 @@ Als Nächstes konfigurieren Sie Ihr Exemplar und die Benachrichtigungen auf dies
 Zusätzlich zum Triggern der Nachricht können Sie auch Inhalte mit der API-Anfrage in die Nachricht innerhalb des `trigger_properties` Objekts einfügen, die als Template dienen sollen. Auf diesen Inhalt kann im Hauptteil der Nachricht verwiesen werden. Zum Beispiel können Sie Folgendes hinzufügen:
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``. Weitere Informationen finden Sie im folgenden Beispiel für eine Benachrichtigung in den sozialen Medien:
 
-![Die oben erwähnte triggernde Eigenschaft, die in der Nachricht enthalten ist, um den Namen des Nutzers:innen automatisch auszufüllen, gefolgt von dem Text: "Ihr Foto gefällt mir! Klicken Sie hier, um zu sehen, was sie gemacht haben.“.]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
+![Die oben erwähnte Trigger-Eigenschaft, die in der Nachricht enthalten ist, füllt automatisch den Namen des Nutzers oder der Nutzerin aus, gefolgt von dem Text: „Ihr Foto hat mir gefallen! Klicken Sie hier, um zu sehen, was sie gemacht haben.“.]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
 
 ## Erneute Qualifizierung mit API-getriggerten Kampagnen
 
