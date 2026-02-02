@@ -54,7 +54,7 @@ Access your onboarding course at:
   - Kurs: `getCourseLink?moduleId=12087`
   - Lektion: `getLessonLink?lessonId=25805`
   - eNPS-Umfrage: `getSurveyLink?surveyId=654`<br><br>
-3. Nutzer:innen, die über diesen Link zu eduMe gelangen, werden einem eduMe Team oder einer Gruppe Ihrer Wahl hinzugefügt. Ersetzen Sie `groupId` durch die entsprechende Team ID oder eduMe Gruppen ID. In der Regel werden Sie die Team ID verwenden, außer bei Kursen, die eine Einschreibung erfordern. In diesem Fall sollten Sie die Gruppen ID verwenden.<br><br>
-4. Fügen Sie ein geeignetes Feld ein, auf das Sie das Feld `externalUserId` abbilden können. Das Beispiel für den Aufruf von Connected-Content verwendet das Feld `driver_id`, obwohl Ihr Feld wahrscheinlich anders aussehen wird. Diese ID wird in den eduMe-Berichten verfügbar sein, so dass Sie sie mit Ihren Systemen in Verbindung bringen können.<br><br>
+3. Nutzer:innen, die über diesen Link zu eduMe gelangen, werden zu einem eduMe Team oder einer Gruppe Ihrer Wahl hinzugefügt. Ersetzen Sie `groupId` durch die entsprechende Team ID oder eduMe Gruppen ID. Normalerweise verwenden Sie die Team ID, außer bei Kursen, die eine Einschreibung erfordern. In diesem Fall sollten Sie die Gruppen ID verwenden.<br><br>
+4. Fügen Sie ein geeignetes Feld ein, auf das Sie das Feld `externalUserId` abbilden können. Das Beispiel für den Aufruf von Connected-Content verwendet das Feld `driver_id`, obwohl Ihr Feld wahrscheinlich anders aussehen wird. Diese ID ist in eduMe-Berichten verfügbar, so dass Sie diese mit Ihren Systemen in Verbindung bringen können.<br><br>
 5. Schließlich können Sie Ihre Nachrichten nach Bedarf anpassen und testen. Wir empfehlen Ihnen, mindestens eine Testnachricht zu versenden, auf die eduMe-Inhalte zuzugreifen, die Lektion oder den Kurs abzuschließen und zu überprüfen, ob die eduMe Analytics aufgezeichnet werden. 
 
