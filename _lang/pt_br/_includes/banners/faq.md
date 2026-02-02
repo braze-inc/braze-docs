@@ -29,7 +29,7 @@ Os Banners são diferentes dos Cartões de Conteúdo, o que significa que você 
 Embora os Banners não suportem [entrega baseada em ação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery), você pode direcionar usuários com base em suas ações passadas usando segmentação e prioridade.
 
 Por exemplo, para mostrar um Banner especial apenas para usuários que completaram um `purchase` evento:
-1. **Direcionamento:** Em sua campanha, direcione um segmento de usuários que realizaram o evento personalizado `purchase` pelo menos uma vez.
+1. **Direcionamento:** Em sua campanha, direcione um segmento de usuários que tenham realizado o evento personalizado `purchase` pelo menos uma vez.
 2. **Prioridade:** Se você tiver um Banner geral para todos os usuários e este Banner específico para compradores direcionando o mesmo local, defina a prioridade do Banner específico para **Alta** e o Banner geral para **Média** ou **Baixa**.
 
 Quando o usuário inicia uma nova sessão ou atualiza os Banners após realizar a ação, a Braze avalia sua elegibilidade. Se eles corresponderem ao segmento "Compra", o Banner de alta prioridade será exibido.
@@ -37,7 +37,7 @@ Quando o usuário inicia uma nova sessão ou atualiza os Banners após realizar 
 
 ## Os usuários podem dispensar manualmente um Banner?
 
-Não. Os usuários não podem dispensar manualmente os Banners. No entanto, você pode controlar a visibilidade do Banner gerenciando a elegibilidade do segmento de usuários. Quando um usuário não atende mais aos critérios de direcionamento para uma campanha de Banner, ele não verá o Banner novamente em sua próxima sessão.
+Não. Os usuários não podem dispensar manualmente os Banners. No entanto, você pode controlar a visibilidade do Banner gerenciando a elegibilidade do segmento de usuários. Quando um usuário não atende mais aos critérios de direcionamento para uma campanha de Banner, ele não o verá novamente em sua próxima sessão.
 
 Por exemplo, se você exibir um Banner promocional até que um usuário faça uma compra, registrar um evento como `purchase_completed` pode remover esse usuário do segmento direcionado, efetivamente ocultando o Banner em sessões subsequentes.
 
