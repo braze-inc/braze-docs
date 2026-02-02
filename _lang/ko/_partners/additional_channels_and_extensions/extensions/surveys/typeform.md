@@ -21,11 +21,11 @@ By integrating Braze and Typeform, you can:
 
 | Requirement | 설명 |
 | ----------- | ----------- |
-| Typeform account | A Typeform account with access to webhooks is required to take advantage of this partnership. |
+| Typeform account | 이 파트너십을 이용하려면 웹훅에 액세스할 수 있는 Typeform 계정이 필요합니다. |
 | Braze Data Transformation | A [Data Transformation URL]({{site.baseurl}}/data_transformation/) is necessary to receive data from Typeform. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## 통합
+## Integration
 
 ### 1단계: Set up the Braze Data Transformation to accept Typeform's webhooks {#step-1}
 
@@ -45,7 +45,7 @@ Send a test event to your Data Transformation by clicking **View deliveries** an
 
 ### 3단계: Write transformation code to accept your chosen Typeform events
 
-In this step, you will transform the webhook payload that will be sent from Typeform to a JavaScript object return value.
+이 단계에서는 Typeform에서 전송된 웹훅 페이로드를 JavaScript 객체 반환 값으로 변환합니다.
 
 1. Refresh your Data Transformation and make sure you can see the Typeform test payload in the **Webhook Details**.
 2. Update your Data Transformation code to support your chosen Typeform events.
@@ -326,7 +326,7 @@ Content-Type: application/json
 
 The following are example templates built using our [example Typeform webhook payload](#example-typeform-webhook-payload). These templates can be used as a starting point. You can start from scratch or delete specific components as you see fit.
 
-In these example templates, we are logging a custom event to the Braze profile. The title of the Typeform will be passed as the custom event name, and the Typeform results will be passed as event properties. These example templates do not account for the Calendly, File Upload, or Payment question types in Typeform.
+In these example templates, we are logging a custom event to the Braze profile. 유형 양식의 제목은 커스텀 이벤트 이름으로 전달되고 유형 양식 결과는 이벤트 속성정보로 전달됩니다. These example templates do not account for the Calendly, File Upload, or Payment question types in Typeform.
 
 ### Use case: Email as identifier
 
@@ -474,7 +474,7 @@ return brazecall;
 
 You can use Typeform Hidden Fields to pass data in the Typeform webhook payload, such as a user's ID, without having to pass this information in the Typeform response.
 
-In this example template, we are using a "user_id" Hidden Field and passing this into the `/users/track` request payload as the `external_id`. Although we are using "user_id", the fields can be modified to suit your needs.
+이 예제 템플릿에서는 "user_id" 숨겨진 필드를 사용하고 이를 `/users/track` 요청 페이로드에 `external_id` 로 전달하고 있습니다. "user_id", 을 사용하고 있지만 필요에 따라 필드를 수정할 수 있습니다.
 
 {% tabs local %}
 {% tab Input %}
@@ -614,7 +614,7 @@ return brazecall;
 
 After you have written your data transformation, click **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation.
 
-Once activated, custom event data will be logged to a user's profile when they complete your form.
+활성화하면 사용자가 양식을 작성할 때 커스텀 이벤트 데이터가 사용자 프로필에 기록됩니다.
 
 ![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 
