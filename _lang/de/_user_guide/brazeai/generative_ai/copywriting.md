@@ -5,7 +5,7 @@ page_order: 2.1
 description: "Dieser Referenzartikel befasst sich mit dem KI-Texterstellungsassistenten, einer Funktion, die einen kurzen Produktnamen oder eine kurze Beschreibung an das GPT-Texterstellungstool von OpenAI weitergibt, um menschenähnliche Marketingtexte zur Verwendung in Ihren Mitteilungen zu erstellen."
 ---
 
-# Erzeugen einer Kopie mit <sup>BrazeAITM</sup>
+# Kopie mit <sup>BrazeAITM</sup> generieren
 
 > Der KI-Copywriting-Assistent übergibt einen kurzen Produktnamen oder eine kurze Beschreibung an ein GPT-Texterstellungstool eines Drittanbieters, das OpenAI gehört, um menschenähnliche Marketingtexte zur Verwendung in Ihrem Messeging zu erstellen. Diese Funktion ist standardmäßig für die meisten Nachrichten-Editoren im Braze Dashboard verfügbar.
 
@@ -36,7 +36,7 @@ Um Ihre Kopie weiter anzupassen, können Sie:
 
 Wenn Sie fertig sind, wählen Sie **Generieren**. Wir verwenden die von Ihnen bereitgestellten Informationen, um GPT zu veranlassen, Texte für Sie zu schreiben. Die Antwort wird von OpenAI abgerufen und Ihnen zur Verfügung gestellt. Weitere Informationen finden Sie unter [Wie werden meine Daten verwendet und an OpenAI gesendet?](#ai-policy)
 
-![KI-Texterassistent Modal mit verschiedenen Features"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
+![Modal „KI-Copywriting-Assistent“ mit verschiedenen verfügbaren Funktionen"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
 {% alert important %}
 Wir filtern Antworten auf anstößige Inhalte heraus, die gegen die [Content-Richtlinie](https://beta.openai.com/docs/usage-guidelines/content-policy) von OpenAI verstoßen.
