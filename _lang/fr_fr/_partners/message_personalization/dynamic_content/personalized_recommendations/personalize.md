@@ -28,7 +28,7 @@ L'intégration de Braze et de Personalize.AI vous permet d'exporter des données
 * Fournir des recommandations personnalisées pour les articles et les offres, y compris le traitement, le moment opportun et le contenu.
 * Identifiez des objectifs prioritaires et ciblez votre audience optimale grâce à Braze.
 * Identifier les possibilités de réengagement des utilisateurs qui n'ont plus d'expérience.
-* Exploiter les données de géolocalisation pour trouver la bonne audience pour les emplacements/localisations nouvellement ouverts.
+* Utiliser les données de géolocalisation pour trouver la bonne audience pour les emplacements/localisations nouvellement ouverts.
 * Utilisez la modélisation lookalike pour créer des données disponibles limitées pour les nouveaux utilisateurs, en les associant aux recommandations les plus pertinentes.
 * Identifier les bons moyens d'engager les clients tout au long de leur cycle de vie. 
 * Évaluer de manière proactive la probabilité que les clients se désabonnent et attribuer un score de risque pour identifier des indicateurs précoces de désabonnement.
@@ -61,7 +61,7 @@ Voici, par exemple, un ensemble d'attributs clients en rapport avec un exemple d
 | ----------- | ------------- | 
 | `Customer_ID` | 12345 |
 | `Target_Canvas` | C4 |
-| `Target_Objective` |  "Atténuation des désabonnements" |
+| `Target_Objective` |  "Churn_Mitigation" |
 | `C4_Target_Date` | 3/1/2023 |
 | `C4_Target_Variant` | Traitement |
 | `C4_Treatment` | "P.AI_Model" |
