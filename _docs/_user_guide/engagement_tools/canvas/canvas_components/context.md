@@ -2,7 +2,7 @@
 nav_title: Context 
 article_title: Context 
 alias: /context/
-page_order: 1.5
+page_order: 6
 page_type: reference
 toc_headers: "h2"
 description: "This reference article covers how to create and use Context steps in your Canvas."

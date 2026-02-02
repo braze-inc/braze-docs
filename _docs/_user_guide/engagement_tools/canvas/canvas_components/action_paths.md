@@ -2,7 +2,7 @@
 nav_title: Action paths
 article_title: Action Paths 
 alias: /action_paths/
-page_order: 0.1
+page_order: 1
 page_type: reference
 description: "This reference article covers how to use Action Paths, a component that allows you to sort users based on their actions."
 tool: Canvas
