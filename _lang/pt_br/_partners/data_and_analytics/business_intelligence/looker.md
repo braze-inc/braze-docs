@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Curso do Braze Learning] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Looker
 
 > A [Looker](https://looker.com/), uma plataforma de análise de dados e análises de big data, o capacita a explorar, analisar e compartilhar análises de business intelligence em tempo real sem problemas.
 
@@ -70,7 +70,7 @@ Somente os usuários existentes serão sinalizados. Não é possível usar Looks
 
 Configure uma ação do Looker da Braze com sua chave da API REST e o endpoint REST da Braze.
 
-![A página de configuração do Looker Braze. Aqui, você pode encontrar campos para a chave da API do Braze e o endpoint da API REST do Braze.]({% image_buster /assets/img/braze-looker-action.png %})
+![A página de configuração do Looker Braze. Aqui você pode encontrar campos para a chave de API e o endpoint da API REST da Braze.]({% image_buster /assets/img/braze-looker-action.png %})
 
 #### Etapa 2: Configurar o Looker Develop
 
@@ -143,7 +143,7 @@ Authorization: Bearer [API_KEY]
 
 ### Usuários do segmento no Braze {#segment-users}
 
-No Braze, para criar um segmento desses usuários sinalizados, navegue até **Segments (Segmentos** ) em **Engagement (Engajamento)**, nomeie seu segmento e selecione **Looker_Export** como o filtro. Em seguida, use a opção "includes value" (inclui valor) e forneça o sinalizador de atributo personalizado que você atribuiu no Looker.
+No Braze, para criar um segmento desses usuários sinalizados, navegue até **Segments (Segmentos** ) em **Engagement (Engajamento**), nomeie seu segmento e selecione **Looker_Export** como o filtro. Em seguida, use a opção "includes value" (inclui valor) e forneça o sinalizador de atributo personalizado que você atribuiu no Looker.
 
 ![No criador de segmentos do Braze, o filtro "looker_export" está definido como "includes_value" e "Looker".]({% image_buster /assets/img/braze_segments.png %})
 
