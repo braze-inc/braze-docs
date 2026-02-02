@@ -1,6 +1,6 @@
 ---
 nav_title: Mencione-me
-article_title: Integração do Mention Me com o Braze
+article_title: Integrar o Mention Me ao Braze
 description: Guia de configuração da integração Mention Me
 alias: /partners/mention_me/
 page_type: partner
@@ -47,6 +47,6 @@ Para obter um passo a passo completo, consulte a [documentação de configuraç�
 Para integrar o Mention Me com o Braze:
 
 1. No Mention Me, acesse a página de [integração do Braze](https://mention-me.com/merchant/~/integrations/braze) e selecione **Connect (Conectar**).
-2. Selecione **Create New Authorization (Criar nova autorização)**, adicione a [chave de API criada anteriormente](#prerequisites) e selecione sua instância do Braze.
+2. Selecione **Create New Authorization (Criar nova autorização**), adicione a [chave de API criada anteriormente](#prerequisites) e selecione sua instância do Braze.
 3. Escolha um ou mais países com os quais você gostaria de sincronizar.
 4. Quando terminar, selecione **Connect**.
