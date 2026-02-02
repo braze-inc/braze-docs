@@ -3,7 +3,7 @@ nav_title: Jacquard
 article_title: Jacquard
 alias: /partners/jacquard/
 page_order: 1
-description: "Cet article de référence présente le partenariat entre Braze et Jacquard Dynamic Optimisation qui s'appuie sur Braze Currents et Connected Content pour collecter les informations de suivi des clics de vos abonnés par le biais de webhooks. Jacquard relie ensuite ces événements à vos variantes linguistiques pour une optimisation linguistique en temps réel."
+description: "Cet article de référence présente le partenariat entre Braze et Jacquard Dynamic Optimisation qui utilise Braze Currents et Connected Content pour collecter les informations de suivi des clics de vos abonnés par le biais de webhooks. Jacquard relie ensuite ces événements à vos variantes linguistiques pour une optimisation linguistique en temps réel."
 page_type: partner
 search_tag: Partner
 ---
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Jacquard](https://www.jacquard.com/) réunit l'intelligence artificielle, la linguistique informatique et un esprit centré sur le client pour aider à déployer le langage de la marque à grande échelle, sur des canaux personnalisés aux couleurs de votre marque.
 
-L'optimisation dynamique, alimentée par Jacquard X, s'appuie sur Braze Currents et Connected Content pour collecter des informations de suivi des clics auprès de vos abonnés par le biais de webhooks. Jacquard relie ensuite ces événements à vos variantes linguistiques pour une optimisation linguistique en temps réel. 
+L'optimisation dynamique, alimentée par Jacquard X, utilise Braze Currents et Connected Content pour collecter les informations de suivi des clics de vos abonnés par le biais de webhooks. Jacquard relie ensuite ces événements à vos variantes linguistiques pour une optimisation linguistique en temps réel. 
 
 ## Conditions préalables
 
@@ -27,7 +27,7 @@ L'optimisation dynamique, alimentée par Jacquard X, s'appuie sur Braze Currents
 
 ### Étape 1 : Demander les identifiants Amazon S3 de Jacquard
 
-Vous aurez besoin de Jacquard pour configurer un compartiment Amazon S3 dédié afin de recevoir vos événements de suivi des clics de Braze. Contactez votre gestionnaire de la satisfaction client Jacquard pour démarrer ce processus. Lorsque le compartiment est créé, vous recevrez des identifiants uniques pour créer votre flux Currents. 
+Vous aurez besoin de Jacquard pour configurer un compartiment Amazon S3 dédié afin de recevoir vos événements de suivi des clics de Braze. Contactez votre gestionnaire de satisfaction client Jacquard pour démarrer ce processus. Lorsque le compartiment est créé, vous recevrez des identifiants uniques pour créer votre flux Currents. 
 
 ### Étape 2 : Créer un flux Currents
 
@@ -40,7 +40,7 @@ Vous aurez besoin de Jacquard pour configurer un compartiment Amazon S3 dédié 
 
 ### Étape 3 : requête de suppression d'informations personnellement identifiables (IPI).
 
-Ensuite, contactez l'équipe de votre compte Braze pour vous assurer qu'aucune information personnelle identifiable n'est transmise à Jacquard.
+Ensuite, contactez votre équipe de compte Braze pour vous assurer qu'aucune information personnellement identifiable n'est transmise à Jacquard.
 
 Par défaut, le flux Currents inclura certains attributs par défaut comme l'e-mail et l'adresse. Jacquard ne peut pas recevoir et ne recevra pas d'IIP, il est donc essentiel que vous demandiez à l'équipe de votre compte Braze de désactiver cette fonction pour toutes les données d'événements transmises à Jacquard.
 
@@ -48,6 +48,6 @@ Par défaut, le flux Currents inclura certains attributs par défaut comme l'e-m
 
 Contactez l'équipe de votre compte Jacquard pour obtenir les extraits de code nécessaires.
 
-Ces extraits tirent parti du [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) et, une fois placés dans vos e-mails, ils intègrent de manière dynamique la langue et un pixel de suivi afin que Jacquard puisse optimiser votre langue en temps réel à l'aide de Jacquard X.
+Ces extraits utilisent le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) et, une fois placés dans vos e-mails, ils intègrent dynamiquement la langue et un pixel de suivi afin que Jacquard puisse optimiser votre langue en temps réel à l'aide de Jacquard X.
 
 
