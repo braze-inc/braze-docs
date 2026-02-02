@@ -1,5 +1,5 @@
 ---
-nav_title: Bloques de editor
+nav_title: Bloques de edición
 article_title: Bloques de editor de arrastrar y soltar
 noindex: true
 layout: redirect
