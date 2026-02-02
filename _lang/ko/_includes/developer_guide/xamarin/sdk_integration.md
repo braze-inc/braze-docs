@@ -1,6 +1,6 @@
 ## .NET MAUI SDK 통합
 
-Braze .NET MAUI (이전의 Xamarin) SDK를 통합하면 기본 분석 기능과 사용자와 소통할 수 있는 인앱 메시지를 사용할 수 있습니다. 
+Braze .NET MAUI (이전 Xamarin) SDK를 통합하면 기본 분석 기능과 사용자와 소통할 수 있는 인앱 메시지를 사용할 수 있습니다. 
 
 ### 필수 조건
 
