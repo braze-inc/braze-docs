@@ -1,6 +1,6 @@
 ---
 nav_title: Mencióname
-article_title: Integración de Mention Me con Braze
+article_title: Integrar Mention Me con Braze
 description: Guía de configuración de la integración de Mention Me
 alias: /partners/mention_me/
 page_type: partner
@@ -34,7 +34,7 @@ Antes de empezar, necesitarás lo siguiente:
 
 Cuando configures esta integración, Mention Me creará automáticamente tus atributos y eventos del cliente, por lo que no tendrás que hacerlo de antemano.
 
-Las direcciones de correo electrónico de tus clientes en Braze se utilizarán para vincular eventos y atributos personalizados relevantes. Mention Me enviará eventos y atributos del perfil de contacto de cualquier cliente potencial o existente que desencadene este evento a través de Mention Me, independientemente de su estado de adhesión voluntaria.
+Las direcciones de correo electrónico de tus clientes en Braze se utilizarán para vincular eventos y atributos personalizados relevantes. Mention Me enviará eventos y atributos del perfil de contacto para cualquier cliente potencial o existente que desencadene este evento a través de Mention Me, independientemente de su estado de adhesión voluntaria.
 
 Para más detalles, consulta [Atributos y eventos del perfil de contacto](https://help.mention-me.com/hc/en-gb/articles/26677937177501-What-Mention-Me-data-is-sent-to-Braze).
 
