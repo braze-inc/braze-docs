@@ -64,5 +64,5 @@ Sie können Ihre Daten filtern nach:
 Die im Dashboard **Nachrichtenverwendung** angezeigten Daten beziehen sich auf die Vertragsebene und sind nicht auf ein einzelnes Dashboard-Unternehmen oder einen Arbeitsbereich beschränkt. Diese Daten spiegeln die Nutzung aller Arbeitsbereiche innerhalb Ihres Dashboards wider und möglicherweise auch aller Dashboards (wenn Sie mehrere haben).
 {% endalert %}
 
-- Die zugrundeliegenden Daten werden täglich zur Verfügung gestellt, wobei die Datentabellen um 3 Uhr, 9 Uhr, 12 Uhr und 18 Uhr EST aktualisiert werden. Das Update des Dashboards **zur Nutzung von Nachrichten** kann länger als 24 Stunden dauern.
+- Die zugrundeliegenden Daten werden täglich zur Verfügung gestellt, wobei die Datentabellen um 3 Uhr, 9 Uhr, 12 Uhr und 18 Uhr EST aktualisiert werden. Die Aktualisierung des Dashboards **zur Nutzung von Nachrichten** kann nach Änderungen länger als 48 Stunden dauern, damit die Daten synchronisiert werden können.
 - Braze folgt der üblichen Rundungsmethodik: Zahlen werden auf das nächste Zehntel aufgerundet.
