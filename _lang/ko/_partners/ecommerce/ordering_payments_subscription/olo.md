@@ -38,7 +38,7 @@ To handle multiple Olo events within this single transformation, look for the `X
 
 {% multi_lang_include create_transformation.md location="default" %}
 
-### Step 2: Set up Olo webhooks
+### 2단계: Set up Olo webhooks
 
 Use the [self-service webhooks tool](https://olosupport.zendesk.com/hc/en-us/articles/360061153692-Self-Service-Webhooks) within the Olo dashboard to set up webhooks to send to your Data Transformation.
 
