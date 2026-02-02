@@ -39,7 +39,7 @@ This integration also allows you to [import user cohorts to Braze]({{site.baseur
 2. Select **Braze** from the list of available destinations.
 3. Provide your Braze REST endpoint (excluding "https://rest.") and your Braze REST API Key.<br><br>![]({% image_buster /assets/img/hightouch/hightouch_braze_setup.png %})
 
-### Step 2: Object and event syncing
+### 2단계: Object and event syncing
 
 Hightouch supports syncing to both user objects and events.
 
@@ -49,7 +49,7 @@ Hightouch supports syncing to both user objects and events.
 | Events | Syncs records as events to your destination; this is often in the form of a track call. | Track event or track purchase |
 
 {% alert note %}
-Refer to [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) for more information on how syncs affect your Braze data point consumption.
+동기화가 데이터 포인트가 기록되는 방식에 미치는 영향에 대한 자세한 내용은 [Hightouch를](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) 참조하세요.
 {% endalert %}
 
 #### Syncing Braze objects
