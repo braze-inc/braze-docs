@@ -60,6 +60,6 @@ Eppo uses these assignments and fact tables to analyze results, and it's recomme
 
 ## Support
 
-For questions about setting up Braze Currents, Snowflake Data Sharing, or configuring multivariate campaigns, reach out to your Braze customer success manager.
+Braze 커런츠, Snowflake 데이터 공유 설정 또는 다변량 캠페인 구성에 대한 질문이 있는 경우 Braze 고객 성공 매니저에게 문의하세요.
 
 For assistance with configuring Eppo to measure Braze experiments, contact the Eppo support team.
