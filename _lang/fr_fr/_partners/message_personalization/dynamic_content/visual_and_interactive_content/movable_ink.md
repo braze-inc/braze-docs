@@ -60,26 +60,26 @@ Intelligent Creative propose de nombreuses offres dont les utilisateurs de Braze
 
 Les clients devront créer une source de données qui peut être un CSV, une importation de site web ou une intégration API.
 
-![Différentes options de sources de données apparaissent : Téléchargement CSV, site web ou intégration API.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+![Différentes options de sources de données apparaissent : Chargement d’un CSV, site web ou intégration API.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
 {% tabs local %}
-{% tab Source de données CSV %}
+{% tab CSV Data Source %}
 - **Source de données CSV**: Chaque ligne doit comporter au moins une colonne de segmentation et une colonne de contenu. Une fois votre fichier CSV téléchargé, sélectionnez les colonnes à utiliser pour le ciblage du contenu. [Exemple de fichier CSV]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
-![Les champs qui s'affichent lorsque vous sélectionnez "CSV" comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
+![Champs affichés en sélectionnant « CSV » comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
-{% tab Source de données du site web %}
+{% tab Website Data Source %}
 - **Source de données du site web**: Chaque ligne doit comporter au moins une colonne de segmentation et une colonne de contenu. Une fois votre fichier CSV téléchargé, sélectionnez les colonnes à utiliser pour le ciblage du contenu.
   - Dans le cadre de ce processus, vous devez établir un mappage :
     - Quels sont les champs qui seront utilisés comme segmentations ?
     - Quels sont les champs de données que vous souhaitez voir personnalisés de manière dynamique dans la création (par exemple : attributs de l'utilisateur ou attributs personnalisés tels que le prénom, le nom, la ville, etc.)
 
-![Les champs qui s'affichent lorsque vous sélectionnez "Site web" comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
+![Champs affichés en sélectionnant « Website » (Site Web) comme source de données.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
-{% tab Intégrations API %}
+{% tab API Integrations %}
 - **Intégrations API**: Utilisez l'API de votre entreprise pour alimenter le contenu directement à partir d'une réponse d'API.
 
-![Les champs qui s'affichent lorsque vous sélectionnez "Integration d’API" comme source de données]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
+![Champs affichés en sélectionnant « API Integration » (Intégration par API) comme source de données]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -89,11 +89,11 @@ Dans l'écran d'accueil de Movable Ink, créez une campagne. Vous pouvez choisir
 
 Nous vous suggérons également de jeter un coup d'œil aux différentes options de contenu disponibles par le biais des blocs.
 
-![Une image de la plateforme Movable Ink lors de la création d'une nouvelle campagne Movable Ink.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
+![Une image de ce à quoi ressemble la plateforme Movable Ink lors de la création d'une nouvelle campagne Movable Ink.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
 
 Movable Ink dispose d'un éditeur par lequel vous pouvez glisser-déposer des éléments tels que du texte ou des images. Si vous avez rempli votre source de données, vous pouvez générer dynamiquement une image à l'aide des propriétés des données. En outre, vous pouvez également créer des solutions de repli dans ce flux pour les utilisateurs si la campagne est envoyée et qu'un utilisateur ne correspond pas aux critères de personnalisation.
 
-![L'éditeur de blocs Movable Ink montre les différents éléments personnalisables.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
+![L’éditeur de blocs Movable Ink affichant les différents éléments personnalisables.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
 Avant de terminer votre campagne, veillez à prévisualiser les images dynamiques et à tester les paramètres de requête pour voir à quoi ressembleront les images lors de leur affichage. Une fois l'opération terminée, une URL dynamique sera générée et pourra être insérée dans Braze !
 
@@ -105,18 +105,18 @@ Pour inclure le contenu de Movable Ink dans les messages Braze, vous devez local
 
 Pour obtenir l'URL source, vous devez avoir configuré le contenu dans le tableau de bord Movable Ink, puis à partir de là, terminer et exporter votre contenu. Sur la page **Terminer**, copiez l'URL source (`img src`) de la balise du contenu créatif.
 
-![La page qui s'affiche une fois que vous avez terminé votre campagne Movable Ink dans laquelle figure l'URL de votre contenu.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
+![La page qui s'affiche une fois que vous avez terminé votre campagne Movable Ink, vous y trouverez l'URL de votre contenu.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
 Ensuite, dans la plateforme Braze, collez l'URL dans le champ approprié. Les champs appropriés pour votre canal de communication sont indiqués à l'étape 4. Enfin, remplacez toutes les balises de fusion (telles que {% raw %}```&mi_u=%%email%%```{% endraw %}) par la variable Liquid correspondante (telle que {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
 ### Étape 4 : Expérience de Braze
 
 {% tabs local %}
-{% tab E-mail %}
-Dans la plateforme Braze, collez votre balise de contenu créatif dans le corps de votre e-mail.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
+{% tab Email %}
+Dans la plateforme Braze, collez votre étiquette créative dans le corps de votre e-mail.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
 
 {% endtab %}
-{% tab Notification push %}
+{% tab Push notification %}
 
 1. Dans la plateforme Braze :
 	- Notification push Android : Collez l'URL dans les champs **Image de l'icône push** et **Image de la notification étendue.** <br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
@@ -125,9 +125,9 @@ Dans la plateforme Braze, collez votre balise de contenu créatif dans le corps 
 2. Pour vous assurer que les images ne sont pas mises en cache, placez dans le message des balises Liquid vides avant l'URL : <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 {% endtab %}
-{% tab Message in-app %}
+{% tab In-app message %}
 
-1. Dans la plateforme Braze, collez l'URL dans le champ **Média de notification enrichie**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+1. Dans la plateforme Braze, collez l'URL dans le champ **Rich Notification Media.** ![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. Fournissez une URL unique pour éviter la mise en cache. Pour confirmer que les images en temps réel de Movable Ink fonctionnent et ne seront pas affectées par la mise en cache, utilisez Liquid pour ajouter un horodatage à la fin de l'URL de l'image Movable Ink.
 
 Pour ce faire, utilisez la syntaxe suivante, en remplaçant l'URL de l'image si nécessaire :
@@ -140,12 +140,12 @@ Pour ce faire, utilisez la syntaxe suivante, en remplaçant l'URL de l'image si 
 {% endraw %}
 Ce modèle prend l'heure actuelle (en secondes), l'ajoute à la fin de l'onglet image de Movable Ink (en tant que paramètre de requête), puis affiche le résultat final. Vous pouvez le prévisualiser à l'aide de l'onglet **Test**, qui évalue le code et affiche un aperçu.
 
-**3\.** Enfin, réévaluez l'appartenance à un segment. Pour ce faire, activez l'option `Re-evaluate audience membership and liquid at send-time` située à l'étape **Audiences cibles** d'une campagne. Si cette option n'est pas disponible, contactez votre gestionnaire de la satisfaction client ou le service d'assistance de Braze. Cette option indiquera aux SDK de Braze de redemander la campagne, en fournissant une URL unique à chaque fois qu'un message in-app est déclenché.
+**3\.** Enfin, réévaluez l'appartenance à un segment. Pour ce faire, activez l'option `Re-evaluate audience membership and liquid at send-time` située à l'étape **Audiences cibles** d'une campagne. Si cette option n'est pas disponible, contactez votre gestionnaire satisfaction client ou le service d'assistance de Braze. Cette option indiquera aux SDK de Braze de redemander la campagne, en fournissant une URL unique à chaque fois qu'un message in-app est déclenché.
 
 {% endtab %}
-{% tab Carte de contenu %}
+{% tab Content Card %}
 
-1. Dans la plateforme Braze, collez l'URL dans le champ **Média de notification enrichie**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+1. Dans la plateforme Braze, collez l'URL dans le champ **Rich Notification Media.** ![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. Pour les mobiles : Les images des cartes de contenu sur iOS et Android sont mises en cache dès leur réception et ne s'actualisent pas. 
   - Pour contourner ce problème, planifiez votre campagne comme un message récurrent quotidien, hebdomadaire ou mensuel avec une date d'expiration correspondante afin que la carte de contenu soit reformatée. Par exemple, une carte de contenu qui doit être actualisée une fois par jour doit être définie comme un envoi planifié quotidien avec une expiration d'un jour.
 3. Pour garantir que les images en temps réel de Movable Ink fonctionnent et ne seront pas affectées par la mise en cache lorsque la carte de contenu est reformatée, utilisez Liquid pour ajouter un horodatage à la fin de l'URL de l'image Movable Ink.
@@ -175,7 +175,7 @@ Ce modèle prend l'heure actuelle (en secondes), l'ajoute à la fin de l'onglet 
 
 
 [1]: https://www.movableink.com/
-[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
-[1]: ({% image_buster /assets/img/movable_ink/android.png %})
-[2]: ({% image_buster /assets/img/movable_ink/ios.png %})
-[3]: ({% image_buster /assets/img/movable_ink/web.png %})
+[source de données] : ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[1] : ({% image_buster /assets/img/movable_ink/android.png %})
+[2] : ({% image_buster /assets/img/movable_ink/ios.png %})
+[3] : ({% image_buster /assets/img/movable_ink/web.png %})
