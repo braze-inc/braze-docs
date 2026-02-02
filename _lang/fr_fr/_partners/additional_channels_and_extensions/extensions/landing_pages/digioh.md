@@ -1,7 +1,7 @@
 ---
 nav_title: Digioh
 article_title: Digioh
-description: "Cet article de référence décrit le partenariat entre Braze et Digioh, une plateforme de sondage qui vous permet de créer facilement des fenêtres contextuelles, des formulaires, des enquêtes et des centres de préférences de communication qui suscitent un réel engagement par le biais de vos campagnes Braze."
+description: "Cet article de référence présente le partenariat entre Braze et Digioh, une plateforme d'enquête permettant de créer des pop-ups, des formulaires, des enquêtes et des centres de préférences de communication qui stimulent l'engagement à travers vos campagnes Braze."
 alias: /partners/digioh/
 page_type: partner
 search_tag: Partner
@@ -10,15 +10,15 @@ search_tag: Partner
 
 # Digioh
 
-> [Digioh](https://www.digioh.com/) vous aide à développer vos listes, à collecter des données de première partie et à les utiliser dans vos campagnes Braze.
+> [Digioh](https://www.digioh.com/) prend en charge la croissance des listes, la capture des données first-party et l'utilisation de ces données dans les campagnes de Braze.
 
 _Cette intégration est maintenue par Digioh._
 
 ## À propos de l'intégration
 
-L'intégration de Braze et Digioh vous permet d'utiliser leur générateur flexible par glisser-déposer pour créer des formulaires, des fenêtres contextuelles, des centres de performance, des pages de destination et des enquêtes qui vous mettent en relation avec vos clients. Digioh vous aidera à configurer l'intégration et à créer, concevoir et lancer votre première campagne pour vous.
+L'intégration de Braze et Digioh vous permet d'utiliser un générateur de glisser-déposer pour créer des formulaires, des pop-ups, des centres de préférences, des pages d'atterrissage et des enquêtes adaptés à votre marque, qui vous mettent en relation avec vos clients. Digioh vous aide à configurer l'intégration et peut créer, concevoir et lancer votre première campagne.
 
-!["Créez des centres de préférences flexibles pour les e-mails et les communications avec Digioh"]({% image_buster /assets/img/digioh/pref_pop_examples.png %}){: style="border:0"}
+![« Créez des centres de préférences flexibles pour les e-mails et les communications avec Digioh »]({% image_buster /assets/img/digioh/pref_pop_examples.png %}){: style="border:0"}
 
 ## Conditions préalables
 
@@ -37,7 +37,7 @@ Pour intégrer Digioh, vous devez d'abord configurer le connecteur Braze. Cette 
 
 Dans Digioh, cliquez sur l'onglet **Intégrations**, puis sur le bouton **Nouvelle intégration**. Sélectionnez **Braze** dans la liste déroulante **Intégration** et nommez l'intégration. 
 
-!["Sélectionnez l'intégration correcte dans la liste déroulante"]({% image_buster /assets/img/digioh/2.png %}){: style="max-width:50%;"}
+![« Sélectionnez la bonne intégration dans la liste déroulante »]({% image_buster /assets/img/digioh/2.png %}){: style="max-width:50%;"}
 
 Ensuite, entrez la clé API REST Braze et l’endpoint de l'API Braze `/users/track/`. 
 
@@ -63,7 +63,7 @@ Vous souhaitez consulter une galerie de méthodes permettant de tirer parti de l
 
 Pour appliquer cette intégration à une [lightbox](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/) Digioh, accédez à la page **Boxes** et sélectionnez le lien **Ajouter** ou **Modifier** dans la colonne **Intégrations**. Cela peut également être ajouté depuis la section **Intégration** de l'éditeur.
 
-!["Ajouter l'intégration à une boîte lumineuse"]({% image_buster /assets/img/digioh/3.png %}){: style="max-width:90%"}
+![« Ajouter l'intégration à une lightbox »]({% image_buster /assets/img/digioh/3.png %}){: style="max-width:90%"}
 
 Ici, sélectionnez **Ajouter une intégration**, choisissez l'intégration souhaitée et **enregistrez**. Digioh va désormais transmettre les leads que vous avez capturés à Braze en temps réel.
 
