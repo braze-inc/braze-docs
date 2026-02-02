@@ -13,9 +13,9 @@ toc_headers: h2
 
 ## Acerca de Intelligent Selection
 
-Una variante que parezca rendir más que las demás se enviará a más usuarios, mientras que las variantes que rindan menos se dirigirán a menos usuarios. Cada ajuste se realiza mediante un [algoritmo estadístico](https://en.wikipedia.org/wiki/Multi-armed_bandit) que garantiza que Braze se ajusta a las diferencias de rendimiento reales y no al azar.
+Una variante que parezca rendir más que las demás se enviará a más usuarios, mientras que las variantes de bajo rendimiento se dirigirán a menos usuarios. Cada ajuste se realiza mediante un [algoritmo estadístico](https://en.wikipedia.org/wiki/Multi-armed_bandit) que garantiza que Braze se ajusta a las diferencias de rendimiento reales y no al azar.
 
-\![Sección de pruebas A/B de una campaña con Intelligent Selection habilitada.]({% image_buster /assets/img/intelligent_selection1.png %})
+![Sección de pruebas A/B de una campaña con Intelligent Selection habilitada.]({% image_buster /assets/img/intelligent_selection1.png %})
 
 Intelligent Selection lo hará:
 - Observa repetidamente los datos de rendimiento y desplaza gradualmente el tráfico de la campaña hacia las variantes ganadoras.
@@ -60,11 +60,11 @@ La Intelligent Selection no puede utilizarse en campañas con un periodo de reel
 {% tab Canvas %}
 Añade al menos un evento de conversión y dos variantes a tu Canvas. A continuación, selecciona uno de los porcentajes de variantes en el paso Construir. 
 
-\![Un Canvas con dos variantes, cada una ajustada al 50% de distribución de variantes, que permite habilitar la Intelligent Selection.]({% image_buster /assets/img/intelligent_selection.png %})
+![Un Canvas con dos variantes, cada una ajustada al 50% de distribución de variantes, que permite habilitar la Intelligent Selection.]({% image_buster /assets/img/intelligent_selection.png %})
 
 Esto te permite editar la distribución de variantes y activar la Intelligent Selection. 
 
-\![Opción Intelligent Selection activada para un Canvas]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+![Opción Intelligent Selection activada para un Canvas]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 Intelligent Selection no estará disponible si aún no has añadido eventos de conversión a tu Canvas o si tu campaña se compone de una sola variante.
 {% endtab %}
@@ -92,7 +92,7 @@ Si no quieres que Intelligent Selection envíe 50/50 durante las primeras fases 
 
 ### ¿Por qué no se puede volver a ser elegible en menos de 24 horas cuando se combina con Intelligent Selection?
 
-No permitimos que las campañas de Intelligent Selection vuelvan a ser elegibles en un plazo demasiado corto, porque afectaría a la integridad de la variante de control. Al crear un intervalo de 24 horas, ayudamos a garantizar que el algoritmo tendrá un conjunto de datos estadísticamente válido con el que trabajar.
+No permitimos que las campañas de Intelligent Selection vuelvan a ser elegibles en un plazo demasiado corto, porque afectaría a la integridad de la variante de control. Al crear un intervalo de 24 horas, ayudamos a garantizar que el algoritmo dispondrá de un conjunto de datos estadísticamente válido con el que trabajar.
 
 Normalmente, las campañas con reelegibilidad harán que los usuarios vuelvan a introducir la misma variante que recibieron antes. Con Intelligent Selection, Braze no puede garantizar que un usuario reciba la misma variante de campaña, porque la distribución de variantes se habría desplazado debido al aspecto de asignación óptima de esta característica. Si se permitiera al usuario volver a entrar antes de que Intelligent Selection volviera a examinar el rendimiento de la variante, los datos podrían estar sesgados debido a los usuarios que volvieron a entrar.
 
@@ -100,13 +100,13 @@ Por ejemplo, si una campaña utiliza estas variantes:
 
 - Variante A: 20%
 - Variante B: 20%
-- Control: 60%
+- Control: 60 %
 
 Entonces la distribución de variantes podría ser la siguiente para la segunda vuelta:
 
 - Variante A: 15%
-- Variante B: 25%
-- Control: 60%
+- Variante B: 25 %
+- Control: 60 %
 
 ### ¿Por qué mis variantes de Intelligent Selection muestran envíos iguales durante las primeras fases de mi campaña?
 
