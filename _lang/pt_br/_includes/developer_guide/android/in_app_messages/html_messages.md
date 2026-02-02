@@ -2,14 +2,14 @@
 
 ## Sobre mensagens HTML
 
-Com a interface JavaScript do Braze, você pode aproveitar o Braze dentro das WebViews personalizadas do seu app. O [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) é responsável por:
+Com a interface JavaScript do Braze, você pode aproveitar o Braze dentro das WebViews personalizadas em seu app. O [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) é responsável por:
 
-1. Injetar a ponte JavaScript do Braze na sua WebView, conforme descrito em [Guia do Usuário: Mensagens HTML no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
-2. Passar os métodos da ponte recebidos da sua WebView para o [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk).
+1. Injetar a ponte JavaScript do Braze em sua WebView, conforme descrito em [Guia do Usuário: Mensagens HTML no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
+2. Passar os métodos da ponte recebidos de sua WebView para o [Braze Android SDK](https://github.com/braze-inc/braze-android-sdk).
 
 ## Adição da interface a um WebView
 
-O uso da funcionalidade da Braze a partir de um WebView em seu app pode ser feito adicionando a interface Braze JavaScript ao seu WebView. Depois que a interface foi adicionada, a mesma API disponível para [Guia do Usuário: Mensagens HTML no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) estarão disponíveis dentro da sua WebView personalizada.
+O uso da funcionalidade da Braze a partir de um WebView em seu app pode ser feito adicionando a interface Braze JavaScript ao seu WebView. Depois que a interface foi adicionada, a mesma API disponível para [Guia do Usuário: Mensagens HTML no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) estarão disponíveis dentro de sua WebView personalizada.
 
 {% tabs %}
 {% tab JAVA %}
@@ -56,7 +56,7 @@ A seguir, um exemplo de um vídeo do YouTube incorporado em um trecho de HTML:
 
 ## Usando deep links
 
-Ao usar deep links ou links externos em mensagens HTML no app Android, **não** chame `brazeBridge.closeMessage()` no seu JavaScript. A lógica interna do SDK fecha automaticamente a mensagem no app quando redireciona para um link. Chamar `brazeBridge.closeMessage()` interfere nesse processo e pode fazer com que a mensagem fique sem resposta quando os usuários retornarem ao seu app. 
+Ao usar deep links ou links externos em mensagens HTML no app Android, **não** chame `brazeBridge.closeMessage()` em seu JavaScript. A lógica interna do SDK fecha automaticamente a mensagem no app quando redireciona para um link. Chamar `brazeBridge.closeMessage()` interfere nesse processo e pode fazer com que a mensagem fique sem resposta quando os usuários retornarem ao seu app. 
 
 O seguinte é um exemplo de um deep link em um trecho de código:
 
