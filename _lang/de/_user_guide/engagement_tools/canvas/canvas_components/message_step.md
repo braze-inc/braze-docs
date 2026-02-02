@@ -13,7 +13,7 @@ tool: Canvas
 
 > Mit den Messaging-Schritten können Sie an jeder beliebigen Stelle in Ihrem Canvas eine eigenständige Nachricht hinzufügen.
 
-![Ein Nachrichten-Schritt mit dem Namen "Mittags-Promo" über den Push-Kanal.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Eine Nachricht mit dem Namen "Mittagspromo" über den Push-Kanal.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## Erstellen einer Nachricht
 
@@ -22,12 +22,13 @@ Um eine Nachricht-Komponente zu erstellen, fügen Sie zunächst einen Schritt zu
 ### Schritt 1: Wählen Sie Ihren Messaging-Kanal aus
 
 Sie können aus den folgenden Messaging-Kanälen auswählen: 
+- Banner (im frühen Zugang)
 - Content-Cards
 - E-Mail
 - LINE
 - Push-Benachrichtigungen
 - SMS/MMS/RCS
-- In-App-Nachrichten 
+- In-App-Nachrichten
 - Webhook
 - WhatsApp
 
@@ -47,7 +48,7 @@ Wählen Sie **Intelligentes Timing verwenden** auf der Registerkarte **Zustellun
 
 Zustellungsvalidierungen bieten eine zusätzliche Prüfung, um zu bestätigen, dass Ihre Zielgruppe die Zustellungskriterien beim Senden von Nachrichten erfüllt. Diese Einstellung wird empfohlen, wenn Stille Stunden, Intelligentes Timing oder Ratenbegrenzung aktiviert sind. Sie können ein Segment oder zusätzliche Filter hinzufügen, die zum Zeitpunkt des Versands der Nachricht überprüft werden. Wenn ein:e Nutzer:in die festgelegten Zustellungsvalidierungen für einen Messaging-Schritt nicht erfüllt, verlässt er den Canvas bei diesem Schritt.
 
-![Der Tab Zustellungseinstellungen für die Einstellungen der Komponente Nachrichten. Ruhezeiten sind aktiviert, und das Kontrollkästchen „Intelligentes Timing verwenden“ ist ausgewählt, um die Nachricht zu einem optimalen Zeitpunkt zuzustellen. Zustellungsvalidierungen sind aktiviert, um die Zielgruppen beim Senden von Nachrichten zu validieren.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
+![Der Tab „Zustellungseinstellungen“ für die Einstellungen der Komponente „Nachrichten“. Ruhezeiten sind aktiviert, und das Kontrollkästchen „Intelligentes Timing verwenden“ ist ausgewählt, um die Nachricht zu einem optimalen Zeitpunkt zuzustellen. Zustellungsvalidierungen sind aktiviert, um die Zielgruppen beim Senden von Nachrichten zu validieren.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
 ## Wie Nutzer:innen den Fortschritt voranbringen
 
