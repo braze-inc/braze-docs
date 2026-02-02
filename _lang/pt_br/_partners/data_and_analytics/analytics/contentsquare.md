@@ -24,7 +24,7 @@ A integração entre o Braze e o Contentsquare permite que você envie sinais ao
 | ----------- | ----------- |
 | Conta do Contentsquare | É necessário ter uma conta no Contentsquare para aproveitar essa parceria. |
 | Chave da API REST do Braze | Uma chave da API REST da Braze com permissões `users.track`. Para criar uma nova chave no dashboard do Braze, acesse **Configurações** > **Chaves de API**. |
-| Endpoint REST  do Braze | [Seu URL do ponto de extremidade REST]({% image_buster /assets/img/contentsquare_custom_events.png %}). Seu endpoint dependerá do URL do Braze para sua instância. |
+| Ponto de extremidade REST do Braze | [URL de seu endpoint REST]({% image_buster /assets/img/contentsquare_custom_events.png %}). Seu endpoint dependerá do URL do Braze para sua instância. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
@@ -41,7 +41,7 @@ Para integrar o Contentsquare ao Braze, você deve solicitar a instalação de u
 
 1. No Contentsquare, clique em **Console** no menu **Settings (Configurações** ). Isso o redirecionará para o projeto em que está trabalhando no momento. 
 2. Na página **Projetos**, acesse a guia **Integrações** e clique no botão **\+ Adicionar integração**.
-3. No catálogo de integrações, localize a integração **Live Signals** e clique em **Add** (Adicionar). A equipe da Contentsquare entrará em contato para configurar o snippet de código para enviar sinais em tempo real para a Braze.
+3. No catálogo de integrações, localize a integração **Live Signals** e clique em **Add** (Adicionar). A equipe da Contentsquare entrará em contato com você para configurar o trecho de código para enviar sinais ao vivo para o Braze.
 4. O Contentsquare agora processará sua integração. O texto do indicador será atualizado após a conclusão da integração.
 
 Para saber mais, consulte [Solicitar uma integração da Contentsquare](https://uxanalyser.zendesk.com/hc/en-gb/articles/4405613239186).
@@ -50,6 +50,6 @@ Para saber mais, consulte [Solicitar uma integração da Contentsquare](https://
 
 Quando a integração estiver concluída, os eventos personalizados do Contentsquare estarão disponíveis para uso em suas campanhas e Canvas. Você pode verificar quais eventos estão sendo enviados ao Braze em **Data Settings** > **Custom Events** (Configurações de dados > Eventos personalizados).
 
-![Dados de sinais ao vivo do Contentsquare na guia Eventos personalizados do Braze]({% image_buster /assets/img/contentsquare_custom_events.png %})
+![Dados do Contentsquare Live Signals na guia de eventos personalizados da Braze]({% image_buster /assets/img/contentsquare_custom_events.png %})
 
 
