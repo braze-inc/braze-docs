@@ -30,12 +30,12 @@ A integração entre o Braze e a Adikteev permite aumentar a retenção de usuá
 ## Casos de uso
 
 {% tabs %}
-{% tab Filtragem de público %}
+{% tab Audience filtering %}
 Refinamento de seus segmentos de público com base no risco de churn.<br> Os nomes e valores dos atributos personalizados enviados pelo Adikteev são configuráveis.
 
 ![Uma captura de tela mostrando um exemplo de como usar um atributo personalizado enviado pelo Adikteev como um filtro de segmento de público.]({% image_buster /assets/img/adikteev/audience.png %})
 {% endtab %}
-{% tab Direcionamento de mensagens %}
+{% tab Message targeting %}
 Personalização de suas campanhas de mensagens do Braze com base no risco de churn dos destinatários.
 
 ![Uma captura de tela mostrando um exemplo de como usar um atributo personalizado enviado pelo Adikteev como um filtro de direcionamento de campanha.]({% image_buster /assets/img/adikteev/campaign.png %})
