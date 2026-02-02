@@ -27,8 +27,8 @@ The Braze and Adobe integration allows you to seamlessly control the flow of inf
 
 ### Step 1: Create an XDM schema in Adobe
 
-1. In Adobe Experience Platform, go to **Schemas** > select **Create schema** > select **Experience Event** > select **Next**.<br><br>![Adobe Schemas page for the schema called "Braze Currents Walk-Through".]({% image_buster /assets/img/adobe/currents_sources.png %})<br><br>
-2. Provide a name and description for your schema. 
+1. Adobe Experience Platform에서 **Schemas**로 이동 > **Create schema** 선택 > **Experience Event** 선택 > **Next** 선택.<br><br>![Adobe 스키마 페이지는 "Braze 커런츠 워크스루"라는 스키마에 대한 것입니다.]({% image_buster /assets/img/adobe/currents_sources.png %})<br><br>
+2. 스키마의 이름과 설명을 제공하십시오. 
 3. In the **Composition** panel, configure your schema attributes:
 - In **Field groups**, select **Add** and then add the **Braze Currents User Event** field group.
 - Select **Save**.
@@ -39,25 +39,25 @@ For more information on schemas, refer to Adobe's documentation on [creating sch
 
 1. In Adobe Experience Platform, go to **Sources** > **Catalog** > **Marketing automation**.
 2. Select **Add data** for Braze Currents.
-3. Upload the [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json).<br><br>![Adobe "Add data page".]({% image_buster /assets/img/adobe/currents_add_data.png %})<br><br>
-4. After your file is uploaded, provide your dataflow details, including information about your dataset and the schema that you are mapping to. 
+3. [Braze 커런츠 샘플 파일](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json)<br><br>![어도비 "데이터 추가 페이지".]({% image_buster /assets/img/adobe/currents_add_data.png %})<br><br>
+4. 파일이 업로드된 후, 데이터 흐름 세부정보를 제공하십시오. 여기에는 데이터 세트 및 매핑할 스키마에 대한 정보가 포함됩니다. 
     - If this is your first time connecting a Braze Currents source, create a new dataset and make sure to use the schema you created in [Step 1](#step-1-create-an-xdm-schema-in-adobe). 
     - If this isn't your first time, use any existing dataset that references the Braze schema.
 5. Configure mapping for your data and resolve the issues.
     - Change the mapping for `id` from `to _braze.appID` to `_id` at the root level of the schema.
     - Make sure `properties.is_amp` is mapped to `_braze.messaging.email.isAMP`.
     - Delete the `time` and `timestamp` mapping, then select the add icon > **Add calculated field** and enter **time * 1000**. Select **Save**.
-    - Select **Map target field** next to the new source field and map it to **timestamp** at the root level of the schema. <br><br>![Adobe "Add data" page with mappings.]({% image_buster /assets/img/adobe/currents_mapping.png %})<br><br>
-6. Select **Validate** to confirm you resolved the issues.
+    - 새로운 소스 필드 옆에 있는 **맵 대상 필드**를 선택하고 스키마의 루트 수준에서 **타임스탬프**에 매핑합니다. <br><br>![어도비 "데이터 추가" 페이지와 매핑.]({% image_buster /assets/img/adobe/currents_mapping.png %})<br><br>
+6. 문제를 해결했음을 확인하려면 **확인**을 선택하십시오.
 
 {% alert important %}
 Braze timestamps are expressed in seconds. To accurately reflect timestamps in Adobe Experience Platform, your calculated fields need to be in milliseconds. To convert seconds to milliseconds, use the calculation **time * 1000**.
 {% endalert %}
 
 {: start="7"}
-7\. Select **Next**, review your dataflow details, and then select **Finish**.<br><br>![Adobe "Add data" page with no mapping errors.]({% image_buster /assets/img/adobe/currents_no_errors.png %})
+7\. 다음 **Next**을 선택하고, 데이터 흐름 세부 정보를 검토한 후 **Finish**을 선택하십시오.<br><br>![어도비 "데이터 추가" 페이지에 매핑 오류가 없습니다.]({% image_buster /assets/img/adobe/currents_no_errors.png %})
 
-### Step 3: Gather credentials
+### 3단계: Gather credentials
 
 Collect the following creditials to input into Braze, which will allow Braze to send data to Adobe Experience Platform.
 
