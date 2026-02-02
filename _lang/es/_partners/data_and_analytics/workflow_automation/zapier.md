@@ -33,7 +33,7 @@ Usando nuestro ejemplo de WordPress, en la plataforma Zapier, configuraremos nue
 
 ![En la plataforma Zapier, dentro de un zap, selecciona que el desencadenante sea "nuevo comentario", "cualquier webhook" o "nueva publicación". Para este ejemplo, se selecciona "nueva entrada". ] [5]
 
-![En la plataforma Zapier, dentro de un zap, configura el desencadenante seleccionando el estado y el tipo de entrada deseados. En este ejemplo, se selecciona "Publicado" y "Mensajes".] [6]
+![En la plataforma Zapier, dentro de un zap, configura el desencadenante seleccionando el estado y el tipo de entrada deseados. Para este ejemplo, se selecciona "Publicado" y "Mensajes"]. [6]
 
 ### Paso 2: Añadir un webhook de acción
 
