@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Visto](https://seen.io) permite que marcas criem e entreguem experiências de vídeo personalizadas em grande escala. Com o Visto, você pode projetar um vídeo em torno dos seus dados, personalizá-lo em grande escala na nuvem e, em seguida, distribuí-lo onde funciona melhor.
 >
-> A integração entre Braze e Visto permite que você envie dados de usuários do Braze para o Visto, gere vídeos personalizados dinamicamente e retorne ativos de vídeo—como uma URL de player única e miniatura—de volta ao Braze para uso em campanhas e Canvas.
+> A integração entre Braze e Visto permite que você envie dados de usuários do Braze para o Visto, gere vídeos personalizados dinamicamente e retorne ativos de vídeo—como uma URL de player única e miniatura—de volta ao Braze para uso em campanhas e Canvases.
 
 
 ## Casos de uso
@@ -40,7 +40,7 @@ Antes de começar, você precisa do seguinte:
 
 ## Como funcionam as Jornadas Vistas
 
-O Seen usa [Jornadas](https://docs.seen.io/journey) para controlar como os dados recebidos são processados e como as saídas de vídeo são geradas.
+O Seen usa [Jornadas](https://docs.seen.io/journey) para controlar como os dados recebidos são processados e como os vídeos são gerados.
 
 Uma Jornada é um fluxo de trabalho configurável que:
 - Recebe dados de sistemas externos (como o Braze)
@@ -50,11 +50,11 @@ Uma Jornada é um fluxo de trabalho configurável que:
 
 As Jornadas são compostas por **nós**, cada um com uma função específica:
 
-- **Node de Disparo**: Define como e quando uma Jornada começa (para integrações com o Braze, use um `On Create` disparador)
-- **Node Condicional**: Roteia usuários através de diferentes caminhos lógicos com base nos valores dos dados
-- **Node de Projeto**: Aplica personalização dinâmica de vídeo usando os dados recebidos
-- **Node de Player**: Gera uma URL de player de vídeo única
-- **Node de Webhook**: Define a carga útil de resposta enviada de volta ao Braze
+- **nó de Disparo**: Define como e quando uma Jornada começa (para integrações com o Braze, use um `On Create` disparador)
+- **nó Condicional**: Roteia usuários através de diferentes caminhos lógicos com base nos valores dos dados
+- **nó de Projeto**: Aplica personalização dinâmica de vídeo usando os dados recebidos
+- **nó de Player**: Gera uma URL de player de vídeo única
+- **nó de Webhook**: Define a carga útil de resposta enviada de volta ao Braze
 
 Como as respostas da Jornada são configuráveis, certifique-se de que os campos de saída retornados pelo Seen correspondam aos atributos esperados pela sua Transformação de Dados do Braze.
 
@@ -114,9 +114,9 @@ Para configurar sua Jornada:
 2. Adicione um **nó de Trigger** e selecione o `On Create` trigger  
    Isso garante que a Jornada comece quando a Braze enviar dados para o Seen. Crie e adicione qualquer lógica de [segmentação](https://docs.seen.io/segments) dentro do seu espaço de trabalho, se necessário.
 3. Construa sua lógica usando os seguintes nós conforme necessário:
-   - **Node Condicional**: Roteie usuários com base nos valores de atributo (por exemplo, tipo de plano ou região)
-   - **Node de Projeto**: Aplique personalização dinâmica de vídeo usando os dados recebidos
-   - **Node de Player**: Gere uma URL única do player de vídeo
+   - **nó Condicional**: Roteie usuários com base em valores de atributos (por exemplo, tipo de plano ou região)
+   - **nó de Projeto**: Aplique personalização dinâmica de vídeo usando os dados recebidos
+   - **nó de Player**: Gere uma URL única do player de vídeo
 4. Adicione um **nó de Webhook** para definir a resposta enviada de volta para a Braze
 
 #### Requisitos de resposta do nó Webhook
