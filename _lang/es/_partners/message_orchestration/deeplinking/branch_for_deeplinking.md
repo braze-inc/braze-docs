@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://branch.io/), una plataforma de enlace móvil, te ayuda a adquirir, interactuar y medir en todos los dispositivos, canales y plataformas, proporcionando una visión holística de todos los puntos de intervención del usuario.
+> [Branch](https://branch.io/) es una plataforma de enlace móvil utilizada para adquirir, interactuar y medir a través de dispositivos, canales y plataformas, proporcionando una visión holística de los puntos de intervención del usuario.
 
 _Esta integración está mantenida por Branch._
 
@@ -29,7 +29,7 @@ Sigue [la guía de integración de SDK de Branch](https://help.branch.io/develop
 Para soportar el envío de enlaces universales iOS como enlaces profundos desde dentro de Braze:
 
 1. Sigue la documentación de Branch para configurar [los enlaces universales](https://help.branch.io/developers-hub/docs/ios-universal-links).
-2. Implemente el método [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate)[braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) en su integración Braze SDK para [enrutar enlaces universales]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) desde su aplicación.
+2. Pon en práctica el [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) método [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) en tu integración de SDK Braze para [dirigir enlaces universales]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) desde tu aplicación.
 
 ### Vinculación en profundidad en el correo electrónico
 
