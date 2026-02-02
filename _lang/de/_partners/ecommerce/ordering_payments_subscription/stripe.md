@@ -50,7 +50,7 @@ Als nächstes transformieren Sie die Webhook-Nutzdaten, die von Stripe gesendet 
 3. Wählen Sie **Validieren** aus, um eine Vorschau auf die Ausgabe Ihres Codes zu erhalten und um zu prüfen, ob es sich um eine akzeptable `/users/track` Anfrage handelt.
 4. Speichern und aktivieren Sie Ihre Datentransformation.
 
-![Ein Beispiel für Webhook-Details und Transformation Code.]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
+![Ein Beispiel für die Webhook-Details und den Code für die Transformation.]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
 
 #### Format des Anfragekörpers
 
@@ -68,7 +68,7 @@ Dieser Rückgabewert muss dem Format des Körpers der Anfrage für den Endpunkt 
 
 Nachdem Sie Ihre Datentransformation geschrieben haben, wählen Sie **Validieren**, um sicherzustellen, dass Ihr Code für die Datentransformation richtig formatiert ist und wie erwartet funktioniert. Dann speichern und aktivieren Sie Ihre Datentransformation. Nach der Aktivierung werden angepasste Event-Daten im Profil eines Nutzers protokolliert, wenn dieser das Event abschließt.
 
-![Ein angepasstes Stripe Event "Charge Succeeded" in einem Braze Nutzerprofil.]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
+![Ein angepasstes Event "Charge Succeeded" in einem Braze Nutzerprofil.]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
 
 ## Beispiel Webhook-Nutzdaten von Stripe {#example}
 
@@ -244,7 +244,7 @@ In dieser Beispielvorlage protokollieren wir ein angepasstes Event für das Prof
 In dieser Beispielvorlage verwenden wir das Feld Kund:in als Bezeichner.
 
 {% tabs local %}
-{% tab Eingabe %}
+{% tab Input %}
 
 ```javascript
 
@@ -283,7 +283,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Ausgabe %}
+{% tab Output %}
 
 ```json
 {
