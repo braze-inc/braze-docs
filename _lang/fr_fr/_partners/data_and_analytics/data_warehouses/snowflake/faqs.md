@@ -16,6 +16,8 @@ Non, pour l'instant, ce n'est pas possible.
 Utilisez le partage des données pour la même région dans les scénarios suivants :
 - Votre compte Snowflake se trouve dans la région US-EAST-1 (AWS) et la région de votre tableau de bord Braze se trouve aux États-Unis.
 - Votre région Snowflake se trouve dans l'UE-CENTRAL-1 et la région du tableau de bord de Braze se trouve dans l'UE.
+- Votre région Snowflake se trouve en AP-Southeast-2 (AWS) et votre région tableau de bord Braze se trouve en Australie.
+- Votre région Snowflake se trouve en AP-Southeast-3 (AWS) et votre région tableau de bord de Braze se trouve en Indonésie.
 
 Dans le cas contraire, utilisez le partage des données pour les régions transversales. 
 
