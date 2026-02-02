@@ -38,7 +38,7 @@ Sie können in Ihren Kampagnen und Canvase native Features für A/B-Tests verwen
 Um Experimente mit Braze-Daten in Eppo durchzuführen, erstellen Sie [Zuweisungstabellen](https://docs.geteppo.com/data-management/definitions/assignment-sql/) in Ihrem Warehouse auf der Grundlage der aus Braze exportierten Nachrichten-Ereignisdaten auf Nutzerebene. Für Canvas- und Kampagnen-Experimente werden getrennte Tabellen empfohlen, da sie auf unterschiedlichen Metadaten beruhen.
 
 {% tabs local %}
-{% tab Canvas-Experimente %}
+{% tab canvas experiments %}
 Für Canvas-Experimente können Zuweisungen entweder erstellt werden:
 
 - Auf der Einstiegsebene von Canvas (`users.canvas.Entry`)
@@ -48,7 +48,7 @@ In diesen Fällen werden Felder wie `canvas_name`, `experiment_step_id`, `canvas
 
 {% endtab %}
 
-{% tab Kampagnen-Experimente %}
+{% tab campaign experiments %}
 Bei Kampagnen-Experimenten verwenden Sie Sendeereignisse (wie Push, E-Mail, SMS), um festzustellen, wann ein Nutzer:innen das Experiment betreten hat. `campaign_name` `message_variation_name` und `time` werden verwendet, um die Zuordnungstabelle aufzufüllen.
 
 {% endtab %}
@@ -60,6 +60,6 @@ Eppo verwendet diese Zuweisungen und Faktentabellen, um die Ergebnisse zu analys
 
 ## Support
 
-Wenn Sie Fragen zur Einrichtung von Braze-Currents, Snowflake Data Sharing oder zur Konfiguration von multivariaten Kampagnen haben, wenden Sie sich bitte an Ihren Braze Customer-Success-Manager:in.
+Wenn Sie Fragen zur Einrichtung von Braze-Currents, Snowflake Data Sharing oder zur Konfiguration von multivariaten Kampagnen haben, wenden Sie sich an Ihren Customer-Success-Manager von Braze.
 
 Wenn Sie Hilfe bei der Konfiguration von Eppo zur Messung von Braze-Experimenten benötigen, wenden Sie sich an das Eppo Support Team.
