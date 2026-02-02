@@ -1,5 +1,5 @@
 ---
-nav_title: "Informar"
+nav_title: "Informe"
 article_title: "Informes para SMS, MMS y RCS"
 page_order: 12
 description: "Este artículo de referencia cubre las métricas de SMS, MMS y RCS utilizadas en Braze, así como la forma de verlas en tus campañas de SMS, MMS y RCS."
