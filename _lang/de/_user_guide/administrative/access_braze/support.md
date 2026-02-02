@@ -13,9 +13,9 @@ search_rank: 7
 
 Um das Braze Support Team zu kontaktieren, navigieren Sie zum Braze-Dashboard. Wählen Sie auf dem Dashboard **Support** > **Hilfe holen**.
 
-\![Das Dropdown-Menü "Support" mit der Option, Hilfe zu erhalten.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
+![Das Dropdown-Menü "Support" mit der Option, Hilfe zu erhalten.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Abhängig von Ihren Braze-Berechtigungen und davon, ob Sie ein ausgewiesener Support-Kontakt sind, werden Sie entweder zum Braze-Supportportal weitergeleitet, wo Sie Fälle einreichen und tracken können, oder zu unserem Standard-Supportformular. Wenn Sie sich nicht sicher sind, ob Sie ein Braze-Supportkontakt sind, wenden Sie sich an den Braze-Administrator, den Braze Success Manager oder den Account Manager:in Ihres Unternehmens.
+Abhängig von Ihren Braze-Berechtigungen und davon, ob Sie ein ausgewiesener Support-Kontakt sind, werden Sie entweder zum Braze-Supportportal weitergeleitet, wo Sie Fälle einreichen und tracken können, oder zu unserem Standard-Supportformular. Wenn Sie sich nicht sicher sind, ob Sie ein Braze-Supportkontakt sind, wenden Sie sich an den Braze-Administrator, den Braze-Erfolgsmanager oder den Account Manager Ihres Unternehmens.
 
 ## Hinzufügen von Ansprechpartnern für den Support
 
@@ -26,7 +26,7 @@ Bestimmte Support-Kontakte können auf alle Support-Fälle für Ihr Unternehmen 
 3. Wählen Sie im Menü **Bearbeiten** aus, um zur Seite **Nutzer:innen bearbeiten** weitergeleitet zu werden.
 4. Aktivieren Sie das Kontrollkästchen für **Diesen Nutzer:innen als designierten Support-Kontakt für das Braze Support-Portal festlegen**.
 
-\![Das Kontrollkästchen zum Festlegen eines Nutzers:innen als Support-Kontakt.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
+![Das Kontrollkästchen zum Festlegen eines Nutzers:innen als Support-Kontakt.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
 ### Zugang erhalten
 
@@ -68,7 +68,7 @@ Lassen Sie die betroffenen Nutzer:innen Folgendes tun:
 
 1. Öffnen Sie ihre Entwickler:in-Tools. Wenn Sie Chrome verwenden, können Sie dies mit dem Tastaturkürzel `option` + `⌘` + `J` (auf macOS) tun. Wenn Sie Windows oder Linux verwenden, können Sie dies mit dem Shortcut `shift` + `CTRL` + `J` tun.
 2. Wählen Sie **Netzwerk** > **Fetch/XHR** oder **XHR**.
-3. Nehmen Sie eine Bildschirmaufnahme oder einen Screenshot auf, auf dem **Name**, **Status**, **Größe** und **Zeit** der Elemente zu sehen sind.<br><br>\![Der Tab "Fetch/XHR" in einem Chrome-Browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
+3. Nehmen Sie eine Bildschirmaufnahme oder einen Screenshot auf, auf dem **Name**, **Status**, **Größe** und **Zeit** der Elemente zu sehen sind.<br><br>![Der Tab "Fetch/XHR" in einem Chrome-Browser.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 Hängen Sie dann die Aufnahme oder den Screenshot des Nutzers:innen an das Support-Ticket an. Diese Informationen können die Ermittlungen von Support unterstützen.
 
