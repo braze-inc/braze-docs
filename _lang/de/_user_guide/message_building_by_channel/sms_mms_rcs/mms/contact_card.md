@@ -24,7 +24,7 @@ Kontaktkarten können mit dem SMS- und MMS-Composer erstellt werden. Wählen Sie
 
 Als Nächstes werden Sie aufgefordert, Ihren Firmennamen oder Spitznamen einzugeben. Dies ist der Name, den Ihre Benutzer sehen werden, wenn sie die Karte speichern. Ein Limit von 20 Zeichen wird durchgesetzt, um sicherzustellen, dass die Nutzer:innen in ihren Kontakten und in ihrer Messaging-App Ihren gesamten Firmennamen oder Alias sehen können. 
 
-\![Der Tab des Kontaktkartengenerators.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![Der Tab Kontaktkartengenerator.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Schritt 2: Rufnummer zuweisen
 
@@ -34,7 +34,7 @@ Beachten Sie, dass alphanumerische Codes nicht mit Zwei-Wege-Messaging kompatibe
 
 ### Schritt 3: Optionale Felder
 
-\![Optionale Felder für den Kontaktkartengenerator.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Optionale Felder für den Kontaktkartengenerator.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 #### Kontaktkarte Kontaktfoto hochladen
 
