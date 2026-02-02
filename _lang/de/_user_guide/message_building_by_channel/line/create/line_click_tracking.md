@@ -26,7 +26,7 @@ Alle URLs, die mit `http://` oder `https://` beginnen, werden gekürzt. Sie kön
 
 ## Klick Tracking einrichten
 
-### Textnachrichten
+### Text Nachrichten
 
 So richten Sie das Tracking von Klicks für eine Textnachricht ein:
 
@@ -51,14 +51,14 @@ So richten Sie das Click Tracking für eine Rich Message ein:
 2. Wählen Sie die **URI** für das **Klickverhalten** für den entsprechenden antippbaren Bereich aus.
 3. Geben Sie eine URL in das Feld **URL öffnen** ein.
 
-![LINE Nachrichten-Editor mit einer Rich Nachricht mit zwei antippbaren Bereichen, die jeweils eine URL haben.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
+![LINE Nachrichten-Editor mit einer Rich Nachricht mit zwei antippbaren Bereichen, die jeweils eine URL enthalten.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
 
 {: start="4"}
 4\. Gehen Sie auf den Tab **Einstellungen** und bestätigen Sie, dass **Click Tracking** aktiviert ist. Das Tracking von Klicks ist standardmäßig für alle neuen Nachrichten aktiviert.
 
 ### Kartenbasierte Nachrichten
 
-So richten Sie das Tracking von Klicks für eine kartenbasierte Nachricht ein:
+So richten Sie das Click Tracking für eine kartenbasierte Nachricht ein:
 
 1. Ziehen Sie eine **kartenbasierte Nachricht** in den Composer.
 2. Wählen Sie die **URI** für das **Klickverhalten** für die entsprechenden Karten- oder Button-Bereiche aus.
@@ -74,7 +74,7 @@ URLs in den Feldern **Titel** oder **Beschreibung** werden nicht gekürzt, da di
 
 ## Angepasste Domains
 
-Das LINE Tracking von Klicks erlaubt es Ihnen, Ihre eigene Domain zu verwenden, um das Erscheinungsbild Ihrer verkürzten URLs zu personalisieren und so ein einheitliches Markenimage zu vermitteln. Weitere Informationen finden Sie unter [Angepasste Domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains).
+Das Tracking von LINE-Klicks erlaubt es Ihnen, Ihre eigene Domain zu verwenden, um das Erscheinungsbild Ihrer verkürzten URLs zu personalisieren und so ein einheitliches Markenimage zu vermitteln. Weitere Informationen finden Sie unter [Angepasste Domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains).
 
 ## Flüssige Personalisierung in URLs
 
@@ -118,7 +118,7 @@ Die Tabelle LINE Performance enthält die Spalte **Gesamtklicks**, die die Anzah
 
 Die Daten der Klicks werden automatisch im Analytics Dashboard angezeigt. 
 
-![LINE performance analytics Dashboard.]({% image_buster /assets/img/line/line_performance.png %})
+![LINE Performance Analytics Dashboard.]({% image_buster /assets/img/line/line_performance.png %})
 
 ## Nutzer-Retargeting
 
@@ -161,7 +161,7 @@ Ja Wenn das Tracking von Klicks aktiviert ist, können Sie Nutzer:innen, die auf
 
 ### Funktioniert das Click Tracking mit Deeplinks oder universellen Links?
 
-Click Tracking funktioniert nicht mit Deeplinks. Sie können universelle Links von Anbietern wie Branch oder Appsflyer kürzen, aber Braze ist nicht in der Lage, Fehler zu beheben, die dabei auftreten können (z.B. wenn die Attribution unterbrochen wird oder die Weiterleitung fehlschlägt).
+Click Tracking funktioniert nicht mit Deeplinks. Sie können universelle Links von Anbietern wie Branch oder Appsflyer kürzen, aber Braze ist nicht in der Lage, Probleme zu beheben, die dabei auftreten können (z.B. wenn die Attribution unterbrochen wird oder die Weiterleitung fehlschlägt).
 
 ### Zählen Vorschauen in der LINE App als Klicks?
 
