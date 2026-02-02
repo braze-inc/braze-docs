@@ -42,7 +42,7 @@ Im Feld **Lokalisierung von Exporten nach** können Sie wählen, wie Sie die Lok
 
 Nachdem Sie eine E-Mail in Dyspatch erstellt haben, zeigen Sie die veröffentlichte E-Mail-Vorlage an und klicken auf **Herunterladen/Exportieren** und dann auf **Zur Integration exportieren**, um Ihre Vorlage an Braze zu senden.
 
-Wenn Sie Ihre Vorlage manuell hochladen möchten, sehen Sie sich die veröffentlichte E-Mail-Vorlage an und klicken Sie auf **Download/Export** und dann auf **HTML herunterladen**. Als nächstes wählen Sie in Ihrem Braze-Konto im Bereich **Templates und Medien > E-Mail-Vorlagen** die Option **Aus Datei aus**, um Ihre Vorlage hochzuladen.
+Wenn Sie Ihre Vorlage manuell hochladen möchten, sehen Sie sich die veröffentlichte E-Mail-Vorlage an und klicken Sie auf **Download/Export** und dann auf **HTML herunterladen**. Als nächstes wählen Sie in Ihrem Braze-Konto im Bereich **Templates & Medien > E-Mail-Vorlagen** die Option **Aus Datei aus**, um Ihre Vorlage hochzuladen.
 
 ![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
@@ -52,6 +52,6 @@ Wählen Sie kein **Inline CSS** im Abschnitt **Sendeinfo** für eine Dyspatch E-
 
 ### Nutzung
 
-Sie finden Ihr hochgeladenes Dyspatch Template in Ihrem Braze-Konto im Bereich **Templates und Medien > E-Mail Templates**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
+Sie finden Ihr hochgeladenes Dyspatch Template in Ihrem Braze-Konto im Bereich **Templates & Media > E-Mail Templates**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
 
 
