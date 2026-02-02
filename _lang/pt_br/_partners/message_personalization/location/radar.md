@@ -10,15 +10,15 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) é a principal plataforma de geofencing e monitoramento de localização. A plataforma Radar possui três produtos principais: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking) e [Geo APIs](https://radar.io/product/api).  Isso inclui rastreamento de coleta e entrega, notificações acionadas por local, personalização contextual, verificação de local, localizadores de lojas, preenchimento automático de endereço e mais.
+> [Radar](https://www.radar.com/) é a principal plataforma de geofencing e monitoramento de localização. A plataforma Radar possui três produtos principais: [Geofences](https://radar.com/product/geofencing), [Trip Tracking](https://radar.com/product/trip-tracking) e [Geo APIs](https://radar.com/product/api). Combinar a plataforma de engajamento líder da indústria Braze com as capacidades de geofencing líderes da indústria da Radar permite que você impulsione a receita e a fidelidade por meio de uma ampla gama de experiências de produtos e serviços baseados em localização. Isso inclui rastreamento de coleta e entrega, notificações acionadas por local, personalização contextual, verificação de local, localizadores de lojas, preenchimento automático de endereço e mais.
 
-
+_Esta integração é mantida pela Radar._
 
 ## Sobre a integração
 
 A integração entre a Braze e a Radar permite acessar gatilhos sofisticados de campanhas baseadas em local e enriquecimento de perfil de usuário com dados primários de local. Quando eventos de geofence ou rastreamento de viagem da Radar são gerados, eventos personalizados e atributos de usuário são enviados para a Braze em tempo real. Esses eventos e atributos podem então ser usados para disparar campanhas baseadas em local, impulsionar operações de coleta e entrega na última milha, monitorar a logística de frotas e remessas, ou construir segmentos de usuários com base em padrões de local. 
 
-Além disso, as APIs do Radar Geo podem ser aproveitadas para enriquecer ou personalizar suas campanhas de marketing através de [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
+Além disso, as APIs Geo da Radar podem ser usadas para enriquecer ou personalizar suas campanhas de marketing através do [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Pré-requisitos
 
@@ -60,23 +60,23 @@ Você pode usar eventos personalizados e atributos de usuário para construir se
 
 Envie uma notificação por push para o usuário com instruções de chegada assim que ele chegar à sua loja para uma retirada na calçada.
 
-![Uma campanha de entrega baseada em ação mostrando que a campanha será entregue quando o evento personalizado "arrived_at_trip_destination" ocorrer, e "trip_metadata" for igual a "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
+![Uma campanha de entrega baseada em ação mostrando que a campanha será entregue quando o "arrived_at_trip_destination" evento personalizado ocorrer, e o "trip_metadata" for igual a "na calçada".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Construa um segmento de público de visitantes recentes da loja
 
 Por exemplo, mire em qualquer usuário que tenha visitado sua loja nos últimos 7 dias, independentemente de terem feito uma compra ou não.
 
-![Um segmento onde "radar_geofence_tags" inclui o valor minha_loja e "radar_updated_at" foi há menos de 7 dias.]({% image_buster /assets/img_archive/radar-segment.png %})
+![Um segmento onde "radar_geofence_tags" inclui o valor my_store e "radar_updated_at" foi há menos de 7 dias.]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Conteúdo conectado
 
 O exemplo a seguir mostra como executar uma promoção para atrair usuários próximos à loja com uma oferta digital. 
 
-
+![Uma imagem do Android de uma mensagem por push de conteúdo conectado que exibe "Novas promoções em uma loja Walmart ou Target perto de você".]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 Para começar, você precisará ter sua chave de API publicável do Radar em mãos para usar nos URLs de suas solicitações.
 
-Em seguida, dentro de uma tag `connected_content`, faça uma solicitação GET para a [API de pesquisa de lugares](https://radar.io/documentation/api#search-places). A API de busca de lugares retorna locais próximos com base em [Radar Places](https://radar.io/documentation/places): um banco de dados de locais para lugares, cadeias e categorias que fornece uma visão abrangente do mundo.
+Em seguida, dentro de uma tag `connected_content`, faça uma solicitação GET para a [API de pesquisa de lugares](https://radar.com/documentation/api#search-places). A API de busca de lugares retorna locais próximos com base em [Radar Places](https://radar.com/documentation/places): um banco de dados de locais para lugares, cadeias e categorias que fornece uma visão abrangente do mundo.
 
 O snippet de código a seguir é um exemplo do que a Radar retornará como objeto JSON da chamada da API:
 
@@ -129,7 +129,7 @@ O snippet de código a seguir é um exemplo do que a Radar retornará como objet
 }
 ```
 
-Para construir a mensagem Braze direcionada e personalizada de Conteúdo Conectado, você pode aproveitar o atributo Braze `most_recent_location` como entrada para o parâmetro `near` na URL da solicitação da API. O atributo `most_recent_location` é coletado através da integração de eventos da Radar ou diretamente através do SDK da Braze.
+Para construir a mensagem Braze conectada e personalizada, você pode usar o atributo Braze `most_recent_location` como entrada para o parâmetro `near` na URL da solicitação da API. O atributo `most_recent_location` é coletado através da integração de eventos da Radar ou diretamente através do SDK da Braze.
 
 No exemplo a seguir, o filtro da cadeia Radar é aplicado para as localizações do Target e Walmart, e o raio de busca para locais próximos é definido em 2 km.
 
@@ -180,7 +180,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-Visite a [documentação do Radar](https://radar.io/documentation/api) para todas as APIs do Radar que podem ser aproveitadas no Conteúdo Conectado.
+Visite [documentação da Radar](https://radar.com/documentation/api) para todas as APIs da Radar que podem ser usadas no Conteúdo Conectado.
 {% endalert %}
 
 
