@@ -7,14 +7,14 @@
 ## 커스텀 이벤트 추가
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
@@ -32,7 +32,7 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 속성은 키-값 쌍으로 정의됩니다. 키는 `String` 오브젝트이고 값은 `String`, `int`, `float`, `boolean` 또는 [`Date`](http://developer.android.com/reference/java/util/Date.html) 오브젝트일 수 있습니다.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.logCustomEvent("YOUR-EVENT-NAME",
@@ -54,7 +54,7 @@ Braze.logCustomEvent("YOUR-EVENT-NAME",
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.logCustomEvent("YOUR-EVENT-NAME",
