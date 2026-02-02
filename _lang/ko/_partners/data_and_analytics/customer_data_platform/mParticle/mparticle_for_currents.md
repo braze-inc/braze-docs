@@ -43,20 +43,20 @@ The Braze feed integration supports four separate feeds: iOS, Android, Web, and 
 
 ![]({% image_buster /assets/img/braze-feed-inputs.png %})
 
-For each feed, under **Act as Platform** select the matching platform from the list. If you do not see an option to select an **act-as** feed, the data will be treated as unbound, but can still be forwarded to data warehouse outputs.
+For each feed, under **Act as Platform** select the matching platform from the list. **act-as** 피드를 선택하는 옵션이 표시되지 않으면 데이터는 언바운드로 처리되지만 여전히 데이터 웨어하우스 출력으로 전달할 수 있습니다.
 
-![The first integration dialog box, prompting you to provide a configuration name, determine a feed status, and select a platform to act as.]({% image_buster /assets/img/braze-feed-act1.png %}){: style="max-width:40%;"}  ![The second integration dialog box showing the server-to-server key and server-to-server secret.]({% image_buster /assets/img/braze-feed-act2.png %}){: style="max-width:37%;"}
+![구성 이름을 제공하고 피드 상태를 결정하며 작동할 플랫폼을 선택하라는 프롬프트를 표시하는 첫 번째 통합 대화 상자.]({% image_buster /assets/img/braze-feed-act1.png %}){: style="max-width:40%;"}  ![서버 간 키와 서버 간 비밀을 보여주는 두 번째 통합 대화상자.]({% image_buster /assets/img/braze-feed-act2.png %}){: style="max-width:37%;"}
 
-As you create each input, mParticle will provide you with a key and secret. Copy these credentials, making sure to note which feed each pair of credentials is for.
+각 입력을 생성할 때 mParticle에서 키와 비밀을 제공합니다. Copy these credentials, making sure to note which feed each pair of credentials is for.
 
 ### Step 2: Create Current
 
 In Braze, navigate to **Currents > + Create Current > Create mParticle Export**. Provide an integration name,  contact email and the mParticle API key and mParticle secret key for each platform. Next, select the events you want to track; a list of available events is provided. Lastly, click **Launch Current**
 
-![The mParticle Currents page in Braze. Here, you can find fields for integration name, contact email, API key, and secret key.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
+![The mParticle Currents page in Braze. 여기에서 통합 이름, 연락처 이메일, API 키 및 비밀 키 필드를 찾을 수 있습니다.]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
 {% alert important %}
-It's important to keep your mParticle API Key and mParticle Secret Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+It's important to keep your mParticle API Key and mParticle Secret Key up to date; if your connector's credentials expire, the connector will stop sending events. 이 상태가 **5일** 이상 지속되면 커넥터의 이벤트가 삭제되고 데이터가 영구적으로 손실됩니다.
 {% endalert %}
 
 All events sent to mParticle will include the user's `external_user_id` as the `customerid`. At this time, Braze does not send event data for users who do not have their `external_user_id` set. If you'd like to map the `external_user_id` to a different ID in mParticle that is not the default `customerid`, please contact your Braze CSM. 
