@@ -1,7 +1,7 @@
 ---
 nav_title: Wyng
 article_title: Wyng
-description: "Este artículo de referencia describe la asociación entre Braze y Wyng, una plataforma de datos de cero partes, que facilita la recopilación, el uso y la integración de las preferencias y los atributos de los clientes a través de microexperiencias, portales de preferencias de clientes y una plataforma API."
+description: "Este artículo de referencia describe la asociación entre Braze y Wyng, una plataforma de datos de zero-party data utilizada para recopilar, utilizar e integrar las preferencias y atributos de los clientes a través de microexperiencias, portales de preferencias de clientes y una plataforma API."
 alias: /partners/wyng/
 page_type: partner
 search_tag: Partner
@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Wyng
 
-> [Wyng](https://wyng.com/) facilita la creación de experiencias digitales interactivas (es decir, cuestionarios, centros de preferencias, promociones) que atraen a los consumidores en los momentos adecuados, recopilan preferencias y otros datos de terceros y personalizan en tiempo real.
+> [Wyng](https://wyng.com/) proporciona herramientas para crear experiencias digitales interactivas (cuestionarios, centros de preferencias, promociones) que atraen a los consumidores en momentos clave, recopilan preferencias y otros datos de zero-party data, y personalizan en tiempo real.
 
 _Esta integración está mantenida por Wyng._
 
@@ -31,22 +31,22 @@ La integración de Braze y Wyng te permite aprovechar los zero-party data obteni
 
 En Wyng, vaya a [**Integraciones**](https://wyng.com/dashboard/integrations/) y seleccione la pestaña **Añadir**. A continuación, sitúate sobre **Braze** y haz clic en **Conectar** para la integración.
 
-![La ficha del socio Braze en la plataforma Wyng.]({% image_buster /assets/img/wyng/2.png %}){: style="max-width:80%;"}
+![La baldosa asociada Braze en la plataforma Wyng.]({% image_buster /assets/img/wyng/2.png %}){: style="max-width:80%;"}
 
 ### Paso 2: Configurar el conector Braze
 
 1. En la ventana de configuración que se abre, proporciona tu clave de API REST Braze.
 ![Una imagen del aspecto de la solicitud de credenciales.]({% image_buster /assets/img/wyng/4.png %}){: style="max-width:80%;"}<br><br>
-2. A continuación, utiliza el menú desplegable para seleccionar la campaña Wyng que te gustaría compartir con Braze.![Imagen del conector Braze que te pide que selecciones una campaña Wyng existente que te gustaría compartir con Braze.]({% image_buster /assets/img/wyng/5.png %}){: style="max-width:80%;"}<br><br>
+2. A continuación, utilice el menú desplegable para seleccionar la campaña Wyng que desea compartir con Braze.![Imagen del conector Braze que le pide que seleccione una campaña Wyng existente que desee compartir con Braze.]({% image_buster /assets/img/wyng/5.png %}){: style="max-width:80%;"}<br><br>
 3. A continuación, debes configurar las suscripciones, los objetos atributo y evento, y los eventos personalizados.<br><br>
 - **Configuración de suscripciones (obligatorio)**<br>
 Para suscribir usuarios a grupos de suscripción, haga clic en **Añadir suscripción** y añada el nombre y el ID del grupo de suscripción. Para añadir varios nombres e ID de grupo, pulse de nuevo el botón **Añadir suscripción**.<br>![Una imagen que te pide el nombre y el ID de un grupo de suscripción.]({% image_buster /assets/img/wyng/8.png %}){: style="max-width:80%;"}<br><br>
 - **Configuración del seguimiento del usuario**<br>
-Haga clic en **Añadir propiedad personalizada** para añadir pares de atributos y objetos de evento para enviar al endpoint `/users/track`. Utilícelo para añadir valores de atributos codificados para cada transacción de datos enviada para la integración. Para añadir varias propiedades, haga clic de nuevo en el botón **Añadir propiedad personalizada**.<br>![Una imagen que te pide que añadas propiedades de atributo personalizadas.]({% image_buster /assets/img/wyng/9.png %}){: style="max-width:80%;"}<br><br>
+Haga clic en **Añadir propiedad personalizada** para añadir pares de atributos y objetos de evento para enviar al endpoint `/users/track`. Utilícelo para añadir valores de atributos codificados para cada transacción de datos enviada para la integración. Para añadir varias propiedades, haga clic de nuevo en el botón **Añadir propiedad personalizada**.<br>![Una imagen que le pide que añada propiedades personalizadas de atributos.]({% image_buster /assets/img/wyng/9.png %}){: style="max-width:80%;"}<br><br>
 - **Enviar evento personalizado**<br>
-Opcionalmente, puede activar el **envío de eventos personalizados**. Si está activada, debe incluir el nombre del evento y el ID de la aplicación correspondiente.<br>![Una imagen que te indica que envíes eventos personalizados, si es necesario.]({% image_buster /assets/img/wyng/10.png %}){: style="max-width:80%;"}<br><br>
+Opcionalmente, puede activar el **envío de eventos personalizados**. Si está activada, debe incluir el nombre del evento y el ID de la aplicación correspondiente.<br>![Una imagen que le pide que envíe eventos personalizados, si es necesario.]({% image_buster /assets/img/wyng/10.png %}){: style="max-width:80%;"}<br><br>
 4. Por último, debe asignar los campos Wyng a los campos de la API Braze en función de su caso de uso. Haga clic en **Seleccionar un campo** para elegir los campos que desea asignar y, a continuación, **guarde** la integración. Una vez guardados, estos campos asignados se pueden encontrar en **Integraciones > Gestionar**.
-![Un ejemplo de los diferentes campos Wyng que puedes mapear con determinados campos Braze.]({% image_buster /assets/img/wyng/11.png %}){: style="max-width:80%;"}
+![Un ejemplo de los diferentes campos Wyng que puede asignar a determinados campos Braze.]({% image_buster /assets/img/wyng/11.png %}){: style="max-width:80%;"}
 ![Una lista de los campos de sincronización disponibles.]({% image_buster /assets/img/wyng/12.png %}){: style="max-width:80%;margin-top:2px"}
 
 ### Paso 3: Pruebe su integración
@@ -75,6 +75,6 @@ La sección **Ver error** mostrará el código de error y alguna información ad
 
 ![Un ejemplo de registro de errores mostrado en la plataforma Wyng.]({% image_buster /assets/img/wyng/16.jpg %}){: style="max-width:80%;"}
 
-Si tienes más preguntas, ponte en contacto con el servicio de asistencia de Wyng[(support@wyng.com](mailto:contact@wyng.com)).
+Si tienes más preguntas, ponte en contacto con el servicio de asistencia de Wyng[(support@wyng.com](mailto:contact@wyng.com)) para que te ayuden.
 
 
