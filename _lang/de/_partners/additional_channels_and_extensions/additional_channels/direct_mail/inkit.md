@@ -40,13 +40,13 @@ Um eine Inkit-Webhook-Vorlage zu erstellen, die Sie in zukünftigen Kampagnen od
 
 Wenn Sie eine einmalige Inkit-Webhook-Kampagne erstellen oder ein bestehendes Template verwenden möchten, wählen Sie bei der Erstellung einer neuen Kampagne **Webhook** in Braze aus.
 
-![Eine Auswahl der verfügbaren vorgefertigten Webhook-Templates finden Sie auf dem Tab Webhook Templates im Bereich Templates und Medien.]({% image_buster /assets/img/inkit-webhook-template.png %})
+![Eine Auswahl der verfügbaren vorgefertigten Webhook-Templates finden Sie auf dem Tab Webhook Templates im Bereich Templates & Medien.]({% image_buster /assets/img/inkit-webhook-template.png %})
 
 Sobald Sie das Inkit Webhook Template ausgewählt haben, sollten Sie folgendes sehen:
 - **Webhook URL**: Leer
 - **Anfrage Körper**: Rohtext
 
-Im Feld Webhook URL müssen Sie eine Inkit Webhook URL [erstellen](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) und eingeben.
+[Erstellen Sie](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) im Feld Webhook URL eine Inkit Webhook URL und geben Sie diese ein.
 
 ![Der Code des Anfragekörpers und die Webhook-URL werden im Tab "Braze webhook builder compose" angezeigt.]({% image_buster /assets/img/inkit-integration.png %})
 
