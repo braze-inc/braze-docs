@@ -1,5 +1,5 @@
 ---
-nav_title: "Rich-Benachrichtigungen erstellen"
+nav_title: Rich-Benachrichtigungen erstellen
 article_title: "Erstellen umfangreicher Push-Benachrichtigungen für Android"
 page_order: 3
 page_layout: tutorial
@@ -12,7 +12,7 @@ tool:
   
 ---
 
-# Erstellen umfangreicher Push-Benachrichtigungen für Android
+# Erstellen Sie Rich-Push-Benachrichtigungen für Android
 
 > Mit Rich Notifications können Sie Ihre Push-Benachrichtigungen noch individueller gestalten, indem Sie zusätzliche Inhalte hinzufügen, die über den reinen Text hinausgehen. Android-Benachrichtigungen enthalten schon seit einiger Zeit Bilder in Push-Benachrichtigungen, die als "erweitertes Benachrichtigungsbild" bezeichnet werden.
 
@@ -44,7 +44,7 @@ Folgen Sie den Schritten zum [Erstellen einer Kampagne]({{site.baseurl}}/user_gu
 
 Fügen Sie den **Zusammenfassungstext/Bildunterschrift** hinzu, den Sie vor dem Bild in der Benachrichtigung anzeigen möchten.
 
-![Der Bereich Erweitertes Benachrichtigungsbild, wo Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![Der Bereich „Erweitertes Benachrichtigungsbild“, wo Sie ein Bild hinzufügen oder eine Bild-URL eingeben können.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Schritt 3: Medien hinzufügen
 
@@ -52,7 +52,7 @@ Fügen Sie Ihr Bild in das Feld **Erweitertes Benachrichtigungsbild** im Compose
 
 Details zu den unterstützten Bildern finden Sie unter [Bildspezifikationen]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
 
-![Ein Nutzer:innen erhält eine Push-Benachrichtigung für iOS mit dem Titel "Hallo" und dem Text "Danke, dass Sie an unserem Kundenbindungs-Programm teilnehmen!]({% image_buster /assets/img_archive/android_rich_image.png %})
+![Ein:e Nutzer:in erhält eine Push-Benachrichtigung für iOS mit dem Titel „Hallo“ und dem Text „Danke, dass Sie unserem Kundenbindungs-Programm beigetreten sind“.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Schritt 4: Fahren Sie mit der Erstellung Ihrer Kampagne fort
 
