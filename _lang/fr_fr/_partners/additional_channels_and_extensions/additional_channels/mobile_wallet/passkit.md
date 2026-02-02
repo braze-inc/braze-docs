@@ -23,7 +23,7 @@ L'intégration de Braze et PassKit vous permet d'augmenter et de mesurer l'engag
 | Condition | Description |
 | ----------- | ----------- |
 | Compte PassKit | Vous devez disposer d'un compte PassKit et d'un gestionnaire de compte PassKit. |
-| `userDefinedID` | Pour mettre à jour de manière appropriée les événements personnalisés et les attributs personnalisés destinés à vos utilisateurs entre PassKit et Braze, vous devez définir l'ID externe de Braze comme. `userDefinedID` Ce paramètre `userDefinedID` sera utilisé lors des appels d'API vers les endpoints PassKit. |
+| `userDefinedID` | Pour mettre à jour de manière appropriée les événements personnalisés et les attributs personnalisés de vos utilisateurs entre PassKit et Braze, vous devez définir l'ID externe de Braze comme `userDefinedID`. Cette adresse `userDefinedID` est utilisée lors des appels d'API aux endpoints Passkit. |
 | Clé d'API REST Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
 | Endpoint REST Braze  | L'URL de votre endpoint REST. Votre endpoint dépendra de l'[URL de Braze pour votre instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -44,21 +44,21 @@ Une fois les données transmises à Braze, vous pouvez créer des audiences, per
 
 Pour transmettre des données depuis PassKit, assurez-vous d'avoir défini votre ID externe Braze sur le paramètre `externalId` de PassKit.
 
-1. Dans **Paramètres**, sous **Intégrations** de votre projet ou programme PassKit Pass, cliquez sur **Connect** sous l'onglet **Braze**.<br>![La tuile d'intégration de Braze dans la plateforme Passkit.]({% image_buster /assets/img/passkit/passkit5.png %}){: style="max-width:80%"}<br><br>
+1. Dans **Paramètres**, sous **Intégrations** de votre projet ou programme PassKit Pass, cliquez sur **Connect** sous l'onglet **Braze**.<br>![La vignette d'intégration Braze dans la plateforme PassKit.]({% image_buster /assets/img/passkit/passkit5.png %}){: style="max-width:80%"}<br><br>
 2. Renseignez votre clé API Braze, l'URL de votre endpoint et donnez un nom à votre connecteur.<br><br>
-3. **Activez l'intégration** et tous les événements que vous souhaitez dans Braze pour déclencher ou personnaliser vos messages.<br>![La tuile d'intégration PassKit Braze a été étendue pour accepter la clé API, l'URL de l'endpoint, le nom de l'intégration, les paramètres d'activation, les paramètres d'adhésion et les paramètres de passage.]({% image_buster /assets/img/passkit/passkit4.png %}){: style="max-width:70%"}
+3. **Activez l'intégration** et tous les événements que vous souhaitez dans Braze pour déclencher ou personnaliser vos messages.<br>![La vignette d'intégration PassKit Braze a été étendue pour accepter la clé API, l'URL de l’endpoint, le nom de l'intégration, les paramètres d'activation, les paramètres d'adhésion et les paramètres de pass.]({% image_buster /assets/img/passkit/passkit4.png %}){: style="max-width:70%"}
 
 ## Créer un pass à l'aide d'un lien SmartPass
 
-Dans Braze, vous pouvez configurer un lien SmartPass pour générer une URL unique permettant à vos clients d'installer leur pass sur Android ou iOS. Pour ce faire, vous devez définir une charge utile de données SmartPass cryptée qui peut être appelée depuis un Braze Content Block. Ce [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) peut ensuite être réutilisé pour les futurs laissez-passer et coupons. Les éléments suivants seront utilisés lors de votre intégration :
+Dans Braze, vous pouvez configurer un lien SmartPass pour générer une URL unique permettant à vos clients d'installer leur pass sur Android ou iOS. Pour ce faire, vous devez définir une charge utile de données SmartPass cryptée qui peut être appelée depuis un Braze Content Block. Ce [bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) peut ensuite être réutilisé pour les futurs laissez-passer et coupons. Les éléments suivants sont utilisés lors de votre intégration :
 
 - **URL de PassKit** : L'URL de votre PassKit est une URL unique pour votre programme PassKit.<br>Chaque programme possède une URL unique, que vous trouverez dans l'onglet **Distribution** de votre programme ou projet PassKit. (par exemple,https://pub1.pskt.io/c/ww0jir)<br><br>
-- **Secret PassKit** : Outre l'URL, vous devez disposer de la clé PassKit de ce programme.<br>Elle est disponible sur la même page que l'URL de PassKit.<br><br>
-- **ID du programme (ou du projet)** : Votre ID de programme PassKit sera requis pour créer l'URL SmartPass. <br>Vous pouvez le trouver dans l'onglet **Paramètres** de votre projet ou programme.
+- **Secret PassKit** : En plus de l'URL, vous devez avoir à portée de main la clé Passkit pour ce programme.<br>Elle est disponible sur la même page que l'URL de PassKit.<br><br>
+- **ID du programme (ou du projet)** : Votre ID de programme PassKit est nécessaire pour créer l'URL du SmartPass. <br>Vous pouvez le trouver dans l'onglet **Paramètres** de votre projet ou programme.
 
 Pour plus d'informations sur la création de liens SmartPass chiffrés, consultez cet [article de Passkit](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links).
 
-### Étape 1 : Définissez la charge utile des données de votre pass {#passkit-integrations}
+### Étape 1 : Définissez la charge utile des données de votre pass {#passkit-integrations}
 
 Tout d'abord, vous devez définir le coupon ou la charge utile du membre. 
 
@@ -94,7 +94,7 @@ Sélectionnez **Créer un bloc de contenu** pour commencer.
 
 Ensuite, vous devez définir votre **balise Liquid de bloc de contenu**. Après avoir enregistré ce bloc de contenu, cette balise Liquid peut être référencée lors de la rédaction de messages. Dans cet exemple, nous avons attribué à la balise Liquid la valeur {% raw %} `{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
-Dans ce bloc de contenu, nous n'inclurons pas directement la charge utile, mais la référencerons dans une variable {% raw %} `{{passData}}` {% endraw %}. Le premier extrait de code que vous devez ajouter à votre bloc de contenu capture un encodage Base64 de la variable {% raw %} `{{passData}}` {% endraw %}.
+Dans ce bloc de contenu, nous n'inclurons pas directement la charge utile, mais nous la référencerons dans une variable {% raw %}`{{passData}}`{% endraw %}. Le premier extrait de code que vous devez ajouter à votre bloc de contenu capture un encodage Base64 de la variable {% raw %} `{{passData}}` {% endraw %}.
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passDatapassData|base64_encode}}{% endcapture %}
@@ -135,7 +135,7 @@ Enfin, assurez-vous d'appeler votre URL finale afin qu'elle imprime votre URL Sm
 ```
 {% endraw %}
 
-À ce stade, vous aurez créé un bloc de contenu qui ressemble à ceci :
+À ce stade, vous avez créé un bloc de contenu qui ressemble à ceci :
 
 {% raw %}
 ```liquid
@@ -196,10 +196,10 @@ Capturez votre charge utile JSON minifiée à partir de l'[étape 1](#passkit-in
 {% endraw %}
 
 Le corps de votre message devrait ressembler à ceci :
-![Une image du compositeur du message du bloc de contenu avec le JSON capturé et la référence du bloc de contenu.]({% image_buster /assets/img/passkit/passkit1.png %}){: style="max-width:70%"}
+![Image du compositeur de messages du bloc de contenu avec le JSON capturé et la référence du bloc de contenu affichée.]({% image_buster /assets/img/passkit/passkit1.png %}){: style="max-width:70%"}
 
 L'URL de sortie de l'exemple est la suivante :
-![L'URL de sortie qui comprend une longue chaîne de caractères générée de manière aléatoire.]({% image_buster /assets/img/passkit/passkit2.png %}){: style="max-width:70%"}
+![URL de sortie qui inclut une longue chaîne de caractères alphanumériques générée de manière aléatoire.]({% image_buster /assets/img/passkit/passkit2.png %}){: style="max-width:70%"}
 
 L'URL de sortie sera longue. La raison en est qu'il contient toutes les données d'accès et intègre une sécurité de premier ordre pour garantir l'intégrité des données et éviter toute modification d'URL. Si vous utilisez le SMS pour distribuer cette URL, vous pouvez la faire passer par un processus de raccourcissement de lien tel que [bit.ly](https://dev.bitly.com/v4/#operation/createFullBitlink). Cela peut se faire par le biais d'un appel de contenu connecté à un endpoint bit.ly.
 
@@ -222,9 +222,9 @@ Avant de commencer, voici les paramètres de charge utile JSON courants que vous
 | `status` | Chaîne de caractères | L'état actuel d'un coupon, tel que `REDEEMED` ou`UNREDEEMED`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Étape 1 : Créez votre modèle de webhook Braze
+### Étape 1 : Créez votre modèle de webhook Braze à Braze
 
-Pour créer un modèle de webhook PassKit à utiliser dans de futures campagnes ou Canvases, accédez à **la section Modèles et médias du** tableau de bord de Braze. Si vous souhaitez créer une campagne webhook PassKit unique ou utiliser un modèle existant, sélectionnez Webhook **in** Braze lors de la création d'une nouvelle campagne.
+Pour créer un modèle de webhook PassKit à utiliser dans de futures campagnes ou Canvases, accédez à la section **Modèles & Media** dans le tableau de bord Braze. Si vous souhaitez créer une campagne webhook PassKit unique ou utiliser un modèle existant, sélectionnez Webhook **in** Braze lors de la création d'une nouvelle campagne.
 
 Une fois que vous avez sélectionné le modèle de webhook PassKit, vous devriez voir ce qui suit :
 - **URL du webhook** : `https://api-pub1.passkit.io/coupon/singleUse/coupon`
@@ -297,7 +297,7 @@ Outre la création et la mise à jour des laissez-passer, vous pouvez également
 ```
 
 {% endtab %}
-{% tab passe le statut %}
+{% tab passes status %}
 ```
 UNREDEEMED 
 ```
