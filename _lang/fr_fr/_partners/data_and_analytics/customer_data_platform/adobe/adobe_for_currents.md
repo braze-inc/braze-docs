@@ -47,7 +47,7 @@ Pour plus d'informations sur les schémas, consultez la documentation d'Adobe su
     - Modifiez le mappage pour `id` de `to _braze.appID` à `_id` au niveau racine du schéma.
     - Assurez-vous que `properties.is_amp` est mappée à `_braze.messaging.email.isAMP`.
     - Supprimez le mappage `time` et `timestamp`, puis sélectionnez l'icône d'ajout > **Ajouter un champ calculé** et entrez **time * 1000.** Sélectionnez **Enregistrer**.
-    - Sélectionnez **Mapper le champ cible** à côté du nouveau champ source et mappez-le à l'**horodatage** au niveau racine du schéma. <br><br>![Page Adobe "Ajouter des données" avec mappages.]({% image_buster /assets/img/adobe/currents_mapping.png %})<br><br>
+    - Sélectionnez **Mapper le champ cible** à côté du nouveau champ source et mappez-le à l'**horodatage** au niveau racine du schéma. <br><br>![Page Adobe "Add data" avec mappages.]({% image_buster /assets/img/adobe/currents_mapping.png %})<br><br>
 6. Sélectionnez **Valider** pour confirmer que vous avez résolu les problèmes.
 
 {% alert important %}
@@ -57,7 +57,7 @@ Les horodatages de Braze sont exprimés en secondes. Pour refléter correctement
 {: start="7"}
 7\. Sélectionnez **Suivant**, vérifiez les détails de votre flux de données, puis sélectionnez **Terminer**.<br><br>![Page "Ajouter des données" d'Adobe sans erreur de mappage.]({% image_buster /assets/img/adobe/currents_no_errors.png %})
 
-### Étape 3 : Rassembler les informations d'identification
+### Étape 3 : Rassembler les informations d'identification
 
 Recueillez les crédentiels suivants pour les saisir dans Braze, ce qui permettra à Braze d'envoyer des données à Adobe Experience Platform.
 
