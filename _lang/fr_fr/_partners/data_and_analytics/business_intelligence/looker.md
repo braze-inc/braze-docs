@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Cours Braze] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/) {: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Looker
 
 > [Looker](https://looker.com/), une plateforme d'aide à la décision et d'analyse de big data, vous permet de facilement explorer, analyser et partager des analyses commerciales en temps réel.
 
@@ -70,7 +70,7 @@ Seuls les utilisateurs existants seront signalés. Vous ne pouvez pas utiliser l
 
 Configurez une action Braze Looker avec votre clé API Braze REST et votre endpoint REST.
 
-![La page de configuration de Looker Braze. Ici, vous pouvez trouver des champs pour la clé API de Braze et l'endpoint de l'API REST de Braze.]({% image_buster /assets/img/braze-looker-action.png %})
+![La page de configuration de Looker Braze. Vous trouverez ici des champs pour la clé d'API Braze et l’endpoint de l'API Braze REST.]({% image_buster /assets/img/braze-looker-action.png %})
 
 #### Étape 2 : Configurer Looker Develop
 
@@ -143,9 +143,9 @@ Authorization: Bearer [API_KEY]
 
 ### Segmentez les utilisateurs dans Braze {#segment-users}
 
-Dans Braze, pour créer un segment de ces utilisateurs signalés, accédez à **Segments** sous **Engagement**, nommez votre segment et sélectionnez **Looker_Export** comme filtre. Ensuite, utilisez l'option « inclut la valeur » et fournissez le drapeau d'attribut personnalisé que vous avez attribué dans Looker.
+Dans Braze, pour créer un segment de ces utilisateurs marqués, naviguez vers **Segments** sous **Engagement**, nommez votre segment et sélectionnez **Looker_Export** comme filtre. Ensuite, utilisez l'option « inclut la valeur » et fournissez le drapeau d'attribut personnalisé que vous avez attribué dans Looker.
 
-![Dans le générateur de segments de Braze, le filtre "looker_export" est défini sur "includes_value" et "Looker".]({% image_buster /assets/img/braze_segments.png %})
+![Dans le générateur de segments Braze, le filtre "looker_export" est réglé sur "includes_value" et "Looker".]({% image_buster /assets/img/braze_segments.png %})
 
 Une fois enregistré, vous pouvez faire référence à ce segment lors de la création d'un canvas ou d'une campagne à l'étape du ciblage des utilisateurs.
 
