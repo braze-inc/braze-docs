@@ -3,24 +3,24 @@ nav_title: Configurações de idioma
 article_title: Configurações de idioma
 page_order: 2.5
 page_type: reference
-description: "Este artigo descreve como alterar o idioma em que o painel de controle do Braze é exibido."
+description: "Este artigo descreve como alterar o idioma em que o dashboard da Braze é exibido."
 
 ---
 
 # Configurações de idioma
 
-Este artigo descreve como alterar o idioma em que o painel de controle do Braze é exibido.
+Este artigo descreve como alterar o idioma em que o dashboard da Braze é exibido.
 
-## Alterar as configurações de idioma do painel
+## Altere as configurações de idioma do dashboard
 
-O painel de controle do Braze está disponível em [vários idiomas](#supported-languages). Você pode alterar o idioma do visor para o idioma de sua preferência a qualquer momento.
+O dashboard do Braze está disponível em [vários idiomas](#supported-languages). Você pode alterar o idioma do visor para o idioma de sua preferência a qualquer momento.
 
 1. No cabeçalho global, selecione <i class="fa-solid fa-globe" aria-label="Selecione seu idioma"></i>.
 2. Escolha seu idioma na lista.
 
-\![Inglês selecionado para o idioma do painel do Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
+![Inglês selecionado para o idioma do dashboard do Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
-Pode levar alguns minutos para que o painel seja recarregado.
+Pode levar alguns minutos para que o dashboard seja recarregado.
 
 ### Idiomas suportados
 
