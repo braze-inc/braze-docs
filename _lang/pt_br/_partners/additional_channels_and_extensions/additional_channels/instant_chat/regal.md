@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Regal
 
-> [Regal.io](https://regal.io) é a solução de vendas por telefone e SMS criada para gerar mais conversas, para que você possa atingir suas metas de crescimento muito mais rapidamente.
+> [Regal.io](https://regal.io) é a solução de vendas por telefone e SMS construída para gerar mais conversas, para que você possa atingir suas metas de crescimento muito mais rápido.
 
 Ao integrar a Regal e o Braze, você pode criar uma experiência mais consistente e personalizada em todos os pontos de contato com o cliente.
 - Envie o próximo melhor e-mail ou notificação por push da Braze com base no que foi dito em uma conversa telefônica na Regal.
@@ -228,11 +228,11 @@ Quando você edita um endpoint, pode levar até 5 minutos para que o cache seja 
 #### Tentativas
 Atualmente, não há novas tentativas nesses eventos. Se uma resposta não for recebida em 5 segundos, o evento será descartado e não passará por novas tentativas. A Regal adicionará novas tentativas em uma versão futura.
 #### Eventos
-O [guia Webhooks de relatórios](https://developer.regal.io/docs/reporting-webhooks#events) da Regal inclui a lista completa de eventos de relatórios que eles publicam. Lá você pode ver definições de propriedades e exemplos de cargas úteis.
+O [guia de Webhooks de Relatórios](https://developer.regal.io/docs/reporting-webhooks#events) da Regal inclui a lista completa de eventos de Relatórios que eles publicam. Lá você pode ver definições de propriedades e exemplos de cargas úteis.
 
 ### Etapa 3: Transforme os eventos Regal em eventos Braze
 
-O recurso Braze [Data Transformation]({{site.baseurl}}/data_transformation) permite que você mapeie os eventos Regal recebidos no formato necessário para serem adicionados como atribuições, eventos ou compras no Braze.
+O recurso [Transformação de Dados]({{site.baseurl}}/data_transformation) do Braze permite que você mapeie eventos de Regal recebidos no formato necessário para serem adicionados como atributos, eventos ou compras no Braze.
 
 1. Dê um nome à sua transformação de dados. Recomenda-se configurar uma transformação de dados por webhook de evento.
 
@@ -250,7 +250,7 @@ O recurso Braze [Data Transformation]({{site.baseurl}}/data_transformation) perm
 ## Casos de uso
 
 {% tabs %}
-{% tab Disparar um e-mail %}
+{% tab Trigger an email %}
 
 **Disparar um e-mail da Braze com base em uma disposição de chamada na Regal**
 
@@ -348,7 +348,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Atualizar atribuições do perfil %}
+{% tab Update profile attributes %}
 
 **Atualizar os atributos do perfil na Braze com base nos eventos `contact.attribute.edited` da Regal**
 
@@ -412,7 +412,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Mantenha seus experimentos em sincronia %}
+{% tab Keep your experiments in sync %}
 
 **Mantenha seus experimentos no Braze e no Regal em sincronia usando os eventos do `contact.experiment.assigned` **
 
@@ -475,7 +475,7 @@ return brazecall;
 
 ```
 {% endtab %}
-{% tab Cancelar inscrição de um contato %}
+{% tab Unsubscribe a contact %}
 
 **Cancelar inscrição de um contato no Braze com base em um `contact.unsubscribed` da Regal**
 
