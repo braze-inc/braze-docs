@@ -75,9 +75,9 @@ Les utilisateurs qui n'ont pas enregistré votre marque en tant que contact et q
 - N'incluez aucun caractère après votre lien de prévisualisation ou l'expérience pourrait être perturbée.
 
 
-[1]: {% image_buster /assets/img/movable_ink/ios_link.png %}
-[2]: {% image_buster /assets/img/movable_ink/ios_message.png %}
-[3]: {% image_buster /assets/img/movable_ink/ios_test_launch.png %}
-[4]: {% image_buster /assets/img/movable_ink/ios_example.png %}
-[5]: {% image_buster /assets/img/movable_ink/android_automatic.png %}
-[6]: {% image_buster /assets/img/movable_ink/android_tap.png %}
+[1] : {% image_buster /assets/img/movable_ink/ios_link.png %}
+[2] : {% image_buster /assets/img/movable_ink/ios_message.png %}
+[3] : {% image_buster /assets/img/movable_ink/ios_test_launch.png %}
+[4] : {% image_buster /assets/img/movable_ink/ios_example.png %}
+[5] : {% image_buster /assets/img/movable_ink/android_automatic.png %}
+[6] : {% image_buster /assets/img/movable_ink/android_tap.png %}
