@@ -63,12 +63,12 @@ Kunden müssen eine Datenquelle erstellen, bei der es sich um eine CSV-Datei, ei
 ![Es werden verschiedene Optionen für Datenquellen angezeigt: CSV-Upload, Website- oder API-Integration.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
 {% tabs local %}
-{% tab CSV Datenquelle %}
+{% tab CSV Data Source %}
 - **CSV-Datenquelle**: Jede Zeile muss mindestens eine Segmente- und eine Inhaltsspalte haben. Nachdem Sie Ihre CSV-Datei hochgeladen haben, wählen Sie aus, welche Spalten für das Targeting der Inhalte verwendet werden sollen. [Beispiel CSV-Datei]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
 ![Die Felder, die angezeigt werden, wenn Sie "CSV" als Datenquelle auswählen.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
-{% tab Website Datenquelle %}
+{% tab Website Data Source %}
 - **Website Datenquelle**: Jede Zeile muss mindestens eine Segmente- und eine Inhaltsspalte haben. Nachdem Sie Ihre CSV-Datei hochgeladen haben, wählen Sie aus, welche Spalten für das Targeting der Inhalte verwendet werden sollen.
   - Im Rahmen dieses Prozesses müssen Sie eine Abbildung erstellen:
     - Welche Felder werden als Segmente verwendet?
@@ -76,7 +76,7 @@ Kunden müssen eine Datenquelle erstellen, bei der es sich um eine CSV-Datei, ei
 
 ![Die Felder, die angezeigt werden, wenn Sie "Website" als Datenquelle auswählen.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
-{% tab API-Integrationen %}
+{% tab API Integrations %}
 - **API-Integrationen**: Nutzen Sie die API Ihres Unternehmens, um Inhalte direkt aus einer API-Antwort zu erzeugen.
 
 ![Die Felder, die angezeigt werden, wenn Sie "API Integration" als Ihre Datenquelle auswählen]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
@@ -89,7 +89,7 @@ Erstellen Sie auf dem Startbildschirm von Movable Ink eine Kampagne. Sie können
 
 Wir empfehlen Ihnen auch, einen Blick auf die verschiedenen Inhaltsoptionen zu werfen, die über Blöcke verfügbar sind.
 
-![Ein Bild davon, wie die Movable Ink-Plattform aussieht, wenn Sie eine neue Kampagne für Movable Ink erstellen.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
+![Ein Bild davon, wie die Movable Ink-Plattform bei der Erstellung einer neuen Movable Ink-Kampagne aussieht.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
 
 Movable Ink verfügt über einen einfachen Editor, mit dem Sie Elemente wie Text oder Bilder per Drag-and-Drop verschieben können. Wenn Sie Ihre Datenquelle aufgefüllt haben, können Sie mit Hilfe der Eigenschaften der Daten dynamisch ein Bild erzeugen. Darüber hinaus können Sie innerhalb dieses Flusses auch Fallbacks für Nutzer:innen erstellen, wenn die Kampagne gesendet wird und ein Nutzer nicht den Kriterien der Personalisierung entspricht.
 
@@ -105,18 +105,18 @@ Um Movable Ink-Inhalte in Nachrichten von Braze einzubinden, müssen Sie den Sta
 
 Um die Quell-URL zu erhalten, müssen Sie den Inhalt im Movable Ink Dashboard einrichten und dann von dort aus Ihren Inhalt fertigstellen und exportieren. Kopieren Sie auf der Seite **Finish** die Quell-URL(`img src`) aus dem Creative Tag.
 
-![Die Seite, die erscheint, nachdem Sie Ihre Movable Ink Kampagne abgeschlossen haben, hier finden Sie Ihre Inhalts-URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
+![Die Seite, die erscheint, nachdem Sie Ihre Movable Ink Kampagne abgeschlossen haben. Hier finden Sie Ihre Inhalts-URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
 Als nächstes fügen Sie in der Braze Platform die URL in das entsprechende Feld ein. Entsprechende Felder für Ihren Messaging-Kanal finden Sie in Schritt 4. Ersetzen Sie schließlich alle Merge-Tags (z. B. {% raw %}```&mi_u=%%email%%```{% endraw %}) durch die entsprechende Liquid-Variable (z. B. {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
 ### Schritt 4: Braze Erfahrung
 
 {% tabs local %}
-{% tab E-Mail %}
+{% tab Email %}
 Fügen Sie auf der Braze-Plattform Ihren kreativen Tag in den Text Ihrer E-Mail ein.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
 
 {% endtab %}
-{% tab Push-Benachrichtigung %}
+{% tab Push notification %}
 
 1. In der Braze Plattform:
 	- Android Push: Fügen Sie die URL in die Felder **Push-Symbolbild** und **Erweitertes Bild der Benachrichtigung** ein.<br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
@@ -125,7 +125,7 @@ Fügen Sie auf der Braze-Plattform Ihren kreativen Tag in den Text Ihrer E-Mail 
 2. Um sicherzustellen, dass die Bilder nicht zwischengespeichert werden, stellen Sie der URL in der Nachricht leere Liquid-Tags voran: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 {% endtab %}
-{% tab In-App-Nachricht %}
+{% tab In-app message %}
 
 1. Fügen Sie auf der Braze-Plattform die URL in das Feld **Rich-Benachrichtigung Media** ein.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. Geben Sie eine eindeutige URL an, um das Zwischenspeichern zu verhindern. Um sicherzustellen, dass die Realtime-Bilder von Movable Ink funktionieren und nicht durch das Caching beeinträchtigt werden, verwenden Sie Liquid, um einen Zeitstempel an das Ende der URL des Movable Ink-Bildes anzuhängen.
@@ -143,7 +143,7 @@ Dieses Template nimmt die aktuelle Zeit (in Sekunden), hängt sie an das Ende de
 **3\.** Schließlich sollten Sie die Mitgliedschaft in den Segmenten neu bewerten. Aktivieren Sie dazu die Option `Re-evaluate audience membership and liquid at send-time`, die sich im Schritt **Targeting Zielgruppen** einer Kampagne befindet. Wenn diese Option nicht verfügbar ist, wenden Sie sich an Ihren Customer-Success-Manager oder den Braze-Support. Diese Option weist Braze SDKs an, die Kampagne mit einer eindeutigen URL jedes Mal neu anzufragen, wenn eine In-App-Nachricht getriggert wird.
 
 {% endtab %}
-{% tab Content-Card %}
+{% tab Content Card %}
 
 1. Fügen Sie auf der Braze-Plattform die URL in das Feld **Rich-Benachrichtigung Media** ein.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. Für Mobiltelefone: Content-Cards-Bilder auf iOS und Android werden beim Empfang zwischengespeichert und nicht aktualisiert. 
@@ -175,7 +175,7 @@ Dieses Template nimmt die aktuelle Zeit (in Sekunden), hängt sie an das Ende de
 
 
 [1]: https://www.movableink.com/
-[Datenquelle]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})
