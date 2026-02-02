@@ -34,7 +34,7 @@ Pour intégrer les deux plateformes, vous devez intégrer les deux SDK et mapper
 Pour mapper correctement les champs entre les deux SDK, définissez le même ID utilisateur dans les deux systèmes à l'aide de la [`changeUser`méthode]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/#setting-user-ids) du SDK Braze `setUserId` et de la méthode de [`PilgrimUserInfo`](https://developer.foursquare.com/docs/pilgrim-sdk/advanced-setup-guide#custom-user-data) dans le SDK Pilgrim.
 
 ### Étape 2 : Configurer la console Pilgrim
-![Une image de la console Pilgrim demandant l'ID du groupe, l'ID de l'application Android et l'ID de l'application iOS.]({% image_buster /assets/img_archive/pilgrim-dev-console.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Image de la console Pilgrim demandant l'ID de groupe, l'ID d'application Android et l'ID d'application iOS.]({% image_buster /assets/img_archive/pilgrim-dev-console.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Recherchez l'espace de travail et les ID d'application dans la console de développement Braze. Ensuite, entrez votre clé d'API Braze REST et vos identifiants d'application dans la console Foursquare Pilgrim.
 
@@ -52,13 +52,13 @@ Pour envoyer une campagne qui enverra des messages en fonction d'un emplacement/
 - Créez une campagne Braze ou un canvas en activant l’option **Livraison par événement**
 - Pour votre déclencheur, utilisez un événement personnalisé `arrival` ou avec un filtre de propriétés d'événement `locationType`, comme indiqué dans la capture d'écran suivante.
 
-![Une campagne basée sur l'action à l'étape de réception indiquant « arrivée » sélectionnée comme option « Réaliser un événement personnalisé », où « LocationType » est égal à « domicile ». ]({% image_buster /assets/img_archive/action-based-campaign.png %})
+![Une campagne basée sur l’action dans l’étape de livraison montrant « arrival » sélectionné comme option « perform custom event », où « locationType » est égal à « home ».]({% image_buster /assets/img_archive/action-based-campaign.png %})
 
 ## Reciblage
 
 Pour recibler vos utilisateurs, utilisez le SDK Pilgrim pour définir un `last_location` attribut personnalisé sur les profils utilisateur de vos utilisateurs de Braze. Vous pouvez ensuite utiliser la comparaison `matches regex` pour recibler les utilisateurs qui se sont rendus à un endroit précis dans le monde réel, par exemple en segmentant tous les utilisateurs qui se sont récemment rendus dans une pizzeria.
 
-![Une campagne basée sur l'action à l'étape des utilisateurs cibles indiquant que « last_location » est égal à « Pizza Place ». ]({% image_buster /assets/img_archive/last-location-segment.png %})
+![Une campagne basée sur l'action dans la démarche des utilisateurs cibles montrant que "last_location" est égal à "Pizza Place".]({% image_buster /assets/img_archive/last-location-segment.png %})
 
 Vous pouvez également segmenter les utilisateurs de Braze qui ont visité un type de site particulier en fonction de ceux de Foursquare `primaryCategoryId` au cours d'une période donnée. Pour tirer parti de ce point de données pour vos cas d'utilisation de reciblage, enregistrez-`primaryCategoryId` en tant que propriété d’événement lors de votre processus de segmentation d'audience. [Pour identifier les utilisateurs et les propriétés utilisés par l'API Foursquare et le SDK Pilgrim, consultez le site des développeurs de Foursquare.](https://developer.foursquare.com/)
 
