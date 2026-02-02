@@ -14,13 +14,13 @@ guide_featured_list:
   - name: Erste Schritte
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Erstellen von Kampagnen
+  - name: Kampagnen erstellen
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     image: /assets/img/braze_icons/list.svg
-  - name: Kampagnen verwalten
+  - name: Kampagnen managen
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Kampagnen testen
+  - name: Test Kampagnen
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Ideen und Strategien
