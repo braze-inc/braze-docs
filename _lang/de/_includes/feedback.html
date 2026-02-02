@@ -1,0 +1,38 @@
+<div class="gitedit_div">
+    <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank"> <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" alt="Github" /> {{ site.data.i18n[site.language]['edit_github'] | Standard: "Diese Seite auf GitHub bearbeiten" }} </a>
+</div>
+
+<div id="feedback">
+    {%- if include.title -%}
+    <div id="feedback_title">{{ include.title | upcase }} </div>
+    {%- sonst -%}
+    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | Standard: "WIE HILFREICH WAR DIESE SEITE?" }} </div>
+    {%- endif -%}
+
+    <div id="feedback_answer">
+      <ul class="list-inline rating-list">
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="Sehr hilfreich"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="Hilfreich"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="Einigermaßen hilfreich"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="Nicht hilfreich"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="Sehr wenig hilfreich"></i></li>
+      </ul>
+    </div>
+    <div id="feedback_comment_div">
+        <div>
+            <textarea id="feedback_comment" placeholder="Wie können wir diese Seite verbessern?"></textarea>
+        </div>
+        <button type="submit" name="submit_feedback" value="FEEDBACK ABGEBEN" class="btn btn-black" id="feedback_submit_button" role="button"> FEEDBACK ABGEBEN </button>
+
+    </div>
+    <div id="feedback_msg">
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    var feedback_site = '{{site.baseurl}}{{page.url}}';
+    var feedback_article_title = '{{page.article_title}}';
+    var feedback_nav_title = '{{page.nav_title}}';
+</script>
