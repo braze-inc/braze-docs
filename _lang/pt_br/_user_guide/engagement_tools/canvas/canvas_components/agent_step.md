@@ -13,7 +13,7 @@ toc_headers: h2
 
 > O passo do Agente permite que você adicione decisões e geração de conteúdo impulsionadas por IA diretamente no seu fluxo de trabalho do Canva. Para mais informações gerais, veja [Braze Agents]({{site.baseurl}}/user_guide/brazeai/agents/). 
 
-![Um passo do Agente em uma jornada do usuário do Canva.]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Um passo do Agente em uma jornada do usuário no Canva.]({% image_buster /assets/img/ai_agent/agent_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 ## Como funciona?
 
@@ -45,9 +45,9 @@ As saídas do agente podem ser salvas como strings, números, booleanos ou objet
 
 | Tipo de dados | Usos comuns |
 | --- | --- |
-| String | Personalização de mensagens (linhas de assunto, cópia, respostas) |
+| String | Personalização de mensagens (linhas de assunto, cópias, respostas) |
 | Número | Pontuação, limites, roteamento em [Caminhos do Público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) |
-| Booleano | Divisão Sim/Não em [Divisões de Decisão]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
+| Booleano | Divisões Sim/Não em [Divisões de Decisão]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) |
 | Objeto | Aproveite um ou mais dos tipos de dados acima com uma única chamada LLM em uma estrutura de dados previsível |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -67,7 +67,7 @@ Você deve decidir quais dados o agente deve receber em tempo de execução. As 
 - **Fornecer valores:** Passe apenas propriedades selecionadas, como o primeiro nome ou a cor favorita de um usuário. Escolha esta opção para dar ao agente acesso apenas aos valores que você atribui aqui. Para cada **Chave**, insira a [tag Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags) que define o campo de perfil de usuário específico ou variável de contexto.  
 
 {% alert note %}
-Braze passa os primeiros 10 KB de conteúdo para o agente. Fornecer valores que têm um valor total superior a 10 KB resulta em truncamento.
+Braze passa os primeiros 10 KB de conteúdo para o agente. Fornecer valores que tenham um valor total superior a 10 KB resulta em truncamento.
 {% endalert %}
 
 ### Etapa 5: Teste o agente
@@ -76,11 +76,11 @@ Após configurar sua etapa do Agente, você pode testar e visualizar a saída de
 
 ## Tratamento de erros  
 
-- Se o modelo conectado retornar um erro de limite de frequência, o Braze tenta até cinco vezes com retrocesso exponencial.  
+- Se o modelo conectado retornar um erro de limite de frequência, o Braze tenta novamente até cinco vezes com retrocesso exponencial.  
 - Se o agente falhar por qualquer outro motivo (como chave de API inválida), a variável de saída é definida como `null`.
     - Se um agente atingir seu limite diário de invocações, a variável de saída é definida como `null`. Se você estiver usando a saída de um agente em uma etapa de Mensagem, considere usar a lógica de abortar Liquid.
 - As respostas são armazenadas em cache para entradas idênticas e podem ser reutilizadas para invocações idênticas repetidas dentro de alguns minutos.
-    - Respostas que usam valores em cache ainda contam para o total e as invocações diárias.
+    - As respostas que usam valores em cache ainda contam para o total e as invocações diárias.
 
 ## Análise de dados  
 
@@ -97,7 +97,7 @@ Consulte as seguintes métricas para acompanhar o desempenho das suas etapas do 
 
 ### Quando devo usar uma etapa de Agente?
 
-Em geral, recomendamos usar uma etapa de Agente quando você deseja fornecer dados contextuais específicos a um LLM e fazer com que ele atribua variáveis de contexto do Canvas de forma inteligente em uma escala impossível para humanos.
+Em geral, recomendamos usar uma etapa de Agente quando você quiser fornecer dados contextuais específicos a um LLM e fazer com que ele atribua variáveis de contexto do Canvas de forma inteligente em uma escala impossível para humanos.
 
 Vamos supor que você esteja enviando uma mensagem personalizada para recomendar um novo sabor de sorvete a um usuário que anteriormente pediu chocolate e morango. Aqui está a diferença entre usar uma etapa de Agente versus recomendações de itens de IA:
 
@@ -106,7 +106,7 @@ Vamos supor que você esteja enviando uma mensagem personalizada para recomendar
 
 ### Quando devo usar um formato de saída padrão para um agente?
 
-Recomendamos usar o formato de saída quando você deseja que o agente retorne uma estrutura de dados com múltiplos valores definidos de maneira estruturada, em vez de uma saída de valor único. Isso permite que a saída seja melhor formatada como uma variável de contexto consistente.
+Recomendamos usar o formato de saída quando você quiser que o agente retorne uma estrutura de dados com múltiplos valores definidos de maneira estruturada, em vez de uma saída de valor único. Isso permite que a saída seja melhor formatada como uma variável de contexto consistente.
 
 Por exemplo, você pode usar um formato de saída dentro de um agente que tem a intenção de criar um itinerário de viagem de amostra para um usuário com base em um formulário que eles enviaram. O formato de saída permite que você defina que cada resposta do agente deve retornar com valores para `tripStartDate`, `tripEndDate` e `destination`. Cada um desses valores pode ser extraído de variáveis de contexto e colocado em uma etapa de Mensagem para personalização usando Liquid.
 
