@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://branch.io/), eine mobile Verknüpfungsplattform, unterstützt Sie bei der Akquise, dem Engagement und der Messung über alle Geräte, Kanäle und Plattformen hinweg, indem sie einen ganzheitlichen Überblick über alle Nutzer:innen-Touchpoints bietet.
+> [Branch](https://branch.io/) ist eine mobile Verknüpfungsplattform für die Akquise, das Engagement und die Messung über Geräte, Kanäle und Plattformen hinweg, die einen ganzheitlichen Blick auf die Touchpoints der Nutzer:innen bietet.
 
 _Diese Integration wird von Branch gepflegt._
 
@@ -29,7 +29,7 @@ Folgen Sie dem [Leitfaden zur SDK-Integration von Branch](https://help.branch.io
 Zur Unterstützung des Versendens von iOS Universal-Links als Deeplinks von Braze aus:
 
 1. Folgen Sie der Dokumentation von Branch, um [universelle Verknüpfungen](https://help.branch.io/developers-hub/docs/ios-universal-links) einzurichten.
-2. Implementieren Sie die [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) Methode [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) in Ihrer Braze SDK-Integration, um von Ihrer App aus [universelle Links weiterzuleiten]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization).
+2. Implementieren Sie die [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) Methode [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) in Ihrer Braze SDK-Integration, um [universelle Links]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) von Ihrer App aus [weiterzuleiten]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization).
 
 ### Deeplinking in E-Mails setzen
 
