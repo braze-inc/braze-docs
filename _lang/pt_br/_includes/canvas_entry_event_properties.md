@@ -16,7 +16,7 @@ Você pode referenciar `canvas_entry_properties` em qualquer etapa de Mensagem c
 {% raw %}
 Digamos que uma loja de varejo, RetailApp, tenha a seguinte solicitação: `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}`. 
 
-RetailApp pode puxar o nome do produto (sapatos) para uma mensagem com este Liquid: `{{canvas_entry_properties.${product_name}}}`.
+RetailApp pode puxar o nome do produto (sapatos) em uma mensagem com este Liquid: `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
 O RetailApp também pode disparar o envio de mensagens específicas para diferentes propriedades do `product_name` em um Canva que direciona os usuários depois que eles acionam um evento de compra. Por exemplo, eles podem enviar mensagens diferentes para os usuários que compraram sapatos e para os usuários que compraram outra coisa, adicionando o seguinte Liquid em uma etapa de Mensagem.
