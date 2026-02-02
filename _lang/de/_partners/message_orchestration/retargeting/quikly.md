@@ -43,7 +43,7 @@ Zum Beispiel:
 Im Folgenden finden Sie vier verschiedene Integrationen: E-Mail-Erfassung, SMS-Erfassung, angepasste Attribute und Webhooks. Welche Integration Sie wählen, hängt von Ihrer Quikly Aktivierung und Ihrem Anwendungsfall ab.
 
 {% tabs %}
-{% tab E-Mail-Akquise %}
+{% tab Email Acquisition %}
 
 ### E-Mail-Akquise
 
@@ -59,7 +59,7 @@ Im Folgenden finden Sie eine Übersicht darüber, wie Quikly diesen Arbeitsablau
     - Quikly erstellt über den Braze [`/users/track` Endpunkt]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) ein reines Alias-Profil, wobei die E-Mail des Nutzers als Nutzer-Alias festgelegt wird, um diesen Nutzer in Zukunft zu referenzieren (da der Nutzer keine externe ID hat).
     - Falls gewünscht, kann Quikly angepasste Events protokollieren, um anzuzeigen, dass dieses Profil an der Quikly-Aktivierung teilgenommen hat.
 
-{% details /benutzer/tracking anfrage %}
+{% details /users/track request %}
 
 #### Anfrage-Header
 ```
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
-{% tab SMS-Erfassung %}
+{% tab SMS Acquisition %}
 
 ### SMS-Abonnements
 
@@ -103,7 +103,7 @@ Um bestehende Double Opt-in SMS Abo-Workflows zu unterstützen, kann Quikly anst
 Braze empfiehlt, bei der Erstellung neuer Nutzer:innen über den Endpunkt `/users/track` eine Verzögerung von etwa 2 Minuten einzuhalten, bevor Nutzer:innen der entsprechenden Abo-Gruppe hinzugefügt werden, damit Braze Zeit hat, das Nutzerprofil vollständig zu erstellen.
 {% endalert %}
 
-{% details Ausführliche /subscription/status/set Anfrage %}
+{% details Detailed /subscription/status/set request %}
 #### Anfrage-Header
 ```
 Content-Type: application/json
@@ -123,7 +123,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
-{% tab Benutzerdefinierte Attribute %}
+{% tab Custom Attributes %}
 ### Angepasste Attribute
 
 Je nach Ihrer Braze-Implementierung möchten Sie vielleicht, dass Ereignisse innerhalb der Quikly-Aktivierung zur weiteren Verarbeitung durch Braze kaskadiert werden. Sie können zum Beispiel ein angepasstes Attribut anwenden, das darauf basiert, welche Stufe oder welcher Anreiz bei der Quikly-Aktivierung erreicht wurde, so dass Sie die entsprechende Content-Card anzeigen können, wenn der Benutzer Ihre App öffnet oder sich auf Ihrer Website einloggt. Quikly wird direkt mit Ihnen zusammenarbeiten, um diese Integrationen zu implementieren.
@@ -149,7 +149,7 @@ Quikly benötigt eine `HTTP Header` für die Autorisierung.
 
 - **HTTP-Methode**: POST
 - **Anfrage-Header**:
-  - **Autorisierung**: Überbringer [PARTNER_AUTHORIZATION_HEADER]
+  - **Autorisierung**: Bearer [PARTNER_AUTHORIZATION_HEADER]
   - **Content-Typ**: application/json
 
 #### Anfragetext
@@ -175,6 +175,6 @@ Denken Sie daran, Ihr Template zu speichern, bevor Sie die Seite verlassen! <br>
 {% endtabs %}
 
 ## Support
-Wenden Sie sich bei Fragen an Ihren Client Success Manager bei Quikly.
+Kontaktieren Sie Ihren Client Success Manager bei Quikly, wenn Sie Fragen haben.
 
 
