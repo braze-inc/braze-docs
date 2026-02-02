@@ -13,7 +13,7 @@ search_tag: Partner
 > Cette page partenaire propose quelques exemples de requêtes de cas d'utilisation possibles à consulter lors de la configuration de vos requêtes.
 
 {% tabs %}
-{% tab Filtrer par temps%}
+{% tab Filter By Time%}
 
 Une requête courante pourrait être de filtrer les événements par heure.
 
@@ -38,7 +38,7 @@ La valeur de `sf_created_at` n'est fiable que pour les événements qui ont ét�
 {% endalert %}
 {% endtab %}
 
-{% tab Interroger les journaux des modifications%}
+{% tab Querying Changelogs%}
   
 Les noms de campagne et les noms de canvas ne sont pas présents dans les événements eux-mêmes. Au lieu de cela, ils sont publiés dans un journal des modifications. 
 
@@ -73,7 +73,7 @@ LEFT JOIN CHANGELOGS_CANVAS_SHARED AS Canvas ON canvas.id = campaign_join.canvas
 qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
 {% endtab %}
-{% tab Entonnoir des notifications push %}
+{% tab Push Funnel %}
 
 Vous pouvez utiliser cette requête d'entonnoir de notifications push pour agréger les données brutes des événements d'envoi de notifications push, jusqu'aux données brutes des événements de livraison, et jusqu'aux données brutes des événements d'ouverture. Cette requête montre comment toutes les tables doivent être jointes car chaque événement brut a généralement une table séparée :
 
@@ -102,7 +102,7 @@ LIMIT 500;
 ```
 
 {% endtab %}
-{% tab Fréquence des e-mails %}
+{% tab Email Cadence %}
 Vous pouvez utiliser cette requête de cadence d'envoi de messages par e-mail quotidienne pour analyser le temps entre les e-mails qu'un utilisateur reçoit.
 
 Par exemple, si un utilisateur recevait deux e-mails en une journée, ils tomberaient sous `0 "days since last received"`. S'ils recevaient un e-mail lundi et un autre mardi, ils tomberaient dans la cohorte `1 "days since last received"`.
@@ -145,7 +145,7 @@ ORDER BY 1
 LIMIT 500;
 ```
 {% endtab %}
-{% tab Clics d'e-mail uniques %}
+{% tab Unique Email Clicks %}
 
 Vous pouvez utiliser cette requête de clics d'e-mail unique pour analyser le clic d'e-mail unique dans une fenêtre de temps donnée. L'algorithme pour calculer cela est le suivant :
   1. Partitionner les événements par la clé (`app_group_id`, `message_variation_id`, `dispatch_id`, `email_address`).
