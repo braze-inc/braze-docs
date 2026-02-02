@@ -16,7 +16,7 @@ O arquivamento de mensagens está disponível como um recurso complementar. Para
 
 ## Como funciona?
 
-Quando esse recurso está ativado, se você conectou um bucket de armazenamento em nuvem à Braze e o marcou como o destino padrão de exportação de dados, a Braze gravará um arquivo JSON compactado em gzip em seu bucket de armazenamento em nuvem para cada mensagem enviada a um usuário através dos canais selecionados (e-mail, SMS/MMS ou push). 
+Quando esse recurso está ativado, se você conectou um bucket de armazenamento em nuvem à Braze e o marcou como o destino padrão de exportação de dados, a Braze gravará um arquivo JSON gzipped em seu bucket de armazenamento em nuvem para cada mensagem enviada a um usuário através dos canais selecionados (e-mail, SMS/MMS ou push). 
 
 Esse arquivo conterá os campos definidos em [Referências de arquivo](#file-references) e refletirá os modelos finais de mensagens enviadas ao usuário. Todos os valores de modelo definidos em sua campanha (por exemplo, {% raw %}`{{${first_name}}}`{% endraw %}) mostrarão o valor final que o usuário recebeu com base nas informações de perfil. Isso permite que você retenha uma cópia da mensagem enviada para atender aos requisitos de conformidade, auditoria ou suporte ao cliente.
 
@@ -52,7 +52,7 @@ Esta seção o orienta na configuração do arquivamento de mensagens para o seu
 Se ainda não tiver feito isso, conecte um bucket de armazenamento em nuvem à Braze. Para obter etapas, consulte a documentação de nossos parceiros sobre o [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/), o [Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/) ou o [Google Cloud Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
 
 {% alert note %}
-Você não precisa configurar o Currents para a arquivação de mensagens, então pode pular esse pré-requisito na documentação do parceiro.
+Você não precisa configurar Currents para a arquivação de mensagens, então pode pular esse pré-requisito na documentação do parceiro.
 {% endalert %}
 
 ### Etapa 2: Selecione canais de envio de mensagens
@@ -176,7 +176,7 @@ Quando uma mensagem é enviada fora de uma campanha ou do Canva, a ID da campanh
 
 ### Como faço para obter mais informações sobre esse envio?
 
-Você pode usar o `external_id` ou `dispatch_id` em conjunto com o `user_id` para cruzar a mensagem template com nossos dados do Currents para encontrar mais informações, como o timestamp em que foi entregue, se o usuário abriu ou clicou na mensagem, e mais.
+Você pode usar tanto o `external_id` quanto o `dispatch_id` em conjunto com o `user_id` para cruzar a mensagem modelada com nossos dados Currents para encontrar mais informações, como o timestamp em que foi entregue, se o usuário abriu ou clicou na mensagem, e mais.
 
 ### Como as novas tentativas são tratadas?
 
@@ -190,11 +190,11 @@ Se suas credenciais de armazenamento em nuvem se tornarem inválidas em algum mo
 
 A cópia renderizada é feita upload imediatamente antes de enviar a mensagem ao usuário. Devido aos tempos de upload do armazenamento em nuvem, pode haver uma postergação de alguns segundos entre o registro de data e hora `sent_at` na cópia renderizada e a hora real em que o envio ocorre.
 
-### Posso criar um novo bucket especificamente para arquivação de mensagens enquanto mantenho o bucket atual usado para dados do Currents?
+### Posso criar um novo bucket especificamente para arquivação de mensagens enquanto mantenho o bucket atual usado para dados Currents?
 
 Não. Se você estiver interessado em criar esses buckets específicos, envie [feedback sobre o produto]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
-### Os dados arquivados são gravados em uma pasta dedicada em um bucket existente, semelhante à forma como as exportações de dados do Currents são estruturadas?
+### Os dados arquivados são gravados em uma pasta dedicada em um bucket existente, semelhante à forma como as exportações de dados Currents são estruturadas?
 
 Os dados são gravados em uma seção `sent_messages` do bucket. Consulte [Como funciona](#how-it-works) para mais detalhes.
 
