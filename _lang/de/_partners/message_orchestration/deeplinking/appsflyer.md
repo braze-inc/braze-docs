@@ -4,7 +4,7 @@ noindex: true
 layout: dev_guide
 guide_top_header: "AppsFlyer"
 guide_top_text: "AppsFlyer ist eine Analyse- und Attributionsplattform für mobiles Marketing, die Sie durch Marketinganalysen, Mobile-Attribution und Deep Linking bei der Analyse und Optimierung Ihrer Apps unterstützt."
-description: "Auf dieser Landing Page finden Sie alles rund um AppsFlyer, einschließlich Anleitungen zur Integration und wie Sie AppsFlyer Zielgruppen nutzen können."
+description: "Auf dieser Landing Page finden Sie alles über AppsFlyer, einschließlich Anweisungen zur Integration und zur Verwendung von AppsFlyer Zielgruppen."
 
 guide_featured_list:
 - name: AppsFlyer
