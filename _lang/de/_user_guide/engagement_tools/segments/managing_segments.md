@@ -1,6 +1,6 @@
 ---
 nav_title: Segmente verwalten
-article_title: Segmente verwalten
+article_title: "Segmente verwalten:in"
 page_order: 1
 page_type: tutorial
 tool: Segments
@@ -12,7 +12,7 @@ description: "Dieser Artikel behandelt die Aktionen, die Sie zur Verwaltung Ihre
 
 > Im Bereich Segmente können Sie eine umfassende Liste Ihrer bestehenden Segmente einsehen, neue Segmente erstellen und bestehende Segmente bearbeiten. Sie können die Liste der Segmente verfeinern, indem Sie eine Vielzahl von Filtern und Spalten auswählen, so dass nur die für Sie wichtigsten Informationen angezeigt werden.
 
-![Der Bereich Segmente zeigt eine Liste der aktiven Segmente an.]({% image_buster /assets/img/segment/segments_page.png %})
+![Der Abschnitt Segmente zeigt eine Liste der aktiven Segmente an.]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## Anpassen Ihrer Ansicht
 
@@ -53,12 +53,12 @@ Wenn Sie **Nur markierte anzeigen** wählen, wird Ihre Ansicht auf die Segmente 
 Gehen Sie zum Abschnitt **Messaging-Verwendung** eines Segments, um eine Übersicht darüber zu erhalten, wo das Segment verwendet wird, z. B. innerhalb anderer Segmente, Kampagnen und Canvase.
 
 {% alert note %}
-Um zu verhindern, dass Schleifen von Segmenten sich gegenseitig referenzieren, können Segmente, die den Filter **Segmentzugehörigkeit** verwenden, nicht von anderen Segmenten referenziert werden. Weitere Einzelheiten finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+Um Schleifen von Segmenten zu verhindern, die sich gegenseitig referenzieren, können Segmente, die den Filter **Segmentzugehörigkeit** verwenden, nicht von anderen Segmenten referenziert werden. Weitere Einzelheiten finden Sie unter [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 {% endalert %}
 
 ## Verwaltung bestimmter Segmente
 
-![Das Bearbeitungsmenü für ein Segment mit den Optionen "Bearbeiten", "Duplizieren", "Archivieren" und "Zu Sternchen hinzufügen".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
+![Das Bearbeitungsmenü für ein Segment mit den Optionen "Bearbeiten", "Duplizieren", "Archivieren" und "Zu markierten hinzufügen".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 Um ein bestimmtes Segment zu verwalten, bewegen Sie den Mauszeiger über das Segment und wählen Sie das Menüsymbol am Ende der Zeile, um die folgenden Optionen anzuzeigen:
 - **Bearbeiten:** Bearbeiten Sie die Filter in Ihrem Segment.
