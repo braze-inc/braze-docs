@@ -64,5 +64,5 @@ Vous pouvez filtrer vos données par :
 Les données présentées dans le tableau de bord de l' **utilisation des messages** se situent au niveau du contrat et ne se rapportent pas à une entreprise ou à un espace de travail particulier. Ces données reflètent l'utilisation de tous les espaces de travail de votre tableau de bord, et potentiellement de tous les tableaux de bord (si vous en avez plusieurs).
 {% endalert %}
 
-- Les données sous-jacentes sont fournies quotidiennement, les tableaux de données étant actualisés à 3 heures, 9 heures, 12 heures et 18 heures (heure de l'Est). La mise à jour du tableau de bord de l'**envoi des messages** peut prendre plus de 24 heures.
+- Les données sous-jacentes sont fournies quotidiennement, les tableaux de données étant actualisés à 3 heures, 9 heures, 12 heures et 18 heures (heure de l'Est). La mise à jour du tableau de bord de l'**utilisation des messages** peut prendre plus de 48 heures après les modifications afin de laisser le temps aux données de se synchroniser.
 - Braze suit la méthode d'arrondi standard : les chiffres sont arrondis au dixième le plus proche.
