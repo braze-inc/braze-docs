@@ -80,7 +80,7 @@ Just Words trabaja con Lienzos y campañas utilizando Contenido conectado. Si es
 ![Configuración de la prueba A/B Canvas de Braze.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
 
 {% endtab %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 1. En el paso **Redactar mensajes** de tu campaña, crea dos variantes.
 2. En el paso **Audiencia objetivo**, ve a la sección **Pruebas A/B** y modifica los porcentajes de usuarios que recibirán cada una de tus variantes (y tu grupo de control opcional). Puedes personalizar aún más tu prueba seleccionando una opción de optimización. Para obtener más información sobre las pruebas A/B para campañas, consulta [Crear pruebas multivariantes y A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/).
@@ -140,7 +140,7 @@ Braze Currents habilita el seguimiento y la optimización del rendimiento a lo l
 1. En Braze, ve a **Integraciones de socios** > **Exportación de datos**.
 2. Selecciona **Crear nueva corriente de prueba** y, a continuación, **Exportación de datos de prueba de Amazon S3**.
 
-!["Crear nueva corriente de prueba" desplegable con la opción de "Prueba de exportación de datos de Amazon S3".]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
+!["Crear nueva corriente de prueba" desplegable con la opción "Prueba de exportación de datos de Amazon S3".]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
 
 {: start="3" }
 3\. Introduce el ID de acceso a AWS S3, la clave de acceso secreta de AWS, el nombre de contenedor y la carpeta que te proporcionó Just Words durante la incorporación.
