@@ -60,13 +60,13 @@ Wenn Sie beispielsweise das Onboarding Messaging auf eine Gruppe von Nutzern aus
 
 Nachdem der Schritt für Zielgruppenpfade abgeschlossen ist, hat jede Zielgruppe einen eigenen Branch. Sie können mit der Verwendung von Zielgruppenpfaden fortfahren, um Ihr Publikum weiter zu filtern. Alternativ können Sie Ihre Canvas-Journey mit den Standard-Canvas-Schritten fortsetzen. 
 
-![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Grundlage von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Zwei Zielgruppen-Pfade mit unterschiedlichen Gruppen auf der Basis von Engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Testen von Zielgruppen
 
 Nachdem Sie Ihrer Zielgruppe Segmente und Filter hinzugefügt haben, können Sie testen, ob Ihre Zielgruppen wie erwartet eingerichtet sind, indem Sie [nach einem Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), um zu überprüfen, ob er den Zielgruppenkriterien entspricht.
 
-![Die Rubrik "Nutzer:in".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+![Die Rubrik "Nutzer:innen".]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## Audience Paths verwenden
 
