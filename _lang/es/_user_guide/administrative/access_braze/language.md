@@ -3,32 +3,32 @@ nav_title: Configuración de idioma
 article_title: Configuración de idioma
 page_order: 2.5
 page_type: reference
-description: "Este artículo describe cómo cambiar el idioma en el que aparece el panel de Braze."
+description: "Este artículo describe cómo cambiar el idioma en el que aparece el panel de control de Braze."
 
 ---
 
 # Configuración de idioma
 
-Este artículo describe cómo cambiar el idioma en el que aparece el panel de Braze.
+Este artículo describe cómo cambiar el idioma en el que aparece el panel de control de Braze.
 
-## Cambia la configuración de idioma de tu panel de control
+## Cambia la configuración de idioma del panel
 
 El panel de Braze está disponible en [varios idiomas](#supported-languages). Puedes cambiar el idioma de la pantalla al que prefieras en cualquier momento.
 
 1. En la cabecera global, selecciona <i class="fa-solid fa-globe" aria-label="Selecciona tu idioma"></i>.
-2. Elige tu idioma de la lista.
+2. Elija su idioma en la lista.
 
-\![Inglés seleccionado para el idioma del panel de Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
+![Inglés seleccionado para el idioma del panel de Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 El panel puede tardar unos instantes en volver a cargarse.
 
 ### Idiomas admitidos
 
-Puedes seleccionar uno de los siguientes idiomas admitidos:
+Puede seleccionar uno de los siguientes idiomas admitidos:
 
 - Alemán (Deutsch)
 - Inglés
-- Español (English)
+- Español (Español)
 - Francés (Français)
 - Japonés (日本語)
 - Coreano (한국어)
