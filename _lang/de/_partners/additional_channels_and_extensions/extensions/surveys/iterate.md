@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Iterate
 
-> [Iterate](https://iteratehq.com) macht es Ihnen leicht, von Ihren Kund:innen zu lernen, indem es intelligente, nutzer:innenfreundliche Recherchetools anbietet, die aussehen und sich anfühlen wie Ihre Marke.
+> [Iterate](https://iteratehq.com) bietet Ihnen Umfragen und Feedback-Tools, mit denen Sie von Ihren Kunden lernen können, und bietet benutzerfreundliche Forschungserlebnisse, die an Ihre Marke angepasst sind.
 
 _Diese Integration wird von Iterate gepflegt._
 
