@@ -18,7 +18,7 @@ Grâce à l'intégration de Zeotap et Braze, vous pouvez étendre l'échelle et 
 | --- | --- |
 |Compte Zeotap | Un [compte Zeotap](https://zeotap.com/) est nécessaire pour bénéficier de ce partenariat. |
 | Clé d'API REST Braze | Une clé API Braze REST avec des autorisations `users.track`. <br><br> Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**. |
-| Endpoint REST Braze  | L'URL de votre endpoint REST. Votre endpoint dépendra de l'[URL de Braze pour votre instance]({% image_buster /assets/img/zeotap/zeotap1.png %}). |
+| Endpoint REST Braze  | L'URL de votre endpoint REST. Votre endpoint dépendra de l'URL [Braze] de votre instance. ]({% image_buster /assets/img/zeotap/zeotap1.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Intégration
@@ -47,7 +47,7 @@ Les identifiants qui apparaissent sont à la fois disponibles dans le segment et
 
 Après avoir créé, poussé et traité avec succès un segment dans Zeotap, les utilisateurs de Zeotap apparaîtront dans le tableau de bord de Braze. Vous pouvez rechercher des utilisateurs par ID utilisateur dans le tableau de bord de Braze. 
 
-![Profil d'un utilisateur de Braze montrant les segments un à quatre listés comme "vrais" sous "Attributs personnalisés".]({% image_buster /assets/img/zeotap/zeotap4.png %})
+![Un profil utilisateur de Braze montrant les segments 1 à 4 répertoriés comme « vrais » sous « Attributs personnalisés ».]({% image_buster /assets/img/zeotap/zeotap4.png %})
 
 Si un utilisateur fait partie du segment Zeotap, le nom du segment apparaît en tant qu'attribut personnalisé sur son profil utilisateur avec une valeur booléenne. `true` Prenez note du nom de l'attribut personnalisé car vous en aurez besoin lors de la création d'un segment Braze. 
 
@@ -56,7 +56,7 @@ Ensuite, vous devez créer et définir ce segment dans Braze :
 2. Ensuite, nommez votre segment et sélectionnez le segment d'attribut personnalisé créé dans Zeotap.
 3. Enregistrez vos modifications. 
 
-![Dans le générateur de segments de Braze, vous trouverez les segments importés définis en tant qu'attributs personnalisés.]({% image_buster /assets/img/zeotap/zeotap3.png %})
+![Dans le générateur de segments Braze, vous pouvez trouver les segments importés définis en tant qu'attributs personnalisés.]({% image_buster /assets/img/zeotap/zeotap3.png %})
 
 Vous pouvez désormais ajouter ce segment nouvellement créé aux futures campagnes Braze et Canvases pour cibler ces utilisateurs finaux. 
 
