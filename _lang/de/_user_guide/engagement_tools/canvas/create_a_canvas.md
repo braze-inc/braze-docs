@@ -1,9 +1,9 @@
 ---
-nav_title: Erstellen von Canvases
-article_title: Erstellen von Canvases
+nav_title: Canvase bauen
+article_title: Canvase bauen
 page_order: 1
 layout: dev_guide
-guide_top_header: "Erstellen von Canvases"
+guide_top_header: "Canvase bauen"
 guide_top_text: "Die Artikel in diesem Abschnitt helfen Ihnen dabei, ein mehrdimensionales Canvas zu erstellen und es Ihren Benutzern schnell zur Verfügung zu stellen - von der Idee bis zur Ausführung. Mit seiner intuitiven Drag-and-Drop-Oberfläche und dem Bereich für Zusammenarbeit können Sie diese visuelle Programmierumgebung nutzen, um die besten Ergebnisse für Ihre Ziele im Bereich Customer-Engagement zu erzielen."
 
 page_type: landing
@@ -12,13 +12,13 @@ tool: Canvas
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-  - name: Erstellen einer Leinwand
+  - name: Eine Leinwand erstellen
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
   - name: Kommentarfunktion in Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments/
     image: /assets/img/braze_icons/message-circle-01.svg
-  - name: Erstellen einer Leinwandvorlage
+  - name: Eine Canvas-Vorlage erstellen
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Rate-Limiting
