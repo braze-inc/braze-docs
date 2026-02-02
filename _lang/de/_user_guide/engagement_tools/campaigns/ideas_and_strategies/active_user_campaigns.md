@@ -29,7 +29,7 @@ Wenn Sie Nutzer-IDs zur Identifizierung von Nutzer:innen festlegen, werden neue 
 
 Verwenden Sie unsere Auswahl an Filtern, um ein Nutzersegment zu erstellen, das Ihrer Meinung nach Ihre loyalste, beständigste Nutzerbasis umfasst. Das folgende Beispielsegment definiert die Top-Benutzer.
 
-\![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 Außerdem müssen Sie dieses Segment nicht ständig aktualisieren, da Nutzer, die die Einschränkungen der Kampagne ein- oder überschreiten, entsprechend angesprochen oder abgewiesen werden.
 
@@ -37,7 +37,7 @@ Außerdem müssen Sie dieses Segment nicht ständig aktualisieren, da Nutzer, di
 Das vorangegangene Beispiel segmentiert die Nutzer nach allgemeiner App-Nutzung. In den meisten Fällen wird die Gesamtzahl der Filter, die zur Definition Ihres wichtigsten Nutzer:innensegments erforderlich sind, weitgehend von den Besonderheiten Ihrer App bestimmt.
 {% endalert %}
 
-## Schritt 2: Erreichen Sie Ihre Top-Benutzer
+## Schritt 2: Kontaktieren Sie Ihre Top Nutzer:innen
 
 ### Geben Sie Ihren Benutzern das Gefühl, geschätzt zu werden
 
@@ -45,7 +45,7 @@ Geben Sie Ihren Nutzern das Gefühl der Wertschätzung, indem Sie ihnen für ihr
 
 Unerwartete Belohnungen können effektiver sein, wenn es darum geht, den Nutzer zu weiteren Aktionen zu bewegen, als wenn Sie sie von Anfang an versprochen hätten!
 
-\![Eine Kampagne im Schritt Verfassen mit einer Rich-Benachrichtigung von iOS, die lautet: "Nochmals vielen Dank für Ihren Einkauf bei uns! Als Dankeschön schenken wir Ihnen den Versand Ihres nächsten Einkaufs".]({% image_buster /assets/img/congratulations_push.jpg %})
+![Eine Kampagne im Schritt Verfassen mit einer iOS Rich-Benachrichtigung, die lautet: "Nochmals vielen Dank für Ihren Einkauf bei uns! Als Dankeschön schenken wir Ihnen den Versand Ihres nächsten Einkaufs".]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### Behalten Sie den Überblick über Ihre Ergebnisse
 
