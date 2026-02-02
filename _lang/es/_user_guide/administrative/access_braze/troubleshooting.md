@@ -1,6 +1,6 @@
 ---
 nav_title: Solución de problemas
-article_title: Solución de problemas Braze Access
+article_title: Solución de problemas de Braze Access
 page_order: 8
 page_type: reference
 description: "Este artículo te guía en la solución de problemas que puedas tener al intentar acceder a Braze."
@@ -13,18 +13,18 @@ description: "Este artículo te guía en la solución de problemas que puedas te
 
 ## Bloqueo de la cuenta
 
-Si no puedes acceder a tu cuenta Braze, ¡no te preocupes! Podemos ayudarte a volver a entrar.	
+Si no puedes acceder a tu cuenta Braze, ¡no te preocupes! Podemos ayudarte a volver a acceder.	
 
 Puedes saber qué tipo de bloqueo estás experimentando por el mensaje de error que recibes:	
 
 - [Veo un error sobre mi contraseña.](#password-error)	
-- [No veo ningún error, pero Braze sigue sin dejarme entrar.](#instance-error)	
+- [No veo ningún error, pero Braze sigue sin dejarme acceder.](#instance-error)	
 - [Veo un error sobre la suspensión de la cuenta.](#account-suspension)	
 
 ### Error de contraseña
 
 La seguridad de tu cuenta es importante para nosotros, por lo que se requieren contraseñas para acceder a tu cuenta de Braze.	
-- Comprueba que estás accediendo a la [instancia]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) correcta [del panel de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances). Compruébalo con tu administrador de cuentas o director de cuentas de Braze.	
+- Comprueba que estás accediendo a la [instancia correcta del panel de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances). Compruébalo con el administrador de tu cuenta o con el director de cuentas de Braze.	
 - Es posible que tu contraseña haya caducado, por lo que tendrás que [restablecerla]({{site.baseurl}}/user_guide/administrative/access_braze/accessing_your_account/#resetting-your-password).	
 - Si utilizas un servicio de [inicio de sesión único]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), comprueba con el administrador de tu cuenta que la configuración se ha realizado correctamente.	
 - Si tu empresa está en varias instancias de Braze, puede que estés utilizando el correo electrónico incorrecto para iniciar sesión.  	
@@ -35,7 +35,7 @@ En caso de duda, siempre puedes [restablecer tu contraseña]({{site.baseurl}}/us
 
 Si utilizas la misma máquina que usas habitualmente para conectarte, Braze debería detectar automáticamente la instancia correcta. Sin embargo, en caso de que no sea así o de que te conectes por primera vez, te recomendamos que tengas en cuenta lo siguiente:	
 
-- Comprueba que estás accediendo a la [instancia]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) correcta [del panel de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances). Compruébalo con tu administrador de cuentas o director de cuentas de Braze.
+- Comprueba que estás accediendo a la [instancia correcta del panel de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances). Compruébalo con el administrador de tu cuenta o con el director de cuentas de Braze.
 - Si tu empresa está en varias instancias de Braze, puede que estés utilizando el correo electrónico incorrecto para iniciar sesión.	
 
 ### Suspensión de la cuenta	
@@ -73,11 +73,11 @@ Si eres un nuevo usuario de Braze y tienes problemas para iniciar sesión o acce
 
 - Comprueba tu carpeta de correo no deseado: Confirma que el correo electrónico de activación de la cuenta no se ha filtrado en tu carpeta de correo no deseado.
 - Verifica tu dirección de correo electrónico: Haz que tu administrador compruebe la dirección de correo electrónico asociada a tu nueva cuenta Braze para confirmar que es correcta.
-- Políticas informáticas: Confirma con tu equipo de TI que no existen políticas que puedan impedir la recepción del correo electrónico de activación.
+- Políticas informáticas: Confirma con tu equipo de TI que no existen políticas que impidan la recepción del correo electrónico de activación.
 
 ### He recibido el correo electrónico, pero estoy atascado configurando la autenticación de dos factores (2FA).
 
-- Restablecer 2FA: Si tienes problemas para configurar la 2FA, tu administrador puede restablecer la 2FA para tu cuenta de usuario en la configuración.
+- Restablecer 2FA: Si tienes problemas para configurar 2FA, tu administrador puede restablecer 2FA para tu cuenta de usuario en la configuración.
 - Volver a añadir usuario: Si los problemas persisten, el administrador puede eliminar tu cuenta de usuario del panel y volver a añadirte. Esto permite crear el usuario con los mismos datos.
 
 Si los problemas continúan después de estos pasos, ponte en contacto con [el servicio de asistencia]({{site.baseurl}}/braze_support/) para obtener más ayuda.
