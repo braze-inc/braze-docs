@@ -12,9 +12,9 @@ page_order: 0
 
 > [Shopify](https://www.shopify.com/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a business of any size. Shopify makes commerce better for everyone with a platform and services engineered for reliability while delivering a better shopping experience for consumers everywhere.
 
-The Braze integration with Shopify provides a powerful solution for ecommerce businesses looking to enhance their customer engagement and drive personalized marketing efforts. This integration seamlessly connects Shopify's robust ecommerce capabilities with our advanced customer engagement platform, enabling you to deliver targeted, relevant, and timely messages to your users based on real-time shopping behaviors and transactional data.
+Braze와 Shopify의 통합은 고객 참여를 강화하고 개인화된 마케팅 활동을 추진하고자 하는 전자상거래 비즈니스에 강력한 솔루션을 제공합니다. 이 통합은 Shopify의 강력한 이커머스 기능과 고도화된 고객 참여 플랫폼을 원활하게 연결하여 실시간 쇼핑 행동 및 트랜잭션 데이터를 기반으로 사용자에게 관련성 있고 시의적절한 메시지를 전달할 수 있도록 지원합니다.
 
-## Requirements
+## 요구 사항
 
 | Requirement | Description |
 | --- | --- |
@@ -130,7 +130,7 @@ When you use these sign-up form templates, Braze automatically updates the globa
 
 {% alert note %}
 - Make sure to include entry criteria in your campaign or Canvas that includes both the global email subscription status and the subscription group that are connected to your Shopify store. This will help ensure that you are targeting the right audience. 
-- Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. This information is then sent to Shopify. This data helps merchants recognize visitors to their store and create a more personalized shopping experience. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+- Braze collects visitor information, such as email addresses and phone numbers, through in-browser messages. 그런 다음 이 정보는 Shopify 방문자 API로 전송되지만 Shopify에서 고객 프로필은 생성되지 않습니다. For more details, refer to [Visitor API](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
 {% endalert %}
 
 #### Third-party sign-up forms 
