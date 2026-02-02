@@ -50,7 +50,7 @@ In the **Account** step, provide your Braze API key and select **Connect to dest
 
 ![]({% image_buster /assets/img/adobe/braze-destination-account.png %}){: style="max-width:60%"}
 
-### Step 3: Authentication
+### 3단계: Authentication
 
 Next, in the  **Authentication** step, enter your Braze connection details:
 - **Name**: Enter the name you'd like to recognize this destination by in the future.
@@ -60,10 +60,10 @@ Next, in the  **Authentication** step, enter your Braze connection details:
 
 ![]({% image_buster /assets/img/adobe/braze-destination-authentication.png %}){: style="max-width:60%;"}
 
-### Step 4: Create destination
-Select **Create destination**. Your destination has been created. You can select **Save & Exit** to activate segments later or **Next** to continue the workflow and select segments to activate. 
+### 4단계: Create destination
+Select **Create destination**. Your destination has been created. **저장 & 나가기를** 선택하여 나중에 세그먼트를 활성화하거나 **다음을** 선택하여 워크플로를 계속하고 활성화할 세그먼트를 선택할 수 있습니다. 
 
-### Step 5: Activate segments
+### 5단계: Activate segments
 Activate the data you have in the Adobe real-time CDP by mapping segments to the Braze destination.
 
 The following list highlights the general steps required to activate a segment. For thorough guidance on Adobe segments and the segment activation workflow, visit [Adobe](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#prerequisites).
@@ -98,7 +98,7 @@ Let's say your XDM profile schema and your Braze instance contains the following
 
 The correct mapping would look like this:
 
-![Destination mappings: IdentityMap:IDFA mapped to IdentityMap:external_id, IdentityMap:GAID mapped to IdentityMap:external_id, IdentityMap:Email mapped to IdentityMap:external_id, xdm:mobilePhone.number mapped to CustomAttribute:PhoneNumber, xdm:person.name.lastName mapped to CustomAtrribute:LastName, xdm:person.name.firstName mapped to CustomAttribute:FirstName]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
+![Destination mappings: IdentityMap:IDFA는 IdentityMap:external_id, 에 매핑됨 IdentityMap:GAID는 IdentityMap:external_id, 에 매핑됨 IdentityMap:이메일은 IdentityMap:external_id, 에 매핑됨 xdm:mobilePhone.number 은 CustomAttribute:PhoneNumber 에 매핑됨, xdm:person.name.lastName 은 CustomAtrribute:LastName 에 매핑됨, xdm:person.name.firstName 은 CustomAttribute:FirstName 에 매핑됨.]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
 
 ## Exported data
 To verify if data has been exported successfully to Braze, check your Braze account. Adobe Experience Platform segments are exported to Braze under the `AdobeExperiencePlatformSegments` attribute.
