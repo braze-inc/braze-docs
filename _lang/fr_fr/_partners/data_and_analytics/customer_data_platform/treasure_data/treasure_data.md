@@ -54,7 +54,7 @@ Ensuite, sélectionnez **Exporter les résultats** et sélectionnez une authenti
 
 Définissez des paramètres de résultats d'exportation supplémentaires comme indiqué dans la [section de personnalisation](#customization) suivante. Dans votre contenu d'intégration d'exportation, passez en revue les paramètres d'intégration.
 
-![La page « Exporter les résultats ». Cette page contient les champs permettant de spécifier le mode, le suivi des types d’enregistrement et des champs préformatés. Dans cet exemple, les champs "User-Track" et "Custom Events" sont respectivement définis comme suit :]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
+![La page « Exporter les résultats ». Cette page contient les champs permettant de spécifier le mode, le suivi des types d’enregistrement et des champs préformatés. Dans cet exemple, Utilisateur-Suivre et Événements personnalisés sont définis sur ces champs, respectivement.]({% image_buster /assets/img/treasure_data/braze_export_configuration.png %}){: style="max-width:80%;"}
 
 Enfin, sélectionnez **Terminé**, exécutez votre requête et confirmez que vos données ont été transférées vers Braze.
 
