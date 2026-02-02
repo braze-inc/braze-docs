@@ -12,16 +12,11 @@ channel:
 
 # WhatsApp Nachrichten mit optimierter Zustellung
 
-> Nutzen Sie die fortschrittlichen KI-Systeme von Meta, um Ihre Marketing Nachrichten an mehr Nutzer:innen zuzustellen, die am ehesten bereit sind, sich mit ihnen zu beschäftigen, und so die Zustellbarkeit und das Engagement für Ihre Nachrichten deutlich zu erhöhen.
+> Erhöhen Sie die Zustellbarkeit und das Engagement, indem Sie mit einer dynamischen, engagementbasierten Zustellung mehr der richtigen Nutzer:innen auf WhatsApp erreichen.
 
-WhatsApp Nachrichten mit optimierter Zustellung werden über die neue [Marketing Messages Lite API](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/) von Meta versendet, die im Vergleich zur herkömmlichen Cloud API eine bessere Performance bietet. Mit dieser neuen Sendepipeline können Sie Nutzer:innen besser erreichen, die Ihre Nachrichten wertschätzen und empfangen möchten.
+WhatsApp Nachrichten mit optimierter Zustellung werden über die [Marketing Messages API for WhatsApp](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp) (MM API for WhatsApp) von Meta versendet, die eine dynamische, auf Engagement basierende Zustellung bietet. Das bedeutet, dass Ihre Nachrichten mit hohem Engagement (z.B. solche, die eher gelesen und angeklickt werden) mehr Nutzer:innen erreichen, die sich wahrscheinlich auch mit ihnen beschäftigen werden. WhatsApp geht davon aus, dass Ihre Nachrichten ein hohes Engagement aufweisen, wenn sie erwartet, relevant und zeitnah sind und daher eher gelesen und angeklickt werden. 
 
-Zu den Vorteilen einer optimierten Zustellung gehören:
-
-- **Dynamische Grenzen für Messaging:** Die neue API bietet dynamischere Grenzen für das Messaging pro Benutzer, so dass Marketing-Nachrichten mit hohem Engagement (die eher gelesen oder angeklickt werden) mehr Nutzer:innen erreichen können.
-- **Optimierte Zustellbarkeit:** Sie können mit niedrigeren Zustellungs-Raten, aber höheren Engagement-Raten für die zugestellten Nachrichten rechnen, da die fortschrittliche KI von Meta für Nutzer:innen optimiert wird, von denen sie erwartet, dass sie die Nachricht wertschätzen und sich mit ihr beschäftigen. 
-- **Bewährte Ergebnisse:** In Indien wurden bei Nachrichten, die als eher lesbar oder klickbar identifiziert wurden, bis zu 9 % mehr Nachrichten zugestellt als beim Versand über die Cloud API.
-- **Gezielte Zustellung:** Metas fortschrittliche KI identifiziert Nachrichten mit hohem Engagement und bringt sie mehr Nutzern zugestellt, was es Ihnen erlaubt, die richtige Nachricht an mehr Nutzer:innen zu übermitteln.
+Marken können mit der MM API für WhatsApp die gleiche oder eine höhere Zustellbarkeit erwarten als mit der Cloud API. In Indien wurden laut Meta bei Marketing-Nachrichten mit hohem Engagement bis zu 9% mehr Nachrichten zugestellt als bei Cloud APIs. Beachten Sie, dass die MM API für WhatsApp immer noch keine 100%ige Zustellbarkeit garantiert.
 
 ### Regionale Verfügbarkeit
 
@@ -37,7 +32,7 @@ Die Verfügbarkeit und die Möglichkeiten der optimierten Zustellung hängen von
 {: start="3"}
 3\. Nachdem die optimierte Zustellung aktiviert wurde, wird der Status der optimierten Zustellung in Ihren Kontodetails im **WhatsApp Business Account Management** angezeigt.
 
-![WhatsApp Business Account Management Abschnitt mit einer aufgelisteten Abo-Gruppe, die den Status Aktiv hat.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
+![WhatsApp Business Account Management mit einer aufgelisteten Abo-Gruppe, die den Nummernstatus Aktiv hat.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
 
 Alternativ können Sie die optimierte Zustellung auch direkt in Ihrem WhatsApp Manager aktivieren und dann mit dem Senden in Braze beginnen.
 
@@ -57,3 +52,12 @@ Die optimierte Zustellung sollte für **Marketing Nachrichten** verwendet werden
 - Wenn Sie die optimierte Zustellung auswählen, diese aber nicht verfügbar ist, wird die Nachricht automatisch auf die Methode der Cloud API zurückgreifen.
 
 ![Nachrichten-Editor mit einem Tab für die Vorschau, der ein Kontrollkästchen zum Auswählen der optimierten Zustellung enthält.]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})
+
+### Retargeting von Nutzer:innen auf anderen Braze Kanälen 
+
+Da die MM API für WhatsApp keine 100%ige Zustellbarkeit bietet, ist es wichtig zu wissen, wie Sie Nutzer:innen, die Ihre Nachricht auf anderen Kanälen nicht erhalten haben, retargeten können. 
+
+Für das Retargeting von Nutzern:innen empfehlen wir die Erstellung eines Segments von Nutzern:innen, die eine bestimmte Nachricht nicht erhalten haben. Filtern Sie dazu nach dem Fehlercode `131049`, der anzeigt, dass eine Nachricht mit einem Marketing Template nicht gesendet wurde, weil WhatsApp das Limit für Marketing-Templates pro Nutzer:innen nicht einhält. Sie können dies mit Braze-Currents oder SQL Segment-Erweiterungen tun:
+
+- **Braze Currents:** Exportieren Sie Nachrichten-Fehlerereignisse mit Braze Currents. Mit diesen Daten können Sie dann ein angepasstes Attribut im Nutzerprofil (z.B. `whatsapp_failed_last_msg: true`) aktualisieren, das Sie als Filter für Ihre Retargeting-Kampagne verwenden können.
+- **SQL Segment-Erweiterungen:** Wenn Sie Zugriff auf dieses Feature haben, können Sie SQL verwenden, um die Protokolle der Nachrichtenfehler abzufragen und ein Segment dieser Nutzer:innen zu erstellen und dieses Segment dann auf einem anderen Kanal zu targetieren.
