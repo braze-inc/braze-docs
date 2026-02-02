@@ -1,12 +1,12 @@
 ---
 nav_title: Segmentación basada en cuentas
-article_title: Configuración de la segmentación basada en cuentas
+article_title: Configurar la segmentación basada en cuentas
 page_order: 2
 page_type: reference
 description: "Aprende a utilizar varias características de Braze para potenciar tus casos de uso de segmentación basada en cuentas B2B."
 ---
 
-# Configuración de la segmentación basada en cuentas
+# Configura la segmentación basada en cuentas
 
 > Esta página muestra cómo utilizar varias características de Braze para potenciar tus casos de uso de segmentación basada en cuentas B2B.
 
@@ -25,8 +25,8 @@ Para ayudarte a empezar, hemos creado plantillas SQL básicas para una segmentac
 
 Supongamos que quieres segmentar a los usuarios que son empleados de una cuenta de empresa objetivo. 
 
-1. Ve a **Audiencia** > **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con una plantilla** y selecciona la plantilla **Segmento de catálogo para eventos**. <br><br> \!["Selecciona una plantilla" modal con opciones de segmento de catálogo para eventos o compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>El editor SQL se rellena automáticamente con una plantilla que une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que interactúan con determinados elementos del catálogo. <br><br>\![Un editor SQL para una nueva extensión con una pestaña "Variables" abierta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
-2. Utiliza la pestaña **Variables** para proporcionar los campos necesarios para tu plantilla antes de generar tu segmento.<br><br>Para que Braze identifique a los usuarios en función de su interacción con los elementos del catálogo, tienes que hacer lo siguiente:
+1. Ve a **Audiencia** > **Extensiones de segmento** > **Crear nueva extensión** > **Empezar con una plantilla** y selecciona la plantilla **Segmento de catálogo para eventos**. <br><br> ![Modalidad "Selecciona una plantilla" con opciones de segmento de catálogo para eventos o compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>El editor SQL se rellena automáticamente con una plantilla que une los datos de eventos de usuario con los datos del catálogo para segmentar a los usuarios que interactúan con determinados elementos del catálogo. <br><br>![Un editor SQL para una nueva extensión con una pestaña "Variables" abierta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
+2. Utilice la pestaña **Variables** para proporcionar los campos necesarios para su plantilla antes de generar su segmento.<br><br>Para que Braze identifique a los usuarios en función de su compromiso con los artículos del catálogo, debe hacer lo siguiente:
 - Selecciona un catálogo que contenga un campo de catálogo
 - Selecciona un evento personalizado que contenga una propiedad de evento
 - Haz coincidir los valores del campo del catálogo y de las propiedades del evento
@@ -40,7 +40,7 @@ Selecciona las siguientes variables para un caso de uso de segmentación basada 
 | Catálogo | Catálogo de cuentas |
 | Campo del catálogo | ID |
 | Evento personalizado | account_linked |
-| Propiedad personalizada del evento | account_id |
+| Propiedad de evento personalizado | account_id |
 | (En Filtrar resultados SQL) Campo del catálogo | Clasificación |
 | (En Filtrar resultados SQL) Valor | Empresa |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
