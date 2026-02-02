@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by Adikteev._
 
-## About the integration
+## 통합 정보
 
 The Braze and Adikteev integration allows you to boost user retention by leveraging Adikteev's churn prediction technology within Braze CRM campaigns to target high-risk user segments in priority.
 
@@ -27,18 +27,18 @@ The Braze and Adikteev integration allows you to boost user retention by leverag
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Use cases
+## 사용 사례
 
 {% tabs %}
 {% tab Audience filtering %}
 Refinement of your audience segments based on churn risk.<br> The names and values of custom attributes sent by Adikteev are configurable.
 
-![A screenshot showing an example of how to use a custom attribute sent by Adikteev as an audience segment filter.]({% image_buster /assets/img/adikteev/audience.png %})
+![Adikteev에서 보낸 커스텀 속성을 오디언스 세그먼트 필터로 사용하는 방법을 보여주는 스크린샷입니다.]({% image_buster /assets/img/adikteev/audience.png %})
 {% endtab %}
 {% tab Message targeting %}
 Customization of your Braze messaging campaigns based on the churn risk of the recipients.
 
-![A screenshot showing an example of how to use a custom attribute sent by Adikteev as a campaign targeting filter.]({% image_buster /assets/img/adikteev/campaign.png %})
+![애딕티비가 전송한 커스텀 속성을 캠페인 타겟팅 필터로 사용하는 예시를 보여주는 스크린샷입니다.]({% image_buster /assets/img/adikteev/campaign.png %})
 {% endtab %}
 {% endtabs %}
 
