@@ -4,7 +4,7 @@ article_title: Admin-Einstellungen
 page_order: 20
 layout: dev_guide
 guide_top_header: "Admin-Einstellungen"
-guide_top_text: "Diese Seite finden Sie unter <b>Einstellungen</b> > <b>Admin-Einstellungen</b>. Sie können dann die entsprechende Registerkarte auswählen, um zu den Einstellungen zu navigieren, die Sie verwalten möchten. <br> <br> Die meisten Funktionen in den <b>Admin-Einstellungen</b> sind nur für Braze-Kontoadministratoren verfügbar. Wenn Sie keinen Zugang haben, aber glauben, dass Sie ihn haben sollten, wenden Sie sich an den Braze-Kontoverwalter Ihres Unternehmens."
+guide_top_text: "Diese Seite finden Sie unter <b>Einstellungen</b> > <b>Admin-Einstellungen</b>. Sie können dann die entsprechende Registerkarte auswählen, um zu den Einstellungen zu navigieren, die Sie verwalten möchten. <br> <br> Die meisten Funktionen in den <b>Admin-Einstellungen</b> sind nur für Braze-Kontoadministratoren verfügbar. Wenn Sie keinen Zugang haben, aber der Meinung sind, dass Sie ihn haben sollten, wenden Sie sich an den Administrator des Braze-Kontos in Ihrem Unternehmen."
 
 page_type: landing
 description: "Diese Landing Page enthält Artikel über Verwaltungseinstellungen. Hier finden Sie Artikel zur Konfiguration von Kontaktinformationen, Benachrichtigungseinstellungen und Sicherheitseinstellungen."
