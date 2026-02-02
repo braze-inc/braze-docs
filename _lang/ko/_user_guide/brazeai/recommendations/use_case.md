@@ -1,11 +1,11 @@
 ---
-nav_title: 사용 사례
+nav_title: Use case
 article_title: 사용 사례 드라이브 콘텐츠 시청 후 검색
 description: "이 예시는 가상의 브랜드가 Braze AI 상품 추천을 사용하여 주요 고객 순간에 개인화된 콘텐츠와 제품 추천을 제공하는 방법을 보여줍니다."
 page_type: tutorial
 ---
 
-# 사용 사례: 시청 후 콘텐츠 검색 유도
+# Use case: 시청 후 콘텐츠 검색 유도
 
 > 이 예시는 가상의 브랜드가 Braze AI 상품 추천을 사용하여 주요 고객 순간에 개인화된 콘텐츠와 제품 추천을 제공하는 방법을 보여줍니다. 추천 로직으로 참여도를 높이고 전환을 늘리며 수작업을 줄이는 방법을 알아보세요.
 
@@ -15,7 +15,7 @@ page_type: tutorial
 
 Camila는 [AI 항목 추천을]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/) 사용하여 각 시청자의 시청 기록을 기반으로 새로운 타이틀을 자동으로 추천하는 시스템을 구축하여 사용자가 영화나 에피소드를 마친 직후에 전달합니다. 이는 사용자가 실제로 다음에 보고 싶은 콘텐츠를 발견하고 플랫폼에 계속 참여할 수 있도록 도와주는 더 스마트하고 개인화된 방법입니다.
 
-!"라는 인앱 메시지가 표시됩니다. "태양의 유목민"을 시청했으므로 이미지, 제목 이름, 설명, "지금 보기" 또는 다음 추천으로 "건너뛰기"를 위한 CTA가 표시됩니다.]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
+![인앱 메시지 "다음 순서, 바로 당신만을 위한 것입니다. "태양의 유목민"을 시청했으므로 이미지, 제목 이름, 설명, "지금 보기" 또는 다음 추천으로 "건너뛰기"를 위한 CTA가 표시됩니다.]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
 
 이 튜토리얼에서는 Camila:
 
@@ -42,13 +42,13 @@ Camila는 사용자가 콘텐츠 시청을 마칠 때마다 관련 타이틀을 
 2. 그녀는 트리거를 커스텀 이벤트로 설정합니다: `Watched Content`.
 3. 그녀는 제목 이미지, 이름, "지금 보기" CTA가 포함된 여러 페이지의 인앱 메시지를 디자인합니다.
 
-개인화 유형으로 "아이템 추천"을 선택한 상태에서 Braze 편집기에서 "개인화 추가" 모달이 열립니다.]({% image_buster /assets/img/ai_use_cases/recommendation_add_personalization.png %})
+!["개인화 유형으로 '아이템 추천'을 선택한 상태에서 Braze 편집기에서 '개인화 추가' 모달이 열립니다.]({% image_buster /assets/img/ai_use_cases/recommendation_add_personalization.png %})
 
 {: start="4"}
 
 4. 메시지 본문에서 Camila는 [개인화 추가 모달을]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables) 사용하여 추천 제목의 이름, 설명, 썸네일 등의 변수를 추가하고 카탈로그에서 콘텐츠를 동적으로 채우는 Liquid를 사용합니다. 그녀는 `Last Watched Movie` 에 커스텀 속성을 템플릿으로 지정하여 사용자에게 이 추천이 시청 기록을 기반으로 한다는 사실을 알립니다. 
 
-추천의 카탈로그 항목에서 특정 필드에 템플릿을 작성할 수 있는 원시 Liquid가 포함된 인앱 메시지 편집기.]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
+![추천의 카탈로그 항목에서 특정 필드에 템플릿을 작성할 수 있는 원시 Liquid가 포함된 인앱 메시지 편집기.]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
 
 {% details Show Liquid used in image %}
 
