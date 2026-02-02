@@ -1,82 +1,82 @@
 ---
-nav_title: Caminhos de ação
-article_title: Caminhos de ação 
+nav_title: Jornadas de ação
+article_title: Jornadas de ação 
 alias: /action_paths/
 page_order: 0.1
 page_type: reference
-description: "Este artigo de referência aborda como usar o Action Paths, um componente que permite classificar os usuários com base em suas ações."
+description: "Este artigo de referência cobre como usar jornadas de ação, um componente que permite classificar os usuários com base em suas ações."
 tool: Canvas
 ---
 
-# Caminhos de ação 
+# Jornadas de ação 
 
-> Os caminhos de ação no Canvas permitem classificar os usuários com base em suas ações. 
+> Jornadas de ação no canva permitem que você classifique seus usuários com base em suas ações. 
 
-Uma etapa do Action Paths em uma jornada do usuário do Canvas.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Uma etapa de jornadas de ação em um canva de usuário.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-Usando os Caminhos de Ação, você pode:
+Usando jornadas de ação, você pode:
 
-* Personalize os caminhos do usuário com base em uma ação específica, incluindo eventos de envolvimento do usuário e eventos personalizados
-* Manter os usuários por um determinado período para priorizar seu próximo caminho com base em suas ações durante esse período de avaliação
+* Personalize os caminhos do usuário com base em uma ação específica, incluindo eventos de engajamento do usuário e eventos personalizados
+* Mantenha os usuários por uma determinada duração para priorizar sua próxima jornada com base em suas ações durante este período de avaliação
 
-## Criação de um caminho de ação
+## Criando uma jornada de ação
 
-Para criar um caminho de ação, adicione um componente ao seu Canvas. Arraste e solte o componente da barra lateral ou selecione o botão de adição <i class="fas fa-plus-circle"></i> na parte inferior de uma etapa e selecione **Caminhos de ação**. 
+Para criar uma jornada de ação, adicione um componente ao seu canva. Arraste e solte o componente da barra lateral ou selecione o <i class="fas fa-plus-circle"></i> botão de mais na parte inferior de uma etapa e selecione **jornadas de ação**.
 
 ### Configurações de ação
 
-Em **Action Settings (Configurações de ação**), defina a **Evaluation Window (Janela de avaliação)** para determinar por quanto tempo os usuários são mantidos na etapa. Por padrão, os usuários são avaliados em um dia, mas você pode ajustar essa janela em segundos, minutos, horas, dias e semanas, dependendo do seu Canvas. A janela de avaliação máxima para um caminho de ação é de 31 dias.
+Nas **Configurações de Ação**, defina a **Janela de Avaliação** para determinar quanto tempo os usuários permanecem na etapa. Por padrão, os usuários são avaliados dentro de um dia, mas você pode ajustar essa janela por segundos, minutos, horas, dias e semanas, dependendo do seu canva. A janela máxima de avaliação para uma jornada de ação é de 31 dias.
 
-Nas **Configurações de ação**, você também pode ativar a ordem de classificação dos seus componentes ativando a opção **Avançar usuários com base na ordem de classificação**.
+Dentro das **Configurações de Ação**, você também pode ativar a ordem classificada para seus componentes ativando a alternância **Avançar usuários com base na ordem classificada**.
 
-As configurações de ação têm uma janela de avaliação de 1 dia.]({% image_buster /assets/img/actionpath_settings.png %})
+![As Configurações de Ação com uma janela de avaliação de 1 dia.]({% image_buster /assets/img/actionpath_settings.png %})
 
-Por padrão, **a classificação** está desativada. Quando um usuário entra no caminho de ação e executa o evento de acionamento associado a qualquer grupo de ação, ele avança imediatamente pelo grupo de ação relevante. Se um usuário não realizar um evento de acionamento, ele avançará pelo grupo padrão **Everyone Else** no final do período de avaliação.
+Por padrão, **Ranking** está desativado. Quando um usuário entra na jornada de ação e realiza o evento de gatilho associado a qualquer grupo de ação, ele avança imediatamente pelo grupo de ação relevante. Se um usuário não realizar um evento de gatilho, ele avança pelo grupo padrão **Todos os Outros** ao final do período de avaliação.
 
-Quando **Advanced users based on ranked order** está ativado, isso significa que **a classificação** está ativada. Portanto, todos os usuários serão mantidos até o final da janela de avaliação. No final do período de avaliação, os usuários avançarão pelo grupo de ação de prioridade mais alta para o qual estiverem qualificados no final da janela de avaliação. Os usuários que não executarem nenhuma das ações durante a janela de avaliação avançarão pelo grupo padrão **Everyone Else**.
+Quando **Usuários Avançados com base na ordem classificada** está ativado, isso significa que **Classificação** está ativado. Assim, todos os usuários são retidos até o final da janela de avaliação. Ao final do período de avaliação, os usuários avançam pelo grupo de ação de maior prioridade para o qual são elegíveis ao final da janela de avaliação. Usuários que não realizam nenhuma das ações durante a janela de avaliação avançam pelo grupo padrão **Todos os Outros**.
 
-#### Mensagens no aplicativo
+Observe que você pode disparar uma jornada de ação quando um objeto de atributo personalizado aninhado muda, mas não para vetores de atributos personalizados aninhados ou mudanças em tipos de dados de vetor de objeto.
 
-Observe que, quando o acionador do grupo de ações estiver iniciando uma sessão e a próxima etapa for uma mensagem in-app, o usuário precisará executar dois inícios de sessão para receber a mensagem in-app. A primeira sessão atribui o usuário ao grupo de ação dentro do caminho de ação, e a segunda sessão aciona a mensagem in-app.
+#### Mensagem no app
+
+Observe que quando o gatilho do grupo de ação inicia uma sessão e o próximo passo é uma mensagem no app, o usuário deve realizar dois inícios de sessão para receber a mensagem no app. A primeira sessão atribui o usuário ao grupo de ação dentro da jornada de ação, e a segunda sessão aciona a mensagem no app.
 
 #### Exemplo de status de classificação
 
-Digamos que você tenha um caminho de ação com um período de avaliação de um dia com dois grupos de ação: Grupo 1 e Grupo 2. O Grupo 1 tem um evento de acionamento "Iniciar sessão" e o Grupo 2 tem "Fazer compra". Se **a classificação** estiver ativada, todos os usuários no caminho da ação serão "retidos" por um dia. No final do dia, se um usuário tiver iniciado uma sessão e feito uma compra, ele avançará para o caminho de classificação mais alto. Nesse caso, o usuário avançaria para o Grupo 1. 
+Digamos que você tenha uma jornada de ação com um período de avaliação de um dia com dois grupos de ação: Grupo 1 e Grupo 2. O Grupo 1 tem um evento de gatilho "Iniciar Sessão", e o Grupo 2 tem "Fazer Compra". Se **Ranking** estiver ativado, todos os usuários na jornada de ação serão "retidos" por um dia. No final do dia, se um usuário iniciou uma sessão e fez uma compra, então ele avança para a jornada de maior classificação. Neste caso, o usuário avançaria para o Grupo 1. 
 
-No exemplo anterior, se **a classificação** estiver desativada e quando um usuário realizar um dos eventos de acionamento ("Iniciar sessão" ou "Fazer compra"), esse usuário será avançado no grupo de ação relevante com base na ação de acionamento.
+No exemplo anterior, se **Classificação** estiver desativado e um usuário realizar um dos eventos de gatilho ("Iniciar Sessão" ou "Fazer Compra"), esse usuário é avançado no grupo de ação relevante com base na ação de gatilho.
 
-Observe que as propriedades de entrada do Canvas são diferentes das propriedades do evento. As propriedades de entrada do Canvas são propriedades do evento que acionou o Canvas. Essas propriedades só podem ser usadas na primeira etapa completa de um Canvas ao usar o fluxo de trabalho original do Canvas. Ao usar o Canvas, as propriedades de entrada persistentes são ativadas e permitem que as propriedades de entrada sejam reutilizadas em todo o Canvas. Por outro lado, as propriedades de evento se originam de um evento ou ação que ocorre à medida que o usuário passa pelo seu fluxo de trabalho.
+Nota que as propriedades de entrada do canva diferem das propriedades do evento. As propriedades de entrada da canva são propriedades do evento que acionou a canva. Essas propriedades só podem ser usadas na primeira etapa completa de um canva ao usar o fluxo de trabalho original do canva. Ao usar o canva, as propriedades de entrada persistentes são ativadas e permitem que as propriedades de entrada sejam reutilizadas ao longo do canva. Por outro lado, as propriedades do evento se originam de um evento ou ação que ocorre à medida que o usuário passa pelo seu fluxo de trabalho.
 
 ### Grupos de ação
 
-Adicione um acionador ou vários acionadores para definir seus grupos de ações. Aqui, você pode selecionar um intervalo de acionadores, como se os usuários:
+Adicione um disparar ou vários disparar para definir seus grupos de ação. Aqui, você pode selecionar uma variedade de gatilhos, como se os usuários:
 
 - Fazer uma compra
 - Iniciar uma sessão
-- Realizar um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
+- Realizarem um [evento personalizado]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Realizar um evento de conversão
-- Adicionar um endereço de e-mail
-- Alterar um valor de atributo personalizado (incluindo matrizes, mas não atributos personalizados aninhados). Isso inclui adicionar um novo atributo com um valor a um perfil de usuário pela primeira vez (quando o atributo não estava presente anteriormente).
-- Atualizar o status da assinatura ou o status do grupo de assinatura
-- Interagir com uma campanha ou Content Card
+- Adicione um endereço de e-mail
+- Alterarem um valor de atributo personalizado (incluindo vetores, mas não atributos personalizados aninhados). Isso inclui adicionar um novo atributo com um valor a um perfil de usuário pela primeira vez (quando o atributo não estava presente anteriormente).
+- Atualize o status da inscrição ou o status do grupo de inscrições
+- Interaja com uma campanha ou cartão de conteúdo
 - Insira um local
-- Acionar uma geocerca
-- Enviar uma mensagem de entrada de SMS ou WhatsApp
+- Disparar um geofence
+- Enviar uma mensagem de entrada por SMS ou WhatsApp
 
-Um grupo de ação chamado "Grupo 1" para usuários que fazem qualquer compra.]({% image_buster /assets/img/actionpath_group.png %})
+![Um grupo de ação chamado "Grupo 1" para usuários que realizam qualquer compra.]({% image_buster /assets/img/actionpath_group.png %})
 
-Em cada configuração de grupo de ação, você também tem a opção de marcar a caixa de seleção **Quero que esse grupo saia do Canvas**, o que significa que os usuários desse grupo sairão do Canvas no final do período de avaliação.
+Em cada configuração de grupo de ação, você também tem a opção de selecionar a caixa de seleção **Eu quero que este grupo saia do canva**, significando que os usuários dentro deste grupo saem do canva ao final do período de avaliação.
 
-### Telas com reelegibilidade
+### canvas com re-eligibilidade
 
-Se os usuários entrarem em um caminho de ação várias vezes e tiverem várias entradas no caminho de ação ao mesmo tempo, o comportamento esperado varia de acordo com o status **da classificação**.
+Se os usuários entrarem em uma jornada de ação várias vezes e tiverem várias entradas na jornada de ação ao mesmo tempo, o comportamento esperado varia dependendo do status de **Classificação**.
 
-| Status da classificação | Comportamento do caminho de ação |
+| Status de Classificação | Comportamento da jornada de ação |
 |---|--------------|
-| **Desligado** | Quando uma ação relevante for executada, o Braze desduplicará as entradas e avançará imediatamente a entrada mais antiga pelo grupo de ações relevantes. <br><br/> Quando uma ação relevante não for executada, todas as entradas avançarão no final da janela de avaliação relevante. Não haverá desduplicação. |
-| **Em** | Todas as inscrições avançarão no final da janela de avaliação relevante. Não haverá desduplicação. |
+| **Off** | Quando uma ação relevante é realizada, o Braze deduplica as entradas e avança imediatamente a entrada mais antiga através do grupo de ações relevantes. <br><br/> Quando uma ação relevante não é realizada, todas as entradas avançam no final da janela de avaliação relevante. Nenhuma deduplicação ocorre. |
+| **On** | Todas as entradas avançam no final da janela de avaliação relevante. Nenhuma deduplicação ocorre. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Observe que as classificações não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
-
-
+Nota que os rankings não são [editáveis após o lançamento]({{site.baseurl}}/post-launch_edits/).
