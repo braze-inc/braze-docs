@@ -54,7 +54,7 @@ En Alpaco, crea una plantilla que exprese la identidad de tu marca. Cuando esté
 
 A continuación, ve al vestíbulo de Alpaco y utiliza tu plantilla para crear un correo electrónico, un mensaje dentro de la aplicación o un bloque de contenido. Para volver a comprobar tu mensaje antes de exportarlo, selecciona **Revisar**.
 
-![Alpaco - Crear correo electrónico]({% image_buster /assets/img/alpaco/alpaco_2.png %})
+![Alpaco Crear correo electrónico]({% image_buster /assets/img/alpaco/alpaco_2.png %})
 
 ### Paso 3: Exporta tu mensaje a Braze
 
@@ -62,13 +62,13 @@ Selecciona **Exportar**, luego elige la integración Braze y especifica si vas a
 
 Si haces cambios después de la exportación, puedes volver a exportar el contenido desde Alpaco para actualizarlo en Braze.
 
-![Alpaco - Exportar correo electrónico]({% image_buster /assets/img/alpaco/alpaco_3.png %})
+![Alpaco Exportar correo electrónico]({% image_buster /assets/img/alpaco/alpaco_3.png %})
 
 ## Uso de plantillas y bloques Alpaco en Braze
 
 Dependiendo del tipo de contenido que exportes, tu plantilla aparecerá en una de las siguientes secciones:
 
-- **Plantillas y medios > Plantillas de correo electrónico**
-- **Plantillas y medios > Bloques de contenido**
+- **Plantillas & Medios > Plantillas de correo electrónico**
+- **Plantillas & Medios > Bloques de contenido**
 
 Las plantillas Alpaco son ideales para las organizaciones que desean gestionar de forma centralizada la coherencia de la marca. También son compatibles con las etiquetas integradas de Braze para facilitar la categorización y la gestión de contenidos.
