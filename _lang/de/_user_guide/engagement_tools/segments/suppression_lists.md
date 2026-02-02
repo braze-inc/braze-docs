@@ -67,7 +67,7 @@ Sie können Unterdrückungslisten deaktivieren oder archivieren, wenn Sie sie ni
 
 Um zu überprüfen, ob Ihre Unterdrückungsliste verhindert hat, dass ein Nutzer:innen eine Nachricht erhält, verwenden Sie **User Lookup** im Schritt **Target Audience** innerhalb Ihrer Kampagne oder Canvas. Hier können Sie sehen, zu welcher Unterdrückungsliste sie gehören.
 
-!["User Lookup"-Fenster, das anzeigt, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
+![Das Fenster "Nutzersuche" zeigt an, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 {% alert tip %}
 Sie können die angewandten Unterdrückungslisten auch im Schritt **Zusammenfassung** finden.
@@ -75,16 +75,16 @@ Sie können die angewandten Unterdrückungslisten auch im Schritt **Zusammenfass
 
 Verwenden Sie bei der Erstellung einer Kampagne oder eines Canvas die **Benutzersuche** im Schritt **Target Audience**, um nach einem Nutzer:innen zu suchen, und wenn dieser nicht zur Zielgruppe gehört, können Sie die Unterdrückungsliste sehen, zu der er gehört. 
 
-!["User Lookup"-Fenster, das anzeigt, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
+![Das Fenster "Nutzersuche" zeigt an, dass ein Nutzer:innen in einer Unterdrückungsliste steht.]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 ### Kampagne 
 
 Wenn ein Nutzer:innen in einer Unterdrückungsliste steht, erhält er keine Kampagne, für die diese Unterdrückungsliste gilt. Siehe [Nachrichtentypen und Kanäle, die von Unterdrückungslisten betroffen sind](#message-types-and-channels-affected-by-suppression-lists), für Fälle, in denen eine Unterdrückungsliste nicht gilt.
 
-![Der Abschnitt "Unterdrückungslisten" mit einer aktiven Unterdrückungsliste namens "Niedrige Marketing-Gesundheitswerte".]({% image_buster /assets/img/active_suppression_list.png %})
+![Der Bereich "Unterdrückungslisten" mit einer aktiven Unterdrückungsliste namens "Niedrige Marketing Health Scores".]({% image_buster /assets/img/active_suppression_list.png %})
 
 ### Canvas 
 
 Sobald ein Nutzer:innen zu einer Unterdrückungsliste hinzugefügt wird, wird er keine Canvase mehr betreten. Wenn sie bereits einen Canvas eingegeben haben, erhalten sie keine Nachrichten-Schritte. Das bedeutet, dass ein Nutzer:innen, der sich bereits in einem Canvas befindet, wenn er zu einer Unterdrückungsliste hinzugefügt wird, den Canvas bis zum nächsten Canvas-Schritt voranbringt und ihn dann verlässt, ohne die Nachricht zu erhalten. 
 
-Nehmen wir zum Beispiel an, ein Canvas hat einen Nutzer:innen-Update-Schritt gefolgt von einem Nachrichten-Schritt. Wenn ein Nutzer:innen in den Canvas eintritt und dann zu einer Unterdrückungsliste hinzugefügt wird, durchläuft dieser Nutzer:innen weiterhin den Schritt Benutzer-Update (wo er möglicherweise aktualisiert wird) und verlässt dann den Schritt Nachricht, woraufhin er in die verlassenen Metriken aufgenommen wird.
+Nehmen wir zum Beispiel an, ein Canvas hat einen Nutzer:innen-Update-Schritt gefolgt von einem Nachrichten-Schritt. Wenn ein Nutzer:innen den Canvas betritt und dann zu einer Unterdrückungsliste hinzugefügt wird, durchläuft dieser Nutzer:innen trotzdem den Schritt Benutzer-Update (wo er möglicherweise aktualisiert wird) und verlässt ihn dann im Schritt Nachricht, wo er in die verlassenen Metriken aufgenommen wird.
