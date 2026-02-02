@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Iterate
 
-> [Iterate](https://iteratehq.com) makes it easy to learn from your customers, offering smart, user-friendly research tools that look and feel like your brand.
+> [Iterate는](https://iteratehq.com) 설문조사 및 피드백 도구를 제공하여 브랜드에 맞는 사용자 친화적인 조사 경험을 제공함으로써 고객으로부터 학습할 수 있도록 도와줍니다.
 
 _This integration is maintained by Iterate._
 
@@ -65,11 +65,11 @@ You'll then see the configuration options to send responses to Braze. Toggle on 
 
 #### Step 2: Share your survey
 
-Your survey can be shared in two ways: by embedding the first question into your message or including a direct link to the survey on the Iterate platform.
+설문조사는 두 가지 방법으로 공유할 수 있습니다. 첫 번째 질문을 메시지에 포함하거나 Iterate 플랫폼에서 설문조사에 대한 직접 링크를 포함시키는 것입니다.
 
-![Iterate link options]({% image_buster /assets/img/iterate.png %})
+![Iterate 링크 옵션]({% image_buster /assets/img/iterate.png %})
 
-- **Embed the code**
+- **코드 삽입**
   - Copy the code snippet under **Email embed code** within the Braze integration section of the **Send survey** tab. Insert the code into the HTML of your Braze email where you would like the beginning of the survey to appear. 
   - If you are having difficulties rendering the survey questions or if they look incorrectly formatted, you will need to go into the **Sending Info** tab in the message composer and uncheck **Inline CSS**.
 - **Include a link**
