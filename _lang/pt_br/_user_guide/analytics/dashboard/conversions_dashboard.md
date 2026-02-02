@@ -136,7 +136,7 @@ Para baixar os dados da série temporal, selecione <i class="fas fa-bars"></i> e
 
 Suas conversões podem não ser tão altas quanto você espera quando comparadas a campanhas anteriores ou às suas expectativas. As conversões são um negócio complicado, mas dependem de algumas funções simples em nossa plataforma: rastreamento de eventos e prazos de conversão.
 
-Para solucionar por que isso acontece, recomendamos verificar seu rastreamento de eventos e prazos de conversão.
+Para solucionar o motivo disso, recomendamos verificar seu rastreamento de eventos e prazos de conversão.
 
 #### Rastreamento de eventos
 
