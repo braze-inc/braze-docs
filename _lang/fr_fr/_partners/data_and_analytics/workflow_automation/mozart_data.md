@@ -114,4 +114,4 @@ Mozart Data propose une couche de transformation SQL pour permettre aux utilisat
 Cela peut vous aider à prendre des décisions plus éclairées sur les stratégies d'engagement afin d'améliorer la rétention des utilisateurs. Tout cela peut être fait dans l'interface de Mozart Data à l'aide de l'outil de requête, où vous pouvez exporter les résultats dans une feuille Google ou CSV pour préparer une présentation.
 
 #### Aide à la décision (BI)
-Vous êtes prêt à visualiser et à partager vos informations avec les autres membres de l'équipe ? Mozart Data s'intègre à presque tous les outils d’aide à la décision. Si vous n'avez pas encore d'outil d’aide à la décision, contactez Mozart Data pour créer un compte Metabase gratuit. 
+Vous êtes prêt à visualiser et à partager vos informations avec les autres membres de l'équipe ? Mozart Data s'intègre à presque tous les outils d’aide à la décision. Si vous n'avez pas encore d'outil de BI, contactez Mozart Data pour créer un compte Metabase gratuit.
