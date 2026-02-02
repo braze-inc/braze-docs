@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Peak
 
-> [Peak](https://platform.peak.ai/), une plateforme d'intelligence décisionnelle qui utilise l'intelligence artificielle à des fins commerciales pour améliorer la prise de décision commerciale, augmenter le chiffre d'affaires et les bénéfices.
+> [Peak](https://peak.ai/), une plateforme d'intelligence décisionnelle qui utilise l'intelligence artificielle à des fins commerciales pour améliorer la prise de décision commerciale, augmenter le chiffre d'affaires et les bénéfices.
 
 _Cette intégration est maintenue par Peak._
 
