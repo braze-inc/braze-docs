@@ -57,7 +57,7 @@ The integration is supported for both syncing data from [Braze to Mozart Data](#
 
 #### Step 2: Fill out the Fivetran connector form
 
-You will be redirected to the Fivetran connector page. On this page, fill out the given fields. Next, click **Continue** > **Save & Test** to complete the Fivetran connector.
+You will be redirected to the Fivetran connector page. On this page, fill out the given fields. 그런 다음 **계속** > ** & 테스트 저장을** 클릭하여 Fivetran 커넥터를 완료합니다.
 
 Fivetran will begin syncing data from your Braze account to your Snowflake data warehouse. You can access query data from Mozart Data after the connector has finished syncing. 
 
@@ -81,7 +81,7 @@ Next, choose a name for your sync, provide contact emails, and select a data typ
 
 ![]({% image_buster /assets/img/mozartdata/mozartdata-braze-importsync.png %}){: style="max-width:80%;"}
 
-#### Step 3: Add a public key to the Braze user
+#### 3단계: Add a public key to the Braze user
 At this point, you will need to go back to Snowflake to complete the setup. Add the public key displayed on the Braze dashboard to the user you created for Braze to connect to Snowflake.
 
 For additional information on how to do this, see the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth.html). If you want to rotate the keys at any point, Mozart Data can generate a new key pair and provide you with the new public key.
@@ -114,4 +114,4 @@ Using the transform models or raw data synced from Braze, you can analyze users'
 This can help you make more informed decisions about engagement strategies to improve user retention. This can all be done within Mozart Data's interface using the Query tool, where you can export the results into a Google Sheet or CSV to prepare for a presentation.
 
 #### Business intelligence (BI)
-Ready to visualize and share your insights with other team members? Mozart Data integrates with almost every BI tool. If you do not already have a BI tool, reach out to Mozart Data to set up a free Metabase account. 
+Ready to visualize and share your insights with other team members? Mozart Data integrates with almost every BI tool. 아직 BI 도구가 없는 경우, Mozart Data에 문의하여 무료 Metabase 계정을 설정하세요.
