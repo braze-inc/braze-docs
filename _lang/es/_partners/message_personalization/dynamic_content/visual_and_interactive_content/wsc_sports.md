@@ -12,7 +12,7 @@ search_tag: Partner
 
 > La plataforma [WSC Sports](https://wsc-sports.com/) genera vídeos deportivos personalizados para cada plataforma digital y cada aficionado al deporte, de forma automática y en tiempo real. 
 
-_Esta integración es mantenida por WSC Sports._
+_Esta integración está mantenida por WSC Sports._
 
 ## Sobre la integración
 
@@ -32,7 +32,7 @@ La aplicación WSC Sports gestiona el proceso de principio a fin, desde la selec
 
 ### Paso 1: Selecciona la configuración de envío
 
-![]({% image_buster /assets/img/wsc_sports/braze_integration.jpg %} "soldadura_integracion.jpg"){: style="float:right;max-width:25%;margin-bottom:15px;"}
+![]({% image_buster /assets/img/wsc_sports/braze_integration.jpg %} "braze_integration.jpg"){: style="float:right;max-width:25%;margin-bottom:15px;"}
 
 Antes de iniciar la integración, asegúrate de que tienes tus segmentos de campaña y de usuarios deseados creados en Braze. Una vez completado, en la plataforma WSC Sports, selecciona el video que desees, y en la configuración de envío, selecciona el segmento de usuarios Braze y el ID de campaña que quieras utilizar. Por último, elige la hora a la que quieres que se envíe tu mensaje push. 
 
