@@ -60,13 +60,13 @@ Intelligent Creative has many offerings that Braze users can take advantage of. 
 
 Customers will need to create a data source that can be a CSV, website import, or API integration.
 
-![Different data source options that will appear: CSV Upload, Website, or API Integration.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+![Different data source options that will appear: CSV 업로드, 웹사이트 또는 API 통합.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
 {% tabs local %}
 {% tab CSV Data Source %}
-- **CSV Data Source**: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content. [Example CSV File]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
+- **CSV Data Source**: Each row must have at least one segment column and one content column. CSV를 업로드한 후 콘텐츠를 타겟팅하는 데 사용할 열을 선택합니다. [CSV 파일 예시]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
-![The fields that will show up when selecting "CSV" as your data source.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
+![데이터 소스로 'CSV'를 선택하면 표시되는 필드입니다.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
 {% tab Website Data Source %}
 - **Website Data Source**: Each row must have at least one segment column and one content column. After your CSV has been uploaded, select which columns should be used to target the content.
@@ -74,12 +74,12 @@ Customers will need to create a data source that can be a CSV, website import, o
     - Which fields will be used as Segments
     - Which fields you want as data fields that can be dynamically personalized in the creative (for example: user attributes or custom attributes like first name, last name, city, etc.)
 
-![The fields that will show up when selecting "Website" as your data source.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
+![데이터 소스로 '웹사이트'를 선택하면 표시되는 필드입니다.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
 {% tab API Integrations %}
 - **API Integrations**: Use your company's API to power content directly from an API response.
 
-![The fields that will show up when selecting "API Integration" as your data source]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
+![데이터 소스로 "API 통합"을 선택할 때 표시되는 필드]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -89,11 +89,11 @@ From the Movable Ink home screen, create a campaign. You can select from email f
 
 We also suggest taking a look at the various content options available through blocks.
 
-![An image of what the Movable Ink platform looks like when creating a new Movable Ink campaign.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
+![새 Movable Ink 캠페인을 만들 때 Movable Ink 플랫폼이 어떻게 보이는지 보여주는 이미지입니다.]({% image_buster /assets/img/movable_ink/movable_ink5.png %}){: style="max-width:70%"}
 
 Movable Ink has an easy editor for you to drag and drop elements like text or images. If you have populated your data source, you can dynamically generate an image using the data properties. In addition, you can also create fallbacks within this flow for users if the campaign is sent and a user doesn't fit within the personalization criteria.
 
-![The Movable Ink block editor showing the different customizable elements.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
+![다양한 사용자 정의 가능한 요소를 보여주는 Movable Ink 블록 편집기.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
 Before finishing your campaign, make sure to preview the dynamic images and test out the query parameters to see what the images will look like upon view. When complete, a dynamic URL will be generated that can then be inserted into Braze!
 
@@ -105,7 +105,7 @@ To include Movable Ink content into Braze messages, you must locate the source U
 
 To obtain the source URL, you must have set up the content in the Movable Ink dashboard, and then from there, finish and export your content. On the **Finish** page, copy the source URL(`img src`) from the creative tag.
 
-![The page that appears after you have completed your Movable Ink campaign, here you find your content URL.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
+![Movable Ink 캠페인을 완료한 후 표시되는 페이지에서 콘텐츠 URL을 찾을 수 있습니다.]({% image_buster /assets/img/movable_ink/obtain_url.png %}){: style="max-width:80%;"}
 
 Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate fields for your messaging channel can be found in step 4. Lastly, replace any merge tags (such as {% raw %}```&mi_u=%%email%%```{% endraw %}) with the corresponding Liquid variable (such as {% raw %}```&mi_u={{${email_address}}}```{% endraw %}).
 
@@ -113,7 +113,7 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 
 {% tabs local %}
 {% tab Email %}
-In the Braze platform, paste your creative tag into your email body.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
+Braze 플랫폼에서 크리에이티브 태그를 이메일 본문에 붙여넣습니다.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
 
 {% endtab %}
 {% tab Push notification %}
@@ -127,7 +127,7 @@ In the Braze platform, paste your creative tag into your email body.![]({% image
 {% endtab %}
 {% tab In-app message %}
 
-1. In the Braze platform, paste the URL in the **Rich Notification Media** field.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+1. Braze 플랫폼에서 **리치 알림 미디어** 필드에 URL을 붙여넣습니다.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. Provide a unique URL to help prevent caching. To confirm that Movable Ink's real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL.
 
 To do this, use the following syntax, replacing the image URL as needed:
@@ -140,12 +140,12 @@ To do this, use the following syntax, replacing the image URL as needed:
 {% endraw %}
 This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab—this will evaluate the code and show a preview.
 
-**3\.** Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate audience membership and liquid at send-time` option located on the **Target Audiences** step of a campaign. If this is option is not available, reach out to your customer success manager or Braze support. This option will instruct Braze SDKs to re-request the campaign, providing a unique URL each time an in-app message is triggered.
+**3\.** Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate audience membership and liquid at send-time` option located on the **Target Audiences** step of a campaign. 이 옵션을 사용할 수 없는 경우 고객 성공 매니저 또는 Braze 지원팀에 문의하세요. This option will instruct Braze SDKs to re-request the campaign, providing a unique URL each time an in-app message is triggered.
 
 {% endtab %}
 {% tab Content Card %}
 
-1. In the Braze platform, paste the URL in the **Rich Notification Media** field.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
+1. Braze 플랫폼에서 **리치 알림 미디어** 필드에 URL을 붙여넣습니다.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. For mobile: Content Cards images on iOS and Android are cached upon receipt and do not refresh. 
   - As a workaround, schedule your campaign as a daily, weekly, or monthly recurring message with a corresponding expiration so the Content Card will be re-templated. For example, a Content Card that should refresh once a day should be set as a daily scheduled send with a 1-day expiration.
 3. To ensure that Movable Ink's real-time images work and will not be affected by caching when the Content Card is re-templated, use Liquid to append a timestamp to the end of the Movable Ink image URL.
@@ -175,7 +175,7 @@ This template will take the current time (in seconds), append it to the end of t
 
 
 [1]: https://www.movableink.com/
-[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[데이터 소스]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})
