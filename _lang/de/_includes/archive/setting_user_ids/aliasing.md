@@ -17,7 +17,7 @@ Weitere Informationen zum Einrichten von Benutzer-Aliasnamen für ein Benutzerpr
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
