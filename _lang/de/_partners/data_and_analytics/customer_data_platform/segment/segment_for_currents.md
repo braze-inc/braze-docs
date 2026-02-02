@@ -32,7 +32,7 @@ Die Integration von Braze und Segment erlaubt es Ihnen, Braze-Currents zu nutzen
 Wählen Sie in Ihrem Dashboard für Segmente Ihre Segmentquelle aus. Gehen Sie dann zu **Einstellungen > API-Schlüssel**. Hier finden Sie den **Schreibschlüssel für Segmente**.
 
 {% alert warning %}
-Es ist wichtig, dass Sie Ihren Schreibschlüssel für Segmente auf dem neuesten Stand halten. Wenn die Zugangsdaten Ihres Konnektors ablaufen, wird der Konnektor keine Ereignisse mehr senden. Wenn dieser Zustand länger als **48 Stunden** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Es ist wichtig, dass Sie Ihren Schreibschlüssel für Segmente auf dem neuesten Stand halten. Wenn die Zugangsdaten Ihres Konnektors ablaufen, wird der Konnektor keine Ereignisse mehr senden. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
 ### Schritt 2: Erstellen Sie einen neuen Currents Konnektor
