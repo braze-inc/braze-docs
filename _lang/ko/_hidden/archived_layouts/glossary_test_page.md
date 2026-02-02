@@ -3,8 +3,8 @@ page_order: 2
 
 nav_title: 용어 사전
 layout: glossary_page
-glossary_top_header: "Glossary Template"
-glossary_top_text: "This is a test Glossary Page."
+glossary_top_header: "용어집 템플릿"
+glossary_top_text: "테스트 용어집 페이지입니다."
 
 #Required
 description: "Google 검색 설명입니다. 160자를 초과하는 문자는 잘리므로 간결하게 작성하세요."
