@@ -1,5 +1,5 @@
 ---
-nav_title: "Informar"
+nav_title: "Informe"
 article_title: Informes de WhatsApp
 page_order: 7
 description: "Este artículo de referencia cubre las métricas de WhatsApp utilizadas en Braze, así como la forma de verlas en tus campañas de WhatsApp."
