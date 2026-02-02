@@ -162,7 +162,7 @@ Estas vistas proporcionan actualizaciones casi en tiempo real de los atributos d
 * Útil para análisis en tiempo real y situaciones en las que se necesitan datos recientes.
 * **Consideraciones sobre el rendimiento:**
     * Las consultas a usuarios individuales son más rápidas (menos de un minuto utilizando un almacén grande).
-    * Las consultas sin filtrar el USER_ID requieren la agregación de todos los usuarios, lo que conlleva tiempos de ejecución significativamente mayores.
+    * Las consultas sin filtros de USER_ID requieren que se agreguen todos los usuarios, lo que lleva a tiempos de ejecución significativamente más largos.
     * Las consultas en un gran conjunto de datos (como más de 100 millones de usuarios) pueden tardar muchos minutos.
 
 ## Historial de cambios
