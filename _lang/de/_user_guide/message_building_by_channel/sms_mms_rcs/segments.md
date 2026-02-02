@@ -24,7 +24,7 @@ SMS Nachrichten werden pro Nachrichten-Segment abgerechnet. Um Ihre Abrechnung z
 
 ### Was ist ein SMS-Segment?
 
-Der Short Messaging Service (SMS) ist ein standardisiertes Kommunikationsprotokoll, mit dem Geräte kurze Textnachrichten senden und empfangen können. Es wurde so konzipiert, dass es zwischen andere Signalisierungsprotokolle passt. Deshalb ist die Länge von SMS-Nachrichten auf 160 7-Bit-Zeichen begrenzt, also 1120 Bits oder 140 Bytes. SMS-Nachrichtensegmente sind die Zeichenpakete, die die Telefongesellschaften zur Messung von Textnachrichten verwenden. Nachrichten werden pro Nachrichtensegment abgerechnet. Kunden, die SMS nutzen, profitieren also sehr davon, wenn sie die Feinheiten der Aufteilung der Nachrichten kennen. 
+Der Short Messaging Service (SMS) ist ein standardisiertes Kommunikationsprotokoll, mit dem Geräte kurze Textnachrichten senden und empfangen können. Es wurde so konzipiert, dass es zwischen andere Signalisierungsprotokolle passt. Deshalb ist die Länge von SMS-Nachrichten auf 160 7-Bit-Zeichen begrenzt, also 1120 Bits oder 140 Bytes. SMS-Nachrichtensegmente sind die Zeichenpakete, die die Telefongesellschaften zur Messung von Textnachrichten verwenden. Nachrichten werden pro Nachrichtensegment abgerechnet. Kunden, die SMS nutzen, profitieren also sehr davon, wenn sie die Feinheiten der Aufteilung der Nachrichten kennen.
 
 Wenn Sie eine SMS-Kampagne oder ein Canvas mit Braze erstellen, sind die Nachrichten, die Sie im Editor erstellen, zwar repräsentativ für das, was Ihre Nutzer:innen sehen, wenn die Nachricht ihrem Telefon zugestellt wird, aber **sie geben keinen Hinweis darauf, wie Ihre Nachricht in Segmente aufgeteilt wird und wie Sie letztendlich abgerechnet werden**. Es liegt in Ihrer Verantwortung, zu verstehen, wie viele Segmente gesendet werden, und sich der potenziellen Überschreitungen bewusst zu sein, die auftreten können. Wir stellen jedoch einige Ressourcen zur Verfügung, um Ihnen dies zu erleichtern. Sehen Sie sich unseren internen [Segmentrechner](#segment-calculator) an.
 
@@ -36,9 +36,9 @@ Das Zeichenlimit für **ein eigenständiges SMS-Segment** beträgt 160 Zeichen[(
 
 Bitte beachten Sie, dass **zusätzliche Zeichen, sobald Sie das Zeichenlimit Ihres ersten Segments überschreiten, dazu führen, dass Ihre gesamte Nachricht geteilt und auf der Grundlage der neuen Zeichengrenzen segmentiert** wird:
 - **GSM-7-Kodierung**
-    - Nachrichten, die die 160-Zeichen-Grenze überschreiten, werden jetzt in Segmente mit 153 Zeichen segmentiert und einzeln versendet und dann vom Gerät des Empfängers:in wieder zusammengesetzt. Eine Nachricht mit 161 Zeichen wird z. B. in zwei Nachrichten gesendet, eine mit 153 Zeichen und die zweite mit 8 Zeichen. 
+    - Nachrichten, die die 160-Zeichen-Grenze überschreiten, werden jetzt in Segmente mit 153 Zeichen segmentiert und einzeln versendet und dann vom Gerät des Empfängers:in wieder zusammengesetzt. Eine Nachricht mit 161 Zeichen wird z. B. in zwei Nachrichten gesendet, eine mit 153 Zeichen und die zweite mit 8 Zeichen.
 - **UCS-2-Kodierung**
-    - Wenn Sie Nicht-GSM-Zeichen wie Emojis, chinesische, koreanische oder japanische Schriftzeichen in SMS-Nachrichten einfügen, müssen diese Nachrichten mit UCS-2-Kodierung gesendet werden. Nachrichten, die das anfängliche Segmentlimit von 70 Zeichen überschreiten, werden in 67-Zeichen-Nachrichtensegmente unterteilt. Zum Beispiel wird eine Nachricht mit 71 Zeichen als zwei Nachrichten gesendet, eine mit 67 Zeichen und die zweite mit 4 Zeichen. 
+    - Wenn Sie Nicht-GSM-Zeichen wie Emojis, chinesische, koreanische oder japanische Schriftzeichen in SMS-Nachrichten einfügen, müssen diese Nachrichten mit UCS-2-Kodierung gesendet werden. Nachrichten, die das anfängliche Segmentlimit von 70 Zeichen überschreiten, werden in 67-Zeichen-Nachrichtensegmente unterteilt. Zum Beispiel wird eine Nachricht mit 71 Zeichen als zwei Nachrichten gesendet, eine mit 67 Zeichen und die zweite mit 4 Zeichen.
 
 Unabhängig von der Kodierungsart hat jede von Braze versandte SMS ein Limit von bis zu 10 Segmenten und ist kompatibel mit [Liquid Templating]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), Emojis und Links.
 
@@ -129,6 +129,34 @@ Wenn Sie wissen möchten, in wie vielen Segmenten Ihre Nachricht gesendet wird, 
   .segment_color_3 {
     background-color: #27368f30;
   }
+  .encoding_gsm {
+    background-color: #28a745;
+    color: white;
+    padding: 1px 3px;
+    margin: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .encoding_ucs2 {
+    background-color: #dc3545;
+    color: white;
+    padding: 1px 3px;
+    margin: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .encoding_legend {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  .encoding_legend_item {
+    display: inline-block;
+    margin-right: 15px;
+  }
 </style>
 <form id="sms_split">
   <textarea id="sms_message_split" placeholder="Geben Sie hier Ihren SMS-Text ein..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
@@ -139,7 +167,16 @@ Wenn Sie wissen möchten, in wie vielen Segmenten Ihre Nachricht gesendet wird, 
   Länge der Nachricht: <span id="sms_length" style="padding-left: 5px;">0</span> Zeichen.<br />
   Anzahl der SMS-Segmente: <span id="sms_segments" style="padding-left: 5px;">0</span> Segmente. <br />
   Nachrichtenausgabe: <span id="sms_output" style="padding-left: 5px;"></span><br />
-  <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Segmente anzeigen: </label>
+  <input type="checkbox" id="encoding_section" name="encoding_section"> <label for="encoding_section" style="padding-left: 5px; margin-bottom: 0px;">Zeichencodierung anzeigen</label>
+  <div class="segment_data_hide" id="character_encoding_container">
+    <div class="encoding_legend">
+      <div class="encoding_legend_item"><span class="encoding_gsm">GSM</span> GSM-7 Zeichen</div>
+      <div class="encoding_legend_item"><span class="encoding_ucs2">UCS</span> UCS-2 Zeichen</div>
+    </div>
+    <span id="character_encoding_label">Zeichenkodierung: </span><span id="character_encoding" style="padding-left: 5px;"></span><br />
+  </div>
+  <br />
+  <input type="checkbox" id="segment_section" name="segment_section"> <label for="segment_section" style="padding-left: 5px; margin-bottom: 0px;">Segmente anzeigen</label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
@@ -409,6 +446,26 @@ function countLength(typ, s) {
   }
 }
 
+function getCharacterEncoding(char, type) {
+  if (type === "ucs2") return "ucs2";
+  if (type === "gsm") return "gsm";
+
+  // Bei automatischer Erkennung prüfen, ob das Zeichen im GSM-7-Set enthalten ist
+  const codePoint = char.charCodeAt(0);
+  return (codePoint in unicodeToGsm) ? "gsm" : "ucs2";
+}
+
+function displayCharacterEncoding(text, type) {
+  const Zeichen = smsutil.unicodeCharacters(Text);
+  return characters.map((char, index) => {
+    const encoding = getCharacterEncoding(char, type);
+    const displayChar = char === " " ? " " : char;
+    const encodingClass = encoding === "gsm" ? "encoding_gsm": "encoding_ucs2";
+    const encodingLabel = encoding === "gsm" ? "GSM" : "UCS";
+    return `<span id="character_encoding_data_${index}" class="${encodingClass}" title="${displayChar} - ${encoding.toUpperCase()}">${encodingLabel}</span>`;
+  }).join("");
+}
+
 Funktion updateSMSSplit(){
     var sms_text = $('#sms_message_split').val();
     var sms_type = $('#sms_split input[name=sms_type]:checked').val();
@@ -417,9 +474,22 @@ Funktion updateSMSSplit(){
     var smsSegments = segmenter[sms_type](unicodeinput);
     $('#sms_length').html(countLength(sms_type, sms_text));
     $('#sms_segments').html(smsSegments.length);
+
+    // Display character encoding
+    $('#character_encoding').html(displayCharacterEncoding(sms_text, sms_type));
+
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
-    const segmentsHtml = smsSegments.map((segment,segment_index) => segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
-    const messageOutput = smsSegments.map((segment,segment_index) => segment.text.map((ch, i) => `<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`).join(""));
+    const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
+
+    // Create message output with both segment and character indexing
+    let characterIndex = 0;
+    const messageOutput = smsSegments.map((segment,segment_index) =>
+      segment.text.map((ch, i) => {
+        const result = `<div id='message_output_data_${segment_index}-${i}' data-char-index='${characterIndex}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`;
+        characterIndex++;
+        return result;
+      }).join("")
+    );
     $('#sms_output').html(messageOutput);
     $('#sms_segments_data').html(segmentsHtml);
     $('#segment_section').click(function() {
@@ -429,26 +499,69 @@ Funktion updateSMSSplit(){
       else {
         $("#sms_segments_data").hide();
       }
+    });
+    $('#encoding_section').click(function() {
+      if($(this).is(":checked")) {
+        $("#character_encoding_container").show();
+      }
+      else {
+        $("#character_encoding_container").hide();
+      }
     })
 }
-const implementHover = (hover_id, input_id_prefix, output_id_prefix) => {
-  $(hover_id).mouseover(function(e){
-    var input_id = e.target.id;
-    var index = input_id.split(input_id_prefix)[1];
-    if(!index) {
-      return;
-    }
-    var output_id = `#${output_id_prefix}${index}`;
-    $(`${output_id}, #${input_id}`).addClass("hover_segment");
-    $(`#${input_id}`).mouseleave(function() {
-    $(`${output_id}, #${input_id}`).removeClass("hover_segment");
-  });
+// Verbesserte Hover-Funktionalität mit dreifacher Hervorhebung
+$("#sms_segments_data").mouseover(function(e){
+  if(e.target.id.startsWith("sms_segments_data_")) {
+    const segmentIndex = e.target.id.split("sms_segments_data_")[1];
+    const messageOutputElement = `#message_output_data_${segmentIndex}`;
+    const charIndex = $(messageOutputElement).attr('data-char-index');
+    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}`: null;
+
+    let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
+    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+    $(elementsToHighlight).addClass("hover_segment");
+    $(`#${e.target.id}`).mouseleave(function() {
+      $(elementsToHighlight).removeClass("hover_segment");
+    });
+  }
 });
-};
-//highlight segment to message output
-implementHover("#sms_segments_data", "sms_segments_data_", "message_output_data_");
-//highlight message output to segment
-implementHover("#sms_output", "message_output_data_", "sms_segments_data_");
+
+$("#sms_output").mouseover(function(e){
+  if(e.target.id.startsWith("message_output_data_")) {
+    const segmentIndex = e.target.id.split("message_output_data_")[1];
+    const segmentElement = `#sms_segments_data_${segmentIndex}`;
+    const charIndex = $(e.target).attr('data-char-index');
+    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}`: null;
+
+    let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
+    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+    $(elementsToHighlight).addClass("hover_segment");
+    $(`#${e.target.id}`).mouseleave(function() {
+      $(elementsToHighlight).removeClass("hover_segment");
+    });
+  }
+});
+
+$("#character_encoding").mouseover(function(e){
+  if(e.target.id.startsWith("character_encoding_data_")) {
+    const charIndex = e.target.id.split("character_encoding_data_")[1];
+    const messageOutputElement = $(`[data-char-index='${charIndex}']`);
+    const messageOutputId = messageOutputElement.attr('id');
+
+    if(messageOutputId) {
+      const segmentIndex = messageOutputId.split("message_output_data_")[1];
+      const segmentElement = `#sms_segments_data_${segmentIndex}`;
+
+      const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
+      $(elementsToHighlight).addClass("hover_segment");
+      $(`#${e.target.id}`).mouseleave(function() {
+        $(elementsToHighlight).removeClass("hover_segment");
+      });
+    }
+  }
+});
 $('#sms_message_split').on("input", function(e){
   $('#auto_encoding').html("");
   updateSMSSplit();
@@ -463,7 +576,7 @@ $('#sms_split input[name=sms_type]').change(function(e){
 
 ## Abrechnung von RCS Nachrichten
 
-RCS-Nachrichten werden auf der Grundlage ihres Inhalts und des Landes, in dem die Nachricht zugestellt wird, abgerechnet. Um die Kosten genau einschätzen zu können, müssen Sie die verschiedenen Arten von Nachrichten verstehen und wissen, wie sie abgerechnet werden.
+RCS-Nachrichten werden auf der Grundlage ihres Inhalts und des Landes, in dem die Nachricht zugestellt wird, abgerechnet. Um die Kosten genau einschätzen zu können, ist es wichtig, die verschiedenen Arten von Nachrichten und deren Abrechnung zu verstehen.
 
 ### RCS-Abrechnungsarten
 

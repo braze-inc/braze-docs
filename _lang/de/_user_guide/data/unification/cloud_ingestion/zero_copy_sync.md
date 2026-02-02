@@ -8,7 +8,7 @@ description: "Diese Seite bietet eine Übersicht darüber, wie Sie Braze Canvase
 
 # Personalisierung ohne Kopien mit CDI
 
-> Lernen Sie, wie Sie Canvas-Trigger mit CDI für eine Personalisierung ohne Kopien synchronisieren können. Dieses Feature greift auf benutzerspezifische Daten aus Ihrer Lösung zur Datenspeicherung zu und gibt sie an ein Ziel-Canvas weiter. Canvas-Schritte können optional Personalisierungsfelder enthalten, die nicht auf Braze Nutzerprofilen persistent sind.
+> Lernen Sie, wie Sie Canvas-Trigger mit CDI für eine Personalisierung ohne Kopien synchronisieren können. Dieses Feature greift auf benutzerspezifische Daten aus Ihrer Lösung zur Datenspeicherung zu und gibt sie an ein Ziel-Canvas weiter. Canvas-Schritte können optional Personalisierungsfelder enthalten, die nicht auf Braze-Nutzerprofilen persistent sind.
 
 {% alert important %}
 CDI Canvas Trigger befinden sich derzeit im Early Access. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
@@ -65,7 +65,7 @@ Eigenschaften sind nicht für jede Zeile oder Nutzer:in erforderlich. Die Eigens
 
 ##### Schritt 1.2: Zugangsdaten einrichten
 
-Richten Sie eine Rolle, ein Lager und einen Nutzer:in ein und erteilen Sie die entsprechenden Berechtigungen. Wenn Sie bereits über Zugangsdaten aus einer bestehenden Synchronisierung verfügen, können Sie diese wiederverwenden, aber stellen Sie sicher, dass Sie den Zugriff auf die Quellentabelle der Canvas-Trigger erweitern.  
+Richten Sie eine Rolle, ein Lager und einen Nutzer:in ein und vergeben Sie die entsprechenden Berechtigungen. Wenn Sie bereits über Zugangsdaten aus einer bestehenden Synchronisierung verfügen, können Sie diese wiederverwenden, aber stellen Sie sicher, dass Sie den Zugriff auf die Quellentabelle der Canvas-Trigger erweitern.  
 
 ```sql
 
@@ -174,7 +174,7 @@ CREATE TABLE `BRAZE-CLOUD-PRODUCTION.INGESTION.CANVAS_TRIGGERS_SYNC`
 
 ##### Schritt 1.3: Zugangsdaten einrichten
 
-Erstellen Sie einen Nutzer:in und erteilen Sie Berechtigungen. Wenn Sie bereits über Zugangsdaten aus einer anderen Synchronisierung verfügen, können Sie diese wiederverwenden, solange sie Zugriff auf die Tabelle der Canvas-Trigger haben.
+Erstellen Sie einen Nutzer:in und erteilen Sie Berechtigungen. Wenn Sie bereits über Zugangsdaten von einer anderen Synchronisierung verfügen, können Sie diese wiederverwenden, solange sie Zugriff auf die Tabelle der Canvas-Trigger haben.
 
 | Berechtigung | Zweck |
 | :---- | :---- |
@@ -300,7 +300,7 @@ Dateinamen müssen den AWS Regeln entsprechen und eindeutig sein. Fügen Sie Zei
 
 1. Richten Sie Ihr Ziel Canvas für Canvas-Trigger ein. Erstellen Sie ein neues oder wählen Sie ein bestehendes API-getriggertes Canvas aus. Wie Sie einen Canvas mit einem API-getriggerten Zeitplan für die Zustellung erstellen, erfahren Sie unter [Zeitplanarten für Eingänge]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#entry-schedule-types).
 2. Nachdem Sie den Typ des API-getriggerten Zeitplans für die Zustellung ausgewählt haben, fahren Sie mit der Einrichtung von Canvas fort und erstellen Ihren Canvas. Canvase können von einfachen Nachrichten bis hin zu komplexen Kunden:in-Workflows mit mehreren Schritten reichen.
-3. Verwenden Sie innerhalb Ihrer Canvas-Schritte die [Eingangs-Eigenschaften von Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), um Nachrichten mit den Eigenschaften zu personalisieren, die Sie aus Ihrer Quelltabelle synchronisieren möchten.
+3. Verwenden Sie innerhalb Ihrer Canvas-Schritte [Canvas-Eingangs-Eigenschaften]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties), um Nachrichten mit den Eigenschaften zu personalisieren, die Sie aus Ihrer Quelltabelle synchronisieren möchten.
   * Wenn Sie beispielsweise in Schritt 1 ein Eigenschaftsfeld für `account_balance` instrumentiert haben, würden Sie die folgende Liquid-Vorlage verwenden, um Ihre Nachricht zu personalisieren: `\{\{canvas_entry_properties.\$\{account_balance\}\}\}`.
 5. Nachdem Sie Ihr Canvas erstellt haben, starten Sie es und fahren Sie mit [Schritt 3](#step-3-create-your-zero-copy-sync) fort.
 

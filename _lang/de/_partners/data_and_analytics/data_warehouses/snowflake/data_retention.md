@@ -139,7 +139,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA')
 ```
 {% endraw %}
 {% endtab %}
-{% tab Gefiltert %}
+{% tab Filtered %}
 
 Geben Sie einen Filter an, um auszuwählen, welche Altersdaten gesichert werden sollen, und geben Sie einen Tabellennamenfilter an, um nur ausgewählte Ereignistabellen zu sichern. 
 
@@ -257,7 +257,7 @@ LIST @MY_EXPORT_STAGE;
 ```
 {% endraw %}
 {% endtab %}
-{% tab Gefiltert %}
+{% tab Filtered %}
 
 Geben Sie einen Filter in der Prozedur an, um nur bestimmte Tabellen zu entladen.
 

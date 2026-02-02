@@ -9,7 +9,7 @@ search_tag: Partner
 ---
 # Vizbee {#vizbee}
 
-> [Vizbee](https://vizbee.tv/) ermöglicht es allen Smartphones und Smart-TVs in Ihrem Haus, als ein nahtloses Gerät zusammenzuarbeiten und so ein großartiges Nutzer:innen-Erlebnis zu schaffen. Vizbee hilft Ihnen, bestehende Kanäle für das Mobile App Marketing wie Benachrichtigungen, Deeplinks und E-Mails zu nutzen, um nahtlos Zuschauer für alle Connected TV (CTV)-Geräte (wie Roku, FireTV, Samsung TV, LG TV usw.) zu gewinnen und zu engagieren.
+> [Vizbee](https://vizbee.tv/) ermöglicht es allen Smartphones und Smart-TVs in Ihrem Haus, als ein nahtloses Gerät zusammenzuarbeiten und so ein großartiges Nutzer:innen-Erlebnis zu schaffen. Vizbee hilft Ihnen, bestehende Kanäle für das Mobile-App-Marketing wie Benachrichtigungen, Deeplinks und E-Mails zu nutzen, um nahtlos Zuschauer für alle Connected TV-Geräte (wie Roku, FireTV, Samsung TV, LG TV usw.) zu gewinnen und zu engagieren.
 
 _Diese Integration wird von Vizbee gepflegt._
 

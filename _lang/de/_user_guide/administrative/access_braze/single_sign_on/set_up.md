@@ -65,7 +65,7 @@ Achten Sie darauf, dass Ihr `x.509`-Zertifikat diesem Format entspricht, wenn Si
 -----END CERTIFICATE-----
 ```
 
-![SAML SSO Einstellungen mit dem ausgewählten Umschalter.]({% image_buster /assets/img/samlsso.png %})
+![SAML SSO Einstellungen, wenn das Umschalten ausgewählt ist.]({% image_buster /assets/img/samlsso.png %})
 
 ### Schritt 3: Bei Braze anmelden
 
@@ -78,7 +78,7 @@ Speichern Sie Ihre Sicherheitseinstellungen und melden Sie sich ab. Melden Sie s
 1. Gehen Sie in Braze zu **Einstellungen** > **APIs und Bezeichner**.
 2. Wählen Sie auf dem Tab **API-Schlüssel** den Button **API-Schlüssel erstellen** aus.
 3. Geben Sie in das Feld **Name des API-Schlüssels** einen Namen für Ihren Schlüssel ein.
-4. Erweitern Sie das Dropdown-Menü **SSO** unter **Berechtigungen** und markieren Sie **sso.saml.login**.<br><br>![Der Abschnitt "Berechtigungen" mit sso.saml.login markiert.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+4. Erweitern Sie das Dropdown-Menü **SSO** unter **Berechtigungen** und markieren Sie **sso.saml.login**.<br><br>![Der Abschnitt "Berechtigungen" mit sso.saml.login ist markiert.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. Wählen Sie **API-Schlüssel erstellen**.
 6. Kopieren Sie auf dem Tab **API-Schlüssel** den Bezeichner neben dem API-Schlüssel, den Sie erstellt haben.
 7. Fügen Sie den RelayState API-Schlüssel in den RelayState Ihres IdP ein (je nach IdP kann er auch als "Relay State" oder "Default Relay State" erscheinen).
@@ -120,7 +120,7 @@ Wählen Sie den SAML-Tracer in der Navigationsleiste Ihres Browsers aus. Vergewi
 
 Wählen Sie **Exportieren**. Für **Cookie-Filter-Profil auswählen** wählen Sie **Keine**. Wählen Sie dann **Exportieren**. Nun wird eine JSON-Datei generiert, die Sie zur weiteren Fehlerbehebung an den Braze-Support senden können.
 
-!["SAML-Trace-Einstellungen exportieren" mit der ausgewählten Option "Keine".]({% image_buster /assets/img/export_saml_trace_preferences.png %})
+![Menü "SAML-Trace-Einstellungen exportieren" mit der ausgewählten Option "Keine".]({% image_buster /assets/img/export_saml_trace_preferences.png %})
 
 ## Fehlersuche
 

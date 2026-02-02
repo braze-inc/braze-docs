@@ -1,6 +1,6 @@
 ---
 nav_title: "Messaging Nutzer:innen"
-article_title: "Targeting von Nutzer:innen für Predictive Churn"
+article_title: "Targeting von Nutzern:innen für voraussichtliche Abwanderung"
 description: "Dieser Referenzartikel behandelt mögliche nächste Schritte, nachdem Sie eine Prognose zur Abwanderung erstellt haben, wie die Implementierung von Filtern und strategische Überlegungen."
 page_order: 1.2
 
@@ -18,7 +18,7 @@ Sobald Sie sich entschieden haben, welchen Bereich des _Churn Risk Score_ oder d
 
 Sie können auch Filter in Kampagnen oder Segmenten verwenden, um die Nutzer anhand dieses Schwellenwerts anzusprechen. Sie können in Kampagnen, Canvas und Segmenten nach Nutzer:innen nach dem "Abwanderungs-Score" oder der "Abwanderungskategorie" filtern, so wie Sie jeden anderen Filter in Braze verwenden.
 
-Abwandernde Filter, die bei der Definition einer Zielgruppe verfügbar sind, umfassen die Kaufwahrscheinlichkeitskategorie und den Kaufwahrscheinlichkeitsscore.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
+![Die bei der Definition einer Zielgruppe verfügbaren Filter für die Abwanderung umfassen die Kaufwahrscheinlichkeitskategorie und den Kaufwahrscheinlichkeitsscore.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
 
 ## Strategische Überlegungen
 
