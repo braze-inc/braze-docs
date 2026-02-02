@@ -1,13 +1,13 @@
 ---
-nav_title: Starten mit Canvas flow
-article_title: Starten mit Canvas Flow
+nav_title: Starten Sie mit Canvas flow
+article_title: Starten Sie mit Canvas Flow
 page_order: 3
 description: "Dieser Referenzartikel beschreibt, wie Sie ein mit Canvas Flow erstelltes Canvas vor dem Start vorbereiten und testen."
 page_type: reference
 tool: Canvas
 ---
 
-# Starten mit Canvas Flow
+# Starten Sie mit Canvas Flow
 
 > Dieser Referenzartikel beschreibt, wie Sie ein mit Canvas Flow erstelltes Canvas vor dem Start vorbereiten und testen. Dazu gehört die Identifizierung wichtiger Canvas-Kontrollpunkte wie Canvas-Entry-Bedingungen, Zielgruppenzusammenfassungen und Nutzersegmente.
 
@@ -22,7 +22,7 @@ Berücksichtigen Sie die [Race Conditions]({{site.baseurl}}/user_guide/engagemen
 
 Um an einem Canvas teilzunehmen, müssen Nutzer:innen vor dem Entry-Zeitplan zur Zielgruppe gehören, unabhängig davon, ob das Canvas geplant, aktionsbasiert oder API-gesteuert ist. 
 
-\![Ein aktionsbasiertes Canvas, das Nutzer:innen einträgt, wenn sie während der Ortszeit eines Nutzers vom 30\. April 2025 um 12 Uhr bis zum 7\. Mai 2025 um 12 Uhr einen Kauf tätigen.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
+![Ein aktionsbasiertes Canvas, das Nutzer:innen erfasst, wenn sie während der Ortszeit des Nutzers vom 30\. April 2025 um 12 Uhr bis zum 7\. Mai 2025 um 12 Uhr einen Kauf tätigen.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Beachten Sie, dass Nutzer:innen, die sich nach dem Start des Canvas für Ihre Zielgruppe qualifizieren, nicht am Canvas teilnehmen.
 
@@ -88,7 +88,7 @@ Nachdem Sie die Feinheiten Ihres Canvas überprüft haben, sehen Sie sich unter 
 ### Verfügbarkeit der Nutzer:innen prüfen
 
 - Stellen Sie sicher, dass Ihre Nutzer:innen Ihre Segmentierungskriterien erfüllen.
-- Bestätigen Sie, dass ihr Abo "abonniert" oder "Opt-in" ist und ihr Push-Token existiert. Wenn Sie diese als Eingangsregeln für Canvas hinzugefügt haben, ist es möglich, dass die Nutzer:innen zwischen dem Eingang in Ihr Canvas und dem Erhalt des Nachrichten-Schritts abgemeldet wurden.
+- Bestätigen Sie, dass ihr Abo auf "abonniert" oder "Opt-in" steht und ihr Push-Token existiert. Wenn Sie diese als Eingangsregeln für Canvas hinzugefügt haben, ist es möglich, dass die Nutzer:innen zwischen dem Eingang in Ihr Canvas und dem Erhalt des Nachrichten-Schritts abgemeldet wurden.
 - Bestätigen Sie, dass sie mit Ihren Canvas-Sendeeinstellungen übereinstimmen. (Wenn Nutzer:in "Abonnent:in" sind, die Einstellungen aber auf "Opt-in" stehen, werden Nutzer:in nicht für den Kanal freigeschaltet.)
 - Wenn das globale Frequency-Capping für Ihr Canvas aktiviert ist, überprüfen Sie, ob Ihre Regeln die Anzahl der Nachrichten begrenzen, die jeder Nutzer:innen von einem bestimmten Kanal erhalten kann.
 - Wenn die Ruhezeiten aktiviert sind, kann die Sendezeit Ihrer Nachrichten beeinträchtigt werden, d.h. Ihre Nachricht wird möglicherweise zum nächsten verfügbaren Zeitpunkt (wenn die Ruhezeiten enden) gesendet oder ganz abgebrochen.
