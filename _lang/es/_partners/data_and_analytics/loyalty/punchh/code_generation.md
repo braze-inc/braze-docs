@@ -96,7 +96,7 @@ https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX?sign
 
 Cuando un usuario haga clic en la URL del cupón, será redirigido a una página web alojada en Punchh, donde se mostrará el cupón generado.
 
-![Ejemplo de mensaje de confirmación después de que un usuario genere correctamente un código de cupón.]({% image_buster /assets/img/punchh/punchh7.png %})
+![Ejemplo de mensaje de confirmación después de que un usuario genere con éxito un código de cupón.]({% image_buster /assets/img/punchh/punchh7.png %})
 
 #### Extracción de código mediante JSON como texto sin formato
 
@@ -126,7 +126,7 @@ Para enlazar el código del cupón dentro de una imagen:
 3. Inserte su enlace en una etiqueta HTML {% raw %}`<img>`{% endraw %}.
 
 {% tabs local %}
-{% tab ejemplo de entrada %}
+{% tab example input %}
 {% raw %}
 ```liquid
 <img src="https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.png?sign={{jwt}}">
@@ -134,8 +134,8 @@ Para enlazar el código del cupón dentro de una imagen:
 {% endraw %}
 {% endtab %}
 
-{% tab ejemplo de salida %}
-![Salida renderizada de la etiqueta de imagen de código de cupón.]({% image_buster /assets/img/punchh/punchh9.png %})
+{% tab example output %}
+![Salida renderizada de la etiqueta de imagen del código del cupón.]({% image_buster /assets/img/punchh/punchh9.png %})
 {% endtab %}
 {% endtabs %}
 
