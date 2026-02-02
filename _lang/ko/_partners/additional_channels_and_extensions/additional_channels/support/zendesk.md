@@ -21,7 +21,7 @@ The Braze and Zendesk server-to-server integration allows you to utilize:
 | Requirement | Description |
 |---|---|
 | Zendesk account | A [Zendesk admin account](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) is required to take advantage of this partnership. |
-| Zendesk API token | A Zendesk [API token](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) is required to send requests from Braze to the Zendesk ticket endpoint. |
+| Zendesk API token | Zendesk [API 토큰](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-)는 Braze에서 Zendesk 티켓 엔드포인트로 요청을 보내는 데 필요합니다. |
 | Common identifier (recommended) | A [common identifier](#common-identifier) between Braze and Zendesk is recommended. |
 | Braze API key | A Braze API key is required to send requests from Zendesk to a Braze endpoint. Ensure that the API key you use has the correct permissions for the Braze endpoint your Zendesk webhook is using. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -43,7 +43,7 @@ Further use cases can be handled through [Zendesk support APIs](https://develope
 
 #### Request header and method
 
-Zendesk requires an HTTP header for authorization and an HTTP method. In the **Settings** tab, replace the <email_address> with your Zendesk admin email and <api_token> with your Zendesk API token.
+Zendesk requires an HTTP header for authorization and an HTTP method. **설정** 탭에서 <email_address>를 Zendesk 관리자 이메일로 교체하고 <api_token>을 Zendesk API 토큰으로 교체하세요.
 
 - **HTTP Method**: POST
 - **Request Headers**:
@@ -117,7 +117,7 @@ Our example below will use a trigger to invoke the webhook when a support case s
 1. In the **Admin Center**, click **Objects and rules** in the sidebar, then select **Business rules > Triggers**.<br><br>
 2. Select **Add trigger**.<br><br>
 3. Name your trigger and select a category.<br><br>
-4. Select **Add condition** to set up which conditions should trigger the webhook. For example, "Status category changed to closed" or "Status category changed to solved".![]({% image_buster /assets/img_archive/zendesk1.png %}){: style="max-width:70%;"}<br><br>
+4. Select **Add condition** to set up which conditions should trigger the webhook. 예를 들어, "상태 카테고리가 닫힘으로 변경됨" 또는 "상태 카테고리가 해결됨으로 변경됨".![]({% image_buster /assets/img_archive/zendesk1.png %}){: style="max-width:70%;"}<br><br>
 5. Select **Add action**, choose **Notify active webhook**, and select from the dropdown the webhook created in the previous step.<br><br>
 6. Define the JSON body to conform to your Braze endpoint, using Zendesk variable placeholders to dynamically populate the relevant fields.<br>![]({% image_buster /assets/img_archive/zendesk3.png %}){: style="max-width:70%;"}<br><br>
 7. Select **Create**.<br><br>
