@@ -45,7 +45,7 @@ So verwenden Sie Push Max in Ihrer Kampagne:
 3. Gehen Sie zum Schritt **Lieferung planen**.
 4. Wählen Sie **Senden mit Push Max**.
 
-\![Android Push Zustellbarkeit im Schritt Zustellung planen mit der Option "Mit Push Max senden".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+![Android Push Zustellbarkeit im Schritt Zustellung planen mit der Option "Mit Push Max senden".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
@@ -57,7 +57,7 @@ So verwenden Sie Push Max in Ihrem Canvas:
 3. Gehen Sie auf die Registerkarte **Zustellungseinstellungen**.
 4. Wählen Sie **Senden mit Push Max**.
 
-\![Tab Zustellungseinstellungen eines Android Push Message Schrittes mit der Option "Senden mit Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
+![Tab Zustellungseinstellungen eines Android Push Message Schrittes mit der Option "Senden mit Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -74,7 +74,7 @@ Time-to-Live (TTL) kann fehlgeschlagene Push-Benachrichtigungen an Firebase Clou
 
 Standardmäßig ist Time to Live auf 28 Tage eingestellt, das ist das Maximum. Sie können die Standard TTL für alle neuen Android Push-Nachrichten unter **Einstellungen** > **Workspace-Einstellungen** > **Push-Einstellungen** verringern, oder Sie können die Anzahl der Tage pro Nachricht auf dem Tab **Einstellungen** konfigurieren, wenn Sie eine Android Push-Benachrichtigung verfassen.
 
-\![Time to Live-Feld auf 28 Tage eingestellt.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
+![Das Feld Zeit zum Leben wurde auf 28 Tage gesetzt.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## Was Sie wissen sollten
 
