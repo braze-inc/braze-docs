@@ -38,7 +38,7 @@ Eagle Eye Connect es una integración bidireccional entre Braze y AIR que habili
 Las tablas siguientes describen los dos tipos de integraciones compatibles entre Braze y Eagle Eye AIR. Eagle Eye Connect es el middleware que habilita el intercambio de datos entre AIR y sistemas de socios como Braze. Para saber más, consulta [la documentación](https://developer.eagleeye.com/docs/braze) sobre Braze [de Eagle Eye.](https://developer.eagleeye.com/docs/braze)
 
 {% tabs local %}
-{% tab salida %}
+{% tab outbound %}
 <table>
   <thead>
     <tr>
@@ -73,7 +73,7 @@ Las tablas siguientes describen los dos tipos de integraciones compatibles entre
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
 {% endtab %}
 
-{% tab entrante %}
+{% tab inbound %}
 <table>
   <thead>
     <tr>
@@ -125,7 +125,7 @@ En primer lugar, proporcionarás los siguientes datos a tu equipo de Ojo de Águ
 |------------------------|-------------|
 | Credenciales de la API Braze  | Comparte tu punto final REST Braze, identificador de aplicación y clave de API de forma segura con tu contacto de Eagle Eye. |
 | Coincidencia de identificadores    | Determina y comparte el identificador de usuario principal para las actualizaciones de perfil que sea común en AIR y Braze, como ID externo o correo electrónico. |
-| Clave de autenticación               | Determina y comparte una clave de autenticación secreta para cada conector de entrada y salida. |
+| Clave de autenticación               | Determina y comparte una clave de autenticación secreta para cada conector entrante y saliente. |
 | Código de moneda          | Comparte el código de moneda de 3 dígitos para mostrar los importes monetarios de las compras (e.g., USD). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -154,7 +154,7 @@ Además, añade usuarios a las audiencias y confirma que las recompensas se emit
 
 Una vez superadas las pruebas, la integración puede ponerse en vivo para enviar datos continuamente a Braze. Se requieren los mismos pasos de configuración para los entornos de producción en AIR y Braze
 
-Ponte en contacto con tu administrador del éxito del cliente de Eagle Eye para que te asignen un recurso para configurar EE Connect.
+Ponte en contacto con tu administrador del éxito del cliente de Eagle Eye para que te asignen un recurso que configure EE Connect.
 
 ## Soporte
 
