@@ -1,5 +1,5 @@
 ---
-nav_title: In-App-Nachrichten erstellen
+nav_title: In-App-Nachricht erstellen
 article_title: "Erstellen einer In-App-Nachricht mit Drag-and-Drop"
 description: "Dieser Artikel erläutert die Erstellung von In-App-Nachrichten per Drag-and-Drop-Editor sowie Voraussetzungen, kreative Details und mehr."
 alias: "/create_dnd_iam/"
@@ -11,7 +11,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
   creative-details: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#creative-details'
 ---
 
-# Erstellen einer In-App-Nachricht per Drag-and-Drop
+# Erstellen Sie eine In-App-Nachricht per Drag-and-Drop
 
 > Mit dem Drag-and-Drop-Editor können Sie vollständig angepasste und personalisierte In-App-Nachrichten in Kampagnen und Canvasen erstellen.
 
@@ -20,7 +20,7 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
 
 Wenn Sie Ihre vorhandenen benutzerdefinierten HTML-Vorlagen oder von Dritten erstellte Vorlagen verwenden möchten, müssen diese im Drag-and-Drop-Editor neu erstellt werden.
 
-Sie sind sich nicht sicher, ob Ihre In-App-Nachricht über eine Kampagne oder ein [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) gesendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind. Nachdem Sie den Ort ausgewählt haben, an dem Sie Ihre Nachricht erstellen möchten, lassen Sie uns nun die einzelnen Schritte zur Erstellung einer In-App-Nachricht per Drag-and-Drop erläutern.
+Sie sind sich nicht sicher, ob Ihre In-App-Nachricht über eine Kampagne oder ein [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/) gesendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind. Nachdem Sie den Ort ausgewählt haben, an dem Sie Ihre Nachricht erstellen möchten, lassen Sie uns nun die einzelnen Schritte zur Erstellung einer In-App-Nachricht per Drag-and-Drop erläutern.
 
 ## Voraussetzungen
 
@@ -70,7 +70,7 @@ Wenn Sie den Drag-and-Drop-Editor als Bearbeitungsmethode ausgewählt haben, hab
 
 Wählen Sie **Nachricht erstellen**, um mit dem Entwurf Ihrer In-App-Nachricht im Drag-and-Drop-Editor zu beginnen.
 
-![Der Bereich Braze Templates, in dem Sie ein einfaches Template, ein Hintergrundbild, eine Telefonnummer oder ein leeres Template auswählen können.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
+![Der Bereich Braze Templates, in dem Sie ein einfaches Template, ein Hintergrundbild, eine Telefonnummernaufnahme oder ein leeres Template auswählen können.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 Sie können auf alle Vorlagen auch über den Bereich **Vorlagen** im Dashboard zugreifen.
 
@@ -188,7 +188,7 @@ Derzeit ist der Editor nur auf modale und bildschirmfüllende Nachrichten beschr
 
 #### Kann ich meine In-App-Nachricht als Vorlage speichern, nachdem ich sie in meiner Kampagne oder im Canvas erstellt habe?
 
-Ja Jede In-App-Nachricht, die Sie in einer zukünftigen Kampagne oder einem Canvas-Schritt wiederverwenden möchten, können Sie über die Schaltfläche **Als Vorlage speichern**, die nach dem Verlassen des Editors verfügbar ist, als eigene Vorlage speichern. Bevor Sie sie als Vorlage speichern können, müssen Sie die Kampagne zunächst starten ODER als Entwurf speichern.
+Ja Jede In-App-Nachricht, die Sie in einer zukünftigen Kampagne oder einem Canvas-Schritt wiederverwenden möchten, können Sie über den Button **Als Vorlage speichern**, der nach Verlassen des Editors verfügbar ist, als angepasstes Template speichern. Bevor Sie sie als Vorlage speichern können, müssen Sie die Kampagne zunächst starten ODER als Entwurf speichern.
 
 ![Eine Vorschau auf eine In-App-Nachricht für eine Produkt-Tour.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
