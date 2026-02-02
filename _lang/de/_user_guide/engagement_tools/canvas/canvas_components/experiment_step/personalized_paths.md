@@ -85,7 +85,7 @@ Wenn Personalisierte Pfade aktiviert wurde, ist Ihre Analytics-Ansicht in zwei T
 
 Die Registerkarte **Erstes Experiment** zeigt die Metriken für jeden Pfad während des Experimentierfensters. Sie können eine Zusammenfassung der Leistung aller Pfade für die angegebenen Konvertierungsereignisse sehen.
 
-![Ergebnisse eines anfänglichen Experiments zur Ermittlung des besten Performance-Pfads für jeden Nutzer:innen. Eine Tabelle zeigt die Performance der einzelnen Pfade auf der Grundlage verschiedener Metriken für den Targeting-Kanal.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
+![Ergebnisse eines ersten Experimentes zur Ermittlung des besten Performance-Pfades für je:den Nutzer:in. Eine Tabelle zeigt die Performance der einzelnen Pfade auf der Grundlage verschiedener Metriken für den Targeting-Kanal.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
 
 Standardmäßig sucht der Test nach Assoziationen zwischen angepassten Events des Nutzers und seinen Pfadpräferenzen oder der Variante von Nachrichten, auf die ein Nutzer:innen am besten reagiert. Diese Analyse stellt fest, ob angepasste Events die Wahrscheinlichkeit erhöhen oder verringern, auf einen bestimmten Pfad zu reagieren. Diese Beziehungen werden dann verwendet, um zu bestimmen, welchen Nutzer:innen welcher Pfad zugewiesen wird, nachdem das Experiment-Fenster vorüber ist.
 
@@ -93,7 +93,7 @@ Die Beziehungen zwischen angepassten Events und Pfadpräferenzen werden in der T
 
 ![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 
-Wenn der Test keine sinnvolle Beziehung zwischen angepassten Events und Pfadpräferenzen finden kann, greift der Test auf eine sitzungsbasierte Analysemethode zurück.
+Wenn der Test keine sinnvolle Beziehung zwischen angepassten Events und Pfadeinstellungen finden kann, fällt der Test auf eine sitzungsbasierte Analysemethode zurück und es werden keine Tabellen mit angepassten Event-Daten angezeigt.
 
 {% details Fallback analysis method %}
 
@@ -136,7 +136,7 @@ Die drei Karten auf dieser Seite zeigen Ihren voraussichtlichen Auftrieb, die Ge
 - **Gesamtergebnisse:** Die Ergebnisse des zweiten Sendevorgangs basierend auf Ihrem Konversions-Event.
 - **Prognostizierte Ergebnisse:** Die voraussichtlichen Ergebnisse des zweiten Versands auf der Grundlage der von Ihnen gewählten Optimierungsmetrik, wenn Sie stattdessen nur die Gewinnvariante versendet hätten.
 
-![Tab Personalisierte Pfade für ein Canvas. Die Karten zeigen den prognostizierten Lift, die Gesamtkonversionen (mit personalisierten Pfaden) und die prognostizierten eindeutigen Öffnungen (mit Gewinnpfad).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
+![Registerkarte Personalisierte Pfade für ein Canvas. Die Karten zeigen den prognostizierten Lift, die Gesamtkonversionen (mit personalisierten Pfaden) und die prognostizierten eindeutigen Öffnungen (mit Gewinnpfad).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
 
 {% endtab %}
 {% endtabs %}
