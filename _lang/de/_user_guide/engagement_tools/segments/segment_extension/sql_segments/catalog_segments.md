@@ -1,7 +1,7 @@
 ---
 nav_title: "Katalog-Segmente"
 article_title: Katalog-Segmente
-page_order: 1
+page_order: 0
 page_type: reference
 alias: "/catalog_segments/"
 description: "Dieser Artikel erläutert, wie Sie Katalogsegmente erstellen und mithilfe von Katalogdaten in SQL-Segmenterweiterungen Nutzerzielgruppen bilden."
@@ -20,7 +20,7 @@ Katalogsegmente führen Daten aus Katalogen und angepassten Events oder Käufen 
 
 ## Katalogsegmente erstellen
 
-1. Gehen Sie zu **Segment-Erweiterungen** > **Neue Erweiterung erstellen** > **Mit Vorlage beginnen** und wählen Sie eine Vorlage aus. <br>![Modal mit der Option, ein Segment für Ereignisse oder Käufe zu erstellen.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
+1. Gehen Sie zu **Segment-Erweiterungen** > **Neue Erweiterung erstellen** > **Mit Vorlage beginnen** und wählen Sie eine Vorlage aus. <br>![Modal mit der Option, ein Katalogsegment für Ereignisse, Käufe oder RFM-Segmente zu erstellen.]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
 2\. Der SQL-Editor füllt sich automatisch mit einer Vorlage. <br>![SQL-Editor mit einer vorgenerierten Vorlage.]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>Dieses Template verbindet Nutzerereignis- mit Katalogdaten, um Nutzersegmente zu erstellen, die sich mit bestimmten Artikeln im Katalog beschäftigt haben.
@@ -56,11 +56,11 @@ LIMIT 10
 
 ### Feststellen, ob Sie SQL invertieren müssen
 
-Es ist zwar nicht möglich, direkt nach Nutzer:innen mit null Ereignissen zu suchen, aber mit **Invert SQL** können Sie diese Nutzer:innen gezielt zusammenstellen.
+Es ist zwar nicht möglich, direkt nach Nutzer:innen mit Null-Ereignissen zu suchen, aber Sie können **Invert SQL** verwenden, um diese Nutzer:innen gezielt zusammenzustellen.
 
-Um beispielsweise Nutzer:innen mit weniger als drei Einkäufen als Zielgruppe zusammenzustellen, schreiben Sie zunächst eine Abfrage, um Nutzer:innen mit drei oder mehr Einkäufen auszuwählen. Wählen Sie dann **SQL invertieren** aus, um Nutzer:innen mit weniger als drei Käufen (einschließlich derer mit null Käufen) als Targeting zusammenzustellen.
+Um beispielsweise Nutzer:innen mit weniger als drei Käufen als Zielgruppe zusammenzustellen, schreiben Sie zunächst eine Abfrage, um Nutzer:innen mit drei oder mehr Käufen auszuwählen. Wählen Sie dann **SQL invertieren** aus, um Nutzer:innen mit weniger als drei Käufen (einschließlich derer mit null Käufen) als Targeting zusammenzustellen.
 
-![Segment-Erweiterung mit dem Namen "In den letzten 30 Tagen auf 1-4 E-Mails geklickt" mit der ausgewählten Option, SQL zu invertieren.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
+![Segment-Erweiterung mit dem Namen "In den letzten 30 Tagen auf 1-4 E-Mails geklickt" mit der Option, SQL zu invertieren, ausgewählt.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:70%;"}
 
 {% alert important %}
 Sofern Sie nicht speziell Nutzer:innen mit Null-Ereignissen als Targeting zusammenstellen wollen, brauchen Sie SQL nicht zu invertieren. Wenn Sie **SQL invertieren** auswählen, bestätigen Sie, dass das Feature benötigt wird und dass das Segment Ihrer gewünschten Zielgruppe entspricht. Wenn eine Abfrage beispielsweise auf Nutzer:innen mit mindestens einem Ereignis abzielt, wird sie nur auf Nutzer:innen mit null Ereignissen abzielen, wenn sie invertiert wird.
@@ -141,5 +141,5 @@ Ja So wie SQL-Segmenterweiterungen auf Ihr Kontingent an Segmenterweiterungen an
 
 ### Ein Template eignet sich nicht für ein bestimmtes Katalogsegment. Wie soll ich das einrichten?
 
-Wenden Sie sich an Ihren Kundenbetreuer oder den [Braze-Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/), wenn Sie weitere Hilfe benötigen.
+Wenden Sie sich an Ihren Manager:in oder an den [Braze Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/), wenn Sie weitere Hilfe benötigen.
 
