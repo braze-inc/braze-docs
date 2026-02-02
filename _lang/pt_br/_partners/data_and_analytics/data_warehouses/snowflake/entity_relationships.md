@@ -26,10 +26,6 @@ search_tag: Partner
 {% multi_lang_include snowflake_users_messages/inappmessage.md %}
 {% endsdktab %}
 
-{% sdktab News Feed %}
-{% multi_lang_include snowflake_users_messages/newsfeedcard.md %}
-{% endsdktab %}
-
 {% sdktab Push Notifications %}
 {% multi_lang_include snowflake_users_messages/pushnotification.md %}
 {% endsdktab %}
