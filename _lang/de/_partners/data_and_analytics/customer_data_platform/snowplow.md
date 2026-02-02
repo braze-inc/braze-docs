@@ -1,7 +1,7 @@
 ---
 nav_title: Snowplow
 article_title: Snowplow
-description: "Dieser referenzierte Artikel beschreibt die Partnerschaft zwischen Braze und Snowplow, einer Plattform für die Datenerfassung mit offenem Quellcode, die es Ihnen erlaubt, Snowplow-Ereignisse über das Server-seitige Tagging des Google Tag Managers an Braze weiterzuleiten."
+description: "Dieser Artikel referenziert die Partnerschaft zwischen Braze und Snowplow, einer Plattform für Dateninfrastrukturen, die es Ihnen erlaubt, Snowplow-Ereignisse in Realtime an Braze weiterzuleiten, indem Sie Snowplows Event Forwarding nutzen."
 alias: /partners/snowplow/
 page_type: partner
 search_tag: Partner
@@ -10,28 +10,30 @@ search_tag: Partner
 
 # Snowplow
 
-> [Snowplow](https://snowplowanalytics.com) ist eine skalierbare Open-Source-Plattform für eine umfangreiche, qualitativ hochwertige Datenerfassung mit geringer Latenz. Es wurde entwickelt, um hochwertige, vollständige Verhaltensdaten für Unternehmen zu sammeln.
+> [Snowplow](https://snowplowanalytics.com) ist eine skalierbare Plattform für eine umfangreiche, qualitativ hochwertige Datenerfassung mit geringer Latenz. Snowplow wurde entwickelt, um hochwertige, vollständige Verhaltensdaten für Unternehmen zu sammeln.
 
 _Diese Integration wird von Snowplow gepflegt._
 
 ## Über die Integration
 
-Die Integration von Braze und Snowplow ermöglicht es Nutzern:innen, Snowplow-Ereignisse über Google Tag Manager Server-seitiges Tagging an Braze weiterzuleiten. Der Snowplow Braze Tag erlaubt es Ihnen, Ereignisse an Braze zu senden und bietet gleichzeitig zusätzliche Flexibilität und Kontrolle:
-- Vollständiger Einblick in alle Transformationen der Daten
-- Die Fähigkeit, sich im Laufe der Zeit weiterzuentwickeln
-- Alle Daten verbleiben in Ihrer privaten Cloud, bis Sie sie weiterleiten möchten.
-- Einfache Einrichtung dank umfangreicher Bibliotheken mit Tags und vertrauter Google Tag Manager:in UI
+Die Integration von Braze und Snowplow ermöglicht Ihnen die Weiterleitung von Snowplow-Ereignissen an Braze in Realtime mit Hilfe der Snowplow Event Forwarding Lösung. Mit dieser Integration können Sie Ereignisse an Braze senden und gleichzeitig Flexibilität und Kontrolle bieten. Genauer gesagt, können Sie das:
+- Filtern und transformieren Sie Ereignisse, bevor Sie sie an Braze senden.
+- Ordnen Sie Snowplow-Ereignisdaten den Nutzer:innen-Attributen, angepassten Events und Käufen von Braze zu.
+- Bewahren Sie alle Daten in Ihrer privaten Cloud auf, bis Sie sie weiterleiten möchten.
+- Stellen Sie die Lösung selbst innerhalb Ihres bestehenden Snowplow Cloud-Kontos bereit. 
 
-Nutzen Sie die umfangreichen Verhaltensdaten von Snowplow, um leistungsstarke kundenorientierte Interaktionen in Braze voranzutreiben und personalisierte Nachrichten in Realtime zugestellt zu bekommen.
+Die [Ereignisweiterleitung](https://docs.snowplow.io/docs/destinations/forwarding-events/) von Snowplow ist ein kostenpflichtiges Feature, das Snowplow Kund:innen zur Verfügung steht. Um Ereignisse ohne dieses Add-On an Braze weiterzuleiten, verwenden Sie die Google Tag Manager Server-Side [Integration](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) von Snowplow [.](https://docs.snowplow.io/docs/destinations/forwarding-events/google-tag-manager-server-side/) 
+
+Nutzen Sie die umfangreichen Verhaltensdaten von Snowplow, um leistungsstarke kundenorientierte Interaktionen in Braze voranzutreiben und personalisierte Nachrichten in Echtzeit zugestellt zu bekommen.
 
 ## Voraussetzungen
 
-| Anforderung | Beschreibung |
-| ----------- | ----------- |
-| Schneepflug-Pipeline | Eine Schneepflug-Pipeline muss eingerichtet und in Betrieb sein. |
-| Google Tag Manager:in auf der Server-Seite | GTM-SS muss bereitgestellt und der [Snowplow Client für GTM-SS](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/) muss eingerichtet werden. |
-| Braze REST API-Schlüssel | Ein Braze REST API-Schlüssel mit `users.track` Berechtigungen. <br><br> Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. |
-| Braze REST Endpunkt | [Ihre URL für den REST-Endpunkt]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Ihr Endpunkt hängt von der Braze-URL für Ihre Instanz ab. |
+| Anforderung             | Beschreibung                                                                                                                                                                                                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Schneepflug-Pipeline       | Sie brauchen eine Schneepflug-Pipeline, die funktioniert.                                                                                                                                                                                                                                          |
+| Zugang zur Schneepflug-Konsole | Sie müssen Zugriff auf die Snowplow-Konsole haben, um Ereignis-Forwarder zu konfigurieren.                                                                                                                                                                                                                                |
+| Braze REST API-Schlüssel      | Ein Braze REST API-Schlüssel mit den folgenden Berechtigungen: `users.track`, `users.alias.new`, `users.identify`, `users.export.ids`, `users.merge`, `users.external_ids.rename`, und `users.alias.update`. <br><br> Sie können diesen im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellen. |
+| Braze REST Endpunkt     | [Ihre URL für den REST-Endpunkt]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Ihr Endpunkt hängt von der Braze-URL für Ihre Instanz ab.                                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Anwendungsfälle
@@ -44,79 +46,44 @@ Erstellen Sie dynamische Zielgruppen in Braze auf der Grundlage der hochwertigen
 
 ## Integration
 
-### Schritt 1: Template-Installation
+### Schritt 1: Konfigurieren Sie das Ziel in der Snowplow-Konsole
 
-#### Manuelle Installation
+So erstellen Sie den Event Forwarder:
 
-1. Laden Sie die [`template.tpl`](https://github.com/snowplow/snowplow-gtm-server-side-braze-tag/blob/main/template.tpl) Template-Datei herunter.
-2. Erstellen Sie einen neuen Tag im Bereich **Templates** eines Google Tag Manager Server Containers.
-3. Klicken Sie auf das Menü **Weitere Aktionen** in der oberen rechten Ecke und wählen Sie **Importieren**.
-4. Importieren Sie Ihre heruntergeladene Template-Datei und speichern Sie sie.
+1. Navigieren Sie in der Snowplow-Konsole zu **Ziele** und wählen Sie **Neues Ziel erstellen**.
+2. Wenn Sie die Verbindung konfigurieren, wählen Sie **Braze** als Verbindungstyp aus.
+3. Geben Sie Ihren Braze API-Schlüssel und Ihren REST API-Endpunkt ein.
+4. Speichern Sie die Verbindung.
 
-#### Tag Manager:in der Galerie
+### Schritt 2: Konfigurieren Sie den Event Forwarder
 
-Demnächst verfügbar! Dieser Tag muss noch genehmigt werden, um in die GTM-Galerie aufgenommen zu werden.
+Bei der Konfiguration des Forwarders können Sie auswählen, welche Snowplow-Ereignisse weitergeleitet werden sollen, und sie auf Braze-Objekttypen abbilden:
 
-### Schritt 2: Braze Tag einrichten
+1. **[Nutzer:innen Attribute]({{site.baseurl}}/api/objects_filters/user_attributes_object)**: Aktualisieren Sie die Daten des Nutzerprofils und die angepassten Eigenschaften der Nutzer:innen.
+2. **[Angepasste Events]({{site.baseurl}}/api/objects_filters/event_object)**: Senden Sie Nutzer:innen Aktionen und Verhaltensweisen.
+3. **[Einkäufe]({{site.baseurl}}/api/objects_filters/purchase_object)**: Senden Sie Transaktionsdaten mit Produktdetails.
 
-Wenn Sie das Template installiert haben, fügen Sie den Braze Tag zu Ihrem GTM-SS Container hinzu.
+Für jeden Objekttyp können Sie Feldzuordnungen konfigurieren, um festzulegen, wie Snowplow Ereignisdaten auf Braze Felder abgebildet werden. Detaillierte Anweisungen zur Einrichtung und Konfiguration der Abbildung von Feldern finden Sie in der [Dokumentation](https://docs.snowplow.io/docs/destinations/forwarding-events/creating-forwarders/) von Snowplow [zum Erstellen von Forwardern](https://docs.snowplow.io/docs/destinations/forwarding-events/creating-forwarders/).
 
-1. Wählen Sie auf dem Tab **Tag** die Option **Neu** und wählen Sie dann den **Braze Tag** als Ihre Tag-Konfiguration aus.
-2. Wählen Sie den gewünschten Auslöser für die Ereignisse aus, die Sie an Braze weiterleiten möchten.
-3. Geben Sie die erforderlichen Parameter ein und konfigurieren Sie Ihren Tag (weitere Einzelheiten finden Sie im folgenden Abschnitt Anpassung).
-4. Klicken Sie auf **Speichern**.
+### Schritt 3: Validieren Sie die Integration
 
-## Anpassung
+Bestätigen Sie, dass die Ereignisse Braze erreichen, indem Sie die folgenden Seiten in Ihrem Braze-Konto überprüfen:
 
-### Erforderliche Tag-Parameter
+1. **Query Builder**: Navigieren Sie in Braze zu **Analytics** > **Query Builder**. Sie können Abfragen zu den folgenden Tabellen schreiben, um eine Vorschau der von Snowplow weitergeleiteten Daten zu erhalten: `USER_BEHAVIORS_CUSTOMEVENT_SHARED` und `USERS_BEHAVIORS_PURCHASE_SHARED`.
+2. **API-Nutzungs-Dashboard**: Navigieren Sie in Braze zu **Einstellungen** > **APIs und Bezeichner**, um ein Chart der API-Nutzung im Laufe der Zeit anzuzeigen. Sie können speziell nach dem API-Schlüssel filtern, den Snowplow verwendet, und sowohl Erfolge als auch Misserfolge sehen.
 
-In der folgenden Tabelle finden Sie die erforderlichen Tag-Parameter, die Sie in die Einrichtung Ihrer Braze Tags aufnehmen müssen.
+## Anpassen von Eigenschaften senden
 
-| Parameter | Beschreibung |
-| --------- | ----------- |
-| Braze REST API Endpunkt | Setzen Sie dies auf die URL Ihres Braze REST [Endpunktes]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
-| Braze API-Schlüssel | Setzen Sie hier Ihren Braze [API-Schlüssel]({{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys) ein, der in jeder Anfrage enthalten sein wird. |
-| Braze `external_id` | Setzen Sie diesen Schlüssel auf die Eigenschaft des Client-Ereignisses, das der `external_id` Ihrer Nutzer:innen entspricht und als [Bezeichner der Braze-Benutzer]({{site.baseurl}}/developer_guide/rest_api/basics/#external-user-id-explanation):innen verwendet wird. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Sie können angepasste Eigenschaften über die Standardfelder hinaus senden. Die Struktur hängt davon ab, welchen Braze-Objekttyp Sie verwenden:
 
-### Abbildung von Ereignissen
+- **Nutzer**:**innen-Attribute**: Fügen Sie als Top-Level-Felder hinzu (zum Beispiel `subscription_tier`, `loyalty_points`)
+- **Event-Eigenschaften**: Verschachtelung unter `properties` Objekt (zum Beispiel `properties.plan_type`, `properties.feature_flag`)
+- **Kauf-Details der Eigenschaften**: Verschachtelung unter `properties` Objekt (zum Beispiel `properties.color`, `properties.size`)
 
-In der folgenden Tabelle sind die Optionen für die Abbildung von Ereignissen in Bezug auf das Ereignis Snowplow aufgeführt, das vom [Snowplow Client](https://docs.snowplowanalytics.com/docs/forwarding-events-to-destinations/forwarding-events/google-tag-manager-server-side/snowplow-client-for-gtm-ss/) beansprucht wird.
+Für Eigenschaftsnamen, die Leerzeichen enthalten, verwenden Sie die Klammerschreibweise (z.B. `["account type"]` oder `properties["campaign source"]`).
 
-| Option Abbildung | Beschreibung |
-| --------- | ----------- |
-| Selbstbeschreibendes Ereignis einbeziehen | Standardmäßig aktiviert. Gibt an, ob die selbstbeschreibenden Daten von Snowplow in die an Braze gesendeten Eigenschaften des Ereignisses aufgenommen werden sollen. |
-| Kontextregeln für Schneepflug-Ereignisse | Beschreibt, wie das Braze Tag die mit einem Snowplow-Ereignis verbundenen Kontext-Entitäten verwendet. |
-| Entität aus Array extrahieren, wenn einzelnes Element | Schneepflug-Entitäten befinden sich immer in Arrays, da mehrere der gleichen Entität an ein Ereignis angehängt werden können. Diese Option wählt das einzelne Element aus dem Array aus, wenn das Array nur ein einziges Element enthält. |
-| Alle Entitäten in das Ereignisobjekt einbeziehen | Standardmäßig aktiviert. Schließt alle Entitäten eines Ereignisses in das Objekt Eigenschaften des Braze-Ereignisses ein. Deaktivieren Sie diese Option, um einzelne Entitäten für die Aufnahme auszuwählen. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Einzelheiten zu den unterstützten Datentypen, den Anforderungen an die Benennung der Eigenschaften und den Größenbeschränkungen für die Nutzdaten finden Sie in der [Dokumentation zum Ereignisobjekt]({{site.baseurl}}/api/objects_filters/event_object).
 
-### Fortgeschrittene Abbildung von Ereignissen
+## Beschränkungen
 
-#### Regeln für Event-Eigenschaften
-
-Wenn Sie andere Eigenschaften aus dem Client-Ereignis aufnehmen und auf das Braze-Ereignis abbilden möchten, referenzieren Sie die Regeln in der folgenden Tabelle: 
-
-| Regeln für Event-Eigenschaften | Beschreibung |
-| --------- | ----------- |
-| Gemeinsame Event-Eigenschaften einbeziehen | Standardmäßig aktiviert, legt diese Option fest, ob die Event-Eigenschaften aus der [gemeinsamen Event-Definition](https://developers.google.com/tag-platform/tag-manager/server-side/common-event-data) automatisch in die Eigenschaften des Braze-Events aufgenommen werden sollen. |
-| Zusätzliche Regeln für die Abbildung von Nutzer:innen- und Event-Eigenschaften | Geben Sie den Schlüssel der Eigenschaft aus dem Client-Ereignis und den Objektschlüssel der Eigenschaften an, auf den Sie ihn abbilden möchten (oder lassen Sie den abgebildeten Schlüssel leer, um denselben Namen zu behalten). Sie können hier eine Schlüsselpfad-Notation verwenden (z.B. `x-sp-tp2.p` für eine Snowplow Event-Plattform oder `x-sp-contexts.com_snowplowanalytics_snowplow_web_page_1.0.id` für eine Snowplow Event-Seitenansicht-ID (in Array-Index 0) oder Eigenschaften wählen, die nicht von Snowplow stammen, wenn Sie einen anderen Client verwenden.<br><br>Regeln für die Abbildung von Event-Eigenschaften füllen das Braze Event-Eigenschaften Objekt.|
-| Gemeinsame Nutzer:in-Eigenschaften einbeziehen| Diese Option ist standardmäßig aktiviert und legt fest, ob die Eigenschaften von `user_data` aus der gemeinsamen Event-Definition in das Objekt Nutzer:in aufgenommen werden sollen.|
-| Eigenschaft "Ereigniszeit | Mit dieser Option können Sie die Eigenschaft des Client-Ereignisses angeben, um die Ereigniszeit (im ISO-8601-Format) zu füllen, oder sie leer lassen, um die aktuelle Zeit zu verwenden (Standardverhalten). |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-### Abbildung der Entität
-
-Mithilfe der Abbildungstabelle für Snowplow-Entitäten können die Entitäten in Braze umbenannt und in Event-Eigenschaften oder Nutzer:innen-Attribute aufgenommen werden. 
-
-Die Entität kann in zwei verschiedenen Formaten angegeben werden:
-- Hauptversionsübereinstimmung: `x-sp-contexts_com_snowplowanalytics_snowplow_web_page_1` wobei `com_snowplowanalytics_snowplow` für den Ereignisanbieter, `web_page` für den Schemanamen und `1` für die Hauptversionsnummer steht. `x-sp-` kann auch weggelassen werden, falls gewünscht.
-- Vollständige Schemaübereinstimmung: `iglu:com.snowplowanalytics.snowplow/webPage/jsonschema/1-0-0`
-<br><br>
-
-| Option für die Abbildung von Entitäten | Beschreibung |
-| --------- | ----------- |
-| Nicht zugeordnete Objekte in Ereignis einbeziehen | Bei der Neuzuordnung oder dem Verschieben einiger Entitäten zu Nutzer:in-Attributen mit der vorangegangenen Anpassung können Sie mit dieser Option sicherstellen, dass alle nicht zugeordneten Entitäten (z.B. alle Entitäten, die nicht in den [Regeln für die Event-Eigenschaften](#event-property-rules) gefunden wurden) in das Objekt Eigenschaften des Braze-Events aufgenommen werden. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
-
-
+**Rate-Limits:** Braze setzt ein Rate-Limits von 3.000 API-Aufrufen alle drei Sekunden für die Track Nutzer:innen API durch. Da Snowplow keine Stapelverarbeitung für Ereignis-Forwarder unterstützt, fungiert dieses API Rate-Limit auch als Rate-Limit für Ereignisse. Wenn Ihr Eingabedurchsatz 3.000 Ereignisse pro drei Sekunden überschreitet, kann es zu erhöhten Latenzzeiten kommen.
