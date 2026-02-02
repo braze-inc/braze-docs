@@ -1,5 +1,5 @@
 ---
-nav_title: Transferencia de datos a Redshift
+nav_title: Transferir datos a Redshift
 article_title: Transferencia de datos a Redshift
 page_order: 8
 page_type: tutorial
@@ -8,9 +8,9 @@ tool: Currents
 
 ---
 
-# Transferencia de datos a Redshift
+# Transferir datos a Redshift
 
-> [Amazon Redshift](https://aws.amazon.com/redshift/) es un popular almacén de datos que se ejecuta en Amazon Web Services junto con Amazon S3. Los datos de Braze Currents están estructurados para que sea fácil transferirlos directamente a Redshift.
+> [Amazon Redshift](https://aws.amazon.com/redshift/) es un popular almacén de datos que se ejecuta en Amazon Web Services junto con Amazon S3. Los datos de Braze Currents están estructurados para su transferencia directa a Redshift.
 
 Encontrarás más información sobre cómo transferir datos de Amazon S3 a Redshift mediante un proceso de extraer, transformar, cargar (ETL) en nuestro [repositorio de GitHub](https://github.com/Appboy/currents-examples) de ejemplos de Currents.
 
