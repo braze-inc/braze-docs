@@ -1,12 +1,12 @@
 ---
-nav_title: Eine Transformation schaffen
-article_title: Eine Transformation schaffen
+nav_title: Erstellen Sie eine Transformation
+article_title: Erstellen Sie eine Transformation
 page_order: 1
 page_type: reference
 description: "Dieser referenzierte Artikel beschreibt die Schritte zur Erstellung einer Transformation mit Braze Data Transformation."
 ---
 
-# Eine Transformation schaffen
+# Erstellen Sie eine Transformation
 
 > Mit Braze Data Transformation können Sie Webhook-Integrationen erstellen und verwalten, um den Datenfluss von externen Plattformen in Braze zu automatisieren. Diese Webhook-Integrationen können dann noch leistungsfähigere Anwendungsfälle im Marketing unterstützen. Sie können Ihre Datentransformation aus dem Standard Code erstellen oder unsere spezielle Bibliothek mit Templates verwenden, um Ihnen den Einstieg in bestimmte externe Plattformen zu erleichtern.
 
@@ -43,7 +43,7 @@ Dieser Schritt ist optional, aber wir empfehlen, einen Test-Webhook von Ihrer Au
 
 So sieht es bei Typeform aus:
 
-![Beispiel für einen Code zur Datentransformation, der den Webhook auf Braze-Nutzerprofile abbildet.]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
+![Beispiel für einen Code zur Datentransformation, der den Webhook auf Braze Nutzerprofile abbildet.]({% image_buster /assets/img/data_transformation/data_transformation11.png %})
 
 {% alert note %}
 Braze Data Transformation unterstützt möglicherweise noch keine externen Plattformen, die eine spezielle Überprüfung oder Authentifizierung für Webhooks erfordern. Wenn Sie sich für diese Art von Plattform mit Braze Data Transformation interessieren, sollten Sie ein [Feedback zu Ihrem Produkt]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) abgeben.
