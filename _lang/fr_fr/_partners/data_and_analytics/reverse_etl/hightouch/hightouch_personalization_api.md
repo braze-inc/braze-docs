@@ -29,9 +29,9 @@ L'API de personnalisation de Hightouch fournit un endpoint REST à utiliser dans
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab Cas d'utilisation %}
+{% tab Use Cases %}
 
-### Cas d'utilisation
+### Cas d’utilisation
 
 Avant de commencer, il est utile de planifier exactement la manière dont vous souhaitez utiliser l'API de personnalisation.
 
@@ -42,7 +42,7 @@ Les cas d'utilisation courants incluent :
 - **Recommandations basées sur des données financières ou médicales : les données** financières sont soumises à des exigences strictes auxquelles Hightouch répond par le biais de ses politiques de sécurité [des données strictes.](https://hightouch.com/docs/security/overview#compliance) Avec Hightouch, vous pouvez créer des segments de clientèle en fonction de données financières ou médicales sans exposer les attributs sous-jacents utilisés dans vos critères de segmentation.
 
 {% endtab %}
-{% tab Ensembles de données %}
+{% tab Datasets %}
 
 ### Ensembles de données
 
@@ -68,7 +68,7 @@ Pour plus de détails, reportez-vous à la [documentation](https://hightouch.com
 Les modèles Hightouch définissent les données à extraire de votre source. Pour configurer un nouveau modèle, procédez comme suit :
 
 1. Dans Hightouch, accédez à [**Aperçu des modèles > Ajouter un**](https://app.hightouch.com/models) **modèle**, puis sélectionnez la source que vous venez de connecter. <br><br>
-2. Choisissez ensuite une [méthode de modélisation](https://hightouch.com/docs/models/creating-models). Comme toutes vos informations doivent être réunies dans un seul tableau, vous pouvez utiliser le sélecteur de tableau visuel pour les définir. Vous pouvez également écrire du code SQL pour n'inclure que les colonnes que vous souhaitez ou vous appuyer sur vos modèles DBT, Looker Looks ou Sigma existants.<br><br>
+2. Choisissez ensuite une [méthode de modélisation](https://hightouch.com/docs/models/creating-models). Comme toutes vos informations doivent être regroupées dans un seul tableau, vous pouvez utiliser le sélecteur visuel de tableau pour le définir. Vous pouvez également écrire du code SQL pour n'inclure que les colonnes que vous souhaitez ou vous appuyer sur vos modèles DBT, Looker Looks ou Sigma existants.<br><br>
 3. Avant de continuer, prévisualisez votre modèle pour vous assurer qu'il interroge les données qui vous intéressent. Par défaut, Braze limite l'aperçu aux 100 premiers enregistrements. Après avoir validé vos données, cliquez sur **Continuer**.<br><br>
 4. Donnez un nom à votre modèle, par exemple « Recommandations aux utilisateurs ». «<br><br>
 5. Enfin, sélectionnez une clé primaire et cliquez sur **Terminer**. Une clé primaire doit être une colonne contenant des identifiants uniques. C'est également le champ que vous utiliserez pour appeler l'API de personnalisation afin de récupérer les recommandations d'un utilisateur en particulier.
