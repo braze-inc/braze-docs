@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Crowdin
 
-> Crowdin est un logiciel basé sur le cloud permettant de gérer la localisation. Grâce à Crowdin, vous pouvez traduire vos applications Android et iOS, votre site web, les captures d'écran de votre boutique et d'autres contenus. La traduction peut être effectuée par votre équipe interne, par une agence de traduction ou à l'aide de moteurs de traduction automatique.
+> Crowdin est une plateforme de gestion de la localisation basée sur le cloud. Grâce à Crowdin, vous pouvez traduire vos applications Android et iOS, votre site web, les captures d'écran de votre boutique et d'autres contenus. La traduction peut être effectuée par votre équipe interne, par une agence de traduction ou à l'aide de moteurs de traduction automatique.
 
 _Cette intégration est maintenue par Crowdin._
 
@@ -60,12 +60,12 @@ Une fois que vous avez fourni vos informations d'identification Braze, deux pann
 
 En mode éditeur dans Crowdin, le contenu synchronisé depuis votre compte Braze peut être affiché à vos traducteurs sous la forme d'une liste de caractères ou d'un aperçu de fichier.
 
-![Une image de ce à quoi ressemble le compositeur d'e-mails de Crowdin Editor avec quelques traductions de base ajoutées.]({% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %})
+![Une image de ce à quoi ressemble le compositeur d'e-mail Crowdin Editor avec quelques traductions de base ajoutées.]({% image_buster /assets/img/crowdin/crowdin_editor_email_preview.png %})
 
 ### Étape 3 : Ajouter des traductions à Braze
 
 Dès que les traductions sont terminées, ouvrez l'appli Braze dans Crowdin, sélectionnez les fichiers traduits (pour chaque fichier, vous pouvez choisir toutes les langues cibles ou seulement certaines) dans le panneau de gauche, et cliquez sur **Synchroniser avec Braze**.
 
-![Image d'un utilisateur sélectionnant ses fichiers de traduction et les synchronisant avec Braze.]({% image_buster /assets/img/crowdin/sync_translations.png %})
+![Une image d'un utilisateur sélectionnant ses fichiers de traduction et les synchronisant avec Braze.]({% image_buster /assets/img/crowdin/sync_translations.png %})
 
 
