@@ -35,7 +35,7 @@ Der Abschnitt **Weitermachen, wo Sie aufgehört haben** erscheint, nachdem Sie e
 
 Standardmäßig zeigt die **Übersicht über die Performance** die Daten der letzten 30 Tage für alle Apps und Websites. Ihre Metriken werden alle auf der Grundlage des ausgewählten Datumsbereichs berechnet.
 
-![Datumsbereich und App-Felder auf dem Home Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Datumsbereich und App-Felder auf dem Home-Dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Die Prozentsätze werden auf der Grundlage des aktuellen Datumsbereichs im Vergleich zum vorherigen Datumsbereich berechnet, mit Ausnahme der *monatlich aktiven Nutzer*:in (MAU), die den letzten Tag des vorherigen Zeitraums anstelle eines Bereichs verwenden. 
 
@@ -47,7 +47,7 @@ Wenn Sie beispielsweise den Datumsbereich auf **Letzte 7 Tage** einstellen und I
 
 Wählen Sie **Aufschlüsselung anzeigen** für jede Zeile der Performance-Übersichtsstatistik aus, um den Wert jeder Statistik pro Tag für den angegebenen Datumsbereich anzuzeigen.
 
-![Erweitern]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+![Erweitern Sie]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Verfügbare Statistiken
 
@@ -72,9 +72,34 @@ Der Prozentsatz neben der MAU-Zahl zeigt die Veränderung der MAU für diesen Ze
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### MAU-Berechnungsregeln
+
+MAU-Berechnungen folgen bestimmten Regeln, um eine genaue und konsistente Abrechnung zu gewährleisten:
+
+- **Berechnungszeitpunkt**: Wird einmal täglich um 12:05 UTC als 30-Tage-Schnappschuss berechnet; die Zählungen ändern sich nie rückwirkend.
+- **Anonyme Profile**: Zählt **nur**, wenn mindestens eine Sitzung protokolliert wird.
+- **Identifizierte Profile**: Zählen automatisch, sobald sie existieren.
+- **Verwaiste Profile**: Duplikate, die mit einem anderen Nutzer:innen zusammengelegt wurden, werden **nicht** gezählt.
+- **CSV-Uploads**: Nutzer:innen, die per CSV hochgeladen wurden, werden nur gezählt, wenn `date_of_first_session` oder `date_of_last_session` angegeben wird, oder wenn sie später eine Sitzung anmelden.
+- **API-Löschungen**: Wenn Sie einen Nutzer:innen über die API löschen, wird MAU nicht sofort aktualisiert; die Zählung korrigiert sich selbst im nächsten Monatszyklus.
+
 {% alert note %}
 Anonyme Nutzer:innen zählen ebenfalls zu Ihren MAU. Bei mobilen Geräten sind anonyme Nutzer:innen geräteabhängig. Für Internet-Nutzer:innen sind anonyme Nutzer:innen vom Browser-Cache abhängig.
 {% endalert %}
+
+#### MAU Berechnungsbeispiel
+
+Das folgende Beispiel zeigt, wie MAU-Berechnungen durch verschiedene Nutzer:innen-Aktionen funktionieren:
+
+| Schritt | Aktion | Unmittelbare MAU-Änderung | Resultierende Summe |
+|------|--------|----------------------|-----------------|
+| (1 %) | Erstellen Sie den **anonymen Nutzer:in 1** und protokollieren Sie eine Sitzung | +1 | (1 %) |
+| (2 %) | **Anonymen Nutzer:in 1** identifizieren (Profil wird in Bezeichner umgewandelt) | 0 | (1 %) |
+| 3 | Erstellen Sie den **anonymen Nutzer:in 2** und protokollieren Sie eine Sitzung | +1 | (2 %) |
+| (4 %) | Identifizieren Sie den **anonymen Nutzer:in 2** als **dieselbe Person** wie Nutzer:in 1 (Nutzer:in 2 wird verwaist) | -1 | (1 %) |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+MAU-Snapshots werden einmal pro Tag berechnet und ändern sich nie rückwirkend. In diesem Beispiel bleibt die MAU-Zahl für den Tag nach Schritt 3 dauerhaft bei 2, auch wenn Nutzer:in später verwaist ist. Die MAU-Zählung für die folgenden Tage spiegelt jedoch nur die nicht verwaisten Nutzer:innen wider. Innerhalb eines beliebigen 30-Tage-Fensters verbraucht dieser Fluss letztendlich 1 MAU, da nur ein einzelner, nicht verwaister Nutzer:in übrig bleibt.
 
 ### Täglich aktive Nutzer:innen
 
