@@ -24,7 +24,7 @@ Navigieren Sie zur Seite **Segmente** unter **Zielgruppe**, um alle Ihre aktuell
 
 Nachdem Sie Ihr Segment erstellt haben, fügen Sie einen Filter für **den letzten Standort** hinzu, um Nutzer:innen nach dem letzten Ort zu targetieren, an dem sie Ihre App verwendet haben. Sie haben die Möglichkeit, Nutzer:innen innerhalb oder außerhalb eines kreisförmigen Standardbereichs oder eines anpassbaren polygonalen Bereichs zu markieren.
 
-![Filter für den letzten Standort innerhalb eines Kreises.]({% image_buster /assets/img_archive/filter_recent_location.png %})
+![Filtern Sie nach dem letzten Standort innerhalb eines Kreises.]({% image_buster /assets/img_archive/filter_recent_location.png %})
 
 {% tabs %}
 {% tab Circular %}
