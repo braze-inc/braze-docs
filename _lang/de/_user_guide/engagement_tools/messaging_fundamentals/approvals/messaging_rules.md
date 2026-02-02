@@ -15,11 +15,7 @@ description: "Auf dieser Seite erfahren Sie, wie Sie Messaging-Regeln im Genehmi
 Messaging-Regeln gelten für einen Workspace und bestehen aus einem Nachrichtentyp und einer maximalen Anzahl erreichbarer Nutzer:innen.
 
 - **Art der Nachricht:** Legt fest, auf welchen Nachrichtentyp die Regel angewendet wird: Kampagne, Canvas oder sowohl Canvas als auch Kampagnen.
-- **Maximal erreichbare Nutzer:innen:** Bestimmt die Größe der Zielgruppe, für die eine zusätzliche Genehmigung erforderlich ist.
-
-### Gemeinsame Nachrichtenarten und maximal erreichbare Nutzer:innen
-
-Es können zwei Regeln mit der gleichen Anzahl von erreichbaren Nutzer:innen für den gleichen Nachrichtentyp existieren. Sie können zum Beispiel ein Maximum von 10.000 Nutzer:innen für Canvas und 10.000 Nutzer:innen sowohl für Canvas als auch für Kampagnen festlegen. 
+- **Maximal erreichbare Nutzer:innen:** Legt fest, ab welcher Zielgruppe eine zusätzliche Genehmigung erforderlich ist.
 
 ### Separate Genehmiger
 
@@ -30,7 +26,7 @@ Zwei Regeln können das gleiche Nutzer:innen-Maximum haben, so dass Sie Ihre Reg
 
 ### Keine überschneidenden erreichbaren Nutzer:innen
 
-Sie können keine Regeln mit einer sich überschneidenden Anzahl von Nutzer:innen für denselben Nachrichtentyp festlegen. Die folgende Messaging-Regel **kann zum Beispiel nicht** eingestellt werden: 
+Um Verwirrung zu vermeiden, können Sie keine identischen Regeln mit einer sich überschneidenden Anzahl von Nutzer:innen für denselben Nachrichtentyp und dieselben Genehmiger festlegen. Die folgende Messaging-Regel **kann zum Beispiel nicht** eingestellt werden: 
 
 - Regel C für Canvas mit maximal 10.000 Nutzer:innen 
 - Regel D für Canvas mit einer Höchstzahl von 1.000.000 Nutzer:innen
@@ -54,7 +50,7 @@ Sie können bis zu fünf Messaging-Regeln erstellen.
 5. Geben Sie eine Zahl für **maximal erreichbare Nutzer:innen** ein. Weitere Informationen finden Sie unter [Statistiken zur Zielgruppe]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics).
 6. Wählen Sie **Speichern**.
 
-![Eine beispielhafte Messaging-Regel "Regel 1" für Kampagnen mit maximal 100.000 Nutzer:innen. Es gibt einen Nutzer:innen, der das Canvas und die zu startende Kampagne genehmigen kann.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
+![Ein Beispiel für die Messaging-Regel "Regel 1" für Kampagnen mit maximal 100.000 Nutzer:innen. Es gibt einen Nutzer:innen, der das Canvas und die zu startende Kampagne genehmigen kann.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
 
 ### Schritt 2: Start mit Genehmigung festlegen (optional)
 
@@ -62,8 +58,8 @@ Wählen Sie **Starten mit Genehmigung zulassen**. Als nächstes wählen Sie für
 
 Beachten Sie die folgenden Details zum Starten von Nachrichten mit Genehmigung:
 
-- Wenn das Maximum erreicht ist und ein Genehmigender ausgewählt wurde, kann der Nutzer:innen mit der Genehmigungsberechtigung aus dem Dropdown-Menü **Target Audience** **Approved** auswählen.
-- Wenn das Maximum erreicht ist und eine Genehmigung nicht ausgewählt wurde, wird der Start des Canvas oder der Kampagne verhindert.
+- Wenn das Maximum erreicht ist und ein Genehmigender ausgewählt wurde, kann der Braze Nutzer:innen mit der Genehmigungsberechtigung aus dem Dropdown-Menü **Target Audience** approval die Option **Approved** auswählen.
+- Wenn das Maximum erreicht ist und kein Genehmigender ausgewählt ist, kann das Canvas oder die Kampagne nicht gestartet werden.
 
 ![Der Schritt "Zusammenfassung" des Canvas-Workflows, der anzeigt, dass Sie eine Genehmigung zum Starten benötigen.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
