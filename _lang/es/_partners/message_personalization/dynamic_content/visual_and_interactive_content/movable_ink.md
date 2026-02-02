@@ -63,12 +63,12 @@ Los clientes tendrán que crear un origen de datos que puede ser un CSV, la impo
 ![Diferentes opciones de origen de datos que aparecerán: Carga CSV, sitio web o integración API.]({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 
 {% tabs local %}
-{% tab Origen de datos CSV %}
+{% tab CSV Data Source %}
 - **Origen de datos CSV**: Cada fila debe tener al menos una columna de segmento y una columna de contenido. Una vez cargado tu CSV, selecciona qué columnas deben utilizarse para orientar el contenido. [Ejemplo de archivo CSV]({% image_buster /assets/download_file/movable_ink_CSV.csv %})
 
 ![Los campos que aparecerán al seleccionar "CSV" como origen de datos.]({% image_buster /assets/img/movable_ink/movable_ink2.png %})
 {% endtab %}
-{% tab Origen de datos del sitio web %}
+{% tab Website Data Source %}
 - **Origen de datos del sitio web**: Cada fila debe tener al menos una columna de segmento y una columna de contenido. Una vez cargado tu CSV, selecciona qué columnas deben utilizarse para orientar el contenido.
   - Dentro de este proceso, tendrás que mapear:
     - Qué campos se utilizarán como Segmentos
@@ -76,7 +76,7 @@ Los clientes tendrán que crear un origen de datos que puede ser un CSV, la impo
 
 ![Los campos que aparecerán al seleccionar "Sitio web" como origen de datos.]({% image_buster /assets/img/movable_ink/movable_ink3.png %})
 {% endtab %}
-{% tab Integraciones API %}
+{% tab API Integrations %}
 - **Integraciones API**: Utiliza la API de tu empresa para impulsar contenidos directamente desde una respuesta API.
 
 ![Los campos que aparecerán al seleccionar "Integración de API" como origen de datos]({% image_buster /assets/img/movable_ink/movable_ink4.png %})
@@ -95,7 +95,7 @@ Movable Ink tiene un sencillo editor para que arrastres y sueltes elementos como
 
 ![El editor de bloques Movable Ink mostrando los diferentes elementos personalizables.]({% image_buster /assets/img/movable_ink/create_campaign2.png %})
 
-Antes de finalizar tu campaña, asegúrate de obtener una vista previa de las imágenes dinámicas y de probar los parámetros de consulta para ver qué aspecto tendrán las imágenes al visualizarlas. ¡Una vez completado, se generará una URL dinámica que podrás insertar en Braze!
+Antes de finalizar tu campaña, asegúrate de obtener una vista previa de las imágenes dinámicas y probar los parámetros de consulta para ver qué aspecto tendrán las imágenes al visualizarlas. ¡Una vez completado, se generará una URL dinámica que podrás insertar en Braze!
 
 Para más información sobre cómo utilizar la Plataforma Movable Ink, visita el [centro de soporte de Movable Ink](https://support.movableink.com/)
 
@@ -112,11 +112,11 @@ A continuación, en la Plataforma Braze, pega la URL en el campo correspondiente
 ### Paso 4: Experiencia Braze
 
 {% tabs local %}
-{% tab Correo electrónico %}
+{% tab Email %}
 En la plataforma Braze, pega tu etiqueta creativa en el cuerpo de tu correo electrónico.![]({% image_buster /assets/img/movable_ink/web2.png %}){: style="max-width:90%"}<br><br>
 
 {% endtab %}
-{% tab Notificación push %}
+{% tab Push notification %}
 
 1. En la Plataforma Braze:
 	- Android Push: Pega la URL en los campos **Imagen de icono push** e **Imagen de notificación expandida**.<br>![]({% image_buster /assets/img/movable_ink/android.png %}){: style="max-width:60%"}<br><br>
@@ -125,7 +125,7 @@ En la plataforma Braze, pega tu etiqueta creativa en el cuerpo de tu correo elec
 2. Para asegurarte de que las imágenes no se almacenan en caché, antepone a la URL del mensaje etiquetas de Liquid vacías: <br>{% raw %}```{% if true %}{% endif %}https://movable-ink-image-url-goes-here```{% endraw %}
 
 {% endtab %}
-{% tab Mensaje dentro de la aplicación %}
+{% tab In-app message %}
 
 1. En la plataforma Braze, pega la URL en el campo **Medios de notificación enriquecida**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. Proporciona una URL única para evitar el almacenamiento en caché. Para confirmar que las imágenes en tiempo real de Movable Ink funcionan y no se verán afectadas por el almacenamiento en caché, utiliza Liquid para añadir una marca de tiempo al final de la URL de la imagen de Movable Ink.
@@ -143,7 +143,7 @@ Esta plantilla tomará la hora actual (en segundos), la añadirá al final de la
 **3\.** Por último, reevalúa la pertenencia a un segmento. Para ello, habilita la opción `Re-evaluate audience membership and liquid at send-time` situada en el paso **Audiencias** objetivo de una campaña. Si esta opción no está disponible, ponte en contacto con tu administrador del éxito del cliente o con el soporte de Braze. Esta opción indicará a los SDK de Braze que vuelvan a solicitar la campaña, proporcionando una URL única cada vez que se desencadene un mensaje dentro de la aplicación.
 
 {% endtab %}
-{% tab Tarjeta de contenido %}
+{% tab Content Card %}
 
 1. En la plataforma Braze, pega la URL en el campo **Medios de notificación enriquecida**.![]({% image_buster /assets/img/movable_ink/image.png %}){: style="max-width:60%"}<br><br>
 2. Para móvil: Las imágenes de las tarjetas de contenido en iOS y Android se almacenan en caché cuando se reciben y no se actualizan. 
@@ -175,7 +175,7 @@ Esta plantilla tomará la hora actual (en segundos), la añadirá al final de la
 
 
 [1]: https://www.movableink.com/
-[origen de datos]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
+[datasource]: ({% image_buster /assets/img/movable_ink/movable_ink1.png %})
 [1]: ({% image_buster /assets/img/movable_ink/android.png %})
 [2]: ({% image_buster /assets/img/movable_ink/ios.png %})
 [3]: ({% image_buster /assets/img/movable_ink/web.png %})
