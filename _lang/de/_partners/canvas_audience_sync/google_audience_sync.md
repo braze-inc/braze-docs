@@ -91,11 +91,15 @@ Nach der Synchronisierung mit Braze stehen Ihnen die folgenden Attribute für di
 - `$google_ad_user_data`
 - `$google_ad_personalization`
 
-In jedem Canvas, in dem Sie Endnutzer:innen aus dem EWR, Großbritannien und der Schweiz mit Hilfe von Google Audience Sync zu einer Zielgruppe zusammenstellen, müssen Sie diese Nutzer:innen ausschließen, wenn beide Attribute für die Zustimmung einen Wert haben, der nicht `true` ist. Dies kann erreicht werden, indem diese Nutzer:innen segmentiert werden, wenn die Zustimmungswerte auf `true` eingestellt sind. Dadurch wird auch sichergestellt, dass die genaueren Analytics der Nutzer:innen synchronisiert werden, da wir wissen, dass Google diese Nutzer:innen aus den Zielgruppen ausschließt. Wenn Sie Google Audience Sync verwenden, um Nutzer:innen aus einer Zielgruppe zu entfernen, sind die Attribute für die Zustimmung nicht erforderlich.
+In jedem Canvas, in dem Sie Endnutzer:innen aus dem EWR, Großbritannien und der Schweiz mit Hilfe einer Google Audience Sync zu einer Zielgruppe zusammenstellen, müssen Sie diese Nutzer:innen ausschließen, wenn beide Attribute für die Zustimmung einen Wert haben, der nicht `true` ist. Sie können dies tun, indem Sie diese Nutzer:innen segmentieren, wenn die Zustimmungswerte auf `true` eingestellt sind. Dadurch wird auch sichergestellt, dass die genaueren Analytics der Nutzer:innen synchronisiert werden, denn wir wissen, dass Google diese Nutzer:innen aus den Zielgruppen ausschließt. Wenn Sie Google Audience Sync verwenden, um Nutzer:innen aus einer Zielgruppe zu entfernen, sind die Attribute für die Zustimmung nicht erforderlich.
 
 ## Integration
 
 ### Schritt 1: Google-Konto verbinden
+
+{% alert important %}
+Sie müssen die [ Berechtigung "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) haben, um Google Ads mit Ihrem Braze-Konto zu verbinden.
+{% endalert %}
 
 Um loszulegen, gehen Sie zu **Partnerintegrationen** > **Technologiepartner** > **Google Ads** und wählen Sie **Google Ads verbinden**. Sie werden in einem Modal aufgefordert, die mit Ihrem Google Ads-Konto verknüpfte E-Mail auszuwählen und dann Braze Zugriff auf Ihr Google Ads-Konto zu gewähren.
 
@@ -108,16 +112,16 @@ Nachdem Sie Ihr Google Ads-Konto erfolgreich verbunden haben, werden Sie zu Ihre
 Wenn Sie iOS IDFA oder Google Advertising IDs in Ihre Zielgruppen-Synchronisierung exportieren möchten, benötigt Google Ihre iOS App ID und Android App ID in den Anfragen. Wählen Sie unter Google Audience Sync die Option **Mobile Werbe-IDs hinzufügen**, geben Sie die ID Ihrer iOS-App und Android-App (Name des App-Pakets) ein und speichern Sie beide.
 
 <br><br>
-![Die aktualisierte Seite der Google Ads-Technologie zeigt die verbundenen Anzeigenkonten an, was eine erneute Synchronisierung der Konten und das Hinzufügen von IDs für mobile Werbung zulässig macht.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
+![Die aktualisierte Google Ads Technologieseite zeigt die verbundenen Anzeigenkonten an, was eine erneute Synchronisierung der Konten und das Hinzufügen von IDs für mobile Werbung zulässig macht.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 <br><br>
 
 Wenn Sie mehrere Apps in einem Workspace haben, können Sie bei der Einrichtung jede Ihrer App IDs eingeben, da die mobilen Anzeigen-IDs für Ihre Nutzer:innen in allen Apps gleich sind. Das liegt daran, dass sowohl der Android GAID als auch der iOS IDFA universelle Bezeichner für Anzeigen auf dem Gerät sind und nicht App-spezifisch. Um mobile Werbe-IDs für Nutzer:innen einer bestimmten App zu synchronisieren, können Sie Segmentierungsfilter ("Zuletzt verwendete bestimmte App" oder "Neueste App-Version") verwenden, um diese Nutzer:innen gezielt anzusprechen.
 
-### Schritt 2: Hinzufügen eines Google Audience-Schritts in Canvas Flow
+### Schritt 2: Fügen Sie einen Google Audience-Schritt in Canvas hinzu
 
 Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie dann **Audience Sync**.
 
-![Das Menü zum Auswählen einer Canvas-Komponente im Editor.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![Der zur Nutzer:in hinzugefügte Schritt der Audience Sync.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
+![Das Menü zum Auswählen einer Canvas-Komponente im Editor.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![Der Schritt Audience Sync wurde zur Nutzer:innen-Reise hinzugefügt.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Schritt 3: Sync-Einrichtung
 
@@ -131,7 +135,7 @@ Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie dann **Audience
 4\. Geben Sie in der Dropdown-Liste **Neue oder bestehende Zielgruppe auswählen** den Namen einer neuen oder bestehenden Zielgruppe ein. 
 
 {% tabs %}
-{% tab Eine neue Zielgruppe erstellen %}
+{% tab Create a New Audience %}
 
 1. Geben Sie einen Namen für die neue angepasste Zielgruppe ein.
 2. Wählen Sie **Nutzer:innen zur Zielgruppe hinzufügen**.
@@ -147,7 +151,7 @@ Fügen Sie eine Komponente in Ihrem Canvas hinzu und wählen Sie dann **Audience
 
 Nutzer:innen werden im oberen Bereich des Schritteditors benachrichtigt, wenn die Zielgruppe erfolgreich erstellt wurde oder wenn dabei Fehler auftreten. Nutzer:innen können diese Zielgruppe referenzieren, um sie später in Canvas zu entfernen, da die Zielgruppe im Entwurfsmodus erstellt wurde. 
 
-![Eine Meldung, die erscheint, nachdem eine neue Zielgruppe in der Canvas-Komponente erstellt wurde.]({% image_buster /assets/img/audience_sync/g_sync3.png %})
+![Eine Warnung, die erscheint, nachdem eine neue Zielgruppe in der Komponente Canvas erstellt wurde.]({% image_buster /assets/img/audience_sync/g_sync3.png %})
 
 Wenn Sie ein Canvas mit einer neuen Zielgruppe starten, erstellt Braze beim Start des Canvas eine neue angepasste Zielgruppe und synchronisiert anschließend die Nutzer:innen nahezu in Realtime, sobald sie den Google Audience-Schritt betreten. 
 
@@ -155,7 +159,7 @@ Wenn Sie ein Canvas mit einer neuen Zielgruppe starten, erstellt Braze beim Star
 Aufgrund der Anforderungen von Google an den Kundenabgleich können Sie keine Kontaktinformationen von Kund:innen und IDs von mobilen Werbetreibenden in denselben Kundenlisten haben. Google Customer Match verwendet dann diese Informationen, um zu bestimmen, wer innerhalb von Google Search, Google Display, YouTube und Google Mail als Targeting geeignet ist. Weitere Einzelheiten zu den Anforderungen von Google Customer Match finden Sie in der [Dokumentation](https://support.google.com/google-ads/answer/7474166?hl=en&ref_topic=6296507).
 {% endalert %}
 {% endtab %}
-{% tab Mit einer bestehenden Zielgruppe synchronisieren %}
+{% tab Sync with an Existing Audience %}
 
 Braze bietet auch die Möglichkeit, Nutzer:innen aus bestehenden Google Kund:innen-Listen hinzuzufügen oder zu entfernen, um sicherzustellen, dass diese Zielgruppen aktuell sind. Zum Synchronisieren mit einer bestehenden Zielgruppe:
 
@@ -164,7 +168,7 @@ Braze bietet auch die Möglichkeit, Nutzer:innen aus bestehenden Google Kund:inn
 3. Braze fügt Nutzer:innen nahezu in Realtime hinzu oder entfernt sie, sobald sie den Schritt Google Audience betreten. 
 4. Nachdem Sie Ihre Google Audience konfiguriert haben, wählen Sie **Fertig**. Ihr Google Audience-Schritt enthält Details über die neue Zielgruppe.
 
-![Erweiterte Ansicht der Komponente Custom Audience Canvas. Hier werden das gewünschte Anzeigenkonto und die bestehende Zielgruppe ausgewählt sowie der Radio Button "Nutzer:innen zur Zielgruppe hinzufügen".]({% image_buster /assets/img/audience_sync/g_sync2.png %})
+![Erweiterte Ansicht der Komponente Custom Audience Canvas. Hier werden das gewünschte Anzeigenkonto und die bestehende Zielgruppe ausgewählt sowie der Button "Nutzer:innen zur Zielgruppe hinzufügen".]({% image_buster /assets/img/audience_sync/g_sync2.png %})
 
 {% endtab %}
 {% endtabs %}
