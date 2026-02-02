@@ -25,7 +25,7 @@ The Braze and Treasure Data integration allows you to seamlessly control the flo
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Treasure Data logs each event in batches. For more information on how to query Treasure Data to get event counts, refer to [Braze Currents Import Integration](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
+Treasure Data logs each event in batches. 이벤트 수를 얻기 위해 Treasure Data를 쿼리하는 방법에 대한 자세한 내용은 [데이터 쿼리하기를](https://docs.treasuredata.com/articles/int/braze-currents-import-integration/a/h2__592056238) 참조하세요.<br><br>Treasure Data의 새로운 Braze 스트리밍 커넥터와 통합하려는 경우, [Braze 커런츠 스트리밍 가져오기 통합의](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4) 자세한 설정 단계를 참조하세요. Braze 내 통합 또는 설정에 대해 궁금한 점이 있으면 Braze 계정 팀에 문의하세요.
 {% endalert %}
 
 ## Integration
@@ -47,7 +47,7 @@ In Braze, navigate to **Currents** > **\+ Create Current** > **Treasure Data Exp
 All events sent to Treasure Data will include the user’s `external_user_id`. At this time, Braze does not send event data to Treasure Data for users who haven't set their `external_user_id`.
 
 {% alert important %}
-Keep your Treasure Data URL up to date. If your connector’s URL is incorrect, Braze won't be able to send events. If this persists for more than 48 hours, the connector’s events will be dropped and data will be permanently lost.
+Keep your Treasure Data URL up to date. If your connector’s URL is incorrect, Braze won't be able to send events. 이 상태가 **5일** 이상 지속되면 커넥터의 이벤트가 삭제되고 데이터가 영구적으로 손실됩니다.
 {% endalert %}
 
 #### Example event field value
