@@ -1,8 +1,8 @@
 ---
 nav_title: Variables du contenu connecté local
-article_title: Variables de contenu connecté local
+article_title: Variables du contenu connecté local
 page_order: 1
-description: "Cet article de référence explique comment utiliser et stocker les variables locales du contenu connecté."
+description: "Le présent article de référence explique comment utiliser et stocker les variables du contenu connecté local."
 search_rank: 1
 ---
 
@@ -10,11 +10,11 @@ search_rank: 1
 
 > Cette page donne un aperçu des variables locales du contenu connecté et de la manière de les utiliser et de les stocker.
 
-Au moment de l'envoi, Braze envoie une requête GET standard à l'endpoint spécifié dans l'étiquette `connected_content`. Si l'endpoint renvoie du JSON, il est automatiquement analysé et stocké dans une variable appelée `connected`. Si l'endpoint renvoie du texte, celui-ci sera directement inséré dans le message à la place de l'étiquette `connected_content`.
+Braze effectue une demande GET standard à l’heure d’envoi au endpoint spécifié dans la balise `connected_content`. Si l’endpoint retourne JSON, il est automatiquement analysé et stocké dans une variable appelée `connected`. Si l’endpoint renvoie le texte, il sera directement inséré dans le message à la place de la balise `connected_content`.
 
-Si vous souhaitez enregistrer votre réponse dans une variable, il est recommandé de renvoyer des objets JSON. Et si vous voulez que la réponse de Contenu connecté remplace l'étiquette par le texte, assurez-vous que la réponse n'est pas un JSON valide (tel que défini par [json.org](http://www.json.org))
+Si vous souhaitez enregistrer votre réponse à une variable, il est recommandé de retourner des objets JSON. Et si vous voulez que la réponse de Contenu connecté remplace l'étiquette par le texte, assurez-vous que la réponse n'est pas un JSON valide (tel que défini par [json.org](http://www.json.org))
 
-Vous pouvez également spécifier `:save your_variable_name` après l'URL pour enregistrer les données sous un autre nom. Par exemple, l'étiquette `connected_content` suivante enregistre la réponse dans une variable locale appelée `localweather` (vous pouvez enregistrer plusieurs variables JSON `connected_content` ) :
+Vous pouvez également spécifier `:save your_variable_name` après l'URL pour enregistrer les données sous un autre nom. Par exemple, les `connected_content` la balise enregistrera la réponse à une variable locale appelée `localweather` (vous pouvez enregistrer plusieurs `connected_content` variables JSON) :
 
 {% raw %}
 ```js
@@ -22,13 +22,13 @@ Vous pouvez également spécifier `:save your_variable_name` après l'URL pour e
 ```
 {% endraw %}
 
-Metaweather est une API météorologique gratuite qui utilise un "Where-on-Earth ID" pour renvoyer les conditions météorologiques d'une région. Utilisez ce code uniquement à des fins de test et d'apprentissage.
+Metaweather est une API météorologique gratuite qui utilise un "Where-on-Earth ID" pour renvoyer les conditions météorologiques d'une région. Utilisez ce code à des fins de test et d’apprentissage uniquement.
 
->  La variable stockée n'est accessible que dans le champ qui contient la demande `connected_content`. Par exemple, si vous voulez utiliser la variable `localweather` à la fois dans le champ message et dans le champ titre, vous devez faire la demande `connected_content` dans les deux champs. Si la demande est identique, Braze utilisera les résultats mis en cache, plutôt que d'envoyer une deuxième demande au serveur de destination. Toutefois, les appels de contenu connecté effectués via HTTP POST ne sont pas mis en cache par défaut et effectuent une deuxième demande au serveur de destination. Si vous souhaitez ajouter la mise en cache aux appels POST, reportez-vous à l'option [`cache_max_age`](#configurable-caching) option.
+>  La variable stockée ne peut être consultée que dans le champ qui contient `connected_content` demande. Par exemple, si vous souhaitez utiliser `localweather` variable dans le champ Message et Titre, vous devez faire `connected_content` dans les deux champs. Si la demande est identique, Braze utilisera les résultats mis en cache plutôt que d’effectuer une seconde demande au serveur de destination. Cependant, les appels de contenu connecté effectués via HTTP POST ne sont pas mis en cache par défaut et feront une seconde demande au serveur de destination. Si vous souhaitez ajouter la mise en cache aux appels POST, reportez-vous à l'option [`cache_max_age`](#configurable-caching).
 
 ## Analyse JSON
 
-Le contenu connecté interprétera tous les résultats formatés en JSON dans une variable locale, lorsque vous spécifiez `:save`. Par exemple, un endpoint de contenu connecté lié à la météo renvoie l'objet JSON suivant, que vous stockez dans une variable locale `localweather` en spécifiant `:save localweather`.
+Le contenu connecté interprète tous les résultats formatés JSON dans une variable locale, lorsque vous spécifiez `:save`. Par exemple, un endpoint de contenu connecté lié à la météo renvoie l’objet JSON suivant, que vous stockez dans une variable locale `localweather` en spécifiant `:save localweather`.
 {% raw %}
 
 ```js
@@ -62,10 +62,10 @@ Le contenu connecté interprétera tous les résultats formatés en JSON dans un
   }
 ```
 
-Vous pouvez vérifier s'il pleut ou non en vous référant à `{{localweather.consolidated_weather[0].weather_state_name}}`, qui, s'il était utilisé sur cet objet, renverrait `Clear`. Si vous souhaitez également personnaliser le nom de l'emplacement/localisation obtenu, `{{localweather.title}}` renvoie à `New York`.
+Vous pouvez tester si c’est difficile ou non en faisant référence `{{localweather.consolidated_weather[0].weather_state_name}}`, qui, si utilisé sur cet objet, reviendrait `Clear`. Si vous souhaitez également personnaliser avec le nom de l’emplacement en résultant, `{{localweather.title}}` retours `New York`.
 {% endraw %}
 
-L'image suivante illustre le type de coloration syntaxique que vous devriez voir dans le tableau de bord si vous avez configuré les choses correctement. Il montre également comment vous pouvez tirer parti de l'exemple de demande `connected_content`!
+L’image suivante illustre le type de syntaxe que vous devez voir dans le tableau de bord si vous configurez correctement les choses. Cela montre également comment vous pourriez tirer profit de l’exemple `connected_content` demande !
 
 {% raw %}
 ```liquid
@@ -84,26 +84,26 @@ Enjoy the weather!
 
 Si l'API a répondu {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} en renvoyant `Rain`, l'utilisateur recevra alors ce message.
 
-\![Notification push avec le message "Il pleut ! Prenez un parapluie !"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
+![Envoie une notification push avec le message « Il pleut ! Prenez un parapluie ! »]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
 {% multi_lang_include connected_content.md section='default behavior' %}
 
-## HTTP POST
+## POST HTTP
 
 {% multi_lang_include connected_content.md section='http post' %}
 
-### Fournir un corps JSON
+### Fournir le corps du JSON
 
-Si vous souhaitez fournir votre propre corps JSON, vous pouvez l'écrire en ligne s'il n'y a pas d'espace. Si votre corps comporte des espaces, vous devez utiliser une instruction d'assignation ou de capture. En d'autres termes, l'un ou l'autre de ces trois éléments est acceptable :
+Si vous souhaitez fournir votre propre corps JSON, vous pouvez l’écrire en ligne s’il n’y a pas d’espace. Si votre corps dispose d’espaces, vous devez utiliser un relevé d’affectation ou de capture. C’est-à-dire que l’un de ces trois éléments est acceptable :
 
 {% raw %}
-##### Inline : les espaces ne sont pas autorisés
+##### Inséré : espaces non autorisés
 
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
-##### Corps d'une déclaration de capture : espaces autorisés
+##### Corps dans un relevé de capture : espaces autorisés
 
 ```js
 {% capture postbody %}
@@ -134,7 +134,7 @@ Si vous souhaitez fournir votre propre corps JSON, vous pouvez l'écrire en lign
 {% endraw %}
 
 {% raw %}
-##### Corps dans une déclaration d'affectation : espaces autorisés
+##### Corps dans un état d’affectation : espaces autorisés
 
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
@@ -142,9 +142,9 @@ Si vous souhaitez fournir votre propre corps JSON, vous pouvez l'écrire en lign
 ```
 {% endraw %}
 
-## Codes d'état HTTP
+## Codes de statut HTTP
 
-Vous pouvez utiliser le statut HTTP d'un appel au contenu connecté en l'enregistrant d'abord dans une variable locale, puis en utilisant la touche `__http_status_code__`. Par exemple :
+Vous pouvez utiliser l’état HTTP à partir d’un appel de contenu connecté en l’enregistrant d’abord en tant que variable locale, puis en utilisant le `__http_status_code__` clé. Par exemple :
 
 {% raw %}
 ```js
