@@ -23,13 +23,13 @@ O tempo necessário para preencher um público depende do parceiro específico. 
 
 Os campos específicos usados para cada parceiro podem variar de acordo com os requisitos do parceiro. 
 
-Por exemplo, ao configurar uma sincronização de público do Facebook, você poderá usar uma ampla variedade de campos primários, como e-mail, telefone, nome e sobrenome, ao passo que, com o Snapchat, você só poderá selecionar e-mail, telefone ou ID do anunciante móvel. 
+Por exemplo, ao configurar uma sincronização de público do Facebook, você pode usar uma grande variedade de campos primários, como e-mail, telefone, nome e sobrenome, enquanto que, com o Snapchat, você só pode selecionar e-mail, telefone ou ID do anunciante móvel. 
 
 É importante notar que os campos de usuário que podem ser selecionados para sincronização estão correlacionados com os atributos padrão do Braze e os IDs de publicidade móvel. Você deve garantir a transmissão adequada desses dados por meio de nossos SDKs ou APIs. 
 
 ### O que acontece quando meus dados estão sendo processados para serem enviados a cada parceiro do Audience Sync?
 
-Os dados que você selecionar para enviar ao destino do Audience Sync serão normalizados. Cada parceiro pode ter especificações diferentes para a normalização de dados com base em seus requisitos de API, portanto, consulte o endpoint específico de cada parceiro para obter mais detalhes.
+Os dados que você selecionar para enviar ao destino do Audience Sync serão normalizados. Cada parceiro pode ter especificações diferentes para a normalização de dados com base em seus requisitos de API, portanto, examine o endpoint específico de cada parceiro para obter mais detalhes.
 
 Além disso, o Braze criará hashes para todos os dados antes de sincronizar os usuários com nossos parceiros do Audience Sync, garantindo que todos os IPI sejam criptografados usando SHA256.
 
@@ -47,7 +47,7 @@ O usuário que está se reconectando deve ter acesso de leitura e gravação a t
 
 | Erro | Motivo | Solução |
 | --- | --- | --- |
-| Token inválido | Isso pode ocorrer se você tiver alterado sua senha para registrar uma rede de anúncios específica ou se suas credenciais tiverem expirado. | Acesse a página do respectivo parceiro para desconectar e reconectar sua conta. |
+| Token inválido | Isso pode ocorrer se você tiver alterado sua senha para registro em uma rede de anúncios específica ou se suas credenciais tiverem expirado. | Acesse a página do respectivo parceiro para desconectar e reconectar sua conta. |
 | Tamanho do público muito baixo | Isso pode ocorrer se você tiver criado uma etapa de Audience Sync que remova usuários dos públicos. Se o tamanho de seu público se aproximar de zero, a rede poderá sinalizar que ele é muito baixo para ser atendido. | Confirme que está considerando uma estratégia de sincronização de público que adiciona e remove usuários regularmente de forma a não esgotar totalmente o tamanho do público. |
 | O público não existe | A etapa Audience Sync usa um público que não existe. Isso também pode ser disparado se você não tiver a permissão necessária para acessar o público. | Adicione um público ativo em sua configuração do Audience Sync ou crie um novo público. |
 | Tentativa de acesso à conta de anúncios | Esse erro ocorre se você não tiver permissão para a conta de anúncios, para um público selecionado ou para ambos. | Trabalhe com os administradores de sua conta de anúncios para obter acesso e permissões adequados. |
