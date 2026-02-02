@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex permite una localización robusta en toda su base de usuarios, sin importar el idioma.
+> [Transifex](https://www.transifex.com/) habilita una sólida localización en toda tu base de usuarios, sin importar el idioma.
 
 _Esta integración está mantenida por Transifex._
 
 ## Sobre la integración
 
-La integración de Braze y Transifex aprovecha Connected Content para permitirte extraer una colección de cadenas de recursos e incluir las traducciones pertinentes en tus mensajes en lugar de líneas de formato condicional basadas en el idioma. Esto automatiza la traducción y libera a sus equipos para que se centren en ofrecer experiencias brillantes a los clientes.
+La integración de Braze y Transifex utiliza Contenido conectado para permitirte extraer una colección de cadenas de recursos e incluir las traducciones pertinentes en tus mensajes, en lugar de líneas de formato condicional basadas en el idioma. Esto automatiza la traducción y libera a sus equipos para que se centren en ofrecer experiencias brillantes a los clientes.
 
 {% alert important %}
 A partir del 7 de abril de 2022, Transifex ha dejado obsoletas sus versiones 2 y 2.5 de la API para dar paso a la versión 3\. Las v2 y v2.5 ya no son operativas, y las solicitudes correspondientes fallarán. <br><br>Las siguientes instrucciones de integración reflejan la actualización de la versión 3. Actualice en consecuencia sus llamadas a Contenidos Conectados.
@@ -42,7 +42,7 @@ curl --request GET \
      --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
-Por ejemplo, si su proyecto Transifex se encuentra en `https://www.transifex.com/appboy-3/french2/french_translationspo/`, el `project_name` será "french2" y el `resource_name` será "french_translationspo".
+Por ejemplo, si tu proyecto Transifex está ubicado en `https://www.transifex.com/appboy-3/french2/french_translationspo/`, el `project_name` será "french2" y el `resource_name` será "french_translationspo".
 
 ## Ejemplo de mensaje de contenido conectado
 
