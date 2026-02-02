@@ -34,7 +34,7 @@ Die Integration von Braze und Segment erlaubt es Ihnen, mit [Engage](https://seg
 1. Gehen Sie in Segmente auf den Tab **Zielgruppen** in Engage und klicken Sie auf **Neu**.
 2. Schaffen Sie Ihre Zielgruppe. Ein Blitz in der oberen Ecke der Seite zeigt an, ob die Zielgruppe in Realtime aktualisiert wird.
 3. Wählen Sie dann Braze als Ihr Ziel aus.
-4. Machen Sie eine Vorschau Ihrer Zielgruppe, indem Sie auf **Überprüfen & Erstellen** klicken. Standardmäßig fragt Segmente alle historischen Daten ab, um den aktuellen Wert des berechneten Merkmals und der Zielgruppe festzulegen. Um diese Daten auszulassen, deaktivieren Sie die Option **Historisches Backfill**.
+4. Eine Vorschau Ihrer Zielgruppe erhalten Sie, indem Sie auf **Überprüfen & Erstellen** klicken. Standardmäßig fragt Segmente alle historischen Daten ab, um den aktuellen Wert des berechneten Merkmals und der Zielgruppe festzulegen. Um diese Daten auszulassen, deaktivieren Sie die Option **Historisches Backfill**.
 
 ### Schritt 2: Erfassen Sie den Datenimport-Schlüssel für Ihre Kohorte
 
@@ -57,7 +57,7 @@ Navigieren Sie in Braze zu **Segmente**, erstellen Sie ein neues Segment und wä
 1. Gehen Sie in Segmente auf den Tab **Berechnete Merkmale** oder **Zielgruppen** in **Engage** und klicken Sie auf **Neu**.
 2. Erstellen Sie Ihre rechnerische Eigenschaft oder Zielgruppe. Ein Blitz in der oberen Ecke der Seite zeigt an, ob die Berechnung in Realtime aktualisiert wird.
 3. Wählen Sie dann **Braze** als Ihr Ziel aus. 
-4. Machen Sie eine Vorschau Ihrer Zielgruppe, indem Sie auf **Überprüfen & Erstellen** klicken. Standardmäßig fragt Segmente alle historischen Daten ab, um den aktuellen Wert des berechneten Merkmals und der Zielgruppe festzulegen. Um diese Daten auszulassen, deaktivieren Sie die Option **Historisches Backfill**.
+4. Eine Vorschau Ihrer Zielgruppe erhalten Sie, indem Sie auf **Überprüfen & Erstellen** klicken. Standardmäßig fragt Segmente alle historischen Daten ab, um den aktuellen Wert des berechneten Merkmals und der Zielgruppe festzulegen. Um diese Daten auszulassen, deaktivieren Sie die Option **Historisches Backfill**.
 5. Passen Sie in den Einstellungen für berechnete Merkmale oder Zielgruppen die Verbindungseinstellungen an, je nachdem, wie Sie Ihre Daten an Braze senden möchten.
 
 #### Berechnete Merkmale und Zielgruppen
@@ -69,7 +69,7 @@ Navigieren Sie in Braze zu **Segmente**, erstellen Sie ein neues Segment und wä
 Sie können wählen, welche Methode Sie verwenden möchten (oder Sie verwenden beide), wenn Sie die berechnete Spur mit dem Braze-Ziel verbinden.
 
 {% tabs %}
-{% tab Identifizieren %}
+{% tab Identify %}
 
 Sie können berechnete Attribute und Zielgruppen als `identify` -Aufrufe an Braze senden, um angepasste Attribute in Braze zu erstellen. 
 
@@ -77,10 +77,10 @@ Wenn Sie z.B. ein von Engage berechnetes Attribut für "Zuletzt gesehener Artike
 
 | Berechnetes Merkmal | Zielgruppen |
 | -------------- | --------- |
-| ![Der Abschnitt für angepasste Attribute in einem Nutzerprofil listet "last_product_viewed_item" als "Pullover" auf.]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![Im Abschnitt für angepasste Attribute in einem Nutzerprofil wird "dormant_shopper" als "true" aufgeführt.]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
+| ![Der Abschnitt für angepasste Attribute in einem Nutzerprofil listet "last_product_viewed_item" als "Pullover" auf.]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![Der Abschnitt für angepasste Attribute in einem Nutzerprofil führt "dormant_shopper" als "wahr" auf.]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
 
 {% endtab %}
-{% tab Tracking %}
+{% tab Track %}
 
 Sie können berechnete Merkmale und Zielgruppen als `track` Aufrufe an Braze senden, um angepasste Events in Braze zu erstellen. 
 
@@ -88,7 +88,7 @@ Um das vorherige Beispiel fortzusetzen: Wenn ein Nutzer eine berechnete Eigensch
 
 | Berechnetes Merkmal | Zielgruppen |
 | -------------- | --------- |
-| ![Der Abschnitt für angepasste Events innerhalb eines Nutzerprofils listet "Trait Computed" "1" Zeit auf, wobei der letzte Zeitpunkt "vor 20 Stunden" liegt.]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![Der Abschnitt für angepasste Attribute innerhalb eines Nutzerprofils listet die Zeit "Zielgruppe eingegeben" "1" auf, wobei die letzte Zeit "9\. März um 1:45 Uhr" ist.]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
+| ![Der Abschnitt für angepasste Events in einem Nutzerprofil listet "Trait Computed" "1" Zeit auf, wobei der letzte Zeitpunkt "vor 20 Stunden" ist.]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![Der Abschnitt für angepasste Attribute in einem Nutzerprofil listet die Zeit "Zielgruppe eingegeben" "1" auf, wobei der letzte Zeitpunkt "9\. März um 1:45 Uhr" ist.]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
 
 {% endtab %}
 {% endtabs %}
