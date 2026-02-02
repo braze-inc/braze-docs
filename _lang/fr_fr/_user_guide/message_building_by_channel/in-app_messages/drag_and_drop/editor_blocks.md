@@ -1,5 +1,5 @@
 ---
-nav_title: Blocs éditeurs
+nav_title: Blocs éditeur
 article_title: "Blocs de l'éditeur par glisser-déposer"
 noindex: true
 layout: redirect
