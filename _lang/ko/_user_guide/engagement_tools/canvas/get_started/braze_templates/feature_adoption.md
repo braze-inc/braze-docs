@@ -13,9 +13,9 @@ tool: Canvas
 
 이 문서에서는 사용자 라이프사이클의 리텐션 및 로열티 단계를 위한 **기능 채택** 템플릿의 사용 사례를 안내합니다. 이 글을 읽고 나면 사용자가 새로운 기능을 사용하도록 유도하고 사용자 의견을 수집하는 고객 여정을 커스텀할 수 있습니다.
 
-## 전제 조건
+## 필수 조건
 
-이 템플릿을 성공적으로 사용하려면 사용자가 기능을 사용한 시점을 참조하는 [커스텀 이벤트가]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) 필요합니다.
+이 템플릿을 성공적으로 사용하려면 사용자가 기능을 사용한 시점을 참조하는 [사용자 지정 이벤트가]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) 필요합니다.
 
 ## 필요에 맞게 템플릿 조정하기
 
@@ -29,14 +29,14 @@ tool: Canvas
 
 1. 템플릿 이름 옆의 **편집을** 선택합니다.
 
-캔버스의 현재 제목과 설명입니다.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
+![캔버스의 현재 제목과 설명입니다.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 
 {:start="2"}
-2\. 캔버스 이름을 업데이트하여 사용자 피드백을 수집하기 위한 타겟팅 사용자용 캔버스라는 점을 명시합니다.
+2\. 캔버스 이름을 업데이트하여 사용자 피드백을 수집하기 위한 타겟팅 사용자용 캔버스라는 것을 명시합니다.
 3\. 설명을 업데이트하여 캔버스가 새로운 크루즈 컨트롤 기능에 대한 사용자의 피드백을 제출하고 사용자 의견을 추적하기 위한 것임을 명시합니다.
 4\. 캔버스 홈 페이지에서 필터링할 수 있도록 **기능 채택** 태그를 추가합니다.
 
-캔버스의 새로운 이름과 설명입니다. 새 설명에는 다음과 같이 명시되어 있습니다: '반복적인 음식 배달을 예약하는 기능인 크루즈 컨트롤의 채택 및 사용자 감정을 추적하는 기능 채택 캔버스'.]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
+![캔버스의 새 이름과 설명입니다. 새 설명에는 다음과 같이 명시되어 있습니다: '반복적인 음식 배달을 예약하는 기능인 크루즈 컨트롤의 채택 및 사용자 감정을 추적하는 기능 채택 캔버스'.]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
 ### 2단계: 전환 이벤트 할당하기
 
@@ -47,7 +47,7 @@ tool: Canvas
 3. 커스텀 이벤트를 선택하세요 `scheduled_delivery`.
 4. 전환 기한은 3일로 유지됩니다.
 
-캔버스의 전환 이벤트 창입니다.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
+![캔버스의 전환 이벤트 창입니다.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
 
 ### 3단계: 참가 일정 맞춤 설정
 
@@ -61,7 +61,7 @@ tool: Canvas
 
 사용자가 현지 시간대로 캔버스에 입장할 수 있는 옵션은 계속 유지됩니다.
 
-### 4단계: 타겟팅 오디언스 선택하기
+### 4단계: 타겟 오디언스 선택
 
 이제 템플릿에서 다음 세부 정보를 업데이트하여 타겟 오디언스를 설정해 보겠습니다:
 
@@ -69,46 +69,46 @@ tool: Canvas
 2. 템플릿의 추가 필터를 제거합니다. 
 3. 커스텀 이벤트를 사용하여 이 필터를 생성하세요: `Has scheduled_delivery for exactly 0 times`. 이를 통해 이미 해당 기능을 사용한 사용자는 캔버스에 들어오는 것을 제외할 수 있습니다.
 
-\![크루즈 컨트롤을 사용하지 않은 모든 사용자를 위한 세그먼트입니다.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
+![크루즈 컨트롤을 사용하지 않은 모든 사용자를 위한 세그먼트입니다.]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
 
 {: start="4"}
 4\. 이전에 칼로리 로켓에서 일부 사용자에게 새로운 기능인 크루즈 컨트롤의 베타 테스트를 허용했던 것을 염두에 두고, 이러한 사용자는 캔버스 진입에서 제외하도록 퇴장 기준을 업데이트할 예정입니다.
 
-### 5단계: 보내기 설정 선택
+### 5단계: 전송 설정을 선택하세요
 
-기본값인 구독 설정을 유지하여 메시지 또는 알림 수신을 구독하거나 옵트인한 사용자에게만 보내고 다른 설정(최대 게재빈도 설정, 방해금지 시간, 시드 그룹)은 건너뜁니다.
+기본 구독 설정을 유지하여 구독하거나 메시지 또는 알림 수신을 선택한 사용자에게만 전송하고 다른 설정(빈도 제한, 조용한 시간, 시드 그룹)은 건너뜁니다.
 
-### 6단계: 캔버스 커스텀하기
+### 6단계: 캔버스 사용자 지정
 
 #### 행동 경로 구축하기
 
 다음으로, 사용자가 새 기능에 관심이 있는지 여부를 나타내는 첫 번째 행동 경로 단계를 구축해 보겠습니다. 템플릿을 다음과 같이 조정하겠습니다:
 
-1. 크루즈 컨트롤 기능은 주문이 장바구니에 **추가된** 후에만 사용할 수 있으므로 첫 번째 작업 그룹의 이름을 **장바구니에 추가됨으로** 지정하고 커스텀 이벤트에 `added_to_cart` 을 선택합니다.
+1. 크루즈 컨트롤 기능은 주문이 **카트에 추가된** 후에만 사용할 수 있으므로 첫 번째 작업 그룹의 이름을 카트에 추가됨으로 지정하고 사용자 지정 이벤트에 `added_to_cart` 을 선택합니다.
 
-\![작업 그룹 이름을 "장바구니에 추가됨"으로 설정하고 "커스텀 이벤트 수행"을 "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}로 설정했습니다.){: style="max-width:60%;"}
+![작업 그룹 이름을 "장바구니에 추가됨"으로 설정하고 "커스텀 이벤트 수행"을 "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %})로 설정합니다.{: style="max-width:60%;"}
 
 {: start="2"}
 2\. 사용자가 앱을 둘러보았는지 평가하고, 둘러본 경우 두 번째 경로로 진행하기 때문에 두 번째 행동 그룹인 **둘러보기는** 그대로 유지합니다.
 3\. **사용량 평가라는** 이름의 후속 행동 경로에서 **사용 기능 >3배를** **크루즈 컨트롤 보기 설정으로** 바꿉니다.
 4\. 커스텀 이벤트 **수행** 드롭다운을 선택한 다음 커스텀 이벤트에 대해 `scheduled_delivery` 을 선택합니다.
 
-액션 그룹 이름을 '기능 >3배 사용'으로 설정하고 '커스텀 이벤트 수행'을 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}로 설정했습니다.{: style="max-width:60%;"}
+![액션 그룹 이름을 '기능 >3배 사용'으로 설정하고 '커스텀 이벤트 수행'을 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}로 설정합니다.){: style="max-width:60%;"}
 
 #### 피드백 설문조사 설정하기
 
 다음으로 **피드백 설문조사라는** 메시지 단계로 이동하여 사용자가 크루즈 컨트롤을 처음 사용한 후 작성할 수 있는 피드백 설문조사를 포함하겠습니다. 사용자를 위한 설문조사 응답 옵션은 다음과 같습니다:
 
-- **정말 좋았어요!**
+- **마음에 들었습니다!**
 - **저에게는 해당되지 않습니다.**
 
 1. 두 가지 설문조사 선택 항목의 경우, 크루즈 컨트롤에 대한 피드백을 캡처하고 추적하려면 커스텀 속성으로 **경험 피드백을** 선택합니다. 이 커스텀 속성은 설문조사 응답을 담당하는 두 개의 값(`good` 및 `bad`)을 갖습니다.
 2. 설문조사 옵션과 일치하도록 속성 값을 업데이트합니다. 이를 통해 사용자의 응답을 추적할 수 있습니다.
 
-### 7단계: 캔버스 테스트 및 실행하기
+### 7단계: 캔버스 테스트 및 실행
 
 캔버스를 테스트하고 검토하여 예상대로 작동하는지 확인한 후 **캔버스 시작** 을 선택하여 캔버스를 실행합니다. 이제 개인화된 사용자 여정을 통해 사용자를 타겟팅하여 새로운 기능인 크루즈 컨트롤을 채택하도록 유도할 수 있습니다.
 
 {% alert tip %}
-캔버스를 출시하기 전과 후에 고려해야 할 사항은 [출시 전후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
+캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}
