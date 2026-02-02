@@ -34,14 +34,14 @@ Le connecteur HTTP personnalisé est actuellement en version bêta. Si vous souh
 3. Sélectionnez les **canaux d'engagement client** comme catégorie.<br><br>![Une fenêtre "Créer une source" répertoriant différentes catégories, dont "Canaux d'engagement client".]({% image_buster /assets/img/zeotap/cec.png %}){: style="max-width:70%;"}<br><br>
 4. Sélectionnez **Braze** comme source de données.
 5. Saisissez un nom de source.
-6. Sélectionnez votre région.<br><br>![Fenêtre avec options de sélection de votre région et de votre entité de données.]({% image_buster /assets/img/zeotap/select_region.png %}){: style="max-width:70%;"}<br><br>
+6. Sélectionnez votre région.<br><br>![Fenêtre avec options de sélection de votre région et de l'entité de données.]({% image_buster /assets/img/zeotap/select_region.png %}){: style="max-width:70%;"}<br><br>
 7. Sélectionnez **Créer une source**.
-8. Accédez à l'onglet **Détails de la mise en œuvre** et notez l'**URL de l'API** et la **clé d'écriture**.<br><br>![Détails de la mise en œuvre de Braze Currents contenant l'URL de l'API et la clé d'écriture.]({% image_buster /assets/img/zeotap/implementation_details.png %})
+8. Accédez à l'onglet **Détails de la mise en œuvre** et notez l'**URL de l'API** et la **clé d'écriture**.<br><br>![Détails de la mise en œuvre pour Braze Currents qui contient l'URL de l'API et la clé d'écriture.]({% image_buster /assets/img/zeotap/implementation_details.png %})
 
 ### Étape 2 : Configurer le flux de données en continu dans Currents
 
 1. Dans Braze, allez dans **Intégrations partenaires** > **Exportation de données**.
-2. Sélectionnez **Créer un nouveau courant** et **Exporter des courants personnalisés**.<br><br>![Le bouton "Créer un nouveau courant" avec une liste déroulante contenant "Exportation de courants personnalisés".]({% image_buster /assets/img/zeotap/custom_currents_export.png %}){: style="max-width:60%;"}<br><br>
+2. Sélectionnez **Créer un nouveau courant** et **Exporter des courants personnalisés**.<br><br>![Le bouton "Créer un nouveau courant" avec un menu déroulant qui contient "Exportation de courants personnalisés".]({% image_buster /assets/img/zeotap/custom_currents_export.png %}){: style="max-width:60%;"}<br><br>
 3. Saisissez un nom d'intégration et un e-mail pour être contacté en cas d'erreurs avec l'intégration.
 4. Sous **Credentials**, entrez les informations suivantes que vous avez notées à l'[étape 1 :](#step-1-create-a-currents-source)
 - L'URL de l'API comme **endpoint**
