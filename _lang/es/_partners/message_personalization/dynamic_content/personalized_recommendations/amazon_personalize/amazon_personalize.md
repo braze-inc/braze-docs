@@ -11,7 +11,7 @@ search_tag: Partner
 <!--
 {% multi_lang_include video.html id="xFZ3HMleYYE" align="right" %}
 -->
-> Amazon Personalize es como tener tu propio sistema de recomendación de aprendizaje automático de Amazon durante todo el día. Basado en más de 20 años de experiencia en recomendaciones, Amazon Personalize le permite mejorar la interacción con el cliente mediante recomendaciones personalizadas de productos y contenidos en tiempo real y promociones de marketing específicas.
+> [Amazon Personalize](https://aws.amazon.com/personalize/) es como tener tu propio sistema de recomendación de aprendizaje automático de Amazon durante todo el día. Basado en más de 20 años de experiencia en recomendaciones, Amazon Personalize le permite mejorar la interacción con el cliente mediante recomendaciones personalizadas de productos y contenidos en tiempo real y promociones de marketing específicas.
 
 _Esta integración es mantenida por Amazon Personalize._
 
@@ -31,7 +31,7 @@ Este artículo de referencia le ayudará a comprender los casos de uso que ofrec
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% tabs %}
-{% tab casos de uso %}
+{% tab Use Cases %}
 
 **Ejemplos**
 
@@ -43,7 +43,7 @@ Antes de crear un modelo, debe determinar su caso de uso para esta integración.
 En la siguiente guía, nos centraremos en la receta de recomendaciones personalizadas para el usuario.
 
 {% endtab %}
-{% tab Conjuntos de datos %}
+{% tab Datasets %}
 
 **Conjuntos de datos**
 
@@ -71,7 +71,7 @@ Para una receta de recomendaciones de usuario, debe proporcionar un conjunto de 
 Una vez importados los conjuntos de datos, puede crear una solución. Una solución utiliza una de las [recetas](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algoritmos) de Amazon Personalize para entrenar un modelo. En nuestro caso, utilizaremos la receta `USER_PERSONALIZATION`. El entrenamiento de la solución crea una versión de la solución (modelo entrenado) que puede evaluar en función de las métricas de rendimiento del modelo.
 
 Amazon Personalize te permite ajustar los hiperparámetros que el modelo utiliza para entrenarse. Por ejemplo:
-- El parámetro "Percentil de longitud del historial de usuario" que se encuentra en la consola de Amazon Personalize permite ajustar el percentil del historial de usuario que se incluirá en el entrenamiento:<br><br>![Configuración mínima máxima del perfil de usuario]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})
+- El parámetro "Percentil de longitud del historial de usuario" que se encuentra en la consola de Amazon Personalize permite ajustar el percentil del historial de usuario que se incluirá en el entrenamiento:<br><br>![Configuración del perfil de usuario mín./máx.]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})
   - `min_user_history_length_percentile`: excluye un porcentaje de usuarios con historiales muy cortos, lo que puede ser útil para eliminar artículos populares y elaborar recomendaciones basadas en patrones subyacentes más profundos.
   - `max_user_history_length_percentile`: ajusta el porcentaje de usuarios a tener en cuenta cuando se entrena con longitudes de historial muy largas.
 
@@ -150,6 +150,6 @@ This seems like a great fit for you:
 
 Incluyendo el título, la imagen y enlazando la URL, así es como quedaría la Tarjeta de Contenido completa:
 
-![Una imagen de una campaña con Contenido Conectado añadida al cuerpo del mensaje y al campo "Añadir imagen". Esta imagen también muestra la lógica de Contenido conectado añadida al campo "Redirigir a URL Web", que vincula a los usuarios a una URL de recomendación.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
+![Una imagen de una campaña con Contenido Conectado añadida al cuerpo del mensaje y al campo "Añadir imagen". Esta imagen también muestra la lógica de Connected Content añadida al campo "Redirect to Web URL", que enlaza a los usuarios con una URL de recomendación.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
 
 
