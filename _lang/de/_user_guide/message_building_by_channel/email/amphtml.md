@@ -42,7 +42,7 @@ Eine vollständige Liste der unterstützten E-Mail Clients finden Sie in der [AM
 
 Gehen Sie zu Ihren Google Mail-Einstellungen und wählen Sie unter **Allgemein** die Option **Dynamische E-Mail aktivieren**.
 
-![Ein Beispiel für die Einstellungen von Google Mail mit ausgewähltem Kontrollkästchen "Dynamische E-Mails aktivieren".]({% image_buster /assets/img/dynamic-content.png %})
+![Ein Beispiel für Gmail-Einstellungen mit aktiviertem Kontrollkästchen „Dynamische E-Mail aktivieren“.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## API-Nutzung
 
@@ -249,6 +249,6 @@ Wenn keine dieser Bedingungen den Fehler verursacht, wenden Sie sich an den [Sup
 
 #### Sollte ich mit AMP E-Mails segmentieren?
 
-Wir plädieren dafür, nicht zu segmentieren, um an alle verschiedenen Nutzer:innen zu senden. Das liegt daran, dass wir AMP-Nachrichten mehrteilig versenden, d. h. dass verschiedene Versionen in der ursprünglichen E-Mail enthalten sind. Wenn ein Nutzer:innen die AMP-Version nicht sehen kann, wird der Standard wieder auf HTML zurückgesetzt. 
+Wir plädieren dafür, nicht zu segmentieren, um an alle verschiedenen Nutzer:innen zu senden. Das liegt daran, dass wir AMP-Nachrichten mehrteilig versenden, d. h. dass verschiedene Versionen in der ursprünglichen E-Mail enthalten sind. Wenn ein Nutzer:innen die AMP-Version nicht sehen kann, wird der Standard wieder auf HTML zurückgesetzt.
 
 
