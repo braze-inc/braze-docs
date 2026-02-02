@@ -5,7 +5,7 @@
 
 {% multi_lang_include archive/setting_user_ids/setting_user_ids.md %}
 
-## Convenção de nomenclatura de ID de usuário sugerida
+## Sugestão de convenção de nomenclatura de ID de usuário
 
 {% multi_lang_include archive/setting_user_ids/naming_convention.md %}
 
@@ -38,11 +38,11 @@ Além disso, recomendamos **não** alterar o ID do usuário quando um usuário s
 
 Consulte a documentação de [`changeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html) para saber mais.
 
-## Notas e práticas recomendadas de integração de ID de usuário
+## Práticas recomendadas e notas para integração de ID do usuário
 
 {% multi_lang_include archive/setting_user_ids/best_practices.md %}
 
-## Alias de usuários
+## Aliasing de usuários
 
 {% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
 
