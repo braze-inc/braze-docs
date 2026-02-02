@@ -40,7 +40,7 @@ Par exemple, voici une image personnalisée générée par NiftyImages à partir
 
 Dans NiftyImages, choisissez une balise de fusion, puis remplissez vos valeurs par défaut. Lorsque vous avez terminé, sélectionnez **Suivant.**
 
-![alt text]({% image_buster /assets/img/niftyimages/2.png %}){: style="max-width:70%;"}
+![texte alt]({% image_buster /assets/img/niftyimages/2.png %}){: style="max-width:70%;"}
 
 Si vous le souhaitez, saisissez vos types de données, puis sélectionnez **Suivant.**
 
@@ -49,7 +49,7 @@ Si vous le souhaitez, saisissez vos types de données, puis sélectionnez **Suiv
 
 Vous pouvez choisir d'enregistrer votre balise pour pouvoir l’utiliser ultérieurement. Lorsque vous avez terminé, sélectionnez **Enregistrer** pour créer votre balise de fusion.
 
-![alt text]({% image_buster /assets/img/niftyimages/4.png %}){: style="max-width:70%;"}
+![texte alt]({% image_buster /assets/img/niftyimages/4.png %}){: style="max-width:70%;"}
 
 ### Étape 2 : Personnalisez votre image
 
