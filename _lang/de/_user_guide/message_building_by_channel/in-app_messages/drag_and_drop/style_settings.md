@@ -9,7 +9,7 @@ page_order: 3
 
 > Die Drag-and-Drop-Bearbeitung ist in zwei Bereiche unterteilt: **Build** und **Vorschau & Test**. In diesem Artikel erfahren Sie, was Sie für die Arbeit auf der Registerkarte " **Erstellen"** des Editors wissen müssen. Wir gehen davon aus, dass Sie bereits [eine In-App-Nachricht erstellt]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/) haben.
 
-!["Tab "Nachrichten-Stile".]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+![Tab "Nachrichten-Stile".]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## Stile auf Nachrichtenebene
 
@@ -42,7 +42,7 @@ Die Schriftart auf Nachrichtenebene gilt nur für die aktuelle Nachricht und all
 
 ## Messaging-Komponenten
 
-![Ein GIF, das die Erstellung einer In-App-Nachricht zu Werbezwecken zeigt.]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
+![Ein GIF, das zeigt, wie eine In-App-Nachricht zu Werbezwecken erstellt wird.]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
 Der Drag-and-Drop-Editor verwendet zwei Schlüsselkomponenten zum Verfassen von In-App-Nachrichten: **Zeilen** und **Blöcke**. Alle Blöcke müssen in einer Reihe platziert werden.
 
@@ -50,13 +50,13 @@ Der Drag-and-Drop-Editor verwendet zwei Schlüsselkomponenten zum Verfassen von 
 
 Für Modal- und In-App-Nachrichten im Vollbildmodus können Sie den Button zum Schließen anpassen, der als <i class="fa-solid fa-xmark"></i> in der oberen rechten Ecke Ihrer Nachricht angezeigt wird. Zu den Anpassungsoptionen gehören Position, Größe, Füllfarbe, Hintergrundfarbe, Rahmenstil und Rahmenradius.
 
-Optionen zum Anpassen des Close X Buttons in In-App-Nachrichten, einschließlich Buttongröße, Füllfarbe, Hintergrundfarbe, Rahmenstil und Rahmenradius.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+![Optionen zum Anpassen des Close X Buttons in In-App-Nachrichten, einschließlich Buttongröße, Füllfarbe, Hintergrundfarbe, Rahmenstil und Rahmenradius.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
 
 ### Spanne Styling
 
 Das Hinzufügen von span styling zu Text in In-App-Nachrichten erlaubt eine bessere Anpassung des Erscheinungsbildes von Nachrichten und ermöglicht die Verwendung verschiedener Textfarben, Schriftarten und -größen. Span Styling bietet Ihren Nutzer:innen ein einnehmendes und visuell ansprechendes Erlebnis, indem es die Aufmerksamkeit auf die wichtigsten Informationen lenkt und die Klarheit der Nachrichten insgesamt verbessert.
 
-![Option, die angezeigt wird, wenn Sie Text in einer In-App-Nachricht hervorheben. Ein kleines Pinselsymbol zeigt an, dass Sie mit der Spanne für Stil umbrechen können.]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+![Option, die beim Hervorheben von Text in einer In-App-Nachricht angezeigt wird. Ein kleines Pinselsymbol zeigt an, dass Sie mit der Spanne für Stil umbrechen können.]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
 
 ![Side Panel für "Span Properties", mit dem der Endnutzer:in die Lage versetzt wird, die Schriftfamilie, das Schriftgewicht, die Schriftgröße, den Buchstabenabstand und die Textfarbe anzupassen.]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
 
@@ -73,6 +73,12 @@ Die Größe der Spalten können Sie mit dem Schieberegler anpassen.
 ![Anpassen von Spalten aus dem Bereich "Spaltenanpassung".]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 Es empfiehlt sich, die Eigenschaften Ihrer Zeilen und Spalten zu formatieren, bevor Sie die Blöcke innerhalb der Zeilen formatieren. Es gibt viele Stellen, an denen Sie die Abstände und die Ausrichtung anpassen können. Wenn Sie also von der Basis ausgehen, ist es einfacher, sie nach und nach zu bearbeiten.
+
+#### Hintergrundbild
+
+Sie können einer Zeile im Panel **Eigenschaften der Zeile** ein Hintergrundbild hinzufügen. Schalten Sie auf **Hintergrundbild** um, und geben Sie eine Bild-URL an oder wählen Sie ein Bild aus der [Bibliothek]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) aus. Schließlich konfigurieren Sie den Alt-Text, die Größe, die Position und ob das Bild wiederholt werden soll, um Muster in der Reihe zu erzeugen.
+
+![Ein Zeilenhintergrundbild einer Pizza, das ein horizontales Wiederholungsmuster aufweist.]({% image_buster /assets/img_archive/background_row.png %})
 
 ### Blöcke
 
@@ -110,7 +116,7 @@ Wenn Sie Probleme bei der Auswahl eines bestimmten Blocks haben, können Sie den
 
 ### Hinzufügen von Flüssigkeit
 
-![Symbol zum Hinzufügen von Liquid Personalisierung.]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
+![Symbol zum Hinzufügen der Personalisierung von Liquid.]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
 Um [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) zu Ihrer In-App-Nachricht hinzuzufügen, wählen Sie <i class="fa-solid fa-circle-plus"></i> **Personalisierung hinzufügen** aus der Symbolleiste des Editors. Hier können Sie verschiedene Personalisierungsarten wie Standardattribute, Geräteattribute, benutzerdefinierte Attribute und mehr hinzufügen.
 
@@ -124,7 +130,7 @@ Wenn ein Textblock in Ihrer In-App-Nachricht ausgewählt ist, klicken Sie auf <i
 Sie können ein paar Klicks sparen, indem Sie den Text innerhalb des Blocks markieren, bevor Sie auf das Symbol klicken. Der markierte Text wird dem Werkzeug hinzugefügt und die Kopie wird sofort erstellt.
 {% endalert %}
 
-![GIF des KI Werbetexters.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
+![GIF des KI-Werbetexters.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### Stile auf Standard zurücksetzen
 
