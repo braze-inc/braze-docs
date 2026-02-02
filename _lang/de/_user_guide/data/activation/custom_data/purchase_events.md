@@ -24,7 +24,7 @@ Im Folgenden finden Sie eine Liste der Methoden, die auf verschiedenen Plattform
 - [Internet]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=web)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=unity)
-- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
+- [.NET MAUI (früher Xamarin)]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/analytics/logging_purchases/?tab=roku)
 
 ## Anzeigen von Kaufdaten
@@ -59,7 +59,7 @@ Beim Targeting von Nutzer:innen stehen Ihnen die folgenden Filter zur Segmentier
 
 Einzelheiten zu den einzelnen Filtern finden Sie im Glossar der [Segmentierungsfilter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) und in der Filterung nach "Kaufverhalten".
 
-![Filtern nach Nutzer:innen, die genau drei Käufe getätigt haben]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
+![Filter für Nutzer:innen, die genau drei Käufe getätigt haben]({% image_buster /assets/img/purchase_filter_example.gif %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Wenn Sie nach der Häufigkeit eines bestimmten Kaufs segmentieren möchten, erfassen Sie diesen Kauf einzeln als [inkrementelles angepasstes Attribut]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
@@ -69,7 +69,7 @@ Wenn Sie nach der Häufigkeit eines bestimmten Kaufs segmentieren möchten, erfa
 
 Wie jede andere Art von Daten, die Sie von Ihren Nutzer:innen erheben, können Sie Kaufdaten verwenden, um Ihr Messaging über Liquid zu personalisieren. Sie können zum Beispiel eine personalisierte E-Mail an einen Nutzer:innen senden, in der Sie Produkte empfehlen, die denen ähnlich sind, die er gerade gekauft hat.
 
-Nehmen wir an, Sie haben eine Kauf-Event-Eigenschaft namens `last_purchased_product`, die den Namen des letzten Produkts speichert, das ein Nutzer:in gekauft hat. Sie können diese Eigenschaft verwenden, um eine E-Mail-Nachricht wie diese zu personalisieren:
+Angenommen, Sie haben eine Kauf-Event-Eigenschaft namens `last_purchased_product`, die den Namen des letzten Produkts speichert, das ein Nutzer:in gekauft hat. Sie können diese Eigenschaft verwenden, um eine E-Mail Nachricht wie diese zu personalisieren:
 
 {% raw %}
 
@@ -85,7 +85,7 @@ Nehmen wir an, Sie haben eine Kauf-Event-Eigenschaft namens `last_purchased_prod
 
 {% endraw %}
 
-In diesem Beispiel wird die Nachricht auf der Grundlage der Eigenschaft `last_purchased_product` personalisiert. Wenn das letzte Produkt, das der Nutzer:innen gekauft hat, "Laufschuhe" war, erhält er eine Nachricht, in der Laufshorts und Trinkflaschen empfohlen werden. Wenn das letzte Produkt eine "Yogamatte" war, erhalten sie eine Nachricht, in der Yoga-Blöcke und -Gurte empfohlen werden. Wenn die Nachricht `last_purchased_product` etwas anderes ist, erhalten sie eine allgemeine Dankesnachricht.
+In diesem Beispiel wird die Nachricht auf der Grundlage der Eigenschaft `last_purchased_product` personalisiert. Wenn das letzte Produkt, das der Nutzer:innen gekauft hat, "Laufschuhe" war, erhält er eine Nachricht, in der Laufshorts und Trinkflaschen empfohlen werden. Wenn das letzte Produkt "Yogamatte" war, erhalten sie eine Nachricht, in der Yoga-Blöcke und -Gurte empfohlen werden. Wenn die Nachricht `last_purchased_product` etwas anderes ist, erhalten sie eine allgemeine Dankesnachricht.
 
 ### Getriggerte Nachrichten
 
@@ -179,15 +179,15 @@ Wenn Sie beispielsweise eine E-Commerce-Anwendung haben und einem Nutzer nach ei
 
 **Beispiel für das Triggern auf der Basis von Kauf-Event-Eigenschaften:**
 
-![Aktionsbasierte Zustellung, um eine Kampagne an Nutzer:innen zu senden, die Kopfhörer mit einem Markennamen wie HeadphoneMart kaufen]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
+![Einstellungen für die aktionsbasierte Zustellung, um eine Kampagne an Nutzer:innen zu senden, die Kopfhörer mit einem Markennamen wie HeadphoneMart kaufen]({% image_buster /assets/img/purchase2.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Weitere Informationen finden Sie unter [Kauf-Details-Objekt]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object).
 
 ### Segmentierung der Eigenschaften von Ereignissen
 
-Die Segmentierung von Event-Eigenschaften ermöglicht Ihnen das Targeting von Nutzer:innen nicht nur auf der Grundlage angepasster Events, sondern auch auf der Grundlage der Eigenschaften, die mit diesen Events verbunden sind. Dieses Feature bietet zusätzliche Filteroptionen bei der Segmentierung von Kauf-Events und angepassten Events.
+Mit der Segmentierung von Event-Eigenschaften können Sie Nutzer:innen nicht nur anhand der angepassten Events, sondern auch anhand der mit diesen Events verbundenen Eigenschaften gezielt ansprechen. Dies bietet zusätzliche Filteroptionen bei der Segmentierung von Kauf-Events und angepassten Events.
 
-![]({% image_buster /assets/img/nested_object3.png %}){: style="max-width:80%;margin-left:15px;"}
+![Segmentierungsfilter für Kauf-Event-Eigenschaften, die Optionen zum Filtern von Nutzern auf der Grundlage bestimmter Kauf-Event-Eigenschaftswerte anzeigen, z. B. das Filtern nach Nutzern:innen, die ein Produkt mit einer bestimmten Eigenschaft innerhalb eines bestimmten Zeitraums gekauft haben.]({% image_buster /assets/img/purchase_event_property.png %}){: style="max-width:80%;margin-left:15px;"}
 
 Diese Filter für die Segmentierung umfassen:
 - Hat das angepasste Event mit der Eigenschaft Y mit dem Wert V X-mal in den letzten Y Tagen durchgeführt
@@ -210,11 +210,11 @@ Um Einkäufe auf der Ebene der Bestellung statt auf der Ebene des Produkts zu pr
 
 Bei Braze bieten wir einige allgemeine Namenskonventionen für das Kauf-Objekt `product_id` an. Bei der Auswahl von `product_id` schlägt Braze vor, einfache Namen wie den Produktnamen oder die Produktkategorie (anstelle von SKUs) zu verwenden, mit der Absicht, alle protokollierten Artikel nach diesem `product_id` zu gruppieren.
 
-So lassen sich Produkte für die Segmentierung und das Triggern leicht identifizieren. 
+So lassen sich Produkte für die Segmentierung und das Triggern einfach identifizieren. 
 
 ## Kauf-Events auf die Blockliste setzen
 
-Es kann vorkommen, dass Sie Kauf-Events identifizieren, die entweder zu viele Datenpunkte aufzeichnen, für Ihre Marketing Strategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie das angepasste Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen.
+Es kann vorkommen, dass Sie Kauf-Events identifizieren, die entweder zu viele Datenpunkte protokollieren, für Ihre Marketing Strategie nicht mehr nützlich sind oder irrtümlich aufgezeichnet wurden. Um zu verhindern, dass diese Daten an Braze gesendet werden, können Sie das angepasste Datenobjekt auf eine Blockliste setzen, während Ihr Entwicklerteam daran arbeitet, es aus dem Backend Ihrer App oder Website zu entfernen.
 
 Im Braze-Dashboard können Sie das Blocklisting unter **Dateneinstellungen** > Produkte verwalten. Weitere Informationen finden Sie unter [Verwalten angepasster Daten]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/).
 
