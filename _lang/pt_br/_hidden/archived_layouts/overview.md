@@ -8,7 +8,7 @@ noindex: true
 
 > O layout de visão geral é bom para criar uma opção de navegação específica na parte superior de uma página que permita aos usuários clicar em um botão para ir para uma parte específica de uma página ou para uma página completamente diferente.
 
-Exemplos clássicos do layout do seletor são a página [Changelogs do SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/) ou a página [Detalhes de criativos da mensagem no app](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/).
+Exemplos clássicos do layout do seletor são a página [Changelogs do SDK](https://www.braze.com/docs/developer_guide/changelogs) ou a página [Detalhes de criativos da mensagem no app](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 ## Componentes necessários
 
