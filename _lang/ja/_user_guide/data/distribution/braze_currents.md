@@ -14,7 +14,7 @@ guide_top_text: "エンゲージメント戦略の影響を理解することは
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: "カレントを設定する"
+- name: "Currentsの設定"
   link: /docs/user_guide/data/braze_currents/setting_up_currents/
   image: /assets/img/braze_icons/building-01.svg
 - name: "利用可能なパートナー"
