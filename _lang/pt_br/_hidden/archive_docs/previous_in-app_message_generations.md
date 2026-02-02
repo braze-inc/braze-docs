@@ -89,7 +89,7 @@ Mensagens de captura de e-mail permitem que você solicite facilmente aos usuár
 
 {% details Custom HTML Message %}
 
-Embora as mensagens padrão no aplicativo da Braze possam ser personalizadas de várias maneiras, você pode ter um controle ainda maior sobre a aparência e a sensação de suas campanhas usando mensagens projetadas e construídas com HTML, CSS e JavaScript. Com algumas composições simples, você pode desbloquear a funcionalidade e a marca personalizadas para atender a qualquer uma de suas necessidades. Mensagens no app em HTML permitem maior controle sobre a aparência e a sensação de uma mensagem, e tudo o que é compatível com HTML5 também é compatível com a Braze.
+Embora as mensagens padrão no aplicativo da Braze possam ser personalizadas de várias maneiras, você pode ter ainda mais controle sobre a aparência e a sensação de suas campanhas usando mensagens projetadas e construídas com HTML, CSS e JavaScript. Com algumas composições simples, você pode desbloquear a funcionalidade e a marca personalizadas para atender a qualquer uma de suas necessidades. Mensagens no app em HTML permitem maior controle sobre a aparência e a sensação de uma mensagem, e tudo o que é compatível com HTML5 também é compatível com a Braze.
 
 **Ponte JavaScript (appboyBridge)**
 
