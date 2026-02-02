@@ -49,7 +49,7 @@ Hightouch prend en charge la synchronisation à la fois des objets utilisateurs 
 | Evénements | Synchronise les enregistrements en tant qu'événements vers votre destination, souvent sous la forme d'un appel de suivi. | Suivi des événement ou des achats |
 
 {% alert note %}
-Reportez-vous à [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) pour plus d'informations sur la manière dont les synchronisations affectent votre consommation de points de données Braze.
+Reportez-vous à [Hightouch](https://hightouch.com/docs/destinations/braze#syncing-and-data-point-consumption) pour plus d'informations sur la manière dont les synchronisations affectent l'enregistrement des points de données.
 {% endalert %}
 
 #### Synchronisation des objets Braze
