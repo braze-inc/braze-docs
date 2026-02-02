@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "Este artículo de referencia describe la asociación entre Braze y Stensul, una plataforma de correo electrónico empresarial que permite crear fácilmente plantillas de correo electrónico que responden a dispositivos móviles en todos los canales."
+description: "Este artículo de referencia describe la asociación entre Braze y Stensul, una plataforma de correo electrónico empresarial para crear plantillas de correo electrónico receptivas para móviles en todos los canales."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stensul
 
-> [Stensul](https://stensul.com/) permite a los profesionales del marketing por correo electrónico crear fácilmente en Stensul mensajes de correo electrónico adaptados a los dispositivos móviles y a la marca, antes de enviarlos a Braze, en tiempo real, para la creación de campañas.
+> [Stensul](https://stensul.com/) proporciona a los especialistas en marketing por correo electrónico herramientas para crear en Stensul mensajes de correo electrónico receptivos y adaptados a la marca, antes de enviarlos a Braze en tiempo real para la creación de campañas.
 
 _Esta integración está mantenida por Stensul._
 
@@ -39,7 +39,7 @@ Esta es una configuración única y cualquier exportación en el futuro utilizar
 
 Cree un correo electrónico Stensul en la plataforma Stensul y haga clic en **Completar**.
 
-![Opciones de guardado de Stensul]({% image_buster /assets/img_archive/stensul_save_options.png %})
+![Opciones de ahorro Stensul]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
 ### Paso 2: Exportar plantilla a Braze
 En el nuevo cuadro de diálogo que aparece en la página de finalización, seleccione **Cargar en ESP**.
@@ -48,10 +48,10 @@ En el nuevo cuadro de diálogo que aparece en la página de finalización, selec
 
 A continuación, introduzca el **nombre de la plantilla**, el **asunto** y el **preencabezado** de su correo electrónico y seleccione **Cargar**. A continuación, recibirá una confirmación de que la carga se ha realizado correctamente y un historial de cargas anteriores del archivo, si procede.
 
-![Éxito de carga de Stensul]({% image_buster /assets/img_archive/stensul_upload_success.png %})
+![Éxito de la carga de Stensul]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## Uso
 
-Busque la plantilla Stensul que ha cargado en la sección **Plantillas y medios > Plantillas de correo electrónico** de su cuenta Braze. Ya puede utilizar esta plantilla de correo electrónico para empezar a enviar mensajes atractivos a sus clientes.
+Encuentra tu plantilla Stensul cargada en la sección **Plantillas** de tu cuenta Braze ** & Medios > Plantillas de correo electrónico**. Ya puede utilizar esta plantilla de correo electrónico para empezar a enviar mensajes atractivos a sus clientes.
 
 
