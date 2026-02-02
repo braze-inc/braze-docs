@@ -13,7 +13,7 @@
 Esta etapa é apenas para iOS. A implementação padrão para mensagens no app já está configurada no Android.
 {% endalert %}
 
-Para configurar o apresentador padrão para mensagens no app no iOS, crie uma implementação do protocolo `BrazeInAppMessagePresenter` e atribua-o ao `inAppMessagePresenter` opcional na sua instância do Braze. Você também pode usar o apresentador padrão do Braze UI instanciando um objeto `BrazeInAppMessageUI`.
+Para configurar o apresentador padrão para mensagens no app no iOS, crie uma implementação do protocolo `BrazeInAppMessagePresenter` e atribua-a ao `inAppMessagePresenter` opcional na sua instância do Braze. Você também pode usar o apresentador padrão do Braze UI instanciando um objeto `BrazeInAppMessageUI`.
 
 Você deve importar a biblioteca `BrazeUI` para acessar a classe `BrazeInAppMessageUI`.
 
