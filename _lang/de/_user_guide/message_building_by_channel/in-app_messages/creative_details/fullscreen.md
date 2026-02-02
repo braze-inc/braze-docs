@@ -18,12 +18,12 @@ tool:
 {% tabs %}
 {% tab Portrait %}
 
-\![Zwei In-App-Nachrichten im Vollbildmodus nebeneinander im Hochformat, mit detaillierten Bild- und Textempfehlungen. Siehe die folgenden Abschnitte für Details.]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![Zwei bildschirmfüllende In-App-Nachrichten nebeneinander im Hochformat, die die Bild- und Textempfehlungen detailliert darstellen. Siehe die folgenden Abschnitte für Details.]({% image_buster /assets/img/full-screen-spec.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% tab Landscape %}
 
-\![Zwei In-App-Nachrichten im Vollbildmodus nebeneinander im Querformat, mit detaillierten Bild- und Textempfehlungen. Siehe die folgenden Abschnitte für Details.]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
+![Zwei bildschirmfüllende In-App-Nachrichten nebeneinander im Querformat, die die Bild- und Textempfehlungen detailliert darstellen. Siehe die folgenden Abschnitte für Details.]({% image_buster /assets/img/full-screen-spec-landscape.png %}){: style="max-width:801px;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}
@@ -56,9 +56,9 @@ In-App-Nachrichten im Vollbildmodus füllen die gesamte Höhe eines Geräts aus 
 
 ### Safe Zone für Bildelemente
 
-Bei der Vorschau einer In-App-Nachricht im Vollbildmodus auf der Braze-Plattform können Sie die Image Safe Zone für den Bereich der Nachricht aktivieren, der bei der Anzeige auf verschiedenen Geräten vor Beschneidung geschützt ist. Zusätzlich zum Testen der Safe Zone für Bildelemente in der Vorschau empfehlen wir Ihnen, [Ihre Nachricht wie gewohnt zu testen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/).
+Bei der Vorschau einer In-App-Nachricht im Vollbildmodus auf der Braze-Plattform können Sie die Image Safe Zone für den Bereich der Nachricht aktivieren, der bei der Anzeige auf verschiedenen Geräten vor Beschneidung geschützt ist. Zusätzlich zum Testen der Safe Zone für Bildelemente in der Vorschau empfehlen wir Ihnen, [Ihre Nachricht wie gewohnt zu testen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/).
 
-Vorschau einer In-App-Nachricht in Braze mit Enablement "Sichere Zone für Bilder anzeigen". Die sichere Bildzone ist ein Overlay über dem Bild, das anzeigt, welche Teile des Bildes vor dem Beschneiden geschützt sind.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
+![Vorschau einer In-App-Nachricht in Braze mit aktivierter „Safe Zone für Bildelemente anzeigen“. Die sichere Bildzone ist ein Overlay über dem Bild, das anzeigt, welche Teile des Bildes vor dem Beschneiden geschützt sind.]({% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %})
 
 ## Größere Bildschirme
 
@@ -67,12 +67,12 @@ Auf einem Tablet oder einem Desktop-Browser wird eine bildschirmfüllende In-App
 {% tabs %}
 {% tab Portrait %}
 
-\![In-App-Nachricht im Vollbildmodus, wie sie auf einem großen Bildschirm im Hochformat erscheinen würde. Die Nachricht erscheint als großes Modal, das in der Mitte des Bildschirms sitzt.]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
+![Bildschirmfüllende In-App-Nachricht, wie sie auf einem großen Bildschirm im Hochformat erscheinen würde. Die Nachricht erscheint als großes Modal, das in der Mitte des Bildschirms sitzt.]({% image_buster /assets/img/full-screen-large-viewport.png %}){: style="border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% tab Landscape %}
 
-\![In-App-Nachricht im Vollbildmodus, wie sie auf einem großen Bildschirm im Querformat erscheinen würde. Die Nachricht erscheint als großes Modal, das in der Mitte des Bildschirms sitzt.]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
+![Bildschirmfüllende In-App-Nachricht, wie sie auf einem großen Bildschirm im Querformat erscheinen würde. Die Nachricht erscheint als großes Modal, das in der Mitte des Bildschirms sitzt.]({% image_buster /assets/img/full-screen-large-viewport-landscape.png %}){: style="max-width:80%;border:none;display:block;margin-left:auto;margin-right:auto"}
 
 {% endtab %}
 {% endtabs %}
