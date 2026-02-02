@@ -28,14 +28,14 @@ hidden: true
 
 Nachdem Sie sich bei Ihrem YOUBORA Tool Suite Konto angemeldet haben, navigieren Sie zur Seite Integrationen, indem Sie die Option **Integrationen** aus dem Dropdown-Kontomenü auswählen.
 
-![NPAW dropdown]({% image_buster /assets/img/npaw_dropdown.png %})
+![NPAW Dropdown]({% image_buster /assets/img/npaw_dropdown.png %})
 
 ## Konfigurieren Ihrer Integration
 
 Sobald Sie die Seite Integration aufgerufen haben, scrollen Sie nach unten, bis Sie
 siehe die Option Integration von **Braze**. Nachdem Sie darauf geklickt haben, erweitert sich das Fenster und bietet Ihnen eine Reihe von Parametern an, die Sie ausfüllen müssen:
 
-![NPAW Integration]({% image_buster /assets/img/npaw_integration.png %})
+![NPAW-Integration]({% image_buster /assets/img/npaw_integration.png %})
 
 Füllen Sie die Details mit den entsprechenden Informationen aus, die Sie in der Rubrik Nebeneinkünfte finden:
 * Der **Name des Konnektors** ist ein **alphanumerischer** String, der in Zukunft verwendet wird, um auf diese Integration zu referenzieren. Dieser Wert kann auf jeden beliebigen Wert gesetzt werden, solange er **nur** Buchstaben und Zahlen enthält.
@@ -51,6 +51,6 @@ Wenn Sie die Integration mit Braze fertig konfiguriert haben, navigieren Sie zum
 
 Nachdem Sie eine Probe in der **Probenverwaltung** erstellt haben, können Sie nun auf das Symbol mit dem dreifachen Punkt auf der rechten Seite klicken, um alle Nutzer:innen Ihrer Probe an Braze zu senden.
 
-![NPAW sample manager:in]({% image_buster /assets/img/npaw_sample_manager.png %})
+![NPAW Sample Manager:in]({% image_buster /assets/img/npaw_sample_manager.png %})
 
 Nachdem Sie Ihre Nutzer:innen an Braze geschickt haben, können Sie jetzt aktiv werden und Kampagnen auf Segmente ausrichten, um inaktive Nutzer:innen wieder zu engagieren, Ihre treuesten Nutzer:innen zu kontaktieren oder eine beliebige Aktion für ein beliebiges Segment durchzuführen!
