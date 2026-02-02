@@ -1,5 +1,5 @@
 ---
-nav_title: PREGUNTAS FRECUENTES
+nav_title: Preguntas frecuentes
 article_title: Currents FAQ
 page_order: 9
 page_type: reference
