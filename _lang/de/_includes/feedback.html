@@ -5,7 +5,7 @@
 <div id="feedback">
     {%- if include.title -%}
     <div id="feedback_title">{{ include.title | upcase }} </div>
-    {%- sonst -%}
+    {%- else -%}
     <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | Standard: "WIE HILFREICH WAR DIESE SEITE?" }} </div>
     {%- endif -%}
 
