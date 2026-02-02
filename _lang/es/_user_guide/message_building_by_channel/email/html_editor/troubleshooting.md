@@ -17,7 +17,7 @@ Si tu [correo electrónico de prueba]({{site.baseurl}}/developer_guide/platform_
 
 ### Conflictos de prórroga
 
-Algunas extensiones de navegador pueden causar problemas con nuestro editor de correo electrónico. Un ejemplo es [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) cuando se utiliza con Google Chrome. Si utilizas una de estas extensiones, deberías 
+Algunas extensiones de navegador pueden causar problemas con nuestro editor de correo electrónico. Un ejemplo es [Grammarly](https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen?hl=en) cuando se utiliza con Google Chrome. Si utilizas una de estas extensiones, deberías: 
 - Editar correos electrónicos Braze en un navegador que no tenga Grammarly como extensión del navegador
 - Ponte en contacto con tu director de cuentas Braze y pídele que cambie tus editores de correo electrónico a sólo HTML o a texto sin formato. 
 
@@ -25,7 +25,7 @@ La vista de texto sin formato elimina tu editor ```WYSIWYG``` (lo que ves es lo 
 
 ### Representación del correo electrónico
 
-Los correos electrónicos se muestran de forma diferente según los navegadores y los clientes de correo electrónico, así que toma nota de los navegadores y clientes de correo electrónico con los que tienes problemas.
+Los correos electrónicos se muestran de forma diferente en función de los navegadores y clientes de correo electrónico, así que toma nota de los navegadores y clientes de correo electrónico con los que tienes problemas.
 
 - Obtén una vista previa de tus correos electrónicos con [Inbox Vision]({{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision/) para ver cómo se ven en distintos navegadores y clientes de correo electrónico.
 - Una vez que hayas identificado los navegadores o clientes de correo electrónico que causan problemas, informa a tu equipo de desarrolladores de que tendrán que modificar su HTML y hacer cambios para adaptarse a esos navegadores o clientes de correo electrónico.
