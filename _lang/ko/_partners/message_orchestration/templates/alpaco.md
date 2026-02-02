@@ -48,27 +48,27 @@ This is a one-time setup and any exports in the future will automatically use th
 
 In Alpaco, create a template that expresses your brand identity. When you're ready, select **Save**.
 
-![Alpaco Create template]({% image_buster /assets/img/alpaco/alpaco_1.png %})
+![알파코 템플릿 만들기]({% image_buster /assets/img/alpaco/alpaco_1.png %})
 
-### Step 2: Draft a message using the template
+### 2단계: Draft a message using the template
 
 Next, go to the Alpaco lobby and use your template to create an email, in-app message, or content block. To double-check your message before exporting, select **Review**.
 
-![Alpaco Create email]({% image_buster /assets/img/alpaco/alpaco_2.png %})
+![알파코 이메일 만들기]({% image_buster /assets/img/alpaco/alpaco_2.png %})
 
-### Step 3: Export your message to Braze
+### 3단계: Export your message to Braze
 
 Select **Export**, then choose the Braze integration and specify whether you're exporting an email template or a content block.
 
 If you make changes after export, you can re-export the content from Alpaco to update it in Braze.
 
-![Alpaco Export email]({% image_buster /assets/img/alpaco/alpaco_3.png %})
+![알파코 내보내기 이메일]({% image_buster /assets/img/alpaco/alpaco_3.png %})
 
 ## Using Alpaco Templates and Blocks in Braze
 
 Depending on the type of content you export, your template will appear in one of the following sections:
 
-- **Templates & Media > Email Templates**
-- **Templates & Media > Content Blocks**
+- **템플릿 & 미디어 > 이메일 템플릿**
+- **템플릿 & 미디어 > 콘텐츠 블록**
 
 Alpaco templates are ideal for organizations looking to centrally manage brand consistency. They also support Braze’s built-in tags for easy categorization and content management.
