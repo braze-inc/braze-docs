@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Rápido
 
-> [Quikly](https://www.quikly.com), una plataforma de marketing de urgencia, aprovecha la psicología para motivar a los consumidores, de modo que las marcas puedan aumentar inmediatamente la respuesta en torno a sus iniciativas de marketing clave.
+> [Quikly](https://www.quikly.com), una plataforma de marketing de urgencia, utiliza la psicología para motivar a los consumidores, de modo que las marcas puedan aumentar inmediatamente la respuesta en torno a sus iniciativas clave de marketing.
 
 _Esta integración está mantenida por Quikly._
 
@@ -43,7 +43,7 @@ Por ejemplo:
 A continuación se describen cuatro integraciones diferentes: adquisición por correo electrónico, adquisición por SMS, atributos personalizados y webhooks. La integración que elija dependerá de su activación de Quikly y de su caso de uso.
 
 {% tabs %}
-{% tab Adquisición por correo electrónico %}
+{% tab Email Acquisition %}
 
 ### Adquisición por correo electrónico
 
@@ -59,7 +59,7 @@ Aquí tienes un esquema de cómo Quikly ejecuta este flujo de trabajo.
     - Quikly crea un perfil de sólo alias a través del [punto final]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Braze [`/users/track`, estableciendo el correo electrónico del usuario como alias de usuario para hacer referencia a ese usuario en el futuro (ya que el usuario no tendrá un ID externo).]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
     - Si lo desea, Quikly puede registrar eventos personalizados para indicar que este perfil participó en la activación de Quikly.
 
-{% details /usuarios/solicitud de seguimiento %}
+{% details /users/track request %}
 
 #### Encabezado de solicitud
 ```
@@ -84,7 +84,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
-{% tab Adquisición de SMS %}
+{% tab SMS Acquisition %}
 
 ### Suscripciones SMS
 
@@ -103,7 +103,7 @@ Para admitir los flujos de trabajo de suscripción por SMS de opt-in doble exist
 Braze aconseja que, al crear nuevos usuarios a través del punto final `/users/track`, haya un retraso de unos 2 minutos antes de añadir usuarios al grupo de suscripción correspondiente para dar tiempo a Braze a crear completamente el perfil de usuario.
 {% endalert %}
 
-{% details Solicitud detallada /subscription/status/set  %}
+{% details Detailed /subscription/status/set request %}
 #### Encabezado de solicitud
 ```
 Content-Type: application/json
@@ -123,7 +123,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% enddetails %}
 
 {% endtab %}
-{% tab Atributos personalizados %}
+{% tab Custom Attributes %}
 ### Atributos personalizados
 
 Dependiendo de tu implementación de Braze, puede que quieras que los eventos dentro de la activación de Quikly pasen en cascada a través de Braze para su posterior procesamiento. Por ejemplo, es posible que desee aplicar un atributo de usuario personalizado basado en qué nivel o incentivo se logró en la activación de Quikly, lo que le permite mostrar la tarjeta de contenido relevante cuando abren su aplicación o inician sesión en su sitio web. Quikly trabajará con usted directamente para implementar estas integraciones.
@@ -175,6 +175,6 @@ Recuerda guardar tu plantilla antes de salir de la página. <br>Las plantillas w
 {% endtabs %}
 
 ## Soporte
-Ponte en contacto con tu administrador de éxito de clientes de Quikly si tienes alguna pregunta.
+Ponte en contacto con tu administrador de éxito de clientes en Quikly si tienes alguna pregunta.
 
 
