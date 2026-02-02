@@ -43,6 +43,6 @@ Das Feld für Ihren Konnektor ändert seine Farbe, nachdem die Details mit den r
 
 ## Nutzung
 
-Sie finden Ihre hochgeladene Taxi-Vorlage in Ihrem Braze-Konto im Bereich **Templates und Medien > E-Mail-Vorlagen**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
+Ihre hochgeladene Taxi-Vorlage finden Sie in Ihrem Braze-Konto im Bereich **Templates & Media > E-Mail-Vorlagen**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
 
 
