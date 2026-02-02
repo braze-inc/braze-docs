@@ -9,7 +9,7 @@ hidden: true
 Cette page sert de guide de référence rapide pour l’expression régulière, y compris les jetons fréquents, les séquences méta, les jetons généraux, les constantes de groupe, etc.
 
 {% tabs %}
-{% tab Jetons courants %}
+{% tab Common tokens %}
 
 | Jetons courants |
 | ------------- |
@@ -38,7 +38,7 @@ Cette page sert de guide de référence rapide pour l’expression régulière, 
 | Limite sans mot | `\B` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Séquence méta %}
+{% tab Meta sequence %}
 
 | Méta-séquence |
 | ------------- |
@@ -77,7 +77,7 @@ Cette page sert de guide de référence rapide pour l’expression régulière, 
 | Rend n’importe quel caractère littéral | `\` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Jetons généraux %}
+{% tab General tokens %}
 
 | Jetons généraux |
 | -------------- |
@@ -88,7 +88,7 @@ Cette page sert de guide de référence rapide pour l’expression régulière, 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Modificateurs de classe de caractères %}
+{% tab Character class modifiers %}
 
 | Modificateurs de classe de caractères |
 | ------------------------- |
@@ -109,7 +109,7 @@ Cette page sert de guide de référence rapide pour l’expression régulière, 
 | Caractères Word | `[:>:]` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Constantes de groupe %}
+{% tab Group constants %}
 
 | Constantes de groupe |
 | --------------- |
@@ -166,7 +166,7 @@ Cette page sert de guide de référence rapide pour l’expression régulière, 
 | Modificateur de moteur d’expression régulière | `(*NO_START_OPT)` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Quantificateurs %}
+{% tab Quantifiers %}
 
 | Quantificateurs |
 | ----------- |
@@ -181,7 +181,7 @@ Cette page sert de guide de référence rapide pour l’expression régulière, 
 | Quantificateur possessif | `a*+` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Ancres %}
+{% tab Anchors %}
 
 | Ancres |
 | ------- |
@@ -196,7 +196,7 @@ Cette page sert de guide de référence rapide pour l’expression régulière, 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Drapeaux et modificateurs %}
+{% tab Flags and modifiers %}
 
 | Indicateurs et modificateurs |
 | ------------------- | 
