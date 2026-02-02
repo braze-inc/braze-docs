@@ -276,15 +276,84 @@ s3-qa-load-2-d0daa196-cdf5-4a69-84ae-4797303aee75,"{""name"": ""EP1U0"", ""age""
 {% endtab %}
 {% tab CSV Catalogs  %}
 ```plaintext  
-ID,PAYLOAD
-85,"{""product_name"": ""Product 85"", ""price"": 85.85}" 
-1,"{""product_name"": ""Product 1"", ""price"": 1.01}" 
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
 ```
+Include an optional **DELETED** column. When `DELETED` is `true`, that catalog item is removed from the catalog in Braze. See [Deleting catalog items](#deleting-catalog-items).
 {% endtab %}
 
 {% endtabs %}  
 
 For examples of all supported file types, refer to the sample files in [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+
+## Deleting data
+
+Cloud Data Ingestion for S3 supports deleting users and catalog items through file uploads. Use separate syncs and file formats for each.
+
+- **[Deleting users](#deleting-users)** – Create a sync with data type **Delete Users** and upload files that contain only user identifiers (no payload).
+- **[Deleting catalog items](#deleting-catalog-items)** – Use your existing catalog sync and add a `deleted` (or `DELETED`) column to mark items for removal.
+
+### Deleting users
+
+To delete user profiles in Braze using files in S3:
+
+1. Create a new Cloud Data Ingestion sync (same [AWS and Braze setup](#setting-up-cloud-data-ingestion-in-aws) as for other syncs).
+2. When configuring the sync in Braze, set **Data Type** to **Delete Users**.
+3. Upload files to your S3 bucket that contain only user identifier columns. Do not include a `PAYLOAD` column—the sync fails if payload is present, to avoid accidental deletions.
+
+Each row in the file must identify exactly one user using one of:
+
+| Identifier | Description |
+| --- | --- |
+| `EXTERNAL_ID` | Matches the `external_id` used in Braze. |
+| `ALIAS_NAME` and `ALIAS_LABEL` | Both columns together identify the user by alias. |
+| `BRAZE_ID` | Braze-generated user ID (existing users only). |
+
+{% alert important %}
+Deleting users is permanent and cannot be undone. Include only users you intend to remove. For more details, see [Delete users with Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/delete_users/).
+{% endalert %}
+
+**Example – JSON (user deletes):**
+```json
+{"external_id":"user-to-delete-001"}
+{"external_id":"user-to-delete-002"}
+{"braze_id":"braze-id-from-profile"}
+```
+
+**Example – CSV (user deletes):**
+```plaintext
+external_id
+user-to-delete-001
+user-to-delete-002
+```
+
+When the sync runs, Braze processes new files in the bucket and deletes the corresponding user profiles.
+
+### Deleting catalog items
+
+To remove items from a catalog using file storage:
+
+1. Use the same S3 sync you use to [sync catalog data]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/) (data type **Catalogs**).
+2. In your CSV or JSON files, add an optional **`deleted`** (or **`DELETED`**) column.
+3. Set `deleted` to `true` for any catalog item you want removed from the catalog in Braze.
+
+Each row still needs `ID` and `PAYLOAD`. For rows marked for deletion, the payload can be minimal; Braze removes the item by `ID`.
+
+**Example – JSON (catalog item delete):**
+```json
+{"id":"85","payload":"{\"product_name\": \"Product 85\", \"price\": 85.85}"}
+{"id":"1","payload":"{\"product_name\": \"Product 1\", \"price\": 1.01}","deleted":true}
+```
+
+**Example – CSV (catalog item delete):**
+```plaintext
+ID,PAYLOAD,DELETED
+85,"{""product_name"": ""Product 85"", ""price"": 85.85}",false
+1,"{""product_name"": ""Product 1"", ""price"": 1.01}",true
+```
+
+When the sync runs, rows with `deleted: true` cause the matching catalog item to be deleted in Braze. For full catalog sync and delete behavior, see [Sync and delete catalog data]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/).
 
 ## Things to know
 
