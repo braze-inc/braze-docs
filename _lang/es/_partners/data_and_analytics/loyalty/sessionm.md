@@ -22,9 +22,9 @@ search_tag: Partner
 | SesiónM | Un punto final REST de SessionM Core | Tu punto final dependerá de la URL SessionM de tu instancia. Se puede crear en el panel SesiónM desde **Propiedades Digitales**. |
 | SesiónM | Una clave de API REST SessionM Core | La clave de API SessionM asociada a tu instancia y a la integración Braze. Esta clave puede utilizarse para todas las llamadas basadas en el núcleo, incluidas las etiquetas. Se puede crear en el panel SesiónM desde **Propiedades Digitales**. |
 | SesiónM | Un secreto de la API REST del núcleo SessionM | El secreto de la API SessionM asociado a tu instancia y a la integración de Braze. Esta clave puede utilizarse para todas las llamadas basadas en el núcleo, incluidas las etiquetas. Se puede crear en el panel SesiónM desde **Propiedades Digitales**. |
-| SesiónM | Un punto final REST de SessionM Connect | Tu punto final dependerá de la URL SessionM de tu instancia. Ponte en contacto con tu director de cuentas técnico de SessionM o con el equipo de entrega para que te lo proporcione. |
-| SesiónM | Una cadena de autorización REST de SessionM Connect | La cadena de autorización básica de SessionM Connect asociada a tu instancia. Esta cadena de autenticación se puede utilizar para todas las llamadas basadas en connect, incluida get_user_offers. Ponte en contacto con tu director de cuentas técnico de SessionM o con el equipo de entrega para que te lo proporcione. |
-| SesiónM | A SesiónM Connect REST ID de minorista | Un guid único que identifica al cliente específico asociado a tu instancia. Ponte en contacto con tu director de cuentas técnicas de SessionM o con el equipo de entrega. |
+| SesiónM | Un punto final REST de SessionM Connect | Tu punto final dependerá de la URL SessionM de tu instancia. Ponte en contacto con tu director de cuentas técnicas de SessionM o con el equipo de entrega para que te lo proporcione. |
+| SesiónM | Una cadena de autorización REST de SessionM Connect | La cadena de autorización básica de SessionM Connect asociada a tu instancia. Esta cadena de autenticación se puede utilizar para todas las llamadas basadas en conexión, incluido get_user_offers.. Ponte en contacto con tu director de cuentas técnicas de SessionM o con el equipo de entrega para que te la proporcionen. |
+| SesiónM | A SesiónM Connect REST ID de minorista | Un guid único que identifica al cliente específico asociado a tu instancia. Ponte en contacto con tu director de cuentas técnicas de SessionM o con el equipo de entrega para que te lo proporcione. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
@@ -225,7 +225,7 @@ Los campos adicionales se envían a Braze como `trigger_properties` para persona
 
 Crea una campaña activada por la API o un Canvas en Braze para que lo desencadene SessionM. Si se han configurado campos adicionales, como `offer_id` o `offer title`, utiliza Liquid (como {% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %}) para añadir los campos personalizados a tu mensajería.
 
-![Propiedades de desencadenar API.]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
+![Propiedades de la API para desencadenar.]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
 
 En la pestaña **Programar entrega**, anota el ID de la campaña o del Canvas, ya que se añadirá a la **Configuración avanzada de** la campaña SessionM.
 
@@ -250,7 +250,7 @@ Actualiza la configuración avanzada de la campaña SessionM para incluir la sig
 ```
 {% endraw %}
 
-![Configuración avanzada de SessionM.]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
+![Configuración avanzada de la SesiónM.]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
 
 Crea un desencadenador de mensajes en el horario o comportamiento deseado. A continuación, selecciona **Variante de mensajería Braze** como **Variante de mensajería** en el menú **Mensaje externo** para utilizar la plantilla.
 
