@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) est la principale plateforme de géorepérage et de localisation. La plateforme Radar comprend trois produits de base : [Géorepérages](https://radar.io/product/geofencing), [Suivi des déplacements](https://radar.io/product/trip-tracking) et [API de géolocalisation](https://radar.io/product/api). La combinaison de la plateforme d'engagement Braze, leader du secteur, et des capacités de géorepérage de Radar, leader du secteur, vous permet de générer du chiffre d'affaires et de la fidélisation grâce à un large éventail d'expériences de produits et de services basées sur l'emplacement/localisation. Il s'agit notamment du suivi des retraits ou livraisons des articles, des notifications déclenchées en fonction de l'emplacement, de la personnalisation contextuelle, de la vérification de l'emplacement, des localisateurs de magasins, de la saisie semi-automatique des adresses, et bien plus encore.
+> [Radar](https://www.radar.com/) est la principale plateforme de géorepérage et de localisation. La plateforme Radar comprend trois produits de base : [Géorepérages](https://radar.com/product/geofencing), [Suivi des déplacements](https://radar.com/product/trip-tracking) et [API de géolocalisation](https://radar.com/product/api). La combinaison de la plateforme d'engagement Braze, leader du secteur, et des capacités de géorepérage de Radar, leader du secteur, vous permet de générer du chiffre d'affaires et de la fidélisation grâce à un large éventail d'expériences de produits et de services basées sur l'emplacement/localisation. Il s'agit notamment du suivi des retraits ou livraisons des articles, des notifications déclenchées en fonction de l'emplacement, de la personnalisation contextuelle, de la vérification de l'emplacement, des localisateurs de magasins, de la saisie semi-automatique des adresses, et bien plus encore.
 
 _Cette intégration est assurée par Radar._
 
@@ -18,7 +18,7 @@ _Cette intégration est assurée par Radar._
 
 L'intégration de Braze et Radar vous permet d'accéder à des déclencheurs de campagne sophistiqués basés sur l'emplacement et à l'enrichissement du profil utilisateur grâce à des données d'emplacement/localisation riches et de première partie. Lorsque les événements de géorepérage ou de suivi de trajet de Radar sont générés, les événements personnalisés et les attributs clients sont envoyés à Braze en temps réel. Ces événements et attributs peuvent ensuite être utilisés pour déclencher des campagnes basées sur la localisation, alimenter les opérations de distribution sur le dernier kilomètre, surveiller la logistique des flottes et des déclencheurs, ou créer des segments d'utilisateurs basés sur des modèles d'emplacement/localisation. 
 
-De plus, les API Radar Geo peuvent être exploitées pour enrichir ou personnaliser vos campagnes marketing grâce au [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
+De plus, les API Radar Geo peuvent être utilisées pour enrichir ou personnaliser vos campagnes marketing grâce au [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Conditions préalables
 
@@ -60,23 +60,23 @@ Vous pouvez utiliser des événements et attributs personnalisés pour créer de
 
 Envoyez une notification push à l'utilisateur avec des instructions pour récupérer son article en bordure de rue.
 
-![Campagne de livraison par action indiquant que la campagne sera livrée lorsque l'événement personnalisé "arrived_at_trip_destination" se produit et que les "trip_metadata" sont "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
+![Une campagne de livraison par événement indiquant que la campagne sera livrée lorsque l'événement personnalisé "arrived_at_trip_destination" se produit et que "trip_metadata" est égal à "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Créez un segment d'audience composé des visiteurs récents de votre magasin.
 
 Par exemple, ciblez tous les utilisateurs qui ont visité votre magasin au cours des 7 derniers jours, qu'ils aient effectué un achat ou non.
 
-![Un segment où "radar_geofence_tags" inclut la valeur my_store et où "radar_updated_at" date de moins de 7 jours.]({% image_buster /assets/img_archive/radar-segment.png %})
+![Un segment où "radar_geofence_tags" comprend les valeurs my_store et "radar_updated_at" a été créé il y a moins de 7 jours.]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Contenu connecté
 
 L'exemple suivant montre comment configurer une promotion pour inciter les utilisateurs se trouvant à proximité à se rendre en magasin avec une offre numérique. 
 
-![Image Android d'un message push de contenu connecté affichant "New In Store Deals, Walmart and target near you".]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
+![Image Android d'un message push de contenu connecté qui affiche "New In Store Deals, Walmart and target near you" (Nouvelles offres en magasin, Walmart et Target près de chez vous).]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 Pour commencer, vous devez disposer de votre clé API publiable Radar, que vous utiliserez dans vos URL de requête.
 
-Ensuite, dans une balise `connected_content`, créez une requête GET vers l'[API Rechercher des emplacements](https://radar.io/documentation/api#search-places). L'API de recherche d'emplacements renvoie les emplacements/localisations proches en se basant sur [Radar Places](https://radar.io/documentation/places): une base de données d'emplacements pour les lieux, les chaînes et les catégories qui offre une vue d'ensemble du monde.
+Ensuite, dans une balise `connected_content`, créez une requête GET vers l'[API Rechercher des emplacements](https://radar.com/documentation/api#search-places). L'API de recherche d'emplacements renvoie les emplacements/localisations proches en se basant sur [Radar Places](https://radar.com/documentation/places): une base de données d'emplacements pour les lieux, les chaînes et les catégories qui offre une vue d'ensemble du monde.
 
 L'extrait de code suivant est un exemple de ce que Radar renverra comme objet JSON à partir de l'appel API :
 
@@ -129,7 +129,7 @@ L'extrait de code suivant est un exemple de ce que Radar renverra comme objet JS
 }
 ```
 
-Pour créer le contenu connecté ciblé et le message personnalisé de Braze, vous pouvez utiliser l'attribut `most_recent_location` de Braze comme entrée du paramètre `near` dans l'URL de la requête d'API. L'attribut `most_recent_location` est collecté via l'intégration des événements Radar ou directement via le SDK de Braze.
+Pour construire le contenu connecté ciblé et le message personnalisé de Braze, vous pouvez utiliser l'attribut `most_recent_location` de Braze comme entrée pour le paramètre `near` dans l'URL de la requête API. L'attribut `most_recent_location` est collecté via l'intégration des événements Radar ou directement via le SDK de Braze.
 
 Dans l'exemple suivant, le filtrage de la chaîne Radar est appliqué aux emplacements/localisations de Target et Walmart, et le rayon de recherche des emplacements proches est fixé à 2 km.
 
@@ -180,7 +180,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-Consultez la [documentation Radar](https://radar.io/documentation/api) pour connaître toutes les API Radar qui peuvent être utilisées dans le contenu connecté.
+Consultez la [documentation Radar](https://radar.com/documentation/api) pour connaître toutes les API Radar qui peuvent être utilisées dans le contenu connecté.
 {% endalert %}
 
 
