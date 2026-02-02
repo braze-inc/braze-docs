@@ -20,7 +20,7 @@ Braze가 데이터를 수집하는 방법에 대해 자세히 알아보세요.
     - [사용자 식별]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) 엔드포인트 내에서 `merge_behavior` 필드를 사용하여 알려진 사용자 프로필에 유지되어야 하는 사용자 별칭 프로필의 데이터를 지정할 수 있습니다.
     - 사용자 별칭이 전송 가능한 프로필이 되려면 프로필에 이메일 및/또는 전화번호를 표준 속성으로 포함해야 합니다.
 - `device_id`: 자동으로 생성되는 기기별 식별자입니다. 고객 프로필에는 여러 개의 `device_ids`를 연결할 수 있습니다. 예를 들어 회사 컴퓨터, 집 컴퓨터, 태블릿, iOS 앱에서 계정에 로그인한 사용자는 프로필에 4개의 `device_ids`를 연결할 수 있습니다.
-- 이메일 주소 및 전화번호:
+- 이메일 주소 & 전화번호:
     - Supported as an identifier in the Braze track user endpoint. 
     - 요청 내에서 이메일 주소 또는 전화번호를 식별자로 사용하는 경우 다음과 같은 세 가지 결과가 발생할 수 있습니다.
         1. 이 이메일/휴대폰을 가진 사용자가 Braze 내에 존재하지 않는 경우 이메일 전용/휴대폰 전용 사용자 프로필이 생성되며, 요청의 모든 데이터가 프로필에 추가됩니다.
@@ -92,7 +92,7 @@ Braze가 데이터를 수집하는 방법에 대해 자세히 알아보세요.
 }
 ```
 {% alert important %}
-이 기능은 현재 얼리 액세스에서 제공ㅂ니다.
+이 기능은 현재 얼리 액세스 중입니다.
 {% endalert %}
 
 ## 고객 프로필에 데이터 동기화
@@ -104,26 +104,26 @@ Braze가 데이터를 수집하는 방법에 대해 자세히 알아보세요.
 [클라우드 데이터 수집]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/cloud_ingestion/overview/#what-is-cloud-data-ingestion)
 - 사용자 추적 엔드포인트와 마찬가지로 클라우드 데이터 수집을 통해 데이터를 고객 프로필에 동기화할 수 있습니다. 이 도구를 사용할 때 동기화하려는 데이터 웨어하우스 테이블 또는 보기를 설정하고 원하는 Braze 작업 공간에 연결하여 속성, 이벤트 및 구매를 프로필에 기록합니다.
 
-[데이터 포인트]({{site.baseurl}}/user_guide/data/data_points/)
-- Braze는 값의 변경 여부와 관계없이 고객 프로필에 '쓸' 때마다 데이터 포인트가 발생하는 데이터 포인트 소비 모델을 보유하고 있습니다. 따라서 변경된 속성만 Braze에 전송하는 것이 좋습니다. 
+[Data points]({{site.baseurl}}/user_guide/data/data_points/)
+- Braze에는 값의 변경 여부와 관계없이 데이터 포인트가 고객 프로필에 '쓰기'될 때마다 기록되는 데이터 포인트 모델이 있습니다. 따라서 변경된 속성만 Braze에 전송하는 것이 좋습니다. 
 
 ## 사용자 오디언스를 Braze로 보내기
 
 [코호트 가져오기 동기화 파트너 설명서]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. 이러한 오디언스가 고객 프로필에 사용자 속성으로 저장되는 대신, 고객은 세분화 툴 내의 파트너 브랜드 필터를 통해 이 코호트를 구축하고 타겟팅할 수 있습니다. 이를 통해 고객은 특정 사용자 세그먼트를 더 쉽고 간편하게 찾고 타겟팅할 수 있습니다.
+- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. 이러한 오디언스가 고객 프로필에 사용자 속성으로 저장되는 대신, 고객은 세분화 툴 내의 파트너 브랜드 필터를 통해 이 코호트를 구축하고 타겟팅할 수 있습니다. 이를 통해 특정 사용자 세그먼트를 보다 효율적으로 찾고 타겟팅할 수 있습니다.
 - 코호트 가져오기 엔드포인트는 공개되지 않으며 각 파트너에 따라 다릅니다. 따라서 코호트 엔드포인트에 대한 동기화는 고객의 워크스페이스 사용량 제한에 포함되지 않습니다. 
 
 [사용자 추적]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
 - 사용자 속성을 통해 특정 오디언스에서 사용자를 표시하여 Braze에서 사용자를 생성하는 데 즉시 사용할 수 있는 공개적으로 액세스할 수 있는 엔드포인트입니다. 이 엔드포인트와 코호트 가져오기 엔드포인트의 주요 차이점은 이 엔드포인트를 사용하여 전송된 오디언스는 고객 프로필에 저장되는 반면, 코호트 가져오기 엔드포인트는 세분화 툴에 필러로 표시된다는 점입니다. 이 엔드포인트에는 워크스페이스 수준에서 분당 50,000건의 요청으로 사용량 제한이 적용됩니다.
 - 이 엔드포인트를 사용할 때는 [파트너 설명서]({{site.baseurl}}/partners/isv_partners/api_partner)에 표시된 대로 `partner` 키를 포함해야 합니다.
 
-[데이터 포인트]({{site.baseurl}}/user_guide/data/data_points/)<br>
-- Braze는 값의 변경 여부와 관계없이 고객 프로필에 '쓸' 때마다 데이터 포인트가 발생하는 데이터 포인트 소비 모델을 보유하고 있습니다.
+[Data points]({{site.baseurl}}/user_guide/data/data_points/)<br>
+- Braze에는 값이 변경되었는지 여부와 관계없이 데이터 포인트가 고객 프로필에 '쓰기'될 때마다 기록되는 데이터 포인트 모델이 있습니다.
 - 데이터 포인트는 코호트 가져오기와 사용자 추적 엔드포인트 모두에서 발생합니다.
 
 ## 파트너로 인게이지먼트 분석 스트리밍
 
-### 커런츠
+### Currents
 
 Currents are a near real-time message engagement analytics streaming tool in Braze. 이렇게 하면 고객의 워크스페이스에서 전송된 캠페인 및 캔버스에 대한 모든 전송, 전달, 열람, 클릭 등에 대한 사용자 수준 데이터가 스트리밍됩니다. 몇 가지 주의해야 할 사항이 있습니다: 커런츠는 고객의 커넥터당 가격이 책정되므로 모든 신규 커런츠 파트너는 EA 프로세스를 거쳐야 합니다. 커스텀 브랜드 UI를 구축하고 커넥터를 공개적으로 제공하기 전에 파트너에게 5명의 고객을 EA의 일부로 확보할 것을 요청합니다. 
 - [파트너 설명서]({{site.baseurl}}/partners/isv_partners/currents_integration/)
@@ -176,7 +176,7 @@ Use the Braze endpoint to generate a send ID which can be used to break down cam
 - 로컬라이제이션 및 번역
 
 주의해야 할 사항:
-- Braze는 API 호출에 대해 요금을 부과하지 않으며, 데이터 포인트 할당량에 포함되지 않습니다.
+- Braze는 API 호출에 대해 요금을 부과하지 않으며 데이터 포인트 사용량에 포함되지 않습니다.
 - 연결된 콘텐츠 응답에는 1MB의 제한이 있습니다.
 - 연결된 콘텐츠 호출은 메시지가 전송될 때 발생하지만, 인앱 메시지는 메시지를 볼 때 이 호출을 수행합니다.
 - 연결된 콘텐츠 호출에서는, 성능상의 이유로 서버 응답 시간이 2초 미만이어야 하는 redirects.Braze를 따르지 않습니다. 서버가 응답하는 데 2초 이상 걸리면 콘텐츠가 삽입되지 않습니다.
