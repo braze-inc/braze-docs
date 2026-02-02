@@ -2,7 +2,7 @@
 title: "Movable Ink Da Vinci"
 article_title: Movable Ink Da Vinci
 alias: "/partners/movable_ink_da_vinci/"
-description: "La integración de Braze y Movable Ink con Da Vinci permite a las marcas entregar mensajes altamente personalizados aprovechando el motor de decisión de contenidos de Da Vinci basado en IA. Da Vinci selecciona el contenido más relevante para cada usuario y despliega fácilmente mensajes a través de Braze."
+description: "La integración de Braze y Movable Ink con Da Vinci permite a las marcas entregar mensajes altamente personalizados aprovechando el motor de toma de decisiones sobre contenidos basado en IA de Da Vinci. Da Vinci selecciona el contenido más relevante para cada usuario y despliega fácilmente mensajes a través de Braze."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Movable Ink Da Vinci
 
-> La integración de Braze y Movable Ink [con Da Vin](https://movableink.com/da-vinci) ci permite a las marcas entregar mensajes altamente personalizados aprovechando el motor de decisión de contenidos de Da Vinci basado en IA. Da Vinci selecciona el contenido más relevante para cada usuario y despliega fácilmente mensajes a través de Braze.
+> La integración de Braze y Movable Ink [con Da Vin](https://movableink.com/da-vinci) ci permite a las marcas entregar mensajes altamente personalizados aprovechando el motor de toma de decisiones sobre contenidos basado en IA de Da Vinci. Da Vinci selecciona el contenido más relevante para cada usuario y despliega fácilmente mensajes a través de Braze.
 
 ## Requisitos previos
 
