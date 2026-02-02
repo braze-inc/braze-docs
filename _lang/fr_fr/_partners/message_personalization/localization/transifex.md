@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex permet une localisation robuste à travers votre base d'utilisateurs, quelle que soit la langue.
+> [Transifex](https://www.transifex.com/) permet une localisation robuste à travers votre base d'utilisateurs, quelle que soit la langue.
 
 _Cette intégration est maintenue par Transifex._
 
 ## À propos de l'intégration
 
-L'intégration de Braze et Transifex s'appuie sur le contenu connecté pour vous permettre d'extraire une collection de chaînes de caractères de ressources et d'inclure les traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basées sur la langue. Cette intégration automatise la traduction et libère vos équipes pour qu'elles se concentrent sur la fourniture d'expériences client brillantes.
+L'intégration de Braze et Transifex utilise le contenu connecté pour vous permettre d'extraire une collection de chaînes de caractères de ressources et d'inclure les traductions pertinentes dans vos messages au lieu de lignes de formatage conditionnel basées sur la langue. Cette intégration automatise la traduction et libère vos équipes pour qu'elles se concentrent sur la fourniture d'expériences client brillantes.
 
 {% alert important %}
 Depuis le 7 avril 2022, Transifex a supprimé les versions 2 et 2.5 de son API pour faire place à la version 3\. Les versions 2 et 2.5 ne sont plus prises en charge et les requêtes correspondantes échoueront. <br><br>Les instructions d'intégration suivantes tiennent compte de la mise à jour de la version 3. Mettez à jour vos appels au contenu connecté en conséquence.
@@ -42,7 +42,7 @@ curl --request GET \
      --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
-Par exemple, si votre projet Transifex se trouve à l’emplacement `https://www.transifex.com/appboy-3/french2/french_translationspo/`, le `project_name` sera "french2" et le `resource_name` sera "french_translationspo".
+Par exemple, si votre projet Transifex est situé à l'emplacement/localisation `https://www.transifex.com/appboy-3/french2/french_translationspo/`, l'adresse `project_name` sera "french2" et l'adresse `resource_name` sera "french_translationspo".
 
 ## Exemple de message sur le contenu connecté
 
