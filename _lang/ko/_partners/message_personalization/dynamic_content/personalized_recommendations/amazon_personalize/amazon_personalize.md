@@ -11,11 +11,11 @@ search_tag: Partner
 <!--
 {% multi_lang_include video.html id="xFZ3HMleYYE" align="right" %}
 -->
-> Amazon Personalize is like having your very own all day Amazon machine learning recommendation system. Based on over 20 years of recommendation experience, Amazon Personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations and targeted marketing promotions.
+> [Amazon Personalize는](https://aws.amazon.com/personalize/) 하루 종일 작동하는 나만의 Amazon 머신 러닝 추천 시스템과 같습니다. Based on over 20 years of recommendation experience, Amazon Personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations and targeted marketing promotions.
 
 _This integration is maintained by Amazon Personalize._
 
-## About the integration
+## 통합 정보
 
 Using machine learning and an algorithm you help define, Amazon Personalize can help you train a model that outputs high-quality recommendations for your websites and applications. These models will allow you to create lists of recommendations based on users' past behaviors, sort items by relevancy, and recommend other items based on similarity. Lists obtained from the Amazon Personalize API can then be used in Braze Connected Content to run personalized Braze recommendation campaigns. By integrating with Amazon Personalize, customers are given the freedom to control the parameters used to train the models and define optional business objectives that optimize the algorithm's output. 
 
@@ -71,8 +71,8 @@ For a user recommendations recipe, you must provide an interactions dataset cont
 Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize [recipes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
 
 Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example:
-- The "User history length percentile" parameter found in the Amazon Personalize console lets you adjust the percentile of user history to include in the training:<br><br>![Min max user profile setting]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})
-  - `min_user_history_length_percentile`: excludes a percentage of users with very short history lengths, which can be helpful to eliminate popular items and build recommendations based on deeper underlying patterns.
+- Amazon 개인화 콘솔에 있는 '사용자 기록 길이 백분위수' 매개 변수를 사용하면 교육에 포함할 사용자 기록의 백분위수를 조정할 수 있습니다:<br><br>![최소 최대 사용자 프로필 설정]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})
+  - `min_user_history_length_percentile`: 기록 길이가 매우 짧은 사용자 비율을 제외하므로 인기 항목을 제거하고 보다 심층적인 기본 패턴을 기반으로 추천을 구축하는 데 도움이 될 수 있습니다.
   - `max_user_history_length_percentile`: adjust the percentage of users to take into account when training with very long history lengths.
 
 The number of hidden dimensions helps detect more complicated patterns for complex datasets, while the back-propagation through time technique (BPTT) adjusts rewards for an early event after a chain of events took place that resulted in a high-value action.
@@ -150,6 +150,6 @@ This seems like a great fit for you:
 
 Including the title, the image, and linking the URL, this is what the complete Content Card would look like:
 
-![An image of a campaign with Connected Content added to the message body and "Add Image" field. This image also shows Connected Content logic added to the "Redirect to Web URL" field, linking users to a recommendation URL.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
+![메시지 본문과 '이미지 추가' 필드에 연결된 콘텐츠가 추가된 캠페인의 이미지입니다. 이 이미지는 사용자를 추천 URL로 연결하는 '웹 URL로 리디렉션' 필드에 추가된 콘텐츠 로직을 보여줍니다.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
 
 
