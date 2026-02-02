@@ -55,7 +55,7 @@
 {% endif %}
 
 {% if include.metric == "Click-to-Open Rate" %}
-<i>열람율</i>는 단일 사용자 또는 기계가 최소한 한 번 클릭한 열린 이메일의 비율이며, <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더</a>에서만 사용할 수 있습니다.
+<i>열람율</i>은 단일 사용자 또는 기계가 최소한 한 번 클릭한 열린 이메일의 비율이며, <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더</a>에서만 사용할 수 있습니다.
 {% endif %}
 
 {% if include.metric == "Close Message" %}
