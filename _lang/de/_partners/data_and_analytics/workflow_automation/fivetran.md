@@ -44,7 +44,7 @@ Wählen Sie im [Fivetran Dashboard](https://fivetran.com/dashboard) **\+ Konnekt
 
 Öffnen Sie die [Amazon IAM-Konsole](https://console.aws.amazon.com/iam/home#home) und navigieren Sie zu **Policies > Create Policy**.
 
-![Amazon IAM-Konsole mit einer Liste von Richtlinien.]({% image_buster /assets/img/fivetran_as3_iam.png %})
+![Amazon IAM-Konsole mit der Liste der Richtlinien.]({% image_buster /assets/img/fivetran_as3_iam.png %})
 
 Als nächstes öffnen Sie den Tab **JSON** und fügen die folgende Richtlinie ein. Stellen Sie sicher, dass Sie `{your-bucket-name}` durch den Namen Ihres S3-Buckets ersetzen.
 
@@ -76,7 +76,7 @@ Als nächstes öffnen Sie den Tab **JSON** und fügen die folgende Richtlinie ei
 
 Wählen Sie abschließend **Richtlinie überprüfen** aus und geben Sie der Richtlinie einen eindeutigen Namen und eine Beschreibung. Wählen Sie **Richtlinie erstellen**, um Ihre Richtlinie zu erstellen. 
 
-![Felder für den Namen der Richtlinie und eine Beschreibung.]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
+![Felder, um die Richtlinie zu benennen und eine Beschreibung anzugeben.]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
 ##### Eine IAM-Rolle erstellen {#step-two}
 
@@ -86,7 +86,7 @@ Navigieren Sie in AWS zu **Rollen** und wählen Sie dann **Neue Rolle erstellen*
 
 Wählen Sie **Anderes AWS Konto** und geben Sie die ID des Fivetran Kontos `834469178297` an. Stellen Sie sicher, dass Sie das Kontrollkästchen **Externe ID erforderlich** aktivieren. Hier geben Sie die externe ID an, die Sie in Schritt 1 gefunden haben.
 
-![Das Feld zur Eingabe Ihrer "Konto-ID", ein Kontrollkästchen, um die externe ID zu verlangen, und ein leeres Textfeld zur Eingabe Ihrer "externen ID".]({% image_buster /assets/img/fivetran_another_aws_account.png %})
+![Das Feld zur Eingabe Ihrer "Konto ID", ein Kontrollkästchen, um die externe ID zu verlangen, und ein leeres Textfeld zur Eingabe Ihrer "Externen ID".]({% image_buster /assets/img/fivetran_another_aws_account.png %})
 
 Wählen Sie dann **aus: Berechtigungen** können Sie die soeben erstellte Richtlinie auswählen.
 
@@ -114,7 +114,7 @@ Wählen Sie in Fivetran **\+ Konnektor** und dann den Konnektor **Braze** aus, u
 Stellen Sie sicher, dass **Amazon S3** als **Cloud-Speicher** ausgewählt ist.
 {% endalert %}
 
-Wählen Sie schließlich **Speichern & Testen** aus, und Fivetran erledigt den Rest, indem es die Daten aus Ihrem Braze-Konto synchronisiert!
+Wählen Sie schließlich ** & Test speichern** aus, und Fivetran erledigt den Rest, indem es die Daten aus Ihrem Braze-Konto synchronisiert!
 
 ### Einrichten von Braze-Currents für Google Cloud Storage
 
@@ -147,5 +147,5 @@ Wählen Sie in Fivetran **\+ Konnektor** und dann den Konnektor **Braze** aus, u
 Stellen Sie sicher, dass **Google Cloud Storage** als **Cloud-Speicher** ausgewählt ist.
 {% endalert %}
 
-Wählen Sie schließlich **Speichern & Testen** aus, und Fivetran erledigt den Rest, indem es die Daten aus Ihrem Braze-Konto synchronisiert!
+Wählen Sie schließlich ** & Test speichern** aus, und Fivetran erledigt den Rest, indem es die Daten aus Ihrem Braze-Konto synchronisiert!
 
