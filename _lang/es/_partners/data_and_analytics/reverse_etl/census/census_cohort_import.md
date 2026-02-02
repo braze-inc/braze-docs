@@ -27,11 +27,11 @@ Para sincronizar clientes con Braze, debe crear una sincronización. Aquí defin
 
 1. Vaya a la pestaña **Sincronizaciones** y seleccione **Nueva sincronización**.<br><br> 
 2. En el compositor, seleccione el modelo de datos fuente de su almacén de datos.<br><br>
-3. Configura dónde se sincronizará el modelo. Selecciona **Braze** como destino y **Usuario y cohorte** como objeto a sincronizar.<br>![En la pregunta "Selecciona un destino", se selecciona "Braze" como conexión y se enumeran varios objetos.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. Configure dónde se sincronizará el modelo. Selecciona **Braze** como destino y **Usuario & Cohorte** como objeto a sincronizar.<br>![En la pregunta "Selecciona un destino", se selecciona "Braze" como conexión y se enumeran varios objetos.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Selecciona la **Columna Fuente** que identifica a los usuarios que se van a añadir a una cohorte, y selecciona **ID de usuario externo** como **Tipo de identificador**.<br><br>
 5. En el desplegable **Nombre de la cohorte**, selecciona una cohorte, crea una cohorte o selecciona una Columna de origen para rellenar el nombre de la cohorte.<br><br>
 6. Utiliza el desplegable **Cuando se elimina un registro de los datos de origen** para seleccionar lo que les ocurre a los usuarios cuando se eliminan del conjunto de datos de origen, como **No hacer nada** o **Eliminar registro coincidente de la cohorte**.<br><br>
-7. Por último, asigne los campos de datos del censo a los campos Braze equivalentes.<br>![Censo mapeado]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
+7. Por último, mapea los campos de datos de Census a los campos Braze equivalentes.<br>![Mapeado de Census]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
 8. Confirma los detalles y crea la sincronización. 
 
 ¡Ahora puedes ejecutar tu sincronización!
