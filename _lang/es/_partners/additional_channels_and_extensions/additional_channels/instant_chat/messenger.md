@@ -70,7 +70,7 @@ Cuando esté seguro de que recibe PSID, coordínelo y compártalo con sus desarr
 
 ### Paso 3: Configure su plantilla de webhook
 
-En **Plantillas y medios**, ve a **Plantillas de webhook** y elige la **Plantilla de webhook de Facebook Messenger**.
+En **Plantillas & Medios**, ve a **Plantillas de webhook** y elige la **plantilla de webhook de Facebook Messenger**.
 
 1. Proporcione un nombre de plantilla y añada equipos y etiquetas, según sea necesario.
 2. Escribe tu mensaje o elige una plantilla de mensaje de [las que Facebook pone a tu disposición](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). También puedes elegir el [tipo de](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) mensaje o [etiqueta](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags).
@@ -89,7 +89,7 @@ Si recibe el mensaje correctamente, puede configurar sus opciones de entrega.
 
 Una vez configurada, utiliza esta integración para dirigirte a los usuarios de Facebook Messenger. Si no envías mensajes utilizando los números de teléfono de los usuarios y planeas enviar mensajes de Messenger repetidamente, debes [crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) para todos los usuarios para los que exista el ID de Messenger como atributo personalizado y activar el [seguimiento de análisis]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) para realizar un seguimiento de tus tasas de suscripción a Messenger a lo largo del tiempo. 
 
-![Filtro de segmento "messenger_id" establecido en "no está en blanco".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
+![Filtro de segmento "messenger_id" ajustado a "no está en blanco".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
 
 Si decide no crear un segmento específico para los suscriptores de Messenger, asegúrese de incluir un filtro para el ID de Messenger existente para evitar errores.
 
