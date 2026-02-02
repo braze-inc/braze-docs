@@ -31,9 +31,9 @@ Usando a terminologia da Zapier, um "zap" é um fluxo de trabalho automatizado q
 
 Usando nosso exemplo do WordPress, na plataforma Zapier, configuraremos nosso zap para disparar quando uma nova postagem do WordPress for adicionada e selecionaremos **Published** e **Posts** como **Post Status** e **Post Type**. 
 
-![Na plataforma Zapier, em um zap, selecione o gatilho para ser um "novo comentário", "qualquer webhook" ou "nova postagem". Para este exemplo, selecionamos "new post" (nova postagem). ] [5]
+![Na plataforma Zapier, em um zap, selecione o gatilho para ser um "novo comentário", "qualquer webhook" ou "nova postagem". Para este exemplo, "novo post" está selecionado. ] [5]
 
-![Na plataforma Zapier, em um zap, configure o gatilho selecionando o status e o tipo de postagem desejados. Para este exemplo, "Published" (Publicados) e "Posts" (Postagens) estão selecionados.] [6]
+![Na plataforma Zapier, em um zap, configure o gatilho selecionando o status e o tipo de postagem desejados. Para este exemplo, "Publicado" e "Posts" estão selecionados.] [6]
 
 ### Etapa 2: Adicionar um webhook de ação
 
