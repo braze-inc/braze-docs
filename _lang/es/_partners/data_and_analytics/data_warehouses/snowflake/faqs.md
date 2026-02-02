@@ -16,6 +16,8 @@ No, por ahora no se admite.
 Utiliza datos compartidos para la misma región en los siguientes escenarios:
 - Tu cuenta Snowflake está en US-EAST-1 (AWS) y la región de tu panel de Braze está en EE. UU.
 - Tu región Snowflake está en EU-CENTRAL-1 y la región de tu panel de Braze está en la UE.
+- Tu región Snowflake está en AP-Southeast-2 (AWS) y la región de tu panel de Braze está en Australia.
+- Tu región Snowflake está en AP-Southeast-3 (AWS) y la región de tu panel de Braze está en Indonesia.
 
 Si no, utiliza el intercambio de datos entre regiones. 
 
