@@ -62,7 +62,7 @@ En la URL del webhook, debe:
 - Pasa a Remerge el identificador único de tu aplicación para Android (como "com.example") e iOS (como "012345678").
 - Define una clave; Remerge te la proporcionará.
 
-![La URL del webhook y la vista previa del mensaje mostrados en el constructor de webhook Braze.]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
+![La URL del webhook y la vista previa del mensaje se muestran en el constructor de webhook Braze.]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
 
 {% alert important %}
 Braze no recoge automáticamente el IDFA/AAID del dispositivo, por lo que debe almacenar estos valores usted mismo. Tenga en cuenta que puede necesitar el consentimiento del usuario para recopilar estos datos.
@@ -76,7 +76,7 @@ El webhook Remerge requiere un método HTTP y una cabecera de petición.
 - **Encabezados de solicitud**:
   - **Content-Type**: application/json
 
-![Los encabezados de solicitud, el método HTTP y la vista previa del mensaje que se muestran en el constructor de webhook Braze.]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
+![Los encabezados de solicitud, el método HTTP y la vista previa del mensaje mostrados en el creador de webhook Braze.]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
 
 #### Cuerpo de la solicitud
 
