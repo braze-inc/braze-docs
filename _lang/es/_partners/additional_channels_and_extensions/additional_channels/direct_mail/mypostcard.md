@@ -22,7 +22,7 @@ Utiliza la integración de MyPostcard y Braze para enviar a tus clientes correos
 | Cuenta MyPostcard B2B           | Es necesario registrarse en MyPostcard para beneficiarse de esta integración.                                          |
 | Clave de API B2B y credenciales        | Puedes encontrar tu clave de API y las credenciales en la herramienta de administración MyPostcard B2B.                                         |
 | Aprobada la campaña MyPostcard B2B | Para aprovechar esta integración, tienes que configurar una campaña de mailing impreso en la herramienta MyPostcard B2B. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Ejemplos
 
@@ -41,7 +41,7 @@ Para integrarte con MyPostcard, [inicia sesión o regístrate](https://www.mypos
 Crea una plantilla webhook MyPostcard para utilizarla en futuras campañas o Lienzos navegando hasta **Plantillas** > **Plantillas webhook** en la plataforma Braze.
 
 {% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), vaya a **Compromiso** > **Plantillas y medios** > **Plantillas de Webhook**.
+Si utilizas la [navegación antigua]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), ve a **Interacción** > **Plantillas & Medios** > **Plantillas webhook**.
 {% endalert %}
 
 Si quieres crear una campaña única de webhook MyPostcard o utilizar una plantilla existente, selecciona **Webhook** en Braze al crear una nueva campaña. Rellena los siguientes campos:
@@ -90,13 +90,13 @@ MyPostcard requiere que se incluya en la plantilla un método HTTP junto con las
 
 Copia el cuerpo de la solicitud que aparece en la Herramienta de administración B2B y, a continuación, rellena los marcadores de posición con contenido utilizando cualquier etiqueta de personalización de Liquid.
 
-![Pestaña Componer que muestra el cuerpo JSON y la información del webhook.]({% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %})
+![La pestaña Componer muestra el cuerpo JSON y la información del webhook.]({% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %})
 
 ### Paso 2: Vista previa de su solicitud
 
 A continuación, previsualiza tu solicitud en el panel **Vista previa** o ve a la pestaña **Prueba**, donde puedes elegir un usuario al azar, un usuario existente o crear un usuario personalizado para probar tu webhook. ¡No olvides guardar tu plantilla antes de salir de la página!
 
-![Prueba la pestaña webhook con diferentes campos para validar la implementación.]({% image_buster /assets/img/mypostcard/mypostcard_test.jpg %})
+![Prueba la pestaña Webhook con diferentes campos para validar la implementación.]({% image_buster /assets/img/mypostcard/mypostcard_test.jpg %})
 
 {% alert important %}
 Recuerda guardar tu plantilla antes de salir de la página. <br>Las plantillas webhook actualizadas pueden encontrarse en la lista **Plantillas webhook guardadas** al crear una nueva [campaña webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
