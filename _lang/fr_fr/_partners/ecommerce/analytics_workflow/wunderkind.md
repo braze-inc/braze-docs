@@ -27,7 +27,7 @@ L'intégration de Braze et Wunderkind vous permet d'analyser l'augmentation des 
 
 ## Intégration
 
-Contactez votre équipe WunderKind pour vous aider à configurer l'intégration. Vous serez invité à fournir vos identifiants Braze ESP ou API afin que Wunderkind puisse envoyer des déploiements d'e-mails et des statuts d'abonnement via l'API. 
+Contactez votre équipe WunderKind pour vous aider à mettre en place l'intégration. Vous serez invité à fournir vos identifiants Braze ESP ou API afin que Wunderkind puisse envoyer des déploiements d'e-mails et des statuts d'abonnement via l'API. 
 
 Une fois connecté, Wunderkind va :
 - Effectuer des tests préliminaires pour confirmer une connexion stable et vous assurer que les e-mails peuvent être envoyés depuis Wunderkind vers l'ESP. 
