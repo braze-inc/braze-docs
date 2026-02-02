@@ -22,8 +22,8 @@ Die Integration von Braze und PassKit ermöglicht es Ihnen, das Engagement Ihrer
 
 | Anforderung | Beschreibung |
 | ----------- | ----------- |
-| PassKit Konto | Sie benötigen ein PassKit Konto und einen PassKit Account Manager:in. |
-| `userDefinedID` | Um angepasste Events und angepasste Attribute an Ihre Nutzer:innen zwischen PassKit und Braze angemessen anzupassen, müssen Sie die externe ID von Braze als `userDefinedID` festlegen. Diese `userDefinedID` wird verwendet, wenn Sie API-Aufrufe an die PassKit Endpunkte tätigen. |
+| PassKit Konto | Sie müssen ein PassKit Konto und einen PassKit Account Manager:in haben. |
+| `userDefinedID` | Um angepasste Events und angepasste Attribute für Ihre Nutzer:innen zwischen PassKit und Braze angemessen zu aktualisieren, müssen Sie die externe ID von Braze als `userDefinedID` festlegen. Diese `userDefinedID` wird verwendet, wenn Sie API-Aufrufe zu den PassKit-Endpunkten tätigen. |
 | Braze REST API-Schlüssel | Ein Braze REST API-Schlüssel mit `users.track` Berechtigungen. <br><br> Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. |
 | Braze REST Endpunkt  | Ihre URL für den REST-Endpunkt. Ihr Endpunkt hängt von der [Braze-URL für Ihre Instanz]({{site.baseurl}}/api/basics/#endpoints) ab. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -50,11 +50,11 @@ Um Daten von PassKit zu übergeben, stellen Sie sicher, dass Sie Ihre externe ID
 
 ## Pass über einen SmartPass-Link erstellen
 
-Innerhalb von Braze können Sie einen SmartPass-Link einrichten, um eine eindeutige URL für Ihre Kund:innen zu generieren, damit sie ihren Pass entweder auf Android oder iOS installieren können. Dazu müssen Sie eine verschlüsselte SmartPass Daten-Nutzlast definieren, die von einem Braze Content-Block aufgerufen werden kann. Dieser [Content-Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) kann dann für zukünftige Pässe und Coupons wiederverwendet werden. Folgendes wird während Ihrer Integration verwendet:
+Innerhalb von Braze können Sie einen SmartPass-Link einrichten, um eine eindeutige URL für Ihre Kund:innen zu generieren, damit sie ihren Pass entweder auf Android oder iOS installieren können. Dazu müssen Sie eine verschlüsselte SmartPass Daten-Nutzlast definieren, die von einem Braze Content-Block aufgerufen werden kann. Dieser [Content-Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) kann dann für zukünftige Pässe und Coupons wiederverwendet werden. Das Folgende wird während Ihrer Integration verwendet:
 
 - **PassKit URL**: Ihre PassKit URL ist eine eindeutige URL für Ihr PassKit Programm.<br>Jedes Programm hat eine eindeutige URL, die Sie auf dem Tab **Distribution** Ihres PassKit Programms oder Projekts finden. (zum Beispiel, https://pub1.pskt.io/c/ww0jir)<br><br>
-- **PassKit Geheimnis**: Zusammen mit der URL müssen Sie den PassKit Key für dieses Programm bereithalten.<br>Diese finden Sie auf der gleichen Seite wie Ihre PassKit URL.<br><br>
-- **Programm (oder Projekt) ID**: Ihre PassKit Programm ID wird benötigt, um die SmartPass URL zu erstellen. <br>Sie finden sie unter dem Tab **Einstellungen** Ihres Projekts oder Programms.
+- **PassKit Geheimnis**: Neben der URL müssen Sie auch den PassKit Key für dieses Programm bereithalten.<br>Diese finden Sie auf der gleichen Seite wie Ihre PassKit URL.<br><br>
+- **Programm (oder Projekt) ID**: Ihre PassKit Programm ID ist erforderlich, um die SmartPass URL zu erstellen. <br>Sie finden sie unter dem Tab **Einstellungen** Ihres Projekts oder Programms.
 
 Weitere Informationen zur Erstellung verschlüsselter SmartPass-Links finden Sie in diesem [PassKit-Artikel](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links).
 
@@ -103,7 +103,7 @@ Innerhalb dieses Content-Blocks werden wir die Nutzdaten nicht direkt einbinden,
 
 ### Schritt 3: Erstellen Sie Ihre Signatur zur Verschlüsselung mit einem SHA1 HMAC-Hash
 
-Als Nächstes erstellen Sie Ihre Signatur unter Verwendung eines [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) Hashes der Projekt-URL und der Nutzdaten. 
+Als nächstes erstellen Sie Ihre Signatur unter Verwendung eines [SHA1 HMAC-Hashes](https://en.wikipedia.org/wiki/HMAC) der Projekt-URL und der Nutzdaten. 
 
 Der zweite Code Snippet, den Sie zu Ihrem Content-Block hinzufügen müssen, erfasst die URL, die für das Hashing verwendet werden soll.
 {% raw %}
@@ -224,7 +224,7 @@ Bevor Sie beginnen, finden Sie hier die üblichen JSON-Payload-Parameter, die Si
 
 ### Schritt 1: Erstellen Sie Ihr Braze-to-Braze-Webhook Template
 
-Um eine PassKit-Webhook-Vorlage zu erstellen, die Sie in zukünftigen Kampagnen oder Canvase verwenden können, navigieren Sie zum Bereich **Templates und Medien** im Braze-Dashboard. Wenn Sie eine einmalige PassKit-Webhook-Kampagne erstellen oder eine bestehende Vorlage verwenden möchten, wählen Sie bei der Erstellung einer neuen Kampagne **Webhook** in Braze aus.
+Um eine PassKit-Webhook-Vorlage zu erstellen, die Sie in zukünftigen Kampagnen oder Canvase verwenden können, navigieren Sie zum Abschnitt **Templates & Medien** im Braze-Dashboard. Wenn Sie eine einmalige PassKit-Webhook-Kampagne erstellen oder eine bestehende Vorlage verwenden möchten, wählen Sie bei der Erstellung einer neuen Kampagne **Webhook** in Braze aus.
 
 Sobald Sie das PassKit Webhook Template ausgewählt haben, sollten Sie folgendes sehen:
 - **Webhook URL**: `https://api-pub1.passkit.io/coupon/singleUse/coupon`
@@ -280,7 +280,7 @@ Sie können nicht nur Pässe erstellen und aktualisieren, sondern auch die Pass-
 **Liquid Beispiel Antworten**
 
 {% tabs local %}
-{% tab Passiert EinlösungDetails %}
+{% tab passes redemptionDetails %}
 
 ```json
 {
@@ -297,7 +297,7 @@ Sie können nicht nur Pässe erstellen und aktualisieren, sondern auch die Pass-
 ```
 
 {% endtab %}
-{% tab passiert Status %}
+{% tab passes status %}
 ```
 UNREDEEMED 
 ```
