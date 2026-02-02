@@ -38,7 +38,7 @@ Navigieren Sie in Braze zu **Currents > + Create Current > Tealium Export**. Geb
 Alle Ereignisse, die an Tealium gesendet werden, enthalten die `external_user_id` des Nutzers:innen. Zur Zeit sendet Braze keine Ereignisdaten an Tealium für Nutzer:innen, die ihre `external_user_id` nicht eingestellt haben.
 
 {% alert important %}
-Es ist wichtig, dass Sie Ihre Tealium URL auf dem neuesten Stand halten. Wenn die URL Ihres Konnektors falsch ist, kann Braze keine Ereignisse senden. Wenn dieser Zustand länger als **48 Stunden** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
+Es ist wichtig, dass Sie Ihre Tealium URL auf dem neuesten Stand halten. Wenn die URL Ihres Konnektors falsch ist, kann Braze keine Ereignisse senden. Wenn dieser Zustand länger als **5 Tage** anhält, werden die Ereignisse des Konnektors gelöscht und die Daten gehen dauerhaft verloren.
 {% endalert %}
 
 ## Details zur Integration
