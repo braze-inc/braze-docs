@@ -9,10 +9,10 @@ search_tag: Partner
 
 # Hino Futuro
 
-> O produto tudo-em-um da Future Anthem para a indústria de jogos com dinheiro real, Amplifier IA, oferece personalização de conteúdo, experiências em tempo real e públicos dinâmicos. O Amplificador de IA funciona perfeitamente em esportes, cassino e loteria, permitindo que os clientes aprimorem os perfis de jogadores da Braze com atributos de jogadores específicos do setor, como jogo favorito, time favorito, pontuação de engajamento, recomendação de próxima aposta, próxima aposta esperada e mais.
+> O produto completo da [Future Anthem](https://www.futureanthem.com/) para o setor de jogos com dinheiro real, o Amplifier IA, oferece personalização de conteúdo, experiências em tempo real e públicos dinâmicos. O Amplifier IA funciona perfeitamente em esportes, cassinos e loterias, permitindo que os clientes aprimorem os perfis de jogadores do Braze com atribuições específicas do setor, como jogo favorito, time favorito, pontuação de engajamento, recomendação de próxima aposta, próxima aposta esperada e muito mais.
 
 {% alert important %}
-Este recurso está atualmente em Acesso Antecipado. Por favor, entre em contato com a equipe de sucesso do cliente da Future Anthem para começar.
+Este recurso está atualmente em Acesso Antecipado. Entre em contato com a equipe de sucesso do cliente da Future Anthem para começar.
 {% endalert %}
 
 ## Pré-requisitos
@@ -33,18 +33,18 @@ Com essa integração, você pode:
 
 ## Integração
 
-A equipe de sucesso do cliente do Future Anthem ajudará a configurar sua integração. Entre em contato com seu contato de Sucesso do Cliente e eles o ajudarão a identificar os atributos mais relevantes para você enviar para Braze.
+A equipe de sucesso do cliente do Future Anthem ajudará a configurar sua integração. Entre em contato com o seu contato de Sucesso do Cliente e ele o ajudará a identificar os atributos mais relevantes a serem enviados ao Braze.
 
 |Atributos de exemplo em Future Anthem|Exemplo de atributos no Braze|
 |-----------------------------------|---------------------------|
-|![Os atributos no perfil do usuário.]({% image_buster /assets/img/future_anthem/future_anthem_example_attributes.png %})|![O atributo do objeto.]({% image_buster /assets/img/future_anthem/braze_example_attributes.png %})|
+|![As atribuições no perfil do usuário.]({% image_buster /assets/img/future_anthem/future_anthem_example_attributes.png %})|![A atribuição do objeto.]({% image_buster /assets/img/future_anthem/braze_example_attributes.png %})|
 
 ## Braze atributos personalizados
 
 Estes são os atributos personalizados do Braze disponíveis. Para informações mais detalhadas, veja [Future Anthem: Começando](https://knowledge.futureanthem.com/getting-started).
 
 {% tabs local %}
-{% tab Recomendações de Apostas %}
+{% tab Bet Recommendations %}
 
 | Subcategoria | Exemplo (JSON) | Tipo de dado |
 | ------- | ----------- |----------- |
@@ -56,7 +56,7 @@ Estes são os atributos personalizados do Braze disponíveis. Para informações
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Recomendações Bônus %}
+{% tab Bonus Recommendations %}
 
 | Subcategoria | Exemplo | Tipo de dado |
 | ------- | ----------- |----------- |
@@ -73,7 +73,7 @@ Estes são os atributos personalizados do Braze disponíveis. Para informações
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Recomendações de Jogos %}
+{% tab Game Recommendations %}
 
 | Subcategoria | Exemplo | Tipo de dado |
 | ------- | ----------- |----------- |
@@ -89,7 +89,7 @@ Estes são os atributos personalizados do Braze disponíveis. Para informações
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Cluster de Jogadores %}
+{% tab Player Cluster %}
 
 | Subcategoria | Exemplo | Tipo de dado |
 | ------- | ----------- |----------- |
@@ -97,7 +97,7 @@ Estes são os atributos personalizados do Braze disponíveis. Para informações
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Sustentação do Jogador - risco potencial do jogador %}
+{% tab Player Sustain - Player potential risk %}
 
 | Subcategoria | Exemplo | Tipo de dado |
 | ------- | ----------- |----------- |
