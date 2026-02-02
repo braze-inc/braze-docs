@@ -25,13 +25,13 @@ valid_partner_list:
   url: /docs/partners/liftigniter/
 - name: Movable Ink
   url: /docs/partners/movable_ink/
-- name: 시트랩스
+- name: Sheetlabs
   url: /docs/partners/sheetlabs/
 - name: Amplitude
   url: /docs/partners/amplitude/
 - name: Certona
   url: /docs/partners/certona/
-- name: 미래 국가
+- name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: Judo
   url: /docs/partners/judo/
@@ -41,7 +41,7 @@ valid_partner_list:
   url: /docs/partners/odicci/
 - name: Playable
   url: /docs/partners/playable/
-- name: 본
+- name: SEEN
   url: /docs/partners/seen/
 - name: Storyly
   url: /docs/partners/storyly/
@@ -71,7 +71,7 @@ valid_partner_list:
   url: /docs/partners/niftyimages/
 - name: 미래 국가
   url: /docs/partners/future_anthem
-- name: 본
+- name: SEEN
   url: /docs/partners/seen
 - name: Just Words
   url: /docs/partners/just_words/
