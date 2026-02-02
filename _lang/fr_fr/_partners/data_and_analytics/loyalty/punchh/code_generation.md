@@ -126,7 +126,7 @@ Pour lier le code de coupon à l'intérieur d'une image :
 3. Intégrez votre lien dans une étiquette HTML {% raw %}`<img>`{% endraw %}.
 
 {% tabs local %}
-{% tab exemple de saisie %}
+{% tab example input %}
 {% raw %}
 ```liquid
 <img src="https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.png?sign={{jwt}}">
@@ -134,8 +134,8 @@ Pour lier le code de coupon à l'intérieur d'une image :
 {% endraw %}
 {% endtab %}
 
-{% tab exemple de sortie %}
-![Restitution de la balise de l’image du code de coupon.]({% image_buster /assets/img/punchh/punchh9.png %})
+{% tab example output %}
+![Résultat du rendu de l'étiquette de l'image du code du coupon.]({% image_buster /assets/img/punchh/punchh9.png %})
 {% endtab %}
 {% endtabs %}
 
