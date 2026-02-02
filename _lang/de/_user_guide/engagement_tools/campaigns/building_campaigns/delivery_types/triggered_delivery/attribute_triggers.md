@@ -22,7 +22,7 @@ Attributauslöser sind für die folgenden Szenarien verfügbar:
 
 Um mit der Verwendung von Attributauslösern zu beginnen, erstellen Sie eine Kampagne oder eine Canvas-Komponente und wählen Sie **Aktionsbasierte Zustellung** als Zustellungsmethode. Wählen Sie dann den Attribut-Trigger aus, den Sie verwenden möchten.
 
-!["Aktionsbasierte Zustellung" mit einer Dropdown-Liste zum Auswählen eines Auslösers.]({% image_buster /assets/img_archive/trigger_attribute.png %})
+![Abschnitt "Aktionsbasierte Zustellung" mit einer Dropdown-Liste zum Auswählen eines Auslösers.]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Abo-Status aktualisieren
 
@@ -60,9 +60,9 @@ Bei einem Änderungsattribut wird zuerst der Trigger und dann das Zielgruppenkri
 
 Verwenden Sie den Auslöser `Change Custom Attribute Value` mit der Option `any new value`, um Nutzer:innen anzusprechen, wenn sich ein boolescher, ganzzahliger, String- oder Datumswert in einen beliebigen neuen Wert ändert.
 
-Stellen Sie Nutzer:innen zum Beispiel gezielt zusammen, wenn sich die Anzahl ihrer Rewards-Punkte ändert, um ihnen mitzuteilen, wie viele Punkte sie jetzt haben. In diesem Beispiel nehmen wir an, dass ein Nutzer:innen 85 Rewardspunkte hat und Sie eine Kampagne eingerichtet haben, die triggert, wenn sich das Attribut Rewardspunkte auf einen neuen Wert ändert. Wenn sich der Wert des Attributs Rewardspunkte dieses Nutzers:innen auf einen neuen Wert ändert (z.B. 83, 84, 86, usw.), wird die Kampagne getriggert.
+Stellen Sie Nutzer:innen zum Beispiel gezielt zusammen, wenn sich die Anzahl ihrer Rewards-Punkte ändert, um ihnen mitzuteilen, wie viele Punkte sie jetzt haben. In diesem Beispiel nehmen wir an, dass ein Nutzer:innen 85 Rewards-Punkte hat und Sie eine Kampagne eingerichtet haben, die triggert, wenn sich das Attribut Reward-Punkte auf einen neuen Wert ändert. Wenn sich der Wert des Attributs Rewardspunkte dieses Nutzers:innen auf einen neuen Wert ändert (z.B. 83, 84, 86, usw.), wird die Kampagne getriggert.
 
-Betrachten Sie den nächsten Anwendungsfall mit einer Benachrichtigung über ein Stufen-Update. Vielleicht möchten Sie Nutzer:innen benachrichtigen, wenn sich ihre Rewards-Stufe ändert. Um diesen Anwendungsfall zu realisieren, richten Sie eine Kampagne ein, die durch `Change Custom Attribute Value` ausgelöst wird, und stellen Sie sie so ein, dass sie ausgelöst wird, wenn sich das angepasste Attribut Rewards Tier auf einen neuen Wert ändert.
+Betrachten Sie den nächsten Anwendungsfall mit einer Benachrichtigung über ein Stufen-Update. Vielleicht möchten Sie Nutzer:innen benachrichtigen, wenn sich ihre Rewards-Stufe ändert. Um diesen Anwendungsfall zu realisieren, richten Sie eine Kampagne ein, die von `Change Custom Attribute Value` ausgelöst wird, und stellen Sie sie so ein, dass sie ausgelöst wird, wenn sich das angepasste Attribut Rewards Tier auf einen neuen Wert ändert.
 
 {% alert important %}
 Attribut-Trigger sind derzeit nicht für Array-Attribute verfügbar.
