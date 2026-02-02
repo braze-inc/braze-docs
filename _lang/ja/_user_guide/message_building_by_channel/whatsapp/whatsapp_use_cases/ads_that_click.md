@@ -32,7 +32,7 @@ WhatsAppで今すぐチャット」などのフレーズを使って、広告を
 {% endalert %}
 
 {: start="2"}
-2\.Brazeで、アクションベースのキャンバスを設定する。アクションベースのオプションは**Send a WhatsApp inbound messageで**、メッセージ本文は“YOUR_TRIGGER_WORD”. この例では、フードデリバリーアプリが "free delivery "を使っている。
+2\.Brazeでアクションベースのキャンバスを設定する。アクションベースのオプションは**Send a WhatsApp inbound messageで**、メッセージ本文は“YOUR_TRIGGER_WORD”. この例では、フードデリバリーアプリが "free delivery "を使っている。
 
 ![アクションベースのBrazeキャンバスのエントリスケジュール。トリガーメッセージは "WhatsApp受信メッセージを送信"、メッセージ本文は "無料配送 "の正規表現に一致する。]({% image_buster /assets/img/whatsapp/action_based_free_delivery.png %})
 
