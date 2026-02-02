@@ -61,7 +61,7 @@ valid_partner_list:
   url: /docs/partners/lokalise/
 - name: Phrase  
   url: /docs/partners/phrase/
-- name: Smartling (en anglais)
+- name: Smartling
   url: /docs/partners/smartling/
 - name: Mandarine
   url: /docs/partners/tangerine/
