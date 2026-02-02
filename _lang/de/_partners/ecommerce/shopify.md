@@ -15,6 +15,9 @@ guide_featured_list:
 - name: Shopify Standard-Integration einrichten
   link: /docs/shopify_standard_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
+- name: Shopify Standard-Integration mit Tagging von Drittanbietern
+  link: /docs/shopify_standard_integration_third_party_tagging/
+  image: /assets/img/braze_icons/shopping-cart-03.svg
 - name: Shopify Angepasste Integration einrichten
   link: /docs/shopify_custom_integration/
   image: /assets/img/braze_icons/shopping-cart-03.svg
@@ -37,16 +40,3 @@ guide_menu_list:
   link: /docs/ecommerce_use_cases/
   image: /assets/img/braze_icons/users-01.svg
 ---
-<br><br>
-
-## Neue Shopify Integration
-
-Dies ist eine neue Version der Shopify Integration, die ab April 2025 schrittweise veröffentlicht wird. Die Phasen richten sich nach der Art des Shopify Shops und der externen ID, die zur Einrichtung der ersten Integration verwendet wurde. 
-
-**Die ältere Version der Integration wird am 28\. August 2025 veraltet sein. Sie müssen vor dem 28\. August 2025 auf die neuere Version der Integration aktualisieren.**
-
-**Neue Braze Kund:in:** Ab April 2025 wird Braze den neuen Shopify Konnektor schrittweise für neue Onboardings und Upgrades von bestehenden Kund:in einführen. Um mehr über die neue Standard Integration zu erfahren, lesen Sie [Shopify Standard Integration]({{site.baseurl}}/shopify_standard_integration/).
-
-**Bestehende Braze Kund:innen:** Ab Februar 2025 werden wir Sie mit einer Upgrade-Anleitung kontaktieren, um Ihnen den Übergang zur neueren Shopify Integration zu erleichtern.  Wir werden Kunden in Gruppen (Kohorten) einteilen, die auf Ihrem Shopify Shop basieren und darauf, wie Sie externe IDs von Braze verwenden, um ein reibungsloses und personalisiertes upgraden zu ermöglichen. Sie werden benachrichtigt, wenn Ihre Kohorte für das Upgrade bereit ist.
-
-**Das Upgraden auf diese neuere Version führt zu wesentlichen Änderungen.** Sie werden auf dem Braze-Dashboard durch einen Überprüfungsprozess geführt, der Ihnen und Ihrem Entwickler:in-Team hilft, diese Änderungen vor dem Upgrade zu berücksichtigen.
