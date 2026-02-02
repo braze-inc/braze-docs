@@ -28,14 +28,14 @@ hidden: true
 
 Après vous être connecté à votre compte YOUBORA tool suite, accédez à la page Intégrations en sélectionnant l'option **Intégrations** dans le menu déroulant du compte.
 
-![NPAW dropdown]({% image_buster /assets/img/npaw_dropdown.png %})
+![NPAW dropdown (liste déroulante)]({% image_buster /assets/img/npaw_dropdown.png %})
 
 ## Configuration de votre intégration
 
 Une fois que vous avez accédé à la page d'intégration, faites défiler la page vers le bas jusqu'à
 voir l'option d'**intégration de Braze**. Après avoir cliqué dessus, il s'agrandira et proposera un certain nombre de paramètres requis à remplir :
 
-![Intégration NPAW ] ({% image_buster /assets/img/npaw_integration.png %})
+![Intégration NPAW]({% image_buster /assets/img/npaw_integration.png %})
 
 Remplissez les champs appropriés avec les informations recueillies dans la section des prérequis, où :
 * Le **nom du connecteur** est une chaîne de caractères **alphanumérique** qui sera utilisée pour faire référence à cette intégration à l'avenir. Cette valeur peut être réglée comme vous le souhaitez tant qu'elle **ne** contient que des lettres et des chiffres.
@@ -51,6 +51,6 @@ Une fois que vous avez terminé de configurer votre intégration avec Braze, acc
 
 Après avoir créé un échantillon dans le **gestionnaire d'échantillons**, vous pouvez maintenant cliquer sur l'icône à trois points sur le côté droit pour envoyer tous les utilisateurs de votre échantillon vers Braze.
 
-![Gestionnaire d'échantillons NPAW ] ({% image_buster /assets/img/npaw_sample_manager.png %})
+![Gestionnaire d’échantillons NPAW]({% image_buster /assets/img/npaw_sample_manager.png %})
 
 Désormais, une fois que vous avez envoyé vos utilisateurs vers Braze, vous pouvez passer à l'action et concentrer les campagnes sur les segments d'utilisateurs pour réengager les utilisateurs inactifs, contacter vos utilisateurs les plus fidèles ou toute action sur n'importe quel segment d'utilisateurs !
