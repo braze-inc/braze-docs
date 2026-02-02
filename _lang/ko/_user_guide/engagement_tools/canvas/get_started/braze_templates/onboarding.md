@@ -13,7 +13,7 @@ tool: Canvas
 
 이 문서에서는 사용자 라이프사이클의 고려 단계를 위한 **온보딩** 템플릿의 사용 사례를 통해 신규 사용자를 위한 원활한 온보딩 여정을 만드는 방법을 안내합니다. 이 글이 끝나면 이러한 신규 사용자를 위해 개인화된 메시지로 이 Braze 캔버스 템플릿을 커스텀할 수 있습니다.
 
-## 전제 조건
+## 필수 조건
 
 이 템플릿을 사용하기 전에 캔버스에서 참조할 다음 [이메일 템플릿을]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template) 만들어야 합니다:
 
@@ -33,20 +33,20 @@ tool: Canvas
 
 1. 템플릿 이름 옆의 **편집을** 선택합니다.
 
-캔버스의 현재 제목과 설명입니다.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
+![캔버스의 현재 제목과 설명입니다.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. 캔버스 이름을 업데이트하여 캔버스가 신규 사용자 온보딩용임을 지정합니다.
 3\. 설명을 업데이트하여 캔버스가 사용자와의 신뢰와 로열티를 증진하는 사용자 여정을 매핑한다는 점을 명시하세요.
 4\. 캔버스 홈 페이지에서 필터링할 수 있도록 **온보딩** 태그를 추가합니다.
 
-캔버스의 새 이름, 설명 및 태그입니다.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
+![캔버스의 새 이름, 설명 및 태그입니다.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
 
 ### 2단계: 전환 이벤트 할당하기
 
-다음으로 전환 이벤트를 할당해 보겠습니다. 전환 이벤트는 캔버스의 성공 여부를 측정하는 데 사용할 수 있는 측정기준의 일종입니다. 커스텀 **이벤트 이름에** 커스텀 이벤트로 **이메일 클릭을** 선택합니다.
+다음으로 전환 이벤트를 할당해 보겠습니다. 전환 이벤트는 캔버스의 성공 여부를 측정하는 데 사용할 수 있는 일종의 지표입니다. 커스텀 **이벤트 이름에** 커스텀 이벤트로 **이메일 클릭을** 선택합니다.
 
-주요 전환 이벤트 - 전환 유형이 "커스텀 이벤트 수행"이고 커스텀 이벤트 이름이 "이메일 클릭"인 A입니다. 전환 기한은 4일입니다.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
+![주요 전환 이벤트 - 전환 유형이 "커스텀 이벤트 수행"이고 커스텀 이벤트 이름이 "이메일 클릭"인 A입니다. 전환 기한은 4일입니다.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 즉, 신규 사용자는 최대 4일 이내에 환영 이메일을 클릭해야 합니다. 이 경우 신규 사용자가 PantsLabyrinth에 참여해야 한다는 절박감을 느끼고 시즌 의류에 대한 정기 배송을 구독할 수 있도록 하려고 합니다.
 
@@ -56,7 +56,7 @@ tool: Canvas
 
 다음으로 **입력 창을** 조정하여 사용자가 캔버스에 들어갈 수 있는 시간을 결정합니다. 10월 말에 PantsLabyrinth 구독이 출시될 예정이라고 가정해 보겠습니다. 여기에서 시작 시간을 **2024/10/28 오전 8:00로** 설정합니다. 선택적으로 사용자가 현지 시간대로 캔버스에 입장하도록 할 수도 있습니다.
 
-시작 시간이 2024년 10월 28일 오전 8시로 설정된 응모 기간입니다. 사용자는 현지 시간대로 이 메시지를 입력합니다.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
+![시작 시간이 2024년 10월 28일 오전 8시로 설정된 응모 창입니다. 사용자는 현지 시간대로 이 메시지를 입력합니다.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### 4단계: 오디언스 타겟팅하기
 
@@ -66,7 +66,7 @@ tool: Canvas
 
 기본값으로 이 캔버스는 가입하거나 옵트인한 사용자에게 전송되며 최대 게재빈도 설정 규칙을 따릅니다. 이 설정은 그대로 유지하겠습니다.
 
-### 6단계: 캔버스 커스텀하기
+### 6단계: 캔버스 사용자 지정
 
 이제 템플릿 단계를 커스텀하여 캔버스를 구축해 보겠습니다.
 
@@ -82,22 +82,22 @@ tool: Canvas
 
 오디언스 경로 단계인 **오디언스 분할에서** 참여 사용자에 대한 필터를 커스텀할 수 있습니다. 템플릿에서 필터는 **환영 이메일 단계의 이메일을 클릭함이며**, 이는 사용자가 환영 이메일을 클릭한 사용자와 클릭하지 않은 사용자의 두 그룹으로 나뉜다는 의미입니다.
 
-참여 사용자에게는 하나의 경로를, 그 외의 사용자에게는 하나의 경로를 제공하는 오디언스 분할 단계입니다.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
+![참여 사용자에게는 하나의 경로를, 그 외 모든 사용자에게는 하나의 경로를 제공하는 오디언스 분할 단계입니다.]({% image_buster /assets/img/canvas_templates/onboarding2.png %}){: style="max-width:70%;"}
 
 온라인 의류 리테일러인 팬츠라비린스에는 모바일 사용자 그룹도 활발하게 활동하고 있습니다. 따라서 별도의 온보딩 캔버스에서 다음 필터를 선택하여 모바일 사용자를 식별하고 이러한 세그먼트로 분할할 수도 있습니다:
 
 - **단계 환영 콘텐츠 카드에 대한 콘텐츠 카드를 클릭했습니다.**
-- **그 외 모든 사람**
+- **다른 모든 사용자**
 
 #### 오디언스 경로로 더 많은 사용자 타겟팅하기
 
 앱과 상호 작용하지 않은 사용자 집합에서 '클릭 확인' 단계와 '윈백 넛지' 단계를 편집하여 이러한 사용자를 추가로 타겟팅할 수 있습니다.
 
-### 7단계: 캔버스 테스트 및 실행하기
+### 7단계: 캔버스 테스트 및 실행
 
 캔버스를 테스트하고 검토하여 예상대로 작동하는지 확인한 후 **캔버스 시작** 을 선택하여 캔버스를 실행합니다. 이제 신규 사용자에게 개인화된 온보딩 경험을 제공하여 지속적인 관계를 유지할 수 있습니다!
 
 {% alert tip %}
-캔버스를 출시하기 전과 후에 고려해야 할 사항은 [출시 전후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
+캔버스 출시 전후에 고려해야 할 사항은 [출시 전/후 체크리스트를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) 확인하세요.
 {% endalert %}
 
