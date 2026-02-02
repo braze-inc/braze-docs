@@ -5,7 +5,7 @@ page_order: 0
 layout: dev_guide
 alias: /liquid/
 search_rank: 3
-guide_top_header: "液体タグを使用したカスタマイズ"
+guide_top_header: "Liquidタグを使用したカスタマイズ"
 guide_top_text: "Braze は、指定されたユーザーの値を自動的にメッセージに置き換えます。中括弧の2組の内側に式を置き、補間値を使用していることをBrazeに通知します。これらの括弧内では、置換するユーザー値は、先頭にドル記号を付けた追加の括弧で囲む必要があります。<br><br>Liquid の詳細については、Braze Learning のガイド付きの「<b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Liquid のダイナミックパーソナライゼーション</a></b>」の Braze 学習パスをご覧ください。"
 description: "このランディングページでは、サポートされているパーソナライゼーションタグ、フィルター、デフォルト値の設定など、Liquid のすべてを網羅しています。"
 
@@ -53,7 +53,7 @@ guide_featured_list:
 
 例えば、整数データ型のユーザープロファイルからカスタム属性を取得し、その値を最も近い整数に丸めることができます。Liquid の構文と使用方法については、[**サポートされているパーソナライゼーションタグ**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を参照してください。
 
-リキッドテンプレーティング言語は、オブジェクト、タグs、およびフィルターs の使用をサポートします。
+Liquidテンプレーティング言語は、オブジェクト、タグ、およびフィルターの使用をサポートします。
 
 - [**オブジェクト**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)を使用すると、メッセージにパーソナライズされた 属性sを挿入できます。
 - [**タグ**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)を使用すると、メッセージングにデータを挿入し、条件付きロジックを使用して、特定の条件が満たされた場合にメッセージを送信できます。例えば、タグを使用して、「if」文などのインテリジェントロジックをキャンペーンに含めることができます。
