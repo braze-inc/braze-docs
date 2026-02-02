@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Nift](https://gonift.com/) ajuda as empresas a adquirir, engajar e reter clientes. A plataforma bilateral ajuda os parceiros a agradecerem seus clientes com cartões-presente da Nift. Agradecer aos clientes aumenta o valor do tempo de vida e gera receita incremental.
 
-_Essa integração é mantida pelo Nift._
+_Esta integração é mantida pela Nift._
 
 ## Sobre a integração
 
@@ -41,7 +41,7 @@ Você pode alterar o nome do parâmetro de ID do cliente no link de referência 
 
 Clique em **Vincular Conta**.
 
-!["Página de integração do serviço Nift solicitando ao usuário a chave de API do Braze e a URL do dashboard do Braze.]({% image_buster /assets/img/nift/link_your_braze_account.png %})
+![Página de integração do serviço Nift solicitando a chave de API da Braze e o URL do dashboard da Braze.]({% image_buster /assets/img/nift/link_your_braze_account.png %})
 
 ## Usando a integração
 
