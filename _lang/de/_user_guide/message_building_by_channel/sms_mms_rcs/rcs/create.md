@@ -1,6 +1,6 @@
 ---
-nav_title: "Erstellen einer RCS Nachricht"
-article_title: Erstellen einer RCS Nachricht
+nav_title: Eine RCS Nachricht erstellen
+article_title: Eine RCS Nachricht erstellen
 page_order: 2
 alias: /create_rcs_message/
 description: "Dieser Artikel beschreibt, wie Sie eine RCS Nachricht erstellen."
@@ -9,7 +9,7 @@ channel:
   - RCS
 ---
 
-# Erstellen einer RCS Nachricht
+# Eine RCS Nachricht erstellen
 
 > RCS Kampagnen eignen sich hervorragend, um Ihre Kund:in direkt zu erreichen und programmgesteuert mit ihnen zu kommunizieren. Sie können Liquid und andere dynamische Inhalte verwenden, um ein persönliches Erlebnis mit Ihren Nutzern zu schaffen und eine Umgebung zu schaffen, die ein unaufdringliches Nutzererlebnis mit Ihrer Marke fördert und verbessert.
 
@@ -17,12 +17,12 @@ channel:
 
 ### Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
+Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
 
 {% tabs %}
 {% tab Campaign %}
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
-2. Wählen Sie **SMS/MMS/RCS**, oder für Kampagnen, die auf mehrere Kanäle abzielen, wählen Sie **Multichannel**.
+2. Wählen Sie **SMS/MMS/RCS** oder, für Kampagnen, die auf mehrere Kanäle abzielen, **Multichannel**.
 3. Geben Sie Ihrer Kampagne einen klaren und aussagekräftigen Namen.
 4. Fügen Sie nach Bedarf [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) und [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
    * Mithilfe von Tags lassen sich Ihre Kampagnen leichter finden und Berichte daraus erstellen. Wenn Sie zum Beispiel den [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/) verwenden, können Sie nach bestimmten Tags filtern.
@@ -38,7 +38,7 @@ Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canva
 {: start="7"}
 7\. Wählen Sie zwischen SMS und RCS. Bevor Sie RCS-Nachrichten verfassen, wählen Sie den Kanal, über den Sie senden. Wir empfehlen generell die Verwendung von RCS, wo immer dies möglich ist, da dies erhebliche Vorteile für das Engagement der Nutzer:innen gegenüber SMS mit sich bringt. Wir bieten jedoch immer die Möglichkeit, per SMS zu versenden, damit Sie maximale Flexibilität und Kontrolle haben. 
 
-Optionen zum Auswählen eines RCS- oder SMS/MMS-Nachrichtentyps.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
+![Optionen zum Auswählen eines RCS- oder SMS/MMS-Nachrichtentyps.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
 
 {% alert tip %}
 Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt haben, sollten Sie Ihre Nachricht verfassen, bevor Sie zusätzliche Varianten hinzufügen. Sie können dann aus der Dropdown-Liste **Variante hinzufügen** die Option **Aus Variante kopieren** wählen.
@@ -55,7 +55,7 @@ Wenn alle Nachrichten in Ihrer Kampagne ähnlich sind oder den gleichen Inhalt h
 {: start="5"}
 5\. Wählen Sie zwischen SMS und RCS. Bevor Sie RCS-Nachrichten verfassen, wählen Sie den Kanal, über den Sie senden. Wir empfehlen generell die Verwendung von RCS, wo immer dies möglich ist, da dies erhebliche Vorteile für das Engagement der Nutzer:innen gegenüber SMS mit sich bringt. Wir bieten jedoch immer die Möglichkeit, per SMS zu versenden, damit Sie maximale Flexibilität und Kontrolle haben. 
 
-Optionen zum Auswählen eines RCS- oder SMS/MMS-Nachrichtentyps.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
+![Optionen zum Auswählen eines RCS- oder SMS/MMS-Nachrichtentyps.]({% image_buster /assets/img/rcs/rcs_message_type.png %}){: style="max-width:65%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -127,7 +127,8 @@ Bevor Sie fortfahren, lesen Sie unsere [Richtlinien für die Begrenzung von RCS 
 
 ### Schritt 4: Vorschau und Test Ihrer Nachricht
 
-Braze empfiehlt immer, Ihre Nachricht vor dem Versand in der Vorschau zu prüfen. Gehen Sie auf den Tab **Test**, um eine Test-RCS an Inhaltstestgruppen oder einzelne Nutzer:innen zu senden, oder um eine Vorschau der Nachricht als Nutzer:innen direkt in Braze anzuzeigen.
+Da das RCS-Rendering vom Betriebssystem des Nutzers, dem Hersteller des Geräts, dem Netzbetreiber und der Messaging-App gesteuert wird (z.B. Google Messages vs. Apple Messaging) können Nachrichten unterschiedlich aussehen. Daher stimmt die in Braze angezeigte RCS Vorschau möglicherweise nicht genau mit dem überein, was ein Endnutzer:in letztendlich erhält. Die Unterschiede können Layout, Mediengröße, Buttons, Branding-Elemente oder unterstützte Features betreffen. Braze empfiehlt immer, Ihre Nachricht vor dem Versand in der Vorschau zu prüfen. Verwenden Sie den Tab **Test**, um einen Test-RCS an Inhaltstestgruppen oder einzelne Nutzer zu senden und eine Vorschau der Nachricht als Nutzer:innen direkt in Braze anzuzeigen. Das endgültige Rendering sollte jedoch nach Möglichkeit immer auf realen Geräten validiert werden, da Braze keine perfekte Parität für alle Kombinationen von Betriebssystemen, Geräten und Anbietern garantieren kann.
+
 
 ### Schritt 5: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
 
@@ -147,7 +148,7 @@ Stellen Sie Nutzer:innen durch die Auswahl von Segmenten oder Filtern gezielt zu
 
 {% multi_lang_include target_audiences.md %}
 
-Als nächstes wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit optionalen [Filtern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) weiter ein. Sie erhalten automatisch eine Vorschau darauf, wie die ungefähre Anzahl der Segmente im Moment aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
+Als nächstes wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit optionalen [Filtern]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) weiter ein. Sie erhalten automatisch eine Vorschau darauf, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
 
 {% alert tip %}
 Möchten Sie RCS Retargeting nutzen, um Nutzer:innen auf der Basis ihrer SMS- und RCS-Interaktionen zu targetieren? Verweisen Sie auf [Retargeting]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).
@@ -179,7 +180,7 @@ Wenn Sie Liquid verwenden möchten, stellen Sie sicher, dass Sie einen Standardw
 
 Benötigen Sie Hilfe bei der Erstellung ansprechender Texte? Versuchen Sie es mit dem [KI-Textwerkstatt-Assistenten]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Geben Sie einen Produktnamen oder eine Beschreibung ein, und die KI generiert menschenähnliche Marketingtexte für Ihr Messaging.
 
-![Nachrichten-Editor mit einem Symbol zum Öffnen des KI-Texter-Assistenten.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
+![Nachrichten-Editor mit einem Symbol zur Öffnung des KI-Textwerksassistenten.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 
 ## Häufig gestellte Fragen
 
