@@ -27,18 +27,18 @@ L'intégration de Braze et d'Adikteev vous permet de stimuler la rétention des 
 | Endpoint REST de Braze | [L'URL de votre endpoint REST.]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d’utilisation
+## Cas d'utilisation
 
 {% tabs %}
-{% tab Filtrage de l'audience %}
+{% tab Audience filtering %}
 Affinement de vos segments d'audience en fonction du risque de désabonnement.<br> Les noms et valeurs des attributs personnalisés envoyés par Adikteev sont configurables.
 
-![Capture d'écran montrant un exemple d'utilisation d'un attribut personnalisé envoyé par Adikteev comme filtre d'un segment d'audience.]({% image_buster /assets/img/adikteev/audience.png %})
+![Une capture d'écran montrant un exemple d'utilisation d'un attribut personnalisé envoyé par Adikteev comme filtre d'un segment d'audience.]({% image_buster /assets/img/adikteev/audience.png %})
 {% endtab %}
-{% tab Ciblage des messages %}
+{% tab Message targeting %}
 Personnalisation de vos campagnes de messages Braze en fonction du risque de désabonnement des destinataires.
 
-![Capture d'écran montrant un exemple d'utilisation d'un attribut personnalisé envoyé par Adikteev comme filtre de ciblage de campagne.]({% image_buster /assets/img/adikteev/campaign.png %})
+![Une capture d'écran montrant un exemple d'utilisation d'un attribut personnalisé envoyé par Adikteev comme filtre de ciblage de campagne.]({% image_buster /assets/img/adikteev/campaign.png %})
 {% endtab %}
 {% endtabs %}
 
