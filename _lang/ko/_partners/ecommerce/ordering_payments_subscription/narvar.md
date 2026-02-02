@@ -13,7 +13,7 @@ search_tag: Partner
 
 ## Prerequisites
 
-| Requirement           | Description                                                                                   |
+| Requirement           | 설명                                                                                   |
 |-----------------------|-----------------------------------------------------------------------------------------------|
 | Narvar Account        | A Narvar account is required to take advantage of this partnership.                           |
 | Braze REST API key    | A Braze REST API key with `messages.send` permission. This can be created in the Braze dashboard from **Settings** > **API Keys**.                                            |
