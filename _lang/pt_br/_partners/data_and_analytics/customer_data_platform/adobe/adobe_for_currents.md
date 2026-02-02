@@ -27,7 +27,7 @@ A integração Braze e Adobe permite que você controle de forma contínua o flu
 
 ### Etapa 1: Crie um esquema XDM no Adobe
 
-1. No Adobe Experience Platform, Acessar **Schemas** > selecionar **Criar esquema** > selecionar **Evento de Experiência** > selecionar **Próximo**.<br><br>![Página do Adobe Schemas para o esquema chamado "Braze Currents Walk-Through".]({% image_buster /assets/img/adobe/currents_sources.png %})<br><br>
+1. No Adobe Experience Platform, Acessar **Schemas** > selecionar **Criar esquema** > selecionar **Evento de Experiência** > selecionar **Próximo**.<br><br>![Página de Esquemas da Adobe para o esquema chamado "Braze Currents Walk-Through".]({% image_buster /assets/img/adobe/currents_sources.png %})<br><br>
 2. Forneça um nome e uma descrição para seu esquema. 
 3. No painel **Composição**, configure os atributos do seu esquema:
 - Em **Field groups**, selecione **Add** e, em seguida, adicione o grupo de campos **Braze Currents User Event**.
@@ -39,7 +39,7 @@ Para saber mais sobre esquemas, consulte a documentação da Adobe sobre [criaç
 
 1. No Adobe Experience Platform, Acessar **Sources** > **Catalog** > **Marketing automation**.
 2. Selecione **Add data** para Braze Currents.
-3. Fazer upload do [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json).<br><br>![Adobe "Add data page" (Adicionar página de dados).]({% image_buster /assets/img/adobe/currents_add_data.png %})<br><br>
+3. Fazer upload do [Braze Currents sample file](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json).<br><br>![Adobe "Adicionar página de dados".]({% image_buster /assets/img/adobe/currents_add_data.png %})<br><br>
 4. Após o upload do seu arquivo, forneça os detalhes do seu fluxo de dados, incluindo informações sobre seu conjunto de dados e o esquema ao qual você está mapeando. 
     - Se esta é a sua primeira vez conectando uma fonte de Braze Currents, crie um novo conjunto de dados e certifique-se de usar o esquema que você criou em [Etapa 1](#step-1-create-an-xdm-schema-in-adobe). 
     - Se esta não é a sua primeira vez, use qualquer conjunto de dados existente que faça referência ao esquema Braze.
