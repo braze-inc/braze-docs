@@ -1,7 +1,7 @@
 ---
 nav_title: VWO
-article_title: Integração do VWO com o Braze
-description: "Saiba como integrar o VWO ao Braze."
+article_title: Integre o VWO com o Braze
+description: "Aprenda como integrar o VWO com o Braze."
 alias: /partners/vwo/
 page_type: partner
 search_tag: Partner
@@ -9,65 +9,65 @@ search_tag: Partner
 
 # VWO
 
-> [O VWO](https://vwo.com/) é uma poderosa plataforma de experimentação que ajuda as marcas a aprimorar as principais métricas de negócios, ativando as equipes para executar programas de otimização de conversão com o apoio de dados de comportamento do cliente. Com o VWO, você pode unificar os dados do cliente, obter insights comportamentais, criar hipóteses, executar Testes A/B em várias plataformas (servidor, Web e móvel), implementar recursos, personalizar experiências e otimizar toda a jornada do cliente.
+> [VWO](https://vwo.com/) é uma poderosa plataforma de experimentação que ajuda as marcas a melhorar métricas de negócios importantes, permitindo que as equipes executem programas de otimização de conversão apoiados por dados de comportamento do cliente. Com o VWO, você pode unificar dados de clientes, obter insights comportamentais, construir hipóteses, realizar testes A/B em várias plataformas (servidor, web e mobile), lançar recursos, personalizar experiências e otimizar toda a jornada do cliente.
 
-Ao integrar o VWO com o Braze, você pode aproveitar os dados de experimentos do VWO para criar segmentos direcionados e fornecer campanhas personalizadas.
+Ao integrar o VWO com o Braze, você pode aproveitar os dados de experimentos do VWO para criar segmentos direcionados e entregar campanhas personalizadas.
 
 ## Pré-requisitos
 
 | Requisito     | Descrição |
 |-----------------|-------------|
-| Conta VWO     | Uma conta VWO com acesso a dados de experimentação. |
-| Conta Braze   | Uma conta Braze ativa com o [Braze Web SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) integrado em sua página da Web. Você também precisará ativar a segmentação de propriedades de eventos. Para solicitá-lo, consulte [Considerações](#request-event-property-segmentation). |
+| Conta do VWO     | Uma conta do VWO com acesso a dados de experimentação. |
+| Conta Braze   | Uma conta ativa do Braze com o [Braze Web SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web) integrado em sua página da web. Você também precisará da segmentação de propriedades de eventos ativada. Para solicitá-la, veja [Considerações](#request-event-property-segmentation). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Integração do VWO com o Braze
+## Integrando o VWO com o Braze
 
-### Etapa 1: Ativar a integração do Braze no VWO
+### Etapa 1: Ative a integração do Braze no VWO
 
-1. Faça o registro em sua conta VWO.
-2. No dashboard do VWO, acesse **Configurações > Integrações**. Aqui, você pode ativar as integrações no nível do espaço de trabalho, o que aplica a integração a todas as campanhas de teste futuras por padrão.
+1. Faça login na sua conta do VWO.
+2. No painel do VWO, acesse **Configurações > Integrações**. Aqui, você pode ativar integrações no nível do espaço de trabalho, o que aplica a integração a todas as futuras campanhas de teste por padrão.
 
-   ![Configuração de integração do VWO]({% image_buster /assets/img/vwo/vwo1_settings.png %})
+   ![Configuração de Integração do VWO]({% image_buster /assets/img/vwo/vwo1_settings.png %})
 
 4. Selecione a integração do Braze para ativá-la.
-5. Opcionalmente, você pode ativar a integração do Braze para quaisquer campanhas existentes. Para fazer isso, selecione uma campanha, acesse **Configuration > Integrations (Configuração > Integrações**) e ative o Braze.
+5. Opcionalmente, você pode ativar a integração do Braze para quaisquer campanhas existentes. Para fazer isso, selecione uma campanha, depois acesse **Configuração > Integrações**, e ative o Braze.
 
-   ![Ativar a integração do Braze]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
+   ![Ativar Integração Braze]({% image_buster /assets/img/vwo/vwo2_enable_braze.png %})
 
-6. Depois de ativar a capacitação, o VWO começará a enviar dados de experimentos para o Braze no nível da campanha.
+6. Depois de ativar a integração, o VWO começará a enviar dados de experimentos para o Braze no nível da campanha.
 
-### Etapa 2: Criar um segmento no Braze com propriedades de evento VWO
+### Etapa 2: Crie um segmento no Braze com propriedades de evento do VWO
 
-1. No dashboard do Braze, selecione **Segments** > **\+ Create Segment**( **Segmentos** **\+ Criar Segmento**).
-3. Na janela **Create Segment (Criar segmento** ), insira um nome para o segmento e, em seguida, **Create Segment (Criar segmento**).
-4. Em seu segmento recém-criado, selecione **Filters (Filtros** ) > **Add Filter (Adicionar filtro**) e escolha **Custom Event (Evento personalizado** ) como o tipo de filtro.
-6. No menu suspenso do filtro, procure por **VWO**.
+1. No painel do Braze, selecione **Segmentos** > **\+ Criar Segmento**.
+3. Na janela **Criar Segmento**, insira um nome para o segmento, depois **Criar Segmento**.
+4. No seu segmento recém-criado, selecione **Filtros** > **Adicionar Filtro**, depois escolha **Evento Personalizado** como o tipo de filtro.
+6. No dropdown de filtro, procure por **VWO**.
 7. Selecione a propriedade VWO relevante e especifique o valor necessário.
 8. Se necessário, configure o número de visitas e o período de tempo. Quando terminar, selecione **Salvar**.
 
-   ![Braze Segment Creation]({% image_buster /assets/img/vwo/vwo3_braze_segment.png %})
+   ![Criação de Segmento Braze]({% image_buster /assets/img/vwo/vwo3_braze_segment.png %})
 
-9. Para visualizar o número de usuários que correspondem aos seus critérios de segmento, selecione **Calculate Exact Statistics (Calcular estatísticas exatas**).
+9. Para ver o número de usuários que correspondem aos critérios do seu segmento, selecione **Calcular Estatísticas Exatas**.
 
-   ![Estatísticas do segmento de Braze]({% image_buster /assets/img/vwo/vwo4_braze_segment_calculate_size.png %})
+   ![Estatísticas de Segmento Braze]({% image_buster /assets/img/vwo/vwo4_braze_segment_calculate_size.png %})
 
 ## Fluxo de dados
 
 O VWO envia os dados do experimento da campanha para o Braze como um evento personalizado usando o seguinte formato:
 
-- **Nome do evento:** VWO
-- **Propriedades do evento:** `vwo_campaign_name`, `vwo_variation_name`
+- **Nome do Evento:** VWO
+- **Propriedades do Evento:** `vwo_campaign_name`, `vwo_variation_name`
 
 {% alert tip %}
-Essas propriedades de eventos personalizados também podem ser usadas para segmentação e direcionamento.
+Essas propriedades de evento personalizado também podem ser usadas para segmentação e direcionamento.
 {% endalert %}
 
 ## Considerações
 
-### Segmentação de propriedades de eventos de solicitação
+### Solicitar segmentação de propriedades de evento
 
-Antes de poder usar a segmentação de propriedades de eventos, você precisará ativá-la no Braze. Use o modelo a seguir para entrar em contato com o CSM da Braze ou com a equipe de suporte para obter acesso.
+Antes que você possa usar a segmentação de propriedades de evento, você precisará ativá-la no Braze. Use o seguinte modelo para contatar seu CSM do Braze ou a equipe de suporte para acesso.
 
    <table>
    <thead>
@@ -79,16 +79,16 @@ Antes de poder usar a segmentação de propriedades de eventos, você precisará
    <tbody>
       <tr>
          <td><strong>Assunto</strong></td>
-         <td>Solicitação para ativar a segmentação da propriedade do evento para a integração do VWO</td>
+         <td>Solicitação para Ativar a Segmentação de Propriedades de Evento para Integração VWO</td>
       </tr>
       <tr>
          <td><strong>Corpo</strong></td>
          <td>
-         Olá, equipe do Braze,<br><br>
-         Gostaríamos de ativar a segmentação de propriedades de eventos para eventos enviados de nossa integração VWO&lt;>Braze. Aqui estão os detalhes:<br><br>
-         - <strong>Nome do evento:</strong> VWO<br>
-         - <strong>Propriedades do evento:</strong> <code>vwo_campaign_name</code>, <code>vwo_variation_name</code><br><br>
-         Confirme quando as propriedades tiverem sido ativadas em nossa conta.<br><br>
+         Olá, equipe Braze,<br><br>
+         Gostaríamos de ativar a segmentação de propriedades de evento para eventos enviados da nossa integração VWO&lt;>Braze. Aqui estão os detalhes:<br><br>
+         - <strong>Nome do Evento:</strong> VWO<br>
+         - <strong>Propriedades do Evento:</strong> <code>vwo_campaign_name</code>, <code>vwo_variation_name</code><br><br>
+         Por favor, confirme assim que as propriedades forem ativadas em nossa conta.<br><br>
          Obrigada.
          </td>
       </tr>
@@ -96,25 +96,25 @@ Antes de poder usar a segmentação de propriedades de eventos, você precisará
    </table>
    {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### Pontos de dados do Braze
+### Pontos de dados Braze
 
-O evento personalizado enviado do VWO para o Braze - incluindo quaisquer propriedades de evento ativadas para segmentação - consumirá pontos de dados em sua instância do Braze.
+O evento personalizado enviado do VWO para o Braze—incluindo quaisquer propriedades de evento ativadas para segmentação—registrará pontos de dados em sua instância Braze.
 
 ### Limitações
 
-Atualmente, essa integração não oferece suporte à sincronização em tempo real dos dados de teste. Pode haver uma postergação de até 15 minutos para que os dados do teste apareçam no Braze.
+Atualmente, essa integração não suporta a sincronização em tempo real de dados de teste. Pode haver uma postergação de até 15 minutos para que os dados de teste apareçam no Braze.
 
 ## Solução de problemas
 
-Se não estiver vendo os dados do VWO no Braze:
+Se você não estiver vendo dados do VWO no Braze:
 
-1. Clique com o botão direito do mouse na página em que sua campanha de teste está sendo executada e selecione **Inspecionar elemento**.
-2. Na guia **Network (Rede** ), procure por **Braze** para filtrar as chamadas de rede para o Braze.
-3. As chamadas de rede são preenchidas à medida que a página é carregada. Você pode recarregar a página para visualizar as chamadas de rede.
+1. Clique com o botão direito na página, onde sua campanha de teste está rodando e selecione **Inspecionar Elemento**.
+2. Na aba **Rede**, procure por **Braze** para filtrar as chamadas de rede para o Braze.
+3. As chamadas de rede são preenchidas à medida que a página carrega. Você pode recarregar a página para visualizar as chamadas de rede.
 4. Selecione uma chamada de rede para ver mais detalhes.
-5. Acesse a seção **Carga útil** da **solicitação** na guia **Carga**, onde é possível encontrar eventos: com o nome: **ce**, indicando Evento personalizado.
-6. Expanda 0: e data: para ver n: "VWO" (nome do evento personalizado) e p: {vwo_campaign_name: "<your vwo campaign name>", vwo_variation_name: "<variation name>"}. Isso indica que os valores estão sendo empurrados pelo VWO para o Braze.
+5. Acesse a seção **Payload da Solicitação** na aba **Carga Útil**, onde você pode encontrar eventos: que têm nome: **ce**, indicando Evento Personalizado.
+6. Expanda 0: e dados: para ver n: “VWO” (nome do Evento Personalizado) e p: {vwo_campaign_name: “<your vwo campaign name>”, vwo_variation_name: “<variation name>”. Esses indicam que os valores estão sendo enviados pelo VWO para o Braze.
 
- ![Solução de problemas do Braze]({% image_buster /assets/img/vwo/vwo5_troubleshooting.png %})
+ ![Solução de Problemas do Braze]({% image_buster /assets/img/vwo/vwo5_troubleshooting.png %})
 
-Para obter suporte adicional, entre em contato com o gerente de sucesso do cliente da VWO.
+Para suporte adicional, entre em contato com seu gerente de sucesso do cliente do VWO.
