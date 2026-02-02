@@ -64,7 +64,7 @@ Os atributos personalizados serão atualizados somente para os usuários que tiv
 
 Os públicos sincronizados do Amperity para o Braze serão registrados nos perfis de usuário como atributos personalizados. Elas podem ser usadas para direcionar esses usuários na Braze.
 
-![Lista suspensa de filtros com atributos personalizados exibidos na categoria Dados personalizados.]({% image_buster /assets/img/amperity/custom_attributes_filters.png %}){: style="max-width:60%;"}
+![Lista suspensa de filtros com atributos personalizados exibidos na categoria de dados personalizados.]({% image_buster /assets/img/amperity/custom_attributes_filters.png %}){: style="max-width:60%;"}
 
 ![Lista suspensa de atributos personalizados, como "l12m_frequency" e "l12m_monetary".]({% image_buster /assets/img/amperity/search_custom_attributes_filters.png %}){: style="max-width:40%;"}
 
@@ -112,7 +112,7 @@ Nomeie a tabela como "Braze Customer Attributes" (Atributos do cliente Braze) e 
 
 Na plataforma da Amperity, navegue até a guia **Destinations** (Destinos). Procure a opção de adicionar um novo destino. Entre as opções disponíveis, selecione **Braze**.
 
-![A seção New Destination com o nome "Braze API", a descrição "Send audience attributes to Braze." e o plugin "Braze".]({% image_buster /assets/img/amperity/destination_name.png %}){: style="max-width:60%;"}
+![A seção de novo destino com o nome "Braze API", a descrição "Enviar atribuições do público para a Braze" e o plug-in "Braze".]({% image_buster /assets/img/amperity/destination_name.png %}){: style="max-width:60%;"}
 
 #### Etapa 2d: configure os destinos
 
@@ -128,7 +128,7 @@ Na guia **Destinations (Destinos** ), abra o menu do destino Braze e selecione *
 
 Se as configurações necessárias não tiverem sido definidas como parte dos destinos, configure-as como parte do modelo de dados. Salvar o modelo de dados.
 
-![A seção Data Template Name com o nome "Braze Audience Attributes" e a descrição "Send audience attributes to Braze."]({% image_buster /assets/img/amperity/data_template_name.png %}){: style="max-width:60%;"}
+![A seção de nome de modelo de dados com o nome "Atributos do público da Braze" e a descrição "Enviar atributos do público para a Braze".]({% image_buster /assets/img/amperity/data_template_name.png %}){: style="max-width:60%;"}
 
 #### Etapa 2f: Salvar a configuração 
 
