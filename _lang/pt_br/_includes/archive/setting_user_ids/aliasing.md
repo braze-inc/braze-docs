@@ -10,7 +10,7 @@ Para saber mais sobre a configuração de aliases de usuário em relação a um 
 {% if include.platform == "iOS" %}
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
  [[Appboy sharedInstance].user addAlias:ALIAS_NAME withLabel:ALIAS_LABEL];
