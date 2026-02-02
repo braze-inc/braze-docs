@@ -61,7 +61,7 @@ A continuación, en el paso **Autenticación**, introduce los datos de tu conexi
 ![]({% image_buster /assets/img/adobe/braze-destination-authentication.png %}){: style="max-width:60%;"}
 
 ### Paso 4: Crear destino
-Selecciona **Crear destino**. Se ha creado tu destino. Puedes seleccionar **Guardar y Salir** para activar los segmentos más tarde o **Siguiente** para continuar el flujo de trabajo y seleccionar los segmentos a activar. 
+Selecciona **Crear destino**. Se ha creado tu destino. Puedes seleccionar **Guardar & Salir** para activar los segmentos más tarde o **Siguiente** para continuar el flujo de trabajo y seleccionar los segmentos a activar. 
 
 ### Paso 5: Activar segmentos
 Active los datos que tiene en el CDP en tiempo real de Adobe asignando segmentos al destino Braze.
@@ -98,7 +98,7 @@ Digamos que su esquema de perfil XDM y su instancia Braze contienen los siguient
 
 La asignación correcta sería la siguiente:
 
-![Asignaciones de destino: IdentityMap:IDFA mapeado a IdentityMap:external_id, IdentityMap:GAID mapeado a IdentityMap:external_id, IdentityMap:Email mapeado a IdentityMap:external_id, xdm:mobilePhone.number mapeado a CustomAttribute:PhoneNumber, xdm:person.name.lastName mapeado a CustomAttribute:LastName, xdm:person.name.firstName mapeado a CustomAttribute:FirstName]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
+![Asignaciones de destino: IdentityMap:IDFA mapeado a IdentityMap:external_id, IdentityMap:GAID mapeado a IdentityMap:external_id, IdentityMap:Email mapeado a IdentityMap:external_id, xdm:mobilePhone.number mapeado a CustomAttribute:PhoneNumber, xdm:person.name.lastName mapeado a CustomAtrribute:LastName, xdm:person.name.firstName mapeado a CustomAttribute:FirstName]({% image_buster /assets/img/adobe/braze-destination-mapping-example.png %})
 
 ## Datos exportados
 Para verificar si los datos se han exportado correctamente a Braze, comprueba tu cuenta Braze. Los segmentos de Adobe Experience Platform se exportan a Braze con el atributo `AdobeExperiencePlatformSegments`.
