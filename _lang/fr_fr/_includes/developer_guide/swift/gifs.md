@@ -2,7 +2,7 @@
 
 ## Intégration d'une bibliothèque d'images personnalisée
 
-### Étape 1 : Intégration de SDwebimage
+### Étape 1 : Intégration de SDwebimage
 
 Intégrez le [référentiel SDwebimage](https://github.com/SDWebImage/SDWebImage) dans votre projet Xcode.
 
