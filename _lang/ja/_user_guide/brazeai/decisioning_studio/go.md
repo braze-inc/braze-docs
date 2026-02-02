@@ -1,6 +1,6 @@
 ---
-nav_title: デシジョン・スタジオ・ゴー
-article_title: BrazeAIデシジョニングスタジオGo
+nav_title: Decisioning Studio Go
+article_title: BrazeAI Decisioning Studio Go
 page_order: 0
 description: "BrazeAI Decisioning<sup>StudioTM</sup>Goを設定し、Brazeに統合する方法を学ぶ。"
 ---
@@ -9,7 +9,7 @@ description: "BrazeAI Decisioning<sup>StudioTM</sup>Goを設定し、Brazeに統
 
 > BrazeAI Decisioning Studio™ Goとの統合を開始するために、Brazeで重要な情報を見つける。
 
-## エッセンシャルズ
+## 必須事項
 
 ### BrazeでREST APIキーを作成する
 
