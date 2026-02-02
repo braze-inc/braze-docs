@@ -1,6 +1,6 @@
 ---
-nav_title: Suivi des e-mails transactionnels
-article_title: Suivi des e-mails transactionnels
+nav_title: Suivre les e-mails transactionnels
+article_title: Suivre les e-mails transactionnels
 page_order: 1
 description: "Cet article de référence explique comment implémenter le suivi en temps réel pour les campagnes d'e-mails transactionnels."
 page_type: reference
@@ -10,7 +10,7 @@ channel: email
 
 ---
 
-# Suivi des e-mails transactionnels
+# Suivre les e-mails transactionnels
 
 > Cette page décrit comment implémenter le suivi en temps réel pour les [campagnes d'e-mails transactionnels]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/). Pour plus d'informations sur l'endpoint lui-même, reportez-vous à la section [Envoyer des e-mails transactionnels à l'aide de la réception/distribution déclenchée par l'API]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/).
 
