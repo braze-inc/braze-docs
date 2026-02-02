@@ -30,8 +30,8 @@ Wenn Sie wissen möchten, wie Sie Tapcart in Braze integrieren können, lesen Si
 - Rich-Push-Benachrichtigungen
 - Tracking und Segmentierung der Nutzer:innen
 
-Beachten Sie, dass die folgenden Features derzeit nicht unterstützt werden: Push-Storys, Web-Push, In-App-Nachrichten anpassen.
+Die folgenden Features werden derzeit nicht unterstützt: Push-Storys, Internet-Push, In-App-Nachricht-Anpassung.
 
 {% alert note %}
-Sollten Sie weitere Fragen haben, wenden Sie sich bitte an Ihren Tapcart-Implementierungsspezialisten oder mailen Sie an [help@tapcart.co](mailto:help@tapcart.co).
+Wenn Sie weitere Fragen haben, wenden Sie sich an Ihren Tapcart-Implementierungsspezialisten oder mailen Sie an [help@tapcart.co](mailto:help@tapcart.co).
 {% endalert %}
