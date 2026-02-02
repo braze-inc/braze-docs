@@ -24,7 +24,7 @@ Braze verfolgt automatisch, wenn ein Nutzer:innen ein Landing Page-Formular absc
 {% tab Using a segment %}
 Wenn Sie [ein Segment erstellen]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), wählen Sie unter der Gruppe "Retargeting" die Option **Übermitteltes Formular auf der Landing Page**.
 
-\![Segmentierung mit ausgewählter Filtergruppe "Eingereichtes Formular auf der Landing Page".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
+![Erstellung von Segmenten mit der Filtergruppe ausgewählt als "Eingereichtes Formular auf der Landing Page".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
 Von hier aus können Sie Nutzer:innen danach segmentieren, ob sie ein Landing Page-Formular für Ihre Landing Page abgeschickt haben oder nicht.
 {% endtab %}
@@ -34,7 +34,7 @@ Wenn Sie die Zustellung für Ihre [Kampagne]({{site.baseurl}}/user_guide/engagem
 
 Alle Nutzer:innen, die ein Formular über dieses Landing Page-Formular einreichen, erhalten entweder eine Nachricht über den gewählten Messaging-Kanal oder werden in den gewählten Canvas eingetragen.
 
-\![Landing Page Aktion triggern im Messaging.]({% image_buster /assets/img/landing_pages/trigger.png %})
+![Landing Page Aktion triggern im Messaging.]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 {% alert note %}
 Die aktionsbasierte Zustellung für Landing Pages ist für In-App-Nachrichten nicht verfügbar. Um Nutzer:innen, die ein Formular auf einer Landing Page mit einer In-App-Nachricht eingereicht haben, als Zielgruppe zusammenzustellen, wählen Sie den Filter **Eingereichtes Formular auf Landing Page** in den **Targeting-Optionen** Ihrer Kampagne aus.
