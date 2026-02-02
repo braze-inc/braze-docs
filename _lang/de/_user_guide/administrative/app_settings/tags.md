@@ -14,7 +14,7 @@ description: "Dieser Referenzartikel behandelt Tags im Braze-Dashboard, mit dene
 
 Sie können bei der Erstellung oder Bearbeitung einer Kampagne, eines Canvas oder eines Segments Tags hinzufügen. Klicken Sie auf <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** unter dem Namen des Engagements und wählen Sie ein vorhandenes Tag aus, oder beginnen Sie mit der Eingabe, um ein neues Tag hinzuzufügen.
 
-\![Hinzufügen von Tags bei der Erstellung von Kampagnen.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
+![Hinzufügen von Tags bei der Erstellung von Kampagnen.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 Sie können bis zu 175 Tags zu einer Kampagne, einem Canvas oder einem Segment hinzufügen.
@@ -24,7 +24,7 @@ Sie können bis zu 175 Tags zu einer Kampagne, einem Canvas oder einem Segment h
 
 Sie können auch Tags zu mehreren Kampagnen, Canvase oder Segmenten hinzufügen, indem Sie mehrere Engagements auswählen und <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As** wählen.
 
-\![Hinzufügen von Tags zu mehreren Kampagnen zur gleichen Zeit.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+![Hinzufügen von Tags zu mehreren Kampagnen zur gleichen Zeit.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
 
 {% alert important %}
 Wenn Sie die Massenverschlagwortung verwenden, um ein neues Tag auf mehrere Kampagnen anzuwenden, die bereits unterschiedliche Tags haben, erhält jede ausgewählte Kampagne das neue Tag, und alle Tags, die in einer Kampagne vorhanden sind, werden auf alle anderen ausgewählten Kampagnen angewendet, auch wenn diese Tags ursprünglich nicht mit ihnen verbunden waren.
@@ -34,13 +34,13 @@ Wenn Sie die Massenverschlagwortung verwenden, um ein neues Tag auf mehrere Kamp
 
 Die für eine Kampagne, ein Canvas oder ein Segment gesetzten Tags sind auf der Detailseite neben dem Namen des Engagements sichtbar. Sie erscheinen auch in den Analytics der Kampagnen.
 
-\![Tags, die auf der Seite Campaign Analytics angezeigt werden.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
+![Tags, die auf der Seite Campaign Analytics angezeigt werden.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
 
 ### Nach Tags filtern
 
 Tags sind in der Liste der Kampagnen, Canvase oder Segmente sichtbar, zusammen mit zusätzlichen Tags für Statuskennzeichnungen wie **Archiviert** und **Entwurf**. Um nach einem Tag zu filtern, wählen Sie den Namen des Tags aus der Liste der Tags aus.
 
-\![Tags auf der Liste der Kampagnen.]({% image_buster /assets/img_archive/tags_grid.png %})
+![Tags auf der Liste der Kampagnen.]({% image_buster /assets/img_archive/tags_grid.png %})
 
 ## Angepasste Daten Tags
 
@@ -54,13 +54,13 @@ Dieses Feature befindet sich derzeit in der Early Access-Phase. Wenden Sie sich 
 
 Sie können dieselben Tags für Kampagnen, Canvases und Segmente verwenden. Um Tags in Ihrem Dashboard effizient umzubenennen, zu entfernen oder hinzuzufügen, gehen Sie zu **Einstellungen** > **Tag Management**.
 
-\![Tab Tags auf der Seite Einstellungen verwalten.]({% image_buster /assets/img_archive/tags_view.png %})
+![Tab Tags auf der Seite Einstellungen verwalten.]({% image_buster /assets/img_archive/tags_view.png %})
 
 Um Ihre Tags noch besser zu organisieren, verschachteln Sie Ihre Tags unter einem übergeordneten Tag. Sie können z.B. alle Feiertags-Tags unter einem übergeordneten Tag `Holidays` oder alle Tags, die sich auf eine Phase Ihres Marketing-Trichters beziehen, unter einem übergeordneten Tag `Funnel` unterbringen. 
 
 Erstellen Sie dazu ein neues Tag, wählen Sie **Tag verschachteln unter** und wählen Sie aus, unter welchem bestehenden Tag Sie Ihr neues Tag verschachteln möchten. Sie können bestehende Tags auch auf der Seite **Tag Management** verschachteln. Bewegen Sie auf dieser Seite den Mauszeiger über eine Zeile mit Ihrem Tag und klicken Sie auf **<i class="fas fa-pencil-alt"></i>Bearbeiten**. Befolgen Sie dann die gleichen Schritte wie zuvor.
 
-\![Erstellen Sie einen verschachtelten Tag.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
+![Erstellen Sie einen verschachtelten Tag.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
 
 ## Bewährte Praktiken {#tags-best-practices}
 
