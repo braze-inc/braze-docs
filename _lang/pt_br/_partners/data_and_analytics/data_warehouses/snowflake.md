@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# [![Curso de Aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
 
 > O [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) é um data warehouse de nuvem SQL criado para fins específicos e disponibilizado como software como serviço (SaaS). O Snowflake fornece um data warehouse mais rápido, mais fácil de usar e muito mais flexível do que as ofertas tradicionais. Com a arquitetura exclusiva e patenteada da Snowflake, é fácil reunir todos os seus dados, executar análises rápidas e obter insights orientados por dados para todos os seus usuários.
 
@@ -32,45 +32,45 @@ Com o compartilhamento de dados, nenhum dado real é copiado ou transferido entr
 
 Além disso, usando os recursos integrados de funções e permissões do Snowflake, o acesso aos dados compartilhados do Braze pode ser controlado e governado usando os controles de acesso já existentes para a sua conta do Snowflake e os dados nela contidos. O acesso pode ser restrito e monitorado da mesma forma que seus próprios dados.
 
-Para saber mais sobre o compartilhamento de dados do Snowflake, consulte [Introdução ao compartilhamento seguro de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
+Para saber mais sobre o compartilhamento de dados do Snowflake, veja [Introdução ao Compartilhamento Seguro de Dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#how-does-secure-data-sharing-work).
 
 ## Pré-requisitos
 
-Antes de poder usar esse recurso, você precisará concluir o seguinte:
+Antes de usar este recurso, você precisará concluir o seguinte:
 
 | Requisito | Descrição |
 | ----------- | ----------- |
-| Acesso ao Braze | Para acessar esse recurso no Braze, você precisará entrar em contato com sua conta Braze ou com o gerente de sucesso do cliente. |
-| Conta Snowflake | Uma conta Snowflake com permissões `admin`. |
+| Acesso ao Braze | Para acessar este recurso no Braze, você precisará entrar em contato com seu gerente de conta ou gerente de sucesso do cliente do Braze. |
+| Conta Snowflake | Uma conta Snowflake com `admin` permissões. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Configuração do compartilhamento seguro de dados
+## Configurando o Compartilhamento Seguro de Dados
 
-No Snowflake, o compartilhamento de dados ocorre entre um [provedor de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) e um [consumidor de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers). Nesse contexto, sua conta Braze é o provedor de dados porque cria e envia o compartilhamento de dados, ao passo que sua conta Snowflake é o consumidor de dados porque usa o compartilhamento de dados para criar um banco de dados. Para obter mais detalhes, consulte [Snowflake: Consumo de dados compartilhados](https://docs.snowflake.com/en/user-guide/data-share-consumers).
+Para o Snowflake, o compartilhamento de dados acontece entre um [fornecedor de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) e [consumidor de dados](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers). Dentro deste contexto, sua conta Braze é o fornecedor de dados porque cria e envia o datashare—enquanto sua conta Snowflake é o consumidor de dados porque usa o datashare para criar um banco de dados. Para mais detalhes, veja [Snowflake: Consumindo Dados Compartilhados](https://docs.snowflake.com/en/user-guide/data-share-consumers).
 
-### Etapa 1: Enviar o compartilhamento de dados do Braze
+### Etapa 1: Envie o datashare do Braze
 
-1. No Braze, acesse **Partner Integrations** > **Data Sharing (** **Integrações com parceiros** > **Compartilhamento de dados**).
-2. Insira os detalhes de sua conta Snowflake e o local. Para obter o localizador de sua conta, execute `SELECT CURRENT_ACCOUNT()` na conta de destinos.
+1. No Braze, acesse **Integrações de Parceiros** > **Compartilhamento de Dados**.
+2. Insira os detalhes da sua conta Snowflake e o localizador. Para obter seu localizador de conta, execute `SELECT CURRENT_ACCOUNT()` na conta de destino.
 3. Se estiver usando um compartilhamento CRR, especifique o provedor de nuvem e a região.
-4. Quando terminar, selecione **Create Datashare**. Isso enviará o compartilhamento de dados para sua conta do Snowflake.
+4. Quando terminar, selecione **Criar Datashare**. Isso enviará o datashare para sua conta Snowflake.
 
-### Etapa 2: Criar o banco de dados no Snowflake
+### Etapa 2: Crie o banco de dados no Snowflake
 
-1. Após alguns minutos, você deverá receber o compartilhamento de dados de entrada em sua conta do Snowflake.
-2. Usando o compartilhamento de dados de entrada, crie um banco de dados para visualizar e consultar as tabelas. Por exemplo:
+1. Após alguns minutos, você deve receber o datashare de entrada em sua conta Snowflake.
+2. Usando o datashare de entrada, crie um banco de dados para visualizar e consultar as tabelas. Por exemplo:
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
 3. Conceda privilégios para consultar o novo banco de dados.
 
 {% alert warning %}
-Se você excluir e recriar um compartilhamento no dashboard do Braze, deverá remover o banco de dados criado anteriormente e recriá-lo usando `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` para consultar o compartilhamento de entrada.
+Se você excluir e recriar um compartilhamento no dashboard do Braze, deve descartar o banco de dados criado anteriormente e recriá-lo usando `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` para consultar o compartilhamento de entrada.
 {% endalert %}
 
 ## Uso e visualização
 
-Depois que o compartilhamento de dados for provisionado, será necessário criar um banco de dados a partir do compartilhamento de dados recebido, fazendo com que todas as tabelas compartilhadas apareçam na sua instância do Snowflake e possam ser consultadas como qualquer outro dado armazenado na sua instância. No entanto, lembre-se de que os dados compartilhados são somente de leitura e só podem ser consultados, mas não modificados ou excluídos de forma alguma.
+Após o compartilhamento de dados ser provisionado, você precisará criar um banco de dados a partir do compartilhamento de dados de entrada, fazendo com que todas as tabelas compartilhadas apareçam na sua instância Snowflake e sejam consultáveis como qualquer outro dado que você está armazenando na sua instância. No entanto, lembre-se de que os dados compartilhados são somente de leitura e só podem ser consultados, mas não modificados ou excluídos de forma alguma.
 
 Semelhante ao Currents, você pode usar o compartilhamento seguro de dados do Snowflake para:
 
@@ -80,7 +80,7 @@ Semelhante ao Currents, você pode usar o compartilhamento seguro de dados do Sn
 - Mapear dados brutos de eventos ou de usuários para um CRM (como o Salesforce)
 - E mais
 
-[Baixe os esquemas de tabela brutos aqui.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+[Baixe os esquemas de tabela bruta aqui.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### Esquema de ID de usuário
 
@@ -115,7 +115,7 @@ Quando possível, as mudanças interruptivas serão precedidas de um anúncio e 
 
 ### Regiões do Snowflake
 
-A Braze hospeda todos os dados de nível de usuário nas regiões AWS US East-1 e EU-Central (Frankfurt) do Snowflake. Para usuários fora dessas regiões, a Braze pode fornecer compartilhamento de dados para clientes conjuntos que hospedem sua infraestrutura do Snowflake em qualquer região do AWS, Azure ou GCP.
+O Braze atualmente hospeda todos os dados de nível de usuário na AWS Snowflake US East-1, EU-Central (Frankfurt), AP-Southeast-2 (Sydney) e AP-Southeast-3 (Jacarta). Para usuários fora dessas regiões, a Braze pode fornecer compartilhamento de dados para clientes conjuntos que hospedem sua infraestrutura do Snowflake em qualquer região do AWS, Azure ou GCP.
 
 ### Retenção de dados
 
