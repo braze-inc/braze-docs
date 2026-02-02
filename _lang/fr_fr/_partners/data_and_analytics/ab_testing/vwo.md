@@ -1,6 +1,6 @@
 ---
 nav_title: VWO
-article_title: Intégration de VWO avec Braze
+article_title: Intégrer VWO à Braze
 description: "Découvrez comment intégrer VWO à Braze."
 alias: /partners/vwo/
 page_type: partner
@@ -23,7 +23,7 @@ En intégrant VWO à Braze, vous pouvez exploiter les données d'expérience de 
 
 ## Intégration de VWO avec Braze
 
-### Étape 1 : Activez l'intégration de Braze dans VWO
+### Étape 1 : Activez l'intégration de Braze dans VWO
 
 1. Connectez-vous à votre compte VWO.
 2. Dans le tableau de bord de VWO, allez dans **Configurations > Intégrations**. Ici, vous pouvez activer les intégrations au niveau de l'espace de travail, ce qui applique par défaut l'intégration à toutes les futures campagnes de test.
@@ -46,11 +46,11 @@ En intégrant VWO à Braze, vous pouvez exploiter les données d'expérience de 
 7. Sélectionnez la propriété VWO concernée et indiquez la valeur requise.
 8. Si nécessaire, configurez le nombre de visites et la période de temps. Lorsque vous avez terminé, sélectionnez **Enregistrer.**
 
-   ![Création de segments de Braze]({% image_buster /assets/img/vwo/vwo3_braze_segment.png %})
+   ![Création de segments Braze]({% image_buster /assets/img/vwo/vwo3_braze_segment.png %})
 
 9. Pour afficher le nombre d'utilisateurs correspondant à vos critères de segmentation, sélectionnez **Calculer les statistiques exactes**.
 
-   ![Statistiques sur les segments de Braze]({% image_buster /assets/img/vwo/vwo4_braze_segment_calculate_size.png %})
+   ![Statistiques du segment Braze]({% image_buster /assets/img/vwo/vwo4_braze_segment_calculate_size.png %})
 
 ## Flux de données
 
@@ -98,7 +98,7 @@ Avant de pouvoir utiliser la segmentation des propriétés d'événement, vous d
 
 ### Points de données Braze
 
-L'événement personnalisé envoyé par VWO à Braze - y compris toutes les propriétés d'événement activées pour la segmentation - consommera des points de données dans votre instance Braze.
+L'événement personnalisé envoyé par VWO à Braze - y compris toutes les propriétés d'événement activées pour la segmentation - enregistrera des points de données dans votre instance Braze.
 
 ### Restrictions
 
@@ -113,7 +113,7 @@ Si vous ne voyez pas les données VWO dans Braze :
 3. Les appels réseau se remplissent au fur et à mesure du chargement de la page. Vous pouvez recharger la page pour voir les appels de réseau.
 4. Sélectionnez un appel réseau pour en savoir plus.
 5. Allez dans la section **Request Payload** dans l'onglet **Payload**, où vous pouvez trouver des événements : qui a le nom : **ce**, indiquant Custom Event.
-6. Développez 0 : et données : pour voir n : "VWO" (nom de l'événement personnalisé) et p : {vwo_campaign_name : "<your vwo campaign name>", vwo_variation_name : "<variation name>"}. Cela indique que les valeurs sont transmises par VWO à Braze.
+6. Développez 0 : et données : pour voir n : "VWO" (nom de l'événement personnalisé) et p : {vwo_campaign_name: "<your vwo campaign name>", vwo_variation_name: "<variation name>"}. Cela indique que les valeurs sont transmises par VWO à Braze.
 
  ![Résolution des problèmes de Braze]({% image_buster /assets/img/vwo/vwo5_troubleshooting.png %})
 
