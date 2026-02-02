@@ -39,11 +39,11 @@ On the **Link your Braze Account** page, provide your Braze REST API key and sel
 
 You can change the customer ID parameter name in the referral link sent to your customers. Nift will use this to mark your customers as processed in Braze when they have selected a gift from one of our brands.
 
-Click **Link Account**.
+**계정 연결**을 클릭합니다.
 
-!["Nift service integration page prompting the user for the Braze API key and Braze dashboard URL.]({% image_buster /assets/img/nift/link_your_braze_account.png %})
+![사용자에게 Braze API 키와 Braze 대시보드 URL을 입력하라는 프롬프트를 표시하는 'Nift 서비스 통합 페이지'.]({% image_buster /assets/img/nift/link_your_braze_account.png %})
 
-## Using the integration
+## 통합 사용
 
 To use the integration, distribute the referral link in your messaging. When your customer uses the referral link and selects a gift from one of our brands, Nift will mark them as processed in Braze.
 
