@@ -1,23 +1,23 @@
 ---
-nav_title: "Personnalisation des pages d'atterrissage"
-article_title: "Personnalisation des pages d'atterrissage"
+nav_title: "Personnalisez les pages d'atterrissage"
+article_title: "Personnalisez les pages d'atterrissage"
 description: "Cet article explique comment personnaliser les pages d'atterrissage de Braze à l'aide de l'éditeur par glisser-déposer."
 page_order: 4
 ---
 
-# Personnalisation des pages d'atterrissage
+# Personnalisez les pages d'atterrissage
 
 > Utilisez la personnalisation liquide dans les pages d'atterrissage pour adapter dynamiquement le contenu grâce aux données du profil utilisateur. Par exemple, vous pouvez personnaliser les titres en fonction de différents attributs de l'utilisateur sans avoir à gérer plusieurs pages d'atterrissage statiques.
 
 {% alert important %}
-La personnalisation liquide pour les pages d'atterrissage n'est disponible que sur le niveau Pro des pages d'atterrissage. Actuellement, le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) et les [codes de promotion]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) ne sont pas pris en charge avec la personnalisation liquide dans les pages de destination.
+La personnalisation liquide pour les pages d'atterrissage n'est disponible que sur le niveau Pro des pages d'atterrissage. Actuellement, le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), le [multilinguisme]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings) et les [codes de promotion]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) ne sont pas pris en charge avec la personnalisation liquide dans les pages d'atterrissage.
 {% endalert %}
 
 ## Insertion du liquide
 
 Dans l'éditeur par glisser-déposer, vous pouvez insérer la personnalisation des liquides à la fois dans l'éditeur et dans les paramètres de la page ou du bloc dans le panneau de droite. Pour obtenir des instructions sur la mise en œuvre de Liquid, consultez notre [documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) dédiée à [Liquid.]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1)
 
-L'éditeur de pages d'atterrissage avec la personnalisation des liquides a été ajouté.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+![Éditeur de page d'atterrissage avec ajout de la personnalisation liquide.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## Prévisualisation et test
 
@@ -40,6 +40,13 @@ Pour éviter que votre page ne dépasse les limites de taille ou ne connaisse de
 
 - Ne passe pas en boucle ou ne fait pas référence à de grands ensembles de données.
 - ne repose pas sur une logique mathématique ou conditionnelle poussée au sein du bloc Liquid.
+
+### Utilisation du liquide pour les utilisateurs identifiés et anonymes 
+
+Liquid peut personnaliser l'expérience de la page d'atterrissage pour les visiteurs identifiés et anonymes.
+
+- **Utilisateurs identifiés :** Créez un lien vers la page d'atterrissage à partir d'un message Braze et incluez l'[étiquette Liquid de la page d'atterrissage]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags). Cela permet d'associer l'utilisateur à son profil Braze et de personnaliser l'expérience de la page.
+- **Visiteurs anonymes :** Utilisez Liquid pour un contenu contextuel, non basé sur un profil, tel qu'un numéro aléatoire ou un message d'accueil à l'heure du jour.
 
 ## Pages de repli
 
