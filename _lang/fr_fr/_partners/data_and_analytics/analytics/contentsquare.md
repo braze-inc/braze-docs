@@ -24,7 +24,7 @@ L'intégration de Braze et Contentsquare vous permet d'envoyer des Signaux en li
 | ----------- | ----------- |
 | Compte Contentsquare | Un compte Contentsquare est requis pour profiter de ce partenariat. |
 | Clé d'API REST Braze | Une clé API Braze REST avec des autorisations `users.track`. Pour créer une nouvelle clé dans le tableau de bord de Braze, allez dans **Paramètres** > **Clés API.** |
-| Endpoint REST Braze | [L'URL de votre endpoint REST]({% image_buster /assets/img/contentsquare_custom_events.png %}). Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+| Endpoint REST Braze | [Votre URL de l’endpoint REST]({% image_buster /assets/img/contentsquare_custom_events.png %}).] Votre endpoint dépendra de l'URL Braze pour votre instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Cas d'utilisation
@@ -41,7 +41,7 @@ Pour intégrer Contentsquare dans Braze, vous devez demander l'installation d'un
 
 1. Dans Contentsquare, cliquez sur **Console** dans le menu **Paramètres**. Cela vous redirigera vers le projet sur lequel vous travaillez actuellement. 
 2. Sur la page **Projets**, allez à l'onglet **Intégrations** et cliquez sur le bouton **\+ Ajouter une intégration**.
-3. Dans le catalogue des intégrations, recherchez l'intégration **Signaux en ligne** et cliquez sur **Ajouter**. L'équipe Contentsquare vous contactera ensuite pour configurer l'extrait de code afin d'envoyer des signaux en ligne à Braze.
+3. Dans le catalogue des intégrations, recherchez l'intégration **Signaux en ligne** et cliquez sur **Ajouter**. L'équipe de Contentsquare vous contactera ensuite pour configurer l'extrait de code afin d'envoyer des signaux en ligne/en production/instantanée à Braze.
 4. Contentsquare va maintenant traiter votre intégration. Le texte de l'indicateur sera mis à jour après que l'intégration aura été complétée.
 
 Pour plus d'informations, consultez la section [Demander une intégration Contentsquare](https://uxanalyser.zendesk.com/hc/en-gb/articles/4405613239186).
@@ -50,6 +50,6 @@ Pour plus d'informations, consultez la section [Demander une intégration Conten
 
 Une fois l'intégration terminée, les custom events Contentsquare seront disponibles pour être utilisés dans vos campagnes et Canvases. Vous pouvez vérifier quels événements sont envoyés à Braze depuis **Paramètres des données** > **Événements personnalisés**.
 
-![Données des signaux en direct Contentsquare dans l'onglet des événements personnalisés de Braze]({% image_buster /assets/img/contentsquare_custom_events.png %})
+![Données de signaux en ligne de Contentsquare dans l'onglet Événements personnalisés de Braze]({% image_buster /assets/img/contentsquare_custom_events.png %})
 
 
