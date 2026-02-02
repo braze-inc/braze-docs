@@ -247,10 +247,10 @@ La fonctionnalité de [transformation des données de]({{site.baseurl}}/data_tra
 - Braze ne prend pas en charge les numéros de téléphone comme identifiant. Pour l'utiliser comme identifiant, le numéro de téléphone peut être défini comme [alias d'utilisateur]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) dans Braze.
 - Lors de l'utilisation de la transformation de données Braze, l'adresse e-mail peut être utilisée comme identifiant. Si l'adresse e-mail existe en tant que profil dans Braze, le profil existant sera mis à jour. Si l'adresse e-mail n'existe pas encore dans Braze, un profil uniquement e-mail sera créé.
 
-## Cas d'utilisation
+## Cas d’utilisation
 
 {% tabs %}
-{% tab Déclencher un e-mail %}
+{% tab Trigger an email %}
 
 **Déclenchez un e-mail depuis Braze en fonction d'une disposition d'appel dans Regal**
 
@@ -348,7 +348,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Mettre à jour les attributs du profil %}
+{% tab Update profile attributes %}
 
 **Mettez à jour les attributs de profil dans Braze en fonction des `contact.attribute.edited` événements de Regal**
 
@@ -412,7 +412,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Gardez vos expériences synchronisées %}
+{% tab Keep your experiments in sync %}
 
 **Gardez vos expériences dans Braze et Regal synchronisées en utilisant des événements `contact.experiment.assigned`**
 
@@ -475,7 +475,7 @@ return brazecall;
 
 ```
 {% endtab %}
-{% tab Se désabonner d'un contact %}
+{% tab Unsubscribe a contact %}
 
 **Désabonner un contact dans Braze en fonction d'un `contact.unsubscribed` de Regal**
 
