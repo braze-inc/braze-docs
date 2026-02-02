@@ -1150,7 +1150,7 @@ a:hover {
 <div id="ticket_mainform" class="container">
     <form  id="ticket_form">
       <div id="step3">
-        <h2>필요한 것을 찾을 수 없습니까? 우리 지원 팀에 문의하십시오.</h2>
+        <h2>필요한 것을 찾을 수 없습니까? 우리 지원 팀에 문의하세요.</h2>
         <!-- Row 1 -->
         <div class="row">
           <div class="col-md-6">
