@@ -57,5 +57,5 @@ En Enterprise MetaRouter, selecciona **Integraciones** > **Nueva integración** 
 
 Añada la asignación de eventos para cada salida de identidad y, a continuación, configure los eventos que desea enviar a Braze. Cuando haya terminado, seleccione **Guardar como nueva revisión**.
 
-![Añadir mapeo de eventos para cada una de las salidas de identidad.]({% image_buster /assets/img/metarouter/img2.png %})
+![Añade mapeados de eventos para cada una de las salidas de identidad.]({% image_buster /assets/img/metarouter/img2.png %})
 
