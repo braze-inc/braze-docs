@@ -8,7 +8,7 @@ description: "Este artículo de referencia describe los eventos recomendados, qu
 
 # Eventos recomendados
 
-> Los eventos recomendados se corresponden con los casos de uso más comunes del comercio electrónico. Al utilizar eventos recomendados, puedes desbloquear plantillas Canvas prediseñadas, paneles de informes mapeados según el ciclo de vida del cliente y mucho más.
+> Los eventos recomendados se corresponden con los casos de uso más comunes del comercio electrónico. Al utilizar eventos recomendados, puedes desbloquear plantillas Canvas preconstruidas, paneles de informes mapeados según el ciclo de vida del cliente y mucho más.
 
 Por ejemplo, puedes tener un evento personalizado llamado “cart_updated” o “update_to_cart” para capturar cuando un usuario ha añadido, eliminado o actualizado los productos de su cesta. Para los eventos recomendados, Braze proporcionará la plantilla del evento, que incluye un nombre definido y las propiedades relevantes para este evento.
 
