@@ -26,15 +26,15 @@ A Braze transforma seus links usando seu subdomínio de rastreamento de links de
 
 ### Requisitos do navegador
 
-Principais navegadores, como o Google Chrome, restringem o tráfego através de URLs não seguras para proteger os usuários. Usar SSL ajuda a confirmar que o conteúdo é confiável e minimiza problemas como links e imagens quebradas em e-mails.
+Principais navegadores como o Google Chrome restringem o tráfego através de URLs não seguras para proteger os usuários. Usar SSL ajuda a confirmar que o conteúdo é confiável e minimiza problemas como links e imagens quebradas em e-mails.
 
 ### Requisito de domínios HSTS 
 
-Se você tiver um domínio HTTP Strict Transport Security (HSTS), configure o SSL e configure um CDN para enviar os certificados de segurança necessários. Sem SSL, links de imagem e da web quebram.
+Se você tiver um domínio HTTP Strict Transport Security (HSTS), configure SSL e configure um CDN para enviar os certificados de segurança necessários. Sem SSL, links de imagem e da web quebram.
 
 ## Aquisição de um certificado SSL
 
-Adquira um certificado SSL através de um terceiro, geralmente uma Rede de Entrega de Conteúdo (CDN). Um CDN hospeda o certificado e o serve ao navegador quando um usuário clica em um link, redirecionando o tráfego através do CDN para aplicar os certificados antes de enviá-lo ao SendGrid ou SparkPost.
+Adquira um certificado SSL através de um terceiro, geralmente uma Rede de Distribuição de Conteúdo (CDN). Um CDN hospeda o certificado e o serve ao navegador quando um usuário clica em um link, redirecionando o tráfego através do CDN para aplicar os certificados antes de enviá-lo ao SendGrid ou SparkPost.
 
 Para iniciar a configuração do SSL, entre em contato com seu gerente de sucesso do cliente da Braze para iniciar uma configuração completa de e-mail da Braze.
 
@@ -53,19 +53,19 @@ Uma rede de entrega de conteúdo (CDN) é uma plataforma de servidores que ajuda
 A configuração da CDN sempre ocorre depois que os registros DNS são validados pela Braze. Se você ainda não iniciou esta etapa, entre em contato com seu gerente de sucesso do cliente para mais informações sobre como começar.
 {% endalert %}
 
-Para rastreamento de cliques e aberturas, os parceiros de entrega transformam links usando um subdomínio de marca e a CDN aplica o certificado SSL a esses links transformados. Os parceiros muitas vezes devem apresentar certificados válidos ao navegador do destinatário para que links e imagens sejam exibidos corretamente. Como a Braze não solicita nem gerencia certificados, você deve configurar isso através de uma CDN. 
+Para rastreamento de cliques e aberturas, os parceiros de entrega transformam links usando um subdomínio de marca e o CDN aplica o certificado SSL a esses links transformados. Os parceiros muitas vezes devem apresentar certificados válidos ao navegador do destinatário para que links e imagens sejam exibidos corretamente. Como a Braze não solicita ou gerencia certificados, você deve configurar isso através de um CDN. 
 
 {% alert note %}
-Se você não puder ou não quiser usar as CDNs listadas para rastreamento de cliques e aberturas SSL, pode configurar uma configuração SSL personalizada. CDNs alternativas ou proxies personalizados podem resultar em uma configuração mais complexa. Consulte a documentação do [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) e [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
+Se você não puder ou não quiser usar os CDNs listados para rastreamento de cliques e aberturas SSL, pode configurar uma configuração SSL personalizada. CDNs alternativos ou proxies personalizados podem resultar em uma configuração mais complexa. Consulte a documentação do [SendGrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) e [SparkPost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/).
 {% endalert %}
 
 #### Recursos adicionais
 
 {% alert important %}
-Para solucionar problemas de configuração da sua CDN, entre em contato com seu provedor de CDN.
+Para solucionar problemas de configuração do seu CDN, entre em contato com seu provedor de CDN.
 {% endalert %}
 
-A tabela a seguir inclui guias passo a passo escritos por parceiros de ESP sobre como configurar certas CDNs. Embora sua CDN específica possa não estar listada, você precisa se certificar de que sua CDN tem a capacidade de aplicar certificados SSL.
+A tabela a seguir inclui guias passo a passo escritos por parceiros de ESP sobre como configurar certos CDNs. Embora sua CDN específica possa não estar listada, você precisa se certificar de que sua CDN tem a capacidade de aplicar certificados SSL.
 
 | SendGrid | SparkPost |
 | -------- | --------- |
@@ -78,20 +78,20 @@ Para Amazon SES, consulte [Opção 2: Configurando um domínio HTTPS](https://do
 - **Clusters Braze na UE:** `r.eu-central-1.awstrack.me`
 
 {% alert important %}
-Quando você configura o domínio de rastreamento de cliques da sua CDN, ative o cabeçalho `X-Forwarded-Host` para evitar possíveis problemas de segurança, como ataques de cabeçalho de host. Consulte a documentação da CDN ou sua equipe de suporte para obter etapas.
+Quando você configura o domínio de rastreamento de cliques do seu CDN, ative o cabeçalho `X-Forwarded-Host` para evitar possíveis problemas de segurança, como ataques de cabeçalho de host. Consulte a documentação do CDN ou sua equipe de suporte para obter etapas.
 {% endalert %}
 
 #### Solução de problemas
 
-Embora você deva lidar com a configuração da CDN, certificados e problemas de proxy com sua CDN, use estas dicas para identificar problemas comuns de rastreamento de cliques SSL.
+Embora você deva lidar com a configuração do CDN, certificados e problemas de proxy com seu CDN, use estas dicas para identificar problemas comuns de rastreamento de cliques SSL.
 
 ##### Problemas de registro de domínio
 
-Execute um comando dig para confirmar que você aponta o rastreamento de links para a CDN. No seu terminal, execute `dig CNAME link_tracking_subdomain`. Sob `ANSWER SECTION`, ele lista para onde seu CNAME aponta. Se apontar para o prestador de serviço de e-mail (SendGrid ou SparkPost) e não para sua CDN, reconfigure seu registro de domínio para apontar para sua CDN.
+Execute um comando dig para confirmar que você aponta o rastreamento de links para o CDN. No seu terminal, execute `dig CNAME link_tracking_subdomain`. Sob `ANSWER SECTION`, ele lista para onde seu CNAME aponta. Se apontar para o prestador de serviço de e-mail (SendGrid ou SparkPost) e não para o seu CDN, reconfigure seu registro de domínio para apontar para o seu CDN.
 
 ##### Problemas de CDN
 
-Se os links de e-mail ao vivo quebrarem durante a configuração, você provavelmente apontou o DNS para sua CDN antes da configuração adequada. Isso pode aparecer como um erro de "link errado". Entre em contato com seu provedor de CDN e revise sua documentação para solucionar problemas de configuração.
+Se os links de e-mail ao vivo quebrarem durante a configuração, você provavelmente apontou o DNS para o seu CDN antes da configuração adequada. Isso pode aparecer como um erro de "link errado". Entre em contato com seu provedor de CDN e revise a documentação deles para solucionar a configuração.
 
 ##### Status da capacitação SSL
 
