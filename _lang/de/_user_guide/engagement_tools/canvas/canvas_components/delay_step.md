@@ -13,7 +13,7 @@ tool: Canvas
 
 > Mit Delay-Komponenten können Sie einem Canvas eine eigenständige Verzögerung hinzufügen. Sie können eine Verzögerung zu Ihrem Canvas hinzufügen, ohne dass Sie eine zugehörige Nachricht hinzufügen müssen. 
 
-Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> ![Ein Verzögerungsschritt mit einer 1-tägigen Verzögerung als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+Verzögerungen können Ihr Canvas sauberer aussehen lassen. Sie können diese Komponente auch verwenden, um einen anderen Schritt bis zu einem genauen Datum, bis zu einem bestimmten Tag oder bis zu einem bestimmten Wochentag zu verschieben. <br> ![Ein Delay-Schritt mit einer Verzögerung von 1 Tag als erster Schritt eines Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Erstellen einer Verzögerung
 
@@ -39,8 +39,8 @@ Wenn Sie **Dauer** auswählen, können Sie Nutzer:innen für eine bestimmte Anza
   
 Beachten Sie den Unterschied zwischen der Berechnung von „Tagen“ und „Kalendertagen“.
   
-- Ein "Tag" umfasst 24 Stunden und wird ab dem Zeitpunkt berechnet, an dem der Nutzer:innen den Schritt Verzögerung eingibt. 
-- Ein "Kalendertag" definiert die Wartezeit bis zur nächsten angegebenen Zeit, die weniger als 24 Stunden betragen kann. Sie können wählen, ob die Verzögerung zur Unternehmenszeit oder zur Ortszeit des Nutzers:innen erfolgen soll. Wenn keine Zeit angegeben wird, wird der Nutzer:in bis Mitternacht des nächsten Tages in Firmenzeit verschoben.
+- Ein "Tag" ist 24 Stunden und wird ab dem Zeitpunkt berechnet, an dem der Nutzer:innen den Schritt Verzögerung eingibt. 
+- Ein "Kalendertag" definiert die Wartezeit bis zur nächsten angegebenen Zeit, die weniger als 24 Stunden betragen kann. Sie können wählen, ob die Verzögerung zur Firmenzeit oder zur Ortszeit des Nutzers:innen erfolgen soll. Wenn keine Zeit angegeben wird, wird der Nutzer:in bis Mitternacht des nächsten Tages in Firmenzeit verschoben.
 
 Sie können auch **Zu einem bestimmten Zeitpunkt** auswählen, um festzulegen, wann die Nutzer:innen im Canvas zum nächsten Schritt übergehen. Diese Option berücksichtigt den Zeitpunkt, zu dem der oder die Nutzer:in zum Schritt „Delay“ übergegangen ist. Wenn diese Zeit über die in den Einstellungen konfigurierte Zeit hinausgeht, fügen wir dem Delay weitere Stunden hinzu. 
 
