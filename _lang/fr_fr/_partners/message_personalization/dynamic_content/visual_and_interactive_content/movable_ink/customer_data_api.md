@@ -1,12 +1,12 @@
 ---
 nav_title: "Connexion à l'API de données client"
-article_title: "Connexion à l'API de données clients de Movable Ink"
+article_title: "Connectez-vous à l'API des données clients de Movable Ink"
 description: "Cet article de référence explique comment se connecter pour activer les données d'événements clients stockées dans Braze afin de générer du contenu personnalisé dans Movable Ink en utilisant l'API de données client."
 page_type: partner
 search_tag: Partner
 ---
 
-# Connexion à l'API de données clients de Movable Ink
+# Connectez-vous à l'API des données clients de Movable Ink
 
 > Braze et l'intégration de l'API de données client de Movable Ink permettent aux marketeurs d'activer les données d'événements clients stockées dans Braze pour générer du contenu personnalisé au sein de Movable Ink.
 
@@ -42,7 +42,7 @@ Pour plus d'informations sur les Stories, l'API de données client de Movable In
 
 1. Dans le champ **URL du webhook**, entrez l'URL de l'endpoint Movable Ink.
 
-![Onglet Compose du webhook composer dans Braze avec l'URL du point de terminaison Movable Ink et le Request Body définis comme des paires clé-valeur JSON.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
+![Onglet Compose du compositeur webhook à Braze avec l'URL du point de terminaison Movable Ink et le Request Body définis sur JSON Key/Value Pairs (paires clé-valeur).]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
 
 {:start="2"}
 2\. Sélectionnez l'onglet **Paramètres**.
@@ -54,7 +54,7 @@ Pour plus d'informations sur les Stories, l'API de données client de Movable In
 | Autorisation | Entrez l'authentification de base que vous avez reçue de Movable Ink. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Onglet Paramètres du webhook composer dans Braze avec des paires clé-valeur pour Content-Type et Authorization.]({% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}){: style="max-width:75%" }
+![Onglet Paramètres du webhook composer à Braze avec des paires clé-valeur pour Content-Type et Authorization.]({% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}){: style="max-width:75%" }
 
 #### Étape 1c: Configurez votre charge utile
 
@@ -77,7 +77,7 @@ Pour tester votre webhook, procédez comme suit :
 2. Prévisualisez le message en tant qu'utilisateur pour voir un exemple de charge utile d'événement pour cet utilisateur. Vous pouvez choisir entre prévisualiser en tant qu'utilisateur aléatoire, utilisateur spécifique ou utilisateur personnalisé.
 3. Si tout semble bon, cliquez sur **Envoyer le test** pour envoyer une requête de test.
 
-![Message de réponse du webhook à Braze montrant une réponse 200 OK.]({% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}){: style="max-width:75%" }
+![Message de réponse du webhook dans Braze montrant une réponse 200 OK.]({% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}){: style="max-width:75%" }
 
 ### Étape 2 : Finalisez la configuration de votre campagne
 
@@ -103,7 +103,7 @@ Ensuite, déterminez quels utilisateurs vous souhaitez cibler pour cette campagn
 
 Veillez à ne pas utiliser le test A/B dans votre campagne en décochant la case **groupe de contrôle**. Si un groupe de contrôle est inclus, les données d’un pourcentage d'utilisateurs ne seront pas envoyées à Movable Ink. L’intégralité de votre audience devrait aller à la variante plutôt qu'au groupe de contrôle.
 
-![Panel de test A/B dans une campagne Braze avec une distribution de 100% de la variante assignée à la variante 1, et aucun groupe de contrôle.]({% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %})
+![Panneau de test A/B dans une campagne Braze avec une distribution de 100 % de la variante attribuée à la variante 1, et aucun groupe de contrôle.]({% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %})
 
 #### Étape 2c : Choisissez des événements de conversion (facultatif)
 
@@ -156,7 +156,7 @@ Pour plus d'informations, consultez les exemples de webhooks sous [exemples de c
 ### Événement de vue de produit
 
 {% tabs local %}
-{% tab Exemple d'événement déclencheur Braze %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -190,7 +190,7 @@ Pour plus d'informations, consultez les exemples de webhooks sous [exemples de c
 {% endraw %}
 
 {% endtab %}
-{% tab Charge utile de la requête Movable Ink attendue %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -226,7 +226,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 {% endraw %}
 {% endtab %}
-{% tab Exemple de webhook %}
+{% tab Example webhook %}
 
 Dans cet exemple, une adresse e-mail hachée est utilisée comme `anonymous_id` pour les utilisateurs qui n'ont pas de `external_id`.
 
@@ -278,7 +278,7 @@ Dans cet exemple, une adresse e-mail hachée est utilisée comme `anonymous_id` 
 ### Événement de vue de catégorie
 
 {% tabs local %}
-{% tab Exemple d'événement déclencheur Braze %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -302,7 +302,7 @@ Dans cet exemple, une adresse e-mail hachée est utilisée comme `anonymous_id` 
 {% endraw %}
 
 {% endtab %}
-{% tab Charge utile de la requête Movable Ink attendue %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -328,7 +328,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 {% endraw %}
 
 {% endtab %}
-{% tab Exemple de webhook %}
+{% tab Example webhook %}
 
 Cet exemple montre un webhook suivant les événements uniquement pour les utilisateurs connus (utilisateurs avec un `external_id`).
 
@@ -361,7 +361,7 @@ Cet exemple montre un webhook suivant les événements uniquement pour les utili
 ### Identifier l'événement
 
 {% tabs local %}
-{% tab Exemple d'événement déclencheur Braze %}
+{% tab Example Braze Trigger Event %}
 
 {% raw %}
 
@@ -379,7 +379,7 @@ Cet exemple montre un webhook suivant les événements uniquement pour les utili
 
 {% endraw %}
 {% endtab %}
-{% tab Charge utile de la requête Movable Ink attendue %}
+{% tab Expected Movable Ink Request Payload %}
 
 {% raw %}
 
@@ -398,7 +398,7 @@ curl --location --request POST 'https://collector.movableink-dmz.com/behavioral/
 
 {% endraw %}
 {% endtab %}
-{% tab Exemple de webhook %}
+{% tab Example webhook %}
 
 Dans cet exemple, une adresse e-mail hachée est utilisée comme `anonymous_id` pour les utilisateurs qui n'ont pas de `external_id`.
 
