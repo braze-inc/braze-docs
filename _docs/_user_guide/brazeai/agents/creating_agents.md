@@ -72,7 +72,8 @@ In the **Output** section, you can organize and define the agent's output by man
 - **Fields:** A no-code way to enforce an agent output that you can use consistently. 
 - **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema.
 
-#### Fields
+{% tabs %}
+{% tab Fields %}
 
 Let's say you want to format responses to a simple feedback survey to determine how likely respondents are to recommend your restaurant's newest ice cream flavor. You can set up the following fields to structure the output format:
 
@@ -83,9 +84,10 @@ Let's say you want to format responses to a simple feedback survey to determine 
 | **confidence_score** | Number |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]( {% image_buster /assets/img/ai_agent/output_format_fields.png %} )
+![Agent Console showing three output fields for likelihood score, explanation, and confidence score.]({% image_buster /assets/img/ai_agent/output_format_fields.png %}){: style="max-width:85%;"}
 
-### JSON schema
+{% endtab %}
+{% tab JSON schema %}
 
 Let's say you want to collect user feedback for their most recent dining experience at your restaurant chain. You could select **JSON Schema** as the output format and insert the following JSON to return a data object that includes a sentiment variable and reasoning variable.
 
@@ -108,6 +110,9 @@ Let's say you want to collect user feedback for their most recent dining experie
 ```
 
 If you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the [defined output fields](#fields).
+
+{% endtab %}
+{% endtabs %}
 
 {% alert important %}
 Output formats aren't currently supported by Claude AI. If you're using an Anthropic key, we recommend manually adding the structure to the agent prompt.
