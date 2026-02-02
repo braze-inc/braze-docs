@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "Dieser referenzierte Artikel beschreibt die Partnerschaft zwischen Braze und Stensul, einer E-Mail-Plattform für Unternehmen, die es Ihnen erlaubt, auf allen Kanälen einfach mobile, responsive E-Mail-Templates zu erstellen."
+description: "Dieser referenzierende Artikel beschreibt die Partnerschaft zwischen Braze und Stensul, einer E-Mail-Plattform für Unternehmen zur Erstellung mobiler, responsiver E-Mail-Templates für verschiedene Kanäle."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stensul
 
-> [Stensul](https://stensul.com/) versetzt Marketer in die Lage, in Stensul responsive, markengerechte E-Mails zu erstellen, bevor sie diese zur Erstellung von Kampagnen in Realtime an Braze weiterleiten.
+> [Stensul](https://stensul.com/) stellt E-Mail Marketern Tools zur Verfügung, mit denen sie in Stensul responsive, markengerechte E-Mails erstellen können, bevor sie diese zur Erstellung von Kampagnen in Realtime an Braze weiterleiten.
 
 _Diese Integration wird von Stensul gepflegt._
 
@@ -39,7 +39,7 @@ Dies ist eine einmalige Einrichtung und alle zukünftigen Exporte werden automat
 
 Erstellen Sie eine Stensul E-Mail in der Stensul Plattform und klicken Sie auf **Fertig stellen**.
 
-![Stensul Speicheroptionen]({% image_buster /assets/img_archive/stensul_save_options.png %})
+![Stensul Optionen speichern]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
 ### Schritt 2: Template nach Braze exportieren
 In dem neuen Dialog, der auf der Fertigstellungsseite erscheint, wählen Sie **Hochladen in ESP**.
@@ -48,10 +48,10 @@ In dem neuen Dialog, der auf der Fertigstellungsseite erscheint, wählen Sie **H
 
 Geben Sie dann den **Namen des Templates**, den **Betreff** und den **Preheader** für Ihre E-Mail ein und wählen Sie **Hochladen**. Sie erhalten dann eine Bestätigung, dass der Upload erfolgreich war und ggf. einen Verlauf früherer Uploads der Datei.
 
-![Stensul Upload Success]({% image_buster /assets/img_archive/stensul_upload_success.png %})
+![Stensul Upload Erfolg]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## Nutzung
 
-Sie finden Ihr hochgeladenes Template für Stensul in Ihrem Braze-Konto im Bereich **Templates und Medien > E-Mail Templates**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
+Sie finden Ihre hochgeladene Stensul-Vorlage in Ihrem Braze-Konto im Bereich **Templates & Media > E-Mail-Vorlagen**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
 
 
