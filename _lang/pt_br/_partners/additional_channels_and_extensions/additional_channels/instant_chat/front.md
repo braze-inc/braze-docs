@@ -184,15 +184,15 @@ Na guia “Settings” (Configurações), configure os cabeçalhos de solicitaç
 
 Em **Entrega programada**, selecione **Entrega baseada em ação** e, em seguida, escolha **Enviar uma mensagem de entrada SMS** para o tipo de disparo. Adicione também o grupo de inscrições de SMS e a categoria de palavras-chave que você [configurou anteriormente](#step-51-create-an-sms-keyword-category).
 
-![A página "Schedule Delivery" da primeira campanha de webhook.]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
+![A página "Schedule Delivery" (Agendar entrega) da primeira campanha de webhook.]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
 
 Em **Controles de entrega**, ative a reelegibilidade.
 
-![Reelegível selecionado em "Delivery Controls" (Controles de entrega) para a primeira campanha de webhook.]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![Reelegibilidade selecionada em "Controles de entrega" para a primeira campanha de webhook.]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
 #### Etapa 5.4: Crie sua segunda campanha de webhook
 
-Como sua segunda campanha de webhook corresponderá à primeira, você pode [duplicar a primeira e renomeá-la]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns). Você pode fazer isso agora.
+Como sua segunda campanha de webhook corresponde à primeira, você pode [duplicar a primeira e renomeá-la]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns).
 
 #### Etapa 5.5: Agendar a segunda entrega
 
@@ -204,7 +204,7 @@ Para **Programar entrega**, defina o **disparo baseado em ação** e o **grupo d
 
 Sua campanha de webhook agora pode encaminhar respostas de SMS recebidas de seus clientes. Para filtrar as respostas de SMS de modo que somente as mensagens de chats ativos sejam encaminhadas, adicione o filtro de segmentação **Last Received Message From Specific Campaign** à **etapa de públicos-alvo**.
 
-![Um filtro de público com a opção "Última mensagem recebida de uma campanha específica" selecionada.]({% image_buster /assets/img/front/front_segment_last_received_message.png %}){: style="max-width:65%;"}
+![Um filtro de público com a opção "Last Received Message From Specific Campaign" (Última mensagem recebida de uma campanha específica) selecionada.]({% image_buster /assets/img/front/front_segment_last_received_message.png %}){: style="max-width:65%;"}
 
 Em seguida, configure seu filtro:
 
@@ -221,9 +221,9 @@ Em seguida, configure seu filtro:
 - As mensagens SMS no Braze são cobradas por segmento de mensagem. Entender o que define um segmento de mensagens e como essas mensagens serão divididas é fundamental para entender como você será cobrado pelas mensagens. Para saber mais, consulte nossa [documentação]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
 - Respostas longas dos agentes consumirão mais segmentos faturáveis.
 
-### Consumo de pontos de dados
+### Registro de pontos de dados
 
-No momento, a integração exige que um evento personalizado seja gravado em um perfil de usuário toda vez que um agente envia um SMS pela Front. Isso pode ser adequado para trocas rápidas que duram apenas algumas mensagens, mas à medida que as conversas se tornam mais longas, o mesmo acontece com as implicações dos pontos de dados. Um ponto de dados é consumido para cada evento personalizado registrado no Braze.
+No momento, a integração exige que um evento personalizado seja gravado em um perfil de usuário toda vez que um agente envia um SMS pela Front. Isso pode ser adequado para trocas rápidas que duram apenas algumas mensagens, mas à medida que as conversas se tornam mais longas, o mesmo acontece com as implicações dos pontos de dados. Se você tiver dúvidas sobre as nuances dos pontos de dados Braze, seu gerente de conta Braze poderá respondê-las.
 
 ### Inclusão de links em mensagens SMS
 
