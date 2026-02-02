@@ -21,7 +21,7 @@ En intégrant Braze et Typeform, vous pouvez :
 
 | Condition | Descriptif |
 | ----------- | ----------- |
-| Compte Typeform | Un compte Typeform avec accès aux webhooks est nécessaire pour profiter de ce partenariat. |
+| Compte Typeform | Un compte Typeform avec un accès aux webhooks sont nécessaires pour profiter de ce partenariat. |
 | Transformation des données de Braze | Une [URL de transformation des données]({{site.baseurl}}/data_transformation/) est nécessaire pour recevoir des données de Typeform. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -45,7 +45,7 @@ Envoyez un événement test à votre transformation de données en cliquant sur 
 
 ### Étape 3 : Écrire un code de transformation pour accepter les événements Typeform que vous avez choisis.
 
-Dans cette étape, vous allez transformer la charge utile du webhook qui sera envoyée par Typeform en une valeur de retour d'un objet JavaScript.
+Dans cette étape, vous transformez la charge utile du webhook envoyée par Typeform en valeur de retour d'un objet JavaScript.
 
 1. Actualisez votre transformation de données et assurez-vous que vous pouvez voir la charge utile du test Typeform dans les **détails du webhook.**
 2. Mettez à jour votre code de transformation des données pour prendre en charge les événements Typeform que vous avez choisis.
@@ -326,7 +326,7 @@ Content-Type: application/json
 
 Vous trouverez ci-dessous des exemples de modèles créés à l'aide de notre [exemple de webhook Typeform.](#example-typeform-webhook-payload) Ces modèles peuvent être utilisés comme point de départ. Vous pouvez repartir de zéro ou supprimer des éléments spécifiques comme bon vous semble.
 
-Dans ces exemples de modèles, nous enregistrons un événement personnalisé dans le profil Braze. Le titre du formulaire type sera transmis comme nom d'événement personnalisé, et les résultats du formulaire type seront transmis comme propriétés d'événement. Ces exemples de modèles ne tiennent pas compte des types de questions Calendly, Téléchargement de fichiers ou Paiement dans Typeform.
+Dans ces exemples de modèles, nous enregistrons un événement personnalisé dans le profil Braze. Le titre du formulaire de type est transmis comme nom d'événement personnalisé, et les résultats du formulaire de type sont transmis comme propriétés d'événement. Ces exemples de modèles ne tiennent pas compte des types de questions Calendly, Téléchargement de fichiers ou Paiement dans Typeform.
 
 ### Cas d'utilisation : L'e-mail comme identifiant
 
@@ -337,7 +337,7 @@ Si vous avez l'intention d'utiliser une adresse e-mail comme identifiant, consul
 {% endalert %}
 
 {% tabs local %}
-{% tab Entrée %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -409,7 +409,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Sortie %}
+{% tab Output %}
 
 ```json
 {
@@ -474,10 +474,10 @@ return brazecall;
 
 Vous pouvez utiliser les champs cachés de Typeform pour transmettre des données dans la charge utile du webhook Typeform, comme l'ID d'un utilisateur, sans avoir à transmettre ces informations dans la réponse Typeform.
 
-Dans cet exemple de modèle, nous utilisons un champ caché "user_id" et le transmettons à la charge utile de la requête `/users/track` en tant que `external_id`. Bien que nous utilisions "user_id", les champs peuvent être modifiés pour répondre à vos besoins.
+Dans cet exemple de modèle, nous utilisons un champ caché "user_id" et nous le passons dans la charge utile de la requête `/users/track` en tant que `external_id`. Bien que nous utilisions "user_id",, les champs peuvent être modifiés pour répondre à vos besoins.
 
 {% tabs local %}
-{% tab Entrée %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -549,7 +549,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Sortie %}
+{% tab Output %}
 
 ```json
 {
@@ -614,7 +614,7 @@ return brazecall;
 
 Après avoir écrit votre transformation de données, cliquez sur **Valider** pour vous assurer que votre code de transformation de données est formaté correctement et qu'il fonctionnera comme prévu. Ensuite, enregistrez et activez votre transformation de données.
 
-Une fois activées, les données des événements personnalisés seront enregistrées dans le profil de l'utilisateur lorsqu'il remplit votre formulaire.
+Lorsqu'elles sont activées, les données des événements personnalisés sont enregistrées dans le profil de l'utilisateur lorsqu'il remplit votre formulaire.
 
 ![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 
