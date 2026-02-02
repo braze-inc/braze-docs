@@ -25,12 +25,12 @@ Hay un límite de cinco predicciones activas simultáneamente. Antes de comprar 
 {: start="2"}
 2\. Dale a tu predicción un nombre único. También puedes proporcionar una descripción para guardar cualquier nota relevante.
 
-\![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
+![]({% image_buster /assets/img/purchasePrediction/purchases_step1.png %})
 
 {: start="3"}
 3\. Haz clic en **Adelante** para pasar al siguiente paso. <br><br>Opcionalmente, puedes hacer clic en **Construir ahora** para utilizar toda la configuración predeterminada y pasar al último paso de la creación. Tendrás la oportunidad de revisar la configuración antes de iniciar el proceso de construcción. Además, puedes volver a cualquier paso más tarde haciendo clic en él en la barra superior.
 
-## Paso 2: Especificar seguimiento de eventos {#event-tracking}
+## Paso 2: Especificar seguimiento de eventos {#event-tracking}
 
 Especifica si los eventos de tus usuarios se almacenan en Braze como [eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/) o [eventos personalizados]({{site.baseurl}}/user_guide/data/custom_data/custom_events/).
 
@@ -40,11 +40,15 @@ Aquí verás si el método seleccionado proporciona suficientes datos para que B
 
 La ventana del evento es el intervalo de tiempo en el que quieres predecir si un usuario realizará el evento. Se puede configurar hasta 60 días. Esta ventana se utiliza para consultar datos históricos para entrenar la predicción. Además, después de crear la predicción y de que los usuarios reciban puntuaciones, la puntuación de probabilidad indica la probabilidad de que un usuario realice el evento en el número de días especificado por la ventana de eventos.
 
-### Paso 3: Filtra tu audiencia de predicción (opcional) {#audience}
+### Paso 3: Filtra tu audiencia de predicción (opcional) {#audience}
 
 Tu audiencia de predicción es el grupo de usuarios cuya puntuación de probabilidad te gustaría predecir. Si lo deseas, puedes realizar una predicción sobre toda tu población de usuarios. Para ello, deja seleccionada la opción predeterminada **Todos los usuarios**.
 
 Dependiendo de tu caso de uso, puede que quieras utilizar filtros para especificar los usuarios que quieres evaluar para el modelo. Para ello, selecciona **Definir mi propia audiencia de predicción** y elige tus filtros de audiencia. Por ejemplo, es posible que quieras centrarte en los usuarios que han estado utilizando tu aplicación durante al menos 30 días seleccionando el filtro "Primera aplicación utilizada" establecido en 30 días. Configurar esta audiencia indica a Braze que quieres que tu modelo aprenda específicamente de los usuarios que (en el momento en que se ejecuta el modelo) han utilizado la aplicación durante al menos 30 días.
+
+{% alert important %}
+Centra tus filtros en las características de los usuarios relevantes para tu caso de uso, como usuarios activos, nuevos usuarios, usuarios de alto valor o usuarios de un país concreto. Evita filtrar tu audiencia de predicción en función de si los usuarios ya han realizado el evento que estás prediciendo. La audiencia de predicción define de quién quieres que aprenda el modelo, no el resultado del acontecimiento en sí. El modelo necesita observar tanto a los usuarios que han completado el acontecimiento como a los que no lo han hecho para aprender y predecir con precisión la probabilidad de completar el acontecimiento en el futuro.
+{% endalert %}
 
 La audiencia de predicción define el grupo de usuarios en los que se fija el modelo de aprendizaje automático para aprender del pasado. Braze te mostrará el tamaño estimado de tu audiencia de predicción. Si especificas la audiencia deseada y no alcanzas el mínimo necesario para ejecutar el modelo, prueba a especificar un filtro más amplio o utiliza la opción **Todos los usuarios**. Ten en cuenta que muchos casos de uso no requieren que selecciones una audiencia de predicción específica. Por ejemplo, si tu caso de uso es dirigirte a los usuarios de la región de la UE con más probabilidades de abandono, puedes ejecutar tu modelo en todos los usuarios y luego incluir un filtro para la región de la UE en el segmento de la campaña.
 
