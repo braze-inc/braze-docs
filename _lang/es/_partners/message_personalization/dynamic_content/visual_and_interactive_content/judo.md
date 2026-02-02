@@ -66,7 +66,7 @@ Una vez finalizada la integración del lado de la aplicación, puede probarla ej
 
 Desde la plataforma Braze, cree una campaña de mensajes Braze in-app con un tipo de mensaje **de Código personalizado**. A continuación, seleccione **Carga HTML** como tipo personalizado. Asegúrate de rellenar el contenido del mensaje con los campos básicos de mensajería in-app; este contenido no se mostrará al usuario.
 
-![Una imagen del aspecto del panel cuando se selecciona el tipo de mensaje "Código personalizado".]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
+![Una imagen del aspecto del panel de control cuando se selecciona el tipo de mensaje "Código personalizado".]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
 
 A continuación, utilice el siguiente fragmento HTML mínimo para satisfacer la validación del formulario: 
 ```
@@ -75,7 +75,7 @@ A continuación, utilice el siguiente fragmento HTML mínimo para satisfacer la 
 
 Tenga en cuenta que esto no se mostrará en producción en su dispositivo ya que Judo reescribirá y reemplazará esto con una Experiencia Judo.
 
-![Una imagen que muestra el código de validación del formulario añadido al paso de composición de tu campaña.]({% image_buster /assets/img/judo/braze-html-boilerplate.png %})
+![Una imagen que muestra el código de validación del formulario añadido al paso de composición de su campaña.]({% image_buster /assets/img/judo/braze-html-boilerplate.png %})
 
 ### Paso 2: Establecer un par clave-valor para Judo
 ![Esta imagen muestra el par clave-valor necesario para esta integración, siendo la "clave" "judo-experiencia" y el "valor" tu enlace de Judo.]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
