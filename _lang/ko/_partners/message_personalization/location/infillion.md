@@ -22,13 +22,13 @@ Combine your beacon or geofence support with Braze targeting and messaging featu
 This integration works the same for Infillion beacons and Infillion geofence solutions.
 {% endalert %}
 
-## 전제 조건
+## Prerequisites
 
-| 요구 사항| 설명|
+| Requirement| 설명|
 | ---| ---|
 | [Infillion manager account](https://manager.gimbal.com/login/users/sign_in) | A Infillion manager account is required to take advantage of this partnership. |
 |[Infillion Location SDK](https://docs.gimbal.com/index.html) | The Infillion Location SDK powers macro and micro location-based mobile experiences using proximity beacons and geofences that allow you to communicate more effectively with your app users. SDK를 구현하고 지오펜스 또는 비콘을 설정해야 합니다. |
-| Braze REST API 키 | `users.track` 권한이 있는 Braze REST API 키. <br><br> Braze 대시보드의 **설정** > **API 키**에서 생성할 수 있습니다. |
+| Braze REST API 키 | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## SDK 통합
