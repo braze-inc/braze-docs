@@ -40,16 +40,16 @@ Questions? Contact Just Words on their [booking page](https://www.justwords.ai/b
 3. Fill out basic campaign details.
 4. Use AI to generate personalized variations.
 
-![The Just Words template creation platform.]({% image_buster /assets/img/just_words/creation_interface.png %}){: style="max-width:80%;"}
+![Just Words 템플릿 제작 플랫폼입니다.]({% image_buster /assets/img/just_words/creation_interface.png %}){: style="max-width:80%;"}
 
-### Step 2: Create a Just Words API key
+### 2단계: Create a Just Words API key
 
 1. Go to **Org Settings** > **API Keys** > **Generate API Key**.
 2. Copy and save the API key in a secure location.
 
-![The Just Words API key form.]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
+![Just Words API 키 양식입니다.]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
 
-### Step 3: Use Just Words in your Braze content
+### 3단계: Use Just Words in your Braze content
 
 Just Words works with Canvases and campaigns by using Connected Content. If you're creating a Canvas, each email step should correspond to a unique Just Words template.
 
@@ -77,7 +77,7 @@ Just Words works with Canvases and campaigns by using Connected Content. If you'
 ```
 {% endraw %}
 
-![Braze A/B test Canvas setup.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
+![Braze A/B 테스트 캔버스 설정.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
 
 {% endtab %}
 {% tab Campaign %}
@@ -125,32 +125,32 @@ To personalize your messages with custom attributes (such as `industry`), use th
 
 Note that the custom attribute of `industry` is indicated by {% raw %}```&attrs.industry={{ custom_attribute.industry }}```{% endraw %}. 
 
-![Braze Liquid logic in an HTML message composer.]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
+![HTML 메시지 작성기에서 Braze Liquid 로직.]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
 
-### Step 4: Preview the email
+### 4단계: Preview the email
 
 Make sure to preview the email in Braze to confirm that the personalized content correctly renders.
 
-![Braze message preview for a Just Words email.]({% image_buster /assets/img/just_words/just_words_preview.png %}){: style="max-width:80%;"}
+![Just Words 이메일에 대한 Braze 메시지 미리보기.]({% image_buster /assets/img/just_words/just_words_preview.png %}){: style="max-width:80%;"}
 
-### Step 5: Set up Braze Currents
+### 5단계: Set up Braze Currents
 
 Braze Currents enables performance tracking and optimization over time.
 
 1. In Braze, go to **Partner Integrations** > **Data Export**.
 2. Select **Create New Test Current** and then select **Test Amazon S3 Data Export**.
 
-!["Create New Test Current" dropdown with the option of "Test Amazon S3 Data Export".]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
+!["새 테스트 전류 만들기" 드롭다운에서 "Amazon S3 데이터 내보내기 테스트" 옵션을 선택합니다.]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
 
 {: start="3" }
 3\. Enter the S3 Access ID, AWS Secret Access Key, Bucket name, and folder that were provided by Just Words during onboarding.
 
-!["Credentials" section for the AWS secret access key.]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
+![AWS 비밀 액세스 키에 대한 "자격 증명" 섹션.]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
 
 {: start="4" }
 4\. Select the events to track, such as sends, opens, clicks, unsubscribes, conversions, and others.
 
-!["Message Engagement Events" section with events to select.]({% image_buster /assets/img/just_words/message_engagement_events.png %}){: style="max-width:80%;"}
+!["메시지 참여 이벤트" 섹션에서 이벤트를 선택할 수 있습니다.]({% image_buster /assets/img/just_words/message_engagement_events.png %}){: style="max-width:80%;"}
 
 {: start="5" }
 5\. Launch the Braze Current.
