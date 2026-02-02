@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude for Currents
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitude for Currents
 
 > [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
@@ -39,7 +39,7 @@ amplitude.setDeviceId(Appboy.getInstance(context).getDeviceId();)
 
 You can export two types of events to Amplitude: [Message Engagement Events](#supported-currents-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#supported-currents-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
-All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "TEST_COHORT" with the `cohort_id` "abcd1234" will be titled `[Amplitude] TEST_COHORT: abcd1234` in Braze filters.
+All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. 즉, `cohort_id` "abcd1234"가 포함된 "TEST_COHORT" 라는 이름의 코호트는 Braze 필터에서 `[Amplitude] TEST_COHORT: abcd1234` 라는 제목이 붙게 됩니다.
 
 Contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements.
 
@@ -59,7 +59,7 @@ In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**.
 Events sent from Braze Currents to Amplitude will count toward your Amplitude event volume quota.
 {% endalert %}
 
-![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. The lower half of the Currents page lists available Currents events you can send.]({% image_buster /assets/img/amplitude4.png %})
+![The Braze Amplitude Currents page. This page includes fields for integration name, contact email, API key, and US region. 커런츠 페이지 하단에는 보낼 수 있는 커런츠 이벤트가 나열되어 있습니다.]({% image_buster /assets/img/amplitude4.png %})
 
 {% tab note %}
 Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) to learn more.
