@@ -4,7 +4,7 @@ article_title: Content-Cards
 page_order: 1
 layout: dev_guide
 guide_top_header: "Content-Cards"
-guide_top_text: "Mit Content-Cards können Sie einen zielgerichteten, dynamischen Stream mit reichhaltigen Inhalten an Ihre Kund:innen senden, und zwar innerhalb der Apps, die sie lieben, ohne ihr Erlebnis zu unterbrechen. <br><br>Content-Cards werden direkt in Ihre App oder Website eingebettet, so dass Sie Nachrichteneingänge und angepasste Schnittstellen erstellen können, die die Reichweite anderer Kanäle wie E-Mail oder Push-Benachrichtigungen erweitern. Darüber hinaus unterstützen Content-Cards mehr personalisierte Features, einschließlich Karten-Anheftung, Karten-Ausblendung, API-basierte Zustellung, Karten-Analytik und einfache Koordination mit Push-Benachrichtigungen. <br><br>**Die Verfügbarkeit von Content-Cards hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren oder Ihre Account Manager:in oder Customer-Success-Manager:in, um loszulegen.**"
+guide_top_text: "Mit Content-Cards können Sie einen zielgerichteten, dynamischen Stream mit reichhaltigen Inhalten an Ihre Kund:innen senden, und zwar innerhalb der Apps, die sie lieben, ohne ihr Erlebnis zu unterbrechen. <br><br>Content-Cards werden direkt in Ihre App oder Website eingebettet, so dass Sie Nachrichteneingänge und angepasste Schnittstellen erstellen können, die die Reichweite anderer Kanäle wie E-Mail oder Push-Benachrichtigungen erweitern. Darüber hinaus unterstützen Content-Cards mehr personalisierte Features, einschließlich Karten-Anheftung, Karten-Ausblendung, API-basierte Zustellung, Karten-Analytik und einfache Koordination mit Push-Benachrichtigungen. <br><br>**Die Verfügbarkeit von Content-Cards hängt von Ihrem Braze-Paket ab. Kontaktieren Sie Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen."
 description: "Diese Landing-Page ist die Heimat von Braze Content-Cards. Hier finden Sie Artikel darüber, wie Sie eine Content Card erstellen, wie Sie Ihre Content Cards anpassen, wie Sie Tests durchführen, Berichte erstellen und vieles mehr."
 channel:
   - content cards
@@ -21,7 +21,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
   image: /assets/img/braze_icons/brush-02.svg
 - name: Testen
-  link: /docs/user_guide/message_building_by_channel/content_cards/testing/
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: Berichterstattung
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Vorteile der Verwendung von Content-Cards
+## [![Braze Lernangebote]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} Vorteile der Verwendung von Content-Cards
 
 Hier sind nur einige Vorteile der Verwendung von Content Cards gegenüber der Einbindung von Inhalten in Ihre App durch Ihre Entwickler:
 
@@ -128,11 +128,11 @@ In diesem Abschnitt finden Sie die gängigsten Möglichkeiten, Content-Cards in 
 
 Die Logik und die Implementierung dieser Platzierungen sind in Braze nicht voreingestellt, so dass Ihr Entwicklungsteam die Arbeit zur Erreichung dieser Anwendungsfälle liefern und unterstützen muss. Einen Überblick über die Implementierung dieser Platzierungen finden Sie unter [Erstellen einer benutzerdefinierten Inhaltskarte]({{site.baseurl}}/developer_guide/content_cards/creating_cards/).
 
-\![3 Beispiel Content-Cards, die die verschiedenen Platzierungsoptionen zeigen: Posteingang, Karussell und Banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 Beispiel Content-Cards, die die verschiedenen Platzierungsmöglichkeiten zeigen: Posteingang, Karussell und Banner.]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### Posteingang für Nachrichten
 
-\![Eine Content-Card mit der Platzierung "Posteingang" als Beispiel.]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Ein Beispiel für eine Content-Card mit der Platzierung "Posteingang".]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Ein Nachrichteneingang (auch Benachrichtigungszentrale oder Feed genannt) ist ein dauerhafter Ort in Ihrer App oder Website, an dem Sie Content Cards in dem von Ihnen bevorzugten Format anzeigen können. Jede Nachricht im Posteingang ist eine eigene Inhaltskarte. 
 
@@ -154,7 +154,7 @@ Content Cards werden mit einem Standardstil geliefert, aber Sie können eine ben
 
 ### Karussell
 
-\![Ein Beispiel für eine Content-Card, die die "Karussell"-Positionierung verwendet.]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+![Ein Beispiel für eine Content-Card, bei der die "Karussell"-Positionierung verwendet wird.]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 Karussells zeigen mehrere Inhalte in einem einzigen Bereich an, den Ihre Kunden durch Wischen aufrufen können. Sie können eine Diashow mit Bildern, Text, Videos oder einer Kombination davon sein. Dies ist eine angepasste Implementierung und erfordert ein wenig Arbeit von Ihren Entwickler:innen.
 
