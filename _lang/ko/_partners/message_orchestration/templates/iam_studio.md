@@ -36,23 +36,23 @@ With the Braze and IAM Studio integration, you can easily insert customizable in
 
 ### Step 1: Choose a template
 
-Choose an in-app message template you want to use from the in-app message template gallery
+인앱 메시지 템플릿 갤러리에서 사용하려는 인앱 메시지 템플릿을 선택하세요
 
-![The IAM Studio template gallery shows different templates such as "carousel slide modal", "simple icon modal", "modal full image", and more.]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
+![IAM Studio 템플릿 갤러리는 '캐러셀 슬라이드 Modal', '간단한 아이콘 Modal', 'Modal 전체 이미지' 등 다양한 템플릿을 보여줍니다.]({% image_buster /assets/img/iam_studio/iam_template_gallery.png %})
 
-### Step 2: Customize the template
+### 2단계: Customize the template
 
 First, customize the image, text, and button for your content. Be sure to connect **Deeplink** for the image and button.
 
 {% tabs local %}
 {% tab Image %}
-![The IAM Studio UI showing the options to customize the image. These options include the image, image radius, and image dimmed.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
+![The IAM Studio UI showing the options to customize the image. 이러한 옵션에는 이미지, 이미지 반경, 이미지 어둡게 하기 등이 있습니다.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
 {% tab Text %}
-![The IAM Studio UI showing the options to customize the title and subtitle of your message. These options include text, formatting, and font.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
+![The IAM Studio UI showing the options to customize the title and subtitle of your message. 이러한 옵션에는 텍스트, 서식 및 글꼴이 포함됩니다.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
 {% tab Button %}
-![The IAM Studio UI showing the options to customize the main, left and right button. These options include color, deep link, text, and formatting.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
+![The IAM Studio UI showing the options to customize the main, left and right button. 이러한 옵션에는 색상, 딥링크, 텍스트 및 서식이 포함됩니다.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -60,13 +60,13 @@ Next, create your personalized in-app message by adding custom fonts and using L
 
 {% tabs local %}
 {% tab Fonts %}
-![The IAM Studio UI showing the options to add Liquid. These options include making personalized sentence.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
+![The IAM Studio UI showing the options to add Liquid. 이러한 옵션에는 개인화된 문장을 만드는 것이 포함됩니다.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
-![The IAM Studio UI showing the options to customize event/attribute logging. These options include that user behavior log.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+![The IAM Studio UI showing the options to customize event/attribute logging. 이러한 옵션에는 해당 사용자 행동 로그가 포함됩니다.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
 {% tab Logging and Tracking %}
-![The IAM Studio UI showing the options to customize font. These options include that user can customize font style.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png %})
+![The IAM Studio UI showing the options to customize font. 이러한 옵션에는 사용자가 글꼴 스타일을 커스텀할 수 있는 옵션이 포함됩니다.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
 
@@ -76,7 +76,7 @@ Once all editing has been completed, export the template by clicking **Export**.
 
 ![]({% image_buster /assets/img/iam_studio/export_iam_code.png %}){: style="max-width:45%;"}
 
-### Step 4: Use code in Braze 
+### 4단계: Use code in Braze 
 
 Navigate to Braze, and in your in-app message, paste the custom code in the **HTML Input** box. Make sure to test your message to check it is displaying correctly.
 
