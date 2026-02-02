@@ -32,7 +32,7 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
 
 {% alert warning %}
-It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. 이 상태가 **5일** 이상 지속되면 커넥터의 이벤트가 삭제되고 데이터가 영구적으로 손실됩니다.
 {% endalert %}
 
 ### Step 2: Create a new Currents connector
@@ -41,9 +41,9 @@ It's important to keep your Segment write key up to date. If your connector's cr
 2. Click **\+ Create New Current** > **Segment Data Export**.
 3. Next, provide an integration name, contact email, Segment write key, and Segment region.
 
-![The Segment Currents page in Braze. Here, you can find fields for integration name, contact email, segment region, and API key.]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
+![세그먼트 커런츠 페이지 in Braze. 여기에서 통합 이름, 연락처 이메일, Segment 리전 및 API 키 필드를 찾을 수 있습니다.]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
 
-### Step 3: Export message engagement events
+### 3단계: Export message engagement events
 
 Next, select the message engagement events you would like to export. Reference the following export events and properties table listed. All events sent to Segment will include the user's `external_user_id` as the `userId` and the user's `braze_id` as the `anonymousId`.
 
@@ -53,9 +53,9 @@ Keep in mind, Braze only sends event data for users without an `external_user_id
 Anonymous user export is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
 {% endalert %}
 
-![List of all available message engagement events on the Segment Currents page in Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
+![Braze의 세그먼트 커런츠 페이지에서 사용 가능한 모든 메시지 참여 이벤트 목록입니다.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
-Lastly, select **Launch Current**.
+마지막으로, **현재 실행**을 선택합니다.
 
 {% alert warning %}
 If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different workspaces. Because the Braze Segment Currents integration cannot isolate events by different apps in a single workspace, failure to do this will lead to unnecessary data deduping and lost data.
