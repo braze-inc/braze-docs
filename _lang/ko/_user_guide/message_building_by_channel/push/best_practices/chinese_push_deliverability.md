@@ -1,29 +1,29 @@
 ---
-nav_title: 중국 Android 기기에 대한 전달 가능성
-article_title: 중국 Android 기기에 대한 푸시 전달 가능성
+nav_title: Deliverability for Chinese Android devices
+article_title: 중국 Android 기기의 푸시 전달 가능성
 page_order: 10
 
 page_type: reference
-description: "이 문서에서는 중국 OEM이 제조한 Android 기기의 사용자를 타겟팅할 때 주의해야 할 푸시 전달 가능성의 뉘앙스에 대해 설명합니다."
+description: "이 기사에서는 중국 OEM이 제조한 Android 기기에서 사용자를 타겟팅할 때 알아야 할 푸시 전달 가능성의 미묘한 차이점을 다룹니다."
 channel: push
 
 ---
 
-# 중국 Android 기기에 대한 푸시 전달 가능성
+# 중국 Android 기기의 푸시 전달 가능성
 
-> Xiaomi, OPPO, Vivo 등 중국 OEM(주문자 상표 부착 생산업체)에서 제조한 일부 Android 기기는 적극적인 앱 수명 주기 관리를 통해 배터리 수명을 연장하도록 최적화합니다. 이 최적화는 백그라운드 앱 처리를 종료하는 의도하지 않은 결과를 초래할 수 있으며, 이로 인해 푸시 알림의 전달 가능성이 저하될 수 있습니다.<br><br>이러한 기기에서 앱의 메시징 성능이 예상대로 작동하도록 하려면 마케팅 팀과 엔지니어링 팀이 협력하여 이 문서에 설명된 단계를 따라야 합니다.
+> 일부 Android 기기는 Xiaomi, OPPO, Vivo와 같은 중국의 원래 장비 제조업체(OEM)가 제조하며, 공격적인 앱 수명 주기 관리를 통해 더 긴 배터리 수명을 최적화합니다. 이 최적화는 백그라운드 앱 처리를 중단시키는 의도치 않은 결과를 초래할 수 있으며, 이는 푸시 알림의 전달 가능성을 감소시킬 수 있습니다.<br><br>이 기사의 단계에 따라 앱의 메시징 성능이 이러한 기기에서 예상대로 작동하도록 마케팅 및 엔지니어링 팀이 협력해야 합니다.
 
 ## 개발자를 위한 단계
-이러한 OEM은 백그라운드 애플리케이션을 공격적으로 종료하고 백그라운드 작업을 실행하기 위해 스스로 시작하지 못하도록 차단하여 성능/성과를 최적화합니다. 개발자는 가능하면 사용자에게 이러한 제한을 완화하도록 요청하도록 앱을 구성해야 합니다.
+이들 OEM은 백그라운드 애플리케이션을 공격적으로 종료하고 백그라운드 작업을 실행하기 위해 자체 시작을 차단함으로써 최적화를 수행합니다. 개발자로서 사용자가 이러한 제한을 완화하도록 앱을 구성해야 합니다.
 
-이는 최종 사용자의 기기에서 앱이 자동으로 시작되도록 설정하여 앱이 백그라운드에서 실행되고 Braze의 메시지를 수신할 수 있는 권한을 부여함으로써 달성할 수 있습니다. 안타깝게도 이 문제는 Android 문제가 아닌 OEM별 문제이므로 각 OEM에 대한 자동 시작 권한 프롬프트를 불러오는 데 대한 설명서가 없는 API가 있습니다.
+이는 앱이 최종 사용자의 기기에서 자동으로 시작되도록 하여 앱이 백그라운드에서 실행되고 Braze로부터의 메시지를 수신할 수 있도록 허용함으로써 달성할 수 있습니다. 불행히도, 이것은 Android 문제가 아닌 OEM 특정 문제이기 때문에 각 OEM에 대한 자동 시작 권한 프롬프트를 표시하는 문서화된 API가 없습니다.
 
-이 문제를 해결하려면 [AutoStarter와](https://github.com/judemanutd/AutoStarter) 같은 라이브러리를 애플리케이션에 통합하세요. AutoStarter는 여러 제조업체를 지원하므로 다양한 기기에서 시작 권한 매니저를 쉽게 호출할 수 있습니다. AutoStarter를 통합한 후 `AutoStartPermissionHelper.getInstance().getAutoStartPermission(context)` 으로 전화하여 최종 사용자의 기기에 시작 권한 매니저를 불러오세요. 이 작업과 함께 최종 사용자에게 앱의 '자동 시작'을 인에이블먼트하도록 권장하는 메시지를 표시하세요. 마케팅 팀이 이 메시지를 만들 것입니다 - 다음 섹션을 참조하세요!
+이를 해결하려면 [AutoStarter](https://github.com/judemanutd/AutoStarter)와 같은 라이브러리를 애플리케이션에 통합하십시오. AutoStarter는 여러 제조업체를 지원하여 다양한 기기에서 시작 권한 매니저를 쉽게 호출할 수 있는 방법을 제공합니다. AutoStarter를 통합한 후, `AutoStartPermissionHelper.getInstance().getAutoStartPermission(context)`을 호출하여 최종사용자의 기기에서 시작 권한 매니저를 불러옵니다. 이 작업을 앱의 "자동 시작"을 활성화하도록 최종 사용자에게 권장하는 메시지와 결합하세요. 귀하의 마케팅 팀이 이 메시지를 작성할 것입니다. 다음 섹션을 참조하십시오!
 
-## 마케팅 담당자를 위한 단계
-사용자가 푸시 알림 수신을 옵트인한 후에는 이러한 기기에 대한 메시지 전달을 개선하기 위해 사용자 측에서 취할 수 있는 추가 단계가 있습니다. [푸시 프라이머 메시지에]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) 중국 OEM 기기의 사용자를 타겟팅하는 인앱 메시지를 추가하여 후속 조치를 취하는 것이 좋습니다:
+## 마케터를 위한 단계
+사용자가 푸시 알림을 받도록 선택한 후, 이러한 기기의 메시지 전달을 개선하기 위해 추가로 취할 수 있는 단계가 있습니다. We recommend you follow up your [push primer message]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) with an in-app message targeted to users on Chinese OEM devices with these additional steps:
 
-- 앱에 '자동 시작' 인에이블먼트 사용
-- 앱의 배터리 최적화 비활성화하기
+- 앱의 "자동 시작"을 활성화하십시오
+- 앱의 배터리 최적화를 비활성화합니다
 
-메시지를 더욱 증폭시키려면 다른 채널을 추가하여 SMS, WhatsApp, LINE과 같은 앱 외부 채널과 인앱 메시지 및 콘텐츠 카드와 같은 인앱 채널을 통해 열지 않은 푸시 알림의 정보를 다시 표시할 수 있습니다. 사용자는 다음에 앱을 열 때 놓쳤을 수 있는 모든 내용을 확인할 수 있습니다.
+메시지를 더욱 증폭시키기 위해 SMS, WhatsApp, LINE과 같은 앱 외 채널과 인앱 메시지 및 콘텐츠 카드와 같은 인앱 채널을 통해 열리지 않은 푸시 알림의 정보를 다시 표면화하는 다른 채널을 추가하세요. 사용자가 앱을 열 때 놓친 내용을 확인할 수 있습니다.
