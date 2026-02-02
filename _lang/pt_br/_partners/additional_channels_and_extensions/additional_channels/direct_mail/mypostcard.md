@@ -22,7 +22,7 @@ Use a integração MyPostcard e Braze para enviar facilmente correspondências i
 | Minha conta MyPostcard B2B           | O registro no MyPostcard é necessário para aproveitar esta integração.                                          |
 | chave de API B2B e credenciais        | Você pode encontrar sua chave de API e as credenciais na ferramenta de administração B2B do MyPostcard.                                         |
 | Campanha B2B MyPostcard aprovada | Para aproveitar esta integração, você precisa configurar uma campanha de mala direta de impressão na ferramenta B2B MyPostcard. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Casos de uso
 
@@ -41,7 +41,7 @@ Para integrar-se ao MyPostcard, [fazer login ou inscrever-se](https://www.mypost
 Crie um modelo de webhook MyPostcard para usar em campanhas futuras ou canvas navegando até **Templates** > **Webhook Templates** na plataforma Braze.
 
 {% alert note %}
-Se estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), acesse **Engajamento** > **Modelos e mídias** > **Modelos de webhook**.
+Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), acessar **engajamento** > **Modelos & Mídia** > **Modelos de Webhook**.
 {% endalert %}
 
 Se você gostaria de criar uma campanha de webhook MyPostcard única ou usar um modelo existente, selecione **Webhook** no Braze ao criar uma nova campanha. Preencha os seguintes campos:
@@ -90,13 +90,13 @@ MyPostcard requer um método HTTP juntamente com os seguintes cabeçalhos HTTP a
 
 Copie o corpo da solicitação exibido na Ferramenta de Administração B2B, em seguida, preencha os espaços reservados com conteúdo usando quaisquer tags de personalização Liquid.
 
-![Guia Criador mostrando o corpo JSON e as informações do webhook.]({% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %})
+![Compor guia mostrando o corpo JSON e informações do webhook.]({% image_buster /assets/img/mypostcard/mypostcard_compose.jpg %})
 
 ### Etapa 2: veja uma prévia da sua solicitação
 
 Em seguida, faça uma prévia da solicitação no painel **Preview (Prévia)** ou navegue até a guia **Test (Teste)**, onde é possível selecionar um usuário aleatório, um usuário existente ou personalizar o seu próprio usuário para testar o webhook. Não se esqueça de salvar seu modelo antes de sair da página!
 
-![Teste a guia Webhook com campos diferentes para validar a implementação.]({% image_buster /assets/img/mypostcard/mypostcard_test.jpg %})
+![Teste a guia Webhook com diferentes campos para validar a implementação.]({% image_buster /assets/img/mypostcard/mypostcard_test.jpg %})
 
 {% alert important %}
 Lembre-se de salvar seu modelo antes de sair da página! <br>Os modelos de webhook atualizados podem ser encontrados na lista **Modelos de webhook salvos** ao criar uma nova [campanha de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
