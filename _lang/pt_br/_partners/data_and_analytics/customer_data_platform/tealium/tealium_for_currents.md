@@ -38,7 +38,7 @@ Na Braze, navegue até **Currents > + Criar Currents > Exportação do Tealium**
 Todos os eventos enviados ao Tealium incluirão o endereço `external_user_id` do usuário. No momento, o Braze não envia dados de eventos para a Tealium para usuários que não têm o endereço `external_user_id` definido.
 
 {% alert important %}
-É importante manter seu URL do Tealium atualizado. Se o URL de seu conector estiver incorreto, o Braze não conseguirá enviar eventos. Se isso persistir por mais de **48 horas**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
+É importante manter seu URL do Tealium atualizado. Se o URL de seu conector estiver incorreto, o Braze não conseguirá enviar eventos. Se isso persistir por mais de **5 dias**, os eventos do conector serão descartados e os dados serão perdidos permanentemente.
 {% endalert %}
 
 ## Detalhes da integração
