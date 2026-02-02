@@ -41,7 +41,7 @@ Para integrar Contentsquare en Braze, debe solicitar la instalación de una inte
 
 1. En Contentsquare, haz clic en **Consola** en el menú **Configuración**. Esto le redirigirá al proyecto en el que está trabajando actualmente. 
 2. En la página **Proyectos**, vaya a la pestaña **Integraciones** y haga clic en el botón **\+ Añadir integración**.
-3. En el catálogo de integraciones, localice la integración **Señales en directo** y haga clic en **Añadir**. El equipo de Contentsquare se pondrá en contacto con usted para configurar el fragmento de código y enviar señales en directo a Braze.
+3. En el catálogo de integraciones, localice la integración **Señales en directo** y haga clic en **Añadir**. El equipo de Contentsquare se pondrá en contacto contigo para configurar el fragmento de código para enviar señales en vivo a Braze.
 4. Contentsquare procesará ahora su integración. El texto del indicador se actualizará una vez finalizada la integración.
 
 Para más información, consulta [Solicitar una integración de Contentsquare](https://uxanalyser.zendesk.com/hc/en-gb/articles/4405613239186).
@@ -50,6 +50,6 @@ Para más información, consulta [Solicitar una integración de Contentsquare](h
 
 Una vez completada la integración, los eventos personalizados de Contentsquare estarán disponibles para ser utilizados en tus campañas y Canvases. Puedes comprobar qué eventos se envían a Braze desde **Configuración de datos** > **Eventos personalizados**.
 
-![Datos de señales en vivo de Contentsquare en la pestaña de eventos personalizados de Braze]({% image_buster /assets/img/contentsquare_custom_events.png %})
+![Datos de Señales en vivo de Contentsquare en la pestaña Eventos personalizados de Braze]({% image_buster /assets/img/contentsquare_custom_events.png %})
 
 
