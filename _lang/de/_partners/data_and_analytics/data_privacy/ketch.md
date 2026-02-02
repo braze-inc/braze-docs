@@ -55,7 +55,7 @@ Um Opt-in und Opt-out Signale von Nutzer:innen zu sammeln und zu orchestrieren, 
 
 ### Schritt 3: Identitäten konfigurieren
 
-Ein Nutzer:innen kann das Zentrum für Marketing-Einstellungen nur sehen, wenn Ketch die Identität des Nutzers für Marketing-Einstellungen bestätigen kann. Wenn Ketch die Identität des Nutzers nicht richtig erfassen kann, wird die Seite mit den Marketing-Einstellungen für diesen Nutzer:innen nicht angezeigt, da Ketch nicht in der Lage ist, seine Benutzereinstellungen zu verwalten.
+Ein Nutzer:innen kann das Zentrum für Marketing-Einstellungen nur dann sehen, wenn Ketch die Identität der Marketing-Einstellungen dieses Nutzers bestätigen kann. Wenn Ketch die Identität des Nutzers nicht richtig erfassen kann, wird die Seite mit den Marketing-Einstellungen für diesen Nutzer:innen nicht angezeigt, da Ketch nicht in der Lage ist, seine Benutzereinstellungen zu verwalten.
 
 1. Um die Identität der Marketing-Einstellungen zu konfigurieren, gehen Sie in Ketch auf die Seite **Einstellungen** und klicken Sie auf **Identitätsraum**. Sie müssen entweder einen neuen Identitätsraum erstellen oder einen bestehenden Identitätsraum bearbeiten, um diesen Identitätsraum als Marketing-Einstellungsidentität zuzuweisen. Vergewissern Sie sich, dass der für die Eigenschaft eingesetzte Ketch-Tag diesen Identitätsraum richtig erfasst.
 2. Gehen Sie zu **Experience Server** > **Eigenschaften**, und bearbeiten Sie die gewünschte Eigenschaft. Stellen Sie sicher, dass Sie unter der Datenebene für diese Eigenschaft den angepassten Identitätsbereich anpassen. Konfigurieren Sie dann, wie die Identität der Marketing-Präferenz auf dieser Website erfasst werden soll.
