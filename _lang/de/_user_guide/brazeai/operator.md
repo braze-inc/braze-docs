@@ -8,15 +8,15 @@ description: "Dieser referenzierte Artikel behandelt BrazeAI Operator, einen KI-
 
 # <sup>BrazeAITM</sup> Operator
 
-> <sup>BrazeAITM</sup> Operator ist ein KI-gestützter Assistent, der in das Braze-Dashboard integriert ist. Operator hilft Ihnen, Antworten zu finden, Fehlerbehebungen vorzunehmen und Best Practices zu erlernen, ohne Ihren Arbeitsablauf zu verlassen.
+> <sup>BrazeAITM</sup> Operator ist ein KI-gestützter Assistent, der in das Braze-Dashboard integriert ist. Operator liefert Antworten, Anleitungen zur Fehlerbehebung und bewährte Verfahren für Ihren Arbeitsablauf.
 
 {% alert important %}
-<sup>BrazeAITM</sup> Operator befindet sich derzeit in einer privaten Beta-Phase mit eingeschränkter Funktionalität. Wenn Sie Hilfe benötigen, wenden Sie sich an Ihren Customer-Success-Manager:in.
+<sup>BrazeAITM</sup> Operator befindet sich in einer privaten Beta-Phase mit eingeschränkter Funktionalität. Wenn Sie Hilfe benötigen, wenden Sie sich an Ihren Customer-Success-Manager:in.
 {% endalert %}
 
 ## Über Operator
 
-Operator ist Ihr eingebauter KI-Assistent im Braze-Dashboard. Es hilft Ihnen, schneller voranzukommen, indem es Fragen beantwortet, nächste Schritte vorschlägt und Sie durch Aufgaben führt - und das alles, ohne Ihren Arbeitsablauf zu verlassen.
+Operator ist ein eingebauter KI-Assistent im Braze-Dashboard. Es beantwortet Fragen, schlägt die nächsten Schritte vor und führt Sie durch Ihre Aufgaben - alles innerhalb Ihres Arbeitsablaufs.
 
 Während der Beta-Phase unterstützt Operator nur den **Fragemodus**. Sie können:
 
@@ -24,22 +24,32 @@ Während der Beta-Phase unterstützt Operator nur den **Fragemodus**. Sie könne
 - Fehlerbehebung mit [seitenorientiertem Kontext](#page-aware-context)
 - Lernangebote und Anleitung zum Onboarding
 
+### Modellanbieter als Unterauftragsverarbeiter oder Drittanbieter
+
+Wenn der Kunde eine Integration mit einem LLM-Anbieter nutzt, der von Braze über die Serviceleistungen; Dienste ("von Braze bereitgestellte LLM") bereitgestellt wird, handeln die Anbieter dieser von Braze bereitgestellten LLM als Unterauftragsverarbeiter von Braze, vorbehaltlich der Bedingungen des Datenverarbeitungszusatzes (DPA) zwischen dem Kunden und Braze. BrazeAI Operator ist mit OpenAI integriert.
+
+Wenn Kunden sich dafür entscheiden, ihren eigenen API-Schlüssel zur Integration mit Braze AI Operator mitzubringen, wird der Anbieter des eigenen LLM-Abos des Kunden als Drittanbieter betrachtet, wie im Vertrag zwischen dem Kunden und Braze definiert. 
+
+### Wie werden meine Daten verwendet und an OpenAI gesendet?
+
+Um KI-Output durch Braze AI-Features zu generieren, die Braze als OpenAI nutzend identifiziert ("Output"), sendet Braze Ihre Prompts, die im Dashboard angezeigten Inhalte und ggf. Workspace-Daten, die für Ihre Abfragen relevant sind ("Input"), an OpenAI. Gemäß [den Verpflichtungen der API-Plattform von OpenAI](https://openai.com/enterprise-privacy/) werden Daten, die über Braze an die API von OpenAI gesendet werden, nicht zum Trainieren oder Verbessern von OpenAI-Modellen verwendet. Zwischen Ihnen und Braze ist der Output Ihre geistige Eigenschaft. Braze erhebt keine Ansprüche auf das Urheberrecht an solchen Ausgaben. Braze übernimmt keinerlei Garantie in Bezug auf KI-generierte Inhalte im Allgemeinen, einschließlich Output.
+
 ## Wie Sie Operator aufrufen
 
 Sie können Operator von jeder Seite des Braze-Dashboards aus öffnen.  
 
 1. Wählen Sie **<sup>BrazeAITM</sup> Operator**, neben Ihrem Nutzerprofil.
 
-\![Das BrazeAI Operator Symbol neben einem Nutzerprofil.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
+![Das Symbol BrazeAI Operator neben einem Nutzerprofil.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
 
 {: start="2"}
 2\. Das Operator Chat Panel wird auf der rechten Seite des Bildschirms geöffnet.
 
-\![Das Chat Panel für Operator.]({% image_buster /assets/img/operator/operator_panel.png %})
+![Das Chat Panel für Operator.]({% image_buster /assets/img/operator/operator_panel.png %})
 
 {% alert tip %}
-Versuchen Sie, das Panel zu maximieren, um es besser lesen zu können, oder zu minimieren, damit Operator weiterhin verfügbar ist, während Sie weiterarbeiten.  
-{% endalert %}
+Versuchen Sie, das Panel zu maximieren, um es besser lesen zu können, oder es zu minimieren, damit Operator weiterhin verfügbar ist, während Sie weiterarbeiten.  
+{% endalert %} 
 
 ## Wie man mit Operator spricht
 
@@ -56,15 +66,26 @@ Betrachten Sie Operator als ein Gespräch, nicht als eine Suchmaschine. Kurze, n
 
 - **Seien Sie konkret:** Versuchen Sie anstelle von "Erzählen Sie mir von Canvas" lieber "Wie verwende ich Aktions-Pfade in Canvas?".  
 - **Verwenden Sie Nachfassaktionen:** Wenn die erste Antwort nicht das ist, was Sie brauchen, stellen Sie klärende Fragen. Der Operator kann die Antworten verfeinern.
-- **Verlassen Sie sich auf den Kontext:** Operator weiß, auf welcher Seite Sie sich in Braze befinden. Öffnen Sie Operator, während Sie sich auf der Seite befinden, mit der Sie arbeiten, um die wichtigsten Ergebnisse zu erhalten.
+- **Verlassen Sie sich auf den Kontext:** Der Operator weiß, auf welcher Seite in Braze Sie sich befinden. Öffnen Sie Operator, während Sie sich auf der Seite befinden, mit der Sie arbeiten, um die wichtigsten Ergebnisse zu erhalten.
 
 ## Features
 
 Operator enthält während der Beta-Phase die folgenden Features:
 
+### GPT-Modelle
+
+Sie können aus diesen GPT-Modellen auswählen, um sie für verschiedene Arten von Anfragen mit Operator zu verwenden:
+
+- [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
+- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
+- [GPT-5](https://platform.openai.com/docs/models/gpt-5)
+- [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1) (Standard)
+
+![Dropdown für verschiedene GPT-Modelle zur Auswahl.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
+
 ### Seitenbezogener Kontext
 
-Operator versteht die Seite, an der Sie gerade in Braze arbeiten, und kann die Antworten auf der Grundlage dieses Kontexts anpassen. Wenn Sie zum Beispiel Operator öffnen, während Sie ein Canvas erstellen, kann er Ihnen für das Canvas relevante Schritte vorschlagen oder Anleitungen geben, ohne dass Sie erklären müssen, wo Sie sich befinden. 
+Operator versteht die Seite, an der Sie in Braze arbeiten, und kann die Antworten auf der Grundlage dieses Kontexts anpassen. Wenn Sie zum Beispiel Operator öffnen, während Sie ein Canvas erstellen, kann er Schritte vorschlagen oder Anleitungen für das Canvas bereitstellen, ohne dass Sie erklären müssen, wo Sie sich befinden. 
 
 ### Vorgeschlagene Souffleure
 
@@ -74,7 +95,7 @@ Wenn Sie Operator öffnen, sehen Sie ein paar Vorschläge, die Ihnen den Einstie
 
 Operator zeigt seine Argumentationsschritte in zusammenklappbaren Abschnitten mit der Bezeichnung **Reasoned** an. Wählen Sie die Dropdown-Liste aus, um diese Abschnitte zu erweitern und zu sehen, wie Operator zu einer Antwort gekommen ist.
 
-\![Dropdown für "Begründet" erweitert mit mehr Details zur Antwort des Operators.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:60%"}
+![Das Dropdown-Menü für "Begründet" wurde um weitere Details zur Antwort des Operators erweitert.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:50%"}
 
 ### Vorgeschlagene Aktionen
 
@@ -122,3 +143,7 @@ Während Operator auf den Kontext Ihrer Arbeit in Braze zugreifen kann, kann Ope
 Da es sich um eine private Beta-Version handelt, kann Operator gelegentlich Fehler, Unterbrechungen oder unvollständige Features aufweisen.
 
 Wenn Sie sich nicht sicher sind, ob eine Frage unterstützt wird, versuchen Sie, sie so zu formulieren, dass Operator Ihnen bei der Navigation oder der Durchführung von Aktionen innerhalb des Braze-Dashboards helfen kann, anstatt Daten aus Analytics oder historischen Daten abzurufen.
+
+### Anzahl der gesendeten Nachrichten
+
+Es gibt ein Limit für die Anzahl der Nachrichten, die Sie an Operator senden können. Wir empfehlen, den Standard GPT-5 mini oder GPT-5 nano für Ihre Abfragen zu verwenden und GPT-5 mit Bedacht für komplexere Aufgaben einzusetzen.
