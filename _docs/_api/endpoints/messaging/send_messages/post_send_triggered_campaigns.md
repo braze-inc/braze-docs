@@ -41,7 +41,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "campaign_id": (required, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
-  "segment_id": (optional, string) see segment identifier,
   "trigger_properties": (optional, object) personalization key-value pairs that apply to all users in this request,
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, connected audience object) see connected audience,
@@ -75,7 +74,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`campaign_id`|Required|String|See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
-|`segment_id`| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`trigger_properties`| Optional | Object | See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Personalization key-value pairs apply to all users in this request. |
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
 |`audience`| Optional | Connected audience object| See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
@@ -87,22 +85,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 - When `send_to_existing_only` is `true` (the default), Braze sends the message only to existing users. When set to `false` and an attributes object is provided, Braze creates a new user if one doesn't exist. Note that setting `send_to_existing_only` to `false` is not supported for user aliases&#8212;new alias-only users cannot be created through this endpoint. To send to an alias-only user, the user must already exist in Braze.
 
 A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
-
-## Trigger campaign messages with segment ID
-
-You can trigger campaign messages to specific segments using the `segment_id` parameter. This allows you to send API-triggered campaigns to users within a segment that is already configured in your campaign's target audience settings. The following payload shows an example of how to use the `segment_id` to achieve this:
-
-```json
-{
-  "campaign_id": "campaign_identifier",
-  "segment_id": "segment_identifier",
-  "broadcast": true
-}
-```
-
-{% alert important %}
-When using `segment_id`, ensure you set `"broadcast": true`. This is a requirement when the `recipients` array is not included in the payload. Without this parameter, the API will return a 400 Bad Request response. The `segment_id` must match the API identifier of the segment defined in your campaign's target audience settings. Using an incorrect or mismatched segment ID will result in a failed request.
-{% endalert %}
 
 ## Example request
 ```

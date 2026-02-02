@@ -41,7 +41,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvas_id": (required, string) see Canvas identifier,
   "canvas_entry_properties": (optional, object) personalization key-value pairs that apply to all users in this request,
-  "segment_id": (optional, string) see segment identifier,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
@@ -66,7 +65,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| Required | String | See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
 |`canvas_entry_properties`| Optional | Object | This includes [Canvas entry properties]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Personalization key-value pairs apply to all users in this request. The Canvas entry properties object has a maximum size limit of 50 KB. <br><br>**Note:** If you're participating in the [Canvas Context early access]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/), this parameter is `context` and includes Canvas entry properties. |
-|`segment_id`| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
 |`audience`| Optional| Connected audience object | See [Connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>If not provided and `broadcast` is set to `true`, the message is sent to the entire segment that the Canvas targets.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `canvas_entry_properties` object. This call requires an `external_user_id`, `user_alias`, or `email`. Requests must specify only one. <br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
@@ -80,22 +78,6 @@ Customers using the API for server-to-server calls may need to allowlist the app
 
 {% alert note %}
 If you include both specific users in your API call and a target segment in the dashboard, Braze sends the message to specifically the user profiles that are both in the API call and qualify for the segment filters.
-{% endalert %}
-
-## Trigger Canvas messages with segment ID
-
-You can trigger Canvas messages to specific segments using the `segment_id` parameter. This allows you to send API-triggered messages to users within a segment that is already configured in your Canvas. The following payload shows an example of how to use the `segment_id` to achieve this:
-
-```json
-{
-  "canvas_id": "canvas_identifier",
-  "segment_id": "segment_identifier",
-  "broadcast": true
-}
-```
-
-{% alert important %}
-When using `segment_id`, ensure you set `"broadcast": true` in your request. This is a requirement when the `recipients` array is not in the payload. Without this parameter, the API will return a 400 Bad Request response. The `segment_id` must match the API identifier of the segment defined in your Canvas's target audience settings. Using an incorrect or mismatched segment ID will result in a failed request.
 {% endalert %}
 
 ## Example request
