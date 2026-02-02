@@ -1,7 +1,7 @@
 ---
 nav_title: Dynamic Yield
 article_title: Dynamic Yield
-description: "Este artículo de referencia describe la asociación entre Braze y Dynamic Yield. Esta asociación te permite aprovechar el motor de recomendación y segmentación de Dynamic Yield para crear Bloques de Experiencia que pueden incrustarse en los mensajes Braze."
+description: "Este artículo de referencia describe la asociación entre Braze y Dynamic Yield. Esta asociación te permite utilizar el motor de recomendación y segmentación de Dynamic Yield para crear Bloques de Experiencia que pueden incrustarse en los mensajes Braze."
 alias: /partners/dynamic_yield/
 page_type: partner
 search_tag: Partner
@@ -16,7 +16,7 @@ _Esta integración es mantenida por Dynamic Yield._
 
 ## Sobre la integración
 
-La asociación entre Braze y Dynamic Yield te permite aprovechar el motor de recomendación y segmentación de Dynamic Yield para crear Bloques de Experiencia que pueden incrustarse en los mensajes Braze. Los bloques de experiencia pueden ser de
+La asociación entre Braze y Dynamic Yield te permite utilizar el motor de recomendación y segmentación de Dynamic Yield para crear Bloques de Experiencia que pueden incrustarse en los mensajes Braze. Los bloques de experiencia pueden ser de
 - **Bloques de recomendaciones**: Establecen algoritmos y filtrar el contenido personalizado de los usuarios de origen que se propaga cuando se abre el correo electrónico. 
 - **Bloques de contenido dinámico**: Dirigen diferentes promociones y mensajes a diferentes usuarios. La orientación puede basarse en la afinidad o en la audiencia. El Rendimiento dinámico determina qué experiencia personalizada servir cuando se abre el correo electrónico. 
 
