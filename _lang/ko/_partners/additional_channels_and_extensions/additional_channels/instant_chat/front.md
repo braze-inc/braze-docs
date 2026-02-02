@@ -74,7 +74,7 @@ First, you'll create a new data transformation in Braze. The following steps are
 
     Your transformation should be similar to the following:
 
-    ![An example data transformation.]({% image_buster /assets/img/front/data_transformation.png %})
+    ![데이터 변환의 예.]({% image_buster /assets/img/front/data_transformation.png %})
 
 {% alert tip %}
 You can modify this template to meet your specific needs. For example, you can customize the pre-set custom event name. For more information, see [Data transformation overview]({{site.baseurl}}/user_guide/data/data_transformation/overview/).
@@ -96,13 +96,13 @@ In the **Message** textbox, add the following Liquid code, along with any opt-ou
 
 Your message should be similar to the following:
 
-![An example message using Liquid code.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
+![Liquid 코드를 사용한 메시지의 예.]({% image_buster /assets/img/front/sms_to_braze.png %}){: style="max-width:80%;"}
 
 #### 2.2 Schedule the delivery
 
 For the delivery type, select **Action-Based delivery**; then for the custom event trigger, select **Outbound SMS Sent**.
 
-![The "Schedule Delivery" page.]({% image_buster /assets/img/front/custom_event_trigger.png %})
+!["전달 일정" 페이지.]({% image_buster /assets/img/front/custom_event_trigger.png %})
 
 {% alert note %}
 This custom event is the Data Transformation that writes to the user’s profile. Agent messages will be saved as an event property on this event.
@@ -110,23 +110,23 @@ This custom event is the Data Transformation that writes to the user’s profile
 
 Finally, under **Delivery Controls**, enable re-eligibility.
 
-![Re-eligibility enabled under "Delivery Controls."]({% image_buster /assets/img/front/braze_reeligibility.png %})
+!["배송 관리"에서 재자격이 활성화됩니다.]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
-### Step 3: Create a custom channel
+### 3단계: Create a custom channel
 
 In the Front dashboard, go to **Settings** > **Channels** > **Add Channels**, then select **Custom Channel** and enter a name for your new Braze channel.
 
-![A custom channel for Braze in the Front dashboard.]({% image_buster /assets/img/front/front_custom_channel.png %})
+![Front 대시보드에서 Braze를 위한 커스텀 채널.]({% image_buster /assets/img/front/front_custom_channel.png %})
 
-### Step 4: Configure the settings
+### 4단계: Configure the settings
 
 In the outbound API endpoint field, enter the Data Transformation Webhook URL [you created earlier](#step-1-set-up-a-data-transformation-in-braze). All outbound messages from live agents on your new Braze channel will be sent here. This channel also provides an endpoint URL for Braze to forward SMS messages to in the **Incoming URL** Field.
 
 Be sure to make a note of this URL—you'll need it later.
 
-![The channel settings for the newly created Braze channel in Front.]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
+![Front에서 새로 생성된 Braze 채널의 채널 설정.]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
 
-### Step 5: Set up inbound-SMS forwarding
+### 5단계: Set up inbound-SMS forwarding
 
 Next, you’ll create two new webhook campaigns in Braze so you can forward inbound SMS from customers to the Front inbox.
 
@@ -144,16 +144,16 @@ In the Braze dashboard, go to **Audience**, choose your **SMS subscription group
 |---|---|
 |Keyword Category|The name of your keyword category, such as `FrontSMS1`.|
 |Keywords|Your custom keywords, such as `TIMETOMOW`. Avoid common words to prevent accidental triggers. Keep in mind, keywords are case insensitive, so `lawn` would match `LAWN`.|
-|Reply Message|The message that will be sent when a keyword is detected, such as "A landscaper will reach out to you shortly."|
+|Reply Message|키워드가 감지될 때 전송될 메시지, 예를 들어 "조경사가 곧 연락드릴 것입니다."|
 {: .reset-td-br-1 .reset-td-br-2 }
 
-![An example SMS keyword category in Braze.]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
+![Braze의 SMS 키워드 카테고리 예시.]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
 
-#### Step 5.2: Create your first webhook campaign
+#### 5.2단계: Create your first webhook campaign
 
 In the Braze dashboard, create your first webhook campaign using the URL [you created previously](#step-3-configure-the-settings-for-your-new-custom-braze-channel).
 
-![An example of the first webhook campaign that should be created in Braze.]({% image_buster /assets/img/front/sms_to_front.png %}){: style="max-width:65%;"}
+![Braze에서 생성해야 할 첫 번째 웹훅 캠페인의 예.]({% image_buster /assets/img/front/sms_to_front.png %}){: style="max-width:65%;"}
 
 Add the following to your request body:
 
@@ -178,33 +178,33 @@ Add the following to your request body:
 
 In the Settings tab, configure your `Authorization`, `content-type`, and `accept` request headers.
 
-![An example request with the three required headers.]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
+![세 개의 필수 헤더가 포함된 요청의 예.]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
 
-#### Step 5.3: Schedule the first delivery
+#### 5.3단계: Schedule the first delivery
 
 For **Schedule Delivery**, select **Action-Based Delivery**, then choose **Send an SMS Inbound Message** for your trigger type. Also add the SMS subscription group and keyword category you [set up previously](#step-51-create-an-sms-keyword-category).
 
-![The "Schedule Delivery" page for the first webhook campaign.]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
+![첫 번째 웹훅 캠페인의 '전송 예약' 페이지입니다.]({% image_buster /assets/img/front/front_actionbased_keyword.png %})
 
 Under **Delivery Controls**, enable re-eligibility.
 
-![Re-eligibility selected under "Delivery Controls" for the first webhook campaign.]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![첫 번째 웹훅 캠페인의 '전달 제어'에서 재자격이 선택되었습니다.]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
 #### Step 5.4: Create your second webhook campaign
 
-Since your second webhook campaign will match the first, you can [duplicate the first one and rename it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns). You can do so now.
+두 번째 웹훅 캠페인이 첫 번째와 일치하므로 [첫 번째 캠페인을 복제하고 이름을 바꿀 수 있습니다.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns)
 
 #### Step 5.5: Schedule the second delivery
 
 For **Schedule Delivery**, set the **action-based trigger** and the **SMS subscription group** to the same as [your the first delivery](#step-53-schedule-the-first-delivery). However, for **keyword category**, choose **Other**.
 
-![The "Scheduled Delivery" page for the second webhook campaign, with "Other" chosen as the keyword category.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
+![두 번째 웹훅 캠페인을 위한 "예정된 전달" 페이지, 키워드 카테고리로 "기타"가 선택됨.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
 
 #### Step 5.6: Add an audience filter
 
 Your webhook campaign can now forward inbound SMS responses from your customers. To filter SMS responses so only messages for live chats are forwarded, add the **Last Received Message From Specific Campaign** segmentation filter to the **Target Audiences Step**.
 
-![An audience filter with "Last Received Message From Specific Campaign" selected.]({% image_buster /assets/img/front/front_segment_last_received_message.png %}){: style="max-width:65%;"}
+!["특정 캠페인에서 마지막으로 수신한 메시지"가 선택된 오디언스 필터.]({% image_buster /assets/img/front/front_segment_last_received_message.png %}){: style="max-width:65%;"}
 
 Then configure your filter:
 
@@ -212,20 +212,20 @@ Then configure your filter:
 2. For **Operator**, select **Less Than**.
 3. For **Time Window**, choose the length of time a chat should stay open without a response from the customer.
 
-![The configuration settings for the selected audience filter.]({% image_buster /assets/img/front/front_target_audience.png %})
+![선택된 오디언스 필터의 구성 설정.]({% image_buster /assets/img/front/front_target_audience.png %})
 
-## Considerations
+## 고려 사항
 
 ### Billable Segments
 
 - SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages. See more information in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
 - Long agent responses will consume more billable segments.
 
-### Data Point Consumption
+### 데이터 포인트 기록
 
-Currently this integration requires a custom event to be written to a user profile every single time a live agent sends an SMS from Front. This may be suitable for quick exchanges that only last a couple of messages - but as conversations get lengthier so do the data point implications. A data point is consumed for each custom event logged to Braze.
+Currently this integration requires a custom event to be written to a user profile every single time a live agent sends an SMS from Front. 이는 몇 개의 메시지만 지속되는 빠른 교환에 적합할 수 있지만, 대화가 길어질수록 데이터 포인트의 의미도 커집니다. Braze 데이터 포인트의 뉘앙스에 대한 질문이 있는 경우, 귀하의 Braze 계정 매니저가 답변할 수 있습니다.
 
-### Including Links in SMS messages
+### SMS 메시지에 링크 포함
 
 Sending a link from the Front live chat will render with extra HTML tags.
 
