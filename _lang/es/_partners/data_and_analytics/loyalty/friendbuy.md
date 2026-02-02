@@ -1,6 +1,6 @@
 ---
 nav_title: AmigoCompra
-article: FriendBuy
+article_title: AmigoCompra
 layout: redirect
 redirect_to: /docs/partners/friendbuy/
 ---
