@@ -18,7 +18,7 @@ search_tag: Partner
 | Prérequis | Description |
 |---|---|
 | Un compte Zendesk | Un compte Zendesk est nécessaire pour bénéficier de ce partenariat.|
-| Un jeton d'autorisation de base Zendesk | Un jeton d'autorisation de base Zendesk sera utilisé pour effectuer une demande de webhook sortant de Braze à Zendesk.|
+| Un jeton d'autorisation de base Zendesk | Un jeton d'autorisation de base Zendesk est utilisé pour effectuer une demande de webhook sortant de Braze à Zendesk.|
 | Une clé API REST de Braze  | Une clé API Braze REST avec des autorisations `campaigns.trigger.send`. Elle peut être créée dans le tableau de bord de Braze depuis **Paramètres** > **Clés d'API**.|
 
 ## Cas d’utilisation
@@ -31,7 +31,7 @@ Améliorez l'efficacité du support client en combinant les fonctionnalités SMS
 
 1. Dans la console de développement Zendesk, accédez à webhooks : {% raw %}`https://{{url}}.zendesk.com/admin/apps-integrations/webhooks/webhooks`{% endraw %}
 2. Sous **Créer un webhook**, sélectionnez **Déclencheur ou automatisation**.
-3. Pour l'**URL de** l'endpoint, ajoutez l'endpoint **/campaign/trigger/send**.
+3. Pour l'**URL de l'endpoint**, ajoutez l'endpoint **/campagne/déclencheur/envoi**.
 4. Sous **Authentification**, sélectionnez **Bearer token** et ajoutez la clé API REST de Braze avec les autorisations `campaigns.trigger.send`.
 
 ![Un exemple de webhook Zendesk.]({% image_buster /assets/img/zendesk/instant_chat/chat1.png %}){: style="max-width:70%;"}
@@ -70,15 +70,15 @@ Feel free to respond directly to this number!
 
 #### Étape 2.2 : Planifier la distribution
 
-Pour le type de distribution, sélectionnez **Distribution déclenchée par API**, puis copiez l'ID de la campagne qui sera utilisé dans les étapes suivantes.
+Pour le type de **réception/distribution**, sélectionnez **API-Triggered delivery**, puis copiez l'ID de la campagne, qui sera utilisé dans les étapes suivantes.
 
-![Réception/distribution déclenchée par l'API]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
+![Distribution déclenchée par l'API]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
 
 Enfin, sous **Contrôle de la distribution**, activez la rééligibilité.
 
 ![Rééligibilité activée sous "Contrôles de la distribution".]({% image_buster /assets/img/zendesk/instant_chat/chat5.png %})
 
-### Étape 3 : Créez un déclencheur dans Zendesk pour transmettre les réponses des agents à Braze.
+### Étape 3 : Créez un déclencheur dans Zendesk pour transmettre les réponses des agents à Braze.
 
 Allez dans **Objets et règles** > **Règles de gestion** > **Déclencheurs**.
 
@@ -86,13 +86,13 @@ Allez dans **Objets et règles** > **Règles de gestion** > **Déclencheurs**.
 2. Créez un nouveau **déclencheur** (par exemple, **Répondre par SMS Braze**).
 3. Sous **Conditions**, sélectionnez :
 - **Ticket>Comment** est **présent et le demandeur peut voir le commentaire de** sorte que le message est déclenché chaque fois qu'un nouveau commentaire public est inclus dans la mise à jour d'un ticket.
-- **Ticket>Update** *n'est pas un* **service Web (API) de** sorte que lorsqu'un utilisateur envoie un message depuis Braze, celui-ci n'est pas renvoyé sur son téléphone portable. Seuls les messages provenant de Zendesk seront transférés.
+- **Ticket>Update** *n'est pas un* **service Web (API) de** sorte que lorsqu'un utilisateur envoie un message depuis Braze, celui-ci n'est pas renvoyé sur son téléphone portable. Seuls les messages provenant de Zendesk sont transférés.
 
-![Répondre par SMS Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat6.png %}){: style="max-width:70%;"}
+![Répondez par SMS Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat6.png %}){: style="max-width:70%;"}
 
 Sous **Actions**, sélectionnez **Notifier par webhook** et choisissez l'endpoint que vous avez créé à l'étape 1. Ensuite, indiquez le corps de l'appel à l'API. Saisissez l'adresse `campaign_id` de l'[étape 2.2](#step-22-schedule-the-delivery) dans le corps de la requête.
 
-![Répondre par SMS Corps JSON de Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat7.png %}){: style="max-width:70%;"}
+![Répondre par SMS Braze JSON body.]({% image_buster /assets/img/zendesk/instant_chat/chat7.png %}){: style="max-width:70%;"}
 
 {% raw %}
 ```liquid
@@ -131,7 +131,7 @@ Ensuite, configurez un déclencheur pour avertir Braze de la clôture du ticket 
 
 Sous **Actions**, sélectionnez **Notifier par webhook** et choisissez le deuxième endpoint que vous venez de créer. À partir de là, nous devons spécifier le corps de l'appel à l'API :
 
-![Ticket résolu JSON body.]({% image_buster /assets/img/zendesk/instant_chat/chat10.png %}){: style="max-width:70%;"}
+![Ticket résolu Corps JSON.]({% image_buster /assets/img/zendesk/instant_chat/chat10.png %}){: style="max-width:70%;"}
 
 {% raw %}
 ```liquid
@@ -175,10 +175,10 @@ Dans le tableau de bord de Braze, allez dans **Audience**, choisissez votre **gr
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Catégorie de mots-clés | Le nom de votre catégorie de mots-clés, par exemple `ZendeskSMS1`.                                                                 |
 | Mots clés         | Vos mots-clés personnalisés, tels que `SUPPORT`.                                                                                  |
-| Message de réponse    | Le message qui sera envoyé lorsqu'un mot-clé est détecté, par exemple "Un représentant du service clientèle vous contactera sous peu". |
+| Message de réponse    | Le message qui est envoyé lorsqu'un mot-clé est détecté, par exemple "Un représentant du service clientèle vous contactera sous peu". |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-![Exemple de catégorie de mots-clés SMS dans Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}
+![Un exemple de catégorie de mots-clés SMS dans Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}
 
 #### Étape 6.2 : Créez votre première campagne webhook
 
@@ -224,7 +224,7 @@ Pour **Schedule Delivery**, sélectionnez **Action-Based Delivery**, puis choisi
 
 Sous **Contrôle de la distribution**, activez la rééligibilité.
 
-![Rééligibilité sélectionnée sous "Contrôles de distribution" pour la première campagne webhook.]({% image_buster /assets/img/zendesk/instant_chat/chat14.png %})
+![Rééligibilité sélectionnée sous "Contrôles de la distribution" pour la première campagne webhook.]({% image_buster /assets/img/zendesk/instant_chat/chat14.png %})
 
 #### Étape 6.4 : Créez votre deuxième campagne webhook
 
@@ -262,6 +262,6 @@ Corps de l'échantillon :
 #### Étape 6.5 : Terminer la configuration de la deuxième campagne webhook
 - Mettez en place un déclencheur basé sur une action pour les utilisateurs qui envoient un message entrant dans la catégorie "Autre".
 - Établir des critères de rééligibilité.
-- Ajoutez les audiences applicables (dans ce cas, l'attribut personnalisé **zendesk_ticket_open** est **true**).
+- Ajoutez les audiences concernées (dans ce cas, l'attribut personnalisé **zendesk_ticket_open** est **vrai**).
 
-[2]: {% image_buster /assets/img/zendesk/instant_chat/chat2.png %}
+[2] : {% image_buster /assets/img/zendesk/instant_chat/chat2.png %}
