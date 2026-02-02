@@ -8,12 +8,12 @@ guide_top_text: "> En envoyant vos données clients de Braze vers d'autres outil
 page_type: landing
 description: "Cette section comprend des articles relatifs à la distribution des données dans la plateforme de données de Braze."
 
-guide_featured_title: "Articles de section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Braze Currents
+  - name: Currents Braze
     link: /docs/user_guide/data/distribution/braze_currents/
     image: /assets/img/braze_icons/waves.svg
-  - name: Exportation des données Braze
+  - name: Exportation de données Braze
     link: /docs/user_guide/data/distribution/export_braze_data/
     image: /assets/img/braze_icons/file-download-01.svg
 ---
