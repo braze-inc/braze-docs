@@ -39,7 +39,7 @@ Bevor Sie mit der Integration beginnen, vergewissern Sie sich, dass Sie die gew�
 #### API-Aufruf
 
 Sobald die Push-Benachrichtigung versendet wurde, stellt WSC Sports sie den ausgewählten Segmenten der Nutzer:innen über die folgenden Endpunkte von Braze zu, basierend auf den ausgewählten Optionen:
-- [/messages/schedule/create]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages#create-scheduled-messages)
+- [/nachrichten/zeitplan/erstellen]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_messages#create-scheduled-messages)
 - [/nachrichten/senden]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages#sending-messages-immediately-via-api-only)
 
 Der Text der Nachricht sieht wie folgt aus: 
