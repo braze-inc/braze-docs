@@ -1,5 +1,5 @@
 ---
-nav_title: Blocs de produits
+nav_title: Bloc de produits
 article_title: Blocs de produits à glisser-déposer
 layout: redirect
 redirect_to: /docs/dnd_product_blocks/
