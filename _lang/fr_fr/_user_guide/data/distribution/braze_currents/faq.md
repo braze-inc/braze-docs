@@ -7,7 +7,7 @@ description: "Cet article aborde certaines des questions les plus fréquemment p
 tool: Currents
 ---
 
-# Questions fréquemment posées
+# Foire aux questions
 
 > Cette page fournit des réponses à certaines questions fréquemment posées au sujet de Currents.
 
@@ -26,6 +26,6 @@ Nous créons un processus d'extraction, de transformation et de chargement (ETL)
 ### Où dois-je stocker ces données pour pouvoir les interroger ?
 
 Braze est partenaire de plusieurs entrepôts de données dans lesquels vous pouvez stocker vos données pour les interroger. Nous vous recommandons d'utiliser :
-- [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)
-- [Stockage de blocs Microsoft Azure]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/)
+- [Amazon S3]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/amazon_s3/)
+- [Microsoft Azure Blob Storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/microsoft_azure_blob_storage_for_currents/)
 - [Google cloud storage]({{site.baseurl}}/partners/data_and_analytics/cloud_storage/google_cloud_storage_for_currents/).
