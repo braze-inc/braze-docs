@@ -70,7 +70,7 @@ Verwenden Sie Dynamic Content, um unterschiedliche Aktionen und Nachrichten an v
 5. Legen Sie die Prioritäten für Ihre Variationen mithilfe der Pfeile nach oben und unten fest. <br><br> 
 6. Die Prioritäten bestimmen, welche Variante angeboten wird, wenn ein Nutzer:innen für mehr als ein Erlebnis in Frage kommt.
 
-### Schritt 3: Integrieren Sie Ihre E-Mail mit Braze
+### Schritt 3: Integrieren Sie Ihre E-Mails mit Braze
 
 Diese Integration erlaubt es Ihnen, personalisierte Empfehlungs-Widgets und dynamischen Content von Dynamic Yield in Ihre Kampagnen von Braze zu integrieren. Das Einbetten dieser Kampagnen in Braze-Kampagnen erfolgt über einen einfachen Einbettungscode, den Sie in den E-Mail-Editor von Braze einfügen.
 
