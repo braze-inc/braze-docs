@@ -55,11 +55,11 @@ optilyz nécessite également un en-tête HTTP pour l'autorisation et une métho
 - **Méthode HTTP** : POST
 - **En-têtes de la requête** :
   - **Autorisation** : {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
-  - **Content-Type**: application/json
+  - **Type de contenu : application/json**
 
 ![Les en-têtes de requête et la méthode HTTP affichés dans le générateur de webhook Braze.]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
 
-#### Corps de la demande
+#### Corps de la requête
 
 [Dans le corps de requête suivant, vous pouvez utiliser n'importe quel tag de personnalisation Liquid et créer un modèle de requête personnalisé conformément à la documentation de l'API d'optilyz.](https://www.optilyz.com/doc/api/)
 
@@ -84,13 +84,13 @@ Le champ `variation` est facultatif et permet de définir quelle conception au s
 ```
 {% endraw %}
 
-![Une image du code du corps de la requête et de l'URL du webhook affichée dans l'onglet de composition du générateur webhook à Braze.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
+![Une image du code du corps de la requête et de l'URL du webhook affichés dans l'onglet de composition du générateur de webhooks Braze.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
 
 ### Étape 2 : Prévisualisez votre requête
 
 Ensuite, prévisualisez votre requête dans le panneau **Aperçu** ou accédez à l'onglet **Test**, où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser le vôtre pour tester votre webhook. N'oubliez pas d'enregistrer votre modèle avant de quitter la page !
 
-![Différents champs de test disponibles dans l'onglet test du générateur webhook de Braze.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
+![Différents champs de test sont disponibles dans l'onglet de test du générateur de webhooks Braze.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
 
 {% alert important %}
 N'oubliez pas d'enregistrer votre modèle avant de quitter la page ! <br>Les modèles de webhook mis à jour se trouvent dans la liste **Modèles de webhook enregistrés** lors de la création d'une nouvelle [campagne webhook.]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/)
