@@ -36,7 +36,7 @@ La siguiente integración de Currents es compatible tanto con [Amazon S3](#setti
 
 En [el panel de control de Fivetran](https://fivetran.com/dashboard), selecciona **\+ Conector** y, a continuación, selecciona el conector **Braze** para iniciar el formulario de configuración. A continuación, seleccione **Amazon S3**. Toma nota del ID externo proporcionado aquí; lo necesitarás para permitir que Fivetran acceda a tu contenedor de S3. 
 
-![El Fivetran configura la forma del conector Braze. El campo ID externo necesario para este paso se encuentra en el centro de la página en un recuadro gris claro.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
+![El Fivetran configura la forma del conector Braze. El campo ID externo necesario para este paso se encuentra en el centro de la página, en un recuadro gris claro.]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
 #### Paso 2: Dar acceso a Fivetran a un contenedor de S3 especificado
 
@@ -94,7 +94,7 @@ A continuación, selecciona **Siguiente: Permisos** para seleccionar la polític
 
 Selecciona **Siguiente: Revisa**, asigna un nombre a tu nuevo rol (como Fivetran) y selecciona **Crear rol**. Una vez creado el rol, selecciónalo y anota el ARN del rol que se muestra.
 
-![El ARN de Amazon S3 listado en el rol.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
+![El ARN de Amazon S3 que aparece en el rol.]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
 
 {% alert note %}
 Puedes especificar permisos para el ARN de rol que designes para Fivetran. Dar permisos selectivos a esta función permitirá a Fivetran sincronizar sólo lo que tiene permiso para ver.
@@ -114,7 +114,7 @@ En Fivetran, selecciona **\+ Conector** y, a continuación, selecciona el conect
 Asegúrese de que **Amazon S3** está seleccionado como **almacenamiento en la nube**.
 {% endalert %}
 
-Por último, selecciona **Guardar y probar**, ¡y Fivetran hará el resto sincronizándose con los datos de tu cuenta Braze!
+Por último, selecciona **Guardar prueba & **, ¡y Fivetran hará el resto sincronizándose con los datos de tu cuenta Braze!
 
 ### Configuración de Braze Currents para Google Cloud Storage
 
@@ -147,5 +147,5 @@ En Fivetran, selecciona **\+ Conector** y, a continuación, selecciona el conect
 Asegúrese de que **Google Cloud Storage** está seleccionado como opción de **almacenamiento en la nube**.
 {% endalert %}
 
-Por último, selecciona **Guardar y probar**, ¡y Fivetran hará el resto sincronizándose con los datos de tu cuenta Braze!
+Por último, selecciona **Guardar prueba & **, ¡y Fivetran hará el resto sincronizándose con los datos de tu cuenta Braze!
 
