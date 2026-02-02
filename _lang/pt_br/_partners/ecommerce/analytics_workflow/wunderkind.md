@@ -27,7 +27,7 @@ A integração do Braze e do Wunderkind permite analisar o aumento da performanc
 
 ## Integração
 
-Entre em contato com a equipe do WunderKind para ajudar a configurar a integração. Você precisará fornecer suas credenciais do provedor de serviços de e-mail ou da API da Braze para que a Wunderkind possa enviar implantações de e-mail e status de inscrição por meio da API. 
+Entre em contato com sua equipe da WunderKind para ajudar a configurar a integração. Você precisará fornecer suas credenciais do provedor de serviços de e-mail ou da API da Braze para que a Wunderkind possa enviar implantações de e-mail e status de inscrição por meio da API. 
 
 Após a conexão, a Wunderkind:
 - Realize testes preliminares para confirmar uma conexão estável e garantir que os e-mails possam ser enviados do lado do Wunderkind para o ESP. 
