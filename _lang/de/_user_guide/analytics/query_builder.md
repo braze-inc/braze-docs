@@ -25,7 +25,7 @@ So führen Sie einen Query Builder-Bericht aus:
 6. Speichern Sie Ihre Anfrage.
 7. Um eine CSV-Datei mit Ihrem Bericht herunterzuladen, wählen Sie **Exportieren**.
 
-\![Query Builder zeigt die Ergebnisse für die Template-Abfrage "Engagement und Umsatz des Kanals in den letzten 30 Tagen".]({% image_buster /assets/img_archive/query_builder.png %})
+![Query Builder zeigt die Ergebnisse für die Template-Abfrage "Engagement und Umsatz des Kanals in den letzten 30 Tagen".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Die Ergebnisse der einzelnen Berichte können einmal pro Tag erstellt werden. Wenn Sie denselben Bericht mehr als einmal pro Kalendertag ausführen, enthalten beide Berichte dieselben Ergebnisse.
 
@@ -76,7 +76,7 @@ Wenn Sie die Nutzung von Abfragen über längere Zeiträume prüfen oder Aufzeic
 
 Der Abfrage-Builder mit KI nutzt [GPT](https://openai.com/gpt-4) von OpenAI, um SQL für Ihre Abfrage zu empfehlen.
 
-\![Die SQL KI-Abfrageerstellung.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![Der SQL KI Query Builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 So erzeugen Sie SQL per KI im Abfrage-Builder:
 
