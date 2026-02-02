@@ -1,12 +1,12 @@
 ---
 nav_title: Kontobasierte Segmentierung
-article_title: Einrichten der kontobasierten Segmentierung
+article_title: Kontobasierte Segmentierung einrichten
 page_order: 2
 page_type: reference
 description: "Erfahren Sie, wie Sie die verschiedenen Features von Braze nutzen können, um Ihre Anwendungsfälle für die Segmentierung von B2B-Konten zu unterstützen."
 ---
 
-# Einrichten einer kontobasierten Segmentierung
+# Kontobasierte Segmentierung einrichten
 
 > Auf dieser Seite erfahren Sie, wie Sie verschiedene Features von Braze nutzen können, um Ihre Anwendungsfälle für die Segmentierung von B2B-Konten zu unterstützen.
 
@@ -25,7 +25,7 @@ Um Ihnen den Einstieg zu erleichtern, haben wir grundlegende SQL-Templates für 
 
 Nehmen wir an, Sie möchten Nutzer:innen eines Targeting-Unternehmenskontos segmentieren. 
 
-1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen** > **Neue Erweiterung erstellen** > **Mit einer Vorlage beginnen** und wählen Sie die Vorlage **Katalogsegment für Ereignisse**. <br><br> !["Wählen Sie ein Template"-Modal mit Katalogsegmentierungsoptionen für Events oder Käufe.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>Der SQL-Editor wird automatisch mit einer Vorlage gefüllt, die Benutzer-Event-Daten mit Katalogdaten verknüpft, um Nutzer:innen zu segmentieren, die sich mit bestimmten Katalogartikeln beschäftigen. <br><br>![Ein SQL-Editor für eine neue Erweiterung mit einem geöffneten Tab "Variablen".]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
+1. Gehen Sie zu **Zielgruppe** > **Segmenterweiterungen** > **Neue Erweiterung erstellen** > **Mit einer Vorlage beginnen** und wählen Sie die Vorlage **Katalogsegment für Ereignisse**. <br><br> ![Modal „Template auswählen“ mit Segmentoptionen für Events oder Käufe.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>Der SQL-Editor wird automatisch mit einer Vorlage gefüllt, die Benutzer-Event-Daten mit Katalogdaten verknüpft, um Nutzer:innen zu segmentieren, die sich mit bestimmten Katalogartikeln beschäftigen. <br><br>![Ein SQL-Editor für eine neue Erweiterung mit einer geöffneten Registerkarte "Variablen".]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Verwenden Sie die Registerkarte **Variablen**, um die erforderlichen Felder für Ihre Vorlage bereitzustellen, bevor Sie Ihr Segment erstellen.<br><br>Damit Braze Nutzer:innen auf der Grundlage ihres Engagements für Katalogartikel identifizieren kann, müssen Sie Folgendes tun:
 - Wählen Sie einen Katalog, der ein Katalogfeld enthält
 - Wählen Sie ein angepasstes Event aus, das eine Event-Eigenschaft enthält
