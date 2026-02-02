@@ -47,11 +47,11 @@ Dúvidas? Entre em contato com a Just Words na [página de reservas](https://www
 1. Acesse **Configurações da organização** > **Chaves de API** > **Gerar chave de API**.
 2. Copie e salve a chave de API em um local seguro.
 
-![Formulário da chave de API do Just Words.]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
+![O formulário de chave de API do Just Words.]({% image_buster /assets/img/just_words/api_key_form.png %}){: style="max-width:80%;"}
 
 ### Etapa 3: Use Just Words em seu conteúdo do Braze
 
-O Just Words trabalha com Canvas e campanhas usando o Connected Content. Se estiver criando um Canva, cada etapa do e-mail deve corresponder a um modelo exclusivo do Just Words.
+O Just Words trabalha com canvas e campanhas usando o Connected Content. Se estiver criando um Canva, cada etapa do e-mail deve corresponder a um modelo exclusivo do Just Words.
 
 #### Etapa 3.1: Configure seu teste A/B
 
@@ -125,7 +125,7 @@ Para personalizar suas mensagens com atributos personalizados (como `industry`),
 
 Note que o atributo personalizado de `industry` é indicado por {% raw %}```&attrs.industry={{ custom_attribute.industry }}```{% endraw %}. 
 
-![Lógica Braze Liquid em um criador de mensagens HTML.]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
+![Lógica do Braze Liquid em um criador de mensagens HTML.]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
 
 ### Etapa 4: Pré-visualização do e-mail
 
@@ -140,12 +140,12 @@ O Braze Currents ativa o rastreamento e a otimização da performance ao longo d
 1. No Braze, acesse **Integrações de Parceiros** > **Exportação de Dados**.
 2. Selecione **Criar novo teste atual** e, em seguida, selecione **Testar exportação de dados do Amazon S3**.
 
-![Menu suspenso "Create New Test Current" (Criar novo teste atual) com a opção "Test Amazon S3 Data Export" (Testar exportação de dados do Amazon S3).]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
+![Menu suspenso "Create New Test Currents" (Criar novo teste atual) com a opção "Test Amazon S3 Data Export" (Testar exportação de dados do Amazon S3).]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
 
 {: start="3" }
 3\. Digite o ID de acesso S3, a chave de acesso secreto da AWS, o nome do bucket e a pasta que foram fornecidos pela Just Words durante a integração.
 
-![Seção "Credentials" para a chave de acesso secreta da AWS.]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
+![Seção "Credenciais" para a chave de acesso secreta da AWS.]({% image_buster /assets/img/just_words/aws_secret_access_key.png %}){: style="max-width:80%;"}
 
 {: start="4" }
 4\. Selecione os eventos a serem rastreados, como envios, aberturas, cliques, cancelamentos de inscrição, conversões e outros.
