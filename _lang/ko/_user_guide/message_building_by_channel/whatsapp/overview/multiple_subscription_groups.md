@@ -18,7 +18,7 @@ channel:
 
 동일한 Meta Business 매니저 내에 중첩된 비즈니스 계정도 사용자 액세스 권한 관리 및 카탈로그를 공유합니다(Braze에서는 아직 지원되지 않음).
 
-![브레이즈 및 WhatsApp 생태계 다이어그램으로, 작업 공간과 WhatsApp 비즈니스 계정이 서로 연결되는 방식을 보여줍니다: 하나의 구독 그룹을 하나의 전화번호에 연결할 수 있으며, 여러 WhatsApp 비즈니스 계정을 하나의 작업 공간에 연결할 수 있고, 하나의 작업 공간을 여러 Meta 비즈니스 포트폴리오에 연결할 수 있습니다.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+![브레이징 및 WhatsApp 생태계 다이어그램으로, 작업 공간과 WhatsApp 비즈니스 계정이 서로 연결되는 방식을 보여줍니다: 하나의 구독 그룹을 하나의 전화번호에 연결할 수 있으며, 여러 WhatsApp 비즈니스 계정을 하나의 작업 공간에 연결하고, 하나의 작업 공간을 여러 Meta 비즈니스 포트폴리오에 연결할 수 있습니다.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### WhatsApp 비즈니스 계정 추가
 
