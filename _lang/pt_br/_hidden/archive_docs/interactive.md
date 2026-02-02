@@ -46,7 +46,7 @@ hidden: true
 
 }
 #main_content \#article-main #swagger-ui .opblock-tag-section a {
-    família de fontes: "Sailec W00 Bold",Arial,Helvetica,sans-serif;
+    família da fonte: "Sailec W00 Bold",Arial,Helvetica,sans-serif;
     exibir: inline;
     cor: #212123;
     largura da borda inferior: 0px;
@@ -58,11 +58,11 @@ hidden: true
     -moz-transição: tudo com facilidade .2s
 }
 #main_content \#article-main  #swagger-ui .opblock-tag-section .guia a  {
-  família de fontes: "Sailec W00 Regular",Arial,Helvetica,sans-serif;
+  família da fonte: "Sailec W00 Regular",Arial,Helvetica,sans-serif;
   peso da fonte: 500;
 }
 #main_content \#article-main  #swagger-ui .opblock-tag-section .guia .ativo a  {
-  família de fontes: "Sailec W00 Bold",Arial,Helvetica,sans-serif;
+  família da fonte: "Sailec W00 Bold",Arial,Helvetica,sans-serif;
   peso da fonte: 700;
 }
 #main_content \#article-main #swagger-ui .opblock-tag-section a:hover {
