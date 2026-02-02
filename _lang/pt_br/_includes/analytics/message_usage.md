@@ -64,5 +64,5 @@ Você pode filtrar seus dados por:
 Os dados mostrados no dashboard **Uso de Mensagens** estão no nível do contrato e não estão restritos a uma empresa de dashboard individual ou espaço de trabalho. Estes dados refletem o uso de todos os espaços de trabalho dentro do seu dashboard e, potencialmente, em todos os dashboards (se você tiver múltiplos).
 {% endalert %}
 
-- Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. O dashboard **de Uso de Mensagens** pode demorar mais de 24 horas para ser atualizado.
+- Os dados subjacentes são fornecidos em uma cadência diária, com as tabelas de dados atualizadas às 3h, 9h, 12h e 18h EST. O dashboard **Message Usage** pode levar mais de 48 horas para ser atualizado após as alterações para permitir que os dados tenham tempo de ser sincronizados.
 - Braze segue a metodologia padrão de arredondamento: os números são arredondados para cima até a décima mais próxima.
