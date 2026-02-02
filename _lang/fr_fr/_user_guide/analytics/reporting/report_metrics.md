@@ -1,6 +1,6 @@
 ---
-nav_title: Glossaire des indicateurs du rapport
-article_title: Glossaire des indicateurs du rapport
+nav_title: Glossaire d’indicateurs de rapport
+article_title: Glossaire d’indicateurs de rapport
 layout: report_metrics
 page_order: 0.5
 excerpt_separator: ""
@@ -21,7 +21,7 @@ tool: Reports
 ### Clics AMP
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='AMP Clicks' %}
@@ -30,10 +30,10 @@ e-mail
 
 {% api %}
 
-### Ouverture de l'AMP
+### Ouvertures AMP
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='AMP Opens' %}
@@ -42,7 +42,7 @@ e-mail
 
 {% api %}
 
-### L'audience
+### Audience
 
 {% apitags %}
 Tous
@@ -64,18 +64,18 @@ E-mail, Web Push, iOS Push
 
 {% multi_lang_include analytics/metrics.md metric='Bounces' %} Cela peut se produire parce qu'il n'y a pas de jeton de poussée valide, que l'utilisateur s'est désabonné après le lancement de la campagne, ou que l'adresse e-mail est inexacte ou désactivée.
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|e-mail|Pour les clients utilisant SendGrid, un échec d'e-mail se compose d'un échec définitif, de spam (`spam_report_drops`) et d'e-mails envoyés à des adresses non valides (`invalid_emails`).<br><br>Pour l'e-mail, le *taux de* *rebond* est le pourcentage de messages qui ont été envoyés sans succès ou désignés comme "renvoyés" ou "non reçus" par les services d'envoi utilisés ou qui n'ont pas été reçus par les utilisateurs visés par l'e-mail.|
-|Pousser|Ces utilisateurs ont été automatiquement désabonnés de toutes les futures notifications push.|
+|E-mail|Pour les clients utilisant SendGrid, un échec d'e-mail se compose d'un échec définitif, de spam (`spam_report_drops`) et d'e-mails envoyés à des adresses non valides (`invalid_emails`).<br><br>Pour l'e-mail, le *taux de* *rebond* est le pourcentage de messages qui ont été envoyés sans succès ou désignés comme "renvoyés" ou "non reçus" par les services d'envoi utilisés ou qui n'ont pas été reçus par les utilisateurs visés par l'e-mail.|
+|Notification push|Ces utilisateurs ont été automatiquement désabonnés de toutes les notifications push futures.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Rebonds</i>: Compter</li>
-        <li><i>Taux de rebond (Bounce %</i> ) ou <i>taux de rebond (Bounce Rate %)</i>: (Rebonds) / (Envois)</li>
+        <li><i>Rebonds</i> : Total</li>
+        <li><i>Taux de rebond (Bounce %</i> ) ou <i>taux de rebond (Bounce Rate %)</i>: (Rebonds)/(Envois)</li>
     </ul>
 </span>
 {:/}
@@ -84,7 +84,7 @@ E-mail, Web Push, iOS Push
 
 {% api %}
 
-### Cliquez sur le corps
+### Body Click
 
 {% apitags %}
 Push iOS, Push Android
@@ -92,58 +92,58 @@ Push iOS, Push Android
 
 {% multi_lang_include analytics/metrics.md metric='Body Click' %}
 
-<span class="calculation-line">Calcul : (Clics corporels) / (Impressions)</span>
+<span class="calculation-line">Calcul : (Clics sur le corps du message) / (Impressions)</span>
 
 {% endapi %}
 
 {% api %}
 
-### Clics sur le corps
+### Clics sur le corps du message
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Body Clicks' %} Pour plus de détails, reportez-vous aux journaux des modifications du SDK pour [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) et [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100).
 
-<span class="calculation-line">Calcul : (Clics corporels) / (Impressions)</span>
+<span class="calculation-line">Calcul : (Clics sur le corps du message) / (Impressions)</span>
 
 {% endapi %}
 
 {% api %}
 
-### Clics du bouton 1
+### Clics Boutons 1
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} L'envoi de messages pour les _clics sur le bouton 1_ ne fonctionne que si vous indiquez que l'**identifiant pour l'envoi de messages** est "0" dans le message in-app.
 
-<span class="calculation-line">Calcul : (Clics sur le bouton 1) / (Impressions)</span>
+<span class="calculation-line">Calcul : (Clics du bouton 1) / (Impressions)</span>
 
 {% endapi %}
 
 {% api %}
 
-### Bouton 2 Clics
+### Clics Boutons 2
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} L'envoi de messages pour les _clics sur le bouton 2_ ne fonctionne que si vous indiquez que l'**identifiant pour l'envoi de messages** est "1" dans le message in-app.
 
-<span class="calculation-line">Calcul : (Clics du bouton 2) / (Impressions)</span>
+<span class="calculation-line">Calcul : (Clics du bouton 2) / (Impressions)</span>
 
 {% endapi %}
 
 {% api %}
 
-### Analyse/analytique de la campagne (si utilisée anjective)
+### Analyse de campagne
 
 {% apitags %}
-Drapeaux de fonctionnalité
+Indicateurs de fonctionnalité
 {% endapitags %}
 
 La performance du message sur les différents canaux. Les indicateurs affichés dépendent du canal de communication sélectionné et du fait que l'[expérience Feature Flag]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) est un test multivarié.
@@ -155,7 +155,7 @@ La performance du message sur les différents canaux. Les indicateurs affichés 
 ### Choix soumis
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Choices Submitted' %}
@@ -164,10 +164,10 @@ Message in-app
 
 {% api %}
 
-### Taux de clics d'ouverture
+### Taux de Click-to-Open
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}
@@ -190,7 +190,7 @@ SMS/MMS, RCS
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Réceptions/distributions confirmées</i>: Compter</li>
+        <li><i>Réceptions/distributions confirmées</i>: Total</li>
         <li><i>Taux de réception/distribution confirmé</i>: (Réceptions/distributions confirmées) / (Envois)</li>
     </ul>
 </span>
@@ -212,10 +212,10 @@ Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webh
 
 {% api %}
 
-### Bouton de la page de confirmation
+### Bouton de page de confirmation
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Button' %}
@@ -224,10 +224,10 @@ Message in-app
 
 {% api %}
 
-### Page de confirmation Renvois
+### Rejets Page de Confirmation
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Dismissals' %}
@@ -244,21 +244,21 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 
 {% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %} Cet événement défini est déterminé par vous lorsque vous créez la campagne. 
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
 |E-mail, Push, Webhooks|Les conversions sont suivies après l'envoi initial.|
 |Cartes de contenu|Les conversions sont comptabilisées lorsque l'utilisateur consulte une carte de contenu pour la première fois.|
-|Messages in-app|Une conversion est comptabilisée si l'utilisateur a reçu et visualisé la campagne de messages in-app, puis effectue l'événement de conversion spécifique dans la fenêtre de conversion définie, qu'il ait cliqué ou non sur le message.<br><br>Les conversions sont attribuées au dernier message reçu. Si la rééligibilité est activée, la conversion sera attribuée au dernier message in-app reçu, à condition qu'il intervienne dans la fenêtre de conversion définie. Toutefois, si une conversion a déjà été attribuée au message in-app, la nouvelle conversion ne peut pas être enregistrée pour ce message spécifique. Cela signifie que chaque réception/distribution de messages in-app est associée à une seule conversion.|
+|in-app Messages|Une conversion est comptabilisée si l'utilisateur a reçu et visualisé la campagne de messages in-app, puis effectue l'événement de conversion spécifique dans la fenêtre de conversion définie, qu'il ait cliqué ou non sur le message.<br><br>Les conversions sont attribuées au dernier message reçu. Si la rééligibilité est activée, la conversion sera attribuée au dernier message in-app reçu, à condition qu'il intervienne dans la fenêtre de conversion définie. Toutefois, si une conversion a déjà été attribuée au message in-app, la nouvelle conversion ne peut pas être enregistrée pour ce message spécifique. Cela signifie que chaque réception/distribution de messages in-app est associée à une seule conversion.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
 
-### Total des conversions
+### Conversions totales
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Conversions' %}
@@ -274,7 +274,7 @@ Par exemple, si un utilisateur déclenche un message in-app deux fois et se conv
 ### Fermer le message
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Close Message' %}
@@ -291,9 +291,9 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 
 {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|Messages in-app|La métrique du nombre total d'<i>impressions uniques</i> quotidiennes est utilisée pour calculer le <i>taux de conversion</i> des messages in-app.<br><br>Les impressions pour les messages in-app ne peuvent être comptabilisées qu'une fois par jour. D'autre part, le nombre de fois qu'un utilisateur accomplit une action souhaitée (une "conversion") peut augmenter au cours d'une période de 24 heures. Si les conversions peuvent se produire plusieurs fois par jour, ce n'est pas le cas des impressions. Par conséquent, si un utilisateur effectue une conversion plusieurs fois dans la journée, le <i>taux de conversion</i> peut augmenter en conséquence, mais les impressions ne seront comptabilisées qu'une seule fois.|
+|in-app Messages|La métrique du nombre total d'<i>impressions uniques</i> quotidiennes est utilisée pour calculer le <i>taux de conversion</i> des messages in-app.<br><br>Les impressions pour les messages in-app ne peuvent être comptabilisées qu'une fois par jour. D'autre part, le nombre de fois qu'un utilisateur accomplit une action souhaitée (une "conversion") peut augmenter au cours d'une période de 24 heures. Si les conversions peuvent se produire plusieurs fois par jour, ce n'est pas le cas des impressions. Par conséquent, si un utilisateur effectue une conversion plusieurs fois dans la journée, le <i>taux de conversion</i> peut augmenter en conséquence, mais les impressions ne seront comptabilisées qu'une seule fois.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
@@ -301,7 +301,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
     Calcul :
     <ul>
         <li><b>Messages in-app</b>: (Conversions primaires) / (Impressions uniques)</li>
-        <li><b>Autres canaux</b>: (Conversions primaires) / (Destinataires uniques)</li>
+        <li><b>Autres canaux</b>: (Conversions principales)/(Destinataires uniques)</li>
     </ul>
 </span>
 {:/}
@@ -310,7 +310,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 
 {% api %}
 
-### Fenêtre de conversion
+### Période de conversion
 
 {% apitags %}
 Tous
@@ -322,25 +322,25 @@ Tous
 
 {% api %}
 
-### Réceptions/distributions
+### Réceptions
 
 {% apitags %}
-E-mail, Web Push, iOS Push, Android Push, WhatsApp
+E-mail, notification push Web, notification push iOS, notification push Android, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %}
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|e-mail|Il s'agit du nombre total d'envois de messages (Sends) envoyés et reçus avec succès par les parties concernées par l'e-mail.|
+|E-mail|Il s'agit du nombre total d'envois de messages (Sends) envoyés et reçus avec succès par les parties concernées par l'e-mail.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Réceptions/distributions</i>: Compter</li>
-        <li><i>Réception/distribution %</i>: (Envois - Rebonds) / (Envois)</li>
+        <li><i>Réceptions/distributions</i>: Total</li>
+        <li><i>Réception/distribution %</i>: (Envoi - Bounces) / (Envois)</li>
     </ul>
 </span>
 {:/}
@@ -357,7 +357,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour obtenir de l'aide afin de comprendre les raisons des échecs de réception/distribution.
+Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour vous aider à comprendre les raisons des échecs de réception/distribution.
 
 <span class="calculation-line">Calcul : (Envoie) - (Envoie au transporteur)</span>
 
@@ -365,7 +365,7 @@ Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> po
 
 {% api %}
 
-### Défauts de réception/distribution
+### Échecs de réception
 
 {% apitags %}
 RCS
@@ -373,7 +373,7 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour obtenir de l'aide afin de comprendre les raisons des échecs de réception/distribution.
+Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour vous aider à comprendre les raisons des échecs de réception/distribution.
 
 <span class="calculation-line">Calcul : (Envoie) - (Envoie au transporteur)</span>
 
@@ -381,7 +381,7 @@ Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> po
 
 {% api %}
 
-### Taux de réception/distribution manquée
+### Taux de réceptions échouées
 
 {% apitags %}
 SMS/MMS
@@ -389,7 +389,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour obtenir de l'aide afin de comprendre les raisons des échecs de réception/distribution.
+Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> pour vous aider à comprendre les raisons des échecs de réception/distribution.
 
 <span class="calculation-line">Calcul : (échecs de réception/distribution) / (envois)</span>
 
@@ -400,26 +400,26 @@ Contactez le <a href="/docs/braze_support/">service d'assistance de Braze</a> po
 ### Ouvertures directes
 
 {% apitags %}
-Poussée iOS
+Notification push iOS
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Direct Opens' %}
 
-<span class="calculation-line">Calcul : (Ouvertures directes) / (Réceptions/distributions)</span>
+<span class="calculation-line">Calcul : (Ouvertures directes) / (Livraisons)</span>
 
 {% endapi %}
 
 {% api %}
 
-### Disponible par e-mail
+### Emailable
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
 
@@ -428,7 +428,7 @@ e-mail
 ### Erreurs
 
 {% apitags %}
-webhook
+Webhook
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Errors' %} Les erreurs sont incluses dans le décompte des <i>envois</i> mais ne sont pas incluses dans le décompte des <i>destinataires uniques</i>.
@@ -440,7 +440,7 @@ webhook
 ### Estimation des ouvertures réelles
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %}
@@ -449,7 +449,7 @@ e-mail
 
 {% api %}
 
-### Défaillances
+### Échecs
 
 {% apitags %}
 WhatsApp
@@ -466,7 +466,7 @@ WhatsApp
 ### Fonctionnalité de l'expérience du drapeau
 
 {% apitags %}
-Drapeaux de fonctionnalité
+Indicateurs de fonctionnalité
 {% endapitags %}
 
 Indicateurs de performance pour l'expérience de l'envoi de messages dans une fonctionnalité. Les indicateurs spécifiques affichés varient en fonction du canal de communication et du fait que l'expérience était ou non un test multivarié.
@@ -475,15 +475,15 @@ Indicateurs de performance pour l'expérience de l'envoi de messages dans une fo
 
 {% api %}
 
-### échec d'envoi définitif
+### Échec d'envoi définitif
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
 
-Lorsque cela se produit, Braze marque l'adresse e-mail comme invalide mais ne met pas à jour l' [état de l'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) de l'utilisateur. Si un e-mail reçoit un échec d'envoi définitif, nous cesserons toute demande future à cette adresse e-mail.
+Lorsque cela se produit, Braze marque l'adresse e-mail comme invalide mais ne met pas à jour le [statut d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) de l'utilisateur. Si un e-mail reçoit un échec d'envoi définitif, nous cesserons toute demande future à cette adresse e-mail.
 
 {% endapi %}
 
@@ -509,13 +509,13 @@ Push iOS, Push Android
 
 {% multi_lang_include analytics/metrics.md metric='Influenced Opens' %}
 
-<span class="calculation-line">Calcul : (Ouvertures influencées) / (Réceptions/distributions)</span>
+<span class="calculation-line">Calcul : (Ouvertures influencées) / (Livraisons)</span>
 
 {% endapi %}
 
 {% api %}
 
-### Chiffre d'affaires à vie
+### Revenus à vie
 
 {% apitags %}
 Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
@@ -563,7 +563,7 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 
 {% api %}
 
-### Chiffre d'affaires quotidien par utilisateur
+### Revenus quotidiens par utilisateur
 
 {% apitags %}
 Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
@@ -575,10 +575,10 @@ Cartes de contenu, e-mail, message in-app, Web Push, iOS Push, Android Push, Web
 
 {% api %}
 
-### La machine s'ouvre
+### Ouverture automatique
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Machine Opens' %} Cette mesure est suivie à partir du 11 novembre 2021 pour SendGrid et du 2 décembre 2021 pour SparkPost. Pour Amazon SES, l'analyse/analytique s'affichera sous forme d'_adjectifs_. Toutefois, le filtrage des clics par les robots sera pris en charge.
@@ -599,7 +599,7 @@ Web Push, iOS Push, Android Push
 
 {% api %}
 
-### Abandon
+### Désabonnement
 
 {% apitags %}
 SMS/MMS, RCS
@@ -611,10 +611,10 @@ SMS/MMS, RCS
 
 {% api %}
 
-### Autres ouvertures
+### Autre ouverture
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Other Opens' %} Notez qu'un utilisateur peut également ouvrir un e-mail (comme les comptes d'ouverture vers Autres ouvertures) avant qu'un compte d'ouvertures machine ne soit enregistré. Si un utilisateur ouvre un e-mail une fois (ou plus) après un événement d'ouverture automatique à partir d'une boîte de réception autre qu'Apple Mail, le nombre de fois où l'utilisateur ouvre l'e-mail est calculé pour les autres ouvertures et une seule fois pour les ouvertures uniques.
@@ -623,10 +623,10 @@ e-mail
 
 {% api %}
 
-### Réessai en attente
+### En attente d’une nouvelle tentative
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Pending Retry' %}
@@ -643,18 +643,18 @@ Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webh
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
 
-|Chaîne|Informations complémentaires|
+|Canal|Comportement|
 |-------------|----------------------|
-|E-mail, Push, Webhooks|Après l'envoi initial.|
-|Cartes de contenu, messages in-app|Lorsque l'utilisateur visualise la carte de contenu ou le message pour la première fois.|
+|E-mail, Push, Webhooks|L'utilisateur est compté comme destinataire après l'envoi du message.|
+|Cartes de contenu, messages in-app|L'utilisateur est compté comme destinataire après avoir vu le message pour la première fois.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Conversions principales (A) ou événement de conversion principal</i>: Compter</li>
-        <li><i>Conversions primaires (A) %</i> ou <i>taux d'événement de conversion principal</i>: (Conversions primaires) / (Destinataires uniques)</li>
+        <li><i>Conversions principales (A) ou événement de conversion principal</i>: Nombre d'utilisateurs ayant achevé l'événement de conversion principal dans la fenêtre de conversion définie </li>
+        <li><i>Conversions primaires (A) %</i> ou <i>taux d'événement de conversion principal</i>: (Conversions principales)/(Destinataires uniques)</li>
     </ul>
 </span>
 {:/}
@@ -663,7 +663,7 @@ Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webh
 
 {% api %}
 
-### Lire
+### Lectures
 
 {% apitags %}
 WhatsApp
@@ -697,11 +697,11 @@ E-mail, cartes de contenu, message in-app, Web Push, iOS Push, Android Push, SMS
 
 {% multi_lang_include analytics/metrics.md metric='Received' %} 
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-------|
 |Cartes de contenu|Reçu lorsque les utilisateurs visualisent la carte dans l'application.|
-|Pousser|Reçu lors de l'envoi de messages du serveur Braze au fournisseur de push.|
-|e-mail|Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services e-mailing.|
+|Notification push|Reçu lors de l'envoi de messages du serveur Braze vers le fournisseur de push.|
+|E-mail|Reçu lorsque les messages sont envoyés du serveur Braze au fournisseur de services e-mailing.|
 |SMS/MMS|"Livré" après que le fournisseur de SMS a reçu la confirmation de l'opérateur en amont et de l'appareil de destination.|
 |Message in-app|Reçu au moment de l'affichage en fonction de l'action de déclenchement définie.|
 |WhatsApp|Reçu au moment de l'affichage en fonction de l'action de déclenchement définie.|
@@ -723,7 +723,7 @@ SMS/MMS, RCS
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Rejets</i>: Compter</li>
+        <li><i>Rejets</i>: Total</li>
         <li><i>Taux de rejet</i>: (Rejets) / (Envois)</li>
     </ul>
 </span>
@@ -736,7 +736,7 @@ SMS/MMS, RCS
 ### Chiffre d'affaires
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Revenue' %}
@@ -753,28 +753,28 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Sent' %}
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
 
 {% api %}
 
-### Envoie
+### Envois
 
 {% apitags %}
 Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, RCS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Sends' %} Ces indicateurs sont fournis par Braze. Notez que lors du lancement d'une campagne planifiée, cette mesure inclura tous les messages envoyés, même s'ils n'ont pas encore été envoyés en raison de la limite de débit.
+{% multi_lang_include analytics/metrics.md metric='Sends' %} Ces indicateurs sont fournis par Braze. Notez qu’au lancement d’une campagne planifiée, cet indicateur inclura tous les messages envoyés, qu’ils aient été envoyés ou non en raison d’une limitation du taux.
 
 {% alert tip %}
 Pour les cartes de contenu, cette mesure est calculée différemment en fonction de ce que vous avez sélectionné pour la [création de la carte :]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)
 
-- **Au moment du lancement ou de l'entrée en scène :** Le nombre de cartes créées et disponibles pour être vues. Cela ne tient pas compte du fait que les utilisateurs ont ou non consulté la carte.
-- **À première vue :** Le nombre de cartes affichées aux utilisateurs.
+- **Au moment du lancement ou de l'entrée d’étape :** Le nombre de cartes créées et disponibles pour être vues. Le fait que les utilisateurs aient consulté ou non la carte n’est pas comptabilisé.
+- **À première vue :** Le nombre de cartes affichées aux utilisateurs.
 {% endalert %}
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
 
@@ -786,22 +786,22 @@ Pour les cartes de contenu, cette mesure est calculée différemment en fonction
 Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Ces indicateurs sont fournis par Braze. Notez que lors du lancement d'une campagne planifiée, cette mesure inclura tous les messages envoyés, même s'ils n'ont pas encore été envoyés en raison de la limite de débit.
+{% multi_lang_include analytics/metrics.md metric='Messages Sent' %}  Ces indicateurs sont fournis par Braze. Notez qu’au lancement d’une campagne planifiée, cet indicateur inclura tous les messages envoyés, qu’ils aient été envoyés ou non en raison d’une limitation du taux.
 
 {% alert tip %}
 Pour les cartes de contenu, cette mesure est calculée différemment en fonction de ce que vous avez sélectionné pour la [création de la carte :]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)
 
-- **Au moment du lancement ou de l'entrée en scène :** Le nombre de cartes créées et disponibles pour être vues. Cela ne tient pas compte du fait que les utilisateurs ont ou non consulté la carte.
-- **À première vue :** Le nombre de cartes affichées aux utilisateurs.
+- **Au moment du lancement ou de l'entrée d’étape :** Le nombre de cartes créées et disponibles pour être vues. Le fait que les utilisateurs aient consulté ou non la carte n’est pas comptabilisé.
+- **À première vue :** Le nombre de cartes affichées aux utilisateurs.
 {% endalert %}
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
 
 {% api %}
 
-### Envoi au transporteur
+### Envois à l’opérateur
 
 {% apitags %}
 SMS/MMS
@@ -813,7 +813,7 @@ SMS/MMS
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Envoi au transporteur</i>: Compter</li>
+        <li><i>Envoi au transporteur</i>: Total</li>
         <li><i>Envoie à Carrier Rate :</i> (Envoie au transporteur) / (Envoie)</li>
     </ul>
 </span>
@@ -823,10 +823,10 @@ SMS/MMS
 
 {% api %}
 
-### Échappée provisoire d'envoi
+### Échec provisoire de livraison
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} Si un e-mail reçoit un échec provisoire d'envoi, nous effectuons généralement une nouvelle tentative dans les 72 heures, mais le nombre de tentatives varie d'un destinataire à l'autre.
@@ -840,7 +840,7 @@ Bien que les échecs provisoires ne soient pas pris en compte dans l'analyse/ana
 ### Spam
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
@@ -853,8 +853,8 @@ Les plaintes pour spam sont traitées directement par les fournisseurs de servic
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Spam</i>: Compter</li>
-        <li><i>Spam %</i> ou <i>Spam Rate % :</i> (Marqué comme spam) / (Envoyé)</li>
+        <li><i>Spam</i>: Total</li>
+        <li><i>Spam %</i> ou <i>Spam Rate % :</i> (Marqué comme spam) / (Envois)</li>
     </ul>
 </span>
 {:/}
@@ -863,10 +863,10 @@ Les plaintes pour spam sont traitées directement par les fournisseurs de servic
 
 {% api %}
 
-### Renvoi de la page d'enquête
+### Rejets Page de Sondage
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Page Dismissals' %}
@@ -875,10 +875,10 @@ Message in-app
 
 {% api %}
 
-### Soumissions d'enquêtes
+### Soumissions de sondage
 
 {% apitags %}
-Message in-app
+in-app Message
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Submissions' %}
@@ -895,19 +895,19 @@ E-mail, cartes de contenu, SMS/MMS, MMS
 
 {% multi_lang_include analytics/metrics.md metric='Total Clicks' %}
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-------|
-|LIGNE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint. Les e-mails AMP comprennent les clics enregistrés à la fois dans les versions HTML et en texte clair. Ce chiffre peut être artificiellement gonflé par des outils anti-spam.|
-|Bannières|Le nombre total (et le pourcentage) d'utilisateurs qui ont cliqué dans le message envoyé, indépendamment du fait que le même utilisateur clique plusieurs fois.|
+|LINE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint. Les e-mails AMP comprennent les clics enregistrés à la fois dans les versions HTML et en texte clair. Ce chiffre peut être artificiellement gonflé par des outils anti-spam.|
+|Bannières|Le nombre total (et le pourcentage) d'utilisateurs qui ont cliqué dans le message diffusé, indépendamment du fait que le même utilisateur clique plusieurs fois.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><b>E-mail :</b> (nombre total de clics) / (réception/distribution)</li>
-        <li><b>Cartes de contenu :</b> (Nombre total de clics) / (Nombre total d'impressions)</li>
-        <li><b>SMS :</b> (Clics ouverts) / (Réceptions/distributions)</li>
+        <li><b>E-mail :</b> (nombre total de clics) / (réception/distribution)</li>
+        <li><b>Cartes de contenu (Content cards) :</b> (Nombre total de clics) / (Nombre total d'impressions)</li>
+        <li><b>SMS :</b> (Ouvertures par clic) / (Livraisons)</li>
     </ul>
 </span>
 {:/}
@@ -916,7 +916,7 @@ E-mail, cartes de contenu, SMS/MMS, MMS
 
 {% api %}
 
-### Total des licenciements
+### Total des rejets
 
 {% apitags %}
 Cartes de contenu
@@ -928,7 +928,7 @@ Cartes de contenu
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Total des licenciements :</i> Compter</li>
+        <li><i>Total des licenciements :</i> Total</li>
         <li><i>Taux de licenciement total :</i> Total des rejets / Total des impressions</li>
     </ul>
 </span>
@@ -946,19 +946,19 @@ Message in-app, cartes de contenu
 
 {% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Ce nombre correspond à la somme du nombre d'événements d'impression que Braze reçoit des SDK.
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|Cartes de contenu|Le nombre total d'impressions enregistrées pour une carte de contenu donnée. Cela peut s'incrémenter plusieurs fois pour le même utilisateur.|
-|Messages in-app|S'il y a plusieurs appareils et que la rééligibilité est désactivée, l'utilisateur ne devrait voir le message in-app qu'une seule fois. Même si l'utilisateur utilise plusieurs appareils, il ne la verra que sur le premier appareil ciblé. Cela suppose que le profil a consolidé les appareils et qu'un utilisateur dispose d'un ID unique auquel il est connecté sur tous les appareils. Si la rééligibilité est activée, une impression est enregistrée chaque fois que l'utilisateur voit le message in-app.|
+|Cartes de contenu|Nombre total d’impressions enregistrées pour une carte de contenu donnée. Ce nombre peut être incrémenté plusieurs fois pour le même utilisateur.|
+|in-app Messages|S'il y a plusieurs appareils et que la rééligibilité est désactivée, l'utilisateur ne devrait voir le message in-app qu'une seule fois. Même si l'utilisateur utilise plusieurs appareils, il ne la verra que sur le premier appareil ciblé. Cela suppose que le profil a consolidé les appareils et qu'un utilisateur dispose d'un ID unique auquel il est connecté sur tous les appareils. Si la rééligibilité est activée, une impression est enregistrée chaque fois que l'utilisateur voit le message in-app.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
 
 {% api %}
 
-### Total des ouvertures
+### Nombre total d’ouvertures
 
 {% apitags %}
 E-mail, iOS Push, Android Push, Web Push, LINE
@@ -966,9 +966,9 @@ E-mail, iOS Push, Android Push, Web Push, LINE
 
 {% multi_lang_include analytics/metrics.md metric='Total Opens' %}
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|LIGNE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint.|
+|LINE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint.|
 |Les e-mails AMP|Le total des ouvertures pour les versions HTML et en texte clair.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -976,9 +976,9 @@ E-mail, iOS Push, Android Push, Web Push, LINE
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><b>Email <i>Nombre total d'ouvertures</i>:</b> Compter</li>
-        <li><b><i>Taux d'ouverture total des</i> e-mails :</b> (Ouvertures) / (Réceptions/distributions)</li>
-        <li><b>Web push <i>Nombre total d'ouvertures</i>:</b> Nombre d'<i>ouvertures directes</i> </li>
+        <li><b>Email <i>Nombre total d'ouvertures</i>:</b> Total</li>
+        <li><b><i>Taux d'ouverture total des</i> e-mails :</b> (Ouvertures) / (Livraisons)</li>
+        <li><b>Web push <i>Nombre total d'ouvertures</i>:</b> Nombre d'<i>ouvertures directes</i></li>
         <li><b>Web push <i>Taux d'ouverture total :</i></b> (Ouvertures totales) / (Réceptions/distributions)</li>
         <li><b>iOS, Android et Kindle push <i>Nombre total d'ouvertures</i>:</b> (Ouvertures directes) + (Ouvertures influencées)</li>
         <li><b>iOS, Android et Kindle push <i>Taux d'ouverture total :</i></b> (Ouvertures totales) / (Réceptions/distributions)</li>
@@ -990,7 +990,7 @@ E-mail, iOS Push, Android Push, Web Push, LINE
 
 {% api %}
 
-### Chiffre d'affaires total
+### Total des revenus
 
 {% apitags %}
 Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, MMS.
@@ -1012,19 +1012,19 @@ E-mail, cartes de contenu, LINE
 
 Cela inclut les clics sur les liens de désinscription fournis par Braze.
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|e-mail|Suivi sur une période de sept jours.|
-|LIGNE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint.|
+|E-mail|Suivi sur une période de sept jours.|
+|LINE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Clics uniques</i>: Compter</li>
+        <li><i>Clics uniques</i>: Total</li>
         <li><b>Carte de contenu</b> <i>% de clics uniques</i> ou <i>taux de clics uniques</i>: (Clics uniques) / (Impressions uniques)</li>
-        <li><i>Pourcentage de clics uniques sur l</i> <b>'e-mail</b> ou <i>taux de clics uniques</i>: (Clics uniques) / (Réceptions/distributions)</li>
+        <li><i>Pourcentage de clics uniques par</i> <b>e-mail</b> ou <i>taux de clics uniques</i>: (Clics uniques) / (Réceptions/distributions)</li>
     </ul>
 </span>
 {:/}
@@ -1033,7 +1033,7 @@ Cela inclut les clics sur les liens de désinscription fournis par Braze.
 
 {% api %}
 
-### Licenciements uniques
+### Rejets uniques
 
 {% apitags %}
 Cartes de contenu
@@ -1041,7 +1041,7 @@ Cartes de contenu
 
 {% multi_lang_include analytics/metrics.md metric='Unique Dismissals' %}
 
-<span class="calculation-line">Calcul : (Renvois uniques) / (Impressions uniques)</span>
+<span class="calculation-line">Calcul : (Rejets uniques) / (Impressions uniques)</span>
 
 {% endapi %}
 
@@ -1055,13 +1055,13 @@ Message in-app, cartes de contenu
 
 {% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} 
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|Messages in-app|Les impressions uniques peuvent être à nouveau incrémentées après 24 heures si la rééligibilité est activée et qu'un utilisateur effectue l'action déclencheur. Si la rééligibilité est activée, <i>Impressions uniques</i> = <i>Destinataires uniques</i>.|
+|in-app Messages|Les impressions uniques peuvent être à nouveau incrémentées après 24 heures si la rééligibilité est activée et qu'un utilisateur effectue l'action déclencheur. Si la rééligibilité est activée, <i>Impressions uniques</i> = <i>Destinataires uniques</i>.|
 |Cartes de contenu|Le décompte ne doit pas être incrémenté la deuxième fois qu'un utilisateur consulte une carte.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
 
@@ -1075,18 +1075,18 @@ E-mail, LINE
 
 {% multi_lang_include analytics/metrics.md metric='Unique Opens' %}
 
-|Chaîne|Informations complémentaires|
+|Canal|Informations supplémentaires|
 |-------|-----------------------|
-|e-mail|Suivi sur une période de 7 jours.|
-|LIGNE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint.|
+|E-mail|Suivi sur une période de 7 jours.|
+|LINE|Suivi après qu'un seuil minimum de 20 messages par jour a été atteint.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Ouverture unique</i>: Compter</li>
-        <li><i>Pourcentage d'ouvertures uniques</i> ou <i>taux d'ouvertures uniques</i>: (Ouvertures uniques) / (Réceptions/distributions)</li>
+        <li><i>Ouverture unique</i>: Total</li>
+        <li><i>Pourcentage d'ouvertures uniques</i> ou <i>taux d'ouvertures uniques</i>: (Ouvertures uniques) / (Livraisons)</li>
     </ul>
 </span>
 {:/}
@@ -1103,18 +1103,18 @@ Tous
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}
 
-Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i> Pour les cartes de contenu, chaque carte de contenu ne peut être reçue qu'une seule fois. Par conséquent, le fait de visualiser la même carte de contenu une deuxième fois, quel que soit le jour, n'augmentera pas ce décompte.<br><br>Ce numéro est reçu de Braze et est basé sur le site `user_id`. Les destinataires uniques sont comptabilisés au niveau de la campagne ou de l'étape du canvas, et non au niveau de l'<a href='https://braze.com/docs/api/identifier_types/#send-identifier'>identifiant d'envoi</a>.
+Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i> Pour les cartes de contenu, chaque carte de contenu ne peut être reçue qu'une seule fois, de sorte que la consultation de la même carte de contenu une deuxième fois, quel que soit le jour, n'augmentera pas ce décompte.<br><br>Ce numéro est reçu de Braze et est basé sur le site `user_id`. Les destinataires uniques sont comptabilisés au niveau de la campagne ou de l'étape du canvas, et non au niveau de l'<a href='https://braze.com/docs/api/identifier_types/#send-identifier'>identifiant d'envoi.</a>
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
 
 {% api %}
 
-### Désabonnés ou désabonnement
+### Désabonnés
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}
@@ -1123,8 +1123,8 @@ e-mail
 <span class="calculation-line">
     Calcul :
     <ul>
-        <li><i>Désabonnés</i> ou <i>désabonnés</i>: Compter</li>
-        <li><i>Pourcentage de désabonnements</i> ou <i>taux de désabonnement</i>: (Désabonnements) / (Réceptions/distributions)</li>
+        <li><i>Désabonnés</i> ou <i>désabonnés</i>: Total</li>
+        <li><i>Pourcentage de désabonnements</i> ou <i>taux de désabonnement</i>: (Désinscriptions)/(Livraisons)</li>
     </ul>
 </span>
 {:/}
@@ -1133,15 +1133,15 @@ e-mail
 
 {% api %}
 
-### Désabonnements
+### Se désabonne
 
 {% apitags %}
-e-mail
+E-mail
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribes' %}
 
-<span class="calculation-line">Calcul : (Désabonnements) / (Réceptions/distributions)</span>
+<span class="calculation-line">Calcul : (Désabonnements) / (Livraisons)</span>
 
 {% endapi %}
 
@@ -1155,6 +1155,6 @@ Cartes de contenu, Email, Message in-app, Web Push, iOS Push, Android Push, Webh
 
 {% multi_lang_include analytics/metrics.md metric='Variation' %}
 
-<span class="calculation-line">Calcul : Compter</span>
+<span class="calculation-line">Calcul : Total</span>
 
 {% endapi %}
