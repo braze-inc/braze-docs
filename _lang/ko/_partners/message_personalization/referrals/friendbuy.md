@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Friendbuy
 
-> Leverage the integration between Friendbuy and Braze to expand your email and SMS capabilities while effortlessly automating your referral and loyalty program communications. Braze will generate customer profiles for all the opted-in phone numbers collected via Friendbuy.
+> [Friendbuy와](https://www.friendbuy.com/) Braze의 통합을 통해 이메일과 SMS 기능을 확장하는 동시에 추천 및 로열티 프로그램 커뮤니케이션을 손쉽게 자동화할 수 있습니다. Braze will generate customer profiles for all the opted-in phone numbers collected via Friendbuy.
 
 _This integration is maintained by Friendbuy._
 
@@ -27,19 +27,19 @@ Before you start, you'll need the following:
 
 ## Integrating Friendbuy
 
-In [Friendbuy](https://retailer.friendbuy.io/), go to **Developer Center** > **Integrations**, then on the Braze integration card select **Add integration**.
+[Friendbuy에서](https://retailer.friendbuy.io/) **개발자 센터** > **연동** 카드로 이동한 다음 Braze 연동 카드에서 **연동 추가를** 선택합니다.
 
-![The Braze integration card in Friendbuy.]({% image_buster /assets/img/friendbuy/choosing_braze.png %}){: style="max-width:75%;"}
+![Friendbuy의 Braze 통합 카드.]({% image_buster /assets/img/friendbuy/choosing_braze.png %}){: style="max-width:75%;"}
 
-In the form, enter your REST endpoint and API Key, then select **Install Integration**.
+양식에 REST 엔드포인트와 API 키를 입력한 다음, **통합 설치**를 선택합니다.
 
-![The Friendbuy integration form.]({% image_buster /assets/img/friendbuy/install_form.png %}){: style="max-width:55%;"}
+![Friendbuy 통합 양식입니다.]({% image_buster /assets/img/friendbuy/install_form.png %}){: style="max-width:55%;"}
 
-Go to back to your [Friendbuy account](https://retailer.friendbuy.io/) and refresh the page. If your integration was successful, you'll see a message similar to the following:
+[Friendbuy 계정으로](https://retailer.friendbuy.io/) 돌아가서 페이지를 새로 고칩니다. 통합에 성공했다면 다음과 비슷한 메시지가 표시됩니다:
 
-![integration installed]({% image_buster /assets/img/friendbuy/install_success.png %}){: style="max-width:55%;"}
+![통합 설치]({% image_buster /assets/img/friendbuy/install_success.png %}){: style="max-width:55%;"}
 
-### Custom attributes
+### 사용자 지정 속성
 
 | Custom Attribute Name            | Definition                                                                                                                                         | Data Type |
 |----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
@@ -58,9 +58,9 @@ Go to back to your [Friendbuy account](https://retailer.friendbuy.io/) and refre
 
 ## Default behavior
 
-Before customer data can be sent to Braze, customers must opt-in through the referral widget by checking one or more boxes of the following boxes:
+고객 데이터를 Braze로 전송하기 전에 고객은 추천 위젯을 통해 다음 상자 중 하나 이상의 확인란을 선택하여 옵트인해야 합니다:
 
-![referral widget]({% image_buster /assets/img/friendbuy/referral_widget.png %})
+![추천 위젯]({% image_buster /assets/img/friendbuy/referral_widget.png %})
 
 {% alert note %}
 Friendbuy uses the international standard (E.164) to verify real phone numbers. Invalid numbers, such as `555-555-5555`, will not be sent to Braze.
