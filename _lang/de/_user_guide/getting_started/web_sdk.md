@@ -8,7 +8,7 @@ description: "Dieser Referenzartikel behandelt die Grundlagen des Braze SDK."
 
 # SDK-Übersicht 
 
-> Mit dem Braze SDK ist es ganz einfach, Sitzungsdaten zu sammeln, Nutzer:innen zu identifizieren und Käufe und angepasste Events über Ihre Website oder App aufzuzeichnen. Sie können das SDK auch verwenden, um mit Ihren Nutzer:innen in Kontakt zu treten, indem Sie In-App-Nachrichten und Push-Benachrichtigungen direkt vom Braze-Dashboard aus versenden.
+> Das Braze SDK sammelt Sitzungsdaten, identifiziert Nutzer:innen und zeichnet Käufe und angepasste Events über Ihre Website oder App auf. Sie können das SDK auch nutzen, um Nutzer:innen zu engagieren, indem Sie In-App-Nachrichten und Push-Benachrichtigungen direkt über das Braze-Dashboard versenden.
 
 Kurz gesagt, das Braze SDK:
 * Sammelt und synchronisiert Benutzerdaten in einem konsolidierten Benutzerprofil
@@ -28,13 +28,13 @@ Um Zeit zu sparen und eine reibungslose Integration zu gewährleisten, empfehlen
 
 ## Datenaggregation
 
-Das Braze SDK erfasst automatisch riesige Datenmengen auf Nutzerebene, sodass Sie die wichtigsten Metriken für Ihre App und Ihre Nutzerbasis leicht erkennen können. Sie werden ähnliche Anwendungen in einem einzigen Arbeitsbereich auf Ihrem Dashboard gruppieren. So können Sie zum Beispiel die iOS- und Android-Versionen Ihrer App im selben Arbeitsbereich zusammenfassen, so dass Sie die gesammelten Daten von Benutzern auf beiden Plattformen sehen können. So erhalten Sie einen vollständigeren Überblick über Ihre Nutzer im Web und auf mobilen Kanälen. Weitere Informationen finden Sie in dem Artikel auf der [Startseite]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
+Das Braze SDK erfasst automatisch Daten auf Benutzerebene und liefert Ihnen wichtige Metriken für Ihre App und Ihre Nutzer:innen-Basis. Gruppieren Sie ähnliche Apps in einem einzigen Workspace (z.B. iOS- und Android-Versionen zusammen), um gesammelte Daten plattformübergreifend zu betrachten und ein vollständiges Bild der Nutzer:in zu erhalten. Weitere Informationen finden Sie in dem Artikel auf der [Startseite]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/).
 
 ## In-App-Nachrichten
 
-Das SDK macht es einfach, In-App-Nachrichten zu verfassen und zu versenden, um direkt mit den Nutzer:innen in Kontakt zu treten. Sie können wählen, ob Sie Slideup-, Modal- oder Vollbildnachrichten senden möchten, je nach Ihrer Kampagnenstrategie. Weitere Informationen zum Verfassen einer In-App-Nachricht finden Sie auf unserer Seite zum [Erstellen einer In-App-Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Verwenden Sie das SDK, um In-App-Nachrichten direkt zu verfassen und zu versenden. Je nach Strategie Ihrer Kampagne können Sie zwischen Slideup-, Modal- oder Fullscreen-Nachrichten wählen. Einzelheiten zur Zusammensetzung finden Sie unter [Erstellen einer In-App-Nachricht]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
-![Push auf einem Webbrowser angezeigt]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
+![Push-Benachrichtigung in einem Webbrowser]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
 ## Push-Benachrichtigungen
 
@@ -48,7 +48,7 @@ Eine Kampagne, die In-App-Nachrichten enthält, wird standardmäßig an alle Ver
 
 Sie können ein Segment Ihrer Internet-Nutzer erstellen, indem Sie **Apps und Websites mit Targeting** auf **Nutzer:innen bestimmter Apps** zusammenstellen, und dann nur Ihre Website für die **spezifischen Apps** auswählen.
 
-![Segment Detailseite mit Web App im Fokus]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Segment Details Seite mit Web App im Fokus]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Dies ermöglicht es Ihnen, Nutzer:innen auf der Grundlage ihres Verhaltens auf intelligente Weise anzusprechen. Wenn Sie Webnutzer:innen ansprechen möchten, um sie zum Herunterladen Ihrer mobilen App zu bewegen, würden Sie dieses Segment als Ihre Zielgruppe erstellen. Wenn Sie eine Nachrichtenkampagne versenden möchten, die eine mobile In-App-Nachricht, aber keine Web-Nachricht enthält, deaktivieren Sie das Symbol für Ihre Website in Ihrem Segment.
 
