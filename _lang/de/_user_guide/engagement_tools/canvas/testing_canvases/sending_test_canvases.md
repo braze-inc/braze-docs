@@ -1,13 +1,13 @@
 ---
-nav_title: Test-Leinwände verschicken
-article_title: Test-Canvase verschicken
+nav_title: Test-Canvase versenden
+article_title: Test Canvase versenden
 page_order: 1
 description: "In diesem Referenzartikel erfahren Sie, wie Sie ein Canvas vor dem Start testen und wie Sie dabei am besten vorgehen."
 page_type: reference
 tool: Canvas
 ---
 
-# Test-Leinwände verschicken
+# Test-Canvase versenden
 
 > Nachdem [Sie Ihr Canvas erstellt haben]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), sollten Sie vor dem Start mehrere Prüfungen durchführen, je nach Details wie der Größe Ihrer Zielgruppe oder der Anzahl der Segmentierungsfilter.
 
@@ -35,7 +35,7 @@ Es gibt zwei Möglichkeiten, wie Sie Ihr Canvas testen können.
 
 - **Methode 1:** Bearbeiten Sie in dem duplizierten Canvas den Teil **Entry-Zielgruppe** des Canvas-Builders so, dass nur Testnutzer:innen für das Canvas in Frage kommen. Sie können auch Ihre eigene E-Mail-Adresse als Testnutzer:in eingeben, indem Sie den Testfilter **E-Mail-Adresse** hinzufügen. Im folgenden Beispiel haben wir den Canvas auf zwei Testnutzer:innen beschränkt, die die App vor weniger als drei Tagen zum ersten Mal verwendet haben.
 
-![Ein Canvas mit der Zielgruppe "Diese Apps wurden vor weniger als 3 Tagen zum ersten Mal verwendet" und den E-Mail-Adressen von zwei Testnutzer:innen.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
+![Ein Canvas mit einem Eingang der Zielgruppe "Diese Apps wurden vor weniger als 3 Tagen zum ersten Mal verwendet" und den E-Mail-Adressen von zwei Testnutzer:innen.]({% image_buster /assets/img_archive/canvas_test2.png %}){: style="max-width:90%;"}
 
 - **Methode 2:** [Zeigen Sie Ihre Benutzerpfadein der Vorschau an]({{site.baseurl}}/preview_user_paths/), indem Sie in der Fußzeile des Canvas-Builders auf die Schaltfläche **Canvas testen** klicken.
 
