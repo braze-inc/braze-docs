@@ -126,7 +126,7 @@ $$;
 2\. Exécutez l'une des commandes ci-dessous dans votre compte Snowflake pour exécuter la procédure.
 
 {% tabs %}
-{% tab Défaut %}
+{% tab Default %}
 
 Par défaut, la procédure sauvegarde les données datant de plus de deux ans pour tous les types d'événements `USERS_*`. 
 
@@ -139,7 +139,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA')
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtré %}
+{% tab Filtered %}
 
 Spécifiez un filtre pour choisir les données d'âge à sauvegarder et spécifiez un filtre de nom de table pour ne sauvegarder que les tables d'événements sélectionnées. 
 
@@ -238,7 +238,7 @@ $$;
 2\. Lancez l'une des commandes suivantes pour exécuter la procédure. 
 
 {% tabs %}
-{% tab Défaut %}
+{% tab Default %}
 
 Par défaut, la procédure copiera toutes les tables avec le préfixe `USERS_`.
 
@@ -257,7 +257,7 @@ LIST @MY_EXPORT_STAGE;
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtré %}
+{% tab Filtered %}
 
 Spécifiez un filtre dans la procédure pour ne décharger que les tables spécifiées.
 
