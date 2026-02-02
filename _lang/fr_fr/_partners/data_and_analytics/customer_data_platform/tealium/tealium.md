@@ -20,7 +20,7 @@ L'intégration de Braze et Tealium vous permet de suivre vos utilisateurs et de 
 - [Importer des données entre les plateformes](#choose-your-integration-type). Braze propose à la fois une [intégration SDK](#side-by-side-sdk-integration) côte à côte pour vos applications Android, iOS et web et une [intégration serveur-à-serveur](#server-to-server-integration) qui peut être utilisée sur toute plateforme capable de rapporter des données d'événements.<br><br>
 
 {% tabs %}
-{% tab eventstream %}
+{% tab EventStream %}
 Tealium eventstream est un centre de collecte de données et d'API qui se trouve au centre de vos données. eventstream gère l'ensemble de la chaîne d'approvisionnement en données, de la configuration et de l'installation à l'identification, la validation et l'amélioration des données utilisateur entrantes. eventstream prend des mesures en temps réel avec des flux d'événements et des connecteurs. Voici les fonctionnalités qui composent [EventStream](https://docs.tealium.com/server-side/getting-started/eventstream-api-hub/introduction/).
 - Sources de données (installation et collecte de données)
 - événements en ligne (inspection des données en temps réel)
@@ -34,7 +34,7 @@ Tealium eventstream est un centre de collecte de données et d'API qui se trouve
 Tealium AudienceStream est un moteur d'action en temps réel et de segmentation de la clientèle omnicanal. AudienceStream prend les données qui circulent dans EventStream et crée des profils de visiteurs qui représentent les attributs les plus importants de l'engagement de vos clients avec votre marque. Consultez notre article [AudienceStream]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/tealium/tealium_audience_stream/) pour les étapes de configuration.
 
 {% endtab %}
-{% tab Gestion des balises iQ %}
+{% tab iQ Tag Management %}
 Tealium iQ vous permet de déclencher du code dans vos applications en utilisant une balise dans l'interface de gestion des balises Tealium iQ. Cette balise collectera, contrôlera et livrera les données d'événements des plateformes mobiles et web, vous permettant de configurer une mise en œuvre native de Braze sans ajouter de code spécifique à Braze dans vos applications. Les utilisateurs peuvent choisir d'intégrer des commandes à distance mobiles via la gestion des étiquettes iQ ou des fichiers de configuration JSON (approche recommandée par Tealium). Les utilisateurs qui utilisent le SDK Web Braze doivent s'intégrer via la balise web iQ.
 
 Pour en savoir plus sur les avantages et les inconvénients de chaque méthode, reportez-vous à la section suivante [Gestionnaire des balises Tealium iQ](#mobile-remote-commands).
@@ -145,7 +145,7 @@ Tealium exige que vous configuriez d'abord une source de données valide pour qu
 1. Depuis la barre latérale dans Tealium sous **serveur**, accédez à **Sources > Sources de données > + Ajouter une source de données**.
 2. Recherchez la plateforme souhaitée dans les catégories disponibles et nommez votre source, il s'agit d'un champ obligatoire.<br>![]({% image_buster /assets/img/tealium/data_source.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}
 3. À partir des **spécifications de l'événement**, choisissez les [spécifications de l'événement](https://docs.tealium.com/server-side/event-specifications/about/) que vous souhaitez inclure. Les spécifications des événements vous aident à identifier les noms des événements et les attributs requis à suivre dans votre installation. Ces spécifications seront appliquées aux événements entrants.<br>![]({% image_buster /assets/img/tealium/event_specs.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>Prenez le temps de réfléchir aux données qui vous conviennent le mieux et aux spécifications qui vous semblent les plus appropriées pour votre cas d’utilisation. Des [événements personnalisés](https://docs.tealium.com/iq-tag-management/events/about/) peuvent également être organisés. <br>
-4. Le boîte de dialogue suivante passe à l'étape **Obtenir le code**. Le code de base et le code de suivi des événements fournis ici servent de guide d'installation. Téléchargez le PDF fourni si vous souhaitez partager ces instructions avec votre équipe. Sélectionnez **enregistrer et continuer** lorsque vous avez terminé.<br>
+4. Le boîte de dialogue suivante passe à l'étape **Obtenir le code**. Le code de base et le code de suivi des événements fournis ici servent de guide d'installation. Téléchargez le PDF fourni si vous souhaitez partager ces instructions avec votre équipe. Sélectionnez **Enregistrer & Continuer** lorsque vous avez terminé.<br>
 5. Vous pourrez désormais voir votre source enregistrée ainsi qu'ajouter ou supprimer des spécifications d'événements. <br>![]({% image_buster /assets/img/tealium/braze_connection.png %}){: style="max-width:80%;margin-left:15px;margin-bottom:15px;"}<br>À partir de la vue détaillée de la source de données, vous pouvez effectuer les actions suivantes :
 - Afficher et copier la clé de source de donnée
 - Voir les instructions d'installation
@@ -190,7 +190,7 @@ Tous les champs proposés ne sont pas obligatoires.
 {% endalert %}
 
 {% tabs local %}
-{% tab Suivi des utilisateurs - lots et non-lots %}
+{% tab Track User - Batch and Non-Batch %}
 
 Cette action vous permet de suivre les attributs des utilisateurs, des événements et des achats en une seule action.
 
@@ -210,7 +210,7 @@ Cette action vous permet de suivre les attributs des utilisateurs, des événeme
 ![]({% image_buster /assets/img/tealium/track_user_example.png %})
 
 {% endtab %}
-{% tab Suppression d'un utilisateur - hors lot %}
+{% tab Delete User - Non-Batch %}
 
 Cette action vous permet de supprimer des utilisateurs du tableau de bord de Braze.
 
@@ -252,7 +252,7 @@ Reportez-vous à la [documentation Trace](https://docs.tealium.com/server-side/c
 
 ## Dépassements potentiels de point de donnée
 
-Il existe principalement trois façons de dépasser accidentellement les limites de données lors de l'intégration de Braze via Tealium :
+Il existe trois principales façons d'enregistrer accidentellement des points données inutiles lors de l'intégration de Braze via Tealium :
 
 #### Envoi de données en double - n'envoyez que des deltas d'attributs Braze
 
@@ -263,7 +263,7 @@ Tealium ne transmet pas les deltas d'attributs utilisateur à Braze. Par exemple
 
 #### Envoi de données non pertinentes ou réécriture inutile de données
 
-Si vous avez plusieurs EventStreams qui ciblent le même flux d'événements, **toutes les actions activées pour ce connecteur** se déclencheront automatiquement à chaque fois qu'une action unique est déclenchée, \*\*ce qui pourrait également entraîner l'écrasement de données dans Braze et la consommation de points de données inutiles.\\N- Vous ne pouvez pas vous permettre d'utiliser un seul connecteur pour un seul événement.
+Si plusieurs eventstreams ciblent le même flux d'événements, **toutes les actions activées pour ce connecteur** se déclencheront automatiquement à chaque fois qu'une action unique sera déclenchée. Cela pourrait également entraîner l'écrasement de données dans Braze et l'enregistrement de points de données inutiles.
 
 **Solution** : <br>Configurez une spécification d'événement distincte ou un flux pour suivre chaque action. <br>**OU**<br> Désactivez les actions (ou connecteurs) que vous ne souhaitez pas déclencher en utilisant les commutateurs dans le tableau de bord Tealium.
 
