@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Notify](https://fr.notify-group.com/) é uma solução de software impulsionada por IA que se integra perfeitamente com ferramentas de gestão de relacionamento com o cliente para aprimorar estratégias de marketing e facilitar o engajamento em múltiplos canais.
 
-A integração do Braze e do Notify permite que os profissionais de marketing promovam efetivamente o engajamento em várias plataformas. Em vez de depender de métodos tradicionais de marketing, uma campanha disparada pela API do Braze pode aproveitar os recursos do Notify para fornecer envio de mensagens personalizadas por meio de vários canais, incluindo e-mail, SMS, notificações por push e muito mais.
+A integração do Braze e do Notify permite que os profissionais de marketing promovam efetivamente o engajamento em várias plataformas. Em vez de depender de métodos tradicionais de marketing, uma campanha acionada pela API da Braze pode usar as capacidades do Notify para entregar mensagens personalizadas através de múltiplos canais, incluindo e-mail, SMS, notificações por push e mais.
 
 ## Pré-requisitos
 
