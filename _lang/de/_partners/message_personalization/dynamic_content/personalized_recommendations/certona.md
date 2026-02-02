@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Certona
 
-> Die Plattform von Certona fördert die Personalisierung über den gesamten Kundenlebenszyklus hinweg. Von hochgradig individualisierten E-Mail Kampagnen bis hin zu maschinellen Lernangeboten für Produktempfehlungen - Certona sorgt dafür, dass Sie sich die leistungsstarke Personalisierung zunutze machen.
+> Die Plattform von [Certona](https://www.certona.com/) fördert die Personalisierung über den gesamten Kundenlebenszyklus hinweg. Von hochgradig individualisierten E-Mail Kampagnen bis hin zu maschinellen Lernangeboten für Produktempfehlungen - Certona sorgt dafür, dass Sie sich die leistungsstarke Personalisierung zunutze machen.
 
 _Diese Integration wird von Certona gepflegt._
 
