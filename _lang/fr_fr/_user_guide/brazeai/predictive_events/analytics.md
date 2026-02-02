@@ -12,12 +12,12 @@ page_order: 1.3
 
 ## A propos de l'analyse prédictive/analytique (if used anjective)
 
-Dès que la prédiction est terminée et que cette page est remplie, vous pouvez commencer à utiliser les [filtres]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Si vous souhaitez obtenir de l'aide pour décider qui cibler et pourquoi, cette page peut vous aider en fonction de la précision historique du modèle et de vos propres objectifs métier.
+Dès que la prédiction est terminée et que cette page est remplie, vous pouvez commencer à utiliser les [filtres]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux.
 
 Tels sont les éléments constitutifs de l'analyse/analytique prévisionnelle des événements :
 
 - [Score de vraisemblance](#purchase_score)
-- [Qualité des prédictions](#prediction_quality)
+- [Qualité de prédiction](#prediction_quality)
 - [Précision estimée](#estimated_results)
 - [Tableau de corrélation des événements](#correlation_table)
 
@@ -25,7 +25,7 @@ La distribution des scores de vraisemblance pour l'ensemble de l'audience de pr�
 
 Lorsque vous déplacez les curseurs sur différentes positions, la barre située dans la moitié gauche du panneau vous indique combien d'utilisateurs, sur l'ensemble de l'audience prédite, seraient ciblés en utilisant la partie de la population que vous avez sélectionnée.
 
-\![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
+![]({% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}){: style="max-width:90%"} 
 
 ## Score de vraisemblance {#purchase_score}
 
@@ -43,7 +43,7 @@ Les scores et les prédictions correspondantes seront mis à jour selon la plani
 
 Dans la moitié droite du panneau situé sous le graphique, nous présentons des estimations de la précision attendue du ciblage de la partie de l'audience de prédictions que vous avez sélectionnée de deux manières : combien d'utilisateurs sélectionnés sont censés réaliser l'événement, et combien sont censés ne pas le faire.
 
-\![L'audience sélectionnée et la précision estimée affichées dans le tableau de bord de Braze.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+![L'audience sélectionnée et la précision estimée s'affichent dans le tableau de bord de Braze.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### On attend d'eux qu'ils accomplissent
 
@@ -55,9 +55,9 @@ La prédiction n'est pas parfaitement exacte, et aucune prédiction ne l'est jam
 
 Vous pouvez utiliser la précision estimée pour vérifier combien d'utilisateurs sélectionnés sont susceptibles de ne pas réaliser l'événement.
 
-Tous les modèles de machine learning font des erreurs. Il se peut que certains utilisateurs de votre sélection aient un score de probabilité élevé, mais qu'ils ne réalisent pas l'événement. Ils ne réaliseraient pas l'événement si vous n'agissiez pas. Ils seront de toute façon ciblés, il s'agit donc d'une erreur ou d'un "faux positif". La largeur totale de cette deuxième barre de progression représente le nombre attendu d'utilisateurs qui n'effectueront pas l'événement, et la partie remplie correspond à ceux qui seront incorrectement ciblés en utilisant la position actuelle du curseur.
+Tous les modèles de machine learning font des erreurs. Il se peut que certains utilisateurs de votre sélection aient un score de probabilité élevé, mais qu'ils ne réalisent pas l'événement. Si vous n’agissiez pas, ils ne réaliseraient pas l'événement. Ils seront de toute façon ciblés, donc il s’agit d’une erreur ou d’un « faux positif ». La largeur totale de cette deuxième barre de progression représente le nombre attendu d'utilisateurs qui n'effectueront pas l'événement, et la partie remplie représente ceux qui seront incorrectement ciblés en utilisant la position actuelle du curseur.
 
-À l'aide de ces informations, nous vous encourageons à décider du nombre de vrais positifs que vous souhaitez capturer, du nombre de faux positifs dont vous pouvez accepter le ciblage et du coût des erreurs pour votre entreprise. Si vous envoyez une promotion intéressante, vous pouvez ne cibler que les non-acheteurs (faux positifs) en privilégiant le côté gauche du graphique. Vous pouvez également encourager les acheteurs qui achètent souvent (les vrais positifs) à le faire à nouveau en sélectionnant une section d'utilisateurs qui privilégie le côté droit du graphique.
+À l'aide de ces informations, nous vous encourageons à décider du nombre de vrais positifs que vous souhaitez capturer, du nombre de faux positifs dont vous pouvez accepter le ciblage et du coût des erreurs pour votre entreprise. Si vous envoyez une promotion intéressante, vous pouvez cibler uniquement les non acheteurs (faux positifs) en privilégiant le côté gauche du graphique. Vous pouvez également encourager les acheteurs qui achètent souvent (les vrais positifs) à le faire à nouveau en sélectionnant une section d'utilisateurs qui privilégie le côté droit du graphique.
 
 ## Qualité des prédictions {#prediction_quality}
 
@@ -65,12 +65,12 @@ Tous les modèles de machine learning font des erreurs. Il se peut que certains 
 
 ## Tableau de corrélation des événements {#correlation_table}
 
-Cette analyse affiche les attributs ou les comportements de l'utilisateur qui sont en corrélation avec les événements de l'audience de prédiction. Les attributs évalués sont l'âge, le pays, le sexe et la langue. Les comportements analysés comprennent les sessions, les achats, le montant total des dépenses, les événements personnalisés, ainsi que les campagnes et les étapes canvas reçues au cours des 30 derniers jours.
+Cette analyse affiche les attributs ou les comportements de l'utilisateur qui sont en corrélation avec les événements de l'audience de prédiction. Les attributs évalués sont l’âge, le pays, le sexe et la langue. Les comportements analysés comprennent les sessions, les achats, le montant total des dépenses, les événements personnalisés, ainsi que les campagnes et les étapes canvas reçues au cours des 30 derniers jours.
 
 Les tableaux sont divisés en deux parties, gauche et droite, respectivement pour les personnes les plus et les moins susceptibles de réaliser l'événement. Pour chaque ligne, le ratio par lequel les utilisateurs ayant le comportement ou l'attribut dans la colonne de gauche sont plus ou moins susceptibles de réaliser l'événement est affiché dans la colonne de droite. Ce nombre est le rapport entre les scores de vraisemblance des utilisateurs ayant ce comportement ou cet attribut, divisé par la probabilité de réaliser l'événement sur l'ensemble de l'audience de prédiction.
 
 Ce tableau n'est mis à jour que lorsque la prédiction se réajuste et non lorsque les scores de vraisemblance de l'utilisateur sont mis à jour.
 
 {% alert note %}
-Les données de corrélation pour les prédictions seront partiellement cachées. Un achat est nécessaire pour révéler ces informations. Contactez votre gestionnaire de compte pour plus d'informations.
+Les données de corrélation pour les aperçus de prédictions seront partiellement cachées. Un achat est requis pour révéler ces informations. Contactez votre gestionnaire de compte pour plus d’informations.
 {% endalert %}
