@@ -99,7 +99,7 @@ Certifique-se de inserir o valor JSON completo que é [gerado pelo Google Cloud]
 
 ![A página do Google Cloud Storage no dashboard da Braze.]({% image_buster /assets/img/gcs7.png %}){: style="max-width:70%;"}
 
-### Etapa 5: Teste suas credenciais de conta de serviço (opcional)
+### Etapa 5: Teste suas credenciais da conta de serviço (opcional)
 
 Sua conta de serviço do Google Cloud IAM deve ter as seguintes permissões:
 
@@ -118,12 +118,12 @@ Para verificar essas permissões no painel da Braze, vá para a página **Google
 Os usuários que integraram uma solução de armazenamento de dados na nuvem e estão tentando exportar APIs, relatórios de dashboard ou relatórios CSV terão a seguinte experiência:
 
 - Todas as exportações da API não retornarão um URL para baixar no corpo da resposta e devem ser recuperadas por meio do armazenamento de dados.
-- Todos os relatórios de dashboard e relatórios CSV serão enviados para o e-mail do usuário para download (nenhuma permissão de armazenamento necessária) e serão salvos no Armazenamento de Dados.
+- Todos os relatórios do dashboard e relatórios CSV serão enviados para o e-mail do usuário para download (nenhuma permissão de armazenamento necessária) e serão salvos no Armazenamento de Dados.
 
 {% alert important %}
 **Requisito de formato JSON**: Para exportações JSON, o Braze usa o formato JSONL (JSON delimitado por nova linha), onde cada linha contém um objeto JSON separado. Esse formato difere do JSON padrão, que é um único array ou objeto JSON. Cada linha no arquivo exportado é um objeto JSON válido, mas o arquivo como um todo não é um único documento JSON válido. Ao processar esses arquivos, analise cada linha individualmente como um objeto JSON separado, em vez de tentar analisar o arquivo inteiro como um único documento JSON.
 
-As exportações Currents usam o formato Apache Avro (`.avro` arquivos), não JSON. Esse requisito de formato JSON se aplica a exportações de dados de dashboard e exportações de API que usam o formato JSON.
+As exportações Currents usam o formato Apache Avro (`.avro` arquivos), não JSON. Esse requisito de formato JSON se aplica a exportações de dados do dashboard e exportações de API que usam o formato JSON.
 {% endalert %}
 
 ## Solução de problemas
