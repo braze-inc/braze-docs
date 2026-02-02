@@ -147,7 +147,7 @@ BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
 Quando o Braze abre links profundos de sites dentro do app, os links profundos são tratados por [`BrazeWebViewActivity`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html).
 
 {% alert note %}
-Para mensagens in-app em HTML personalizadas, links configurados com `target="_blank"` abrem no navegador web padrão do dispositivo e não são tratados por `BrazeWebViewActivity`.
+Para mensagens in-app personalizadas em HTML, links configurados com `target="_blank"` abrem no navegador web padrão do dispositivo e não são tratados por `BrazeWebViewActivity`.
 {% endalert %}
 
 Para mudar isso:
@@ -187,9 +187,9 @@ Braze.configure(this, brazeConfig)
 
 ## Usando Jetpack Compose
 
-Para lidar com links profundos ao usar Jetpack Compose com NavHost:
+Para tratar links profundos ao usar Jetpack Compose com NavHost:
 
-1. Certifique-se de que a atividade que lida com seu link profundo está registrada no Android Manifest.
+1. Certifique-se de que a atividade que trata seu link profundo está registrada no Manifesto do Android.
     ```xml
     <activity
       ...
@@ -223,7 +223,7 @@ Para lidar com links profundos ao usar Jetpack Compose com NavHost:
         )
     }
     ```
-3. Dependendo da arquitetura do seu app, você pode precisar lidar com a nova intenção que é enviada para sua atividade atual também.
+3. Dependendo da arquitetura do seu app, você pode precisar tratar a nova intenção que é enviada para sua atividade atual também.
     ```kotlin
     DisposableEffect(Unit) {
         val listener = Consumer<Intent> {
