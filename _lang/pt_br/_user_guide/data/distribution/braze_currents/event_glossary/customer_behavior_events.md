@@ -44,7 +44,7 @@ Os esquemas de armazenamento se aplicam aos dados de eventos de arquivo simples 
 {% endalert %}
 
 {% api %}
-## Eventos de Atualização de Número de Bucket Aleatório {#random-bucket-number-update-events}
+## Eventos de Atualização do Número de Bucket Aleatório {#random-bucket-number-update-events}
 
 {% apitags %}
 Número de bucket aleatório
@@ -578,7 +578,7 @@ As propriedades de compra são eventos personalizados especiais e vêm com uma s
 {% endapi %}
 
 {% api %}
-## Eventos de Primeira Sessão {#first-session-events}
+## Eventos da Primeira Sessão {#first-session-events}
 
 {% apitags %}
 Sessões
@@ -925,7 +925,7 @@ Quando um usuário inicia sua primeira sessão, são disparados os eventos `Firs
 Atividade ao Vivo, Push para Iniciar Token
 {% endapitags %}
 
-Este evento ocorre quando o Braze sincroniza o token de push para iniciar a Atividade ao Vivo com o usuário.
+Este evento ocorre quando o Braze sincroniza o token de push para iniciar a atividade ao vivo com o usuário.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -1031,7 +1031,7 @@ Este evento ocorre quando o Braze sincroniza o token de push para iniciar a Ativ
 ## Eventos de mudança de token de atualização de atividade ao vivo {#live-activity-update-token-change-events}
 
 {% apitags %}
-Atividade ao vivo, Mudança de token de atualização
+Atividade ao vivo, Token de atualização
 {% endapitags %}
 
 Este evento ocorre quando o Braze sincroniza o token de atualização da atividade ao vivo com o usuário
@@ -1281,7 +1281,7 @@ Este evento ocorre quando um token por push é inserido, atualizado ou removido.
 - Sempre que um token por push entra no Braze, seus eventos de ciclo de vida são registrados. Existem três tipos de eventos de mudança de token ("adicionar", "atualizar" e "remover") registrados no campo `push_token_state_change_type`. Observe os seguintes detalhes:
   - Para um novo token que não existia antes, isso registra um evento "adicionar".
   - Para atualizar o token com a mesma string de token no mesmo usuário (gateway ou `foreground_push_disabled` ou outros campos "secundários" alterados), isso registrará um evento "atualizar" no mesmo token.
-  - Se um token for transferido de um usuário para outro, isso gerará um evento de "remover" para o usuário antigo e um evento de "adicionar" para o novo usuário.
-  - Se o mesmo usuário ou dispositivo gerar um novo token, isso gerará um evento de "remover" para o token antigo e um evento de "adicionar" para o novo token.
-  - Se a Braze estiver removendo um token (por razões como desinstalação ou token inválido), isso gerará um evento de "remover" para o token.
+  - Se um token for transferido de um usuário para outro, isso irá registrar um evento de "remover" para o usuário antigo e um evento de "adicionar" para o novo usuário.
+  - Se o mesmo usuário ou dispositivo gerar um novo token, isso irá registrar um evento de "remover" para o token antigo e um evento de "adicionar" para o novo token.
+  - Se a Braze estiver removendo um token (por razões como desinstalação ou token inválido), isso irá registrar um evento de "remover" para o token.
 {% endapi %}
