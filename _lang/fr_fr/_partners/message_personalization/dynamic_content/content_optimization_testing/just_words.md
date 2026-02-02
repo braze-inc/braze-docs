@@ -33,7 +33,7 @@ Des questions ? Contactez Just Words sur leur [page de réservation](https://ww
 
 ## Intégration de Just Words avec Braze
 
-### Étape 1 : Créez un modèle de mots justes
+### Étape 1 : Créez un modèle de mots justes
 
 1. Allez dans votre console Just Words et [créez un nouveau modèle](https://console.justwords.ai/new).
 2. Choisissez un ID facile à mémoriser, composé uniquement de lettres, de chiffres et de traits de soulignement.
@@ -77,10 +77,10 @@ Just Words fonctionne avec des canevas et des campagnes en utilisant le contenu 
 ```
 {% endraw %}
 
-![Configuration du test A/B Canvas de Braze.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
+![Configuration de la toile pour le test A/B de Braze.]({% image_buster /assets/img/just_words/braze_canvas.png %}){: style="max-width:70%;"}
 
 {% endtab %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 1. Dans l'étape **Composer des messages de** votre campagne, créez deux variantes.
 2. À l'étape **Audience cible**, accédez à la section **Test A/B** et modifiez les pourcentages d'utilisateurs qui recevront chacune de vos variantes (et votre groupe de contrôle facultatif). Vous pouvez personnaliser davantage votre test en sélectionnant une option d'optimisation. Pour plus d'informations sur les tests A/B pour les campagnes, reportez-vous à la section [Création de tests multivariés et de tests A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/).
@@ -125,13 +125,13 @@ Pour personnaliser vos messages avec des attributs personnalisés (tels que `ind
 
 Notez que l'attribut personnalisé de `industry` est indiqué par {% raw %}```&attrs.industry={{ custom_attribute.industry }}```{% endraw %}. 
 
-![Braze Liquid logic in an HTML message composer.]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
+![Braze Liquid logique dans un compositeur de messages HTML.]({% image_buster /assets/img/just_words/just_words_personalization.png %}){: style="max-width:80%;"}
 
 ### Étape 4 : Prévisualiser l'e-mail
 
 Veillez à prévisualiser l'e-mail dans Braze pour confirmer que le contenu personnalisé s'affiche correctement.
 
-![Prévisualisation de l'envoi de messages de Braze pour un e-mail de Just Words.]({% image_buster /assets/img/just_words/just_words_preview.png %}){: style="max-width:80%;"}
+![Prévisualisation d'un message Braze pour un e-mail Just Words.]({% image_buster /assets/img/just_words/just_words_preview.png %}){: style="max-width:80%;"}
 
 ### Étape 5 : Mettre en place des Braze Currents
 
@@ -140,7 +140,7 @@ Braze Currents permet de suivre et d'optimiser les performances au fil du temps.
 1. Dans Braze, allez dans **Intégrations partenaires** > **Exportation de données**.
 2. Sélectionnez **Créer un nouveau test courant**, puis sélectionnez **Tester l'exportation de données Amazon S3**.
 
-![Le menu déroulant "Create New Test Current" avec l'option "Test Amazon S3 Data Export".]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
+![Le menu déroulant "Create New Test Current" (Créer un nouveau courant de test) avec l'option "Test Amazon S3 Data Export" (Tester l'exportation de données Amazon S3).]({% image_buster /assets/img/just_words/test_amazon_s3.png %}){: style="max-width:80%;"}
 
 {: start="3" }
 3\. Saisissez l'ID d'accès S3, la clé d'accès secrète AWS, le nom du compartiment et le dossier qui ont été fournis par Just Words lors de l'onboarding.
@@ -150,7 +150,7 @@ Braze Currents permet de suivre et d'optimiser les performances au fil du temps.
 {: start="4" }
 4\. Sélectionnez les événements à suivre, tels que les envois, les ouvertures, les clics, les désabonnements, les conversions et autres.
 
-![La section "événements engagement aux messages" contient des événements à sélectionner.]({% image_buster /assets/img/just_words/message_engagement_events.png %}){: style="max-width:80%;"}
+![Section "événements d'engagement aux messages" avec des événements à sélectionner.]({% image_buster /assets/img/just_words/message_engagement_events.png %}){: style="max-width:80%;"}
 
 {: start="5" }
 5\. Lancez le Braze Currents.
