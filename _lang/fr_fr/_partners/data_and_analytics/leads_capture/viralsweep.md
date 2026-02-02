@@ -39,7 +39,7 @@ Dans ViralSweep, naviguez vers **Intégrations > Email & SMS > Ajouter un servic
 
 Dans la fenêtre de configuration des intégrations, indiquez votre clé API REST Braze et votre endpoint REST. Assurez-vous que l'endpoint que vous fournissez n'inclut pas `https://`, par exemple, `dashboard-03.braze.com`. 
 
-![Page d'intégration du service ViralSweep demandant à l'utilisateur la clé API de Braze et l'URL du tableau de bord de Braze.]({% image_buster /assets/img/viralsweep/connect2.png %}){: style="max-width:40%;"}
+![Page d'intégration du service ViralSweep invitant l'utilisateur à saisir la clé API de Braze et l'URL du tableau de bord de Braze.]({% image_buster /assets/img/viralsweep/connect2.png %}){: style="max-width:40%;"}
 
 Cliquez sur **Connecter**.
 
