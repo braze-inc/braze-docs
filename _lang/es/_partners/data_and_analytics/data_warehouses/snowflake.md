@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Curso de Braze Learning]( {% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) es un almacén de datos SQL en la nube creado específicamente y proporcionado como software como servicio (SaaS). Snowflake proporciona un almacén de datos más rápido, fácil de usar y mucho más flexible que las ofertas tradicionales de almacén de datos. Con la arquitectura única y patentada de Snowflake, es fácil acumular todos tus datos, habilitar análisis rápidos y obtener información basada en datos para todos tus usuarios.
 
@@ -40,7 +40,7 @@ Antes de poder utilizar esta característica, tendrás que completar lo siguient
 
 | Requisito | Descripción |
 | ----------- | ----------- |
-| Acceso Braze | Para acceder a esta característica en Braze, tendrás que ponerte en contacto con tu cuenta Braze o con tu administrador del éxito del cliente. |
+| Acceso Braze | Para acceder a esta característica en Braze, tendrás que ponerte en contacto con tu administrador del éxito del cliente o de tu cuenta Braze. |
 | Cuenta Snowflake | Una cuenta Snowflake con permisos `admin`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -80,7 +80,7 @@ De forma similar a Currents, puedes utilizar tu compartición segura de datos de
 - Mapear los datos brutos de eventos o usuarios a un CRM (como Salesforce)
 - Y más
 
-[Descarga aquí los esquemas de las tablas en bruto.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+[Descarga aquí los esquemas de las tablas sin procesar.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### Esquema de ID de usuario
 
@@ -115,7 +115,7 @@ Siempre que sea posible, los cambios de última hora irán precedidos de un anun
 
 ### Regiones Snowflake
 
-Braze aloja actualmente todos los datos a nivel de usuario en las regiones Snowflake AWS US East-1 y EU-Central (Frankfurt). Para los usuarios de fuera de esas regiones, Braze puede proporcionar datos compartidos a clientes conjuntos que alojen su infraestructura Snowflake en cualquier región de AWS, Azure o GCP.
+Braze aloja actualmente todos los datos de usuario en las regiones Snowflake AWS US East-1, EU-Central (Frankfurt), AP-Southeast-2 (Sydney) y AP-Southeast-3 (Jakarta). Para los usuarios de fuera de esas regiones, Braze puede proporcionar datos compartidos a clientes conjuntos que alojen su infraestructura Snowflake en cualquier región de AWS, Azure o GCP.
 
 ### Retención de datos
 
