@@ -33,17 +33,17 @@ L'intégration de Braze et de Clarisights vous permet d'importer les données de
 Grâce à l'intégration de Braze et de Clarisights, les utilisateurs peuvent créer différentes visualisations et tableaux pour obtenir des informations sur les campagnes qu'ils ont créées. Les cas d'utilisation les plus courants sont les suivants :
 
 {% tabs %}
-{% tab Une meilleure visibilité %}
+{% tab Better visibility %}
 Meilleure visibilité sur les performances globales des campagnes et des Canvases.
 
 ![Un graphique montrant un exemple de la meilleure visibilité des performances dans la plateforme Clarisights. Ce graphique comprend des statistiques sur les campagnes et les canvas ouverts, les clics, les envois, les conversions, etc.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
-{% tab Rapports détaillés %}
+{% tab Granular reporting %}
 Rapports granulaires pour les campagnes et les canevas.
 
 ![Un graphique montrant des rapports précis, comme le "total des envois par canal d'envoi" et le "taux de conversion".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
 {% endtab %}
-{% tab Tableaux de bord unifiés %}
+{% tab Unified dashboards %}
 Tableaux de bord unifiés pour les CMO et les CXO.
 
 ![Un graphique montrant un exemple de tableaux de bord unifiés.]({{site.baseurl}}/assets/img/clarisights/granular_reporting.png)
@@ -61,7 +61,7 @@ Pour synchroniser les données Braze avec Clarisights, vous devez créer un conn
 
 Pour inclure Braze comme source de données dans vos rapports Clarisights, naviguez vers **Créer un nouveau rapport.** Nommez votre rapport et sélectionnez **Braze** comme source de données dans l'invite qui s'affiche. Vous pouvez également choisir les indicateurs et les dimensions à inclure dans le rapport. Lorsque vous avez terminé, sélectionnez **Créer un rapport**. 
 
-Les données de Braze commenceront à circuler à partir de la prochaine importation de données planifiée. Contactez votre gestionnaire de satisfaction client Clarisights pour demander des remplissages historiques pour des durées plus longues. 
+Les données de Braze commenceront à circuler à partir de la prochaine importation de données planifiée. Contactez votre gestionnaire de satisfaction client Clarisights pour demander des remplissages pour des durées plus longues. 
 
 ![Paramètres du rapport Clarisight affichant les champs pour le nom et la source de données. Dans cet exemple, "Braze" est sélectionné comme source de données.]({{site.baseurl}}/assets/img/clarisights/braze_report.png)
 
