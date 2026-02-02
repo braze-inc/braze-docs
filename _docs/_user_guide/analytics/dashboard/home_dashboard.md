@@ -113,6 +113,10 @@ MAU snapshots are calculated once per day and never change retroactively. In thi
 When you initially integrate Braze, all users will look like new users because Braze has never recorded a session for them before.
 {% endalert %}
 
+{% alert important %}
+Users associated with more than one app are counted separately for each app. This means a single user can contribute to the *New Users* count multiple times if they start sessions across different apps in your workspace.
+{% endalert %}
+
 ### Stickiness
 
 The *Stickiness* value is a ratio of a given periods' DAU to MAU. In essence, stickiness measures the percentage of your MAU that come back on a daily basis.
