@@ -29,9 +29,9 @@ Com a integração entre o Braze e a Extole, você pode puxar eventos e atributo
 
 ## Casos de uso
 
-Os casos de uso a seguir mostram algumas maneiras de aproveitar a integração do Extole com o Braze. Trabalhe com seus gerentes de implementação e de sucesso do cliente da Extole para desenvolver uma opção que atenda às necessidades específicas de sua empresa.
+Os casos de uso a seguir mostram algumas maneiras de usar a integração do Extole com o Braze. Trabalhe com seus gerentes de implementação e de sucesso do cliente da Extole para desenvolver uma opção que atenda às necessidades específicas de sua empresa.
 
-- Aproveite os eventos personalizados de seus programas de indicação e engajamento para disparar uma campanha Braze ou Canvas
+- Use eventos personalizados de seus programas de indicação e engajamento para disparar uma campanha Braze ou Canvas
 - Crie segmentos, dashboards e relatórios personalizados usando os dados de seus programas com tecnologia Extole
 - Cancelar automaticamente a inscrição ou inscrever usuários em sua lista de marketing no Braze
 
@@ -52,7 +52,7 @@ Conclua as etapas a seguir para sua integração entrar em funcionamento. Seus g
 
 ### Eventos do programa Extole
 
-Abaixo estão os eventos padrão, as propriedades do evento e as atribuições do usuário que a Extole enviará à Braze. Entre em contato com os gerentes de implementação ou de sucesso do cliente do Extole para identificar e adicionar outros eventos do Extole à sua integração.
+Abaixo estão os eventos padrão, as propriedades do evento e as atribuições do usuário que a Extole enviará à Braze. Entre em contato com os gerentes de implementação ou de sucesso do cliente do Extole para identificar e adicionar eventos adicionais do Extole à sua integração.
 
 | Evento | Descrição | Propriedades do evento | Atributos do usuário |
 | ----------- | ----------- | ----------- | ----------- |
