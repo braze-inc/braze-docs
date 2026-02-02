@@ -70,7 +70,7 @@ Quando tiver certeza de que está recebendo PSIDs, coordene e compartilhe isso c
 
 ### Etapa 3: Configure seu modelo de webhook
 
-Em **Modelos e mídias**, acesse **Modelos de webhook** e escolha o **modelo de webhook do Facebook Messenger**.
+Em **Modelos & Mídia**, acesse **Modelos de Webhook** e escolha o **Modelo de Webhook do Facebook Messenger**.
 
 1. Forneça um nome de modelo e adicione equipes e tags, conforme necessário.
 2. Digite sua mensagem ou escolha um modelo de mensagem dentre [os disponibilizados pelo Facebook](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). Você também pode escolher [o tipo](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) de mensagem ou [a tag](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags).
@@ -81,7 +81,7 @@ Em **Modelos e mídias**, acesse **Modelos de webhook** e escolha o **modelo de 
 
 Antes de enviar sua mensagem, teste seu webhook. Certifique-se de que seu Messenger ID esteja salvo no Braze (ou encontre-o e teste como um usuário personalizado) e use a prévia para enviar a mensagem de teste:
 
-![Guia Teste no modelo de webhook do Facebook Messenger mostrando que você pode fazer uma prévia da mensagem enviando-a para um usuário existente.]({% image_buster /assets/img_archive/fbm-test.png %})
+![Guia Teste no modelo de webhook do Facebook Messenger, mostrando que é possível fazer uma prévia da mensagem enviando-a para um usuário existente.]({% image_buster /assets/img_archive/fbm-test.png %})
 
 Se a mensagem for recebida com êxito, você poderá definir as configurações de entrega.
 
@@ -89,7 +89,7 @@ Se a mensagem for recebida com êxito, você poderá definir as configurações 
 
 Depois de configurada, use essa integração para direcionar os usuários do Facebook Messenger. Se não estiver enviando mensagens usando os números de telefone dos usuários e planeja enviar mensagens do Messenger repetidamente, [crie um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) para todos os usuários para os quais o Messenger ID existe como um atributo personalizado e ative [o rastreamento de dados]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) para acompanhar as taxas de inscrição no Messenger ao longo do tempo. 
 
-![Filtro de segmento "messenger_id" definido como "is not blank".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
+![Filtro de segmento "messenger_id" definido como "não está em branco".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
 
 Se você optar por não criar um segmento específico para assinantes do Messenger, certifique-se de incluir um filtro para o Messenger ID existente para evitar erros.
 
