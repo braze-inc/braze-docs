@@ -15,7 +15,7 @@ search_tag: Partner
 Este documento cubre los casos de uso de la extensión, cómo instalarla en tus bibliotecas de reenvío de eventos y cómo emplear sus capacidades en una [regla de](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) reenvío de eventos.
 
 {% alert note %}
-El envío de atributos a Braze puede aumentar el consumo de puntos de datos de Braze. Consulta con tu director de cuentas Braze antes de enviar atributos. Consulte la documentación de Braze sobre [puntos de datos facturables]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) para obtener más información.
+El uso del reenvío de eventos de Adobe puede aumentar el uso de punto de datos de Braze. Consulta la documentación de Braze sobre [puntos de datos]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) para obtener más información.
 {% endalert %}
 
 ## Casos prácticos
@@ -62,7 +62,7 @@ Tras instalar la extensión, crea una nueva [regla ](https://experienceleague.ad
 ![]({% image_buster /assets/img/efe.png %})
 
 {% tabs local %}
-{% tab Identificación del usuario %}
+{% tab User Identification %}
 
 | Entrada de datos | Descripción |
 | --- | --- |
@@ -76,7 +76,7 @@ Para vincular el evento a un usuario, debes rellenar el campo `External User ID`
 {% endalert %}
 
 {% endtab %}
-{% tab Datos del evento %}
+{% tab Event Data %}
 
 | Entrada de datos | Descripción | Obligatoria |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ La acción **Enviar evento de Braze** sólo requiere que se especifique un **Nom
 {% endalert %}
 
 {% endtab %}
-{% tab Atributo de usuario %}
+{% tab User Attribute %}
 
 Los atributos de usuario pueden ser un objeto JSON que contenga campos que crearán o actualizarán un atributo con el nombre y valor suministrados en el perfil de usuario especificado. Se admiten las siguientes propiedades:
 
@@ -106,13 +106,13 @@ Los atributos de usuario pueden ser un objeto JSON que contenga campos que crear
 | País | El país del usuario como cadena en formato [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
 | Idioma | El idioma del usuario como cadena en formato [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | Fecha de nacimiento | Los datos de nacimiento del usuario en cadena en formato "AAAA-MM-DD" (por ejemplo, 1980-12-21). |
-| Zona horaria | Nombre de la zona horaria de la base de datos de [zonas horarias de IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, "América/Nueva_York" u "Hora del Este (EE.UU. y Canadá)"). |
+| Zona horaria | Nombre de la zona horaria de la base de datos de [zonas horarias de IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, ’America/New_York’ o "Eastern Time (US & Canada)"). |
 | Facebook | Un hash que contiene cualquiera de los siguientes elementos: `id` (cadena), `likes` (matriz de cadenas), `num_friends` (entero). |
 | X | Hash que contiene cualquiera de estos: id (entero), `screen_name` (cadena, X (antes Twitter) handle), `followers_count` (entero), `friends_count` (entero), `statuses_count`(entero). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Todos los atributos añadidos en la configuración se enviarán cada vez que el evento se envíe a Braze, independientemente de si el valor del atributo ha cambiado. Cuando configure los atributos de usuario, asegúrese de saber cómo afectarán al consumo de puntos de datos.
+Todos los atributos añadidos en la configuración se enviarán cada vez que el evento se envíe a Braze, independientemente de si el valor del atributo ha cambiado. Cuando configures los atributos de usuario, asegúrate de que sabes cómo afectarán al uso de punto de datos.
 {% endalert %}
 
 {% endtab %}
@@ -125,7 +125,7 @@ Tras instalar la extensión, crea una nueva [regla ](https://experienceleague.ad
 ![]({% image_buster /assets/img/efe2.png %})
 
 {% tabs local %}
-{% tab Identificación del usuario %}
+{% tab User Identification %}
 
 | Entrada de datos | Descripción |
 | --- | --- |
@@ -139,7 +139,7 @@ Para vincular el evento a un usuario, debes rellenar el campo `External User ID`
 {% endalert %}
 
 {% endtab %}
-{% tab Datos de compra %}
+{% tab Purchase Data %}
 
 | Entrada de datos | Descripción | Obligatoria |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ La acción **Enviar evento de compra** sólo requiere que se especifique `Produc
 {% endalert %}
 
 {% endtab %}
-{% tab Atributos del usuario %}
+{% tab User Attributes %}
 
 Puede elegir si desea enviar atributos con cada evento dentro de la vista de configuración.
 
@@ -174,13 +174,13 @@ Los atributos de usuario pueden ser un objeto JSON que contenga campos que crear
 | País | El país del usuario como cadena en formato [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
 | Idioma | El idioma del usuario como cadena en formato [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | Fecha de nacimiento | Los datos de nacimiento del usuario en cadena en formato "AAAA-MM-DD" (por ejemplo, 1980-12-21). |
-| Zona horaria | Nombre de la zona horaria de la base de datos de [zonas horarias de IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, "América/Nueva_York" u "Hora del Este (EE.UU. y Canadá)"). |
+| Zona horaria | Nombre de la zona horaria de la base de datos de [zonas horarias de IANA](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (por ejemplo, ’America/New_York’ o "Eastern Time (US & Canada)"). |
 | Facebook | Un hash que contiene cualquiera de los siguientes elementos: `id` (cadena), `likes` (matriz de cadenas), `num_friends` (entero). |
 | X | Hash que contiene cualquiera de estos: id (entero), `screen_name` (cadena, X (antes Twitter) handle), `followers_count` (entero), `friends_count` (entero), `statuses_count`(entero). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Todos los atributos añadidos en la configuración se enviarán cada vez que el evento se envíe a Braze, independientemente de si el valor del atributo ha cambiado. Al configurar los atributos de usuario, asegúrese de saber cómo afectará esto al consumo de puntos de datos.
+Todos los atributos añadidos en la configuración se enviarán cada vez que el evento se envíe a Braze, independientemente de si el valor del atributo ha cambiado. Cuando configures los atributos de usuario, asegúrate de que sabes cómo afectará al uso de punto de datos.
 {% endalert %}
 
 {% endtab %}
