@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Friendbuy
 
-> Aprovecha la integración entre Friendbuy y Braze para ampliar tus capacidades de correo electrónico y SMS mientras automatizas sin esfuerzo las comunicaciones de tus programas de recomendación y fidelización. Braze generará perfiles de cliente para todos los números de teléfono de adhesión voluntaria recogidos a través de Friendbuy.
+> Utiliza la integración entre [Friendbuy](https://www.friendbuy.com/) y Braze para ampliar tus capacidades de correo electrónico y SMS a la vez que automatizas sin esfuerzo las comunicaciones de tus programas de referidos y fidelización. Braze generará perfiles de cliente para todos los números de teléfono de adhesión voluntaria recogidos a través de Friendbuy.
 
 _Esta integración está mantenida por Friendbuy._
 
