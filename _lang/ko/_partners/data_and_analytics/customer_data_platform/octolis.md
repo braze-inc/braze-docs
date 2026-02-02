@@ -23,7 +23,7 @@ The Braze and Octolis integration acts as middleware between your raw data sourc
 
 ![]({% image_buster /assets/img/Octolis/Braze_scheme.png %})
 
-## Prerequisites
+## 전제 조건
 
 | Requirement | Description |
 | ----------- | ----------- |
@@ -74,7 +74,7 @@ Next, select **Braze** as the destination and which entity you will send data to
 
 ![]({% image_buster /assets/img/Octolis/Braze_screen4.png %})
 
-### Step 4: Set output settings
+### 4단계: Set output settings
 
 By default, Braze creates all the attributes that you would send, but you must document the list of fields to be synchronized.
 
