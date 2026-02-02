@@ -9,11 +9,11 @@ description: "Este artigo de referência aborda como abrir exportações de CSV 
 
 # Abertura de exportações CSV no Excel
 
-> Esta página aborda como abrir exportações de CSV no Excel.
+> Esta página cobre como abrir exportações CSV no Excel.
 
 ## Definir o Excel como o programa padrão
 
-Embora os arquivos CSV geralmente sejam abertos automaticamente no Excel por padrão, isso nem sempre é o caso. Consulte os artigos de solução de problemas [do Windows](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495) e [da Apple](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac) para obter as etapas para definir o Excel como seu programa padrão.
+Embora os arquivos CSV geralmente sejam abertos automaticamente no Excel por padrão, nem sempre esse é caso. Consulte os artigos de solução de problemas [do Windows](https://support.microsoft.com/en-us/windows/change-which-programs-windows-7-uses-by-default-62fd162f-8c82-0436-806f-c60d69dcf495) e [da Apple](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac) para obter as etapas para definir o Excel como seu programa padrão.
 
 ## Conversão de CSV em XLSX ou XLS
 
