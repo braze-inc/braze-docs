@@ -23,7 +23,7 @@ Alle Apps, die _auf_ Android 11 (API 30) _zielen_, müssen auf [Braze Android SD
 Aufgrund von Änderungen in den Android 11 APIs werden Apps, die auf Android 11 abzielen und nicht auf Braze Android SDK v8.1.0+ aktualisieren, Probleme mit Deeplinks von Braze UI-Komponenten haben und angepasste HTML In-App-Nachrichten nicht korrekt anzeigen.
 {% endalert %}
 
-### Deeplinks setzen
+### Deeplinks
 
 Apps, die auf Android 11 oder höher (API Version 30+) Targeting betreiben, müssen auf [Braze Android SDK v8.1.0](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md#810) upgraden, um weiterhin Deeplinks innerhalb von Braze Nachrichten zu verwenden. Aufgrund einer Änderung der Android 11 APIs werden Apps, die nicht mindestens auf Android SDK v8.1.0 aktualisieren, Probleme mit Deeplinks innerhalb von Braze Nachrichten (In-App-Nachrichten oder Content-Cards) haben.
 
