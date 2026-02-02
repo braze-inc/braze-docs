@@ -16,7 +16,7 @@ _Essa integração é mantida por B.Layer._
 
 ## Sobre a integração
 
-A integração entre o Braze e o B.Layer permite que você aproveite o construtor de mensagens no app B.Layer para ajudá-lo a criar mensagens no app com a sua marca, que podem ser exportadas como um arquivo zip ou HTML em linha para o Braze. Essa integração não exige a ajuda de desenvolvedores, o que economiza tempo e orçamento.
+A integração entre o Braze e o B.Layer permite que você use o construtor de mensagens no app B.Layer para ajudá-lo a criar mensagens no app com a sua marca, que podem ser exportadas como um arquivo zip ou HTML em linha para o Braze. Essa integração não exige a ajuda de desenvolvedores, o que economiza tempo e orçamento.
 
 ![]({% image_buster /assets/img/blayer/blayer2.png %})
 
