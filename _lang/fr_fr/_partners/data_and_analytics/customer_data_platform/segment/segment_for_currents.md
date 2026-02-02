@@ -32,7 +32,7 @@ L'intégration de Braze et de Segment vous permet de tirer parti de Braze Curren
 Dans votre tableau de bord Segment, sélectionnez la source Segment. Ensuite, allez dans **Paramètres > Clés d'API**. Vous trouverez ici la **clé d'écriture des segments**.
 
 {% alert warning %}
-Il est important de maintenir à jour la clé de rédaction de votre segment. Si les informations d'identification de votre connecteur expirent, le connecteur cessera d'envoyer des événements. Si cette situation persiste pendant plus de **48 heures**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
+Il est important de maintenir à jour la clé de rédaction de votre segment. Si les informations d'identification de votre connecteur expirent, le connecteur cessera d'envoyer des événements. Si cette situation persiste pendant plus de **5 jours**, les événements du connecteur seront abandonnés et les données seront définitivement perdues.
 {% endalert %}
 
 ### Étape 2 : Création d'un nouveau connecteur Currents
@@ -41,7 +41,7 @@ Il est important de maintenir à jour la clé de rédaction de votre segment. Si
 2. Cliquez sur **\+ Créer un nouveau flux Currents** > **Exporter des données Segment**.
 3. Ensuite, indiquez le nom de l'intégration, l'e-mail du contact, la clé d'écriture du segment et la région du segment.
 
-![La page Segment Currents dans Braze. Vous trouverez ici des champs pour le nom de l'intégration, l'e-mail du contact, la région du segment et la clé API.]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
+![La page Segment Currents dans Braze. Cette page contient des champs permettant de spécifier le nom de l'intégration, l'e-mail de contact, la région du segment et la clé API.]({% image_buster /assets/img/segment/segment_currents_integration_config.png %})
 
 ### Étape 3 : Exporter les événements d'engagement des messages
 
@@ -53,7 +53,7 @@ N'oubliez pas que Braze n'envoie les données d'événements que pour les utilis
 L'exportation d'utilisateurs anonymes est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
 {% endalert %}
 
-![Liste de tous les événements d'engagement aux messages disponibles sur la page Segment Currents de Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
+![Liste de tous les événements d'engagement de messages disponibles sur la page Segment Currents de Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Enfin, sélectionnez **Lancer Currents**.
 
@@ -67,7 +67,7 @@ Pour en savoir plus, consultez la [documentation](https://segment.com/docs/conne
 
 {% multi_lang_include updating_currents.md %}
 
-## Événements Currents pris en charge
+## Événements soutenus par Currents
 
 Braze prend en charge l'exportation vers Segment des données suivantes répertoriées dans les glossaires des événements Currents relatifs au [comportement des utilisateurs]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/) et à [l'engagement des messages]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) :
  
