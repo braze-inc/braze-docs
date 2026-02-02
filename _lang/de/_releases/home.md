@@ -78,7 +78,7 @@ Mit [dynamischem BCC]({{site.baseurl}}/user_guide/administrative/app_settings/em
 
 Als Alternative zu einem Rate-Limit, das für die gesamte Multichannel-Kampagne oder den Canvas gilt, können Sie ein bestimmtes Rate-Limit pro Kanal auswählen. In diesem Fall gilt das Rate-Limits für jeden von Ihnen ausgewählten Kanal. Sie können Ihre Kampagne oder Ihr Canvas beispielsweise so einstellen, dass Sie maximal 5.000 Webhooks und 2.500 SMS-Nachrichten pro Minute über die Kampagne oder das Canvas versenden. Weitere Einzelheiten finden Sie unter [Rate-Limiting und Frequency-Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting).
 
-### Partnerschaften
+### Partnerschaften:
 
 #### LILT - Lokalisierung
 
@@ -131,7 +131,7 @@ Da die MM API für WhatsApp keine 100%ige Zustellbarkeit bietet, ist es wichtig 
 
 Für das Retargeting von Nutzern:innen empfehlen wir die Erstellung eines Segments von Nutzern:innen, die eine bestimmte Nachricht nicht erhalten haben. Filtern Sie dazu nach dem Fehlercode `131049`, der anzeigt, dass eine Nachricht mit einem Marketing Template nicht gesendet wurde, weil WhatsApp das Limit für Marketing-Templates pro Nutzer:innen nicht einhält. Sie können dies mit [Braze-Currents oder SQL Segment-Erweiterungen]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/optimized_delivery/#retargeting-users-on-other-braze-channels) tun.
 
-### Partnerschaften
+### Partnerschaften:
 
 #### OtherLevels - Dynamische Inhalte
 
