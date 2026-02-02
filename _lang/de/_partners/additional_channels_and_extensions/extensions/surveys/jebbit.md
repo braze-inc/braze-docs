@@ -44,7 +44,7 @@ Ein Jebbit-Ingenieur, der für Ihre Integration zuständig ist, wird eine Testü
 Die ID des Attributs, die Sie in Jebbit festgelegt haben, ist die Art und Weise, wie der Name des Attributfelds in Braze angezeigt wird.
 {% endalert %}
 
-## Anpassung
+## Customization
 
 Wir unterstützen derzeit speziell die Endpunkte für [Nutzerdaten]({{site.baseurl}}/api/endpoints/user_data/), aber Anfragen für andere Endpunkte können unterstützt werden.
 
