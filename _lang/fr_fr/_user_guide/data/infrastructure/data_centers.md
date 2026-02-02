@@ -10,7 +10,7 @@ description: "Cet article de référence fournit des informations sur les centre
 
 > Les centres de données de Braze sont créés pour vous offrir des options sur l'endroit où les données de vos utilisateurs sont traitées et stockées. Vous pouvez ainsi gérer efficacement vos risques liés à la souveraineté, à la flexibilité et à la gestion des données.
 
-## Comment cela fonctionne-t-il ?
+## Fonctionnement
 
 Braze exploite plusieurs centres de données situés dans différents emplacements/localisations à travers le monde. Ces centres de données permettent à nos services d'être fiables et évolutifs. Cette répartition géographique permet de minimiser le temps de latence, c'est-à-dire le temps que mettent les données à voyager entre le serveur et l'utilisateur. 
 
