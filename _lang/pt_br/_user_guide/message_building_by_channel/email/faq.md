@@ -23,7 +23,7 @@ As campanhas disparadas pela API desduplicarão ou enviarão desduplicações, d
 
 - **Cenário 1: E-mails duplicados no segmento de destino:** Se o mesmo e-mail aparecer em vários perfis de usuário agrupados nos filtros de público do dashboard para uma campanha disparada por API, apenas um dos perfis receberá o e-mail.
 - **Cenário 2: Envio de e-mails duplicados em diferentes `user_ids` dentro do objeto de destinatários:** Se o mesmo e-mail aparecer em múltiplos `External_user_IDs` referenciados pelo objeto `recipients`, o e-mail será enviado duas vezes.
-- **Cenário 3: E-mails duplicados devido a duplicatas user_ids dentro do objeto de destinatários:** Se você tentar adicionar o mesmo perfil de usuário duas vezes, apenas um dos perfis receberá o e-mail.
+- **Cenário 3: E-mails duplicados devido a user_ids duplicados dentro do objeto recipients:** Se você tentar adicionar o mesmo perfil de usuário duas vezes, apenas um dos perfis receberá o e-mail.
 
 ### As atualizações das minhas configurações de envio de e-mail serão aplicadas retroativamente?
 
