@@ -74,7 +74,7 @@ Tout d'abord, vous allez créer une nouvelle transformation de données dans Bra
 
     Votre transformation devrait ressembler à ce qui suit :
 
-    ![Exemple de transformation de données.]({% image_buster /assets/img/front/data_transformation.png %})
+    ![Un exemple de transformation de données.]({% image_buster /assets/img/front/data_transformation.png %})
 
 {% alert tip %}
 Vous pouvez modifier ce modèle pour répondre à vos besoins spécifiques. Par exemple, vous pouvez personnaliser le nom de l'événement personnalisé prédéfini. Pour plus d'informations, voir l'[aperçu de la transformation des données]({{site.baseurl}}/user_guide/data/data_transformation/overview/).
@@ -102,7 +102,7 @@ Votre message devrait ressembler à ce qui suit :
 
 Pour le type de distribution, sélectionnez **Livraison par événement**. Pour le déclencheur d'événement personnalisé, sélectionnez **Envoi de SMS sortants**.
 
-![La page "Planifier la distribution".]({% image_buster /assets/img/front/custom_event_trigger.png %})
+![La page "Planifier la réception/distribution".]({% image_buster /assets/img/front/custom_event_trigger.png %})
 
 {% alert note %}
 Cet événement personnalisé est la transformation de données qui écrit dans le profil de l'utilisateur. Les messages de l'agent seront enregistrés en tant que propriété de cet événement.
@@ -116,17 +116,17 @@ Enfin, sous **Contrôle de la distribution**, activez la rééligibilité.
 
 Dans le tableau de bord de Braze, allez dans **Paramètres** > **Canaux** > **Ajouter des canaux**, puis sélectionnez **Canal personnalisé** et saisissez un nom pour votre nouveau canal Braze.
 
-![Un canal personnalisé pour Braze dans le tableau de bord Front.]({% image_buster /assets/img/front/front_custom_channel.png %})
+![Un canal personnalisé pour Braze dans le tableau de bord de Braze.]({% image_buster /assets/img/front/front_custom_channel.png %})
 
-### Étape 4 : Configurez les paramètres
+### Étape 4 : Configurez les paramètres
 
 Dans le champ de l'endpoint API sortant, entrez l'URL du webhook de transformation des données [que vous avez créé précédemment](#step-1-set-up-a-data-transformation-in-braze). Tous les messages sortants des agents en ligne/en production/instantanée sur votre nouveau canal Braze seront envoyés ici. Ce canal fournit également une URL d'endpoint vers laquelle Braze doit transférer les messages SMS dans le champ **URL entrant.**
 
 Notez bien cette URL, vous en aurez besoin plus tard.
 
-![Les paramètres du canal Braze nouvellement créé dans Front.]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
+![Les paramètres du canal de Braze nouvellement créé dans Front.]({% image_buster /assets/img/front/front_custom_channel2.png %}){: style="max-width:65%;"}
 
-### Étape 5 : Mise en place d'une redirection des SMS entrants
+### Étape 5 : Mise en place d'une redirection des SMS entrants
 
 Ensuite, vous allez créer deux nouvelles campagnes webhook à Braze afin de pouvoir transférer les SMS entrants des clients vers la boîte de réception du Front.
 
@@ -147,13 +147,13 @@ Dans le tableau de bord de Braze, allez dans **Audience**, choisissez votre **gr
 |Message de réponse|Le message qui sera envoyé lorsqu'un mot-clé est détecté, par exemple "Un paysagiste vous contactera sous peu".|
 {: .reset-td-br-1 .reset-td-br-2 }
 
-![Exemple de catégorie de mots-clés SMS dans Braze.]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
+![Un exemple de catégorie de mots-clés SMS dans Braze.]({% image_buster /assets/img/front/front_keyword.png %}){: style="max-width:65%;"}
 
 #### Étape 5.2 : Créez votre première campagne webhook
 
 Dans le tableau de bord de Braze, créez votre première campagne webhook à l'aide de l'URL [que vous avez créée précédemment](#step-3-configure-the-settings-for-your-new-custom-braze-channel).
 
-![Un exemple de la première campagne webhook qui devrait être créée dans Braze.]({% image_buster /assets/img/front/sms_to_front.png %}){: style="max-width:65%;"}
+![Un exemple de la première campagne webhook à créer dans Braze.]({% image_buster /assets/img/front/sms_to_front.png %}){: style="max-width:65%;"}
 
 Ajoutez ce qui suit au corps de votre requête :
 
@@ -178,7 +178,7 @@ Ajoutez ce qui suit au corps de votre requête :
 
 Dans l'onglet Paramètres, configurez vos en-têtes de requête `Authorization`, `content-type` et `accept`.
 
-![Exemple de requête avec les trois en-têtes requis.]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
+![Exemple de demande avec les trois en-têtes requis.]({% image_buster /assets/img/front/webhook_settings.png %}){: style="max-width:65%;"}
 
 #### Étape 5.3 : Planifiez la première distribution
 
@@ -188,17 +188,17 @@ Pour **Schedule Delivery**, sélectionnez **Action-Based Delivery**, puis choisi
 
 Sous **Contrôles de distribution**, activez la rééligibilité.
 
-![Rééligibilité sélectionnée sous "Contrôles de distribution" pour la première campagne webhook.]({% image_buster /assets/img/front/braze_reeligibility.png %})
+![Rééligibilité sélectionnée sous "Contrôles de la distribution" pour la première campagne webhook.]({% image_buster /assets/img/front/braze_reeligibility.png %})
 
 #### Étape 5.4 : Créez votre deuxième campagne webhook
 
-Étant donné que votre deuxième campagne webhook correspondra à la première, vous pouvez [dupliquer la première et la renommer.]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns) Vous pouvez le faire dès maintenant.
+Comme votre deuxième campagne webhook correspond à la première, vous pouvez [dupliquer la première et la renommer]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#duplicating-segments-or-campaigns).
 
 #### Étape 5.5 : Planifiez la seconde distribution
 
 Pour la **distribution planifiée**, définissez le **déclencheur basé sur l'action** et le **groupe d'abonnement SMS** de la même manière que pour [la première distribution](#step-53-schedule-the-first-delivery). Toutefois, pour la **catégorie de mots-clés**, choisissez **Autre**.
 
-![La page "Distribution planifiée" de la deuxième campagne webhook, avec "Autre" comme catégorie de mot-clé.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
+![La page "Réception/distribution planifiée" pour la deuxième campagne webhook, avec "Autre" choisi comme catégorie de mot-clé.]({% image_buster /assets/img/front/front_actionbased_other_keyword.png %})
 
 #### Étape 5.6 : Ajouter un filtre d'audience
 
@@ -221,9 +221,9 @@ Configurez ensuite votre filtre :
 - Chez Braze, les envois de messages SMS sont facturés par segment de message. Il est essentiel de comprendre ce qui définit un segment et comment ces messages seront répartis pour savoir comment vous serez facturé pour les messages. Vous trouverez plus d'informations dans notre [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
 - Les longues réponses des agents consommeront davantage de segments facturables.
 
-### Consommation de points de données
+### Enregistrement des points de données
 
-Actuellement, cette intégration nécessite l'écriture d'un événement personnalisé dans le profil de l'utilisateur à chaque fois qu'un agent en ligne envoie un SMS depuis Front. Cela peut convenir à des échanges rapides qui ne durent que quelques messages, mais lorsque les conversations deviennent plus longues, les points de données deviennent de plus en plus importants. Un point de données est consommé pour chaque événement personnalisé enregistré dans Braze.
+Actuellement, cette intégration nécessite l'écriture d'un événement personnalisé dans le profil de l'utilisateur à chaque fois qu'un agent en ligne envoie un SMS depuis Front. Cela peut convenir à des échanges rapides qui ne durent que quelques messages, mais au fur et à mesure que les conversations s'allongent, les points de données deviennent de plus en plus importants. Si vous avez des questions sur les nuances des points de données de Braze, votre gestionnaire de compte Braze peut y répondre.
 
 ### Inclure des liens dans les messages SMS
 
