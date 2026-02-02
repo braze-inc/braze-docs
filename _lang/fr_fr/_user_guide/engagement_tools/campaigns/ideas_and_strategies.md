@@ -3,37 +3,37 @@ nav_title: Idées et stratégies
 article_title: Idées et stratégies
 layout: dev_guide
 guide_top_header: "Idées et stratégies"
-guide_top_text: "Découvrez comment créer votre campagne idéale grâce à ces cas d'utilisation et à d'autres idées."
+guide_top_text: "Apprenez-en plus sur la manière de créer votre campagne idéale avec ces exemples d’utilisation et d’autres idées."
 page_order: 5
 
 tool: Campaigns
 page_type: landing
-description: "Cette page d'atterrissage contient des idées et des stratégies de campagne. Vous y trouverez des articles sur des sujets tels que la localisation, le reciblage, les meilleures pratiques, etc."
+description: "Cette page d’accueil présente des idées et des stratégies de campagne. Vous trouverez ici des articles sur des sujets tels que la localisation, le reciblage, les bonnes pratiques, etc."
 
-guide_featured_title: "Articles de section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: Campagnes auprès des utilisateurs actifs
+  - name: Campagnes d’utilisateurs actifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Liens vers le calendrier
+  - name: Liens d’ajout au calendrier
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links/
     image: /assets/img/braze_icons/calendar-date.svg
-  - name: Meilleures pratiques
+  - name: Bonnes pratiques
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices/#high-ratings
     image: /assets/img/braze_icons/target-04.svg
-  - name: Capturer les utilisateurs absents
+  - name: Capturer les utilisateurs inactifs
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/
     image: /assets/img/braze_icons/users-01.svg
-  - name: "Installation d'une campagne d'attribution"
+  - name: Campagne d’attribution d’installation
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: "Sensibilisation aux fonctionnalités et nouvelle version de l'application"
+  - name: Connaissance des fonctionnalités et nouvelle version de l’application
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     image: /assets/img/braze_icons/phone-02.svg
   - name: Campagnes de reciblage
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/
     image: /assets/img/braze_icons/target-04.svg
-  - name: "Automatiser l'enregistrement de Zoom"
+  - name: "Automatiser l'inscription Zoom"
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/zoom
     image: /assets/img/braze_icons/line-chart-up-01.svg
 
