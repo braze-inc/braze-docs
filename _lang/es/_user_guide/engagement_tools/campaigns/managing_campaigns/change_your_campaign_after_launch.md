@@ -1,16 +1,16 @@
 ---
-nav_title: Editar tu campaña después del lanzamiento
-article_title: Editar tu campaña después del lanzamiento
+nav_title: Edita tu campaña después del lanzamiento
+article_title: Edita tu campaña después del lanzamiento
 page_order: 1
 tool: Campaigns
 page_type: reference
-description: "Este artículo de referencia ofrece un resumen del resultado de editar determinados aspectos de una campaña tras su lanzamiento."
+description: "Este artículo de referencia ofrece una visión general del resultado de editar determinados aspectos de una campaña tras su lanzamiento."
 
 ---
 
-# Editar tu campaña después del lanzamiento
+# Edita tu campaña después del lanzamiento
 
-> Este artículo ofrece un resumen del resultado de editar determinados aspectos de una campaña tras su lanzamiento.
+> Este artículo ofrece una visión general del resultado de editar ciertos aspectos de una campaña tras su lanzamiento.
 
 ## Detener tu campaña
 
@@ -22,7 +22,7 @@ Para detener una campaña, abre tu página **Detalles de campaña** y selecciona
 
 Para reiniciar tu campaña, selecciona **Reanudar**. Tu campaña seguirá enviando mensajes y pruebas A/B, pero los mensajes perdidos no se volverán a enviar ni a programar.
 
-## Campañas desencadenadas
+## Campañas activadas
 
 Todos los cambios en las campañas de entrega basada en acciones y en las campañas de entrega desencadenadas por la API entran en vigor inmediatamente para los envíos en adelante. 
 
@@ -30,7 +30,7 @@ Si estas campañas se han desencadenado pero aún no se han enviado (por ejemplo
 
 ### Campañas programadas
 
-Si necesitas hacer cambios en una campaña después de su lanzamiento, toma nota de los siguientes puntos cuando edites tu campaña para comprobar que tus cambios tienen los efectos deseados.
+Si necesita realizar cambios en una campaña después de su lanzamiento, tenga en cuenta los siguientes puntos cuando edite su campaña para comprobar que sus cambios tienen los efectos deseados.
 
 ### Contenido del mensaje
 
@@ -38,22 +38,22 @@ Cualquier cambio en el contenido de los mensajes (incluyendo títulos, cuerpos e
 
 ### Programación y audiencia
 
-Si modificas la hora de envío programada de tu campaña o su audiencia, esos cambios se reflejan inmediatamente en la campaña real.
+Si modifica la hora de envío programada de su campaña o su público, esos cambios se reflejarán inmediatamente en la campaña real.
 
 ### Tasa de envío
 
-Cuando utilizas un límite de velocidad de envío, Braze "programa" tus mensajes en franjas horarias de granularidad de minutos, así que si quieres cambiar la tasa de envío de mensajes, sigue el siguiente proceso para hacer cambios inmediatos.
+Cuando se utiliza un límite de velocidad de envío, Braze "programa" los mensajes en franjas horarias de minutos, por lo que si desea cambiar la velocidad de envío de mensajes, siga el siguiente proceso para realizar cambios inmediatos.
 
 ## Hacer cambios inmediatos
 
 Si necesitas que los cambios surtan efecto inmediatamente, haz lo siguiente:
 
-1. Detén la campaña de afectados.
+1. Detener la campaña de afectados.
 2. Duplica la campaña.
-3. Edita la campaña duplicada.
+3. Edite la campaña duplicada.
 
 {% alert important %}
-Esto restablece la elegibilidad de las personas que ya recibieron la campaña original, por lo que puede que tengas que filtrar la campaña duplicada para las personas que no recibieron la original.
+Esto restablece la elegibilidad de las personas que ya recibieron la campaña original, por lo que es posible que tenga que filtrar la campaña duplicada para las personas que no recibieron la original.
 {% endalert %}
 
 ## Guardar borradores de campañas activas {#campaign-drafts}
@@ -64,13 +64,13 @@ Los borradores son estupendos para hacer cambios a gran escala en campañas acti
 Una campaña sólo puede tener un borrador a la vez. Además, los análisis no están disponibles, ya que los cambios redactados aún no se han puesto en marcha.
 {% endalert %}
 
-Para crear un borrador, haz lo siguiente:
+Para crear un borrador, haz lo siguiente
 
 1. Ve a tu campaña activa.
 2. Haz tus cambios.
 3. Selecciona **Guardar como borrador**. Ten en cuenta que después de crear un borrador, no puedes editar la campaña activa hasta que lances o descartes tu borrador.
 
-Borrador de una campaña activa con una opción para ver la campaña activa.]({% image_buster /assets/img/campaign_draft.png %})
+![Un borrador de una campaña activa con una opción para ver la campaña activa.]({% image_buster /assets/img/campaign_draft.png %})
 
 Mientras editas el borrador, también puedes hacer referencia a la campaña activa en la cabecera del borrador de la campaña o en el pie de página de los análisis de la campaña. 
 
