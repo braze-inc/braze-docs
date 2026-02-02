@@ -3,7 +3,7 @@ nav_title: Brazeパイロット
 page_order: 10.5
 layout: dev_guide
 guide_top_header: "Brazeパイロット"
-guide_top_text: "Braze Pilotは、Brazeダッシュボードとシームレスに接続できるように設計されたモバイルアプリである。これにより、アプリにキャンペーンやキャンバスを立ち上げることができるようになり、Brazeのメッセージに自分の携帯電話で命を吹き込むことができる。Braze Pilotには、さまざまな業界を代表する架空のブランドのアプリシミュレーションライブラリーがあり、カスタマーエクスペリエンスから見たメッセージングを体験することができる。"
+guide_top_text: "Braze Pilotは、Brazeダッシュボードとシームレスに接続できるように設計されたモバイルアプリである。これにより、アプリにキャンペーンやキャンバスを立ち上げることができるようになり、Brazeのメッセージに自分のスマホで命を吹き込むことができる。Braze Pilotには、さまざまな業界を代表する架空のブランドのアプリシミュレーションライブラリーがあり、カスタマーエクスペリエンスから見たメッセージングを体験することができる。"
 description: "Brazeのダッシュボードから携帯電話にメッセージを送るための、Brazeのさまざまな使い方をチェックしよう。"
 
 guide_featured_title: "セクションの記事"
@@ -49,7 +49,7 @@ PantsLabyrinthはパンツを販売するeコマースアプリだ！PantsLabyri
 
 MovieCanonは、コンテンツ・エンゲージメントに関するBrazeの一般的なユースケースを説明するために完璧に設計されたストリーミング・サービスである。 
 
-![MovieCanonアプリで、さまざまなスリラー映画を観ることができる。]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
+![MovieCanonアプリでは、さまざまなスリラー映画を見ることができる。]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% endtabs %}
