@@ -184,7 +184,7 @@ Cada usuário pode ter até 250 cartões de conteúdo não expirados em seu feed
 
 ### Comportamento de envio
 
-Após o Braze enviar Cartões de Conteúdo, eles ficam em uma "caixa de entrada" prontos para serem entregues ao usuário (semelhante a e-mails). Depois que o Braze puxa conteúdo para o Cartão de Conteúdo no momento da exibição, o conteúdo não muda durante a vida útil do cartão. Isso inclui chamadas de API através de Conteúdo Conectado se os dados do endpoint mudarem. O Braze não atualiza esses dados. Você só pode parar de enviar novos cartões e remover cartões existentes dos feeds. Se você modificar uma campanha, apenas os cartões futuros refletirão a atualização.
+Após o Braze enviar Cartões de Conteúdo, eles ficam em uma "caixa de entrada" prontos para serem entregues ao usuário (semelhante a e-mails). Após o Braze puxar conteúdo para o Cartão de Conteúdo no momento da exibição, o conteúdo não muda durante a vida útil do cartão. Isso inclui chamadas de API através de Conteúdo Conectado se os dados do endpoint mudarem. O Braze não atualiza esses dados. Você só pode parar de enviar novos cartões e remover cartões existentes dos feeds. Se você modificar uma campanha, apenas os cartões futuros refletem a atualização.
 
 Se você precisar remover cartões antigos, primeiro deve parar a campanha. Para interromper uma campanha, abra sua campanha do Content Card e selecione **Stop Campaign (Interromper campanha)** Parar a campanha solicitará que você decida como lidar com os usuários que já receberam seu cartão. 
 
@@ -200,7 +200,7 @@ Você quer que seu conteúdo dure mais de 30 dias? Experimente [Banners]({{site.
 
 Alguns Cartões de Conteúdo são relevantes apenas até que um usuário realize alguma ação. Por exemplo, um cartão que incentiva os usuários a ativar sua conta não deve ser exibido depois que o usuário concluir essa tarefa de integração.
 
-Dentro de uma campanha ou mensagem do Canvas, você pode opcionalmente adicionar um **Evento de Remoção** para especificar quais eventos ou compras personalizados devem causar a remoção de cartões enviados anteriormente do feed desse usuário, acionados pelo SDK ou API REST.
+Dentro de uma campanha ou mensagem do Canvas, você pode opcionalmente adicionar um **Evento de Remoção** para especificar quais eventos ou compras personalizados devem fazer com que cartões enviados anteriormente sejam removidos do feed desse usuário, acionados pelo SDK ou API REST.
 
 O Braze remove cartões em atualizações subsequentes após processar o evento especificado.
 
@@ -229,12 +229,12 @@ Uma abordagem é arquivar a campanha e remover os cartões ativos do feed. Entã
 
 ##### Caso de uso
 
-Vamos supor que você configurou uma campanha para ser acionada pelo início de uma sessão, e ela tem re-elegibilidade definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, você arquivaria a campanha e removeria os cartões do feed. Em segundo lugar, você duplicaria a campanha e relançaria com o novo texto. Se o usuário tiver outra sessão, ele receberá imediatamente o novo cartão.
+Vamos supor que você configurou uma campanha para ser acionada pelo início de uma sessão, e ela tem a re-elegibilidade definida para 30 dias. Um usuário recebeu a campanha há dois dias e você deseja alterar a cópia. Primeiro, você arquivaria a campanha e removeria os cartões do feed. Em segundo lugar, você duplicaria a campanha e relançaria com o novo texto. Se o usuário tiver outra sessão, ele receberá imediatamente o novo cartão.
 
 ##### Impacto
 
 * **Relatórios:** Cada versão do cartão tem análises separadas.
-* **Beneficiários existentes:** Novos e antigos destinatários veem o cartão atualizado na próxima atualização do feed, se forem elegíveis.
+* **Beneficiários existentes:** Novos e existentes destinatários veem o cartão atualizado na próxima atualização do feed, se forem elegíveis.
 
 {% alert tip %}
 Recomendamos esta opção para mensagens onde você está mostrando o conteúdo mais recente no cartão (como banners da página inicial), as mudanças devem ser mostradas imediatamente, ou quando a re-eligibilidade está desativada.
