@@ -9,7 +9,7 @@ alias: /landing_pages/
 
 # Sobre landing pages
 
-> As páginas de destino do Braze são páginas da web independentes que podem impulsionar sua estratégia de aquisição e engajamento de usuários.
+> As páginas de destino do Braze são páginas da web autônomas que podem impulsionar sua estratégia de aquisição e engajamento de usuários.
 
 Use páginas de destino para aumentar seu público, capturar dados de usuários, promover ofertas especiais e apoiar campanhas multicanal.
 
