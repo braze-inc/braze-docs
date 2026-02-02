@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Connecting LiveRamp, Snowflake, and Braze
+# LiveRamp, Snowflake, Braze 연결하기
 
 > Learn how to connect LiveRamp, Snowflake, and Braze, so you can create highly personalized and relevant marketing campaigns by reducing the time to insights, breaking down data silos, and optimizing customer engagement. This integration enhances data-driven marketing by providing actionable person-based insights and consolidating consumer touchpoints for better audience segmentation and timely campaigns. It also leverages benchmarks powered by Snowflake to help refine your marketing strategies against industry standards.
 
@@ -27,14 +27,14 @@ Snowflake's [Secure Data Shares](https://docs.snowflake.com/en/user-guide/data-s
 | Prerequisite       | Description                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Snowflake Account | You need a Snowflake account with admin-level permissions.                                                                                                                                      |
-| LiveRamp Account  | Reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com) to discuss the required LiveRamp applications within Snowflake.                              |
+| LiveRamp Account  | [Snowflake](mailto:snowflake@liveramp.com) 내에서 필요한 LiveRamp 애플리케이션에 대해 논의하려면 LiveRamp 계정 팀 또는 [liveramp.com 으로 문의하세요.](mailto:snowflake@liveramp.com)                               |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Setting up the integration
 
 ### Step 1: Request a data share from Braze
 
-First, reach out to your Braze account manager or customer success manager to purchase a Snowflake Data Share Connector for your Braze account. When you request a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. Once the share is visible in your instance create a database from the share so you can see and query the tables.
+먼저, Braze 계정 매니저 또는 고객 성공 매니저에게 연락하여 Braze 계정에 대한 Snowflake 데이터 공유 커넥터를 구매하세요. When you request a data share, Braze will provision the share from the workspace(s) that the share was purchased. After the share is provisioned, all data is immediately accessible from within your Snowflake instance in the form of an incoming data share. Once the share is visible in your instance create a database from the share so you can see and query the tables.
 
 For a full walkthrough, see [Snowflake integration guide with Braze]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/).
 
@@ -112,12 +112,12 @@ $output_table_name
 
 ### Next steps
 
-With your data now pseudonymized to your dedicated encoding of RampID, you have the ability to share the RampID-based tables to LiveRamp’s Managed Activation Application for streamlined fulfillment to your key advertising platform partners. The Activation Application includes a business-user friendly interface for additional segmentation and selection/configuration of downstream destination partners. For more details on the application please reach out to your LiveRamp account team or [snowflake@liveramp.com](mailto:snowflake@liveramp.com).
+With your data now pseudonymized to your dedicated encoding of RampID, you have the ability to share the RampID-based tables to LiveRamp’s Managed Activation Application for streamlined fulfillment to your key advertising platform partners. The Activation Application includes a business-user friendly interface for additional segmentation and selection/configuration of downstream destination partners. 신청에 대한 자세한 내용은 LiveRamp 계정 팀 또는 [snowflake@liveramp.com](mailto:snowflake@liveramp.com) 로 문의하시기 바랍니다.
 
-## Troubleshooting
+## 문제 해결
 
 {% alert note %}
-If you have more specific issues or questions, reach out to [martech@liveramp.com](mailto:martech@liveramp.com).
+보다 구체적인 문제나 질문이 있는 경우 [martech@liveramp.com](mailto:martech@liveramp.com) 로 문의하세요.
 {% endalert %}
 
 ### Snowflake Regions
@@ -128,7 +128,7 @@ Currently, this application is only available for the following US-based regions
   - aws-us-west-2: FAA28932
   - azure-east-us-2: BL60425
 
-### Privacy & Column Values
+### 개인 정보 & 열 값
 
 The process evaluates the combination of all the column values on a per row basis for unique values. If a particular combination of column values occurs 3 or fewer times, the rows containing those column values will not be matchable and will not be returned in the output table. Likewise, to ensure privacy, the LiveRamp service assesses the uniqueness of combinations of column values, ensuring that if over 5% of the file's rows become unmatchable due to rare combinations, the job will fail.
 
