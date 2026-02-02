@@ -91,11 +91,15 @@ Después de sincronizarte con Braze, los siguientes atributos de consentimiento 
 - `$google_ad_user_data`
 - `$google_ad_personalization`
 
-En cualquier Canvas en el que te dirijas a usuarios finales del EEE, Reino Unido y Suiza utilizando Google Audience Sync para añadir usuarios a una audiencia, tienes que excluir a estos usuarios siempre que ambos atributos de consentimiento tengan cualquier valor que no sea `true`. Esto se puede conseguir segmentando a estos usuarios cuando los valores de consentimiento están configurados en `true`. Esto también garantiza la sincronización de los análisis más precisos de los usuarios, ya que sabemos que Google rechazará a estos usuarios de las audiencias. Ten en cuenta que si utilizas Google Audience Sync para eliminar usuarios de una audiencia, los atributos de consentimiento no son necesarios.
+En cualquier Canvas en el que te dirijas a usuarios finales del EEE, Reino Unido y Suiza utilizando Google Audience Sync para añadir usuarios a una audiencia, debes excluir a estos usuarios siempre que ambos atributos de consentimiento tengan cualquier valor que no sea `true`. Puedes hacerlo segmentando a estos usuarios cuando los valores de consentimiento estén configurados en `true`. Esto también garantiza la sincronización de los análisis más precisos de los usuarios, porque sabemos que Google rechazará a estos usuarios de las audiencias. Ten en cuenta que si utilizas Google Audience Sync para eliminar usuarios de una audiencia, los atributos de consentimiento no son necesarios.
 
 ## Integración
 
 ### Paso 1: Conectar la cuenta de Google
+
+{% alert important %}
+Debes tener el [ permiso "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) para conectar Google Ads a tu cuenta de Braze.
+{% endalert %}
 
 Para empezar, vaya a **Integraciones de socios** > **Socios tecnológicos** > **Anuncios de Google** y seleccione **Conectar anuncios de Google**. Se te pedirá mediante un modal que selecciones el correo electrónico asociado a tu cuenta de Google Ads y, a continuación, que concedas a Braze acceso a tu cuenta de Google Ads.
 
@@ -111,27 +115,27 @@ Si piensas exportar IDFA de iOS o ID de publicidad de Google en tu sincronizaci�
 ![La página actualizada de la tecnología de Google Ads muestra las cuentas de anuncios conectadas, lo que te permite volver a sincronizar cuentas y añadir ID de publicidad para móviles.]({% image_buster /assets/img/google_sync/google_sync5.png %}){: style="max-width:75%;"}
 <br><br>
 
-Si tienes varias aplicaciones en un mismo espacio de trabajo, puedes introducir cualquiera de los ID de tus aplicaciones en la configuración, ya que los ID de los anuncios móviles de tus usuarios serán los mismos en las distintas aplicaciones. Esto se debe a que tanto el GAID de Android como el IDFA de iOS son identificadores universales de anuncios en el dispositivo y no son específicos de una aplicación. Para sincronizar los ID de anuncios para móviles de los usuarios de una aplicación específica, puedes utilizar filtros de segmento ("Última aplicación específica utilizada" o Versión más reciente de la aplicación") para dirigirte a estos usuarios.
+Si tienes varias aplicaciones en un mismo espacio de trabajo, puedes introducir cualquiera de los ID de tus aplicaciones en la configuración, porque los ID de los anuncios para móviles de tus usuarios serán los mismos en las distintas aplicaciones. Esto se debe a que tanto el GAID de Android como el IDFA de iOS son identificadores universales de anuncios en el dispositivo y no son específicos de una aplicación. Para sincronizar los ID de anuncios para móviles de los usuarios de una aplicación específica, puedes utilizar filtros de segmento ("Última aplicación específica utilizada" o Versión más reciente de la aplicación") para dirigirte a estos usuarios.
 
-### Paso 2: Añadir un paso de Google Audience en Canvas Flow
+### Paso 2: Añadir un paso en Canvas para Google Audience
 
 Añade un componente en tu Canvas y, a continuación, selecciona **Sincronizar audiencia**.
 
-![El menú para seleccionar un componente Canvas en el editor.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![El paso de Sincronización con la audiencia añadido al recorrido del usuario.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
+![El menú para seleccionar un componente Canvas en el editor.]({% image_buster /assets/img/audience_sync/audience_sync3.png %}){: style="max-width:35%;"} ![El paso Sincronización de la audiencia se ha añadido al recorrido del usuario.]({% image_buster /assets/img/audience_sync/audience_sync5.png %}){: style="max-width:28%;"}
 
 ### Paso 3: Configuración de la sincronización
 
 1. Selecciona **Audiencia personalizada** para abrir el editor de componentes.
 2. Selecciona **Google** como socio de Sincronización de Audiencias.
 
-![La configuración del paso Sincronización de la audiencia con la opción de seleccionar un socio para iniciar la sincronización.]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
+![La configuración del paso Sincronizar audiencia con la opción de seleccionar un socio para iniciar la sincronización.]({% image_buster /assets/img/audience_sync/audience_sync4.png %}){: style="max-width:80%;"}
 
 {: start="3"}
 3\. Seleccione la cuenta de anuncios de Google deseada.
 4\. En el desplegable **Elegir una audiencia nueva o existente**, introduce el nombre de una audiencia nueva o existente. 
 
 {% tabs %}
-{% tab Crear una nueva audiencia %}
+{% tab Create a New Audience %}
 
 1. Introduce un nombre para la nueva audiencia personalizada.
 2. Selecciona **Añadir usuarios a la audiencia**.
@@ -143,11 +147,11 @@ Añade un componente en tu Canvas y, a continuación, selecciona **Sincronizar a
 {: start="4"}
 4\. A continuación, guarda tu audiencia seleccionando el botón **Crear audiencia** en la parte inferior del editor de pasos.
 
-![Vista ampliada del componente Canvas de audiencia personalizada. Aquí, se selecciona la cuenta de publicidad deseada, se crea una nueva audiencia y se selecciona la casilla "información de contacto del cliente".]({% image_buster /assets/img/audience_sync/g_sync.png %})
+![Vista ampliada del componente Canvas de audiencia personalizada. Aquí, se selecciona la cuenta de publicidad deseada, se crea una nueva audiencia y se marca la casilla "información de contacto del cliente".]({% image_buster /assets/img/audience_sync/g_sync.png %})
 
 Los usuarios recibirán una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si surgen errores durante este proceso. Los usuarios pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador. 
 
-![Una alerta que aparece después de crear un nuevo público en el componente Canvas.]({% image_buster /assets/img/audience_sync/g_sync3.png %})
+![Una alerta que aparece después de crear una nueva audiencia en el componente Canvas.]({% image_buster /assets/img/audience_sync/g_sync3.png %})
 
 Cuando lances un Canvas con una nueva audiencia, Braze creará una nueva audiencia personalizada al lanzar el Canvas y, posteriormente, sincronizará a los usuarios casi en tiempo real cuando entren en el paso en Canvas de Google Audience. 
 
@@ -155,7 +159,7 @@ Cuando lances un Canvas con una nueva audiencia, Braze creará una nueva audienc
 Dados los requisitos de coincidencia de clientes de Google, no puede tener información de contacto de clientes e ID de anunciantes móviles en las mismas listas de clientes. A continuación, Google Customer Match utilizará esta información para determinar quién es segmentable en la Búsqueda de Google, Google Display, YouTube y Gmail. Para más detalles sobre los requisitos de Google Customer Match, consulta su [documentación](https://support.google.com/google-ads/answer/7474166?hl=en&ref_topic=6296507).
 {% endalert %}
 {% endtab %}
-{% tab Sincronización con un público existente %}
+{% tab Sync with an Existing Audience %}
 
 Braze también ofrece la posibilidad de añadir o eliminar usuarios de las listas de clientes de Google existentes para garantizar que estas audiencias estén actualizadas. Para sincronizar con una audiencia existente:
 
@@ -164,7 +168,7 @@ Braze también ofrece la posibilidad de añadir o eliminar usuarios de las lista
 3. Braze añadirá o eliminará usuarios casi en tiempo real a medida que entren en el paso de Google Audience. 
 4. Después de configurar el paso Google Audience, selecciona **Hecho**. Tu paso de Google Audience incluirá detalles sobre la nueva audiencia.
 
-![Vista ampliada del componente Canvas de audiencia personalizada. Aquí se seleccionan la cuenta de anuncios deseada y el público existente, así como el botón de opción "Añadir usuario al público".]({% image_buster /assets/img/audience_sync/g_sync2.png %})
+![Vista ampliada del componente Canvas de audiencia personalizada. Aquí se seleccionan la cuenta de anuncios deseada y la audiencia existente, así como el botón de opción "Añadir usuario a la audiencia".]({% image_buster /assets/img/audience_sync/g_sync2.png %})
 
 {% endtab %}
 {% endtabs %}
