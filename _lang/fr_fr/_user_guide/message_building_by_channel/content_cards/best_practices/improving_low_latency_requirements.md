@@ -1,13 +1,13 @@
 ---
 nav_title: Améliorer la faible latence
-article_title: Amélioration de la faible latence pour les cartes de contenu de type bannière
+article_title: Améliorer la faible latence pour les cartes de contenu de type bannière
 page_order: 10
 description: "Cet article traite des stratégies permettant de répondre aux exigences de faible latence avec les cartes de contenu."
 channel:
   - content cards
 ---
 
-# Amélioration de la latence pour les cartes de contenu de type bannière
+# Amélioration du temps de latence pour les cartes de contenu de type bannière
 
 > Si vous rencontrez des problèmes de latence dans la mise en œuvre de vos cartes de contenu pour des cas d'utilisation critiques, tels que les bannières de page d'accueil, consultez cette page pour obtenir des stratégies et des conseils qui vous aideront à résoudre le problème et à accélérer le rendu.
 
