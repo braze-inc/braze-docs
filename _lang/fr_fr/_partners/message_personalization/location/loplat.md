@@ -55,7 +55,7 @@ Créez une nouvelle clé API dans le tableau de bord de Braze. Copiez la clé AP
 
 ![]({% image_buster /assets/img/loplat/loplat_api_triggered_delivery.png %})
 
-#### livraison par événement
+#### Livraison par événement
 
 Avec l'intégration, vous pouvez appliquer des conditions d'emplacement en envoyant des données de géorepérage, de région, de nom de marque ou de nom de magasin. De plus, vous pouvez ajouter des segments ou attribuer une conversion avec l'événement personnalisé que vous avez créé.
 1. Créez une campagne loplat X en suivant les instructions dans le [guide de l'utilisateur loplat X](https://loplatx-user-guide.notion.site/Campaign-integration-b92f8120cbe74d19a3a5f593657b4e8e#f898aa55ef74440aba76dd9a0e3e7598).
