@@ -6,7 +6,7 @@ guide_top_header: "Braze Pilot"
 guide_top_text: "Braze Pilot est une application mobile conçue pour se connecter de façon fluide/sans heurts à votre tableau de bord Braze. Vous pouvez ainsi lancer des campagnes et des toiles dans l'application, donnant vie aux messages de Braze sur votre propre téléphone. Braze Pilot comprend une bibliothèque de simulations d'applications pour des marques fictives représentant différents secteurs d'activité, ce qui vous permet d'expérimenter ce que pourrait être votre envoi de messages du point de vue de vos clients."
 description: "Découvrez les différentes façons d'utiliser Braze pour envoyer des messages depuis le tableau de bord de Braze vers votre téléphone."
 
-guide_featured_title: "Articles de section"
+guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Démarrer avec Braze Pilot
     link: /docs/user_guide/getting_started/braze_pilot/getting_started/
@@ -31,16 +31,16 @@ Le cœur de Braze Pilot est sa bibliothèque de simulations d'applications. Chaq
 
 Steppington est une appli de fitness avec des séances d'entraînement, des objectifs d'exercice et un service premium Steppington+. Il offre plusieurs endroits pour démontrer les [cartes de contenu]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards), une section qui peut être révélée avec des [drapeaux de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags), et une bibliothèque robuste d'enregistrement d'événements personnalisés qui permettent d'illustrer de nombreux parcours clients pour ce secteur.
 
-La page d'accueil de Steppington avec des icônes pour l'entraînement au marathon, le yoga, le cyclisme et les poids.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
+![La page d'accueil de Steppington avec des icônes pour l'entraînement au marathon, le yoga, le cyclisme et les poids.]({% image_buster /assets/img/braze_pilot/steppington_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab eCommerce %}
 
-### PantalonLabyrinthe
+### PantsLabyrinth
 
 PantsLabyrinth est une application de commerce électronique qui vend (vous l'avez deviné) des pantalons ! L'application PantsLabyrinth comprend une expérience sur l'application d'un panier d'achat complet, une fonctionnalité optionnelle de liste de souhaits qui peut être activée avec un drapeau de fonctionnalité, et de nombreuses occasions de plaisanteries sournoises avec des amis du Royaume-Uni.
 
-Une page produit pour PantsLabyrinth avec des options pour ajouter des jeans au panier.]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
+![Une page produit pour PantsLabyrinth avec des options pour ajouter des jeans au panier.]({% image_buster /assets/img/braze_pilot/pantslabyrinth_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% tab Streaming %}
@@ -49,7 +49,7 @@ Une page produit pour PantsLabyrinth avec des options pour ajouter des jeans au 
 
 MovieCanon est un service de streaming parfaitement conçu pour illustrer les cas d'utilisation courants de Braze autour de l'engagement de contenu. 
 
-L'application MovieCanon propose différents films à suspense.]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
+![L'application MovieCanon propose différents films à suspense.]({% image_buster /assets/img/braze_pilot/moviecanon_app.png %}){:style="max-width:50%"}
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +58,7 @@ L'application MovieCanon propose différents films à suspense.]({% image_buster
 
 Le SDK de Braze est un ensemble de codes qui recueille les données de vos utilisateurs une fois intégré à votre app ou site web. Lorsque vous connectez Pilot à votre tableau de bord, vous initialisez cette connexion entre l'application Pilot sur votre téléphone et le SDK de Braze, et vous établissez une connexion unique avec votre instance Braze en donnant à Pilot votre identifiant de clé API pour votre tableau de bord.
 
-La première étape de la mise en place de Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![La première étape de la mise en place de Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
 Une fois que Pilot se connecte à votre tableau de bord de Braze, le SDK de Braze fonctionne dans l'application comme il le fera une fois que vous aurez intégré le SDK à votre propre application ou site web. Cela signifie que Braze va :
 
@@ -68,7 +68,7 @@ Une fois que Pilot se connecte à votre tableau de bord de Braze, le SDK de Braz
 
 Pour en savoir plus sur le SDK de Braze, consultez la rubrique [Intégration]({{site.baseurl}}/user_guide/getting_started/integration).
 
-La pile d'engagement client de Braze, qui comprend des intégrations, des API, des SDK pour l'ingestion de données, la classification, l'orchestration, la personnalisation et l'action avec des canaux de messagerie pour une boucle de rétroaction interactive avec vos clients.]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
+![La pile d'engagement client de Braze, qui comprend des intégrations, des API, des SDK pour l'ingestion de données, la classification, l'orchestration, la personnalisation et l'action avec des canaux de messagerie pour une boucle de rétroaction interactive avec vos clients.]({% image_buster /assets/img/braze_pilot/braze_sdk_diagram.png %}){:style="max-width:70%"}
 
 ## Profils utilisateurs à Braze
 
@@ -82,7 +82,7 @@ Cet état de connexion conseille l'expérience sur l'application d'un invité de
 
 Cet état de connexion signifie que Braze reconnaît votre profil utilisateur grâce à un identifiant unique qui vous est attribué, appelé identifiant externe. Vous pouvez rechercher cet identifiant externe dans la page **Recherche d'utilisateur** de votre tableau de bord pour localiser votre profil utilisateur, qui stockera tous les attributs utilisateur et les événements enregistrés à partir de Pilot en fonction de votre activité dans l'appli.
 
-Exemple de profil utilisateur Braze pour l'utilisateur "torchie-208117".]({% image_buster /assets/img/braze_pilot/user_profile.png %})
+![Exemple de profil utilisateur Braze pour l'utilisateur "torchie-208117".]({% image_buster /assets/img/braze_pilot/user_profile.png %})
 
 ### Type de connexion
 
@@ -127,7 +127,7 @@ Si vous enregistrez des données en tant qu'utilisateur identifié, une icône d
 {% endtab %}
 {% endtabs %}
 
-## Campagnes et toiles
+## Campagnes et canvas
 
 Les campagnes et les canevas vous permettent d'envoyer des messages à vos utilisateurs. 
 
@@ -138,4 +138,4 @@ Les campagnes et les canevas vous permettent d'envoyer des messages à vos utili
 
 Braze Currents prend actuellement en charge les [messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about), qui apparaissent dans votre application, délivrant des messages opportuns pendant que l'utilisateur est activement engagé.
 
-Un message in-app dans l'application MovieCanon "Vous appréciez MovieCanon ? Parrainez vos amis" avec une option permettant d'entrer votre e-mail pour envoyer une recommandation.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}
+![Un message in-app dans l'application MovieCanon "Vous appréciez MovieCanon ? Parrainez vos amis" avec une option permettant d'entrer votre e-mail pour envoyer une recommandation.]({% image_buster /assets/img/braze_pilot/moviecanon_iam.png %}){:style="max-width:40%"}
