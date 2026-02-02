@@ -32,7 +32,7 @@ Wenn Sie einen **S3-Bucket von Braze** verwenden, kann dies aus folgenden Gründ
 
 ### 'ExpiredToken'
 
-Dies geschieht, wenn die E-Mail vor so langer Zeit gesendet wurde, dass die S3-Datei abgelaufen ist. Wenn nicht anders angegeben, werden die Dateien nach vier Stunden gelöscht. Führen Sie den Export erneut aus und laden Sie ihn herunter, bevor die Datei abläuft.
+Das passiert, wenn die E-Mail vor so langer Zeit gesendet wurde, dass die S3-Datei abgelaufen ist. Wenn nicht anders angegeben, werden die Dateien nach vier Stunden gelöscht. Führen Sie den Export erneut aus und laden Sie ihn herunter, bevor die Datei abläuft.
 
 Eine weitere Ursache könnte sein, dass Braze keinen Zugriff mehr auf den S3-Bucket hat, in den Sie die Daten herunterladen. Vergewissern Sie sich mit dieser Anleitung, dass Sie Ihre S3-Zugangsdaten aktualisiert haben.
 
