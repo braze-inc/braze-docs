@@ -10,14 +10,14 @@ page_order: 4
 > Utiliza la personalización Liquid en las páginas de destino para adaptar dinámicamente el contenido con los datos del perfil de usuario. Por ejemplo, puedes personalizar los titulares en función de distintos atributos de los usuarios sin tener que gestionar varias páginas de destino estáticas.
 
 {% alert important %}
-La personalización Liquid para páginas de destino sólo está disponible en el nivel Pro de páginas de destino. Actualmente, el [contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) y los [códigos promocionales]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) no son compatibles con la personalización de Liquid en las páginas de destino.
+La personalización Liquid para páginas de destino sólo está disponible en el nivel Pro de páginas de destino. Actualmente, el [contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), el [multilenguaje]({{site.baseurl}}/user_guide/administrative/app_settings/multi_language_settings) y [los códigos promocionales]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes) no son compatibles con la personalización de Liquid en las páginas de destino.
 {% endalert %}
 
 ## Introducir Liquid
 
 En el editor de arrastrar y soltar, puedes insertar la personalización de Liquid tanto en el editor como en la configuración de la página o del bloque en el panel derecho. Para obtener instrucciones sobre la implantación de Liquid, consulta nuestra [documentación]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1) dedicada [a Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid-1).
 
-\![Editor de páginas de destino con personalización Liquid añadida.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
+![Se ha añadido un editor de páginas de destino con personalización Liquid.]({% image_buster /assets/img/landing_pages/lp_liquid_.png %})
 
 ## Vista previa y pruebas
 
@@ -40,6 +40,13 @@ Para evitar que tu página supere los límites de tamaño o experimente tiempos 
 
 - No realiza bucles continuos ni hace referencia a grandes conjuntos de datos.
 - No depende de una amplia lógica condicional o matemática dentro del bloque Liquid.
+
+### Utiliza Liquid para usuarios identificados y anónimos 
+
+Liquid puede personalizar la experiencia de la página de inicio tanto para los visitantes identificados como para los anónimos.
+
+- **Usuarios identificados:** Enlaza a la página [de]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags) destino desde un mensaje Braze e incluye la [etiqueta de Liquid de la página de destino]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users/#using-landing-page-liquid-tags). Esto asocia al usuario con su perfil de Braze y personaliza la experiencia de la página.
+- **Visitantes anónimos:** Utiliza Liquid para contenido contextual no basado en perfiles, como un número aleatorio o una felicitación por la hora del día.
 
 ## Páginas alternativas
 
