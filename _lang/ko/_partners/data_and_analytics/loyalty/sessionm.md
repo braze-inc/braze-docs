@@ -22,9 +22,9 @@ search_tag: Partner
 | SessionM | A SessionM Core REST endpoint | Your endpoint will depend on the SessionM URL of your instance. This can be created in the SessionM dashboard from **Digital Properties**. |
 | SessionM | A SessionM Core REST API key | The SessionM API key associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. |
 | SessionM | A SessionM Core REST API secret | The SessionM API secret associated with your instance and the Braze integration. This key can be used for all core based calls including tags. This can be created in the SessionM dashboard from **Digital Properties**. |
-| SessionM | A SessionM Connect REST endpoint | Your endpoint will depend on the SessionM URL of your instance. Please reach out to your SessionM technical account manager or Delivery team to provide. |
-| SessionM | A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. This authentication string can be used for all connect based calls including get_user_offers. Please reach out to your SessionM technical account manager or Delivery team to provide. |
-| SessionM | A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. Reach out to your SessionM technical account manager or Delivery team. |
+| SessionM | A SessionM Connect REST endpoint | Your endpoint will depend on the SessionM URL of your instance. 세션엠 기술 계정 매니저 또는 전달 팀에 문의하세요. |
+| SessionM | A SessionM Connect REST Authorization string | The SessionM Connect Basic Authorization string associated with your instance. 이 인증 문자열은 다음을 포함한 모든 연결 기반 호출에 사용할 수 있습니다 get_user_offers. 세션엠 기술 계정 매니저 또는 전달 팀에 문의하여 제공하세요. |
+| SessionM | A SessionM Connect REST Retailer ID | A unique guid identification to the specific customer associated with your instance. 세션엠 기술 계정 매니저 또는 전달 팀에 문의하세요. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
@@ -47,15 +47,15 @@ The following use cases showcase a few ways to leverage the SessionM and Braze i
 
 In Braze, create a segment of users to target with SessionM promotions and offers. 
 
-![Segment Builder with the "Custom Attributes" filter selected.]({% image_buster /assets/img/sessionm/CreateSegment.png %})
+!["커스텀 속성" 필터가 선택된 세그먼트 빌더.]({% image_buster /assets/img/sessionm/CreateSegment.png %})
 
-### Step 2: Import Braze segments into SessionM
+### 2단계: Import Braze segments into SessionM
 
 #### Option 1: Export to the SessionM Tag endpoint (recommended)
 
 First, create a webhook campaign in Braze and set the webhook URL to {% raw %}`{{endpoint_core}}/priv/v1/apps/{{appkey_core}}/users/{{${user_id}}}/tags`{% endraw %}. Use Liquid to define the `user_id` within the URL. 
 
-Using a raw text **Request Body**, compose the webhook body to include the desired tags to be added to the user profile in SessionM and the desired time to live. An example is:
+Using a raw text **Request Body**, compose the webhook body to include the desired tags to be added to the user profile in SessionM and the desired time to live. 예를 들면 다음과 같습니다:
 
  ```
  {
@@ -72,7 +72,7 @@ In the **Settings** tab, add the key-value pairs for each request header field:
     \- Create a key `Content-Type` with a corresponding value `application/json`
     \- Create a key `Authorization` with a corresponding value `Basic YOUR-ENCODED-STRING-KEY`. Contact your SessionM team for the encoded string key for your endpoint. 
 
-![Webhook settings.]({% image_buster /assets/img/sessionm/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
+![웹훅 설정.]({% image_buster /assets/img/sessionm/SessionMWebhookSettings.png %}){: style="max-width:85%;"}
 
 Schedule your delivery, set your **Target Audiences** to target the segment [you created previously](#step-1-create-a-segment-in-braze), then launch your campaign.
 
@@ -190,7 +190,7 @@ After a request is made to the endpoint, SessionM returns the complete list of o
 Using Liquid dot notation, this can be populated into the message. For example, to personalize the message with the resulting `offer_id`, you could leverage the return payload by using {% raw %}`{{wallet.payload.available_points}`{% endraw %}, which returns `100`.
 
 {% alert note %}
-This is an individual API. If you intend to send a batch of over 500 users, reach out to your SessionM account team to inquire about how to incorporate bulk data in the integration.
+This is an individual API. 500명 이상의 사용자를 일괄 전송하려는 경우 SessionM 계정 팀에 문의하여 통합에 일괄 데이터를 통합하는 방법에 대해 문의하세요.
 {% endalert %}
 
 ## Setting up triggered messaging
@@ -225,11 +225,11 @@ Additional fields are sent to Braze as `trigger_properties` for personalizing th
 
 Create an API-triggered campaign or Canvas in Braze to be triggered by SessionM. If additional fields have been configured, such as `offer_id` or `offer title`, use Liquid (such as {% raw %}`{{api_trigger_properties.${offer_id}}}`{% endraw %}) to add the personalized fields into your messaging.
 
-![API trigger properties.]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
+![API 트리거 속성.]({% image_buster /assets/img/sessionm/apiTriggerProperties.png %})
 
 In the **Schedule Delivery** tab, note down the campaign or Canvas ID as this will be added to SessionM campaign **Advanced Settings**.
 
-![API triggered campaign.]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
+![API 트리거 캠페인.]({% image_buster /assets/img/sessionm/apiTriggerCampaign.png %})
 
 Finalize your campaign or Canvas details, and select **Launch**. 
 
@@ -237,7 +237,7 @@ Finalize your campaign or Canvas details, and select **Launch**.
 
 Next, create your campaign in SessionM.
 
-![SessionM Campaign Creation.]({% image_buster /assets/img/sessionm/SessionMCampaignCreation.png %})
+![세션엠 캠페인 생성.]({% image_buster /assets/img/sessionm/SessionMCampaignCreation.png %})
 
 Update the advanced settings in the SessionM campaign to include the following JSON payload containing the `braze_campaign_id` or `braze_canvas_id`.
 
@@ -250,12 +250,12 @@ Update the advanced settings in the SessionM campaign to include the following J
 ```
 {% endraw %}
 
-![SessionM advanced settings.]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
+![SessionM 고급 설정.]({% image_buster /assets/img/sessionm/SessionMAdvancedSettings.png %}){: style="max-width:85%;"}
 
 Create a message trigger on the desired schedule or behavior. Then, select **Braze Messaging Variant** as the **Messaging Variant** in the **External Message** menu to use the template.
 
-![SessionM external message.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
+![세션M 외부 메시지.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
 
 This template pulls the relevant static and dynamic attributes and call out to the Braze endpoint.
 
-![SessionM Braze template.]({% image_buster /assets/img/sessionm/SessionMBrazeTemplate.png %}){: style="max-width:85%;"}
+![SessionM Braze 템플릿.]({% image_buster /assets/img/sessionm/SessionMBrazeTemplate.png %}){: style="max-width:85%;"}
