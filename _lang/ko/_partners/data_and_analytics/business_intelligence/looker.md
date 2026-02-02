@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Looker
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/looker-integration-with-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Looker
 
 > [Looker](https://looker.com/), a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 
@@ -70,9 +70,9 @@ Only existing users will be flagged. You cannot use pivoted Looks when flagging 
 
 Set up a Braze Looker Action with your Braze REST API key and REST endpoint.
 
-![The Looker Braze configuration page. Here, you can find fields for Braze API key and Braze REST API endpoint.]({% image_buster /assets/img/braze-looker-action.png %})
+![Looker Braze 구성 페이지. 여기에서 Braze API 키와 Braze REST API 엔드포인트에 대한 필드를 찾을 수 있습니다.]({% image_buster /assets/img/braze-looker-action.png %})
 
-#### Step 2: Set up Looker Develop
+#### 2단계: Set up Looker Develop
 
 Within Looker Develop, select the appropriate views. Add `braze_id` to the dimensions tag and commit the changes.
 This `braze_id` tag is use to determine which field is the unique key.
@@ -143,9 +143,9 @@ Authorization: Bearer [API_KEY]
 
 ### Segment users in Braze {#segment-users}
 
-In Braze, to create a segment of these flagged users, navigate to **Segments** under **Engagement**, name your segment, and select **Looker_Export** as the filter. Next, use the "includes value" option and provide the custom attribute flag you assigned in Looker.
+Braze에서 이러한 플래그가 지정된 사용자의 세그먼트를 만들려면 **참여** 아래의 **세그먼트로** 이동하여 세그먼트의 이름을 지정하고 필터로 **Looker_Export** 를 필터로 선택합니다. Next, use the "includes value" option and provide the custom attribute flag you assigned in Looker.
 
-![In the Braze segment builder, the filter "looker_export" is set to "includes_value" and "Looker".]({% image_buster /assets/img/braze_segments.png %})
+![Braze 세그먼트 빌더에서 "looker_export" 필터는 "includes_value" 및 "Looker"로 설정됩니다.]({% image_buster /assets/img/braze_segments.png %})
 
 Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
 
