@@ -16,7 +16,7 @@ tool:
 
 Um Ihre globalen Stileinstellungen zu bearbeiten, gehen Sie zu **Einstellungen** > **E-Mail-Voreinstellungen** > **Drag-and-Drop-E-Mail-Voreinstellungen**. Nachdem Sie die Stile im Drag-and-Drop-Editor für E-Mails bearbeitet haben, wählen Sie **Speichern**. Um Ihre E-Mail Kampagnen und Canvase weiter anzupassen, sehen Sie sich an, wie Sie [Editor-Blöcke per Drag-and-Drop]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks) einbinden können.
 
-\![Abschnitt E-Mail Globale Stil-Einstellungen im Tab Einstellungen des Drag-and-Drop-Editors.]({% image_buster /assets/img_archive/dnd_global_style_settings.png %})
+![Abschnitt Globale E-Mail-Stil-Einstellungen auf dem Tab Einstellungen des Drag-and-Drop-Editors.]({% image_buster /assets/img_archive/dnd_global_style_settings.png %})
 
 {% alert note %}
 Aktualisierungen der globalen Stileinstellungen werden für alle zukünftigen E-Mail-Kampagnen und Canvases übernommen.
@@ -26,7 +26,7 @@ Aktualisierungen der globalen Stileinstellungen werden für alle zukünftigen E-
 
 Für **Basic Styling** können Sie Ihre Standardfarben für den Hintergrund von E-Mails und Inhalten für Ihre E-Mail-Kampagnen und Canvases festlegen. Sie können auch eine Standardschriftart auswählen, eine benutzerdefinierte Schriftart hinzufügen und Linkfarben bearbeiten.
 
-\![Grundlegende Styling-Optionen, die Optionen zum Bearbeiten der Hintergrundfarben für E-Mails und Inhalte, des Standard-Schriftnamens und der Standard-Linkfarbe umfassen.]({% image_buster /assets/img_archive/dnd_basic_styling.png %}) 
+![Standard-Stil-Optionen, die Optionen zur Bearbeitung der Hintergrundfarben für E-Mails und Inhalte, des Standard-Schriftnamens und der Standard-Linkfarbe umfassen.]({% image_buster /assets/img_archive/dnd_basic_styling.png %}) 
 
 ## Eigene Schriftart
 
@@ -63,15 +63,15 @@ Um andere angepasste Schriftarten in Ihren Kampagnen zu verwenden, können Sie e
 
 Fallback-Schriften werden für den Titel, die Kopfzeile und den Textkörper verwendet, wenn Ihre Standardschriftart vom Posteingangsanbieter oder dem Betriebssystem nicht unterstützt wird. Standardmäßig stellt Braze automatisch Arial als Ausweichschriftart ein, wenn die globalen Stileinstellungen gespeichert werden. Sie haben auch die Möglichkeit, Serif oder Sans Serif als Optionen für Ihre Standardschriftart-Familie hinzuzufügen.
 
-\![Ein Beispiel für "Arial" als Fallback-Schriftart mit "Sans-serif" als Schriftfamilie.]({% image_buster /assets/img_archive/dnd_fallbacks.png %})
+![Ein Beispiel für "Arial" als Fallback-Schriftart mit "Sans-serif" als Schriftfamilie.]({% image_buster /assets/img_archive/dnd_fallbacks.png %})
 
 Sie können bis zu 17 Fallback-Schriften hinzufügen. Die zuerst gewählte Ausweichschriftart wird als erste ausprobiert. Die Fallback-Schriftart wird nur für neu erstellte Vorlagen, E-Mail-Kampagnen und Canvas-Komponenten verwendet. Die Ersatzschriftart wird nicht automatisch für Nachrichten gesetzt, die erstellt wurden, bevor die Ersatzschriftart festgelegt wurde. Wir empfehlen Ihnen dringend, Fallback-Schriftarten zu wählen, die Ihrem E-Mail-Messaging ähneln, um die Konsistenz Ihres Markenauftritts zu gewährleisten.
 
 ## Titel Styling
 
-Hier können Sie den Stil Ihrer E-Mail-Titel anpassen, indem Sie die Schriftgröße, die Schriftfarbe und die Textausrichtung bearbeiten. Dies gilt für die Hauptkopfzeile und die Nebenkopfzeile. 
+Hier können Sie den Stil Ihrer E-Mail-Titel anpassen, indem Sie die Schriftgröße, die Schriftfarbe und die Textausrichtung bearbeiten. 
 
-Titel Styling-Einstellungen für eine mittig ausgerichtete Hauptkopfzeile und eine sekundäre Kopfzeile.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
+![Titel Styling-Einstellungen für eine mittig ausgerichtete Hauptkopfzeile und eine sekundäre Kopfzeile.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
 
 Optional können Sie den Standardstil Ihres Drag-and-Drop-Editor-Designs überschreiben. Wählen Sie **Standardstil überschreiben** aus, um das von Ihnen gewählte Titeldesign anzuwenden. Dazu kann die Einstellung einer anderen Schriftart und Linkfarbe gehören.
 
@@ -79,7 +79,7 @@ Optional können Sie den Standardstil Ihres Drag-and-Drop-Editor-Designs übersc
 
 Um einen Standard-Absatzstil festzulegen, gehen Sie zur **Absatzgestaltung**, geben Sie den **Schriftgrad** ein und wählen Sie **Schriftfarbe**, um eine Schriftfarbe auszuwählen. Sie können auch das Blockstyling für den Textkörper anpassen, indem Sie die Werte **Auffüllen oben**, **Auffüllen rechts**, **Auffüllen unten** und **Auffüllen links** bearbeiten. Dies gilt für die Abstände in allen vier Bereichen, die den Absatzblock umgeben.
 
-\![Absatz-Styling-Einstellungen für Text mit 14pt Schrift.]({% image_buster /assets/img_archive/dnd_paragraph_styling.png %})
+![Absatzstileinstellungen für Text mit 14pt-Schrift.]({% image_buster /assets/img_archive/dnd_paragraph_styling.png %})
 
 ## Listen-Stil
 
@@ -99,7 +99,7 @@ Wenn Sie Listen zu Ihren Nachrichten hinzufügen, sorgt der Abschnitt **Listenge
 
 Sie können den **Listentyp** entweder als nummeriert oder als Aufzählungszeichen festlegen. Der **Listenstiltyp** bietet zusätzliche Anpassungsmöglichkeiten für den Stil Ihrer Listen. Sie können z.B. festlegen, dass die Aufzählungstypen immer mit Aufzählungszeichen versehen sind und dass jedes Aufzählungszeichen ein Quadrat ist.  
 
-\![Liste Styling-Einstellungen für eine Aufzählungsliste.]({% image_buster /assets/img_archive/dnd_list_styling.png %})
+![Liste Styling-Einstellungen für eine Aufzählungsliste.]({% image_buster /assets/img_archive/dnd_list_styling.png %})
 
 ## Button-Stil
 
@@ -112,7 +112,7 @@ Im Bereich **Gestaltung der Schaltfläche** können Sie die folgenden Standardst
 - Rahmenstärke
 - Padding-Button
 
-\![Button Styling-Einstellungen für einen rechteckigen Button mit blauem Hintergrund.]({% image_buster /assets/img_archive/dnd_button_styling.png %})
+![Button Styling-Einstellungen für einen rechteckigen Button mit blauem Hintergrund.]({% image_buster /assets/img_archive/dnd_button_styling.png %})
 
 Wie bei allen anderen Styling-Abschnitten können Sie das Block-Styling anpassen, indem Sie die Werte **Padding Top**, **Padding Right**, **Padding Bottom** und **Padding Left** bearbeiten.
 
@@ -120,7 +120,7 @@ Wie bei allen anderen Styling-Abschnitten können Sie das Block-Styling anpassen
 
 Mit der Breite der E-Mail-Vorlage können Sie eine Breite für die Konsistenz Ihrer E-Mail-Kampagnen festlegen und anpassen. 
 
-\![E-Mail Template Breite auf 600px eingestellt.]({% image_buster /assets/img_archive/dnd_email_template_width.png %})
+![Breite des Templates für E-Mails auf 600px eingestellt.]({% image_buster /assets/img_archive/dnd_email_template_width.png %})
 
 ## Content-Block-Breite
 
@@ -128,4 +128,4 @@ Diese Einstellung wird für alle zukünftigen Content-Blöcke vorkonfiguriert se
 
 Wir empfehlen, die Breite des Content-Blocks an die Breite der E-Mail-Template anzupassen.
 
-\![Content-Block-Breite auf 600px gesetzt.]({% image_buster /assets/img_archive/dnd_content_block_width_update.png %})
+![Die Breite des Content-Blocks wurde auf 600px festgelegt.]({% image_buster /assets/img_archive/dnd_content_block_width_update.png %})
