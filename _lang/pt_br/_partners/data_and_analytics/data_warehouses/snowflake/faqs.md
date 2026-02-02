@@ -16,6 +16,8 @@ Não, no momento não há suporte para isso.
 Use o compartilhamento de dados para a mesma região nos seguintes cenários:
 - Sua conta do Snowflake está em US-EAST-1 (AWS), e a região do dashboard da Braze é os EUA.
 - Sua região do Snowflake é EU-CENTRAL-1, e sua região de Braze dashboard é a UE.
+- Sua região do Snowflake está em AP-Southeast-2 (AWS) e sua região do dashboard do Braze está na Austrália.
+- Sua região do Snowflake está em AP-Southeast-3 (AWS) e sua região do dashboard do Braze está na Indonésia.
 
 Caso contrário, use o compartilhamento de dados entre regiões. 
 
@@ -29,10 +31,10 @@ Se seu compartilhamento de dados for inter-regional, talvez os dados não fiquem
 
 ### Por que estou recebendo um erro de conformidade com a HIPAA ao criar um compartilhamento de dados?
 
-A conta especificada não é compatível com a HIPAA ou está em [Snowflake Editions](https://docs.snowflake.com/en/user-guide/intro-editions) inferior a Business Critical. Sua conta Snowflake deve ser atualizada para a Edição Business Critical para ser compatível com a HIPAA para compartilhamento de dados. Entre em contato com o suporte da Snowflake para mais assistência na atualização da sua conta.
+A conta especificada não é compatível com HIPAA ou está em [edições do Snowflake](https://docs.snowflake.com/en/user-guide/intro-editions) inferiores à Business Critical. Sua conta Snowflake deve ser feita upgrade para a Business Critical Edition para estar em conformidade com a HIPAA para compartilhamento de dados. Entre em contato com o suporte da Snowflake para obter mais assistência para fazer upgrade da sua conta.
 
-### Por que não consigo recriar um compartilhamento de dados após excluir um?
+### Por que não consigo recriar um compartilhamento de dados depois de excluí-lo?
 
-O sistema pode ainda estar processando a exclusão do seu compartilhamento de dados anterior. Aguarde alguns minutos para que o processo de desprovisionamento seja concluído e, em seguida, tente criar o novo compartilhamento de dados novamente.
+O sistema ainda pode estar processando a exclusão do seu compartilhamento de dados anterior. Aguarde alguns minutos para que o processo de desprovisionamento seja concluído e, em seguida, tente criar o novo compartilhamento de dados novamente.
 
 
