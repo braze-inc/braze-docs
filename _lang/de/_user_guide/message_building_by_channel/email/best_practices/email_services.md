@@ -10,7 +10,7 @@ channel: email
 
 # E-Mail-Dienste {#email-services}
 
-> Wenn Sie zusätzliche Unterstützung für Ihr E-Mail-Programm benötigen, bietet Braze wiederkehrende und einmalige Dienste zu einem Aufpreis an. Für weitere Informationen wenden Sie sich bitte an Ihren Braze-Kundenbetreuer.
+> Wenn Sie zusätzliche Unterstützung für Ihr E-Mail-Programm benötigen, bietet Braze wiederkehrende und einmalige Dienste zu einem Aufpreis an. Weitere Informationen erhalten Sie von Ihrem Braze-Konto Manager:in.
 
 ## Dienste für die Zustellbarkeit von E-Mails {#email-deliverability-services}
 
