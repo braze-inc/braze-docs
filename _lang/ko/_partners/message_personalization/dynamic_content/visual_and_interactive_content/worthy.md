@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Worthy
 
-> The [Worthy](https://worthy.ai/) and Braze integration allows you to easily create personalized, rich in-app experiences using Worthy's drag-and-drop editor and deliver them through Braze. Additionally, Worthy will automatically do the following:
+> [워디와](https://worthy.ai/) 브라즈의 통합을 통해 워디의 드래그 앤 드롭 편집기를 사용하여 개인화된 풍부한 인앱 경험을 제작하고 이를 브라즈를 통해 전달할 수 있습니다. 또한, Worthy는 자동으로 다음을 수행합니다:
 
 _This integration is maintained by Worthy._
 
