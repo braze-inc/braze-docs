@@ -51,14 +51,18 @@ Wenn der Endpunkt JSON zurückgibt, können Sie dies erkennen, indem Sie prüfen
 
 Connected-Content verwendet einen Mechanismus zur Erkennung von ungesunden Hosts, um zu erkennen, wenn der Zielhost sehr langsam oder überlastet ist. Dies führt zu Timeouts, zu vielen Anfragen oder anderen Ergebnissen, die verhindern, dass Braze erfolgreich mit dem Ziel-Endpunkt kommunizieren kann. Diese Funktion dient als Schutzmaßnahme, um unnötige Belastungen zu reduzieren, die dem Zielhost Probleme bereiten könnten. Es dient auch der Stabilisierung der Braze-Infrastruktur und der Aufrechterhaltung schneller Nachrichtenübertragungsgeschwindigkeiten.
 
-Wenn der Zielhost eine hohe Rate an erheblicher Langsamkeit oder Überlastung aufweist, hält Braze die Anfragen an den Zielhost vorübergehend für eine Minute an und simuliert stattdessen Antworten, die auf den Fehler hinweisen. Nach einer Minute prüft Braze den Zustand des Hosts mit einer kleinen Anzahl von Anfragen, bevor es die Anfragen mit voller Geschwindigkeit wieder aufnimmt, wenn der Host als gesund befunden wird. Wenn der Host immer noch ungesund ist, wartet Braze eine weitere Minute, bevor es erneut versucht wird.
+Wenn der Targeting-Host in hohem Maße verlangsamt oder überlastet ist, hält Braze Anfragen an den Targeting-Host für eine Minute vorübergehend an und simuliert stattdessen Antworten, die den Fehler anzeigen. Nach einer Minute prüft Braze den Zustand des Hosts mit einer kleinen Anzahl von Anfragen, bevor es die Anfragen mit voller Geschwindigkeit wieder aufnimmt, wenn der Host als gesund befunden wird. Wenn der Host immer noch ungesund ist, wartet Braze eine weitere Minute, bevor es erneut versucht wird.
 
 Wenn Anfragen an den Zielhost durch den Detektor für fehlerhafte Hosts gestoppt werden, rendert Braze weiterhin Nachrichten und folgt Ihrer Liquid-Logik, als hätte es einen Fehlerantwortcode erhalten. Wenn Sie sicherstellen möchten, dass diese Connected-Content-Anfragen erneut versucht werden, wenn sie vom Detektor für fehlerhafte Hosts angehalten werden, verwenden Sie die Option `:retry`. Weitere Informationen über die Option `:retry` finden Sie unter [Wiederholungsversuche für angeschlossene Inhalte]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries).
 
 Wenn Sie glauben, dass die Erkennung eines ungesunden Hosts Probleme verursacht, wenden Sie sich an den [Braze Support]({{site.baseurl}}/support_contact/).
 
+{% alert note %}
+Sie können zulassen, dass bestimmte URLs für Connected-Content verwendet werden. Um auf dieses Feature zuzugreifen, wenden Sie sich an Ihren Customer-Success-Manager:in.
+{% endalert %}
+
 {% alert tip %}
-Besuchen Sie die Seite [Fehlerbehebung bei Webhook- und Connected Content-Anfragen]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection), um mehr darüber zu erfahren, wie Sie häufige Fehlercodes beheben können.
+Besuchen Sie die Seite [Fehlerbehebung für Webhook- und Connected-Content-Anfragen]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection), um mehr darüber zu erfahren, wie Sie häufige Fehlercodes beheben können.
 {% endalert %}
 
 ## Zulässig für effiziente Performance
@@ -80,15 +84,15 @@ Braze-Systeme können denselben Connected-Content-API-Aufruf mehr als einmal pro
 
 Wenn die URL eine Basisauthentifizierung erfordert, kann Braze Zugangsdaten für Sie speichern, die Sie in Ihrem API-Aufruf verwenden können. Unter **Einstellungen** > **Connected-Content** können Sie bestehende Zugangsdaten verwalten und neue hinzufügen **.**
 
-\![Die Connected-Content-Einstellungen im Braze-Dashboard.]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
+![Die Connected-Content-Einstellungen im Braze-Dashboard.]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
 
 Um eine neue Zugangsdaten hinzuzufügen, wählen Sie **Zugangsdaten hinzufügen** > **Basisauthentifizierung**. 
 
-\!["Zugangsdaten hinzufügen"-Dropdown mit der Option, die Basisauthentifizierung oder die Token-Authentifizierung zu verwenden.]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
+![Dropdown-Menü "Zugangsdaten hinzufügen" mit der Option, die Basisauthentifizierung oder die Token-Authentifizierung zu verwenden.]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
 
 Geben Sie Ihren Zugangsdaten einen Namen und geben Sie den Nutzernamen und das Passwort ein.
 
-\![Das Fenster "Neue Zugangsdaten erstellen" mit der Möglichkeit, einen Namen, einen Benutzernamen und ein Passwort einzugeben.]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
+![Das Fenster "Neue Zugangsdaten erstellen" mit der Möglichkeit, einen Namen, einen Benutzernamen und ein Passwort einzugeben.]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
 
 Sie können diese grundlegenden Zugangsdaten dann in Ihren API-Aufrufen verwenden, indem Sie auf den Namen des Tokens verweisen:
 
@@ -104,15 +108,11 @@ Wenn Sie eine Zugangsdaten löschen, denken Sie daran, dass alle Connected-Conte
 
 ### Token-Authentifizierung verwenden
 
-{% alert important %}
-Der Token-Authentifizierungstyp befindet sich derzeit im frühen Zugriff. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an der Teilnahme an diesem frühen Zugang interessiert sind.
-{% endalert %}
-
 Bei der Verwendung von Braze Connected Content kann es vorkommen, dass Sie für bestimmte APIs ein Token anstelle eines Benutzernamens und eines Passworts benötigen. Braze kann auch Zugangsdaten speichern, die Token-Authentifizierungs-Headerwerte enthalten.
 
 Um einen Zugangsdatenschlüssel mit Token-Werten hinzuzufügen, wählen Sie **Zugangsdaten hinzufügen** > **Token-Authentifizierung**. Fügen Sie dann die Schlüssel-Wert-Paare für Ihre API-Aufruf-Header und die zulässige Domain hinzu.
 
-\![Ein Beispiel für einen Token "token_credential_abc" mit Details zur Token-Authentifizierung.]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
+![Ein Beispiel für ein Token "token_credential_abc" mit Details zur Token-Authentifizierung.]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
 
 Sie können diese Zugangsdaten dann in Ihren API-Aufrufen verwenden, indem Sie auf den Namen der Zugangsdaten verweisen:
 
@@ -178,7 +178,7 @@ Sie können den Namen der Zugangsdaten für die Authentifizierungsarten bearbeit
 - Bei der einfachen Authentifizierung können Sie den Benutzernamen und das Passwort aktualisieren. Beachten Sie, dass das zuvor eingegebene Passwort nicht sichtbar ist.
 - Für die Token-Authentifizierung können Sie die Schlüssel-Wert-Paare des Headers und die zulässige Domain aktualisieren. Beachten Sie, dass die zuvor eingestellten Kopfzeilenwerte nicht sichtbar sein werden.
 
-\![Die Option zum Bearbeiten der Zugangsdaten.]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+![Die Möglichkeit, Zugangsdaten zu bearbeiten.]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
 
 ## Connected-Content-IP-Allowlisting
 
