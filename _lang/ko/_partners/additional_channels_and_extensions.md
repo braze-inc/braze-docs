@@ -1,5 +1,5 @@
 ---
-nav_title: "Additional Channels &amp; Extensions"
+nav_title: "추가 채널 및 확장"
 article_title: Additional Channels &amp; Extensions
 page_order: 11
 
@@ -35,8 +35,6 @@ valid_partner_list:
   url: /docs/partners/zendesk/
 - name: PassKit
   url: /docs/partners/passkit/
-- name: Rokt Calendar
-  url: /docs/partners/rokt/
 - name: Future Anthem
   url: /docs/partners/future_anthem/
 - name: Komo
@@ -61,4 +59,8 @@ valid_partner_list:
   url: /docs/partners/survicate/
 - name: Typeform
   url: /docs/partners/typeform/
+- name: 오피지
+  url: /docs/partners/oppizi/
+- name: 스택어댑트
+  url: /docs/partners/stackadapt/
 ---
