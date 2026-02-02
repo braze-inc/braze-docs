@@ -1,6 +1,6 @@
 ---
 nav_title: Tapcart
-article_title: Integrating Tapcart with Braze
+article_title: 탭카트와 Braze 통합하기
 description: "Learn about Tapcart's integration with Braze."
 alias: /partners/tapcart/
 page_type: partner
@@ -30,8 +30,8 @@ To learn how to integrate Tapcart with Braze, checkout [Tapcart’s integration 
 - Rich push messages
 - User journey tracking and segmentation
 
-Note that the following features are not currently supported: Push Stories, Web Push, In-App Messages customization.
+현재 지원되지 않는 기능은 다음과 같습니다: 푸시 스토리, 웹 푸시, 인앱 메시지 커스텀.
 
 {% alert note %}
-If you have any additional questions, please reach out to your Tapcart Implementation Specialist or email [help@tapcart.co](mailto:help@tapcart.co).
+추가 질문이 있는 경우 탭카트 구현 전문가에게 문의하거나 [도움말@tapcart.co](mailto:help@tapcart.co) 으로 이메일을 보내주세요.
 {% endalert %}
