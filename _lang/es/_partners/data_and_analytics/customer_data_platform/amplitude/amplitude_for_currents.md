@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# [![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitud para corrientes
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitud para Currents
 
 > [Amplitude](https://amplitude.com/) es una plataforma de análisis de productos e inteligencia empresarial.
 
@@ -39,7 +39,7 @@ amplitude.setDeviceId(Appboy.getInstance(context).getDeviceId();)
 
 Puedes exportar dos tipos de eventos a Amplitude: Eventos de [participación en mensajes](#supported-currents-events), que consisten en los Eventos Braze directamente relacionados con el envío de mensajes, y [Eventos de comportamiento del cliente](#supported-currents-events), incluida otra actividad de la aplicación o del sitio web, como sesiones, eventos personalizados y compras rastreadas a través de la plataforma. Todos los eventos regulares llevan el prefijo `[Appboy]`, y todos los eventos personalizados llevan el prefijo `[Appboy] [Custom Event]`. Las propiedades de eventos personalizados y eventos de compra llevan el prefijo `[Custom event property]` y `[Purchase property]`, respectivamente.
 
-Todas las cohortes nombradas e importadas a Braze llevarán el prefijo `[Amplitude]` y el sufijo `cohort_id`. Esto significa que una cohorte llamada "TEST_COHORT" con el `cohort_id` "abcd1234" se titulará `[Amplitude] TEST_COHORT: abcd1234` en los filtros Braze.
+Todas las cohortes nombradas e importadas a Braze llevarán el prefijo `[Amplitude]` y el sufijo `cohort_id`. Esto significa que una cohorte denominada "TEST_COHORT" con el `cohort_id` "abcd1234" se titulará `[Amplitude] TEST_COHORT: abcd1234` en los filtros Braze.
 
 Póngase en contacto con su gestor de cuenta o abra un [ticket de asistencia]({{site.baseurl}}/braze_support/) si necesita acceder a derechos de eventos adicionales.
 
@@ -59,9 +59,9 @@ En Braze, vaya a **Corrientes > + Crear corriente > Crear exportación de amplit
 Los eventos enviados desde Braze Currents a Amplitude contarán para tu cuota de volumen de eventos de Amplitude.
 {% endalert %}
 
-![La página de corrientes de amplitud de Braze. Esta página incluye campos para el nombre de la integración, el correo electrónico de contacto, la clave de API y la región de EEUU. La mitad inferior de la página Currents enumera los eventos Currents disponibles que puede enviar.]({% image_buster /assets/img/amplitude4.png %})
+![La página de corrientes de amplitud de Braze. Esta página incluye campos para el nombre de la integración, el correo electrónico de contacto, la clave de API y la región de EEUU. La mitad inferior de la página Currents enumera los eventos Currents disponibles que puedes enviar.]({% image_buster /assets/img/amplitude4.png %})
 
-{% tab nota %}
+{% tab note %}
 Consulta [los documentos de integración](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) de Amplitude para obtener más información.
 {% endtab %}
 
