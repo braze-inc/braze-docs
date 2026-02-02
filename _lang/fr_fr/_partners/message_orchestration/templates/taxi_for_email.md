@@ -16,7 +16,7 @@ _Cette intégration est assurée par Taxi for email._
 
 ## À propos de l'intégration
 
-L'intégration de Braze et Taxi exploite la syntaxe simple mais puissante de Taxi pour créer et exporter des modèles d'e-mail intelligents vers Braze. 
+L'intégration entre Braze et Taxi utilise la syntaxe simple mais puissante de Taxi pour créer et exporter des modèles d'e-mails intelligents vers Braze. 
 
 ## Conditions préalables
 
@@ -43,6 +43,6 @@ Votre champ de connecteur changera de couleur après que les détails avec les a
 
 ## Utilisation
 
-Trouvez votre modèle Taxi téléchargé dans la section **modèles et médias > modèles d'e-mail** de votre compte Braze. Vous pouvez maintenant utiliser ce modèle d'e-mail pour commencer à envoyer des messages d'e-mail engageants à vos clients !
+Vous trouverez le modèle de Taxi que vous avez téléchargé dans la section **Modèles & Media > Modèles d'e-mail de** votre compte Braze. Vous pouvez désormais utiliser ce modèle d'e-mail pour commencer à envoyer des e-mails attrayants à vos clients !
 
 
