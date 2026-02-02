@@ -1,4 +1,4 @@
-{% details Template anzeigen %}
+{% details Show template %}
 {% raw %}
 ```markdown
 ---
