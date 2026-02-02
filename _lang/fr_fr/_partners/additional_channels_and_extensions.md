@@ -1,5 +1,5 @@
 ---
-nav_title: "Canaux supplémentaires et extensions"
+nav_title: "Canaux et extensions supplémentaires"
 article_title: Canaux supplémentaires et extensions
 page_order: 11
 
@@ -35,8 +35,6 @@ valid_partner_list:
   url: /docs/partners/zendesk/
 - name: PassKit
   url: /docs/partners/passkit/
-- name: Calendrier Rokt
-  url: /docs/partners/rokt/
 - name: "L'hymne du futur"
   url: /docs/partners/future_anthem/
 - name: Komo
@@ -61,4 +59,8 @@ valid_partner_list:
   url: /docs/partners/survicate/
 - name: Typeform
   url: /docs/partners/typeform/
+- name: Oppizi
+  url: /docs/partners/oppizi/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
 ---
