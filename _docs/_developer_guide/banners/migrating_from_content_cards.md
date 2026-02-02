@@ -402,12 +402,7 @@ card.logClick();
 ```kotlin
 // Manual impression logging required for custom implementations
 cards.forEach { card ->
-  if (!card.isControl) {
     card.logImpression()
-  } else {
-    // Still log impressions for control cards
-    card.logImpression()
-  }
 }
 
 // Manual click logging required for custom implementations
@@ -418,12 +413,7 @@ card.logClick()
 ```swift
 // Manual impression logging required for custom implementations
 for card in cards {
-  if !card.isControl {
     card.context?.logImpression()
-  } else {
-    // Still log impressions for control cards
-    card.context?.logImpression()
-  }
 }
 
 // Manual click logging required for custom implementations
@@ -434,12 +424,7 @@ card.context?.logClick()
 ```javascript
 // Manual impression logging required for custom implementations
 cards.forEach(card => {
-  if (!card.isControl) {
     Braze.logContentCardImpression(card.id);
-  } else {
-    // Still log impressions for control cards
-    Braze.logContentCardImpression(card.id);
-  }
 });
 
 // Manual click logging required for custom implementations
@@ -450,12 +435,7 @@ Braze.logContentCardClicked(card.id);
 ```dart
 // Manual impression logging required for custom implementations
 for (final card in cards) {
-  if (!card.isControl) {
     braze.logContentCardImpression(card);
-  } else {
-    // Still log impressions for control cards
-    braze.logContentCardImpression(card);
-  }
 }
 
 // Manual click logging required for custom implementations
@@ -470,7 +450,7 @@ braze.logContentCardClicked(card);
 {% tab Web %}
 
 {% alert important %}
-Analytics are automatically tracked when using insertBanner(). Manual logging should not be used when using insertBanner().
+Analytics are automatically tracked when using `insertBanner()`. Manual logging should not be used when using `insertBanner()`.
 {% endalert %}
 
 ```javascript
@@ -562,12 +542,9 @@ Analytics are automatically tracked when using BrazeBannerView. No manual loggin
 ```javascript
 cards.forEach(card => {
   if (card.isControl) {
-    // Don't display, but still log impression
-    braze.logContentCardImpressions([card]);
+    // Logic for control cards ie. don't display but log analytics
   } else {
-    // Display and log impression
-    braze.logContentCardImpressions([card]);
-    // Render card
+    // Logic for cards ie. render card
   }
 });
 ```
@@ -576,12 +553,9 @@ cards.forEach(card => {
 ```kotlin
 cards.forEach { card ->
   if (card.isControl) {
-    // Don't display, but still log impression
-    card.logImpression()
+    // Logic for control cards ie. don't display but log analytics
   } else {
-    // Display and log impression
-    card.logImpression()
-    // Render card
+    // Logic for cards ie. render card
   }
 }
 ```
@@ -590,12 +564,9 @@ cards.forEach { card ->
 ```swift
 for card in cards {
   if card.isControl {
-    // Don't display, but still log impression
-    card.context?.logImpression()
+    // Logic for control cards ie. don't display but log analytics
   } else {
-    // Display and log impression
-    card.context?.logImpression()
-    // Render card
+    // Logic for cards ie. render card
   }
 }
 ```
@@ -604,12 +575,9 @@ for card in cards {
 ```javascript
 cards.forEach(card => {
   if (card.isControl) {
-    // Don't display, but still log impression
-    Braze.logContentCardImpression(card.id);
+    // Logic for control cards ie. don't display but log analytics
   } else {
-    // Display and log impression
-    Braze.logContentCardImpression(card.id);
-    // Render card
+    // Logic for cards ie. render card
   }
 });
 ```
@@ -618,12 +586,9 @@ cards.forEach(card => {
 ```dart
 for (final card in cards) {
   if (card.isControl) {
-    // Don't display, but still log impression
-    braze.logContentCardImpression(card);
+    // Logic for control cards ie. don't display but log analytics
   } else {
-    // Display and log impression
-    braze.logContentCardImpression(card);
-    // Render card
+    // Logic for cards ie. render card
   }
 }
 ```
