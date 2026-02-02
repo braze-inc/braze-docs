@@ -1,6 +1,6 @@
 ## Intégration d'une bibliothèque d'images personnalisée
 
-### Étape 1 : Créer le délégué de chargement d’images
+### Étape 1 : Créer le délégué de chargement d’images
 
 Le délégué de chargement d’images doit mettre en œuvre les méthodes suivantes :
 
