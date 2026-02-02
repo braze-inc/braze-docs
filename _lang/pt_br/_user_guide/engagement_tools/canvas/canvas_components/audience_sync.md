@@ -1,5 +1,5 @@
 ---
-nav_title: Sincronização do público do Canvas
+nav_title: Sincronização do público do Canva
 page_order: 10
 noindex: true
 tool: Canvas
