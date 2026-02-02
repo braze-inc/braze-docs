@@ -3,7 +3,7 @@ nav_title: Jacquard
 article_title: Jacquard
 alias: /partners/jacquard/
 page_order: 1
-description: "Este artículo de referencia describe la asociación entre Braze y Jacquard Dynamic Optimisation que aprovecha Braze Currents y Connected Content para recopilar información de seguimiento de clics de sus suscriptores a través de webhooks. A continuación, Jacquard relaciona esos eventos con sus variantes lingüísticas para optimizar el lenguaje en tiempo real."
+description: "Este artículo de referencia describe la asociación entre Braze y Jacquard Dynamic Optimisation, que utiliza Braze Currents y contenido conectado para recopilar información de seguimiento de clics de tus suscriptores a través de webhooks. A continuación, Jacquard relaciona esos eventos con tus variantes lingüísticas para optimizar el lenguaje en tiempo real."
 page_type: partner
 search_tag: Partner
 ---
@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Jacquard](https://www.jacquard.com/) aúna inteligencia artificial, lingüística computacional y un espíritu centrado en el cliente para ayudar a desplegar el lenguaje de la marca, a escala, a través de canales personalizados según la voz de su marca.
 
-La optimización dinámica, impulsada por Jacquard X, aprovecha Braze Currents y Connected Content para recopilar información de seguimiento de clics de sus suscriptores a través de webhooks. A continuación, Jacquard relaciona esos eventos con sus variantes lingüísticas para optimizar el lenguaje en tiempo real. 
+La Optimización Dinámica, impulsada por Jacquard X, utiliza Braze Currents y Contenido conectado para recopilar información de seguimiento de clics de tus suscriptores a través de webhooks. A continuación, Jacquard relaciona esos eventos con tus variantes lingüísticas para optimizar el lenguaje en tiempo real. 
 
 ## Requisitos previos
 
@@ -48,6 +48,6 @@ Por defecto, la Corriente incluirá ciertos atributos PII como el correo electr�
 
 Ponte en contacto con el equipo de tu cuenta Jacquard para obtener los fragmentos de código necesarios.
 
-Estos fragmentos aprovechan [el Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) y, una vez colocados en sus correos electrónicos, extraerán dinámicamente el idioma y un píxel de seguimiento para que Jacquard pueda optimizar su idioma en tiempo real utilizando Jacquard X.
+Estos fragmentos utilizan [contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content) y, una vez colocados en tus correos electrónicos, introducirán dinámicamente el idioma y un píxel de seguimiento para que Jacquard pueda optimizar tu idioma en tiempo real utilizando Jacquard X.
 
 
