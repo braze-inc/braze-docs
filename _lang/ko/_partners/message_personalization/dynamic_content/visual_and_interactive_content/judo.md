@@ -64,23 +64,23 @@ Once you have finished the app-side integration, you can test it by running a te
 
 ### Step 1: Create a custom code in-app message campaign
 
-From the Braze platform, create a Braze in-app message campaign with a **Custom Code** message type. Next, select **HTML Upload** as the custom type. Make sure to populate the content of the message with the base in-app messaging fields; this content will not be shown to the user.
+From the Braze platform, create a Braze in-app message campaign with a **Custom Code** message type. Next, select **HTML Upload** as the custom type. 메시지 콘텐츠를 기본 인앱 메시징 필드로 채워야 하며, 이 콘텐츠는 사용자에게 표시되지 않습니다.
 
-![An image of what the dashboard looks like when selecting the "Custom Code" message type.]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
+!['커스텀 코드' 메시지 유형을 선택할 때 대시보드의 모습을 보여주는 이미지.]({% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %})
 
-Next, use the following minimal HTML snippet to satisfy the form validation: 
+다음으로 다음과 같은 최소한의 HTML 스니펫을 사용하여 양식 유효성 검사를 충족합니다: 
 ```
 <a href="appboy://close">X</a>
 ```
 
-Note that this will not be displayed in production on your device as Judo will rewrite and replace this with a Judo Experience.
+Judo에서 다시 작성하고 이를 Judo 경험으로 대체하므로 프로덕션의 기기에는 표시되지 않습니다.
 
-![An image showing the form validation code added to the compose step of your campaign.]({% image_buster /assets/img/judo/braze-html-boilerplate.png %})
+![캠페인의 작성 단계에 추가된 양식 유효성 검사 코드를 보여주는 이미지입니다.]({% image_buster /assets/img/judo/braze-html-boilerplate.png %})
 
-### Step 2: Set a key-value pair for Judo
-![This image shows the one key-value pair needed for this integration with the "key" being "judo-experience", and the "value" being your Judo link.]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+### 2단계: 유도용 키-값 쌍 설정하기
+![이 이미지에서는 이 통합에 필요한 하나의 키-값 페어를 보여줍니다. 이때 '키'는 'Judo 경험'이고 '값'은 Judo 링크입니다.]({% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
-Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) on the campaign with a key of `judo-experience`. Provide the URL of the Judo Experience you'd like to show here. The Judo-Braze integration library will then detect this key-value pair in the handler and use it to inject your Judo Experience in place of the standard Braze in-app message UI.
+캠페인에서 [커스텀 키-값 페어]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)를 `judo-experience` 키와 함께 설정합니다. Provide the URL of the Judo Experience you'd like to show here. The Judo-Braze integration library will then detect this key-value pair in the handler and use it to inject your Judo Experience in place of the standard Braze in-app message UI.
 <br><br>
 ### Step 3: Finishing the campaign
 
