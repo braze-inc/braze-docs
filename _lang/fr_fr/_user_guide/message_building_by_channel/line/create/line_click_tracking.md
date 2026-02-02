@@ -18,7 +18,7 @@ Lorsque le suivi des clics LINE est activé, Braze raccourcit automatiquement vo
 
 Le suivi des clics de LINE peut être utilisé pour les messages textuels, les messages enrichis et les messages sous forme de cartes. Il prend en charge les liens à l'intérieur des boutons et des zones mappées qui ont une URL comme action au clic. Vous pouvez également personnaliser les URL à l'aide de Liquid et de domaines personnalisés.
 
-## Comment cela fonctionne-t-il ?
+## Fonctionnement
 
 Vous pouvez gérer les paramètres de suivi des clics de LINE dans l'onglet **Paramètres** lors de la rédaction d'un message. Lorsque cette option est activée, les URL sont raccourcis à l'aide du domaine Braze par défaut (`https://brz.ai`) ou du domaine personnalisé spécifié pour le groupe d'abonnement, et personnalisés pour l'utilisateur.
 
@@ -26,13 +26,13 @@ Tous les URL qui commencent par `http://` ou `https://` seront raccourcis. Un me
 
 ## Mise en place du suivi des clics
 
-### Messages texte
+### Envois de messages
 
 Pour configurer le suivi des clics pour un message texte :
 
 1. Faites glisser un message **texte** dans le compositeur et ajoutez une URL dans le champ de texte.
 
-\![LINE message composer avec un message texte contenant un long URL : https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
+![LINE avec un message texte contenant une URL longue : https://braze.com/docs/user_guide/message_building_by_channel/line/create/]({% image_buster /assets/img/line/click_tracking_text_message.png %})
 
 {: start="2"}
 2\. Allez dans l'onglet **Paramètres** et confirmez que le **suivi des clics** est activé. Le suivi des clics est activé par défaut pour tous les nouveaux messages.
@@ -41,9 +41,9 @@ Pour configurer le suivi des clics pour un message texte :
 Vous pouvez afficher des aperçus du lien raccourci lorsque vous vous trouvez dans l'onglet **Paramètres** ou **Aperçu du test & **. Le lien complet s'affiche dans le compositeur pendant que vous créez votre message.
 {% endalert %}
 
-\![LIGNE message composer l'onglet "Paramètres" avec " avec "Click Tracking" basculé et un aperçu Message texte contenant une URL raccourcie : https://olaf.brz.ai/p/9rcfdqdD]({% image_buster /assets/img/line/click_tracking_settings.png %})
+![LINE message composer l'onglet "Settings" avec " avec "Click Tracking" basculé et un aperçu Message texte contenant une URL raccourcie : https://olaf.brz.ai/p/9rcfdqdD]({% image_buster /assets/img/line/click_tracking_settings.png %})
 
-### Des messages riches
+### Messages riches
 
 Pour configurer le suivi des clics pour un message riche :
 
@@ -51,7 +51,7 @@ Pour configurer le suivi des clics pour un message riche :
 2. Sélectionnez l'**URI** pour le **comportement au clic de la** zone tactile concernée.
 3. Saisissez une URL dans le champ **Ouvrir l'URL.** 
 
-!compositeur de messages LINE avec un message Rich avec deux zones à tapoter qui ont chacune une URL.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
+![Le compositeur de messages LINE propose un message riche avec deux zones tactiles comportant chacune une URL.]({% image_buster /assets/img/line/rich_message_click_tracking.png %})
 
 {: start="4"}
 4\. Allez dans l'onglet **Paramètres** et confirmez que le **suivi des clics** est activé. Le suivi des clics est activé par défaut pour tous les nouveaux messages.
@@ -63,7 +63,7 @@ Pour configurer le suivi des clics pour un message basé sur une carte :
 1. Faites glisser un **message basé sur une carte** dans le compositeur.
 2. Sélectionnez l'**URI** pour le **comportement au clic** pour les zones de carte ou de bouton applicables.
 
-\![LINE message composer avec un message sous forme de carte avec deux boutons qui ont chacun un URL.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
+![LINE avec un message sous forme de carte avec deux boutons comportant chacun un URL.]({% image_buster /assets/img/line/card_based_message_click_tracking.png %})
 
 {: start="3"}
 3\. Allez dans l'onglet **Paramètres** et confirmez que le **suivi des clics** est activé. Le suivi des clics est activé par défaut pour tous les nouveaux messages.
@@ -76,7 +76,7 @@ Les URL figurant dans les champs **Titre** ou **Description** ne seront pas racc
 
 Le suivi des clics de LINE vous permet d'utiliser votre propre domaine pour personnaliser l'aspect et la convivialité de vos URL raccourcis, ce qui contribue à donner une image de marque cohérente. Pour plus d'informations, reportez-vous à la section [Domaines personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains).
 
-## La personnalisation liquide dans les URL
+## La personnalisation Liquid dans les URL
 
 Vous pouvez construire dynamiquement votre URL directement dans le compositeur Braze, ce qui vous permet d'ajouter des paramètres UTM dynamiques à vos URL ou d'envoyer aux utilisateurs des liens uniques (comme diriger les utilisateurs vers leur panier abandonné ou vers un produit spécifique qui est de nouveau en stock).
 Les URL peuvent être générés dynamiquement par l'utilisation de n'importe quelle étiquette Liquid de personnalisation prise en charge.
@@ -100,25 +100,25 @@ https://example.com/{{url_var}}
 
 Braze raccourcit les URL qui sont rendues par Liquid, même celles qui sont incluses dans les propriétés de déclenchement de l'API. Par exemple, si {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} représente un URL valide, nous raccourcirons et suivrons cet URL avant d'envoyer le message LINE.
 
-## Essais
+## Test
 
 Avant de lancer votre campagne ou votre Canvas, la meilleure pratique consiste à prévisualiser et à tester votre message. Pour ce faire, allez dans l'onglet **Test** pour prévisualiser et envoyer un message LINE à des groupes de test de contenu ou à un utilisateur individuel.
 
 Cet aperçu sera mis à jour avec la personnalisation pertinente et l'URL raccourcie. 
 
 {% alert important %}
-Si un brouillon est créé dans un canvas actif, l'URL raccourcie ne sera pas générée. L'URL raccourci est généré lorsque le projet Canvas est rendu actif.
+Si un brouillon est créé dans un Canvas actif, l'URL raccourcie ne sera pas générée. L'URL raccourci est généré lorsque le projet Canvas est rendu actif.
 {% endalert %}
 
-## Rapports
+## Reporting
 
 Le tableau des performances de la LIGNE comprend la colonne **Total des clics** qui indique le nombre de clics par variante et le taux de clics associé. Pour plus de détails sur les indicateurs de LINE, reportez-vous à la section [Performances des messages de LINE.]({{site.baseurl}}/user_guide/message_building_by_channel/line/reporting)
 
-!Performance pour une étape du canvas LINE.]({% image_buster /assets/img/line/line_step_performance.png %}){: style="max-width:30%;"}
+![Performance pour une étape du canvas LINE.]({% image_buster /assets/img/line/line_step_performance.png %}){: style="max-width:30%;"}
 
 Les données relatives aux clics seront automatiquement reportées dans le tableau de bord analytique. 
 
-\![Tableau de bord de l'analyse/analytique de la performance de la LIGNE (si utilisé comme adjectif anjectif).]({% image_buster /assets/img/line/line_performance.png %})
+![Tableau de bord de l'analyse/analytique des performances de LINE (si utilisé comme adjectif).]({% image_buster /assets/img/line/line_performance.png %})
 
 ## Reciblage des utilisateurs
 
@@ -128,26 +128,26 @@ Vous pouvez recibler les utilisateurs qui ont cliqué sur une URL dans un messag
     - Interagir avec la campagne
     - Interagir avec Step
 
-!LIGNE de déclenchement de la réception/distribution par événement.]({% image_buster /assets/img/line/line_action_based.png %})
+![LINE : déclencheur de réception/distribution par événement.]({% image_buster /assets/img/line/line_action_based.png %})
 
 - Filtres de segmentation
     - Campagne cliquée/ouverte
     - Campagne ou canvas cliqué/ouvert avec étiquette 
     - Étape cliquée/ouverte
 
-!Groupe de filtres affichant les trois filtres de segmentation : "Campagne cliquée/ouverte", "Campagne cliquée/ouverte ou canvas avec étiquette" et "Étape cliquée/ouverte".]({% image_buster /assets/img/line/line_segmentation_filters.png %})
+![Groupe de filtres affichant les trois filtres de segmentation : "Campagne cliquée/ouverte", "Campagne cliquée/ouverte ou canvas avec étiquette" et "Étape cliquée/ouverte".]({% image_buster /assets/img/line/line_segmentation_filters.png %})
 
-## Questions fréquemment posées
+## Foire aux questions
 
-### Les liens que je reçois lors de l'envoi de tests sont-ils de véritables URL ?
+### Les liens que je reçois lors des tests sont-ils de vraies URL ?
 
 Oui, de véritables URL seront générées lors de l'envoi de tests. Cependant, l'URL exacte envoyée lors d'une campagne lancée peut différer de celle envoyée lors d'un envoi test.
 
-### Puis-je ajouter des paramètres UTM à une URL avant qu'elle ne soit raccourcie ?
+### Est-il possible d’ajouter des paramètres UTM à une URL avant qu’elle ne devienne courte ?
 
 Oui, des paramètres statiques et dynamiques peuvent être ajoutés.
 
-### Combien de temps les URL raccourcis restent-ils valides ?
+### Combien de temps les URL raccourcies restent-elles valides ?
 
 Les URL personnalisées sont valables deux mois à compter de la date d'enregistrement de l'URL.
 
@@ -155,7 +155,7 @@ Les URL personnalisées sont valables deux mois à compter de la date d'enregist
 
 Non, le suivi des clics fonctionne sans intégration SDK.
 
-### Puis-je savoir quels utilisateurs individuels cliquent sur une URL ?
+### Est-il possible de savoir quels utilisateurs cliquent sur une URL ?
 
 Oui. Lorsque le suivi des clics est activé, vous pouvez recibler les utilisateurs qui ont cliqué sur des URL en utilisant les [filtres de reciblage LINE.](#retargeting-users)
 
