@@ -1,11 +1,11 @@
 ---
 nav_title: Empfehlungen verwenden
-article_title: Artikel-Empfehlungen in Ihrem Messaging verwenden
+article_title: Verwenden Sie Artikel-Empfehlungen für Ihr Messaging
 description: "Dieser Artikel beschreibt, wie Sie Artikel-Empfehlungen in Ihrer Nachricht verwenden können."
 page_order: 1.2
 ---
 
-# Verwendung von Artikel-Empfehlungen in Ihrem Messaging
+# Verwenden Sie Artikel-Empfehlungen in Ihrem Messaging
 
 > Nachdem Ihre Empfehlung trainiert ist, können Sie Liquid verwenden, um empfohlene Artikel in Ihren Nachrichten abzurufen und anzuzeigen, indem Sie direkt mit dem Objekt `product_recommendation` Liquid arbeiten.
 
@@ -25,7 +25,7 @@ Nachdem Ihre Empfehlung trainiert wurde, können Sie Ihre Nachrichten mit Liquid
 
 {% tabs local %}
 {% tab pre-formatted code %}
-!["Modal "Personalisierung hinzufügen" mit Artikel-Empfehlung als Personalisierungstyp.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
+![Modal "Personalisierung hinzufügen" mit Artikel-Empfehlung als Personalisierungstyp.]({% image_buster /assets/img/add_personalization.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 Sie können Liquid über den Abschnitt **Personalisierung hinzufügen** in Ihrem Nachrichten-Editor erstellen:
 
