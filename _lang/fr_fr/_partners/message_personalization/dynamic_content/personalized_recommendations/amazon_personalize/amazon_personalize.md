@@ -11,7 +11,7 @@ search_tag: Partner
 <!--
 {% multi_lang_include video.html id="xFZ3HMleYYE" align="right" %}
 -->
-> Amazon Personalize, c'est comme si vous disposiez de votre propre système de recommandation Amazon machine learning ouvert toute la journée. S'appuyant sur plus de 20 ans d'expérience en matière de recommandations, Amazon Personalize vous permet d'améliorer l'engagement client en proposant des recommandations personnalisées de produits et de contenus en temps réel et des promotions marketing ciblées.
+> [Amazon Personalize](https://aws.amazon.com/personalize/), c'est comme si vous aviez votre propre système de recommandation par machine learning d'Amazon toute la journée. S'appuyant sur plus de 20 ans d'expérience en matière de recommandations, Amazon Personalize vous permet d'améliorer l'engagement client en proposant des recommandations personnalisées de produits et de contenus en temps réel et des promotions marketing ciblées.
 
 _Cette intégration est gérée par Amazon Personalize._
 
@@ -31,9 +31,9 @@ Cet article de référence vous aidera à comprendre les cas d'utilisation propo
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% tabs %}
-{% tab Cas d'utilisation %}
+{% tab Use Cases %}
 
-**Cas d'utilisation**
+**Cas d’utilisation**
 
 Avant de créer un modèle, vous devez déterminer votre cas d'utilisation pour cette intégration. Parmi les cas d'utilisation courants, citons :
 - Recommandez des articles aux utilisateurs en fonction de leurs interactions précédentes, afin de créer une expérience véritablement personnalisée pour vos utilisateurs.
@@ -43,7 +43,7 @@ Avant de créer un modèle, vous devez déterminer votre cas d'utilisation pour 
 Dans le guide suivant, nous nous concentrerons sur la recette de recommandations personnalisées pour les utilisateurs.
 
 {% endtab %}
-{% tab Ensembles de données %}
+{% tab Datasets %}
 
 **Ensembles de données**
 
@@ -71,7 +71,7 @@ Pour une recette de recommandations aux utilisateurs, vous devez fournir un ense
 Une fois les ensembles de données importés, vous pouvez créer une solution. Une solution utilise l'une des [recettes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithmes) d'Amazon Personalize pour entraîner un modèle. Dans notre cas, nous utiliserons la recette `USER_PERSONALIZATION`. La formation de la solution crée une version de la solution (modèle entraîné) que vous pouvez évaluer en fonction des indicateurs de performance du modèle.
 
 Amazon Personalize vous permet de régler les hyperparamètres utilisés par le modèle pour l'entraînement. Par exemple :
-- Le paramètre « Percentile de longueur de l'historique utilisateur » de la console Amazon Personalize vous permet d'ajuster le percentile de l'historique utilisateur à inclure dans la formation :<br><br>![Min max profil utilisateur]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})
+- Le paramètre « Percentile de longueur de l'historique utilisateur » de la console Amazon Personalize vous permet d'ajuster le percentile de l'historique utilisateur à inclure dans la formation :<br><br>![Paramètre de profil utilisateur minimal et maximal]({% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %})
   - `min_user_history_length_percentile`: exclut un pourcentage d'utilisateurs dont l'historique est très court, ce qui peut être utile pour éliminer les articles les plus populaires et créer des recommandations basées sur des modèles sous-jacents plus approfondis.
   - `max_user_history_length_percentile`: ajustez le pourcentage d'utilisateurs à prendre en compte lors des formations dont l'historique est très long.
 
@@ -150,6 +150,6 @@ This seems like a great fit for you:
 
 En incluant le titre, l'image et le lien vers l'URL, voici à quoi ressemblerait la fiche de contenu complète :
 
-![Image d'une campagne avec du contenu connecté ajouté au corps du message et au champ « Ajouter une image ». Cette image montre également la logique de contenu connecté ajoutée au champ "Redirect to Web URL", qui renvoie les utilisateurs à une URL de recommandation.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
+![Image d'une campagne avec du contenu connecté ajouté au corps du message et au champ « Ajouter une image ». Cette image montre également la logique de contenu connecté ajoutée au champ « Rediriger vers l'URL Web », reliant les utilisateurs à une URL de recommandation.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
 
 
