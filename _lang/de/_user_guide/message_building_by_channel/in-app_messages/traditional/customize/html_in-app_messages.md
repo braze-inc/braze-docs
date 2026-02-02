@@ -82,7 +82,7 @@ Die folgenden JavaScript-Methoden werden in Braze HTML-In-App-Nachrichten unters
 </style>
 
 {% alert note %}
-Sie können Liquid nicht referenzieren, um <code>customAttributes</code> in JavaScript Bridge-Methoden einzufügen.
+Sie können Liquid als Referenz für die Einfügung in JavaScript-Bridge-Methoden nicht verwenden <code>customAttributes</code> in JavaScript Bridge-Methoden.
 {% endalert %}
 
 {% multi_lang_include archive/appboyBridge.md %}
@@ -242,8 +242,8 @@ Wenn Sie JavaScript-Methoden innerhalb eines `onclick` Attributs verwenden, schl
 
    | Vor | Nach |
    |:-------- |:------------|
-   |<code><a href="braze://close">Close Button</a></code>|<code><a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()">Schließen Button</a></code>|
-   |<code><a href="braze://close?abButtonId=0">Close Button</a></code>|<code><a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()">Schließen Button</a></code>|
-   |<code><a href="app://deeplink?abButtonId=0">Track Button 1</a></code>|<code><a href="app://deeplink" onclick="brazeBridge.logClick('0')">Track Button 1</a></code>|
-   |<code><script><br>location.href = "braze://close?abButtonId=1"<br></script></code>|<code><script><br>window.addEventListener("ab.BridgeReady", function(){<br>  brazeBridge.logClick("1");<br>  brazeBridge.closeMessage();<br>});<br></script></code>|
+   |<code>&lt;a href="<mem_78309b9e-9d6d-40a7-a1a1-71c9187dbc21/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_3968ee21-fe0f-4a54-a43c-7f3d426042c8/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_cf448ec2-a379-4e89-a483-a70dfa3d93b3/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_489b97fb-c50e-4106-b3f2-7dcc143938b3/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_9b002fab-6b0d-49b8-8019-0fd8dcfc340a/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
