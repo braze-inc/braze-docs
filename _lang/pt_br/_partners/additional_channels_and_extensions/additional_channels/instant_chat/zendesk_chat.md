@@ -18,7 +18,7 @@ search_tag: Partner
 | Pré-requisito | Descrição |
 |---|---|
 | Uma conta do Zendesk | É necessário ter uma conta da Zendesk para aproveitar essa parceria.|
-| Um token de autorização básica do Zendesk | Um token de autorização básica do Zendesk será usado para fazer uma solicitação de webhook de saída do Braze para o Zendesk.|
+| Um token de autorização básica do Zendesk | Um Token de Autorização Básica do Zendesk é usado para fazer uma solicitação de webhook de saída do Braze para o Zendesk.|
 | Uma chave da API REST do Braze  | Uma chave da API REST da Braze com permissões `campaigns.trigger.send`. Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**.|
 
 ## Casos de uso
@@ -31,7 +31,7 @@ Aumente a eficiência do suporte ao cliente combinando os recursos do Braze SMS 
 
 1. No console de desenvolvedor do Zendesk, acesse webhooks: {% raw %}`https://{{url}}.zendesk.com/admin/apps-integrations/webhooks/webhooks`{% endraw %}
 2. Em **Create Webhook**, selecione **Trigger ou automação**.
-3. Para o **URL do endpoint**, adicione o endpoint **/campaign/trigger/send**.
+3. Para **URL do Endpoint**, adicione o endpoint **/campanha/disparar/enviar**.
 4. Em **Authentication (Autenticação**), selecione **Bearer token (Token do portador)** e adicione a chave da API REST do Braze com as permissões `campaigns.trigger.send`.
 
 ![Um exemplo de webhook do Zendesk.]({% image_buster /assets/img/zendesk/instant_chat/chat1.png %}){: style="max-width:70%;"}
@@ -70,9 +70,9 @@ Feel free to respond directly to this number!
 
 #### Etapa 2.2: Agendar a entrega
 
-Para o tipo de entrega, selecione **API-Triggered delivery** e, em seguida, copie o Campaign ID que será usado nas próximas etapas.
+Para o tipo de entrega, selecione **Entrega Acionada por API**, em seguida, copie o ID da campanha, que é usado nas próximas etapas.
 
-![Entrega disparada pela API]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
+![Entrega disparada por API]({% image_buster /assets/img/zendesk/instant_chat/chat4.png %}){: style="max-width:70%;"}
 
 Por fim, em **Controles de entrega**, ative a reelegibilidade.
 
@@ -86,7 +86,7 @@ Acesse **Objetos e regras** > **Regras de negócios** > **Acionadores**.
 2. Crie um novo **disparador** (por exemplo, **Responder via SMS Braze**).
 3. Em **Condições**, selecione:
 - **Ticket>Comment** está **presente e o solicitante pode ver o comentário** para que a mensagem seja disparada sempre que um novo comentário público for incluído em uma atualização de tickets
-- **Ticket>Update** *não é um* **serviço da Internet (API)**, de modo que, quando um usuário envia uma mensagem pelo Braze, ela não é encaminhada de volta para o telefone celular. Somente as mensagens provenientes do Zendesk serão encaminhadas.
+- **Ticket>Update** *não é um* **serviço da Internet (API)**, de modo que, quando um usuário envia uma mensagem pelo Braze, ela não é encaminhada de volta para o telefone celular. Somente mensagens provenientes do Zendesk são encaminhadas.
 
 ![Responda via SMS Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat6.png %}){: style="max-width:70%;"}
 
@@ -175,7 +175,7 @@ No dashboard do Braze, acesse **Público**, escolha seu **grupo de inscrições 
 |------------------|---------------------------------------------------------------------------------------------------------------------------|
 | Categoria da palavra-chave | O nome da categoria da palavra-chave, como `ZendeskSMS1`.                                                                 |
 | Palavras-chave         | Suas palavras-chave personalizadas, como `SUPPORT`.                                                                                  |
-| Mensagem de resposta    | A mensagem que será enviada quando uma palavra-chave for detectada, como "Um representante do atendimento ao cliente entrará em contato com você em breve". |
+| Mensagem de resposta    | A mensagem que é enviada quando uma palavra-chave é detectada, como "Um representante de atendimento ao cliente entrará em contato com você em breve." |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ![Um exemplo de categoria de palavra-chave SMS no Braze.]({% image_buster /assets/img/zendesk/instant_chat/chat11.png %}){: style="max-width:70%;"}
@@ -185,7 +185,7 @@ No dashboard do Braze, acesse **Público**, escolha seu **grupo de inscrições 
 No dashboard do Braze, crie sua primeira campanha de webhook. Essa mensagem sinalizará ao Zendesk que o suporte está sendo solicitado.
 
 No criador do webhook, preencha os seguintes campos:
-- URL do webhook: {% raw %}https://{{url}}.zendesk.com/api/v2/tickets{% endraw %}
+- URL do Webhook: {% raw %}https://{{url}}.zendesk.com/api/v2/tickets{% endraw %}
 - Método HTTP: POST
 - Cabeçalhos de solicitação:
 - Content-Type: application/json
@@ -220,11 +220,11 @@ No criador do webhook, preencha os seguintes campos:
 
 Em **Entrega programada**, selecione **Entrega baseada em ação** e, em seguida, escolha **Enviar uma mensagem de entrada SMS** para o tipo de disparo. Adicione também o grupo de inscrições de SMS e a categoria de palavras-chave que você configurou anteriormente.
 
-![A página "Schedule Delivery" da primeira campanha de webhook.]({% image_buster /assets/img/zendesk/instant_chat/chat13.png %})
+![A página "Schedule Delivery" (Agendar entrega) da primeira campanha de webhook.]({% image_buster /assets/img/zendesk/instant_chat/chat13.png %})
 
 Em **Controles de entrega**, ative a reelegibilidade.
 
-![Reelegível selecionado em "Delivery Controls" (Controles de entrega) para a primeira campanha de webhook.]({% image_buster /assets/img/zendesk/instant_chat/chat14.png %})
+![Reelegibilidade selecionada em "Controles de entrega" para a primeira campanha de webhook.]({% image_buster /assets/img/zendesk/instant_chat/chat14.png %})
 
 #### Etapa 6.4: Crie sua segunda campanha de webhook
 
@@ -239,7 +239,7 @@ Como o Zendesk envia o ID do ticket como uma string, crie um bloco de conteúdo 
 {% endraw %}
 
 No criador do webhook:
-- URL do webhook: {% raw %}https://{{url}}.zendesk.com/api/v2/tickets/{{content_blocks.${to_int}}}.json{% endraw %}
+- URL do Webhook: {% raw %}https://{{url}}.zendesk.com/api/v2/tickets/{{content_blocks.${to_int}}}.json{% endraw %}
 - Solicitação: PUT
 - KVPs:
     - Content-Type:application/JSON
@@ -262,6 +262,6 @@ Corpo da amostra:
 #### Etapa 6.5: Concluir a configuração da segunda campanha de webhook
 - Configure um disparo baseado em ação para usuários que enviam uma mensagem de entrada na categoria "Outros".
 - Estabelecer critérios de reelegibilidade.
-- Adicione os públicos aplicáveis (nesse caso, o atributo personalizado **zendesk_ticket_open** é **verdadeiro**).
+- Adicione públicos aplicáveis (neste caso, o atributo personalizado **zendesk_ticket_open** é **true**).
 
 [2]: {% image_buster /assets/img/zendesk/instant_chat/chat2.png %}
