@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Amor por correo electrónico
 
-> [Email Love](https://emaillove.com/) es un complemento de Figma que te permite diseñar y exportar correos electrónicos HTML receptivos y accesibles directamente desde Figma. La característica Exportar a Braze de Email Love utiliza la API de Braze para cargar fácilmente tus plantillas de correo electrónico a Braze.
+> [Email Love](https://emaillove.com/) es un complemento de Figma que te permite diseñar y exportar correos electrónicos HTML receptivos y accesibles directamente desde Figma. La característica Exportar a Braze de Email Love utiliza la API de Braze para subir fácilmente tus plantillas de correo electrónico a Braze.
 
 ## Requisitos previos
 
@@ -28,7 +28,7 @@ Para diseñar tu plantilla de correo electrónico, primero tendrás que cargar e
 
 ### Paso 2: Crea tu primer marco
 
-En el plugin, selecciona el botón **[+ Sin plantilla seleccionada]** para crear un nuevo marco para el diseño de tu correo electrónico.
+En el complemento, selecciona el botón **[+ Sin plantilla seleccionada]** para crear un nuevo marco para el diseño de tu correo electrónico.
 
 ### Paso 3: Diseña la plantilla con los componentes preconstruidos de Email Love
 
