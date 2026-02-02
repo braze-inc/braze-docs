@@ -28,7 +28,7 @@ La integración de Braze y Personalize.AI te permite exportar datos de Personali
 * Proporcionar recomendaciones personalizadas para artículos y ofertas, incluyendo el tratamiento, el momento y el contenido
 * Identificar objetivos prioritarios y dirigirse a tu audiencia óptima a través de Braze
 * Identificar las oportunidades de reactivación de la interacción de los usuarios rezagados
-* Aprovechar los datos de geolocalización para encontrar la audiencia adecuada para las ubicaciones de nueva apertura
+* Utiliza los datos de geolocalización para encontrar la audiencia adecuada para las ubicaciones de nueva apertura
 * Utilizar el modelado de parecidos para basarte en los limitados datos disponibles de los usuarios más nuevos, emparejándolos con las recomendaciones más relevantes
 * Identificar las formas adecuadas de interacción con los clientes a lo largo de su ciclo de vida 
 * Evaluar proactivamente la probabilidad de abandono de los clientes y asigna una puntuación de riesgo para encontrar indicadores tempranos de abandono
