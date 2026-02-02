@@ -280,5 +280,5 @@ class BrazeExample:
 
 ### Etapa 3: Atualizar os fluxos de solução para redirecionar após o sucesso/falha do nó de ação
 
-Por fim, no design de cada solução, você pode encaminhar os usuários para os nós com base no sucesso da chamada à API do nó de ação. Se o nó de ação receber uma mensagem de erro, o usuário final deverá ser tratado com cuidado. 
+Por fim, no design de cada solução, você pode encaminhar os usuários para os nós com base no sucesso da chamada à API do nó de ação. Se o nó de ação receber uma mensagem de erro, o usuário final deverá ser tratado com cuidado.
 
