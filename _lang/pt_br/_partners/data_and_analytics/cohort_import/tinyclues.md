@@ -31,7 +31,7 @@ Na Braze, navegue até **Integrações de parceiros** > **Parceiros de tecnologi
 
 Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
-Para concluir a integração, será necessário fornecer a chave de importação de dados e o ponto de extremidade REST à equipe de operações de dados da Tinyclues. A Tinyclues estabelecerá a conexão e entrará em contato com você após a conclusão da configuração.
+Para concluir a integração, é necessário fornecer a chave de importação de dados e o ponto de extremidade REST à equipe de operações de dados da Tinyclues. A Tinyclues estabelecerá a conexão e entrará em contato com você após a conclusão da configuração.
 
 ### Etapa 2: Exportar uma campanha da plataforma Tinyclues
 
@@ -46,7 +46,7 @@ No Tinyclues, selecione a(s) campanha(s) que deseja exportar e clique em **Expor
 No Braze, navegue até **Segments (Segmentos**), nomeie seu segmento de coorte Tinyclues e selecione **Tinyclues Cohorts (Coortes Tinyclues)** como seu filtro. Nessa tela, você pode escolher qual coorte da Tinyclues deseja incluir. Depois que o segmento de coorte do Tinyclues for criado, você poderá selecioná-lo como um filtro de público ao criar uma campanha ou uma tela.
 
 ![]({% image_buster /assets/img/tinyclues/tinyclues_3.png %}){: style="max-width:90%;"}<br><br>
-![No criador de segmentos do Braze, o filtro de atribuições do usuário "Tinyclues cohort" está definido como "includes" e "Primary cohort".]({% image_buster /assets/img/tinyclues/tinyclues_4.png %}){: style="max-width:90%;"}
+![No criador de segmentos da Braze, o filtro de atribuições do usuário "Coorte da Tinyclues" está definido como "inclui" e "Coorte primária".]({% image_buster /assets/img/tinyclues/tinyclues_4.png %}){: style="max-width:90%;"}
 
 Está tendo problemas para localizar seu coorte? Consulte nossa seção [de solução de problemas](#troubleshooting) para obter orientação. 
 
@@ -58,7 +58,7 @@ Somente os usuários que já existem no Braze serão adicionados ou removidos de
 
 Para usar seu segmento da Tinyclues, crie uma campanha da Braze ou um canva e selecione o segmento como seu público-alvo. 
 
-![No criador de campanhas do Braze, na etapa de direcionamento, o filtro "Target users by segment" (Direcionar usuários por segmento) está definido como "Tinyclues cohort" (coorte de Tinyclues).]({% image_buster /assets/img/tinyclues/tinyclues_5.png %}){: style="max-width:90%;"}
+![No criador de campanhas da Braze, na etapa de direcionamento, o filtro "Direcionar por segmento de usuários" fica definido como "Coorte da Tinyclues".]({% image_buster /assets/img/tinyclues/tinyclues_5.png %}){: style="max-width:90%;"}
 
 ## Correspondência de usuários
 
@@ -68,7 +68,7 @@ Os usuários identificados podem ser combinados pelo endereço `external_id` ou 
 
 Está tendo problemas para encontrar o coorte certo na lista? No Tinyclues, visualize os detalhes de sua campanha e verifique o nome verificando o **Nome do arquivo de exportação**.
 
-![A parte inferior da página de detalhes da campanha mostra o nome do seu coorte.]({% image_buster /assets/img/tinyclues/tinyclues_2.png %}){: style="max-width:30%;"}
+![A parte inferior da página de detalhes da campanha mostra o nome de seu coorte.]({% image_buster /assets/img/tinyclues/tinyclues_2.png %}){: style="max-width:30%;"}
 
 Ainda está tendo problemas para recuperar seu público? Entre em contato com a [equipe da Tinyclues](mailto:support@tinyclues.com) para obter suporte adicional.
 
