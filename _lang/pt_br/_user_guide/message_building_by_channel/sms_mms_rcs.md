@@ -9,24 +9,24 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS, MMS e RCS"
-guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service) e RCS (Rich Communication Services) oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de mensagens, pois utilizam o número de telefone deles, permitindo que você os alcance em tempo real. Confira os tópicos a seguir para começar a usar o Braze SMS, MMS ou RCS!<br><br>Não está preparado para nenhum dos tópicos a seguir? Vá até nossa coleção de <a href='/docs/about_sms/'>configurações de SMS</a> para conhecer o SMS no Braze. <br><br>**A disponibilidade de SMS, MMS e RCS depende do seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar."
-description: "Essa página de destino abriga o SMS (Serviço de Mensagens Curtas), o MMS (Serviço de Mensagens Multimídia) e o RCS (Serviços de Comunicação Avançada). Esses serviços oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de mensagens, pois utilizam o número de telefone deles, permitindo que você entre em contato com eles em tempo real."
+guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service) e RCS (Rich Communication Services) oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de envio de mensagens, pois utilizam o número de telefone deles, permitindo que você os alcance em tempo real. Dê uma olhada nos tópicos a seguir para começar a usar o Braze SMS, MMS ou RCS!<br><br>Não está preparado para nenhum dos tópicos a seguir? Acesse nossa coleção de <a href='/docs/about_sms/'>configurações de SMS</a> para conhecer o SMS no Braze. <br><br>**A disponibilidade de SMS, MMS e RCS depende de seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.**"
+description: "Essa landing page contém SMS (Short Messaging Service), MMS (Multimedia Messaging Service) e RCS (Rich Communication Services). Esses serviços oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de envio de mensagens, pois utilizam o número de telefone deles, permitindo que você entre em contato com eles em tempo real."
 
 guide_featured_title: "Artigos gerais"
 guide_featured_list:
 - name: "Leis e regulamentos"
   link: /docs/sms_mms_rcs_laws/
   image: /assets/img/braze_icons/briefcase-02.svg
-- name: "Grupos de assinatura"
+- name: "Grupos de inscrições"
   link: /docs/sms_rcs_subscription_groups/
   image: /assets/img/braze_icons/table.svg
 - name: "Permissões geográficas"
   link: /docs/geographic_permissions/
   image: /assets/img/braze_icons/globe-04.svg
-- name: "Encurtamento de links"
+- name: "Encurtamento de link"
   link: /docs/link_shortening/
   image: /assets/img/braze_icons/link-03.svg
-- name: "Retargeting"
+- name: "Redirecionamento"
   link: /docs/sms_mms_rcs_user_retargeting/
   image: /assets/img/braze_icons/users-01.svg
 - name: "Processamento de palavras-chave e casos de uso"
@@ -47,7 +47,7 @@ guide_featured_list:
 - name: "Calculadoras de faturamento"
   link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg
-- name: "Painel de uso de mensagens"
+- name: "Painel de Uso de Mensagens"
   link: /docs/message_usage_dashboard/
   image: /assets/img/braze_icons/file-07.svg
 
@@ -56,13 +56,13 @@ guide_menu_list:
 - name: "Sobre a SMS"
   link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "Termos de SMS para conhecer"
+- name: "Termos importantes de SMS"
   link: /docs/sms_terms_to_know/
   image: /assets/img/braze_icons/book-closed.svg
 - name: "Envio de mensagens SMS"
   link: /docs/sms_message_sending/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "Criação de uma mensagem SMS"
+- name: "Criação de um envio de mensagens SMS"
   link: /docs/create_sms_message/
   image: /assets/img/braze_icons/table.svg
 - name: "Perguntas frequentes sobre SMS"
@@ -83,7 +83,7 @@ guide_menu_list2:
 - name: "Cartões de contato"
   link: /docs/mms_contact_cards/
   image: /assets/img/braze_icons/user-circle.svg
-- name: "Perguntas frequentes sobre MMS"
+- name: "Perguntas frequentes sobre a MMS"
   link: /docs/mms_faq/
   image: /assets/img/braze_icons/annotation-question.svg
 
