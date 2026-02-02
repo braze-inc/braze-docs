@@ -73,6 +73,10 @@ This means you can still use Content Optimizer in single-send or short-term Canv
 - Only one message is sent per user per entry. There is no memory of previous sends for re-entries.
 - Marketers must manually insert Liquid tags for each component in the message composer where the defined content component variants should render.
 
+## How is my data used and sent to OpenAI? {#ai-policy} 
+
+{% multi_lang_include brazeai/generative_ai/policy.md %}
+
 ## Next steps
 
 - Contact your customer success manager to join the beta or for onboarding support.
