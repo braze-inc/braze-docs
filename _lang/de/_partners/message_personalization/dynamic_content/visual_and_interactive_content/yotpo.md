@@ -23,7 +23,7 @@ Mit der Integration von Braze und Yotpo können Sie in E-Mails und anderen Kanä
 | ----------- | ----------- |
 | Yotpo-Konto | Ein Yotpo-Konto ist erforderlich, um die Vorteile dieser Partnerschaft zu nutzen. |
 | Yotpo Bewertungen API-Schlüssel | Diese API wird im Code-Snippet Connected-Content implementiert.<br><br>Weitere Informationen finden Sie unter [Finden Sie Ihren Yotpo App-Schlüssel und geheimen Schlüssel](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
-| Yotpo Loyalitäts-API-Schlüssel | Dieser API-Schlüssel und die GUID werden im Code-Snippet für Connected-Content implementiert.<br><br>Weitere Informationen finden Sie unter [Finden Ihres API-Schlüssels und Ihrer GUID für Treue und Empfehlungen](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
+| Yotpo Loyalitäts-API-Schlüssel | Dieser API-Schlüssel und der global eindeutige Bezeichner (GUID) werden im Code-Snippet von Connected-Content implementiert.<br><br>Weitere Informationen finden Sie unter [Finden Sie Ihre Treue & Empfehlungen API-Schlüssel und GUID](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Bevor Sie fortfahren, vergewissern Sie sich, dass die ID des Yotpo-Produkts mit der `product_id` übereinstimmt, die dynamisch von Braze abgerufen wird. Dies ist ein Pflichtfeld, damit die Integration funktioniert. 
@@ -159,15 +159,15 @@ Das Snippet sieht dann etwa so aus:
 
 ## Häufig gestellte Fragen {#faq}
 
-#### Was ist, wenn ich keine 5-Sterne-Bewertung habe?
+### Was ist, wenn ich keine 5-Sterne-Bewertung habe?
 
 Wenn Sie keine 5-Sterne-Bewertungen haben (z.B. wenn die Antwort des Endpunkts NULL für die 5-Sterne-Bewertung zurückgibt), wird kein Inhalt angezeigt.
 
-#### Was ist, wenn ich kein Bild für ein Produkt veröffentlicht habe?
+### Was ist, wenn ich kein Bild für ein Produkt veröffentlicht habe?
 
 Wenn Sie keine Bilder für ein Produkt haben (z.B. wenn die Antwort des Endpunkts NULL für das Produktbild zurückgibt), wird kein Inhalt angezeigt.
 
-#### Kann ich das Aussehen anpassen oder andere Datenfelder von Yotpo beziehen?
+### Kann ich das Aussehen anpassen oder andere Datenfelder von Yotpo beziehen?
 
 Ja! Weitere Datenpunkte und Anpassungsmöglichkeiten finden Sie unter [Einen API-Aufruf tätigen]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). Möglicherweise benötigen Sie dazu die Hilfe eines Entwicklers:in.
 
