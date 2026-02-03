@@ -3,6 +3,7 @@ nav_title: "Migrate from Content Cards"
 article_title: "Migrate from Content Cards to Banners"
 description: "Learn how to migrate from Content Cards to Banners, including code examples for all supported SDKs, limitations, and benefits."
 page_order: 5
+toc_headers: h2
 channel:
   - banners
 platform:
