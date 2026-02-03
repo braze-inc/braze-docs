@@ -21,7 +21,7 @@ For both Canvases and Campaigns, you must save all changes before approving, eve
 
 {% tabs %}
 {% tab campaign %}
-To launch a campaign, you must approve these components:
+To launch a Campaign, you must approve these components:
 
 - **Messages:** This is the campaign message.
 - **Delivery:** This is the delivery type and determines when users receive the campaign.
