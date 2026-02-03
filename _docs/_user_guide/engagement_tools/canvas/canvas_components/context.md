@@ -100,7 +100,7 @@ We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guid
 If you're previewing your Canvas in the **Preview & Test Send** section of the editor, the timestamp in the test message preview **does not** standardize to UTC because this panel generates previews as strings. This means if a Canvas is set up to accept a `time` object, the message preview does not accurately preview what occurs when the Canvas is live. To test your Canvas most accurately, we recommend previewing user paths instead.
 {% endalert %}
 
-Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience, decision, or Action Path step comparisons that match users to any context variables.
+Be sure to observe any common scenarios that create invalid context variables. When previewing your user path, you can view the outcomes of personalized Delay steps using context variables, and any audience or decision step comparisons that match users to any context variables.
 
 If the context variable is valid, you can reference the variable throughout your Canvas. However, if the context variable wasn’t created correctly, future steps in your Canvas won’t perform correctly either. For example, if you create a Context step to assign users an appointment time and set the appointment time's value to a past date, the reminder email in your Message step does not send.
 
