@@ -59,7 +59,7 @@ After you turn on the approval workflow, you must set user permissions so your d
 {% tab campaign %}
 You must have the ["Approve and Deny Campaigns" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#managing-limited-and-team-role-permissions). This permission controls who can update the approval status of a campaign. With this permission, you can do the following:
 
-- Self-approve the campaign
+- Self-approve the Campaign
 - Approve and launch the Campaign
 - Approve but not launch the Campaign (a different user with the "Send Campaigns, Canvases" permission can launch the Campaign)
 - Neither approve nor launch the Campaign
