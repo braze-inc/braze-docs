@@ -61,7 +61,7 @@ You must have the ["Approve and Deny Campaigns" permission]({{site.baseurl}}/use
 
 - Self-approve the campaign
 - Approve and launch the Campaign
-- Approve but not launch the campaign (a different user with the "Send Campaigns, Canvases" permission can launch the campaign)
+- Approve but not launch the Campaign (a different user with the "Send Campaigns, Canvases" permission can launch the Campaign)
 - Neither approve nor launch the campaign
 
 After approval statuses are set on the **Summary** step, any subsequent changes made to the campaign reset all approval statuses when saved. This applies to any changes made either in a draft campaign or a post-launch campaign. For example, if you only make changes to the target audience, the **Summary** step reverts approval statuses for all sections back to the default state, **Pending Approval**.
