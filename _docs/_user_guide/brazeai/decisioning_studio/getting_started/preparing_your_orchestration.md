@@ -12,7 +12,7 @@ description: "This reference article explains what you need to prepare before se
 
 ## What is orchestration?
 
-Orchestration is the connection between Decisioning Studio and your Customer Engagement Platform (CEP). Once your decisioning agent determines the optimal action for each customer, orchestration carries out those decisions by triggering personalized communications through your CEP.
+Orchestration is the connection between Decisioning Studio and your customer engagement platform (CEP). Once your decisioning agent determines the optimal action for each customer, orchestration carries out those decisions by triggering personalized communications through your CEP.
 
 Think of it this way:
 
