@@ -21,21 +21,13 @@ channel:
 
 iOS プッシュ通知のキャンペーンを作成し、[**設定**] タブに移動して、[**通知グループ**] ドロップダウンを開きます。
 
-<<<<<<< HEAD
-![設定」タブの「通知グループ」ドロップダウンで「クーポン」を選択した。]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
-=======
-\![設定」タブの「通知グループ」ドロップダウンで「クーポン」を選択した。]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
->>>>>>> main
+!["Settings"タブに"Notification group"ドロップダウンで"Coupons"の値を選択しました。]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
 ドロップダウンから通知グループを選択する。通知グループの設定に不具合がある場合、またはドロップダウンから [**なし**] を選択した場合、メッセージはワークスペース内のすべての定義済みユーザーに通常どおり自動的に送信されます。
 
 ここに通知グループがない場合は、iOSのスレッドIDを使って追加できる。追加したい通知グループごとに、iOSスレッドIDが1つ必要だ。次に、ドロップダウンの [**通知グループを管理**] をクリックし、表示される [**iOS プッシュ通知グループを管理**] ウィンドウの必須フィールドに入力して、iOS スレッド ID を通知グループに追加します。
 
-<<<<<<< HEAD
-![iOSのプッシュ通知グループを管理するウィンドウ。]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
-=======
-\![iOSのプッシュ通知グループを管理するウィンドウ。]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
->>>>>>> main
+![iOS プッシュ通知を管理するためのウィンドウです。]({% image_buster /assets/img_archive/managenotgroups.png %}){: style="max-width:70%;" }
 
 iOS プッシュキャンペーンを作成したら、作成画面の上部を確認します。そこに、**Notification Groups（通知グループ**）と書かれたドロップダウンがある。
 
@@ -82,7 +74,7 @@ UNNotificationCategory *newsCategory = [UNNotificationCategory categoryWithIdent
 
 Apple は、ユーザーが明示的にオプトインする前に、ユーザーの通知センターにサイレントプッシュ通知の送信をブランドに許可ており、お客様のメッセージの価値を早期に示す機会を提供しています。あなたのアプリで[仮のプッシュ通知を設定](#set-up-provisional-push-notifications)するだけで、仮のプッシュトークンを持っているユーザーは誰でもあなたのメッセージを受け取ることができる。
 
-従来の iOS プッシュトークンとは異なり、暫定プッシュトークンは「お試し許諾」として機能します。これにより、ブランドは、新規ユーザーが Apple のネイティブプッシュオプトインプロンプトを確認してクリックする前に、新規ユーザーに接触できます。この機能により、お客様のプッシュ通知は新規ユーザーの通知トレイに直接配信され、今後の通知を「保持」または「オフ」にするオプションが付きます。ユーザーは「オプトイン」ジャーニーを体験する代わりに、「オプトアウト」ジャーニーのような体験をします。
+従来のiOS プッシュトークンとは異なり、暫定プッシュトークンは"trial pass&quot として機能します。これにより、ブランドはアップルのネイティブプッシュオプトインプロンプトを見てクリックするまでに新しいユーザーに到達することができます。この機能により、お客様のプッシュ通知は新規ユーザーの通知トレイに直接配信され、今後の通知を「保持」または「オフ」にするオプションが付きます。ユーザーは「オプトイン」ジャーニーを体験する代わりに、「オプトアウト」ジャーニーのような体験をします。
 
 {% alert tip %}
 暫定承認には、オプトイン率を劇的に高める可能性がありますが、ただしユーザーがお客様のメッセージに価値を認めた場合に限られます。[ユーザーセグメンテーション]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)、[ロケーションターゲティング]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/)、[パーソナライゼーション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)機能を使って、適切なユーザーが適切なタイミングで「トライアル」通知を受け取れるようにしよう。そうすれば、プッシュ通知がユーザーのアプリ体験に付加価値を与えることを理解した上で、ユーザーにプッシュ通知への完全なオプトインを促すことができる。
@@ -90,26 +82,18 @@ Apple は、ユーザーが明示的にオプトインする前に、ユーザ�
 
 ユーザーがどちらのオプションを選択しても、ユーザープロフィールの**Engagement**タブにある[Contact Settingsに]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab)適切なトークンまたは[サブスクリプションステータスが]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/)追加される。
 
-<<<<<<< HEAD
-![プッシュ購読ステータスを持つコンタクト設定。]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![プッシュサブスクライブされたステータスで設定s に連絡します。]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 [セグメンテーション・フィルターを使って]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)、仮承認か否かに基づいてユーザーをターゲティングすることができる。
 
-![セグメンテーションの詳細パネルに「iOSのストップウォッチ（iOS）で暫定的に許可されていることがtrue」というサンプルフィルターを表示し、ユーザーをターゲティングする。]({% image_buster /assets/img/segment-push-prov-auth.png %})
-=======
-\![プッシュ購読ステータスを持つコンタクト設定。]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
-
-[セグメンテーション・フィルターを使って]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)、仮承認か否かに基づいてユーザーをターゲティングすることができる。
-
-\![セグメンテーションの詳細パネルに「iOSのストップウォッチ（iOS）で暫定的に許可されていることがtrue」というサンプルフィルターを表示し、ユーザーをターゲティングする。]({% image_buster /assets/img/segment-push-prov-auth.png %})
->>>>>>> main
+![サンプルSegment フィルター &quot を含むSegment 詳細パネル。iOS ストップウォッチ(iOS) で暫定的に許可されたものはtrue" を対象とするユーザーs です。]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 もしユーザーがあなたからの暫定プッシュを「オフ」にすると、もうあなたからの暫定プッシュメッセージは表示されなくなる。この機能を使って送信されるメッセージの内容や順序には十分注意すること！
 {% endalert %}
 
 {% alert important %}
-追加のプッシュプロンプトや[アプリ内プッシュプライマー](https://www.braze.com/resources/glossary/priming-for-push/)（プッシュ通知へのオプトインを促すアプリ内メッセージ）を使用する場合は、Brazeの担当者に連絡して追加のガイダンスを受ける。
+追加のプッシュプロンプトまたは[in-アプリ プッシュプライマー](https://www.braze.com/resources/glossary/priming-for-push/)(ユーザーがsをプッシュ通知にオプトインすることを推奨するアプリ内メッセージ)を使用する場合は、Braze担当者に追加の指針を問い合わせてください。
 {% endalert %}
 
 #### 仮のプッシュ通知を設定する
@@ -150,21 +134,13 @@ if (@available(iOS 12.0, *)) {
 
 iOS 15の新しいフォーカス・モードでは、ユーザーはアプリの通知を音や振動で「中断」させるタイミングをより自由にコントロールできる。
 
-<<<<<<< HEAD
-![iOSの通知設定ページでは、即時配信の通知がイネーブルメントに設定され、時間指定通知がイネーブルメントに設定されている。]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
-=======
-\![iOSの通知設定ページでは、即時配信の通知がイネーブルメントに設定され、時間指定通知がイネーブルメントに設定されている。]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
->>>>>>> main
+![iOS 通知設定ページでは、即時配信が有効になっており、タイムセンシティブ通知が有効になっている通知が表示されます。]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
 
 緊急度に基づいて、通知に含める必要がある割り込みのレベルをアプリで指定できるようになりました。
 
 iOSプッシュ通知の中断レベルを変更するには、**「設定」**タブを選択し、「**中断レベル」**ドロップダウンメニューから希望のレベルを選択する。
 
-<<<<<<< HEAD
-![中断レベルを選択するドロップダウン。]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
-=======
-\![中断レベルを選択するドロップダウン。]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
->>>>>>> main
+![割り込みレベルを選択するためのドロップダウン]({% image_buster /assets/img/ios/interruption_level.png %}){: style="max-width:50%"}
 
 この機能にはSDKの最小バージョン要件はないが、iOS 15以上を搭載したデバイスにのみ適用される。
 
@@ -182,11 +158,7 @@ iOSプッシュ通知の中断レベルを変更するには、**「設定」**�
 
 ### 関連性スコア（iOS 15以上） {#relevance-score}
 
-<<<<<<< HEAD
-![iOS用の通知サマリー「Your Evening Summary」には3つの通知がある。]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-=======
-\![iOS用の通知サマリー「Your Evening Summary」には3つの通知がある。]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
->>>>>>> main
+![iOS の通知サマリー「" Your Evening Summary" 3 通知 s.]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 またiOS 15では、1日を通して指定した時間に、複数の通知をダイジェストでまとめるスケジュールをユーザーが任意に設定できるようになった。これは、すぐに注意を払う必要のない通知により一日中繰り返される割り込みを防ぐ措置です。
 
@@ -196,11 +168,7 @@ iOSプッシュ通知の中断レベルを変更するには、**「設定」**�
 
 iOS通知の関連性スコアを設定するには、**設定**タブで`0.0` から`1.0` の間の値を入力する。例えば、最重要メッセージは `1.0` で送信する必要があり、重要度が中のメッセージは `0.5` で送信できます。
 
-<<<<<<< HEAD
-![関連性スコアは「0.5」である。]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
-=======
-\![関連性スコアは「0.5」である。]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
->>>>>>> main
+!["0.5"の関連性スコア。]({% image_buster /assets/img/ios/relevance-score.png %}){: style="max-width:80%;"}
 
 この機能にはSDKの最小バージョン要件はないが、iOS 15以上を搭載したデバイスにのみ適用される。
 

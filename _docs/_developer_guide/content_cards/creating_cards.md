@@ -1,6 +1,6 @@
 ---
-nav_title: Creating cards
-article_title: Creating Content Cards
+nav_title: Create cards
+article_title: Create Content Cards
 page_order: 0
 description: "This article covers components of creating a custom Content Card UI."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Creating Content Cards
+# Create content cards
 
 > This article discusses the basic approach you'll use when implementing custom Content Cards, as well as three common use cases. It assumes you've already read the other articles in the Content Card customization guide to understand what can be done by default and what requires custom code. It's especially helpful to understand how to [log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) for your custom Content Cards. 
 

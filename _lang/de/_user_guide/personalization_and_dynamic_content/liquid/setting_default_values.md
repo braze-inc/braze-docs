@@ -1,12 +1,12 @@
 ---
-nav_title: Standardwerte einstellen
-article_title: Standardwerte für Flüssigkeiten einstellen
+nav_title: Standardwerte festlegen
+article_title: Standard Liquid-Werte festlegen
 page_order: 5
 description: "In diesem Artikel erfahren Sie, wie Sie Standardwerte für alle Personalisierungsattribute festlegen, die Sie in Ihren Nachrichten verwenden."
 
 ---
 
-# Standardwerte einstellen
+# Standardwerte festlegen
 
 {% raw %}
 

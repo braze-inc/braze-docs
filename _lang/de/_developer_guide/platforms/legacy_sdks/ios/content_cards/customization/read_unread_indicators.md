@@ -1,5 +1,5 @@
 ---
-nav_title: Gelesen &amp; Ungelesen Indikatoren
+nav_title: Gelesen &amp; Ungelesen-Anzeigen
 article_title: Content-Card Lese- &amp; Ungelesen-Anzeigen für iOS
 platform: iOS
 page_order: 4
@@ -34,7 +34,7 @@ So setzen Sie beispielsweise die Farbe der Nicht-aufgerufen-Anzeige auf Rot:
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 (card as? ABKBaseContentCardCell).unviewedLineView.backgroundColor = UIColor.red

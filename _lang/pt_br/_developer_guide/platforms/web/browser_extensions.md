@@ -42,7 +42,7 @@ O Braze pode ser incluído nas seguintes áreas de sua extensão:
 
 O `manifest.json` não requer permissões adicionais como um arquivo de localização empacotado com sua extensão ao integrar o SDK da Braze (`braze.min.js`). 
 
-No entanto, se você usar [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), ou referenciar o SDK do Braze a partir de uma URL externa, ou tiver definido uma Política de Segurança de Conteúdo rigorosa para sua extensão, você precisará ajustar a configuração [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) em seu `manifest.json` para permitir fontes de script remotas.
+No entanto, se você usar o [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), ou fizer referência ao SDK da Braze a partir de um URL externo, ou tiver definido uma Política de segurança de conteúdo rigorosa para sua extensão, será necessário ajustar a configuração [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) no `manifest.json` para permitir fontes de script remotas.
 
 ## Primeiros passos
 
@@ -52,13 +52,13 @@ Antes de começar, leia o [guia de configuração inicial do Web SDK]({{site.bas
 
 Para integrar o Braze Web SDK, primeiro você precisará baixar uma cópia da biblioteca JavaScript mais recente. Isso pode ser feito usando o NPM ou baixando-o diretamente da [CDN do Braze](https://js.appboycdn.com/web-sdk/latest/braze.min.js).
 
-Alternativamente, se você preferir usar [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ou usar uma cópia do SDK Braze hospedada externamente, tenha em mente que carregar recursos externos exigirá que você ajuste sua configuração [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) em seu `manifest.json`.
+Como alternativa, se você preferir usar o [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ou usar uma cópia hospedada externamente do Braze SDK, lembre-se de que o carregamento de recursos externos exigirá que você ajuste a configuração [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) em seu site `manifest.json`.
 
 Depois de baixar, copie o arquivo `braze.min.js` em algum lugar do diretório de sua extensão.
 
 ### Popups de extensão {#popup}
 
-Para adicionar a Braze a uma extensão pop-up, faça referência ao arquivo JavaScript local em seu site `popup.html`, como faria em um site normal. Se você estiver usando o Google Tag Manager, pode adicionar Braze usando nossos [modelos do Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/).
+Para adicionar a Braze a uma extensão pop-up, faça referência ao arquivo JavaScript local em seu site `popup.html`, como faria em um site normal. Se estiver usando o Google Tag Manager, poderá adicionar a Braze usando nossos [modelos do Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/).
 
 ```html
 <html>
@@ -110,5 +110,5 @@ Para saber mais sobre nossas opções de inicialização suportadas, visite a [r
 
 ## Push
 
-As caixas de diálogo pop-up de extensão não permitem push prompts (elas não têm a barra de URL na navegação). Então, para registrar e solicitar permissão de push dentro do diálogo Popup de uma extensão, você terá que usar uma solução alternativa de domínio, conforme descrito em [Domínio de push alternativo]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
+As caixas de diálogo pop-up de extensão não permitem push prompts (elas não têm a barra de URL na navegação). Portanto, para registrar e solicitar permissão push na caixa de diálogo pop-up de uma extensão, será necessário usar uma solução alternativa de domínio, conforme descrito em [Alternar domínio push]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
 

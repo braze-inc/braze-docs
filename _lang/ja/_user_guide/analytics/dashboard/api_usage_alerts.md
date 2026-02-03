@@ -1,6 +1,6 @@
 ---
 nav_title: API利用アラート
-article_title: API 使用アラート
+article_title: API 使用状況アラート
 description: "この記事では、予期せぬトラフィックをプロアクティブに検出できるAPI使用アラートの概要を説明する。"
 page_order: 3.6
 ---
@@ -68,7 +68,7 @@ API使用アラートを作成する：
 
 メールアラート、Webhook アラート、またはその両方を設定できます。Webhookアラートは、Slackチャネルなどの外部プラットフォームにアラートを送信するようなユースケースで非常に役立つ。例として、Slackとのアラート統合に関する[ドキュメントで](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration)、通知設定を参照できる。
 
-![アラートの基準に達すると、選択したEメールにメールが送信される。]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
+![アラートの基準に達すると、選択したメールにメールが送信される。]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
 ### サンプルペイロード {#payload}
 

@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://branch.io/), a mobile linking platform, helps you acquire, engage, and measure across all devices, channels, and platforms by providing a holistic view of all user touchpoints.
+> [Branch는](https://branch.io/) 사용자 터치포인트에 대한 전체적인 뷰를 제공하여 기기, 채널, 플랫폼 전반에서 고객 확보, 참여, 측정에 사용되는 모바일 연결 플랫폼입니다.
 
 _This integration is maintained by Branch._
 
@@ -29,7 +29,7 @@ Follow [Branch's SDK integration guide](https://help.branch.io/developers-hub/do
 To support sending iOS universal links as deep links from within Braze:
 
 1. Follow Branch's documentation for setting up [universal links](https://help.branch.io/developers-hub/docs/ios-universal-links).
-2. Implement the [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) method [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) in your Braze SDK integration to [route universal links]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) from within your app.
+2. 구현 [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) 메서드 [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) 를 구현하여 앱 내에서 [유니버설 링크를 라우팅하세요]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization).
 
 ### Deep linking in email
 

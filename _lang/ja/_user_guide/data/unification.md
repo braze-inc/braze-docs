@@ -1,12 +1,12 @@
 ---
-nav_title: データの統一
-article_title: データの統一
+nav_title: データ統合
+article_title: データ統合
 page_order: 1
 layout: dev_guide
-guide_top_header: "データの統一"
-guide_top_text: "> ユーザーデータをBrazeで一箇所にまとめる。データソースが何であれ、ユーザーデータすべてを統合することで、ユーザーの行動、嗜好、アクションなど、ユーザーの全体像を把握することができる。"
+guide_top_header: "データ統合"
+guide_top_text: "> ユーザーデータをBraze の1 か所にまとめます。データソースに関係なく、すべてを統一することで、ユーザーの行動、環境設定、アクションs などの全体像を把握できます。"
 page_type: landing
-description: "このセクションには、Braze Data Platformのデータ統一に関する記事が含まれている。"
+description: "ここでは、Brazeデータプラットフォームのデータ統合に関する記事について説明します。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
@@ -19,7 +19,7 @@ guide_featured_list:
   - name: ユーザーデータの収集
     link: /docs/user_guide/data/unification/user_data_collection/
     image: /assets/img/braze_icons/users-01.svg
-  - name: 式の作成
+  - name: 数式の作成
     link: /docs/user_guide/data/unification/creating_a_formula/
     image: /assets/img/braze_icons/beaker-02.svg
 

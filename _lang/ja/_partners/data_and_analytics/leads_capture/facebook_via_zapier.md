@@ -141,23 +141,23 @@ Webhookを設定した後、**Continue とtest** を選択します。テスト�
 
 ## トラブルシューティング
 
-{% details トリガーとアクションを正常にテストしたため、Zapierのザップを公開できないのはなぜですか? %}
+{% details I tested the Trigger and Action successfully, so why am I unable to publish my Zapier Zap? %}
 この統合を使用するには、プレミアムアプリs をサポートする<a href="https://zapier.com/app/pricing/" target="_blank">Zapierプラン</a> が必要です。
 {% enddetails %}
 
-{% details Facebook リードが Braze に同期されないのはなぜですか? %}
+{% details Why aren’t Facebook leads syncing to Braze? %}
 1. 管理者が Facebook ページ、広告アカウント、リードアクセスにアクセスできることを確認します。次に、Zapier でアカウントを再接続します。
 2. Facebook で作成したインスタントフォームが、トリガーステップで選択したフォームにマッピングされていることを確認します。 
 3. [**Facebook Business Manager**] > [**Integrations**] > [**Lead Access**] に移動して、Zapier を Leads Access に割り当てていることを確認します。
 {% enddetails %}
 
-{% details 同じメールが設定されている重複ユーザープロファイルが表示されるのはなぜですか? %}
+{% details Why am I seeing duplicate user profiles with the same email? %}
 [ユーザープロファイルライフサイクル]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle#user-profile-lifecycle) に基づいて、Braze でユーザープロファイルs を作成および管理する独自の方法があります。
 
 内部プロセスによっては、Braze 内での顧客の作成をトリガーするときに、統合によって作成されるユーザープロファイルの競合状態と、ユーザーがシステムから作成された時点に応じて、重複するユーザープロファイルが発生することがあります。Braze では[ユーザープロファイルをマージできます]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/)。
 {% enddetails %}
 
-{% details Zapier アカウントを持っていません。Facebook Lead Ads Webhook を Braze にトリガーするにはどうすればよいですか? %}
+{% details I don’t have a Zapier account. How can I trigger Facebook Lead Ads webhooks into Braze? %}
 Zapier を使用しておらず、Zapier を使用する予定がない場合は、Facebook から Braze への直接の統合を構築できます。詳細については、<a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/" target="_blank">リード獲得広告のドキュメント</a>を参照してください。
 
 Facebook からリードを取得するには、<a href="https://developers.facebook.com/docs/marketing-api/guides/lead-ads/retrieving#webhooks" target="_blank">Webhook</a> を使用します。Facebook で Webhook の使用を開始するには、<a href="https://developers.facebook.com/docs/graph-api/webhooks/getting-started" target="_blank">Webhook のドキュメント</a> を参照してください。

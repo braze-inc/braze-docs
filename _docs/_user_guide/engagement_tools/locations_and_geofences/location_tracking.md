@@ -20,15 +20,15 @@ To enable location collection on your app, refer to the developer guide for the 
 - [Android]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=android)
 - [Web]({{site.baseurl}}/developer_guide/analytics/tracking_location/?sdktab=web)
 
-In general, mobile apps will use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps will use WPS (Wi-Fi Positioning System) to track a user's location. All of these platforms will require users to opt-in to location tracking. The accuracy of your location tracking data may be affected by whether or not your users have Wi-Fi enabled on their devices. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data.
+In general, mobile apps use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps use WPS (Wi-Fi Positioning System) to track a user's location. All of these platforms require users to opt in to location tracking. The accuracy of your location tracking data may be affected by whether or not your users have Wi-Fi enabled on their devices. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data.
 
 ### SDK user location by IP address
 
-As of November 26, 2024, Braze will detect user locations from the geolocated country using the IP address from the start of the first SDK session. 
+Braze detects user locations from the geolocated country using the IP address from the start of the first SDK session. 
 
-Before this, Braze used the country code from the device locale during SDK user creation and for the duration of the first session. Only after processing the first session start would the IP address be used for setting the more reliable country on the user. This meant that user country was set with greater accuracy only from the second session onwards, only after the first session start was processed.
+Previously, Braze used the country code from the device locale during SDK user creation and for the duration of the first session. Only after processing the first session start would the IP address be used for setting the more reliable country on the user. This meant that user country was set with greater accuracy only from the second session onward, only after the first session start was processed.
 
-Now, Braze will use the IP address to set the country value on user profiles created via the SDK, and that IP-based country setting will be available during and after the first session.
+Now, Braze uses the IP address to set the country value on user profiles created via the SDK, and that IP-based country setting is available during and after the first session.
 
 ## Location targeting
 
@@ -70,8 +70,8 @@ Braze only collects location when the application is open in the foreground. As 
 
 You should also keep the following nuances in mind:
 
-- If location is disabled, the `Most Recent Location` filter will show the last location recorded.
-- If a user has ever had a location stored on their profile, they will qualify for the `Location Available` filter, even if they've opted out of location tracking since then.
+- If location is disabled, the `Most Recent Location` filter shows the last location recorded.
+- If a user has ever had a location stored on their profile, they qualify for the `Location Available` filter, even if they've opted out of location tracking since then.
 
 ### What's the difference between the Most Recent Device Locale and Most Recent Location filters?
 
@@ -79,9 +79,9 @@ The `Most Recent Device Locale` comes from the user's device settings. For examp
 
 The `Most Recent Location` is the last known GPS location of the device. This is updated on session start and is stored on the user's profile.
 
-### If a user opts out of location tracking, will their old location data be removed from Braze?
+### If a user opts out of location tracking, is their previous location data removed from Braze?
 
-No. If a user has ever had a location stored on their profile, that data will not be automatically removed if they later opt out of location tracking.
+No. If a user has ever had a location stored on their profile, that data is not automatically removed if they later opt out of location tracking.
 
 ## Troubleshooting
 

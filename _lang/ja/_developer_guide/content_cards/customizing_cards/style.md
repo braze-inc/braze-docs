@@ -20,7 +20,7 @@ platform:
 
 デフォルトのコンテンツ カード UI は、Braze SDK の UI レイヤーからインポートされます。そこから、カードのスタイルの特定の部分、カードが表示される順序、フィードがユーザーに表示される方法を調整できます。
 
-![2 つのコンテンツカード、1 つはデフォルトのフォントと角が四角形で、もう1 つは角が丸く、中字フォントが] ({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
+![2枚のコンテンツ・カード、1枚はデフォルトのフォントで角が四角いもの、もう1枚は角が丸くカーリーフォントのものである。]({% image_buster/assets/img/content_cards/content-card-customization-attributes.png %})
 
 {% alert note %}
 コンテンツ カードのプロパティ`title`、 `cardDescription`、`imageUrl`などは、[ダッシュボード]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details)から直接編集できます。これは、詳細を変更するための推奨される方法です。
@@ -28,7 +28,18 @@ platform:
 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+Braze のデフォルトスタイルは、Braze SDK 内の CSS で定義されます。アプリケーションで選択したスタイルを上書きすることで、独自の背景画像、フォントファミリ、スタイル、サイズ、アニメーションなどを使用して標準フィードをカスタマイズできます。たとえば、次の例はコンテンツカードを幅800 ピクセルで表示する上書きを示しています。
+
+``` css
+body .ab-feed {
+  width: 800px;
+}
+```
+
+{% endtab %}
+{% tab android %}
 
 デフォルトでは、Android および FireOS SDK コンテンツカードは標準の Android UI ガイドラインに一致し、シームレスなエクスペリエンスを提供します。これらのデフォルトのスタイルは、Braze SDK ディストリビューション内の[`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml)ファイルで確認できます。
 
@@ -80,7 +91,7 @@ platform:
 
 デフォルトでは、Android および FireOS SDK コンテンツカードは標準の Android UI ガイドラインに一致し、シームレスなエクスペリエンスを提供します。
 
-2つの方法のいずれかでスタイルを適用できます。1つ目は、次の例のように`ContentCardListStyling`と`ContentCardStyling`を`ContentCardsList()`に渡します。
+2つの方法のいずれかでスタイルを適用できます。まず、以下の例のように、[`ContentCardListStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html) および[`ContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html) を[`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html) に渡します。
 
 ```kotlin
 ContentCardsList(
@@ -98,7 +109,7 @@ ContentCardsList(
 )
 ```
 
-2つ目は、次の例のように、BrazeStyle を使用して Braze コンポーネントのグローバルスタイルを作成することです。
+2 つ目は、[`BrazeStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose/-braze-style.html) を使用して、次の例のようにBraze コンポーネントのグローバルスタイルを作成します。
 
 ```kotlin
 BrazeStyle(
@@ -118,7 +129,7 @@ BrazeStyle(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 コンテンツカードビューコントローラーを使用すると、[`BrazeContentCardUI.ViewController.Attributes`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller/attributes-swift.struct)構造体を介してすべてのセルの外観と動作をカスタマイズできます 。`Attributes`を使用したコンテンツカードの設定は簡単なオプションであり、最小限の設定でコンテンツカード UI を立ち上げることができます。 
 
@@ -198,17 +209,6 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-Braze のデフォルトスタイルは、Braze SDK 内の CSS で定義されます。アプリケーションで選択したスタイルを上書きすることで、独自の背景画像、フォントファミリ、スタイル、サイズ、アニメーションなどを使用して標準フィードをカスタマイズできます。たとえば、次の例はコンテンツカードを幅800 ピクセルで表示する上書きを示しています。
-
-``` css
-body .ab-feed {
-  width: 800px;
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ## カスタマイズの例
@@ -218,7 +218,19 @@ body .ab-feed {
 コンテンツカードで使用されるフォントをカスタマイズすると、ブランドアイデンティティを維持し、ユーザーにとって視覚的に魅力的なエクスペリエンスを作成できます。これらのレシピを使用して、すべてのコンテンツカードのフォントをプログラムで設定します。 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+他の Web 要素と同様に、CSS を使用してコンテンツカードの外観を簡単にカスタマイズできます。CSS ファイルまたはインラインスタイルで、`font-family`プロパティを使用して、希望のフォント名またはフォントスタックを指定します。
+
+```css
+/* CSS selector targeting the Content Card element */
+.card-element {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+```
+
+{% endtab %}
+{% tab android %}
 
 デフォルトのフォントをプログラムで変更するには、カードのスタイルを設定し、`fontFamily`属性を使用して、カスタムフォントファミリを使用するように Braze に指示します。
 
@@ -238,9 +250,9 @@ body .ab-feed {
 Android SDK でのフォントのカスタマイズの詳細については、[フォントファミリガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization)を参照してください。
 {% endtab %}
 {% tab Jetpack Compose %}
-デフォルトのフォントをプログラムで変更するには、`ContentCardStyling`の`titleTextStyle` を設定します。
+デフォルトのフォントをプログラムで変更するには、`ContentCardStyling` の[`titleTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#715371549%2FProperties%2F-1725759721) を設定します。
 
-また、特定のカードタイプの`titleTextStyle`の場合は、`BrazeShortNewsContentCardStyling`に設定して`ContentCardStyling`の`shortNewsContentCardStyle`に渡すことで設定することもできます。
+また、[`BrazeShortNewsContentCardStyling`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-braze-short-news-content-card-styling/index.html)に設定し、[](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721)`shortNewsContentCardStyle`の[`shortNewsContentCardStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#8580250%2FProperties%2F-1725759721)に渡すことで、特定のカードタイプに`titleTextStyle`を設定することもできます。
 
 ```kotlin
 val fontFamily = FontFamily(
@@ -254,7 +266,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -279,28 +291,45 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-他の Web 要素と同様に、CSS を使用してコンテンツカードの外観を簡単にカスタマイズできます。CSS ファイルまたはインラインスタイルで、`font-family`プロパティを使用して、希望のフォント名またはフォントスタックを指定します。
-
-```css
-/* CSS selector targeting the Content Card element */
-.card-element {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### カスタムの固定アイコン
 
 コンテンツカードの作成時、マーケターはカードを固定するオプションを選択できます。ピン留めされたカードはユーザーのフィードの上部に表示され、ユーザーが閉じることはできません。カードスタイルをカスタマイズすると、固定されたアイコンの外観を変更できます。
 
-![「このカードをフィードの一番上に固定する」オプションを選択した、モバイルおよび Web 用 Braze のコンテンツカードプレビューを並べて表示。]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
+![Braze for MobileとBraze for Webのコンテンツカードプレビューを、「このカードをフィードの先頭にピン留めする」オプションを選択した状態で並べてみた。]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+コンテンツカードの固定アイコンの構造は次のとおりです。
+
+```css
+<div class="ab-pinned-indicator">
+  <i class="fa fa-star"></i>
+</div>
+```
+
+別の FontAwesome アイコンを使用する場合は、`i`要素のクラス名を目的のアイコンのクラス名に置き換えるだけです。  
+
+アイコンを全体的に交換したい場合は、`i`要素を削除し、カスタムアイコンを`ab-pinned-indicator`の子として追加します。いくつかの方法がありますが、簡単な方法の1つは`ab-pinned-indicator`要素の`replaceChildren()`です。
+
+以下に例を示します。
+
+```javascript
+// Get the parent element
+const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
+
+// Create a new custom icon element
+const customIcon = document.createElement('span');
+customIcon.classList.add('customIcon');
+
+// Replace the existing icon with the custom icon
+pinnedIndicator.replaceChildren(customIcon);
+```
+
+{% endtab %}
+{% tab android %}
 
 カスタムの固定アイコンを設定するには、`Braze.ContentCards.PinnedIcon`スタイルを上書きします。カスタム画像アセットは、`android:src`要素で宣言される必要があります。以下に例を示します。
 
@@ -320,7 +349,7 @@ let viewController = BrazeContentCardUI.ViewController.init(braze: braze, attrib
 {% endtab %}
 {% tab Jetpack Compose %}
 
-デフォルトの固定アイコンを変更するには、`ContentCardStyling`の`pinnedResourceId`を設定します。 以下に例を示します。
+デフォルトの固定アイコンを変更するには、`ContentCardStyling`の[`pinnedResourceId`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#794044424%2FProperties%2F-1725759721)を設定します。 以下に例を示します。
 
 ```kotlin
 ContentCardStyling(
@@ -329,7 +358,7 @@ ContentCardStyling(
 )
 ```
 
-`ContentCardStyling`の`pinnedComposable`でコンポーザブルを指定することもできます。`pinnedComposable`が指定されている場合は、`pinnedResourceId`の値が上書きされます。
+`ContentCardStyling`の[`pinnedComposable`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#1460938052%2FProperties%2F-1725759721)にComposableを指定することもできます。`pinnedComposable`が指定されている場合は、`pinnedResourceId`の値が上書きされます。
 
 ```kotlin
 ContentCardStyling(
@@ -346,7 +375,7 @@ ContentCardStyling(
 )
 ```
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -377,45 +406,25 @@ let viewController = BrazeContentCardUI.ViewController(braze: AppDelegate.braze,
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-コンテンツカードの固定アイコンの構造は次のとおりです。
-
-```css
-<div class="ab-pinned-indicator">
-  <i class="fa fa-star"></i>
-</div>
-```
-
-別の FontAwesome アイコンを使用する場合は、`i`要素のクラス名を目的のアイコンのクラス名に置き換えるだけです。  
-
-アイコンを全体的に交換したい場合は、`i`要素を削除し、カスタムアイコンを`ab-pinned-indicator`の子として追加します。いくつかの方法がありますが、簡単な方法の1つは`ab-pinned-indicator`要素の`replaceChildren()`です。
-
-以下に例を示します。
-
-```javascript
-// Get the parent element
-const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
-
-// Create a new custom icon element
-const customIcon = document.createElement('span');
-customIcon.classList.add('customIcon');
-
-// Replace the existing icon with the custom icon
-pinnedIndicator.replaceChildren(customIcon);
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### 未読インジケーターの色の変更
 
 コンテンツカードの下部には、カードが閲覧されたかどうかを示す青い線が表示されます。 
 
-![2枚のコンテンツ・カードが並んで表示される。最初のカードの下部には青い線があり、それがまだ見られていないことを示している。2番目のカードには、すでに表示されていることを示す青い線がありません。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
+![2枚のコンテンツ・カードが並んで表示される。最初のカードの下部には青い線があり、それがまだ見られていないことを示している。2番目のカードには青い線がなく、すでに見られたことを示している。]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+カードの未読インジケーターの色を変更するには、Web ページにカスタム CSS を追加します。たとえば、未表示のインジケーターの色を緑に設定するには、次のようにします。
+
+```css
+.ab-unread-indicator { background-color: green; }
+```
+
+{% endtab %}
+{% tab android %}
 
 未読インジケーターバーの色を変更するには、`colors.xml`ファイルの`com_braze_content_cards_unread_bar_color`の値を変更します。 
 
@@ -430,7 +439,7 @@ pinnedIndicator.replaceChildren(customIcon);
 {% endtab %}
 {% tab Jetpack Compose %}
 
-未読インジケーターバーの色を変更するには、`ContentCardStyling`の`unreadIndicatorColor`の値を変更します。
+未読インジケータバーの色を変更するには、`ContentCardStyling` の[`unreadIndicatorColor`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-styling/index.html#-1669590042%2FProperties%2F-1725759721) の値を変更します。
 
 ```kotlin
 ContentCardStyling(
@@ -439,7 +448,7 @@ ContentCardStyling(
 ```
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 {% subtabs %}
 {% subtab Swift %}
@@ -479,21 +488,22 @@ BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewControlle
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-カードの未読インジケーターの色を変更するには、Web ページにカスタム CSS を追加します。たとえば、未表示のインジケーターの色を緑に設定するには、次のようにします。
-
-```css
-.ab-unread-indicator { background-color: green; }
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### 未読インジケーターを無効にする
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+未読インジケーターバーを非表示にするには、`css`に次のスタイルを追加します。
+
+```css
+.ab-unread-indicator { display: none; }
+```
+
+{% endtab %}
+
+{% tab android %}
 
 未読インジケーターバーを非表示にするには、`ContentCardViewHolder`の[`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean))を`false`に設定します。 
 
@@ -502,8 +512,7 @@ BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewControlle
 {% tab Jetpack Compose %}
 未読インジケーターの無効化は、Jetpack Compose ではサポートされていません。
 {% endtab %}
-
-{% tab iOS %}
+{% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
 
@@ -516,14 +525,5 @@ BRZContentCardUIViewController *viewController = [[BRZContentCardUIViewControlle
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab Web %}
-
-未読インジケーターバーを非表示にするには、`css`に次のスタイルを追加します。
-
-```css
-.ab-unread-indicator { display: none; }
-```
-
 {% endtab %}
 {% endtabs %}

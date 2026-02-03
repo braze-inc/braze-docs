@@ -251,7 +251,7 @@ Le <i>chiffre d'affaires</i> total est le chiffre d'affaires total, en dollars, 
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message et est mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id.</a>
+Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message. <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

@@ -20,7 +20,7 @@ Voucherify で、Voucherify キャンペーンに移動します。次に、**CS
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_export_codes.png %}){: style="margin-top:15px;"}
 
-## ステップ2:プロモーションコードリストを作成する
+## ステップ 2:プロモーションコードリストを作成する
 
 [**Data Settings**] > [**Promotion Codes**] に移動し、[**Promotion Code List**] をクリックします。
 
@@ -34,7 +34,7 @@ Voucherify キャンペーンの名前を使用して、一覧に名前を付け
 
 リスト期限切れアラートやしきい値アラートなどのコードs に属性s を設定することもできますが、コードの背後にあるロジックはVoucherify がリスト設定s に関係なく管理することに注意してください。
 
-![リストの有効期限]({% image_buster /assets/img/voucherify/voucherify_promotion_list_expiration.png %})
+![リスト満了]({% image_buster /assets/img/voucherify/voucherify_promotion_list_expiration.png %})
 
 ## ステップ 3:上読み込む CSVファイル
 
@@ -46,7 +46,7 @@ Voucherify コードを含む CSV ファイルをアップロードします。
 
 ![]({% image_buster /assets/img/voucherify/voucherify_promotion_upload_csv.png %}){: style="max-width:50%;"}
 
-## ステップ4:Braze キャンペーンでのコードスニペットの使用
+## ステップ 4: Braze キャンペーンでのコードスニペットの使用
 
 Braze キャンペーン内のリストからコードs を使用するには、スニペットをコピーしてメール本文に追加します。
 

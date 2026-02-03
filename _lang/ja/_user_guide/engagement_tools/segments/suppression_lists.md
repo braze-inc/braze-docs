@@ -31,11 +31,7 @@ description: "このページでは、抑制リストを使用して、メッセ
 除外リストは、`campaign_id` でBraze ダッシュボード内に作成されたAPI キャンペーンs にアプリされます。除外リストは、関連付けられた`campaign_id`なしで[Braze メッセージング エンドポイント s]({{site.baseurl}}/api/endpoints/messaging/)経由で送信されたメッセージにはアプリしません。
 {% endalert %}
 
-<<<<<<< HEAD
-!["Exception Settings" にチェックボックスを付けて、抑制一覧をAPI-トリガー ed キャンペーン s およびキャンバスにアプリしないようにします。]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
-=======
-\!["Exception Settings" にチェックボックスを付けて、抑制一覧をAPI-トリガー ed キャンペーン s およびキャンバスにアプリしないようにします。]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
->>>>>>> main
+!["Exception Settings"では、抑制一覧をAPI-トリガー ed キャンペーン s およびCanvases にアプリしないようにするチェックボックスがあります。]({% image_buster /assets/img/suppression_list_checkbox.png %}){: style="max-width:70%;"}
 
 ## サプレッションリストの設定 {#setup}
 
@@ -43,31 +39,19 @@ description: "このページでは、抑制リストを使用して、メッセ
 すべてのユーザーs はサプレッションリストを表示できますが、[admin permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?tab=admin#list-of-permissions) を持つユーザーs のみがサプレッションリストを作成および管理できます。
 {% endalert %}
 
-<<<<<<< HEAD
-1. [**オーディエンス**] > [**抑制リスト**] に移動します。<br><br>!["Suppression Lists"ページ。3つの抑制リストのリストがあります。]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
-2. **抑制リストの作成**を選択し、名前を追加します。<br><br>![&quot と呼ばれるウィンドウ;除外リスト&クォートを作成します。名前を入力するフィールドがあります。]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
-=======
-1. [**オーディエンス**] > [**抑制リスト**] に移動します。<br><br>\!["Suppression Lists"ページ。3つの抑制リストのリストがあります。]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
-2. **抑制リストの作成**を選択し、名前を追加します。<br><br>\![&quot と呼ばれるウィンドウ;除外リスト&クォートを作成します。名前を入力するフィールドがあります。]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
->>>>>>> main
+1. [**オーディエンス**] > [**抑制リスト**] に移動します。<br><br>![3つの抑制リストのリストを含む「抑制リスト」ページ。]({% image_buster /assets/img/suppression_lists_home.png %})<br><br>
+2. **抑制リストの作成**を選択し、名前を追加します。<br><br>![名前を入力するフィールドがある「抑制リストの作成」というウィンドウ。]({% image_buster /assets/img/create_suppression_list.png %}){: style="max-width:80%;"}<br><br>
 3. セグメントフィルタを使用して、抑制リスト内のユーザを識別します。少なくとも1 つを選択する必要があります。
 
 {% alert important %}
 設定プロセスは[セグメント作成]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)と似ていますが、抑制リストは**do not**がセグメントメンバーシップに関係なくメッセージを送信したいユーザのグループです。
 {% endalert %}
 
-<<<<<<< HEAD
-![最後の開封が90日間以上前にメールしたユーザー sのフィルターを持つサプレッションリストビルダー。]({% image_buster /assets/img/suppression_list_filters.png %})
+![90 日以上前にメールを最後に開いたユーザのフィルタを含む抑制リストビルダー。]({% image_buster /assets/img/suppression_list_filters.png %})
 
 {: start="4"}
-4\.セグメント名の下にあるボックスをチェックして、タグに基づいて例外を設定するかどうかを決定します(詳細については、[抑制リストを使用する理由?](#why-use-suppression-lists)を参照してください)。次に、この抑制リストのユーザがまだ受信すべきキャンペーンまたはキャンバスのタグを追加します。<br><br>つまり、例外タグ「配送確認」を追加すると、抑制リスト内のユーザーは、タグ「配送確認」を使用するユーザーを除き、すべてのメッセージングから除外されます。<br><br>![The "Shipping List Details" section with an exception タグ アプリlied called "Shipping confirmation".]({% image_buster /assets/img/exception_tags.png %})<br><br>
-=======
-\![最後の開封が90日間以上前にメールしたユーザー sのフィルターを持つサプレッションリストビルダー。]({% image_buster /assets/img/suppression_list_filters.png %})
-
-{: start="4"}
-4\.セグメント名の下にあるボックスをチェックして、タグに基づいて例外を設定するかどうかを決定します(詳細については、[抑制リストを使用する理由?](#why-use-suppression-lists)を参照してください)。次に、この抑制リストのユーザがまだ受信すべきキャンペーンまたはキャンバスのタグを追加します。<br><br>つまり、例外タグ「配送確認」を追加すると、抑制リスト内のユーザーは、タグ「配送確認」を使用するユーザーを除き、すべてのメッセージングから除外されます。<br><br>\![The "Shipping List Details" section with an exception タグ アプリlied called "Shipping confirmation".]({% image_buster /assets/img/exception_tags.png %})<br><br>
->>>>>>> main
-5. 抑制リストを保存または有効化します。
+4\.セグメント名の下にあるボックスをチェックして、タグに基づいて例外を設定するかどうかを決定します(詳細については、[抑制リストを使用する理由?](#why-use-suppression-lists)を参照してください)。次に、この抑制リストのユーザがまだ受信すべきキャンペーンまたはキャンバスのタグを追加します。<br><br>つまり、例外タグ「配送確認」を追加すると、抑制リスト内のユーザーは、タグ「配送確認」を使用するユーザーを除き、すべてのメッセージングから除外されます。<br><br>![[抑制リストの詳細] セクションに「Shipping confirmation」という例外タグが適用されている。]({% image_buster /assets/img/exception_tags.png %})<br><br>
+5\.抑制リストを保存または有効化します。
 - 保存すると、抑制リストは保存されますが、アクティブにはなりません。つまり、有効にはなりません。サプレッションリストはアクティブにするまで非アクティブのままになり、非アクティブなサプレッションリストはメッセージングに影響を与えません(ユーザーはメッセージから除外されません)。
 - 有効にすると、抑制リストが保存され、すぐに有効になります。つまり、抑制リスト内のユーザは、すぐにキャンペーンまたはキャンバスから除外されます(例外タグを含むユーザを除く)。
 
@@ -83,11 +67,7 @@ description: "このページでは、抑制リストを使用して、メッセ
 
 抑制リストでユーザがメッセージを受信できないかどうかを確認するには、キャンペーンまたはキャンバス内の**Target Audience** ステップで**User Lookup** を使用します。ここでは、ユーザーがどの抑制リストに含まれているかを確認できます。
 
-<<<<<<< HEAD
-![" ユーザー Lookup" ユーザーがサプレッションリストにあることを示すウィンドウ。]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
-=======
-\![" ユーザー Lookup" ユーザーがサプレッションリストにあることを示すウィンドウ。]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
->>>>>>> main
+!["ユーザー Lookup" ユーザーがサプレッションリストにあることを示すウィンドウ。]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 {% alert tip %}
 適用された抑制リストは、[**要約**] ステップにも表示されます。
@@ -95,21 +75,13 @@ description: "このページでは、抑制リストを使用して、メッセ
 
 キャンペーンまたはキャンバスの作成中に、**ユーザールックアップ**を**ターゲットオーディエンス**ステップ内で使用してユーザーを検索し、それらがターゲットオーディエンスに存在しない場合は、それらが含まれている抑制リストを確認できます。 
 
-<<<<<<< HEAD
-![" ユーザー Lookup" ユーザーがサプレッションリストにあることを示すウィンドウ。]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
-=======
-\![" ユーザー Lookup" ユーザーがサプレッションリストにあることを示すウィンドウ。]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
->>>>>>> main
+!["ユーザー Lookup" ユーザーがサプレッションリストにあることを示すウィンドウ。]({% image_buster /assets/img/suppression_list_user_lookup.png %}){: style="max-width:70%;"}
 
 ### キャンペーン 
 
 ユーザが抑制リストに含まれている場合、その抑制リストが適用されるキャンペーンは受信されません。除外リストがアプリしない場合については、[除外リストの影響を受けるメッセージの種類とチャネル](#message-types-and-channels-affected-by-suppression-lists)を参照してください。
 
-<<<<<<< HEAD
-!["Suppression Lists" セクション。&quot と呼ばれる1 つのアクティブなサプレッションリストがあります。マーケティングヘルススコア&クォートが低くなります。]({% image_buster /assets/img/active_suppression_list.png %})
-=======
-\!["Suppression Lists" セクション。&quot と呼ばれる1 つのアクティブなサプレッションリストがあります。マーケティングヘルススコア&クォートが低くなります。]({% image_buster /assets/img/active_suppression_list.png %})
->>>>>>> main
+![「抑制リスト」セクションには、「低マーケティング正常性スコア」と呼ばれるアクティブな抑制リストが1つあります。]({% image_buster /assets/img/active_suppression_list.png %})
 
 ### キャンバス 
 

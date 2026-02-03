@@ -48,7 +48,7 @@ En **Detalles de la** bandera de característica, introduce un nombre, un ID y u
 En **Propiedades**, puedes crear opcionalmente propiedades personalizadas a las que tu aplicación pueda acceder a través del SDK de Braze cuando tu característica esté habilitada. Puedes asignar un valor de cadena, booleano, de imagen, de marca de tiempo, JSON o numérico a cada variable, así como establecer un valor predeterminado.
 
 {% tabs local %}
-{% tab ejemplo %}
+{% tab example %}
 En el siguiente ejemplo, la bandera de característica muestra un banner de agotado para una tienda de comercio electrónico utilizando las propiedades personalizadas indicadas: 
 
 |Nombre de la propiedad|Tipo|Valor|
@@ -71,11 +71,11 @@ No hay límite en el número de propiedades que puedes añadir. Sin embargo, las
 
 Antes de desplegar una bandera de características, tienes que elegir un [segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuarios al que dirigirte. Selecciona **Añadir regla** en la bandera que acabas de crear y, a continuación, utiliza los menús desplegables Grupo de filtrado y Segmento para filtrar a los usuarios de tu audiencia objetivo. Añade varios filtros para limitar aún más tu audiencia.
 
-![Un cuadro de texto etiquetado como Tráfico de Rollout con la posibilidad de añadir segmentos y filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
+![Un cuadro de texto con la etiqueta Tráfico de despliegue con la posibilidad de añadir segmentos y filtros.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Paso 5: Configura el tráfico de despliegue {#rollout}
 
-Por defecto, las banderas de características están siempre inactivas, lo que te permite separar la fecha de lanzamiento de tus características de la activación total de tus usuarios. Para iniciar tu despliegue, utiliza la sección **Tráfico de despliegue** para introducir un porcentaje en el cuadro de texto. Esto elegirá el porcentaje de usuarios aleatorios en tu segmento seleccionado para recibir esta nueva característica.
+Por defecto, las banderas de características están siempre inactivas, lo que te permite separar la fecha de lanzamiento de tus características de la activación total de tus usuarios. Para comenzar tu despliegue, utiliza la sección **Tráfico de despliegue** para introducir un porcentaje en el cuadro de texto. Esto elegirá el porcentaje de usuarios aleatorios en tu segmento seleccionado para recibir esta nueva característica.
 
 {% alert important %}
 No configures el tráfico de despliegue por encima del 0 % hasta que estés listo para que tu nueva característica se active en vivo. Cuando definas inicialmente tu feature flag en el panel, deja esta configuración en 0 %.
@@ -110,7 +110,7 @@ Por defecto, las reglas se ordenan en la secuencia en que se crean, pero puedes 
 
 ![Una imagen que muestra que un usuario puede añadir una regla a una bandera de característica.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
 
-![Una imagen que muestra un resumen de una bandera de característica con múltiples reglas añadidas y una regla para todos los demás.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
+![Una imagen que muestra un resumen de una bandera de característica con varias reglas añadidas y una regla para todos los demás.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
 
 ### Casos de uso de la bandera de características multirregla
 
@@ -120,7 +120,7 @@ Supongamos que trabajas para una marca de comercio electrónico y tienes una nue
 
 - **Regla 1:** Tu segmento de EE.UU. está configurado al 100%.
 - **Regla 2:** Tu segmento está establecido en el 50% de tus usuarios brasileños, por lo que no todos ellos reciben el flujo a la vez. 
-- **Regla 3 (Todos los demás):** Para todos los demás usuarios, alterna tu regla "Todos los demás" y ajústala al 15%, de modo que una parte de todos los usuarios puedan realizar la salida con el nuevo flujo.
+- **Regla 3 (El resto):** Para todos los demás usuarios, alterna tu regla "Todos los demás" y ajústala al 15%, de modo que una parte de todos los usuarios puedan realizar la salida con el nuevo flujo.
 
 #### Llega primero a los probadores internos
 
@@ -883,7 +883,7 @@ Para comprobar para qué características es elegible un usuario en Braze, ve a 
 
 En la pestaña **Elegibilidad de las** banderas de características, puedes filtrar la lista de banderas de características elegibles por plataforma, aplicación o dispositivo. También puedes obtener una vista previa de la carga útil que se devolverá al usuario seleccionando <i class="fa-solid fa-eye"></i> junto a la bandera de una característica.
 
-![Una imagen que muestra la tabla de banderas de características a las que un usuario es elegible.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
+![Una imagen que muestra la tabla de banderas de características a las que puede optar un usuario.]({% image_buster /assets/img/feature_flags/eligibility.png %}){: style="max-width:85%;"}
 
 ## Ver el registro de cambios
 
@@ -893,13 +893,13 @@ Para ver el registro de cambios de una feature flag, abre esta última y selecci
 
 Aquí puedes revisar cuándo se produjo un cambio, quién lo hizo, a qué categoría pertenece y mucho más.
 
-![El registro de cambios de la bandera de la característica seleccionada.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
+![El registro de cambios de la bandera de característica seleccionada.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
 ## Segmentación con indicadores de características {#segmentation}
 
 Braze hace un seguimiento automático de los usuarios que tienen habilitada una característica. Puedes crear un segmento o un objetivo de mensajería utilizando el [filtro **Feature flags**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Para más información sobre cómo filtrar por segmentos, consulta [Crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![La sección "Filtros" con la "Bandera de características" escrita en la barra de búsqueda de filtros.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![La sección "Filtros" con la "Bandera de características" introducida en la barra de búsqueda de filtros.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 Para evitar segmentos recursivos, no es posible crear un segmento que haga referencia a otras banderas de características.

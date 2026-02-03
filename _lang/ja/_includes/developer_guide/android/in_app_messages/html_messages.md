@@ -1,15 +1,15 @@
 {% multi_lang_include developer_guide/prerequisites/android.md %}
 
-## HTMLメッセージについて
+## HTMLについて
 
-BrazeのJavaScriptインターフェイスを使えば、アプリ内のカスタムWebView内でBrazeを活用することができる。以下はその責任である。 [`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html)がレスポンシブである：
+Braze JavaScript インターフェイスを使用すると、Brazeをアプリ内のカスタムWebView 内で活用できます。[`InAppMessageJavascriptInterface`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.jsinterface/-in-app-message-javascript-interface/index.html) は、以下の原因となります。
 
-1. [ユーザーガイドに記載されているように、Braze JavaScriptブリッジをWebViewに注入する：HTMLアプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
-2. WebViewから受け取ったブリッジメソッドを[Braze Android SDKに](https://github.com/braze-inc/braze-android-sdk)渡す。
+1. [ ユーザガイドに記載されているように、Braze JavaScript ブリッジをWebView に挿入します。HTML アプリ内メッセージs]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages).
+2. WebViewから受信したブリッジメソッドを[Braze Android SDK](https://github.com/braze-inc/braze-android-sdk)に渡す。
 
 ## WebView へのインターフェースの追加
 
-アプリの WebView から Braze 機能を使用するには、WebView に Braze JavaScript インターフェイスを追加します。インターフェイスが追加された後、[ユーザーガイドと同じAPIが利用できる：HTMLアプリ内メッセージ]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) はカスタムWebView内で利用できるようになる。
+アプリの WebView から Braze 機能を使用するには、WebView に Braze JavaScript インターフェイスを追加します。インターフェイスが追加された後、[ ユーザガイドで使用できる同じAPI が使用可能になります。HTML アプリ内メッセージs]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages) は、ユーザ定義のWebView で使用できます。
 
 {% tabs %}
 {% tab JAVA %}
@@ -36,7 +36,7 @@ myWebView.addJavascriptInterface(javascriptInterface, "brazeInternalBridge")
 {% endtab %}
 {% endtabs %}
 
-## YouTubeのコンテンツを埋め込む
+## YouTubeコンテンツの埋め込み
 
 YouTube やその他の HTML5コンテンツは、HTML アプリ内メッセージで再生できます。これには、アプリ内メッセージが表示されるアクティビティでハードウェアアクセラレーションが有効になっている必要があります。詳細については、[Android 開発者ガイド](https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling)を参照してください。ハードウェアアクセラレーションは、Android API バージョン11以降でのみ利用できます。
 
@@ -53,3 +53,19 @@ YouTube やその他の HTML5コンテンツは、HTML アプリ内メッセー�
     </div>
 </body>
 ```
+
+## ディープリンクの使用
+
+Android HTML アプリ内メッセージs でディープリンクまたは外部リンクを使用する場合、**do not** はJavaScript で`brazeBridge.closeMessage()` を呼び出します。SDKの内部ロジックは、リンクにリダイレクトすると、自動的にアプリ内メッセージを閉じます。`brazeBridge.closeMessage()` を呼び出すと、この処理が妨げられ、ユーザーがアプリに戻ったときにメッセージがレスポンシブでなくなることがあります。 
+
+以下は、コード スニペットのディープリンクの例です。
+
+{% raw %}
+```javascript
+<script>
+document.querySelectorAll('[data-button-id]').forEach(function (node)
+Unknown macro: { node.addEventListener('click', function () { brazeBridge.logClick(node.dataset.buttonId); brazeBridge.closeMessage(); }); }
+);
+</script>
+```
+{% endraw %}

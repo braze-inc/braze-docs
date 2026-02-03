@@ -10,16 +10,16 @@ As notificações por push são limitadas por taxa, então não tenha medo de en
 
 ### Etapa 2: Ativar push capabilities
 
-No Xcode, acesse a seção **Signing & Capabilities** do direcionamento do app principal e adicione o recurso de notificações por push.
+No Xcode, acesse a seção **Acessando & Capabilities** do direcionamento do aplicativo principal e adicione o recurso de notificações por push.
 
-![A seção "Signing & Capabilities" (Assinatura e recursos) em um projeto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
+![A seção "Fazendo login & Capabilities" em um projeto Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
-### Etapa 3: Configurar o manuseio do push
+### Etapa 3: Configurar o manuseio de push
 
 Você pode usar o Swift SDK para automatizar o processamento de notificações remotas recebidas do Braze. Essa é a maneira mais simples de lidar com notificações por push e é o método de tratamento recomendado.
 
 {% tabs local %}
-{% tab Automático %}
+{% tab Automatic %}
 #### Etapa 3.1: Ativar a capacitação na propriedade push
 
 Para ativar a integração automática de push, defina a propriedade `automation` da configuração `push` para `true`:
@@ -318,7 +318,7 @@ Para acessar as cargas úteis de notificação por push processadas pela Braze, 
 Você pode usar o parâmetro `payloadTypes` para especificar se deseja se inscrever em notificações envolvendo eventos de push abertos, eventos de push recebidos ou ambos.
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab Swift %}
 
 ```swift
 // This subscription is maintained through a Braze cancellable, which will observe for changes until the subscription is cancelled.
@@ -335,7 +335,7 @@ Lembre-se de que os eventos recebidos de push só dispararão para notificaçõe
 
 {% endtab %}
 
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;
@@ -403,4 +403,4 @@ Esse recurso melhora as taxas de entrega, sempre encaminhando tokens por push pa
 
 #### Posso desativar esse recurso?
 
-O gerenciamento de gateway de APNs dinâmicos é ativado por padrão e oferece melhorias de confiabilidade. Se tiver casos de uso específicos que exijam a seleção manual do gateway, entre em contato com [o suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).
+O gerenciamento de gateway de APNs dinâmicos é ativado por padrão e oferece melhorias de confiabilidade. Se houver casos de uso específicos que exijam a seleção manual do gateway, entre em contato com [o suporte da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/).

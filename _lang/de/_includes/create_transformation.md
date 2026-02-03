@@ -8,7 +8,7 @@ Wählen Sie **Template verwenden**, um eine Template-Bibliothek zu durchsuchen, 
 
 Wenn Sie bei Null anfangen, wählen Sie ein Ziel für Ihre Transformation. Sie können trotzdem eine Codevorlage aus der Vorlagenbibliothek einfügen.
 
-{% details Mehr über Reiseziele %}
+{% details More on destinations %}
 * **POST: Benutzer verfolgen:** Wandelt Webhooks von einer Quellplattform in Aktualisierungen des Benutzerprofils um, z. B. Attribute, Ereignisse oder Käufe.
 * **PUT: Aktualisieren Sie mehrere Katalogartikel:** Wandelt Webhooks von einer Quellplattform in Aktualisierungen von Katalogartikeln um.
 * **LÖSCHEN: Löschen Sie mehrere Katalogartikel:** Wandelt Webhooks von einer Quellplattform in Löschungen von Katalogartikeln um.
@@ -24,7 +24,7 @@ Nachdem Sie Ihre Transformation erstellt haben, sehen Sie die Detailansicht der 
 
 {% if include.location == "typeform" %}
 
-![Ein Beispiel für Webhook-Details und Transformation Code.]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
+![Ein Beispiel für die Webhook-Details und den Code für die Transformation.]({% image_buster /assets/img/typeform/data_transformation_typeform.png %})
 
 {% endif %}
 

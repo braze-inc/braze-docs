@@ -41,7 +41,7 @@
 
 {% if include.section == "email validation" %}
 
-もしユーザーが受け付けられない特殊文字を含むメールアドレスを入力した場合、一般的なエラーインジケーターが表示され、フォームを送信することができない。このエラーメッセージはカスタマイズできない。**プレビュー & テスト** タブおよびテストデバイスでエラーの動作を確認できます。Braze が [メール アドレスの検証]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) でメール アドレスをどのようにフォーマットするかの詳細をご覧ください。
+もしユーザーが受け付けられない特殊文字を含むメールアドレスを入力した場合、一般的なエラーインジケーターが表示され、フォームを送信することができない。このエラーメッセージはカスタマイズできない。エラーの挙動は、**プレビュー&テスト**タブとテストデバイスで確認できます。Braze が [メール アドレスの検証]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) でメール アドレスをどのようにフォーマットするかの詳細をご覧ください。
 
 {% endif %}
 

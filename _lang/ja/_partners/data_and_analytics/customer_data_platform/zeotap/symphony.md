@@ -81,7 +81,7 @@ Symphony でユーザーにフィルターを適用した後、またはユー�
 [**Data To Send**] タブでは、Zeotap Catalogue のフィールドを、Braze に送信できる Braze のフィールドにマッピングできます。マッピングは以下のいずれかの方法で行うことができる：
 - **静的マッピング** \- Zeotap により関連する Braze フィールドに自動的にマッピングされるフィールドがあります (メール、電話番号、名前、性など)。<br>
 - **ドロップダウン選択** \- Zeotap に取り込まれた関連フィールドを、ドロップダウンメニューに示されている Braze フィールドにマッピングします。<br>![言語、都市、誕生日など、Zeotapに設定されたさまざまなユーザー特性。]({% image_buster /assets/img/zeotap/zeotap7.png %}){: style="max-width:70%;"}<br>
-- **カスタムデータ入力**-関連するZeotapフィールドにマッピングされたカスタムデータを追加し、Brazeに送信する。<br>![Zeotapのユーザー特性として「loyalty_points」を選択する。]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
+- **カスタムデータ入力**-関連するZeotapフィールドにマッピングされたカスタムデータを追加し、Brazeに送信する。<br>![Zeotap のユーザー特性として"loyalty_points" を選択します。]({% image_buster /assets/img/zeotap/zeotap8.png %}){: style="max-width:70%;"}
 
 ## サポートされている属性
 このセクションでは、すべての Braze フィールドの詳細を確認できます。

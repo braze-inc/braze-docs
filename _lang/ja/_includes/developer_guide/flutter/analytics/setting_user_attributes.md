@@ -43,7 +43,7 @@ braze.setStringCustomUserAttribute("custom string attribute", "string custom att
 ```
 
 {% endtab %}
-{% tab 整数 %}
+{% tab Integer %}
 `integer` 、カスタム属性を設定する：
 
 ```dart
@@ -70,14 +70,14 @@ braze.setBoolCustomUserAttribute("custom boolean attribute key", boolean);
 ```
 {% endtab %}
 
-{% tab 日付 %}
+{% tab Date %}
 `date` 、カスタム属性を設定する：
 
 ```dart
 braze.setDateCustomUserAttribute("custom date attribute key", date);
 ```
 {% endtab %}
-{% tab 配列 %}
+{% tab Array %}
 `array` 、カスタム属性を設定する：
 
 ```dart

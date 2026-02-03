@@ -1,5 +1,5 @@
 ---
-nav_title: スマートTV対応
+nav_title: スマート TV 対応
 article_title: Web Braze SDKのスマートTVサポート
 platform: Web
 page_order: 30
@@ -7,7 +7,7 @@ description: "この記事では、Braze Web SDKを使用してスマートテ�
 
 ---
 
-# スマートTV対応
+# スマート TV 対応
 
 > Braze Web SDK を使えば、[Samsung Tizen TV](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html) や [LG TV (webOS)](https://webostv.developer.lge.com/discover) を含むスマート TV ユーザーに対して、分析を収集し、リッチなアプリ内メッセージやコンテンツカードメッセージを表示できます。この記事では、Braze Web SDKを使用してスマートTVと統合する方法について説明する。
 
@@ -26,7 +26,7 @@ description: "この記事では、Braze Web SDKを使用してスマートテ�
 
 ## 分析
 
-アナリティクスのための同じWeb SDKメソッドはすべて、スマートTVで使用できる。カスタムイベントやカスタム属性情報などのトラッキングの詳細については、[Analyticsを]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web)参照のこと。
+アナリティクスのための同じWeb SDKメソッドはすべて、スマートTVで使用できる。カスタムイベントやカスタム属性などのトラッキングの詳細については、[Analytics]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web) を参照してください。
 
 ## アプリ内メッセージとコンテンツカード
 

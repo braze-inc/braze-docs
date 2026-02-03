@@ -81,6 +81,7 @@ In your `app.json`, add the Braze Expo Plugin. You can provide the following con
 | `enableBrazeIosPushStories`                   | boolean | iOS only. Whether to enable Braze Push Stories for iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | string  | iOS only. The app group used for iOS Push Stories.                                                                                                       |
 | `iosUseUUIDAsDeviceId`                        | boolean | iOS only. Whether the device ID will use a randomly generated UUID.                                                                                       |
+| `iosForwardUniversalLinks`                    | boolean | iOS only. Specifies if the SDK should automatically recognize and forward universal links to the system methods (default: `false`). When enabled, the SDK will automatically forward universal links to the system methods defined in [Supporting universal links in your app](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/forwarduniversallinks/). Introduced in React Native SDK v11.1.0 and Expo Plugin v3.2.0. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Example configuration:
@@ -113,7 +114,8 @@ Example configuration:
           "androidNotificationSmallIcon": "@drawable/custom_app_small_icon",
           "iosRequestPushPermissionsAutomatically": false,
           "enableBrazeIosPushStories": true,
-          "iosPushStoryAppGroup": "group.com.example.myapp.PushStories"
+          "iosPushStoryAppGroup": "group.com.example.myapp.PushStories",
+          "iosForwardUniversalLinks": false
         }
       ],
     ]
@@ -264,6 +266,7 @@ cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 Import the Braze SDK at the top of the `AppDelegate.swift` file:
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 In the `application(_:didFinishLaunchingWithOptions:)` method, replace the API [key]({{site.baseurl}}/api/identifier_types/) and [endpoint]({{site.baseurl}}/api/basics/#endpoints) with your app's values. Then, create the Braze instance using the configuration, and create a static property on the `AppDelegate` for easy access:
@@ -385,3 +388,11 @@ const App = () => {
 ```
 
 In the Braze dashboard, go to [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search#using-user-search) and look for the user with the ID matching `some-user-id`. Here, you can verify that session and device data were logged.
+
+## Next steps
+
+After integrating the Braze SDK, you can start implementing common messaging features:
+
+- [Push Notifications]({{site.baseurl}}/developer_guide/push_notifications/): Set up and send push notifications to your users
+- [In-App Messages]({{site.baseurl}}/developer_guide/in_app_messages/): Display contextual messages within your app
+- [Banners]({{site.baseurl}}/developer_guide/banners/): Show persistent banners in your app interface

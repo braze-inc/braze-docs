@@ -3,7 +3,7 @@ nav_title: 시작하기
 article_title: Braze 파일럿 시작하기
 page_order: 2
 page_type: reference
-description: "이 참조 문서에서는 엔지니어 또는 개발자에게 필요한 통합 단계를 간략하게 다룹니다."
+description: "이 참조 문서에서는 엔지니어 또는 개발자에게 필요한 통합 단계에 대해 간략하게 설명합니다."
 ---
 
 # Braze 파일럿 시작하기
@@ -14,11 +14,11 @@ description: "이 참조 문서에서는 엔지니어 또는 개발자에게 필
 
 Braze 파일럿을 사용하려면 먼저 Apple 앱 스토어 또는 Google Play 스토어 앱에서 앱을 다운로드해야 합니다. 앱 스토어에서 앱을 검색하거나 아래 QR 코드를 스캔하여 해당 기기의 앱 페이지로 이동할 수 있습니다.
 
-## 2단계: 이용 약관에 동의
+## 2단계: 이용 약관에 동의합니다.
 
 그런 다음 이용 약관에 동의한 다음 양식에 업무용 이메일을 입력합니다. 이메일은 앱 사용 분석용으로만 사용되며 마케팅 목적으로는 사용되지 않습니다.
 
-\![Braze 파일럿 시작 페이지.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"}\![업무용 이메일 주소를 입력하는 옵션입니다.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
+![Braze 파일럿 환영 페이지.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"} ![업무용 이메일 주소를 입력하는 옵션입니다.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
 
 ## 3단계: Braze 소프트웨어 개발 키트로 연결 초기화하기
 
@@ -35,7 +35,7 @@ Braze 파일럿을 사용하면 모든 Braze 대시보드에 대해 소프트웨
 
 | Android용 파일럿 | iOS용 파일럿 |
 | --- | --- |
-| \![Android용 QR코드.]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | \![iOS용 QR코드.]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
+| ![Android용 QR 코드.]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | ![iOS용 QR 코드.]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -45,11 +45,11 @@ Braze 파일럿을 사용하면 모든 Braze 대시보드에 대해 소프트웨
 
 Braze 대시보드의 **앱 설정** 페이지에서 대시보드 워크스페이스와의 연결을 초기화하는 단계별 가이드를 따르세요.
 
-\![Braze 파일럿 설정 마법사 1단계.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![Braze 파일럿 설정 마법사 1단계.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
 이 연결은 워크스페이스별로 다릅니다. 즉, 데모 워크스페이스에서 연결을 초기화한 다음 무료 평가판 대시보드에서 라이브 워크스페이스로 전환하면 해당 워크스페이스에서 소프트웨어 개발 키트를 다시 초기화해야 그곳에서 시작된 모든 캠페인을 받을 수 있습니다.
 
-"데모 - Braze"가 활성 워크스페이스로 선택된 Braze 대시보드의 워크스페이스 드롭다운.]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
+!["데모 - Braze"가 활성 워크스페이스로 선택된 Braze 대시보드의 워크스페이스 드롭다운.]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
 
 {% endtab %}
 {% endtabs %}

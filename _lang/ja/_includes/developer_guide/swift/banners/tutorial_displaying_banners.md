@@ -6,7 +6,7 @@
 
 ## スウィフトSDKのバナーの表示
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="バナーの表示Swift" %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Displaying Banners Swift" %}
 
 {% tabs %}
 {% tab UIKit %}

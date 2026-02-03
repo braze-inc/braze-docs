@@ -1,8 +1,8 @@
-{% multi_lang_include developer_guide/prerequisites/react_native.md %} [プッシュ通知を設定する必要もあります]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native)。
+{% multi_lang_include developer_guide/prerequisites/react_native.md %} [プッシュ通知の設定も]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native)必要だ。
 
-## プッシュストーリーの有効化
+## プッシュストーリーのイネーブルメント
 
-React Native SDKでは、**プッシュストーリーをデフォルト** でAndroidできます。
+React Native SDKでは、**プッシュストーリーはデフォルトでAndroidで利用できる**。
 
 Expoを使ってiOSでプッシュストーリーズを有効にするには、アプリケーションにアプリグループが定義されていることを確認する。詳細については、[アプリグループの追加]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group)を参照してください。
 

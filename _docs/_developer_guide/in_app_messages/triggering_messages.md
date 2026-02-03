@@ -1,6 +1,6 @@
 ---
-nav_title: Triggering messages
-article_title: Triggering in-app messages through the Braze SDK
+nav_title: Trigger messages
+article_title: Trigger in-app messages through the Braze SDK
 page_order: 0.2
 description: "Learn how to trigger in-app messages through the Braze SDK."
 platform: 
@@ -10,7 +10,7 @@ platform:
   - Web
 ---
 
-# Triggering in-app messages
+# Trigger in-app messages
 
 > Learn how to trigger in-app messages through the Braze SDK.
 

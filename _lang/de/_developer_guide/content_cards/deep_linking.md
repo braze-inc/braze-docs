@@ -17,15 +17,15 @@ platform:
 > Lernen Sie, wie man mit dem Braze SDK Deeplinks innerhalb einer Content-Card setzt. Um mehr über Deeplinks zu erfahren, lesen Sie bitte [Was ist Deeplinking?]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)
 
 {% sdktabs %}
+{% sdktab web %}
+Zur Zeit werden Deeplinks von Content-Cards für das Internet Braze SDK nicht unterstützt.
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/deep_linking.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/deep_linking.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-Zur Zeit werden Deeplinks von Content-Cards für das Internet Braze SDK nicht unterstützt.
 {% endsdktab %}
 {% endsdktabs %}

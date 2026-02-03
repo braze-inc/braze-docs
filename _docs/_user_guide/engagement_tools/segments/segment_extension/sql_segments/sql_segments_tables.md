@@ -29,7 +29,6 @@ Table | Description
 [USERS_BEHAVIORS_UNINSTALL_SHARED](#USERS_BEHAVIORS_UNINSTALL_SHARED) | When a user uninstalls an app
 [USERS_BEHAVIORS_UPGRADEDAPP_SHARED](#USERS_BEHAVIORS_UPGRADEDAPP_SHARED) | When a user upgrades the app
 [USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED](#USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED) | When a user has their first session
-[USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | When a user views the News Feed
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | When a user ends a session on an app
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | When a user begins a session on an app
 [USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | When a user triggers a geofenced area (for example, when they enter or exit a geofence). This event was batched with other events and received through the standard events endpoint, and therefore may not have been received by the endpoint in real time.
@@ -66,9 +65,6 @@ Table | Description
 [USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | An originally scheduled in-app message was aborted for some reason.
 [USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED](#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED) | When a user clicks an in-app message
 [USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED](#USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED) | When a user views an in-app message
-[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | An originally scheduled News Feed card message was aborted for some reason.
-[USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED) | When a user clicks a News Feed card
-[USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED) | When a user views a News Feed card
 [USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | An originally scheduled push notification message was aborted for some reason.
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | When a push notification bounces
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | When a user opens the app after receiving a notification without clicking on the notification
@@ -235,23 +231,6 @@ Field | Type | Description
 `language` | `null,`&nbsp;`string` | [PII] Language of the user
 `device_id` | `null,`&nbsp;`string` | ID of the device on which the session occurred
 `sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the session
-`platform` | `null,`&nbsp;`string` | Platform of the device
-`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | Model of the device
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED {#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED}
-
-Field | Type | Description
-------|------|------------
-`id` | `string` | Globally unique ID for this event
-`user_id` | `string` | Braze ID of the user that viewed the News Feed
-`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`app_api_id` | `null,`&nbsp;`string` | API ID of the app on which the user viewed the News Feed
-`time` | `int` | Unix timestamp at which the user viewed the News Feed
-`device_id` | `null,`&nbsp;`string` | ID of the device on which the impression occurred
-`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the impression
 `platform` | `null,`&nbsp;`string` | Platform of the device
 `os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
 `device_model` | `null,`&nbsp;`string` | Model of the device
@@ -1252,83 +1231,6 @@ Field | Type | Description
 `ad_id` | `null,`&nbsp;`string` | [PII] Advertising identifier
 `ad_id_type` | `null,`&nbsp;`string` | One of `ios_idfa`, `google_ad_id`, `windows_ad_id`, OR `roku_ad_id`
 `ad_tracking_enabled` | `null, boolean` | Whether advertising tracking is enabled for the device
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED}
-
-Field | Type | Description
-------|------|------------
-`id` | `string` | Globally unique ID for this event
-`user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`time` | `int` | Unix timestamp at which the event happened
-`app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
-`card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
-`country` | `null,`&nbsp;`string` | [PII] Country of the user
-`timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] Language of the user
-`device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | Platform of the device
-`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | Model of the device
-`resolution` | `null,`&nbsp;`string` | resolution of the device
-`carrier` | `null,`&nbsp;`string` | carrier of the device
-`browser` | `null,`&nbsp;`string` | browser of the device
-`abort_type` | `null,`&nbsp;`string` | Type of abort, one of: `liquid_abort_message` or `rate_limit`
-`abort_log` | `null,`&nbsp;`string` | [PII] Log message describing abort details (maximum of 2,000 characters)
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED}
-
-Field | Type | Description
-------|------|------------
-`id` | `string` | Globally unique ID for this event
-`user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`time` | `int` | Unix timestamp at which the event happened
-`app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
-`card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
-`country` | `null,`&nbsp;`string` | [PII] Country of the user
-`timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] Language of the user
-`device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | Platform of the device
-`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | Model of the device
-`resolution` | `null,`&nbsp;`string` | resolution of the device
-`carrier` | `null,`&nbsp;`string` | carrier of the device
-`browser` | `null,`&nbsp;`string` | browser of the device
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED}
-
-Field | Type | Description
-------|------|------------
-`id` | `string` | Globally unique ID for this event
-`user_id` | `string` | Braze ID of the user that performed this event
-`external_user_id` | `null,`&nbsp;`string` | [PII] External user ID of the user
-`app_group_api_id` | `null,`&nbsp;`string` | API ID of the workspace this user belongs to
-`time` | `int` | Unix timestamp at which the event happened
-`app_api_id` | `null,`&nbsp;`string` | API ID of the app on which this event occurred
-`card_api_id` | `null,`&nbsp;`string` | API ID of the card
-`gender` | `null,`&nbsp;`string` | [PII] Gender of the user
-`country` | `null,`&nbsp;`string` | [PII] Country of the user
-`timezone` | `null,`&nbsp;`string` | Time zone of the user
-`language` | `null,`&nbsp;`string` | [PII] Language of the user
-`device_id` | `null,`&nbsp;`string` | ID of the device on which the event occurred
-`sdk_version` | `null,`&nbsp;`string` | Version of the Braze SDK in use during the event
-`platform` | `null,`&nbsp;`string` | Platform of the device
-`os_version` | `null,`&nbsp;`string` | Version of the operating system of the device
-`device_model` | `null,`&nbsp;`string` | Model of the device
-`resolution` | `null,`&nbsp;`string` | resolution of the device
-`carrier` | `null,`&nbsp;`string` | carrier of the device
-`browser` | `null,`&nbsp;`string` | browser of the device
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED}

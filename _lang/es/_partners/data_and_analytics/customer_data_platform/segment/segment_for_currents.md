@@ -32,7 +32,7 @@ La integración de Braze y Segment le permite aprovechar Braze Currents para exp
 En tu panel de Segment, selecciona tu fuente de Segment. A continuación, ve a **Configuración > Claves de API**. Aquí encontrará la **clave de escritura de segmentos**.
 
 {% alert warning %}
-Es importante mantener actualizada la clave de escritura de Segment. Si las credenciales de tu conector caducan, el conector dejará de enviar eventos. Si esto persiste durante más de **48 horas**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
+Es importante mantener actualizada la clave de escritura de Segment. Si las credenciales de tu conector caducan, el conector dejará de enviar eventos. Si esto persiste durante más de **5 días**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
 {% endalert %}
 
 ### Paso 2: Crear un nuevo conector Currents
@@ -53,7 +53,7 @@ Ten en cuenta que Braze sólo envía datos de eventos de usuarios sin `external_
 La exportación de usuarios anónimos está actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
 {% endalert %}
 
-![Lista de todos los eventos de interacción de mensajes disponibles en la página de Segmentos Currents de Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
+![Lista de todos los eventos de compromiso de mensajes disponibles en la página Segment Currents de Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Por último, seleccione **Lanzar corriente**.
 

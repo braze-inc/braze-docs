@@ -1,6 +1,6 @@
 ---
 nav_title: Back-in-stock notifications
-article_title: Setting up back-in-stock notifications
+article_title: Set up back-in-stock notifications
 page_order: 2
 description: "Learn how to set up back-in-stock notifications using your catalog and custom events, so you can automatically subscribe customers to receive notifications when an item is back in stock."
 ---
@@ -85,6 +85,8 @@ To template in details about the catalog item that's back in stock, you can use 
 Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} will return the ID of the item that came back in stock. {%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} will return the inventory value of the item prior to the update, and {%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} will return the new inventory value after the update.
 
 Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} at the top of your message, then use {%raw%}``{{ items[0].<field_name> }}``{%endraw%} to access data about that item throughout the message.
+
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
 ## Considerations
 

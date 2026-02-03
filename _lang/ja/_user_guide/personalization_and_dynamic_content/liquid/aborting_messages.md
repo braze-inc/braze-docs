@@ -1,12 +1,12 @@
 ---
 nav_title: メッセージの中止
-article_title: Liquid メッセージの中止
+article_title: リキッドメッセージの中止
 page_order: 7
 description: "このリファレンス記事では、リキッドメッセージの中止といくつかのサンプルユースケースs について説明します。"
 
 ---
 
-# メッセージの中止
+# アボートメッセージ
 
 > オプションで、条件内で`abort_message("optional reason for aborting")` Liquid メッセージタグを使用して、ユーザーへのメッセージ送信を中止できます。この記事では、この機能をマーケティングキャンペーンで使用する方法の例をいくつか紹介します。
 
@@ -59,7 +59,7 @@ Send this message in English!
 ```
 {% endraw %}
 
-![Message エラー は、"language のアボートメッセージで開発者コンソールにログインします。nil" でした。]({% image_buster /assets/img_archive/developer_console.png %})
+![「language was nil」という中止メッセージのある開発者コンソールのメッセージエラーログ]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## アボートメッセージのクエリ
 

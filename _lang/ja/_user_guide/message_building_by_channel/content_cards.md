@@ -4,7 +4,7 @@ article_title: コンテンツカード
 page_order: 1
 layout: dev_guide
 guide_top_header: "コンテンツカード"
-guide_top_text: "コンテンツ カードを使用すると、顧客のエクスペリエンスを中断することなく、顧客が選択したアプリ内で、高度にターゲットを絞ったリッチコンテンツの動的なストリームを送信できます。<br><br>コンテンツカードは、アプリやWebサイトに直接埋め込むことができ、メールやプッシュ通知などの他のチャネルのリーチを拡張するメッセージ受信トレイやカスタムインターフェイスを作成することができる。さらに、コンテンツカードは、カードのピン留め、カードの破棄、APIベースの配信、コネクテッドコンテンツ、カスタムカードの有効期限、カード分析、プッシュ通知との簡単な連携など、よりパーソナライズされた機能をサポートしている。<br><br>**コンテンツカードの有無はBrazeパッケージによって異なる。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。"
+guide_top_text: "コンテンツ カードを使用すると、顧客のエクスペリエンスを中断することなく、顧客が選択したアプリ内で、高度にターゲットを絞ったリッチコンテンツの動的なストリームを送信できます。<br><br>コンテンツカードはアプリまたはWeb サイトに直接的に埋め込まれるため、メッセージ受信トレイesや、メールやプッシュ通知sなどの他のチャネルの到達範囲を広げるカスタムインターフェイスを作成できます。さらに、コンテンツカードは、カードの固定、カードの解雇、APIベースの配信、接続コンテンツ、カスタムカードの有効期限、カード 分析、およびプッシュ通知sとの容易な調整など、より多くのパーソナライズされた機能に対応しています。<br><br>** コンテンツカードを利用できるかどうかは、Brazeによって異なります。開始するには、アカウントマネージャーまたは顧客のサクセスマネージャーにお問い合わせください。**"
 description: "このランディングページは Braze コンテンツカードのホームです。ここでは、コンテンツカードの作成方法、コンテンツカードのカスタマイズ方法、テスト、レポートなどに関する記事を検索できます。"
 channel:
   - content cards
@@ -21,7 +21,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
   image: /assets/img/braze_icons/brush-02.svg
 - name: テスト
-  link: /docs/user_guide/message_building_by_channel/content_cards/testing/
+  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/
   image: /assets/img/braze_icons/beaker-02.svg
 - name: レポート
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
@@ -31,7 +31,7 @@ guide_featured_list:
   image: /assets/img/braze_icons/check-square-broken.svg
 ---
 
-## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"} コンテンツカードを使うメリット
+## [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/content-cards){: style="float:right;width:120px;border:0;" class="noimgborder"}コンテンツカードの利点
 
 開発者がアプリにコンテンツを組み込むのと比較して、コンテンツカードを使用するメリットをいくつか挙げてみよう：
 
@@ -47,12 +47,12 @@ guide_featured_list:
 
 - コンテンツカードは、72時間以内に売上を伸ばすうえでメールよりも **38 倍**効果的です。[^1]
 - ロイヤルティ登録キャンペーンでコンテンツカードを使用すると、コンバージョンが **5 倍**増加します。[^1]
-- プッシュ通知、アプリ内メッセージ、コンテンツカードを通じてユーザーにアウトリーチを送ると、プッシュのみでエンゲージメントしたユーザーと比較して、セッション数が**6.9倍**増加する[^2]。
-- メール、アプリ内メッセージ、コンテンツカードを通じてユーザーにアウトリーチを送ると、メールだけでエンゲージメントしたユーザーと比較して、平均ユーザーライフタイムが**3.6倍**長くなる[^2]。
+- ユーザー s のアウトリーチをプッシュ通知 s、アプリ内メッセージ s、およびコンテンツカードで送信すると、Push 単独で実行されるユーザー s と比較して、**6.9X** s のセッションが長くなります。[^2]
+- ユーザーのアウトリーチをメール、S、およびコンテンツカードで送信すると、ユーザーの平均寿命は、メールのみで使用するアプリ内メッセージと比較して**3.6X**長くなります。[^2]
 
 ## 仕組み
 
-Brazeは、コンテンツカードを表示するために、さまざまなコンテンツカードタイプを用意している：クラシック、キャプション付き画像、または画像。本質的に、コンテンツカードは実際にはデータのペイロードであり、データの外観ではありません。 
+Brazeには、コンテンツカードを表示するためのさまざまなコンテンツカードタイプが用意されています。クラシック、キャプションイメージ、またはイメージ。本質的に、コンテンツカードは実際にはデータのペイロードであり、データの外観ではありません。 
 
 少し技術的な部分を説明しましょう。バックグラウンドでは、コンテンツカードの 3 つの主要な部分があります。
 
@@ -119,20 +119,20 @@ Brazeは、コンテンツカードを表示するために、さまざまなコ
 
 これらの主な使用例以外にも、顧客は非常にさまざまな方法でコンテンツカードを使用しています。コンテンツカードの強みはその柔軟性です。欲しいユースケースがここに示されていない場合は、[キーと値のペアを]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/)設定し、ペイロードをアプリやWebサイトに送信することができる。
 
-## アプリ内のコンテンツカード
+## アプリのコンテンツカード
 
-このセクションでは、アプリやWebサイト内にコンテンツカードを配置する最も一般的な方法を説明する：
+ここでは、アプリまたはWeb サイト内にコンテンツカードを配置する最も一般的な方法について説明します。
 
 - [メッセージの受信トレイ](#message-inbox)
 - [カルーセル](#carousel)
 
 これらの配置のロジックと実装は Braze のデフォルトではないため、これらのユースケースを実現する作業は、開発チームが実施し、サポートする必要があります。これらの配置の実装方法の概要については、[カスタムコンテンツカードの作成]({{site.baseurl}}/developer_guide/content_cards/creating_cards/)を参照してください。
 
-![メッセージ受信トレイ、カルーセル、バナーという異なる配置オプションを示す、3つのコンテンツカードの例だ。]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
+![3 つのサンプルコンテンツカードs は、メッセージ受信トレイ、カルーセル、バナーなど、さまざまな配置方法を示しています。]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
 ### メッセージの受信トレイ
 
-![メッセージ受信トレイ」を使ったコンテンツカードの例。]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!["message 受信トレイ"を使用したサンプルコンテンツカードです。]({% image_buster /assets/img_archive/cc_placement_inbox.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 メッセージ受信ボックス (通知センターまたはフィードとも呼ばれます) は、アプリまたは Web サイト内の永続的な場所であり、コンテンツカードを任意の形式で表示できます。受信トレイ内の各メッセージは、それぞれ独自のコンテンツカードです。 
 
@@ -154,7 +154,7 @@ Brazeは、コンテンツカードを表示するために、さまざまなコ
 
 ### カルーセル
 
-![カルーセル」配置を使ったコンテンツカードの例。]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
+!["carousel"placement を使用したサンプルコンテンツカード。]({% image_buster /assets/img_archive/cc_politer_carousel.png %}){: style="float:right;margin-left:15px;max-width:30%;border:0px;"}
 
 カルーセルは、顧客がスワイプして表示できる 1 つのスペースに複数のコンテンツを表示します。画像、テキスト、動画のスライドショーであったり、それらを組み合わせたものであったりする。これはカスタム実装であり、開発者による多少の作業が必要です。
 

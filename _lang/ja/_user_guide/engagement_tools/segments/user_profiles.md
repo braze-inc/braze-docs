@@ -26,7 +26,11 @@ description: "この参考記事では、ダッシュボードでユーザーの
 
 一致するものが見つかった場合は、Braze SDK を使用してこのユーザーについて記録した情報を表示できます。それ以外の場合、検索で複数のユーザープロファイルが返される場合は、各プロファイルを個別にマージするか、ユーザーの一括マージを実行できます。詳細な手順については、「[重複ユーザー]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)」を参照してください。
 
-![検索結果には、"複数のユーザーが検索条件に一致しました "というバナーと、"前へ "と "次へ "という2つのボタンが表示される。]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
+{% alert important %}
+電話番号が検索に使用される場合、その電話番号は以下の形式に変更される。 [`E.164`](https://en.wikipedia.org/wiki/e.164)形式に変更される。電話番号を`E.164` 形式に変更できないユーザー（たとえば、電話番号の国コードや市外局番が無効なため）は、電話番号で検索できない。
+{% endalert %}
+
+![検索結果には、「検索条件に一致するユーザーが複数います」というバナーと、「前へ」と「次へ」と書かれた2つのボタンが表示される。]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## ユースケース
 
@@ -59,9 +63,9 @@ description: "この参考記事では、ダッシュボードでユーザーの
 | 購入 | このユーザーに帰属する生涯収益、前回の購入、購入の合計数、および各購入のリスト。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-このデータの詳細については、「[ユーザーデータ収集]({{site.baseurl}}/user_guide/data/user_data_collection/)」を参照してください。
+このデータの詳細については、[SDKデータ収集を]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/)参照のこと。
 
-![ユーザープロファイルの概要タブ。]({% image_buster /assets/img_archive/user_profile2.png %})
+![ユーザープロファイルの「概要」タブ。]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### 「エンゲージメント」タブ {#engagement-tab}
 
@@ -89,7 +93,7 @@ description: "この参考記事では、ダッシュボードでユーザーの
 この表についてフィードバックがある場合、または特定のイベントを見たい場合は、[user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback)に件名を「メッセージング履歴タブのフィードバック」としてメールを送ってほしい。
 {% endalert %}
 
-![ユーザーがどのキャンペーンやキャンバスを受け取ったかを示すメッセージング履歴タブ。]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
+![ユーザーが受信したキャンペーンおよびキャンバスを示す [メッセージ履歴] タブ。]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### イベントの表示と理解
 
@@ -147,5 +151,11 @@ description: "この参考記事では、ダッシュボードでユーザーの
 - イベントに**Campaign/Canvas**と**Message Sent** のデータがない場合、このメッセージは`campaign_id` と`message_variation_id` を指定していない API キャンペーン（API トリガーキャンペーンではない）から送信されたことを示す。これらのフィールドはオプショナルであり、リクエストボディから 省略することもできる。これらのフィールドが指定されると、その情報がメッセージ履歴ログに入力される。
    - 特定のメッセージがメッセージング履歴から完全に消えているにもかかわらず、「**受信したキャンペーン」**ログに表示されている場合は、ユーザーが現在のユーザーとして識別される前にキャンペーンを受信した可能性がある。既存のプロファイルが孤児になった場合、**受信したキャンペーンの**ログは転送されるが、メッセージング履歴は転送されない。 
 - **キャンペーン/キャンバスの**データが欠落している場合、手動テストが送信された可能性がある。手動テストは**メッセージング履歴**タブに記録されるが、送信されたキャンペーンやキャンバスは記録されない。
+
+## 関連記事
+
+- [ユーザープロファイルのライフサイクル]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [POST: 識別子別にユーザープロファイルをエクスポートする。]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [POST: ユーザーを削除する]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 

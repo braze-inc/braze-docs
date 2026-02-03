@@ -1,12 +1,12 @@
 ---
-nav_title: Creating a catalog
-article_title: Creating a Catalog
+nav_title: Create a catalog
+article_title: Create a Catalog
 alias: "/catalogs/"
 page_order: 1
 description: "This reference article covers how to create catalogs that reference non-user data in your Braze campaigns through Liquid."
 ---
 
-# Creating a catalog
+# Create a catalog
 
 > Creating a catalog involves importing a CSV file of non-user data into Braze. This allows you to then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
@@ -191,6 +191,10 @@ To update your catalog after uploading a CSV or creating a catalog in the browse
 As you build more catalogs, you can also use the [List catalogs endpoint]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) to return a list of the catalogs in a workspace.
 
 Supported data types for using API include: string, integer, float, boolean, or datetime. You can also upload arrays and objects when managing your catalogs with the API.
+
+### Using Cloud Data Ingestion
+
+You can maintain catalogs through [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/) by syncing catalog data directly from your data warehouse (such as Snowflake, Redshift, BigQuery, Databricks, Microsoft Fabric, or S3) on a scheduled basis.
 
 ## Managing catalog items
 

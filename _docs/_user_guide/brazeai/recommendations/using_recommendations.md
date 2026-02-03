@@ -1,11 +1,11 @@
 ---
 nav_title: Using recommendations
-article_title: Using Item Recommendations In Your Messaging
+article_title: Use Item Recommendations In Your Messaging
 description: "This article describes how to use item recommendations in your message."
 page_order: 1.2
 ---
 
-# Using item recommendations in your messaging
+# Use item recommendations in your messaging
 
 > After your recommendation is trained, you can use Liquid to fetch and display recommended items in your messages by working directly with the `product_recommendation` Liquid object.
 

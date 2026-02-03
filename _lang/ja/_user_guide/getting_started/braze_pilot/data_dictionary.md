@@ -66,21 +66,21 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>mc_watched_movie</code></td>
             <td>ムービーキャノン</td>
             <td>イベント</td>
-            <td><code>title:文字列</code></td>
+            <td><code>title: string</code></td>
             <td>ユーザーが動画を見終わったら</td>
         </tr>
         <tr>
             <td><code>mc_viewed_movie_page</code></td>
             <td>ムービーキャノン</td>
             <td>イベント</td>
-            <td><code>title:文字列</code></td>
+            <td><code>title: string</code></td>
             <td>ユーザーが動画を表示しているとき</td>
         </tr>
         <tr>
             <td><code>pl_viewed_item</code></td>
             <td>PantsLabyrinth</td>
             <td>イベント</td>
-            <td><code>item_name: 文字列</code></td>
+            <td><code>item_name: string</code></td>
             <td>ユーザーがプロダクトページを表示する場合</td>
         </tr>
         <tr>
@@ -94,21 +94,21 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>pl_added_item_to_wishlist</code></td>
             <td>PantsLabyrinth</td>
             <td>イベント</td>
-            <td><code>item_name: 文字列</code></td>
+            <td><code>item_name: string</code></td>
             <td>ユーザーが希望する一覧に項目を追加したとき</td>
         </tr>
         <tr>
             <td><code>pl_added_item_to_cart</code></td>
             <td>PantsLabyrinth</td>
             <td>イベント</td>
-            <td><code>item_name: 文字列</code></td>
+            <td><code>item_name: string</code></td>
             <td>ユーザーが台車にアイテムを追加したとき</td>
         </tr>
         <tr>
-            <td><code>&lt;purchase_event></code></td>
+            <td><code>&lt;purchase_event&gt;</code></td>
             <td>PantsLabyrinth</td>
             <td>イベント</td>
-            <td><code>name: string</code><br><code>価格:個数</code></td>
+            <td><code>name: string</code><br><code>price: number</code></td>
             <td>ユーザーが購入を完了したとき</td>
         </tr>
         <tr>
@@ -122,49 +122,49 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_completed_class</code></td>
             <td>ステッピントン</td>
             <td>イベント</td>
-            <td><code>class_type: 文字列</code><br><code>calories_burned: 番号</code><br><code>workout_length: 番号</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>ユーザーがワークアウトを完了したとき</td>
         </tr>
         <tr>
             <td><code>st_viewed_premium_benefit</code></td>
             <td>ステッピントン</td>
             <td>イベント</td>
-            <td><code>benefit_type: 文字列</code></td>
+            <td><code>benefit_type: string</code></td>
             <td>ユーザーがSteppington+タブにアクセスしたとき(フィーチャーフラグで有効になっている場合)</td>
         </tr>
         <tr>
             <td><code>st_viewed_class</code></td>
             <td>ステッピントン</td>
             <td>イベント</td>
-            <td><code>class_type: 文字列</code></td>
+            <td><code>class_type: string</code></td>
             <td>ユーザーがワークアウトページを表示したとき</td>
         </tr>
         <tr>
             <td><code>st_completed_class</code></td>
             <td>ステッピントン</td>
             <td>イベント</td>
-            <td><code>class_type: 文字列</code><br><code>calories_burned: 番号</code><br><code>workout_length: 番号</code></td>
+            <td><code>class_type: string</code><br><code>calories_burned: number</code><br><code>workout_length: number</code></td>
             <td>ユーザーがワークアウトを完了したとき</td>
         </tr>
         <tr>
             <td><code>st_most_recent_completed_class</code></td>
             <td>ステッピントン</td>
             <td>属性</td>
-            <td><code>ストリング</code></td>
+            <td><code>string</code></td>
             <td>ユーザーがワークアウトを完了したとき</td>
         </tr>
         <tr>
             <td><code>st_favorited_class</code></td>
             <td>ステッピントン</td>
             <td>イベント</td>
-            <td><code>class_type: 文字列</code></td>
+            <td><code>class_type: string</code></td>
             <td>ユーザーが授業を好きなとき</td>
         </tr>
         <tr>
             <td><code>st_unfavorited_class</code></td>
             <td>ステッピントン</td>
             <td>イベント</td>
-            <td><code>class_type: 文字列</code></td>
+            <td><code>class_type: string</code></td>
             <td>ユーザーが授業にお気に入りでない場合</td>
         </tr>
         <tr>
@@ -178,7 +178,7 @@ th:nth-child(5), td:nth-child(5) {
             <td><code>st_set_goal</code></td>
             <td>ステッピントン</td>
             <td>イベント</td>
-            <td><code>goal_name: 文字列</code><br><code>目標数</code><br><code>単位: string</code></td>
+            <td><code>goal_name: string</code><br><code>goal: number</code><br><code>units: string</code></td>
             <td>ユーザーが<strong>無料トライアル</strong>スタートボタンを選択した場合。</td>
         </tr>
     </tbody>

@@ -1,6 +1,6 @@
 ---
-nav_title: Measuring segment size
-article_title: Measuring Segment Size
+nav_title: Measure segment size
+article_title: Measure Segment Size
 page_order: 5
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "This page covers how you can monitor your segment’s membership and size."
 ---
 
-# Measuring segment size
+# Measure segment size
 
 > This page covers how you can monitor your segment’s membership and size.
 
@@ -25,8 +25,8 @@ It is possible that the number of total users is different than the number of us
 ![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, and Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 For a user to be listed as reachable through a certain channel, the user must have both:
-* A valid email address or push token associated with their profile; and
-* Opted in or subscribed to your app.
+* A valid email address or push token associated with their profile, and
+* Opted-in or subscribed to your app.
 
 A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable through those communication channels.
 
@@ -74,6 +74,17 @@ In cases where the _Total_ is higher than the sum of the channels, the gap repre
 For a user to be listed as reachable through a certain channel, the user must have:
 - A valid email address or push token associated with their profile, and
 - Opted-in or subscribed to your app.
+
+#### Applied filters for channel-specific reachable users
+
+The following filters are applied for each channel when determining reachable users.
+
+| Channel | Filter |
+| --- | --- |
+| Email | **Email Available** is true. |
+| Push | **Foreground Push Enabled** is true. |
+| SMS | **Subscription Group** is any SMS subscription group. **Invalid Phone Number** is false. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Calculating exact statistics 
 

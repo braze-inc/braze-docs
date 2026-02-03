@@ -26,9 +26,6 @@ guide_featured_list:
   - name: ユーザーをインポートする
     link: /docs/user_guide/data/unification/user_data_collection/user_import/
     image: /assets/img/braze_icons/users-01.svg
-  - name: ユーザーを削除する
-    link: /docs/user_guide/data/unification/user_data/delete_users/
-    image: /assets/img/braze_icons/users-01.svg
   - name: 匿名ユーザー
     link: /docs/user_guide/data/unification/user_data_collection/user_profile_lifecycle/anonymous_users/
     image: /assets/img/braze_icons/user-circle.svg
@@ -40,7 +37,7 @@ guide_featured_list:
 <br>
 
 {% alert important %}
-Brazeは、セッション数が 500 万を超えるユーザー (「ダミーユーザー」) の禁止またはブロックを行い、SDK イベントの取り込みを停止します。これは通常、誤った連携の結果であるためです。正規ユーザーに対して禁止またはブロックが発生しているとわかった場合は、Braze アカウントマネージャーに連絡してください。
+Brazeは、セッション数が 500 万を超えるユーザー (「ダミーユーザー」) の禁止またはブロックを行い、SDK イベントの取り込みを停止します。これは通常、誤った連携の結果であるためです。正当なユーザーでこのような事態が発生した場合は、Brazeアカウントマネージャーに連絡すること。
 {% endalert %}
 
 <br>

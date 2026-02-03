@@ -31,7 +31,7 @@
 すべてのアプリ内メッセージの推奨画像サイズは500 KB、最大画像サイズは5 MB で、PNG、JPEG、GIF のファイルタイプをサポートしています。
 
 {% tabs %}
-{% tab ポートレート %}
+{% tab Portrait %}
 
 | タイプ | アスペクト比 | 画質 | メモ |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab 景観 %}
+{% tab Landscape %}
 
 | タイプ | アスペクト比 | 画質 | メモ |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab スライドアップ %}
+{% tab Slideup %}
 
 | タイプ | アスペクト比 | 画質 | メモ |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab モーダル %}
+{% tab Modal %}
 
 | タイプ | アスペクト比 | 画質 | メモ |
 | --- | --- | --- | --- |

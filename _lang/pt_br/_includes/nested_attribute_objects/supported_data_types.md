@@ -20,7 +20,7 @@ Os seguintes tipos de dados são suportados:
     </tr>
     <tr>
       <td>Booleano</td>
-      <td>Um valor que avalia para um ou outro <code>true</code> ou <code>false</code>.</td>
+      <td>Um valor que é avaliado como <code>true</code> ou <code>false</code>.</td>
     </tr>
     <tr>
       <td>Vetor</td>
@@ -29,23 +29,23 @@ Os seguintes tipos de dados são suportados:
     <tr>
       <td>Horário</td>
       <td>
-        Um valor de timestamp usado para comparações de data e hora. Ao filtrar um atributo personalizado de tempo aninhado, você pode escolher:<br><br>
+        Um valor de registro de data e hora usado para comparações de data e hora. Ao filtrar um atributo personalizado de tempo aninhado, você pode escolher:<br><br>
         <ul>
-          <li><strong>Dia do Ano</strong>: Verifica apenas o mês e o dia para comparação, como <code>03-15</code>.</li>
-          <li><strong>Tempo</strong>: Compara o timestamp completo, incluindo o ano, como <code>2023-03-15T12:00:00Z</code>.</li>
+          <li><strong>Dia do ano</strong>: Verifica apenas o mês e o dia para comparação, como <code>03-15</code>.</li>
+          <li><strong>Tempo</strong>: Compara o registro de data e hora completo, incluindo o ano, como <code>2023-03-15T12:00:00Z</code>.</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td>Objeto</td>
-      <td>Um valor estruturado com pares chave-valor, como <code>{"author": "Tolkien"}</code>.</td>
+      <td>Um valor estruturado com pares de valores-chave, como <code>{"author": "Tolkien"}</code>.</td>
     </tr>
     <tr>
       <td>Vetor de objetos</td>
       <td>
         Uma lista de objetos, como <code>[{"title": "The Hobbit"}, {"title": "Dune"}]</code>. 
         Para saber mais, consulte 
-        <a href="{{site.baseurl}}/array_of_objects/">Arrays de objetos</a>.
+        <a href="{{site.baseurl}}/array_of_objects/">Vetores de objetos</a>.
       </td>
     </tr>
   </tbody>

@@ -1,22 +1,22 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} [プッシュ通知の設定]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)も必要です。
+{% multi_lang_include developer_guide/prerequisites/swift.md %} また、[プッシュ通知s]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)を設定する必要があります。
 
-## アクションボタンのカスタマイズ {#push-action-buttons-integration}
+## アクションキーのカスタマイズ {#push-action-buttons-integration}
 
 Braze Swift SDK では、プッシュアクションボタン用の URL 処理がサポートされています。Braze のデフォルトプッシュカテゴリのデフォルトプッシュアクションボタンには、4つのセット `Accept/Decline`、`Yes/No`、`Confirm/Cancel`、`More` があります。
 
-![2 つのカスタマイズ可能なアクションボタンを表示するためにプルダウンされているプッシュメッセージのGIF。]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
+![2つのカスタマイズ可能なアクションボタンを表示するためにプルダウンされているプッシュメッセージのGIF。]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
 
-### アクションボタンを手動で登録する
+### アクションを手動で登録する
 
 {% alert important %}
-手動で押しボタンを登録することはお勧めしません。
+手動でプッシュアクションボタンを登録することはお勧めしません。
 {% endalert %}
 
-`configuration.push.automation` 設定オプションを使用して[プッシュ通知]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) を設定した場合、Braze はデフォルトのプッシュカテゴリのアクションボタンを自動的に登録し、プッシュアクションボタンのクリックアナリティクスとURL ルーティングを処理します。
+[ で`configuration.push.automation` 設定オプションを使用してプッシュ通知s]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) を設定した場合、Braze はデフォルトプッシュカテゴリのアクションボタンを自動的に登録し、プッシュアクションボタンのクリック分析とURL ルーティングを処理します。
 
-ただし、代わりに手動でプッシュアクションボタンを登録することもできます。
+ただし、代わりにプッシュアクションボタンsを手動で登録することもできます。
 
-#### ステップ1:Braze デフォルトプッシュカテゴリの追加 {#registering}
+#### ステップ 1: Braze デフォルトプッシュカテゴリの追加 {#registering}
 
 [register for push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze) の場合、デフォルトのプッシュカテゴリに登録するには、次のコードを使用します。
 
@@ -46,7 +46,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 クリック分析や URL ルーティングを含むプッシュアクションボタンの処理を有効にするには、アプリの `didReceive(_:completionHandler:)` デリゲートメソッドに次のコードを追加します。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.notifications.handleUserNotification(response: response, withCompletionHandler: completionHandler)
@@ -71,14 +71,14 @@ Brazeはデフォルトのプッシュカテゴリのセットを提供するだ
 
 デバイスに表示される `LIKE_CATEGORY` を活用する例を次に示します。
 
-![2つのプッシュアクションボタン"unlike"および"like".]({% image_buster /assets/img_archive/push_example_category.png %})を表示するプッシュメッセージ
+![「いいねを取り消す」と「いいね」の2つのプッシュアクションボタンを表示するプッシュメッセージ]({% image_buster /assets/img_archive/push_example_category.png %})
 
 ### ステップ1:カテゴリを登録する
 
 以下のような方法で、アプリにカテゴリを登録します。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 Braze.Notifications.categories.insert(
@@ -136,18 +136,18 @@ UNNotificationCategory *likeCategory = [UNNotificationCategory categoryWithIdent
 3. [**iOS 通知カテゴリ**] ドロップダウンで、[**事前登録されたカスタム iOS カテゴリを入力**] を選択します。
 4. 最後に、前に作成したカテゴリのいずれかを入力します。次の例では、カスタムカテゴリ`LIKE_CATEGORY` を使用します。
 
-![カスタムカテゴリのセットアップを含むプッシュ通知キャンペーンダッシュボード。]({% image_buster /assets/img_archive/ios-notification-category.png %})
+![カスタムカテゴリの設定を含むプッシュ通知 キャンペーン ダッシュボード。]({% image_buster /assets/img_archive/ios-notification-category.png %})
 
 ## バッジのカスタマイズ
 
-バッジは小さなアイコンで、ユーザーの注意を引くのに最適です。Braze ダッシュボードを使用してプッシュ通知を作成する場合、[**Settings**]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings) タブでバッジ数を指定できます。アプリケーションの [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) プロパティまたは[リモート通知ペイロード](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1)を使用して、バッジ数を手動で更新することもできます。 
+バッジは小さなアイコンで、ユーザーの注意を引くのに最適です。Braze ダッシュボードを使用してプッシュ通知を作成する場合、[**設定**]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_settings)タブでバッジ数を指定できます。アプリケーションの [`applicationIconBadgeNumber`](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/instp/UIApplication/applicationIconBadgeNumber) プロパティまたは[リモート通知ペイロード](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1)を使用して、バッジ数を手動で更新することもできます。 
 
 Brazeは、アプリがフォアグラウンドにあるときにBraze通知を受信すると、バッジカウントを自動的にクリアします。バッジ番号を手動で0に設定すると、通知センターの通知もクリアされます。 
 
 通常のアプリ操作の一部として、またはバッジをクリアするプッシュを送信してバッジをクリアする計画がない場合は、次のコードをアプリの `applicationDidBecomeActive:` デリゲートメソッドに追加してアプリがアクティブになったときにバッジをクリアする必要があります。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 // For iOS 16.0+
@@ -183,7 +183,7 @@ UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotification
 
 ## サウンドのカスタマイズ
 
-### ステップ1:アプリでサウンドをホストする
+### ステップ 1: アプリでサウンドをホスティングする
 
 カスタムプッシュ通知サウンドは、アプリのメインバンドル内でローカルにホストする必要があります。次のオーディオデータ形式が使用できます。
 
@@ -210,7 +210,7 @@ afconvert /System/Library/Sounds/Submarine.aiff ~/Desktop/sub.caf -d ima4 -f caf
 QuickTime Player でサウンドを開き、[**ムービー**] メニューから [**ムービーインスペクターを表示**] を選択するとサウンドのデータ形式を確認できます。
 {% endalert %}
 
-### ステップ2:サウンドのプロトコルURL を指定する
+### ステップ 2:サウンドのプロトコルURL を指定する
 
 アプリ内のサウンドファイルの場所にリダイレクトするプロトコル URL を指定する必要があります。これには2 つの方法があります。
 
@@ -219,7 +219,7 @@ QuickTime Player でサウンドを開き、[**ムービー**] メニューか�
 
 ![Braze ダッシュボードのプッシュコンポーザー]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
-指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードとは別に、[メッセージング API][12] でサウンドを設定することもできます。
+指定したサウンドファイルが存在しない場合、またはキーワード「default」を入力した場合は、Braze では、デバイスのデフォルトのアラートサウンドが使用されます。ダッシュボードとは別に、[messaging API][12] でサウンドを設定することもできます。
 
 詳細については、[カスタムアラートサウンドの準備](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html)に関するApple Developer のドキュメントを参照してください。
 

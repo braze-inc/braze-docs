@@ -1,10 +1,10 @@
-## 리액트 네이티브 콘텐츠 카드에 대하여
+## React Native 콘텐츠 카드 정보
 
 Braze SDK에는 콘텐츠 카드를 시작할 수 있는 기본 카드 피드가 포함되어 있습니다. 카드 피드를 표시하려면 `Braze.launchContentCards()` 메서드를 사용할 수 있습니다. 기본 카드 피드는 Braze SDK에 포함되어 있으며 모든 분석 추적, 해제 및 사용자의 콘텐츠 카드 렌더링을 처리합니다.
 
 {% multi_lang_include developer_guide/prerequisites/react_native.md %}
 
-## 카드 메서드
+## 카드 방법
 
 자체 UI를 빌드하려면 사용 가능한 카드 목록을 가져오고 카드 업데이트를 수신 대기할 수 있습니다.
 
@@ -42,7 +42,7 @@ Braze.requestContentCardsRefresh();
 
 ## 카드 유형 및 속성
 
-콘텐츠 카드 데이터 모델은 리액트 네이티브 SDK에서 사용할 수 있으며 다음과 같은 콘텐츠 카드 유형을 제공합니다: [이미지 전용](#image-only), [캡션 이미지](#captioned-image), 및 [클래식](#classic). 특별한 [대조군](#control) 카드 유형도 있으며, 이는 주어진 카드에 대한 대조군에 있는 사용자에게 반환됩니다. 각 유형은 고유한 속성 외에도 기본 모델에서 공통 속성을 상속받습니다.
+콘텐츠 카드 데이터 모델은 React Native 소프트웨어 개발 키트에서 사용할 수 있으며 다음과 같은 콘텐츠 카드 유형을 제공합니다: [이미지 전용](#image-only), [캡션 이미지](#captioned-image) 및 [클래식](#classic). 특정 카드의 대조군에 속하는 사용자에게 반환되는 특별한 [대조](#control) 카드 유형도 있습니다. 각 유형은 고유한 속성 외에도 기본 모델에서 공통 속성을 상속받습니다.
 
 {% alert tip %}
 콘텐츠 카드 데이터 모델에 대한 전체 참조는 [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html) 및 [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard) 설명서를 참조하세요.
@@ -62,8 +62,8 @@ Braze.requestContentCardsRefresh();
 |`pinned`      | 카드가 고정되어 있는지 여부.                                                                                            |
 |`dismissed`   | 사용자가 이 카드를 해지했는지 여부입니다. 이미 기각된 카드를 기각된 것으로 표시하는 것은 불가능합니다. |
 |`dismissible` | 사용자가 카드를 해지할 수 있는지 여부입니다.                                                                           |
-|`url`         | (선택 사항) 카드 클릭 작업과 관련된 URL 문자열입니다.                                                       |
-|`openURLInWebView` | 이 카드의 URL이 Braze WebView에서 열려야 하는지 여부입니다.                                            |
+|`url`         | (선택 사항) 카드 클릭 동작과 연결된 URL 문자열입니다.                                                       |
+|`openURLInWebView` | 이 카드의 URL을 Braze WebView에서 열어야 하는지 여부입니다.                                            |
 |`isControl`   | 이 카드가 제어 카드인지 여부. 제어 카드는 사용자에게 표시되지 않아야 합니다.                                |
 |`extras`      | 이 카드의 키 값 추가 항목 맵.                                                                             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -112,7 +112,7 @@ Braze.requestContentCardsRefresh();
 |`domain`           | (선택 사항) 속성 URL의 링크 텍스트(예: `"braze.com/resources/"`). 카드의 UI에 표시되어 카드를 클릭할 때 동작과 방향을 나타낼 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-클래식(텍스트 알림) 콘텐츠 카드에 대한 전체 참조는 [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) 및 [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) 설명서를 참조하세요. 클래식 이미지(짧은 뉴스) 카드에 대해서는 [안드로이드](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) 및 [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) 설명서를 참조하십시오.
+클래식(텍스트 알림) 콘텐츠 카드에 대한 전체 참조는 [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-text-announcement-card/index.html) 및 [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classic-swift.struct) 설명서를 참조하세요. 클래식 이미지(짧은 뉴스) 카드에 대해서는 [Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-short-news-card/index.html) 및 [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/classicimage-swift.struct) 설명서를 참조하세요.
 
 ### 제어
 

@@ -46,7 +46,7 @@ For SDK integration, use the [SDK endpoint]({{site.baseurl}}/user_guide/administ
 
 ### API limits
 
-For most APIs, Braze has a default rate limit of 250,000 requests per hour. However, certain request types have their own rate limit applied to better handle high volumes of data across our customer base. For details, refer to [API rate limits]({{site.baseurl}}/api/api_limits/)
+For most APIs, Braze has a default rate limit of 250,000 requests per hour. However, certain request types have their own rate limit applied to better handle high volumes of data across the customer base. For details, refer to [API rate limits]({{site.baseurl}}/api/api_limits/)
 
 ### User IDs
 
@@ -57,7 +57,7 @@ For more information, refer to the following articles based on your platform: [i
 
 ## About REST API keys
 
-A REST Application Programming Interface key (REST API key) is a unique code that you pass into an API to authenticate the API call and identify the calling application or user. You access the API using HTTPS web requests to your company's REST API endpoint. We use REST API keys at Braze in tandem with our App Identifier keys to track, access, send, export, and analyze data to help make sure everything is running smoothly on both your and our end.
+A REST Application Programming Interface key (REST API key) is a unique code that you pass into an API to authenticate the API call and identify the calling application or user. You access the API using HTTPS web requests to your company's REST API endpoint. REST API keys work in tandem with App Identifier keys to track, access, send, export, and analyze data to help ensure everything is running smoothly.
 
 Workspaces and API keys go hand in hand at Braze. Workspaces are designed to house versions of the same application across multiple platforms. Many customers also use workspaces to contain free and premium versions of their applications on the same platform. As you may notice, these workspaces are also making use of the REST API and have their own REST API keys. These keys can be individually scoped to include access to specific endpoints on the API. Each call to the API must include a key with access to the endpoint hit.
 
@@ -137,7 +137,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Permission | Endpoint | Description |
 |---|---|---|
 | `campaigns.trigger.send` | [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Trigger the sending of an existing campaign. |
-| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Schedule a future send of a campaign with API-triggered delivery. |
+| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Schedule a send of a campaign with API-triggered delivery. |
 | `campaigns.trigger.schedule.update` | [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/) | Update a campaign scheduled with API-triggered delivery. |
 | `campaigns.trigger.schedule.delete` | [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/) |Delete a campaign scheduled with API-triggered delivery. |
 | `campaigns.list` | [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) | Query for a list of campaigns. |
@@ -155,7 +155,7 @@ API key permissions are permissions you can assign a user or group to limit thei
 | Permission | Endpoint | Description |
 |---|---|---|
 | `canvas.trigger.send` | [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Trigger the sending of an existing Canvas. |
-| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Schedule a future send of a Canvas with API-triggered delivery. |
+| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Schedule a send of a Canvas with API-triggered delivery. |
 | `canvas.trigger.schedule.update` | [`/canvas/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/) | Update a Canvas scheduled with API-triggered delivery. |
 | `canvas.trigger.schedule.delete` | [`/canvas/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/)| Delete a Canvas scheduled with API-triggered delivery. |
 | `canvas.list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) |  Query for a list of Canvases. |
@@ -353,18 +353,18 @@ For additional security, you can specify a list of IP addresses and subnets whic
 If you don't specify any, requests can be sent from any IP address.
 
 {% alert tip %}
-Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+If you're making a Braze-to-Braze webhook and using allowlisting, see the list of [IPs to whitelist]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
 
 ## Additional resources
 
 ### Ruby client library
 
-If you're implementing Braze using Ruby, you can use our [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
+If you're implementing Braze using Ruby, you can use the [Ruby client library](https://github.com/braze-inc/braze-api-client-ruby) to reduce your data import time. A client library is a collection of code specific to one programming language—in this case, Ruby—that makes it easier to use an API.
 
 The Ruby client library supports the [User endpoints]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert important %}
-This client library is in beta. Want to help us make this library better? Send us feedback at [smb-product@braze.com](mailto:smb-product@braze.com).
+This client library is in beta. To help make this library better, send feedback to [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 

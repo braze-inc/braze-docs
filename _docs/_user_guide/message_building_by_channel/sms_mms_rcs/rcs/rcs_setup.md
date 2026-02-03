@@ -9,7 +9,7 @@ channel:
   - RCS
 ---
 
-# Setting up RCS
+# Set up RCS
 
 > This article covers the requirements needed to get your RCS channel up and running.
 

@@ -7,7 +7,7 @@ description: "Get acquainted with the core concepts you'll need to know when wor
 
 ---
 
-# Getting Started: Braze overview
+# Get started: Braze overview
 
 Welcome to Braze! This collection of articles will help you get started with our platform and introduce you to the key terms, features, and functionalities of Braze. This page introduces the core concepts you'll need to know when working in Braze.
 
@@ -78,7 +78,7 @@ Here's the Braze framework for estimating the length of your integration based o
 Need help with your migration? Our [certified Braze partners](https://www.braze.com/partners/solutions-partners) can help!
 {% endalert %}
 
-- **Email volume:** To send emails, you'll need to warm up your IPs. [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) is the process of building sender reputation with your newly assigned IP addresses. If you send less than 2–3 million emails per day, your IP warming should take 30 days or less. Keep in mind your peak sending. If you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to. High-volume senders can use multiple IPs to speed up the warming process.
+- **Email volume:** To send emails, you'll need to warm up your IPs. [IP warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) is the process of building sender reputation with your newly assigned IP addresses. If you send less than 2-3 million emails per day, your IP warming should take 30 days or less. Keep in mind your peak sending. If you normally send 2 million emails a day but plan to send 7 million for a seasonal period, that "peak" sending is what you should warm up to. High-volume senders can use multiple IPs to speed up the warming process.
 - **Organizational complexity:** Our onboarding process can adapt to your business needs. Whether you're a single business unit, have a Center of Excellence, multiple independent units, or use agencies to augment your teams, Braze has experience working in all scenarios.
 - **Data infrastructure sophistication:** If you're only implementing the Braze SDK or already have a Customer Data Platform (CDP), it's possible to get everything set up in just 30 days. Using a modern CDP can speed up the process. But if you have many backend systems, tools, or databases to connect with Braze, it might take longer and need more dedicated resources to finish setup.
 

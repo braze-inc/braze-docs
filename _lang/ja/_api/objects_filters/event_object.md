@@ -1,5 +1,5 @@
 ---
-nav_title: "イベントオブジェクト"
+nav_title: "イベント・オブジェクト"
 article_title: APIイベントオブジェクト
 page_order: 6
 page_type: reference
@@ -71,6 +71,17 @@ Braze で既存のユーザープロファイルのみを更新するには、`_
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 配列またはオブジェクト値を含むイベントプロパティオブジェクトには、最大 100 KB のイベントプロパティペイロードを設定できます。
+
+### 予約済みのキー
+
+以下のキーは予約されているため、カスタムイベントプロパティとして使用できません。
+
+- `time`
+- `event_name`
+
+{% alert important %}
+カスタムイベントプロパティ名として予約キーを使用すると、`/users/track` エンドポイントにリクエストを送信する際に API エラーが発生する。
+{% endalert %}
 
 ### イベント・プロパティの永続性
 

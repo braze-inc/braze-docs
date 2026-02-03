@@ -32,11 +32,11 @@ description: "この記事では、Braze のメディアライブラリに関す
 
 既存の"画像を切り取るには、メディアライブラリーから"画像を選択し、**クロップ&新規"画像を保存**をクリックします。 
 
-![媒体ライブラリー "画像のプレビュー。]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
+![用紙ライブラリー "画像のプレビュー。]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
 すると、トリミングコンポーザーにリダイレクトされるので、そこで比率の種類を選択し、新しい画像の名前を編集します。**Save**を選択すると、新しい"画像を使用できます。
 
-![メディアライブラリー "画像を切り出して保存する画面]]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
+![メディアライブラリー "画像を切り取って保存するウィンドウ。]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 
 ### アップロードしようとすると画像がタイムアウトし続けます。どうしたらいいですか?
 

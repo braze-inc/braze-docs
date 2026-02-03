@@ -40,15 +40,15 @@ Para crear una plantilla de webhook Inkit y utilizarla en futuras campañas o Ca
 
 Si desea crear una campaña webhook Inkit única o utilizar una plantilla existente, seleccione **Webhook** en Braze al crear una nueva campaña.
 
-![Una selección de plantillas de webhook prediseñadas disponibles en la pestaña Plantillas de webhook de la sección Plantillas y medios.]({% image_buster /assets/img/inkit-webhook-template.png %})
+![Una selección de plantillas de webhook prediseñadas disponibles en la pestaña Plantillas de webhook de la sección Plantillas & Medios.]({% image_buster /assets/img/inkit-webhook-template.png %})
 
 Una vez que haya seleccionado la plantilla de webhook Inkit, debería ver lo siguiente:
 - **URL del webhook**: En blanco
 - **Cuerpo de la solicitud**: Texto sin procesar
 
-En el campo URL Webhook, tendrás que [crear](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) e introducir una URL webhook de Inkit.
+En el campo URL Webhook, [crea](https://docs.inkit.com/docs/set-up-a-webhook-to-an-event) e introduce una URL webhook de Inkit.
 
-![Código del cuerpo de la solicitud y URL del webhook mostrados en la pestaña de composición del constructor de webhook Braze.]({% image_buster /assets/img/inkit-integration.png %})
+![Código del cuerpo de la solicitud y URL del webhook mostrados en la pestaña de composición del creador de webhooks Braze.]({% image_buster /assets/img/inkit-integration.png %})
 
 #### Encabezados de solicitud y método
 

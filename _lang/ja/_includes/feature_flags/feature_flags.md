@@ -35,7 +35,7 @@ Braze フィーチャーフラグを使用することで、機能を段階的�
 
 この機能を徐々に展開するには、"ライブチャットウィジェット "という[フィーチャーフラグを作成]({{site.baseurl}}/developer_guide/feature_flags/create/)すればいい。
 
-![Live Chat Widget という名前の例の機能フラグの詳細。ID はenable_live_chat です。このフィーチャーフラグの説明には、ライブチャットウィジェットがサポートページに表示されることが記載されています。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Live Chat Widget という名前の例の機能フラグの詳細。ID はenable_live_chat. このフィーチャーフラグ記述は、ライブチャットウィジェットがサポートページに表示されることを読み取ります。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 このアプリ コードでは、Braze フィーチャーフラグが有効になっている場合、**Live Chat**ボタンのみを表示します。
 
@@ -140,7 +140,7 @@ liveChatView.isHidden = !liveChatEnabled
 
 この機能をリモートで構成するには、`navigation_promo_link` という新しいフィーチャーフラグを作成し、次の初期プロパティを定義します。
 
-![リンクとテキストプロパティを使用して、汎用の販売ページに移動する機能フラグ。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
+![汎用販売ページに向けたリンクとテキストプロパティを持つ機能フラグ。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 このアプリでは、Braze で getter メソッドを使用して、このフィーチャーフラグのプロパティを取得し、これらの値に基づいてナビゲーションリンクを構築します。
 
@@ -219,7 +219,7 @@ liveChatView.promoText = featureFlag?.stringProperty("text")
 
 これで、感謝祭の前日には、Braze ダッシュボードでこれらのプロパティ値を変更するだけで済みます。
 
-![感謝祭の販売ページに向けたリンクとテキストプロパティを持つフィーチャーフラグ。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
+![Thanksgivingの販売ページに向けたリンクとテキストプロパティを持つ機能フラグ。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
 
 その結果、次回誰かがアプリを読み込むと、新しい感謝祭セールが表示されます。
 
@@ -231,11 +231,11 @@ liveChatView.promoText = featureFlag?.stringProperty("text")
 
 機能のロールアウトとメッセージングを効率的に調整するために、`show_loyalty_program` という新しいフィーチャーフラグを作成します。最初の段階的リリースでは、フィーチャーフラグを有効にするタイミングと対象をキャンバスでコントロールします。この時点では、ロールアウトのパーセンテージは0% のままにし、ターゲットセグメントは選択しません。
 
-![ロイヤルティ報酬プログラムという名前のフィーチャーフラグ。ID は show_loyalty_program で、これはホーム画面とプロファイルページに新しいロイヤルティ報酬プログラムが表示されるということを説明しています。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![ロイヤルティ報酬プログラムという名前のフィーチャーフラグ。ID はshow_loyalty_program, で、これがホーム画面とプロファイル画面に新しいロイヤルティ 報酬 s プログラムを示すことを説明します。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
-次に、キャンバスで、「高価値顧客」セグメントの`show_loyalty_program` フィーチャーフラグをイネーブルメントする[フィーチャーフラグステップを]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/)作成する：
+次に、キャンバスで、&quot の`show_loyalty_program` フィーチャーフラグを有効にする[フィーチャーフラグ ステップ]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/);高価値のCustomers" Segmentを作成します。
 
-![高価値顧客セグメントが show_loyalty_program フィーチャーフラグをオンにする、オーディエンス分割ステップを含むキャンバスの例。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![たとえば、オーディエンス分割ステップを使用しているキャンバスでは、高値の顧客がSegmentするとshow_loyalty_programフィーチャーフラグが有効になります。]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 これで、このセグメントのユーザーに対して新しいロイヤルティプログラムが表示され始め、有効にした後、メールと調査が自動的に送信され、チームがフィードバックを収集できるようになります。
 
@@ -310,9 +310,9 @@ if let featureFlag, featureFlag.enabled {
 
 A/B テストは、[Feature Flag Experiment]({{site.baseurl}}/developer_guide/feature_flags/experiments/) で設定します。
 
-さて、50%のユーザーが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。{% multi_lang_include analytics/metrics.md metric='コンバージョン率' 2つのバリアントを分析して、どちらのチェックアウトフローがより高いコンバージョン率をもたらしたかを判断することができる。 %}
+さて、50%のユーザーが旧来の体験を見て、残りの50%が新しい体験を見てくれるでしょう。次に、2つのバリアントsを解析して、どのチェックアウトフローがより高いコンバージョン率をもたらすかを決定することができる。 {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
-![トラフィックを2 つの50 パーセントグループに分割する機能フラグ実験。]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
+![交通を50%の2群に分けるフィーチャーフラグ実験。]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
 勝者が決定したら、このキャンペーンを停止し、すべてのユーザーに対してフィーチャーフラグのロールアウト率を100%に増やすことができます。一方、開発チームはこれを次のアプリリリースにハードコーディングします。
 

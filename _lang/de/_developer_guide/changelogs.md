@@ -12,8 +12,7 @@ platform:
   - React Native
   - Roku
   - Unity
-  - Unreal Engine
-  - Xamarin
+  - .NET MAUI
 ---
 
 # Braze SDK Changelogs
@@ -21,6 +20,14 @@ platform:
 > Diese Referenzseite enthält die Changelogs für jedes Braze SDK und einen Link zum Changelog in ihrem öffentlichen GitHub-Repository. Die vollständige Liste der Ressourcen finden Sie unter [Referenzen, Repositories und Beispiel-Apps]({{site.baseurl}}/developer_guide/references/).
 
 {% sdktabs %}
+{% sdktab web %}
+{% alert tip %}
+Sie können auch eine Kopie des [Changelogs des Internet Braze SDK auf GitHub](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) finden.
+{% endalert %}
+
+{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% alert tip %}
 Sie können auch eine Kopie des [Android Braze SDK Changelog auf GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/CHANGELOG.md) finden.
@@ -35,14 +42,6 @@ Sie können auch eine Kopie des [Swift Braze SDK Changelog auf GitHub](https://g
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-swift-sdk/main/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% alert tip %}
-Sie können auch eine Kopie des [Changelogs des Internet Braze SDK auf GitHub](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) finden.
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-web-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
@@ -85,17 +84,9 @@ Sie können auch eine Kopie des [Unity Braze SDK Changelog auf GitHub](https://g
 {% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-unity-sdk/master/CHANGELOG.md %}
 {% endsdktab %}
 
-{% sdktab unreal engine %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% alert tip %}
-Sie können auch eine Kopie des [Unreal Engine Braze SDK Changelog auf GitHub](https://github.com/braze-inc/braze-unreal-sdk/blob/master/CHANGELOG.md) finden.
-{% endalert %}
-
-{% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-unreal-sdk/master/CHANGELOG.md %}
-{% endsdktab %}
-
-{% sdktab xamarin %}
-{% alert tip %}
-Sie können auch eine Kopie des [Xamarin Braze SDK Changelog auf GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) finden.
+Sie können auch eine Kopie des [ Changelogs des .NET MAUI Braze SDK auf GitHub](https://github.com/braze-inc/braze-xamarin-sdk/blob/master/CHANGELOG.md) finden.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/braze-inc/braze-xamarin-sdk/master/CHANGELOG.md %}

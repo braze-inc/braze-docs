@@ -126,7 +126,7 @@ const handleItemInteraction = (itemId) => {
 ### 서버 측 통합(MCP 서버)
 
 <!-- For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT app requests and tool calls. -->
-MCP 서버에서 이벤트 및 구매를 추적하려면 [REST API를](https://www.braze.com/docs/api/home) 사용하세요. MCP 서버에 메시징 기능도 필요한 경우 [지원 케이스로](https://support.braze.com/login) 문의하세요.
+MCP 서버의 메시징 기능을 위한 서버 측 통합도 필요한 경우, 다음 연락처로 문의하세요. <span style="white-space:nowrap;">`mcp-product@braze.com`</span>. MCP 서버에서 이벤트 및 구매를 추적하려면 [REST API를]({{site.baseurl}}/api/home) 사용하세요.
 
 <!-- #### Import the Braze functions
 

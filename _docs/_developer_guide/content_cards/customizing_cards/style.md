@@ -1,6 +1,6 @@
 ---
 nav_title: Style
-article_title: Customizing the style of Content Cards
+article_title: Customize the style of Content Cards
 page_order: 1
 description: "This article covers styling options for your Content Cards."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Customizing the style of Content Cards
+# Customize the style of Content Cards
 
 > Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For the full list of content card types, see [About Content Cards]({{site.baseurl}}/developer_guide/content_cards/).
 

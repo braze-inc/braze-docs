@@ -36,16 +36,20 @@ Vous devez vous assurer que les éléments suivants sont créés, complétés et
 | --- | --- | --- |
 | Gestionnaire d’affaires Snapchat | Snapchat | Un outil centralisé pour gérer les ressources Snapchat de votre marque (comme les comptes publicitaires, les pages, les apps). |
 | Compte publicitaire Snapchat | Snapchat | Un compte publicitaire Snapchat actif lié au gestionnaire de compte Snapchat de votre marque.<br><br>Assurez-vous que votre gestionnaire de compte Snapchat vous a accordé des droits d'administrateur sur les comptes publicitaires Snapchat que vous prévoyez d'utiliser avec Braze. |
-| Conditions d'utilisation de Snapchat | [Snapchat](https://www.snap.com/en-US/policies) | Acceptez de vous conformer à tous les termes, politiques, directives et documents requis de Snapchat liés à votre utilisation de Snapchat Audience Sync, y compris tous les termes, politiques, directives et documents qui y sont incorporés par référence, qui peuvent inclure : les conditions de service, les conditions de service commerciales, les conditions des développeurs, Audience Match, les politiques publicitaires, la politique de contenu commercial, les lignes directrices de la communauté et la responsabilité des fournisseurs. |
+| Conditions d'utilisation de Snapchat &  | [Snapchat](https://www.snap.com/en-US/policies) | Acceptez de vous conformer à tous les termes, politiques, directives et documents requis de Snapchat liés à votre utilisation de Snapchat Audience Sync, y compris tous les termes, politiques, directives et documents qui y sont incorporés par référence, qui peuvent inclure : les conditions de service, les conditions de service commerciales, les conditions des développeurs, Audience Match, les politiques publicitaires, la politique de contenu commercial, les lignes directrices de la communauté et la responsabilité des fournisseurs. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Intégration 
 
 ### Étape 1 : Se connecter à Snapchat
 
+{% alert important %}
+Vous devez disposer de l'[autorisation "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) pour connecter Snapchat à votre compte Braze.
+{% endalert %}
+
 Dans le tableau de bord de Braze, allez dans **Intégrations partenaires** > **Partenaires technologiques** et sélectionnez **Snapchat**. Sous Synchronisation de l'audience Snapchat, sélectionnez **Connecter Snapchat**.
 
-![Page technologique de Snapchat dans Braze qui comprend une section Aperçu et une section Synchronisation de l'audience de Snapchat avec le bouton Snapchat connecté.]({% image_buster /assets/img/snapchat/snapchat1.png %}){: style="max-width:80%;"}
+![Page sur la technologie Snapchat dans Braze qui comprend une section Aperçu et une section Synchronisation de l'audience Snapchat avec le bouton Snapchat connecté.]({% image_buster /assets/img/snapchat/snapchat1.png %}){: style="max-width:80%;"}
 
 Vous serez ensuite redirigé vers la page OAuth de Snapchat pour autoriser Braze à obtenir les permissions liées à votre intégration de synchronisation d’audience.
 
@@ -76,25 +80,25 @@ Sélectionnez **TikTok** comme partenaire de synchronisation d'audience.
 Sélectionnez ensuite le compte publicitaire Snapchat de votre choix. Dans la liste déroulante **Choisir une audience nouvelle ou existante**, saisissez le nom d'une audience nouvelle ou existante.
 
 {% tabs %}
-{% tab Créer une nouvelle audience %}
+{% tab Create a New Audience %}
 
 **Créer une nouvelle audience**<br>
 Saisissez un nom pour la nouvelle audience, sélectionnez **Ajouter des utilisateurs à l'audience** et sélectionnez les champs que vous souhaitez synchroniser avec Snapchat. Ensuite, enregistrez votre audience en cliquant sur le bouton **Créer une audience** en bas de l'éditeur d'étape.
 
-![Vue élargie de l'étape du canvas d’audience personnalisée. Ici, le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée.]({% image_buster /assets/img/audience_sync/snapchat3.png %})
+![Vue élargie de l'étape du canvas de l'audience personnalisée. Le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée ici.]({% image_buster /assets/img/audience_sync/snapchat3.png %})
 
-Les utilisateurs seront avertis en haut de l'éditeur d'étape si l'audience est créée avec succès ou si des erreurs surviennent au cours de ce processus. Les utilisateurs peuvent également référencer cette audience pour la suppression d'utilisateurs plus tard dans le parcours Canvas car l'audience a été créée en mode brouillon.
+Braze affiche une notification en haut de l'éditeur d'étape si l'audience est créée avec succès ou si des erreurs surviennent. Les utilisateurs peuvent faire référence à cette audience pour la supprimer plus tard dans le parcours Canvas, car l'audience a été créée en mode brouillon.
 
-![Une alerte qui apparaît après la création d'une nouvelle audience dans le composant canvas.]({% image_buster /assets/img/audience_sync/snapchat2.png %})
+![Une alerte qui apparaît après la création d'une nouvelle audience dans le composant Canvas.]({% image_buster /assets/img/audience_sync/snapchat2.png %})
 
 Lorsque vous lancez un canvas avec une nouvelle audience, Braze synchronise les utilisateurs quasiment en temps réel lorsqu'ils entrent dans le composant de synchronisation de l’audience.
 
 {% endtab %}
-{% tab Synchronisation avec une audience existante %}
-**Synchroniser avec une audience existante**<br>
+{% tab Sync with an Existing Audience %}
+**Synchronisation avec une audience existante**<br>
 Braze offre également la possibilité d'ajouter des utilisateurs aux audiences Snapchat existantes afin de s'assurer que ces audiences sont à jour. Pour effectuer une synchronisation avec une audience existante, saisissez le nom de l'audience dans le menu déroulant et sélectionnez **Ajouter à l'audience**. Braze ajoutera ensuite des utilisateurs en temps quasi réel au fur et à mesure qu'ils entreront dans le composant Audience Sync.
 
-![Vue élargie de l'étape du canvas d’audience personnalisé. Ici, le compte publicitaire souhaité et l'audience existante sont sélectionnés.]({% image_buster /assets/img/audience_sync/snapchat.png %})
+![Vue élargie de l'étape du canvas de l'audience personnalisée. Le compte publicitaire souhaité et l’audience existante sont sélectionnés ici.]({% image_buster /assets/img/audience_sync/snapchat.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -109,9 +113,9 @@ Vous pouvez afficher l'audience dans Snapchat en entrant dans votre compte gesti
 
 ## Considérations relatives à la synchronisation des utilisateurs et à la limite de débit
 
-Lorsque les utilisateurs atteignent l'étape de synchronisation de l'audience, Braze synchronise ces utilisateurs en temps quasi réel tout en respectant les limites de débit de l'API de Snapchat. En pratique, Braze va essayer de mettre en lot et de traiter autant d'utilisateurs toutes les 5 secondes avant d'envoyer ces utilisateurs à Snapchat.
+Lorsque les utilisateurs atteignent l'étape de synchronisation de l'audience, Braze les synchronise quasiment en temps réel tout en respectant les limites de débit de l'API de Snapchat. Braze met en lot et traite un maximum d'utilisateurs toutes les 5 secondes avant de les envoyer sur Snapchat.
 
-La limite de débit de l'API de Snapchat stipule qu'il ne faut pas dépasser dix requêtes par seconde et 100 000 utilisateurs par requête. Si un client Braze atteint cette limite de débit, le canvas Braze tentera de synchroniser pendant environ 13 heures maximum. Si la synchronisation n'est pas possible, ces utilisateurs sont répertoriés sous les indicateurs Users Errored.
+La limite de débit de l'API de Snapchat n'autorise pas plus de dix requêtes par seconde et 100 000 utilisateurs par demande. Si un client atteint cette limite, Braze retente la synchronisation pendant environ 13 heures. Si la synchronisation n'est toujours pas possible, Braze répertorie ces utilisateurs sous l'indicateur Users Errored.
 
 ### Comprendre les analyses
 

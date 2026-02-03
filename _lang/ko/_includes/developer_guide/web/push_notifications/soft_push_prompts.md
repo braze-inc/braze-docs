@@ -4,13 +4,13 @@
 
 사이트에서는 푸시 권한을 요청하기 전에 사용자를 '프라임'하고 푸시 알림을 보내야 하는 이유를 설명하는 '소프트' 푸시 프롬프트를 구현하는 것이 좋습니다. 이 기능은 브라우저에서 사용자에게 직접 프롬프트를 표시하는 빈도를 조절하고 사용자가 권한을 거부하면 다시는 요청할 수 없기 때문에 유용합니다.
 
-또는 표준 [웹 푸시 통합에]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) 설명된 대로 `requestPushPermission()` 으로 직접 전화하는 대신 [트리거된 인앱 메시지를]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) 사용하여 특별한 사용자 지정 처리를 포함할 수 있습니다.
+또는 표준 [웹 푸시 통합에]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/#step-2-browser-registration) 설명된 대로 `requestPushPermission()` 을 직접 호출하는 대신 특별한 커스텀 처리를 포함하려면 [트리거된 인앱 메시지를]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web) 사용하세요.
 
 {% alert tip %}
 새로운 [노코드 푸시 프라이머]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)를 사용하면 SDK 사용자 지정 없이도 이 작업을 수행할 수 있습니다.
 {% endalert %}
 
-## 소프트 푸시 프롬프트 설정
+## 소프트 푸시 프롬프트 설정하기
 
 {% multi_lang_include archive/web-v4-rename.md %}
 
@@ -29,7 +29,7 @@ Braze SDK 통합의 경우 로딩 스니펫 내에서 `automaticallyShowInAppMes
 
 ### 3단계: 업데이트 통합
 
-마지막으로 제거된 호출을 다음 스니펫으로 대체합니다:
+마지막으로 제거된 호출을 다음 스니펫으로 대체합니다. `openSession()` 으로 전화하기 전에 `subscribeToInAppMessage()` 으로 전화하세요. 이렇게 하면 인앱 메시지 수신기가 푸시 프라이머 메시지를 수신할 수 있도록 제때 등록됩니다.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

@@ -32,7 +32,7 @@ S3 用のクラウドデータ取り込み (CDI) を使用して、AWS アカウ
 
 ### AWSの定義
 
-まず、この作業で使われる用語をいくつか定義しておこう。
+まず、このタスクで使用される用語を定義します。
 
 | 用語 | 定義 |
 | --- | --- |
@@ -68,9 +68,9 @@ SQSキューはグローバルに一意でなければならない（例えば�
 
 この設定では ARN とSQS のURL を頻繁に使用するため、それらを必ずメモしてください。
 
-![誰がキューにアクセスできるかを定義するJSONオブジェクトの例で、"Advanced "を選択する。]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
+!["Advanced"を選択すると、キューにアクセスできるユーザーを定義するJSONオブジェクトの例が表示されます。]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
-### ステップ 3: アクセスポリシーの設定
+### ステップ 3:アクセスポリシーの設定
 
 アクセスポリシーを設定するには、**詳細オプション** を選択します。 
 
@@ -110,7 +110,7 @@ S3バケットのルートフォルダにファイルをアップロードした
 
 ソースバケットの操作を Braze に許可する IAM ポリシーを作成します。まず、アカウント管理者として AWS 管理コンソールにサインインします。 
 
-1. AWS コンソールの [IAM] セクションに移動し、ナビゲーションバーの [**ポリシー**] を選択してから [**ポリシーを作成**] を選択します。<br><br>![AWSコンソールの "Create policy "ボタン。]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
+1. AWS コンソールの [IAM] セクションに移動し、ナビゲーションバーの [**ポリシー**] を選択してから [**ポリシーを作成**] を選択します。<br><br>![AWSコンソールの"Create policy"ボタン。]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
 
 2. **JSON** タブを開き、**Policy Document** セクションに以下のコード スニペットを入力します。`YOUR-BUCKET-NAME-HERE` をバケット名に、`YOUR-SQS-ARN-HERE` をSQS キュー名に置き換えるよう注意してください。 
 
@@ -148,36 +148,36 @@ S3バケットのルートフォルダにファイルをアップロードした
 
 4. ポリシーの名前と説明を指定し、[**ポリシーの作成**] を選択します。  
 
-![new-policy-name "という名前のポリシーの例だ。]({% image_buster /assets/img/create_policy_3_name.png %})
+!["new-policy-name."という名前のポリシーの例。]({% image_buster /assets/img/create_policy_3_name.png %})
 
-![ポリシーの説明フィールド。]({% image_buster /assets/img/create_policy_4_created.png %})
+![ポリシーの記述フィールド。]({% image_buster /assets/img/create_policy_4_created.png %})
 
-### ステップ6: IAM ロールを作成する
+### ステップ 6: IAM ロールを作成する
 
 AWS での設定を完了するには、IAM ロールを作成し、ステップ 4 の IAM ポリシーをそれにアタッチします。 
 
 1. IAM ポリシーを作成したコンソールの同じ [IAM] セクションで、[**ロール**] > [**ロールの作成**] に移動します。 
 
-<br><br>![役割の作成」ボタンだ。]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
+<br><br>!["Create role"ボタン。]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
 
 {: start="2"}
 2\.Braze AWS アカウントID をBraze ダッシュボードからコピーします。[**クラウドデータ取り込み**] に移動し、[**新しいデータ同期を作成**] を選択し、[**S3 インポート**] を選択します。
 
-3. AWS で、信頼できるエンティティセレクターのタイプとして [**別の AWS アカウント**] を選択します。BrazeアカウントIDを入力する。**Require external ID**チェックボックスを選択し、Brazeが使用する外部IDを入力する。これは、BrazeダッシュボードのCurrents接続の**認証情報**セクションでS3 Currents接続を作成した際に生成された外部IDである。完了したら [**次へ**] を選択します。 
+3. AWS で、信頼できるエンティティセレクターのタイプとして [**別の AWS アカウント**] を選択します。Brazeの部門コードを入力します。**Require external ID**チェックボックスを選択し、Brazeが使用する外部IDを入力します。これは、Braze ダッシュボードのCurrents コネクションの**Credentials** セクションでS3 Currents コネクションを作成したときに生成される外部ID です。完了したら [**次へ**] を選択します。 
 
-<br><br> ![S3の "Create Role "ページ。このページには、ロール名、ロールの説明、信頼できるエンティティ、ポリシー、および権限境界のフィールドがあります。]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+<br><br> ![S3 の [ロールの作成] ページ。このページには、ロール名、ロールの説明、信頼できるエンティティ、ポリシー、および権限境界のフィールドがあります。]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="4"}
 4\.ステップ 4 で作成したポリシーをロールにアタッチします。検索バーでポリシーを検索し、ポリシーの横のチェックマークを選択してアタッチします。完了したら [**次へ**] を選択します。
 
-<br><br>![new-policy-nameが選択されたロールARN。]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+<br><br>![new-policy-name を選択したロールARN。]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
 
 ロールに名前と説明を指定し、[**Create Role**] を選択します。
 
-<br><br>![new-role-name "という名前のロールの例だ。]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
+<br><br>!["new-role-name"という名前のロールの例。]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5. 作成したロールのARNと外部IDは、Cloud Data Ingestion統合を作成する際に使用するので、控えておくこと。
+5. Cloud Data Ingestion 統合を作成するために必要なため、作成したロールのARN と生成した外部ID をメモしておきます。
 
 ## Braze でのクラウドデータ取り込みの設定
 
@@ -191,22 +191,22 @@ AWS での設定を完了するには、IAM ロールを作成し、ステップ
   - フォルダーパス (オプション、ワークスペース内の同期間で一意である必要があります)
   - 地域
 
-![新しいインポート同期を作成するためにS3に表示される認証情報の例。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+![S3 に表示されるセキュリティー認証情報s を例にして、新しいインポートシンクを作成します。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
 3\.統合に名前を付け、この統合のデータ型を選択する。 
 
-<br><br>![ユーザー属性をデータソースとする "cdi-s3-as-source-integration "の同期詳細を設定する。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+<br><br>![ユーザー 属性s をデータ型として、"cdi-s3-as-source-integration" の同期の詳細を設定します。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
 
 {: start="4"}
 4\.アクセスや権限の問題で同期が切れた場合に通知を受け取る連絡先メールアドレスを追加します。オプションで、ユーザーレベルのエラーと同期の成功の通知をオンにします。 
 
-<br><br> ![同期エラー通知の設定。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+<br><br> ![同期エラー 通知s の通知環境設定のセットアップ。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
 {: start="5"}
 5. 最後に接続テストを行い、同期を保存します。 
 
-<br><br>![データプレビューで接続をテストするオプション。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+<br><br>![データプレビューとの接続をテストするための選択肢です。]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## 必要なファイル形式
 

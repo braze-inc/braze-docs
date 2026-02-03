@@ -548,7 +548,9 @@ erDiagram
         "SHORT_URL": "Shortened url that was clicked",
         "USER_AGENT": "User agent on which the spam report occurred",
         "USER_PHONE_NUMBER": "[PII] The user's phone number from which the message was received",
-        "SF_CREATED_AT": "when this event was picked up by the Snowpipe"
+        "SF_CREATED_AT": "when this event was picked up by the Snowpipe",
+        "IS_SUSPECTED_BOT_CLICK": "Whether this event was processed as a bot event",
+        "SUSPECTED_BOT_CLICK_REASON": "Array of reasons why this event was classified as a bot"
     }
 }
 ```
