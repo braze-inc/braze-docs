@@ -32,7 +32,7 @@ Now, follow the respective steps for your data source:
 4. Select **+ Add Tile** and then choose one of the reports you created in [Report Builder (New)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
 
 {% alert important %}
-After a Report Builder report is added to a Dashboard Builder tile, the tile is not connected to the original report. If you edit the original report in Report Builder, you'll need to delete the existing dashboard tile and create a new one using the updated report as the data source.
+After a Report Builder report is added to a Dashboard Builder tile, the tile is not connected to the original report. If you edit the original report in Report Builder, you must delete the existing dashboard tile and create a new one using the updated report as the data source.
 {% endalert %}
 
 {: start="5"}
