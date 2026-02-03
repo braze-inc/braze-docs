@@ -211,7 +211,7 @@ CREATE SCHEMA BRAZE-CLOUD-PRODUCTION.INGESTION;
 | `ALIAS_LABEL` | 文字列 | NULL 許容 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-スキーマとテーブルには好きな名前を付けることができるが、カラム名は前述の定義と一致させる必要がある。
+スキーマとテーブルには好きな名前をつけることができるが、カラム名は前述の定義と一致させる必要がある。
 
 * `UPDATED_AT`:この行が更新または追加された時刻。前回の同期以降に追加または更新された行のみが同期される。  
 * `external_id` 、または`alias_name` 、`alias_label` のいずれかをユーザー識別子列とする。これらは、キャンバスのメッセージングをトリガーしたいユーザーを識別する。  
