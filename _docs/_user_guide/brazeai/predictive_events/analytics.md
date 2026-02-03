@@ -41,7 +41,7 @@ The scores and the corresponding categories will be updated according to the sch
 
 ### Accessing user-level likelihood scores
 
-To access user-level likelihood scores and categories for individual users, create a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) using the [Event Likelihood Score]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) or [Event Likelihood Category]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-category) filters, then export the users from that segment. When exporting, you can include the likelihood scores in the export data.
+To view the likelihood score for a single user, look up that user in the dashboard and go to **Engagement** > **Predictions** to see their score. To access scores and categories for many users at once, create a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) using the [Event Likelihood Score]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) or [Event Likelihood Category]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-category) filters, then export the users from that segment. When exporting, you can include the likelihood scores in the export data.
 
 {% alert note %}
 **Difference between predictive events and predictive churn**: While both predictive events and [predictive churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) assign scores to users, there are important differences:
