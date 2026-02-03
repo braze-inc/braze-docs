@@ -1,6 +1,6 @@
 ---
 nav_title: Fetching data through Connected Content
-article_title: Fetching data through Connected Content with Voucherify
+article_title: Voucherify로 연결된 콘텐츠를 통해 데이터 가져오기
 page_order: 2
 alias: /partners/voucherify/connected_content/
 description: "This reference article outlines how you can fetch data from Voucherify API through Braze Connected Content and send messages to specific Braze segments."
@@ -8,13 +8,13 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Fetching data through Connected Content
+# 연결된 콘텐츠를 통해 데이터 가져오기
 
 > With Braze Connected Content, you can fetch data from the Voucherify API and send messages to specific Braze segments. This reference article will show you how to set up Connected Content scripts to publish Voucherify coupons, invite new referrers, retrieve loyalty cards balance, and more.
 
 _This integration is maintained by Voucherify._
 
-## About the integration
+## 통합 정보
 
 The basic schema of the script looks as follows:
 {% raw %}
@@ -352,7 +352,7 @@ We're assuming you already have a Braze campaign or Canvas in which you want to 
 
 ### Step 1: Add Connected Content script to message template
 
-1.  Copy and paste the Connected Content script under the {% raw %}`<body>`{% endraw %} tag in a message HTML template. Replace **CAMPAIGN_ID** with a Voucherify {% raw %}`campaign_id`{% endraw %} copied from the URL address of Voucherify campaign dashboard.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
+1.  Copy and paste the Connected Content script under the {% raw %}`<body>`{% endraw %} tag in a message HTML template. Replace **CAMPAIGN_ID** 를 Voucherify 캠페인 대시보드의 URL 주소에서 복사한 {% raw %}`campaign_id`{% endraw %} 로 바꿉니다.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}  
     ```
     assign voucherify_campaign_id = "camp_Y7h1meBSyybsNs7UpSVVZZce"
@@ -428,7 +428,7 @@ For example, to display the published code in a message template, you must creat
 
 Connected Content script:
 
-![Connected Content script showing to save a Voucherify response at the end of the Connected Content call]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
+![연결된 콘텐츠 호출이 끝날 때 Voucherify 응답을 저장하는 것을 보여주는 연결된 콘텐츠 스크립트]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
 
 Snippet in Braze message template:
 

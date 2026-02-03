@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# [![Braze Learning course]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"}Snowflake
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/snowflake-secure-data-sharing-via-braze/){: style="float:right;width:120px;border:0;" class="noimgborder"} Snowflake
 
 > [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is a purpose-built SQL cloud data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings. With Snowflake's unique and patented architecture, it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
@@ -40,7 +40,7 @@ Before you can use this feature, you'll need to complete the following:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze access | To access this feature in Braze, you'll need to reach out to your Braze account or customer success manager. |
+| Braze access | Braze에서 이 기능을 사용하려면 Braze 계정 또는 고객 성공 매니저에게 문의해야 합니다. |
 | Snowflake account | A Snowflake account with `admin` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -57,12 +57,12 @@ For Snowflake, data sharing happens between a [data provider](https://docs.snowf
 
 ### Step 2: Create the database in Snowflake
 
-1. After a few minutes, you should receive the inbound datashare in your Snowflake acccount.
+1. 몇 분 후, 인바운드 데이터 공유가 Snowflake 계정에 수신됩니다.
 2. Using the inbound datashare, create a database to view and query the tables. For example:
     ```sql
     CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>
     ```
-3. Grant priviliges to query the new database.
+3. 새 데이터베이스를 쿼리할 수 있는 권한을 부여합니다.
 
 {% alert warning %}
 If you delete and recreate a share in the Braze dashboard, you must drop the previously-created database and recreate it using `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` to query the inbound share.
@@ -80,7 +80,7 @@ Similar to Currents, you can use your Snowflake Secure Data Sharing to:
 - Map raw event or user data to a CRM (like Salesforce)
 - And more
 
-[Download the raw table schemas here.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
+[여기에서 원시 테이블 스키마를 다운로드하세요.]({% image_buster /assets/download_file/data-sharing-raw-table-schemas.txt %})
 
 ### User ID schema
 
@@ -115,11 +115,11 @@ When possible, breaking changes will be preceded by an announcement and a migrat
 
 ### Snowflake regions
 
-Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-Central (Frankfurt) regions. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
+Braze는 현재 Snowflake AWS 미국 동부-1, 유럽 중부(프랑크푸르트), AP 동남부-2(시드니), AP 동남부-3(자카르타) 리전에서 모든 사용자 데이터를 호스팅하고 있습니다. For users outside of those regions, Braze can provide data sharing to joint customers who are hosting their Snowflake infrastructure across any AWS, Azure, or GCP region.
 
-### Data Retention
+### 데이터 보존
 
-#### Retention Policy
+#### 보존 정책
 
 Any data older than two years will be archived and moved to long term storage. As part of the archival process, all events are anonymized and any personal identifiable information (PII) sensitive fields are stripped out (this includes optionally PII fields like `properties`). Archived data still contains the `user_id` field, which allows for per-user analytics across all events data.
 
