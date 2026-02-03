@@ -1,7 +1,7 @@
 ---
 nav_title: Item recommendations
 article_title: Item recommendations in Braze
-page_order: 15
+page_order: 7
 search_rank: 1
 description: "Learn all about item recommendation engines in Braze."
 ---
