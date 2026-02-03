@@ -11,18 +11,15 @@ description: "このランディングページには、Braze アカウントま
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: Brazeをナビゲートする
-  link: /docs/user_guide/administrative/access_braze/navigation/
-  image: /assets/img/braze_icons/list.svg
-- name: ダッシュボードを検索する
-  link: /docs/user_guide/administrative/access_braze/global_search/
-  image: /assets/img/braze_icons/search-sm.svg
-- name: API と SDK のエンドポイント
-  link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: アカウントにアクセスする
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
   image: /assets/img/braze_icons/user-circle.svg
+- name: ダッシュボード
+  link: /docs/user_guide/administrative/access_braze/braze_dashboard/
+  image: /assets/img/braze_icons/browser.svg
+- name: API と SDK のエンドポイント
+  link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: 言語設定
   link: /docs/user_guide/administrative/access_braze/language/
   image: /assets/img/braze_icons/globe-04.svg

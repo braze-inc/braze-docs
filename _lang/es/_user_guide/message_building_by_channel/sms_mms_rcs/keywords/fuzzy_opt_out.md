@@ -1,7 +1,7 @@
 ---
 nav_title: Exclusión voluntaria difusa
-article_title: Adhesión voluntaria difusa
-description: "Este artículo de referencia explica cómo configurar la exclusión difusa, una configuración que intenta reconocer cuándo un mensaje entrante no coincide con una palabra clave de exclusión."
+article_title: Exclusión aproximada
+description: "Este artículo de referencia explica cómo configurar la exclusión difusa, una opción que intenta reconocer cuándo un mensaje entrante no coincide con una palabra clave de exclusión."
 page_type: reference
 channel:
   - SMS
@@ -13,30 +13,30 @@ page_order: 1
 
 # Exclusión voluntaria difusa
 
-\![Chat de mensajes para iOS que muestra mensajes de exclusión salientes en respuesta a la exclusión difusa entrante "Por favor, stoppppp".]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Chat de mensajes iOS que muestra mensajes de exclusión salientes en respuesta a la exclusión difusa entrante "Please stopppp".]({% image_buster /assets/img/sms/fuzzy1.jpg %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-> Los usuarios que envíen SMS, MMS y RCS con Braze deben cumplir las leyes, reglamentos y normas industriales aplicables que se definan. Para la adhesión voluntaria, las leyes dictan que cuando un usuario envía un mensaje de texto "STOP", todos los mensajes posteriores relacionados con ese programa de mensajería se detendrán. Braze procesa automáticamente estos mensajes y cancela la suscripción del usuario.<br><br>La exclusión difusa intenta reconocer cuándo un mensaje entrante no coincide con una [palabra clave de exclusión]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), pero indica una intención de exclusión. Si se habilita la exclusión voluntaria difusa y una respuesta de palabra clave entrante se considera "difusa", Braze responderá automáticamente con un mensaje de respuesta que indique a los usuarios que se excluyan.
+> Los usuarios que envíen SMS, MMS y RCS con Braze deben cumplir las leyes, reglamentos y normas industriales aplicables que se definan. En cuanto a la exclusión voluntaria, las leyes dictan que cuando un usuario envía un mensaje de texto con la palabra "STOP", todos los mensajes posteriores relacionados con ese programa de mensajería se detendrán. Braze procesa automáticamente estos mensajes y cancela la suscripción del usuario.<br><br>La exclusión difusa intenta reconocer cuándo un mensaje entrante no coincide con una [palabra clave de exclusión]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), pero indica una intención de exclusión. Si se habilita la exclusión voluntaria difusa y una respuesta de palabra clave entrante se considera "difusa", Braze responderá automáticamente con un mensaje de respuesta que indique a los usuarios que se excluyan.
 
-Actualmente, sólo se admiten las palabras clave de exclusión creadas utilizando el inglés como [idioma local]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#multi-language-support).
+Actualmente, sólo se admiten las palabras clave de exclusión creadas utilizando el inglés como [lengua local]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#multi-language-support).
 
-## ¿Qué se considera difuso?
+## ¿Qué se considera aproximado?
 
 Los criterios para que una respuesta entrante se considere "difusa" son los siguientes:
-- Si al intercambiar una letra con la letra uno a su izquierda o derecha en una palabra clave QWERTY se obtiene una palabra clave de adhesión voluntaria coincidente.
+- Si al cambiar una letra con la letra uno a su izquierda o derecha en una palabra clave QWERTY se obtiene una palabra clave de exclusión coincidente.
 - Una subcadena del mensaje coincide con una palabra clave de exclusión.
 
-Por ejemplo, "Stpo" o "Please stopppp" se considerarán difusos, y se enviará una respuesta difusa de exclusión. Si el usuario responde con una palabra clave de adhesión voluntaria, se desencadenará un evento de cancelar suscripción.
+Por ejemplo, "Stpo" o "Please stopppp" se considerarán aproximados, y se enviará una respuesta de exclusión aproximada. Si el usuario responde con una palabra clave de adhesión voluntaria, se desencadenará un evento de cancelar suscripción.
 
-## Configurar la adhesión voluntaria difusa
+## Configurar la exclusión difusa
 
-Para configurar la exclusión difusa, navega a la página de gestión de suscripciones del grupo de palabras clave.
+Para configurar la exclusión difusa, vaya a la página de gestión de palabras clave del grupo de suscripción.
 
 1. Ve a **Audiencia** > **Gestión de grupos de suscripción** y selecciona un grupo de suscripción **SMS/MMS/RCS**.
 2. En **Palabras clave globales**, busca la categoría de **adhesión voluntaria** y selecciona el icono del lápiz.
-3. Habilita **la exclusión voluntaria difusa** alternándola.
-4. Modifica la respuesta difusa de adhesión voluntaria como desees. 
+3. Habilita **la exclusión voluntaria aproximada** alternándola.
+4. Modifique la respuesta de exclusión difusa como desee. 
 
-Sección para editar palabras clave de adhesión voluntaria.]({% image_buster /assets/img/sms/fuzzy2.png %})
+![Sección para editar las palabras clave de adhesión voluntaria.]({% image_buster /assets/img/sms/fuzzy2.png %})
 
 ## Buenas prácticas para mensajes difusos de exclusión voluntaria
 
@@ -77,7 +77,7 @@ Céntrate en guiar a los usuarios. Por ejemplo, si tu palabra clave de exclusió
       <td>"Te has dado de baja correctamente. No recibirás más mensajes de este número. Responde START para volver a suscribirte" (Esto es una confirmación directa de cancelar suscripción, lo que es engañoso en un escenario de exclusión difusa).</td>
     </tr>
     <tr>
-      <td>"Hemos recibido tu mensaje. Si quieres dejar de recibir mensajes, envía un mensaje de texto de STOP".</td>
+      <td>"Hemos recibido tu mensaje. Si quieres dejar de recibir mensajes de texto, envía el mensaje "STOP".</td>
       <td>"STOP" (Esto es sólo la palabra clave exacta en sí, que no guía al usuario).</td>
     </tr>
     <tr>

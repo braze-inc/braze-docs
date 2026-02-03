@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by Passkit._
 
-## About the integration
+## 통합 정보
 
 The Braze and PassKit integration allows you to increase and measure the engagement of your online campaigns by instantly delivering custom Apple Wallet and Google Pay passes. You can then analyze usage and make real-time adjustments to increase in-store traffic by triggering location-based messages and personalized, dynamic updates to your customer's mobile wallet. 
 
@@ -22,8 +22,8 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 
 | Requirement | Description |
 | ----------- | ----------- |
-| PassKit account | You will need to have a PassKit account and a PassKit account manager. |
-| `userDefinedID` | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the `userDefinedID`. This `userDefinedID` will be used when making API calls to the PassKit endpoints. |
+| PassKit account | Passkit 계정과 Passkit 계정 매니저가 있어야 합니다. |
+| `userDefinedID` | Passkit과 Braze 간에 사용자에 대한 커스텀 이벤트 및 커스텀 속성을 적절하게 업데이트하려면 Braze 외부 ID를 `userDefinedID` 로 설정해야 합니다. 이 `userDefinedID` 는 Passkit 엔드포인트에 API 호출을 할 때 사용됩니다. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -44,17 +44,17 @@ Once the data is passed into Braze, you can build audiences, personalize content
 
 To pass data from PassKit, ensure that you have set your Braze external ID as PassKit's `externalId`.
 
-1. Within **Settings**, under **Integrations** in your PassKit pass project or program click **Connect** under the **Braze** Tab.<br>![The Braze integration tile in the PassKit platform.]({% image_buster /assets/img/passkit/passkit5.png %}){: style="max-width:80%"}<br><br>
-2. Fill out your Braze API key, endpoint URL, and provide a name for your connector.<br><br>
-3. Toggle **Enable Integration** and whichever events you want in Braze to trigger or personalize your messages with.<br>![The PassKit Braze integration tile expanded to accept the API key, endpoint URL, integration name, enablement settings, membership settings, and pass settings.]({% image_buster /assets/img/passkit/passkit4.png %}){: style="max-width:70%"}
+1. **설정** 내 PassKit 패스 프로젝트 또는 프로그램의 **통합**에서 **Braze** 탭 아래 **연결**을 클릭합니다.<br>![PassKit 플랫폼의 Braze 통합 타일입니다.]({% image_buster /assets/img/passkit/passkit5.png %}){: style="max-width:80%"}<br><br>
+2. Braze API 키와 엔드포인트 URL을 입력하고 커넥터의 이름을 제공합니다.<br><br>
+3. **통합 활성화** 및 Braze에서 메시지를 트리거하거나 개인화할 이벤트를 토글합니다.<br>![API 키, 엔드포인트 URL, 통합 이름, 활성화 설정, 멤버십 설정 및 패스 설정을 허용하도록 확장된 PassKit Braze 통합 타일.]({% image_buster /assets/img/passkit/passkit4.png %}){: style="max-width:70%"}
 
-## Create pass using a SmartPass link
+## SmartPass 링크를 사용하여 패스 생성
 
-Within Braze, you can set up a SmartPass link to generate a unique URL for your customers to install their pass on either Android or iOS. To do this, you must define an encrypted SmartPass data payload that can be called from a Braze Content Block. This [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) can then be reused for future passes and coupons. The following will be used during your integration:
+Within Braze, you can set up a SmartPass link to generate a unique URL for your customers to install their pass on either Android or iOS. To do this, you must define an encrypted SmartPass data payload that can be called from a Braze Content Block. This [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) can then be reused for future passes and coupons. 통합 과정에서 다음이 사용됩니다:
 
 - **PassKit URL**: Your PassKit URL is a unique URL for your PassKit program.<br>Each program has a unique URL, and you can find it under the **Distribution** tab of your PassKit program or project. (for example, https://pub1.pskt.io/c/ww0jir)<br><br>
-- **PassKit secret**: Along with the URL, you will need to have the PassKit Key for this program handy.<br>This can be found on the same page as your PassKit URL.<br><br>
-- **Program (or project) ID**: Your PassKit Program ID will be required to create the SmartPass URL. <br>You can find it under the **Settings** tab of your project or program.
+- **PassKit secret**: URL과 함께 이 프로그램을 위한 Passkit 키가 준비되어 있어야 합니다.<br>This can be found on the same page as your PassKit URL.<br><br>
+- **Program (or project) ID**: 스마트패스 URL을 생성하려면 Passkit 프로그램 ID가 필요합니다. <br>You can find it under the **Settings** tab of your project or program.
 
 For more information on creating encrypted SmartPass links, check out this [PassKit article](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links).
 
@@ -94,7 +94,7 @@ Select **Create Content Block** to get started.
 
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
-Within this Content Block, we will not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
+이 콘텐츠 블록에서는 페이로드를 직접 포함하지 않고 {% raw %}`{{passData}}`{% endraw %} 변수에서 참조합니다. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passDatapassData|base64_encode}}{% endcapture %}
@@ -103,7 +103,7 @@ Within this Content Block, we will not directly include the payload, but referen
 
 ### Step 3: Create your encryption signature using a SHA1 HMAC hash
 
-Next, you will be creating your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
+다음으로 프로젝트 URL과 페이로드의 [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) 해시를 사용하여 암호화 서명을 생성합니다. 
 
 The second code snippet you must add to your Content Block captures the URL to be used for hashing.
 {% raw %}
@@ -135,7 +135,7 @@ Lastly, make sure you call your final URL so that it prints your SmartPass URL w
 ```
 {% endraw %}
 
-At this point, you will have created a Content Block that looks something like this:
+이 시점에서 다음과 같은 콘텐츠 블록을 만들었습니다:
 
 {% raw %}
 ```liquid
@@ -195,13 +195,13 @@ Capture your minified JSON payload from [step 1](#passkit-integrations):
 ```
 {% endraw %}
 
-Your message body should look something like this:
-![An image of the Content Block message composer with the captured JSON and Content Block reference shown.]({% image_buster /assets/img/passkit/passkit1.png %}){: style="max-width:70%"}
+메시지 본문은 다음과 같이 표시되어야 합니다:
+![캡처한 JSON 및 콘텐츠 블록 참조가 표시된 콘텐츠 블록 메시지 작성기의 이미지입니다.]({% image_buster /assets/img/passkit/passkit1.png %}){: style="max-width:70%"}
 
-The output URL for the sample is:
-![The output URL that includes a long, randomly generated string of letters and numbers.]({% image_buster /assets/img/passkit/passkit2.png %}){: style="max-width:70%"}
+샘플의 출력 URL은 다음과 같습니다:
+![무작위로 생성된 긴 문자 및 숫자 문자열이 포함된 출력 URL입니다.]({% image_buster /assets/img/passkit/passkit2.png %}){: style="max-width:70%"}
 
-The output URL will be long. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly](https://dev.bitly.com/v4/#operation/createFullBitlink). This can be done through a Connected Content call to a bit.ly endpoint.
+출력 URL이 길어집니다. The reason for this is that it contains all the pass data and incorporates best-in-class security to ensure data integrity and no tempering via URL modification. If using SMS to distribute this URL, you may want to run it through a link shortening process such as [bit.ly](https://dev.bitly.com/v4/#operation/createFullBitlink). This can be done through a Connected Content call to a bit.ly endpoint.
 
 ## Update pass using the PassKit webhook
 
@@ -224,7 +224,7 @@ Before you get started, here are the common JSON payload parameters that you can
 
 ### Step 1: Create your Braze webhook template
 
-To create a PassKit webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze dashboard. If you would like to create a one-off PassKit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+향후 캠페인이나 캔버스에서 사용할 Passkit 웹훅 템플릿을 만들려면 Braze 대시보드의 **템플릿 & 미디어** 섹션으로 이동하세요. If you would like to create a one-off PassKit webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
 Once you have selected the PassKit webhook template, you should see the following:
 - **Webhook URL**: `https://api-pub1.passkit.io/coupon/singleUse/coupon`

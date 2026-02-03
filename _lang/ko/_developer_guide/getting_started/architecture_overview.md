@@ -21,7 +21,7 @@ platform:
 
 Braze는 기본적으로 데이터를 다룹니다. Braze 플랫폼은 SDK, REST API 및 파트너 통합을 통해 데이터를 집계하고 실행할 수 있습니다. 
 
-![Braze에는 다양한 레이어가 있습니다. 전체적으로 SDK, API, 대시보드, 파트너 통합으로 구성되어 있습니다. 각각 데이터 수집 레이어, 분류 레이어, 오케스트레이션 레이어, 개인화 레이어 및 작업 레이어의 일부에 기여합니다. 액션 레이어에는 푸시, 인앱 메시지, 커넥티드 카탈로그, 웹훅, SMS, 이메일 등 다양한 채널이 있습니다.]({% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}){: style="display:block;margin:auto;" }
+![Braze에는 다양한 레이어가 있습니다. 전체적으로 SDK, API, 대시보드, 파트너 통합으로 구성되어 있습니다. 각각 데이터 수집 레이어, 분류 레이어, 오케스트레이션 레이어, 개인화 레이어 및 작업 레이어의 일부에 기여합니다. 작업 레이어에는 푸시, 인앱 메시지, 연결된 카탈로그, 웹훅, SMS, 이메일 등 다양한 채널이 있습니다.]({% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}){: style="display:block;margin:auto;" }
 
 * [데이터 수집](#ingestion): Braze는 다양한 소스에서 데이터를 가져옵니다.
 * [분류](#classification): 귀하의 마케팅 팀은 이러한 측정기준을 사용하여 사용자 기반을 동적으로 세분화합니다. 
@@ -34,28 +34,50 @@ Braze는 기본적으로 데이터를 다룹니다. Braze 플랫폼은 SDK, REST
 
 ## 데이터 수집 {#ingestion}
 
-Braze는 Snowflake, Kafka, MongoDB 및 Redis를 활용하여 스트리밍 데이터 아키텍처를 기반으로 빌드됩니다. SDK 및 API를 통해 여러 소스의 데이터를 Braze에 로드할 수 있습니다. 플랫폼은 데이터가 중첩되거나 구조화되는 방식에 관계없이 실시간으로 모든 데이터를 처리할 수 있습니다. 데이터 in Braze는 고객 프로필에 저장됩니다. 
+Braze는 Snowflake, Kafka, MongoDB 및 Redis를 활용하여 스트리밍 데이터 아키텍처를 기반으로 빌드됩니다. 소프트웨어 개발 키트와 API를 통해 다양한 소스의 데이터를 Braze에 로드할 수 있습니다. 플랫폼은 데이터가 중첩되거나 구조화되는 방식에 관계없이 실시간으로 모든 데이터를 처리할 수 있습니다. 데이터 in Braze는 고객 프로필에 저장됩니다. 
 
 {% alert tip %}
 Braze는 사용자가 익명 상태일 때부터 앱에 로그인하여 알려진 상태가 될 때까지의 전체 여정에서 데이터를 추적할 수 있습니다. 각 사용자에 대해 Braze에서 `external_id`라고 하는 사용자 ID를 설정해야 합니다. 이들은 사용자가 앱을 열 때 변경되지 않고 접근할 수 있어야 하며, 이를 통해 기기와 플랫폼 전반에서 사용자를 추적할 수 있습니다. 최고의 실천 방법에 대해서는 [사용자 수명 주기 기사]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/)를 참조하십시오.
 {% endalert %}
 
-![Braze는 API에서 백엔드 데이터 소스를, SDK에서 프론트엔드 데이터 소스를, Braze 클라우드 데이터 수집에서 데이터 웨어하우스 데이터를, 파트너 통합에서 데이터를 가져옵니다. 이 데이터는 Braze API ]({% image_buster /assets/img/getting-started/import-export.png %})를 통해 내보냅니다.{: style="display:block;margin:auto;" }
+![Braze는 API에서 백엔드 데이터 소스를, SDK에서 프론트엔드 데이터 소스를, Braze 클라우드 데이터 수집에서 데이터 웨어하우스 데이터를, 파트너 통합에서 데이터를 가져옵니다. 이 데이터는 Braze API ]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }를 통해 내보내집니다
 
 {% alert note %}
 이 사람 중심의 고객 프로필 데이터베이스에서는 실시간 대화형 속도를 지원합니다. Braze는 데이터가 도착하면 값을 미리 계산하고 빠른 검색을 위해 경량 문서 형식으로 결과를 저장합니다. 그리고 플랫폼이 처음부터 이러한 방식으로 설계되었기 때문에 대부분의 메시징 사용 사례에 적합합니다. 특히 연결된 콘텐츠, 제품 카탈로그 및 중첩된 속성과 같은 다른 데이터 개념과 결합된 경우가 이에 해당합니다.
 {% endalert %}
 
+### 데이터 소스 분석
+
+Braze는 다양한 기능을 위해 서로 다른 데이터 저장 시스템을 사용합니다. 어떤 기능이 어떤 데이터 소스를 사용하는지 이해하는 것은 데이터 관리와 문제 해결에 중요합니다.
+
+#### MongoDB 기반 기능
+- 커스텀 이벤트(소프트웨어 개발 키트 및 API로 추적)
+- Custom attributes
+- 사용자 프로필
+- 구매 이벤트
+- 대부분의 세분화 및 타겟팅 기능
+
+#### Snowflake 기반 기능
+- [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
+- [Predictive Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
+- [개인화된 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) 및 [개인화된 배리언트]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
+- [AI 개인화된 아이템 추천]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
+- [예상 실제 열람율]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (커스텀 이벤트 미사용)
+
+{% alert important %}
+**데이터 제거 고려 사항:** 커스텀 이벤트는 MongoDB에 저장되며 Snowflake 데이터와는 별개입니다. 잘못된 커스텀 이벤트 데이터를 제거해야 하는 경우, MongoDB에서 해결해야 합니다. Snowflake 기반 기능(예: SQL 세그먼트 확장 및 기타 Snowflake 기반 기능)은 별도로 처리되는 Snowflake의 데이터를 사용합니다. 한 시스템에서 데이터를 제거해도 다른 시스템에서 자동으로 제거되지는 않습니다.
+{% endalert %}
+
 ### Braze API를 통한 백엔드 데이터 소스
 Braze는 [REST API를]({{site.baseurl}}/api/endpoints/user_data) 통해 사용자 데이터베이스, 오프라인 트랜잭션, 데이터 웨어하우스에서 데이터를 가져올 수 있습니다. 
 
-### Braze SDK를 통한 프론트엔드 데이터 소스
+### Braze 소프트웨어 개발 키트를 통한 프론트엔드 데이터 소스 제공
 Braze는 사용자의 디바이스와 같은 프론트엔드 데이터 소스에서 [Braze SDK를]({{site.baseurl}}/user_guide/getting_started/web_sdk/) 통해 퍼스트파티 데이터를 자동으로 캡처합니다. SDK는 새로운 (익명) 사용자를 처리하고 생애주기 동안 고객 프로필에서 데이터를 관리합니다. 
 
 ### 파트너 통합
 Braze에는 "Alloys"라고 부르는 150개 이상의 기술 파트너가 있습니다. [상호 운용 가능한 기술 및 데이터 API로]({{site.baseurl}}/partners/home) 구성된 의미 있고 강력한 네트워크를 통해 데이터 피드를 보완할 수 있습니다. 
 
-### Braze 클라우드 데이터 수집을 통한 직접 웨어하우스 연결
+### Braze 클라우드 데이터 수집을 통한 데이터 웨어하우스 직접 연결
 [Braze Cloud 데이터 수집을]({{site.baseurl}}/user_guide/data/cloud_ingestion/) 통해 단 몇 분 만에 데이터 웨어하우스에서 플랫폼으로 고객 데이터를 스트리밍하여 관련 사용자 속성, 이벤트 및 구매를 동기화할 수 있습니다. 클라우드 데이터 수집 통합은 중첩된 JSON 및 오브젝트 배열을 포함하는 복잡한 데이터 구조를 지원합니다.
 
 클라우드 데이터 수집은 Snowflake, Amazon Redshift, Databricks 및 Google BigQuery에서 데이터를 동기화할 수 있습니다.

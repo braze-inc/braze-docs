@@ -42,9 +42,7 @@ Diese Customer Data Platform (CDP) sammelt Daten aus verschiedenen Quellen und l
 Diese Partner sind auf Produkt Analytics und Business-Intelligence spezialisiert und können Ihnen helfen, mit Ihren Nutzer:innen auf der Grundlage ihrer Aktionen zu interagieren.
 
 * [Amplitude]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_for_currents/)
-
 * [Mixpanel]({{site.baseurl}}/partners/data_and_analytics/analytics/mixpanel/)
-
 * [Heap]({{site.baseurl}}/partners/data_and_analytics/analytics/heap/heap_cohort_import/)
 
 

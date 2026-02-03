@@ -25,6 +25,7 @@ Brazeは、米国と欧州のさまざまなクラスターでアプリライケ
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
 | AU-01 | `https://rest.au-01.braze.com`  |
+| ID-01 | `https://rest.id-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## エンドポイントURL

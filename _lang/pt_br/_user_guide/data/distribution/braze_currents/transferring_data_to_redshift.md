@@ -1,21 +1,21 @@
 ---
-nav_title: Transferindo dados para o Redshift
-article_title: Transferindo Dados para o Redshift
+nav_title: Transferir dados para o Redshift
+article_title: Transferir dados para o Redshift
 page_order: 8
 page_type: tutorial
-description: "Este artigo de como fazer irá guiá-lo sobre como transferir dados do Amazon S3 para o Redshift através de um processo de Extrair, Transformar, Carregar (ETL)."
+description: "Este artigo explica como transferir dados do Amazon S3 para o Redshift por meio de um processo de extração, transformação e carga (ETL)."
 tool: Currents
 
 ---
 
-# Transferindo dados para o Redshift
+# Transferir dados para o Redshift
 
-> [Amazon Redshift](https://aws.amazon.com/redshift/) é um popular armazém de dados que opera na Amazon Web Services ao lado do Amazon S3. Os dados do Braze a partir do Currents são estruturados para serem facilmente transferidos diretamente para o Redshift.
+> [O Amazon Redshift](https://aws.amazon.com/redshift/) é um data warehouse popular que é executado no Amazon Web Services juntamente com o Amazon S3. Os dados do Braze dos Currents são estruturados para transferência direta para o Redshift.
 
-Mais informações sobre como transferir dados do Amazon S3 para o Redshift através de um processo de Extrair, Transformar, Carregar (ETL) estão disponíveis em nossos exemplos do Currents [repositório do GitHub](https://github.com/Appboy/currents-examples).
+Mais informações sobre como transferir dados do Amazon S3 para o Redshift por meio de um processo de extração, transformação e carga (ETL) estão disponíveis em Currents examples no [repositório GitHub](https://github.com/Appboy/currents-examples).
 
 {% alert important %}
-Esta é apenas uma das muitas opções que você pode escolher ao transferir seus dados para lugares que seriam mais vantajosos para você.
+Essa é apenas uma das muitas opções que você pode escolher quando se trata de transferir seus dados para os locais mais vantajosos para você.
 {% endalert %}
 
 {% markdown_embed https://raw.githubusercontent.com/Appboy/currents-examples/master/redshift-s3-loader/README.md %}

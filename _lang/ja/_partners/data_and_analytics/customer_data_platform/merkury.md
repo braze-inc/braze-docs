@@ -46,7 +46,7 @@ WebサイトにMerkuryタグを配置して、Merkury IDコネクタをWebサイ
 
 ### ステップ 3:カスタム属性を作成する
 
-Merkuryアイデンティティコネクターは以下のフィールドに値を入力するため、Brazeで[カスタム属性として]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes)作成する必要がある。
+Merkuryアイデンティティコネクターは以下のフィールドを入力するが、これらは[カスタム属性として]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes)Brazeで作成する必要がある。
 
 | 属性名 | データタイプ | 説明 |
 | --- | --- | --- |

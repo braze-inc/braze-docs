@@ -1,4 +1,4 @@
-# ChatGPTアプリとの統合
+# ChatGPTアプリ統合
 
 ## 設定
 
@@ -126,7 +126,7 @@ const handleItemInteraction = (itemId) => {
 ### サーバー側の統合（MCPサーバー）
 
 <!-- For tracking events and purchases from your MCP server, add these code snippets to your server file (typically `server.js` or `server.ts`) where you handle ChatGPT app requests and tool calls. -->
-MCPサーバーからのイベントや購入のトラッキングには、[REST APIを](https://www.braze.com/docs/api/home)使用する。MCPサーバーのメッセージング機能も必要な場合は、[サポートケースを](https://support.braze.com/login)開封する。
+MCPサーバーのメッセージング機能のためにサーバーサイドの統合も必要な場合は、以下に連絡すること。 <span style="white-space:nowrap;">`mcp-product@braze.com`</span>.MCPサーバーからのイベントや購入のトラッキングには、[REST APIを]({{site.baseurl}}/api/home)使用する。
 
 <!-- #### Import the Braze functions
 

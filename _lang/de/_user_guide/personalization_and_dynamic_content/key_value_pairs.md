@@ -167,8 +167,11 @@ Das iOS-Betriebssystem kann [Push-Benachrichtigungen]({{site.baseurl}}/developer
 
 ## In-App-Nachrichten
 
-Um einer In-App-Nachricht ein Schlüssel-Wert-Paar hinzuzufügen, wählen Sie im Nachrichten-Editor den Tab **Einstellungen**, wählen Sie **Neues Paar hinzufügen** und geben Sie Ihre Schlüssel-Wert-Paare an.
+Sie können einer In-App-Nachricht im [herkömmlichen Editor]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/) ein Schlüssel-Wert-Paar hinzufügen, indem Sie den Tab **Einstellungen** auswählen, **Neues Paar hinzufügen** wählen und dann Ihre Schlüssel-Wert-Paare angeben.
 
+{% alert note %}
+Schlüssel-Wert-Paare können nicht über den Drag-and-Drop-Editor für In-App-Nachrichten festgelegt werden.
+{% endalert %}
 ![]({% image_buster /assets/img_archive/keyvalue_iam.png %})
 
 #### Per API getriggerte Kampagnen

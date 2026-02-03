@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Supprimer des utilisateurs"
+nav_title: "POST : Supprimer les utilisateurs"
 article_title: "POST : Supprimer des utilisateurs"
 search_tag: Endpoint
 page_order: 5
@@ -16,7 +16,7 @@ description: "Cet article décrit les détails de l'endpoint Braze pour supprime
 
 > Utilisez cet endpoint pour supprimer un profil utilisateur en spécifiant un identifiant utilisateur connu.
 
-Jusqu'à 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` peuvent être inclus dans une seule demande. Une seule des adresses `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` peut être incluse dans une seule demande. 
+Jusqu'à 50 `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` peuvent être inclus dans une seule demande. Une seule des adresses `external_ids`, `user_aliases`, `braze_ids`, `email_addresses`, ou `phone_numbers` peut être incluse dans une seule demande.
 
 Si vous avez un cas d'utilisation qui ne peut pas être résolu avec la suppression en bloc d'utilisateurs via l'API, contactez l' [équipe d'assistance de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/support/) pour obtenir de l'aide.
 
@@ -105,8 +105,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "deleted" : (required, integer) number of user IDs queued for deletion
 }

@@ -26,7 +26,11 @@ Um auf das Profil eines Benutzers zuzugreifen, gehen Sie auf die Seite **Benutze
 
 Wenn eine Übereinstimmung gefunden wird, können Sie die Informationen, die Sie für diese Nutzer:innen erfasst haben, mit dem Braze SDK einsehen. Andernfalls, wenn Ihre Suche mehrere Nutzerprofile ergibt, können Sie jedes Profil einzeln zusammenführen oder eine Massen-Zusammenführung von Nutzer:innen durchführen. Eine vollständige Anleitung finden Sie unter [Doppelte Benutzer]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-\![Suchergebnisse mit einem Banner mit der Aufschrift "Mehrere Nutzer:innen entsprechen Ihren Suchkriterien" und zwei Buttons mit der Aufschrift Zurück und Weiter.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
+{% alert important %}
+Wenn eine Telefonnummer in der Suche verwendet wird, wird sie in das [`E.164`](https://en.wikipedia.org/wiki/e.164) Format. Nutzer:innen, deren Telefonnummern nicht in das Format `E.164` umgewandelt werden können (z.B. weil die Telefonnummer einen ungültigen Code oder eine ungültige Ortsvorwahl hat), können nicht nach Telefonnummern gesucht werden.
+{% endalert %}
+
+![Suchergebnisse mit einem Banner mit der Aufschrift "Mehrere Nutzer:innen entsprechen Ihren Suchkriterien" und zwei Buttons mit der Aufschrift Zurück und Weiter.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## Anwendungsfälle
 
@@ -59,9 +63,9 @@ Die Registerkarte **Übersicht** enthält grundlegende Informationen über einen
 | Käufe | Lebenszeitumsatz, der diesem Benutzer zugeschrieben wird, sein letzter Kauf, die Gesamtzahl der Käufe und eine Liste der einzelnen Käufe. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Informationen zu diesen Daten finden Sie unter [Nutzer:innen-Datenerfassung]({{site.baseurl}}/user_guide/data/user_data_collection/).
+Weitere Informationen zu diesen Daten finden Sie unter [SDK Datenerfassung]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 
-\![Der Tab Übersicht eines Nutzerprofils.]({% image_buster /assets/img_archive/user_profile2.png %})
+![Die Registerkarte Übersicht eines Benutzerprofils.]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### Engagement-Tab {#engagement-tab}
 
@@ -79,7 +83,7 @@ Die Registerkarte **Engagement** enthält Informationen über die Interaktionen 
 | Prognosen | Werte für die [Abwanderungsvorhersage]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) und die [Ereignisvorhersage]({{site.baseurl}}/user_guide/brazeai/predictive_events/) für diesen Benutzer. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-\![Der Tab Engagement eines Nutzerprofils, der die Kontakteinstellungen und Kommunikationsstatistiken anzeigt.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
+![Die Registerkarte Engagement eines Benutzerprofils, auf der die Kontakteinstellungen und Kommunikationsstatistiken angezeigt werden.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### Registerkarte Nachrichtenverlauf
 
@@ -89,7 +93,7 @@ Der Tab **Nachrichtenverlauf** des Nutzerprofils zeigt die jüngsten Ereignisse 
 Wenn Sie Feedback zu dieser Tabelle haben oder bestimmte Ereignisse sehen möchten, mailen Sie bitte [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) mit der Betreffzeile "Messaging History Tab Feedback".
 {% endalert %}
 
-\![Der Tab Messaging-Verlauf zeigt an, welche Kampagnen und Canvase ein Nutzer:in erhalten hat.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
+![Die Registerkarte Nachrichtenverlauf zeigt an, welche Kampagnen und Canvases ein Benutzer erhalten hat.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### Events anzeigen und auswerten
 
@@ -145,7 +149,13 @@ In den folgenden Szenarien können einige Felder auf dem Tab **Verlauf der Nachr
 
 - Wenn bei einem Ereignis Daten für **Gesendete Nachrichten** fehlen, bedeutet dies, dass die Kampagne keine Nachrichtenvariationen enthält.
 - Wenn in einem Ereignis Daten für **Kampagne/Canvas** und **Gesendete Nachricht** fehlen, bedeutet dies, dass diese Nachricht von einer API-Kampagne (nicht von API-getriggerten Kampagnen) gesendet wurde, die nicht die `campaign_id` und `message_variation_id` angegeben hat. Diese Felder sind optional und können im Text der Anfrage weggelassen werden. Wenn diese Felder angegeben werden, werden diese Informationen in die Protokolle des Nachrichtenverlaufs aufgenommen.
-   - Wenn eine bestimmte Nachricht im Verlauf der Messaging-Kampagnen fehlt, aber im Protokoll **Empfangene Kampagnen** erscheint, hat der Nutzer:innen die Kampagne wahrscheinlich erhalten, bevor er als der aktuelle Nutzer identifiziert wurde. Wenn ein bestehendes Profil verwaist ist, wird das Protokoll **Empfangene Kampagnen** übertragen, der Verlauf der Messaging-Nachrichten jedoch nicht. 
+   - Wenn eine bestimmte Nachricht im Verlauf der Messaging-Kampagnen fehlt, aber im Protokoll **Empfangene Kampagnen** erscheint, hat der Nutzer:innen die Kampagne wahrscheinlich erhalten, bevor er als aktueller Nutzer identifiziert wurde. Wenn ein bestehendes Profil verwaist ist, wird das Protokoll **Empfangene Kampagnen** übertragen, der Verlauf der Messaging-Nachrichten jedoch nicht. 
 - Wenn Daten für **Kampagnen/Canvas** fehlen, wurde möglicherweise ein manueller Test gesendet. Manuelle Tests werden im Tab **Messaging-Verlauf** protokolliert, aber die Kampagne oder das Canvas, das gesendet wurde, wird nicht protokolliert.
+
+## Ähnliche Artikel
+
+- [Nutzerprofil-Lebenszyklus]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [POST: Nutzerprofil nach Bezeichner exportieren]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [POST: Nutzer:innen löschen]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 

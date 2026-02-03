@@ -25,7 +25,11 @@ LINE と Braze を統合するには、以下が必要です。
 - [LINE 開発者アカウント](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE メッセージング API チャネル](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-Braze から LINE メッセージを送信すると、アカウントのメッセージクレジットが消費されます。
+BrazeからLINEメッセージを送信すると、アカウントのメッセージクレジットが消費される。
+
+{% alert note %}
+** `native_line_id`** を**設定する**：ユーザーの更新をBrazeに送信することで、`native_line_id` 。 [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)エンドポイント、[CSVインポート]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import)、または[Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/))。クライアント側SDKに`native_line_id` の専用フィールドがない場合は、以下のいずれかの方法を使用して、サーバー側ユーザー更新で送信する。
+{% endalert %}
 
 ## LINE アカウントのタイプ
 

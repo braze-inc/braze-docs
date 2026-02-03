@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# [![Curso do Braze Learning ]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitude
 
 > A [Amplitude](https://amplitude.com/) é uma plataforma de análise de dados e business intelligence de produtos.
 
@@ -38,7 +38,7 @@ A Amplitude e a Braze oferecem dois métodos de integração diferentes. Leia a 
 | Requisito | Descrição |
 | ----------- | ----------- |
 | Chave da API REST do Braze | Uma chave da API REST do Braze com todas as permissões.<br><br> Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
-| Ponto de extremidade REST do Braze | [URL de seu endpoint REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
+| Endpoint REST  do Braze | [URL de seu ponto de extremidade REST][1]. Seu endpoint dependerá do URL do Braze para sua instância. |
 | Identificador do app Braze | O identificador do app que receberá eventos do Amplitude. Isso pode ser encontrado em **Dashboard da Braze > Console de desenvolvedor > Configurações**. |
 
 ### Configuração da Amplitude
@@ -74,7 +74,7 @@ Nos públicos da Amplitude, selecione **Syncs > Create Sync** (Sincronizações 
 Em seguida, escolha sincronizar uma propriedade, um cálculo, um coorte ou uma recomendação de usuário. 
 
 {% tabs %}
-{% tab Sincronização de propriedades do usuário %}
+{% tab Syncing user property %}
 
 Selecione **User Property** (Propriedade do usuário) e, em seguida, a propriedade do usuário que deseja sincronizar.
 
@@ -89,7 +89,7 @@ Por fim, defina a frequência de sua sincronização.
 ![Defina sua cadência como uma sincronização única ou uma sincronização programada.]({% image_buster /assets/img/amplitude9.png %})
 
 {% endtab %}
-{% tab Computação de sincronização %}
+{% tab Syncing computation %}
 
 Selecione **Computation** (Cálculo) e, em seguida, o cálculo que deseja sincronizar.
 

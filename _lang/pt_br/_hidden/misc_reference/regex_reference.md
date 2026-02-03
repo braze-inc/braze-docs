@@ -9,7 +9,7 @@ hidden: true
 Esta página serve como um guia de referência rápida para expressões regulares, incluindo tokens comuns, metassequências, tokens gerais, constantes de grupo e muito mais.
 
 {% tabs %}
-{% tab Tokens comuns %}
+{% tab Common tokens %}
 
 | Tokens comuns |
 | ------------- |
@@ -38,7 +38,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 | Limite de nenhuma palavra | `\B` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Meta-sequência %}
+{% tab Meta sequence %}
 
 | Meta-sequência |
 | ------------- |
@@ -77,7 +77,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 | Torna qualquer caractere literal | `\` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Tokens gerais %}
+{% tab General tokens %}
 
 | Tokens gerais |
 | -------------- |
@@ -88,7 +88,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Modificadores de classe de personagem %}
+{% tab Character class modifiers %}
 
 | Modificadores de classe de personagem |
 | ------------------------- |
@@ -109,7 +109,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 | Caracteres de palavras | `[:>:]` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Constantes de grupo %}
+{% tab Group constants %}
 
 | Constantes de grupo |
 | --------------- |
@@ -166,7 +166,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 | Modificador de mecanismo regex | `(*NO_START_OPT)` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Quantificadores %}
+{% tab Quantifiers %}
 
 | Quantificadores |
 | ----------- |
@@ -181,7 +181,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 | Quantificador de possessivo | `a*+` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Âncoras %}
+{% tab Anchors %}
 
 | Âncoras |
 | ------- |
@@ -196,7 +196,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 
-{% tab Sinalizadores e modificadores %}
+{% tab Flags and modifiers %}
 
 | Sinalizadores e modificadores |
 | ------------------- | 
@@ -213,7 +213,7 @@ Esta página serve como um guia de referência rápida para expressões regulare
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Substituição %}
+{% tab Substitution %}
 
 | Substituição |
 | ------------ |

@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp ist eine beliebte Peer-to-Peer Messaging-Plattform, die weltweit genutzt wird und konversationsbasiertes Messaging für Unternehmen bietet. Der Messaging-Kanal von WhatsApp bietet eine direkte Möglichkeit, Nutzer:innen und Kund:innen auf der WhatsApp-Plattform zu erreichen. <br><br>**Die Verfügbarkeit von WhatsApp hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren oder Ihre Account Manager:in oder Customer-Success-Manager:in, um loszulegen.**"
+guide_top_text: "WhatsApp ist eine beliebte Peer-to-Peer Messaging-Plattform, die weltweit genutzt wird und konversationsbasiertes Messaging für Unternehmen bietet. Der Messaging-Kanal von WhatsApp bietet eine direkte Möglichkeit, Nutzer:innen und Kund:innen auf der WhatsApp-Plattform zu erreichen. <br><br>**Die Verfügbarkeit von WhatsApp hängt von Ihrem Braze-Paket ab. Kontaktieren Sie Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen."
 description: "Auf dieser Landing Page finden Sie alles rund um WhatsApp, z. B. wie Sie eine WhatsApp-Kampagne erstellen, Opt-Ins und Ops-Outs, Schnellantworten, Berichte und mehr."
 search_rank: 3
 alias: /whatsapp/
@@ -15,6 +15,9 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "WhatsApp-Einrichtung"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "Bringen Sie Ihren eigenen WhatsApp Konnektor mit"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
   image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsApp-Abonnementgruppe"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/

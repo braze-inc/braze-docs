@@ -42,7 +42,7 @@ Braze peut être inclus dans les parties suivantes de votre extension :
 
 Aucune autorisation supplémentaire n’est requise dans votre `manifest.json` lors de l’intégration du SDK Braze (`braze.min.js`) en tant que fichier local associé à votre extension. 
 
-Toutefois, si vous utilisez [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), ou si vous faites référence au SDK de Braze à partir d'une URL externe, ou si vous avez défini une politique de sécurité du contenu stricte pour votre extension, vous devrez ajuster le paramètre [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) dans votre site `manifest.json` pour autoriser les sources de scripts à distance.
+Toutefois, si vous utilisez [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), ou si vous faites référence au SDK de Braze à partir d'une URL externe, ou si vous avez défini une politique de sécurité du contenu stricte pour votre extension, vous devrez ajuster les paramètres de votre pour autoriser les sources de script distantes. [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) dans votre site `manifest.json` pour autoriser les sources de scripts à distance.
 
 ## Démarrage
 
@@ -52,13 +52,13 @@ Avant de commencer, assurez-vous que vous avez lu le [guide de configuration ini
 
 Pour intégrer le Braze Web SDK, vous devez d'abord télécharger une copie de la dernière bibliothèque JavaScript. Cela peut se faire en utilisant NPM ou en le téléchargeant directement depuis le [réseau de diffusion de contenu de Braze](https://js.appboycdn.com/web-sdk/latest/braze.min.js).
 
-Si vous préférez utiliser [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ou utiliser une copie du SDK de Braze hébergée à l'extérieur, gardez à l'esprit que le chargement de ressources externes vous obligera à ajuster les paramètres de votre SDK dans votre . [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) dans votre `manifest.json`.
+Sinon, si vous préférez utiliser [Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ou une copie hébergée à l’extérieur du SDK Braze, gardez à l’esprit que le chargement de ressources externes nécessite de régler le paramètre [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) dans votre `manifest.json`.
 
 Une fois téléchargé, assurez-vous de copier le fichier `braze.min.js` dans le répertoire de votre extension.
 
 ### Fenêtres contextuelles d’extension {#popup}
 
-Pour ajouter Braze à une fenêtre contextuelle d’extension, reportez-vous au fichier JavaScript local dans votre `popup.html`, comme vous le feriez sur un site Internet normal. Si vous utilisez Google Tag Manager, vous pouvez ajouter Braze en utilisant nos [modèles Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) à la place.
+Pour ajouter Braze à une fenêtre contextuelle d’extension, reportez-vous au fichier JavaScript local dans votre `popup.html`, comme vous le feriez sur un site Internet normal. Si vous utilisez Google Tag Manager, vous pouvez ajouter Braze en utilisant notre [Google Tag Manager templates]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) ].
 
 ```html
 <html>
@@ -110,5 +110,5 @@ Pour plus d'informations sur les options d'initialisation prises en charge, cons
 
 ## Notification push
 
-Les boîtes de dialogue contextuelle d’extension ne permettent pas de demander des notifications push (elles ne disposent pas de barre d’URL dans la navigation). Ainsi, pour enregistrer et demander l'autorisation de pousser dans la boîte de dialogue Popup d'une extension, vous devrez utiliser un domaine alternatif, comme décrit dans [Domaine alternatif de poussée]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
+Les boîtes de dialogue contextuelle d’extension ne permettent pas de demander des notifications push (elles ne disposent pas de barre d’URL dans la navigation). Pour vous enregistrer et demander une autorisation de notification push dans la boîte de dialogue contextuelle d’une extension, vous devrez utiliser un contournement par un domaine alternatif, tel que décrit dans [domaine alternatif de notification push]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain).
 

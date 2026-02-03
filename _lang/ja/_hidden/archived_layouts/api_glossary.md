@@ -82,7 +82,7 @@ Post,Email,Create,Template,REST,API
 
 #### パラメータの詳細
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
 | `modified_after`  | いいえ | ISO 8601の文字列 | 指定された時刻以降に更新されたテンプレートのみを取得します。 |
 | `modified_before`  |  いいえ | ISO 8601の文字列 | 指定された時刻以前に更新されたテンプレートのみを取得します。 |
@@ -137,7 +137,7 @@ GET https://YOUR_REST_API_URL/templates/email/list
 
 #### パラメータの詳細
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
 | `email_template_id`  | はい | string | あなたのメールテンプレートのAPI識別子。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -205,7 +205,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 #### パラメータの詳細
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 |---|---|---|---|
 | `email_template_id`  | はい | string | あなたのメールテンプレートのAPI識別子。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }

@@ -18,7 +18,7 @@ guide_featured_list:
 - name: Braze エージェント
   link: /docs/user_guide/brazeai/agents/
   image: /assets/img/braze_icons/star-06.svg
-- name: BrazeAIオペレーター
+- name: BrazeAI Operator
   link: /docs/operator/
   image: /assets/img/braze_icons/edit-05.svg
 - name: Intelligence Suite

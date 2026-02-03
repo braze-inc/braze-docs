@@ -23,7 +23,7 @@ Con la integración de Braze y Yotpo, puedes extraer y mostrar dinámicamente la
 | ----------- | ----------- |
 | Cuenta Yotpo | Se necesita una cuenta de Yotpo para beneficiarse de esta asociación. |
 | Yotpo revisa la clave de API | Esta API se implementará dentro del fragmento de código Contenido conectado.<br><br>Para más información, consulta [cómo encontrar la clave de tu aplicación de Yotpo y la clave secreta](https://support.yotpo.com/en/article/finding-your-yotpo-app-key-and-secret-key). |
-| Clave de API de fidelización de Yotpo | Esta clave de API y GUID se implementarán dentro del fragmento de código de Contenido conectado.<br><br>Para más información, consulta [cómo encontrar tu clave de API y GUID de fidelización y referidos](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
+| Clave de API de fidelización de Yotpo | Esta clave de API y el identificador único global (GUID) se implementarán dentro del fragmento de código de Contenido conectado.<br><br>Para más información, consulta [cómo encontrar tu clave de API y GUID de referidos de fidelización & ](https://support.yotpo.com/en/article/finding-your-loyalty-referrals-api-key-and-guid)|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Antes de continuar, confirma que el ID de producto de Yotpo es el mismo que el de `product_id` que se extraerá dinámicamente de Braze. Esto es obligatorio para que la integración funcione. 
@@ -35,7 +35,7 @@ Para encontrar tu ID de producto de Yotpo, sigue estos pasos:
 3. Haz clic con el botón derecho y selecciona **Inspeccionar**.
 4. Pulsa <kbd>Control</kbd> + <kbd>F</kbd> y busca `yotpo-main` en el código. La variable `data-product ID` y su valor aparecen en el div de Yotpo.
 
-![Inspecciona y busca yotpo-main para encontrar la variable ID del producto]({% image_buster /assets/img/yotpo/image1.png %})
+![Inspecciona y busca yotpo-main para encontrar la variable data-product ID]({% image_buster /assets/img/yotpo/image1.png %})
 
 ## Integración
 
@@ -71,7 +71,7 @@ The average rating for this product is:
 
 Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La dirección `product_id` se extraerá dinámicamente de Braze. Para que la integración funcione, el `product_id` en Braze debe coincidir con el ID del producto en Yotpo (normalmente el ID del producto padre de eCommerce).
 
-![Sustituye YOTPO-API-KEY por tu clave de API de Yotpo Reviews]({% image_buster /assets/img/yotpo/image2.png %})
+![Sustituye YOTPO-API-KEY por tu clave de API de Reseñas de Yotpo]({% image_buster /assets/img/yotpo/image2.png %})
 
 ### Mostrar una opinión reciente de 5 estrellas sobre un producto {#five-star-review}
 
@@ -125,7 +125,7 @@ Sustituye `<YOTPO-API-KEY>` por tu clave de API de reseñas de Yotpo. La direcci
 
 El fragmento de código tendrá el siguiente aspecto:
 
-![Ejemplo de editor de correo electrónico que muestra un fragmento de código de imágenes publicadas en Yotpo]({% image_buster /assets/img/yotpo/image4.png %})
+![Ejemplo de editor de correo electrónico que muestra un fragmento de imágenes publicadas en Yotpo]({% image_buster /assets/img/yotpo/image4.png %})
 
 ### Mostrar el saldo de fidelización de un cliente en un correo electrónico {#loyalty-balance}
 
@@ -155,19 +155,19 @@ Sustituye `<YOTPO-LOYALTY-GUID>` y `<YOTPO-LOYALTY-API-KEY>` por tus credenciale
 
 El fragmento de código tendrá el siguiente aspecto:
 
-![Ejemplo de editor de correo electrónico que muestra un fragmento de saldo de fidelización de clientes]({% image_buster /assets/img/yotpo/image5.png %})
+![Ejemplo de editor de correo electrónico que muestra un fragmento de código del saldo de fidelización de un cliente]({% image_buster /assets/img/yotpo/image5.png %})
 
 ## Preguntas más frecuentes {#faq}
 
-#### ¿Qué pasa si no tengo una opinión de 5 estrellas?
+### ¿Qué pasa si no tengo una opinión de 5 estrellas?
 
 Si no tienes ninguna reseña de 5 estrellas (por ejemplo, si la respuesta del punto final devuelve NULL para la reseña de 5 estrellas), no se mostrará ningún contenido.
 
-#### ¿Qué pasa si no tengo una imagen publicada para un producto?
+### ¿Qué pasa si no tengo una imagen publicada para un producto?
 
 Si no tienes ninguna imagen para un producto (por ejemplo, si la respuesta del punto final devuelve NULL para la imagen del producto), no se mostrará ningún contenido.
 
-#### ¿Puedo personalizar el aspecto o extraer otros campos de datos de Yotpo?
+### ¿Puedo personalizar el aspecto o extraer otros campos de datos de Yotpo?
 
 Sí. Para descubrir otros puntos de datos y opciones de personalización disponibles, consulta [Realizar una llamada a la API]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/). Puede que necesites la ayuda de un desarrollador front-end para hacerlo.
 

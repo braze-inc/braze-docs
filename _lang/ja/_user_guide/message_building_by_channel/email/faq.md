@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: メールFAQ
-page_order: 14
+page_order: 15
 description: "ここでは、メールメッセージングに関してよくある質問にお答えします。"
 channel: email
 

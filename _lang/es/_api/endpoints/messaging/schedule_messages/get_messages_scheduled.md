@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Enumerar próximas campañas y Canvas programados"
+nav_title: "GET: Lista de próximas campañas programadas y Lonas"
 article_title: "GET: Enumerar próximas campañas y Canvas programados"
 search_tag: Endpoint
 page_order: 0
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "scheduled_broadcasts": [
     {

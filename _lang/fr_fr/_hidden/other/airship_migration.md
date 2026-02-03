@@ -1,13 +1,13 @@
 ---
-nav_title: Migration du SDK depuis Airship vers Braze
+nav_title: Migration du SDK de Airship vers Braze
 permalink: /sdk_migration_guide_airship/
 hidden: true
 page_type: reference
 ---
 
-# Migration des SDK depuis Airship vers Braze (iOS)
+# Migration des SDK de Airship vers Braze (iOS)
 
-> Chez Braze, nous sommes conscients que le passage à une plateforme et un SDK entièrement nouveaux peut être intimidant, mais avec le guide de migration suivant, des exemples de code faciles à comprendre et des fonctionnalités impressionnantes, nous pensons que cela ne vous dérangera pas. Dans cet article, nous avons inclus l’équivalent Braze de nombreuses fonctionnalités clés d’Airship, ainsi que des extraits de code SDK « chercher-remplacer » pour rendre votre migration à la fois simple et rapide.
+> Chez Braze, nous sommes conscients que le passage à une plateforme et un SDK entièrement nouveaux peut être intimidant, mais avec le guide de migration suivant, des exemples de code faciles à comprendre et des fonctionnalités impressionnantes, nous pensons que cela ne vous dérangera pas. Dans cet article, nous avons inclus l'équivalent en Braze de nombreuses fonctionnalités clés d'Airship ainsi que des extraits de code SDK pour remplacer l'utilisation d'Airship et rendre votre migration rapide, simple et sans douleur.
 
 ## Au-delà du code
 ### Gestion des jetons
@@ -18,15 +18,15 @@ Braze utilise le jeton d’appareil Apple, pour iOS.
 
 #### Migration des jetons de notification push
 
-Il est nécessaire de [migrer les jetons de notification push via l'API]({{site.baseurl}}/help/help_articles/push/push_token_migration/#migration-via-api). La documentation liée contient des étapes spécifiques, ainsi qu’un exemple de charge utile, mais le processus global est le suivant :
+Il est nécessaire de [migrer les jetons push via l'API]({{site.baseurl}}/api/objects_filters/user_attributes_object/#migrating-push-tokens). La documentation liée contient des étapes spécifiques, ainsi qu’un exemple de charge utile, mais le processus global est le suivant :
 
-1. Importez les jetons via l'[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Pour les importations de lots, nous disposons de ressources pour accélérer le processus. Contactez votre COM ou SA pour plus de détails !
+1. Importez les jetons via l'[endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). Pour les importations de lots, nous disposons de ressources pour accélérer le processus. Contactez votre COM ou SA pour plus de détails !
 2. Si le jeton existe déjà dans Braze, il sera ignoré. Sinon, un profil anonyme sera généré.
-3. Effectuez l'assurance qualité de l'intégration "push". Assurez-vous que les étapes de la [configuration de push]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/) ont été effectuées.
+3. Effectuez l'assurance qualité de l'intégration "push". Assurez-vous que les étapes de la [configuration de push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) ont été effectuées.
 
 Si vos profils d’utilisateur et vos jetons de notification push sont stockés à des endroits distincts, nous vous recommandons d’importer des jetons de notification push de manière anonyme, puis de migration ultérieurement vos profils d’utilisateur existants. Il n’est pas nécessaire de les mapper ensemble car le SDK iOS de Braze va gérer la résolution du jeton lors de l’intégration réussie.
 
-- Nous recommandons de migrer des utilisateurs via API, mais s’il est nécessaire d’importer une liste statique d’utilisateurs, cela peut être fait avec un CSV. Notez que **les jetons de notification push ne peuvent pas être importés via CSV** car l'objet « push_token » ne peut pas être spécifié dans le CSV. Pour visualiser un modèle d'importation et en savoir plus sur l'importation de données dans le tableau de bord, consultez notre [documentation sur les fichiers CSV.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv)
+- Nous recommandons de migrer des utilisateurs via API, mais s’il est nécessaire d’importer une liste statique d’utilisateurs, cela peut être fait avec un CSV. Notez que **les jetons push ne peuvent pas être importés via CSV** car l'objet "push_token" ne peut pas être spécifié dans le CSV. Pour visualiser un modèle d'importation et en savoir plus sur l'importation de données dans le tableau de bord, consultez notre [documentation sur les fichiers CSV.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv)
 
 {% alert note %}
 Les jetons push peuvent apparaître sous la forme `subscribed` dans le tableau de bord de Braze, mais deviendront `opted-in` une fois que les utilisateurs auront démarré une session avec le SDK de Braze.
@@ -37,13 +37,13 @@ Les jetons push peuvent apparaître sous la forme `subscribed` dans le tableau d
 Avec Braze, un utilisateur peut avoir plusieurs jetons de notification push (un pour chaque appareil) et en ciblant tous les jetons de notification push valides, vous pouvez envoyer des notifications à plusieurs appareils d’utilisateur. Il est également possible de configurer des campagnes pour qu’elles ne soient envoyées qu’à l’appareil le plus récent d’un utilisateur.
 
 ## Configuration de la campagne
-Avec une certaine maîtrise, Braze est un véritable outil unique dans l’espace d’engagement des clients. Grâce à nos options de personnalisation étendues et à notre ensemble de fonctionnalités croissantes, les campagnes migrées dans Braze bénéficient souvent de la replanification pour tirer profit des avantages de ces outils, et notre framework de planification de campagne (contactez votre COM ou SA pour plus de détails) est spécialement conçu pour cela.
+Avec une certaine maîtrise, Braze est un véritable outil unique dans l’espace d’engagement des clients. En raison de nos options de personnalisation étendues et de notre ensemble croissant de fonctionnalités, les campagnes migrées vers Braze bénéficient souvent d'une nouvelle planification afin d'utiliser les avantages de ces outils, et notre cadre de planification de campagne (contactez votre COM ou SA pour plus de détails) est spécialement créé à cet effet.
 
 ### Composition
 #### Notifications push
 Braze nécessite des canaux distincts pour les notifications push (un pour iOS, un pour Android).
 
-| **Perspective de Braze :**<br>Nous offrons à nos clients la possibilité d’obtenir le meilleur des deux mondes au lieu d’avoir à faire des concessions. Être capable de tirer parti de l’ensemble des capacités d’un seul canal offre plus de flexibilité pour le spécialiste du marketing et une expérience utilisateur améliorée. Cela nous permet d'adopter les dernières fonctionnalités de chaque système d'exploitation ; par exemple, Android a pris en charge les notifications riches avant iOS. |
+| **Perspective de Braze :**<br>Nous permettons à nos clients de bénéficier des avantages des deux solutions au lieu de devoir faire des concessions. Le fait de pouvoir utiliser le canal individuel à sa pleine capacité offre plus de flexibilité au marketeur et améliore l'expérience de l'utilisateur. Cela nous permet d'adopter les dernières fonctionnalités de chaque système d'exploitation ; par exemple, Android a pris en charge les notifications riches avant iOS. |
 {: .reset-td-br-1 role="presentation" }
 
 Braze peut envoyer des notifications push aux utilisateurs qui ne mettent pas à jour leur application avec le SDK de Braze installé. Étant donné que Braze dispose d’un jeton de notification push valide, Braze peut envoyer la notification push sans le SDK Braze car les APN s’occupent du reste. Il est crucial de noter que **l’analyse de cette notification push ne sera pas disponible pour les builds sans le SDK Braze**.
@@ -68,10 +68,10 @@ Pour recréer directement un segment statique Airship dans Braze, il existe deux
 Nous vous recommandons d'importer des utilisateurs via l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) et, ce faisant, d'attribuer un attribut personnalisé à ces utilisateurs importés. Par exemple, vous pouvez créer un segment d’utilisateurs qui possèdent chacun un attribut personnalisé `Segment_Group_1` défini sur `true`. Pour segmenter ultérieurement ces utilisateurs, vous devez [créer un segment de]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) tous les utilisateurs pour lesquels `Segment_Group_1` est `true`.<br><br>
 - **Filtre basé sur l'importation d'utilisateurs CSV**<br>
 Il existe une option de Braze pour filtrer uniquement les utilisateurs inclus dans une importation CSV spécifique. Cette option de filtrage est visible lors de l'étape des utilisateurs cibles (outils d'engagement) dans « Filtrer les utilisateurs par `Updated/Imported via CSV` ».
-![Filtre d'importation CSV][1]{: style="max-width:90%;border:0;"}
+![Filtre d'importation CSV]({% image_buster /assets/img/csv_filter.png %}){: style="max-width:90%;border:0;"}
 Notez que pour les importations CSV, un ID externe est requis pour chaque utilisateur importé et **les segments avec des utilisateurs anonymes ou des alias uniquement ne pourront pas être importés**. Pour visualiser un modèle d'importation et en savoir plus sur l'importation de données dans le tableau de bord, consultez notre [documentation sur les fichiers CSV.]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv)
 
-## Rechercher/remplacer les extraits de code SDK
+## Remplacer les extraits de code du SDK
 Afin de simplifier la migration, nous avons mis en évidence les extraits de code SDK d’Airship suivants présents dans votre code, avec les extraits de code SDK de Braze correspondants pour les remplacer. Consultez les sujets suivants pour commencer :
 - [Installation](#installation)
 - [Obtention et paramétrage de l'ID de l'utilisateur](#userid)
@@ -120,7 +120,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 }
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 **Airship**
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -194,7 +194,7 @@ extension AppboyManager {
 }
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 **Airship**
 ```objc
 
@@ -255,7 +255,7 @@ extension AppboyManager {
 }
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 **Airship**
 ```objc
 - (void)receivedBackgroundNotification:(UANotificationContent *)notificationContent completionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
@@ -336,7 +336,7 @@ extension AppboyManager {
 }
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 **Airship**
 ```objc
 - (void)trackEventWith:(NSString *)name value:(NSDecimalNumber *)value eventProperties:(NSDictionary *)eventProperties {
@@ -425,7 +425,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate {
 }
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 **Airship**
 ```objc
 - (UAInAppMessage *)extendMessage:(UAInAppMessage *)message {
@@ -505,7 +505,7 @@ extension AppboyManager {
 }
 ```
 {% endtab %}
-{% tab Objectif-C %}
+{% tab Objective-C %}
 **Airship**
 ```objc
 - (void)displayMessageCenter {
@@ -524,4 +524,3 @@ extension AppboyManager {
 {% endtab %}
 {% endtabs %}
 
-[1]: {% image_buster /assets/img/csv_filter.png %}
