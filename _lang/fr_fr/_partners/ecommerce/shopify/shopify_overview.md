@@ -12,7 +12,7 @@ page_order: 0
 
 > [Shopify](https://www.shopify.com/) est un leader mondial du commerce qui fournit des outils de confiance pour démarrer, développer, marketeur et gérer une entreprise de toute taille. Shopify améliore le commerce pour tout le monde avec une plateforme et des services conçus pour la fiabilité tout en offrant une meilleure expérience d'achat aux consommateurs.
 
-L'intégration de Braze à Shopify constitue une solution puissante pour les entreprises de commerce électronique qui cherchent à améliorer l'engagement de leurs clients et à mener des efforts de marketeur personnalisés. Cette intégration relie de façon fluide/sans heurts/de façon homogène les robustes capacités de commerce électronique de Shopify à notre plateforme avancée d'engagement client, ce qui vous permet d'envoyer des messages ciblés, pertinents et opportuns à vos utilisateurs en fonction de leurs comportements d'achat et de leurs données transactionnelles en temps réel.
+L'intégration de Braze à Shopify constitue une solution puissante pour les entreprises de commerce électronique qui cherchent à améliorer l'engagement de leurs clients et à mener des efforts de marketeur personnalisés. Cette intégration connecte de façon fluide/sans heurts/de façon homogène les fonctionnalités eCommerce de Shopify avec notre plateforme avancée d'engagement client, ce qui vous permet d'envoyer des messages ciblés, pertinents et opportuns à vos utilisateurs en fonction de leurs comportements d'achat en temps réel et des données transactionnelles.
 
 ## Conditions
 
@@ -130,7 +130,7 @@ Lorsque vous utilisez ces modèles de formulaire d'inscription, Braze met automa
 
 {% alert note %}
 - Veillez à inclure des critères d'entrée dans votre campagne ou Canvas qui incluent à la fois le statut global de l'abonnement e-mail et le groupe d'abonnement qui sont connectés à votre boutique Shopify. Cela vous permettra de vous assurer que vous ciblez la bonne audience. 
-- Braze recueille des informations sur les visiteurs, telles que les adresses e-mail et les numéros de téléphone, par le biais de messages dans le navigateur. Ces informations sont ensuite envoyées à Shopify. Ces données aident les commerçants à reconnaître les visiteurs de leur magasin et à créer une expérience d'achat plus personnalisée. Pour plus de détails, reportez-vous à l'[API visiteurs](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+- Braze recueille des informations sur les visiteurs, telles que les adresses e-mail et les numéros de téléphone, par le biais de messages dans le navigateur. Ces informations sont ensuite envoyées à l'API des visiteurs de Shopify, mais ne créent pas de profil de client dans Shopify. Pour plus de détails, reportez-vous à l'[API visiteurs](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
 {% endalert %}
 
 #### Formulaires d'inscription de tiers 

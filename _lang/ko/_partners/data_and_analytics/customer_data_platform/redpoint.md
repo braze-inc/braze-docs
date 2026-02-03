@@ -83,17 +83,17 @@ Add the **Output Name** attribute from the **Offer History** table. Lastly, add 
 
 Create a second export template for append-only operations named **Braze Append**.
 
-You will set only two attributes for this template. For **PID**, set the **Header Row Value** as `external_id`. For **Output Name**, set the **Header Row** as `output_name`.
+You will set only two attributes for this template. For **PID**, set the **Header Row Value** as `external_id`. **출력 이름**에서 **헤더 행**을 `output_name`으로 설정합니다.
 
-![A sample export template with the `external_id` and output name attributes.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
+![`external_id` 및 출력 이름 속성이 포함된 샘플 내보내기 템플릿.]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
 
-#### Step 1c: Set date format
+#### 1c단계: Set date format
 
-For both export templates, navigate to the **Options** tab and set the **Date Format** to the value of **Custom Format**. Set the format as **yyyy-MM-dd**.
+For both export templates, navigate to the **Options** tab and set the **Date Format** to the value of **Custom Format**. 형식을 **yyyy-MM-dd**로 설정합니다.
 
-![The options tab showing date format set to yyyy-MM-dd.]({% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}){: style="max-width:75%;"}
+![yyyy-MM-dd로 설정된 날짜 형식을 보여주는 옵션 탭.]({% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}){: style="max-width:75%;"}
 
-### Step 2: Create outbound channels
+### 2단계: Create outbound channels
 
 In RPI, create two new channels. Set both channels to **Outbound Delivery**. Name one channel **Braze Onboarding and Upsert**, and the other **Braze Append**.
 
@@ -125,13 +125,13 @@ Check the **Post-execution** checkbox to call a service URL after channel execut
 
 ![]({% image_buster /assets/img/redpoint/rpi_to_braze_channel_config_post_execution.png %}){: style="max-width:75%;"}
 
-### Step 4: Set up Braze components in Redpoint Data Management 
+### 4단계: Set up Braze components in Redpoint Data Management 
 
 The archive containing Redpoint Data Management (RPDM) artifacts to support the Braze integration contains a README with detailed instructions for setting up the required components. Keep in mind the following details when configuring your integration. 
 
 #### Step 4a: Update the RPI to Braze automation with your Braze REST endpoint and base RPI output directory 
 
-After importing the Braze related artifacts into Redpoint Data Management, open the automation named **AUTO_Process_RPI_to_Braze** and update the following two automation variables with the values for your environment:
+Braze 관련 아티팩트를 Redpoint Data Management로 가져온 후, 다음과 같은 이름의 자동화를 열고 **AUTO_Process_RPI_to_Braze** 을 열고 다음 두 자동화 변수를 사용자 환경에 맞는 값으로 업데이트합니다:
 
 * **BRAZE_API_URL**: The Braze REST endpoint
 * **BASE_OUTPUT_DIRECTORY**: The shared output directory between Redpoint Interaction and Redpoint Data Management
@@ -140,7 +140,7 @@ After importing the Braze related artifacts into Redpoint Data Management, open 
 
 #### Step 4b: Update the RPI to Braze append project 
 
-The Redpoint Data Management project named **PROJ_RPI_to_Braze_Append** contains the outbound delivery export file schema and mappings for the `rpi_cdp_attributes` custom attribute object in Braze. 
+Redpoint 데이터 관리 프로젝트에는 **PROJ_RPI_to_Braze_Append** 에는 Braze의 `rpi_cdp_attributes` 커스텀 속성 오브젝트에 대한 아웃바운드 전달 내보내기 파일 스키마 및 매핑이 포함되어 있습니다. 
 
 Update the file input schema and document injector tool named **RPI to Braze Document Injector** with any additional custom CDP attributes defined in your export file template. This example shows the additional mapping of education, income, and marital status:
 

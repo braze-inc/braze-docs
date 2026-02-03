@@ -86,7 +86,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 ![]({% image_buster /assets/img/audience_sync/tiktok3.png %})
 
-Braze는 오디언스가 성공적으로 생성되었거나 오류가 발생할 경우 단계 편집기 상단에 알림을 표시합니다. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze는 오디언스가 성공적으로 생성되거나 오류가 발생할 경우 단계 편집기 상단에 알림을 표시합니다. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![]({% image_buster /assets/img/audience_sync/tiktok2.png %})
 

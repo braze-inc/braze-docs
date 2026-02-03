@@ -14,12 +14,8 @@ description: "Esta página explica cómo utilizar las reglas de mensajería en e
 
 Las reglas de mensajería se aplican a un espacio de trabajo y se componen de un tipo de mensaje y un número máximo de usuarios alcanzables.
 
-- **Tipo de mensaje:** Define a qué tipo de mensaje se aplicará la regla: campaña, Canvas, o tanto Canvas como campañas.
-- **Máximo de usuarios accesibles:** Determina qué tamaño de audiencia requerirá una aprobación adicional.
-
-### Tipos de mensajes compartidos y usuarios máximos alcanzables
-
-Pueden existir dos reglas con el mismo número de usuarios accesibles para el mismo tipo de mensaje. Por ejemplo, puedes establecer un máximo de 10.000 usuarios para Canvas y de 10.000 usuarios tanto para Canvas como para campañas. 
+- **Tipo de mensaje:** Define a qué tipo de mensaje se aplica la regla: campaña, Canvas, o tanto Canvas como campañas.
+- **Máximo de usuarios accesibles:** Determina qué tamaño de audiencia requiere una aprobación adicional.
 
 ### Aprobadores separados
 
@@ -30,7 +26,7 @@ Dos reglas pueden compartir el mismo usuario máximo para que puedas organizar y
 
 ### No hay usuarios accesibles solapados
 
-No puedes establecer reglas con un número solapado de usuarios para el mismo tipo de mensaje. Por ejemplo, **no** se puede establecer la siguiente regla de mensajería: 
+Para evitar confusiones, no puedes establecer reglas idénticas con un número solapado de usuarios para el mismo tipo de mensaje y aprobadores. Por ejemplo, **no** se puede establecer la siguiente regla de mensajería: 
 
 - Regla C para Canvas con un máximo de 10.000 usuarios 
 - Regla D para Canvas con un máximo de 1.000.000 de usuarios
@@ -52,20 +48,20 @@ Puedes crear hasta CINCO reglas de mensajería.
 3. Dale un nombre a esta regla (por ejemplo, "Todas las suscripciones de usuarios").
 4. En **Tipo de mensaje**, selecciona **Campaña**, **Canvas** o **Tanto Canvas como Campañas** para aplicar la regla de aprobación.
 5. Introduce un número para **el máximo de usuarios accesibles**. Para más información, consulta [Estadísticas de audiencia]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users#audience-statistics).
-6. Selecciona **Guardar**.
+6. Seleccione **Guardar**.
 
-\![Un ejemplo de regla de mensajería "Regla 1" para campañas con 100.000 usuarios como máximo. Hay un usuario que puede aprobar el Canvas y la campaña a lanzar.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
+![Un ejemplo de regla de mensajería "Regla 1" para campañas con 100.000 usuarios como máximo. Hay un usuario que puede aprobar el Canvas y la campaña a lanzar.]({% image_buster /assets/img/target_population_approval_example.png %}){: style="max-width:90%;"}
 
-### Paso 2: Determinar el lanzamiento con aprobación (opcional)
+### Paso 2: Determinar el lanzamiento con aprobación (opcional)
 
 Selecciona **Permitir lanzamiento con aprobación**. A continuación, en **Con aprobación de**, selecciona los aprobadores que tienen permiso para aprobar el Canvas o la campaña si se cumple el máximo.
 
 Toma nota de los siguientes detalles sobre el lanzamiento de mensajes con aprobación:
 
-- Si se cumple el máximo y se selecciona un **aprobador**, el usuario Braze con el permiso de aprobación podrá seleccionar **Aprobado** en el desplegable de aprobación **Audiencia objetivo**.
-- Si se alcanza el máximo y no se selecciona una aprobación, se impedirá el lanzamiento del Canvas o de la campaña.
+- Si se cumple el máximo y se selecciona un aprobador, el usuario Braze con permiso de aprobación puede seleccionar **Aprobado** en el desplegable de aprobación **Audiencia objetivo**.
+- Si se alcanza el máximo y no se selecciona un aprobador, se impide el lanzamiento del Canvas o de la campaña.
 
-\![El paso en Canvas "Resumen" del flujo de trabajo que muestra que necesitas una aprobación para lanzarlo.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
+![El paso "Resumen" del flujo de trabajo Canvas que muestra que necesitas una aprobación para lanzarlo.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
 ## Preguntas más frecuentes
 

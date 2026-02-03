@@ -138,7 +138,7 @@ braze.getUser().setCustomUserAttribute(
 {% endsubtab %}
 {% subtab Array %}
 
-커스텀 속성 배열에는 최대 25개의 요소를 가질 수 있습니다. 수동으로 설정된 개별 배열(자동으로 감지되지 않음)은 Braze 대시보드의 **데이터 설정** > **커스텀 속성**에서 최대 100으로 증가할 수 있습니다. 이 최대값을 늘리고 싶다면 Braze 계정 매니저에게 문의하십시오.
+커스텀 속성 배열에는 최대 25개의 요소를 가질 수 있습니다. 수동으로 설정된 개별 배열(자동으로 감지되지 않음) **데이터 유형**에 대해서는 Braze 대시보드의 **데이터 설정** > **커스텀 속성**에서 최대 100으로 증가할 수 있습니다. 이 최대값을 늘리고 싶다면 Braze 계정 매니저에게 문의하십시오.
 
 최대 요소 수를 초과하는 [배열은]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) 최대 요소 수를 포함하도록 잘립니다.
 
@@ -161,7 +161,7 @@ braze.getUser().removeFromCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "value
 {% endsubtabs %}
 
 {% alert important %}
-커스텀 속성 키와 값은 최대 255자까지만 가질 수 있습니다. 유효한 커스텀 속성 값에 대한 자세한 정보는 [참조 설명서](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)를 참조하십시오.
+커스텀 속성 키와 값은 최대 255자만 가질 수 있습니다. 유효한 커스텀 속성 값에 대한 자세한 내용은 [참조 설명서](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)를 참조하십시오.
 {% endalert %}
 {% endtab %}
 

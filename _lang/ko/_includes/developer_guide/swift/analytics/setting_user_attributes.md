@@ -63,7 +63,7 @@ AppDelegate.braze?.user.set(firstName: nil)
 기본 사용자 속성 외에도 Braze는 여러 가지 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 [사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics/)을 참조하십시오.
 
 {% alert important %}
-커스텀 속성 값의 최대 길이는 255자이며, 이보다 긴 값은 잘립니다. 자세한 내용은 [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class)을 참조하십시오.
+커스텀 속성 값의 최대 길이는 255자이며, 이보다 긴 값은 잘립니다. 자세한 내용은 [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class)를 참조하십시오.
 {% endalert %}
 
 ### 사용자 지정 속성 설정
@@ -194,7 +194,7 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 
 ### 커스텀 속성 증가 또는 감소
 
-이 코드는 증분 사용자 지정 속성의 예시입니다. 커스텀 속성의 값을 `integer` 또는 `long` 값으로 증가시킬 수 있습니다:
+이 코드는 증분 사용자 지정 속성의 예시입니다. 커스텀 속성의 값을 `integer` 또는 `long` 값만큼 증가시킬 수 있습니다:
 
 {% tabs %}
 {% tab swift %}
@@ -236,7 +236,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 ### 커스텀 속성 중첩
 
-커스텀 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩된 속성을 가진 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
+커스텀 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩된 속성을 가진 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)를 참조하십시오.
 
 {% tabs %}
 {% tab swift %}

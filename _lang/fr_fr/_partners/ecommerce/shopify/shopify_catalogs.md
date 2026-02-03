@@ -2,13 +2,13 @@
 nav_title: Synchronisation des produits Shopify
 article_title: Synchronisation des produits Shopify
 alias: /shopify_catalogs/
-page_order: 4
+page_order: 5
 description: "Cet article de référence explique comment importer vos produits Shopify dans les catalogues Braze."
 ---
 
 # Synchronisation des produits Shopify 
 
-> Vous pouvez synchroniser tous les produits de votre boutique Shopify avec un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) Braze pour une personnalisation plus poussée des messages. 
+> Vous pouvez synchroniser tous les produits de votre boutique Shopify avec un [catalogue]({{site.baseurl}}/user_guide/data/activation/catalogs) Braze pour une personnalisation plus poussée des messages. 
 
 Les catalogues Shopify seront mis à jour en quasi-temps réel à mesure que vous apportez des modifications et des changements aux produits de votre boutique Shopify. Vous pouvez enrichir votre panier abandonné, votre confirmation de commande et plus encore avec les détails et informations sur le produit les plus à jour.
 
@@ -20,9 +20,9 @@ Si vous avez déjà installé votre boutique Shopify, vous pouvez toujours synch
 
 Vous pouvez synchroniser vos produits avec un catalogue Braze via le flux d'installation Shopify ou sur la page partenaire Shopify. 
 
-![Étape 3 du processus de configuration avec "Shopify Variant ID" comme "Catalog product identifier".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:70%;"}
+![Étape 3 du processus de configuration avec "ID de variante Shopify" comme "identifiant de produit du catalogue".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:70%;"}
 
-Les produits synchronisés avec un catalogue Braze contribueront à votre [limite de catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits).
+Les produits synchronisés avec un catalogue Braze contribueront à votre [limite de catalogue]({{site.baseurl}}/user_guide/data/activation/catalogs/create/#tiers).
 
 ### Étape 2 : Sélectionnez votre identifiant de produit
 
@@ -44,13 +44,13 @@ Si vous sélectionnez l'unité de gestion des stocks comme ID de votre catalogue
 
 Vous recevrez une notification de tableau de bord, et votre statut s'affichera comme « En cours » pour indiquer que la synchronisation initiale commence. Notez que le temps nécessaire pour terminer la synchronisation dépendra du nombre de produits et de variantes que Braze devra synchroniser depuis Shopify. Pendant ce temps, vous pouvez quitter cette page et attendre une notification de tableau de bord ou un e-mail pour vous informer lorsque cela est terminé.
 
-Notez que si votre synchronisation initiale dépasse votre [limite de catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#limits), Braze arrêtera de synchroniser d'autres produits. Si vous dépassez la limite après la synchronisation réussie en raison de nouveaux produits ajoutés au fil du temps, la synchronisation ne sera plus active. Dans les deux cas, les mises à jour de produit de Shopify ne seront plus reflétées dans Braze. Contactez votre gestionnaire de compte pour envisager de mettre à niveau votre niveau d’abonnement. 
+Notez que si votre synchronisation initiale dépasse votre [limite de catalogue]({{site.baseurl}}/user_guide/data/activation/catalogs/create/#tiers), Braze arrêtera de synchroniser d'autres produits. Si vous dépassez la limite après la synchronisation réussie en raison de nouveaux produits ajoutés au fil du temps, la synchronisation ne sera plus active. Dans les deux cas, les mises à jour de produit de Shopify ne seront plus reflétées dans Braze. Contactez votre gestionnaire de compte pour envisager de passer à un niveau supérieur. 
 
-### Étape 4 : Synchronisation terminée
+### Étape 4 : Synchronisation terminée
 
 Vous recevrez une notification de tableau de bord et un e-mail après la synchronisation réussie. La page partenaire Shopify mettra également à jour l’état des catalogues Shopify en « Synchronisation ». Vous pouvez voir vos produits en cliquant sur le nom du catalogue dans la page partenaire Shopify.
 
-Reportez-vous aux [cas d'utilisation supplémentaires des catalogues]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#additional-use-cases) pour en savoir plus sur la façon de tirer parti des données de catalogue pour personnaliser votre message.
+Reportez-vous aux [cas d'utilisation supplémentaires des catalogues]({{site.baseurl}}/user_guide/data/activation/catalogs/use) pour en savoir plus sur la façon de tirer parti des données de catalogue pour personnaliser votre message.
 
 #### Données de catalogue Shopify prises en charge
 
@@ -79,25 +79,11 @@ Reportez-vous aux [cas d'utilisation supplémentaires des catalogues]({{site.bas
 La modification du catalogue Shopify de quelque manière que ce soit peut interférer involontairement avec les synchronisations de produits en temps réel. N’apportez pas de modifications au catalogue Shopify, car elles pourraient être écrasées par Shopify. Au lieu de cela, effectuez les mises à jour nécessaires du produit dans votre instance Shopify.<br><br>Pour supprimer votre catalogue Shopify, accédez à la page Shopify et désactivez la synchronisation. Ne supprimez pas directement le catalogue Shopify sur la page des catalogues.
 {% endalert %}
 
-##### En utilisant `product_handle` ou `product_url`
-
-Pour accéder à `product_handle` et `product_url` et les utiliser, déconnectez et reconnectez votre catalogue Shopify en procédant comme suit.
-
-1. Accédez à la page d'intégration de Shopify et sélectionnez **Modifier la configuration**.
-
-![Page d'intégration de Shopify.]({% image_buster /assets/img/Shopify/edit_config.png %})
-
-{: start="2"}
-2\. Dans l'étape **Synchroniser le** catalogue, basculez le catalogue puis mettez à jour les paramètres.
-3\. Basculez sur le catalogue et mettez à jour les paramètres.
-
-![Shopify "Sync catalog" step with catalog toggle.]({% image_buster /assets/img/Shopify/catalog_toggle.png %})
-
 ## Cas d'utilisation de retour en stock et de baisse de prix
 
-Pour configurer les notifications de retour en stock, suivez les étapes [ici]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/back_in_stock_notifications#back-in-stock-notifications).
+Pour configurer les notifications de retour en stock, suivez les étapes [ici]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/).
 
-Pour configurer les notifications de baisse de prix, suivez les étapes [ici]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/price_drop_notifications/).
+Pour configurer les notifications de baisse de prix, suivez les étapes [ici]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications/).
 
 Notez qu'avec l'intégration Shopify, vous devrez créer un événement personnalisé qui capture le statut d'abonnement d'un utilisateur dans votre catalogue pour chaque cas d'utilisation. L'événement personnalisé nécessitera une propriété d'événement qui correspond soit à l'[unité de gestion des stocks ou à l'ID de variante Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify_features/shopify_catalogs#step-2-select-your-product-identifier) que vous avez sélectionnée dans le cadre de la synchronisation de votre produit Shopify. 
 
@@ -115,7 +101,7 @@ Si la synchronisation de votre produit Shopify rencontre une erreur, cela pourra
 | Erreur | Raison | Solution |
 | --- | --- | --- |
 | Erreur du serveur | Cela se produit s'il y a une erreur de serveur du côté de Shopify lorsque nous essayons de synchroniser vos produits. | [Désactivez la synchronisation](#deactivate) et resynchronisez à nouveau l'ensemble de votre inventaire de produits. |
-| Unité de gestion des stocks en double | Cela se produit si vous utilisez une unité de gestion des stocks comme ID d'article de catalogue et avez des produits avec la même unité de gestion des stocks. Puisque l'ID de l'article du catalogue doit être unique, tous vos produits doivent avoir des unités de gestion des stocks uniques. | Vérifiez votre liste complète de produits et de variantes dans Shopify pour vous assurer qu'il n'y a pas d’unités de gestion des stocks en double. S'il y a des unités de gestion des stocks en double, mettez-les à jour pour qu'elles soient uniques dans votre compte de boutique Shopify. Après cela, [désactivez la synchronisation](#deactivate) et resynchronisez à nouveau l'ensemble de votre inventaire de produits. |
-| Limite du catalogue dépassée | Cela se produit si vous dépassez votre limite de catalogue. Braze ne pourra pas terminer la synchronisation ou maintenir la synchronisation active en raison de l'absence de disponibilité de stockage. | Il existe deux solutions à ce problème :<br><br>1\. Contactez votre gestionnaire de compte pour mettre à niveau votre abonnement afin d'augmenter votre limite de catalogue. <br><br>2\. Libérez de l'espace de stockage en supprimant l'un des éléments suivants :<br>Cataloguer des articles d'autres catalogues<br>\- Autres catalogues<br>Sélections créées<br><br> Après avoir utilisé l'une ou l'autre des solutions, la synchronisation doit être désactivée puis resynchronisée. |
+| Unité de gestion des stocks en double | Cela se produit si vous utilisez une unité de gestion des stocks comme ID d'article de catalogue et avez des produits avec la même unité de gestion des stocks. Comme l'ID de l'article du catalogue doit être unique, tous vos produits doivent avoir des UGS uniques. | Vérifiez votre liste complète de produits et de variantes dans Shopify pour vous assurer qu'il n'y a pas d’unités de gestion des stocks en double. S'il y a des unités de gestion des stocks en double, mettez-les à jour pour qu'elles soient uniques dans votre compte de boutique Shopify. Après cela, [désactivez la synchronisation](#deactivate) et resynchronisez à nouveau l'ensemble de votre inventaire de produits. |
+| Limite du catalogue dépassée | Cela se produit si vous dépassez votre limite de catalogue. Braze ne pourra pas terminer la synchronisation ou maintenir la synchronisation active en raison de l'absence de disponibilité de stockage. | Il existe deux solutions à ce problème :<br><br>1\. Contactez votre gestionnaire de compte pour passer à un niveau supérieur afin d'augmenter votre limite de catalogue. <br><br>2\. Libérez de l'espace de stockage en supprimant l'un des éléments suivants :<br>Cataloguer des articles d'autres catalogues<br>\- Autres catalogues<br>Sélections créées<br><br> Après avoir utilisé l'une ou l'autre des solutions, la synchronisation doit être désactivée puis resynchronisée. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 

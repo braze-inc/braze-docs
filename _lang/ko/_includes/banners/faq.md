@@ -1,8 +1,8 @@
 # 배너: 자주 묻는 질문
 
-> 이것은 Braze의 배너에 대한 자주 묻는 질문에 대한 답변입니다. 더 일반적인 정보는 [배너에 대하여]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %}).
+> 이것은 Braze의 배너에 대한 자주 묻는 질문에 대한 답변입니다. 더 일반적인 정보는 [배너에 대해]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners{% endif %})를 참조하세요.
 
-## 사용자에게 배너 업데이트는 언제 나타납니까?
+## 배너 업데이트는 사용자에게 언제 나타납니까?
 
 배너는 새로고침 메서드를 호출할 때마다 최신 데이터로 새로 고쳐지며, 배너 캠페인을 다시 전송하거나 업데이트할 필요가 없습니다.
 
@@ -10,7 +10,7 @@
 
 단일 새로 고침 요청에서 최대 10개의 배치를 요청할 수 있습니다. 요청한 각 배치에 대해 Braze는 사용자가 자격이 있는 가장 높은 우선 순위의 배너를 반환합니다. 추가 요청은 오류를 반환합니다.
 
-자세한 내용은 [배치 요청]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
+자세한 내용은 [배치 요청]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %})를 참조하세요.
 
 ## 동시에 활성화할 수 있는 배너 캠페인은 몇 개입니까?
 
@@ -18,11 +18,11 @@
 
 ## 배치를 공유하는 캠페인에서 어떤 배너가 먼저 표시됩니까?
 
-사용자가 동일한 배치를 공유하는 여러 배너 캠페인에 자격이 있는 경우, 가장 높은 우선 순위의 배너가 표시됩니다. 자세한 내용은 [배너 우선 순위]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
+사용자가 동일한 배치를 공유하는 여러 배너 캠페인에 자격이 있는 경우, 가장 높은 우선 순위의 배너가 표시됩니다. 자세한 내용은 [배너 우선 순위]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %})를 참조하세요.
 
 ## 기존 콘텐츠 카드 피드에서 배너를 사용할 수 있습니까?
 
-배너는 콘텐츠 카드와 다르므로, 같은 피드에서 배너와 콘텐츠 카드를 사용할 수 없습니다. 기존 콘텐츠 카드 피드를 배너로 교체하려면 [앱이나 웹사이트에 배치를 생성해야 합니다.]({{site.baseurl}}/developer_guide/banners/placements/)
+배너는 콘텐츠 카드와 다르므로 같은 피드에서 배너와 콘텐츠 카드를 사용할 수 없습니다. 기존 콘텐츠 카드 피드를 배너로 교체하려면 [앱이나 웹사이트에 배치를 생성해야 합니다.]({{site.baseurl}}/developer_guide/banners/placements/)
 
 ## 사용자 행동에 따라 배너를 트리거할 수 있습니까?
 
@@ -39,7 +39,7 @@
 
 아니요. 사용자는 배너를 수동으로 닫을 수 없습니다. 그러나 사용자 세그먼트 적격성을 관리하여 배너 가시성을 제어할 수 있습니다. 사용자가 배너 캠페인에 대한 타겟팅 기준을 더 이상 충족하지 않으면, 다음 세션에서 다시 보지 않게 됩니다.
 
-예를 들어, 사용자가 구매할 때까지 프로모션 배너를 표시하는 경우, `purchase_completed`과 같은 이벤트를 기록하면 해당 사용자가 타겟팅된 세그먼트에서 제거되어 이후 세션에서 배너가 숨겨집니다.
+예를 들어, 사용자가 구매할 때까지 프로모션 배너를 표시하는 경우, `purchase_completed`과 같은 이벤트를 기록하면 해당 사용자가 타겟 세그먼트에서 제거되어 이후 세션에서 배너가 숨겨집니다.
 
 ## Braze API를 사용하여 배너 캠페인 분석을 내보낼 수 있나요?
 
