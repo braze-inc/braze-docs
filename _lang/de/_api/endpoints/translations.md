@@ -16,28 +16,28 @@ guide_featured_list:
   - name: "GET: Übersetzung für eine Kampagne anzeigen"
     link: /docs/api/endpoints/translations/campaigns/get_translation_campaign/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: Alle Übersetzungen für eine Kampagne anzeigen"
-    link: /docs/api/endpoints/translations/campaigns/get_bulk_translations_campaigns/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Übersetzung in einer Kampagne aktualisieren"
     link: /docs/api/endpoints/translations/campaigns/put_update_translation_campaign/
     image: /assets/img/braze_icons/target-04.svg
+  - name: "GET: Kampagnen-Standard-Quellübersetzungen anzeigen"
+    link: /docs/api/endpoints/translations/campaigns/get_source_campaign/
+    image: /assets/img/braze_icons/message-plus-square.svg
 
 guide_menu_title: "Canvas endpoints"
 guide_menu_list:
   - name: "GET: Übersetzung für ein Canvas anzeigen"
     link: /docs/api/endpoints/translations/canvas/get_translation_canvas/
     image: /assets/img/braze_icons/message-plus-square.svg
-  - name: "GET: Alle Übersetzungen für ein Canvas anzeigen"
-    link: /docs/api/endpoints/translations/canvas/get_bulk_translations_canvases/
-    image: /assets/img/braze_icons/message-plus-square.svg
   - name: "PUT: Übersetzung in einem Canvas aktualisieren"
     link: /docs/api/endpoints/translations/canvas/put_update_translation_canvas/
     image: /assets/img/braze_icons/target-04.svg
-  
+  - name: "GET: Canvas-Standard-Quellübersetzungen anzeigen"
+    link: /docs/api/endpoints/translations/canvas/get_source_canvas/
+    image: /assets/img/braze_icons/message-plus-square.svg
+
 guide_menu_title2: "Email template endpoints"
 guide_menu_list2:
-  - name: "GET: Quelle ansehen Übersetzung"
+  - name: "GET: E-Mail Template Standard Quellübersetzungen anzeigen"
     link: /docs/api/endpoints/translations/email_templates/get_view_source_template/
     image: /assets/img/braze_icons/message-plus-square.svg
   - name: "GET: Ansichtsspezifische Übersetzung und Lokalisierung"

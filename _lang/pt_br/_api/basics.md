@@ -34,7 +34,7 @@ A seguir, uma visão geral dos termos que você poderá ver na documentação da
 
 ### Endpoints
 
-A Braze gerencia várias instâncias diferentes para nosso dashboard e endpoints REST. Quando sua conta for provisionada, você fará o registro em um dos seguintes URLs. Use o endpoint REST correto com base na instância para a qual você está provisionado. Se não tiver certeza, abra um [tíquete de suporte]({{site.baseurl}}/braze_support/) ou use a tabela a seguir para fazer a correspondência entre o URL do dashboard que você usa e o endpoint REST correto.
+A Braze gerencia várias instâncias diferentes para nosso dashboard e endpoints REST. Quando sua conta é provisionada, você faz login em uma das seguintes URLs. Use o endpoint REST correto com base na instância para a qual você está provisionado. Se você não tiver certeza, abra um [ticket de suporte]({{site.baseurl}}/braze_support/) ou use a tabela a seguir para corresponder a URL do dashboard que você usa ao Endpoint REST correto.
 
 {% alert important %}
 Ao usar endpoints para chamadas de API, use o endpoint REST.
@@ -46,22 +46,22 @@ Para integração de SDK, use o [endpoint de SDK]({{site.baseurl}}/user_guide/ad
 
 ### Limites da API
 
-Para a maioria das APIs, a Braze tem um limite de frequência padrão de 250.000 solicitações por hora. No entanto, determinados tipos de solicitação têm seu próprio limite de frequência aplicado para lidar melhor com grandes volumes de dados de nossa base de clientes. Para obter informações, consulte [os limites de frequência da API]({{site.baseurl}}/api/api_limits/)
+Para a maioria das APIs, a Braze tem um limite de frequência padrão de 250.000 solicitações por hora. No entanto, certos tipos de solicitação têm seu próprio limite de frequência aplicado para lidar melhor com altos volumes de dados em toda a base de clientes. Para obter informações, consulte [os limites de frequência da API]({{site.baseurl}}/api/api_limits/)
 
 ### IDs de usuário
 
 - **ID de usuário externo**: O endereço `external_id` serve como um identificador exclusivo do usuário para o qual você está enviando dados. Esse identificador deve ser o mesmo que você definiu no SDK do Braze para evitar a criação de vários perfis para o mesmo usuário.
-- **Braze user ID**: `braze_id` serve como um identificador de usuário exclusivo que é definido pela Braze. Esse identificador pode ser usado para excluir usuários por meio da API REST, além de external_ids.
+- **ID do usuário Braze**: `braze_id` serve como um identificador único de usuário que o Braze define. Você pode usar esse identificador para excluir usuários através da API REST, além de external_ids.
 
 Para saber mais, consulte os seguintes artigos com base em sua plataforma: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) e [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/).
 
 ## Sobre as chaves da API REST
 
-Uma chave de interface de programação de aplicativo REST (chave de API REST) é um código exclusivo que é passado para uma API para autenticar a chamada de API e identificar o aplicativo ou o usuário que está fazendo a chamada. O acesso à API é feito usando solicitações da Web HTTPS para o endpoint da API REST de sua empresa. Usamos as chaves da API REST no Braze em conjunto com as chaves do App Identifier para rastrear, acessar, enviar, exportar e analisar dados para ajudar a garantir que tudo esteja funcionando sem problemas, tanto do seu lado quanto do nosso.
+Uma chave de Interface de Programação de Aplicativo REST (chave da API REST) é um código único que você passa para uma API para autenticar a chamada da API e identificar o aplicativo ou usuário que está chamando. Você acessa a API usando solicitações web HTTPS para o endpoint da API REST da sua empresa. As chaves da API REST funcionam em conjunto com as chaves de Identificador de App para rastrear, acessar, enviar, exportar e analisar dados para ajudar a garantir que tudo esteja funcionando sem problemas.
 
 Os espaços de trabalho e as chaves de API andam de mãos dadas no Braze. Os espaços de trabalho são projetados para abrigar versões do mesmo aplicativo em várias plataformas. Muitos clientes também usam espaços de trabalho para conter versões gratuitas e premium de seus aplicativos na mesma plataforma. Como você pode notar, esses espaços de trabalho também estão usando a API REST e têm suas próprias chaves de API REST. Estas chaves podem ter escopo individual para incluir acesso a endpoints específicos na API. Cada chamada para a API precisa incluir uma chave com acesso ao endpoint atingido.
 
-Referimo-nos tanto à chave da API REST quanto à chave da API do espaço de trabalho como `api_key`. O `api_key` é incluído em cada solicitação como um cabeçalho de solicitação e atua como uma chave de autenticação que lhe permite usar nossas APIs REST. Essas APIs REST são usadas para rastrear usuários, enviar mensagens, exportar dados de usuários e muito mais. Ao criar uma nova chave da API REST, você precisará dar a ela acesso a endpoints específicos. Ao atribuir permissões específicas a uma chave de API, você pode limitar exatamente quais chamadas uma chave de API pode autenticar.
+Referimo-nos tanto à chave da API REST quanto à chave da API do espaço de trabalho como `api_key`. O `api_key` é incluído em cada solicitação como um cabeçalho de solicitação e atua como uma chave de autenticação que lhe permite usar nossas APIs REST. Essas APIs REST são usadas para rastrear usuários, enviar mensagens, exportar dados de usuários e muito mais. Quando você cria uma nova chave da API REST, deve conceder acesso a endpoints específicos. Ao atribuir permissões específicas a uma chave de API, você pode limitar exatamente quais chamadas uma chave de API pode autenticar.
 
 ![Painel de chaves da API REST na guia Chaves da API.]({% image_buster /assets/img_archive/rest-api-key.png %})
 
@@ -88,7 +88,7 @@ Lembre-se: depois de criar uma nova chave de API, você não poderá editar o es
 As permissões de chave de API são permissões que podem ser atribuídas a um usuário ou grupo para limitar seu acesso a determinadas chamadas de API. Para visualizar sua lista de permissões de chave de API, acesse **Settings (Configurações)** > **APIs and Identifiers (APIs e identificadores)** e selecione sua chave de API.
 
 {% tabs %}
-{% tab Dados de usuários %}
+{% tab User Data %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -106,7 +106,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
  {% endtab %}
- {% tab Envio de e-mail %}
+ {% tab Email %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -119,7 +119,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Envio de mensagens %}
+{% tab Messages %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -132,12 +132,12 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Campanhas %}
+{% tab Campaigns %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
 | `campaigns.trigger.send` | [`/campaigns/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) | Disparar o envio de uma campanha existente. |
-| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Programe um envio futuro de uma campanha com entrega disparada por API. |
+| `campaigns.trigger.schedule.create` | [`/campaigns/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/) | Agende o envio de uma campanha com entrega acionada pela API. |
 | `campaigns.trigger.schedule.update` | [`/campaigns/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/) | Atualize uma campanha programada com entrega disparada por API. |
 | `campaigns.trigger.schedule.delete` | [`/campaigns/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/) |Exclua uma campanha programada com entrega disparada por API. |
 | `campaigns.list` | [`/campaigns/list`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) | Consulta de uma lista de campanhas. |
@@ -147,7 +147,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 | `sends.id.create` | [`/sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) | Criar ID de envio para rastreamento de mensagens. |
 | `campaigns.url_info.details` | [`/campaigns/url_info/details`]({{site.baseurl}}) | Faça uma consulta para obter informações do URL de uma variação de mensagem específica dentro de uma campanha. |
 | `transactional.send` | [`/transactional/v1/campaigns/{campaign_id}/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) | Permite a capacidade de enviar mensagens transacionais usando o endpoint de mensagens transacionais. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
 {% tab Canvas %}
@@ -155,7 +155,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 | Permissão | Endpoint | Descrição |
 |---|---|---|
 | `canvas.trigger.send` | [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) | Dispare o envio de um canva existente. |
-| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Agende um envio futuro de um canva com entrega disparada pela API. |
+| `canvas.trigger.schedule.create` | [`/canvas/trigger/schedule/create`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/) | Agende o envio de um Canvas com entrega acionada pela API. |
 | `canvas.trigger.schedule.update` | [`/canvas/trigger/schedule/update`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/) | Atualize um canva agendado com entrega disparada pela API. |
 | `canvas.trigger.schedule.delete` | [`/canvas/trigger/schedule/delete`]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/)| Exclua um canva agendado com entrega disparada pela API. |
 | `canvas.list` | [`/canvas/list`]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) |  Faça uma consulta para obter uma lista de canvas. |
@@ -166,7 +166,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Segmentos %}
+{% tab Segments %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -176,7 +176,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Compras %}
+{% tab Purchases %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -186,7 +186,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Eventos %}
+{% tab Events %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -195,7 +195,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Sessões %}
+{% tab Sessions %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -214,7 +214,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Modelos %}
+{% tab Templates %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -233,7 +233,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Blocos de conteúdo %}
+{% tab Content Blocks %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -244,7 +244,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Central de Preferências %}
+{% tab Preference Center %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -255,7 +255,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Inscrição %}
+{% tab Subscription %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -274,7 +274,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Catálogos %}
+{% tab Catalogs %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
@@ -294,12 +294,12 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Autenticação do SDK %}
+{% tab SDK Authentication %}
 
 | Permissão | Endpoint | Descrição |
 |---|---|---|
 | `sdk_authentication.create` | [`/app_group/sdk_authentication/create`]({{site.baseurl}}/api/endpoints/sdk_authentication/post_create_sdk_authentication_key) | Crie uma nova chave de autenticação do SDK para seu app. |
-| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | Marque uma chave de autenticação do SDK como a chave primária do seu app. |
+| `sdk_authentication.primary` | [`/app_group/sdk_authentication/primary`]({{site.baseurl}}/api/endpoints/sdk_authentication/put_primary_sdk_authentication_key/) | Marque uma chave de autenticação do SDK como a chave principal para seu app. |
 | `sdk_authentication.delete` | [`/app_group/sdk_authentication/delete`]({{site.baseurl}}/api/endpoints/sdk_authentication/delete_sdk_authentication_key) | Exclua uma chave de autenticação do SDK para seu app. |
 | `sdk_authentication.keys` | [`/app_group/sdk_authentication/keys`]({{site.baseurl}}/api/endpoints/sdk_authentication/get_sdk_authentication_keys) | Obtenha todas as chaves de autenticação do SDK para seu app. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -309,7 +309,7 @@ As permissões de chave de API são permissões que podem ser atribuídas a um u
 
 ### Gerenciamento de chaves da API REST
 
-Você pode visualizar detalhes ou excluir chaves de API REST existentes na guia **Configurações** > **APIs e identificadores** > **Chaves de API**. Observe que as chaves da API REST não podem ser editadas depois de criadas.
+Você pode visualizar detalhes ou excluir chaves de API REST existentes na guia **Configurações** > **APIs e identificadores** > **Chaves de API**. Observe que você não pode editar as chaves da API REST após criá-las.
 
 A guia **Chaves de API** inclui as seguintes informações para cada chave:
 
@@ -317,18 +317,18 @@ A guia **Chaves de API** inclui as seguintes informações para cada chave:
 | ------------ | :------------------------------------------------------------------------------------------------------------------ |
 | Nome da chave de API | O nome dado à chave na criação.                                                                            |
 | Identificador   | A chave de API.                                                                                                        |
-| Criado por   | O endereço de e-mail do usuário que criou a chave. Esse campo será exibido como "N/A" para chaves criadas antes de junho de 2023. |
+| Criado por   | O endereço de e-mail do usuário que criou a chave. Este campo aparece como "N/A" para chaves criadas antes de junho de 2023. |
 | Data de criação | A data em que essa chave foi criada.                                                                                      |
-| Último envio    | A data em que essa chave foi usada pela última vez. Esse campo será exibido como "N/A" para chaves que nunca foram usadas.                  |
+| Último envio    | A data em que essa chave foi usada pela última vez. Este campo aparece como "N/A" para chaves que nunca foram usadas.                  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Para visualizar os detalhes de uma chave de API, passe o mouse sobre a chave e selecione <i class="fa-solid fa-eye" alt="View"></i> **View**. Isso inclui todas as permissões que essa chave tem, IPs na lista de permissões (se houver) e se essa chave foi aceita na lista de permissões de IP do Braze.
 
 ![A lista de permissões da chave de API no dashboard do Braze.]({% image_buster /assets/img_archive/view-api-key.png %})
 
-Note que, ao [excluir um usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/), as chaves de API associadas que o usuário criou não serão excluídas. Para excluir uma chave, passe o mouse sobre a chave e selecione <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
+Observe que ao [excluir um usuário]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/), o Braze não exclui as chaves da API associadas que o usuário criou. Para excluir uma chave, passe o mouse sobre a chave e selecione <i class="fa-solid fa-trash-can" alt="Delete"></i> **Delete**.
 
-![Uma chave de API denominada 'Last Seen' com o ícone da lixeira destacado, mostrando 'Delete'.]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
+![Uma chave de API chamada "Last Seen" com o ícone de lixeira destacado, mostrando "Delete".]({% image_buster /assets/img_archive/api-key-options.png %}){: style="max-width:30%;"}
 
 ### Segurança da chave da API REST
 
@@ -342,7 +342,7 @@ Uma boa prática de segurança é atribuir a um usuário apenas o acesso necess�
 Como as chaves da API REST permitem o acesso a endpoints da API REST potencialmente confidenciais, certifique-se de que elas sejam armazenadas e usadas com segurança. Por exemplo, não use essa chave para fazer chamadas AJAX em seu site nem a exponha de qualquer outra forma pública.
 {% endalert %}
 
-Se ocorrer a exposição acidental de uma chave, ela poderá ser excluída do console de desenvolvedor. Para obter ajuda com esse processo, abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
+Se você acidentalmente expuser uma chave, pode excluí-la do console de desenvolvedor. Para ajuda com esse processo, abra um [ticket de suporte]({{site.baseurl}}/braze_support/).
 
 ### Lista de permissões de IP da API
 
@@ -353,18 +353,18 @@ Para maior segurança, você pode especificar uma lista de endereços IP e sub-r
 Se você não especificar nenhum, as solicitações poderão ser enviadas de qualquer endereço IP.
 
 {% alert tip %}
-Como criar um webhook Braze-to-Braze e usar o allowlisting? Confira nossa lista de [IPs para lista de permissões]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+Se você estiver criando um webhook Braze para Braze e usando a lista de permissões, veja a lista de [IPs a serem permitidos]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
 {% endalert %}
 
 ## Recursos adicionais
 
 ### Biblioteca de cliente Ruby
 
-Se estiver implementando a Braze usando Ruby, poderá usar nossa [biblioteca de cliente Ruby](https://github.com/braze-inc/braze-api-client-ruby) para reduzir o tempo de importação de dados. Uma biblioteca de cliente é uma coleção de códigos específicos de uma linguagem de programação - neste caso, Ruby - que facilita o uso de uma API.
+Se você estiver implementando o Braze usando Ruby, pode usar a [biblioteca cliente Ruby](https://github.com/braze-inc/braze-api-client-ruby) para reduzir o tempo de importação de dados. Uma biblioteca de cliente é uma coleção de códigos específicos de uma linguagem de programação - neste caso, Ruby - que facilita o uso de uma API.
 
 A biblioteca do cliente Ruby é compatível com os [endpoints do usuário]({{site.baseurl}}/api/endpoints/user_data).
 
 {% alert important %}
-Essa biblioteca de clientes está atualmente na versão beta. Quer nos ajudar a melhorar esta biblioteca? Envie-nos seu feedback em [smb-product@braze.com](mailto:smb-product@braze.com).
+Esta biblioteca cliente está em beta. Para ajudar a melhorar esta biblioteca, envie feedback para [smb-product@braze.com](mailto:smb-product@braze.com).
 {% endalert %}
 

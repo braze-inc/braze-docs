@@ -37,7 +37,7 @@ description: "This reference article explains the different components of the Br
   "header_variables": (optional, header variables object) an object to specify header variable values for specified template_name, required if the header has variables; see object specification below,
   "body_variables": (optional, body variable object) an object to specify body variable values for specified template_name, required if the body has variables; see object specification below,
   "button_variables": (optional, button variables object) an object to specify button variable values for specified template_name, required if buttons have variables; see object specification below,
-  "header_image_uri": (optional, string) URI to the header image, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
+  "header_media_uri": (optional, string) URI to the header media, if the header is of type IMAGE in specified template_name. Only IMAGE and TEXT header types are supported by the messages/send API.
 }
 ```
 
@@ -50,7 +50,9 @@ description: "This reference article explains the different components of the Br
 The `header_variables` object lets you specify values for header variables in the WhatsApp template. Each key is the WhatsApp template variable index (zero-indexed) to replace with the specified value.
 
 {% alert note %}
-**Header type requirement:** You can use `header_variables` only with templates that have TEXT-type headers. For IMAGE headers, use `header_image_uri` instead. DOCUMENT, VIDEO, and other media header types are not supported by the `messages/send` API.
+You can use `header_variables` only with templates that have TEXT-type headers. For IMAGE headers, use `header_media_uri` instead. DOCUMENT, VIDEO, and other media header types are not supported by the `messages/send` API.<br><br>
+
+`header_image_uri` is used only for response message types (such as `quick_reply_response_message`), not template messages.
 {% endalert %}
 
 ```json

@@ -12,9 +12,9 @@ description: "Este artículo de referencia cubre la configuración genérica de 
 
 > Como administrador, la seguridad es una prioridad en tu lista de preocupaciones. La página **Configuración de seguridad** puede ayudarte a gestionar la configuración de seguridad genérica para toda la empresa, incluidas las reglas de autenticación, la lista de IP permitidas y la autenticación de dos factores.
 
-Para acceder a esta página, ve a **Configuración** > **Configuración de administrador** > **Configuración de seguridad**.
+Para acceder a esta página, vaya a **Configuración** > **Configuración de administración** > **Configuración de seguridad**.
 
-## Reglas de autenticación
+## Normas de autenticación
 
 ### Longitud de la contraseña
 
@@ -34,32 +34,32 @@ Determina el número mínimo de nuevas contraseñas que deben establecerse antes
 
 ### Reglas de caducidad de la contraseña
 
-Utiliza este campo para establecer cuándo quieres que los usuarios de tu cuenta Braze restablezcan su contraseña.
+Utilice este campo para establecer cuándo desea que los usuarios de su cuenta Braze restablezcan su contraseña.
 
 ### Reglas de duración de la sesión
 
-Utiliza este campo para definir durante cuánto tiempo Braze mantendrá activa tu sesión. Cuando Braze considere que tu sesión está inactiva (sin actividad durante el número de minutos definido), se cerrará la sesión del usuario. El número máximo de minutos que puedes introducir es de 10.080 (igual a una semana) si en tu empresa se aplica la autenticación de dos factores; de lo contrario, la duración máxima de la sesión será de 1.440 minutos (igual a 24 horas).
+Utiliza este campo para definir durante cuánto tiempo Braze mantendrá activa tu sesión. Después de que Braze considere que tu sesión está inactiva (sin actividad durante el número de minutos definido), Braze cierra la sesión del usuario. El número máximo de minutos que puedes introducir es de 10.080 (igual a una semana) si en tu empresa se aplica la autenticación de dos factores; de lo contrario, la duración máxima de la sesión es de 1.440 minutos (igual a 24 horas).
 
 ### Autenticación de inicio de sesión único (SSO)
 
-Puedes restringir a tus usuarios el acceso mediante contraseña o SSO.
+Puede restringir a sus usuarios el acceso mediante contraseña o SSO.
 
-Para [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/), los clientes deben establecer su configuración SAML antes de aplicarla. Si los clientes utilizan Google SSO, sólo tienen que hacer cumplir la página de configuración de seguridad, sin ninguna elevación adicional.
+Para [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/), los clientes deben establecer su configuración SAML antes de aplicarla. Si los clientes utilizan Google SSO, solo tienen que hacer cumplir la página de configuración de seguridad, sin ninguna elevación adicional.
 
-## Panel de control Lista de IP permitidas
+## Lista de direcciones IP permitidas del panel
 
-Utiliza el campo mostrado para permitir una lista de direcciones IP y subredes específicas desde las que los usuarios pueden acceder a tu cuenta (por ejemplo, desde una red de empresa o VPN). Especifica las direcciones IP y las subredes como rangos CIDR en una lista separada por comas. Si no se especifica, los usuarios podrán conectarse desde cualquier dirección IP.
+Utilice el campo mostrado para permitir direcciones IP y subredes específicas desde las que los usuarios pueden iniciar sesión en su cuenta (por ejemplo, desde una red de empresa o VPN). Especifique las direcciones IP y subredes como rangos CIDR en una lista separada por comas. Si no se especifica, los usuarios pueden conectarse desde cualquier dirección IP.
 
 ## Autenticación de dos factores (2FA)
 
-La autenticación de dos factores es necesaria para todos los usuarios de Braze. Añade un segundo nivel de verificación de identidad al registro de una cuenta, haciéndolo más seguro que un simple nombre de usuario y contraseña. Si tu panel no admite la autenticación de dos factores, ponte en contacto con tu administrador del éxito del cliente. 
+La autenticación de dos factores es obligatoria para todos los usuarios de Braze. Añade un segundo nivel de verificación de identidad al registro de una cuenta, haciéndolo más seguro que un simple nombre de usuario y contraseña. Si tu panel de control no admite la autenticación de dos factores, ponte en contacto con tu gestor de éxito de clientes. 
 
 Cuando se activa la autenticación de dos factores:
 
-- Además de introducir una contraseña, los usuarios tendrán que introducir un código de verificación al iniciar sesión en su cuenta de Braze. El código puede enviarse a través de una aplicación de autenticación, correo electrónico o SMS. 
+- Además de introducir una contraseña, los usuarios deben introducir un código de verificación al acceder a su cuenta de Braze. El código puede enviarse a través de una aplicación de autenticación, correo electrónico o SMS. 
 - La casilla **Recordar esta cuenta durante 30 días** pasa a estar disponible para los usuarios.
 
-Los usuarios que no configuren su autenticación de dos factores serán bloqueados de su cuenta Braze. Los usuarios de cuentas Braze también pueden configurar la autenticación de dos factores por su cuenta en **Configuración de la cuenta**, aunque no lo exija el administrador.
+Braze bloquea a los usuarios que no configuran su autenticación de dos factores desde su cuenta Braze. Los usuarios de cuentas Braze también pueden configurar la autenticación de dos factores por su cuenta en la **Configuración de la cuenta**, aunque no lo exija el administrador.
 
 Asegúrate de guardar los cambios antes de salir de la página.
 
@@ -69,19 +69,19 @@ Esta característica está disponible cuando está activada la autenticación de
 
 Cuando seleccionas **Recordar esta cuenta durante 30 días**, se almacena una cookie en tu dispositivo, que sólo te pedirá que inicies sesión con la autenticación de dos factores una vez en el transcurso de 30 días. 
 
-\![Casilla Recordar esta cuenta durante 30 días]({% image_buster /assets/img/remember_me.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Casilla de verificación Recordar esta cuenta durante 30 días]({% image_buster /assets/img/remember_me.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
-Los clientes con varias cuentas en un panel de empresa pueden tener problemas al utilizar esta característica debido a que la cookie está vinculada a un dispositivo específico. Si los usuarios utilizan el mismo dispositivo para iniciar sesión en varias cuentas, la cookie se sustituirá para las cuentas previamente autorizadas en ese dispositivo. Braze espera que sólo se asocie un dispositivo a una cuenta, no un dispositivo para varias cuentas.
+Los clientes con varias cuentas en una misma empresa pueden tener problemas al utilizar esta función debido a que la cookie está vinculada a un dispositivo específico. Si los usuarios utilizan el mismo dispositivo para iniciar sesión en varias cuentas, la cookie se sustituirá para las cuentas previamente autorizadas en ese dispositivo. Braze espera que sólo haya un dispositivo asociado a una cuenta, no un dispositivo para varias cuentas.
 
 ### Restablecer la autenticación de usuario
 
 Si tienes problemas para iniciar sesión con la autenticación de dos factores, ponte en contacto con los administradores de tu empresa para restablecer la autenticación de dos factores. Los administradores pueden realizar los siguientes pasos:
 
-1. Ve a **Configuración** > **Usuarios de la empresa**.
-2. Selecciona el usuario de la lista proporcionada.
-3. Selecciona **Restablecer** en **Autenticación de dos factores**.
+1. Vaya a **Configuración** > **Usuarios de la empresa**.
+2. Seleccione el usuario de la lista proporcionada.
+3. Seleccione **Restablecer** en **Autenticación de dos factores**.
 
-Un restablecimiento puede resolver problemas comunes de autenticación, como problemas con las aplicaciones de autenticación, el no envío de la verificación por correo electrónico, el fallo en el inicio de sesión debido a interrupciones de SMS o a un error del usuario, y mucho más.
+Un restablecimiento puede resolver problemas comunes de autenticación, como problemas con aplicaciones de autenticación, verificación de correo electrónico que no se envía, fallo de inicio de sesión debido a interrupciones de SMS o error del usuario, y más.
 
 ### Requisitos para la 2FA a nivel de empresa
 
@@ -131,23 +131,22 @@ El Acceso Elevado añade una capa extra de seguridad para las acciones sensibles
 
 Si un usuario no puede volver a verificar, será redirigido al punto donde lo dejó y no podrá continuar con la acción sensible. Después de volver a verificar con éxito, no tendrán que volver a hacerlo durante la siguiente hora, a menos que cierren la sesión antes.
 
-Alterna el acceso elevado.]({% image_buster /assets/img/elevated_access.png %})
+![Alterna el Acceso Elevado.]({% image_buster /assets/img/elevated_access.png %})
 
 ## Descargar un informe de sucesos de seguridad {#security-event-report}
 
-El informe de sucesos de seguridad es un informe CSV de sucesos de seguridad como invitaciones a cuentas, eliminaciones de cuentas, intentos fallidos y con éxito de iniciar sesión y otras actividades. Puedes utilizarlo para realizar auditorías internas.
+El informe de eventos de seguridad es un informe CSV de eventos de seguridad como invitaciones a cuentas, eliminaciones de cuentas, intentos de inicio de sesión fallidos y exitosos, y otras actividades. Puedes utilizarlo para realizar auditorías internas.
 
-Para descargar este informe, haz lo siguiente
+Para descargar este informe, haga lo siguiente:
 
-1. Ve a **Configuración** > **Configuración del administrador**.
-2. Selecciona la pestaña **Configuración de Seguridad** y ve a la sección **Descarga de Eventos de Seguridad**.
-2. Selecciona **Descargar informe**. 
+1. Vaya a **Configuración** > **Configuración del administrador**.
+2. Seleccione la pestaña **Configuración de seguridad** y vaya a la sección **Descarga de eventos de seguridad**.
+2. Seleccione **Descargar informe**. 
 
-Este informe sólo contiene los 10.000 eventos de seguridad más recientes de tu cuenta. Si necesitas datos específicos del evento, ponte en contacto con el soporte técnico.
+Este informe sólo contiene los 10.000 eventos de seguridad más recientes de su cuenta. Si necesita datos de eventos específicos, póngase en contacto con el servicio de asistencia técnica.
 
 {% details Reported security events %}
-
-### Iniciar sesión y cuenta 
+### Iniciar sesión y cuenta
 - Firmado en
 - Error al iniciar sesión
 - Configuración de la autenticación de dos factores completada
@@ -162,25 +161,30 @@ Este informe sólo contiene los 10.000 eventos de seguridad más recientes de tu
 - Cuenta eliminada
 - Estado de la suscripción del usuario actualizado
 - Usuario actualizado
+- Cuenta de desarrollador actualizada
 
 ### Acceso elevado
 - Iniciado Flujo de Acceso Elevado
 - Flujo de acceso elevado completado
 - Verificación 2FA fallida para acceso elevado
+- Habilitación del control de acceso elevado
+- Acceso Elevado para Discapacitados Aplicación de la Ley
 
-### Campaña
+Campaña
 - Campaña añadida
 - Campaña editada
 
-### Canvas
+Canvas
 - Viaje añadido
 - Viaje editado
 
-### Segmento
+### Segment
 - Segmento añadido
 - Segmento editado
 - Datos exportados a CSV
 - Segmento exportado mediante API
+- Segmento Usuarios Eliminado
+- Cohorte autorizada
 
 ### Clave de API REST
 - Añadida clave de API REST
@@ -194,32 +198,77 @@ Este informe sólo contiene los 10.000 eventos de seguridad más recientes de tu
 ### Permiso
 - Desarrollador autorizado 2FA
 - Permiso de cuenta actualizado
+- Equipo añadido
+- Equipo editado
+- Equipo archivado
+- Equipo no archivado
+- Conjunto de permisos del grupo de aplicaciones creado
+- Grupo de aplicaciones editadas Conjunto de permisos
+- Eliminado el conjunto de permisos del grupo de aplicaciones
+- Rol personalizado creado
+- Rol personalizado actualizado
+- Rol personalizado eliminado
 
 ### Configuración de la empresa
 - Grupo de aplicaciones añadido
 - Aplicación añadida
 - Configuración de la empresa modificada
+- Configuración de seguridad de la empresa actualizada
+- Actualizada la Exportación a la Nube de Eventos de Seguridad
+- Añadido dominio personalizado de Páginas de Aterrizaje
+- Eliminado el dominio personalizado de las páginas de destino
+- Dominio personalizado creado
+- Dominio personalizado Eliminado
+- Habilitación del grupo de control global
+- Grupo de control global desactivado
+- Exclusiones de control global actualizadas
+- Lista de SMS permitidos del grupo de suscripción actualizada
 
 ### Plantilla de correo electrónico
 - Plantilla de correo electrónico añadida
 - Plantilla de correo electrónico actualizada
 
 ### Push credenciales
-- Credenciales push actualizadas
-- Credenciales push eliminadas
+Credenciales push actualizadas
+Credenciales push eliminadas
 
-### Depurador SDK
+### Depurador de SDK
 - Iniciada la sesión del depurador SDK
 - Registro del depurador SDK exportado
+
+### Usuarios
+- Usuarios eliminados
+- Usuarios vistos
+- Inicio de la importación de usuarios
+- Estado del grupo de suscripción de usuarios actualizado
+- Usuario eliminado
+- Cancelada la eliminación de un solo usuario
+- Cancelado el borrado masivo de usuarios
+
+### Catálogos
+- Catálogo Creado
+- Catálogo Eliminado
+
+### Agentes de Braze
+- Agente creado
+- Agente editado
+
+### Operador BrazeAI 
+- Respuesta solicitada del operador BrazeAI
+- El operador de BrazeAI respondió
 {% enddetails %}
 
-## Visualización de información de identificación personal (PII) {#view-pii}
+## Ver información personal identificable (PII) {#view-pii}
 
 El permiso **Ver PII** sólo es accesible para unos pocos usuarios seleccionados de Braze. Por defecto, todos los administradores tienen activado el permiso **Ver PII** en los permisos de usuario. Esto significa que pueden ver todos los atributos estándar y personalizados que tu empresa haya definido como PII en todo el panel. Cuando este permiso esté desactivado para los usuarios, éstos no podrán ver ninguno de esos atributos.
 
+{% alert note %}
+Necesitas el permiso **Ver PII** para utilizar [el Generador de consultas]({{site.baseurl}}/user_guide/analytics/query_builder/building_queries/), porque permite acceder directamente a algunos datos de clientes.
+{% endalert %}
+
 Para conocer las capacidades de permisos de equipo existentes, consulta [Configurar permisos de usuario]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#available-limited-and-team-role-permissions).
 
-### Definición de PII
+### Definir la PII
 
 {% alert important %}
 Seleccionar y definir determinados campos como campos PII sólo afecta a lo que los Usuarios pueden ver en el panel Braze y no afecta a cómo se gestionan los datos del Usuario final en dichos campos PII.<br><br>Consulta a tu equipo jurídico para alinear la configuración de tu panel con las normativas y políticas de privacidad aplicables a tu empresa, incluidas las relacionadas con la [retención de datos]({{site.baseurl}}/data_retention/).
@@ -229,56 +278,58 @@ Puedes seleccionar los campos que tu empresa designe como PII en el panel. Para 
 
 Los siguientes atributos pueden designarse como PII y ocultarse a los usuarios de Braze que no tengan permisos de **Ver PII**.
 
+#### Posibles atributos PII
+
 | Atributos estándar | Atributos personalizados |
 | ------------------- | ----------------- |
-| {::nomarkdown} <ul> <li>Dirección de correo electrónico </li> <li> Número de teléfono </li> <li> Nombre </li> <li> Apellidos </li> <li> Género </li> <li> Cumpleaños </li> <li> ID de dispositivo </li> <li> Ubicación más reciente </li> </ul> {:/} | {::nomarkdown} <ul> <li> Todos los atributos personalizados<ul><li>Los atributos personalizados individuales pueden marcarse como PII si no necesitas ocultar todos los atributos.</li></ul></li> </ul> {:/} |
+| {::nomarkdown} <ul> <li>Dirección de correo electrónico </li> <li> Número de teléfono </li> <li> Nombre </li> <li> Apellido </li> <li> Género </li> <li> Cumpleaños </li> <li> ID de los dispositivos </li> <li> Ubicación más reciente </li> </ul> {:/} | {::nomarkdown} <ul> <li> Todos los atributos personalizados<ul><li>Los atributos personalizados individuales pueden marcarse como PII si no necesita ocultar todos los atributos.</li></ul></li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Zonas limitadas
 
-A continuación se asume que todos los campos están configurados como PII, y que los usuarios mencionados son los que utilizan la plataforma Braze.
+A continuación se asume que todos los campos están configurados como PII, y que los usuarios mencionados son los que utilizan la plataforma Braze. Además, los atributos "precedentes" se refieren a los de la tabla [Atributos PII potenciales](#potential-pii-attributes). Eliminar los permisos de PII de un usuario puede afectar a la usabilidad más allá de estas áreas enumeradas.
 
-| Navegación por el panel de control | Resultado | Notas |
+| Navegación por el panel | Resultado | Notas |
 | -------------------- | ------ | ----- |
-| Búsqueda de usuarios | El usuario que se conecta no puede buscar por dirección de correo electrónico, número de teléfono, nombre o apellidos: {::nomarkdown} <ul> <li> No se mostrarán los atributos estándar y personalizados anteriores al visualizar un perfil de usuario. </li> <li> No se pueden editar los atributos estándar anteriores de un perfil de usuario desde el panel de Braze. </li> </ul> {:/} | El acceso a esta sección sigue requiriendo acceso para ver el perfil de usuario. |
-| Importación de usuarios | El usuario no puede descargar archivos de la página de **importación de usuarios**. | |
-| {::nomarkdown} <ul> <li> Segmentos </li> <li> Campañas </li> <li> Canvas </li> </ul> {:/} | En el desplegable **Datos de usuario**: {::nomarkdown} <ul> <li> El usuario no dispondrá de la opción <b>Exportar dirección de correo electrónico CSV</b>. </li> <li> El usuario no dispondrá de los atributos estándar y de cliente anteriores en el archivo CSV al seleccionar <b>Exportar datos de usuario CSV</b>. </li> </ul> {:/} | |
-| Grupo interno de prueba | El usuario no tendrá acceso a los atributos estándar anteriores de ningún usuario añadido al grupo interno de prueba. | |
-| Registro de actividad de mensajería | El usuario no tendrá acceso a los atributos estándar anteriores para ningún usuario identificado en el registro de actividad de mensajes. | |
+| Búsqueda de usuarios | El usuario que se conecta no puede buscar por dirección de correo electrónico, número de teléfono, nombre o apellidos: {::nomarkdown} <ul> <li> No se mostrarán los atributos estándar y personalizados anteriores al visualizar un perfil de usuario. </li> <li> No se pueden editar los atributos estándar anteriores de un perfil de usuario desde el panel de Braze. </li> <li> No se puede actualizar el estado de suscripción en un perfil de usuario. </li></ul> {:/} | El acceso a esta sección sigue requiriendo acceso para ver el perfil de usuario. |
+| Importación de usuarios | El usuario no puede descargar archivos desde la página de **importación de usuarios**. | |
+| {::nomarkdown} <ul> <li> Segmentos </li> <li> Campañas </li> <li> Canvas </li> </ul> {:/} | En el desplegable **Datos de usuario**: {::nomarkdown} <ul> <li> El usuario no tendrá la opción <b>CSV Exportar dirección de correo electrónico</b>. </li> <li> El usuario no dispondrá de los atributos estándar y personalizados anteriores en el archivo CSV al seleccionar <b>Exportar datos de usuario CSV</b>. </li> </ul> {:/} | |
+| Grupo de prueba interno | El usuario no tendrá acceso a los atributos estándar anteriores de ningún usuario añadido al grupo de prueba interno. | |
+| Registro de actividad de mensajes | El usuario no tendrá acceso a los atributos estándar anteriores para ningún usuario identificado en el registro de actividad de mensajes. | |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
-Al previsualizar un mensaje, no se aplica el permiso **Ver PII**, por lo que los usuarios pueden ver los atributos estándar anteriores si se hizo referencia a ellos en el mensaje a través de Liquid.
+Al previsualizar un mensaje, no se aplica el permiso **Ver PII**, por lo que los usuarios pueden ver los [atributos estándar anteriores](#potential-pii-attributes) si se hizo referencia a ellos en el mensaje a través de Liquid.
 {% endalert %}
 
 ## Preferencias de eliminación de datos 
 
-Puedes utilizar esta configuración para establecer preferencias sobre si determinados campos deben eliminarse durante el proceso de eliminación de usuarios para eventos. Estas preferencias sólo afectan a los datos de los usuarios que han sido eliminados de Braze. 
+Puedes utilizar esta configuración para establecer preferencias sobre si Braze debe eliminar determinados campos durante el proceso de eliminación de usuarios para eventos. Estas preferencias sólo afectan a los datos de los usuarios que Braze ha eliminado. 
 
-Cuando se elimina un usuario, Braze elimina toda la PII de los datos de eventos, pero conserva los datos anonimizados para fines de análisis. Algunos campos definidos por el usuario pueden contener PII si envías información de usuario final a Braze. Si estos campos contienen PII, puedes optar por eliminar los datos cuando los datos de eventos se anonimicen para los usuarios eliminados; si los campos no contienen PII, pueden conservarse para análisis.
+Cuando se elimina un usuario, Braze elimina toda la PII de los datos de eventos, pero conserva los datos anonimizados para fines de análisis. Algunos campos definidos por el usuario pueden contener IIP si envía información de usuario final a Braze. Si estos campos contienen PII, puedes optar por eliminar los datos cuando Braze anonimice los datos de eventos de los usuarios eliminados; si los campos no contienen PII, puedes conservarlos para análisis.
 
-Eres responsable de determinar las preferencias correctas para tu espacio de trabajo. La mejor forma de determinar la configuración adecuada es revisar con los equipos internos que envían datos de eventos a Braze y a los equipos que utilizan extras de mensajes en Braze para confirmar si los campos pueden contener PII.  
+Usted es responsable de determinar las preferencias correctas para su espacio de trabajo. La mejor forma de determinar la configuración adecuada es revisar con los equipos internos que envían datos de eventos a Braze y con los equipos que utilizan extras de mensajes en Braze para confirmar si los campos pueden contener IIP.  
 
 ### Campos relevantes  
 
 | Nombre o tipo de evento | Campo | Notas |
 | -------------------- | ------ | ----- |
-| Evento personalizado | propiedades |  |
-| Evento de compra | propiedades |  |
+| Evento personalizado | Propiedades |  |
+| Evento de compra | Propiedades |  |
 | Envío de mensajes | message_extras | Varios tipos de eventos contienen un campo `message_extras`. La preferencia se aplica a todos los tipos de eventos de envío de mensajes compatibles con `message_extras`, incluidos los tipos de eventos que se añadan en el futuro. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert warning %}
-**¡La eliminación es permanente!** Si optas por eliminar cualquier campo de Snowflake para los usuarios eliminados, la configuración se aplicará a todos los datos históricos de tus espacios de trabajo y a cualquier evento de usuarios eliminados en el futuro. Después de que Braze haya ejecutado el proceso para aplicar la configuración a los datos de eventos históricos de los usuarios eliminados, **no se podrán restaurar** los datos.
+**La eliminación es permanente.** Si optas por eliminar cualquier campo de Snowflake para los usuarios eliminados, la configuración se aplica a todos los datos históricos de tus espacios de trabajo y a cualquier evento de usuarios eliminados en el futuro. Después de que Braze haya ejecutado el proceso para aplicar la configuración a los datos de eventos históricos de los usuarios eliminados, **no podrás restaurar** los datos.
 {% endalert %}
 
 ### Configurar preferencias
 
-Establece las preferencias predeterminadas marcando las casillas de los campos que deben eliminarse si se borra un usuario. Selecciona cualquiera de los campos que contengan PII. Esta preferencia se aplicará a todos los espacios de trabajo actuales y futuros, a menos que los espacios de trabajo se añadan explícitamente a un grupo de preferencias.
+Establece preferencias predeterminadas marcando las casillas de los campos que Braze debe eliminar si se borra un usuario. Seleccione cualquiera de los campos que contengan IIP. Esta preferencia se aplica a todos los espacios de trabajo actuales y futuros, a menos que los espacios de trabajo se añadan explícitamente a un grupo de preferencias.
 
 Para personalizar las preferencias por espacio de trabajo, puedes añadir grupos de preferencias con una configuración distinta a la predeterminada. Aplicamos la configuración predeterminada a todos los espacios de trabajo que no se hayan añadido a un grupo de preferencias adicional, incluidos los espacios de trabajo que se creen en el futuro.  
 
-\![Sección Preferencias de eliminación de datos con alternar activada para personalizar las preferencias de eliminación de datos por espacio de trabajo.]({% image_buster /assets/img/deletion_preferences_1.png %})
+![Sección Preferencias de eliminación de datos con alternar activada para personalizar las preferencias de eliminación de datos por espacio de trabajo.]({% image_buster /assets/img/deletion_preferences_1.png %})
 
 ## Solución de problemas 
 

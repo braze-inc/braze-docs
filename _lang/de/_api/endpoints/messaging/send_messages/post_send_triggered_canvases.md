@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Senden von Canvas Nachrichten mit API-getriggerter Zustellung"
+nav_title: "POST: Senden Sie Canvas Nachrichten mit API-getriggerter Zustellung"
 article_title: "POST: Senden von Canvas Nachrichten mit API-getriggerter Zustellung"
 search_tag: Endpoint
 page_order: 4
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details des Endpunkts Canvase mit AP
 {% api %}
 # Senden Sie Canvas Nachrichten mit API-getriggerter Zustellung
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/canvas/trigger/send
+/canvas/triggern/senden
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um Canvas Nachrichten mit API-getriggerter Zustellung zu versenden.
@@ -26,11 +26,11 @@ Bevor Sie mit diesem Endpunkt Nachrichten versenden können, müssen Sie über e
 
 Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berechtigung `canvas.trigger.send` erstellen.
 
-## Rate-Limits
+## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='send endpoints' category='send messages endpoints' %}
 
-## Körper der Anfrage
+## Anfragetext
 
 ```
 Content-Type: application/json
@@ -40,9 +40,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see Canvas identifier,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
-  "segment_id": (optional, string) see segment identifier,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
@@ -52,9 +51,9 @@ Authorization: Bearer YOUR-REST-API-KEY
       "external_user_id": (optional, string) external identifier of user to receive message,
       "email": (optional, string) email address of user to receive message,
       "prioritization": (optional, array) prioritization array; required when using email,
-      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with the parent `canvas_entry_properties`)
+      "canvas_entry_properties": (optional, object) personalization key-value pairs that apply to this user (these key-value pairs override any keys that conflict with the parent `canvas_entry_properties`)
       "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases
-      "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
+      "attributes": (optional, object) fields in the attributes object create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values are overwritten
     }],
     ...
 }
@@ -67,9 +66,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`canvas_id`| Erforderlich | String | Siehe [Canvas Bezeichner]({{site.baseurl}}/api/identifier_types/). |
 |`canvas_entry_properties`| Optional | Objekt | Dazu gehören auch die [Eigenschaften von Canvas-Eingängen]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). Die Schlüssel-Wert-Paare für die Personalisierung gelten für alle Nutzer:innen in dieser Anfrage. Das Objekt Canvas Eingang-Eigenschaften hat eine maximale Größe von 50 KB. <br><br>**Hinweis:** Wenn Sie am [Canvas-Kontext-Frühzugang]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/) teilnehmen, lautet dieser Parameter `context` und enthält die Eigenschaften des Canvas-Eingangs. |
 |`broadcast`| Optional | Boolesch | Sie müssen `broadcast` auf true setzen, wenn Sie eine Nachricht an ein ganzes Segment senden, auf das eine Kampagne oder ein Canvas abzielt. Dieser Parameter ist standardmäßig auf false eingestellt (Stand: 31\. August 2017). <br><br> Wenn `broadcast` auf true gesetzt ist, kann eine `recipients` Liste nicht aufgenommen werden. Seien Sie jedoch vorsichtig, wenn Sie `broadcast: true` setzen, denn wenn Sie dieses Flag unbeabsichtigt setzen, kann dies dazu führen, dass Sie Ihre Nachricht an eine größere Zielgruppe als erwartet senden. |
-|`segment_id `| Optional | String | Siehe [Bezeichner für Segmente]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Optional| Verbundenes Objekt der Zielgruppe | Siehe [Verbundenes Publikum]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Optional | Array | Siehe [Objekt Empfänger:innen]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Falls nicht angegeben und `broadcast` auf true gesetzt ist, wird die Nachricht an das gesamte Segment, auf das das Canvas abzielt, gesendet.<br><br> Das Array `recipients` kann bis zu 50 Objekte enthalten, wobei jedes Objekt einen einzelnen String `external_user_id` und ein Objekt `canvas_entry_properties` enthält. Dieser Aufruf erfordert eine `external_user_id`, `user_alias` oder `email`. In der Anfrage darf nur eine Angabe gemacht werden. <br><br>Wenn `email` der Bezeichner ist, müssen Sie [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in das Empfänger:innen-Objekt aufnehmen. |
+|`recipients`| Optional | Array | Siehe [Objekt Empfänger:innen]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>Wenn nicht angegeben und `broadcast` auf `true` eingestellt ist, wird die Nachricht an das gesamte Segment gesendet, auf das das Canvas abzielt.<br><br> Das Array `recipients` kann bis zu 50 Objekte enthalten, wobei jedes Objekt einen einzelnen String `external_user_id` und ein Objekt `canvas_entry_properties` enthält. Dieser Aufruf erfordert eine `external_user_id`, `user_alias` oder `email`. In der Anfrage darf nur eine Angabe gemacht werden. <br><br>Wenn `email` der Bezeichner ist, müssen Sie [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in das Empfänger:innen-Objekt aufnehmen. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert important %}
@@ -79,7 +77,7 @@ Für den Parameter `recipients` gilt: Wenn `send_to_existing_only` `true` ist, s
 Kund:innen, die die API für Server-zu-Server-Aufrufe verwenden, müssen möglicherweise die entsprechende API-URL zulassen, wenn sie sich hinter einer Firewall befinden.
 
 {% alert note %}
-Wenn Sie sowohl bestimmte Nutzer:innen in Ihrem API-Aufruf als auch ein Zielsegment im Dashboard angeben, wird die Nachricht speziell an die Nutzerprofile gesendet, die sowohl im API-Aufruf enthalten sind als auch für die Segmentierung in Frage kommen.
+Wenn Sie sowohl bestimmte Nutzer:innen in Ihrem API-Aufruf als auch ein Zielsegment im Dashboard angeben, sendet Braze die Nachricht speziell an die Nutzerprofile, die sowohl im API-Aufruf enthalten sind als auch für die Segmentierung in Frage kommen.
 {% endalert %}
 
 ## Beispiel Anfrage

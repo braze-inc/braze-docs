@@ -15,9 +15,9 @@ channel: email
 
 ## Funktionsweise
 
-Die E-Mail-Validierung wird durchgeführt, wenn die E-Mail-Adresse eines Nutzers aktualisiert wurde oder über die API, den CSV-Upload oder das SDK in Braze importiert oder im Dashboard geändert wurde. Beachten Sie, dass Ihre E-Mail-Adressen keine Leerzeichen enthalten dürfen. Wenn Sie die API verwenden, führen Leerzeichen zu einem `400`-Fehler.
+Braze validiert eine E-Mail Adresse, wenn sie aktualisiert, per API, CSV-Upload, SDK importiert oder im Dashboard geändert wird. E-Mail-Adressen dürfen keine Leerzeichen enthalten. Wenn Sie die API verwenden, gibt Whitespace einen `400` Fehler zurück.
 
-Braze akzeptiert bestimmte Zeichen nicht und erkennt sie als ungültig an. Wenn eine E-Mail gebounced wird, markiert Braze die E-Mail als ungültig, und der Status des Abos wird nicht geändert. Beachten Sie, dass die E-Mail nicht versendet werden kann, wenn sie nicht standardmäßige [ASCII-Zeichen](https://en.wikipedia.org/wiki/ASCII) enthält.
+Braze lehnt bestimmte Zeichen ab und markiert die Adresse als ungültig. Wenn eine E-Mail gebounct wird, markiert Braze die Adresse als ungültig und ändert den Status des Abos nicht. Wenn der Text der E-Mail nicht standardmäßige [ASCII-Zeichen](https://en.wikipedia.org/wiki/ASCII) enthält, sendet Braze die E-Mail nicht.
 
 {% details Accepted characters %}
 - Buchstaben (A-Z)
@@ -46,15 +46,15 @@ Braze akzeptiert bestimmte Zeichen nicht und erkennt sie als ungültig an. Wenn 
 - Whitespaces (ASCII und Unicode)
 {% enddetails %}
 
-Diese Validierung ist nicht zu verwechseln mit einem Validierungsdienst. Dies ist eine Überprüfung, um zu überprüfen, ob die Syntax einer E-Mail-Adresse korrekt ist. Einer der Hauptgründe für die Verwendung dieses Validierungsverfahrens ist die Unterstützung internationaler Zeichen (wie UTF-8) im lokalen Teil der E-Mail-Adresse.
+Bei dieser Überprüfung handelt es sich um eine Syntaxprüfung, nicht um einen Validierungsdienst. Ein Ziel dieses Prozesses ist die Unterstützung internationaler Zeichen (wie UTF-8) im lokalen Teil der E-Mail Adresse.
 
-Bei der Überprüfung der E-Mail-Syntax werden sowohl der lokale als auch der Host-Teil einer E-Mail-Adresse geprüft. Der lokale Teil ist alles vor dem Asperand (@) und der Host-Teil ist alles nach dem Asperand. Zum Beispiel kann dieser lokale Teil einer E-Mail-Adresse mit jedem der zulässigen Zeichen beginnen und enden, außer mit einem Punkt (.). Beachten Sie, dass bei diesem Vorgang nur die Syntax der E-Mail-Adresse überprüft wird und nicht berücksichtigt wird, ob die Domäne einen gültigen MX-Server hat oder ob der Benutzer auf der aufgeführten Domäne existiert.
+Braze überprüft die Syntax sowohl für den lokalen als auch für den Host-Teil einer E-Mail Adresse. Der lokale Teil ist alles, was vor dem Asperand (@) steht; der Host-Teil ist alles, was danach kommt. Der lokale Teil kann mit jedem zulässigen Zeichen außer einem Punkt (.) beginnen und enden. Dieser Prozess berücksichtigt nicht, ob die Domain einen gültigen MX Server hat oder ob ein Nutzer:innen in dieser Domain existiert.
 
 {% alert important %}
 Wenn der Domain-Teil nicht standardmäßige ASCII-Zeichen enthält, muss er vor der Übergabe an Braze [mit Punycode kodiert](https://www.punycoder.com/) werden.
 {% endalert %}
 
-Wenn Braze eine Anfrage zum Hinzufügen eines Benutzers erhält und die E-Mail-Adresse als ungültig eingestuft wird, erhalten Sie eine Fehlerantwort in der API. Wenn Sie eine CSV-Datei hochladen, wird zwar ein Nutzer:innen angelegt, aber die E-Mail Adresse wird nicht hinzugefügt.
+Wenn Braze eine Anfrage zum Hinzufügen eines Nutzers:innen mit einer ungültigen E-Mail Adresse erhält, gibt die API einen Fehler zurück. Bei einem CSV-Upload erstellt Braze den Nutzer:innen, lässt aber die ungültige E-Mail Adresse weg.
 
 ## Regeln für die Validierung des lokalen Teils
 
@@ -73,11 +73,11 @@ Der folgende reguläre Ausdruck kann verwendet werden, um zu überprüfen, ob ei
 
 ### Gmail Adressen
 
-Wenn es sich bei dem Domain-Teil um eine Gmail-Adresse handelt, muss der lokale Teil mindestens zwei Zeichen lang sein und den oben aufgeführten regulären Ausdrücken entsprechen.
+Wenn es sich bei der Domain um Gmail handelt, muss der lokale Teil mindestens zwei Zeichen lang sein und den oben aufgeführten regulären Ausdrücken entsprechen.
 
 ### Microsoft-Domänen
 
-Wenn die Host-Domain "msn", "hotmail", "outlook" oder "live" enthält, wird der folgende reguläre Ausdruck verwendet, um den lokalen Teil zu validieren: `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
+Wenn die Host Domain "msn", "hotmail", "outlook" oder "live" enthält, verwendet Braze den folgenden regulären Ausdruck, um den lokalen Teil zu validieren: `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
 
 Der lokale Teil der Microsoft-Adresse muss diesen Parametern entsprechen:
 
@@ -88,30 +88,30 @@ Der lokale Teil der Microsoft-Adresse muss diesen Parametern entsprechen:
 - Darf nicht zwei oder mehr aufeinanderfolgende Punkte (.) enthalten.
 - Kann nicht mit einem Punkt (.) enden
 
-Beachten Sie, dass der Validierungstest prüft, ob der lokale Teil, der dem "+" vorausgeht, mit dem regulären Ausdruck übereinstimmt.
+Der Validierungstest prüft, ob der lokale Teil vor dem "+" mit dem regulären Ausdruck übereinstimmt.
 
 ## Regeln für die Validierung des Host-Teils
 
-IPv4- oder IPv6-Adressen sind im Host-Teil einer E-Mail-Adresse nicht erlaubt. Die Top-Level-Domain (wie .com, .org, .net usw.) darf nicht vollständig numerisch sein.
+Der Host-Teil kann keine IPv4- oder IPv6-Adresse sein. Die Top-Level-Domain (wie .com, .org, .net) kann nicht vollständig numerisch sein.
 
 Der folgende reguläre Ausdruck wird zur Validierung der Domain verwendet:<br>
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
 
-Der Domänenname muss diesen Parametern entsprechen:
+Der Domain-Name muss diese Parameter erfüllen:
 
 - Besteht aus zwei oder mehr durch Punkte getrennten Labels
 	- Jeder Teil eines Domänennamens wird als "Label" bezeichnet. Zum Beispiel besteht der Domain-Name "example.com" aus dem Label "example" und dem Label "com".
 - Muss mindestens einen Punkt (.) enthalten
 - Kann nicht zwei oder mehr aufeinanderfolgende Perioden enthalten
 - Jede durch einen Punkt getrennte Label muss:
-	- Nur alphanumerische Zeichen (a-z oder 0-9) und den Bindestrich (-) enthalten
+	- Enthält nur alphanumerische Zeichen (a-z oder 0-9) und den Bindestrich (-)
 	- Beginnen Sie mit einem alphanumerischen Zeichen (a-z oder 0-9)
 	- Ende mit einem alphanumerischen Zeichen (a-z oder 0-9)
 	- Enthält 1 bis 63 Zeichen
 
 ### Zusätzliche Validierung erforderlich
 
-Die endgültige Bezeichnung der Domain muss eine gültige Top-Level-Domain (TLD) sein, die durch alles nach dem letzten Punkt (.) bestimmt wird. Diese TLD sollte in der [TLD-Liste der ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) enthalten sein. Der Braze E-Mail-Validator prüft nur, ob die Syntax der E-Mail gemäß dem in diesem Abschnitt aufgeführten regulären Ausdruck korrekt ist. Es erkennt keine Tippfehler oder Adressen, die nicht existieren.
+Die endgültige Bezeichnung der Domain muss eine gültige Top-Level-Domain (TLD) sein, die durch alles nach dem letzten Punkt (.) bestimmt wird. Diese TLD sollte in der [TLD-Liste der ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt) erscheinen. Der Braze Validator prüft nur die Syntax. Tippfehler oder nicht existierende Adressen werden nicht erkannt.
 
 {% alert important %}
 Unicode wird nur für den lokalen Teil der E-Mail Adresse akzeptiert. Unicode wird für den Domain-Teil nicht akzeptiert, aber er kann in Punycode kodiert werden.
