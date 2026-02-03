@@ -9,7 +9,7 @@ search_tag: Partner
 
 # Snowflake data retention
 
-> Braze anonymizes (removes personally identifiable information, or PII) from most events data stored in Snowflake that is more than two years old. Certain events are retained until a user is deleted, as outlined later on this page. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied. 
+> Braze anonymizes (removes personally identifiable information, or PII) from most events data stored in Snowflake that is more than two years old. Certain events are retained until a user is deleted, as outlined later on this page. If you use Snowflake data sharing, you may choose to retain the full events data in your environment by storing a copy in your Snowflake account before the retention policy is applied.
 
 This page presents two ways you can retain non-anonymized data: 
 
