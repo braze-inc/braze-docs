@@ -21,7 +21,7 @@ The Braze and Heap integration enables you to [import Heap data to Braze](#data-
 | Heap account | A [Heap](https://heap.io/about) account is required to take advantage of this partnership. |
 | Braze Data Import key | This can be captured in the Braze dashboard from **Partner Integrations** > **Technology Partners** and then select **Heap**. |
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
-| Braze Currents | In order to export data from Braze to Heap, you will need [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) enabled on your account. |
+| Braze Currents | 데이터를 브레이즈에서 힙으로 내보내려면 계정에서 [브레이즈 커런츠를]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) 인에이블먼트해야 합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Use cases
@@ -41,17 +41,17 @@ On this page, you can find your data import key and a REST endpoint. Take note o
 
 ![]({% image_buster /assets/img/heap/heap2.png %}){: style="max-width:90%;"}
 
-### Step 2: Segment imported users in Braze
+### 2단계: Segment imported users in Braze
 
-In Braze, navigate to **Segments**, name your Heap cohort segment, and select **Heap Cohorts** as your filter. From here, you can choose which Heap cohort you wish to include. After your Heap cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
+In Braze, navigate to **Segments**, name your Heap cohort segment, and select **Heap Cohorts** as your filter. From here, you can choose which Heap cohort you wish to include. 힙 코호트 세그먼트가 생성된 후에는 캠페인이나 캔버스를 만들 때 오디언스 필터로 선택할 수 있습니다.
 
-![In the Braze segment builder, the user attributes filter "Heap cohort" is set to "includes" and "Heap Test Cohort".]({% image_buster /assets/img/heap/heap1.png %}){: style="max-width:90%;"}
+![Braze 세그먼트 빌더에서 사용자 속성 필터 'Heap 코호트'는 '포함' 및 'Heap 테스트 코호트'로 설정되어 있습니다.]({% image_buster /assets/img/heap/heap1.png %}){: style="max-width:90%;"}
 
-### Using this integration
+### 이 통합 사용
 
-To use your Heap segment, create a Braze campaign or Canvas and select the segment as your target audience.
+힙 세그먼트를 사용하려면 Braze 캠페인 또는 캔버스를 생성하고 세그먼트를 타겟 오디언스로 선택합니다.
 
-![In the Braze campaign builder on the targeting step, the "Target users by segment" filter is set to "Heap cohort".]({% image_buster /assets/img/heap/heap3.png %}){: style="max-width:90%;"}
+![타겟팅 단계의 Braze 캠페인 빌더에서 '세그먼트별 타겟 사용자' 필터가 'Heap 코호트'로 설정되어 있습니다.]({% image_buster /assets/img/heap/heap3.png %}){: style="max-width:90%;"}
 
 {% alert important %}
 Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.

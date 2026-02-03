@@ -10,7 +10,7 @@ description: "이 섹션에는 Braze 데이터 플랫폼의 데이터 배포와 
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-  - name: Braze 커런츠
+  - name: Braze Currents
     link: /docs/user_guide/data/distribution/braze_currents/
     image: /assets/img/braze_icons/waves.svg
   - name: Braze 데이터 내보내기
