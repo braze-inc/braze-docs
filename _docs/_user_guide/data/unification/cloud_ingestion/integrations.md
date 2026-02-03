@@ -261,7 +261,7 @@ CDI supports partitions for BigQuery. If you partition by a function of `UPDATED
 
 Don't partition by any other fields. Test different configurations to find the best setup for your specific data.
 
-All CDI queries filter by `UPDATED_AT`, but this behavior isn't guaranteed to remain unchanged. Don't design your table schema to require that queries include this clause.
+All CDI queries filter by `UPDATED_AT`, but this behavior could change. Design your table schema to _not_ require that queries include this clause.
 
 For more information, refer to the [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
 {% endalert %}
