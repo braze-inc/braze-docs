@@ -42,7 +42,7 @@ To launch a Canvas, you must approve these key components:
 
 ## Turning on the approval workflow
 
-By default, the approval workflow setting is off for campaigns and Canvases. To turn on this feature, go to **Settings** > **Approval Workflow** and select the applicable toggle:
+By default, the approval workflow setting is off for Campaigns and Canvases. To turn on this feature, go to **Settings** > **Approval Workflow** and select the applicable toggle:
 
 - **Use approval workflow for all campaigns in [your workspace]**
 - **Use approval workflow for all Canvases in [your workspace]**
