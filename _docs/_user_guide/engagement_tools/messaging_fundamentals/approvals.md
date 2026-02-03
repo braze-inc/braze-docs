@@ -94,5 +94,5 @@ To avoid losing approvals:
 {% endtabs %}
 
 {% alert important %}
-To edit a live campaign, you need the "Approve and Deny Campaigns" permission. A user must approve their changes because a draft version of campaigns is not yet available. This is not the case for Canvases as a user can make changes and save as a draft, and another user can approve and launch the Canvas.
+To edit a live Campaign, you need the "Approve and Deny Campaigns" permission. A user must approve their changes because a draft version of Campaigns is not yet available. This is not the case for Canvases as a user can make changes and save as a draft, and another user can approve and launch the Canvas.
 {% endalert %}
