@@ -12,10 +12,10 @@ tool: Media
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-- name: Erstellen einer E-Mail per Drag-and-Drop
+- name: Erstellen Sie eine E-Mail per Drag-and-Drop
   link: /docs/dnd/overview/
   image: /assets/img/braze_icons/brush-02.svg
-- name: Erstellen einer E-Mail-Vorlage
+- name: Eine E-Mail-Vorlage erstellen
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
 - name: Editor-Blöcke

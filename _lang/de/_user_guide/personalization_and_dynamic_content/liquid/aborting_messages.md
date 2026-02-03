@@ -1,6 +1,6 @@
 ---
 nav_title: Nachrichten abbrechen
-article_title: Abbrechen von Liquid Messages
+article_title: Abbrechen Liquid Nachrichten
 page_order: 7
 description: "Dieser Referenzartikel behandelt den Abbruch von Liquid-Nachrichten und einige Anwendungsbeispiele."
 
@@ -59,7 +59,7 @@ Sie können die abgebrochene Nachricht auch in Ihrem Nachrichten-Aktivitätsprot
 ```
 {% endraw %}
 
-![Nachrichten-Fehlerprotokoll in der Entwickler:in der Entwicklungskonsole mit der Abbruchnachricht "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
+![Fehlerprotokoll in der Entwicklungskonsole mit der Abbruchmeldung "Sprache war null".]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Abfrage für abgebrochene Nachrichten
 

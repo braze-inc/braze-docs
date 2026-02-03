@@ -35,7 +35,7 @@ Die klassische Karte eignet sich hervorragend für Standardnachrichten und Benac
 
 Die Karte mit Bildunterschrift ist eine großartige Möglichkeit, um wichtige Inhalte, wie z. B. einen großen Verkauf oder eine neue App-Funktion, zu präsentieren und die Aufmerksamkeit darauf zu lenken.
 
-![Bild einer Bildunterschriftenkarte mit empfohlenen Details und einem Beispiel für eine Bildunterschriftenkarte]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+![Abbildung einer Bildunterschriftenkarte mit empfohlenen Details und ein Beispiel für eine Bildunterschriftenkarte]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
 
 | Kartenkapazität | Details |
 | --- | ---|

@@ -15,7 +15,7 @@ _Diese Integration wird von Merkury gepflegt._
 
 ## Über die Integration
 
-Die Integration von Braze und Merkury erlaubt es Ihnen, die `MerkuryID` zu nutzen, um die Erkennungsrate von Braze-Kunden zu erhöhen. Wenn Merkury erkennt, dass es sich bei den Besuchern um Abonnent:innen der Marke handelt, wird das Profil von Braze aktualisiert, um die E-Mail Adresse der Abonnent:innen aufzunehmen. Die verbesserten Erkennungsmöglichkeiten von `MerkuryID` verbessern das Engagement und die Chancen der Personalisierung und erhöhen sofort die Anzahl der gesendeten E-Mails und die damit verbundenen Einnahmen. 
+Die Integration von Braze und Merkury erlaubt es Ihnen, die `MerkuryID` zu nutzen, um die Erkennungsrate von Braze-Kunden zu erhöhen. Wenn Merkury erkennt, dass ein Besucher ein Abonnent:innen der Marke ist, aktualisiert es das Profil von Braze und fügt die E-Mail Adresse des Abonnenten hinzu. Die verbesserten Erkennungsmöglichkeiten von `MerkuryID` verbessern das Engagement und die Chancen der Personalisierung und erhöhen sofort die Anzahl der gesendeten E-Mails und die damit verbundenen Einnahmen. 
 
 ## Voraussetzungen
 
@@ -42,11 +42,11 @@ Sie müssen das [Braze Web SDK]({{site.baseurl}}/developer_guide/platform_integr
 
 ### Schritt 2: Merkle's Merkury Tag bereitstellen
 
-Setzen Sie den Merkury Tag auf Ihrer Website ein. Dadurch wird der Merkury Konnektor auf Ihrer Website verfügbar. Ein detaillierter Leitfaden mit Anweisungen wird Ihnen von Ihrem Merkle Account Manager:in zur Verfügung gestellt.
+Setzen Sie den Merkury Tag auf Ihrer Website ein, um den Merkury Konnektor auf Ihrer Website verfügbar zu machen. Ihr Merkle Account Manager:in wird Ihnen einen detaillierten Leitfaden mit Anweisungen zur Verfügung stellen.
 
 ### Schritt 3: Angepasste Attribute erstellen
 
-Die folgenden Felder werden vom Merkury Identitätskonnektor ausgefüllt und müssen in Braze als [angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes) erstellt werden.
+Der Merkury Konnektor füllt die folgenden Felder auf, die Sie in Braze als [angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes) erstellen müssen.
 
 | Attributname | Datentyp | Beschreibung |
 | --- | --- | --- |

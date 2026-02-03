@@ -2,7 +2,7 @@
 
 ### Solução de problemas de carregamento de ativos (`NSURLError` código `-1008`)
 
-Ao integrar a Braze com bibliotecas de registro de rede de terceiros, os desenvolvedores geralmente se deparam com um `NSURLError` com o código de domínio `-1008`. Esse erro indica que ativos como imagens e fontes não puderam ser recuperados ou não foram armazenados em cache. Para contornar esses casos, você precisará registrar as URLs do CDN do Braze na lista de domínios que devem ser ignorados por essas bibliotecas.
+Ao integrar a Braze com bibliotecas de registro de rede de terceiros, os desenvolvedores geralmente se deparam com um `NSURLError` com o código de domínio `-1008`. Esse erro indica que ativos como imagens e fontes não puderam ser recuperados ou não foram armazenados em cache. Para contornar tais casos, você precisará registrar as URLs do CDN do Braze na lista de domínios que devem ser ignorados por essas bibliotecas.
 
 #### Domínios
 

@@ -70,7 +70,7 @@ Para acionar uma mensagem no app usando um evento enviado pelo servidor, envie u
 
 Registre [seu retorno de chamada de push personalizado]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#push-callback) para escutar uma notificação push silenciosa específica.
 
-No exemplo a seguir, dois eventos serão registrados para que a mensagem no app seja entregue, um pelo servidor e um de dentro do seu retorno de chamada push personalizado. Para garantir que o mesmo evento não seja duplicado, o evento registrado a partir do seu retorno de chamada push deve seguir uma convenção de nomenclatura genérica, por exemplo, "evento de gatilho de mensagem no app", e não o mesmo nome do evento enviado pelo servidor. Se isso não for feito, a segmentação e os dados de usuários podem ser afetados por eventos duplicados sendo registrados para uma única ação do usuário.
+No exemplo a seguir, dois eventos serão registrados para a mensagem no app ser entregue, um pelo servidor e um de dentro do seu retorno de chamada push personalizado. Para garantir que o mesmo evento não seja duplicado, o evento registrado a partir do seu retorno de chamada push deve seguir uma convenção de nomenclatura genérica, por exemplo, "evento de gatilho de mensagem no app", e não o mesmo nome do evento enviado pelo servidor. Se isso não for feito, a segmentação e os dados de usuários podem ser afetados por eventos duplicados sendo registrados para uma única ação do usuário.
 
 {% tabs %}
 {% tab JAVA %}

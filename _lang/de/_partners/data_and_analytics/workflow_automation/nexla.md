@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Nexla
 
-> [Nexla](https://www.nexla.com) ist ein führendes Unternehmen im Bereich einheitlicher Datenoperationen und ein Gartner Cool Vendor 2021. Die Nexla-Plattform macht es für jeden einfach, skalierbare Datenflüsse zu erstellen und bietet reibungslose, geregelte Datenoperationen, bessere Zusammenarbeit und Agilität für Geschäfts- und Datenteams. Teams, die mit Daten arbeiten, erhalten eine einheitliche Erfahrung ohne oder mit wenig Code, um Daten für jeden Anwendungsfall zu integrieren, zu transformieren, bereitzustellen und zu überwachen. 
+> [Nexla](https://www.nexla.com) ist ein führendes Unternehmen im Bereich einheitlicher Datenoperationen und ein Gartner Cool Vendor 2021. Die Nexla-Plattform bietet Tools für die Erstellung skalierbarer Datenflüsse, die einen geregelten Datenbetrieb, Zusammenarbeit und Agilität für Geschäfts- und Datenteams ermöglichen. Teams, die mit Daten arbeiten, erhalten eine einheitliche Erfahrung ohne oder mit wenig Code, um Daten für jeden Anwendungsfall zu integrieren, zu transformieren, bereitzustellen und zu überwachen. 
 
 Die Braze- und Nexla-Integration erlaubt es Kunden, die [Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) verwenden, Nexla zu nutzen, um Data-Lake-Daten zu extrahieren, zu transformieren und in einem angepassten Format an andere Standorte zu laden, so dass Daten in Ihrem gesamten Ökosystem leicht zugänglich sind.
 
@@ -25,7 +25,7 @@ Die Braze- und Nexla-Integration erlaubt es Kunden, die [Currents]({{site.baseur
 
 ## Anwendungsfälle
 
-Nexla's Daten-als-Produkt, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), machen es einfach, mit Daten jedes Formats zu arbeiten, ohne sich um Metadaten zu kümmern. Wenn Sie Ihre Datenströme zu oder von Braze mit Nexla einrichten, ist dies mit den No-Code-Tools einfach und in wenigen Minuten möglich. Nachdem der Datenfluss auf ein Ziel eingestellt ist, überwacht Nexla Ihren Datenfluss und skaliert auf jede beliebige Menge an Daten.
+Nexla's Daten-als-Produkt, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), ermöglicht die Arbeit mit Daten jeglichen Formats ohne Verwaltung von Metadaten. Wenn Sie mit Nexla Datenströme zu oder von Braze einrichten, sind No-Code-Tools innerhalb weniger Minuten verfügbar. Nachdem der Datenfluss auf ein Ziel eingestellt ist, überwacht Nexla den Fluss und skaliert auf jede Datenmenge.
 
 ## Integration
 
@@ -41,7 +41,7 @@ Wenn Sie noch kein Nexla-Konto haben, gehen Sie auf die [Website](https://www.ne
 3. Wählen Sie **Neue Zugangsdaten hinzufügen**, benennen Sie die Zugangsdaten, fügen Sie Ihren Braze API-Schlüssel und den REST-Endpunkt hinzu und **speichern Sie**.
 4. Wählen Sie abschließend Ihre Daten aus und klicken Sie auf **Speichern**. 
 
-Nexla durchsucht nun die Quelle nach allen Daten, die es findet, und generiert ein [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) zur Transformation oder zum Senden an das Ziel.
+Nexla durchsucht die Quelle nach verfügbaren Daten und generiert ein [Nexset](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information) zur Transformation oder zum Senden an ein Ziel.
 
 #### Wenn Braze Ihr Ziel ist
 

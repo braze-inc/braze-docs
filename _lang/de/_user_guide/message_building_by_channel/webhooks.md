@@ -5,7 +5,7 @@ page_order: 4
 layout: dev_guide
 alias: /about_webhooks/
 guide_top_header: "Webhooks"
-guide_top_text: "Webhooks sind ein gängiger Weg für Anwendungen, um Daten in Echtzeit auszutauschen. Heutzutage haben wir selten eine einzige Anwendung, die alles kann. Meistens arbeiten Sie mit vielen verschiedenen Anwendungen oder Systemen, die auf bestimmte Aufgaben spezialisiert sind, und diese Anwendungen müssen alle miteinander kommunizieren können. Hier kommen die Webhooks ins Spiel. <br><br> Ein Webhook ist eine automatische Nachricht von einem System an ein anderes, nachdem ein bestimmtes Kriterium erfüllt wurde. In Braze ist dieses Kriterium normalerweise das Triggern eines angepassten Events. <br><br>Im Kern ist ein Webhook eine Event-basierte Methode für zwei getrennte Systeme, um auf der Grundlage von in Echtzeit übermittelten Daten effektive Maßnahmen zu ergreifen. Diese Nachricht enthält Anweisungen, die dem empfangenden System mitteilen, wann und wie es eine bestimmte Aufgabe ausführen soll. Aus diesem Grund können Sie mit Webhooks dynamischer und flexibler auf Daten und programmatische Funktionen zugreifen und Customer Journeys einrichten, die Ihre Prozesse rationalisieren. <br><br>**Die Verfügbarkeit von Webhooks hängt von Ihrem Braze-Paket ab. Wenden Sie sich an Ihren oder Ihre Account Manager:in oder Customer-Success-Manager:in, um loszulegen.**"
+guide_top_text: "Webhooks sind ein gängiger Weg für Anwendungen, um Daten in Echtzeit auszutauschen. Heutzutage gibt es selten eine einzige Anwendung, die alles kann. Meistens arbeiten Sie mit vielen verschiedenen Anwendungen oder Systemen, die auf bestimmte Aufgaben spezialisiert sind, und diese Anwendungen müssen alle miteinander kommunizieren können. Hier kommen die Webhooks ins Spiel. <br><br> Ein Webhook ist eine automatische Nachricht von einem System an ein anderes, nachdem ein bestimmtes Kriterium erfüllt wurde. In Braze ist dieses Kriterium normalerweise das Triggern eines angepassten Events. <br><br>Im Kern ist ein Webhook eine Event-basierte Methode für zwei getrennte Systeme, um auf der Grundlage von in Echtzeit übermittelten Daten effektive Maßnahmen zu ergreifen. Diese Nachricht enthält Anweisungen, die dem empfangenden System mitteilen, wann und wie es eine bestimmte Aufgabe ausführen soll. Aus diesem Grund können Sie mit Webhooks dynamischer und flexibler auf Daten und programmatische Funktionen zugreifen und Customer Journeys einrichten, die Ihre Prozesse rationalisieren. <br><br>**Die Verfügbarkeit von Webhooks hängt von Ihrem Braze-Paket ab. Kontaktieren Sie Ihren Account Manager oder Customer-Success-Manager:in, um loszulegen."
 description: "Diese Startseite ist der Ausgangspunkt für Webhooks. Hier finden Sie Artikel zur Erstellung von Webhooks, zur Erstellung von Webhook-Vorlagen und zu Braze-to-Braze-Webhooks."
 channel:
   - webhooks
@@ -57,7 +57,7 @@ Ein Webhook besteht aus den folgenden Teilen.
 | Anfragetext | Dieser Teil des Webhooks enthält die Informationen, die Sie an den Endpunkt übermitteln. Der Anfragetext kann aus JSON Schlüssel-Wert-Paaren oder Rohtext bestehen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Beispiel-Webhook mit einer HTTP-Methode, einer HTTP-URL und einem Body der Anfrage.]({% image_buster /assets/img_archive/webhook_anatomy.png %})
+![Beispiel-Webhook mit einer HTTP-Methode, einer HTTP-URL und einem Anfragetext.]({% image_buster /assets/img_archive/webhook_anatomy.png %})
 
 ### HTTP-Methoden {#methods}
 

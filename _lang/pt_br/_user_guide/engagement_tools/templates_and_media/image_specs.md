@@ -13,23 +13,23 @@ tool:
 
 # Especificações da imagem
 
-> Em geral, imagens menores e de alta qualidade serão carregadas mais rapidamente, portanto, recomendamos usar o menor ativo possível para obter o resultado desejado. Para maximizar o uso de sua imagem em canais específicos, consulte os detalhes neste artigo.
+> Em geral, imagens menores e de alta qualidade serão carregadas mais rapidamente, portanto, recomendamos o uso do menor ativo possível para obter o resultado desejado. Para maximizar o uso de sua imagem em canais específicos, consulte os detalhes neste artigo.
 
-Você deve sempre [visualizar e testar suas mensagens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) em vários dispositivos para confirmar que as áreas mais importantes da sua imagem e mensagem aparecem conforme o esperado.
+Sempre faça [uma prévia e teste suas mensagens]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) em vários dispositivos para confirmar se as áreas mais importantes da imagem e da mensagem aparecem conforme o esperado.
 
-{% alert tip %} Crie ativos com confiança! Nossos modelos de imagem de mensagem no aplicativo e sobreposições de zona de segurança foram projetados para funcionar bem em dispositivos de todos os tamanhos. [Faça o download dos modelos de design ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
+{% alert tip %} Crie ativos com confiança! Nossos modelos de imagem de mensagem no app e as sobreposições de zona de segurança foram projetados para funcionar bem em dispositivos de todos os tamanhos. [Baixe os modelos de design ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}). {% endalert %}
 
 {% multi_lang_include image_specs.md variable_name='payload size' %}
 
-## Mensagens no aplicativo
+## Mensagem no app
 
 {% multi_lang_include image_specs.md variable_name='in-app messages' %}
 
-### Fonte incrível
+### Fonte Awesome
 
-O Braze suporta o uso da [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) para ícones de mensagens modais no aplicativo.
+A Braze oferece suporte ao uso da [Fonte Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) para ícones modais de mensagens no app.
 
-## Notificações push
+## Notificações por push
 
 {% multi_lang_include image_specs.md variable_name='push notifications' %}
 

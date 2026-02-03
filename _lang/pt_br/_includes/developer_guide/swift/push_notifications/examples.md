@@ -137,7 +137,7 @@ Para criar uma notificação por push de captura de informações, você deve de
 
 Como visto no exemplo, você também pode incluir uma imagem em sua notificação por push. Para isso, você deve integrar [notificações ricas]({{site.baseurl}}/developer_guide/push_notifications/rich/?sdktab=swift), definir o estilo de notificação em sua campanha como Notificação Rich e incluir uma imagem de notificação por push rica.
 
-![Uma mensagem push com três conjuntos de pares de valores-chave. 1. "Braze_id" definido como uma chamada Liquid para recuperar o ID do Braze. 2. "cert_title" definido como "Certificação de Profissional de Marketing Braze". 3. "Cert_description" definido como "Profissionais de Marketing Braze Certificados impulsionam...".]({% image_buster /assets/img/push_implementation_guide/push9.png %})
+![Uma mensagem push com três conjuntos de pares de valores-chave. 1. "Braze_id" definido como uma chamada Liquid para recuperar o ID do Braze. 2. "cert_title" definido como "Certificação de Profissional de Marketing Braze". 3. "Cert_description" definido como "Profissionais de marketing certificados do Braze impulsionam...".]({% image_buster /assets/img/push_implementation_guide/push9.png %})
 
 ### Manipulação de ações de botões
 

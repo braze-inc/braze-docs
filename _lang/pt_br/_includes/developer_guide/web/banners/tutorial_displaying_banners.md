@@ -58,7 +58,7 @@ linhas-index.js=8-23
 
 #### 2\. Inscreva-se para atualizações de Banner
 
-Use `subscribeToBannersUpdates()` para registrar um manipulador que será executado sempre que um Banner for atualizado. Dentro do manipulador, chame `braze.getBanner("global_banner")` para obter a colocação mais recente.
+Use `subscribeToBannersUpdates()` para registrar um manipulador que é executado sempre que um Banner é atualizado. Dentro do manipulador, chame `braze.getBanner("global_banner")` para obter a colocação mais recente.
 
 !!etapa
 linhas-index.js=15-22
