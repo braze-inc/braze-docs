@@ -391,7 +391,7 @@ In the Braze dashboard, go to [User Search]({{site.baseurl}}/user_guide/engageme
 
 ## Next steps
 
-Now that you've integrated the Braze SDK, you can start implementing common messaging features:
+After integrating the Braze SDK, you can start implementing common messaging features:
 
 - [Push Notifications]({{site.baseurl}}/developer_guide/push_notifications/): Set up and send push notifications to your users
 - [In-App Messages]({{site.baseurl}}/developer_guide/in_app_messages/): Display contextual messages within your app
