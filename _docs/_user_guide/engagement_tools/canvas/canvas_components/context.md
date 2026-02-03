@@ -146,18 +146,18 @@ Refer to [Data types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create
 
 When Connected Content fails in a Context step, successful users advance immediately to the next step, while failed users are retried separately. This means a batch doesn't wait for all users to succeed before progressing—successful users move forward as soon as their Connected Content call completes.
 
+When Connected Content fails in a Context step, successful users advance immediately to the next step, while failed users are retried separately. This means a batch doesn't wait for all users to succeed before progressing—successful users move forward as soon as their Connected Content call completes.
+
 **Retry behavior**: Context steps (and all Canvas steps) use Canvas-specific retry mechanisms, not the standard Connected Content retry behavior. If a Connected Content call fails, Braze retries the step approximately 13 times with exponential backoff. If all retries fail, the user exits the Canvas.
 
-{% alert note %}
-The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
-{% endalert %}
+**Note**: The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
 
 **Processing time**: The time it takes to process all users through a Context step depends on:
 - The number of users entering the step
 - The use of Connected Content (and its response time)
 - The batch size (default 1,000 users per batch)
 
-If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches process in parallel, so ensure your endpoint can handle concurrent requests from multiple batches.
+If your Connected Content endpoint has rate limits, consider that Context steps process users sequentially within each batch, which helps respect rate limits naturally. However, multiple batches are processed in parallel, so make sure your endpoint can handle concurrent requests from multiple batches.
 
 ## Frequently asked questions
 
