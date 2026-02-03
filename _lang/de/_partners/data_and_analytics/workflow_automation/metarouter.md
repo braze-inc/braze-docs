@@ -51,7 +51,7 @@ So richten Sie MetaRouter für Ihre Integration in Braze ein:
 
 Wählen Sie in Enterprise MetaRouter **Integrationen** > **Neue Integration** > **Braze** und benennen Sie Ihre Integration. Geben Sie als nächstes Ihre Instanz-URL und Ihren API-Schlüssel ein und wählen Sie dann **Änderungen übernehmen**.
 
-![Hinzufügen von Braze als Integration in MetaRouter.]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
+![Hinzufügen von Braze als eine Integration in MetaRouter.]({% image_buster /assets/img/metarouter/img1.png %}){: style="max-width:50%;"}
 
 ### Schritt 2: Abbildung der Ereignisse hinzufügen
 

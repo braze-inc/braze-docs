@@ -59,7 +59,7 @@ Dia | \# de e-mails a serem enviados
 
 Sugerimos aquecer até o seu pico de envio. Ou seja, se você normalmente envia 2 milhões de e-mails por dia, mas planeja enviar 7 milhões durante um período sazonal, esse envio de "pico" é o que você deve aquecer.
 
-Após a conclusão do aquecimento de IP e você ter alcançado seu volume diário desejado, deve-se manter esse volume diariamente. Alguma flutuação é esperada, mas alcançar o volume desejado e, em seguida, fazer um envio em massa apenas uma vez por semana, pode afetar negativamente suas métricas de entrega e reputação do remetente. 
+Após o aquecimento de IP ser concluído e você ter alcançado seu volume diário desejado, você deve se esforçar para manter esse volume diariamente. Alguma flutuação é esperada, mas alcançar o volume desejado e, em seguida, fazer apenas um envio em massa uma vez por semana, pode afetar negativamente suas métricas de entrega e reputação do remetente. 
 
 {% alert important %}
 A maioria dos provedores armazena dados de reputação por apenas 30 dias. Se você passar um mês sem enviar nenhuma mensagem, terá que repetir o processo de aquecimento de IP.

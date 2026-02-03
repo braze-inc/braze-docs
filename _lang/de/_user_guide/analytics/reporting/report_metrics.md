@@ -643,17 +643,17 @@ Content-Cards, E-Mail, In-App-Messaging, Web-Push, iOS Push, Android Push, Webho
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
 
-|Kanal|Zusätzliche Informationen|
+|Kanal|Verhalten|
 |-------------|----------------------|
-|E-Mail, Push, Webhooks|Nach dem ersten Senden.|
-|Content-Cards, In-App-Nachrichten|Wenn der Nutzer:innen die Content-Card oder Nachricht zum ersten Mal sieht.|
+|E-Mail, Push, Webhooks|Der Nutzer:innen wird als Empfänger:in gezählt, nachdem die Nachricht gesendet wurde.|
+|Content-Cards, In-App-Nachrichten|Der Nutzer:innen wird als Empfänger:in gezählt, wenn er die Nachricht zum ersten Mal sieht.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Kalkulation:
     <ul>
-        <li><i>Primäre Konversionen (A) oder Primäres Konversions-Event</i>: Anzahl</li>
+        <li><i>Primäre Konversionen (A) oder Primäres Konversions-Event</i>: Anzahl der Nutzer:innen, die das primäre Konversions-Event innerhalb des definierten Konversions-Fensters abgeschlossen haben </li>
         <li><i>Primäre Konversionen (A) %</i> oder <i>Primäres Konversions-Event</i>: (Primäre Konversionen) / (Eindeutige Empfänger:innen)</li>
     </ul>
 </span>

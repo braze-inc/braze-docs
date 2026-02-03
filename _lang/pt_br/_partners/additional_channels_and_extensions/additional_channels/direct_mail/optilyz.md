@@ -84,13 +84,13 @@ O campo `variation` é opcional e pode definir qual projeto dentro da automaçã
 ```
 {% endraw %}
 
-![Uma imagem do código do corpo da solicitação e do URL do webhook mostrados na guia de composição do criador de webhooks do Braze.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
+![Uma imagem do código do corpo da solicitação e da URL do webhook mostrada na guia de composição do criador de webhooks do Braze.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
 
 ### Etapa 2: veja uma prévia da sua solicitação
 
 Em seguida, faça uma prévia da solicitação no painel **Preview (Prévia** ) ou navegue até a guia **Test (Teste** ), onde é possível selecionar um usuário aleatório, um usuário existente ou personalizar o seu próprio usuário para testar o webhook. Lembre-se de salvar seu modelo antes de sair da página!
 
-![Diferentes campos de teste disponíveis na guia teste do construtor de webhooks do Braze.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
+![Diferentes campos de teste disponíveis na guia de teste do construtor de webhooks do Braze.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
 
 {% alert important %}
 Lembre-se de salvar seu modelo antes de sair da página! <br>Os modelos de webhook atualizados podem ser encontrados na lista **Modelos de webhook salvos** ao criar uma nova [campanha de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).

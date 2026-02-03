@@ -16,7 +16,7 @@ guide_featured_list:
   - name: Ein Segment erstellen
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: Segmente verwalten
+  - name: "Segmente verwalten:in"
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Filter für die Segmentierung

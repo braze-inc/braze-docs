@@ -138,7 +138,7 @@ braze.getUser().setCustomUserAttribute(
 {% endsubtab %}
 {% subtab Array %}
 
-Você pode ter até 25 elementos em arrays de atributos personalizados. Arrays individuais que são definidos manualmente (não detectados automaticamente) para **Tipo de Dados** podem ser aumentados para até 100 no dashboard do Braze em **Configurações de Dados** > **Atributos Personalizados**. Se você quiser que esse máximo seja aumentado, entre em contato com seu gerente de conta do Braze.
+Você pode ter até 25 elementos em arrays de atributos personalizados. Arrays individuais que são definidos manualmente (não detectados automaticamente) para **Tipo de Dados** podem ser aumentados até 100 no dashboard do Braze em **Configurações de Dados** > **Atributos Personalizados**. Se você quiser que esse máximo seja aumentado, entre em contato com seu gerente de conta do Braze.
 
 [As matrizes]({{site.baseurl}}/developer_guide/platform_wide/getting_started/analytics_overview/#arrays) que excederem o número máximo de elementos serão truncadas para conter o número máximo de elementos.
 
@@ -231,7 +231,7 @@ Visite [Gerenciar inscrições de usuários]({{site.baseurl}}/user_guide/message
 braze.getUser().setEmailNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);
 ```
 
-### Cancelando a inscrição de um usuário de push
+### Cancelando a inscrição de um usuário por push
 
 ```java
 braze.getUser().setPushNotificationSubscriptionType(braze.User.NotificationSubscriptionTypes.UNSUBSCRIBED);

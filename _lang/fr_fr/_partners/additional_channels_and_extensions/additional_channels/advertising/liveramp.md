@@ -27,14 +27,14 @@ Les partages de [données sécurisés de Snowflake ne transfèrent pas de donné
 | Prérequis       | Description                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Compte Snowflake | Vous avez besoin d'un compte Snowflake avec des autorisations de niveau administrateur.                                                                                                                                      |
-| Compte LiveRamp  | Contactez l'équipe de votre compte LiveRamp ou envoyez un e-mail à [snowflake@ liveramp.com](mailto:snowflake@liveramp.com) pour discuter des applications LiveRamp requises dans Snowflake.                              |
+| Compte LiveRamp  | Contactez votre équipe LiveRamp ou [snowflake@liveramp.com](mailto:snowflake@liveramp.com) pour discuter des applications LiveRamp requises dans Snowflake.                              |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Configuration de l'intégration
 
 ### Étape 1 : Demander un partage de données à Braze
 
-Tout d'abord, contactez votre responsable de compte Braze ou votre responsable de la satisfaction client pour acheter un connecteur Snowflake Data Share pour votre compte Braze. Lorsque vous requêtez un partage de données, Braze fournira le partage depuis le ou les espaces de travail dans lesquels l'action a été achetée. Une fois le partage configuré, toutes les données sont immédiatement accessibles depuis votre instance Snowflake sous la forme d'un partage de données entrant. Une fois que le partage est visible dans votre instance, créez une base de données à partir du partage afin de pouvoir voir et interroger les tables.
+Tout d'abord, contactez votre gestionnaire de compte Braze ou votre responsable satisfaction client pour acheter un connecteur de partage de données Snowflake pour votre compte Braze. Lorsque vous requêtez un partage de données, Braze fournira le partage depuis le ou les espaces de travail dans lesquels l'action a été achetée. Une fois le partage configuré, toutes les données sont immédiatement accessibles depuis votre instance Snowflake sous la forme d'un partage de données entrant. Une fois que le partage est visible dans votre instance, créez une base de données à partir du partage afin de pouvoir voir et interroger les tables.
 
 Pour une procédure pas à pas complète, consultez le guide d'[intégration de Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) avec Braze.
 
@@ -89,7 +89,7 @@ Maintenant que vos variables sont définies, créez la table de métadonnées po
 Enfin, effectuez l'opération de résolution d'identité. Pour une présentation complète, consultez [ LiveRamp : Effectuez l'opération de résolution d'identité](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation).
 
 {% tabs local %}
-{% tab exemple de saisie %}
+{% tab example input %}
 ```sql
 call lr_resolution_and_transcoding(
 $customer_input_table_name,
@@ -101,7 +101,7 @@ $customer_metrics_table_name
 ```
 {% endtab %}
 
-{% tab exemple de sortie %}
+{% tab example output %}
 ```sql
 call check_for_output(
 $output_table_name
@@ -112,12 +112,12 @@ $output_table_name
 
 ### Prochaines étapes
 
-Vos données étant désormais pseudonymisées selon l’encodage dédié de RAMPID, vous pouvez partager les tables basées sur RAMPID avec l'application d'activation gérée de LiveRamp afin de les transmettre facilement à vos principaux partenaires de plateformes publicitaires. L'application d'activation comprend une interface conviviale pour les utilisateurs professionnels permettant une segmentation et une sélection/configuration supplémentaires des partenaires de destination en aval. Pour plus de détails sur l'application, veuillez contacter l'équipe responsable de votre compte LiveRamp ou envoyez un e-mail à [ snowflake@liveramp.com](mailto:snowflake@liveramp.com).
+Vos données étant désormais pseudonymisées selon l’encodage dédié de RAMPID, vous pouvez partager les tables basées sur RAMPID avec l'application d'activation gérée de LiveRamp afin de les transmettre facilement à vos principaux partenaires de plateformes publicitaires. L'application d'activation comprend une interface conviviale pour les utilisateurs professionnels permettant une segmentation et une sélection/configuration supplémentaires des partenaires de destination en aval. Pour plus de détails sur l'application, contactez votre équipe de compte LiveRamp ou [Snowflake@liveramp.com](mailto:snowflake@liveramp.com).
 
 ## Résolution des problèmes
 
 {% alert note %}
-Si vous avez des problèmes ou des questions plus spécifiques, envoyez un e-mail à l’adresse [martech@ liveramp.com](mailto:martech@liveramp.com).
+Si vous avez des problèmes ou des questions plus spécifiques, contactez [martech@liveramp.com](mailto:martech@liveramp.com).
 {% endalert %}
 
 ### Régions Snowflake
@@ -128,7 +128,7 @@ Actuellement, cette application n'est disponible que pour les régions américai
   - aws-us-ouest-2 : FAA28932
   - azure-east-us-2 : BL60425
 
-### Confidentialité et valeurs des colonnes
+### Vie privée & Valeurs des colonnes
 
 Le processus évalue la combinaison de toutes les valeurs de colonne par ligne pour obtenir des valeurs uniques. Si une combinaison particulière de valeurs de colonne apparaît 3 fois ou moins, les lignes contenant ces valeurs de colonne ne pourront pas être mises en correspondance et ne seront pas renvoyées dans la table de sortie. De même, pour garantir la confidentialité, le service LiveRamp évalue le caractère unique des combinaisons de valeurs de colonnes, garantissant ainsi que si plus de 5 % des lignes du fichier deviennent incomparables en raison de combinaisons rares, le travail échouera.
 

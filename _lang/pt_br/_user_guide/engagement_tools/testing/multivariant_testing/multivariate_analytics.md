@@ -39,7 +39,7 @@ Se uma variante superou todas as outras com mais de 95% de [confiança]({{site.b
 
 Se nenhuma variante superar todas as outras com 95% de confiança e você optar por enviar a variante de melhor performance mesmo assim, a variante de melhor performance ainda será enviada e indicada com o rótulo "Winner" (Vencedor).
 
-![Resultados de um teste inicial enviado para determinar a Variante Vencedora onde nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atender ao limite de confiança de 95 por cento para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
+![Resultados de um teste inicial enviado para determinar a Variante Vencedora, onde nenhuma variante teve desempenho melhor do que as outras com confiança suficiente para atender ao limite de confiança de 95 por cento para significância estatística.]({% image_buster /assets/img_archive/ab_analytics_wv_insufficient_confidence.png %})
 
 #### Como a variante vencedora é selecionada
 
@@ -151,7 +151,7 @@ Independentemente de seu teste ter ou não um vencedor claro, pode ser útil exe
 
 ## Discrepâncias entre o grupo de controle e a variante
 
-Em campanhas de mensagem no app, a forma como os usuários são rastreados e como as impressões são registradas pode causar discrepâncias na divisão esperada entre o grupo de controle e a variante. Isso ocorre porque as impressões reais registradas podem não refletir essa divisão, e a Braze, em última análise, não tem controle sobre o comportamento individual do usuário de quem irá realizar o disparo.
+Em campanhas de mensagem no app, a forma como os usuários são rastreados e como as impressões são registradas pode causar discrepâncias na divisão esperada entre o grupo de controle e a variante. Isso ocorre porque as impressões reais registradas podem não refletir essa divisão, e a Braze, em última análise, não tem controle sobre o comportamento individual do usuário de quem realizará o disparo.
 
 Por exemplo, digamos que uma campanha tenha um público-alvo de 200 usuários no lançamento, com 100 usuários no grupo de controle e 100 usuários na variante.
 
