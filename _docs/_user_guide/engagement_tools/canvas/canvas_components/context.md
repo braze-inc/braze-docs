@@ -144,7 +144,7 @@ Refer to [Data types]({{site.baseurl}}/user_guide/engagement_tools/canvas/create
 
 ### Delays in sending with Connected Content
 
-When Connected Content fails in a Context step, successful users advance immediately to the next step, while failed users are retried separately. This means a batch doesn't wait for all users to succeed before progressing—successful users move forward as soon as their Connected Content call completes.
+All users in a batch are processed before any users advance. After batch processing completes, successful users move to the next step while failed users are retried separately—successful users don't wait for retry attempts to succeed before advancing.
 
 **Retry behavior**: Context steps (and all Canvas steps) use Canvas-specific retry mechanisms, not the standard Connected Content retry behavior. If a Connected Content call fails, Braze retries the step approximately 13 times with exponential backoff. If all retries fail, the user exits the Canvas.
 
