@@ -25,7 +25,7 @@ To launch a Campaign, you must approve these components:
 
 - **Messages:** This is the Campaign message.
 - **Delivery:** This is the delivery type and determines when users receive the Campaign.
-- **Target Audience:** This determines who will receive the campaign.
+- **Target Audience:** This determines who will receive the Campaign.
 - **Conversion Events:** This is the metric you're tracking for engagement and reporting purposes.
 {% endtab %}
 
