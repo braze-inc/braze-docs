@@ -87,7 +87,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 A user's subscription group status can be updated using the inclusion of a `subscription_groups` parameter within the `attributes` object. For more details, refer to [User attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object).
 
 {% alert note %}
-The `segment_id` parameter is not supported for this endpoint. To target a segment, configure the segment in the campaign's target audience settings in the Braze dashboard and use `broadcast: true`, or use the `audience` parameter with [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) filters.
+The `segment_id` parameter is not supported for this endpoint. To target a segment, configure the segment in the campaign's target audience settings in the Braze dashboard and use `"broadcast": true`, or use the `audience` parameter with [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) filters.
 {% endalert %}
 
 ## Example request
