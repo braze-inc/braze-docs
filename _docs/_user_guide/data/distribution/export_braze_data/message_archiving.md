@@ -165,7 +165,7 @@ The `extras` field contains the key-value pairs configured in the **Email Extras
 **Push payload structure variations**: The top-level `payload` field in push notification archives contains the entire provider payload as sent to the device. Within this JSON, keys such as `aps` (for APNs) or `notification` and `data` (for FCM) can vary significantly depending on the message type, platform, and configuration. For example:
 
 - **iOS push notifications** may have different structures for rich notifications (where `aps.alert` is an object containing fields such as `title` and `body`) versus simple notifications (where `aps.alert` is a string).
-- **Android push notifications** (for example, FCM) may have different provider payload structures for display messages that use the `notification` key versus messages that rely solely on the `data` key or custom keys.
+- **Android push notifications** (for example, FCM) use data messages with custom keys. The payload structure may include different optional fields depending on the message configuration, such as push buttons, carousels, or additional metadata.
 
 Additionally, test sends from the dashboard may produce different payload structures than production messages.
 
