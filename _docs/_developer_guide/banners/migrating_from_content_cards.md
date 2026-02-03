@@ -1,6 +1,6 @@
 ---
-nav_title: "Migrating from Content Cards"
-article_title: "Migrating from Content Cards to Banners"
+nav_title: "Migrate from Content Cards"
+article_title: "Migrate from Content Cards to Banners"
 description: "Learn how to migrate from Content Cards to Banners, including code examples for all supported SDKs, limitations, and benefits."
 page_order: 5
 channel:
@@ -13,14 +13,14 @@ platform:
   - React Native
 ---
 
-# Migrating from Content Cards to Banners
+# Migrate from Content Cards to Banners
 
 > This guide helps you migrate from Content Cards to Banners for banner-style messaging use cases. Banners are ideal for inline, persistent in-app and web messages that appear at specific placements in your application.
 
 ## Why migrate to Banners?
 
 - If your engineering team is building or maintaining custom Content Cards, migrating to Banners can reduce that ongoing investment. Banners let marketers control the UI directly, freeing developers for other work.
-- If you're launching new homepage messages, onboarding flows, or persistent announcements, start with Banners rather than building on Content Cards. You'll benefit from real-time personalization, no 30-day expiration, no size limit, and native prioritization from day one.
+- If you're launching new homepage messages, onboarding flows, or persistent announcements, start with Banners rather than building on Content Cards. You can benefit from real-time personalization, no 30-day expiration, no size limit, and native prioritization from day one.
 - If you're working around the 30-day expiration limit, managing complex re-eligibility logic, or frustrated by stale personalization, Banners solves these problems natively.
 
 Banners offer several advantages over Content Cards for banner-style messaging:
@@ -53,9 +53,9 @@ Consider migrating to Banners if you're using Content Cards for:
 
 Continue using Content Cards if you need:
 
-- Feed Experiences: Any use case involving multiple scrollable messages or a card-based "Inbox".
-- Specific Features: Messages that require Connected Content or Promotional Codes, as Banners do not support these natively.
-- Triggered Delivery: Use cases strictly requiring API-triggered or action-based delivery. Note: While Banners don’t support API-triggered or action-based delivery, real-time eligibility evaluation means users instantly qualify/disqualify based on segment membership at each refresh.
+- **Feed experiences:** Any use case involving multiple scrollable messages or a card-based "Inbox".
+- **Specific features:** Messages that require Connected Content or Promotional Codes, as Banners do not support these natively.
+- **Triggered delivery:** Use cases strictly requiring API-triggered or action-based delivery. While Banners don’t support API-triggered or action-based delivery, real-time eligibility evaluation means users instantly qualify or disqualify based on segment membership at each refresh.
 
 ## Migration guide
 
@@ -65,7 +65,7 @@ Before migrating, ensure your Braze SDK meets the minimum version requirements:
 
 {% multi_lang_include sdk_versions.md feature='banners' %}
 
-### 1. Subscribing to updates
+### Subscribe to updates
 
 #### Content Cards approach
 
@@ -191,7 +191,7 @@ StreamSubscription bannerStreamSubscription = braze.subscribeToBanners((List<Bra
 {% endtab %}
 {% endtabs %}
 
-### 2. Displaying content
+### Display content
 
 {% alert note %}
 Content Cards can be manually rendered with custom UI logic, whereas Banners can only be rendered with the out-of-the-box SDK methods.
@@ -378,7 +378,7 @@ braze.requestBannersRefresh(["global_banner"]);
 {% endtab %}
 {% endtabs %}
 
-### 3. Logging Analytics (Custom Implementations)
+### Log analytics (Custom Implementations)
 
 {% alert note %}
 Both Content Cards and Banners automatically track analytics when using their default UI components. The examples below are for custom implementations where you're building your own UI.
@@ -533,7 +533,7 @@ Analytics are automatically tracked when using BrazeBannerView. No manual loggin
 {% endtab %}
 {% endtabs %}
 
-### 4. Handling control groups
+### Handling control groups
 
 #### Content Cards approach
 
@@ -661,11 +661,12 @@ BrazeBannerView(
 
 When migrating from Content Cards to Banners, be aware of the following limitations:
 
-### Migrating Triggered Messages
+### Migrating triggered messages
+
 Banners only support scheduled delivery campaigns. To migrate a message that was previously API-triggered or action-based, convert it to segment-based targeting:
 
-* **Example**: Instead of triggering a "Complete Profile" card via API, create a segment for users who signed up in the last 7 days but have not completed their profile.
-* **Real-time Eligibility**: Users will qualify or disqualify for the Banner instantly at each refresh based on their segment membership.
+- **Example:** Instead of triggering a "Complete Profile" card with the API, create a segment for users who signed up in the last 7 days but have not completed their profile.
+- **Real-time eligibility:** Users qualify or disqualify for the Banner instantly at each refresh based on their segment membership.
 
 ### Feature differences
 
@@ -695,21 +696,22 @@ Banners only support scheduled delivery campaigns. To migrate a message that was
 | **Content Updates** |
 | Liquid templating refresh | ❌ Once per card at send/launch | ✅ Refreshes on every refresh |
 | Eligibility refresh | ❌ Once per card at send/launch | ✅ Refreshes on every session |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### Product Limits
+### Product limitations
 
-* **Active Messages**: Maximum 25 active messages per placement.
-* **Batch Requests**: Maximum 10 placement IDs per refresh request; requests beyond this are truncated.
+- Up to 25 active messages per placement.
+- Up to 10 placement IDs per refresh request; requests beyond this are truncated.
 
 ### SDK limitations
 
-- **Unsupported Platforms**: Banners are not currently supported on .NET MAUI (Xamarin), Cordova, Unity, Vega, or TV platforms
-- **Minimum SDK versions**: Ensure you're using the minimum SDK versions listed in the prerequisites
+- Banners are not currently supported on .NET MAUI (Xamarin), Cordova, Unity, Vega, or TV platforms.
+- Make sure you're using the minimum SDK versions listed in the prerequisites.
 
-## Next steps
+## Related articles
 
-- Learn more about [Banner placements]({{site.baseurl}}/developer_guide/banners/placements)
-- Review the [Banner tutorial]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
-- Check [Banner analytics]({{site.baseurl}}/developer_guide/banners/analytics)
-- Read the [Banner FAQ]({{site.baseurl}}/developer_guide/banners/faq)
+- [Banner placements]({{site.baseurl}}/developer_guide/banners/placements)
+- [Tutorial: Displaying a Banner by Placement ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)
+- [Banner analytics]({{site.baseurl}}/developer_guide/banners/analytics)
+- [Banner FAQ]({{site.baseurl}}/developer_guide/banners/faq)
 
