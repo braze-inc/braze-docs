@@ -20,7 +20,7 @@ Além disso, se você tiver mais de um grupo de app no Braze, precisará configu
 
 Para evitar perda de dados e interrupção do serviço, é essencial que você monitore seus endpoints o tempo todo e busque resolver erros graves ou inatividade dentro de 24 horas.
 
-Para a maioria dos tipos de erro, (como erros de servidor, erros de conexão de rede, etc.), o Braze continuará a enfileirar e tentar transmissões de eventos por até 24 horas. Após esse tempo, eventos não transmitidos serão descartados. Conectores com taxas de erro ou tempo de atividade consistentemente ruins serão automaticamente suspensos.
+Para a maioria dos tipos de erro, (como erros de servidor, erros de conexão de rede, etc.), o Braze continuará a enfileirar e tentar retransmitir eventos por até 24 horas. Após esse tempo, eventos não transmitidos serão descartados. Conectores com taxas de erro ou tempo de atividade consistentemente ruins serão automaticamente suspensos.
 
 ### Resiliência a mudanças
 
@@ -29,7 +29,7 @@ Ocasionalmente, faremos alterações não disruptivas nos esquemas Currents do B
 Normalmente, damos um aviso de duas semanas para essas mudanças, mas às vezes isso não é possível. É essencial que você projete sua integração para lidar com campos ou tipos de eventos não reconhecidos, caso contrário, isso provavelmente levará à perda de dados.
 
 {% alert tip %}
-Para a lista completa de esquemas de eventos Currents, [Eventos de Engajamento de Mensagem]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
+Para a lista completa de esquemas de eventos Currents, [Eventos de Engajamento de Mensagens]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events).
 {% endalert %}
 
 ## Agrupamento e serialização
@@ -382,7 +382,7 @@ Aqui estão alguns exemplos de cargas úteis de eventos para vários outros even
 
 Tokens de autenticação em sua carga útil são opcionais. Eles podem ser passados através de um cabeçalho HTTP `Authorization` usando o esquema de autorização `Bearer`, conforme especificado em [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). Embora opcionais, se um token de autenticação for passado, o Braze sempre o validará primeiro—mesmo que não haja eventos na carga útil.
 
-De acordo com o RFC 6750, os tokens devem ser valores codificados em Base64 com pelo menos um caractere. Tenha em mente que a RFC 6750 permite que os tokens contenham os seguintes caracteres além dos caracteres normais do Base64: `-`, `.`, `_` e `~`. Você pode escolher se deseja incluir esses caracteres em seu token ou não—no entanto, ele deve estar no formato Base64.
+De acordo com o RFC 6750, os tokens devem ser valores codificados em Base64 com pelo menos um caractere. Tenha em mente que a RFC 6750 permite que os tokens contenham os seguintes caracteres além dos caracteres normais do Base64: `-`, `.`, `_` e `~`. Você pode escolher se deseja incluir esses caracteres em seu token ou não—no entanto, deve estar no formato Base64.
 
 Além disso, se o cabeçalho `Authorization` estiver presente, ele será construído usando o seguinte formato:
 
@@ -397,7 +397,7 @@ Authorization: Bearer 0p3n5354m3==
 ```
 
 {% alert note %}
-No futuro, podemos usar cabeçalhos `Authorization` para implementar um esquema de autorização personalizado, chave-valor, que é exclusivo para Braze. Isso aderirá à especificação [RFC 7235](https://tools.ietf.org/html/rfc7235), que é como algumas empresas implementam seus esquemas de autenticação, como a Amazon Web Services (AWS).
+No futuro, podemos usar cabeçalhos `Authorization` para implementar um esquema de autorização personalizado, chave-valor, que é exclusivo do Braze. Isso aderiria à especificação [RFC 7235](https://tools.ietf.org/html/rfc7235), que é como algumas empresas implementam seus esquemas de autenticação, como a Amazon Web Services (AWS).
 {% endalert %}
 
 ## Versão
@@ -408,7 +408,7 @@ Todas as solicitações da nossa integração de conector HTTP serão enviadas c
 Braze-Currents-Version: 1
 ```
 
-A versão será sempre `1`, a menos que, como não esperamos incrementar esse número com muita frequência, se é que algum dia.
+A versão será sempre `1` a menos que, como não esperamos incrementar esse número com muita frequência, se é que algum dia.
 
 Assim como nossos [esquemas de armazenamento de data warehouse]({{site.baseurl}}/user_guide/data/braze_currents/event_delivery_semantics?redirected=1), cada campo de evento em um evento individual é garantido ser retrocompatível com versões anteriores de carga útil de eventos, de acordo com a definição de retrocompatibilidade do [Apache Avro](https://avro.apache.org/):
 
@@ -418,9 +418,9 @@ Assim como nossos [esquemas de armazenamento de data warehouse]({{site.baseurl}}
 
 ## Mecanismo de tratamento de erros e novas tentativas
 
-Se ocorrer um erro, Braze irá enfileirar e tentar novamente a solicitação com base no código de retorno HTTP recebido. Ele continuará a tentar por pelo menos dois dias, desde que os dados estejam armazenados em buffer no sistema. Se os dados estiverem parados por mais de 24 horas, nossos engenheiros de plantão serão alertados automaticamente. Neste momento, nossa estratégia de recuo é tentar novamente periodicamente.
+Se ocorrer um erro, o Braze irá enfileirar e tentar novamente a solicitação com base no código de retorno HTTP recebido. Ele continuará a tentar por pelo menos dois dias, desde que os dados estejam armazenados em buffer no sistema. Se os dados estiverem presos por mais de 24 horas, nossos engenheiros de plantão serão alertados automaticamente. Neste momento, nossa estratégia de recuo é tentar novamente periodicamente.
 
-Se sua integração Currents começar a retornar erros `4XX`, Braze enviará automaticamente um e-mail de notificação e estenderá automaticamente o período de retenção para um mínimo de sete dias.
+Se sua integração Currents começar a retornar erros `4XX`, o Braze enviará automaticamente um e-mail de notificação e estenderá automaticamente o período de retenção para um mínimo de sete dias.
 
 Qualquer código de erro HTTP não listado abaixo será tratado como um erro HTTP `5XX`.
 

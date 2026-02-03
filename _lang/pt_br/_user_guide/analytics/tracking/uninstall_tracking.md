@@ -87,5 +87,5 @@ Por razões de privacidade, os provedores de push do Braze podem revogar tokens 
 
 A diferença é esperada. 
 
-A Apple usa um cronograma aleatório para atrasar a notificação quando um token push se torna inválido, o que significa que mesmo após um usuário desinstalar um app, o APNs pode continuar a retornar respostas bem-sucedidas para notificações push por um período de tempo. Esse atraso é intencional e projetado para proteger a privacidade do usuário. Nenhum bounce ou falha será relatado até que o APNs retorne um status `410` para um token inválido.
+A Apple usa um cronograma aleatório para atrasar a notificação quando um token push se torna inválido, o que significa que mesmo após um usuário desinstalar um app, o APNs pode continuar a retornar respostas bem-sucedidas para notificações push por um período de tempo. Esse atraso é intencional e projetado para proteger a privacidade do usuário. Nenhum bounce ou falha será relatado até que o APNs retorne um `410` status para um token inválido.
 

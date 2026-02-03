@@ -68,7 +68,7 @@ Os emblemas são atribuições especiais do visitante que representam padrões d
 #### Exemplo de atributo e emblema
 
 {% tabs local %}
-{% tab Atribuição %}
+{% tab Attribute %}
 
 Crie um atributo de visitante "Valor do tempo de vida do pedido" que calcule o valor cumulativo gasto (`order_total`) pelo cliente para todos os pedidos concluídos (evento de compra). Para configurar o valor dos pedidos no tempo de vida na sua conta Tealium, siga as instruções a seguir:
 
@@ -144,14 +144,14 @@ Nem todos os campos oferecidos são obrigatórios.
 {% endalert %}
 
 {% tabs local %}
-{% tab Rastreamento de usuário - lote e não lote %}
+{% tab Track User - Batch and Non-Batch %}
 
 Essa ação permite rastrear atributos de usuário, evento e compra, tudo em uma única ação. Embora a ação "Rastrear usuário" seja a mesma para AudienceStream e EventStream, a Tealium recomenda definir mapeamentos de atributo de usuário com ações AudienceStream e mapeamentos de evento e compra com ações EventStream.
 
 | Parâmetros | Descrição |
 | ---------- | ----------- |
 | ID de usuário | Use esse campo para mapear o campo de ID do usuário do Tealium para seu equivalente no Braze. Mapeie uma ou mais atribuições de ID de usuário. Quando várias IDs são especificadas, o primeiro valor não em branco é escolhido com base na seguinte ordem de prioridade: ID externo, ID da Braze, nome do alias e etiqueta do alias.<br><br>\- A ID externa e a ID Braze não devem ser especificadas se estiver importando tokens por push.<br>\- Se estiver especificando um alias de usuário, o nome do alias e o rótulo do alias devem ser definidos. <br><br>Para saber mais, confira o [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) da Braze. |
-| Atributos do usuário | Use os nomes de campo existentes do perfil de usuário do Braze para atualizar os valores do perfil de usuário no dashboard do Braze ou adicione seus próprios dados [de atributos]({{site.baseurl}}/api/objects_filters/user_attributes_object/) personalizados [de usuários]({{site.baseurl}}/api/objects_filters/user_attributes_object/) aos perfis de usuários.<br><br>\- Por padrão, novos usuários serão criados se não houver nenhum.<br>\- Ao definir **Update Existing Only** como `true`, somente os usuários existentes serão atualizados, e nenhum novo usuário será criado.<br>\- Se um atributo da Tealium estiver vazio, ele será convertido em nulo e removido do perfil de usuário da Braze. Os enriquecimentos devem ser usados se os valores nulos não devem ser enviados ao Braze para remover uma atribuição de usuário. |
+| Atributos do usuário | Use os nomes de campo de perfil de usuário existentes no Braze para atualizar os valores de perfil de usuário no dashboard do Braze ou adicione seus próprios dados [de atributos]({{site.baseurl}}/api/objects_filters/user_attributes_object/) personalizados [de usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object/) aos perfis de usuário.<br><br>\- Por padrão, novos usuários serão criados se não houver nenhum.<br>\- Ao definir **Update Existing Only** como `true`, somente os usuários existentes serão atualizados, e nenhum novo usuário será criado.<br>\- Se um atributo da Tealium estiver vazio, ele será convertido em nulo e removido do perfil de usuário da Braze. Os enriquecimentos devem ser usados se os valores nulos não devem ser enviados ao Braze para remover uma atribuição de usuário. |
 | Modificar atributos do usuário | Use esse campo para incrementar ou decrementar certas atribuições do usuário<br><br>\- As atribuições de números inteiros podem ser incrementadas por números inteiros positivos ou negativos.<br>\- As atribuições das matrizes podem ser modificadas adicionando ou removendo valores das matrizes existentes. |
 | Evento | Um evento representa uma única ocorrência de um evento personalizado por um usuário específico em um registro de data e hora. Use esse campo para rastrear e mapear atribuições de eventos como as do [objeto de evento]({{site.baseurl}}/api/objects_filters/event_object/) Braze. <br><br>\- O atributo de evento `Name` é necessário para cada evento mapeado.<br>\- O atributo de evento `Time` é automaticamente definido para a hora atual, a menos que seja explicitamente mapeado. <br>\- Por padrão, novos eventos serão criados se não houver nenhum. Ao definir `Update Existing Only` como `true`, somente os eventos existentes serão atualizados, e nenhum novo evento será criado.<br>\- Atribuições do tipo matriz de mapas para adicionar vários eventos. As atribuições do tipo matriz devem ter o mesmo comprimento.<br>\- Atributos de valor único podem ser usados e aplicados a cada evento. |
 | Modelo de evento | Fornecer modelos de eventos a serem referenciados nos dados do corpo. Os modelos podem ser usados para transformar os dados antes de enviá-los ao Braze. Consulte o [Guia de modelos](https://docs.tealium.com/server-side/connectors/webhook-connectors/trimou-templating-engine/) da Tealium para saber mais. |
@@ -164,7 +164,7 @@ Essa ação permite rastrear atributos de usuário, evento e compra, tudo em uma
 ![]({% image_buster /assets/img/tealium/track_user_example2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Excluir usuário - Não lote %}
+{% tab Delete User - Non-Batch %}
 
 Essa ação permite excluir usuários do dashboard do Braze.
 
@@ -176,7 +176,7 @@ Essa ação permite excluir usuários do dashboard do Braze.
 ![]({% image_buster /assets/img/tealium/track_user_delete2.png %}){: style="max-width:90%"}
 
 {% endtab %}
-{% tab Atualizar Status do Grupo de Inscrições do Usuário - Não em Lote %}
+{% tab Update User Subscription Group Status - Non-Batch %}
 Essa ação permite adicionar ou remover usuários dos grupos de inscrições para e-mail ou SMS do Braze.
 
 | Parâmetros | Descrição |
