@@ -50,7 +50,7 @@ excerpt_separator: ""
 Publier,E-mail,Créer,Modèle,API,REST
 {% endapitags %}
 
-Utilisez les API REST du modèle d’e-mail pour gérer par programme les modèles d’e-mail que vous avez stockés sur les tableaux de bord de Braze de la page Templates & Media (Modèles et médias). Braze fournit deux endpoints pour la création et la mise à jour de vos modèles d’e-mail.
+Utilisez les API REST de modèles d'e-mail pour gérer de manière programmatique les modèles d'e-mail que vous avez stockés sur les tableaux de bord de Braze, sur la page Modèles et médias &. Braze fournit deux endpoints pour la création et la mise à jour de vos modèles d’e-mail.
 
 La réponse de cet endpoint comprend un champ `email_template_id` qui peut être utilisé pour mettre à jour le modèle lors des prochains appels d’API.
 
@@ -265,26 +265,26 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Champ profil utilisateur | Spécification des types de données |
 | ---| --- |
-| pays | (chaîne de caractères) Nous vous demandons de transmettre les indicatifs nationaux à Braze selon la [norme ISO-3166-1 alpha-2][17]. |
-| current_location | (objet) du formulaire {"longitude": -73.991443, "latitude": 40.753824} |
+| pays | (chaîne de caractères) Nous exigeons que les codes de pays soient transmis à Braze selon la [norme ISO-3166-1 alpha-2][17]. |
+| current_location | (objet) De la forme {"longitude" : -73.991443, "latitude" : 40.753824} |
 | date_of_first_session | (date à laquelle l’utilisateur s’est servi de l’application pour la première fois) Chaîne de caractères au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
 | date_of_last_session | (date à laquelle l’utilisateur s’est servi de l’application pour la dernière fois) Chaîne de caractères au format ISO 8601 ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. |
 | ddn | (date de naissance) Chaîne au format "AAAA-MM-JJ", par exemple, 1980-12-21. |
 | e-mail | (string) |
-| email_subscribe | (chaîne de caractères) Les valeurs disponibles sont « opted_in » (confirmé : explicitement consenti à recevoir des e-mails), « unsubscribed » (désabonné : a explicitement refusé de recevoir des e-mails), et « subscribed » (abonné : ni accepté, ni refusé).  |
+| email_subscribe | (chaîne de caractères) Les valeurs disponibles sont "opted_in" (explicitement inscrit pour recevoir des messages e-mail), "unsubscribed" (explicitement désinscrit des messages e-mail) et "subscribed" (ni inscrit ni désinscrit).  |
 | external_id | (chaîne de caractères) De l’identifiant utilisateur unique. |
 | facebook | hachage contenant l’un des `id` (string), `likes` (array of strings), `num_friends` (integer). |
-| Prénom | (string) |
+| first_name | (string) |
 | genre | (string) « H », « F », « A » (autre), « S/O » (sans objet), « P » (préfère ne pas dire) ou nul (inconnu). |
-| ville | (string) |
+| home_city | (string) |
 | image_url | (chaîne de caractères) URL de l’image à associer au profil utilisateur. |
-| langue | (string) la langue doit être transmise à Braze selon la [norme ISO-639-1][24]. <br>[Liste des langues acceptées][1]|
-| Nom | (string) |
-|email_marqué_comme_spam_à| (chaîne de caractères) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. La liste est affichée au format ISO 8601 ou au format yyyy-MM-dd'T'HH:mm:ss:SSSZ.|
+| langue | (chaîne de caractères), nous exigeons que la langue soit transmise à Braze selon la [norme ISO-639-1][24]. <br>[Liste des langues acceptées](/docs/user_guide/data_and_analytics/user_data_collection/language_codes/)|
+| last_name | (string) |
+|marked_email_as_spam_at| (chaîne de caractères) Date à laquelle l’e-mail de l’utilisateur a été marqué comme courrier indésirable. La liste est affichée au format ISO 8601 ou au format yyyy-MM-dd'T'HH:mm:ss:SSSZ.|
 | téléphone | (string) |
-| abonnement aux notifications push | (chaîne de caractères) Les valeurs disponibles sont « confirmé » (a explicitement consenti à recevoir des notifications push), « désabonné » (a explicitement refusé de recevoir des notifications push), et « abonné » (a ni accepté, ni refusé).  |
+| push_subscribe | (chaîne caractères) Les valeurs disponibles sont "opted_in" (explicitement enregistré pour recevoir des messages push), "unsubscribed" (explicitement opted out of push messages), et "subscribed" (ni opted in ni out).  |
 | push_tokens | Tableau d’objets avec `app_id` et la chaîne de caractères `token`. Vous pouvez éventuellement fournir un `device_id` pour l’appareil auquel ce jeton est associé, par exemple, `[{"app_id": App Identifier, "token": "abcd", "device_id": "optional_field_value"}]`. Si aucun `device_id` n’est pas fourni, il sera généré de manière aléatoire. |
-| time_zone | (chaîne de caractères) Nom de fuseau horaire de la [base de données de fuseaux horaires IANA][26] (par ex. « Amérique/New_York » ou « Heure de l’Est [États-Unis et Canada] »). Seules les valeurs de fuseau horaire valides seront définies. |
+| time_zone | (chaîne de caractères) Nom du fuseau horaire provenant de la [base de données des fuseaux horaires de l'IANA][26] (par exemple, "America/New_York" ou "Eastern Time (US & Canada)"). Seules les valeurs de fuseau horaire valides seront définies. |
 | twitter | Hachage contenant l'un des éléments suivants : `id` (nombre entier), `screen_name` (chaîne de caractères, identifiant X (anciennement Twitter)), `followers_count` (nombre entier), `friends_count` (nombre entier), `statuses_count` (nombre entier). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

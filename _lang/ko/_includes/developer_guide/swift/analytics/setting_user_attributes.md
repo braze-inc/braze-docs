@@ -63,13 +63,13 @@ AppDelegate.braze?.user.set(firstName: nil)
 기본 사용자 속성 외에도 Braze는 여러 가지 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 [사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics/)을 참조하십시오.
 
 {% alert important %}
-커스텀 속성 값의 최대 길이는 255자이며, 이보다 긴 값은 잘립니다. 자세한 내용은 [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class)를 참조하십시오.
+커스텀 속성 값의 최대 길이는 255자이며, 이보다 긴 값은 잘립니다. 자세한 내용은 [`Braze.User`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/user-swift.class)을 참조하십시오.
 {% endalert %}
 
 ### 사용자 지정 속성 설정
 
 {% tabs local %}
-{% tab 문자열 %}
+{% tab string %}
 `string` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs %}
@@ -87,7 +87,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 정수 %}
+{% tab integer %}
 `integer` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs %}
@@ -105,8 +105,8 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 부동 소수점 %}
-Braze는 데이터베이스 내에서 `float` 및 `double` 값을 동일하게 처리합니다. 배정밀도 값으로 커스텀 속성을 설정하려면:
+{% tab floating-points %}
+Braze는 데이터베이스 내에서 `float` 및 `double` 값을 동일하게 처리합니다. 더블 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs %}
 {% subtab swift %}
@@ -123,7 +123,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 부울 %}
+{% tab boolean %}
 `boolean` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs %}
@@ -141,7 +141,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 날짜 %}
+{% tab date %}
 `date` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs %}
@@ -159,8 +159,8 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 배열 %}
-[커스텀 속성 배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)의 최대 요소 개수 기본값은 25개입니다. 최대 요소 수를 초과하는 배열은 최대 요소 수를 포함하도록 잘립니다. 개별 배열의 최댓값은 최대 100개까지 늘릴 수 있습니다. 이 최대 한도를 늘리려면 고객 서비스 관리자에게 문의하세요.
+{% tab array %}
+[커스텀 속성 배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)의 최대 요소 개수 기본값은 25개입니다. 최대 요소 수를 초과하는 배열은 최대 요소 수를 포함하도록 잘립니다. 개별 배열의 최댓값은 최대 100개까지 늘릴 수 있습니다. 이 최대값을 늘리고 싶다면 고객 서비스 매니저에게 문의하십시오.
 
 `array` 값으로 커스텀 속성을 설정하려면:
 
@@ -194,7 +194,7 @@ AppDelegate.braze?.user.removeFromCustomAttributeArray(key: "array_name", value:
 
 ### 커스텀 속성 증가 또는 감소
 
-이 코드는 증분 사용자 지정 속성의 예시입니다. 사용자 정의 속성의 값을 `integer` 또는 `long` 값으로 증가시킬 수 있습니다:
+이 코드는 증분 사용자 지정 속성의 예시입니다. 커스텀 속성의 값을 `integer` 또는 `long` 값으로 증가시킬 수 있습니다:
 
 {% tabs %}
 {% tab swift %}
@@ -213,11 +213,11 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 {% endtab %}
 {% endtabs %}
 
-### 사용자 정의 속성 해제
+### 커스텀 속성 해제
 
 {% tabs %}
 {% tab swift %}
-사용자 정의 속성을 해제하려면 관련 속성 키를 `unsetCustomAttribute` 메서드에 전달하십시오.
+커스텀 속성을 해제하려면 관련 속성 키를 `unsetCustomAttribute` 메서드에 전달하십시오.
 
 ```swift
 AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
@@ -225,7 +225,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 
 {% endtab %}
 {% tab objective-c %}
-사용자 정의 속성을 해제하려면 관련 속성 키를 `unsetCustomAttributeWithKey` 메서드에 전달하십시오.
+커스텀 속성을 해제하려면 관련 속성 키를 `unsetCustomAttributeWithKey` 메서드에 전달하십시오.
 
 ```objc
 [AppDelegate.braze.user unsetCustomAttributeWithKey:@"your_attribute_key"];
@@ -234,9 +234,9 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 {% endtab %}
 {% endtabs %}
 
-### 사용자 정의 속성 중첩
+### 커스텀 속성 중첩
 
-사용자 정의 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩된 속성을 가진 `favorite_book` 객체가 사용자 프로필의 사용자 정의 속성으로 설정됩니다. 자세한 내용은 [중첩된 사용자 정의 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
+커스텀 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩된 속성을 가진 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
 
 {% tabs %}
 {% tab swift %}
@@ -266,7 +266,7 @@ NSDictionary *favoriteBook = @{
 
 ### REST API 사용
 
-REST API를 사용하여 사용자 속성을 설정하거나 해제할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
+사용자 속성을 설정하거나 해제하려면 REST API를 사용할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
 
 ## 사용자 구독 설정
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: SDK 인증 키 제거"
+nav_title: "DELETE: 소프트웨어 개발 키트 인증 키 제거"
 article_title: "DELETE: SDK 인증 키 제거"
 search_tag: Endpoint
 page_order: 3
@@ -42,10 +42,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | Description |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | 필수 | 문자열 | 앱 API 식별자입니다. |
-| `key_id` | 필수 | 문자열 | 삭제할 SDK 인증 키의 ID입니다. |
+| `app_id` | Required | 문자열 | 앱 API 식별자입니다. |
+| `key_id` | Required | 문자열 | 삭제할 SDK 인증 키의 ID입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 예시 요청
@@ -77,7 +77,7 @@ curl --location --request DELETE 'https://rest.iad-01.braze.com/app_group/sdk_au
 
 ## 응답 매개변수
 
-| 매개변수 | 데이터 유형 | 설명 |
+| 매개변수 | 데이터 유형 | Description |
 | --------- | --------- | ----------- |
 | `keys` | 배열 | 남은 SDK 인증 키 개체의 배열입니다. |
 | `keys[].id` | 문자열 | SDK 인증 키의 ID입니다. |

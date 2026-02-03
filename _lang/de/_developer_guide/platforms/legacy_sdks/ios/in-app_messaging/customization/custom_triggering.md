@@ -1,6 +1,6 @@
 ---
-nav_title: Benutzerdefinierte Triggerung
-article_title: Anpassen des Auslösens von In-App-Nachrichten für iOS
+nav_title: Angepasstes Triggern
+article_title: Anpassen des Triggerns von In-App Nachrichten für iOS
 platform: iOS
 page_order: 7
 description: "Dieser Referenzartikel behandelt die benutzerdefinierte Auslösung von In-App-Nachrichten für Ihre iOS-Anwendung."
@@ -34,7 +34,7 @@ Fügen Sie den folgenden Code in die Methode `application(_:didReceiveRemoteNoti
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func handleExtras(userInfo: [AnyHashable : Any]) {
@@ -54,11 +54,11 @@ Beim Empfang einer stillen Push-Benachrichtigung wird ein vom SDK aufgezeichnete
 
 Erstellen Sie eine Kampagne mit einem stillen Push, die über das vom Server gesendete Event ausgelöst wird. Einzelheiten zur Erstellung einer stillen Push-Kampagne finden Sie unter [Stille Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/push_notifications/silent_push_notifications/).
 
-![In-App-Nachrichten-Kampagne mit aktionsbasierter Zustellung an die Nutzer, die das angepasste Event "server_event" ausführen.]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachricht-Kampagnen, die Nutzern zugestellt wird, die das angepasste Event durchführen "server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %})
 
 Die Push-Kampagne muss zusätzliche Schlüssel-Wert-Paare (Extras) enthalten, die angeben, dass diese Push-Kampagne gesendet wird, um ein angepasstes SDK-Event zu protokollieren. Dieses Event wird zum Triggern der In-App-Nachricht verwendet:
 
-![In-App-Nachrichten-Kampagne mit aktionsbasierter Zustellung und zwei Schlüssel-Wert-Paaren. "CAMPAIGN_NAME" ist auf "In-app message name example" und "IS_SERVER_EVENT" ist auf "true" gesetzt.]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![n aktionsbasierte Zustellung einer In-App-Kampagne mit zwei Schlüssel-Wert-Paaren. "CAMPAIGN_NAME" ist auf "In-App-Nachricht Beispiel" und "IS_SERVER_EVENT" auf "wahr" eingestellt.]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 Der Code in der Methode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` prüft auf den Schlüssel `IS_SERVER_EVENT` und protokolliert ein angepasstes SDK-Event, wenn dieser vorhanden ist.
 
@@ -68,9 +68,9 @@ Sie können entweder den Event-Namen oder die Event- Eigenschaften ändern, inde
 
 Erstellen Sie Ihre für den Benutzer sichtbare In-App-Nachrichtenkampagne über das Braze-Dashboard. Diese Kampagne sollte eine aktionsbasierte Zustellung haben und durch das angepasste Event ausgelöst werden, das in der Methode `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` protokolliert wird.
 
-Im folgenden Beispiel wurde die zu triggernde In-App-Nachricht konfiguriert, indem die Event-Eigenschaft im Rahmen der ursprünglichen stillen Push-Benachrichtigung gesendet wurde.
+Im folgenden Beispiel wurde die zu triggernde In-App-Nachricht konfiguriert, indem die Event-Eigenschaft im Rahmen des usprünglichen stillen Push gesendet wurde.
 
-![In-App-Nachrichten-Kampagne mit aktionsbasierter Zustellung an die Nutzer, die das angepasste Event "In-App-Nachrichten-Trigger" ausführen, wobei "campaign_name" auf "In-app message name example" gesetzt ist.]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+![Eine aktionsbasierte Zustellung von In-App-Nachrichten-Kampagnen, die Benutzern zugestellt wird, die das angepasste Event "In-App-Nachricht Auslöser" ausführen, wobei "campaign_name" gleich "In-App-Nachricht Beispiel" ist.]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 Da eine Push-Nachricht verwendet wird, um ein vom SDK protokolliertes angepasstes Event aufzuzeichnen, muss Braze ein Push-Token für jeden Nutzer speichern, um diese Lösung zu aktivieren. Sowohl für iOS als auch für Android speichert Braze ein Token erst ab dem Zeitpunkt, an dem ein Nutzer die Push-Aufforderung des Betriebssystems erhalten hat. Davor ist der Nutzer nicht per Push erreichbar und die obige Lösung nicht möglich.
 

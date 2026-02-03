@@ -9,9 +9,9 @@ description: "In diesem Artikel werden Aliasnamen zur Identifizierung von Objekt
 
 # Aliasnamen zur Identifizierung des Objekts
 
-Eine API-Anfrage mit einem beliebigen Feld im Attribute-Objekt erstellt oder aktualisiert ein Attribut dieses Namens mit dem angegebenen Wert im angegebenen Benutzerprofil. 
+Eine API-Anfrage mit einem beliebigen Feld im Attribute-Objekt erstellt oder aktualisiert ein Attribut dieses Namens mit dem angegebenen Wert im angegebenen Nutzerprofil.
 
-Verwenden Sie die Feldnamen des Braze-Benutzerprofils (wie nachfolgend aufgeführt oder im Abschnitt für [Braze-Benutzerprofilfelder]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)), um diese speziellen Werte im Benutzerprofil im Dashboard zu aktualisieren, oder fügen Sie Ihre eigenen benutzerdefinierten Attributdaten für den Benutzer hinzu.
+Verwenden Sie die Feldnamen des Braze-Benutzerprofils (wie nachfolgend aufgelistet oder alle im Abschnitt für [Braze-Benutzerprofilfelder]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields) aufgelisteten), um diese speziellen Werte im Benutzerprofil im Dashboard zu aktualisieren, oder fügen Sie Ihre eigenen angepassten Attributdaten für den Benutzer hinzu.
 
 ## Objektkörper
 
@@ -21,7 +21,7 @@ Verwenden Sie die Feldnamen des Braze-Benutzerprofils (wie nachfolgend aufgefüh
   [
     {
       "external_id" : (required, string) see External user ID,
-      // external_ids for users that do not exist will return a non-fatal error.
+      // external_ids for users that do not exist return a non-fatal error.
       // See server responses for details.
       "user_alias" : {
         "alias_name" : (required, string) see User aliases,

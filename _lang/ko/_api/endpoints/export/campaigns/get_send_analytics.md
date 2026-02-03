@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 애널리틱스 내보내기"
+nav_title: "GET: 보내기 분석 내보내기"
 article_title: "GET: 애널리틱스 내보내기"
 search_tag: Endpoint
 page_order: 4
@@ -32,8 +32,8 @@ Braze 스토어는 전송 후 14일 동안 분석을 전송합니다. 캠페인 
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | 필수 | 문자열 | [캠페인 API 식별자를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
-| `send_id` | 필수 | 문자열 | [API 식별자 보내기를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
+| `campaign_id` | Required | 문자열 | [캠페인 API 식별자]({{site.baseurl}}/api/identifier_types/)을 참조하십시오. |
+| `send_id` | Required | 문자열 | [API 식별자 보내기를]({{site.baseurl}}/api/identifier_types/) 참조하세요. |
 | `length` | 필수 | 정수 | 반환된 시리즈에 포함할 `ending_at` 전 최대 일수. 1에서 100 사이여야 합니다(포함). |
 | `ending_at` | 선택 사항 | 날짜 시간 <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 문자열[)](https://en.wikipedia.org/wiki/ISO_8601)  | 데이터 시리즈가 종료되어야 하는 날짜. 요청 시점으로 기본 설정됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 ## 응답
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

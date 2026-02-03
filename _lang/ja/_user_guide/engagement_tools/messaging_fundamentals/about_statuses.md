@@ -1,7 +1,7 @@
 ---
 nav_title: ステータス
 article_title: キャンペーンとキャンバスのステータス
-page_order: 1
+page_order: 11
 description: "キャンペーンとキャンバスのステータスと、ダッシュボードでの使用方法について説明します。"
 tool:
     - Campaigns

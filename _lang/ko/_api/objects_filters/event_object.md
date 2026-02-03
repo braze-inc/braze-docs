@@ -1,5 +1,5 @@
 ---
-nav_title: "이벤트 개체"
+nav_title: "이벤트 객체"
 article_title: API 이벤트 객체
 page_order: 6
 page_type: reference
@@ -43,7 +43,7 @@ description: "이 참고 문서에서는 이벤트 객체의 정의와 이벤트
 ```
 
 - [외부 사용자 ID]({{site.baseurl}}/api/basics/#user-ids)
-- [앱 식별자]({{site.baseurl}}/api/identifier_types/)
+- [App identifier]({{site.baseurl}}/api/identifier_types/)
 - [ISO 8601 시간 코드](https://en.wikipedia.org/wiki/ISO_8601)
 
 #### 기존 프로필만 업데이트
@@ -71,6 +71,17 @@ Braze에서 기존 사용자 프로필만 업데이트하려면 요청 본문에
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 배열 또는 개체 값을 포함하는 이벤트 속성 개체는 최대 100KB의 이벤트 속성 페이로드를 가질 수 있습니다.
+
+### 예약 키
+
+다음 키는 예약되어 있으며 커스텀 이벤트 속성으로 사용할 수 없습니다:
+
+- `time`
+- `event_name`
+
+{% alert important %}
+예약된 키를 커스텀 이벤트 속성정보로 사용하면 `/users/track` 엔드포인트로 요청을 보낼 때 API 오류가 발생합니다.
+{% endalert %}
 
 ### 이벤트 속성 지속성
 

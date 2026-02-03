@@ -25,15 +25,15 @@ Los datos **generales de uso de los créditos de mensajes** se limitan al period
 
 El gráfico **Uso de créditos de mensajes durante el contrato** muestra tu uso durante el periodo de tiempo seleccionado. La granularidad de este gráfico depende del marco temporal que hayas seleccionado. Exporta las opciones de exportación seleccionando el menú de la esquina superior derecha del gráfico.
 
-![Panel general de uso de créditos para mensajes con secciones para el uso de créditos, resumen del contrato de créditos y consumo de créditos sobre el contrato.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
+![Panel general de uso de créditos de mensajes con secciones para el uso de créditos, resumen del contrato de créditos y consumo de créditos sobre el contrato.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
 
 ## SMS, MMS y RCS
 
-**SMS/MMS/RCS Uso de créditos** muestra el desglose de uso del canal SMS, MMS y RCS. Las columnas de la tabla de datos generalmente requieren que hayas comprado Créditos para mensajes (aunque Braze aún admite temporalmente modelos de facturación más antiguos), y las columnas **Ratio de crédito** y **Créditos** indican la tasa del país respectivo y los créditos consumidos. Además, los mosaicos de alto nivel indicarán el consumo total de SMS y, si procede, de MMS en el intervalo de fechas seleccionado.
+**Uso de créditos SMS/MMS/RCS** muestra el desglose de uso del canal SMS, MMS y RCS. Las columnas de la tabla de datos generalmente requieren que hayas comprado Créditos para mensajes (aunque Braze aún admite temporalmente modelos de facturación anteriores), y las columnas **Ratio de crédito** y **Créditos** indican la tasa del país respectivo y los créditos consumidos. Además, los mosaicos de alto nivel indicarán el consumo total de SMS y, cuando proceda, de MMS en el intervalo de fechas seleccionado.
 
 Hay filtros disponibles que te permiten filtrar por **País** o por tipo de SMS y RCS.
 
-![SMS/MSS/RCS Utilización de créditos con mosaicos para los datos de alto nivel y una sección para el consumo por cuenta.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
+![Consumo de créditos SMS/MSS/RCS con mosaicos para los datos de alto nivel y una sección para el consumo por cuenta.]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 A diferencia del **Resumen de uso de créditos para mensajes**, esta sección contiene datos históricos de periodos contractuales anteriores. 
 
@@ -41,7 +41,7 @@ A diferencia del **Resumen de uso de créditos para mensajes**, esta sección co
 Es posible seleccionar un intervalo de fechas que contenga tanto el uso sin créditos como el uso con créditos de los mensajes. En este caso, el consumo que se haya producido fuera de los créditos del mensaje mostrará `—` (nulo) en las columnas **Ratio de créditos** y **Créditos**.
 {% endalert %}
 
-![SMS/MMS/RCS Tabla de utilización de créditos con valores nulos.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
+![Tabla de uso de créditos SMS/MMS/RCS con valores nulos.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -64,5 +64,5 @@ Puedes filtrar tus datos por:
 Los datos que se muestran en el panel de **Uso de mensajes** son a nivel de contrato y no se limitan a una empresa o espacio de trabajo individual del panel. Estos datos reflejan el uso de todos los espacios de trabajo de tu panel, y potencialmente de todos los paneles (si tienes varios).
 {% endalert %}
 
-- Los datos subyacentes se proporcionan en una cadencia diaria, con las tablas de datos actualizadas a las 3 am, 9 am, 12 pm y 6 pm EST. 
+- Los datos subyacentes se proporcionan en una cadencia diaria, con las tablas de datos actualizadas a las 3 am, 9 am, 12 pm y 6 pm EST. El panel de **Uso de Mensajes** puede tardar más de 24 horas en actualizarse.
 - Braze sigue la metodología estándar de redondeo: las cifras se redondean a la décima más próxima.

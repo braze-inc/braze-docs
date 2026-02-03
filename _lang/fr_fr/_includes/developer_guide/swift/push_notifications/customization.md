@@ -4,7 +4,7 @@
 
 Le SDK Braze Swift offre une prise en charge de la gestion des URL pour les boutons d'action push. Il existe quatre ensembles de boutons d'action par défaut pour les catégories de notification push par défaut de Braze : `Accept/Decline`, `Yes/No`, `Confirm/Cancel` et `More`.
 
-![GIF d'un message push tiré vers le bas pour afficher deux boutons d'action personnalisables.]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
+![Un GIF d'un message push étant tiré vers le bas pour afficher deux boutons d'action personnalisables.]({% image_buster /assets/img_archive/iOS8Action.gif %}){: style="max-width:60%"}
 
 ### Enregistrement manuel des boutons d'action
 
@@ -16,7 +16,7 @@ Si vous configurez [les notifications push]({{site.baseurl}}/developer_guide/pus
 
 Toutefois, vous pouvez choisir d'enregistrer manuellement les boutons d'action push à la place.
 
-#### Étape 1 : Ajout des catégories de notification push par défaut de Braze {#registering}
+#### Étape 1 : Ajout des catégories de notification push par défaut de Braze {#registering}
 
 Utilisez le code suivant pour vous inscrire aux catégories push par défaut lorsque vous [vous inscrivez à push :]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#step-4-register-push-tokens-with-braze)
 
@@ -28,7 +28,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:BRZNotifications.categories];
@@ -53,7 +53,7 @@ AppDelegate.braze?.notifications.handleUserNotification(response: response, with
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [AppDelegate.braze.notifications handleUserNotificationWithResponse:response
@@ -71,7 +71,7 @@ En plus de fournir un ensemble de catégories de push par défaut, Braze prend e
 
 Voici un exemple qui tire parti du `LIKE_CATEGORY` affiché sur l’appareil :
 
-![Un message envoyant deux boutons d'action push "unlike" et "like".]({% image_buster /assets/img_archive/push_example_category.png %})
+![Un message de notification push affichant deux boutons d’action push « unlike » (je n’aime plus) et « like » (j’aime).]({% image_buster /assets/img_archive/push_example_category.png %})
 
 ### Étape 1 : Enregistrer une catégorie
 
@@ -94,7 +94,7 @@ UNUserNotificationCenter.current().setNotificationCategories(Braze.Notifications
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSMutableSet<UNNotificationCategory *> *categories = [BRZNotifications.categories mutableCopy];
@@ -136,7 +136,7 @@ Vous n'avez besoin de définir des catégories de notification personnalisées q
 3. Dans le menu déroulant **Catégorie de notification iOS**, sélectionnez **Entrez la catégorie iOS personnalisée préenregistrée**.
 4. Enfin, entrez l'une des catégories que vous avez créées plus tôt. L'exemple suivant utilise la catégorie personnalisée : `LIKE_CATEGORY`.
 
-![Le tableau de bord de la campagne de notification push avec la configuration des catégories personnalisées.]({% image_buster /assets/img_archive/ios-notification-category.png %})
+![Le tableau de bord de la campagne de notifications push avec la configuration des catégories personnalisées.]({% image_buster /assets/img_archive/ios-notification-category.png %})
 
 ## Personnalisation des badges
 
@@ -163,7 +163,7 @@ UIApplication.shared.applicationIconBadgeNumber = 0
 ```
 
 {% endtab %}
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // For iOS 16.0+
@@ -183,7 +183,7 @@ UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotification
 
 ## Personnalisation des sons
 
-### Étape 1 : Héberger le son dans votre application
+### Étape 1 : Héberger le son dans votre application
 
 Les sons de notification push personnalisés doivent être hébergés localement dans le bundle principal de votre application. Les formats de données audio suivants sont acceptés :
 
@@ -217,9 +217,9 @@ Vous devez spécifier une URL de protocole qui dirige vers l'emplacement/localis
 * Utilisez le paramètre `sound` de l'[objet Apple push]({{site.baseurl}}/api/objects_filters/messaging/apple_object#apple-push-object) pour transmettre l'URL à Braze.
 * Spécifiez l'URL dans le tableau de bord. Dans le [compositeur push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#step-3-select-notification-type-ios-and-android), sélectionnez **Paramètres** et saisissez l'URL du protocole dans le champ **Son.**  
 
-![Le compositeur poussé dans le tableau de bord de Braze]({% image_buster /assets/img_archive/sound_push_ios.png %})
+![Composeur de notifications push dans le tableau de bord de Braze]({% image_buster /assets/img_archive/sound_push_ios.png %})
 
-Si le fichier son spécifié n’existe pas ou si le mot-clé « default » est saisi, Braze utilisera le son d’alerte par défaut du appareil. En dehors de notre tableau de bord, le son peut également être configuré via notre [API d’envoi de messages][12].
+Si le fichier son spécifié n’existe pas ou si le mot-clé « default » est saisi, Braze utilisera le son d’alerte par défaut du appareil. Outre notre tableau de bord, le son peut également être configuré via notre [API d'envoi de messages][12].
 
 Pour plus d'informations, consultez la documentation du développeur Apple concernant [la préparation de sons d'alerte personnalisés](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html).
 

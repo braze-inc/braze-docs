@@ -41,7 +41,7 @@ Unsere Empfehlung lautet, immer die ausdrückliche Zustimmung zum Versand von E-
 
 {% if include.section == "email validation" %}
 
-Wenn der oder die Nutzer:in eine E-Mail-Adresse eingibt, die nicht akzeptierte Sonderzeichen enthält, wird eine allgemeine Fehlermeldung angezeigt und das Formular kann nicht gesendet werden. Diese Fehlermeldung ist nicht anpassbar. Sie können das Fehlerverhalten auf der Registerkarte **Vorschau & Test** und auf Ihrem Testgerät sehen. Erfahren Sie mehr darüber, wie Braze E-Mail-Adressen unter [E-Mail-Validierung]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) formatiert.
+Wenn der oder die Nutzer:in eine E-Mail-Adresse eingibt, die nicht akzeptierte Sonderzeichen enthält, wird eine allgemeine Fehlermeldung angezeigt und das Formular kann nicht gesendet werden. Diese Fehlermeldung ist nicht anpassbar. Sie können das Fehlerverhalten in der **Vorschau & ** Tab **Test** und auf Ihrem Gerät sehen. Erfahren Sie mehr darüber, wie Braze E-Mail-Adressen unter [E-Mail-Validierung]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/) formatiert.
 
 {% endif %}
 

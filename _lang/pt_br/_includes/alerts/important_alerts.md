@@ -1,7 +1,7 @@
 {% if include.alert == "Shopify deprecation" %}
 
 {% alert important %}
-Uma [nova versão da integração com o Shopify]({{site.baseurl}}/partners/shopify/#new-shopify-integration) será lançada em fases a partir de abril de 2025. As fases serão baseadas no tipo de loja Shopify e no ID externo usado para configurar a integração inicial. <br><br>**A versão antiga da integração não estará mais disponível após 28 de agosto de 2025. Atualize para a nova versão antes dessa data para continuar usando a integração sem problemas.**
+Uma [nova versão da integração Shopify]({{site.baseurl}}/partners/shopify/#new-shopify-integration) será lançada em fases a partir de abril de 2025. As fases serão baseadas no tipo de loja Shopify e no ID externo usado para configurar a integração inicial. <br><br>**A versão antiga da integração não estará mais disponível após 28 de agosto de 2025. Atualize para a nova versão antes desta data para continuar usando a integração sem problemas.**
 {% endalert %}
 
 {% endif %}
@@ -29,7 +29,7 @@ Para maior segurança, recomendamos adicionar nosso recurso de [autenticação d
 {% if include.alert == 'Preference Center warning' %}
 
 {% alert important %}
-Há determinados navegadores, como os apps Naver para Android e iOS, que não são compatíveis com a Central de Preferências Braze. Caso preveja que alguns de seus usuários usem esses navegadores, considere fornecer métodos alternativos para que eles gerenciem suas preferências de e-mail.
+Existem certos navegadores, como os aplicativos Naver Android e iOS, que não suportam o central de preferências da Braze. Caso preveja que alguns de seus usuários usem esses navegadores, considere fornecer métodos alternativos para que eles gerenciem suas preferências de e-mail.
 {% endalert %}
 
 {% endif %}
@@ -37,7 +37,15 @@ Há determinados navegadores, como os apps Naver para Android e iOS, que não s�
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-Os planos para eliminar gradualmente o evento de compra serão anunciados no final de 2025. A longo prazo, o evento de compra será substituído por novos [eventos recomendados de comércio eletrônico]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que virão com recursos aprimorados de segmentação, relatórios, análise de dados e muito mais. No entanto, os novos eventos de comércio eletrônico não serão compatíveis com os recursos existentes relacionados ao evento de compra, como o valor do tempo de vida (LTV) ou relatórios de receita em telas ou campanhas. Para obter uma lista completa de recursos relacionados a eventos de compra, consulte [Registro de eventos de compra]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+Os planos para descontinuar o evento de compra serão anunciados em 2026. O evento de compra será eventualmente substituído por novos [eventos recomendados de eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que virão com recursos aprimorados para segmentação, relatórios, análise de dados e mais. No entanto, os novos eventos de eCommerce não suportarão recursos existentes relacionados ao evento de compra, como valor do tempo de vida (LTV) ou relatórios de receita em Canvases ou campanhas. Para uma lista completa de recursos relacionados a eventos de compra, consulte [Registro de eventos de compra]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Purchase event deprecation for eCommerce filters' %}
+
+{% alert important %}
+Os planos para descontinuar o evento de compra serão anunciados em 2026. O evento de compra será eventualmente substituído por novos [eventos recomendados de eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que virão com recursos aprimorados para segmentação, relatórios, análise de dados e mais. Quando isso acontecer, os filtros de segmento não serão mais preenchidos sob o comportamento de compra. Para uma lista completa de eventos de compra, consulte [Registro de eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
 {% endalert %}
 
 {% endif %}
@@ -45,7 +53,7 @@ Os planos para eliminar gradualmente o evento de compra serão anunciados no fin
 {% if include.alert == 'S3 file bucket export' %}
 
 {% alert important %}
-Os arquivos de exportação armazenados em buckets S3 são automaticamente excluídos depois que o link de download expira (quatro horas a partir do envio do e-mail de exportação, salvo nota em contrário).
+Os arquivos exportados armazenados em buckets S3 são automaticamente excluídos após o link de download expirar (quatro horas a partir do envio do e-mail de exportação, a menos que indicado de outra forma).
 {% endalert %} 
 
 {% endif %}
@@ -53,7 +61,7 @@ Os arquivos de exportação armazenados em buckets S3 são automaticamente exclu
 {% if include.alert == 'Shopify customer create' %}
 
 {% alert important %}
-A integração do Shopify é compatível com os webhooks de criação e atualização de clientes do Shopify, que estão localizados em suas definições de configuração de dados. Quando um perfil de usuário é criado ou atualizado no Shopify, um perfil de usuário correspondente no Braze será criado ou atualizado. <br><br>Essas ações não disparam eventos personalizados no Braze e são usadas apenas para [sincronizar os dados de usuários do Shopify com o Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works). Os dados sincronizados incluem [atributos personalizados]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-custom-attributes), [atributos padrão]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-standard-attributes) e, se ativados em sua configuração, [estados do grupo de inscrições]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview#syncing-shopify-email-and-sms-marketing-opt-ins).
+A integração Shopify suporta webhooks de criação e atualização de clientes Shopify, que estão localizados nas configurações de configuração de dados. Quando um perfil de usuário é criado ou atualizado no Shopify, um perfil de usuário correspondente na Braze será criado ou atualizado. <br><br>Essas ações não disparam eventos personalizados na Braze e são usadas exclusivamente para [sincronizar dados de usuários do Shopify com a Braze]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview/#how-the-integration-works). Os dados sincronizados incluem [atributos personalizados]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-custom-attributes), [atributos padrão]({{site.baseurl}}/partners/ecommerce/shopify/shopify_data_features/#supported-shopify-standard-attributes), e, se habilitado em sua configuração, [estados de grupo de inscrições]({{site.baseurl}}/partners/ecommerce/shopify/shopify_overview#syncing-shopify-email-and-sms-marketing-opt-ins).
 {% endalert %}
 
 {% endif %}
@@ -61,7 +69,7 @@ A integração do Shopify é compatível com os webhooks de criação e atualiza
 {% if include.alert == 'context variable' %}
 
 {% alert important %}
-Se estiver participando do acesso antecipado ao Canvas Context, as propriedades de entrada do Canvas fazem parte das variáveis de contexto do Canvas. Isso significa que `canvas_entry_properties` agora é referenciado como `context`. Cada variável de contexto inclui um nome, um tipo de dados e um valor que pode incluir Liquid. Atualmente, o site `canvas_entry_properties` ainda é compatível com versões anteriores. Para obter mais detalhes, consulte [Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) e [objeto de contexto da tela]({{site.baseurl}}/api/objects_filters/context_object).
+Se você está participando do acesso antecipado ao Canvas Context, as propriedades de entrada do Canvas são parte das variáveis de contexto do Canvas. Isso significa que `canvas_entry_properties` agora é referenciado como `context`. Cada variável de contexto inclui um nome, um tipo de dados e um valor que pode incluir Liquid. Atualmente, `canvas_entry_properties` ainda são compatíveis com versões anteriores. Para mais detalhes, veja [Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) e [objeto de propriedades de entrada do Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endalert %}
 
 {% endif %}

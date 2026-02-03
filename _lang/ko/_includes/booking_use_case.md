@@ -1,23 +1,23 @@
-# 사용 사례: 예약 알림 이메일 시스템
+# Use case: 예약 알림 이메일 시스템
 
-> Braze는 프로그래밍적으로 제어할 수 있도록 설계된 종합 고객 참여 플랫폼입니다. 이 사용 사례에서는 Braze가 제품과 마케팅의 교차점에 있는 사용 사례에 연결할 수 있는 기능을 제공하는 몇 가지 방법을 보여줍니다. 예를 들어 예약 시스템과 같은 경우입니다.
+> Braze는 프로그래밍적으로 제어할 수 있도록 설계된 종합 고객 참여 플랫폼입니다. 이 사용 사례에서는 Braze가 제품과 마케팅의 교차점에 있는 사용 사례에 연결할 수 있는 기능을 제공하는 몇 가지 방법을 보여줍니다.
 
 이 사용 사례는 Braze 기능을 사용하여 예약 알림 이메일 메시징 서비스를 구축하는 방법을 보여줍니다. 이 서비스는 사용자가 약속을 예약할 수 있도록 하며, 다가오는 약속에 대한 알림 메시지를 사용자에게 전송합니다. 이 사용 사례는 이메일 메시지를 사용하지만, 사용자 프로필에 대한 단일 업데이트를 기반으로 모든 채널 또는 여러 채널에서 메시지를 보낼 수 있습니다.
 
 이 서비스를 생성하는 다른 이점은 다음과 같습니다:
 - 전송된 메시지는 전체 추적 및 보고 기능을 갖습니다.
-- 메시지 내용은 비기술적인 Braze 사용자에 의해 업데이트될 수 있습니다.
+- 비기술적인 Braze 사용자는 메시지 내용을 업데이트할 수 있습니다.
 - 메시지는 캠페인 구성에 따라 사용자 프로필의 옵트인 및 옵트아웃 상태를 준수합니다.
-- 예약 데이터와 메시지 상호작용 데이터 모두 추가 메시징을 위해 사용자를 세분화하고 타겟팅하는 데 사용할 수 있습니다. 예를 들어, 초기 알림 메시지를 열지 않은 사용자에게 약속 전에 추가 알림으로 리타겟팅할 수 있습니다.
+- 예약 데이터와 메시지 상호작용 데이터를 모두 사용하여 사용자를 세그먼트화하고 추가 메시지를 타겟팅할 수 있습니다. 예를 들어, 초기 알림 메시지를 열지 않은 사용자에게 약속 전에 추가 알림으로 리타겟할 수 있습니다.
 
-이 사용 사례를 달성하기 위해 다음 단계를 따르세요:
-1. [다가오는 예약 데이터를 Braze 사용자 프로필에 작성하기](#step-1)
-2. [예약 알림 메시지를 설정하고 시작하기](#step-2)
-3. [업데이트된 예약 및 취소 처리하기](#step-3)
+이 사용 사례를 달성하기 위해 다음 단계를 따르십시오:
+1. [Braze 사용자 프로필에 다가오는 예약 데이터를 작성하십시오](#step-1)
+2. [예약 알림 메시지를 설정하고 시작하십시오](#step-2)
+3. [업데이트된 예약 및 취소를 처리하십시오](#step-3)
 
-## 1단계: 다가오는 예약 데이터를 Braze 사용자 프로필에 작성하기 {#step-1}
+## 1단계: Braze 사용자 프로필에 다가오는 예약 데이터를 작성하십시오 {#step-1}
 
-Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 사용하여 예약이 발생할 때마다 사용자 프로필에 [중첩 고객 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)을 작성하세요. 중첩 고객 속성에는 알림 메시지를 전송하고 개인화하는 데 필요한 모든 정보가 포함되어야 합니다. 이 사용 사례에서는 중첩 고객 속성을 "여행"이라고 명명합니다.
+예약이 발생할 때마다 Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) 엔드포인트를 사용하여 사용자 프로필에 [중첩 고객 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support/)을 작성하십시오. 중첩 고객 속성이 알림 메시지를 전송하고 개인화하는 데 필요한 모든 정보를 포함하고 있는지 확인하세요. 이 사용 사례에서는 중첩 고객 속성의 이름을 "여행"으로 지정합니다.
 
 ### 예약 추가
 
@@ -42,7 +42,7 @@ Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/
 
 중첩 고객 속성 "여행"은 사용자 프로필에 다음과 같이 표시됩니다.
 
-![런던 여행과 시드니 여행을 위한 두 개의 중첩 고객 속성입니다.][1]{: style="max-width:70%;"}
+![런던 여행과 시드니 여행을 위한 두 개의 중첩 고객 속성입니다.]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
 ### 예약 업데이트
 사용자가 예약을 업데이트할 때, Braze에 데이터를 전송하기 위해 `/users/track` 엔드포인트를 통해 객체 배열의 다음 구조를 사용하십시오.
@@ -72,7 +72,7 @@ Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/
 ### 예약 제거
 
 {% tabs %}
-{% tab /users/track 엔드포인트 %}
+{% tab /users/track endpoint %}
 #### `/users/track` 엔드포인트를 통해 데이터 전송
 사용자가 예약을 삭제할 때, Braze에 데이터를 전송하기 위해 `/users/track` 엔드포인트를 통해 객체 배열의 다음 구조를 사용하십시오.
 
@@ -120,23 +120,23 @@ braze.getUser().setCustomUserAttribute("trips", json);
 {% endtab %}
 {% endtabs %}
 
-지정된 예약은 사용자 프로필의 중첩 고객 속성에서 제거되며 남아 있는 예약이 표시됩니다.
+Braze는 사용자 프로필의 중첩 고객 속성에서 지정된 예약을 제거하고 남아 있는 예약을 표시합니다.
 
 ![런던 여행을 위한 중첩 고객 속성입니다.]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
 ## 2단계: 예약 알림 메시지 설정 및 시작 {#step-2}
 
-### 2a 단계: 대상 오디언스 생성
+### Step 2a: 대상 오디언스 생성
 다중 기준 세분화를 사용하여 알림을 받을 대상 오디언스를 생성하십시오. 예를 들어, 예약 날짜 이틀 전에 알림을 보내고 싶다면 다음을 선택하세요:
 
 - 시작 날짜 **1일 이상** 및
 - 시작 날짜 **2일 미만** 
 
-![시작 날짜가 하루 이상이고 이틀 미만인 중첩 커스텀 속성 "trips"가 있는 경우.][3]
+![시작 날짜가 하루 이상이고 이틀 미만인 기준을 가진 중첩 고객 속성 "여행"입니다.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
-### 2b 단계: 메시지를 작성하세요
+### Step 2b: 메시지를 작성하세요
 
-[커스텀 HTML로 이메일 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)의 단계를 따라 알림 이메일 메시지를 만드세요. Liquid를 사용하여 이 예제와 같이 생성한 커스텀 고객 속성(“trips”)의 데이터로 메시지를 개인화하세요.
+[커스텀 HTML로 이메일 만들기]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/)의 단계를 따라 알림 이메일 메시지를 만드세요. Liquid를 사용하여 생성한 커스텀 고객 속성(“trips”)의 데이터로 메시지를 개인화하세요. 이 예와 같이요.
 
 {% raw %}
 ```liquid
@@ -153,15 +153,15 @@ You have the following booked in 2 days! Check the information below:
 ```
 {% endraw %}
 
-### 2c 단계: 캠페인을 시작하세요
+### Step 2c: 캠페인을 시작하세요
 
-알림 이메일 메시지 캠페인을 시작하세요. 이제 Braze가 “trips” 커스텀 속성을 받을 때마다, 각 예약 객체에 포함된 데이터에 따라 메시지가 예약됩니다.
+알림 이메일 메시지 캠페인을 시작하세요. 이제 Braze가 "여행" 커스텀 속성을 받을 때마다, Braze는 해당 예약 객체에 포함된 데이터에 따라 메시지를 예약합니다.
 
 ## 3단계: 업데이트된 예약 업데이트 및 취소 처리 {#step-3}
 
 이제 알림 메시지를 보내고 있으므로, 예약이 업데이트되거나 취소될 때 보낼 확인 메시지를 설정할 수 있습니다.
 
-### 3a 단계: 업데이트된 데이터 전송
+### Step 3a: 업데이트된 데이터 전송
 
 {% tabs %}
 {% tab /users/track %}
@@ -210,9 +210,9 @@ braze.logCustomEvent("trip_updated", {
 {% endtab %}
 {% endtabs %}
 
-### 3b단계: 업데이트를 확인하는 메시지를 작성하세요
+### Step 3b: 업데이트를 확인하는 메시지를 작성하세요.
 
-사용자에게 업데이트된 예약 확인을 보내기 위해 [행동 기반 캠페인]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)을 생성하세요. 예약의 이름, 이전 시간 및 새로운 시간을 반영하는 이벤트 속성을 템플릿화하기 위해 [Liquid을 사용할 수 있습니다]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) (또는 취소인 경우 이름만 사용).
+사용자에게 업데이트된 예약 확인을 보내기 위해 [행동 기반 캠페인]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/)을 생성하세요. 예약의 이름, 이전 시간 및 새로운 시간(또는 취소인 경우 이름만)을 반영하는 이벤트 속성을 템플릿화하기 위해 [Liquid을 사용할 수 있습니다]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) 메시지 자체에 포함하세요.
 
 예를 들어, 다음과 같은 메시지를 작성할 수 있습니다:
 
@@ -222,9 +222,9 @@ Hi {{${first_name}}}, you have successfully updated the date of your trip, {{eve
 ```
 {% endraw %}
 
-### 3단계 c: 업데이트를 반영하도록 사용자 프로필을 수정하세요
+### 3단계 c: 업데이트를 반영하도록 사용자 프로필을 수정하세요.
 
-마지막으로, 가장 최근 데이터에 따라 1단계 및 2단계에서 예약 알림을 보내기 위해 중첩된 커스텀 속성을 업데이트하여 예약의 변경 또는 취소를 반영하세요.
+마지막으로, 1단계와 2단계에서 예약 알림을 가장 최근 데이터에 따라 보내기 위해 중첩된 커스텀 속성을 업데이트하여 예약의 변경 또는 취소를 반영하세요.
 
 #### 업데이트된 예약
 
@@ -256,7 +256,7 @@ Hi {{${first_name}}}, you have successfully updated the date of your trip, {{eve
 
 #### 취소된 예약
 
-이 사용 사례에서 사용자가 시드니 여행을 취소한 경우, `/users/track` 엔드포인트에 다음 호출을 보냅니다:
+이 사용 사례에서 사용자가 시드니 여행을 취소한 경우, `/users/track` 엔드포인트에 다음 호출을 전송합니다:
 
 {% raw %}
 ```json
@@ -280,5 +280,3 @@ Hi {{${first_name}}}, you have successfully updated the date of your trip, {{eve
 
 이 호출이 전송되고 사용자 프로필이 업데이트된 후, 예약 알림 메시지는 사용자의 예약 날짜에 대한 최신 데이터를 반영합니다.
 
-[1]: {% image_buster /assets/img/use_cases/2_nested_attributes.png %}
-[3]: {% image_buster /assets/img/use_cases/custom_nested_attribute.png %}

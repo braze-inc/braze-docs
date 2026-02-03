@@ -216,7 +216,7 @@ Schließlich können Sie Ihre Deeplinks testen. Senden Sie sich selbst einen Lin
 ## Universelle Links, App Links und Click-Tracking
 
 {% alert note %}
-Click-Tracking-Links werden in der Regel als Teil Ihres Onboardings für E-Mails eingerichtet. Wenn dies beim Onboarding des Kunden nicht geschehen ist, wenden Sie sich bitte an Ihren Account Manager:in, um Hilfe zu erhalten.
+Click-Tracking-Links werden in der Regel als Teil Ihres Onboardings für E-Mails eingerichtet. Wenn dies nicht während des Onboarding der Kund:in geschehen ist, wenden Sie sich an Ihren Account Manager:in, um Hilfe zu erhalten.
 {% endalert %}
 
 Unsere Partner für das Versenden von E-Mails, SendGrid und SparkPost, verwenden Domains für das Click-Tracking, um alle Links zu verpacken und URL-Parameter für das Click-Tracking in E-Mails von Braze einzubinden.

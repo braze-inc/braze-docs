@@ -95,7 +95,7 @@ En la página **Campañas**, crea una nueva campaña y elige **Notificación pus
 
 Después de nombrar tu campaña, elige **Android Push** como plataforma push.
 
-![El compositor de creación de campañas que muestra las plataformas push disponibles.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
+![El compositor de creación de campañas muestra las plataformas push disponibles.]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
 
 A continuación, crea tu campaña push con un título y un mensaje.
 
@@ -103,7 +103,7 @@ A continuación, crea tu campaña push con un título y un mensaje.
 
 En la pestaña **Prueba**, introduce tu ID de usuario, que habrás configurado en tu aplicación utilizando el [método`changeUser(USER_ID_STRING)` ]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/#assigning-a-user-id), y haz clic en **Enviar prueba** para enviar un push de prueba.
 
-![La pestaña de prueba del compositor de creación de campañas muestra que puedes enviarte un mensaje de prueba a ti mismo proporcionando tu ID de usuario e introduciéndolo en el campo "Añadir usuarios individuales".]({% image_buster /assets/img/huawei/huawei-test-send.png %})
+![La pestaña de prueba del creador de campañas muestra que puedes enviarte un mensaje de prueba a ti mismo proporcionando tu ID de usuario e introduciéndolo en el campo "Añadir usuarios individuales".]({% image_buster /assets/img/huawei/huawei-test-send.png %})
 
 En este punto, deberías recibir una notificación push de prueba de Braze en tu dispositivo Huawei (HMS).
 
@@ -111,7 +111,7 @@ En este punto, deberías recibir una notificación push de prueba de Braze en tu
 
 Como tu aplicación de Huawei en el panel de Braze se basa en la plataforma push de Android, tienes la flexibilidad de enviar push a todos los usuarios de Android (Firebase Cloud Messaging y Huawei Mobile Services), o puedes elegir segmentar la audiencia de tu campaña en aplicaciones específicas.
 
-Para enviar push solo a las aplicaciones de Huawei, [crea un nuevo segmento]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) y selecciona tu aplicación de Huawei en la sección **Aplicaciones**.
+Para enviar push sólo a las aplicaciones de Huawei, [crea un nuevo segmento]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) y selecciona tu aplicación de Huawei en la sección **Aplicaciones**.
 
 ![]({% image_buster /assets/img/huawei/huawei-segmentation.png %})
 

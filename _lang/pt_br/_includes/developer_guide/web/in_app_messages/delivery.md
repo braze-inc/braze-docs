@@ -14,7 +14,7 @@ As mensagens no app não podem ser disparadas pela API ou por eventos da API - s
 
 Todas as mensagens no app elegíveis são enviadas para o dispositivo do usuário no início da sessão. Quando entregue, o SDK fará a pré-busca de ativos para que eles estejam disponíveis no momento do disparo, minimizando a latência da exibição. Se o evento de gatilho tiver mais de uma mensagem elegível no app, somente a mensagem com a prioridade mais alta será entregue.
 
-Para saber mais sobre a semântica de início de sessão do SDK, consulteSession[Lifecycle (Ciclo de vida]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/) da sessão).
+Para saber mais sobre a semântica de início de sessão do SDK, consulteSession[Lifecycle]({{site.baseurl}}/developer_guide/platform_integration_guides/analytics/tracking_sessions/).
 
 ### Limites de taxa
 

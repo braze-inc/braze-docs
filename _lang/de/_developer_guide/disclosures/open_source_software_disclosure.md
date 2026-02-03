@@ -1,5 +1,5 @@
 ---
-nav_title: Offenlegung von Open Source Software
+nav_title: Offenlegung von Open-Source-Software
 article_title: Offenlegung von Open Source Software
 page_order: 1
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: Feature flags en Canvas
+nav_title: Banderas de características en Canvas
 page_order: 30
 noindex: true
 tool: Feature Flags

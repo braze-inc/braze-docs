@@ -1,7 +1,7 @@
 ---
 nav_title: ユーザーのターゲット設定
 article_title: ターゲットユーザー
-page_order: 9
+page_order: 12
 page_type: reference
 description: "この参照記事では、キャンペーンエディターとキャンバスエディターでオーディエンスをターゲット設定する方法について説明します。"
 tool:

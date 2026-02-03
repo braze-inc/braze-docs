@@ -3,16 +3,16 @@ Todos os e-mails de transação são complementados com postbacks de status de e
 Você pode associar essas atualizações a mensagens individuais usando identificadores exclusivos:
 
 - `dispatch_id`: Um ID exclusivo que o Braze gera automaticamente para cada mensagem.
-- `external_send_id`: Um identificador personalizado fornecido por você, como um número de pedido, para combinar atualizações com seus sistemas internos.
+- `external_send_id`: Um identificador personalizado que você fornece, como um número de pedido, para combinar atualizações com seus sistemas internos.
 
-Por exemplo, se você incluir `external_send_id: 1234` na solicitação ao enviar um e-mail de confirmação de pedido, todos os postbacks de eventos subsequentes para esse e-mail - como `Sent` ou `Delivered`- incluirão `external_send_id: 1234`. Isso lhe permite confirmar se o cliente do pedido nº 1234 recebeu o e-mail de confirmação do pedido.
+Por exemplo, se você incluir `external_send_id: 1234` na solicitação ao enviar um e-mail de confirmação de pedido, todos os postbacks de eventos subsequentes para esse e-mail—como `Sent` ou `Delivered`—incluirão `external_send_id: 1234`. Isso permite que você confirme se o cliente do pedido #1234 recebeu seu e-mail de confirmação de pedido.
 
-### Configuração de postbacks
+### Configurando postbacks
 
-Em seu dashboard do Braze:
+No seu painel do Braze:
 
 1. Acesse **Configurações** > **Preferências de e-mail**.
-2. Em **Transactional Event Status Postback**, digite o URL para o qual o Braze deve enviar atualizações de status para seus e-mails de transação.
+2. Sob **Estado do Evento Transacional Postback**, insira a URL onde o Braze deve enviar atualizações de status para seus e-mails transacionais.
 3. Teste o postback.
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})

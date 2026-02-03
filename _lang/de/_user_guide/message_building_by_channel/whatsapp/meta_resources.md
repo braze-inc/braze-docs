@@ -1,7 +1,7 @@
 ---
 nav_title: Meta-Ressourcen
 article_title: Meta-Ressourcen
-page_order: 11
+page_order: 12
 description: "In diesem Artikel finden Sie hilfreiche Informationen von Meta zur WhatsApp-Integration."
 page_type: reference
 channel:
@@ -24,14 +24,14 @@ In der folgenden Meta-Dokumentation finden Sie Anleitungen zu Anzeigenamen, Tele
 ## WhatsApp-Produktupdates
 
 ### April 2025: Pause für Marketing Nachrichten an US-Telefonnummern
-*Letztes Update August 2025*
+*Zuletzt aktualisiert im August 2025*
 
 Meta unterbricht die Zustellung aller Marketing Template Nachrichten an Nutzer:innen von WhatsApp, die eine Telefonnummer in den USA haben (eine Nummer, die sich aus einer `+1` Vorwahl und einer US-Vorwahl zusammensetzt). Es gibt keinen aktuellen Zeitplan, wann diese Pause aufgehoben werden soll. 
 
 Jeder Versuch, ein Template an einen Nutzer:innen von WhatsApp mit einer US-Telefonnummer zu senden, führt zu der Fehlermeldung `131049`.
 
 ### März 2025: Nutzerspezifische Werbetemplate-Nachrichtenlimits
-*Letztes Update August 2025*
+*Zuletzt aktualisiert im August 2025*
 
 Meta begrenzt die Anzahl der Marketing Template Nachrichten, die ein Nutzer:innen innerhalb eines bestimmten Zeitraums in allen Unternehmen erhalten kann, und beginnt mit Nachrichten, die mit geringerer Wahrscheinlichkeit gelesen werden. 
 
@@ -156,7 +156,7 @@ Beachten Sie, dass WhatsApp bei der Bewertung der Template-Qualität dasselbe Sy
 
 Letztendlich bietet Ihnen dieses Update eine schnellere Feedbackschleife (30 Minuten gegenüber Stunden oder Tagen mit Vorlagenpausen), so dass Sie Ihre Vorlagen anpassen und ein besseres Kundenerlebnis bieten können.
 
-**Falls Sie Fragen zu dem Update haben, wenden Sie sich bitte an Ihren Meta-Partner.**
+**Wenn Sie weitere Fragen zu diesem Update haben, wenden Sie sich an die Vertretung Ihres Meta Partners.**
 
 ### Juni 2023: Versuchsphase 
 *Zuletzt aktualisiert im Juni 2023*
