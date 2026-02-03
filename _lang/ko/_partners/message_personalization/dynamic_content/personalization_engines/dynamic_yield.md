@@ -1,7 +1,7 @@
 ---
 nav_title: Dynamic Yield
 article_title: Dynamic Yield
-description: "This reference article outlines the partnership between Braze and Dynamic Yield. This partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages."
+description: "This reference article outlines the partnership between Braze and Dynamic Yield. 이번 파트너십을 통해 Dynamic Yield의 추천 및 세분화 엔진을 사용하여 Braze 메시지에 삽입할 수 있는 경험 블록을 만들 수 있습니다."
 alias: /partners/dynamic_yield/
 page_type: partner
 search_tag: Partner
@@ -14,9 +14,9 @@ search_tag: Partner
 
 _This integration is maintained by Dynamic Yield._
 
-## About the integration
+## 통합 정보
 
-The Braze and Dynamic Yield partnership allows you to leverage Dynamic Yield's recommendation and segmentation engine to create Experience Blocks that can be embedded into Braze messages. Experience blocks can be made of:
+Braze와 Dynamic Yield의 파트너십을 통해 Dynamic Yield의 추천 및 세분화 엔진을 사용하여 Braze 메시지에 삽입할 수 있는 경험 블록을 만들 수 있습니다. Experience blocks can be made of:
 - **Recommendations blocks**: Set algorithms and filtering to source users' personalized content that propagates when the email is opened. 
 - **Dynamic Content Blocks**: Target different promotions and messages to different users. Targeting can be based on either affinity or audience. Dynamic Yield determines which personalized experience to serve when the email is opened. 
 
@@ -35,7 +35,7 @@ To create an Experience Block in Dynamic Yield, navigate to **Email > Experience
 
 Next, select **Create Experience Block** to design a Dynamic Content or Recommendations block to embed inside a Braze email template.<br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield7.png %})
 
-### Step 2: Draft your messaging
+### 2단계: Draft your messaging
 
 The following image shows an email from scratch in the builder.<br>![]({% image_buster /assets/img/dynamic_yield/dynamic_yield5.png %})
 
@@ -70,7 +70,7 @@ Use Dynamic Content to target different promotions and messages to different use
 5. Set the priorities for your variations using the up and down arrows. <br><br> 
 6. Priorities determine which variation is served when a user is eligible for more than one experience.
 
-### Step 3: Integrate your Email with Braze
+### 3단계: 이메일을 Braze와 통합하기
 
 This integration allows you to add personalized recommendation widgets and dynamic content powered by Dynamic Yield into your Braze email campaigns. Embedding these campaigns into Braze campaigns is done with a simple embed code that you paste into the Braze email editor.
 

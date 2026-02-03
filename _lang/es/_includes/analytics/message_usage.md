@@ -64,5 +64,5 @@ Puedes filtrar tus datos por:
 Los datos que se muestran en el panel de **Uso de mensajes** son a nivel de contrato y no se limitan a una empresa o espacio de trabajo individual del panel. Estos datos reflejan el uso de todos los espacios de trabajo de tu panel, y potencialmente de todos los paneles (si tienes varios).
 {% endalert %}
 
-- Los datos subyacentes se proporcionan en una cadencia diaria, con las tablas de datos actualizadas a las 3 am, 9 am, 12 pm y 6 pm EST. El panel de **Uso de Mensajes** puede tardar más de 24 horas en actualizarse.
+- Los datos subyacentes se proporcionan en una cadencia diaria, con las tablas de datos actualizadas a las 3 am, 9 am, 12 pm y 6 pm EST. El panel de **Uso de mensajes** puede tardar más de 48 horas en actualizarse tras los cambios para dar tiempo a que se sincronicen los datos.
 - Braze sigue la metodología estándar de redondeo: las cifras se redondean a la décima más próxima.

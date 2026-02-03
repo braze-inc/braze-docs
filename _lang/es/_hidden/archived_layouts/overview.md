@@ -8,7 +8,7 @@ noindex: true
 
 > El diseño de resumen es bueno para crear una opción de navegación específica en la parte superior de una página que permita a los usuarios hacer clic en un botón para viajar a una parte concreta de una página o a otra completamente distinta.
 
-Ejemplos clásicos del diseño del SELECTOR son la página [de registros de cambios del SDK](https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_changelogs/) o [la página de detalles creativos de mensajes dentro de la aplicación](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/).
+Ejemplos clásicos del diseño del SELECTOR son la página [de registros de cambios del SDK](https://www.braze.com/docs/developer_guide/changelogs) o [la página de detalles creativos de mensajes dentro de la aplicación](https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
 ## Componentes necesarios
 

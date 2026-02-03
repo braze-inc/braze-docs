@@ -175,7 +175,7 @@
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>주요 전환(A)</i> 또는 <i>주요 전환 이벤트</i>는 Braze 캠페인에서 메시지를 수신하거나 본 후 정의된 이벤트를 수행하는 고유 사용자 수입니다. 이 이벤트는 캠페인을 설정할 때 선택되며 보고 및 최적화를 위한 주요 성공 지표로 사용됩니다.
+<i>주요 전환(A)</i> 또는 <i>주요 전환 이벤트</i>는 Braze 캠페인에서 메시지를 수신하거나 본 후 정의된 이벤트를 수행하는 고유 사용자 수입니다. 이 이벤트는 캠페인을 설정할 때 귀하가 선택하며, 보고 및 최적화를 위한 주요 성공 지표로 사용됩니다.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -251,12 +251,12 @@
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>고유 클릭수</i>는 메시지 내의 링크를 최소한 한 번 클릭한 수신자의 고유 수이며 <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>로 측정됩니다.
+<i>고유 클릭 수</i>는 메시지 내의 링크를 최소한 한 번 클릭한 수신자의 고유 수이며, <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>에 의해 측정됩니다.
 {% endif %}
 
 <!-- Pull channels like Banners that don't have a Dispatch ID-->
 {% if include.metric == "Unique Clicks No Dispatch ID" %}
-<i>고유 클릭수</i>는 메시지 내의 링크를 최소한 한 번 클릭한 수신자의 고유 수입니다.
+<i>고유 클릭 수</i>는 메시지 내의 링크를 최소한 한 번 클릭한 수신자의 고유 수입니다.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
