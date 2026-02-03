@@ -1,5 +1,5 @@
 ---
-nav_title: リキッドコード
+nav_title: Liquidコード
 article_title: BrazeAIでLiquidコードを生成する
 description: "この記事では、AI Liquid アシスタントの仕組みと、それを使用したメッセージング用の Liquid スニペットの生成方法について説明します。"
 page_type: reference

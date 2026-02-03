@@ -7,7 +7,7 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Verbinden von LiveRamp, Snowflake und Braze
+# Verbinden Sie LiveRamp, Snowflake und Braze
 
 > Erfahren Sie, wie Sie LiveRamp, Snowflake und Braze miteinander verbinden können, um hochgradig personalisierte und relevante Kampagnen zu erstellen, indem Sie die Zeit bis zu Insights verkürzen, Datensilos aufbrechen und das Customer-Engagement optimieren. Die Integration verbessert das datengesteuerte Marketing, indem sie verwertbare personenbezogene Erkenntnisse liefert und Verbraucherkontakte konsolidiert, um eine bessere Zielgruppensegmentierung und zeitnahe Kampagnen zu ermöglichen. Außerdem nutzt es die von Snowflake bereitgestellten Benchmarks, um Ihre Marketing Strategien im Vergleich zu Branchenstandards zu verfeinern.
 
@@ -27,14 +27,14 @@ Die [sichere Datenfreigabe](https://docs.snowflake.com/en/user-guide/data-sharin
 | Voraussetzung       | Beschreibung                                                                                                                                                                                     |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Snowflake Konto | Sie benötigen ein Snowflake-Konto mit Admin-Rechten.                                                                                                                                      |
-| LiveRamp Konto  | Wenden Sie sich an Ihr LiveRamp Account Team oder an [snowflake@liveramp.com](mailto:snowflake@liveramp.com), um die erforderlichen LiveRamp-Anwendungen in Snowflake zu besprechen.                              |
+| LiveRamp Konto  | Wenden Sie sich an Ihr LiveRamp-Kontoteam oder an [snowflake@liveramp.com](mailto:snowflake@liveramp.com), um die erforderlichen LiveRamp-Anwendungen in Snowflake zu besprechen.                              |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Einrichten der Integration
 
 ### Schritt 1: Anfrage zur Freigabe von Daten bei Braze
 
-Wenden Sie sich zunächst an Ihren Braze Account Manager oder Customer-Success-Manager, um einen Snowflake Data Share Connector für Ihr Braze-Konto zu erwerben. Wenn Sie eine Datenfreigabe anfragen, wird Braze die Freigabe von dem/den Workspace(s) aus bereitstellen, in dem/denen die Freigabe erworben wurde. Nachdem die Freigabe bereitgestellt wurde, sind alle Daten sofort von Ihrer Snowflake Instanz aus in Form einer eingehenden Datenfreigabe zugänglich. Sobald die Freigabe in Ihrer Instanz sichtbar ist, erstellen Sie eine Datenbank aus der Freigabe, damit Sie die Tabellen sehen und abfragen können.
+Wenden Sie sich zunächst an Ihren Braze Account Manager oder Customer-Success-Manager:in, um einen Snowflake Data Share Connector für Ihr Braze-Konto zu erwerben. Wenn Sie eine Datenfreigabe anfragen, wird Braze die Freigabe von dem/den Workspace(s) aus bereitstellen, in dem/denen die Freigabe erworben wurde. Nachdem die Freigabe bereitgestellt wurde, sind alle Daten sofort von Ihrer Snowflake Instanz aus in Form einer eingehenden Datenfreigabe zugänglich. Sobald die Freigabe in Ihrer Instanz sichtbar ist, erstellen Sie eine Datenbank aus der Freigabe, damit Sie die Tabellen sehen und abfragen können.
 
 Eine vollständige Anleitung finden Sie in der [Anleitung zur Integration von Snowflake mit Braze]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/).
 
@@ -89,7 +89,7 @@ Da Ihre Variablen nun festgelegt sind, erstellen Sie die Metadatentabelle für d
 Führen Sie schließlich den Vorgang der Identitätsauflösung durch. Eine vollständige Übersicht finden Sie unter [LiveRamp: Führen Sie die Operation zur Identitätsauflösung durch](https://docs.liveramp.com/identity/en/perform-identity-resolution-in-snowflake.html#perform-the-identity-resolution-operation).
 
 {% tabs local %}
-{% tab Beispieleingabe %}
+{% tab example input %}
 ```sql
 call lr_resolution_and_transcoding(
 $customer_input_table_name,
@@ -101,7 +101,7 @@ $customer_metrics_table_name
 ```
 {% endtab %}
 
-{% tab Beispiel-Ausgabe %}
+{% tab example output %}
 ```sql
 call check_for_output(
 $output_table_name
@@ -112,12 +112,12 @@ $output_table_name
 
 ### Nächste Schritte
 
-Da Ihre Daten nun mit Ihrer eigenen RampID-Kodierung pseudonymisiert sind, haben Sie die Möglichkeit, die RampID-basierten Tabellen an die Managed Activation Application von LiveRamp weiterzugeben, um die Abwicklung mit Ihren wichtigsten Partnern der Werbeplattform zu optimieren. Die Aktivierungsanwendung enthält eine benutzerfreundliche Schnittstelle für die zusätzliche Segmentierung und Auswahl/Konfiguration von nachgelagerten Zielpartnern. Für weitere Details zur Anwendung wenden Sie sich bitte an Ihr LiveRamp Account Team oder an [snowflake@liveramp.com](mailto:snowflake@liveramp.com).
+Da Ihre Daten nun mit Ihrer eigenen RampID-Kodierung pseudonymisiert sind, haben Sie die Möglichkeit, die RampID-basierten Tabellen an die Managed Activation Application von LiveRamp weiterzugeben, um die Abwicklung mit Ihren wichtigsten Partnern der Werbeplattform zu optimieren. Die Aktivierungsanwendung enthält eine benutzerfreundliche Schnittstelle für die zusätzliche Segmentierung und Auswahl/Konfiguration von nachgelagerten Zielpartnern. Weitere Einzelheiten zur Anwendung erhalten Sie von Ihrem LiveRamp Account Team oder von [snowflake@liveramp.com](mailto:snowflake@liveramp.com).
 
 ## Fehlersuche
 
 {% alert note %}
-Wenn Sie spezielle Probleme oder Fragen haben, wenden Sie sich an [martech@liveramp.com](mailto:martech@liveramp.com).
+Wenn Sie spezifischere Probleme oder Fragen haben, wenden Sie sich an [martech@liveramp.com](mailto:martech@liveramp.com).
 {% endalert %}
 
 ### Snowflake Regionen

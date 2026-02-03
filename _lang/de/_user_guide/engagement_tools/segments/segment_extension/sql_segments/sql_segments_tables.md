@@ -29,7 +29,6 @@ Tabelle | Beschreibung
 [USERS_BEHAVIORS_UNINSTALL_SHARED](#USERS_BEHAVIORS_UNINSTALL_SHARED) | Wenn ein Benutzer eine App deinstalliert
 [USERS_BEHAVIORS_UPGRADEDAPP_SHARED](#USERS_BEHAVIORS_UPGRADEDAPP_SHARED) | Wenn ein:e Nutzer:in die App aktualisiert
 [USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED](#USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED) | Wenn ein:e Nutzer:in seine oder ihre erste Sitzung hat
-[USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | Wenn ein Nutzer den News Feed anschaut
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | Wenn ein Benutzer eine Sitzung in einer App beendet
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | Wenn ein Benutzer eine Sitzung in einer App beginnt
 [USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | Wenn ein:e Nutzer:in einen Geofence-Bereich auslöst (z. B. wenn er oder sie einen Geofence aufruft oder verlässt). Dieses Event wurde mit anderen Events zusammengefasst und über den Endpunkt für Standard-Events empfangen. Daher kann es sein, dass der Endpunkt es nicht in Echtzeit empfangen hat.
@@ -66,13 +65,10 @@ Tabelle | Beschreibung
 [USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | Eine ursprünglich geplante In-App-Nachricht wurde aus irgendeinem Grund abgebrochen.
 [USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED](#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED) | Wenn ein Benutzer auf eine In-App-Nachricht klickt
 [USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED](#USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED) | Wenn ein Nutzer eine In-App-Nachricht anschaut
-[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | Eine ursprünglich geplante News-Feed-Kartennachricht wurde aus irgendeinem Grund abgebrochen.
-[USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED) | Wenn ein Benutzer auf eine News-Feed-Karte klickt
-[USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED) | Wenn ein Benutzer eine News-Feed-Karte ansieht
 [USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | Eine ursprünglich geplante Push-Benachrichtigung wurde aus irgendeinem Grund abgebrochen.
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | Wenn eine Push-Benachrichtigung abprallt
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | Wenn ein Benutzer die App nach Erhalt einer Benachrichtigung öffnet, ohne auf die Benachrichtigung zu klicken
-[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | Wenn ein Benutzer eine Push-Benachrichtigung erhält, während die App geöffnet ist
+[USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED) | Wenn ein Nutzer:innen eine Push-Benachrichtigung erhält, während die App geöffnet ist. <br><br>Dieses Ereignis wird vom [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) nicht unterstützt und ist im [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) veraltet.
 [USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_OPEN_SHARED) | Wenn ein Benutzer eine Push-Benachrichtigung öffnet oder auf eine Push-Benachrichtigungsschaltfläche klickt (einschließlich einer SCHLIESSEN-Schaltfläche, die die App NICHT öffnet). <br><br> Aktionen auf Knopfdruck haben mehrere Auswirkungen. Aktionen wie „Nein“, „Ablehnen“ und „Abbrechen“ werden durch Klicken ausgeführt, während Aktionen wie „Akzeptieren“ durch Öffnen ausgeführt werden. Beide sind in dieser Tabelle vertreten, aber sie lassen sich in der **BUTTON_ACTION_TYPE** Spalte. Beispielsweise kann eine Abfrage verwendet werden, um nach einem `BUTTON_ACTION_TYPE` zu gruppieren, bei dem es sich nicht um „Nein“, „Ablehnen“ und „Abbrechen“ handelt.
 [USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_SEND_SHARED) | Wenn wir eine Push-Benachrichtigung an einen Benutzer senden
 [USERS_MESSAGES_SMS_ABORT_SHARED](#USERS_MESSAGES_SMS_ABORT_SHARED) | Eine ursprünglich geplante SMS-Nachricht wurde aus irgendeinem Grund abgebrochen.
@@ -235,23 +231,6 @@ Feld | Typ | Beschreibung
 `language` | `null,` `string` | [PII] Sprache des Nutzers:innen
 `device_id` | `null,` `string` | ID des Geräts, auf dem die Sitzung stattgefunden hat
 `sdk_version` | `null,` `string` | Version des Braze-SDK, die während der Sitzung verwendet wird
-`platform` | `null,` `string` | Plattform des Geräts
-`os_version` | `null,` `string` | Version des Betriebssystems des Geräts
-`device_model` | `null,` `string` | Modell des Geräts
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED {#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED}
-
-Feld | Typ | Beschreibung
-------|------|------------
-`id` | `string` | Globale eindeutige ID für dieses Event
-`user_id` | `string` | Braze ID des Benutzers, der den News Feed angesehen hat
-`external_user_id` | `null,` `string` | [PII] Externe ID des Nutzers:innen
-`app_group_api_id` | `null,` `string` | API-ID des Arbeitsbereichs, zu dem dieser Benutzer gehört
-`app_api_id` | `null,` `string` | API-ID der App, mit der der Benutzer den News Feed angesehen hat
-`time` | `int` | Unix-Zeitstempel, zu dem der Benutzer den News Feed angesehen hat
-`device_id` | `null,` `string` | ID des Geräts, auf dem die Impression stattgefunden hat
-`sdk_version` | `null,` `string` | Version des Braze SDK, die während des Abdrucks verwendet wird
 `platform` | `null,` `string` | Plattform des Geräts
 `os_version` | `null,` `string` | Version des Betriebssystems des Geräts
 `device_model` | `null,` `string` | Modell des Geräts
@@ -1254,83 +1233,6 @@ Feld | Typ | Beschreibung
 `ad_tracking_enabled` | `null, boolean` | Ob die Werbeverfolgung für das Gerät aktiviert ist
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-### USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED}
-
-Feld | Typ | Beschreibung
-------|------|------------
-`id` | `string` | Globale eindeutige ID für dieses Event
-`user_id` | `string` | Braze-ID des Nutzers oder der Nutzerin, der oder die dieses Event durchgeführt hat
-`external_user_id` | `null,` `string` | [PII] Externe ID des Nutzers:innen
-`app_group_api_id` | `null,` `string` | API-ID des Arbeitsbereichs, zu dem dieser Benutzer gehört
-`time` | `int` | Unix-Zeitstempel, zu dem das Ereignis eingetreten ist
-`app_api_id` | `null,` `string` | API-ID der App, in der dieses Ereignis aufgetreten ist
-`card_api_id` | `null,` `string` | API-ID der Karte
-`gender` | `null,` `string` | [PII] Geschlecht der Nutzer:innen
-`country` | `null,` `string` | [PII] Land des Nutzers:innen
-`timezone` | `null,` `string` | Zeitzone des Benutzers
-`language` | `null,` `string` | [PII] Sprache des Nutzers:innen
-`device_id` | `null,` `string` | ID des Geräts, auf dem das Event aufgetreten ist
-`sdk_version` | `null,` `string` | Version des Braze-SDK, die während des Events verwendet wird
-`platform` | `null,` `string` | Plattform des Geräts
-`os_version` | `null,` `string` | Version des Betriebssystems des Geräts
-`device_model` | `null,` `string` | Modell des Geräts
-`resolution` | `null,` `string` | Auflösung des Geräts
-`carrier` | `null,` `string` | Netzbetreiber des Geräts
-`browser` | `null,` `string` | Browser des Geräts
-`abort_type` | `null,` `string` | Typ des Abbruchs, einer von: `liquid_abort_message` oder `rate_limit`
-`abort_log` | `null,` `string` | [PII] Protokollnachricht, die Details zum Abbruch beschreibt (maximal 2.000 Zeichen)
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED}
-
-Feld | Typ | Beschreibung
-------|------|------------
-`id` | `string` | Globale eindeutige ID für dieses Event
-`user_id` | `string` | Braze-ID des Nutzers oder der Nutzerin, der oder die dieses Event durchgeführt hat
-`external_user_id` | `null,` `string` | [PII] Externe ID des Nutzers:innen
-`app_group_api_id` | `null,` `string` | API-ID des Arbeitsbereichs, zu dem dieser Benutzer gehört
-`time` | `int` | Unix-Zeitstempel, zu dem das Ereignis eingetreten ist
-`app_api_id` | `null,` `string` | API-ID der App, in der dieses Ereignis aufgetreten ist
-`card_api_id` | `null,` `string` | API-ID der Karte
-`gender` | `null,` `string` | [PII] Geschlecht der Nutzer:innen
-`country` | `null,` `string` | [PII] Land des Nutzers:innen
-`timezone` | `null,` `string` | Zeitzone des Benutzers
-`language` | `null,` `string` | [PII] Sprache des Nutzers:innen
-`device_id` | `null,` `string` | ID des Geräts, auf dem das Event aufgetreten ist
-`sdk_version` | `null,` `string` | Version des Braze-SDK, die während des Events verwendet wird
-`platform` | `null,` `string` | Plattform des Geräts
-`os_version` | `null,` `string` | Version des Betriebssystems des Geräts
-`device_model` | `null,` `string` | Modell des Geräts
-`resolution` | `null,` `string` | Auflösung des Geräts
-`carrier` | `null,` `string` | Netzbetreiber des Geräts
-`browser` | `null,` `string` | Browser des Geräts
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED}
-
-Feld | Typ | Beschreibung
-------|------|------------
-`id` | `string` | Globale eindeutige ID für dieses Event
-`user_id` | `string` | Braze-ID des Nutzers oder der Nutzerin, der oder die dieses Event durchgeführt hat
-`external_user_id` | `null,` `string` | [PII] Externe ID des Nutzers:innen
-`app_group_api_id` | `null,` `string` | API-ID des Arbeitsbereichs, zu dem dieser Benutzer gehört
-`time` | `int` | Unix-Zeitstempel, zu dem das Ereignis eingetreten ist
-`app_api_id` | `null,` `string` | API-ID der App, in der dieses Ereignis aufgetreten ist
-`card_api_id` | `null,` `string` | API-ID der Karte
-`gender` | `null,` `string` | [PII] Geschlecht der Nutzer:innen
-`country` | `null,` `string` | [PII] Land des Nutzers:innen
-`timezone` | `null,` `string` | Zeitzone des Benutzers
-`language` | `null,` `string` | [PII] Sprache des Nutzers:innen
-`device_id` | `null,` `string` | ID des Geräts, auf dem das Event aufgetreten ist
-`sdk_version` | `null,` `string` | Version des Braze-SDK, die während des Events verwendet wird
-`platform` | `null,` `string` | Plattform des Geräts
-`os_version` | `null,` `string` | Version des Betriebssystems des Geräts
-`device_model` | `null,` `string` | Modell des Geräts
-`resolution` | `null,` `string` | Auflösung des Geräts
-`carrier` | `null,` `string` | Netzbetreiber des Geräts
-`browser` | `null,` `string` | Browser des Geräts
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
 ### USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED}
 
 Feld | Typ | Beschreibung
@@ -1428,6 +1330,10 @@ Feld | Typ | Beschreibung
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED}
+
+{% alert important %}
+Dieses Ereignis wird vom [Swift SDK](https://github.com/braze-inc/braze-swift-sdk) nicht unterstützt und ist im [Obj-C SDK](https://github.com/Appboy/appboy-ios-sdk) veraltet.
+{% endalert %}
 
 Feld | Typ | Beschreibung
 ------|------|------------

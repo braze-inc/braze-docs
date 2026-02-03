@@ -20,23 +20,23 @@ In dieser Anleitung erfahren Sie, wie Camila:
 - Erstellt ein Modell zur Prognose der Abwanderung auf der Grundlage des Verhaltens der Nutzer:in
 - Segmentierung der Nutzer:innen nach Risikoniveau
 - Entwickelt eine Kampagne zur erneuten Interaktion, die auf die am meisten gefährdeten Personen zugeschnitten ist
-- Bewertet die Wirkung mithilfe von Analytics für Kampagnen
+- Bewertung der Wirkung mithilfe von Analytics für Kampagnen
 
 ## Schritt 1: Erstellen Sie ein Modell zur Prognose der Abwanderung
 
 Camila beginnt mit der Modellierung des Ergebnisses, das sie vermeiden möchte: Nutzer:innen werden inaktiv. Für MovieCanon bedeutet Abwandern, dass ein Stream nicht innerhalb von 14 Tagen gestartet wird - das ist also das Verhalten, das sie prognostizieren möchte.
 
-1. Auf dem Braze-Dashboard geht Camila zu **Analytics** > Predictive Churn.
+1. Im Braze-Dashboard geht Camila zu **Analytics** > Voraussichtliche Abwanderung.
 2. Sie erstellt eine neue Prognose für die Abwanderung und nennt sie "Abwanderungsrisiko in 2 Wochen".
 3. Um die Abwanderung zu definieren, wählt sie `do not` und das angepasste Event `stream_started`, das aktives Engagement anzeigt.
 4. Sie setzt das Prognose-Fenster auf 14 Tage - das heißt, das Modell wird Nutzer:innen identifizieren, die wahrscheinlich 14 Tage lang keinen neuen Stream starten.
 
-![Churn-Definition, die zeigt, dass ein Nutzer:in den letzten 14 Tagen kein angepasstes Event "stream_started" durchgeführt hat.]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
+![Abwanderungsdefinition: Nutzer:in, die in den letzten 14 Tagen kein angepasstes Event "stream_started" durchgeführt haben.]({% image_buster /assets/img/ai_use_cases/churn_definition.png %})
 
 {:start="5"}
 5\. Sie wählt eine Zielgruppe für Prognosen aus, die alle Nutzer:innen umfasst, die in den letzten 30 Tagen relevante Ereignisse getriggert haben, so dass das Modell aus dem jüngsten Verhalten lernen kann.
 6\. Sie stellt den Zeitplan für das Update der Prognosen auf wöchentlich, damit die Ergebnisse aktuell bleiben.
-7\. Sie wählt die Option **Prognose erstellen** aus.
+7\. Sie wählt die Option **Prognose erstellen**.
 
 Das Modell beginnt dann zu trainieren, indem es Verhaltensweisen wie die letzten Sitzungen, die Häufigkeit des Betrachtens und die Interaktionen mit Inhalten analysiert, um Muster zu erkennen, die den Abbruch prognostizieren. Camila erhält eine Stunde später eine E-Mail, dass ihre Prognose das Training abgeschlossen hat. Sie öffnet sie in Braze und überprüft die [Qualitätsbewertung der Prognose]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#prediction_quality). Es ist mit "Gut" gekennzeichnet, was bedeutet, dass die Prognosen des Modells wahrscheinlich genau und zuverlässig sind. Sie ist von der Performance des Modells überzeugt und geht weiter.
 
@@ -50,7 +50,7 @@ Um einen Anfangsschwellenwert für das Targeting festzulegen, verwendet Camila d
 2. Sie erstellt ein [Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) mithilfe des [Filters Churn Risk Score]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#churn-risk-score) und wählt die von ihr erstellte Prognose zur Abwanderung aus:
    - **Wahrscheinlich abwandern:** Ergebnis mehr als 70
 
-Segmentierung für Nutzer:innen mit einem Abwanderungsrisiko von mehr als 70.]({% image_buster /assets/img/ai_use_cases/churn_risk_score.png %})
+![Segmentierung von Nutzern:innen mit einem Churn-Risiko-Score von mehr als 70.]({% image_buster /assets/img/ai_use_cases/churn_risk_score.png %})
 
 ## Schritt 3: Targeting gefährdeter Nutzer:innen mit Inhalten zur erneuten Interaktion
 
@@ -82,9 +82,9 @@ Sie sieht:
 - *Klickrate:* 15%
 - *Konversionsrate* (gestarteter Stream innerhalb von 48 Stunden): 11%
 
-Verglichen mit der alten Kampagne "Wir vermissen Sie" (bei der die Konversionsraten um die 3 % lagen), reduziert dieser neue Fluss die ABWANDERUNG VERRINGERN in der Zielgruppe um 28 %. Sie schaut sich den [Funnel-Bericht]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) an, um zu sehen, wo Nutzer:innen abspringen. Während die Öffnungs- und Klickraten gut sind, bemerkt sie eine leichte Reibung zwischen Klick und Konversion - was sie dazu veranlasst, CTA-Texte zu testen oder mit dem Layout zu experimentieren.
+Verglichen mit der alten Kampagne "Wir vermissen Sie" (bei der die Konversionsraten um die 3% lagen), senkt dieser neue Fluss die ABWANDERUNG VERRINGERN in der Zielgruppe um 28%. Sie schaut sich den [Funnel-Bericht]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/) an, um zu sehen, wo Nutzer:innen abspringen. Während die Öffnungs- und Klickraten gut sind, bemerkt sie eine leichte Reibung zwischen Klick und Konversion - was sie dazu veranlasst, CTA-Texte zu testen oder mit dem Layout zu experimentieren.
 
-Um die langfristigen Auswirkungen zu verstehen, verfolgt Camila auch das Volumen der Nutzer:innen, die Woche für Woche in das Segment "Wahrscheinlich abwandern" eintreten. Dies hilft ihr, den Gesamtzustand des Lebenszyklus zu beurteilen und die Strategie der Bindung auf einer breiteren Ebene zu informieren. Schließlich besucht sie die Seite [Predictive Analytics]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/) für ihre Prognose der Abwanderung, um die prognostizierten mit den tatsächlichen Abgewanderten zu vergleichen - eine nützliche Überprüfung, um sicherzustellen, dass das Modell die erwartete Performance erzielt.
+Um die langfristigen Auswirkungen zu verstehen, verfolgt Camila auch das Volumen der Nutzer:innen, die Woche für Woche in das Segment "Wahrscheinlich abwandern" fallen. Dies hilft ihr, den Gesamtzustand des Lebenszyklus zu beurteilen und die Strategie der Bindung auf einer breiteren Ebene zu informieren. Schließlich besucht sie die Seite [Predictive Analytics]({{site.baseurl}}/user_guide/brazeai/predictive_churn/analytics/) für ihre Prognose der Abwanderung, um die prognostizierten mit den tatsächlichen Abgewanderten zu vergleichen - eine nützliche Überprüfung, um sicherzustellen, dass das Modell die erwartete Performance erzielt.
 
 Auf der Grundlage dieser Insights plant Camila A/B-Tests für Betreffzeilen, verschiedene Zeitfenster und Experimente mit Inhaltsformaten wie Empfehlungen im Karussell-Stil in einer In-App-Nachricht.
 

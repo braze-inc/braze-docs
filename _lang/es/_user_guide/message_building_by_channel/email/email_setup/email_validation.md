@@ -15,9 +15,9 @@ channel: email
 
 ## Cómo funciona
 
-La validación del correo electrónico se realiza cuando la dirección de correo electrónico de un usuario se ha actualizado o se está importando a Braze mediante la API, la carga CSV o el SDK, o se ha modificado en el panel. Ten en cuenta que tus direcciones de correo electrónico no pueden incluir espacios en blanco. Si utilizas la API, los espacios en blanco provocarán un error en `400`.
+Braze valida una dirección de correo electrónico cuando se actualiza, importa por API, carga CSV, SDK o modifica en el panel. Las direcciones de correo electrónico no pueden incluir espacios en blanco. Si utilizas la API, los espacios en blanco devuelven un error `400`.
 
-Braze no acepta ciertos caracteres y los reconoce como no válidos. Si un correo electrónico es rebotado, Braze marca el correo electrónico como no válido, y el estado de la suscripción no se modifica. Ten en cuenta que si hay caracteres [ASCII](https://en.wikipedia.org/wiki/ASCII) no estándar en el cuerpo del correo electrónico, éste no se enviará.
+Braze rechaza ciertos caracteres y marca la dirección como no válida. Si un correo electrónico rebota, Braze marca la dirección como no válida y no cambia el estado de la suscripción. Si el cuerpo del correo electrónico contiene caracteres [ASCII](https://en.wikipedia.org/wiki/ASCII) no estándar, Braze no envía el correo electrónico.
 
 {% details Accepted characters %}
 - Letras (A-Z)
@@ -46,15 +46,15 @@ Braze no acepta ciertos caracteres y los reconoce como no válidos. Si un correo
 - Espacios en blanco (ASCII y Unicode)
 {% enddetails %}
 
-Esta validación no debe confundirse con un servicio de validación. Se trata de una comprobación para verificar que la sintaxis de una dirección de correo electrónico es correcta. Uno de los principales motivos para utilizar este proceso de validación es admitir caracteres internacionales (como UTF-8) en la parte local de la dirección de correo electrónico.
+Esta validación es una comprobación sintáctica, no un servicio de validación. Uno de los objetivos de este proceso es admitir caracteres internacionales (como UTF-8) en la parte local de la dirección de correo electrónico.
 
-La validación sintáctica del correo electrónico examina las partes local y host de una dirección de correo electrónico. La parte local es todo lo que va antes del asperando (@), y la parte host es todo lo que va después del asperando. Por ejemplo, esta parte local de una dirección de correo electrónico puede empezar y terminar con cualquiera de los caracteres permitidos, excepto un punto (.). Ten en cuenta que este proceso sólo valida la sintaxis de la dirección de correo electrónico y no tiene en cuenta si el dominio tiene un servidor MX válido o si el usuario existe en el dominio indicado.
+Braze valida la sintaxis de las partes local y host de una dirección de correo electrónico. La parte local es todo lo que va antes del asperando (@); la parte host es todo lo que va después. La parte local puede empezar y terminar con cualquier carácter permitido, excepto un punto (.). Este proceso no tiene en cuenta si el dominio tiene un servidor MX válido o si existe un usuario en ese dominio.
 
 {% alert important %}
 Si la parte del dominio contiene caracteres ASCII no estándar, habrá que [codificarla con Punycode](https://www.punycoder.com/) antes de suministrársela a Braze.
 {% endalert %}
 
-Si Braze recibe una solicitud para añadir un usuario y la dirección de correo electrónico se considera no válida, verás una respuesta de error en la API. Al cargar con un archivo CSV, se creaba un usuario, pero no se añadía la dirección de correo electrónico.
+Si Braze recibe una solicitud para añadir un usuario con una dirección de correo electrónico no válida, la API devuelve un error. Para una carga CSV, Braze crea el usuario pero omite la dirección de correo electrónico no válida.
 
 ## Reglas locales de validación de piezas
 
@@ -62,7 +62,7 @@ Si Braze recibe una solicitud para añadir un usuario y la dirección de correo 
 
 Para la mayoría de los dominios, la parte local debe seguir estos parámetros:
 - Puede contener cualquier letra, número, incluidas las letras y números Unicode, así como los siguientes caracteres: (+) (&) (#) (_) (-) (^) o (/)
-- Puede contener, pero no empezar ni terminar con el siguiente carácter: (.)
+- Puede contener el carácter siguiente, pero no puede empezar ni terminar con él: (.)
 - No puede contener comillas dobles (")
 - Debe tener entre 1 y 64 caracteres
 
@@ -73,47 +73,47 @@ La siguiente expresión regular puede utilizarse para validar si una dirección 
 
 ### Direcciones de Gmail
 
-Si la parte del dominio es una dirección de Gmail, la parte local debe tener al menos dos caracteres y debe seguir la validación de expresión regular indicada anteriormente.
+Si la parte del dominio es Gmail, la parte local debe tener al menos dos caracteres y seguir la validación de expresión regular indicada anteriormente.
 
 ### Dominios Microsoft
 
-Si el dominio del host incluye "msn", "hotmail", "outlook" o "en vivo", se utilizará la siguiente expresión regular para validar la parte local: `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
+Si el dominio del host incluye "msn", "hotmail", "outlook" o "en vivo", Braze utiliza la siguiente expresión regular para validar la parte local: `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
 
-La parte local de la dirección de Microsoft debe seguir estos parámetros:
+La parte local de la dirección Microsoft debe seguir estos parámetros:
 
 - Puede empezar por un carácter (a-z), un guión bajo (_), o un número (0-9).  
 - Puede contener cualquier carácter alfanumérico (a-z o 0-9) o un guión bajo (_)
 - Puede contener los siguientes caracteres: (.) o (-)
-- No puede empezar con un punto (.)
+- No puede empezar por punto (.)
 - No puede contener dos o más puntos consecutivos (.)
 - No puede terminar con un punto (.)
 
-Observa que la prueba de validación comprueba si la parte local, que precede al "+", coincide con la expresión regular.
+La prueba de validación comprueba si la parte local que precede al "+" coincide con la expresión regular.
 
 ## Reglas de validación de la parte anfitriona
 
-Las direcciones IPv4 o IPv6 no están permitidas en la parte del host de una dirección de correo electrónico. El dominio de primer nivel (como .com, .org, .net, etc.) puede no ser totalmente numérico.
+La parte del host no puede ser una dirección IPv4 o IPv6. El dominio de primer nivel (como .com, .org, .net) no puede ser totalmente numérico.
 
 La siguiente expresión regular se utiliza para validar el dominio:<br>
 `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
 
-El nombre del dominio debe seguir estos parámetros:
+El nombre de dominio debe cumplir estos parámetros:
 
 - Consta de dos o más etiquetas separadas por puntos
 	- Cada parte de un nombre de dominio se denomina "etiqueta". Por ejemplo, el nombre de dominio "example.com" está formado por la etiqueta "ejemplo" y la etiqueta "com".
 - Debe contener al menos un punto (.)
 - No puede contener dos o más periodos consecutivos
-- Cada etiqueta separada por puntos debe
+- Cada etiqueta separada por puntos debe:
 	- Sólo contiene caracteres alfanuméricos (a-z o 0-9) y el guión (-)
-	- Empieza con un carácter alfanumérico (a-z o 0-9)
-	- Termina con un carácter alfanumérico (a-z o 0-9)
-	- Contienen de 1 a 63 caracteres
+	- Empieza por un carácter alfanumérico (a-z o 0-9)
+	- Terminar con un carácter alfanumérico (a-z o 0-9)
+	- Contiene de 1 a 63 caracteres
 
 ### Se requiere validación adicional
 
-La etiqueta final del dominio debe ser un dominio de nivel superior (TLD) válido, que viene determinado por todo lo que aparece después del punto final (.). Este TLD debería estar en [la lista de TLD de la ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). El validador de correo electrónico Braze sólo comprueba que la sintaxis del correo electrónico sea correcta de acuerdo con la expresión regular indicada en esta sección. No detecta erratas ni direcciones que no existen.
+La etiqueta final del dominio debe ser un dominio de nivel superior (TLD) válido, determinado por cualquier cosa después del punto final (.). Este TLD debería aparecer en [la lista de TLD de la ICANN](https://data.iana.org/TLD/tlds-alpha-by-domain.txt). El validador de Braze sólo comprueba la sintaxis. No detecta errores tipográficos ni direcciones inexistentes.
 
 {% alert important %}
-Sólo se acepta Unicode para la parte local de la dirección de correo electrónico. No se acepta Unicode para la parte del dominio, pero puede codificarse en Punycode.
+Unicode sólo se acepta para la parte local de la dirección de correo electrónico. No se acepta Unicode para la parte del dominio, pero puede codificarse en Punycode.
 {% endalert %}
 

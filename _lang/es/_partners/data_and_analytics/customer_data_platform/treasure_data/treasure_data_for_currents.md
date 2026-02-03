@@ -25,7 +25,7 @@ La integración de Braze y Treasure Data te permite controlar fácilmente el flu
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Treasure Data registra cada evento por lotes. Para más información sobre cómo consultar Treasure Data para obtener recuentos de eventos, consulta [Integración de Importación de Braze Currents](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration).
+Treasure Data registra cada evento por lotes. Para más información sobre cómo consultar Treasure Data para obtener recuentos de eventos, consulta [Consultar Datos](https://docs.treasuredata.com/articles/int/braze-currents-import-integration/a/h2__592056238).<br><br>Si quieres integrarte con el nuevo conector de streaming Braze de Treasure Data, consulta los pasos detallados de configuración en [Integración de importación de streaming Braze Currents](https://docs.treasuredata.com/articles/#!int/braze-currents-import-integration/q/braze/qid/72364/qp/4). Para cualquier pregunta sobre la integración o la configuración en Braze, ponte en contacto con tu equipo de cuentas Braze.
 {% endalert %}
 
 ## Integración
@@ -47,7 +47,7 @@ En Braze, vaya a **Corrientes** > **\+ Crear corriente** > **Exportar datos de t
 Todos los eventos enviados a Treasure Data incluirán la dirección `external_user_id` del usuario. En este momento, Braze no envía datos de eventos a Treasure Data para los usuarios que no han configurado su `external_user_id`.
 
 {% alert important %}
-Mantén actualizada tu URL de Treasure Data. Si la URL de tu conector es incorrecta, Braze no podrá enviar eventos. Si esto persiste durante más de 48 horas, los eventos del conector se eliminarán y los datos se perderán permanentemente.
+Mantén actualizada tu URL de Treasure Data. Si la URL de tu conector es incorrecta, Braze no podrá enviar eventos. Si esto persiste durante más de **5 días**, los eventos del conector se eliminarán y los datos se perderán permanentemente.
 {% endalert %}
 
 #### Ejemplo de valor de campo de evento

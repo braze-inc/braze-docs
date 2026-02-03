@@ -15,7 +15,7 @@ Todos os SDKs do Braze aderem à [Semantic Versioning Specification (SemVer)](ht
 
 |versão|Sobre esta versão|Recomendação|
 |-------|------------------|--------------|
-| `PATCH` | As atualizações são sempre ininterruptas e incluem correções de bugs importantes. Eles sempre estarão seguros. | Você deve sempre tentar atualizar para a versão mais recente do patch de sua versão principal e secundária atual imediatamente. |
+| `PATCH` | As atualizações são sempre ininterruptas e incluem correções de bugs importantes. Eles sempre estarão seguros. | Você deve sempre tentar atualizar imediatamente para a versão mais recente do patch de sua versão principal e secundária atual. |
 | `MINOR` | As atualizações são sempre ininterruptas e incluem novas funcionalidades líquidas. Eles nunca exigirão alterações no código de seu aplicativo. | Embora não seja necessário fazer isso imediatamente, você deve atualizar para a versão secundária mais recente de sua versão principal atual assim que possível. 
 | `MAJOR` | As atualizações são mudanças significativas e podem exigir alterações no código do aplicativo. | Como isso pode exigir alterações no código, atualize para a versão principal mais recente em um período que seja melhor para a sua equipe. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}

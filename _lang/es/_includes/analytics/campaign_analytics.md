@@ -115,7 +115,7 @@ El panel de **rendimiento de la tarjeta de contenido** muestra el rendimiento de
 
 El panel **Rendimiento del correo electrónico** muestra el rendimiento de tu mensaje en varias dimensiones. Las métricas de este panel varían en función del canal de mensajería elegido y de si estás realizando o no una prueba multivariante. Puedes hacer clic en el icono <i class="fa fa-eye preview-icon"></i> **Vista previa** para ver tu mensaje para cada variante o canal.
 
-![Análisis del rendimiento de los mensajes electrónicos]({% image_buster /assets/img_archive/email_message_performance.png %})
+![Análisis del rendimiento de los mensajes de correo electrónico]({% image_buster /assets/img_archive/email_message_performance.png %})
 
 {% elsif include.channel == "in-app message" %}
 ### Rendimiento de los mensajes dentro de la aplicación
@@ -132,11 +132,11 @@ El panel de **rendimiento push** muestra el rendimiento de tu mensaje en varias 
 ![Análisis del rendimiento de los mensajes push]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
-### SMS/MMS/RCS: Rendimiento
+### Rendimiento de SMS/MMS/RCS
 
-El panel de **rendimiento deSMS/MMS/RCS ** muestra el rendimiento de tu mensaje en varias dimensiones. Las métricas de este panel varían en función del canal de mensajería elegido y de si estás realizando o no una prueba multivariante. Puedes hacer clic en el icono <i class="fa fa-eye preview-icon"></i> **Vista previa** para ver tu mensaje para cada variante o canal.
+El panel **Rendimiento de SMS/MMS/RCS** muestra el rendimiento de tu mensaje en varias dimensiones. Las métricas de este panel varían en función del canal de mensajería elegido y de si estás realizando o no una prueba multivariante. Puedes hacer clic en el icono <i class="fa fa-eye preview-icon"></i> **Vista previa** para ver tu mensaje para cada variante o canal.
 
-![SMS/MMS/RCS Panel de rendimiento que incluye una tabla de métricas para un grupo de control, la variante 1 y la variante 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
+![Panel de rendimiento de SMS/MMS/RCS que incluye una tabla de métricas para un grupo de control, la variante 1 y la variante 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
 
 {% elsif include.channel == "banner" %}
 ### Banner de rendimiento
@@ -167,7 +167,7 @@ Si quieres simplificar la vista, haz clic en <i class="fas fa-plus"></i> **Añad
 
 #### Mapas de calor
 
-Con los mapas de calor, puedes ver el éxito de los distintos enlaces de una misma campaña de correo electrónico. En la sección **Análisis de mensajes**, ve al panel **Rendimiento del correo electrónico**. Selecciona **Vista previa y** mapa de calor para ver una vista previa de tu campaña de correo electrónico y el mapa de calor. También puedes seleccionar el hipervínculo del nombre de la variante para ver el mapa de calor.
+Con los mapas de calor, puedes ver el éxito de los distintos enlaces de una misma campaña de correo electrónico. En la sección **Análisis de mensajes**, ve al panel **Rendimiento del correo electrónico**. Selecciona **Vista previa & Mapa** de calor para ver una vista previa de tu campaña de correo electrónico y el mapa de calor. También puedes seleccionar el hipervínculo del nombre de la variante para ver el mapa de calor.
 
 En esta vista, puedes alternar la opción **Mostrar mapa de calor** para obtener una vista visual de tu correo electrónico que muestre la frecuencia general y la ubicación de los clics dentro de la duración de la campaña. En el panel **Tabla de enlaces por clics totales**, puedes ver todos los enlaces de tu campaña de correo electrónico y ordenarlos por clics totales. Esto puede proporcionar información adicional sobre por dónde navegan tus usuarios. Para guardar una copia del mapa térmico como referencia, selecciona el botón de descarga.
 
@@ -201,7 +201,7 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">Mensajes enviados</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Messages Sent' %} <br><br>
                 Se calcula de forma diferente según lo que hayas seleccionado para 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Creación de tarjetas</a>:<br><br>
                 <ul>
@@ -212,23 +212,23 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">Impresiones totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} Puede incrementarse varias veces para el mismo usuario.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Esto puede incrementarse varias veces para el mismo usuario.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">Impresiones únicas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Este recuento</span> no se incrementa la segunda vez que un usuario ve una tarjeta de contenido.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Este recuento</span> no se incrementa la segunda vez que un usuario ve una tarjeta de contenido.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Destinatarios únicos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Para las tarjetas de contenido, cada tarjeta de contenido sólo puede recibirse una vez, por lo que ver la misma tarjeta de contenido una segunda vez, independientemente del día, no incrementará este recuento. Dado que un espectador puede ser un destinatario único cada día, debes esperar que sea superior a <i>Impresiones únicas</i>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Para las tarjetas de contenido, cada tarjeta de contenido sólo puede recibirse una vez, por lo que ver la misma tarjeta de contenido una segunda vez, independientemente del día, no incrementará este recuento. Dado que un espectador puede ser un destinatario único cada día, debes esperar que sea superior a <i>Impresiones únicas</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Clics únicos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Incluye los clics en los enlaces de cancelar suscripción proporcionados por Braze.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Esto incluye los clics en los enlaces para cancelar suscripción proporcionados por Braze.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">Descartes únicos</a></td>
-            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Unique Dismissals' %}</td>
         </tr>
     </tbody>
 </table>
@@ -257,7 +257,7 @@ Tus _Mensajes Enviados_ se refiere a las Tarjetas de Contenido disponibles para 
 
 Éstas son las métricas clave que debes seguir al revisar el rendimiento de tu campaña de banners. Los clics y las impresiones de los banners se siguen automáticamente con el SDK. 
 
-Para ver las definiciones completas de todas las métricas de Banners, consulta el [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtra por Banners.
+Para obtener las definiciones completas de todas las métricas de Banners, consulta el [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtra por Banners.
 
 <style>
     .no-split {
@@ -275,11 +275,11 @@ Para ver las definiciones completas de todas las métricas de Banners, consulta 
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impresiones totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} En el caso de los banners, las impresiones se registran una vez por sesión de usuario. Si el mismo banner se ve varias veces en la misma sesión, sólo se registra una impresión.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impresiones únicas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Cada usuario sólo se cuenta una vez.</span></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Cada usuario sólo se cuenta una vez.</span></td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Clics totales</a></td>
@@ -287,23 +287,23 @@ Para ver las definiciones completas de todas las métricas de Banners, consulta 
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics únicos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Cada usuario sólo se cuenta una vez.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks No Dispatch ID' %} Cada usuario sólo se cuenta una vez.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Conversiones primarias</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinatarios únicos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Dado que un espectador puede ser un destinatario único cada día, debes esperar que sea superior a <i>Impresiones únicas</i>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %} <br><br> Dado que un espectador puede ser un destinatario único cada día, debes esperar que sea superior a <i>Impresiones únicas</i>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">Ingresos</a></td>
-            <td>{% multi_lang_include metrics.md metric='Revenue' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">Confianza</a></td>
-            <td>{% multi_lang_include metrics.md metric='Confidence' %}</td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Confidence' %}</td>
         </tr>
     </tbody>
 </table>
@@ -345,56 +345,56 @@ Aquí tienes algunas métricas clave específicas del correo electrónico que no
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics únicos</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Clicks' %} Se realiza un seguimiento durante un periodo de siete días para el correo electrónico y se mide por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Esto incluye los clics en los enlaces para cancelar suscripción proporcionados por Braze. Esta cifra debe estar entre el 5-10%. ¡Todo lo que supere el 10% es excepcional!
+                {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Esto se sigue durante un periodo de siete días para el correo electrónico y se mide mediante <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Esto incluye los clics en los enlaces de cancelación de suscripción proporcionados por Braze. Esta cifra debe estar entre el 5-10%. ¡Todo lo que supere el 10% es excepcional!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Aperturas únicas</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} En el caso del correo electrónico, se realiza un seguimiento durante un periodo de 7 días. Esta cifra debe estar entre el 30-40%. ¡Todo lo que supere el 40% es excepcional!
+                {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} En el caso del correo electrónico, el seguimiento se realiza durante un periodo de 7 días. Esta cifra debe estar entre el 30-40%. ¡Todo lo que supere el 40% es excepcional!
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">Tasa de clics de apertura</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">Tasa de correo no deseado</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Spam' %} Si esta métrica es superior a 0,08, podría ser una señal de que, o bien el texto de tu mensaje es demasiado vendedor, o bien deberías reconsiderar tus métodos de recogida de direcciones de correo electrónico (para confirmar que estás enviando mensajes a quienes están interesados en tu correspondencia).
+                {% multi_lang_include analytics/metrics.md metric='Spam' %} Si esta métrica es superior a 0,08, podría ser una señal de que o bien el texto de tu mensaje es demasiado vendedor, o bien deberías reconsiderar tus métodos de recogida de direcciones de correo electrónico (para confirmar que estás enviando mensajes a quienes están interesados en tu correspondencia).
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unsubscribers-or-unsub">Cancelar suscripción o darse de baja</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unsubscribers or Unsub' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#other-opens">Otras aperturas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Other Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Other Opens' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimación de Aperturas reales</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} Para más detalles, consulta la sección siguiente.</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimación de Aperturas Reales</a></td>
+            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Para más detalles, consulta la sección siguiente.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Machine Opens (Aperturas automáticas)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Machine Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Machine Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Rebotes</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#hard-bounce">Rebote duro</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Hard Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Hard Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Rebote suave</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Aplazamiento</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deferral' %}</td>
         </tr>
     </tbody>
 </table>
@@ -443,7 +443,7 @@ Aquí tienes algunas métricas clave de los mensajes dentro de la aplicación qu
 {% alert note %}
 La generación de informes para los _clics del botón 1_ y _los clics del botón 2_ sólo funciona cuando especificas el **identificador para la generación de** informes como "0" y "1" respectivamente en el mensaje dentro de la aplicación.
 
-![El campo "Identificador para informes" con valor "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+![El campo "Identificador para informar" con valor "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
 {% endalert %}
 
 <style>
@@ -462,39 +462,39 @@ La generación de informes para los _clics del botón 1_ y _los clics del botón
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#body-clicks">Clics del cuerpo</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Body Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Body Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-1-clicks">Clics en botón 1</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 1 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">Clics en botón 2</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impresiones únicas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impresiones totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">Conversiones (B, C, D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">Total de conversiones</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Conversions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Conversions' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Tasa de conversión</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Cerrar mensaje</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Close Message' %}</td>
         </tr>
     </tbody>
 </table>
@@ -521,15 +521,15 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Rebotes</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} Ver <a href="#bounced-push">Notificaciones push rebotadas</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %} Ver <a href="#bounced-push">Notificaciones push rebotadas</a>.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">Direct Opens</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Direct Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Direct Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opens">Aperturas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opens' %}</td>
         </tr>
     </tbody>
 </table>
@@ -543,19 +543,19 @@ Las cancelaciones de suscripción push no se incluyen como métrica en los anál
 Sin embargo, el seguimiento manual de las cancelaciones de suscripción push puede proporcionar información valiosa sobre la respuesta de los usuarios a la frecuencia de tus notificaciones y la relevancia del contenido. Aquí tienes dos opciones para el seguimiento de las cancelaciones de suscripción push: Utilizando filtros de segmento o filtros personalizados.
 
 {% tabs local %}
-{% tab Filtros de segmento %}
+{% tab Segment filters %}
 
-Puedes crear un segmento para identificar a los usuarios que no están habilitados para push, es decir, que no están suscritos o no han dado su adhesión voluntaria y no tienen un [token de notificaciones push en primer plano]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). Por ejemplo, para ver el número de cancelaciones de suscripción en tu aplicación, utilizarías la combinación de los siguientes segmentos: 
+Puedes crear un segmento para identificar a los usuarios que no están habilitados para push, es decir, que no están suscritos o no han dado su adhesión voluntaria y no tienen un [token de notificaciones push en primer plano]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens). Por ejemplo, para ver el número de cancelaciones de suscripción en tu aplicación, utilizarías una combinación "O" de los siguientes segmentos: 
 
 - `Background or Foreground Push Enabled is false`
 - `Has Uninstalled`
 
-![La sección Creador de segmentos con el filtro "Push de fondo o primer plano habilitado para la aplicación" para una aplicación es falsa, y el filtro "Ha desinstalado" están seleccionados.]({% image_buster /assets/img/push_unsub_segment_example.png %})
+![La sección Creador de segmentos con el filtro "Push de fondo o primer plano habilitado para la aplicación" de una aplicación es falsa, y el filtro "Se ha desinstalado" están seleccionados.]({% image_buster /assets/img/push_unsub_segment_example.png %})
 
-Ten en cuenta que los filtros de segmentación son aproximados y no pueden vincularse específicamente a una fecha y una campaña.
+Ten en cuenta que los filtros de segmentación son aproximados y no pueden vincularse específicamente a una fecha y a una campaña.
 
 {% endtab %}
-{% tab Filtros personalizados %}
+{% tab Custom filters %}
 
 {% alert important %}
 El registro de un evento personalizado para el cambio de suscripción registrará [puntos de datos]({{site.baseurl}}/user_guide/data_and_analytics/data_points#consumption-count). Alternativamente, utiliza filtros de segmento para identificar y dirigirte a los usuarios que no están habilitados para push.
@@ -581,7 +581,7 @@ El número de _Envíos_ puede superar el número de _Destinatarios Únicos_ debi
 ##### Por qué se producen los rebotes {#bounced-push}
 
 {% tabs %}
-{% tab Servicio de notificación push de Apple %}
+{% tab Apple Push Notification service %}
 
 Los rebotes se producen en los servicios de notificaciones push de Apple (APN) cuando una notificación push intenta entregarse a un dispositivo que no tiene instalada la aplicación prevista. APN también tiene derecho a cambiar los tokens de los dispositivos arbitrariamente. Si intentas realizar un envío al dispositivo de un usuario en el que su token de notificaciones push ha cambiado entre el momento en que registramos previamente su token (como al principio de cada sesión, cuando registramos a un usuario para obtener un token push) y el momento del envío, se produciría un rebote.
 
@@ -590,7 +590,7 @@ Si un usuario desactiva push en la configuración de su dispositivo al abrir una
 Las notificaciones push que caducan antes de la entrega no se consideran fallidas y no se registrarán como rebotadas.
 
 {% endtab %}
-{% tab Mensajería en la nube Firebase %}
+{% tab Firebase Cloud Messaging %}
 
 Firebase Cloud Messaging (FCM) puede rebotar en tres casos:
 
@@ -609,7 +609,7 @@ Firebase Cloud Messaging (FCM) puede rebotar en tres casos:
 
 #### Métricas de SMS, MMS y RCS
 
-Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el rendimiento de tus mensajes. Para ver las definiciones completas de todas las métricas de SMS, MMS y RCS, consulta el [Glosario de métricas del informe]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtra por SMS/MMS y RCS.
+Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el rendimiento de tus mensajes. Para ver las definiciones completas de todas las métricas de SMS, MMS y RCS, consulta el [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) y filtra por SMS/MMS y RCS.
 
 <style>
     .no-split {
@@ -627,31 +627,31 @@ Aquí tienes un desglose de algunas métricas clave que puedes ver al revisar el
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">Enviadas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sent' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">Fallos de entrega</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">Entrega confirmada</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#rejections">Rechazos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Rejections' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Rejections' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opt-out">Cancelación</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opt-Out' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opt-Out' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#help">Ayuda</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Help' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Clics totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' %}</td>
         </tr>
     </tbody>
 </table>
@@ -678,15 +678,15 @@ Aquí tienes algunas métricas clave de webhook que puedes ver en tus análisis.
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinatarios únicos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Envíos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#errors">Errores</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Errors' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Errors' %}</td>
         </tr>
     </tbody>
 </table>
@@ -713,19 +713,19 @@ Aquí tienes algunas métricas clave de WhatsApp que puedes ver en tus análisis
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Envíos</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deliveries">Entregas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deliveries' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#reads">Lecturas</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Reads' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Reads' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#failures">Errores</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Failures' %}</td>
         </tr>
     </tbody>
 </table>
@@ -742,7 +742,7 @@ El panel **Rendimiento histórico** te permite ver las métricas del panel **Ren
 
 Para obtener un desglose día a día, haz clic en el menú hamburguesa de <i class="fas fa-bars"></i> y selecciona **Descargar CSV** para recibir una exportación CSV del informe.
 
-![Un gráfico del panel Rendimiento histórico con estadísticas de ejemplo para un correo electrónico de febrero de 2021 a mayo de 2022.]({% image_buster /assets/img/cc-historical-performance.png %})
+![Gráfico del panel Rendimiento histórico con estadísticas de ejemplo para un correo electrónico de febrero de 2021 a mayo de 2022.]({% image_buster /assets/img/cc-historical-performance.png %})
 
 {% if include.channel == "in-app message" %}
 
@@ -758,7 +758,7 @@ Si seleccionas enviar sólo a usuarios que puedan ver la última versión Braze 
 
 El panel de **Respuestas a palabras clave** te muestra una cronología de las palabras clave entrantes con las que los usuarios respondieron tras recibir tu mensaje.  
 
-![Nivel de campaña SMS/MMS/RCS Panel de respuestas de palabras clave que incluye un gráfico de líneas de la distribución de palabras clave a lo largo del tiempo, y una sección de categorías de palabras clave con casillas de verificación seleccionadas para Adhesión voluntaria, Exclusión voluntaria, Ayuda, Otros, Más y Coaching.]({% image_buster /assets/img/sms/keyword_responses.png %})
+![Panel de respuestas de palabras clave a nivel de campaña SMS/MMS/RCS que incluye un gráfico de líneas de la distribución de palabras clave a lo largo del tiempo, y una sección de categorías de palabras clave con casillas de verificación seleccionadas para adhesión voluntaria, exclusión voluntaria, ayuda, otros, más y entrenamiento.]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 Aquí también puedes ver la distribución de la respuesta de cada categoría de palabras clave para determinar los próximos pasos para [reorientar]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns) y [crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) convenientemente.
 
@@ -770,11 +770,11 @@ Aquí también puedes ver la distribución de la respuesta de cada categoría de
 
 El panel **Detalles del evento de conversión** te muestra el rendimiento de los eventos de conversión de tu campaña. Para más información, consulta [Eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#step-3-view-results).
 
-![El panel de detalles del evento de conversión.]({% image_buster /assets/img/cc-conversion.png %})
+![El panel de Detalles del evento de conversión.]({% image_buster /assets/img/cc-conversion.png %})
 
 ### Correlación de conversión
 
-El panel **Correlación de conversiones** te da información sobre qué atributos y comportamientos de los usuarios ayudan o perjudican los resultados que estableces para las campañas. Para más información, consulta [Correlación de la conversión]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
+El panel **Correlación de conversiones** te da información sobre qué atributos y comportamientos de los usuarios ayudan o perjudican los resultados que estableces para las campañas. Para más información, consulta los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
 ![El panel Correlación de la conversión con un análisis de los atributos y el comportamiento del usuario a partir del evento de conversión primaria - A.]({% image_buster /assets/img/convcorr.png %})
 

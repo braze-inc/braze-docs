@@ -1,13 +1,13 @@
 ---
-nav_title: Caso de uso de la colección
-article_title: Caso de uso de la colección
+nav_title: Caso de uso de la recopilación
+article_title: Caso de uso de la recopilación
 page_order: 3
 page_type: reference
 description: "Este artículo de referencia trata un caso de uso de recopilación de datos de usuario sobre cómo una aplicación de transporte compartido puede decidir qué datos de usuario recopilar."
 
 ---
 
-# Caso de uso de la colección
+# Caso de uso de la recopilación
 
 > Este artículo trata un caso de uso de recopilación de datos de usuario sobre cómo una aplicación de transporte compartido podría decidir qué datos de usuario recopilar.
 
@@ -24,19 +24,19 @@ El objetivo de StyleRyde es sencillo: quieren que los usuarios llamen a taxis a 
 3. StyleRyde necesita que los usuarios intenten llamar a un taxi.
 4. StyleRyde tiene que estar disponible cuando los usuarios llamen a un taxi.
 
-Estas acciones podrían etiquetarse como los siguientes eventos personalizados:
+Estas acciones podrían entonces etiquetarse como los siguientes eventos personalizados:
 
 - Inicio de la inscripción
-- Inscripción Completa
+- Registro completo
 - Llamadas de taxi con éxito
 - Llamadas de taxi fallidas
 
 Una vez implementados los eventos, StyleRyde puede realizar campañas como las siguientes:
 
-1. Envía mensajes a los usuarios que iniciaron el registro, pero no lo han completado en un plazo determinado.
-2. Envía mensajes de felicitación a los usuarios que hayan Completado el Registro.
-3. Envía disculpas y crédito promocional a los usuarios que hayan tenido Llamadas de Taxi fallidas, que no hayan sido seguidas por una Llamada de Taxi correcta en un determinado periodo de tiempo.
-4. Envía promociones a usuarios avanzados con muchos Taxi Llamados con éxito para agradecerles su fidelización.
+1. Envía mensajes a los usuarios que iniciaron el registro pero no lo han completado en un plazo determinado.
+2. Enviar mensajes de felicitación a los usuarios que hayan completado el registro.
+3. Enviar disculpas y crédito promocional a los usuarios que hayan tenido llamadas de taxi fallidas, que no hayan sido seguidas por una llamada de taxi exitosa dentro de un cierto período de tiempo.
+4. Envíe promociones a los usuarios con más llamadas de taxi realizadas con éxito para agradecerles su fidelidad.
 
 ## Pregunta del caso 3: ¿Qué otra información sobre el usuario podríamos recopilar y utilizar para informar nuestra mensajería?
 
@@ -47,13 +47,13 @@ Una vez implementados los eventos, StyleRyde puede realizar campañas como las s
 Estas características podrían etiquetarse como los siguientes atributos personalizados:
 
 - Saldo de crédito promocional (tipo decimal)
-- Tasa media de conductores (tipo entero)
-- Código de promoción único (Tipo de cadena)
+- Clasificación promedio de los conductores (tipo de número entero)
+- Código promocional único (tipo cadena)
 
 Estos atributos te permiten enviar campañas a usuarios como:
 
 1. Recordar a los usuarios que no han utilizado la aplicación en siete días y tienen crédito promocional en su cuenta que vuelvan a la aplicación y utilicen el crédito.
-2. Utiliza nuestras plantillas de mensajes y [características de personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) para arrastrar el atributo de código promocional único a la mensajería dirigida a los usuarios.
+2. Utilizar nuestras plantillas de mensajes y [funciones de personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/#personalized-messaging) para arrastrar el atributo de código promocional único a los mensajes dirigidos a los usuarios.
 
 {% alert important %}
 Braze prohibirá o bloqueará a los usuarios ("usuarios ficticios") con más de 5.000.000 de sesiones y dejará de ingerir sus eventos SDK porque suelen ser el resultado de una mala integración. Si descubres que esto le ha ocurrido a un usuario legítimo, ponte en contacto con tu director de cuentas Braze.

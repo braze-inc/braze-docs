@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Eliminar Canvas programados desencadenados por API"
-article_title: "POST: Eliminar Canvas programados desencadenados por API"
+nav_title: "PUBLICAR: Borrar Lienzos programados desencadenados por la API"
+article_title: "PUBLICAR: Eliminar Canvas programados desencadenados por API"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -16,7 +16,7 @@ description: "En este artículo se describen los detalles del punto final Elimin
 
 > El punto final para eliminar la programación te permite cancelar un mensaje que hayas programado antes a través de Canvas desencadenados por API antes de que se haya enviado.
 
-Los mensajes programados o desencadenados que se borren muy cerca de la hora a la que debían enviarse, o durante la misma, se actualizarán con los mejores esfuerzos, por lo que los borrados de último segundo podrían aplicarse a todos, a algunos o a ninguno de tus usuarios objetivo.
+Los mensajes programados o desencadenados que se eliminan cerca de la hora a la que debían enviarse o durante la misma se actualizan con el máximo esfuerzo, por lo que Braze puede aplicar eliminaciones de último momento a todos, a algunos o a ninguno de tus usuarios objetivo.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 

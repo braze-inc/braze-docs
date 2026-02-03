@@ -29,7 +29,7 @@ Bitte beachten Sie, dass die Nutzer:innen-Felder, die Sie für die Synchronisier
 
 ### Was passiert, wenn meine Daten verarbeitet werden, um sie an die einzelnen Audience Sync Partner zu senden?
 
-Die Daten, die Sie zum Senden an Ihr Audience Sync Ziel auswählen, werden normalisiert. Jeder Partner kann aufgrund seiner API-Anforderungen unterschiedliche Spezifikationen für die Normalisierung von Daten haben. Bitte prüfen Sie daher jeden partnerspezifischen Endpunkt für weitere Details.
+Die Daten, die Sie zum Senden an Ihr Audience Sync Ziel auswählen, werden normalisiert. Jeder Partner kann je nach seinen API-Anforderungen unterschiedliche Spezifikationen für die Normalisierung von Daten haben. Prüfen Sie daher jeden partnerspezifischen Endpunkt für weitere Details.
 
 Darüber hinaus hackt Braze alle Daten, bevor wir Nutzer:innen mit unseren Audience Sync Partnern synchronisieren, um sicherzustellen, dass alle PII mit SHA256 gehasht werden.
 

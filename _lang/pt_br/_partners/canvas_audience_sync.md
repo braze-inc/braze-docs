@@ -4,7 +4,7 @@ article_title: Sincronização do público do Canva
 page_order: 8
 
 guide_top_header: "Sincronização do público do Canva"
-guide_top_text: "O recurso Braze Audience Sync ajuda você a ampliar o alcance das suas campanhas para muitas das principais tecnologias de redes sociais e de publicidade. Essa landing page é onde os desenvolvedores e profissionais de marketing podem encontrar recursos sobre os parceiros de sincronização do Canva disponíveis."
+guide_top_text: "O recurso Braze Audience Sync amplia o alcance de suas campanhas para muitas das principais tecnologias sociais e de publicidade. Essa landing page é onde os desenvolvedores e profissionais de marketing podem encontrar recursos sobre os parceiros de sincronização do Canva disponíveis."
 description: "Essa landing page é onde os desenvolvedores e profissionais de marketing podem encontrar recursos sobre os parceiros de sincronização do Canva disponíveis."
 
 layout: dev_guide
@@ -45,5 +45,5 @@ guide_menu_list:
 ---
 
 {% alert important %}
-Braze Audience Syncs para Criteo, Pinterest, Snapchat e TikTok são integrações do Audience Sync Pro. Para saber mais sobre essas integrações, entre em contato com seu gerente de conta da Braze.
+A disponibilidade do Braze Audience Syncs para Criteo, Pinterest, Snapchat e TikTok depende de seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.
 {% endalert %}

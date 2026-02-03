@@ -34,8 +34,8 @@ A Transcend permite acessar, excluir e recusar de forma programática a comunica
 Para começar, registre-se na [Transcend](https://app.transcend.io/login).
 1. Navegue até **Mapa de dados > Adicionar silo de dados > Braze** e selecione o botão **Conectar**.<br><br>
 2. Quando sua conta for provisionada, você fará o registro em um dos URLs correspondentes: `https://dashboard-01.braze.com`, `https://dashboard-02.braze.com, ..., https://dashboard-01.braze.eu`.<br> Use a [tabela]({{site.baseurl}}/api/basics/#endpoints) a seguir para descobrir qual subdomínio você deve incluir com base no URL do seu dashboard.<br><br>
-3. Após a conexão, navegue até a guia **Privacy Center** (Centro de privacidade) da Transcend. Aqui você precisará mapear os dados na Braze conforme suas práticas de dados. Para fazer isso, crie uma nova categoria e uma nova coleta de dados com a convenção de nomenclatura apropriada (por exemplo, "Listas de discussão ou perfil de usuário"). Quando terminar, clique em **Publicar**.<br><br>
-4. Volte ao mapa de dados e clique no silo de dados da Braze. Expanda **Manage Datapoints (Gerenciar pontos de dados** ) e selecione o rótulo (categoria) da coleção que você criou na etapa anterior no menu suspenso. Você também pode escolher quais ações de dados (por exemplo, acesso ou exclusão) estão ativadas para quais pontos de dados. <br><br>
+3. Após a conexão, navegue até a guia **Privacy Center** (Centro de privacidade) da Transcend. Aqui você precisará mapear os dados na Braze conforme suas práticas de dados. Para fazer isso, crie uma nova categoria e uma nova coleta de dados com a convenção de nomenclatura apropriada (por exemplo, "Listas de discussão ou perfil de usuário"). Quando concluído, selecione **Publicar**.<br><br>
+4. Navegue de volta ao Mapa de dados e selecione o silo de dados do Braze. Expanda **Manage Datapoints (Gerenciar pontos de dados** ) e selecione o rótulo (categoria) da coleção que você criou na etapa anterior no menu suspenso. Você também pode escolher quais ações de dados (por exemplo, acesso ou exclusão) estão ativadas para quais pontos de dados. <br><br>
 5. Em seguida, enquanto ainda estiver no silo de dados da Braze, expanda **Manage Identifiers** (Gerenciar identificadores). Marque as respectivas caixas para os identificadores que você gostaria de ativar. Por exemplo, se quiser que a Transcend pesquise usuários por endereço de e-mail, marque a caixa para ativar o identificador de endereço de e-mail.
 
 {% alert note %}
@@ -44,8 +44,8 @@ Se os identificadores não forem ativados corretamente, a Transcend poderá não
 
 ### Etapa 2: Solicitações de teste
 A Transcend recomenda testar as solicitações no mapa de dados antes de começar a processar as solicitações dos usuários finais.
-1. Acesse o **Privacy Center (Centro de privacidade** ) no Transcend e clique em **View your Privacy Center (Exibir seu centro de privacidade**).<br><br>
-2. No **Centro de Privacidade**, clique em **Assumir controle** e, em seguida, em **Baixar meus dados**. Digite seu e-mail ou faça o registro para se autenticar antes de enviar a solicitação.<br><br>
+1. Acesse **Privacy Center (Centro de privacidade** ) no Transcend e selecione **View your Privacy Center (Exibir seu centro de privacidade**).<br><br>
+2. No **Centro de Privacidade**, selecione **Assumir controle** e, em seguida, **Baixar meus dados**. Digite seu e-mail ou faça o registro para se autenticar antes de enviar a solicitação.<br><br>
 3. Verifique se há uma mensagem da Transcend em seu e-mail. Você será solicitado a clicar em um link de verificação para verificar a solicitação.<br><br>
 4. Em seguida, de volta ao painel **do administrador**, navegue até a guia **Solicitações recebidas** e selecione sua solicitação. Entre em contato com a Transcend pelo e-mail [support@transcend.io](mailto:support@transcend.io) se não encontrar a solicitação aqui.<br><br>
 5. Depois de clicar na sua solicitação, navegue até a guia **Data Silos** (Silos de dados) e selecione **Braze**. Inspecione e confirme os dados retornados.<br><br>

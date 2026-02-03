@@ -1,13 +1,13 @@
 ---
-nav_title: 購入のロギング
-article_title: Windowsユニバーサルの購入履歴を記録する
+nav_title: ログ購入
+article_title: Windowsユニバーサルのログ購入
 platform: Windows Universal
 page_order: 4
 description: "この参考記事では、Windowsユニバーサルプラットフォームでの購入履歴の記録方法について説明する。"
 hidden: true
 ---
  
-# 購入のロギング
+# ログ購入
 {% multi_lang_include archive/windows_deprecation.md %}
 
 アプリ内での購入を記録して、売上を経時的にトラッキングしたり、売上源を横断してトラッキングしたりできます。また、ユーザーを生涯価値でセグメント化することもできます。

@@ -86,4 +86,4 @@ Brazeがプロモーションコード付きのメッセージを送信すると
 
 ### ユーザープロファイルにプロモーションコードを保存して、将来のメッセージングに利用することは可能か？
 
-はい。ユーザー更新ステップで、プロモーションコードをユーザープロファイルに保存できる。詳しくは、[ユーザープロファイルへのプロモーションコードの保存を]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#save-to-profile)参照のこと。
+はい。ユーザー更新ステップで、プロモーションコードをユーザープロファイルに保存できる。詳細については、[ユーザープロファイルへのプロモーションコードの保存を]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/manage/#save-to-profile)参照のこと。

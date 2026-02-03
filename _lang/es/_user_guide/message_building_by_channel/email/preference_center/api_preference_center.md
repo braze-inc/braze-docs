@@ -9,11 +9,11 @@ channel:
 
 # Centro de preferencias de correo electrónico API
 
-> Configurar un centro de preferencias proporciona una ventanilla única para que tus usuarios editen y administren sus preferencias de notificación para tu [mensajería por correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/). Este artículo incluye los pasos para crear un centro de preferencias generado por la API, pero también puedes crear un centro de preferencias utilizando el [editor de arrastrar y soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
+> La creación de un centro de preferencias permite a los usuarios editar y gestionar sus preferencias de notificación de [mensajes de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/). Este artículo incluye los pasos para crear un centro de preferencias generado por la API, pero también puedes crear un centro de preferencias utilizando el [editor de arrastrar y soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/).
 
 En el panel de Braze, ve a **Audiencia** > **Centros de preferencias de correo electrónico**.
 
-Aquí es donde puedes gestionar y ver cada grupo de suscripción. Cada grupo de suscripción que crees se añade a esta lista del centro de preferencias. Puedes crear varios centros de preferencias.
+Aquí es donde puede gestionar y ver cada grupo de suscripción. Cada grupo de suscripción que se crea se añade a esta lista del centro de preferencias. Puede crear varios centros de preferencias.
 
 {% alert important %}
 El centro de preferencias está pensado para ser utilizado dentro del canal de correo electrónico Braze. Los enlaces del centro de preferencias son dinámicos en función de cada usuario y no pueden alojarse externamente.
@@ -21,31 +21,31 @@ El centro de preferencias está pensado para ser utilizado dentro del canal de c
 
 ## Crear un centro de preferencias con API
 
-Utilizando los [puntos finales del Centro de preferencias Braze]({{site.baseurl}}/api/endpoints/preference_center), puedes crear un centro de preferencias, un sitio web alojado en Braze, que puede mostrar el estado de suscripción de tu usuario y los estados del grupo de suscripción. Mediante HTML y CSS, tu equipo de desarrolladores puede construir el centro de preferencias utilizando HTML y CSS para que el estilo de la página se ajuste a las directrices de tu marca.
+Al utilizar [los puntos finales Braze del Centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center), puede crear un centro de preferencias, un sitio web alojado por Braze, que puede mostrar el estado de suscripción de sus usuarios y los estados de los grupos de suscripción. Mediante HTML y CSS, tu equipo de desarrolladores puede construir el centro de preferencias utilizando HTML y CSS para que el estilo de la página se ajuste a las directrices de tu marca.
 
-Utilizar Liquid te habilita para recuperar los nombres de tus grupos de suscripción y el estado de cada usuario. De esta forma, Braze almacena y recupera estos datos cuando se carga la página.
+El uso de Liquid le permite recuperar los nombres de sus grupos de suscripción y el estado de cada usuario. De este modo, Braze almacena y recupera estos datos cuando se carga la página.
 
 ### Requisitos previos
 
 | Requisito | Descripción |
 |---|---|
-| Centro de preferencias habilitado | Tu panel de Braze tiene permisos para utilizar la característica del centro de preferencias. |
+| Centro de preferencias activado | Tu panel de control Braze tiene permisos para utilizar la función del centro de preferencias. |
 | Espacio de trabajo válido con un grupo de suscripción por correo electrónico, SMS o WhatsApp | Un espacio de trabajo con usuarios válidos y un grupo de suscripción por correo electrónico, SMS o WhatsApp. |
-| Usuario válido | Un usuario con una dirección de correo electrónico y un ID externo. |
-| Clave de API generada con permisos del centro de preferencias | En el panel de Braze, ve a **Configuración** > **Claves de API** para confirmar que tienes acceso a una clave de API con permisos del centro de preferencias. |
+| Usuario válido | Un usuario con una dirección de correo electrónico y un identificador externo. |
+| Clave API generada con permisos del centro de preferencias | En el panel de control de Braze, vaya a **Configuración** > **Claves de** API para confirmar que tiene acceso a una clave de API con permisos del centro de preferencias. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Paso 1: Utiliza el punto final Crear centro de preferencias
 
-Empecemos a crear un centro de preferencias utilizando el [punto final Crear centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). Para personalizar tu centro de preferencias, puedes incluir HTML que se ajuste a tu marca en el campo `preference_center_page_html` y en el campo `confirmation_page_html`.
+Empecemos a crear un centro de preferencias utilizando el [punto final Crear centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center/post_create_preference_center/). Para personalizar su centro de preferencias, puede incluir código HTML acorde con su marca en los campos `preference_center_page_html` y `confirmation_page_html`.
 
-El [punto final Generar URL del]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) centro de preferencias te permite obtener la URL del centro de preferencias de un usuario concreto fuera de un correo electrónico enviado a través de Braze.
+El [punto final Generar URL del centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center/get_create_url_preference_center/) te permite obtener la URL del centro de preferencias de un usuario concreto fuera de un correo electrónico enviado a través de Braze.
 
-### Paso 2: Incluir en tu campaña de correo electrónico
+### Paso 2: Incluir en tu campaña de correo electrónico
 
 {% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
-Para colocar un enlace al centro de preferencias en tus correos electrónicos, utiliza la siguiente etiqueta de Liquid en el lugar deseado de tu correo electrónico, de forma similar a como insertarías las URL para cancelar suscripción.
+Para colocar un enlace al centro de preferencias en sus correos electrónicos, utilice la siguiente etiqueta Liquid en el lugar deseado de su correo electrónico, de forma similar a como insertaría las URL de cancelación de suscripción.
 
 {% raw %}
 ```liquid
@@ -53,7 +53,7 @@ Para colocar un enlace al centro de preferencias en tus correos electrónicos, u
 ```
 {%endraw%}
 
-También puedes utilizar una combinación de HTML que incluya Liquid. Por ejemplo, puedes pegar lo siguiente como URL en el editor HTML o en el editor de arrastrar y soltar. Esto mostrará el diseño básico del centro de preferencias que enumera automáticamente todos los grupos de suscripción por correo electrónico. 
+También puede utilizar una combinación de HTML que incluya Liquid. Por ejemplo, puede pegar lo siguiente como URL en el editor HTML o en el editor de arrastrar y soltar. Esto mostrará el diseño básico del centro de preferencias que enumera automáticamente todos los grupos de suscripción de correo electrónico. 
 
 {% raw %}
 ```html
@@ -61,29 +61,29 @@ También puedes utilizar una combinación de HTML que incluya Liquid. Por ejempl
 ```
 {%endraw%}
 
-El centro de preferencias tiene una casilla de verificación que permitirá a tus usuarios cancelar suscripción a todos los correos electrónicos. Ten en cuenta que no podrás guardar estas preferencias si las envías como mensaje de prueba.
+El centro de preferencias tiene una casilla de verificación que permitirá a sus usuarios darse de baja de todos los correos electrónicos. Tenga en cuenta que no podrá guardar estas preferencias si las envía como mensaje de prueba.
 
 {% alert important %}
-La etiqueta de Liquid anterior sólo funcionará al lanzar una campaña o Canvas. El envío de un correo electrónico de prueba no generará un enlace válido.
+La etiqueta Liquid anterior sólo funcionará al lanzar una campaña o Canvas. El envío de un correo electrónico de prueba no generará un enlace válido.
 {% endalert %}
 
 #### Editar un centro de preferencias
 
 Puedes editar y actualizar tu centro de preferencias utilizando el [punto final Actualizar centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center/put_update_preference_center/). 
 
-#### Centros de preferencia identificadores y detalles
+#### Identificación de los centros de preferencia y detalles
 
-Para identificar tus centros de preferencias, utiliza el [punto final Ver detalles del centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) para obtener información relacionada, como la fecha y hora de la última actualización, el ID del centro de preferencias, etc.
+Para identificar sus centros de preferencias, utilice el [punto final Ver detalles del centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center/get_view_details_preference_center/) para obtener información relacionada, como la fecha y hora de la última actualización, el ID del centro de preferencias, etc.
 
 ## Personalización
 
-Braze gestiona las actualizaciones del estado de suscripción desde el centro de preferencias, lo que lo mantiene sincronizado. Sin embargo, también puedes crear y alojar tu propio centro de preferencias utilizando [las API de grupos de suscripción]({{site.baseurl}}/api/endpoints/subscription_groups/) con las siguientes opciones.
+Braze gestiona las actualizaciones del estado de suscripción desde el centro de preferencias, lo que lo mantiene sincronizado. Sin embargo, también puede crear y alojar su propio centro de preferencias utilizando [las API de grupos de suscripción]({{site.baseurl}}/api/endpoints/subscription_groups/) con las siguientes opciones.
 
 ### Opción 1: Enlace con parámetros de consulta de cadena
 
-Utiliza pares campo-valor de cadena de consulta en el cuerpo de la URL para pasar el ID del usuario y la categoría de correo electrónico a la página, de modo que los usuarios sólo tengan que confirmar su elección de cancelar suscripción. Esta opción es buena para quienes almacenan un identificador de usuario en formato hash y aún no tienen un centro de suscripción.
+Utilice pares campo-valor de cadena de consulta en el cuerpo de la URL para pasar el ID de usuario y la categoría de correo electrónico a la página, de modo que los usuarios sólo tengan que confirmar su decisión de darse de baja. Esta opción es buena para aquellos que almacenan un identificador de usuario en formato hash y no tienen ya un centro de suscripción.
 
-Para esta opción, cada categoría de correo electrónico requerirá su propio enlace específico para cancelar suscripción:<br>
+Para esta opción, cada categoría de correo electrónico requerirá su propio enlace de cancelación de suscripción específico:<br>
 `http://mycompany.com/query-string-form-fill?field_id=John&field_category=offers`
 
 {% alert tip %}
@@ -98,9 +98,9 @@ My encoded string is: {{my_string}}
 
 ### Opción 2: Autenticar con token Web JSON
 
-Utiliza [un token Web JSON](https://auth0.com/learn/json-web-tokens/) para autenticar a los usuarios en una parte de tu servidor Web (por ejemplo, las preferencias de cuenta) que normalmente está detrás de una capa de autenticación como la de iniciar sesión con nombre de usuario y contraseña. 
+Utilice un [token web JSON](https://auth0.com/learn/json-web-tokens/) para autenticar a los usuarios en una parte de su servidor web (por ejemplo, las preferencias de cuenta) que normalmente está detrás de una capa de autenticación como el inicio de sesión con nombre de usuario y contraseña. 
 
-Este enfoque no requiere pares de valores de cadena de consulta incrustados en la URL, ya que éstos pueden pasarse en la carga útil del token Web JSON, por ejemplo:
+Este enfoque no requiere pares de valores de cadena de consulta incrustados en la URL, ya que estos se pueden pasar en la carga útil del token web JSON, por ejemplo:
 
 ```json
 {
@@ -140,3 +140,39 @@ Luego, a través de Currents, podrías identificar qué usuarios hablan español
 ### ¿Son necesarios para el envío tanto los enlaces para cancelar suscripción como los centros de preferencias de correo electrónico?
 
 No. Si ves el mensaje "El cuerpo de tu correo electrónico no incluye un enlace para cancelar suscripción" al redactar una campaña de correo electrónico, esta advertencia es de esperar si tu enlace para cancelar suscripción está en un bloque de contenido.
+
+### ¿Cómo actualizo el icono predeterminado del navegador?
+
+Por defecto, el icono situado junto al nombre de la pestaña del navegador (favicon) utiliza el logotipo de Braze. Para añadir un favicon personalizado, lo estableces a través del atributo `links-tags` en tu [llamada a la API]({{site.baseurl}}/api/endpoints/preference_center) Crear o Actualizar [centro de preferencias]({{site.baseurl}}/api/endpoints/preference_center). A continuación, Braze inyecta la etiqueta {% raw %}`<link rel="icon" ...>`{% endraw %} en la página alojada por ti.
+
+{% raw %}
+```
+{
+  "name": "MyPreferenceCenter",
+  "preference_center_title": "Email Preferences",
+  "preference_center_page_html": "<!doctype html> ...",
+  "confirmation_page_html": "<!doctype html> ...",
+  "state": "active",
+  "options": {
+    "links-tags": [
+      {
+        "rel": "icon",
+        "type": "image/png",
+        "sizes": "32x32",
+        "href": "https://yourcdn.com/path/to/favicon-32x32.png"
+      },
+      {
+        "rel": "shortcut icon",
+        "type": "image/x-icon",
+        "href": "https://yourcdn.com/path/to/favicon.ico"
+      },
+      {
+        "rel": "apple-touch-icon",
+        "sizes": "180x180",
+        "href": "https://yourcdn.com/path/to/apple-touch-icon.png"
+      }
+    ]
+  }
+}
+```
+{% endraw %}

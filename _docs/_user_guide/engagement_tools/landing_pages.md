@@ -29,6 +29,16 @@ Before you can access, create, and publish landing pages, you either need admini
 
 {% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
+## Plan tiers
+
+The number of published landing pages and custom domains you can use depends on your plan type: free or paid (incremental).
+
+| Feature                                                                                                   | Free tier     | Paid tier (incremental)     |
+| :---------------------------------------------------------------------------------------------------------------- | :--------------- | ----------------- |
+| Published landing pages                                                                 | Five per company | 20 additional |
+| Custom domains          | One per company | Five additional |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
+
 ## Adding Google Tag Manager to a landing page
 
 To add Google Tag Manager to your landing pages, add a **Custom Code** block to your landing page in the drag-and-drop editor, then insert the Tag Manager code into the block. Make sure to add a data layer before the Tag Manager code, such as in this example:

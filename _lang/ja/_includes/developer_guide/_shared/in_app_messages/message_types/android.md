@@ -38,6 +38,10 @@ Braze には、メッセージ、"画像 s、[フォントアウェゾーム](ht
 
 このメッセージタイプは、[`IInAppMessageHtml`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html) を実装します。これは、[`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) のサブクラスです。
 
+{% alert note %}
+Androidでは、機器のデフォルトウェブブラウザのカスタムHTML アプリ内メッセージの開封で`target="_blank"` で設定されたリンク。
+{% endalert %}
+
 Android アプリ内メッセージ では、JavaScript `brazeBridge` インターフェイスを使用してHTML内からBraze Android SDKのメソッドを呼び出すことができます。詳しくは、<a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">JavaScript bridge</a> を参照してください。
 
 ![内容のカルーセルとインタラクティブボタンを備えたHTML アプリ内メッセージ。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}

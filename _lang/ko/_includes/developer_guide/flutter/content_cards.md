@@ -1,4 +1,4 @@
-## 플러터 콘텐츠 카드에 대하여
+## Flutter 콘텐츠 카드 정보
 
 Braze SDK에는 콘텐츠 카드를 시작할 수 있는 기본 카드 피드가 포함되어 있습니다. 카드 피드를 표시하려면 `braze.launchContentCards()` 메서드를 사용할 수 있습니다. 기본 카드 피드는 Braze SDK에 포함되어 있으며 모든 분석 추적, 해제 및 사용자의 콘텐츠 카드 렌더링을 처리합니다.
 
@@ -42,24 +42,17 @@ contentCardsStreamSubscription.cancel();
 
 ### 2단계: 네이티브 레이어에서 콘텐츠 카드 데이터를 전달
 
-1단계의 Dart 레이어에서 데이터를 수신하려면 다음 코드를 추가하여 기본 레이어에서 콘텐츠 카드 데이터를 전달합니다.
+{% alert note %}
+이 단계는 iOS 전용입니다. 콘텐츠 카드 데이터는 Android 계층에서 자동으로 전달됩니다.
+{% endalert %}
 
-{% tabs %}
-{% tab Android %}
-
-콘텐츠 카드 데이터는 Android 계층에서 자동으로 전달됩니다.
-
-{% endtab %}
-{% tab iOS %}
+1단계의 Dart 레이어에서 데이터를 받으려면 다음 코드를 추가하여 네이티브 iOS 레이어에서 콘텐츠 카드 데이터를 전달합니다.
 
 1. 콘텐츠 카드 업데이트에 가입하려면 `contentCards.subscribeToUpdates`를 구현합니다. 자세한 내용은 [subscribeToUpdates](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/subscribetoupdates(_:)) 설명서를 참조하세요.
 
 2. 귀하의 `contentCards.subscribeToUpdates` 콜백 구현은 `BrazePlugin.processContentCards(contentCards)`를 호출해야 합니다.
 
 예제는 샘플 앱의 [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) 를 참조하세요.
-
-{% endtab %}
-{% endtabs %}
 
 #### 콘텐츠 카드에 대한 콜백 재생
 
