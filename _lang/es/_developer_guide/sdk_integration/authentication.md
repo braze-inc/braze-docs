@@ -1,7 +1,7 @@
 ---
 page_order: 1.2
 nav_title: Autenticación
-article_title: Configuración de la autenticación para el SDK de Braze
+article_title: Configurar la autenticación para el SDK de Braze
 description: "Este artículo de referencia cubre la autenticación del SDK y cómo habilitar esta característica en el SDK de Braze."
 platform:
   - iOS
@@ -10,7 +10,7 @@ platform:
   
 ---
 
-# Configuración de la autenticación SDK
+# Configurar la autenticación SDK
 
 > La Autenticación del SDK te permite proporcionar una prueba criptográfica (generada en el servidor) a las solicitudes del SDK realizadas en nombre de usuarios que han iniciado sesión.
 
@@ -23,7 +23,7 @@ Después de habilitar esta característica en tu aplicación, puedes configurar 
 - Actualización de los atributos estándar del perfil de usuario
 - Recibir o desencadenar mensajes
 
-Ahora puedes impedir que los usuarios no autentificados que hayan iniciado sesión utilicen la clave de API de SDK de tu aplicación para realizar acciones maliciosas, como suplantar la identidad de otros usuarios.
+Ahora puedes evitar que usuarios no autenticados que hayan iniciado sesión utilicen la clave de API de SDK de tu aplicación para realizar acciones maliciosas, como suplantar la identidad de otros usuarios.
 
 ## Configuración de la autenticación
 
@@ -201,7 +201,7 @@ O, cuando hayas refrescado el token del usuario en mitad de la sesión:
 Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER")
 ```
 {% endtab %}
-{% tab Objetivo-C %}
+{% tab Objective-C %}
 
 Proporciona el JWT cuando llames a [`changeUser`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)):
 
@@ -251,7 +251,7 @@ Cuando esta característica se establece como [Requerido](#enforcement-options),
 - El JWT estaba vacío o faltaba
 - No se ha podido verificar JWT para las claves públicas que has cargado en el panel de Braze
 
-Puedes utilizar `subscribeToSdkAuthenticationFailures` para suscribirte y recibir una notificación cuando las solicitudes del SDK fallen por uno de estos motivos. Una función de devolución de llamada contiene un objeto con la información relevante [`errorCode`](#error-codes), `reason` para el error, el `userId` de la solicitud (si el usuario no es anónimo), y el token de autenticación (JWT) que causó el error. 
+Puedes utilizar `subscribeToSdkAuthenticationFailures` para suscribirte y recibir una notificación cuando las solicitudes del SDK fallen por uno de estos motivos. Una función de devolución de llamada contiene un objeto con la información relevante [`errorCode`](#error-codes), `reason` para el error, el `userId` de la solicitud (el usuario no puede ser anónimo), y el token de autenticación (JWT) que causó el error. 
 
 Las solicitudes fallidas se reintentarán periódicamente hasta que tu aplicación proporcione un nuevo JWT válido. Si ese usuario sigue conectado, puedes utilizar esta devolución de llamada como una oportunidad para solicitar un nuevo JWT a tu servidor y suministrar al SDK de Braze este nuevo token válido.
 
@@ -400,19 +400,19 @@ Los datos están disponibles en tiempo real, y puedes pasar el ratón por encima
 
 ## Códigos de error {#error-codes}
 
-| Código de error| Motivo del error | Descripción |
-| --------  | ------------ | ---------  |
-| 10 | `EXPIRATION_REQUIRED` | La caducidad es un campo obligatorio para el uso de Braze.|
-| 20 | `DECODING_ERROR` | Clave pública no coincidente o error general no detectado.|
-| 21 | `SUBJECT_MISMATCH` | Los sujetos esperados y los reales no son los mismos.|
-| 22 | `EXPIRED` | El token proporcionado ha caducado.|
-| 23 | `INVALID_PAYLOAD` | La carga útil del token no es válida.|
-| 24 | `INCORRECT_ALGORITHM` | No se admite el algoritmo del token.|
-| 25 | `PUBLIC_KEY_ERROR` | No se ha podido convertir la clave pública al formato adecuado.|
-| 26 | `MISSING_TOKEN` | No se ha proporcionado ningún token en la solicitud.|
-| 27 | `NO_MATCHING_PUBLIC_KEYS` | Ninguna clave pública coincide con el token proporcionado.|
-| 28 | `PAYLOAD_USER_ID_MISMATCH` | No todos los ID de usuario de la carga útil de la solicitud coinciden como es debido.|
-{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3 role="presentation" }
+| Código de error| Motivo del error | Descripción | Pasos para resolver |
+| --------  | ------------ | ---------  | ---------  |
+| 10 | `EXPIRATION_REQUIRED` | La caducidad es un campo obligatorio para el uso de Braze.| Añade un campo `exp` o de caducidad a tu lógica de creación de JWT. |
+| 20 | `DECODING_ERROR` | Clave pública no coincidente o error general no detectado.| Copia tu JWT en una herramienta de comprobación de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
+| 21 | `SUBJECT_MISMATCH` | Los sujetos esperados y los reales no son los mismos.| El campo `sub` debe ser el mismo ID de usuario pasado al método SDK `changeUser`. |
+| 22 | `EXPIRED` | El token proporcionado ha caducado.| Amplía la caducidad o actualiza periódicamente los tokens antes de que caduquen. |
+| 23 | `INVALID_PAYLOAD` | La carga útil del token no es válida.| Copia tu JWT en una herramienta de comprobación de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
+| 24 | `INCORRECT_ALGORITHM` | No se admite el algoritmo del token.| Cambia tu JWT para que utilice el cifrado `RS256`. No se admiten otros tipos. |
+| 25 | `PUBLIC_KEY_ERROR` | No se ha podido convertir la clave pública al formato adecuado.| Copia tu JWT en una herramienta de comprobación de JWT para diagnosticar por qué tu JWT tiene un formato no válido. |
+| 26 | `MISSING_TOKEN` | No se ha proporcionado ningún token en la solicitud.| Asegúrate de que pasas un token al llamar a `changeUser(id, token)` y de que tu token no está vacío.|
+| 27 | `NO_MATCHING_PUBLIC_KEYS` | Ninguna clave pública coincide con el token proporcionado.| La clave privada utilizada en el JWT no coincide con ninguna clave pública configurada para tu aplicación. Confirma que has añadido las claves públicas a la aplicación correcta de tu espacio de trabajo que coincide con esta clave de API.|
+| 28 | `PAYLOAD_USER_ID_MISMATCH` | No todos los ID de usuario de la carga útil de la solicitud coinciden como es debido.| Esto es inesperado y puede dar lugar a una carga útil malformada. Abre un ticket de soporte para obtener ayuda. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Preguntas más frecuentes (FAQ) {#faq}
 
@@ -452,3 +452,6 @@ Cuando se rechaza una solicitud debido a un error de autenticación, el SDK invo
 
 Las solicitudes se reintentarán periódicamente utilizando un método de retirada exponencial. Después de 50 intentos fallidos consecutivos, los reintentos se pausarán hasta el siguiente inicio de sesión. Cada SDK también tiene un método para solicitar manualmente una descarga de datos.
 
+#### ¿Puedes utilizar la autenticación SDK para usuarios anónimos? {#faq-anonymous-users}
+
+No. La autenticación SDK no funcionará para usuarios anónimos.

@@ -1,13 +1,13 @@
 ---
 nav_title: Fehlersuche
-article_title: Fehlerbehebung Braze Access
+article_title: Fehlerbehebung für Braze Access
 page_order: 8
 page_type: reference
 description: "Dieser Artikel führt Sie durch die Fehlerbehebung von Problemen, die beim Zugriff auf Braze auftreten können."
 
 ---
 
-# Fehlerbehebung Braze Zugang
+# Fehlerbehebung beim Braze-Zugang
 
 > Dieser Artikel hilft Ihnen bei der Fehlerbehebung von Problemen, die beim Zugriff auf Braze auftreten können.
 
@@ -67,7 +67,7 @@ Wenn Sie die oben genannten Probleme gelöst haben und Ihr Dashboard immer noch 
 
 ## Fehlerbehebung als neuer Nutzer:in
 
-Wenn Sie ein neuer Nutzer:innen von Braze sind und Probleme bei der Anmeldung oder beim ersten Zugriff auf Ihr Konto haben, befolgen Sie diese Schritte, um die häufigsten Probleme zu lösen:
+Wenn Sie ein neuer Nutzer:innen von Braze sind und Probleme bei der Anmeldung oder beim ersten Zugriff auf Ihr Konto haben, befolgen Sie diese Schritte, um häufige Probleme zu lösen:
 
 ### Ich habe die Willkommens-E-Mail nie erhalten
 

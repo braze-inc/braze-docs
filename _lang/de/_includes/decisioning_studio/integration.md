@@ -22,6 +22,6 @@ Gehen Sie in Braze zu **Einstellungen** > **API-Schlüssel**, und erstellen Sie 
 
 ### Schritt 3: Customer-Success-Manager wegen BrazeAI Decisioning Studio™ kontaktieren
 
-Wenden Sie sich an Ihren Customer-Success-Manager mit der Bitte, BrazeAI Decisioning Studio™ zu aktivieren. Sie verwenden Ihren Braze API-Schlüssel und die URL des Endpunkts, um die Integration fertigzustellen.
+Wenden Sie sich an Ihren Customer-Success-Manager:in und bitten Sie ihn, BrazeAI Decisioning Studio™ zu aktivieren. Sie verwenden Ihren Braze API-Schlüssel und die URL des Endpunkts, um die Integration fertigzustellen.
 
 Danach arbeiten Sie mit dem Team von AI Expert Services zusammen, um [Agenten für Ihr Produkt zu erstellen]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/building_agents). Jeder Agent ist auf ein bestimmtes Geschäftsziel zugeschnitten, so dass Sie gemeinsam mit uns eine für Sie passende Implementierung entwerfen können.

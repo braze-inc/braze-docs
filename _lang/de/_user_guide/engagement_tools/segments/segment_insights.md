@@ -9,7 +9,7 @@ tool:
 description: "In diesem Artikel erfahren Sie, wie Sie Segment-Insights verwenden, interpretieren und weitergeben können."
 ---
 
-# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmente Insights
+# [![Braze-Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmente-Insights
 
 > Lernen Sie, wie Sie Segment-Insights verwenden, interpretieren und weitergeben können. 
 
@@ -19,7 +19,7 @@ Segment Insights zeigt Ihnen, wie sich ein Segment im Vergleich zu einem anderen
 
 Gehen Sie auf die Seite **Segment-Insights** auf Ihrem Dashboard unter **Analytics**, um bis zu 10 verschiedene Segmente im Vergleich zu einer Baseline zu sehen.
 
-![Segment-Insights Dashboard, das die drei Segmente "Nutzer:innen aus Großbritannien", "Nutzer:innen aus Frankreich" und "Nutzer:innen aus Kanada" mit einem Basissegment "Alle Nutzer:innen" vergleicht.]({% image_buster /assets/img_archive/segment_insights.png %})
+![Segment-Insights Dashboard zum Vergleich der drei Segmente "Nutzer:innen aus Großbritannien", "Nutzer:innen aus Frankreich" und "Nutzer:innen aus Kalifornien" mit einem Basissegment "Alle Nutzer:innen".]({% image_buster /assets/img_archive/segment_insights.png %})
 
 Das Basissegment kann entweder ein bestimmtes Segment sein, das Sie auswählen, oder ein Segment, das alle Ihre Nutzer enthält. Sie können die folgenden Statistiken mit Segment Insights vergleichen:
 
@@ -66,7 +66,7 @@ Um die Konversionen bei Sprechern anderer Sprachen als Englisch zu verbessern, w
 
 Es kann schwierig sein, Nutzer:innen zu Käufern und Käuferinnen umzuwandeln, und der Versuch, neue, inaktive oder uninteressierte Nutzer:innen direkt zum Kauf zu drängen, kann dazu führen, dass sie Ihre App deinstallieren. Segment-Insights können Ihnen helfen, Aktionen zu entdecken, die Nutzer:innen weiter in den Funnel führen, ohne dass sie gleich kaufen müssen, z.B. das Abonnieren Ihres Newsletters, das Teilen in Social Media oder das Abonnieren von Nachrichten zu Werbezwecken. So können Sie zum Beispiel die Auswirkungen verschiedener Verhaltensweisen innerhalb einer E-Commerce App auf die Käufe in einem Chart darstellen.
 
-Segment-Insights Aufschlüsselung für Nutzer:innen, die in Social Media geteilt, sich für Aktionen registriert und sich für den Newsletter angemeldet haben.]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
+![Segment-Insights Aufschlüsselung für Nutzer:innen, die auf Social Media geteilt haben, sich für Aktionen registriert haben und sich für den Newsletter angemeldet haben.]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
 
 In diesem Fall sind relativ wenige Nutzer:innen für Nachrichten zu Werbezwecken registriert und nicht so aktiv, aber diese Nutzer:innen generieren einen höheren Lifetime-Umsatz. Um den Umsatz zu steigern, kann es eine gute Idee sein, in Onboarding-Kampagnen eine Einladung zur Registrierung für Werbenachrichten aufzunehmen. Um verfallene Nutzer:innen wieder zu engagieren, bietet es sich an, eine typische [Kampagne für verfallene Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) zu versenden und die [Nutzer:innen, die konvertiert sind]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter), mit einer nachfolgenden Kampagne anzusprechen, damit sie sich für Werbebotschaften anmelden.
 

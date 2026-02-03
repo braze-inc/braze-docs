@@ -9,7 +9,7 @@ tool: Currents
 
 ---
  
-# [![Curso do Braze Learning] ({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"}Mixpanel
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2){: style="float:right;width:120px;border:0;" class="noimgborder"} Mixpanel
 
 > O [Mixpanel](https://mixpanel.com/) é uma plataforma de análise de dados que permite exportar eventos do Mixpanel para realizar análises mais profundas em outras plataformas. Os dados coletados podem então ser usados para criar relatórios personalizados e medir o engajamento e a retenção de usuários.
 
@@ -39,9 +39,9 @@ No dashboard do Mixpanel, clique em **Project Settings** (Configurações do pro
 
 Na Braze, navegue até \*\*Currents > **\+ Criar Current** > **Criar exportação do Mixpanel**. Forneça um nome de integração, e-mail de contato, segredo da API do Mixpanel e token do Mixpanel nos campos listados. Em seguida, selecione os eventos que deseja rastrear; é fornecida uma lista dos eventos disponíveis. Por fim, clique em **Launch Current (Iniciar atual**).
 
-![A página Braze Mixpanel Currents. Essa página inclui campos para nome da integração, e-mail do contato, segredo da API e token de exportação do Mixpanel. A metade inferior da página de Currents lista os eventos de Currents disponíveis que você pode enviar.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
+![A página Braze Mixpanel Currents. Essa página inclui campos para nome da integração, e-mail do contato, segredo da API e token de exportação do Mixpanel. A metade inferior da página Currents lista os eventos Currents disponíveis que você pode enviar.]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
 
-{% tab nota %}
+{% tab note %}
 Consulte [os documentos de integração](https://help.mixpanel.com/hc/en-us/articles/360001243663) do Mixpanel para saber mais.
 {% endtab %}
 

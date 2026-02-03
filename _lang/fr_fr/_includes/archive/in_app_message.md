@@ -1,33 +1,33 @@
 ### Messages in-app Slideup
 
-[`Slideup`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} Les messages in-app sont ainsi nommés parce qu'ils « glissent  depuis le haut ou le bas de l'écran.  Ils recouvrent une petite partie de l’écran et offrent une fonctionnalité de messagerie efficace et non intrusive.
+[\`Slideup\`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} Les messages in-app sont ainsi nommés parce qu'ils "glissent vers le haut" ou "glissent vers le bas" depuis le haut ou le bas de l'écran.  Ils recouvrent une petite partie de l’écran et offrent une fonctionnalité de messagerie efficace et non intrusive.
 
-![Exemple de contextuel][in_app_message_9]
+![Exemple de Slideup]({% image_buster /assets/img_archive/In-App_Slideup.png %})
 
 ### Messages in-app modaux
 
-[`Modal`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} Les messages in-app apparaissent au centre de l'écran et sont encadrés par un panneau translucide. Utiles pour les messages critiques, ils peuvent être pourvus de deux boutons d’action et d’analyse.
+[\`Modal\`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} Les messages in-app apparaissent au centre de l'écran et sont encadrés par un panneau translucide. Utiles pour les messages critiques, ils peuvent être pourvus de deux boutons d’action et d’analyse.
 
-![Exemple de fenêtre modale][in_app_message_10]
+![Exemple de message Modal]({% image_buster /assets/img_archive/In-App_Modal.png %})
 
 ### Messages in-app complets
 
-[`Full`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} Les messages in-app sont utiles pour maximiser le contenu et l'impact de votre communication avec les utilisateurs.  La moitié supérieure d’un message in-app `full` contient une image, et la moitié inférieure affiche le texte et deux boutons d’action et d’analyse.
+[\`Full\`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} messages in-app sont utiles pour maximiser le contenu et l'impact de votre communication avec les utilisateurs.  La moitié supérieure d’un message in-app `full` contient une image, et la moitié inférieure affiche le texte et deux boutons d’action et d’analyse.
 
-![Exemple complet][in_app_message_11]
+![Exemple de message complet]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 ### Messages in-app HTML complets
 
-[`HTML Full`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} Les messages in-app sont utiles pour créer un contenu utilisateur entièrement personnalisé. Le contenu des messages in-app entièrement en HTML défini par l’utilisateur est affiché dans un {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} et peut éventuellement contenir d’autres contenus enrichis, tels que des images et des polices, permettant un contrôle total de l’apparence et de la fonctionnalité du message.
+[\`HTML Full\`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} Les messages in-app sont utiles pour créer un contenu utilisateur entièrement personnalisé. Le contenu des messages in-app entièrement en HTML défini par l’utilisateur est affiché dans un {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} et peut éventuellement contenir d’autres contenus enrichis, tels que des images et des polices, permettant un contrôle total de l’apparence et de la fonctionnalité du message.
 
  {% if include.platform == "iOS" %}
 L’exemple suivant montre la mise en page d’un message in-app HTML complet :
 
-![Exemple HTML5][in_app_message_23]
+![Exemple HTML5]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
  {% elsif include.platform == "Android" %}L’exemple suivant montre un message in-app HTML complet de sondage créé par Soundcloud.
 
-![Exemple HTML5][in_app_message_12]
+![Exemple HTML5]({% image_buster /assets/img_archive/HTML5.gif %})
 {% endif %}
 
 Le contenu d’un message in-app complet est affiché dans un WKWebView et peut éventuellement contenir d’autres contenus enrichis, comme des images et des polices, permettant un contrôle total de l’apparence et des fonctionnalités du message. **Veuillez noter que nous ne prenons actuellement pas en charge l’affichage de messages in-app HTML personnalisés dans un iFrame sur les plateformes iOS et Android.**
@@ -38,16 +38,16 @@ Le contenu d’un message in-app complet est affiché dans un WKWebView et peut 
 
 La documentation suivante fait référence au produit Braze `In-App Messaging`, également connu sous le nom de "messages in-app déclenchés", dont la marque est mise en évidence ci-dessous dans le menu déroulant "Créer une campagne" :
 
-![Compositeur de messages in-app][in_app_message_13]
+![Compositeur de messages in-app]({% image_buster /assets/img_archive/trigger-iam-composer.png %})
 
-Vous pouvez également consulter la documentation relative à notre produit obsolète [`Original In-App Messaging`][in_app_message_14].
+Vous pouvez également vous référer à la documentation de notre produit obsolète [\`Original In-App Messaging\`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages).
 
 #### Types de déclencheurs
 
 Notre produit de messages in-app vous permet de déclencher un affichage de messages in-app suite à plusieurs types d’événements différents : `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  En outre, les déclencheurs `Specific Purchase` et `Custom Event` peuvent contenir des filtres de propriétés robustes.
 
 {% alert note %}
-Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK de Braze. Les messages in-app peuvent être déclenchés via l’API ou les événements API (comme les événements d’achat). Si vous travaillez avec Android, découvrez comment [consigner des événements personnalisés sur Android][in_app_message_24]. Si vous travaillez avec iOS, découvrez comment [consigner des événements personnalisés sur iOS][in_app_message_25].
+Les messages in-app déclenchés ne fonctionnent qu’avec des événements personnalisés enregistrés via le SDK de Braze. Les messages in-app peuvent être déclenchés via l’API ou les événements API (comme les événements d’achat). Si vous travaillez avec Android, découvrez comment [enregistrer des événements personnalisés sur Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events). Si vous travaillez avec iOS, découvrez comment [enregistrer des événements personnalisés sur iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
 #### Sémantiques de livraison
@@ -88,16 +88,6 @@ Pour remplacer cette valeur, définissez `com_appboy_trigger_action_minimum_time
 [in_app_message_6]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html
 [in_app_message_7]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html
 [in_app_message_8]: https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
-[in_app_message_9]: {% image_buster /assets/img_archive/In-App_Slideup.png %}
-[in_app_message_10]: {% image_buster /assets/img_archive/In-App_Modal.png %}
-[in_app_message_11]: {% image_buster /assets/img_archive/In-App_Full.png %}
-[in_app_message_12]: {% image_buster /assets/img_archive/HTML5.gif %}
-[in_app_message_13]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
-[in_app_message_14]: {{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
 [in_app_message_15a]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-lifecycle
 [in_app_message_15b]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle
-[in_app_message_19]: {{ site.baseurl }}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-déclenchés
-[in_app_message_23]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
-[in_app_message_24]: {{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
-[in_app_message_25]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
 

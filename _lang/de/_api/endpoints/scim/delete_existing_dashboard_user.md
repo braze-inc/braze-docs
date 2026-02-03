@@ -12,10 +12,10 @@ description: "Dieser Artikel beschreibt den Endpunkt Nutzer:innen des Dashboard-
 {% api %}
 # Dashboard-Benutzerkonto entfernen
 {% apimethod delete %}
-/scim/v2/Users/{id}
+/scim/v2/Benutzer:innen/{id}
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um einen bestehenden Nutzer:in des Dashboards dauerhaft zu löschen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) Methode zurückgegeben wird. 
+> Verwenden Sie diesen Endpunkt, um einen bestehenden Nutzer:in des Dashboards dauerhaft zu löschen, indem Sie die Ressource `id` angeben, die von der SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) Methode zurückgegeben wird.
 
 Dies ist vergleichbar mit dem Löschen eines Nutzers:innen im Bereich **Unternehmensnutzer** des Braze-Dashboards.
 

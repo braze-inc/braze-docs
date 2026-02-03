@@ -5,7 +5,7 @@ page_order: 3
 layout: dev_guide
 
 guide_top_header: "Daten"
-guide_top_text: "Daten spielen eine entscheidende Rolle bei der Verbesserung Ihrer Customer-Engagement-Strategie, denn sie ermöglichen es Ihnen, personalisierte Erlebnisse zu schaffen, das Kundenverhalten zu verstehen und Messaging-Strategien zu optimieren. Bei Braze haben wir bei der Entwicklung aller Datenfunktionen drei Kernpunkte im Auge: <br><br>**1.** <a href='/docs/user_guide/data/#making-customer-data-work-harder/'>Lassen Sie Kundendaten härter arbeiten.</a><br> **2.** <a href='/docs/user_guide/data/#enhancing-data-agility-to-drive-performance/'>Verbessern Sie die Agilität der Daten, um die Performance zu steigern.</a><br>**3.** <a href='/docs/user_guide/data/#keeping-brands-data-secure-safe-and-compliant/'>Sorgen Sie dafür, dass die Daten der Marken sicher und konform sind.</a>" 
+guide_top_text: "Daten spielen eine entscheidende Rolle bei der Verbesserung Ihrer Customer-Engagement-Strategie, denn sie ermöglichen es Ihnen, personalisierte Erlebnisse zu schaffen, das Kundenverhalten zu verstehen und Messaging-Strategien zu optimieren. Bei Braze haben wir bei der Entwicklung aller Datenfunktionen drei Dinge im Auge: <br><br>**1.** <a href='/docs/user_guide/data/#making-customer-data-work-harder/'>Lassen Sie Kundendaten härter arbeiten.</a><br> **2.** <a href='/docs/user_guide/data/#enhancing-data-agility-to-drive-performance/'>Verbessern Sie die Agilität der Daten, um die Performance zu steigern.</a><br>**3.** <a href='/docs/user_guide/data/#keeping-brands-data-secure-safe-and-compliant/'>Sorgen Sie dafür, dass die Daten der Marken sicher und konform sind.</a>" 
 
 guide_featured_title: "Braze-Datenplattform"
 guide_featured_list:

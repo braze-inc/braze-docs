@@ -7,7 +7,7 @@ description: "Dieser Artikel bietet einen Überblick über die verschiedenen Mö
 
 ---
 
-# Erste Schritte: Kampagnen und Canvase
+# Beginnen Sie: Kampagnen und Canvase
 
 In Braze können Sie Nachrichten entweder über eine [Kampagne](#campaigns) oder ein [Canvas](#canvas) versenden.
 
@@ -42,7 +42,7 @@ Hier erfahren Sie mehr über Braze-Kampagnen:
 
 Anstatt sporadische Nachrichten über mehrere Kampagnen hinweg zu versenden, schaffen Canvases eine kontinuierliche, fließende Konversation mit den Nutzern. Das liegt daran, dass sich die Reise eines Nutzers durch ein Canvas in verschiedene Pfade aufteilen kann, je nachdem, was er mit Ihrer Marke macht (oder nicht macht). So können Sie die Nutzer automatisch und in Echtzeit durch einen bestimmten Fluss führen.
 
-\![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 So können Sie mit Canvasen Nutzer:innen erfassen, die den Konversionspfad verlassen haben, und sie in die am besten geeignete Outreach-Initiative einbinden.
 
@@ -60,7 +60,7 @@ Schauen Sie sich diese zusätzlichen Ressourcen an, um mehr über Canvas zu erfa
 
 Messaging-Kanäle sind die verschiedenen Kommunikationskanäle, über die Sie mit Ihren Kunden in Kontakt treten und gezielte Nachrichten übermitteln können. 
 
-\![]({% image_buster /assets/img/getting_started/channels.png %})
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 Die folgende Tabelle gibt einen Überblick über die von uns unterstützten Kanäle.
 

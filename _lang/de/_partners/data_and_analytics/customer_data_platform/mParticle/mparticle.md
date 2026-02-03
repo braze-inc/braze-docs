@@ -25,15 +25,17 @@ Die Integration von Braze und mParticle erlaubt es Ihnen, den Informationsfluss 
 | ----------- | ----------- |
 | mParticle Konto | Um die Vorteile dieser Partnerschaft zu nutzen, benötigen Sie ein [mParticle-Konto](https://app.mparticle.com/login). |
 | Braze-Instanz | Ihre Braze-Instanz finden Sie auf der [API-Übersichtsseite]({{site.baseurl}}/api/basics/#endpoints) (z. B. `US-01` oder `US-02`). |
-| Braze App Bezeichner Schlüssel | Ihr Bezeichner für die App. <br><br>Diese finden Sie im **Braze Dashboard > Einstellungen verwalten > API-Schlüssel**. |
-| Workspace REST API-Schlüssel | (Server-zu-Server) Ein Braze REST API-Schlüssel<br><br>Dieser kann über das **Braze-Dashboard > Entwicklungskonsole > API-Einstellungen > API-Schlüssel** erstellt werden. |
+| Braze App Bezeichner Schlüssel | Ihr Bezeichner für die App. <br><br>Diese finden Sie unter **Einstellungen verwalten** > **API-Schlüssel** im Braze-Dashboard. |
+| Workspace REST API-Schlüssel | (Server-zu-Server) Ein Braze REST API-Schlüssel<br><br>Dieser kann unter **Entwickler**:in > **API-Einstellungen** > **API-Schlüssel** im Braze-Dashboard erstellt werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
 ### Zielgruppen
 
-Nutzen Sie die Partnerschaft zwischen Braze und mParticle, um Ihre Integration zu konfigurieren und mParticle Zielgruppen für das Retargeting direkt in Braze zu importieren, so dass ein vollständiger Kreislauf von Daten von einem System zum anderen entsteht. Jede Integration, die Sie einrichten, wird auf das Datenpunktvolumen Ihres Kontos angerechnet.
+Nutzen Sie die Partnerschaft zwischen Braze und mParticle, um Ihre Integration zu konfigurieren und mParticle Zielgruppen für das Retargeting direkt in Braze zu importieren, so dass ein vollständiger Kreislauf von Daten von einem System zum anderen entsteht. 
+
+Jede Integration, die Sie einrichten, protokolliert Datenpunkte. Wenn Sie Fragen zu den Datenpunkten von Braze haben, kann Ihr Braze-Konto Manager:in diese Fragen beantworten.
 
 #### Zielgruppen weiterleiten
 
@@ -118,18 +120,18 @@ Sie sollten die Synchronisierung der Zielgruppen mit Braze innerhalb weniger Min
 
 #### Schritt 2: Segmentierung der Nutzer:innen in Braze
 
-Um in Braze ein Segment für diese Nutzer:innen zu erstellen, navigieren Sie zu **Segmente** unter **Engagement** und benennen Sie Ihr Segment. Im Folgenden finden Sie zwei Beispiele für Segmente, abhängig von der Option, die Sie für **Segmente senden als** ausgewählt haben. Weitere Einzelheiten zu den einzelnen Optionen finden Sie unter [Weiterleitung von Zielgruppen](#forwarding-audiences.)
+Um in Braze ein Segment für diese Nutzer:innen zu erstellen, navigieren Sie zu **Segmente** unter **Engagement** und benennen Sie Ihr Segment. Im Folgenden finden Sie zwei Beispiele für Segmente, abhängig von der Option, die Sie für **Segmente senden als** ausgewählt haben. Weitere Einzelheiten zu den einzelnen Optionen finden Sie unter [Weiterleitung von Zielgruppen](#forwarding-audiences).
 
-- **Einzelnes Attribut eines Arrays:** Wählen Sie `SegmentMembershipArray` als Ihren Filter aus. Verwenden Sie als nächstes die Option "enthält Wert" und geben Sie die gewünschte Zielgruppen-ID ein. ![mParticle Segmente-Filter "SegmentMembershipArray" als "enthält Wert" und Zielgruppen-ID eingestellt..]({% image_buster /assets/img_archive/mparticle5.png %})<br><br>
+- **Einzelnes Attribut eines Arrays:** Wählen Sie `SegmentMembershipArray` als Ihren Filter aus. Verwenden Sie als nächstes die Option "enthält Wert" und geben Sie die gewünschte Zielgruppen-ID ein. ![mParticle Segmente-Filter "SegmentMembershipArray" als "enthält Wert" und Zielgruppen-ID eingestellt.]({% image_buster /assets/img_archive/mparticle5.png %})<br><br>
 - **Ein Attribut pro Segment:** Wählen Sie Ihr angepasstes Attribut als Filter aus. Verwenden Sie dann die Option "gleich" und wählen Sie die entsprechende Logik. ![mParticle Segmente Filter "in möglichen Parisern" als "gleich" und "wahr" eingestellt.]({% image_buster /assets/img_archive/mparticle3.png %})
 
 Einmal gespeichert, können Sie dieses Segment bei der Erstellung von Canvas oder Kampagnen im Schritt Targeting Nutzer:innen referenzieren.
 
 #### Deaktivieren und Löschen von Verbindungen
 
-Da mParticle die Segmente in Braze nicht direkt verwaltet, werden die Segmente nicht gelöscht, wenn die entsprechende mParticle-Zielgruppenverbindung gelöscht oder deaktiviert wird. In diesem Fall wird mParticle die Attribute der Nutzer:innen in Braze nicht aktualisieren, um die Zielgruppe von jedem Nutzer zu entfernen.
+Da mParticle die Segmente nicht direkt in Braze verwaltet, werden die Segmente nicht gelöscht, wenn die entsprechende mParticle-Zielgruppenverbindung gelöscht oder deaktiviert wird. In diesem Fall wird mParticle die Attribute der Nutzer:innen in Braze nicht aktualisieren, um die Zielgruppe von jedem Nutzer zu entfernen.
 
-Um die Zielgruppe eines Braze-Nutzers vor dem Löschen zu entfernen, passen Sie die Zielgruppen-Filter so an, dass die Zielgruppengröße vor dem Löschen einer Zielgruppe auf 0 gesetzt wird. Nachdem die Berechnung der Zielgruppe abgeschlossen ist und 0 Nutzer:innen ergibt, löschen Sie die Zielgruppe. Dann wird die Mitgliedschaft der Zielgruppe in Braze auf `false` für die Option Einzelattribut aktualisiert oder die ID der Zielgruppe wird aus dem Array-Format entfernt.
+Um die Zielgruppe eines Braze-Nutzers vor dem Löschen zu entfernen, passen Sie die Zielgruppen-Filter so an, dass die Zielgruppengröße vor dem Löschen einer Zielgruppe auf 0 gesetzt wird. Nachdem die Berechnung der Zielgruppe abgeschlossen ist und 0 Nutzer:innen ergibt, löschen Sie die Zielgruppe. Dann wird die Mitgliedschaft der Zielgruppe in Braze auf `false` für die Option Einzelattribut aktualisiert oder die ID der Zielgruppe aus dem Array-Format entfernt.
 
 ## Abbildung der Daten
 
@@ -139,7 +141,7 @@ Unabhängig davon, welchen Ansatz Sie wählen, müssen Sie Braze als Ausgabe ein
 
 ### Konfigurieren Sie Ihre Braze-Ausgabeeinstellungen
 
-Navigieren Sie in mParticle zu **Setup > Outputs > Add Outputs** und wählen Sie **Braze**, um die Konfiguration des Braze-Kits zu öffnen. **Speichern Sie**, wenn Sie fertig sind.
+Navigieren Sie in mParticle zu **Setup > Outputs > Add Outputs** und wählen Sie **Braze**, um die Braze-Kit-Konfiguration zu öffnen. **Speichern Sie**, wenn Sie fertig sind.
 
 | Name der Einstellung | Beschreibung |
 | ------------ | ----------- |
@@ -154,9 +156,9 @@ Navigieren Sie in mParticle zu **Setup > Outputs > Add Outputs** und wählen Sie
 
 ### Integration von Embedded Kits
 
-Das mParticle und Braze SDK wird durch die Integration des Embedded Kits in Ihrer Anwendung vorhanden sein. Im Gegensatz zu einer direkten Braze-Integration kümmert sich mParticle jedoch um den Aufruf der meisten SDK-Methoden von Braze für Sie. Die mParticle Methoden, die Sie zum Tracking von Nutzerdaten verwenden, werden automatisch auf die Braze SDK Methoden abgebildet. 
+Die SDKs von mParticle und Braze werden durch die Integration des Embedded Kits in Ihrer Anwendung vorhanden sein. Im Gegensatz zu einer direkten Braze-Integration kümmert sich mParticle jedoch um den Aufruf der meisten SDK-Methoden von Braze für Sie. Die mParticle Methoden, die Sie zum Tracking von Nutzerdaten verwenden, werden automatisch auf die Braze SDK Methoden abgebildet. 
 
-Diese Abbildungen des SDK von mParticle für [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) und [Internet](https://github.com/Appboy/integration-appboy) sind Open Source und können auf der [GitHub-Seite von mParticle](https://github.com/mparticle-integrations) gefunden werden. 
+Diese Abbildungen des SDK von mParticle für [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) und [Internet](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze) sind Open Source und können auf der [GitHub-Seite von mParticle](https://github.com/mparticle-integrations) gefunden werden. 
 
 Die SDK-Integration des Embedded Kit erlaubt es Ihnen, unsere gesamte Suite an Features zu nutzen (Push, In-App-Nachrichten und alle relevanten Messaging Analytics Tracking).
 
@@ -180,7 +182,7 @@ Der [Leitfaden zur Integration des Braze Event-Kits](https://docs.mparticle.com/
 
 #### Schritt 3: Verbindungseinstellungen für Ihren Braze-Ausgang
 
-Navigieren Sie in mParticle zu **Verbindungen > Verbinden > [Ihre gewünschte Plattform] > Ausgang verbinden**, um Braze als Ausgang hinzuzufügen. **Speichern Sie**, wenn Sie fertig sind.
+Navigieren Sie in mParticle zu **Verbindungen** > **Verbinden** > **[Ihre gewünschte Plattform]** > **Ausgang verbinden**, um Braze als Ausgang hinzuzufügen. Wählen Sie dann **Speichern**.
 
 ![]({% image_buster /assets/img_archive/mParticle_event_config.png %})
 
@@ -191,7 +193,7 @@ Nicht alle Verbindungseinstellungen gelten für alle Plattformen und Integration
 Dies ist ein Add-On, mit dem Sie Ihre Backend-Daten an Braze weiterleiten können, wenn Sie die serverseitigen SDKs von mParticle verwenden (z.B. Ruby, Python, etc.). Um diese Server-zu-Server-Integration mit Braze einzurichten, folgen Sie der [Dokumentation von mParticle.](https://docs.mparticle.com/guides/platform-guide/connections/)
 
 {% alert important %}
-Die Server-zu-Server Integration unterstützt keine UI Features von Braze wie In-App-Nachrichten, Content-Cards oder Push-Benachrichtigungen. Es gibt auch automatisch erfasste Daten, wie z.B. Felder auf Geräteebene, die mit dieser Methode nicht verfügbar sind. 
+Die Server-zu-Server Integration unterstützt keine Features der Braze UI, wie In-App-Nachrichten, Content-Cards oder Push-Benachrichtigungen. Es gibt auch automatisch erfasste Daten, wie z.B. Felder auf Geräteebene, die mit dieser Methode nicht verfügbar sind. 
 
 Ziehen Sie eine Side-by-side-Integration in Betracht, wenn Sie diese Features nutzen möchten.
 
@@ -249,7 +251,7 @@ Leiten Sie Anfragen zur Löschung von Daten an Braze weiter, indem Sie die Ausga
 
 Braze empfiehlt, in den mParticle-Verbindungseinstellungen die Option **Angereicherte Nutzer:innen-Attribute einbeziehen** zu deaktivieren. Wenn diese Funktion aktiviert ist, leitet mParticle bei jedem protokollierten Event alle verfügbaren Nutzerattribute (wie Standardattribute, angepasste Attribute und berechnete Attribute) aus dem vorhandenen Profil an Braze weiter. Dies führt zu einem hohen Verbrauch an Datenpunkten, da mParticle Braze bei jedem Aufruf die gleichen unveränderten Attribute sendet.
 
-Wenn ein Nutzer:innen z.B. bei seiner ersten Sitzung Vorname, Nachname und Telefonnummer angibt und sich später für einen Newsletter anmeldet, indem er dieselben Informationen zusätzlich zu seiner E-Mail hinzufügt, wird ein Newsletter-Registrierungsereignis ausgelöst:
+Wenn ein Nutzer:innen beispielsweise bei seiner ersten Sitzung seinen Vornamen, Nachnamen und seine Telefonnummer angibt und sich später für einen Newsletter anmeldet und dieselben Informationen sowie eine E-Mail hinzufügt, triggert dies ein Ereignis zur Registrierung für den Newsletter:
 - Wenn diese Option aktiviert ist (Standard), fallen fünf Datenpunkte an. (Registrierungsereignis, E-Mail Adresse, Vorname, Nachname und Telefonnummer)
 - Wenn Sie diese Option deaktivieren, fallen zwei Datenpunkte an (Registrierungsereignis und E-Mail Adresse)
 
@@ -261,7 +263,7 @@ Wenn Sie diese Einstellung deaktivieren, wird nicht auf sich ändernde Daten gep
 
 Bei der Deaktivierung der Option **Angereicherte Nutzer:innen Attribute einbeziehen** gibt es einige Dinge zu beachten:
 1. Die Server-zu-Server Integration verwendet die mParticle events API, um Ereignisse an Braze zu senden. Jede Anfrage wird durch ein Ereignis ausgelöst. Wenn ein Benutzerattribut geändert wird, wie z.B. das Update einer E-Mail-Adresse, aber nicht mit einem bestimmten Event verbunden ist (z.B. ein angepasstes Event zur Profil-Aktualisierung), wird der neue Wert nur als "angereichertes Attribut" in der Payload des nächsten vom Benutzer getriggerten Events an eine Ausgabe wie Braze weitergegeben. Wenn **Include Enriched User Attributes** ausgeschaltet ist, wird dieser neue Attributwert, der nicht mit einem bestimmten Ereignis verknüpft ist, nicht an Braze weitergegeben.
-  - Um dieses Problem zu lösen, empfehlen wir Ihnen, ein separates Ereignis "Nutzer:innen aktualisiert" zu erstellen, das nur die spezifischen Nutzer:innen-Attribute, die aktualisiert wurden, an Braze sendet. Beachten Sie, dass Sie bei diesem Ansatz zwar immer noch einen zusätzlichen Datenpunkt für das Ereignis "Update der Nutzer:innen-Attribute" protokollieren, der Verbrauch an Datenpunkten jedoch weitaus geringer ist als das Senden aller Nutzer:innen-Attribute bei jedem Anruf, bei dem das Feature aktiviert ist.
+  - Um dieses Problem zu lösen, empfehlen wir Ihnen, ein separates Ereignis "Nutzer:innen aktualisiert" zu erstellen, das nur die spezifischen Nutzer:innen-Attribute, die aktualisiert wurden, an Braze sendet. Beachten Sie, dass Sie bei diesem Ansatz zwar immer noch einen zusätzlichen Datenpunkt für das Ereignis "Benutzerattribut aktualisiert" protokollieren, die Datenpunkt-Nutzung aber weitaus geringer ist als das Senden aller Nutzer:innen-Attribute bei jedem Anruf, bei dem das Feature aktiviert ist.
 2. Berechnete Attribute werden als angereicherte Nutzer:innen-Attribute an Braze weitergegeben. Wenn also "Angereicherte Nutzer:innen-Attribute" deaktiviert ist, werden diese nicht mehr an Braze weitergegeben. Um berechnete Attribute an Braze weiterzuleiten, wenn "Angereicherte Nutzer:innen"-Attribute ausgeschaltet sind, könnte ein [berechneter Attribut-Feed](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) helfen, ohne alle Attribute zu pushen. Der Feed gibt ein Update an Braze weiter, wenn sich ein berechnetes Attribut ändert. 
 
 ### Senden von unnötigen oder doppelten Daten an Braze

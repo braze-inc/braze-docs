@@ -20,7 +20,7 @@ Más información sobre cómo recopila datos Braze:
     - Dentro del punto final [User identify]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/), el campo `merge_behavior` puede utilizarse para especificar qué datos del perfil de alias de usuario deben persistir en el perfil de usuario conocido.
     - Tenga en cuenta que para que el alias de usuario sea un perfil enviable, debe seguir incluyendo el correo electrónico y/o el teléfono como atributo estándar en el perfil.
 - `device_id`: Un identificador específico del dispositivo generado automáticamente. Un perfil de usuario puede tener asociado un número de `device_ids`. Por ejemplo, un usuario que haya iniciado sesión en su cuenta en el ordenador del trabajo, el ordenador de casa, la tableta y la aplicación iOS tendría 4 `device_ids` asociados a su perfil.
-- Dirección de correo electrónico y número de teléfono:
+- Dirección de correo electrónico & Número de teléfono:
     - Se admite como identificador en el punto final de seguimiento de usuarios Braze. 
     - Cuando se utiliza la dirección de correo electrónico o los números de teléfono como identificador dentro de una solicitud, hay tres resultados posibles:
         1. Si no existe un usuario con este correo electrónico/teléfono en Braze, se creará un perfil de usuario de sólo correo electrónico/sólo teléfono, y los datos de la solicitud se añadirán al perfil.
@@ -92,7 +92,7 @@ Utilice la dirección de correo electrónico como identificador en el endpoint d
 }
 ```
 {% alert important %}
-Esta funcionalidad se encuentra actualmente en acceso anticipado.
+Esta funcionalidad está en acceso temprano.
 {% endalert %}
 
 ## Sincronización de datos con perfiles de usuario
@@ -105,12 +105,12 @@ Esta funcionalidad se encuentra actualmente en acceso anticipado.
 - De forma similar al punto final de seguimiento del usuario, los datos pueden sincronizarse con los perfiles de usuario a través de Cloud Data Ingestion. Al utilizar esta herramienta, los atributos, eventos y compras se registran en los perfiles configurando y conectando la tabla o vista del almacén de datos que desea sincronizar con el espacio de trabajo Braze deseado.
 
 [Puntos de datos]({{site.baseurl}}/user_guide/data/data_points/)
-- Braze tiene un modelo de consumo de puntos de datos en el que se incurre en puntos de datos por "escritura" en el perfil del usuario, independientemente de si el valor ha cambiado. Por este motivo, recomendamos que sólo se envíen a Braze los atributos que hayan cambiado. 
+- Braze tiene un modelo de punto de datos en el que los puntos de datos se registran por "escritura" en el perfil de usuario, independientemente de si el valor ha cambiado. Por este motivo, recomendamos que sólo se envíen a Braze los atributos que hayan cambiado. 
 
 ## Envío de audiencias de usuarios a Braze
 
 [Documentación del socio de importación de cohortes]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Las audiencias de usuarios pueden sincronizarse con Braze como una cohorte utilizando los puntos finales de la API de importación de cohortes Braze. En lugar de que estas audiencias se almacenen en el perfil del usuario como atributos de usuario, los clientes pueden crear y dirigirse a esta cohorte a través de un filtro de marca de socio dentro de nuestra herramienta de segmentación. Esto puede hacer que encontrar y dirigirse a un segmento concreto de usuarios sea más fácil y sencillo para los clientes.
+- Las audiencias de usuarios pueden sincronizarse con Braze como una cohorte utilizando los puntos finales de la API de importación de cohortes Braze. En lugar de que estas audiencias se almacenen en el perfil del usuario como atributos de usuario, los clientes pueden crear y dirigirse a esta cohorte a través de un filtro de marca de socio dentro de nuestra herramienta de segmentación. Esto te habilita para encontrar y dirigirte más eficazmente a un segmento concreto de usuarios.
 - Los criterios de valoración de la importación de cohortes no son públicos y son específicos de cada socio. Por este motivo, las sincronizaciones con los puntos finales de cohorte no contarán para los límites de velocidad del espacio de trabajo de un cliente. 
 
 [Seguimiento del usuario]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
@@ -118,7 +118,7 @@ Esta funcionalidad se encuentra actualmente en acceso anticipado.
 - Cuando utilices este punto final, asegúrate de que incluyes la clave `partner` como se indica en nuestra [documentación para socios]({{site.baseurl}}/partners/isv_partners/api_partner).
 
 [Puntos de datos]({{site.baseurl}}/user_guide/data/data_points/)<br>
-- Braze tiene un modelo de consumo de puntos de datos en el que se incurre en puntos de datos por "escritura" en el perfil del usuario, independientemente de si el valor ha cambiado.
+- Braze tiene un modelo de punto de datos en el que los puntos de datos se registran por "escritura" en el perfil de usuario, independientemente de si el valor ha cambiado.
 - Los puntos de datos se producen tanto por la importación de cohortes como por los puntos finales de seguimiento del usuario.
 
 ## Transmisión de análisis de interacción al socio
@@ -176,7 +176,7 @@ La versatilidad de Connected Contents hace que sea una función utilizada por mu
 - Localización y traducción
 
 Cosas a tener en cuenta:
-- Braze no cobra por las llamadas a la API y no contarán para tu asignación de puntos de datos.
+- Braze no cobra por las llamadas a la API y no contarán para tu uso de punto de datos.
 - Hay un límite de 1 MB para las respuestas de Contenido conectado.
 - Las llamadas a Contenido Conectado se realizarán cuando se envíe el mensaje, excepto en el caso de los mensajes in-app, que realizarán esta llamada cuando se visualice el mensaje.
 - Las llamadas de contenido conectado no siguen redirects.Braze requiere que el tiempo de respuesta del servidor sea inferior a 2 segundos por razones de rendimiento; si el servidor tarda más de 2 segundos en responder, el contenido no se insertará.

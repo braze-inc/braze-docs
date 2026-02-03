@@ -1,9 +1,9 @@
 ---
 nav_title: Acceder a tu cuenta
 article_title: Acceder a tu cuenta
-page_order: 2
+page_order: 0
 page_type: reference
-description: "Este artículo explica cómo obtener tu cuenta Braze, cómo iniciar sesión después de que se te haya concedido acceso y cómo restablecer tu contraseña Braze."
+description: "Este artículo explica cómo obtener una cuenta Braze, cómo iniciar sesión una vez obtenido el acceso y cómo restablecer la contraseña Braze."
 
 ---
 
@@ -11,17 +11,17 @@ description: "Este artículo explica cómo obtener tu cuenta Braze, cómo inicia
 
 > Este artículo explica cómo obtener tu cuenta Braze, cómo iniciar sesión después de que se te haya concedido acceso y cómo solucionar los problemas de acceso al panel y de rendimiento del panel.
 
-Si eres el primer usuario de Braze en tu empresa y te conectas por primera vez, recibirás un correo electrónico de bienvenida de `@alerts.braze.com` pidiéndote que confirmes tu correo electrónico y te conectes el primer día de tu contrato.
+Si es el primer usuario de Braze en su empresa y se conecta por primera vez, recibirá un correo electrónico de bienvenida de `@alerts.braze.com` en el que se le pedirá que confirme su correo electrónico y se conecte el primer día de su contrato.
 
-Tras confirmar tu cuenta, puedes añadir usuarios adicionales desde la página [Usuarios de la empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) de tu panel. Todos los usuarios recibirán un correo electrónico pidiéndoles que confirmen su cuenta después de haber sido añadidos.
+Tras confirmar tu cuenta, puedes añadir usuarios adicionales desde la página [Usuarios de la empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) de tu panel. Todos los usuarios recibirán un correo electrónico pidiéndoles que confirmen su cuenta después de haber sido añadidos.
 
-Si no eres el primer usuario de la cuenta Braze de tu empresa, ponte en contacto con el administrador de la cuenta Braze de tu empresa y pídele que cree tu cuenta. A continuación, recibirás un correo electrónico de bienvenida de `@alerts.braze.com` pidiéndote que confirmes tu correo electrónico e inicies sesión.
+Si no eres el primer usuario de la cuenta Braze de tu empresa, ponte en contacto con el administrador de la cuenta Braze de tu empresa y pídele que cree tu cuenta. A continuación, recibirás un correo electrónico de bienvenida de `@alerts.braze.com` en el que se te pedirá que confirmes tu dirección de correo electrónico e inicies sesión.
 
-## Iniciar sesión
+## Inicio de sesión
 
-Hablemos de cómo iniciar sesión, ¡ya sea la primera vez o la millonésima! Si eres el primer usuario de tu empresa, sigue las indicaciones del apartado anterior. Si no, puedes iniciar sesión después de que el administrador de Braze de tu empresa cree tu cuenta.
+Hablemos de cómo iniciar sesión, ¡ya sea la primera vez o la millonésima! Si usted es el primer usuario de su empresa, siga las indicaciones de la sección anterior. Si no, puedes iniciar sesión después de que el administrador de Braze de tu empresa cree tu cuenta.
 
-Puedes iniciar sesión desde el [Braze.com](https://www.braze.com) o utilizar la URL del panel que corresponde a tu [instancia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). Para tu comodidad, Braze tiene varias opciones de inicio de sesión único (SSO), como:
+Puedes iniciar sesión desde el sitio [Braze.com](https://www.braze.com) o utilizar la URL del panel que corresponda a tu [instancia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) específica. Para tu comodidad, Braze tiene varias opciones de inicio de sesión único (SSO), como:
 
 * [SAML SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
     * [Aprovisionamiento justo a tiempo SAML]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit/)
@@ -57,7 +57,7 @@ Ambas direcciones de correo electrónico dirigirán los mensajes al mismo buzón
 
 ### Crear alias separados con otros proveedores
 
-Si tu proveedor de correo electrónico no admite el alias `+`, aún puedes crear alias distintos, como configurar `rocky@braze.com` para que se reenvíe a `rocky.lotito@braze.com`. Esto permite que varias direcciones lleguen al mismo buzón de entrada y que Braze las reconozca como correos electrónicos diferentes.
+Si tu proveedor de correo electrónico no admite el alias `+`, aún puedes crear alias separados, como configurar `rocky@braze.com` para que se reenvíe a `rocky.lotito@braze.com`. Esto permite que varias direcciones lleguen al mismo buzón de entrada y que Braze las reconozca como correos electrónicos diferentes.
 
 ### Utilizar desarrolladores multiempresa
 
@@ -65,7 +65,7 @@ La característica de desarrolladores multiempresa permite compartir una única 
 
 Si tienes SSO y quieres habilitar desarrolladores multiempresa, tienes que habilitar un ID de entidad SAML personalizado configurando una integración SAML SSO personalizada. Sigue los pasos de la [sesión iniciada por el proveedor de servicios (SP)]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/), pero aplica estos cambios:
 - Cambia **el ID de entidad** a `braze_dashboard_<companyID>` para cada integración de panel.
-- Ponte en contacto con tu administrador del éxito del cliente o director de cuentas para habilitar la función `saml_sso_custom_entity_id` para cada panel.
+- Ponte en contacto con tu administrador del éxito del cliente o director de cuentas para habilitar la aleta de características `saml_sso_custom_entity_id` para cada panel.
 
 ### Consideraciones para el inicio de sesión único (SSO)
 
@@ -73,11 +73,11 @@ Si utilizas el inicio de sesión único (SSO), ten en cuenta que tener varias di
 
 ## Solución de problemas
 
-### Restablecer tu contraseña
+### Restablecer la contraseña
 
 Para restablecer tu contraseña, selecciona el enlace **¿Has olvidado tu contraseña?** en la página de inicio de sesión del panel. Se te pedirá que introduzcas tu correo electrónico para recibir un enlace para restablecer tu contraseña.
 
-\![Iniciar sesión en el panel con la pregunta "¿Has olvidado tu contraseña?".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
+![Iniciar sesión en el panel con la pregunta "¿Has olvidado tu contraseña?".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
 
 ### Borrar la caché y las cookies de tu navegador
 
@@ -104,14 +104,14 @@ El editor puede experimentar problemas de carga debido a lo siguiente:
 - **Error grave:** Puede tratarse de un problema de infraestructura o de producto.  Puedes consultar nuestra [página sobre el estado del sistema Braze](https://braze.statuspage.io/), ya que probablemente seamos conscientes de la situación y estemos trabajando activamente para resolverla.
 
 {% alert important %}
-Si sigues teniendo problemas, [abre un ticket de soporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Antes de hacerlo, comprueba que tu administrador informático ha confirmado que `*.bz-rndr.com` está en la lista de permitidos de tu sistema.
+Si sigues teniendo problemas, [abre un ticket de soporte]({{site.baseurl}}/user_guide/administrative/access_braze/support/). Antes de hacerlo, comprueba que tu administrador informático ha confirmado que `*.bz-rndr.com` está incluido en tu lista de permitidos.
 {% endalert %}
 
 ### Acceder a Braze Learning
 
 Si tienes problemas para iniciar sesión en Braze Learning y te encuentras atrapado en un bucle que te redirige al panel, sigue estos pasos:
 
-1. Si tienes varias cuentas de Braze, al iniciar sesión con la cuenta incorrecta dos veces se te enviará al panel de Braze. Confirma que estás accediendo a la cuenta correcta. 
+1. Si tienes varias cuentas Braze, al iniciar sesión con la cuenta incorrecta dos veces se te enviará al panel Braze. Confirma que estás accediendo a la cuenta correcta. 
 2. Si tienes un bloqueador de anuncios, confirma que está desactivado. Puede bloquear las cookies necesarias para la funcionalidad de inicio de sesión único.
 3. Ve a Configuración de la empresa > Configuración de seguridad y comprueba que el inicio de sesión único (SSO) está activado.
 4. Confirma que el perfil de usuario de tu panel incluye nombre y apellidos. No tener un apellido puede interrumpir el proceso de iniciar sesión.
@@ -130,11 +130,11 @@ Un administrador debe restablecer el 2FA para el usuario afectado haciendo lo si
 4. Confirma el restablecimiento 2FA cuando se te solicite.
 5. Si el restablecimiento no resuelve inmediatamente el problema, borra las cookies y la memoria caché.
 
-Braze no puede restablecer la 2FA en nombre de los usuarios por motivos de seguridad, así que si el administrador no puede restablecer la 2FA, debe crearse un ticket de soporte.
+Braze no puede restablecer la 2FA en nombre de los usuarios por motivos de seguridad, así que si el administrador no puede restablecer la 2FA, crea un ticket de soporte.
 
 #### Consideraciones
 
-- Si se aplica la 2FA a nivel de empresa: Tras el restablecimiento, se pedirá al usuario que vuelva a configurar su 2FA la próxima vez que se conecte.
+- Si se aplica la 2FA a nivel de empresa: Tras el restablecimiento, Braze pide al usuario que vuelva a configurar su 2FA la próxima vez que se conecte.
 - Si la 2FA no se aplica a nivel de empresa: El usuario iniciará sesión en el panel sin necesidad de volver a configurar la 2FA. Si desean habilitar la 2FA, pueden hacerlo en Configuración de la cuenta.
 
 {% alert note %}

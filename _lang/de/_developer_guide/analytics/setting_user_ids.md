@@ -1,6 +1,6 @@
 ---
-nav_title: "Nutzer:innen einstellen"
-article_title: "Festlegen von Nutzer:innen IDs über das Braze SDK"
+nav_title: "Nutzer:innen IDs festlegen"
+article_title: "Setzen Sie Nutzer:innen IDs über das Braze SDK"
 page_order: 1.1
 description: "Lernen Sie, wie Sie Nutzer:innen IDs über das Braze SDK festlegen."
 
@@ -25,6 +25,20 @@ Um eine ID festzulegen, rufen Sie die Methode `changeUser()` auf, nachdem sich d
 Wenn Sie stattdessen einen eindeutigen Bezeichner hashen, stellen Sie sicher, dass Sie die Eingabe Ihrer Hashing-Funktion normalisieren. Wenn Sie zum Beispiel eine E-Mail Adresse hashen, entfernen Sie alle führenden und nachfolgenden Leerzeichen und berücksichtigen Sie die Lokalisierung.
 
 {% tabs local %}
+{% tab WEB %}
+Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
+
+```javascript
+braze.changeUser(YOUR_USER_ID_STRING);
+```
+
+Wenn Sie stattdessen den Google Tag Manager verwenden möchten, können Sie den Tag-Typ **Nutzer:innen ändern** verwenden, um die [Methode`changeUser` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) aufzurufen. Verwenden Sie es immer dann, wenn sich ein Nutzer:in anmeldet oder anderweitig mit seinem eindeutigen Bezeichner `external_id` identifiziert wird.
+
+Achten Sie darauf, die eindeutige ID des aktuellen Benutzers in das Feld **Externe Benutzer-ID** einzugeben, die in der Regel mit einer von Ihrer Website gesendeten Datenschichtvariablen gefüllt wird.
+
+![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Enthaltene Einstellungen sind "Tag-Typ" und "externe Nutzer:innen ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+{% endtab %}
+
 {% tab ANDROID %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -55,20 +69,6 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endsubtabs %}
 {% endtab %}
 
-{% tab WEB %}
-Für eine Standard Internet SDK-Implementierung können Sie die folgende Methode verwenden:
-
-```javascript
-braze.changeUser(YOUR_USER_ID_STRING);
-```
-
-Wenn Sie stattdessen den Google Tag Manager verwenden möchten, können Sie den Tag-Typ **Nutzer:innen ändern** verwenden, um die [Methode`changeUser` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) aufzurufen. Verwenden Sie es immer dann, wenn sich ein Nutzer:in anmeldet oder anderweitig mit seinem eindeutigen Bezeichner `external_id` identifiziert wird.
-
-Achten Sie darauf, die eindeutige ID des aktuellen Benutzers in das Feld **Externe Benutzer-ID** einzugeben, die in der Regel mit einer von Ihrer Website gesendeten Datenschichtvariablen gefüllt wird.
-
-![Ein Dialogfeld mit den Konfigurationseinstellungen für Braze Action Tags. Zu den Einstellungen gehören "Tag-Typ" und "Externe Nutzer-ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
-{% endtab %}
-
 {% tab CORDOVA %}
 ```javascript
 BrazePlugin.changeUser("YOUR_USER_ID");
@@ -84,12 +84,6 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 {% tab UNITY %}
 ```csharp
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
-```
-{% endtab %}
-
-{% tab UNREAL ENGINE %}
-```cpp
-UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 ```
 {% endtab %}
 {% endtabs %}
@@ -109,6 +103,12 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 Ein Nutzer-Alias besteht aus zwei Teilen: einem Namen und einer Bezeichnung. Der Name referenziert auf den Bezeichner selbst, während die Bezeichnung auf den Typ des Bezeichners verweist, zu dem er gehört. Wenn Sie z.B. einen Nutzer:in einer Kunden:innen-Plattform eines Drittanbieters mit der externen ID `987654` haben, können Sie ihm in Braze einen Alias mit dem Namen `987654` und dem Label `support_id` zuweisen, damit Sie ihn plattformübergreifend tracken können.
 
 {% tabs local %}
+{% tab web %}
+```javascript
+braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -125,7 +125,7 @@ Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endsubtabs %}
 {% endtab %}
 
-{% tab schnell %}
+{% tab swift %}
 {% subtabs %}
 {% subtab swift %}
 ```swift
@@ -139,12 +139,6 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 ```
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab Internet %}
-```javascript
-braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
 {% endtab %}
 
 {% tab rest api %}

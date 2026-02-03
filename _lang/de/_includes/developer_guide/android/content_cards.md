@@ -10,7 +10,7 @@ Wie Sie ein Fragment zu einer Aktivität hinzufügen können, erfahren Sie in [d
 
 ## Kartentypen und Eigenschaften
 
-Das Content-Cards-Datenmodell ist im Android SDK verfügbar und bietet die folgenden eindeutigen Content-Card-Typen. Jeder Typ hat ein gemeinsames Basismodell, das es ihnen erlaubt, gemeinsame Eigenschaften vom Basismodell zu erben und darüber hinaus ihre eigenen eindeutigen Eigenschaften zu haben. Die vollständige referenzierte Dokumentation finden Sie unter [`com.braze.models.cards`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html).
+Das Content-Cards-Datenmodell ist im Android SDK verfügbar und bietet die folgenden eindeutigen Content-Card-Typen. Jeder Typ hat ein gemeinsames Basismodell, das es ihnen erlaubt, gemeinsame Eigenschaften vom Basismodell zu erben und zusätzlich ihre eigenen eindeutigen Eigenschaften zu haben. Die vollständige referenzierte Dokumentation finden Sie unter [`com.braze.models.cards`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/index.html).
 
 ### Basis-Kartenmodell {#base-card-for-android}
 
@@ -28,7 +28,7 @@ Das [Basiskartenmodell](https://braze-inc.github.io/braze-android-sdk/kdoc/braze
 |`isRemoved()` | Gibt einen booleschen Wert zurück, der angibt, ob der Endnutzer:in diese Karte gekündigt hat.|
 |`isDismissibleByUser()`  | Gibt einen booleschen Wert zurück, der angibt, ob die Karte vom Nutzer:in entlassen werden kann.|
 |`isClicked()` | Gibt einen booleschen Wert zurück, der den angeklickten Zustand dieser Karte wiedergibt.|
-|`isDismissed()` | Gibt einen booleschen Wert zurück, wenn diese Karte abgewiesen wurde.|
+|`isDismissed` | Gibt einen booleschen Wert zurück, der angibt, ob die Karte abgewiesen wurde. Setzen Sie auf `true`, um die Karte als entlassen zu markieren. Wenn eine Karte bereits als abgelehnt markiert ist, kann sie nicht erneut als abgelehnt markiert werden.|
 |`isControl()` | Gibt einen booleschen Wert zurück, wenn diese Karte eine Kontrollkarte ist und nicht gerendert werden soll.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -67,6 +67,7 @@ Bei einer klassischen Karte ohne Bild handelt es sich um eine [Textankündigungs
 |`getUrl()` | Gibt die URL zurück, die geöffnet wird, nachdem die Karte angeklickt wurde. Kann eine HTTP(s)-URL oder eine Protokoll-URL sein. | 
 |`getDomain()` | Gibt den Linktext für die URL der Eigenschaft zurück. |
 |`getImageUrl()` | Gibt die URL des Bildes der Karte zurück, gilt nur für die klassische Kurznachrichtenkarte. |
+|`isDismissed` | Gibt einen booleschen Wert zurück, der angibt, ob die Karte abgewiesen wurde. Setzen Sie auf `true`, um die Karte als entlassen zu markieren. Wenn eine Karte bereits als abgelehnt markiert ist, kann sie nicht erneut als abgelehnt markiert werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Karten-Methoden
@@ -77,5 +78,4 @@ Alle [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-s
 |---|---|
 |`logImpression()` | Protokollieren Sie manuell einen Abdruck in Braze für eine bestimmte Karte. |
 |`logClick()` | Protokollieren Sie manuell einen Klick auf Braze für eine bestimmte Karte. |
-|`setIsDismissed()` | Protokollieren Sie manuell eine Kündigung in Braze für eine bestimmte Karte. Wenn eine Karte bereits als abgelehnt markiert ist, kann sie nicht erneut als abgelehnt markiert werden. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

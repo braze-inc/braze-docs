@@ -11,11 +11,11 @@ hidden: true
 # Integração de notificações por push
 {% multi_lang_include archive/windows_deprecation.md %}
 
-![Um exemplo de push da Plataforma Universal do Windows.][10]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Um exemplo de push da Plataforma Universal do Windows.]({% image_buster /assets/img_archive/windows_uni_push_sample.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Uma notificação por push é um alerta fora do aplicativo que aparece na tela do usuário quando ocorre uma atualização importante. As notificações por push são uma forma valiosa de fornecer aos usuários conteúdo relevante e oportuno ou para reengajá-los com seu app.
 
-Consulte mais práticas recomendadas em nossa [documentação][9].
+Acesse nossa [documentação]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) para obter práticas recomendadas adicionais.
 
 ## Etapa 1: Configure seu app para push
 
@@ -25,8 +25,8 @@ Na guia **Aplicativo**, verifique se `Toast Capable` está definido como `YES`.
 
 ## Etapa 2: Configurar o dashboard do Braze
 
-1. [Encontre seu SID e segredo do cliente][4]
-2. Na página **Configurações** do dashboard da Braze, adicione o SID e o segredo do cliente em suas configurações.<br>![][6]
+1. [Encontre seu SID e segredo do cliente](http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx)
+2. Na página **Configurações** do dashboard da Braze, adicione o SID e o segredo do cliente em suas configurações.<br>![]({% image_buster /assets/img_archive/windows_sid.png %} "Windows SID dashboard")
 
 ## Etapa 3: Atualização para registro aberto em segundo plano
 
@@ -66,15 +66,9 @@ Se você especificar uma string de inicialização extra no dashboard ou na API 
 
 Especifique a string a ser anexada à string de inicialização no campo "Additional Launch String Configuration" (Configuração adicional da string de inicialização) nas configurações de notificação por push.
 
-![][15]
+![]({% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action")
 
 ### Parte 3: Deep links pela API REST
 
-A Braze também permite o envio de deep links por meio da API REST. Os [objetos push do Windows Universal][13] aceitam um parâmetro opcional `extra_launch_string`.
+O Braze também permite o envio de deep linking por meio da API REST. [Os objetos push do Windows Universal]({{site.baseurl}}/api/objects_filters/) aceitam um parâmetro opcional `extra_launch_string`.
 
-[4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
-[6]: {% image_buster /assets/img_archive/windows_sid.png %} "Painel de controle do Windows SID"
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
-[13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Ação de clique do deep linking"

@@ -23,7 +23,7 @@ valid_partner_list:
 - name: Lob
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/lob/
 - name: Messenger
-  url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
+  url: /docs/partners/messenger/
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
@@ -31,9 +31,6 @@ valid_partner_list:
 - name: Branch
   title: Deeplinking
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
-  alt:
-    - title: Attribution
-      url: /docs/partners/message_orchestration/attribution/branch/branch_for_attribution/
 - name: Facebook Zapier
   url: /docs/partners/data_and_infrastructure_agility/leads_capture/facebook_via_zapier/
 - name: Kochava
@@ -77,7 +74,7 @@ valid_partner_list:
 - name: Microsoft Azure
   url: /docs/partners/data_and_infrastructure_agility/cloud_storage/microsoft_azure_blob_storage_for_currents/
 - name: Apteligent
-  url: /docs/partners/data_and_infrastructure_agility/crash_analytics/apteligent/
+  url: /docs/partners/apteligent/
 - name: Snowflake
   url: /docs/partners/data_and_infrastructure_agility/data_warehouses/snowflake/
 - name: Amplitude
@@ -91,7 +88,7 @@ valid_partner_list:
 - name: Segment
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/segment/
 - name: mParticle
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/mparticle/
+  url: /docs/partners/mparticle_overview/
 - name: Tealium
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
 - name: RudderStack
@@ -108,8 +105,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/playable/
 - name: Movable Ink
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/movable_ink
-- name: Liftigniter
-  url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Transifex
   url: /docs/partners/message_personalization/localization/transifex/
 - name: Crowdin
@@ -153,7 +148,7 @@ valid_partner_list:
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+  url: /docs/partners/ecommerce/shopify/
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
@@ -181,7 +176,7 @@ valid_partner_list:
 - name: Knak
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/knak/
 - name: WSC Sports
-  url: /docs/partners/message_personalization/dynamic_content/wsc_sports/
+  url: /docs/partners/wsc_sports/
 - name: Extole
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/extole/
 - name: ViralSweep
@@ -249,7 +244,7 @@ valid_partner_list:
 - name: Regal
   url: /docs/partners/message_orchestration/additional_channels/messaging/regal/
 - name: Kognitiv
-  url: /docs/partners/message_orchestration/channel_extensions/loyalty/kognitiv/
+  url: /docs/partners/kognitiv/
 - name: SalesWings
   url: /docs/partners/data_and_infrastructure_agility/analytics/saleswings/
 - name: OneTrust
@@ -261,7 +256,7 @@ valid_partner_list:
 - name: Redpoint
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/redpoint/  
 - name: Simon Data
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/simondata/
+  url: /docs/partners/simon_data/
 - name: Ketch
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/ketch/
 - name: Antavo
@@ -276,8 +271,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/email_templates/smartersends/
 - name: Typeform
   url: /docs/partners/message_orchestration/channel_extensions/surveys/typeform/
-- name: Scuba
-  url: /docs/partners/data_and_infrastructure_agility/analytics/scuba/
 - name: Celebrus
   url: /docs/partners/data_and_infrastructure_agility/analytics/celebrus/
 - name: Friendbuy
@@ -296,10 +289,12 @@ valid_partner_list:
   url: /docs/partners/liveramp/
 - name: Monstruo del buzón de entrada
   url: /docs/partners/inbox_monster/
+- name: Kickbox
+  url: /docs/partners/kickbox/
 - name: mypostcard
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/mypostcard/
 - name: VISTO
-  url: /docs/partners/message_personalization/dynamic_content/seen
+  url: /docs/partners/seen/
 - name: Dixa
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/dixa/
 - name: Narvar
@@ -325,9 +320,9 @@ valid_partner_list:
 - name: Front
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/front/
 - name: Avisa a
-  url: /docs/partners/message_personalization/dynamic_content/notify/
+  url: /docs/partners/notify/
 - name: Odicci
-  url: /docs/partners/message_personalization/dynamic_content/odicc/
+  url: /docs/partners/odicci/
 - name: Pinterest
   url: /docs/partners/canvas_steps/pinterest_audience_sync/
 - name: Snapchat
@@ -339,9 +334,9 @@ valid_partner_list:
 - name: VWO
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/vwo/
 - name: SesiónM
-  url: /docs/partners/message_orchestration/channel_extensions/loyalty/sessionm/
+  url: /docs/partners/sessionm/
 - name: Tapcart
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+  url: /docs/partners/tapcart/
 - name: Mencióname
   url: /docs/partners/mention_me/
 - name: Sólo palabras
@@ -350,6 +345,43 @@ valid_partner_list:
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
-- name: Raya
+- name: Stripe
   url: /docs/partners/stripe/
+- name: Okendo
+  url: /docs/partners/okendo/
+- name: Lemnisk
+  url: /docs/partners/lemnisk/
+- name: Jasper
+  url: /docs/partners/jasper/
+- name: Kameleoon
+  url: /docs/partners/kameleoon/
+- name: Swym
+  url: /docs/partners/swym/
+- name: StackAdapt
+  url: /docs/partners/stackadapt/
+- name: Oppizi
+  url: /docs/partners/oppizi/
+- name: Cloudinary
+  url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/cloudinary/
+- name: LILT
+  url: /docs/partners/lilt/
+- name: Historia completa
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
+- name: Oracle Crowdtwist
+  url: /docs/partners/crowdtwist/
+- name: Blings
+  url: /docs/partners/blings/
+- name: Google Audience Sync
+  url: /docs/google_audience_sync/ 
+- name: Optimizely
+  url: /docs/partners/optimizely/
+- name: OtrosNiveles
+  url: /docs/partners/otherlevels/
+  url: /docs/partners/crowdtwist
+- name: Historia completa
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
+- name: Fidelización abierta
+  url: /docs/partners/openloyalty/
+- name: DOTS.ECO
+  url: /docs/partners/dots.eco/
 ---

@@ -32,20 +32,24 @@ Certifique-se de que os seguintes itens tenham sido criados, concluídos ou acei
 | Requisito | Origin | Descrição |
 | --- | --- | --- |
 | Conta de anúncios do LinkedIn | [LinkedIn](https://www.linkedin.com/campaignmanager) | Uma conta ativa de anúncios do LinkedIn vinculada à sua marca.<br><br>Certifique-se de que aceitou todos os termos e condições relevantes do LinkedIn para acessar e usar essa conta e que seu administrador do LinkedIn lhe concedeu as permissões apropriadas para gerenciar públicos. |
-| Termos e políticas do LinkedIn | LinkedIn | Concorde em cumprir todos os termos, políticas, diretrizes e documentação exigidos pelo LinkedIn relacionados ao seu uso do LinkedIn Audience Sync, incluindo quaisquer termos, políticas, diretrizes e documentação incorporados por referência, que podem incluir os do LinkedIn: Termos de Serviços, Contrato de Anúncios, Contrato de Processamento de Dados e Diretrizes da Comunidade Profissional. |
+| Termos do LinkedIn & Políticas | LinkedIn | Concorde em cumprir todos os termos, políticas, diretrizes e documentação exigidos pelo LinkedIn relacionados ao seu uso do LinkedIn Audience Sync, incluindo quaisquer termos, políticas, diretrizes e documentação incorporados por referência, que podem incluir os do LinkedIn: Termos de Serviços, Contrato de Anúncios, Contrato de Processamento de Dados e Diretrizes da Comunidade Profissional. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integração
 
 ### Etapa 1: Conecte-se ao LinkedIn
 
+{% alert important %}
+Você deve ter a [ permissão "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) para conectar o LinkedIn à sua conta Braze.
+{% endalert %}
+
 No dashboard da Braze, acesse **Parceiros de tecnologia** e selecione **LinkedIn**. Na seção **Sincronização de Público do LinkedIn**, selecione **Conectar LinkedIn**.
 
-![A página de tecnologia do LinkedIn no Braze inclui uma seção de visão geral e uma seção de sincronização de público do LinkedIn com o botão LinkedIn conectado.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}
+![A página de tecnologia do LinkedIn em Braze inclui uma seção de Visão Geral e uma seção de Sincronização de Público do LinkedIn com o botão LinkedIn Conectado.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}
 
 Em seguida, você será redirecionado para a página do LinkedIn OAuth para autorizar a Braze a conceder as permissões relacionadas à integração do Audience Sync. Depois de selecionar **Confirm (Confirmar)**, você será redirecionado de volta ao Braze para selecionar com quais contas de anúncios do LinkedIn você deseja sincronizar. 
 
-!["Braze Self Service" está selecionado como a conta de anúncio a ser conectada.]({% image_buster /assets/img/linkedin/linkedin7.png %}){: style="max-width:75%;"}
+!["Braze Self Service" é selecionado como a conta de anúncio para conectar.]({% image_buster /assets/img/linkedin/linkedin7.png %}){: style="max-width:75%;"}
 
 Após a conexão bem-sucedida, você retornará à página do parceiro, onde poderá ver quais contas estão conectadas e desconectar contas existentes.
 
@@ -59,11 +63,11 @@ Ao criar públicos para o rastreamento de anúncios, talvez seja necessário inc
 
 Se você coletou o [IDFA do iOS por meio do SDK do Braze]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection), poderá usar o filtro **Ads Tracking Enabled (Rastreamento de anúncios ativado** ). Selecione o valor como `true` para enviar os usuários apenas para destinos do Audience Sync que eles aceitaram. 
 
-![Um público de entrada com o filtro "A capacitação do rastreamento de anúncios é verdadeira".]({% image_buster /assets/img/linkedin/linkedin5.png %}){: style="max-width:75%;"}
+![Um público de entrada com o filtro "Rastreamento de Anúncios Habilitado é verdadeiro".]({% image_buster /assets/img/linkedin/linkedin5.png %}){: style="max-width:75%;"}
 
 Se você estiver coletando `opt-ins`, `opt-outs`, `Do Not Sell Or Share` ou quaisquer outros atributos personalizados relevantes, deve incluir esses dentro dos seus critérios de entrada da canva como um filtro:
 
-![Um Canva com um público de entrada de "opted_in_marketing" é igual a "true".]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
+![Uma tela com um público de entrada de "opted_in_marketing" é igual a "true" (verdadeiro).]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
 
 Para saber mais sobre como cumprir essas leis de proteção de dados na plataforma Braze, consulte a [Assistência Técnica de Proteção de Dados]({{site.baseurl}}/dp-technical-assistance/).
 
@@ -71,20 +75,20 @@ Para saber mais sobre como cumprir essas leis de proteção de dados na platafor
 
 Adicione um componente em seu canva e selecione Audience Sync. Clique no botão **Público personalizado** para abrir o editor de componentes.
 
-![O editor do Canvas com a lista de componentes disponíveis.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![O componente Audience Sync selecionado.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
+![O canva editor com a lista de componentes disponíveis.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![O componente de Sincronização de Público selecionado.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
 
 ### Etapa 4: Configuração de sincronização
 
 Selecione **LinkedIn** como o parceiro desejado do Audience Sync.
 
-![Os detalhes de "Set up Audience Sync" (Configurar sincronização do público) com vários parceiros para escolher.]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
+![Os detalhes de "Configurar a Sincronização de Público" com os vários parceiros para escolher.]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
 
 Em seguida, selecione a conta de anúncios do LinkedIn desejada. No menu suspenso **Choose a New or Existing Audience (Escolher um público novo ou existente** ), digite o nome de um público novo ou existente.
 
-![Sincronização do público com o LinkedIn com o Braze selecionado como a conta do anúncio.]({% image_buster /assets/img/linkedin/linkedin20.png %})
+![Sincronização de Público com LinkedIn com Braze selecionado como a conta de anúncio.]({% image_buster /assets/img/linkedin/linkedin20.png %})
 
 {% tabs %}
-{% tab Criar um novo público %}
+{% tab Create a New Audience %}
 
 **Criar um novo público**<br>
 Digite um nome para o novo público, selecione **Add Users to Audience (Adicionar usuários ao público**) e selecione os campos que deseja sincronizar com o LinkedIn. Para essa integração, no momento, oferecemos suporte aos seguintes itens: 
@@ -94,21 +98,21 @@ Digite um nome para o novo público, selecione **Add Users to Audience (Adiciona
 
 Em seguida, salve seu público clicando no botão **Create Audience (Criar público)** na parte inferior do editor de etapas.
 
-![Um exemplo de público "leads" com a conta de anúncio Braze selecionada, público "leads", a ação de adicionar usuários ao público, e e-mail, GAID do Android e primeiro e último nome como campos para correspondência.]({% image_buster /assets/img/linkedin/linkedin10.png %})
+![Um exemplo de público "leads" com a conta de anúncios do Braze selecionada, o público "leads", a ação para adicionar usuários ao público e e-mail, Android GAID e nome e sobrenome como campos a serem correspondidos.]({% image_buster /assets/img/linkedin/linkedin10.png %})
 
-Os usuários serão notificados no topo do editor de etapas se o público for criado com sucesso ou se ocorrerem erros durante este processo. Os usuários também podem fazer referência a esse público para remoção de usuários posteriormente na jornada do Canva, pois o público foi criado no modo de rascunho.
+O Braze exibe uma notificação na parte superior do editor de etapas se o público for criado com êxito ou se ocorrerem erros. Os usuários podem referenciar este público para remoção de usuários mais tarde na jornada do Canva porque o público foi criado no modo de rascunho.
 
 ![Confirmação de que o público "leads" foi criado.]({% image_buster /assets/img/linkedin/linkedin9.png %})
 
 Ao lançar um canva com um novo público, a Braze sincroniza os usuários quase em tempo real quando eles entram no componente do Audience Sync.
 
 {% endtab %}
-{% tab Sincronização com um público existente %}
+{% tab Sync with an Existing Audience %}
 
 **Sincronização com um público existente**<br>
 O Braze também oferece a capacidade de adicionar usuários a públicos existentes no LinkedIn para confirmar que esses públicos estão atualizados. Para sincronizar com um público existente, digite o nome do público existente no menu suspenso e **adicione ao público**. A Braze adicionará usuários quase em tempo real quando eles entrarem no componente do Audience Sync.
 
-![Visualização expandida da etapa do canva de público-alvo personalizado. Nesta etapa, a conta de anúncios desejada e o público existente são selecionados.]({% image_buster /assets/img/linkedin/linkedin17.png %})
+![Visualização expandida da etapa do canva de público-alvo personalizado. Aqui, a conta de anúncios desejada e o público existente são selecionados.]({% image_buster /assets/img/linkedin/linkedin17.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -123,9 +127,9 @@ Depois de configurar o Audience Sync para o LinkedIn, basta iniciar o canva! O n
 
 ## Considerações sobre sincronização de usuários e limite de frequência
 
-Quando os usuários atingirem a etapa de sincronização do público, o Braze sincronizará esses usuários quase em tempo real, respeitando os limites de frequência da API do LinkedIn. Na prática, a Braze tentará agrupar e processar o maior número de usuários a cada 5 segundos antes de enviar esses usuários para o LinkedIn.
+Quando os usuários atingem a etapa de sincronização do público, o Braze os sincroniza quase em tempo real, respeitando os limites de frequência da API do LinkedIn. O Braze agrupa e processa o maior número possível de usuários a cada 5 segundos antes de enviá-los ao LinkedIn.
 
-O limite de frequência da API do LinkedIn afirma que não são permitidas mais de dez consultas por segundo e 100.000 usuários por solicitação. Se um cliente Braze atingir este limite de frequência, Braze o canva irá tentar a sincronização por até cerca de 13 horas. Se a sincronização não for possível, esses usuários serão listados na métrica Users Errored (Usuários com erro).
+O limite de frequência da API do LinkedIn não permite mais do que dez consultas por segundo e 100.000 usuários por solicitação. Se um cliente atingir esse limite, o Braze tentará novamente a sincronização por até 13 horas. Se a sincronização ainda não for possível, o Braze listará esses usuários na métrica Usuários com erro.
 
 ## Compreensão da análise de dados
 
@@ -151,7 +155,7 @@ O LinkedIn fornece métricas adicionais sobre as taxas de correspondência em su
 <br><br>
 Selecione o parceiro como **LinkedIn**, sua conta de anúncios e o público para ver o tamanho do público e a taxa de correspondência do LinkedIn.
 
-![Um exemplo de métricas de etapa de sincronização de público com 10.000 usuários inseridos.]({% image_buster /assets/img/linkedin/linkedin11.png %})
+![Um exemplo de métricas de etapas do Audience Sync com 10.000 usuários inseridos.]({% image_buster /assets/img/linkedin/linkedin11.png %})
 {% endalert %}
 
 ## Perguntas frequentes

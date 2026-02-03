@@ -1,7 +1,7 @@
 ---
 page_order: 1.2
 nav_title: Authentifizierung
-article_title: Einrichten der Authentifizierung für das Braze SDK
+article_title: Authentifizierung für das Braze SDK einrichten
 description: "Dieser Referenzartikel die SDK-Authentifizierung und wie Sie dieses Feature im Braze SDK aktivieren können."
 platform:
   - iOS
@@ -71,7 +71,7 @@ Um mehr über JSON Web Token zu erfahren oder die vielen Öffnungen von Biblioth
 
 ### Schritt 2: SDK konfigurieren {#sdk-integration}
 
-Dieses Feature ist ab den folgenden [SDK-Versionen verfügbar]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
+Dieses Feature ist ab den folgenden [SDK-Versionen]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) verfügbar:
 
 {% sdk_min_versions swift:5.0.0 android:14.0.0 web:3.3.0 %}
 
@@ -251,7 +251,7 @@ Wenn dieses Feature auf [Erforderlich](#enforcement-options) gesetzt ist, werden
 - JWT war leer oder fehlte
 - JWT konnte für die öffentlichen Schlüssel, die Sie auf das Braze-Dashboard hochgeladen haben, nicht überprüft werden
 
-Mit `subscribeToSdkAuthenticationFailures` können Sie sich benachrichtigen lassen, wenn SDK-Anfragen aus einem dieser Gründe fehlschlagen. Eine Callback-Funktion enthält ein Objekt mit dem entsprechenden [`errorCode`](#error-codes), `reason` für den Fehler, die `userId` der Anfrage (wenn der Nutzer:innen nicht anonym ist) und das Authentifizierungs-Token (JWT), das den Fehler verursacht hat. 
+Mit `subscribeToSdkAuthenticationFailures` können Sie sich benachrichtigen lassen, wenn SDK-Anfragen aus einem dieser Gründe fehlschlagen. Eine Callback-Funktion enthält ein Objekt mit dem entsprechenden [`errorCode`](#error-codes), `reason` für den Fehler, die `userId` der Anfrage (der Nutzer:in kann nicht anonym sein) und das Authentifizierungstoken (JWT), das den Fehler verursacht hat. 
 
 Fehlgeschlagene Anfragen werden regelmäßig wiederholt, bis Ihre App ein neues gültiges JWT liefert. Wenn dieser Nutzer:innen noch angemeldet ist, können Sie diesen Callback als Opportunity nutzen, um ein neues JWT von Ihrem Server anzufordern und das Braze SDK mit diesem neuen gültigen Token zu versorgen.
 
@@ -396,23 +396,23 @@ Jede App zeigt eine Aufschlüsselung der SDK-Authentifizierungsfehler, die gesam
 
 Die Daten sind in Realtime verfügbar, und Sie können den Mauszeiger über Datenpunkte im Chart bewegen, um eine Aufschlüsselung der Fehler für ein bestimmtes Datum zu sehen.
 
-![Ein Chart, das die Anzahl der Instanzen von Authentifizierungsfehlern anzeigt. Außerdem werden die Gesamtzahl der Fehler, die Fehlerart und der einstellbare Datumsbereich angezeigt.]({% image_buster /assets/img/sdk-auth-analytics.png %}){: style="max-width:80%"}
+![Ein Chart, das die Anzahl der Instanzen von Authentifizierungsfehlern anzeigt. Außerdem werden die Gesamtzahl der Fehler, die Fehlerart und der anpassbare Datumsbereich angezeigt.]({% image_buster /assets/img/sdk-auth-analytics.png %}){: style="max-width:80%"}
 
 ## Fehlercodes {#error-codes}
 
-| Fehlercode| Fehlerursache | Beschreibung |
-| --------  | ------------ | ---------  |
-| (10 %) | `EXPIRATION_REQUIRED` | Der Ablauf ist ein Pflichtfeld für die Verwendung von Braze.|
-| 20 | `DECODING_ERROR` | Nicht übereinstimmender Public Key oder ein allgemeiner nicht abgefangener Fehler.|
-| 21 | `SUBJECT_MISMATCH` | Die erwarteten und tatsächlichen Themen sind nicht identisch.|
-| 22 | `EXPIRED` | Das angegebene Token ist abgelaufen.|
-| 23 | `INVALID_PAYLOAD` | Die Nutzdaten des Tokens sind ungültig.|
-| 24 | `INCORRECT_ALGORITHM` | Der Algorithmus des Tokens wird nicht unterstützt.|
-| 25 | `PUBLIC_KEY_ERROR` | Der Public Key konnte nicht in das richtige Format umgewandelt werden.|
-| 26 | `MISSING_TOKEN` | Es wurde kein Token in der Anfrage angegeben.|
-| 27 | `NO_MATCHING_PUBLIC_KEYS` | Es gibt keine öffentlichen Schlüssel, die mit dem angegebenen Token übereinstimmen.|
-| 28 | `PAYLOAD_USER_ID_MISMATCH` | Nicht alle Nutzer:innen IDs in der Payload der Anfrage stimmen überein.|
-{: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3 role="presentation" }
+| Fehlercode| Fehlergrund | Beschreibung | Schritte zur Klärung |
+| --------  | ------------ | ---------  | ---------  |
+| (10 %) | `EXPIRATION_REQUIRED` | Der Ablauf ist ein Pflichtfeld für die Verwendung von Braze.| Fügen Sie ein `exp` oder ein Ablauffeld zu Ihrer JWT-Erstellungslogik hinzu. |
+| 20 | `DECODING_ERROR` | Nicht übereinstimmender Public Key oder ein allgemeiner nicht abgefangener Fehler.| Kopieren Sie Ihr JWT in ein JWT-Testtool, um festzustellen, warum Ihr JWT ein ungültiges Format hat. |
+| 21 | `SUBJECT_MISMATCH` | Die erwarteten und tatsächlichen Themen sind nicht identisch.| Das Feld `sub` sollte dieselbe Nutzer:in sein, die an die SDK-Methode `changeUser` übergeben wurde. |
+| 22 | `EXPIRED` | Das angegebene Token ist abgelaufen.| Verlängern Sie die Gültigkeitsdauer Ihrer Token oder aktualisieren Sie sie regelmäßig, bevor sie ablaufen. |
+| 23 | `INVALID_PAYLOAD` | Die Nutzdaten des Tokens sind ungültig.| Kopieren Sie Ihr JWT in ein JWT-Testtool, um festzustellen, warum Ihr JWT ein ungültiges Format hat. |
+| 24 | `INCORRECT_ALGORITHM` | Der Algorithmus des Tokens wird nicht unterstützt.| Ändern Sie Ihr JWT, um die Verschlüsselung `RS256` zu verwenden. Andere Typen werden nicht unterstützt. |
+| 25 | `PUBLIC_KEY_ERROR` | Der Public Key konnte nicht in das richtige Format umgewandelt werden.| Kopieren Sie Ihr JWT in ein JWT-Testtool, um festzustellen, warum Ihr JWT ein ungültiges Format hat. |
+| 26 | `MISSING_TOKEN` | Es wurde kein Token in der Anfrage angegeben.| Stellen Sie sicher, dass Sie beim Aufruf von `changeUser(id, token)` ein Token übergeben und dass Ihr Token nicht leer ist.|
+| 27 | `NO_MATCHING_PUBLIC_KEYS` | Es gibt keine öffentlichen Schlüssel, die mit dem angegebenen Token übereinstimmen.| Der im JWT verwendete Private Key stimmt nicht mit den für Ihre App konfigurierten Public Keys überein. Vergewissern Sie sich, dass Sie die öffentlichen Schlüssel zu der richtigen App in Ihrem Workspace hinzugefügt haben, die zu diesem API-Schlüssel passt.|
+| 28 | `PAYLOAD_USER_ID_MISMATCH` | Nicht alle Nutzer:innen IDs in der Payload der Anfrage stimmen überein, wie es erforderlich ist.| Dies ist unerwartet und kann zu einer missgestalteten Nutzlast führen. Öffnen Sie ein Support-Ticket für Hilfe. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Häufig gestellte Fragen (FAQ) {#faq}
 
@@ -452,3 +452,6 @@ Wenn eine Anfrage aufgrund eines Authentifizierungsfehlers abgelehnt wird, ruft 
 
 Anfragen werden in regelmäßigen Abständen mit einem exponentiellen Backoff-Verfahren wiederholt. Nach 50 aufeinanderfolgenden Fehlversuchen werden die Versuche bis zum nächsten Sitzungsstart pausiert. Jedes SDK verfügt auch über eine Methode zur manuellen Anfrage eines Data Flush.
 
+#### Können Sie die SDK-Authentifizierung für anonyme Nutzer:innen verwenden? {#faq-anonymous-users}
+
+Nein. Die SDK-Authentifizierung ist für anonyme Nutzer:innen nicht möglich.

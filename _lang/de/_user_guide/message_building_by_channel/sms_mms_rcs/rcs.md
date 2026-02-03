@@ -3,7 +3,7 @@ nav_title: "RCS"
 article_title: Über Rich Communication Serviceleistungen; Dienste (RCS)
 alias: /about_rcs/
 page_type: reference
-page_order: 14
+page_order: 15
 description: "Dieser referenzierte Artikel behandelt allgemeine Anwendungsfälle des RCS-Kanals und die Anforderungen, die Sie erfüllen müssen, um Ihren RCS-Kanal einsatzbereit zu machen."
 ---
 

@@ -31,7 +31,7 @@ Lassen Sie einen Braze-Administrator Folgendes tun:
 4. Wählen Sie die Standardberechtigung, die dem neuen Dashboard-Benutzer zugewiesen werden soll. Wie Sie einen Berechtigungssatz erstellen, erfahren Sie unter [Festlegen von Benutzerberechtigungen]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/).
 6. Wählen Sie unten auf der Seite **Änderungen speichern** 
 7. Fügen Sie in den Einstellungen Ihres SSO-Anbieters alle Nutzer:innen, die auf Braze zugreifen müssen, zum Verzeichnis Ihres SSO-Anbieters hinzu.
-8. Jetzt können sich Benutzer anmelden oder einloggen.
+8. Weisen Sie Nutzer:innen an, bei ihrer ersten Anmeldung über Ihr IdP-Portal auf Braze zuzugreifen. Danach wird der SAML Single Sign-on Button für zukünftige Anmeldungen angezeigt.
 
 ## Häufig gestellte Fragen
 

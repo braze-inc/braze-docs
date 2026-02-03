@@ -10,13 +10,13 @@ channel:
 
 # E-Mail-Abonnements
 
-> Erfahren Sie mehr über die verschiedenen Abonnementstatus der Benutzer, wie Sie Abonnementgruppen erstellen und verwalten und wie Sie Benutzer auf der Grundlage ihrer Abonnements segmentieren können.
+> Erfahren Sie mehr über die Abo-Status, wie Sie Abo-Gruppen erstellen und verwalten und wie Sie Nutzer:innen auf der Grundlage ihrer Abos segmentieren können.
 
 Dieses Dokument dient nur zu Informationszwecken. Sie dienen nicht der Rechtsberatung und dürfen auch nicht als solche angesehen werden. Das Versenden von Marketing- und Transaktions-E-Mails kann bestimmten rechtlichen Anforderungen unterliegen. Um sicherzustellen, dass Sie dabei alle für Ihr Unternehmen geltenden Gesetze, Regeln und Vorschriften einhalten, sollten Sie sich von Ihrem Rechtsbeistand und/oder Ihrem Compliance-Team beraten lassen.
 
 ## Abo-Status {#subscription-states}
 
-Braze verfügt über drei globale Abo-Status für E-Mail-Nutzer:innen (in der folgenden Tabelle aufgeführt), die die endgültigen Gatekeeper zwischen Ihren Nachrichten und Ihren Nutzer:innen sind. Nutzer:innen, die als `unsubscribed` gelten, erhalten zum Beispiel keine Nachrichten, die auf den globalen Abo-Status `subscribed` oder `opted-in` ausgerichtet sind.
+Braze hat drei globale Abo-Status für Nutzer:innen von E-Mails. Diese Zustände lassen Ihre Nachrichten von Nutzer:innen passieren. Nutzer:innen im Zustand `unsubscribed` erhalten beispielsweise keine Nachrichten, die auf `subscribed` oder `opted-in` ausgerichtet sind.
 
 | Status | Definition |
 | ----- | ---------- |
@@ -31,9 +31,9 @@ Braze zählt keine Änderungen des Abo-Status für Ihre Datenpunkte, global und 
 
 ### Abgemeldete E-Mail-Adressen
 
-Braze meldet jeden Benutzer, der sich manuell von Ihrer E-Mail abmeldet, automatisch über eine [benutzerdefinierte Fußzeile]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer) ab. Wenn der Benutzer seine E-Mail-Adresse aktualisiert und die Option **Benutzer bei Aktualisierung der E-Mail-Adresse erneut anmelden** in den Einstellungen für **die Sendekonfiguration** aktiviert ist, wird der normale E-Mail-Versand wieder aufgenommen.
+Braze meldet automatisch jeden Nutzer:innen ab, der sich manuell über eine [angepasste Fußzeile]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer) abmeldet. Wenn der Nutzer:in seine E-Mail Adresse aktualisiert und die Option **Nutzer:innen bei Update der E-Mail abmelden** in der **Sendekonfiguration** aktiviert ist, wird der normale Versand fortgesetzt.
 
-Wenn ein Benutzer eine oder mehrere Ihrer E-Mails als Spam markiert hat, sendet Braze nur Transaktions-E-Mails an diesen Benutzer. In diesem Fall referenzieren Transaktions-E-Mails auf die im Schritt **Targeting** ausgewählte Option **An alle Nutzer:innen senden, auch an nicht abgemeldete Nutzer:innen**.
+Wenn ein Nutzer:innen eine oder mehrere Ihrer E-Mails als Spam markiert, sendet Braze nur Transaktions-E-Mails an diesen Nutzer:innen. Transaktions-E-Mails referenzieren auf die Option **An alle Nutzer:innen senden, einschließlich abgemeldeter Nutzer**:innen in **Target Audience**.
 
 {% alert tip %}
 In unseren [IP-Warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/)-Best Practices finden Sie Hinweise, wie Sie Ihre Nutzer:innen effektiv erneuern können.
@@ -43,7 +43,7 @@ In unseren [IP-Warming]({{site.baseurl}}/user_guide/message_building_by_channel/
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} {% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 
 
-Wenn eine E-Mail Adresse hart gebounct wird, wird der Status des Abos des Nutzers:innen nicht automatisch auf "abgemeldet" gesetzt. Wenn eine E-Mail-Adresse "hard bounce" ist (z.B. wenn eine E-Mail ungültig ist oder nicht existiert), markieren wir die E-Mail-Adresse des Nutzers:innen als ungültig und versuchen nicht, weitere E-Mails an diese E-Mail-Adresse zu senden. Wenn dieser Benutzer seine E-Mail-Adresse ändert, senden wir ihm wieder E-Mails, da seine neue E-Mail-Adresse gültig sein könnte. Soft Bounces werden automatisch 72 Stunden lang wiederholt.
+Wenn eine E-Mail gebounct wird, setzt Braze den Status des Abos des Nutzers:innen nicht automatisch auf "abgemeldet". Wenn eine Adresse "hard bounce" (ungültig oder nicht vorhanden) ist, markiert Braze sie als ungültig und versucht nicht, sie weiter zu senden. Wenn der Nutzer:innen seine E-Mail Adresse ändert, setzt Braze den Versand fort. Braze wiederholt Soft Bounces für 72 Stunden.
 
 ### Aktualisierung des Status von E-Mail-Abos
 
@@ -55,24 +55,24 @@ Verwenden Sie das Braze-SDK, um den Status des Abos eines Nutzers oder einer Nut
 
 #### REST API
 
-Verwenden Sie den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), um das [Attribut`email_subscribe` ]({{site.baseurl}}/api/objects_filters/user_attributes_object) für einen bestimmten Nutzer:innen zu aktualisieren.
+Verwenden Sie den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), um das [Attribut`email_subscribe` ]({{site.baseurl}}/api/objects_filters/user_attributes_object) für einen Nutzer:innen zu aktualisieren.
 
 #### Benutzerprofil
 
 1. Finden Sie den Benutzer über **Benutzer suchen**. 
-2. Wählen Sie auf dem Tab **Engagement** die Buttons **Abgemeldet**, **Abonniert** oder **Opt-in** aus, um den Status des Abonnements des Nutzers:in zu ändern. 
+2. Wählen Sie unter **Engagement** die Option **Abgemeldet**, **Abonniert** oder **Opt-in** aus, um den Status des Abonnent:in zu ändern. 
 
 Falls verfügbar, zeigt das Nutzerprofil auch einen Zeitstempel an, wann das Abo des Nutzers:innen zuletzt geändert wurde.
 
 #### Präferenzzentrum
 
-[Das Preference Center](#email-preference-center) Liquid kann am Ende Ihrer E-Mails eingefügt werden, so dass die Benutzer sich für oder gegen E-Mails entscheiden können. Braze verwaltet die Updates des Abo-Status über das Präferenzzentrum.
+Fügen Sie das [Preference Center](#email-preference-center) Liquid am Ende Ihrer E-Mails ein, damit die Nutzer:in ein Opt-in oder ein Opt-out entscheiden können. Braze verwaltet Updates des Abo-Status über das Einstellungszentrum.
 
 ### Status des E-Mail-Abonnements prüfen
 
-Nutzerprofil für John Doe, dessen E-Mail Abonnent:in auf Abonniert gesetzt wurde.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Benutzerprofil von John Doe, dessen E-Mail-Abonnementstatus auf Abonniert gesetzt ist.]({% image_buster /assets/img/push_example.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-Es gibt zwei Möglichkeiten, den Status des E-Mail-Abos eines Nutzers:innen mit Braze zu überprüfen:
+Sie können den Status des E-Mail-Abos eines Nutzers:innen auf folgende Weise überprüfen:
 
 1. **REST API-Export:** Verwenden Sie die Endpunkte [Nutzer:innen nach Segmenten exportieren]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/) oder [Nutzer:innen nach Bezeichnern exportieren]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), um einzelne Nutzerprofile im JSON-Format zu exportieren.
 2. **Benutzerprofil:** Suchen Sie das Profil des Nutzers auf der Seite [Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/) und wählen Sie dann den Tab **Engagement**, um den Status des Abos eines Nutzers anzuzeigen und manuell zu aktualisieren.
@@ -96,13 +96,13 @@ Verwenden Sie die [Endpunkte für Abo-Gruppen]({{site.baseurl}}/api/endpoints/su
 
 Alle Abonnementgruppen werden automatisch zu Ihrem Präferenzcenter hinzugefügt.
 
-\![Felder zum Erstellen einer Abo-Gruppe.]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
+![Felder, um eine Abonnementgruppe zu erstellen.]({% image_buster /assets/img/sub_group_create.png %}){: style="max-width:75%"}
 
 ### Segmentierung mit einer Abonnementgruppe
 
 Wenn Sie Ihre Segmente erstellen, setzen Sie den Namen der Abo-Gruppe als Filter ein. Damit bestätigen Sie, dass die Benutzer, die sich für Ihre Gruppe entschieden haben, Ihre E-Mails erhalten. Dies eignet sich hervorragend für monatliche Newsletter, Gutscheine, Mitgliedschaftsstufen und mehr.
 
-\![Beispiel für das Targeting von Nutzern:innen im Segment "Verlorene Nutzer" mit dem Filter für Nutzer:innen in der Abo-Gruppe "Wöchentliche E-Mails".]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
+![Beispiel für das Targeting von Nutzern im Segment "Verfallene Nutzer" mit dem Filter für Nutzer:innen in der Abo-Gruppe "Wöchentliche E-Mails".]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### Archivierung von Abonnementgruppen
 
@@ -113,82 +113,82 @@ Um Ihre Gruppe auf der Seite **Abo-Gruppen** zu archivieren, gehen Sie wie folgt
 1. Suchen Sie Ihre Gruppe in der Liste der Abo-Gruppen. 
 2. Wählen Sie **Archiv** aus dem Dropdown-Menü <i class="fa-solid fa-ellipsis-vertical"></i>.
 
-Braze wird keine Statusänderungen für Benutzer in archivierten Gruppen verarbeiten. Wenn Sie z.B. die Abo-Gruppe 1 archivieren, während Susie sie abonniert hat, bleibt sie in dieser Gruppe "abonniert", auch wenn sie auf einen Abmelde-Link klickt (dies sollte Susie nichts ausmachen, da die Abo-Gruppe 1 archiviert ist und Sie damit keine Nachrichten mehr versenden können).
+Braze verarbeitet keine Statusänderungen für Nutzer:innen in archivierten Gruppen. Wenn Sie z.B. die Abo-Gruppe 1 archivieren, während Alex sie abonniert hat, bleibt Alex "abonniert", auch wenn er auf einen Abmeldelink klickt. Das spielt keine Rolle, da die Abo-Gruppe 1 archiviert ist und Sie mit ihr keine Nachrichten versenden können.
 
 #### Anzeigen der Größe von Abonnementgruppen
 
 Auf der Seite **Abo-Gruppen** können Sie das Diagramm **Abo-Gruppe Zeitreihe** referenzieren, um die Größe der Abo-Gruppe basierend auf der Anzahl der Nutzer:innen über einen bestimmten Zeitraum zu sehen. Diese Größen der Abo-Gruppen stimmen auch mit anderen Bereichen von Braze überein, z. B. mit der Berechnung der Segmentgröße.
 
-\![Eine Beispielgrafik "Abo-Gruppe Zeitreihe" vom 2\. bis 11\. Dezember. Die Grafik zeigt einen Anstieg der Nutzerzahlen um ca. 10 Millionen vom 6\. zum 7.]({% image_buster /assets/img_archive/subscription_group_graph.png %})
+![Eine Beispielgrafik „Abo-Gruppe Zeitreihe“ vom 2\. bis 11\. Dezember. Die Grafik zeigt einen Anstieg der Nutzerzahlen um ca. 10 Millionen vom 6\. zum 7.]({% image_buster /assets/img_archive/subscription_group_graph.png %})
 
 #### Anzeigen von Abonnementgruppen in der Kampagnenanalyse
 
-Sie können die Anzahl der Benutzer, die ihren Abonnementstatus (abonniert oder abgemeldet) für eine bestimmte E-Mail-Kampagne geändert haben, auf der Analyseseite dieser Kampagne sehen.
+Auf der Analytics-Seite einer Kampagne sehen Sie die Anzahl der Nutzer:innen, die ihr Abo geändert haben (abonniert oder abgemeldet).
 
 1. Scrollen Sie auf der Seite **Campaign Analytics** für Ihre Kampagne nach unten zum Abschnitt **E-Mail Nachricht Performance**.
 2. Wählen Sie den Pfeil unter **Abo-Gruppen** aus, um die Gesamtzahl der Statusänderungen zu sehen, die von Ihren Kund:innen übermittelt wurden.
 
-\![Die Seite "Performance von E-Mail-Nachrichten" zeigt die Gesamtzahl der von Kund:in übermittelten Statusänderungen an.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
+![Die Seite „E-Mail-Messaging-Performance“ zeigt die Gesamtzahl der von Kund:innen übermittelten Statusänderungen an.]({% image_buster /assets/img/campaign_analytics_sub_groups.png %})
 
 ### Überprüfen der E-Mail Abo-Gruppe eines Nutzers:innen
 
 - **Benutzerprofil:** Auf einzelne Benutzerprofile können Sie über das Braze-Dashboard von der Seite [Benutzer suchen]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles) aus zugreifen. Hier können Sie Benutzerprofile nach E-Mail-Adresse, Telefonnummer oder externer Benutzer-ID abrufen. Auf dem Tab **Engagement** können Sie auch die E-Mail Abo-Gruppen eines Nutzers:innen einsehen.
-- **Braze REST API:** Verwenden Sie den [Endpunkt Abo-Gruppen des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) oder [Abo-Gruppenstatus des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/), um die Abo-Gruppen der einzelnen Nutzerprofile anzuzeigen. 
+- **Braze REST API:** Verwenden Sie den [Endpunkt Abo-Gruppen des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) oder den [Endpunkt Abo-Gruppenstatus des Nutzers auflisten]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/), um die Abo-Gruppen einzelner Nutzerprofile anzuzeigen. 
 
 ## E-Mail-Präferenzzentrum
 
-Das E-Mail-Präferenzcenter ist eine einfache Möglichkeit zu verwalten, welche Benutzer bestimmte Gruppen von Newslettern erhalten. Sie finden es im Dashboard unter **Abonnementgruppen**. Jede Abo-Gruppe, die Sie erstellen, wird zur Liste der Präferenzzentren hinzugefügt. 
+Mit dem E-Mail-Präferenzcenter können Sie verwalten, welche Nutzer:innen die Newsletter der Abo-Gruppe erhalten. Sie finden es im Dashboard unter **Abo-Gruppen**. Jede Abo-Gruppe, die Sie erstellen, wird zur Liste der Präferenzzentren hinzugefügt. 
 
 Wenn Sie mehr darüber erfahren möchten, wie Sie ein Präferenzzentrum hinzufügen oder anpassen können, lesen Sie den Abschnitt [Präferenzzentrum]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).
 
 ## Ändern von E-Mail-Abos {#changing-email-subscriptions}
 
-In den meisten Fällen verwalten Ihre Benutzer ihr E-Mail-Abonnement über Abonnement-Links, die in den E-Mails enthalten sind, die sie erhalten. Sie müssen am Ende jeder E-Mail, die Sie versenden, eine rechtskonforme Fußzeile mit einem Link zum Abmelden einfügen. Wenn Nutzer:innen die Abmelde-URL in Ihrer Fußzeile auswählen, sollten sie abgemeldet werden und auf eine Landing Page gelangen, die die Änderung ihres Abos bestätigt. Wir empfehlen, dieses Liquid-Tag einzubinden: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
+In den meisten Fällen verwalten die Nutzer:innen ihr E-Mail Abo über Links in den E-Mails, die sie erhalten. Fügen Sie eine rechtskonforme Fußzeile mit einem Link zum Abmelden am Ende jeder E-Mail ein. Wenn Nutzer:innen die Abmelde-URL auswählen, meldet Braze sie ab und zeigt eine Landing Page an, die die Änderung bestätigt. Fügen Sie diesen Liquid-Tag ein: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
-Beachten Sie, dass, wenn ein Benutzer im E-Mail-Einstellungscenter die Option "Alle oben genannten E-Mail-Typen abbestellen" auswählt, sein globaler E-Mail-Abonnementstatus auf `unsubscribed` aktualisiert und er aus allen Abonnementgruppen abgemeldet wird.
+Wenn ein Nutzer:innen im Einstellungscenter die Option "Von allen oben genannten Arten von E-Mails abmelden" auswählt, setzt Braze seinen globalen E-Mail-Abostatus auf `unsubscribed` und meldet ihn von allen Gruppen ab.
 
 ### Benutzerdefinierte Fußzeilen erstellen {#custom-footer}
 
-Wenn Sie die standardmäßige Braze-Fußzeile in Ihren E-Mails nicht verwenden möchten, können Sie eine arbeitsbereichsweite benutzerdefinierte E-Mail-Fußzeile erstellen, die Sie mit dem Attribut {% raw %}`{{${email_footer}}}`{% endraw %} Liquid in jede E-Mail einfügen können.
+Wenn Sie die Standard-Fußzeile nicht verwenden möchten, erstellen Sie eine arbeitsbereichsweite, angepasste E-Mail-Fußzeile und fügen Sie diese mit {% raw %}`{{${email_footer}}}`{% endraw %} als Template in jede E-Mail ein.
 
-Auf diese Weise müssen Sie nicht für jede E-Mail-Template oder E-Mail-Kampagne, die Sie verwenden, eine neue Fußzeile erstellen. Weitere Schritte finden Sie unter [Benutzerdefinierte E-Mail-Fußzeile]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
+So müssen Sie nicht für jede E-Mail-Vorlage oder E-Mail-Kampagne eine neue Fußzeile erstellen. Weitere Schritte finden Sie unter [Angepasste E-Mail-Fußzeile]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/).
 
 #### Verwaltung des Abonnementstatus für chinesische IP-Adressen
 
-Wenn Sie davon ausgehen, dass Ihre Empfänger:innen eine chinesische IP-Adresse haben, sollten Sie sich nicht allein auf einen Abmelde-Link in Ihrer E-Mail verlassen, um Ihre `unsubscribed` Listen zu pflegen. Bieten Sie stattdessen alternative Möglichkeiten für Nutzer:innen an, sich einfach abzumelden, z.B. indem Sie ein Ticketing über Ihr Support-Portal öffnen oder eine E-Mail an eine Vertretung mailen. 
+Wenn Sie mit chinesischen IP-Adressen rechnen, sollten Sie sich nicht nur auf einen Link zum Abmelden verlassen, um `unsubscribed` Listen zu pflegen. Bieten Sie alternative Wege zum Abmelden an, z.B. ein Support-Ticket oder eine E-Mail an die Vertretung des Kunden. 
 
 ### Erstellen einer angepassten Seite zum Abmelden
 
-Wenn Nutzer:innen in einer E-Mail eine URL zum Abmelden auswählen, werden sie auf eine Standard-Landingpage weitergeleitet, die die Änderung ihres Abos bestätigt.
+Wenn Nutzer:innen eine URL zum Abmelden auswählen, zeigt Braze eine Standard Landing Page an, die die Änderung bestätigt.
 
-So erstellen Sie eine angepasste Landing Page, zu der Nutzer:in nach dem Abschluss eines Abonnements weitergeleitet werden (anstelle der Standard-Seite):
+So erstellen Sie eine angepasste Landing Page (anstelle des Standards), die nach dem Abschluss eines Abonnements angezeigt wird:
 
 1. Gehen Sie zu **E-Mail-Einstellungen** > **Seiten und Fußzeilen für Abonnements**.
 2. Stellen Sie das HTML für Ihre angepasste Landing Page zur Verfügung. 
 
-Wir empfehlen, auf der Landing Page einen Link zum erneuten Abonnieren (z. B. {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}) einzubauen, damit die Nutzer die Möglichkeit haben, sich erneut anzumelden, falls sie sich versehentlich abgemeldet haben.
+Fügen Sie einen Link zum Abmelden ein (z.B. {% raw %}`{{${set_user_to_subscribed_url}}}`{% endraw %}), damit Nutzer:innen sich erneut anmelden können, wenn sie sich versehentlich abgemeldet haben.
 
-\![Angepasste Abmeldeseite mit einer Vorschau "Sorry, dass Sie gehen!".]({% image_buster /assets/img/custom_unsubscribe.png %})
+![Angepasste Abmeldeseite mit einer Vorschau "Sorry, dass Sie gehen!".]({% image_buster /assets/img/custom_unsubscribe.png %})
 
 ### Erstellen einer angepassten Opt-in-Seite
 
-Anstatt einen Benutzer sofort für Ihre E-Mail-Kampagnen anzumelden, können Sie ihm mit einer benutzerdefinierten Opt-in-Seite die Möglichkeit geben, seine Benachrichtigungspräferenzen zu bestätigen und zu kontrollieren. Diese zusätzliche Kommunikation kann auch dazu beitragen, dass Ihre E-Mail Kampagnen nicht im Spam-Ordner landen, denn Ihre Nutzer:innen haben sich für ein Opt-in entschieden. 
+Verwenden Sie eine angepasste Opt-in-Seite, damit Nutzer:innen die Benachrichtigungseinstellungen vor dem Abo bestätigen und kontrollieren können. Diese zusätzliche Kommunikation kann dazu beitragen, dass E-Mail Kampagnen nicht in Spam-Ordnern landen.
 
 1. Gehen Sie zu **Einstellungen** > **E-Mail-Voreinstellungen**.
 2. Wählen Sie **Abo-Seiten und Fußzeilen** aus.
 3. Passen Sie das Styling im Abschnitt **Benutzerdefinierte Opt-in-Seite** an, um zu sehen, wie Ihre Nutzer:in darauf hingewiesen werden, dass sie abonniert wurden.
 
-Nutzer:innen werden über den Tag {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} auf diese Seite geleitet.
+Nutzer:innen gelangen über den Tag {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} auf diese Seite.
 
 {% alert tip %}
-Braze empfiehlt die Verwendung eines Double-Opt-In-Verfahrens, um Ihre E-Mail-Reichweite zu erhöhen. Bei diesem Vorgang wird eine zusätzliche Bestätigungs-E-Mail verschickt, in der der Benutzer seine Benachrichtigungseinstellungen über einen Link in der E-Mail noch einmal bestätigen kann. Zu diesem Zeitpunkt gilt der oder die Nutzer:in als angemeldet.
+Verwenden Sie ein Double Opt-in-Verfahren, um die Reichweite zu verbessern. Braze sendet eine zusätzliche E-Mail, in der ein Nutzer:innen die Benachrichtigungseinstellungen über einen Link bestätigt. Nach der Bestätigung ist der Nutzer:innen Opt-in.
 {% endalert %}
 
-\![Angepasste Opt-in E-Mail mit der Nachricht "Schön, dass Sie immer noch von uns hören wollen".]({% image_buster /assets/img/custom_optin.png %})
+![Angepasste Opt-in E-Mail mit der Nachricht "Schön, dass Sie immer noch von uns hören wollen".]({% image_buster /assets/img/custom_optin.png %})
 
 ## Abos und Kampagnen-Targeting {#subscriptions-and-campaign-targeting}
 
-Standardmäßig richten sich Kampagnen mit Push- oder E-Mail-Nachrichten an Nutzer:innen, die ein Abonnent:in sind oder ein Opt-in haben. Sie können diese Targeting-Präferenz bei der Bearbeitung einer Kampagne ändern, indem Sie zum Schritt **Zielgruppe** gehen und das Dropdown-Menü neben **An diese Nutzer:innen senden** auswählen:.
+Standardmäßig stellt Braze Kampagnen mit Push- oder E-Mail-Nachrichten für Nutzer:innen zusammen, die ein Abonnent:in sind oder ein Opt-in haben. Ändern Sie dies in **Target Audience**, indem Sie das Dropdown-Menü neben **An diese Nutzer:innen senden** auswählen **:**.
 
 Braze unterstützt drei Targeting-Stufen:
 
@@ -202,9 +202,9 @@ Es liegt in Ihrer Verantwortung, bei der Verwendung dieser Targeting-Einstellung
 
 ## Segmentierung nach Benutzerabonnements {#segmenting-by-user-subscriptions}
 
-Mit den Filtern "E-Mail Abo-Status" und "Push Abo-Status" können Sie Ihre Nutzer:innen nach ihrem Abo-Status segmentieren.
+Verwenden Sie die Filter "E-Mail-Abonnementstatus" und "Push-Abonnementstatus", um Nutzer:innen nach dem Abonnementstatus zu segmentieren.
 
-Dies kann nützlich sein, wenn Sie Nutzer:innen ansprechen möchten, die sich weder für noch gegen ein Opt-in entschieden haben, und sie auffordern, sich explizit für E-Mail oder Push zu entscheiden. In diesem Fall würden Sie ein Segment mit einem Filter für "E-Mail/Push-Abonnement-Status ist abonniert" erstellen und Kampagnen an dieses Segment gehen an Benutzer, die abonniert sind, sich aber nicht angemeldet haben.
+Verwenden Sie diese Option, um Nutzer:innen, die sich weder angemeldet noch abgemeldet haben, als Zielgruppe zusammenzustellen und ein explizites Opt-in zu fördern. Erstellen Sie ein Segment mit dem Filter "E-Mail/Push-Abonnement Status ist Abonnent" und senden Sie Kampagnen an Nutzer:in, die zwar Abonnent:in sind, aber kein Opt-in haben.
 
-\![E-Mail Abo Status als Segment Filter verwendet.]({% image_buster /assets/img_archive/not_optin.png %})
+![E-Mail Abo-Status, der als Segmentfilter verwendet wird.]({% image_buster /assets/img_archive/not_optin.png %})
 
