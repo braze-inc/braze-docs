@@ -26,11 +26,11 @@ Die folgenden Metriken und Arbeitsabläufe von Braze sind von Bot-Klicks betroff
 
 - **_Klicks insgesamt_:** Kampagnen-Analysen und Canvas-Analysen schließen Bot-Klicks aus und zeigen nur menschliche Interaktionen an.
 - **Filter für die Segmentierung:** Segmente, die sich auf SMS-Link-Interaktionen beziehen, schließen Bot-Klicks für ein genaueres Retargeting in Kampagnen und Canvase aus.
-- **Orchestrierung:** Bot-Klicks werden aus aktionsbasierten Triggern und Canvas-Aktions-Pfaden gefiltert, die auf SMS-Link-Interaktionen referenzieren, so dass die Trigger das menschliche Verhalten widerspiegeln dürfen.
+- **Orchestrierung:** Klicks von Bots werden aus aktionsbasierten Triggern und Canvas Aktions-Pfaden gefiltert, die auf SMS-Link-Interaktionen referenzieren. So ist es zulässig, dass die Trigger menschliches Verhalten widerspiegeln.
 - **Braze Intelligence:**
     - **Intelligente Auswahl:** Schließt Bot-Klicks bei der Optimierung der Auswahl von Varianten aus.
     - **Intelligenter Kanal:** Schließt Bot-Klicks aus, wenn SMS oder RCS für eine genaue Auswahl des Kanals ausgewählt ist.
-    - **Schritte des Experiments:** Schließt Klicks von Bots aus, um zuverlässige Ergebnisse zu erhalten.
+    - **Schritte des Experiments:** Schließt Bot-Klicks aus, um zuverlässige Ergebnisse zu erhalten.
     - **Currents Datenexporte:** Enthält die Felder `is_suspected_bot_click` und `suspected_bot_click_reason` zur Analyse der Klicks von Menschen und Bots. Diese Felder sind in [Currents]({{site.baseurl}}/user_guide/data/distribution/braze_currents/), [Snowflake Data Sharing]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) und [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) verfügbar.
 
 Abmeldungen aufgrund von mutmaßlichen Bot-Klicks sind davon nicht betroffen. Braze bearbeitet alle Anfragen zur Abmeldung wie gewohnt. Um diese Abmeldungen zu blockieren, [senden Sie uns ein Produkt-Feedback]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).

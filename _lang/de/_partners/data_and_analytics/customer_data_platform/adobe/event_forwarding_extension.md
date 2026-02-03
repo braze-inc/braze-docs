@@ -15,7 +15,7 @@ search_tag: Partner
 Dieses Dokument beschreibt die Anwendungsfälle der Erweiterung, wie Sie sie in Ihren Bibliotheken für die Ereignisweiterleitung installieren und wie Sie ihre Funktionen in einer [Regel für](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en) die Ereignisweiterleitung einsetzen.
 
 {% alert note %}
-Das Senden von Attributen an Braze kann den Verbrauch von Datenpunkten in Braze erhöhen. Wenden Sie sich an Ihren Braze-Konto Manager:in, bevor Sie Attribute senden. Weitere Informationen finden Sie in der Dokumentation von Braze über [abrechenbare Datenpunkte]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points).
+Die Verwendung von Adobe Event Forwarding kann die Datenpunkt-Nutzung von Braze erhöhen. Weitere Informationen finden Sie in der Dokumentation von Braze zu [Datenpunkten]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points).
 {% endalert %}
 
 ## Anwendungsfälle
@@ -62,7 +62,7 @@ Nachdem Sie die Erweiterung installiert haben, erstellen Sie eine neue [Regel f�
 ![]({% image_buster /assets/img/efe.png %})
 
 {% tabs local %}
-{% tab Nutzer:in Identifikation %}
+{% tab User Identification %}
 
 | Eingabe | Beschreibung |
 | --- | --- |
@@ -76,7 +76,7 @@ Um das Ereignis mit einem Nutzer:innen zu verknüpfen, müssen Sie entweder das 
 {% endalert %}
 
 {% endtab %}
-{% tab Daten zum Ereignis %}
+{% tab Event Data %}
 
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
@@ -91,7 +91,7 @@ Für die Aktion **Braze Ereignis senden** müssen nur der **Ereignisname** und d
 {% endalert %}
 
 {% endtab %}
-{% tab Nutzer:innen Attribut %}
+{% tab User Attribute %}
 
 Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, mit denen ein Attribut mit dem angegebenen Namen und Wert für das angegebene Nutzerprofil erstellt oder aktualisiert wird. Die folgenden Eigenschaften werden unterstützt:
 
@@ -106,13 +106,13 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, mit denen e
 | Land | Das Land des Nutzers:in als String im Format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
 | Sprache | Die Sprache des Nutzers:in als String im Format [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | Geburtsdatum | Die Nutzerdaten der Nutzer:innen als String im Format "JJJJ-MM-TT" (z.B. 1980-12-21). |
-| Zeitzone | Name der Zeitzone aus der [IANA-Zeitzonendatenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. 'Amerika/New_York' oder 'Eastern Time (US & Canada)'). |
+| Zeitzone | Name der Zeitzone aus der [IANA-Zeitzonendatenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. ’America/New_York’ oder 'Eastern Time (US & Canada)'). |
 | Facebook | Ein Hash mit einem der folgenden Werte: `id` (String), `likes` (String-Array), `num_friends` (Ganzzahl). |
 | Twitter | Hash mit einer der folgenden Angaben: id (Ganzzahl), `screen_name` (String, X (ehemals Twitter) Handle), `followers_count` (Ganzzahl), `friends_count` (Ganzzahl), `statuses_count`(Ganzzahl). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Alle in der Konfiguration hinzugefügten Attribute werden jedes Mal gesendet, wenn das Ereignis an Braze gesendet wird, unabhängig davon, ob sich der Wert des Attributs geändert hat. Wenn Sie Nutzer:innen-Attribute konfigurieren, stellen Sie sicher, dass Sie wissen, wie sich dies auf die Nutzung Ihrer Datenpunkte auswirkt.
+Alle in der Konfiguration hinzugefügten Attribute werden jedes Mal gesendet, wenn das Ereignis an Braze gesendet wird, unabhängig davon, ob sich der Wert des Attributs geändert hat. Wenn Sie Nutzer:innen-Attribute konfigurieren, stellen Sie sicher, dass Sie wissen, wie sich dies auf Ihre Datenpunkt-Nutzung auswirkt.
 {% endalert %}
 
 {% endtab %}
@@ -125,7 +125,7 @@ Nachdem Sie die Erweiterung installiert haben, erstellen Sie eine neue [Regel f�
 ![]({% image_buster /assets/img/efe2.png %})
 
 {% tabs local %}
-{% tab Nutzer:in Identifikation %}
+{% tab User Identification %}
 
 | Eingabe | Beschreibung |
 | --- | --- |
@@ -139,7 +139,7 @@ Um das Ereignis mit einem Nutzer:innen zu verknüpfen, müssen Sie entweder das 
 {% endalert %}
 
 {% endtab %}
-{% tab Daten zum Kauf %}
+{% tab Purchase Data %}
 
 | Eingabe | Beschreibung | Erforderlich |
 | --- | --- | --- |
@@ -157,7 +157,7 @@ Für die Aktion **Kauf-Event senden** muss nur `Product ID`, `Purchase Time`, `C
 {% endalert %}
 
 {% endtab %}
-{% tab Benutzerattribute %}
+{% tab User Attributes %}
 
 In der Konfigurationsansicht können Sie wählen, ob Attribute mit jedem Ereignis gesendet werden sollen.
 
@@ -174,13 +174,13 @@ Benutzerattribute können ein JSON-Objekt sein, das Felder enthält, mit denen e
 | Land | Das Land des Nutzers:in als String im Format [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). |
 | Sprache | Die Sprache des Nutzers:in als String im Format [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes). |
 | Geburtsdatum | Die Nutzerdaten der Nutzer:innen als String im Format "JJJJ-MM-TT" (z.B. 1980-12-21). |
-| Zeitzone | Name der Zeitzone aus der [IANA-Zeitzonendatenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. 'Amerika/New_York' oder 'Eastern Time (US & Canada)'). |
+| Zeitzone | Name der Zeitzone aus der [IANA-Zeitzonendatenbank](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) (z. B. ’America/New_York’ oder 'Eastern Time (US & Canada)'). |
 | Facebook | Ein Hash mit einem der folgenden Werte: `id` (String), `likes` (String-Array), `num_friends` (Ganzzahl). |
 | Twitter | Hash mit einer der folgenden Angaben: id (Ganzzahl), `screen_name` (String, X (ehemals Twitter) Handle), `followers_count` (Ganzzahl), `friends_count` (Ganzzahl), `statuses_count`(Ganzzahl). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-Alle in der Konfiguration hinzugefügten Attribute werden jedes Mal gesendet, wenn das Ereignis an Braze gesendet wird, unabhängig davon, ob sich der Wert des Attributs geändert hat. Wenn Sie Nutzer:innen-Attribute konfigurieren, vergewissern Sie sich bitte, dass Sie wissen, wie sich dies auf den Verbrauch Ihrer Datenpunkte auswirkt.
+Alle in der Konfiguration hinzugefügten Attribute werden jedes Mal gesendet, wenn das Ereignis an Braze gesendet wird, unabhängig davon, ob sich der Wert des Attributs geändert hat. Wenn Sie Nutzer:innen-Attribute konfigurieren, stellen Sie bitte sicher, dass Sie wissen, wie sich dies auf die Datenpunkt-Nutzung auswirkt.
 {% endalert %}
 
 {% endtab %}
