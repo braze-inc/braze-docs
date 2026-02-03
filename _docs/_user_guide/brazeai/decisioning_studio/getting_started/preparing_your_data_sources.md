@@ -63,6 +63,6 @@ Engagement data and activations data are very commonly found in the same data as
 |-------------|------|
 | Each record contains a unique customer identifier that is consistent with all data assets | Decisioning Studio needs to track the individual customer journey from recommendation, through activation, to conversion. |
 | Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for agent training and metric calculation. |
-| Fields needed to match communication content to activation events are provided (e.g., event_id) | Correctly matching communication characteristics to sends is necessary for agent attribution and training. |
+| Fields needed to match communication content to activation events are provided (such as `event_id`) | Correctly matching communication characteristics to sends is necessary for agent attribution and training. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
