@@ -34,7 +34,7 @@ During the beta period, email is the only supported channel.
 
 From the **Messaging Channels** tab, select **Email** and create your base email message. Refer to our dedicated [Email]({{site.baseurl}}/user_guide/message_building_by_channel/email) section for help. 
 
-The Content Optimizer agent will use the send settings (such as the email domain and reply-to address) specified in this variant to send all messages. You can either start with a new design or select an existing template for this message. At this step, it may be helpful to consider which components of the message you want to optimize for. You will define these in [step 4](#step-4).
+The Content Optimizer agent uses the send settings (such as the email domain and reply-to address) specified in this variant to send all messages. You can either start with a new design or select an existing template for this message. At this step, consider which components of the message you want to optimize for. You will define these in [step 4](#step-4).
 
 Supported components to optimize include:
 
@@ -45,17 +45,17 @@ Supported components to optimize include:
 
 ### Step 3: Specify delivery settings
 
-In the Delivery Settings tab, you can specify if the step should use Intelligent Timing or delivery validations. For more details, refer to [Edit delivery settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#step-2-edit-delivery-settings) in Message step.
+In the **Delivery Settings** tab, you can specify if the step should use Intelligent Timing or delivery validations. For more details, refer to [Edit delivery settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#step-2-edit-delivery-settings) in Message step.
 
 ### Step 4: Add content components and variants {#step-4}
 
-Content components are the individual elements of your message that you want to test—such as different subject lines, headlines, body text, or primary calls to action. These components allow you to generate multiple versions of a message and automatically optimize based on performance over time.
+Content components are the individual elements of your message that you want to test, such as different subject lines, headlines, body text, or primary calls to action. These components allow you to generate multiple versions of a message and automatically optimize based on performance over time.
 
-You can add up to 3 content components per step and up to 5 variants per component, for a total of 125 unique content combinations.
+You can add up to three content components per step and up to five variants per component, for a total of 125 unique content combinations.
 
 ![Options for adding and configuring content components in the Content Optimizer interface. The interface displays selectable components such as Subject, Body Header, Body Content, and Primary CTA, each with fields to enter different variants.]({% image_buster /assets/img/content_optimizer/add_content_components.png %})
 
-#### Step 4a: Configure content components
+#### Step 4.1: Configure content components
 
 To configure components:
 
@@ -71,7 +71,7 @@ To configure components:
 
 ![Content Optimizer Settings interface showing options to add and configure content components for email optimization. Each component has input fields for entering different variants. Visible text includes component names and fields for entering variant text.]({% image_buster /assets/img/content_optimizer/content_optimizer_settings.png %})
 
-#### Step 4b: Add Liquid to your message
+#### Step 4.2: Add Liquid to your message
 
 After defining at least two variants for each component, copy the associated Liquid tag for each one and paste it into the corresponding location in your base message.
 
@@ -82,7 +82,7 @@ After defining at least two variants for each component, copy the associated Liq
 
 If you don’t add a Liquid tag for a selected content component, you’ll see a warning on the **Content Optimizer Settings** tab and an error on the **Messaging Channels** tab. The Canvas can’t be launched until all selected components are properly added to your base message.
 
-As the Canvas runs, the agent will mix and match variants across components to generate different content combinations. Over time, higher-performing combinations are prioritized for delivery, helping you improve performance without manual intervention.
+As the Canvas runs, the agent mixes and matches variants across components to generate different content combinations. Over time, higher-performing combinations are prioritized for delivery, helping you improve performance without manual intervention.
 
 #### Liquid reference
 
