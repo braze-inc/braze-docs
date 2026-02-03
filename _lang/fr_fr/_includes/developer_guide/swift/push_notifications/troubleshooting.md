@@ -53,7 +53,7 @@ Il est normal que les APN renvoient initialement un statut de réussite même si
 
 Le [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) vous donne la possibilité de voir tous les messages (en particulier les messages d'erreur) associés à vos campagnes et à vos envois, y compris les erreurs de notification push. Ce journal d’erreurs fournit de nombreux avertissements qui peuvent être très utiles pour identifier les raisons pour lesquelles vos campagnes ne fonctionnent pas comme prévu. Cliquer sur un message d’erreur vous redirigera vers la documentation pertinente pour vous aider à résoudre un incident particulier.
 
-![Les journaux d'erreurs en mode push affichent l'heure à laquelle l'erreur s'est produite, le nom de l'application, le canal, le type d'erreur et le message d'erreur.]({% image_buster /assets/img_archive/message_activity_log.png %})
+![Les journaux d’erreur Push affichent l’heure à laquelle l’erreur s’est produite, le nom de l’application, le canal, le type d’erreur et le message d’erreur.]({% image_buster /assets/img_archive/message_activity_log.png %})
 
 Les erreurs courantes que vous pouvez voir ici comprennent des notifications spécifiques à l'utilisateur, telles que ["Received Unregistered Sending to Push Token".](#swift_received-unregistered-sending)
 
@@ -139,7 +139,7 @@ Vérifiez le profil utilisateur de l’utilisateur auquel vous essayez d’envoy
 
 Ce qui suit indiquerait un problème avec l’inscription aux notifications push ou que le jeton de l’utilisateur a été renvoyé à Braze comme invalide par les APN après avoir été envoyé :
 
-![Profil utilisateur affichant les paramètres de contact d’un utilisateur. Sous Push, "No Apps" s'affiche.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![Profil utilisateur affichant les paramètres de contact d’un utilisateur. Sous Notification push, «Pas d’application » s'affiche.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## Les clics de notification push ne sont pas enregistrés {#push-clicks-not-logged}
 

@@ -11,7 +11,7 @@ description: "Aprende a utilizar el depurador del SDK de Braze, para que puedas 
 
 ## Requisitos previos
 
-Para utilizar el depurador del SDK de Braze, necesitarás los permisos `View PII` y `View User Profiles PII Compliant`. Además, tu SDK de Braze debe cumplir o apuntar a las siguientes versiones mínimas: 
+Para utilizar el depurador del SDK de Braze, necesitarás los permisos "Ver PII" y "Ver perfiles de usuario compatibles con PII". Para descargar los registros de tu sesión de depuración, también necesitarás el permiso "Exportar datos de usuario". Además, tu SDK de Braze debe cumplir o apuntar a las siguientes versiones mínimas: 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -67,4 +67,4 @@ Puede tardar unos minutos en generar tus registros, dependiendo de la duración 
 
 Después de la sesión, puedes exportar tus registros de sesión como archivo CSV. Además, otras personas pueden utilizar tu **ID de sesión** para buscar tu sesión de depuración, por lo que no necesitas enviarles tus registros directamente.
 
-![La página de depuración con "Exportar registros" y "Copiar ID de sesión" que se muestra después de la sesión.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![La página de depuración con "Exportar Registros" y "Copiar ID de Sesión" mostrada después de la sesión.]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})

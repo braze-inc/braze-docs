@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Renommer l'ID externe"
+nav_title: "POST : Renommer des ID externes"
 article_title: "POST : Renommer l'ID externe"
 search_tag: Endpoint
 page_order: 1
@@ -14,11 +14,11 @@ description: "Cet article présente en détail l’endpoint Renommer des ID exte
 /users/external_ids/rename
 {% endapimethod %}
 
-> Utilisez cet endpoint pour renommer les ID externes de vos utilisateurs. 
+> Utilisez cet endpoint pour renommer les ID externes de vos utilisateurs.
 
-Vous pouvez envoyer jusqu’à 50 objets renommés par demande. 
+Vous pouvez envoyer jusqu’à 50 objets renommés par demande.
 
-Cet endpoint définit un nouvel `external_id` (principal) pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un ou l’autre des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. La présence de plusieurs ID externes permet de prévoir une période de migration pour que les versions antérieures de vos applications qui utilisent l’ancien schéma de nommage des ID externes ne s’interrompent pas. 
+Cet endpoint définit un nouvel `external_id` (principal) pour l’utilisateur et rend son `external_id` existant obsolète. Cela signifie que l’utilisateur peut être identifié par l’un ou l’autre des `external_id` jusqu’à ce que celui qui est obsolète soit supprimé. Le fait de disposer de plusieurs ID externes permet de prévoir une période de migration, de sorte que les versions antérieures de vos applications qui utilisent l'ancien schéma de dénomination des ID externes ne soient pas interrompues.
 
 Une fois que votre ancien schéma de nommage n'est plus utilisé, nous vous recommandons vivement de supprimer les ID externes obsolètes à l'aide de l'[endpoint`/users/external_ids/remove`.]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove)
 
@@ -99,16 +99,16 @@ Le champ `message` renverra `success` pour toutes les demandes valides. Des erre
 ## Foire aux questions
 
 ### Cela a-t-il un impact sur le MAU ?
-Non, puisque le nombre d’utilisateurs restera le même, ils auront simplement un nouvel `external_id`.
+Non, parce que le nombre d'utilisateurs reste le même, ils ont un nouveau `external_id`.
 
 ### Le comportement des utilisateurs change-t-il au cours du temps ?
-Non, étant donné que l’utilisateur est toujours le même et que tous ses comportements historiques sont toujours liés à lui.
+Non, parce que l'utilisateur est toujours le même et que tout son comportement historique est toujours lié à lui.
 
 ### Peut-il être exécuté sur des espaces de travail de développement ou de mise à l'essai ?
 Oui. En fait, nous vous recommandons vivement d'effectuer un test de migration sur un espace de travail de développement ou de mise à disposition, et de vous assurer que tout s'est bien déroulé avant d'exécuter la migration sur les données de production.
 
-### Est-ce que cela consomme des points de données ?
-Cette fonctionnalité ne coûte pas de points de données.
+### Ce système enregistre-t-il des points de données ?
+Cette fonctionnalité ne permet pas d'enregistrer des points de données.
 
 ### Quel est le délai d’obsolescence recommandé ?
 Nous n'avons pas de limite stricte quant à la durée pendant laquelle vous pouvez conserver des ID externes dépréciés, mais nous vous recommandons vivement de les supprimer lorsqu'il n'est plus nécessaire de référencer les utilisateurs par l'ID déprécié.

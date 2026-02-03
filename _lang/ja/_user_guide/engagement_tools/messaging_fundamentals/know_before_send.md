@@ -3,7 +3,7 @@ nav_title: 送る前に知っておこう
 article_title: 送る前に知っておこう
 description: "私たちのプレローンチガイドを訪問した後、コンテンツカード、メール、アプリ内メッセージ、プッシュ、SMSについては、この最終的なチェックリストまたは「gotcha」を参照してください。"
 alias: /know_before_send/
-page_order: 10.2
+page_order: 7
 tool:
     - Campaigns
     - Canvas
@@ -103,7 +103,8 @@ tool:
 - **コンテンツカードの更新**: デフォルトでは、Braze は、セッション開始時、フィードダウンスワイプ時 (モバイル)、および最後の更新が1分以上前の場合はカードビューが開かれたときに、コンテンツ カードリクエストを同期して更新します。
 - **コンテンツカードのキャッシュ**: コンテンツカードのキャッシュオプションは、当社の[Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/custom_styling/#customizing-card-rendering-for-android)および[Web](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#getcachedcontentcards)のドキュメントにあります。 
 - **フリークエンシーキャップ**:フリークエンシーキャップは、コンテンツカードには適用されません。
-- **インプレッション**: 印象は一般的にカードが見られたときに記録されます。例えば、受信トレイがコンテンツカードでいっぱいの場合、ユーザーが特定のコンテンツカードまでスクロールするまでインプレッションは記録されません。Web、Android、iOS の各プラットフォームには若干の違いがあります。  
+- **インプレッション**: 印象は一般的にカードが見られたときに記録されます。例えば、受信トレイがコンテンツカードでいっぱいの場合、ユーザーが特定のコンテンツカードまでスクロールするまでインプレッションは記録されません。Web、Android、iOS の各プラットフォームには若干の違いがあります。
+- **SDKセッションとカード作成**：SDKセッションを持たないユーザーがセグメンテーション条件を満たしていても、コンテンツカードは作成されない。しかし、ユーザーがすでにAndroidセッションを持っている場合、iOS固有のクリックアクションを持つコンテンツカードは引き続き作成され、ユーザーがiOSでセッションを持てば、iOSでそれらのコンテンツカードを見ることができる。カードが作成されるタイミングについては、[カード作成を]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)参照のこと。  
 
 ## アプリ内メッセージ
 

@@ -13,7 +13,7 @@ repositories {
 Em seguida, adicione o Braze às suas dependências.
 
 {% tabs local %}
-{% tab somente a base %}
+{% tab base only %}
 Se não planeja usar os componentes da interface do usuário do Braze, adicione o seguinte código ao seu site `build.gradle`. Substitua `SDK_VERSION` pela versão atual de seu Android Braze SDK. Para obter a lista completa de versões, consulte [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
@@ -24,7 +24,7 @@ dependencies {
 ```
 {% endtab %}
 
-{% tab com componentes de interface do usuário %}
+{% tab with ui components %}
 Se planeja usar os componentes da interface do usuário do Braze posteriormente, adicione o seguinte código ao seu site `build.gradle`.  Substitua `SDK_VERSION` pela versão atual de seu Android Braze SDK. Para obter a lista completa de versões, consulte [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
@@ -82,7 +82,7 @@ Enquanto a capacitação estiver ativada, todas as conexões de rede serão canc
 A inicialização com postergação está desativada por padrão. Para ativar, use uma das seguintes opções:
 
 {% tabs %}
-{% tab Arquivo XML do Braze %}
+{% tab Braze XML file %}
 No arquivo `braze.xml` de seu projeto, defina `com_braze_enable_delayed_initialization` como `true`.
 
 ```xml
@@ -90,7 +90,7 @@ No arquivo `braze.xml` de seu projeto, defina `com_braze_enable_delayed_initiali
 ```
 {% endtab %}
 
-{% tab Em tempo de execução %}
+{% tab At runtime %}
 Para ativar a capacitação com postergação no tempo de execução, use o seguinte método.
 
 {% subtabs %}
@@ -121,7 +121,7 @@ Quando a inicialização com postergação é ativada, as análises de dados pus
 Para enfileirar explicitamente a análise de dados push, escolha uma das seguintes opções:
 
 {% tabs %}
-{% tab Arquivo XML do Braze %}
+{% tab Braze XML file %}
 Em seu arquivo `braze.xml`, defina `com_braze_delayed_initialization_analytics_behavior` como `QUEUE`:
 
 ```xml
@@ -129,7 +129,7 @@ Em seu arquivo `braze.xml`, defina `com_braze_delayed_initialization_analytics_b
 ```
 {% endtab %}
 
-{% tab Em tempo de execução %}
+{% tab At runtime %}
 Adicione `QUEUE` ao seu [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) método:
 
 {% subtabs %}
@@ -156,7 +156,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 Para descartar a análise de dados por push, escolha uma das seguintes opções:
 
 {% tabs %}
-{% tab Arquivo XML do Braze %}
+{% tab Braze XML file %}
 Em seu arquivo `braze.xml`, defina `com_braze_delayed_initialization_analytics_behavior` como `DROP`: 
 
 ```xml
@@ -164,7 +164,7 @@ Em seu arquivo `braze.xml`, defina `com_braze_delayed_initialization_analytics_b
 ```
 {% endtab %}
 
-{% tab Em tempo de execução %}
+{% tab At runtime %}
 Adicione `DROP` ao método [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) method:
 
 {% subtabs %}
@@ -249,7 +249,7 @@ Para obter a lista de parâmetros disponíveis, consulte [`BrazeActivityLifecycl
 Você também pode usar o [SDK Debugger]({{site.baseurl}}/developer_guide/debugging) para diagnosticar problemas do SDK.
 {% endalert %}
 
-Se tiver problemas durante o teste, ative a [capacitação de registro detalhado](#android_enabling-logs) e use o logcat para detectar chamadas ausentes de `openSession` e `closeSession` em suas atividades.
+Se tiver problemas durante o teste, ative [a capacitação de registro detalhado](#android_enabling-logs) e use o logcat para detectar chamadas ausentes de `openSession` e `closeSession` em suas atividades.
 
 1. No Braze, acesse **Overview (Visão geral)**, selecione seu app e, no menu suspenso **Display Data For (Exibir dados para** ), escolha **Today (Hoje**).
     ![A página "Overview" (Visão geral) no Braze, com o campo "Display Data For" (Exibir dados para) definido como "Today" (Hoje).]({% image_buster /assets/img_archive/android_sessions.png %})
@@ -263,7 +263,7 @@ Se tiver problemas durante o teste, ative a [capacitação de registro detalhado
 
 Para definir suas opções do Braze no código em vez de no arquivo `braze.xml`, use [a configuração de tempo de execução](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Se houver um valor em ambos os lugares, o valor de tempo de execução será usado em seu lugar. Depois que todas as configurações necessárias forem fornecidas em tempo de execução, você poderá excluir o arquivo `braze.xml`.
 
-No exemplo a seguir, um [objeto builder](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) é criado e, em seguida, passado para [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Note que apenas algumas das opções de tempo de execução disponíveis são mostradas - consulte nosso [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) para obter a lista completa.
+No exemplo a seguir, um [objeto builder](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) é criado e, em seguida, passado para [`Braze.configure()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/configure.html). Observe que apenas algumas das opções de tempo de execução disponíveis são mostradas - consulte nosso [KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html) para obter a lista completa.
 
 {% tabs %}
 {% tab JAVA %}
@@ -380,7 +380,7 @@ Ativar registros detalhados antes de qualquer outra chamada em `Application.onCr
 {% endalert %}
 
 {% tabs local %}
-{% tab Aplicativo %}
+{% tab Application %}
 Para ativar logs diretamente no seu app, adicione o seguinte ao método `onCreate()` do seu aplicativo antes de qualquer outro método.
 
 {% subtabs local %}

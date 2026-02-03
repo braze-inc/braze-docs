@@ -2,9 +2,9 @@
 
 ## 기본 사용자 속성
 
-### 미리 정의된 메서드
+### 미리 정의된 방법
 
-Braze는 `BrazeBinding` 객체를 사용하여 다음 사용자 속성을 설정하기 위한 미리 정의된 메서드를 제공합니다. 자세한 내용은 [Braze Unity 선언 파일](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs)을 참조하십시오.
+Braze는 `BrazeBinding` 객체를 사용하여 다음 사용자 속성을 설정하기 위한 사전 정의된 메서드를 제공합니다. 자세한 내용은 [Braze Unity 선언 파일을](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs) 참조하세요.
 
 - First name
 - Last name
@@ -17,66 +17,66 @@ Braze는 `BrazeBinding` 객체를 사용하여 다음 사용자 속성을 설정
 - 사용자 푸시 구독
 - 사용자 전화번호
 
-### 기본 속성 설정
+### 기본 속성 설정하기
 
-기본 속성을 설정하려면 `BrazeBinding` 객체에서 관련 메서드를 호출하십시오.
+기본 속성을 설정하려면 `BrazeBinding` 객체에서 관련 메서드를 호출하세요.
 
 {% tabs local %}
-{% tab 이름 %}
+{% tab First name %}
 ```csharp
 BrazeBinding.SetUserFirstName("first name");
 ```
 {% endtab %}
-{% tab 성 %}
+{% tab Last name %}
 ```csharp
 BrazeBinding.SetUserLastName("last name");
 ```
 {% endtab %}
-{% tab 이메일 %}
+{% tab Email %}
 ```csharp
 BrazeBinding.SetUserEmail("email@email.com");
 ```
 {% endtab %}
-{% tab 성별 %}
+{% tab Gender %}
 ```csharp
 BrazeBinding.SetUserGender(Appboy.Models.Gender);
 ```
 {% endtab %}
-{% tab 생년월일 %}
+{% tab Birth date %}
 ```csharp
 BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
 ```
 {% endtab %}
-{% tab 국가 %}
+{% tab Country %}
 ```csharp
 BrazeBinding.SetUserCountry("country name");
 ```
 {% endtab %}
-{% tab 거주 도시 %}
+{% tab Home city %}
 ```csharp
 BrazeBinding.SetUserHomeCity("city name");
 ```
 {% endtab %}
-{% tab 이메일 구독 %}
+{% tab Email subscription %}
 ```csharp
 BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab 푸시 구독 %}
+{% tab Push subscription %}
 ```csharp
 BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
 ```
 {% endtab %}
-{% tab 전화번호 %}
+{% tab Phone number %}
 ```csharp
 BrazeBinding.SetUserPhoneNumber("phone number");
 ```
 {% endtab %}
 {% endtabs %}
 
-### 기본 속성 해제
+### 기본 속성 설정 해제하기
 
-기본 사용자 속성을 해제하려면 관련 메서드에 `null`을 전달하십시오.
+기본 사용자 속성을 해제하려면 해당 메서드에 `null` 을 전달하세요.
 
 ```csharp
 BrazeBinding.SetUserFirstName(null);
@@ -84,14 +84,14 @@ BrazeBinding.SetUserFirstName(null);
 
 ## 사용자 지정 사용자 속성
 
-기본 사용자 속성 외에도 Braze는 여러 다른 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 []({{site.baseurl}}/developer_guide/analytics)사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics)을 참조하십시오.
+Braze에서는 기본 사용자 속성 외에도 여러 가지 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있습니다. 각 속성의 세그먼트화 옵션에 대한 자세한 내용은 [사용자 데이터 수집을]({{site.baseurl}}/developer_guide/analytics) 참조하세요.
 
 ### 사용자 지정 속성 설정
 
-커스텀 속성을 설정하려면 속성 유형에 해당하는 메서드를 사용하십시오: 
+커스텀 속성을 설정하려면 속성 유형에 해당하는 방법을 사용합니다: 
 
 {% tabs %}
-{% tab 문자열 %}
+{% tab String %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
@@ -99,7 +99,7 @@ AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string cust
 
 {% endtab %}
 
-{% tab 정수 %}
+{% tab Integer %}
 
 ```csharp
 // Set Integer Attribute
@@ -117,14 +117,14 @@ AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double valu
 
 {% endtab %}
 
-{% tab 부울 %}
+{% tab Boolean %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 {% endtab %}
 
-{% tab 날짜 %}
+{% tab Date %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
@@ -135,12 +135,12 @@ AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute ke
 ```
 
 {% alert note %}
-Braze에 전달된 날짜는 [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) 형식(예: `2013-07-16T19:20:30+01:00`) 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식(예: `2016-12-14T13:32:31.601-0800`)이어야 합니다.
+Braze에 전달된 날짜는 [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) 형식(예: `2013-07-16T19:20:30+01:00`) 또는 `yyyy-MM-dd'T'HH:mm:ss:SSSZ` 형식(예:`2016-12-14T13:32:31.601-0800`)이어야 합니다.
 {% endalert %}
 
 {% endtab %}
 
-{% tab 배열 %}
+{% tab Array %}
 
 ```csharp
 // Setting An Array
@@ -157,9 +157,9 @@ AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 커스텀 속성 값의 최대 길이는 255자이며, 이보다 긴 값은 잘립니다.
 {% endalert %}
 
-### 커스텀 속성 해제
+### 커스텀 속성 설정 해제하기
 
-커스텀 속성을 해제하려면 관련 속성 키를 `UnsetCustomUserAttribute` 메서드에 전달하십시오. 
+커스텀 속성을 설정 해제하려면 관련 속성 키를 `UnsetCustomUserAttribute` 메서드에 전달하세요. 
 
 ```csharp
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
@@ -167,11 +167,11 @@ AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 
 ### REST API 사용
 
-사용자 속성을 설정하거나 해제하려면 REST API를 사용할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
+REST API를 사용하여 사용자 속성을 설정하거나 설정 해제할 수도 있습니다. 자세한 정보는 [사용자 데이터 엔드포인트]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)를 참조하십시오.
 
 ## 사용자 구독 설정
 
-사용자에게 이메일 또는 푸시 구독을 설정하려면 다음 함수 중 하나를 호출하십시오.
+사용자를 위한 이메일 또는 푸시 구독을 설정하려면 다음 함수 중 하나를 호출하세요.
 
 ```csharp
 // Email notifications
@@ -181,7 +181,7 @@ AppboyBinding.SetUserEmailNotificationSubscriptionType()
 AppboyBinding.SetPushNotificationSubscriptionType()`
 ```
 
-두 함수 모두 `Appboy.Models.AppboyNotificationSubscriptionType`을(를) 인수로 사용하며, 세 가지 다른 상태가 있습니다:
+두 함수 모두 세 가지 상태가 있는 `Appboy.Models.AppboyNotificationSubscriptionType` 을 인자로 받습니다:
 
 | Subscription Status | 정의 |
 | ------------------- | ---------- |

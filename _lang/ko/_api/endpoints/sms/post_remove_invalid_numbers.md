@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: 잘못된 전화번호 제거"
+nav_title: "POST: 유효하지 않은 전화번호 제거"
 article_title: "POST: 잘못된 전화번호 제거"
 search_tag: Endpoint
 page_order: 2
@@ -20,7 +20,7 @@ description: "이 문서에서는 유효하지 않은 전화번호 제거 Braze 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76495aac-8c2d-4e1a-8cac-12e3856ab1d3 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `sms.invalid_phone_numbers.remove` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 

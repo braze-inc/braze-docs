@@ -46,7 +46,7 @@ NSDictionary *brazeInfo = @{
 
 En Braze, vaya a **Integraciones de socios** > **Socios tecnológicos** y seleccione **AppsFlyer**. 
 
-Aquí encontrarás el punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puede crear una nueva o invalidar una existente. La clave de importación de datos y el endpoint REST se utilizan en el siguiente paso cuando se configura un postback en el dashboard de AppsFlyer.<br><br>![La casilla "Importación de datos mediante importación de cohortes" en la página de tecnología de AppsFlyer. En este cuadro se te muestra la clave de importación de datos y el punto final REST.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
+Aquí puedes encontrar el punto final REST y generar tu clave de importación de datos Braze. Una vez generada la clave, puede crear una nueva o invalidar una existente. La clave de importación de datos y el endpoint REST se utilizan en el siguiente paso cuando se configura un postback en el dashboard de AppsFlyer.<br><br>![La casilla "Importación de datos mediante importación de cohortes" en la página de tecnología de AppsFlyer. En este cuadro, se te muestra la clave de importación de datos y el punto final REST.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}){: style="max-width:90%;"}
 
 ### Paso 3: Configurar una conexión Braze en AppsFlyer Audiences
 
@@ -61,7 +61,7 @@ Aquí encontrarás el punto final REST y generarás tu clave de importación de 
 
 Una vez que se ha cargado un público de AppsFlyer en Braze, puede utilizarlo como filtro al definir segmentos en Braze seleccionando el filtro **Cohortes de AppsFlyer**.
 
-![Filtro de atributos de usuario "Cohortes AppsFlyer" seleccionadas.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %})
+![Filtro de atributos de usuario "Cohortes AppsFlyer" seleccionado.]({% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %})
 
 {% alert important %}
 Sólo se añadirán o eliminarán de una cohorte los usuarios que ya existan en Braze. La importación de cohortes no creará nuevos usuarios en Braze.

@@ -13,7 +13,7 @@ search_tag: Partner
 
 _This integration is maintained by Lytics._
 
-## About the integration
+## 통합 정보
 
 The Braze and Lytics integration provides a unified view of your customers to enable powerful personalization and to drive optimized campaigns using the next best action orchestration and decisions.
 
@@ -49,7 +49,7 @@ In the **Configure Authorization** prompt that appears, provide a label and a de
 
 ![]({% image_buster /assets/img/lytics/braze_authorization.png %}){: style="max-width:80%;"}
 
-### Step 2: Create a new job
+### 2단계: Create a new job
 
 In Lytics, navigate to the **Jobs** dashboard within the **Data** console in the navigation bar. Select **Create New Job** and search for and select **Braze**.  In the **Select Job Type** prompt that appears, select **Export Audience**.
 
@@ -59,7 +59,7 @@ Next, choose an authorization within the **Select Authorization** options.
 
 ![]({% image_buster /assets/img/lytics/braze_jobauth.png %}){: style="max-width:80%;"}
 
-### Step 3: Configure the job
+### 3단계: Configure the job
 
 Within the **Configure Job** prompt, provide a label and an optional description. Next, From the **Braze External User ID Field** input, select the field in Lytics that contains the Braze external user ID (`braze_id`). The next step is the most important—select the audiences to export to Braze.
 
@@ -68,7 +68,7 @@ Within the **Configure Job** prompt, provide a label and an optional description
 Finally, choose the preferable option for the **Existing Users** checkbox. Leaving this box checked will add users who already exist in the selected Lytics audience. If unchecked, users will only be exported to Braze when entering or exiting the audience after the workflow begins.
 
 {% alert note %}
-By checking this box, all existing users in the selected audience will be pushed into Braze. This will result in a data point being incurred per user per audience for the initial sync.
+By checking this box, all existing users in the selected audience will be pushed into Braze. Braze 요금제에 데이터 포인트가 포함된 경우 그에 따라 데이터 포인트 사용량을 모니터링하세요.
 {% endalert %}
 
 Click **Complete** when finished to initiate the export and save.
@@ -124,7 +124,7 @@ Input a name, an optional description, and a token expiration period. Next, togg
 
 ![]({% image_buster /assets/img/lytics/data_manager.png %}){: style="max-width:80%;"}
 
-#### Step 2: Configure the Lytics webhook URL
+#### 2단계: Configure the Lytics webhook URL
 
 The Lytics webhook URL is used by Braze to send a message to the Lytics API from Braze. This message can be used to personalize your campaigns in Lytics or can be used to enrich your Lytics Customer Profile. The following two parameters are required to be added within the Lytics webhook URL:
 

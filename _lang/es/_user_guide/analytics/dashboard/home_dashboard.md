@@ -1,9 +1,9 @@
 ---
 nav_title: Panel de inicio
-article_title: Panel de inicio (Antes resumen)
+article_title: Tablero de inicio (antes vista general)
 page_order: 1
 page_type: reference
-description: "Este artículo de referencia describe tu panel de Inicio y proporciona definiciones para las estadísticas disponibles en esta página."
+description: "Este artículo de referencia describe el panel de control de su página de inicio y proporciona definiciones para las estadísticas disponibles en esta página."
 tool: 
   - Reports
 
@@ -11,15 +11,15 @@ tool:
 
 # Panel de inicio
 
-> La página de **inicio** del panel proporciona métricas clave para que puedas hacer un seguimiento y comprender el rendimiento de tu aplicación o sitio web, y te da una visión general de alto nivel de tu base de usuarios.
+> La página de **inicio** del panel de control proporciona métricas clave para que pueda realizar un seguimiento y comprender el rendimiento de su aplicación o sitio web, y le ofrece una visión general de alto nivel de su base de usuarios.
 
 La página de **inicio** tiene dos secciones principales:
-- [Continúa donde lo dejaste](#pick-up-where-you-left-off)
-- [Resumen de rendimiento](#peformance-overview)
+- [Continuar donde lo dejaste](#pick-up-where-you-left-off)
+- [Resumen del rendimiento](#peformance-overview)
 
-\![Panel de inicio en Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
+![Panel de inicio en Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
-## Continúa donde lo dejaste
+## Continuar donde lo dejaste
 
 Puedes continuar donde lo dejaste en el panel de Braze, con acceso directo a los archivos que hayas editado o creado recientemente. Esta sección aparece en la parte superior de la página de **Inicio** del panel de Braze.
 
@@ -29,25 +29,25 @@ Puedes volver a visitar campañas, lienzos y segmentos editados o creados recien
 La sección **Retomar donde lo dejaste** aparece después de haber editado o creado una campaña, Canvas o segmento.
 {% endalert %}
 
-\![Un borrador de Canvas, un segmento activo y un borrador de campaña en la sección "Continúa donde lo dejaste".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+![Un borrador de Canvas, un segmento activo y un borrador de campaña en la sección "Continúa donde lo dejaste".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
-## Resumen de rendimiento
+## Resumen del rendimiento
 
-Por defecto, la sección **Resumen de rendimiento** muestra los datos de los últimos 30 días de todas las aplicaciones y sitios. Todas tus métricas se calculan en función del intervalo de fechas seleccionado.
+Por defecto, la sección **Resumen de rendimiento** muestra los datos de los últimos 30 días de todas las aplicaciones y sitios. Todas las métricas se calculan en función del intervalo de fechas seleccionado.
 
-\![Intervalo de fechas y campos de aplicación en el panel de inicio.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Campos de intervalo de fechas y aplicación en el panel de inicio.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Los porcentajes se calculan basándose en el intervalo de fechas actual en comparación con el intervalo de fechas anterior, con la excepción de *los Usuarios Activos Mensuales* (MAU), que utiliza el último día del periodo anterior en lugar de un intervalo. 
 
-Por ejemplo, si estableces tu intervalo de fechas en **Últimos 7 días** y tus *Usuarios activos diarios* muestran un aumento porcentual del 1,8%, eso significa que has tenido un 1,8% más de usuarios activos diarios esta semana en comparación con la semana pasada.
+Por ejemplo, si establece el intervalo de fechas en **los últimos 7 días** y *los usuarios activos diarios* muestran un aumento porcentual del 1,8%, significa que esta semana ha tenido un 1,8% más de usuarios activos diarios que la semana pasada.
 
-\![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
-### Desglose del espectáculo
+### Desglose de la función de mostrar
 
 Selecciona **Mostrar desglose** en cada fila de las estadísticas del resumen de rendimiento para ver el valor de cada estadística por día para el intervalo de fechas especificado.
 
-Expandir]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+![Expand]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Estadísticas disponibles
 
@@ -59,46 +59,71 @@ A continuación encontrarás las definiciones de tus estadísticas disponibles, 
 
 Un ratio MAU-usuario bajo puede indicar que necesitas diversificar tus canales de mensajería o aumentar tus esfuerzos para llegar a los usuarios rezagados. Para más información, consulta nuestra guía rápida sobre la [captura de usuarios caducados]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users). En general, la proporción entre MAU y tiempo de vida disminuirá inevitablemente con el tiempo debido al abandono de usuarios, pero las herramientas de Braze pueden ayudarte a minimizar este efecto manteniendo a los usuarios comprometidos durante más tiempo.
 
-### Sesiones de por vida
+### Sesiones por ciclo de vida
 
-*Sesiones de por vida* es el recuento total de sesiones que Braze ha registrado desde la integración. En pocas palabras, una sesión es cada vez que un usuario utiliza la aplicación o visita tu sitio web. Para una definición más precisa sobre cómo se definen las sesiones por plataforma, consulta el correspondiente
-Artículos para desarrolladores de [iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android y FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), o de seguimiento de sesiones [Web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
+*Sesiones de por vida* es el recuento total de sesiones que Braze ha registrado desde la integración. En pocas palabras, una sesión es cada vez que un usuario utiliza la aplicación o visita su sitio web. Para una definición más precisa sobre cómo se definen las sesiones por plataforma, consulta el correspondiente
+[iOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift), [Android y FireOS]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=android), o artículos para desarrolladores sobre seguimiento de sesiones [web]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=web).
 
 ### Usuarios activos al mes
 
-Los *usuarios activos mensuales* (MAU) son el número de usuarios que han registrado una sesión en tu aplicación o sitio web en los últimos 30 días. Las MAU se calculan cada noche con una ventana móvil de 30 días. El MAU te proporciona una buena comprensión de la salud de una aplicación o sitio durante un largo periodo de tiempo, ya que suaviza las incoherencias entre días de intensidad de uso variable.
+Los *usuarios activos mensuales* (MAU) son el número de usuarios que han registrado una sesión en su aplicación o sitio en los últimos 30 días. Los MAU se calculan cada noche con una ventana continua de 30 días. Los MAU permiten comprender mejor la salud de una aplicación o un sitio web durante un periodo de tiempo prolongado, ya que suavizan las incoherencias entre días de intensidad de uso variable.
 
-El porcentaje junto al recuento de MAU muestra la variación de MAU de este periodo respecto al anterior.
+El porcentaje junto al recuento de MAU muestra el cambio en MAU para este periodo en comparación con el periodo anterior.
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### Reglas de cálculo de MAU
+
+Los cálculos de MAU siguen reglas específicas para garantizar una facturación precisa y coherente:
+
+- **Momento del cálculo**: Se calcula una vez al día a las 12:05 UTC como una instantánea de 30 días; los recuentos nunca cambian retroactivamente.
+- **Perfiles anónimos**: Cuenta **sólo** cuando se registre al menos una sesión.
+- **Perfiles identificados**: Cuéntalos automáticamente una vez que existan.
+- **Perfiles huérfanos**: Los duplicados fusionados con otro usuario **no** se contabilizan.
+- **Cargas CSV**: Los usuarios cargados por CSV sólo cuentan cuando se suministra `date_of_first_session` o `date_of_last_session`, o cuando registran posteriormente una sesión.
+- **Supresión de API**: Eliminar un usuario a través de la API no actualiza el MAU inmediatamente; el recuento se autocorrige en el siguiente ciclo mensual.
+
 {% alert note %}
-Los usuarios anónimos también cuentan para tu MAU. En los dispositivos móviles, los usuarios anónimos dependen del dispositivo. Para los usuarios Web, los usuarios anónimos dependen de la caché del navegador.
+Los usuarios anónimos también cuentan para tu MAU. En el caso de los dispositivos móviles, los usuarios anónimos dependen del dispositivo. En el caso de los internautas, los usuarios anónimos dependen de la caché del navegador.
 {% endalert %}
+
+#### Ejemplo de cálculo de MAU
+
+El siguiente ejemplo muestra cómo funcionan los cálculos de MAU a través de diferentes acciones del usuario:
+
+| Paso | Acción | Cambio inmediato de MAU | Total resultante |
+|------|--------|----------------------|-----------------|
+| 1 | Crea **el usuario anónimo 1** y registra una sesión | +1 | 1 |
+| 2 | Identificar **usuario anónimo 1** (el perfil se convierte en identificado) | 0 | 1 |
+| 3 | Crear **usuario anónimo 2** y registrar una sesión | +1 | 2 |
+| 4 | Identificar al **usuario anónimo 2** como la **misma persona** que el usuario 1 (el usuario 2 queda huérfano) | -1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+Las instantáneas de MAU se calculan una vez al día y nunca cambian retroactivamente. En este ejemplo, el recuento de MAU para el día posterior al paso 3 sigue siendo permanentemente 2, aunque el usuario 2 quede huérfano más tarde. Sin embargo, el recuento de MAU de los días siguientes sólo refleja el usuario no huérfano. En cualquier ventana de 30 días, este flujo consume en última instancia 1 MAU, ya que sólo queda un usuario distinto, no huérfano.
 
 ### Usuarios activos diarios
 
-*Usuarios activos diarios* (DAU) muestra el número de usuarios únicos que registran al menos una sesión en tu aplicación o sitio web en un día determinado. DAU puede ser una estadística útil para examinar la variabilidad diaria del uso de tu aplicación o sitio y adaptar tus campañas de mensajería para que sean lo más eficaces posible. Por ejemplo, el uso de tu aplicación puede experimentar un pico apreciable los fines de semana, lo que te informaría de que podrías llegar a más usuarios con mensajes dentro de la aplicación en esos días, en comparación con los días laborables.
+*Usuarios activos diarios* (DAU) muestra el número de usuarios únicos que registran al menos una sesión en su aplicación o sitio en un día determinado. DAU puede ser una estadística útil para examinar la variabilidad diaria del uso de su aplicación o sitio y adaptar sus campañas de mensajería para que sean lo más eficaces posible. Por ejemplo, el uso de tu aplicación puede experimentar un pico apreciable los fines de semana, lo que te informaría de que podrías llegar a más usuarios con mensajes dentro de la aplicación en esos días, en comparación con los días laborables.
 
-### Nuevos usuarios
+### de nuevos usuarios.
 
-*Nuevos usuarios* te indica cuántos usuarios que nunca antes habían registrado una sesión han empezado a utilizar tu aplicación o sitio web. Este número es el total de nuevos usuarios durante el periodo de tiempo dado. Esta estadística puede ser muy valiosa para el seguimiento de la eficacia de tus esfuerzos publicitarios.
+*Nuevos usuarios* le indica cuántos usuarios que nunca habían registrado una sesión han empezado a utilizar su aplicación o sitio. Este número es el total de nuevos usuarios durante un periodo de tiempo determinado. Esta estadística puede ser muy valiosa para el seguimiento de la eficacia de tus esfuerzos publicitarios.
 
 {% alert note %}
 Cuando realices la integración inicial de Braze, todos los usuarios parecerán nuevos porque Braze nunca ha registrado una sesión para ellos.
 {% endalert %}
 
-### Adherencia
+### Adherencia de los usuarios
 
-El valor de *adherencia* es una relación entre la DAU y la MAU de un periodo determinado. En esencia, la adherencia mide el porcentaje de tus MAU que vuelven a diario.
+El valor de *pegajosidad* es una relación entre el DAU y el MAU de un periodo determinado. En esencia, la adherencia mide el porcentaje de tus MAU que vuelven a diario.
 
-Por ejemplo, si el intervalo de fechas se establece en 30 días, una proporción del 50% indica que, de media, un usuario activo utiliza la aplicación o el sitio web durante 15 de cada 30 días, o que aproximadamente la mitad de tus usuarios activos vuelven a diario. La adherencia es una métrica importante para el éxito, porque la mayoría de los usuarios no dejan de utilizar una aplicación porque la odien activamente, sino porque no se ha convertido en parte de su rutina diaria. Por lo tanto, puedes utilizar la adherencia como indicador para medir lo bien que estás interactuando con tus usuarios.
+Por ejemplo, si el intervalo de fechas se establece en 30 días, un ratio del 50% indica que, de media, un usuario activo utiliza la aplicación o el sitio web durante 15 de los 30 días o que aproximadamente la mitad de sus usuarios activos vuelven a diario. La adherencia es una métrica importante para el éxito, porque la mayoría de los usuarios no dejan de utilizar una aplicación porque la odien activamente, sino porque no se ha convertido en parte de su rutina diaria. Por lo tanto, puede utilizar la adherencia como indicador para medir el grado de implicación de sus usuarios.
 
-El porcentaje junto al índice de adherencia muestra el cambio en la adherencia de este periodo en comparación con el periodo anterior.
+El porcentaje que aparece junto al índice de adherencia muestra la variación de la adherencia en este periodo en comparación con el anterior.
 
 $$\text{Change in stickiness} = \frac{\text{Stickiness of last period} - \text{Stickiness of this period}}{\text{Stickiness of last period}}$$
 
-Los plazos para "último periodo" y "este periodo" vienen determinados por el intervalo de fechas que selecciones.
+Los plazos de "último periodo" y "este periodo" vienen determinados por el intervalo de fechas que seleccione.
 
 {% alert important %}
 El valor MAU se calcula cada noche y no se actualizará hasta el día siguiente.
@@ -106,7 +131,7 @@ El valor MAU se calcula cada noche y no se actualizará hasta el día siguiente.
 
 ### Sesiones diarias
 
-*Sesiones diarias* es el número de sesiones registradas en un día determinado. Comparar este valor con tu recuento de DAU puede informarte de cuántas veces tus usuarios abren la aplicación o visitan tu sitio web en los días en que registran al menos una sesión.
+*Sesiones diarias* es el número de sesiones registradas en un día determinado. Comparar este valor con su recuento de DAU puede informarle de cuántas veces sus usuarios abren la aplicación o visitan su sitio web en los días en los que registran al menos una sesión.
 
 ### Sesiones diarias por MAU
 

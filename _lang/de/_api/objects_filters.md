@@ -12,8 +12,8 @@ description: "Diese Landing Page listet die Braze-API-Objekte und -Filter auf, d
 
 ## Objekte und Filter
 
-- [Canvas Eintrag Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
-- [Verbundenes Publikum Filter & Objekt]({{site.baseurl}}/api/objects_filters/connected_audience/)
+- [Canvas Entry Eigenschaften Objekt]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object)
+- [Verbundene Zielgruppe-Filter & Objekt]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Ereignis-Objekt]({{site.baseurl}}/api/objects_filters/event_object/)
 - [Objekt kaufen]({{site.baseurl}}/api/objects_filters/purchase_object/)
 - [Objekt Empfänger]({{site.baseurl}}/api/objects_filters/recipient_object/)

@@ -11,10 +11,10 @@ channel:
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-- name: Erstellen einer E-Mail-Vorlage
+- name: Eine E-Mail-Vorlage erstellen
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   image: /assets/img/braze_icons/brush-02.svg
-- name: Hochladen einer E-Mail-Vorlage
+- name: Eine E-Mail-Vorlage hochladen
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
   image: /assets/img/braze_icons/upload-01-alt.svg
 - name: Link Aliasing

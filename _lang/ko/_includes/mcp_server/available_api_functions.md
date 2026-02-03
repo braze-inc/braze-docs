@@ -1,17 +1,16 @@
 # Braze MCP 서버 기능
 
-> Braze MCP 서버는 특정 Braze REST API 엔드포인트에 매핑되는 읽기 전용 API 함수 집합을 노출합니다. Claude 및 Cursor와 같은 MCP 클라이언트는 이러한 함수를 호출하여 PII에 액세스하거나 작업 공간을 변경하지 않고도 데이터를 검색할 수 있습니다. 자세한 내용은 [Braze MCP 서버]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "개발자" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
+> Braze MCP 서버는 특정 Braze REST API 엔드포인트에 매핑되는 읽기 전용 API 함수 집합을 노출합니다. Claude 및 Cursor와 같은 MCP 클라이언트는 이러한 함수를 호출하여 PII에 액세스하거나 작업 공간을 변경하지 않고도 데이터를 검색할 수 있습니다. 자세한 내용은 [Braze MCP 서버]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/){% endif %}.
 
 {% multi_lang_include mcp_server/beta_alert.md %}
 
 ## 필수 조건
 
-이 기능을 사용하려면 먼저 [Braze MCP 서버 설정]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "개발자" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
+이 기능을 사용하려면 먼저 [Braze MCP 서버 설정]{% if include.section == "user" %}({{site.baseurl}}/user_guide/brazeai/mcp_server/setup/){% elsif include.section == "developer" %}({{site.baseurl}}/developer_guide/mcp_server/setup/){% endif %}.
 
 ## 사용 가능한 Braze API 기능
 
-다음은 MCP 클라이언트가 The Braze MCP 서버와 상호 작용하기 위해 참조하는 API 함수입니다:
-
+MCP 클라이언트는 다음 API 함수를 참조하여 Braze MCP 서버와 상호 작용합니다:
 ### 일반 기능
 
 | 기능 | 설명 |
@@ -137,7 +136,7 @@
 | `get_session_data_series` | [`/sessions/data_series`]({{site.baseurl}}/api/endpoints/export/sessions/get_sessions_analytics) | 앱 세션 수에 대한 시계열 데이터입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
-### 소프트웨어 개발 키트 인증 키
+### SDK 인증 키
 
 | 기능 | Endpoint | 설명 |
 |----------|----------|-------------|

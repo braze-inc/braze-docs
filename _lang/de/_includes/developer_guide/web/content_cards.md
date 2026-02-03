@@ -159,7 +159,7 @@ Google Tag Manager funktioniert, indem das [Braze CDN]({{site.baseurl}}/develope
 ### Content-Cards einrichten
 
 {% tabs local %}
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Für eine Standardintegration des Content Card Feeds können Sie ein **benutzerdefiniertes HTML-Tag** im Google Tag Manager verwenden. Fügen Sie Ihrem angepassten HTML-Tag Folgendes hinzu, um den standardmäßigen Content-Card-Feed zu aktivieren:
 
 ```html
@@ -168,10 +168,10 @@ Für eine Standardintegration des Content Card Feeds können Sie ein **benutzerd
 </script>
 ```
 
-![Tag-Konfiguration eines angepassten HTML-Tags, das den Content-Card-Feed anzeigt, im Google Tag Manager.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
+![Tag-Konfiguration im Google Tag Manager eines angepassten HTML-Tags, das den Content-Card-Feed anzeigt.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
 {% endtab %}
 
-{% tab manuell %}
+{% tab manual %}
 Um das Erscheinungsbild von Content-Cards und ihres Feeds stärker anpassen zu können, können Sie Content-Cards direkt in Ihre native Website integrieren. Hierfür gibt es zwei Möglichkeiten: Sie können die Standard-Feed-Benutzeroberfläche verwenden oder eine benutzerdefinierte Feed-Benutzeroberfläche erstellen.
 
 {% subtabs local %}
@@ -198,8 +198,8 @@ body .ab-feed {
 
 Um ein Upgrade auf die neueste Version des Braze Web SDK durchzuführen, führen Sie die folgenden drei Schritte im Google Tag Manager-Dashboard aus:
 
-1. **Tag-Template aktualisieren**<br>Rufen Sie die Seite **Vorlagen** in Ihrem Arbeitsbereich auf. Hier sollten Sie ein Symbol sehen, das anzeigt, dass ein Update verfügbar ist.<br><br>![Die Seite mit den Vorlagen zeigt an, dass ein Update verfügbar ist]({% image_buster /assets/img/web-gtm/gtm-update-available.png %})<br><br>Klicken Sie auf dieses Symbol und klicken Sie nach Überprüfung der Änderung auf **Update akzeptieren**.<br><br>![Bildschirm, auf dem ein Vergleich zwischen altem und neuem Tag-Template mit dem Button "Update zustimmen" zu sehen ist]({% image_buster /assets/img/web-gtm/gtm-accept-update.png %})<br><br>
-2. **Versionsnummer aktualisieren**<br>Nachdem Sie das Tag-Template aktualisiert haben, bearbeiten Sie das Braze Initialisierungs-Tag und aktualisieren die SDK-Version auf die neueste Version im Format `major.minor`. Wenn die neueste Version beispielsweise `4.1.2` ist, geben Sie `4.1` ein. Sie können eine Liste der SDK-Versionen in unserem [Changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) einsehen.<br><br>![Braze-Template für Initialisierungs-Tags mit einem Eingabefeld zum Ändern der SDK Version]({% image_buster /assets/img/web-gtm/gtm-version-number.png %})<br><br>
+1. **Tag-Template aktualisieren**<br>Rufen Sie die Seite **Vorlagen** in Ihrem Arbeitsbereich auf. Hier sollten Sie ein Symbol sehen, das anzeigt, dass ein Update verfügbar ist.<br><br>![Templates Seite zeigt an, dass ein Update verfügbar ist]({% image_buster /assets/img/web-gtm/gtm-update-available.png %})<br><br>Klicken Sie auf dieses Symbol und klicken Sie nach Überprüfung der Änderung auf **Update akzeptieren**.<br><br>![Ein Bildschirm, der die alten und neuen Tag-Templates vergleicht, mit einem Button "Update akzeptieren".]({% image_buster /assets/img/web-gtm/gtm-accept-update.png %})<br><br>
+2. **Versionsnummer aktualisieren**<br>Nachdem Sie das Tag-Template aktualisiert haben, bearbeiten Sie das Braze Initialisierungs-Tag und aktualisieren die SDK-Version auf die neueste Version im Format `major.minor`. Wenn die neueste Version beispielsweise `4.1.2` ist, geben Sie `4.1` ein. Sie können eine Liste der SDK-Versionen in unserem [Changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md) einsehen.<br><br>![Braze Initialization Template mit einem Eingabefeld zum Ändern der SDK Version]({% image_buster /assets/img/web-gtm/gtm-version-number.png %})<br><br>
 3. **QA und Veröffentlichung**<br>Vergewissern Sie sich, dass die neue SDK-Version funktioniert, indem Sie das [Debugging-Tool](https://support.google.com/tagmanager/answer/6107056?hl=en) von Google Tag Manager verwenden, bevor Sie ein Update für Ihren Tag-Container veröffentlichen.
 
 ### Fehlerbehebung {#troubleshooting}
@@ -208,7 +208,7 @@ Um ein Upgrade auf die neueste Version des Braze Web SDK durchzuführen, führen
 
 Jede Braze-Tag-Vorlage verfügt über ein optionales Kontrollkästchen **GTM Tag Debugging**, mit dem Sie Debug-Meldungen in der JavaScript-Konsole Ihrer Webseite protokollieren können.
 
-![Das Debug-Tool von Google Tag Manager]({% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %})
+![Das Debug-Tool von Google Tag Manager:in]({% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %})
 
 #### Debugging-Modus aufrufen
 
@@ -216,7 +216,7 @@ Eine weitere Möglichkeit, Ihre Google Tag Manager-Integration zu debuggen, ist 
 
 Auf diese Weise können Sie feststellen, welche Werte von der Datenebene Ihrer Webseite an die einzelnen ausgelösten Braze-Tags gesendet werden, und Sie erfahren, welche Tags ausgelöst wurden und welche nicht.
 
-![Seite mit der Zusammenfassung des Braze Initialisierungs-Tags, auf der Sie eine Übersicht über das Tag zusammen mit Informationen zu den getriggerten Tags finden.]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
+![Die Übersichtsseite des Braze Initialisierungs-Tags bietet eine Übersicht über den Tag, einschließlich Informationen darüber, welche Tags ausgelöst wurden.]({% image_buster /assets/img/web-gtm/gtm-debug-mode.png %})
 
 #### Ausführliche Protokollierung einschalten
 
@@ -224,6 +224,6 @@ Damit der technische Support von Braze während der Tests auf die Protokolle zug
 
 Navigieren Sie in der Google Tag Manager-Integration zu Ihrem Braze Initialisierungs-Tag und wählen Sie **Web SDK-Protokollierung aktivieren**.
 
-![Seite mit der Zusammenfassung des Braze Initialisierungs-Tags und der aktivierten Option "Web SDK-Protokollierung aktivieren".]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %})
+![Die Übersichtsseite der Braze Initialisierungs-Tags mit der aktivierten Option Internet SDK Logging aktivieren.]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %})
 
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md

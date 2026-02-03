@@ -1,6 +1,6 @@
 ## Pré-requisitos
 
-Antes de usar os Cartões de Conteúdo, você precisará integrar o [Braze Swift SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) no seu app. Em seguida, você precisará concluir as etapas para configurar seu app tvOS.
+Antes de usar os Cartões de Conteúdo, você precisará integrar o [Braze SWIFT SDK]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) no seu app. Em seguida, você precisará concluir as etapas para configurar seu app tvOS.
 
 {% alert important %}
 Lembre-se de que você precisará implementar sua própria IU personalizada, pois os cartões de conteúdo são compatíveis com a IU headless usando o Swift SDK, que não inclui nenhuma IU ou exibição padrão para o tvOS.

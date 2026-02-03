@@ -188,4 +188,4 @@ Sie können die Methode [`wipeData()`](https://braze-inc.github.io/braze-android
 
 ## Wiederaufnahme des Trackings von Daten
 
-Um die Datenerfassung wieder aufzunehmen, können Sie die [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) Methode. Denken Sie daran, dass dadurch keine zuvor gelöschten Daten wiederhergestellt werden können.
+Um die Datenerfassung wieder aufzunehmen, können Sie die [`enableSDK()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-sdk.html) Methode nutzen. Denken Sie daran, dass dadurch keine zuvor gelöschten Daten wiederhergestellt werden können.

@@ -28,7 +28,7 @@ AppDelegate.braze?.user.set(firstName: "Alex")
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setFirstName:@"Alex"];
@@ -49,7 +49,7 @@ AppDelegate.braze?.user.set(firstName: nil)
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setFirstName:nil];
@@ -69,7 +69,7 @@ Los valores de atributos personalizados tienen una longitud máxima de 255 carac
 ### Establecer atributos personalizados
 
 {% tabs local %}
-{% tab cadena %}
+{% tab string %}
 Para establecer un atributo personalizado con un valor `string`:
 
 {% subtabs %}
@@ -87,7 +87,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: "yo
 {% endsubtabs %}
 {% endtab %}
 
-{% tab entero %}
+{% tab integer %}
 Para establecer un atributo personalizado con un valor `integer`:
 
 {% subtabs %}
@@ -105,7 +105,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab puntos flotantes %}
+{% tab floating-points %}
 Braze trata de la misma manera los valores `float` y `double` dentro de nuestra base de datos. Para establecer un atributo personalizado con un valor doble:
 
 {% subtabs %}
@@ -123,7 +123,7 @@ AppDelegate.braze?.user.setCustomAttribute(key: "your_attribute_key", value: you
 {% endsubtabs %}
 {% endtab %}
 
-{% tab booleano %}
+{% tab boolean %}
 Para establecer un atributo personalizado con un valor `boolean`:
 
 {% subtabs %}
@@ -141,7 +141,7 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", value: yourBool
 {% endsubtabs %}
 {% endtab %}
 
-{% tab fecha %}
+{% tab date %}
 Para establecer un atributo personalizado con un valor `date`:
 
 {% subtabs %}
@@ -159,8 +159,8 @@ AppDelegate.braze?.user.setCustomAttribute("your_attribute_key", dateValue:yourD
 {% endsubtabs %}
 {% endtab %}
 
-{% tab matriz %}
-El número máximo de elementos de [las matrices de atributos personalizadas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) está predeterminado en 25. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla. El máximo para matrices individuales puede aumentarse hasta 100. Si deseas aumentar este máximo, ponte en contacto con tu administrador del servicio de atención al cliente.
+{% tab array %}
+El número máximo de elementos de [las matrices de atributos personalizadas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays) está predeterminado en 25. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla. El máximo para matrices individuales puede aumentarse hasta 100. Si deseas aumentar este máximo, ponte en contacto con el administrador del servicio de atención al cliente.
 
 Para establecer un atributo personalizado con un valor `array`:
 
@@ -204,7 +204,7 @@ AppDelegate.braze?.user.incrementCustomUserAttribute(key: "your_attribute_key", 
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
@@ -224,7 +224,7 @@ AppDelegate.braze?.user.unsetCustomAttribute(key: "your_attribute_key")
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 Para desactivar un atributo personalizado, pasa la clave del atributo correspondiente al método `unsetCustomAttributeWithKey`.
 
 ```objc
@@ -251,7 +251,7 @@ braze.user.setCustomAttribute(key: "favorite_book", dictionary: favoriteBook)
 ```
 {% endtab %}
 
-{% tab objetivo-c %}
+{% tab objective-c %}
 ```objc
 NSDictionary *favoriteBook = @{
   @"title": @"The Hobbit",
@@ -293,7 +293,7 @@ AppDelegate.braze?.user.set(emailSubscriptionState: Braze.User.SubscriptionState
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setEmailSubscriptionState: BRZUserSubscriptionState]
@@ -312,7 +312,7 @@ AppDelegate.braze?.user.set(pushNotificationSubscriptionState: Braze.User.Subscr
 ```
 
 {% endtab %}
-{% tab objetivo-c %}
+{% tab objective-c %}
 
 ```objc
 [AppDelegate.braze.user setPushNotificationSubscriptionState: BRZUserSubscriptionState]

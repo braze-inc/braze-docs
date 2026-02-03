@@ -1,6 +1,6 @@
 ---
-nav_title: 보고서 메트릭 용어집
-article_title: 보고서 메트릭 용어집
+nav_title: 보고서 측정기준 용어집
+article_title: 보고서 측정기준 용어집
 layout: report_metrics
 page_order: 0.5
 excerpt_separator: ""
@@ -18,7 +18,7 @@ tool: Reports
 
 {% api %}
 
-### AMP 클릭
+### AMP 클릭 수
 
 {% apitags %}
 이메일
@@ -30,7 +30,7 @@ tool: Reports
 
 {% api %}
 
-### AMP 열기
+### AMP 열람 수
 
 {% apitags %}
 이메일
@@ -42,10 +42,10 @@ tool: Reports
 
 {% api %}
 
-### 청중
+### 오디언스
 
 {% apitags %}
-모두
+전체
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Audience' %}
@@ -56,26 +56,26 @@ tool: Reports
 
 {% api %}
 
-### 반송
+### 반송 수
 
 {% apitags %}
 이메일, 웹 푸시, iOS 푸시
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Bounces' %} 이는 유효한 푸시 토큰이 없거나, 캠페인이 시작된 후 사용자가 구독을 취소했거나, 이메일 주소가 부정확하거나 비활성화된 경우 발생할 수 있습니다.
+{% multi_lang_include analytics/metrics.md metric='Bounces' %} 이는 유효한 푸시 토큰이 없거나, 사용자가 캠페인이 시작된 후 구독을 취소했거나, 이메일 주소가 부정확하거나 비활성화된 경우 발생할 수 있습니다.
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|이메일|SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸 (`spam_report_drops`) 및 잘못된 주소로 전송된 이메일 (`invalid_emails`)로 구성됩니다.<br><br>이메일의 경우, *Bounce %* 또는 *Bounce Rate*는 전송 서비스에서 성공적으로 전송되지 않았거나 "반송됨" 또는 "수신되지 않음"으로 지정된 메시지의 비율입니다.|
-|푸시|이 사용자들은 모든 향후 푸시 알림에서 자동으로 구독 해지되었습니다.|
+|Email|SendGrid를 사용하는 고객의 이메일 반송은 하드 반송, 스팸(`spam_report_drops`) 및 잘못된 주소로 전송된 이메일(`invalid_emails`)로 구성됩니다.<br><br>이메일의 경우 반송 *%* 또는 *반송률은* 이메일 수신 가능 사용자가 사용하거나 수신하지 않은 전송 서비스에서 전송에 실패하거나 '반송' 또는 '미수신'으로 지정된 메시지의 백분율입니다.|
+|푸시|이러한 사용자는 향후 모든 푸시 알림에서 자동으로 수신 거부되었습니다.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>반송</i>: 수량</li>
-        <li><i>반송 %</i> 또는 <i>반송률 %</i>: (반송) / (전송)</li>
+        <li><i>바운스</i>: 카운트</li>
+        <li><i>이탈률 %</i> 또는 <i>이탈률 %</i>: (바운스) / (전송)</li>
     </ul>
 </span>
 {:/}
@@ -87,75 +87,75 @@ tool: Reports
 ### 본문 클릭
 
 {% apitags %}
-iOS 푸시, 안드로이드 푸시
+iOS 푸시, Android 푸시
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Body Click' %}
 
-<span class="calculation-line">계산: (본문 클릭) / (노출)</span>
+<span class="calculation-line">계산: (본문 클릭) / (노출 횟수)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 본문 클릭
+### 본문 클릭 수
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Body Clicks' %} 자세한 내용은 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) 및 [안드로이드]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100)의 SDK 변경 로그를 참조하십시오.
+{% multi_lang_include analytics/metrics.md metric='Body Clicks' %} 자세한 내용은 [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/objc_changelog#3310) 및 [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog#1100)의 SDK 변경 로그를 참조하십시오.
 
-<span class="calculation-line">계산: (본문 클릭) / (노출)</span>
+<span class="calculation-line">계산: (본문 클릭) / (노출 횟수)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 버튼 1 클릭
+### 버튼 1 클릭 수
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} _버튼 1 클릭_에 대한 보고는 앱 내 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' %} _버튼 1 클릭_에 대한 보고서는 인앱 메시지에서 **보고용 식별자**를 "0"으로 지정할 때만 작동합니다.
 
-<span class="calculation-line">계산: (버튼 1 클릭) / (노출)</span>
+<span class="calculation-line">계산: (버튼 1 클릭) / (노출 횟수)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 버튼 2 클릭
+### 버튼 2 클릭 수
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} _버튼 2 클릭_에 대한 보고는 앱 내 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
+{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' %} _버튼 2 클릭_에 대한 보고서는 인앱 메시지에서 **보고용 식별자**를 "1"로 지정할 때만 작동합니다.
 
-<span class="calculation-line">계산: (버튼 2 클릭) / (노출)</span>
+<span class="calculation-line">계산: (버튼 2 클릭) / (노출 횟수)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 캠페인 분석
+### Campaign analytics
 
 {% apitags %}
-기능 플래그
+Feature Flags
 {% endapitags %}
 
-메시지의 성능이 다양한 채널에서 나타납니다. 표시된 메트릭은 선택한 메시징 채널과 [기능 플래그 실험]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics)이 다변량 테스트인지 여부에 따라 달라집니다.
+The performance of the message across various channels. The metrics shown depend on the selected messaging channel, and whether the [Feature Flag experiment]({{site.baseurl}}/developer_guide/platform_wide/feature_flags/experiments/#campaign-analytics) is a multivariate test.
 
 {% endapi %}
 
 {% api %}
 
-### 제출된 선택사항
+### 제출된 선택
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Choices Submitted' %}
@@ -164,7 +164,7 @@ iOS 푸시, 안드로이드 푸시
 
 {% api %}
 
-### 클릭-오픈 비율
+### 클릭 후 열람률
 
 {% apitags %}
 이메일
@@ -172,26 +172,26 @@ iOS 푸시, 안드로이드 푸시
 
 {% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' %}
 
-<span class="calculation-line">계산: (고유 클릭 수) / (고유 오픈 수) (이메일용)</span>
+<span class="calculation-line">계산: (고유 클릭 수) / (고유 열람 수) (이메일용)</span>
 
 {% endapi %}
 
 {% api %}
 
-### RCS 확인된 배달 또는 SMS 확인된 배달
+### RCS Confirmed Deliveries or SMS Confirmed Deliveries
 
 {% apitags %}
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} Braze 고객으로서 배달은 귀하의 SMS 할당량에 청구됩니다. 
+{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' %} Braze 고객으로서, 전달은 귀하의 SMS 할당량에 포함됩니다. 
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>확인된 배달</i>: 수량</li>
-        <li><i>확인된 배달 비율</i>: (확인된 배달) / (발송 수)</li>
+        <li><i>Confirmed Deliveries</i>: 카운트</li>
+        <li><i>Confirmed Delivery Rate</i>: (Confirmed Deliveries) / (Sends)</li>
     </ul>
 </span>
 {:/}
@@ -203,7 +203,7 @@ SMS/MMS, RCS
 ### 신뢰도
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confidence' %}
@@ -215,7 +215,7 @@ SMS/MMS, RCS
 ### 확인 페이지 버튼
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Button' %}
@@ -227,7 +227,7 @@ SMS/MMS, RCS
 ### 확인 페이지 해제
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Confirmation Page Dismissals' %}
@@ -236,45 +236,45 @@ SMS/MMS, RCS
 
 {% api %}
 
-### 전환 (B, C, D)
+### 변환 (B, C, D)
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' %} 이 정의된 이벤트는 캠페인을 구축할 때 귀하에 의해 결정됩니다. 
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|이메일, 푸시, 웹훅|전환은 초기 발송 후 추적됩니다.|
-|콘텐츠 카드|사용자가 콘텐츠 카드를 처음 볼 때 전환이 계산됩니다.|
-|앱 내 메시지|사용자가 앱 내 메시지 캠페인을 수신하고 보고, 정의된 전환 창 내에서 특정 전환 이벤트를 수행하는 경우 전환이 계산됩니다. 메시지를 클릭했는지 여부는 관계없습니다.<br><br>전환은 가장 최근에 수신한 메시지에 귀속됩니다. 재자격이 활성화된 경우, 전환은 정의된 전환 창 내에서 발생하는 최신 앱 내 메시지에 할당됩니다. 그러나 앱 내 메시지에 이미 전환이 할당된 경우, 해당 특정 메시지에 대해 새로운 전환을 기록할 수 없습니다. 이는 각 앱 내 메시지 전달이 오직 하나의 전환과만 연관되어 있음을 의미합니다.|
+|Email, Push, Webhooks|Conversions are tracked after the initial send.|
+|콘텐츠 카드|Conversions are counted when the user views a Content Card for the first time.|
+|인앱 메시지|A conversion is counted if the user has received and viewed the in-app message campaign, and subsequently performs the specific conversion event within the defined conversion window, regardless of whether they clicked on the message or not.<br><br>전환은 가장 최근에 수신한 메시지에 기인합니다. 재자격이 활성화된 경우, 정의된 전환 기간 내에 발생한 경우 가장 최근에 수신한 인앱 메시지에 전환이 할당됩니다. 그러나 인앱 메시지에 이미 전환이 할당된 경우에는 해당 특정 메시지에 대해 새 전환을 기록할 수 없습니다. 즉, 각 인앱 메시지 전달은 단 하나의 전환과만 연결됩니다.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
 
-### 총 전환
+### 총 전환 수
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Conversions' %}
 
-사용자가 앱 내 메시지 캠페인을 한 번만 볼 경우, 전환 이벤트를 여러 번 수행하더라도 오직 하나의 전환만 계산됩니다. 그러나 재자격이 활성화되고 사용자가 앱 내 메시지 캠페인을 여러 번 보는 경우, *총 전환*은 사용자가 앱 내 메시지 캠페인의 새로운 인스턴스에 대한 노출을 기록할 때마다 한 번씩 증가할 수 있습니다. 
+사용자가 인앱 메시지 캠페인을 한 번만 조회하면 나중에 전환 이벤트를 여러 번 수행하더라도 전환은 한 번만 계산됩니다. 그러나 재적격성이 켜져 있고 사용자가 인앱 메시지 캠페인을 여러 번 보는 경우, 사용자가 인앱 메시지 캠페인의 새 인스턴스에 대한 노출을 기록할 때마다 *총 전환* 수가 한 번씩 증가할 수 있습니다. 
 
-예를 들어, 사용자가 앱 내 메시지를 두 번 트리거하고 각 앱 내 메시지 노출 후에 전환을 수행하면(결과적으로 두 개의 전환이 발생), *총 전환*은 두 번 증가합니다. 그러나 앱 내 메시지 노출이 하나만 있었고 그 뒤에 두 개의 전환 이벤트가 발생한 경우, 오직 하나의 전환만 기록되며, *총 전환*은 한 번 증가합니다.
+예를 들어, 사용자가 인앱 메시지를 두 번 트리거하고 각 인앱 메시지 노출 후 전환하면(결과적으로 두 번의 전환이 발생하면) *총 전환 수가* 두 개 증가합니다. 그러나 인앱 메시지 노출이 한 번만 발생한 후 전환 이벤트가 두 번 발생한 경우에는 전환이 한 번만 기록되고 *총 전환 수가* 한 개 증가합니다.
 
 {% endapi %}
 
 {% api %}
 
-### 메시지 닫기
+### 닫기 메시지
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Close Message' %}
@@ -286,22 +286,22 @@ SMS/MMS, RCS
 ### 전환율
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|앱 내 메시지|총 일일 <i>고유 노출</i> 지표는 앱 내 메시지의 <i>전환율</i>을 계산하는 데 사용됩니다.<br><br>앱 내 메시지에 대한 노출은 하루에 한 번만 계산될 수 있습니다. 반면, 사용자가 원하는 행동("전환")을 완료하는 횟수는 24시간 내에 증가할 수 있습니다. 전환은 하루에 여러 번 발생할 수 있지만, 노출은 그렇지 않습니다. 따라서 사용자가 하루에 여러 번 전환을 완료하면 <i>전환율</i>이 그에 따라 증가할 수 있지만, 노출은 한 번만 계산됩니다.|
+|인앱 메시지|일일 총 <i>고유 노출</i> 수 측정지표는 인앱 메시지의 <i>전환율을</i> 계산하는 데 사용됩니다.<br><br>인앱 메시지의 노출 수는 하루에 한 번만 계산할 수 있습니다. 반면에 사용자가 원하는 작업('전환')을 완료하는 횟수는 24시간 이내에 증가할 수 있습니다. 전환은 하루에 한 번 이상 발생할 수 있지만, 노출은 하루에 한 번만 발생할 수 있습니다. 따라서 사용자가 하루에 여러 번 전환을 완료하는 경우 <i>전환율은</i> 그에 따라 증가할 수 있지만 노출 횟수는 한 번만 계산됩니다.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><b>앱 내 메시지</b>: (주요 전환) / (고유 노출 수)</li>
-        <li><b>기타 채널</b>: (주요 전환) / (고유 수신자)</li>
+        <li><b>인앱 메시지</b>: (기본 전환) / (고유 노출)</li>
+        <li><b>기타 채널</b>: (기본 전환) / (고유 수신자)</li>
     </ul>
 </span>
 {:/}
@@ -310,10 +310,10 @@ SMS/MMS, RCS
 
 {% api %}
 
-### 전환 창
+### 전환 기간
 
 {% apitags %}
-모두
+전체
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Conversion Window' %}
@@ -322,25 +322,25 @@ SMS/MMS, RCS
 
 {% api %}
 
-### 전송 수
+### 전달 수
 
 {% apitags %}
-이메일, 웹 푸시, iOS 푸시, 안드로이드 푸시, WhatsApp
+이메일, 웹 푸시, iOS 푸시, Android 푸시, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Deliveries' %}
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|이메일|이메일 수신 가능 당사자에게 성공적으로 전송되고 수신된 메시지(전송)의 총 수를 나타냅니다.|
+|Email|Refers to the total number of messages (Sends) successfully sent to and received by emailable parties.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>전송 수</i>: 수량</li>
-        <li><i>전송 수 %</i>: (전송 - 반송) / (전송)</li>
+        <li><i>배송</i>: 카운트</li>
+        <li><i>배송 %</i>: (전송 - 반송) / (전송)</li>
     </ul>
 </span>
 {:/}
@@ -349,7 +349,7 @@ SMS/MMS, RCS
 
 {% api %}
 
-### RCS 전송 실패 또는 SMS 전송 실패
+### RCS Delivery Failures or SMS Delivery Failures
 
 {% apitags %}
 SMS/MMS
@@ -357,15 +357,15 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-전송 실패의 이유를 이해하는 데 도움을 받으려면 <a href="/docs/braze_support/">브레이즈 지원</a>에 문의하십시오.
+전달 실패의 이유를 이해하는 데 도움을 받으려면 <a href="/docs/braze_support/">Braze 지원</a>에 문의하십시오.
 
-<span class="calculation-line">계산: (전송) - (운영자에게 전송된 전송)</span>
+<span class="calculation-line">계산: (보냄) - (운송업체에 보냄)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 전송 실패
+### 전달 실패 수
 
 {% apitags %}
 RCS
@@ -373,15 +373,15 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-전송 실패의 이유를 이해하는 데 도움을 받으려면 <a href="/docs/braze_support/">브레이즈 지원</a>에 문의하십시오.
+전달 실패의 이유를 이해하는 데 도움을 받으려면 <a href="/docs/braze_support/">Braze 지원</a>에 문의하십시오.
 
-<span class="calculation-line">계산: (전송) - (운영자에게 전송된 전송)</span>
+<span class="calculation-line">계산: (보냄) - (운송업체에 보냄)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 실패한 전송 비율
+### Failed Delivery Rate
 
 {% apitags %}
 SMS/MMS
@@ -389,15 +389,15 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-전송 실패의 이유를 이해하는 데 도움을 받으려면 <a href="/docs/braze_support/">브레이즈 지원</a>에 문의하십시오.
+전달 실패의 이유를 이해하는 데 도움을 받으려면 <a href="/docs/braze_support/">Braze 지원</a>에 문의하십시오.
 
-<span class="calculation-line">계산: (전송 실패) / (전송)</span>
+<span class="calculation-line">계산: (Delivery Failures) / (Sends)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 직접 열기
+### 직접 열람 수
 
 {% apitags %}
 iOS 푸시
@@ -405,7 +405,7 @@ iOS 푸시
 
 {% multi_lang_include analytics/metrics.md metric='Direct Opens' %}
 
-<span class="calculation-line">계산: (직접 열기) / (전송)</span>
+<span class="calculation-line">계산: (직접 열람 수) / (전달 수)</span>
 
 {% endapi %}
 
@@ -419,7 +419,7 @@ iOS 푸시
 
 {% multi_lang_include analytics/metrics.md metric='Emailable' %}
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}
 
@@ -431,13 +431,13 @@ iOS 푸시
 웹훅
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Errors' %} 오류는 <i>Sends</i> 수에 포함되지만 <i>고유 수신자</i> 수에는 포함되지 않습니다.
+{% multi_lang_include analytics/metrics.md metric='Errors' %} 오류는 <i>전송</i> 수에 포함되지만 <i>고유 수신자</i> 수에는 포함되지 않습니다.
 
 {% endapi %}
 
 {% api %}
 
-### 추정 실제 열기
+### 추정된 실제 열람
 
 {% apitags %}
 이메일
@@ -449,33 +449,33 @@ iOS 푸시
 
 {% api %}
 
-### 실패
+### 실패 수
 
 {% apitags %}
 WhatsApp
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Failures' %} 실패는 <i>Sends</i> 수에 포함되지만 <i>전송</i> 수에는 포함되지 않습니다.</td>
+{% multi_lang_include analytics/metrics.md metric='Failures' %} 실패는 <i>전송</i> 수에 포함되지만 <i>전달</i> 수에는 포함되지 않습니다.</td>
 
-<span class="calculation-line">계산 (<i>실패율</i>): (실패) / (전송)</span>
+<span class="calculation-line">계산<i>(실패율</i>): (실패) / (전송)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 기능 플래그 실험 성과
+### Feature flag experiment performance
 
 {% apitags %}
-기능 플래그
+Feature Flags
 {% endapitags %}
 
-기능 플래그 실험에서 메시지의 성과 지표. 표시된 특정 지표는 메시징 채널에 따라 다르며, 실험이 다변량 테스트인지 여부에 따라 달라집니다.
+Performance metrics for the message in a Feature Flag experiment. The specific metrics shown will vary depending on the messaging channel, and whether or not the experiment was a multivariate test.
 
 {% endapi %}
 
 {% api %}
 
-### 하드 바운스
+### 하드바운스
 
 {% apitags %}
 이메일
@@ -483,42 +483,42 @@ WhatsApp
 
 {% multi_lang_include analytics/metrics.md metric='Hard Bounce' %} 
 
-이 경우 Braze는 이메일 주소를 유효하지 않은 것으로 표시하지만 사용자의 [구독 상태]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)는 업데이트하지 않습니다. 이메일이 하드 바운스를 받으면, 우리는 이 이메일 주소에 대한 모든 향후 요청을 중단합니다.
+이 경우 Braze는 이메일 주소를 유효하지 않은 것으로 표시하지만 사용자의 [구독 상태]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)는 업데이트하지 않습니다. 이메일이 하드 반송되면 해당 이메일 주소에 대한 향후 요청이 중지됩니다.
 
 {% endapi %}
 
 {% api %}
 
-### 도움
+### 도움말
 
 {% apitags %}
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Help' %} 사용자의 응답은 사용자가 귀하의 메시지를 받은 후 4시간 이내에 수신 메시지를 보낼 때 측정됩니다.
+{% multi_lang_include analytics/metrics.md metric='Help' %} 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
 
 {% endapi %}
 
 {% api %}
 
-### 영향을 받은 오픈
+### 영향받은 열람 수
 
 {% apitags %}
-iOS 푸시, 안드로이드 푸시
+iOS 푸시, Android 푸시
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Influenced Opens' %}
 
-<span class="calculation-line">계산: (영향을 받은 오픈) / (전송 수)</span>
+<span class="calculation-line">계산: (영향을 받은 열람) / (전달)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 평생 수익
+### 생애주기 매출
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}
@@ -527,10 +527,10 @@ iOS 푸시, 안드로이드 푸시
 
 {% api %}
 
-### 사용자당 평생 가치
+### 사용자별 생애주기 가치
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}
@@ -539,10 +539,10 @@ iOS 푸시, 안드로이드 푸시
 
 {% api %}
 
-### 평균 일일 수익
+### 일일 평균 수익
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}
@@ -551,10 +551,10 @@ iOS 푸시, 안드로이드 푸시
 
 {% api %}
 
-### 일일 구매
+### 일일 구매 수
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}
@@ -566,7 +566,7 @@ iOS 푸시, 안드로이드 푸시
 ### 사용자당 일일 수익
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}
@@ -575,22 +575,22 @@ iOS 푸시, 안드로이드 푸시
 
 {% api %}
 
-### 기계 오픈
+### 기계 열람
 
 {% apitags %}
 이메일
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} 이 지표는 SendGrid의 경우 2021년 11월 11일부터, SparkPost의 경우 2021년 12월 2일부터 추적됩니다. Amazon SES의 경우, 분석은 _오픈_로 표시됩니다. 그러나 클릭에 대한 봇 필터링은 지원됩니다.
+{% multi_lang_include analytics/metrics.md metric='Machine Opens' %} 이 측정기준은 SendGrid의 경우 2021년 11월 11일부터, SparkPost의 경우 2021년 12월 2일부터 추적됩니다. For Amazon SES, analytics will show up as _Opens_. However, bot filtering for clicks will be supported.
 
 {% endapi %}
 
 {% api %}
 
-### 오픈
+### 열람 수
 
 {% apitags %}
-웹 푸시, iOS 푸시, 안드로이드 푸시
+웹 푸시, iOS 푸시, Android 푸시
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Opens' %}
@@ -599,31 +599,31 @@ iOS 푸시, 안드로이드 푸시
 
 {% api %}
 
-### 옵트 아웃
+### 옵트아웃
 
 {% apitags %}
 SMS/MMS, RCS
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} 사용자의 응답은 사용자가 귀하의 메시지를 받은 후 4시간 이내에 수신 메시지를 보낼 때 측정됩니다.
+{% multi_lang_include analytics/metrics.md metric='Opt-Out' %} 사용자가 귀하의 메시지를 받은 후 4시간 이내에 인바운드 메시지를 보낼 때마다 사용자 응답이 측정됩니다.
 
 {% endapi %}
 
 {% api %}
 
-### 기타 오픈
+### 기타 열람 수
 
 {% apitags %}
 이메일
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Other Opens' %} 사용자가 기계 오픈 수가 기록되기 전에 이메일을 열 수 있다는 점에 유의하십시오(예: 오픈 수는 기타 오픈으로 계산됨). 사용자가 비 애플 메일 인박스에서 기계 오픈 이벤트 후 이메일을 한 번(또는 그 이상) 열면, 사용자가 이메일을 여는 횟수는 기타 오픈으로 계산되며 고유 오픈으로는 한 번만 계산됩니다.
+{% multi_lang_include analytics/metrics.md metric='Other Opens' %} 사용자가 이메일을 열 수 있으며(예: 다른 열기 수에 대한 카운트) 기계 열기 수가 기록되기 전에 발생할 수 있습니다. 사용자가 Apple Mail이 아닌 받은 편지함에서 컴퓨터 열기 이벤트가 발생한 후 이메일을 한 번 이상 여는 경우, 사용자가 이메일을 여는 횟수는 기타 열기 횟수에 대해 계산되고 고유 열기 횟수에 대해서는 한 번만 계산됩니다.
 
 {% endapi %}
 
 {% api %}
 
-### 대기 중 재시도
+### 보류 중 재시도
 
 {% apitags %}
 이메일
@@ -638,23 +638,23 @@ SMS/MMS, RCS
 ### 주요 전환(A) 또는 주요 전환 이벤트
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
 
-|채널|추가 정보|
+|Channel|Behavior|
 |-------------|----------------------|
-|이메일, 푸시, 웹훅|초기 전송 후.|
-|콘텐츠 카드, 앱 내 메시지|사용자가 콘텐츠 카드 또는 메시지를 처음 볼 때.|
+|Email, Push, Webhooks|메시지가 전송된 후 사용자는 수신자로 계산됩니다.|
+|Content Cards, In-app messages|사용자가 메시지를 처음으로 볼 때 수신자로 계산됩니다.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>주요 전환(A) 또는 주요 전환 이벤트</i>: 수량</li>
-        <li><i>주요 전환(A) %</i> 또는 <i>주요 전환 이벤트 비율</i>: (주요 전환) / (고유 수신자)</li>
+        <li><i>기본 전환(A) 또는 기본 전환 이벤트</i>: 정의된 전환 창 내에서 주요 전환 이벤트를 완료한 사용자 수 </li>
+        <li><i>기본 전환(A) %</i> 또는 <i>기본 전환 이벤트율</i>: (기본 전환) / (고유 수신자)</li>
     </ul>
 </span>
 {:/}
@@ -663,7 +663,7 @@ SMS/MMS, RCS
 
 {% api %}
 
-### 읽기
+### 읽기 수
 
 {% apitags %}
 WhatsApp
@@ -675,7 +675,7 @@ WhatsApp
 
 {% api %}
 
-### 읽기 비율
+### Read Rate
 
 {% apitags %}
 WhatsApp
@@ -683,35 +683,35 @@ WhatsApp
 
 {% multi_lang_include analytics/metrics.md metric='Read Rate' %}
 
-<span class="calculation-line">계산: (읽기 영수증이 있는 읽기) / (전송)</span>
+<span class="calculation-line">계산: (Reads with read receipts) / (Sends)</span>
 
 {% endapi %}
 
 {% api %}
 
-### 수신됨
+### 수신
 
 {% apitags %}
-이메일, 콘텐츠 카드, 앱 내 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, SMS/MMS, WhatsApp
+Email, Content Cards, In-App Message, Web Push, iOS Push, Android Push, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Received' %} 
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-------|
-|콘텐츠 카드|사용자가 앱에서 카드를 볼 때 수신됨.|
-|푸시|메시지가 Braze 서버에서 푸시 제공업체로 전송될 때 수신됨.|
-|이메일|메시지가 Braze 서버에서 이메일 서비스 제공업체로 전송될 때 수신됨.|
-|SMS/MMS|SMS 제공업체가 상위 통신사 및 목적지 장치로부터 확인을 받으면 "전송됨"으로 표시됩니다.|
-|앱 내 메시지|정의된 트리거 작업에 따라 표시 시점에 수신됨.|
-|WhatsApp|정의된 트리거 작업에 따라 표시 시점에 수신됨.|
+|콘텐츠 카드|사용자가 앱에서 카드를 볼 때 수신됩니다.|
+|푸시|Braze 서버에서 푸시 제공자에게 메시지가 전송될 때 수신됩니다.|
+|Email|Braze 서버에서 이메일 서비스 제공업체로 메시지가 전송될 때 수신됩니다.|
+|SMS/MMS|SMS 제공업체가 업스트림 이동 통신사 및 대상 디바이스로부터 확인을 받은 후 "배달됨".|
+|In-app message|트리거 동작에 따라 정의된 디스플레이 시점에 수신됨.|
+|WhatsApp|트리거 동작에 따라 정의된 디스플레이 시점에 수신됨.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {% endapi %}
 
 {% api %}
 
-### RCS 거부 또는 SMS 거부
+### RCS Rejections or SMS Rejections
 
 {% apitags %}
 SMS/MMS, RCS
@@ -723,8 +723,8 @@ SMS/MMS, RCS
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>거부</i>: 수량</li>
-        <li><i>거부율</i>: (거부) / (전송)</li>
+        <li><i>Rejections</i>: 카운트</li>
+        <li><i>Rejection Rate</i>: (Rejections) / (Sends)</li>
     </ul>
 </span>
 {:/}
@@ -733,7 +733,7 @@ SMS/MMS, RCS
 
 {% api %}
 
-### 수익
+### Revenue
 
 {% apitags %}
 이메일
@@ -745,7 +745,7 @@ SMS/MMS, RCS
 
 {% api %}
 
-### 보내기
+### 발송됨
 
 {% apitags %}
 SMS/MMS
@@ -753,55 +753,55 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Sent' %}
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}
 
 {% api %}
 
-### 보내기
+### 발송 수
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, RCS, WhatsApp, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, RCS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Sends' %} 이 지표는 Braze에서 제공됩니다. 예약된 캠페인을 시작할 때, 이 지표는 전송된 모든 메시지를 포함하며, 비율 제한으로 인해 아직 전송되지 않은 메시지도 포함됩니다.
+{% multi_lang_include analytics/metrics.md metric='Sends' %} 이 지표는 Braze에 의해 제공됩니다. 예약된 캠페인을 시작하면 이 지표에는 전송률 제한으로 인해 아직 발송되지 않았는지 여부와 관계없이 발송된 모든 메시지가 포함됩니다.
 
 {% alert tip %}
-콘텐츠 카드의 경우, 이 지표는 [카드 생성]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)에 대해 선택한 내용에 따라 다르게 계산됩니다:
+콘텐츠 카드의 경우 이 지표는 [카드 생성을]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) 위해 선택한 항목에 따라 다르게 계산됩니다:
 
-- **출시 시 또는 단계 진입 시:** 생성된 카드 수와 볼 수 있는 카드 수입니다. 이것은 사용자가 카드를 보았는지 여부를 계산하지 않습니다.
-- **첫 인상 시:** 사용자에게 표시된 카드 수입니다.
+- **출시 또는 단계 진입 시:** 생성된 카드의 수와 볼 수 있는 카드의 수. 사용자가 카드를 조회했는지 여부는 포함되지 않습니다.
+- **첫인상:** 사용자에게 표시되는 카드 수.
 {% endalert %}
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}
 
 {% api %}
 
-### 전송된 메시지
+### Messages Sent
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, 안드로이드 푸시, 웹훅, SMS/MMS, WhatsApp, LINE
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp, LINE
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Messages Sent' %} 이 지표는 Braze에서 제공됩니다. 예약된 캠페인을 시작할 때, 이 지표는 전송된 모든 메시지를 포함하며, 비율 제한으로 인해 아직 전송되지 않은 메시지도 포함됩니다.
+{% multi_lang_include analytics/metrics.md metric='Messages Sent' %} 이 지표는 Braze에 의해 제공됩니다. 예약된 캠페인을 시작하면 이 지표에는 전송률 제한으로 인해 아직 발송되지 않았는지 여부와 관계없이 발송된 모든 메시지가 포함됩니다.
 
 {% alert tip %}
-콘텐츠 카드의 경우, 이 지표는 [카드 생성]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/)에 대해 선택한 내용에 따라 다르게 계산됩니다:
+콘텐츠 카드의 경우 이 지표는 [카드 생성을]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/) 위해 선택한 항목에 따라 다르게 계산됩니다:
 
-- **출시 시 또는 단계 진입 시:** 생성된 카드 수와 볼 수 있는 카드 수입니다. 이것은 사용자가 카드를 보았는지 여부를 계산하지 않습니다.
-- **첫 인상 시:** 사용자에게 표시된 카드 수입니다.
+- **출시 또는 단계 진입 시:** 생성된 카드의 수와 볼 수 있는 카드의 수. 사용자가 카드를 조회했는지 여부는 포함되지 않습니다.
+- **첫인상:** 사용자에게 표시되는 카드 수.
 {% endalert %}
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}
 
 {% api %}
 
-### 운송사에 전송
+### 이동통신사로 발송
 
 {% apitags %}
 SMS/MMS
@@ -813,8 +813,8 @@ SMS/MMS
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>운송업체에 전송</i>: 수량</li>
-        <li><i>운송업체 요금</i>: (운송업체에 전송) / (전송)</li>
+        <li><i>Sends to Carrier</i>: 카운트</li>
+        <li><i>Sends to Carrier Rate</i>: (Sends to Carrier) / (Sends)</li>
     </ul>
 </span>
 {:/}
@@ -823,15 +823,15 @@ SMS/MMS
 
 {% api %}
 
-### 소프트 반송
+### 소프트바운스
 
 {% apitags %}
 이메일
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 이메일이 소프트 반송을 받으면 일반적으로 72시간 이내에 재시도하지만, 재시도 횟수는 수신자마다 다릅니다.
+{% multi_lang_include analytics/metrics.md metric='Soft Bounce' %} 이메일이 소프트 바운스를 받으면, 일반적으로 72시간 이내에 재시도하지만, 재시도 횟수는 수신자마다 다릅니다.
 
-소프트 반송은 캠페인 분석에서 추적되지 않지만, [메시지 활동 로그]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/)에서 소프트 반송을 모니터링할 수 있습니다. 이 사용자들을 전송에서 제외하거나 [소프트 반송 세그먼트 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced)를 통해 지난 30일 동안의 소프트 반송 수를 확인할 수 있습니다. 메시지 활동 로그에서 소프트 반송의 이유를 확인하고 이메일 캠페인에서 "전송"과 "배달" 간의 가능한 불일치를 이해할 수 있습니다.
+소프트 바운스는 캠페인 분석에서 추적되지 않지만, [메시지 활동 로그에서]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) 소프트 바운스를 모니터링할 수 있습니다. 또한 [소프트 반송 세그먼트 필터를]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters#soft-bounced) 사용하여 이러한 사용자를 전송에서 제외하거나 지난 30일 동안의 소프트 반송 양을 다시 살펴볼 수도 있습니다. 메시지 활동 로그에서 소프트 반송의 이유를 확인하고 이메일 캠페인의 '전송'과 '배달' 간에 발생할 수 있는 불일치를 파악할 수도 있습니다.
 
 {% endapi %}
 
@@ -846,15 +846,15 @@ SMS/MMS
 {% multi_lang_include analytics/metrics.md metric='Spam' %}
 
 {% alert note %}
-스팸 불만은 이메일 서비스 제공업체에 의해 직접 처리되며, 피드백 루프를 통해 Braze에 전달됩니다. 대부분의 피드백 루프는 실제 불만의 일부만 보고하므로, _스팸_ 지표는 종종 실제 총량의 일부를 나타냅니다. 오직 이메일 서비스 제공업체만이 실제 스팸 불만의 양을 볼 수 있으므로, _스팸_은 지표로서 참고용으로만 봐야 합니다.
+Spam complaints are handled directly by email service providers and then relayed to Braze through a feedback loop. Most feedback loops only report a portion of the actual complaints, so the _Spam_ metric often represents a fraction of the actual total. Only email service providers can view the true volume of spam complaints, which means _Spam_ should be viewed as an indicative, not exhaustive, metric.
 {% endalert %}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>스팸</i>: 수량</li>
-        <li><i>스팸 %</i> 또는 <i>스팸 비율 %</i>: (스팸으로 표시됨) / (전송)</li>
+        <li><i>스팸:</i> 카운트</li>
+        <li><i>스팸 %</i> 또는 <i>스팸 비율 %</i>: (스팸으로 표시) / (전송)</li>
     </ul>
 </span>
 {:/}
@@ -863,10 +863,10 @@ SMS/MMS
 
 {% api %}
 
-### 설문 페이지 해제
+### 설문조사 페이지 해제
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Page Dismissals' %}
@@ -875,10 +875,10 @@ SMS/MMS
 
 {% api %}
 
-### 설문 제출
+### 설문조사 제출
 
 {% apitags %}
-앱 내 메시지
+인앱 메시지
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Survey Submissions' %}
@@ -890,24 +890,24 @@ SMS/MMS
 ### 총 클릭 수
 
 {% apitags %}
-이메일, 콘텐츠 카드, SMS/MMS, LINE
+Email, Content Cards, SMS/MMS, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Clicks' %}
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-------|
-|LINE|하루 최소 20개의 메시지가 도달한 후 추적됩니다. AMP 이메일은 HTML 및 일반 텍스트 버전 모두에서 기록된 클릭을 포함합니다. 이 숫자는 스팸 방지 도구에 의해 인위적으로 부풀려질 수 있습니다.|
-|배너|전달된 메시지 내에서 클릭한 사용자 수(및 비율)의 총 수로, 동일한 사용자가 여러 번 클릭하더라도 상관없습니다.|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached. AMP emails include clicks recorded in both HTML and plaintext versions. This number may be artificially inflated by anti-spam tools.|
+|Banners|The total number (and percentage) of users who clicked within the delivered message, regardless of whether the same user clicks multiple times.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><b>이메일:</b> (총 클릭 수) / (전달 수)</li>
+        <li><b>이메일:</b> (총 클릭 수) / (배송)</li>
         <li><b>콘텐츠 카드:</b> (총 클릭 수) / (총 노출 수)</li>
-        <li><b>SMS:</b> (클릭 오픈 수) / (전달 수)</li>
+        <li><b>SMS:</b> (클릭 열람 수) / (전달 수)</li>
     </ul>
 </span>
 {:/}
@@ -916,20 +916,20 @@ SMS/MMS
 
 {% api %}
 
-### 총 해제 수
+### 총 무시 수
 
 {% apitags %}
 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} 사용자가 동일한 캠페인에서 두 개의 서로 다른 카드를 받고 둘 다 무시하면, 이 카운트는 두 개 증가합니다. 재자격 부여는 사용자가 카드를 받을 때마다 _총 무시 수_를 한 번 증가시킬 수 있게 해줍니다. 각 카드는 다른 메시지입니다.
+{% multi_lang_include analytics/metrics.md metric='Total Dismissals' %} 사용자가 동일한 캠페인에서 두 개의 다른 카드를 받고 둘 다 거부하면, 이 수치는 두 개 증가합니다. Re-eligibility allows you to increment _Total Dismissals_ once every time a user receives a card; each card is a different message.
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>총 무시 수:</i> 수량</li>
-        <li><i>총 무시 비율:</i> 총 무시 수 / 총 노출 수</li>
+        <li><i>Total Dismissals:</i> 카운트</li>
+        <li><i>Total Dismissal Rate:</i> Total Dismissals / Total Impressions</li>
     </ul>
 </span>
 {:/}
@@ -941,47 +941,47 @@ SMS/MMS
 ### 총 노출 수
 
 {% apitags %}
-앱 내 메시지, 콘텐츠 카드
+인앱 메시지, 콘텐츠 카드
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} 이 숫자는 Braze가 SDK로부터 받는 노출 이벤트 수의 합계입니다.
+{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} 이 숫자는 Braze가 SDK로부터 받는 노출 횟수 이벤트의 합계입니다.
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|콘텐츠 카드|주어진 콘텐츠 카드에 대해 기록된 총 노출 수입니다. 이것은 동일한 사용자에 대해 여러 번 증가할 수 있습니다.|
-|앱 내 메시지|여러 장치가 있고 재자격 부여가 꺼져 있으면, 사용자는 앱 내 메시지를 한 번만 봐야 합니다. 사용자가 여러 장치를 사용하더라도, 타겟팅된 첫 번째 장치에서만 볼 수 있습니다. 이것은 프로필이 장치를 통합하고 사용자가 장치 간에 로그인한 하나의 사용자 ID를 가지고 있다고 가정합니다. 재자격 부여가 켜져 있으면, 사용자가 앱 내 메시지를 볼 때마다 노출이 기록됩니다.|
+|콘텐츠 카드|The total count of impressions logged for a given Content Card. 동일한 사용자에 대해 여러 번 증가시킬 수 있습니다.|
+|인앱 메시지|If there are multiple devices and re-eligibility is off, the user should only see the in-app message once. 사용자가 여러 디바이스를 사용하더라도 타겟팅된 첫 번째 디바이스에서만 볼 수 있습니다. 여기서는 프로필에 통합된 디바이스가 있고 사용자가 여러 디바이스에서 로그인하는 하나의 사용자 ID를 가지고 있다고 가정합니다. If re-eligibility is on, an impression is logged for every time that user sees the in-app message.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}
 
 {% api %}
 
-### 총 열기 수
+### 총 열람 수
 
 {% apitags %}
-이메일, iOS 푸시, 안드로이드 푸시, 웹 푸시, LINE
+이메일, iOS 푸시, Android 푸시, 웹 푸시, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Total Opens' %}
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|LINE|하루 최소 20개의 메시지가 도달한 후 추적됩니다.|
-|AMP 이메일|HTML 및 일반 텍스트 버전의 총 열기 수입니다.|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached.|
+|AMP emails|The total opens for the HTML and plaintext versions.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><b>이메일 <i>총 열기 수</i>:</b> 수량</li>
-        <li><b>이메일 <i>총 오픈율</i>:</b> (오픈 수) / (배달 수)</li>
-        <li><b>웹 푸시 <i>총 오픈 수</i>:</b> <i>직접 오픈 수</i> 수치</li>
-        <li><b>웹 푸시 <i>총 오픈율</i>:</b> (총 오픈 수) / (배달 수)</li>
-        <li><b>iOS, Android, Kindle 푸시 <i>총 오픈 수</i>:</b> (직접 오픈 수) + (영향을 받은 오픈 수)</li>
-        <li><b>iOS, Android, Kindle 푸시 <i>총 오픈율</i>:</b> (총 오픈 수) / (배달 수)</li>
+        <li><b>Email <i>Total Opens</i>:</b> 카운트</li>
+        <li><b>Email <i>Total Open Rate</i>:</b> (열림) / (배달)</li>
+        <li><b>Web push <i>Total Opens</i>:</b> <i>Direct Opens</i> count</li>
+        <li><b>Web push <i>Total Open Rate</i>:</b> (Total Opens) / (Deliveries)</li>
+        <li><b>iOS, Android, and Kindle push <i>Total Opens</i>:</b> (Direct Opens) + (Influenced Opens)</li>
+        <li><b>iOS, Android, and Kindle push <i>Total Open Rate</i>:</b> (Total Opens) / (Deliveries)</li>
     </ul>
 </span>
 {:/}
@@ -993,10 +993,10 @@ SMS/MMS
 ### 총 수익
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, Android 푸시, 웹훅, SMS/MMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
-{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} 이 지표는 <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 작성기</a>를 통해 캠페인 비교 보고서에서만 사용할 수 있습니다.
+{% multi_lang_include analytics/metrics.md metric='Total Revenue' %} 이 지표는 <a href='https://braze.com/docs/user_guide/data_and_analytics/reporting/report_builder/'>보고서 빌더</a>를 통한 캠페인 비교 보고서에서만 사용할 수 있습니다.
 
 {% endapi %}
 
@@ -1005,26 +1005,26 @@ SMS/MMS
 ### 고유 클릭 수
 
 {% apitags %}
-이메일, 콘텐츠 카드, LINE
+이메일, Content Cards, LINE
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %}
 
-이것은 Braze에서 제공하는 구독 취소 링크 클릭을 포함합니다.
+This includes clicks on Braze-provided unsubscribe links.
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|이메일|7일 동안 추적됨.|
-|LINE|하루 최소 20개의 메시지가 도달한 후 추적됩니다.|
+|Email|Tracked over a seven-day period.|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>고유 클릭 수</i>: 수량</li>
-        <li><b>콘텐츠 카드</b> <i>고유 클릭 수 %</i> 또는 <i>고유 클릭 수 비율</i>: (고유 클릭 수) / (고유 노출 수)</li>
-        <li><b>이메일</b> <i>고유 클릭 수 %</i> 또는 <i>고유 클릭 수 비율</i>: (고유 클릭) / (전송 수)</li>
+        <li><i>고유 클릭 수</i>: 카운트</li>
+        <li><b>콘텐츠 카드</b> <i>고유 클릭 수 %</i> 또는 <i>고유 클릭률</i>: (고유 클릭 수) / (고유 노출 횟수)</li>
+        <li><b>이메일</b> <i>고유 클릭 수 %</i> 또는 <i>고유 클릭률</i>: (고유 클릭 수) / (전달 수)</li>
     </ul>
 </span>
 {:/}
@@ -1033,7 +1033,7 @@ SMS/MMS
 
 {% api %}
 
-### 고유 해제
+### 고유 무시 수
 
 {% apitags %}
 콘텐츠 카드
@@ -1041,7 +1041,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Unique Dismissals' %}
 
-<span class="calculation-line">계산: (고유 해제) / (고유 노출 수)</span>
+<span class="calculation-line">계산: (고유 무시 수) / (고유 노출 횟수)</span>
 
 {% endapi %}
 
@@ -1050,24 +1050,24 @@ SMS/MMS
 ### 고유 노출 수
 
 {% apitags %}
-앱 내 메시지, 콘텐츠 카드
+인앱 메시지, 콘텐츠 카드
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} 
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|앱 내 메시지|고유 노출 수는 재적격성이 활성화되어 있고 사용자가 트리거 작업을 수행하면 24시간 후에 다시 증가할 수 있습니다. 재적격성이 활성화되어 있으면, <i>고유 노출 수</i> = <i>고유 수신자</i>입니다.|
-|콘텐츠 카드|사용자가 카드를 두 번째로 볼 때 카운트가 증가하지 않아야 합니다.|
+|인앱 메시지|Unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. If re-eligibility is on, <i>Unique Impressions</i> = <i>Unique Recipients</i>.|
+|콘텐츠 카드|The count should not increment the second time a user views a card.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}
 
 {% api %}
 
-### 고유 열람 수
+### 고유 열람
 
 {% apitags %}
 이메일, LINE
@@ -1075,18 +1075,18 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Unique Opens' %}
 
-|채널|추가 정보|
+|Channel|Additional information|
 |-------|-----------------------|
-|이메일|7일 동안 추적되었습니다.|
-|LINE|하루 최소 20개의 메시지가 도달한 후 추적됩니다.|
+|Email|Tracked over a 7 day period.|
+|LINE|Tracked after a minimum threshold of 20 messages per day has been reached.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>고유 열람 수</i>: 수량</li>
-        <li><i>고유 열람 비율</i> 또는 <i>고유 열람 비율</i>: (고유 열람 수) / (전송 수)</li>
+        <li><i>고유 열기</i>: 카운트</li>
+        <li><i>고유 오픈 %</i> 또는 <i>고유 오픈율</i>: (고유 열람 수) / (전달 수)</li>
     </ul>
 </span>
 {:/}
@@ -1098,20 +1098,20 @@ SMS/MMS
 ### 고유 수신자
 
 {% apitags %}
-모두
+전체
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Unique Recipients' %}
 
-뷰어가 매일 고유 수신자가 될 수 있으므로, 이는 <i>고유 노출 수</i>보다 높을 것으로 예상해야 합니다. 콘텐츠 카드의 경우, 각 콘텐츠 카드는 한 번만 수신될 수 있으므로, 같은 콘텐츠 카드를 두 번째로 보는 것은 날짜에 관계없이 이 카운트를 증가시키지 않습니다.<br><br>이 숫자는 Braze에서 수신되며 `user_id`를 기반으로 합니다. 고유 수신자는 캠페인 또는 캔버스 단계 수준에서 계산되며, <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>전송 식별자</a> 수준에서는 계산되지 않습니다.
+시청자는 매일 고유한 수신자가 될 수 있으므로, <i>고유 노출 수</i>보다 더 높을 것으로 예상해야 합니다. For Content Cards, each Content Card can only be received once, so viewing the same Content Card a second time, regardless of the day, will not increment this count.<br><br>This number is received from Braze and is based on the `user_id`. Unique recipients are counted at the campaign or Canvas step level, not the <a href='https://braze.com/docs/api/identifier_types/#send-identifier'>send identifier</a> level.
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}
 
 {% api %}
 
-### 구독 취소자 또는 구독 취소
+### 구독 취소 또는 구독 취소
 
 {% apitags %}
 이메일
@@ -1123,8 +1123,8 @@ SMS/MMS
 <span class="calculation-line">
     계산:
     <ul>
-        <li><i>구독 취소자</i> 또는 <i>구독 취소</i>: 수량</li>
-        <li><i>구독 취소자 %</i> 또는 <i>구독 취소 비율</i>: (구독 취소) / (전송)</li>
+        <li><i>구독 취소</i> 또는 구독 <i>취소</i>: 카운트</li>
+        <li><i>구독 취소자 %</i> 또는 <i>구독 취소율</i>: (구독 취소) / (배송)</li>
     </ul>
 </span>
 {:/}
@@ -1133,7 +1133,7 @@ SMS/MMS
 
 {% api %}
 
-### 구독 취소
+### 구독취소 수
 
 {% apitags %}
 이메일
@@ -1141,7 +1141,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Unsubscribes' %}
 
-<span class="calculation-line">계산: (구독 취소) / (전송)</span>
+<span class="calculation-line">계산: (구독 취소 수) / (전달 수)</span>
 
 {% endapi %}
 
@@ -1150,11 +1150,11 @@ SMS/MMS
 ### 변형
 
 {% apitags %}
-콘텐츠 카드, 이메일, 인앱 메시지, 웹 푸시, iOS 푸시, Android 푸시, 웹훅, SMS/MMS, WhatsApp
+Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook, SMS/MMS, WhatsApp
 {% endapitags %}
 
 {% multi_lang_include analytics/metrics.md metric='Variation' %}
 
-<span class="calculation-line">계산: 수량</span>
+<span class="calculation-line">계산: 카운트</span>
 
 {% endapi %}

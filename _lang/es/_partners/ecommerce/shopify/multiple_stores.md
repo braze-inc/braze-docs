@@ -2,11 +2,11 @@
 nav_title: Conectar varias tiendas
 article_title: Soporte para múltiples tiendas en Shopify
 alias: /shopify_connecting_multiple_stores/
-page_order: 5
+page_order: 6
 description: "Este artículo de referencia explica cómo conectar y configurar varias tiendas Shopify a un único espacio de trabajo."
 ---
 
-# Conectar varias tiendas Shopify
+# Conecta varias tiendas Shopify
 
 > Conecta varios dominios de tiendas Shopify a un único espacio de trabajo para tener una visión holística de tus clientes en todos los mercados. Construye y lanza programas y viajes de automatización en un único espacio de trabajo sin duplicar esfuerzos en las tiendas regionales.  
 
@@ -30,11 +30,11 @@ Después de instalar la aplicación Braze en tu tienda Shopify e instalar tu pri
 
 Para tu tienda regional adicional de Shopify, selecciona **Comenzar configuración**.
 
-![La sección "Configuración de la integración" con un botón para "Comenzar la configuración".]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
+![La sección "Configuración de la integración" con un botón para "Iniciar la configuración".]({% image_buster /assets/img/Shopify/multiple_stores.png %}){: style="max-width:80%;"}
 
 Como en la primera integración de tu tienda Shopify, puedes elegir entre una configuración estándar o personalizada.
 
-!["Habilitar los SDK Braze" sección con opciones para implementar el SDK Braze Web con la configuración estándar o personalizada.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
+!["Habilitar los SDK de Braze" sección con opciones para implementar el SDK Web de Braze con la configuración estándar o personalizada.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
 
 Elige la opción que mejor se adapte a tus necesidades:
 
@@ -69,7 +69,7 @@ Cuando se sincroniza un perfil de usuario, se fusionan los siguientes campos. Pa
 - Datos personalizados de eventos y compras
 - Propiedades del evento personalizadas para la segmentación (por ejemplo, "X veces en Y días" donde X ≤ 50 e Y ≤ 30)
 - Recuento de eventos (combinado de ambos perfiles)
-- Fechas de los primeros y últimos eventos (Braze selecciona la fecha más temprana y la más tardía)
+- Fechas de los primeros y últimos eventos (Braze selecciona la fecha más antigua y la más reciente)
 - Datos de interacción de la campaña (campos de fecha más recientes)
 - Resúmenes del flujo de trabajo (campos de fecha más recientes)
 - Historial de mensajes e interacciones
@@ -80,14 +80,14 @@ Cuando se sincroniza un perfil de usuario, se fusionan los siguientes campos. Pa
 Puedes elegir recopilar suscriptores directamente a través de Braze (en la configuración de tu conector de Shopify) o a través de alternativas de API y SDK que sincronizan los datos desde Shopify.
 
 {% tabs local %}
-{% tab Conector Shopify %}
+{% tab Shopify connector %}
 En el paso **Administrar usuarios** de la configuración de tu conector de Shopify, puedes utilizar Braze para recopilar las adhesiones voluntarias de suscriptores por correo electrónico y SMS y organizarlas en un grupo de suscripción dedicado:
 
 1. Crea un grupo de suscripción único para cada tienda que conectes. Esto te ayuda a mantener datos precisos sobre la procedencia de los suscriptores.
 2. Habilita la recogida de suscriptores por correo electrónico y SMS.
 {% endtab %}
 
-{% tab API o SDK Braze %}
+{% tab Braze API or SDKs %}
 Alternativamente, puedes sincronizar la información de adhesión al marketing por correo electrónico y SMS directamente desde Shopify utilizando la API o los SDK de Braze.
 
 |Opción|Recursos|
@@ -153,7 +153,7 @@ Para obtener un resumen completo de todas las cargas útiles de eventos, consult
 
 Cuando conectas y configuras cada tienda de Shopify en Braze, puedes habilitar opcionalmente la sincronización de productos de Shopify como parte de la integración.
 
-Si activas la sincronización de productos para cada tienda, Braze incluirá el nombre de tu tienda Shopify en el nombre del catálogo. Esto te ayuda a distinguir los productos de diferentes tiendas.
+Si activas la sincronización de productos para cada tienda, Braze incluye el nombre de tu tienda Shopify en el nombre del catálogo. Esto distingue los productos de diferentes tiendas.
 
 ![Catálogos de Shopify con su tienda Shopify a su nombre.]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
 

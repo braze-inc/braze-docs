@@ -1,4 +1,3 @@
-
 # Expéditeurs de SMS et de RCS
 
 > Le présent article vous guidera à travers des concepts importants concernant l’envoi de numéros de téléphone avec Braze.
@@ -6,7 +5,7 @@
 ## Types d'expéditeurs de SMS et de RCS
 
 {% tabs %}
-{% tab RCS-Expéditeur vérifié %}
+{% tab RCS-Verified Sender %}
 
 #### Expéditeur vérifié par le RCS
 
@@ -33,7 +32,7 @@ Un expéditeur vérifié par RCS est une représentation visuelle de votre marqu
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Short Codes SMS %}
+{% tab SMS Short Codes %}
 
 #### Codes courts SMS
 
@@ -59,7 +58,7 @@ Un code court est une séquence mémorable de 5 à 6 chiffres qui permet aux ex
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab Codes longs SMS %}
+{% tab SMS Long Codes %}
 
 #### Codes longs des SMS
 
@@ -76,7 +75,7 @@ Un code long est un numéro de téléphone standard utilisé pour envoyer et rec
 
 | Avantages |
 | ---- |
-| **Peut être utilisé immédiatement pour envoyer des messages (pour certains pays)**<br>Les codes longs offrent une expérience client localisée et personnalisée lors de l'envoi de messages pour les cas d'utilisation de personne à personne. Contrairement aux codes courts SMS, l'acquisition d'un code long est un processus assez rapide pour certains pays. (Pour les autres pays, le délai est aussi long, voire plus long, que celui d'un code court). Les codes longs peuvent également être définis comme un numéro de secours en cas d’échec d’un code court.<br><br>**Une plus grande disponibilité dans le monde entier**<br>Les codes longs sont disponibles dans plus de 100 grands pays du monde. Veuillez contacter votre gestionnaire du succès des clients ou l’[assistance]({{site.baseurl}}/braze_support/) de Braze pour obtenir une liste des pays disponibles.<br><br>**MMS activé pour certains pays**<br>Prend en charge les MMS (ou Multimedia Message Service), qui vous permettent d’envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, consultez notre documentation [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
+| **Peut être utilisé immédiatement pour envoyer des messages (pour certains pays)**<br>Les codes longs offrent une expérience client localisée et personnalisée lors de l'envoi de messages pour les cas d'utilisation de personne à personne. Contrairement aux codes courts SMS, l'acquisition d'un code long est un processus assez rapide pour certains pays. (Pour les autres pays, le délai est aussi long, voire plus long, que celui d'un code court). Les codes longs peuvent également être définis comme un numéro de secours en cas d’échec d’un code court.<br><br>**Une plus grande disponibilité dans le monde entier**<br>Les codes longs sont disponibles dans plus de 100 grands pays du monde. Contactez votre gestionnaire de la satisfaction client ou l'[assistance]({{site.baseurl}}/braze_support/) Braze pour obtenir la liste des pays disponibles.<br><br>**MMS activé pour certains pays**<br>Prend en charge les MMS (ou Multimedia Message Service), qui vous permettent d’envoyer des messages contenant des ressources multimédias (JPEG, GIF, PNG) vers des téléphones mobiles. Pour plus d'informations sur les MMS dans Braze, consultez notre documentation [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Inconvénients |
@@ -114,7 +113,7 @@ Un code court à 5 à 6 chiffres est spécifiquement sélectionné par une mar
 {: .reset-td-br-1}
 
 {% endtab %}
-{% tab SMS Alphanumérique ID de l'expéditeur %}
+{% tab SMS Alphanumeric Sender ID %}
 
 #### ID alphanumérique de l'expéditeur du SMS
 
@@ -136,9 +135,9 @@ Les ID d'expéditeur alphanumériques vous permettent de définir le nom de votr
 | {::nomarkdown} <ul> <li> Pas de frais supplémentaires pour la mise en œuvre </li> <li> Améliore la notoriété de la marque </li> <li> Augmente le taux d'ouverture des SMS </li> <li> Correspond à la vitesse d'envoi des numéros de téléphone à l'intérieur du groupe d'abonnement. </li> <li> Disponible immédiatement si l’enregistrement préalable n’est pas requis </li> </ul> {:/} | {::nomarkdown} <ul> <li> L'<a href='/docs/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses/'>envoi de messages dans les deux sens</a> n'est pas pris en charge. </li> <li> Cette fonctionnalité n'est pas disponible dans tous les pays. </li> <li> Certains pays exigent une procédure d'approbation supplémentaire </li> <li> MMS n'est pas activé </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Pour plus d’informations sur les ID d’expéditeur alphanumériques, veuillez contacter votre gestionnaire du succès des clients.
+Pour plus d'informations sur l'ID d'expéditeur alphanumérique, contactez votre gestionnaire satisfaction client.
 {% endtab %}
-{% tab Numéro gratuit SMS %}
+{% tab SMS Toll-Free Number %}
 
 #### Numéro gratuit par SMS
 
@@ -155,7 +154,7 @@ Un numéro de téléphone gratuit ou numéro vert est un numéro de téléphone 
 
 | Avantages | Inconvénients |
 | ---- | ---- | 
-| {::nomarkdown} <ul> <li> Doit être enregistré avant l'envoi. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Les numéros verts ne concernent que les États-Unis et le Canada </li><li> MMS n'est pas activé </li> </ul> {:/} |
+| {::nomarkdown} <ul> <li> Doit être enregistré avant l'envoi. </li> </ul> {:/} | {::nomarkdown} <ul> <li> Les numéros verts ne sont pris en charge qu'aux États-Unis et au Canada. </li><li> Le MMS est pris en charge aux États-Unis et au Canada.  </li> </ul> {:/} |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 {% endtab %}
@@ -177,11 +176,11 @@ Les codes courts et longs correspondent au numéro de téléphone depuis lequel 
 
 ## Comment obtenir un code court pour les SMS ?
 
-Le processus de demande de code court peut être un processus long. Il peut, toutefois, en valoir la peine. Si vous souhaitez un code court, contactez votre gestionnaire d’onboarding ou un autre conseiller Braze et informez-le de vos besoins. Ensuite, ils feront une demande pour vous - ils vous demanderont quelques informations de base qui vous aideront à remplir les conditions requises. Ensuite, il ne vous reste plus qu’à attendre.
+Le processus de demande de code court peut être un processus long. Il peut, toutefois, en valoir la peine. Si vous souhaitez obtenir un code court, contactez votre gestionnaire onboarding ou un autre conseiller de Braze et faites-le leur savoir. Ensuite, ils feront une demande pour vous - ils vous demanderont quelques informations de base qui vous aideront à remplir les conditions requises. Ensuite, il ne vous reste plus qu’à attendre.
 
 ### Demande de code court
 
-Bien que Braze soit responsable de la demande effective de code court, nous avons besoin de quelques informations. Nous vous recommandons d’examiner ces questions avant de contacter Braze. 
+Bien que Braze soit responsable de la demande effective de code court, nous avons besoin de quelques informations. Nous vous recommandons de prendre connaissance de ces questions avant de contacter Braze. 
 
 Les réglementations exigent qu’il y ait des réponses à toutes les questions sur l’abonnement, le désabonnement, l’aide/les informations et les réponses à des mots-clés. Vous devrez nous indiquer les flux de messages spécifiques (les réponses que vous souhaitez envoyer aux utilisateurs après qu'ils ont envoyé un [mot-clé]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/)) que vous souhaitez pour les situations suivantes.
 
@@ -198,7 +197,7 @@ Selon votre situation, vous devrez peut-être fournir plus ou moins de flux comm
 Vous devez également nous informer, quel que soit le numéro que vous utilisez, du nombre de messages par mois que vous prévoyez d’envoyer.
 
 {% alert important %}
-Si vous avez votre propre code court, contactez votre gestionnaire du succès des clients au cours du processus d’onboarding pour discuter de la migration ou du transfert de votre code court. Les codes courts doivent être configurés par votre gestionnaire du succès des clients.
+Si vous disposez de votre propre code court, contactez votre gestionnaire de la satisfaction client au cours du processus d'onboarding pour discuter de la migration ou du transfert de votre code court. Les codes courts doivent être configurés par votre gestionnaire du succès des clients.
 {% endalert %}
 
 ## SMS Application-to-Person 10-Digit Long Codes (A2P 10DLC)

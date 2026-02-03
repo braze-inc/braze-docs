@@ -9,7 +9,7 @@ search_tag: Partner
 
 # RudderStack
 
-> [RudderStack](https://rudderstack.com/) é uma infraestrutura de dados de cliente de código aberto para coletar e direcionar dados de eventos de clientes para o seu data warehouse preferido e dezenas de outros provedores de análise, como Braze. Ele está pronto para empresas e oferece uma estrutura de transformação robusta para processar seus dados de eventos em tempo real.
+> [O RudderStack](https://rudderstack.com/) é uma infraestrutura de dados de clientes de código aberto para coletar e rotear dados de eventos de clientes para seu data warehouse preferido e dezenas de outros provedores de análise de dados, como o Braze. Ele está pronto para empresas e oferece uma estrutura de transformação robusta para processar seus dados de eventos em tempo real.
 
 A integração entre a Braze e o RudderStack oferece uma integração de SDK nativo para seus aplicativos Android, iOS e Web e uma integração de servidor para servidor de seus serviços de back-end.
 
@@ -18,17 +18,17 @@ A integração entre a Braze e o RudderStack oferece uma integração de SDK nat
 | Requisito | Descrição |
 | --- | --- |
 | Conta do RudderStack | É necessário ter uma [conta RudderStack](https://app.rudderstack.com/) para usar a parceria. |
-| Fonte configurada | Uma [source](https://www.rudderstack.com/docs/dashboard-guides/sources/) é essencialmente a origem de qualquer dado enviado para o RudderStack, como websites, aplicativos móveis ou servidores de backend. É necessário configurar a fonte antes de configurar o Braze como um destino no RudderStack. |
+| Fonte configurada | Uma [fonte](https://www.rudderstack.com/docs/dashboard-guides/sources/) é essencialmente a origem de qualquer dado enviado ao RudderStack, como sites, apps móveis ou servidores back-end. É necessário configurar a fonte antes de configurar o Braze como um destino no RudderStack. |
 | chave da API REST Braze | Uma chave da API REST da Braze com as permissões `users.track`, `users.identify`, `users.delete` e `users.alias.new`.<br><br>Isso pode ser criado no dashboard do Braze em **Configurações** > **Chaves de API**. |
 | Chave do app da Braze | Para obter sua chave de aplicativo no dashboard do Braze, vá para **Configurações** > **Configurações do aplicativo** > **Identificação** e encontre o nome do seu aplicativo. Salva a string de identificador associada.
-| Centro de dados | Seu data center se alinha com sua dashboard Braze [instance]({{site.baseurl}}/api/basics/#endpoints).  |
+| Centro de dados | Seu data center se alinha com sua [instância]({{site.baseurl}}/api/basics/#endpoints) do Braze dashboard.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Integração
 
 ### Etapa 1: Adicionar uma fonte
 
-Para começar a enviar dados para a Braze, primeiro você precisa confirmar se há uma fonte configurada no seu app da RudderStack. Visite [RudderStack](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started) para aprender como configurar sua fonte de dados.
+Para começar a enviar dados para a Braze, primeiro você precisa confirmar se há uma fonte configurada no seu app da RudderStack. Visite o [RudderStack](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#getting-started) para saber como configurar sua fonte de dados.
 
 ### Etapa 2: configure os destinos
 
@@ -54,12 +54,12 @@ Saiba mais sobre os [modos de conexão](https://www.rudderstack.com/docs/destina
 
 Com esse modo, você pode enviar seus eventos para a Braze usando o SDK da Braze configurado em seu site ou app móvel.
 
-Configure os mapeamentos para o SDK do RudderStack para sua plataforma no repositório do GitHub do Braze, conforme descrito em [supported methods](#supported-methods):
+Configure os mapeamentos para o RudderStack SDK para sua plataforma no repositório do Braze GitHub, conforme descrito em [métodos suportados](#supported-methods):
 
 - [Android](https://github.com/rudderlabs/rudder-integration-braze-android)
 - [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master)
 - [Swift](https://github.com/rudderlabs/rudder-integration-braze-swift)
-- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze)
+- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/develop/packages/analytics-js-integrations/src/integrations/Braze)
 - [React Native](https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native)
 - [Flutter](https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter)
 
@@ -112,7 +112,7 @@ As configurações a seguir são aplicáveis somente se você estiver enviando e
 A Braze oferece suporte a estes métodos do RudderStack: identificar, rastrear, tela, página, grupo e alias.
 
 {% tabs %}
-{% tab Identificar %}
+{% tab Identify %}
 
 O [método `identify` do RudderStack](https://rudderstack.com/docs/destinations/marketing/braze/#identify) associa os usuários às suas ações. O RudderStack captura um ID de usuário exclusivo e características opcionais associadas a esse usuário, como nome, e-mail, endereço IP etc.
 
@@ -123,25 +123,25 @@ Se enviar eventos para a Braze usando o modo dispositivo, você poderá economiz
 É possível excluir um usuário no Braze usando a [regulamentação Suppression with Delete](https://www.rudderstack.com/docs/api/data-regulation-api/#adding-a-suppression-with-delete-regulation) da [API de regulamentação de dados](https://www.rudderstack.com/docs/api/data-regulation-api/) do RudderStack.
 
 {% endtab %}
-{% tab Rastrear %}
+{% tab Track %}
 
 O [método`track` ](https://rudderstack.com/docs/destinations/marketing/braze/#track) do RudderStack captura todas as atividades do usuário e as propriedades associadas a essas atividades.
 
 **Pedido concluído**<br>
-Ao usar a [RudderStack eCommerce API](https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/) para chamar o método track para um evento com o nome `Order Completed`, o RudderStack envia os produtos listados nesse evento para o Braze como [`purchases`]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
+Ao usar [a API de comércio eletrônico do RudderStack](https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/) para chamar o método de rastreamento de um evento com o nome `Order Completed`, o RudderStack envia os produtos listados nesse evento para o Braze como [`purchases`]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data).
 
 {% endtab %}
-{% tab Tela %}
+{% tab Screen %}
 
 O [método`screen` ](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#screen) do RudderStack permite gravar as visualizações de tela móvel dos usuários com qualquer informação adicional sobre a tela visualizada.
 
 {% endtab %}
-{% tab Página %}
+{% tab Page %}
 
 O [método `page`](https://rudderstack.com/docs/destinations/marketing/braze/#page) do RudderStack permite que você registre as visualizações de página do seu site. Ele também captura qualquer outra informação relevante sobre essa página.
 
 {% endtab %}
-{% tab Grupo %}
+{% tab Group %}
 
 O [método `group`](https://rudderstack.com/docs/destinations/marketing/braze/#group) do RudderStack permite que você associe um usuário a um grupo.
 

@@ -10,11 +10,11 @@ Nachdem Sie ein Testsegment eingerichtet haben, können Sie es verwenden, um jed
 
 Um ein Testsegment einzurichten, gehen Sie zu **Segmente** und erstellen Sie ein neues Segment. Wählen Sie **Filter hinzufügen** und wählen Sie dann einen der Testfilter aus.
 
-![Braze-Testkampagne, die die im Targeting-Schritt verfügbaren Filter anzeigt.]({% image_buster /assets/img_archive/testmessages1.png %})
+![Eine Braze Testkampagne, die die im Targeting-Schritt verfügbaren Filter anzeigt.]({% image_buster /assets/img_archive/testmessages1.png %})
 
 Mit Testfiltern können Sie sicherstellen, dass nur Nutzer:innen mit einer bestimmten E-Mail Adresse oder [externen ID]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#setting-user-ids) die Nachricht erhalten.
 
-![Dropdown-Menü mit mehreren Filtern, die unter der Überschrift "Testen" aufgeführt sind]({% image_buster /assets/img_archive/testmessages2.png %})
+![Ein Dropdown-Menü mit mehreren Filtern, die unter der Überschrift Testen aufgelistet sind]({% image_buster /assets/img_archive/testmessages2.png %})
 
 Sowohl die Filter für E-Mail-Adressen als auch für externe IDs bieten die folgenden Optionen:
 
@@ -29,7 +29,7 @@ Sie können mehrere bestimmte E-Mails auswählen, indem Sie die Option "`matches
 
 Nachdem Sie die Testfilter zu Ihrem Testsegment hinzugefügt haben, können Sie überprüfen, ob sie funktionieren, indem Sie **Vorschau** auswählen oder indem Sie **Einstellungen** > **CSV-Export aller Nutzer:innen** wählen, um die Nutzerdaten dieses Segments in eine CSV-Datei zu exportieren.
 
-![Abschnitt einer Braze Kampagne mit dem Titel "Segment-Details"]({% image_buster /assets/img_archive/testmessages3.png %})
+![Ein Abschnitt einer Braze Kampagne mit dem Titel Segment Details]({% image_buster /assets/img_archive/testmessages3.png %})
 
 {% alert note %}
 Der Export der Nutzerdaten des Segments in eine CSV-Datei ist die genaueste Überprüfungsmethode, da die Vorschau nur eine Stichprobe Ihrer Nutzer:innen zeigt und möglicherweise nicht alle Nutzer:innen umfasst.
@@ -40,12 +40,12 @@ Der Export der Nutzerdaten des Segments in eine CSV-Datei ist die genaueste Übe
 Sie können eine Nachricht über das Braze-Dashboard oder die Befehlszeile senden.
 
 {% tabs local %}
-{% tab Verwendung des Dashboards %}
+{% tab Using the dashboard %}
 {% subtabs %}
 {% subtab push or in-app message %}
 Um Push-Benachrichtigungen oder In-App-Nachrichten zum Test zu versenden, müssen Sie Ihr zuvor erstelltes Testsegment adressieren. Beginnen Sie mit der Erstellung Ihrer Kampagne und folgen Sie den üblichen Schritten. Wenn Sie den Schritt **Zielgruppen** erreichen, wählen Sie Ihr Testsegment aus dem Dropdown-Menü aus.
 
-![Braze-Testkampagne, die die im Targeting-Schritt verfügbaren Segmente anzeigt.]({% image_buster /assets/img_archive/test_segment.png %})
+![Eine Braze Testkampagne, die die Segmente anzeigt, die im Targeting-Schritt verfügbar sind.]({% image_buster /assets/img_archive/test_segment.png %})
 
 Bestätigen Sie Ihre Kampagne und starten Sie sie, um Ihre Push-Benachrichtigungen und In-App-Nachrichten zu testen.
 
@@ -57,7 +57,7 @@ Stellen Sie sicher, dass Sie im Abschnitt **Zeitplan** des Kampagnenkomponisten 
 {% subtab email message %}
 Wenn Sie ausschließlich E-Mail-Nachrichten testen, müssen Sie nicht unbedingt ein Testsegment einrichten. Im ersten Schritt des Kampagnen-Composers, in dem Sie die E-Mail-Nachricht Ihrer Kampagne verfassen, klicken Sie auf **Test senden** und geben die E-Mail-Adresse ein, an die Sie eine Test-E-Mail senden möchten. 
 
-![Braze Kampagne mit ausgewähltem Tab "Test senden"]({% image_buster /assets/img_archive/testmessages45.png %})
+![Eine Braze Kampagne mit ausgewähltem Tab Test senden]({% image_buster /assets/img_archive/testmessages45.png %})
 
 {% alert tip %}
 Sie können auch aktivieren oder deaktivieren, dass [TEST (oder SEED)]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/#append-email-subject-lines) an Ihre Nachrichten angehängt wird.
@@ -66,7 +66,7 @@ Sie können auch aktivieren oder deaktivieren, dass [TEST (oder SEED)]({{site.ba
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Verwenden der Befehlszeile %}
+{% tab Using the command line %}
 Alternativ können Sie eine einzelne Nachricht mit cURL und der [Braze Messaging API]({{site.baseurl}}/api/endpoints/messaging/) senden. Beachten Sie, dass diese Beispiele eine Anfrage über die Instanz `US-01` stellen. Um Ihre herauszufinden, referenzieren Sie die [API Endpunkte]({{site.baseurl}}/api/basics/#endpoints).
 
 {% subtabs local %}

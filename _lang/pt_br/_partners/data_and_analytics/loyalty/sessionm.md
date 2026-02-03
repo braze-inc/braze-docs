@@ -22,9 +22,9 @@ search_tag: Partner
 | SessãoM | Um endpoint REST do SessionM Core | Seu endpoint dependerá do URL SessionM da sua instância. Isso pode ser criado no dashboard do SessionM em **Digital Properties**. |
 | SessãoM | Uma chave da API REST do SessionM Core | A chave da API SessionM associada à sua instância e à integração do Braze. Essa chave pode ser usada para todas as chamadas baseadas em núcleo, inclusive tags. Isso pode ser criado no dashboard do SessionM em **Digital Properties**. |
 | SessãoM | Um segredo da API REST do SessionM Core | O segredo da API SessionM associado à sua instância e à integração do Braze. Essa chave pode ser usada para todas as chamadas baseadas em núcleo, inclusive tags. Isso pode ser criado no dashboard do SessionM em **Digital Properties**. |
-| SessãoM | Um ponto de extremidade REST do SessionM Connect | Seu endpoint dependerá do URL SessionM da sua instância. Entre em contato com o gerente técnico de contas da SessionM ou com a equipe de entrega para fornecer informações. |
-| SessãoM | Uma string de autorização REST do SessionM Connect | A string de autorização básica do SessionM Connect associada à sua instância. Essa string de autenticação pode ser usada para todas as chamadas baseadas em conexão, incluindo get_user_offers. Entre em contato com o gerente técnico de contas da SessionM ou com a equipe de entrega para fornecer informações. |
-| SessãoM | Um ID de varejista do SessionM Connect REST | Uma identificação de guid exclusiva para o cliente específico associado à sua instância. Entre em contato com o gerente técnico de contas da SessionM ou com a equipe de entrega. |
+| SessãoM | Um ponto de extremidade REST do SessionM Connect | Seu endpoint dependerá do URL SessionM da sua instância. Entre em contato com o gerente técnico de conta da SessionM ou com a equipe de entrega para fornecer. |
+| SessãoM | Uma string de autorização REST do SessionM Connect | A string de autorização básica do SessionM Connect associada à sua instância. Essa string de autenticação pode ser usada para todas as chamadas baseadas em conexão, incluindo get_user_offers.. Entre em contato com o gerente de conta técnica da SessionM ou com a equipe de entrega para fornecer a string. |
+| SessãoM | Um ID de varejista do SessionM Connect REST | Uma identificação de guid exclusiva para o cliente específico associado à sua instância. Entre em contato com o gerente técnico de conta da SessionM ou com a equipe de entrega para fornecer. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
@@ -254,7 +254,7 @@ Atualize as configurações avançadas na campanha SessionM para incluir a segui
 
 Crie um disparo de mensagens sobre a programação ou o comportamento desejado. Em seguida, selecione **Braze Messaging Variant** como a **variante de envio de mensagens** no menu **External Message** para usar o modelo.
 
-![Envio de mensagens externas da SessionM.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
+![Mensagem externa da SessionM.]({% image_buster /assets/img/sessionm/SessionMExternalMessage.png %})
 
 Esse modelo extrai as atribuições estáticas e dinâmicas relevantes e chama o ponto de extremidade do Braze.
 

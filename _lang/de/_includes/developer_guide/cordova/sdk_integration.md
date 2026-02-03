@@ -13,7 +13,7 @@ Fügen Sie das Braze Cordova SDK nur mit den unten aufgeführten Methoden hinzu.
 Wenn Sie Cordova 6 oder höher verwenden, können Sie das SDK direkt von GitHub hinzufügen. Alternativ können Sie auch eine ZIP-Datei des [GitHub-Repositorys](https://github.com/braze-inc/braze-cordova-sdk) herunterladen und das SDK manuell hinzufügen.
 
 {% tabs local %}
-{% tab Geofence deaktiviert %}
+{% tab geofence disabled %}
 Wenn Sie nicht vorhaben, Standorterfassung und Geofences zu nutzen, verwenden Sie den Branch `master` von GitHub.
 
 ```bash
@@ -21,7 +21,7 @@ cordova plugin add https://github.com/braze-inc/braze-cordova-sdk#master
 ```
 {% endtab %}
 
-{% tab Geofence aktiviert %}
+{% tab geofence enabled %}
 Wenn Sie vorhaben, Standorterfassung und Geofences zu nutzen, verwenden Sie `geofence-branch` von GitHub.
 
 ```bash

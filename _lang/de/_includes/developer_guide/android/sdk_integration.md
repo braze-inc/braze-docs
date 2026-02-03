@@ -13,7 +13,7 @@ repositories {
 Als nächstes fügen Sie Braze zu Ihren Abhängigkeiten hinzu.
 
 {% tabs local %}
-{% tab nur Basis %}
+{% tab base only %}
 Wenn Sie nicht vorhaben, Braze UI-Komponenten zu verwenden, fügen Sie den folgenden Code zu Ihrem `build.gradle` hinzu. Ersetzen Sie `SDK_VERSION` durch die aktuelle Version Ihres Android Braze SDK. Die vollständige Liste der Versionen finden Sie unter [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
@@ -24,7 +24,7 @@ dependencies {
 ```
 {% endtab %}
 
-{% tab mit UI-Komponenten %}
+{% tab with ui components %}
 Wenn Sie später Braze UI-Komponenten verwenden möchten, fügen Sie den folgenden Code zu Ihrem `build.gradle` hinzu.  Ersetzen Sie `SDK_VERSION` durch die aktuelle Version Ihres Android Braze SDK. Die vollständige Liste der Versionen finden Sie unter [Changelogs]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
@@ -79,10 +79,10 @@ Während die verzögerte Initialisierung aktiviert ist, werden alle Netzwerkverb
 
 #### Schritt 4.1: Aktualisieren Sie Ihr `braze.xml`
 
-Die verzögerte Initialisierung ist standardmäßig deaktiviert. Zum Enablement verwenden Sie eine der folgenden Optionen:
+Die verzögerte Initialisierung ist standardmäßig deaktiviert. Verwenden Sie zum Enablement eine der folgenden Optionen:
 
 {% tabs %}
-{% tab Braze XML Datei %}
+{% tab Braze XML file %}
 In der Datei `braze.xml` Ihres Projekts setzen Sie `com_braze_enable_delayed_initialization` auf `true`.
 
 ```xml
@@ -90,7 +90,7 @@ In der Datei `braze.xml` Ihres Projekts setzen Sie `com_braze_enable_delayed_ini
 ```
 {% endtab %}
 
-{% tab Zur Laufzeit %}
+{% tab At runtime %}
 Um die verzögerte Initialisierung zur Laufzeit zu aktivieren, verwenden Sie die folgende Methode.
 
 {% subtabs %}
@@ -114,14 +114,14 @@ Braze.enableDelayedInitialization(context)
 
 #### Schritt 4.2: Konfigurieren Sie Push Analytics (optional)
 
-Wenn die verzögerte Initialisierung aktiviert ist, werden Push Analytics standardmäßig in eine Warteschlange gestellt. Sie können Push Analytics jedoch auch [explizit in die Warteschlange stellen](#explicitly-queue-push-analytics) oder [ablehnen](#drop-push-analytics).
+Wenn die verzögerte Initialisierung aktiviert ist, werden Push Analytics standardmäßig in eine Warteschlange gestellt. Sie können Push Analytics jedoch auch [explizit in die Warteschlange stellen](#explicitly-queue-push-analytics) oder [ganz weglassen](#drop-push-analytics).
 
 ##### Ausdrücklich Warteschlange {#explicitly-queue-push-analytics}
 
 Um Push Analytics explizit in die Warteschlange zu stellen, wählen Sie eine der folgenden Optionen:
 
 {% tabs %}
-{% tab Braze XML Datei %}
+{% tab Braze XML file %}
 Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytics_behavior` auf `QUEUE`:
 
 ```xml
@@ -129,7 +129,7 @@ Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytic
 ```
 {% endtab %}
 
-{% tab Zur Laufzeit %}
+{% tab At runtime %}
 Fügen Sie `QUEUE` zu Ihrer [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) Methode hinzu:
 
 {% subtabs %}
@@ -156,7 +156,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 Um Push Analytics zu löschen, wählen Sie eine der folgenden Optionen:
 
 {% tabs %}
-{% tab Braze XML Datei %}
+{% tab Braze XML file %}
 Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytics_behavior` auf `DROP`: 
 
 ```xml
@@ -164,7 +164,7 @@ Setzen Sie in Ihrer Datei `braze.xml` `com_braze_delayed_initialization_analytic
 ```
 {% endtab %}
 
-{% tab Zur Laufzeit %}
+{% tab At runtime %}
 Fügen Sie `DROP` zu der [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) Methode hinzu:
 
 {% subtabs %}
@@ -380,7 +380,7 @@ Aktivieren Sie ausführliche Protokolle vor allen anderen Aufrufen in `Applicati
 {% endalert %}
 
 {% tabs local %}
-{% tab Anwendung %}
+{% tab Application %}
 Um Protokolle direkt in Ihrer App zu aktivieren, fügen Sie der Methode `onCreate()` Ihrer Anwendung vor allen anderen Methoden Folgendes hinzu.
 
 {% subtabs local %}

@@ -14,7 +14,7 @@ channel:
 
 Apple bietet eine native Eingabeaufforderung, die mit iOS 10.3 eingeführt wurde und mit der Benutzer Apps direkt aus der App heraus bewerten können. Wenn Sie App-Bewertungen von Benutzern über eine In-App-Nachricht unter iOS anfordern möchten, müssen Sie die systemeigene Eingabeaufforderung verwenden, da Apple benutzerdefinierte Bewertungsaufforderungen nicht zulässt (siehe [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct), Abschnitt 5.6.1).
 
-Gemäß den Apple-Richtlinien können App-Bewertungsaufforderungen einem Nutzer bis zu dreimal pro Jahr angezeigt werden, so dass alle App-Bewertungskampagnen die [Ratenbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) nutzen sollten. Benutzer können in ihren App-Einstellungen auch die Anzeige von App-Bewertungsaufforderungen vollständig deaktivieren. Weitere Informationen zu App Store-Bewertungen finden Sie in Apples Artikel über [Bewertungen, Rezensionen und Antworten](https://developer.apple.com/app-store/ratings-and-reviews/).
+Gemäß den Apple-Richtlinien können App-Bewertungsaufforderungen einem Nutzer bis zu dreimal pro Jahr angezeigt werden, so dass alle App-Bewertungskampagnen die [Ratenbegrenzung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) nutzen sollten. Nutzer:innen können in ihren App-Einstellungen auch die Anzeige von App-Bewertungsaufforderungen vollständig deaktivieren. Weitere Informationen zu App Store-Bewertungen finden Sie in Apples Artikel über [Bewertungen, Rezensionen und Antworten](https://developer.apple.com/app-store/ratings-and-reviews/).
 
 ## Verwenden Sie Braze, um Benutzer um App-Bewertungen zu bitten
 

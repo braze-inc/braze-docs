@@ -25,15 +25,17 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 | ----------- | ----------- |
 | mParticle account | An [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
 | Braze instance | Your Braze instance can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints) (for example, `US-01` or `US-02`). |
-| Braze app identifier key | Your app identifier key. <br><br>This can be found within the **Braze Dashboard > Manage Settings > API Key**. |
-| Workspace REST API key | (Server-to-server) A Braze REST API key<br><br>This can be created within the **Braze Dashboard > Developer Console > API Settings > API Key**. |
+| Braze app identifier key | Your app identifier key. <br><br>이것은 Braze 대시보드의 **설정 관리** > **API 키**에서 찾을 수 있습니다. |
+| Workspace REST API key | (Server-to-server) A Braze REST API key<br><br>이것은 Braze 대시보드의 **개발자 콘솔** > **API 설정** > **API 키**에서 생성할 수 있습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
 ### Audiences
 
-Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. Any integration you set up will count toward your account's data point volume.
+Use Braze and mParticle's partnership to configure your integration and import mParticle audiences directly into Braze for retargeting, creating a full loop of data from one system to another. 
+
+설정한 모든 통합은 데이터 포인트를 기록합니다. Braze 데이터 포인트의 뉘앙스에 대한 질문이 있는 경우, 귀하의 Braze 계정 매니저가 답변할 수 있습니다.
 
 #### Forwarding Audiences
 
@@ -59,9 +61,9 @@ While this is the default option in mParticle, most Braze users opt to use [sing
 This solution is not recommended if you have more than a few audiences because custom attributes can be up to 255 characters long, so you will not be able to store dozens or hundreds of audiences on a user profile using this method. If you have a large number of cohorts per user, we strongly recommend the "one attribute per segment" configuration.
 {% endalert %}
 
-![mParticle segment membership]({% image_buster /assets/img_archive/mparticle1.png %})
+![mParticle 세그먼트 membership]({% image_buster /assets/img_archive/mparticle1.png %})
 
-##### Single array attribute {#array}
+##### 단일 배열 속성 {#array}
 
 mParticle creates a single custom array attribute in Braze for each user, called `SegmentMembershipArray`. The value of this attribute is an array of mParticle audience IDs that match the user.
 
@@ -73,11 +75,11 @@ Braze array attributes have a maximum length of 25. If any of your users are mem
 
 ##### One attribute per segment {#per-segment}
 
-mParticle will create a boolean custom attribute for each audience a user belongs to. For example, if an mParticle audience is called "Possible Parisians", you can segment these users with the filter `In Possible Parisians` - `equals` - `true`.
+mParticle will create a boolean custom attribute for each audience a user belongs to. 예를 들어, mParticle 오디언스가 'Possible Parisians'인 경우, 이 사용자는 `In Possible Parisians` - `equals` - `true` 필터로 세분화할 수 있습니다.
 
-![mParticle custom attribute]({% image_buster /assets/img_archive/mparticle2.png %})
+![mParticle 커스텀 속성]({% image_buster /assets/img_archive/mparticle2.png %})
 
-##### Both single array attribute and single string attribute {#both-1}
+##### 단일 배열 속성과 단일 문자열 속성 {#both-1}
 
 mParticle will send attributes as described by both single array attribute and single string attribute.
 
@@ -118,18 +120,18 @@ You should begin seeing audiences syncing to Braze within a few minutes. Audienc
 
 #### Step 2: Segment users in Braze
 
-In Braze, to create a segment of these users, navigate to **Segments** under **Engagement** and name your segment. The following are two examples of segments depending on the option you selected for **Send segments as**. For more details on each option, see [Forwarding audiences](#forwarding-audiences.)
+In Braze, to create a segment of these users, navigate to **Segments** under **Engagement** and name your segment. The following are two examples of segments depending on the option you selected for **Send segments as**. 각 옵션에 대한 자세한 내용은 [오디언스 전달](#forwarding-audiences)를 참조하십시오.
 
-- **Single array attribute:** Select `SegmentMembershipArray` as your filter. Next, use the "includes value" option and input your desired audience ID. ![mParticle segment filter "SegmentMembershipArray" set as "includes value" and audience ID.]({% image_buster /assets/img_archive/mparticle5.png %})<br><br>
-- **One attribute per segment:** Select your custom attribute as the filter. Next, use the "equals" option and choose the appropriate logic. ![mParticle segment filter "in possible parisians" set as "equals" and "true".]({% image_buster /assets/img_archive/mparticle3.png %})
+- **Single array attribute:** `SegmentMembershipArray`를 필터로 선택합니다. 다음으로, '값 포함' 옵션을 사용하고 원하는 오디언스 ID를 입력합니다. ![mParticle 세그먼트 필터 'SegmentMembershipArray'를 '값 포함'으로 설정하고 오디언스 ID를 입력합니다.]({% image_buster /assets/img_archive/mparticle5.png %})<br><br>
+- **세그먼트당 하나의 속성:** 귀하의 커스텀 속성을 필터로 선택하십시오. 다음으로, '같음' 옵션을 사용하고 적절한 논리를 선택합니다. ![mParticle 세그먼트 필터 'in possible parisians'을 '같음' 및 'true'로 설정합니다.]({% image_buster /assets/img_archive/mparticle3.png %})
 
-Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
+저장한 후에는 사용자 타겟팅 단계에서 캔버스 또는 캠페인을 생성하는 동안 이 세그먼트를 참조할 수 있습니다.
 
 #### Deactivating and deleting connections
 
-Since mParticle does not directly maintain segments in Braze, it will not delete segments when the corresponding mParticle audience connection is deleted or deactivated. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
+mParticle는 Braze에서 세그먼트를 직접 유지 관리하지 않기 때문에, 해당 mParticle 오디언스 연결이 삭제되거나 비활성화될 때 세그먼트를 삭제하지 않습니다. When this happens, mParticle will not update the audience user attributes in Braze to remove the audience from each user.
 
-To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. Then, the audience membership will update in Braze to `false` for the single attribute option or removes the audience ID from the array format.
+To remove the audience from a Braze user before deletion, adjust the audience filters to force the audience size to 0 before deleting an audience. After the audience calculation has completed and returns 0 users, delete the audience. 그런 다음, 오디언스 멤버십은 단일 속성 옵션에 대해 Braze에서 `false`로 업데이트되거나 배열 형식에서 오디언스 ID를 제거합니다.
 
 ## Data mapping
 
@@ -139,7 +141,7 @@ Regardless of which approach you choose, you must set up Braze as an output:
 
 ### Configure your Braze output settings
 
-In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze** to open the Braze kit configuration. **Save** when completed.
+mParticle에서 **설정 > 출력 > 출력 추가**로 이동하고 **Braze**를 선택하여 Braze 키트 구성을 엽니다. **Save** when completed.
 
 | Setting name | Description |
 | ------------ | ----------- |
@@ -154,9 +156,9 @@ In mParticle, navigate to **Setup > Outputs > Add Outputs** and selected **Braze
 
 ### Embedded kit integration
 
-The mParticle and Braze SDK will be present on your application through the embedded kit integration. However, unlike a direct Braze integration, mParticle takes care of calling the majority of Braze SDK methods for you. The mParticle methods you use to track user data will automatically be mapped to the Braze SDK methods. 
+mParticle 및 Braze SDK는 내 애플리케이션에 내장된 키트 통합을 통해 존재합니다. However, unlike a direct Braze integration, mParticle takes care of calling the majority of Braze SDK methods for you. The mParticle methods you use to track user data will automatically be mapped to the Braze SDK methods. 
 
-These mappings of mParticle's SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle's GitHub page](https://github.com/mparticle-integrations). 
+mParticle의 SDK에 대한 이러한 매핑은 [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy), 및 [Web](https://github.com/mparticle-integrations/mparticle-javascript-integration-braze)에 대해 오픈 소스이며 [mParticle의 GitHub 페이지](https://github.com/mparticle-integrations)에서 찾을 수 있습니다. 
 
 The embedded kit SDK integration allows you to take advantage of our full suite of features (push, in-app messages, and all relevant message analytics tracking).
 
@@ -180,7 +182,7 @@ mParticle's [Braze event kit integration guide](https://docs.mparticle.com/integ
 
 #### Step 3: Connections settings for your Braze output
 
-In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed.
+mParticle에서 **연결** > **연결** > **[원하는 플랫폼]** > **출력 연결**로 이동하여 Braze를 출력으로 추가합니다. 그런 다음 **저장**을 선택합니다.
 
 ![]({% image_buster /assets/img_archive/mParticle_event_config.png %})
 
@@ -191,7 +193,7 @@ Not all connection settings will apply to all platforms and integration types. F
 This is an add-on to route your backend data to Braze if you're using mParticle's server-side SDKs (for example, Ruby, Python, etc.). To set up this server-to-server integration with Braze, follow [mParticle's documentation](https://docs.mparticle.com/guides/platform-guide/connections/).
 
 {% alert important %}
-Server-to-server integration does not support Braze UI features such as in-app messaging, Content Cards, or push notifications. There also exists automatically captured data, such as device-level fields, that are unavailable through this method. 
+서버 간 통합은 인앱 메시징, 콘텐츠 카드 또는 푸시 알림과 같은 Braze UI 기능을 지원하지 않습니다. There also exists automatically captured data, such as device-level fields, that are unavailable through this method. 
 
 Consider a side-by-side integration if you wish to use these features.
 
@@ -200,7 +202,7 @@ For server-side data to be forwarded to Braze, it must include an `external_id`;
 
 #### Connections settings for your Braze output
 
-In mParticle, navigate to **Connections > Connect > [Your desired platform] > Connect Output** to add Braze as an output. **Save** when completed. 
+mParticle에서 **연결 > 연결 > [원하는 플랫폼] > 출력 연결**로 이동하여 Braze를 출력으로 추가합니다. **Save** when completed. 
 
 ![]({% image_buster /assets/img_archive/mParticle_connections.png %})
 
@@ -213,10 +215,10 @@ Before enabling "Enriched User Attributes" or "Enriched User Identities" we reco
 #### Data types
 Not all data types are supported between both platforms.
 - [Custom event properties]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.
-- [Custom attributes]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) support string, numerical, boolean, date objects, and arrays but does not support objects or nested objects. 
+- [커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/)은 문자열, 숫자, 불리언, 날짜 객체 및 배열을 지원하지만 객체나 중첩 객체는 지원하지 않습니다. 
 
 {% alert note %}
-Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze will ingest these values when they are sent by mParticle but the value will be stored as a string.
+Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type custom attributes. Braze는 mParticle에서 전송된 이러한 값을 수집하지만, 값은 문자열로 저장됩니다.
 {% endalert %}
 
 #### Data mapping
@@ -231,7 +233,7 @@ Braze doesn't support timestamps before year 0 or after year 3000 in `Time` type
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 #### User identity mapping
-For each mParticle output, you can select the external identity type to send to Braze as the `external_id`. While the default value is customer ID, you can choose to map another ID, such as `MPID`, to send to Braze as the `external_id`. Be aware that choosing an identifier other than customer ID may influence how data is sent in Braze. 
+For each mParticle output, you can select the external identity type to send to Braze as the `external_id`. While the default value is customer ID, you can choose to map another ID, such as `MPID`, to send to Braze as the `external_id`. 고객 ID 외의 식별자를 선택하면 Braze에서 데이터가 전송되는 방식에 영향을 미칠 수 있습니다. 
 
 For example, mapping MPID to your Braze `external_id` will have the following effects:
 - Due to the nature of when MPID is assigned, all users will be assigned an `external_id` on session start.
@@ -247,9 +249,9 @@ Forward erasure requests to Braze by configuring a data subject request output t
 
 #### Enabling enrich user attributes/identities (server-to-server only) {#enriched}
 
-In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (such as standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. This will result in high consumption of data points since mParticle will send Braze the same unchanged attributes on each call.
+In the mParticle connection settings, Braze recommends turning off **Include Enriched User Attributes**. If enabled, mParticle will forward all available user attributes (such as standard attributes, custom attributes, and calculated attributes) from the existing profile to Braze on each logged event. 이로 인해 mParticle이 각 호출에서 동일한 변경되지 않은 속성을 Braze에 전송하므로 데이터 포인트 소비가 높아집니다.
 
-For example, if a user adds first name, last name, and phone number during their first session and later signs up for a newsletter adding the same information, in addition to email, triggering a newsletter sign-up event:
+예를 들어, 사용자가 첫 번째 세션 중에 이름, 성 및 전화번호를 추가하고 나중에 뉴스레터에 가입하고 동일한 정보와 이메일을 추가하여 뉴스레터 가입 이벤트를 트리거하는 경우:
 - If turned on (default), five data points will be incurred. (sign-up event, email address, first name, last name, and phone number)
 - If turned off, two data points will be incurred (sign-up event and email address)
 
@@ -261,7 +263,7 @@ Turning off this setting won't check for changing data. It will, however, preven
 
 There are a few considerations to be aware of when turning off **Include Enriched User Attributes**:
 1. The server-to-server integration uses the mParticle events API to send events to Braze. Each request is triggered by an event. When a user attribute is changed, such as updating an email address, but is not associated with a specific event (for example, a profile update custom event), the new value is only passed to an output like Braze as an "enriched attribute" in the payload of the next event triggered by the user. When **Include Enriched User Attributes** is turned off, this new attribute value unassociated with a specific event will not be passed to Braze.
-  - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. Note that with this approach, you are still logging an additional data point for the "user attribute updated" event, but data point consumption will be far less than sending all user attributes on every call with the feature enabled.
+  - To solve this, we recommend creating a separate "user attribute updated" event that only sends the specific user attribute(s) that have been updated to Braze. 이 접근 방식을 사용하면 "사용자 속성 업데이트" 이벤트에 대해 추가 데이터 포인트를 여전히 기록하고 있지만, 기능이 활성화된 상태에서 모든 사용자 속성을 매 호출마다 전송하는 것보다 데이터 포인트 사용량이 훨씬 적습니다.
 2. Calculated Attributes are passed to Braze as an enriched user attribute, so when "Enriched User Attributes" is turned off these will no longer be passed to Braze. To forward calculated attributes to Braze when "Enriched User Attributes" are turned off, a [calculated attribute feed](https://docs.mparticle.com/guides/platform-guide/calculated-attributes/using-calculated-attributes/#forward-calculated-attributes-in-the-calculated-attributes-feed) could help without pushing all the attributes. The feed will fire an update downstream to Braze when a calculated attribute changes. 
 
 ### Sending unnecessary or duplicate data to Braze

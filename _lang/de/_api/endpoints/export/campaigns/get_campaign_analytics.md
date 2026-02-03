@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Kampagnen Analytics exportieren"
+nav_title: "GET: Kampagnen-Analytics exportieren"
 article_title: "GET: Kampagnen Analytics exportieren"
 search_tag: Endpoint
 page_order: 4
@@ -11,10 +11,10 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Export campaign ana
 {% api %}
 # Kampagnen-Analytics exportieren
 {% apimethod get %}
-/kampagnen/daten_serie
+/campaigns/data_series
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um eine tägliche Reihe verschiedener Statistiken für eine Kampagne im Zeitverlauf abzurufen. 
+> Verwenden Sie diesen Endpunkt, um eine tägliche Reihe verschiedener Statistiken für eine Kampagne im Zeitverlauf abzurufen.
 
 Zu den zurückgegebenen Daten gehört, wie viele Nachrichten pro Messaging-Kanal gesendet, geöffnet, angeklickt oder umgewandelt wurden.
 
@@ -37,7 +37,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 | `ending_at` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Datum, an dem die Datenreihe enden soll. Standardmäßig wird die Zeit der Anfrage verwendet. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## Beispiel Anfrage 
+## Beispiel Anfrage
 
 {% raw %}
 ```
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 ### Antwort über mehrere Kanäle
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -126,21 +124,21 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "whats_app": [
                     {
                       "variation_api_id": (string) the variation API identifier,
-                      "sent": (int) the number of sends, 
+                      "sent": (int) the number of sends,
                       "delivered": (int) the number of delivered messages,
                       "failed": (int) the number of failed deliveries,
                       "read": (int) the number of opened messages
                     },
                 ],
                 "content_cards" : [
-                  { 
-                    "variation_api_id": (string) the variation API identifier, 
-                    "sent": (int) the number of sends, 
-                    "total_clicks": (int) the number of total clicks, 
-                    "total_dismissals": (int) the number of total dismissals, 
-                    "total_impressions": (int) the number of total impressions, 
-                    "unique_clicks": (int) the number of unique clicks, 
-                    "unique_dismissals": (int) the number of unique dismissals, 
+                  {
+                    "variation_api_id": (string) the variation API identifier,
+                    "sent": (int) the number of sends,
+                    "total_clicks": (int) the number of total clicks,
+                    "total_dismissals": (int) the number of total dismissals,
+                    "total_impressions": (int) the number of total impressions,
+                    "unique_clicks": (int) the number of unique clicks,
+                    "unique_dismissals": (int) the number of unique dismissals,
                     "unique_impressions": (int) the number of unique impressions
                   }
                 ],
@@ -154,8 +152,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 ### Multivariate Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {

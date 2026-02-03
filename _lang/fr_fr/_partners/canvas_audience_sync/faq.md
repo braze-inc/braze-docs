@@ -23,13 +23,13 @@ Vous pouvez vérifier la plage de temps spécifique dans la section Résolution 
 
 Les champs spécifiques utilisés pour chaque partenaire peuvent varier en fonction des exigences du partenaire. 
 
-Par exemple, lorsque vous configurez un flux de synchronisation d’audiences dans Facebook, vous pouvez utiliser une grande variété de champs first party tels que l'e-mail, le téléphone, le prénom et le nom de famille, tandis qu'avec Snapchat, vous ne pouvez sélectionner que l'e-mail, le téléphone ou l'ID publicitaire mobile. 
+Par exemple, lorsque vous configurez une synchronisation d'audience vers Facebook, vous pouvez utiliser une grande variété de champs first-party comme l'e-mail, le téléphone, le prénom et le nom de famille, alors qu'avec Snapchat, vous ne pouvez sélectionner que l'e-mail, le téléphone ou l'ID de l'annonceur mobile. 
 
 Il est important de noter que les champs utilisateur que vous pouvez sélectionner pour synchroniser correspondent aux attributs standard de Braze et aux identifiants publicitaires mobiles. Vous devez vous assurer de transmettre correctement cette donnée via nos SDK ou API. 
 
 ### Que se passe-t-il lorsque mes données sont traitées pour être envoyées à chaque partenaire Audience Sync ?
 
-Les données que vous sélectionnez pour envoyer à votre destination de synchronisation d’audiences seront normalisées. Chaque partenaire peut avoir des spécifications différentes pour la normalisation des données en fonction de leurs exigences API, alors veuillez consulter chaque endpoint spécifique au partenaire pour plus de détails.
+Les données que vous sélectionnez pour envoyer à votre destination de synchronisation d’audiences seront normalisées. Chaque partenaire peut avoir des spécifications différentes pour la normalisation des données en fonction des exigences de son API. Consultez donc chaque endpoint spécifique à un partenaire pour plus de détails.
 
 De plus, Braze hachera toutes les données avant de synchroniser les utilisateurs avec nos partenaires de synchronisation d'audience, garantissant que toutes les IIP sont hachées en utilisant SHA256.
 

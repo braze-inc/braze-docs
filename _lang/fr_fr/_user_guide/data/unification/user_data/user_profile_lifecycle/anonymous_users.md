@@ -18,10 +18,10 @@ Vous pouvez effectuer les opérations suivantes avec les utilisateurs anonymes c
 - Envoi de messages aux utilisateurs avant qu'ils ne se connectent
 - Collectez le profil d'un utilisateur avant qu'il ne se connecte, afin de ne pas passer à côté de données pertinentes.
 - Encouragez l'utilisateur à compléter son profil en lui envoyant un message lorsqu'il ne le fait que partiellement.
-- Compléter le profil d'un utilisateur lorsqu'il se connecte, afin que vous puissiez annuler les envois de messages sur d'autres plateformes (par exemple, ne pas envoyer un message "livraison gratuite sur la 1ère commande d'app" lorsque l'utilisateur a déjà effectué des commandes d'app).
+- Compléter le profil d'un utilisateur lorsqu'il se connecte, afin de pouvoir annuler les envois de messages sur d'autres plateformes (par exemple, ne pas envoyer un message "livraison gratuite sur la 1ère commande de l'app" lorsque l'utilisateur a déjà effectué des commandes sur l'app).
 - Engagez les utilisateurs qui montrent une intention de sortie en les encourageant à créer un profil, à passer à la caisse ou à effectuer une autre action.
 
-## Comment cela fonctionne-t-il ?
+## Fonctionnement
 
 {% multi_lang_include anonymous_users/about_anonymous_users.md section='user_guide' %}
 
@@ -33,7 +33,7 @@ Vous pouvez effectuer les opérations suivantes avec les utilisateurs anonymes c
 
 Parfois, les profils utilisateurs anonymes sont des doublons qui ont le même numéro de téléphone ou la même adresse e-mail que d'autres profils utilisateurs. L'un des doublons peut même être un profil utilisateur identifié. Ces doublons peuvent être fusionnés en un seul profil utilisateur en utilisant le POST [: Fusionner Utilisateurs endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) ou l'un des outils de fusion de la plateforme Braze, comme la [fusion basée sur des règles]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
 
-## Cas d'utilisation
+## Cas d’utilisation
 
 ### Cibler les utilisateurs anonymes de votre segmentation
 
@@ -41,10 +41,10 @@ Comme les utilisateurs anonymes n'ont pas d'ID `external_id`, vous pouvez les ci
 
 Supposons que vous attribuiez l'attribut personnalisé "is_lead_profile" à chaque profil utilisateur anonyme. Vous pourriez cibler ces profils avec l'un de ces filtres ou les deux :
 
-- **L'ID externe est vide.**
+- **L'ID utilisateur externe est vide**
 - "is_lead_profile" **est vrai**
 
-\![Les filtres de segmentation pour un ID externe vide et un attribut personnalisé vrai "is_lead_profile".]({% image_buster /assets/img/getting_started/anonymous_users.png %})
+![Filtres de segmentation pour un ID externe vide et un attribut personnalisé vrai "is_lead_profile".]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### Capturez les données de paiement d'un utilisateur anonyme.
 
