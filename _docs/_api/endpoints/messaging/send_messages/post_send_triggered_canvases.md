@@ -162,7 +162,7 @@ If your Canvas is archived, you see this `notice` message: "The Canvas is archiv
 
 If your request encounters a fatal error, refer to [Errors and responses]({{site.baseurl}}/api/errors/#fatal-errors) for the error code and description.
 
-## Important considerations
+## Considerations
 
 Consider the following when making API calls to send Canvas messages using API-triggered delivery:
 
