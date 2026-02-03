@@ -17,7 +17,7 @@ tool:
 
 You can review the details of your Campaign or Canvas in the final step of editing. 
 
-For both Canvases and campaigns, you must save all changes before approving, even if they're your own changes. A user with the appropriate permissions must approve each section of the summary before the message can launch. The default status for each section is **Pending Approval**.
+For both Canvases and Campaigns, you must save all changes before approving, even if they're your own changes. A user with the appropriate permissions must approve each section of the summary before the message can launch. The default status for each section is **Pending Approval**.
 
 {% tabs %}
 {% tab campaign %}
