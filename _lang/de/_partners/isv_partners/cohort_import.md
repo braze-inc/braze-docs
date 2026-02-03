@@ -25,6 +25,7 @@ Braze hostet unsere Anwendung auf mehreren Clustern in den USA und der EU. Die U
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 | EU-02 | `https://rest.fra-02.braze.eu`  |
 | AU-01 | `https://rest.au-01.braze.com`  |
+| ID-01 | `https://rest.id-01.braze.com`  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Endpunkt-URLs
@@ -124,9 +125,9 @@ In der folgenden Tabelle finden Sie spezifische Fehlercodes für die Endpunkte v
 |  | `created_at` muss eine gültige Zeit in Form eines [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) Strings sein |
 | `401` | Ungültiger API-Schlüssel des Partners |
 |  | Ungültiges Client-Geheimnis |
-|  | Partner nicht aktiviert für Client mit Client Geheimnis: **<Client Geheimnis>** |
+|  | Partner nicht für Client mit Client-Geheimnis aktiviert: **<client secret>** |
 |  | Unbefugter Zugriff |
 | `423` | Ressource gesperrt |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Informationen zur Fehlerbehebung finden Sie unter [Fehler & Antworten]({{site.baseurl}}/api/errors/), in denen die verschiedenen Fehler und Server-Antworten beschrieben werden, die bei der Verwendung der Braze API auftreten können.
+Weitere Informationen zur Fehlerbehebung finden Sie unter [Fehler & Antworten]({{site.baseurl}}/api/errors/), in dem die verschiedenen Fehler und Server-Antworten behandelt werden, die bei der Verwendung der Braze API auftreten können.

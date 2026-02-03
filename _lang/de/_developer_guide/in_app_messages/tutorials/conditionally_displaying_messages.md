@@ -11,12 +11,79 @@ layout: scrolly
 > Folgen Sie dem Beispielcode in diesem Tutorial, um In-App-Nachrichten mit dem Braze SDK bedingt anzuzeigen.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} Es ist jedoch keine zusätzliche Einrichtung erforderlich.
+
+## Bedingte Anzeige von In-App-Nachrichten für das Internet
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  if (
+    location.pathname === "/checkout" ||
+    document.getElementById("#checkout")
+  ) {
+    // do not show the message
+  } else {
+    braze.showInAppMessage(message);
+  }
+});
+```
+
+!Schritt
+Zeilen-index.js=2
+
+#### 1\. Entfernen Sie Aufrufe von `automaticallyShowInAppMessages()`
+
+Entfernen Sie alle Aufrufe von [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages)da sie jede angepasste Logik, die Sie später implementieren, außer Kraft setzen werden.
+
+!Schritt
+Zeilen-index.js=6
+
+#### 2\. Enablement von Fehlersuchen (optional)
+
+Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren.
+
+!Schritt
+Zeilen-index.js=9-18
+
+#### 3\. Updates für In-App-Nachrichten abonnieren
+
+Registrieren Sie einen Callback mit [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) um jedes Mal, wenn eine In-App-Nachricht ausgelöst wird, einen `message` zu erhalten.
+
+!Schritt
+Zeilen-index.js=10-13
+
+#### 4\. Erstellen Sie bedingte Logik
+
+Erstellen Sie eine angepasste Logik, um zu steuern, wann Nachrichten angezeigt werden. In diesem Beispiel prüft die Logik, ob die URL `"checkout"` enthält oder ob ein `#checkout` Element auf der Seite existiert.
+
+!Schritt
+Zeilen-index.js=16
+
+#### 5\. Nachrichten anzeigen mit `showInAppMessage`
+
+Um die Nachricht anzuzeigen, rufen Sie [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Wenn Sie dies nicht tun, wird die Nachricht übersprungen.
+
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Außerdem müssen Sie [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Bedingte Anzeige von In-App-Nachrichten für Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Android" %}
 
 {% scrolly %}
 
@@ -111,7 +178,7 @@ Geben Sie eine `InAppMessageOperation` mit `DISPLAY_NOW` zurück, um die Nachric
 
 ## Bedingte Anzeige von In-App-Nachrichten für Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Conditionally Displaying Messages Swift" %}
 
 {% scrolly %}
 
@@ -194,73 +261,6 @@ Zeilen-AppDelegate.swift=26-33
 #### 4\. Überschreiben Sie `DisplayChoice` mit bedingter Logik
 
 Überschreiben Sie [`inAppMessage(_:displayChoiceForMessage:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:displaychoiceformessage:)-9w1nb) um zu entscheiden, ob eine Nachricht angezeigt werden soll. Geben Sie `.now` ein, um die Nachricht anzuzeigen oder `.discard`, um sie zu unterdrücken.
-
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} Es ist jedoch keine zusätzliche Einrichtung erforderlich.
-
-## Bedingte Anzeige von In-App-Nachrichten für das Internet
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  if (
-    location.pathname === "/checkout" ||
-    document.getElementById("#checkout")
-  ) {
-    // do not show the message
-  } else {
-    braze.showInAppMessage(message);
-  }
-});
-```
-
-!Schritt
-Zeilen-index.js=2
-
-#### 1\. Entfernen Sie Aufrufe von `automaticallyShowInAppMessages()`
-
-Entfernen Sie alle Aufrufe von [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages)da sie jede angepasste Logik, die Sie später implementieren, außer Kraft setzen werden.
-
-!Schritt
-Zeilen-index.js=6
-
-#### 2\. Enablement von Fehlersuchen (optional)
-
-Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren.
-
-!Schritt
-Zeilen-index.js=9-18
-
-#### 3\. Updates für In-App-Nachrichten abonnieren
-
-Registrieren Sie einen Callback mit [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) um jedes Mal, wenn eine In-App-Nachricht ausgelöst wird, einen `message` zu erhalten.
-
-!Schritt
-Zeilen-index.js=10-13
-
-#### 4\. Erstellen Sie bedingte Logik
-
-Erstellen Sie eine angepasste Logik, um zu steuern, wann Nachrichten angezeigt werden. In diesem Beispiel prüft die Logik, ob die URL `"checkout"` enthält oder ob ein `#checkout` Element auf der Seite existiert.
-
-!Schritt
-Zeilen-index.js=16
-
-#### 5\. Nachrichten anzeigen mit `showInAppMessage`
-
-Um die Nachricht anzuzeigen, rufen Sie [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage). Wenn Sie dies nicht tun, wird die Nachricht übersprungen.
 
 {% endscrolly %}
 {% endsdktab %}

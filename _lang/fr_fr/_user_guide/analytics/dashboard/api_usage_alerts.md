@@ -1,6 +1,6 @@
 ---
 nav_title: "Alertes sur l'utilisation de l'API"
-article_title: "Alertes sur l'utilisation de l'API"
+article_title: "Alertes d'utilisation de l'API"
 description: "Cet article donne un aperçu des alertes d'utilisation de l'API, qui vous permettent de détecter de manière proactive un trafic inattendu."
 page_order: 3.6
 ---
@@ -27,7 +27,7 @@ Pour créer une alerte sur l'utilisation de l'API :
 2. Saisissez un nom pour votre alerte et choisissez les points d'extrémité de l'API REST et les clés API pour lesquels vous souhaitez être alerté.
 3. Définissez vos critères d'alerte en choisissant un ou plusieurs codes de réponse et en spécifiant les [seuils d'alerte](#api-usage-alert-thresholds).
 4. Lorsque vous avez terminé, basculez sur l **'activation de l'alerte.**
-    Exemple d'alerte d'utilisation de l'API qui envoie des notifications lorsque le nombre d'utilisateurs augmente de 100 % en l'espace d'une heure.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
+    ![Exemple d'alerte d'utilisation de l'API qui envoie des notifications lorsque le point d'extrémité Suivi des utilisateurs augmente de 100 % en l'espace d'une heure.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts1.png %})
 
 ## Seuils d'alerte {#api-usage-alert-thresholds}
 
@@ -36,7 +36,7 @@ Lorsque vous définissez vos critères d'alerte, vous pouvez ajuster les seuils 
 <table>
   <thead>
     <tr>
-      <th>Champ d'application</th>
+      <th>Champ</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -48,7 +48,7 @@ Lorsque vous définissez vos critères d'alerte, vous pouvez ajuster les seuils 
         <ul>
           <li><strong>Augmenté de</strong> ou <strong>Diminué de</strong>: Compare les demandes par rapport à la fenêtre temporelle précédente.</li>
           <li><strong>Augmenté en pourcentage</strong> ou <strong>Diminué en pourcentage :</strong> Compare le pourcentage de variation des demandes par rapport à la fenêtre temporelle précédente.</li>
-          <li><strong>Supérieur ou égal</strong>, ou <strong>inférieur ou égal</strong>: Compte les demandes dans une fenêtre temporelle.</li>
+          <li><strong>Supérieur ou égal</strong>, ou <strong>inférieur ou égal</strong>: Compte les demandes dans une fenêtre de temps.</li>
         </ul>
       </td>
     </tr>
@@ -57,7 +57,7 @@ Lorsque vous définissez vos critères d'alerte, vous pouvez ajuster les seuils 
       <td>Utilisé en conjonction avec la condition de seuil.</td>
     </tr>
     <tr>
-      <td>A l'intérieur</td>
+      <td>Période</td>
       <td>La fenêtre temporelle pour l'évaluation de l'alerte.</td>
     </tr>
   </tbody>
@@ -66,9 +66,9 @@ Lorsque vous définissez vos critères d'alerte, vous pouvez ajuster les seuils 
 
 ## Mise en place de notifications d'alerte
 
-Vous pouvez configurer une alerte par e-mail, une alerte par webhook ou les deux. Les alertes webhook peuvent être très utiles pour des cas d'utilisation tels que l'envoi d'une alerte à des plateformes externes, comme un canal Slack. Pour un exemple, consultez notre [documentation](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) sur l'intégration des alertes avec Slack pour connaître nos préférences en matière de notification.
+Vous pouvez configurer une alerte par e-mail, webhook ou les deux. Les alertes webhook peuvent être très utiles pour des cas d'utilisation tels que l'envoi d'une alerte à des plateformes externes, comme un canal Slack. Pour un exemple, consultez notre [documentation](https://www.braze.com/docs/user_guide/administrative/app_settings/company_settings/notification_preferences#slack-incoming-webhook-integration) sur l'intégration des alertes avec Slack pour connaître nos préférences en matière de notification.
 
-Un e-mail sera envoyé à l'adresse sélectionnée lorsque les critères de l'alerte sont atteints.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
+![Un e-mail sera envoyé à l'adresse sélectionnée lorsque les critères de l'alerte sont atteints.]({% image_buster /assets/img/api_usage_alerts/api_usage_alerts2.png %})
 
 ### Exemple de charge utile {#payload}
 
@@ -104,36 +104,36 @@ Voici quelques façons de mettre en place vos configurations d'alerte d'utilisat
 {% tab api health %}
 Vous pouvez mettre en place des alertes pour surveiller l'état général de votre API. Par exemple, vous pouvez configurer ces alertes lorsque les erreurs d'API augmentent de façon drastique, par exemple de 20 % par rapport à l'heure précédente.
 
-| Endpoint | clé API | Code de réponse | Condition de seuil | Volume seuil | A l'intérieur |
+| Endpoint | Clé API | Code de réponse | Condition de seuil | Volume seuil | Période |
 | --- | --- | --- | --- | --- | --- |
-| Tous les endpoints | Toutes les clés API | `4XX` et `5XX` | Augmentation de 10% | 10 | 1 heure |
+| Tous les endpoints | Toutes les clés API | `4XX` et `5XX` | Augmentation de 10% | 10 | 1 heure |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 
 {% tab endpoint rate limit %}
 Soyez alerté lorsque votre espace de travail atteint sa limite de débit pour `/users/track` endpoint. Vous pouvez également appliquer cette configuration à d'autres endpoints de Braze.
 
-| Endpoint | clé API | Code de réponse | Condition de seuil | Volume seuil | A l'intérieur |
+| Endpoint | Clé API | Code de réponse | Condition de seuil | Volume seuil | Période |
 | --- | --- | --- | --- | --- | --- |
-| `/users/track` | Toutes les clés API | `429` | Supérieur ou égal à | 100 | 1 heure |
+| `/users/track` | Toutes les clés API | `429` | Supérieur ou égal à | 100 | 1 heure |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 
 {% tab API-triggered campaigns %}
 Cette configuration d'alerte vous informe lorsque des erreurs se produisent pour les campagnes et les Canvases déclenchées par l'API, dont certaines peuvent être hautement prioritaires.
 
-| Endpoint | clé API | Code de réponse | Condition de seuil | Volume seuil | A l'intérieur |
+| Endpoint | Clé API | Code de réponse | Condition de seuil | Volume seuil | Période |
 | --- | --- | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li><code>/campagnes/déclencheurs/envoi</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/envoi</code></li></ul>{:/} | Toutes les clés API | `4XX` et `5XX` | Supérieur ou égal à | 1 | 1 heure |
+| {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | Toutes les clés API | `4XX` et `5XX` | Supérieur ou égal à | 1 | 1 heure |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 
 {% tab partner integrations %}
 Utilisez la configuration d'alerte suivante pour être alerté lorsqu'une intégration partenaire cesse d'envoyer des données à Braze.
 
-| Endpoint | clé API | Code de réponse | Condition de seuil | Volume seuil | A l'intérieur |
+| Endpoint | Clé API | Code de réponse | Condition de seuil | Volume seuil | Période |
 | --- | --- | --- | --- | --- | --- |
-| Tous les endpoints | La clé API utilisée pour l'intégration de votre partenaire | Tous les codes de réponse | Inférieur ou égal à | 0 | 1 jour |
+| Tous les endpoints | La clé API utilisée pour l'intégration de votre partenaire | Tous les codes de réponse | Inférieur ou égal à | 0 | 1 jour |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 {% endtabs %}

@@ -11,6 +11,8 @@ description: "In diesem referenzierten Artikel werden die verschiedenen Komponen
 
 > In diesem Artikel werden die verschiedenen Komponenten eines Kauf-Objekts, die richtige Verwendung, bewährte Verfahren und Beispiele erläutert.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 ## Was ist ein Kauf-Objekt?
 
 Ein Kauf-Objekt ist ein Objekt, das über die API übergeben wird, wenn ein Kauf getätigt wurde. Jedes Kauf-Objekt befindet sich in einem Kauf-Array, wobei jedes Objekt einen einzelnen Kauf durch einen bestimmten Nutzer:in zu einem bestimmten Zeitpunkt darstellt. Das Kauf-Objekt hat viele verschiedene Felder, die es dem Backend von Braze erlauben, diese Informationen zu speichern und für die Anpassung, Datenerfassung und Personalisierung zu verwenden.
@@ -35,7 +37,7 @@ Ein Kauf-Objekt ist ein Objekt, das über die API übergeben wird, wenn ein Kauf
   "time" : (required, datetime as string in ISO 8601) Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
-  // Setting this flag to true will put the API in "Update Only" mode.
+  // Setting this flag to true puts the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean)
 }
@@ -57,7 +59,7 @@ Innerhalb des Kauf-Objekts ist `product_id` ein Bezeichner für den Kauf (z.B. `
 
 Bei Braze bieten wir einige allgemeine Namenskonventionen für das Kauf-Objekt `product_id` an. Bei der Auswahl von `product_id` schlägt Braze vor, einfache Namen wie den Produktnamen oder die Produktkategorie (anstelle von SKUs) zu verwenden, mit der Absicht, alle protokollierten Artikel nach diesem `product_id` zu gruppieren.
 
-So lassen sich Produkte für die Segmentierung und das Triggern leicht identifizieren.
+So lassen sich Produkte für die Segmentierung und das Triggern leichter identifizieren.
 
 ### Käufe auf der Ebene der Bestellung protokollieren
 
@@ -90,7 +92,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Kauf-Details-Objekt
 
-Angepasste Events und Käufe können Event-Eigenschaften haben. Die "Eigenschaften"-Werte sollten ein Objekt sein, bei dem die Schlüssel die Eigenschaftsnamen und die Werte die Eigenschaftswerte sind. Eigenschaftsnamen müssen nicht-leere Strings mit maximal 255 Zeichen sein, ohne führende Dollarzeichen. 
+Angepasste Events und Käufe können Event-Eigenschaften haben. Die "Eigenschaften"-Werte sollten ein Objekt sein, bei dem die Schlüssel die Eigenschaftsnamen und die Werte die Eigenschaftswerte sind. Eigenschaftsnamen müssen nicht-leere Strings mit maximal 255 Zeichen sein, ohne führende Dollarzeichen.
 
 Bei den Eigenschaften kann es sich um jeden der folgenden Datentypen handeln:
 
@@ -101,7 +103,7 @@ Bei den Eigenschaften kann es sich um jeden der folgenden Datentypen handeln:
 | Datumsangaben | Formatiert als Strings im [ISO-8601-](https://en.wikipedia.org/wiki/ISO_8601) oder `yyyy-MM-dd'T'HH:mm:ss:SSSZ` -Format. Innerhalb von Arrays nicht unterstützt. |
 | Strings | 255 Zeichen oder weniger. |
 | Arrays | Arrays können keine Datumsangaben enthalten. |
-| Objekte | Die Objekte werden als Strings eingelesen. |
+| Objekte | Objekte werden als Strings eingelesen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Objekte mit Event-Eigenschaften, die Array- oder Objektwerte enthalten, können eine Nutzlast für Event-Eigenschaften von bis zu 50 KB haben.
@@ -114,10 +116,10 @@ Objekte mit Event-Eigenschaften, die Array- oder Objektwerte enthalten, können 
 
 Bitte beachten Sie, dass dieses Feature **pro Produkt** und nicht pro Kauf aktiviert wird. Wenn Sie z.B. ein großes Volumen an unterschiedlichen Produkten haben, die aber alle die gleichen Eigenschaften haben, ist eine Segmentierung vielleicht eher unnötig.
 
-In dieser Instanz empfehlen wir die Verwendung von Produktnamen auf "Gruppenebene" anstelle von etwas Granularem bei der Festlegung von Datenstrukturen. Zum Beispiel sollte ein Unternehmen, das Fahrkarten für Züge anbietet, Produkte für "Einzelfahrt", "Hin- und Rückfahrt", "Multi-City" und nicht für bestimmte Transaktionen wie "Transaktion 123" oder "Transaktion 046" haben. Ein weiteres Beispiel: Für das Kauf-Event "Essen" sollten Sie die Eigenschaften "Kuchen" und "Sandwich" festlegen.
+In dieser Instanz empfehlen wir, bei der Festlegung von Datenstrukturen Produktnamen auf "Gruppenebene" anstelle von Bezeichnern auf Transaktionsebene zu verwenden. Zum Beispiel sollte ein Unternehmen, das Fahrkarten für Züge anbietet, Produkte für "Einzelfahrt", "Hin- und Rückfahrt", "Multi-City" und nicht für bestimmte Transaktionen wie "Transaktion 123" oder "Transaktion 046" haben. Ein weiteres Beispiel: Für das Kauf-Event "Essen" sollten Sie die Eigenschaften "Kuchen" und "Sandwich" festlegen.
 
 {% alert important %}
-Beachten Sie, dass Produkte über die Braze REST API hinzugefügt werden können. Wenn Sie beispielsweise einen Anruf an den Endpunkt `/users/track` senden und eine neue Kauf-ID angeben, wird im Abschnitt **Dateneinstellungen** > **Produkte** des Dashboards automatisch ein Produkt erstellt.
+Beachten Sie, dass Produkte über die Braze REST API hinzugefügt werden können. Wenn Sie beispielsweise einen Anruf an den Endpunkt `/users/track` senden und eine neue Kauf-ID angeben, erstellt Braze automatisch ein Produkt im Abschnitt **Dateneinstellungen** > **Produkte** des Dashboards.
 {% endalert %}
 
 ### Beispiel Kauf-Objekt

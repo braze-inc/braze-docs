@@ -1,49 +1,49 @@
 ---
-nav_title: Usuários de mensagens
-article_title: Mensagens para usuários do LINE
+nav_title: Usuários de envio de mensagens
+article_title: Usuários do LINE de mensagens
 page_order: 2
-description: "Este artigo de referência aborda como conversar com os usuários usando modelos de campanhas e Canvases."
+description: "Este artigo de referência aborda como conversar com os usuários usando modelos de campanhas e Canvas."
 page_type: reference
 channel:
  - LINE
 alias: /line/messaging_users/
 ---
 
-# Mensagens para usuários do LINE
+# Envio de mensagens aos usuários do LINE
 
-> O LINE é um canal de comunicação bidirecional. Você pode ir além do envio de mensagens aos usuários e participar de conversas com eles usando modelos de campanhas e Canvases. Este artigo aborda os detalhes do envio de mensagens aos usuários, por exemplo, como definir palavras de acionamento para mensagens recebidas e respostas não reconhecidas.
+> O LINE é um canal de comunicação bidirecional. É possível ir além do envio de mensagens aos usuários e se engajar em conversas com eles usando campanhas de modelos e Canvas. Este artigo cobre os detalhes do envio de mensagens para os usuários, como definir palavras disparadoras para mensagens recebidas e respostas não reconhecidas.
 
-Há vários métodos para conversar com os usuários por meio do LINE, como o uso de palavras de acionamento do LINE. Você também pode usar chamadas para ação (CTAs) para incentivar o envolvimento do usuário com as mensagens do LINE.
+Há vários métodos para conversar com os usuários pelo LINE, como o uso de palavras disparadoras do LINE. Também é possível usar chamadas para ação (CTAs) para incentivar o engajamento do usuário com o envio de mensagens LINE.
 
 ## Gatilhos baseados em ações
 
-Você pode criar campanhas e Canvases que iniciam, ramificam e têm alterações no meio do caminho quando você recebe uma mensagem LINE de entrada (uma mensagem enviada por um usuário) que contém uma palavra de gatilho. Certifique-se de escolher palavras de gatilho que correspondam ao que você espera que os usuários enviem.
+É possível criar campanhas e Canvas que iniciam, ramificam e têm alterações no meio do caminho quando você recebe uma mensagem LINE de entrada (uma mensagem enviada por um usuário) que contém uma palavra disparadora. Certifique-se de escolher palavras disparadoras que correspondam ao que você espera que os usuários enviem.
 
-### Campanha
+### Campanha interrompida
 
-Defina suas palavras de gatilho ao programar uma campanha de entrega baseada em ação.
+Defina suas palavras de disparo ao programar uma campanha de entrega baseada em ação.
 
-Gatilho baseado em ação de "Enviar esta campanha aos usuários que enviaram LINE de entrada para o grupo de assinatura onde está o corpo da mensagem" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+![Disparo baseado em ação de "Enviar esta campanha aos usuários que enviaram LINE de entrada para o grupo de inscrições onde está o corpo da mensagem" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
-### Tela
+### Canva
 
-Defina suas palavras-gatilho dentro de [caminhos de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) em seu Canvas.
+Defina suas palavras-gatilho em [jornadas de ação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) em seu Canva.
 
-Caminho de ação com um acionador de "Enviar esta campanha aos usuários que enviaram LINE de entrada para o grupo de assinatura onde está o corpo da mensagem" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+![Jornada de ação com um disparo de "Enviar esta campanha para usuários que definirem um LINE de entrada para o grupo de inscrição em que o corpo da mensagem seja" e um campo em branco.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
-### Requisitos
+### Solicitações
 
-Cada letra de sua palavra de gatilho deve ser maiúscula ao criar sua campanha ou Canvas, embora o Braze não exija que as palavras de gatilho de entrada sejam maiúsculas. Por exemplo, se sua palavra de acionamento for "JOIN2023", uma mensagem de entrada "jOin2023" ainda acionará o Canvas ou a campanha.
+Cada letra de sua palavra de disparo deve ser maiúscula ao criar sua campanha ou canva, embora a Braze não exija que as palavras de disparo de entrada sejam maiúsculas. Por exemplo, se sua palavra de acionamento for "JOIN2023", uma mensagem de entrada "jOin2023" ainda disparará o Canva ou a campanha.
 
-Se nenhuma palavra de acionamento for especificada, a campanha ou o Canvas será executado para *todas as* mensagens LINE recebidas. Isso inclui mensagens com frases correspondentes em campanhas ativas e Canvases, caso em que o usuário receberá duas mensagens LINE.
+Se nenhuma palavra disparadora for especificada, a campanha ou o Canva será executado para *todas as* mensagens LINE recebidas. Isso inclui mensagens com frases correspondentes em campanhas ativas e Canvas, caso em que o usuário receberá duas mensagens LINE.
 
 ## Respostas não reconhecidas
 
-Você deve incluir uma opção de acionamento para respostas não reconhecidas em telas interativas. Isso informa os usuários sobre os prompts disponíveis (ou palavras de gatilho) e define suas expectativas em relação ao canal.
+Você deve incluir uma opção de disparo para respostas não reconhecidas em telas interativas. Isso informa os usuários sobre os prompts disponíveis (ou palavras disparadoras) e define suas expectativas em relação ao canal.
 
-### Criação de um acionador para respostas não reconhecidas
+### Criação de um disparador para respostas não reconhecidas
 
-Depois de criar grupos de ação para as frases de filtro personalizadas, adicione outro grupo de ação ao caminho de ação para **Enviar mensagem LINE** e não verifique **Onde o corpo da mensagem**. Isso capturará todas as respostas não reconhecidas do usuário, semelhante a uma cláusula "else".
+Depois de criar grupos de ação para as frases de filtro personalizadas, adicione outro grupo de ação à jornada de ação para **Enviar mensagem LINE** e não verifique **Onde o corpo da mensagem**. Isso capturará todas as respostas não reconhecidas do usuário, semelhante a uma cláusula "else".
 
-Para essa mensagem, você deve enviar uma mensagem LINE informando ao usuário que esse canal não é monitorado por um ser humano e, se necessário, orientá-lo para um canal de suporte.
+Para essa mensagem, você deve enviar uma mensagem LINE informando ao usuário que esse canal não é monitorado por um humano e, se necessário, orientá-lo para um canal de suporte.
 

@@ -10,9 +10,9 @@ search_tag: Partner
 
 ---
 
-# [![Cours Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"}Amplitude
+# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/amplitude-integration-with-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Amplitude
 
-> [Amplitude](https://amplitude.com/) est une plateforme d'analyse des produits et d'aide à la décision.
+> [Amplitude](https://amplitude.com/) est une plateforme d'analyse de produits et d'aide à la décision.
 
 L'intégration bidirectionnelle entre Braze et Amplitude vous permet d'[importer vos cohortes]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/amplitude/amplitude_cohort_import/), traits de caractère d'utilisateurs et événements d'Amplitude dans Braze, ainsi que de créer des segments qui peuvent cibler les utilisateurs dans de futures campagnes ou Canvases. Vous pouvez également tirer parti de Braze Currents pour [exporter vos événements Braze vers Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/#data-export-integration) afin d’analyser plus en profondeur vos données produits et marketing.
 
@@ -38,7 +38,7 @@ Amplitude et Braze proposent deux méthodes d'intégration différentes. Lisez l
 | Condition | Description |
 | ----------- | ----------- |
 | Clé API REST de Braze | Une clé API REST de Braze avec toutes les autorisations.<br><br> Celle-ci peut être créée dans le tableau de bord de Braze à partir de **Paramètres** > **Clés API**. |
-| Endpoint REST Braze | [Votre URL de l’endpoint REST][1].] Votre endpoint dépendra de l'URL de Braze pour votre instance. |
+| Endpoint REST Braze | [L'URL de votre endpoint REST][1]. Votre endpoint dépendra de l'URL de Braze pour votre instance. |
 | Identifiant de l'application Braze | L'identifiant de l'application qui recevra les événements Amplitude. Vous trouverez cette information dans le **tableau de bord de Braze > Console de développement > Paramètres**. |
 
 ### Configuration de l'Amplitude
@@ -74,7 +74,7 @@ Dans Amplitude Audiences, sélectionnez **Synchronisations > Créer une synchron
 Ensuite, choisissez de synchroniser une propriété de l'utilisateur, un calcul, une cohorte ou une recommandation. 
 
 {% tabs %}
-{% tab Synchronisation des propriétés des utilisateurs %}
+{% tab Syncing user property %}
 
 Sélectionnez **Propriété de l'utilisateur**, puis la propriété de l'utilisateur à synchroniser.
 
@@ -89,7 +89,7 @@ Enfin, définissez la fréquence de votre synchronisation.
 ![Définissez votre cadence comme une synchronisation unique ou une synchronisation planifiée.]({% image_buster /assets/img/amplitude9.png %})
 
 {% endtab %}
-{% tab Calcul de synchronisation %}
+{% tab Syncing computation %}
 
 Sélectionnez le **calcul**, puis le calcul souhaité à synchroniser.
 

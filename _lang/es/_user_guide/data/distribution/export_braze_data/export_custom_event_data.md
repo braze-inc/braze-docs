@@ -12,18 +12,18 @@ tool: Reports
 
 > Esta página cubre la página del informe **Eventos personalizados** del panel, que te permite ver las ocurrencias de uno o más eventos personalizados a lo largo del tiempo. Si ves estadísticas detalladas de eventos personalizados o eventos personalizados por horas, tendrás la opción de ver también los datos por segmentos específicos.
 
-Puedes encontrar el **Informe de eventos personalizados** en **Análisis**.
+Encontrará el **Informe de eventos personalizados** en **Análisis**.
 
-Eventos personalizados]({% image_buster /assets/img_archive/Export_events.png %})
+![Eventos personalizados]({% image_buster /assets/img_archive/Export_events.png %})
 
-Puedes exportar los siguientes CSV:
+Puede exportar los siguientes CSV:
 
 - Eventos personalizados por fecha
     - (Opcional) Eventos personalizados para diferentes segmentos
-- Eventos personalizados por horas
+- Eventos personalizados por hora
     - (Opcional) Eventos personalizados para diferentes segmentos
 - Eventos personalizados por MAU
-- Eventos personalizados para diferentes segmentos
+- Eventos personalizados para distintos segmentos
 - Eventos personalizados por fórmula KPI
     - (Opcional) Eventos personalizados para diferentes segmentos
 

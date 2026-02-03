@@ -4,10 +4,10 @@ article_title: Datos personalizados
 page_order: 0
 layout: dev_guide
 guide_top_header: "Datos personalizados"
-guide_top_text: "Una de las mejores características de Braze es su flexibilidad: puedes configurar datos personalizados en tu aplicación y enviarlos a Braze junto con sus métricas asociadas. Comprueba cómo visitando los siguientes artículos."
+guide_top_text: "Una de las mejores características de Braze es su flexibilidad: puede configurar datos personalizados en su aplicación y enviarlos a Braze junto con las métricas asociadas. Compruebe cómo visitando los siguientes artículos."
 
 page_type: landing
-description: "En esta página encontrarás artículos sobre datos personalizados. Aquí puedes encontrar recursos sobre convenciones de nomenclatura de eventos, eventos y atributos del cliente, eventos de compra, bloqueo de datos de clientes y mucho más."
+description: "En esta página encontrarás artículos sobre datos personalizados. Aquí encontrará recursos sobre convenciones de nomenclatura de eventos, eventos y atributos personalizados, eventos de compra, bloqueo de datos personalizados, etc."
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
@@ -26,7 +26,7 @@ guide_featured_list:
   - name: Convenciones para nombrar eventos
     link: /docs/user_guide/data/activation/custom_data/event_naming_conventions/
     image: /assets/img/braze_icons/list.svg
-  - name: Gestión de datos personalizados
+  - name: Gestionar datos personalizados
     link: /docs/user_guide/data/activation/custom_data/managing_custom_data/
     image: /assets/img/braze_icons/check-square-broken.svg
   - name: Eventos recomendados

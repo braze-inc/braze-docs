@@ -1,6 +1,6 @@
 ---
 nav_title: Tapcart
-article_title: Intégration de Tapcart avec Braze
+article_title: Intégrer Tapcart à Braze
 description: "Découvrez l'intégration de Tapcart avec Braze."
 alias: /partners/tapcart/
 page_type: partner
@@ -30,8 +30,8 @@ Pour savoir comment intégrer Tapcart avec Braze, consultez [le guide d'intégra
 - Envois riches de messages push
 - Suivi et segmentation du parcours de l'utilisateur
 
-Notez que les fonctionnalités suivantes ne sont pas prises en charge actuellement : Personnalisation des Push Stories, des Web Push, des messages in-app.
+Les fonctionnalités suivantes ne sont pas prises en charge actuellement : Push Stories, Web Push, personnalisation des messages in-app.
 
 {% alert note %}
-Si vous avez des questions supplémentaires, veuillez contacter votre spécialiste en implémentation Tapcart ou envoyez un e-mail [à help@tapcart.co](mailto:help@tapcart.co).
+Si vous avez des questions supplémentaires, contactez votre spécialiste en implémentation Tapcart ou envoyez un e-mail [à help@tapcart.co](mailto:help@tapcart.co).
 {% endalert %}

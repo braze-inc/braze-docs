@@ -1,5 +1,5 @@
 ---
-nav_title: "Nutzer:in Objekt Nutzer-Alias"
+nav_title: "Nutzer-Alias Objekt"
 article_title: "API Nutzer:innen Alias Objekt"
 page_order: 11
 page_type: reference

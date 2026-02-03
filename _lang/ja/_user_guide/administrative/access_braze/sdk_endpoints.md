@@ -1,7 +1,7 @@
 ---
 nav_title: API と SDK のエンドポイント
 article_title: API と SDK のエンドポイント
-page_order: 1
+page_order: 2.4
 page_type: reference
 description: "このリファレンス記事には、利用可能な Braze インスタンスのダッシュボード URL、API エンドポイント、SDK エンドポイントの一覧があります。"
 

@@ -23,9 +23,9 @@ L'intégration de Braze et eduMe s'appuie sur le [contenu connecté]({{site.base
 | Condition | Description |
 |---|---|
 | Compte Edume | Un compte eduMe est nécessaire pour bénéficier de ce partenariat. |
-| Clé API eduMe | Vous devez demander une clé API à votre contact de satisfaction client eduMe. Cette clé sera utilisée lors de votre appel au contenu connecté de Braze. |
-| Secret de signature du lien Edume | Vous devez demander à votre contact de satisfaction client chez eduMe de mettre en place un secret de signature de lien pour votre entreprise. Ce secret est utilisé pour activer les liens fluides/sans heurts dans le contenu connecté. Vous n'aurez rien à faire avec ce secret. |
-| ID de groupe et de contenu eduMe | Ces identifiants sont nécessaires pour configurer vos appels au contenu connecté. Contactez votre service client eduMe pour obtenir ces identifiants. |
+| Clé API eduMe | Vous devez demander une clé API à votre contact de satisfaction client eduMe. Cette touche est utilisée dans votre appel de contenu connecté Braze. |
+| Secret de signature du lien Edume | Vous devez demander à votre contact de satisfaction client chez eduMe de mettre en place un secret de signature de lien pour votre entreprise. Ce secret est utilisé pour activer les liens fluides/sans heurts dans le contenu connecté. Vous n'avez rien à faire avec ce secret. |
+| ID de groupe et de contenu eduMe | Ces identifiants sont nécessaires pour configurer vos appels au contenu connecté. Contactez votre service client Edume pour obtenir ces identifiants. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Intégration
@@ -54,7 +54,7 @@ Access your onboarding course at:
   - Cours : `getCourseLink?moduleId=12087`
   - Leçon : `getLessonLink?lessonId=25805`
   - Enquête eNPS : `getSurveyLink?surveyId=654`<br><br>
-3. Les utilisateurs qui arrivent sur eduMe par ce lien seront ajoutés à une équipe ou à un groupe eduMe de votre choix. Remplacez `groupId` par l'ID de l'équipe ou du groupe Edume concerné. Vous utiliserez généralement l'ID de l'équipe, sauf pour les cours nécessitant une inscription, auquel cas vous devrez utiliser l'ID du groupe.<br><br>
-4. Inclure un champ approprié pour mapper le champ `externalUserId`. L'exemple d'appel de contenu connecté utilise l’ID `driver_id`, mais votre champ sera probablement différent. Cet ID sera disponible dans les rapports eduMe, ce qui vous permettra d'établir une corrélation avec vos systèmes.<br><br>
+3. Les utilisateurs qui arrivent sur Edume par ce lien sont ajoutés à une équipe ou un groupe eduMe de votre choix. Remplacez `groupId` par l'ID de l'équipe ou du groupe Edume concerné. Vous utilisez généralement l'ID de l'équipe, sauf pour les cours qui requièrent une inscription, auquel cas vous devez utiliser l'ID du groupe<br><br>
+4. Inclure un champ approprié pour mapper le champ `externalUserId`. L'exemple d'appel de contenu connecté utilise l’ID `driver_id`, mais votre champ sera probablement différent. Cet ID est disponible dans les rapports Edume, ce qui vous permet de les mettre en corrélation avec vos systèmes.<br><br>
 5. Enfin, personnalisez et testez votre message si nécessaire. Nous vous recommandons d'envoyer au moins un message de test, d'accéder au contenu eduMe, de terminer la leçon ou le cours et de vérifier que les analyses eduMe sont bien enregistrées. 
 

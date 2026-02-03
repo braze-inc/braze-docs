@@ -33,7 +33,7 @@ In Braze tritt eine der häufigsten Race-Conditions bei Nachrichten auf, die sic
 1. Ein Benutzer wird erstellt;
 2. Derselbe Nutzer:in wird sofort für eine Nachricht angesprochen, führt ein angepasstes Event durch oder protokolliert ein angepasstes Attribut.
 
-In manchen Fällen wird jedoch das zweite Ereignis zuerst ausgelöst. Dies bedeutet, dass eine Nachricht an einen Nutzer:innen gesendet werden soll, der noch nicht existiert. Infolgedessen erhält der Nutzer:in sie nie. Dies gilt auch für Ereignisse oder Attribute, bei denen versucht wird, das Ereignis oder Attribut in einem Nutzerprofil zu protokollieren, das noch nicht erstellt wurde.
+In manchen Fällen wird jedoch das zweite Ereignis zuerst getriggert. Dies bedeutet, dass eine Nachricht an einen Nutzer:innen gesendet werden soll, der noch nicht existiert. Infolgedessen erhält der Nutzer:in sie nie. Dies gilt auch für Ereignisse oder Attribute, bei denen versucht wird, das Ereignis oder Attribut in einem Nutzerprofil zu protokollieren, das noch nicht erstellt wurde.
 
 ### Bewährte Praktiken
 
@@ -48,7 +48,7 @@ Sie können diese Verzögerung auch im [Braze SDK]({{site.baseurl}}/developer_gu
 ## Szenario 2: Mehrere API-Endpunkte verwenden
 
 {% alert important %}
-Wir verwenden asynchrone Verarbeitung, um Geschwindigkeit und Flexibilität zu maximieren. Das bedeutet, wenn API-Aufrufe separat an uns gesendet werden, können wir nicht garantieren, dass sie in der Reihenfolge verarbeitet werden, in der sie gesendet wurden.
+Wir verwenden asynchrone Verarbeitung, um Geschwindigkeit und Flexibilität zu maximieren. Das bedeutet, dass wir, wenn API-Aufrufe separat an uns gesendet werden, nicht garantieren können, dass sie in der Reihenfolge verarbeitet werden, in der sie gesendet wurden.
 {% endalert %}
 
 Es gibt ein paar Szenarien, in denen mehrere API Endpunkte ebenfalls zu dieser Race-Condition führen können, z. B. wenn:
@@ -59,7 +59,7 @@ Es gibt ein paar Szenarien, in denen mehrere API Endpunkte ebenfalls zu dieser R
 Wenn Nutzer:innen Informationen über den [Endpunkt`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track) an Braze senden, kann es gelegentlich ein paar Sekunden dauern, bis sie verarbeitet werden. Das bedeutet, dass es bei gleichzeitigen Anfragen an die Endpunkte `/users/track` und Messaging wie `/campaign/trigger/send` keine Garantie dafür gibt, dass die Nutzer:innen aktualisiert werden, bevor eine Nachricht gesendet wird.
 
 {% alert note %}
-Wenn Nutzerattribute und Events in derselben Anfrage gesendet werden (entweder von `/users/track` oder vom SDK), dann verarbeitet Braze die Attribute vor den Events oder vor dem Versuch, eine Nachricht zu senden.
+Wenn Nutzer:innen-Attribute und Ereignisse in derselben Anfrage gesendet werden (entweder von `/users/track` oder vom SDK), dann verarbeitet Braze die Attribute vor den Ereignissen oder vor dem Versuch, eine Nachricht zu senden.
 {% endalert %}
 
 ### Bewährte Praktiken
@@ -104,7 +104,7 @@ Wenn der Trigger Ihrer Kampagne beispielsweise "Hat einen Kauf getätigt" lautet
 
 #### Vermeiden Sie Zielgruppen-Filter, die davon ausgehen, dass das auslösende Ereignis aktualisiert wurde.
 
-Diese bewährte Methode ähnelt der Vermeidung von redundanten Filtern mit dem Trigger-Ereignis. Normalerweise schlägt ein Filter, der davon ausgeht, dass das triggernde Ereignis im Nutzerprofil aktualisiert wurde, fehl.
+Diese bewährte Methode ähnelt der Vermeidung von redundanten Filtern mit dem Trigger-Ereignis. Ein Filter, der davon ausgeht, dass das triggernde Ereignis im Nutzerprofil aktualisiert wurde, schlägt normalerweise fehl.
 
 #### Liquid verwenden Abbrüche (nur Attribute)
 
@@ -124,5 +124,7 @@ In diesem Fall können Sie eine Trigger-Verzögerung in einer Kampagne implement
 #### Bestätigen Sie, wie die Nutzerdaten verwaltet werden
 
 Wenn eine Race-Condition bei der Auswertung des Canvas-Eingangs auftritt, können Nutzer:innen einen Canvas betreten, den sie eigentlich nicht betreten sollten. Das Profil des Nutzers könnte beispielsweise so eingestellt werden, dass es in die Zielgruppe aufgenommen wird, und anschließend aktualisiert werden, nachdem der Canvas die Nutzer:innen in die Warteschlange gestellt hat, damit sie nicht mehr für die Zielgruppe in Frage kommen. 
+
+Wenn ein Nutzer:innen das Canvas-Eingabe-Ereignis mehrmals innerhalb einer Sekunde triggert, erlaubt Braze nur eine Eingabe für diese Sekunde (auch wenn die erneute Eingabe aktiviert ist). Dies verhindert doppelte Eingänge, so dass die Gesamtzahl der Canvas-Einträge niedriger sein kann als die Gesamtzahl der triggernden Ereignisse.
 
 Wir empfehlen Ihnen, sich zu vergewissern, wie Nutzerdaten verwaltet und aktualisiert werden, insbesondere wann und wie bestimmte Attribute aktualisiert werden, z.B. über SDK, API, Batch-API und andere Methoden. Dies kann dabei helfen, zu erkennen und zu klären, warum ein Nutzer:innen eine Kampagne oder ein Canvas betreten hat und wann das Profil des Nutzers aktualisiert wurde.

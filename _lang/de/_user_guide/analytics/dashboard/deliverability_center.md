@@ -24,8 +24,8 @@ Bevor Sie sich mit dem Deliverability Center verbinden, müssen Sie ein Konto be
 2. Wählen Sie unten rechts das Plus-Symbol <i class="fas fa-plus-circle"></i> aus.
 3. Geben Sie Ihre Root- oder Subdomäne ein, um Ihre E-Mail-Adresse zu bestätigen. Wenn Sie die Root-Domain hinzufügen und bestätigen, wird die Verifizierung auch auf die Subdomains angewendet. Wenn Sie zum Beispiel `braze.com` bestätigen, können Sie später `demo.braze.com` und andere Subdomains hinzufügen, ohne diese separat verifizieren zu müssen.
 4. Google erstellt einen TXT-Eintrag, der direkt zum Domain-DNS hinzugefügt werden kann. Dieser gehört in der Regel der Person, die Ihr DNS verwaltet. Informationen und Anleitungen zur Aktualisierung Ihres DNS finden Sie unter [Domain-Verifizierung (für Hosts)](https://support.google.com/a/topic/1409901).
-5. Wählen Sie **Weiter**. <br>\![Eine Beispiel-Domain "demo.braze.com" zur Authentifizierung einer E-Mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. Nachdem der TXT-Eintrag zum DNS hinzugefügt wurde, kehren Sie zum Dashboard der Google Postmaster Tools zurück und wählen **Überprüfen**. Damit wird bestätigt, dass die Domain Ihnen gehört, damit Sie in Ihrem Postmaster-Konto auf die Zustellbarkeitsdaten von Gmail zugreifen können. <br> \![Eine Aufforderung, den Besitz der Domain "demo.braze.com" zu überprüfen.]({% image_buster /assets/img_archive/domain_verification.png %})
+5. Wählen Sie **Weiter**. <br>![Eine Beispiel-Domain "demo.braze.com" zur Authentifizierung einer E-Mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
+6. Nachdem der TXT-Eintrag zum DNS hinzugefügt wurde, kehren Sie zum Dashboard der Google Postmaster Tools zurück und wählen **Überprüfen**. Damit wird bestätigt, dass die Domain Ihnen gehört, damit Sie in Ihrem Postmaster-Konto auf die Zustellbarkeitsdaten von Gmail zugreifen können. <br> ![Eine Aufforderung, den Besitz der Domain "demo.braze.com" zu überprüfen.]({% image_buster /assets/img_archive/domain_verification.png %})
 
 {% alert tip %}
 Stellen Sie sicher, dass der TXT-Eintrag mit der übergeordnete Domain verknüpft ist und nicht mit der Subdomain, die Sie bei Braze verwenden.
@@ -42,13 +42,13 @@ Bevor Sie Ihr Zustellbarkeitscenter einrichten, überprüfen Sie, ob Ihre Domain
 Befolgen Sie diese Anleitung, um Google Postmaster einzubinden und das Deliverability Center einzurichten:
 
 1. Gehen Sie zu **Analytics** > E-Mail Performance.
-2. Wählen Sie den Tab **Zustellbarkeitscenter** aus. <br>\![Ein Zustellbarkeitscenter mit Google Postmaster ist nicht verbunden.]({% image_buster /assets/img_archive/deliverability_center1.png %})
+2. Wählen Sie den Tab **Zustellbarkeitscenter** aus. <br>![Ein Zustellbarkeitscenter, das nicht mit Google Postmaster verbunden ist.]({% image_buster /assets/img_archive/deliverability_center1.png %})
 3. Wählen Sie **Mit Google Postmaster verbinden**. 
 4. Wählen Sie Ihr Google-Konto aus und wählen Sie dann **Zulassen**, damit Braze die Metriken zum E-Mail-Verkehr für die in den Postmaster Tools registrierten Domains anzeigen kann. 
 
 Ihre überprüften Domains werden im Deliverability Center angezeigt. 
 
-\![Zwei für Google Postmaster überprüfte Domains mit mittlerer und niedriger Reputation.]({% image_buster /assets/img_archive/deliverability_center2.png %})
+![Zwei für Google Postmaster überprüfte Domains mit einer mittleren und einer niedrigen Reputation.]({% image_buster /assets/img_archive/deliverability_center2.png %})
 
 Sie können auch über das Braze-Dashboard auf Google Postmaster zugreifen, indem Sie zu **Partnerintegrationen** > **Technologiepartner** > **Google Postmaster** gehen. Nach der Integration zieht Braze die Reputations- und Fehlerdaten der letzten 30 Tage ab. Die Daten sind möglicherweise nicht sofort verfügbar und das Ausfüllen kann einige Minuten dauern.
 
@@ -111,7 +111,7 @@ Wenn Sie Ihr Hauptpostfach bei Microsoft haben, können Sie diese Integration nu
 Wenn Sie Ihre Daten nicht im Deliverability Center sehen, kontaktieren Sie den [Support]({{site.baseurl}}/user_guide/administrative/access_braze/support/) mit einer Liste Ihrer IP-Adressen.
 {% endalert %}
 
-Ein Beispiel für die Ergebnisse von Microsoft SNDS, einschließlich Beispiel-IPs, Empfänger:innen, RCPT-Befehle, Daten-Befehle, Filter-Ergebnis, Beschwerde-Rate, Beginn und Ende des Zeitraums für Trap-Nachrichten und Spam-Trap-Treffer.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
+![Ein Beispiel für die Ergebnisse von Microsoft SNDS, einschließlich Beispiel-IPs, Empfänger:innen, RCPT-Befehle, Daten-Befehle, Filter-Ergebnis, Beschwerde-Rate, Beginn und Ende des Zeitraums für Trap-Nachrichten und Spam-Trap-Treffer.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
 
 ### Metriken und Definitionen
 

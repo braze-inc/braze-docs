@@ -1,12 +1,12 @@
 ---
 nav_title: Liquid Code
-article_title: Generierung von Liquid Code mit BrazeAI
+article_title: Generieren Sie Liquid Code mit BrazeAI
 description: "In diesem Artikel erfahren Sie, wie der AI Liquid Assistant funktioniert und wie Sie ihn nutzen können, um Liquid-Snippets für Ihre Nachrichten zu erstellen."
 page_type: reference
 page_order: 0.0
 ---
 
-# Generierung von Liquid Code mit <sup>BrazeAITM</sup>
+# Generieren Sie Liquid Code mit <sup>BrazeAITM</sup>
 
 > Der <sup>BrazeAITM</sup> Liquid Assistant ist ein von <sup>BrazeAITM</sup> betriebener Chat-Assistent, der Ihnen hilft, das Liquid zu erzeugen, das Sie für die Personalisierung von Nachrichteninhalten benötigen.
 
@@ -32,7 +32,7 @@ Der Assistent arbeitet mit E-Mail Nachrichten und nicht mit Templates. Es funkti
 
 Um den BrazeAI<sup>TM</sup> Liquid Assistant zu starten, wählen Sie das KI-Assistenten-Symbol im Nachrichten-Editor.
 
-![Nachrichten-Editor mit dem KI-Assistenten.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
+![Nachrichtenersteller mit dem KI-Assistenten.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
 
 Sie können einen der mitgelieferten Prompts auswählen oder Ihre eigenen in das Textfeld eingeben.
 
@@ -52,19 +52,19 @@ Dieser Prompt generiert Liquid-Code, der eine Nachricht mit der verbleibenden Ze
 {% tab inspire me %}
 Diese Eingabeaufforderung erscheint, wenn Ihr Nachrichtenfeld einen Inhalt enthält. Nun wird eine Liste mit Optionen generiert, mit denen Sie Ihre Nachricht mit Liquid personalisieren können. 
 
-![Beispiel für die Ausgabe der Eingabeaufforderung "Inspire me".]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
+![Beispielausgabe für den Prompt "Inspiriere mich".]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab improve my liquid %}
 Diese Eingabeaufforderung erscheint, wenn Ihr Nachrichten-Editor Inhalt enthält. Wählen Sie diese Option, wenn Sie möchten, dass der Assistent Ihren Code effizienter und leichter zu lesen macht.
 
-![Beispiel für die Ausgabe der Aufforderung "Verbessern Sie mein Liquid".]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
+![Beispielausgabe für den Prompt "Verbesser mein Liquid".]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
 {% endtab %}
 {% endtabs %}
 
 Um Ihren Liquid-Code zu generieren, wählen Sie **Editor aktualisieren**.
 
-![KI-Assistenten-Fenster mit bereitgestellten Eingabeaufforderungen.]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
+![KI-Assistent-Fenster mit bereitgestellten Eingabeaufforderungen.]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
  
 Sie können eine weitere Nachricht mit demselben Prompt erstellen, indem Sie auf **Neu generieren** gehen. Um die Nachricht zu entfernen und zur vorherigen Nachricht zurückzukehren, wählen Sie **Aktualisierung rückgängig machen**.
 
@@ -72,12 +72,12 @@ Sie können eine weitere Nachricht mit demselben Prompt erstellen, indem Sie auf
 
 Die folgenden Attribute befinden sich derzeit im Beta-Stadium für den <sup>BrazeAITM</sup> Liquid Assistant:
 
-| Kriterium | Wissenstyp |
-| - | - |
-| Liquid (inkl. `for` Loops, `if` Anweisungen, Mathematik etc.) | Programmieren |
-| Standard-Benutzerattribute | Attribute |
-| Benutzerdefinierte Attribute, die einen dieser Datentypen haben: {::nomarkdown}<ul><li>Boolesche Werte</li><li>Zahlen</li><li>Strings</li><li>Arrays</li><li>Uhrzeit</li></ul>{:/} | Attribute |
-| Connected-Content | Programmieren |
+| Kriterium | Wissenstyp | 
+| - | - | 
+| Liquid (einschließlich `for` Schleifen, `if` Anweisungen, Mathe und andere) | Kodierung |
+| Standard- und Standardattribute für Nutzer:innen | Attribute |
+| Angepasste Attribute, die einen dieser Datentypen aufweisen: {::nomarkdown}<ul><li>Boolesche Werte</li><li>Zahlen</li><li>Strings</li><li>Arrays</li><li>Uhrzeit</li></ul>{:/} | Attribute |
+| Connected-Content | Kodierung |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Bewährte Praktiken

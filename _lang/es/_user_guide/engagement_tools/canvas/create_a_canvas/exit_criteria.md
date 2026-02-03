@@ -20,11 +20,11 @@ Consideremos otro ejemplo cuando se utilizan criterios de salida basados en el t
 
 ## Configuración de los criterios de salida
 
-En el paso **Audiencia objetivo** del creador de Canvas, puedes configurar los criterios de salida para identificar qué usuarios quieres que salgan de tu Canvas. 
+En el paso **Público objetivo** del constructor de Canvas, puede establecer criterios de salida para identificar qué usuarios desea que salgan de su Canvas. 
 
 Los criterios de salida incluyen un evento de excepción, que es la acción específica que puede provocar que los usuarios salgan del Canvas.
 
-\![Los criterios de salida configurados para reactivar la interacción de los usuarios que han navegado por productos pero aún no los han añadido a su cesta ni han realizado un pedido.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
+![Los criterios de salida configurados para reactivar la interacción de los usuarios que han navegado por los productos pero aún no los han añadido a su cesta ni han realizado un pedido.]({% image_buster /assets/img/exit_criteria.png %}){: style="max-width:90%;"}
 
 ### Seleccionar eventos de excepción {#exception-events}
 
@@ -34,9 +34,9 @@ Supongamos que tienes un Canvas configurado para promocionar un nuevo producto. 
 
 Otros eventos de excepción son:
 
-- Hacer una compra
+- Realizar una compra
 - Iniciar una sesión
-- Realización de un evento personalizado
+- Realizar un evento personalizado
 - Realización de un evento de conversión
 - Añadir una dirección de correo electrónico
 - Modificar el valor de un atributo personalizado
@@ -50,7 +50,7 @@ Otros eventos de excepción son:
 - Envío de un mensaje entrante LINE
 - Realización de un evento de actualización del carrito
 - Realización de un evento de pago completado
-- Realización de un evento de inicio de pago
+- Realización de un evento de salida iniciada
 
 #### Pasos programados
 
@@ -60,7 +60,7 @@ Si se programa un paso en Canvas, el usuario abandonará inmediatamente el Canva
 
 Si un paso en Canvas es desencadenado por un evento, se cancelará el último envío programado en cola desde ese desencadenante, pero el usuario permanecerá dentro del Canvas mientras dure la ventana. Eso significa que el usuario puede seguir recibiendo el paso si vuelve a realizar el evento desencadenante dentro de la ventana. Cuando pase la ventana, el usuario saldrá del Canvas.
 
-### Utilizar segmentos y filtros
+### Utilización de segmentos y filtros
 
 También puedes añadir segmentos y filtros en los criterios de salida. Esto significa que los usuarios que coincidan con el segmento y el filtro saldrán del Canvas y no recibirán más mensajería. 
 
@@ -83,7 +83,7 @@ Considera el siguiente ejemplo sobre cómo se calculan los análisis:
 1. Diez usuarios pasan por el Canvas.
 2. Tres usuarios realizan el evento de conversión en cinco minutos (el número de eventos de salida es tres, y el número de eventos de conversión es tres).
 3. Otros cinco usuarios salen del Canvas al cabo de cinco minutos, pero realizan el evento de conversión al cabo de dos días (el número de eventos de salida sigue siendo el mismo, pero el evento de conversión aumenta a ocho).
-4. Los dos últimos usuarios salen del Canvas al cabo de cinco minutos, pero no realizan el evento de conversión, o lo realizan al cabo de tres días y cinco minutos (no se contabilizan ni en los eventos de salida ni en las métricas de eventos de conversión).
+4. Los dos últimos usuarios salen del Canvas al cabo de cinco minutos, pero no realizan el evento de conversión, o lo realizan al cabo de tres días y cinco minutos (no se contabilizan ni en la métrica de eventos de salida ni en la de eventos de conversión).
 
 ## Ejemplo
 
@@ -95,6 +95,6 @@ Supongamos que queremos dirigirnos a usuarios que aún no han realizado ninguna 
 4. Para **filtrar**, selecciona **Comportamiento de compra** > **Número de compras** > **Producto comprado**.
 5. Configura el grupo de filtrado en `backpack-example exactly 1`. Esto significa que los usuarios que han comprado nuestro producto mochila saldrían del Canvas.
 
-\![Configuración de los Criterios de Salida con "Realiza cualquier compra" como evento de excepción, de modo que si un usuario realiza cualquier compra, entonces saldrá de este Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
+![Configuración de los Criterios de Salida con "Realiza cualquier compra" como evento de excepción, de modo que si un usuario realiza cualquier compra, entonces saldrá de este Canvas.]({% image_buster /assets/img_archive/exit_criteria_example.png %}){: style="max-width:80%;"}
 
 

@@ -54,7 +54,7 @@ Um eine SMS- oder RCS-Kampagne über Braze einzuführen, wählen Sie eine Abo-Gr
 In Übereinstimmung mit den internationalen [Telekommunikationsvorschriften und -richtlinien]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/) wird Braze niemals SMS oder RCS an Nutzer:in senden, die nicht die ausgewählte Abo-Gruppe abonniert haben.  
 {% endalert %}
 
-![SMS-Editor mit geöffnetem Abo-Gruppen-Dropdown und der Markierung "Messaging Dienst A für SMS" durch den Nutzer:innen.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
+![SMS-Editor mit geöffneter Dropdown-Liste der Abo-Gruppe und „Messaging-Dienst A für SMS“ vom Nutzer oder von der Nutzerin hervorgehoben.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
 
 ## Enablement von Abo-Gruppen
 
@@ -62,13 +62,13 @@ Um Abo-Gruppen für SMS, MMS oder RCS zu aktivieren, referenzieren Sie auf Folge
 
 {% tabs local %}
 {% tab SMS %}
-Während Ihres SMS-Onboarding-Prozesses wird ein Braze Onboarding-Manager Abonnementgruppen für Ihr Dashboard-Konto einrichten. Er wird mit Ihnen zusammen festlegen, wie viele Abonnementgruppen Sie benötigen, und die entsprechenden Telefonnummern für den Versand zu Ihren Abonnementgruppen hinzufügen. Der Zeitrahmen für die Einrichtung einer Abonnementgruppe hängt von der Art der Telefonnummern ab, die Sie hinzufügen möchten. Shortcode-Anwendungen können beispielsweise zwischen 8 bis 12 Wochen dauern, während Langcodes innerhalb eines Tages eingerichtet werden können. Wenn Sie Fragen zur Einrichtung Ihres Braze-Dashboards haben, wenden Sie sich an Ihren Braze-Vertreter, um Unterstützung zu erhalten.  
+Während Ihres SMS-Onboarding-Prozesses wird ein Braze Onboarding-Manager Abonnementgruppen für Ihr Dashboard-Konto einrichten. Er wird mit Ihnen zusammen festlegen, wie viele Abonnementgruppen Sie benötigen, und die entsprechenden Telefonnummern für den Versand zu Ihren Abonnementgruppen hinzufügen. Der Zeitrahmen für die Einrichtung einer Abonnementgruppe hängt von der Art der Telefonnummern ab, die Sie hinzufügen möchten. Shortcode-Anwendungen können beispielsweise zwischen 8 bis 12 Wochen dauern, während Langcodes innerhalb eines Tages eingerichtet werden können. Wenn Sie Fragen zur Einrichtung Ihres Braze-Dashboards haben, wenden Sie sich bitte an die Vertretung von Braze, um Unterstützung zu erhalten.  
 {% endtab %}
 
 {% tab MMS %}
 Um eine MMS-Nachricht senden zu können, muss mindestens eine Nummer in Ihrer Abonnementgruppe für den Versand von MMS aktiviert sein. Dies wird durch einen Tag angezeigt, der sich neben der Abo-Gruppe befindet. 
 
-![Abo-Gruppe mit hervorgehobenem "Messaging Dienst A für SMS" in der Auswahlliste. Dem Entry ist der Tag „MMS“ vorangestellt.]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
+![Dropdown-Menü Abonnementgruppe mit der Markierung "Nachrichtendienst A für SMS". Dem Entry ist der Tag „MMS“ vorangestellt.]({% image_buster /assets/img/sms/mms_sub_group_tag.png %}){: style="max-width:40%"}
 {% endtab %}
 
 {% tab RCS %}
@@ -99,7 +99,7 @@ Definieren Sie Ihre Zielgruppe mit einer der folgenden Methoden. Gehen Sie dann 
 
 | Methode                          | Beschreibung                                                                                                                                                                                                 |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Ein Segment erstellen**         | Erstellen Sie ein Segment, das alle Nutzer:innen einer Abo-Gruppe oder eine Teilmenge mit Hilfe von Segmentierungsfiltern (e.g., zufällige 5-10%) umfasst. Segmente werden vor jedem Versand aktualisiert, um Ihre aktuelle Nutzer:innen-Basis widerzuspiegeln.        |
+| **Ein Segment erstellen**         | Erstellen Sie ein Segment, das alle Nutzer:innen einer Abo-Gruppe oder eine Teilmenge mit Hilfe von Segmentierungsfiltern (z.B. zufällige 5-10%) umfasst. Segmente werden vor jedem Versand aktualisiert, um Ihre aktuelle Nutzer:innen-Basis widerzuspiegeln.        |
 | **Kampagne oder Canvas Filter anwenden** | Verfeinern Sie die Zielgruppe im **Target Audience-Schritt** Ihrer Kampagne oder Ihres Canvas. Passen Sie die Targeting-Optionen an, ohne die Seite zu verlassen, um noch flexibler zu sein.                                         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
@@ -126,7 +126,7 @@ Fügen Sie einen Nutzer:innen-Update-Schritt zu Ihrem Canvas hinzu. Im Schritt �
 ```
 {% endraw %}
 
-!["User Update Object", das den zuvor angegebenen JSON Code enthält.]({% image_buster /assets/img/sms/user_update_object.png %})
+!["Nutzer:innen Update Object", das den zuvor angegebenen JSON Code enthält.]({% image_buster /assets/img/sms/user_update_object.png %})
 
 ### Schritt 4: Testen Sie das Canvas
 

@@ -4,7 +4,7 @@ article_title: ユーザーを削除する
 page_order: 4.2
 toc_headers: h2
 description: "個々のユーザーまたはユーザーのSegmentをBraze ダッシュボードから直接削除する方法について説明します。"
-alias: /user_guide/data/unification/user_data/delete_users/
+alias: /delete_users/
 hidden: true
 ---
 
@@ -13,7 +13,7 @@ hidden: true
 > 個々のユーザーまたはユーザーのSegmentをBraze ダッシュボードから直接削除する方法について説明します。
 
 {% alert important %}
-この機能は現在早期アクセス段階です。参加したい場合は、顧客のサクセスマネージャーにお問い合わせください。
+この機能の早期アクセスは一時的に終了します。詳しくは、顧客のサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
 ## 前提条件

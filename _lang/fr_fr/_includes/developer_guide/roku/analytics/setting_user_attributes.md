@@ -21,47 +21,47 @@ Braze propose des méthodes prédéfinies pour définir les attributs utilisateu
 Pour définir un attribut par défaut, appelez la méthode correspondante sur l'objet `m.Braze`.
 
 {% tabs local %}
-{% tab Prénom %}
+{% tab First name %}
 ```brightscript
 m.Braze.setFirstName("Alex")
 ```
 {% endtab %}
-{% tab Nom de famille %}
+{% tab Last name %}
 ```brightscript
 m.Braze.setLastName("Smith")
 ```
 {% endtab %}
-{% tab E-mail %}
+{% tab Email %}
 ```brightscript
 m.Braze.setEmail("alex@example.com")
 ```
 {% endtab %}
-{% tab Genre %}
+{% tab Gender %}
 ```brightscript
 m.Braze.setGender("m") ' Accepts: "m", "f", "o", "n", "u", "p"
 ```
 {% endtab %}
-{% tab Date de naissance %}
+{% tab Birth date %}
 ```brightscript
 m.Braze.setDateOfBirth(1990, 5, 15) ' Year, month, day
 ```
 {% endtab %}
-{% tab Pays %}
+{% tab Country %}
 ```brightscript
 m.Braze.setCountry("United States")
 ```
 {% endtab %}
-{% tab Langue %}
+{% tab Language %}
 ```brightscript
 m.Braze.setLanguage("en")
 ```
 {% endtab %}
-{% tab Ville d'origine %}
+{% tab Home city %}
 ```brightscript
 m.Braze.setHomeCity("New York")
 ```
 {% endtab %}
-{% tab Numéro de téléphone %}
+{% tab Phone number %}
 ```brightscript
 m.Braze.setPhoneNumber("+1234567890")
 ```
@@ -75,7 +75,7 @@ Outre les attributs par défaut, Braze vous permet de définir des attributs per
 ### Définition des attributs personnalisés
 
 {% tabs %}
-{% tab Chaîne de caractères %}
+{% tab String %}
 Pour donner à un attribut personnalisé une valeur `string`:
 
 ```brightscript
@@ -83,7 +83,7 @@ m.Braze.setCustomAttribute("stringAttribute", "stringValue")
 ```
 {% endtab %}
 
-{% tab Entier %}
+{% tab Integer %}
 Pour définir un attribut personnalisé avec une valeur `integer`:
 
 ```brightscript
@@ -91,7 +91,7 @@ m.Braze.setCustomAttribute("intAttribute", 5)
 ```
 {% endtab %}
 
-{% tab Points flottants %}
+{% tab Floating-points %}
 Braze traite les valeurs `float` et `double` exactement de la même manière. Pour définir un attribut personnalisé avec l'une ou l'autre valeur :
 
 ```brightscript
@@ -99,7 +99,7 @@ m.Braze.setCustomAttribute("floatAttribute", 3.5)
 ```
 {% endtab %}
 
-{% tab Booléen %}
+{% tab Boolean %}
 Pour définir un attribut personnalisé avec une valeur `boolean`:
 
 ```brightscript
@@ -117,7 +117,7 @@ m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
 ```
 {% endtab %}
 
-{% tab Réseau %}
+{% tab Array %}
 Pour définir un attribut personnalisé avec une valeur `array`:
 
 ```brightscript

@@ -1,5 +1,5 @@
 ---
-nav_title: "Canvas Eingangs-Eigenschaften Objekt"
+nav_title: "Canvas Entry Eigenschaften Objekt"
 article_title: API Canvas Eingang-Eigenschaften Objekt
 page_order: 2
 page_type: reference

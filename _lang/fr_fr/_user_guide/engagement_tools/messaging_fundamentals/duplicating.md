@@ -1,7 +1,7 @@
 ---
 nav_title: Duplication
 article_title: Duplication
-page_order: 5
+page_order: 5.5
 page_type: reference
 description: "Cet article de référence explique comment dupliquer vos campagnes et vos canevas."
 tool:
@@ -25,7 +25,7 @@ Vous pouvez également [copier votre campagne]({{site.baseurl}}/user_guide/engag
 {% tab campaign %}
 Pour dupliquer une campagne :
 
-1. Allez dans **Envoi de messages** > Campagnes.
+1. Sélectionnez **Envoi de messages** > **Campagnes**.
 2. Passez la souris sur la campagne et sélectionnez <i class="fas fa-gear"></i> **Plus d'actions.**
 3. Sélectionnez **Dupliquer**.
 {% endtab %}
@@ -33,7 +33,7 @@ Pour dupliquer une campagne :
 {% tab canvas %}
 Pour dupliquer une toile :
 
-1. Allez dans **Messagerie** > **Canvas**.
+1. Allez dans **Messagerie** > **Canvas.**
 2. Passez la souris sur la ligne Canvas et sélectionnez <i class="fas fa-ellipsis-vertical"></i> **More actions.**
 3. Sélectionnez **Dupliquer**.
 

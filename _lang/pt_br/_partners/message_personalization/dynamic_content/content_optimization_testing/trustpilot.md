@@ -33,7 +33,7 @@ Antes de começar, você precisará do seguinte:
 1. [Faça login no Trustpilot](https://app.contentful.com/login) com suas credenciais.  
 2. Crie ou recupere a chave e o segredo da API no painel do Trustpilot acessando **Integrações** > **Desenvolvedores** > **APIs**. Se você ainda não tiver uma chave de API, crie uma nova:  
    1. Acesse **Nome da Aplicação** > **Criar Aplicação**  
-   2. Copie sua chave de API e segredo, que serão usados para autenticar suas solicitações de Conteúdo Conectado.
+   2. Copie sua chave e segredo da API, que serão usados para autenticar suas solicitações de Conteúdo Conectado.
 
 ## Enviando convites para avaliações do Trustpilot
 
@@ -71,12 +71,12 @@ https://api.trustpilot.com/v1/oauth/oauth-business-users-for-applications/access
 3\. Adicione o token de acesso ao cabeçalho da solicitação da sua campanha de webhook.
 
 {% alert tip %}
-Consulte [a documentação do Trustpilot](https://support.trustpilot.com/hc/en-us/community/posts/11947443933074-Braze-Trustpilot-Setup-Instructions-for-triggering-API-invites) para obter instruções mais detalhadas.
+Consulte a [documentação do Trustpilot](https://support.trustpilot.com/hc/en-us/community/posts/11947443933074-Braze-Trustpilot-Setup-Instructions-for-triggering-API-invites) para instruções mais detalhadas.
 {% endalert %}
 
 ## Personalizando mensagens com insights de avaliações de produtos
 
-Na sua campanha Braze, faça uma chamada de Conteúdo Conectado para solicitar dados do [Ponto de resumo de avaliações de produtos do Trustpilot](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}). Este método recupera avaliações de produtos para SKUs específicos da unidade de negócios. O seguinte exemplo especifica o SKU do produto específico e filtra por avaliações de cinco estrelas.
+Na sua campanha Braze, faça uma chamada de Conteúdo Conectado para solicitar dados do [Ponto de resumo de avaliações de produtos do Trustpilot](https://developers.trustpilot.com/product-reviews-api#get-product-reviews-summary) ({% raw %}`https://api.trustpilot.com/v1/product-reviews/business-units/{businessUnitId}`{% endraw %}). Este método recupera avaliações de produtos para SKUs específicos da unidade de negócios. O seguinte exemplo especifica o SKU do produto específico e filtra para avaliações de cinco estrelas.
 
 {% raw %}
 ```liquid

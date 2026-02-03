@@ -35,23 +35,23 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 
 Before you create your data connection within Treasure Data, you'll need to authenticate. First, select **Integrations Hub**, then **Catalog**.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
+![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
 
 Search for the Braze Integration in the **Catalog**, then hover over the icon and select **Create Authentication**. Enter your credentials, name your authentication, then select **Done**.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
+![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
 
-### Step 3: Define your cohort Audience
+### 3단계: Define your cohort Audience
 
 Sync your cohorts to Braze through an activation in the **Audience Studio** or by executing a query in the **Data Workbench**.
 
 {% alert important %}
-Only users who already exist within Braze will be added or removed from a cohort. Cohort Import will not create new users in Braze.
+이미 Braze 내에 존재하는 사용자만 코호트에 추가되거나 제거됩니다. Cohort Import will not create new users in Braze.
 {% endalert %}
 
 {% tabs local %}
 {% tab Data Workbench %}
-#### Step 3.1: Define your query
+#### 3.1 단계: Define your query
 
 {% alert note %}
 Query columns must be specified with the exact column names and data type. The query columns must include at least one of the columns: `user_ids`, `device_ids`, or braze alias column match with configuration on the UI. Only user profiles that exist within Braze will be added to a cohort. Cohort Import will not create new user profiles.
@@ -61,7 +61,7 @@ Query columns must be specified with the exact column names and data type. The q
 2. Select **New Query**.
 3. Run the query to validate the result set.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
+![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
 
 ##### Use case: Syncing cohorts by identifier
 
@@ -160,7 +160,7 @@ After running the query, these device IDs will be added to the cohort in Braze:
 
 Once the query has been built, select **Export Results**. You can select an existing authentication, such as the one created in the last steps, or create a new authentication to be used for output. 
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
+![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
 
 
 | Export Result Mapping |	Description	| 
@@ -179,13 +179,13 @@ Save the query with a name and run, or just run the query. Upon successful compl
 
 {% endtab %}
 {% tab Audience Studio %}
-#### Step 3.1: Create an activation
+#### 3.1 단계: Create an activation
 
 Create a new segment or choose an existing segment to sync to Braze as a cohort. Within the segment, choose **Create activation**.
 
 #### Step 3.2: Fill out your activation details
 
-![Treasure Data Integrations Activation Details]({% image_buster /assets/img/treasure_data/cohort/cohort7.png %}) 
+![Treasure Data 통합 활성화 세부 정보]({% image_buster /assets/img/treasure_data/cohort/cohort7.png %}) 
 
 | Activation Detail Setting |	Description	| 
 | ----------- | ----------- |
@@ -200,7 +200,7 @@ Create a new segment or choose an existing segment to sync to Braze as a cohort.
 
 #### Step 3.3: Set up output mapping
 
-![Treasure Data Integrations Activation Output Mapping]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
+![트레저 데이터 통합 활성화 출력 매핑]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
 
 | Activation Output Mapping |	Description	| 
 | ----------- | ----------- |
@@ -219,7 +219,7 @@ All non-relevant or misnamed column names will be ignored. You may choose to use
 
 Define your desired sync schedule and save your activation.
 
-![Treasure Data Integrations Activation Schedule]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
+![Treasure Data 통합 활성화 일정]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -227,7 +227,7 @@ Define your desired sync schedule and save your activation.
 
 In Braze, navigate to **Segments**, create a new segment, and select **Treasure Data Cohorts** as your filter. From here, you can choose which Treasure Data cohort you wish to include. After your Treasure Data cohort segment is created, you can select it as an audience filter when creating a campaign or Canvas.
 
-![Treasure Data Integrations Hub Catalog]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+![Treasure Data 통합 허브 카탈로그]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
 ## User Matching
 

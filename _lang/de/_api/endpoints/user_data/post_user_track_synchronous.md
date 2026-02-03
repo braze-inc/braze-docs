@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Nutzer:innen verfolgen (Synchron)"
-article_title: "POST: Nutzer:innen verfolgen (Synchron)"
+nav_title: "POST: Nutzer:innen erstellen und aktualisieren (synchron)"
+article_title: "POST: Nutzer:innen erstellen und aktualisieren (Synchron)"
 alias: /post_user_track_synchronous/
 layout: api_page
 page_order: 4.5
@@ -9,15 +9,15 @@ description: "Dieser Artikel beschreibt Details zum synchronen Tracking von Nutz
 
 ---
 {% api %}
-# Nutzer:innen tracken (synchron)
+# Nutzer:innen erstellen und aktualisieren (synchron)
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/users/track/sync
+/benutzer/track/sync
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um angepasste Events und Käufe aufzuzeichnen und die Attribute des Nutzerprofils synchron zu aktualisieren. Dieser Endpunkt funktioniert ähnlich wie der [Endpunkt `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), der die Nutzerprofile asynchron aktualisiert.
 
 {% alert important %}
-Dieser Endpunkt befindet sich derzeit in der Beta-Phase. Kontaktieren Sie Ihren Braze-Konto Manager:in, wenn Sie an dieser Beta teilnehmen möchten.
+Dieser Endpunkt befindet sich derzeit in einer **begrenzten Beta-Phase**. Obwohl wir im Moment keine neuen Kunden in die Beta-Version aufnehmen, lassen Sie Ihren Braze-Konto Manager:in wissen, ob Sie denken, dass dieses Feature für Ihre Braze Integration nützlich sein könnte.
 {% endalert %}
 
 ## Synchrone und asynchrone API-Aufrufe
@@ -58,7 +58,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ### Parameter der Anfrage
 
 {% alert important %}
-Für jede in der folgenden Tabelle aufgeführte Komponente einer Anfrage ist eine der folgenden Angaben erforderlich: `external_id`, `user_alias`, `braze_id`, `email` oder `phone`.
+Für jede in der folgenden Tabelle aufgeführte Komponente der Anfrage müssen Sie eine der folgenden Angaben machen: `external_id`, `user_alias`, `braze_id`, `email`, oder `phone`.
 {% endalert %}
 
 | Parameter | Erforderlich | Datentyp | Beschreibung |
@@ -74,14 +74,14 @@ Wenn Sie die [Anfrageparameter](#request-parameters) dieses Endpunkts verwenden,
 
 ### Erfolgreiche Nachricht
 
-Erfolgreiche Nachrichten liefern die folgende Antwort, die Informationen über die aktualisierten Nutzerprofildaten enthält.
+Erfolgreiche Nachrichten liefern die folgende Antwort, die Informationen über die Nutzerprofildaten enthält, die Braze aktualisiert hat.
 
 ```json
 {
     "users": (optional, object), the identifier of the user in the request. May be empty if no users are found and _update_existing_only key is set to true,
-        "custom_attributes": (optional, object), the custom attributes as a result of the request. Only custom attributes from the request will be listed,
-        "custom_events": (optional, object), the custom events as a result of the request. Only custom events from the request will be listed,
-        "purchase_events": (optional, object), the purchase events as a result of the request. Only purchase events from the request will be listed,
+        "custom_attributes": (optional, object), the custom attributes as a result of the request. Braze lists only custom attributes from the request,
+        "custom_events": (optional, object), the custom events as a result of the request. Braze lists only custom events from the request,
+        "purchase_events": (optional, object), the purchase events as a result of the request. Braze lists only purchase events from the request,
     },
     "message": "success"
 ```
@@ -146,7 +146,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Ein angepasstes Event per E-Mail aktualisieren
@@ -201,7 +201,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ### Update eines Kauf-Events durch Nutzer:in-Alias
@@ -215,8 +215,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 --data-raw '{
   "purchases" : [
     {
-      "user_alias" : { 
-          "alias_name" : "device123", 
+      "user_alias" : {
+          "alias_name" : "device123",
           "alias_label" : "my_device_identifier"
       }
       "app_id" : "11ae5b4b-2445-4440-a04f-bf537764c9ad",
@@ -225,13 +225,13 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
       "price" : 219.98,
       "time" : "2022-12-06T19:20:45+01:00",
       "properties" : {
-          "products" : [ 
+          "products" : [
             {
               "name": "Monitor",
               "category": "Gaming",
               "product_amount": 19.99
             },
-            { 
+            {
               "name": "Gaming Keyboard",
               "category": "Gaming ",
               "product_amount": 199.99
@@ -249,8 +249,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
 {
     "users": [
         {
-          "user_alias" : { 
-            "alias_name" : "device123", 
+          "user_alias" : {
+            "alias_name" : "device123",
             "alias_label" : "my_device_identifier"
           },
           "purchase_events": [
@@ -264,18 +264,18 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track/sync' 
         }
     ],
     "message": "success"
-} 
+}
 ```
 
 ## Häufig gestellte Fragen
 
 ### Soll ich den asynchronen oder den synchronen Endpunkt verwenden?
 
-Für die meisten Updates von Profilen eignet sich der Endpunkt `/users/track` am besten, da er ein höheres Rate-Limit hat und Sie Anfragen in Stapeln bearbeiten können. Der Endpunkt `/users/track/sync` ist jedoch nützlich, wenn Sie Race-Conditions aufgrund von schnellen, aufeinanderfolgenden Anfragen für denselben Nutzer:innen erleben.
+Für die meisten Updates von Profilen eignet sich der Endpunkt `/users/track` am besten, da er ein höheres Rate-Limit hat und die Flexibilität bietet, Anfragen in Stapeln zu verarbeiten. Der Endpunkt `/users/track/sync` ist jedoch nützlich, wenn Sie Race-Conditions aufgrund von schnellen, aufeinanderfolgenden Anfragen für denselben Nutzer:innen erleben.
 
 ### Weicht die Antwortzeit vom Endpunkt `/users/track` ab?
 
-Bei einem synchronen Aufruf wartet die API, bis die Anfrage abgeschlossen ist, um eine Antwort zurückzugeben. Daher dauern synchrone Anfragen im Durchschnitt länger als asynchrone Anfragen an `/users/track`. Für die meisten Anfragen können Sie innerhalb von Sekunden eine Antwort erwarten.
+Bei einem synchronen Aufruf wartet die API, bis Braze die Anfrage abgeschlossen hat, um eine Antwort zurückzugeben. Folglich brauchen synchrone Anfragen im Durchschnitt länger als asynchrone Anfragen an `/users/track`. Für die meisten Anfragen können Sie innerhalb von Sekunden eine Antwort erwarten.
 
 ### Kann ich mehrere Anfragen gleichzeitig senden?
 

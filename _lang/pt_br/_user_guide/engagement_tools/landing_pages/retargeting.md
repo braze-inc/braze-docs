@@ -1,43 +1,43 @@
 ---
 nav_title: Redirecionamento de usuários
-article_title: Redirecionamento de usuários por meio de uma página de destino
-description: "Saiba como redirecionar os usuários que enviaram um formulário por meio de uma página de destino."
+article_title: Redirecionar usuários através de uma landing page
+description: "Aprenda como redirecionar usuários que enviaram um formulário através de uma landing page."
 page_order: 3
 ---
 
-# Redirecionamento de usuários por meio de uma página de destino
+# Redirecionar usuários através de uma landing page
 
-> Saiba como redirecionar os usuários que enviaram um formulário por meio de uma página de destino, criando um segmento dedicado ou acionando uma mensagem quando o formulário é enviado.
+> Saiba como redirecionar os usuários que enviaram um formulário por meio de uma landing page, criando um segmento dedicado ou enviando uma mensagem quando o formulário for enviado.
 
 ## Pré-requisitos
 
-Antes de começar, você precisará criar uma [página de destino]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/).
+Antes de começar, você precisará criar uma [landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/).
 
 ## Redirecionamento de usuários
 
-O Braze rastreia automaticamente quando um usuário envia um formulário de página de destino. Você pode visualizar o número total de envios de um formulário na [análise da página de destino]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#viewing-analytics). No entanto, para o redirecionamento específico do usuário, você precisará redirecionar os usuários por meio do formulário da sua landing page usando um dos seguintes métodos:
+O Braze rastreia automaticamente quando um usuário envia um formulário de landing page. Você pode visualizar o número total de envios de um formulário na [análise de dados da landing page]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/creating_pages/#viewing-analytics). No entanto, para redirecionamento específico do usuário, será necessário redirecionar os usuários por meio do formulário da landing page usando um dos seguintes métodos:
 
-- **Usando um segmento:** Você pode criar um novo segmento para identificar automaticamente os usuários que enviaram ou não um formulário de landing page.
-- **Usando um acionador de mensagem:** Você pode configurar um acionador de mensagens para enviar mensagens automaticamente aos usuários ou inseri-los em um Canvas depois que eles enviarem o formulário.
+- **Usando um segmento:** É possível criar um novo segmento para identificar automaticamente os usuários que enviaram ou não um formulário da landing page.
+- **Usando um disparador de mensagens:** É possível configurar um disparador de mensagens para enviar mensagens automaticamente aos usuários ou inseri-los em um Canva depois que eles enviarem o formulário.
 
 {% tabs local %}
 {% tab Using a segment %}
-Quando você [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), no grupo "Retargeting", escolha **Formulário enviado na página de destino**.
+Quando você [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), no grupo "Redirecionamento", escolha **Formulário enviado na Landing Page**.
 
-Criação de segmento com o grupo de filtros selecionado como "Formulário enviado na página de destino".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
+![Criação de segmento com o Grupo de Filtro selecionado como "Formulário Enviado na Landing Page".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
-A partir daí, você pode segmentar os usuários com base no fato de eles terem ou não enviado um formulário para a sua página de destino.
+A partir daqui, você pode segmentar usuários com base em se eles enviaram ou não um formulário de landing page para sua landing page.
 {% endtab %}
 
 {% tab Using a message trigger %}
-Quando você escolher a opção de entrega para sua [campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/), selecione **Action Based Delivery (Entrega baseada em ação**) e, em seguida, **o formulário Submitted Landing Page (Página de destino enviada**).
+Quando você escolher sua opção de entrega para sua [campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) ou [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/), selecione **Entrega Baseada em Ação**, então **Formulário Enviado da Landing Page**.
 
-Todos os usuários que enviarem um formulário por meio desse formulário da página de destino receberão uma mensagem por meio do canal de mensagens escolhido ou entrarão no Canvas escolhido.
+Todos os usuários que enviarem um formulário por meio desse formulário da landing page receberão um envio de mensagens pelo canal de envio de mensagens escolhido ou entrarão no Canva escolhido.
 
-\![Ação de acionamento da página de destino em mensagens.]({% image_buster /assets/img/landing_pages/trigger.png %})
+![Ação-gatilho da landing page na mensagem.]({% image_buster /assets/img/landing_pages/trigger.png %})
 
 {% alert note %}
-A opção de entrega baseada em ação para páginas de destino não está disponível para mensagens in-app. Para segmentar usuários que enviaram um formulário em uma página de destino com uma mensagem in-app, selecione o filtro **Formulário enviado na página de destino** nas **Opções de segmentação** da sua campanha.
+A opção de entrega baseada em ação para landing pages não está disponível para mensagens no app. Para direcionar usuários que enviaram um formulário em uma landing page com uma mensagem no app, selecione o filtro **Formulário Enviado na Landing Page** nas **Opções de Direcionamento** da sua campanha.
 {% endalert %}
 
 {% endtab %}

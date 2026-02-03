@@ -40,7 +40,7 @@ Bei Canvas-Schritten mit einem durch eine Aktion getriggerter Entry können Nutz
 
 Sie können wählen, wann die In-App-Nachricht abläuft. Während dieser Zeit bleibt die In-App-Nachricht stehen und wartet darauf, angesehen zu werden, bis sie das Ablaufdatum erreicht hat. Nachdem die In-App-Nachricht gesendet wurde, kann sie einmalig angesehen werden.
 
-![Der Abschnitt Message Controls eines Nachrichtenschritts für eine In-App-Nachricht. Die In-App-Nachricht läuft drei Tage nach der Verfügbarkeit des Schritts ab.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
+![Der Abschnitt Nachrichtensteuerung eines Nachrichtenschritts für eine In-App-Nachricht. Die In-App-Nachricht läuft drei Tage nach der Verfügbarkeit des Schritts ab.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Option | Beschreibung | Beispiel |
 |---|---|---|
@@ -241,4 +241,4 @@ Im Folgenden finden Sie einige Überlegungen zum Versenden von In-App-Nachrichte
 
 - Wenn der Nutzer die App nie neu startet oder nie eine Sitzung beginnt, kann die App nicht herausfinden, ob der Nutzer für die In-App-Nachricht berechtigt ist, d.h. es wird keine In-App-Nachricht versendet.
 - Wenn der erste Klick erfolgt und es eine Canvas-Kontextvariable gibt (Canvas-Eingangs-Eigenschaften) und ein Nutzer:innen fünfmal in ein Canvas eintritt, nimmt Braze den fünften Eingang und verwendet diese Kontextvariable in der In-App-Nachricht.
-- Ein Nutzer:innen kann jeweils nur 10 In-App-Nachrichten erhalten. Wenn ein Nutzer:innen zum Beispiel für 10 In-App-Nachrichten verschiedene Canvas-Schritte durchläuft, können Sie nur bis zu 10 dieser Schritte haben.
+- Ein Nutzer:innen kann bis zu 10 In-App-Nachrichten innerhalb desselben Canvas-Schritts erhalten. Wenn ein Canvas beispielsweise einen erneuten Eingang zulässt und ein Nutzer:innen 11 Mal den Canvas betritt, werden ihm nur 10 In-App-Nachrichten geschickt, wenn keine abgelaufen sind.

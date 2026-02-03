@@ -6,8 +6,8 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp es una popular plataforma de mensajería entre pares utilizada en todo el mundo que ofrece a las empresas mensajes basados en conversaciones. El canal de mensajería de WhatsApp ofrece una forma directa de llegar a usuarios y clientes en la plataforma de WhatsApp. <br><br>**La disponibilidad de WhatsApp depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar."
-description: "En esta página de destino encontrarás todo lo relacionado con WhatsApp: cómo crear una campaña de WhatsApp, adhesiones voluntarias, respuestas rápidas, informes y mucho más."
+guide_top_text: "WhatsApp es una popular plataforma de mensajería peer-to-peer utilizada en todo el mundo que ofrece mensajería basada en conversaciones para empresas. El canal de mensajería WhatsApp ofrece una forma directa de llegar a los usuarios y clientes de la plataforma WhatsApp. <br><br>**La disponibilidad de WhatsApp depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.**"
+description: "Esta página de destino contiene información sobre WhatsApp, como por ejemplo cómo crear una campaña de WhatsApp, las opciones de inclusión y exclusión, las respuestas rápidas, los informes y mucho más."
 search_rank: 3
 alias: /whatsapp/
 
@@ -16,7 +16,10 @@ guide_featured_list:
 - name: "Configuración de WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
   image: /assets/img/braze_icons/whatsapp.svg
-- name: "Grupo de suscripción de WhatsApp"
+- name: "Trae tu propio conector de WhatsApp"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "Grupo de suscripción a WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
   image: /assets/img/braze_icons/table.svg
 - name: "Números de teléfono de usuario"
@@ -28,10 +31,10 @@ guide_featured_list:
 - name: "Reorientación de usuarios"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting/
   image: /assets/img/braze_icons/users-01.svg
-- name: "Adhesión voluntaria y exclusión voluntaria"
+- name: "Adhesión voluntaria y cancelación"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs/
   image: /assets/img/braze_icons/message-dots-circle.svg
-- name: "Usuarios de mensajería"
+- name: "Mensajería de usuarios"
   link: /docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/
   image: /assets/img/braze_icons/message-chat-circle.svg
 - name: "Tratamiento de números de teléfono desconocidos"

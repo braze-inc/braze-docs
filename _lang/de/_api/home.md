@@ -3,8 +3,8 @@ page_order: 0
 nav_title: Home
 article_title: Braze API-Leitfaden
 layout: api_glossary
-glossary_top_header: "Braze API Guide"
-glossary_top_text: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This page lists available Braze API endpoints and their uses."
+glossary_top_header: "Braze API-Leitfaden"
+glossary_top_text: "Braze bietet eine leistungsstarke REST API, mit der Sie Nutzer:innen verfolgen, Nachrichten versenden, Daten exportieren und vieles mehr können. Auf dieser Seite finden Sie eine Liste der verfügbaren Braze API Endpunkte und deren Verwendung."
 page_type: glossary
 description: "Diese Landing Page listet die verfügbaren Braze API Endpunkte und ihre Verwendung auf."
 glossary_tag_name: Endpoint Type
@@ -109,7 +109,7 @@ glossaries:
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_create_send_ids/'>/sends/id/create</a>"
-    description: "Erstellen Sie Sende-IDs, mit denen Sie programmgesteuert Nachrichten versenden und die Performance der Nachrichten verfolgen können, ohne für jede Sendung eine Kampagne erstellen zu müssen."
+    description: "Erstellen Sie IDs zum programmgesteuerten Versenden von Nachrichten und zum Tracking der Nachrichten-Performance, ohne für jede Sendung eine Kampagne erstellen zu müssen."
     tags:
       - Send Messages
   - name: "<a href='/docs/api/endpoints/messaging/send_messages/post_send_transactional_message/'>/transactional/v1/campagnen/{CAMPAIGN_ID}/send</a>"
@@ -149,7 +149,7 @@ glossaries:
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/'>/canvas/triggern/zeitplan/update</a>"
-    description: "Aktualisieren Sie geplante, durch APIs getriggerte Canvase, die im Dashboard erstellt wurden."
+    description: "Aktualisieren Sie geplante, durch APIs getriggerte Canvase, die Sie im Dashboard erstellt haben."
     tags:
       - Schedule Messages
   - name: "<a href='/docs/api/endpoints/messaging/schedule_messages/get_messages_scheduled/'>/nachrichten/geplante_ausstrahlungen</a>"
@@ -260,6 +260,10 @@ glossaries:
     description: "Exportieren Sie eine Liste von Segmenten, die jeweils den Namen, den Bezeichner der Segment API und die Angabe, ob das Analytics Tracking aktiviert ist, enthalten."
     tags:
       - Segments
+  - name: "<a href='/docs/api/endpoints/export/segments/post_cancel_export/'>/export/segment/cancel</a>"
+    description: Brechen Sie die Exporte für die angegebene Segment ID ab.
+    tags:
+      - Segments
   - name: "<a href='/docs/api/endpoints/export/sessions/get_sessions_analytics/'>/sessions/data_series</a>"
     description: Rufen Sie eine Reihe von Sitzungen für Ihre App über einen bestimmten Zeitraum ab.
     tags:
@@ -313,11 +317,11 @@ glossaries:
     tags:
       - KPI
   - name: "<a href='/docs/api/endpoints/sms/post_remove_invalid_numbers/'>/sms/invalid_phone_numbers/remove</a>"
-    description: "Entfernen Sie \"ungültige\" Telefonnummern aus der Liste der ungültigen Nummern in Braze. Damit können Sie Telefonnummern erneut validieren, nachdem sie als ungültig markiert wurden."
+    description: "Entfernen Sie \"ungültige\" Telefonnummern aus der Liste der ungültigen Nummern in Braze. Verwenden Sie dies, um Telefonnummern erneut zu validieren, nachdem Braze sie als ungültig markiert hat."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/sms/get_query_invalid_numbers/'>/sms/invalid_phone_numbers</a>"
-    description: "Erstellen Sie eine Liste der Telefonnummern, die innerhalb eines bestimmten Zeitraums als \"ungültig\" eingestuft wurden."
+    description: "Ziehen Sie eine Liste der Telefonnummern, die Braze innerhalb eines bestimmten Zeitraums als \"ungültig\" markiert hat."
     tags:
       - SMS
   - name: "<a href='/docs/api/endpoints/export/purchases/get_list_product_id/'>/Einkäufe/Produkt_liste</a>"
@@ -331,7 +335,7 @@ glossaries:
   - name: "<a href='/docs/api/endpoints/export/purchases/get_revenue_series/'>/Einkäufe/Einnahmen_serien</a>"
     description: "Geben Sie den Gesamtbetrag zurück, der in Ihrer App über einen bestimmten Zeitraum ausgegeben wurde."
     tags:
-      - Purchases    
+      - Purchases
   - name: "<a href='/docs/api/endpoints/preference_center/get_create_url_preference_center'>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</a>"
     description: Erstellen Sie eine URL für ein Einstellungscenter.
     tags:
@@ -341,7 +345,7 @@ glossaries:
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/get_view_details_preference_center'>/preference_center/v1/{preferenceCenterExternalId}</a>"
-    description: "Sehen Sie sich die Details zu Ihren Präferenzzentren an, einschließlich des Zeitpunkts, zu dem sie erstellt und aktualisiert wurden."
+    description: "Sehen Sie sich die Details zu Ihrem Einstellungszentrum an, einschließlich des Zeitpunkts, zu dem es erstellt und aktualisiert wurde."
     tags:
       - Preference Center
   - name: "<a href='/docs/api/endpoints/preference_center/post_create_preference_center'>/präferenz_zentrum/v1</a>"
@@ -467,5 +471,5 @@ glossaries:
   - name: "<a href='/docs/api/endpoints/sdk_authentication/delete_sdk_authentication_key/'>/app_group/sdk_authentication/delete</a>"
     description: Löschen Sie einen SDK-Authentifizierungsschlüssel für Ihre App.
     tags:
-      - SDK Authentication  
+      - SDK Authentication
 ---

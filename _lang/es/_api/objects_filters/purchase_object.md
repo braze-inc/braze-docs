@@ -11,6 +11,8 @@ description: "Este artículo de referencia explica los distintos componentes de 
 
 > Este artículo explica los distintos componentes de un objeto de compra, cómo utilizarlo correctamente, las mejores prácticas y ejemplos en los que inspirarse.
 
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
+
 ## ¿Qué es un objeto de compra?
 
 Un objeto de compra es un objeto que se pasa a través de la API cuando se ha realizado una compra. Cada objeto de compra está ubicado dentro de una matriz de objetos de compra, siendo cada objeto una única compra realizada por un usuario concreto en un momento determinado. El objeto de compra tiene muchos campos diferentes que permiten al backend Braze almacenar y utilizar esta información para la personalización, la recopilación de datos y la personalización.
@@ -35,7 +37,7 @@ Un objeto de compra es un objeto que se pasa a través de la API cuando se ha re
   "time" : (required, datetime as string in ISO 8601) Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
-  // Setting this flag to true will put the API in "Update Only" mode.
+  // Setting this flag to true puts the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean)
 }
@@ -57,7 +59,7 @@ Dentro del objeto de compra, el `product_id` es un identificador de la compra (c
 
 En Braze, ofrecemos algunas convenciones generales de nomenclatura para el objeto de compra `product_id`. Al elegir `product_id`, Braze sugiere utilizar nombres simplistas como el nombre del producto o la categoría del producto (en lugar de SKU) con la intención de agrupar todos los artículos registrados por este `product_id`.
 
-Esto ayuda a que los productos sean fáciles de identificar para su segmentación y desencadenamiento.
+Esto ayuda a que los productos sean más fáciles de identificar para su segmentación y desencadenamiento.
 
 ### Registrar las compras a nivel de pedido
 
@@ -90,18 +92,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Objeto propiedades de compra
 
-Los eventos personalizados y las compras pueden tener propiedades del evento. Los valores de las "propiedades" deben ser un objeto en el que las claves son los nombres de las propiedades y los valores son los valores de las propiedades. Los nombres de propiedad deben ser cadenas no vacías de menos o igual a 255 caracteres, sin signos de dólar al principio. 
+Los eventos personalizados y las compras pueden tener propiedades del evento. Los valores de las "propiedades" deben ser un objeto en el que las claves son los nombres de las propiedades y los valores son los valores de las propiedades. Los nombres de propiedad deben ser cadenas no vacías de menos o igual a 255 caracteres, sin signos de dólar al principio.
 
 Los valores de propiedad pueden ser cualquiera de los siguientes tipos de datos:
 
 | Tipo de datos | Descripción |
 | --- | --- |
-| Números | Como [enteros](https://en.wikipedia.org/wiki/Integer) o [flotantes](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Números | Como [números enteros](https://en.wikipedia.org/wiki/Integer) o [flotantes](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booleanos |  |
 | Fechas y horas | Formateados como cadenas en formato [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) o `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. No se admite dentro de matrices. |
 | Cadenas | 255 caracteres o menos. |
 | Matrices | Las matrices no pueden incluir fechas. |
-| Objetos | Los objetos se ingestarán como cadenas. |
+| Objetos | Los objetos se ingieren como cadenas. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Los objetos de propiedades del evento que contienen valores de matrices u objetos pueden tener una carga útil de propiedades del evento de hasta 50 KB.
@@ -114,10 +116,10 @@ Los objetos de propiedades del evento que contienen valores de matrices u objeto
 
 Es importante tener en cuenta que esta característica se activa **por producto**, no por compra. Por ejemplo, si tienes un gran volumen de productos distintos, pero cada uno tiene las mismas propiedades, segmentar puede ser más innecesario.
 
-En esta instancia, recomendamos utilizar nombres de productos a "nivel de grupo" en lugar de algo granular al configurar las estructuras de datos. Por ejemplo, una empresa de billetes de tren debería tener productos para "viaje de ida", "viaje de vuelta", "multiciudad", y no transacciones específicas como "transacción 123" o "transacción 046". Como otro ejemplo, con el evento de compra "comida", lo mejor sería establecer las propiedades "tarta" y "bocadillo".
+En esta instancia, recomendamos utilizar nombres de productos a "nivel de grupo" en lugar de identificadores a nivel de transacción al configurar las estructuras de datos. Por ejemplo, una empresa de billetes de tren debería tener productos para "viaje de ida", "viaje de vuelta", "multiciudad", y no transacciones específicas como "transacción 123" o "transacción 046". Como otro ejemplo, con el evento de compra "comida", lo mejor sería establecer las propiedades "tarta" y "bocadillo".
 
 {% alert important %}
-Ten en cuenta que los productos se pueden añadir a través de la API REST de Braze. Por ejemplo, si envías una llamada al punto final `/users/track` e incluyes un nuevo ID de compra, se creará automáticamente un producto en la sección **Configuración de datos** > **Productos** del panel.
+Ten en cuenta que los productos se pueden añadir a través de la API REST de Braze. Por ejemplo, si envías una llamada al punto final `/users/track` e incluyes un nuevo ID de compra, Braze crea automáticamente un producto en la sección **Configuración de datos** > **Productos** del panel.
 {% endalert %}
 
 ### Ejemplo de objeto de compra

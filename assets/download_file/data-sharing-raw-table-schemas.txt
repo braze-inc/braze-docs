@@ -1561,7 +1561,7 @@ USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED: when a user opens the app
 	BROWSER (VARCHAR(16777216)): Device browser - extracted from user_agent - on which the open occurred
 	SF_CREATED_AT (TIMESTAMP_LTZ(9)): when this event was picked up by the Snowpipe
 
-USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED: when a user receives a push notification while the app is open. This event is not supported by the Swift SDK and is deprecated in the Obj-C SDK.
+USERS_MESSAGES_PUSHNOTIFICATION_IOSFOREGROUND_SHARED: when a user receives a push notification while the app is open
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	USER_ID (VARCHAR(16777216)): Braze user ID of the user who performed this event
 	EXTERNAL_USER_ID (VARCHAR(16777216)): [PII] External ID of the user
@@ -1720,6 +1720,7 @@ USERS_MESSAGES_RCS_CLICK_SHARED: An event that is created when the end user inte
 	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
 	URL (VARCHAR(16777216)): URL that the user clicked on
 	SUBSCRIPTION_GROUP_API_ID (VARCHAR(16777216)): Subscription group API ID
+	CANVAS_VARIATION_NAME (VARCHAR(16777216)): Name of the Canvas variation this user received
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_RCS_DELIVERY_SHARED: An event that is created when an RCS message is successfully delivered to an end user's mobile device
@@ -1822,6 +1823,7 @@ USERS_MESSAGES_RCS_REJECTION_SHARED: An event that is created when an RCS messag
 	CANVAS_STEP_API_ID (VARCHAR(16777216)): API ID of the Canvas step this event belongs to
 	TO_PHONE_NUMBER (VARCHAR(16777216)): [PII] Phone number of the user receiving the message in e.164 format (for example +14155552671)
 	CAMPAIGN_API_ID (VARCHAR(16777216)): API ID of the campaign this event belongs to
+	CANVAS_STEP_MESSAGE_VARIATION_API_ID (VARCHAR(16777216)): API ID of the Canvas step message variation this user received
 	SF_CREATED_AT (TIMESTAMP_NTZ(9)): when this event was picked up by the Snowpipe
 
 USERS_MESSAGES_RCS_SEND_SHARED: An event that is created when an RCS messages is sent out of Braze's systems to our last-mile delivery partners

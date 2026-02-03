@@ -38,7 +38,7 @@ Zu den Features für Banner gehören:
 
 Bannerplatzierungen sind bestimmte Standorte in Ihrer App oder Website, [die Sie mit dem Braze SDK erstellen]({{site.baseurl}}/developer_guide/banners/placements/) und die festlegen, wo Banner erscheinen können.
 
-Zu den üblichen Standorten gehören der obere Teil Ihrer Homepage, die Produktdetailseiten und die Kassenabläufe. Nachdem die Platzierungen erstellt wurden, können die Banner [in Ihrer Kampagne zugewiesen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/) werden.
+Zu den üblichen Standorten gehören der obere Teil Ihrer Homepage, die Produktdetailseiten und die Kassenabläufe. Nachdem die Platzierungen erstellt wurden, können die Banner [in Ihrer Kampagne zugewiesen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/) werden.
 
 Es gibt keine feste Grenze für die Anzahl der Vermittlungen, die Sie pro Workspace erstellen können, und Sie können so viele Vermittlungs-IDs erstellen, wie Ihre Erfahrung erfordert. Jede Platzierung muss innerhalb eines Workspace eindeutig sein. Eine einzige Platzierungs-ID kann von bis zu 10 aktiven Kampagnen gleichzeitig referenziert werden.
 
@@ -48,9 +48,9 @@ Vermeiden Sie die Änderung von Platzierungs-IDs nach dem Starten einer Kampagne
 
 ### Banner Priorität {#priority}
 
-Wenn mehrere Kampagnen auf dieselbe ID referenzieren, werden die Banner in der Reihenfolge ihrer Priorität angezeigt: hoch, mittel oder niedrig. Standardmäßig sind neu erstellte Banner auf mittel eingestellt, aber Sie können [die Priorität manuell festlegen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority), wenn Sie Ihre Banner-Kampagne erstellen oder bearbeiten. 
+Wenn mehrere Nachrichten mit Bannern auf dieselbe ID referenzieren, werden die Banner in der Reihenfolge ihrer Priorität angezeigt: hoch, mittel oder niedrig. Standardmäßig sind Banner auf mittel eingestellt, aber Sie können [die Priorität manuell festlegen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority), wenn Sie Ihre Banner Kampagne erstellen oder bearbeiten. 
 
-Wenn mehrere Banner die gleiche Priorität haben, wird das neueste Banner, für das Nutzer:innen berechtigt sind, zuerst angezeigt.
+Wenn mehrere Banner die gleiche Priorität haben, wird das neueste Banner, für das der Nutzer:innen berechtigt ist, zuerst angezeigt.
 
 ### Anfragen zur Platzierung {#requests}
 
@@ -58,7 +58,7 @@ Wenn mehrere Banner die gleiche Priorität haben, wird das neueste Banner, für 
 
 ### Zustellung von Nachrichten
 
-Bannernachrichten werden Ihrer App oder Website als HTML-Inhalt zugestellt, der in der Regel innerhalb eines iframe gerendert wird. Dies stellt sicher, dass Ihre Banner auf allen Geräten einheitlich dargestellt werden, und hilft Ihnen, ihre Stile und Skripte vom Rest Ihres Codes zu trennen.
+Bannernachrichten werden Ihrer App oder Website als HTML-Inhalt zugestellt, der in der Regel innerhalb eines iframe gerendert wird. Dies stellt sicher, dass Ihre Banner auf allen Geräten einheitlich dargestellt werden und hilft Ihnen, ihre Stile und Skripte vom Rest Ihres Codes zu trennen.
 
 Iframes ermöglichen dynamische und personalisierte Updates von Inhalten, die keine Änderungen an Ihrer Codebasis erfordern. Jeder iframe ruft den HTML-Code für jede Nutzer:innen-Sitzung ab und zeigt ihn mit Hilfe der Logik für das Targeting und die Personalisierung der Kampagne an.
 
@@ -76,7 +76,6 @@ Jeder Workspace kann bis zu 200 aktive Banner-Kampagnen unterstützen. Wenn dies
 
 Außerdem unterstützen Banner Nachrichten die folgenden Features nicht:
 
-- Canvas-Integration
 - API-ausgelöste und aktionsbasierte Kampagnen
 - Connected-Content
 - Aktionscodes
@@ -92,5 +91,5 @@ Möchten Sie bei der Festlegung der nächsten Prioritäten helfen? Kontaktieren 
 Da Sie nun über Banner Bescheid wissen, sind Sie bereit für die nächsten Schritte:
 
 1. [Erstellen von Bannerplatzierungen in Ihrer App oder Website]({{site.baseurl}}/developer_guide/banners/placements/)
-2. [Erstellen von Bannerkampagnen in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
+2. [Erstellen von Bannerkampagnen in Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/)
 3. [Tutorial: Anzeige eines Banners nach Platzierungs-ID]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

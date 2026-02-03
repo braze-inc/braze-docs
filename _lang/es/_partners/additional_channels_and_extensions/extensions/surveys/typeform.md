@@ -45,7 +45,7 @@ Envía un evento de prueba a tu Transformación de Datos haciendo clic en **Ver 
 
 ### Paso 3: Escribe el código de transformación para aceptar los eventos Typeform que elijas
 
-En este paso, transformarás la carga útil del webhook que se enviará desde Typeform en un valor de retorno de objeto JavaScript.
+En este paso, transformas la carga útil del webhook que se envía desde Typeform en un valor de retorno de objeto JavaScript.
 
 1. Actualiza tu Transformación de datos y asegúrate de que puedes ver la carga útil de prueba de Typeform en **los Detalles del webhook**.
 2. Actualiza tu código de Transformación de Datos para que sea compatible con los eventos de Typeform que hayas elegido.
@@ -326,7 +326,7 @@ Content-Type: application/json
 
 Las siguientes son plantillas de ejemplo creadas utilizando nuestro [ejemplo de carga útil de webhook de Typeform](#example-typeform-webhook-payload). Estas plantillas pueden servirte de punto de partida. Puedes empezar desde cero o eliminar componentes específicos según te convenga.
 
-En estas plantillas de ejemplo, estamos registrando un evento personalizado en el perfil Braze. El título del Typeform se pasará como nombre del evento personalizado, y los resultados del Typeform se pasarán como propiedades del evento. Estas plantillas de ejemplo no tienen en cuenta los tipos de pregunta Calendly, Carga de archivos o Pago en Typeform.
+En estas plantillas de ejemplo, estamos registrando un evento personalizado en el perfil Braze. El título del Typeform se pasa como nombre del evento personalizado, y los resultados del Typeform se pasan como propiedades del evento. Estas plantillas de ejemplo no tienen en cuenta los tipos de pregunta Calendly, Carga de archivos o Pago en Typeform.
 
 ### Casos de uso: Correo electrónico como identificador
 
@@ -337,7 +337,7 @@ Si tienes intención de utilizar una dirección de correo electrónico como iden
 {% endalert %}
 
 {% tabs local %}
-{% tab Entrada %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -409,7 +409,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Salida %}
+{% tab Output %}
 
 ```json
 {
@@ -474,10 +474,10 @@ return brazecall;
 
 Puedes utilizar los campos ocultos de Typeform para pasar datos en la carga útil del webhook de Typeform, como el ID de un usuario, sin tener que pasar esta información en la respuesta de Typeform.
 
-En esta plantilla de ejemplo, utilizamos un campo oculto "user_id" y lo pasamos a la carga útil de la solicitud `/users/track` como `external_id`. Aunque estamos utilizando "user_id", los campos se pueden modificar para adaptarlos a tus necesidades.
+En esta plantilla de ejemplo, utilizamos un campo oculto "user_id" y lo pasamos a la carga útil de la solicitud `/users/track` como `external_id`. Aunque utilizamos "user_id",, los campos pueden modificarse para adaptarlos a tus necesidades.
 
 {% tabs local %}
-{% tab Entrada %}
+{% tab Input %}
 
 ```javascript
 /* In the Typeform webhook payload each question is stored as a “title” within each object of the “fields” array. Our code defines a “title” variable where we store the value of each field title. */
@@ -549,7 +549,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab Salida %}
+{% tab Output %}
 
 ```json
 {
@@ -614,7 +614,7 @@ return brazecall;
 
 Después de haber escrito tu transformación de datos, haz clic en **Validar** para asegurarte de que tu código de Transformación de Datos está formateado correctamente y funcionará como se espera. A continuación, guarda y activa tu Transformación de Datos.
 
-Una vez activados, los datos del evento personalizado se registrarán en el perfil de un usuario cuando complete tu formulario.
+Cuando se activa, los datos del evento personalizado se registran en el perfil de un usuario cuando completa tu formulario.
 
 ![]({% image_buster /assets/img/typeform/typeform_custom_event.png %})
 

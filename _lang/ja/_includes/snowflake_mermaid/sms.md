@@ -34,4 +34,6 @@
         string url
         string user_agent
         string user_phone_number
-    }
+        boolean is_suspected_bot_click
+        array suspected_bot_click_reason
+}

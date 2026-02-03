@@ -1,6 +1,6 @@
 ---
 nav_title: WhatsApp y sistema externo
-article_title: Integración de Braze y WhatsApp con un sistema externo
+article_title: Integrar Braze y WhatsApp con un sistema externo
 page_order: 2
 description: "Este artículo de referencia proporciona una guía paso a paso para integrar la integración de Braze y WhatsApp con una IA externa o un sistema de comunicación."
 page_type: reference
@@ -9,7 +9,7 @@ channel:
   - WhatsApp
 ---
 
-# Integración de Braze y WhatsApp con una IA externa o un sistema de comunicación
+# Integrar Braze y WhatsApp con un sistema externo de IA o comunicación
 
 > Aprovecha el poder de los chatbots de IA y las entregas de agentes en vivo en el canal WhatsApp para agilizar tus operaciones de atención al cliente. Automatizando las consultas rutinarias y pasando fácilmente a agentes humanos cuando sea necesario, puedes mejorar significativamente los tiempos de respuesta y mejorar la experiencia general del cliente.
 
@@ -23,16 +23,16 @@ El flujo de trabajo de integración puede dividirse en dos flujos clave:
 
 Para automatizar eficazmente esta comunicación, esta integración utiliza dos características clave de Braze: [las campañas webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) y [las campañas desencadenadas por API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/).
 
-\![Arquitectura de la integración entre el canal de WhatsApp de Braze y un sistema externo.]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
+![Arquitectura de la integración entre el canal de WhatsApp de Braze y un sistema externo.]({% image_buster /assets/img/whatsapp/external_system_architecture.png %})
 <sup>*Arquitectura de la integración entre el canal de WhatsApp de Braze y un sistema externo.*</sup>
 
 ## Requisitos previos
 
-| Prerrequisito | Descripción |
+| Requisito previo | Descripción |
 | - | - |
-| Sistema externo | Un sistema de IA o comunicación de terceros capaz de crear y administrar chatbots, sistemas automatizados de servicio al cliente mediante API, o ambos. |
-| Integración de Braze y WhatsApp | Un número de WhatsApp administrado por Braze | Un número de WhatsApp administrado por Braze | Un número de WhatsApp administrado por Braze | Un número de WhatsApp administrado por Braze | Un número de WhatsApp administrado por Braze | Un número de WhatsApp administrado por Braze
-| Clave de API REST de Braze | Una clave de API REST con permisos `campaigns.trigger.send`. Se puede crear en el panel de Braze yendo a **Configuración** > **Claves de API**. |
+| Sistema externo | Un sistema de comunicación o IA de terceros capaz de crear y administrar chatbots, sistemas automatizados de servicio al cliente mediante API, o ambos. |
+| Integración de Braze y WhatsApp | Un número de WhatsApp administrado por Braze |
+| Clave de API REST Braze | Una clave de API REST con permisos `campaigns.trigger.send`. Se puede crear en el panel de Braze yendo a **Configuración** > **Claves de API**. |
 {: .reset-td-br-1 .reset-td-br-2 role=”presentation” }
 
 ## Configurar la integración
@@ -59,30 +59,30 @@ En primer lugar, crea una campaña de webhook para establecer una forma de envia
 {: start="5"}
 5\. En el paso **Programar entrega** del compositor de tu campaña, selecciona **Basado en acciones** para el tipo de entrega y **Enviar un mensaje entrante de WhatsApp** para el desencadenante de la campaña.
 
-Entrega basada en acciones con un desencadenante de envío de un mensaje entrante de WhatsApp.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
+![Entrega basada en acciones con un desencadenante de envío de un mensaje entrante de WhatsApp.]({% image_buster /assets/img/whatsapp/inbound_message_trigger.png %})
 
 {: start="6"}
-6\. Termina de componer tu campaña, luego guárdala y lánzala. Ahora, cada vez que se reciba un mensaje, Braze enviará un webhook a tu sistema externo.
+6\. Termina de componer tu campaña, luego guárdala y lánzala. Después de lanzar la campaña, cada vez que se recibe un mensaje, Braze envía un webhook a tu sistema externo.
 
-### Paso 2: Crea una campaña desencadenada por API para mensajes salientes {#step-2}
+### Paso 2: Crea una campaña desencadenada por API para mensajes salientes {#step-2}
 
 A continuación, crea una campaña desencadenada por la API para establecer una forma de que tu sistema externo envíe mensajes a los usuarios a través de WhatsApp.
 
 1. En Braze, crea una campaña de WhatsApp. 
 2. En el creador de mensajes, selecciona **la plantilla de mensaje de WhatsApp** o el **mensaje de respuesta** y, a continuación, selecciona la plantilla o el diseño del mensaje de respuesta. Puedes seleccionar cualquier diseño de mensaje de respuesta porque el mensaje entrante abrió la ventana de WhatsApp 24 horas.
 
-\![Creador de mensajes con opciones para seleccionar el tipo de mensaje y el diseño del mensaje.]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
+![Creador de mensajes con opciones para seleccionar el tipo de mensaje y el diseño del mensaje.]({% image_buster /assets/img/whatsapp/response_message_layout.png %})
 
 {: start="3"}
 3\. Añade la propiedad desencadenante de la API al cuerpo del mensaje, como {% raw %}```{{api_trigger_properties.${external_system_msg+body}}}```{% endraw %}. Esto permite a tu sistema de IA rellenar el mensaje que se enviará.
 
-\![Creador de mensajes con cuerpo de mensaje que contiene propiedades desencadenantes.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
+![Creador de mensajes con cuerpo de mensaje que contiene propiedades desencadenantes.]({% image_buster /assets/img/whatsapp/api_trigger_properties.png %})
 
 {: start="4"}
 4\. En el paso **Programar entrega** del compositor de tu campaña, selecciona **Basada en acciones** para el tipo de entrega.
 5\. Guarda la campaña y toma nota del `campaign_id` único que Braze genera para esta campaña. Necesitarás el ID para el siguiente paso.
 
-### Paso 3: Conecta el sistema externo a la campaña desencadenada por la API
+### Paso 3: Conecta el sistema externo a la campaña desencadenada por la API
 
 Por último, configura tu sistema externo para que llame a Braze y envíe la respuesta.
 
