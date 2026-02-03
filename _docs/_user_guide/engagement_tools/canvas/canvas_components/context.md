@@ -148,7 +148,9 @@ All users in a batch are processed before any users advance. After batch process
 
 **Retry behavior**: Context steps (and all Canvas steps) use Canvas-specific retry mechanisms, not the standard Connected Content retry behavior. If a Connected Content call fails, Braze retries the step approximately 13 times with exponential backoff. If all retries fail, the user exits the Canvas.
 
-**Note**: The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
+{% alert note %}
+The `:retry` tag used in standard Connected Content doesn't apply to Connected Content calls made within Canvas steps. Canvas steps have their own retry logic optimized for Canvas workflows.
+{% endalert %}
 
 **Processing time**: The time it takes to process all users through a Context step depends on:
 - The number of users entering the step
