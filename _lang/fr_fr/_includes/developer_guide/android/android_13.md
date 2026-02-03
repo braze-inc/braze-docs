@@ -14,7 +14,7 @@ Pour vous préparer à Android 13, veuillez mettre à jour votre SDK Braze vers 
 
 Android 13 introduit un [changement majeur](https://developer.android.com/about/versions/13/changes/notification-permission) dans la manière dont les gestionnaires gèrent les applications qui envoient des notifications push. Dans Android 13, les applications doivent obtenir une autorisation avant que les notifications push ne puissent être affichées. 
 
-![Message d’autorisation des notifications push sous Android demandant « Autoriser Kitchenerie à vous envoyer des notifications ? » avec deux boutons, « Autoriser » et « Ne pas autoriser » au bas du message.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
+![Un message push Android demandant "Autoriser Kitchenerie à vous envoyer des notifications ?" avec deux boutons "Autoriser" et "Ne pas autoriser" en bas du message.]({% image_buster /assets/img/android/android-13-push-prompt.png %}){: style="float:right;max-width:430px;width:50%;margin-left:15px;border:0"}
 
 Ce nouveau système d’autorisation suit un modèle similaire aux notifications push iOS et Web pour lesquelles une seule tentative d’obtenir l’autorisation est faite. Si un utilisateur choisit `Don't Allow` ou rejette la demande, votre application ne peut plus demander d’autorisation.
 
