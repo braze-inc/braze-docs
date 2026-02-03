@@ -19,13 +19,13 @@ Xcode sollte ein neues Ziel generieren und automatisch folgende Dateien für Sie
 
 ### Schritt 2: Funktionen aktivieren {#enable-capabilities}
 
-Fügen Sie in Xcode über den Bereich **Signing & Capabilities** die Funktion "Background Modes" zum App-Hauptziel hinzu. Aktivieren Sie die Kontrollkästchen **Hintergrundabruf** und **Fernbenachrichtigung**.
+In Xcode fügen Sie die Fähigkeit Background Modes über den Bereich **Signing & Capabilities** zum Hauptziel der App hinzu. Aktivieren Sie die Kontrollkästchen **Hintergrundabruf** und **Fernbenachrichtigung**.
 
 ![]({% image_buster /assets/img/swift/push_story/enable_background_mode.png %})
 
 #### Hinzufügen einer App-Gruppe
 
-Fügen Sie außerdem im Bereich **Signieren & Fähigkeiten** in Xcode die App-Gruppen-Fähigkeit zu Ihrem Hauptziel der App sowie zu den Zielen der Erweiterung für Benachrichtigungsinhalte hinzu. Klicken Sie dann auf die Schaltfläche **+**. Verwenden Sie die Bundle-ID Ihrer App, um die App-Gruppe zu erstellen. Wenn die Bundle-ID Ihrer App beispielsweise `com.company.appname` lautet, können Sie die App-Gruppe `group.com.company.appname.xyz` nennen.
+Fügen Sie außerdem im Bereich **Signing & Capabilities** in Xcode die App-Gruppen-Fähigkeit zu Ihrem App-Hauptziel sowie zu den Zielen der Notification Content Extension hinzu. Klicken Sie dann auf die Schaltfläche **+**. Verwenden Sie die Bundle-ID Ihrer App, um die App-Gruppe zu erstellen. Wenn die Bundle-ID Ihrer App beispielsweise `com.company.appname` lautet, können Sie die App-Gruppe `group.com.company.appname.xyz` nennen.
 
 {% alert important %}
 App-Gruppen beziehen sich in diesem Zusammenhang auf die [App-Gruppen-Berechtigung](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups) von Apple und nicht auf die ID Ihres Braze-Arbeitsbereichs (früher App-Gruppe).
@@ -36,11 +36,11 @@ Wenn Sie Ihre App nicht zu einer App-Gruppe hinzufügen, kann es sein, dass Ihre
 ### Schritt 3: Hinzufügen des Push Story Frameworks zu Ihrer App {#enable-capabilities}
 
 {% tabs local %}
-{% tab Swift-Paketmanager %}
+{% tab Swift Package Manager %}
 
 Nachdem Sie den [Leitfaden für die Integration von Swift-Paketmanager]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/) befolgt haben, fügen Sie `BrazePushStory` zur `Notification Content Extension` hinzu:
 
-![Wählen Sie in Xcode unter "Frameworks and Libraries" das Pluszeichen (+) aus, um ein Framework hinzuzufügen.]({% image_buster /assets/img/swift/push_story/spm1.png %})
+![Wählen Sie in Xcode unter Frameworks und Bibliotheken das Symbol "+" aus, um ein Framework hinzuzufügen.]({% image_buster /assets/img/swift/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/swift/push_story/spm2.png %})
 
@@ -73,7 +73,7 @@ Eine Anleitung zur Implementierung von Rich Push finden Sie unter [Rich-Benachri
 Nachdem Sie das Podfile aktualisiert haben, wechseln Sie in Ihrem Terminal in das Verzeichnis Ihres Xcode App-Projekts und führen Sie `pod install` aus.
 
 {% endtab %}
-{% tab Manuell %}
+{% tab Manual %}
 
 Laden Sie die neueste Version der `BrazePushStory.zip` von der [GitHub-Release-Seite](https://github.com/braze-inc/braze-swift-sdk/releases) herunter, extrahieren Sie sie und fügen Sie der `Notification Content Extension` Ihres Projekts `BrazePushStory.xcframework` hinzu.
 

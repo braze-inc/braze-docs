@@ -25,7 +25,7 @@ Cuando los usuarios abran tu aplicación, se les pedirá que acepten notificacio
 A partir de macOS 13, en determinados dispositivos, puedes probar las notificaciones push en un simulador de iOS 16 que se ejecute en Xcode 14. Para más detalles, consulta [las Notas de la versión de Xcode 14](https://developer.apple.com/documentation/xcode-release-notes/xcode-14-release-notes).
 {% endalert %}
 
-#### Consideraciones para la generación de tokens de notificaciones push
+#### Consideraciones para la generación de token de notificaciones push
 
 - Si los usuarios instalan tu aplicación en otro dispositivo, se creará otro token y se capturará del mismo modo. 
 - Si los usuarios reinstalan tu aplicación, se generará un nuevo token y se pasará a Braze. Sin embargo, APN y Braze pueden seguir registrando como válido el token original.
@@ -139,7 +139,7 @@ Comprueba el perfil de usuario del usuario al que intentas enviar un mensaje de 
 
 Lo siguiente indicaría un problema con el registro push o que el token de notificaciones push del usuario ha sido devuelto a Braze como no válido por las APN después de haber sido enviado:
 
-![Un perfil de usuario que muestra la configuración de los contactos de un usuario. En Push, aparece "Sin aplicaciones".]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![Un perfil de usuario que muestra la configuración de los contactos de un usuario. En la opción Push, aparece "Sin aplicaciones".]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## Los clics push no se registran {#push-clicks-not-logged}
 

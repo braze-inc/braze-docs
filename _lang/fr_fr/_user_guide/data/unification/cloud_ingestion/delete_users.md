@@ -3,11 +3,11 @@ nav_title: Supprimer des utilisateurs avec CDI
 article_title: "Supprimer des utilisateurs avec l'ingestion de données en nuage"
 page_order: 30
 page_type: reference
-description: "Cette pgae fournit un aperçu du processus de suppression des utilisateurs avec l'ingestion de données dans le nuage."
+description: "Cette page fournit un aperçu du processus de suppression des utilisateurs avec Cloud Data Ingestion."
 
 ---
 
-# Supprimer des utilisateurs avec l'ingestion de données dans le nuage
+# Supprimer des utilisateurs avec Cloud Data Ingestion
 
 > Cette page traite du processus de suppression des utilisateurs avec l'ingestion de données dans le cloud.
 
@@ -15,9 +15,9 @@ Les synchronisations de suppression d'utilisateur sont prises en charge pour tou
 
 ## Configuration de l'intégration 
 
-Suivez le processus standard pour [créer une nouvelle intégration dans le tableau de bord de Braze]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) pour l'entrepôt de données auquel vous souhaitez vous connecter. Assurez-vous d'inclure un rôle qui peut accéder à la table de suppression. Sur la page **Créer une synchronisation d'importation**, définissez le **Type de données** sur **Supprimer les utilisateurs** afin que les actions appropriées soient prises pendant l'exécution de l'intégration pour supprimer les utilisateurs.
+Suivez le processus standard pour [créer une nouvelle intégration dans le tableau de bord de Braze]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views) pour l'entrepôt de données auquel vous souhaitez vous connecter. Assurez-vous d'inclure un rôle qui peut accéder au tableau de suppression. Sur la page **Créer une synchronisation d'importation**, définissez le **Type de données** sur **Supprimer les utilisateurs** afin que les actions appropriées soient prises pendant l'exécution de l'intégration pour supprimer les utilisateurs.
 
-\![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
+![]({% image_buster /assets/img/cloud_ingestion/deletion_1.png %})
 
 ## Configuration des données sources
 
@@ -29,10 +29,10 @@ Ajoutez un horodatage `UPDATED_AT` à votre tableau source. Cet horodatage indiq
 
 ### Colonnes d'identification de l'utilisateur
 
-Votre tableau peut contenir une ou plusieurs colonnes d'identifiants d'utilisateurs. Chaque ligne ne doit contenir qu'un seul identifiant : soit `external_id`, soit la combinaison de `alias_name` et `alias_label`, soit `braze_id`. Un tableau source peut contenir des colonnes pour un, deux ou les trois types d'identifiants.
-- `EXTERNAL_ID` - Il identifie l'utilisateur que vous souhaitez mettre à jour. Cette valeur devrait correspondre à la valeur `external_id` utilisée dans Braze. 
-- `ALIAS_NAME` et `ALIAS_LABEL` \- Ces deux colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul `alias_name` par `alias_label`.
-- `BRAZE_ID` - L'identifiant de l'utilisateur de Braze. Celui-ci est généré par le SDK de Braze et il n'est pas possible de créer de nouveaux utilisateurs à l'aide d'un ID de Braze par le biais de l'ingestion de données dans le cloud. Pour créer de nouveaux utilisateurs, indiquez un ID externe ou un alias d'utilisateur. 
+Votre tableau peut contenir une ou plusieurs colonnes d’identifiants utilisateur. Chaque ligne ne doit contenir qu'un seul identifiant : soit `external_id`, soit la combinaison de `alias_name` et `alias_label`, soit `braze_id`. Un tableau source peut contenir des colonnes pour un, deux ou les trois types d'identifiants.
+- `EXTERNAL_ID` : Ceci identifie l’utilisateur que vous désirez mettre à jour. Cela doit correspondre à la valeur `external_id` utilisée dans Braze. 
+- `ALIAS_NAME` et `ALIAS_LABEL` : Ces deux colonnes créent un objet d'alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec différentes étiquettes, mais seulement un `alias_name` par `alias_label`.
+- `BRAZE_ID` : L’identifiant d’utilisateur Braze. Il est généré par le SDK Braze et les nouveaux utilisateurs ne peuvent pas être créés à l’aide d’un ID Braze via l’ingestion de données cloud. Pour créer de nouveaux utilisateurs, spécifiez un ID utilisateur externe ou un alias utilisateur. 
 
 {% alert important %}
 N'incluez pas de colonne `PAYLOAD` dans votre tableau pour la suppression de l'utilisateur. Pour éviter la suppression accidentelle et permanente d'utilisateurs, la synchronisation échouera si une colonne "payload" est fournie dans la table source. Toute autre colonne est autorisée mais sera ignorée par Braze.
@@ -73,7 +73,7 @@ Créez une table avec les champs suivants :
 
 | Nom du champ | Type | Mode |
 |---|---|---|
-| `UPDATED_AT`| TIMESTAMP | OBLIGATOIRE |
+| `UPDATED_AT`| DATE/HEURE | REQUIS |
 | `EXTERNAL_ID`| CHAÎNE DE CARACTÈRES | NULLABLE |
 | `ALIAS_NAME`| CHAÎNE DE CARACTÈRES | NULLABLE |
 | `ALIAS_LABEL`| CHAÎNE DE CARACTÈRES | NULLABLE |
@@ -85,7 +85,7 @@ Créez une table avec les champs suivants :
 
 | Nom du champ | Type | Mode |
 |---|---|---|
-| `UPDATED_AT`| TIMESTAMP | OBLIGATOIRE |
+| `UPDATED_AT`| DATE/HEURE | REQUIS |
 | `EXTERNAL_ID`| CHAÎNE DE CARACTÈRES | NULLABLE |
 | `ALIAS_NAME`| CHAÎNE DE CARACTÈRES | NULLABLE |
 | `ALIAS_LABEL`| CHAÎNE DE CARACTÈRES | NULLABLE |
@@ -111,14 +111,14 @@ GO
 
 {% endtabs %}
 
-### Comment cela fonctionne-t-il ?
+### Fonctionnement
 
-Avec Braze Cloud Data Ingestion, vous configurez une intégration entre votre instance d'entrepôt de données et l'espace de travail Braze pour synchroniser les données de manière récurrente. Cette synchronisation s'effectue selon une planification que vous définissez, et chaque intégration peut avoir une planification différente. Les synchronisations peuvent être effectuées aussi fréquemment que toutes les 15 minutes ou aussi rarement qu'une fois par mois. Pour les clients qui ont besoin de synchronisations plus fréquentes que 15 minutes, adressez-vous à votre gestionnaire de satisfaction client, ou envisagez d'utiliser les appels API REST pour l'ingestion de données en temps réel.
+Avec Braze Cloud Data Ingestion, vous configurez une intégration entre votre instance d'entrepôt de données et l'espace de travail Braze pour synchroniser les données de manière récurrente. Cette synchronisation se fait selon la planification que vous déterminez et chaque intégration peut disposer d’une planification différente. Les synchronisations peuvent avoir lieu d’une fois toutes les 15 minutes à une fois par mois. Pour les clients qui ont besoin de synchronisations plus fréquentes que 15 minutes, adressez-vous à votre gestionnaire de satisfaction client, ou envisagez d'utiliser les appels API REST pour l'ingestion de données en temps réel.
 
 Lorsqu'une synchronisation s'exécute, Braze se connecte directement à votre instance d'entrepôt de données, récupère toutes les nouvelles données de la table spécifiée et supprime les profils utilisateurs correspondants sur votre tableau de bord Braze. 
 
 {% alert warning %}
-La suppression des profils utilisateurs ne peut pas être annulée. Il supprimera définitivement les utilisateurs susceptibles de provoquer des divergences dans vos données. Pour plus d'informations, reportez-vous à la section [Supprimer un profil utilisateur]({{site.baseurl}}/help/help_articles/api/delete_user/).
+La suppression des profils utilisateur ne peut pas être annulée. Cette action supprimera définitivement les utilisateurs susceptibles de provoquer des écarts dans vos données. Pour plus d'informations, reportez-vous à la section [Supprimer un profil utilisateur]({{site.baseurl}}/help/help_articles/api/delete_user/).
 {% endalert %}
 
 <br><br>

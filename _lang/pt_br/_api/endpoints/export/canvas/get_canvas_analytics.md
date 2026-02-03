@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Exportar análise de séries de dados de canvas"
+nav_title: "OBTER: Exportar análise de dados da série de dados da canva"
 article_title: "OBTER: Exportar análise de séries de dados de canvas"
 search_tag: Endpoint
 page_order: 4
@@ -11,7 +11,7 @@ description: "Este artigo traz informações sobre o endpoint \"Exportar anális
 {% api %}
 # Exportar análise de dados da série de dados da canva
 {% apimethod get %}
-/canva/data_series
+/canvas/data_series
 {% endapimethod %}
 
 > Use este endpoint para exportar dados de séries temporais para uma canva.
@@ -51,8 +51,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_seri
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "data": {
     "name": (string) the Canvas name,

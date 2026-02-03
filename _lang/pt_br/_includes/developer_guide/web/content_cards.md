@@ -159,7 +159,7 @@ O Google Tag Manager funciona injetando o [Braze CDN]({{site.baseurl}}/developer
 ### Configuração de cartões de conteúdo
 
 {% tabs local %}
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Para uma integração padrão do feed do cartão de conteúdo, você pode usar uma tag **HTML personalizada** no Google Tag Manager. Adicione o seguinte em sua tag HTML personalizada, que ativará o feed padrão do cartão de conteúdo:
 
 ```html
@@ -168,7 +168,7 @@ Para uma integração padrão do feed do cartão de conteúdo, você pode usar u
 </script>
 ```
 
-![Configuração de tag no Google Tag Manager de uma tag HTML personalizada que mostra o feed do cartão de conteúdo.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
+![Configuração de tag no Google Tag Manager de uma tag HTML personalizada que mostra o feed do Content Card.]({% image_buster /assets/img/web-gtm/gtm_content_cards.png %})
 {% endtab %}
 
 {% tab manual %}
@@ -224,6 +224,6 @@ Para permitir que o suporte técnico da Braze acesse os registros durante os tes
 
 Em sua integração do Google Tag Manager, navegue até a tag de inicialização da Braze e selecione **Ativar registro do SDK para Web**.
 
-![A página de resumo da tag de inicialização do Braze com a opção de ativar o registro do SDK da Web.]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %})
+![A página de resumo da tag de inicialização do Braze com a opção de ativar o registro do Web SDK.]({% image_buster /assets/img/web-gtm/gtm_verbose_logging.png %})
 
 [changelog]: https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md

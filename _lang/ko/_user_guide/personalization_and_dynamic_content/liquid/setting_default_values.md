@@ -1,20 +1,20 @@
 ---
-nav_title: 기본값 설정하기
+nav_title: 기본값 설정
 article_title: 기본값 Liquid 설정하기
 page_order: 5
-description: "이 참조 문서에서는 메시징에 사용하는 개인화 속성에 대한 기본 대체 값을 설정하는 방법을 다룹니다."
+description: "이 참조 문서에서는 메시지에서 사용하는 개인화 속성에 대한 기본 대체 값을 설정하는 방법에 대해 설명합니다."
 
 ---
 
-# 기본값 설정하기
+# 기본값 설정
 
 {% raw %}
 
-> 메시징에 사용하는 모든 개인화 속성에 대해 기본 대체 값을 설정할 수 있습니다. 이 문서에서는 기본값의 작동 방식, 설정 방법 및 메시징에서 기본값을 사용하는 방법에 대해 설명합니다.
+> 메시지에서 사용하는 모든 개인화 속성에 대해 기본 대체 값을 설정할 수 있습니다. 이 문서에서는 기본값의 작동 방식, 설정 방법 및 메시징에서 기본값을 사용하는 방법에 대해 설명합니다.
 
 ## 작동 방식
 
-기본값은 [Liquid 필터](http://docs.shopify.com/themes/liquid-documentation/filters) (그림과 같이 필터를 인라인으로 구분하려면 `|` 사용)를 "default"라는 이름으로 지정하여 추가할 수 있습니다.
+Default values can be added by specifying a [Liquid Filter](http://docs.shopify.com/themes/liquid-documentation/filters) (use `|` to distinguish the filter inline, as shown) with the name "default."
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -28,13 +28,13 @@ description: "이 참조 문서에서는 메시징에 사용하는 개인화 속
 Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
 ```
 
-신원 미상의 사용자에게는 이 메시지가 다음과 같이 표시됩니다:
+신원 미상이라는 사용자에게는 이 메시지가 다음과 같이 표시됩니다.
 
 ```
 Hi Janet, thanks for using the App!
 ```
 
-아니면...
+또는
 
 ```
 Hi Valued User, thanks for using the App!
@@ -49,7 +49,7 @@ Hi Valued User, thanks for using the App!
 
 위의 예는 문자열의 기본값을 설정하는 방법을 보여줍니다. 문자열, 부울 값, 배열, 오브젝트, 숫자 등 `empty`, `nil` (정의되지 않음) 또는 `false` 의 값을 갖는 모든 Liquid 데이터 유형에 대해 기본값을 설정할 수 있습니다.
 
-### 사용 사례: 부울
+### Use case: 부울
 
 `premium_user` 이라는 부울 커스텀 속성이 있고 사용자의 프리미엄 상태에 따라 개인화된 메시지를 보내려고 한다고 가정해 보겠습니다. 일부 사용자는 프리미엄 상태가 설정되어 있지 않으므로 이러한 사용자를 캡처하려면 기본값을 설정해야 합니다.
 
@@ -91,7 +91,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 {% endraw %}
 {% enddetails %}
 
-### 사용 사례: 숫자
+### Use case: 숫자
 
 `reward_points` 이라는 숫자 커스텀 속성이 있고 사용자의 리워드 포인트가 포함된 메시지를 보내려고 한다고 가정해 보겠습니다. 일부 사용자는 보상 포인트가 설정되어 있지 않으므로 이러한 사용자를 고려한 기본값을 설정해야 합니다.
 
@@ -112,7 +112,7 @@ Hi {{${first_name} | default: 'valued user'}}, you have {{custom_attribute.${rew
 ```
 {% endraw %}
 
-### 사용 사례: 개체
+### Use case: 개체
 
 `city` 및 `state` 속성을 포함하는 `location` 라는 중첩된 고객 속성 오브젝트가 있다고 가정해 보겠습니다. 이러한 속성이 설정되어 있지 않은 경우 사용자에게 속성을 제공하도록 권장할 수 있습니다.
 
@@ -158,7 +158,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 {% endraw %}
 {% enddetails %}
 
-### 사용 사례: 배열
+### Use case: 배열
 
 `destination` 및 `departure_date` 속성을 가진 트립을 포함하는 `upcoming_trips` 이라는 배열 커스텀 속성이 있다고 가정해 보겠습니다. 사용자에게 예약된 여행이 있는지 여부에 따라 개인화된 메시지를 보내려고 합니다.
 
@@ -172,7 +172,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 {% endraw %}
 
 {: start="2"}
-2\. `upcoming_trips` 에 콘텐츠가 있는 경우 전송할 메시지를 지정합니다:<br><br>**2a.** 사용자의 주소를 입력하고 이름을 모르는 경우 기본값을 입력합니다. <br>**2b.** `for` 태그를 사용하여 `upcoming_trips` 에 포함된 각 여행에 대한 속성(또는 정보)을 가져오도록 지정합니다. <br>**2c.** 메시징에 속성을 나열하고 `departure_date` 이 설정되지 않은 경우 기본값을 포함하세요. (예를 들어 여행을 생성하려면 `destination` 이 필요하므로 기본값을 설정할 필요가 없습니다).<br>**2d.** `for` 태그를 닫은 다음 조건 로직을 닫습니다.
+2\. `upcoming_trips` 에 콘텐츠가 있는 경우 전송할 메시지를 지정합니다:<br><br>**2a.** 사용자의 주소를 입력하고 이름을 모르는 경우 기본값을 입력합니다. <br>**2b.** `for` 태그를 사용하여 `upcoming_trips` 에 포함된 각 여행에 대한 속성(또는 정보)을 가져오도록 지정합니다. <br>**2c.** 메시징에 속성을 나열하고 `departure_date` 이 설정되지 않은 경우 기본값을 포함하세요. (예를 들어 여행을 생성하려면 `destination` 이 필요하므로 기본값을 설정할 필요가 없습니다.)<br>**2d.** `for` 태그를 닫은 다음 조건 로직을 닫습니다.
 
 {% raw %}
 ```liquid

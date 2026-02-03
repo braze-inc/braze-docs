@@ -3,6 +3,10 @@
 
 Para editar y administrar [el soporte multilingüe]({{site.baseurl}}/multi_language_support/), debes tener el permiso de usuario "Administrar configuración multilingüe". Para añadir la configuración regional a un mensaje, necesitarás permisos para editar campañas.
 
+{% alert important %}
+El soporte multilingüe está actualmente en acceso temprano. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en este acceso anticipado.
+{% endalert %}
+
 {% endif %}
 
 {% if include.section == "Preview" %}

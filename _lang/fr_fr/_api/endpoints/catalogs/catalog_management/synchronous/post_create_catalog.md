@@ -158,7 +158,7 @@ Le code de statut `201` pourrait renvoyer le corps de réponse suivant.
 
 ### Exemple de réponse échouée
 
-Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la résolution des problèmes[](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
+Le code de statut `400` pourrait renvoyer le corps de réponse suivant. Consultez la [résolution des problèmes](#troubleshooting) pour plus d’informations concernant les erreurs que vous pourriez rencontrer.
 
 ```json
 {

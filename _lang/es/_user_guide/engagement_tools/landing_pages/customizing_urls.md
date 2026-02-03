@@ -1,11 +1,11 @@
 ---
-nav_title: Personalizar la URL
-article_title: Personalizar las URL de las páginas de destino
+nav_title: Personaliza la URL
+article_title: Personaliza las URL de las páginas de destino
 description: "Aprende a personalizar las URL de tus páginas de destino con la marca de tu empresa, conectando tu dominio a tu espacio de trabajo Braze."
 page_order: 1
 ---
 
-# Personalizar las URL de las páginas de destino
+# Personaliza las URL de las páginas de destino
 
 > Aprende a personalizar las URL de tus páginas de destino con la marca de tu empresa, conectando tu dominio a tu espacio de trabajo Braze.
 
@@ -24,7 +24,7 @@ Para conectar un dominio a tu cuenta Braze, haz que un administrador siga los pa
 3. Copia y pega los registros **TXT** y **CNAME** en la configuración de DNS de tu proveedor de dominios.
 4. Vuelve al panel de Braze para verificar la conexión.
 
-\![Página de configuración de la página de destino con un registro TXT y dos CNAME listados con sus respectivos nombres y valores.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
+![Página de configuración de la página de destino con un registro TXT y dos CNAME listados con sus respectivos nombres y valores.]({% image_buster /assets/img/landing_pages/connect_subdomain.png %})
 
 {% alert note %}
 Dependiendo de tu proveedor de dominios, la conexión puede tardar hasta 48 horas. Una vez completado el proceso, empezaremos a utilizar tu dominio personalizado para tus páginas de destino en el panel de Braze.
@@ -46,16 +46,7 @@ Cuando elimines un dominio personalizado, esa URL dejará de ser válida. Todas 
 
 ## Recursos DNS
 
-A continuación encontrarás recursos para crear y administrar registros de DNS con los proveedores de dominios más utilizados. Si utilizas otro proveedor, consulta su documentación o ponte en contacto con su equipo de soporte para obtener información.
-
-| Proveedor de dominios | Recursos |
-| --- | --- |
-| Bluehost | [Explicación de los registros de DNS](https://my.bluehost.com/hosting/help/508)<br> [Gestión de DNS Añadir Editar o Eliminar Entradas DNS](https://my.bluehost.com/hosting/help/559) |
-| Dreamhost | [¿Cómo añado registros de DNS personalizados?](https://help.dreamhost.com/hc/en-us/articles/360035516812) |
-| GoDaddy | [Añadir un registro CNAME](https://www.godaddy.com/help/add-a-cname-record-19236?) |
-| Cloudflare | [Gestionar registros de DNS](https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/) |
-| Squarespace | [Añadir configuración DNS personalizada](https://support.squarespace.com/hc/en-us/articles/360002101888-Adding-custom-DNS-records-to-your-Squarespace-managed-domain) |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+{% multi_lang_include dns_records.md %}
 
 ## Solución de problemas 
 
@@ -72,4 +63,28 @@ No, actualmente sólo puedes conectar un subdominio a un espacio de trabajo.
 ### ¿Puedo utilizar el mismo subdominio que utilizo actualmente para mi sitio web principal o mi dominio de envío?
 
 No, no puedes utilizar subdominios que ya estén en uso. Aunque estos subdominios son válidos, no pueden utilizarse para páginas de destino si ya están asignados a otros fines o tienen registros de DNS que entran en conflicto con los registros CNAME requeridos.
+
+### ¿Por qué mi dominio personalizado está atascado en "Conectando" a pesar de que los registros de DNS son válidos?
+
+Si tu dominio personalizado muestra todos los registros de DNS como "Conectado", pero el estado del dominio permanece en "Conectando" durante más de cuatro horas, es posible que tu organización esté utilizando registros CAA (Autorización de Autoridad de Certificación) o retenciones de zona de Cloudflare que impiden que Braze proteja tu página.
+
+#### Registros CAA
+
+Los registros CAA restringen qué autoridades de certificación pueden emitir certificados SSL para tu dominio. Si tus registros CAA no incluyen LetsEncrypt, Braze (a través de Cloudflare) no puede emitir el certificado SSL necesario.
+
+Para solucionarlo, pide a tu equipo de TI que añada un registro CAA a tu subdominio con los siguientes valores:
+- **Tipo de registro:** CAA
+- **Valor:** `0 issue "letsencrypt.org"`
+
+Para más información, consulta [la documentación sobre CAA de LetsEncrypt](https://letsencrypt.org/docs/caa/).
+
+#### La zona Cloudflare retiene
+
+Si tu organización utiliza Cloudflare, una característica de seguridad de retención de zona puede estar impidiendo que Braze cree tu dominio personalizado.
+
+Para solucionarlo, pide a tu equipo de TI que libere temporalmente la zona retenida. Para más información, consulta [la documentación sobre la retención de zonas de Cloudflare](https://developers.cloudflare.com/fundamentals/account/account-security/zone-holds/#release-zone-holds).
+
+#### Reiniciar el proceso de validación
+
+Después de resolver cualquiera de los dos problemas, elimina y vuelve a crear tu dominio personalizado en el panel de Braze para reiniciar el proceso de validación.
 

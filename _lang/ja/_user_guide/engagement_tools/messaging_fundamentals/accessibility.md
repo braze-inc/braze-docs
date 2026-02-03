@@ -1,7 +1,7 @@
 ---
 nav_title: アクセシビリティ
 article_title: Braze でのアクセシブルメッセージの作成
-page_order: 10.1
+page_order: 0.5
 page_type: reference
 description: "この参考記事では、マーケティング・コンテンツにおいてアクセシビリティを考慮することが重要な理由と、Brazeでアクセシブルなメッセージを作成する方法について説明する。"
 ---
@@ -96,7 +96,7 @@ description: "この参考記事では、マーケティング・コンテンツ
 
 {% alert note %}
 - 米国では5人に1人が学習と注意の問題を抱えている（[LDA](https://ldaamerica.org/lda_today/the-state-of-learning-disabilities-today/#:~:text=LD%20Today,have%20learning%20and%20attention%20issues.)参照）。
-- 世界人口のおよそ10～20% が神経多様性を持つと考えられている ([Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html) 参照)
+- 全世界の人口のおよそ10～20%が神経分岐型と考えられている([Deloitte](https://www2.deloitte.com/us/en/insights/topics/talent/neurodiversity-in-the-workplace.html)参照)
 - 世界中で100人に1人の子供が自閉症にかかっています([WHO](https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders)参照)
 {% endalert %}
 

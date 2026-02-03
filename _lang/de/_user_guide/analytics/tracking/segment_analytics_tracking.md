@@ -27,7 +27,7 @@ In einer App kann das Tracking für bis zu 25 Segmente aktiviert werden. Braze e
 
 Gehen Sie zu **Analytics** > **Umsatzbericht**, um Daten zu [Umsatz und Käufen im Zeitverlauf für dieses Segment]({{site.baseurl}}/user_guide/data/export_braze_data/exporting_revenue_data/) anzuzeigen.
 
-![Umsatzdaten nach Segmenten]({% image_buster /assets/img_archive/Revenue.png %})
+![Daten zu den Einnahmen nach Segmenten]({% image_buster /assets/img_archive/Revenue.png %})
 
 Um die Daten der Segmente für jeden angepassten Zeitraum visuell zu vergleichen, fügen Sie dem Diagramm Segmente hinzu oder entfernen sie. Wählen Sie in der Dropdown-Liste **Aufschlüsselung** die Option **Nach Segmenten** und wählen Sie dann Ihre Segmente in **Aufschlüsselung Werte** aus.
 

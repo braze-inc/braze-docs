@@ -29,9 +29,9 @@ La synchronisation des données Braze avec Criteo est une intégration Audience 
 
 ## Conditions préalables 
 
-Vous devrez vous assurer que les éléments suivants ont été créés avant de configurer votre synchronisation d'audience avec Criteo.
+Vous devez vous assurer que les éléments suivants ont été créés et/ou complétés avant de configurer votre synchronisation d'audience avec Criteo.
 
-| Exigence | Origine | Description |
+| Condition | Origine | Description |
 | --- | --- | --- |
 | Compte publicitaire Criteo | [Criteo](https://marketing.criteo.com/) | Un compte publicitaire Criteo actif lié à votre marque.<br><br>Assurez-vous que votre administrateur Criteo vous a accordé les autorisations appropriées pour accéder aux audiences. |
 | [Directives publicitaires de Criteo](https://www.criteo.com/advertising-guidelines/)<br>et<br>[Directives de sécurité de la marque Criteo](https://www.criteo.com/wp-content/uploads/2017/11/Criteo-Brand-Safety-Guidelines-UK-March-2016.pdf) | Criteo | En tant que client actif de Criteo, vous devez vous assurer que vous pouvez respecter les directives de sécurité de la marque et de la publicité de Criteo avant de lancer toute campagne Criteo. |
@@ -41,19 +41,23 @@ Vous devrez vous assurer que les éléments suivants ont été créés avant de 
 
 ### Étape 1 : Connectez-vous à Criteo
 
+{% alert important %}
+Vous devez disposer de l'[autorisation "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) pour connecter Criteo à votre compte Braze.
+{% endalert %}
+
 Dans le tableau de bord de Braze, allez à **Intégrations de partenaires** > **Partenaires technologiques** et sélectionnez **Criteo**. Sous Exportation de l'audience Criteo, sélectionnez **Connecter Criteo**.
 
 ![Page de la technologie Criteo dans Braze qui comprend une section Aperçu et une section Criteo avec le bouton Connected Criteo.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
-Une page oAuth de Criteo apparaîtra pour autoriser Braze pour les autorisations liées à votre intégration de synchronisation d'audience.
+Une page Criteo oAuth s'affiche pour autoriser Braze à obtenir les permissions liées à votre intégration Audience Sync.
 
 Une fois que vous avez sélectionné confirmer, vous serez alors redirigé vers Braze pour sélectionner les comptes publicitaires Criteo que vous souhaitez synchroniser. 
 
-![Une liste des comptes publicitaires disponibles que vous pouvez connecter à Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
+![Une liste de comptes publicitaires disponibles que vous pouvez connecter à Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-Une fois que vous vous êtes connecté avec succès, vous serez redirigé vers la page partenaire, où vous pourrez voir quels comptes sont connectés et déconnecter les comptes existants.
+Une fois la connexion établie, vous revenez à la page partenaire, où vous pouvez voir quels comptes sont connectés et déconnecter les comptes existants.
 
-![Une version actualisée de la page de partenaires technologiques de Criteo montrant les comptes publicitaires connectés avec succès.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
+![Une version mise à jour de la page des partenaires technologiques de Criteo montrant les comptes publicitaires connectés avec succès.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 
 Votre connexion Criteo sera appliquée au niveau de l'espace de travail Braze. Si votre administrateur Criteo vous supprime de votre compte publicitaire Criteo, Braze détectera un jeton invalide. En conséquence, vos Canvases actifs utilisant Criteo afficheront des erreurs, et Braze ne pourra pas synchroniser les utilisateurs.
 
@@ -75,7 +79,7 @@ Pour en savoir plus sur la manière de se conformer à ces lois sur la protectio
 
 Ajoutez un composant dans votre canvas et sélectionnez **Synchronisation de l’audience**.
 
-![Workflow des étapes précédentes pour ajouter un composant Criteo Audience dans Canvas Flow.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Workflow des étapes précédentes pour ajouter un composant Criteo Audience dans Canvas Flow.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
+![Workflow des étapes précédentes pour ajouter un composant Criteo Audience dans Canvas.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Workflow des étapes précédentes pour ajouter un composant Criteo Audience dans Canvas.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
 
 ### Étape 4 : Configuration de la synchronisation
 
@@ -88,23 +92,23 @@ Sélectionnez **Criteo** comme le partenaire de synchronisation d'audience souha
 Sélectionnez ensuite le compte publicitaire Criteo souhaité. Dans la liste déroulante **Choisir une audience nouvelle ou existante**, saisissez le nom d'une audience nouvelle ou existante.
 
 {% tabs %}
-{% tab Créer une nouvelle audience %}
+{% tab Create a New Audience %}
 **Créer une nouvelle audience**<br>
 Saisissez un nom pour la nouvelle audience, sélectionnez **Ajouter des utilisateurs à l'audience** et sélectionnez les champs que vous souhaitez synchroniser avec Criteo. Ensuite, enregistrez votre audience en cliquant sur le bouton **Créer une audience** en bas de l'éditeur d'étape.
 
-![Vue élargie de l'étape du canvas d’audience personnalisée. Ici, le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée.]({% image_buster /assets/img/criteo/criteo3.png %})
+![Vue élargie de l'étape du canvas de l'audience personnalisée. Le compte publicitaire souhaité est sélectionné et une nouvelle audience est créée ici.]({% image_buster /assets/img/criteo/criteo3.png %})
 
-Les utilisateurs seront avertis en haut de l'éditeur d'étape si l'audience est créée avec succès ou si des erreurs surviennent au cours de ce processus. Les utilisateurs peuvent également référencer cette audience pour la suppression d'utilisateurs plus tard dans le parcours Canvas car l'audience a été créée en mode brouillon.
+Braze affiche une notification en haut de l'éditeur d'étape si l'audience est créée avec succès ou si des erreurs surviennent. Les utilisateurs peuvent faire référence à cette audience pour la supprimer plus tard dans le parcours Canvas, car l'audience a été créée en mode brouillon.
 
-![Une alerte qui apparaît après la création d'une nouvelle audience dans le composant canvas.]({% image_buster /assets/img/criteo/criteo1.png %})
+![Une alerte qui apparaît après la création d'une nouvelle audience dans le composant Canvas.]({% image_buster /assets/img/criteo/criteo1.png %})
 
 Lorsque vous lancez un canvas avec une nouvelle audience, Braze synchronise les utilisateurs quasiment en temps réel lorsqu'ils entrent dans le composant de synchronisation de l’audience.
 {% endtab %}
-{% tab Synchronisation avec une audience existante %}
+{% tab Sync with an Existing Audience %}
 **Synchronisation avec une audience existante**<br>
 Braze offre également la possibilité d'ajouter des utilisateurs aux audiences Criteo existantes afin de s'assurer que ces audiences sont à jour. Pour effectuer une synchronisation avec une audience existante, saisissez le nom de l'audience existante dans le menu déroulant et sélectionnez **Ajouter à l'audience**. Braze ajoutera ensuite des utilisateurs en temps quasi réel au fur et à mesure qu'ils entreront dans le composant Audience Sync.
 
-![Vue élargie de l'étape du canvas d’audience personnalisé. Ici, le compte publicitaire souhaité et l'audience existante sont sélectionnés.]({% image_buster /assets/img/criteo/criteo8.png %})
+![Vue élargie de l'étape du canvas de l'audience personnalisée. Le compte publicitaire souhaité et l’audience existante sont sélectionnés ici.]({% image_buster /assets/img/criteo/criteo8.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -115,13 +119,13 @@ Une fois que vous avez configuré la synchronisation d’audience avec Criteo, l
 
 Vous pouvez voir l'audience dans Criteo en accédant à votre compte gestionnaire de publicités, puis en sélectionnant Segments dans la **Bibliothèque d'audience** de la navigation. Sur la page **Segments**, vous pouvez voir la taille de chaque audience après qu'elle ait atteint ~1 000.
 
-![La bibliothèque d'audience indique le segment, l'ID, la source, le type, la taille, l'utilisation actuelle et la dernière mise à jour.]({% image_buster /assets/img/criteo/criteo.png %})
+![La bibliothèque d'audiences affichant le segment, l'ID, la source, le type, la taille, actuellement utilisé et la dernière mise à jour.]({% image_buster /assets/img/criteo/criteo.png %})
 
 ## Considérations relatives à la synchronisation des utilisateurs et à la limite de débit
 
-Au fur et à mesure que les utilisateurs atteignent l'étape de synchronisation de l'audience, Braze synchronisera ces utilisateurs en quasi-temps réel tout en respectant les limites de taux de l'API de Criteo. Ce que cela signifie en pratique, c'est que Braze essaiera de mettre en lot et de traiter autant d'utilisateurs que possible toutes les 5 secondes avant d'envoyer ces utilisateurs à Criteo.
+Lorsque les utilisateurs atteignent l'étape de synchronisation de l'audience, Braze les synchronise quasiment en temps réel tout en respectant les limites de débit de l'API de Criteo. Braze met en lots et traite autant d'utilisateurs que possible toutes les cinq secondes avant de les envoyer à Criteo.
 
-La limite de débit de l'API de Criteo indique qu'il ne faut pas dépasser 250 demandes par minute. Si un client Braze atteint cette limite de débit, le canvas Braze retentera la synchronisation pendant environ 13 heures. Si la synchronisation n'est pas possible, ces utilisateurs sont répertoriés sous les indicateurs Users Errored. 
+La limite de débit de l'API de Criteo n'autorise pas plus de 250 demandes par minute. Si un client atteint cette limite, Braze retente la synchronisation pendant environ 13 heures. Si la synchronisation n'est toujours pas possible, Braze répertorie ces utilisateurs sous l'indicateur Users Errored. 
 
 ## Comprendre les analyses
 

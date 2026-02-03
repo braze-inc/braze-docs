@@ -1,7 +1,7 @@
 ---
 nav_title: Lokalisierung
 article_title: Lokalisierung
-page_order: 7
+page_order: 8
 description: "Dieser Artikel referenziert die Grundlagen der Lokalisierung, listet die Vorteile verschiedener Orchestrierungsansätze für Kampagnen und Canvase auf und zeigt verschiedene Möglichkeiten auf, wie Nutzer:innen die Personalisierung ihrer Nachrichten handhaben können."
 tool:
     - Campaigns
@@ -14,10 +14,10 @@ tool:
 
 ## Funktionsweise
 
-Nachdem Sie [das Braze SDK integriert haben]({{site.baseurl}}/developer_guide/sdk_integration/), werden automatisch Lokalisierungsinformationen von Nutzer:innen-Geräten gesammelt. Das Gebietsschema enthält die Sprache und einen Bezeichner für die Region. Diese Informationen sind im Braze Segmentierungstool unter **Land** und **Sprache** verfügbar.
+Lokalisierungsinformationen werden im Profil eines Nutzers auf der Grundlage von Daten gespeichert, die Sie mit einem [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) (automatisch) oder [REST API]({{ site.baseurl }}/api/endpoints/user_data/post_user_track)] erfassen. Das Gebietsschema enthält die Sprache und einen Bezeichner für die Region. Diese Informationen sind im Braze Segmentierungstool unter **Land** und **Sprache** verfügbar.
 
 {% alert tip %}
-Technische Details zum Empfang der Lokalisierung finden Sie in der offiziellen Dokumentation [für iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) und [Android](http://developer.android.com/reference/java/util/Locale.html).
+Technische Details dazu, wie die Lokalisierung von unseren SDKs erfasst wird, finden Sie in der offiziellen Dokumentation [für iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [Android](http://developer.android.com/reference/java/util/Locale.html) und das [Internet](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language).
 {% endalert %}
 
 ## Übersetzungsmanagement
@@ -82,10 +82,18 @@ Nach dem Versand bietet das Dashboard dynamische Analytics pro Land und innerhal
 
 ## Versenden von übersetzten Nachrichten
 
-Um personalisierte Nachrichten auf der Grundlage der Sprache oder des Gebietsschemas eines Nutzers zu versenden, verwenden Sie eine der folgenden Methoden:
+Um personalisierte Nachrichten auf der Grundlage der Sprache, des Gebietsschemas oder angepasster Attribute eines Nutzers zu versenden, verwenden Sie eine der folgenden Methoden.
+
+### Übersetzung Liquid-Tags (empfohlen) {#translation-liquid-tag}
+
+Braze unterstützt einen {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} Liquid-Tag, um Nutzer:innen in verschiedenen Sprachen mit einer einzigen Nachricht zu targetieren. 
+
+Eine ausführliche Anleitung finden Sie in der [Anleitung zur Verwendung von Tags für die Übersetzung]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+  
+### Alternative Ansätze
 
 {% tabs local %}
-{% tab Manually %}
+{% tab Custom Liquid %}
 Sie können Ihre Inhalte manuell in den Textkörper Ihrer Nachricht einfügen und [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) verwenden, um dem Empfänger: [in]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) der richtigen Sprache anzuzeigen. Um dies zu tun:
 
 1. Verfassen Sie Ihre Nachricht und wählen Sie dann **Sprache** aus, um Liquid bedingte Logik für jede der von Ihnen ausgewählten Sprachen zu generieren.
@@ -233,14 +241,6 @@ Auf diese Katalogeintragungen kann mit Hilfe der unten gezeigten [Personalisieru
 {% endraw %}
 {% endtab %}
 
-{% tab Locale messages %}
-Fügen Sie Ihrer Nachricht Lokalisierungen hinzu und verwenden Sie diese, um Nutzer:innen in verschiedenen Sprachen innerhalb einer einzigen Kampagne oder eines Canvas für die E-Mail- oder Push-Kanäle anzusprechen. Eine vollständige Anleitung finden Sie unter [Lokalisierung in E-Mail Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) oder [Lokalisierung in Push-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
-
-{% alert important %}
-Diese Funktion befindet sich derzeit in der Early Access-Phase. Wenden Sie sich an Ihren Braze-Account Manager, wenn Sie sich für die Teilnahme am Early Access interessieren.
-{% endalert %}
-{% endtab %}
-
 {% tab Braze partners %}
 Viele Partner von Braze bieten Lösungen zur Lokalisierung an, darunter [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) und [Crowdin](https://crowdin.com/). In der Regel nutzen die Benutzer die Plattform zusammen mit einem internen Team und einem Übersetzungsbüro. Diese Übersetzungen werden dann dort hochgeladen und sind dann über die REST API zugänglich. Diese Dienste nutzen häufig auch [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), was es Nutzern:innen erlaubt, die Übersetzungen über APIs abzurufen.
 
@@ -283,7 +283,7 @@ Diese Option bietet eine alternative Methode zur Transformation von Google-Tabel
 
 Die Struktur der Tabellenkalkulation folgt den Schritten in Option 4, aber SheetDB bietet auch [zusätzliche Filter](https://docs.sheetdb.io/#sheetdb-api) zur Abfrage der Objekte.
 
-Einige Benutzer ziehen es vielleicht vor, SheetDB mit weniger Liquid- und Connected Block-Abhängigkeiten zu implementieren, indem sie die [SheetDB-Suchmethode](https://docs.sheetdb.io/#get-search-in-document) in GET-Anfrageaufrufen implementieren, um die JSON-Objekte auf der Grundlage von {% raw %}`{{${language}}}`{% endraw %} Liquid-Tag zu filtern und automatisch die Ergebnisse für eine einzelne Sprache zurückzugeben, anstatt große bedingte Blöcke zu erstellen.
+Einige Nutzer:innen ziehen es vielleicht vor, SheetDB mit weniger Liquid- und Connected Block-Abhängigkeiten zu implementieren, indem sie die [Suchmethode](https://docs.sheetdb.io/#get-search-in-document) von SheetDB in GET-Anfragen implementieren, um die JSON-Objekte auf der Grundlage des {% raw %}`{{${language}}}`{% endraw %} Liquid-Tags zu filtern und automatisch die Ergebnisse für eine einzelne Sprache zu liefern, anstatt große bedingte Blöcke zu erstellen.
 
 #### Schritt 1: Google-Tabelle formatieren
 

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Estado del grupo de suscripción de usuarios de la lista"
+nav_title: "GET: Estado del grupo de suscripción de los usuarios de la lista"
 article_title: "GET: Listar el estado del grupo de suscripción del usuario"
 search_tag: Endpoint
 page_order: 4
@@ -54,17 +54,17 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 - Para los grupos de suscripción de SMS y WhatsApp, se requiere `external_id` o `phone`.  Cuando se envían ambos, sólo se utiliza el `external_id` para la consulta y el número de teléfono se aplica a ese usuario.
 - Para los grupos de suscripción por correo electrónico, se requiere `external_id` o `email`.  Cuando se envían ambos, sólo se utiliza el `external_id` para la consulta y la dirección de correo electrónico se aplica a ese usuario.
 
-## Ejemplo de solicitud 
+## Ejemplo de solicitud
 
 {% tabs %}
-{% tab Múltiples usuarios %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS y WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab Correo electrónico %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 Todas las respuestas correctas devolverán `Subscribed`, `Unsubscribed`, o `Unknown` dependiendo del estado y del historial del usuario con el grupo de suscripción.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert note %}
+Cuando un usuario se da de baja globalmente, se le da de baja de cada grupo de suscripción. Este punto final devuelve el último estado de suscripción de cada grupo de suscripción. Este es el comportamiento esperado porque si el usuario decide volver a suscribirse globalmente, Braze revierte cada estado de suscripción.
+{% endalert %}
 
 {% endapi %}

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Añadir correos electrónicos a la lista de bloqueo"
-article_title: "POST: Añadir correos electrónicos a la lista de bloqueo"
+nav_title: "PUBLICAR: Añadir correos electrónicos a la lista de bloqueo"
+article_title: "PUBLICAR: Añadir correos electrónicos a la lista de bloqueo"
 search_tag: Endpoint
 page_order: 10
 layout: api_page

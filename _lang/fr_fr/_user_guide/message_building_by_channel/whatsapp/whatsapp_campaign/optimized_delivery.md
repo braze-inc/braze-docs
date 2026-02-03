@@ -12,16 +12,11 @@ channel:
 
 # Messages WhatsApp avec réception/distribution optimisée
 
-> Tirez parti des systèmes d'intelligence artificielle avancés de Meta pour diffuser vos messages marketing à un plus grand nombre d'utilisateurs qui sont les plus susceptibles de s'engager avec eux, en stimulant considérablement la livrabilité et l'engagement des messages.
+> Boostez la livrabilité et l'engagement en touchant davantage les bons utilisateurs sur WhatsApp grâce à une réception/distribution dynamique et basée sur l'engagement.
 
-Les messages WhatsApp à réception/distribution optimisée sont envoyés à l'aide de la nouvelle [API Marketing Messages Lite](https://developers.facebook.com/docs/whatsapp/marketing-messages-lite-api/) de Meta, qui offre des performances supérieures à celles de l'API Cloud traditionnelle. Ce nouveau pipeline d'envoi vous permet de mieux atteindre les utilisateurs qui valorisent vos messages et souhaitent les recevoir.
+Les messages WhatsApp à réception/distribution optimisée sont envoyés à l'aide de l'[API de messages marketing](https://developers.facebook.com/docs/whatsapp/marketing-messages-api-for-whatsapp) de Meta pour WhatsApp (MM API pour WhatsApp), qui offre une réception/distribution dynamique et basée sur l'engagement. Cela signifie que vos messages à fort taux d'engagement (par exemple, ceux qui sont plus susceptibles d'être lus et cliqués) peuvent atteindre plus d'utilisateurs qui sont susceptibles de s'engager avec eux. WhatsApp considère que vos messages ont un taux d'engagement élevé s'ils sont attendus, pertinents et opportuns, et donc plus susceptibles d'être lus et cliqués. 
 
-Les avantages de l'utilisation de la réception/distribution optimisée sont les suivants :
-
-- **Limites de l'envoi de messages dynamiques :** La nouvelle API offre des limites d'envoi de messages plus dynamiques par utilisateur, ce qui permet aux messages marketing à fort engagement (ceux qui sont plus susceptibles d'être lus ou cliqués) d'atteindre un plus grand nombre d'utilisateurs.
-- **Optimisation de la livrabilité :** Vous pouvez vous attendre à des taux de réception/distribution plus faibles, mais à des taux d'engagement plus élevés pour les messages délivrés, car l'intelligence artificielle avancée de Meta optimisera pour les utilisateurs dont elle s'attend à ce qu'ils accordent de la valeur au message et qu'ils s'y engagent. 
-- **Des résultats probants :** En Inde, les messages identifiés comme étant plus susceptibles d'être lus ou cliqués ont eu jusqu'à 9 % de messages supplémentaires livrés par rapport à l'envoi via l'API Cloud.
-- **Réception/distribution ciblée :** L'intelligence artificielle avancée de Meta identifie les messages à fort taux d'engagement et les diffuse à un plus grand nombre d'utilisateurs, ce qui vous permet de transmettre le bon message à un plus grand nombre de personnes sur WhatsApp.
+Les marques peuvent s'attendre à une livrabilité égale ou supérieure avec l'API MM pour WhatsApp, par rapport à l'API Cloud. En Inde, les messages marketing à fort engagement ont vu jusqu'à 9 % de messages supplémentaires délivrés par rapport à l'API Cloud, selon Meta. Notez que l'API MM pour WhatsApp ne garantit toujours pas une livrabilité à 100 %.
 
 ### Disponibilité régionale
 
@@ -32,12 +27,12 @@ La disponibilité et les possibilités de réception/distribution optimisée dé
 1. Dans Braze, allez dans **Intégrations partenaires** > **Partenaires technologiques** > **WhatsApp**.
 2. Dans la section **Optimisez vos envois avec la réception/distribution optimisée**, sélectionnez **Paramètre de mise à niveau** pour déclencher le [flux d'inscription intégré]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
 
-!La section Intégration des messages WhatsApp avec une option d'optimisation de l'envoi avec réception/distribution optimisée.]({% image_buster /assets/img/whatsapp/whatsapp_messaging_integration.png %})
+![La section Intégration des messages WhatsApp avec une option d'optimisation de l'envoi avec réception/distribution optimisée.]({% image_buster /assets/img/whatsapp/whatsapp_messaging_integration.png %})
 
 {: start="3"}
 3\. Une fois la réception/distribution optimisée activée, les détails de votre compte dans **WhatsApp Business Account Management** afficheront l'état de la réception/distribution optimisée.
 
-!WhatsApp section Gestion des comptes d'entreprise avec un groupe d'abonnement répertorié qui a un statut de numéro actif.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
+![WhatsApp section Gestion des abonnements avec un groupe d'abonnement listé qui a un statut de numéro actif.]({% image_buster /assets/img/whatsapp/optimized_delivery_message.png %})
 
 Sinon, vous pouvez activer la réception/distribution optimisée directement dans votre gestionnaire WhatsApp, puis commencer à envoyer dans Braze.
 
@@ -56,4 +51,13 @@ La réception/distribution optimisée devrait être utilisée pour les **message
 2. Dans la section **Méthode de réception/distribution**, la case **Livraison optimisée (recommandée)** sera cochée par défaut si votre compte WhatsApp Business (WABA) est activé. Si vous ne souhaitez pas utiliser la réception/distribution optimisée pour ce message spécifique, décochez la case.
 - Si vous sélectionnez la réception/distribution optimisée mais qu'elle n'est pas disponible, le message reviendra automatiquement à la méthode de l'API dans le nuage.
 
-!Compositeur de messages avec un onglet de prévisualisation qui comporte une case à cocher pour sélectionner la réception/distribution optimisée.]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})
+![Compositeur de messages avec un onglet de prévisualisation comportant une case à cocher pour sélectionner la réception/distribution optimisée.]({% image_buster /assets/img/whatsapp/delivery_method_settings.png %})
+
+### Reciblage des utilisateurs sur d'autres canaux de Braze 
+
+L'API MM pour WhatsApp n'offrant pas une livrabilité à 100 %, il est important de comprendre comment recibler les utilisateurs qui n'ont peut-être pas reçu votre message sur d'autres canaux. 
+
+Pour recibler les utilisateurs, nous vous recommandons de créer un segment d'utilisateurs qui n'ont pas reçu un message spécifique. Pour ce faire, filtrez par le code d'erreur `131049`, qui indique qu'un message de modèle marketing n'a pas été envoyé en raison de l'application de la limite de modèles marketing par utilisateur de WhatsApp. Pour ce faire, vous pouvez utiliser les Braze Currents ou les extensions de segments SQL :
+
+- **Braze Currents :** Exportez les événements de défaillance des messages à l'aide de Braze Currents. Vous pouvez ensuite utiliser ces données pour mettre à jour un attribut personnalisé sur le profil utilisateur (tel que `whatsapp_failed_last_msg: true`), que vous pouvez utiliser comme filtre pour votre campagne de reciblage.
+- **Extensions de segments SQL :** Si vous avez accès à cette fonctionnalité, vous pouvez utiliser SQL pour interroger les journaux d'échec des messages et créer un segment de ces utilisateurs, puis cibler ce segment sur un canal différent.

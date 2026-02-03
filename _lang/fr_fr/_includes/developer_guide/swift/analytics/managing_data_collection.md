@@ -46,22 +46,22 @@ Dans votre projet Xcode, ouvrez le fichier `PrivacyInfo.xcprivacy` de votre appl
 
 {% endalert %}
 
-![Un projet Xcode avec le menu contextuel ouvert et l’option « Clés et valeurs brutes » en surbrillance.]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
+![Un projet Xcode avec le menu contextuel ouvert et "Raw Keys and Values" en surbrillance.]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
 
 Sous **Configuration de la confidentialité des applications**, choisissez **NSPrivacyTracking** et définissez sa valeur sur **OUI**.
 
-![Le fichier 'PrivacyInfo.xcprivacy' s'ouvre avec "NSPrivacyTracking" réglé sur "OUI".]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
+![Le fichier 'PrivacyInfo.xcprivacy' est ouvert avec "NSPrivacyTracking" réglé sur "YES".]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
 
 Sous **Configuration de la confidentialité des applications**, choisissez **NSPrivacyTrackingDomains**. Dans le tableau des domaines, ajoutez un nouvel élément et définissez sa valeur sur le point de terminaison que vous [avez précédemment ajouté à votre `AppDelegate`]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate) préfixé par `sdk-tracking`.
 
-![Le fichier PrivacyInfo.xcprivacy s'ouvre avec un endpoint de suivi Braze répertorié sous « NSPrivacyTrackingDomains ».]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
+![Le fichier 'PrivacyInfo.xcprivacy' s'ouvre avec un endpoint de suivi de Braze répertorié sous "NSPrivacyTrackingDomains".]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
 
 ### Étape 4 : Déclarez vos données de suivi
 
 Ensuite, ouvrez `AppDelegate.swift` puis listez chaque [propriété de suivi](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) que vous souhaitez déclarer en créant une liste de suivi statique ou dynamique. Gardez à l'esprit qu'Apple bloquera ces propriétés jusqu'à ce que l'utilisateur final accepte l’invite ATT. Par conséquent, listez uniquement les propriétés que vous et votre équipe juridique envisagez pour le suivi. Par exemple :
 
 {% tabs %}
-{% tab exemple statique %}
+{% tab static example %}
 Dans l'exemple suivant, `dateOfBirth`, `customEvent` et `customAttribute` sont déclarés comme des données de suivi dans une liste statique. 
 
 ```swift
@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 {% endtab %}
 
-{% tab exemple dynamique %}
+{% tab dynamic example %}
 Dans l'exemple suivant, la liste de suivi est automatiquement mise à jour après que l'utilisateur final accepte l'invite ATT.
 
 ```swift

@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmentierung erstellen
+# [![Braze-Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Segmente erstellen
 
 > Die Segmentierung ermöglicht es Ihnen, Benutzer auf der Grundlage ihrer demografischen, verhaltensbezogenen oder technischen Merkmale und Aktionen anzusprechen. Durch den kreativen und intelligenten Einsatz von Segmentierung und Nachrichtenautomatisierung können Sie Ihre Nutzer nahtlos vom Erstkontakt zum langfristigen Kunden machen. Segmente werden in Echtzeit aktualisiert, wenn sich Daten ändern. Sie können so viele Segmente erstellen, wie Sie für Ihre Targeting- und Messaging-Zwecke benötigen.
 
@@ -25,7 +25,7 @@ Optional können Sie auch Folgendes tun:
 - Fügen Sie ein [Team]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) zu Ihrem Segment hinzu.
 - Fügen Sie Ihrem Segment zur weiteren Organisation [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) hinzu.
 
-![Modal zum Erstellen von Segmenten, in dem das Segment den Namen "Verfallene Nutzer:innen" trägt, mit der Segmentbeschreibung "Dies ist unser Hauptsegment für verfallene Nutzer:innen, um Nicht-Aktive innerhalb der letzten vierzehn Tage zu targetieren." und zwei Buttons: „Abbrechen“ und „Segment erstellen“.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
+![Erstellen Sie ein Segment-Modal, in dem das Segment „Passive Nutzer:innen“ heißt und die Segmentbeschreibung „Dies ist unser Hauptsegment für passive Nutzer:innen, um inaktive Nutzer:innen innerhalb der letzten vierzehn Tage anzusprechen“ lautet. Fügen Sie zwei Buttons hinzu: „Abbrechen“ und „Segment erstellen“.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
 ## Schritt 3: Wählen Sie Ihre App oder Plattform
 
@@ -33,7 +33,7 @@ Wählen Sie, welche Apps oder Plattformen Sie anvisieren möchten, indem Sie **B
 
 Wenn Sie zum Beispiel eine In-App-Nachricht nur an iOS-Geräte senden möchten, wählen Sie Ihre iOS-App aus. So wird sichergestellt, dass Benutzer, die sowohl ein iOS- als auch ein Android-Gerät verwenden, die Nachricht nur auf ihrem iOS-Gerät erhalten. In der Liste der spezifischen Apps können Sie mit der Option **Nutzer:innen ohne** Sitzungen und ohne App-Daten (die in der Regel durch Nutzerimport oder REST API erstellt wurden) aufnehmen.
 
-![Segment Details Panel mit der ausgewählten Option "Nutzer:innen aus allen Apps" im Abschnitt Verwendete Apps.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
+![Segmentdetails mit der Option „Nutzer:innen aus allen Apps“ im Abschnitt „Verwendete Apps“.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## Schritt 4: Filter zu Ihrem Segment hinzufügen
 
@@ -78,7 +78,7 @@ Die folgenden negativen Targeting-Kriterien sollten nicht mit dem Operator `OR` 
 - `does not equal`
 - `does not match regex`
 
-Wenn `not included`, `is not`, `does not equal` oder `does not match regex` zusammen mit dem Operator `OR` zwei- oder mehrmals in einer Anweisung verwendet werden, werden Nutzer:innen mit allen Werten für das entsprechende Attribut gezielt angesprochen.
+Wenn `not included`, `is not`, `does not equal` oder `does not match regex` zusammen mit dem Operator `OR` zwei- oder mehrmals in einer Anweisung verwendet werden, werden Nutzer:innen mit allen Werten für das betreffende Attribut gezielt angesprochen.
 
 {% enddetails %}
 
@@ -124,7 +124,7 @@ Durch das Hinzufügen von Filtern, die Ihren Nutzerfluss dokumentieren, können 
 
 Nachdem Sie Ihrem Segment Apps und Filter hinzugefügt haben, können Sie testen, ob Ihr Segment wie erwartet eingerichtet ist, indem Sie nach einem Benutzer suchen, um zu überprüfen, ob er den Segmentkriterien entspricht. Suchen Sie dazu in der **Benutzersuche** nach dem Namen eines Benutzers `external_id` oder `braze_id`. Beachten Sie, dass Sie in der **Benutzer:innen-Suche** nicht nach E-Mail-Adressen suchen können.
 
-![Abschnitt Nutzer:in mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
+![Abschnitt „Nutzersuche“ mit einem Suchfeld.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
 
 Die Benutzersuche ist verfügbar, wenn:
 - Ein Segment erstellen
@@ -133,7 +133,7 @@ Die Benutzersuche ist verfügbar, wenn:
 
 Wenn ein:e Nutzer:in den Segment-, Filter- und App-Kriterien entspricht, wird dies in einer Benachrichtigung angezeigt.
 
-![Eine Nutzer:in-Suche nach "testuser" triggert einen Alarm mit der Meldung "testuser stimmt mit allen Segmenten, Filtern und Apps überein.]({% image_buster /assets/img_archive/user_lookup_match.png %})
+![Eine Nutzer:innen-Suche nach "testuser" triggert einen Alarm, der besagt: "testuser passt zu allen Segmenten, Filtern und Apps.]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 Wenn ein Benutzer die Segment-, Filter- oder App-Kriterien ganz oder teilweise nicht erfüllt, werden die fehlenden Kriterien zur Fehlerbehebung aufgelistet.
 
@@ -175,7 +175,7 @@ Wenn Sie mit geräteabhängigen Filtern segmentieren (Gerätemodell, Betriebssys
 
 ### Push-Benachrichtigungen
 
-Sie können festlegen, dass an jede:n Nutzer:in nur eine Push-Benachrichtigung gesendet wird. Wenn [Sie Ihre Nachricht verfassen]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), wählen Sie unter **Weitere Einstellungen** die Option **Nur an das zuletzt verwendete Gerät des Benutzers senden**.
+Sie können festlegen, dass an jede:n Nutzer:in nur eine Push-Benachrichtigung gesendet wird. Wenn [Sie Ihre Nachricht verfassen]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), wählen Sie unter **Weitere Einstellungen** die Option **Nur an das zuletzt verwendete Gerät des Benutzers senden**.
 
 !["Zusätzliche Einstellungen" mit einem Kontrollkästchen, um nur an das zuletzt benutzte Gerät des Nutzer:innen zu senden.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 

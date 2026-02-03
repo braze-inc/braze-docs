@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by Punchh._
 
-## About the integration
+## 통합 정보
 
 The Braze and Punchh integration allows you to sync data for gifting and loyalty purposes across the two platforms. Data published in Braze will be available for segmentation and can sync user data back into Punchh via Braze webhooks.
 
@@ -55,9 +55,9 @@ Punchh offers several endpoints available to Braze customers to help add externa
 
 Note that the Punchh `user_id` and Braze `external_id` need to be available in either platform for the integration to sync properly. 
 - Events sent from Punchh to Braze will include the Braze `external_id` as the identifier. If Punchh is configured to use the `external_source_id`, that value will be set as the Braze `external_id`. Otherwise, the integration will default to setting the Punchh `user_id` as the Braze `external_id`.
-- To send webhooks from Braze to Punchh, the Punchh `user_id` must be available on the Braze user profile. If Punchh `user_id` is not used as the Braze `external_id`, it should be set as a custom attribute "punchh_user_id". 
+- To send webhooks from Braze to Punchh, the Punchh `user_id` must be available on the Braze user profile. Punchh `user_id` 를 Braze `external_id` 로 사용하지 않는 경우 커스텀 속성으로 설정해야 합니다. "punchh_user_id". 
 
-### Step 1: Set up external ID ingestion endpoints (optional)
+### 1단계: Set up external ID ingestion endpoints (optional)
 
 External IDs from Braze can be added using the following endpoints for new and existing Punchh users.
 
@@ -77,7 +77,7 @@ Update `external_source_id` for existing Punchh users. Punchh allows external id
 <br><br>
 {% tabs local %}
 {% tab User sign-up API example %}
-This example allows you to send external identifiers with a user profile at sign-up time. This is done by sending `external_source` as "customer_id" and `external_source_id` as "111111111111111111" as a string data type.
+This example allows you to send external identifiers with a user profile at sign-up time. 이는 문자열 데이터 유형으로 `external_source` 을 "customer_id" 으로, `external_source_id` 을 "111111111111111111"으로 보내면 됩니다.
 
 ```json
 curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
@@ -104,7 +104,7 @@ curl --location --request POST 'https://server_name_goes_here.punchh.com/api2/mo
 ```
 {% endtab %}
 {% tab User update API example %}
-This example allows you to update external identifiers with a user profile. This is done by sending `external_source` as "customer_id" and `external_source_id` as "111111111111111111" as a string data type.
+This example allows you to update external identifiers with a user profile. 이는 문자열 데이터 유형으로 `external_source` 을 "customer_id" 으로, `external_source_id` 을 "111111111111111111"으로 보내면 됩니다.
 
 ```json
 curl --location --request PUT 'https://server_name_goes_here.punchh.com/api2/mobile/users' \
@@ -166,9 +166,9 @@ Braze can add users to a Punchh segment through webhooks utilizing Punchh Custom
 3. This webhook can be set up as a singular campaign or as a step within a Canvas. Alternatively, if the webhook adding users to this specific Punchh segment will be used in multiple campaigns or Canvases, it can be set up as a [template]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template#creating-a-webhook-template).<br><br>
 The `user_id` key within the webhook maps to the Punchh user ID. This identifier will need to be added to all webhooks created in Braze to add users to a Punchh custom segment. The `punch_user_id` custom attribute can be dynamically populated as the value for the `user_id` key using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#pre-formatted-variables). You can insert the `punchh_user_id` custom attribute variable using the blue "plus" icon located on the top-right of any templated text field.<br><br>![]({% image_buster /assets/img/punchh/update3.png %}){: style="max-width:65%;"}<br><br>![]({% image_buster /assets/img/punchh/update4.png %}){: style="max-width:65%;"}<br><br>
 
-4. After the webhook is saved, it can be used to sync users, as shown below. For example, 136 guests would be added to the Punch custom segment when this Braze webhook campaign is launched.<br><br>![An example of syncing users using the saved webhook due to Braze and Punchh integration.]({% image_buster /assets/img/punchh/punchh6.png %})
+4. After the webhook is saved, it can be used to sync users, as shown below. 예를 들어, 이 Braze 웹훅 캠페인이 시작될 때 136명의 게스트가 Punch 커스텀 세그먼트에 추가됩니다.<br><br>![Braze와 Punchh 통합으로 인해 저장된 웹훅을 사용하여 사용자를 동기화하는 예시입니다.]({% image_buster /assets/img/punchh/punchh6.png %})
 
-For more information on how webhooks are used at Braze, check out [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+Braze에서 웹훅을 사용하는 방법에 대한 자세한 내용은 [웹훅 만들기를]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) 참조하세요. 
 
 ## Use case campaigns
 
@@ -182,13 +182,13 @@ Adding a trigger will pull up the list of events created in Braze. Choose the ev
 
 ![]({% image_buster /assets/img/punchh/update5.png %})
 
-Property filters can be added to further filter the triggering event. For example, the message should only be triggered when a customer triggers the "checkins_gift" event where the approved event property is `true`. This is an optional feature that may not be applicable to all use cases. 
+Property filters can be added to further filter the triggering event. 예를 들어, 고객이 승인된 이벤트 속성정보가 `true` 인 "checkins_gift" 이벤트를 트리거할 때만 메시지가 트리거되어야 합니다. This is an optional feature that may not be applicable to all use cases. 
 
-#### Segmentation
+#### 세분화
 
-In many cases, Braze campaigns and Canvases being triggered by Punchh events can be set to an "All Users" audience since the segmentation of users triggering these events will be determined within Punchh. However, customers looking to further refine the audience of users who will receive the Braze messaging triggered by the event can do so by adding additional filters and segments in the **Target Audiences** section of the campaign composer or the **Entry Audience** of the Canvas composer. 
+대부분의 경우, 이러한 이벤트를 트리거하는 사용자의 세분화가 Punchh 내에서 결정되기 때문에 Punchh 이벤트에 의해 트리거되는 Braze 캠페인과 캔버스를 "모든 사용자" 오디언스로 설정할 수 있습니다. However, customers looking to further refine the audience of users who will receive the Braze messaging triggered by the event can do so by adding additional filters and segments in the **Target Audiences** section of the campaign composer or the **Entry Audience** of the Canvas composer. 
 
-### Use cases
+### 사용 사례
 
 {% tabs local %}
 {% tab Signup %}
@@ -208,9 +208,9 @@ Events required:
 - Reward event
 - Guest event
 Considerations:
-- Execution delay, recommend that the guest add a 5–10-minute delay
+- 실행 지연, 게스트에게 5~10분 지연을 추가할 것을 권장합니다.
 
-![A user segment is configured in punch, and guests sign up for a loyalty program. After this, the guest event, if triggered, and the Braze messaging campaign is triggered. Next, the Punchh sign-up gifting campaign is triggered after 10 minutes, triggering the reward event and optional follow-up message.]({% image_buster /assets/img/punchh/usecase3.png %})
+![A user segment is configured in punch, and guests sign up for a loyalty program. After this, the guest event, if triggered, and the Braze messaging campaign is triggered. 다음으로, 10분 후 Punchh 가입 선물 캠페인이 트리거되어 리워드 이벤트와 선택적 후속 메시지가 트리거됩니다.]({% image_buster /assets/img/punchh/usecase3.png %})
 {% endtab %}
 
 {% tab Braze welcome %}
@@ -241,15 +241,15 @@ Punchh configurations required:
 
 **Using Punchh for segmentation and gifting, and Braze for messaging:**<br>
 For example, a $2 off reward is sent to a segment configurable within Punchh with messaging sent through Braze.<br>
-![A user segment can be configured in Punchh, and users receive a gift through a Punchh mass offer campaign. Next, a reward event is triggered, and then the Braze messaging campaign is triggered.]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:80%;"}
+![A user segment can be configured in Punchh, and users receive a gift through a Punchh mass offer campaign. 그런 다음 보상 이벤트가 트리거되고 Braze 메시징 캠페인이 트리거됩니다.]({% image_buster /assets/img/punchh/usecase6.png %}){: style="max-width:80%;"}
 
 **Using Braze segmentation and messaging, and Punchh for gifting:**<br>
 For example, a $2 off reward and messaging sent to a segment with attributes not available in Punchh.<br>
-![A user segment can be configured in Braze, and then a message can be sent from a Braze-to-Braze segment. Next, the users are sent to the Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:80%;"}
+![A user segment can be configured in Braze, and then a message can be sent from a Braze-to-Braze segment. Next, the users are sent to the Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. 이 후 보상 이벤트가 트리거됩니다.]({% image_buster /assets/img/punchh/usecase5.png %}){: style="max-width:80%;"}
 
 **Using Braze segmentation and Punchh for gifting or messaging, or both:**<br>
 For example, a $2 off reward is sent to a segment with attributes not available in Punchh, but no messaging is required, or the messaging can be sent through Punchh (note that all guests must be present in Punchh).<br>
-![A user segment can be configured in Braze, and the users are sent to Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. After this the reward event is triggered.]({% image_buster /assets/img/punchh/usecase4.png %})
+![A user segment can be configured in Braze, and the users are sent to Punchh custom segment through a Braze webhook with segment and user ID. After this, the user receives a gift through Punchh mass offer campaign with a custom segment. 이 후 보상 이벤트가 트리거됩니다.]({% image_buster /assets/img/punchh/usecase4.png %})
 
 {% endtab %}
 {% tab Recurring mass offer %}
@@ -262,7 +262,7 @@ Punchh configurations required:
 - Segment: Custom list or customer choice
 - Reward: Customer choice
 Considerations:
-- Campaign IDs and campaign names are sent to Braze as an event property on the event. If you want to use a Punchh campaign identifier in Braze to further filter the audience receiving the campaign, the campaign name must be used since the campaign IDs will change daily.
+- Campaign IDs and campaign names are sent to Braze as an event property on the event. Braze에서 Punchh 캠페인 식별자를 사용하여 캠페인을 수신하는 오디언스를 추가로 필터링하려는 경우, 캠페인 ID는 매일 변경되므로 캠페인 이름을 사용해야 합니다.
 
 {% endtab %}
 {% tab Post check-in offer with notification %}
@@ -277,7 +277,7 @@ Punchh configurations required:
 
 For example, an email notifying guests to visit this weekend for double points to a segment with attributes not available in Punchh. Punchh will gift this segment points after a qualifying check-in and optional messaging from Braze. 
 
-![A user segment is configured in Braze, and messages are sent from Braze post check-in campaign. Next, the qualifying users are sent to Punchh custom segment through Braze webhook with segment and user ID. Lastly, the qualifying user in the custom segment checks in and receives the gift and optional message through post check-in campaign]({% image_buster /assets/img/punchh/update7.png %})
+![A user segment is configured in Braze, and messages are sent from Braze post check-in campaign. Next, the qualifying users are sent to Punchh custom segment through Braze webhook with segment and user ID. 마지막으로, 커스텀 메시지 세그먼트의 적격 사용자는 체크인 후 체크인 캠페인을 통해 선물과 선택적 메시지를 받습니다.]({% image_buster /assets/img/punchh/update7.png %})
 
 {% endtab %}
 {% tab Post check-in offer without notification %}
@@ -292,7 +292,7 @@ Punchh configurations required:
 
 For example, a surprise and delight Braze campaign is sent to a segment available in Punchh, thanking guests for visiting and rewarding them with $2 off their next visit.
 
-![An qualifying user segment can be configured within Punchh, and a qualifying user checks in and receives a gift through a Punchh post-check-in campaign. After this, a reward event is triggered and the recall message is sent notifying guests of the reward sent from Braze.]({% image_buster /assets/img/punchh/usecase2.png %})
+![An qualifying user segment can be configured within Punchh, and a qualifying user checks in and receives a gift through a Punchh post-check-in campaign. 그 후 리워드 이벤트가 트리거되고 리콜 메시지가 게스트에게 Braze에서 보낸 리워드를 알리는 메시지로 전송됩니다.]({% image_buster /assets/img/punchh/usecase2.png %})
 
 {% endtab %}
 {% tab Anniversary %}
@@ -309,7 +309,7 @@ Considerations:
 - Lifespan duration (How long is the birthday reward valid?)
 - Recurring campaigns, schedule required 
 
-![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh anniversary campaign. After this, a reward event is triggered and the recall message is sent notifying guests of the reward sent from Braze.]({% image_buster /assets/img/punchh/usecase1.png %})
+![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh anniversary campaign. 그 후 리워드 이벤트가 트리거되고 리콜 메시지가 게스트에게 Braze에서 보낸 리워드를 알리는 메시지로 전송됩니다.]({% image_buster /assets/img/punchh/usecase1.png %})
 
 {% endtab %}
 {% tab Recall %}
@@ -326,7 +326,7 @@ Punchh configurations required:
 Considerations:
 - Campaign runs on a schedule
 
-![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh recall campaign. After this, a reward event is triggered, and the recall message is sent notifying guests of the reward sent from Braze.]({% image_buster /assets/img/punchh/usecase.png %})
+![An optional segment can be created within Punchh, and a qualifying user receives a reward through a Punchh recall campaign. 그 후 리워드 이벤트가 트리거되고, 리콜 메시지가 게스트에게 Braze에서 보낸 리워드를 알리는 메시지로 전송됩니다.]({% image_buster /assets/img/punchh/usecase.png %})
 
 {% endtab %}
 {% endtabs %}

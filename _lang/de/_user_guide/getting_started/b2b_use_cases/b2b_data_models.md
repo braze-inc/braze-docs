@@ -1,12 +1,12 @@
 ---
 nav_title: Daten Modelle
-article_title: Erstellen eines B2B-Datenmodells
+article_title: Erstellen Sie ein B2B-Datenmodell
 page_order: 0
 page_type: reference
 description: "Hier erfahren Sie, wie Sie mit den Daten-Tools von Braze B2B-Modelle erstellen können."
 ---
 
-# Erstellen eines B2B-Datenmodells
+# Erstellen Sie ein B2B-Datenmodell
 
 > Dieser Anwendungsfall zeigt, wie Sie mit den Daten-Tools von Braze ein effektives und effizientes B2B-Datenmodell erstellen können, das Sie beim Targeting, Triggern, Personalisieren und Versenden von Nachrichten an Ihre Nutzer:innen unterstützt. 
 
@@ -74,22 +74,22 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
   <tr>
     <td rowspan="4">Katalog > Kontokatalog</td>
     <td><code>id</code></td>
-    <td><code>Konto</code></td>
+    <td><code>account</code></td>
     <td><code>id</code></td>
   </tr>
   <tr>
-    <td><code>Kontoname</code></td>
-    <td><code>Konto</code></td>
-    <td><code>Konto Name</code></td>
+    <td><code>AccountName</code></td>
+    <td><code>account</code></td>
+    <td><code>Account Name</code></td>
   </tr>
   <tr>
-    <td><code>Typ</code></td>
-    <td><code>Konto</code></td>
-    <td><code>Typ</code></td>
+    <td><code>Type</code></td>
+    <td><code>account</code></td>
+    <td><code>Type</code></td>
   </tr>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>Konto</code></td>
+    <td><code>account</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
 </table>
@@ -113,21 +113,21 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
   <tr>
     <td rowspan="4">Katalog > Opportunity-Katalog</td>
     <td><code>id</code></td>
-    <td><code>Opportunity</code></td>
+    <td><code>opportunity</code></td>
     <td><code>id</code></td>
   </tr>
   <tr>
     <td><code>OpportunityName</code></td>
-    <td><code>Opportunity</code></td>
+    <td><code>opportunity</code></td>
     <td><code>Opportunity Name</code></td>
   </tr>
   <tr>
-    <td><code>Territorium</code></td>
-    <td><code>Opportunity</code></td>
-    <td><code>Territorium</code></td>
+    <td><code>Territory</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>Territory</code></td>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>Opportunity</code></td>
+    <td><code>opportunity</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
   </tr>
@@ -135,7 +135,7 @@ In diesem Anwendungsfall ist Salesforce das Beispiel-CRM-System. Sie können jed
 
 ##### Beispieltabelle der zugeordneten Opportunity-Felder
 
-![Tabelle der Salesforce Opportunities mit den entsprechenden Informationen wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![Tabelle der Salesforce Opportunities mit den entsprechenden Informationen, wie Rechnungsadresse und Kontoinhaber.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endsubtab %}
 {% endsubtabs %}

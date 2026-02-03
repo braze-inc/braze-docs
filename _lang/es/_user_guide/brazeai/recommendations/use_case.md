@@ -15,7 +15,7 @@ El objetivo de Camila es mantener la interacción de los espectadores cuando ter
 
 Utilizando [las Recomendaciones de elementos de IA]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/), Camila crea un sistema para recomendar automáticamente nuevos títulos basados en el historial de visionado de cada espectador, que se entregan inmediatamente después de que el usuario termine una película o un episodio. Es una forma más inteligente y personal de ayudar a los usuarios a descubrir contenidos que realmente querrán ver a continuación y mantener su interacción con la plataforma.
 
-\![Mensaje dentro de la aplicación con la leyenda "A continuación, sólo para ti. Porque viste "Nómadas del Sol", con una imagen, un nombre de título, una descripción y un CTA para "Ver ahora" o "Saltar" a la siguiente recomendación.]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
+![Mensaje dentro de la aplicación con la leyenda "A continuación, sólo para ti. Porque viste "Nómadas del Sol", con una imagen, un nombre de título, una descripción y un CTA para "Ver ahora" o "Saltar" a la siguiente recomendación.]({% image_buster /assets/img/ai_use_cases/recommendation_rendered.png %})
 
 Este tutorial explica cómo funciona Camila:
 
@@ -34,7 +34,7 @@ Camila empieza creando una recomendación que mostrará títulos relevantes cada
 6. Camila vincula la recomendación al evento personalizado `Watched Content`, que realiza un seguimiento de las visualizaciones completadas, y establece el **Nombre de la propiedad** en el título del contenido.
 7. Ella crea la recomendación.
 
-## Paso 2: Configurar un mensaje dentro de la aplicación
+## Paso 2: Configurar un mensaje dentro de la aplicación
 
 Una vez que la recomendación ha terminado de entrenarse, Camila construye un flujo de mensajería que llega al usuario en el momento adecuado: inmediatamente después de que termine un título. El mensaje incluye una lista de tres sugerencias personalizadas extraídas directamente del catálogo.
 
@@ -42,13 +42,13 @@ Una vez que la recomendación ha terminado de entrenarse, Camila construye un fl
 2. Configura el desencadenamiento a su evento personalizado: `Watched Content`.
 3. Diseña un mensaje dentro de la aplicación de varias páginas con imágenes de títulos, nombres y una CTA de "Ver ahora".
 
-\!["Añadir personalización" modal abierto en el editor de Braze, con "Recomendación de artículos" seleccionada como tipo de personalización.]({% image_buster /assets/img/ai_use_cases/recommendation_add_personalization.png %})
+![Se abre el modal "Añadir personalización" en el editor de Braze, con la opción "Recomendación de artículos" seleccionada como tipo de personalización.]({% image_buster /assets/img/ai_use_cases/recommendation_add_personalization.png %})
 
 {: start="4"}
 
 4. En el cuerpo del mensaje, Camila utiliza el [modal Añadir personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#inserting-pre-formatted-variables) para añadir variables como el nombre, la descripción y la miniatura del título recomendado utilizando Liquid, que rellena dinámicamente el contenido del catálogo. Plantilla un atributo personalizado para `Last Watched Movie` para que los usuarios sepan que esta recomendación se basa en su historial de relojes. 
 
-\![Editor de mensajes dentro de la aplicación con Liquid sin procesar para crear plantillas en campos específicos a partir de elementos del catálogo de la recomendación.]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
+![Editor de mensajes dentro de la aplicación con Liquid sin procesar para crear plantillas en campos específicos a partir de elementos del catálogo de la recomendación.]({% image_buster /assets/img/ai_use_cases/recommendation_liquid.png %})
 
 {% details Show Liquid used in image %}
 
@@ -74,7 +74,7 @@ Una vez que la recomendación ha terminado de entrenarse, Camila construye un fl
 
 5. A continuación, Camila duplica su página e incrementa la matriz Liquid {% raw %} (`{{ items[0]}}` a `{{items[1]}}`) {% endraw %} en cada variable de la plantilla en el siguiente elemento de la lista de recomendaciones.
 
-## Paso 3: Medir y optimizar
+## Paso 3: Medir y optimizar
 
 Con la campaña en vivo, Camila supervisa las tasas abiertas, los CTR y el comportamiento de seguimiento. Compara el rendimiento con el de anteriores campañas de recomendación estáticas y observa una mayor interacción y más sesiones de contenido por usuario.
 

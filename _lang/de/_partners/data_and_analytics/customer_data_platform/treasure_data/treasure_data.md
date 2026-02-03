@@ -58,7 +58,7 @@ Definieren Sie zusätzliche Parameter für die Exportergebnisse, wie im folgende
 
 Wählen Sie schließlich **Fertig**, führen Sie Ihre Abfrage aus und überprüfen Sie, ob Ihre Daten nach Braze verschoben wurden.
 
-### Anpassung
+### Customization
 
 Die Parameter der Exportergebnisse sind in der folgenden Tabelle aufgeführt:
 

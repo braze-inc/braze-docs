@@ -18,7 +18,7 @@ description: "이 문서에서는 사용자 지정 이벤트 목록 내보내기
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `events.list` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -33,7 +33,7 @@ description: "이 문서에서는 사용자 지정 이벤트 목록 내보내기
 | `page` | 선택 사항 | 정수 | 반환할 이벤트 이름 페이지의 기본값은 0입니다(최대 250개의 첫 번째 집합을 반환합니다). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -42,8 +42,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3'
 ## 응답
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [
@@ -57,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### 치명적인 오류 응답 코드 {#fatal-export}
 
-요청에 치명적인 오류가 발생할 경우 반환되는 상태 코드 및 관련 오류 메시지는 치명적인 [오류 및 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
+요청에 심각한 오류가 발생할 경우 반환되는 상태 코드 및 관련 오류 메시지는 [심각한 오류 & 응답을]({{site.baseurl}}/api/errors/#fatal-errors) 참조하세요.
 
 {% alert tip %}
 CSV 및 API 내보내기 문제 해결에 대한 도움은 [내보내기 문제 해결]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/)를 방문하세요.

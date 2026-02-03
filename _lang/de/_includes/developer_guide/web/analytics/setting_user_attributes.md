@@ -19,7 +19,7 @@ Braze stellt vordefinierte Methoden zum Festlegen der folgenden Nutzerattribute 
 ### Einstellung von Standardattributen
 
 {% tabs %}
-{% tab Methoden verwenden %}
+{% tab using methods %}
 Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `getUser()` auf Ihrer Braze-Instanz auf, um eine Referenz auf den aktuellen Nutzer:innen Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
 
 {% subtabs local %}
@@ -41,7 +41,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Bei der Verwendung von Google Tag Manager sollten Standard-Attribute für Nutzer:innen (z.B. der Vorname eines Nutzers) auf die gleiche Weise protokolliert werden wie angepasste Attribute für Nutzer:innen. Stellen Sie sicher, dass die Werte, die Sie für Standardattribute übergeben, dem erwarteten Format entsprechen, das in der Dokumentation [Nutzerklasse](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) angegeben ist.
 
 Das Attribut "gender" kann zum Beispiel folgende Werte annehmen: `"m" | "f" | "o" | "u" | "n" | "p"`. Um also das Geschlecht eines Nutzers als weiblich festzulegen, erstellen Sie ein angepasstes HTML-Tag mit folgendem Inhalt:
@@ -59,17 +59,17 @@ window.braze.getUser().setGender("f")
 Um ein Standardattribut für Nutzer:innen zu deaktivieren, übergeben Sie `null` an die entsprechende Methode. Zum Beispiel:
 
 {% tabs local %}
-{% tab Vorname %}
+{% tab First name %}
 ```javascript
 braze.getUser().setFirstName(null);
 ```
 {% endtab %}
-{% tab Geschlecht %}
+{% tab Gender %}
 ```javascript
 braze.getUser().setGender(null);
 ```
 {% endtab %}
-{% tab Geburtsdatum %}
+{% tab Date of birth %}
 ```javascript
 braze.getUser().setDateOfBirth(null, null, null);
 ```
@@ -81,7 +81,7 @@ braze.getUser().setDateOfBirth(null, null, null);
 ### Anpassen der Attribute
 
 {% tabs %}
-{% tab Methoden verwenden %}
+{% tab using methods %}
 Zusätzlich zu den Standardattributen können Sie auch [angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) für Ihre Nutzer:innen festlegen. Die vollständigen Spezifikationen der Methode finden Sie in [unseren JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
@@ -165,7 +165,7 @@ Angepasste Attribut-Schlüssel und -Werte dürfen nur maximal 255 Zeichen lang s
 {% endalert %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Benutzerdefinierte Benutzerattribute sind aufgrund einer Einschränkung in der Skriptsprache von Google Tag Manager nicht verfügbar. Um angepasste Attribute zu protokollieren, erstellen Sie ein angepasstes HTML-Tag mit folgendem Inhalt:
 
 ```html

@@ -71,11 +71,11 @@ Elige mostrar u ocultar los eventos personalizados Braze del usuario.
 
 #### Mostrar una lista de compras
 
-Elige mostrar u ocultar una lista de productos comprados por el usuario. Aquí puedes ver cuántas veces se ha comprado. Para ver la primera y la última fecha de compra, pasa el ratón por encima del artículo. 
+Elige mostrar u ocultar una lista de productos que el usuario ha comprado. Aquí puedes ver cuántas veces compró el usuario el producto. Para ver la primera y la última fecha de compra, pasa el ratón por encima del artículo. 
 
 ### Ejemplo de integración
 
 A continuación se muestra un ejemplo de integración:
 
-![La integración de Braze y Dixa en Dixa que muestra el estado de suscripción por correo electrónico, los atributos personalizados, los eventos personalizados y las compras de un usuario.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
+![La integración de Braze y Dixa en Dixa que muestra el estado de suscripción por correo electrónico de un usuario, atributos personalizados, eventos personalizados y compras.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
 

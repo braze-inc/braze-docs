@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Exportar detalles del Canvas"
+nav_title: "GET: Exportar detalles del lienzo"
 article_title: "GET: Exportar detalles del Canvas"
 search_tag: Endpoint
 page_order: 4
@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Respuestas
 
 {% alert note %}
-Todos los pasos de Canvas tienen un campo `next_paths`, que es una matriz de datos `{name, next_step_id}`. Para los pasos completos y los pasos de Mensaje, el campo `next_step_ids` estará presente, pero no contendrá datos para otros pasos del Flujo del lienzo.
+Todos los pasos de Canvas tienen un campo `next_paths`, que es una matriz de datos `{name, next_step_id}`. Para los pasos en Canvas de Mensajes, el campo `next_step_ids` estará presente, pero no contendrá datos para otros pasos en Canvas.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

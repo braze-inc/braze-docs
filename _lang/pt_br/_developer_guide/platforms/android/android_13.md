@@ -8,4 +8,4 @@ platform:
 description: "Este artigo aborda o Android 13, as atualizações do SDK, as alterações na permissão push, a compatibilidade do SDK e muito mais."
 ---
 
- %} developer_guide/android/android_13.md
+{% multi_lang_include developer_guide/android/android_13.md %}

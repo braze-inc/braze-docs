@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mise à jour des canevas déclenchés par l'API planifiée"
+nav_title: "POST : Mise à jour des Canvases déclenchées par l'API planifiée"
 article_title: "POST : Mise à jour des canevas déclenchés par l'API planifiée"
 search_tag: Endpoint
 page_order: 4
@@ -16,13 +16,13 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 
 > Utilisez cet endpoint pour mettre à jour des Canvas déclenchés par API planifiés qui ont été créés dans le tableau de bord.
 
-Ceci vous permet de décider quelle action doit déclencher l’envoi du message. Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
+Vous pouvez ainsi décider de l'action qui déclenche l'envoi du message. Vous pouvez intégrer `trigger_properties` que Braze modélise dans le message lui-même.
 
 Notez que pour envoyer des messages avec ce point de terminaison, vous devez avoir un ID Canvas, créé lorsque vous construisez un [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
 Toute planification écrasera complètement celle que vous avez établie dans la demande de création de planification ou dans les demandes de mise à jour de planification précédentes.
-  - Par exemple, si vous indiquez initialement `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` et, que dans votre mise à jour, vous renseignez `"schedule" : {"time" : "2015-02-20T14:14:47"}`, votre message sera envoyé à l’heure indiquée (UTC), et non à l’heure locale de l’utilisateur.
-  - Les déclencheurs planifiés qui sont mis à jour peu de temps avant ou pendant la période où ils sont censés être envoyés seront mis à jour dans les meilleurs délais, de sorte que les changements de dernière minute pourraient être appliqués à tous, certains ou aucun de vos utilisateurs ciblés.
+  - Par exemple, si vous indiquez initialement `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` puis `"schedule" : {"time" : "2015-02-20T14:14:47"}` dans votre mise à jour, Braze envoie votre message à l'heure indiquée en UTC, et non à l'heure locale de l'utilisateur.
+  - Les déclencheurs planifiés que vous mettez à jour à proximité ou pendant l'heure à laquelle ils étaient censés être envoyés sont mis à jour dans la mesure du possible, de sorte que Braze peut appliquer des modifications de dernière seconde à tous les utilisateurs ciblés, à certains d'entre eux ou à aucun d'entre eux.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 

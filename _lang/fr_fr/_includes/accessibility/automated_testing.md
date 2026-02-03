@@ -2,7 +2,7 @@ Les [tests d'accessibilité automatisés]({{site.baseurl}}/help/accessibility/#a
 
 Mais l'automatisation ne peut pas tout saisir. Certaines questions doivent être examinées par un œil humain, par exemple si l'ordre des priorités est logique, si les liens et les boutons sont clairement étiquetés ou si vos instructions sont faciles à suivre. Considérez ces contrôles comme un outil de diagnostic et non comme un verdict final. Nous vous recommandons d'examiner manuellement les problèmes signalés et de faire preuve de discernement lorsque quelque chose est marqué comme étant "à revoir".
 
-Pour un soutien supplémentaire, notre guide [L'accessibilité à Braze]({{site.baseurl}}/help/accessibility) partage des conseils pratiques pour faciliter l'utilisation de votre contenu par tous, notamment :
+Pour un soutien supplémentaire, notre guide [L'accessibilité à Braze]({{site.baseurl}}/help/accessibility) partage des conseils pratiques pour rendre votre contenu plus facile à utiliser pour tout le monde, notamment :
 
 - [Rubriques et structure]({{site.baseurl}}/help/accessibility/#content)
 - [Texte Alt et images]({{site.baseurl}}/help/accessibility/#images) 
