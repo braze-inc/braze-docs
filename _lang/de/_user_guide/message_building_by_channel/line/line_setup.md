@@ -25,7 +25,11 @@ Für die Integration von LINE mit Braze benötigen Sie Folgendes:
 - [LINE Entwickler-Konto](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE-Messaging-API-Kanal](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-Wenn Sie LINE-Nachrichten von Braze aus versenden, wird das Nachrichtenguthaben Ihres Kontos verbraucht.
+Das Versenden von LINE-Nachrichten von Braze aus verbraucht das Nachrichtenguthaben Ihres Kontos.
+
+{% alert note %}
+**Einstellung `native_line_id`**: Sie können `native_line_id` einstellen, indem Sie Nutzer:innen Updates an Braze senden (zum Beispiel mit dem [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) Endpunkt, [CSV-Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) oder [Cloud-Datenaufnahme]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Wenn Ihr Client-seitiges SDK kein spezielles Feld für `native_line_id` hat, senden Sie es in Server-seitigen Nutzer:innen Updates mit einer dieser Methoden.
+{% endalert %}
 
 ## Arten von LINE-Konten
 
@@ -61,6 +65,10 @@ Um konsistente Benutzeraktualisierungen einzurichten, übernehmen Sie die LINE-I
 4. [Update-Methoden für Nutzer:innen ändern](#step-4-change-your-user-update-methods)
 5. [(Optional) Nutzerprofile zusammenführen](#step-5-merge-profiles-optional)
 
+{% alert note %}
+Sie können nur ein LINE-Konto in einem einzigen Workspace haben. Wenn Sie mehrere LINE-Konten haben, empfehlen wir Ihnen, jedes Konto in einem anderen Workspace zu verwenden.
+{% endalert %}
+
 ## Schritt 1: Importieren oder aktualisieren Sie bestehende LINE-Benutzer
 
 Dieser Schritt ist notwendig, wenn Sie einen bestehenden und identifizierten LINE-Benutzer haben, da Braze später automatisch dessen Abonnementstatus abruft und das richtige Benutzerprofil aktualisiert. Wenn Sie die Nutzer:innen noch nicht mit ihrer LINE ID abgeglichen haben, überspringen Sie diesen Schritt. 
@@ -82,7 +90,7 @@ Nachdem der Integrationsprozess abgeschlossen ist, zieht Braze automatisch die L
 1. Gehen Sie in LINE auf die Registerkarte **Messaging API** und bearbeiten Sie Ihre **Webhook-Einstellungen**:
    - Setzen Sie die **Webhook-URL** auf `https://anna.braze.com/line/events`.
       - Braze ändert diese URL bei der Integration automatisch in eine andere URL, die auf Ihrem Dashboard-Cluster basiert.
-   - Aktivieren Sie **Webhook verwenden** und **Webhook-Zustellung**. <br><br> ![Webhook-Einstellungsseite, um die Webhook-URL zu überprüfen oder zu bearbeiten, "Webhook verwenden", "Webhook-Wiederzustellung" und "Fehlerstatistiken aggregieren" ein- oder auszuschalten.]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
+   - Aktivieren Sie **Webhook verwenden** und **Webhook-Zustellung**. <br><br> ![Webhook-Einstellungsseite, um die Webhook-URL zu überprüfen oder zu bearbeiten, „Webhook verwenden“, „Erneute Webhook-Zustellung“ und „Fehlerstatistik-Aggregation“ ein- oder auszuschalten.]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. Beachten Sie die folgenden Informationen auf der Registerkarte **Provider**:
 
 | Informationstyp | Standort |
@@ -99,7 +107,7 @@ Nachdem der Integrationsprozess abgeschlossen ist, zieht Braze automatisch die L
    - Schalten Sie **Automatische Antwortnachrichten** aus. Alle ausgelösten Benachrichtigungen sollten über Braze erfolgen. Das hindert Sie nicht daran, direkt von der LINE-Konsole aus zu senden.
    - Aktivieren Sie **Webhooks**.
 
-![Einstellungsseite für die Antwort mit Umschaltmöglichkeiten, wie Ihr Konto Chats behandeln soll.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
+![Seite mit den Einstellungen für die Reaktion mit Umschaltern für die Art und Weise, wie Ihr Konto Chats handhabt.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### Schritt 2.2: Erzeugen von LINE-Abonnementgruppen in Braze
 
@@ -115,12 +123,12 @@ Wenn Sie in Ihrem LINE-Konto ein IP-Whitelisting hinzufügen möchten, fügen Si
 Vergewissern Sie sich während der Integration, dass Ihr Kanalgeheimnis korrekt ist. Wenn sie nicht korrekt ist, gibt es möglicherweise Unstimmigkeiten im Abo-Status.
 {% endalert %}
 
-![LINE Messaging Integration Seite mit LINE Integration Abschnitt.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
+![LINE-Messaging-Integrationsseite mit Abschnitt „LINE-Integration“.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2\. Nach der Verbindung erstellt Braze automatisch eine Braze-Abonnementgruppe für jede LINE-Integration, die erfolgreich zu Ihrem Arbeitsbereich hinzugefügt wurde. <br><br> Alle Änderungen an Ihrer Follower-Liste (z.B. neue Follower oder Unfollower) werden automatisch in Braze übertragen.
 
-![Abschnitt LINE Abo-Gruppen, der eine Abo-Gruppe für den Kanal "LINE" anzeigt.]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
+![Abschnitt „LINE Abo-Gruppen“, der eine Abo-Gruppe für den Kanal „LINE“ anzeigt.]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## Schritt 3: Nutzer-IDs abgleichen
 
@@ -329,7 +337,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\. Erstellen Sie eine Nachricht, in der Ihnen der Code für den Gutschein zugestellt wird.
-4\. (Optional) Erstellen Sie eine aktionsbasierte Kampagne oder ein Canvas, das ausgelöst wird, wenn der LINE-Benutzer identifiziert wird, um dem Benutzer seinen Gutscheincode zu senden. <br>![Aktionsbasierte Kampagne, die ausgelöst wird, wenn der Nutzer:innen von LINE identifiziert wird.]({% image_buster /assets/img/line/account_link_2.png %})
+4\. (Optional) Erstellen Sie eine aktionsbasierte Kampagne oder ein Canvas, das ausgelöst wird, wenn der LINE-Benutzer identifiziert wird, um dem Benutzer seinen Gutscheincode zu senden. <br>![Aktionsbasierte Kampagne, die ausgelöst wird, wenn der LINE-Nutzer:in identifiziert wird.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### Funktionsweise
 
@@ -375,7 +383,7 @@ if (user && isLoggedIn && lineUserId) {
 
 Sie können Ihren LINE-Kanal testen, bevor Sie eine [Benutzerabstimmung](#user-id-reconciliation) einrichten, indem Sie ein "Wer bin ich"-Canvas oder eine Kampagne erstellen.
 
-1. Richten Sie ein Canvas ein, das die Braze ID eines Nutzers:innen bei einem bestimmten triggernden Wort zurückgibt. <br><br>Beispiel Auslöser <br><br>![Triggern Sie die Kampagne an Nutzer:in, die eine eingehende LINE an eine bestimmte Abo-Gruppe gesendet haben.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Beispielnachricht<br><br>![LINE Nachricht mit Angabe der Braze Nutzer:in ID.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
+1. Richten Sie ein Canvas ein, das die Braze ID eines Nutzers:innen bei einem bestimmten triggernden Wort zurückgibt. <br><br>Beispiel Auslöser <br><br>![Trigger, um die Kampagne an Nutzer:innen zu senden, die eine eingehende LINE an eine bestimmte Abo-Gruppe gesendet haben.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Beispielnachricht<br><br>![LINE-Nachricht mit Angabe der Braze-Benutzer-ID.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. In Braze können Sie die Braze ID verwenden, um nach bestimmten Nutzer:innen zu suchen und sie bei Bedarf zu ändern.
 

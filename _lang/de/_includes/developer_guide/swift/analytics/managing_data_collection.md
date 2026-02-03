@@ -46,22 +46,22 @@ Prüfen Sie zunächst, ob Sie bereits ein Datenschutzmanifest haben, indem Sie i
 
 {% endalert %}
 
-![Ein Xcode-Projekt mit geöffnetem Kontextmenü und markierter Option "Raw Keys and Values".]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
+![Ein Xcode-Projekt mit geöffnetem Kontextmenü und markierten "Raw Keys and Values".]({% image_buster /assets/img/apple/privacy_manifest/check_raw_keys_and_values.png %})
 
 Wählen Sie unter **App-Datenschutzkonfiguration** **NSPrivacyTracking** und setzen Sie den Wert auf **YES**.
 
-![Die geöffnete Datei "PrivacyInfo.xcprivacy" mit "NSPrivacyTracking" auf "YES" gesetzt.]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
+![Die Datei 'PrivacyInfo.xcprivacy' geöffnet mit "NSPrivacyTracking" auf "YES" gesetzt.]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytracking.png %})
 
 Wählen Sie unter **App-Datenschutzkonfiguration** **NSPrivacyTrackingDomains**. Fügen Sie im Array domains ein neues Element hinzu und setzen Sie dessen Wert auf den Endpunkt, den Sie [zuvor zu Ihrem `AppDelegate` mit dem Präfix `sdk-tracking` hinzugefügt haben]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/completing_integration/#update-your-app-delegate).
 
-![Die geöffnete Datei "PrivacyInfo.xcprivacy" mit einem Braze-Tracking-Endpunkt, der unter "NSPrivacyTrackingDomains" aufgeführt ist.]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
+![Die Datei 'PrivacyInfo.xcprivacy' ist mit einem Tracking Endpunkt von Braze geöffnet, der unter "NSPrivacyTrackingDomains" aufgeführt ist.]({% image_buster /assets/img/apple/privacy_manifest/add_nsprivacytrackingdomains.png %})
 
 ### Schritt 4: Deklarieren Sie Ihre Tracking Daten
 
 Als Nächstes öffnen Sie `AppDelegate.swift` und listen alle [Tracking-Eigenschaften](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/trackingproperty/) auf, die Sie deklarieren möchten, indem Sie eine statische oder dynamische Tracking-Liste erstellen. Denken Sie daran, dass Apple diese Eigenschaften blockiert, bis der Endnutzer die ATT-Aufforderung akzeptiert. Führen Sie also nur die Eigenschaften auf, die Sie und Ihre Rechtsberatung als Tracking betrachten. Zum Beispiel:
 
 {% tabs %}
-{% tab statisches Beispiel %}
+{% tab static example %}
 Im folgenden Beispiel werden `dateOfBirth`, `customEvent` und `customAttribute` als Tracking Daten innerhalb einer statischen Liste deklariert. 
 
 ```swift
@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 {% endtab %}
 
-{% tab dynamisches Beispiel %}
+{% tab dynamic example %}
 In dem folgenden Beispiel wird die Tracking-Liste automatisch aktualisiert, nachdem der Endnutzer die ATT-Aufforderung akzeptiert hat.
 
 ```swift

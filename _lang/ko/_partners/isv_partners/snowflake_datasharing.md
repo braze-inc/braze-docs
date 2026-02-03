@@ -31,21 +31,21 @@ Braze는 현재 모든 사용자 수준 데이터를 Snowflake AWS US East-1 및
 
 ## 파괴적 변경 사항 및 비파괴적 변경 사항
 
-### 비파괴적 변경 사항
+### Non-breaking changes
 
-비파괴적 변경 사항은 언제든지 발생할 수 있으며 일반적으로 추가 기능을 제공합니다. 비파괴적 변경 사항의 예:
-- 새 테이블 또는 뷰 추가
-- 기존 테이블 또는 뷰에 열 추가하기
+Non-breaking changes can happen at any time and generally provide additional functionality. Examples of non-breaking changes:
+- Adding a new table or view
+- Adding a column to an existing table or view
 
 {% alert important %}
 새 열은 비파괴적 변경으로 간주되므로 Braze는 `SELECT *` 쿼리를 사용하는 대신 각 쿼리에서 관심 있는 열을 명시적으로 나열할 것을 적극 권장합니다. 또는 열 이름을 명시적으로 지정하는 보기를 생성한 다음, 테이블을 직접 쿼리하는 대신 해당 보기를 쿼리할 수 있습니다.
 {% endalert %}
 
-### 파괴적 변경 사항
+### Breaking changes
 
-가능한 경우, 파괴적 변경 사항은 공지와 마이그레이션 기간이 선행됩니다. 파괴적 변경 사항의 예:
-- 테이블 또는 뷰 제거
-- 기존 테이블 또는 뷰에서 열 제거하기
+When possible, breaking changes will be preceded by an announcement and a migration period. Examples of breaking changes include:
+- Removing a table or view
+- Removing a column from an existing table or view
 - 기존 열의 유형 또는 무효화 가능성 변경하기
 
 ## 일반 데이터 보호 규정(GDPR) 준수

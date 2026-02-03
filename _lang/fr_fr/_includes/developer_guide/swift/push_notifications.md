@@ -4,13 +4,13 @@ Les notifications push sont limitées en débit, n'ayez donc pas peur d'en envoy
 
 ## Mise en place des notifications push
 
-### Étape 1 : Téléchargez votre jeton APN
+### Étape 1 : Téléchargez votre jeton APN
 
 {% multi_lang_include developer_guide/swift/apns_token.md %}
 
-### Étape 2 : Activer les fonctionnalités de notification push
+### Étape 2 : Activer les fonctionnalités de notification push
 
-Dans Xcode, accédez à la section **Signage et capacités de** la cible principale de l'app et ajoutez la capacité de notifications push.
+Dans Xcode, accédez à la section **Signing & Capabilities** de la cible principale de l'app et ajoutez la capacité de notifications push.
 
 ![La section "Signing & Capabilities" dans un projet Xcode.]({% image_buster /assets/img_archive/Enable_push_capabilities.png %})
 
@@ -19,7 +19,7 @@ Dans Xcode, accédez à la section **Signage et capacités de** la cible princip
 Vous pouvez utiliser le SDK Swift pour automatiser le traitement des notifications à distance reçues de Braze. C'est la façon la plus simple de gérer les notifications push et c'est la méthode de gestion recommandée.
 
 {% tabs local %}
-{% tab Automatique %}
+{% tab Automatic %}
 #### Étape 3.1 : Activer l'automatisation dans la propriété push
 
 Pour activer l'intégration automatique des notifications push, définissez la propriété `automation` de la configuration `push` sur `true` :
@@ -84,7 +84,7 @@ configuration.push.automation.requestAuthorizationAtLaunch = NO;
 Voir [`Braze.Configuration.Push.Automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.class) pour connaître toutes les options disponibles et [`automation`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/push-swift.class/automation-swift.property) pour plus d'informations sur le comportement de l'automatisation.
 {% endtab %}
 
-{% tab Manual (Manuel) %}
+{% tab Manual %}
 {% alert note %}
 Si vous comptez sur les notifications push pour des comportements supplémentaires spécifiques à votre appli, vous pouvez toujours utiliser l'intégration push automatique au lieu de l'intégration manuelle des notifications push. La méthode [`subscribeToUpdates(_:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/notifications-swift.class/subscribetoupdates(_:)) permet d'être informé des notifications à distance traitées par Braze.
 {% endalert %}
@@ -335,7 +335,7 @@ Gardez à l'esprit que les événements reçus par les notifications push ne se 
 
 {% endtab %}
 
-{% tab OBJECTIF-C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 NSInteger filtersValue = BRZNotificationsPayloadTypeFilter.opened.rawValue | BRZNotificationsPayloadTypeFilter.received.rawValue;

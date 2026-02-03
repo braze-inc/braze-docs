@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Kochava
 
-> A Kochava oferece atribuição e análise de dados para dispositivos móveis que ajudam a utilizar seus dados em prol do crescimento. Com a Kochava Audience Platform, é possível planejar, direcionar, ativar, medir e otimizar suas campanhas de apps.
+> [A Kochava](https://www.kochava.com/) oferece atribuição e análises de dados móveis para ajudá-lo a aproveitar seus dados para crescer. Com a Kochava Audience Platform, é possível planejar, direcionar, ativar, medir e otimizar suas campanhas de apps.
 
 _Essa integração é mantida pela Kochava._
 
@@ -33,7 +33,7 @@ A integração entre o Braze e a Kochava ajuda a proporcionar uma compreensão m
 
 #### Android
 
-O SDK para [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) gera um GUID como o ID da Braze no início da sessão. Esse é o identificador que recomendamos passar para o método Kochava `IdentityLink`, pois ele permite que o Braze reconcilie os dados de volta ao perfil de usuário correto. O ID da Braze pode ser recuperado usando o seguinte método:
+O SDK [do Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) gera um GUID (Globally Unique Identifier) como o Braze ID no início da sessão. Esse identificador deve ser passado para o método Kochava `IdentityLink` para que o Braze possa reconciliar os dados de volta ao perfil de usuário correto. Recupere o Braze ID com o seguinte método:
 
 ```java
 Apppboy.getInstance(context).getDeviceId();
@@ -42,7 +42,7 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-Antes de fevereiro de 2023, nossa integração de atribuição Kochava usava o IDFV como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes do Braze que usam Objective C busquem o Braze `device_id` e o enviem para a Kochava durante a instalação, pois não haverá interrupção do serviço.
+Antes de fevereiro de 2023, nossa integração de atribuição da Kochava usava o Identificador de Fornecedor (IDFV) como o identificador principal para corresponder aos dados de atribuição do iOS. Não é necessário que os clientes do Braze que usam Objective C busquem o Braze `device_id` e o enviem para a Kochava durante a instalação, pois não há interrupção do serviço.
 {% endalert%}
 
 Para quem usa o SWIFT SDK v5.7.0+, se você deseja continuar usando o IDFV como o identificador mútuo, confirme se o campo `useUUIDAsDeviceId` está definido como `false` para que não haja interrupção da integração. Se estiver definido como `true`, implemente o mapeamento de ID do dispositivo iOS para SWIFT a fim de passar o `device_id` da Braze para a Kochava na instalação do app para que a Braze possa corresponder adequadamente as atribuições do iOS.
@@ -64,7 +64,7 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Na Braze, navegue até **Integrações de parceiros** > **Parceiros de tecnologia** e selecione **Kochava**. 
 
-Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Kochava.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia do Kochava. Nessa caixa, você verá a chave de importação de dados e o ponto de extremidade REST.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
+Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Kochava.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia do Kochava. Essa caixa contém chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: configure um postback da Kochava
 
@@ -72,9 +72,9 @@ Aqui você encontra o endpoint REST e gera sua chave de importação de dados da
 
 ### Etapa 4: Confirmar a integração
 
-Quando o Braze receber dados de atribuição da Kochava, o indicador de status de conexão na página de parceiros de tecnologia da Kochava no Braze mudará de "Não conectado" para "Conectado". Um registro de data e hora da última solicitação bem-sucedida também será incluído. 
+Depois que o Braze receber dados de atribuição da Kochava, o indicador de status da conexão na página de parceiros de tecnologia da Kochava no Braze mudará de "Não conectado" para "Conectado" e incluirá um registro de data e hora da última solicitação bem-sucedida.
 
-Observe que isso não acontecerá até recebermos dados sobre uma instalação atribuída. Instalações orgânicas, que devem ser excluídas do postback da Kochava, são ignoradas pela nossa API e não são contadas ao determinar se uma conexão bem-sucedida foi estabelecida.
+Esse status é alterado somente depois que o Braze recebe dados sobre uma atribuição de instalação. O Braze ignora as instalações orgânicas (exclui-as do postback do Kochava) e não as conta ao determinar se a conexão foi bem-sucedida.
 
 ## Dados de atribuição do Facebook e do X (antigo Twitter)
 

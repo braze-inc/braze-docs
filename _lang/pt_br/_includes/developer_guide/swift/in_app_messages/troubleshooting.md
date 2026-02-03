@@ -2,7 +2,7 @@
 
 ### Solução de problemas de carregamento de ativos (`NSURLError` código `-1008`)
 
-Ao integrar a Braze com bibliotecas de registro de rede de terceiros, os desenvolvedores geralmente se deparam com um `NSURLError` com o código de domínio `-1008`. Esse erro indica que ativos como imagens e fontes não puderam ser recuperados ou não foram armazenados em cache. Para contornar tais casos, você precisará registrar as URLs do CDN do Braze na lista de domínios que devem ser ignorados por essas bibliotecas.
+Ao integrar a Braze com bibliotecas de registro de rede de terceiros, os desenvolvedores geralmente se deparam com um `NSURLError` com o código de domínio `-1008`. Esse erro indica que ativos como imagens e fontes não puderam ser recuperados ou não foram armazenados em cache. Para contornar esses casos, você precisará registrar as URLs do CDN do Braze na lista de domínios que devem ser ignorados por essas bibliotecas.
 
 #### Domínios
 
@@ -20,12 +20,12 @@ Abaixo estão as bibliotecas que são conhecidas por entrar em conflito com o ca
 ##### Netfox
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab Swift %}
 ```swift
 NFX.sharedInstance().ignoreURLs(["https://cdn.braze.com"])
 ```
 {% endtab %}
-{% tab Objective C %}
+{% tab Objective-C %}
 ```objc
 [NFX.sharedInstance ignoreURLs:@[@"https://cdn.braze.com"]];
 ```
@@ -35,12 +35,12 @@ NFX.sharedInstance().ignoreURLs(["https://cdn.braze.com"])
 ##### NetGuard
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab Swift %}
 ```swift
 NetGuard.blackListHosts.append(contentsOf: ["cdn.braze.com"])
 ```
 {% endtab %}
-{% tab Objective C %}
+{% tab Objective-C %}
 ```objc
 NSMutableArray<NSString *> *blackListHosts = [NetGuard.blackListHosts mutableCopy];
 [blackListHosts addObject:@"cdn.braze.com"];
@@ -52,13 +52,13 @@ NetGuard.blackListHosts = blackListHosts;
 ##### XNLogger
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab Swift %}
 ```swift
 let brazeAssetsHostFilter = XNHostFilter(host: "https://cdn.braze.com")
 XNLogger.shared.addFilters([brazeAssetsHostFilter])
 ```
 {% endtab %}
-{% tab Objective C %}
+{% tab Objective-C %}
 ```objc
 XNHostFilter *brazeAssetsHostFilter = [[XNHostFilter alloc] initWithHost: @"https://cdn.braze.com"];
 [XNLogger.shared addFilters:@[brazeAssetsHostFilter]];

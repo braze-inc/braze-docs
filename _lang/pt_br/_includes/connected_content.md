@@ -19,7 +19,7 @@ Você pode opcionalmente fornecer um corpo POST especificando `:body` seguido po
 O Connected Content também não armazena em cache as chamadas POST por padrão. Você pode atualizar esse comportamento adicionando `:cache_max_age` à chamada POST do Connected Content.
 
 {% tabs %}
-{% tab Tipo de conteúdo padrão %}
+{% tab Default content-type %}
 
 {% raw %}
 ```js

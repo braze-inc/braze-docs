@@ -6,7 +6,7 @@ Para adicionar parâmetros UTM ao seu URL, faça o seguinte:
 
 1. Comece com seu URL de base. Esse é o URL da página que você deseja rastrear (como `https://www.example.com`).
 2. Adicione um ponto de interrogação (?) após o URL da base.
-3. Adicione cada parâmetro UTM separado por um E comercial (&).
+3. Adicione cada parâmetro UTM separado por um ampersand (&).
 
 Um exemplo é `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
 
@@ -26,7 +26,7 @@ Sim. Podem ser adicionados parâmetros estáticos e dinâmicos.
 
 ### Por quanto tempo os URLs encurtados permanecem válidos?
 
-Os URLs personalizados são válidos por dois meses a partir do momento do registro do URL.
+URLs personalizadas são válidas por dois meses a partir do momento do registro da URL.
 
 ### O SDK da Braze precisa ser instalado para encurtar links?
 

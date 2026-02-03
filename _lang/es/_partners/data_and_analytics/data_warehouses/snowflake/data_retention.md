@@ -126,7 +126,7 @@ $$;
 2\. Ejecuta uno de los siguientes comandos en tu cuenta Snowflake para ejecutar el procedimiento.
 
 {% tabs %}
-{% tab Predeterminado %}
+{% tab Default %}
 
 Por defecto, el procedimiento hará una copia de seguridad de los datos de más de dos años para todos los tipos de eventos de `USERS_*`. 
 
@@ -139,7 +139,7 @@ CALL COPY_BRAZE_SHARE('SOURCE_DB', 'SOURCE_SCHEMA', 'DEST_DB', 'DEST_SCHEMA')
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtrado %}
+{% tab Filtered %}
 
 Especifica un filtro para elegir de qué datos de edad hacer copia de seguridad, y especifica un filtro de nombre de tabla para hacer copia de seguridad sólo de las tablas de eventos seleccionadas. 
 
@@ -238,7 +238,7 @@ $$;
 2\. Ejecuta uno de los siguientes comandos para ejecutar el procedimiento. 
 
 {% tabs %}
-{% tab Predeterminado %}
+{% tab Default %}
 
 Por defecto, el procedimiento copiará todas las tablas con el prefijo `USERS_`.
 
@@ -257,7 +257,7 @@ LIST @MY_EXPORT_STAGE;
 ```
 {% endraw %}
 {% endtab %}
-{% tab Filtrado %}
+{% tab Filtered %}
 
 Especifica un filtro en el procedimiento para descargar sólo las tablas especificadas.
 

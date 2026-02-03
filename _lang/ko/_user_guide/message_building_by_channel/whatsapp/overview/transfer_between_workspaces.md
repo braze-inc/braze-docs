@@ -2,7 +2,7 @@
 nav_title: 작업 공간 간 전송
 article_title: 작업 공간 간 전화번호 및 구독 그룹 전송
 page_order: 5
-description: "이 참조 문서에서는 WhatsApp 전화번호 및 구독 그룹을 작업 공간 간에 전송하는 방법을 다룹니다."
+description: "이 참조 문서에서는 WhatsApp 전화번호와 구독 그룹을 작업 공간 간에 전송하는 방법을 다룹니다."
 page_type: reference
 channel:
   - WhatsApp
@@ -10,7 +10,7 @@ channel:
 
 # WhatsApp 전화번호 및 구독 그룹을 작업 공간 간에 전송
 
-> 이 페이지에서는 WhatsApp 비즈니스 계정(WABA) 전화번호와 관련된 구독 그룹을 Braze 내의 한 작업 공간에서 다른 작업 공간으로 이동하는 방법을 다룹니다. 이 프로세스는 Braze와 함께 WhatsApp을 사용하는 경험을 간소화하고 엔지니어링 지원의 필요성을 줄입니다.
+> 이 페이지에서는 WhatsApp 비즈니스 계정(WABA) 전화번호와 해당 구독 그룹을 Braze 내의 한 작업 공간에서 다른 작업 공간으로 이동하는 방법을 다룹니다. 이 프로세스는 Braze와 함께 WhatsApp을 사용하는 경험을 간소화하고 엔지니어링 지원의 필요성을 줄입니다.
 
 ## 필수 조건
 
@@ -23,8 +23,8 @@ channel:
 
 WhatsApp 구독 그룹을 보관하려면 다음 단계를 따르십시오:
 
-1. 구독 그룹이 현재 존재하는 작업 공간으로 이동합니다.
-2. **오디언스** > **구독 그룹 관리**로 이동하여 이동하려는 WhatsApp 전화번호와 관련된 구독 그룹을 찾습니다.
+1. 현재 구독 그룹이 존재하는 작업 공간으로 이동합니다.
+2. **오디언스** > **구독 그룹 관리**로 이동하여 이동하려는 WhatsApp 전화번호와 연결된 구독 그룹을 찾습니다.
 3. 구독 그룹의 상태 위에 마우스를 올리고 <i class="fa-solid fa-box-archive"></i> **보관**를 선택하면 구독 그룹이 비활성으로 표시되지만 삭제되지는 않습니다.
 
 !["보관" 버튼이 구독 그룹의 "활성" 상태 위에 마우스를 올릴 때 나타납니다.]({% image_buster /assets/img/whatsapp/archive_subscription_group.png %}){: style="max-width:70%;"}
@@ -44,4 +44,4 @@ WhatsApp 구독 그룹을 보관하려면 다음 단계를 따르십시오:
 ## 고려 사항
 
 - WhatsApp 전화번호를 원래 작업 공간으로 다시 전송해야 하는 경우, 단계를 반복하십시오. 대상 작업 공간에서 구독 그룹을 보관한 다음, 원래 작업 공간에 통합하십시오.
-- 전송 중에 Meta Business Manager에서 WhatsApp 전화번호를 제거할 필요가 없습니다.
+- 전송 중에 WhatsApp 전화번호를 Meta Business Manager에서 제거할 필요가 없습니다.

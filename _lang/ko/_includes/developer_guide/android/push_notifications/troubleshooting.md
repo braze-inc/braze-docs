@@ -1,4 +1,4 @@
-## Braze 푸시 워크플로 이해
+## Braze 푸시 워크플로 이해하기
 
 Firebase 클라우드 메시징(FCM) 서비스는 Android 애플리케이션으로 전송되는 푸시 알림을 위한 Google의 인프라입니다. 다음은 사용자의 디바이스에서 푸시 알림을 활성화하는 방법과 Braze가 푸시 알림을 보내는 방법에 대한 간단한 구조입니다:
 
@@ -14,7 +14,7 @@ sequenceDiagram
   participant BrazeAPI as Braze Server
   participant Firebase as Google Firebase
   Note over Device, Firebase: Register Option 1<br/>Register Automatically using `com_braze_firebase_cloud_messaging_registration_enabled` in braze.xml
-  App ->> Braze: App intializes Braze with the first Braze call<br>This could be automatic session handling
+  App ->> Braze: App initializes Braze with the first Braze call<br>This could be automatic session handling
   BrazeSDK ->> App: Get push token from Firebase Manager
   BrazeSDK ->> BrazeAPI: Send push token to Braze Server
   Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.
@@ -33,7 +33,7 @@ sequenceDiagram
   Firebase ->> Device: Push message sent
   Device ->> App: Android will send the push to the App.<br>This could be blocked to Do Not Disturb, Power Saving Mode, etc.
   App ->> BrazeSDK: Message is sent to BrazeFirebaseMessagingService
-  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notfication and displayed.
+  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notification and displayed.
 
 ```
 

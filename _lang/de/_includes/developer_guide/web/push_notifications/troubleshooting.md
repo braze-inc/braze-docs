@@ -4,4 +4,5 @@ Wenn Sie nach der Einrichtung von Push-Benachrichtigungen Probleme haben, sollte
 
 - Für Web-Push-Benachrichtigungen muss Ihre Website über HTTPS verfügen.
 - Nicht alle Browser können Push-Nachrichten empfangen. Stellen Sie sicher, dass `braze.isPushSupported()` im Browser `true` zurückgibt.
+- Einige Browser, wie z.B. Firefox, zeigen keine Bilder in Push-Benachrichtigungen an. Einzelheiten zur Browserunterstützung finden Sie in der [MDN-Dokumentation für Notification Images](https://developer.mozilla.org/en-US/docs/Web/API/Notification/image).
 - Wenn ein Nutzer:innen den Push-Zugriff auf eine Website verweigert hat, wird er nicht mehr um Erlaubnis gefragt, es sei denn, er entfernt den Status "verweigert" aus seinen Browsereinstellungen.

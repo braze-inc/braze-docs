@@ -46,7 +46,7 @@ Si estás participando en las pruebas de las cuentas de Meta Work en versión be
 2\. En el módulo Exportar audiencia de Facebook, selecciona **Conectar Facebook**. <br><br>![Página de socios tecnológicos de Facebook en la plataforma Braze.]({% image_buster /assets/img/fb/afb_1.png %}){: style="max-width:70%;"}
 
 {: start="3"}
-3\. En la ventana de diálogo oAuth de Facebook, autoriza a Braze a crear Públicos personalizados en tus cuentas de anuncios de Facebook. <br><br>![El primer cuadro de diálogo de Facebook que solicita "Conectarse como X", donde X es tu nombre de usuario de Facebook.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![El segundo cuadro de diálogo de Facebook que solicita permiso para administrar los anuncios de tus cuentas publicitarias.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
+3\. En la ventana de diálogo oAuth de Facebook, autoriza a Braze a crear Públicos personalizados en tus cuentas de anuncios de Facebook. <br><br>![El primer cuadro de diálogo de Facebook te pide "Conectarte como X", donde X es tu nombre de usuario de Facebook.]({% image_buster /assets/img/fb/afb_3.png %}){: style="max-width:30%;"}  ![El segundo cuadro de diálogo de Facebook que solicita permiso para gestionar los anuncios de tus cuentas publicitarias.]({% image_buster /assets/img/fb/afb_2.png %}){: style="max-width:40%;"}
 
 {: start="4"}
 4\. Una vez que Braze esté vinculado a tu cuenta de Facebook, selecciona las cuentas de anuncios que deseas sincronizar en tu espacio de trabajo Braze. <br><br>![Una lista de las cuentas de anuncios disponibles que puedes conectar a Facebook.]({% image_buster /assets/img/fb/afb_4.png %}){: style="max-width:70%;"}<br><br> Después de conectarse, volverá a la página de socios, donde podrá ver qué cuentas están conectadas y desconectar las existentes. <br><br> ![Una versión actualizada de la página de socios tecnológicos de Facebook que muestra las cuentas de anuncios conectadas correctamente.]({% image_buster /assets/img/fb/afb_5.png %}){: style="max-width:70%;"}<br>
@@ -63,7 +63,7 @@ Para los clientes que hayan pasado previamente por el proceso de revisión de la
 En Braze, se puede acceder a la exportación de público de Facebook a través de la página **Segmentos**. 
 
 1. En la página **Segmentos**, selecciona el segmento que deseas exportar.
-2. Selecciona **Datos de usuario** y, a continuación, **Exportar como audiencia de Facebook**. <br><br>![La sección "Detalles del segmento" de un segmento con "Datos de usuario" seleccionados para mostrar un desplegable de opciones que incluye "Exportar como Facebook Audience".]({% image_buster /assets/img/fb/afb_6.png %})
+2. Selecciona **Datos de usuario** y, a continuación, **Exportar como audiencia de Facebook**. <br><br>![La sección "Detalles del segmento" de un segmento con "Datos de usuario" seleccionados para mostrar un desplegable de opciones que incluye "Exportar como audiencia de Facebook".]({% image_buster /assets/img/fb/afb_6.png %})
 
 {: start="3"}
 3\. Si aún no has activado Facebook en Braze, se te pedirá que vayas a la página de socios tecnológicos de Facebook en el panel. Si ya has activado Facebook a través de **Socios tecnológicos** > **Facebook**, podrás seleccionar tu cuenta de anuncios de Facebook y los campos de usuario para exportar. <br><br> Hay tres posibles campos de usuario que puede exportar:
@@ -77,7 +77,7 @@ Sólo puede seleccionar un campo de usuario en una única exportación. Si elige
 
 {: start="4"}
 4\. Después de seleccionar el campo del usuario, selecciona **Exportar segmento**. Al igual que las exportaciones CSV, recibirás un correo electrónico cuando el segmento haya terminado de exportarse a Facebook.
-5\. Visualiza la audiencia personalizada en el [administrador de anuncios de Facebook](https://www.facebook.com/ads/manager/audiences/manage/).
+5\. Consulta la audiencia personalizada en el [administrador de anuncios de Facebook](https://www.facebook.com/ads/manager/audiences/manage/).
 
 {% alert important %}
 Por motivos de privacidad de los usuarios, Facebook no te permite ver:
@@ -96,10 +96,28 @@ Al crear audiencias de Facebook, es posible que desees incluir o excluir a deter
 
 - Si está recopilando opt ins, opt outs, `Do Not Sell Or Share`, u otros atributos personalizados relevantes, debe incluirlos dentro de sus criterios de entrada de Canvas como un filtro: 
 
-![Un Canvas con una audiencia de entrada de "opted_in_marketing" igual a "true".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
+![Un Canvas con una audiencia de entrada de "opted_in_marketing" es igual a "verdadero".]({% image_buster /assets/img/tiktok/tiktok13.png %}){: style="max-width:75%;"}
 
 
 #### Audiencias similares
 
 Una vez que hayas exportado correctamente un segmento como público de Facebook, puedes crear grupos adicionales utilizando [públicos similares](https://www.facebook.com/business/help/164749007013531?id=401668390442328) de Facebook. Esta función examina los datos demográficos, los intereses y otros atributos de la audiencia elegida y crea una nueva audiencia de personas con atributos similares.
 
+## Solución de problemas
+
+### Error al validar el token de acceso
+
+Al utilizar Facebook Export, aparecerá el error `Error Validating Access Token` si:
+- Has cambiado tu contraseña, lo que invalida tu sesión actual
+- Facebook cerró tu sesión como medida de seguridad
+
+Para resolver este error, sigue estos pasos:
+1. Sal de Facebook y vuelve a entrar.
+2. En Braze, elimina tus credenciales de Facebook y guárdalas. Confirma que se han eliminado las credenciales intentando exportar un segmento (el icono de exportación debe estar desactivado).
+3. Vuelve a añadir y guardar tus credenciales de Facebook.
+4. Intenta exportar de nuevo. 
+
+Si la exportación no funciona, haz lo siguiente:
+1. Vuelve a eliminar tus credenciales y guarda.
+2. Vuelve a añadir tus credenciales y guarda.
+3. Desconecta y vuelve a conectar la integración de Facebook en la página de **socios tecnológicos**.

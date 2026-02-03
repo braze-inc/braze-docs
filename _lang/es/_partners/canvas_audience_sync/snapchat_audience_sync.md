@@ -36,22 +36,26 @@ Debes asegurarte de que los siguientes elementos están creados, completados y/o
 | --- | --- | --- |
 | Administrador de negocios de Snapchat | Snapchat | Una herramienta centralizada para administrar los activos de Snapchat de tu marca (como cuentas de anuncios, páginas, aplicaciones). |
 | Cuenta publicitaria de Snapchat | Snapchat | Una cuenta de anuncios de Snapchat activa vinculada al administrador de negocios de Snapchat de tu marca.<br><br>Asegúrate de que tu administrador de Snapchat Business Manager te ha concedido permisos de administrador para las cuentas de anuncios de Snapchat que piensas utilizar con Braze. |
-| Términos y políticas de Snapchat | [Snapchat](https://www.snap.com/en-US/policies) | Acepta cumplir cualquiera de los términos, políticas, directrices y documentación requeridos por Snapchat relacionados con tu uso de la Sincronización de audiencias de Snapchat, incluidos los términos, políticas, directrices y documentación incorporados por referencia a los mismos, que pueden incluir: las Condiciones de servicio, las Condiciones de servicio para empresas, las Condiciones para desarrolladores, la Sincronización de audiencias, las Políticas de publicidad, la Política de contenido comercial, las Directrices de la comunidad y la Responsabilidad del proveedor. |
+| Condiciones de Snapchat & políticas | [Snapchat](https://www.snap.com/en-US/policies) | Acepta cumplir cualquiera de los términos, políticas, directrices y documentación requeridos por Snapchat relacionados con tu uso de la Sincronización de audiencias de Snapchat, incluidos los términos, políticas, directrices y documentación incorporados por referencia a los mismos, que pueden incluir: las Condiciones de servicio, las Condiciones de servicio para empresas, las Condiciones para desarrolladores, la Sincronización de audiencias, las Políticas de publicidad, la Política de contenido comercial, las Directrices de la comunidad y la Responsabilidad del proveedor. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integración 
 
 ### Paso 1: Conéctate a Snapchat
 
+{% alert important %}
+Debes tener el [ permiso "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) para conectar Snapchat a tu cuenta de Braze.
+{% endalert %}
+
 En el panel de Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **Snapchat**. En Sincronizar audiencia de Snapchat, selecciona **Conectar Snapchat**.
 
-![Página de tecnología de Snapchat en Braze que incluye una sección de resumen y otra de sincronización de la audiencia de Snapchat con el botón de Snapchat conectado.]({% image_buster /assets/img/snapchat/snapchat1.png %}){: style="max-width:80%;"}
+![Página de tecnología de Snapchat en Braze que incluye una sección de resumen y otra de sincronización de la audiencia de Snapchat con el botón Snapchat Conectado.]({% image_buster /assets/img/snapchat/snapchat1.png %}){: style="max-width:80%;"}
 
 A continuación, se te redirigirá a la página OAuth de Snapchat para que autorices a Braze los permisos relacionados con tu integración de Audience Sync.
 
 Una vez que hayas seleccionado confirmar, se te redirigirá de nuevo a Braze para que selecciones las cuentas de anuncios de Snapchat que deseas sincronizar. 
 
-![Una lista de las cuentas de anuncios disponibles que puedes conectar a Snapchat.]({% image_buster /assets/img/snapchat/snapchat2.png %}){: style="max-width:80%;"}
+![Una lista de las cuentas publicitarias disponibles que puedes conectar a Snapchat.]({% image_buster /assets/img/snapchat/snapchat2.png %}){: style="max-width:80%;"}
 
 Una vez conectado correctamente, volverás a la página del socio, donde podrás ver qué cuentas están conectadas y desconectar las cuentas existentes.
 
@@ -76,25 +80,25 @@ Selecciona **TikTok** como socio de Sincronización de Audiencia deseado.
 A continuación, selecciona la cuenta de anuncios de Snapchat que desees. En el desplegable **Elegir una audiencia nueva o existente**, escribe el nombre de una audiencia nueva o existente.
 
 {% tabs %}
-{% tab Crear una nueva audiencia %}
+{% tab Create a New Audience %}
 
 **Crear una nueva audiencia**<br>
 Introduce un nombre para la nueva audiencia, selecciona **Añadir usuarios a la audiencia** y selecciona los campos que deseas sincronizar con Snapchat. A continuación, guarda tu audiencia haciendo clic en el botón **Crear audiencia** situado en la parte inferior del editor de pasos.
 
 ![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se selecciona la cuenta publicitaria deseada y se crea una nueva audiencia.]({% image_buster /assets/img/audience_sync/snapchat3.png %})
 
-Los usuarios recibirán una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si surgen errores durante este proceso. Los usuarios también pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
+Braze muestra una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si se producen errores. Los usuarios pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
 
 ![Una alerta que aparece después de crear una nueva audiencia en el componente Canvas.]({% image_buster /assets/img/audience_sync/snapchat2.png %})
 
-Cuando lanzas un Canvas con una nueva audiencia, Braze sincroniza a los usuarios casi en tiempo real a medida que entran en el componente Audience Sync.
+Cuando lanzas un Canvas con una nueva audiencia, Braze sincroniza a los usuarios casi en tiempo real a medida que entran en el componente Sincronización de Audiencias.
 
 {% endtab %}
-{% tab Sincronización con un público existente %}
-**Sincronización con una audiencia existente**<br>
+{% tab Sync with an Existing Audience %}
+**Sincronízate con una audiencia existente**<br>
 Braze también ofrece la posibilidad de añadir usuarios a las audiencias de Snapchat existentes para garantizar que estas audiencias estén actualizadas. Para sincronizar con una audiencia existente, escribe el nombre de la audiencia existente en el desplegable y **Añadir a la audiencia**. A continuación, Braze añadirá usuarios casi en tiempo real a medida que entren en el componente Audience Sync.
 
-![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se seleccionan la cuenta publicitaria deseada y el público existente.]({% image_buster /assets/img/audience_sync/snapchat.png %})
+![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se seleccionan la cuenta publicitaria deseada y la audiencia existente.]({% image_buster /assets/img/audience_sync/snapchat.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -109,9 +113,9 @@ Puedes ver la audiencia en Snapchat entrando en tu cuenta de administrador de an
 
 ## Consideraciones sobre la sincronización de usuarios y el límite de velocidad
 
-Cuando los usuarios lleguen al paso Sincronización de audiencia, Braze sincronizará a estos usuarios casi en tiempo real, respetando los límites de velocidad de la API de Snapchat. En la práctica, Braze intentará procesar por lotes el mayor número de usuarios cada 5 segundos antes de enviarlos a Snapchat.
+Cuando los usuarios llegan al paso Sincronización de audiencia, Braze los sincroniza casi en tiempo real respetando los límites de velocidad de la API de Snapchat. Braze agrupa y procesa el mayor número posible de usuarios cada 5 segundos antes de enviarlos a Snapchat.
 
-El límite de velocidad de la API de Snapchat establece no más de diez consultas por segundo y 100.000 usuarios por solicitud. Si un cliente Braze alcanza este límite de velocidad, Braze Canvas reintentará la sincronización durante un máximo de ~13 horas. Si la sincronización no es posible, estos usuarios aparecen en la lista de la métrica Users Errored.
+El límite de velocidad de la API de Snapchat no permite más de diez consultas por segundo y 100.000 usuarios por solicitud. Si un cliente alcanza este límite, Braze reintenta la sincronización durante un máximo de ~13 horas. Si la sincronización sigue sin ser posible, Braze lista a estos usuarios en la métrica Usuarios erróneos.
 
 ### Comprender los análisis
 

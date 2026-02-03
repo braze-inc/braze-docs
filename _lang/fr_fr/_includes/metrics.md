@@ -175,7 +175,7 @@ Le terme <i>En attente d’une nouvelle tentative</i> désigne le nombre de dema
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-Les <i>conversions principales (A)</i> ou <i>événement de conversion principal</i> correspondent au nombre de fois qu'un événement défini s'est produit après avoir interagi avec un message reçu dans le cadre d'une campagne de Braze ou après l'avoir visualisé. Cet événement défini est déterminé par vous lorsque vous créez la campagne.
+<i>Les conversions principales (A)</i> ou <i>événement de conversion principal</i> correspondent au nombre d'utilisateurs uniques qui effectuent un événement défini après avoir reçu ou visualisé un message d'une campagne de Braze. Cet événement est sélectionné par vous lors de l'implémentation de la campagne et est utilisé comme principal indicateur de réussite pour la création de rapports et l'optimisation.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -251,7 +251,7 @@ Le <i>chiffre d'affaires</i> total est le chiffre d'affaires total, en dollars, 
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message et est mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id.</a>
+Le nombre de <i>clics uniques</i> est le nombre distinct de destinataires qui ont cliqué au moins une fois sur un lien dans un message. <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
 {% endif %}
 
 <!-- Pull channels like Banners that don't have a Dispatch ID-->

@@ -18,7 +18,7 @@ extension AppDelegate: BrazeInAppMessageUIDelegate {
 }
 ```
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 ```objc
 @interface AppDelegate () <BrazeInAppMessageUIDelegate>
 
@@ -43,7 +43,7 @@ inAppMessageUI.delegate = self
 AppDelegate.braze?.inAppMessagePresenter = inAppMessageUI
 ```
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 ```objc
 BrazeInAppMessageUI *inAppMessageUI = [[BrazeInAppMessageUI alloc] init];
 inAppMessageUI.delegate = self;
@@ -71,7 +71,6 @@ A propriedade `clickAction` em seu `Braze.InAppMessage` tem como padrão `.none`
 | `ClickAction` | Comportamento ao clicar |
 | -------------------------- | -------- |
 | `.url(URL, useWebView: Bool)` | Abre o URL fornecido em um navegador externo. Se `useWebView` estiver definido como `true`, ele será aberto em uma visualização da Web. |
-| `.newsFeed` | O feed de notícias será exibido quando a mensagem for clicada, e a mensagem será descartada.<br><br>**Nota:** O Feed de notícias está sendo descontinuado. Consulte o [guia de migração]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) para obter mais detalhes. |
 | `.none` | A mensagem será descartada quando for clicada. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -98,7 +97,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 O método `inAppMessage(_:prepareWith:)` não está disponível em Objective C.
 
@@ -123,7 +122,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui
@@ -178,7 +177,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 ```objc
 - (BOOL)inAppMessage:(BrazeInAppMessageUI *)ui
        shouldProcess:(enum BRZInAppMessageRawClickAction)clickAction
@@ -215,7 +214,7 @@ BrazeInAppMessageUI.ModalImageView.Attributes.defaults.dismissOnBackgroundTap = 
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 A personalização via `Attributes` não está disponível em Objective C.
 
@@ -237,7 +236,7 @@ Para saber mais sobre a personalização de mensagens no app, consulte este [art
 Você pode personalizar a orientação de suas mensagens no app. Você pode definir uma nova orientação padrão para todas as mensagens ou definir uma orientação personalizada para uma única mensagem.
 
 {% tabs local %}
-{% tab todos os envios de mensagens %}
+{% tab all messages %}
 Para escolher uma orientação padrão para todas as mensagens no app, use o método [`inAppMessage(_:prepareWith:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazeinappmessageuidelegate/inappmessage(_:preparewith:)-11fog) para definir a propriedade `preferredOrientation` no site `PresentationContext`. 
 
 Por exemplo, para definir retrato como a orientação padrão:
@@ -267,7 +266,7 @@ func inAppMessage(
 {% endsubtabs %}
 {% endtab %}
 
-{% tab mensagem única %}
+{% tab single message %}
 Para definir a orientação de uma única mensagem, modifique a propriedade `orientation` de `Braze.InAppMessage`:
 
 {% subtabs %}
@@ -328,7 +327,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui displayChoiceForMessage:(BRZInAppMessageRaw *)message
@@ -348,7 +347,7 @@ Configure o site `BrazeInAppMessageUI.DisplayChoice` para retornar um dos seguin
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert tip %}
-Para obter um exemplo do site `InAppMessageUI`, consulte nosso [repositório Swift Braze SDK](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) e [Objective C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI).
+Para obter uma amostra do site `InAppMessageUI`, consulte nosso [repositório Swift Braze SDK](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/Swift/Sources/InAppMessageUI) e [Objective C](https://github.com/braze-inc/braze-swift-sdk/tree/main/Examples/ObjC/Sources/InAppMessageUI).
 {% endalert %}
 
 ## Ocultação da barra de status
@@ -429,7 +428,7 @@ func inAppMessage(
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (void)inAppMessage:(BrazeInAppMessageUI *)ui
@@ -501,7 +500,7 @@ func inAppMessage(_ ui: BrazeInAppMessageUI, displayChoiceForMessage message: Br
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (enum BRZInAppMessageUIDisplayChoice)inAppMessage:(BrazeInAppMessageUI *)ui
@@ -537,7 +536,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {

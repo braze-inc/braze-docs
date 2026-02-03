@@ -141,9 +141,11 @@ If you're having issues logging in with two-factor authentication, contact your 
 
 1. **설정** > **관리자 설정으로** 이동합니다.
 2. **보안 설정** 탭을 선택하고 **보안 이벤트 다운로드** 섹션으로 이동합니다.
-2. **보고서 다운로드**를 선택합니다. 
+3. **보고서 다운로드**를 선택합니다. 
 
-이 보고서에는 계정에 대한 가장 최근 10,000건의 보안 이벤트만 포함되어 있습니다. 특정 이벤트 데이터가 필요한 경우 기술 지원팀에 문의하세요.
+이 수동 보고서 다운로드에는 계정에 대한 가장 최근 10,000개의 보안 이벤트만 포함되어 있습니다.
+
+이 행 제한 없이 보안 이벤트를 Amazon S3로 내보내려면 [Amazon S3를 사용하여 보안 이벤트 내보내기를]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/) 참조하세요.
 
 {% details Reported security events %}
 ### 로그인 및 계정

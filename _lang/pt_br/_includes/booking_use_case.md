@@ -2,13 +2,13 @@
 
 > Braze é uma plataforma abrangente de engajamento com clientes que foi projetada para ser altamente controlável programaticamente. Neste caso de uso, demonstraremos apenas algumas maneiras pelas quais o Braze fornece funcionalidades que você pode integrar em casos de uso que estão na interseção de produto e marketing, como sistemas de reserva.
 
-Este caso de uso mostra como você pode usar os recursos do Braze para construir um serviço de envio de mensagens de lembrete de reserva por e-mail. O serviço permitirá que os usuários agendem compromissos e enviará mensagens aos usuários com lembretes de seus compromissos futuros. Embora este caso de uso utilize mensagens de e-mail, você pode enviar mensagens em qualquer canal, ou em múltiplos canais, com base em uma única atualização no perfil do usuário.
+Este caso de uso mostra como você pode usar os recursos do Braze para construir um serviço de envio de mensagens de lembrete de reserva. O serviço permitirá que os usuários agendem compromissos e enviará mensagens aos usuários com lembretes de seus compromissos futuros. Embora este caso de uso utilize mensagens de e-mail, você pode enviar mensagens em qualquer canal, ou em múltiplos canais, com base em uma única atualização no perfil do usuário.
 
 Outros benefícios de criar este serviço incluem:
 - As mensagens enviadas terão rastreamento e relatórios completos.
-- O conteúdo da mensagem pode ser atualizado por usuários do Braze que não são técnicos.
-- As mensagens obedecem aos status de aceitação e recusa nos perfis dos usuários conforme a configuração da campanha.
-- Tanto os dados de reserva quanto os dados de interação com mensagens podem ser usados para segmentar e direcionar usuários para mensagens adicionais. Por exemplo, você pode redirecionar aqueles que não abrem a mensagem de lembrete inicial com um lembrete adicional antes de seu compromisso.
+- Usuários do Braze não técnicos podem atualizar o conteúdo das mensagens.
+- As mensagens obedecem aos status de aceitação e recusa nos perfis dos usuários por configuração de campanha.
+- Você pode usar tanto os dados de reserva quanto os dados de interação com mensagens para segmentar e direcionar usuários para mensagens adicionais. Por exemplo, você pode redirecionar aqueles que não abrem a mensagem de lembrete inicial com um lembrete adicional antes de seu compromisso.
 
 Siga estas etapas para alcançar este caso de uso:
 1. [Escreva os dados de reserva futuros em um perfil de usuário do Braze](#step-1)
@@ -40,7 +40,7 @@ Quando um usuário cria uma reserva, use a seguinte estrutura para o array de ob
 ```
 {% endraw %}
 
-O atributo personalizado aninhado "trips" será exibido no perfil do usuário assim.
+O atributo personalizado aninhado "viagens" será exibido no perfil do usuário assim.
 
 ![Dois atributos personalizados aninhados para uma viagem a Londres e uma viagem a Sydney.]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
@@ -120,23 +120,23 @@ braze.getUser().setCustomUserAttribute("trips", json);
 {% endtab %}
 {% endtabs %}
 
-A reserva especificada será removida do atributo personalizado aninhado no perfil do usuário e exibirá quaisquer reservas restantes.
+O Braze remove a reserva especificada do atributo personalizado aninhado no perfil do usuário e exibe quaisquer reservas restantes.
 
 ![Um atributo personalizado aninhado para uma viagem a Londres.]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
-## Etapa 2: Configurar e lançar uma mensagem de lembrete de reserva {#step-2}
+## Etapa 2: Configure e lance uma mensagem de lembrete de reserva {#step-2}
 
 ### Etapa 2a: Criar um público-alvo
-Criar um público-alvo para receber lembretes usando segmentação de múltiplos critérios. Por exemplo, se você quiser enviar um lembrete dois dias antes da data da reserva, selecione o seguinte:
+Criar um público-alvo para receber lembretes usando segmentação multiclasse. Por exemplo, se você quiser enviar um lembrete dois dias antes da data da reserva, selecione o seguinte:
 
 - Uma data de início **em mais de 1 dia** e
 - Uma data de início **em menos de 2 dias** 
 
-![Um atributo personalizado aninhado "trips" com critérios para uma data de início que seja mais de um dia e menos de dois dias.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
+![Um atributo personalizado aninhado "trips" com critérios para uma data de início que é mais de um dia e menos de dois dias.]({% image_buster /assets/img/use_cases/custom_nested_attribute.png %})
 
 ### Etapa 2b: Crie sua mensagem
 
-Crie a mensagem de e-mail de lembrete seguindo os passos em [Criando um e-mail com HTML personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/). Use Liquid para personalizar a mensagem com dados do atributo personalizado do cliente que você criou (“trips”), como neste exemplo.
+Crie a mensagem de e-mail de lembrete seguindo os passos em [Criando um e-mail com HTML personalizado]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/). Use Liquid para personalizar a mensagem com dados do atributo de cliente personalizado que você criou (“trips”), como neste exemplo.
 
 {% raw %}
 ```liquid
@@ -153,9 +153,9 @@ You have the following booked in 2 days! Check the information below:
 ```
 {% endraw %}
 
-### Etapa 2c: Lance sua campanha
+### Etapa 2c: Lançar sua campanha
 
-Lance a campanha para a mensagem de e-mail de lembrete. Agora, cada vez que a Braze receber o atributo personalizado “trips”, uma mensagem será agendada de acordo com os dados incluídos no objeto da respectiva reserva.
+Lance a campanha para a mensagem de e-mail de lembrete. Agora, cada vez que a Braze recebe o atributo personalizado "trips", a Braze agenda uma mensagem de acordo com os dados incluídos no objeto da respectiva reserva.
 
 ## Etapa 3: Gerencie atualizações de reservas e cancelamentos {#step-3}
 
@@ -167,9 +167,9 @@ Agora que você está enviando mensagens de lembrete, pode configurar mensagens 
 {% tab /users/track %}
 
 #### Enviar dados através do endpoint `/users/track`
-Use o endpoint Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para enviar um evento personalizado quando um usuário atualiza ou cancela uma reserva. Nesse evento, coloque os dados necessários nas propriedades do evento que confirmarão a alteração. 
+Use o endpoint Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para enviar um evento personalizado quando um usuário atualiza ou cancela uma reserva. Nesse evento, coloque os dados necessários nas propriedades do evento que confirmarão a mudança. 
 
-Digamos que, neste caso de uso, um usuário atualizou a data de sua viagem para Sydney. O evento seria assim:
+Vamos supor que, neste caso de uso, um usuário atualizou a data de sua viagem para Sydney. O evento seria assim:
 
 {% raw %}
 ```json
@@ -224,11 +224,11 @@ Hi {{${first_name}}}, you have successfully updated the date of your trip, {{eve
 
 ### Etapa 3c: Modifique o perfil do usuário para refletir a atualização
 
-Finalmente, para enviar os lembretes de reserva das etapas 1 e 2 com base nos dados mais recentes, atualize os atributos personalizados aninhados para refletir a mudança ou cancelamento na reserva.
+Por fim, para enviar os lembretes de reserva das etapas 1 e 2 com base nos dados mais recentes, atualize os atributos personalizados aninhados para refletir a alteração ou cancelamento na reserva.
 
 #### Reserva atualizada
 
-Se o usuário neste caso de uso atualizou sua viagem para Sydney, você usaria o endpoint `/users/track` para mudar a data com uma chamada como esta:
+Se o usuário neste caso de uso atualizou sua viagem para Sydney, você usaria o `/users/track` endpoint para alterar a data com uma chamada como esta:
 
 {% raw %}
 ```json
@@ -256,7 +256,7 @@ Se o usuário neste caso de uso atualizou sua viagem para Sydney, você usaria o
 
 #### Reserva cancelada
 
-Se o usuário neste caso de uso cancelou sua viagem para Sydney, você enviaria a seguinte chamada para o endpoint `/users/track`:
+Se o usuário neste caso de uso cancelou sua viagem para Sydney, você enviaria a seguinte chamada para o `/users/track` endpoint:
 
 {% raw %}
 ```json
