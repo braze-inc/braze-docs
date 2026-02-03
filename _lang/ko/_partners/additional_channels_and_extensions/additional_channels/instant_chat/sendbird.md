@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by Sendbird._
 
-## About the integration
+## 통합 정보
 
 The Braze and Sendbird integration allows Braze users to:
 * Utilize Braze segmentation and triggering capabilities to initiate personalized in-app notifications.
@@ -32,7 +32,7 @@ By harnessing the joint capabilities of Braze and Sendbird Notifications, busine
 | Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Use cases
+## 사용 사례
 
 ![]({% image_buster /assets/img/sendbird/use-cases.png %})
 
@@ -49,7 +49,7 @@ The Braze and Sendbird Notifications integration offers a range of use cases to 
 
 ![]({% image_buster /assets/img/sendbird/sendbird-dashboard-template.png %})
 
-### Step 2: Set up the Braze integration on Sendbird dashboard
+### 2단계: Set up the Braze integration on Sendbird dashboard
 
 From **Sendbird Dashboard**, select your application, navigate to **Notifications > Integrations**, and click **Add** under the **Braze** section. Here, you will need your Braze REST API key and Braze REST endpoint.
 
@@ -71,7 +71,7 @@ A Sendbird user ID must be added to a Braze user profile as a [custom attribute]
 
 ### Step 5: Set up your webhook template
 
-In Braze, from **Templates & Media**, go to **Webhook Templates** and choose the **Sendbird Webhook Template**. Note that this template will only be available if you have installed the Sendbird Notification Builder extension.
+브레이즈에서 **템플릿 & 미디어**로 가서 **웹훅 템플릿**을 선택하고 **센드버드 웹훅 템플릿**을 선택하세요. Note that this template will only be available if you have installed the Sendbird Notification Builder extension.
 
 {% raw %}
 1. Provide a template name and add teams and tags as necessary.
