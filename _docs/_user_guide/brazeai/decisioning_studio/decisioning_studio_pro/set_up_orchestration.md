@@ -10,15 +10,11 @@ toc_headers: h2
 
 > Decisioning agents need to connect to a Customer Engagement Platform (CEP) to orchestrate communications once they have ingested customer data and personalized at a 1:1 level. This article explains how to set up the integration for each supported CEP.
 
-{% alert note %}
-The Decisioning Studio team is currently building even more seamless integrations between Decisioning Studio and Braze orchestration. This documentation will be updated as these steps are simplified.
-{% endalert %}
-
 ## Supported CEPs
 
 Decisioning Studio Pro supports the following Customer Engagement Platforms:
 
-| CEP | Integration Type | Setup Complexity |
+| CEP | Integration type | Setup complexity |
 |-----|-----------------|------------------|
 | **Braze** | Native API integration | Low (recommended) |
 | **Salesforce Marketing Cloud** | Native API events + Journeys | Medium |
@@ -49,7 +45,7 @@ A base template is any template that the Decisioning Agent might use for orchest
 
 ### Step 3: Configure re-eligibility
 
-Ensure all API Triggered Campaigns allow users to become re-eligible within **15 minutes**.
+Ensure all API-triggered campaigns allow users to become re-eligible within 15 minutes.
 
 ![Decisioning Pro Diagram]({% image_buster /assets/img/decisioning_studio/decisioning_studio_frequency_cap.png %})
 
@@ -59,9 +55,7 @@ While the Decisioning Studio agent will never send the same campaign more than o
 
 ### Step 4: Add dynamic placeholders
 
-These will serve as dynamic placeholders for decisions that the Decisioning Studio agent is optimizing.
-
-Here are some examples:
+These serve as dynamic placeholders for decisions that the Decisioning Studio agent is optimizing.
 
 #### Example 1: Email Campaign
 
@@ -137,7 +131,7 @@ Might be used to optimize an email campaign that looks like the following:
 
 ## Next steps
 
-Now that you've set up orchestration, proceed to design your agent:
+After setting up orchestration, proceed to design your agent:
 
 - [Design your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent/)
 

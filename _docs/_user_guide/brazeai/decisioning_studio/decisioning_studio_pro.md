@@ -9,12 +9,11 @@ description: "Learn how to set up and integrate BrazeAI Decisioning Studio<sup>T
 
 ## About Decisioning Studio Pro
 
-Decisioning Studio Pro is more flexible and more powerful than Decisioning Studio Go. Pro includes full action bank customization, the ability to optimize on any metric (such as revenue, conversions, or engagement), and is compatible with any Customer Engagement Platform (CEP).
+Decisioning Studio Pro is more flexible and more powerful than Decisioning Studio Go. Pro includes full action bank customization, the ability to optimize on any metric (such as revenue, conversions, or engagement), and is compatible with any customer engagement platform (CEP).
 
 Setting up a Pro agent requires collaboration with our AI Decisioning Services team—Braze's forward deployed data science team—which guides and assists with agent design throughout to drive maximum value for your business.
 
-To learn more about the differences between Decisioning Studio Go and Decisioning Studio Pro, see [Decisioning Studio Go vs. Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
-
+To learn more about the differences between Decisioning Studio Go and Decisioning Studio Pro, see [Decisioning Studio Go versus Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
 
 ## Next steps
 

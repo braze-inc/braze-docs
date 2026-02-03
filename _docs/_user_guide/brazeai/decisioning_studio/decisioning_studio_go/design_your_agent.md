@@ -11,15 +11,15 @@ description: "Learn how to design a BrazeAI Decisioning Studio Go agent, includi
 
 For foundational concepts about decisioning agents—including success metrics, dimensions, action banks, and constraints—see [Designing Decisioning Agents]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents/).
 
-## Go vs. Pro capabilities
+## Go versus Pro capabilities
 
 Decisioning Studio Go is a self-service platform with streamlined capabilities compared to Decisioning Studio Pro. Understanding these differences helps you design an effective agent within Go's scope.
 
 | Capability | Decisioning Studio Go | Decisioning Studio Pro |
 |-----------|----------------------|------------------------|
-| **Success metric** | Clicks only | Any business metric (revenue, conversions, ARPU, etc.) |
+| **Success metric** | Clicks only | Any business metric (revenue, conversions, or ARPU) |
 | **Dimensions** | Limited action bank | Unlimited dimensions |
-| **CEPs supported** | Braze, SFMC, Klaviyo | Any CEP (native + custom) |
+| **CEPs supported** | Braze, SFMC, Klaviyo | Any CEP (native and custom) |
 | **Customer data** | Engagement only | All 1P Data |
 | **Setup** | Self-service | AI Decisioning Services support |
 | **Experiment groups** | Go + Random Control + optional BAU | Fully customizable |
@@ -116,4 +116,3 @@ When designing your Go agent, keep these limitations in mind:
 Once you've designed your agent and configured it in the Decisioning Studio Go portal, you're ready to launch:
 
 - [Launch your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)
-

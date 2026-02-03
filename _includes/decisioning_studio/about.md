@@ -4,7 +4,7 @@
 
 ## What is BrazeAI Decisioning Studio™?
 
-[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) replaces A/B testing with decisioning agents that personalize everything, and maximize any metric: drive dollars, not clicks&#8212;with decisioning studio, you can optimize any business metric.
+[BrazeAI Decisioning Studio™](https://www.braze.com/product/brazeai-decisioning-studio/) replaces A/B testing with decisioning agents that personalize everything, and maximize any metric: drive dollars, not clicks&#8212;with Decisioning Studio, you can optimize any business metric.
 
 BrazeAI™ decisioning agents automatically discover the optimal action for every customer. Using your first-party data, BrazeAI™ can maximize any business KPI for a wide range of use cases, including cross-sell, upsell, repurchase, retention, renewal, referral, winback, and more.
 

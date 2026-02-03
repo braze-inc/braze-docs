@@ -12,7 +12,7 @@ description: "This reference article covers the critical feedback data assets ne
 
 ## Closing the AI decisioning loop
 
-While all customer data is important for the agent (see [Connect data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)), the *most important data assets* are those that tell the agent what happened after customer engagement decisions were sent.
+While all customer data is important for the agent (see [Connect data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)), the most important data assets are those that tell the agent what happened after customer engagement decisions were sent.
 
 These assets create the feedback loop that allows the agent to learn.
 
@@ -24,30 +24,34 @@ If the agent is natively integrated with the customer engagement platform (such 
 
 There are three critical assets for creating the feedback loop:
 
-### 1. Conversions data
+1. Conversions data
+2. Engagement data
+3. Activations data
+
+### Conversions data
 
 The conversion asset describes what happened to the customer after orchestration. For example, supposing an agent is optimizing on Net Present Value (NPV) for customers receiving optimized campaigns, the conversion asset might include a daily update of changes to NPV.
 
-| Requirement | Why? |
+| Requirement | Reason |
 |-------------|------|
 | Each record contains a unique customer identifier that is consistent with all data assets | Decisioning Studio needs to track the individual customer journey from recommendation, through activation, to conversion. |
 | Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for agent training and metric calculation. |
-| If using a non-binary (e.g., converted vs. unconverted) target metric, the target metric value is provided with each conversion event | Decisioning Studio uses the target metric value to generate training experiences to appropriately reward/penalize the agent based on the outcomes of the recommended actions. |
+| If using a non-binary (such as, converted versus unconverted) target metric, the target metric value is provided with each conversion event | Decisioning Studio uses the target metric value to generate training experiences to appropriately reward/penalize the agent based on the outcomes of the recommended actions. |
 | If conversions can be uniquely attributed to communications (e.g., coupon redemption), fields needed to match conversions to activations are provided | If a conversion event can be tied to a particular communication, this allows for clean and precise attribution. Direct attribution provides the clearest signal to the agent, but if not possible (as is often the case), proximity-based attribution will be used. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### 2. Engagement data
+### Engagement data
 
 The engagement asset describes customer interactions, including clicks, opens, and other impressions. Engagement data may be included in the conversion data or may be separate. It plays a similar role as conversions data—telling the agent what happened after customer engagement.
 
-| Requirement | Why? |
+| Requirement | Reason |
 |-------------|------|
 | Each record contains a unique customer identifier that is consistent with all data assets | Decisioning Studio needs to track engagement events for each individual customer. |
 | Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for agent training and metric calculation. |
 | If clicks, opens, or other engagement data can be uniquely attributed to communications, fields needed to match engagement to activations are provided | As with conversion data, if engagement can be tied to a particular communication, this allows for clean and precise attribution. Direct attribution provides the clearest signal to the agent. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### 3. Activations data
+### Activations data
 
 The activations asset tells the agent which communications were sent. This is often necessary depending on how orchestration is configured. If the agent orchestrates via a direct integration with Braze, SFMC, or Klaviyo, then the agent may be able to pull activation data directly.
 
@@ -55,7 +59,7 @@ The activations asset tells the agent which communications were sent. This is of
 Engagement data and activations data are very commonly found in the same data asset.
 {% endalert %}
 
-| Requirement | Why? |
+| Requirement | Reason |
 |-------------|------|
 | Each record contains a unique customer identifier that is consistent with all data assets | Decisioning Studio needs to track the individual customer journey from recommendation, through activation, to conversion. |
 | Each record has an associated timestamp | Understanding the time between communication and sequence of customer actions is extremely important for agent training and metric calculation. |

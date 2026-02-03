@@ -556,4 +556,3 @@ You're all set! You can now trigger activations through BrazeAI Decisioning Stud
 Now that you've set up orchestration, proceed to design your agent:
 
 - [Design your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent/)
-

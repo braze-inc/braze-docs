@@ -16,7 +16,7 @@ A decisioning agent is a custom configuration for BrazeAI Decisioning Studio™ 
 
 ### What metrics can I optimize for?
 
-You can optimize for any business metric that aligns with your goals, such as revenue, conversions, ARPU (Average Revenue Per User), CLV (Customer Lifetime Value), profit, contract renewals, or any other business KPI.
+You can optimize for any business metric that aligns with your goals, such as revenue, conversions, average revenue per user (ARPU), customer lifetime value (CLV), profit, contract renewals, or any other business KPI.
 
 ### What are dimensions in Decisioning Studio?
 
@@ -28,7 +28,7 @@ The action bank defines the *specific options* which the decisioning agent has a
 
 ### Can the decisioning agent take actions I haven't configured?
 
-No. The decisioning agent can only take actions that *you* configure and add to the action bank. This means that all possible actions are defined by the combinations of what you put in the action bank.
+No. The decisioning agent can only take actions that you configure and add to the action bank. This means that all possible actions are defined by the combinations of what you put in the action bank.
 
 ### What are constraints?
 
@@ -36,5 +36,4 @@ Constraints limit the decisioning agent's actions to respect critical business r
 
 ### What is the difference between Decisioning Studio Go and Decisioning Studio Pro?
 
-Decisioning Studio Pro includes AI Decisioning Services support from Braze's forward deployed data science team, which will help you design and configure your agent to maximize your business outcomes. For more information, see [Decisioning Studio Go vs. Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).
-
+Decisioning Studio Pro includes AI Decisioning Services support from Braze's forward deployed data science team, which will help you design and configure your agent to maximize your business outcomes. For more information, see [Decisioning Studio Go versus Decisioning Studio Pro]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/#decisioning-studio-go-vs-decisioning-studio-pro).

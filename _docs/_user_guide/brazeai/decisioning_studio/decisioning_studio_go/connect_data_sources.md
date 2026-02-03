@@ -55,8 +55,6 @@ Make sure your Braze Currents export includes data from any campaigns you want t
 For Salesforce Marketing Cloud integrations, Decisioning Studio Go requires:
 
 1. **Data Extensions**: Your audience must be defined in a Data Extension that Decisioning Studio Go can access. Use the SubscriberKey as the primary user identifier.
-
-
 2. **Tracking Events access**: As long as the Installed App Package supports end-to-end automated setup, no additional configuration is required. 
 
 The data extensions and SQL queries are configured as part of the [orchestration setup]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/).
@@ -69,9 +67,7 @@ The data extensions and SQL queries are configured as part of the [orchestration
 For Klaviyo integrations, Decisioning Studio Go requires:
 
 1. **Segment access**: Your audience must be defined as a Klaviyo segment that the API key can access.
-
 2. **Profile data**: The API key must have Full Access to Profiles to read customer attributes.
-
 3. **Metrics access**: The API key must have Full Access to Metrics and Events to capture engagement data.
 
 {% endtab %}

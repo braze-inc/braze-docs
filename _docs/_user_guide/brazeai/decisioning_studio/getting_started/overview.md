@@ -10,12 +10,9 @@ description: "This reference gives an overview of the steps involved in setting 
 
 > This reference gives an overview of the steps involved in setting up Decisioning Studio, including connecting data sources, setting up orchestration, and designing your decisioning agent.
 
+BrazeAI Decisioning Studio™ allows you to design and deploy decisioning agents that optimize any business metric. A decisioning agent is a custom configuration tailored to meet a specific business goal.
 
-## What you'll need to do
-
-BrazeAI Decisioning Studio™ allows you to design and deploy **decisioning agents** that optimize any business metric. A decisioning agent is a custom configuration tailored to meet a specific business goal.
-
-To do so, you will need to connect data sources, set up orchestration, and design your decisioning agents.
+To do so, you must connect data sources, set up orchestration, and design your decisioning agents.
 
 {% alert tip %}
 For Decisioning Studio Pro Customers, your AI Expert Services team will support you in setting up Decisioning Studio for optimal performance.
@@ -29,16 +26,15 @@ To set up Decisioning Studio, you will complete the following steps:
 
 Connect customer profiles and engagement data so that the decisioning agents you create understand who each customer is and how they behave.
 
-You will typically only need to connect your data sources once, during the initial setup of Decisioning Studio. If you expand your use cases later, you may need to add new data sources.
+You typically only need to connect your data sources once, during the initial setup of Decisioning Studio. If you expand your use cases later, you may need to add new data sources.
 
 {% alert tip %}
-Any data already in the Braze Data Platform is automatically available to Decisioning Studio.
+Any data already in the [Braze Data Platform]({{site.baseurl}}/user_guide/data/braze_data_platform) is automatically available to Decisioning Studio.
 {% endalert %}
 
 For detailed guidance, see the documentation for your tier of Decisioning Studio:
 - [Decisioning Studio Go: Connect data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources/)
 - [Decisioning Studio Pro: Connect data sources]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources/)
-
 
 ### Step 2: Set up orchestration
 
@@ -49,7 +45,6 @@ You generally need to set up this orchestration only once.
 For detailed guidance, see the documentation for your tier of Decisioning Studio:
 - [Decisioning Studio Go: Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration/)
 - [Decisioning Studio Pro: Set up orchestration]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration/)
-
 
 ### Step 3: Design your agents
 
@@ -70,9 +65,6 @@ Launch your decisioning agent and let it continuously learn and optimize for you
 For detailed guidance, see the documentation for your tier of Decisioning Studio:
 - [Decisioning Studio Go: Launch your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent/)
 - [Decisioning Studio Pro: Launch your agent]({{site.baseurl}}/user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent/) 
-
-
-
 
 ## Next steps
 

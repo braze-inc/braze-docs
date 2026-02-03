@@ -1,17 +1,17 @@
 ---
-page_order: 3
-nav_title: Reports and Insights
+nav_title: Reports and insights
 article_title: Reports and Insights
 description: "Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns."
+page_order: 3
 ---
 
-# Reports and Insights
+# Reports and insights
 
 > Learn how to view BrazeAI Decisioning Studio™ reports in Braze, so you can understand how AI-powered decisions impact your campaigns. From performance metrics to data health and system changes, these reports help you understand results, troubleshoot issues, and make informed decisions with confidence.
 
 ## Prerequisites
 
-Before you can view decisioning studio reports in the Braze, you'll need to:
+Before you can view Decisioning Studio reports in the Braze, you'll need to:
 
 - Have an active contract for Braze and BrazeAI Decisioning Studio™. 
 - Contact your CSM to enable BrazeAI Decisioning Studio™ for you on your behalf.
@@ -19,7 +19,7 @@ Before you can view decisioning studio reports in the Braze, you'll need to:
 
 ## Viewing reports {#view}
 
-To view metrics for a decisioning studio agent in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
+To view metrics for a Decisioning Studio agent in Braze, go to **AI Decisioning** > **BrazeAI Decisioning Studio™**, then select an agent.
 
 ![BrazeAI Decisioning Studio™ reporting home screen showing a dashboard with multiple report cards. Each card displays a report type such as Performance, Insights, Diagnostics, and Timeline, with brief descriptions and icons for each.]( {% image_buster /assets/img/decisioning_studio/reporting_home.png %} )
 
@@ -63,7 +63,7 @@ To compare performance between two groups, use the dropdowns to select your desi
 
 ### Insights
 
-Insights show you how the various recommendation options in your action bank are generated, like SL or block selection. There are two different insights reports: **Agent preferences** and **SHAPs**.
+Insights show you how the various recommendation options in your action bank are generated, like block selection. There are two different insights reports: **Agent preferences** and **SHAPs**.
 
 {% tabs local %}
 {% tab agent preferences %}
