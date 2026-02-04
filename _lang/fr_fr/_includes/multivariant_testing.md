@@ -10,7 +10,7 @@ Si vous avez plusieurs variantes que vous souhaitez répartir de manière égale
 
 Lors de l'exécution d'un test A/B sur les messages in-app, vos analyses peuvent sembler montrer une distribution plus élevée entre une variante et une autre, même si elles ont une répartition en pourcentage égale. Par exemple, considérez le graphique suivant des *destinataires uniques* pour la variante A et la variante C.
 
-![Graphique des destinataires uniques pour deux variantes avec une forme similaire entre la variante A et la variante C, où la variante A a un plus grand nombre de destinataires uniques par jour]({% image_buster /assets/img/variant_distribution_iam.png %})
+![Graphique des destinataires uniques pour deux variantes avec une forme similaire entre la variante A et la variante C, où la variante A a un plus grand nombre de destinataires uniques par jour.]({% image_buster /assets/img/variant_distribution_iam.png %})
 
 La variante A a un nombre de *destinataires uniques* systématiquement plus élevé que la variante C. Cela n'est pas dû à la distribution des variantes, mais plutôt à la façon dont les *destinataires uniques* sont calculés pour les messages in-app. Pour les messages in-app, les *Destinataires uniques* sont en fait des *Impressions uniques*, c'est-à-dire le nombre total de personnes qui ont reçu et consulté le message in-app. Cela signifie que si un utilisateur ne reçoit pas le message pour une raison quelconque ou décide de ne pas le consulter, il n'est pas inclus dans le décompte des *destinataires uniques* et la distribution des variantes peut apparaître faussée.
 

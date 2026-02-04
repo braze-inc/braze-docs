@@ -46,7 +46,7 @@ Passen wir die Canvas-Details an, um unser Ziel zu erreichen.
 
 Lassen Sie uns nun unsere Konversions-Events zuweisen. Konversions-Events sind eine Art Metrik, mit der Sie den Erfolg des Canvas messen können. Für den **Ereignistyp Konversion** wählen Sie **Angepasstes Event durchführen**. Wählen Sie dann **email_opt_in** für den **Namen des angepassten Events**.
 
-!["Konversions-Events zuweisen" für den Konversions-Event-Typ des Opt-in für E-Mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+!["Konversions-Ereignisse zuweisen" für den Konversions-Ereignistyp des Opt-in für E-Mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 Wir behalten die Frist für die Konversion des Templates von drei Tagen bei, da wir unsere jüngsten Nutzer:innen ansprechen wollen.
 
@@ -60,7 +60,7 @@ Wir werden auch die **aktionsbasierten Optionen** beibehalten, so dass Nutzer:in
 
 Für das **Fenster Eingang** aktualisieren wir die **Startzeit (erforderlich)** auf das gewünschte Datum und die Uhrzeit.
 
-![Ein Eingangsfenster mit der Startzeit 16\. Januar 2025 um 12:30 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+![Ein Eingabefenster mit der Startzeit 16\. Januar 2025 um 12:30 Uhr. Nutzer:innen werden diese Nachricht in ihrer Ortszeit eingeben.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
 ### Schritt 4: Wählen Sie die Zielgruppe aus
 
@@ -72,7 +72,7 @@ Wir definieren unsere Zielgruppe als Nutzer:innen von Steppington, die keine E-M
 
 Wir behalten die Standardeinstellungen für Abonnements bei, d.h. wir senden nur an Benutzer, die Nachrichten oder Benachrichtigungen abonniert oder sich dafür entschieden haben, und überspringen die anderen Einstellungen (Häufigkeitsbegrenzung, ruhige Stunden und Seed-Gruppen).
 
-![Standard-Sendeoptionen, um nur an Nutzer:in zu senden, die ein Abonnent:in sind oder ein Opt-in haben.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
+![Standard-Sendeoptionen, um nur an Nutzer:in zu senden, die Abonnent:in sind oder ein Opt-in haben.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### Schritt 6: Canvas anpassen
 

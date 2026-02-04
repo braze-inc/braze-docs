@@ -1,6 +1,6 @@
 ---
 nav_title: "Messaging Nutzer:innen"
-article_title: LINE-Benutzer benachrichtigen
+article_title: "Nachricht LINE Nutzer:innen"
 page_order: 2
 description: "In diesem Referenzartikel erfahren Sie, wie Sie mit Hilfe von Kampagnenvorlagen und Canvases mit Benutzern chatten können."
 page_type: reference
@@ -23,13 +23,13 @@ Sie können Kampagnen und Canvase erstellen, die starten, sich verzweigen und mi
 
 Legen Sie Ihre Trigger-Wörter fest, wenn Sie eine aktionsbasierte Zustellungskampagne planen.
 
-![Aktionsbasierter Auslöser von "Senden Sie diese Kampagne an Nutzer:innen, die eingehende Nachrichten an die Abo-Gruppe gesendet haben, in der sich die Nachricht befindet" und ein leeres Feld.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+![Aktionsbasierter Trigger von "Diese Kampagne an Nutzer:innen senden, die eingehende Nachrichten an die Abo-Gruppe gesendet haben, in der sich der Nachrichtentext befinde" und ein leeres Feld.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canvas
 
 Legen Sie Ihre Auslösewörter innerhalb von [Aktionspfaden]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) in Ihrem Canvas fest.
 
-![Aktions-Pfad mit einem Trigger von "Diese Kampagne an Nutzer:innen senden, die eingehende Nachrichten an die Abo-Gruppe gesendet haben, in der sich der Nachrichtentext befindet" und einem leeren Feld.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+![Aktionspfad mit einem Trigger von "Diese Kampagne an Nutzer:innen senden, die eingehende Nachrichten an die Abo-Gruppe gesendet haben, in der sich der Nachrichtentext befindet" und einem leeren Feld.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Anforderungen
 

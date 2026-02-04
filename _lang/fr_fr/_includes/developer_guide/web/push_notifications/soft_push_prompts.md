@@ -29,7 +29,7 @@ Dans votre intégration SDK Braze, trouvez et supprimez tout appel à `automatic
 
 ### Étape 3 : Mettre à jour l’intégration
 
-Enfin, remplacez l’appel supprimé par l’extrait de code suivant :
+Enfin, remplacez l'appel supprimé par l'extrait de code suivant. Appelez `subscribeToInAppMessage()` avant d'appeler `openSession()`. Cela permet de s'assurer que votre récepteur de message in-app est enregistré à temps pour recevoir le message d'amorçage push.
 
 ```javascript
 import * as braze from "@braze/web-sdk";

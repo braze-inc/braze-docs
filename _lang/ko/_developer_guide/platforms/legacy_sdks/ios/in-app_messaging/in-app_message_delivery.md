@@ -34,7 +34,7 @@ noindex: true
 
 기본적으로 양질의 사용자 경험을 제공하기 위해 인앱 메시지 전송을 30초에 한 번으로 제한합니다.
 
-`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`에 전달된 `appboyOptions` 매개변수 내 `ABKMinimumTriggerTimeIntervalKey`를 통해 이 값을 재정의할 수 있습니다. `ABKMinimumTriggerTimeIntervalKey`를 인앱 메시지 간 최소 시간(초)에 대해 원하는 정수 값으로 설정합니다.
+`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`에 전달된 `appboyOptions` 매개변수 내 `ABKMinimumTriggerTimeIntervalKey`를 통해 이 값을 재정의할 수 있습니다. `ABKMinimumTriggerTimeIntervalKey`을 인앱 메시지 간 최소 시간(초)에 대해 원하는 정수 값으로 설정합니다.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

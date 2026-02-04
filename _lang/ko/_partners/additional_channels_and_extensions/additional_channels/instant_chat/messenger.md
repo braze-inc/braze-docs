@@ -27,8 +27,8 @@ Acknowledge the following before proceeding with integration:
 | ---| ---| ---|
 | Facebook Messenger page| Facebook| [https://www.facebook.com/pages/create](https://www.facebook.com/pages/create) | A Facebook page will be used as the identity of your bot. When people chat with your app, they will see the page name and profile picture.|
 | Facebook Messenger app| Facebook| [https://developers.facebook.com/apps](https://developers.facebook.com/apps) | The Facebook app contains the settings for your Messenger bot, including access tokens.
-| App bot review and approval | Facebook | [https://developers.facebook.com/docs/messenger-platform/app-review](https://developers.facebook.com/docs/messenger-platform/app-review) | When you are ready to release your bot to the public, you must submit it to Facebook for review and approval. This review process allows us to ensure your Messenger bot abides by our policies and functions as expected before making it available to everyone on Messenger. |
-| Page-scope IDs (PSIDs) | Facebook | [https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages) | You need to have users PSIDs to send messages on Facebook Messenger. When a user interacts with your app via Messenger, Facebook will create a PSID. This PSID can be sent to Braze as a string custom attribute.
+| App bot review and approval | Facebook | [https://developers.facebook.com/문서/메신저-플랫폼/앱-검토](https://developers.facebook.com/docs/messenger-platform/app-review) | When you are ready to release your bot to the public, you must submit it to Facebook for review and approval. This review process allows us to ensure your Messenger bot abides by our policies and functions as expected before making it available to everyone on Messenger. |
+| Page-scope IDs (PSIDs) | Facebook | [https://developers.facebook.com/문서/메신저-플랫폼/참조/웹훅-이벤트/메시지](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages) | You need to have users PSIDs to send messages on Facebook Messenger. When a user interacts with your app via Messenger, Facebook will create a PSID. This PSID can be sent to Braze as a string custom attribute.
 | Page access token | Facebook | [https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token](https://developers.facebook.com/docs/messenger-platform/getting-started/app-setup#page_access_token) | These access tokens are similar to user access tokens, except that they provide permission to APIs that read, write or modify the data belonging to a Facebook Page. To obtain a page access token, you need to obtain a user access token and ask for the `manage_pagespermission`. After you have the user access token, you then get the page access token via the Graph API.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -70,7 +70,7 @@ Once you are confident that you are receiving PSIDs, coordinate and share this w
 
 ### Step 3: Set up your webhook template
 
-From **Templates & Media**, go to **Webhook Templates** and choose the **Facebook Messenger Webhook Template**.
+**템플릿 & 미디어**에서 **웹훅 템플릿**으로 가서 **Facebook 메신저 웹훅 템플릿**을 선택하세요.
 
 1. Provide a template name and add teams and tags, as necessary.
 2. Enter your message or choose a message template from [those made available by Facebook](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). You can also choose your message [type](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) or [tag](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags).
@@ -79,17 +79,17 @@ From **Templates & Media**, go to **Webhook Templates** and choose the **Faceboo
 
 #### Previewing and testing your webhook
 
-Before you send your message, test your webhook. Make sure your Messenger ID is saved in Braze (or find it and test as a customized user), and use the preview to send the test message:
+Before you send your message, test your webhook. 메신저 ID가 Braze에 저장되어 있는지 확인하고(또는 찾아서 사용자 지정된 사용자로 테스트) 미리보기를 사용하여 테스트 메시지를 전송합니다.
 
-![Test tab in the Facebook Messenger webhook template showing you can preview the message by sending it to an existing user.]({% image_buster /assets/img_archive/fbm-test.png %})
+![테스트 탭에서 기존 사용자에게 메시지를 전송하여 미리 볼 수 있음을 보여주는 Facebook Messenger 웹훅 템플릿입니다.]({% image_buster /assets/img_archive/fbm-test.png %})
 
-If you receive the message successfully, you can configure its delivery settings.
+메시지를 성공적으로 수신했다면 메시지 전달 설정을 구성할 수 있습니다.
 
 ## Using this integration
 
 Once set up, use this integration to target Facebook Messenger users. If you are not sending messages using users' phone numbers and plan on sending Messenger messages repeatedly, you should [create a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) for all users for whom the Messenger ID exists as a custom attribute and turn on [analytics tracking]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) to track your Messenger subscription rates over time. 
 
-![Segment filter "messenger_id" set to "is not blank".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
+![세그먼트 필터 "messenger_id"가 "비어 있지 않음"으로 설정됨.]({% image_buster /assets/img_archive/fbm-segmentation.png %})
 
 If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for Messenger ID existing to avoid errors.
 

@@ -9,10 +9,10 @@ description: "Este artigo de referência descreve eventos e propriedades recomen
 
 # eventos recomendados de eCommerce
 
-> Esta página cobre eventos e propriedades recomendados de eCommerce. Esses eventos são criados para capturar comportamentos de compra chave que os profissionais de marketing precisam para disparar mensagens eficazes, como direcionar carrinhos abandonados.
+> Esta página cobre eventos e propriedades recomendados de eCommerce. Esses eventos são criados para capturar comportamentos de compra chave que os profissionais de marketing precisam para disparar mensagens eficazes, como direcionamento de carrinhos abandonados.
 
 {% alert important %}
-Os eventos recomendados de eCommerce estão atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente da Braze se estiver interessado em participar deste acesso antecipado. <br><br>Se você estiver usando o novo [conector Shopify]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), esses eventos recomendados estarão automaticamente disponíveis através da integração.
+Os eventos recomendados de eCommerce estão atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente da Braze se você estiver interessado em participar deste acesso antecipado. <br><br>Se você estiver usando o novo [conector Shopify]({{site.baseurl}}/partners/ecommerce/shopify/multiple_stores/?tab=shopify%20connector), esses eventos recomendados estarão automaticamente disponíveis através da integração.
 {% endalert %}
 
 A Braze reconhece que o planejamento de dados leva tempo. Incentivamos nossos clientes a familiarizarem suas equipes de desenvolvimento e começarem a enviar esses eventos agora. Embora alguns recursos possam não estar disponíveis imediatamente com os eventos recomendados de eCommerce, você pode aguardar a introdução de novos produtos ao longo de 2025 que aprimorarão suas capacidades de eCommerce.
@@ -164,7 +164,7 @@ Você pode usar o evento de carrinho atualizado para rastrear quando produtos s�
 
 #### Objeto de mapeamento de carrinhos
 
-O evento `ecommerce.cart_updated` tem um objeto de mapeamento de carrinhos. Este objeto é criado para o perfil do usuário que contém um mapeamento de carrinhos, que contêm todos os produtos no carrinho do comprador. Você pode acessar os produtos no carrinho de compras através da tag Liquid: 
+O evento `ecommerce.cart_updated` tem um objeto de mapeamento de carrinhos. Este objeto é criado para o perfil do usuário que contém um mapeamento de carrinhos, que contêm todos os produtos no carrinho do comprador. Você pode acessar os produtos em seu carrinho de compras através da tag Liquid: 
 
 {%raw%}
 ```liquid
@@ -199,10 +199,10 @@ Se houver dois carrinhos, adicione ambos ao usuário mesclado. Reenfileire o can
 | `product_url` | Não | String | URL para a página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
 | `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
 | `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine). |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Objetos de exemplo
@@ -375,7 +375,7 @@ Semelhante ao evento `ecommerce.cart_updated`, este evento permite que você apr
 | `product_url` | Não | String | URL para a página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
 | `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
 | `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine). |
 | `metadata` | Não | Objeto |  |
@@ -543,7 +543,7 @@ Você pode usar o evento de pedido realizado para disparar quando um cliente com
 | `product_url` | Não | String | URL para a página do produto para mais detalhes. |
 | `quantity` | Sim | Inteiro | Número de unidades do produto no carrinho. |
 | `price` | Sim | Float | O preço unitário da variante do produto no momento da visualização. |
-| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata` | Não | Objeto | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. <br> Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku` | Não | String | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo. |
 | `source` | Sim | String | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine). |
 | `order_status_url` | Não | String | URL para visualizar o status do pedido. |
@@ -759,7 +759,7 @@ Você pode usar o evento de pedido reembolsado para disparar quando um pedido é
 | `product_url`      | Não       | String    | URL para a página do produto para mais detalhes.  |
 | `quantity`         | Sim      | Inteiro   | Número de unidades do produto no carrinho.   |
 | `price`            | Sim      | Float     | O preço unitário da variante do produto no momento da visualização.  |
-| `metadata`         | Não       | Objeto    | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos o SKU. Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
+| `metadata`         | Não       | Objeto    | Campo de metadados adicional sobre o produto que o cliente deseja adicionar para seus casos de uso. Para Shopify, adicionaremos SKU. Isso terá um limite baseado em nosso limite geral de propriedades de eventos de 50kb. |
 | `sku`            | Não       | String    | (Apenas Shopify) SKU do Shopify. Isso pode ser configurado como o campo de ID do catálogo.  |
 | `source`              | Sim      | String    | Fonte da qual o evento é derivado. (Para Shopify, isso é a vitrine).    |
 | `metadata`            | Não       | Objeto    |                |
@@ -1161,14 +1161,14 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
 
 A Braze criou modelos de Canvas pré-construídos que são alimentados por eventos recomendados de eCommerce, como direcionar clientes que iniciaram o processo de checkout, mas saíram antes de finalizar o pedido. Você pode usar esses eventos para tomar decisões informadas para melhorar a jornada do usuário, personalizando o envio de mensagens e direcionando públicos específicos.
 
-Confira nossos [casos de uso de eCommerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) dedicados para mais maneiras de como você pode usar esses eventos com modelos de Canvas.
+Confira nossos casos de uso dedicados [eCommerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) para mais maneiras de como você pode usar esses eventos com modelos de Canvas.
 
 ## Campos calculados pelo usuário
 
 Usamos cálculos de campos de usuário padronizados para os seguintes campos: 
 
 - **Receita Total** = soma do valor total dos pedidos realizados - soma do valor total dos pedidos reembolsados
-- **Contagem Total de Pedidos** = contagem de eventos de pedidos distintos realizados - contagem de eventos de cancelamentos de pedidos distintos
+- **Contagem Total de Pedidos** = contagem de eventos distintos de pedidos realizados - contagem de eventos distintos de cancelamentos de pedidos
 - **Valor Total de Reembolso** = soma do valor total dos pedidos reembolsados 
 
 Esses cálculos de campos de usuário também estão incluídos na aba **Transações** dos perfis de usuário.

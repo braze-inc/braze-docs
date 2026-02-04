@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: 환경설정 센터 만들기"
+nav_title: "POST: 환경설정 센터 생성"
 article_title: "POST: 환경설정 센터 만들기"
 search_tag: Endpoint
 page_order: 4
@@ -18,7 +18,7 @@ description: "이 기사는 Braze 엔드포인트에 대한 기본 설정 센터
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e15d7065-2cbc-4eb3-ae16-32efe43357a6 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `preference_center.update` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -52,19 +52,19 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## 요청 매개변수
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`name`| 필수 | 문자열 | 다음 요구 사항을 충족하는 환경설정 센터의 이름입니다: <br>\- 문자, 숫자, 하이픈, 밑줄만 포함합니다. <br>\- 공백이 없습니다. |
-|`preference_center_title`| 선택 사항 | 문자열 | 환경설정 센터 및 확인 페이지의 제목입니다. 제목을 지정하지 않으면 페이지의 제목은 기본적으로 "환경설정 센터"로 설정됩니다. |
-|`preference_center_page_html`| 필수 | 문자열 | 환경설정 센터 페이지의 HTML입니다. |
-|`confirmation_page_html`| 필수 | 문자열 | 확인 페이지의 HTML입니다. |
-|`state` | 선택 사항 | 문자열 | `active` 또는 `draft` 을 선택합니다. 지정하지 않으면 기본값은 `active` 입니다. |
-|`options` | 선택 사항 | 객체 | 속성: <br>`meta-viewport-content`: 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다.<br><br> `link-tags`: 페이지에 파비콘을 설정하세요. 설정되면, `<link>` 태그에 rel 속성이 추가됩니다.  |
+|`name`| Required | 문자열 | 다음 요구 사항을 충족하는 환경설정 센터의 이름입니다: <br>\- 문자, 숫자, 하이픈, 밑줄만 포함합니다. <br>\- 공백이 없습니다. |
+|`preference_center_title`| Optional | 문자열 | 환경설정 센터 및 확인 페이지의 제목입니다. 제목을 지정하지 않으면 페이지의 제목은 기본적으로 "환경설정 센터"로 설정됩니다. |
+|`preference_center_page_html`| Required | 문자열 | 환경설정 센터 페이지의 HTML입니다. |
+|`confirmation_page_html`| Required | 문자열 | 확인 페이지의 HTML입니다. |
+|`state` | Optional | 문자열 | `active` 또는 `draft` 을 선택합니다. 지정하지 않으면 기본값은 `active` 입니다. |
+|`options` | 선택 사항 | 객체 | 속성: <br>`meta-viewport-content`: 존재하는 경우 `viewport` 메타 태그가 페이지에 `content= <value of attribute>` 으로 추가됩니다.<br><br> `link-tags`: 페이지의 파비콘을 설정합니다. 설정되면, `<link>` 태그에 rel 속성이 추가됩니다.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -81,7 +81,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Liquid | 설명 |
 | --------- | ---------|
-|`{{subscribed_state.${email_global}}}`| 사용자의 글로벌 이메일 구독 상태(예: '옵트인', '구독' 또는 '구독 취소')를 가져옵니다. |
+|`{{subscribed_state.${email_global}}}`| 사용자의 글로벌 이메일 가입 상태(예: "opted_in", "가입함" 또는 "탈퇴함")를 가져옵니다. |
 |`{{subscribed_state.${<subscription_group_id>}}}`| 사용자에 대해 지정된 구독 그룹의 구독 상태(예: "구독됨" 또는 "구독 취소됨"을 표시)를 가져옵니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -89,7 +89,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Liquid | 설명 |
 | --------- | ---------|
-|`{% form_field_name :email_global_state %}`| 특정 양식 입력 요소가 사용자의 글로벌 이메일 구독 상태에 해당함을 나타냅니다. 글로벌 이메일 구독 상태에 대한 선택 데이터와 함께 양식을 제출할 때 사용자의 선택 상태는 '옵트인', '구독' 또는 '구독 취소'여야 합니다. 체크박스인 경우 사용자는 '옵트인' 또는 '구독 취소' 상태가 됩니다. 숨겨진 입력의 경우 '구독 중' 상태도 유효합니다. |
+|`{% form_field_name :email_global_state %}`| 특정 양식 입력 요소가 사용자의 글로벌 이메일 구독 상태에 해당함을 나타냅니다. 사용자 선택 상태는 "opted_in", "가입함" 또는 글로벌 이메일 가입 상태에 대한 선택 데이터와 함께 양식이 제출된 경우 "탈퇴함"이어야 합니다. 확인란이 선택되어 있으면 사용자는 "opted_in" 또는 "탈퇴한 상태"가 됩니다. 숨겨진 입력의 경우 '구독 중' 상태도 유효합니다. |
 |`{% form_field_name :subscription_group <subscription_group_id> %}`| 특정 양식 입력 요소가 지정된 구독 그룹에 해당함을 나타냅니다. 특정 구독 그룹에 대한 선택 데이터와 함께 양식을 제출할 때 사용자의 선택 상태는 "구독 중" 또는 "구독 취소" 중 하나여야 합니다. |
 |`{{preference_center_submit_url}}`| 양식 제출을 위한 URL을 생성합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

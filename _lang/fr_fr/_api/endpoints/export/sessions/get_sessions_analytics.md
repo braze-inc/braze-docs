@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exporter les sessions d'application par heure"
+nav_title: "GET : Exporter les sessions de l'application en fonction de l'heure"
 article_title: "Get : Exporter les sessions d'application par heure"
 search_tag: Endpoint
 page_order: 4
@@ -11,7 +11,7 @@ description: "Cet article présente en détail l’endpoint Braze Exporter les a
 {% api %}
 # Exporter les sessions d'application par heure
 {% apimethod get %}
-/sessions/séries de données
+/sessions/data_series
 {% endapimethod %}
 
 > Utilisez cet endpoint pour récupérer une série du nombre de sessions de votre application sur une période donnée.
@@ -48,8 +48,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sessions/data_se
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

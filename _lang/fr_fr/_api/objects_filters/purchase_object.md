@@ -1,5 +1,5 @@
 ---
-nav_title: "Objet d’achat"
+nav_title: "Objet Achat"
 article_title: Objet Achat de l’API
 page_order: 8
 page_type: reference
@@ -10,6 +10,8 @@ description: "Cet article de référence explique les différents composants d�
 # Objet Achat
 
 > Cet article explique les différents composants d’un objet Achat, comment l’utiliser correctement, les bonnes pratiques et des exemples dont vous pouvez vous inspirer.
+
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
 ## Qu’est-ce qu’un objet Achat ?
 
@@ -35,7 +37,7 @@ Un objet Achat est un objet qui passe par l’API lorsqu’un achat a été effe
   "time" : (required, datetime as string in ISO 8601) Time of purchase,
   // See the following purchase object explanation for clarification.
   "properties" : (optional, Properties Object) properties of the event,
-  // Setting this flag to true will put the API in "Update Only" mode.
+  // Setting this flag to true puts the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean)
 }
@@ -57,7 +59,7 @@ Dans l'objet Achat, le `product_id` est un identifiant pour l'achat (tel que `Pr
 
 Chez Braze, nous proposons des conventions générales de nommage pour l’objet Achat `product_id`. Lorsque vous choisissez `product_id`, Braze suggère d’utiliser des noms simples tels que le nom du produit ou la catégorie de produit (au lieu des unités de gestion des stocks) dans l’intention de regrouper tous les éléments enregistrés par ce `product_id`.
 
-Cela permet de faciliter l’identification des produits pour la segmentation et le déclenchement.
+Les produits sont ainsi plus faciles à identifier pour la segmentation et le déclencheur.
 
 ### Journaliser les achats au niveau de la commande
 
@@ -90,18 +92,18 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Objet Propriétés d’achat
 
-Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « Properties (Propriétés) » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriété. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar. 
+Les événements et achats personnalisés peuvent avoir des propriétés d’événement. Les valeurs des « Properties (Propriétés) » doivent être un objet dont les clés sont les noms de propriétés et les valeurs sont les valeurs de propriété. Les noms de propriété doivent être des chaînes de caractères non vides de moins de 255 caractères, qui ne commencent pas par un symbole de dollar.
 
 Les valeurs de propriété peuvent être l’un des types de données suivants :
 
 | Type de données | Description |
 | --- | --- |
-| Chiffres | Sous forme d'[entiers](https://en.wikipedia.org/wiki/Integer) ou de [float](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Chiffres | Peuvent être des [nombres entiers](https://en.wikipedia.org/wiki/Integer) ou des [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
 | Booléens |  |
 | Datetimes | Formatés sous forme de chaînes de caractères au format [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) ou `yyyy-MM-dd'T'HH:mm:ss:SSSZ`. Non pris en charge dans les tableaux. |
 | Chaînes de caractères | 255 caractères ou moins. |
 | Tableaux | Les tableaux ne peuvent pas inclure des dates/horodatages. |
-| Objets | Les objets seront ingérés en tant que chaînes de caractères. |
+| Objets | Les objets sont ingérés sous forme de chaînes de caractères. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Les objets de propriété d'événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété d'événement allant jusqu'à 50 Ko.
@@ -114,10 +116,10 @@ Les [propriétés d'achat]({{site.baseurl}}/user_guide/data_and_analytics/custom
 
 Il est important de noter que cette fonctionnalité est activée **par produit**, et non par achat. Par exemple, si vous avez un volume élevé de produits distincts, mais que chacun d'entre eux possède les mêmes propriétés, la segmentation peut s'avérer plus inutile.
 
-Dans cette instance, nous vous recommandons d'utiliser des noms de produits au "niveau du groupe" plutôt que quelque chose de granulaire lors de la définition des structures de données. Par exemple, une société de vente de billets de train devrait avoir des produits pour "voyage simple", "voyage aller-retour", "multi-villes", et non des transactions spécifiques telles que la "transaction 123" ou la "transaction 046". Autre exemple, pour l'événement d'achat "nourriture", il serait préférable que les propriétés soient "gâteau" et "sandwich".
+Dans cette instance, nous recommandons d'utiliser des noms de produits au "niveau du groupe" plutôt que des identifiants au niveau de la transaction lors de la définition des structures de données. Par exemple, une société de vente de billets de train devrait avoir des produits pour "voyage simple", "voyage aller-retour", "multi-villes", et non des transactions spécifiques telles que la "transaction 123" ou la "transaction 046". Autre exemple, pour l'événement d'achat "nourriture", il serait préférable que les propriétés soient "gâteau" et "sandwich".
 
 {% alert important %}
-Notez que les produits peuvent être ajoutés via l'API REST de Braze. Par exemple, si vous envoyez un appel à l'endpoint `/users/track` et que vous incluez un nouvel ID d'achat, un produit sera automatiquement créé dans la section **Paramètres des données** > **Produits** du tableau de bord.
+Notez que les produits peuvent être ajoutés via l'API REST de Braze. Par exemple, si vous envoyez un appel au point de terminaison `/users/track` et que vous incluez un nouvel ID d'achat, Braze crée automatiquement un produit dans la section **Paramètres des données** > **Produits** du tableau de bord.
 {% endalert %}
 
 ### Exemple d’objet Achat

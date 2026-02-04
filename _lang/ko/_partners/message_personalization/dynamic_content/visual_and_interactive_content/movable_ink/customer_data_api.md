@@ -1,12 +1,12 @@
 ---
 nav_title: Connecting to the Customer Data API
-article_title: Connecting to the Movable Ink Customer Data API
+article_title: Movable Ink 고객 데이터 API에 연결하기
 description: "This reference article outlines how to connect to activate customer event data stored in Braze to generate personalized content within Movable Ink using the Customer Data API."
 page_type: partner
 search_tag: Partner
 ---
 
-# Connecting to the Movable Ink Customer Data API
+# Movable Ink 고객 데이터 API에 연결하기
 
 > Braze and Movable Ink’s Customer Data API integration allows marketers to activate customer event data stored in Braze to generate personalized content within Movable Ink.
 
@@ -42,7 +42,7 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 
 1. In the **Webhook URL** field, enter the Movable Ink endpoint URL.
 
-![Compose tab of the webhook composer in Braze with the Movable Ink endpoint URL and Request Body set to JSON Key/Value Pairs.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
+![Braze에서 웹훅 작성기의 작성 탭에서 Movable Ink 엔드포인트 URL과 요청 본문을 JSON 키-값 쌍으로 설정합니다.]({% image_buster /assets/img/movable_ink/cd_api_webhook_url.png %}){: style="max-width:75%" }
 
 {:start="2"}
 2\. Select the **Settings** tab.
@@ -54,14 +54,14 @@ For more information on Stories, the Movable Ink Customer Data API, and how Mova
 | Authorization | Enter the Basic Authentication you received from Movable Ink. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![Settings tab of the webhook composer in Braze with key-value pairs for Content-Type and Authorization.]({% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}){: style="max-width:75%" }
+![콘텐츠 유형 및 권한 부여에 대한 키-값 페어가 있는 Braze의 웹훅 작성기 설정 탭입니다.]({% image_buster /assets/img/movable_ink/cd_api_webhook_settings.png %}){: style="max-width:75%" }
 
 #### Step 1c: Configure your payload
 
 1. Return to the **Compose** tab.
 2. For your **Request Body**, either create your own request body with JSON key-value pairs or enter your event payload as raw text. Refer to the [sample payloads](#sample-payloads) for examples of standard eCommerce events.
 
-![Compose tab of the webhook composer in Braze with JSON key-value pairs for ID, timestamp, user ID, and event type.]({% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}){: style="max-width:75%" }
+![ID, 타임스탬프, 사용자 ID, 이벤트 유형에 대한 JSON 키-값 페어를 사용하여 Braze의 웹훅 작성기 탭에서 작성하세요.]({% image_buster /assets/img/movable_ink/cd_api_webhook_kvp.png %}){: style="max-width:75%" }
 
 #### Step 1d: Test your webhook {#step-1d}
 
@@ -77,9 +77,9 @@ To test your webhook, do the following:
 2. Preview the message as a user to view a sample event payload for that user. You can choose between previewing as a random user, specific user, or custom user.
 3. If everything looks good, click **Send test** to send a test request.
 
-![Webhook response message in Braze showing a 200 OK response.]({% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}){: style="max-width:75%" }
+![200 OK 응답을 표시하는 Braze의 웹훅 응답 메시지.]({% image_buster /assets/img/movable_ink/cd_api_webhook_response.png %}){: style="max-width:75%" }
 
-### Step 2: Finalize your campaign setup
+### 2단계: Finalize your campaign setup
 
 #### Step 2a: Schedule your campaign
 
@@ -103,7 +103,7 @@ Next, determine which users you want to target for this campaign. For details, r
 
 Make sure not to use A/B testing in your campaign by clearing the **Control Group** checkbox. If a control group is included, a percentage of users will not have data sent to Movable Ink. All of your audience should go to the variant rather than the control group.
 
-![A/B Testing panel in a Braze campaign with 100% variant distrubtion assigned to Variant 1, and no control group.]({% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %})
+![배리언트 1에 100% 배리언트 배포가 할당되고 대조군이 없는 Braze 캠페인의 A/B 테스트 패널.]({% image_buster /assets/img/movable_ink/cd_api_webhook_ab.png %})
 
 #### Step 2c: Choose conversion events (optional)
 

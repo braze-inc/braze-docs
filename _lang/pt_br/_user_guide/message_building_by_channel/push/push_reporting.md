@@ -1,6 +1,6 @@
 ---
-nav_title: Relatório
-article_title: Relatório de Push
+nav_title: Relatórios
+article_title: Relatórios de push
 page_order: 21
 page_type: reference
 description: "Este artigo cobre o relatório de push, que você pode usar para visualizar e analisar o sucesso de suas campanhas de push."
@@ -9,7 +9,7 @@ tool: Reports
 
 ---
 
-# Relatório de push
+# Relatórios de push
 
 > Este artigo cobre o relatório de push, que você pode usar para visualizar e analisar o sucesso de suas campanhas de push.
 

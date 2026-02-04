@@ -14,7 +14,7 @@ search_tag: Partner
 
 A integração da Braze e da Hightouch permite que você use a API com [conteúdo conectado da Braze]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/) para obter dados atualizados de clientes ou objetos em suas campanhas ou canvas no momento do envio.
 
-A API de Personalização da Hightouch fornece um endpoint REST para usar na sua configuração do Braze. Especificamente, você pode usar a oferta de Conteúdo Conectado do Braze para fazer uma solicitação GET à API de Personalização para recuperar todas as informações relacionadas a um identificador específico. Os dados expostos pela API podem representar dados de clientes, produtos ou qualquer outro objeto. 
+A API de Personalização da Hightouch fornece um endpoint REST para usar na sua configuração do Braze. Especificamente, você pode usar a oferta Braze Connected Content para fazer uma solicitação GET à API de personalização para recuperar todas as informações relacionadas a um identificador específico. Os dados expostos pela API podem representar dados de clientes, produtos ou qualquer outro objeto. 
 
 ![]({% image_buster /assets/img/hightouch/cohort6.png %})
 
@@ -29,7 +29,7 @@ A API de Personalização da Hightouch fornece um endpoint REST para usar na sua
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab Casos de uso %}
+{% tab Use Cases %}
 
 ### Casos de uso
 
@@ -42,7 +42,7 @@ Casos de uso comuns incluem:
 - **Recomendações baseadas em dados financeiros ou médicos**—dados financeiros têm requisitos rigorosos que a Hightouch atende por meio de suas [políticas rigorosas de segurança de dados](https://hightouch.com/docs/security/overview#compliance). Com a Hightouch, você pode criar segmentos de clientes com base em dados financeiros ou médicos sem expor os atributos subjacentes usados em seus critérios de segmentação.
 
 {% endtab %}
-{% tab Conjuntos de dados %}
+{% tab Datasets %}
 
 ### Conjuntos de dados
 
@@ -68,7 +68,7 @@ Para mais detalhes, consulte a [documentação](https://hightouch.com/docs) rele
 Os modelos Hightouch definem quais dados extrair da sua fonte. Para configurar um novo modelo, siga estas etapas:
 
 1. No Hightouch, Acessar [**Visão geral dos modelos**](https://app.hightouch.com/models) > **Adicionar modelo**, e selecione a fonte que você acabou de conectar. <br><br>
-2. Em seguida, escolha um [método de modelagem](https://hightouch.com/docs/models/creating-models). Como todas as suas informações devem ser unidas em uma tabela, você pode usar o seletor de tabela visual para defini-la. Alternativamente, você pode escrever SQL para incluir apenas as colunas que deseja ou confiar em seus modelos dbt existentes, Looker Looks ou workbooks da Sigma.<br><br>
+2. Em seguida, escolha um [método de modelagem](https://hightouch.com/docs/models/creating-models). Como todas as suas informações devem ser reunidas em uma única tabela, você pode usar o seletor de tabela visual para defini-la. Alternativamente, você pode escrever SQL para incluir apenas as colunas que deseja ou confiar em seus modelos dbt existentes, Looker Looks ou workbooks da Sigma.<br><br>
 3. Antes de continuar, veja uma prévia do seu modelo para confirmar se ele está consultando seus dados de interesse. Por padrão, a Braze limita a prévia aos primeiros 100 registros. Depois de validar seus dados, clique em **Continue** (Continuar).<br><br>
 4. Dê um nome ao seu modelo, por exemplo, "Recomendações do usuário."<br><br>
 5. Por fim, selecione uma chave primária e clique em **Finish** (Concluir). Uma chave primária deve ser uma coluna com identificadores únicos. Este é também o campo que você usará para chamar a API de personalização para recuperar as recomendações de um usuário específico.

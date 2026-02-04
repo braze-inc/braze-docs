@@ -79,7 +79,7 @@ Sie können Nutzerdaten für alle Empfänger:innen einer Kampagne als CSV-Datei 
 Sie können den Button **Nutzerdaten** nicht sehen? Um Nutzerdaten zu exportieren, benötigen Sie die Berechtigung [Berechtigungen]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#limited-and-team-role-permissions) **Nutzerdaten exportieren** für diesen Workspace.
 {% endalert %}
 
-\![Nutzerdaten-Dropdown auf der Seite Kampagnendetails]({% image_buster /assets/img/campaign_export_example.png %})
+![Nutzerdaten-Dropdown auf der Seite Kampagnendetails]({% image_buster /assets/img/campaign_export_example.png %})
 
 Die CSV-Ausgabe enthält Nutzerprofil-Daten für jeden Empfänger:innen der Kampagne. Braze erstellt den Bericht im Hintergrund und mailt ihn an die Nutzer:innen, die gerade angemeldet sind.
 

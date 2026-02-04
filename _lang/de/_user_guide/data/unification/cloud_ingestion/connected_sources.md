@@ -208,7 +208,7 @@ Wenn Sie über Netzwerkrichtlinien verfügen, müssen Sie Braze Netzwerkzugriff 
 Damit Braze auf Databricks zugreifen kann, muss ein persönliches Token für den Zugriff erstellt werden.
 
 1. Wählen Sie in Ihrem Databricks Workspace Ihren Databricks-Benutzernamen in der oberen Leiste aus und wählen Sie dann **Benutzer:in** aus dem Dropdown-Menü.
-2. Vergewissern Sie sich, dass das Konto des Dienstes über die Rechte `CREATE TABLE` für das Schema verfügt, das für die verbundene Quelle verwendet wird. 
+2. Vergewissern Sie sich, dass das Konto des Dienstes über die Berechtigung `CREATE TABLE` für das Schema verfügt, das für die verbundene Quelle verwendet wird. 
 3. Wählen Sie auf der Registerkarte **Zugriffstoken** die Option **Neues Token generieren**.
 4. Geben Sie einen Kommentar ein, der Ihnen hilft, dieses Token zu identifizieren, z. B. „Braze-CDI“, und ändern Sie die Lebensdauer des Tokens auf „keine Lebensdauer“, indem Sie das Feld „Lebensdauer (Tage)“ leer lassen.
 5. Wählen Sie **Erzeugen**.
@@ -434,7 +434,7 @@ Fügen Sie den Public Key, den Sie im letzten Schritt notiert haben, zu Ihren Nu
 
 Wenn Sie die Schlüssel irgendwann wechseln möchten, können Sie einen neuen öffentlichen Schlüssel erstellen, indem Sie in der **Datenzugriffsverwaltung** von **Cloud Data Ingestion** die Option **Neuen Schlüssel generieren** für das jeweilige Konto wählen.
 
-![Data Access Management für Snowflake Zugangsdaten, mit einem Button zur Generierung eines neuen Schlüssels.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
+![Datenzugriffsverwaltung für Snowflake Zugangsdaten, mit einem Button zur Generierung eines neuen Schlüssels.]({% image_buster /assets/img/cloud_ingestion/connected_source_sf_4.png %})
 
 ```json
 ALTER USER BRAZE_INGESTION_USER SET rsa_public_key='{INSERT_YOUR_KEY}';

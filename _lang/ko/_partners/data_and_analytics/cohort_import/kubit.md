@@ -18,9 +18,9 @@ In Braze, navigate to **Partner Integrations** > **Technology Partners** and sel
 
 Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kubit's dashboard.
 
-![The Kubit technology partner page in Braze.]({% image_buster /assets/img/kubit/kubit.png %}){: style="max-width:90%;"}
+![Braze의 Kubit 기술 파트너 페이지.]({% image_buster /assets/img/kubit/kubit.png %}){: style="max-width:90%;"}
 
-### Step 2: Configure Braze in Kubit
+### 2단계: Configure Braze in Kubit
 
 Provide the Braze data import key and Braze REST endpoint to your Kubit support contact. They will configure the integration on their side and let you know when the integration is live.  
 
@@ -50,7 +50,7 @@ Once an import has been completed, an email notification will be sent to the rec
 ### Step 4: Create Braze segments with Kubit cohorts
 After importing cohorts to Braze, you can use them as filters to create Braze segments and include them in Braze campaigns or Canvas. Visit our segment documentation to learn more about [how to create Braze segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
 
-![In the Braze segment builder, the user attribute "Kubit cohorts" is set to "includes_value" and shows a list of available cohorts.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
+![Braze 세그먼트 빌더에서 사용자 속성 "Kubit 코호트"는 "includes_value" 로 설정되어 사용 가능한 코호트 목록을 표시합니다.]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ## User Matching
 

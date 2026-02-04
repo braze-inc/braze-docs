@@ -24,12 +24,12 @@ This feature gives brands the option to control what specific first-party data i
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to Criteo is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager. <br> 
+Braze Audience Sync to Criteo is an Audience Sync Pro integration. 이 통합에 대한 자세한 내용은 Braze 계정 매니저에게 문의하세요. <br> 
 {% endalert %}
 
-## Prerequisites 
+## 필수 조건 
 
-You will need to ensure that you have the following items created and/or completed prior to setting up your Audience Sync to Criteo.
+크리테오에 오디언스 동기화를 설정하기 전에 다음 항목을 생성 및/또는 완료했는지 확인해야 합니다.
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
@@ -41,21 +41,25 @@ You will need to ensure that you have the following items created and/or complet
 
 ### Step 1: Connect to Criteo
 
+{% alert important %}
+Braze 계정에 크리테오를 연결하려면 ['관리자' 권한이]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) 있어야 합니다.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. Under Criteo Audience Export, select **Connect Criteo**.
 
-![Criteo technology page in Braze that includes an Overview section and Criteo section with the Connected Criteo button.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
+![Braze의 크리테오 기술 페이지에는 개요 섹션과 연결된 크리테오 버튼이 있는 크리테오 섹션이 포함되어 있습니다.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
-A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
+오디언스 동기화 통합과 관련된 권한에 대해 Braze에 권한을 부여하는 크리테오 oAuth 페이지가 나타납니다.
 
 Once you have selected confirm, you’ll then be redirected back into Braze to select which Criteo ad accounts you wish to sync to. 
 
-![A list of available ad accounts you can connect to Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
+![Criteo에 연결할 수 있는 사용 가능한 광고 계정 목록.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
+연결에 성공하면 파트너 페이지로 돌아가서 어떤 계정이 연결되어 있는지 확인하고 기존 계정의 연결을 해제할 수 있습니다.
 
-![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
+![광고 계정이 성공적으로 연결되었음을 보여주는 Criteo 기술 파트너 페이지의 업데이트된 버전.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 
-Your Criteo connection will be applied at the Braze workspace level. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Criteo will show errors, and Braze will not be able to sync users.
+Criteo 연결은 Braze 워크스페이스 수준에서 적용됩니다. If your Criteo admin removes you from your Criteo ad account, Braze will detect an invalid token. As a result, your active Canvases using Criteo will show errors, and Braze will not be able to sync users.
 
 ### Step 2: Configure your Canvas entry criteria
 
@@ -75,9 +79,9 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 Add a component in your Canvas and select **Audience Sync**.
 
-![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Workflow of the previous steps to add a Criteo Audience component in Canvas Flow.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
+![캔버스에서 크리테오 오디언스 컴포넌트를 추가하는 이전 단계의 워크플로입니다.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![캔버스에서 크리테오 오디언스 컴포넌트를 추가하는 이전 단계의 워크플로입니다.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
 
-### Step 4: Sync setup
+### 4단계: Sync setup
 
 Click on the **Custom Audience** button to open the component editor.
 
@@ -92,11 +96,11 @@ Then select your desired Criteo ad account. Under the **Choose a New or Existing
 **Create a New Audience**<br>
 Enter a name for the new audience, select **Add Users to Audience**, and select which fields you would like to sync with Criteo. Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/criteo/criteo3.png %})
+![Expanded view of the Custom Audience Canvas step. 여기에서 원하는 광고 계정을 선택하면 새 오디언스가 생성됩니다.]({% image_buster /assets/img/criteo/criteo3.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze는 오디언스가 성공적으로 생성되거나 오류가 발생하면 단계 편집기 상단에 알림을 표시합니다. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/criteo/criteo1.png %})
+![캔버스 구성 요소에서 새 오디언스가 생성된 후 표시되는 알림입니다.]({% image_buster /assets/img/criteo/criteo1.png %})
 
 When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync component.
 {% endtab %}
@@ -104,7 +108,7 @@ When you launch a Canvas with a new audience, Braze syncs users in near real-tim
 **Sync with an Existing Audience**<br>
 Braze also offers the ability to add users to existing Criteo audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then add users in near real-time as they enter the Audience Sync component.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account and existing audience are selected.]({% image_buster /assets/img/criteo/criteo8.png %})
+![Expanded view of the Custom Audience Canvas step. 여기에서 원하는 광고 계정과 기존 오디언스가 선택됩니다.]({% image_buster /assets/img/criteo/criteo8.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -113,15 +117,15 @@ Braze also offers the ability to add users to existing Criteo audiences to ensur
 
 Once you have configured your Audience Sync to Criteo, simply launch the Canvas! The new audience will be created, and users who go through the Audience Sync step will be passed into this audience on Criteo. If your Canvas contains subsequent components, your users will then advance to the next step in their user journey.
 
-You can view the audience in Criteo by going into your ads manager account and then selecting Segments from the **Audience Library** of the navigation. From the **Segments** page, you can see the size of each audience after it reaches ~1,000.
+You can view the audience in Criteo by going into your ads manager account and then selecting Segments from the **Audience Library** of the navigation. **세그먼트** 페이지에서 최대 1,000명에 도달한 후 각 오디언스의 크기를 확인할 수 있습니다.
 
-![The audience library showing the segment, id, source, type, size, currently used, and last update.]({% image_buster /assets/img/criteo/criteo.png %})
+![세그먼트, ID, 소스, 유형, 크기, 현재 사용량, 마지막 업데이트가 표시된 오디언스 라이브러리.]({% image_buster /assets/img/criteo/criteo.png %})
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting Criteo's API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Criteo.
+사용자가 오디언스 동기화 단계에 도달하면, Braze는 크리테오의 API 속도 제한을 준수하면서 거의 실시간으로 동기화합니다. Braze는 5초마다 최대한 많은 사용자를 배치하고 처리한 후 크리테오로 전송합니다.
 
-Criteo's API rate limit states no more than 250 requests per minute. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric. 
+크리테오의 API 속도 제한은 분당 250건 이하의 요청만 허용합니다. 고객이 이 제한에 도달하면 Braze는 최대 13시간 동안 동기화를 다시 시도합니다. 그래도 동기화가 되지 않으면 Braze는 이러한 사용자를 사용자 오류 측정기준 아래에 나열합니다. 
 
 ## Understanding analytics
 

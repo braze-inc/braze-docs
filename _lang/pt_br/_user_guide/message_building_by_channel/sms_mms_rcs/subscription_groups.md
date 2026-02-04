@@ -41,24 +41,24 @@ Para definir o estado do grupo de inscrição de um usuário, use um dos seguint
 
 ### Verificando o grupo de um usuário
 
-Para verificar o grupo de inscrições de um usuário, use um dos seguintes métodos:
+Para verificar o grupo de inscrição de um usuário, use um dos seguintes métodos:
 
 - **Perfil do usuário:** Perfis de usuários individuais podem ser acessados através do dashboard do Braze selecionando **Pesquisa de Usuário** na barra lateral. Aqui, é possível procurar perfis de usuários por endereço de e-mail, número de telefone ou ID de usuário externo. Quando dentro de um perfil de usuário, na guia de Engajamento, você pode visualizar os grupos de inscrição de SMS e RCS de um usuário. 
 - **API REST:** O grupo de inscrições de perfis de usuários individuais pode ser visualizado pelo [endpoint Listar grupos de inscrições do]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) usuário ou pelo [endpoint Listar status do grupo de inscrições do usuário]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) usando a Braze REST API. 
 
-## Enviando mensagens com um grupo de inscrições
+## Enviando mensagens com um grupo de inscrição
 
-Para lançar uma campanha de SMS ou RCS através do Braze, selecione um grupo de inscrições no menu suspenso **Variantes de SMS/MMS/RCS**. Depois de selecionado, um filtro de público será adicionado automaticamente à sua campanha ou Canva, garantindo que apenas os usuários `subscribed` do grupo de inscrições selecionado estejam no público-alvo.
+Para lançar uma campanha de SMS ou RCS através do Braze, selecione um grupo de inscrição no menu suspenso **Variações de SMS/MMS/RCS**. Depois de selecionado, um filtro de público será adicionado automaticamente à sua campanha ou Canva, garantindo que apenas os usuários `subscribed` do grupo de inscrições selecionado estejam no público-alvo.
 
 {% alert important %}
-Em conformidade com as [normas e diretrizes de telecomunicações internacionais]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/), o Braze nunca enviará SMS ou RCS para usuários que não se inscreveram no grupo de inscrições selecionado.  
+Em conformidade com as [normas e diretrizes de telecomunicações internacionais]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations/), o Braze nunca enviará SMS ou RCS para usuários que não se inscreveram no grupo de inscrição selecionado.  
 {% endalert %}
 
 ![Criador de SMS com o menu suspenso do grupo de inscrições aberto e "Serviço de envio de mensagens A para SMS" destacado pelo usuário.]({% image_buster /assets/img/sms/sms_subgroup_select.png %})
 
-## Ativando grupos de inscrições
+## Ativando grupos de inscrição
 
-Para ativar grupos de inscrições para SMS, MMS ou RCS, consulte o seguinte:
+Para ativar grupos de inscrição para SMS, MMS ou RCS, consulte o seguinte:
 
 {% tabs local %}
 {% tab SMS %}
@@ -72,22 +72,22 @@ Para enviar uma mensagem MMS, pelo menos um número em seu grupo de inscrições
 {% endtab %}
 
 {% tab RCS %}
-Um remetente verificado de RCS deve estar presente dentro do seu grupo de inscrições antes que você possa enviar uma mensagem de RCS. 
+Um remetente verificado de RCS deve estar presente dentro do seu grupo de inscrição antes que você possa enviar uma mensagem RCS. 
 
 Existem duas maneiras de adicionar um remetente verificado de RCS:
-- Adicione-o a um grupo de inscrições existente
-- Crie um novo grupo de inscrições de RCS
+- Adicione-o a um grupo de inscrição existente
+- Crie um novo grupo de inscrição de RCS
 A escolha depende em grande parte dos casos de uso de RCS que você está interessado. 
 
-Dependendo da sua integração, o Braze pode adicionar remetentes verificados de RCS aos seus grupos de inscrições de SMS existentes ou configurar novos grupos de inscrições para você. Em qualquer um dos casos, seu gerente de sucesso do cliente o guiará por uma atualização de tráfego de SMS tranquila e eficiente.
+Dependendo da sua integração, o Braze pode adicionar remetentes verificados de RCS aos seus grupos de inscrição de SMS existentes ou configurar novos grupos de inscrição para você. Em qualquer um dos casos, seu gerente de sucesso do cliente irá guiá-lo através de uma atualização de tráfego de SMS tranquila e eficiente.
 {% endtab %}
 {% endtabs %}
 
 ## Migrando tráfego de SMS para RCS
 
-Se você tiver grupos de inscrições de SMS e RCS separados, pode migrar usuários de SMS para RCS usando um Canvas de uma etapa. 
+Se você tiver grupos de inscrição de SMS e RCS separados, pode migrar usuários de SMS para RCS usando um Canvas de uma etapa. 
 
-O Braze recomenda que você teste o envio de RCS para volumes menores de usuários inicialmente e migre mais usuários para o grupo de inscrições de RCS ao longo do tempo. Por exemplo, se você tiver 1.000.000 de usuários inscritos em um grupo de inscrições por SMS, isso poderia parecer primeiro migrar todos os usuários para o novo grupo de inscrições e, em seguida, segmentar um público menor de 50.000 a 100.000 (5-10%) para testar as mensagens RCS.
+O Braze recomenda que você teste o envio de RCS para volumes menores de usuários inicialmente e migre mais usuários para o grupo de inscrição de RCS ao longo do tempo. Por exemplo, se você tiver 1.000.000 de usuários inscritos em um grupo de inscrições por SMS, isso poderia parecer primeiro migrar todos os usuários para o novo grupo de inscrições e, em seguida, segmentar um público menor de 50.000 a 100.000 (5-10%) para testar as mensagens RCS.
 
 ### Etapa 1: Crie um Canva e preencha o Cronograma de Entrada
 
@@ -130,10 +130,10 @@ Adicione uma Etapa de Atualização de Usuário ao seu Canva. Na etapa, abra o *
 
 ### Etapa 4: Teste o Canva
 
-Recomendamos fortemente [testar seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) para confirmar que funciona como esperado antes de enviá-lo para seu público mais amplo.
+Recomendamos fortemente [testar seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) para confirmar que funciona como esperado antes de enviá-lo ao seu público mais amplo.
 
 ### Etapa 5: Inicie seu canva
 
 Depois de ter testado com sucesso seu Canva, vá em frente e lance-o para seu subconjunto de usuários!
 
-Para confirmar que seus usuários foram migrados com sucesso, recomendamos verificar alguns perfis de usuários individuais que foram atualizados. Na guia **engajamento**, procure por **Configurações de Contato** e role para ver os grupos de inscrições aos quais o usuário está inscrito. O alternador do grupo de inscrições RCS deve estar ativado agora.
+Para confirmar que seus usuários foram migrados com sucesso, recomendamos verificar alguns perfis de usuários individuais que foram atualizados. Na guia **engajamento**, procure por **Configurações de Contato** e role para ver os grupos de inscrições aos quais o usuário está inscrito. O interruptor do grupo de inscrições RCS deve estar ativado agora.

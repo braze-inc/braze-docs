@@ -12,7 +12,7 @@ description: "Découvrez comment synchroniser les données de votre compte Braze
 > Découvrez comment synchroniser les données de votre compte Braze à l'aide de CDI.
 
 {% alert important %}
-Les [objets de compte](https://braze.com/unlisted_docs/account_opportunity_object/) sont actuellement en version bêta, ce qui est nécessaire pour utiliser cette fonctionnalité. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la version bêta.
+Les [objets de compte](https://braze.com/unlisted_docs/account_opportunity_object/) sont en version bêta et sont nécessaires pour utiliser cette fonctionnalité. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à la version bêta.
 {% endalert %}
 
 ## Conditions préalables
@@ -30,8 +30,9 @@ N'effectuez des mises à jour du schéma de votre compte que lorsque la synchron
 - Si `DELETED` est `true`, le compte est supprimé.
 - La synchronisation n'enregistre pas les points de données, mais toutes les données synchronisées sont prises en compte dans votre utilisation totale des comptes, mesurée par le nombre total de données stockées - il n'est pas nécessaire de se limiter aux données modifiées.
 - Les champs qui ne figurent pas dans le schéma de votre comptabilité sont supprimés ; mettez à jour le schéma avant de synchroniser de nouveaux champs.
+- Vous pouvez actualiser, reprendre ou mettre en pause une synchronisation en survolant le nom de la synchronisation et en sélectionnant l'action appropriée.
 
-## Synchronisation des données de votre compte
+## Synchronisez les données de votre compte
 
 Vous pouvez synchroniser les données de vos comptes à l'aide de CDI par l'intermédiaire d'un entrepôt de données ou d'un stockage de fichiers.
 
@@ -58,7 +59,7 @@ Pour intégrer votre source de données à votre entrepôt de données :
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -100,7 +101,7 @@ Pour intégrer votre source de données à votre entrepôt de données :
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -216,7 +217,7 @@ Pour intégrer votre source de données à votre entrepôt de données :
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -274,7 +275,7 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Création d'une vue de synchronisation
+## Créer une vue de synchronisation
 
 La création d'une vue synchrone dans votre entrepôt de données permet d'actualiser automatiquement la source sans avoir à réécrire des requêtes supplémentaires.
 

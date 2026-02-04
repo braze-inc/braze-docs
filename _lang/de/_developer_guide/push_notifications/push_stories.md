@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: Push-Storys
-article_title: Einrichten von Push-Storys für das Braze SDK
+article_title: Push-Storys für das Braze SDK einrichten
 channel:
   - push notifications
 ---

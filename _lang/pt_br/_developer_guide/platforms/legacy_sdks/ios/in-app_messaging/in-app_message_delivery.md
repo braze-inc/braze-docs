@@ -34,10 +34,10 @@ Pode haver alguma latência para mensagens no app que são exibidas imediatament
 
 Por padrão, limitamos as mensagens no app a uma vez a cada 30 segundos para facilitar uma experiência de qualidade para o usuário.
 
-Você pode alterar esse valor em `ABKMinimumTriggerTimeIntervalKey` no parâmetro `appboyOptions` passado para `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Defina `ABKMinimumTriggerTimeIntervalKey` como o valor inteiro que deseja como tempo mínimo em segundos entre as mensagens no app:
+Você pode alterar esse valor em `ABKMinimumTriggerTimeIntervalKey` no parâmetro `appboyOptions` passado para `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Defina `ABKMinimumTriggerTimeIntervalKey` como o valor inteiro que deseja como tempo mínimo em segundos entre mensagens no app:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 // Sets the minimum trigger time interval to 5 seconds
@@ -108,7 +108,7 @@ Uma mensagem no app disparada será descartada nas seguintes situações:
 Para exibir uma mensagem no app em outros momentos no app, você poderá exibir manualmente a mensagem no app que estiver mais à frente na pilha chamando o método a seguir:
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 [[Appboy sharedInstance].inAppMessageController displayNextInAppMessage];
@@ -129,7 +129,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 As mensagens no app também podem ser criadas localmente no aplicativo e exibidas via Braze. Isso é particularmente útil para exibir mensagens que você deseja disparar no app em tempo real. A Braze não é compatível com a análise de dados em mensagens no app criadas localmente.
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
   ABKInAppMessageSlideup *customInAppMessage = [[ABKInAppMessageSlideup alloc] init];

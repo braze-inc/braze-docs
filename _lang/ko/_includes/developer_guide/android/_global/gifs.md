@@ -17,7 +17,7 @@ Braze는 커스텀 이미지 라이브러리를 사용하여 애니메이션 GIF
 아래 연동 예시는 Braze Android SDK에 포함된 [Glide 연동 샘플 앱](https://github.com/braze-inc/braze-android-sdk/tree/master/samples/glide-image-integration)에서 가져온 것입니다.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 public class GlideBrazeImageLoader implements IBrazeImageLoader {
@@ -73,7 +73,7 @@ public class GlideBrazeImageLoader implements IBrazeImageLoader {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 class GlideBrazeImageLoader : IBrazeImageLoader {
@@ -134,7 +134,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 Braze SDK는 [`IBrazeImageLoader`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/index.html)로 설정된 모든 커스텀 이미지 로더를 사용합니다. 사용자 정의 애플리케이션 하위 클래스에서 사용자 정의 이미지 로더를 설정하는 것이 좋습니다:
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 public class GlideIntegrationApplication extends Application {
@@ -147,7 +147,7 @@ public class GlideIntegrationApplication extends Application {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 class GlideIntegrationApplication : Application() {
