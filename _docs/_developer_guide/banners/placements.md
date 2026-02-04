@@ -514,7 +514,7 @@ The method used to log Banner clicks depends on how your Banner is rendered and 
 
 ### Standard Banner content (automatic)
 
-If you're using SDK methods to insert Banners and your Banner uses standard editor components (images, buttons, text), clicks are tracked automatically. The SDK attaches click listeners to these elements, and no additional code is needed.
+If you're using default, out-of-the-box SDK methods to insert Banners, and your Banner uses standard editor components (images, buttons, text), clicks are tracked automatically. The SDK attaches click listeners to these elements, and no additional code is needed.
 
 ### Custom Code Blocks
 
