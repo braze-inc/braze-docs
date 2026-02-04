@@ -2,7 +2,7 @@
 nav_title: Agent
 article_title: Agent Step
 alias: /agent_step/
-page_order: 0.2
+page_order: 2
 page_type: reference
 description: "This reference article covers how to use the Agent step in Canvas to generate content or make intelligent decisions in real time."
 tool: Canvas
