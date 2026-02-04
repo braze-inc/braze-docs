@@ -63,7 +63,7 @@ To add a custom attribute to each choice, select a custom attribute name from th
 The data type of your custom attributes matters depending on how you've set up your survey.
 
 - **Multiple-choice selection:** The data type of the custom attribute must be an array. If the custom attribute is set to a different data type, responses will not be logged.
-- **Single-choice selection:** The data type of the custom attribute must be a string. Custom attributes that are not string type will not appear in the drop-down, and responses will not be logged if the attribute is not a string.
+- **Single-choice selection:** The data type of the custom attribute must be a string. Custom attributes that are not string type will not appear in the dropdown, and responses will not be logged.
 
 {% alert important %} 
 When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
