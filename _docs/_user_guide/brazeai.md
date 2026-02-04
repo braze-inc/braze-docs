@@ -22,6 +22,9 @@ guide_featured_list:
   - name: BrazeAI Operator
     link: /docs/operator/
     image: /assets/img/braze_icons/edit-05.svg
+  - name: Content Optimizer
+    link: /docs/user_guide/brazeai/content_optimizer
+    image: /assets/img/braze_icons/image-user-check.svg
   - name: Intelligence Suite
     link: /docs/user_guide/brazeai/intelligence/
     image: /assets/img/braze_icons/clock.svg
