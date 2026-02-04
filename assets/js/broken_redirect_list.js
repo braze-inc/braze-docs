@@ -3224,4 +3224,6 @@ validurls['/docs/user_guide/data/unification/user_data/delete_users/'] = '/docs/
 validurls['/docs/user_guide/administrative/access_braze/navigation/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
 validurls['/docs/user_guide/administrative/access_braze/global_search/'] = '/docs/user_guide/administrative/access_braze/braze_dashboard/';
 
+validurls['/docs/user_guide/message_building_by_channel/sms_mms_rcs/message_usage/'] = '/docs/user_guide/administrative/app_settings/subscription_and_usage/message_usage/';
+
 // validurls['OLD'] = 'NEW';

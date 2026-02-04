@@ -1,13 +1,13 @@
-# Message Usage dashboard
+# Credits Usage dashboard
 
-> The Message Usage dashboard provides self-service insights into your SMS, RCS, and WhatsApp credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
+> The Credits Usage dashboard provides self-service insights into your credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
-The **Message Usage** dashboard is divided into three sections:
+The **Credits Usage** dashboard is divided into three sections:
 - [Credit Usage Overview](#credit-usage-overview)
 - [SMS/MMS](#smsmms) 
 - [WhatsApp](#whatsapp)
 
-Access the dashboard by going to **Settings** > **Billing** > **Message Usage**.
+Access the dashboard by going to **Settings** > **Billing** > **Credits Usage**.
 
 ## Message credits usage overview
 
