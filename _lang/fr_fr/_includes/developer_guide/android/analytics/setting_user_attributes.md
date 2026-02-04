@@ -83,7 +83,7 @@ Outre les attributs par défaut, Braze vous permet de définir des attributs per
 ### Définition des attributs personnalisés
 
 {% tabs local %}
-{% tab Chaîne de caractères %}
+{% tab String %}
 Pour définir un attribut personnalisé avec une valeur `string`:
 
 {% subtabs global %}
@@ -110,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Entiers %}
+{% tab Integers %}
 Pour définir un attribut personnalisé avec une valeur `int`:
 
 {% subtabs global %}
@@ -169,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Points flottants %}
+{% tab Floating-points %}
 Pour définir un attribut personnalisé avec une valeur `float`:
 
 {% subtabs global %}
@@ -223,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Booléen %}
+{% tab Boolean %}
 Pour définir un attribut personnalisé avec une valeur `boolean`:
 
 {% subtabs global %}
@@ -289,7 +289,7 @@ Les dates transmises à Braze avec cette méthode doivent être au format [ISO 8
 {% endalert %}
 
 {% endtab %}
-{% tab Réseau %}
+{% tab Array %}
 
 Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Paramètres des données** > **Attributs personnalisés**. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments. Pour plus d'informations sur les tableaux d'attributs personnalisés et leur comportement, consultez notre documentation sur les [tableaux.]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)
 

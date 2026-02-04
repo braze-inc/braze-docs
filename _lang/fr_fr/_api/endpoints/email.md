@@ -33,5 +33,5 @@ guide_featured_list:
     image: /assets/img/braze_icons/mail-04.svg
 ---
 {% comment %}
-redirection à partir de email_sync.md
+rediriger depuis email_sync.md
 {% endcomment %}

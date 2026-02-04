@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Borrar mensajes programados"
-article_title: "POST: Borrar mensajes programados"
+nav_title: "PUBLICAR: Borrar mensajes programados"
+article_title: "PUBLICAR: Borrar mensajes programados"
 search_tag: Endpoint
 page_order: 4
 layout: api_page

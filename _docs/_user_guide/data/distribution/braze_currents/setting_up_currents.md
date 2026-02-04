@@ -46,7 +46,7 @@ Before you begin your integration, it's best to decide which integration is best
 
 ### Step 2: Open Currents
 
-To get started, go to **Partner Integrations** > **Data Export**. You'll be taken to the Currents integration management page.
+To get started, go to **Partner Integrations** > **Currents**. You'll be taken to the Currents integration management page.
 
 ![Currents page in the Braze dashboard]({% image_buster /assets/img_archive/currents-main-page.png %})
 

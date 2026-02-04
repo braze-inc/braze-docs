@@ -37,7 +37,7 @@ After users save your brand as a contact, either through a [contact card]({{site
 
 ![1]{: style="max-width:30%;"}
 
-#### Step 2: Send Movable Ink links
+#### 2단계: Send Movable Ink links
 
 1. Create an SMS campaign in Movable Ink and generate your click-through URL.
 2. In the Braze dashboard, go to **Campaigns** and set up a new SMS/MMS campaign from the **Create Campaign** dropdown.
@@ -69,7 +69,7 @@ Users who haven't saved your brand as a contact and have turned on automatic pre
 
 ![6]{: style="max-width:30%;"}
 
-## Considerations
+## 고려 사항
 
 - Only include one preview link in your message. Content will not be generated with multiple links in your SMS body. 
 - Don't include any characters after your preview link or the experience might break.

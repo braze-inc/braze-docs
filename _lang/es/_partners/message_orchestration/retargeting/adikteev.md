@@ -27,15 +27,15 @@ La integración de Braze y Adikteev te permite impulsar la retención de usuario
 | Punto final REST Braze | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final dependerá de la URL Braze de tu instancia. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Ejemplos
+## Casos prácticos
 
 {% tabs %}
-{% tab Filtrado de audiencia %}
+{% tab Audience filtering %}
 Afina tus segmentos de audiencia en función del riesgo de abandono.<br> Los nombres y valores de los atributos personalizados enviados por Adikteev son configurables.
 
 ![Una captura de pantalla que muestra un ejemplo de cómo utilizar un atributo personalizado enviado por Adikteev como filtro de segmento de audiencia.]({% image_buster /assets/img/adikteev/audience.png %})
 {% endtab %}
-{% tab Focalización de mensajes %}
+{% tab Message targeting %}
 Personalización de tus campañas de mensajería Braze en función del riesgo de abandono de los destinatarios.
 
 ![Una captura de pantalla que muestra un ejemplo de cómo utilizar un atributo personalizado enviado por Adikteev como filtro de segmentación de campaña.]({% image_buster /assets/img/adikteev/campaign.png %})

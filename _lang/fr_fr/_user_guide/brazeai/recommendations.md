@@ -20,30 +20,30 @@ Avant de pouvoir créer ou utiliser des recommandations d'articles dans Braze, v
 
 Dans le cadre de la fonctionnalité de [recommandations d'articles par l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/), les recommandations personnalisées par l'intelligence artificielle tirent parti de l'apprentissage profond pour prédire ce qui est le plus susceptible d'intéresser vos utilisateurs par la suite, en fonction de ce à quoi ils ont montré de l'intérêt par le passé. Cette méthode fournit un système de recommandation dynamique et personnalisé qui s'adapte au comportement de l'utilisateur.
 
-Les recommandations personnalisées de l'intelligence artificielle utilisent les 6 derniers mois de données d'interaction avec les articles, comme les achats ou les événements personnalisés, pour créer le modèle de recommandation. Pour les utilisateurs qui ne disposent pas de suffisamment de données pour établir une liste personnalisée, les éléments les plus populaires servent de solution de repli afin que vos utilisateurs reçoivent toujours des suggestions pertinentes.
+Les recommandations personnalisées de l'intelligence artificielle utilisent les 6 derniers mois de données d'interaction avec les articles, comme les achats ou les événements personnalisés, pour créer le modèle de recommandation. Pour les utilisateurs qui ne disposent pas de suffisamment de données pour établir une liste personnalisée, les éléments les plus populaires servent de solution de repli, de sorte que vos utilisateurs reçoivent toujours des suggestions pertinentes.
 
-Grâce aux recommandations d'articles de l'intelligence artificielle, vous pouvez également filtrer davantage les articles disponibles avec les éléments suivants.
+Grâce aux recommandations de produits avec l’IA, vous pouvez également filtrer davantage les produits disponibles avec les
 [sélections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/). Cependant, les sélections avec Liquid ne peuvent pas être utilisées dans les recommandations de l'intelligence artificielle. Gardez donc cela à l'esprit lorsque vous créez vos sélections dans le catalogue.
 
 {% alert tip %}
 Les recommandations personnalisées par intelligence artificielle fonctionnent mieux avec des centaines ou des milliers d'articles et généralement au moins 30 000 utilisateurs avec des données d'achat ou d'interaction. Il s'agit d'une indication approximative qui peut varier. Les autres types de recommandations peuvent fonctionner avec moins de données.
 {% endalert %}
 
-#### Cas d'utilisation
+#### Cas d’utilisation
 
 En fonction des données d'interaction suivies, les cas d'utilisation de ce modèle pourraient être les suivants :
 
 {% tabs local %}
 {% tab Most likely to purchase next %}
-Prédire et recommander les articles qu'un utilisateur est le plus susceptible d'acheter ensuite, en fonction des événements d'achat ou des événements personnalisés liés aux achats. Par exemple :
+Prédire et recommander les articles qu'un utilisateur est le plus susceptible d'acheter ensuite, en fonction des événements d'achat ou des événements personnalisés liés aux achats. Par exemple :
 
 - Un site de voyage pourrait suggérer des forfaits vacances, des vols ou des séjours à l'hôtel en fonction de l'historique de navigation de l'utilisateur et de ses réservations précédentes, anticipant ainsi sa prochaine destination de voyage et facilitant l'organisation de son séjour.
-- Une plateforme de streaming peut analyser les habitudes de visionnage pour recommander des émissions ou des films qu'un utilisateur est le plus susceptible de regarder ensuite, ce qui permet de maintenir son engagement et de réduire les taux d'attrition.
+- Une plateforme de streaming peut analyser les habitudes de visionnage pour recommander des émissions ou des films qu'un utilisateur est le plus susceptible de regarder ensuite, ce qui permet de maintenir l'intérêt des utilisateurs et de réduire les taux d'attrition.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
-- Une méthode de suivi des achats, soit un objet personnalisé, soit un événement personnalisé.
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
+- Une méthode pour suivre les achats, soit un objet personnalisé, soit un événement personnalisé.
 {% enddetails %}
 
 {% details Setting it up %}
@@ -62,17 +62,17 @@ Prédire et recommander les articles qu'un utilisateur est le plus susceptible d
 
 Le modèle de recommandation "Les plus populaires" présente les fonctionnalités les plus appréciées par les utilisateurs.
 
-#### Cas d'utilisation
+#### Cas d’utilisation
 
 Sur la base des données d'interaction suivies, les cas d'utilisation de ce modèle pourraient inclure la recommandation :
 
 {% tabs local %}
 {% tab most popular %}
-Encouragez les utilisateurs à explorer les articles populaires de votre catalogue en fonction de leurs achats. Pour vous assurer que vous n'obtenez que du contenu pertinent, nous vous recommandons de filtrer à l'aide d'une sélection. Par exemple, un service de réception/distribution de nourriture pourrait mettre en avant les plats ou les restaurants les mieux notés dans la région d'un utilisateur, en fonction de la popularité des commandes sur la plateforme, encourageant ainsi l'essai et la découverte.
+Encouragez les utilisateurs à explorer les articles populaires de votre catalogue en fonction de leurs achats. Pour vous assurer que vous n'accédez qu'à des contenus pertinents, nous vous recommandons de les filtrer à l'aide d'une sélection. Par exemple, un service de réception/distribution de nourriture pourrait mettre en avant les plats ou les restaurants les mieux notés dans la région d'un utilisateur, en fonction de la popularité des commandes sur la plateforme, encourageant ainsi l'essai et la découverte.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Un objet d'achat ou tout autre événement personnalisé
 {% enddetails %}
 
@@ -88,11 +88,11 @@ Encouragez les utilisateurs à explorer les articles populaires de votre catalog
 {% endtab %}
 
 {% tab most liked %}
-Encouragez les utilisateurs à explorer les articles qu'ils ont récemment aimés ou les articles qui sont populaires, sur la base d'un événement personnalisé pour les likes. Par exemple, une application de streaming musical pourrait créer des playlists personnalisées ou suggérer de nouvelles sorties d'albums en fonction des genres ou des artistes qu'un utilisateur a aimés par le passé, améliorant ainsi l'engagement de l'utilisateur et le temps passé sur l'application.
+Encouragez les utilisateurs à explorer les produits qu'ils ont récemment aimés ou les produits populaires, sur la base d'un événement personnalisé pour les likes. Par exemple, une application de streaming musical pourrait créer des playlists personnalisées ou suggérer de nouvelles sorties d'albums en fonction des genres ou des artistes qu'un utilisateur a aimés par le passé, améliorant ainsi l'engagement de l'utilisateur et le temps passé sur l'application.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Événement personnalisé pour les likes
 {% enddetails %}
 
@@ -108,11 +108,11 @@ Encouragez les utilisateurs à explorer les articles qu'ils ont récemment aimé
 {% endtab %}
 
 {% tab most viewed %}
-Mettez en avant les articles qui ont attiré l'attention de votre base d'utilisateurs par le biais des vues afin d'encourager l'engagement ou les achats. Par exemple, un site web immobilier pourrait afficher les annonces les plus consultées dans la zone de recherche d'un utilisateur afin de mettre en évidence les propriétés qui attirent beaucoup d'attention, ce qui pourrait être le signe de bonnes affaires ou d'emplacements recherchés.
+Mettez en avant les articles qui ont attiré l'attention de votre base d'utilisateurs par le biais des vues afin d'encourager l'engagement ou les achats. Par exemple, un site Web immobilier pourrait afficher les annonces les plus consultées dans la zone de recherche d'un utilisateur afin de mettre en évidence les propriétés qui attirent beaucoup d'attention, ce qui pourrait indiquer les offres intéressantes ou les zones recherchées.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Événement personnalisé pour les vues
 {% enddetails %}
 
@@ -130,11 +130,11 @@ Mettez en avant les articles qui ont attiré l'attention de votre base d'utilisa
 {% tab popular in cart %}
 Mettez en avant les articles qui sont ajoutés au panier par de nombreux autres acheteurs, donnant ainsi aux utilisateurs un aperçu des tendances actuelles de votre offre.
 
-Par exemple, un détaillant de mode pourrait promouvoir des vêtements et des accessoires qui sont à la mode en se basant sur les ajouts personnalisés au panier par d'autres clients. Ils peuvent ensuite créer une section dynamique "Trending Now" sur leur page d'accueil et leur application mobile, qui se met à jour en temps réel pour encourager les acheteurs à acheter avant que les articles ne soient épuisés.
+Par exemple, un détaillant de mode pourrait promouvoir des vêtements et des accessoires à la mode en se basant sur les articles fréquemment ajoutés au panier par d'autres clients. Ils peuvent ensuite créer une section dynamique « À la mode en ce moment » sur leur page d'accueil et leur application mobile, qui se met à jour en temps réel pour encourager les utilisateurs à acheter avant que les articles ne soient épuisés.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Événement personnalisé pour l'ajout au panier
 {% enddetails %}
 
@@ -152,9 +152,9 @@ Par exemple, un détaillant de mode pourrait promouvoir des vêtements et des ac
 
 ### Article le plus récent {#most-recent}
 
-Le modèle de recommandation "Les plus récents" présente les fonctionnalités avec lesquelles les utilisateurs s'engagent le plus. Utilisez ce modèle pour réduire le désabonnement en encourageant les utilisateurs désabonnés à se réengager avec un contenu pertinent.
+Le modèle de recommandation "Les plus récents" présente les fonctionnalités avec lesquelles les utilisateurs s'engagent le plus. Utilisez ce modèle pour réduire l’attrition en encourageant les utilisateurs inactifs à se réengager avec le contenu pertinent.
 
-#### Cas d'utilisation
+#### Cas d’utilisation
 
 Sur la base des données d'interaction suivies, les cas d'utilisation de ce modèle pourraient inclure la recommandation :
 
@@ -163,8 +163,8 @@ Sur la base des données d'interaction suivies, les cas d'utilisation de ce mod�
 Encouragez les utilisateurs à revenir sur les éléments sur lesquels ils ont récemment cliqué, en fonction d'un événement personnalisé pour les clics. Par exemple, un détaillant de mode en ligne pourrait créer une recommandation pour envoyer des e-mails de suivi ou des notifications push présentant des fonctionnalités pour lesquelles un utilisateur a montré de l'intérêt en cliquant dessus, encourageant ainsi l'utilisateur à revenir sur l'article et à effectuer un achat.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Événement personnalisé pour les clics
 {% enddetails %}
 
@@ -180,11 +180,11 @@ Encouragez les utilisateurs à revenir sur les éléments sur lesquels ils ont r
 
 {% endtab %}
 {% tab Recently liked %}
-Encouragez les utilisateurs à explorer les articles qu'ils ont récemment aimés ou les articles qui sont populaires, sur la base d'un événement personnalisé pour les likes. Par exemple, une application de streaming musical pourrait créer des playlists personnalisées ou suggérer de nouvelles sorties d'albums en fonction des genres ou des artistes qu'un utilisateur a aimés par le passé, améliorant ainsi l'engagement de l'utilisateur et le temps passé sur l'application.
+Encouragez les utilisateurs à explorer les produits qu'ils ont récemment aimés ou les produits populaires, sur la base d'un événement personnalisé pour les likes. Par exemple, une application de streaming musical pourrait créer des playlists personnalisées ou suggérer de nouvelles sorties d'albums en fonction des genres ou des artistes qu'un utilisateur a aimés par le passé, améliorant ainsi l'engagement de l'utilisateur et le temps passé sur l'application.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Événement personnalisé pour les likes
 {% enddetails %}
 
@@ -200,15 +200,15 @@ Encouragez les utilisateurs à explorer les articles qu'ils ont récemment aimé
 {% endtab %}
 
 {% tab Recently engaged %}
-Faites la promotion d'éléments avec lesquels les utilisateurs ont récemment interagi, qu'il s'agisse de vues, de clics ou d'achats. Cette approche permet de maintenir vos recommandations à jour et de les aligner sur les derniers centres d'intérêt de l'utilisateur.. Par exemple :
+Faites la promotion d'éléments avec lesquels les utilisateurs ont récemment interagi, qu'il s'agisse de vues, de clics ou d'achats. Cette approche permet de maintenir vos recommandations à jour et de les aligner sur les derniers centres d'intérêt de l'utilisateur.. Par exemple :
 
 - **Éducation :** Une plateforme d'éducation en ligne pourrait encourager les utilisateurs qui ont récemment regardé une vidéo éducative mais ne se sont pas inscrits à un cours à consulter des cours similaires ou des sujets d'intérêt afin de maintenir l'engagement de l'utilisateur et de le motiver à commencer l'apprentissage.
-- **La remise en forme :** Une application de fitness peut suggérer des entraînements ou des défis similaires à ceux que l'utilisateur a récemment effectués ou avec lesquels il a interagi, ce qui lui permet de varier son programme d'exercices et de s'y intéresser.
-- **Détaillant de produits d'amélioration de l'habitat :** Après qu'un client a acheté un outil électrique, un retailing de rénovation peut lui recommander des accessoires connexes ou des engrenages de sécurité en fonction de son achat récent, améliorant ainsi l'expérience et la sécurité de l'utilisateur.
+- **Remise en forme :** Une application de fitness peut suggérer des entraînements ou des défis similaires à ceux que l'utilisateur a récemment effectués ou avec lesquels il a interagi, ce qui lui permet de varier son programme d'exercices et de s'y intéresser.
+- **Produits de bricolage et décoration :** Après l'achat d'un outil électrique par un client, un retailing de rénovation peut lui recommander des accessoires connexes ou des engrenages de sécurité en fonction de son achat récent, améliorant ainsi l'expérience et la sécurité de l'utilisateur.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Un objet d'achat ou tout autre événement personnalisé pour une interaction d'engagement.
 {% enddetails %}
 
@@ -227,8 +227,8 @@ Faites la promotion d'éléments avec lesquels les utilisateurs ont récemment i
 Rappelez aux utilisateurs leur intérêt pour les articles qu'ils ont récemment ajoutés à leur panier, mais qu'ils n'ont pas encore achetés. Par exemple, un retailing en ligne pourrait envoyer des rappels ou proposer des réductions à durée limitée sur les articles dans leur panier, encourageant ainsi les utilisateurs à terminer leurs achats avant que les offres n'expirent.
 {% details Requirements %}
 
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Événement personnalisé pour l'ajout au panier
 {% enddetails %}
 
@@ -248,9 +248,9 @@ Rappelez aux utilisateurs leur intérêt pour les articles qu'ils ont récemment
 
 Le modèle de recommandation "Trending" présente les fonctionnalités qui ont le plus progressé au cours des dernières interactions avec les utilisateurs. Nous calculons cela en utilisant une analyse pondérée d'environ 10 semaines d'historique d'événements, la pondération la plus forte étant appliquée aux 2 semaines les plus récentes. Pour éviter que de petites fluctuations n'affectent la qualité de la recommandation, nous appliquons un seuil d'activité et des techniques de lissage statistique.
 
-Contrairement au modèle "le plus populaire", qui présente des fonctionnalités avec un taux d'interaction élevé et constant, ce modèle présente des fonctionnalités qui ont connu une augmentation des interactions. Vous pouvez l'utiliser pour recommander des produits qui ont le vent en poupe et qui bénéficient actuellement d'une traction accrue.
+Contrairement au modèle "le plus populaire", qui présente des fonctionnalités avec un taux d'interaction élevé et constant, ce modèle présente des fonctionnalités qui ont connu une augmentation des interactions. Vous pouvez l'utiliser pour recommander des produits qui ont le vent en poupe et qui bénéficient actuellement d'une plus grande popularité.
 
-#### Cas d'utilisation
+#### Cas d’utilisation
 
 Sur la base des données d'interaction suivies, les cas d'utilisation de ce modèle pourraient inclure la recommandation :
 
@@ -259,9 +259,9 @@ Sur la base des données d'interaction suivies, les cas d'utilisation de ce mod�
 Mettez en évidence les articles que vos utilisateurs ont récemment achetés avec une fréquence accrue. Par exemple, une entreprise de commerce électronique pourrait recommander des articles saisonniers que les utilisateurs commencent à stocker au cours de leurs préparatifs pour la prochaine saison. 
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
-- Une méthode de suivi des achats (soit un objet d'achat, soit un événement personnalisé).
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
+- Une méthode de suivi des achats (soit un objet personnalisé, soit un événement personnalisé).
 {% enddetails %}
 
 {% details Setting it up %}
@@ -271,7 +271,7 @@ Mettez en évidence les articles que vos utilisateurs ont récemment achetés av
 4. (Facultatif) Ajoutez une sélection pour filtrer votre recommandation et ne retenir que les éléments pertinents.
 5. Choisissez un événement d'achat ou un événement personnalisé qui suit les achats, ainsi que la propriété correspondante.
 6. Former la recommandation.
-7. [Utilisez la recommandation dans les messages.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging)
+7. [Utilisez la recommandation dans les communications.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging)
 {% enddetails %}
 {% endtab %}
 
@@ -279,8 +279,8 @@ Mettez en évidence les articles que vos utilisateurs ont récemment achetés av
 Mettez en évidence les éléments que vos utilisateurs ont récemment aimés, et ce de manière plus fréquente. Par exemple, une application musicale pourrait mettre en fonctionnalité des artistes en devenir qui ont connu une hausse récente du nombre de likes des utilisateurs.
 
 {% details Requirements %}
-- Recommandations sur les postes de l'intelligence artificielle
-- Catalogue d'articles pertinents
+- Recommandations de produits basées sur l’IA
+- Catalogue de produits pertinents
 - Événement personnalisé pour le suivi des mentions "J'aime".
 {% enddetails %}
 
@@ -289,20 +289,24 @@ Mettez en évidence les éléments que vos utilisateurs ont récemment aimés, e
 2. Réglez le **Type** sur **Tendance**.
 3. Sélectionnez votre catalogue.
 4. (Facultatif) Ajoutez une sélection pour filtrer votre recommandation et ne retenir que les éléments pertinents.
-5. Choisissez votre événement personnalisé pour le suivi des propriétés d'événement, ainsi que la propriété correspondante.
+5. Choisissez votre événement personnalisé pour le suivi des likes avec la propriété correspondante.
 6. Former la recommandation.
-7. [Utilisez la recommandation dans les messages.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging/)
+7. [Utilisez la recommandation dans les communications.]({{site.baseurl}}/user_guide/sage_ai/recommendations/ai_item_recommendations/#using-recommendations-in-messaging/)
 {% enddetails %}
 {% endtab %}
 {% endtabs %}
 
 ### Basé sur des sélections {#selections-based}
 
-Les [sélections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) sont des groupes spécifiques de données du catalogue. Lorsque vous utilisez une sélection, vous configurez essentiellement des filtres personnalisés basés sur des colonnes spécifiques de votre catalogue. Il peut s'agir de filtres pour la marque, la taille, l'emplacement/localisation, la date d'ajout, etc. Il vous permet de contrôler ce que vous recommandez en définissant les critères auxquels les éléments doivent répondre pour être présentés aux utilisateurs.
+Les [sélections]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) sont des groupes spécifiques de données du catalogue. Lorsque vous utilisez une sélection, vous configurez essentiellement des filtres personnalisés basés sur des colonnes spécifiques de votre catalogue. Il peut s'agir de filtres pour la marque, la taille, l'emplacement, la date d'ajout, etc. Il vous permet de contrôler ce que vous recommandez en définissant les critères auxquels les éléments doivent répondre pour être présentés aux utilisateurs.
 
-Les trois types précédents impliquent tous la configuration et la formation d'un modèle de recommandation dans Braze. Bien que vous puissiez également utiliser des sélections dans ces modèles, vous pouvez également réaliser certains cas d'utilisation de la recommandation avec seulement des sélections de catalogue et une personnalisation liquide.
+Les trois types précédents impliquent tous la configuration et l’entraînement d'un modèle de recommandation dans Braze. Bien que vous puissiez également utiliser des sélections dans ces modèles, vous pouvez également réaliser certains cas d'utilisation de la recommandation avec seulement des sélections de catalogue et une personnalisation liquide.
 
-#### Cas d'utilisation
+{% alert note %}
+Si vous utilisez des sélections, le champ de tri et les limites éventuelles ne seront pas utilisés avec les recommandations d'articles d'intelligence artificielle. Cela signifie que si vous créez une sélection avec un champ de tri spécifique et que vous limitez le nombre d'éléments renvoyés, ces contraintes ne seront pas utilisées lors du traitement des recommandations d'éléments d'intelligence artificielle.
+{% endalert %}
+
+#### Cas d’utilisation
 
 Sur la base des données d'interaction suivies, les cas d'utilisation de ce modèle pourraient inclure la recommandation :
 
@@ -317,22 +321,22 @@ Par exemple, une plateforme d'e-commerce technologique pourrait alerter les pass
 {% enddetails %}
 
 {% details Setting it up %}
-1. Créez une sélection à partir de votre catalogue. Assurez-vous que votre catalogue dispose d'un champ temporel (champ dont le **type de données** est défini sur **Temps**) qui correspond à la date à laquelle l'élément a été ajouté.
+1. Créez une sélection à partir de votre catalogue. Assurez-vous que votre catalogue dispose d'un champ temporel (champ dont le **type de données** est défini sur **Temps**) correspondant à la date à laquelle l'élément a été ajouté.
 2. (Facultatif) Ajoutez des filtres si vous le souhaitez.
 3. Assurez-vous que l'**option Randomiser l'ordre de tri** est désactivée.
-4. Pour le champ **de tri**, sélectionnez votre champ de date ajoutée.
+4. Pour **Trier le champ**, sélectionnez votre champ de date ajoutée.
 5. Définissez l'**ordre de tri** comme étant décroissant.
 6. [Utilisez la sélection dans les messages.]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/#using-selections-in-messaging)
 {% enddetails %}
 {% endtab %}
 
 {% tab Random items %}
-Pour une expérience utilisateur diversifiée, la recommandation d'articles aléatoires peut introduire de la variété et potentiellement susciter de l'intérêt pour les zones du catalogue les moins visitées. Cette méthode ne requiert pas de modèles ou d'événements spécifiques, mais utilise plutôt une sélection de catalogue pour s'assurer que les articles sont affichés de manière aléatoire.
+Pour une expérience utilisateur diversifiée, la recommandation de produits aléatoires peut favoriser la variété et potentiellement susciter de l'intérêt pour certaines parties du catalogue moins visitées. Cette méthode ne requiert pas de modèles ou d'événements spécifiques, mais utilise plutôt une sélection de catalogue pour s'assurer que les articles sont affichés de manière aléatoire.
 
 Par exemple, une librairie en ligne pourrait proposer une fonctionnalité "Surprenez-moi", recommandant un livre au hasard en fonction des achats antérieurs de l'utilisateur ou de ses habitudes de navigation, encourageant ainsi l'exploration en dehors des genres de lecture habituels.
 
 {% details Requirements %}
-- Catalogue d'articles pertinents
+- Catalogue de produits pertinents
 - Sélection avec **ordre de tri aléatoire** activé
 {% enddetails %}
 
@@ -349,20 +353,20 @@ Par exemple, une librairie en ligne pourrait proposer une fonctionnalité "Surpr
 
 Un moteur de [recommandation basé sur des règles]({{site.baseurl}}/rules_based_recommendations/) utilise les données des utilisateurs et les informations sur les produits pour suggérer des articles pertinents aux utilisateurs dans les messages. Il utilise Liquid et les catalogues de Braze ou le contenu connecté pour personnaliser dynamiquement le contenu en fonction du comportement et des attributs de l'utilisateur.
 
-Les recommandations basées sur des règles sont fondées sur une logique fixe que vous devez définir manuellement. Cela signifie que vos recommandations ne s'adapteront pas à l'historique d'achat et aux goûts individuels d'un utilisateur à moins que vous ne mettiez à jour la logique, c'est pourquoi cette méthode est préférable pour les recommandations qui ne nécessitent pas de mises à jour fréquentes.
+Les recommandations basées sur des règles sont fondées sur une logique fixe que vous devez définir manuellement. Cela signifie que vos recommandations ne s'adapteront pas à l'historique d'achat et aux goûts individuels d'un utilisateur à moins que vous ne mettiez à jour la logique ; par conséquent, cette méthode est préférable pour les recommandations qui ne nécessitent pas de mises à jour fréquentes.
 
-#### Cas d'utilisation
+#### Cas d’utilisation
 
 En fonction des données d'interaction suivies, les cas d'utilisation de ce modèle pourraient être les suivants :
 
-- **Rappels de réapprovisionnement :** Envoi de prédictions de réapprovisionnement pour les articles dont le cycle d'utilisation est prévisible, comme les vitamines mensuelles ou les produits d'épicerie hebdomadaires, en fonction de leur dernière date d'achat.
-- **Les primo-accédants :** Recommandez des kits de démarrage ou des offres de lancement aux premiers acheteurs afin de les encourager à effectuer un deuxième achat.
+- **Rappels de réapprovisionnement :** Envoi de rappels de réapprovisionnement pour les produits dont le cycle d'utilisation est prévisible, comme les vitamines mensuelles ou les achats alimentaires hebdomadaires, en fonction de leur dernière date d'achat.
+- **Premiers achats :** Recommandez des kits de démarrage ou des offres de lancement aux premiers acheteurs afin de les encourager à effectuer un deuxième achat.
 Programmes de fidélisation : Mettez en évidence les produits qui maximiseraient les points de fidélité ou les récompenses d'un client en fonction de son solde de points actuel.
-- **Contenu éducatif :** Proposer de nouveaux cours ou contenus sur la base des thèmes abordés dans les documents déjà consommés ou achetés.
+- **Contenu éducatif :** Proposer de nouveaux cours ou contenus basés sur les thèmes des documents déjà consommés ou achetés.
 
 {% multi_lang_include brazeai/recommendations/ai.md section="Plan-specific features" %}
 
-## Questions fréquemment posées {#faq}
+## Foire aux Questions {#faq}
 
 ### Qu'est-ce qui fait que les articles les plus populaires sont mélangés aux recommandations d'autres modèles ?
 
@@ -370,9 +374,11 @@ Lorsque notre moteur de recommandation établit une liste pour vous, il donne d'
 
 Cela se produit dans quelques conditions spécifiques :
 
-- Le modèle trouve moins de 30 articles correspondant à vos critères.
+- Le modèle trouve moins de 30 produits correspondant à vos critères.
 - Les articles concernés ne sont plus disponibles ou en stock.
-- Les articles ne répondent pas aux critères de sélection actuels, peut-être en raison d'un changement de stock ou des préférences de l'utilisateur.
+- Les produits ne répondent pas aux critères de sélection actuels, peut-être en raison d'un changement au niveau des stocks ou des préférences de l'utilisateur.
+
+Notez que les recommandations fonctionnent de manière indépendante et n'ont aucune connaissance de ce que les autres modèles recommandent. Cela signifie que chaque section peut avoir des éléments en double déjà affichés dans d'autres sections de recommandation de l'intelligence artificielle dans le même e-mail.
 
 ### Les recommandations existantes font-elles l'objet d'une formation hebdomadaire après la mise à niveau vers Item Recommendations Pro ?
 

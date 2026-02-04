@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt die Details der Ansicht Details für den
 {% api %}
 # Details für Präferenzzentrum anzeigen
 {% apimethod get %}
-/Präferenz_center/v1/{preferenceCenterExternalID}
+/preference_center/v1/{preferenceCenterExternalID}
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um die Details zu Ihren Einstellungszentren einzusehen, einschließlich des Zeitpunkts, zu dem sie erstellt und aktualisiert wurden.

@@ -1,5 +1,5 @@
 ---
-nav_title: "Daten und Analysen"
+nav_title: "DATEN UND ANALYSEN"
 article_title: Daten- und Analytics-Partner
 page_order: 5
 
@@ -53,10 +53,10 @@ valid_partner_list:
   url: /docs/partners/mozart_data/
 - name: SalesWings
   url: /docs/partners/saleswings/
-- name: Scuba
-  url: /docs/partners/scuba/
 - name: Inbox Monster
   url: /docs/partners/inbox_monster/
+- name: Kickboxen
+  url: /docs/partners/kickbox/
 - name: Amazon S3
   url: /docs/partners/amazon_s3/
 - name: Google-Cloudspeicher
@@ -163,4 +163,6 @@ valid_partner_list:
   url: /docs/partners/eagle_eye/
 - name: Eppo
   url: /docs/partners/eppo/
+- name: Lemnisk
+  url: /docs/partners/lemnisk/
 ---

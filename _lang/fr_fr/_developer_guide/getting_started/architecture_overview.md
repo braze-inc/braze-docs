@@ -21,7 +21,7 @@ platform:
 
 Globalement, Braze est une plateforme orientée données. La plateforme Braze, alimentée par le SDK, l'API REST et les intégrations partenaires, vous permet d'agréger et d'exploiter vos données. 
 
-![Braze a différentes couches. De manière générale, la plateforme se compose du SDK, de l'API, du tableau de bord et des intégrations partenaires. Chacun de ces éléments contribue à une couche d'ingestion de données, une couche de classification, une couche d'orchestration, une couche de personnalisation et une couche d'action. La couche d'action dispose de plusieurs canaux, notamment les messages in-app, Connected Catalog, webhook, SMS et e-mail.]({% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}){: style="display:block;margin:auto;" }
+![Braze a différentes couches. De manière générale, la plateforme se compose du SDK, de l'API, du tableau de bord et des intégrations partenaires. Chacun de ces éléments contribue à une couche d'ingestion de données, une couche de classification, une couche d'orchestration, une couche de personnalisation et une couche d'action. La couche d'action dispose de différents canaux, notamment les notifications push, les messages in-app, le catalogue connecté, le webhook, les SMS et les e-mails.]({% image_buster /assets/img/getting-started/braze_listen_understand_act.png %}){: style="display:block;margin:auto;" }
 
 * [Ingestion de données](#ingestion): Braze tire des données de diverses sources.
 * [Classification](#classification) : Votre équipe marketing segmente dynamiquement votre base d'utilisateurs en utilisant ces métriques. 
@@ -34,28 +34,50 @@ Tout cela fonctionne ensemble pour créer des interactions réussies entre votre
 
 ## Ingestion de données {#ingestion}
 
-La plateforme Braze s’appuie sur une architecture de flux de données en continu, exploitant Snowflake, Kafka, MongoDB et Redis. Les données de nombreuses sources peuvent être chargées dans Braze via le SDK et l’API. La plateforme est capable de gérer toutes les données en temps réel, quelle que soit leur imbrication ou leur structure. Les données dans Braze sont stockées sur le profil utilisateur. 
+La plateforme Braze s’appuie sur une architecture de flux de données en continu, exploitant Snowflake, Kafka, MongoDB et Redis. Des données provenant de nombreuses sources peuvent être chargées dans Braze grâce au SDK et à l'API. La plateforme est capable de gérer toutes les données en temps réel, quelle que soit leur imbrication ou leur structure. Les données dans Braze sont stockées sur le profil utilisateur. 
 
 {% alert tip %}
 Braze peut suivre les données d'un utilisateur tout au long de son parcours avec vous, depuis le moment où il est anonyme jusqu'au moment où il est connecté à votre application et connu. Les identifiants d'utilisateur, appelés `external_id`s dans Braze, doivent être définis pour chacun de vos utilisateurs. Ces éléments doivent être immuables et accessibles lorsque l'utilisateur ouvre l'application, vous permettant de suivre vos utilisateurs sur différents appareils et plateformes. Consultez [l'article sur le cycle de vie des utilisateurs]({{site.baseurl}}/user_guide/data/user_data_collection/user_profile_lifecycle/) pour connaître les bonnes pratiques.
 {% endalert %}
 
-![Braze importe des sources de données back-end depuis l'API, des sources de données front-end depuis le SDK, des données d'entrepôt de données à partir de l’ingestion de données Cloud dans Braze Cloud, et depuis des intégrations partenaires. Ces données sont exportées via l'API de Braze ]({% image_buster /assets/img/getting-started/import-export.png %}).{: style="display:block;margin:auto;" }
+![Braze importe des sources de données back-end depuis l'API, des sources de données front-end depuis le SDK, des données d'entrepôt de données à partir de l’ingestion de données Cloud dans Braze Cloud, et depuis des intégrations partenaires. Ces données sont exportées via l'API Braze ]({% image_buster /assets/img/getting-started/import-export.png %}){: style="display:block;margin:auto;" }
 
 {% alert note %}
 Cette base de données de profil utilisateur centrée sur la personne permet une vitesse interactive en temps réel. Braze pré-calcule les valeurs lorsque les données arrivent et stocke les résultats dans notre format de document léger pour une récupération rapide. Et comme la plateforme a été conçue de cette manière dès le départ, elle est idéale pour la plupart des contextes de communication, en particulier en combinaison avec d'autres concepts de données tels que le contenu connecté, les catalogues de produits et les attributs imbriqués.
 {% endalert %}
 
-### Sources de données backend via l'API Braze
+### Ventilation des sources de données
+
+Braze utilise différents systèmes de stockage de données pour diverses fonctionnalités. Il est important de comprendre quelles fonctionnalités utilisent quelles sources de données pour la gestion des données et la résolution des problèmes.
+
+#### Fonctionnalités basées sur MongoDB
+- Événements personnalisés (suivis par le SDK et l'API)
+- Attributs personnalisés
+- Profils utilisateur
+- Événements d’achat
+- La plupart des fonctionnalités de segmentation et de ciblage
+
+#### Fonctionnalités alimentées par Snowflake
+- [Segment Extensions SQL]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/)
+- [Predictive Suite]({{site.baseurl}}/user_guide/brazeai/predictive_suite/)
+- [Chemins personnalisés]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/) et [variante personnalisée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/optimizations/#personalized-variant)
+- [Recommandations d'articles personnalisées par l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)
+- [Estimation du taux d'ouverture réel]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#estimated-real-open-rate) (n'utilise pas les événements personnalisés)
+
+{% alert important %}
+**Considérations relatives à la suppression des données :** Les événements personnalisés sont stockés dans MongoDB et sont distincts des données de Snowflake. Si vous devez supprimer des données d'événements personnalisés erronées, vous devez les traiter dans MongoDB. Les fonctionnalités alimentées par Snowflake (comme les extensions de segments SQL et d'autres fonctionnalités alimentées par Snowflake) utilisent des données provenant de Snowflake, qui sont traitées séparément. Le fait de supprimer des données d'un système ne les supprime pas automatiquement de l'autre.
+{% endalert %}
+
+### Sources de données dorsales via l'API de Braze
 Braze peut extraire des données des bases de données des utilisateurs, des transactions hors ligne et des entrepôts de données par le biais de notre [API REST]({{site.baseurl}}/api/endpoints/user_data). 
 
-### Sources de données frontend via le SDK Braze
+### Sources de données frontales via le SDK de Braze
 Braze capture automatiquement des données first-party à partir de sources de données frontales, telles que les appareils des utilisateurs, par le biais du [SDK Braze]({{site.baseurl}}/user_guide/getting_started/web_sdk/). Le SDK gère les nouveaux utilisateurs (anonymes) et gère les données de leur profil utilisateur tout au long de leur cycle de vie. 
 
 ### Intégrations partenaires
 Braze compte plus de 150 partenaires technologiques, que nous appelons « Alloys ». Vous pouvez compléter vos flux de données par un réseau solide de [technologies interopérables et d'API de données.]({{site.baseurl}}/partners/home) 
 
-### Connexion directe à l'entrepôt via l'ingestion de données Cloud de Braze
+### Connexion directe à l'entrepôt par l'intermédiaire de Braze Cloud Data Ingestion
 Vous pouvez transmettre des données clients de votre entrepôt de données à la plateforme via [Braze Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/) en quelques minutes seulement, ce qui vous permet de synchroniser les attributs, les événements et les achats pertinents des utilisateurs. L'intégration de l'ingestion de données Cloud prend en charge des structures de données complexes, y compris des JSON imbriqués et des tableaux d'objets.
 
 L'ingestion de données Cloud peut synchroniser les données de Snowflake, Amazon Redshift, Databricks et Google BigQuery.
@@ -104,7 +126,7 @@ De manière critique, toutes les interactions des utilisateurs finaux avec Braze
 Braze [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) est un module complémentaire optionnel de Braze qui permet d'exporter un flux granulaire qui alimente en continu d'autres destinations de votre pile. Currents est un flux de données brutes par utilisateur et par événement qui exporte des données toutes les cinq minutes, ou tous les 15 000 événements, selon la première éventualité. Exemples de certaines destinations en aval pour Currents : Segment, S3, Redshift et Mixpanel, entre autres. 
 
 ### Partage de données Snowflake
-La fonctionnalité de [partage sécurisé des données]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/) de Snowflake permet à Braze de vous donner un accès sécurisé aux données sur notre portail Snowflake sans avoir à se soucier des frictions du flux de travail, des points de défaillance et des coûts inutiles qui accompagnent les relations habituelles avec les fournisseurs de données. Tout le partage est accompli grâce à la couche de services unique et au magasin de métadonnées de Snowflake : aucune donnée n'est réellement copiée ou transférée entre les comptes. Il s’agit d’un concept important, car les données partagées ne prennent pas de place dans un compte client et, par conséquent, ne contribuent pas à vos frais mensuels de stockage des données. Les seuls frais pour les consommateurs concernent les ressources informatiques (c.-à-d. les entrepôts virtuels) utilisées pour interroger les données partagées.
+La fonctionnalité de [partage sécurisé des données]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) de Snowflake permet à Braze de vous donner un accès sécurisé aux données sur notre portail Snowflake sans avoir à se soucier des frictions du flux de travail, des points de défaillance et des coûts inutiles qui accompagnent les relations habituelles avec les fournisseurs de données. Tout le partage est accompli grâce à la couche de services unique et au magasin de métadonnées de Snowflake : aucune donnée n'est réellement copiée ou transférée entre les comptes. Il s’agit d’un concept important, car les données partagées ne prennent pas de place dans un compte client et, par conséquent, ne contribuent pas à vos frais mensuels de stockage des données. Les seuls frais pour les consommateurs concernent les ressources informatiques (c.-à-d. les entrepôts virtuels) utilisées pour interroger les données partagées.
 
 ### API d'exportation Braze
 L'API de Braze fournit des [endpoints]({{site.baseurl}}/api/endpoints/export) qui vous permettent d'exporter de manière programmatique des analyses/analytiques agrégées, ainsi que d'exporter des données d'utilisateurs individuels. Ces données peuvent être exportées pour des audiences et des segments de toute taille. 

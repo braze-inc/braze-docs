@@ -1,6 +1,6 @@
 ---
 nav_title: Retargeting-Kampagnen
-article_title: Retargeting-Kampagnen
+article_title: Retarget-Kampagnen
 page_order: 2
 page_type: reference
 description: "In diesem Referenzartikel erfahren Sie, wie und warum Sie Retargeting-Kampagnen auf der Grundlage der Nachrichten, die Ihre Nutzer erhalten, in Betracht ziehen sollten."
@@ -9,7 +9,7 @@ tool:
   
 ---
 
-# Retargeting-Kampagnen
+# Retargeting Kampagnen
 
 > Durch Retargeting-Kampagnen, die auf den früheren Aktionen des Benutzers basieren, z. B. ob er eine E-Mail geöffnet hat oder nicht, können Sie Ihre Benutzer neu klassifizieren und so die Tür zu einem effektiven, datengesteuerten Marketingansatz öffnen.
 
@@ -17,7 +17,7 @@ Braze unterstützt das Retargeting von Nutzern auf Grundlage des Nachrichtenempf
 
 Jeder Retargeting-Filter bietet nach dem Hinzufügen mehrere Optionen. Wenn Sie mehr über das Targeting von Benutzern erfahren möchten, besuchen Sie unseren [Braze Learning-Kurs](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) zur Einrichtung von Kampagnen!
 
-![Abschnitt Segmente Details mit dem Dropdown-Menü für die verfügbaren Filter.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![Abschnitt Segmentdetails mit dem Dropdown-Menü für die verfügbaren Filter.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## Retargeting-Filter
 

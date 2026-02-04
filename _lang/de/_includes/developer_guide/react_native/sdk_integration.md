@@ -20,7 +20,7 @@ Wenn Ihre iOS App mit `RCTAppDelegate` konform ist und unserem früheren `AppDel
 
 Für die Integration des SDK ist React Native Version 0.71 oder höher erforderlich. Die vollständige Liste der unterstützten Versionen finden Sie in unserem [React Native SDK GitHub-Repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
 
-### Schritt 1: Braze-Bibliothek integrieren
+### Schritt 1: Integrieren der Braze-Bibliothek
 
 {% tabs local %}
 {% tab npm %}
@@ -80,6 +80,7 @@ Fügen Sie in Ihrem `app.json` das Braze Expo Plugin hinzu. Sie können die folg
 | `enableBrazeIosRichPush`                      | boolean | Nur iOS. Ob Sie Rich-Push-Funktionen für iOS aktivieren möchten.                                                                                                  |
 | `enableBrazeIosPushStories`                   | boolean | Nur iOS. Ob Sie Braze Push Stories für iOS aktivieren möchten.                                                                                                  |
 | `iosPushStoryAppGroup`                        | String  | Nur iOS. Die App-Gruppe, die für iOS Push Stories verwendet wird.                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | boolean | Nur iOS. Ob die ID des Geräts eine zufällig generierte UUID verwenden soll.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Beispielkonfiguration:
@@ -263,6 +264,7 @@ cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 Importieren Sie das Braze SDK am Anfang der Datei `AppDelegate.swift`:
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 Ersetzen Sie in der Methode `application(_:didFinishLaunchingWithOptions:)` den [API-Schlüssel]({{site.baseurl}}/api/identifier_types/) und den [Endpunkt]({{site.baseurl}}/api/basics/#endpoints) durch die Werte Ihrer App. Erstellen Sie dann die Braze-Instanz mithilfe der Konfiguration und legen Sie eine statische Eigenschaft in `AppDelegate` an, um den Zugriff zu erleichtern:

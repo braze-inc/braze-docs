@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Push FAQs
-page_order: 80
+page_order: 25
 description: "This article addresses some of the most frequently asked questions that arise when setting up push campaigns."
 page_type: FAQ
 channel:

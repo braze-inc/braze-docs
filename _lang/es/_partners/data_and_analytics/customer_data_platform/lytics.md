@@ -68,7 +68,7 @@ Dentro de la pregunta **Configurar trabajo**, proporciona una etiqueta y una des
 Por último, elige la opción preferida para la casilla **Usuarios existentes**. Si dejas marcada esta casilla, se añadirán los usuarios que ya existan en la audiencia de Lytics seleccionada. Si no está marcada, los usuarios sólo se exportarán a Braze cuando entren o salgan de la audiencia una vez iniciado el flujo de trabajo.
 
 {% alert note %}
-Al marcar esta casilla, todos los usuarios existentes en la audiencia seleccionada serán enviados a Braze. Esto hará que se genere un punto de datos por usuario y por audiencia para la sincronización inicial.
+Al marcar esta casilla, todos los usuarios existentes en la audiencia seleccionada serán enviados a Braze. Si el precio de tu Braze incluye puntos de datos, controla el uso de punto de datos en consecuencia.
 {% endalert %}
 
 Haz clic en **Completar** cuando hayas terminado para iniciar la exportación y guardar.

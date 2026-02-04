@@ -16,7 +16,7 @@ _Diese Integration wird von B.Layer gepflegt._
 
 ## Über die Integration
 
-Die Integration von Braze und B.Layer erlaubt es Ihnen, den B.Layer In-App-Nachrichten-Builder zu nutzen, um In-App-Nachrichten zu erstellen, die als Zip-Datei oder Inline-HTML in Braze exportiert werden können. Diese Integration erfordert keine zusätzlichen Entwickler:in-Ressourcen, wodurch Sie Zeit und Budget sparen.
+Die Integration von Braze und B.Layer erlaubt es Ihnen, den B.Layer In-App-Nachrichten-Builder zu verwenden, um In-App-Nachrichten zu erstellen, die als Zip-Datei oder Inline-HTML in Braze exportiert werden können. Diese Integration erfordert keine zusätzlichen Entwickler:in-Ressourcen, wodurch Sie Zeit und Budget sparen.
 
 ![]({% image_buster /assets/img/blayer/blayer2.png %})
 

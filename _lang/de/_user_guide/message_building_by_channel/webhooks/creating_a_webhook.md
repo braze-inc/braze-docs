@@ -1,5 +1,5 @@
 ---
-nav_title: Erstellen eines Webhooks
+nav_title: Einen Webhook erstellen
 article_title: Einen Webhook erstellen
 page_order: 1
 channel:
@@ -8,7 +8,7 @@ description: "In diesem Referenzartikel erfahren Sie, wie Sie eine Webhook-Kampa
 search_rank: 2
 ---
 
-# Erstellen einer Webhook-Kampagne
+# Erstellen Sie eine Webhook-Kampagne
 
 > Wenn Sie eine Webhook-Kampagne erstellen oder einen Webhook in eine Multichannel-Kampagne einbinden, ist es zulässig, Nicht-App-Aktionen zu triggern, indem Sie anderen Systemen und Anwendungen Informationen in Echtzeit zur Verfügung stellen. 
 
@@ -20,7 +20,7 @@ Wenn Sie mehr darüber erfahren möchten, was Webhooks sind und wie Sie sie in B
 
 ## Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich eher für einzelne einfache Messaging-Kampagnen, während Canvases besser für mehrstufige User Journeys geeignet sind.
+Sie sind sich nicht sicher, ob Ihre Nachricht über eine Kampagne oder ein Canvas versendet werden soll? Kampagnen eignen sich besser für einzelne, gezielte Messaging-Kampagnen, während Canvase besser für mehrstufige Nutzer:innen geeignet sind.
 
 {% tabs %}
 {% tab Campaign %}
@@ -99,7 +99,7 @@ Der Anfragetext ist die Information, die an die von Ihnen angegebene URL gesende
 
 Mit JSON-Schlüssel-Wert-Paaren können Sie ganz einfach eine Anfrage für einen Endpunkt schreiben, der ein JSON-Format erwartet. Sie können dies nur mit einem Endpunkt verwenden, der eine JSON-Anfrage erwartet. Wenn Ihr Schlüssel zum Beispiel `message_body` lautet, könnte der entsprechende Wert `Your order just arrived!` sein. Nachdem Sie Ihr Schlüssel-Wert-Paar eingegeben haben, konfiguriert der Editor Ihre Anfrage in JSON-Syntax, und eine Vorschau Ihrer JSON-Anfrage wird automatisch eingeblendet.
 
-![Body der Anfrage auf JSON Schlüssel-Wert-Paare eingestellt.]({% image_buster /assets/img/webhook_json_1.png %})
+![Körper der Anfrage auf JSON Schlüssel-Wert-Paare eingestellt.]({% image_buster /assets/img/webhook_json_1.png %})
 
 Sie können Ihre Schlüssel-Wert-Paare mit Liquid personalisieren, z.B. indem Sie ein beliebiges Benutzerattribut, ein [benutzerdefiniertes Attribut]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_user_ids/#additional-notes-and-best-practices) oder eine [Ereigniseigenschaft]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) in Ihre Anfrage aufnehmen. Sie können zum Beispiel den Vornamen und die E-Mail-Adresse eines Kunden in Ihre Anfrage aufnehmen. Achten Sie darauf, dass Sie für jedes Attribut einen [Standardwert]({{site.baseurl}}/developer_guide/analytics/setting_user_ids/?tab=web) angeben.
 
@@ -119,7 +119,7 @@ to={{custom_attribute.${example}}}&text=Your+order+just+arrived
 ```
 {% endraw %}
 
-![Body der Anfrage mit URL-kodiertem String.]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
+![Körper der Anfrage mit URL-kodiertem String.]({% image_buster /assets/img_archive/webhook_rawtext_URL-encoded.png %})
 
 ## Schritt 3: Konfigurieren Sie zusätzliche Einstellungen
 
@@ -170,9 +170,9 @@ Für die aktionsbasierte Zustellung können Sie auch die Dauer der Kampagne und 
 
 In diesem Schritt können Sie auch Zustellungskontrollen festlegen, z. B. dass Nutzer:innen wieder für den Empfang der Kampagne [zugelassen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/#campaigns) werden oder [Frequency-Capping-Regeln]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) aktiviert werden.
 
-#### Wählen Sie Benutzer als Zielgruppe aus
+#### Zielgruppe auswählen
 
-Als Nächstes müssen Sie mithilfe von Segmenten oder Filtern eine [Zielgruppe erstellen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit unseren Filtern weiter ein, wenn Sie möchten. Sie erhalten automatisch eine Vorschau darauf, wie die ungefähre Anzahl der Segmente im Moment aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
+Als Nächstes müssen Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch die Auswahl von Segmenten oder Filtern [gezielt zusammenstellen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/), um Ihre Zielgruppe einzugrenzen. In diesem Schritt wählen Sie die größere Zielgruppe aus Ihren Segmenten aus und grenzen dieses Segment mit unseren Filtern weiter ein, wenn Sie möchten. Sie erhalten automatisch eine Vorschau darauf, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -204,7 +204,7 @@ Webhooks basieren auf Braze-Servern, die Anfragen an einen externen Endpunkt ste
 
 Wenn Ihr Webhook nicht gesendet werden kann, wird eine Fehlernachricht im [Nachrichten-Aktivitätsprotokoll]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) protokolliert, die Details wie den Zeitstempel des Fehlers, den Namen der App und Details zum Fehler enthält.
 
-![Webhook-Fehler mit der Nachricht "Es muss ein aktives Token verwendet werden, um Informationen über den aktuellen Nutzer:in abzufragen".]({% image_buster /assets/img_archive/webhook-error.png %})
+![Webhook-Fehler mit der Nachricht "Für die Abfrage von Informationen über den aktuellen Nutzer:in muss ein aktives Token verwendet werden".]({% image_buster /assets/img_archive/webhook-error.png %})
 
 Wenn die Nachricht über die Fehlerquelle nicht eindeutig genug ist, sollten Sie die Dokumentation des von Ihnen verwendeten API Endpunkts überprüfen. Darin finden Sie in der Regel eine Erläuterung der Fehlercodes, die der Endpunkt verwendet, sowie die typischen Ursachen für diese Fehler.
 

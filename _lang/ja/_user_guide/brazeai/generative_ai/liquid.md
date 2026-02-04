@@ -1,12 +1,12 @@
 ---
-nav_title: リキッドコード
+nav_title: Liquidコード
 article_title: BrazeAIでLiquidコードを生成する
 description: "この記事では、AI Liquid アシスタントの仕組みと、それを使用したメッセージング用の Liquid スニペットの生成方法について説明します。"
 page_type: reference
 page_order: 0.0
 ---
 
-# BrazeAI<sup>TM</sup> を使用した Liquid コードの生成
+# <sup>BrazeAITMで</sup>Liquidコードを生成する
 
 > BrazeAI<sup>TM</sup> Liquid アシスタントは BrazeAI<sup>TM</sup> を搭載したチャットアシスタントであり、メッセージコンテンツをパーソナライズするために必要な Liquid を生成する場合に役立ちます。
 

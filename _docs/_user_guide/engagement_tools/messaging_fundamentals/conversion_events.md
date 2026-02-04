@@ -1,7 +1,7 @@
 ---
 nav_title: Conversion events
 article_title: Conversion Events
-page_order: 4
+page_order: 3
 page_type: reference
 description: "This reference article defines conversion events, how to use them to define your success metrics in Braze, and how to use these events to see how engaged your users are."
 tool:
@@ -15,7 +15,7 @@ tool:
 
 ## How it works
 
-Let's say you're creating a personalized holiday campaign for active users, a conversion event of **Start a Session** within two or three days may be appropriate since it will allow you to gather a sense of user engagement from receiving your message. Additional events like **Make Purchase**, **Upgrade App**, or any of your custom events can be selected as conversion events.
+For a personalized holiday campaign targeting active users, a conversion event of **Start a Session** within two or three days may be appropriate because it allows you to gather a sense of user engagement from receiving your message. You can also select additional events like **Places Order**, **Upgrade App**, or any of your custom events as conversion events.
 
 {% alert tip %}
 For more on conversions, check out our [Braze Learning course](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) on campaign setup.
@@ -23,50 +23,56 @@ For more on conversions, check out our [Braze Learning course](https://learning.
 
 ### Conversion tracking rules
 
-Conversion events allow you to attribute user action back to a point of engagement. That said, there are a few things to note regarding how Braze handles multiple conversions. Check out the following scenarios to understand how Braze tracks these conversions:
+Conversion events attribute user actions back to a point of engagement. Note the following about how Braze handles multiple conversions:
 
-- Conversions occur on a per-user basis, not a per-device basis. This means a user can only convert once, even if a message is sent to multiple devices. As another example, assume a campaign has only one conversion event which is "Makes any purchase". If a user who receives this campaign makes two separate purchases within the conversion deadline, then only one conversion will be counted.
-- If a user performs one conversion event within the conversion deadlines of two separate campaigns or Canvases that they received, then the conversion will register on both.
-- A user will count as converted if they performed the specific conversion event in the window even if they did not open or click the message.
-- For Canvases, conversion tracking works based on the final conversion deadline that begins when a user enters the Canvas, not individual message timing. This means conversions can be counted even during delay periods between messages in Canvas.
+- **Single-channel campaigns**: Conversions occur on a per-user basis, not a per-device basis. Within a single channel, a user converts only once per conversion event, even if a message is sent to multiple devices. For example, if a campaign has only one conversion event set to "Makes any purchase" and a user makes two separate purchases within the conversion deadline, Braze counts only one conversion.
+- **Multichannel campaigns**: For multichannel campaigns, each channel has its own conversion opportunity. A user can convert once per channel after receiving a message on that channel. This means if a user receives messages on multiple channels (for example, both email and push) and performs the conversion action, Braze counts one conversion for each channel, which can result in conversion rates exceeding 100%.
+- If a user performs one conversion event within the conversion deadlines of two separate campaigns or Canvases that they received, the conversion registers on both.
+- A user counts as converted if they performed the specific conversion event in the window, even if they did not open or click the message.
+- For Canvases, conversion tracking works based on the final conversion deadline that begins when a user enters the Canvas, not individual message timing. Braze counts conversions even during delay periods between messages in Canvas.
 
 ### Primary conversion event
 
-The primary conversion event is the first event added during the campaign or Canvas creation. This event has the most bearing on your engagement and reporting. Your primary conversion event is used to:
+The primary conversion event is the first event you add during campaign or Canvas creation. This event has the most bearing on your engagement and reporting. Braze uses your primary conversion event to:
 
 - Compute the winning message variation in [multivariate]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing) campaigns or Canvases.
 - Determine the window when revenue is calculated for the campaign or Canvas.
 - Adjust message distributions for campaigns and Canvases using [Intelligent Selection]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/).
 
-The primary conversion event count is the number of users who performed the primary conversion action. The primary conversion event rate is calculated by dividing this count by the number of unique recipients. A user is considered a recipient once they are sent or shown the message, depending on the channel. For example, in push or email, a user becomes a recipient after the message is sent. For in-app messages or Content Cards, the user must view the message to be considered a recipient.
+The primary conversion event count is the number of conversion events that occurred. For multichannel campaigns, Braze counts conversions per channel (as described in [Conversion tracking rules](#conversion-tracking-rules)), which means the conversion count can exceed the number of unique users and result in conversion rates greater than 100%. Braze calculates the primary conversion event rate by dividing this count by the number of unique recipients. Braze considers a user a recipient when the message is sent or shown, depending on the channel. For example, in push or email, a user becomes a recipient after Braze sends the message. For in-app messages or Content Cards, the user must view the message to be considered a recipient.
 
 {% alert note %}
-If messages are aborted using the Liquid `abort` tag, only the users who go through variants are potentially aborted. This means the messages to users who go through the control group won't be aborted, which may lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) to target your users at campaign and Canvas entry.
+If you abort messages using the Liquid `abort` tag, Braze aborts messages only for users who go through variants. Messages to users in the control group are not aborted, which can lead to skewed conversion percentages across variants and control groups. As a workaround, use [segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment) to target your users at campaign and Canvas entry.
 {% endalert %}
 
 ## Creating a campaign with conversion tracking
 
 ### Step 1: Set up your campaign
 
-[Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) for your desired messaging channel. After setting up your campaign's messages and schedule, you'll have the option to add up to four conversion events for tracking.
+[Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign) for your desired messaging channel. After setting up your campaign's messages and schedule, you can add up to four conversion events for tracking.
 
-We recommend using as many conversion events as you feel is necessary because the addition of a second (or third) conversion event can significantly enrich your reporting. For instance, let's say you have a campaign that targets lapsing users. In this case, adding a secondary conversion event and the primary **Starts Session** conversion event can further your understanding of how effective your campaign is in ushering your users back into your application. 
+Use as many conversion events as necessary. Adding a second or third conversion event significantly enriches your reporting. For example, for a campaign targeting lapsing users, adding a secondary conversion event along with the primary **Starts Session** conversion event helps you understand how effective your campaign is at bringing users back into your application. 
 
 ### Step 2: Add the conversion events
 
 First, select the general type of event you'd like to use:
 
-| Conversion Event Type         | Description                                                                                                                                                                                                                                                                                                                                 |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Starts Session**      | A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).                                                                                                                                                                                                         |
-| **Makes Purchase**      | A user is counted as having converted when they purchase the product you specify (defaults to any product).                                                                                                                                                                                                                                 |
-| **Performs Custom Event** | A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).                                                                                                                                                                                                        |
-| **Upgrade App**         | A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze performs a best-efforts numerical comparison to determine if the change was an upgrade. Non-numeric versions are counted as conversions if the version changes.              |
-| **Opens email**         | A user is counted as having converted when they open the email (only for email campaigns).                                                                                                                                                                                                                                                 |
-| **Clicks email**        | A user is counted as having converted when they click a link within the email (only for email campaigns).                                                                                                                                                                                                                                  |
+| Conversion Event Type   | Description                |
+|-------------------------|----------------------------|
+| **Starts Session**      | A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the workspace).|
+| **Makes Purchase**      | A user is counted as having converted when they record a [Purchase event]({{site.baseurl}}/api/objects_filters/purchase_object/). This tracks any purchase by default, or you can specify a particular product.|
+| **Places Order**        | A user is counted as having converted when they trigger the [Order Placed eCommerce recommended event]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events?tab=ecommerce.order_placed#ecommerce-recommended-events). This tracks any order by default, or you can filter by a specific product.|
+| **Performs Custom Event**| A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).|
+| **Upgrade App**         | A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the workspace). Braze performs a best-efforts numerical comparison to determine if the change was an upgrade. Non-numeric versions are counted as conversions if the version changes.|
+| **Opens email**         | A user is counted as having converted when they open the email (only for email campaigns).|
+| **Clicks email**        | A user is counted as having converted when they click a link within the email (only for email campaigns).|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-Set your conversion deadline. This is the maximum amount of time that may pass to consider a conversion. You have the option of allowing up to a 30-day window during which the conversion will be counted if the user takes the specified action.
+{% alert important %}
+**Nested properties are not supported in conversion events**. You cannot use nested properties in conversion events. For example, if `product_code` or `product_name` are nested properties within a `products` array (such as `products[].product_code`), you cannot use them to check if a specific product purchase has been made in a conversion event.
+{% endalert %}
+
+Set your conversion deadline. This is the maximum amount of time that can pass before Braze considers a conversion. You can set a window of up to 30 days during which Braze counts the conversion if the user takes the specified action.
 
 ![The "Makes Purchase" conversion event type as an example to record conversions for users who make any purchase. This has a conversion deadline of 12 hours.]({% image_buster /assets/img_archive/conversion_event_selection.png %})
 
@@ -74,14 +80,12 @@ After you've selected your conversion events, continue the campaign creation pro
 
 ### Step 3: View your results
 
-Go to the **Details** page to view the details for each conversion event associated with the campaign you just created. Regardless of your selected conversion events, you can also see the total revenue that can be attributed to this specific campaign, as well as specific variants, during the window of the primary conversion event.
+Go to the **Details** page to view the details for each conversion event associated with the campaign you created. Regardless of your selected conversion events, you can also see the total revenue attributed to this specific campaign, as well as specific variants, during the window of the primary conversion event.
 
 {% alert note %}
-If there are no conversion events selected during campaign creation, the time defaults to three days. 
+If you don't select any conversion events during campaign creation, the time defaults to three days. 
 {% endalert %}
 
 Additionally, for multivariate messages, you can see the number of conversions and conversion percentages for your control group and each variant.
 
 ![Four conversion events that track conversions based on when a purchase was made within three hours, made a purchase within two hours, started a session within 30 minutes, and started a session within 25 minutes.]({% image_buster /assets/img_archive/conversion_event_details.png %})
-
-

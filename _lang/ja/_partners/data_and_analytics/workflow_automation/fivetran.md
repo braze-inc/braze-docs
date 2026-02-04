@@ -90,7 +90,7 @@ AWS で、**ロール** に移動し、**新しいロールを作成** を選択
 
 次に、**次へ] を選択します。権限**を選択して、作成したポリシーを選択します。
 
-![ポリシーの一覧。]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
+![ポリシーのリスト]({% image_buster /assets/img/fivetran_as3_select_policy.png %})
 
 **次へ] を選択します。確認**] を選択し、新しいロールに名前 (Fivetran など) を付け、[**ロールの作成]** を選択します。ロールが作成されたら、それを選択し、表示されているロール ARN をメモしておきます。
 
@@ -128,7 +128,7 @@ Fivetran で、**\+ コネクター**、**Braze** コネクターの順に選択
 
 [[Google Storage Console](https://console.cloud.google.com/storage/browser)] に移動し、Braze Currents を設定したバケットを選択して、[**Edit bucket permissions**] を選択します。
 
-![Google Storage Console で利用可能なバケット。バケツを探し、縦に並んだ3つの点のアイコンを選択すると、バケツの権限を編集するためのドロップダウンが開封される。]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
+![Google Storage Console で利用可能なバケット。バケツを見つけ、縦に並んだ3つの点のアイコンを選択すると、バケツの権限を編集するためのドロップダウンが開封される。]({% image_buster /assets/img/fivetran_edit_bucket_permissions_gcs.png %})
 
 次に、[ステップ1](#step-one2)のメールアドレスに `Storage Object Viewer` アクセス権を付与するため、メールアドレスをメンバーとして追加します。バケット名をメモしておいてください。次のステップで Fivetran を設定するときに必要となります。
 

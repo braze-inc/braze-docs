@@ -1,21 +1,21 @@
 ---
-nav_title: "GET: Ver la traducción de una campaña"
-article_title: "GET: Ver la traducción de una campaña"
+nav_title: "GET: Ver todas las traducciones de una campaña"
+article_title: "GET: Ver todas las traducciones de una campaña"
 search_tag: Endpoint
 page_order: 1
 
 layout: api_page
 page_type: reference
-description: "En este artículo se describen los detalles del punto final Ver la traducción de una campaña."
+description: "Este artículo describe en detalle el punto final Ver todas las traducciones de una campaña."
 ---
 
 {% api %}
-# Ver la traducción de una campaña
+# Ver todas las traducciones de una campaña
 {% apimethod get %}
-/campaigns/translations/?locale_id={locale_id}
+/campaigns/translations
 {% endapimethod %}
 
-> Utiliza este punto final para obtener una vista previa de un mensaje traducido para una campaña.
+> Utiliza este punto final para ver todas las traducciones de cada variante de mensaje de una campaña. Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
 
 {% alert important %}
 Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
@@ -31,19 +31,22 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Parámetros de consulta
 
-| Parámetro              | Obligatoria | Tipo de datos | Descripción                        |
-|------------------------|----------|-----------|------------------------------------|
-| `campaign_id`          | Obligatoria | Cadena    | El ID de su campaña.           |
-| `message_variation_id` | Obligatoria | Cadena    | El ID de su variación de mensaje. |
-| `locale_id`            | Obligatoria | Cadena    | El ID de la configuración regional.              |
+| Parámetro | Obligatoria | Tipo de datos | Descripción |
+| --------- | ---------| --------- | ----------- |
+|`campaign_id`| Obligatoria | Cadena | El ID de su campaña. |
+|`message_variation_id`| Obligatoria | Cadena | El ID de la variación de tu mensaje. |
+|`locale_id`| Opcional | Cadena | Un UUID de localización para filtrar las respuestas. |
+| `post_launch_draft_version`| Opcional | Booleano | Cuando `true` devuelve la última versión borrador en lugar de la última versión publicada en vivo. Predetermina `false` devolviendo la última versión en vivo.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Ten en cuenta que todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la configuración **del soporte multilingüe** o en la respuesta a la solicitud.
+{% alert note %}
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+{% endalert %}
 
 ## Ejemplo de solicitud
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations/?locale_id={locale_uuid}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/campaigns/translations?campaign_id={campaign_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -57,8 +60,6 @@ Hay cuatro respuestas de código de estado para este punto final: `200`, `400`, 
 El código de estado `200` podría devolver la siguiente cabecera y cuerpo de respuesta.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -74,6 +75,20 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "language": "es",
                 "locale_key": "es-mx"
             }
+        },
+        {
+            "translation_map": {
+                "id_0": "你好",
+                "id_1": "我的名字是 Jacky",
+                "id_2": "圖書館在哪裡?"
+            },
+            "locale": {
+                "uuid": "a1b12345-cd35-1234-5678-abcdefa99r3f",
+                "name": "zh-HK",
+                "country": "HK",
+                "language": "zh",
+                "locale_key": "zh-hk"
+            }
         }
     ]
 }
@@ -81,32 +96,17 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Ejemplo de respuesta de error
 
-El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Consulte la sección [Solución de problemas](#troubleshooting) para obtener más información sobre los errores que puede encontrar.
+El código de estado `400` podría devolver el siguiente cuerpo de respuesta.
 
 ```json
 {
 	"errors": [
 		{
-			"message": "The provided locale code does not exist."
+			"message": "This message does not support multi-language."
 		}
 	]
 }
 ```
 
-## Solución de problemas
-
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
-
-| Mensaje de error                           | Solución de problemas                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_CAMPAIGN_ID`                   | Confirma que el ID de la campaña coincide con la campaña que estás traduciendo.                   |
-| `INVALID_LOCALE_ID`                     | Confirma que tu ID de configuración regional existe en la traducción de tu mensaje.                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | Confirma que el ID de tu mensaje es correcto.                                                |
-| `MESSAGE_NOT_FOUND`                     | Comprueba el mensaje para traducir.                                           |
-| `LOCALE_NOT_FOUND`                      | Confirma que la configuración regional existe en tu configuración multilingüe.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | La configuración multilingüe no está activada para tu espacio de trabajo.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Sólo se pueden traducir las campañas de correo electrónico, push y mensajes dentro de la aplicación o los mensajes de Canvas con correos electrónicos.             |
-| `UNSUPPORTED_CHANNEL`                   | Sólo se pueden traducir las campañas por correo electrónico, push o mensajes dentro de la aplicación, o los mensajes de Canvas. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -45,28 +45,28 @@ Wählen Sie ein Template für In-App-Nachrichten aus der Galerie der In-App-Nach
 Passen Sie zunächst das Bild, den Text und den Button für Ihren Inhalt an. Stellen Sie sicher, dass Sie **Deeplink** für das Bild und den Button verbinden.
 
 {% tabs local %}
-{% tab Bild %}
+{% tab Image %}
 ![Das IAM Studio UI zeigt die Optionen zum Anpassen des Bildes an. Diese Optionen umfassen das Bild, den Bildradius und das abgeblendete Bild.]({% image_buster /assets/img/iam_studio/iam_customize_image.png %})
 {% endtab %}
 {% tab Text %}
 ![Das IAM Studio UI zeigt die Optionen zum Anpassen des Titels und des Untertitels Ihrer Nachricht an. Diese Optionen umfassen Text, Formatierung und Schriftart.]({% image_buster /assets/img/iam_studio/iam_customize_text.png %})
 {% endtab %}
 {% tab Button %}
-![Das IAM Studio UI zeigt die Optionen zum Anpassen des Haupt-, linken und rechten Buttons. Diese Optionen umfassen Farbe, Deeplinks, Text und Formatierung.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
+![Das IAM Studio UI zeigt die Optionen zum Anpassen des Haupt-, linken und rechten Buttons. Zu diesen Optionen gehören Farbe, Deeplinks setzen, Text und Formatierung.]({% image_buster /assets/img/iam_studio/iam_customize_button.png %})
 {% endtab %}
 {% endtabs %}
 
 Als nächstes erstellen Sie Ihre personalisierte In-App-Nachricht, indem Sie angepasste Schriftarten hinzufügen und Liquid-Tags verwenden. Um die Protokollierung und das Tracking zu aktivieren, wählen Sie **Daten protokollieren und das Verhalten der Nutzer:innen verfolgen**.
 
 {% tabs local %}
-{% tab Schriftarten %}
+{% tab Fonts %}
 ![Das UI von IAM Studio zeigt die Optionen zum Hinzufügen von Liquid. Zu diesen Optionen gehört die Personalisierung von Sätzen.]({% image_buster /assets/img/iam_studio/iam_custom_font.png %})
 {% endtab %}
 {% tab Liquid %}
-![Das IAM Studio UI mit den Optionen zur Anpassung der Ereignis-/Attribut-Protokollierung. Diese Optionen beinhalten das Protokoll des Nutzer:in-Verhaltens.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
+![Das IAM Studio UI mit den Optionen zur Anpassung der Ereignis-/Attribut-Protokollierung. Diese Optionen beinhalten, dass das Verhalten der Nutzer:in protokolliert wird.]({% image_buster /assets/img/iam_studio/iam_liquid.png %})
 {% endtab %}
-{% tab Protokollierung und Tracking %}
-![Das IAM Studio UI zeigt die Optionen zum Anpassen der Schriftart an. Diese Optionen beinhalten, dass Nutzer:in den Schriftstil anpassen können.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png %})
+{% tab Logging and Tracking %}
+![Das IAM Studio UI zeigt die Optionen zum Anpassen der Schriftart an. Zu diesen Optionen gehört, dass Nutzer:innen den Schriftstil anpassen können.]({% image_buster /assets/img/iam_studio/iam_tracking_logging.png  %})
 {% endtab %}
 {% endtabs %}
 

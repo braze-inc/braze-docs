@@ -141,9 +141,11 @@ To download this report, do the following:
 
 1. Go to **Settings** > **Admin Settings**.
 2. Select the **Security Settings** tab and go to the **Security Event Download** section.
-2. Select **Download report**. 
+3. Select **Download report**. 
 
-This report only contains the most recent 10,000 security events for your account. If you need specific event data, contact technical support.
+This manual report download contains only the most recent 10,000 security events for your account.
+
+To export security events to Amazon S3 without this row limit, see [Security events export with Amazon S3]({{site.baseurl}}/user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3/).
 
 {% details Reported security events %}
 ### Login and account
@@ -287,7 +289,7 @@ The following attributes can be designated as PII and hidden from Braze users wh
 
 ### Limited areas
 
-The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table.
+The following assumes that all fields are set as PII, and the users mentioned are those who use the Braze platform. Also, "preceding" attributes refer to those in the [Potential PII attributes](#potential-pii-attributes) table. Removing PII permissions from a user can impact usability beyond these listed areas.
 
 | Dashboard Navigation | Result | Notes |
 | -------------------- | ------ | ----- |

@@ -13,7 +13,7 @@ search_tag: Partner
 > Esta página de parceiro oferece algumas consultas de exemplo de possíveis casos de uso para referência ao configurar suas consultas.
 
 {% tabs %}
-{% tab Filtrar por tempo%}
+{% tab Filter By Time%}
 
 Uma consulta comum pode ser filtrar eventos por tempo.
 
@@ -38,7 +38,7 @@ O valor de `sf_created_at` é confiável apenas para eventos que foram persistid
 {% endalert %}
 {% endtab %}
 
-{% tab Consultando registros de alterações%}
+{% tab Querying Changelogs%}
   
 Os nomes das campanhas e os nomes das canva não estão presentes nos próprios eventos. Em vez disso, eles são publicados em uma tabela de changelog. 
 
@@ -73,7 +73,7 @@ LEFT JOIN CHANGELOGS_CANVAS_SHARED AS Canvas ON canvas.id = campaign_join.canvas
 qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
 {% endtab %}
-{% tab Funil de push %}
+{% tab Push Funnel %}
 
 Você pode usar esta consulta de funil de push para agregar dados de eventos brutos de envios de push, até dados de eventos brutos de entregas, até dados de eventos brutos de aberturas. Esta consulta mostra como todas as tabelas devem ser unidas, já que cada evento bruto normalmente tem uma tabela separada:
 
@@ -102,7 +102,7 @@ LIMIT 500;
 ```
 
 {% endtab %}
-{% tab Cadência de e-mail %}
+{% tab Email Cadence %}
 Você pode usar essa consulta de envio de mensagens de e-mail diário para analisar o tempo entre os e-mails que um usuário recebe.
 
 Por exemplo, quando um usuário recebe dois e-mails em um dia, ele se enquadra em `0 "days since last received"`. Quem recebe um e-mail na segunda-feira e outro na terça-feira fica na coorte `1 "days since last received"`.
@@ -145,7 +145,7 @@ ORDER BY 1
 LIMIT 500;
 ```
 {% endtab %}
-{% tab Cliques Únicos em e-mail %}
+{% tab Unique Email Clicks %}
 
 Você pode usar esta consulta de cliques de e-mail únicos para analisar o clique de e-mail único em um determinado período de tempo. O algoritmo para calcular isso é o seguinte:
   1. Particione os eventos pela chave (`app_group_id`, `message_variation_id`, `dispatch_id`, `email_address`).

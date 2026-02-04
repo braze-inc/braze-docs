@@ -1,5 +1,5 @@
 ---
-nav_title: Steuerung des Netzwerkverkehrs
+nav_title: Feinsteuerung des Netzwerkverkehrs
 article_title: Fine Network Traffic Control für iOS
 platform: iOS
 page_order: 1
@@ -38,7 +38,7 @@ Sie können die Daten jederzeit manuell auf die Braze Server übertragen, indem 
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
@@ -65,7 +65,7 @@ Sie können die Daten jederzeit manuell auf die Braze Server übertragen, indem 
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
@@ -91,7 +91,7 @@ NSDictionary *appboyOptions = @{
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
@@ -116,7 +116,7 @@ Die Richtlinie für die Verarbeitung von Anfragen kann auch während der Laufzei
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 // Sets the request processing policy to automatic (the default value)
@@ -138,7 +138,7 @@ Wenn zu irgendeinem Zeitpunkt eine "In-Flight"-Serverkommunikation angehalten we
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.shutdownServerCommunication();

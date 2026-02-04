@@ -2,7 +2,7 @@
 nav_title: Message 
 article_title: Message 
 alias: "/message_step/"
-page_order: 5
+page_order: 11
 page_type: reference
 description: "This reference article covers how to create a stand-alone message using the Message step."
 tool: Canvas
@@ -22,12 +22,13 @@ To create a Message component, first add a step to your Canvas. Drag and drop th
 ### Step 1: Select your messaging channel
 
 You can select from the following messaging channels: 
+- Banners (in early access)
 - Content Cards
 - Email
 - LINE
 - Push notifications
 - SMS/MMS/RCS
-- In-app messages 
+- In-app messages
 - Webhook
 - WhatsApp
 

@@ -1,27 +1,27 @@
 ---
-nav_title: Simon Data
-article_title: Simon Data
-description: "Nutzen Sie die Integration von Braze und Simon Data, um anspruchsvolle Zielgruppen für die Orchestrierung zu erstellen und mit Braze zu synchronisieren - in Realtime und ohne Code."
+nav_title: SimonAI
+article_title: SimonAI
+description: "Nutzen Sie die Integration von Braze und SimonAI, um anspruchsvolle Zielgruppen zu erstellen und zur Orchestrierung mit Braze zu synchronisieren - in Realtime und ohne Code."
 alias: /partners/simon_data/
 page_type: partner
 search_tag: Partner
 ---
 
-# Simon Data
+# Simon KI
 
-> [Simon Data](https://www.simondata.com) ist eine Customer Data Platform (CDP), die für Marketer freundlich ist und von Datenteams geschätzt wird. Durch die Transformation Ihres Data Warehouse in ein Marketing-Powerhouse sorgt Simon für bessere Geschäftsergebnisse und ein besseres Kundenerlebnis.
+> Die [Simon KI][1] Agentic Marketing Platform hilft Marketing Teams, eine echte eins-zu-eins Personalisierung zu erreichen. Es kombiniert eine zusammensetzbare CDP mit KI-Agenten, die direkt in der Snowflake KI-Datenwolke arbeiten und als Daten- und Ausführungsteam eines Marketers fungieren.
 
-Nutzen Sie die Integration von Braze und Simon Data, um anspruchsvolle Zielgruppen für die Orchestrierung zu erstellen und mit Braze zu synchronisieren - in Realtime und ohne Code. Mit dieser Integration können Sie die besten Funktionen von Simon für die Priorisierung von Kampagnen und den Abgleich von Identitäten, die Unterstützung komplexer Aggregate und vieles mehr nutzen, um Ihre Kampagnen in Braze weiterzuentwickeln.
+Nutzen Sie die Integration von Braze und Simon KI, um fortschrittliche Zielgruppen vorzubringen und mit Braze zu synchronisieren - für eine Orchestrierung in Echtzeit und ohne Code. Mit dieser Integration können Sie die Identitätsauflösung, die Vereinheitlichung von Kundendaten und die KI-gestützte Segmentierung von Simon AI nutzen, um nachgelagerte personalisierte und leistungsstarke Kampagnen durchzuführen.
 
 ## Voraussetzungen
 
-Um loszulegen, müssen Sie Ihr Braze-Konto innerhalb Ihres Simon Data-Kontos authentifizieren.
+Um loszulegen, müssen Sie Ihr Braze-Konto innerhalb Ihres Simon KI-Kontos authentifizieren.
 
 | Anforderung         | Beschreibung                                                                                                                                                               |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Simon Data          | Sie müssen über ein bestehendes Simon Data-Konto verfügen, um die Braze-Integration von Simon Data aus nutzen zu können.                                                                    |
+| Simon KI          | Sie müssen über ein bestehendes Simon KI-Konto verfügen, um die Braze-Integration von Simon KI aus nutzen zu können.                                                                    |
 | Braze REST API-Schlüssel  | Ein Braze REST API-Schlüssel mit den Berechtigungen `users.track`, `campaigns.trigger.schedule.create`, und `campaigns.trigger.send`. <br><br> Dieser kann im Braze-Dashboard unter **Einstellungen** > **API-Schlüssel** erstellt werden. |
-| Braze Dashboard URL | [Ihre URL für den REST-Endpunkt]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints). Ihr Endpunkt hängt von der Braze-URL für Ihre Instanz ab.                                                                                |
+| Braze Dashboard URL | [Ihre URL für den REST-Endpunkt][3]. Ihr Endpunkt hängt von der Braze-URL für Ihre Instanz ab.                                                                                |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Anwendungsfälle
@@ -36,21 +36,21 @@ Wenn Sie die Integration von Simon und Braze verwenden, sendet Simon bei jeder S
 
 ## Integration
 
-### Authentifizieren Sie Ihr Braze-Konto in Simon
+### Authentifizieren Sie Ihr Braze-Konto in Simon AI
 
 Um die Braze-Integration zu nutzen, authentifizieren Sie zunächst Ihr Braze-Konto in Simon:
 
 1. Klicken Sie in der linken Navigation auf **Integrationen** und scrollen Sie dann zu Braze.
-2. Geben Sie Ihren Braze [REST API-Schlüssel]({{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys) und Ihre [Dashboard-URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) ein.
+2. Geben Sie Ihren Braze [REST API-Schlüssel][2] und Ihre [Dashboard-URL][3] ein.
 3. Klicken Sie auf **Änderungen speichern**.
 
 Bei einer erfolgreichen Verbindung wird im Fenster **Verbunden** angezeigt.
 
-![Integration Bildschirm in Simon Data]({% image_buster /assets/img/simon_data/ConnecttoBraze.png %}){: style="max-width:70%"}
+![Bildschirm zur Integration in Simon KI][8]{: style="max-width:70%"}
 
-### Hinzufügen von Braze-Aktionen zu Flows oder Journeys in Simon
+### Hinzufügen von Braze-Aktionen zu Flows oder Journeys in Simon AI
 
-Nachdem Sie Ihr Braze-Konto in Simon authentifiziert haben, können Sie Braze-Aktionen zu [Flows](https://docs.simondata.com/docs/campaigns-flows) und [Journeys](https://docs.simondata.com/docs/campaigns-journeys-two) hinzufügen.
+Nachdem Sie Ihr Braze-Konto in Simon KI authentifiziert haben, können Sie Braze-Aktionen zu [Flows][4] und [Journeys][5] hinzufügen.
 
 Es sind drei Aktionen verfügbar:
 
@@ -58,9 +58,9 @@ Es sind drei Aktionen verfügbar:
 - **Triggern Sie ein Braze-Canvas**: Triggern Sie ein Braze-Canvas, das die Daten Ihrer Simon Segmente nutzt.
 - **Senden Sie eine Braze Kampagne**: Starten Sie eine komplette Braze-Kampagne von Simon aus.
 
-![Dropdown-Liste mit den verfügbaren Braze-Aktionen in Simon Data.]({% image_buster /assets/img/simon_data/BrazeActions.png %}){: style="max-width:60%"}
+![Dropdown-Liste der verfügbaren Braze-Aktionen in der Simon KI][9]{: style="max-width:60%"}
 
-Einige Aktionen sind nur für bestimmte Flussarten oder Reisen verfügbar. Erfahren Sie mehr unter [docs.simondata.com](https://docs.simondata.com).
+Einige Aktionen sind nur für bestimmte Flussarten oder Reisen verfügbar. Erfahren Sie mehr unter [docs.simondata.com][6].
 
 ### Eigenschaften und Kontakteigenschaften synchronisieren
 
@@ -79,9 +79,21 @@ Nachdem Contact Traits von Ihrem Account Manager:in aktiviert wurde:
    2. Bearbeiten Sie den **Downstream-Namen**, wenn Sie möchten, dass die Feldnamen bei ihrer Ankunft in Braze anders aussehen.
    3. Wenn dies Ihre erste Integration mit Braze von Simon aus ist, klicken Sie auf **Alle Kontakte zurücksetzen**. Backfilling sendet alle Datenpunkte an Braze, wenn Sie eine Aktion in einem Fluss oder einer Reise zum ersten Mal verwenden, um sicherzustellen, dass alle Daten vollständig synchronisiert sind. Bei späteren Synchronisierungen werden dann nur die Eigenschaften, die Sie in diesem Bildschirm auswählen, an Braze gesendet. So stellen Sie sicher, dass Ihnen nur die Daten in Rechnung gestellt werden, die Sie benötigen.
 
-![Auswählen von Synchronisationsmerkmalen in Simon Data.]({% image_buster /assets/img/simon_data/BrazeTraitSyncing.png %})
+![Auswählen von Synchronisationsmerkmalen in Simon KI.][10]
+
+[1]: https://www.simondata.com
 
 
 
 
+[1]: https://www.simondata.com
+[2]: {{site.baseurl}}/api/basics/#creating-and-managing-rest-api-keys
+[3]: {{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints
+[4]: https://docs.simondata.com/docs/campaigns-flows
+[5]: https://docs.simondata.com/docs/campaigns-journeys-two
+[6]: https://docs.simondata.com
+[7]: https://docs.simondata.com/docs/support-center
+[8]: {% image_buster /assets/img/simon_data/ConnecttoBraze.png %}  
+[9]: {% image_buster /assets/img/simon_data/BrazeActions.png %}
+[10]: {% image_buster /assets/img/simon_data/BrazeTraitSyncing.png %}
 

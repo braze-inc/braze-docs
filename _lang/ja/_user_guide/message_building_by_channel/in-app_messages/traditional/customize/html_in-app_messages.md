@@ -1,5 +1,5 @@
 ---
-nav_title: HTML アプリ内メッセージs
+nav_title: HTML アプリ内メッセージ
 article_title: カスタムHTMLアプリ内メッセージ
 page_order: 0
 page_type: reference
@@ -242,8 +242,8 @@ HTMLエディタで<i class="fa-solid fa-magnifying-glass"></i>**検索**を選�
 
    | 前 | その後 |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_f2ea53fb-2c71-4cbd-a3ea-d49418b89495/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_f80365b4-3f37-489e-a07f-792e07829da3/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_f08ca691-4f42-40d4-8cd9-7ebceed41981/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_efb380b7-dd57-4701-9ef2-e22cfe3a50bc/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_2c9a2106-bdce-451b-829b-048facba5768/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_2666be59-016c-419c-ac89-295e58c4e51a/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_ccb5d92a-892e-4927-a68f-98a391090629/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_48fbe3ca-5d9f-494f-b5ba-70d376026132/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_35ec9802-ff9e-4c14-a457-4e6a5d5f618d/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_81452fb4-f3d8-44c8-808b-ee21c524b8c7/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 

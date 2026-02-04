@@ -20,23 +20,23 @@ Hay cuatro objetos B2B principales que necesitas para ejecutar campañas B2B.
 
 | Objeto | Descripción |
 | --- | --- |
-| Dirige | Un registro de clientes potenciales que han mostrado interés por un producto o servicio, pero que aún no han sido calificados como una oportunidad. |
+| Clientes potenciales | Un registro de clientes potenciales que han mostrado interés por un producto o servicio, pero que aún no han sido calificados como una oportunidad. |
 | Contactos | Normalmente, personas que han sido cualificadas y convertidas de cliente potencial a contacto para buscar una oportunidad de venta. |
 | Oportunidades | Un registro que sigue los detalles de una venta potencial o de un acuerdo en curso
 | Cuentas | Un registro de una organización que es un cliente potencial cualificado, un cliente existente, un socio o un competidor que mantiene una relación de importancia similar. |
 {: .reset-td-br-1 .reset-td-br-2 }
 
-En Braze, estos cuatro objetos se combinan y se reducen a dos: perfiles de usuario y objetos empresariales.
+En Braze, estos cuatro objetos se combinan y reducen a dos: los perfiles de usuario y los objetos empresariales.
 
 | Objeto Braze B2B | Descripción | Objetos B2B originales  |
 | --- | --- | --- |
-| Perfiles de usuario | Éstos se mapean directamente con clientes potenciales y contactos en tu sistema CRM de ventas. Como Braze capta los clientes potenciales, se crean automáticamente como clientes potenciales en tu sistema CRM de ventas. A medida que se convierten en contactos, los ID y detalles de los contactos se sincronizan de nuevo con Braze. |Dirige<br> Contactos |
+| Perfiles de usuario | Éstos se mapean directamente con clientes potenciales y contactos en tu sistema CRM de ventas. Como Braze capta los clientes potenciales, se crean automáticamente como clientes potenciales en tu sistema CRM de ventas. A medida que se convierten en contactos, los ID y detalles de los contactos se sincronizan de nuevo con Braze. |Clientes potenciales<br> Contactos |
 | Objetos empresariales | Se mapean con cualquier objeto no usuario de tu sistema CRM de ventas. Esto incluye tus objetos específicos de ventas, como objetos de cuenta y objetos de oportunidad. | Cuentas<br> Oportunidades |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Paso 1: Crea tus objetos de negocio en Braze
 
-Los objetos de negocio son cualquier conjunto de datos no centrado en el usuario. En un contexto B2B, éstos incluyen tus datos de cuentas y oportunidades, y cualquier otro conjunto de datos pertinente no centrado en el usuario que tu empresa siga.
+Los objetos empresariales son cualquier conjunto de datos no centrados en el usuario. En un contexto B2B, éstos incluyen tus datos de cuentas y oportunidades, y cualquier otro conjunto de datos pertinente no centrado en el usuario que tu empresa siga.
 
 Existen dos métodos para crear y gestionar tus objetos de negocio en Braze, los catálogos y las fuentes conectadas. 
 
@@ -73,30 +73,30 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
   </tr>
   <tr>
     <td rowspan="4">Catálogo > Catálogo de cuentas</td>
-    <td><code>ID</code></td>
-    <td><code>cuenta</code></td>
-    <td><code>ID</code></td>
+    <td><code>id</code></td>
+    <td><code>account</code></td>
+    <td><code>id</code></td>
   </tr>
   <tr>
-    <td><code>NombreCuenta</code></td>
-    <td><code>cuenta</code></td>
-    <td><code>Nombre de la cuenta</code></td>
+    <td><code>AccountName</code></td>
+    <td><code>account</code></td>
+    <td><code>Account Name</code></td>
   </tr>
   <tr>
-    <td><code>Tipo</code></td>
-    <td><code>cuenta</code></td>
-    <td><code>Tipo</code></td>
+    <td><code>Type</code></td>
+    <td><code>account</code></td>
+    <td><code>Type</code></td>
   </tr>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>cuenta</code></td>
+    <td><code>account</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
 </table>
 
 ##### Ejemplo de tabla de campos de cuenta mapeados
 
-\![Tabla de cuentas de Salesforce con la información correspondiente, como la dirección de facturación y el propietario de la cuenta.]({% image_buster /assets/img/b2b/sf_accounts.png %})
+![Tabla de cuentas de Salesforce con la información correspondiente, como la dirección de facturación y el propietario de la cuenta.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
 {% endsubtab %}
 {% subtab Opportunity catalog %}
@@ -112,22 +112,22 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
   </tr>
   <tr>
     <td rowspan="4">Catálogo > Catálogo de oportunidades</td>
-    <td><code>ID</code></td>
-    <td><code>oportunidad</code></td>
-    <td><code>ID</code></td>
+    <td><code>id</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>id</code></td>
   </tr>
   <tr>
-    <td><code>NombreDeLaOportunidad</code></td>
-    <td><code>oportunidad</code></td>
-    <td><code>Nombre de la oportunidad</code></td>
+    <td><code>OpportunityName</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>Opportunity Name</code></td>
   </tr>
   <tr>
-    <td><code>Territorio</code></td>
-    <td><code>oportunidad</code></td>
-    <td><code>Territorio</code></td>
+    <td><code>Territory</code></td>
+    <td><code>opportunity</code></td>
+    <td><code>Territory</code></td>
   <tr>
     <td><code>OTHER_FIELDS</code></td>
-    <td><code>oportunidad</code></td>
+    <td><code>opportunity</code></td>
     <td><code>OTHER_FIELDS</code></td>
   </tr>
   </tr>
@@ -135,7 +135,7 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
 
 ##### Ejemplo de tabla de campos de oportunidad mapeados
 
-\![Tabla de oportunidades de Salesforce con la información correspondiente, como la dirección de facturación y el propietario de la cuenta.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
+![Tabla de oportunidades de Salesforce con la información correspondiente, como la dirección de facturación y el propietario de la cuenta.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
 {% endsubtab %}
 {% endsubtabs %}
@@ -146,12 +146,12 @@ En este caso de uso, Salesforce es el sistema CRM de ejemplo. Puedes mapear sobr
 
 Los orígenes conectados son tablas de datos alojadas por ti en tu propio almacén de datos y consultadas por [las extensiones de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) Braze [CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). A diferencia de los catálogos, en lugar de duplicar tus objetos de negocio (cuentas y oportunidades) en Braze, los mantendrías en tu almacén de datos y utilizarías tu almacén como fuente de verdad.
 
-Para configurar las [fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources), consulta [Integrar fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
+Para configurar las fuentes conectadas, consulta [Integrar fuentes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
 
 {% endtab %}
 {% endtabs %}
 
-## Paso 2: Relaciona los objetos de tu empresa con los perfiles de usuario
+## Paso 2: Relaciona los objetos de tu empresa con los perfiles de usuario
 
 Los perfiles de usuario son el objeto principal de Braze, que impulsa la mayor parte de tu segmentación demográfica, desencadenamiento y personalización. Los perfiles de usuario incluyen [datos de usuario predeterminados]({{site.baseurl}}/user_guide/data/user_data_collection/) recopilados por nuestro SDK y otras fuentes, incluidos [datos personalizados]({{site.baseurl}}/user_guide/data/custom_data/), que adoptan la forma de atributos (datos demográficos), eventos (datos de comportamiento) o compras (datos de transacciones).
 
@@ -164,8 +164,8 @@ En primer lugar, asegúrate de que Braze y el CRM que elijas tengan un identific
 | Campo de Braze | Objeto CRM (Salesforce) | Campo CRM (Salesforce) | Información adicional |
 | --- | --- | --- | --- |
 | `Aliases.salesforce_lead_id` | Dirige | `id` |  \- Etiqueta de alias de usuario: `salesforce_lead_id` <br>\- Nombre del alias de usuario: `lead_id`|
-| `Aliases.salesforce_contact_id` | Ponte en contacto con | `id` | \- Etiqueta de alias de usuario: `salesforce_contact_id` <br>\- Nombre del alias de usuario: `contact_id` |
-| `AccountId` | Ponte en contacto con | `AccountId` | 
+| `Aliases.salesforce_contact_id` | Ponte en contacto | `id` | \- Etiqueta de alias de usuario: `salesforce_contact_id` <br>\- Nombre del alias de usuario: `contact_id` |
+| `AccountId` | Ponte en contacto | `AccountId` | 
 | `OpportunityId` (opcional, escalar) <br>o<br> `Opportunities` (opcional, matriz) | Oportunidad | `id` | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 

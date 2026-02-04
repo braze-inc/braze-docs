@@ -1,6 +1,6 @@
 ---
-nav_title: HTMLメールテンプレートをアップロードする
-article_title: HTMLメールテンプレートをアップロードする
+nav_title: HTML メール テンプレートの読み込む
+article_title: HTML メールテンプレートの読み込むアップ
 page_order: 2
 description: "このリファレンス記事では、Brazeダッシュボードを使用したHTMLメールテンプレートの作成、管理、トラブルシューティングの方法について説明する。"
 tool:
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# HTMLメールテンプレートをアップロードする
+# HTML メール テンプレートの読み込む
 
 > Braze ダッシュボードでは、独自の HTML メールテンプレートをアップロードし、後でキャンペーンに使用するために保存することができます。また、エディターを使って[Eメールテンプレートを作成する]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/)こともできる。
 

@@ -16,7 +16,7 @@ Um einen Bericht über Ihre Einnahmen auf dem Dashboard anzuzeigen, gehen Sie zu
 
 Sie können Ihren Umsatzbericht anpassen, indem Sie einen Datumsbereich, Apps und Parameter auswählen.
 
-\![Die Seite "Umsatzbericht" zeigt das Diagramm "Performance im Zeitverlauf" mit dem Parameter "Umsatz".]({% image_buster /assets/img/revenue_report.png %})
+![Der Umsatzbericht enthält das Diagramm "Leistung im Zeitverlauf", wobei der Umsatz als Parameter eingestellt ist.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtern nach Datum und Apps
 
@@ -38,6 +38,10 @@ Sie können die folgenden Daten im **Diagramm Performance im Zeitverlauf** anzei
 - Umsatz pro Nutzer:in
 
 ## Die Umsatzberechnung
+
+{% alert note %}
+Wenn Sie einen Umsatz für eine Währung ohne Wechselkurs verbuchen, verbucht Braze ihn als einen Kauf von US $0,00.
+{% endalert %}
 
 <style>
     .no-split {
@@ -80,6 +84,6 @@ Sie können die folgenden Daten im **Diagramm Performance im Zeitverlauf** anzei
 
 In der Tabelle **Aufschlüsselung der Produkte** finden Sie eine Liste der Produkte, die während des von Ihnen ausgewählten Zeitraums gekauft wurden, wie viele Produkte gekauft wurden und wie viel Umsatz jedes Produkt generiert hat.
 
-\![Die Tabelle "Aufschlüsselung der Produkte" mit den Spalten "Produktname", "Gekauft" und "Umsatz".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
+![Die Produktaufschlüsselung mit den Spalten Produktname, Absatz und Umsatz.]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 

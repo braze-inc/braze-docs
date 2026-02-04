@@ -40,8 +40,8 @@ For example, let's say your app hosts a weekly trivia contest. You send a push n
 
 Shorter TTLs make sure users receive timely notifications for events or promotions that quickly lose relevance. For example:
 
-- **Retail:** Sending a push for a flash sale that ends in 2 hours (TTL: 1–2 hours)
-- **Food delivery:** Notifying users when their order is nearby (TTL: 10–15 minutes)
+- **Retail:** Sending a push for a flash sale that ends in 2 hours (TTL: 1-2 hours)
+- **Food delivery:** Notifying users when their order is nearby (TTL: 10-15 minutes)
 - **Transportation apps:** Sharing ride arrival updates (TTL: a few minutes)
 - **Event reminders:** Notifying users when a webinar is starting soon (TTL: under 1 hour)
 

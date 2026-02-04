@@ -63,7 +63,7 @@ The **Overview** tab contains basic information about a user and their interacti
 | Purchases | Lifetime revenue attributed to this user, their last purchase, total number of purchases, and a list of each purchase. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on this data, see [User Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/).
+For more information on this data, see [SDK data collection]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 
 ![The Overview tab of a user profile.]({% image_buster /assets/img_archive/user_profile2.png %})
 
@@ -151,5 +151,11 @@ Some fields may be absent in a user's **Message History** tab in the following s
 - When an event is missing data for **Campaign/Canvas** and **Message Sent**, this indicates that this message was sent from an API campaign (not API-triggered campaigns) that didn't specify the `campaign_id` and `message_variation_id`. These fields are optional and may be left out of the request body. When these fields are specified, that information is populated into the message history logs.
    - If a particular message is missing entirely from the messaging history but appears in the **Campaigns Received** log, it's likely the user received the campaign before being identified as the current user. If an existing profile is orphaned, the **Campaigns Received** log is transferred, but the messaging history is not. 
 - When data is missing for **Campaign/Canvas**, a manual test may have been sent. Manual tests are logged in the **Messaging History** tab, but the campaign or Canvas that was sent won't be logged.
+
+## Related articles
+
+- [User profile lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [POST: Export user profile by identifier]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [POST: Delete users]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 

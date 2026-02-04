@@ -31,7 +31,7 @@ Aunque no hay límites en cuanto al número de caracteres de texto que puedes in
 Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomendado de 500 KB, un tamaño de imagen máximo de 5 MB y admiten los tipos de archivo PNG, JPEG y GIF.
 
 {% tabs %}
-{% tab Retrato %}
+{% tab Portrait %}
 
 | Tipo | Relación de aspecto | Calidad de imagen | Notas |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomend
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Horizontal %}
+{% tab Landscape %}
 
 | Tipo | Relación de aspecto | Calidad de imagen | Notas |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ Todos los mensajes dentro de la aplicación tienen un tamaño de imagen recomend
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Deslizamiento hacia arriba %}
+{% tab Slideup %}
 
 | Tipo | Relación de aspecto | Calidad de imagen | Notas |
 | --- | --- | --- | --- |

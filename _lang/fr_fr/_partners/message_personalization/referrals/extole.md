@@ -27,11 +27,11 @@ Avec l'intégration de Braze et Extole, vous pouvez extraire des événements et
 | URL de l'API Braze | Votre URL API Braze est spécifique à votre [instance Braze]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Cas d'utilisation
+## Cas d’utilisation
 
-Les cas d'utilisation suivants montrent quelques façons de tirer parti de l'intégration d'Extole avec Braze. Travaillez avec votre implémentation Extole et vos responsables de la satisfaction client pour développer une option qui répond aux besoins spécifiques de votre entreprise.
+Les cas d'utilisation suivants illustrent quelques façons d'utiliser l'intégration d'Extole avec Braze. Travaillez avec votre implémentation Extole et vos responsables de la satisfaction client pour développer une option qui répond aux besoins spécifiques de votre entreprise.
 
-- Tirez parti des custom events de vos programmes de recommandation et d'engagement pour déclencher une campagne Braze ou un canvas
+- Utilisez les événements personnalisés de vos programmes de recommandation et d'engagement pour déclencher une campagne Braze ou Canvas.
 - Créez des segments personnalisés, des tableaux de bord et des rapports en utilisant les données de vos programmes alimentés par Extole
 - Désabonnez ou abonnez automatiquement les utilisateurs à votre liste de marketing dans Braze
 
@@ -52,7 +52,7 @@ Complétez les étapes suivantes pour que votre intégration soit rapidement op�
 
 ### Événements du programme Extole
 
-Vous trouverez ci-dessous les événements par défaut, les propriétés d'événement et les attributs utilisateur qu'Extole enverra à Braze. Contactez l’équipe de la mise en œuvre d'Extole ou de la satisfaction client pour identifier et ajouter d’autres événements Extole à votre intégration.
+Vous trouverez ci-dessous les événements par défaut, les propriétés d'événement et les attributs utilisateur qu'Extole enverra à Braze. Contactez vos gestionnaires de mise en œuvre ou de satisfaction client Extole pour identifier et ajouter des événements Extole supplémentaires à votre intégration.
 
 | Événement | Description | propriétés d'événement | Attributs de l'utilisateur |
 | ----------- | ----------- | ----------- | ----------- |

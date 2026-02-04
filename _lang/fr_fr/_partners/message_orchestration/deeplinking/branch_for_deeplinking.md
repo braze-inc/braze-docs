@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branch](https://branch.io/), une plateforme de liaison mobile, vous aide à acquérir, engager et mesurer à travers tous les appareils, canaux et plateformes en fournissant une vue complète de tous les points de contact de l'utilisateur.
+> [Branch](https://branch.io/) est une plateforme de liaison mobile utilisée pour acquérir, engager et mesurer à travers les appareils, les canaux et les plateformes en fournissant une vue holistique des points de contact de l'utilisateur.
 
 _Cette intégration est maintenue par la branche._
 
@@ -29,7 +29,7 @@ Consultez [le guide d'intégration du SDK de Branch](https://help.branch.io/deve
 Pour prendre en charge l'envoi de liens universels iOS en tant que liens profonds dans Braze :
 
 1. Suivez les instructions fournies dans la documentation de Branch pour configurer les [liens universels](https://help.branch.io/developers-hub/docs/ios-universal-links).
-2. Mettez en œuvre la méthode [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate)[braze(_:shouldOpenURL :)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) dans votre intégration SDK Braze pour [acheminer les liens universels]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) depuis votre application.
+2. Mettez en œuvre la [`BrazeDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate) méthode [braze(_:shouldOpenURL:)](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazedelegate/braze(_:shouldopenurl:)-6xxc5) dans votre intégration SDK Braze pour [acheminer les liens universels]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/advanced_use_cases/linking/#linking-handling-customization) depuis votre application.
 
 ### Création de liens profonds dans des e-mails
 
