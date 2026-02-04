@@ -108,8 +108,8 @@ import BrazeKit
 import braze_react_native_sdk
 
 let configuration = Braze.Configuration(
-  apiKey: "<BRAZE_API_KEY>",
-  endpoint: "<BRAZE_ENDPOINT>"
+  apiKey: "{YOUR-BRAZE-API-KEY}",
+  endpoint: "{YOUR-BRAZE-ENDPOINT}"
 )
 configuration.api.sdkAuthentication = true
 let braze = BrazeReactBridge.perform(
@@ -202,7 +202,7 @@ braze.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 {% endtab %}
 {% tab React Native %}
 
-Supply the JWT when calling [`changeUser`](https://braze-inc.github.io/braze-react-native-sdk/):
+Supply the JWT when calling [`changeUser`](https://braze-inc.github.io/braze-react-native-sdk/classes/Braze.Braze-1.html#changeUser):
 
 ```typescript
 import Braze from '@braze/react-native-sdk';
@@ -314,7 +314,7 @@ braze.subscribeToSdkAuthenticationFailures((error) => {
   console.error("SDK authentication failed:", error);
   console.log("Error code:", error.errorCode);
   console.log("User ID:", error.userId);
-  console.log("Signature:", error.signature);
+  // Note: Do not log error.signature as it contains sensitive authentication credentials
   
   // TODO: Check if the error.userId matches the currently logged-in user
   // Fetch a new token from your server and set it
@@ -332,8 +332,8 @@ const sdkAuthErrorSubscription = Braze.addListener(
   Braze.Events.SDK_AUTHENTICATION_ERROR,
   (error) => {
     // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
-    console.log(`SDK Authentication for ${error.user_id} failed with error code ${error.error_code}.`);
+    // TODO: Check if the `userId` within the `error` matches the currently logged-in user
+    console.log(`SDK Authentication for ${error.userId} failed with error code ${error.errorCode}.`);
     
     const updated_jwt = getNewTokenSomehow(error);
     Braze.setSdkAuthenticationSignature(updated_jwt);
