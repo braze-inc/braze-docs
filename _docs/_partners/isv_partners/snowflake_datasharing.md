@@ -62,7 +62,7 @@ A row is added to `CHANGELOGS_CAMPAIGN_SHARED` when:
   - Conversion behaviors
 
 {% alert important %}
-Save or update post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the campaign or apply the post-launch draft changes to the active campaign.
+Saving or updating the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the campaign or apply the post-launch draft changes to the active campaign.
 {% endalert %}
 
 ### SNAPSHOTS_CAMPAIGN_MESSAGE_VARIATION_SHARED
@@ -79,7 +79,7 @@ A row is added to `CHANGELOGS_CANVAS_SHARED` when:
   - Variations (percentage, first step assignments, variation names)
 
 {% alert important %}
-Save or update post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+Saving or updating the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
 {% endalert %}
 
 ### SNAPSHOTS_CANVAS_VARIATION_SHARED
@@ -96,7 +96,7 @@ A row is added to `SNAPSHOTS_CANVAS_STEP_SHARED` when:
   - Actions (including message content changes within message variations)
 
 {% alert important %}
-Saving post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+Saving the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
 {% endalert %}
 
 ### SNAPSHOTS_CANVAS_FLOW_STEP_SHARED
@@ -108,7 +108,7 @@ A row is added to `SNAPSHOTS_CANVAS_FLOW_STEP_SHARED` when:
   - Name
 
 {% alert important %}
-Saving post-launch draft does NOT automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
+Saving the post-launch draft does not automatically trigger an update. The update is triggered only when you launch the Canvas or apply the post-launch draft changes to the active Canvas.
 {% endalert %}
 
 ## General Data Protection Regulation (GDPR) compliance
