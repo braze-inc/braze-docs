@@ -28,6 +28,10 @@ If your domain or IP is blocked by an ISP, the message logs in the [Message Acti
 
 You can use automated IP warming to gradually increase your daily send volume, allowing inbox providers to learn and trust your sending patterns. Monitor your IP warming tracker by selecting the **Automated IP Warming** tile in the **Pick up where you left off** section of your home dashboard. 
 
+{% alert important %}
+Automated IP warming is in early access. Contact your Braze account manager if you're interested in participating in the early access.
+{% endalert %}
+
 Braze sends to your most engaged subscribers first, which allows daily volume to grow at a pace that matches best practices. Then, Braze tracks engagement and deliverability signals. If any issues are detected, your schedule is adjusted automatically.
 
 ![IP warming tracker with send volume for the week of January 16.]({% image_buster /assets/img/automated_ip_warming_example.png %})
