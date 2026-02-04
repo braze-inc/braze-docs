@@ -530,7 +530,7 @@ This is similar to the [JavaScript bridge]({{site.baseurl}}/user_guide/message_b
 
 ### Custom UI implementations (headless)
 
-If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
+If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks (and impressions) from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
 
 Use the `logClick()` method on the Banner object.
 
