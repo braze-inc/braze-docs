@@ -126,6 +126,10 @@ Kafka record schema for when an Agent Console agent is executed
 
 Kafka record schema for when a tool is executed
 
+{% alert note %}
+This event does not include a `user_id` field and is considered an **anonymous user event**. To receive this event, be sure to indicate **send anonymous users** when [configuring your Currents integration]({{site.baseurl}}/user_guide/data/distribution/braze_currents/setting_up_currents/#requirements).
+{% endalert %}
+
 {% tabs %}
 {% tab Cloud Storage %}
 ```json
