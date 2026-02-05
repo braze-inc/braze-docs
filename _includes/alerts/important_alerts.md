@@ -73,3 +73,18 @@ If you're participating in the Canvas Context early access, Canvas entry propert
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == 'time filter types' %}
+
+{% alert important %}
+**Choosing between "Day of year" and "Time" filter types**: When filtering context variables that contain dates, choose the correct comparison type based on whether the date repeats every year:
+
+- **Use "Day of year"** when the date repeats every year (for example, birthdays, anniversaries, or holidays like Christmas). This comparison type calculates based on the day of the year (1-365/366), ignoring the year component.
+- **Use "Time"** when the date is an absolute date that doesn't repeat (for example, contract end dates, appointment dates, or subscription renewal dates). This comparison type calculates based on the full timestamp, including the year.
+
+Using "Day of year" for absolute dates can produce incorrect or unexpected results because the calculation ignores the year component. For example, if you're comparing a future contract end date in April to determine if it's within 63 days, using "Day of year" may incorrectly match dates because it only compares day numbers (119 vs 359) without considering that April is actually 188 days away.
+
+**General guideline**: Does the date repeat every year? **Yes** → Use "Day of year". **No** → Use "Time".
+{% endalert %}
+
+{% endif %}
