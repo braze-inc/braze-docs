@@ -302,7 +302,7 @@ Braze.prepareForDelayedInitialization(analyticsBehavior: .queue)
 
 ##### Drop
 
-To drop push analytics received before SDK initialization, pass `.drop` to the `analyticsBehavior` parameter:
+To drop push analytics received before SDK initialization, pass `.drop` to the `analyticsBehavior` parameter. With this option, any push analytics event that occurs while the SDK is not initialized will be ignored.
 
 {% tabs local %}
 {% tab Swift %}
