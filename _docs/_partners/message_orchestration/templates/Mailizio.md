@@ -37,7 +37,7 @@ The Mailizio and Braze integration lets you design dynamic email templates using
 
 ## Integration
 
-Provide your Braze REST API key and cluster instance to your Mailizio customer success manager. The Mailzilio team then sets up the initial integration for you.
+Provide your Braze REST API key and cluster instance to your Mailizio customer success manager. The Mailizio team then sets up the initial integration for you.
 
 {% alert important %}
 This is a one-time setup, and any exports in the future automatically utilize this API key.
