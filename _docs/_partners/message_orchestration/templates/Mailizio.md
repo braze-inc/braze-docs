@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Mailizio
 
-> [Mailizio](https://mailizio.com/) is an email creation and management platform that makes it easy to design reusable, brand-safe content using an intuitive visual editor. With Mailizio's integration to Braze, you can export your content blocks and email marketing, then automatically generate in-app messages from those same assets, enabling fast and fully controlled campaign deployment.
+> [Mailizio](https://mailizio.com/) is an email creation and management platform that makes it easy to design reusable, brand-safe content using an intuitive visual editor. With Mailizio's integration to Braze, you can export your content blocks and email templates, then automatically generate in-app messages from those same assets, enabling fast and fully controlled campaign deployment.
 
 _This integration is maintained by Mailizio._
 
