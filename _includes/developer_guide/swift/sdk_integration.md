@@ -206,7 +206,7 @@ empty_swift_file.swift
 
 ### Step 2: Set up delayed initialization (optional)
 
-You can choose to delay when the Braze Swift SDK is initialized, which is useful if your app needs to load config or wait for user consent before starting the SDK. Delayed initialization ensures Braze push notifications and push tokens received before SDK initialization are queued and processed once the SDK is initialized.
+You can choose to delay when the Braze Swift SDK is initialized, which is useful if your app needs to load a configuration or wait for user consent before starting the SDK. Delayed initialization ensures Braze push notifications and push tokens received before SDK initialization are enqueued and processed once the SDK is initialized.
 
 To use delayed initialization, the minimum Braze SDK version is required:
 {% sdk_min_versions swift:11.2.0 %}
