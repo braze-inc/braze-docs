@@ -387,5 +387,5 @@ valid_partner_list:
 - name: DOTS.ECO
   url: /docs/partners/dots.eco/
 - name: Mailizio
-  url: /docs/partners/mailizio
+  url: /docs/partners/mailizio/
 ---
