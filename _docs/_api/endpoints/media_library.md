@@ -2,7 +2,7 @@
 nav_title: Media Library
 article_title: Media Library Endpoints
 search_tag: Endpoint
-page_order: 10
+page_order: 2.5
 layout: dev_guide
 
 description: "This landing page lists the Braze media library endpoints."

@@ -1282,6 +1282,9 @@ This event occurs when a push token is inserted, updated, or removed. Use this t
   - If the push permission is unknown, this will be empty. By default, Braze will attempt to send foreground push notifications to the token.
 - The `push_token_provisionally_opted_in` field only applies to iOS push tokens.
   - If you have [Provisional Authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push) set up, provisional tokens will have this field set to `true`. All other push tokens will be `false`.
+- The `sdk_version` field will only populate if the token state change is initiated by SDK.
+  - If there is a `changeUser` SDK event that triggers the token to be moved from one user to another, the `sdk_version` field will populate.
+  - If there is a push bounce (for example, due to uninstall), the `sdk_version` field will be blank.
 - Whenever a push token enters Braze, its lifecycle events are recorded. There are three types of token change events ("add", "update", and "remove") recorded in the `push_token_state_change_type` field. Note the following details:
   - For a new token that hasn't existed before, this ingests one "add" event.
   - For updating the token with the same token string on the same user (gateway or `foreground_push_disabled` or other "secondary" fields changed), this will ingest one "update" event on the same token.
