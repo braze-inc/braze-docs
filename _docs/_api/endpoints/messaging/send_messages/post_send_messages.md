@@ -21,24 +21,20 @@ If you are targeting a segment, a record of your request will be stored in the [
 {% multi_lang_include api/payload_size_alert.md %}
 
 {% alert important %}
-When using this endpoint for API-Only sends (API Campaign), the recipient must already exist in Braze for the request to succeed. This applies when specifying users in the `external_user_ids` or `user_aliases` parameters.
+When using this endpoint for API campaigns, the recipient must already exist in Braze for the request to succeed. This applies when specifying users in the `external_user_ids` or `user_aliases` parameters.
 {% endalert %}
 
 ### Creating new users with API sends
 
-If you need to create a user as part of a send via API, you have two options:
+If you need to create a user as part of a send using the API, you have two options:
 
-**Option 1: Use `/users/track` then send**
+#### Option 1: Use `/users/track` then send
 
-Create the user using the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, then wait an appropriate delay for the data to propagate (generally a few minutes is recommended) before initiating the API-Only send. Note that Braze doesn't guarantee data processing times on `/users/track`, so there is some risk of race conditions if you don't allow enough time between these calls.
+First, create the user with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, then wait for the data to propagate (generally, a few minutes is recommended) before initiating the API-only send. Note that Braze doesn't guarantee data processing times on `/users/track`, so [race conditions]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) may occur if you don't allow enough time between these calls.
 
-**Option 2: Use API-Triggered Campaign or Canvas**
+#### Option 2: Use an API-triggered campaign or Canvas
 
-Pivot to using [API-Triggered Campaign]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) workflows. These allow you to create a recipient if one doesn't already exist (unlike with API-Only sends). This option simplifies your backend processes, but requires you to configure a campaign or Canvas in the Braze dashboard.
-
-{% alert note %}
-These considerations are unique to the "new user" scenario. If your users already exist in Braze, you can use this endpoint without any additional steps.
-{% endalert %}
+Use an [API-triggered campaign]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) workflow. These allow you to create a recipient if one doesn't already exist. This option simplifies your backend processes, but requires you to configure a campaign or Canvas in the Braze dashboard.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
