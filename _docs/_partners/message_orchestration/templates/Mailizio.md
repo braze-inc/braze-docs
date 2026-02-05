@@ -31,7 +31,7 @@ The Mailizio and Braze integration lets you design dynamic email templates using
 | Requirement | Description |                          
 | ----------- | ----------- |  
 | Mailizio account | A Mailizio account is required to take advantage of this partnership. |  
-| Braze REST API key | A Braze REST API key with full **Templates** permissions.<br><br>You can careate a Braze REST API key in the Braze dashboard from **Settings** > **API Keys**. |  
+| Braze REST API key | A Braze REST API key with full **Templates** permissions.<br><br>You can create a Braze REST API key in the Braze dashboard from **Settings** > **API Keys**. |  
 | A Braze REST endpoint | [Your REST endpoint URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Your endpoint depends on the Braze URL for your instance. |  
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
