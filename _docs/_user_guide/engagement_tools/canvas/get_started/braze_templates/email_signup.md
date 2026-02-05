@@ -3,7 +3,7 @@ nav_title: Email sign-up with double opt-in
 article_title: Email Sign-Up with Double Opt-In
 page_order: 2
 page_type: reference
-description: "This article describes how to use a Braze Canvas template to to expand your reach with verified email sign-ups."
+description: "This article describes how to use a Braze Canvas template to expand your reach with verified email sign-ups."
 tool: Canvas
 ---
 
@@ -17,7 +17,7 @@ This article will walk you through a use case for the **Email sign-up with doubl
 
 To successfully use this template, you'll need the following:
 
-- A [multi-page in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page) with one page to capture your users' emails and another to communicate a success message.
+- A [multi-page in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page) with one page to capture your users' emails and another to communicate a success message. 
 - A confirmation email for users to verify their email address.
 - A welcome email with an exclusive promotion code for users who double opt-in.
 
@@ -37,7 +37,7 @@ Let’s adjust the Canvas details to reflect our goal.
 
 {:start="2"}
 2. Update the Canvas name to specify that the Canvas is for targeting new users when they first use the app.
-3. Update the description to explain that this Canvas contains personalized messaging for users to double opt-in.
+3. Update the description to explain that this Canvas contains personalized messaging for users to double-opt in.
 4. Add the tag **Email** so that we can filter for it on the Canvas home page.
 
 ![The new name, description, and tag for the Canvas.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
@@ -76,7 +76,7 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 ### Step 6: Customize your Canvas
 
-Now, we’ll build our Canvas by customizing the channels and content that will send to users. Because we’re focusing on verifying our email sign-ups, we don't need to add or remove any of the template's Canvas steps and channels.
+Now, we’ll build our Canvas by customizing the channels and content that will be sent to users. Because we’re focusing on verifying our email sign-ups, we don't need to add or remove any of the template's Canvas steps and channels.
 
 1. Select the first Message step named **Email Sign-up**. This is where we'll update the template to use our multi-page in-app (and in-browser) message.
 
@@ -92,9 +92,13 @@ Now, we’ll build our Canvas by customizing the channels and content that will 
 - Users who haven't subscribed to Steppington with their email
 
 {:start="3"}
-3. Next, replace the email body with our branded confirmation email for the **Verify Email** Message step. This will send an email to our subscribed users and prompt them to confirm their email address and opt-in to our messaging.
-4. Keep the **Confirm Subscription** Action Path step as is. This step further splits our users into those who have confirmed their email and those who have not with a one-week window.
-5. Lastly, update the **Welcome + Discount** Message step with our confirmation email that includes an exclusive promotion code.  
+3. Next, replace the email body with our branded confirmation email for the **Verify Email** Message step. This will send an email to our subscribed users and prompt them to confirm their email address and opt in to our messaging.
+4. Keep the **Confirm Subscription** Action Path step as is. This step further splits our users into those who have confirmed their email and those who have not, with a one-week window.
+5. Lastly, update the **Welcome + Discount** Message step with our confirmation email that includes an exclusive promotion code.
+
+{% alert note %}
+The **Verify Email** Message step is triggered on the user's second session. This is because the first session start event would trigger the Canvas, but a second session start after the user has reached the first **Email Sign-up** Message step is required for the user to be eligible to trigger the second in-app message.
+{% endalert %}
 
 ### Step 7: Test and launch your Canvas
 
