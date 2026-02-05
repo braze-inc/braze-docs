@@ -18,6 +18,8 @@ description: "This article outlines details about the Send messages immediately 
 
 If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
+
 {% multi_lang_include api/payload_size_alert.md %}
 
 {% alert important %}
@@ -36,7 +38,6 @@ First, create the user with the [`/users/track`]({{site.baseurl}}/api/endpoints/
 
 Use an [API-triggered campaign]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) or [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) workflow. These allow you to create a recipient if one doesn't already exist. This option simplifies your backend processes, but requires you to configure a campaign or Canvas in the Braze dashboard.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
 ## Prerequisites
 
