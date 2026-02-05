@@ -2415,7 +2415,7 @@ This event occurs when an originally scheduled banner message was aborted for so
 #### Property details
 
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Banner messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Banner messages every 1 week`
 
 {% endapi %}
 
@@ -3014,7 +3014,7 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Content Card messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -4122,7 +4122,7 @@ This event occurs if an email message was aborted based on Liquid aborts, etc.
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 email messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -6780,7 +6780,7 @@ This event occurs when an originally scheduled in-app message was aborted.
 #### Property details
 
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 in-app messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 in-app messages every 1 week`
 
 {% endapi %}
 
@@ -7467,7 +7467,7 @@ This event occurs when a scheduled LINE message cannot be delivered, before send
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 LINE messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 LINE messages every 1 week`
 
 {% endapi %}
 
@@ -8781,7 +8781,7 @@ This event occurs if a push notification message was aborted based on Liquid abo
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 push messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 push messages every 1 week`
 
 {% endapi %}
 
@@ -10024,7 +10024,7 @@ This event is created when an RCS send is interrupted due to an error detected w
 #### Property details
 
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 RCS messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 RCS messages every 1 week`
 
 {% endapi %}
 
@@ -11409,7 +11409,7 @@ This event occurs if an SMS message was aborted based on Liquid aborts, etc.
 #### Property details
 
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 SMS messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 SMS messages every 1 week`
 
 {% endapi %}
 
@@ -13240,7 +13240,7 @@ This event occurs if a webhook message was aborted based on Liquid aborts, etc.
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 webhook messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 webhook messages every 1 week`
 
 {% endapi %}
 
