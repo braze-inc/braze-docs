@@ -36,7 +36,7 @@ Instructions for creating a data source can be found on the [Tealium](https://do
 1. In Braze, navigate to **Currents > + Create Current > Tealium Export**. 
 2. Provide an integration name, contact email, and your Tealium URL. 
 3. Next, select what you want to track from the list of available events. 
-4. Select **Launch Current**
+4. Select **Launch Current**.
 
 You can select the **Include events from anonymous users** checkbox to also send events that do not have an `external_user_id` to Tealium.
 
