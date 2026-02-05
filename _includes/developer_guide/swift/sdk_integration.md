@@ -285,7 +285,7 @@ When delayed initialization is enabled, push analytics are queued by default. Ho
 
 ##### Explicitly queue
 
-To explicitly queue push analytics (default behavior), pass `.queue` to the `analyticsBehavior` parameter:
+To explicitly queue push analytics (default behavior), pass `.queue` to the `analyticsBehavior` parameter. Push analytics events that are queued prior to initialization will be processed and flushed to the server upon initialization.
 
 {% tabs local %}
 {% tab Swift %}
