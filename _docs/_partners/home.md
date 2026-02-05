@@ -386,4 +386,6 @@ valid_partner_list:
   url: /docs/partners/openloyalty/
 - name: DOTS.ECO
   url: /docs/partners/dots.eco/
+- name: Mailizio
+  url: /docs/partners/mailizio
 ---
