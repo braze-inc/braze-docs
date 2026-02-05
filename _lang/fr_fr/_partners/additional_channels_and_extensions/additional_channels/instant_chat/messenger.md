@@ -70,7 +70,7 @@ Une fois que vous êtes certain de recevoir des PSID, coordonnez et partagez cel
 
 ### Étape 3 : Configurez votre modèle de webhook
 
-Dans **Modèles et médias**, allez dans **Modèles de webhook** et choisissez le **modèle de webhook Facebook Messenger.**
+À partir de **Modèles et médias & **, allez dans **Modèles de webhook** et choisissez le **modèle de webhook Facebook Messenger.**
 
 1. Donnez un nom au modèle et ajoutez des Teams et des tags, si nécessaire.
 2. Saisissez votre message ou choisissez un modèle de message parmi [ceux mis à disposition par Facebook](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). Vous pouvez également choisir le [type](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) de message ou la [balise](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags).
@@ -81,7 +81,7 @@ Dans **Modèles et médias**, allez dans **Modèles de webhook** et choisissez l
 
 Avant d'envoyer votre message, testez votre webhook. Assurez-vous que votre ID Messenger est enregistré dans Braze (ou trouvez-le et testez-le en tant qu'utilisateur personnalisé), et utilisez l'aperçu pour envoyer le message de test :
 
-![L'onglet Test dans le modèle de webhook Facebook Messenger vous permet de prévisualiser le message en l'envoyant à un utilisateur existant.]({% image_buster /assets/img_archive/fbm-test.png %})
+![L'onglet Test dans le modèle de webhook Facebook Messenger montrant que vous pouvez prévisualiser le message en l'envoyant à un utilisateur existant.]({% image_buster /assets/img_archive/fbm-test.png %})
 
 Si vous recevez le message avec succès, vous pouvez configurer ses paramètres de distribution.
 
@@ -89,7 +89,7 @@ Si vous recevez le message avec succès, vous pouvez configurer ses paramètres 
 
 Une fois configurée, utilisez cette intégration pour cibler les utilisateurs de Facebook Messenger. Si vous n'envoyez pas de messages en utilisant les numéros de téléphone des utilisateurs et que vous prévoyez d'envoyer des messages Messenger de manière répétée, vous devriez [créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment) pour tous les utilisateurs pour lesquels l'ID Messenger existe en tant qu'attribut personnalisé et activer le [suivi analytique]({{site.baseurl}}/user_guide/data_and_analytics/reporting/viewing_and_understanding_segment_data/) pour suivre vos taux d'abonnement Messenger au fil du temps. 
 
-![Le filtre de segmentation "messenger_id" est réglé sur "is not blank".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
+![Filtre de segmentation "messenger_id" réglé sur "n'est pas vide".]({% image_buster /assets/img_archive/fbm-segmentation.png %})
 
 Si vous choisissez de ne pas créer de segmentation spécifique pour les abonnés Messenger, veillez à inclure un filtre pour les ID Messenger existants afin d'éviter les erreurs.
 

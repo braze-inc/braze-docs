@@ -12,7 +12,7 @@ Por exemplo, se você incluir `external_send_id: 1234` na solicitação ao envia
 No seu painel do Braze:
 
 1. Acesse **Configurações** > **Preferências de e-mail**.
-2. Sob **Estado do Evento Transacional Postback**, insira a URL onde o Braze deve enviar atualizações de status para seus e-mails transacionais.
+2. Em **Status do Evento Transacional Postback**, insira a URL onde o Braze deve enviar atualizações de status para seus e-mails transacionais.
 3. Teste o postback.
 
 ![]({% image_buster /assets/img/transactional_webhook_url.png %})

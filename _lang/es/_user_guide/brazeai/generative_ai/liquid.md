@@ -22,7 +22,7 @@ Puedes utilizar el Asistente Líquido <sup>BrazeAITM</sup> al crear:
 - Mensajes SMS
 - Notificaciones push
 - Mensajes de correo electrónico HTML
-- Lienzos
+- Canvas
 
 {% alert note %}
 El asistente funciona con mensajes de correo electrónico y no con plantillas. Funciona mejor con mensajes de correo electrónico ya creados.
@@ -32,7 +32,7 @@ El asistente funciona con mensajes de correo electrónico y no con plantillas. F
 
 Para iniciar el asistente <sup>BrazeAITM</sup> Liquid, selecciona el icono del asistente de IA en el creador de mensajes.
 
-\![Creador de mensajes con el asistente de IA.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
+![Creador de mensajes con el asistente de IA.]({% image_buster /assets/img/ai_liquid/ai_assistant_icon.png %}){: style="max-width:50%;"}
 
 Puedes elegir una de las indicaciones incluidas o introducir la tuya propia en el cuadro de texto.
 
@@ -40,31 +40,31 @@ Puedes elegir una de las indicaciones incluidas o introducir la tuya propia en e
 {% tab use app activity %}
 El aviso **Utilizar actividad de la aplicación** genera código Liquid para ayudarte a enviar mensajes diferentes en función de cuándo se utilizó tu aplicación por última vez. Es posible que te hagan preguntas de seguimiento para que el asistente pueda generar un resultado más preciso.
 
-\![Ejemplo de salida de la consulta "Usar actividad de aplicación".]({% image_buster /assets/img/ai_liquid/use_app_activity.png %}){: style="max-width:45%;"}
+![Ejemplo de salida de la consulta "Utilizar actividad de aplicación".]({% image_buster /assets/img/ai_liquid/use_app_activity.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab add countdown %}
 Este aviso generará código Liquid que envía un mensaje con el tiempo que falta para que se produzca un evento. Te pedirá que proporciones detalles sobre la fecha y hora del evento.
 
-\![Ejemplo de salida de la consulta "Añadir cuenta atrás".]({% image_buster /assets/img/ai_liquid/add_countdown.png %}){: style="max-width:45%;"}
+![Ejemplo de salida de la consulta "Añadir cuenta atrás".]({% image_buster /assets/img/ai_liquid/add_countdown.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab inspire me %}
 Este mensaje aparece cuando hay contenido en tu buzón de mensajes. Genera una lista de opciones que puedes elegir para personalizar tu mensaje con Liquid. 
 
-\![Ejemplo de salida de la consulta "Inspírame".]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
+![Ejemplo de salida de la consulta "Inspírame".]({% image_buster /assets/img/ai_liquid/inspire_me.png %}){: style="max-width:45%;"}
 {% endtab %}
 
 {% tab improve my liquid %}
-Este mensaje aparece cuando hay contenido en tu creador de mensajes. Selecciónalo cuando quieras que el asistente haga tu código más eficaz y fácil de leer.
+Este mensaje aparece cuando hay contenido en tu creador de mensajes. Selecciónala cuando quieras que el asistente haga tu código más eficaz y fácil de leer.
 
-\![Ejemplo de salida de la consulta "Mejorar mi Liquid".]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
+![Ejemplo de salida de la consulta "Mejorar mi Liquid".]({% image_buster /assets/img/ai_liquid/improve_my_liquid.png %}){: style="max-width:45%;"}
 {% endtab %}
 {% endtabs %}
 
 Para generar tu código Liquid, selecciona **Actualizar compositor**.
 
-Ventana del asistente de IA con las indicaciones proporcionadas.]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
+![Ventana del asistente de IA con las indicaciones proporcionadas.]({% image_buster /assets/img/ai_liquid/ai_assistant_window.png %}){: style="max-width:50%;"}
  
 Puedes generar otro mensaje utilizando el mismo aviso seleccionando **Regenerar**. Para eliminar el mensaje y volver al anterior, selecciona **Deshacer actualización**.
 
@@ -72,12 +72,12 @@ Puedes generar otro mensaje utilizando el mismo aviso seleccionando **Regenerar*
 
 Los siguientes atributos están actualmente en fase beta para el Asistente de Líquidos <sup>BrazeAITM</sup>:
 
-| Criterio Tipo de conocimiento
-| - | - |
-| Liquid (incluyendo `for` bucles, `if` declaraciones, matemáticas y otros) | Codificación |
-| Atributos de usuario predeterminados y estándar | Atributos | Atributos
-| Atributos personalizados que tengan cualquiera de estos tipos de datos: {::nomarkdown}<ul><li>Booleanos</li><li>Números</li><li>Cadenas</li><li>Matrices</li><li>Tiempo</li></ul>{:/} | Atributos
-| Contenido conectado | Codificación | Codificación
+| Criterio | Tipo de conocimiento | 
+| - | - | 
+| Liquid (incluyendo bucles `for`, declaraciones `if`, matemáticas y otras) | Código |
+| Atributos predeterminados y estándar del usuario | Atributos |
+| Atributos personalizados que tienen cualquiera de estos tipos de datos: {::nomarkdown}<ul><li>Booleanos</li><li>Números</li><li>Cadenas</li><li>Matrices</li><li>Tiempo</li></ul>{:/} | Atributos |
+| Contenido conectado | Código |
 {: .reset-td-br-1 .reset-td-br-2 }
 
 ## Buenas prácticas

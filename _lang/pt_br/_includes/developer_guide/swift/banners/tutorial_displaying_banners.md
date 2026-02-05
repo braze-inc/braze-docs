@@ -136,7 +136,7 @@ linhas-BannerViewController.swift=19-37
 
 #### 3\. Inicialize o Banner e forneça um retorno de chamada
 
-Crie uma instância de `BrazeBannerUI.BannerUIView` com seu objeto Braze e ID de colocação, e forneça um retorno de chamada `processContentUpdates` para mostrar o Banner e atualizar sua restrição de altura com base na altura do conteúdo fornecido.
+Crie uma `BrazeBannerUI.BannerUIView` instância com seu objeto Braze e ID de colocação, e forneça um `processContentUpdates` retorno de chamada para desocultar o Banner e atualizar sua restrição de altura com base na altura do conteúdo fornecido.
 
 !!etapa
 linhas-BannerViewController.swift=38-40
@@ -150,7 +150,7 @@ linhas-BannerViewController.swift=43-58
 
 #### 5\. Ancore o conteúdo e defina restrições de altura
 
-Ancore seu conteúdo principal na parte superior usando Auto Layout e coloque a visualização do Banner logo abaixo. Prenda as bordas esquerda, direita e inferior do Banner à área segura e defina uma restrição de altura inicial de `0` que será atualizada quando o conteúdo for carregado.
+Ancore seu conteúdo principal na parte superior usando Auto Layout e coloque a visualização do Banner logo abaixo dele. Prenda as bordas esquerda, direita e inferior do Banner à área segura e defina uma restrição de altura inicial de `0` que será atualizada quando o conteúdo for carregado.
 
 {% endscrolly %}
 {% endtab %}

@@ -29,7 +29,7 @@ Mit dem Punchh Coupon Framework und Braze können Sie die folgenden Szenarien re
     - Token zur dynamischen Generierung von Coupons: Dies ist ein vom System generiertes Token für die Verschlüsselung.
     - Dynamische URL für die Erstellung von Coupons: Diese URL wird als Link oder Bild in die E-Mail eingebettet, je nach Bedarf des Unternehmens.
 
-![Das Formular zum Erstellen einer Kampagne in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
+![Das Formular für die Erstellung einer Gutscheinkampagne in Punchh.]({% image_buster /assets/img/punchh/punchh8.png %}){: style="max-width:60%;"}
 
 ### Schritt 2: Signatur generieren und URL konstruieren
 
@@ -126,7 +126,7 @@ So verknüpfen Sie den Code mit einem Bild:
 3. Betten Sie Ihren Link in einen HTML {% raw %}`<img>`{% endraw %} Tag ein.
 
 {% tabs local %}
-{% tab Beispieleingabe %}
+{% tab example input %}
 {% raw %}
 ```liquid
 <img src="https://fakebrandz.punchh.com/request_coupons/7xY3bL9jRfZ1pA6mc8qD2eS4vT5wX.png?sign={{jwt}}">
@@ -134,7 +134,7 @@ So verknüpfen Sie den Code mit einem Bild:
 {% endraw %}
 {% endtab %}
 
-{% tab Beispiel-Ausgabe %}
+{% tab example output %}
 ![Gerenderte Ausgabe des Tags für den Code des Gutscheins.]({% image_buster /assets/img/punchh/punchh9.png %})
 {% endtab %}
 {% endtabs %}

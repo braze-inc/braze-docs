@@ -31,13 +31,13 @@ By integrating Braze and Stripe, you can:
 
 {% multi_lang_include create_transformation.md %}
 
-### Step 2: Set up Stripe webhooks
+### 2단계: Set up Stripe webhooks
 
 Follow the steps in [Stripe's webhooks documentation](https://docs.stripe.com/development/dashboard/webhooks) to set up a webhook.
 
 Add your Data Transformation webhook URL as the **Destination URL** and select the event types you’d like to send to Braze. Refer to [Stripe's documentation](https://docs.stripe.com/api/events/types) for a full list of event types.
 
-![An example Stripe webhook configuration.]({% image_buster /assets/img/stripe/stripe_webhook_configuration.png %}){: style="max-width:80%;"}
+![스트라이프 웹훅 구성 예시.]({% image_buster /assets/img/stripe/stripe_webhook_configuration.png %}){: style="max-width:80%;"}
 
 Then, send a test event to your Data Transformation. 
 
@@ -50,7 +50,7 @@ Next, you'll transform the webhook payload that will be sent from Stripe to a Ja
 3. Select **Validate** to return a preview of your code's output and to check if it's an acceptable `/users/track` request.
 4. Save and activate your Data Transformation.
 
-![An example of webhook details and transformation code.]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
+![웹훅 세부 정보 및 변환 코드의 예시입니다.]({% image_buster /assets/img/stripe/stripe_data_transformation.png %})
 
 #### Request body format
 
@@ -68,7 +68,7 @@ This return value must adhere to the `/users/track` endpoint request body format
 
 After writing your Data Transformation, select **Validate** to make your Data Transformation code is formatted correctly and will work as expected. Then, save and activate your Data Transformation. After activating, custom event data will be logged to a user's profile when they complete the event.
 
-![A Stripe custom event "Charge Succeeded" in a Braze user profile.]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
+![Braze 고객 프로필에 "충전 성공" 스트라이프 커스텀 이벤트가 표시됩니다.]({% image_buster /assets/img/stripe/stripe_braze_profile_event.png %}){: style="max-width:80%;"}
 
 ## Example Stripe webhook payload {#example}
 

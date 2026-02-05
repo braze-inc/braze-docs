@@ -24,7 +24,7 @@ Na seção **Modelos**, selecione seu modelo recém-adicionado.
 
 ![A página "Modelos" no Google Tag Manager mostrando o modelo de Tag de Inicialização Braze.]({% image_buster /assets/img/web-gtm/select_tag_template.png %}){: style="max-width:95%;"}
 
-Selecione o ícone de lápis para abrir o menu suspenso **Configuração da Tag**.
+Selecione o ícone de lápis para abrir o dropdown de **Configuração da Tag**.
 
 ![O bloco de Configuração da Tag com o ícone de 'lápis' mostrado.]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
 
@@ -34,7 +34,7 @@ Insira as informações mínimas necessárias:
 | ------------- | ----------- |
 | **Chave de API**   | Sua [Chave de API Braze]({{site.baseurl}}/api/basics/#about-rest-api-keys), encontrada no painel Braze em **Configurações** > **Configurações do App**. |
 | **Endpoint de API** | Sua URL de endpoint REST. Seu endpoint dependerá do [URL da Braze para [sua instância]({{site.baseurl}}/api/basics/#endpoints). |
-| **Versão do SDK**  | A versão mais recente `MAJOR.MINOR` do SDK Web Braze listada no [changelog]({{site.baseurl}}/developer_guide/changelogs/?sdktab=web). Por exemplo, se a versão mais recente for `4.1.2`, digite `4.1`. Para mais informações, veja [Sobre gerenciamento de versão do SDK]({{site.baseurl}}/developer_guide/sdk_integration/version_management/). |
+| **Versão do SDK**  | A versão mais recente `MAJOR.MINOR` do SDK Web Braze listada no [changelog]({{site.baseurl}}/developer_guide/changelogs/?sdktab=web). Por exemplo, se a versão mais recente for `4.1.2`, digite `4.1`. Para mais informações, veja [Sobre o gerenciamento de versão do SDK]({{site.baseurl}}/developer_guide/sdk_integration/version_management/). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 Para configurações de inicialização adicionais, selecione **Opções de Inicialização Braze** e escolha quaisquer opções que você precisar.

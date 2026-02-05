@@ -43,7 +43,7 @@ Consulte a tabela a seguir para termos comuns de geofences e suas descrições.
 Para criar um geofence, você precisará criar um conjunto de geofences primeiro.
 
 1. Acessar **público** > **Locais** no dashboard da Braze.
-2. Selecione **Criar Conjunto de Geofence**.
+2. Selecione **Criar Conjunto de Geofences**.
 3. Para **Nome do conjunto**, insira um nome para seu conjunto de geofences.
 4. (Opcional) Adicione tags para filtrar seu conjunto.
 

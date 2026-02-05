@@ -30,9 +30,9 @@ A Braze configura seu registro DKIM quando configuramos seus IPs e domínios. Al
 
 ### Autenticação, relatório e conformidade de mensagens baseadas em domínio (DMARC)
 
-[Autenticação de Mensagens Baseada em Domínio, Relatórios & Conformidade (DMARC)](https://dmarc.org/) é um protocolo de autenticação de e-mail para remetentes de e-mail provarem a legitimidade de seu correio, o que permite confiança do receptor da caixa de entrada e incentiva a aceitação do correio. O DMARC permite que os remetentes de e-mail especifiquem como lidar com os e-mails que não foram autenticados usando o Sender Policy Framework (SPF) ou o Domain Keys Identified Mail (DKIM). Isso é feito verificando se as verificações SPF e DKIM foram aprovadas. 
+[Autenticação de Mensagem Baseada em Domínio, Relatório & Conformidade (DMARC)](https://dmarc.org/) é um protocolo de autenticação de e-mail para remetentes de e-mail provarem a legitimidade de seu correio, o que permite confiança do receptor da caixa de entrada e incentiva a aceitação do correio. O DMARC permite que os remetentes de e-mail especifiquem como lidar com os e-mails que não foram autenticados usando o Sender Policy Framework (SPF) ou o Domain Keys Identified Mail (DKIM). Isso é feito verificando se as verificações SPF e DKIM foram aprovadas. 
 
-Os remetentes instruem os provedores de caixa de entrada sobre como lidar com correio que falha em verificações de assinatura ou autenticação. Falhas podem indicar falsificação. Você pode instruir os provedores a rejeitar ou colocar em quarentena o correio que falha e enviar relatórios automatizados. Isso ajuda os provedores a identificar spammers, bloquear e-mails maliciosos, minimizar falsos positivos e melhorar a transparência dos relatórios de autenticação.
+Os remetentes instruem os provedores de caixa de entrada sobre como lidar com e-mails que falham em verificações de assinatura ou autenticação. Falhas podem indicar falsificação. Você pode instruir os provedores a rejeitar ou colocar em quarentena e-mails que falham e enviar relatórios automatizados. Isso ajuda os provedores a identificar spammers, bloquear e-mails maliciosos, minimizar falsos positivos e melhorar a transparência dos relatórios de autenticação.
 
 #### Como funciona?
 

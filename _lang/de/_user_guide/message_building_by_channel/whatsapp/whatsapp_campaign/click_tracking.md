@@ -35,7 +35,7 @@ Der Link wird auf die Braze Domain oder die für die Abo-Gruppe angegebene angep
 
 Alle statischen URLs, die mit `http://` oder `https://` beginnen, werden gekürzt. Verkürzte URLs, die eine Liquid Personalisierung enthalten (z.B. Tracking Targeting auf Nutzerebene), sind zwei Monate lang gültig.
 
-![WhatsApp Nachrichten-Editor mit Inhalt und einem Button.]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
+![Nachrichten-Editor für WhatsApp mit Inhalt und einem Button.]({% image_buster /assets/img/whatsapp/click_tracking/message_composer.png %})
 
 ### Template-Nachrichten 
 
@@ -46,14 +46,14 @@ Bei Nachrichten mit Template muss die Basis-URL bei der Erstellung des Templates
 1. Erstellen Sie in Ihrem WhatsApp Manager:in eine Basis-URL, die entweder Ihre angepasste Domain oder `brz.ai` ist.
 2. Stellen Sie sicher, dass die in der Vorlage enthaltenen Links mit Klick Tracking kompatibel sind.
 3. Ändern Sie die Variablen des Templates nicht mehr, nachdem Sie es als Kampagne in Braze eingerichtet haben; nachgelagerte Änderungen können nicht mehr übernommen werden.
-4. Für CTA-Buttons wählen Sie **Dynamisch** und geben dann die Basis-URL an (`brz.ai` oder Ihre angepasste Domain).<br><br>![Abschnitt, um einen Aufruf zum Handeln zu erstellen.]({% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %})<br><br>
+4. Für CTA-Buttons wählen Sie **Dynamisch** und geben dann die Basis-URL an (`brz.ai` oder Ihre angepasste Domain).<br><br>![Abschnitt, um eine Aufforderung zum Handeln zu erstellen.]({% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %})<br><br>
 5. Für Links im Textkörper entfernen Sie beim Schreiben des Templates in Ihrem WhatsApp Manager:in alle eingefügten Leerzeichen für Links, die im Textkörper enthalten sind und die Sie tracken möchten.<br><br>![Textfeld zur Eingabe des Inhaltskörpers für den Aufruf zur Aktion.]({% image_buster /assets/img/whatsapp/click_tracking/cta_textbox.png %})
 
 #### Schritt 2: Vervollständigen Sie Ihr Template in Braze
 
 Bei der Erstellung erkennt Braze automatisch, welche Templates unterstützbare URL Domains haben, sowohl im Fließtext als auch für CTA Buttons. Der Status wird am unteren Rand des Templates angezeigt. 
 
-!["Link Status" Abschnitt zeigt einen aktiven Status für das Klick Tracking.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
+![Der Abschnitt "Linkstatus" zeigt einen aktiven Status für das Klick Tracking an.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
 
 - **Unterstützte Links:** Für Links, die mit der passenden Basis-URL übermittelt werden, ist das Klick Tracking aktiviert.
 - **Teilweise unterstützte Links:** Wenn einige Links in einem Template als vollständige URLs übermittelt werden, wird das Click Tracking **nicht** auf diese Links angewendet.
@@ -61,7 +61,7 @@ Bei der Erstellung erkennt Braze automatisch, welche Templates unterstützbare U
 
 Die Ziel-URL muss für jeden Link mit einer Basis-URL angegeben werden, die entweder `brz.ai` oder Ihrer angepassten Domain entspricht. 
 
-!["Buttons"-Abschnitt mit Feldern für den Button-Namen, die Website-URL und die Klick-Tracking-URL.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
+![Abschnitt "Buttons" mit Feldern für den Namen des Buttons, die Website-URL und die Klick-Tracking-URL.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
@@ -107,7 +107,7 @@ Wenn das Tracking von Klicks aktiviert ist oder mit unterstützten Templates ver
 
 Die Daten der Klicks werden automatisch im Analytics Dashboard angezeigt.
 
-![WhatsApp Nachrichten Performance Tabelle.]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
+![Tabelle zur Performance von WhatsApp Nachrichten.]({% image_buster /assets/img/whatsapp/click_tracking/message_performance.png %})
 
 ## Nutzer-Retargeting 
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Abrufen von Daten über Connected-Content
-article_title: Abruf von Daten über Connected-Content mit Voucherify
+article_title: Abrufen von Daten über Connected-Content mit Voucherify
 page_order: 2
 alias: /partners/voucherify/connected_content/
 description: "Dieser referenzierte Artikel beschreibt, wie Sie Daten aus der Voucherify API über Braze Connected-Content abrufen und Nachrichten an bestimmte Segmente von Braze senden können."
@@ -40,7 +40,7 @@ Besuchen Sie das Voucherify [GitHub Repository](https://github.com/voucherifyio/
 Ohne die folgenden Einstellungen wird jedes Mal, wenn eine Connected-Content Nachricht getriggert wird, die Voucherify API mindestens zwei Mal aufgerufen. Diese Einstellungen reduzieren die Anzahl der API-Aufrufe, die Braze in Rechnung gestellt werden, und verringern das Risiko, an das Hard-Blocking-API-Limit zu stoßen, das die Zustellung von Nachrichten unterbrechen kann.
 
 {% tabs %}
-{% tab Rate-Limiter %}
+{% tab Rate Limiter %}
 
 **Rate-Limiter**
 
@@ -69,7 +69,7 @@ So fügen Sie die Zwischenspeicherung für POST-Aufrufe hinzu:
 _Beachten Sie die Konsequenzen:_ Braze speichert die API-Aufrufe auf der Grundlage der URL. Der eindeutige String, der als Abfrageparameter verwendet wird, wird von Voucherify ignoriert, aber er unterscheidet verschiedene API-Anfragen für Braze und erlaubt es, jeden eindeutigen Versuch separat zwischenzuspeichern. Ohne diesen Abfrageparameter erhält jede Kund:in den Cache den gleichen Code für die Dauer des Caches.
 
 {% endtab %}
-{% tab Attribut "Wiederholung %}
+{% tab Retry attribute %}
 
 **Attribut "Wiederholung**
 
@@ -80,7 +80,7 @@ Wenn Sie {% raw %}`:retry`{% endraw %} nicht verwenden, wird Braze unabhängig v
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_retry.png %})
 
 {% endtab %}
-{% tab Eindeutige Veröffentlichungen %}
+{% tab Unique publications %}
 
 **Eindeutige Veröffentlichung pro Kund:in**
 
@@ -99,7 +99,7 @@ Sie können {% raw %}`{{source_id}}`{% endraw %} und seine Auswirkungen auf Publ
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Einmaliges Beitreten %}
+{% tab Join-once %}
 
 **Einmaliges Beitreten**
 
@@ -352,7 +352,7 @@ Wir gehen davon aus, dass Sie bereits eine Braze-Kampagne oder ein Braze-Canvas 
 
 ### Schritt 1: Connected-Content-Skript zur Nachrichten-Vorlage hinzufügen
 
-1.  Kopieren Sie das Skript Connected-Content und fügen Sie es unter dem Tag {% raw %}`<body>`{% endraw %} in eine HTML-Vorlage für Nachrichten ein. Ersetzen Sie **CAMPAIGN_ID** durch eine Voucherify {% raw %}`campaign_id`{% endraw %}, die Sie aus der URL-Adresse des Dashboards der Kampagne von Voucherify kopieren.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
+1.  Kopieren Sie das Skript Connected-Content und fügen Sie es unter dem Tag {% raw %}`<body>`{% endraw %} in eine HTML-Vorlage für Nachrichten ein. Ersetzen Sie **CAMPAIGN_ID** durch eine Voucherify {% raw %}`campaign_id`{% endraw %}, die von der URL-Adresse des Dashboards der Voucherify Kampagne kopiert wurde.<br>![]({% image_buster /assets/img/voucherify/voucherify_cc_campaignId.png %}){: style="margin-top:15px;margin-bottom:15px;"}
     {% raw %}  
     ```
     assign voucherify_campaign_id = "camp_Y7h1meBSyybsNs7UpSVVZZce"
