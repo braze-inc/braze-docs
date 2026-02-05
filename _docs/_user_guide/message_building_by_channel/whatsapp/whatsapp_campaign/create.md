@@ -107,6 +107,10 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 
 Call-to-action URLs may contain variables, though Meta requires them to be at the end of the URL, such as `{% raw %}https://example.com/{{variable}}{% endraw %}`, where the variable can then be replaced in Braze with Liquid. Links can also be included as the body text as part of the template. Both of these links can be shortened and tracked using [click tracking]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking/).
 
+### Dynamic images
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 {% endtab %}
 {% tab Response messages %}
 
