@@ -282,7 +282,7 @@ Make incremental updates to your data so you can prevent unintentional overwrite
 {% alert important %}
 **Updates to different attributes:** In the vast majority of cases, if two updates don't impact the same attributes on a user, they have entirely independent results. For example, if you update a user's `Color` attribute and separately update their `Size` attribute, both updates should be applied correctly, even if they occur within seconds of each other.
 
-**Updates to the same attribute:** Race conditions can occur when multiple updates target the same attribute within seconds of each other (or up to five minutes in extreme cases such as system downtimes). In these rare cases, one update may overwrite another.
+**Updates to the same attribute:** Race conditions can occur when multiple updates target the same attribute within a single sync run. In these rare cases, one update may overwrite another. The best way to prevent this behavior is to ensure that the source data for your CDI sync reflects only the latest state of each user, or that all updates for a given user or user+attribute pairing are contained in a single row.
 
 **Object array operators:** The only exceptions to independent updates are with the `$add`, `$remove`, and `$update` operators for object arrays, where updates to the same array may interact with each other.
 
