@@ -289,7 +289,7 @@ Make incremental updates to your data so you can prevent unintentional overwrite
 **Events:** Race conditions don't affect events because each event is unique and has a timestamp associated with it.
 {% endalert %}
 
-To minimize the risk of race conditions when updating the same attributes, stagger your updates so that multiple updates for a single user are spaced apart (multiple rows apart) or in different sync runs.
+The best way to prevent this behavior is to ensure that the source data for your CDI sync reflects only the latest state of each user, or that all updates for a given user or user+attribute pairing are contained in a single row.
 
 ### Create a JSON string from another table
 
