@@ -28,7 +28,7 @@ Puedes encontrar más información sobre el uso de Recurly con Braze en [los doc
 | Requisito | Descripción |
 | ----------- | ----------- |
 | Cuenta Recurly | Se requiere un plan de suscripción Elite [Recurly](https://recurly.com/) con el Conmutador de características de Braze habilitado para aprovechar esta asociación. También es necesaria la activación de las facturas de crédito en tu plataforma Recurly.|
-| Clave de API REST de Braze | Una clave de API REST de Braze con permisos `users.track`. <br><br> Puede crearse en el dashboard de Braze desde **Configuración** > **Claves API**. Dado que Recurly sólo utiliza el punto final `users.track`, recomendamos aprovisionar una clave específica de Recurly sólo con este permiso. |
+| Clave de API REST de Braze | Una clave de API REST de Braze con permisos `users.track`. <br><br> Puede crearse en el panel Braze desde **Configuración** > **Claves API**. Como Recurly sólo utiliza el endpoint `users.track`, recomendamos aprovisionar una clave específica de Recurly sólo con este permiso. |
 | Punto final REST Braze | [La URL de tu punto final REST]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). Tu punto final dependerá de la URL Braze de tu instancia. |
 
 ## Integración
@@ -82,11 +82,11 @@ Para una interacción eficaz con los clientes, debes [configurar eventos persona
 
 Dado que Recurly utiliza el punto final Braze `/users/track`, la integración está sujeta a los límites de velocidad estándar de Braze de 50.000 solicitudes por minuto.
 
-Recurly agrupa determinados eventos del ciclo de vida de la suscripción como llamadas únicas a la API de Braze para reducir el número de llamadas realizadas.
+Recurly agrupa determinados eventos del ciclo de vida de la suscripción en una sola llamada a la API de Braze para reducir el número de solicitudes.
 
-- La creación de varias suscripciones al mismo tiempo se agrupa por lotes y se envía a Braze como una única solicitud.
-- Cuando se renuevan varias suscripciones al mismo tiempo para una cuenta, cada una de esas renovaciones se agrupa en una única solicitud.
-- Los eventos del ciclo de vida de la suscripción al mismo modelo se envían como una única solicitud. Por ejemplo, una factura recién creada con un pago enviaría una única solicitud API con los eventos personalizados `Recurly Invoice Created` y `Recurly Successful Payment`.
+- Recurly agrupa y envía múltiples suscripciones creadas al mismo tiempo como una única solicitud.
+- Recurly agrupa varias renovaciones simultáneas de una cuenta en una sola solicitud.
+- Recurly envía los eventos del ciclo de vida de la suscripción del mismo modelo en una sola petición. Por ejemplo, una factura recién creada con un pago da lugar a una solicitud API que contiene los eventos personalizados `Recurly Invoice Created` y `Recurly Successful Payment`.
 
 Los lotes se envían a Braze en grupos de hasta 75 eventos a la vez. Por ejemplo, si se crearan 100 suscripciones a la vez, Recurly haría dos peticiones API a Braze. Para más detalles, consulta la opción [de agrupar solicitudes de seguimiento de usuarios]({{site.baseurl}}/api/api_limits/#batch-user-track).
 

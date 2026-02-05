@@ -10,7 +10,7 @@ Los eventos personalizados se registran con `actionType` configurado en `logEven
 
 Primero, crea un desencadenante que busque un `eventName` que sea igual a `played song`.
 
-![Un desencadenante personalizado en Google Tag Manager configurado para desencadenar algunos eventos cuando "eventName" es igual a "canción reproducida".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
+![Un desencadenador personalizado en Google Tag Manager configurado para desencadenar algunos eventos cuando "eventName" es igual a "canción reproducida".]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
 A continuación, crea una nueva etiqueta (también conocida como "llamada a función") e introduce la ruta de clase de tu [proveedor de etiquetas personalizado](#adding-ios-google-tag-provider) que se describe más adelante en este artículo. Esta etiqueta se desencadenará cuando registres el evento `played song`. Como `eventName` está configurado como `played song`, se utilizará como nombre de evento personalizado que se registra en Braze.
 
@@ -18,7 +18,7 @@ A continuación, crea una nueva etiqueta (también conocida como "llamada a func
 Cuando envíes un evento personalizado, configura `actionType` en `logEvent`, y establece un valor para `eventName` para que Braze reciba el nombre correcto del evento y la acción a realizar.
 {% endalert %}
 
-![Una etiqueta en Google Tag Manager con classpath y campos de par clave-valor. Esta etiqueta se configura para desencadenar con el desencadenante "canción reproducida" creado previamente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
+![Una etiqueta en Google Tag Manager con classpath y campos de par clave-valor. Esta etiqueta está configurada para desencadenar con el desencadenador "canción reproducida" creado anteriormente.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 También puedes incluir argumentos adicionales de par clave-valor en la etiqueta, que se enviarán como propiedades del evento personalizadas a Braze. `eventName` y `actionType` no se ignorarán para las propiedades del evento personalizadas. En la siguiente etiqueta de ejemplo, introduce `genre`, que se definió utilizando una variable de etiqueta en Google Tag Manager y se obtuvo del evento personalizado registrado en la aplicación.
 
@@ -38,7 +38,7 @@ Analytics.logEvent("played song", parameters: parameters)
 ```
 
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"genre" : @"pop",
@@ -61,7 +61,7 @@ let parameters: [String: Any] = ["customAttributeKey": "favoriteSong",
 FIRAnalytics.logEvent(withName:"customAttribute", parameters: parameters)
 ```
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"customAttributeKey" : @"favoriteSong",
@@ -84,7 +84,7 @@ let parameters: [String: Any] = ["externalUserId": "favorite userId"]
 Analytics.logEvent(withName:"changeUser", parameters: parameters)
 ```
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 ```obj-c
 NSDictionary *parameters = @{@"externalUserId" : userId};
@@ -182,7 +182,7 @@ final class BrazeGTMTagManager : NSObject, TAGCustomFunction {
 }
 ```
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 Añade el siguiente código a tu archivo `BrazeGTMTagManager.h`:
 
 ```obj-c

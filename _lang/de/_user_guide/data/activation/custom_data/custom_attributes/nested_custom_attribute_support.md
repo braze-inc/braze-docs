@@ -263,7 +263,7 @@ Verwenden Sie den Tag für die Personalisierung `custom_attribute` und die Punkt
 <br> `{{custom_attribute.${most_played_song}[0].play_analytics.count}}` - "1000"
 {% endraw %}
 
-![Mit Liquid können Sie ein Template für den Namen eines Liedes und die Anzahl, wie oft ein Hörer dieses Lied gespielt hat, in eine Nachricht einfügen]({% image_buster /assets/img_archive/nca_liquid_2.png %})
+![Verwendung von Liquid als Template für den Namen eines Titels und die Anzahl der Abspielungen dieses Titels in einer Nachricht]({% image_buster /assets/img_archive/nca_liquid_2.png %})
 
 ## Segmentierung
 
@@ -271,7 +271,7 @@ Sie können Segmente auf der Grundlage von verschachtelten angepassten Attribute
 
 Nachdem Sie einen Pfad zu Ihrer Eigenschaft hinzugefügt haben, wählen Sie **Validieren**, um zu überprüfen, ob der Wert im Feld Pfad gültig ist.
 
-Filter basierend auf einem angepassten Attribut für den meistgespielten Titel, wenn ein Hörer einen Titel mehr als eine bestimmte Anzahl von Malen gespielt hat]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
+![Filtern auf der Grundlage eines angepassten Attributs für den meistgespielten Titel, wenn ein Hörer einen Titel mehr als eine bestimmte Anzahl von Malen gespielt hat]({% image_buster /assets/img_archive/nca_segmentation_2.png %})
 
 Um mit verschachtelten angepassten Attributen zu segmentieren, wählen Sie den Filter **Verschachtelte angepasste Attribute**, um ein Dropdown-Menü anzuzeigen, aus dem Sie ein bestimmtes verschachteltes angepasstes Attribut auswählen können.
 
@@ -293,7 +293,7 @@ Verwenden Sie die **Segmentierung nach mehreren Kriterien**, um ein Segment zu e
 
 Sie können auch das Feature **Liquid für Segmente kopieren** verwenden, um einen Liquid Code für dieses Segment zu erzeugen und diesen in einer Nachricht zu verwenden. Nehmen wir zum Beispiel an, Sie haben ein Array von Kontoobjekten und ein Segment, das auf Kund:innen mit aktiven steuerpflichtigen Konten abzielt. Wenn Sie Ihre Kund:in dazu bringen möchten, einen Beitrag zu einem ihrer aktiven und steuerpflichtigen Konten zu leisten, müssen Sie eine Nachricht erstellen, um sie anzustacheln. 
 
-![Ein Beispielsegment mit ausgewähltem Kontrollkästchen für die Multikriterien-Segmentierung.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
+![Ein Beispielsegment mit ausgewähltem Kontrollkästchen für die multikriterielle Segmentierung.]({% image_buster /assets/img_archive/nca_multi_criteria.png %})
 
 Wenn Sie **Liquid für Segmente** auswählen, generiert Braze automatisch Liquid-Code, der ein Objekt-Array zurückgibt, das nur aktive und steuerpflichtige Konten enthält.
 

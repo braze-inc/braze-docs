@@ -1,6 +1,6 @@
 ---
 nav_title: Achat par un ami
-article: FriendBuy
+article_title: Achat par un ami
 layout: redirect
 redirect_to: /docs/partners/friendbuy/
 ---

@@ -22,8 +22,8 @@ Warning! Don't make any changes to this document without approval from the legal
 
 Braze habilita a sus clientes para que eliminen ellos mismos perfiles de usuario y datos de atributos completos de su espacio de trabajo.
 
-Esto significa que puedes: 
-- Eliminar perfiles de usuario mediante el [punto final de la API de eliminación de usuarios de Braze]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+Esto significa que puedes:
+- Eliminar perfiles de usuario mediante el [punto final de la API de eliminación de usuarios de Braze]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 - Eliminar (null) o modificar los atributos de los perfiles de usuario mediante el [punto final de la API de seguimiento de usuarios de Braze]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Los eventos de comportamiento no se pueden eliminar de un perfil de usuario (eventos personalizados, sesiones, campañas, compras). Para eliminar esos eventos, debes borrar todo el perfil de usuario.
@@ -44,7 +44,7 @@ Cada semana, Braze ejecuta un proceso para eliminar a los usuarios inactivos y l
 Los clientes tienen pleno control sobre si un usuario está o no Inactivo o Dormido, y pueden evitar que se archiven los perfiles de usuario registrando un punto de datos a intervalos regulares. Braze Canvas ofrece la posibilidad de hacerlo automáticamente, lo que te permite desactivar de forma efectiva esta funcionalidad para algunos o todos tus usuarios inactivos o durmientes.
 {% endalert %}
 
-#### Datos de la campaña y de las interacciones con Canvas 
+#### Datos de la campaña y de las interacciones con Canvas
 
 Los datos de interacción de mensajería se refieren a cómo interactúa un usuario con una campaña o Canvas que ha recibido (por ejemplo, cuando un usuario abre la campaña A o un usuario recibe la variante A). Estos datos se utilizan para reorientar. Puedes leer más sobre la [disponibilidad de datos de interacción de]({{site.baseurl}}/messaging_interaction_data/) mensajes en [Acerca de la disponibilidad de datos de interacción de mensajes]({{site.baseurl}}/messaging_interaction_data/).
 

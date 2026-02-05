@@ -11,9 +11,9 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Anwendungsfall: Karussell-Ansicht
+# Anwendungsfälle: Karussell-Ansicht
 
-![Beispiel einer Nachrichten-App, die ein Karussell von Inhaltskarten in einem Artikel zeigt.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Beispiel einer Nachrichten App, die ein Karussell von Content-Cards in einem Artikel zeigt.]({% image_buster/assets/img_archive/cc_politer_carousel.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 In diesem Abschnitt erfahren Sie, wie Sie einen Karussell-Feed mit mehreren Karten implementieren, bei dem ein Benutzer horizontal wischen kann, um weitere vorgestellte Karten anzuzeigen. Für die Integration einer Karussell-Ansicht müssen Sie eine vollständig angepasste Content-Card-Implementierung verwenden – die Run-Phase des [Crawl-Walk-Run-Ansatzes]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/#customization-approaches).
 

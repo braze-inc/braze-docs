@@ -1,6 +1,6 @@
 Bevor Sie eine iOS Push-Benachrichtigung mit Braze versenden können, müssen Sie Ihre `.p8` Push-Benachrichtigungsdatei hochladen, wie beschrieben in der [Entwickler:in Dokumentation von Apple](https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns):
 
-1. Gehen Sie in Ihrem Apple-Entwicklerkonto zu [**Zertifikate, Kennungen & Profile**](https://developer.apple.com/account/ios/certificate).
+1. Gehen Sie in Ihrem Apple Entwickler-Account zu [**Zertifikate, Bezeichner & Profile**](https://developer.apple.com/account/ios/certificate).
 2. Wählen Sie unter **Schlüssel** die Option **Alle** und klicken Sie auf die Schaltfläche Hinzufügen (+) in der oberen rechten Ecke.
 3. Geben Sie unter **Schlüsselbeschreibung** einen eindeutigen Namen für den Signierschlüssel ein.
 4. Aktivieren Sie unter **Wichtige Dienste** das Kontrollkästchen **Apple Push Notification Service (APNs)** und klicken Sie dann auf **Weiter**. Klicken Sie auf **Bestätigen**.

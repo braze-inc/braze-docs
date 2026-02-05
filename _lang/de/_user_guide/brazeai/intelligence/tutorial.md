@@ -22,7 +22,7 @@ Wir verwenden Intelligent Timing, um die vergangenen Interaktionen unserer Nutze
 
 Für Benutzer, die nicht über genügend frühere Interaktionen verfügen, die analysiert werden können, bieten wir einen Ausweichzeitpunkt an: die beliebteste Zeit für die Nutzung der App unter allen Benutzern.
 
-\![Intelligente Timing Zustellung für einen Schritt der Nachricht.]({% image_buster /assets/img/intelligence_suite1.png %})
+![Einstellungen für intelligentes Timing bei der Zustellung eines Nachrichtenschritts.]({% image_buster /assets/img/intelligence_suite1.png %})
 
 ### Schritt 2: Verwenden Sie die intelligente Auswahl, um die Aktion auszuwählen
 
@@ -30,7 +30,7 @@ Für die eigentlichen Werbebotschaften werden wir Intelligent Selection verwende
 
 Nachdem die Intelligente Auswahl genügend Daten gesammelt hat, um die Nachricht mit der besten Leistung zu ermitteln, wird diese Nachricht bei 100 % aller zukünftigen Sendungen verwendet.
 
-\![A/B-Tests Abschnitt eines Canvas mit aktivierter intelligenter Auswahl.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+![A/B-Testbereich eines Canvas mit aktivierter intelligenter Auswahl.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 ### Schritt 3: Starten Sie das Canvas
 

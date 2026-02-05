@@ -30,6 +30,12 @@ Now, follow the respective steps for your data source:
 
 {: start="4"}
 4. Select **+ Add Tile** and then choose one of the reports you created in [Report Builder (New)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
+
+{% alert important %}
+After a Report Builder report is added to a Dashboard Builder tile, the tile is not connected to the original report. If you edit the original report in Report Builder, you must delete the existing dashboard tile and create a new one using the updated report as the data source.
+{% endalert %}
+
+{: start="5"}
 5. Select the pencil icon to change how the title and chart type display in the tile.
     - You can toggle between different chart types below the default visualization. The current options include bar charts (horizontal or vertical), and line charts (only available if you selected **Date** as a drilldown option in the Report Builder setup).<br><br>![Toggles for different chart types.]({% image_buster /assets/img/report_builder_types.png %})<br><br>
     - Use the metrics dropdown to select which metrics to include in your visualization. By default, the first column in the report will be the default displayed metric.

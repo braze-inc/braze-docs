@@ -11,7 +11,7 @@ channel:
   
 ---
 
-# Umgang mit unbekannten Rufnummern - neue Benutzer
+# Umgang mit unbekannten Rufnummern - neue Nutzer:innen
 
 > Nachdem Sie SMS, MMS und RCS mit Braze zum Laufen gebracht haben, werden Sie möglicherweise Nachrichten von unbekannten Nutzer:innen erhalten. Die folgenden Schritte beschreiben, wie ein:e nicht identifizierte:r Nutzer:in und eine Nummer verarbeitet werden.
 

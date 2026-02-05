@@ -1,17 +1,17 @@
 ---
-nav_title: Registro de Eventos Personalizados
-article_title: Registrando eventos personalizados através do SDK Braze
+nav_title: Registre eventos personalizados
+article_title: Registre eventos personalizados por meio do SDK do Braze
 page_order: 3.1
-description: "Aprenda como registrar eventos personalizados através do SDK Braze."
+description: "Saiba como registrar eventos personalizados por meio do SDK do Braze."
 
 ---
 
-# Registro de eventos personalizados
+# Registre eventos personalizados
 
-> Aprenda como registrar eventos personalizados através do SDK Braze.
+> Saiba como registrar eventos personalizados por meio do SDK do Braze.
 
 {% alert note %}
-Para SDKs wrapper não listados, use o método nativo relevante do Android ou Swift.
+Para SDKs de wrapper não listados, use o método nativo relevante do Android ou Swift.
 {% endalert %}
 
 ## Registro de um evento personalizado
@@ -19,8 +19,23 @@ Para SDKs wrapper não listados, use o método nativo relevante do Android ou Sw
 Para registrar um evento personalizado, use o seguinte método de registro de eventos.
 
 {% tabs %}
-{% tab Android %}
-Para Android nativo, você pode usar o seguinte método:
+{% tab web %}
+Para uma implementação padrão do Web SDK, você pode usar o seguinte método:
+
+```javascript
+braze.logCustomEvent("YOUR_EVENT_NAME");
+```
+
+Se, em vez disso, você quiser usar o Google Tag Manager, poderá usar o tipo de tag **Custom Event** para chamar o [método`logCustomEvent` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) e enviar eventos personalizados para o Braze, incluindo opcionalmente propriedades de eventos personalizados. Para isso:
+
+1. Digite o **nome do evento** usando uma variável ou digitando um nome de evento.
+2. Use o botão **Adicionar linha** para adicionar propriedades de eventos.
+
+![Uma caixa de diálogo mostrando as definições de configuração da tag de ação do Braze. As configurações incluídas são "tag type" (evento personalizado), "event name" (nome do evento) (clique no botão) e "event properties" (propriedades do evento).]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
+{% endtab %}
+
+{% tab android %}
+Para o Android nativo, você pode usar o seguinte método:
 
 {% subtabs %}
 {% subtab java %}
@@ -52,21 +67,6 @@ AppDelegate.braze?.logCustomEvent(name: "YOUR_EVENT_NAME")
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-Para uma implementação padrão do SDK Web, você pode usar o seguinte método:
-
-```javascript
-braze.logCustomEvent("YOUR_EVENT_NAME");
-```
-
-Se você quiser usar o Google Tag Manager em vez disso, pode usar o tipo de tag **Evento Personalizado** para chamar o [`logCustomEvent` método](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent) e enviar eventos personalizados para o Braze, incluindo opcionalmente propriedades de eventos personalizados. Para fazer isso:
-
-1. Digite o **nome do evento** usando uma variável ou digitando um nome de evento.
-2. Use o botão **Adicionar linha** para adicionar propriedades de eventos.
-
-![Uma caixa de diálogo mostrando as definições de configuração da tag de ação do Braze. As configurações incluídas são "tag type" (evento personalizado), "event name" (nome do evento) (clique no botão) e "event properties" (propriedades do evento).]({% image_buster /assets/img/web-gtm/gtm-custom-event.png %})
-{% endtab %}
-
 {% tab flutter %}
 ```dart
 braze.logCustomEvent('YOUR_EVENT_NAME');
@@ -74,7 +74,7 @@ braze.logCustomEvent('YOUR_EVENT_NAME');
 {% endtab %}
 
 {% tab infillion %}
-Se você integrou [Infillion Beacons](https://infillion.com/software/beacons/) no seu aplicativo Android, você pode opcionalmente usar `visit.getPlace()` para registrar eventos específicos de localização. `requestImmediateDataFlush` verifica se seu evento será registrado mesmo que seu aplicativo esteja em segundo plano.
+Se tiver integrado o [Infillion Beacons](https://infillion.com/software/beacons/) ao seu aplicativo Android, você poderá usar opcionalmente o `visit.getPlace()` para registrar eventos específicos do local. O `requestImmediateDataFlush` verifica se o evento será registrado mesmo que o app esteja em segundo plano.
 
 {% subtabs %}
 {% subtab java %}
@@ -105,27 +105,36 @@ m.Braze.logEvent("YOUR_EVENT_NAME")
 ```
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 ```csharp
 AppboyBinding.LogCustomEvent("YOUR_EVENT_NAME");
 ```
 {% endtab %}
-
-{% tab unreal engine %}
-```cpp
-UBraze->LogCustomEvent(TEXT("YOUR_EVENT_NAME"));
-```
-{% endtab %}
 {% endtabs %}
 
-## Adicionando propriedades de metadados
+## Adição de propriedades de metadados
 
-Quando você registra um evento personalizado, você tem a opção de adicionar metadados sobre esse evento personalizado passando um objeto de propriedades com o evento. As propriedades são definidas como pares de valores-chave. As chaves são strings e os valores podem ser objetos `string`, `numeric`, `boolean` ou [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp).
+Ao registrar um evento personalizado, você tem a opção de adicionar metadados sobre esse evento personalizado passando um objeto de propriedades com o evento. As propriedades são definidas como pares de valores-chave. As chaves são strings e os valores podem ser `string`, `numeric`, `boolean`, [`Date`](http://www.w3schools.com/jsref/jsref_obj_date.asp) objetos, vetores de objetos ou objetos JSON aninhados.
 
 Para adicionar propriedades de metadados, use o seguinte método de registro de eventos.
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+```javascript
+braze.logCustomEvent("YOUR-EVENT-NAME", {
+  you: "can", 
+  pass: false, 
+  orNumbers: 42,
+  orDates: new Date(),
+  or: ["any", "array", "here"],
+  andEven: {
+     deeply: ["nested", "json"]
+  }
+});
+```
+{% endtab %}
+
+{% tab android %}
 {% subtabs %}
 {% subtab java %}
 ```java
@@ -207,21 +216,6 @@ AppDelegate.braze?.logCustomEvent(
 {% endsubtabs %}
 {% endtab %}
 
-{% tab web %}
-```javascript
-braze.logCustomEvent("YOUR-EVENT-NAME", {
-  you: "can", 
-  pass: false, 
-  orNumbers: 42,
-  orDates: new Date(),
-  or: ["any", "array", "here"],
-  andEven: {
-     deeply: ["nested", "json"]
-  }
-});
-```
-{% endtab %}
-
 {% tab flutter %}
 ```dart
 braze.logCustomEvent('custom_event_with_properties', properties: {
@@ -248,23 +242,9 @@ m.Braze.logEvent("YOUR_EVENT_NAME", {"stringPropKey" : "stringPropValue", "intPr
 ```
 {% endtab %}
 
-{% tab Unity %}
+{% tab unity %}
 ```csharp
 AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));
-```
-{% endtab %}
-
-{% tab unreal engine %}
-```cpp
-TMap<FString, FString> Properties;
-Properties.Add(TEXT("you"), TEXT("can"));
-Properties.Add(TEXT("pass"), TEXT("false"));
-Properties.Add(TEXT("orNumbers"), FString::FromInt(42));
-Properties.Add(TEXT("orDates"), FDateTime::Now().ToString());
-Properties.Add(TEXT("or"), TEXT("any,array,here")); // Arrays are stored as comma-separated strings
-Properties.Add(TEXT("andEven"), TEXT("deeply:nested,json"));
-
-UBraze->LogCustomEventWithProperties(TEXT("YOUR_EVENT_NAME"), Properties);
 ```
 {% endtab %}
 {% endtabs %}
@@ -272,3 +252,37 @@ UBraze->LogCustomEventWithProperties(TEXT("YOUR_EVENT_NAME"), Properties);
 {% alert important %}
 As chaves `time` e `event_name` são reservadas e não podem ser usadas como propriedades de eventos personalizados.
 {% endalert %}
+
+## Melhores práticas
+
+Há três verificações importantes a serem realizadas para que as propriedades do seu evento personalizado registrem o que é esperado:
+
+* [Estabeleça quais eventos são registrados](#verify-events)
+* [Verifique o registro](#verify-log)
+* [Verifique os valores](#verify-values)
+
+Várias propriedades podem ser registradas cada vez que um evento personalizado é registrado.
+
+### Verificar eventos
+
+Verifique com seus desenvolvedores quais propriedades de eventos estão sendo rastreadas. Lembre-se de que todas as propriedades do evento diferenciam maiúsculas de minúsculas. Para obter informações adicionais sobre rastreamento de eventos personalizados, confira estes artigos com base na sua plataforma:
+
+* [Android]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=android)
+* [iOS]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)
+* [Web]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=web)
+
+### Verificar registro
+
+Para confirmar que as propriedades do evento são rastreadas com sucesso, você pode visualizar todas as propriedades do evento na página de **Eventos Personalizados**.
+
+1. Acessar **Configurações de Dados** > **Eventos Personalizados**.
+2. Localize seu evento personalizado na lista.
+3. Para seu evento, selecione **Manage Properties (Gerenciar propriedades** ) para visualizar os nomes das propriedades associadas a um evento.
+
+### Verifique os valores
+
+Depois de [adicionar seu usuário como um usuário teste]({{site.baseurl}}/user_guide/administrative/app_settings/internal_groups_tab/#adding-test-users), siga estas etapas para verificar seus valores: 
+
+1. Execute o evento personalizado dentro do app.
+2. Aguarde cerca de 10 segundos para que os dados sejam liberados.
+3. Atualize o [registro de usuários de eventos]({{site.baseurl}}/user_guide/administrative/app_settings/event_user_log_tab/) para ver o evento personalizado e o valor da propriedade do evento que foi passado com ele.

@@ -37,7 +37,7 @@ yarn add @braze/react-native-sdk
 
 ### Étape 2 : Choisissez une option de configuration
 
-Vous pouvez gérer le SDK de Braze à l'aide du plugin Braze Expo ou via l'une des couches natives. Avec le plugin Expo, vous pouvez configurer certaines fonctionnalités du SDK sans écrire de code dans les couches natives. Choisissez l'option qui répond le mieux aux besoins de votre application.
+Vous pouvez gérer le SDK de Braze à l'aide du plugin Braze Expo ou via l'une des couches natives. Avec le plugin Expo, vous pouvez configurer certaines fonctionnalités du SDK sans écrire de code dans aucune des couches natives. Choisissez l'option qui répond le mieux aux besoins de votre application.
 
 {% tabs %}
 {% tab Expo %}
@@ -80,6 +80,7 @@ Dans votre `app.json`, ajoutez le Plugin Braze Expo. Vous pouvez fournir les opt
 | `enableBrazeIosRichPush`                      | booléen | iOS uniquement. Faut-il activer les fonctionnalités push enrichies pour iOS.                                                                                                  |
 | `enableBrazeIosPushStories`                   | booléen | iOS uniquement. Activer ou non les histoires push Braze pour iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | chaîne de caractères  | iOS uniquement. Le groupe d'applications utilisé pour les histoires Push iOS.                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | booléen | iOS uniquement. Indique si l'ID de l'appareil utilisera un UUID généré de manière aléatoire.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Exemple de configuration :
@@ -263,6 +264,7 @@ cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 Ajoutez le SDK Braze en haut du fichier `AppDelegate.swift` :
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 Dans la méthode `application(_:didFinishLaunchingWithOptions:)`, remplacez la [clé API]({{site.baseurl}}/api/identifier_types/) et le [point de terminaison]({{site.baseurl}}/api/basics/#endpoints) par les valeurs de votre application. Ensuite, créez l’instance Braze à l’aide de la configuration et créez une propriété statique sur `AppDelegate` pour un accès facile :

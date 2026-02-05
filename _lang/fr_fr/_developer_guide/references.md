@@ -3,6 +3,7 @@ nav_title: "Références et exemples d'applications"
 article_title: "Références, référentiels et exemples d'applications du SDK de Braze"
 page_order: 5.5
 description: "Il s'agit d'une liste de documentation de référence, de dépôts GitHub et d'exemples d'applications appartenant à chaque SDK Braze."
+toc_headers: h2
 ---
 
 # Références, référentiels et exemples d'applications
@@ -23,10 +24,9 @@ Actuellement, certains SDK n'ont pas de documentation de référence dédiée, m
 | SDK Cordova       | [Dossier de déclaration](https://github.com/braze-inc/braze-cordova-sdk/blob/master/www/BrazePlugin.js)                                      | [Dépôt GitHub](https://github.com/braze-inc/braze-cordova-sdk)      | [Exemple d’application](https://github.com/braze-inc/braze-cordova-sdk/tree/master/sample-project)      |
 | SDK Flutter       | [Documentation de référence](https://pub.dev/documentation/braze_plugin/latest/braze_plugin/)                                                   | [Dépôt GitHub](https://github.com/braze-inc/braze-flutter-sdk)      | [Exemple d’application](https://github.com/braze-inc/braze-flutter-sdk/tree/master/example)      |
 | React Native SDK  | [Dossier de déclaration](https://github.com/braze-inc/braze-react-native-sdk/blob/master/src/index.d.ts)                   | [Dépôt GitHub](https://github.com/braze-inc/braze-react-native-sdk) | [Exemple d’application](https://github.com/braze-inc/braze-react-native-sdk/tree/master/BrazeProject) |
-| SDK Roku          | N/A                                                                                                                                                         | [Dépôt GitHub](https://github.com/braze-inc/braze-roku-sdk)            | [Exemple d’application](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)            |
+| SDK Roku          | S.O.                                                                                                                                                         | [Dépôt GitHub](https://github.com/braze-inc/braze-roku-sdk)            | [Exemple d’application](https://github.com/braze-inc/braze-roku-sdk/tree/main/torchietv)            |
 | SDK Unity         | [Fichier de déclaration](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs)     | [Dépôt GitHub](https://github.com/braze-inc/braze-unity-sdk)          | [Exemple d’application](https://github.com/braze-inc/braze-unity-sdk/tree/master/unity-samples)          |
-| Unreal Engine SDK | N/A                                                                                                                                                         | [Dépôt GitHub](https://github.com/braze-inc/braze-unreal-sdk)        | [Exemple d’application](https://github.com/braze-inc/braze-unreal-sdk/tree/master/BrazeSample)        |
-| Xamarin SDK       | N/A                                                                                                                                                         | [Dépôt GitHub](https://github.com/braze-inc/braze-xamarin-sdk)      | [Exemple d’application](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
+| .NET MAUI SDK (anciennement Xamarin)      | S.O.                                                                                                                                                         | [Dépôt GitHub](https://github.com/braze-inc/braze-xamarin-sdk)      | [Exemple d’application](https://github.com/braze-inc/braze-xamarin-sdk/tree/master/appboy-component/samples)      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Créer un exemple d'application
@@ -35,7 +35,7 @@ Actuellement, certains SDK n'ont pas de documentation de référence dédiée, m
 {% tab android %}
 ### Créer "Droidboy"
 
-Notre application de test au sein du [dépôt GitHub Android SDKBraze](https://github.com/braze-inc/braze-android-sdk "Android GitHub Repository") s'appelle Droidboy. Suivez ces instructions pour créer une copie entièrement fonctionnelle de celle-ci parallèlement à votre projet.
+Notre application de test dans le [dépôt GitHub du SDK Android](https://github.com/braze-inc/braze-android-sdk) s'appelle Droidboy. Suivez ces instructions pour créer une copie entièrement fonctionnelle de celle-ci parallèlement à votre projet.
 
 1. Créez un nouvel [espace de travail]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration) et notez la clé d'identification de l'API Braze.<br><br>
 2. Copiez votre ID d’expéditeur FCM et votre clé d’identification de l’API Braze dans les emplacements appropriés `/droidboy/res/values/braze.xml` (entre les balises des chaînes nommées `com_braze_push_fcm_sender_id` et `com_braze_api_key`, respectivement).<br><br>

@@ -34,7 +34,7 @@ Em seguida, adicione o trecho de código que se refere aos códigos da lista; el
 
 Você também pode definir atributos para códigos, como Expiração da Lista e Alertas de Limite; no entanto, nota que o Voucherify gerencia a lógica por trás dos seus códigos, independentemente das configurações da lista.
 
-![Lista de expiração]({% image_buster /assets/img/voucherify/voucherify_promotion_list_expiration.png %})
+![Expiração da lista]({% image_buster /assets/img/voucherify/voucherify_promotion_list_expiration.png %})
 
 ## Etapa 3: fazer upload do arquivo CSV
 

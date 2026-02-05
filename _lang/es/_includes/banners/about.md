@@ -6,11 +6,11 @@
 
 ## Requisitos previos
 
-La disponibilidad de los banners depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.
+La disponibilidad de las pancartas depende de tu paquete Braze. Ponte en contacto con tu director de cuentas o administrador del éxito del cliente para empezar.
 
 ## ¿Por qué utilizar Banners?
 
-Los banners permiten a los equipos de marketing y de producto personalizar el contenido de la aplicación o del sitio web de forma dinámica, reflejando en tiempo real la elegibilidad y el comportamiento del usuario. Muestran mensajes en línea de forma persistente, proporcionando experiencias no intrusivas y contextualmente relevantes que se actualizan automáticamente al inicio de cada sesión de usuario.
+Los banners permiten a los equipos de marketing y producto personalizar el contenido de la aplicación o del sitio web de forma dinámica, reflejando en tiempo real la elegibilidad y el comportamiento del usuario. Muestran mensajes en línea de forma persistente, proporcionando experiencias no intrusivas y contextualmente relevantes que se actualizan automáticamente al inicio de cada sesión de usuario.
 
 Una vez integrados los banners en una aplicación o sitio web, los especialistas en marketing pueden diseñarlos y lanzarlos con un sencillo editor de arrastrar y soltar, lo que elimina la necesidad de asistencia continua de los desarrolladores, reduce la complejidad y mejora la eficacia.
 
@@ -38,7 +38,7 @@ Entre las características de las Banderas se incluyen:
 
 Las ubicaciones de banners son ubicaciones específicas en tu aplicación o sitio web [que creas con el SDK de Braze]({{site.baseurl}}/developer_guide/banners/placements/) y que designan dónde pueden aparecer los banners.
 
-Las ubicaciones más comunes son la parte superior de tu página de inicio, las páginas de detalles del producto y los flujos de pago. Una vez creadas las ubicaciones, los banners se pueden [asignar en tu campaña de banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/).
+Las ubicaciones más comunes son la parte superior de tu página de inicio, las páginas de detalles del producto y los flujos de pago. Una vez creadas las ubicaciones, los banners se pueden [asignar en tu campaña de banners]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
 
 No hay un límite fijo en el número de colocaciones que puedes crear por espacio de trabajo, y puedes crear tantos ID de colocación como requiera tu experiencia. Cada colocación debe ser única dentro de un espacio de trabajo. Un único ID de colocación puede ser referenciado por hasta 10 campañas activas al mismo tiempo.
 
@@ -48,9 +48,9 @@ Evita modificar los ID de ubicación después de lanzar una campaña de Banner.
 
 ### Prioridad del banner {#priority}
 
-Cuando varias campañas hacen referencia al mismo ID de ubicación, los banners se muestran por orden de prioridad: alta, media o baja. Por defecto, los Banners recién creados están predeterminados como medios, pero puedes [establecer manualmente la prioridad]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#set-priority) cuando crees o edites tu campaña de Banners. 
+Cuando varios mensajes de Banner hacen referencia al mismo ID de colocación, los Banners se muestran por orden de prioridad: alta, media o baja. Por defecto, los banners están predeterminados como medios, pero puedes [establecer manualmente la prioridad]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#set-priority) cuando crees o edites tu campaña de banners. 
 
-Si hay varios banners configurados con la misma prioridad, se mostrará primero el más reciente para el que el usuario sea elegible.
+Si hay varios banners con la misma prioridad, se mostrará primero el más reciente para el que el usuario sea elegible.
 
 ### Solicitudes de colocación {#requests}
 
@@ -58,7 +58,7 @@ Si hay varios banners configurados con la misma prioridad, se mostrará primero 
 
 ### Entrega de mensajes
 
-Los mensajes de banner se entregan a tu aplicación o sitio web como contenido HTML, normalmente dentro de un iframe. Esto garantiza que tus banners se muestren de forma coherente en todos los dispositivos, y te ayuda a mantener sus estilos y secuencias de comandos separados del resto del código.
+Los mensajes de banner se entregan a tu aplicación o sitio web como contenido HTML, normalmente dentro de un iframe. Esto garantiza que tus banners se muestren de forma coherente en todos los dispositivos, y te ayuda a mantener sus estilos y secuencias de comandos separados del resto de tu código.
 
 Los iframes permiten actualizaciones de contenido dinámicas y personalizadas que no requieren cambios en tu código base. Cada iframe recupera y muestra el HTML de cada sesión de usuario utilizando la lógica de segmentación y personalización de campañas.
 
@@ -67,16 +67,15 @@ Los iframes permiten actualizaciones de contenido dinámicas y personalizadas qu
 Esto es lo que debes saber sobre las dimensiones y el tamaño de los estandartes:
 
 - Aunque el compositor te permite previsualizar Banners en diferentes dimensiones, esa información no se guarda ni se envía al SDK.
-- El HTML ocupará todo el ancho del contenedor en el que se muestre.
+- El HTML ocupa todo el ancho del contenedor en el que se representa.
 - Te recomendamos que hagas un elemento de dimensión fija y pruebes esas dimensiones en Compositor.
 
 ## Limitaciones
 
-Cada espacio de trabajo puede soportar hasta 200 campañas de Banner activas. Si se alcanza este límite, tendrás que [archivar o desactivar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) una campaña existente antes de crear una nueva.
+Cada espacio de trabajo puede albergar hasta 200 campañas de Banner activas. Si se alcanza este límite, tendrás que [archivar o desactivar]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status) una campaña existente antes de crear una nueva.
 
 Además, los mensajes de Banner no admiten las siguientes características:
 
-- Integración en Canvas
 - Campañas activadas por API y basadas en acciones
 - Contenido conectado
 - Códigos promocionales
@@ -92,5 +91,5 @@ Además, los mensajes de Banner no admiten las siguientes características:
 Ahora que ya conoces los Banners, estás preparado para los siguientes pasos:
 
 1. [Creación de banners en tu aplicación o sitio web]({{site.baseurl}}/developer_guide/banners/placements/)
-2. [Crear campañas de banners en Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/)
+2. [Crear campañas de banners en Braze]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/)
 3. [Tutorial: Mostrar un Banner por ID de Colocación]({{site.baseurl}}/developer_guide/banners/tutorial_displaying_banners)

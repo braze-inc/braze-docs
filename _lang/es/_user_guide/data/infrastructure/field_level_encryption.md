@@ -25,16 +25,18 @@ Para utilizar el cifrado a nivel de campo de identificador, debes tener acceso a
 
 Sigue estos pasos para configurar tu método de autenticación con clave secreta de AWS.
 
-1. Para recuperar tu ID de clave de acceso y tu clave de acceso secreta, [crea un usuario IAM y un grupo de administradores](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin) en AWS con una política de permisos para el servicio de administración de claves de AWS. El usuario IAM debe tener los permisos [kms](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html) [:Descifrar](https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html) y [kms:GenerarMac](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html). Para más detalles, consulta los [permisos de AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html).
+1. Para recuperar tu ID de clave de acceso y tu clave de acceso secreta, [crea un usuario IAM y un grupo de administradores](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-set-up.html#create-an-admin) en AWS con una política de permisos para el servicio de administración de claves de AWS. El usuario IAM debe tener los permisos [kms:Descifrar](https://docs.aws.amazon.com/kms/latest/APIReference/API_Decrypt.html) y [kms:GenerarMac](https://docs.aws.amazon.com/kms/latest/APIReference/API_GenerateMac.html). Para más detalles, consulta los [permisos de AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/kms-api-permissions-reference.html).
 2. Selecciona **Mostrar credenciales de seguridad de usuario** para revelar tu ID de clave de acceso y tu clave de acceso secreta. Anota estas credenciales en algún sitio o selecciona el botón **Descargar credenciales**, ya que tendrás que introducirlas cuando conectes tus claves AWS KMS.
 3. Debes configurar KMS en las siguientes regiones de AWS:
-    - **Agrupaciones Braze US:** `us-east-1`
-    - **Braze racimos UE:** `eu-central-1`
+    - **Clústeres Braze US:** `us-east-1`
+    - **Clústeres Braze UE:** `eu-central-1`
+    - **Racimo AU Braze:** `ap-southeast-2`
+    - **Grupo ID Braze:** `ap-southeast-3`
 4. En el servicio de administración de claves de AWS, crea dos claves y asegúrate de que el usuario IAM está añadido en los permisos de uso de claves:
     - **[Cifrar/descifrar](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** Selecciona el tipo de clave **Simétrica** y el uso de las claves **Cifrar y Descifrar**.
-    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Selecciona Tipo de clave **simétrica** y **Generar y verificar** el uso de la clave **MAC**. La especificación clave debe ser **HMAC_256**. Después de crear la clave, anota en algún sitio el ID de la clave HMAC, ya que tendrás que introducirlo en Braze.
+    - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Selecciona Tipo de clave **simétrica** y **Generar y verificar el uso de la clave MAC**. La especificación clave debe ser **HMAC_256**. Después de crear la clave, anota en algún sitio el ID de la clave HMAC, ya que tendrás que introducirlo en Braze.
 
-\![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
+![]({% image_buster /assets/img/field_level_encryption_aws_prereq.png %})
 
 ## Paso 1: Conecta tus claves AWS KMS
 
@@ -44,19 +46,19 @@ En el panel de Braze, ve a **Configuración de datos** > **Cifrado a nivel de ca
 - Clave de acceso secreta
 - ID de la clave HMAC (no se puede actualizar después de guardarla)
 
-## Paso 2: Selecciona tus campos encriptados
+## Paso 2: Selecciona tus campos encriptados
 
 A continuación, selecciona **Dirección de correo electrónico** para codificar el campo. 
 
 Cuando se activa la encriptación de un campo, no se puede revertir a un campo desencriptado. Esto significa que la encriptación es una configuración permanente. Cuando configures la encriptación de la dirección de correo electrónico, confirma que ningún usuario tiene direcciones de correo electrónico en el espacio de trabajo. Esto garantiza que no se almacenen direcciones de correo electrónico en texto plano en Braze al activar la característica para el espacio de trabajo.
 
-\![]({% image_buster /assets/img/field_level_encryption.png %})
+![]({% image_buster /assets/img/field_level_encryption.png %})
 
-## Paso 3: Importar y actualizar usuarios
+## Paso 3: Importar y actualizar usuarios
 
 Cuando la encriptación a nivel de campo de identificador está activada, debes hacer hash y encriptar la dirección de correo electrónico antes de añadirla a Braze. Asegúrate de minusvalorar la dirección de correo electrónico antes de enviarla. Consulta el [objeto de atributos del usuario](#user-attributes-object) para más detalles.
 
-Al actualizar la dirección de correo electrónico en Braze, debes utilizar el valor de correo electrónico con hash siempre que se incluya `email`. Esto incluye
+Al actualizar la dirección de correo electrónico en Braze, debes utilizar el valor de correo electrónico hash siempre que se incluya `email`. Esto incluye lo siguiente:
 
 - Puntos finales REST:
     - `/users/track`
@@ -75,7 +77,7 @@ Estas características no son compatibles con el cifrado a nivel de campo identi
 
 - Identificar y capturar la dirección de correo electrónico mediante SDK
 - Formularios de captura de mensajes dentro de la aplicación por correo electrónico
-- Informes sobre el dominio del destinatario, incluyendo gráficos del proveedor de correo electrónico Email Insights
+- Informes sobre el dominio del destinatario, incluyendo gráficos del proveedor de buzón de correo Email Insights
 - Filtrar direcciones de correo electrónico por expresión regular
 - Sincronización de la audiencia
 - Integración con Shopify
@@ -122,4 +124,4 @@ No. Si utilizas "mail-to list-unsubscribe", enviarás la dirección de correo el
 
 ### ¿El cifrado a nivel de campo del identificador admite otros identificadores como el teléfono?
 
-No. Actualmente, el cifrado a nivel de campo identificador sólo se admite para las direcciones de correo electrónico.
+No. Actualmente, el cifrado a nivel de campo identificador sólo es compatible con las direcciones de correo electrónico.

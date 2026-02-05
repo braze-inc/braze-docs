@@ -8,7 +8,11 @@ description: "This reference article covers how to automatically export security
 
 # Security events export with Amazon S3
 
-> You can automatically export security events to Amazon S3, a cloud storage provider, with a daily job that runs at midnight UTC. After setting up, you won't need to manually export security events from the dashboard. The job will export the security events for the past 24 hours in CSV format to your configured S3 storage. The CSV file will have the same structure as a manually exported report.
+> You can automatically export security events to Amazon S3, a cloud storage provider, with a daily job that runs at midnight UTC. After setting up, you don't need to manually export security events from the dashboard. The job exports the security events for the past 24 hours in CSV format to your configured S3 storage. The CSV file has the same structure as a manually exported report.
+
+{% alert note %}
+The 10,000-row limit applies only to the manual CSV report download from the dashboard. Security event exports to S3 aren't subject to this row limit.
+{% endalert %}
 
 Braze supports two different S3 authentication and authorization methods for setting up Amazon S3 export:
 
@@ -19,9 +23,9 @@ Braze supports two different S3 authentication and authorization methods for set
 
 This method generates a secret key and an access key ID that allows Braze to authenticate as a user on your AWS account to write data to your bucket.
 
-### Step 1: Create an in-app message user
+### Step 1: Create an Identity and Access Management (IAM) user
 
-To retrieve your secret access key and access key ID, you’ll need to create an in-app message user, following the instructions in [Setting up your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
+To retrieve your secret access key and access key ID, you’ll need to create an IAM user, following the instructions in [Setting up your AWS account](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
 
 ### Step 2: Get credentials
 

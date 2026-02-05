@@ -38,7 +38,7 @@ Si tu cuenta de Shopify está asociada a más de una tienda, puedes cambiar la t
 
 Para las tiendas online de Shopify, puedes seleccionar la configuración estándar para implementar automáticamente el SDK Web y el SDK JavaScript de Braze.
 
-!["Habilitar Web SDK" paso con opciones para implementar a través de una configuración estándar o personalizada.]({% image_buster /assets/img/Shopify/sdk_setup.png %})
+![Paso "Habilitar SDK Web" con opciones para implementarlo mediante una configuración estándar o personalizada.]({% image_buster /assets/img/Shopify/sdk_setup.png %})
 
 Después de seleccionar la ruta de incorporación de la configuración estándar, tendrás que elegir cuándo Braze debe inicializarse y cargar los SDK de una de las siguientes opciones: 
 - En el momento de la visita, como el inicio de la sesión
@@ -53,28 +53,30 @@ Después de seleccionar la ruta de incorporación de la configuración estándar
 
 Ahora seleccionarás los datos de Shopify de los que quieres hacer seguimiento.
 
-![Sección "Seguimiento de los datos de Shopify" con una casilla de verificación para seguir los eventos de comportamiento y los atributos de usuario.]({% image_buster /assets/img/Shopify/tracking_shopify_data.png %})
+![Sección "Seguimiento de los datos de Shopify" con una casilla de verificación para realizar un seguimiento de los eventos de comportamiento y los atributos de usuario.]({% image_buster /assets/img/Shopify/tracking_shopify_data.png %})
 
 Los siguientes eventos estarán habilitados por defecto en la integración estándar.
 
 | Eventos recomendados por Braze | Shopify eventos personalizados | Atributos personalizados de Shopify |
 | --- | --- | --- |
-| {::nomarkdown}<ul><li>Producto visto</li><li>Carrito actualizado</li><li>Pago iniciado</li><li>Pedido realizado</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_account_login</li><li>shopify_pedido_pagado</li><li>shopify_order_canceled</li><li>shopify_order_refunded</li><li>shopify_order_fulfilled</li><li>shopify_order_partially_fulfilled</li></ul>{:/} | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_gastado</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li><li>shopify_provincia</li></ul>{:/} |
+| {::nomarkdown}<ul><li>Producto visto</li><li>Carrito actualizado</li><li>Pago iniciado</li><li>Pedido realizado</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_account_login</li><li>shopify_paid_order</li><li>shopify_order_canceled</li><li>shopify_order_refunded</li><li>shopify_order_fulfilled</li><li>shopify_order_partially_fulfilled</li></ul>{:/} | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li><li>shopify_province</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2  .reset-td-br-3 role="presentation"}
 
 Para más información sobre los datos que se siguen a través de la integración, consulta [Características de los datos de Shopify]({{site.baseurl}}/shopify_data_features/).
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
 ### Configuración histórica del relleno
 
 A través de la configuración estándar, tienes la opción de realizar una carga inicial de tus clientes y pedidos de Shopify de los últimos 90 días antes de tu conexión de integración con Shopify. Para ello, marca la casilla de verificación para incluir la carga inicial de datos como parte de tu integración. 
 
-![Alternar el relleno de datos históricos.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
+![Alternar datos históricos de relleno.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
 Esta tabla contiene los datos que se cargarán inicialmente a través del relleno.
 
 | Eventos recomendados por Braze | Shopify eventos personalizados | Atributos estándar Braze | Estados de suscripción Braze |
 | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li>Pedido realizado</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_gastado</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_provincia</li></ul>{:/} | {::nomarkdown}<ul><li>Correo electrónico</li><li>Nombre</li><li>Apellido</li><li>Teléfono</li><li>Localidad</li><li>País</li></ul>{:/} | {::nomarkdown}<ul><li>Suscripciones de correo electrónico de marketing asociadas a esta tienda Shopify</li><li>Suscripciones de marketing por SMS asociadas a esta tienda Shopify</li></ul>{:/} |
+| {::nomarkdown}<ul><li>Pedido realizado</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>Correo electrónico</li><li>Nombre</li><li>Apellido</li><li>Teléfono</li><li>Localidad</li><li>País</li></ul>{:/} | {::nomarkdown}<ul><li>Suscripciones de correo electrónico de marketing asociadas a esta tienda Shopify</li><li>Suscripciones de marketing por SMS asociadas a esta tienda Shopify</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 Cuando tus registros de cliente de Shopify se carguen en Braze, el ID de cliente de Shopify se utilizará como ID externo de Braze. 
@@ -121,7 +123,7 @@ Con los SDK de Braze, puedes hacer un seguimiento de eventos personalizados o at
   </tbody>
 </table>
 
-El seguimiento de datos de clientes te ayuda a obtener información más profunda sobre el comportamiento del usuario y a personalizar aún más su experiencia. Para implementar eventos personalizados, tienes que editar [el código del tema de](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) tu [tienda](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) en el archivo `theme.liquid`. Puede que necesites ayuda de tus desarrolladores.
+El seguimiento de los datos de clientes proporciona una información más profunda sobre el comportamiento del usuario y favorece una mayor personalización. Para implementar eventos personalizados, tienes que editar [el código del tema de](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) tu [tienda](https://help.shopify.com/en/manual/online-store/themes/theme-structure/extend/edit-theme-code) en el archivo `theme.liquid`. Puede que necesites ayuda de tus desarrolladores.
 
 Por ejemplo, el siguiente fragmento de código de JavaScript rastrea si el usuario actual se suscribe a un boletín de noticias y lo registra como un evento personalizado en su perfil de Braze:
 
@@ -139,46 +141,92 @@ braze.logCustomEvent(
 
 El SDK debe estar inicializado (a la escucha de la actividad) en el dispositivo de un usuario para registrar eventos o atributos personalizados. Para saber más sobre el registro de datos personalizados, consulta el [objeto Usuario](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) y el [objeto logCustomEvent](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
-## Paso 4: Configura cómo gestionas a los usuarios
+## Paso 4: Configura cómo gestionas a los usuarios {#step-4}
 
 Selecciona tu tipo de `external_id` en el desplegable. 
 
 ![Sección "Recoger suscriptores".]({% image_buster /assets/img/Shopify/external_id_standard.png %})
 
 {% alert important %}
-Utilizar una dirección de correo electrónico o una dirección de correo electrónico con hash como ID externo de Braze puede ayudarte a simplificar la gestión de identidades en todos tus orígenes de datos. Sin embargo, es importante tener en cuenta los riesgos potenciales para la privacidad de los usuarios y la seguridad de los datos.<br><br>
+Utilizar una dirección de correo electrónico o una dirección de correo electrónico con hash como ID externo de Braze puede simplificar la gestión de identidades en todos tus orígenes de datos. Sin embargo, es importante tener en cuenta los riesgos potenciales para la privacidad de los usuarios y la seguridad de los datos.<br><br>
 
 - **Información adivinable:** Las direcciones de correo electrónico son fáciles de adivinar, lo que las hace vulnerables a los ataques.
 - **Riesgo de explotación:** Si un usuario malintencionado altera su navegador web para enviar la dirección de correo electrónico de otra persona como ID externo, podría acceder potencialmente a mensajes confidenciales o a información de la cuenta.
 {% endalert %}
 
-Si has seleccionado un tipo de ID externo personalizado, sigue los pasos 4.1 y 4.2. De lo contrario, continúa con el paso 4.3.
+Por defecto, Braze convierte automáticamente los correos electrónicos de Shopify a minúsculas antes de utilizarlos como ID externo. Si utilizas el correo electrónico o el correo electrónico con hash como ID externo, confirma que tus direcciones de correo electrónico también se convierten a minúsculas antes de asignarlas como ID externo o antes de aplicarles hash desde otros orígenes de datos. Esto ayuda a prevenir discrepancias en los ID externos y a evitar la creación de perfiles de usuario duplicados en Braze.
 
-### Paso 4.1: Crear un personalizado `external_id`
+{% alert note %}
+Los siguientes pasos dependen de tu selección de ID externo:<br><br>
+- **Si seleccionaste un tipo de ID externo personalizado:** Completa los pasos 4.1-4.3 para establecer la configuración personalizada de tu ID externo.
+- **Si seleccionaste ID de cliente de Shopify, correo electrónico o correo electrónico con hash:** Sáltate los pasos 4.1-4.3 y continúa directamente con el paso 4.4.
+{% endalert %}
 
-Primero, ve a Shopify y crea el metacampo `braze.external_id`. Te recomendamos que sigas los pasos indicados en [Crear descripciones de metacampos personalizadas](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions). Para **Espacio de nombres y clave**, introduce `braze.external_id`. Para el **Tipo**, te recomendamos que elijas un tipo de ID.
+### Paso 4.1: Crea el metacampo `braze.external_id` 
 
-Después de crear el metacampo, escucha [los webhooks de`customer/create` ](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) para que puedas escribir el metacampo cuando se cree un nuevo cliente. A continuación, utiliza [la API de administración](https://shopify.dev/docs/api/admin-graphql) o [la API de clientes](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) para rellenar todos tus clientes creados previamente con este metacampo.
+1. En tu panel de administración de Shopify, ve a **Configuración** > **Metacampos y metaobjetos**.
+2. Selecciona **Clientes** > **Añadir definición**.
+3. Para **Nombre**, introduce `braze.external_id`. 
+4. Selecciona el espacio de nombres autogenerado y la clave (`custom.braze_external_id`) para editarlo y cambiarlo a `braze.external_id`.
+5. En **Tipo**, selecciona **Tipo de ID**.
 
-### Paso 4.2: Crear un punto final
+Una vez creado el metacampo, rellénalo para tus clientes. Recomendamos los siguientes enfoques:
 
-Necesitas un punto final GET público para recuperar tu ID externo. Si Shopify no puede proporcionar el metacampo, Braze llamará a ese punto final para recuperar el ID externo.
+- **Escucha los webhooks de creación de clientes:** Configura un webhook para escuchar [los eventos de`customer/create` ](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks). Esto te permite escribir el metacampo cuando se crea un nuevo cliente.
+- **Rellena a los clientes existentes:** Utiliza [la Admin API](https://shopify.dev/docs/api/admin-graphql) o la [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) para rellenar el metacampo de los clientes creados previamente.
 
-Un ejemplo de punto final es `https://mystore.com/custom_id?shopify_customer_id=1234&email_address=raghav.narain@braze.com&shopify_storefront=dev-store.myshopify.com`
+### Paso 4.2: Crea un endpoint para recuperar tu ID externo
 
-#### Respuesta
+Debes crear un punto final público al que Braze pueda llamar para recuperar el ID externo. Esto permite a Braze obtener el ID en situaciones en las que Shopify no puede proporcionar directamente el metacampo `braze.external_id`.
 
-Braze espera un código de estado `200`. Cualquier otro código se considera un fallo del punto final. La respuesta debe ser:
+#### Especificaciones del punto final
 
-{% raw %}
-```json
-{ "external_id": "my_external_id" }
+**Método:** OBTENER
+
+Braze envía los siguientes parámetros a tu punto final:
+
+| Parámetro            | Obligatoria | Tipo de datos | Descripción                                                      |
+|----------------------|----------|-----------|------------------------------------------------------------------|
+| shopify_customer_id  | Sí      | Cadena    | El ID de cliente de Shopify.                                         |
+| shopify_storefront   | Sí      | Cadena    | El nombre de la tienda para la solicitud. Ex: `<storefront_name>.myshopify.com` |
+| email_address        | No       | Cadena    | La dirección de correo electrónico del usuario conectado. <br><br>Este campo puede faltar en algunos escenarios de webhook. Tu lógica de punto final debe tener en cuenta los valores nulos aquí (por ejemplo, obtener el correo electrónico utilizando shopify_customer_id si tu lógica interna lo requiere). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+#### Ejemplo de punto final
+
+```http
+GET https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
 ```
-{% endraw %}
 
-Valida la dirección `shopify_customer_id` y la dirección de correo electrónico utilizando la API de administración o la API de cliente para confirmar que los valores de los parámetros coinciden con los valores del cliente en Shopify. Tras la validación, también podrías utilizar las API para recuperar el metacampo `braze.external_id` y devolver el valor del ID externo.
+#### Respuesta esperada
+Braze espera un código de estado `200` que devuelva el ID externo JSON:
+```json
+{
+  "external_id": "my_external_id"
+}
+```
 
-### Paso 4.3: Recoger tus adhesiones voluntarias por correo electrónico o SMS desde Shopify (opcional)
+#### Validación
+Es fundamental validar que `shopify_customer_id` y `email_address` (si existen) coinciden con los valores del cliente en Shopify. Puedes utilizar [la API de administración de Shopify](https://shopify.dev/docs/api/admin-graphql) o [la API de cliente](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) para validar estos parámetros y recuperar el metacampo `braze.external_id` correcto.
+
+#### Comportamiento en caso de fallo y fusión
+Cualquier código de estado distinto de `200` se considera un fallo.
+
+- **Implicaciones de la fusión:** Si el punto final falla (devuelve no`200` o se agota el tiempo de espera), Braze no puede recuperar el ID externo. En consecuencia, la fusión entre el usuario de Shopify y el perfil de usuario de Braze no se producirá en ese momento.
+- **Lógica de reintento:** Braze puede intentar reintentos de red estándar inmediatos, pero si el fallo persiste, la fusión se aplazará hasta el siguiente evento que cumpla los requisitos (por ejemplo, la próxima vez que el usuario actualice su perfil o complete una compra).
+- **Apoyabilidad:** Para poder fusionar usuarios a tiempo, asegúrate de que tu endpoint tiene una alta disponibilidad y gestiona el campo opcional `email_address` con elegancia.
+
+### Paso 4.3: Introduce tu ID externo
+
+Repite [el paso 4](#step-4) e introduce la URL de tu punto final después de seleccionar ID externo personalizado como tipo de ID externo Braze.
+
+#### Consideraciones
+
+- Si tu ID externo no se genera cuando Braze envía una solicitud a tu punto final, la integración utilizará por defecto el ID de cliente de Shopify cuando se llame a la función `changeUser`. Este paso es crucial para fusionar el perfil de usuario anónimo con el perfil de usuario identificado. Como resultado, puede haber un periodo temporal durante el cual existan diferentes tipos de ID externos dentro de tu espacio de trabajo.
+- Cuando el ID externo esté disponible en el metacampo `braze.external_id`, la integración priorizará y asignará este ID externo. 
+    - Si el ID de cliente de Shopify estaba previamente configurado como ID externo de Braze, se sustituirá por el valor del metacampo `braze.external_id`. 
+
+### Paso 4.4: Recoger tus adhesiones voluntarias por correo electrónico o SMS desde Shopify (opcional)
 
 Tienes la opción de recopilar tus adhesiones voluntarias de marketing por correo electrónico o SMS desde Shopify. 
 
@@ -194,9 +242,9 @@ Como se menciona en el [resumen de Shopify]({{site.baseurl}}/shopify_overview/),
 
 ## Paso 5: Sincronizar productos (opcional)
 
-Puedes sincronizar todos los productos de tu tienda Shopify con un catálogo Braze para una mayor personalización de la mensajería. Las actualizaciones automáticas se producen casi en tiempo real para que tu catálogo refleje siempre los detalles más recientes de los productos. Para saber más, consulta la [sincronización de productos de Shopify]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
+Puedes sincronizar todos los productos de tu tienda Shopify con un catálogo Braze para una mayor personalización de la mensajería. Las actualizaciones automáticas se producen casi en tiempo real para que tu catálogo refleje los detalles actualizados de los productos. Para saber más, consulta la [sincronización de productos de Shopify]({{site.baseurl}}/partners/ecommerce/shopify/shopify_catalogs/).
 
-![Paso 4 del proceso de configuración con "Shopify Variant ID" como "Identificador del producto del catálogo".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:80%;"}
+![Paso 4 del proceso de configuración con "Shopify Variant ID" como "Identificador de producto del catálogo".]({% image_buster /assets/img/Shopify/sync_products_step1.png %}){: style="max-width:80%;"}
 
 ## Paso 6: Activar canales (opcional)
 
@@ -205,7 +253,7 @@ Puedes habilitar los mensajes dentro de la aplicación sin recurrir a un desarro
 ![Paso de configuración para activar canales, siendo la opción disponible la mensajería en el explorador.]({% image_buster /assets/img/Shopify/activate_channels_standard.png %})
 
 {% alert note %}
-Braze recopila información de los visitantes, como direcciones de correo electrónico y números de teléfono, a través de mensajes en el explorador. Esta información se envía a Shopify. Estos datos ayudan a los comerciantes a reconocer a los visitantes de su tienda y a crear una experiencia de compra más personalizada. Para más detalles, consulta la [API de Visitantes](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
+Braze recopila información de los visitantes, como direcciones de correo electrónico y números de teléfono, a través de mensajes en el explorador. Esta información se envía a Shopify. Estos datos habilitan a los comerciantes a reconocer a los visitantes de su tienda y crear una experiencia de compra más personalizada. Para más detalles, consulta la [API de Visitantes](https://shopify.dev/docs/api/web-pixels-api/emitting-data#visitor-api).
 {% endalert %}
 
 ### Compatibilidad con canales SDK adicionales
@@ -218,9 +266,7 @@ Para añadir tarjetas de contenido o banderas de características, tendrás que 
 
 #### Notificaciones push web
 
-El push web no es compatible actualmente con la integración de Shopify. Si quieres que esto se admita en el futuro, envía una solicitud de producto a través del [portal de productos Braze]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
-
-Si deseas que esto se admita en el futuro, envía una solicitud de producto a través del [portal de productos]({{site.baseurl}}/user_guide/administrative/access_braze/portal/) Braze.
+Web push no es compatible actualmente con la integración de Shopify. Para solicitar asistencia, envía una solicitud de producto a través del [portal de productos Braze]({{site.baseurl}}/user_guide/administrative/access_braze/portal/).
 
 ## Paso 7: Configuración de acabado
 

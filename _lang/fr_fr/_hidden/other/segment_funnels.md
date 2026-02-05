@@ -1,5 +1,5 @@
 ---
-nav_title: Entonnoirs de segments
+nav_title: Entonnoirs de segmentation
 permalink: /segment_funnels/
 hidden: true
 page_type: reference
@@ -39,17 +39,17 @@ En analysant l’impact d’une certaine action effectuée par un utilisateur (c
 
 Supposons par exemple que vous ayez un groupe dans lequel tous les utilisateurs qui ont ajouté des articles à une liste d’envies ont également effectué un achat. Étant donné que seul un petit pourcentage d’utilisateurs ont ajouté des articles à une liste d’envies, l’application peut souhaiter encourager ce comportement à travers des campagnes marketing.
 
-![Exemple d’entonnoir de segments avec les filtres suivants : "Dernière utilisation de ces applications il y a moins de 30 jours", Dernier ajout à la liste d'attente il y a moins de 30 jours" et Dernier achat il y a moins de 30 jours" pour atteindre 4 302 utilisateurs.]({% image_buster /assets/img_archive/Wish_List_2.png %})
+![Exemple d’entonnoir de segments avec les filtres suivants : « Last used these apps less than 30 days ago (A utilisé ces applications pour la dernière fois il y a moins de 30 jours) », « Last Added Item to Waitlist less than 30 days ago (Dernier article ajouté à liste d’envies il y a moins de 30 jours) », et « Last Made Purchase less than 30 days ago (Dernier achat effectué il y a moins de 30 jours) » pour atteindre un total de 4 302 utilisateurs.]({% image_buster /assets/img_archive/Wish_List_2.png %})
 
 ### Comparer les canaux de messagerie
 
 Créez un segment d’utilisateurs actifs (ou d’utilisateurs ayant les traits souhaités) et comparez leurs interactions avec différents canaux d’engagement, comme les e-mails et les notifications push. Par exemple, si les utilisateurs les plus loyaux sont abonnés aux notifications push, vous pourriez passer plus de temps à envoyer des campagnes par notification push aux utilisateurs actifs. Cependant, si vous constatez que la valeur à vie est plus élevée pour les personnes qui sont abonnées aux communications par e-mail, vous pourriez inviter plus d’utilisateurs actifs à s’abonner aux e-mails.
 
-![Entonnoir de segments pour une campagne par e-mail avec les filtres suivants : "Dernier achat effectué il y a moins de 30 jours", "Dernière utilisation de ces applications il y a moins de 30 jours", "Push Enabled est vrai", et "Email Subscription Status est Opted In" pour atteindre 2 799 utilisateurs.]({% image_buster /assets/img_archive/Wish_List_Email.png %})
+![Entonnoir de segments pour une campagne par e-mail avec les filtres suivants : "Dernier achat effectué il y a moins de 30 jours", "Dernière utilisation de ces applications il y a moins de 30 jours", "Foreground Push Enabled is true", et "Email Subscription Status is Opted In" pour atteindre 2 799 utilisateurs.]({% image_buster /assets/img_archive/Wish_List_Email.png %})
 
 ### Abonnements aux notification push Android ou iOS
 
-Ce cas d’utilisation tire parti du filtre « Notification push activée pour l’app » pour cibler les utilisateurs iOS ou Android qui se sont abonnés aux notifications push.
+Ce cas d'utilisation exploite le filtre "Foreground Push Enabled for App" pour cibler les utilisateurs iOS ou Android qui ont opté pour le push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/ios.png %})
 
@@ -57,13 +57,13 @@ Ce cas d’utilisation tire parti du filtre « Notification push activée pour 
 
 ### Audience totalement abonnée aux notifications push
 
-Ce cas d’utilisation tire parti du filtre « Notification push activée » pour cibler les utilisateurs qui se sont abonnés aux notifications push.
+Ce cas d'utilisation exploite le filtre "Foreground Push Enabled" pour cibler les utilisateurs qui ont opté pour le push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/both.png %})
 
 ### Groupe de contrôle global d’une audience ayant activé les notifications push
 
-Ce cas d’utilisation tire parti des filtres « Notification push activée » et « Nombre de compartiments aléatoire » pour cibler les utilisateurs qui font partie du groupe de contrôle global qui s’est abonné aux notifications push.
+Ce cas d'utilisation exploite les filtres "Foreground Push Enabled" et "Random Bucket #" pour cibler les utilisateurs qui font partie du groupe de contrôle global ayant opté pour le push.
 
 ![]({% image_buster /assets/img/seg_filter_examples/global_control.png %})
 

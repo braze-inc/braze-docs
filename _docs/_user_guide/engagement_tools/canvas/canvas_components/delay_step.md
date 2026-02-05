@@ -2,7 +2,7 @@
 nav_title: Delay 
 article_title: Delay 
 alias: "/delay_step/"
-page_order: 3
+page_order: 8
 page_type: reference
 description: "This reference article covers how to add a delay to your Canvas without needing to add an associated message."
 tool: Canvas

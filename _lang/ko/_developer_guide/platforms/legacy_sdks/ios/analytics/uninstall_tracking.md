@@ -1,5 +1,5 @@
 ---
-nav_title: 설치 제거 추적
+nav_title: 추적 제거
 article_title: 제거 추적은 페이로드에 Braze 플래그가 포함된 백그라운드 푸시 알림을 활용합니다.
 platform: iOS
 page_order: 7

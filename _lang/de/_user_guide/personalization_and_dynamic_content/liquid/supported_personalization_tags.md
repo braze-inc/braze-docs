@@ -22,7 +22,7 @@ Zur Erleichterung finden Sie hier eine Zusammenfassung der unterstützten Person
 | Geräteattribute | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>E-Mail-Liste Attribute</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Dieses Tag ersetzt das bisherige Tag `{{${unsubscribe_url}}}`. Das ältere Tag funktioniert zwar auch in bereits erstellten E-Mails, aber wir empfehlen Ihnen, stattdessen das neuere Tag zu verwenden. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
 | <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS Attribute</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp Attribute</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp Attribute</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | Kampagnenattribute | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Canvas-Attribute | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Canvas Schritt Attribute | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -96,7 +96,7 @@ User is in list of apps
 
 ## Informationen zum jeweiligen Gerät
 
-Für Push-Benachrichtigungen und In-App-Kanäle für Nachrichten können Sie die folgenden Attribute für das Gerät, an das eine Nachricht gesendet wird, als Template eingeben. Das heißt, eine Push-Benachrichtigung oder In-App-Nachricht kann Geräteattribute des Geräts enthalten, auf dem die Nachricht gelesen wird. Beachten Sie, dass diese Attribute bei Content-Karten nicht funktionieren. 
+Für Push-Benachrichtigungen, In-App-Nachrichten und Banner können Sie die folgenden Attribute für das Gerät, an das eine Nachricht gesendet wird, als Template eingeben. Das heißt, eine Push-Benachrichtigung, eine In-App-Nachricht oder ein Banner kann die Attribute des Geräts enthalten, auf dem die Nachricht gelesen wird. Beachten Sie, dass diese Attribute bei Content-Karten nicht funktionieren. 
 
 |Taggen | Beschreibung |
 |------------------|---|
@@ -117,7 +117,7 @@ Da es eine so große Bandbreite an Geräteträgern, Modellnamen und Betriebssyst
 
 Darüber hinaus ist es möglich, dass Braze bei Push-Benachrichtigungen unter bestimmten Umständen nicht in der Lage ist, das mit der Push-Benachrichtigung verbundene Gerät zu erkennen, z.B. wenn das Push-Token über die API importiert wurde, was dazu führt, dass die Werte für diese Nachrichten `null` sind.
 
-![Beispiel für die Verwendung des Standardwerts "there" bei Verwendung einer Variable für den Vornamen in einer Push Nachricht.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![Beispiel für die Verwendung des Standardwerts "there" bei der Verwendung einer Vornamenvariable in einer Push-Nachricht.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### Verwendung einer bedingten Logik anstelle eines Standardwerts
 

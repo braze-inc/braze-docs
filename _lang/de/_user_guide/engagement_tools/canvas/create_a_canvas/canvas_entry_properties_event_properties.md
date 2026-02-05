@@ -43,10 +43,12 @@ Sie können Canvase nicht mehr mit dem Original-Editor erstellen oder dupliziere
 
 ### Was Sie wissen sollten
 
-- Die Eigenschaften von Canvas-Eingängen sind nur in Liquid referenzierbar. Um nach den Eigenschaften innerhalb des Canvas zu filtern, verwenden Sie stattdessen die [Segmentierung von Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
-- Für In-App Nachrichten-Kanäle kann `canvas_entry_properties` nur in einem Canvas referenziert werden. `event_properties` kann nicht für In-App Nachrichten-Kanäle verwendet werden.
-- Sie können `event_properties` nicht für den Lead-Nachrichtenschritt verwenden. Stattdessen müssen Sie `canvas_entry_properties` verwenden oder einen Aktionspfadschritt mit dem entsprechenden Event **vor dem** Nachrichtenschritt hinzufügen, der `event_properties` enthält. 
+- Die Eigenschaften von Canvas-Eingängen sind nur in Liquid referenzierbar. Um nach den Eigenschaften im Canvas zu filtern, verwenden Sie stattdessen die [Segmentierung von Event-Eigenschaften]({{site.baseurl}}/user_guide/data/custom_data/custom_events/nested_objects/).
+- Für In-App-Nachricht-Kanäle können Sie in einem Canvas auf `canvas_entry_properties` und `event_properties` referenzieren. `event_properties` kann im ersten Canvas-Schritt aufgerufen werden, da es sich um einen Trigger handelt.
+- Sie können `event_properties` nicht für den Lead-Nachrichtenschritt verwenden. Stattdessen können Sie `canvas_entry_properties` verwenden oder einen Aktions-Pfad-Schritt mit dem entsprechenden Ereignis **vor dem** Schritt "Nachricht" hinzufügen, der `event_properties` enthält.
 - Wenn ein „Aktionspfad“-Schritt einen Trigger vom Typ „Eingehende SMS-Nachricht gesendet“ oder „Eingehende WhatsApp-Nachricht gesendet“ enthält, können die nachfolgenden Canvas-Schritte eine SMS- oder WhatsApp-Liquid-Eigenschaft enthalten. Dies spiegelt die Funktionsweise der Event-Eigenschaften in Canvase wider. Auf diese Weise können Sie Ihre Nachrichten nutzen, um First-Party-Daten zu Nutzerprofilen und Gesprächs-Messaging zu speichern und zu referenzieren.
+
+{% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
 
 ### Zeitstempel für Event-Eigenschaften
 
@@ -56,7 +58,7 @@ Angesichts dieses Verhaltens empfiehlt Braze dringend die Verwendung eines Liqui
 
 {% raw %}
 ```liquid
-{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }
+{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }}
 ```
 {% endraw %}
 
@@ -67,15 +69,15 @@ Angesichts dieses Verhaltens empfiehlt Braze dringend die Verwendung eines Liqui
 
 ## Anwendungsfall
 
-![Ein Aktions-Pfad-Schritt, gefolgt von einem Verzögerungsschritt und einem Nachrichten-Schritt für Nutzer:innen, die einen Artikel zu ihrer Wunschliste hinzugefügt haben, und ein Pfad für alle anderen.]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Ein Aktions-Pfad, gefolgt von einem Verzögerungsschritt und einem Nachrichten-Schritt für Nutzer:innen, die einen Artikel zu ihrer Wunschliste hinzugefügt haben, und ein Pfad für alle anderen.]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-Um die Unterschiede zwischen `canvas_entry_properties` und `event_properties` besser zu verstehen, lassen Sie uns dieses Szenario betrachten, in dem Benutzer ein aktionsbasiertes Canvas betreten, wenn sie das benutzerdefinierte Ereignis "Artikel zur Wunschliste hinzufügen" ausführen. 
+Um die Unterschiede zwischen `canvas_entry_properties` und `event_properties` besser zu verstehen, betrachten wir folgendes Szenario: Nutzer:innen betreten ein aktionsbasiertes Canvas, wenn sie das angepasste Event "Artikel zur Wunschliste hinzufügen" ausführen. 
 
-Die `canvas_entry_properties` werden im Schritt [Eingabezeitplan]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) bei der Erstellung eines Canvas konfiguriert und entsprechen dem Zeitpunkt, zu dem ein Benutzer ein Canvas betritt. Diese `canvas_entry_properties` können auch in jedem Schritt von Messaging referenziert werden.
+Die `canvas_entry_properties` werden im [Zeitplan für den Eingang]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) beim Erstellen eines Canvas konfiguriert und entsprechen dem Zeitpunkt, zu dem ein Nutzer:innen ein Canvas betritt. Diese `canvas_entry_properties` können auch in jedem Schritt von Messaging referenziert werden.
 
-In diesem Canvas haben wir eine User Journey, die mit einem „Aktionspfad-Schritt“ beginnt, um festzustellen, ob ein:e Nutzer:in einen Artikel zu seiner oder ihrer Wunschliste hinzugefügt hat. Wenn der oder die Nutzer:in einen Artikel hinzugefügt hat, erhält er oder sie erst mit Verzögerung die Nachricht „Neuer Artikel in Ihrer Wunschliste“ aus dem „Nachricht“-Schritt. 
+In diesem Canvas haben wir eine User Journey, die mit einem „Aktionspfad-Schritt“ beginnt, um festzustellen, ob ein:e Nutzer:in einen Artikel zu seiner oder ihrer Wunschliste hinzugefügt hat. Wenn der Nutzer:innen einen Artikel hinzugefügt hat, erhält er erst mit Verzögerung die Nachricht "Neuer Artikel in Ihrer Wunschliste!" aus dem Schritt Nachricht. 
 
-Der erste „Nachricht“-Schritt in einer User Journey hat Zugriff auf die angepasste `event_properties` aus Ihrem „Aktionspfad-Schritt“. In diesem Fall können wir ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` in diesem „Nachricht“-Schritt als Teil des Contents unserer Nachrichten einbinden. Wenn ein:e Nutzer:in keinen Artikel zu seiner oder ihrer Wunschliste hinzufügt, durchläuft er oder sie über den Pfad „Alle anderen“, d. h. `event_properties` kann nicht referenziert werden und zeigt einen Fehler mit ungültigen Einstellungen an.
+Der erste Nachrichten-Schritt in einer Nutzer:in hat Zugriff auf die angepasste `event_properties` aus Ihrem Aktions-Pfade-Schritt. In diesem Fall können wir ``{% raw %} {{event_properties.${property_name}}} {% endraw %}`` in diesem „Nachricht“-Schritt als Teil des Contents unserer Nachrichten einbinden. Wenn ein Nutzer:innen einen Artikel nicht zu seiner Wunschliste hinzufügt, geht er über den Pfad Alle anderen, was bedeutet, dass `event_properties` nicht referenziert werden kann und einen Fehler für ungültige Einstellungen ausgibt.
 
-Beachten Sie, dass Sie nur dann auf `event_properties` zugreifen können, wenn Ihr „Nachricht“-Schritt auf einen Pfad in einem „Aktionspfade“-Schritt zurückverfolgt werden kann, der nicht „Alle anderen“ ist. Wenn der „Nachricht“-Schritt mit einem „Alle anderen“-Pfad verbunden ist, aber auf einen „Aktionspfade“-Schritt in der User Journey zurückverfolgt werden kann, dann haben Sie auch weiterhin Zugriff auf `event_properties`. Weitere Informationen zu diesen Verhaltensweisen finden Sie unter [Nachrichtenschritt]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
+Beachten Sie, dass Sie nur dann auf `event_properties` zugreifen können, wenn Ihr „Nachricht“-Schritt auf einen Pfad in einem „Aktionspfade“-Schritt zurückverfolgt werden kann, der nicht „Alle anderen“ ist. Wenn der Schritt Nachricht mit einem Alle anderen Pfad verbunden ist, aber auf einen Aktions-Pfad in der User Journey zurückverfolgt werden kann, dann haben Sie auch weiterhin Zugriff auf `event_properties`. Weitere Informationen zu diesen Verhaltensweisen finden Sie unter [Schritt "Nachrichten"]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 

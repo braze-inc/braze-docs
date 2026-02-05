@@ -5,7 +5,7 @@ description: "Cet article de référence couvre les fonctionnalités des donnée
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
-page_order: 3
+page_order: 4
 ---
 
 # Fonctionnalités des données de Shopify
@@ -14,8 +14,12 @@ page_order: 3
 
 ## Suivi des événements Shopify
 
+L'intégration de Shopify utilise les [événements recommandés par l'eCommerce]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) pour capturer les principaux comportements d'achat. Pour des exemples de mise en œuvre et des stratégies marketeurs utilisant ces événements, reportez-vous aux [cas d'utilisation du commerce électronique.]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/)
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
+
 {% tabs %}
-{% tab Exemple de charge utile %}
+{% tab Example Payload %}
 {% subtabs global %}
 {% subtab Product viewed %}
 ```json
@@ -396,7 +400,7 @@ page_order: 3
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Événements Shopify %}
+{% tab Shopify events %}
 {% subtabs global %}
 {% subtab Product viewed %}
 **Événement**: `ecommerce.product_viewed`<br>
@@ -465,7 +469,7 @@ Pour plus d'informations sur la façon de créer une boucle Liquid `for` pour aj
 {% subtab Checkout started %}
 **Événement**: `ecommerce.checkout_started`<br>
 **Type** : Événement recommandé<br>
-**Déclenché**: Lorsqu'un client ajoute, supprime ou met à jour son panier d'achat<br>
+**Déclenché**: Lorsqu'un utilisateur se rend sur la page de paiement<br>
 **Cas d'utilisation**: Abandon du paiement
 
 Pour les toiles Abandoned Checkout, vous devez d'abord utiliser l'étiquette Liquid suivante :
@@ -509,20 +513,20 @@ Vous pouvez ensuite ajouter les étiquettes Liquid suivantes dans votre message 
 | Variable | Liquid templating |
 \|-------------------------|-----------------------------------------------------|
 | cart_id | `{{event_properties.${cart_id}}}` |
-| devise | `{{event_properties.${currency}}}` |
+| devises | `{{event_properties.${currency}}}` |
 | réductions | `{{event_properties.${discounts}}}` |
 | order_id | `{{event_properties.${order_id}}}` |
 | product_id | `{{event_properties.${products}[0].product_id}}` |
-| nom_du_produit | `{{event_properties.${products}[0].product_name}}` |
+| product_name | `{{event_properties.${products}[0].product_name}}` |
 | variant_id | `{{event_properties.${products}[0].variant_id}}` |
 | quantité | `{{event_properties.${products}[0].quantity}}` |
 | unité de gestion des stocks | `{{event_properties.${products}[0].metadata.sku}}` |
 | total_discounts | `{{event_properties.${total_discounts}}}` |
 | order_status_url | `{{event_properties.${metadata}.order_status_url}}` |
-| numéro_de_commande | `{{event_properties.${metadata}.order_number}}` |
+| order_number | `{{event_properties.${metadata}.order_number}}` |
 | tags | `{{event_properties.${metadata}.tags}}` |
-| site_de_référence | `{{event_properties.${metadata}.referring_site}}` |
-| noms_de_passerelle_de_paiement | `{{event_properties.${metadata}.payment_gateway_names}}` |
+| referring_site | `{{event_properties.${metadata}.referring_site}}` |
+| payment_gateway_names | `{{event_properties.${metadata}.payment_gateway_names}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
@@ -739,7 +743,7 @@ Confirmé | `{{event_properties.${confirmed}}}` |
 {% endraw %}
 
 {% alert note %}
-L'intégration de Shopify ne prend actuellement pas en charge le remplissage de l' [événement d'achat de]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) Braze. Par conséquent, les filtres d'achat, les étiquettes Liquid, les déclencheurs basés sur l'action et les analyses doivent utiliser l'événement order_placed de ecommerce..
+L'intégration de Shopify ne prend actuellement pas en charge le remplissage de l' [événement d'achat de]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) Braze. Par conséquent, les filtres d'achat, les étiquettes Liquid, les déclencheurs basés sur l'action et les analyses doivent utiliser l'événement `ecommerce.order_placed`.
 {% endalert %}
 
 {% endsubtab %}
@@ -748,8 +752,9 @@ L'intégration de Shopify ne prend actuellement pas en charge le remplissage de 
 {% endtabs %}
 
 ## Attributs personnalisés Shopify pris en charge
+
 {% tabs local %}
-{% tab Exemple de charge utile %}
+{% tab Example Payload %}
 {% subtabs %}
 {% subtab Shopify Tags %}
 ```json
@@ -770,7 +775,7 @@ L'intégration de Shopify ne prend actuellement pas en charge le remplissage de 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Attributs personnalisés Shopify %}
+{% tab Shopify Custom Attributes %}
 | Nom de l'attribut | Description |
 | --- | --- |
 | `shopify_total_spent` | Le montant total d'argent que le client a dépensé au cours de son historique de commandes. |
@@ -781,6 +786,15 @@ L'intégration de Shopify ne prend actuellement pas en charge le remplissage de 
 | `shopify_province` | La province du client à partir de son adresse par défaut. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+{% alert important %}
+Un problème connu avec la version actuelle de l'API de Shopify empêche l'attribut utilisateur `shopify_last_order_name` de se remplir correctement. L'impact sur les utilisateurs est le suivant :<br><br>
+
+- **Utilisateurs existants :** Pour tout utilisateur ayant déjà une valeur pour `shopify_last_order_name`, cette valeur persiste mais n'est pas mise à jour par les commandes suivantes.
+- **Nouveaux utilisateurs :** Pour les nouveaux utilisateurs, le champ ne se remplit pas et reste vide ou nul.
+
+Cette page sera mise à jour dès que Shopify aura résolu ce problème.
+{% endalert %}
+
 ### Personnalisation Liquid
 
 Pour ajouter une personnalisation Liquid pour vos attributs personnalisés Shopify, sélectionnez **\+ Personnalisation**. Sélectionnez ensuite **Attributs personnalisés** comme type de personnalisation.
@@ -789,7 +803,7 @@ Pour ajouter une personnalisation Liquid pour vos attributs personnalisés Shopi
 
 Après avoir sélectionné votre attribut personnalisé, saisissez une valeur par défaut et copiez l'extrait de code Liquid dans votre message.
 
-![Coller un extrait de code Liquid dans un message.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
+![Collage d'un extrait de code liquide dans un message.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -822,13 +836,13 @@ Si vous prévoyez d'intégrer un ID externe personnalisé (pour l'[intégration 
 
 1. Activez le remplissage historique dans l'étape **Suivi des données Shopify**.
 
-![L'étape "Suivre les données de Shopify" de l'intégration de Shopify montrant l'historique des remblais sélectionnés.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %}).
+![L'étape "Suivre les données Shopify" de l'intégration Shopify montrant l'historique des remblais sélectionnés.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
 {: start="2"}
 
 2. Une fois que vous avez terminé la configuration de votre intégration, Braze commence la synchronisation initiale des données. Vous pouvez suivre la progression dans l'onglet **Données Shopify** de vos paramètres d'intégration. 
 
-![La page des paramètres d'intégration de Shopify avec un curseur indiquant que les événements sont activement synchronisés.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
+![La page des paramètres d'intégration de Shopify avec un spinner indiquant que les événements sont activement synchronisés.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
 
 ### Données synchronisées 
 

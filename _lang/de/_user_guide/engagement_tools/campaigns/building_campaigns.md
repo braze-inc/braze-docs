@@ -1,6 +1,6 @@
 ---
-nav_title: Kampagnen bauen
-article_title: Erstellen von Kampagnen
+nav_title: Kampagnen erstellen
+article_title: Kampagnen erstellen
 layout: dev_guide
 guide_top_header: "Erstellen von Kampagnen"
 guide_top_text: "Auf dieser Landing Page finden Sie Ressourcen zum Aufbau Ihrer Kampagnen. Nachdem Sie Ihre <a href='/docs/user_guide/engagement_tools/segments/'>Segmente</a> erstellt haben, nutzen Sie die Ressourcen hier, um Ihre Kampagne einzurichten und sich über die verschiedenen verfügbaren Optionen zu informieren.<br><br>Wir empfehlen Ihnen auch unseren Braze-Lernkurs <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>zur Einrichtung von Kampagnen</a>."

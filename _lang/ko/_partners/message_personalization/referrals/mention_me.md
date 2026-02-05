@@ -1,6 +1,6 @@
 ---
 nav_title: Mention Me
-article_title: Integrating Mention Me with Braze
+article_title: Braze와 멘션하기 통합하기
 description: Mention Me Integration Setup Guide
 alias: /partners/mention_me/
 page_type: partner

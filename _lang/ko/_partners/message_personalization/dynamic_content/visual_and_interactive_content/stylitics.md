@@ -14,13 +14,13 @@ search_tag: Partner
 
 _This integration is maintained by Stylitics._
 
-## About the integration
+## 통합 정보
 
 Your Braze and Stylitics integration allows you to enhance your existing email campaigns with engaging and relevant bundled content, creating a personalized customer experience.
 
 ![]({% image_buster /assets/img/stylitics.png %}){: style="max-width:60%;"}
 
-## Prerequisites
+## 필수 조건
 
 | Requirement | Description |
 | ----------- | ----------- |

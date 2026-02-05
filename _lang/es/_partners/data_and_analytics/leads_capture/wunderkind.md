@@ -1,6 +1,6 @@
 ---
 nav_title: Niño prodigio
-article: Wunderkind
+article_title: Niño prodigio
 layout: redirect
 redirect_to: /docs/partners/wunderkind/
 ---

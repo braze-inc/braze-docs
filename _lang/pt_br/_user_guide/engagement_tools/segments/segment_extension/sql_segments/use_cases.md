@@ -1,23 +1,23 @@
 ---
 nav_title: "Casos de uso"
-article_title: Casos de uso das extensões do segmento SQL
+article_title: Casos de Uso de Extensões de Segmento SQL
 page_order: 2
 page_type: glossary
 layout: sql_segment_extensions_glossary
 alias: "/sql_segments_use_cases/"
-description: "Este artigo contém consultas testadas e comprovadas para SQL Segment Extensions."
+description: "Este artigo contém consultas testadas e comprovadas para extensões de segmento SQL."
 tool: Segments
 ---
 
 {% api %}
-## Selecione os usuários de acordo com o número de vezes que um evento ocorreu
+## Selecione os usuários pela quantidade de vezes que um evento ocorreu
 {% apitags %}
 Evento
 {% endapitags %}
 
-Selecione os usuários que abriram uma determinada campanha de e-mail mais de uma vez no passado.
+Selecione os usuários que abriram uma certa campanha de e-mail mais de uma vez no passado.
 
-Isso também funciona para o limite de mensagens in-app pelo número de impressões, como a seleção de usuários com mais de três impressões como uma exclusão de segmento na mesma campanha. 
+Isso também funciona para o limite de mensagens no app pelo número de impressões, como selecionar usuários com mais de três impressões como uma exclusão de segmento na mesma campanha. 
 
 ```sql
 SELECT user_id FROM "USERS_MESSAGES_EMAIL_OPEN_SHARED"
@@ -28,12 +28,12 @@ HAVING count(*) > 1
 {% endapi %}
 
 {% api %}
-## Selecionar usuários que executaram uma ação e somar um valor de propriedade
+## Selecione os usuários que realizaram uma ação e some um valor de propriedade
 {% apitags %}
 Propriedade
 {% endapitags %}
 
-Selecione os usuários que fizeram uma aposta em esportes com a soma de todas as suas apostas sendo maior que um determinado valor.
+Selecione usuários que fizeram uma aposta em esportes com a soma de todas as suas apostas sendo maior que um certo valor.
 
 ```sql
 select user_id from "USERS_BEHAVIORS_CUSTOMEVENT_SHARED"
@@ -43,14 +43,14 @@ group by 1 having sum(get_path(parse_json(properties), 'amount')) > 150
 {% endapi %}
 
 {% api %}
-## Selecione usuários com base no número de vezes que um evento ocorreu em um intervalo de tempo
+## Selecione usuários com base em quantas vezes um evento ocorreu em um intervalo de tempo
 {% apitags %}
-Evento, intervalo de tempo
+Evento, Intervalo de tempo
 {% endapitags %}
 
 Selecione usuários com mais de três aberturas de e-mail nos últimos 30 dias.
 
-Isso também funciona para determinar os níveis de envolvimento dos usuários, como usuários altamente responsivos em diferentes canais.
+Isso também funciona para determinar os níveis de engajamento dos usuários, como usuários altamente responsivos em diferentes canais.
 
 ```sql
 SELECT user_id, COUNT(DISTINCT id) AS num_emails_opened
@@ -62,12 +62,12 @@ HAVING COUNT(DISTINCT id) > 3
 {% endapi %}
 
 {% api %}
-## Selecione os usuários que registraram pelo menos um evento em vários intervalos de tempo
+## Selecione usuários que registraram pelo menos um evento em vários intervalos de tempo
 {% apitags %}
-Evento, intervalo de tempo
+Evento, Intervalo de tempo
 {% endapitags %}
 
-Selecione os usuários que fizeram uma compra em cada um dos últimos quatro trimestres. Esse segmento de usuário pode ser usado com a [sincronização de público-alvo]({{site.baseurl}}/partners/canvas_audience_sync/) para identificar clientes semelhantes de alto valor para aquisição.
+Selecione os usuários que fizeram uma compra em cada um dos últimos quatro trimestres. Este segmento de usuário pode ser usado com [público sincronizado]({{site.baseurl}}/partners/canvas_audience_sync/) para identificar clientes semelhantes de alto valor para aquisição.
 
 ```sql
 ELECT DISTINCT user_id
@@ -89,12 +89,12 @@ WHERE to_timestamp_ntz(time) >= DATEADD(day, -365, CURRENT_TIMESTAMP()) AND to_t
 {% endapi %}
 
 {% api %}
-## Selecione qualquer compra com determinadas propriedades
+## Selecione qualquer compra com certas propriedades
 {% apitags %}
 Compra, Propriedade
 {% endapitags %}
 
-Selecione os clientes que fizeram qualquer compra que contenha a propriedade `“type = shops”` em 14 dias. 
+Selecione clientes que fizeram qualquer compra que contenha a propriedade `“type = shops”` em 14 dias. 
 
 ```sql
 SELECT
@@ -118,12 +118,12 @@ HAVING COUNT(id) > 0;
 {% endapi %}
 
 {% api %}
-## Selecione os usuários que receberam uma mensagem que não foi entregue
+## Selecione usuários que receberam uma mensagem que não foi entregue
 {% apitags %}
-Mensagem, entrega
+Mensagem, Entrega
 {% endapitags %}
 
-Selecione os usuários que receberam uma campanha de SMS ou Canvas, mas a mensagem não chegou à operadora. Por exemplo, a mensagem pode ter sido interrompida por um estouro de fila. 
+Selecione os usuários que receberam uma campanha de SMS ou canva, mas a mensagem não chegou à operadora. Por exemplo, a mensagem pode ter sido interrompida por um estouro de fila. 
 
 ```sql
 SELECT
@@ -139,12 +139,12 @@ HAVING COUNT(id) > 0;
 {% endapi %}
 
 {% api %}
-## Encontre todas as mensagens SMS que foram enviadas, mas não chegaram à operadora devido ao excesso de fila
+## Encontre todas as mensagens SMS que foram enviadas, mas não chegaram à operadora devido ao estouro da fila
 {% apitags %}
 Mensagem, operadora
 {% endapitags %}
 
-Isso pode ser reaproveitado para outros tipos de mensagens enviadas de um determinado Canvas que não foram entregues.
+Isso pode ser reutilizado para outros tipos de mensagens enviadas de uma canva específica que não foram entregues.
 
 ```sql
 SELECT
@@ -157,11 +157,11 @@ AND TO_PHONE_NUMBER NOT IN (SELECT TO_PHONE_NUMBER FROM USERS_MESSAGES_SMS_CARRI
 GROUP BY 1
 HAVING COUNT(id) > 0;
 ```
-`CANVAS_ID` é o número após `/canvas/` em seu URL do Canvas.
+`CANVAS_ID` é o número após `/canvas/` na sua URL do canva.
 {% endapi %}
 
 {% api %}
-## Selecione os usuários que fizeram qualquer compra com uma matriz de propriedades contendo um valor específico
+## Selecione usuários que fizeram qualquer compra com uma matriz de propriedades contendo um valor específico
 {% apitags %}
 Compra, Propriedade
 {% endapitags %}
@@ -177,12 +177,12 @@ WHERE f.VALUE::STRING = 'Bacon'
 {% api %}
 ## Encontre todos os usuários que tiveram vários erros 30003 e 0 entregas
 {% apitags %}
-Erro, entrega
+Erro, Entrega
 {% endapitags %}
 
-Isso é útil para resolver situações em que você deseja interromper o envio para usuários que não estão conseguindo receber mensagens, mas não estão sendo marcados como inválidos porque não têm o código de erro necessário. Você pode redirecionar esses usuários para que atualizem seu número de telefone ou cancelar a assinatura. 
+Isso é útil para resolver situações em que você deseja parar de enviar para usuários que não estão recebendo mensagens, mas não estão sendo marcados como inválidos porque não possuem o código de erro necessário. Você pode redirecionar esses usuários para atualizar o número de telefone deles ou cancelar inscrição. 
 
-Essa consulta usa o editor incremental e procura usuários com três ou mais envios rejeitados nos últimos 90 dias e zero entregas.
+Esta consulta usa o editor incremental e procura usuários com três ou mais envios rejeitados nos últimos 90 dias e zero entregas.
 
 ```sql
 SELECT
@@ -206,9 +206,9 @@ Evento, Propriedade, Intervalo de tempo
 
 Encontre usuários que atendam às seguintes condições simultaneamente:
 
-- Transacionou um valor total superior a US$ 500 (a soma de vários eventos `Transact` )
-- Transações no shopping `Funan`
-- Realizou transações mais de três vezes nos últimos 90 dias
+- Transacionou um valor total superior a $500 (a soma de vários `Transact` eventos)
+- Transação no shopping `Funan`
+- Transacionado mais de três vezes nos últimos 90 dias
 
 ```sql
 SELECT
@@ -228,7 +228,7 @@ AND COUNT(*) > 3
 {% endapi %}
 
 {% api %}
-## Selecione usuários cuja sessão mais recente tenha sido em um modelo de dispositivo específico
+## Selecione usuários cuja sessão mais recente foi em um modelo de dispositivo específico
 {% apitags %}
 Sessão, dispositivo
 {% endapitags %}
@@ -244,9 +244,9 @@ group by user_id, external_user_id, device_id, platform, os_version, device_mode
 {% endapi %}
 
 {% api %}
-## Encontre usuários que selecionaram o segundo botão de uma mensagem in-app em um intervalo de tempo específico
+## Encontre usuários que selecionaram o segundo botão de uma mensagem no app em um intervalo de tempo específico
 {% apitags %}
-Intervalo de tempo
+Período
 {% endapitags %}
 
 ```sql
@@ -262,7 +262,7 @@ AND CAMPAIGN_ID = '64c8cd9c4d38d13091957b1c'
 {% api %}
 ## Encontre usuários que compraram em cada um dos últimos três meses do calendário
 {% apitags %}
-Compra, intervalo de tempo
+Compra, Intervalo de tempo
 {% endapitags %}
 
 ```sql
@@ -284,14 +284,14 @@ AND to_timestamp_ntz(time) <= '2023-11-30'::timestamp_ntz;
 {% endapi %}
 
 {% api %}
-## Selecione os usuários que concluíram um evento personalizado com uma propriedade específica quando a propriedade for um número inteiro
+## Selecione usuários que completaram um evento personalizado com uma propriedade específica quando a propriedade é um número inteiro
 {% apitags %}
 Evento, Propriedade
 {% endapitags %}
 
-Enviar uma mensagem aos usuários que assistiram a uma série nos últimos seis meses e estão prestes a deixar a plataforma. 
+Enviando uma mensagem para usuários que assistiram a uma série nos últimos seis meses e estão prestes a deixar a plataforma. 
 
-A propriedade é o ID do título; caso contrário, você precisaria incluir mais de 100 IDs de título em um filtro. A Extensão de segmento incremental pode ser otimizada para custo e você pode especificar o intervalo de datas no cabeçalho.
+A propriedade é o ID do título; caso contrário, você precisaria incluir mais de 100 IDs de título em um filtro. A extensão de segmento incremental pode ser otimizada para custo e você pode especificar o intervalo de datas no cabeçalho.
 
 ```sql
 SELECT 

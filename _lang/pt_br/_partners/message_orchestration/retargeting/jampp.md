@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Jampp](https://www.jampp.com/) é uma plataforma de marketing de performance usada para aquisição e redirecionamento de clientes móveis. Jampp combina dados comportamentais com tecnologia preditiva e programática para gerar receita para os anunciantes, exibindo anúncios pessoais e relevantes que inspiram os consumidores a comprar pela primeira vez ou com mais frequência.
 
-_Esta integração é mantida pela Jampp._
+_Essa integração é mantida pelo Jampp._
 
 ## Sobre a integração
 
@@ -33,7 +33,7 @@ Esta integração suporta aplicativos iOS e Android.
 | ID do app para Android | Seu identificador exclusivo do aplicativo Braze para Android (como "com.example"). |
 | ID do app para iOS | Seu identificador exclusivo do aplicativo Braze para iOS (como "012345678"). |
 | Ativar a coleta de IDFA no SDK da Braze | A coleta de IDFA é opcional no SDK da Braze e fica desativada por padrão. | 
-| Coleta de ID de publicidade do Google via atributo personalizado | A coleta do ID de publicidade do Google é opcional para os clientes e pode ser coletada como um [atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
+| Coleta de ID de publicidade do Google via atributo personalizado | A coleta de ID de publicidade do Google é opcional para os clientes e pode ser coletada como um [atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types).
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integração
@@ -68,7 +68,7 @@ No URL do webhook, você precisa:
 - Passe o identificador exclusivo do aplicativo do seu app para Android (como "com.example") e iOS (como "012345678").
 - Insira [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid) para o atributo personalizado apropriado que você está rastreando como o ID de publicidade do Google. Observe que o ID de publicidade do Google está listado como `aaid` neste exemplo, mas você precisará substituí-lo pelo nome do atributo personalizado que seus desenvolvedores definiram.
 
-![A URL do webhook e a prévia da mensagem mostradas no construtor de webhook do Braze.]({% image_buster /assets/img/jampp_webhook.png %})
+![O URL do webhook e a prévia da mensagem mostrados no construtor de webhook da Braze.]({% image_buster /assets/img/jampp_webhook.png %})
 
 {% alert important %}
 A Braze não coleta automaticamente o IDFA/AAID do dispositivo, então você deve armazenar esses valores. Esteja ciente de que você pode precisar do consentimento do usuário para coletar esses dados.
@@ -82,7 +82,7 @@ O webhook do Jampp requer um método HTTP e um cabeçalho de solicitação.
 - **Cabeçalhos de solicitação**:
   - **Content-Type**: application/json
 
-![Os cabeçalhos da solicitação, o método HTTP e a prévia da mensagem mostrados no construtor de webhook do Braze.]({% image_buster /assets/img/jampp_method.png %})
+![Os cabeçalhos da solicitação, o método HTTP e a prévia da mensagem mostrados no construtor de webhook da Braze.]({% image_buster /assets/img/jampp_method.png %})
 
 #### Corpo da solicitação
 

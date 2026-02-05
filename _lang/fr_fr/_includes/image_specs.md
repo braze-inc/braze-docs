@@ -40,7 +40,7 @@ Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une tail
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Paysage %}
+{% tab Landscape %}
 
 | Type | Rapport hauteur/largeur | Qualité de l’image | Remarques |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une tail
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Contextuel %}
+{% tab Slideup %}
 
 | Type | Rapport hauteur/largeur | Qualité de l’image | Remarques |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ Tous les messages in-app ont une taille d'image recommandée de 500 Ko, une tail
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
 {% endtab %}
-{% tab Fenêtre modale %}
+{% tab Modal %}
 
 | Type | Rapport hauteur/largeur | Qualité de l’image | Remarques |
 | --- | --- | --- | --- |

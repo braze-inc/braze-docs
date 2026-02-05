@@ -68,7 +68,7 @@ Dans l'invite **Configure Job**, indiquez un libellé et une description faculta
 Enfin, choisissez l'option préférée pour la case à cocher **Utilisateurs existants**. En laissant cette case cochée, vous ajouterez les utilisateurs qui existent déjà dans l'audience Lytics sélectionnée. Si la case n'est pas cochée, les utilisateurs ne seront exportés vers Braze que lorsqu'ils entreront ou sortiront de l'audience après le début du flux de travail.
 
 {% alert note %}
-En cochant cette case, tous les utilisateurs existants dans l'audience sélectionnée seront poussés vers Braze. Il en résultera un point de données par utilisateur et par audience pour la synchronisation initiale.
+En cochant cette case, tous les utilisateurs existants dans l'audience sélectionnée seront poussés vers Braze. Si votre tarification Braze inclut des points de données, surveillez l'utilisation des points de données en conséquence.
 {% endalert %}
 
 Cliquez sur **Terminer** lorsque vous avez terminé pour lancer l'exportation et enregistrer.

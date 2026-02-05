@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Liste Katalog Artikel Details"
+nav_title: "GET: Details zum Katalogartikel auflisten"
 article_title: "GET: Liste Katalog Artikel Details"
 search_tag: Endpoint
 page_order: 2

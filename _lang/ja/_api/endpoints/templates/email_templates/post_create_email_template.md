@@ -51,13 +51,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`template_name`|必須|文字列|メールテンプレートの名前|
 |`subject`|必須|文字列|メールテンプレートの件名|
-|`body`|必須|文字列|HTMLを含む可能性のあるメールテンプレート本文。|
+|`body`|必須|文字列|HTMLを含む可能性のあるメールテンプレート本文。400KBまで。|
 |`plaintext_body`|オプション|文字列|メールテンプレート本文のプレーンテキストバージョン。|
 |`preheader`|オプション|文字列|一部のクライアントでプレビューを生成するために使用されるメールプレヘッダー。|
 |`tags`|オプション|文字列|[タグ]({{site.baseurl}}/user_guide/administrative/app_settings/tags/)はすでに存している必要があります。|
 |`should_inline_css`|オプション|ブール値|テンプレートごとに`inline_css` 機能を有効または無効にする。提供されない場合、Brazeはアプリグループのデフォルト設定を使用する。`true` か`false` のどちらかが予想される。|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
 
 ## リクエスト例
 ```

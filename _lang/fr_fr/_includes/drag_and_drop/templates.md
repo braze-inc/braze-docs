@@ -41,7 +41,7 @@ Les meilleures pratiques en matière de livrabilité dépassent souvent les exig
 
 {% if include.section == "email validation" %}
 
-Si l'utilisateur saisit une adresse e-mail contenant des caractères spéciaux non acceptés, il verra apparaître un indicateur d'erreur générique et ne pourra pas soumettre le formulaire. Ce message d'erreur n'est pas personnalisable. Vous pouvez visualiser le comportement de l'erreur dans l'onglet **Prévisualisation et test** et sur votre appareil de test. Pour en savoir plus sur la manière dont Braze formate les adresses e-mail, consultez la rubrique [Validation de l'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)
+Si l'utilisateur saisit une adresse e-mail contenant des caractères spéciaux non acceptés, il verra apparaître un indicateur d'erreur générique et ne pourra pas soumettre le formulaire. Ce message d'erreur n'est pas personnalisable. Vous pouvez visualiser le comportement de l'erreur dans l'onglet **Preview & Test** et sur votre appareil de test. Pour en savoir plus sur la manière dont Braze formate les adresses e-mail, consultez la rubrique [Validation de l'e-mail.]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/)
 
 {% endif %}
 

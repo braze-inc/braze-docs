@@ -4,9 +4,9 @@ article_title: Ativação de dados
 page_order: 2
 layout: dev_guide
 guide_top_header: "Ativação de dados"
-guide_top_text: "> Depois de unificar seus dados no Braze, é hora de usá-los. Ative seus dados criando mensagens direcionadas, personalizando experiências e configurando jornadas de clientes que respondam ao que seus clientes fazem em tempo real."
+guide_top_text: "> Depois de unificar seus dados no Braze, é hora de usá-los. Ative seus dados criando mensagens direcionadas, personalizando experiências e configurando jornadas do cliente que respondem ao que seus clientes fazem em tempo real."
 page_type: landing
-description: "Esta seção inclui artigos relacionados à ativação de dados para a Braze Data Platform."
+description: "Esta seção inclui artigos relacionados à ativação de dados para a Plataforma de Dados Braze."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
@@ -19,10 +19,10 @@ guide_featured_list:
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Análises
+  - name: Análise de dados
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: IA do Braze
+  - name: Braze AI™
     link: /docs/user_guide/brazeai/
     image: /assets/img/braze_icons/stars-01.svg
 ---

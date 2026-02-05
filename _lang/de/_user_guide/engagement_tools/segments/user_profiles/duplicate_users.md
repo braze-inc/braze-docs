@@ -21,7 +21,7 @@ Wenn eine Benutzersuche doppelte Profile ergibt, können Sie jedes Profil einzel
 
 Wählen Sie in Braze **Audience** > **User Search**.
 
-![Die Kachel "Nutzersuche" wird im Navigationsmenü hervorgehoben.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
+![Die Kachel "Nutzer:in" wird im Navigationsmenü hervorgehoben.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 Geben Sie eine eindeutige Kennung für das doppelte Profil ein, z. B. eine E-Mail-Adresse oder Telefonnummer, und wählen Sie dann **Suchen**.
 
@@ -31,7 +31,7 @@ Geben Sie eine eindeutige Kennung für das doppelte Profil ein, z. B. eine E-Mai
 
 Um die Zusammenführung zu starten, wählen Sie **Duplikate zusammenführen**.
 
-![Eines der doppelten Profile der Nutzer:in.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
+![Eines der doppelten Profile der Nutzer:innen.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 Wählen Sie, welches Benutzerprofil Sie behalten und welches Sie zusammenführen möchten, und wählen Sie dann **Profile zusammenführen**. Wiederholen Sie diesen Vorgang, bis Sie alle doppelten Profile zusammengeführt haben.
 
@@ -100,7 +100,7 @@ Sie können Regeln verwenden, um zu steuern, wie doppelte Profile bei der Zusamm
 - **Beheben Sie Verknüpfungen wie**: Erstellungsdatum, Aktualisierungsdatum, Letzte Sitzung
 - **Prioritäten setzen**: Neueste, Älteste
 
-![Das Panel "Regeln bearbeiten" mit Abschnitten zum Auswählen von Optionen für "Profil beibehalten" und "Verknüpfungen auflösen".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
+![Das Panel "Regeln bearbeiten" mit Abschnitten zum Auswählen von Optionen für "Beibehaltene Profile" und "Auflösen von Verknüpfungen".]({% image_buster /assets/img/audience_management/duplicate_users/edit_rules.png %}){: style="max-width:40%;"}
 
 Sie könnten zum Beispiel das Profil mit der Telefonnummer behalten. Wenn mehrere Benutzer dieselbe Telefonnummer haben, können Sie Verbindungen über das Feld **Aktualisierungsdatum** auflösen und dem zuletzt aktualisierten Benutzer Priorität einräumen.
 

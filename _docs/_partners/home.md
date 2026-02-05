@@ -144,7 +144,9 @@ valid_partner_list:
 - name: BlueConic
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 - name: LINE
-  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/
+- name: LinkedIn Audience Sync
+  url: /docs/partners/canvas_audience_sync/linkedin_audience_sync/
 - name: Judo
   url: /docs/partners/message_personalization/dynamic_content/visual_and_interactive_content/judo/
 - name: Shopify
@@ -377,4 +379,11 @@ valid_partner_list:
   url: /docs/partners/optimizely/
 - name: OtherLevels
   url: /docs/partners/otherlevels/
+  url: /docs/partners/crowdtwist
+- name: Fullstory
+  url: /docs/partners/message_personalization/dynamic_content/personalized_recommendations/fullstory
+- name: Open Loyalty
+  url: /docs/partners/openloyalty/
+- name: DOTS.ECO
+  url: /docs/partners/dots.eco/
 ---
