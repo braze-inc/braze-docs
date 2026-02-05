@@ -20,7 +20,7 @@ Póngase en contacto con su gestor de cuenta o abra un [ticket de asistencia]({{
 
 Este desglose de eventos muestra qué tipo de información se incluye generalmente en un evento de compromiso de mensajes. Con una sólida comprensión de sus componentes, tus desarrolladores y el equipo de estrategia de inteligencia empresarial pueden utilizar los datos de eventos Currents entrantes para elaborar informes y gráficos basados en datos, y aprovechar otras valiosas métricas de datos.
 
-![Desglose de un evento de interacción de mensajes que muestra un evento de cancelar suscripción por correo electrónico con las propiedades enumeradas agrupadas por propiedades específicas del usuario, propiedades de seguimiento de campaña o Canvas y propiedades específicas del evento.]({% image_buster /assets/img/message_engagement_event.png %})
+![Desglose de un evento de interacción de mensaje que muestra un evento de cancelar suscripción por correo electrónico con las propiedades enumeradas agrupadas por propiedades específicas del usuario, propiedades de seguimiento de campaña o Canvas y propiedades específicas del evento.]({% image_buster /assets/img/message_engagement_event.png %})
 
 Los eventos de participación en mensajes se componen de propiedades **específicas de usuario**, propiedades de **seguimiento de campaña/tela** y propiedades **específicas de evento**.
 

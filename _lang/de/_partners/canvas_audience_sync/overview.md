@@ -38,7 +38,7 @@ table td {
 | [Facebook oder Instagram]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) | Bis zu 24 Stunden | 190.000 Anzeigenkonten pro Stunde | Ja | {::nomarkdown}<ul><li>Facebook unterstützt bis zu 500 Zielgruppen.</li><li>Facebook verlangt Zielgruppen von mindestens 1.000 Nutzer:innen.</li></ul>{:/} |
 | [Google Ads oder YouTube]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) | Zwischen 6 und 12 Stunden | Batching alle 5 Sekunden mit automatischer Wiederholung basierend auf Google Feedback | Kein:e | {::nomarkdown}<ul><li><b>Kund:in passen sich an:</b> Verwenden Sie entweder eine Handy-Anzeige, eine E-Mail Adresse oder eine Telefonnummer.</li><li>Google Audiences benötigen mindestens 5.000 Nutzer:innen, um mit dem Adserving zu beginnen.</li><li>Die Zielgruppengröße wird als Null angezeigt, bis es mindestens 1.000 Nutzer:innen gibt.</li></ul>{:/} |
 | [LinkedIn]({{site.baseurl}}/partners/canvas_audience_sync/linkedin_audience_sync/) | 48 Stunden | LinkedIn verarbeitet 10 Abfragen pro Sekunde und 100.000 Nutzer:innen pro Anfrage. Braze fasst Nutzer:innen alle 5 Sekunden zusammen. | KI Prognosen für Zielgruppen | {::nomarkdown}<ul><li>Die Zielgruppe muss mindestens 300 Mitglieder umfassen, wobei das Standort-Targeting berücksichtigt wird.</li><li>LinkedIn zeigt die Übereinstimmung mit der Rate im Braze-Dashboard an.</li></ul>{:/} |
-| [Pinterest]({{site.baseurl}}/partners/canvas_audience_sync/pinterest_audience_sync/) | Zwischen 24 und 48 Stunden | Pinterest verarbeitet 7 Abfragen pro Sekunde und 100.000 Nutzer:innen pro Anfrage. Braze fasst Nutzer:innen alle 5 Sekunden zusammen. | Ja | Für die Zielgruppen von Pinterest sind mindestens 100 Nutzer:innen erforderlich. |
+| [Pinterest]({{site.baseurl}}/partners/canvas_audience_sync/pinterest_audience_sync/) | Zwischen 24 und 48 Stunden | Pinterest verarbeitet 7 Abfragen pro Sekunde und 1.900 Nutzer:innen pro Anfrage. Braze fasst Nutzer:innen alle 5 Sekunden zusammen. | Ja | Für die Zielgruppen von Pinterest sind mindestens 100 Nutzer:innen erforderlich. |
 | [Snapchat]({{site.baseurl}}/partners/canvas_audience_sync/snapchat_audience_sync/) | -- | Snapchat verarbeitet 10 Abfragen pro Sekunde und 100.000 Nutzer:innen pro Anfrage. Braze fasst Nutzer:innen alle 5 Sekunden zusammen. | Ja | Snapchat unterstützt bis zu 1.000 Zielgruppen. |
 | [TikTok]({{site.baseurl}}/partners/canvas_audience_sync/tiktok_audience_sync/) | Zwischen 24 und 48 Stunden | TikTok verarbeitet 50 Abfragen pro Sekunde und 10.000 Nutzer:innen pro Anfrage. Braze fasst Nutzer:innen alle 5 Sekunden zusammen. | Ja | {::nomarkdown}<ul><li>TikTok unterstützt bis zu 400 Zielgruppen.</li><li>Die Zielgruppen von TikTok benötigen mindestens 1.000 Nutzer:innen, um mit dem Adserving zu beginnen.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
@@ -48,7 +48,7 @@ table td {
 
 Um Audience Sync mit Google oder Facebook zu nutzen, verbinden Sie Ihr Anzeigenkonto, indem Sie auf der Seite **Technologie-Partner** nach dem Partner suchen.
 
-![Facebook Technologie Partner.]({% image_buster /assets/img/audience_sync/facebook_partner.png %}){: style="max-width:35%;"} ![Google Ads Technologie Partner.]({% image_buster /assets/img/audience_sync/google_ads_partner.png %}){: style="max-width:35%;"}
+![Facebooks Technologie Partner.]({% image_buster /assets/img/audience_sync/facebook_partner.png %}){: style="max-width:35%;"} ![Google Ads Technologie Partner.]({% image_buster /assets/img/audience_sync/google_ads_partner.png %}){: style="max-width:35%;"}
 
 Nachdem Sie Ihr Anzeigenkonto verbunden haben, können Sie ein Canvas mit einem Audience Sync-Schritt erstellen.
 
@@ -109,7 +109,7 @@ Wenn Sie den [iOS Identifier for Advertisers (IDFA) über das Braze SDK]({{site.
 
 Wenn Sie `opt-ins`, `opt-outs`, `Do Not Sell Or Share` oder andere relevante angepasste Attribute sammeln, sollten Sie diese in Ihre Canvas-Eingangskriterien als Filter einbeziehen:
 
-![Ein Canvas mit einem Eingang Zielgruppe "opted_in_marketing" ist gleich "true".]({% image_buster /assets/img/audience_sync/audience_sync.png %})
+![Ein Canvas mit einem Eingang Zielgruppe von "opted_in_marketing ist gleich true".]({% image_buster /assets/img/audience_sync/audience_sync.png %})
 
 Wenn Sie mehr darüber erfahren möchten, wie Sie diese Datenschutzgesetze innerhalb der Braze-Plattform einhalten können, lesen Sie bitte den Abschnitt [Technische Unterstützung zum Datenschutz]({{site.baseurl}}/dp-technical-assistance/).
 

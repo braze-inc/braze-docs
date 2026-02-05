@@ -59,7 +59,7 @@ Quando a autenticação de dois fatores está ativada:
 - Além de inserir uma senha, os usuários precisam inserir um código de verificação ao fazer login em sua conta Braze. O código pode ser enviado através de um aplicativo autenticador, e-mail ou SMS. 
 - A caixa de seleção **Lembrar esta conta por 30 dias** fica disponível para os usuários.
 
-O Braze bloqueia usuários que não conseguem configurar sua autenticação de dois fatores em sua conta Braze. Os usuários da conta Braze também podem configurar a autenticação de dois fatores por conta própria nas **Configurações da conta**, mesmo que não seja exigido pelo administrador.
+O Braze bloqueia usuários que não configuram sua autenticação de dois fatores em sua conta Braze. Os usuários da conta Braze também podem configurar a autenticação de dois fatores por conta própria nas **Configurações da conta**, mesmo que não seja exigido pelo administrador.
 
 Não se esqueça de salvar suas alterações antes de sair da página!
 
@@ -123,7 +123,7 @@ Para ativar manualmente a autenticação de dois fatores (2FA) na sua conta Braz
 3. Digite sua senha no modal de login e selecione **Verificar Senha**.
 4. No modal de **Configuração de Autenticação de Dois Fatores**, insira seu número de telefone e selecione **Ativar**.
 5. Copie o código gerado de sete dígitos do seu aplicativo de 2FA, e-mail ou mensagem SMS, e volte para o Braze e cole no modal de **Configuração de Autenticação de Dois Fatores**. Selecione **Verificar**.
-6. (Opcional) Para evitar inserir 2FA pelos próximos 30 dias, ative a opção **Lembrar esta conta por 30 dias**.
+6. (Opcional) Para evitar inserir 2FA pelos próximos 30 dias, ative a opção **Lembrar desta conta por 30 dias**.
 
 ## Elevated Access
 
@@ -169,8 +169,8 @@ Para exportar eventos de segurança para a Amazon S3 sem esse limite de linha, v
 - Fluxo de acesso elevado iniciado
 - Fluxo de acesso elevado concluído
 - Falha na verificação 2FA para acesso elevado
-- Forçou a Aplicação de Acesso Elevado
-- Desativou a Aplicação de Acesso Elevado
+- Acesso Elevado Habilitado
+- Acesso Elevado Desabilitado
 
 Campanha interrompida
 - Campanha Adicionada
@@ -242,7 +242,7 @@ Credencial push removida
 - Usuários Excluídos
 - Usuários Visualizados
 - Importação de Usuário Iniciada
-- Status do Grupo de Inscrições do Usuário Atualizado
+- Status do Grupo de Inscrição do Usuário Atualizado
 - Usuário excluído
 - Exclusão de Usuário Único Cancelada
 - Exclusão em Massa de Usuários Cancelada
@@ -329,7 +329,7 @@ Você é responsável por determinar as preferências corretas para seu espaço 
 
 Defina preferências padrão marcando caixas para quaisquer campos que o Braze deve remover se um usuário for excluído. Selecione qualquer um dos campos que contenham IPI. Essa preferência se aplica a todos os espaços de trabalho atuais e futuros, a menos que os espaços de trabalho sejam explicitamente adicionados a um grupo de preferências.
 
-Para personalizar preferências por espaço de trabalho, você pode adicionar grupos de preferências com configurações diferentes da padrão. Aplicamos as configurações padrão a todos os espaços de trabalho não adicionados a um grupo de preferências adicional, incluindo espaços de trabalho criados no futuro.  
+Para personalizar preferências por espaço de trabalho, você pode adicionar grupos de preferências com configurações diferentes das padrão. Aplicamos as configurações padrão a todos os espaços de trabalho não adicionados a um grupo de preferências adicional, incluindo espaços de trabalho criados no futuro.  
 
 ![Seção de Preferências de Exclusão de Dados com o botão ativado para personalizar preferências de exclusão de dados por espaço de trabalho.]({% image_buster /assets/img/deletion_preferences_1.png %})
 

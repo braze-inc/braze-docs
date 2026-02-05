@@ -20,7 +20,7 @@ tool: Segments
 
 ## カタログセグメントの作成
 
-1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレートを選択します。<br>![行動、購買、またはRFM Segmentのカタログ Segmentを作成するためのオプションを持つモダル。]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
+1. [**セグメントエクステンション**] > [**エクステンションを新規作成**] > [**テンプレートで開始**] に移動し、テンプレートを選択します。<br>![イベント、購入、またはRFMセグメントのカタログセグメントを作成するためのオプションを持つモダル。]({% image_buster /assets/img/catalog-segments-template.png %}){: style="max-width:80%" }
 
 {: start="2"}
 2\.SQL エディターにテンプレートが自動的に入力されます。<br>![事前生成されたテンプレートを持つSQL エディタ。]({% image_buster /assets/img/catalog-segments-editor.png %}){: style="max-width:80%" }<br>このテンプレートでは、ユーザーイベントデータをカタログデータと結合して、特定のカタログ項目を使用したユーザーをセグメント化します。

@@ -216,7 +216,7 @@ No Google Cloud, selecione o projeto que seu app Android está usando e ative a 
 
 ![API do Firebase Cloud Messaging habilitada]({% image_buster /assets/img/android/push_integration/create_a_service_account/firebase-cloud-messaging-api-enabled.png %}){: style="max-width:80%;"}
 
-### Etapa 4: Criar uma conta de serviço {#service-account}
+### Etapa 4: Crie uma conta de serviço {#service-account}
 
 Em seguida, crie uma nova conta de serviço, para que a Braze possa fazer chamadas de API autorizadas ao registrar tokens FCM. No Google Cloud, acesse **Contas de Serviço**, depois escolha seu projeto. Na página **Contas de serviço**, selecione **Criar conta de serviço**.
 
@@ -232,7 +232,7 @@ No campo **Função**, localize e selecione **Firebase Cloud Messaging API Admin
 Selecione **Admin da _API_ do Firebase Cloud Messaging**, não **Admin do Firebase Cloud Messaging**.
 {% endalert %}
 
-![O formulário para "Conceder a esta conta de serviço acesso ao projeto" com "Admin do API do Firebase Cloud Messaging" selecionado como função.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
+![O formulário para "Conceder a esta conta de serviço acesso ao projeto" com "Admin do Firebase Cloud Messaging API" selecionado como o papel.]({% image_buster /assets/img/android/push_integration/create_a_service_account/add-fcm-api-admin.png %})
 
 ### Etapa 5: Gerar credenciais JSON {#json}
 
@@ -368,7 +368,7 @@ Para evitar que a Braze dispare solicitações de rede desnecessárias sempre qu
 
 ### Etapa 1: Registre o serviço de envio de mensagens do Braze Firebase
 
-Você pode criar um novo, existente ou um serviço de mensagens Firebase que não seja Braze. Escolha o que melhor atende às suas necessidades específicas.
+Você pode criar um novo, existente ou um serviço de mensagens Firebase não-Braze. Escolha o que melhor atende às suas necessidades específicas.
 
 {% tabs local %}
 {% tab New %}
@@ -565,7 +565,7 @@ Siga as instruções encontradas na [documentação do desenvolvedor Android](ht
 
 O dashboard do Braze oferece suporte à configuração de deep links ou URLs da Web em campanhas de notificações por push e canvas que serão abertos quando a notificação for clicada.
 
-![A configuração 'Comportamento ao Clicar' no dashboard do Braze com 'Deep Link Into Application' selecionado no menu suspenso.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
+![A configuração 'Comportamento ao Clicar' no dashboard da Braze com 'Deep Link Para Aplicativo' selecionado no menu suspenso.]({% image_buster /assets/img_archive/deep_link_click_action.png %} "Deep Link Click Action")
 
 #### Personalização do comportamento da pilha traseira
 
@@ -630,7 +630,7 @@ O nome e a descrição padrão do canal também podem ser configurados em `braze
 
 Nesse ponto, você poderá ver as notificações enviadas pelo Braze. Para testar isso, acesse a página **Campaigns (Campanhas** ) em seu dashboard do Braze e crie uma campanha **de notificação por push**. Escolha o **Android Push** e crie sua mensagem. Em seguida, clique no ícone do olho no criador para obter o remetente de teste. Digite o ID do usuário ou o endereço de e-mail do usuário atual e clique em **Send Test (Enviar teste**). Você deverá ver o push aparecer em seu dispositivo.
 
-![A aba 'Teste' de uma campanha de notificação por push no dashboard do Braze.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
+![A aba 'Teste' de uma campanha de notificação por push no dashboard da Braze.]({% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test")
 
 Para problemas relacionados ao push display, consulte nosso [guia de solução de problemas]({{site.baseurl}}/developer_guide/push_notifications/troubleshooting/?sdktab=android).
 
@@ -681,9 +681,9 @@ Este recurso está disponível apenas na API REST da Braze. Consulte o [objeto p
 
 ## Erros de cota excedida do FCM
 
-Quando seu limite para o Firebase Cloud Messaging (FCM) é excedido, o Google retorna erros de "cota excedida". O limite padrão do FCM é de 600.000 solicitações por minuto. O Braze tenta reenviar de acordo com as melhores práticas recomendadas pelo Google. No entanto, um grande volume desses erros pode prolongar o tempo de envio por vários minutos. Para atenuar o possível impacto, a Braze enviará um alerta de que o limite de taxa está sendo excedido e informando quais as medidas que você pode tomar para evitar os erros.
+Quando seu limite para o Firebase Cloud Messaging (FCM) é excedido, o Google retorna erros de "cota excedida". O limite padrão do FCM é de 600.000 solicitações por minuto. A Braze tenta reenviar de acordo com as melhores práticas recomendadas pelo Google. No entanto, um grande volume desses erros pode prolongar o tempo de envio por vários minutos. Para atenuar o possível impacto, a Braze enviará um alerta de que o limite de taxa está sendo excedido e informando quais as medidas que você pode tomar para evitar os erros.
 
-Para verificar seu limite atual, acesse seu **Google Cloud Console** > **APIs & Serviços** > **API do Firebase Cloud Messaging** > **Quotas & Limites do Sistema**, ou visite a [Página de Cotas da API FCM](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
+Para verificar seu limite atual, acesse seu **Google Cloud Console** > **APIs & Serviços** > **API do Firebase Cloud Messaging** > **Quotas & Limites do Sistema**, ou visite a [Página de Quotas da API FCM](https://console.cloud.google.com/apis/api/fcm.googleapis.com/quotas).
 
 ### Melhores práticas
 

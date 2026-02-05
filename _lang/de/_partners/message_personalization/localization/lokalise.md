@@ -16,7 +16,7 @@ _Diese Integration wird von Lokalise gepflegt._
 
 ## Über die Integration
 
-Die Integration von Braze und Lokalise nutzt Connected-Content, um Ihnen das einfache Einfügen übersetzter Inhalte in Ihre Braze Kampagnen auf der Grundlage der Nutzer:innen-Einstellungen zu ermöglichen.
+Die Integration von Braze und Lokalise verwendet Connected-Content, um Ihnen das einfache Einfügen übersetzter Inhalte in Ihre Braze Kampagnen auf der Grundlage der Spracheinstellungen der Nutzer:innen zu ermöglichen.
 
 ## Voraussetzungen
 
@@ -114,16 +114,20 @@ Zum Schluss speichern Sie das Template für die E-Mail und zeigen es in der Vors
 
 ## Häufig gestellte Fragen
 
-**Was passiert, wenn ich versehentlich einen Schlüssel aus Lokalise lösche?**<br>
+### Was passiert, wenn ich versehentlich einen Schlüssel aus Lokalise lösche?
+
 Für den entsprechenden String auf Braze gibt es keine Übersetzung mehr.
 
-**Wenn ich eine `en` Lokalisierung habe, diese aber mit `en-US` auf Lokalise überschreibe, wird Braze sie dann als `en-US` lesen?**<br>
+### Wenn ich eine `en` Lokalisierung habe, diese aber mit `en-US` auf Lokalise überschreibe, wird Braze sie dann als `en-US` lesen?
+
 Nein, die ISO-Codes der Lokalisierung müssen auf Braze und Lokalise übereinstimmen.
 
-**Können wir die Flagge `:rerender` verwenden, wenn wir Lokalise-Inhalte verbinden?**<br>
+### Können wir die Flagge `:rerender` verwenden, wenn wir Lokalise-Inhalte verbinden?
+
 Ja, sicher. Sie können in den Braze-Dokumenten nachlesen, wie Sie dieses Flag hinzufügen können.
 
-**Warum kann ich nach dem Aktualisieren der Übersetzungsdatei auf Lokalise keine Änderungen in den übersetzten Inhalten auf Braze sehen?**<br>
+### Warum kann ich nach dem Aktualisieren der Übersetzungsdatei auf Lokalise keine Änderungen an den übersetzten Inhalten auf Braze sehen?
+
 Braze speichert übersetzte Inhalte im Cache. Die Aktualisierung kann einige Minuten dauern. Wenn Sie Ihre Kampagnen testen und die Ergebnisse der Übersetzungen sofort sehen müssen, können Sie den Parameter `:cache_max_age` verwenden, wie in diesem Artikel referenzieren.
 
 

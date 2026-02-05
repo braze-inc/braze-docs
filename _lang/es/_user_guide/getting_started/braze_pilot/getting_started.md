@@ -3,10 +3,10 @@ nav_title: Cómo empezar
 article_title: Primeros pasos con Braze Pilot
 page_order: 2
 page_type: reference
-description: "Este artículo de referencia cubre brevemente los pasos de integración que deben dar tus ingenieros o desarrolladores."
+description: "Este artículo de referencia cubre brevemente los pasos de integración que deben seguir sus ingenieros o desarrolladores."
 ---
 
-# Primeros pasos con Braze Pilot
+# Empieza con Braze Pilot
 
 > Este artículo explica cómo empezar a utilizar Braze Pilot. Aquí te guiaremos en la descarga de la aplicación, la inicialización de la conexión con tu panel Braze y la finalización de la configuración.
 
@@ -14,13 +14,13 @@ description: "Este artículo de referencia cubre brevemente los pasos de integra
 
 Para empezar a utilizar Braze Pilot, primero tendrás que descargar la aplicación de Apple App Store o de Google Play Store. Puedes buscar la aplicación en la tienda de aplicaciones o escanear los siguientes códigos QR para visitar la página de la aplicación para tu dispositivo.
 
-## Paso 2: Acepta los términos y condiciones
+## Paso 2: Acepta los términos y condiciones
 
 A continuación, acepta los términos y condiciones, y luego introduce tu correo electrónico de trabajo en el formulario. Tu correo electrónico se utilizará únicamente para el análisis del uso de la aplicación y no para fines de marketing.
 
-Página de bienvenida de Braze Pilot.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"}\![Opción de introducir la dirección de correo electrónico de tu trabajo.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
+![Página de bienvenida de Braze Pilot.]({% image_buster /assets/img/braze_pilot/pilot_welcome.png %}){:style="max-width:30%"} ![Opción para introducir tu dirección de correo electrónico del trabajo.]({% image_buster /assets/img/braze_pilot/pilot_signin.png %}){:style="max-width:30%"}
 
-## Paso 3: Inicializa la conexión con el SDK de Braze
+## Paso 3: Inicializa la conexión con el SDK de Braze
 
 Braze Pilot te habilita para inicializar el SDK de Braze contra cualquier panel de Braze. Una vez inicializado el SDK, Pilot empezará a enviar datos de interacción a Braze y te permitirá desencadenar cualquier mensajería lanzada desde ese panel Braze.
 
@@ -35,7 +35,7 @@ Escanea un código QR que incluye todos los detalles necesarios para inicializar
 
 | Piloto para Android | Piloto para iOS |
 | --- | --- |
-| Código QR para Android.]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | Código QR para iOS.]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
+| ![Código QR para Android.]({% image_buster /assets/img/braze_pilot/android_qr_code.png %}){:style="max-width:60%"} | ![Código QR para iOS.]({% image_buster /assets/img/braze_pilot/ios_qr_code.png %}){:style="max-width:60%"} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
@@ -45,11 +45,11 @@ Escanea un código QR que incluye todos los detalles necesarios para inicializar
 
 Sigue una guía paso a paso para inicializar la conexión con el espacio de trabajo de tu panel desde la página **Configuración de la aplicación** en tu panel Braze.
 
-Paso 1 del asistente de configuración de Braze Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
+![Paso 1 del asistente de configuración de Braze Pilot.]({% image_buster /assets/img/braze_pilot/setup_wizard.png %}){:style="max-width:40%"}
 
 Esta conexión es específica del espacio de trabajo. Esto significa que si inicializas la conexión desde el espacio de trabajo de demostración y luego cambias al espacio de trabajo en vivo en tu panel de prueba gratuita, tendrás que volver a inicializar el SDK desde ese espacio de trabajo para recibir cualquier campaña lanzada allí.
 
-El desplegable del espacio de trabajo en el panel de Braze con "Demo - Braze" seleccionado como espacio de trabajo activo.]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
+![El desplegable del espacio de trabajo en el panel de Braze con "Demo - Braze" seleccionado como espacio de trabajo activo.]({% image_buster /assets/img/braze_pilot/dashboard_workspace.png %}){:style="max-width:60%"}
 
 {% endtab %}
 {% endtabs %}

@@ -25,19 +25,19 @@ Acesse **Configurações** > **Equipes internas** ) e selecione <i class="fas fa
 
 ![Janela para adicionar uma nova Equipe.]({% image_buster /assets/img_archive/adding_a_team.png %}){: style="max-width:70%;"}
 
-Digite o **nome da equipe**. Se desejado, use o campo **Definir Equipe** para selecionar um atributo personalizado, localização ou idioma para definir melhor quais dados de usuário a Equipe tem acesso. Por exemplo, um possível caso de uso é realizar [testes com Equipes](#test-with-teams) criando uma Equipe de desenvolvimento que só tem acesso a usuários de teste, identificados por um atributo personalizado. Outro caso de uso é restringir a comunicação com usuários com base no produto.
+Digite o **nome da equipe**. Se desejado, use o campo **Definir Equipe** para selecionar um atributo personalizado, localização ou idioma para definir ainda mais quais dados de usuário a Equipe tem acesso. Por exemplo, um possível caso de uso é realizar [testes com Equipes](#test-with-teams) criando uma Equipe de desenvolvimento que só tem acesso a usuários de teste, identificados por um atributo personalizado. Outro caso de uso é restringir a comunicação com usuários com base no produto.
 
-Se uma Equipe é definida por um atributo personalizado, idioma ou país, você pode então usar a Equipe para filtrar usuários finais para recursos como campanhas, Canvases, Cartões de Conteúdo, segmentos e mais. Para mais informações, veja [Atribuindo tags de Equipe](#tags-and-filters).
+Se uma Equipe for definida por um atributo personalizado, idioma ou país, você pode então usar a Equipe para filtrar usuários finais para recursos como campanhas, Canvases, Cartões de Conteúdo, segmentos e mais. Para mais informações, veja [Atribuindo tags de Equipe](#tags-and-filters).
 
 ## Atribuir usuários a Equipes
 
-Administradores Braze e usuários limitados com a permissão de nível de empresa "Pode Gerenciar Configurações da Empresa" podem atribuir permissões de nível de Equipe a um usuário do dashboard com acesso limitado. Quando atribuído a uma Equipe, os usuários do dashboard estão limitados a ler ou escrever apenas os dados disponíveis para suas respectivas Equipes, como idioma do usuário, localização ou atributo personalizado, conforme definido quando a Equipe foi criada.
+Administradores Braze e usuários limitados com a permissão em nível de empresa "Pode Gerenciar Configurações da Empresa" podem atribuir permissões em nível de Equipe a um usuário do dashboard com acesso limitado. Quando atribuídos a uma Equipe, os usuários do dashboard estão limitados a ler ou escrever apenas os dados disponíveis para suas respectivas Equipes, como idioma do usuário, localização ou atributo personalizado, conforme definido quando a Equipe foi criada.
 
 Para atribuir um usuário a uma Equipe, navegue até **Configurações** > **Usuários da Empresa** e selecione um usuário que você gostaria de adicionar à sua Equipe.
 
 Em seguida, execute as etapas a seguir:
 
-1. Na seção **Permissões de nível de Espaço de Trabalho**, adicione o usuário ao espaço de trabalho apropriado se ele ainda não estiver incluído.
+1. Na seção **Permissões em nível de Espaço de Trabalho**, adicione o usuário ao espaço de trabalho apropriado se ele ainda não estiver incluído.
 
 ![Um conjunto de permissões para o espaço de trabalho "Swifty & Droidboy".]({% image_buster /assets/img/team_level_permissions.png %})
 
@@ -97,7 +97,7 @@ Com base nas permissões atribuídas a Michelle, sempre que ela cria uma campanh
 {% endtab %}
 {% tab Scenario 2 - Team permissions and workspace permissions %}
 
-Neste cenário, Michelle ainda é membro da Equipe de Desenvolvimento, mas ela também possui uma permissão adicional em nível de espaço de trabalho.
+Neste cenário, Michelle ainda é membro da Equipe de Desenvolvimento, mas ela também tem uma permissão adicional em nível de espaço de trabalho.
 
 ![Permissões personalizadas com uma permissão em nível de espaço de trabalho e 15 permissões baseadas em equipe.]({% image_buster /assets/img_archive/scenario2.png %})
 

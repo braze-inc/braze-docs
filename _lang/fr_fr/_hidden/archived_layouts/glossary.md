@@ -26,7 +26,7 @@ noindex: true
 |`glossary_top_text`| Chaîne de caractères, Alphanumérique | Décrivez votre page de glossaire. Elle apparaît au-dessus de la barre de recherche et des filtres (si vous choisissez d'en avoir). Ceci est essentiellement écrit en HTML, vous pouvez donc utiliser \`\`\`<br> pour créer des ruptures de ligne. | 
 |`glossary_tag_name` | Mot unique, alphanumérique | Donnez un nom à vos filtres. Celles-ci apparaîtront dans les cases à cocher situées sous la barre de recherche ainsi que dans les données ci-dessous. | 
 |`glossary_filter_text`| Chaîne de caractères, Alphanumérique | Décrivez vos filtres. Généralement utilisé pour instruire. | 
-|`glossary_tags`| Davantage de contenu YAML plus. | Format comme indiqué ci-dessous : <br> glossary_tags : <br>  \- nom : Cartes de contenu <br>  \- nom : E-mail | 
+|`glossary_tags`| Davantage de contenu YAML plus. | Format comme indiqué ci-dessous : <br> glossary_tags: <br>  \- nom : Cartes de contenu <br>  \- nom : E-mail | 
 | `glossaries`| Davantage de contenu YAML plus. | Voir les [paramètres des glossaires](#glossaries-parameters) ci-dessous. |
 
 ### Paramètres des glossaires

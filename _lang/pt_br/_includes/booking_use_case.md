@@ -2,7 +2,7 @@
 
 > Braze é uma plataforma abrangente de engajamento com clientes que foi projetada para ser altamente controlável programaticamente. Neste caso de uso, demonstraremos apenas algumas maneiras pelas quais o Braze fornece funcionalidades que você pode integrar em casos de uso que estão na interseção de produto e marketing, como sistemas de reserva.
 
-Este caso de uso mostra como você pode usar os recursos do Braze para construir um serviço de envio de mensagens de lembrete de reserva. O serviço permitirá que os usuários agendem compromissos e enviará mensagens aos usuários com lembretes de seus compromissos futuros. Embora este caso de uso utilize mensagens de e-mail, você pode enviar mensagens em qualquer canal, ou em múltiplos canais, com base em uma única atualização no perfil do usuário.
+Este caso de uso mostra como você pode usar os recursos do Braze para construir um serviço de envio de mensagens de lembrete de reserva por e-mail. O serviço permitirá que os usuários agendem compromissos e enviará mensagens aos usuários com lembretes de seus compromissos futuros. Embora este caso de uso utilize mensagens de e-mail, você pode enviar mensagens em qualquer canal, ou em múltiplos canais, com base em uma única atualização no perfil do usuário.
 
 Outros benefícios de criar este serviço incluem:
 - As mensagens enviadas terão rastreamento e relatórios completos.
@@ -21,7 +21,7 @@ Use o endpoint do Braze [`/users/track`]({{site.baseurl}}/api/endpoints/user_dat
 
 ### Adicionar reserva
 
-Quando um usuário cria uma reserva, use a seguinte estrutura para o array de objetos para enviar os dados para o Braze através do endpoint `/users/track`.
+Quando um usuário cria uma reserva, use a seguinte estrutura para o array de objetos para enviar os dados para a Braze através do endpoint `/users/track`.
 
 {% raw %}
 ```json
@@ -45,7 +45,7 @@ O atributo personalizado aninhado "viagens" será exibido no perfil do usuário 
 ![Dois atributos personalizados aninhados para uma viagem a Londres e uma viagem a Sydney.]({% image_buster /assets/img/use_cases/2_nested_attributes.png %}){: style="max-width:70%;"}
 
 ### Atualizar reserva
-Quando um usuário atualiza uma reserva, use a seguinte estrutura para o array de objetos para enviar os dados para o Braze através do endpoint `/users/track`.
+Quando um usuário atualiza uma reserva, use a seguinte estrutura para o array de objetos para enviar os dados para a Braze através do endpoint `/users/track`.
 
 {% raw %}
 ```json
@@ -74,7 +74,7 @@ Quando um usuário atualiza uma reserva, use a seguinte estrutura para o array d
 {% tabs %}
 {% tab /users/track endpoint %}
 #### Enviar dados através do endpoint `/users/track`
-Quando um usuário exclui uma reserva, use a seguinte estrutura para o array de objetos para enviar os dados para o Braze através do endpoint `/users/track`.
+Quando um usuário exclui uma reserva, use a seguinte estrutura para o array de objetos para enviar os dados para a Braze através do endpoint `/users/track`.
 
 {% raw %}
 ```json
@@ -101,7 +101,7 @@ Quando um usuário exclui uma reserva, use a seguinte estrutura para o array de 
 {% tab SDK %}
 #### Escrever atributos aninhados nos perfis de usuário através do SDK
 
-Se você está coletando reservas de compromissos com seu app, site ou ambos e deseja escrever esses dados diretamente em um perfil de usuário, você pode usar o SDK do Braze para transmitir esses dados. Aqui está um exemplo utilizando o SDK Web:
+Se você está coletando reservas de compromissos com seu app, site ou ambos e deseja escrever esses dados diretamente em um perfil de usuário, você pode usar o SDK da Braze para transmitir esses dados. Aqui está um exemplo utilizando o SDK Web:
 
 {% raw %}
 ```json
@@ -120,7 +120,7 @@ braze.getUser().setCustomUserAttribute("trips", json);
 {% endtab %}
 {% endtabs %}
 
-O Braze remove a reserva especificada do atributo personalizado aninhado no perfil do usuário e exibe quaisquer reservas restantes.
+A Braze remove a reserva especificada do atributo personalizado aninhado no perfil do usuário e exibe quaisquer reservas restantes.
 
 ![Um atributo personalizado aninhado para uma viagem a Londres.]({% image_buster /assets/img/use_cases/1_nested_attribute.png %}){: style="max-width:70%;"}
 
@@ -228,7 +228,7 @@ Por fim, para enviar os lembretes de reserva das etapas 1 e 2 com base nos dados
 
 #### Reserva atualizada
 
-Se o usuário neste caso de uso atualizou sua viagem para Sydney, você usaria o `/users/track` endpoint para alterar a data com uma chamada como esta:
+Se o usuário neste caso de uso atualizou sua viagem para Sydney, você usaria o endpoint `/users/track` para alterar a data com uma chamada como esta:
 
 {% raw %}
 ```json
@@ -256,7 +256,7 @@ Se o usuário neste caso de uso atualizou sua viagem para Sydney, você usaria o
 
 #### Reserva cancelada
 
-Se o usuário neste caso de uso cancelou sua viagem para Sydney, você enviaria a seguinte chamada para o `/users/track` endpoint:
+Se o usuário neste caso de uso cancelou sua viagem para Sydney, você enviaria a seguinte chamada para o endpoint `/users/track`:
 
 {% raw %}
 ```json
@@ -278,5 +278,5 @@ Se o usuário neste caso de uso cancelou sua viagem para Sydney, você enviaria 
 ```
 {% endraw %}
 
-Depois que essas chamadas forem enviadas e o perfil do usuário for atualizado, as mensagens de lembrete de reserva refletirão os dados mais recentes sobre as datas de reserva do usuário.
+Após essas chamadas serem enviadas e o perfil do usuário ser atualizado, as mensagens de lembrete de reserva refletirão os dados mais recentes sobre as datas de reserva do usuário.
 

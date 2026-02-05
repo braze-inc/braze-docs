@@ -20,7 +20,7 @@ Bevor Sie Artikel-Empfehlungen in Braze erstellen oder verwenden können, müsse
 
 Als Teil der Funktion [KI-Artikel-Empfehlungen]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/) nutzen die personalisierten KI-Empfehlungen Deep Learning, um vorherzusagen, wofür sich Ihre Nutzer als Nächstes interessieren werden, basierend auf dem, wofür sie sich in der Vergangenheit interessiert haben. Diese Methode bietet ein dynamisches und maßgeschneidertes Empfehlungssystem, das sich dem Nutzerverhalten anpasst.
 
-Personalisierte KI-Empfehlungen verwenden die Daten der letzten 6 Monate zu Artikelinteraktionen, wie Käufe oder angepasste Events, um das Empfehlungsmodell zu erstellen. Für Benutzer, die nicht genügend Daten für eine personalisierte Liste haben, dienen die beliebtesten Artikel als Ausweichmöglichkeit, damit Ihre Benutzer immer noch relevante Vorschläge erhalten.
+Personalisierte KI-Empfehlungen verwenden die Daten der letzten 6 Monate zu Artikelinteraktionen, wie Käufe oder angepasste Events, um das Empfehlungsmodell zu erstellen. Für Nutzer:innen, die nicht genügend Daten für eine personalisierte Liste haben, dienen die beliebtesten Artikel als Fallback, so dass Ihre Nutzer:innen immer noch relevante Vorschläge erhalten.
 
 Mit den KI-Artikelempfehlungen können Sie die verfügbaren Artikel auch weiter mit
 [Auswahlen]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) filtern. Allerdings können Auswahlen mit Liquid nicht in KI-Empfehlungen verwendet werden. Beachten Sie dies also, wenn Sie Ihre Katalogauswahlen erstellen.
@@ -43,7 +43,7 @@ Sagen Sie voraus und empfehlen Sie die Artikel, die ein Benutzer wahrscheinlich 
 {% details Requirements %}
 - KI-Artikelempfehlungen
 - Katalog der relevanten Artikel
-- Eine Methode zur Verfolgung von Käufen, entweder ein Kauf-Objekt oder ein angepasstes Event
+- Eine Methode zum Tracking von Käufen, entweder ein Kauf-Objekt oder ein angepasstes Event
 {% enddetails %}
 
 {% details Setting it up %}
@@ -261,7 +261,7 @@ Heben Sie Artikel hervor, die Ihre Nutzer in letzter Zeit besonders häufig geka
 {% details Requirements %}
 - KI-Artikelempfehlungen
 - Katalog der relevanten Artikel
-- Eine Methode zur Verfolgung von Käufen (entweder ein Kaufobjekt oder ein angepasstes Event)
+- Eine Methode zum Tracking von Käufen (entweder ein Kauf-Objekt oder ein angepasstes Event)
 {% enddetails %}
 
 {% details Setting it up %}
@@ -301,6 +301,10 @@ Heben Sie Artikel, die Ihren Nutzern in letzter Zeit gefallen haben, besonders h
 [Selektionen]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) sind bestimmte Gruppen von Katalogdaten. Wenn Sie eine Auswahl verwenden, richten Sie im Wesentlichen nutzerdefinierte Filter ein, die auf bestimmten Spalten in Ihrem Katalog basieren. Dies könnte Filter für Marke, Größe, Ort, Hinzufügedatum und mehr beinhalten. Damit haben Sie die Kontrolle über Ihre Empfehlungen, da Sie Kriterien definieren können, die Artikel erfüllen müssen, um Nutzer:innen angezeigt zu werden.
 
 Bei den drei vorangegangenen Typen geht es darum, ein Empfehlungsmodell in Braze einzurichten und zu trainieren. Sie können zwar auch in diesen Modellen Auswahlen verwenden, aber Sie können einige Empfehlungsanwendungen auch nur mit Katalogauswahlen und Liquid-Personalisierung erreichen.
+
+{% alert note %}
+Wenn Sie Auswahlen verwenden, werden das Sortierfeld und eventuelle Einschränkungen bei KI-Artikel-Empfehlungen nicht verwendet. Das bedeutet, wenn Sie eine Auswahl mit einem bestimmten Sortierfeld erstellen und die Anzahl der zurückgegebenen Artikel begrenzen, werden diese Einschränkungen bei der Verarbeitung von KI-Artikel-Empfehlungen nicht verwendet.
+{% endalert %}
 
 #### Anwendungsfälle
 
@@ -349,7 +353,7 @@ Eine Online-Buchhandlung könnte zum Beispiel eine "Überraschungsfunktion" anbi
 
 Eine [regelbasierte Empfehlungsmaschine]({{site.baseurl}}/rules_based_recommendations/) verwendet Benutzerdaten und Produktinformationen, um dem Benutzer relevante Artikel in den Nachrichten vorzuschlagen. Sie verwendet Liquid und entweder Braze-Kataloge oder Connected.Content, um Content auf der Grundlage von Nutzerverhalten und Attributen dynamisch zu personalisieren.
 
-Regelbasierte Empfehlungen basieren auf einer festen Logik, die Sie manuell einstellen müssen. Das bedeutet, dass sich Ihre Empfehlungen nicht an die individuelle Kaufhistorie und den Geschmack eines Nutzers anpassen, solange Sie die Logik nicht aktualisieren. Daher ist diese Methode am besten für Empfehlungen geeignet, die nicht häufig aktualisiert werden müssen.
+Regelbasierte Empfehlungen basieren auf einer festen Logik, die Sie manuell einstellen müssen. Das bedeutet, dass sich Ihre Empfehlungen nicht an den individuellen Verlauf und Geschmack eines Nutzers:innen anpassen, solange Sie die Logik nicht aktualisieren. Daher eignet sich diese Methode am besten für Empfehlungen, die nicht häufig aktualisiert werden müssen.
 
 #### Anwendungsfälle
 
@@ -373,6 +377,8 @@ Dies geschieht unter einigen besonderen Bedingungen:
 - Das Modell findet weniger als 30 Artikel, die Ihren Kriterien entsprechen.
 - Die entsprechenden Artikel sind nicht mehr verfügbar oder auf Lager.
 - Die Artikel entsprechen nicht den aktuellen Auswahlkriterien, z.B. weil sich der Bestand oder die Präferenzen des Benutzers geändert haben.
+
+Beachten Sie, dass die Empfehlungen unabhängig voneinander funktionieren und keine Kenntnis darüber haben, was die anderen Modelle empfehlen. Das bedeutet, dass in jeder Sektion Artikel, die bereits in anderen KI-Empfehlungssektionen angezeigt werden, in derselben E-Mail doppelt vorkommen können.
 
 ### Werden bestehende Empfehlungen nach dem Upgrade auf Item Recommendations Pro wöchentlich trainiert?
 

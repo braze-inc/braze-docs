@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "Dieser referenzierende Artikel beschreibt die Partnerschaft zwischen Braze und Stripo, einem E-Mail-Builder per Drag-and-Drop, mit dem Sie auf einfache Weise anspruchsvolle E-Mails mit interaktiven Elementen erstellen können."
+description: "Dieser referenzierende Artikel beschreibt die Partnerschaft zwischen Braze und Stripo, einem E-Mail-Builder per Drag-and-Drop für die Erstellung anspruchsvoller E-Mails mit interaktiven Elementen."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stripo
 
-> [Stripo](https://stripo.email/) ist ein E-Mail-Builder per Drag-and-Drop, mit dem Sie responsive E-Mails mit interaktiven Elementen erstellen und gestalten können. Nutzer:innen von Stripo können mit dem Stripo-Editor auch HTML bearbeiten und entscheiden, welche Elemente auf verschiedenen Geräten angezeigt oder ausgeblendet werden sollen.
+> [Stripo](https://stripo.email/) ist ein E-Mail-Builder per Drag-and-Drop für die Gestaltung responsiver E-Mails mit interaktiven Elementen. Nutzer:innen von Stripo können mit dem Stripo-Editor auch HTML bearbeiten und entscheiden, welche Elemente auf verschiedenen Geräten angezeigt oder ausgeblendet werden sollen.
 
 _Diese Integration wird von Stripo gepflegt._
 
@@ -49,6 +49,6 @@ Dies ist eine einmalige Einrichtung, und alle zukünftigen Exporte werden automa
 
 ## Nutzung
 
-Ihre hochgeladene Stripo-Vorlage finden Sie in Ihrem Braze-Konto im Bereich **Templates und Medien > E-Mail-Vorlagen**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
+Ihre hochgeladene Stripo-Vorlage finden Sie in Ihrem Braze-Konto im Bereich **Templates & Medien > E-Mail-Vorlagen**. Mit dieser E-Mail-Vorlage können Sie jetzt damit beginnen, ansprechende Nachrichten an Ihre Kund:in zu versenden!
 
 

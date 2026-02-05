@@ -44,5 +44,5 @@ Consulta la documentación [`changeUser`](https://braze-inc.github.io/braze-andr
 
 ## Asignación de alias de usuarios
 
-{% multi_lang_include archive/setting_user_ids/aliasing.md plataforma="Android" %}
+{% multi_lang_include archive/setting_user_ids/aliasing.md platform="Android" %}
 

@@ -1,31 +1,31 @@
 ---
 nav_title: Exportar datos Braze
-article_title: Exportar datos Braze
+article_title: Exportar datos de Braze
 page_order: 6
 layout: dev_guide
-guide_top_header: "Exportar datos Braze"
-guide_top_text: "Braze proporciona exportaciones CSV de los datos del panel Braze, lo que te permite analizar los datos con diversas herramientas. Los siguientes artículos cubren los diferentes tipos de datos que puedes exportar desde el panel, así como consejos para abrir los datos en Excel y realizar exportaciones con nuestra API.<br><br>Antes de realizar la exportación, asegúrate de que has seleccionado el intervalo de tiempo correcto del que quieres ver los datos."
+guide_top_header: "Exportación de datos Braze"
+guide_top_text: "Braze proporciona exportaciones CSV de los datos del panel de Braze, lo que te permite analizar los datos con diversas herramientas. En los siguientes artículos se tratan los distintos tipos de datos que se pueden exportar desde el cuadro de mandos, así como consejos para abrir los datos en Excel y realizar exportaciones con nuestra API.<br><br>Antes de realizar la exportación, asegúrese de que ha seleccionado el periodo de tiempo correcto del que desea ver los datos."
 
 page_type: landing
-description: "Esta página de destino contiene recursos sobre la exportación de datos de Braze, como por ejemplo cómo exportar resultados de campañas y Canvas, datos de segmentos, datos generales y de ingresos, y mucho más."
+description: "Esta página de destino contiene recursos sobre la exportación de datos Braze, por ejemplo, cómo exportar resultados de campañas y Canvas, datos de segmentos, datos generales y de ingresos, etc."
 tool: Reports
 
 guide_featured_title: "Artículos populares"
 
 guide_featured_list:
-  - name: Resultados de la campaña de exportación
+  - name: Exportar resultados de campaña
     link: /docs/user_guide/data/export_braze_data/export_campaign_results_data/
     image: /assets/img/braze_icons/bar-chart-01.svg
-  - name: Exportar resultados del Canvas
+  - name: Exportar resultados del lienzo
     link: /docs/user_guide/data/export_braze_data/export_canvas_data/
     image: /assets/img/braze_icons/palette.svg
-  - name: Datos del segmento de exportación
+  - name: Exportar datos de segmentos
     link: /docs/user_guide/data/export_braze_data/segment_data_to_csv/
     image: /assets/img/braze_icons/file-download-02.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
-  - name: Archivo de mensajes
+  - name: Archivado de mensajes
     link: /docs/user_guide/data/export_braze_data/message_archiving/
     image: /assets/img/braze_icons/clock-rewind.svg
   - name: Exportar datos generales
@@ -43,7 +43,7 @@ guide_menu_list:
   - name: Abrir exportaciones CSV en Excel
     link: /docs/user_guide/data/export_braze_data/opening_csv_reports_in_excel/
     image: /assets/img/braze_icons/file-02.svg
-  - name: Solución de problemas de exportación
+  - name: Resolución de problemas de exportación
     link: /docs/user_guide/data/export_braze_data/export_troubleshooting/
     image: /assets/img/braze_icons/help-circle.svg
   - name: Preguntas frecuentes
@@ -56,10 +56,10 @@ guide_menu_list2:
   - name: Braze Currents
     link: /docs/user_guide/data/braze_currents/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Configuración de Currents
+  - name: Configurar Currents
     link: /docs/user_guide/data/braze_currents/setting_up_currents/
     image: /assets/img/braze_icons/building-01.svg
-  - name: Cómo utiliza Braze Currents
+  - name: Cómo utiliza Braze las corrientes
     link: /docs/user_guide/data/braze_currents/how_braze_uses_currents/
     image: /assets/img/braze_icons/expand-05.svg
 

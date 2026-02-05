@@ -16,7 +16,7 @@ channel:
 
 ## 구독 상태 {#subscription-states}
 
-Braze는 이메일 사용자에 대해 세 가지 글로벌 구독 상태를 가지고 있습니다. 이 상태는 사용자에게 메시지를 차단합니다. 예를 들어, `unsubscribed` 상태의 사용자는 `subscribed` 또는 `opted-in`을 대상으로 하는 메시지를 받지 않습니다.
+Braze는 이메일 사용자에 대해 세 가지 글로벌 구독 상태를 가지고 있습니다. 이 상태는 사용자에게 메시지를 차단합니다. 예를 들어, `unsubscribed` 상태의 사용자는 `subscribed` 또는 `opted-in`을(를) 대상으로 하는 메시지를 받지 않습니다.
 
 | 상태 | 정의 |
 | ----- | ---------- |
@@ -102,7 +102,7 @@ Use the [Subscription Group endpoints]({{site.baseurl}}/api/endpoints/subscripti
 
 세그먼트를 만들 때 구독 그룹 이름을 필터로 설정합니다. 이렇게 하면 그룹에 옵트인한 사용자가 내 이메일을 받을 수 있습니다. 월간 뉴스레터, 쿠폰, 멤버십 등급 등에 유용하게 사용할 수 있습니다.
 
-![ "주간 이메일" 구독 그룹의 사용자 필터로 "소멸된 사용자" 세그먼트의 사용자를 타겟팅하는 예시입니다.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
+![ "주간 이메일" 구독 그룹의 사용자에 대한 필터로 "소멸된 사용자" 세그먼트에서 사용자를 타겟팅하는 예시입니다.]({% image_buster /assets/img/segment_sub_group.png %}){: style="max-width:90%"}
 
 ### 구독 그룹 아카이브
 
@@ -113,7 +113,7 @@ To archive your group from the **Subscription Groups** page, do the following:
 1. Find your group in the list of subscription groups. 
 2. Select **Archive** from the <i class="fa-solid fa-ellipsis-vertical"></i> dropdown menu.
 
-Braze는 아카이브된 그룹의 사용자 상태 변경을 처리하지 않습니다. 예를 들어, Alex가 구독 중인 구독 그룹 1을 아카이브하면, Alex는 탈퇴 링크를 클릭하더라도 여전히 "구독 중"으로 남아 있습니다. 이것은 중요하지 않습니다. 왜냐하면 구독 그룹 1이 아카이브되어 있고 이를 사용하여 메시지를 보낼 수 없기 때문입니다.
+Braze는 아카이브된 그룹의 사용자 상태 변경을 처리하지 않습니다. 예를 들어, Alex가 구독 중인 구독 그룹 1을 아카이브하면, Alex는 탈퇴 링크를 클릭하더라도 여전히 "구독 중" 상태로 남아 있습니다. 이것은 중요하지 않습니다. 왜냐하면 구독 그룹 1이 아카이브되어 있고 이를 사용하여 메시지를 보낼 수 없기 때문입니다.
 
 #### 구독 그룹 크기 보기
 
@@ -143,13 +143,13 @@ To learn more about how to add or customize a preference center, refer to [Prefe
 
 ## 이메일 구독 변경하기 {#changing-email-subscriptions}
 
-대부분의 경우, 사용자는 수신하는 이메일에 포함된 링크를 통해 이메일 구독을 관리합니다. 모든 이메일 하단에 탈퇴 링크가 포함된 법적으로 준수하는 바닥글을 삽입하세요. 사용자가 탈퇴 URL을 선택하면, Braze는 그들을 탈퇴시키고 변경을 확인하는 랜딩 페이지를 표시합니다. 다음 Liquid 태그를 포함하세요: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
+대부분의 경우, 사용자는 수신하는 이메일에 포함된 링크를 통해 이메일 구독을 관리합니다. 모든 이메일 하단에 탈퇴 링크가 포함된 법적으로 준수하는 바닥글을 삽입하세요. 사용자가 탈퇴 URL을 선택하면, Braze는 그들을 탈퇴시키고 변경을 확인하는 랜딩 페이지를 표시합니다. 이 Liquid 태그를 포함하세요: {%raw%}`${set_user_to_unsubscribed_url}`{%endraw%}.
 
 사용자가 선호 센터에서 "위의 모든 유형의 이메일 탈퇴"를 선택하면, Braze는 그들의 전역 이메일 구독 상태를 `unsubscribed`로 설정하고 모든 그룹에서 탈퇴시킵니다.
 
 ### 커스텀 바닥글 만들기 {#custom-footer}
 
-기본 바닥글을 사용하고 싶지 않다면, 작업 공간 전체에 맞춤 이메일 바닥글을 만들고 {% raw %}`{{${email_footer}}}`{% endraw %}를 사용하여 모든 이메일에 템플릿화하세요.
+기본 바닥글을 사용하고 싶지 않다면, 작업 공간 전체에 맞춤 이메일 바닥글을 만들고 {% raw %}`{{${email_footer}}}`{% endraw %}를 사용하여 모든 이메일에 템플릿으로 적용하세요.
 
 이렇게 하면 모든 이메일 템플릿이나 이메일 캠페인에 대해 새로운 바닥글을 만들 필요가 없습니다. 단계는 [맞춤 이메일 바닥글]({{site.baseurl}}/user_guide/message_building_by_channel/email/custom_email_footer/)을 참조하세요.
 
@@ -181,7 +181,7 @@ To learn more about how to add or customize a preference center, refer to [Prefe
 사용자는 {% raw %}`{{${set_user_to_opted_in_url}}}`{% endraw %} 태그를 통해 이 페이지에 도달합니다.
 
 {% alert tip %}
-더 나은 아웃리치를 위해 더블 옵트인 프로세스를 사용하세요. Braze는 사용자가 링크를 통해 알림 기본 설정을 확인하는 추가 확인 이메일을 보냅니다. 확인 후 사용자는 옵트인 상태가 됩니다.
+더 나은 아웃리치를 위해 더블 옵트인 프로세스를 사용하세요. Braze는 사용자가 링크를 통해 알림 기본 설정을 확인하는 추가 확인 이메일을 보냅니다. 확인 후 사용자는 옵트인됩니다.
 {% endalert %}
 
 ![메시지 "여전히 저희 소식을 듣고 싶어 하신다니 기쁩니다"가 있는 커스텀 옵트인 이메일입니다.]({% image_buster /assets/img/custom_optin.png %})
@@ -204,7 +204,7 @@ It's your responsibility to comply with any applicable [spam laws]({{site.baseur
 
 "이메일 구독 상태" 및 "푸시 구독 상태" 필터를 사용하여 구독 상태에 따라 사용자를 세그먼트화하세요.
 
-옵트인도 옵트아웃도 하지 않은 사용자를 타겟팅하고 명시적인 옵트인을 유도하는 데 사용하세요. "이메일/푸시 구독 상태가 구독됨" 필터로 세그먼트를 만들고 구독했지만 옵트인하지 않은 사용자에게 캠페인을 전송하세요.
+옵트인도 하지 않고 탈퇴도 하지 않은 사용자를 타겟팅하고 명시적인 옵트인을 유도하는 데 사용하세요. "이메일/푸시 구독 상태가 구독됨" 필터로 세그먼트를 만들고 구독했지만 옵트인하지 않은 사용자에게 캠페인을 전송하세요.
 
 ![Email Subscription Status used as a segment filter.]({% image_buster /assets/img_archive/not_optin.png %})
 

@@ -13,7 +13,7 @@ _Data de Revisão: 19 de maio de 2025_
 
 _(Válido a partir da data de revisão; sujeito a alterações)_
 
-Os seguintes termos adicionais se aplicam em relação ao uso do Cliente da integração com Shopify em conexão com os Serviços Braze ("Integração Shopify"):
+Os seguintes termos adicionais se aplicam em relação ao uso da integração com Shopify pelo Cliente em conexão com os Serviços Braze ("Integração Shopify"):
  
 O Cliente concorda em cumprir e estar vinculado a quaisquer termos e condições, políticas, diretrizes e documentação da Shopify Inc. ou de qualquer uma de suas Afiliadas ("Shopify") aplicáveis ao uso da Integração Shopify.
 

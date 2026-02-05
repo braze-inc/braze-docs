@@ -37,7 +37,7 @@ Existem certos navegadores, como os aplicativos Naver Android e iOS, que não su
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-Os planos para descontinuar o evento de compra serão anunciados em 2026. O evento de compra será eventualmente substituído por novos [eventos recomendados de eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que virão com recursos aprimorados para segmentação, relatórios, análise de dados e mais. No entanto, os novos eventos de eCommerce não suportarão recursos existentes relacionados ao evento de compra, como valor do tempo de vida (LTV) ou relatórios de receita em Canvases ou campanhas. Para uma lista completa de recursos relacionados a eventos de compra, consulte [Registro de eventos de compra]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+Os planos para descontinuar o evento de compra serão anunciados em 2026. O evento de compra será eventualmente substituído por novos [eventos recomendados de eCommerce]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que virão com recursos aprimorados para segmentação, relatórios, análise de dados e mais. No entanto, os novos eventos de eCommerce não suportarão recursos existentes relacionados ao evento de compra, como valor do tempo de vida (LTV) ou relatórios de receita em canva ou campanhas. Para uma lista completa de recursos relacionados a eventos de compra, consulte [Registro de eventos de compra]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
 {% endalert %}
 
 {% endif %}
