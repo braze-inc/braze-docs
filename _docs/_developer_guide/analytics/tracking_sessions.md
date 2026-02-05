@@ -22,9 +22,9 @@ Understanding how inactivity is defined and measured is key to managing session 
 
 ### How inactivity is measured
 
-The Web SDK tracks inactivity based on [SDK-tracked events](https://www.braze.com/docs/user_guide/data/activation/custom_data/events/#events). The SDK maintains an internal timer that resets each time a tracked event is sent. If no SDK-tracked events occur within the configured timeout period, the session is considered inactive and ends.
+The Web SDK tracks inactivity based on [SDK-tracked events]({{site.baseurl}}/user_guide/data/activation/custom_data/events/#events). The SDK maintains an internal timer that resets each time a tracked event is sent. If no SDK-tracked events occur within the configured timeout period, the session is considered inactive and ends.
 
-For more information on how session lifecycle works in the Web SDK, refer to the [Braze Web SDK GitHub repository](https://github.com/braze-inc/braze-web-sdk).
+For more information on how session lifecycle is implemented in the Web SDK, see the session management source code in the [Braze Web SDK GitHub repository](https://github.com/braze-inc/braze-web-sdk/blob/master/src/session.ts).
 
 **What counts as activity by default:**
 - Opening or refreshing the web app
@@ -43,16 +43,7 @@ The Web SDK does not automatically track browser visibility changes, tab switchi
 
 ### Session timeout configuration
 
-By default, the Web SDK considers a session inactive after 30 minutes without any tracked events. You can customize this threshold when initializing the SDK using the `sessionTimeoutInSeconds` parameter.
-
-```javascript
-// Set session timeout to 15 minutes (900 seconds)
-braze.initialize('YOUR-API-KEY-HERE', { 
-  sessionTimeoutInSeconds: 900 
-});
-```
-
-The `sessionTimeoutInSeconds` parameter accepts any integer value greater than or equal to 1, allowing you to configure the inactivity period based on your use case. For more information on SDK initialization, refer to the [`initialize` method documentation](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initialize) and the [Braze Web SDK changelog](https://github.com/braze-inc/braze-web-sdk/blob/master/CHANGELOG.md).
+By default, the Web SDK considers a session inactive after 30 minutes without any tracked events. You can customize this threshold when initializing the SDK using the `sessionTimeoutInSeconds` parameter. For details on configuring this parameter, including code examples, see [Changing the default session timeout](#changing-the-default-session-timeout).
 
 ### Example: Understanding inactivity scenarios
 
@@ -75,7 +66,8 @@ document.addEventListener('visibilitychange', function() {
     // User switched away - optionally log a custom event
     braze.logCustomEvent('tab_hidden');
   } else {
-    // User returned - optionally start a new session or log an event
+    // User returned - optionally start a new session and/or log an event
+    // braze.openSession();
     braze.logCustomEvent('tab_visible');
   }
 });
