@@ -14061,7 +14061,7 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
 - `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
-- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 WhatsApp messages every 1 weeks`
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 WhatsApp messages every 1 week`
 
 {% endapi %}
 
