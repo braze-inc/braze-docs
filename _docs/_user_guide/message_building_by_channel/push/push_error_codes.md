@@ -36,7 +36,7 @@ Common failures may include:
 
 ### Error sending push because the payload was invalid
 
-This message can appear in the user profile **Engagement** tab under **Contact Settings** > **Push Changelog** when Apple Push Notification service (APNs) rejects the push request due to an invalid payload.
+This message can appear in the user profile **Engagement** tab under **Contact Settings** > **Push Changelog** when Apple Push Notification service (APNs) rejects the push request because of an invalid payload.
 
 In Braze, this dashboard message can map to one of the following APNs error reasons:
 
