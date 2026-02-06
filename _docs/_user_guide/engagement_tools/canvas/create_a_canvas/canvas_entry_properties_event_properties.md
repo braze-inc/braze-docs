@@ -49,7 +49,7 @@ You can no longer create or duplicate Canvases using the original editor. This a
 - When an Action Path step contains a "Sent an SMS Inbound Message" or "Sent a WhatsApp Inbound Message" trigger, the subsequent Canvas steps can include an SMS or WhatsApp Liquid property. This mirrors how event properties work in Canvases. This way you can leverage your messages to save and reference first-party data on user profiles and conversational messaging.
 
 {% alert note %}
-Audience eligibility is evaluated once at Canvas entry. If a user is merged during entry, the identified user will continue through the Canvas and is not re-evaluated against the Canvas segment criteria.
+Audience eligibility is evaluated once at Canvas entry. If a user is merged during entry, the identified user continues through the Canvas and is not re-evaluated against the Canvas segment criteria.
 {% endalert %}
 
 {% multi_lang_include alerts/tip_alerts.md alert='Reference properties from triggering event' %}
