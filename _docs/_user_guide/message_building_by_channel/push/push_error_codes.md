@@ -46,7 +46,7 @@ In Braze, this dashboard message can map to one of the following APNs error reas
 Common causes include:
 
 - Custom keys (and their values) making the payload too large (this can include unexpectedly large Liquid-rendered values).
-- An empty or missing alert/body where required (or an otherwise malformed `aps` payload).
+- An empty or missing alert or body where required (or an otherwise malformed `aps` payload).
 
 Next steps:
 
