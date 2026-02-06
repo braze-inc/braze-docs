@@ -18,7 +18,7 @@ tool:
 
 ## Prerequisites
 
-Before you create a Rich push notification for Android, note the following details:
+Before you create a rich push notification for Android, note the following details:
 
 - Android Rich notifications aren't available when creating a quick push campaign.
 - Android extended notification images must be 2:1 ratio, but do not have a size limit.
