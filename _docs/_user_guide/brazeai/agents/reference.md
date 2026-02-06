@@ -126,6 +126,10 @@ Tell a one-paragraph short story about this user, integrating their {{${first_na
 ```
 {% endraw %}
 
+In the **Logs** section of the **Agent Console**, you can review the details for the agent's input and output to understand what value is rendered from the Liquid.
+
+![The details for an agent that has Liquid in its instructions.]({% image_buster /assets/img/ai_agent/using_liquid_example.png %}){: style="max-width:65%;"}
+
 ## Catalogs and fields
 
 Choose specific catalogs for an agent to reference and to give your agent the context it needs to understand your products and other non-user data when relevant.
