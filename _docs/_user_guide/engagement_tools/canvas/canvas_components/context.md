@@ -94,7 +94,7 @@ To define a context variable:
 Now you can use your context variable anywhere you use Liquid, such as in Message and User Update steps, by selecting **Add Personalization**. For a full walkthrough, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/).
 
 {% alert important %}
-When referencing context variables, always use the format {% raw %}`{{context.${variable_name}}}`{% endraw %}. <br><br>The format {% raw %}`{{context.variable_name}}`{% endraw %} (without `${}`) may work in the first Message step, but does not persist to subsequent Canvas steps.
+When referencing context variables, always use the format {% raw %}`{{context.${variable_name}}}`{% endraw %}.
 {% endalert %}
 
 ### Context variable filters
