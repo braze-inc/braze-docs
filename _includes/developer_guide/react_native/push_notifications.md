@@ -156,26 +156,6 @@ Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is
 For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
 
 {% subtabs local %}
-{% subtab Objective-C %}
-```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  self.moduleName = @"YOUR_MODULE_NAME";
-  self.initialProps = @{};
-
-  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
-  configuration.triggerMinimumTimeInterval = 1;
-  configuration.logger.level = BRZLoggerLevelInfo;
-  Braze *braze = [BrazeReactBridge initBraze:configuration];
-  AppDelegate.braze = braze;
-
-  [self registerForPushNotifications];
-  [[BrazeReactUtils sharedInstance] populateInitialPayloadFromLaunchOptions:launchOptions];
-
-  return [super application:application didFinishLaunchingWithOptions:launchOptions];
-}
-```
-{% endsubtab %}
 {% subtab Swift %}
 ```swift
 func application(
@@ -194,6 +174,26 @@ func application(
   BrazeReactUtils.shared().populateInitialPayload(fromLaunchOptions: launchOptions)
 
   return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  self.moduleName = @"YOUR_MODULE_NAME";
+  self.initialProps = @{};
+
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
+  configuration.triggerMinimumTimeInterval = 1;
+  configuration.logger.level = BRZLoggerLevelInfo;
+  Braze *braze = [BrazeReactBridge initBraze:configuration];
+  AppDelegate.braze = braze;
+
+  [self registerForPushNotifications];
+  [[BrazeReactUtils sharedInstance] populateInitialPayloadFromLaunchOptions:launchOptions];
+
+  return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
 ```
 {% endsubtab %}
@@ -223,6 +223,64 @@ Braze provides this workaround since React Native's Linking API does not support
 To enable [universal linking]({{site.baseurl}}/developer_guide/push_notifications/deep_linking/?sdktab=swift#universal-links) support, implement a Braze delegate that determines whether to open a given URL, then register it with your Braze instance.
 
 {% subtabs local %}
+{% subtab Swift %}
+Create a `BrazeReactDelegate.swift` file in your `iOS` directory and add the following. Replace `YOUR_DOMAIN_HOST` with your actual domain.
+
+```swift
+import Foundation
+import BrazeKit
+import UIKit
+
+class BrazeReactDelegate: NSObject, BrazeDelegate {
+
+  /// This delegate method determines whether to open a given URL.
+  /// Reference the context to get additional details about the URL payload.
+  func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
+    if let host = context.url.host,
+       host.caseInsensitiveCompare("YOUR_DOMAIN_HOST") == .orderedSame {
+      // Sample custom handling of universal links
+      let application = UIApplication.shared
+      let userActivity = NSUserActivity(activityType: NSUserActivityTypeBrowsingWeb)
+      userActivity.webpageURL = context.url
+      // Routes to the `continueUserActivity` method, which should be handled in your AppDelegate.
+      application.delegate?.application?(
+        application,
+        continue: userActivity,
+        restorationHandler: { _ in }
+      )
+      return false
+    }
+    // Let Braze handle links otherwise
+    return true
+  }
+}
+```
+
+Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOptions` of your project's `AppDelegate.swift` file.
+
+```swift
+import BrazeKit
+
+class AppDelegate: UIResponder, UIApplicationDelegate {
+  
+  static var braze: Braze?
+  
+  // Keep a strong reference to the BrazeDelegate so it is not deallocated.
+  private var brazeDelegate: BrazeReactDelegate?
+  
+  func application(
+    _ application: UIApplication,
+    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
+  ) -> Bool {
+    // Other setup code (e.g., Braze initialization)
+    
+    brazeDelegate = BrazeReactDelegate()
+    AppDelegate.braze?.delegate = brazeDelegate
+    return true
+  }
+}
+```
+{% endsubtab %}
 {% subtab Objective-C %}
 Create a `BrazeReactDelegate.h` file in your `iOS` directory and then add the following code snippet.
 
@@ -283,64 +341,6 @@ Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOp
 
   self.brazeDelegate = [[BrazeReactDelegate alloc] init];
   braze.delegate = self.brazeDelegate;
-}
-```
-{% endsubtab %}
-{% subtab Swift %}
-Create a `BrazeReactDelegate.swift` file in your `iOS` directory and add the following. Replace `YOUR_DOMAIN_HOST` with your actual domain.
-
-```swift
-import Foundation
-import BrazeKit
-import UIKit
-
-class BrazeReactDelegate: NSObject, BrazeDelegate {
-
-  /// This delegate method determines whether to open a given URL.
-  /// Reference the context to get additional details about the URL payload.
-  func braze(_ braze: Braze, shouldOpenURL context: Braze.URLContext) -> Bool {
-    if let host = context.url.host,
-       host.caseInsensitiveCompare("YOUR_DOMAIN_HOST") == .orderedSame {
-      // Sample custom handling of universal links
-      let application = UIApplication.shared
-      let userActivity = NSUserActivity(activityType: NSUserActivityTypeBrowsingWeb)
-      userActivity.webpageURL = context.url
-      // Routes to the `continueUserActivity` method, which should be handled in your AppDelegate.
-      application.delegate?.application?(
-        application,
-        continue: userActivity,
-        restorationHandler: { _ in }
-      )
-      return false
-    }
-    // Let Braze handle links otherwise
-    return true
-  }
-}
-```
-
-Then, create and register your `BrazeReactDelegate` in `didFinishLaunchingWithOptions` of your project's `AppDelegate.swift` file.
-
-```swift
-import BrazeKit
-
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  
-  static var braze: Braze?
-  
-  // Keep a strong reference to the BrazeDelegate so it is not deallocated.
-  private var brazeDelegate: BrazeReactDelegate?
-  
-  func application(
-    _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
-  ) -> Bool {
-    // Other setup code (e.g., Braze initialization)
-    
-    brazeDelegate = BrazeReactDelegate()
-    AppDelegate.braze?.delegate = brazeDelegate
-    return true
-  }
 }
 ```
 {% endsubtab %}
