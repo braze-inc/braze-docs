@@ -86,7 +86,7 @@ Next, build the Canvas by customizing the channels and content that you want to 
 ![Two pages of an in-app message to capture user emails and display a success message.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
 
 {:start="2"}
-2. From here, we'll keep the **Subscribed** Action Path step as is. This step splits our users into two groups in a one-day window:
+2. From here, keep the **Subscribed** Action Path step as is. This step splits our users into two groups in a one-day window:
 
 - Users who have subscribed to Steppington with their email
 - Users who haven't subscribed to Steppington with their email
