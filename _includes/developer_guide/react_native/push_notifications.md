@@ -160,7 +160,7 @@ For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `di
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.moduleName = @"BrazeProject";
+  self.moduleName = @"YOUR_MODULE_NAME";
   self.initialProps = @{};
 
   BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
@@ -182,7 +182,7 @@ func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
 ) -> Bool {
-  self.moduleName = "BrazeProject"
+  self.moduleName = "YOUR_MODULE_NAME"
   self.initialProps = [:]
 
   let configuration = Braze.Configuration(apiKey: apiKey, endpoint: endpoint)
