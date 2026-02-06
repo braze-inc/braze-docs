@@ -160,8 +160,7 @@ For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `di
 ```objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  self.moduleName = @"YOUR_MODULE_NAME";
-  self.initialProps = @{};
+  // ... Perform regular React Native setup
 
   BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
   configuration.triggerMinimumTimeInterval = 1;
@@ -182,8 +181,7 @@ func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
 ) -> Bool {
-  self.moduleName = "YOUR_MODULE_NAME"
-  self.initialProps = [:]
+  // ... Perform regular React Native setup
 
   let configuration = Braze.Configuration(apiKey: apiKey, endpoint: endpoint)
   configuration.triggerMinimumTimeInterval = 1
