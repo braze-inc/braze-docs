@@ -1,11 +1,11 @@
 ---
 nav_title: "OBTER: Listar chaves de autenticação do SDK"
-article_title: "OBTER: Listar chaves de autenticação do SDK"
+article_title: "OBTER: Listar Chaves de Autenticação do SDK"
 search_tag: Endpoint
 page_order: 1
 layout: api_page
 page_type: reference
-description: "Este artigo descreve detalhes sobre o endpoint de chaves de autenticação do SDK do List Braze."
+description: "Este artigo descreve detalhes sobre o endpoint Braze de Listar chaves de autenticação do SDK."
 ---
 
 {% api %}
@@ -14,7 +14,7 @@ description: "Este artigo descreve detalhes sobre o endpoint de chaves de autent
 /app_group/sdk_authentication/keys
 {% endapimethod %}
 
-> Use esse endpoint para recuperar todas as chaves de autenticação do SDK para seu app.
+> Use este endpoint para recuperar todas as chaves de autenticação do SDK para seu app.
 
 ## Pré-requisitos
 
@@ -63,18 +63,18 @@ curl --location --request GET 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 | Parâmetro | Tipo de dados | Descrição |
 | --------- | --------- | ----------- |
-| `keys` | Vetor | Vetor de objetos de chave de autenticação do SDK. |
-| `keys[].id` | String | A ID da chave de autenticação do SDK. |
+| `keys` | Vetor | Array de objetos de chaves de autenticação do SDK. |
+| `keys[].id` | String | O ID da chave de autenticação do SDK. |
 | `keys[].rsa_public_key` | String | A string da chave pública RSA. |
 | `keys[].description` | String | Descrição da chave de autenticação do SDK. |
-| `keys[].is_primary` | Booleano | Se essa chave é a chave primária de autenticação do SDK. |
+| `keys[].is_primary` | Booleano | Se esta chave é a chave principal de autenticação do SDK. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### Regras de validação
 
-Esse endpoint tem as seguintes regras de validação:
+Este endpoint possui as seguintes regras de validação:
 
-- O parâmetro `app_id` deve ser um identificador válido da API do app.
+- O parâmetro `app_id` deve ser um identificador de API de app válido.
 - O app deve existir em seu espaço de trabalho.
 
 {% endapi %}

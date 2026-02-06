@@ -1,4 +1,4 @@
-# Creación de agentes
+# Construir agentes decisores de IA
 
 > Aprende a crear un agente para BrazeAI Decisioning Studio™, para que puedas automatizar la experimentación personalizada y optimizar resultados como conversiones, retención o ingresos, sin pruebas A/B manuales.
 
@@ -16,7 +16,7 @@ Para crear un buen agente, deberás hacer lo siguiente:
 - Definir qué dimensiones probar, como la oferta, la línea del asunto, la creatividad, el canal o la hora de envío.
 - Seleccionar las opciones para cada dimensión, como correo electrónico frente a SMS, o frecuencia diaria frente a semanal.
 
-![Ejemplo de diagrama de un agente de estudio de decisiones para correos electrónicos referidos.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Ejemplo de diagrama de un agente de estudio de decisión para correos electrónicos referidos.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Agentes de muestra
 
@@ -32,7 +32,7 @@ Antes de crear un agente, tendrás que [integrar BrazeAI Decisioning Studio™](
 
 ### Paso 1: Contacta con Servicios Expertos en IA
 
-El equipo de Servicios Expertos en IA trabajará estrechamente contigo para determinar el alcance, diseñar y crear tu agente de toma de decisiones. Si aún no lo has hecho, ponte en [contacto](https://www.braze.com/get-started/) para empezar.
+El equipo de Servicios Expertos en IA trabajará estrechamente contigo para determinar el alcance, diseñar y crear tu agente de toma de decisiones. Si aún no lo has hecho, [ponte en contacto con nosotros](https://www.braze.com/get-started/) para empezar.
 
 Completarán juntos los siguientes pasos para crear un agente personalizado adecuado para ti.
 

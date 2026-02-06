@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : [Nom de l’endpoint]"
+nav_title: "POST : [Nom de l'endpoint]"
 article_title: "Exemple de mise en page : POST : Suivi utilisateur"
 search_tag: Endpoint
 page_order: 4
@@ -13,7 +13,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# [Nom de l’endpoint]
+# [Nom de l'endpoint].
 
 {% apimethod post %}
 /sms/invalid_phone_numbers/remove

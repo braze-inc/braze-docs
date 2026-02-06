@@ -1,5 +1,5 @@
 ---
-nav_title: Datenaufbewahrung
+nav_title: Bindung von Daten
 article_title: Datenaufbewahrung
 alias: /data_retention/
 description: "Dieser referenzierte Artikel enthält allgemeine Informationen zur Bindung von Daten bei Braze."
@@ -22,8 +22,8 @@ Warning! Don't make any changes to this document without approval from the legal
 
 Braze ermöglicht es seinen Kund:innen, komplette Nutzerprofile und Attribut-Daten selbst aus ihrem Workspace zu löschen.
 
-Das heißt, Sie können: 
-- Löschen von Nutzerprofilen mit dem Braze [Endpunkt Delete user API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/) 
+Das heißt, Sie können:
+- Löschen von Nutzerprofilen mit dem Braze [Endpunkt Delete user API]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 - Löschen (null) oder Ändern von Attributen in Nutzerprofilen über den Braze [Endpunkt Track user API]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)
 
 Verhaltensbezogene Events können nicht aus einem Nutzerprofil gelöscht werden (angepasste Events, Sitzungen, Kampagnen, Käufe). Um diese Ereignisse zu entfernen, müssen Sie das gesamte Profil der Nutzer:in löschen.
@@ -44,7 +44,7 @@ Jede Woche führt Braze einen Prozess durch, um inaktive und ruhende Nutzer:inne
 Kunden haben die volle Kontrolle darüber, ob ein Nutzer inaktiv oder ruhend ist, und können die Archivierung von Nutzerprofilen verhindern, indem sie in regelmäßigen Abständen einen Datenpunkt aufzeichnen. Braze-Canvas bietet die Möglichkeit, dies automatisch zu tun, so dass Sie diese Funktion für einige oder alle Ihrer inaktiven oder ruhenden Nutzer:innen effektiv ausschalten können.
 {% endalert %}
 
-#### Daten zu Kampagnen und Canvas-Interaktionen 
+#### Daten zu Kampagnen und Canvas-Interaktionen
 
 Messaging-Interaktionsdaten beziehen sich darauf, wie ein Nutzer mit einer Kampagne oder einem Canvas, das er erhalten hat, interagiert (z.B. wenn ein Nutzer die Kampagne A öffnet oder ein Nutzer die Variante A erhält). Diese Daten werden für das Retargeting verwendet. Weitere Informationen über die Verfügbarkeit von Messaging-Interaktionsdaten finden Sie unter [Über die Verfügbarkeit von Messaging-Interaktionsdaten]({{site.baseurl}}/messaging_interaction_data/).
 

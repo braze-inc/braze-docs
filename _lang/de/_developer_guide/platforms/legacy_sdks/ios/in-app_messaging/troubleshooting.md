@@ -12,7 +12,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Fehlersuche bei In-App-Nachrichten
+# Fehlerbehebung bei In-App-Nachrichten
 
 ## Impressionen
 
@@ -34,30 +34,30 @@ Das SDK fordert beim Start der Sitzung In-App-Nachrichten von den Braze-Servern 
 
 #### Prüfen Sie, ob Nachrichten angefordert und zurückgeschickt werden
 
-1. Fügen Sie sich als [Testbenutzer]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) auf dem Dashboard hinzu.
+1. Fügen Sie sich als [Testnutzer:in]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) auf dem Dashboard hinzu.
 2. Richten Sie eine In-App-Nachrichtenkampagne ein, die sich an Ihren Nutzer richtet.
 3. Stellen Sie sicher, dass in Ihrer Anwendung eine neue Sitzung stattfindet.
-4. Verwenden Sie das [Event Benutzerprotokolle]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab), um zu überprüfen, ob Ihr Gerät beim Start der Sitzung In-App-Nachrichten anfordert. Suchen Sie die SDK-Anfrage, die mit dem Sitzungsstart-Event Ihres Testbenutzers verbunden ist.
+4. Verwenden Sie das [Event-Benutzerprotokoll]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) ], um zu überprüfen, ob Ihr Gerät beim Start der Sitzung In-App-Nachrichten anfordert. Suchen Sie die SDK-Anfrage, die mit dem Sitzungsstart-Event Ihres Testbenutzers verbunden ist.
   - Wenn Ihre App ausgelöste In-App-Nachrichten anfordern sollte, sollten Sie `trigger` im Feld **Angeforderte Antworten** unter **Antwortdaten** sehen.
   - Wenn Ihre App dazu gedacht war, originale In-App-Nachrichten anzufordern, sollten Sie `in_app` im Feld **Angeforderte Antworten** unter **Antwortdaten** sehen.
-5. Verwenden Sie die [Event-Benutzerprotokolle]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab), um zu überprüfen, ob die richtigen In-App-Nachrichten in den Antwortdaten zurückgegeben werden.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
+5. Verwenden Sie das [Event-Benutzerprotokoll]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) um zu überprüfen, ob die richtigen In-App-Nachrichten in den Antwortdaten zurückgegeben werden.<br>![]({% image_buster /assets/img_archive/event_user_log_iams.png %})
 
 #### Fehlerbehebung bei nicht angeforderten Nachrichten
 
 Wenn Ihre In-App-Nachrichten nicht angefordert werden, kann es sein, dass Ihre App die Sitzungen nicht korrekt verfolgt, da die In-App-Nachrichten beim Start der Sitzung aktualisiert werden. Vergewissern Sie sich außerdem, dass Ihre App tatsächlich eine Sitzung gemäß der Semantik des Sitzungs-Timeouts Ihrer App startet:
 
-![Die SDK-Anfrage, die in den Ereignisbenutzerprotokollen gefunden wurde, die ein erfolgreiches Sitzungsstart-Event anzeigen.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
+![Die SDK-Anfrage, die in den Event-Benutzerprotokollen gefunden wurde, die ein erfolgreiches Sitzungsstart-Ereignis anzeigen.]({% image_buster /assets/img_archive/event_user_log_session_start.png %})
 
 ### Fehlerbehebung bei nicht zurückgegebenen Nachrichten
 
 Wenn Ihre In-App-Nachrichten nicht zurückgeschickt werden, liegt wahrscheinlich ein Problem mit dem Targeting Ihrer Kampagne vor:
 
 - Ihr Segment enthält nicht Ihren Benutzer.
-  - Überprüfen Sie auf der Registerkarte [\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab), ob das richtige Segment unter **Segmente** erscheint.
+  - Überprüfen Sie auf dem Tab [\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) Ihres Nutzers:innen, ob das richtige Segment unter **Segmente** erscheint.
 - Ihr Nutzer hat die In-App-Nachricht bereits erhalten und war nicht berechtigt, sie erneut zu erhalten.
-  - Überprüfen Sie die [Einstellungen für die Wiederzulassung von Kampagnen]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) unter dem Schritt **Zustellung** des **Campaign Composers** und stellen Sie sicher, dass die Einstellungen für die Wiederzulassung mit Ihrer Testkonfiguration übereinstimmen.
+  - Überprüfen Sie die [Einstellungen für die Wiederzulassung von Kampagnen]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) unter dem Schritt **Zustellung** im **Campaign Composer** und stellen Sie sicher, dass die Einstellungen für die Wiederzulassung mit Ihrer Testkonfiguration übereinstimmen.
 - Ihr Benutzer hat die Höchstfrequenz für die Kampagne erreicht.
-  - Überprüfen Sie die Einstellungen für die Kampagne [Frequenzobergrenze]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) und stellen Sie sicher, dass sie mit Ihrer Testkonfiguration übereinstimmen.
+  - Überprüfen Sie die Kampagne [Frequency-Cap-Einstellungen]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) und stellen Sie sicher, dass sie mit Ihrer Testkonfiguration übereinstimmen.
 - Wenn es in der Kampagne eine Kontrollgruppe gab, könnte Ihr Benutzer in die Kontrollgruppe gefallen sein.
   - Sie können überprüfen, ob dies geschehen ist, indem Sie ein Segment mit einem Filter für empfangene Kampagnenvarianten erstellen, bei dem die Kampagnenvariante auf **Kontrolle** eingestellt ist, und überprüfen, ob Ihr Nutzer in dieses Segment fällt.
   - Wenn Sie Kampagnen für Integrationstests erstellen, achten Sie darauf, dass Sie keine Kontrollgruppe hinzufügen.

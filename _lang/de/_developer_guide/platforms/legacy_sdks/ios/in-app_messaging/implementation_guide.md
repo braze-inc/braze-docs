@@ -1,5 +1,5 @@
 ---
-nav_title: Erweiterte Implementierung (optional)
+nav_title: Vorgezogene Implementierung (optional)
 article_title: Anleitung zur Implementierung von In-App-Nachrichten für iOS (optional)
 platform: iOS
 page_order: 6
@@ -13,7 +13,7 @@ noindex: true
 
 <br>
 {% alert important %}
-Suchen Sie den Entwicklerleitfaden zur grundlegenden Integration von In-App-Nachrichten? Sie finden es [hier]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
+Suchen Sie den Entwicklerleitfaden zur grundlegenden Integration von In-App-Nachrichten? Finden Sie es [here]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/in-app_messaging/overview/).
 {% endalert %}
 
 # Leitfaden für die Implementierung von In-App-Nachrichten
@@ -81,7 +81,7 @@ Im Folgenden finden Sie drei Anwendungsbeispiele. Jeder Anwendungsfall beinhalte
 
 ### Benutzerdefinierte In-App-Nachricht zum Hochschieben
 
-![Zwei iPhones nebeneinander. Beim ersten iPhone berührt die hochgeschobene Nachricht den unteren Rand des Telefondisplays. Auf dem zweiten iPhone ist die Slide-up-Nachricht höher auf dem Bildschirm platziert, sodass Sie den angezeigten App-Navigations-Button sehen können.]({% image_buster /assets/img/iam_implementation/slideup.png %}){: style="float:right;max-width:45%;margin-left:15px;border:0;"}
+![Zwei iPhones nebeneinander. Beim ersten iPhone berührt die hochgeschobene Nachricht den unteren Rand des Telefondisplays. Auf dem zweiten iPhone sitzt die hochgeschobene Nachricht höher auf dem Bildschirm, so dass Sie den angezeigten App Navigation Button sehen können.]({% image_buster /assets/img/iam_implementation/slideup.png %}){: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
 Bei der Erstellung Ihrer Slide-up-Nachricht werden Sie feststellen, dass Sie die Platzierung der Nachricht mit den Standardmethoden nicht ändern können. Um eine Änderung wie diese vorzunehmen, verwenden Sie eine Unterklasse von `ABKInAppMessageSlideupViewController` und überschreiben die Variable `offset` mit Ihrer angepassten Variablen. Das Bild auf der rechten Seite zeigt ein Beispiel dafür, wie Sie damit Ihre In-App-Nachrichten anpassen können. 
 
@@ -110,7 +110,7 @@ override var offset: CGFloat {
 }
 ```
 
-{% details Version 3.34.0 oder früher  %}
+{% details Version 3.34.0 or earlier  %}
 **Aktualisieren der Variablen `slideConstraint` **<br>
 Die öffentliche Variable `slideConstraint` stammt aus der Superklasse `ABKInAppMessageSlideupViewController`. 
 
@@ -146,7 +146,7 @@ Aktualisieren Sie die Variable `offset` und legen Sie einen Offset fest, der Ihr
   [super setOffset:offset + [self adjustedOffset]];
 }
 ```
-{% details Version 3.34.0 oder früher  %}
+{% details Version 3.34.0 or earlier  %}
 **Aktualisieren der Variablen `slideConstraint` **<br>
 Die öffentliche Variable `slideConstraint` stammt aus der Superklasse `ABKInAppMessageSlideupViewController`. 
 
@@ -177,7 +177,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 }
 ```
 
-{% details Version 3.34.0 oder früher %}
+{% details Version 3.34.0 or earlier %}
 ```swift
 override func beforeMoveInAppMessageViewOnScreen() {
   setSlideConstraint()
@@ -197,7 +197,7 @@ override func beforeMoveInAppMessageViewOnScreen() {
 }
 ```
 
-{% details Version 3.34.0 oder früher  %}
+{% details Version 3.34.0 or earlier  %}
 ```objc
 - (void)beforeMoveInAppMessageViewOnScreen {
   [self setSlideConstraint:self.slideConstraint];
@@ -212,7 +212,7 @@ Passen Sie den entsprechenden Wert in `viewWillTransition()` an, da die Unterkla
 
 ### Benutzerdefinierte modale In-App-Nachricht
 
-![Ein iPhone, das eine modale In-App-Nachricht anzeigt, mit der Sie durch eine Liste von Sportmannschaften blättern und Ihre Lieblingsmannschaft auswählen können. Am unteren Ende dieser In-App-Nachricht befindet sich ein großer blauer Senden-Button.]({% image_buster /assets/img/iam_implementation/modal.png %}){: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![Ein iPhone, das eine modale In-App-Nachricht anzeigt, mit der Sie durch eine Liste von Sportmannschaften blättern und Ihre Lieblingsmannschaft auswählen können. Am Ende dieser In-App-Nachricht befindet sich ein großer blauer Button zum Absenden.]({% image_buster /assets/img/iam_implementation/modal.png %}){: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 Ein `ABKInAppMessageModalViewController` kann in Unterklassen unterteilt werden, um eine `UIPickerView` zur Erfassung wertvoller Nutzerattribute zu nutzen. Die angepasste modale In-App-Nachricht ermöglicht es Ihnen, Connected-Content oder eine beliebige verfügbare Liste zu verwenden, um Attribute aus einer dynamischen Artikelliste anzuzeigen und zu erfassen. 
 
@@ -224,13 +224,13 @@ Besuchen Sie den [ModalPickerViewController](https://github.com/braze-inc/braze-
 
 Um eine modale In-App-Nachricht im Dashboard einzurichten, müssen Sie eine Artikelliste angeben, die als kommagetrennter String formatiert ist. In unserem Beispiel verwenden wir Connected-Content, um eine JSON-Liste mit Team-Namen abzurufen und die Namen entsprechend zu formatieren.
 
-![Der In-App-Nachrichten-Editor zeigt eine Vorschau, wie die In-App-Nachricht aussehen wird. Stattdessen wird die Artikelliste angezeigt, die Sie an Braze übermittelt haben. Da die Braze-UI Ihre angepasste In-App-Nachrichten-UI erst anzeigt, wenn sie an ein Smartphone gesendet wird, ist die Vorschau zum Aussehen Ihrer Nachricht nicht aussagekräftig. Wir empfehlen Ihnen daher, sie vor dem Senden zu testen.]({% image_buster /assets/img/iam_implementation/dashboard1.png %})
+![Der In-App-Nachrichten-Editor zeigt eine Vorschau, wie die In-App-Nachricht aussehen wird. Stattdessen wird die Artikelliste angezeigt, die Sie an Braze übermittelt haben. Da die Braze-Benutzeroberfläche Ihr angepasstes In-App-Nachricht UI nur anzeigt, wenn es an ein Telefon gesendet wird, ist die Vorschau nicht aussagekräftig, wie Ihre Nachricht aussehen wird. Wir empfehlen Ihnen daher, sie vor dem Senden zu testen.]({% image_buster /assets/img/iam_implementation/dashboard1.png %})
 
 Geben Sie in den Schlüssel-Wert-Paaren einen `attribute_key` an. Dieser Schlüssel wird zusammen mit dem vom Benutzer ausgewählten Wert als benutzerdefiniertes Attribut in seinem Benutzerprofil gespeichert. Ihre benutzerdefinierte Ansichtslogik muss die an Braze gesendeten Benutzerattribute verarbeiten.
 
 Das Wörterbuch `extras` im Objekt `ABKInAppMessage` ermöglicht Ihnen die Abfrage eines Schlüssels des Typs `view_type` (falls vorhanden), der die korrekte Ansicht für die Anzeige angibt. Es ist wichtig zu wissen, dass In-App-Nachrichten für jede einzelne Nachricht konfiguriert werden, so dass benutzerdefinierte und standardmäßige modale Ansichten harmonisch zusammenarbeiten können.
 
-![Zwei Schlüssel-Wert-Paare im Nachrichten-Editor. Für das erste Schlüssel-Wert-Paar wurde "attribute_key" auf "Favorite Team" und für das zweite Schlüssel-Wert-Paar wurde "view_type" auf "picker" festgelegt.]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
+![Zwei Schlüssel-Wert-Paare im Nachrichten-Editor. Für das erste Schlüssel-Wert-Paar ist "attribute_key" auf "Favorite Team" eingestellt, für das zweite "view_type" auf "picker".]({% image_buster /assets/img/iam_implementation/dashboard2.png %}){: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -355,7 +355,7 @@ Möchten Sie unsere angepassten modalen In-App-Nachrichten nutzen, um Videos üb
 
 ### Angepasste In-App-Nachricht des Typs "Full"
 
-![Eine In-App-Meldung, die eine Liste von Konfigurationsoptionen mit Kippschaltern neben jeder Option anzeigt. Am Ende der Nachricht befindet sich ein großer blauer Senden-Button.]({% image_buster /assets/img/iam_implementation/fullscreen.png %}){: style="float:right;max-width:23%;margin-left:15px;border:0;"}
+![Eine In-App-Meldung, die eine Liste von Konfigurationsoptionen mit Kippschaltern neben jeder Option anzeigt. Am Ende der Nachricht befindet sich ein großer blauer Button zum Absenden.]({% image_buster /assets/img/iam_implementation/fullscreen.png %}){: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
 Verwenden Sie benutzerdefinierte, vollständige In-App-Nachrichten, um interaktive, benutzerfreundliche Aufforderungen zur Erfassung wertvoller Kundendaten zu erstellen. Das Beispiel auf der rechten Seite zeigt die Implementierung einer angepassten In-App-Nachricht des Typs "Full", die als interaktiver Push-Primer mit Benachrichtigungspräferenzen überarbeitet wurde. 
 
@@ -367,9 +367,9 @@ Um eine angepasste In-App-Nachricht des Typs "Full" im Dashboard einzurichten, m
 
 Geben Sie in den Schlüssel-Wert-Paaren einen `attribute_key` an. Dieser Schlüssel wird zusammen mit den vom Benutzer ausgewählten Werten in seinem Benutzerprofil als benutzerdefiniertes Attribut gespeichert. Ihre benutzerdefinierte Ansichtslogik muss die an Braze gesendeten Benutzerattribute verarbeiten.
 
-![Drei Schlüssel-Wert-Paare im Nachrichten-Editor. Das erste Schlüssel-Wert-Paar "attribute_key" ist auf "Push Tags", das zweite Schlüssel-Wert-Paar "subtitle_text" ist auf "Enabling notifications will also..." und das dritte Schlüssel-Wert-Paar "view_type" ist auf "table_list" festgelegt.]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
+![Drei Schlüssel-Wert-Paare im Nachrichten-Editor. Das erste Schlüssel-Wert-Paar "attribute_key" ist auf "Push Tags" eingestellt, das zweite "subtitle_text" auf "Enablement notifications will also..." und das dritte "view_type" auf "table_list".]({% image_buster /assets/img/iam_implementation/dashboard3.png %}){: style="max-width:65%;"}
 
-#### Abfangen von Touchgesten bei In-App-Nachrichten
-![Ein Apple-Gerät, das Reihen von Einstellungen und Schaltern anzeigt. Die angepasste Ansicht verarbeitet die Buttons und alle Touchgesten außerhalb der Button-Steuerelemente werden von der In-App-Nachricht verarbeitet und bewirken, dass diese ausgeblendet wird.]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
-Damit die Buttons in angepassten In-App-Nachrichten des Typs "Full" ordnungsgemäß funktionieren, ist das Abfangen von Touchgesten bei In-App-Nachrichten von entscheidender Bedeutung. Standardmäßig fügt `ABKInAppMessageImmersive` der Nachricht eine Tippgesten-Erkennung hinzu, sodass Nutzer die Nachrichten ohne Buttons ausblenden können. Durch Hinzufügen eines `UISwitch` oder eines Buttons zur Ansichtshierarchie `UITableViewCell` werden die Touchgesten nun von der angepassten Ansicht verarbeitet. Seit iOS 6 haben Buttons und andere Steuerelemente bei Arbeiten mit Gestenerkennung Vorrang, sodass unsere angepasste In-App-Nachricht des Typs "Full" genauso funktioniert, wie sie sollte. 
+#### Touch-Events in der In-App-Nachricht abfangen
+![Ein Apple-Gerät, das Reihen von Einstellungen und Schaltern anzeigt. Die angepasste Ansicht verwaltet die Buttons, und jede Berührung außerhalb der Button-Steuerelemente wird von der In-App-Nachricht verwaltet und beendet diese.]({% image_buster /assets/img/iam_implementation_guide.png %}){: style="float:right;max-width:30%;margin-left:10px;border:0"}
+Damit die angepassten Buttons für In-App-Nachricht richtig funktionieren, ist das Abfangen von Berührungen in der App entscheidend. Standardmäßig fügt `ABKInAppMessageImmersive` der Nachricht eine Tippgesten-Erkennung hinzu, sodass Nutzer die Nachrichten ohne Buttons ausblenden können. Durch Hinzufügen eines `UISwitch` oder eines Buttons zur Ansichtshierarchie `UITableViewCell` werden die Touchgesten nun von der angepassten Ansicht verarbeitet. Seit iOS 6 haben Buttons und andere Steuerelemente bei Arbeiten mit Gestenerkennung Vorrang, sodass unsere angepasste In-App-Nachricht des Typs "Full" genauso funktioniert, wie sie sollte. 
 

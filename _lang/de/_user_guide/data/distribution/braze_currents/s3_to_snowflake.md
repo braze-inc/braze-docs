@@ -1,6 +1,6 @@
 ---
-nav_title: Übertragen von Daten von Amazon S3 zu Snowflake
-article_title: Übertragen von Daten von Amazon S3 zu Snowflake
+nav_title: Daten von Amazon S3 zu Snowflake übertragen
+article_title: Daten von Amazon S3 zu Snowflake übertragen
 page_order: 7
 page_type: tutorial
 description: "In diesem Artikel erfahren Sie, wie Sie mit Hilfe des ETL-Prozesses (Extrahieren, Transformieren, Laden) Daten aus einem Cloud-Speicher (z.B. Amazon S3) in ein Warehouse (z.B. Snowflake) übertragen."
@@ -8,12 +8,12 @@ tool: Currents
 
 ---
 
-# Übertragen von Daten von Amazon S3 zu Snowflake
+# Daten von Amazon S3 zu Snowflake übertragen
 
 > Wenn sich Ihre Daten derzeit in Amazon S3 befinden, können Sie sie mit dem Prozess Extrahieren, Laden, Transformieren (ELT) in Snowflake oder ein anderes relationales Data Warehouse übertragen. Auf dieser Seite erfahren Sie, wie Sie das tun können.
 
 {% alert note %}
-Wenn Sie spezifischere Anwendungsfälle haben und möchten, dass Braze für Ihre Currents-Instanz Serviceleistungen erbringt, wenden Sie sich an Ihren Account Manager:in und fragen Sie ihn nach den Braze Data Professional Serviceleistungen; Dienste.
+Wenn Sie spezifischere Anwendungsfälle haben und möchten, dass Braze Ihre Currents-Instanz in Dienst nimmt, wenden Sie sich an Ihren Account Manager:in und fragen Sie ihn nach den Braze Data Professional Serviceleistungen; Dienste.
 {% endalert %}
 
 ## Funktionsweise
@@ -275,6 +275,6 @@ Sie müssen die Befehle `CREATE TABLE` und `CREATE PIPE` für jeden Ereignistyp 
 Um zu sehen, welche Arten von Analytics Sie mit Braze-Currents durchführen können, konsultieren Sie unsere [Looker Blocks](https://github.com/llooker?q=braze).
 
 {% alert note %}
-Wenden Sie sich an Ihren Braze-Kundenbetreuer, wenn Sie Fragen haben oder wenn Sie daran interessiert sind, dass Braze Sie durch diesen Prozess begleitet.
+Wenden Sie sich an Ihren Braze-Konto Manager, wenn Sie Fragen haben oder wenn Sie daran interessiert sind, dass Braze Sie durch diesen Prozess begleitet.
 {% endalert %}
 

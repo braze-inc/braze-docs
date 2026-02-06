@@ -16,21 +16,21 @@ Si necesitas inspiración o ayuda para elaborar tu consulta, elige **Plantilla d
 
 Su informe recibe automáticamente un nombre con la fecha y hora actuales. Pase el ratón por encima del nombre y seleccione <i class="fas fa-pencil" alt="Edit"></i> para dar un nombre significativo a su consulta SQL.
 
-![Un ejemplo de nombre de informe "Interacción con el canal para mayo de 2025".]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
+![Un ejemplo de informe con el nombre "Compromiso del canal para mayo de 2025".]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
 
 ### Paso 2: Construye tu consulta
 
 Cuando construyas tu consulta, puedes optar por obtener ayuda de la IA o construirla por tu cuenta.
 
 {% tabs local %}
-{% tab Uso de BrazeAI %}
+{% tab Using BrazeAI %}
 El Generador de consultas con IA aprovecha [la GPT](https://openai.com/gpt-4), impulsada por OpenAI, para recomendar SQL para tu consulta. Generar SQL con el Generador de consultas con IA
 
 1. Tras crear un informe en el Generador de consultas, selecciona la pestaña **Generador de consultas con IA**.
 2. Escriba su consulta o seleccione una consulta de ejemplo y seleccione **Generar** para traducir su consulta a SQL.
 3. Revise el SQL generado para asegurarse de que parece correcto y, a continuación, seleccione **Insertar en el editor**.
 
-![El constructor de consultas SQL AI.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![El generador de consultas SQL AI.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 #### Consejos
 
@@ -41,7 +41,7 @@ El Generador de consultas con IA aprovecha [la GPT](https://openai.com/gpt-4), i
 \##{% multi_lang_include brazeai/generative_ai/policy.md %}
 {% endtab %}
 
-{% tab Por mi cuenta %}
+{% tab On My Own %}
 Escriba su consulta SQL utilizando [la sintaxis Snowflake](https://docs.snowflake.com/en/sql-reference). Consulte la [referencia de la tabla]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) para obtener una lista completa de las tablas y columnas disponibles para su consulta.
 
 Para ver los detalles de la tabla en el Generador de consultas:
@@ -128,6 +128,6 @@ El uso de créditos está correlacionado con el tiempo de ejecución de su consu
 
 Los créditos no se utilizan al escribir, editar o guardar informes dentro del editor Braze SQL. Tus créditos volverán a ser 5 el primer día de cada mes a las 12 am UTC. Puede controlar el uso mensual de su crédito en la parte superior de la página del Generador de consultas.
 
-![Generador de consultas que muestra la cantidad de créditos utilizados en el mes actual.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
+![Query Builder que muestra la cantidad de créditos utilizados en el mes en curso.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
 
 Cuando alcances el límite de crédito, no podrás ejecutar consultas, pero podrás crear, editar y guardar informes SQL. Si desea adquirir más créditos del Generador de consultas, póngase en contacto con su gestor de cuenta.

@@ -1,5 +1,5 @@
 ---
-nav_title: Aperçu de l’intégration
+nav_title: Présentation de l’intégration
 article_title: Aperçu de l’intégration
 page_order: 2
 description: "Cet article donne un aperçu du processus d'onboarding."
@@ -15,11 +15,11 @@ platform:
   - Unity
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Démarrage : Présentation de l’intégration
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Mise en route : Présentation de l’intégration
 
 > Cet article donne un aperçu du processus d'onboarding.
 
-![Un diagramme de Venn de quatre cercles - découverte, intégration, assurance qualité et maintenance - centré sur le "time to value".]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
+![Diagramme de Venn avec quatre cercles (découverte, intégration, assurance qualité et entretien) centré sur le délai de rentabilisation.]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
 
 En tant que ressource technique, vous donnerez à votre équipe les moyens d'agir en intégrant Braze dans votre pile technologique. L'onboarding se divise globalement en quatre étapes :
 * [Découverte et planification](#discovery): Travaillez avec votre équipe pour vous aligner sur la portée, planifier une structure pour les données et les campagnes, et créer une structure d'espace de travail appropriée. 
@@ -44,7 +44,7 @@ La phase de découverte et de planification dure en moyenne six semaines. Les re
 Pendant la période d'onboarding de votre entreprise, Braze organisera des séances de présentation technique. Nous recommandons vivement aux ingénieurs de participer à ces sessions. Les sessions de présentation technique vous donnent l'occasion d’aborder l'évolutivité de l'architecture de la plateforme et de voir des exemples pratiques de la façon dont certaines entreprises de votre taille ont précédemment réussi avec des cas d'utilisation similaires.
 {% endalert %}
 
-![Icônes pour différents canaux, tels que l'e-mail, le panier d'achat, les images, la géolocalisation, etc.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
+![Des icônes pour différents canaux, tels que l'e-mail, le panier d'achat, les images, la géolocalisation, etc.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### Planification de la campagne
 
@@ -97,7 +97,7 @@ Il est important que vous mettiez en place des environnements différents pour l
 
 ## Intégration {#integration}
 
-![Graphique pyramidal abstrait conseillant le flux d'informations d'une source de données à un appareil d'utilisateur.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
+![Graphique pyramidal abstrait conseillant le flux d'informations d'une source de données vers un appareil d'utilisateur.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
 
 Braze prend en charge les applis iOS, les applis Android, les applis Web, et bien plus encore. Vous pouvez également opter pour l'utilisation d'un SDK wrapper multiplateforme, comme React Native ou Unity. En règle générale, les clients intègrent le système en 1 à 6 semaines. De nombreux clients ont intégré Braze avec un seul ingénieur, en fonction de l'étendue de ses compétences techniques et de la bande passante. Cela dépend entièrement de votre périmètre d'intégration spécifique et du temps que votre équipe consacre au projet Braze. 
 
@@ -111,14 +111,14 @@ Vous aurez besoin de développeurs capables de :
 
 ### Partenaires d'intégration de la CDP
 
-De nombreux clients profitent de l'onboarding de Braze pour réaliser également une intégration avec une plateforme de données client (CDP) en tant que partenaire d'intégration. Braze assure le suivi et l'analyse des données, tandis qu'un CDP peut fournir un acheminement et une orchestration supplémentaires des données. Braze offre une intégration fluide/sans heurts avec de nombreux CDP, tels que [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle/) et [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/). 
+De nombreux clients profitent de l'onboarding de Braze pour réaliser également une intégration avec une plateforme de données client (CDP) en tant que partenaire d'intégration. Braze assure le suivi et l'analyse des données, tandis qu'un CDP peut fournir un acheminement et une orchestration supplémentaires des données. Braze offre une intégration fluide/sans heurts avec de nombreux CDP, tels que [mParticle]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/mparticle/mparticle/) et [Segment]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment/). 
 
 Si vous effectuez une intégration côte à côte avec un CDP, vous mapperez les appels du SDK de votre CDP vers le SDK de Braze. Globalement, vous devrez :
 * Mappez les appels d'identification sur `changeUser` [(Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/change-user.html), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/changeuser(userid:sdkauthsignature:fileid:line:)/), [web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser)) et définissez les attributs.
 * Appels de flux de données cartographiques vers `requestImmediateDataFlush` [(Android](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-immediate-data-flush.html?query=abstract%20fun%20requestImmediateDataFlush()), [iOS](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/requestimmediatedataflush()), [web](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestimmediatedataflush)).
 * Enregistrer les événements personnalisés ou les achats.
 
-Des exemples d'intégration entre le SDK de Braze et la CDP de votre choix peuvent être disponibles, en fonction de la plateforme que vous avez choisie. Pour plus d’informations, consultez notre [liste de partenaires technologiques de CDP]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform). 
+Des exemples d'intégration entre le SDK de Braze et la CDP de votre choix peuvent être disponibles, en fonction de la plateforme que vous avez choisie. Pour plus d’informations, consultez notre [liste de partenaires technologiques de CDP]({{site.baseurl}}/partners/data_and_analytics/). 
 
 ### Intégration SDK de Braze
 
@@ -225,9 +225,9 @@ Vous assurerez le suivi des mises à jour de la plateforme Braze via le [référ
 
 ## Limites de débit du SDK 
 
-### Utilisateurs actifs par mois CY 24-25 
+### Utilisateurs actifs mensuels CY 24-25, MAU universel, MAU web et MAU mobile  
 
-Pour les clients qui ont acheté Utilisateurs actifs mensuels - CY 24-25, Braze applique des limites de débit côté serveur sur les requêtes API utilisées par nos SDK pour mettre à jour les sessions, les attributs utilisateurs, les événements et d'autres données de profil utilisateur. Ceci afin d'assurer la stabilité de la plateforme et de maintenir un service rapide et fiable. 
+Pour les clients qui ont acheté des utilisateurs actifs mensuels CY 24-25, Universal MAU, Web MAU et Mobile MAU , Braze applique des limites de débit côté serveur sur les demandes API utilisées par nos SDK pour mettre à jour les sessions, les attributs utilisateurs, les événements et d'autres données de profil utilisateur. Ceci afin d'assurer la stabilité de la plateforme et de maintenir un service rapide et fiable. 
 
 * Les limites de débit horaire sont fixées en fonction du trafic SDK prévu sur votre compte, qui peut correspondre au nombre d'utilisateurs actifs mensuels (MAU) que vous avez acheté, au secteur d'activité, à la saisonnalité ou à d'autres facteurs. Lorsque la limite de débit horaire est atteinte, Braze étrangle les demandes jusqu'à l'heure suivante.
 * Toutes les demandes à débit limité sont automatiquement relancées par le SDK.

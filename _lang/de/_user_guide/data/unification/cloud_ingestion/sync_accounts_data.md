@@ -1,18 +1,18 @@
 ---
 nav_title: Kontodaten synchronisieren und löschen
-article_title: Synchronisierung von Kontodaten mit CDI
+article_title: Kontodaten über CDI synchronisieren
 page_order: 4
 page_type: reference
 description: "Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mit CDI synchronisieren können."
 
 ---
 
-# Synchronisierung von Kontodaten mit CDI
+# Kontodaten über CDI synchronisieren
 
 > Erfahren Sie, wie Sie die Daten Ihres Braze-Kontos mit CDI synchronisieren können.
 
 {% alert important %}
-[Kontoobjekte](https://braze.com/unlisted_docs/account_opportunity_object/) befinden sich derzeit in der Beta-Phase, die für die Nutzung dieses Features erforderlich ist. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.
+[Kontoobjekte](https://braze.com/unlisted_docs/account_opportunity_object/) sind in der Beta-Phase und werden benötigt, um dieses Feature zu nutzen. Wenden Sie sich an Ihren Braze-Konto Manager:in, wenn Sie an einer Teilnahme an der Beta interessiert sind.
 {% endalert %}
 
 ## Voraussetzungen
@@ -30,8 +30,9 @@ Nehmen Sie Updates an Ihrem Kontenschema nur dann vor, wenn die Synchronisierung
 - Wenn `DELETED` auf `true` steht, wird das Konto gelöscht.
 - Bei der Synchronisierung werden keine Datenpunkte protokolliert, aber alle synchronisierten Daten werden auf die Gesamtnutzung Ihres Kontos angerechnet, gemessen an der Gesamtzahl der gespeicherten Daten - Sie müssen sich nicht auf geänderte Daten beschränken.
 - Felder, die nicht in Ihrem Kontenschema enthalten sind, werden gelöscht. Aktualisieren Sie das Schema, bevor Sie neue Felder synchronisieren.
+- Sie können eine Synchronisierung aktualisieren, fortsetzen oder pausieren, indem Sie mit dem Mauszeiger über den Namen der Synchronisierung fahren und die entsprechende Aktion auswählen.
 
-## Daten Ihres Kontos synchronisieren
+## Synchronisieren Sie Ihre Kontodaten
 
 Sie können Ihre Kontodaten mit CDI über ein Data Warehouse oder einen Dateispeicher synchronisieren.
 
@@ -58,7 +59,7 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -100,7 +101,7 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -216,7 +217,7 @@ So integrieren Sie Ihre Datenquelle mit Ihrem Data Warehouse:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -274,7 +275,7 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Erstellen einer Synchronisationsansicht
+## Eine Synchronisationsansicht erstellen
 
 Wenn Sie eine Synchronisationsansicht in Ihrem Data Warehouse erstellen, wird die Quelle automatisch aktualisiert, ohne dass Sie zusätzliche Abfragen neu schreiben müssen.
 

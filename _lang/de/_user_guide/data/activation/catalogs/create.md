@@ -1,12 +1,12 @@
 ---
-nav_title: Einen Katalog erstellen
+nav_title: Katalog erstellen
 article_title: Einen Katalog erstellen
 alias: "/catalogs/"
 page_order: 1
 description: "In diesem Artikel erfahren Sie, wie Sie Kataloge erstellen, die über Liquid auf benutzerfremde Daten in Braze-Kampagnen verweisen."
 ---
 
-# Einen Katalog erstellen
+# Katalog erstellen
 
 > Um einen Katalog zu erstellen, importieren Sie eine CSV-Datei mit benutzerfremden Daten in Braze. Anschließend können Sie auf diese Informationen zugreifen, um Ihre Nachrichten zu ergänzen. Sie können jede Art von Daten in einen Katalog einbringen. Bei diesen Daten handelt es sich in der Regel um eine Art von Metadaten Ihres Unternehmens, z. B. Produktinformationen für ein E-Commerce-Unternehmen oder Kursinformationen für einen Bildungsanbieter.
 
@@ -159,7 +159,7 @@ Wählen Sie Ihren Katalog aus der Liste aus und wählen Sie dann **Katalog aktua
 
 Wählen Sie **Katalog aktualisieren** > **Artikel hinzufügen**, um einen Artikel zu Ihrem Katalog hinzuzufügen, indem Sie die Informationen auf der Grundlage der Felder eingeben, die Sie zuvor hinzugefügt haben. Wählen Sie dann **Artikel speichern** oder **Speichern und weiteren hinzufügen**, um mit dem Hinzufügen Ihrer Artikel fortzufahren.
 
-![Fügen Sie einen Katalogartikel hinzu.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
+![Fügen Sie einen Artikel hinzu.]({% image_buster /assets/img_archive/add_catalog_items.png %}){: style="max-width:50%;"}
 
 {% alert note %}
 Braze verarbeitet Zeitwerte basierend auf dem Zeitstempel des Dashboards. Wenn eine Spalte z. B. den Wert "13.03.2024" aufweist und Sie die pazifische Zeitzone verwenden, wird in Braze "12\. März 2024, 17:00 Uhr" importiert.
@@ -191,6 +191,10 @@ Um Ihren Katalog zu aktualisieren, nachdem Sie eine CSV-Datei hochgeladen oder e
 Wenn Sie mehr Kataloge erstellen, können Sie auch den [Endpunkt Kataloge auflisten]({{site.baseurl}}/api/endpoints/catalogs/catalog_management/synchronous/get_list_catalogs/) verwenden, um eine Liste der Kataloge in einem Arbeitsbereich anzuzeigen.
 
 Unterstützte Datentypen für die Verwendung der API sind: String, Ganzzahl, Gleitkommazahl, Boolescher Wert oder Datetime. Sie können auch Arrays und Objekte hochladen, wenn Sie Ihre Kataloge mit der API verwalten.
+
+### Datenaufnahme in der Cloud verwenden
+
+Sie können Kataloge über die [Datenaufnahme in der Cloud]({{site.baseurl}}/user_guide/data/unification/cloud_ingestion/sync_catalogs_data/) pflegen, indem Sie Katalogdaten direkt aus Ihrem Data Warehouse (wie Snowflake, Redshift, BigQuery, Databricks, Microsoft Fabric oder S3) auf Zeitplanbasis synchronisieren.
 
 ## Katalogartikel konfigurieren
 

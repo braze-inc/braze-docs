@@ -29,7 +29,7 @@ Die Personalisierung API von Hightouch bietet einen REST-Endpunkt zur Verwendung
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab Anwendungsfälle %}
+{% tab Use Cases %}
 
 ### Anwendungsfälle
 
@@ -42,7 +42,7 @@ Zu den üblichen Anwendungsfällen gehören:
 - **Empfehlungen, die auf finanziellen oder medizinischen Daten basieren - finanzielle**Daten unterliegen strengen Anforderungen, die Hightouch durch seine [strengen Richtlinien zur Datensicherheit](https://hightouch.com/docs/security/overview#compliance) erfüllt. Mit Hightouch können Sie Kundensegmente auf der Grundlage finanzieller oder medizinischer Daten erstellen, ohne die zugrundeliegenden Attribute offenzulegen, die in Ihren Segmentierungskriterien verwendet werden.
 
 {% endtab %}
-{% tab Datensätze %}
+{% tab Datasets %}
 
 ### Datensätze
 
@@ -68,7 +68,7 @@ Weitere Einzelheiten entnehmen Sie bitte der entsprechenden [Dokumentation](http
 Hightouch-Modelle definieren, welche Daten aus Ihrer Quelle gezogen werden sollen. Um ein neues Modell einzurichten, gehen Sie folgendermaßen vor:
 
 1. Gehen Sie in Hightouch zu [**Übersicht der Modelle**](https://app.hightouch.com/models) > **Modell hinzufügen**, und wählen Sie die Quelle aus, die Sie gerade verbunden haben. <br><br>
-2. Wählen Sie als nächstes eine [Modellierungsmethode](https://hightouch.com/docs/models/creating-models). Da alle Ihre Informationen in einer Tabelle zusammengefasst werden sollen, können Sie den visuellen Tabellenselektor verwenden, um diese zu definieren. Alternativ können Sie auch SQL schreiben, um nur die gewünschten Spalten einzubeziehen, oder sich auf Ihre vorhandenen dbt-Modelle, Looker Looks oder Sigma-Arbeitsmappen verlassen.<br><br>
+2. Wählen Sie als nächstes eine [Modellierungsmethode](https://hightouch.com/docs/models/creating-models). Da alle Ihre Informationen in einer Tabelle zusammengefasst werden sollten, können Sie den visuellen Tabellenselektor verwenden, um diese zu definieren. Alternativ können Sie auch SQL schreiben, um nur die gewünschten Spalten einzubeziehen, oder sich auf Ihre vorhandenen dbt-Modelle, Looker Looks oder Sigma-Arbeitsmappen verlassen.<br><br>
 3. Bevor Sie fortfahren, sollten Sie eine Vorschau Ihres Modells anzeigen, um sicherzustellen, dass es die Daten abfragt, an denen Sie interessiert sind. Standardmäßig beschränkt Braze die Vorschau auf die ersten 100 Datensätze. Nachdem Sie Ihre Daten validiert haben, klicken Sie auf **Weiter**.<br><br>
 4. Benennen Sie Ihr Modell, zum Beispiel "Nutzer:innen".<br><br>
 5. Wählen Sie abschließend einen Primärschlüssel aus und klicken Sie auf **Fertig stellen**. Ein Primärschlüssel sollte eine Spalte mit eindeutigen Bezeichnern sein. Dies ist auch das Feld, über das Sie die Personalisierung API aufrufen, um die Empfehlungen eines bestimmten Nutzer:innen abzurufen.

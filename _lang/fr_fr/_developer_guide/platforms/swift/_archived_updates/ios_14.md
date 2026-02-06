@@ -1,5 +1,5 @@
 ---
-nav_title: Guide de mise à jour iOS 14
+nav_title: Guide de mise à niveau iOS 14
 article_title: Guide de mise à jour SDK iOS 14
 page_order: 7
 platform: iOS
@@ -49,7 +49,7 @@ table td {
 
 ### Autorisation de localisation approximative
 
-![Localisation précise]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
+![Emplacement/localisation précis]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
 #### Aperçu
 

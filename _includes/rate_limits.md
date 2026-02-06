@@ -102,12 +102,17 @@ We apply a shared rate limit of 1,000 requests per hour to this endpoint. This r
 <!---/canvas/trigger/send-->
 
 {% elsif include.endpoint == "send endpoints" %}
-When specifying a segment or Connected Audience in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour shared between `/messages/send`, `/campaigns/trigger/send`, and `/canvas/trigger/send`, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+When using Connected Audience filters in your request, we apply a rate limit of 250 requests per minute to this endpoint. Otherwise, if specifying an `external_id`, this endpoint has a default rate limit of 250,000 requests per hour shared between `/messages/send`, `/campaigns/trigger/send`, and `/canvas/trigger/send`, as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
+Braze endpoints support batching API requests. A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`, each with individual message parameters
+- An audience segment of any size, defined in the request as a Connected Audience object
 
 <!---/transactional/v1/campaigns/{campaign_id}/send -->
 
 {% elsif include.endpoint == "transactional email" %}
-Braze Transactional Emails are not subject to a rate limit. Depending on your chosen package, a set number of transactional emails is covered per hour by SLA. Requests that exceed that rate will still send, but are not covered by SLA. 99.9% of emails will send in less than one minute.
+The `/transactional/v1/campaigns/{campaign_id}/send` endpoint is a paid-for endpoint in units per hour (for example, 50,000 per hour depending on your package). There is no separate per-endpoint rate limit: you can send beyond your allotted volume, but only the allotted volume is covered by SLA. Requests to this endpoint count toward your [overall external API rate limit]({{site.baseurl}}/api/api_limits/). If you exceed that limit (for example, 250,000 requests per hour across all endpoints), Braze returns 429 and requests are throttled. The transactional volume count resets each hour, so after one hour, another allotment is available. Within the SLA-covered volume, 99.9% of emails will send in less than one minute.
 
 <!---/sends/id/create-->
 
@@ -204,4 +209,3 @@ This endpoint has a shared rate limit of 50 requests per minute between all asyn
 This endpoint has a rate limit of 50,000 requests per minute.
 
 {% endif %}
-

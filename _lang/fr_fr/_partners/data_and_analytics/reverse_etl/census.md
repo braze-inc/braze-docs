@@ -40,10 +40,10 @@ Pour synchroniser les clients avec Braze, vous devez créer une synchronisation.
 
 1. Accédez à l'onglet **Syncs** et sélectionnez **New Sync (Nouvelle synchronisation)**.<br><br> 
 2. Dans le compositeur, sélectionnez le modèle de données source de votre entrepôt de données.<br><br>
-3. Configurez l'endroit où le modèle sera synchronisé. Sélectionnez **Braze** comme destination et le [type d'objet pris en charge](#supported-objects) à synchroniser.<br>![Dans l'invite "Sélectionnez une destination", "Braze" est sélectionné comme connexion et plusieurs objets sont listés.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
+3. Configurez l'endroit où le modèle sera synchronisé. Sélectionnez **Braze** comme destination et le [type d'objet pris en charge](#supported-objects) à synchroniser.<br>![Dans l'invite "Sélectionner une destination", "Braze" est sélectionné comme connexion, et divers objets sont répertoriés.]({% image_buster /assets/img/census/census_2.png %}){: style="max-width:80%;"}<br><br>
 4. Sélectionnez la règle de synchronisation que vous souhaitez appliquer**(la mise à jour ou la création** est le choix le plus courant, mais vous pouvez choisir des règles plus avancées pour gérer la suppression de données, par exemple).<br><br>
 5. Ensuite, à des fins de mappage des enregistrements, choisissez une clé de synchronisation pour [mapper](#supported-objects) votre objet Braze à un champ de modèle.<br>![Dans l'invite "Select a Sync Key", "External User ID" de Braze correspond à "user_id" dans la source.]({% image_buster /assets/img/census/census_1.png %}){: style="max-width:80%;"}<br><br>
-6. Enfin, mappez les champs de données du Census aux champs équivalents de Braze.<br>![Mappage du Census]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
+6. Enfin, mappez les champs de données du Census aux champs équivalents de Braze.<br>![Mappage de Census]({% image_buster /assets/img/census/census_3.png %}){: style="max-width:80%;"}<br><br>
 7. Confirmez les détails et créez la synchronisation. 
 
 Après la synchronisation, les données de l'utilisateur existeront dans Braze. Vous pouvez désormais créer et ajouter un segment Braze aux futures campagnes et Canvas Braze afin de cibler ces utilisateurs. 

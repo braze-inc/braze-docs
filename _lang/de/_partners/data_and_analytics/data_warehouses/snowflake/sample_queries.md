@@ -13,7 +13,7 @@ search_tag: Partner
 > Auf dieser Partnerseite finden Sie einige Beispielabfragen für mögliche Anwendungsfälle, auf die Sie beim Einrichten Ihrer Abfragen referenzieren können.
 
 {% tabs %}
-{% tab Nach Zeit filtern%}
+{% tab Filter By Time%}
 
 Eine gängige Abfrage könnte sein, Ereignisse nach Zeit zu filtern.
 
@@ -38,7 +38,7 @@ Der Wert von `sf_created_at` ist nur für Ereignisse zuverlässig, die nach `Nov
 {% endalert %}
 {% endtab %}
 
-{% tab Changelogs abfragen%}
+{% tab Querying Changelogs%}
   
 Die Namen der Kampagnen und Canvas sind nicht in den Ereignissen selbst enthalten. Stattdessen werden sie in einer Changelog-Tabelle veröffentlicht. 
 
@@ -102,7 +102,7 @@ LIMIT 500;
 ```
 
 {% endtab %}
-{% tab E-Mail Kadenz %}
+{% tab Email Cadence %}
 Mit dieser Abfrage für das tägliche Messaging von E-Mails können Sie die Zeitspanne zwischen den Nachrichten analysieren, die ein Nutzer:innen erhält.
 
 Wenn ein Nutzer:innen zum Beispiel zwei E-Mails an einem Tag erhalten hat, fallen diese unter `0 "days since last received"`. Wenn sie eine E-Mail am Montag und eine am Dienstag erhalten haben, würden sie in die Kohorte `1 "days since last received"` fallen.
@@ -145,7 +145,7 @@ ORDER BY 1
 LIMIT 500;
 ```
 {% endtab %}
-{% tab Eindeutige Klicks auf E-Mails %}
+{% tab Unique Email Clicks %}
 
 Sie können diese Abfrage für eindeutige E-Mail-Klicks verwenden, um die eindeutigen E-Mail-Klicks in einem bestimmten Zeitfenster zu analysieren. Der Algorithmus zur Berechnung lautet wie folgt:
   1. Unterteilen Sie die Ereignisse nach dem Schlüssel (`app_group_id`, `message_variation_id`, `dispatch_id`, `email_address`).

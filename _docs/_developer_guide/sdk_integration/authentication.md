@@ -88,15 +88,43 @@ Don't worry, initializing with this option alone won't impact data collection in
 {% endalert %}
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 When calling `initialize`, set the optional `enableSdkAuthentication` property to `true`.
 ```javascript
-import * as braze from"@braze/web-sdk";
+import * as braze from "@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
   enableSdkAuthentication: true,
 });
 ```
+{% endtab %}
+{% tab React Native %}
+SDK Authentication must be enabled during native SDK initialization. Add the following configuration to your native iOS and Android code:
+
+**iOS (AppDelegate.swift)**
+
+```swift
+import BrazeKit
+import braze_react_native_sdk
+
+let configuration = Braze.Configuration(
+  apiKey: "{YOUR-BRAZE-API-KEY}",
+  endpoint: "{YOUR-BRAZE-ENDPOINT}"
+)
+configuration.api.sdkAuthentication = true
+let braze = BrazeReactBridge.perform(
+  #selector(BrazeReactBridge.initBraze(_:)),
+  with: configuration
+).takeUnretainedValue() as! Braze
+```
+
+**Android (braze.xml)**
+
+```xml
+<bool name="com_braze_sdk_authentication_enabled">true</bool>
+```
+
+After enabling SDK Authentication in the native layer, you can use the React Native JavaScript methods shown in the following steps.
 {% endtab %}
 {% tab Java %}
 When configuring the Braze instance, call `setIsSdkAuthenticationEnabled` to `true`.
@@ -157,9 +185,8 @@ Keep in mind that `changeUser` should only be called when the User ID has _actua
 {% endalert %}
 
 {% tabs %}
-{% tab JavaScript %}
-Supply the JWT when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser
-):
+{% tab Web %}
+Supply the JWT when calling [`changeUser`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser):
 
 ```javascript
 import * as braze from "@braze/web-sdk";
@@ -169,8 +196,26 @@ braze.changeUser("NEW-USER-ID", "JWT-FROM-SERVER");
 Or, when you have refreshed the user's token mid-session:
 
 ```javascript
-import * as braze from"@braze/web-sdk";
+import * as braze from "@braze/web-sdk";
 braze.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
+```
+{% endtab %}
+{% tab React Native %}
+
+Supply the JWT when calling [`changeUser`](https://braze-inc.github.io/braze-react-native-sdk/classes/Braze.Braze-1.html#changeUser):
+
+```typescript
+import Braze from '@braze/react-native-sdk';
+
+Braze.changeUser("NEW-USER-ID", "JWT-FROM-SERVER");
+```
+
+Or, when you have refreshed the user's token mid-session:
+
+```typescript
+import Braze from '@braze/react-native-sdk';
+
+Braze.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 ```
 {% endtab %}
 {% tab Java %}
@@ -260,15 +305,43 @@ These callback methods are a great place to add your own monitoring or error-log
 {% endalert %}
 
 {% tabs %}
-{% tab JavaScript %}
+{% tab Web %}
 ```javascript
-import * as braze from"@braze/web-sdk";
+import * as braze from "@braze/web-sdk";
+
 braze.subscribeToSdkAuthenticationFailures((error) => {
   // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
-  const updated_jwt = await getNewTokenSomehow(error);
-  braze.setSdkAuthenticationSignature(updated_jwt);
+  console.error("SDK authentication failed:", error);
+  console.log("Error code:", error.errorCode);
+  console.log("User ID:", error.userId);
+  // Note: Do not log error.signature as it contains sensitive authentication credentials
+  
+  // TODO: Check if the error.userId matches the currently logged-in user
+  // Fetch a new token from your server and set it
+  fetchNewSignature(error.userId).then((newSignature) => {
+    braze.setSdkAuthenticationSignature(newSignature);
+  });
 });
+```
+{% endtab %}
+{% tab React Native %}
+```typescript
+import Braze from '@braze/react-native-sdk';
+
+const sdkAuthErrorSubscription = Braze.addListener(
+  Braze.Events.SDK_AUTHENTICATION_ERROR,
+  (error) => {
+    // TODO: Optionally log to your error-reporting service
+    // TODO: Check if the `userId` within the `error` matches the currently logged-in user
+    console.log(`SDK Authentication for ${error.userId} failed with error code ${error.errorCode}.`);
+    
+    const updated_jwt = getNewTokenSomehow(error);
+    Braze.setSdkAuthenticationSignature(updated_jwt);
+  }
+);
+
+// Don't forget to remove the listener when done
+// sdkAuthErrorSubscription.remove();
 ```
 {% endtab %}
 {% tab Java %}

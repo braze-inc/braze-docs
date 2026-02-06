@@ -1,28 +1,28 @@
 ---
-nav_title: Retraso 
-article_title: Retraso 
+nav_title: Demora 
+article_title: Demora 
 alias: "/delay_step/"
 page_order: 3
 page_type: reference
-description: "Este artículo de referencia explica cómo añadir un retraso a tu Canvas sin necesidad de añadir un mensaje asociado."
+description: "Este artículo de referencia cubre cómo añadir un retraso a tu Canvas sin necesidad de añadir un mensaje asociado."
 tool: Canvas
 
 ---
 
-# Retraso
+# Demora
 
-> Los componentes de retardo te permiten añadir un retardo independiente a un Canvas. Puedes añadir un retraso a tu Canvas sin necesidad de añadir un mensaje asociado. 
+> Los componentes de retardo permiten añadir un retardo independiente a un lienzo. Puede añadir un retraso a su lienzo sin necesidad de añadir un mensaje asociado. 
 
-Los retrasos pueden hacer que tu Canvas parezca más limpio. También puedes utilizar este componente para retrasar un paso diferente hasta una fecha exacta, hasta un día concreto o hasta un día concreto de la semana. <br> \![Un paso de Retraso con un retraso de 1 día como primer paso de un Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+Los retrasos pueden hacer que su lienzo parezca más limpio. También puede utilizar este componente para retrasar un paso diferente hasta una fecha exacta, hasta un día específico o hasta un día específico de la semana. <br> ![Un paso de Retraso con un retraso de 1 día como primer paso de un Canvas.]({% image_buster /assets/img/canvas_delay.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 ## Crear un retraso
 
-Para crear un retraso, añade un paso a tu Canvas. Arrastra y suelta el componente Retardo desde la barra lateral, o haz clic en el botón más <i class="fas fa-plus-circle"></i> situado en la parte inferior de un paso y selecciona **Retardo**.
+Para crear un retraso, añade un paso a tu Canvas. Arrastre y suelte el componente Retardo desde la barra lateral, o haga clic en el botón <i class="fas fa-plus-circle"></i> más en la parte inferior de un paso y seleccione **Retardo**.
 
-Hay varios detalles que debes tener en cuenta al crear un retraso en tu viaje a Canvas.
+Hay varios detalles que debes tener en cuenta al crear un retraso en tu recorrido de Canvas.
 
 - El límite de retraso es de 30 días.
-- Un componente Retardo sólo puede conectarse a un paso siguiente.
+- Un componente de retardo sólo puede conectarse a un paso siguiente.
 
 #### Retrasos prolongados
 
@@ -30,14 +30,14 @@ Ahora puedes prolongar los pasos de Retraso hasta dos años. Por ejemplo, si est
 
 ## Tipos de retardo
 
-Puedes elegir el tipo de retraso antes del siguiente mensaje en tu Canvas. Puedes establecer un retraso para que tus usuarios duren hasta después de un periodo de tiempo designado, o retrasar a tus usuarios hasta una fecha y hora concretas.
+Puedes elegir el tipo de retraso antes del siguiente mensaje en tu Canvas. Puedes establecer un retraso para que tus usuarios duren hasta después de un periodo de tiempo designado, o retrasar a tus usuarios hasta una fecha y hora específicas.
 
 {% tabs %}
 {% tab Duration %}
 
 Seleccionar **Duración** te permite retrasar a los usuarios durante un número determinado de segundos, minutos, horas, días o semanas, y a una hora concreta. Por ejemplo, puedes retrasar a los usuarios cuatro horas o un día.
   
-Nota la diferencia entre cómo se calculan los "días" y los "días naturales".
+Tenga en cuenta la diferencia entre cómo se calculan los "días" y los "días naturales".
   
 - Un "día" son 24 horas y se calcula a partir del momento en que el usuario entra en el paso Retraso. 
 - Un "día del calendario" define el tiempo que hay que esperar hasta la siguiente hora especificada, que puede ser inferior a 24 horas. Puedes elegir retrasarlo a la hora de la empresa o a la hora local del usuario. Si no se especifica una hora, el usuario se retrasará hasta la medianoche del día siguiente en horario de empresa.
@@ -55,7 +55,7 @@ Seleccionar **Fecha del calendario** te permite retener a los usuarios en el pas
 
 ##### Los usuarios no recibirán pasos o mensajes con fecha pasada
 
-Si la fecha y hora seleccionadas ya han pasado para cuando los usuarios pasen al paso Retraso, los usuarios saldrán del Canvas. Puede haber hasta 31 días entre el inicio del Canvas y las fechas elegidas para los pasos de "esperar hasta un día exacto".
+Si la fecha y hora seleccionadas ya han pasado para cuando los usuarios procedan al paso Retrasar, los usuarios saldrán del Lienzo. Puede haber hasta 31 días entre el inicio del Canvas y las fechas elegidas para los pasos de "esperar hasta un día exacto".
 
 {% alert important %}
 Si participas en el [acceso anticipado del Contexto Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context), puedes establecer retrasos de hasta 2 años.
@@ -71,26 +71,26 @@ Por ejemplo, los usuarios no recibirán pasos ni mensajes en estos escenarios:
 Si el Canvas tiene dos pasos de Retraso, pero el primer paso de Retraso es más largo que el segundo, los usuarios también saldrán del Canvas. 
 
 Por ejemplo, supongamos que un Canvas tiene estos pasos:
-- Paso 1: Paso de la mensajería
-- Paso 2: Paso aplazado hasta el 13 de diciembre a las 22.00 h
-- Paso 3: Paso de la mensajería
+- Paso 1: Paso de mensaje
+- Paso 2: Paso aplazado hasta el 13 de diciembre a las 22.00 h
+- Paso 3: Paso de mensaje
 - Paso 4: Paso aplazado hasta el 13 de diciembre a las 19.00 h
-- Paso 5: Paso de la mensajería
+- Paso 5: Paso de mensaje
   
 Los usuarios que entren en el Paso 4 saldrán del Canvas antes de recibir el Paso 5, porque el retraso del Paso 4 forma parte del plazo del Paso 2.
 
 {% endtab %}
 {% tab Day of the week %}
 
-Seleccionar **Día de la semana** te permite retener a los usuarios en el paso hasta un día concreto de la semana, a una hora concreta. Por ejemplo, puedes retrasar a los usuarios hasta que llegue el próximo jueves a las 16 h en la zona horaria de la empresa. 
+Seleccionar **Día de la semana** te permite retener a los usuarios en el paso hasta un día concreto de la semana, a una hora concreta. Por ejemplo, puedes retrasar a los usuarios hasta que llegue el próximo jueves a las 16:00 en la zona horaria de la empresa. 
 
-Para configurarlo correctamente, también tendrás que seleccionar qué ocurre si el usuario entra en el Canvas el día de la semana seleccionado (por ejemplo, el jueves), pero después de la hora especificada. Puedes elegir avanzar al usuario el mismo día o retenerlo hasta la semana siguiente.
+Para configurarlo correctamente, también tendrá que seleccionar qué ocurre si el usuario entra en el lienzo el día de la semana seleccionado (por ejemplo, el jueves), pero después de la hora especificada. Puede optar por adelantar al usuario el mismo día o retenerlo hasta la semana siguiente.
 {% endtab %}
 {% endtabs %}
 
 ## Utilizar pasos de Retraso
 
-Digamos que es 10 de junio. El 11 de junio, te gustaría que los usuarios entraran en el Canvas y recibieran un mensaje sobre una próxima promoción. Entonces, querrás retener a los usuarios en el Canvas hasta el 17 de junio a las 15.00, hora local. A las 15:00 hora local del 17 de junio, quieres enviar a los usuarios un mensaje recordatorio sobre la promoción.
+Digamos que es 10 de junio. El 11 de junio, te gustaría que los usuarios entraran en el Canvas y recibieran un mensaje sobre una próxima promoción. Entonces, querrás retener a los usuarios en el Canvas hasta el 17 de junio a las 15:00, hora local. A las 15:00 hora local del 17 de junio, quieres enviar a los usuarios un mensaje recordatorio sobre la promoción.
 
 La secuencia de pasos en Canvas podría tener el siguiente aspecto:
 
@@ -98,7 +98,7 @@ La secuencia de pasos en Canvas podría tener el siguiente aspecto:
 2. Crea un paso de Retraso que retenga a los usuarios hasta la 1 de la tarde, hora local, del 17 de junio.
 3. Vincula el paso Retraso a otro paso Mensaje que envíe su mensaje inmediatamente.
 
-### Componentes de retardo al final de un Canvas {#delay-as-last-step}
+### Componentes de retardo al final de un lienzo {#delay-as-last-step}
 
 Si añades un componente de Retraso a tu Canvas y no hay pasos posteriores, cualquier usuario que llegue al último paso avanzará automáticamente fuera del Canvas. Esto es así aunque aún no se haya alcanzado el tiempo del paso Retraso. Esto significa que los usuarios que ya hayan alcanzado el paso Retraso no recibirán ningún mensaje que añadas después de este paso. Sin embargo, si un usuario no ha llegado al paso Retraso y se añade un mensaje, entonces recibiría ese mensaje.
 
@@ -130,7 +130,7 @@ Supongamos que quieres recordar a tus clientes que compren pasta de dientes dent
 - **Tipo de datos:** Tiempo
 - **Valor:** {% raw %}`{{custom_attribute.${Order_filled_time}}}`{% endraw %}
 
-\![El "product_reminder_interval" y su valor.]({% image_buster /assets/img/context_step1.png %})
+![La página "product_reminder_interval" y su valor.]({% image_buster /assets/img/context_step1.png %})
 
 A continuación, como quieres recordárselo a tus clientes dentro de 30 días, seleccionarás **Hasta un día concreto** como opción de retraso y seleccionarás **Personalizar retraso** para utilizar la información de tu paso Contexto. Esto significa que tus usuarios se retrasarán hasta la variable Contexto seleccionada.
 
@@ -140,9 +140,9 @@ Los componentes de retraso tienen las siguientes métricas disponibles en la vis
 
 | Métrica | Descripción |
 |---|---|
-| _Entró en_ | Refleja el número de veces que se ha introducido el paso. Si tu Canvas es reeleccionable y un usuario entra dos veces en un paso de Retraso, se registrarán dos entradas. |
-| _Pasar al siguiente paso_ | Refleja el número de entradas que pasaron al siguiente paso en Canvas. |
-| _Lienzo Exited_ | Refleja el número de entradas que salieron del Canvas y no pasaron al siguiente paso. |
+| _El usuario ha entrado_ | Refleja el número de veces que se ha introducido el paso. Si tu Canvas es reeleccionable y un usuario entra dos veces en un paso de Retraso, se registrarán dos entradas. |
+| _Continúa con el paso siguiente_ | Refleja el número de entradas que pasaron al siguiente paso en el Canvas. |
+| _Has salido de Canvas_ | Refleja el número de entradas que salieron del Canvas y no pasaron al siguiente paso. |
 | _Error de personalización_ | Refleja el número de veces que un mensaje o contenido personalizado destinado a un usuario no se pudo entregar debido a lo siguiente:<br> {::nomarkdown}<ul><li>El valor del retraso está en el pasado</li><li>El valor del retraso es de más de 2 años en el futuro</li><li><b>Cuando un</b> valor de <b>duración</b> no es un número</li><li><b>Hasta que el</b> valor de <b>un día concreto</b> no sea una fecha o una cadena con formato de fecha</li></ul>{:/} <br>Consulta [Errores de personalización fallidos](#personaliztion-failed-errors) para obtener más detalles. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

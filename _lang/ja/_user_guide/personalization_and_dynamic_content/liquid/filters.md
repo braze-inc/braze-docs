@@ -79,6 +79,7 @@ SALE
 | [map](https://shopify.dev/api/liquid/filters/map)           | 配列要素の属性をパラメーターとして受け取り、各配列要素の値から配列を作成する。        | はい   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | 配列の項目の順序を逆にする。                                                                       | はい   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | 文字列のサイズ（文字数）または配列のサイズ（要素数）を返す。                      | はい   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | 指定したインデックスから始まる文字列の部分文字列または配列の部分集合を返す。                          | はい   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | 配列の要素を、その配列の要素の指定された属性でソートする。                                    | はい   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | 大文字小文字を区別せずにアルファベット順に配列の項目をソートする。                                                | はい   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | 配列内の要素の重複したインスタンスを削除する。                                                           | はい   |

@@ -1,8 +1,8 @@
 {% multi_lang_include developer_guide/prerequisites/react_native.md %} Você também precisará [configurar notificações por push]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native).
 
-## Habilitando histórias por push
+## Capacitação de stories por push
 
-Para o SDK do React Native, **histórias por push estão disponíveis para Android por padrão**.
+Para o React Native SDK, **as stories por push estão disponíveis para Android por padrão**.
 
 Para ativar os stories por push no iOS usando o Expo, é necessário ter um grupo de app definido para seu aplicativo. Para saber mais, veja [Adicionando um grupo de app]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/push_story/#adding-an-app-group).
 

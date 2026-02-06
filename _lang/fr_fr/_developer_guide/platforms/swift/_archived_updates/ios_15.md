@@ -1,5 +1,5 @@
 ---
-nav_title: Guide de mise à jour iOS 15
+nav_title: Guide de mise à niveau iOS 15
 article_title: Guide de mise à jour SDK iOS 15
 page_order: 7
 platform: iOS

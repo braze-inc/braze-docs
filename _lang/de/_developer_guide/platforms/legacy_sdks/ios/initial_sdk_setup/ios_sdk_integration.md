@@ -1,5 +1,5 @@
 ---
-nav_title: SDK-Integrationsleitfaden (optional)
+nav_title: SDK-Integration Anleitung (optional)
 article_title: Braze SDK-Integrationsanleitung für iOS (optional)
 alias: "/ios_sdk/"
 description: "Dieser Leitfaden zur iOS-Integration führt Sie Schritt für Schritt durch die bewährten Verfahren bei der ersten Integration des iOS SDK und seiner Kernkomponenten in Ihre Anwendung. Diese Anleitung hilft Ihnen, eine BrazeManager.swift-Hilfsdatei zu erstellen."
@@ -35,7 +35,7 @@ Die folgenden Schritte helfen Ihnen bei der Erstellung einer `BrazeManager`-Hilf
 ### BrazeManager.swift erstellen
 
 {% tabs local %}
-{% tab BrazeManager swift erstellen %}
+{% tab Create BrazeManager swift %}
 
 ##### BrazeManager.swift erstellen
 Um Ihre `BrazeManager.swift` Datei zu erstellen, erstellen Sie eine neue Swift-Datei mit dem Namen _BrazeManager_, die Sie an dem von Ihnen gewünschten Standort zu Ihrem Projekt hinzufügen. Als Nächstes ersetzen Sie `import Foundation` durch `import AppboyUI` für SPM (`import Appboy_iOS_SDK` für CocoaPods) und erstellen dann eine Klasse `BrazeManager`, die als Host für alle Braze-bezogenen Methoden und Variablen dienen wird. `Appboy_iOS_SDK`
@@ -100,7 +100,7 @@ class BrazeManager: NSObject {
 ### Initialisieren Sie das SDK
 
 {% tabs local %}
-{% tab Schritt 1: Initialize SDK from BrazeManager swift %}
+{% tab Step 1: Initialize SDK from BrazeManager swift %}
 
 ##### SDK von BrazeManager.swift aus initialisieren
 Als nächstes müssen Sie das SDK initialisieren. Diese Anleitung geht davon aus, dass Sie das [SDK bereits zu Ihrem Xcode-Projekt hinzugefügt]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) haben. Sie müssen auch Ihren [Workspace SDK-Endpunkt]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) und [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) in der Datei `Info.plist` oder in `appboyOptions` festgelegt haben.
@@ -131,7 +131,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtabs %}
 
 {% endtab %}
-{% tab Schritt 2: Handle Appboy Initialization %}
+{% tab Step 2: Handle Appboy Initialization %}
 
 ##### Appboy-Initialisierung in AppDelegate.swift behandeln
 Gehen Sie nun zurück zur Datei `AppDelegate.swift` und fügen Sie den folgenden Code-Snippet in die Methode `didFinishLaunchingWithOptions` von AppDelegate ein, um die Initialisierung von Appboy aus der Hilfedatei `BrazeManager.swift` zu verarbeiten. Denken Sie daran, dass es nicht notwendig ist, eine Anweisung `import AppboyUI` in `AppDelegate.swift` hinzuzufügen.
@@ -174,7 +174,7 @@ Fahren Sie mit der Kompilierung Ihres Codes fort und führen Sie Ihre Anwendung 
 ### Push-Benachrichtigungen
 
 {% tabs local %}
-{% tab Schritt 1: Push-Zertifikat hinzufügen %}
+{% tab Step 1: Add Push Certificate %}
 
 ##### Push-Zertifikat hinzufügen
 
@@ -183,7 +183,7 @@ Navigieren Sie zu Ihrem bestehenden Workspace im Braze-Dashboard. Laden Sie unte
 ![]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
 {% endtab %}
-{% tab Schritt 2: Für Benachrichtigungen registrieren %}
+{% tab Step 2: Register for Notifications %}
 
 {% alert important %}
 Verpassen Sie nicht den speziellen Kontrollpunkt am Ende dieses Schritts!
@@ -248,7 +248,7 @@ Beachten Sie, dass Sie aufgefordert werden, Push-Benachrichtigungen anzufordern,
 {% endalert %}
 
 {% endtab %}
-{% tab Schritt 3: Methoden weiterleiten %}
+{% tab Step 3: Forward Methods %}
 
 ##### Methoden für Push-Benachrichtigungen weiterleiten
 
@@ -291,7 +291,7 @@ extension BrazeManager {
 {% endsubtabs %}
 
 ###### Schritt 2: Fernbenachrichtigungen unterstützen
-Fügen Sie auf dem Tab **Signieren & Fähigkeiten** die Unterstützung von **Hintergrundmodi** hinzu und wählen Sie **Remote-Benachrichtigungen** aus, um mit der Unterstützung von Push-Benachrichtigungen aus der Ferne zu beginnen, die von Braze stammen.<br><br>![Signing & Capabilities]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
+Fügen Sie auf dem Tab **Signing & Capabilities** die Unterstützung von **Background Modes** hinzu und wählen Sie **Remote Notifications** aus, um mit der Unterstützung von Push-Benachrichtigungen aus der Ferne zu beginnen, die von Braze stammen.<br><br>![Signieren & Funktionen]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
 ###### Schritt 3: Handhabung von Fernbenachrichtigungen
 Das Braze SDK kann Push-Benachrichtigungen aus der Ferne verarbeiten, die von Braze stammen. Leiten Sie Fernbenachrichtigungen an Braze weiter. Push-Benachrichtigungen, die nicht von Braze stammen, werden vom SDK automatisch ignoriert. Fügen Sie in der Erweiterung für Push-Benachrichtigungen die folgende Methode zu `BrazeManager.swift` hinzu.
@@ -364,7 +364,7 @@ Fahren Sie mit der Kompilierung Ihres Codes fort und führen Sie Ihre Anwendung 
 ### Zugriff auf Nutzer:in-Variablen und -Methoden
 
 {% tabs local %}
-{% tab Nutzer:in-Variablen und -Methoden erstellen %}
+{% tab Create User Variables and Methods %}
 
 ##### Erstellen Sie Nutzer:in-Variablen und -Methoden
 
@@ -427,7 +427,7 @@ Fahren Sie mit der Kompilierung Ihres Codes fort und führen Sie Ihre Anwendung 
 ### Log-Analytics
 
 {% tabs local %}
-{% tab Schritt 1: Angepasste Events %}
+{% tab Step 1: Custom Events %}
 
 ##### Angepasste Event-Methode für das Protokoll erstellen
 
@@ -460,7 +460,7 @@ func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Schritt 2: Angepasste Attribute %}
+{% tab Step 2: Custom Attributes %}
 
 ##### Methode zur Erstellung angepasster Attribute für das Protokoll 
 
@@ -525,7 +525,7 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Schritt 3: Käufe %}
+{% tab Step 3: Purchases %}
 
 ##### Methode zur Protokollierung von Käufen erstellen
 
@@ -570,7 +570,7 @@ Fahren Sie mit der Kompilierung Ihres Codes fort und führen Sie Ihre Anwendung 
 ### In-App-Nachrichten
 
 {% tabs local %}
-{% tab Schritt 1: Mit Delegat  %} konform machen
+{% tab Step 1: Conform to Delegate %}
 
 {% alert important %}
 Der folgende Abschnitt In-App-Nachricht ist für die Integration nicht erforderlich, wenn Sie diesen Kanal nicht in Ihrer Anwendung verwenden möchten.
@@ -615,7 +615,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Schritt 2: Delegierte Methoden hinzufügen %}
+{% tab Step 2: Add Delegate Methods %}
 
 ##### Delegierte Methoden hinzufügen
 Als Nächstes erstellen Sie eine Erweiterung, die dem `ABKInAppMessageUIDelegate` entspricht.
@@ -674,7 +674,7 @@ Fahren Sie mit der Kompilierung Ihres Codes fort und führen Sie Ihre Anwendung 
 ### Content-Cards
 
 {% tabs local %}
-{% tab Content-Card-Variablen und -Methoden erstellen %}
+{% tab Create Content Card Variables and Methods %}
 
 {% alert important %}
 Der folgende Content-Card-Abschnitt ist für die Integration nicht erforderlich, wenn Sie nicht vorhaben, diesen Kanal in Ihrer Anwendung zu verwenden.

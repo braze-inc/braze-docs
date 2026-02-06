@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Eliminar cuenta de usuario del panel de control"
+nav_title: "DELETE: Eliminar la cuenta de usuario del panel"
 article_title: "DELETE: Eliminar cuenta de usuario del panel de control"
 alias: /delete_existing_dashboard_user/
 search_tag: Endpoint
@@ -12,10 +12,10 @@ description: "En este artículo se describen los detalles del punto final Elimin
 {% api %}
 # Eliminar la cuenta de usuario del panel
 {% apimethod delete %}
-/scim/v2/Users/{id}
+/scim/v2/Usuarios/{id}
 {% endapimethod %}
 
-> Utiliza este punto final para eliminar de forma permanente un usuario existente del panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) . 
+> Utiliza este punto final para eliminar de forma permanente un usuario existente del panel especificando el recurso `id` devuelto por el método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) .
 
 Esto es similar a eliminar un usuario en la sección **Usuarios de la empresa** del panel de Braze.
 

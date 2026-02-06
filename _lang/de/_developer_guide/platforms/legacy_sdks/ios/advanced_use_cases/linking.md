@@ -81,7 +81,7 @@ Nachdem Sie die App aktiviert haben, ruft iOS die Methode [`application:openURL:
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -117,7 +117,7 @@ continueUserActivity:(NSUserActivity *)userActivity
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
@@ -225,7 +225,7 @@ Um einen verschlüsselten Link zu dekodieren, verwenden Sie die Methode `NSStrin
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
   func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -267,7 +267,7 @@ Mit dem Protokoll `ABKURLDelegate` können Sie die Handhabung von URLs wie Deepl
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func handleAppboyURL(_ url: URL?, from channel: ABKChannel, withExtras extras: [AnyHashable : Any]?) -> Bool {
@@ -312,7 +312,7 @@ iOS kann Nutzer:innen von Ihrer App auf deren Seite in der iOS-Einstellungsanwen
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

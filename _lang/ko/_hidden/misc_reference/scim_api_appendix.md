@@ -29,9 +29,10 @@ permalink: "/scim_api_appendix/"
 
 유효한 권한 객체는 다음 키-값 쌍을 가진 JSON 객체입니다:
 
-| 키 | 필수 | 데이터 유형 | 설명 |
+| 키 | 필수 | 데이터 유형 | Description |
 | --- | --- | --- | --- |
 | `companyPermissions` | 선택 사항 | 배열 | [회사 권한 문자열](#company) 테이블의 회사 수준 권한 문자열 배열로, 문자열이 존재하면 사용자가 해당 권한을 가지고 있음을 나타냅니다. |
+| `roles` | 선택 사항 | 배열 | [역할 객체의](#role-object) 배열입니다. |
 | `appGroup` | 필수 | 배열 | [작업 공간 권한 객체](#workspace-permission-object)의 배열. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -39,9 +40,9 @@ permalink: "/scim_api_appendix/"
 
 유효한 앱 그룹 권한 객체는 다음 키-값 페어를 가진 JSON 객체입니다:
 
-| 키 | 필수 | 데이터 유형 | 설명 |
+| 키 | 필수 | 데이터 유형 | Description |
 | --- | --- | --- | --- |
-| `appGroupName`| 선택 사항 | 문자열 | 작업 공간의 이름. 이 객체에 포함된 권한이 적용될 워크스페이스를 지정하는 데 사용됩니다. | 
+| `appGroupName`| Optional | 문자열 | 작업 공간의 이름. 이 객체에 포함된 권한이 적용될 워크스페이스를 지정하는 데 사용됩니다. | 
 | `appGroupId` | `appGroupName`이(가) 없으면 필수 | 문자열 | 워크스페이스의 ID로, 워크스페이스를 지정하는 대체 방법으로 사용됩니다. |
 | `appGroupPermissionSets` | 선택 사항 | 배열 | 단일 [워크스페이스 권한 설정 개체](#workspace-permissions-set-object)이 있는 배열. |
 | `appGroupPermissions` | 필수 | 배열 | [워크스페이스 권한 문자열](#workspace-strings) 테이블의 워크스페이스 수준 권한 문자열 배열로, 문자열이 존재하면 사용자가 지정된 워크스페이스에 대한 해당 권한을 가지고 있음을 나타냅니다. |
@@ -52,9 +53,9 @@ permalink: "/scim_api_appendix/"
 
 유효한 워크스페이스 권한 설정 객체는 다음 키-값 페어를 가진 JSON 객체입니다.
 
-| 키 | 필수 | 데이터 유형 | 설명 |
+| 키 | 필수 | 데이터 유형 | Description |
 | --- | --- | --- | --- |
-| `appGroupPermissionSetName` | 선택 사항 | 문자열 | 워크스페이스에 대해 사용자에게 할당된 워크스페이스 권한 세트의 이름입니다. |
+| `appGroupPermissionSetName` | Optional | 문자열 | 워크스페이스에 대해 사용자에게 할당된 워크스페이스 권한 세트의 이름입니다. |
 | `appGroupPermissionSetID` | `appGroupPermissionSetName`이(가) 없으면 필수 | 문자열 | 워크스페이스의 ID로, 이 워크스페이스에 대해 사용자에게 할당된 워크스페이스 권한 세트를 지정하는 대체 방법으로 사용됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -62,11 +63,21 @@ permalink: "/scim_api_appendix/"
 
 유효한 팀 권한 객체는 다음 키-값 쌍을 가진 JSON 객체입니다:
 
-| 키 | 필수 | 데이터 유형 | 설명 |
+| 키 | 필수 | 데이터 유형 | Description |
 | --- | --- | --- | --- |
-| `teamName` | 선택 사항 | 문자열 | 팀의 이름, 이 개체 내의 권한이 어떤 팀을 위한 것인지 지정하는 데 사용할 수 있습니다. |
+| `teamName` | Optional | 문자열 | 팀의 이름, 이 개체 내의 권한이 어떤 팀을 위한 것인지 지정하는 데 사용할 수 있습니다. |
 | `teamId` | `teamName`이(가) 없으면 필수 | 문자열 | 팀의 ID, 팀을 지정하는 대체 방법으로 사용됩니다. |
 | `teamPermissions` | 필수 | 배열 | [teams permission strings](#team) 테이블의 팀 수준 권한 문자열 배열로, 문자열이 존재하면 사용자가 지정된 팀에 대한 해당 권한을 가지고 있음을 나타냅니다. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+## 역할 개체
+
+유효한 역할 객체는 다음과 같은 키 값 쌍을 가진 JSON 객체입니다:
+
+| 키 | 필수 | 데이터 유형 | Description |
+| --- | --- | --- | --- |
+| `roleName` | Optional | 문자열 | 사용자에게 할당되는 역할의 이름입니다. |
+| `roleId` | `roleName`이(가) 없으면 필수 | 문자열 | 역할을 지정하는 대체 방법으로 사용되는 역할의 ID입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## 부록
@@ -86,6 +97,7 @@ permalink: "/scim_api_appendix/"
 | --- | --- |
 | 관리자 | `admin` |
 | 캠페인, 캔버스, 카드, 세그먼트, 미디어 라이브러리에 액세스 | `basic_access` |
+| 캔버스 승인 및 거부 | `approve_deny_campaigns` |
 | 캠페인, 캔버스 발송 | `send_campaigns_canvases` |
 | 카드 게시 | `publish_cards` |
 | 세그먼트 편집 | `edit_segments` |
@@ -116,6 +128,7 @@ permalink: "/scim_api_appendix/"
 | --- | --- |
 | 관리자 | `admin` |
 | 캠페인, 캔버스, 카드, 세그먼트, 미디어 라이브러리에 액세스 | `basic_access` |
+| 캔버스 승인 및 거부 | `approve_deny_campaigns` |
 | 캠페인, 캔버스 발송 | `send_campaigns_canvases` |
 | 카드 게시 | `publish_cards` |
 | 세그먼트 편집 | `edit_segments` |

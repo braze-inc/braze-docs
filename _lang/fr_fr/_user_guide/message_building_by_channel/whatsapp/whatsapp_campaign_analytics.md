@@ -1,8 +1,8 @@
 ---
-nav_title: "Rapports"
-article_title: Rapport WhatsApp
+nav_title: "Reporting"
+article_title: Rapports WhatsApp
 page_order: 7
-description: "Cet article de référence couvre les indicateurs WhatsApp utilisés chez Braze, ainsi que la manière de les visualiser dans vos campagnes WhatsApp."
+description: "Le présent article de référence couvre les indicateurs WhatsApp utilisés chez Braze, ainsi que la façon de les afficher dans vos campagnes WhatsApp."
 page_type: reference
 tool:
   - Reports
@@ -11,9 +11,9 @@ channel:
 
 ---
 
-# Rapport WhatsApp
+# Rapports WhatsApp
 
-> Cet article de référence couvre les indicateurs WhatsApp utilisés chez Braze, ainsi que la manière de les visualiser dans vos campagnes WhatsApp.
+> Le présent article de référence couvre les indicateurs WhatsApp utilisés chez Braze, ainsi que la façon de les afficher dans vos campagnes WhatsApp.
 
 {% multi_lang_include analytics/campaign_analytics.md channel="whatsapp" %}
 

@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Eliminar números de teléfono no válidos"
-article_title: "POST: Eliminar números de teléfono no válidos"
+nav_title: "PUBLICAR: Eliminar números de teléfono no válidos"
+article_title: "PUBLICAR: Eliminar números de teléfono no válidos"
 search_tag: Endpoint
 page_order: 2
 layout: api_page
