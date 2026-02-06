@@ -65,10 +65,10 @@ You can use Liquid in your instructions to reference user attributes, such as th
 
 Select **Add context** to choose what your agent can reference. This includes:
 
-- **Catalog fields:** Provide more details on the product or customer.
-- **Segment membership:** Consider a user's membership in a segment when personalizing messages.
+- [Catalog fields]({{site.baseurl}}/user_guide/brazeai/agents/reference/#catalogs): Provide more details on the product or customer.
+- [Segment membership]({{site.baseurl}}/user_guide/brazeai/agents/reference/#segment-membership-context): Consider a user's membership in a segment when personalizing messages.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
-- **Canvas Context variables:** Reference the context variables that apply to the user.
+- [Canvas Context variables]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables): Reference the context variables that apply to the user.
 
 #### Step 2.2: Add optional settings
 
