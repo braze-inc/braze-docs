@@ -85,7 +85,7 @@ You can pull in dynamic images by using [Liquid]({{site.baseurl}}/user_guide/per
 {% if include.alert == 'network dependency' %}
 
 {% alert important %}
-Content Cards, in-app messages, Banners, and feature flags rely on device connectivity to sync with Braze servers. Because network conditions can vary, there is a chance a message may not be delivered or cleared immediately (for example, if a user is offline). We recommend avoiding these channels for critical, time-sensitive messages.
+Content Cards, in-app messages, Banners, and feature flags rely on device connectivity to sync with Braze servers. Because network conditions can vary, there is a chance content or updates may not sync, display, or be cleared immediately (for example, if a user is offline). We recommend avoiding these channels for critical, time-sensitive updates.
 {% endalert %}
 
 {% endif %}
