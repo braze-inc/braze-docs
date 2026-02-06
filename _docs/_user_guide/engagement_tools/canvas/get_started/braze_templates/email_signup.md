@@ -44,7 +44,7 @@ Adjust the Canvas details to reflect your goal.
 
 ### Step 2: Assign conversion events
 
-Next, let's assign our conversion events. Conversion events are a type of metric that can be used to measure the success of the Canvas. For **Conversion event type**, select **Performs Custom Event**. Then, select **email_opt_in** for the **Custom event name**.
+Next, assign our conversion events. Conversion events are a type of metric that you can use to measure the success of the Canvas. For **Conversion event type**, select **Performs Custom Event**. Then, select **email_opt_in** for the **Custom event name**.
 
 !["Assign Conversion Events" section for the conversion event type of opting in for email.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
