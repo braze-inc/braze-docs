@@ -563,7 +563,7 @@ By default, when a push notification arrives while your app is in the foreground
 
 ### How it works
 
-When you call `BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, Braze determines if the payload is a Braze push notification and, if so, creates and displays the notification via `NotificationManagerCompat`. Unlike iOS, Android displays notifications regardless of whether the app is in the foreground or background.
+When you call `BrazeFirebaseMessagingService.handleBrazeRemoteMessage`, Braze determines if the payload is a Braze push notification and, if so, creates and displays the notification with the `NotificationManagerCompat` method. Unlike iOS, Android displays notifications regardless of whether the app is in the foreground or background.
 
 {% tabs %}
 {% tab JAVA %}
