@@ -1,9 +1,9 @@
 ---
-nav_title: Message usage dashboard
-article_title: Message Usage Dashboard
+nav_title: Credits usage dashboard
+article_title: Credits Usage Dashboard
 page_order: 0
 page_type: reference
-description: "This reference article covers the Message Usage dashboard, where you can view self-service insights into your SMS and WhatsApp credit usage."
+description: "This reference article covers the Credits Usage dashboard, where you can view self-service insights into your message credit usage."
 tool: Dashboard
 ---
 

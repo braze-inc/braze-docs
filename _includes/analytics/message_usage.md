@@ -3,15 +3,17 @@
 > The Credits Usage dashboard provides self-service insights into your credit usage for a comprehensive view of historical and current usage compared against contract allotments. These insights can reduce your confusion and help you make adjustments to prevent overage risks.
 
 The **Credits Usage** dashboard is divided into three sections:
-- [Credit Usage Overview](#credit-usage-overview)
-- [SMS/MMS](#smsmms) 
+- [Message credit usage overview](#message-credits-usage-overview)
+- [LINE](#line)
+- [SMS/MMS/RCS](#sms-mms-and-rcs)
+- [Webhooks](#webhooks)
 - [WhatsApp](#whatsapp)
 
 Access the dashboard by going to **Settings** > **Billing** > **Credits Usage**.
 
 ## Message credits usage overview
 
-**Message Credits Usage Overview** provides an overview of usage across all channels that use credits. You can see how you're pacing against your overall credit allotment, and find details about your active contract and your contract period.
+**Message credits usage overview** provides an overview of usage across all channels that use credits. You can see how you're pacing against your overall credit allotment, and find details about your active contract and your contract period.
 
 This page displays if you're on a message credits contract. The channels that use message credits are shown in the **Credits contract overview**.
 
@@ -26,6 +28,8 @@ If you purchased WhatsApp but aren't on a message credits contract, you'll still
 The **Message Credits Usage over Contract** graph shows your usage over the selected period of time. The granularity of this chart depends on your selected time frame. Export export options by selecting the menu in the top right corner of the chart.
 
 ![Message Credits Usage Overview dashboard with sections for credit usage, credit contract overview, and credit consumption over contract.]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
+
+## LINE
 
 ## SMS, MMS, and RCS
 
@@ -42,6 +46,8 @@ It’s possible to select a date range that contains both non-credits and messag
 {% endalert %}
 
 ![SMS/MMS/RCS Credits Usage table with null values.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
+
+## Webhooks
 
 ## WhatsApp
 
@@ -61,8 +67,8 @@ You can filter your data by:
 ## Things to know
 
 {% alert important %}
-The data shown in the **Message Usage** dashboard is at the contract level and isn't scoped to an individual dashboard company or workspace. This data reflects usage from all workspaces within your dashboard, and potentially across all dashboards (if you have multiple).
+The data shown in the **Credits Usage** dashboard is at the contract level and isn't scoped to an individual dashboard company or workspace. This data reflects usage from all workspaces within your dashboard, and potentially across all dashboards (if you have multiple).
 {% endalert %}
 
-- The underlying data is provided in a daily cadence, with the data tables refreshed at 3 am, 9 am, 12 pm, and 6 pm EST. The **Message Usage** dashboard may take longer than 24 hours to update.
+- The underlying data is provided in a daily cadence, with the data tables refreshed at 3 am, 9 am, 12 pm, and 6 pm EST. The **Credits Usage** dashboard may take longer than 24 hours to update.
 - Braze follows standard rounding methodology: numbers are rounded up to the nearest tenth.

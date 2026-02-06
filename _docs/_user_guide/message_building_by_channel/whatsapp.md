@@ -45,7 +45,7 @@ guide_featured_list:
 - name: "WhatsApp Reporting"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/
   image: /assets/img/braze_icons/file-06.svg
-- name: "Message Usage Dashboard"
+- name: "Credits Usage Dashboard"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage/
   image: /assets/img/braze_icons/file-07.svg
 - name: "WhatsApp Best Practices"
