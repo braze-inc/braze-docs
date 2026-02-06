@@ -64,7 +64,7 @@ For the **Entry Window**, we'll update the **Started Time (Required)** to our de
 
 ### Step 4: Select the target audience
 
-We’ll define our target audience as Steppington users who don't have an email address in their user profile. We'll do this by keeping the template's default [segmentation filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) `Email Available is false`.
+Define your target audience as Steppington users who don't have an email address in their user profile by keeping the template's default [segmentation filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) `Email Available is false`.
 
 ![Entry Audience with the "Email Available is false" filter.]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
