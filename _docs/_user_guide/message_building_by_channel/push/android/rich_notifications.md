@@ -44,7 +44,7 @@ Follow the steps to [create a campaign]({{site.baseurl}}/user_guide/message_buil
 
 Add the **Summary Text** that you'd like to display before the image in the notification.
 
-![A Rich Push Notification from a pet food app called Dog indicating that its time to order more food for spot with a Summary Text.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![A rich push Notification from a pet food app called Dog indicating that it is time to order more food for spot with summary text.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Step 3: Add media
 
