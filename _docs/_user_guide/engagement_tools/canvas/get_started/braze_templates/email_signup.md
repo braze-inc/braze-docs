@@ -23,7 +23,7 @@ To successfully use this template, you need the following:
 
 ## Tailoring the template to your needs
 
-Let’s say we’re working for Steppington, a health app known for its features such as calorie tracking, digital exercise classes, and flash-mob marathons. Before creating the Canvas, we [set up multi-page in-app and in-browser messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page) that includes a series of engaging questions to determine the experience and impression of a user's first ride with the app.
+Let’s say you're working for Steppington, a health app known for its features such as calorie tracking, digital exercise classes, and flash-mob marathons. Before creating the Canvas, you [set up multi-page in-app and in-browser messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page) that includes a series of engaging questions to determine the experience and impression of a user's first ride with the app.
 
 To access the template, when creating a new Canvas, select **Use a Canvas template** > **Braze templates**. Then, next to **Email sign-up with double opt-in**, select **Apply Template**. Now, we can go through the template to fit it for our needs.
 
