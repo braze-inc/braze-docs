@@ -76,7 +76,7 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 ### Step 6: Customize your Canvas
 
-Now, we’ll build our Canvas by customizing the channels and content that will be sent to users. Because we’re focusing on verifying our email sign-ups, we don't need to add or remove any of the template's Canvas steps and channels.
+Next, build the Canvas by customizing the channels and content that you want to send to users. Because you're focusing on verifying email sign-ups, you don't need to add or remove any of the template's Canvas steps and channels.
 
 1. Select the first Message step named **Email Sign-up**. This is where we'll update the template to use our multi-page in-app (and in-browser) message.
 
