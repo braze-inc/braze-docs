@@ -29,7 +29,7 @@ To access the template, when creating a new Canvas, select **Use a Canvas templa
 
 ### Step 1: Set up the details
 
-Let’s adjust the Canvas details to reflect our goal.
+Adjust the Canvas details to reflect your goal.
 
 1. Select **Edit** next to the template name.
 
