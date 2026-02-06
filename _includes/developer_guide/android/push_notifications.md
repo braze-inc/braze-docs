@@ -620,7 +620,7 @@ For more information, see the [Firebase integration sample](https://github.com/b
 
 If you want custom foreground behavior, such as suppressing the system notification or showing an in-app UI instead, you can:
 
-- Use `subscribeToPushNotificationEvents` to react to push events and handle deep links via `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent`. For more information, see the [Firebase push sample](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
+- Use `subscribeToPushNotificationEvents` to react to push events and handle deep links with the `BrazeNotificationUtils.routeUserWithNotificationOpenedIntent` method. For more information, see the [Firebase push sample](https://github.com/braze-inc/braze-android-sdk/blob/master/samples/firebase-push/src/main/java/com/braze/firebasepush/FirebaseApplication.kt).
 - Build and post your own notification using a custom `IBrazeNotificationFactory`, or suppress the notification by not calling `notificationManager.notify` in your handling path.
 
 For more information on customizing notifications, see [Custom notification factory]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=android#custom-notification-factory).
