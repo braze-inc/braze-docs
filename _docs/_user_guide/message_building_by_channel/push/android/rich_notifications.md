@@ -20,7 +20,6 @@ tool:
 
 Before you create a rich push notification for Android, note the following details:
 
-- Android rich notifications aren't available when creating a quick push campaign.
 - Android extended notification images must be 2:1 ratio, but do not have a size limit.
 - Android also allows for setting a separate image for the standard notification view. These are the recommended size images: 
   - **Small:** 512x256
