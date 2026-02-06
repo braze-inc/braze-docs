@@ -78,7 +78,7 @@ We’ll keep the default subscription settings, so we only send to users who hav
 
 Next, build the Canvas by customizing the channels and content that you want to send to users. Because you're focusing on verifying email sign-ups, you don't need to add or remove any of the template's Canvas steps and channels.
 
-1. Select the first Message step named **Email Sign-up**. This is where we'll update the template to use our multi-page in-app (and in-browser) message.
+1. Select the first Message step named **Email Sign-up**. This is where you update the template to use our multi-page in-app (and in-browser) message.
 
 - Page 1 will capture the emails.
 - Page 2 displays a confirmation message.
