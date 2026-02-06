@@ -15,7 +15,7 @@ This article will walk you through a use case for the **Email sign-up with doubl
 
 ## Prerequisites
 
-To successfully use this template, you'll need the following:
+To successfully use this template, you need the following:
 
 - A [multi-page in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page) with one page to capture your users' emails and another to communicate a success message. 
 - A confirmation email for users to verify their email address.
