@@ -58,7 +58,7 @@ Also, consider keeping the **Action Based Options** as is so that users enter th
 
 ![An action-based entry schedule to enter users who start any session into the Canvas.]({% image_buster /assets/img/canvas_templates/email_signup4.png %}){: style="max-width:90%;"}
 
-For the **Entry Window**, we'll update the **Started Time (Required)** to our desired date and time.
+For the **Entry Window**, update the **Started Time (Required)** to our desired date and time.
 
 ![An entry window with the start time January 16, 2025 at 12:30 pm. Users will enter this message in their local time zone.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
