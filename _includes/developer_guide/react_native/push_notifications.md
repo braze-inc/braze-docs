@@ -156,14 +156,32 @@ Skip step 3.1 if you're using the Braze Expo plugin, as this is functionality is
 For iOS, add `populateInitialPayloadFromLaunchOptions` to your AppDelegate's `didFinishLaunchingWithOptions` method. For example:
 
 {% subtabs local %}
+{% subtab Objective-C %}
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+  // ... Perform regular React Native setup
+
+  BRZConfiguration *configuration = [[BRZConfiguration alloc] initWithApiKey:apiKey endpoint:endpoint];
+  configuration.triggerMinimumTimeInterval = 1;
+  configuration.logger.level = BRZLoggerLevelInfo;
+  Braze *braze = [BrazeReactBridge initBraze:configuration];
+  AppDelegate.braze = braze;
+
+  [self registerForPushNotifications];
+  [[BrazeReactUtils sharedInstance] populateInitialPayloadFromLaunchOptions:launchOptions];
+
+  return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+```
+{% endsubtab %}
 {% subtab Swift %}
 ```swift
 func application(
   _ application: UIApplication,
   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
 ) -> Bool {
-  self.moduleName = "YOUR_MODULE_NAME"
-  self.initialProps = [:]
+  // ... Perform regular React Native setup
 
   let configuration = Braze.Configuration(apiKey: apiKey, endpoint: endpoint)
   configuration.triggerMinimumTimeInterval = 1
