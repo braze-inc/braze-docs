@@ -52,7 +52,7 @@ Keep the template's conversion deadline of three days because you want to target
 
 ### Step 3: Tailor the entry schedule
 
-Let’s keep the entry schedule as **Action-Based** so that users will enter our Canvas when they start a session in the app. This way, we can begin to build our relationship with timely engagement.
+Keep the entry schedule as **Action-Based** so that users enter your Canvas when they start a session in the app. This way, you can begin to build your relationship with timely engagement.
 
 We'll also keep the **Action Based Options** as is so that users only enter the Canvas when they start a session.
 
