@@ -292,3 +292,15 @@ pre code span.se {
   background: none !important;
   font-weight: normal !important;
 }
+
+/* Equal-width columns for Do/Don't tables in style guide */
+.do-dont-table {
+  table-layout: fixed;
+  width: 100%;
+  th:first-child,
+  th:nth-child(2),
+  td:first-child,
+  td:nth-child(2) {
+    width: 50%;
+  }
+}
