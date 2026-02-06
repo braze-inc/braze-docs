@@ -210,4 +210,6 @@ As of April 2024, to create or update promotion code lists, Braze users need the
 |Workspace|View Custom AI Agents|Allows users to view [custom AI agents]({{site.baseurl}}/user_guide/brazeai/agents/). This feature is currently in beta.|
 |Workspace|Create Custom AI Agents|Allows users to create custom AI agents. This feature is currently in beta.|
 |Workspace|Edit Custom AI Agents|Allows users to edit custom AI agents. This feature is currently in beta.|
+| Workspace | View WhatsApp Message Templates | Allows users to create WhatsApp message templates in the template builder. |
+| Workspace | Edit WhatsApp Message Templates | Allows users to compose campaigns or Canvases with WhatsApp message templates. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
