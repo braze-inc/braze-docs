@@ -102,7 +102,7 @@ The **Verify Email** Message step is triggered on the user's second session. Thi
 
 ### Step 7: Test and launch your Canvas
 
-After testing and reviewing our Canvas to make sure it works as expected, we’ll launch it by selecting **Launch Canvas**.
+After testing and reviewing your Canvas to make sure it works as expected, launch it by selecting **Launch Canvas**.
 
 {% alert tip %}
 Check out our [Pre and post-launch checklist]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/#things-to-consider-before-launch) for things to consider before and after you launch a Canvas.
