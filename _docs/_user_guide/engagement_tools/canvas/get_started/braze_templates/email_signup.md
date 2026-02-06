@@ -80,7 +80,7 @@ Next, build the Canvas by customizing the channels and content that you want to 
 
 1. Select the first Message step named **Email Sign-up**. This is where you update the template to use our multi-page in-app (and in-browser) message.
 
-- Page 1 will capture the emails.
+- Page 1 captures the emails.
 - Page 2 displays a confirmation message.
 
 ![Two pages of an in-app message to capture user emails and display a success message.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
