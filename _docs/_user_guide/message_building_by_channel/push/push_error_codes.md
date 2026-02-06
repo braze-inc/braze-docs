@@ -51,7 +51,7 @@ Common causes include:
 Next steps:
 
 - Reduce payload size by trimming custom keys and shortening large dynamic values.
-- If you send via the API, validate the final JSON payload (including size) before sending.
+- If you send through the API, validate the final JSON payload (including size) before sending.
 
 ### Push bounced: BadToken
 
