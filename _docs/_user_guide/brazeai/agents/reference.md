@@ -116,6 +116,16 @@ For more details on prompting best practices, refer to guides from the following
 - [Anthropic](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview)
 - [Gemini](https://support.google.com/a/users/answer/14200040?hl=en)
 
+### Using Liquid
+
+Including [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) in your agent's instructions can add an extra layer of personalization in its response. You can specify the exact Liquid variable the agent gets and can include it in the context of your prompt. For example, instead of explicitly writing "first name", you can use the Liquid snippet {% raw %}`{{${first_name}}}``{% endraw %}:
+
+{% raw %}
+```
+Tell a one-paragraph short story about this user, integrating their {{${first_name}}}, {{${last_name}}}, and {{${city}}}. Also integrate any context you receive about how they are currently thinking, feeling, or doing. For example, you may receive {{context.${current_emotion}}}, which is the user's current emotion. You should work that into the story.
+```
+{% endraw %}
+
 ## Catalogs and fields
 
 Choose specific catalogs for an agent to reference and to give your agent the context it needs to understand your products and other non-user data when relevant.
