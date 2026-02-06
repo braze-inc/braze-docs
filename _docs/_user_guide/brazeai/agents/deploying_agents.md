@@ -3,6 +3,7 @@ nav_title: Deploy agents
 article_title: Deploy custom agents
 description: "Learn how to put custom agents to use in Braze after you create them."
 alias: /deploying-agents/
+page_order: 2
 ---
 
 # Deploy custom agents
