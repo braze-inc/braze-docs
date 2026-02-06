@@ -57,15 +57,18 @@ To create your custom agent:
 
 Give the agent instructions. Refer to [Writing instructions](#writing-instructions) for guidance.
 
+{% alert tip %}
+You can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes.
+{% endalert %}
+
 #### Step 2.1: Add context
 
 Select **Add context** to choose what your agent can reference. This includes:
 
-- Catalog fields
-- Segment membership: 
+- **Catalog fields:** Provide more details on the product or customer.
+- **Segment membership:** Consider a user's membership in a segment when personalizing messages.
 - [Brand guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines): Reference the brand voice and style guidelines for the agent to follow. For example, if you want your agent to generate SMS copy to encourage users to sign up for a gym membership, you can use this field to reference your predefined bold, motivational guideline.
-- Canvas Context variables: 
-
+- **Canvas Context variables:** Reference the context variables that apply to the user.
 
 #### Step 2.2: Add optional settings
 
@@ -115,7 +118,7 @@ Let's say you want to collect user feedback for their most recent dining experie
 }
 ```
 
-If you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the [defined output fields](#fields).
+If you try to use an agent with a JSON output in a catalog, it will not follow your schema. Instead, consider using the defined output fields.
 
 {% endtab %}
 {% endtabs %}
