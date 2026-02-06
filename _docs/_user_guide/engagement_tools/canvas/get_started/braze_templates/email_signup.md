@@ -48,7 +48,7 @@ Next, assign our conversion events. Conversion events are a type of metric that 
 
 !["Assign Conversion Events" section for the conversion event type of opting in for email.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
-We'll keep the template's conversion deadline of three days because we want to target our most recent users.
+Keep the template's conversion deadline of three days because you want to target your most recent users.
 
 ### Step 3: Tailor the entry schedule
 
