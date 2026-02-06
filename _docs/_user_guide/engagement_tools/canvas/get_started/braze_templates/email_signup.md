@@ -70,7 +70,7 @@ Define your target audience as Steppington users who don't have an email address
 
 ### Step 5: Select your send settings
 
-We’ll keep the default subscription settings, so we only send to users who have subscribed or opted into receiving messages or notifications, and skip the other settings (frequency capping, quiet hours, and seed groups).
+Keep the default subscription settings, so you send only to users who have subscribed or opted in to receiving messages or notifications, and skip the other settings (frequency capping, quiet hours, and seed groups).
 
 ![Default sending options to only send to users who are subscribed or opted-in.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
