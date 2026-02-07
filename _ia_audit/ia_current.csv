@@ -1,0 +1,655 @@
+current_path,nav_title,article_title,page_order,depth,parent_section,hidden,config_only
+_docs/_user_guide/administrative.md,Administrative,Administrative,2.0,0,,False,False
+_docs/_user_guide/administrative/access_braze.md,Access Braze,Access Braze,0.0,1,administrative,False,False
+_docs/_user_guide/administrative/access_braze/accessing_your_account.md,Access your account,Access Your Account,0.0,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/access_braze/braze_dashboard.md,The dashboard,The Braze dashboard,2.0,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/access_braze/language.md,Language settings,Language Settings,2.5,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/access_braze/portal.md,Product portal,Product Portal,6.0,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/access_braze/sdk_endpoints.md,API and SDK endpoints,API and SDK Endpoints,2.4,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/access_braze/single_sign_on.md,SAML & single sign-on,SAML & Single Sign-On,5.0,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/access_braze/single_sign_on/entra.md,Microsoft Entra SSO,Microsoft Entra SSO,3.0,3,administrative/access_braze/single_sign_on,False,False
+_docs/_user_guide/administrative/access_braze/single_sign_on/okta.md,Okta,Okta,4.0,3,administrative/access_braze/single_sign_on,False,False
+_docs/_user_guide/administrative/access_braze/single_sign_on/onelogin.md,OneLogin,OneLogin,5.0,3,administrative/access_braze/single_sign_on,False,False
+_docs/_user_guide/administrative/access_braze/single_sign_on/saml_jit.md,SAML Just-in-Time provisioning,SAML Just-in-Time Provisioning,1.0,3,administrative/access_braze/single_sign_on,False,False
+_docs/_user_guide/administrative/access_braze/single_sign_on/set_up.md,SAML SSO setup,SAML SSO Setup,0.0,3,administrative/access_braze/single_sign_on,False,False
+_docs/_user_guide/administrative/access_braze/support.md,Braze support,Support,999.0,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/access_braze/troubleshooting.md,Troubleshooting,Troubleshoot Braze Access,8.0,2,administrative/access_braze,False,False
+_docs/_user_guide/administrative/app_settings.md,Settings,Settings (previously Developer Console),3.0,1,administrative,False,False
+_docs/_user_guide/administrative/app_settings/api_settings_tab.md,APIs and identifiers,APIs and Identifiers,3.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/brand_guidelines.md,Brand guidelines,Brand Guidelines,1.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/company_settings.md,Admin settings,Admin Settings,20.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/company_settings/automated_user_provisioning.md,Automated user provisioning,Automated User Provisioning,10.0,3,administrative/app_settings/company_settings,False,False
+_docs/_user_guide/administrative/app_settings/company_settings/contact_information.md,Contact information,Contact Information,0.0,3,administrative/app_settings/company_settings,False,False
+_docs/_user_guide/administrative/app_settings/company_settings/notification_preferences.md,Notification preferences,Notification Preferences,1.0,3,administrative/app_settings/company_settings,False,False
+_docs/_user_guide/administrative/app_settings/company_settings/security_settings.md,Security settings,Security Settings,2.0,3,administrative/app_settings/company_settings,False,False
+_docs/_user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3.md,Security events export with S3,Security Settings Export with S3,1.0,4,administrative/app_settings/company_settings/security_settings,False,False
+_docs/_user_guide/administrative/app_settings/email_settings.md,Email preferences,Email Preferences,14.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/email_settings/bot_filtering.md,Bot filtering for emails,Bot Filtering for Emails,1.0,3,administrative/app_settings/email_settings,False,False
+_docs/_user_guide/administrative/app_settings/event_user_log_tab.md,Event user log,Event User Log,7.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/exports_log.md,Exports log,Exports Log,15.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/internal_groups_tab.md,Internal groups,Internal Group,10.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/manage_your_braze_users.md,Braze users,Manage Braze users,23.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/manage_your_braze_users/teams.md,Teams,Teams,4.0,3,administrative/app_settings/manage_your_braze_users,False,False
+_docs/_user_guide/administrative/app_settings/manage_your_braze_users/user_permissions.md,Permissions,Braze permissions,2.0,3,administrative/app_settings/manage_your_braze_users,False,False
+_docs/_user_guide/administrative/app_settings/message_activity_log_tab.md,Message activity log,Message Activity Log,5.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/multi_language_settings.md,Multi-language settings,Translation and multi-language settings,5.5,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/push_settings.md,Push settings,Push Settings,16.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/subscription_and_usage.md,Billing,Billing,25.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/tags.md,Tags,Tags,12.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/app_settings/workspaces.md,Create and manage workspaces,Create and Manage Workspaces,0.0,2,administrative/app_settings,False,False
+_docs/_user_guide/administrative/privacy.md,Privacy,Privacy,100.0,1,administrative,False,False
+_docs/_user_guide/administrative/privacy/managing_consent.md,Manage consent,Manage Consent,10.0,2,administrative/privacy,False,False
+_docs/_user_guide/administrative/privacy/spam_regulations.md,Spam regulations,Spam Regulations,4.2,2,administrative/privacy,False,False
+_docs/_user_guide/analytics.md,Analytics,Analytics,3.0,0,,False,False
+_docs/_user_guide/analytics/dashboard.md,Your analytics dashboards,Your Analytics Dashboards,6.5,1,analytics,False,False
+_docs/_user_guide/analytics/dashboard/api_usage_alerts.md,API usage alerts,API Usage Alerts,3.6,2,analytics/dashboard,False,False
+_docs/_user_guide/analytics/dashboard/api_usage_dashboard.md,API usage dashboard,API Usage Dashboard,3.5,2,analytics/dashboard,False,False
+_docs/_user_guide/analytics/dashboard/conversions_dashboard.md,Conversions dashboard,Conversions Dashboard,3.0,2,analytics/dashboard,False,False
+_docs/_user_guide/analytics/dashboard/deliverability_center.md,Deliverability Center,Deliverability Center,4.0,2,analytics/dashboard,False,False
+_docs/_user_guide/analytics/dashboard/ecommerce_revenue_dashboard.md,eCommerce revenue dashboard,eCommerce revenue dashboard,6.0,2,analytics/dashboard,False,False
+_docs/_user_guide/analytics/dashboard/email_performance_dashboard.md,Channel performance dashboard,Channel Performance Dashboard,2.0,2,analytics/dashboard,False,False
+_docs/_user_guide/analytics/dashboard/home_dashboard.md,Home dashboard,Home Dashboard (Previously Overview),1.0,2,analytics/dashboard,False,False
+_docs/_user_guide/analytics/query_builder.md,Query Builder,Query Builder,15.0,1,analytics,False,False
+_docs/_user_guide/analytics/query_builder/building_queries.md,Build queries,Use the Query Builder,0.0,2,analytics/query_builder,False,False
+_docs/_user_guide/analytics/query_builder/query_templates.md,Query templates,Query Builder Templates,1.0,2,analytics/query_builder,False,False
+_docs/_user_guide/analytics/query_builder/sql_variables.md,SQL variables,Query Builder SQL variables,2.0,2,analytics/query_builder,False,False
+_docs/_user_guide/analytics/reporting.md,Your reports,Your Reports,7.0,1,analytics,False,False
+_docs/_user_guide/analytics/reporting/campaign_analytics.md,Campaign analytics,Campaign Analytics,4.5,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/canvas_analytics.md,Canvas analytics,Canvas analytics,4.6,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/configuring_reporting.md,Configure reporting,Configure Reporting,1.1,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/dashboard_builder.md,Dashboard Builder,Dashboard Builder,6.1,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/data_by_segments.md,Metrics by segments,Metrics by Segments,2.5,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/engagement_reports.md,Engagement reports,Engagement Reports,3.0,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/funnel_reports.md,Funnel reports,Funnel Reports for Campaigns and Canvases,6.0,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/global_control_group_reporting.md,Global control group,Global Control Group Reporting,999.0,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/report_builder.md,Report Builder,Report Builder,6.2,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/report_builder/report_builder_legacy.md,Report Builder (legacy),Report Builder (Legacy),0.0,3,analytics/reporting/report_builder,False,False
+_docs/_user_guide/analytics/reporting/report_metrics.md,Report metrics glossary,Report Metrics Glossary,0.5,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/retention_reports.md,Retention reports,Retention Reports for Campaigns and Canvases,5.0,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/reporting/revenue_report.md,Revenue report,Revenue Report,999.0,2,analytics/reporting,False,False
+_docs/_user_guide/analytics/tracking.md,Tracking,Tracking,5.0,1,analytics,False,False
+_docs/_user_guide/analytics/tracking/email_tracking.md,Email open pixel and click tracking,Email Open Pixel and Click Tracking,1.0,2,analytics/tracking,False,False
+_docs/_user_guide/analytics/tracking/influenced_opens.md,Influenced opens,Influenced Opens,7.0,2,analytics/tracking,False,False
+_docs/_user_guide/analytics/tracking/segment_analytics_tracking.md,Segment analytics tracking,Segment Analytics Tracking,8.0,2,analytics/tracking,False,False
+_docs/_user_guide/analytics/tracking/uninstall_tracking.md,Uninstall tracking,Uninstall Tracking,6.0,2,analytics/tracking,False,False
+_docs/_user_guide/brazeai.md,BrazeAI,BrazeAI,6.5,0,,False,False
+_docs/_user_guide/brazeai/agents.md,Agents,Braze Agents,1.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/agents/creating_agents.md,Create agents,Create custom agents,999.0,2,brazeai/agents,False,False
+_docs/_user_guide/brazeai/agents/deploying_agents.md,Deploy agents,Deploy custom agents,999.0,2,brazeai/agents,False,False
+_docs/_user_guide/brazeai/content_optimizer.md,Content Optimizer,Content Optimizer,4.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/decisioning_studio.md,Decisioning Studio,Getting started with BrazeAI Decisioning Studio,0.1,1,brazeai,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go.md,Decisioning Studio Go,BrazeAI Decisioning Studio Go,1.0,2,brazeai/decisioning_studio,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources.md,Connect data sources,Connect data sources,1.0,3,brazeai/decisioning_studio/decisioning_studio_go,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent.md,Design your agent,Design your agent,3.0,3,brazeai/decisioning_studio/decisioning_studio_go,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent.md,Launch your agent,Launch your agent,4.0,3,brazeai/decisioning_studio/decisioning_studio_go,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration.md,Set up orchestration,Set up orchestration,2.0,3,brazeai/decisioning_studio/decisioning_studio_go,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro.md,Decisioning Studio Pro,BrazeAI Decisioning Studio Pro,2.0,2,brazeai/decisioning_studio,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources.md,Connect data sources,Connect data sources,1.0,3,brazeai/decisioning_studio/decisioning_studio_pro,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent.md,Design your agent,Design your agent,3.0,3,brazeai/decisioning_studio/decisioning_studio_pro,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent.md,Launch your agent,Launch your agent,4.0,3,brazeai/decisioning_studio/decisioning_studio_pro,False,False
+_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration.md,Set up orchestration,Set up orchestration,2.0,3,brazeai/decisioning_studio/decisioning_studio_pro,False,False
+_docs/_user_guide/brazeai/decisioning_studio/faq.md,FAQ,Decisioning Studio FAQ,10.0,2,brazeai/decisioning_studio,False,False
+_docs/_user_guide/brazeai/decisioning_studio/getting_started.md,Getting started,Getting Started with Decisioning Studio,0.0,2,brazeai/decisioning_studio,False,False
+_docs/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md,Designing decisioning agents,Designing decisioning agents,4.0,3,brazeai/decisioning_studio/getting_started,False,False
+_docs/_user_guide/brazeai/decisioning_studio/getting_started/overview.md,Overview,Overview,1.0,3,brazeai/decisioning_studio/getting_started,False,False
+_docs/_user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources.md,Preparing your data sources,Preparing your data sources,2.0,3,brazeai/decisioning_studio/getting_started,False,False
+_docs/_user_guide/brazeai/decisioning_studio/getting_started/preparing_your_orchestration.md,Preparing your orchestration,Preparing your orchestration,3.0,3,brazeai/decisioning_studio/getting_started,False,False
+_docs/_user_guide/brazeai/decisioning_studio/reporting.md,Reports and insights,Reports and Insights,3.0,2,brazeai/decisioning_studio,False,False
+_docs/_user_guide/brazeai/generative_ai.md,Generative AI,Generative AI,5.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/generative_ai/brand_guidelines.md,Brand guidelines,AI-generated brand guidelines,2.2,2,brazeai/generative_ai,False,False
+_docs/_user_guide/brazeai/generative_ai/content_qa.md,Content QA,Content QA with AI,4.0,2,brazeai/generative_ai,False,False
+_docs/_user_guide/brazeai/generative_ai/copywriting.md,Copywriting,AI Copywriting Assistant,2.1,2,brazeai/generative_ai,False,False
+_docs/_user_guide/brazeai/generative_ai/images.md,Images,Generate images with BrazeAI,10.0,2,brazeai/generative_ai,False,False
+_docs/_user_guide/brazeai/generative_ai/liquid.md,Liquid code,Generate Liquid code with BrazeAI,0.0,2,brazeai/generative_ai,False,False
+_docs/_user_guide/brazeai/generative_ai/sql_queries.md,SQL queries,Use the Query Builder,0.2,2,brazeai/generative_ai,False,False
+_docs/_user_guide/brazeai/generative_ai/sql_segment_extensions.md,SQL Segment Extensions,SQL Segment Extensions,0.1,2,brazeai/generative_ai,False,False
+_docs/_user_guide/brazeai/intelligence.md,Intelligence Suite,About the Braze Intelligence Suite,6.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/intelligence/intelligent_channel.md,Channel filter,Intelligent Channel Filter,1.5,2,brazeai/intelligence,False,False
+_docs/_user_guide/brazeai/intelligence/intelligent_selection.md,Intelligent Selection,Intelligent Selection,1.0,2,brazeai/intelligence,False,False
+_docs/_user_guide/brazeai/intelligence/intelligent_timing.md,Intelligent Timing,Intelligent Timing,1.3,2,brazeai/intelligence,False,False
+_docs/_user_guide/brazeai/intelligence/tutorial.md,Tutorial: Quick service restaurant,Intelligence Suite tutorial,10.0,2,brazeai/intelligence,False,False
+_docs/_user_guide/brazeai/mcp_server.md,Braze MCP server,About the Braze MCP server,3.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/mcp_server/available_api_functions.md,Available API functions,Available API functions in the Braze MCP server,1.5,2,brazeai/mcp_server,False,False
+_docs/_user_guide/brazeai/mcp_server/setup.md,Braze MCP server setup,Set up the Braze MCP server,1.1,2,brazeai/mcp_server,False,False
+_docs/_user_guide/brazeai/mcp_server/usage.md,Using the Braze MCP server,Use the Braze MCP server,1.2,2,brazeai/mcp_server,False,False
+_docs/_user_guide/brazeai/operator.md,Operator,BrazeAI Operator,8.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/predictive_churn.md,Predictive Churn,Predictive Churn,9.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/predictive_churn/analytics.md,Churn analytics,Predictive Churn Analytics,1.5,2,brazeai/predictive_churn,False,False
+_docs/_user_guide/brazeai/predictive_churn/creating_a_churn_prediction.md,Create a churn prediction,Create a Churn Prediction,1.1,2,brazeai/predictive_churn,False,False
+_docs/_user_guide/brazeai/predictive_churn/messaging_users.md,Messaging users,Target Users for Predictive Churn,1.2,2,brazeai/predictive_churn,False,False
+_docs/_user_guide/brazeai/predictive_churn/troubleshooting.md,Troubleshooting,Predictive Churn Troubleshooting,3.0,2,brazeai/predictive_churn,False,False
+_docs/_user_guide/brazeai/predictive_churn/use_case.md,Use case,Use Case Reduce Churn With Timely Content,999.0,2,brazeai/predictive_churn,False,False
+_docs/_user_guide/brazeai/predictive_events.md,Predictive Events,Predictive Events,10.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/predictive_events/analytics.md,Event analytics,Predictive Event Analytics,1.3,2,brazeai/predictive_events,False,False
+_docs/_user_guide/brazeai/predictive_events/creating_an_event_prediction.md,Create an Event Prediction,Create an Event Prediction,1.1,2,brazeai/predictive_events,False,False
+_docs/_user_guide/brazeai/predictive_events/messaging_users.md,Messaging users,Target Users for Predictive Events,1.2,2,brazeai/predictive_events,False,False
+_docs/_user_guide/brazeai/predictive_events/use_case.md,Use case,Use Case Predict Subscription Upgrades,999.0,2,brazeai/predictive_events,False,False
+_docs/_user_guide/brazeai/recommendations.md,Item recommendations,Item recommendations in Braze,7.0,1,brazeai,False,False
+_docs/_user_guide/brazeai/recommendations/creating_recommendations.md,Create recommendations,Create recommendations,1.1,2,brazeai/recommendations,False,True
+_docs/_user_guide/brazeai/recommendations/creating_recommendations/ai.md,AI recommendations,Create AI Item Recommendations,1.0,3,brazeai/recommendations/creating_recommendations,False,False
+_docs/_user_guide/brazeai/recommendations/creating_recommendations/rules_based.md,Rules-based recommendations,Create Rules-Based Item Recommendations,2.0,3,brazeai/recommendations/creating_recommendations,False,False
+_docs/_user_guide/brazeai/recommendations/use_case.md,Use case,Use Case Drive Content Discovery After Viewing,999.0,2,brazeai/recommendations,False,False
+_docs/_user_guide/brazeai/recommendations/using_recommendations.md,Using recommendations,Use Item Recommendations In Your Messaging,1.2,2,brazeai/recommendations,False,False
+_docs/_user_guide/brazeai/recommendations/viewing_analytics.md,Analytics,Item recommendation analytics,1.3,2,brazeai/recommendations,False,False
+_docs/_user_guide/data.md,Data,Data,3.0,0,,False,False
+_docs/_user_guide/data/activation.md,Data activation,Data Activation,2.0,1,data,False,False
+_docs/_user_guide/data/activation/catalogs.md,Catalogs,Catalogs,6.0,2,data/activation,False,False
+_docs/_user_guide/data/activation/catalogs/catalog_triggers.md,Catalog triggers,Catalog triggers,2.0,3,data/activation/catalogs,False,True
+_docs/_user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications.md,Back-in-stock notifications,Set up back-in-stock notifications,2.0,4,data/activation/catalogs/catalog_triggers,False,False
+_docs/_user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications.md,Price drop notifications,Price Drop Notifications,3.0,4,data/activation/catalogs/catalog_triggers,False,False
+_docs/_user_guide/data/activation/catalogs/create.md,Create a catalog,Create a Catalog,1.0,3,data/activation/catalogs,False,False
+_docs/_user_guide/data/activation/catalogs/product_blocks.md,Product blocks,Drag-and-Drop Product Blocks,999.0,3,data/activation/catalogs,False,False
+_docs/_user_guide/data/activation/catalogs/selections.md,Selections,Selections,5.0,3,data/activation/catalogs,False,False
+_docs/_user_guide/data/activation/catalogs/use.md,Using catalogs,Use Catalogs,1.5,3,data/activation/catalogs,False,False
+_docs/_user_guide/data/activation/custom_data.md,Custom data,Custom Data,0.0,2,data/activation,False,False
+_docs/_user_guide/data/activation/custom_data/custom_attributes.md,Custom attributes,Custom Attributes,10.0,3,data/activation/custom_data,False,False
+_docs/_user_guide/data/activation/custom_data/custom_attributes/array_of_objects.md,Array of objects,Array of Objects,0.0,4,data/activation/custom_data/custom_attributes,False,False
+_docs/_user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support.md,Nested custom attributes,Nested Custom Attributes,1.0,4,data/activation/custom_data/custom_attributes,False,False
+_docs/_user_guide/data/activation/custom_data/custom_events.md,Custom events,Custom Events,9.0,3,data/activation/custom_data,False,False
+_docs/_user_guide/data/activation/custom_data/custom_events/nested_objects.md,Nested objects,Nested Objects in Custom Events,1.0,4,data/activation/custom_data/custom_events,False,False
+_docs/_user_guide/data/activation/custom_data/event_naming_conventions.md,Event naming conventions,Event Naming Conventions,10.0,3,data/activation/custom_data,False,False
+_docs/_user_guide/data/activation/custom_data/events.md,Events,Events,0.0,3,data/activation/custom_data,False,False
+_docs/_user_guide/data/activation/custom_data/managing_custom_data.md,Manage custom data,Manage Custom Data,20.0,3,data/activation/custom_data,False,False
+_docs/_user_guide/data/activation/custom_data/purchase_events.md,Purchase events,Purchase Events,8.0,3,data/activation/custom_data,False,False
+_docs/_user_guide/data/activation/custom_data/recommended_events.md,Recommended events,Recommended Events,999.0,3,data/activation/custom_data,False,False
+_docs/_user_guide/data/activation/custom_data/recommended_events/ecommerce_events.md,eCommerce recommended events,eCommerce Recommended Events,999.0,4,data/activation/custom_data/recommended_events,False,False
+_docs/_user_guide/data/activation/custom_data/recommended_events/product_blocks.md,Product blocks,Drag-and-Drop Product Blocks,999.0,4,data/activation/custom_data/recommended_events,False,False
+_docs/_user_guide/data/activation/report_metrics.md,Report metrics glossary,Report Metrics Glossary,0.5,2,data/activation,False,False
+_docs/_user_guide/data/braze_data_platform.md,Braze Data Platform,Braze Data Platform overview,0.0,1,data,False,False
+_docs/_user_guide/data/distribution.md,Data distribution,Data Distribution,3.0,1,data,False,False
+_docs/_user_guide/data/distribution/braze_currents.md,Currents,Currents,3.0,2,data/distribution,False,False
+_docs/_user_guide/data/distribution/braze_currents/available_partners.md,Available partners,Available Currents Partners,2.0,3,data/distribution/braze_currents,False,False
+_docs/_user_guide/data/distribution/braze_currents/event_delivery_semantics.md,Event delivery semantics,Event Delivery Semantics,3.0,3,data/distribution/braze_currents,False,False
+_docs/_user_guide/data/distribution/braze_currents/event_glossary.md,Currents event glossary,Currents event glossary,4.0,3,data/distribution/braze_currents,False,True
+_docs/_user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs.md,Currents Event Changelogs,Currents Event Changelogs,6.0,4,data/distribution/braze_currents/event_glossary,False,False
+_docs/_user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events.md,Customer behavior and user events,Customer behavior and user events,4.0,4,data/distribution/braze_currents/event_glossary,False,False
+_docs/_user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events.md,Message engagement events,Message engagement events,5.0,4,data/distribution/braze_currents/event_glossary,False,False
+_docs/_user_guide/data/distribution/braze_currents/faq.md,FAQ,Currents FAQ,9.0,3,data/distribution/braze_currents,False,False
+_docs/_user_guide/data/distribution/braze_currents/how_braze_uses_currents.md,How Braze uses Currents,How Braze Uses Currents,6.0,3,data/distribution/braze_currents,False,False
+_docs/_user_guide/data/distribution/braze_currents/s3_to_snowflake.md,Transfer data from Amazon S3 to Snowflake,Transfer Data from Amazon S3 to Snowflake,7.0,3,data/distribution/braze_currents,False,False
+_docs/_user_guide/data/distribution/braze_currents/setting_up_currents.md,Set up Currents,Set Up Currents,0.0,3,data/distribution/braze_currents,False,False
+_docs/_user_guide/data/distribution/braze_currents/transferring_data_to_redshift.md,Transfer data to Redshift,Transfer Data to Redshift,8.0,3,data/distribution/braze_currents,False,False
+_docs/_user_guide/data/distribution/export_braze_data.md,Export Braze data,Export Braze Data,6.0,2,data/distribution,False,False
+_docs/_user_guide/data/distribution/export_braze_data/export_apis.md,Export APIs,Export APIs,8.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/export_campaign_results_data.md,Export campaign data,Export Campaign Data,0.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/export_canvas_data.md,Export Canvas data,Export Canvas Data,1.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/export_custom_event_data.md,Export custom event aggregates,Export Custom Event Aggregates,6.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/export_troubleshooting.md,Export troubleshooting,Export Troubleshooting,10.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/exporting_app_usage_data.md,Export usage analytics,Export Usage Analytics,3.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/exporting_revenue_data.md,Export revenue & total revenue data,Export Revenue & Total Revenue Data,4.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/faqs.md,FAQ,Export FAQ,11.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/message_archiving.md,Message archiving,Message Archiving,0.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/opening_csv_reports_in_excel.md,Opening CSV reports in excel,Opening CSV Reports in Excel,9.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/distribution/export_braze_data/segment_data_to_csv.md,Export segment data to CSV,Export Segment Data to CSV,2.0,3,data/distribution/export_braze_data,False,False
+_docs/_user_guide/data/infrastructure.md,Infrastructure,Data Infrastructure,3.5,1,data,False,False
+_docs/_user_guide/data/infrastructure/data_centers.md,Data centers,Data Centers,1.0,2,data/infrastructure,False,False
+_docs/_user_guide/data/infrastructure/data_points.md,Data points,Data Points Overview,10.0,2,data/infrastructure,False,False
+_docs/_user_guide/data/infrastructure/field_level_encryption.md,Identifier field-level encryption,Identifier Field-Level Encryption,2.0,2,data/infrastructure,False,False
+_docs/_user_guide/data/technology_partners.md,Technology Partners,Technology Partners,4.0,1,data,False,False
+_docs/_user_guide/data/unification.md,Data unification,Data Unification,1.0,1,data,False,False
+_docs/_user_guide/data/unification/cloud_ingestion.md,Cloud Data Ingestion,Braze Cloud Data Ingestion,0.1,2,data/unification,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/best_practices.md,Best practices,Cloud Data Ingestion Best Practices,0.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/connected_sources.md,Connected Sources,Connected Sources,2.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/delete_users.md,Delete users with CDI,Delete Users with Cloud Data Ingestion,30.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/faqs.md,FAQs,Cloud Data Ingestion FAQs,100.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/file_storage_integrations.md,File storage integrations,File Storage Integrations,3.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/integrations.md,Data warehouse integrations,Data Warehouse Integrations,2.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/sync_accounts_data.md,Sync and delete account data,Sync account data using CDI,4.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/sync_catalogs_data.md,Sync and delete catalog data,Sync and Delete Catalog Data,4.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/sync_logs.md,Sync logs and observability,Sync logs and observability,10.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/cloud_ingestion/zero_copy_sync.md,Zero-copy personalization,Zero-copy personalization using CDI,4.0,3,data/unification/cloud_ingestion,False,False
+_docs/_user_guide/data/unification/creating_a_formula.md,Create a formula,Create a Formula,1.2,2,data/unification,False,False
+_docs/_user_guide/data/unification/data_transformation.md,Data Transformation,Data Transformation,0.3,2,data/unification,False,False
+_docs/_user_guide/data/unification/data_transformation/creating_a_transformation.md,Create a transformation,Create a Transformation,1.0,3,data/unification/data_transformation,False,False
+_docs/_user_guide/data/unification/data_transformation/use_cases.md,Use cases,Braze Data Transformation Use Cases,2.0,3,data/unification/data_transformation,False,False
+_docs/_user_guide/data/unification/user_data.md,User data,User data in Braze,3.5,2,data/unification,False,False
+_docs/_user_guide/data/unification/user_data/best_practices.md,Collection best practices,Collection Best Practices,3.1,3,data/unification/user_data,False,False
+_docs/_user_guide/data/unification/user_data/collection_use_case.md,Collection use case,Collection Use Case,3.0,3,data/unification/user_data,False,False
+_docs/_user_guide/data/unification/user_data/delete_users.md,Delete users,Delete users,4.2,3,data/unification/user_data,True,False
+_docs/_user_guide/data/unification/user_data/import_users.md,Import users,Import users,4.1,3,data/unification/user_data,False,False
+_docs/_user_guide/data/unification/user_data/import_users/csv.md,CSV import,CSV import,1.2,4,data/unification/user_data/import_users,False,False
+_docs/_user_guide/data/unification/user_data/language_codes.md,Language codes,Supported language codes,999.0,3,data/unification/user_data,False,False
+_docs/_user_guide/data/unification/user_data/sdk_data_collection.md,SDK data collection,SDK Data Collection,1.0,3,data/unification/user_data,False,False
+_docs/_user_guide/data/unification/user_data/user_profile_lifecycle.md,User profile lifecycle,User Profile Lifecycle,2.0,3,data/unification/user_data,False,False
+_docs/_user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users.md,Anonymous users,Anonymous Users,0.0,4,data/unification/user_data/user_profile_lifecycle,False,False
+_docs/_user_guide/engagement_tools.md,Engagement tools,Engagement Tools,4.0,0,,False,False
+_docs/_user_guide/engagement_tools/campaigns.md,Campaigns,Campaigns,2.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns.md,Build campaigns,Build Campaigns,2.0,2,engagement_tools/campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign.md,Create a campaign,Create a Campaign,0.0,3,engagement_tools/campaigns/building_campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types.md,Schedule your campaign,Schedule Your Campaign,3.0,3,engagement_tools/campaigns/building_campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md,API-triggered delivery,API-Triggered Delivery,2.0,4,engagement_tools/campaigns/building_campaigns/delivery_types,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar.md,Content calendar,Content Calendar,4.0,4,engagement_tools/campaigns/building_campaigns/delivery_types,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery.md,Scheduled delivery,Scheduled Delivery,0.0,4,engagement_tools/campaigns/building_campaigns/delivery_types,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery.md,Action-based delivery,Action-Based Delivery,1.0,4,engagement_tools/campaigns/building_campaigns/delivery_types,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers.md,Attribute triggers,Attribute Triggers,1.0,5,engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/campaign_connector.md,Campaign connector,Campaign Connector,2.0,5,engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery,False,False
+_docs/_user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting.md,Rate limiting and frequency capping,Rate Limiting and Frequency Capping,6.0,3,engagement_tools/campaigns/building_campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/faq.md,FAQ,Campaigns FAQ,10.0,2,engagement_tools/campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/getting_started.md,Getting started,Getting Started with Campaigns,0.0,2,engagement_tools/campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/getting_started/campaign_basics.md,Campaign basics,Campaign Basics,1.0,3,engagement_tools/campaigns/getting_started,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies.md,Ideas and strategies,Ideas and Strategies,5.0,2,engagement_tools/campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns.md,Active user campaigns,Active User Campaigns,0.5,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links.md,Add-to-calendar links,Add-to-Calendar Links,1.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices.md,Best practices,Campaign Best Practices,0.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/booking_use_case.md,Booking reminder email,Use Case Booking Reminder Email System,8.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users.md,Capture lapsing users,Capture Lapsing Users,1.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution.md,Understanding user installs,Understanding User Installs,7.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features.md,Feature awareness and new app version,Feature Awareness and New App Version,9.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns.md,Retargeting campaigns,Retarget Campaigns,2.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/zoom.md,Automate Zoom registration,Automate Zoom Registration,1.0,3,engagement_tools/campaigns/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/campaigns/managing_campaigns.md,Manage campaigns,Manage Campaigns,3.0,2,engagement_tools/campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts.md,Campaign alerts,Campaign Alerts,6.0,3,engagement_tools/campaigns/managing_campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch.md,Edit your campaign after launch,Edit Your Campaign After Launch,1.0,3,engagement_tools/campaigns/managing_campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns.md,Search for campaigns,Search for Campaigns,10.0,3,engagement_tools/campaigns/managing_campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/testing_and_more.md,Test campaigns,Test Campaigns,4.0,2,engagement_tools/campaigns,False,False
+_docs/_user_guide/engagement_tools/campaigns/testing_and_more/campaign_analytics.md,Campaign analytics,Campaign analytics,3.0,3,engagement_tools/campaigns/testing_and_more,False,False
+_docs/_user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report.md,Funnel reports,Funnel reports,7.0,3,engagement_tools/campaigns/testing_and_more,False,False
+_docs/_user_guide/engagement_tools/campaigns/testing_and_more/retention_reports.md,Retention reports,Retention reports,5.0,3,engagement_tools/campaigns/testing_and_more,False,False
+_docs/_user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages.md,Send test messages,Send Test Messages,0.0,3,engagement_tools/campaigns/testing_and_more,False,False
+_docs/_user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based.md,API-triggered and action-based campaigns,Test API-Triggered and Action-Based Campaigns,2.0,3,engagement_tools/campaigns/testing_and_more,False,False
+_docs/_user_guide/engagement_tools/canvas.md,Canvas,Canvas,3.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components.md,Canvas components,Canvas Components,2.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/action_paths.md,Action paths,Action Paths,1.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/agent_step.md,Agent,Agent Step,2.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/audience_paths.md,Audience paths,Audience Paths,3.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/audience_sync.md,Audience sync,Audience sync,3.5,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step.md,Content Optimizer,Content Optimizer agent step,5.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/context.md,Context,Context,6.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/decision_split.md,Decision split,Decision split,7.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/delay_step.md,Delay,Delay,8.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step.md,Experiment Paths,Experiment Paths,4.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths.md,Personalized Paths,Personalized Paths in Experiment Paths,999.0,4,engagement_tools/canvas/canvas_components/experiment_step,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path.md,Winning Path,Winning Path in Experiment Paths,999.0,4,engagement_tools/canvas/canvas_components/experiment_step,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/feature_flags.md,Feature flags,Feature Flags,8.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/message_step.md,Message,Message,11.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/canvas_components/user_update.md,User update,User Update,12.0,3,engagement_tools/canvas/canvas_components,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas.md,Build Canvases,Build Canvases,1.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel.md,Canvas by channel,Canvas by channel,6.0,3,engagement_tools/canvas/create_a_canvas,False,True
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas.md,Content cards,Content Cards in Canvas,1.0,4,engagement_tools/canvas/create_a_canvas/canvas_by_channel,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas.md,In-app messages,In-App Messages in Canvas,2.0,4,engagement_tools/canvas/create_a_canvas/canvas_by_channel,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments.md,Commenting in Canvas,Commenting in Canvas,0.5,3,engagement_tools/canvas/create_a_canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties.md,Canvas entry properties and event properties,Canvas Entry Properties and Event Properties,4.2,3,engagement_tools/canvas/create_a_canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties.md,Persistent entry properties,Persistent Entry Properties,5.0,4,engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates.md,Create a Canvas template,Create a Canvas Template,0.5,3,engagement_tools/canvas/create_a_canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/templates.md,Canvas templates,Canvas templates,0.0,4,engagement_tools/canvas/create_a_canvas/canvas_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/context_variables.md,Context variables,Context variables,999.0,3,engagement_tools/canvas/create_a_canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas.md,Create a Canvas,Create a Canvas,0.0,3,engagement_tools/canvas/create_a_canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria.md,Exit criteria,Exit Criteria,4.1,3,engagement_tools/canvas/create_a_canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/create_a_canvas/rate_limiting.md,Rate limiting,Rate limiting,3.9,3,engagement_tools/canvas/create_a_canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/faqs.md,FAQ,Canvas FAQ,8.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started.md,Getting started,Getting Started with Canvas,0.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates.md,Using Braze templates,Use Braze Templates,2.0,3,engagement_tools/canvas/get_started,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart.md,Abandoned cart,Abandoned Cart,1.0,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock.md,Back in stock,Back In Stock,2.0,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/email_signup.md,Email sign-up with double opt-in,Email Sign-Up with Double Opt-In,2.0,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption.md,Feature adoption,Feature Adoption,3.0,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/lapsed_user.md,Lapsed user,Lapsed User,4.0,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/onboarding.md,Onboarding,Onboarding,5.0,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/post_purchase_feedback.md,Post-purchase feedback,Post-Purchase Feedback,6.0,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/preference_survey.md,Onboarding with preferences survey,Onboarding with Preferences Survey,5.5,4,engagement_tools/canvas/get_started/braze_templates,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/canvas_outlines.md,Canvas outlines,Canvas Outlines,3.0,3,engagement_tools/canvas/get_started,False,False
+_docs/_user_guide/engagement_tools/canvas/get_started/the_basics.md,Canvas basics,Canvas Basics,1.0,3,engagement_tools/canvas/get_started,False,False
+_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies.md,Ideas and strategies,Ideas and Strategies,5.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices.md,Best practices,Canvas Best Practices,1.0,3,engagement_tools/canvas/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case.md,Booking reminder email,Use Case Booking Reminder Email System,6.0,3,engagement_tools/canvas/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases.md,eCommerce use cases,eCommerce Use Cases,4.0,3,engagement_tools/canvas/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow.md,Launch with Canvas flow,Launch with Canvas Flow,3.0,3,engagement_tools/canvas/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist.md,Pre and post-launch checklist,Pre and Post-Launch Checklist,2.0,3,engagement_tools/canvas/ideas_and_strategies,False,False
+_docs/_user_guide/engagement_tools/canvas/managing_canvases.md,Manage Canvases,Manage Canvases,2.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts.md,Save drafts for Canvas,Save Drafts for Canvas,1.0,3,engagement_tools/canvas/managing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history.md,Canvas version history,Canvas Version History,2.0,3,engagement_tools/canvas/managing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch.md,Edit Canvases after launch,Edit Canvases After Launch,0.0,3,engagement_tools/canvas/managing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases.md,Cloning Canvases,Clone Canvases,3.0,3,engagement_tools/canvas/managing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/testing_canvases.md,Test Canvases,Test Canvases,4.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/canvas/testing_canvases/canvas_funnel_reports.md,Funnel reports,Funnel reports,4.0,3,engagement_tools/canvas/testing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics.md,Canvas analytics,Canvas Analytics,2.0,3,engagement_tools/canvas/testing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths.md,Preview user paths,Preview User Paths,0.3,3,engagement_tools/canvas/testing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/testing_canvases/retention_reports.md,Retention reports,Retention reports,3.0,3,engagement_tools/canvas/testing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases.md,Send test Canvases,Send Test Canvases,1.0,3,engagement_tools/canvas/testing_canvases,False,False
+_docs/_user_guide/engagement_tools/canvas/troubleshooting.md,Troubleshooting,Troubleshoot Canvases,11.0,2,engagement_tools/canvas,False,False
+_docs/_user_guide/engagement_tools/feature_flags.md,Feature flags,Feature flags for the Braze SDK,32.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/feature_flags/canvas.md,Feature flags in Canvas,Feature flags in Canvas,30.0,2,engagement_tools/feature_flags,False,False
+_docs/_user_guide/engagement_tools/feature_flags/create.md,Create feature flags,Create Feature Flags,20.0,2,engagement_tools/feature_flags,False,False
+_docs/_user_guide/engagement_tools/feature_flags/experiments.md,Feature flag experiments,Feature Flag Experiments,40.0,2,engagement_tools/feature_flags,False,False
+_docs/_user_guide/engagement_tools/feature_flags/faq.md,FAQ,Frequently Asked Questions,50.0,2,engagement_tools/feature_flags,False,False
+_docs/_user_guide/engagement_tools/landing_pages.md,Landing pages,Landing Pages,31.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/landing_pages/about_tracking_data.md,About tracking data,About landing page tracking data,10.0,2,engagement_tools/landing_pages,False,False
+_docs/_user_guide/engagement_tools/landing_pages/creating_pages.md,Create landing pages,Create Landing Pages,0.0,2,engagement_tools/landing_pages,False,False
+_docs/_user_guide/engagement_tools/landing_pages/customizing_urls.md,Customize the URL,Customize landing page URLs,1.0,2,engagement_tools/landing_pages,False,False
+_docs/_user_guide/engagement_tools/landing_pages/personalizing_pages.md,Personalize landing pages,Personalize landing pages,4.0,2,engagement_tools/landing_pages,False,False
+_docs/_user_guide/engagement_tools/landing_pages/retargeting.md,Retargeting users,Retarget Users through a Landing Page,3.0,2,engagement_tools/landing_pages,False,False
+_docs/_user_guide/engagement_tools/landing_pages/tracking_users.md,Tracking users,Track users through a form,2.0,2,engagement_tools/landing_pages,False,False
+_docs/_user_guide/engagement_tools/locations_and_geofences.md,Locations and geofences,Locations and Geofences,6.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/locations_and_geofences/creating_geofences.md,Create geofences,Create Geofences,1.0,2,engagement_tools/locations_and_geofences,False,False
+_docs/_user_guide/engagement_tools/locations_and_geofences/location_tracking.md,Location tracking,Location Tracking,0.0,2,engagement_tools/locations_and_geofences,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals.md,Messaging fundamentals,Messaging Fundamentals,0.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/about_statuses.md,Statuses,Campaign and Canvas statuses,11.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/accessibility.md,Accessibility,Build Accessible Messages in Braze,0.5,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/approvals.md,Approvals,Approvals,1.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules.md,Messaging rules,Messaging Rules,1.0,3,engagement_tools/messaging_fundamentals/approvals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/archiving.md,Archiving,Archiving,2.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/conversion_events.md,Conversion events,Conversion Events,3.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces.md,Copy across workspaces,Copy Across Workspaces,4.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/delivery_types.md,Delivery and entry types,Delivery and Entry Types,5.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks.md,Editor blocks,Drag-and-Drop editor blocks,6.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/duplicating.md,Duplicating,Duplicating,5.5,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/know_before_send.md,Know before you send,Know Before You Send,7.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/localization.md,Localization,Localization,8.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/localization/locales.md,Locales in messages,Translating locales,0.0,3,engagement_tools/messaging_fundamentals/localization,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages.md,Right-to-left messages,Create Right-to-Left Messages,1.0,3,engagement_tools/messaging_fundamentals/localization,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/product_blocks.md,Product blocks,Drag-and-Drop Product Blocks,9.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/reeligibility.md,Re-eligibility,Re-eligibility,10.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/messaging_fundamentals/targeting_users.md,Target users,Target Users,12.0,2,engagement_tools/messaging_fundamentals,False,False
+_docs/_user_guide/engagement_tools/segments.md,Segments,Segments,1.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/segments/creating_a_segment.md,Create a segment,Create a Segment,0.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/location_targeting.md,Location targeting,Location Targeting,10.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/managing_segments.md,Manage segments,Manage Segments,1.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/measuring_segment_size.md,Measure segment size,Measure Segment Size,5.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/regex.md,Regular expressions,Regular Expressions,10.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/segment_extension.md,Segment extensions,Segment Extensions,6.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/segment_extension/cdi_segments.md,CDI segment extensions,CDI Segment Extensions,0.0,3,engagement_tools/segments/segment_extension,False,False
+_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments.md,SQL Segment Extensions,SQL Segment Extensions,3.2,3,engagement_tools/segments/segment_extension,False,False
+_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/catalog_segments.md,Catalog segments,Catalog Segments,0.0,4,engagement_tools/segments/segment_extension/sql_segments,False,False
+_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/rfm_segments.md,RFM segments,RFM SQL segments,1.0,4,engagement_tools/segments/segment_extension/sql_segments,False,False
+_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables.md,SQL table reference,SQL Table Reference,3.0,4,engagement_tools/segments/segment_extension/sql_segments,False,False
+_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/use_cases.md,Use cases,SQL Segment Extensions Use Cases,2.0,4,engagement_tools/segments/segment_extension/sql_segments,False,False
+_docs/_user_guide/engagement_tools/segments/segment_insights.md,Segment insights,Segment Insights,8.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/segmentation_filters.md,Segmentation filters,Segmentation Filters,2.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/suppression_lists.md,Suppression lists,Suppression Lists,3.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/troubleshooting.md,Troubleshooting,Troubleshoot Segments,12.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/user_profiles.md,User profiles,User Profiles,9.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/segments/user_profiles/duplicate_users.md,Duplicate users,Duplicate Users,0.0,3,engagement_tools/segments/user_profiles,False,False
+_docs/_user_guide/engagement_tools/segments/viewing_and_understanding_segment_data.md,Segment data,View and Understand Segment Data,4.0,2,engagement_tools/segments,False,False
+_docs/_user_guide/engagement_tools/templates_and_media.md,Templates and media,Templates and Media,5.0,1,engagement_tools,False,False
+_docs/_user_guide/engagement_tools/templates_and_media/canvas_templates.md,Canvas templates,Canvas templates,2.0,2,engagement_tools/templates_and_media,False,False
+_docs/_user_guide/engagement_tools/templates_and_media/content_blocks.md,Content Blocks Library,Content Blocks Library,1.0,2,engagement_tools/templates_and_media,False,False
+_docs/_user_guide/engagement_tools/templates_and_media/faqs.md,FAQ,Media Library FAQ,5.0,2,engagement_tools/templates_and_media,False,False
+_docs/_user_guide/engagement_tools/templates_and_media/image_specs.md,Image specifications,Image Specifications,4.1,2,engagement_tools/templates_and_media,False,False
+_docs/_user_guide/engagement_tools/templates_and_media/managing_templates.md,Manage templates,Manage Templates,3.0,2,engagement_tools/templates_and_media,False,False
+_docs/_user_guide/engagement_tools/templates_and_media/media_library.md,Media library,Media library,0.0,2,engagement_tools/templates_and_media,False,False
+_docs/_user_guide/engagement_tools/testing.md,Engagement testing,Engagement testing,30.0,1,engagement_tools,False,True
+_docs/_user_guide/engagement_tools/testing/conversion_correlation.md,Conversion correlation,Conversion Correlation,3.0,2,engagement_tools/testing,False,False
+_docs/_user_guide/engagement_tools/testing/global_control_group.md,Global Control Group,Global Control Group,0.0,2,engagement_tools/testing,False,False
+_docs/_user_guide/engagement_tools/testing/multivariant_testing.md,Multivariate & A/B testing,Multivariate and A/B Testing,2.0,2,engagement_tools/testing,False,False
+_docs/_user_guide/engagement_tools/testing/multivariant_testing/ab_test_projection.md,A/B test projection,A/B Test Projection,20.0,3,engagement_tools/testing/multivariant_testing,True,False
+_docs/_user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign.md,Create tests,Create Multivariate and A/B Tests,1.0,3,engagement_tools/testing/multivariant_testing,False,False
+_docs/_user_guide/engagement_tools/testing/multivariant_testing/faq.md,FAQ,Multivariate and A/B Test FAQs,21.0,3,engagement_tools/testing/multivariant_testing,False,False
+_docs/_user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics.md,Analytics,Multivariate and A/B test analytics,10.0,3,engagement_tools/testing/multivariant_testing,False,False
+_docs/_user_guide/engagement_tools/testing/multivariant_testing/optimizations.md,Optimizations,Optimize A/B Tests with Winning Variant or Personalized Variants,1.0,3,engagement_tools/testing/multivariant_testing,False,False
+_docs/_user_guide/engagement_tools/testing/race_conditions.md,Race conditions,Race Conditions,9.0,2,engagement_tools/testing,False,False
+_docs/_user_guide/engagement_tools/testing/random_bucket_numbers.md,Random bucket numbers,Random Bucket Numbers,2.0,2,engagement_tools/testing,False,False
+_docs/_user_guide/getting_started.md,Getting started,Getting Started with Braze,0.1,0,,False,False
+_docs/_user_guide/getting_started/b2b_use_cases.md,B2B use cases,B2B use cases,11.0,1,getting_started,False,False
+_docs/_user_guide/getting_started/b2b_use_cases/account_based_segmentation.md,Account-based segmentation,Set Up Account-Based Segmentation,2.0,2,getting_started/b2b_use_cases,False,False
+_docs/_user_guide/getting_started/b2b_use_cases/b2b_data_models.md,Data models,Create a B2B Data Model,0.0,2,getting_started/b2b_use_cases,False,False
+_docs/_user_guide/getting_started/b2b_use_cases/b2b_salesforce_sales_cloud.md,Salesforce Sales Cloud,Manage leads with Salesforce Sales Cloud,3.0,2,getting_started/b2b_use_cases,False,False
+_docs/_user_guide/getting_started/b2b_use_cases/lead_scoring.md,Lead scoring,Create a Lead-Scoring Workflow,1.0,2,getting_started/b2b_use_cases,False,False
+_docs/_user_guide/getting_started/braze_pilot.md,Braze Pilot,Braze Pilot,10.5,1,getting_started,False,False
+_docs/_user_guide/getting_started/braze_pilot/data_dictionary.md,Data dictionary,Data Dictionary for Braze Pilot,3.0,2,getting_started/braze_pilot,False,False
+_docs/_user_guide/getting_started/braze_pilot/deep_links.md,Navigation deep links,Navigation Deep Links in Braze Pilot,4.0,2,getting_started/braze_pilot,False,False
+_docs/_user_guide/getting_started/braze_pilot/getting_started.md,Getting started,Getting Started with Braze Pilot,2.0,2,getting_started/braze_pilot,False,False
+_docs/_user_guide/getting_started/campaigns_canvases.md,Campaigns and Canvases,Getting Started&#58; Campaigns and Canvases,3.0,1,getting_started,False,False
+_docs/_user_guide/getting_started/integration.md,Integration,Onboarding Integration Overview,8.0,1,getting_started,False,False
+_docs/_user_guide/getting_started/overview.md,Braze overview,Getting Started&#58; Braze Overview,1.0,1,getting_started,False,False
+_docs/_user_guide/getting_started/terms_to_know.md,Terms to know,Braze Terms to Know,10.0,1,getting_started,False,False
+_docs/_user_guide/getting_started/users_segments.md,Users and segments,Getting Started&#58; Users and Segments,2.0,1,getting_started,False,False
+_docs/_user_guide/getting_started/web_sdk.md,SDK overview,SDK Overview,9.0,1,getting_started,False,False
+_docs/_user_guide/getting_started/workspaces.md,Workspaces,Getting Started&#58; Workspaces,3.0,1,getting_started,False,False
+_docs/_user_guide/introduction.md,Home,Braze User Guide,0.0,0,,False,False
+_docs/_user_guide/message_building_by_channel.md,Message building by channel,Message Building by Channel,5.0,0,,False,False
+_docs/_user_guide/message_building_by_channel/banners.md,Banners,About Banners,0.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/banners/analytics.md,Banner analytics,Banner analytics,3.0,2,message_building_by_channel/banners,False,False
+_docs/_user_guide/message_building_by_channel/banners/create.md,Create a Banner,Create a Banner,1.0,2,message_building_by_channel/banners,False,False
+_docs/_user_guide/message_building_by_channel/banners/faq.md,FAQ,Banners: Frequently Asked Questions,10.0,2,message_building_by_channel/banners,False,False
+_docs/_user_guide/message_building_by_channel/banners/testing.md,Testing,Testing,2.0,2,message_building_by_channel/banners,False,False
+_docs/_user_guide/message_building_by_channel/content_cards.md,Content Cards,Content Cards,1.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/best_practices.md,Best practices,Content Card Best Practices,20.0,2,message_building_by_channel/content_cards,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/best_practices/improving_low_latency_requirements.md,Improving low latency,Improve Low Latency for Content Cards as banners,10.0,3,message_building_by_channel/content_cards/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/best_practices/know_before_send.md,Know before you send,Know before you send,999.0,3,message_building_by_channel/content_cards/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/create.md,Create a Content Card,Create a Content Card,0.0,2,message_building_by_channel/content_cards,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/create/card_creation.md,Card creation,Card Creation,0.0,3,message_building_by_channel/content_cards/create,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/creative_details.md,Creative details,Creative Details for Content Cards,1.0,2,message_building_by_channel/content_cards,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/reporting.md,Reporting,Content Card Reporting,4.0,2,message_building_by_channel/content_cards,False,False
+_docs/_user_guide/message_building_by_channel/content_cards/testing.md,Testing,Testing,3.0,2,message_building_by_channel/content_cards,False,False
+_docs/_user_guide/message_building_by_channel/email.md,Email,Email,1.5,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/email/amphtml.md,AMP for email,AMP for Email,11.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/apple_mail.md,Apple Mail,Apple Mail,7.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_SSO.md,Send emails to Apple Private Relay,Send Emails to Apple Private Relay,0.0,3,message_building_by_channel/email/apple_mail,False,False
+_docs/_user_guide/message_building_by_channel/email/apple_mail/mpp.md,Apple Mail Privacy Protection,Apple Mail Privacy Protection for iOS 15,1.0,3,message_building_by_channel/email/apple_mail,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices.md,Best practices,Email Best Practices,14.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices/duplicate_emails.md,Duplicate emails,Duplicate Emails,7.0,3,message_building_by_channel/email/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices/email_services.md,Email services,Email Services,9.0,3,message_building_by_channel/email/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices/email_styling.md,Email styling,Email Styling,2.0,3,message_building_by_channel/email/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips.md,Email guidelines,Email Guidelines,1.0,3,message_building_by_channel/email/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices/know_before_send.md,Know before you send,Know before you send,999.0,3,message_building_by_channel/email/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices/sunset_policies.md,Sunset policies,Sunset Policies for Email,8.0,3,message_building_by_channel/email/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/email/best_practices/use_cases.md,Email use cases,Email Use Cases,3.0,3,message_building_by_channel/email/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/email/custom_email_footer.md,Custom email footer,Custom Email Footer,6.5,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/drag_and_drop.md,Drag-and-drop editor,Drag-And-Drop Editor for Email,3.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks.md,Content Blocks,Drag-and-Drop Editor Content Blocks,2.0,3,message_building_by_channel/email/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks.md,Editor blocks,Drag-and-drop editor blocks,1.0,3,message_building_by_channel/email/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings.md,Email Global Style Settings,Email Global Style Settings,3.0,3,message_building_by_channel/email/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/email/drag_and_drop/faq.md,FAQ,Drag-and-Drop Editor FAQ,5.0,3,message_building_by_channel/email/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/email/drag_and_drop/overview.md,Create an email,Create an Email with Drag-and-Drop,0.0,3,message_building_by_channel/email/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup.md,Email setup,Onboarding Email Setup,1.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/authentication.md,Email authentication,Email Authentication,2.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection.md,Consent & address collection,Consent & Address Collection,6.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps.md,Deliverability pitfalls & spam traps,Deliverability Pitfalls & Spam Traps,7.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/email_validation.md,Email validation,Email Validation,3.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/import_your_email_list.md,Import your email list,Import Your Email List into Braze,4.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/ip_warming.md,IP warming,IP Warming,1.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains.md,Set up IPs & domains,Set Up IPs & Domains,0.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/email_setup/ssl.md,SSL at Braze,SSL Overview,5.0,3,message_building_by_channel/email/email_setup,False,False
+_docs/_user_guide/message_building_by_channel/email/faq.md,FAQ,Email FAQ,15.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/html_editor.md,HTML editor,HTML Editor for Email,4.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign.md,Create an email,Create an Email with Custom HTML,1.0,3,message_building_by_channel/email/html_editor,False,False
+_docs/_user_guide/message_building_by_channel/email/html_editor/css_inline.md,CSS inlining,CSS Inlining,5.1,3,message_building_by_channel/email/html_editor,False,False
+_docs/_user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab.md,Gmail promotions setup,Gmail Promotions Setup,8.0,3,message_building_by_channel/email/html_editor,False,False
+_docs/_user_guide/message_building_by_channel/email/html_editor/troubleshooting.md,Troubleshooting,Troubleshooting,9.0,3,message_building_by_channel/email/html_editor,False,False
+_docs/_user_guide/message_building_by_channel/email/inbox_vision.md,Inbox Vision,Inbox Vision,9.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/managing_user_subscriptions.md,Email subscriptions,Email Subscriptions,6.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/preference_center.md,Preference center,Preference Center,8.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/preference_center/api_preference_center.md,API email preference center,API email preference center,1.0,3,message_building_by_channel/email/preference_center,False,False
+_docs/_user_guide/message_building_by_channel/email/preference_center/dnd_preference_center.md,Drag-and-drop email preference center,Drag-And-Drop Email Preference Center,2.0,3,message_building_by_channel/email/preference_center,False,False
+_docs/_user_guide/message_building_by_channel/email/reporting_and_analytics.md,Reporting & analytics,Reporting & analytics,12.0,2,message_building_by_channel/email,False,True
+_docs/_user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary.md,Email Analytics Glossary,Email Analytics Glossary,0.0,3,message_building_by_channel/email/reporting_and_analytics,False,False
+_docs/_user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting.md,Reporting,Email Reporting,20.0,3,message_building_by_channel/email/reporting_and_analytics,False,False
+_docs/_user_guide/message_building_by_channel/email/templates.md,Templates,Email Templates,5.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/templates/email_template.md,Create an email template,Create an Email Template,0.0,3,message_building_by_channel/email/templates,False,False
+_docs/_user_guide/message_building_by_channel/email/templates/faq.md,FAQ,Email and Link Template FAQ,10.0,3,message_building_by_channel/email/templates,False,False
+_docs/_user_guide/message_building_by_channel/email/templates/html_email_template.md,Upload an HTML email template,Upload an HTML Email Template,2.0,3,message_building_by_channel/email/templates,False,False
+_docs/_user_guide/message_building_by_channel/email/templates/link_aliasing.md,Link aliasing,Link Aliasing,3.0,3,message_building_by_channel/email/templates,False,False
+_docs/_user_guide/message_building_by_channel/email/templates/link_template.md,Link templates,Link Templates,4.0,3,message_building_by_channel/email/templates,False,False
+_docs/_user_guide/message_building_by_channel/email/testing.md,Testing,Testing,13.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/transactional_message_api_campaign.md,Transactional email campaigns,Transactional Email Campaigns,10.0,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/email/transactional_message_api_campaign/tracking_transactional_emails.md,Track transactional emails,Track Transactional Emails,1.0,3,message_building_by_channel/email/transactional_message_api_campaign,False,False
+_docs/_user_guide/message_building_by_channel/email/universal_links.md,Universal links and app links,Universal Links and App Links,6.4,2,message_building_by_channel/email,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages.md,In-app messages,In-App Messages,2.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/best_practices.md,Best practices,In-App Message Best Practices,11.0,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/best_practices/know_before_send.md,Know before you send,Know before you send,999.0,3,message_building_by_channel/in-app_messages/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide.md,Prep guide,In-App Message Prep Guide,0.5,3,message_building_by_channel/in-app_messages/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/creative_details.md,Creative details,Creative Details,3.5,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen.md,Fullscreen,Fullscreen In-App Messages,0.0,3,message_building_by_channel/in-app_messages/creative_details,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/creative_details/modal.md,Modal,Modal In-App Messages,1.0,3,message_building_by_channel/in-app_messages/creative_details,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/creative_details/slideup.md,Slideup,Slideup In-app Messages,2.0,3,message_building_by_channel/in-app_messages/creative_details,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop.md,Drag-and-drop editor,Drag-And-Drop Editor for In-App Messages,2.0,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create.md,Create an in-app message,Creating an In-App Message with Drag-and-Drop,1.0,3,message_building_by_channel/in-app_messages/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks.md,Editor blocks,Drag-and-drop editor blocks,5.0,3,message_building_by_channel/in-app_messages/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings.md,Style settings,In-App Message Style Settings,3.0,3,message_building_by_channel/in-app_messages/drag_and_drop,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates.md,Templates,Templates,10.0,3,message_building_by_channel/in-app_messages/drag_and_drop,False,True
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_capture.md,Email sign-up form,Email Sign-up Form,2.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_confirmation_page.md,Email sign-up with confirmation,Email Sign-up with Confirmation Page,6.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_discount.md,Email sign-up with discount,Email Sign-up with Discount,3.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_image.md,Email sign-up with image,Email Sign-up with Background Image,4.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_offer.md,Email sign-up with offer,Email Sign-up with Special Offer,5.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/onboarding.md,Onboarding flow,Onboarding Flow,0.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture.md,"SMS, RCS, and WhatsApp sign-up form","SMS, RCS, and WhatsApp Sign-up Form",1.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/product_announcement.md,Product announcement,Product Announcement,7.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/seasonal_promo.md,Seasonal promotion with image,Seasonal Promotion with Background Image,8.0,4,message_building_by_channel/in-app_messages/drag_and_drop/templates,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/faq.md,FAQ,In-App Message FAQ,19.0,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt.md,In-app rating prompt for iOS,In-app rating prompt for iOS,6.0,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/reporting.md,Reporting,In-App Message Reporting,5.0,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/testing.md,Testing,Testing,4.5,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional.md,Traditional editor,Traditional Editor for In-App Messages,3.0,2,message_building_by_channel/in-app_messages,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/create.md,Create an in-app message,Create an In-App Message,1.0,3,message_building_by_channel/in-app_messages/traditional,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize.md,Customize,Custom In-App Messages,2.0,3,message_building_by_channel/in-app_messages/traditional,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css.md,Color profiles and CSS templates,Color Profiles and CSS Templates for In-App Messages,4.0,4,message_building_by_channel/in-app_messages/traditional/customize,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form.md,Email capture form,Email Capture Form,3.0,4,message_building_by_channel/in-app_messages/traditional/customize,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages.md,HTML in-app messages,Custom HTML In-App Messages,0.0,4,message_building_by_channel/in-app_messages/traditional/customize,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/video.md,Video,Video in In-App Messages,4.0,4,message_building_by_channel/in-app_messages/traditional/customize,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode.md,Dark mode themes,Dark Mode for In-App Messages,5.0,3,message_building_by_channel/in-app_messages/traditional,False,False
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/templates.md,Templates,Templates,3.0,3,message_building_by_channel/in-app_messages/traditional,False,True
+_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey.md,Simple survey,Simple Survey In-App Message,1.5,4,message_building_by_channel/in-app_messages/traditional/templates,False,False
+_docs/_user_guide/message_building_by_channel/line.md,LINE,LINE,3.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/line/create.md,Create a LINE message,Create a LINE Message,1.0,2,message_building_by_channel/line,False,False
+_docs/_user_guide/message_building_by_channel/line/create/line_click_tracking.md,LINE click tracking,LINE Click Tracking,2.0,3,message_building_by_channel/line/create,False,False
+_docs/_user_guide/message_building_by_channel/line/create/message_types.md,Message types,LINE Message Types,0.0,3,message_building_by_channel/line/create,False,False
+_docs/_user_guide/message_building_by_channel/line/line_setup.md,LINE setup,LINE Setup,0.0,2,message_building_by_channel/line,False,False
+_docs/_user_guide/message_building_by_channel/line/line_users.md,LINE users,LINE users,4.0,2,message_building_by_channel/line,False,True
+_docs/_user_guide/message_building_by_channel/line/line_users/subscription_groups.md,Subscription groups,Subscription Groups,1.0,3,message_building_by_channel/line/line_users,False,False
+_docs/_user_guide/message_building_by_channel/line/line_users/user_management.md,User management,LINE User Management,0.0,3,message_building_by_channel/line/line_users,False,False
+_docs/_user_guide/message_building_by_channel/line/messaging_users.md,Messaging users,Message LINE Users,2.0,2,message_building_by_channel/line,False,False
+_docs/_user_guide/message_building_by_channel/line/reporting.md,Reporting,LINE Reporting,4.0,2,message_building_by_channel/line,False,False
+_docs/_user_guide/message_building_by_channel/line/testing.md,Testing,Testing,5.0,2,message_building_by_channel/line,False,False
+_docs/_user_guide/message_building_by_channel/push.md,Push,Push,4.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/push/advanced_push_options.md,Advanced push options,Advanced Push Options,5.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons.md,Push action buttons,Push Action Buttons,1.0,3,message_building_by_channel/push/advanced_push_options,False,False
+_docs/_user_guide/message_building_by_channel/push/advanced_push_options/push_stories.md,Push stories,Push Stories,2.0,3,message_building_by_channel/push/advanced_push_options,False,False
+_docs/_user_guide/message_building_by_channel/push/android.md,Android options,Android Push Options,7.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/android/advanced_campaign_settings.md,Advanced push campaign settings,Advanced Push Campaign Settings,5.0,3,message_building_by_channel/push/android,False,False
+_docs/_user_guide/message_building_by_channel/push/android/notification_channels.md,Notification channels,Push Notification Channels,4.0,3,message_building_by_channel/push/android,False,False
+_docs/_user_guide/message_building_by_channel/push/android/notification_options.md,Notification options,Android Notification Options,2.0,3,message_building_by_channel/push/android,False,False
+_docs/_user_guide/message_building_by_channel/push/android/push_max.md,Push Max,Push Max,999.0,3,message_building_by_channel/push/android,False,False
+_docs/_user_guide/message_building_by_channel/push/android/rich_notifications.md,Create rich notifications,Creating rich push notifications for Android,3.0,3,message_building_by_channel/push/android,False,False
+_docs/_user_guide/message_building_by_channel/push/best_practices.md,Best practices,Push Best Practices,20.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability.md,Deliverability for Chinese Android devices,Push deliverability for Chinese Android Devices,10.0,3,message_building_by_channel/push/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/push/best_practices/know_before_send.md,Know before you send,Know before you send,999.0,3,message_building_by_channel/push/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/push/best_practices/message_format.md,Message formats,Push Message and Image Formats,5.0,3,message_building_by_channel/push/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/push/best_practices/push_primer_messages.md,Push primer in-app messages,Push Primer In-App Messages,1.0,3,message_building_by_channel/push/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/push/creating_a_push_message.md,Create a push message,Create a Push Campaign,4.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/creating_a_push_message/quick_push.md,Quick push messages,Quick Push Messages,999.0,3,message_building_by_channel/push/creating_a_push_message,False,False
+_docs/_user_guide/message_building_by_channel/push/faq.md,FAQs,Push FAQs,25.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/ios.md,iOS options,iOS Push Options,8.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/ios/customizable_app_icons.md,Custom app icon feature (iOS),Custom App Icon Feature,7.0,3,message_building_by_channel/push/ios,False,False
+_docs/_user_guide/message_building_by_channel/push/ios/notification_options.md,Notification options,iOS Notification Options,2.0,3,message_building_by_channel/push/ios,False,False
+_docs/_user_guide/message_building_by_channel/push/ios/rich_notifications.md,Create rich notifications,Creating rich push notifications for iOS,3.0,3,message_building_by_channel/push/ios,False,False
+_docs/_user_guide/message_building_by_channel/push/ios/utilizing_badge_count.md,Utilizing badge count,Utilizing Badge Count,8.0,3,message_building_by_channel/push/ios,False,False
+_docs/_user_guide/message_building_by_channel/push/push_error_codes.md,Common push error messages,Common Push Error Messages,22.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/push_registration.md,Push registration,Push Registration,2.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/push_reporting.md,Reporting,Push Reporting,21.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/testing.md,Testing,Testing,23.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/troubleshooting.md,Troubleshooting,Troubleshooting Push,24.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/types.md,Types of push notifications,Types of Push Notifications,1.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/users_and_subscriptions.md,Push enablement and subscription,Push Enablement and Subscription,3.0,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/push/web.md,Web push,Web Push Notifications,8.5,2,message_building_by_channel/push,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs.md,"SMS, MMS, and RCS","SMS, MMS, and RCS",4.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices.md,Best practices,"Best Practices for SMS, MMS, and RCS",15.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices/know_before_send.md,Know before you send,Know before you send,999.0,3,message_building_by_channel/sms_mms_rcs/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices/opt-ins.md,Collecting user opt-ins,Best Practices for Collecting User SMS Opt-Ins,7.0,3,message_building_by_channel/sms_mms_rcs/best_practices,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/bot_click_filtering.md,Bot click filtering,SMS and RCS Bot Click Filtering,11.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/campaign_analytics.md,Reporting,"Reporting for SMS, MMS, and RCS",12.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/geographic_permissions.md,Geographic permissions,Geographic Permissions,2.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords.md,Keyword processing,Keyword Processing,6.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in.md,Double opt-in,Double Opt-In,2.0,3,message_building_by_channel/sms_mms_rcs/keywords,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/fuzzy_opt_out.md,Fuzzy opt-out,Fuzzy Opt-Out,1.0,3,message_building_by_channel/sms_mms_rcs/keywords,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling.md,Custom keyword handling,Custom Keyword Handling,3.0,3,message_building_by_channel/sms_mms_rcs/keywords,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout.md,Opt-in & opt-out keywords,SMS Opt-In/Opt-Out Keywords,0.0,3,message_building_by_channel/sms_mms_rcs/keywords,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/unknown_phone_numbers.md,Handle unknown phone numbers,Handle Unknown Phone Numbers,4.0,3,message_building_by_channel/sms_mms_rcs/keywords,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations.md,Laws & regulations,"Laws & Regulations for SMS, MMS, and RCS",0.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/link_shortening.md,Link shortening,Link Shortening,3.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains.md,Self-serve custom domains,Self-Serve Custom Domains,0.0,3,message_building_by_channel/sms_mms_rcs/link_shortening,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/message_usage.md,Message usage dashboard,Message Usage Dashboard,10.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms.md,MMS,About MMS,16.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card.md,Contact cards,Contact Cards,3.0,3,message_building_by_channel/sms_mms_rcs/mms,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/create.md,Create an MMS campaign,Create an MMS Campaign,2.0,3,message_building_by_channel/sms_mms_rcs/mms,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/faqs.md,FAQ,MMS FAQ,4.0,3,message_building_by_channel/sms_mms_rcs/mms,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/mms_short_long_codes.md,MMS short and long codes,MMS Short and Long Codes,1.0,3,message_building_by_channel/sms_mms_rcs/mms,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/phone_numbers_capture.md,Phone number capture,Phone Number Capture,8.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/rcs.md,RCS,About Rich Communication Services (RCS),15.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/rcs/create.md,Create an RCS message,Create an RCS Message,2.0,3,message_building_by_channel/sms_mms_rcs/rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/rcs/rcs_setup.md,RCS setup,RCS Setup,1.0,3,message_building_by_channel/sms_mms_rcs/rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/retargeting.md,User retargeting,User Retargeting,4.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/segments.md,Billing calculator,SMS and RCS Billing Calculators,5.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes.md,SMS and RCS senders,SMS and RCS Senders,9.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms.md,SMS,About SMS,14.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/create.md,Create an SMS message,Create an SMS message,5.0,3,message_building_by_channel/sms_mms_rcs/sms,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/faqs.md,FAQ,SMS FAQ,12.0,3,message_building_by_channel/sms_mms_rcs/sms,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup.md,SMS setup,SMS setup,1.0,3,message_building_by_channel/sms_mms_rcs/sms,False,True
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending.md,Send SMS messages,SMS Message Sending Overview,4.0,4,message_building_by_channel/sms_mms_rcs/sms/sms_setup,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/terms.md,Terms to know,SMS Terms to Know,1.0,4,message_building_by_channel/sms_mms_rcs/sms/sms_setup,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/subscription_groups.md,Subscription groups,SMS and RCS Subscription Groups,1.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/testing.md,Testing,Testing,13.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers.md,User phone numbers,SMS User Phone Numbers,7.0,2,message_building_by_channel/sms_mms_rcs,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc.md,A2P 10DLC,A2P 10DLC,2.9,3,message_building_by_channel/sms_mms_rcs/user_phone_numbers,False,False
+_docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application.md,10DLC application,Required Information for 10DLC application,999.0,4,message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc,False,False
+_docs/_user_guide/message_building_by_channel/webhooks.md,Webhooks,Webhooks,4.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks.md,Create a Braze-to-Braze webhook,Create a Braze-to-Braze Webhook,3.0,2,message_building_by_channel/webhooks,False,False
+_docs/_user_guide/message_building_by_channel/webhooks/creating_a_webhook.md,Create a webhook,Create a Webhook,1.0,2,message_building_by_channel/webhooks,False,False
+_docs/_user_guide/message_building_by_channel/webhooks/lead_scoring.md,Lead scoring,Lead scoring,6.0,2,message_building_by_channel/webhooks,False,False
+_docs/_user_guide/message_building_by_channel/webhooks/reporting.md,Reporting,Webhook Reporting,10.0,2,message_building_by_channel/webhooks,False,False
+_docs/_user_guide/message_building_by_channel/webhooks/testing.md,Testing,Testing,11.0,2,message_building_by_channel/webhooks,False,False
+_docs/_user_guide/message_building_by_channel/webhooks/webhook_template.md,Create a webhook template,Create a Webhook Template,2.0,2,message_building_by_channel/webhooks,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp.md,WhatsApp,WhatsApp,5.0,1,message_building_by_channel,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/faqs.md,FAQ,WhatsApp FAQ,11.0,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/message_processing.md,Message processing,Message processing,3.1,2,message_building_by_channel/whatsapp,False,True
+_docs/_user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers.md,Handle unknown phone numbers,Handle Unknown Phone Numbers,50.0,3,message_building_by_channel/whatsapp/message_processing,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs.md,Opt-ins & opt-outs,WhatsApp Opt-Ins and Opt-Outs,5.0,3,message_building_by_channel/whatsapp/message_processing,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/message_processing/quality_rating.md,Quality rating and messaging limits,Quality Rating and Messaging Limits,999.0,3,message_building_by_channel/whatsapp/message_processing,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/message_processing/user_messages.md,Messaging users,Message Users,5.1,3,message_building_by_channel/whatsapp/message_processing,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/meta_resources.md,Meta resources,Meta Resources,12.0,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/overview.md,WhatsApp setup,WhatsApp Setup,1.0,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/overview/byo_connector.md,BYO WhatsApp connector,Bring Your Own WhatsApp connector,0.0,3,message_building_by_channel/whatsapp/overview,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/overview/embedded_signup.md,Embedded signup,WhatsApp Embedded Signup,1.0,3,message_building_by_channel/whatsapp/overview,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/overview/multiple_subscription_groups.md,Multiple business accounts,Multiple WhatsApp Business Accounts and Phone Numbers,3.0,3,message_building_by_channel/whatsapp/overview,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/overview/phone_number_acquisition.md,Phone number acquisition,Phone Number Acquisition,4.0,3,message_building_by_channel/whatsapp/overview,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/overview/phone_number_migration.md,WhatsApp phone number migration,WhatsApp Phone Number Migration,3.0,3,message_building_by_channel/whatsapp/overview,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/overview/transfer_between_workspaces.md,Transfer between workspaces,Transfer phone numbers and subscription groups between workspaces,5.0,3,message_building_by_channel/whatsapp/overview,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/testing.md,Testing,Testing,10.0,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/user_phone_numbers.md,User phone numbers,WhatsApp User Phone Numbers,1.5,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/user_subscription.md,Subscription groups,WhatsApp Subscription Groups,1.0,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices.md,Best practices,WhatsApp Best Practices,9.0,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign.md,WhatsApp campaign,WhatsApp campaign,3.0,2,message_building_by_channel/whatsapp,False,True
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking.md,Click tracking,Click Tracking,3.0,3,message_building_by_channel/whatsapp/whatsapp_campaign,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create.md,Create a WhatsApp message,Create a WhatsApp Message,0.0,3,message_building_by_channel/whatsapp/whatsapp_campaign,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains.md,Custom domains,Custom domains,5.0,3,message_building_by_channel/whatsapp/whatsapp_campaign,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/optimized_delivery.md,WhatsApp messages with optimized delivery,WhatsApp messages with optimized delivery,1.0,3,message_building_by_channel/whatsapp/whatsapp_campaign,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/product_messages.md,Product messages,Product Messages,2.0,3,message_building_by_channel/whatsapp/whatsapp_campaign,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting.md,User retargeting,User Retargeting,4.0,3,message_building_by_channel/whatsapp/whatsapp_campaign,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/whatsapp_flows.md,WhatsApp Flows,WhatsApp Flows,1.0,3,message_building_by_channel/whatsapp/whatsapp_campaign,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics.md,Reporting,WhatsApp Reporting,7.0,2,message_building_by_channel/whatsapp,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage.md,Message usage dashboard,Message Usage Dashboard,0.0,3,message_building_by_channel/whatsapp/whatsapp_campaign_analytics,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases.md,WhatsApp use cases,WhatsApp use cases,7.0,2,message_building_by_channel/whatsapp,False,True
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases/ads_that_click.md,Ads That Click to WhatsApp,Ads That Click to WhatsApp,1.0,3,message_building_by_channel/whatsapp/whatsapp_use_cases,False,False
+_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases/external_system.md,WhatsApp and external system,Integrate Braze and WhatsApp with an external system,2.0,3,message_building_by_channel/whatsapp/whatsapp_use_cases,False,False
+_docs/_user_guide/onboarding_faq.md,Onboarding Faq,FAQ,999.0,0,,True,False
+_docs/_user_guide/personalization_and_dynamic_content.md,Personalization & dynamic content,Personalization & Dynamic Content,6.0,0,,False,False
+_docs/_user_guide/personalization_and_dynamic_content/canvas_persistent_entry_properties.md,Canvas persistent entry properties,Canvas Persistent Entry Properties,6.0,1,personalization_and_dynamic_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content.md,Connected Content,Connected Content,1.0,1,personalization_and_dynamic_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content.md,Aborting Connected Content,Abort Connected Content,2.0,2,personalization_and_dynamic_content/connected_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content/caching_responses.md,Caching responses,Cache Connected Content Responses,2.5,2,personalization_and_dynamic_content/connected_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries.md,Connected Content retries,Connected Content Retries,5.0,2,personalization_and_dynamic_content/connected_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables.md,Local Connected Content variables,Local Connected Content Variables,1.0,2,personalization_and_dynamic_content/connected_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call.md,Making a Connected Content call,Making a Connected Content API Call,0.0,2,personalization_and_dynamic_content/connected_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content/public_apis.md,Using public APIs,Public APIs for Connected Content,10.0,2,personalization_and_dynamic_content/connected_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content.md,Pulling user profile data,Pull User Profile Data in Connected Content Calls,3.0,2,personalization_and_dynamic_content/connected_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content.md,Deep linking to in-app content,Deep Linking to In-App Content,3.0,1,personalization_and_dynamic_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/key_value_pairs.md,Key-value pairs,Key-Value Pairs,4.0,1,personalization_and_dynamic_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid.md,Liquid,Liquid,0.0,1,personalization_and_dynamic_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/aborting_messages.md,Aborting messages,Abort Liquid Messages,7.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/advanced_filters.md,Advanced filters,Advanced Liquid Filters,4.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras.md,Message extras tag,Message Extras Tag,1.0,3,personalization_and_dynamic_content/liquid/advanced_filters,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/conditional_logic.md,Conditional messaging logic,Conditional Liquid Messaging Logic,6.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/faq.md,FAQ,Frequently Asked Questions,12.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/filters.md,Filters,Liquid Filters,3.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md,Liquid use case library,Liquid Use Case Library,10.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/operators.md,Operators,Liquid Operators,2.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/setting_default_values.md,Set default values,Set Default Liquid Values,5.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags.md,Supported personalization tags,Supported Liquid Personalization Tags,1.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/tutorials.md,Tutorials,Tutorials: Writing Liquid code,11.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/liquid/using_liquid.md,Using Liquid,Liquid Use Case and Overview,0.0,2,personalization_and_dynamic_content/liquid,False,False
+_docs/_user_guide/personalization_and_dynamic_content/overview.md,Overview,Overview,999.0,1,personalization_and_dynamic_content,True,False
+_docs/_user_guide/personalization_and_dynamic_content/promotion_codes.md,Promotion codes,Promotion Codes,5.0,1,personalization_and_dynamic_content,False,False
+_docs/_user_guide/personalization_and_dynamic_content/promotion_codes/create.md,Create codes,Create promotion codes,0.1,2,personalization_and_dynamic_content/promotion_codes,False,False
+_docs/_user_guide/personalization_and_dynamic_content/promotion_codes/manage.md,Using codes,Using promotion codes,0.2,2,personalization_and_dynamic_content/promotion_codes,False,False
+_docs/_user_guide/personalization_and_dynamic_content/promotion_codes/migrating_from_data_feeds.md,Migrate from data feeds,Migrate from Data Feeds to Promotion Codes,10.0,2,personalization_and_dynamic_content/promotion_codes,False,False
+_docs/_user_guide/privacy_portal.md,Privacy portal,Privacy Portal,60.0,0,,False,False

@@ -1,0 +1,937 @@
+_meta:
+  title: User Guide (Proposed)
+  total_entries: 393
+  generated_by: generate_ia_tree.py
+sections:
+- nav_title: Home
+  page_count: 1
+- nav_title: Get started
+  annotation: Braze overview becomes landing page
+  page_count: 9
+  children:
+  - nav_title: Users and segments
+    page_count: 1
+  - nav_title: Campaigns and Canvases
+    page_count: 1
+  - nav_title: Workspaces
+    page_count: 1
+  - nav_title: Integrations
+    page_count: 1
+  - nav_title: SDK overview
+    page_count: 1
+  - nav_title: Terms to know
+    page_count: 1
+  - nav_title: Braze Pilot
+    page_count: 1
+  - nav_title: B2B use cases
+    page_count: 1
+- nav_title: Administer
+  page_count: 40
+  children:
+  - nav_title: Personal
+    page_count: 6
+    children:
+    - nav_title: Accessing your account
+      annotation: combines "Accessing your account" and "Troubleshooting Braze access"
+      page_count: 1
+    - nav_title: The Braze dashboard
+      page_count: 1
+    - nav_title: Language settings
+      page_count: 1
+    - nav_title: Product portal
+      page_count: 1
+    - nav_title: Braze support
+      page_count: 1
+  - nav_title: Global
+    page_count: 33
+    children:
+    - nav_title: User management
+      page_count: 6
+      children:
+      - nav_title: Manage Braze users
+        page_count: 1
+      - nav_title: Permissions
+        page_count: 1
+      - nav_title: Teams
+        page_count: 1
+      - nav_title: Automated user provisioning
+        page_count: 1
+      - nav_title: Internal groups
+        page_count: 1
+    - nav_title: SAML & single sign-on
+      page_count: 6
+      children:
+      - nav_title: SAML SSO setup
+        page_count: 1
+      - nav_title: SAML Just-in-Time provisioning
+        page_count: 1
+      - nav_title: Microsoft Entra SSO
+        page_count: 1
+      - nav_title: Okta
+        page_count: 1
+      - nav_title: OneLogin
+        page_count: 1
+    - nav_title: Create and manage workspaces
+      page_count: 1
+    - nav_title: Workspace settings
+      page_count: 12
+      children:
+      - nav_title: APIs and identifiers
+        page_count: 1
+      - nav_title: Brand guidelines
+        page_count: 1
+      - nav_title: Email preferences
+        page_count: 1
+      - nav_title: Logs and alerts
+        page_count: 5
+        children:
+        - nav_title: API usage alerts
+          page_count: 1
+        - nav_title: Event user log
+          page_count: 1
+        - nav_title: Exports log
+          page_count: 1
+        - nav_title: Message activity log
+          page_count: 1
+      - nav_title: Multi-language settings
+        page_count: 1
+      - nav_title: Push settings
+        page_count: 1
+      - nav_title: Tags
+        page_count: 1
+    - nav_title: Company settings
+      page_count: 4
+      children:
+      - nav_title: Contact information
+        page_count: 1
+      - nav_title: Notification preferences
+        page_count: 1
+      - nav_title: Security settings
+        page_count: 1
+    - nav_title: Billing
+      page_count: 2
+      children:
+      - nav_title: Message Usage Dashboard
+        annotation: renaming to "Credits dashboard" soon"
+        page_count: 1
+    - nav_title: Privacy
+      page_count: 1
+- nav_title: Data
+  annotation: landing page becomes introduction to BDP. Remove BDP article
+  page_count: 65
+  children:
+  - nav_title: Unification
+    page_count: 21
+    children:
+    - nav_title: Cloud Data Ingestion
+      page_count: 11
+      children:
+      - nav_title: Best practices
+        page_count: 1
+      - nav_title: Connected Sources
+        page_count: 1
+      - nav_title: Data warehouse integrations
+        page_count: 1
+      - nav_title: File storage integrations
+        page_count: 1
+      - nav_title: Sync and delete account data
+        page_count: 1
+      - nav_title: Sync and delete catalog data
+        page_count: 1
+      - nav_title: Zero-copy personalization
+        page_count: 1
+      - nav_title: Sync logs and observability
+        page_count: 1
+      - nav_title: Delete users with CDI
+        page_count: 1
+      - nav_title: FAQ
+        page_count: 1
+    - nav_title: Data Transformation
+      page_count: 1
+    - nav_title: Create a formula
+      page_count: 1
+    - nav_title: User data
+      page_count: 7
+      children:
+      - nav_title: SDK data collection
+        page_count: 1
+      - nav_title: User profile lifecycle
+        page_count: 1
+      - nav_title: Anonymous users
+        page_count: 1
+      - nav_title: Collection use case
+        page_count: 1
+      - nav_title: Collection best practices
+        page_count: 1
+      - nav_title: Language codes
+        page_count: 1
+  - nav_title: Activation
+    annotation: Landing page describes what “custom data” means in Braze. Includes tile linking to Report metrics glossary.
+      Remove glossary link from left-nav
+    page_count: 16
+    children:
+    - nav_title: Attributes
+      annotation: new landing page, an overview of attributes similar to the one for events
+      page_count: 5
+      children:
+      - nav_title: Custom attributes
+        page_count: 1
+      - nav_title: Array of objects
+        page_count: 1
+      - nav_title: Nested custom attributes
+        page_count: 1
+      - nav_title: Data types
+        annotation: new article, pulls "Custom attribute data types" content
+        page_count: 1
+    - nav_title: Events
+      annotation: update landing page with recommended events
+      page_count: 6
+      children:
+      - nav_title: Custom events
+        page_count: 1
+      - nav_title: Recommented events
+        page_count: 3
+        children:
+        - nav_title: eCommerce recommended events
+          page_count: 1
+        - nav_title: Purchase events
+          page_count: 1
+      - nav_title: Event naming conventions
+        page_count: 1
+    - nav_title: Catalogs
+      page_count: 1
+    - nav_title: Tags
+      page_count: 1
+    - nav_title: Manage custom data
+      annotation: 'new article, one page for how to manage custom events / attributes. Topics to include: Adding descriptions,
+        adding tags, blocklisting, pre-populating custom data, managing event properties, forcing data type comparisons, removing
+        events or attributes, marking custom attributes as PII'
+      page_count: 1
+    - nav_title: Blocklist custom data
+      annotation: new article one page for how to blocklist and delete custom events and attributes
+      page_count: 1
+  - nav_title: Distribution
+    page_count: 22
+    children:
+    - nav_title: Currents
+      page_count: 13
+      children:
+      - nav_title: Set up Currents
+        page_count: 3
+        children:
+        - nav_title: Available partners
+          page_count: 1
+        - nav_title: Event delivery semantics
+          page_count: 1
+      - nav_title: Currents event glossary
+        page_count: 4
+        children:
+        - nav_title: Customer behavior and user events
+          page_count: 1
+        - nav_title: Message engagement events
+          page_count: 1
+        - nav_title: Currents event changelogs
+          page_count: 1
+      - nav_title: Use cases
+        page_count: 4
+        children:
+        - nav_title: Transfer data from Amazon S3 to Snowflake
+          page_count: 1
+        - nav_title: Transfer data to Redshift
+          page_count: 1
+        - nav_title: How Braze uses Currents
+          page_count: 1
+      - nav_title: FAQ
+        page_count: 1
+    - nav_title: Export Braze data
+      page_count: 8
+      children:
+      - nav_title: Message archiving
+        page_count: 1
+      - nav_title: Campaign data
+        page_count: 1
+      - nav_title: Canvas data
+        page_count: 1
+      - nav_title: Segment data
+        page_count: 1
+      - nav_title: Export APIs
+        page_count: 1
+      - nav_title: Troubleshooting
+        page_count: 1
+      - nav_title: FAQ
+        page_count: 1
+  - nav_title: Infrastructure
+    page_count: 4
+    children:
+    - nav_title: Data centers
+      page_count: 1
+    - nav_title: Identifier field-level encryption
+      page_count: 1
+    - nav_title: Data points
+      page_count: 1
+  - nav_title: Technology Partners
+    page_count: 1
+- nav_title: Audience
+  annotation: landing page should include a cross-link to User data
+  page_count: 17
+  children:
+  - nav_title: Your audience
+    annotation: 'new article, would consist of a variety of jumping off points for learning about audience/user management
+      in Braze:'
+    page_count: 1
+  - nav_title: Segments
+    page_count: 2
+    children:
+    - nav_title: 'Use case: Segment with nested custom attributes'
+      annotation: new article, pulls entire section on Segmenting from "Nested custom attributes" article
+      page_count: 1
+  - nav_title: Global control group
+    page_count: 1
+  - nav_title: Suppression lists
+    page_count: 1
+  - nav_title: User profiles
+    page_count: 1
+  - nav_title: Manage users
+    page_count: 5
+    children:
+    - nav_title: Import users
+      page_count: 2
+      children:
+      - nav_title: CSV import
+        page_count: 1
+    - nav_title: Merge duplicate users
+      page_count: 1
+    - nav_title: Delete users
+      page_count: 1
+  - nav_title: Subscription preferences
+    page_count: 4
+    children:
+    - nav_title: Subscription status
+      page_count: 1
+    - nav_title: Subscription groups
+      page_count: 1
+    - nav_title: Preference center
+      annotation: 'Related articles: API endpoints'
+      page_count: 1
+  - nav_title: Locations and geofences
+    page_count: 1
+- nav_title: Messaging
+  page_count: 93
+  children:
+  - nav_title: Messaging fundamentals
+    page_count: 21
+    children:
+    - nav_title: Accessibility
+      page_count: 1
+    - nav_title: Approvals
+      page_count: 2
+      children:
+      - nav_title: Messaging rules
+        page_count: 1
+    - nav_title: Archiving
+      page_count: 1
+    - nav_title: Conversion Events
+      page_count: 1
+    - nav_title: Copy across workspaces
+      page_count: 1
+    - nav_title: Delivery and entry types
+      page_count: 1
+    - nav_title: Duplicating
+      page_count: 1
+    - nav_title: Editor blocks
+      page_count: 1
+    - nav_title: Frequency capping
+      page_count: 1
+    - nav_title: Know before you send
+      page_count: 1
+    - nav_title: Localization
+      page_count: 3
+      children:
+      - nav_title: Locales in messages
+        page_count: 1
+      - nav_title: Right-to-left messages
+        page_count: 1
+    - nav_title: Priority sorter
+      annotation: new article
+      page_count: 1
+    - nav_title: Product blocks
+      page_count: 1
+    - nav_title: Rate limiting
+      page_count: 1
+    - nav_title: Re-eligibility
+      page_count: 1
+    - nav_title: Statuses
+      page_count: 1
+    - nav_title: Target users
+      page_count: 1
+  - nav_title: Canvas
+    annotation: no changes
+    page_count: 1
+  - nav_title: Campaigns
+    annotation: rewrite landing page
+    page_count: 7
+    children:
+    - nav_title: Campaign basics
+      page_count: 1
+    - nav_title: Schedule your campaign
+      annotation: should include links to rate limiting and frequency capping
+      page_count: 1
+    - nav_title: Manage campaigns
+      page_count: 1
+    - nav_title: Test campaigns
+      page_count: 1
+    - nav_title: Ideas and strategies
+      page_count: 1
+    - nav_title: FAQ
+      page_count: 1
+  - nav_title: Landing pages
+    page_count: 7
+    children:
+    - nav_title: Create landing pages
+      page_count: 1
+    - nav_title: Customize the URL
+      page_count: 1
+    - nav_title: Tracking users
+      page_count: 1
+    - nav_title: Retargeting users
+      page_count: 1
+    - nav_title: Personalize landing pages
+      page_count: 1
+    - nav_title: About tracking data
+      page_count: 1
+  - nav_title: Feature flags
+    page_count: 5
+    children:
+    - nav_title: Create feature flags
+      page_count: 1
+    - nav_title: Feature flags in Canvas
+      page_count: 1
+    - nav_title: Feature flag experiments
+      page_count: 1
+    - nav_title: FAQ
+      page_count: 1
+  - nav_title: A/B testing
+    page_count: 9
+    children:
+    - nav_title: Concepts
+      page_count: 4
+      children:
+      - nav_title: Random bucket numbers
+        page_count: 1
+      - nav_title: Conversion correlation
+        page_count: 1
+      - nav_title: Race conditions
+        page_count: 1
+    - nav_title: Create tests
+      page_count: 1
+    - nav_title: Optimizations
+      page_count: 1
+    - nav_title: Analytics
+      page_count: 1
+    - nav_title: FAQ
+      page_count: 1
+  - nav_title: Reusable content
+    annotation: new landing page
+    page_count: 3
+    children:
+    - nav_title: Content Blocks
+      page_count: 1
+    - nav_title: Product Blocks
+      page_count: 1
+  - nav_title: Design and edit
+    annotation: new landing page
+    page_count: 6
+    children:
+    - nav_title: Drag-and-drop editor
+      annotation: new article
+      page_count: 1
+    - nav_title: Email drag-and-drop editor
+      annotation: new article
+      page_count: 1
+    - nav_title: Email HTML editor
+      annotation: new article
+      page_count: 1
+    - nav_title: Traditional composers
+      annotation: new article
+      page_count: 1
+    - nav_title: Image specifications
+      page_count: 1
+  - nav_title: Media library
+    annotation: Remove image specs section and add to a dedicated article. Fold in FAQ content
+    page_count: 1
+  - nav_title: Templates
+    page_count: 18
+    children:
+    - nav_title: Canvas templates
+      page_count: 1
+    - nav_title: Email templates
+      page_count: 1
+    - nav_title: In-app message templates
+      page_count: 13
+      children:
+      - nav_title: Custom templates
+        annotation: new article with guidance on how to create and access their own templates
+        page_count: 1
+      - nav_title: Color profiles and CSS templates
+        page_count: 1
+      - nav_title: Braze templates
+        page_count: 10
+        children:
+        - nav_title: Onboarding flow
+          page_count: 1
+        - nav_title: SMS, RCS, and WhatsApp signup form
+          page_count: 1
+        - nav_title: Email sign-up form
+          page_count: 1
+        - nav_title: Email sign-up with discount
+          page_count: 1
+        - nav_title: Email sign-up with image
+          page_count: 1
+        - nav_title: Email sign-up with offer
+          page_count: 1
+        - nav_title: Email sign-up with confirmation
+          page_count: 1
+        - nav_title: Product announcement
+          page_count: 1
+        - nav_title: Seasonal promption with image
+          page_count: 1
+    - nav_title: Managing templates
+      page_count: 1
+    - nav_title: Content Block library
+      page_count: 1
+  - nav_title: Personalize
+    page_count: 14
+    children:
+    - nav_title: Dashboard tools
+      annotation: 'new article would explain the “Add personalization” modal/page in various editor views and “Liquid updates”.
+        From: "Insertting pre-formatted variables" and "Liquid updates"'
+      page_count: 1
+    - nav_title: Preview personalization
+      annotation: new article would pull from sending test messages to explain how to preview personalization in a message.
+        Could also cross-link to "Preview user paths in Canvas"
+      page_count: 1
+    - nav_title: Sources
+      annotation: new landing page
+      page_count: 8
+      children:
+      - nav_title: User profile fields
+        annotation: new article
+        page_count: 1
+      - nav_title: REST API
+        annotation: currently "Connected Content"
+        page_count: 1
+      - nav_title: Catalog
+        annotation: currently "Using catalogs in a message"
+        page_count: 1
+      - nav_title: Promotion codes
+        page_count: 1
+      - nav_title: Canvas entry properties
+        annotation: will be eventually renamed to “Context and event properties” w/ Context GA
+        page_count: 1
+      - nav_title: Context variables
+        page_count: 1
+      - nav_title: Key-value pairs
+        page_count: 1
+    - nav_title: Actions and media URLs
+      annotation: 'new article would be an explainer on personalizing action (button/link) and media (image/video) URLs using
+        Liquid). Existing content to draw from: "Deep linking to in-app content" and "Liquid personalization in URLs"'
+      page_count: 1
+    - nav_title: Liquid reference
+      annotation: new landing page
+      page_count: 1
+    - nav_title: Connected content reference
+      annotation: new landing page
+      page_count: 1
+- nav_title: Channels
+  annotation: landing page provides context on the different channel types and how they are delivered. Two tile sections for
+    "In-product" and "Out-of-product"
+  page_count: 132
+  children:
+  - nav_title: Banners
+    annotation: landing page is an overview of the channel
+    page_count: 4
+    children:
+    - nav_title: Create a Banner
+      page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+    - nav_title: FAQ
+      page_count: 1
+  - nav_title: Content Cards
+    annotation: landing page is an overview of the channel
+    page_count: 5
+    children:
+    - nav_title: Create a Content Card
+      page_count: 1
+    - nav_title: Creative details
+      page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+    - nav_title: Best practices
+      page_count: 1
+  - nav_title: Email
+    annotation: landing page is an overview of the channel. Includes content from "Email services" (then remove article
+    page_count: 19
+    children:
+    - nav_title: Email setup
+      page_count: 1
+    - nav_title: Create an email
+      page_count: 1
+    - nav_title: Customize
+      page_count: 5
+      children:
+      - nav_title: Email global style settings
+        page_count: 1
+      - nav_title: Custom email footer
+        page_count: 1
+      - nav_title: AMP for email
+        page_count: 1
+      - nav_title: Universal links and app links
+        page_count: 1
+    - nav_title: Templates
+      page_count: 1
+    - nav_title: Subscriptions
+      page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+    - nav_title: Use cases
+      page_count: 1
+    - nav_title: Best practices
+      page_count: 6
+      children:
+      - nav_title: Email guidelines
+        page_count: 1
+      - nav_title: Email styling
+        page_count: 1
+      - nav_title: Sunset policies
+        page_count: 1
+      - nav_title: Apple Mail
+        page_count: 1
+      - nav_title: Know before you send
+        page_count: 1
+    - nav_title: FAQ
+      annotation: Fold "Duplicate emails" into FAQs. Remove "Duplicate emails" article.
+      page_count: 1
+  - nav_title: Transactional email
+    annotation: landing page is an overview of the channel
+    page_count: 3
+    children:
+    - nav_title: Create a transactional email
+      page_count: 1
+    - nav_title: Tracking
+      page_count: 1
+  - nav_title: In-app messages
+    annotation: landing page is an overview of the channel
+    page_count: 18
+    children:
+    - nav_title: Create an in-app message
+      page_count: 1
+    - nav_title: Message types
+      annotation: 'new landing page divides into two sections with tiles: "Available in all editors" = fullscreen and modal;
+        "Traditional editor only" = remainder'
+      page_count: 7
+      children:
+      - nav_title: Fullscreen
+        page_count: 1
+      - nav_title: Modal
+        page_count: 1
+      - nav_title: Slideup
+        page_count: 1
+      - nav_title: Custom HTML
+        page_count: 1
+      - nav_title: Email capture form
+        page_count: 1
+      - nav_title: Simple survey
+        page_count: 1
+    - nav_title: Customize
+      page_count: 5
+      children:
+      - nav_title: Style settings
+        page_count: 1
+      - nav_title: Dark mode themes
+        page_count: 1
+      - nav_title: Color profiles and CSS templates
+        page_count: 1
+      - nav_title: Video in custom HTML
+        page_count: 1
+    - nav_title: Templates
+      page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+    - nav_title: Best practices
+      page_count: 1
+    - nav_title: FAQ
+      page_count: 1
+  - nav_title: LINE
+    annotation: landing page is an overview of the channel
+    page_count: 7
+    children:
+    - nav_title: LINE setup
+      page_count: 1
+    - nav_title: Create a LINE message
+      page_count: 1
+    - nav_title: Message users
+      annotation: Update existing page to pull child pages of LINE users to be child pages of Messaging users. Delete current
+        config-only page.
+      page_count: 3
+      children:
+      - nav_title: User management
+        page_count: 1
+      - nav_title: Subscription groups
+        page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+  - nav_title: Live notifications
+    annotation: new article would be a marketer-facing overview of iOS Live Activities
+    page_count: 1
+  - nav_title: Push
+    annotation: landing page is an overview of the channel, "Types of push notifications" is turned into a table and included
+    page_count: 25
+    children:
+    - nav_title: Push setup
+      page_count: 3
+      children:
+      - nav_title: Push token lifecycle
+        annotation: 'updates "Push registration" to focus only on covering technical enablement: can Braze deliver to this
+          device?  explains how they are re created, updated, and reassigned.'
+        page_count: 1
+      - nav_title: Push subscription states
+        annotation: 'updates "Push enablement and subscription" to only cover use intent: should this user receive push notifications?
+          explains how tokens interact with subscription state'
+        page_count: 1
+    - nav_title: Create a push message
+      annotation: update article
+      page_count: 5
+      children:
+      - nav_title: Message and image formats
+        page_count: 1
+      - nav_title: Push action buttons
+        page_count: 1
+      - nav_title: Push stories
+        page_count: 1
+      - nav_title: Quick push messages
+        page_count: 1
+    - nav_title: Platform-specific resources
+      page_count: 13
+      children:
+      - nav_title: iOS
+        page_count: 5
+        children:
+        - nav_title: Notification options
+          page_count: 1
+        - nav_title: Rich notifications
+          page_count: 1
+        - nav_title: Custom app icon feature (iOS 10.3)
+          page_count: 1
+        - nav_title: Utilizing badge count
+          page_count: 1
+      - nav_title: Android
+        page_count: 6
+        children:
+        - nav_title: Notification channels
+          page_count: 1
+        - nav_title: Notification options
+          page_count: 1
+        - nav_title: Rich notifications
+          page_count: 1
+        - nav_title: Advanced campaign settings
+          page_count: 1
+        - nav_title: Push Max
+          page_count: 1
+      - nav_title: Web
+        annotation: current "Web push" article
+        page_count: 1
+    - nav_title: Best practices
+      page_count: 1
+    - nav_title: Troubleshooting
+      annotation: Combine "Common push error messages" with this article
+      page_count: 1
+    - nav_title: FAQs
+      page_count: 1
+  - nav_title: SMS, MMS, and RCS
+    annotation: landing page is an overview of the channel family
+    page_count: 13
+    children:
+    - nav_title: Message setup
+      page_count: 1
+    - nav_title: Compliance and deliverability
+      page_count: 1
+    - nav_title: Create an SMS, MMS, or RCS message
+      page_count: 1
+    - nav_title: Message features and optimization
+      page_count: 6
+      children:
+      - nav_title: Link shortening
+        page_count: 1
+      - nav_title: Custom domains
+        page_count: 1
+      - nav_title: Keyword processing
+        page_count: 1
+      - nav_title: User retargeting
+        page_count: 1
+      - nav_title: Bot click filtering
+        page_count: 1
+    - nav_title: Billing calculator
+      page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+    - nav_title: FAQ
+      page_count: 1
+  - nav_title: Webhooks
+    annotation: landing page is an overview of the channel
+    page_count: 6
+    children:
+    - nav_title: Create a webhook
+      page_count: 1
+    - nav_title: Templates
+      page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+    - nav_title: 'Use case: Create a Braze-to-Braze webhook'
+      page_count: 1
+    - nav_title: 'Use case: Create a lead-scoring workflow'
+      page_count: 1
+  - nav_title: WhatsApp
+    annotation: landing page is an overview of the channel
+    page_count: 30
+    children:
+    - nav_title: WhatsApp setup
+      page_count: 9
+      children:
+      - nav_title: Embedded signup
+        page_count: 1
+      - nav_title: User phone numbers
+        page_count: 1
+      - nav_title: Subscription groups
+        page_count: 1
+      - nav_title: Multiple business accounts
+        page_count: 1
+      - nav_title: WhatsApp phone numbers
+        page_count: 4
+        children:
+        - nav_title: Acquire a phone number
+          page_count: 1
+        - nav_title: Migrate a phone number
+          page_count: 1
+        - nav_title: Transfer between workspaces
+          page_count: 1
+    - nav_title: Create a WhatsApp message
+      page_count: 1
+    - nav_title: Message features and optimization
+      page_count: 7
+      children:
+      - nav_title: Optimized delivery
+        page_count: 1
+      - nav_title: Click tracking
+        page_count: 1
+      - nav_title: WhatsApp Flows
+        page_count: 1
+      - nav_title: Product messages
+        page_count: 1
+      - nav_title: User retargeting
+        page_count: 1
+      - nav_title: Custom domains
+        page_count: 1
+    - nav_title: Message processing
+      page_count: 5
+      children:
+      - nav_title: Opt-ins & opt-outs
+        page_count: 1
+      - nav_title: Messaging users
+        page_count: 1
+      - nav_title: Handling unknown phone numbers
+        page_count: 1
+      - nav_title: Quality rating and messaging limits
+        page_count: 1
+    - nav_title: Reporting
+      page_count: 1
+    - nav_title: Use cases
+      page_count: 3
+      children:
+      - nav_title: Ads that click to WhatsApp
+        page_count: 1
+      - nav_title: WhatsApp and external systems
+        page_count: 1
+    - nav_title: Best practices
+      page_count: 1
+    - nav_title: FAQ
+      page_count: 1
+    - nav_title: Meta resources
+      page_count: 1
+- nav_title: Analytics
+  page_count: 25
+  children:
+  - nav_title: Dashboards
+    page_count: 7
+    children:
+    - nav_title: Dashboard Builder
+      page_count: 1
+    - nav_title: Home
+      page_count: 1
+    - nav_title: API usage
+      page_count: 1
+    - nav_title: Channel performance
+      page_count: 1
+    - nav_title: Conversions
+      page_count: 1
+    - nav_title: Deliverability Center
+      page_count: 1
+  - nav_title: Reports
+    annotation: landing page contains an overview of all reports
+    page_count: 11
+    children:
+    - nav_title: Configure reporting
+      page_count: 1
+    - nav_title: Engagement reports
+      page_count: 1
+    - nav_title: Campaign analytics
+      page_count: 1
+    - nav_title: Canvas analytics
+      page_count: 1
+    - nav_title: Report Builder
+      page_count: 1
+    - nav_title: Query Builder
+      page_count: 1
+    - nav_title: Retention reports
+      page_count: 1
+    - nav_title: Funnel reports
+      page_count: 1
+    - nav_title: Revenue report
+      page_count: 1
+    - nav_title: Global control group report
+      page_count: 1
+  - nav_title: Tracking
+    page_count: 5
+    children:
+    - nav_title: Open pixel and click tracking
+      page_count: 1
+    - nav_title: Uninstall tracking
+      page_count: 1
+    - nav_title: Influence opens
+      page_count: 1
+    - nav_title: Segment analytics tracking
+      page_count: 1
+  - nav_title: Metrics glossary
+    annotation: combine with Email metrics glossary, waiting for confirmation from Email PMs
+    page_count: 1
+- nav_title: BrazeAI
+  page_count: 10
+  children:
+  - nav_title: Agents
+    page_count: 1
+  - nav_title: Braze MCP server
+    page_count: 1
+  - nav_title: Content Optimizer
+    page_count: 1
+  - nav_title: Decisioning Studio
+    page_count: 1
+  - nav_title: Generative AI
+    page_count: 1
+  - nav_title: Intelligence Suite
+    page_count: 1
+  - nav_title: Item recommendations
+    page_count: 1
+  - nav_title: Operator
+    page_count: 1
+  - nav_title: Predictive Suite
+    page_count: 1

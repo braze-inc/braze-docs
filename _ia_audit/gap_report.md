@@ -1,0 +1,860 @@
+# IA Migration Gap Report
+
+Items below need manual review.
+
+## Proposed entries not matched to a current page
+
+These entries from `revised_ia.md` could not be matched to any existing page.
+They may be new articles (missing annotation), typos, or renamed pages.
+
+- **Logs and alerts** (in: Administer > Global > Workspace settings > Logs and alerts)
+- **Concepts** (in: Messaging > A/B testing > Concepts)
+- **REST API** (in: Messaging > Personalize > Sources > REST API)
+  - Note: _currently "Connected Content"_
+- **Platform-specific resources** (in: Channels > Push > Platform-specific resources)
+- **Compliance and deliverability** (in: Channels > SMS, MMS, and RCS > Compliance and deliverability)
+- **Migrate a phone number** (in: Channels > WhatsApp > WhatsApp setup > WhatsApp phone numbers > Migrate a phone number)
+
+## Current pages not mentioned in proposed IA
+
+Per your note: "If child pages are not listed here, no changes are needed."
+These pages exist today but are not explicitly listed in `revised_ia.md`.
+They should remain with their parent section (which may itself be moving).
+
+Review to confirm none were accidentally omitted.
+
+### Administrative **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/administrative/access_braze.md`
+  - nav_title: Access Braze
+- `_docs/_user_guide/administrative/access_braze/sdk_endpoints.md`
+  - nav_title: API and SDK endpoints
+- `_docs/_user_guide/administrative/app_settings.md`
+  - nav_title: Settings
+- `_docs/_user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3.md`
+  - nav_title: Security events export with S3
+- `_docs/_user_guide/administrative/app_settings/email_settings/bot_filtering.md`
+  - nav_title: Bot filtering for emails
+- `_docs/_user_guide/administrative/privacy/managing_consent.md`
+  - nav_title: Manage consent
+- `_docs/_user_guide/administrative/privacy/spam_regulations.md`
+  - nav_title: Spam regulations
+
+### Analytics **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/analytics/dashboard.md`
+  - nav_title: Your analytics dashboards
+- `_docs/_user_guide/analytics/dashboard/api_usage_dashboard.md`
+  - nav_title: API usage dashboard
+- `_docs/_user_guide/analytics/dashboard/conversions_dashboard.md`
+  - nav_title: Conversions dashboard
+- `_docs/_user_guide/analytics/dashboard/ecommerce_revenue_dashboard.md`
+  - nav_title: eCommerce revenue dashboard
+- `_docs/_user_guide/analytics/dashboard/home_dashboard.md`
+  - nav_title: Home dashboard
+- `_docs/_user_guide/analytics/query_builder/building_queries.md`
+  - nav_title: Build queries
+- `_docs/_user_guide/analytics/query_builder/query_templates.md`
+  - nav_title: Query templates
+- `_docs/_user_guide/analytics/query_builder/sql_variables.md`
+  - nav_title: SQL variables
+- `_docs/_user_guide/analytics/reporting.md`
+  - nav_title: Your reports
+- `_docs/_user_guide/analytics/reporting/data_by_segments.md`
+  - nav_title: Metrics by segments
+- `_docs/_user_guide/analytics/reporting/report_builder/report_builder_legacy.md`
+  - nav_title: Report Builder (legacy)
+
+### Brazeai **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/brazeai/agents/creating_agents.md`
+  - nav_title: Create agents
+- `_docs/_user_guide/brazeai/agents/deploying_agents.md`
+  - nav_title: Deploy agents
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go.md`
+  - nav_title: Decisioning Studio Go
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources.md`
+  - nav_title: Connect data sources
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent.md`
+  - nav_title: Design your agent
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent.md`
+  - nav_title: Launch your agent
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration.md`
+  - nav_title: Set up orchestration
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro.md`
+  - nav_title: Decisioning Studio Pro
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources.md`
+  - nav_title: Connect data sources
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent.md`
+  - nav_title: Design your agent
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent.md`
+  - nav_title: Launch your agent
+- `_docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration.md`
+  - nav_title: Set up orchestration
+- `_docs/_user_guide/brazeai/decisioning_studio/faq.md`
+  - nav_title: FAQ
+- `_docs/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md`
+  - nav_title: Designing decisioning agents
+- `_docs/_user_guide/brazeai/decisioning_studio/getting_started/overview.md`
+  - nav_title: Overview
+- `_docs/_user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources.md`
+  - nav_title: Preparing your data sources
+- `_docs/_user_guide/brazeai/decisioning_studio/getting_started/preparing_your_orchestration.md`
+  - nav_title: Preparing your orchestration
+- `_docs/_user_guide/brazeai/decisioning_studio/reporting.md`
+  - nav_title: Reports and insights
+- `_docs/_user_guide/brazeai/generative_ai/brand_guidelines.md`
+  - nav_title: Brand guidelines
+- `_docs/_user_guide/brazeai/generative_ai/content_qa.md`
+  - nav_title: Content QA
+- `_docs/_user_guide/brazeai/generative_ai/copywriting.md`
+  - nav_title: Copywriting
+- `_docs/_user_guide/brazeai/generative_ai/images.md`
+  - nav_title: Images
+- `_docs/_user_guide/brazeai/generative_ai/liquid.md`
+  - nav_title: Liquid code
+- `_docs/_user_guide/brazeai/generative_ai/sql_queries.md`
+  - nav_title: SQL queries
+- `_docs/_user_guide/brazeai/generative_ai/sql_segment_extensions.md`
+  - nav_title: SQL Segment Extensions
+- `_docs/_user_guide/brazeai/intelligence/intelligent_channel.md`
+  - nav_title: Channel filter
+- `_docs/_user_guide/brazeai/intelligence/intelligent_selection.md`
+  - nav_title: Intelligent Selection
+- `_docs/_user_guide/brazeai/intelligence/intelligent_timing.md`
+  - nav_title: Intelligent Timing
+- `_docs/_user_guide/brazeai/intelligence/tutorial.md`
+  - nav_title: Tutorial: Quick service restaurant
+- `_docs/_user_guide/brazeai/mcp_server/available_api_functions.md`
+  - nav_title: Available API functions
+- `_docs/_user_guide/brazeai/mcp_server/setup.md`
+  - nav_title: Braze MCP server setup
+- `_docs/_user_guide/brazeai/mcp_server/usage.md`
+  - nav_title: Using the Braze MCP server
+- `_docs/_user_guide/brazeai/predictive_churn/analytics.md`
+  - nav_title: Churn analytics
+- `_docs/_user_guide/brazeai/predictive_churn/creating_a_churn_prediction.md`
+  - nav_title: Create a churn prediction
+- `_docs/_user_guide/brazeai/predictive_churn/troubleshooting.md`
+  - nav_title: Troubleshooting
+- `_docs/_user_guide/brazeai/predictive_events.md`
+  - nav_title: Predictive Events
+- `_docs/_user_guide/brazeai/predictive_events/analytics.md`
+  - nav_title: Event analytics
+- `_docs/_user_guide/brazeai/predictive_events/creating_an_event_prediction.md`
+  - nav_title: Create an Event Prediction
+- `_docs/_user_guide/brazeai/predictive_events/messaging_users.md`
+  - nav_title: Messaging users
+- `_docs/_user_guide/brazeai/predictive_events/use_case.md`
+  - nav_title: Use case
+- `_docs/_user_guide/brazeai/recommendations/creating_recommendations.md` (config_only)
+  - nav_title: Create recommendations
+- `_docs/_user_guide/brazeai/recommendations/creating_recommendations/ai.md`
+  - nav_title: AI recommendations
+- `_docs/_user_guide/brazeai/recommendations/creating_recommendations/rules_based.md`
+  - nav_title: Rules-based recommendations
+- `_docs/_user_guide/brazeai/recommendations/use_case.md`
+  - nav_title: Use case
+- `_docs/_user_guide/brazeai/recommendations/using_recommendations.md`
+  - nav_title: Using recommendations
+- `_docs/_user_guide/brazeai/recommendations/viewing_analytics.md`
+  - nav_title: Analytics
+
+### Data **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/data/activation/catalogs/catalog_triggers.md` (config_only)
+  - nav_title: Catalog triggers
+- `_docs/_user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications.md`
+  - nav_title: Back-in-stock notifications
+- `_docs/_user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications.md`
+  - nav_title: Price drop notifications
+- `_docs/_user_guide/data/activation/catalogs/create.md`
+  - nav_title: Create a catalog
+- `_docs/_user_guide/data/activation/catalogs/selections.md`
+  - nav_title: Selections
+- `_docs/_user_guide/data/activation/catalogs/use.md`
+  - nav_title: Using catalogs
+- `_docs/_user_guide/data/activation/custom_data/custom_events/nested_objects.md`
+  - nav_title: Nested objects
+- `_docs/_user_guide/data/activation/custom_data/managing_custom_data.md`
+  - nav_title: Manage custom data
+- `_docs/_user_guide/data/activation/custom_data/recommended_events/product_blocks.md`
+  - nav_title: Product blocks
+- `_docs/_user_guide/data/activation/report_metrics.md`
+  - nav_title: Report metrics glossary
+- `_docs/_user_guide/data/braze_data_platform.md`
+  - nav_title: Braze Data Platform
+- `_docs/_user_guide/data/distribution/export_braze_data/export_custom_event_data.md`
+  - nav_title: Export custom event aggregates
+- `_docs/_user_guide/data/distribution/export_braze_data/export_troubleshooting.md`
+  - nav_title: Export troubleshooting
+- `_docs/_user_guide/data/distribution/export_braze_data/exporting_app_usage_data.md`
+  - nav_title: Export usage analytics
+- `_docs/_user_guide/data/distribution/export_braze_data/exporting_revenue_data.md`
+  - nav_title: Export revenue & total revenue data
+- `_docs/_user_guide/data/distribution/export_braze_data/opening_csv_reports_in_excel.md`
+  - nav_title: Opening CSV reports in excel
+- `_docs/_user_guide/data/distribution/export_braze_data/segment_data_to_csv.md`
+  - nav_title: Export segment data to CSV
+- `_docs/_user_guide/data/unification/cloud_ingestion/faqs.md`
+  - nav_title: FAQs
+- `_docs/_user_guide/data/unification/data_transformation/creating_a_transformation.md`
+  - nav_title: Create a transformation
+
+### Engagement Tools **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns.md`
+  - nav_title: Build campaigns
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign.md`
+  - nav_title: Create a campaign
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md`
+  - nav_title: API-triggered delivery
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar.md`
+  - nav_title: Content calendar
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery.md`
+  - nav_title: Scheduled delivery
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery.md`
+  - nav_title: Action-based delivery
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers.md`
+  - nav_title: Attribute triggers
+- `_docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/campaign_connector.md`
+  - nav_title: Campaign connector
+- `_docs/_user_guide/engagement_tools/campaigns/getting_started.md`
+  - nav_title: Getting started
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns.md`
+  - nav_title: Active user campaigns
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links.md`
+  - nav_title: Add-to-calendar links
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices.md`
+  - nav_title: Best practices
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/booking_use_case.md`
+  - nav_title: Booking reminder email
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users.md`
+  - nav_title: Capture lapsing users
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution.md`
+  - nav_title: Understanding user installs
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features.md`
+  - nav_title: Feature awareness and new app version
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns.md`
+  - nav_title: Retargeting campaigns
+- `_docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/zoom.md`
+  - nav_title: Automate Zoom registration
+- `_docs/_user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts.md`
+  - nav_title: Campaign alerts
+- `_docs/_user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch.md`
+  - nav_title: Edit your campaign after launch
+- `_docs/_user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns.md`
+  - nav_title: Search for campaigns
+- `_docs/_user_guide/engagement_tools/campaigns/testing_and_more/campaign_analytics.md`
+  - nav_title: Campaign analytics
+- `_docs/_user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report.md`
+  - nav_title: Funnel reports
+- `_docs/_user_guide/engagement_tools/campaigns/testing_and_more/retention_reports.md`
+  - nav_title: Retention reports
+- `_docs/_user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages.md`
+  - nav_title: Send test messages
+- `_docs/_user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based.md`
+  - nav_title: API-triggered and action-based campaigns
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components.md`
+  - nav_title: Canvas components
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/action_paths.md`
+  - nav_title: Action paths
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/agent_step.md`
+  - nav_title: Agent
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/audience_paths.md`
+  - nav_title: Audience paths
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step.md`
+  - nav_title: Content Optimizer
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/context.md`
+  - nav_title: Context
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/decision_split.md`
+  - nav_title: Decision split
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/delay_step.md`
+  - nav_title: Delay
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step.md`
+  - nav_title: Experiment Paths
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path.md`
+  - nav_title: Winning Path
+- `_docs/_user_guide/engagement_tools/canvas/canvas_components/user_update.md`
+  - nav_title: User update
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas.md`
+  - nav_title: Build Canvases
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel.md` (config_only)
+  - nav_title: Canvas by channel
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments.md`
+  - nav_title: Commenting in Canvas
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties.md`
+  - nav_title: Canvas entry properties and event properties
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties.md`
+  - nav_title: Persistent entry properties
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates.md`
+  - nav_title: Create a Canvas template
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas.md`
+  - nav_title: Create a Canvas
+- `_docs/_user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria.md`
+  - nav_title: Exit criteria
+- `_docs/_user_guide/engagement_tools/canvas/faqs.md`
+  - nav_title: FAQ
+- `_docs/_user_guide/engagement_tools/canvas/get_started.md`
+  - nav_title: Getting started
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart.md`
+  - nav_title: Abandoned cart
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock.md`
+  - nav_title: Back in stock
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/email_signup.md`
+  - nav_title: Email sign-up with double opt-in
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption.md`
+  - nav_title: Feature adoption
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/lapsed_user.md`
+  - nav_title: Lapsed user
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/onboarding.md`
+  - nav_title: Onboarding
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/post_purchase_feedback.md`
+  - nav_title: Post-purchase feedback
+- `_docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/preference_survey.md`
+  - nav_title: Onboarding with preferences survey
+- `_docs/_user_guide/engagement_tools/canvas/get_started/canvas_outlines.md`
+  - nav_title: Canvas outlines
+- `_docs/_user_guide/engagement_tools/canvas/get_started/the_basics.md`
+  - nav_title: Canvas basics
+- `_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies.md`
+  - nav_title: Ideas and strategies
+- `_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices.md`
+  - nav_title: Best practices
+- `_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case.md`
+  - nav_title: Booking reminder email
+- `_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases.md`
+  - nav_title: eCommerce use cases
+- `_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow.md`
+  - nav_title: Launch with Canvas flow
+- `_docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist.md`
+  - nav_title: Pre and post-launch checklist
+- `_docs/_user_guide/engagement_tools/canvas/managing_canvases.md`
+  - nav_title: Manage Canvases
+- `_docs/_user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts.md`
+  - nav_title: Save drafts for Canvas
+- `_docs/_user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history.md`
+  - nav_title: Canvas version history
+- `_docs/_user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch.md`
+  - nav_title: Edit Canvases after launch
+- `_docs/_user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases.md`
+  - nav_title: Cloning Canvases
+- `_docs/_user_guide/engagement_tools/canvas/testing_canvases.md`
+  - nav_title: Test Canvases
+- `_docs/_user_guide/engagement_tools/canvas/testing_canvases/canvas_funnel_reports.md`
+  - nav_title: Funnel reports
+- `_docs/_user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics.md`
+  - nav_title: Canvas analytics
+- `_docs/_user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths.md`
+  - nav_title: Preview user paths
+- `_docs/_user_guide/engagement_tools/canvas/testing_canvases/retention_reports.md`
+  - nav_title: Retention reports
+- `_docs/_user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases.md`
+  - nav_title: Send test Canvases
+- `_docs/_user_guide/engagement_tools/canvas/troubleshooting.md`
+  - nav_title: Troubleshooting
+- `_docs/_user_guide/engagement_tools/feature_flags.md`
+  - nav_title: Feature flags
+- `_docs/_user_guide/engagement_tools/locations_and_geofences/creating_geofences.md`
+  - nav_title: Create geofences
+- `_docs/_user_guide/engagement_tools/locations_and_geofences/location_tracking.md`
+  - nav_title: Location tracking
+- `_docs/_user_guide/engagement_tools/segments/creating_a_segment.md`
+  - nav_title: Create a segment
+- `_docs/_user_guide/engagement_tools/segments/location_targeting.md`
+  - nav_title: Location targeting
+- `_docs/_user_guide/engagement_tools/segments/managing_segments.md`
+  - nav_title: Manage segments
+- `_docs/_user_guide/engagement_tools/segments/measuring_segment_size.md`
+  - nav_title: Measure segment size
+- `_docs/_user_guide/engagement_tools/segments/regex.md`
+  - nav_title: Regular expressions
+- `_docs/_user_guide/engagement_tools/segments/segment_extension.md`
+  - nav_title: Segment extensions
+- `_docs/_user_guide/engagement_tools/segments/segment_extension/cdi_segments.md`
+  - nav_title: CDI segment extensions
+- `_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments.md`
+  - nav_title: SQL Segment Extensions
+- `_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/catalog_segments.md`
+  - nav_title: Catalog segments
+- `_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/rfm_segments.md`
+  - nav_title: RFM segments
+- `_docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables.md`
+  - nav_title: SQL table reference
+- `_docs/_user_guide/engagement_tools/segments/segment_insights.md`
+  - nav_title: Segment insights
+- `_docs/_user_guide/engagement_tools/segments/segmentation_filters.md`
+  - nav_title: Segmentation filters
+- `_docs/_user_guide/engagement_tools/segments/troubleshooting.md`
+  - nav_title: Troubleshooting
+- `_docs/_user_guide/engagement_tools/templates_and_media.md`
+  - nav_title: Templates and media
+- `_docs/_user_guide/engagement_tools/templates_and_media/canvas_templates.md`
+  - nav_title: Canvas templates
+- `_docs/_user_guide/engagement_tools/templates_and_media/faqs.md`
+  - nav_title: FAQ
+- `_docs/_user_guide/engagement_tools/testing.md` (config_only)
+  - nav_title: Engagement testing
+- `_docs/_user_guide/engagement_tools/testing/multivariant_testing.md`
+  - nav_title: Multivariate & A/B testing
+- `_docs/_user_guide/engagement_tools/testing/multivariant_testing/ab_test_projection.md` (hidden)
+  - nav_title: A/B test projection
+
+### Engagement Tools.Md
+
+- `_docs/_user_guide/engagement_tools.md`
+  - nav_title: Engagement tools
+
+### Getting Started **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/getting_started/b2b_use_cases/account_based_segmentation.md`
+  - nav_title: Account-based segmentation
+- `_docs/_user_guide/getting_started/b2b_use_cases/b2b_data_models.md`
+  - nav_title: Data models
+- `_docs/_user_guide/getting_started/b2b_use_cases/b2b_salesforce_sales_cloud.md`
+  - nav_title: Salesforce Sales Cloud
+- `_docs/_user_guide/getting_started/b2b_use_cases/lead_scoring.md`
+  - nav_title: Lead scoring
+- `_docs/_user_guide/getting_started/braze_pilot/data_dictionary.md`
+  - nav_title: Data dictionary
+- `_docs/_user_guide/getting_started/braze_pilot/deep_links.md`
+  - nav_title: Navigation deep links
+- `_docs/_user_guide/getting_started/braze_pilot/getting_started.md`
+  - nav_title: Getting started
+- `_docs/_user_guide/getting_started/overview.md`
+  - nav_title: Braze overview
+
+### Getting Started.Md
+
+- `_docs/_user_guide/getting_started.md`
+  - nav_title: Getting started
+
+### Message Building By Channel **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/message_building_by_channel/banners/analytics.md`
+  - nav_title: Banner analytics
+- `_docs/_user_guide/message_building_by_channel/content_cards.md`
+  - nav_title: Content Cards
+- `_docs/_user_guide/message_building_by_channel/content_cards/best_practices/improving_low_latency_requirements.md`
+  - nav_title: Improving low latency
+- `_docs/_user_guide/message_building_by_channel/content_cards/best_practices/know_before_send.md`
+  - nav_title: Know before you send
+- `_docs/_user_guide/message_building_by_channel/content_cards/create/card_creation.md`
+  - nav_title: Card creation
+- `_docs/_user_guide/message_building_by_channel/content_cards/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_SSO.md`
+  - nav_title: Send emails to Apple Private Relay
+- `_docs/_user_guide/message_building_by_channel/email/apple_mail/mpp.md`
+  - nav_title: Apple Mail Privacy Protection
+- `_docs/_user_guide/message_building_by_channel/email/best_practices/duplicate_emails.md`
+  - nav_title: Duplicate emails
+- `_docs/_user_guide/message_building_by_channel/email/best_practices/email_services.md`
+  - nav_title: Email services
+- `_docs/_user_guide/message_building_by_channel/email/best_practices/use_cases.md`
+  - nav_title: Email use cases
+- `_docs/_user_guide/message_building_by_channel/email/drag_and_drop.md`
+  - nav_title: Drag-and-drop editor
+- `_docs/_user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks.md`
+  - nav_title: Editor blocks
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/authentication.md`
+  - nav_title: Email authentication
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection.md`
+  - nav_title: Consent & address collection
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps.md`
+  - nav_title: Deliverability pitfalls & spam traps
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/email_validation.md`
+  - nav_title: Email validation
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/import_your_email_list.md`
+  - nav_title: Import your email list
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/ip_warming.md`
+  - nav_title: IP warming
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains.md`
+  - nav_title: Set up IPs & domains
+- `_docs/_user_guide/message_building_by_channel/email/email_setup/ssl.md`
+  - nav_title: SSL at Braze
+- `_docs/_user_guide/message_building_by_channel/email/faq.md`
+  - nav_title: FAQ
+- `_docs/_user_guide/message_building_by_channel/email/html_editor.md`
+  - nav_title: HTML editor
+- `_docs/_user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign.md`
+  - nav_title: Create an email
+- `_docs/_user_guide/message_building_by_channel/email/html_editor/css_inline.md`
+  - nav_title: CSS inlining
+- `_docs/_user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab.md`
+  - nav_title: Gmail promotions setup
+- `_docs/_user_guide/message_building_by_channel/email/html_editor/troubleshooting.md`
+  - nav_title: Troubleshooting
+- `_docs/_user_guide/message_building_by_channel/email/inbox_vision.md`
+  - nav_title: Inbox Vision
+- `_docs/_user_guide/message_building_by_channel/email/preference_center/api_preference_center.md`
+  - nav_title: API email preference center
+- `_docs/_user_guide/message_building_by_channel/email/preference_center/dnd_preference_center.md`
+  - nav_title: Drag-and-drop email preference center
+- `_docs/_user_guide/message_building_by_channel/email/reporting_and_analytics.md` (config_only)
+  - nav_title: Reporting & analytics
+- `_docs/_user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary.md`
+  - nav_title: Email Analytics Glossary
+- `_docs/_user_guide/message_building_by_channel/email/templates/email_template.md`
+  - nav_title: Create an email template
+- `_docs/_user_guide/message_building_by_channel/email/templates/faq.md`
+  - nav_title: FAQ
+- `_docs/_user_guide/message_building_by_channel/email/templates/html_email_template.md`
+  - nav_title: Upload an HTML email template
+- `_docs/_user_guide/message_building_by_channel/email/templates/link_aliasing.md`
+  - nav_title: Link aliasing
+- `_docs/_user_guide/message_building_by_channel/email/templates/link_template.md`
+  - nav_title: Link templates
+- `_docs/_user_guide/message_building_by_channel/email/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/email/transactional_message_api_campaign.md`
+  - nav_title: Transactional email campaigns
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/best_practices/know_before_send.md`
+  - nav_title: Know before you send
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide.md`
+  - nav_title: Prep guide
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/creative_details.md`
+  - nav_title: Creative details
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop.md`
+  - nav_title: Drag-and-drop editor
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks.md`
+  - nav_title: Editor blocks
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/traditional.md`
+  - nav_title: Traditional editor
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/create.md`
+  - nav_title: Create an in-app message
+- `_docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages.md`
+  - nav_title: HTML in-app messages
+- `_docs/_user_guide/message_building_by_channel/line/create/line_click_tracking.md`
+  - nav_title: LINE click tracking
+- `_docs/_user_guide/message_building_by_channel/line/create/message_types.md`
+  - nav_title: Message types
+- `_docs/_user_guide/message_building_by_channel/line/line_users.md` (config_only)
+  - nav_title: LINE users
+- `_docs/_user_guide/message_building_by_channel/line/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/push/advanced_push_options.md`
+  - nav_title: Advanced push options
+- `_docs/_user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability.md`
+  - nav_title: Deliverability for Chinese Android devices
+- `_docs/_user_guide/message_building_by_channel/push/best_practices/know_before_send.md`
+  - nav_title: Know before you send
+- `_docs/_user_guide/message_building_by_channel/push/best_practices/push_primer_messages.md`
+  - nav_title: Push primer in-app messages
+- `_docs/_user_guide/message_building_by_channel/push/ios.md`
+  - nav_title: iOS options
+- `_docs/_user_guide/message_building_by_channel/push/push_error_codes.md`
+  - nav_title: Common push error messages
+- `_docs/_user_guide/message_building_by_channel/push/push_registration.md`
+  - nav_title: Push registration
+- `_docs/_user_guide/message_building_by_channel/push/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/push/types.md`
+  - nav_title: Types of push notifications
+- `_docs/_user_guide/message_building_by_channel/push/users_and_subscriptions.md`
+  - nav_title: Push enablement and subscription
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices.md`
+  - nav_title: Best practices
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices/know_before_send.md`
+  - nav_title: Know before you send
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices/opt-ins.md`
+  - nav_title: Collecting user opt-ins
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/geographic_permissions.md`
+  - nav_title: Geographic permissions
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in.md`
+  - nav_title: Double opt-in
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/fuzzy_opt_out.md`
+  - nav_title: Fuzzy opt-out
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling.md`
+  - nav_title: Custom keyword handling
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout.md`
+  - nav_title: Opt-in & opt-out keywords
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/unknown_phone_numbers.md`
+  - nav_title: Handle unknown phone numbers
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations.md`
+  - nav_title: Laws & regulations
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains.md`
+  - nav_title: Self-serve custom domains
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms.md`
+  - nav_title: MMS
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card.md`
+  - nav_title: Contact cards
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/create.md`
+  - nav_title: Create an MMS campaign
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/mms_short_long_codes.md`
+  - nav_title: MMS short and long codes
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/phone_numbers_capture.md`
+  - nav_title: Phone number capture
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/rcs.md`
+  - nav_title: RCS
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes.md`
+  - nav_title: SMS and RCS senders
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms.md`
+  - nav_title: SMS
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/create.md`
+  - nav_title: Create an SMS message
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/faqs.md`
+  - nav_title: FAQ
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending.md`
+  - nav_title: Send SMS messages
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/terms.md`
+  - nav_title: Terms to know
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers.md`
+  - nav_title: User phone numbers
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc.md`
+  - nav_title: A2P 10DLC
+- `_docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application.md`
+  - nav_title: 10DLC application
+- `_docs/_user_guide/message_building_by_channel/webhooks/lead_scoring.md`
+  - nav_title: Lead scoring
+- `_docs/_user_guide/message_building_by_channel/webhooks/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/webhooks/webhook_template.md`
+  - nav_title: Create a webhook template
+- `_docs/_user_guide/message_building_by_channel/whatsapp/overview/byo_connector.md`
+  - nav_title: BYO WhatsApp connector
+- `_docs/_user_guide/message_building_by_channel/whatsapp/overview/phone_number_acquisition.md`
+  - nav_title: Phone number acquisition
+- `_docs/_user_guide/message_building_by_channel/whatsapp/testing.md`
+  - nav_title: Testing
+- `_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign.md` (config_only)
+  - nav_title: WhatsApp campaign
+- `_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage.md`
+  - nav_title: Message usage dashboard
+- `_docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases.md` (config_only)
+  - nav_title: WhatsApp use cases
+
+### Message Building By Channel.Md
+
+- `_docs/_user_guide/message_building_by_channel.md`
+  - nav_title: Message building by channel
+
+### Onboarding Faq.Md
+
+- `_docs/_user_guide/onboarding_faq.md` (hidden)
+  - nav_title: Onboarding Faq
+
+### Personalization And Dynamic Content **(section is being restructured -- verify these pages)**
+
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content.md`
+  - nav_title: Connected Content
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content.md`
+  - nav_title: Aborting Connected Content
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content/caching_responses.md`
+  - nav_title: Caching responses
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries.md`
+  - nav_title: Connected Content retries
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables.md`
+  - nav_title: Local Connected Content variables
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call.md`
+  - nav_title: Making a Connected Content call
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content/public_apis.md`
+  - nav_title: Using public APIs
+- `_docs/_user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content.md`
+  - nav_title: Pulling user profile data
+- `_docs/_user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content.md`
+  - nav_title: Deep linking to in-app content
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid.md`
+  - nav_title: Liquid
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/aborting_messages.md`
+  - nav_title: Aborting messages
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/advanced_filters.md`
+  - nav_title: Advanced filters
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras.md`
+  - nav_title: Message extras tag
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/conditional_logic.md`
+  - nav_title: Conditional messaging logic
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/faq.md`
+  - nav_title: FAQ
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/filters.md`
+  - nav_title: Filters
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md`
+  - nav_title: Liquid use case library
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/operators.md`
+  - nav_title: Operators
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/setting_default_values.md`
+  - nav_title: Set default values
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags.md`
+  - nav_title: Supported personalization tags
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/tutorials.md`
+  - nav_title: Tutorials
+- `_docs/_user_guide/personalization_and_dynamic_content/liquid/using_liquid.md`
+  - nav_title: Using Liquid
+- `_docs/_user_guide/personalization_and_dynamic_content/overview.md` (hidden)
+  - nav_title: Overview
+- `_docs/_user_guide/personalization_and_dynamic_content/promotion_codes/create.md`
+  - nav_title: Create codes
+- `_docs/_user_guide/personalization_and_dynamic_content/promotion_codes/manage.md`
+  - nav_title: Using codes
+- `_docs/_user_guide/personalization_and_dynamic_content/promotion_codes/migrating_from_data_feeds.md`
+  - nav_title: Migrate from data feeds
+
+### Personalization And Dynamic Content.Md
+
+- `_docs/_user_guide/personalization_and_dynamic_content.md`
+  - nav_title: Personalization & dynamic content
+
+### Privacy Portal.Md
+
+- `_docs/_user_guide/privacy_portal.md`
+  - nav_title: Privacy portal
+
+## Potential mismatches to verify
+
+These entries were matched but may need verification (e.g., title matched
+but section context was ambiguous).
+
+- **Users and segments**
+  - Current: `_docs/_user_guide/getting_started/users_segments.md`
+  - Proposed: Get started > Users and segments
+- **Campaigns and Canvases**
+  - Current: `_docs/_user_guide/getting_started/campaigns_canvases.md`
+  - Proposed: Get started > Campaigns and Canvases
+- **Workspaces**
+  - Current: `_docs/_user_guide/getting_started/workspaces.md`
+  - Proposed: Get started > Workspaces
+- **Integrations**
+  - Current: `_docs/_user_guide/getting_started/integration.md`
+  - Proposed: Get started > Integrations
+- **SDK overview**
+  - Current: `_docs/_user_guide/getting_started/web_sdk.md`
+  - Proposed: Get started > SDK overview
+- **Terms to know**
+  - Current: `_docs/_user_guide/getting_started/terms_to_know.md`
+  - Proposed: Get started > Terms to know
+- **Braze Pilot**
+  - Current: `_docs/_user_guide/getting_started/braze_pilot.md`
+  - Proposed: Get started > Braze Pilot
+- **B2B use cases**
+  - Current: `_docs/_user_guide/getting_started/b2b_use_cases.md`
+  - Proposed: Get started > B2B use cases
+- **Personal**
+  - Current: `_docs/_user_guide/data/unification/cloud_ingestion/zero_copy_sync.md`
+  - Proposed: Administer > Personal
+- **The Braze dashboard**
+  - Current: `_docs/_user_guide/administrative/access_braze/braze_dashboard.md`
+  - Proposed: Administer > Personal > The Braze dashboard
+- **Language settings**
+  - Current: `_docs/_user_guide/administrative/access_braze/language.md`
+  - Proposed: Administer > Personal > Language settings
+- **Product portal**
+  - Current: `_docs/_user_guide/administrative/access_braze/portal.md`
+  - Proposed: Administer > Personal > Product portal
+- **Braze support**
+  - Current: `_docs/_user_guide/administrative/access_braze/support.md`
+  - Proposed: Administer > Personal > Braze support
+- **Global**
+  - Current: `_docs/_user_guide/analytics/reporting/global_control_group_reporting.md`
+  - Proposed: Administer > Global
+- **User management**
+  - Current: `_docs/_user_guide/message_building_by_channel/line/line_users/user_management.md`
+  - Proposed: Administer > Global > User management
+- **Manage Braze users**
+  - Current: `_docs/_user_guide/administrative/app_settings/manage_your_braze_users.md`
+  - Proposed: Administer > Global > User management > Manage Braze users
+- **Permissions**
+  - Current: `_docs/_user_guide/administrative/app_settings/manage_your_braze_users/user_permissions.md`
+  - Proposed: Administer > Global > User management > Permissions
+- **Teams**
+  - Current: `_docs/_user_guide/administrative/app_settings/manage_your_braze_users/teams.md`
+  - Proposed: Administer > Global > User management > Teams
+- **Automated user provisioning**
+  - Current: `_docs/_user_guide/administrative/app_settings/company_settings/automated_user_provisioning.md`
+  - Proposed: Administer > Global > User management > Automated user provisioning
+- **Internal groups**
+  - Current: `_docs/_user_guide/administrative/app_settings/internal_groups_tab.md`
+  - Proposed: Administer > Global > User management > Internal groups
+- **SAML & single sign-on**
+  - Current: `_docs/_user_guide/administrative/access_braze/single_sign_on.md`
+  - Proposed: Administer > Global > SAML & single sign-on
+- **SAML SSO setup**
+  - Current: `_docs/_user_guide/administrative/access_braze/single_sign_on/set_up.md`
+  - Proposed: Administer > Global > SAML & single sign-on > SAML SSO setup
+- **SAML Just-in-Time provisioning**
+  - Current: `_docs/_user_guide/administrative/access_braze/single_sign_on/saml_jit.md`
+  - Proposed: Administer > Global > SAML & single sign-on > SAML Just-in-Time provisioning
+- **Microsoft Entra SSO**
+  - Current: `_docs/_user_guide/administrative/access_braze/single_sign_on/entra.md`
+  - Proposed: Administer > Global > SAML & single sign-on > Microsoft Entra SSO
+- **Okta**
+  - Current: `_docs/_user_guide/administrative/access_braze/single_sign_on/okta.md`
+  - Proposed: Administer > Global > SAML & single sign-on > Okta
+- **OneLogin**
+  - Current: `_docs/_user_guide/administrative/access_braze/single_sign_on/onelogin.md`
+  - Proposed: Administer > Global > SAML & single sign-on > OneLogin
+- **Create and manage workspaces**
+  - Current: `_docs/_user_guide/administrative/app_settings/workspaces.md`
+  - Proposed: Administer > Global > Create and manage workspaces
+- **Workspace settings**
+  - Current: `_docs/_user_guide/getting_started/workspaces.md`
+  - Proposed: Administer > Global > Workspace settings
+- **APIs and identifiers**
+  - Current: `_docs/_user_guide/administrative/app_settings/api_settings_tab.md`
+  - Proposed: Administer > Global > Workspace settings > APIs and identifiers
+- **Brand guidelines**
+  - Current: `_docs/_user_guide/administrative/app_settings/brand_guidelines.md`
+  - Proposed: Administer > Global > Workspace settings > Brand guidelines
+- **Email preferences**
+  - Current: `_docs/_user_guide/administrative/app_settings/email_settings.md`
+  - Proposed: Administer > Global > Workspace settings > Email preferences
+- **API usage alerts**
+  - Current: `_docs/_user_guide/analytics/dashboard/api_usage_alerts.md`
+  - Proposed: Administer > Global > Workspace settings > Logs and alerts > API usage alerts
+- **Event user log**
+  - Current: `_docs/_user_guide/administrative/app_settings/event_user_log_tab.md`
+  - Proposed: Administer > Global > Workspace settings > Logs and alerts > Event user log
+- **Exports log**
+  - Current: `_docs/_user_guide/administrative/app_settings/exports_log.md`
+  - Proposed: Administer > Global > Workspace settings > Logs and alerts > Exports log
+- **Message activity log**
+  - Current: `_docs/_user_guide/administrative/app_settings/message_activity_log_tab.md`
+  - Proposed: Administer > Global > Workspace settings > Logs and alerts > Message activity log
+- **Multi-language settings**
+  - Current: `_docs/_user_guide/administrative/app_settings/multi_language_settings.md`
+  - Proposed: Administer > Global > Workspace settings > Multi-language settings
+- **Push settings**
+  - Current: `_docs/_user_guide/administrative/app_settings/push_settings.md`
+  - Proposed: Administer > Global > Workspace settings > Push settings
+- **Tags**
+  - Current: `_docs/_user_guide/administrative/app_settings/tags.md`
+  - Proposed: Administer > Global > Workspace settings > Tags
+- **Company settings**
+  - Current: `_docs/_user_guide/administrative/app_settings/company_settings.md`
+  - Proposed: Administer > Global > Company settings
+- **Contact information**
+  - Current: `_docs/_user_guide/administrative/app_settings/company_settings/contact_information.md`
+  - Proposed: Administer > Global > Company settings > Contact information
+- **Notification preferences**
+  - Current: `_docs/_user_guide/administrative/app_settings/company_settings/notification_preferences.md`
+  - Proposed: Administer > Global > Company settings > Notification preferences
+- **Security settings**
+  - Current: `_docs/_user_guide/administrative/app_settings/company_settings/security_settings.md`
+  - Proposed: Administer > Global > Company settings > Security settings
+- **Billing**
+  - Current: `_docs/_user_guide/administrative/app_settings/subscription_and_usage.md`
+  - Proposed: Administer > Global > Billing
+- **Privacy**
+  - Current: `_docs/_user_guide/administrative/privacy.md`
+  - Proposed: Administer > Global > Privacy
+- **Tags**
+  - Current: `_docs/_user_guide/administrative/app_settings/tags.md`
+  - Proposed: Data > Activation > Tags
+- **Segment data**
+  - Current: `_docs/_user_guide/engagement_tools/segments/viewing_and_understanding_segment_data.md`
+  - Proposed: Data > Distribution > Export Braze data > Segment data
+- **Troubleshooting**
+  - Current: `_docs/_user_guide/administrative/access_braze/troubleshooting.md`
+  - Proposed: Data > Distribution > Export Braze data > Troubleshooting
+- **Segments**
+  - Current: `_docs/_user_guide/engagement_tools/segments.md`
+  - Proposed: Audience > Segments
+- **Global control group**
+  - Current: `_docs/_user_guide/engagement_tools/testing/global_control_group.md`
+  - Proposed: Audience > Global control group
+- **Suppression lists**
+  - Current: `_docs/_user_guide/engagement_tools/segments/suppression_lists.md`
+  - Proposed: Audience > Suppression lists

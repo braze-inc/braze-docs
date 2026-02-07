@@ -1,0 +1,2687 @@
+_meta:
+  title: User Guide
+  total_entries: 655
+  generated_by: generate_ia_tree.py
+sections:
+- nav_title: Home
+  path: _docs/_user_guide/introduction.md
+  page_count: 1
+- nav_title: Getting started
+  path: _docs/_user_guide/getting_started.md
+  page_order: 0.1
+  page_count: 17
+  children:
+  - nav_title: Braze overview
+    path: _docs/_user_guide/getting_started/overview.md
+    page_order: 1.0
+    page_count: 1
+  - nav_title: Users and segments
+    path: _docs/_user_guide/getting_started/users_segments.md
+    page_order: 2.0
+    page_count: 1
+  - nav_title: Campaigns and Canvases
+    path: _docs/_user_guide/getting_started/campaigns_canvases.md
+    page_order: 3.0
+    page_count: 1
+  - nav_title: Workspaces
+    path: _docs/_user_guide/getting_started/workspaces.md
+    page_order: 3.0
+    page_count: 1
+  - nav_title: Integration
+    path: _docs/_user_guide/getting_started/integration.md
+    page_order: 8.0
+    page_count: 1
+  - nav_title: SDK overview
+    path: _docs/_user_guide/getting_started/web_sdk.md
+    page_order: 9.0
+    page_count: 1
+  - nav_title: Terms to know
+    path: _docs/_user_guide/getting_started/terms_to_know.md
+    page_order: 10.0
+    page_count: 1
+  - nav_title: Braze Pilot
+    path: _docs/_user_guide/getting_started/braze_pilot.md
+    page_order: 10.5
+    page_count: 4
+    children:
+    - nav_title: Getting started
+      path: _docs/_user_guide/getting_started/braze_pilot/getting_started.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Data dictionary
+      path: _docs/_user_guide/getting_started/braze_pilot/data_dictionary.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Navigation deep links
+      path: _docs/_user_guide/getting_started/braze_pilot/deep_links.md
+      page_order: 4.0
+      page_count: 1
+  - nav_title: B2B use cases
+    path: _docs/_user_guide/getting_started/b2b_use_cases.md
+    page_order: 11.0
+    page_count: 5
+    children:
+    - nav_title: Data models
+      path: _docs/_user_guide/getting_started/b2b_use_cases/b2b_data_models.md
+      page_count: 1
+    - nav_title: Lead scoring
+      path: _docs/_user_guide/getting_started/b2b_use_cases/lead_scoring.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Account-based segmentation
+      path: _docs/_user_guide/getting_started/b2b_use_cases/account_based_segmentation.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Salesforce Sales Cloud
+      path: _docs/_user_guide/getting_started/b2b_use_cases/b2b_salesforce_sales_cloud.md
+      page_order: 3.0
+      page_count: 1
+- nav_title: Administrative
+  path: _docs/_user_guide/administrative.md
+  page_order: 2.0
+  page_count: 41
+  children:
+  - nav_title: Access Braze
+    path: _docs/_user_guide/administrative/access_braze.md
+    page_count: 14
+    children:
+    - nav_title: Access your account
+      path: _docs/_user_guide/administrative/access_braze/accessing_your_account.md
+      page_count: 1
+    - nav_title: The dashboard
+      path: _docs/_user_guide/administrative/access_braze/braze_dashboard.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: API and SDK endpoints
+      path: _docs/_user_guide/administrative/access_braze/sdk_endpoints.md
+      page_order: 2.4
+      page_count: 1
+    - nav_title: Language settings
+      path: _docs/_user_guide/administrative/access_braze/language.md
+      page_order: 2.5
+      page_count: 1
+    - nav_title: SAML & single sign-on
+      path: _docs/_user_guide/administrative/access_braze/single_sign_on.md
+      page_order: 5.0
+      page_count: 6
+      children:
+      - nav_title: SAML SSO setup
+        path: _docs/_user_guide/administrative/access_braze/single_sign_on/set_up.md
+        page_count: 1
+      - nav_title: SAML Just-in-Time provisioning
+        path: _docs/_user_guide/administrative/access_braze/single_sign_on/saml_jit.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Microsoft Entra SSO
+        path: _docs/_user_guide/administrative/access_braze/single_sign_on/entra.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Okta
+        path: _docs/_user_guide/administrative/access_braze/single_sign_on/okta.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: OneLogin
+        path: _docs/_user_guide/administrative/access_braze/single_sign_on/onelogin.md
+        page_order: 5.0
+        page_count: 1
+    - nav_title: Product portal
+      path: _docs/_user_guide/administrative/access_braze/portal.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Troubleshooting
+      path: _docs/_user_guide/administrative/access_braze/troubleshooting.md
+      page_order: 8.0
+      page_count: 1
+    - nav_title: Braze support
+      path: _docs/_user_guide/administrative/access_braze/support.md
+      page_count: 1
+  - nav_title: Settings
+    path: _docs/_user_guide/administrative/app_settings.md
+    page_order: 3.0
+    page_count: 23
+    children:
+    - nav_title: Create and manage workspaces
+      path: _docs/_user_guide/administrative/app_settings/workspaces.md
+      page_count: 1
+    - nav_title: Brand guidelines
+      path: _docs/_user_guide/administrative/app_settings/brand_guidelines.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: APIs and identifiers
+      path: _docs/_user_guide/administrative/app_settings/api_settings_tab.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Message activity log
+      path: _docs/_user_guide/administrative/app_settings/message_activity_log_tab.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: Multi-language settings
+      path: _docs/_user_guide/administrative/app_settings/multi_language_settings.md
+      page_order: 5.5
+      page_count: 1
+    - nav_title: Event user log
+      path: _docs/_user_guide/administrative/app_settings/event_user_log_tab.md
+      page_order: 7.0
+      page_count: 1
+    - nav_title: Internal groups
+      path: _docs/_user_guide/administrative/app_settings/internal_groups_tab.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: Tags
+      path: _docs/_user_guide/administrative/app_settings/tags.md
+      page_order: 12.0
+      page_count: 1
+    - nav_title: Email preferences
+      path: _docs/_user_guide/administrative/app_settings/email_settings.md
+      page_order: 14.0
+      page_count: 2
+      children:
+      - nav_title: Bot filtering for emails
+        path: _docs/_user_guide/administrative/app_settings/email_settings/bot_filtering.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: Exports log
+      path: _docs/_user_guide/administrative/app_settings/exports_log.md
+      page_order: 15.0
+      page_count: 1
+    - nav_title: Push settings
+      path: _docs/_user_guide/administrative/app_settings/push_settings.md
+      page_order: 16.0
+      page_count: 1
+    - nav_title: Admin settings
+      path: _docs/_user_guide/administrative/app_settings/company_settings.md
+      page_order: 20.0
+      page_count: 6
+      children:
+      - nav_title: Contact information
+        path: _docs/_user_guide/administrative/app_settings/company_settings/contact_information.md
+        page_count: 1
+      - nav_title: Notification preferences
+        path: _docs/_user_guide/administrative/app_settings/company_settings/notification_preferences.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Security settings
+        path: _docs/_user_guide/administrative/app_settings/company_settings/security_settings.md
+        page_order: 2.0
+        page_count: 2
+        children:
+        - nav_title: Security events export with S3
+          path: _docs/_user_guide/administrative/app_settings/company_settings/security_settings/security_export_s3.md
+          page_order: 1.0
+          page_count: 1
+      - nav_title: Automated user provisioning
+        path: _docs/_user_guide/administrative/app_settings/company_settings/automated_user_provisioning.md
+        page_order: 10.0
+        page_count: 1
+    - nav_title: Braze users
+      path: _docs/_user_guide/administrative/app_settings/manage_your_braze_users.md
+      page_order: 23.0
+      page_count: 3
+      children:
+      - nav_title: Permissions
+        path: _docs/_user_guide/administrative/app_settings/manage_your_braze_users/user_permissions.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Teams
+        path: _docs/_user_guide/administrative/app_settings/manage_your_braze_users/teams.md
+        page_order: 4.0
+        page_count: 1
+    - nav_title: Billing
+      path: _docs/_user_guide/administrative/app_settings/subscription_and_usage.md
+      page_order: 25.0
+      page_count: 1
+  - nav_title: Privacy
+    path: _docs/_user_guide/administrative/privacy.md
+    page_order: 100.0
+    page_count: 3
+    children:
+    - nav_title: Spam regulations
+      path: _docs/_user_guide/administrative/privacy/spam_regulations.md
+      page_order: 4.2
+      page_count: 1
+    - nav_title: Manage consent
+      path: _docs/_user_guide/administrative/privacy/managing_consent.md
+      page_order: 10.0
+      page_count: 1
+- nav_title: Analytics
+  path: _docs/_user_guide/analytics.md
+  page_order: 3.0
+  page_count: 32
+  children:
+  - nav_title: Tracking
+    path: _docs/_user_guide/analytics/tracking.md
+    page_order: 5.0
+    page_count: 5
+    children:
+    - nav_title: Email open pixel and click tracking
+      path: _docs/_user_guide/analytics/tracking/email_tracking.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Uninstall tracking
+      path: _docs/_user_guide/analytics/tracking/uninstall_tracking.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Influenced opens
+      path: _docs/_user_guide/analytics/tracking/influenced_opens.md
+      page_order: 7.0
+      page_count: 1
+    - nav_title: Segment analytics tracking
+      path: _docs/_user_guide/analytics/tracking/segment_analytics_tracking.md
+      page_order: 8.0
+      page_count: 1
+  - nav_title: Your analytics dashboards
+    path: _docs/_user_guide/analytics/dashboard.md
+    page_order: 6.5
+    page_count: 8
+    children:
+    - nav_title: Home dashboard
+      path: _docs/_user_guide/analytics/dashboard/home_dashboard.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Channel performance dashboard
+      path: _docs/_user_guide/analytics/dashboard/email_performance_dashboard.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Conversions dashboard
+      path: _docs/_user_guide/analytics/dashboard/conversions_dashboard.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: API usage dashboard
+      path: _docs/_user_guide/analytics/dashboard/api_usage_dashboard.md
+      page_order: 3.5
+      page_count: 1
+    - nav_title: API usage alerts
+      path: _docs/_user_guide/analytics/dashboard/api_usage_alerts.md
+      page_order: 3.6
+      page_count: 1
+    - nav_title: Deliverability Center
+      path: _docs/_user_guide/analytics/dashboard/deliverability_center.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: eCommerce revenue dashboard
+      path: _docs/_user_guide/analytics/dashboard/ecommerce_revenue_dashboard.md
+      page_order: 6.0
+      page_count: 1
+  - nav_title: Your reports
+    path: _docs/_user_guide/analytics/reporting.md
+    page_order: 7.0
+    page_count: 14
+    children:
+    - nav_title: Report metrics glossary
+      path: _docs/_user_guide/analytics/reporting/report_metrics.md
+      page_order: 0.5
+      page_count: 1
+    - nav_title: Configure reporting
+      path: _docs/_user_guide/analytics/reporting/configuring_reporting.md
+      page_order: 1.1
+      page_count: 1
+    - nav_title: Metrics by segments
+      path: _docs/_user_guide/analytics/reporting/data_by_segments.md
+      page_order: 2.5
+      page_count: 1
+    - nav_title: Engagement reports
+      path: _docs/_user_guide/analytics/reporting/engagement_reports.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Campaign analytics
+      path: _docs/_user_guide/analytics/reporting/campaign_analytics.md
+      page_order: 4.5
+      page_count: 1
+    - nav_title: Canvas analytics
+      path: _docs/_user_guide/analytics/reporting/canvas_analytics.md
+      page_order: 4.6
+      page_count: 1
+    - nav_title: Retention reports
+      path: _docs/_user_guide/analytics/reporting/retention_reports.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: Funnel reports
+      path: _docs/_user_guide/analytics/reporting/funnel_reports.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Dashboard Builder
+      path: _docs/_user_guide/analytics/reporting/dashboard_builder.md
+      page_order: 6.1
+      page_count: 1
+    - nav_title: Report Builder
+      path: _docs/_user_guide/analytics/reporting/report_builder.md
+      page_order: 6.2
+      page_count: 2
+      children:
+      - nav_title: Report Builder (legacy)
+        path: _docs/_user_guide/analytics/reporting/report_builder/report_builder_legacy.md
+        page_count: 1
+    - nav_title: Global control group
+      path: _docs/_user_guide/analytics/reporting/global_control_group_reporting.md
+      page_count: 1
+    - nav_title: Revenue report
+      path: _docs/_user_guide/analytics/reporting/revenue_report.md
+      page_count: 1
+  - nav_title: Query Builder
+    path: _docs/_user_guide/analytics/query_builder.md
+    page_order: 15.0
+    page_count: 4
+    children:
+    - nav_title: Build queries
+      path: _docs/_user_guide/analytics/query_builder/building_queries.md
+      page_count: 1
+    - nav_title: Query templates
+      path: _docs/_user_guide/analytics/query_builder/query_templates.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: SQL variables
+      path: _docs/_user_guide/analytics/query_builder/sql_variables.md
+      page_order: 2.0
+      page_count: 1
+- nav_title: Data
+  path: _docs/_user_guide/data.md
+  page_order: 3.0
+  page_count: 81
+  children:
+  - nav_title: Braze Data Platform
+    path: _docs/_user_guide/data/braze_data_platform.md
+    page_count: 1
+  - nav_title: Data unification
+    path: _docs/_user_guide/data/unification.md
+    page_order: 1.0
+    page_count: 26
+    children:
+    - nav_title: Cloud Data Ingestion
+      path: _docs/_user_guide/data/unification/cloud_ingestion.md
+      page_order: 0.1
+      page_count: 11
+      children:
+      - nav_title: Best practices
+        path: _docs/_user_guide/data/unification/cloud_ingestion/best_practices.md
+        page_count: 1
+      - nav_title: Connected Sources
+        path: _docs/_user_guide/data/unification/cloud_ingestion/connected_sources.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Data warehouse integrations
+        path: _docs/_user_guide/data/unification/cloud_ingestion/integrations.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: File storage integrations
+        path: _docs/_user_guide/data/unification/cloud_ingestion/file_storage_integrations.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Sync and delete account data
+        path: _docs/_user_guide/data/unification/cloud_ingestion/sync_accounts_data.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Sync and delete catalog data
+        path: _docs/_user_guide/data/unification/cloud_ingestion/sync_catalogs_data.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Zero-copy personalization
+        path: _docs/_user_guide/data/unification/cloud_ingestion/zero_copy_sync.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Sync logs and observability
+        path: _docs/_user_guide/data/unification/cloud_ingestion/sync_logs.md
+        page_order: 10.0
+        page_count: 1
+      - nav_title: Delete users with CDI
+        path: _docs/_user_guide/data/unification/cloud_ingestion/delete_users.md
+        page_order: 30.0
+        page_count: 1
+      - nav_title: FAQs
+        path: _docs/_user_guide/data/unification/cloud_ingestion/faqs.md
+        page_order: 100.0
+        page_count: 1
+    - nav_title: Data Transformation
+      path: _docs/_user_guide/data/unification/data_transformation.md
+      page_order: 0.3
+      page_count: 3
+      children:
+      - nav_title: Create a transformation
+        path: _docs/_user_guide/data/unification/data_transformation/creating_a_transformation.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Use cases
+        path: _docs/_user_guide/data/unification/data_transformation/use_cases.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: Create a formula
+      path: _docs/_user_guide/data/unification/creating_a_formula.md
+      page_order: 1.2
+      page_count: 1
+    - nav_title: User data
+      path: _docs/_user_guide/data/unification/user_data.md
+      page_order: 3.5
+      page_count: 10
+      children:
+      - nav_title: SDK data collection
+        path: _docs/_user_guide/data/unification/user_data/sdk_data_collection.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: User profile lifecycle
+        path: _docs/_user_guide/data/unification/user_data/user_profile_lifecycle.md
+        page_order: 2.0
+        page_count: 2
+        children:
+        - nav_title: Anonymous users
+          path: _docs/_user_guide/data/unification/user_data/user_profile_lifecycle/anonymous_users.md
+          page_count: 1
+      - nav_title: Collection use case
+        path: _docs/_user_guide/data/unification/user_data/collection_use_case.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Collection best practices
+        path: _docs/_user_guide/data/unification/user_data/best_practices.md
+        page_order: 3.1
+        page_count: 1
+      - nav_title: Import users
+        path: _docs/_user_guide/data/unification/user_data/import_users.md
+        page_order: 4.1
+        page_count: 2
+        children:
+        - nav_title: CSV import
+          path: _docs/_user_guide/data/unification/user_data/import_users/csv.md
+          page_order: 1.2
+          page_count: 1
+      - nav_title: Delete users
+        path: _docs/_user_guide/data/unification/user_data/delete_users.md
+        page_order: 4.2
+        hidden: true
+        page_count: 1
+      - nav_title: Language codes
+        path: _docs/_user_guide/data/unification/user_data/language_codes.md
+        page_count: 1
+  - nav_title: Data activation
+    path: _docs/_user_guide/data/activation.md
+    page_order: 2.0
+    page_count: 23
+    children:
+    - nav_title: Custom data
+      path: _docs/_user_guide/data/activation/custom_data.md
+      page_count: 13
+      children:
+      - nav_title: Events
+        path: _docs/_user_guide/data/activation/custom_data/events.md
+        page_count: 1
+      - nav_title: Purchase events
+        path: _docs/_user_guide/data/activation/custom_data/purchase_events.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: Custom events
+        path: _docs/_user_guide/data/activation/custom_data/custom_events.md
+        page_order: 9.0
+        page_count: 2
+        children:
+        - nav_title: Nested objects
+          path: _docs/_user_guide/data/activation/custom_data/custom_events/nested_objects.md
+          page_order: 1.0
+          page_count: 1
+      - nav_title: Custom attributes
+        path: _docs/_user_guide/data/activation/custom_data/custom_attributes.md
+        page_order: 10.0
+        page_count: 3
+        children:
+        - nav_title: Array of objects
+          path: _docs/_user_guide/data/activation/custom_data/custom_attributes/array_of_objects.md
+          page_count: 1
+        - nav_title: Nested custom attributes
+          path: _docs/_user_guide/data/activation/custom_data/custom_attributes/nested_custom_attribute_support.md
+          page_order: 1.0
+          page_count: 1
+      - nav_title: Event naming conventions
+        path: _docs/_user_guide/data/activation/custom_data/event_naming_conventions.md
+        page_order: 10.0
+        page_count: 1
+      - nav_title: Manage custom data
+        path: _docs/_user_guide/data/activation/custom_data/managing_custom_data.md
+        page_order: 20.0
+        page_count: 1
+      - nav_title: Recommended events
+        path: _docs/_user_guide/data/activation/custom_data/recommended_events.md
+        page_count: 3
+        children:
+        - nav_title: eCommerce recommended events
+          path: _docs/_user_guide/data/activation/custom_data/recommended_events/ecommerce_events.md
+          page_count: 1
+        - nav_title: Product blocks
+          path: _docs/_user_guide/data/activation/custom_data/recommended_events/product_blocks.md
+          page_count: 1
+    - nav_title: Report metrics glossary
+      path: _docs/_user_guide/data/activation/report_metrics.md
+      page_order: 0.5
+      page_count: 1
+    - nav_title: Catalogs
+      path: _docs/_user_guide/data/activation/catalogs.md
+      page_order: 6.0
+      page_count: 8
+      children:
+      - nav_title: Create a catalog
+        path: _docs/_user_guide/data/activation/catalogs/create.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Using catalogs
+        path: _docs/_user_guide/data/activation/catalogs/use.md
+        page_order: 1.5
+        page_count: 1
+      - nav_title: Catalog triggers
+        path: _docs/_user_guide/data/activation/catalogs/catalog_triggers.md
+        page_order: 2.0
+        config_only: true
+        page_count: 3
+        children:
+        - nav_title: Back-in-stock notifications
+          path: _docs/_user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications.md
+          page_order: 2.0
+          page_count: 1
+        - nav_title: Price drop notifications
+          path: _docs/_user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications.md
+          page_order: 3.0
+          page_count: 1
+      - nav_title: Selections
+        path: _docs/_user_guide/data/activation/catalogs/selections.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Product blocks
+        path: _docs/_user_guide/data/activation/catalogs/product_blocks.md
+        page_count: 1
+  - nav_title: Data distribution
+    path: _docs/_user_guide/data/distribution.md
+    page_order: 3.0
+    page_count: 25
+    children:
+    - nav_title: Currents
+      path: _docs/_user_guide/data/distribution/braze_currents.md
+      page_order: 3.0
+      page_count: 12
+      children:
+      - nav_title: Set up Currents
+        path: _docs/_user_guide/data/distribution/braze_currents/setting_up_currents.md
+        page_count: 1
+      - nav_title: Available partners
+        path: _docs/_user_guide/data/distribution/braze_currents/available_partners.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Event delivery semantics
+        path: _docs/_user_guide/data/distribution/braze_currents/event_delivery_semantics.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Currents event glossary
+        path: _docs/_user_guide/data/distribution/braze_currents/event_glossary.md
+        page_order: 4.0
+        config_only: true
+        page_count: 4
+        children:
+        - nav_title: Customer behavior and user events
+          path: _docs/_user_guide/data/distribution/braze_currents/event_glossary/customer_behavior_events.md
+          page_order: 4.0
+          page_count: 1
+        - nav_title: Message engagement events
+          path: _docs/_user_guide/data/distribution/braze_currents/event_glossary/message_engagement_events.md
+          page_order: 5.0
+          page_count: 1
+        - nav_title: Currents Event Changelogs
+          path: _docs/_user_guide/data/distribution/braze_currents/event_glossary/currents_changelogs.md
+          page_order: 6.0
+          page_count: 1
+      - nav_title: How Braze uses Currents
+        path: _docs/_user_guide/data/distribution/braze_currents/how_braze_uses_currents.md
+        page_order: 6.0
+        page_count: 1
+      - nav_title: Transfer data from Amazon S3 to Snowflake
+        path: _docs/_user_guide/data/distribution/braze_currents/s3_to_snowflake.md
+        page_order: 7.0
+        page_count: 1
+      - nav_title: Transfer data to Redshift
+        path: _docs/_user_guide/data/distribution/braze_currents/transferring_data_to_redshift.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: FAQ
+        path: _docs/_user_guide/data/distribution/braze_currents/faq.md
+        page_order: 9.0
+        page_count: 1
+    - nav_title: Export Braze data
+      path: _docs/_user_guide/data/distribution/export_braze_data.md
+      page_order: 6.0
+      page_count: 12
+      children:
+      - nav_title: Export campaign data
+        path: _docs/_user_guide/data/distribution/export_braze_data/export_campaign_results_data.md
+        page_count: 1
+      - nav_title: Message archiving
+        path: _docs/_user_guide/data/distribution/export_braze_data/message_archiving.md
+        page_count: 1
+      - nav_title: Export Canvas data
+        path: _docs/_user_guide/data/distribution/export_braze_data/export_canvas_data.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Export segment data to CSV
+        path: _docs/_user_guide/data/distribution/export_braze_data/segment_data_to_csv.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Export usage analytics
+        path: _docs/_user_guide/data/distribution/export_braze_data/exporting_app_usage_data.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Export revenue & total revenue data
+        path: _docs/_user_guide/data/distribution/export_braze_data/exporting_revenue_data.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Export custom event aggregates
+        path: _docs/_user_guide/data/distribution/export_braze_data/export_custom_event_data.md
+        page_order: 6.0
+        page_count: 1
+      - nav_title: Export APIs
+        path: _docs/_user_guide/data/distribution/export_braze_data/export_apis.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: Opening CSV reports in excel
+        path: _docs/_user_guide/data/distribution/export_braze_data/opening_csv_reports_in_excel.md
+        page_order: 9.0
+        page_count: 1
+      - nav_title: Export troubleshooting
+        path: _docs/_user_guide/data/distribution/export_braze_data/export_troubleshooting.md
+        page_order: 10.0
+        page_count: 1
+      - nav_title: FAQ
+        path: _docs/_user_guide/data/distribution/export_braze_data/faqs.md
+        page_order: 11.0
+        page_count: 1
+  - nav_title: Infrastructure
+    path: _docs/_user_guide/data/infrastructure.md
+    page_order: 3.5
+    page_count: 4
+    children:
+    - nav_title: Data centers
+      path: _docs/_user_guide/data/infrastructure/data_centers.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Identifier field-level encryption
+      path: _docs/_user_guide/data/infrastructure/field_level_encryption.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Data points
+      path: _docs/_user_guide/data/infrastructure/data_points.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Technology Partners
+    path: _docs/_user_guide/data/technology_partners.md
+    page_order: 4.0
+    page_count: 1
+- nav_title: Engagement tools
+  path: _docs/_user_guide/engagement_tools.md
+  page_order: 4.0
+  page_count: 166
+  children:
+  - nav_title: Messaging fundamentals
+    path: _docs/_user_guide/engagement_tools/messaging_fundamentals.md
+    page_count: 18
+    children:
+    - nav_title: Accessibility
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/accessibility.md
+      page_order: 0.5
+      page_count: 1
+    - nav_title: Approvals
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/approvals.md
+      page_order: 1.0
+      page_count: 2
+      children:
+      - nav_title: Messaging rules
+        path: _docs/_user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: Archiving
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/archiving.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Conversion events
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/conversion_events.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Copy across workspaces
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: Delivery and entry types
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/delivery_types.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: Duplicating
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/duplicating.md
+      page_order: 5.5
+      page_count: 1
+    - nav_title: Editor blocks
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Know before you send
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/know_before_send.md
+      page_order: 7.0
+      page_count: 1
+    - nav_title: Localization
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/localization.md
+      page_order: 8.0
+      page_count: 3
+      children:
+      - nav_title: Locales in messages
+        path: _docs/_user_guide/engagement_tools/messaging_fundamentals/localization/locales.md
+        page_count: 1
+      - nav_title: Right-to-left messages
+        path: _docs/_user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: Product blocks
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/product_blocks.md
+      page_order: 9.0
+      page_count: 1
+    - nav_title: Re-eligibility
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/reeligibility.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: Statuses
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/about_statuses.md
+      page_order: 11.0
+      page_count: 1
+    - nav_title: Target users
+      path: _docs/_user_guide/engagement_tools/messaging_fundamentals/targeting_users.md
+      page_order: 12.0
+      page_count: 1
+  - nav_title: Segments
+    path: _docs/_user_guide/engagement_tools/segments.md
+    page_order: 1.0
+    page_count: 20
+    children:
+    - nav_title: Create a segment
+      path: _docs/_user_guide/engagement_tools/segments/creating_a_segment.md
+      page_count: 1
+    - nav_title: Manage segments
+      path: _docs/_user_guide/engagement_tools/segments/managing_segments.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Segmentation filters
+      path: _docs/_user_guide/engagement_tools/segments/segmentation_filters.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Suppression lists
+      path: _docs/_user_guide/engagement_tools/segments/suppression_lists.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Segment data
+      path: _docs/_user_guide/engagement_tools/segments/viewing_and_understanding_segment_data.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: Measure segment size
+      path: _docs/_user_guide/engagement_tools/segments/measuring_segment_size.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: Segment extensions
+      path: _docs/_user_guide/engagement_tools/segments/segment_extension.md
+      page_order: 6.0
+      page_count: 7
+      children:
+      - nav_title: CDI segment extensions
+        path: _docs/_user_guide/engagement_tools/segments/segment_extension/cdi_segments.md
+        page_count: 1
+      - nav_title: SQL Segment Extensions
+        path: _docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments.md
+        page_order: 3.2
+        page_count: 5
+        children:
+        - nav_title: Catalog segments
+          path: _docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/catalog_segments.md
+          page_count: 1
+        - nav_title: RFM segments
+          path: _docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/rfm_segments.md
+          page_order: 1.0
+          page_count: 1
+        - nav_title: Use cases
+          path: _docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/use_cases.md
+          page_order: 2.0
+          page_count: 1
+        - nav_title: SQL table reference
+          path: _docs/_user_guide/engagement_tools/segments/segment_extension/sql_segments/sql_segments_tables.md
+          page_order: 3.0
+          page_count: 1
+    - nav_title: Segment insights
+      path: _docs/_user_guide/engagement_tools/segments/segment_insights.md
+      page_order: 8.0
+      page_count: 1
+    - nav_title: User profiles
+      path: _docs/_user_guide/engagement_tools/segments/user_profiles.md
+      page_order: 9.0
+      page_count: 2
+      children:
+      - nav_title: Duplicate users
+        path: _docs/_user_guide/engagement_tools/segments/user_profiles/duplicate_users.md
+        page_count: 1
+    - nav_title: Location targeting
+      path: _docs/_user_guide/engagement_tools/segments/location_targeting.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: Regular expressions
+      path: _docs/_user_guide/engagement_tools/segments/regex.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: Troubleshooting
+      path: _docs/_user_guide/engagement_tools/segments/troubleshooting.md
+      page_order: 12.0
+      page_count: 1
+  - nav_title: Campaigns
+    path: _docs/_user_guide/engagement_tools/campaigns.md
+    page_order: 2.0
+    page_count: 34
+    children:
+    - nav_title: Getting started
+      path: _docs/_user_guide/engagement_tools/campaigns/getting_started.md
+      page_count: 2
+      children:
+      - nav_title: Campaign basics
+        path: _docs/_user_guide/engagement_tools/campaigns/getting_started/campaign_basics.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: Build campaigns
+      path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns.md
+      page_order: 2.0
+      page_count: 10
+      children:
+      - nav_title: Create a campaign
+        path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign.md
+        page_count: 1
+      - nav_title: Schedule your campaign
+        path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types.md
+        page_order: 3.0
+        page_count: 7
+        children:
+        - nav_title: Scheduled delivery
+          path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery.md
+          page_count: 1
+        - nav_title: Action-based delivery
+          path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery.md
+          page_order: 1.0
+          page_count: 3
+          children:
+          - nav_title: Attribute triggers
+            path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers.md
+            page_order: 1.0
+            page_count: 1
+          - nav_title: Campaign connector
+            path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/campaign_connector.md
+            page_order: 2.0
+            page_count: 1
+        - nav_title: API-triggered delivery
+          path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery.md
+          page_order: 2.0
+          page_count: 1
+        - nav_title: Content calendar
+          path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar.md
+          page_order: 4.0
+          page_count: 1
+      - nav_title: Rate limiting and frequency capping
+        path: _docs/_user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting.md
+        page_order: 6.0
+        page_count: 1
+    - nav_title: Manage campaigns
+      path: _docs/_user_guide/engagement_tools/campaigns/managing_campaigns.md
+      page_order: 3.0
+      page_count: 4
+      children:
+      - nav_title: Edit your campaign after launch
+        path: _docs/_user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Campaign alerts
+        path: _docs/_user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts.md
+        page_order: 6.0
+        page_count: 1
+      - nav_title: Search for campaigns
+        path: _docs/_user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns.md
+        page_order: 10.0
+        page_count: 1
+    - nav_title: Test campaigns
+      path: _docs/_user_guide/engagement_tools/campaigns/testing_and_more.md
+      page_order: 4.0
+      page_count: 6
+      children:
+      - nav_title: Send test messages
+        path: _docs/_user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages.md
+        page_count: 1
+      - nav_title: API-triggered and action-based campaigns
+        path: _docs/_user_guide/engagement_tools/campaigns/testing_and_more/triggered_action_based.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Campaign analytics
+        path: _docs/_user_guide/engagement_tools/campaigns/testing_and_more/campaign_analytics.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Retention reports
+        path: _docs/_user_guide/engagement_tools/campaigns/testing_and_more/retention_reports.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Funnel reports
+        path: _docs/_user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report.md
+        page_order: 7.0
+        page_count: 1
+    - nav_title: Ideas and strategies
+      path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies.md
+      page_order: 5.0
+      page_count: 10
+      children:
+      - nav_title: Best practices
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/best_practices.md
+        page_count: 1
+      - nav_title: Active user campaigns
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns.md
+        page_order: 0.5
+        page_count: 1
+      - nav_title: Add-to-calendar links
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/add_to_calendar_links.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Capture lapsing users
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Automate Zoom registration
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/zoom.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Retargeting campaigns
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Understanding user installs
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution.md
+        page_order: 7.0
+        page_count: 1
+      - nav_title: Booking reminder email
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/booking_use_case.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: Feature awareness and new app version
+        path: _docs/_user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features.md
+        page_order: 9.0
+        page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/engagement_tools/campaigns/faq.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Canvas
+    path: _docs/_user_guide/engagement_tools/canvas.md
+    page_order: 3.0
+    page_count: 60
+    children:
+    - nav_title: Getting started
+      path: _docs/_user_guide/engagement_tools/canvas/get_started.md
+      page_count: 12
+      children:
+      - nav_title: Canvas basics
+        path: _docs/_user_guide/engagement_tools/canvas/get_started/the_basics.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Using Braze templates
+        path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates.md
+        page_order: 2.0
+        page_count: 9
+        children:
+        - nav_title: Abandoned cart
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/abandoned_cart.md
+          page_order: 1.0
+          page_count: 1
+        - nav_title: Back in stock
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/back_in_stock.md
+          page_order: 2.0
+          page_count: 1
+        - nav_title: Email sign-up with double opt-in
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/email_signup.md
+          page_order: 2.0
+          page_count: 1
+        - nav_title: Feature adoption
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/feature_adoption.md
+          page_order: 3.0
+          page_count: 1
+        - nav_title: Lapsed user
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/lapsed_user.md
+          page_order: 4.0
+          page_count: 1
+        - nav_title: Onboarding
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/onboarding.md
+          page_order: 5.0
+          page_count: 1
+        - nav_title: Onboarding with preferences survey
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/preference_survey.md
+          page_order: 5.5
+          page_count: 1
+        - nav_title: Post-purchase feedback
+          path: _docs/_user_guide/engagement_tools/canvas/get_started/braze_templates/post_purchase_feedback.md
+          page_order: 6.0
+          page_count: 1
+      - nav_title: Canvas outlines
+        path: _docs/_user_guide/engagement_tools/canvas/get_started/canvas_outlines.md
+        page_order: 3.0
+        page_count: 1
+    - nav_title: Build Canvases
+      path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas.md
+      page_order: 1.0
+      page_count: 13
+      children:
+      - nav_title: Create a Canvas
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas.md
+        page_count: 1
+      - nav_title: Commenting in Canvas
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_comments.md
+        page_order: 0.5
+        page_count: 1
+      - nav_title: Create a Canvas template
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates.md
+        page_order: 0.5
+        page_count: 2
+        children:
+        - nav_title: Canvas templates
+          path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/templates.md
+          page_count: 1
+      - nav_title: Rate limiting
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/rate_limiting.md
+        page_order: 3.9
+        page_count: 1
+      - nav_title: Exit criteria
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria.md
+        page_order: 4.1
+        page_count: 1
+      - nav_title: Canvas entry properties and event properties
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties.md
+        page_order: 4.2
+        page_count: 2
+        children:
+        - nav_title: Persistent entry properties
+          path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties.md
+          page_order: 5.0
+          page_count: 1
+      - nav_title: Canvas by channel
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel.md
+        page_order: 6.0
+        config_only: true
+        page_count: 3
+        children:
+        - nav_title: Content cards
+          path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/content-cards_in_canvas.md
+          page_order: 1.0
+          page_count: 1
+        - nav_title: In-app messages
+          path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas.md
+          page_order: 2.0
+          page_count: 1
+      - nav_title: Context variables
+        path: _docs/_user_guide/engagement_tools/canvas/create_a_canvas/context_variables.md
+        page_count: 1
+    - nav_title: Canvas components
+      path: _docs/_user_guide/engagement_tools/canvas/canvas_components.md
+      page_order: 2.0
+      page_count: 15
+      children:
+      - nav_title: Action paths
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/action_paths.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Agent
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/agent_step.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Audience paths
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/audience_paths.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Audience sync
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/audience_sync.md
+        page_order: 3.5
+        page_count: 1
+      - nav_title: Experiment Paths
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step.md
+        page_order: 4.0
+        page_count: 3
+        children:
+        - nav_title: Personalized Paths
+          path: _docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths.md
+          page_count: 1
+        - nav_title: Winning Path
+          path: _docs/_user_guide/engagement_tools/canvas/canvas_components/experiment_step/winning_path.md
+          page_count: 1
+      - nav_title: Content Optimizer
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Context
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/context.md
+        page_order: 6.0
+        page_count: 1
+      - nav_title: Decision split
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/decision_split.md
+        page_order: 7.0
+        page_count: 1
+      - nav_title: Delay
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/delay_step.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: Feature flags
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/feature_flags.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: Message
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/message_step.md
+        page_order: 11.0
+        page_count: 1
+      - nav_title: User update
+        path: _docs/_user_guide/engagement_tools/canvas/canvas_components/user_update.md
+        page_order: 12.0
+        page_count: 1
+    - nav_title: Manage Canvases
+      path: _docs/_user_guide/engagement_tools/canvas/managing_canvases.md
+      page_order: 2.0
+      page_count: 5
+      children:
+      - nav_title: Edit Canvases after launch
+        path: _docs/_user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch.md
+        page_count: 1
+      - nav_title: Save drafts for Canvas
+        path: _docs/_user_guide/engagement_tools/canvas/managing_canvases/canvas_drafts.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Canvas version history
+        path: _docs/_user_guide/engagement_tools/canvas/managing_canvases/canvas_version_history.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Cloning Canvases
+        path: _docs/_user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases.md
+        page_order: 3.0
+        page_count: 1
+    - nav_title: Test Canvases
+      path: _docs/_user_guide/engagement_tools/canvas/testing_canvases.md
+      page_order: 4.0
+      page_count: 6
+      children:
+      - nav_title: Preview user paths
+        path: _docs/_user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths.md
+        page_order: 0.3
+        page_count: 1
+      - nav_title: Send test Canvases
+        path: _docs/_user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Canvas analytics
+        path: _docs/_user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Retention reports
+        path: _docs/_user_guide/engagement_tools/canvas/testing_canvases/retention_reports.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Funnel reports
+        path: _docs/_user_guide/engagement_tools/canvas/testing_canvases/canvas_funnel_reports.md
+        page_order: 4.0
+        page_count: 1
+    - nav_title: Ideas and strategies
+      path: _docs/_user_guide/engagement_tools/canvas/ideas_and_strategies.md
+      page_order: 5.0
+      page_count: 6
+      children:
+      - nav_title: Best practices
+        path: _docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/best_practices.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Pre and post-launch checklist
+        path: _docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Launch with Canvas flow
+        path: _docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: eCommerce use cases
+        path: _docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Booking reminder email
+        path: _docs/_user_guide/engagement_tools/canvas/ideas_and_strategies/booking_use_case.md
+        page_order: 6.0
+        page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/engagement_tools/canvas/faqs.md
+      page_order: 8.0
+      page_count: 1
+    - nav_title: Troubleshooting
+      path: _docs/_user_guide/engagement_tools/canvas/troubleshooting.md
+      page_order: 11.0
+      page_count: 1
+  - nav_title: Templates and media
+    path: _docs/_user_guide/engagement_tools/templates_and_media.md
+    page_order: 5.0
+    page_count: 7
+    children:
+    - nav_title: Media library
+      path: _docs/_user_guide/engagement_tools/templates_and_media/media_library.md
+      page_count: 1
+    - nav_title: Content Blocks Library
+      path: _docs/_user_guide/engagement_tools/templates_and_media/content_blocks.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Canvas templates
+      path: _docs/_user_guide/engagement_tools/templates_and_media/canvas_templates.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Manage templates
+      path: _docs/_user_guide/engagement_tools/templates_and_media/managing_templates.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Image specifications
+      path: _docs/_user_guide/engagement_tools/templates_and_media/image_specs.md
+      page_order: 4.1
+      page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/engagement_tools/templates_and_media/faqs.md
+      page_order: 5.0
+      page_count: 1
+  - nav_title: Locations and geofences
+    path: _docs/_user_guide/engagement_tools/locations_and_geofences.md
+    page_order: 6.0
+    page_count: 3
+    children:
+    - nav_title: Location tracking
+      path: _docs/_user_guide/engagement_tools/locations_and_geofences/location_tracking.md
+      page_count: 1
+    - nav_title: Create geofences
+      path: _docs/_user_guide/engagement_tools/locations_and_geofences/creating_geofences.md
+      page_order: 1.0
+      page_count: 1
+  - nav_title: Engagement testing
+    path: _docs/_user_guide/engagement_tools/testing.md
+    page_order: 30.0
+    config_only: true
+    page_count: 11
+    children:
+    - nav_title: Global Control Group
+      path: _docs/_user_guide/engagement_tools/testing/global_control_group.md
+      page_count: 1
+    - nav_title: Multivariate & A/B testing
+      path: _docs/_user_guide/engagement_tools/testing/multivariant_testing.md
+      page_order: 2.0
+      page_count: 6
+      children:
+      - nav_title: Create tests
+        path: _docs/_user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Optimizations
+        path: _docs/_user_guide/engagement_tools/testing/multivariant_testing/optimizations.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Analytics
+        path: _docs/_user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics.md
+        page_order: 10.0
+        page_count: 1
+      - nav_title: A/B test projection
+        path: _docs/_user_guide/engagement_tools/testing/multivariant_testing/ab_test_projection.md
+        page_order: 20.0
+        hidden: true
+        page_count: 1
+      - nav_title: FAQ
+        path: _docs/_user_guide/engagement_tools/testing/multivariant_testing/faq.md
+        page_order: 21.0
+        page_count: 1
+    - nav_title: Random bucket numbers
+      path: _docs/_user_guide/engagement_tools/testing/random_bucket_numbers.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Conversion correlation
+      path: _docs/_user_guide/engagement_tools/testing/conversion_correlation.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Race conditions
+      path: _docs/_user_guide/engagement_tools/testing/race_conditions.md
+      page_order: 9.0
+      page_count: 1
+  - nav_title: Landing pages
+    path: _docs/_user_guide/engagement_tools/landing_pages.md
+    page_order: 31.0
+    page_count: 7
+    children:
+    - nav_title: Create landing pages
+      path: _docs/_user_guide/engagement_tools/landing_pages/creating_pages.md
+      page_count: 1
+    - nav_title: Customize the URL
+      path: _docs/_user_guide/engagement_tools/landing_pages/customizing_urls.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Tracking users
+      path: _docs/_user_guide/engagement_tools/landing_pages/tracking_users.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Retargeting users
+      path: _docs/_user_guide/engagement_tools/landing_pages/retargeting.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Personalize landing pages
+      path: _docs/_user_guide/engagement_tools/landing_pages/personalizing_pages.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: About tracking data
+      path: _docs/_user_guide/engagement_tools/landing_pages/about_tracking_data.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Feature flags
+    path: _docs/_user_guide/engagement_tools/feature_flags.md
+    page_order: 32.0
+    page_count: 5
+    children:
+    - nav_title: Create feature flags
+      path: _docs/_user_guide/engagement_tools/feature_flags/create.md
+      page_order: 20.0
+      page_count: 1
+    - nav_title: Feature flags in Canvas
+      path: _docs/_user_guide/engagement_tools/feature_flags/canvas.md
+      page_order: 30.0
+      page_count: 1
+    - nav_title: Feature flag experiments
+      path: _docs/_user_guide/engagement_tools/feature_flags/experiments.md
+      page_order: 40.0
+      page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/engagement_tools/feature_flags/faq.md
+      page_order: 50.0
+      page_count: 1
+- nav_title: Message building by channel
+  path: _docs/_user_guide/message_building_by_channel.md
+  page_order: 5.0
+  page_count: 225
+  children:
+  - nav_title: Banners
+    path: _docs/_user_guide/message_building_by_channel/banners.md
+    page_count: 5
+    children:
+    - nav_title: Create a Banner
+      path: _docs/_user_guide/message_building_by_channel/banners/create.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/banners/testing.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Banner analytics
+      path: _docs/_user_guide/message_building_by_channel/banners/analytics.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/message_building_by_channel/banners/faq.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Content Cards
+    path: _docs/_user_guide/message_building_by_channel/content_cards.md
+    page_order: 1.0
+    page_count: 9
+    children:
+    - nav_title: Create a Content Card
+      path: _docs/_user_guide/message_building_by_channel/content_cards/create.md
+      page_count: 2
+      children:
+      - nav_title: Card creation
+        path: _docs/_user_guide/message_building_by_channel/content_cards/create/card_creation.md
+        page_count: 1
+    - nav_title: Creative details
+      path: _docs/_user_guide/message_building_by_channel/content_cards/creative_details.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/content_cards/testing.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Reporting
+      path: _docs/_user_guide/message_building_by_channel/content_cards/reporting.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: Best practices
+      path: _docs/_user_guide/message_building_by_channel/content_cards/best_practices.md
+      page_order: 20.0
+      page_count: 3
+      children:
+      - nav_title: Improving low latency
+        path: _docs/_user_guide/message_building_by_channel/content_cards/best_practices/improving_low_latency_requirements.md
+        page_order: 10.0
+        page_count: 1
+      - nav_title: Know before you send
+        path: _docs/_user_guide/message_building_by_channel/content_cards/best_practices/know_before_send.md
+        page_count: 1
+  - nav_title: Email
+    path: _docs/_user_guide/message_building_by_channel/email.md
+    page_order: 1.5
+    page_count: 53
+    children:
+    - nav_title: Email setup
+      path: _docs/_user_guide/message_building_by_channel/email/email_setup.md
+      page_order: 1.0
+      page_count: 9
+      children:
+      - nav_title: Set up IPs & domains
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains.md
+        page_count: 1
+      - nav_title: IP warming
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/ip_warming.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Email authentication
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/authentication.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Email validation
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/email_validation.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Import your email list
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/import_your_email_list.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: SSL at Braze
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/ssl.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Consent & address collection
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/consent_and_address_collection.md
+        page_order: 6.0
+        page_count: 1
+      - nav_title: Deliverability pitfalls & spam traps
+        path: _docs/_user_guide/message_building_by_channel/email/email_setup/deliverability_pitfalls_and_spam_traps.md
+        page_order: 7.0
+        page_count: 1
+    - nav_title: Drag-and-drop editor
+      path: _docs/_user_guide/message_building_by_channel/email/drag_and_drop.md
+      page_order: 3.0
+      page_count: 6
+      children:
+      - nav_title: Create an email
+        path: _docs/_user_guide/message_building_by_channel/email/drag_and_drop/overview.md
+        page_count: 1
+      - nav_title: Editor blocks
+        path: _docs/_user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Content Blocks
+        path: _docs/_user_guide/message_building_by_channel/email/drag_and_drop/dnd_content_blocks.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Email Global Style Settings
+        path: _docs/_user_guide/message_building_by_channel/email/drag_and_drop/dnd_email_style_settings.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: FAQ
+        path: _docs/_user_guide/message_building_by_channel/email/drag_and_drop/faq.md
+        page_order: 5.0
+        page_count: 1
+    - nav_title: HTML editor
+      path: _docs/_user_guide/message_building_by_channel/email/html_editor.md
+      page_order: 4.0
+      page_count: 5
+      children:
+      - nav_title: Create an email
+        path: _docs/_user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: CSS inlining
+        path: _docs/_user_guide/message_building_by_channel/email/html_editor/css_inline.md
+        page_order: 5.1
+        page_count: 1
+      - nav_title: Gmail promotions setup
+        path: _docs/_user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: Troubleshooting
+        path: _docs/_user_guide/message_building_by_channel/email/html_editor/troubleshooting.md
+        page_order: 9.0
+        page_count: 1
+    - nav_title: Templates
+      path: _docs/_user_guide/message_building_by_channel/email/templates.md
+      page_order: 5.0
+      page_count: 6
+      children:
+      - nav_title: Create an email template
+        path: _docs/_user_guide/message_building_by_channel/email/templates/email_template.md
+        page_count: 1
+      - nav_title: Upload an HTML email template
+        path: _docs/_user_guide/message_building_by_channel/email/templates/html_email_template.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Link aliasing
+        path: _docs/_user_guide/message_building_by_channel/email/templates/link_aliasing.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Link templates
+        path: _docs/_user_guide/message_building_by_channel/email/templates/link_template.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: FAQ
+        path: _docs/_user_guide/message_building_by_channel/email/templates/faq.md
+        page_order: 10.0
+        page_count: 1
+    - nav_title: Email subscriptions
+      path: _docs/_user_guide/message_building_by_channel/email/managing_user_subscriptions.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Universal links and app links
+      path: _docs/_user_guide/message_building_by_channel/email/universal_links.md
+      page_order: 6.4
+      page_count: 1
+    - nav_title: Custom email footer
+      path: _docs/_user_guide/message_building_by_channel/email/custom_email_footer.md
+      page_order: 6.5
+      page_count: 1
+    - nav_title: Apple Mail
+      path: _docs/_user_guide/message_building_by_channel/email/apple_mail.md
+      page_order: 7.0
+      page_count: 3
+      children:
+      - nav_title: Send emails to Apple Private Relay
+        path: _docs/_user_guide/message_building_by_channel/email/apple_mail/email_private_relay_apple_SSO.md
+        page_count: 1
+      - nav_title: Apple Mail Privacy Protection
+        path: _docs/_user_guide/message_building_by_channel/email/apple_mail/mpp.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: Preference center
+      path: _docs/_user_guide/message_building_by_channel/email/preference_center.md
+      page_order: 8.0
+      page_count: 3
+      children:
+      - nav_title: API email preference center
+        path: _docs/_user_guide/message_building_by_channel/email/preference_center/api_preference_center.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Drag-and-drop email preference center
+        path: _docs/_user_guide/message_building_by_channel/email/preference_center/dnd_preference_center.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: Inbox Vision
+      path: _docs/_user_guide/message_building_by_channel/email/inbox_vision.md
+      page_order: 9.0
+      page_count: 1
+    - nav_title: Transactional email campaigns
+      path: _docs/_user_guide/message_building_by_channel/email/transactional_message_api_campaign.md
+      page_order: 10.0
+      page_count: 2
+      children:
+      - nav_title: Track transactional emails
+        path: _docs/_user_guide/message_building_by_channel/email/transactional_message_api_campaign/tracking_transactional_emails.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: AMP for email
+      path: _docs/_user_guide/message_building_by_channel/email/amphtml.md
+      page_order: 11.0
+      page_count: 1
+    - nav_title: Reporting & analytics
+      path: _docs/_user_guide/message_building_by_channel/email/reporting_and_analytics.md
+      page_order: 12.0
+      config_only: true
+      page_count: 3
+      children:
+      - nav_title: Email Analytics Glossary
+        path: _docs/_user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary.md
+        page_count: 1
+      - nav_title: Reporting
+        path: _docs/_user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting.md
+        page_order: 20.0
+        page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/email/testing.md
+      page_order: 13.0
+      page_count: 1
+    - nav_title: Best practices
+      path: _docs/_user_guide/message_building_by_channel/email/best_practices.md
+      page_order: 14.0
+      page_count: 8
+      children:
+      - nav_title: Email guidelines
+        path: _docs/_user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Email styling
+        path: _docs/_user_guide/message_building_by_channel/email/best_practices/email_styling.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Email use cases
+        path: _docs/_user_guide/message_building_by_channel/email/best_practices/use_cases.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Duplicate emails
+        path: _docs/_user_guide/message_building_by_channel/email/best_practices/duplicate_emails.md
+        page_order: 7.0
+        page_count: 1
+      - nav_title: Sunset policies
+        path: _docs/_user_guide/message_building_by_channel/email/best_practices/sunset_policies.md
+        page_order: 8.0
+        page_count: 1
+      - nav_title: Email services
+        path: _docs/_user_guide/message_building_by_channel/email/best_practices/email_services.md
+        page_order: 9.0
+        page_count: 1
+      - nav_title: Know before you send
+        path: _docs/_user_guide/message_building_by_channel/email/best_practices/know_before_send.md
+        page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/message_building_by_channel/email/faq.md
+      page_order: 15.0
+      page_count: 1
+  - nav_title: In-app messages
+    path: _docs/_user_guide/message_building_by_channel/in-app_messages.md
+    page_order: 2.0
+    page_count: 36
+    children:
+    - nav_title: Drag-and-drop editor
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop.md
+      page_order: 2.0
+      page_count: 14
+      children:
+      - nav_title: Create an in-app message
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Style settings
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Editor blocks
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Templates
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates.md
+        page_order: 10.0
+        config_only: true
+        page_count: 10
+        children:
+        - nav_title: Onboarding flow
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/onboarding.md
+          page_count: 1
+        - nav_title: SMS, RCS, and WhatsApp sign-up form
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture.md
+          page_order: 1.0
+          page_count: 1
+        - nav_title: Email sign-up form
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_capture.md
+          page_order: 2.0
+          page_count: 1
+        - nav_title: Email sign-up with discount
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_discount.md
+          page_order: 3.0
+          page_count: 1
+        - nav_title: Email sign-up with image
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_image.md
+          page_order: 4.0
+          page_count: 1
+        - nav_title: Email sign-up with offer
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_offer.md
+          page_order: 5.0
+          page_count: 1
+        - nav_title: Email sign-up with confirmation
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/email_confirmation_page.md
+          page_order: 6.0
+          page_count: 1
+        - nav_title: Product announcement
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/product_announcement.md
+          page_order: 7.0
+          page_count: 1
+        - nav_title: Seasonal promotion with image
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/seasonal_promo.md
+          page_order: 8.0
+          page_count: 1
+    - nav_title: Traditional editor
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional.md
+      page_order: 3.0
+      page_count: 10
+      children:
+      - nav_title: Create an in-app message
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/create.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Customize
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize.md
+        page_order: 2.0
+        page_count: 5
+        children:
+        - nav_title: HTML in-app messages
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages.md
+          page_count: 1
+        - nav_title: Email capture form
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/email_capture_form.md
+          page_order: 3.0
+          page_count: 1
+        - nav_title: Color profiles and CSS templates
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css.md
+          page_order: 4.0
+          page_count: 1
+        - nav_title: Video
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/customize/video.md
+          page_order: 4.0
+          page_count: 1
+      - nav_title: Templates
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/templates.md
+        page_order: 3.0
+        config_only: true
+        page_count: 2
+        children:
+        - nav_title: Simple survey
+          path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/templates/simple_survey.md
+          page_order: 1.5
+          page_count: 1
+      - nav_title: Dark mode themes
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/traditional/dark-mode.md
+        page_order: 5.0
+        page_count: 1
+    - nav_title: Creative details
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/creative_details.md
+      page_order: 3.5
+      page_count: 4
+      children:
+      - nav_title: Fullscreen
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen.md
+        page_count: 1
+      - nav_title: Modal
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/creative_details/modal.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Slideup
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/creative_details/slideup.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/testing.md
+      page_order: 4.5
+      page_count: 1
+    - nav_title: Reporting
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/reporting.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: In-app rating prompt for iOS
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/ios_app_rating_prompt.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Best practices
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/best_practices.md
+      page_order: 11.0
+      page_count: 3
+      children:
+      - nav_title: Prep guide
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/best_practices/prep_guide.md
+        page_order: 0.5
+        page_count: 1
+      - nav_title: Know before you send
+        path: _docs/_user_guide/message_building_by_channel/in-app_messages/best_practices/know_before_send.md
+        page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/message_building_by_channel/in-app_messages/faq.md
+      page_order: 19.0
+      page_count: 1
+  - nav_title: LINE
+    path: _docs/_user_guide/message_building_by_channel/line.md
+    page_order: 3.0
+    page_count: 11
+    children:
+    - nav_title: LINE setup
+      path: _docs/_user_guide/message_building_by_channel/line/line_setup.md
+      page_count: 1
+    - nav_title: Create a LINE message
+      path: _docs/_user_guide/message_building_by_channel/line/create.md
+      page_order: 1.0
+      page_count: 3
+      children:
+      - nav_title: Message types
+        path: _docs/_user_guide/message_building_by_channel/line/create/message_types.md
+        page_count: 1
+      - nav_title: LINE click tracking
+        path: _docs/_user_guide/message_building_by_channel/line/create/line_click_tracking.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: Messaging users
+      path: _docs/_user_guide/message_building_by_channel/line/messaging_users.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: LINE users
+      path: _docs/_user_guide/message_building_by_channel/line/line_users.md
+      page_order: 4.0
+      config_only: true
+      page_count: 3
+      children:
+      - nav_title: User management
+        path: _docs/_user_guide/message_building_by_channel/line/line_users/user_management.md
+        page_count: 1
+      - nav_title: Subscription groups
+        path: _docs/_user_guide/message_building_by_channel/line/line_users/subscription_groups.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: Reporting
+      path: _docs/_user_guide/message_building_by_channel/line/reporting.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/line/testing.md
+      page_order: 5.0
+      page_count: 1
+  - nav_title: Push
+    path: _docs/_user_guide/message_building_by_channel/push.md
+    page_order: 4.0
+    page_count: 31
+    children:
+    - nav_title: Types of push notifications
+      path: _docs/_user_guide/message_building_by_channel/push/types.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Push registration
+      path: _docs/_user_guide/message_building_by_channel/push/push_registration.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Push enablement and subscription
+      path: _docs/_user_guide/message_building_by_channel/push/users_and_subscriptions.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Create a push message
+      path: _docs/_user_guide/message_building_by_channel/push/creating_a_push_message.md
+      page_order: 4.0
+      page_count: 2
+      children:
+      - nav_title: Quick push messages
+        path: _docs/_user_guide/message_building_by_channel/push/creating_a_push_message/quick_push.md
+        page_count: 1
+    - nav_title: Advanced push options
+      path: _docs/_user_guide/message_building_by_channel/push/advanced_push_options.md
+      page_order: 5.0
+      page_count: 3
+      children:
+      - nav_title: Push action buttons
+        path: _docs/_user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Push stories
+        path: _docs/_user_guide/message_building_by_channel/push/advanced_push_options/push_stories.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: Android options
+      path: _docs/_user_guide/message_building_by_channel/push/android.md
+      page_order: 7.0
+      page_count: 6
+      children:
+      - nav_title: Notification options
+        path: _docs/_user_guide/message_building_by_channel/push/android/notification_options.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Create rich notifications
+        path: _docs/_user_guide/message_building_by_channel/push/android/rich_notifications.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Notification channels
+        path: _docs/_user_guide/message_building_by_channel/push/android/notification_channels.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Advanced push campaign settings
+        path: _docs/_user_guide/message_building_by_channel/push/android/advanced_campaign_settings.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Push Max
+        path: _docs/_user_guide/message_building_by_channel/push/android/push_max.md
+        page_count: 1
+    - nav_title: iOS options
+      path: _docs/_user_guide/message_building_by_channel/push/ios.md
+      page_order: 8.0
+      page_count: 5
+      children:
+      - nav_title: Notification options
+        path: _docs/_user_guide/message_building_by_channel/push/ios/notification_options.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Create rich notifications
+        path: _docs/_user_guide/message_building_by_channel/push/ios/rich_notifications.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Custom app icon feature (iOS)
+        path: _docs/_user_guide/message_building_by_channel/push/ios/customizable_app_icons.md
+        page_order: 7.0
+        page_count: 1
+      - nav_title: Utilizing badge count
+        path: _docs/_user_guide/message_building_by_channel/push/ios/utilizing_badge_count.md
+        page_order: 8.0
+        page_count: 1
+    - nav_title: Web push
+      path: _docs/_user_guide/message_building_by_channel/push/web.md
+      page_order: 8.5
+      page_count: 1
+    - nav_title: Best practices
+      path: _docs/_user_guide/message_building_by_channel/push/best_practices.md
+      page_order: 20.0
+      page_count: 5
+      children:
+      - nav_title: Push primer in-app messages
+        path: _docs/_user_guide/message_building_by_channel/push/best_practices/push_primer_messages.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Message formats
+        path: _docs/_user_guide/message_building_by_channel/push/best_practices/message_format.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Deliverability for Chinese Android devices
+        path: _docs/_user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability.md
+        page_order: 10.0
+        page_count: 1
+      - nav_title: Know before you send
+        path: _docs/_user_guide/message_building_by_channel/push/best_practices/know_before_send.md
+        page_count: 1
+    - nav_title: Reporting
+      path: _docs/_user_guide/message_building_by_channel/push/push_reporting.md
+      page_order: 21.0
+      page_count: 1
+    - nav_title: Common push error messages
+      path: _docs/_user_guide/message_building_by_channel/push/push_error_codes.md
+      page_order: 22.0
+      page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/push/testing.md
+      page_order: 23.0
+      page_count: 1
+    - nav_title: Troubleshooting
+      path: _docs/_user_guide/message_building_by_channel/push/troubleshooting.md
+      page_order: 24.0
+      page_count: 1
+    - nav_title: FAQs
+      path: _docs/_user_guide/message_building_by_channel/push/faq.md
+      page_order: 25.0
+      page_count: 1
+  - nav_title: SMS, MMS, and RCS
+    path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs.md
+    page_order: 4.0
+    page_count: 40
+    children:
+    - nav_title: Laws & regulations
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/laws_and_regulations.md
+      page_count: 1
+    - nav_title: Subscription groups
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/subscription_groups.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Geographic permissions
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/geographic_permissions.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Link shortening
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/link_shortening.md
+      page_order: 3.0
+      page_count: 2
+      children:
+      - nav_title: Self-serve custom domains
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains.md
+        page_count: 1
+    - nav_title: User retargeting
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/retargeting.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: Billing calculator
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/segments.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: Keyword processing
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords.md
+      page_order: 6.0
+      page_count: 6
+      children:
+      - nav_title: Opt-in & opt-out keywords
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout.md
+        page_count: 1
+      - nav_title: Fuzzy opt-out
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/fuzzy_opt_out.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Double opt-in
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Custom keyword handling
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Handle unknown phone numbers
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/keywords/unknown_phone_numbers.md
+        page_order: 4.0
+        page_count: 1
+    - nav_title: User phone numbers
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers.md
+      page_order: 7.0
+      page_count: 3
+      children:
+      - nav_title: A2P 10DLC
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc.md
+        page_order: 2.9
+        page_count: 2
+        children:
+        - nav_title: 10DLC application
+          path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/10dlc/10dlc_application.md
+          page_count: 1
+    - nav_title: Phone number capture
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/phone_numbers_capture.md
+      page_order: 8.0
+      page_count: 1
+    - nav_title: SMS and RCS senders
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/short_and_long_codes.md
+      page_order: 9.0
+      page_count: 1
+    - nav_title: Message usage dashboard
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/message_usage.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: Bot click filtering
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/bot_click_filtering.md
+      page_order: 11.0
+      page_count: 1
+    - nav_title: Reporting
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/campaign_analytics.md
+      page_order: 12.0
+      page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/testing.md
+      page_order: 13.0
+      page_count: 1
+    - nav_title: SMS
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms.md
+      page_order: 14.0
+      page_count: 6
+      children:
+      - nav_title: SMS setup
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup.md
+        page_order: 1.0
+        config_only: true
+        page_count: 3
+        children:
+        - nav_title: Terms to know
+          path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/terms.md
+          page_order: 1.0
+          page_count: 1
+        - nav_title: Send SMS messages
+          path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/sms_setup/sms_sending.md
+          page_order: 4.0
+          page_count: 1
+      - nav_title: Create an SMS message
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/create.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: FAQ
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/sms/faqs.md
+        page_order: 12.0
+        page_count: 1
+    - nav_title: Best practices
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices.md
+      page_order: 15.0
+      page_count: 3
+      children:
+      - nav_title: Collecting user opt-ins
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices/opt-ins.md
+        page_order: 7.0
+        page_count: 1
+      - nav_title: Know before you send
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/best_practices/know_before_send.md
+        page_count: 1
+    - nav_title: RCS
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/rcs.md
+      page_order: 15.0
+      page_count: 3
+      children:
+      - nav_title: RCS setup
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/rcs/rcs_setup.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Create an RCS message
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/rcs/create.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: MMS
+      path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms.md
+      page_order: 16.0
+      page_count: 5
+      children:
+      - nav_title: MMS short and long codes
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/mms_short_long_codes.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Create an MMS campaign
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/create.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Contact cards
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/contact_card.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: FAQ
+        path: _docs/_user_guide/message_building_by_channel/sms_mms_rcs/mms/faqs.md
+        page_order: 4.0
+        page_count: 1
+  - nav_title: Webhooks
+    path: _docs/_user_guide/message_building_by_channel/webhooks.md
+    page_order: 4.0
+    page_count: 7
+    children:
+    - nav_title: Create a webhook
+      path: _docs/_user_guide/message_building_by_channel/webhooks/creating_a_webhook.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Create a webhook template
+      path: _docs/_user_guide/message_building_by_channel/webhooks/webhook_template.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Create a Braze-to-Braze webhook
+      path: _docs/_user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Lead scoring
+      path: _docs/_user_guide/message_building_by_channel/webhooks/lead_scoring.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Reporting
+      path: _docs/_user_guide/message_building_by_channel/webhooks/reporting.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/webhooks/testing.md
+      page_order: 11.0
+      page_count: 1
+  - nav_title: WhatsApp
+    path: _docs/_user_guide/message_building_by_channel/whatsapp.md
+    page_order: 5.0
+    page_count: 32
+    children:
+    - nav_title: WhatsApp setup
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/overview.md
+      page_order: 1.0
+      page_count: 7
+      children:
+      - nav_title: BYO WhatsApp connector
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/overview/byo_connector.md
+        page_count: 1
+      - nav_title: Embedded signup
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/overview/embedded_signup.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Multiple business accounts
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/overview/multiple_subscription_groups.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: WhatsApp phone number migration
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/overview/phone_number_migration.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Phone number acquisition
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/overview/phone_number_acquisition.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Transfer between workspaces
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/overview/transfer_between_workspaces.md
+        page_order: 5.0
+        page_count: 1
+    - nav_title: Subscription groups
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/user_subscription.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: User phone numbers
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/user_phone_numbers.md
+      page_order: 1.5
+      page_count: 1
+    - nav_title: WhatsApp campaign
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign.md
+      page_order: 3.0
+      config_only: true
+      page_count: 8
+      children:
+      - nav_title: Create a WhatsApp message
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create.md
+        page_count: 1
+      - nav_title: WhatsApp messages with optimized delivery
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/optimized_delivery.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: WhatsApp Flows
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/whatsapp_flows.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Product messages
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/product_messages.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Click tracking
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/click_tracking.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: User retargeting
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/user_retargeting.md
+        page_order: 4.0
+        page_count: 1
+      - nav_title: Custom domains
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains.md
+        page_order: 5.0
+        page_count: 1
+    - nav_title: Message processing
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/message_processing.md
+      page_order: 3.1
+      config_only: true
+      page_count: 5
+      children:
+      - nav_title: Opt-ins & opt-outs
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/message_processing/opt-ins_and_opt-outs.md
+        page_order: 5.0
+        page_count: 1
+      - nav_title: Messaging users
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/message_processing/user_messages.md
+        page_order: 5.1
+        page_count: 1
+      - nav_title: Handle unknown phone numbers
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/message_processing/handling_unknown_numbers.md
+        page_order: 50.0
+        page_count: 1
+      - nav_title: Quality rating and messaging limits
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/message_processing/quality_rating.md
+        page_count: 1
+    - nav_title: Reporting
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics.md
+      page_order: 7.0
+      page_count: 2
+      children:
+      - nav_title: Message usage dashboard
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_campaign_analytics/message_usage.md
+        page_count: 1
+    - nav_title: WhatsApp use cases
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases.md
+      page_order: 7.0
+      config_only: true
+      page_count: 3
+      children:
+      - nav_title: Ads That Click to WhatsApp
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases/ads_that_click.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: WhatsApp and external system
+        path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_use_cases/external_system.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: Best practices
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/whatsapp_best_practices.md
+      page_order: 9.0
+      page_count: 1
+    - nav_title: Testing
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/testing.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/faqs.md
+      page_order: 11.0
+      page_count: 1
+    - nav_title: Meta resources
+      path: _docs/_user_guide/message_building_by_channel/whatsapp/meta_resources.md
+      page_order: 12.0
+      page_count: 1
+- nav_title: Personalization & dynamic content
+  path: _docs/_user_guide/personalization_and_dynamic_content.md
+  page_order: 6.0
+  page_count: 30
+  children:
+  - nav_title: Liquid
+    path: _docs/_user_guide/personalization_and_dynamic_content/liquid.md
+    page_count: 13
+    children:
+    - nav_title: Using Liquid
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/using_liquid.md
+      page_count: 1
+    - nav_title: Supported personalization tags
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Operators
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/operators.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Filters
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/filters.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Advanced filters
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/advanced_filters.md
+      page_order: 4.0
+      page_count: 2
+      children:
+      - nav_title: Message extras tag
+        path: _docs/_user_guide/personalization_and_dynamic_content/liquid/advanced_filters/message_extras.md
+        page_order: 1.0
+        page_count: 1
+    - nav_title: Set default values
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/setting_default_values.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: Conditional messaging logic
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/conditional_logic.md
+      page_order: 6.0
+      page_count: 1
+    - nav_title: Aborting messages
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/aborting_messages.md
+      page_order: 7.0
+      page_count: 1
+    - nav_title: Liquid use case library
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases.md
+      page_order: 10.0
+      page_count: 1
+    - nav_title: Tutorials
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/tutorials.md
+      page_order: 11.0
+      page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/personalization_and_dynamic_content/liquid/faq.md
+      page_order: 12.0
+      page_count: 1
+  - nav_title: Connected Content
+    path: _docs/_user_guide/personalization_and_dynamic_content/connected_content.md
+    page_order: 1.0
+    page_count: 8
+    children:
+    - nav_title: Making a Connected Content call
+      path: _docs/_user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call.md
+      page_count: 1
+    - nav_title: Local Connected Content variables
+      path: _docs/_user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Aborting Connected Content
+      path: _docs/_user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content.md
+      page_order: 2.0
+      page_count: 1
+    - nav_title: Caching responses
+      path: _docs/_user_guide/personalization_and_dynamic_content/connected_content/caching_responses.md
+      page_order: 2.5
+      page_count: 1
+    - nav_title: Pulling user profile data
+      path: _docs/_user_guide/personalization_and_dynamic_content/connected_content/user_profile_fields_connected_content.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Connected Content retries
+      path: _docs/_user_guide/personalization_and_dynamic_content/connected_content/connected_content_retries.md
+      page_order: 5.0
+      page_count: 1
+    - nav_title: Using public APIs
+      path: _docs/_user_guide/personalization_and_dynamic_content/connected_content/public_apis.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Deep linking to in-app content
+    path: _docs/_user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content.md
+    page_order: 3.0
+    page_count: 1
+  - nav_title: Key-value pairs
+    path: _docs/_user_guide/personalization_and_dynamic_content/key_value_pairs.md
+    page_order: 4.0
+    page_count: 1
+  - nav_title: Promotion codes
+    path: _docs/_user_guide/personalization_and_dynamic_content/promotion_codes.md
+    page_order: 5.0
+    page_count: 4
+    children:
+    - nav_title: Create codes
+      path: _docs/_user_guide/personalization_and_dynamic_content/promotion_codes/create.md
+      page_order: 0.1
+      page_count: 1
+    - nav_title: Using codes
+      path: _docs/_user_guide/personalization_and_dynamic_content/promotion_codes/manage.md
+      page_order: 0.2
+      page_count: 1
+    - nav_title: Migrate from data feeds
+      path: _docs/_user_guide/personalization_and_dynamic_content/promotion_codes/migrating_from_data_feeds.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Canvas persistent entry properties
+    path: _docs/_user_guide/personalization_and_dynamic_content/canvas_persistent_entry_properties.md
+    page_order: 6.0
+    page_count: 1
+  - nav_title: Overview
+    path: _docs/_user_guide/personalization_and_dynamic_content/overview.md
+    hidden: true
+    page_count: 1
+- nav_title: BrazeAI
+  path: _docs/_user_guide/brazeai.md
+  page_order: 6.5
+  page_count: 59
+  children:
+  - nav_title: Decisioning Studio
+    path: _docs/_user_guide/brazeai/decisioning_studio.md
+    page_order: 0.1
+    page_count: 18
+    children:
+    - nav_title: Getting started
+      path: _docs/_user_guide/brazeai/decisioning_studio/getting_started.md
+      page_count: 5
+      children:
+      - nav_title: Overview
+        path: _docs/_user_guide/brazeai/decisioning_studio/getting_started/overview.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Preparing your data sources
+        path: _docs/_user_guide/brazeai/decisioning_studio/getting_started/preparing_your_data_sources.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Preparing your orchestration
+        path: _docs/_user_guide/brazeai/decisioning_studio/getting_started/preparing_your_orchestration.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Designing decisioning agents
+        path: _docs/_user_guide/brazeai/decisioning_studio/getting_started/designing_decisioning_agents.md
+        page_order: 4.0
+        page_count: 1
+    - nav_title: Decisioning Studio Go
+      path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go.md
+      page_order: 1.0
+      page_count: 5
+      children:
+      - nav_title: Connect data sources
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/connect_data_sources.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Set up orchestration
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/set_up_orchestration.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Design your agent
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/design_your_agent.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Launch your agent
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_go/launch_your_agent.md
+        page_order: 4.0
+        page_count: 1
+    - nav_title: Decisioning Studio Pro
+      path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro.md
+      page_order: 2.0
+      page_count: 5
+      children:
+      - nav_title: Connect data sources
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/connect_data_sources.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Set up orchestration
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/set_up_orchestration.md
+        page_order: 2.0
+        page_count: 1
+      - nav_title: Design your agent
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/design_your_agent.md
+        page_order: 3.0
+        page_count: 1
+      - nav_title: Launch your agent
+        path: _docs/_user_guide/brazeai/decisioning_studio/decisioning_studio_pro/launch_your_agent.md
+        page_order: 4.0
+        page_count: 1
+    - nav_title: Reports and insights
+      path: _docs/_user_guide/brazeai/decisioning_studio/reporting.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: FAQ
+      path: _docs/_user_guide/brazeai/decisioning_studio/faq.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Agents
+    path: _docs/_user_guide/brazeai/agents.md
+    page_order: 1.0
+    page_count: 3
+    children:
+    - nav_title: Create agents
+      path: _docs/_user_guide/brazeai/agents/creating_agents.md
+      page_count: 1
+    - nav_title: Deploy agents
+      path: _docs/_user_guide/brazeai/agents/deploying_agents.md
+      page_count: 1
+  - nav_title: Braze MCP server
+    path: _docs/_user_guide/brazeai/mcp_server.md
+    page_order: 3.0
+    page_count: 4
+    children:
+    - nav_title: Braze MCP server setup
+      path: _docs/_user_guide/brazeai/mcp_server/setup.md
+      page_order: 1.1
+      page_count: 1
+    - nav_title: Using the Braze MCP server
+      path: _docs/_user_guide/brazeai/mcp_server/usage.md
+      page_order: 1.2
+      page_count: 1
+    - nav_title: Available API functions
+      path: _docs/_user_guide/brazeai/mcp_server/available_api_functions.md
+      page_order: 1.5
+      page_count: 1
+  - nav_title: Content Optimizer
+    path: _docs/_user_guide/brazeai/content_optimizer.md
+    page_order: 4.0
+    page_count: 1
+  - nav_title: Generative AI
+    path: _docs/_user_guide/brazeai/generative_ai.md
+    page_order: 5.0
+    page_count: 8
+    children:
+    - nav_title: Liquid code
+      path: _docs/_user_guide/brazeai/generative_ai/liquid.md
+      page_count: 1
+    - nav_title: SQL Segment Extensions
+      path: _docs/_user_guide/brazeai/generative_ai/sql_segment_extensions.md
+      page_order: 0.1
+      page_count: 1
+    - nav_title: SQL queries
+      path: _docs/_user_guide/brazeai/generative_ai/sql_queries.md
+      page_order: 0.2
+      page_count: 1
+    - nav_title: Copywriting
+      path: _docs/_user_guide/brazeai/generative_ai/copywriting.md
+      page_order: 2.1
+      page_count: 1
+    - nav_title: Brand guidelines
+      path: _docs/_user_guide/brazeai/generative_ai/brand_guidelines.md
+      page_order: 2.2
+      page_count: 1
+    - nav_title: Content QA
+      path: _docs/_user_guide/brazeai/generative_ai/content_qa.md
+      page_order: 4.0
+      page_count: 1
+    - nav_title: Images
+      path: _docs/_user_guide/brazeai/generative_ai/images.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Intelligence Suite
+    path: _docs/_user_guide/brazeai/intelligence.md
+    page_order: 6.0
+    page_count: 5
+    children:
+    - nav_title: Intelligent Selection
+      path: _docs/_user_guide/brazeai/intelligence/intelligent_selection.md
+      page_order: 1.0
+      page_count: 1
+    - nav_title: Intelligent Timing
+      path: _docs/_user_guide/brazeai/intelligence/intelligent_timing.md
+      page_order: 1.3
+      page_count: 1
+    - nav_title: Channel filter
+      path: _docs/_user_guide/brazeai/intelligence/intelligent_channel.md
+      page_order: 1.5
+      page_count: 1
+    - nav_title: 'Tutorial: Quick service restaurant'
+      path: _docs/_user_guide/brazeai/intelligence/tutorial.md
+      page_order: 10.0
+      page_count: 1
+  - nav_title: Item recommendations
+    path: _docs/_user_guide/brazeai/recommendations.md
+    page_order: 7.0
+    page_count: 7
+    children:
+    - nav_title: Create recommendations
+      path: _docs/_user_guide/brazeai/recommendations/creating_recommendations.md
+      page_order: 1.1
+      config_only: true
+      page_count: 3
+      children:
+      - nav_title: AI recommendations
+        path: _docs/_user_guide/brazeai/recommendations/creating_recommendations/ai.md
+        page_order: 1.0
+        page_count: 1
+      - nav_title: Rules-based recommendations
+        path: _docs/_user_guide/brazeai/recommendations/creating_recommendations/rules_based.md
+        page_order: 2.0
+        page_count: 1
+    - nav_title: Using recommendations
+      path: _docs/_user_guide/brazeai/recommendations/using_recommendations.md
+      page_order: 1.2
+      page_count: 1
+    - nav_title: Analytics
+      path: _docs/_user_guide/brazeai/recommendations/viewing_analytics.md
+      page_order: 1.3
+      page_count: 1
+    - nav_title: Use case
+      path: _docs/_user_guide/brazeai/recommendations/use_case.md
+      page_count: 1
+  - nav_title: Operator
+    path: _docs/_user_guide/brazeai/operator.md
+    page_order: 8.0
+    page_count: 1
+  - nav_title: Predictive Churn
+    path: _docs/_user_guide/brazeai/predictive_churn.md
+    page_order: 9.0
+    page_count: 6
+    children:
+    - nav_title: Create a churn prediction
+      path: _docs/_user_guide/brazeai/predictive_churn/creating_a_churn_prediction.md
+      page_order: 1.1
+      page_count: 1
+    - nav_title: Messaging users
+      path: _docs/_user_guide/brazeai/predictive_churn/messaging_users.md
+      page_order: 1.2
+      page_count: 1
+    - nav_title: Churn analytics
+      path: _docs/_user_guide/brazeai/predictive_churn/analytics.md
+      page_order: 1.5
+      page_count: 1
+    - nav_title: Troubleshooting
+      path: _docs/_user_guide/brazeai/predictive_churn/troubleshooting.md
+      page_order: 3.0
+      page_count: 1
+    - nav_title: Use case
+      path: _docs/_user_guide/brazeai/predictive_churn/use_case.md
+      page_count: 1
+  - nav_title: Predictive Events
+    path: _docs/_user_guide/brazeai/predictive_events.md
+    page_order: 10.0
+    page_count: 5
+    children:
+    - nav_title: Create an Event Prediction
+      path: _docs/_user_guide/brazeai/predictive_events/creating_an_event_prediction.md
+      page_order: 1.1
+      page_count: 1
+    - nav_title: Messaging users
+      path: _docs/_user_guide/brazeai/predictive_events/messaging_users.md
+      page_order: 1.2
+      page_count: 1
+    - nav_title: Event analytics
+      path: _docs/_user_guide/brazeai/predictive_events/analytics.md
+      page_order: 1.3
+      page_count: 1
+    - nav_title: Use case
+      path: _docs/_user_guide/brazeai/predictive_events/use_case.md
+      page_count: 1
+- nav_title: Privacy portal
+  path: _docs/_user_guide/privacy_portal.md
+  page_order: 60.0
+  page_count: 1
+- nav_title: Onboarding Faq
+  path: _docs/_user_guide/onboarding_faq.md
+  hidden: true
+  page_count: 1
