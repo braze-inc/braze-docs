@@ -55,7 +55,7 @@ To create your custom agent:
 
 ### Step 2: Write the instructions
 
-Give the agent instructions. Refer to [Writing instructions](#writing-instructions) for guidance.
+Give the agent instructions. Refer to the [Agents reference]({{site.baseurl}}/user_guide/brazeai/agents/reference/) for guidance.
 
 {% alert tip %}
 You can use Liquid in your instructions to reference user attributes, such as their first and last name, or custom attributes.
