@@ -125,7 +125,7 @@ Example configuration:
 
 ##### Configuring Android push notification icons {#android-push-icons}
 
-When using `androidNotificationLargeIcon` and `androidNotificationSmallIcon`, follow these best practices to ensure proper icon display:
+When using `androidNotificationLargeIcon` and `androidNotificationSmallIcon`, follow these best practices for proper icon display:
 
 ###### Icon placement and format
 
