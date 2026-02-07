@@ -131,7 +131,7 @@ When using `androidNotificationLargeIcon` and `androidNotificationSmallIcon`, fo
 
 To use custom push notification icons with the Braze Expo plugin:
 
-1. Create your icon files following Android's requirements (detailed below)
+1. Create your icon files following Android's requirements as detailed in [Icon requirements](#icon-requirements).
 2. Place them in your project's Android native directories at `android/app/src/main/res/drawable-<density>/` (for example, `android/app/src/main/res/drawable-mdpi/`, `drawable-hdpi/`, etc.)
 3. Alternatively, if you're managing assets in your React Native directory, you can use Expo's [app.json icon configuration](https://docs.expo.dev/versions/latest/config/app/#icon) or create an [Expo config plugin](https://docs.expo.dev/config-plugins/introduction/) to copy the icons to the Android drawable folders during prebuild.
 
