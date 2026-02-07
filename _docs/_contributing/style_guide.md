@@ -2084,13 +2084,13 @@ Don’t use a file extension to refer to the type of file. For example, use “Z
 
 | Do  | Don’t |
 | :---- | :---- |
-|  |  |
+| ![Example of correctly not embedding text in an image.]({% image_buster /assets/img/contributing/style_guide/embed_text_do.png %}) | ![Example of incorrectly embedding text in an image.]({% image_buster /assets/img/contributing/style_guide/embed_text_dont.png %}) |
 
 **Optimize placement and sizing:** Whenever possible, place images near relevant text and be mindful to use image styling markdown to resize larger images. For some content, this should be done by [anchoring text to the left or right side of the page]({{site.baseurl}}/home/styling_test_page/#image-test) depending on the image and the space available. 
 
 | Do  | Don’t |
 | :---- | :---- |
-|  |  |
+| ![Example of correctly optimizing image placement.]({% image_buster /assets/img/contributing/style_guide/optimize_placement_do.png %}) | ![Example of incorrectly optimizing image placement.]({% image_buster /assets/img/contributing/style_guide/optimize_placement_dont.png %}) |
 
 **Cropping**: Crop relevant sections closely. Unless necessary, do not include the left navigation bar and instead include navigation directions in the article. This will limit the number of images that need to be changed when UI changes to the dashboard occur. 
 
