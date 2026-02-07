@@ -62,6 +62,8 @@ Banner messages are delivered to your app or website as HTML content, typically 
 
 Iframes allow for dynamic and personalized content updates that don't require changes to your codebase. Each iframe retrieves and displays the HTML for each user session using campaign targeting and personalization logic.
 
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
+
 ### Dimensions and sizing
 
 Here's what you need to know about Banner dimensions and sizing:
