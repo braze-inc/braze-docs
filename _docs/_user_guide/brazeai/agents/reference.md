@@ -118,7 +118,7 @@ For more details on prompting best practices, refer to guides from the following
 
 ### Using Liquid
 
-Including [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) in your agent's instructions can add an extra layer of personalization in its response. You can specify the exact Liquid variable the agent gets and can include it in the context of your prompt. For example, instead of explicitly writing "first name", you can use the Liquid snippet {% raw %}`{{${first_name}}}``{% endraw %}:
+Including [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) in your agent's instructions can add an extra layer of personalization in its response. You can specify the exact Liquid variable the agent gets and can include it in the context of your prompt. For example, instead of explicitly writing "first name", you can use the Liquid snippet {% raw %}`{{${first_name}}}`{% endraw %}:
 
 {% raw %}
 ```
