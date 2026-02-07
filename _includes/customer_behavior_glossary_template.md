@@ -42,3 +42,7 @@ Certain events return a `platform` value that specifies the platform of the user
 {% alert important %}
 Storage schemas apply to the flat file event data we send to data warehouse storage partners (such as Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage). Some event and destination combinations listed here are not yet generally available. For information on which events are supported by various partners, refer to our list of [available partners]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/) and check their respective pages.<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900&nbsp;KB.
 {% endalert %}
+
+{% alert note %}
+The events in this glossary are for SDK-initiated changes. It is expected that `sdk_version`, `gender`, `language`, and `country` return `null`.
+{% endalert %}
