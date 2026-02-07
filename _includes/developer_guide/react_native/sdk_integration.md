@@ -139,10 +139,10 @@ The Braze Expo plugin references these icons using Android's drawable resource s
 
 ###### Icon requirements
 
-- **Small icon**: Must be a white silhouette on a transparent background (this is an Android platform requirement)
-- **Large icon**: Can be a full-color image
-- **Format**: PNG format is recommended
-- **Naming**: Use lowercase letters, numbers, and underscores only (for example, `my_large_icon.png`)
+- **Small icon:** Must be a white silhouette on a transparent background (this is an Android platform requirement)
+- **Large icon:** Can be a full-color image
+- **Format:** PNG format is recommended
+- **Naming:** Use lowercase letters, numbers, and underscores only (for example, `my_large_icon.png`)
 
 ###### Configuration in app.json
 
