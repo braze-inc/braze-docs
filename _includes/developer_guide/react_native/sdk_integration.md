@@ -170,7 +170,7 @@ Do not use relative file paths (such as `src/assets/images/icon.png`) or include
 
 ###### How it works
 
-The Braze Expo plugin references your icon files from the Android `drawable` directories. When you run `npx expo prebuild`, Expo generates the native Android project structure. Your icons must be present in the Android `drawable` folders (either placed manually or copied via a config plugin) before the build process. The plugin then configures the Braze SDK to use these drawable resources by their names (without path or extension), which is why the `@drawable/` prefix is required in your configuration.
+The Braze Expo plugin references your icon files from the Android `drawable` directories. When you run `npx expo prebuild`, Expo generates the native Android project structure. Your icons must be present in the Android `drawable` folders (either placed manually or copied through a config plugin) before the build process. The plugin then configures the Braze SDK to use these drawable resources by their names (without path or extension), which is why the `@drawable/` prefix is required in your configuration.
 
 For more information on Android notification icons, see [Android's notification icon guidelines](https://developer.android.com/develop/ui/views/notifications#icon).
 
