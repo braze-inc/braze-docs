@@ -30,14 +30,13 @@ Clearly structure your writing and make it easy for people to find the informati
 
 ###### Guidelines
 
-✅ Use visuals to help clarify complex subjects.  
+✅ Use visuals to help clarify complex subjects. <br> 
 **Example:** The user profile lifecycle image in the [User Profile Lifecycle article]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) helps to illustrate a tricky concept.
 
-✅ Create a clear information hierarchy.
-
+✅ Create a clear information hierarchy. <br>
 **Example:** "This is an overview for how content is managed on Braze Docs. To learn more about a specific topic, choose the dedicated topic page in the navigation."
 
-✅ Ruthlessly cut jargon and acronyms if possible. If not possible, define them.   
+✅ Ruthlessly cut jargon and acronyms if possible. If not possible, define them.  <br> 
 **Example:** "The Short Messaging Service (SMS) is used to send and receive brief text messages."
 
 ##### Empowering
@@ -50,17 +49,15 @@ What problem are you trying to solve with your writing? Keep that problem in min
 
 ###### Guidelines
 
-✅ Make it easy to find the happy path. 
+✅ Make it easy to find the happy path. <br>
+**Example:** "When you stop a Canvas, the following applies: 1. Users are prevented from entering the Canvas. 2. No further messages are sent, despite where a user is in the flow.  3. **Exception:** Email Canvases don't immediately stop." 
 
-**Example:** "When you stop a Canvas, the following applies: 1. Users will be prevented from entering the Canvas. 2. No further messages will be sent out, despite where a user is in the flow.  3. **Exception:** Email Canvases won't immediately stop." 
-
-✅ Provide examples, use cases, and templates that simplify or elevate the user’s work. 
-
+✅ Provide examples, use cases, and templates that simplify or elevate the user’s work. <br>
 **Example:** "`IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons. A common use case would be intercepting a message when a button or message is clicked for further processing."
 
 ##### Human
 
-Informational writing is inherently dry—we want readers to focus on the content, not the delivery. We can still write in a way that will help our readers process the information they’re consuming and make it more likely that they’ll internalize the knowledge. Be human, let your personality show, and be memorable. 
+Informational writing is inherently dry—we want readers to focus on the content, not the delivery. We can still write in a way that helps our readers process the information they’re consuming and make it more likely that they internalize the knowledge. Be human, let your personality show, and be memorable. 
 
 * Aim for a conversational tone rather than a formal one.   
 * Focus on the user; respect their situation and emotional state.   
@@ -68,13 +65,13 @@ Informational writing is inherently dry—we want readers to focus on the conten
 
 ###### Guidelines
 
-✅ Thoughtfully apply brand tone and assets.   
+✅ Thoughtfully apply brand tone and assets.  <br>
 **Example:** "Integrating with Braze is a worthwhile process. But you’re smart. You’re here. Clearly, you already know that."
 
-✅ Apply [accessibility best practices](#accessibility) for both visual and verbal content.   
+✅ Apply [accessibility best practices](#accessibility) for both visual and verbal content.  <br>
 **Example:** Replacing idioms like "out-of-the-box" with "default" make your text more accessible to English second language speakers.
 
-✅ Provide consistent support across the user journey.  
+✅ Provide consistent support across the user journey. <br>
 **Example:** Use the Diátaxis framework to ensure you’re meeting the needs of different users at different times.
 
 #### Accessibility {#accessibility}
@@ -105,7 +102,7 @@ Braze aims to provide an inclusive experience. Use the following guidelines to e
 
 * Don’t use link text like “Learn more”, “here”, or “this document”. For more phrases to avoid, refer to the section [Writing Links](#writing-links).  
 * Avoid placing two links back to back in a sentence. Put a character or word in between to separate them.  
-* [Links to download files](#links-for-file-download) should indicate clicking the link will download the file, as well as the file type (PDF, CSV, etc.)  
+* [Links to download files](#links-for-file-download) should indicate clicking the link downloads the file, as well as the file type (PDF, CSV, and so on)  
 * If it isn’t clear from the context, links to sections in the same document should use a [standard phrase](#structuring-links) indicating this action.
 
 ##### Images, Videos, and GIFs
@@ -185,7 +182,7 @@ When referring to Braze users and their consumers, use the following terms accor
 * **Customers:** Brands we work with. Never refer to our customers as “clients”.  
  * **Braze users:** In the context of documentation, when it is important to distinguish between users of the platform and the end users who receive marketing messages, use "Braze users".  
 * **Consumers:** Customers of a brand we work with.   
-* **Users:** Generally reserved for a specific statistic that depends on “user” metrics (such as “user retention”). When referring to “users” in our content, first aim to be more specific. Think shoppers, consumers, patients, players, etc.
+* **Users:** Generally reserved for a specific statistic that depends on “user” metrics (such as “user retention”). When referring to “users” in our content, first aim to be more specific. Think shoppers, consumers, patients, players.
 
 ##### Departments and Teams
 
@@ -349,18 +346,16 @@ Although some abbreviations are widely understood, others aren't well known or a
 
 If an abbreviation isn’t well known, spell it out on the first mention, followed by the abbreviation in parentheses. For all subsequent mentions of the term, use the abbreviation.
 
-| Do | Don’t |
+| Do <br><br> *Spell out uncommon abbreviations at the first mention* | Don’t <br><br> *Spell out common abbreviations* |
 | :---- | :---- |
-| _Spell out uncommon abbreviations at the first mention_ | _Spell out common abbreviations_ |
 |  Top-level domain (TLD) |  Portable Document Format (PDF)
 | Universally unique identifier (UUID) | Universal Serial Bus (USB) |
 
 
 Treat abbreviations as regular words when making them plural, and don't add an apostrophe—for example, APIs and SDKs. The same goes for which article (a or an) you use—look at how you pronounce the abbreviation. When an abbreviation begins with a vowel sound, use “an”; for consonant sounds, use “a”. 
 
-| Do |
+| Do <br><br> *Use articles depending on how the abbreviation is pronounced, not spelled* |
 | :---- | 
-| _Use articles depending on how the abbreviation is prounounced, not spelled_ |
 | an ISP |
 | a DLL | 
 | an HTML site |
@@ -372,9 +367,8 @@ We use the active voice at Braze when possible. Active voice is our gold standar
 
 To see if your sentence is in a passive voice, insert “by somebody” after the verb. If the sentence makes sense—it’s most likely in the passive voice.
 
-| Do | Don’t |
+| Do <br><br> *Use active voice* | Don’t <br><br> *Use passive voice, if possible* |
 | :---- | :---- |
-| _Use active voice_ | _Use passive voice, if possible_ |
 | Braze connects consumers to the brands they love. | Consumers are connected to the brands they love. |
 | Braze requires employees to keep their addresses up to date. | Employees are required to keep their addresses up to date. |
 | Company administrators can configure authentication requirements for signing into Braze. |  Authentication requirements for signing into Braze can be configured by company administrators. |
@@ -395,9 +389,8 @@ Use the articles “a”, “an”, and “the” to make your writing clear and
 
 To determine if you should use “a” or “an”, look at the pronunciation of the word that follows it. Use “a” before a consonant sound, and use “an” before a vowel sound. The same guidelines apply to [Abbreviations](#abbreviations).
 
-| Do | Don’t |
+| Do <br><br> *Use articles depending on how the anteceding word is pronounced.* | 
 | :---- | :---- |
-| _Use articles depending on how the anteceding word is pronounced._ |
 | an hour |
 | a minute |
 | an FAQ article |
@@ -427,9 +420,8 @@ Only use gendered pronouns (he/she, him/her, his/hers) if the person you’re re
 
 Pronouns substitute for nouns. The word a pronoun refers to is called its antecedent. When writing instructions or learning material, be sure to make clear references between a pronoun and its antecedent. This may require repeating subjects to make the meaning clear.
 
-| Do | Don’t |
+| Do <br><br> *Ensure a pronoun clearly references its antecedent* | Don’t <br><br> *Use ambiguous pronoun references* |
 | :---- | :---- |
-| _Ensure a pronoun clearly references its antecedent_ | _Use ambigous pronoun references_ |
 | If you type text in the field, the text doesn’t change. | If you type text in the field, it doesn't change. |
 | She told Sarah that Sarah’s answer was incorrect. | She told Sarah that her answer was incorrect. |
 | You can’t edit an archived campaign. Unarchive a campaign to edit it. | You can't edit an archived campaign. Unarchive it to edit it. |
@@ -438,9 +430,8 @@ Pronouns substitute for nouns. The word a pronoun refers to is called its antece
 
 To add additional clarity to your writing and to aid in localization, use pronouns such as “that”, “which”, and “who”.
 
-| Do | Don’t |
+| Do <br><br> *Use "that", "which", and "who" to add additional clarity.* | Don’t |
 | :---- | :---- |
-| _Use "that", "which", and "who" to add additional clarity._ |  |
 |  Right-click the link that you want to open. | Right-click the link you want to open. |
 | From here, you can choose which Tinyclues cohort that you want to include. | From here, you can choose a Tinyclues cohort you want to include. |
 
@@ -448,20 +439,17 @@ To add additional clarity to your writing and to aid in localization, use pronou
 
 Avoid unnecessary capitalization. In most instances, use sentence case. Title case should only be used for proper nouns or feature names (unless otherwise specified, see [Glossary](https://confluence.braze.com/pages/viewpage.action?spaceKey=MAR&title=Braze+Glossary)).
 
-| Do | Don’t |
+| Do <br><br> *Use lowercase for writing out website URLs and email addresses* | Don’t |
 | :---- | :---- |
-| _Use lowercase for writing out website URLs and email addresses_ ||
 |  www.braze.com/docs | www.Braze.com/docs |
 |  sample@email.com | SAMPLE@EMAIL.COM |
 
-| Do | Don’t |
+| Do <br><br> *Use lowercase directionals* | Don’t |
 | :---- | :---- |
-| _Use lowercase directionals_ ||
 |  north, south, east, west |  North, South, East, West |
 
-| Do | Don’t |
+| Do <br><br> *Capitalize specific regions, and use all capitals for abbreviated regions* | Don’t |
 | :---- | :---- |
-| _Capitalize specific regions, and use all capitals for abbreviated regions_ ||
 |  the Northwest | the northwest |
 | Southern Connecticut | southern Connecticut |
 | Eastern Europe | eastern Europe |
@@ -492,9 +480,8 @@ If you want to tell the reader to do something in a specific circumstance, try t
 
 A contraction is a shortened version of a word or phrase. Use contractions to keep an approachable and informal tone. However, do not use noun and verb contractions or double contractions, or a combination of two contractions. These can disrupt the flow and coherency of the sentence.
 
-| Do | Don’t |
+| Do <br><br> *Use contractions* | Don’t <br><br> *Use noun and verb contractions* |
 | :---- | :---- |
-| _Use contractions_ | _Use noun and verb contractions_ |
 |  If you’re an admin, you can manage your company’s contact information. | Braze’ll now support Shoptify integration.
 | You can’t edit an archived campaign. Do Use contractions. | You mightn’t’ve seen the restricted upload size. |
 
@@ -502,11 +489,10 @@ A contraction is a shortened version of a word or phrase. Use contractions to ke
 
 Modifiers are words of phrases that modify other words or phrases. A dangling modifier doesn’t modify any subject in the sentence. A misplaced modifier is placed far away from the subject that it’s meant to modify. Essentially, dangling and misplaced modifiers may cause confusion by connecting to the wrong part of the sentence.
 
-Writing with an active voice will help prevent the use of dangling and misplaced modifiers. Be sure to use a modifier that clearly modifies. 
+Writing with an active voice helps prevent the use of dangling and misplaced modifiers. Be sure to use a modifier that clearly modifies. 
 
-| Do | Don’t |
+| Do <br><br> *Keep sentence short and concise. Use active voice.* | Don’t <br><br> *Use lengthy sentences with modifiers that can cause confusion* |
 | :---- | :---- |
-| _Keep sentence short and concise. Use active voice._ | _Use lengthy sentences with modifiers that can cause confusion_ |
 |  Customers must set up their SAML settings. | You may have test messages on your campaigns that can be deleted. |
 | Make sure to save your campaign drafts. | On the way home, Sarah found a gold man’s stopwatch. |
 
@@ -516,7 +502,7 @@ There’s nothing wrong with ending a sentence in a preposition when it improves
 
 | Do | Don’t |
 | :---- | :---- |
-| Each option corresponds to the priority the notification will be displayed in. | Each option corresponds to the priority in which the notification will be displayed. |
+| Each option corresponds to the priority the notification appears in. | Each option corresponds to the priority in which the notification appears. |
 | For details, see the SDK documentation for the platform you’re working with. | For details, see the SDK documentation for the platform with which you’re working. |
 
 #### Present Tense {#present-tense}
@@ -525,7 +511,7 @@ Use present tense instead of future tense. Present tense conveys immediacy and d
 
 | Do | Don’t |
 | :---- | :---- |
-| Archived subscription groups cannot be edited and no longer appear in segment filters. | Archived subscription groups cannot be edited and will no longer appear in segment filters. |
+| Archived subscription groups cannot be edited and no longer appear in segment filters. | Archived subscription groups cannot be edited and no longer appear in segment filters. |
 | Using a short code is the most reliable number type for including links. | Using a short code would be the most reliable number type for including links. |
 
 Only use future tense when you’re actually talking about the future. Avoid predicting [future features](#describing-limitations). 
@@ -654,21 +640,18 @@ Refer to your operating system for how to type an em dash:
 
 Use an en dash (–) to indicate a range of numbers, as a minus sign, or to indicate negative numbers. Don’t put any spaces before or after the en dash except for when it’s used as a minus sign. Don’t use a hyphen (-). 
 
-| Do | Don’t |
+| Do <br><br> *Use an en dash for a range of numbers* | Don’t <br><br> *Use a hyphen* |
 | :---- | :---- |
-| _Use an en dash for a range of numbers_ | _Use a hyphen_ |
 | 2018–2021 | 2018-2021 |
 
 Don’t use an en dash for ranges of time. For more details, refer to the section [Dates and Times](#dates-and-times).
 
-| Do | Don’t |
+| Do <br><br> *Use an en dash for a minus sign and include spaces surrounding the en dash* | Don’t <br><br> *Use a hyphen* |
 | :---- | :---- |
-| _Use an en dash for a minus sign and include spaces surrounding the en dash_ | _Use a hyphen_ |
 | 15 – 5 = 10 | 15-5=10 |
 
-| Do | Don’t |
+| Do <br><br> *Use an en dash for negative numbers* | Don’t <br><br> *Use a hyphen* |
 | :---- | :---- |
-| _Use an en dash for negative numbers_ | _Use a hyphen_ |
 | –30 | -30 |
 
 Refer to your operating system for how to type an en dash:
@@ -684,16 +667,15 @@ An ellipsis is a series of three periods (...) that indicates an omission of one
 
 An exclamation point can be used sparingly for an informal tone. However, avoid overly using exclamation points throughout text. Instead, consider using Alerts.
 
-| Do | Don’t |
+| Do <br><br> *Use exclamation points for an informal tone for reminders and introductions* | Don’t <br><br> *Use exclamation points for indicating warning or caution to readers* |
 | :---- | :---- |
-| _Use exclamation points for an informal tone for reminders and introductions_ | _Use exclamation points for indicating warning or caution to readers_ |
 |  Be sure to save your changes before leaving the page! | Users must receive one or more messages from a step to be counted as a unique recipient! |
 
 #### Hyphens {#hyphens}
 
 Hyphens can help the reader gain more clarity in a sentence by linking words in a phrase together. Here are a few guidelines for getting it right.
 
-Use hyphens for compound modifiers that will help the reader understand the subject more clearly.
+Use hyphens for compound modifiers that help the reader understand the subject more clearly.
 
 | Do | 
 | :---- | 
@@ -761,9 +743,8 @@ There are two types of slashes: backward (\\) and forward (/). Do not use slashe
 
 Use slashes as needed in file paths and URLs.
 
-| Do | Don’t |
+| Do <br><br> *Use a slash for file paths* | Don’t <br><br> *Use a slash to separate alternatives* |
 | :---- | :---- |
-| _Use a slash for file paths_ | _Use a slash to separate alternatives_ |
 | `/campaigns/data_series` | you/your customers |
 
 #### Quotation Marks {#quotation-marks}
@@ -798,23 +779,35 @@ When instructing a reader to interact with the UI, bold the UI element they are 
 
 For guidance on what verbs to use when describing interactions with the UI, refer to the following table:
 
-| Verb | Usage | Example |
-| :---- | :---- | :---- |
-| Open | {::nomarkdown}<ul><li>Opening apps</li><li>Opening files and folders</li></ul>{:/} | {::nomarkdown}<ul><li>Open Droidboy.</li><li>Open the braze.xml file.</li></ul>{:/} |
-| Close | {::nomarkdown}<ul><li>Closing apps</li><li>Closing files and folders</li></ul>{:/} | {::nomarkdown}<ul><li>Close Droidboy.</li><li>Close the braze.xml file.</li></ul>{:/} |
-| Go to | {::nomarkdown}<ul><li>Going to a specific page in the UI (tab, page, section)</li><li>Going to a webpage</li></ul>{:/} | {::nomarkdown}<ul><li>Go to the <strong>Segments</strong> page, and click…</li><li>Go to example.com to sign up.</li></ul>{:/} |
-| >  | Following a sequence of steps when all steps are of the same type. | Go to **Segments** > **Segment Insights**. |
-| Choose | Making a decision that is subjective, strategic, open-ended, or complex. | Choose a campaign strategy. |
-| Select | {::nomarkdown}<ul><li>Selecting a checkbox</li><li>Selecting items from a dropdown</li><li>Selecting a tab</li><li>Making a simple decision</li></ul>{:/} | {::nomarkdown}<ul><li>Select <strong>Show Password</strong>.</li><li>Select a data type from the dropdown.</li><li>On the <strong>Manage Settings</strong> page, select the <strong>Custom Events</strong> tab.</li><li>Select an image.</li></ul>{:/} |
-| Clear | Clearing the selection from a checkbox. | Clear the **Show Password** checkbox. |
-| Click | Clicking an element in the UI. | Add a custom attribute and click **Save**. |
-| Turn on | Enabling a toggle option | Turn on the **List-Unsubscribe header**. |
-| Turn off | Disabling a toggle option | Turn off **Inline CSS on New Emails by Default**. |
-| Enter | Typing a value. | {::nomarkdown}<ul><li>In the text field, enter the name of your custom attribute.</li><li>Enter "Braze" as the source name.</li></ul>{:/} |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr><th>Verb</th><th>Usage</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>Open</td><td><ul><li>Opening apps</li><li>Opening files and folders</li></ul></td><td><ul><li>Open Droidboy.</li><li>Open the braze.xml file.</li></ul></td></tr>
+<tr><td>Close</td><td><ul><li>Closing apps</li><li>Closing files and folders</li></ul></td><td><ul><li>Close Droidboy.</li><li>Close the braze.xml file.</li></ul></td></tr>
+<tr><td>Go to</td><td><ul><li>Going to a specific page in the UI (tab, page, section)</li><li>Going to a webpage</li></ul></td><td><ul><li>Go to the <strong>Segments</strong> page, and click…</li><li>Go to example.com to sign up.</li></ul></td></tr>
+<tr><td>&gt;</td><td>Following a sequence of steps when all steps are of the same type.</td><td>Go to <strong>Segments</strong> &gt; <strong>Segment Insights</strong>.</td></tr>
+<tr><td>Choose</td><td>Making a decision that is subjective, strategic, open-ended, or complex.</td><td>Choose a campaign strategy.</td></tr>
+<tr><td>Select</td><td><ul><li>Selecting a checkbox</li><li>Selecting items from a dropdown</li><li>Selecting a tab</li><li>Making a simple decision</li></ul></td><td><ul><li>Select <strong>Show Password</strong>.</li><li>Select a data type from the dropdown.</li><li>On the <strong>Manage Settings</strong> page, select the <strong>Custom Events</strong> tab.</li><li>Select an image.</li></ul></td></tr>
+<tr><td>Clear</td><td>Clearing the selection from a checkbox.</td><td>Clear the <strong>Show Password</strong> checkbox.</td></tr>
+<tr><td>Click</td><td>Clicking an element in the UI.</td><td>Add a custom attribute and click <strong>Save</strong>.</td></tr>
+<tr><td>Turn on</td><td>Enabling a toggle option</td><td>Turn on the <strong>List-Unsubscribe header</strong>.</td></tr>
+<tr><td>Turn off</td><td>Disabling a toggle option</td><td>Turn off <strong>Inline CSS on New Emails by Default</strong>.</td></tr>
+<tr><td>Enter</td><td>Typing a value.</td><td><ul><li>In the text field, enter the name of your custom attribute.</li><li>Enter "Braze" as the source name.</li></ul></td></tr>
+</tbody>
+</table>
+{:/}
 
 #### Describing Limitations {#describing-limitations}
 
-Write candidly about the product's limitations, without distortion or manipulation. Readers will react in an intense fashion to being manipulated, hoodwinked, and otherwise bamboozled, and this will jeopardize the documentation's efficacy as a source of utilitarian truth. Customers rely on documentation to understand the limits of the system to which they are building so that they can use Braze successfully.
+Write candidly about the product's limitations, without distortion or manipulation. Readers react in an intense fashion to being manipulated, hoodwinked, and otherwise bamboozled, and this jeopardizs the documentation's efficacy as a source of utilitarian truth. Customers rely on documentation to understand the limits of the system to which they are building so that they can use Braze successfully.
 
 At the same time, support the intentionality of the product's development by framing limitations with appropriate, positive context.
 
@@ -825,7 +818,7 @@ At the same time, support the intentionality of the product's development by fra
  * For example, instead of saying "Braze does not allow customers to do this on their own. The Support team must activate this feature for you," say, "To activate this feature, contact the Support team."  
 * Do not over-rely on the same stock phrases to navigate soft limits. If a user reads "Talk to your customer service representative" over and over, the advice becomes meaningless.  
 * If there is a hard limitation, try to describe the rationale behind this limit.  
- * For example: "There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts. …The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you."  
+ * For example: "There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts. …The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation impacts you."  
 * Do not describe [planned functionality or future features](#heading=h.4wvw32nz50ee) as a way to explain current limitations.  
 * When referring to limits around custom data, use the term "capacity" instead of limits.   
  * For example: By default, you can have 20 segmentable event properties per workspace. Contact your Braze account manager to increase your capacity. 
@@ -856,7 +849,7 @@ Before including information about feature deprecations, be sure you have a gene
 
 After you have a general time frame, communicate the feature deprecation early. Be clear in writing about deprecations so that readers can clearly understand what to expect.
 
-Don't use phrases that might incite fear, uncertainty, or doubt with readers. Provide a clear path forward, such as what the deprecated feature will be replaced by or an alternative solution.
+Don't use phrases that might incite fear, uncertainty, or doubt with readers. Provide a clear path forward, such as what the deprecated feature is being replaced by or an alternative solution.
 
 #### General vs Specific {#general-vs-specific}
 
@@ -864,7 +857,7 @@ As a best practice, write articles that discuss functionality in a generally app
 
 Avoid creating duplicated or repetitious content for different channels or features. If repetition is needed, use `includes` files and other [reusable content best practices]({{site.baseurl}}/contributing/content_management/reusing_content).
 
-**As an example:** A common use case for Braze customers is to retarget users who have previously interacted with their messaging. Retargeting users can be done through many engagement tools, including campaigns, Canvases, landing pages, and segments. Retargeting users can be done through many channels: WhatsApp, SMS, Content Cards, email, push notifications, etc. Often, customers will try to reengage a user through a separate channel than one previously used.  
+**As an example:** A common use case for Braze customers is to retarget users who have previously interacted with their messaging. Retargeting users can be done through many engagement tools, including campaigns, Canvases, landing pages, and segments. Retargeting users can be done through many channels: WhatsApp, SMS, Content Cards, email, push notifications, and more. Often, customers try to reengage a user through a separate channel than one previously used.  
 Instead of creating one article for each engagement tool and each channel, create a single article that discusses strategies for retargeting users and outlines all the options available. If there are special considerations for specific channels/tools, create a separate article that outlines those considerations and house it within that documentation section. Create cross-references between the general article and the specific article.
 
 #### Metadata and YAML {#metadata-and-yaml}
@@ -873,7 +866,7 @@ Articles in Braze documentation require certain metadata for search and index pu
 
 #### Naming Conventions {#naming-conventions}
 
-When naming articles and filenames, make sure to describe the general topic in the title. Always include a keyword and brief description that will be easily understood by readers, especially with article titles. 
+When naming articles and filenames, make sure to describe the general topic in the title. Always include a keyword and brief description that readers easily understand, especially with article titles. 
 
 For filenames, keep the name brief and avoid using articles (a, an, the). Separate each word with an underscore (_).
 
@@ -900,7 +893,7 @@ General guidelines:
 
 Before instructions:
 
-* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section will cover, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the document.  
+* **Use introductions and prerequisites.** Don’t jump straight into the steps. Instead, give context on what your article or section covers, and provide any information the reader needs to know before they scan the instructions. Make sure any prerequisites are listed at the top of the document.  
 * **Start at the beginning of the procedure.** Don’t assume the reader has reached this page after completing a previous step. If the instructions for a task pick up where another left off, give an overview of where the reader is in the procedure, and what they must complete before this step. Include links to any previous steps.
 
 Writing instructions:
@@ -936,7 +929,7 @@ To display a full address, use the numeral, followed by the street name, followe
 
 #### Buttons Labels {#buttons-labels}
 
-Button labels should be clear and predictable—the user should know what action will occur upon clicking the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
+Button labels should be clear and predictable—the user should know what action occurs upon clicking the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
 
 | Do | Don’t |
 | :---- | :---- |
@@ -956,7 +949,7 @@ Alerts, also known as callouts, are used to draw attention to information that i
 * Tip  
 * Warning
 
-Use alerts sparingly throughout articles. For more information, refer to [Best Practices for Alerts](https://docs.google.com/document/d/1AhUhMvCZJLsIZjw52MyPJTBc8ewKAtne3XB1fsO_PoU/edit).
+Use alerts sparingly throughout articles. For more information, refer to [Best Practices for Alerts]({#alerts}).
 
 #### Code in Text {#code-in-text}
 
@@ -1012,19 +1005,17 @@ Use an en dash for date ranges.
 
 Use numerals with am or pm, followed by a space, followed by the time of day (am or pm). Remove the minutes from on-the-hour time.
 
-| Do | Don’t |
+| Do <br><br> *Use numerals with am or pm.* | Don’t <br><br> *Use minutes for on-the-hour time (unless it's a range).* |
 | :---- | :---- |
-| _Use numerals with am or pm._ | _Use minutes for on-the-hour time (unless it's a range)._ |
 | 12 pm | 12:00 P.M. |
 
 For ranges of time, use an en dash to separate. Do not add spaces before or after the en dash.
 
-| Do | Don’t |
+| Do <br><br> *Use an en dash for range of time.* | Don’t <br><br> *Use minutes for ranges of time.* |
 | :---- | :---- |
-| _Use an en dash for range of time._ | _Use minutes for ranges of time._ |
 | 12:45–2:30 pm |  | 8:00 am–2:30 pm |
 
-For reference in instances where parties from other time zones will be included (like webinars, meetings, or events), indicate the time zone as noted below:
+For reference in instances where parties from other time zones are included (like webinars, meetings, or events), indicate the time zone as noted below:
 
 * Eastern Standard Time: EST  
 * Central Standard Time: CST  
@@ -1063,7 +1054,7 @@ Use the format “name@example.com” for generic email addresses. Replace “na
 
 #### Figures and Other Images {#figures-and-other-images}
 
-When creating figures and images, refer to the [Image Copy Style Guide](https://docs.google.com/document/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub). Never include personally identifiable information (PII) in figures or images.
+When creating figures and images, refer to the [Image Copy Style Guide]({#image_style_guide}). Never include personally identifiable information (PII) in figures or images.
 
 ##### Alt Text {#alt-text}
 
@@ -1092,9 +1083,8 @@ If possible, take screenshots from [dashboard-06](https://dashboard-06.braze.com
 
 When you’re referring to a file type, use the standard name of the type. If the file type is an acronym, refer to the file type in all caps. 
 
-| Do | Don’t |
+| Do <br><br> *Use the standard name of the file type* | Don’t <br><br> *Use the file extension* |
 | :---- | :---- |
-| _Use the standard name of the file type_ | _Use the file extension_ |
 | CSV | .csv |
 | executable file | .exe |
 | GIF | .gif |
@@ -1270,7 +1260,7 @@ When instructing a reader to type a specific string of text, enclose the text in
 
 Order the FAQs by starting with the information that people most want or need to know, and then organize the FAQs by issue category if there are multiple ones.
 
-For each FAQ, start by directly answering the question, then go into detail. Use real questions that match typical search queries and user vocabulary, which will help with FAQ findability. Include links to resources that the user may find helpful, such as related articles, instructions for contacting support, and teaching materials (how to guides, tutorials, and others) when available. 
+For each FAQ, start by directly answering the question, then go into detail. Use real questions that match typical search queries and user vocabulary, which helps with FAQ findability. Include links to resources that the user may find helpful, such as related articles, instructions for contacting support, and teaching materials (how to guides, tutorials, and others) when available. 
 
 #### Geography {#geography}
 
@@ -1345,7 +1335,7 @@ Introductions serve as a quick check for users asking:
 
 * Am I in the right document? Is this relevant to me?  
 * What will I learn if I invest the time in reading this doc?  
-* Do I feel like I am following a clear integration/setup journey for SMS/email/IAM etc. (despite not spelling out which doc a user should go to next)?
+* Do I feel like I am following a clear integration or setup journey for SMS, email, IAM, or other. (despite not spelling out which doc a user should go to next)?
 
 The following are general guidelines for introductions. Refer to section-specific guidelines for more niche use cases.
 
@@ -1367,7 +1357,7 @@ Include only the "Use this endpoint..." sentence in the intro. We want to keep t
 Intro paragraphs should be written in one of two ways:
 
 1. With a lead-in paragraph or opener for the topic  
-2. A statement of what the article contains. This will often look like "This reference article....".
+2. A statement of what the article contains. This often looks like "This reference article....".
 
 While the steps in the user guide and developer guide have users relying heavily on clues from the navigation throughout their customer journey, while sometimes redundant, it is helpful to explicitly say the value of the doc right at the beginning. 
 
@@ -1394,10 +1384,10 @@ For list item capitalization, start each list item with a capital letter. For li
 
 #### Media Formatting {#media-formatting}
 
-This section includes general guidelines for formatting images and GIFs in your content. For more information, including example screenshots, refer to the [Image Copy Style Guide](https://docs.google.com/document/d/e/2PACX-1vRJSkwcjmjrTfLDagZccLpOMMyh5NN5SXRZSjz12cRAHbX4OrUmhvCmYpf_p5YB-9r4_jSOQLkicQIH/pub).
+This section includes general guidelines for formatting images and GIFs in your content. For more information, including example screenshots, refer to the [Image Copy Style Guide]({#image_style_guide}).
 
 | **Do** | {::nomarkdown}<ul><li>Do tightly crop to the feature or component of mention.</li><li>Do take high-quality screenshots, preferably on a retina monitor (MacBook display).</li><li>Do create a GIF of an interaction or workflow.</li><li>Keep in mind that users cannot pause or scrub through a GIF to see details.</li><li>Do run images through an optimizer to reduce file size (ImageOptim, TinyPNG, or Ezgif).</li><li>Do aim for high contrast between elements for accessibility.</li><li>Do resize images by height percentages rather than distinct pixel values.</li></ul>{:/} |
-| **Don't** | {::nomarkdown}<ul><li>Don't include the header or sidebar of the dashboard, as these can be explained in a simple sentence.</li><li>Don't include the entire dashboard.</li><li>Don't include Personally Identifiable Information (unless blurred, or that of a demo user).</li><li>Don't include the browser frame (URL field, bookmarks, tabs, etc.).</li><li>Don't include dashboards of Technology Partners.</li><li>Don't add a border or drop shadow to images.</li></ul>{:/} |
+| **Don't** | {::nomarkdown}<ul><li>Don't include the header or sidebar of the dashboard, as these can be explained in a simple sentence.</li><li>Don't include the entire dashboard.</li><li>Don't include Personally Identifiable Information (unless blurred, or that of a demo user).</li><li>Don't include the browser frame (URL field, bookmarks, tabs, and so on.).</li><li>Don't include dashboards of Technology Partners.</li><li>Don't add a border or drop shadow to images.</li></ul>{:/} |
 
 #### Numbers {#numbers}
 
@@ -1415,7 +1405,7 @@ Spell out numerals up to nine. For units of measurement or numbers 10 or higher,
 
 ##### Currency
 
-Always indicate what currency you’re referring to by using the currency symbol before the amount or spell it out (example: pesos, euros, pounds, etc.).
+Always indicate what currency you’re referring to by using the currency symbol before the amount or spell it out (example: pesos, euros, pounds, and so on.).
 
 Use the decimal for amounts where the number of cents is greater than zero. For sums greater than three digits, use a comma. Don’t include “.00” in sums of money.
 
@@ -1548,7 +1538,7 @@ To embed a video in Braze documentation, refer to [Embedded Video Test]({{site.b
 
 In Braze documentation, anchors are automatically created for headings. However, you may want to add a custom anchor to a heading if:
 
-* Your auto-generated anchor will be very long.  
+* Your auto-generated anchor is very long.  
 * Your heading may be frequently linked to. Adding a custom anchor reduces the likelihood of breaking links if the heading text is changed later.
 
 To add an anchor to a heading in Braze documentation, refer to [Custom Anchors]({{site.baseurl}}/home/styling_test_page/#custom-header-anchor).
@@ -2076,11 +2066,11 @@ Don’t use a file extension to refer to the type of file. For example, use “Y
 **ZIP**  
 Don’t use a file extension to refer to the type of file. For example, use “ZIP file” instead of “.zip file”.
 
-## Image copy style guide
+## Image copy style guide {#image_style_guide}
 
 **Image Styling Tools:** Use [Skitch](https://evernote.com/products/skitch) (available free through Evernote) for applying image styling (blurring, emphasizing image components, cropping).
 
-**Don’t embed important text inside images:** Avoid embedding text inside images as not all users will be able to read English text (and page translation tools will not translate images). This text should be provided in the article. Provide alt text for images for maximum accessibility for users.
+**Don’t embed important text inside images:** Avoid embedding text inside images as not all users can read English text (and page translation tools do not translate images). This text should be provided in the article. Provide alt text for images for maximum accessibility for users.
 
 | Do  | Don’t |
 | :---- | :---- |
@@ -2092,41 +2082,45 @@ Don’t use a file extension to refer to the type of file. For example, use “Z
 | :---- | :---- |
 | ![Example of correctly optimizing image placement.]({% image_buster /assets/img/contributing/style_guide/optimize_placement_do.png %}) | ![Example of incorrectly optimizing image placement.]({% image_buster /assets/img/contributing/style_guide/optimize_placement_dont.png %}) |
 
-**Cropping**: Crop relevant sections closely. Unless necessary, do not include the left navigation bar and instead include navigation directions in the article. This will limit the number of images that need to be changed when UI changes to the dashboard occur. 
+**Cropping**: Crop relevant sections closely. Unless necessary, do not include the left navigation bar and instead include navigation directions in the article. This limits the number of images that need to be changed when UI changes occur. 
 
-Note: If you are going to capture a dashboard element, crop without including the border. Please visit the end of the style guide for expanded examples.
+{% alert note %}
 
-| Do | Don’t |
-| :---- | :---- |
-|    |    |
+If you are going to capture a dashboard element, crop without including the border. See [Cropping Images continued]({#cropping_continued}) for expanded examples.
 
-**Censorship**: Blur sensitive information like names, emails, API keys, etc. Blurring can be done through Skitch.
+{% endalert %}
 
 | Do | Don’t |
 | :---- | :---- |
-|  |  |
+| ![Example of a properly cropped image.]({% image_buster /assets/img/contributing/style_guide/cropping_do_1.png %}) | ![Example of an incorrectly copped image.]({% image_buster /assets/img/contributing/style_guide/cropping_dont_1.png %}) |
+| ![Example of a properly cropped image.]({% image_buster /assets/img/contributing/style_guide/cropping_do_2.png %}) | ![Example of an incorrectly cropped image.]({% image_buster /assets/img/contributing/style_guide/cropping_dont_2.png %}) |
+
+**Censorship**: Blur sensitive information like names, emails, and API keys. Blurring can be done through Skitch.
+
+| Do | Don’t |
+| :---- | :---- |
+| ![Example of correct blurring.]({% image_buster /assets/img/contributing/style_guide/censorship_do.png %}) | ![Example of incorrect blurring.]({% image_buster /assets/img/contributing/style_guide/censorship_dont.png %}) |
 
 **Emphasizing Components of Images:** Do not emphasize components of images unless necessary. Use blue squares (the most colorblind-friendly option) with a thin-medium thickness to highlight different components of images, this can be done through skitch. Make sure the “highlighted sections” do not obstruct the normal UI. Absolutely no skitch arrows
 
 | Do | Don’t |
 | :---- | :---- |
-|      |    |
+| ![Example of correctly emphasizing components in an image.]({% image_buster /assets/img/contributing/style_guide/emphasis_do_1.png %}) | ![Example of incorrectly emphasizing components in an image.]({% image_buster /assets/img/contributing/style_guide/emphasis_dont_1.png %}) |
+| ![Example of correctly emphasizing components in an image.]({% image_buster /assets/img/contributing/style_guide/emphasis_do_2.png %}) | ![Example of incorrectly emphasizing components in an image.]({% image_buster /assets/img/contributing/style_guide/emphasis_dont_2.png %}) |
 
-**Cropping Explanation Cont.**  
+**Cropping Explanation continued** {#cropping-continued}
 Because Braze docs already add a border to each image, omit borders in a section screenshot. We are looking for a clean crop. The border can be left in if there are components that live outside or within the border, see the third image for example.
 
 **Do:**
-
-
+![Example of correctly cropping an image.]({% image_buster /assets/img/contributing/style_guide/cropping_do_3.png %})
 
 **Don’t:**  
+![Example of incorrectly cropping an image.]({% image_buster /assets/img/contributing/style_guide/cropping_dont_3.png %})
   
 **Do:**  
+![Example of correctly cropping an image.]({% image_buster /assets/img/contributing/style_guide/cropping_do_4.png %})
 
-
-
-
-## Alerts (best practices)
+## Alerts (best practices) {#alerts}
 
 ### Best Practices for Alerts {#best-practices-for-alerts}
 
@@ -2149,90 +2143,438 @@ Refer to the following table for definitions of each alert:
 
 | Alert Type | Definition |
 | :---- | :---- |
-| Important | Includes essential information that **should** be addressed by the reader, such as: Deprecated features  Impacts on billing Information pertaining to relevant updates Pressing feature caveats (ex: beta features) Other important tidbits of information |
-| Note | Includes one-off information that the reader should know, such as: Feature caveats Formatting guidance Helpful callouts Information that is demoted from an Important alert due to the alert’s content dropping in severity (ex: a long-standing important alert shifting to a standard note) |
-| Tip | Includes supplementary knowledge and recommendations for the reader to be aware of, such as: Additional troubleshooting articles Steps and shortcuts that help increase usability (ex: additional customization for in-app messages) |
-| Warning | Includes essential information that **must** be addressed by the reader and can include: Irreversible consequences (ex: Campaign and Canvas deletion) Feature-breaking behavior Loss of data Other crucial warnings |
+| Important | Includes essential information that **should** be addressed by the reader, such as: {::nomarkdown}<ul><li>Deprecated features</li><li>Impacts on billing</li><li>Information pertaining to relevant updates</li><li>Pressing feature caveats (ex: beta features)</li><li>Other important tidbits of information</li></ul>{:/} |
+| Note | Includes one-off information that the reader should know, such as: {::nomarkdown}<ul><li>Feature caveats</li><li>Formatting guidance</li><li>Helpful callouts</li><li>Information that is demoted from an Important alert due to the alert’s content dropping in severity (ex: a long-standing important alert shifting to a standard note)</li></ul>{:/} |
+| Tip | Includes supplementary knowledge and recommendations for the reader to be aware of, such as: {::nomarkdown}<ul><li>Additional troubleshooting articles</li><li>Steps and shortcuts that help increase usability (ex: additional customization for in-app messages)</li></ul>{:/} |
+| Warning | Includes essential information that a reader must address and can include: {::nomarkdown}<ul><li>Irreversible consequences (ex: Campaign and Canvas deletion)</li><li>Feature-breaking behavior</li><li>Loss of data</li><li>Other crucial warnings</li></ul>{:/} |
 
 **Alert Best Practices**  
 Here are general guidelines and best practices for alerts. 
 
-As a general rule of thumb, avoid using alerts for content that is essential to the article structure (feature introductions, setup instructions, steps to use a feature, etc.). When in doubt, consult with the team during peer review.
+As a general rule of thumb, avoid using alerts for content that is essential to the article structure (like feature introductions, setup instructions, and steps to use a feature.). When in doubt, consult with the team during peer review.
 
 | Guideline | Example |
 | :---- | :---- |
-| Explain the information in the alert in a clear, concise statement.  |  [Note alert in Step 4: Add Filters to Your Segment Section]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment) |
-| For alerts that apply to different sections of the same article, consider creating a new section that captures these details to avoid repetitive content. |  [Property Details header in Push Send Events Section]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) |
-| Separate the information into short paragraphs or lists within the alert. |  [Important alert in Canvas Persistent Entry Properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/#using-entry-properties) |
-| Consider any additional formatting that may impact how the alert displays (code snippets, steps, surrounding images, etc.). |  [Important alert in Step 2: Add Code Snippet to Email Body]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/#step-2-add-code-snippet-to-email-body) |
-| Include a line break for alerts that begin an article.  |  [Content Card Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/) |
-| When writing about beta features, include an Important alert that calls out the beta status and related Braze contact information.  Place this beta alert after the overview text and before the first main heading.  |  [Canvas Persistent Entry Properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)  |
-| Avoid using two or more alerts in a row if possible. Instead, reorganize or include the information as part of the text instead.  | [Setting User IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_user_ids/) |
-| If you find your alert is lengthy, consider creating a new section that includes the information as a list. For example, instead of including troubleshooting steps in an alert, consider creating a troubleshooting section or providing a link to a related article.  |  [Tip alert in Canvas and Campaign Tag Differences Section]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) |
+| Explain the information in the alert in a clear, concise statement.  | ![An alert with a clear, concise statement.]({% image_buster /assets/img/contributing/style_guide/alert_1.png %}) <br><br> [Note alert in Step 4: Add Filters to Your Segment Section]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment) |
+| For alerts that apply to different sections of the same article, consider creating a new section that captures these details to avoid repetitive content. | ![Example of a new section instead of an alert.]({% image_buster /assets/img/contributing/style_guide/alert_2.png %}) <br><br> [Property Details header in Push Send Events Section]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) |
+| Separate the information into short paragraphs or lists within the alert. | ![Example of separating the information into short paragraphs.]({% image_buster /assets/img/contributing/style_guide/alert_3.png %}) <br><br> [Important alert in Canvas Persistent Entry Properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/#using-entry-properties) |
+| Consider any additional formatting that may impact how the alert displays (code snippets, steps, surrounding images, and more.). | ![An alert code styling.]({% image_buster /assets/img/contributing/style_guide/alert_4.png %}) <br><br> [Important alert in Step 2: Add Code Snippet to Email Body]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/#step-2-add-code-snippet-to-email-body) |
+| Include a line break for alerts that begin an article. | ![Example of an alert beginning an article.]({% image_buster /assets/img/contributing/style_guide/alert_5.png %}) <br><br> [Content Card Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/) |
+| When writing about beta features, include an Important alert that calls out the beta status and related Braze contact information.  Place this beta alert after the overview text and before the first main heading. | ![Example of an important alert for a beta feature.]({% image_buster /assets/img/contributing/style_guide/alert_6.png %}) <br><br> [Canvas Persistent Entry Properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)  |
+| Avoid using two or more alerts in a row if possible. Instead, reorganize or include the information as part of the text instead. | ![An example of two alerts next to each other, which you should avoid.]({% image_buster /assets/img/contributing/style_guide/alert_7.png %}) <br><br> [Setting User IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_user_ids/) |
+| If you find your alert is lengthy, consider creating a new section that includes the information as a list. For example, instead of including troubleshooting steps in an alert, consider creating a troubleshooting section or providing a link to a related article.  | ![Example of a new section of content.]({% image_buster /assets/img/contributing/style_guide/alert_8.png %}) <br><br> [Tip alert in Canvas and Campaign Tag Differences Section]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) |
 
 ### Alert Examples {#alert-examples}
 
-Refer to the examples below for how and why each alert type is used in our documentation. 
+Refer to the following examples for how and why each alert type is used in our documentation. 
 
 ### Important Alert  {#important-alert}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Push for Web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web/) |  |
-| **Use Case** Includes essential feature caveat that the reader should know as they set up their web push | **Alert Reasoning** Use an Important alert as opposed to a Note alert because the content’s importance is greater for a reader to know as they set up their web push.  |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/important_alert_1.png %}" alt="Example of an important alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/web/">Push for Web</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Includes essential feature caveat that the reader should know as they set up their web push</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> Use an Important alert as opposed to a Note alert because the content’s importance is greater for a reader to know as they set up their web push.</td>
+</tr>
+</table>
+{:/}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Email Settings]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/) |  |
-| **Use Case** Provides important feature caveat about the possibility of doubling billable emails  Redirects reader to contact their Customer Success Manager as needed | **Alert Reasoning** The Important alert is used here to communicate details about the BCC addresses in their email settings.  This information is best presented using an Important alert as opposed to a Warning alert because omitting this information does not impact the feature irreversibly (feature breaking, permanent data loss, etc.) |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/important_alert_2.png %}" alt="Example of an important alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/">Email Settings</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> <ul><li>Provides important feature caveat about the possibility of doubling billable emails</li><li>Redirects reader to contact their Customer Success Manager as needed</li></ul></td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> The Important alert is used here to communicate details about the BCC addresses in their email settings. <br><br> This information is best presented using an Important alert as opposed to a Warning alert because omitting this information does not impact the feature irreversibly (feature breaking, permanent data loss, etc.)</td>
+</tr>
+</table>
+{:/}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Advanced Settings]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/advanced_settings/?redirected=true) |  |
-| **Use Case** Includes pressing feature caveat about the Notification Priority Redirects the reader to new information that’s available | **Alert Reasoning** The Important alert is best used here to redirect the reader to current information and to highlight that the section is applicable only to certain users. It’s also placed after the section header, which forces the user to address the important alert before reading the rest of the section. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/important_alert_3.png %}" alt="Example of an important alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/advanced_settings/?redirected=true">Advanced Settings</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Includes pressing feature caveat about the Notification Priority Redirects the reader to new information that’s available</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> The Important alert is best used here to redirect the reader to current information and to highlight that the section is applicable only to certain users. It’s also placed after the section header, which forces the user to address the important alert before reading the rest of the section.</td>
+</tr>
+</table>
+{:/}
 
 ### Note Alert {#note-alert}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Create a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) |  |
-| **Use Case** Includes additional information that a reader should be aware of as they learn more about Content Cards | **Alert Reasoning** This Note alert provides background information on how Braze cycles older Content Cards for users.  This is helpful, supplemental information for the reader to be aware of and does not require the use of an Important or Tip alert. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/note_alert_1.png %}" alt="Example of a note alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/">Create a Content Card</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Includes additional information that a reader should be aware of as they learn more about Content Cards</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> This Note alert provides background information on how Braze cycles older Content Cards for users.  This is helpful, supplemental information for the reader to be aware of and does not require the use of an Important or Tip alert.</td>
+</tr>
+</table>
+{:/}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) |  |
-| **Use Case** Includes general information that a reader should be aware of Provides an article to learn more about related content (time attributes) | **Alert Reasoning** This information is best relayed using a Note alert as opposed to an Important alert because the content is directed to provide general information. Disregarding this information would not impact the ease of use for this feature. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/note_alert_2.png %}" alt="Example of a note alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/">Custom Attributes</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Includes general information that a reader should be aware of Provides an article to learn more about related content (time attributes)</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> This information is best relayed using a Note alert as opposed to an Important alert because the content is directed to provide general information. Disregarding this information would not impact the ease of use for this feature.</td>
+</tr>
+</table>
+{:/}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/#managing-properties) |  |
-| **Use Case** Includes general information that a reader should be aware of Redirects to Braze contact for further information | **Alert Reasoning** This Note alert provides **additional** information about data storage that would be helpful for a reader to know as they manage their custom attributes.  However, the content does not require a stronger indication of importance to the reader, so a Note alert is acceptable here. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/note_alert_3.png %}" alt="Example of a note alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/#managing-properties">Custom Events and Attribute Management</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Includes general information that a reader should be aware of Redirects to Braze contact for further information</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> This Note alert provides <strong>additional</strong> information about data storage that would be helpful for a reader to know as they manage their custom attributes.  However, the content does not require a stronger indication of importance to the reader, so a Note alert is acceptable here.</td>
+</tr>
+</table>
+{:/}
 
 ### Tip Alert {#tip-alert}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [SMS Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/) |  |
-| **Use Case** Includes tool for the reader to understand their message length and SMS segment count Provides information that may be helpful for the reader in their understanding of copy limits | **Alert Reasoning** This is a lengthy Tip alert because it provides a space for entering the copy to see how many segments a message will dispatch.  The Tip alert is the best option here because this is a helpful generator for the reader to use in the process of setting up their SMS messages. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/tip_alert_1.png %}" alt="Example of a tip alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/">SMS Message Segments and Copy Limits</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Includes tool for the reader to understand their message length and SMS segment count Provides information that may be helpful for the reader in their understanding of copy limits</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> This is a lengthy Tip alert because it provides a space for entering the copy to see how many segments a message dispatches. The Tip alert is the best option here because this is a helpful generator for the reader to use in the process of setting up their SMS messages.</td>
+</tr>
+</table>
+{:/}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Daily App Uninstalls by Date Endpoint]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date/) |  |
-| **Use Case** Provides troubleshooting advice when using this endpoint | **Alert Reasoning** The Tip alert provides additional support for the reader. Use a Tip alert as opposed to a Note alert because the focus of the content is to assist the reader by providing the troubleshooting article. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/tip_alert_2.png %}" alt="Example of a tip alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date/">Daily App Uninstalls by Date Endpoint</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Provides troubleshooting advice when using this endpoint</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> The Tip alert provides additional support for the reader. Use a Tip alert as opposed to a Note alert because the focus of the content is to assist the reader by providing the troubleshooting article.</td>
+</tr>
+</table>
+{:/}
 
 ### Warning Alert {#warning-alert}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [User Profile Lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) |  |
-| **Use Case** Indicates something that the reader should not do when creating their user profiles in Braze | **Alert Reasoning** The Warning alert is used to caution the reader against assigning an external_id before uniquely identifying them. This information is best relayed using a Warning alert as opposed to an Important alert because it includes irreversible consequences for the user profile. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/warning_alert_1.png %}" alt="Example of a warning alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/">User Profile Lifecycle</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Indicates something that the reader should not do when creating their user profiles in Braze</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> The Warning alert is used to caution the reader against assigning an external_id before uniquely identifying them. This information is best relayed using a Warning alert as opposed to an Important alert because it includes irreversible consequences for the user profile.</td>
+</tr>
+</table>
+{:/}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Segments for Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/) |  |
-| **Use Case** Cautions the reader when creating Currents connectors Includes the consequence of incorrectly creating these connectors | **Alert Reasoning** The Warning alert is best used here to describe the limitations of the Braze Segment Currents integration. Use a Warning alert as opposed to an Important alert because creating more than one of the same Currents connectors incorrectly may result in losing data. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/warning_alert_2.png %}" alt="Example of a warning alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/">Segments for Currents</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Cautions the reader when creating Currents connectors Includes the consequence of incorrectly creating these connectors</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> The Warning alert is best used here to describe the limitations of the Braze Segment Currents integration. Use a Warning alert as opposed to an Important alert because creating more than one of the same Currents connectors incorrectly may result in losing data.</td>
+</tr>
+</table>
+{:/}
 
-|  |  |
-| :---- | :---- |
-| **Article:** [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) |  |
-| **Use Case** Lists the information that may cause the feature to not work Details how the intended audience may not receive the campaign or enter the Canvas | **Alert Reasoning** The Warning alert is used here to note how the feature may work incorrectly. This information is best relayed using a Warning alert as opposed to an Important alert because the information is critical and may result in breaking the Canvas delivery. |
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<tr>
+<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/warning_alert_3.png %}" alt="Example of a warning alert."></td>
+</tr>
+<tr>
+<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/">Creating a Canvas</a></td>
+</tr>
+<tr>
+<td style="width: 50%;"><strong>Use Case</strong> Lists the information that may cause the feature to not work Details how the intended audience may not receive the campaign or enter the Canvas</td>
+<td style="width: 50%;"><strong>Alert Reasoning</strong> The Warning alert is used here to note how the feature may work incorrectly. This information is best relayed using a Warning alert as opposed to an Important alert because the information is critical and may result in breaking the Canvas delivery.</td>
+</tr>
+</table>
+{:/}
+
+## Braze API endpoint documentation guidelines {#api-endpoint-documentation-guidelines}
+
+In general, documentation for API endpoints should follow the guidelines indicated in the [General guidelines](#general-guidelines). However, there are niche topics that may require different content guidelines listed in this document. 
+
+Braze supports the following REST API methods:
+
+* GET  
+* DELETE  
+* PATCH  
+* POST  
+* PUT
+
+### Creating a new endpoint article
+
+When creating a new endpoint article, be sure to also add this endpoint into the [Braze API guide]({{site.baseurl}}/api/home) so that the endpoint is searchable. Navigate to  **`_docs`** folder  **`> _api`** folder **`> home.md`** file to add the endpoint by its path and a one-sentence description.
+
+### Referencing endpoints
+
+In general, there isn't a clear convention for referring to endpoints in documentation. When referring to Braze endpoints, use your best judgment to determine how to refer to an endpoint depending on your use case. 
+
+You can refer to an endpoint by its path (for example, `/users/track`) or by the endpoint's name appended with the word "endpoint" (for example, the track user endpoint). If you find that your path is especially long, refer to the endpoint name instead. 
+
+Use sentence styling when referring to the endpoint by its name. Use code text when referring to the endpoint by its path.
+
+Don't capitalize the word "endpoint" unless directly referring to a section name. Don't include the word "API" when directly referencing an endpoint. 
+
+There are instances where an endpoint is referred to as an API. For example, this is an accurate statement: "Braze uses a REST API with many endpoints" when speaking generally about Braze endpoints.
+
+Don't put quotation marks around the endpoint name. Don't use plain text when referring to the path.
+
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<thead>
+<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+</thead>
+<tbody>
+<tr><td style="width: 50%;">Use the Generate preference center URL endpoint to complete the next steps.</td><td style="width: 50%;">Use <code>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</code> to complete the next steps.</td></tr>
+<tr><td style="width: 50%;">Use the <code>/users/track</code> endpoint.</td><td style="width: 50%;">Use the "Users Track" API endpoint.</td></tr>
+</tbody>
+</table>
+{:/}
+
+#### Linking to endpoint articles
+
+When referencing endpoint articles, be sure to use [meaningful link text](#writing-links) that can make sense out of context. If you're using the endpoint's path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint's function.    
+
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<thead>
+<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+</thead>
+<tbody>
+<tr><td style="width: 50%;">Delete user profiles using the Braze <a href="{{site.baseurl}}/api/endpoints/user_data/post_user_delete/">Delete user endpoint</a>.</td><td style="width: 50%;">Delete user profiles using the Braze <a href="{{site.baseurl}}/api/endpoints/user_data/post_user_delete/">Delete user</a> endpoint.</td></tr>
+<tr><td style="width: 50%;"><a href="{{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code> endpoint</a></td><td style="width: 50%;"><a href="{{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/"><code>/users/export/id</code></a> endpoint</td></tr>
+</tbody>
+</table>
+{:/}
+
+### Headings
+
+The introduction of an endpoint article must include the following information:
+
+* Request type and endpoint path URL  
+* A brief description of the endpoint, starting with "Use this endpoint to…"  
+* "See me in Postman" link  
+* A note alert with the required REST API key permission
+
+Use this checklist to ensure that the proper headings (and content) are included in each endpoint article and in the listed sequence. Note that there may be subheadings unique to an endpoint, such as different types of example requests.
+
+* Rate limit  
+* Path parameters  
+* Request body  
+* Request parameters  
+* Example request  
+* Response parameters  
+* Example response  
+* Troubleshooting (if applicable)
+
+Refer to [Headings and Titles](#headings-and-titles) for formatting guidelines. 
+
+#### Path parameters
+
+If there are path parameters for the endpoint, include a Path parameters header and table (similar to the Request parameters table)
+
+If there are no path parameters for the endpoint, include a Path parameters header and the following callout: "There are no path parameters for this endpoint."
+
+If there are no path or request parameters for the endpoint, merge the caveat into the same section as shown below.
+
+{% raw %}
+{::nomarkdown}
+<div style="margin-left: 2em;">
+## Path and request parameters <br>
+There are no path or request parameters for this endpoint.
+</div>
+{:/}
+{% endraw %}
+
+### Naming conventions
+
+Start each endpoint name with an active verb after its method. This lets users know the function of the endpoint immediately. 
+
+Don't use the API method as the leading verb for the endpoint name.
+
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<thead>
+<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+</thead>
+<tbody>
+<tr><td style="width: 50%;">POST: Create new user alias</td><td style="width: 50%;">POST: New user alias</td></tr>
+<tr><td style="width: 50%;">GET: Look up an existing dashboard user account</td><td style="width: 50%;">GET: Existing dashboard user account</td></tr>
+</tbody>
+</table>
+{:/}
+
+Exceptions to this naming convention are the endpoints in the [Export section]({{site.baseurl}}/api/endpoints/export) as the section name is a verb that indicates that the listed information can be exported.
+
+### API key permissions
+
+API key permissions are permissions you can assign a user or group to limit their access to certain API calls. For each endpoint documentation, include the following callout after the Postman documentation link: 
+
+> To use this endpoint, you must generate an API key with the `permission_name_here` permission.
+
+To find the full list of API key permissions, go to **Settings > API Keys** under **Setup and Testing** in the Braze dashboard. Select an API key with full access (the key name usually includes the phrase "full access"). Each permission name should generally match the endpoint name.
+
+Note that SCIM endpoints do not have listed API key permissions since they're specific to the SCIM integration that occurs outside of the developer console. 
+
+### Rate limits
+
+In general, your rate limit should specify the number of requests and the allotted time. 
+
+Be mindful of endpoints that share a total rate limit. For example, all asynchronous catalog item endpoints share a total rate limit, so it's important to indicate that in the respective articles.
+
+#### How to update rate limit file
+
+If your endpoint documentation requires updating or listing a new rate limit, go to **_docs > _api > api_limits.md** to make edits to the rate limit.
+
+### Parameters
+
+Define both the request and response parameters in two separate tables.  These tables should contain the following columns:
+
+* **Parameter**  
+* **Required**  
+* **Data Type**  
+* **Description**
+
+When directly referring to an endpoint's parameters and when listing the values in the **Parameters** column, use code text. When listing the values in the **Required**, **Data Type**, and **Description** columns, use initial caps. 
+
+#### Placeholder text
+
+For placeholder text, use curly brackets with a brief description of what the user should include. 
+
+For API key placeholders, use YOUR_REST_API_KEY, not YOUR-REST-API-KEY.
+
+{::nomarkdown}
+<table style="table-layout: fixed; width: 100%;">
+<thead>
+<tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
+</thead>
+<tbody>
+<tr><td style="width: 50%;"><code>/preference_center/v1/{preferenceCenterExternalId}/url/{userId}</code></td><td style="width: 50%;"><code>/preference_center/v1/[preferenceCenterExternalId]</code></td></tr>
+<tr><td style="width: 50%;"><code>/scim/v2/Users/{userId}</code></td><td style="width: 50%;"><code>/url/[userId]/scim/v2/Users/userID</code></td></tr>
+</tbody>
+</table>
+{:/}
+
+For API key placeholders, use `YOUR_REST_API_KEY` (with underscores), not `YOUR-REST-API-KEY` (with hyphens).
+
+### Requests and responses
+
+An API request includes the header and request parameters. The request parameters should be formatted like this:
+
+```bash
+parameter": (required/optional, data type) A brief description
+```
+
+Here's an example of a request body for the [Create new user alias endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_alias/):
+
+```bash
+Content-Type: application/json
+Authorization: Bearer YOUR_REST_API_KEY
+{
+  "user_aliases": (required, array of new user alias object)
+}
+```
+
+Use double straight quotation marks (" ") to identify parameters that are strings or arrays in an example request. Ensure that all open brackets and parentheses are closed.
+
+An API response includes the response body, headers, and the HTTP status code. Always include an example response. This example must include a simple text example that describes the parameter. Here's an example response for the [Update user alias endpoint]({{site.baseurl}}/api/endpoints/user_data/post_users_alias_update/#example-request).
+
+```bash
+curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/update' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--data-raw '{
+  "alias_updates" :[
+    {
+      "alias_label": "example_alias_label",
+      "old_alias_name" : "example_old_alias_name",
+      "new_alias_name" : "example_new_alias_name"
+    }
+  ]
+}'
+```
+
+#### Status and error codes 
+
+Status codes indicate whether a user's specific request has been successfully completed. It can be helpful to include the status codes for users to know what's considered a success. For example, 400 and 404 can be indicators of an error response for the endpoint.
+
+If your endpoint documentation requires listing out error codes, link out to the [API Error and Responses]({{site.baseurl}}/api/errors/) article instead at **_docs** folder  **> _api** folder **> errors.md** file
+
+### Sample code
+
+Sample code, like sample requests and responses, should be able to be copied and used with minimal work. With the exception of placeholder text (for example, the API key in the header), example requests should work as-is. Use Postman to ensure that your request is formatted correctly. 
+
+#### Beautify vs. minified code
+
+If the endpoint's request contains a body, beautify the example in Postman. This makes it easier for developers learning Braze conventions to understand each piece of the request.  
+
+If the endpoint's request body is very short or does not contain a body, minify the request so that unnecessary whitespace is removed. Use a tool like [JSON Minifier](https://codebeautify.org/jsonminifier) to do this. 
+
+#### Inline comments
+
+Use two forward slashes (//) to indicate single-line comments in example code. 
+
+Inline comments are valuable tools to call a user's attention to a specific section of code, explain the function of a code block, or provide additional context. 
+
+Use inline comments to quickly show where a user's logic layer would be placed and how it would reference the SDK code. Use simple but realistic examples. For example, an example attribute of "favorite_movie" is stronger than "example_attribute." Even if the user's business doesn't track or care about an end user's favorite movie, this example shows the *sorts* of use cases that might be tracked through this attribute. Generic examples fail to elicit the same intuitive understanding.
+
+Avoid inline comments that simply restate human-readable code or method names. Instead, use a variety of synonyms for the Braze-specific methods and parameters to provide scaffolding for non-native English speakers. 
+
+In general, adhere to standard English conventions when providing inline comments. For example, begin sentences with a capital letter, spell out words completely, and so on.
+
+### Additional resources
+
+* [Google developer documentation style guide](https://developers.google.com/style)  
+  * [API reference code and comments](https://developers.google.com/style/api-reference-comments)
