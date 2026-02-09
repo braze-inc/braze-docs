@@ -25,7 +25,7 @@ description: "Diese Landing Page listet die Messaging Endpunkte von Braze auf."
 page_type: landing
 
 guide_top_header: "Messaging Endpunkte"
-guide_top_text: "Die Braze Messaging API bietet Ihnen zwei verschiedene Optionen für den Versand von Nachrichten an Ihre Nutzer:innen. Sie können den Inhalt der Nachrichten und die Konfiguration in der API-Anfrage mit dem <code class='highlighter-rouge'>/messages/send</code> und `/messages/schedule` Endpunkte. Alternativ können Sie die Details Ihrer Nachricht mit einer API-getriggerten Kampagne im Braze-Dashboard verwalten und mit den Endpunkten `/campaigns/trigger/send` und `/campaigns/trigger/schedule` einfach kontrollieren, wann und an wen sie gesendet wird. In den folgenden Abschnitten wird die Spezifikation der Anfrage für beide Methoden erläutert. <br> <br> Ähnlich wie bei anderen Kampagnen können Sie die Anzahl der Male, die ein bestimmter Nutzer eine Messaging-API-Kampagne erhalten kann, begrenzen, indem Sie im Braze-Dashboard [Wiederzulassungseinstellungen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) konfigurieren. Braze wird keine API Nachrichten an Nutzer:innen zustellen, die sich nicht wieder für die Kampagne qualifiziert haben, unabhängig davon, wie viele Anfragen an die API gesendet werden. <br> <br> Mit den Endpunkten für das Senden von Nachrichten können Sie sofortige Nachrichten an bestimmte Nutzer:innen senden. Wenn Sie ein Segment Targeting betreiben, wird eine Aufzeichnung Ihrer Anfrage im **Messaging Activity Log** gespeichert. Verwenden Sie die Endpunkte Nachricht planen, um Nachrichten zu einem bestimmten Zeitpunkt zu versenden und bereits geplante Nachrichten zu ändern oder abzubrechen."
+guide_top_text: "Die Braze Messaging API bietet Ihnen zwei verschiedene Optionen für den Versand von Nachrichten an Ihre Nutzer:innen. Sie können den Inhalt der Nachrichten und die Konfiguration in der API-Anfrage mit dem <code class='highlighter-rouge'>/messages/send</code> und `/messages/schedule` Endpunkte. Alternativ können Sie die Details Ihrer Nachricht mit einer API-getriggerten Kampagne im Braze-Dashboard verwalten und mit den Endpunkten `/campaigns/trigger/send` und `/campaigns/trigger/schedule` steuern, wann und an wen sie gesendet wird. In den folgenden Abschnitten wird die Spezifikation der Anfrage für beide Methoden erläutert. <br> <br> Ähnlich wie bei anderen Kampagnen können Sie die Anzahl der Male, die ein bestimmter Nutzer eine Messaging-API-Kampagne erhalten kann, begrenzen, indem Sie im Braze-Dashboard [Wiederzulassungseinstellungen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/#re-eligibility-with-API-triggered-campaigns) konfigurieren. Braze wird keine API Nachrichten an Nutzer:innen zustellen, die sich nicht wieder für die Kampagne qualifiziert haben, unabhängig davon, wie viele Anfragen an die API gesendet werden. <br> <br> Mit den Endpunkten für das Senden von Nachrichten können Sie sofortige Nachrichten an bestimmte Nutzer:innen senden. Wenn Sie ein Segment Targeting betreiben, wird eine Aufzeichnung Ihrer Anfrage im **Messaging Activity Log** gespeichert. Verwenden Sie die Endpunkte Nachricht planen, um Nachrichten zu einem bestimmten Zeitpunkt zu versenden und bereits geplante Nachrichten zu ändern oder abzubrechen."
 
 guide_featured_title: "Zeitplan für Nachrichten Endpunkte"
 guide_featured_list:
@@ -75,8 +75,17 @@ guide_menu_list:
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     image: /assets/img/braze_icons/inbox-01.svg
 
-guide_menu_title2: "Live Activity endpoints"
+guide_menu_title2: "Duplicate message endpoints"
 guide_menu_list2:
+  - name: "POST: Duplizierte Kampagnen"
+    link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_campaigns/
+    image: /assets/img/braze_icons/copy-04.svg
+  - name: "POST: Canvase duplizieren"
+    link: /docs/api/endpoints/messaging/duplicate_messages/post_duplicate_canvases/
+    image: /assets/img/braze_icons/copy-04.svg
+
+guide_menu_title3: "Live Activity endpoints"
+guide_menu_list3:
   - name: "POST: Live-Aktivität aktualisieren"
     link: /docs/api/endpoints/messaging/live_activity/update/
     image: /assets/img/braze_icons/tablet-01.svg

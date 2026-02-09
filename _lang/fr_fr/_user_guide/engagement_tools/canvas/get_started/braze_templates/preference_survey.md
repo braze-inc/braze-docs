@@ -24,17 +24,17 @@ Pour utiliser ce modèle avec succès, vous aurez besoin des éléments suivants
 
 ## Adapter le modèle à vos besoins
 
-Imaginons que nous travaillions pour StyleRyde, une application de covoiturage à la demande qui permet aux gens de se rendre là où ils le souhaitent. Avant de créer le canvas, nous avons [mis en place une enquête simple]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) qui comprend une série de questions engageantes pour déterminer l'expérience et l'impression d'un utilisateur lors de son premier trajet avec l'application.
+Imaginons que nous travaillions pour StyleRyde, une application de covoiturage à la demande qui permet aux gens de se rendre là où ils le souhaitent. Avant de créer le canvas, nous avons [mis en place une enquête simple]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) qui comprend une série de questions engageantes pour déterminer l'expérience et l'impression d'un utilisateur lors de son premier trajet avec l'application.
 
 Pour accéder au modèle, lorsque vous créez un nouveau canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles de Braze**. Ensuite, à côté de l'**enquête Onboarding with preferences**, sélectionnez **Apply Template**. Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
 1. Sélectionnez **Modifier** à côté du nom du modèle.
 
-![Titre et description actuels de la toile.]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
+![Le titre et la description actuels de la toile.]({% image_buster /assets/img/canvas_templates/preference_survey1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Mettez à jour le nom du Canvas pour préciser qu'il s'agit de cibler les nouveaux utilisateurs lorsqu'ils utilisent l'appli pour la première fois.
@@ -47,7 +47,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 Mettez à jour l'**événement de conversion principal - A** vers **Performs Custom Event.** Sélectionnez ensuite **Dernière application utilisée** pour l'événement personnalisé.
 
-![Dernière application utilisée comme nom d'événement personnalisé sélectionné pour l'événement de conversion.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
+![Last Used App comme nom d'événement personnalisé sélectionné pour l'événement de conversion.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
 
 ### Étape 3 : Adapter la planification de l'entrée
 
@@ -61,7 +61,7 @@ Nous ferons une mise à jour de cette section en ajustant la **fenêtre d'entré
 
 Nous conserverons l'audience cible telle quelle pour cibler nos utilisateurs qui ont utilisé l'appli StyleRyde pour la première fois il y a moins d'un jour.
 
-![Le filtre "Première utilisation de ces applications il y a moins d'un jour" a été sélectionné pour cibler l'audience d'entrée.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+![Le filtre "Première utilisation de ces apps il y a moins de 1 jour" sélectionné pour cibler l'audience d'entrée.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### Étape 5 : Sélectionner vos paramètres d’envoi
 

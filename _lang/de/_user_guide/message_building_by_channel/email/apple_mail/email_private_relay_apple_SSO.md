@@ -1,6 +1,6 @@
 ---
-nav_title: Senden von E-Mails an Apple Private Relay
-article_title: Senden von E-Mails an Apple Private Relay
+nav_title: E-Mails an Apple Private Relay senden
+article_title: E-Mails an Apple Private Relay senden
 alias: /email_relay/
 page_order: 0
 description: "Dieser Artikel beschreibt den Vorgang des Versendens von E-Mails an Apple Private Relay."
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Senden von E-Mails an Apple Private Relay
+# E-Mails an Apple Private Relay senden
 
 > Das Single Sign-on (SSO) Feature von Apple erlaubt es seinen Nutzer:innen, ihre E-Mail-Adressen (`example@icloud.com`) freizugeben oder ihre E-Mail-Adressen auszublenden, indem sie anstelle ihrer persönlichen E-Mail-Adresse das, was den Marken zur Verfügung gestellt wird, maskieren (`tq1234snin@privaterelay.appleid.com`). Apple leitet dann die an die Relay-Adressen gesendeten Nachrichten an die tatsächliche E-Mail Adresse des Nutzers:innen weiter. 
 
@@ -25,6 +25,7 @@ Wenn Sie SendGrid als E-Mail-Anbieter verwenden, können Sie E-Mails an Apple se
 2. Gehen Sie auf die Seite **Zertifikate, Bezeichner & Profile**.
 3. Wählen Sie **Dienste** > **Mit Apple für E-Mail-Kommunikation anmelden**.
 4. Fügen Sie im Abschnitt **E-Mail-Quellen** die Domains und Subdomains hinzu.
+- Die Adresse sollte wie folgt formatiert werden: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (ein Beispiel ist: `bounces+1234567@braze.online.docs.com`). 
 
 Wenn Ihre gewünschte „Von“-Adresse eine `abmail`-Adresse ist, fügen Sie diese in Ihre Subdomain ein. Verwenden Sie zum Beispiel `abmail.docs.braze.com` anstelle von `docs.braze.com`.
 

@@ -52,9 +52,9 @@ En la misma página, introduce lo siguiente:
 
 | Requisito | Detalles |
 |---|---|
-| `SAML Name` | Aparecerá como texto del botón en la pantalla de inicio de sesión.<br>Suele ser el nombre de tu proveedor de identidad, como "Okta". |
-| `Target URL` | Se proporciona después de configurar Braze en tu IdP.<br> Algunos IdP hacen referencia a esto como URL de SSO o punto final de SAML 2.0. |
-| `Certificate` | El certificado `x.509` proporcionado por su proveedor de identidad.|
+| Nombre SAML | Aparecerá como texto del botón en la pantalla de inicio de sesión.<br>Suele ser el nombre de tu proveedor de identidad, como "Okta". |
+| URL de destino | Se proporciona después de configurar Braze en tu IdP.<br> Algunos IdP hacen referencia a esto como URL de SSO o punto final de SAML 2.0. |
+| Certificado | El certificado `x.509` proporcionado por su proveedor de identidad.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Asegúrese de que su certificado `x.509` sigue este formato cuando lo añada al panel de control:
@@ -65,20 +65,20 @@ Asegúrese de que su certificado `x.509` sigue este formato cuando lo añada al 
 -----END CERTIFICATE-----
 ```
 
-![Abrir la configuración de seguridad y añadir detalles de SAML SSO]({% image_buster /assets/img/samlsso.gif %})
+![Configuración de SAML SSO con el alternador seleccionado.]({% image_buster /assets/img/samlsso.png %})
 
 ### Paso 3: Iniciar sesión en Braze
 
 Guarde su configuración de seguridad y cierre la sesión. A continuación, vuelve a iniciar sesión con tu proveedor de identidad.
 
-![Pantalla de inicio de sesión con SSO habilitado]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![Pantalla de inicio de sesión del panel con SSO habilitado]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Configuración de tu RelayState
 
 1. En Braze, ve a **Configuración** > **API e identificadores**.
 2. En la pestaña **Claves de API**, selecciona el botón **Crear clave de API**.
 3. En el campo **Nombre de la clave de API**, introduce un nombre para tu clave.
-4. Amplía el desplegable **SSO** en **Permisos** y marca **sso.saml.login**.<br><br>![La sección "Permisos" con sso.saml.login marcado.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+4. Amplía el desplegable **SSO** en **Permisos** y marca **sso.saml.login**.<br><br>![La sección "Permisos" con sso.saml.login marcada.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. Selecciona **Crear clave de API**.
 6. En la pestaña **Claves de API**, copia el identificador que aparece junto a la clave de API que has creado.
 7. Pega la clave de API RelayState en el RelayState de tu IdP (también puede aparecer como "Estado de retransmisión" o "Estado de retransmisión predeterminado" en función de tu IdP).
@@ -91,7 +91,7 @@ Los miembros que opten por utilizar el SSO ya no podrán utilizar su contraseña
 
 Puedes restringir que los miembros de tu organización solo inicien sesión con Google SSO o SAML SSO. Para activar las restricciones, vaya a **Configuración de seguridad** y seleccione **Aplicar inicio de sesión solo con Google SSO** o **Aplicar inicio de sesión solo con SAML SSO personalizado**.
 
-![Sección Reglas de autenticación de la página Configuración de seguridad]({% image_buster /assets/img/sso3.png %})
+![Ejemplo de configuración de la sección "Reglas de autenticación" con una longitud mínima de contraseña de 8 caracteres y reutilización de contraseña 3 veces. Las contraseñas caducarán a los 180 días, y los usuarios se desconectarán tras 1.440 minutos de inactividad.]({% image_buster /assets/img/sso3.png %})
 
 Al activar las restricciones, los usuarios de Braze de su empresa ya no podrán iniciar sesión utilizando una contraseña, aunque hayan iniciado sesión con una contraseña anteriormente.
 
@@ -126,9 +126,9 @@ Selecciona **Exportar**. Para **Seleccionar perfil de filtrado de cookies**, sel
 
 ### ¿Está correctamente configurada la dirección de correo electrónico del usuario?
 
-Si recibes el error `ERROR_CODE_SSO_INVALID_EMAIL`, la dirección de correo electrónico del usuario no es válida. Confirma en el rastreo SAML que el campo `saml2:Attribute Name="email"` coincide con la dirección de correo electrónico que el usuario está utilizando para iniciar sesión. Si utilizas Microsoft Entra ID, el mapeado de atributos es `email = user.userprincipalname`.
+Si recibes el error `ERROR_CODE_SSO_INVALID_EMAIL`, la dirección de correo electrónico del usuario no es válida. Confirma en el rastreo SAML que el campo `saml2:Attribute Name="email"` coincide con la dirección de correo electrónico que el usuario está utilizando para iniciar sesión. Si utilizas Microsoft Entra ID (antes Azure Active Directory), el mapeado de atributos es `email = user.userprincipalname`.
 
-La dirección de correo electrónico distingue entre mayúsculas y minúsculas y debe coincidir exactamente con la que se configuró en Braze, incluida la configurada en tu proveedor de identidad (como Okta, OneLogin, Azure Active Directory y otros).
+La dirección de correo electrónico distingue entre mayúsculas y minúsculas y debe coincidir exactamente con la que se configuró en Braze, incluida la configurada en tu proveedor de identidad (como Okta, OneLogin, Microsoft Entra ID y otros).
 
 Otros errores que indican que tienes problemas con la dirección de correo electrónico del usuario son:
 - `ERROR_CODE_SSO_EMAIL_DOES_NOT_EXIST`: La dirección de correo electrónico del usuario no está dentro del panel.
@@ -167,7 +167,7 @@ Si recibes el error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, tu RelayState podría 
 
 ### ¿Está el usuario atrapado en un bucle de inicio de sesión entre Okta y Braze?
 
-Si un usuario no puede iniciar sesión porque está bloqueado entre el SSO de Okta y el panel de Braze, tienes que ir a Okta y establecer el destino de la URL SSO en tu [instancia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (por ejemplo, `https://dashboard-07.braze.com`). 
+Si un usuario no puede iniciar sesión porque está bloqueado entre el SSO de Okta y el panel de Braze, tienes que ir a Okta y establecer el destino de la URL del SSO en tu [instancia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (por ejemplo, `https://dashboard-07.braze.com`). 
 
 Si utilizas otro IdP, comprueba si tu empresa ha cargado en Braze el certificado SAML o x.509 correcto.
 

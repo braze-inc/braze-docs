@@ -15,7 +15,7 @@ platform:
   - Unity
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %}](https://learning.braze.com/path/developer) ){: style="float:right;width:120px;border:0;" class="noimgborder"}Primeiros passos: Visão geral da plataforma
+# [![Curso de Aprendizado Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer){: style="float:right;width:120px;border:0;" class="noimgborder"}Introdução: Visão geral da plataforma
 
 > Este artigo aborda as partes básicas e os recursos da plataforma Braze. Os links deste artigo se conectam a tópicos essenciais do Braze. 
 
@@ -25,11 +25,11 @@ Confira nosso curso gratuito [Developer Learning Path](https://learning.braze.co
 
 ## O que é a Braze?
 
-A Braze é uma plataforma de engajamento com clientes. Isso significa simplesmente que o Braze o ajuda a ouvir seus usuários, entender as ações e os comportamentos deles e, em seguida, agir de acordo com eles. A plataforma Braze tem três componentes principais: o SDK, o dashboard e a API REST.
+A Braze é uma plataforma de engajamento com clientes. Ele consome dados de usuários, apresenta ações e comportamentos dos usuários e permite que você aja sobre eles. A plataforma tem três componentes principais: o SDK, o dashboard e a API REST.
 
 Se você for um profissional de marketing e estiver procurando uma visão geral do Braze, consulte a [seção Introdução para profissionais de marketing]({{site.baseurl}}/user_guide/getting_started/overview/).
 
-![O Braze tem diferentes camadas. No total, ela é formada pelo SDK, a API, o dashboard e as integrações com parceiros. Cada uma delas contribui com partes de uma camada de ingestão de dados, uma camada de classificação, uma camada de orquestração, uma camada de personalização e uma camada de ação. A camada de ação tem vários canais, incluindo push, mensagens no app, Connected Catalog, webhook, SMS e e-mail.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
+![O Braze tem diferentes camadas. No total, ela é formada pelo SDK, a API, o dashboard e as integrações com parceiros. Cada uma delas contribui com partes de uma camada de ingestão de dados, uma camada de classificação, uma camada de orquestração, uma camada de personalização e uma camada de ação. A camada de ação tem vários canais, incluindo push, mensagens no app, catálogo conectado, webhook, SMS e e-mail.]({% image_buster /assets/img/getting-started/getting-started-vertically-integrated-stack.png %}){: style="max-width:55%;float:right;margin-left:15px;"}
 
 ### SDK
 
@@ -64,11 +64,11 @@ Para saber mais sobre a Braze, confira: [Primeiros passos: Visão geral da arqui
 
 Os dados armazenados no Braze são retidos e podem ser usados para segmentação, personalização e direcionamento enquanto você for um cliente Braze. Isso permite que você aja com base nos dados de perfil de usuários (por exemplo, atividade de sessão ou compras) até que você decida descontinuar essas informações. Por exemplo, um serviço de fluxo de dados poderia rastrear o conteúdo visto por cada inscrito desde o primeiro dia no serviço (mesmo que isso tenha ocorrido há muitos anos) e usar esses dados para enviar mensagens relevantes.
 
-![Um segmento no dashboard do Braze chamado "Compradores recentes" colocado ao lado de uma tela de telefone mostrando o e-mail "Principais recomendações para Linda".]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
+![Um segmento no dashboard do Braze chamado "Compradores recentes" justaposto ao lado de uma tela de telefone mostrando um e-mail com as "Principais recomendações para Linda".]({% image_buster /assets/img/getting-started/getting-started-segment.png %}){: style="max-width:80%"}
 
 ### Análise de dados do app
 
-O dashboard do Braze exibe gráficos que são atualizados em tempo real com base em uma série de métricas de análise de dados, bem como em eventos personalizados que você instrumenta em seu aplicativo. A medição e a otimização consistentes de suas campanhas com Testes A/B, relatórios e análises de dados personalizados e inteligência automatizada ajudam a manter os clientes engajados e a se destacar dos concorrentes em seu espaço.
+O dashboard do Braze exibe gráficos atualizados em tempo real com base em métricas de análise e eventos personalizados que você instrumenta. Medidas e otimizações consistentes usando testes A/B, relatórios personalizados, análise de dados e inteligência automatizada ajudam a apoiar o engajamento e a diferenciação do cliente.
 
 ### Segmentação de usuários
 
@@ -88,7 +88,7 @@ Depois de definir um segmento, as ferramentas de mensagens privadas do Braze per
 | [E-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/) | Envie mensagens em HTML avançado criando seu e-mail usando o editor de rich-text, nosso editor de arrastar e soltar ou fazendo upload de um de seus modelos HTML existentes. |
 | [Mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | Envie notificações discretas no app usando a interface de usuário nativa personalizada da Braze. |
 | [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | Dispare automaticamente notificações por push de campanhas de mensagens ou itens de notícias usando o serviço de Notificações por Push da Apple (APNs) para iOS ou o Firebase Cloud Messaging (FCM) para Android. |
-| [SMS/MMS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/) | Use SMS/MMS para enviar notificações de transações, compartilhar promoções, enviar lembretes e muito mais. |
+| [SMS, MMS e RCS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs)* | Use SMS, MMS ou RCS para enviar notificações transacionais, compartilhar promoções, enviar lembretes e mais. |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web) | Envie notificações ao navegador da Web, mesmo que os usuários não estejam ativos no site no momento. |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Use webhooks para disparar ações que não sejam do aplicativo, fornecendo dados em tempo real a outros sistemas e aplicativos. |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/) | Conecte-se diretamente com seus usuários e clientes aproveitando a popular plataforma de envio de mensagens ponto a ponto: WhatsApp. |
@@ -109,7 +109,7 @@ Depois de definir um segmento, as ferramentas de mensagens privadas do Braze per
 
 ## Integração do Braze
 
-O Braze foi projetado para entrar em operação de forma rápida e fácil. Nosso tempo médio de obtenção de valor é de seis semanas em nossa base de clientes de centenas de marcas. Para saber mais sobre o processo de integração, confira: [Primeiros passos: Visão geral da integração]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
+O Braze é projetado para integração rápida. O tempo médio para valor é de seis semanas em nossa base de clientes. Para mais informações sobre o processo de integração, veja [Introdução: Visão geral da integração]({{site.baseurl}}/developer_guide/getting_started/integration_overview/).
 
 ## Recursos para adicionar aos favoritos
 
@@ -117,7 +117,7 @@ Como um recurso técnico, você estará envolvido em muitos dos detalhes básico
 
 | Recursos | O que você aprenderá|
 |---|---|
-| [Depurando o SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | Ao solucionar problemas da sua integração, a ferramenta de debug do SDK será uma ferramenta útil. Certifique-se de tê-la à mão! |
+| [Depurando o SDK]({{site.baseurl}}/developer_guide/sdk_integration/debugging) | Ao solucionar problemas de sua integração, a ferramenta de depuração do SDK será uma ferramenta útil. Certifique-se de tê-la à mão! |
 | [GitHub público do Braze](https://github.com/braze-inc/) | Você encontrará informações detalhadas sobre integração e exemplos de código em nosso repositório do GitHub. |
 | [Repositório GitHub do Android SDK](https://github.com/braze-inc/braze-android-sdk/) | O repositório GitHub do Android SDK. |
 | [Referência do SDK do Android](https://appboy.github.io/appboy-android-sdk/kdoc/index.html) | Documentação de classe para o Android SDK. |

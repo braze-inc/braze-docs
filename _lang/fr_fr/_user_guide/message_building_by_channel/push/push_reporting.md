@@ -13,5 +13,5 @@ tool: Reports
 
 > Cet article couvre les rapports des notifications push, que vous pouvez utiliser pour afficher et analyser le succès de vos campagnes de notification push.
 
-{% multi_lang_include campaign_analytics.md channel="push" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="push" %}
 

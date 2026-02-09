@@ -14,5 +14,5 @@ tool:
 
 > Este artigo de referência aborda relatórios e análises de dados de mensagens no app, incluindo detalhes de campanhas, performance de mensagens e histórico de performance.
 
-{% multi_lang_include campaign_analytics.md channel="mensagem no app" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="in-app message" %}
 

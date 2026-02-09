@@ -1,5 +1,5 @@
 ---
-nav_title: Custom View Controller
+nav_title: Custom view controller
 article_title: In-App Message in a Custom View Controller for iOS
 platform: iOS
 page_order: 7

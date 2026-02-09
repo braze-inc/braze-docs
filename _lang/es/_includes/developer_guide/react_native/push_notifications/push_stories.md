@@ -25,7 +25,7 @@ A continuación, configura la propiedad `enableBrazeIosPushStories` en `true` y 
 }
 ```
 
-Por último, añade el identificador de paquete de esta extensión de aplicación a la configuración de credenciales de tu proyecto: `<your-app-bundle-id>.BrazeExpoPushStories`. Para más detalles sobre este proceso, consulta [Utilizar extensiones de aplicación con los Servicios de Aplicación Expo](#reactnative_app-extensions).
+Por último, añade el identificador de paquete de esta extensión de aplicación a la configuración de credenciales de tu proyecto: `<your-app-bundle-id>.BrazeExpoPushStories`. Para más detalles sobre este proceso, consulta [Utilizar extensiones de aplicación con los Servicios de Aplicación Expo]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=react%20native#reactnative_app-extensions).
 
 {% alert warning %}
 Si utilizas historias push con los servicios de aplicaciones Expo, asegúrate de utilizar la bandera `EXPO_NO_CAPABILITY_SYNC=1` al ejecutar `eas build`. Hay un problema conocido en la línea de comandos que elimina la capacidad de Grupos de aplicaciones del perfil de aprovisionamiento de tu extensión.

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Airbridge
 
-> [Airbridge](https://www.airbridge.io/) ist eine einheitliche Plattform für die Messung mobiler Daten, die Ihnen hilft, wahre Wachstumsquellen durch mobile Attribution, inkrementelle Messung und Marketing-Mix-Modellierung zu entdecken.
+> [Airbridge](https://www.airbridge.io/) ist eine einheitliche Plattform für mobile Messungen, mit der Sie Wachstumsquellen durch mobile Attribution, inkrementelle Messungen und Marketing-Mix-Modellierung entdecken können.
 
 _Diese Integration wird von Airbridge gepflegt._
 
@@ -196,13 +196,13 @@ Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und
 
 Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Airbridge einrichten.
 
-![][1]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %})
 
 ### Schritt 3: Konfigurieren Sie Braze im Dashboard von Airbridge
 
 1. Navigieren Sie in Airbridge in der linken Seitenleiste zu **Integrationen > Drittanbieter-Integrationen** und wählen Sie **Braze** aus.
 2. Geben Sie den Datenimport-Schlüssel und den REST-Endpunkt an, den Sie im Braze-Dashboard gefunden haben.
-3. Wählen Sie den Ereignistyp (Ereignis installieren oder Ereignis installieren & öffnen) und speichern Sie.
+3. Wählen Sie den Ereignistyp (Ereignis installieren oder & Deeplink Ereignis öffnen) und speichern Sie.
 
 {% alert note %}
 Die Attribution-Daten für Kampagnen, die zu Deeplink-Öffnungen geführt haben, werden auf der Ebene der Geräte aktualisiert. Wenn beispielsweise zwei Nutzer:innen ein Gerät verwenden und ein Nutzer:in ein Deeplink-Öffnungs-Ereignis ausführt, werden die Attributionsdaten dieses Ereignisses auch in die Daten des anderen Nutzers:in übernommen.
@@ -212,9 +212,9 @@ Ausführlichere Anweisungen finden Sie unter [Airbridge](https://help.airbridge.
 
 ### Schritt 4: Bestätigen Sie die Integration
 
-Sobald Braze Attribution-Daten von Airbridge erhält, ändert sich der Verbindungsstatus auf der Technologie-Partnerseite von Airbridge in Braze von "Nicht verbunden" zu "Verbunden". Ein Zeitstempel der letzten erfolgreichen Anfrage wird ebenfalls mitgeschickt.
+Nachdem Braze Attribution-Daten von Airbridge erhalten hat, ändert sich der Verbindungsstatus auf der Technologie-Partnerseite von Airbridge in Braze von "Nicht verbunden" zu "Verbunden" und enthält einen Zeitstempel der letzten erfolgreichen Anfrage.
 
-Beachten Sie, dass dies erst dann geschieht, wenn wir Daten über eine attributierte Installation erhalten. Organische Installationen, die vom Airbridge-Postback ausgeschlossen werden sollten, werden von unserer API ignoriert und bei der Ermittlung, ob eine erfolgreiche Verbindung hergestellt wurde, nicht mitgezählt.
+Dieser Status ändert sich erst, wenn Braze Daten über eine attributierte Installation erhält. Braze ignoriert organische Installationen (schließt sie aus dem Airbridge-Postback aus) und zählt sie nicht bei der Feststellung, ob die Verbindung erfolgreich war.
 
 ## Verfügbare Datenfelder
 
@@ -231,7 +231,7 @@ Vorausgesetzt, Sie konfigurieren Ihre Integration wie vorgeschlagen, wird Braze 
 
 Ihre Nutzer:innen können im Braze-Dashboard mit Hilfe der Install-Attribution-Filter nach Attributionsdaten segmentiert werden.
 
-![][2]
+![]({% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %})
 
 ## Meta Business Attribution Daten
 
@@ -239,7 +239,7 @@ Attributionsdaten für Meta Business Kampagnen sind nicht über unsere Partner v
 
 ## Airbridge Click Tracking URLs in Braze (optional)
 
-Wenn Sie Tracking-Links für Klicks in Ihren Braze-Kampagnen verwenden, können Sie leicht erkennen, welche Kampagnen zu App-Installationen und erneuter Interaktion führen. So können Sie Ihre Marketing-Bemühungen effektiver messen und datengestützte Entscheidungen darüber treffen, wo Sie mehr Ressourcen für einen maximalen ROI investieren sollten.
+Die Verwendung von Klick Tracking Links in Ihren Braze Kampagnen zeigt, welche Kampagnen App-Installationen und erneute Interaktionen fördern. Nutzen Sie die Ergebnisse, um die Performance des Marketings zu messen und zu entscheiden, wo Sie Ressourcen für einen höheren ROI investieren sollten.
 
 Um mit Airbridge Click Tracking Links zu beginnen, besuchen Sie [Airbridge](https://help.airbridge.io/en/guides/creating-a-new-tracking-link). Nachdem die Einrichtung abgeschlossen ist, können Sie die Airbridge Click Tracking Links direkt in Ihre Kampagnen bei Braze einfügen. Airbridge verwendet dann seine [probabilistischen Attributionsmethoden](https://help.airbridge.io/en/guides/identity-matching), um den Nutzer:innen, die auf den Link geklickt haben, zu attributieren. Wir empfehlen, Ihre Airbridge Tracking-Links mit einem Bezeichner für das Gerät zu versehen, um die Genauigkeit der Attributionen Ihrer Kampagnen von Braze zu verbessern. Dadurch wird der Nutzer:in, der auf den Link geklickt hat, deterministisch attributiert.
 
@@ -274,5 +274,3 @@ Wenn Sie derzeit keine Geräte-Identifikatoren - wie IDFV oder GAID - in Ihren C
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/airbridge/airbridge_integration_step_1.png %}
-[2]: {% image_buster /assets/img/airbridge/airbridge_integration_step_2.png %}

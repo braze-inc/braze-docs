@@ -1,6 +1,6 @@
 ---
 page_order: 11
-nav_title: Práticas recomendadas
+nav_title: Melhores práticas
 article_title: Práticas recomendadas de mensagens no app
 layout: dev_guide
 guide_top_header: "Práticas recomendadas de mensagens no app"

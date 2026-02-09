@@ -1,5 +1,5 @@
 ---
-nav_title: Adoção de Recursos
+nav_title: Adoção de recursos
 article_title: Adoção de Recursos
 page_order: 3
 page_type: reference
@@ -36,7 +36,7 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 3\. Atualize a descrição para especificar que o canva é para incentivar os usuários a enviar feedback e acompanhar o sentimento dos usuários em relação ao novo recurso de Controle de Cruzeiro.
 4\. Adicione a tag **Feature adoption** para que possamos filtrá-la na página inicial do canva.
 
-![O novo nome e descrição para o canva. A nova descrição afirma: Uma adoção de canva para rastrear a adoção e o sentimento do usuário para o Controle de Cruzeiro, uma funcionalidade para agendar entregas de alimentos recorrentes.]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
+![O novo nome e descrição para o canva. A nova descrição indica: Uma tela de adoção de recursos para rastrear a adoção e o sentimento do usuário em relação ao Cruise Control, um recurso para agendar entregas recorrentes de alimentos.]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
 ### Etapa 2: Atribuir um evento de conversão
 
@@ -47,7 +47,7 @@ Em seguida, vamos adicionar um evento de conversão para nosso canva para sinali
 3. Selecione nosso evento personalizado `scheduled_delivery`.
 4. Manteremos o prazo de conversão em três dias.
 
-![A janela de evento de conversão no canva.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
+![A janela do evento de conversão no Canva.]({% image_buster /assets/img/canvas_templates/feature_adoption/assign_conversion_event_cruise_control.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: Ajustar o cronograma de entrada
 
@@ -86,16 +86,16 @@ Em seguida, vamos construir a primeira etapa da jornada de Ação, que tem como 
 
 1. Como a funcionalidade de Controle de Cruzeiro só está disponível após um pedido ter sido adicionado a um carrinho, nomearemos o primeiro grupo de ações **Adicionado ao carrinho** e selecionaremos `added_to_cart` para o evento personalizado.
 
-![O nome do grupo de ações definido como "Adicionado ao carrinho" e o "Executar Evento Personalizado" definido como "adicionado_ao_carrinho".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
+![O nome do grupo de ação definido como "Added to cart" (Adicionado ao carrinho) e o "Perform Custom Event" (Executar evento personalizado) definido como "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Mantenha o segundo grupo de ações **Taken Tour** como está, pois queremos avaliar se os usuários fizeram um tour pelo app, e se o fizeram, então avançarão para a segunda jornada.
 3\. Para a Ação subsequente Jornada chamada **Assess Usage**, substitua **Used Feature >3x** por **Viewed Cruise Control settings**.
 4\. Selecione o **Executar Evento Personalizado** dropdown, em seguida selecione `scheduled_delivery` para o evento personalizado.
 
-![O nome do grupo de ações definido como 'Recurso Usado >3x' e o 'Executar Evento Personalizado' definido como 'entrega_agendada'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
+![O nome do grupo de ação definido como "Recurso usado >3x" e o "Executar evento personalizado" definido como 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
 
-#### Configurar pesquisa de feedback
+#### Configure a pesquisa de feedback
 
 Em seguida, iremos acessar a etapa da Mensagem chamada **Feedback Survey** para incluir nossa pesquisa de feedback para que nossos usuários possam preencher após usar o Cruise Control pela primeira vez. As opções de resposta da nossa pesquisa para nossos usuários são:
 

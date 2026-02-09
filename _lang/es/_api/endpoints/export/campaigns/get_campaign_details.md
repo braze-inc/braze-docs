@@ -33,6 +33,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 | Parámetro | Obligatoria | Tipo de datos | Descripción |
 | --------- | -------- | --------- | ----------- |
 | `campaign_id` | Obligatoria | Cadena | Ver [identificador API de campaña]({{site.baseurl}}/api/identifier_types/).<br><br> Puedes encontrar la dirección `campaign_id` para las campañas API en la página [Claves de API]({{site.baseurl}}/user_guide/administrative/app_settings/api_settings_tab/) y en la página **Detalles de campaña** dentro de tu panel; o puedes utilizar el [punto final Exportar lista de campañas](#campaign-list-endpoint). |
+| `post_launch_draft_version` | Opcional | Booleano | Para los mensajes que tienen un borrador posterior al lanzamiento, configurando esta opción en `true` se mostrará cualquier cambio disponible en el borrador. Predeterminado a `false` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplo de solicitud
@@ -46,14 +47,14 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## Respuestas
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
     "updated_at" : (string) the date last updated as ISO 8601 date,
     "archived": (boolean) whether this campaign is archived,
     "draft": (boolean) whether this campaign is a draft,
+    "enabled": (boolean) whether this campaign is active or not,
+    "has_post_launch_draft": (boolean) whether this campaign has a post-launch draft,
     "name" : (string) the campaign name,
     "description" : (string) the campaign description,
     "schedule_type" : (string) the type of scheduling action,
@@ -81,11 +82,14 @@ La respuesta `messages` contendrá información sobre cada mensaje. A continuaci
 
 ```json
 {
-    "channel": (string) the description of the channel, such as "ios_push" or "android_push"
+    "channel": (string) the description of the channel, such as "ios_push" or "android_push",
+    "name": (string) the name of the variant,
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 
@@ -215,7 +219,7 @@ La respuesta `messages` contendrá información sobre cada mensaje. A continuaci
 
 ### Comportamientos de conversión
 
-La matriz `conversion_behaviors` contendrá información sobre cada comportamiento de evento de conversión establecido para la campaña. Estos comportamientos están en el orden establecido por la campaña. Por ejemplo, el evento de conversión A será el primer elemento de la matriz, el evento de conversión B será el segundo, etc. A continuación se enumeran ejemplos de respuestas de comportamiento ante eventos de conversión:
+La matriz `conversion_behaviors` contiene información sobre cada comportamiento de evento de conversión establecido para la campaña. Estos comportamientos están en el orden establecido por la campaña. Por ejemplo, el evento de conversión A es el primer elemento de la matriz, el evento de conversión B es el segundo, y así sucesivamente. A continuación se enumeran ejemplos de respuestas de comportamiento ante eventos de conversión:
 
 #### Hace clic en el correo electrónico
 

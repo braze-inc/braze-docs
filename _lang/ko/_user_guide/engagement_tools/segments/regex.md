@@ -1,7 +1,7 @@
 ---
-nav_title: "정규식"
-article_title: 정규식
-page_order: 6
+nav_title: "정규표현식"
+article_title: 정규 표현식
+page_order: 10
 
 description: "이 참조 문서에서는 정규표현식(정규식)이 무엇인지, 정규표현식 사용을 시작하는 방법, 정규표현식의 유효성을 검사하고 테스트하는 디버거 기능에 대해 설명합니다."
 page_type: reference
@@ -14,26 +14,26 @@ tool:
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
-> 일반적으로 정규식으로 알려진 정규표현식은 검색 패턴을 정의하는 문자 시퀀스입니다. 정규식을 사용하면 텍스트 그룹화의 유효성을 검사하고 찾기 및 바꾸기 작업을 수행할 수 있습니다. Braze에서는 정규식을 활용하여 타겟 오디언스를 위한 세분화 및 캠페인 필터링에서 보다 유연한 문자열 매칭 솔루션을 제공합니다.<br><br>이 페이지에서는 정규식(정규식), 정규식 사용 방법, 자주 묻는 질문을 다루고 정규식을 테스트할 수 있는 정규식 디버거를 제공합니다.
+> 일반적으로 정규식으로 알려진 정규표현식은 검색 패턴을 정의하는 문자 시퀀스입니다. 정규식을 사용하면 텍스트 그룹화의 유효성을 검사하고 찾기 및 바꾸기 작업을 수행할 수 있습니다. Braze에서는 정규식을 활용하여 타겟 오디언스를 위한 세분화 및 캠페인 필터링에서 보다 유연한 문자열 매칭 솔루션을 제공합니다.<br><br>이 페이지에서는 정규식(정규식)과 사용 방법, 자주 묻는 질문을 다루고 정규식을 테스트할 수 있는 정규식 디버거를 제공합니다.
 
-링크된 Braze 학습 과정에서는 [정규식101][regex]에서 정규표현식을 사용하고 테스트하는 방법을 보여드립니다. 또한 [사내 정규식 테스터](#regex-debugger), 유용한 참조 페이지, 정규식 Braze 학습 동영상에 참조된 샘플 데이터, 자주 묻는 질문도 제공합니다.
+In the linked Braze Learning course, we show you how regular expressions can be used and tested on [Regex101](https://regex101.com/). 또한 [사내 정규식 테스터](#regex-debugger), 유용한 참조 페이지, 정규식 Braze 학습 동영상에 참조된 샘플 데이터, 자주 묻는 질문도 제공합니다.
 
 ## 리소스
 
 - [정규식 기초](https://learning.braze.com/regular-expression-basics-for-braze) Braze 학습 과정
 - [정규식 치트 시트]({{site.baseurl}}/regex_cheat_sheet/)
-- [샘플 데이터 RTF][dummydata]
+- [샘플 데이터 RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## 정규식 디버거
 
 {% alert important %}
-이 도구는 참고용으로만 제공되며, 정규식이 Braze 플랫폼과 100% 일치한다는 보장은 없습니다. 세분화 및 필터를 위한 Braze의 정규식은 `/gi` 수정자를 자동으로 추가합니다. [gi 수정자](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm)는 문자열에서 대소문자를 구분하지 않고 정규표현식이 포함된 모든 항목을 검색하는 데 사용됩니다.  
+이 도구는 참고용으로만 제공되며, 정규식이 Braze 플랫폼과 100% 일치한다는 보장은 없습니다. 세분화 및 필터를 위한 Braze의 정규표현식은 `/gi` 수정자를 자동으로 추가합니다. [gi 수정자](https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm)는 문자열에서 대소문자를 구분하지 않고 정규표현식이 포함된 모든 항목을 검색하는 데 사용됩니다.  
 <br>
-사용자 지정 이벤트 트리거 속성 및 트리거 필터의 정규식은 `/g` 수정자(대소문자 구분, [g 수정자](https://www.w3schools.com/jsref/jsref_regexp_g.asp) 참조)를 사용하며 `/i` 수정자는 사용하지 않습니다. 사용자 지정 이벤트 트리거 속성 및 트리거 필터에 대/소문자를 구분하지 않으려면 `(?i)` 대신 을 사용하세요. 예를 들어 `Matches regex (?i)STOP(?-i)` 은 어떤 경우에도 "STOP"("중지", "제발 중지", "절대 메시지 보내지 마세요" 등)을 사용하는 것을 포착합니다.
+커스텀 이벤트 속성정보 및 트리거 필터에 대한 정규표현식은 `/g` 수정자(대소문자 구분, [g 수정자](https://www.w3schools.com/jsref/jsref_regexp_g.asp) 참조)를 사용하며 `/i` 수정자는 사용하지 않습니다. 커스텀 이벤트 속성정보 및 트리거 필터에 대/소문자를 구분하지 않으려면 `(?i)` 을 대신 사용하세요. 예를 들어 `Matches regex (?i)STOP(?-i)` 은 'STOP'의 모든 사용 사례(예: "중지", "제발 중지", "메시지 전송을 멈추지 마세요")를 포착합니다.
 {% endalert %}
 
 {% tabs %}
-{% tab 정규식 디버거 %}
+{% tab Regex Debugger %}
 <div>
 이 양식을 사용하면 정규식에 대한 기본적인 유효성 검사 및 테스트를 수행할 수 있습니다.
 ​
@@ -194,7 +194,7 @@ $( document ).ready(function() {
 
 #### 특정 전화번호를 필터링하려면 어떻게 하나요?
 
-정규식을 사용하여 전화번호를 필터링하기 전에 고객 프로필에 기록된 번호는 사용자 전화번호에 지정된 [E.164](https://en.wikipedia.org/wiki/E.164) 형식이어야 합니다([사용자 전화번호에]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/) 지정된 대로).
+Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164](https://en.wikipedia.org/wiki/E.164) format, as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/user_phone_numbers/).
 
 미국 전화번호를 검색한다고 가정하면 `\d`의 각 반복은 지정하려는 숫자인 `1?\d\d\d\d\d\d\d\d\d\d` 정규식 형식을 사용합니다. 처음 세 자리는 지역 번호입니다.
 
@@ -206,8 +206,6 @@ $( document ).ready(function() {
 ^1?718\d\d\d\d\d\d\d
 ```
 
-!["^1?718\\d\\d\\d\\d\\d\\d"의 정규식과 일치하는 전화번호를 필터링합니다.]({% image_buster /assets/img/regex/regeximg3.png %})
+!["^1?718\\d\\d\\d\\d\\d\\d\\d"의 정규식과 일치하는 전화번호를 필터링합니다.]({% image_buster /assets/img/regex/regeximg3.png %})
 
 
-[regex]: https://regex101.com/
-[dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}

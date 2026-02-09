@@ -24,7 +24,7 @@ Clique em **Save Color Profile (Salvar perfil de cor** ) quando terminar.
 
 ### Gerenciamento de perfis de cores
 
-Você também pode [duplicar][6] e [arquivar][7] modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Modelos e mídias.][8]
+Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modelo CSS {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ Como você pode ver, é possível editar tudo, desde a cor do plano de fundo at�
 
 ### Gerenciamento de modelos CSS
 
-Você também pode [duplicar][6] e [arquivar][7] modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Modelos e mídias.][8]
+Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) e [arquivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modelos! Saiba mais sobre como criar e gerenciar modelos e conteúdo criativo em [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modal com CSS (somente na Web) {#web-modal-css}
 
@@ -93,6 +93,3 @@ Se optar por usar um Web Modal somente para a internet com mensagem CSS, você p
 Se você optar por aplicar seu próprio modelo, clique em **Aplicar modelo** e escolha na galeria de modelos de mensagens no app. Se não tiver nenhuma opção, você pode fazer upload de um [modelo CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/color_profiles_and_css/#in-app-message-templates) usando o construtor de modelos CSS.
 
 
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
-[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

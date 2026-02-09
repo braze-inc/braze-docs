@@ -1,5 +1,5 @@
 ---
-nav_title: "Crear notificaciones enriquecidas"
+nav_title: Crear notificaciones enriquecidas
 article_title: "Crear notificaciones push enriquecidas para iOS"
 page_order: 3
 page_type: tutorial
@@ -21,9 +21,9 @@ tool:
 
 Antes de crear una notificación push enriquecidas para iOS, ten en cuenta los siguientes detalles:
 
-- Para asegurarte de que tu aplicación puede enviar notificaciones enriquecidas, sigue las instrucciones de [integración push de iOS][1], ya que tu desarrollador tendrá que añadir una extensión de servicio a tu aplicación.
+- Para asegurarte de que tu aplicación puede enviar notificaciones enriquecidas, sigue las instrucciones de [integración push de iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications), ya que tu desarrollador tendrá que añadir una extensión de servicio a tu aplicación.
 - Los tipos de archivo que actualmente admitimos para la carga directa en nuestro panel de control son JPEG, PNG o GIF. Estos archivos también pueden introducirse en el campo de URL planificable junto con estos tipos de archivo adicionales: AIF, M4A, MP3, MP4 o WAV.
-- Consulta [la documentación de Apple][2] para conocer las limitaciones y especificaciones de los soportes.
+- Consulta [la documentación de Apple](https://developer.apple.com/reference/usernotifications/unnotificationattachment) para conocer las limitaciones y especificaciones de los soportes.
 - Las notificaciones enriquecidas de iOS no están disponibles al crear una campaña push rápida.
 - iOS escalará las imágenes para que quepan en la pantalla y escalará las imágenes enriquecidas para la vista activa o bloqueada.
 
@@ -59,7 +59,7 @@ Tus usuarios pueden ver las notificaciones push en una variedad de situaciones d
 </table>
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-![Ejemplo de notificaciones push para push mostradas en la pantalla de bloqueo, cuando se expanden y cuando el dispositivo está activo.]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
+![Ejemplo de notificaciones push que se muestran en la pantalla de bloqueo, cuando se expanden y cuando el dispositivo está activo.]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
 
 {% alert note %}
 Aunque recomendamos una relación de aspecto de 2:1 para las notificaciones push ampliadas, se admite casi cualquier relación de aspecto. Las imágenes siempre ocuparán toda la anchura de la notificación, y la altura se ajustará en consecuencia.
@@ -70,7 +70,7 @@ Aunque recomendamos una relación de aspecto de 2:1 para las notificaciones push
 Al crear contenidos, tenga en cuenta los siguientes escenarios que pueden afectar a la cantidad de texto que se muestra.
 
 {% tabs %}
-{% tab Temporización %}
+{% tab Timing %}
 
 En función del momento en que un usuario se conecta a una notificación push, la marca de tiempo puede acortar el texto del título.
 
@@ -80,11 +80,11 @@ En función del momento en que un usuario se conecta a una notificación push, l
 ![Ejemplo de notificación push con una marca de tiempo de "hace 3 horas" y un título de 33 caracteres.]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
 <br>Número de caracteres del título: **33**
 
-![Ejemplo de notificación push con una fecha y hora de "Ayer, 8:37 AM" y un título de 22 caracteres.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+![Ejemplo de notificación push con una marca de tiempo de "Ayer, 8:37 AM" y un título de 22 caracteres.]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
 <br>Número de caracteres del título: **22**
 
 {% endtab %}
-{% tab Imágenes %}
+{% tab Images %}
 
 El cuerpo del texto se acorta unos 10 caracteres por línea cuando hay una imagen.
 
@@ -95,18 +95,18 @@ El cuerpo del texto se acorta unos 10 caracteres por línea cuando hay una image
 <br>Número de caracteres del cuerpo: **154**
 
 {% endtab %}
-{% tab Nivel de interrupción %}
+{% tab Interruption level %}
 
 Para iOS 15, las denotaciones Sensible al tiempo y Crítico empujan el título a una nueva línea sin la marca de tiempo, dándole un poco más de espacio.
 
-![Ejemplo de notificación push sin indicación de tiempo sensible o crítico y con un título de 35 caracteres.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
+![Ejemplo de notificación push sin indicación de Tiempo sensible o Crítico y con un título de 35 caracteres.]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
 <br>Número de caracteres del título: **35**
 
-![Ejemplo de notificación push con una denotación Time Sensitive y un título de 39 caracteres.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+![Ejemplo de notificación push con una denotación Sensible al tiempo y un título de 39 caracteres.]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
 <br>Número de caracteres del título: **39**
 
 {% endtab %}
-{% tab Más %}
+{% tab More %}
 
 Los siguientes detalles también pueden influir en el truncamiento del texto:
 
@@ -121,30 +121,23 @@ Los siguientes detalles también pueden influir en el truncamiento del texto:
 
 ### Paso 1: Crear una campaña push
 
-Sigue los [pasos de la campaña][3] para redactar una notificación push para iOS. Utilizará el mismo compositor que utiliza para configurar las notificaciones push que no contienen contenido enriquecido.
+Sigue los [pasos de la campaña]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message) para redactar una notificación push para iOS. Utilizará el mismo compositor que utiliza para configurar las notificaciones push que no contienen contenido enriquecido.
 
 ### Paso 2: Añadir medios
 
 Añada su archivo de imagen, GIF, audio o vídeo en el campo **Rich Notification Media** del redactor del mensaje. Consulte los [requisitos](#requirements) sobre cómo añadir sus archivos de contenido.
 
-![Un ejemplo de texto resumido para una notificación push.][4]{: style="max-width:70%;" }
+![Un ejemplo de texto resumido para una notificación push.]({% image_buster /assets/img_archive/rich_notification_add_image.png %}){: style="max-width:70%;" }
 
 También puedes limitar este mensaje para que solo se envíe a usuarios que tengan un dispositivo con iOS 10. Para los usuarios que no hayan actualizado a iOS 10, aparecerá como notificaciones de solo texto sin el contenido enriquecido si dejas desmarcada la opción **Solo enviar a dispositivos compatibles con notificaciones enriquecidas**.
 
-![La sección Imagen de notificación ampliada, donde puedes añadir una imagen o introducir una URL de imagen.][5]{: style="max-width:70%;" }
+![La sección Imagen de notificación ampliada, donde puedes añadir una imagen o introducir una URL de imagen.]({% image_buster /assets/img_archive/rich_notification_ios10_select.png %}){: style="max-width:70%;" }
 
 ### Paso 3: Sigue creando tu campaña
 
-Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes continuar [programando tu campaña][6].
+Una vez cargado el contenido de tu notificación enriquecida en el panel, puedes seguir [programando tu campaña]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign).
 
 Cuando un usuario recibe la notificación push, puede pulsar con fuerza sobre el mensaje push para ampliar la imagen.
 
-![Un usuario recibe una notificación push y pulsa con fuerza el mensaje para mostrar una imagen expandida que dice "¡Hola!".][8]{: style="max-width:50%;" }
+![Un usuario recibe una notificación push y pulsa con fuerza el mensaje para mostrar una imagen expandida que dice "¡Hola!".]({% image_buster /assets/img_archive/rich_notification_ios.gif %}){: style="max-width:50%;" }
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/push_notifications/integration/#ios-10-rich-notifications
-[2]: https://developer.apple.com/reference/usernotifications/unnotificationattachment
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[4]: {% image_buster /assets/img_archive/rich_notification_add_image.png %}
-[5]: {% image_buster /assets/img_archive/rich_notification_ios10_select.png %}
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#schedule-push-campaign
-[8]: {% image_buster /assets/img_archive/rich_notification_ios.gif %}

@@ -12,14 +12,14 @@ tool: Media
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: "Création d'un e-mail glisser-déposer"
+- name: Créer un e-mail glisser-déposer
   link: /docs/dnd/overview/
   image: /assets/img/braze_icons/brush-02.svg
-- name: Création d’un modèle d’e-mail
+- name: Créer un modèle d’e-mail
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
 - name: Blocs éditeur
-  link: /docs/dnd/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=email
   image: /assets/img/braze_icons/align-left.svg
 - name: Paramètres généraux de style
   link: /docs/dnd/global_style_settings/
@@ -28,6 +28,11 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
   image: /assets/img/braze_icons/inbox-01.svg
 
+guide_menu_title: "Other articles"
+guide_menu_list:
+- name: Blocs de produits à glisser-déposer
+  link: /docs/dnd_product_blocks/
+  image: /assets/img/braze_icons/columns-01.svg
 
 ---
 <br><br>

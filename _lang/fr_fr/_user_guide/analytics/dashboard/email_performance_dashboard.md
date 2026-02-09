@@ -3,7 +3,7 @@ nav_title: Tableau de bord des performances du canal
 article_title: Tableau de bord des performances du canal
 page_order: 2
 page_type: reference
-description: "Cet article de référence couvre le tableau de bord des performances du canal, qui vous permet d’afficher les indicateurs de canaux tout entiers pour vos campagnes et vos Canvas."
+description: "Cet article de référence porte sur le tableau de bord des performances des canaux, qui vous permet de consulter les indicateurs de performance de canaux entiers, à la fois sur les campagnes et les Canevas."
 tool: 
   - Reports
 
@@ -13,7 +13,7 @@ tool:
 
 > Les tableaux de bord des performances des canaux affichent les indicateurs de performance agrégés pour un canal entier, à partir des campagnes et des Canevas. Ces tableaux de bord sont disponibles actuellement pour les e-mails et les SMS.
 
-![Tableau de bord des performances e-mail affichant l’engagement des trente derniers jours sur ce canal de communication.][1]
+![Tableau de bord des performances e-mail affichant l’engagement des trente derniers jours sur ce canal de communication.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 Vous pouvez consulter les tableaux de bord suivants :
 - [Tableau de bord des performances e-mail](#email-performance-dashboard)
@@ -26,11 +26,11 @@ Consultez votre tableau de bord des performances des e-mails en allant dans **An
 
 ### Comment les indicateurs sont-ils calculés ?
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Un exemple de campagne d'e-mail avec 335 630 envois, avec une moyenne de 11 187,667 par jour.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 Les calculs des différents indicateurs du tableau de bord des performances des e-mails sont les mêmes que ceux effectués au niveau d'un message individuel (comme l'analyse de la campagne). Sur ce tableau de bord, les indicateurs sont agrégés pour toutes les campagnes et les Canvas dans la plage de dates que vous avez sélectionnée. Pour en savoir plus sur ces définitions, reportez-vous à la section [Indicateurs d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics).
 
-Chaque vignette affiche d’abord l’indicateur de pourcentage, puis le chiffre réel (à l’exception de *Envois*, qui montre le nombre d’envois effectués, suivi de la moyenne par jour). Par exemple, la tuile des clics uniques contient le *taux de clics uniques* de la période que vous avez sélectionnée et le décompte du nombre total de clics uniques de cette période. Chaque tuile indique également la [comparaison avec la période précédente](#comparison-to-last-period-change-in-totals-or-rates).
+Chaque vignette affiche d’abord l’indicateur de pourcentage, puis le chiffre réel (à l’exception de *Envois*, qui montre le nombre d’envois effectués, suivi de la moyenne par jour). Par exemple, la tuile des clics uniques contient le *taux de clics uniques* de la période que vous avez sélectionnée et le décompte du nombre total de clics uniques de cette période. Chaque tuile indique également la [comparaison avec la période précédente](#comparing-time-periods).
 
 | Indicateur | Type | Calcul |
 | --- | --- | ---- |
@@ -61,19 +61,19 @@ La catégorie "Autres" comprend toute chaîne de caractères d'utilisateurs qui 
 Pour mieux comprendre ce qui se trouve dans la catégorie "Autres", vous pouvez extraire les agents utilisateurs à l'aide de l'une ou l'autre de ces options :
 
 1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) vous enverra la chaîne de caractères exacte de l'agent utilisateur qui a été récupérée sur les appareils de vos utilisateurs.
-2. Tirez parti de notre [générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder) [pour]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) utiliser le langage SQL ou de notre [générateur de requêtes pour l'intelligence artificielle]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) pour afficher les agents utilisateurs.
+2. Tirez parti de notre [générateur de requêtes]({{site.baseurl}}/user_guide/analytics/query_builder) pour utiliser le langage SQL ou de notre [générateur de requêtes pour l'intelligence artificielle]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) pour afficher les agents utilisateurs.
 
-![Rapport sur l'engagement par appareil qui indique le nombre de clics pour les mobiles, les ordinateurs de bureau, les tablettes et autres. C'est sur les appareils mobiles que l'on enregistre le plus grand nombre de clics.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
+![Rapport sur l'engagement par appareil qui indique le nombre de clics pour les appareils mobiles, les ordinateurs de bureau, les tablettes et les autres appareils. C'est sur les appareils mobiles que l'on enregistre le plus grand nombre de clics.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
-Pour l'ouverture des e-mails, Braze sépare Google Image Proxy, Apple Image Proxy et Yahoo Mail Proxy. Ces services mettent en cache et chargent toutes les images intégrées dans un e-mail avant qu'il ne soit envoyé au destinataire. Par conséquent, cela déclenche l'ouverture d'un e-mail à partir des serveurs du fournisseur de la boîte aux lettres plutôt qu'à partir du serveur du destinataire, ce qui peut entraîner une augmentation du nombre d'ouvertures d'e-mails. Ces services sont destinés à améliorer la confidentialité, la sécurité, les performances et l'efficacité lors du chargement des images. Ces données peuvent également contenir des ouvertures réelles de destinataires, car ces services proxy masquent l'agent utilisateur, et nous classons les données proxy en fonction de l'agent utilisateur.
+Pour l'ouverture des e-mails, Braze sépare Google Image Proxy, Apple Image Proxy et Yahoo Mail Proxy. Ces services mettent en cache et chargent toutes les images intégrées dans un e-mail avant qu'il ne soit envoyé au destinataire. Par conséquent, cela déclenche l'ouverture d'un e-mail à partir des serveurs du fournisseur de la boîte aux lettres plutôt qu'à partir du serveur du destinataire, ce qui peut entraîner une augmentation du nombre d'ouvertures d'e-mails. Ces services sont destinés à améliorer la confidentialité, la sécurité, les performances et l'efficacité lors du chargement des images. Ces données peuvent également contenir des ouvertures réelles de destinataires, étant donné que ces services proxy masquent l'agent utilisateur et que nous classons les données proxy en fonction de l'agent utilisateur.
 
-![Rapport sur l'engagement par appareil qui indique le nombre de clics pour les mobiles, les ordinateurs de bureau, les tablettes, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy et autres. C'est sur les appareils mobiles que l'on trouve le plus grand nombre d'ouvertures.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
+![Rapport sur l'engagement par appareil qui indique le nombre de clics pour Mobile, Desktop, Tablet, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy, et Other. C'est sur les appareils mobiles que le nombre d'ouvertures est le plus élevé.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
 ### Engagement par fournisseur de boîte aux lettres
 
-Le rapport **Engagement par fournisseur de boîte aux lettres** affiche les principaux fournisseurs de boîtes aux lettres qui contribuent à vos clics ou ouvertures. Vous pouvez cliquer sur des fournisseurs de boîtes aux lettres de premier plan spécifiques afin d'obtenir des informations détaillées sur des domaines de réception spécifiques. Par exemple, si Microsoft figure dans ce rapport comme l'un de vos principaux indicateurs de fournisseurs de messagerie, vous pouvez consulter les détails de leurs domaines de réception tels que outlook.com, hotmail.com, live.com et d'autres encore.
+Le rapport **Engagement par fournisseur de boîte aux lettres** affiche les principaux fournisseurs de boîtes aux lettres qui contribuent à vos clics ou ouvertures. Vous pouvez cliquer sur des fournisseurs de boîtes aux lettres de premier plan spécifiques afin d'obtenir des informations détaillées sur des domaines de réception spécifiques. Par exemple, si Microsoft figure dans ce rapport comme l'un des principaux indicateurs de votre fournisseur de boîtes aux lettres, vous pouvez afficher les détails de leurs domaines de réception, tels que "outlook.com", "hotmail.com", "live.com", et bien d'autres encore.
 
-![][5]{: style="max-width:70%;"}
+![Un exemple de rapport d'engagement par fournisseur de boîte aux lettres avec Google, Apple iCloud, Yahoo, Microsoft et Mail.Ru Group et le nombre de clics correspondant.]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### Heure de l’engagement
 
@@ -81,11 +81,11 @@ Le rapport sur le **moment de l'engagement** affiche des données sur le moment 
 
 Le rapport d'engagement du **jour de la semaine** décompose les ouvertures ou les clics par jour de la semaine. 
 
-![][6]
+![Un exemple de rapport d'engagement par jour de la semaine avec le plus grand nombre de clics le lundi et le mercredi.]({% image_buster /assets/img_archive/time_engagement.png %})
 
-Le rapport sur **l'heure de la journée** ventile les ouvertures ou les clics pour chaque heure d'une fenêtre de 24 heures.
+Le rapport sur l'engagement à l **'heure du jour** décompose les ouvertures ou les clics pour chaque heure d'une fenêtre temporelle de 24 heures.
 
-![][7]
+![Un exemple de rapport d'engagement sur l'heure de la journée avec les ouvertures ou les clics de 12h à 23h.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 Pour plus d'informations sur l'analyse/analytique de vos e-mails, consultez la rubrique [Rapports sur les e-mails.]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/)
 
@@ -95,9 +95,9 @@ Pour utiliser votre tableau de bord des performances SMS, accédez à **Analyse/
 
 ### Comment les indicateurs sont-ils calculés ?
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![Un exemple de campagne SMS avec 335 630 envois, avec une moyenne de 11 187,667 par jour.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-Les calculs des différents indicateurs du tableau de bord des performances SMS sont les mêmes que ceux effectués au niveau d'un message individuel (comme l'analyse de la campagne). Sur ce tableau de bord, les indicateurs sont agrégés pour toutes les campagnes et les Canvas dans la plage de dates que vous avez sélectionnée. Pour en savoir plus sur ces définitions, consultez la section [Indicateurs des messages SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/).
+Les calculs des différents indicateurs du tableau de bord des performances SMS sont les mêmes que ceux effectués au niveau d'un message individuel (comme l'analyse de la campagne). Sur ce tableau de bord, les indicateurs sont agrégés pour toutes les campagnes et les Canvas dans la plage de dates que vous avez sélectionnée. Pour en savoir plus sur ces définitions, consultez la section [Indicateurs des messages SMS]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 Chaque vignette affiche d’abord l’indicateur de pourcentage, puis le chiffre réel (à l’exception de _Envois_, qui montre le nombre d’envois effectués, suivi de la moyenne par jour). Chaque tuile indique également la [comparaison avec la période précédente](#comparison-to-last-period-change-in-totals-or-rates).
 
@@ -120,11 +120,11 @@ Vous pouvez filtrer les données sur votre tableau de bord en utilisant les opti
 - **Canvas :** Choisissez jusqu'à 10 toiles. Une fois appliqué, votre tableau de bord affichera les indicateurs pour les seules toiles sélectionnées. Si vous sélectionnez en premier un filtre de balise, les options de vos filtres Canvas ne comprendront alors que les Canvas disposant de la balise sélectionnée.
 - **Campagne :** Choisissez jusqu'à 10 campagnes. Une fois appliqué, votre tableau de bord affichera les indicateurs pour les seules campagnes que vous avez sélectionnées. Si vous sélectionnez en premier un filtre de balise, les options de vos filtres de campagnes ne comprendront alors que les campagnes disposant de la balise sélectionnée.
 
-![Options de filtre sur le tableau de bord de performance de canal où vous pouvez sélectionner une balise et une liste de Canvas par lesquels vous pouvez filtrer.][3]
+![Options de filtre sur le tableau de bord de performance de canal où vous pouvez sélectionner une balise et une liste de Canvas par lesquels vous pouvez filtrer.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## Comparaison des périodes
 
-Le tableau de bord de performance de canal compare automatiquement la période sélectionnée dans la plage de dates à la période précédente d’un même nombre de jours. Par exemple, si vous choisissez « 7 derniers jours » comme plage de dates dans le tableau de bord, la comparaison avec la dernière période comparera les indicateurs des sept derniers jours par rapport aux sept jours précédents. Si vous sélectionnez une plage de dates personnalisée, par exemple du 10 mai au 15 mai, soit six jours de données, le tableau de bord comparera les indicateurs de ces jours aux indicateurs du 4 mai au 9 mai.
+Le tableau de bord des performances des canaux compare automatiquement la période que vous avez sélectionnée dans l'intervalle de dates avec la période précédente, totalisant le même nombre de jours. Par exemple, si vous choisissez « 7 derniers jours » comme plage de dates dans le tableau de bord, la comparaison avec la dernière période comparera les indicateurs des sept derniers jours par rapport aux sept jours précédents. Si vous sélectionnez une plage de dates personnalisée, par exemple du 10 mai au 15 mai, soit six jours de données, le tableau de bord comparera les indicateurs de ces jours aux indicateurs du 4 mai au 9 mai.
 
 La comparaison est le pourcentage de variation entre la période actuelle et la dernière période, calculé en prenant la différence entre les deux périodes et en divisant cette dernière par la métrique de la dernière période.
 
@@ -132,7 +132,7 @@ La comparaison est le pourcentage de variation entre la période actuelle et la 
 
 Vous pouvez basculer entre **Afficher les changements de totaux**, qui compare les totaux (par exemple le nombre d'e-mails livrés) entre les deux périodes, et **Afficher les changements de taux**, qui compare les taux (par exemple le taux de livraison).
 
-![Boutons d’option pour basculer entre le fait d’afficher les changements sur les totaux ou les taux dans le tableau de bord de performance de canal.][4]
+![Boutons radio permettant de basculer entre l'affichage de la variation des totaux ou de la variation des taux pour le tableau de bord des performances des chaînes.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
 
 ## Foire aux questions
 
@@ -168,10 +168,3 @@ This means Braze hasn't recorded any data for that metric during the time you se
 
 --->
 
-[1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
-[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
-[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
-[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
-[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
-[6]: {% image_buster /assets/img_archive/time_engagement.png %}
-[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}

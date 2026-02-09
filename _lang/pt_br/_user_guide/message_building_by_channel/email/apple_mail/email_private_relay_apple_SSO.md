@@ -1,5 +1,5 @@
 ---
-nav_title: Envio de e-mails para o Apple Private Relay
+nav_title: Enviar e-mails para o Apple Private Relay
 article_title: Envio de e-mails para o Apple Private Relay
 alias: /email_relay/
 page_order: 0
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Envio de e-mails para o Apple Private Relay
+# Enviar e-mails para o Apple Private Relay
 
 > O recurso de logon único (SSO) da Apple permite que seus usuários compartilhem seus endereços de e-mail (`example@icloud.com`) ou ocultem seus endereços de e-mail mascarando o que é fornecido às marcas (`tq1234snin@privaterelay.appleid.com`) em vez do endereço de e-mail pessoal. A Apple encaminhará as mensagens enviadas para os endereços de retransmissão para o endereço de e-mail real do usuário. 
 
@@ -22,9 +22,10 @@ Se um usuário decidir desativar o envio de e-mail para o e-mail de retransmiss�
 Se você usar o SendGrid como provedor de e-mail, poderá enviar e-mails para a Apple sem fazer alterações no DNS. 
 
 1. Registre no [Portal do desenvolvedor da Apple](https://developer.apple.com/)
-2. Acesse a página **Certificados, identificadores e perfis**.
+2. Acesse a página **Certificados, Identificadores & Perfis**.
 3. Selecione **Serviços** > **Fazer login com a Apple para comunicação por e-mail**.
 4. Na seção **Fontes de e-mail**, adicione os domínios e subdomínios.
+- O endereço deve ser formatado como: `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (um exemplo é: `bounces+1234567@braze.online.docs.com`). 
 
 Se o endereço "From" desejado for um endereço `abmail`, inclua-o em seu subdomínio. Por exemplo, use `abmail.docs.braze.com` em vez de `docs.braze.com`.
 

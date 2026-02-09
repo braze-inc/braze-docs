@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Rename External ID"
+nav_title: "POST: Rename external ID"
 article_title: "POST: Rename External ID"
 search_tag: Endpoint
 page_order: 1
@@ -14,11 +14,11 @@ description: "This article outlines details about the Rename external IDs endpoi
 /users/external_ids/rename
 {% endapimethod %}
 
-> Use this endpoint to rename your users' external IDs. 
+> Use this endpoint to rename your users' external IDs.
 
-You can send up to 50 rename objects per request. 
+You can send up to 50 rename objects per request.
 
-This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that older versions of your apps that use the previous external ID naming schema don't break. 
+This endpoint sets a new (primary) `external_id` for the user and deprecates their existing `external_id`. This means that the user can be identified by either `external_id` until the deprecated one is removed. Having multiple external IDs allows for a migration period so that legacy versions of your apps that use the previous external ID naming schema don't break.
 
 After your old naming schema is no longer in use, we highly recommend removing deprecated external IDs using the [`/users/external_ids/remove` endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove).
 
@@ -99,16 +99,16 @@ The `message` field will return `success` for any valid request. More specific e
 ## Frequently asked questions
 
 ### Does this impact MAU?
-No, since the number of users will stay the same, they'll just have a new `external_id`.
+No, because the number of users stays the same, they have a new `external_id`.
 
 ### Does user behavior change historically?
-No, since the user is still the same, and all their historical behavior is still connected to them.
+No, because the user is still the same, and all their historical behavior is still connected to them.
 
 ### Can it be run on development or staging workspaces?
 Yes. In fact, we highly recommend running a test migration on a staging or development workspace, and ensuring everything has gone smoothly before executing on production data.
 
-### Does this consume data points?
-This feature does not cost data points.
+### Does this log data points?
+This feature does not log data points.
 
 ### What is the recommended deprecation period?
 We have no hard limit on how long you can keep deprecated external IDs around, but we highly recommend removing them after there is no longer a need to reference users by the deprecated ID.

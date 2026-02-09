@@ -1,5 +1,5 @@
 ---
-nav_title: Drag-And-Drop Editor
+nav_title: Drag-and-drop editor
 article_title: Drag-And-Drop Editor for In-App Messages
 alias: /iam_drag_and_drop/
 page_order: 2
@@ -14,7 +14,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/
   image: /assets/img/braze_icons/phone-02.svg
 - name: Editor Blocks
-  link: /docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages
   image: /assets/img/braze_icons/align-left.svg
 
 guide_menu_title: Templates

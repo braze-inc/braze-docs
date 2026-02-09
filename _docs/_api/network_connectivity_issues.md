@@ -1,5 +1,5 @@
 ---
-nav_title: API Network Connectivity Issues
+nav_title: API network connectivity issues
 article_title: API Network Connectivity Issues
 page_order: 4
 description: "This reference article touches on API connectivity issues and how to troubleshoot them."

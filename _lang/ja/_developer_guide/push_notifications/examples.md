@@ -8,7 +8,7 @@ channel:
 
 # 高度なプッシュ通知の例
 
-> 以下のガイドでは、Braze SDKの高度なプッシュ通知の例をいくつか取り上げている。
+> 次のガイドでは、Braze SDK の高度なプッシュ通知のいくつかの例について説明します。
 
 {% sdktabs %}
 {% sdktab android %}
@@ -16,6 +16,6 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications/examples.md developer_ %}
+{% multi_lang_include developer_guide/swift/push_notifications/examples.md %}
 {% endsdktab %}
 {% endsdktabs %}

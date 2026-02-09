@@ -43,7 +43,7 @@ Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplica
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
+Prior to February 2023, our Adjust attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation because there is no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -84,9 +84,9 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from Adjust, the status connection indicator on the Adjust technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
+After Braze receives attribution data from Adjust, the status connection indicator on the Adjust technology partners page in Braze changes from "Not Connected" to "Connected" and includes a timestamp of the last successful request.
 
-Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Adjust postback, are ignored by our API and are not counted when determining if a successful connection was established.
+This status changes only after Braze receives data about an attributed install. Braze ignores organic installs (excludes them from the Adjust postback) and does not count them when determining if the connection is successful.
 
 ## Available data fields
 

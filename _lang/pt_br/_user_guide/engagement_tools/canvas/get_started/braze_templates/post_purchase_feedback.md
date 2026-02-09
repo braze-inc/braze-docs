@@ -18,13 +18,13 @@ Este artigo o guiará por um caso de uso do modelo **Post-Purchase Feedback**, q
 Para usar esse modelo com sucesso, você precisará do seguinte:
 
 - Um [atributo personalizado]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) para fazer referência aos resultados da pesquisa de feedback.
-- Um [Braze Audience Sync]({{site.baseurl}}/partners/canvas_steps) configurado com os parceiros e públicos que você usa.
+- Um [Braze Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) configurado com os parceiros e públicos que você usa.
 
 ## Adaptar o modelo às suas necessidades
 
 Digamos que estejamos trabalhando para a Decorumsoft, uma desenvolvedora de videogames para celular. Usaremos o modelo de feedback pós-compra para avaliar o feedback do nosso mais recente lançamento de videogame, o Proxy War 3: Guerra da sede. Usando esse feedback, informaremos nossos planos de desenvolvimento para o pacote de expansão, Liquid Mirage.
 
-Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
+Antes de criar o Canva, configuramos a integração [Braze Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) para que possamos adicionar dados de usuários do Braze ao público do Google para enviar anúncios com base em disparadores comportamentais, segmentação e muito mais.
 
 Para acessar o modelo de feedback pós-compra, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos do Braze**. Em seguida, ao lado de **Post-Purchase Feedback**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
@@ -34,20 +34,20 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 1. Selecione **Editar** ao lado do nome do modelo.
 
-![O título e a descrição atuais do Canva.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
+![O título e a descrição atuais do canva.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Atualize o nome do Canvas para especificar que o Canvas é para direcionamento de usuários recentes.
 3\. Atualize a descrição para especificar que o Canva serve para incentivar os usuários a enviar feedback.
 4\. Adicione a tag **Feedback** para filtrá-la na página inicial do Canva.
 
-![O novo nome e a descrição do Canva. A nova descrição indica: 'Uma tela de feedback pós-compra para avaliar o interesse na próxima expansão do PWD3, Liquid Mirage.']({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
+![O novo nome e a descrição do Canva. A nova descrição indica: 'Um canva de feedback pós-compra para medir o interesse pela próxima expansão do PWD3, Liquid Mirage.']({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
 
 ### Etapa 2: Atribuir eventos de conversão
 
 Em seguida, vamos atribuir nossos eventos de conversão. Atualize o **Evento de conversão primária - A** para **Fazer uma compra específica** e selecione **Proxy War**.
 
-![Seção "Atribuir eventos de conversão" para o tipo de evento de conversão da compra do produto do jogo Proxy War.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
+![Seção "Atribuir Eventos de Conversão" para o tipo de evento de conversão de compra do produto do jogo Proxy War.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
 
 Manteremos o prazo de conversão do modelo de três dias porque queremos direcionar nossos usuários mais recentes.
 
@@ -63,7 +63,7 @@ Nosso público-alvo para feedback são os usuários que compraram recentemente o
 1. Selecione nosso segmento de direcionamento, "Purchased Proxy War 3", que consiste em usuários que compraram o jogo.
 2. Selecione um filtro para incluir usuários que compraram o "Proxy War 3" mais de "0" vezes.
 
-![Um segmento chamado "Purchased Proxy War 3" que segmenta os usuários que compraram o jogo.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
+![Um segmento chamado "Comprado Proxy War 3" que segmenta usuários que compraram o jogo.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/entry_window_segment.png %}){: style="max-width:90%;"}
 
 {: start="3"}
 3\. Atualize os controles de entrada para não permitir que os usuários entrem novamente no Canvas após a duração máxima do Canvas.
@@ -74,7 +74,7 @@ Manteremos as configurações de inscrição padrão, de modo que enviaremos ape
 
 Como queremos ser cuidadosos com nosso envio, selecionaremos **Ativar horário de silêncio** para evitar solicitar feedback entre 23h e 10h no fuso horário de nossos usuários e enviar apenas no próximo horário disponível.
 
-![Etapa "Send Settings" (Configurações de envio) direcionando os usuários inscritos ou com aceitação. O Horário de silêncio está ativado.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
+![Etapa "Send Settings" (Configurações de envio) direcionando os usuários inscritos ou com aceitação. Horário de silêncio ativado.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/send_settings_with_quiet_hours.png %}){: style="max-width:90%;"}
 
 Em nosso exemplo, ignoraremos as outras configurações (limite de frequência e grupos de teste).
 
@@ -103,13 +103,13 @@ Em seguida, precisaremos preencher os detalhes da variante **In-App Message**. �
 4. Para cada uma das três opções de pesquisa, selecione **Experience Feedback** como nosso atributo personalizado. 
 5. Manteremos os valores de atribuição no perfil do usuário como estão, pois esses valores estão alinhados com nosso atributo personalizado.
 
-![Uma pesquisa que pergunta ao usuário se ele gostou da compra recente do Proxy War 3 com três opções: "Adorei", "Foi bom" e "Não é para mim".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
+![Uma pesquisa que pergunta ao usuário se ele gostou da compra recente do Proxy War 3 com três opções: "Amei", "Foi OK" e "Não é para mim".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
 
 #### Construa as jornadas de ação
 
 Usando nosso atributo personalizado `Experience Feedback` e os valores de atributo da seção anterior, atualizaremos a jornada de ação do modelo para que corresponda ao nosso atributo e aos nossos valores.
 
-![O grupo "Good feedback" para a etapa da jornada de ação que inclui usuários que responderam "Loved it" (Adorei) em nossa pesquisa.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
+![O grupo "Bom feedback" para a etapa da jornada de Ação que inclui usuários que responderam "Amei" à nossa pesquisa.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/action_path_good_example.png %}){: style="max-width:90%;"}
 
 ### Configure o redirecionamento de anúncios
 
@@ -121,7 +121,7 @@ Em seguida, vamos configurar o webhook para disparar possíveis casos de suporte
 
 Para a etapa de mensagem denominada **Support Case Creation (Criação de caso de suporte)**, atualizaremos o modelo para compor um webhook para usuários insatisfeitos com a compra e que desejam um reembolso.
 
-![Um webhook que cria casos de suporte para clientes que têm um sentimento negativo e querem um reembolso pela compra do Proxy War 3.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
+![Um webhook que cria casos de suporte para clientes que têm um sentimento negativo e desejam um reembolso pela compra do Proxy War 3.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
 
 ### Etapa 6: Teste e inicie o Canva
 

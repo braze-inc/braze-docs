@@ -1,5 +1,5 @@
 ---
-nav_title: 로컬 연결 콘텐츠 변수
+nav_title: 로컬 연결된 콘텐츠 변수
 article_title: 로컬 연결 콘텐츠 변수
 page_order: 1
 description: "이 참조 문서에서는 로컬 연결된 콘텐츠 변수를 사용하고 저장하는 방법에 대해 설명합니다."
@@ -12,7 +12,7 @@ search_rank: 1
 
 Braze는 전송 시점에 `connected_content` 태그에 지정된 엔드포인트로 표준 GET 요청을 보냅니다. 엔드포인트가 JSON을 반환하면 자동으로 파싱되어 `connected`라는 변수에 저장됩니다. 엔드포인트가 텍스트를 반환하는 경우 `connected_content` 태그 대신 메시지에 직접 삽입됩니다.
 
-응답을 변수에 저장하려면 JSON 객체를 반환하는 것이 좋습니다. And if you want the response of Connected Content to replace the tag with the text, make sure the response isn't valid JSON (as defined by [json.org][46])
+응답을 변수에 저장하려면 JSON 객체를 반환하는 것이 좋습니다. And if you want the response of Connected Content to replace the tag with the text, make sure the response isn't valid JSON (as defined by [json.org](http://www.json.org))
 
 You can also specify `:save your_variable_name` after the URL to save the data as something else. 예를 들어 다음 `connected_content` 태그는 `localweather`라는 로컬 변수에 응답을 저장합니다(여러 개의 `connected_content` JSON 변수를 저장할 수 있음).
 
@@ -84,36 +84,13 @@ Enjoy the weather!
 
 API가 `Rain`을 반환하는 {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%}으로 응답하면 사용자는 이 푸시를 받게 됩니다.
 
-!["비가 내립니다!"라는 메시지가 포함된 푸시 알림이 표시됩니다. 우산 챙기세요!"][17]{:style="max-width:50%" }
+!["비가 내립니다!"라는 메시지가 포함된 푸시 알림이 표시됩니다. 우산 챙기세요!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
-기본적으로 연결된 콘텐츠는 `application/json`으로 보내는 GET HTTP 요청에 `Content-Type` 헤더를 `Accept: */*`로 설정합니다. 다른 콘텐츠 유형이 필요한 경우 태그에 `:content_type your/content-type` 을 추가하여 명시적으로 지정하세요. 그러면 Braze는 콘텐츠 유형과 수락 헤더를 모두 지정한 유형으로 설정합니다.
-
-{% raw %}
-```js
-{% connected_content http://numbersapi.com/random/trivia :content_type application/json %}
-```
-{% endraw %}
+{% multi_lang_include connected_content.md section='default behavior' %}
 
 ## HTTP POST
 
-기본적으로 연결된 콘텐츠는 지정된 URL에 HTTP GET 요청을 합니다. 대신 POST 요청을 하려면 `:method post`를 지정합니다.
-
-선택적으로 `:body` 뒤에 `key1=value1&key2=value2&...` 형식의 쿼리 문자열 또는 캡처된 값에 대한 참조를 지정하여 POST 본문을 제공할 수 있습니다. 콘텐츠 유형 기본값은 `application/x-www-form-urlencoded`입니다. `:content_type application/json`을 지정하고 `key1=value1&key2=value2`와 같이 양식으로 URL 인코딩된 본문을 제공하면, Braze는 전송 전에 자동으로 본문을 JSON 인코딩합니다.
-
-연결된 콘텐츠는 기본적으로 POST 호출도 캐시하지 않습니다. 이 동작은 연결된 콘텐츠 POST 호출에 `:cache_max_age` 을 추가하여 업데이트할 수 있습니다.
-
-#### 기본 콘텐츠 유형
-
-{% raw %}
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
-```
-#### 애플리케이션/JSON 콘텐츠 유형
-
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
-```
-{% endraw %}
+{% multi_lang_include connected_content.md section='http post' %}
 
 ### JSON 본문 제공
 
@@ -184,5 +161,3 @@ API가 `Rain`을 반환하는 {%raw%}`{{localweather.consolidated_weather[0].wea
 
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "커넥티드 콘텐츠 푸시 사용 예시"
-[46]:http://www.json.org

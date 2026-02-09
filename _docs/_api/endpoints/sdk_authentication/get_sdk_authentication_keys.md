@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: List SDK Authentication Keys"
+nav_title: "GET: List SDK authentication keys"
 article_title: "GET: List SDK Authentication Keys"
 search_tag: Endpoint
 page_order: 1

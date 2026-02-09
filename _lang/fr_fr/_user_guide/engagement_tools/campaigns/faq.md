@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### Comment créer une campagne multicanal ?
 
-Pour créer une campagne multicanale, sélectionnez **Messagerie** > Campagnes. Sélectionnez ensuite **Créer une campagne** > **Multicanal**. À partir de là, vous pouvez sélectionner l'un des canaux de communication suivants : Cartes de contenu, e-mail, LINE, notifications push, SMS/MMS/RCS, webhook ou WhatsApp.
+Pour créer une campagne multicanale, sélectionnez **Messagerie** > **Campagnes**. Sélectionnez ensuite **Créer une campagne** > **Multicanal**. À partir de là, vous pouvez sélectionner l'un des canaux de communication suivants : Cartes de contenu, e-mail, LINE, notifications push, SMS/MMS/RCS, webhook ou WhatsApp.
 
 ### Puis-je ajouter un groupe de contrôle à ma campagne multicanal ?
 
@@ -22,7 +22,7 @@ Non, les groupes de contrôle dans les campagnes sont destinés aux messages à 
 
 ### Comment puis-je commencer à tester et optimiser les campagnes ?
 
-Les campagnes multivariées et l’exécution de Canvas avec plusieurs variantes sont un excellent moyen de commencer ! Par exemple, vous pouvez lancer une [campagne multivariée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour tester un message qui a différentes copies ou lignes d'objet. Les toiles comportant plusieurs variantes peuvent permettre de tester des flux de travail entiers.
+Les campagnes multivariées et l’exécution de Canvas avec plusieurs variantes sont un excellent moyen de commencer ! Par exemple, vous pouvez lancer une [campagne multivariée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour tester un message avec différentes copies ou lignes d'objet. Les toiles comportant plusieurs variantes peuvent permettre de tester des flux de travail entiers.
 
 ### Pourquoi le taux d’ouverture de ma campagne a-t-il baissé ?
 
@@ -34,9 +34,15 @@ Par défaut, les campagnes vérifient les filtres d’audience lors de l’entr�
 
 ### Pourquoi y a-t-il une différence entre le nombre de destinataires uniques et le nombre d’envois pour une campagne ou un Canvas donné ?
 
-Une explication potentielle de cette différence peut venir de l’activation de la rééligibilité pour la campagne ou le Canvas. Pour ce faire, les utilisateurs qui remplissent les conditions requises pour les paramètres de segment et de livraison pourront recevoir le message plusieurs fois. Si la rééligibilité n’est pas activée, l’explication probable de la différence entre les envois et les destinataires uniques peut venir des utilisateurs ayant plusieurs appareils, sur plusieurs plates-formes, associés à leurs profils. 
+Une explication possible pourrait être que la campagne ou Canvas a activé la rééligibilité, ce qui signifie que les utilisateurs qui se qualifient pour le segment et les paramètres de réception/distribution seront en mesure de recevoir le message plus d'une fois. Si la rééligibilité n’est pas activée, l’explication probable de la différence entre les envois et les destinataires uniques peut venir des utilisateurs ayant plusieurs appareils, sur plusieurs plates-formes, associés à leurs profils. 
 
 Par exemple, si vous avez un Canvas qui dispose à la fois d’une notification push iOS et Web, un utilisateur donné possédant à la fois un téléphone et un ordinateur de bureau peut recevoir plus d’un message.
+
+### Pourquoi le nombre de conversions peut-il dépasser le nombre d'utilisateurs uniques pour les campagnes multicanal ?
+
+Pour les campagnes multicanal, Braze comptabilise les conversions par canal, et non par utilisateur. Lorsqu'un utilisateur effectue une action de conversion unique dans la fenêtre de conversion, Braze attribue cette conversion à chaque canal dont l'utilisateur a reçu un message. Cela signifie que si un utilisateur reçoit des messages sur plusieurs canaux (par exemple, à la fois par e-mail et par push) et qu'il se convertit, Braze comptabilise plusieurs conversions, une pour chaque canal. Par conséquent, le nombre total de conversions peut dépasser le nombre d'utilisateurs uniques qui se sont convertis.
+
+Par exemple, si une campagne multicanale envoie à la fois un e-mail et une notification push à un utilisateur, et que cet utilisateur effectue une action de conversion après avoir reçu les deux messages et dans la fenêtre de conversion, Braze comptabilise cela comme deux conversions, l'une attribuée à l'e-mail et l'autre au push, même s'il s'agit d'une seule action effectuée par le même utilisateur.
 
 ### Pourquoi ma campagne a-t-elle une plus petite base d’utilisateurs accessible que le segment que j’utilise pour cette campagne ?
 
@@ -46,7 +52,7 @@ Si vous avez un [Groupe de Contrôle Global]({{site.baseurl}}/user_guide/engagem
 
 La livraison selon le fuseau horaire local vous permet de livrer des campagnes de communication à un segment en fonction du fuseau horaire individuel d’un utilisateur. Sans la livraison selon le fuseau horaire local, les campagnes seront planifiées en fonction des paramètres de fuseau horaire de votre société dans Braze. 
 
-Par exemple, une société basée à Londres qui envoie une campagne à midi atteindra les utilisateurs sur la côte ouest de l’Amérique à 4 h du matin. Si votre application n’est disponible que dans certains pays, cela peut ne pas représenter un risque pour vous, sinon nous vous recommandons vivement d’éviter d’envoyer des notifications push matinales à votre base d’utilisateurs !
+Par exemple, une société basée à Londres qui envoie une campagne à midi atteindra les utilisateurs sur la côte ouest de l’Amérique à 4 h du matin. Si votre application n'est disponible que dans certains pays, vous ne courez peut-être aucun risque. Dans le cas contraire, nous vous recommandons vivement d'éviter d'envoyer des notifications push tôt le matin à votre base d'utilisateurs.
 
 ### Comment Braze connaît-t-il le fuseau horaire d’un utilisateur ?
 
@@ -68,7 +74,7 @@ Pour que l’utilisateur puisse être admissible à l’entrée, il doit être a
 
 Notez que l’utilisateur doit être dans le segment pendant 24 heures avant le lancement. Si l’utilisateur n’est pas admissible à la première vérification, alors Braze n’essaiera pas de faire la deuxième.
 
-Par exemple, si une campagne est planifiée pour une livraison à 19 h UTC, nous commencerons à placer les envois de la campagne en file d’attente dès qu’un fuseau horaire est identifié (tpar exemple, les Samoa). Cela signifie que nous nous préparons à envoyer le message, et non à envoyer la campagne. Si les utilisateurs ne correspondent à aucun filtre lors de la vérification de l'éligibilité, ils ne feront pas partie de l'audience cible.
+Par exemple, si une campagne est planifiée pour une livraison à 19 h UTC, nous commencerons à placer les envois de la campagne en file d’attente dès qu’un fuseau horaire est identifié (tpar exemple, les Samoa). Cela signifie que nous nous préparons à envoyer le message, et non à envoyer la campagne. Si les utilisateurs ne correspondent à aucun filtre lorsque nous vérifions leur éligibilité, ils ne feront pas partie de l'audience cible.
 
 Un autre exemple serait que vous désirez créer deux campagnes planifiées pour s’envoyer le même jour, une le matin et une le soir, et ajouter un filtre disant que les utilisateurs ne peuvent recevoir la deuxième campagne que s’ils ont déjà reçu la première. Avec la livraison selon le fuseau horaire local, certains utilisateurs pourraient ne pas recevoir la seconde campagne. En effet, nous vérifions l'éligibilité lorsque le fuseau horaire de l'utilisateur est identifié. Par conséquent, si l'heure planifiée n'a pas encore eu lieu dans son fuseau horaire, il n'a pas reçu la première campagne, ce qui signifie qu'il ne sera pas éligible pour la deuxième campagne.
 
@@ -76,9 +82,9 @@ Un autre exemple serait que vous désirez créer deux campagnes planifiées pour
 
 Lors de la planification d'une campagne, choisissez de l'envoyer à une heure donnée, puis sélectionnez **Envoyer la campagne aux utilisateurs dans leur fuseau horaire local**.
 
-Braze recommande vivement que toutes les campagnes selon le fuseau horaire local soient planifiées 24 heures à l’avance. Étant donné qu'une telle campagne doit être envoyée sur une journée entière, le fait de les planifier 24 heures à l'avance permet de s'assurer que votre message atteindra l'ensemble de votre segmentation. Cependant, vous pouvez planifier ces campagnes moins de 24 heures à l’avance si nécessaire. N’oubliez pas que Braze n’enverra pas de messages aux utilisateurs qui ont manqué l’heure d’envoi de plus d’une heure. 
+Braze recommande vivement que toutes les campagnes concernant les fuseaux horaires locaux soient planifiées 24 heures à l'avance. Étant donné qu'une telle campagne doit être envoyée sur une journée entière, la planifier 24 heures à l'avance permet de s'assurer que votre message atteindra l'ensemble de votre segmentation. Cependant, vous pouvez planifier ces campagnes moins de 24 heures à l’avance si nécessaire. N'oubliez pas que Braze n'enverra pas de messages aux utilisateurs qui ont dépassé l'heure d'envoi de plus d'une heure. 
 
-Par exemple, s'il est 13 heures et que vous planifiez une campagne pour un fuseau horaire local à 15 heures, la campagne sera immédiatement envoyée à tous les utilisateurs dont l'heure locale se situe entre 15 heures et 16 heures, mais pas à ceux dont l'heure locale est 17 heures. De plus, l’heure d’envoi que vous choisissez pour votre campagne ne doit pas encore être dépassée dans le fuseau horaire de votre société.
+Par exemple, s’il est 13 h et que vous planifiez une campagne selon un fuseau horaire local pour 15 h, la campagne sera envoyée immédiatement à tous les utilisateurs dont l’heure locale est comprise entre 15 h et 16 h, mais pas aux utilisateurs dont l’heure locale est 17 h. De plus, l’heure d’envoi que vous choisissez pour votre campagne ne doit pas encore être dépassée dans le fuseau horaire de votre société.
 
 La modification d’une campagne selon un fuseau horaire local qui est programmée moins de 24 heures à l’avance ne modifiera pas la planification du message. Si vous décidez de modifier une campagne selon un fuseau horaire local pour qu’elle soit envoyée ultérieurement (par exemple, à 19 h au lieu de 18 h), les utilisateurs qui se trouvaient dans le segment ciblé lorsque l’heure d’envoi initiale a été choisie recevront toujours le message à l’heure d’origine (18 h). Si vous modifiez un fuseau horaire local pour que l’envoi se fasse plus tôt (par exemple, à 16 h au lieu de 17 h), la campagne sera toujours envoyée à tous les membres du segment à l’heure d’origine (17 h). 
 
@@ -107,25 +113,19 @@ Cela peut se produire lorsqu'une campagne est programmée pour être lancée à 
 
 ### Quelle est la « zone sécurisée » avant que les messages d’une campagne programmée soient placés en file d’attente ?
 
-Vous pouvez modifier en toute sécurité les messages dans les zones sûres suivantes :
+Nous vous recommandons de modifier les messages dans les délais suivants :
 
-- Les **campagnes planifiées ponctuelles** peuvent être modifiées jusqu'à l'heure d'envoi prévue.
-- Les **campagnes planifiées récurrentes** peuvent être modifiées jusqu'à l'heure d'envoi prévue.
-- Les **campagnes d'heure d'envoi locale** peuvent être modifiées jusqu'à 24 heures avant l'heure d'envoi planifiée.
-- Les **campagnes à heure optimale d'envoi** peuvent être modifiées jusqu'à 24 heures avant le jour où l'envoi de la campagne est planifié.
+- **Campagnes à planification unique :** Modifier jusqu'à l'heure d'envoi planifiée.
+- **Campagnes planifiées récurrentes :** Modifier jusqu'à l'heure d'envoi planifiée.
+- **Campagnes d'envoi local :** Modifiez jusqu'à 24 heures avant l'heure d'envoi planifiée.
+- **Campagnes d'envoi optimales :** Modifiez jusqu'à 24 heures avant le jour où l'envoi de la campagne est planifié.
 
-### Que se passe-t-il si je modifie l'heure d'envoi dans la "zone de sécurité" ?
-
-Changer l’heure d’envoi sur les campagnes à ce moment-là peut entraîner un comportement indésirable, par exemple :
+Si vous apportez des modifications à votre message en dehors de ces recommandations, il se peut que les mises à jour ne soient pas reflétées dans le message envoyé. Par exemple, si vous modifiez l'heure d'envoi trois heures avant une campagne dont l'envoi est planifié à 12 heures, heure locale, la situation suivante peut se produire :
 
 - Braze n’enverra pas de messages aux utilisateurs qui ont manqué l’heure d’envoi de plus d’une heure.
-- Les messages placés en file d’attente à l’avance peuvent toujours être envoyés à l’heure initialement prévue, plutôt qu’à l’heure modifiée.
+- Les messages pré-enregistrés peuvent toujours être envoyés à l'heure initialement prévue, plutôt qu'à l'heure Adjust.
 
-### Que dois-je faire si la « zone sécurisée » est déjà passée ?
-
-Pour garantir que les campagnes fonctionnent comme souhaité, nous recommandons d'arrêter la campagne actuelle (cela annulera tous les messages en file d'attente). Vous pouvez ensuite dupliquer la campagne, apporter les modifications nécessaires et lancer la nouvelle campagne. Vous devrez peut-être exclure les utilisateurs de cette campagne qui ont déjà reçu la première.
-
-Assurez-vous de réajuster les heures de planification de la campagne pour permettre l’envoi selon un fuseau horaire.
+Si vous devez apporter des modifications, nous vous recommandons d'arrêter la campagne en cours (ce qui annulera tous les messages en file d'attente). Vous pouvez ensuite dupliquer la campagne, apporter les modifications nécessaires et lancer la nouvelle campagne. Vous devrez peut-être exclure les utilisateurs de cette campagne qui ont déjà reçu la première. Assurez-vous de réajuster les heures de planification de la campagne pour permettre l’envoi selon un fuseau horaire.
 
 ### Pourquoi le nombre d’utilisateurs qui accèdent à une campagne ne correspond pas au nombre prévu ?
 
@@ -143,11 +143,19 @@ Sélectionner l'option **Adresses e-mail d'exportation CSV** ne téléchargera q
 
 Oui, utilisez le filtre `api_id:YOUR_API_ID` sur la page **Campagnes** pour rechercher une campagne par son identifiant API. Pour en savoir plus, reportez-vous à [Rechercher des campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/).
 
+### Pourquoi les espaces blancs apparaissent-ils différemment dans les champs de saisie et dans le texte affiché ? 
+
+La gestion des espaces blancs diffère entre les champs de saisie et les composants de texte affichés en raison du style CSS. Dans les composants de texte avec le CSS par défaut `white-space: normal`, plusieurs espaces consécutifs se réduisent en un seul espace lors de l'affichage. Il s'agit d'un comportement HTML standard pour le texte rendu. 
+
+Les champs de saisie conservent les espaces multiples exactement comme vous les saisissez, car vous devez voir et modifier l'espacement exact pour une saisie précise des données. Cela signifie qu'un texte comportant plusieurs espaces peut apparaître différemment lorsqu'il est affiché dans un champ de saisie (où tous les espaces sont préservés) et lorsqu'il est affiché dans d'autres parties du tableau de bord (où le CSS peut réduire les espaces multiples). 
+
+Par exemple, si vous saisissez un nom de campagne ou un paramètre UTM avec plusieurs espaces dans un champ de saisie, vous voyez tous les espaces préservés. Toutefois, lorsque ce même texte apparaît dans les résultats de recherche, les listes de campagne ou d'autres composants textuels, plusieurs espaces peuvent apparaître comme un seul espace en raison de la gestion des espaces blancs par le CSS. 
+
 ### Quelle est la différence entre les campagnes API et les campagnes déclenchées par l'API ?
 
 Les campagnes déclenchées par API vous permettent de gérer le texte de la campagne, les tests multivariés et les règles de rééligibilité dans le tableau de bord de Braze, tout en déclenchant la réception/distribution de ce contenu à partir de vos propres serveurs et systèmes. Ces messages peuvent également contenir des données supplémentaires à intégrer en temps réel dans les messages.
 
-Les campagnes API sont utilisées pour suivre les messages que vous envoyez en utilisant l’API. Contrairement à la plupart des campagnes, vous ne spécifiez pas le message, les destinataires ou la planification, mais vous transmettez les identifiants dans vos appels API. 
+Les campagnes API sont utilisées pour suivre les messages envoyés à l'aide de l'API. Contrairement à la plupart des campagnes, vous ne spécifiez pas le message, les destinataires ou la planification, mais vous transmettez les identifiants dans vos appels API. 
 
 ### Quelle est la différence entre les campagnes par événement et les campagnes déclenchées par API ?
 
@@ -173,8 +181,8 @@ Les campagnes de livraison par événement ou les campagnes déclenchées par é
 
 Les campagnes déclenchées par l'API et par le serveur sont idéales pour traiter des transactions plus avancées, vous permettant de déclencher la réception/distribution du contenu de la campagne à partir de vos propres serveurs et systèmes. La demande d'API pour déclencher le message peut également inclure des données supplémentaires qui seront intégrées au message en temps réel.
 
-| Avantages | Inconvénients | 
+| Avantages | Considérations | 
 | ---- | ---- |
-| • N’utilise pas de points de données<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement | • Ne vous permet pas de créer un segment d’utilisateurs éligibles au message dans les propriétés de la charge utile JSON<br><br>\- Impossible de voir les charges utiles JSON entrantes avec le **journal d'activité des messages**|
+| \- N'enregistre pas de points de données<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement | • Ne vous permet pas de créer un segment d’utilisateurs éligibles au message dans les propriétés de la charge utile JSON<br><br>\- Impossible de voir les charges utiles JSON entrantes avec le **journal d'activité des messages**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

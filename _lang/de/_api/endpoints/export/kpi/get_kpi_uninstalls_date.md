@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: KPIs für tägliche Deinstallationen von Apps nach Datum exportieren"
+nav_title: "GET: Exportieren Sie KPIs für die tägliche Deinstallation von Apps nach Datum"
 article_title: "GET: KPIs für tägliche Deinstallationen von Apps nach Datum exportieren"
 search_tag: Endpoint
 page_order: 4
@@ -22,13 +22,13 @@ description: "Dieser Artikel enthält Details zum Export täglicher App-Deinstal
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `kpi.uninstalls.data_series`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
 ## Parameter der Anfrage
 
-| Parameter| Erforderlich | Daten Typ | Beschreibung |
+| Parameter| Erforderlich | Datentyp | Beschreibung |
 | -------- | -------- | --------- | ----------- |
 | `length` | Erforderlich | Integer | Maximale Anzahl der Tage vor `ending_at`, die in der zurückgegebenen Serie enthalten sein sollen. Muss zwischen 1 und 100 (einschließlich) liegen. |
 | `ending_at` | Optional | Datetime <br>[(ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) String) | Datum, an dem die Datenreihe enden soll. Standardmäßig wird die Zeit der Anfrage verwendet. |
@@ -46,8 +46,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/uninstalls/d
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

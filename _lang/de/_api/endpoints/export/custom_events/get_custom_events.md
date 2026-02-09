@@ -24,7 +24,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='events list' %}
+{% multi_lang_include rate_limits.md endpoint='events list' %}
 
 ## Parameter der Anfrage
 
@@ -42,8 +42,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3'
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [
@@ -57,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Schwerwiegende Fehler Antwortcodes {#fatal-export}
 
-Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
+Für Statuscodes und zugehörige Nachrichten, die zurückgegeben werden, wenn Ihre Anfrage auf einen schwerwiegenden Fehler stößt, referenzieren Sie [Schwerwiegende Fehler & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% alert tip %}
 Hilfe zu CSV- und API-Exporten finden Sie unter [Fehlerbehebung bei Exporten]({{site.baseurl}}/user_guide/data/export_braze_data/export_troubleshooting/).

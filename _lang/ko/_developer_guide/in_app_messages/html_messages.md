@@ -17,6 +17,6 @@ description: "앱에 Braze 자바스크립트 인터페이스를 추가하는 �
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/in_app_messages/html_messages.md developer_ %}
+{% multi_lang_include developer_guide/swift/in_app_messages/html_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}

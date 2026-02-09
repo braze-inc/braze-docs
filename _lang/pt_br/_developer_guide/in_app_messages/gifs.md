@@ -1,14 +1,14 @@
 ---
 page_order: 2
-nav_title: Incorporação de GIFs
-article_title: Incorporação de GIFs em mensagens no app para o SDK do Braze
+nav_title: Incorporar GIFs
+article_title: Incorporar GIFs em mensagens no aplicativo para o SDK do Braze
 channel:
   - push notifications
 ---
 
-# Incorporação de GIFs em mensagens no app
+# Incorporar GIFs em mensagens no aplicativo
 
-> Saiba como incorporar GIFs em mensagens no app para o Braze SDK.
+> Aprenda como incorporar GIFs em mensagens no aplicativo para o SDK do Braze.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -16,6 +16,6 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/gifs.md%} developer_
+{% multi_lang_include developer_guide/swift/gifs.md%}
 {% endsdktab %}
 {% endsdktabs %}

@@ -1,13 +1,13 @@
 ---
-nav_title: Lançamento com Canvas Flow
-article_title: Lançamento com Canvas Flow
+nav_title: Lançamento com o Canvas Flow
+article_title: Lançamento com o Canvas Flow
 page_order: 3
 description: "Este artigo de referência cobre como preparar e testar um canva construído com Canvas Flow antes do lançamento."
 page_type: reference
 tool: Canvas
 ---
 
-# Lançamento com Canvas Flow
+# Lançamento com o Canvas Flow
 
 > Este artigo de referência cobre como preparar e testar um canva construído com Canvas Flow antes do lançamento. Isso inclui identificar pontos de verificação importantes da canva, como condições de entrada da canva, resumos do público e segmentos de usuários.
 
@@ -22,7 +22,7 @@ Considere as [condições de corrida]({{site.baseurl}}/user_guide/engagement_too
 
 Para entrar em uma canva, os usuários devem estar no público de entrada antes que o horário de entrada ocorra, independentemente de a canva estar agendada, baseada em ação ou acionada por API. 
 
-![][1]{: style="max-width:75%;"}
+![Uma tela baseada em ação que entra nos usuários quando eles fazem qualquer compra durante o fuso local do usuário, de 30 de abril de 2025 às 12h a 7 de maio de 2025 às 12h.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Observe que os usuários que se qualificarem para seu público de entrada após o lançamento do canva não entrarão no canva.
 
@@ -83,23 +83,45 @@ Semelhante às jornadas de ação, você pode aproveitar as etapas de [jornadas 
 
 Depois de revisar os detalhes mais finos da sua canva, confira [Enviando canvas de teste]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) para diferentes métodos que você pode usar para testar sua canva com usuários de teste.
 
+## Lista de verificação de lançamento
+
+### Verifique a disponibilidade do usuário
+
+- Certifique-se de que seus usuários atendam aos critérios de segmentação.
+- Confirme se o estado da inscrição é "inscrito" ou "aceitação" e se o token por push existe. Se você adicionou essas regras como regras de entrada no Canvas, é possível que os usuários tenham cancelado a inscrição entre a entrada no Canvas e o recebimento da etapa de mensagens.
+- Confirme se elas correspondem às configurações de envio do Canva. (Se os usuários estiverem "inscritos", mas as configurações forem "Aceitação", os usuários não serão ativados para o canal).
+- Se o limite global de frequência estiver ativado para o seu Canva, verifique se as regras estão limitando o número de vezes que cada usuário pode receber uma mensagem de um canal específico.
+- Se o horário de silêncio estiver ativado, o tempo de envio de mensagens poderá ser afetado, o que significa que a mensagem poderá ser enviada no próximo horário disponível (quando o horário de silêncio terminar) ou cancelada completamente.
+- Verifique a disponibilidade do usuário para filtros adicionais na etapa do canva.
+
+### Confirmar que realizaram o evento personalizado ou a compra de pré-requisito
+
+- Verifique se há uma condição de corrida, que afeta as mensagens que os usuários recebem se dispararem várias ações ao mesmo tempo.
+- Verifique se não há filtros específicos na etapa que poderiam ter bloqueado o recebimento da mensagem pelos usuários.
+- Procure conflitos entre diferentes etapas do mesmo Canva. Por exemplo, os usuários que não receberam a mensagem podem ser interrompidos por um filtro que exige a conclusão de outra etapa em um ramo diferente.
+- Confirme se os usuários atendem às regras de validação adicionais.
+- Confirme se a etapa do Canva estava conectada à etapa anterior no momento do envio.
+
+### Confirme se o Canva foi salvo corretamente e se todas as etapas são válidas
+
+Se o seu Canvas não estiver carregando e não progredir, isso pode ser causado quando uma versão anterior do Canvas não foi salva corretamente e contém etapas inválidas. Você pode duplicar o Canva no dashboard. Se o problema persistir, abra um [tíquete de suporte]({{site.baseurl}}/braze_support/).
+
 ## Solução de problemas
 
-{% details Por que meus usuários não estão recebendo minhas mensagens do canva? %}
+{% details Why are my users not receiving my Canvas messages? %}
 **Verifique a disponibilidade do usuário**
-- Certifique-se de que eles atendem aos seus critérios de segmentação.
-- Confirme se o estado da inscrição por push deles é "inscrito" ou "optado por" **e** o status de **Push Habilitado** está definido como "verdadeiro". Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
-- Confirme se eles correspondem às suas configurações de envio do Canvas. (Se os usuários estiverem "inscritos", mas as configurações forem "Optado por", os usuários não serão habilitados para o canal.)
-- Se o limite de frequência global estiver habilitado para o seu Canvas, verifique se suas regras estão limitando quantas vezes cada usuário pode receber uma mensagem de um canal específico. 
-- Se o Horário de Silêncio estiver habilitado, o horário de envio da sua mensagem pode ser afetado, o que significa que sua mensagem pode ser enviada no próximo horário disponível (quando o Horário de Silêncio terminar) ou cancelada completamente.
+- Certifique-se de que eles atendam a seus critérios de segmentação.
+- Confirme se o estado da inscrição push é "inscrito" ou "aceitação" **e** se o status de **capacitação push** está definido como "verdadeiro". Se você adicionou isso como regras de entrada da canva, é possível que os usuários tenham sido desinscritos entre a entrada na sua canva e o recebimento da etapa de mensagem.
+- Confirme se elas correspondem às configurações de envio do Canva. (Se os usuários estiverem "inscritos", mas as configurações forem "Aceitação", os usuários não serão ativados para o canal).
+- Se o limite global de frequência estiver ativado para o seu Canva, verifique se as regras estão limitando o número de vezes que cada usuário pode receber uma mensagem de um canal específico. 
+- Se o horário de silêncio estiver ativado, o tempo de envio de mensagens poderá ser afetado, o que significa que a mensagem poderá ser enviada no próximo horário disponível (quando o horário de silêncio terminar) ou cancelada completamente.
 
-**Verifique a disponibilidade do usuário para filtros adicionais na etapa do Canvas**
-- Confirme que eles realizaram o evento personalizado ou a compra pré-requisito.
-- Verifique se há uma [condição de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), que impacta as mensagens que os usuários recebem se eles acionarem várias ações ao mesmo tempo.
-- Certifique-se de que não há filtros específicos na etapa que poderiam ter bloqueado os usuários de receber a mensagem.
-- Procure por conflitos entre diferentes etapas dentro do mesmo Canvas. Por exemplo, usuários que não receberam a mensagem podem ter sido impedidos por um filtro que requer a conclusão de outra etapa em um ramo diferente.
-- Confirme que os usuários atendem a regras de validação adicionais.
-- Confirme que a etapa do Canvas estava conectada à etapa anterior no momento do envio.
+**Verifique a disponibilidade do usuário para filtros adicionais na etapa do canva**
+- Confirme que eles realizaram o evento personalizado ou a compra de pré-requisito.
+- Verifique se há uma [condição de corrida]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/), que afeta as mensagens que os usuários recebem se dispararem várias ações ao mesmo tempo.
+- Verifique se não há filtros específicos na etapa que poderiam ter bloqueado o recebimento da mensagem pelos usuários.
+- Procure conflitos entre diferentes etapas do mesmo Canva. Por exemplo, os usuários que não receberam a mensagem podem ser interrompidos por um filtro que exige a conclusão de outra etapa em um ramo diferente.
+- Confirme se os usuários atendem às regras de validação adicionais.
+- Confirme se a etapa do Canva estava conectada à etapa anterior no momento do envio.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

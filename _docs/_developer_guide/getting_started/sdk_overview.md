@@ -1,5 +1,5 @@
 ---
-nav_title: SDK Overview
+nav_title: SDK overview
 article_title: SDK Overview for Developers
 description: "This onboarding reference article provides a technical overview for developers of the Braze SDK. It discusses default analytics tracked by the SDK, blocking automatic data collection, and the live SDK version of your app."
 page_order: 0
@@ -25,11 +25,11 @@ The Braze SDKs have a very small footprint. We automatically change the rate tha
 
 ## SDK compatibility
 
-The Braze SDK is designed to be very well-behaved, and not interfere with other SDKs present in your app. If you are experiencing any issues you think might be due to incompatibility with another SDK, reach out to Braze Support.
+The Braze SDK is designed to be very well-behaved, and not interfere with other SDKs present in your app. If you are experiencing any issues you think might be due to incompatibility with another SDK, contact Braze Support.
 
 ## Default analytics and session handling
 
-Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and session end, all other automatically tracked data does not count toward your data point allotment.
+Certain user data is collected automatically by our SDK—for example, First Used App, Last Used App, Total Session Count, Device OS, etc. If you follow our integration guides to implement our SDKs, you will be able to take advantage of this [default data collection]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Checking this list can help you avoid storing the same information about users more than once. With the exception of session start and session end, all other automatically tracked data does not count toward your data point usage.
 
 {% alert note %}
 All of our features are configurable, but it's a good idea to fully implement the default data collection model.

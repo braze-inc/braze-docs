@@ -15,7 +15,7 @@ channel:
 
 | Ejemplo de Android (ampliado) | Ejemplo de IOS (ampliado) |
 | :-----: | :----------: |
-| ![][1] | ![][2] |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![![ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -31,7 +31,7 @@ Las siguientes versiones del SDK son necesarias para recibir Push Stories:
 
 ## Cómo utilizar las historias push
 
-![][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Para utilizar las historias push, haz lo siguiente:
 
@@ -44,13 +44,13 @@ Para utilizar las historias push, haz lo siguiente:
 Para crear una página, siga estos pasos:
 
 1. Haga clic en **Gestionar páginas** desde el compositor principal.
-    <br><br>![][4]{: style="max-width:70%"}<br><br>
+    <br><br>![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
 2. Inserte una imagen para cada página, junto con el comportamiento de clic para esa imagen.
 3. Si lo desea, añada un **Título** y una **Descripción** para cada página. Si utiliza un título y una descripción para una página, deben insertarse para todas las páginas.
 
 Los avances se reflejarán y serán interactivos.
 
-![][3]{: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
 
 {% alert important %}
 Si utiliza imágenes con [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), asegúrese de que la URL de la imagen comienza por `https://`. Si utilizas `http://`, tu aplicación se bloqueará.
@@ -61,7 +61,7 @@ Si utiliza imágenes con [Connected Content]({{site.baseurl}}/user_guide/persona
 Las siguientes especificaciones de imagen y texto se aplican a la parte del carrusel de fotos de Push Stories. Para obtener información sobre el push básico con el que interactúan los usuarios para activar la historia push, consulte las [directrices de texto para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications).
 
 {% tabs %}
-{% tab Imágenes %}
+{% tab Images %}
 
 - **Relación de imagen:** 2:1 (obligatorio)
 - **Tamaño de imagen recomendado:** 500 KB
@@ -69,7 +69,7 @@ Las siguientes especificaciones de imagen y texto se aplican a la parte del carr
 - **Tipos de archivos:** PNG, JPEG
 
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 
 - **Título,** 30 caracteres (recomendado)
 - **Descripción:** 30 caracteres (recomendado)
@@ -89,7 +89,7 @@ Cuando creas una campaña o Canvas, puedes filtrar a qué usuarios quieres dirig
 
 La analítica será muy similar a la actual sección de analítica de las notificaciones push. Para los análisis de Push Stories, puede abrir la métrica **Direct Opens** para ver los clics por página.
 
-![Tabla de rendimiento de Push de iOS con ejemplos de análisis y detalles ampliados de la métrica de aperturas directas.][5]
+![Tabla de rendimiento de Push de iOS con ejemplos de análisis y detalles ampliados de la métrica de aperturas directas.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Solución de problemas
 
@@ -111,9 +111,3 @@ En determinadas situaciones en las que no se cargan todas las páginas, por ejem
 
 Por defecto, las Historias Push no se descartan en Android después de que el usuario haga clic en la imagen. Si quieres rechazar la notificación, llama a [`cancelNotification`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/index.html#-1466259649%2FFunctions%2F-1725759721).  
 
-[1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %}
-[2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %}
-[3]: {% image_buster /assets/img_archive/pushstories_composer.png %}
-[4]: {% image_buster /assets/img_archive/pushstories_add_pages.png %}
-[5]: {% image_buster /assets/img_archive/pushstories_analytics.png %}
-[6]: {% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}

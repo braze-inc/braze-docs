@@ -16,7 +16,7 @@ Para ver un informe de sus ingresos desde el panel de control, vaya a **Análisi
 
 Puede personalizar su informe de ingresos seleccionando un intervalo de fechas, las aplicaciones sobre las que informar y los parámetros.
 
-![La página "Informe de ingresos" muestra el gráfico "Rendimiento en el tiempo" con "Ingresos" como parámetro.][1]
+![La página "Informe de ingresos" muestra el gráfico "Rendimiento en el tiempo" con "Ingresos" como parámetro.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtrado por fecha y aplicaciones
 
@@ -39,6 +39,10 @@ Puedes ver los siguientes datos en el **Gráfico de rendimiento en el tiempo**:
 
 ## Comprender los cálculos de ingresos
 
+{% alert note %}
+Cuando registras ingresos por una moneda sin tasa de cambio, Braze lo registra como una compra de 0,00 $.
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;
@@ -55,23 +59,23 @@ Puedes ver los siguientes datos en el **Gráfico de rendimiento en el tiempo**:
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Ingresos del ciclo de vida</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valor de duración del ciclo de vida por usuario</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Ingresos medios diarios</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Compras diarias</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Ingresos diarios por usuario</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -80,8 +84,6 @@ Puedes ver los siguientes datos en el **Gráfico de rendimiento en el tiempo**:
 
 Consulte la tabla **Desglose de productos** para obtener una lista de los productos adquiridos durante el intervalo de fechas seleccionado, cuántos productos de cada tipo se adquirieron y cuántos ingresos generó cada producto.
 
-![La tabla "Desglose de productos" muestra las columnas "Nombre del producto", "Comprado" e "Ingresos".][2]
+![La tabla "Desglose de productos" muestra las columnas "Nombre del producto", "Comprado" e "Ingresos".]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

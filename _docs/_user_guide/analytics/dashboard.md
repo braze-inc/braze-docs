@@ -1,5 +1,5 @@
 ---
-nav_title: Your Analytics Dashboards
+nav_title: Your analytics dashboards
 article_title: Your Analytics Dashboards
 page_order: 6.5
 layout: dev_guide
@@ -27,5 +27,8 @@ guide_featured_list:
   - name: API Usage Dashboard
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: eCommerce Revenue Dashboard
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
 ---
 <br><br>

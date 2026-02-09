@@ -1,6 +1,6 @@
 ---
-nav_title: Modification de votre campagne après le lancement
-article_title: Modification de votre campagne après le lancement
+nav_title: Modifiez votre campagne après son lancement
+article_title: Modifiez votre campagne après son lancement
 page_order: 1
 tool: Campaigns
 page_type: reference
@@ -8,13 +8,13 @@ description: "Le présent article de référence donne un aperçu du résultat d
 
 ---
 
-# Modification de votre campagne après le lancement
+# Modifiez votre campagne après son lancement
 
 > Le présent article donne un aperçu du résultat de la modification de certains aspects d’une campagne après son lancement.
 
 ## Arrêter votre campagne
 
-Pour arrêter une campagne, ouvrez la page des **détails de** votre **campagne** et sélectionnez **Arrêter la campagne**. Lorsqu’une campagne est arrêtée :
+Pour arrêter une campagne, ouvrez la page des **détails de votre campagne** et sélectionnez **Arrêter la campagne**. Lorsqu’une campagne est arrêtée :
 
 - Les messages dont l'envoi est planifié sont annulés.
 - Les tests A/B dont le test initial a déjà été envoyé seront définitivement annulés.
@@ -70,7 +70,7 @@ Pour créer un brouillon, procédez comme suit :
 2. Effectuez vos modifications.
 3. Sélectionnez **Enregistrer comme brouillon**. Notez qu'après avoir créé un brouillon, vous ne pouvez pas modifier la campagne active tant que vous n'avez pas lancé ou abandonné votre brouillon.
 
-![Un projet de campagne active avec une option pour visualiser la campagne active.]({% image_buster /assets/img/campaign_draft.png %})
+![Une ébauche d'une campagne active avec une option permettant de visualiser la campagne active.]({% image_buster /assets/img/campaign_draft.png %})
 
 Lorsque vous modifiez le projet, vous pouvez également faire référence à la campagne active dans l'en-tête du projet de campagne ou dans le pied de page de l'analyse/analytique de la campagne. 
 

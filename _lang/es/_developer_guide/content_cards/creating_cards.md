@@ -14,26 +14,28 @@ platform:
 
 # Crear tarjetas de contenido
 
-> Este artículo analiza el enfoque básico que utilizarás al implementar tarjetas de contenido personalizadas, así como tres casos de uso comunes: imágenes de banners, un buzón de entrada de mensajes y un carrusel de imágenes. Asume que ya has leído los demás artículos de la guía de personalización de la tarjeta de contenido para comprender qué se puede hacer de forma predeterminada y qué requiere código personalizado. Es especialmente útil saber cómo [registrar los análisis]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de tus tarjetas de contenido personalizadas. 
+> Este artículo analiza el enfoque básico que utilizarás al implementar tarjetas de contenido personalizadas, así como tres casos de uso comunes. Asume que ya has leído los demás artículos de la guía de personalización de la tarjeta de contenido para comprender qué se puede hacer de forma predeterminada y qué requiere código personalizado. Es especialmente útil saber cómo [registrar los análisis]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/) de tus tarjetas de contenido personalizadas. 
+
+{% multi_lang_include banners/content_card_alert.md %}
 
 ## Crear una tarjeta
 
 ### Paso 1: Crea una interfaz de usuario personalizada 
 
 {% tabs local %}
-{% tab Android %}
-
-Primero, crea tu propio fragmento personalizado. El [`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
-
-{% endtab %}
-{% tab iOS %}
-
-Primero, crea tu propio componente de controlador de vista personalizado. El [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
-
-{% endtab %}
-{% tab Web %}
+{% tab web %}
 
 En primer lugar, crea tu componente HTML personalizado que se utilizará para representar las tarjetas. 
+
+{% endtab %}
+{% tab android %}
+
+Primero, crea tu propio fragmento personalizado. El [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
+
+{% endtab %}
+{% tab swift %}
+
+Primero, crea tu propio componente de controlador de vista personalizado. El [`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller) predeterminado solo está diseñado para manejar nuestros tipos predeterminados de tarjetas de contenido, pero es un buen punto de partida.
 
 {% endtab %}
 {% endtabs %}
@@ -54,11 +56,11 @@ Para probar tu tarjeta de contenido:
 2. En Braze, ve a **Campañas** y [crea una nueva campaña de tarjeta de contenido]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create).
 3. En tu campaña, selecciona **Prueba** y, a continuación, introduce la dirección `user-id` del usuario de prueba. Cuando estés listo, selecciona **Enviar prueba**. En breve podrás iniciar una tarjeta de contenido en tu dispositivo.
 
-![Una campaña de tarjeta de contenido Braze que muestra que puedes añadir tu propio ID de usuario como destinatario de prueba para probar tu tarjeta de contenido.]({% image_buster /assets/img/react-native/content-card-test.png %} "Prueba de campaña de tarjeta de contenido")
+![Una campaña de tarjeta de contenido Braze que muestra que puedes añadir tu propio ID de usuario como destinatario de prueba para probar tu tarjeta de contenido.]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## Colocación de tarjetas de contenido
 
-Las tarjetas de contenido pueden utilizarse de muchas formas distintas. Tres implementaciones comunes son utilizarlos como centro de mensajes, banner publicitario o carrusel de imágenes. Para cada una de estas colocaciones, asignarás [pares clave-valor]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (la propiedad `extras` del modelo de datos) a tus tarjetas de contenido y, en función de los valores, ajustarás dinámicamente el comportamiento, el aspecto o la funcionalidad de la tarjeta durante el tiempo de ejecución. 
+Las tarjetas de contenido pueden utilizarse de muchas formas distintas. Tres implementaciones comunes son utilizarlos como centro de mensajes, anuncio de imagen dinámico o carrusel de imágenes. Para cada una de estas colocaciones, asignarás [pares clave-valor]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (la propiedad `extras` del modelo de datos) a tus tarjetas de contenido y, en función de los valores, ajustarás dinámicamente el comportamiento, el aspecto o la funcionalidad de la tarjeta durante el tiempo de ejecución. 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -73,19 +75,19 @@ Por ejemplo, puedes querer crear dos tarjetas de mensajes: una llamada a la acci
 Claves como `body`, `title`, y `buttonText` pueden tener simples valores de cadena que tus especialistas en marketing pueden establecer. Claves como `terms` pueden tener valores que proporcionen una pequeña colección de frases aprobadas por tu departamento Jurídico. Claves como `style` y `class_type` tienen valores de cadena que puedes configurar para determinar cómo se muestra tu tarjeta en tu aplicación o sitio web.
 
 {% tabs local %}
-{% tab Recomendaciones de lectura %}
+{% tab Reading recommendations %}
 Pares clave-valor de la tarjeta de recomendación de lectura:
 
 | Clave         | Valor                                                                |
 |------------|----------------------------------------------------------------------|
 | `body`       | Añade tus intereses a tu perfil del Semanario Politer para obtener recomendaciones personales de lectura. |
 | `style`      | información                                                                 |
-| `class_type` | centro_notificaciones                                                 |
+| `class_type` | notification_center                                                 |
 | `card_priority` | 1                                                                 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
-{% tab Cupón de nuevo suscriptor %}
+{% tab New subscriber coupon %}
 Pares clave-valor para un nuevo cupón de suscriptor:
 
 | Clave         | Valor                                                            |
@@ -94,14 +96,14 @@ Pares clave-valor para un nuevo cupón de suscriptor:
 | `body`       | Especial fin del verano - Disfruta de un 10 % de descuento en los juegos de Politer              |
 | `buttonText` | Suscríbete ahora                                                    |
 | `style`      | promo                                                            |
-| `class_type` | centro_notificaciones                                              |
+| `class_type` | notification_center                                              |
 | `card_priority` | 2                                                              |
-| `terms`      | solo_nuevos_abonados                                             |
+| `terms`      | new_subscribers_only                                             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 {% endtabs %}
 
-{% details Información adicional para Android %}
+{% details Additional information for Android %}
 
 En el SDK de Android y FireOS, la lógica del centro de mensajería se rige por el valor `class_type` que proporcionan los pares clave-valor de Braze. Con el método [`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/) puedes filtrar e identificar estos tipos de clases.
 
@@ -237,8 +239,8 @@ Para implementar un carrusel de tarjetas de contenido:
 Si estás implementando un carrusel como fuente secundaria de tarjetas de contenido, asegúrate de [ordenar las tarjetas en la fuente correcta utilizando pares clave-valor]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds).
 {% endalert %}
 
-### Banner
+### Sólo imagen
 
-Las tarjetas de contenido no tienen por qué parecer "tarjetas". Por ejemplo, las tarjetas de contenido pueden aparecer como un banner dinámico que se muestra de forma persistente en tu página de inicio o en la parte superior de las páginas designadas.
+Las tarjetas de contenido no tienen por qué parecer "tarjetas". Por ejemplo, las tarjetas de contenido pueden aparecer como una imagen dinámica que se muestra de forma persistente en tu página de inicio o en la parte superior de las páginas designadas.
 
 Para conseguirlo, tus especialistas en marketing crearán una campaña o paso en Canvas con una tarjeta de contenido de tipo **Sólo imagen**. A continuación, establece los pares clave-valor adecuados para utilizar [las tarjetas de contenido como contenido complementario]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content).

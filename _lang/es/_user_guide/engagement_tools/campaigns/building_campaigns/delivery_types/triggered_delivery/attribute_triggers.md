@@ -22,7 +22,7 @@ Los activadores de atributos están disponibles para los siguientes escenarios:
 
 Para empezar a utilizar los activadores de atributos, cree una campaña o un componente Canvas y seleccione **Entrega basada en acciones** como método de entrega. A continuación, selecciona el desencadenante de atributos que quieras utilizar.
 
-![][1]
+![Sección "Entrega basada en acciones" con un desplegable para seleccionar un desencadenante.]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Actualizar el estado de la suscripción
 
@@ -41,7 +41,9 @@ Utilice el activador `Update Subscription Group Status` para dirigirse a los usu
 Por ejemplo, puedes dirigirte a los usuarios con un mensaje SMS de bienvenida cuando se adhieran voluntariamente a tu programa. También puede especificar el origen de la actualización para tener un control más preciso sobre cuándo se dispara un mensaje. 
 
 Las fuentes de actualización disponibles varían según el canal:
+- Paso de actualización de usuario del Canvas
 - Importar CSV
+- Lista de cancelación de suscripciones
 - Centro de preferencias
 - API REST
 - SDK
@@ -58,21 +60,21 @@ Para el atributo de cambio, se evalúa primero el desencadenante y luego los cri
 
 Utilice el disparador `Change Custom Attribute Value` con la opción `any new value` para dirigirse a los usuarios cuando un valor booleano, entero, de cadena o de fecha cambie a cualquier nuevo valor.
 
-Por ejemplo, diríjase a los usuarios cuando cambie su número de puntos de fidelidad para informarles de cuántos puntos tienen ahora. En este ejemplo, digamos que un usuario tiene 85 puntos de fidelidad y usted ha configurado una campaña para que se active cuando el atributo de puntos de fidelidad cambie a cualquier nuevo valor. Si el valor del atributo de puntos de fidelidad de este usuario cambia a cualquier nuevo valor (e.g 83, 84, 86, etc.), la campaña se activará.
+Por ejemplo, dirígete a los usuarios cuando cambie su número de puntos de recompensa para informarles de cuántos puntos tienen ahora. En este ejemplo, digamos que un usuario tiene 85 puntos de recompensa y has configurado una campaña para que se desencadene cuando el atributo de puntos de recompensa cambie a cualquier nuevo valor. Si el valor del atributo de puntos de recompensa de este usuario cambia a cualquier nuevo valor (como 83, 84, 86, etc.), se desencadenará la campaña.
 
-Considere el siguiente ejemplo de uso con una notificación de actualización de nivel. Es posible que desee alertar a los usuarios si su nivel de fidelidad cambia. Para llevar a cabo este caso de uso, configure una campaña que se active desde `Change Custom Attribute Value` y configúrela para que se active cuando el atributo personalizado nivel de fidelización cambie a cualquier valor nuevo.
+Considere el siguiente ejemplo de uso con una notificación de actualización de nivel. Puede que quieras avisar a los usuarios si cambia su nivel de recompensa. Para llevar a cabo este caso de uso, configura una campaña que se desencadene a partir de `Change Custom Attribute Value` y configúrala para que se desencadene cuando el nivel de recompensa del atributo personalizado cambie a cualquier valor nuevo.
 
 {% alert important %}
 Los activadores de atributos no están disponibles actualmente para los atributos de matriz.
 {% endalert %}
 
-![Cualquier nuevo valor][2]
+![Un desencadenador "Cambiar valor de atributo personalizado" para que "AA_current_rewards_tier" cambie a cualquier valor.]({% image_buster /assets/img_archive/any_value.png %})
 
-También puede utilizar Liquid para personalizar el cuerpo del mensaje con el nuevo nivel de fidelización del cliente y proporcionarle más información sobre el cambio.
+También puedes utilizar Liquid para personalizar el cuerpo del mensaje con el nuevo nivel de recompensa del cliente y proporcionarle más información sobre el cambio.
 
 {% raw %}
 ```liquid
-Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
+Your rewards tier was just changed to {{custom_attribute.${AA_current_rewards_tier}}}
 ```
 {% endraw %}
 
@@ -80,9 +82,9 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 Utilice el disparador `Change Custom Attribute Value` con la opción `specific value` para dirigirse a los usuarios cuando un atributo personalizado booleano, entero o de cadena cambie a un valor específico. 
 
-Por ejemplo, diríjase a los usuarios cuando su nivel de fidelidad cambie al mejor nivel. Para este ejemplo, digamos que el mejor nivel de fidelidad es Super VIP. Puede configurar una campaña para que se active cuando el atributo personalizado de nivel de fidelización de un usuario cambie a `Super VIP`, de forma que pueda felicitar al usuario por convertirse en Super VIP.
+Por ejemplo, dirígete a los usuarios cuando su nivel de recompensa cambie al mejor nivel. Para este ejemplo, digamos que el mejor nivel de recompensa es Super VIP. Puedes configurar campañas para que se desencadenen cuando el atributo personalizado del nivel de recompensa de un usuario cambie a `Super VIP`, de forma que puedas felicitar al usuario por convertirse en Super VIP.
 
-![][4]
+![Un desencadenador "Cambiar valor de atributo personalizado" para que "AA_current_rewards_tier" cambie al valor específico de "super vip".]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Los activadores de atributos para valores de atributos personalizados específicos no están disponibles para atributos personalizados de matriz y fecha.
@@ -91,6 +93,3 @@ Por ejemplo, diríjase a los usuarios cuando su nivel de fidelidad cambie al mej
 - El activador de cambio de valores de atributos personalizados también se aplica a los nuevos usuarios creados.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

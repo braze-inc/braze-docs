@@ -1,5 +1,5 @@
 ---
-nav_title: Localisations et géorepérages
+nav_title: Fonctions de localisation et de géorepérage
 article_title: Localisations et géorepérages
 page_order: 6
 layout: dev_guide
@@ -14,15 +14,12 @@ guide_featured_list:
   - name: Suivi de localisation
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
     image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: Création de géorepérages
+  - name: Créer des géorepérages
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Intégrations mobiles
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Foire aux questions
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## À propos des fonctions de localisation et de géorepérage
@@ -36,4 +33,3 @@ Vous pouvez collecter et utiliser les données de localisation de vos utilisateu
 
 - Lorsqu’un utilisateur ouvre votre application, la fonction de suivi de la localisation collecte les localisations les plus récentes à l’aide des données de localisation GPS. Cela vous permet de voir où vos utilisateurs se sont rendus et de les segmenter en fonction de ces données.
 - Les géorepérages sont des zones géographiques virtuelles définies. Si un utilisateur a activé le suivi de la localisation en arrière-plan, vous pouvez utiliser des géorepérages pour déclencher des campagnes en temps réel lorsqu’un utilisateur se trouve à l’intérieur d’un géorepérage.
-<br><br><br>

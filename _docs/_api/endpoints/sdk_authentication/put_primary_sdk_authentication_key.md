@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Set Primary SDK Authentication Key"
+nav_title: "PUT: Set primary SDK authentication key"
 article_title: "PUT: Set Primary SDK Authentication Key"
 search_tag: Endpoint
 page_order: 2

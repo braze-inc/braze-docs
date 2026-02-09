@@ -18,19 +18,19 @@ tool:
 
 이 보고서를 실행하려면 다음을 수행하십시오:
 1. **쿼리 작성기에서** 템플릿을 사용하여 새 SQL 보고서를 만들도록 선택합니다. 
-2. 메트릭에 세그먼트 분석이 포함된 필터 템플릿은 다음과 같습니다:
+2. Select **Segment breakdowns** for the metric, which filters templates for those where the metrics include breakdowns of segment, which are:
 - 세그먼트별 이메일 성능/성과 측정기준
 - 세그먼트별 변형 또는 단계에 대한 이메일 참여 측정기준
 - 세그먼트별 구매 및 매출
 -  배리언트 또는 단계에 대한 세그먼트별 구매 및 매출
 - 세그먼트별 푸시 성과
 
-![세그먼트 분석 페이지에는 SQL 편집기, 변수, 사용 가능한 데이터 테이블, 쿼리 기록 및 AI 쿼리 빌더에 대한 탭이 있는 사이드 패널, 그리고 결과 섹션이 포함되어 있습니다.]({% image_buster /assets/img_archive/segment_breakdown.png %})
+![세그먼트 세분화 페이지에는 SQL 편집기, 변수, 사용 가능한 데이터 테이블, 쿼리 기록, AI 쿼리 빌더의 탭이 있는 사이드 패널, 결과 섹션이 있습니다.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 ## 보고서 템플릿
 
 {% tabs %}
-{% tab 세그먼트별 이메일 인게이지먼트 측정기준 %}
+{% tab Email engagement metrics by segment %}
 
 ### 캠페인 또는 캔버스 {#campaign-canvas-email}에 대한 측정기준 보기
 
@@ -75,7 +75,7 @@ tool:
 
 {% endtab %}
 
-{% tab 구매 및 세그먼트별 매출 %}
+{% tab Purchases and revenue by segment %}
 ### 캠페인 또는 캔버스에 대한 측정기준 보기
 
 특정 캠페인 또는 캔버스에 대한 세그먼트별로 나누어진 구매 및 매출 측정기준을 보려면, [변수](#variables) 탭을 사용하여 다음을 지정하십시오:
@@ -105,7 +105,7 @@ tool:
 
 예를 들어, 세그먼트에 10명의 사용자가 포함되어 있고 그 중 5명이 이메일을 받은 후 구매를 했다고 가정해 봅시다. 이 5명 중 한 명이 이메일을 클릭한 후 구매했다면 '수신 시 고유 구매율'은 50%가 되고 '클릭 시 고유 구매율'은 10%가 됩니다.
 
-![보고서는 이메일 측정기준을 보여줍니다. 여기에는 수신 시 고유 구매, 수신 시 매출, 클릭 시 고유 구매, 클릭 시 매출, 고유 수신자 및 고유 이메일 클릭이 포함됩니다.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
+![이 보고서에는 수신 시 고유 구매, 수신 시 매출, 클릭 시 고유 구매, 클릭 시 매출, 고유 수신자 및 고유 이메일 클릭을 포함한 이메일 측정기준이 표시됩니다.]({% image_buster /assets/img_archive/segment_breakdown_results.png %})
 
 #### 결과
 
@@ -133,7 +133,7 @@ tool:
 - **열:** 구매 측정기준
 
 {% endtab %}
-{% tab 이메일 참여를 위한 상단 또는 하단 메시지 %}
+{% tab Top or bottom messaging for email engagement %}
 
 ### 상단 또는 하단 성과자의 측정기준 보기
 
@@ -167,7 +167,7 @@ tool:
 결과는 선택한 상단(또는 하단) 캠페인, 캔버스 또는 캔버스 단계를 보여줍니다. 예를 들어, 클릭률이 높은 상위 10개 캠페인을 선택한 경우, 결과는 클릭률이 높은 순서대로 상위 10개 캠페인이 표시됩니다. 열에는 각 행(캠페인, 캔버스 또는 메시지 단계)에 대한 모든 이메일 인게이지먼트 측정기준이 표시됩니다.
 
 {% endtab %}
-{% tab 구매에 대한 상단 또는 하단 메시지 %}
+{% tab Top or bottom messaging for purchases %}
 
 ### 상단 또는 하단 성과자의 측정기준 보기
 
@@ -204,7 +204,7 @@ tool:
 결과는 선택한 상단(또는 하단) 캠페인, 캔버스 또는 캔버스 단계를 보여줍니다. 예를 들어, "클릭당 매출"에 대해 상위 10개 캠페인을 선택한 경우, 결과는 "클릭당 매출"이 높은 순서대로 상위 10개 캠페인이 표시됩니다. 열에는 각 행(캠페인, 캔버스 또는 메시지 단계)에 대한 모든 구매 측정기준이 표시됩니다.
 
 {% endtab %}
-{% tab 푸시 성능/성과 세그먼트 %}
+{% tab Push performance by segment %}
 
 ### 세그먼트에 대한 푸시 측정기준 보기
 

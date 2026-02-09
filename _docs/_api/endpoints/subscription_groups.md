@@ -1,5 +1,5 @@
 ---
-nav_title: Subscription Groups
+nav_title: Subscription groups
 article_title: Subscription Group Endpoints
 page_order: 7
 layout: dev_guide

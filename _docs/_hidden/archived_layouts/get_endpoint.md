@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: [Endpoint Name]"
+nav_title: "GET: [Endpoint name]"
 article_title: "Example layout: GET: [Endpoint Name]"
 search_tag: Endpoint
 page_order: 1
@@ -59,8 +59,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 
 <!-- An example response that defines the different variables returned-->
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

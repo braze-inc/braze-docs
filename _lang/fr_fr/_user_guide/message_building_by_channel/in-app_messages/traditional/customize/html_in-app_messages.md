@@ -21,7 +21,7 @@ Les messages in-app HTML permettent de contrôler davantage l’apparence et l�
 - Composants interactifs
 - Animations personnalisées
 
-Les messages HTML personnalisés peuvent utiliser les méthodes du [pont JavaScript](#javascript-bridge) pour enregistrer des événements, définir des attributs personnalisés, fermer le message, et bien plus encore ! Découvrez notre [référentiel GitHub][2] qui contient des instructions détaillées sur l’utilisation et la personnalisation de messages in-app HTML selon vos besoins, ainsi qu’un ensemble de modèles de messages in-app HTML5 pour vous aider à démarrer.
+Les messages HTML personnalisés peuvent utiliser les méthodes du [pont JavaScript](#javascript-bridge) pour enregistrer des événements, définir des attributs personnalisés, fermer le message, et bien plus encore ! Découvrez notre [référentiel GitHub](https://github.com/braze-inc/in-app-message-templates) qui contient des instructions détaillées sur l’utilisation et la personnalisation de messages in-app HTML selon vos besoins, ainsi qu’un ensemble de modèles de messages in-app HTML5 pour vous aider à démarrer.
 
 {% alert note %}
 Pour activer les messages in-app HTML, votre intégration SDK doit fournir l’option d’initialisation à Braze `allowUserSuppliedJavascript`, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages in-app HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
@@ -137,7 +137,7 @@ Lorsque vous concevez des messages in-app HTML personnalisés, vous pouvez prév
 
 Le panneau d’aperçu de message de l’éditeur offre un aperçu réaliste avec le rendu du Javascript inclus dans votre message. Vous pouvez prévisualiser et interagir avec vos messages personnalisés depuis le panneau d’aperçu en cliquant sur les pages, en soumettant des formulaires ou des enquêtes, en regardant des animations Javascript, et bien plus encore !
 
-![Interagir avec l'aperçu HTML en faisant défiler les pages.]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
+![Interaction avec l’aperçu HTML en faisant défiler les pages.]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
 Toutes les méthodes Javascript `brazeBridge` que vous utilisez dans votre HTML ne mettent pas à jour les profils utilisateur lors de la prévisualisation dans le tableau de bord.
@@ -155,11 +155,7 @@ Ce type de message ne pouvant être reçu que par certaines versions SDK ultéri
 
 ### Créer une campagne {#instructions}
 
-Lors de la création d'un message in-app **avec code personnalisé**, choisissez **Chargement de code HTML avec aperçu** comme type personnalisé. Si vous n’avez pas créé de messages in-app avec code personnalisé (terminés ou brouillons), cette option est automatiquement appliquée et vous n’avez pas besoin de faire un choix.
-
-![Création d’un message in-app envoyé à la fois à des applications mobiles et à des navigateurs Web, avec le type de message défini sur Code personnalisé et le type personnalisé défini sur Chargement de code HTML avec aperçu.]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
-
-N’oubliez pas que les utilisateurs de votre application mobile doivent mettre à niveau vers les versions SDK prises en charge pour recevoir ce message. Nous vous recommandons de [pousser les utilisateurs à mettre à jour]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) leurs applications mobiles avant de lancer des campagnes qui dépendent de versions plus récentes du SDK de Braze.
+Les utilisateurs de votre application mobile doivent passer aux versions SDK prises en charge pour recevoir un message in-app avec **code personnalisé**. Nous vous recommandons de [pousser les utilisateurs à mettre à jour]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) leurs applications mobiles avant de lancer des campagnes qui dépendent de versions plus récentes du SDK de Braze.
 
 #### Fichiers de ressources
 
@@ -197,24 +193,20 @@ Sinon, survolez une ressource dans la liste et sélectionnez <i class="fas fa-co
 
 Les modifications effectuées dans le HTML sont automatiquement affichées dans le panneau d’aperçu à la saisie. Toutes les méthodes [JavaScript`brazeBridge` ](#bridge) que vous utilisez dans votre HTML ne mettront pas à jour les profils utilisateurs lors de la prévisualisation dans le tableau de bord.
 
-Vous pouvez configurer **les paramètres de l'éditeur** pour basculer l'habillage du texte, modifier la taille de la police ou choisir un thème de couleurs. L’éditeur de code comprend différents thèmes de couleur pour mettre la syntaxe évidence, ce qui vous aide à repérer les erreurs de code potentielles directement dans le composeur de messages et à mieux organiser votre code (à l’aide d’espaces ou d’onglets, selon le côté de l’argument où vous êtes).
-
-![Options de mise en évidence de la syntaxe dans le menu déroulant "Paramètres de l'éditeur" lors de la composition d'un message in-app en HTML.]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
-
 {% alert tip %}
-Vous pouvez appuyer sur <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows) ou <kbd>Commande</kbd> + <kbd>F</kbd> (Mac) dans l’éditeur HTML pour faire des recherches dans votre code.
+Vous pouvez sélectionner <i class="fa-solid fa-magnifying-glass"></i> **Search** dans l'éditeur HTML pour effectuer une recherche dans votre code !
 {% endalert %}
 
 ### Suivi des boutons {#button-tracking-improvements}
 
-Vous pouvez suivre les performances dans votre message in-app avec code personnalisé à l’aide de la méthode Javascript [`brazeBridge.logClick(button_id)`][1]. Vous pouvez ainsi effectuer un suivi par programmation des clics de bouton 1, bouton 2 et dans le corps en utilisant `brazeBridge.logClick("0")`, `brazeBridge.logClick("1")` ou `brazeBridge.logClick()`, respectivement.
+Vous pouvez suivre les performances dans votre message in-app avec code personnalisé à l’aide de la méthode Javascript [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/). Vous pouvez ainsi effectuer un suivi par programmation des clics de bouton 1, bouton 2 et dans le corps en utilisant `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')` ou `brazeBridge.logClick()`, respectivement.
 
 | Clics     | Méthode                       |
 | ---------- | ---------------------------- |
-| Bouton 1   | `brazeBridge.logClick("0")` |
-| Bouton 2   | `brazeBridge.logClick("1")` |
+| Bouton 1   | `brazeBridge.logClick('0')` |
+| Bouton 2   | `brazeBridge.logClick('1')` |
 | Clic dans le corps | `brazeBridge.logClick()`    |
-| Suivi personnalisé des boutons |`brazeBridge.logClick("your custom name here")`|
+| Suivi personnalisé des boutons |`brazeBridge.logClick('your custom name here')`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -227,9 +219,13 @@ Vous pouvez suivre plusieurs événements de clic de bouton par impression. Par 
 <a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
 ``` 
 
-Vous pouvez également suivre de nouveaux noms de boutons personnalisés (jusqu’à 100 noms uniques par campagne). Par exemple, `brazeBridge.logClick("blue button")` ou `brazeBridge.logClick("viewed carousel page 3")`.
+Vous pouvez également suivre de nouveaux noms de boutons personnalisés (jusqu’à 100 noms uniques par campagne). Par exemple, `brazeBridge.logClick('blue button')` ou `brazeBridge.logClick('viewed carousel page 3')`.
 
-#### Limitations
+{% alert tip %}
+Lorsque vous utilisez des méthodes JavaScript à l'intérieur d'un attribut `onclick`, entourez les valeurs chaînes de caractères de guillemets simples afin d'éviter tout conflit avec l'attribut HTML à guillemets doubles.
+{% endalert %}
+
+#### Restrictions
 
 - Vous pouvez avoir jusqu’à 100 ID de boutons uniques par campagne.
 - Les ID de boutons peuvent contenir jusqu’à 255 caractères chacun.
@@ -246,10 +242,8 @@ Vous pouvez également suivre de nouveaux noms de boutons personnalisés (jusqu�
 
    | Avant | Après |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_6c19799e-2d2f-4395-9cac-fdf121e040d7/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_611b0baa-dd8b-44fd-b193-809eb995d9df/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_5215a6fd-a85f-44b6-8235-0c68f9fc50f2/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_b45371fd-6a96-487d-bc60-1399c8276165/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_1f375c1b-af51-4502-b9f9-db5525fe112d/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_aec1d70b-c8bb-4154-81e2-5f2370a23114/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_8b14fe28-1c2e-48b5-8c5f-f5cb711015d1/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_0eafef1d-19dd-419d-a937-f92908b9111f/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_8cf6b3e5-0ce1-42b9-9c94-236fb74325ea/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_fab94e7a-d7cf-4e63-916d-85e21fe723c0/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[2]: https://github.com/braze-inc/in-app-message-templates

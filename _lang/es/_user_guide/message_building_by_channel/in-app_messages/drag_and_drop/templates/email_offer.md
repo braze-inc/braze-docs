@@ -10,7 +10,7 @@ description: "Esta página explica cómo utilizar el editor de arrastrar y solta
 
 > Utiliza el editor de arrastrar y soltar mensajes dentro de la aplicación para crear tu lista de correo electrónico ofreciendo un descuento especial al registrarte.
 
-{% multi_lang_include drag_and_drop/templates.md section='Requisitos SDK' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Crear un formulario de registro por correo electrónico con una oferta especial
 
@@ -18,11 +18,11 @@ description: "Esta página explica cómo utilizar el editor de arrastrar y solta
 
 Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecciona **Registro por correo electrónico con oferta especial** para tu plantilla y, a continuación, selecciona **Crear mensaje**. Esta plantilla es compatible tanto con aplicaciones móviles como con navegadores web.
 
-![El editor de mensajes dentro de la aplicación con la plantilla para un formulario de registro por correo electrónico con una oferta especial.][img1]
+![El editor de mensajes dentro de la aplicación con la plantilla para un formulario de registro por correo electrónico con una oferta especial.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
 
 ### Paso 2: Configura tus estilos de mensaje
 
-{% multi_lang_include drag_and_drop/templates.md section='estilo del mensaje' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Paso 3: Personalice su componente de inscripción por correo electrónico
 
@@ -30,30 +30,27 @@ Para empezar a crear tu formulario de registro por correo electrónico, seleccio
 
 Puede personalizar el texto del marcador de posición y el texto de la etiqueta del elemento de captura de correo electrónico.
 
-![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.][img2]
+![El editor de mensajes dentro de la aplicación con un menú lateral para personalizar el elemento de captura de correo electrónico.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %})
 
 #### Validación del correo electrónico
 
-{% multi_lang_include drag_and_drop/templates.md section='validación de correo electrónico' %}
+{% multi_lang_include drag_and_drop/templates.md section='email validation' %}
 
 ### Paso 4: Añadir cláusula de exención de responsabilidad (opcional)
 
-{% multi_lang_include drag_and_drop/templates.md section='descargo de responsabilidad por correo electrónico' %}
+{% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 
 ### Paso 5: Estiliza tu mensaje
 
-Personaliza el aspecto de tu oferta especial utilizando los [componentes de arrastrar y soltar de los mensajes dentro de la aplicación][3].
+Personaliza el aspecto de tu oferta especial utilizando los [componentes de arrastrar y soltar de los mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## Analizar los resultados
 
-{% multi_lang_include drag_and_drop/templates.md section='informes' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 ## Buenas prácticas
 
-{% multi_lang_include drag_and_drop/templates.md section='correo electrónico doble adhesión voluntaria' %}
+{% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %}
-[img2]: {% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %} 
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

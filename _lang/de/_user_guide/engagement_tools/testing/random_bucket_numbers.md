@@ -13,11 +13,19 @@ tool:
 
 # Zufällige Bucket-Nummern
 
-> Eine zufällige Bucket-Nummer ist ein Benutzerattribut, das verwendet werden kann, um gleichmäßig verteilte Segmente von Zufallsbenutzern zu erstellen. Wenn ein Nutzerprofil in Braze erstellt wird, wird dieser Nutzerin oder diesem Nutzer automatisch eine zufällige Bucket-Nummer zwischen 0 und 9999 (einschließlich) zugewiesen. Sie können diese Segmente verwenden, um die Effektivität mehrerer Kampagnen oder Canvases bei Gruppen von Nutzern im Laufe der Zeit zu testen.
+> Eine zufällige Bucket-Nummer ist ein Benutzerattribut, das verwendet werden kann, um gleichmäßig verteilte Segmente von Zufallsbenutzern zu erstellen. 
 
 ## Übersicht
 
-Zufällige Bucket-Nummern werden in Ihrer globalen Kontrollgruppe verwendet - einer Gruppe von Benutzern, die keine Kampagnen oder Canvases erhalten. Braze wählt nach dem Zufallsprinzip mehrere Bereiche mit zufälligen Bucket-Nummern aus und schließt Benutzer aus diesen ausgewählten Buckets ein. 
+Wenn ein Nutzerprofil in Braze erstellt wird, wird dieser Nutzerin oder diesem Nutzer automatisch eine zufällige Bucket-Nummer zwischen 0 und 9999 (einschließlich) zugewiesen. Sie können diese Segmente verwenden, um die Effektivität mehrerer Kampagnen oder Canvases bei Gruppen von Nutzern im Laufe der Zeit zu testen.
+
+### Verwendung der globalen Kontrollgruppe
+
+Zufällige Bucket-Nummern werden in Ihrer globalen Kontrollgruppe verwendet - einer Gruppe von Benutzern, die keine Kampagnen oder Canvases erhalten. Braze wählt nach dem Zufallsprinzip mehrere Bereiche mit zufälligen Bucket-Nummern aus und schließt Benutzer aus diesen ausgewählten Buckets ein. Zufällige Bucket-Nummern werden ohne Gewichtung oder Berücksichtigung der zuletzt vergebenen Nummern zugewiesen. 
+
+{% alert note %}
+Wenn ein Nutzer:innen gelöscht und neu angelegt wird, erhält er eine andere zufällige Bucket-Nummer, da er als neuer Nutzer betrachtet wird.
+{% endalert %}
 
 Wenn Sie eine globale Kontrollgruppe eingerichtet haben und zufällige Bucket-Nummern für andere Anwendungsfälle verwenden möchten, lesen Sie die Hinweise, auf die [Sie achten]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for) sollten.
 
@@ -33,7 +41,7 @@ Wenn Sie Benutzer für Tests innerhalb einer einzelnen Kampagne oder eines einze
 
 Fügen Sie beim [Erstellen eines Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) den Filter "Random Bucket #" hinzu. Geben Sie dann eine Zahl oder einen Zahlenbereich an, den Sie in Ihr Segment aufnehmen möchten.
 
-![][2]
+![Ein Filter für Segmente, der für zufällige Bucket-Nummern nicht mehr als "3000" ist.]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Sie können diese Art von Segmenten verwenden, wenn Sie einen Test mit drei verschiedenen Varianten durchführen und auch eine Kontrollgruppe einbeziehen möchten. Betrachten Sie den folgenden Beispielplan für die Erstellung von Segmenten gleicher Größe für drei Varianten und eine Kontrollgruppe:
 
@@ -57,4 +65,3 @@ Der zufällige Wiedereintritt einer Zielgruppe kann für [A/B-Tests]({{site.base
 5. Starten Sie Ihre Kampagne und überwachen Sie die Leistung der einzelnen Buckets. Sie können Metriken wie Engagement-Raten und Konversionsraten analysieren, um festzustellen, wie effektiv die erneute Interaktion mit einer Zielgruppe für Ihren Anwendungsfall ist.
 
 
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

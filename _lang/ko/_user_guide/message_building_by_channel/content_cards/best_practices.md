@@ -1,6 +1,6 @@
 ---
 page_order: 20
-nav_title: 모범 사례
+nav_title: Best practices
 article_title: 콘텐츠 카드 모범 사례
 layout: dev_guide
 guide_top_header: "콘텐츠 카드 모범 사례"
@@ -18,6 +18,10 @@ guide_featured_list:
 - name: "테스트 메시지 보내기"
   link: /docs/developer_guide/in_app_messages/sending_test_messages/
   image: /assets/img/braze_icons/mail-01.svg
+- name: "저지연 요구 사항 개선"
+  image: /assets/img/braze_icons/send-01.svg
+  link: /docs/user_guide/message_building_by_channel/content_cards/best_practices/improving_low_latency_requirements
+
 ---
 
 <br><br>

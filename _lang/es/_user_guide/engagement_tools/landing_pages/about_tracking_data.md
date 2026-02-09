@@ -30,3 +30,12 @@ Antes de que un usuario envíe un formulario, los datos rastreados en una págin
 
 Dado que estos datos no están vinculados a usuarios identificables, no pueden utilizarse para reorientar o seguir el comportamiento de usuarios individuales.
 
+## Fusión de perfiles de usuario duplicados
+
+Braze no fusiona automáticamente a los usuarios basándose en atributos, como el correo electrónico o el teléfono, cuando se envía un formulario de página de destino. Si se envía un formulario con un correo electrónico o número de teléfono que coincide con un perfil de usuario existente, Braze crea un perfil de usuario independiente.
+
+Para fusionar perfiles de usuario duplicados, puedes:
+
+- Desencadena el [punto final`/users/merge` ]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) cuando se envía un formulario de página de destino para fusionar el nuevo perfil con un perfil existente.
+- Programa la [fusión masiva]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) para fusionar periódicamente perfiles duplicados basándote en identificadores coincidentes.
+

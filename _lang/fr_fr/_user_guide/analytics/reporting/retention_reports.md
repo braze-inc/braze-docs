@@ -17,9 +17,9 @@ Les rapports de rétention ne sont pas disponibles pour les campagnes déclench�
 
 ## Exécuter un rapport de rétention
 
-### Étape 1 : Sélectionner une plage de dates
+### Étape 1 : Sélectionner une plage de dates
 
-![Date du rapport][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Date du rapport]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Commencez par aller sur une campagne ou un Canvas dans votre tableau de bord de Braze, et sélectionnez une plage de dates pour votre rapport. La sélection d’une plage de dates appropriée est cruciale, elle affecte les rapports de rétention. 
 
@@ -30,7 +30,7 @@ Pour sélectionner une plage de dates, naviguez jusqu'à la page de la campagne 
 ### Étape 2 : Sélectionner un événement de rétention
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 Ensuite, allez dans la section **Rétention de la campagne.**  La rétention de la campagne vous indique le taux auquel tout utilisateur ayant reçu cette campagne spécifique a effectué un événement de rétention (spécifié par vous dans le rapport de rétention) au cours des 30 jours à partir du moment où il a reçu la campagne.
 
@@ -42,13 +42,13 @@ Ensuite, sélectionnez **Analyser les variantes**. À partir de là, vous pouvez
 {% endtab %}
 {% endtabs %}
 
-![Sélectionnez un événement de rétention][1]{: style="max-width:80%"}
+![Sélectionnez un événement de rétention]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Étape 3 : Générer le rapport
 
 Après avoir sélectionné un événement de rétention, sélectionnez **Exécuter le rapport** pour lancer la requête.
 
-![Exécuter le rapport][2]{: style="max-width:80%"}
+![Exécuter le rapport]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 Cette requête peut prendre quelques minutes pour exécuter, selon la quantité de données à récupérer pour générer les résultats. Si elle met trop de temps, vous verrez une notification vous demandant de réessayer de charger le rapport. Vous devrez peut-être attendre cinq minutes avant que le rapport ne soit chargé.
 
@@ -57,7 +57,7 @@ Une fois le rapport généré, il ne peut pas être exécuté à nouveau avec le
 Le rapport montre uniquement les jours où la campagne ou Canvas envoyait des messages. Pour certaines campagnes et Canvas, le rapport n’affichera donc qu’un seul jour si elles n’ont été envoyées qu’une seule fois. Si elles sont récurrentes ou déclenchées, vous pouvez voir plusieurs jours dans le tableau.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 ![Rapport complet]({% image_buster /assets/img/campaign_retention3.png %})
 
@@ -97,7 +97,7 @@ La rétention par plage mesure le nombre d’utilisateurs qui reviennent pendant
 
 Les rapports par plage sont certains des rapports les plus intuitifs à lire. Ils indiquent clairement, parmi tous les utilisateurs d’une cohorte, le pourcentage de ceux qui ont eu l’événement de rétention dans une plage de dates donnée. Par exemple, dans l’image suivante, pour la cohorte Tous les utilisateurs et la période « Jour 0 (0-24 h) », 35,71 % de la cohorte a eu le rapport de rétention. Si un utilisateur effectue plusieurs événements de rétention dans plusieurs plages de dates, il sera comptabilisé comme conservé pour chaque plage.
 
-![Rapport de rétention][5]
+![Rapport de rétention]({% image_buster /assets/img/range_retention.png %})
 
 ### Composants du rapport de rétention
 
@@ -121,14 +121,14 @@ Certains cas d’utilisation pour montrer les performances par variante :
 - En explorant les données de rétention du groupe de contrôle, vous pouvez voir à quoi ressemblerait la rétention si vous n’envoyiez pas de message.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
-![Vue par variante]({% image_buster /assets/img/variant_view.png %})
+![Afficher par variante]({% image_buster /assets/img/variant_view.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-![Vue par variante]({% image_buster /assets/img/variant_view_canvas.png %})
+![Afficher par variante]({% image_buster /assets/img/variant_view_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ Certains cas d’utilisation pour montrer les performances par variante :
 - **Plage de dates** : Définie sur la page **Détails de la** campagne ou du canevas, la plage de dates inclut tous les utilisateurs qui ont reçu la campagne ou le canevas pendant cette fenêtre, et parmi ces utilisateurs, les données de ceux qui ont effectué leur événement de rétention pendant la plage de dates apparaîtront dans le rapport. Le taux de rétention, le pourcentage d’écart par rapport au groupe de contrôle et la confiance sont mesurés chaque jour.
 - **Taux de rétention**: Affiche le taux de rétention par variante. Le taux de rétention est équivalent au nombre d’utilisateurs ayant effectué l’événement de rétention divisé par le total des utilisateurs ayant reçu la campagne ou le Canvas.
 - **Pourcentage de changement par rapport au contrôle**: Quantifie le pourcentage d’écart par variante par rapport au groupe de contrôle.
-- **Confiance**: {% multi_lang_include metrics.md metric='Confidence' %} Braze compare le taux de conversion de chaque variante par rapport au taux de conversion du contrôle à l'aide d'une procédure statistique appelée test Z afin de calculer un pourcentage de [confiance]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence).
+- **Confiance**: {% multi_lang_include analytics/metrics.md metric='Confidence' %} Braze compare le taux de conversion de chaque variante au taux de conversion du témoin à l'aide d'une procédure statistique appelée test Z afin de calculer un pourcentage de [confiance]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence).
 - **Unités**: Vous pouvez ajuster les unités pour le pourcentage d’utilisateurs et le nombre d’utilisateurs dans le coin supérieur droit du graphique, des unités spécifiques peuvent s’avérer plus significatives pour juger l’impact d’une campagne ou d’un Canvas.
 - **Graphique de variante** : Ce graphique résume les résultats par variante pour la plage de dates sélectionnée.
 
@@ -151,9 +151,5 @@ Les rapports de rétention sont faciles à générer, mais difficiles à interpr
 - Constatez-vous une lassitude par rapport aux messages ?
 - Une optimisation spécifique que vous avez apportée à une campagne ou à un canvas il y a X jours a-t-elle eu un impact positif ?
 
-[1]: {% image_buster /assets/img/retention_1.png %}
-[2]: {% image_buster /assets/img/retention_2.png %}
-[5]: {% image_buster /assets/img/range_retention.png %}
-[8]: {% image_buster /assets/img/date_select_retention.png %}
 
 

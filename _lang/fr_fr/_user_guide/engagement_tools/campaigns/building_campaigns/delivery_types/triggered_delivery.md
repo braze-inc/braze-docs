@@ -1,5 +1,5 @@
 ---
-nav_title: Réception par événement
+nav_title: Livraison par événement
 article_title: Réception par événement
 page_order: 1
 page_type: reference
@@ -48,7 +48,6 @@ Sélectionnez un événement déclencheur. Il peut comprendre l’un des éléme
     - Voir la carte de contenu
     - Cliquez sur la carte de contenu
     - Ignorer la carte de contenu
-- Interagir avec les cartes du fil d'actualité (voir [Connecteur de campagne][33])
 - Saisir une localisation
 - Effectuer l’événement d’exception pour une autre campagne
 - Interagir avec une étape de Canvas
@@ -56,17 +55,17 @@ Sélectionnez un événement déclencheur. Il peut comprendre l’un des éléme
 - Envoyer un message SMS entrant
 - Envoi d'un message entrant WhatsApp
 
-Vous pouvez également filtrer de manière plus approfondie les événements déclencheurs à l’aide des [propriétés d’événements personnalisés][32] de Braze, lesquelles permettent de définir des propriétés d’événement personnalisables pour les événements personnalisés et les achats in-app. Cette fonction vous permet d’adapter davantage quel utilisateur va recevoir un message sur la base des attributs spécifiques de l’événement personnalisé, ce qui permet une personnalisation plus importante de la campagne et une collecte de données plus sophistiquée. 
+Vous pouvez également filtrer davantage les événements déclencheurs grâce aux [propriétés]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) d'événement personnalisées de Braze, ce qui permet de personnaliser les propriétés d'événement pour les événements personnalisés et les achats in-app. Cette fonction vous permet d’adapter davantage quel utilisateur va recevoir un message sur la base des attributs spécifiques de l’événement personnalisé, ce qui permet une personnalisation plus importante de la campagne et une collecte de données plus sophistiquée. 
 
 Supposons, par exemple, que nous ayons une campagne avec un événement personnalisé d’abandon de panier qui est ciblé par le filtre de propriété « valeur du panier ». Cette campagne n’atteindra que les utilisateurs qui ont abandonné entre 100 $ et 200 $ de marchandises dans leur panier. 
 
-![][34]
+![]({% image_buster /assets/img_archive/customEventProperties.png %})
 
 {% alert note %}
 L'événement déclencheur « démarrer la session » peut être la toute première ouverture de l'application par l'utilisateur si le segment de votre campagne s'applique aux nouveaux utilisateurs. (par exemple, si votre segment se compose de ceux qui n'ont pas de sessions).
 {% endalert %}
 
-N’oubliez pas que vous pouvez toujours envoyer une campagne déclenchée à un segment spécifique d’utilisateurs, afin que ceux qui ne font pas partie du segment ne reçoivent pas la campagne même s’ils effectuent l’événement déclencheur. Si vous remarquez que des utilisateurs ne reçoivent pas la campagne même s'ils sont qualifiés pour le segment, consultez notre section sur [pourquoi un utilisateur pourrait ne pas avoir reçu une campagne déclenchée][49].
+N’oubliez pas que vous pouvez toujours envoyer une campagne déclenchée à un segment spécifique d’utilisateurs, afin que ceux qui ne font pas partie du segment ne reçoivent pas la campagne même s’ils effectuent l’événement déclencheur.
 
 En ce qui concerne l’événement déclencheur défini quand un utilisateur ajoute une adresse e-mail à son profil, les règles suivantes s’appliquent :
 
@@ -75,26 +74,26 @@ En ce qui concerne l’événement déclencheur défini quand un utilisateur ajo
 
 En outre, les messages in-app déclenchés sont toujours conformes aux règles de livraison des messages in-app et apparaissent au début de la session de l’application.
 
-![][17]
+![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
 
-### Étape 2 : Sélectionner la longueur du délai
+### Étape 2 : Sélectionner la longueur du délai
 
 Sélectionnez la durée d’attente avant d’envoyer la campagne une fois les critères de déclenchement satisfaits. Si la longueur du délai choisi est supérieure à la durée d’envoi du message, aucun utilisateur ne recevra la campagne. 
 
 De plus, les utilisateurs qui complètent l'événement déclencheur après le lancement de votre campagne seront les premiers à commencer à recevoir le message après l'expiration du délai. Les utilisateurs qui ont terminé l’événement déclencheur avant que la campagne ne commence ne sont pas qualifiés pour recevoir la campagne.
 
-![][19]
+![]({% image_buster /assets/img_archive/schedule_triggered22.png %})
 
-Vous pouvez également choisir d’envoyer la campagne soit un jour spécifique de la semaine (en choisissant « au prochain » puis en sélectionnant un jour) ou un nombre spécifique de jours dans l’avenir (en sélectionnant « dans »). Vous pouvez également choisir d'envoyer votre message en utilisant la fonctionnalité [Intelligent Timing][8] au lieu de sélectionner manuellement une heure de livraison.
+Vous pouvez également choisir d’envoyer la campagne soit un jour spécifique de la semaine (en choisissant « au prochain » puis en sélectionnant un jour) ou un nombre spécifique de jours dans l’avenir (en sélectionnant « dans »). Vous pouvez également choisir d'envoyer votre message en utilisant la fonctionnalité [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) au lieu de sélectionner manuellement une heure de livraison.
 
-![][41]
-![][50]
+![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
+![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
-### Étape 3 : Sélectionner des événements d’exception
+### Étape 3 : Sélectionner des événements d’exception
 
-Sélectionnez un événement d’exception qui disqualifiera les utilisateurs pour la réception de cette campagne. Vous ne pouvez le faire que si votre message déclenché est envoyé après un délai temporel. Les [événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) peuvent être un achat, le lancement d'une session, l'exécution d'un des [événements de conversion][18]] désignés dans le cadre d'une campagne ou l'exécution d'un événement personnalisé. Si un utilisateur effectue l’événement déclencheur mais effectue ensuite votre événement d’exception avant que le message ne soit envoyé en raison du délai temporel, il ne recevra pas la campagne. Les utilisateurs qui ne reçoivent pas la campagne en raison de l'événement d'exception seront automatiquement éligibles pour la recevoir à l'avenir, la prochaine fois qu'ils complètent l'événement déclencheur, même si vous ne choisissez pas que les utilisateurs deviennent [à nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
+Sélectionnez un événement d’exception qui disqualifiera les utilisateurs pour la réception de cette campagne. Vous ne pouvez le faire que si votre message déclenché est envoyé après un délai temporel. Les [événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) peuvent être la réalisation d'un achat, le démarrage d'une session, l'exécution de l'un des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events) désignés par une campagne ou l'exécution d'un événement personnalisé. Si un utilisateur effectue l’événement déclencheur mais effectue ensuite votre événement d’exception avant que le message ne soit envoyé en raison du délai temporel, il ne recevra pas la campagne. Les utilisateurs qui ne reçoivent pas la campagne en raison de l'événement d'exception seront automatiquement éligibles pour la recevoir à l'avenir, la prochaine fois qu'ils complètent l'événement déclencheur, même si vous ne choisissez pas que les utilisateurs deviennent [à nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 
-![][20]
+![]({% image_buster /assets/img_archive/schedule_triggered32.png %})
 
 Vous pouvez en savoir plus sur la façon d'utiliser les événements d'exception dans notre section sur les [cas d'utilisation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#use-cases).
 
@@ -108,7 +107,7 @@ Vous ne pouvez pas faire que l’événement « démarrer la session » soit �
 
 Attribuez la durée de la campagne en spécifiant une heure de début et une heure de fin facultative.
 
-![][21]
+![]({% image_buster /assets/img_archive/schedule_triggered43.png %})
 
 Si un utilisateur effectue un événement déclencheur pendant la période spécifiée, mais qu’il est éligible pour le message en dehors du délai imparti en raison d’un délai planifié, il ne recevra pas la campagne. Par conséquent, si vous définissez un délai plus long que la durée du message, aucun utilisateur ne recevra votre campagne. De plus, vous pouvez choisir d'envoyer le message dans les [fuseaux horaires locaux des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
 
@@ -116,11 +115,11 @@ Si un utilisateur effectue un événement déclencheur pendant la période spéc
 
 Indiquez si l’utilisateur recevra la campagne pendant à un moment spécifique de la journée. Si vous donnez au message une fenêtre de réception et que l’utilisateur effectue l’événement déclencheur en dehors de cette fenêtre ou que le délai du message entraîne le fait qu’il la rate, alors, par défaut, l’utilisateur ne recevra pas votre message.
 
-![][27]
+![]({% image_buster /assets/img_archive/schedule_triggered5.png %})
 
 Dans le cas où un utilisateur effectue l’événement déclencheur dans la fenêtre temporelle, mais que le délai de message le fait sortir de cette fenêtre, vous pouvez cocher la case suivante pour que ces utilisateurs reçoivent toujours la campagne.
 
-![][31]
+![]({% image_buster /assets/img_archive/schedule_triggered_next_available.png %})
 
 Si un utilisateur ne reçoit pas le message parce qu’il manque la fenêtre temporelle, il sera toujours éligible pour la recevoir la prochaine fois qu’il effectuera l’événement déclencheur, même si vous ne choisissez pas de rendre les utilisateurs [rééligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/). Si vous choisissez d’autoriser les utilisateurs à devenir rééligibles, ils peuvent recevoir la campagne chaque fois qu’ils effectuent l’événement déclencheur, en supposant qu’ils sont admissibles pendant la période spécifiée.
 
@@ -128,9 +127,9 @@ Si vous avez également attribué une certaine durée à la campagne, un utilisa
 
 ### Étape 6 : Déterminer la rééligibilité
 
-Déterminez si les utilisateurs peuvent devenir [rééligibles][24] pour la campagne. Si vous autorisez les utilisateurs à devenir rééligibles, vous pouvez spécifier un délai avant que l’utilisateur puisse recevoir à nouveau la campagne. Cela empêchera les campagnes déclenchées de devenir « indésirables ».
+Déterminez si les utilisateurs peuvent devenir [rééligibles]({% image_buster /assets/img_archive/ReEligible.png %}) pour la campagne. Si vous autorisez les utilisateurs à devenir rééligibles, vous pouvez spécifier un délai avant que l’utilisateur puisse recevoir à nouveau la campagne. Cela empêchera les campagnes déclenchées de devenir « indésirables ».
 
-![][28]
+![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
 ## Cas d’utilisation
 
@@ -155,7 +154,7 @@ L’un des éléments suivants empêchera un utilisateur qui a effectué l’év
 
 Imaginez par exemple que vous souhaitiez envoyer une campagne déclenchée par un événement aux utilisateurs masculins qui viennent juste de s’enregistrer. Lorsque l’utilisateur s’enregistre, vous notez un événement personnalisé `registration` et définissez simultanément un attribut `gender`. L’événement peut déclencher la campagne avant que Braze ne traite le genre de l’utilisateur, ce qui empêche qu’il ne reçoive la campagne.
 
-En tant que bonne pratique, assurez-vous que l’attribut sur lequel la campagne est segmentée est envoyé vers les serveurs de Braze avant l’événement. Si cela n'est pas possible, le meilleur moyen de garantir la livraison est d'utiliser [propriétés d'événements personnalisés][48] pour attacher les propriétés utilisateur pertinentes à l'événement et appliquer un filtre de propriété pour la propriété d'événement spécifique au lieu d'un filtre de segmentation. Dans notre exemple, vous ajouteriez une propriété `gender` à l’événement personnalisé `registration` afin que Braze dispose forcément des données dont vous avez besoin lorsque votre campagne est déclenchée.
+En tant que bonne pratique, assurez-vous que l’attribut sur lequel la campagne est segmentée est envoyé vers les serveurs de Braze avant l’événement. Si ce n'est pas possible, la meilleure façon de garantir la réception/distribution est d'utiliser des [propriétés d'événement personnalisées]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties) pour attacher les propriétés utilisateur pertinentes à l'événement et d'appliquer un filtre de propriété pour la propriété d'événement spécifique au lieu d'un filtre de segmentation. Dans notre exemple, vous ajouteriez une propriété `gender` à l’événement personnalisé `registration` afin que Braze dispose forcément des données dont vous avez besoin lorsque votre campagne est déclenchée.
 
 De plus, si une campagne est basée sur l'action et a un délai, vous pouvez cocher l'option **Réévaluer l'appartenance au segment au moment de l'envoi** pour vous assurer que les utilisateurs font toujours partie du public cible lorsque le message est envoyé.
 
@@ -166,27 +165,20 @@ Si votre campagne est déclenchée par un événement personnalisé spécifique 
 
 Nous recommandons soit de changer le public cible pour inclure tous les utilisateurs, soit de vérifier que les utilisateurs censés effectuer l'événement font déjà partie du public de la campagne pour que le message soit déclenché.
 
-![][51]
+![]({% image_buster /assets/img_archive/reevaluate_segment_membership.png %})
 
-[5]: #local-time-zone-campaigns
-[8]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/
-[17]: {% image_buster /assets/img_archive/schedule_triggered1.png %}
-[18]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[19]: {% image_buster /assets/img_archive/schedule_triggered22.png %}
-[20]: {% image_buster /assets/img_archive/schedule_triggered32.png %}
-[21]: {% image_buster /assets/img_archive/schedule_triggered43.png %}
-[22]: \#use-cases-2
-[24]: {% image_buster /assets/img_archive/ReEligible.png %}
-[27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
-[28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
-[29]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/in-app_message_behavior/#in-app-message-delivery-rules
-[31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
-[32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}
-[41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
-[48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
-[49]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/
-[50]: {% image_buster /assets/img_archive/schedule_triggered8.png %}
-[51]: {% image_buster /assets/img_archive/reevaluate_segment_membership.png %}
+### Résolution des problèmes des événements personnalisés
+
+Tout d'abord, confirmez que l'événement personnalisé est transmis à Braze. Accédez à **Analyse/analytique** > **Rapport sur les événements personnalisés**, puis sélectionnez l'événement personnalisé et la plage de dates correspondants. Si l'événement ne s'affiche pas, vérifiez qu'il est correctement configuré et que l'utilisateur a effectué la bonne action.
+
+Si l'événement personnalisé s'affiche, poursuivez la résolution des problèmes en procédant comme suit :
+
+- Vérifiez le téléchargement du profil utilisateur pour confirmer qu'il a déclenché l'événement et quand il l'a fait. Si l'événement a été déclenché, comparez l'horodatage du déclenchement de l'événement à la durée en ligne/en production/instantanée de la campagne. L'événement peut avoir été déclenché avant que la campagne ne soit en ligne/en production/instantanée.
+- Examinez les journaux des modifications pour la campagne et tous les segments utilisés dans le ciblage afin de déterminer si l'utilisateur se trouvait dans le segment lorsque son événement personnalisé a été déclenché. S'ils ne faisaient pas partie de la segmentation, ils n'auraient pas reçu la campagne.
+- Vérifiez si l'utilisateur a été intégré dans un groupe de contrôle par le biais de la segmentation et, par conséquent, s'il n'a pas pu recevoir la campagne.
+- En cas de retard planifié, vérifiez si l'événement personnalisé de l'utilisateur a été déclenché avant le retard. Si l'événement avait été déclenché avant le délai, ils n'auraient pas reçu la campagne.
+
+{% alert note %}
+Les messages in-app ne peuvent être déclenchés que par des événements envoyés via le SDK, et non via l'API REST.
+{% endalert %}
+

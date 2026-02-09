@@ -33,7 +33,7 @@ First, to export users from Amplitude to Braze, create a [cohort](https://help.a
 - Device ID
 - User ID (External ID)
 
-You can set up multiple Braze connections in your Amplitude account. This allows you to configure one connection to sync user IDs for known users and another to sync device IDs for anonymous users.
+Amplitude supports multiple identifier mapping properties in priority order. You can configure a primary, secondary, and tertiary identifier mapping. During sync, if a user is missing the primary, Amplitude uses the next available one. This improves sync coverage, reduces dropped users, and includes more anonymous and partially identified users in your sync. 
 
 Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
@@ -43,7 +43,9 @@ Only users who already exist within Braze will be added or removed from a cohort
 
 #### Defining sync cadence
 
-Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. Make sure to select an option that makes sense for your business needs while also being mindful of consuming [data points]({{site.baseurl}}/user_guide/data/data_points/).
+Cohort syncs can be set to be one-time sync, scheduled as daily or hourly, or even real-time which updates every minute. 
+
+Any integration you set up will log data points. If you have any questions about the nuances of Braze data points, your Braze account manager can answer them.
 
 ### Step 4: Segment users in Braze
 

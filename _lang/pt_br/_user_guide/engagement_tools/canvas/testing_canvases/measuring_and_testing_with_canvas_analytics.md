@@ -22,7 +22,7 @@ A parte superior da página **Detalhes do Canvas** contém estatísticas de prim
 
 Esse é um ótimo lugar para obter uma visão geral de alto nível e verificar como está a performance do seu Canva em relação à sua meta.
 
-![][24]
+![]({% image_buster /assets/img_archive/Journey_5.png %})
 
 ### alterações desde a última visualização
 
@@ -38,7 +38,7 @@ Para o Canvas Flow, um usuário sairá do Canvas depois de entrar e receber a ca
 
 As métricas também incluem impressões, destinatários únicos, contagem de conversões e receita gerada. Você pode clicar em um componente para detalhar melhor seus dados e ver a performance específica do canal.
 
-![Dois exemplos de detalhes de performance para componentes do canva. À esquerda, são mostrados os detalhes de performance de uma jornada de usuário com um componente do canva. À direita, os detalhes de performance de um componente do canva expandido e uma etapa do canva que mostra a contagem de impressões de mensagens no app.][25]
+![Dois exemplos de detalhes de performance para componentes do canva. À esquerda, são mostrados os detalhes de performance de uma jornada de usuário com um componente do canva. À direita, os detalhes de performance de um componente do canva expandido e uma etapa do canva que mostra a contagem de impressões de mensagens no app.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Detalhamento da performance por variante
 
@@ -54,7 +54,7 @@ Na guia **Analyze Variants (Analisar variantes** ), é possível ver um detalham
 
 Você pode inferir rapidamente as variantes eficazes e identificar as cadências, o conteúdo, os disparos, o momento certos e muito mais.
 
-![][26]
+![]({% image_buster /assets/img_archive/analyze_variants.png %})
 
 As métricas básicas incluem o seguinte:  
 
@@ -75,16 +75,31 @@ Além disso, você pode ver um detalhamento mais explícito dos [eventos de conv
 - Elevação em relação à variante de controle
 - Confiança estatística para cada evento de conversão
 
+### Como as conversões são rastreadas 
+
+Um usuário só pode converter uma vez por evento de conversão e por entrada no Canva. As conversões são atribuídas à mensagem mais recente recebida pelo usuário para essa entrada. O resumo do Canva reflete todas as conversões realizadas pelos usuários nessa jornada e se eles receberam ou não uma mensagem. Cada etapa subsequente mostrará apenas as conversões que ocorreram enquanto essa era a etapa mais recente que o usuário recebeu. 
+
+Considere o seguinte exemplo: um Canva tem 10 notificações por push e o evento de conversão é "Opens App" (ou "Session Start").
+- O usuário A abre o app após entrar, mas antes de receber a primeira mensagem.
+- O usuário B abre o app após cada notificação por push.
+
+O resumo do Canva mostrará duas conversões, enquanto as etapas individuais mostrarão uma conversão na primeira etapa e nenhuma em todas as etapas subsequentes. Se o Horário de silêncio estiver ativo quando o evento de conversão ocorrer, as mesmas regras serão aplicadas. 
+
+Agora, digamos que temos uma tela com Horário de silêncio e os seguintes eventos ocorrem:
+
+1. O usuário A entra em um Canva.
+2. A primeira etapa é uma etapa de postergação dentro do horário de silêncio definido, portanto, a mensagem é suprimida.
+3. O usuário A realiza o evento de conversão.
+
+O usuário A será contado como convertido na variante geral do Canva, mas não na etapa, pois não recebeu a etapa.
+
+Em nosso último exemplo, digamos que temos um Canva com a reelegibilidade ativada. Se um usuário elegível realizar o evento de conversão na primeira entrada e na segunda entrada, serão contadas duas conversões.
+
 ### Relatório de funil
 
-O relatório de funil oferece um relatório visual que permite analisar as jornadas que seus clientes fazem depois de receber um Canva. Se o seu Canva usar um grupo de controle ou várias variantes, você poderá entender como as diferentes variantes afetaram o funil de conversão em um nível mais granular e otimizar com base nesses dados. Para saber mais sobre relatórios de funil, consulte [Relatórios de funil][2].
+O relatório de funil oferece um relatório visual que permite analisar as jornadas que seus clientes fazem depois de receber um Canva. Se o seu Canva usar um grupo de controle ou várias variantes, você poderá entender como as diferentes variantes afetaram o funil de conversão em um nível mais granular e otimizar com base nesses dados. Para saber mais sobre relatórios de funil, consulte [Relatórios de funil]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 ### Relatório de retenção
 
-A retenção de usuários é uma das métricas mais importantes para qualquer profissional de marketing. Manter os usuários engajados voltando para comprar mais indica que os negócios estão saudáveis. O Braze agora permite que você meça a retenção de usuários diretamente na página de **análise de dados do Canva**. Para saber mais sobre como ler e interpretar seu relatório de retenção, consulte [Relatórios de retenção][1].
+A retenção de usuários é uma das métricas mais importantes para qualquer profissional de marketing. Manter os usuários engajados voltando para comprar mais indica que os negócios estão saudáveis. O Braze agora permite que você meça a retenção de usuários diretamente na página de **análise de dados do Canva**. Para saber mais sobre como ler e interpretar seu relatório de retenção, consulte [Relatórios de retenção]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/
-[24]:{% image_buster /assets/img_archive/Journey_5.png %}
-[25]:{% image_buster /assets/img_archive/Journey_6.png %}
-[26]:{% image_buster /assets/img_archive/analyze_variants.png %}

@@ -1,6 +1,6 @@
 ---
-nav_title: メッセージングデータを記録する
-article_title: Braze SDKを使ったプッシュ通知データのロギング
+nav_title: ログ・メッセージ・データ
+article_title: Braze SDKを通したプッシュ通知データの記録
 page_order: 7.2
 description: "Braze SDKを通してプッシュ通知データを記録する方法を学習する。"
 noindex: true
@@ -16,6 +16,6 @@ noindex: true
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/logging_push_data.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/logging_push_data.md %}
 {% endsdktab %}
 {% endsdktabs %}

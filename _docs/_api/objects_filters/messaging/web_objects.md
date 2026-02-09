@@ -1,5 +1,5 @@
 ---
-nav_title: "Web Object"
+nav_title: "Web object"
 article_title: Web Messaging Object
 page_order: 12
 page_type: reference

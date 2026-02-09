@@ -13,18 +13,18 @@ description: "Esta página de inicio cubre artículos sobre Segmentación dentro
 
 guide_featured_title: "Artículos populares"
 guide_featured_list:
-  - name: Creación de un segmento
+  - name: Crear un segmento
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: Administrador de segmentos
+  - name: Administrar segmentos
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Filtros de segmentación
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Embudos de segmentos
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
+  - name: Datos de los segmentos
+    link: /docs/viewing_and_understanding_segment_data/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -91,5 +91,5 @@ Puede refinar aún más sus segmentos utilizando [las Extensiones de Segmento]({
 - **Eventos e interacciones de mensajes:** Segmente a los usuarios en función de si han realizado una compra en los últimos treinta días y también han interactuado con un mensaje específico dentro de la aplicación.
 - **Datos de consulta:** 
   - **Consulta Snowflake:** Segmente a los usuarios con datos combinados de Braze y fuentes externas, como un CRM o un almacén de datos, mediante el uso de [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) para consultar Snowflake.
-  - **Sincronización desde el almacén de datos:** Segmente los usuarios con datos sincronizados directamente desde su almacén de datos o sistema de almacenamiento de archivos a Braze mediante [segmentos CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
+  - **Sincronización desde el almacén de datos:** Segmenta a los usuarios con datos sincronizados directamente desde tu almacén de datos o sistema de almacenamiento de archivos a Braze utilizando [las extensiones de segmento CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/).
 

@@ -1,6 +1,6 @@
 ---
-nav_title: 캔버스 작성
-article_title: 캔버스 작성
+nav_title: 캔버스 구축하기
+article_title: 캔버스 구축하기
 page_order: 1
 layout: dev_guide
 guide_top_header: "캔버스 작성"
@@ -12,7 +12,7 @@ tool: Canvas
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-  - name: 캔버스 만들기
+  - name: 캔버스를 만들기
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
   - name: 캔버스에서 댓글 달기
@@ -39,14 +39,11 @@ guide_featured_list:
   - name: 캔버스의 인앱 메시지
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: 발전 행동
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    image: /assets/img/braze_icons/users-01.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: AI 카피라이팅 어시스턴트
-    link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
+    link: /docs/user_guide/brazeai/generative_ai/copywriting/
     image: /assets/img/braze_icons/edit-05.svg
   - name: 배달 유형
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/

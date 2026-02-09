@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Deep linking
+nav_title: Deep links
 article_title: Deep linking em notificações por push para o SDK Braze
 channel:
   - push notifications
@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/deep_linking.md%} developer_
+{% multi_lang_include developer_guide/swift/deep_linking.md%}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/deep_linking.md%} developer_
+{% multi_lang_include developer_guide/flutter/deep_linking.md%}
 {% endsdktab %}
 {% endsdktabs %}

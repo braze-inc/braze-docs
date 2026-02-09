@@ -1,5 +1,5 @@
 ---
-nav_title: Transaktionsbezogene E-Mail-Kampagnen
+nav_title: Transaktions-E-Mail-Kampagnen
 article_title: Transaktionsbezogene E-Mail-Kampagnen
 page_order: 10
 
@@ -17,7 +17,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 > Braze Transaktions-E-Mails werden versendet, um eine vereinbarte Transaktion zwischen einem Absender und einem Empfänger zu erleichtern. In diesem Referenzartikel erfahren Sie, wie Sie eine transaktionale E-Mail-Kampagne im Braze Dashboard erstellen und eine `campaign_id` generieren, die Sie in Ihre API-Aufrufe für unseren [`/transactional/v1/campaigns/{campaign_id}/send` Endpunkt]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message) einbinden können.
 
 {% alert important %}
-Braze Transactional Email ist nur im Rahmen ausgewählter Braze-Pakete verfügbar. Wenden Sie sich an Ihren Braze Customer Success Manager oder eröffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/) für weitere Informationen.
+Braze Transactional Email ist nur im Rahmen ausgewählter Braze-Pakete verfügbar. Wenden Sie sich an Ihren Customer-Success-Manager:in von Braze oder öffnen Sie ein [Support-Ticket]({{site.baseurl}}/braze_support/) für weitere Informationen.
 {% endalert %}
 
 Die transaktionale E-Mail-Kampagne wurde speziell für den Versand automatisierter, nicht werblicher E-Mail-Nachrichten entwickelt, um eine vereinbarte Transaktion zwischen Ihnen und Ihren Kunden zu erleichtern. Dazu gehören Informationen wie z. B.:
@@ -30,14 +30,14 @@ Die transaktionale E-Mail-Kampagne wurde speziell für den Versand automatisiert
 Kurz gesagt, Sie können Transaktions-E-Mails verwenden, um geschäftskritische Benachrichtigungen zu versenden, die von Ihrem Dienst für einen einzelnen Nutzer:innen stammen, bei dem Schnelligkeit von größter Bedeutung ist. 
 
 {% alert important %}
-Transaktions-E-Mails unterscheiden sich von Transaktionskampagnen, mit denen Sie Ihre Nutzer ohne zusätzliche Kosten ansprechen können. Transaktionskampagnen können zum Beispiel Nachrichten enthalten, die gesendet werden, nachdem ein Nutzer einen Artikel in seinen Warenkorb gelegt hat. Weitere Informationen finden Sie unter [Optionen für die Zielgruppenansprache]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/).
+Transaktions-E-Mails unterscheiden sich von Transaktionskampagnen, mit denen Sie Ihre Nutzer ohne zusätzliche Kosten ansprechen können. Transaktionskampagnen können zum Beispiel Nachrichten enthalten, die gesendet werden, nachdem ein Nutzer einen Artikel in seinen Warenkorb gelegt hat. Weitere Informationen finden Sie unter [Optionen für die Zielgruppenansprache]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/).
 {% endalert %}
 
 ## Schritt 1: Erstellen Sie eine neue Kampagne
 
 Um eine neue Transaktions-E-Mail-Kampagne zu erstellen, erstellen Sie eine Kampagne und wählen Sie **Transaktions-E-Mail** als Nachrichtenkanal.
 
-![Dropdown-Menü Kampagne erstellen mit der hervorgehobenen Option für Transaktions-E-Mails.][1]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Dropdown-Menü Kampagne erstellen mit der hervorgehobenen Option für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Jetzt können Sie mit der Konfiguration Ihrer transaktionalen E-Mail-Kampagne fortfahren.
 
@@ -48,10 +48,10 @@ Der Ablauf der Kampagnenerstellung für Transaktions-E-Mail-Kampagnen ist im Ver
 Daher werden Sie feststellen, dass einige Einstellungen, die Sie vielleicht von anderen Braze-Kampagnentypen kennen, bei der Einrichtung dieses Kampagnentyps nicht erforderlich sind:
 
 - Der Schritt **Lieferung** wurde vereinfacht, um die Terminierungsoptionen zu entfernen. Transaktions-E-Mails werden immer über die Braze REST API unter Verwendung der Kampagnen-ID ausgelöst, die auf der Seite **Zustellung** angezeigt wird. Zusätzliche Einstellungen, wie die Kontrolle der Wiederzulassung und Frequency-Capping-Einstellungen, wurden ebenfalls entfernt, um sicherzustellen, dass alle Nutzer:innen für diese kritischen Transaktionsmeldungen erreichbar sind, wenn Ihr Dienst eine Sendeanfrage triggert.
-- Der Schritt **Zielbenutzer** wurde entfernt. Da Transaktions-E-Mails Ihre gesamte Nutzerbasis als berechtigt registrieren (einschließlich abgemeldeter Nutzer:innen), müssen Sie keine Filter oder Segmente festlegen. Wenn Sie also eine Logik dafür haben, wer diese Nachricht erhalten soll, empfehlen wir Ihnen, diese Logik anzuwenden, bevor Sie entscheiden, ob Sie die API-Anfrage an Braze stellen, um die Nachricht an einen bestimmten Nutzer:innen auszulösen.
+- Der Schritt **Targeting Zielgruppen** wurde entfernt. Da Transaktions-E-Mails Ihre gesamte Nutzerbasis als berechtigt registrieren (einschließlich abgemeldeter Nutzer:innen), müssen Sie keine Filter oder Segmente festlegen. Wenn Sie also eine Logik dafür haben, wer diese Nachricht erhalten soll, empfehlen wir Ihnen, diese Logik anzuwenden, bevor Sie entscheiden, ob Sie die API-Anfrage an Braze stellen, um die Nachricht an einen bestimmten Nutzer:innen auszulösen.
 - Der Schritt **Conversions** wurde entfernt. Transaktions-E-Mails unterstützen zur Zeit kein Tracking von Konversions-Events.
 
-![Erstellung, Zustellung und Bestätigung einer Kampagne für Transaktions-E-Mails.][2]{: style="max-width:80%;"}
+![Erstellung, Zustellung und Bestätigung einer Kampagne für Transaktions-E-Mails.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 Um Ihre Transaktions-E-Mail-Kampagne zu konfigurieren, gehen Sie folgendermaßen vor:
 
@@ -73,5 +73,3 @@ Die Verwendung des Tags `Connected Content` erfordert, dass Braze während des S
 Aus diesem Grund unterstützen wir keine `Connected Content` oder `Promotion Code` Tags in einem Feld Ihrer Transaktions-E-Mail-Kampagnen.
 
 
-[1]: {% image_buster /assets/img/transactional_email_campaign.png %}
-[2]: {% image_buster /assets/img/transactional_campaign_compose.png %}

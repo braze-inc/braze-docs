@@ -30,3 +30,12 @@ Antes de um usuário enviar um formulário, os dados rastreados em uma landing p
 
 Como esses dados não estão vinculados a usuários identificáveis, eles não podem ser usados para redirecionar ou rastrear o comportamento individual do usuário.
 
+## Mesclagem de perfis de usuário duplicados
+
+O Braze não mescla automaticamente os usuários com base em atribuições, como e-mail ou telefone, quando um formulário de landing page é enviado. Se um formulário for enviado com um e-mail ou número de telefone que corresponda a um perfil de usuário existente, o Braze criará um perfil de usuário separado.
+
+Para mesclar perfis de usuário duplicados, você pode:
+
+- Dispare o [endpoint`/users/merge` ]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) quando um formulário de landing page for enviado para mesclar o novo perfil com um perfil existente.
+- Programe [a mesclagem em massa]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) para mesclar periodicamente perfis duplicados com base em identificadores correspondentes.
+

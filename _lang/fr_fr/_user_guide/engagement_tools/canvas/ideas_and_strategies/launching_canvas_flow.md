@@ -1,13 +1,13 @@
 ---
-nav_title: Lancement avec Canvas Flow
-article_title: Lancement avec Canvas Flow
+nav_title: Lancer avec le flux Canvas
+article_title: Lancer avec Canvas Flow
 page_order: 3
 description: "Cet article de référence explique comment préparer et tester un Canvas créé à l’aide de Canvas Flow avant son lancement."
 page_type: reference
 tool: Canvas
 ---
 
-# Lancement avec Canvas Flow
+# Lancer avec Canvas Flow
 
 > Cet article de référence explique comment préparer et tester un Canvas créé à l’aide de Canvas Flow avant son lancement. Ceci comprend le fait d’identifier les points de contrôle importants de Canvas tel que les conditions d’entrée dans le Canvas, les sommaires d’audiences et les segments d’utilisateur.
 
@@ -22,7 +22,7 @@ Prenez en compte les [conditions de concurrence]({{site.baseurl}}/user_guide/eng
 
 Pour entrer dans un Canvas, les utilisateurs doivent se trouver dans l’audience d’entrée avant que sa planification n’arrive, que le Canvas soit planifié, par événement ou déclenché par API. 
 
-![][1]{: style="max-width:75%;"}
+![Un canvas basé sur des actions qui saisit les utilisateurs lorsqu'ils effectuent un achat pendant l'heure locale d'un utilisateur du 30 avril 2025 à 12 heures au 7 mai 2025 à 12 heures.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
 Notez que les utilisateurs qui se qualifient pour votre audience d’entrée après le lancement du Canvas n’y entreront pas.
 
@@ -83,9 +83,32 @@ L'étape de [l’arbre décisionnel]({{site.baseurl}}/user_guide/engagement_tool
 
 Après avoir passé en revue les détails de votre Canvas, consultez la rubrique [Envoi de Canvas de test]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) pour connaître les différentes méthodes que vous pouvez utiliser pour tester votre Canvas auprès d'utilisateurs test.
 
+## Liste de contrôle pour le lancement
+
+### Vérifier la disponibilité des utilisateurs
+
+- Assurez-vous que vos utilisateurs répondent à vos critères de segmentation.
+- Confirmez que l'état de l'abonnement est "abonné" ou "abonné" et que le jeton Push existe. Si vous avez ajouté ces règles en tant que règles d'entrée dans le Canvas, il est possible que les utilisateurs aient été désabonnés entre l'entrée dans le Canvas et la réception de l'étape du message.
+- Confirmez qu'ils correspondent à vos paramètres d'envoi de Canvas. (Si les utilisateurs sont "abonnés" mais que les paramètres sont "Abonnés", les utilisateurs ne seront pas activés pour le canal).
+- Si la limite de fréquence globale est activée pour votre Canvas, vérifiez si vos règles limitent le nombre de fois où chaque utilisateur peut recevoir un message provenant d'un canal spécifique.
+- Si les heures calmes sont activées, l'heure d'envoi de votre message peut être affectée, ce qui signifie que votre message peut être envoyé à la prochaine heure disponible (à la fin des heures calmes) ou être entièrement annulé.
+- Vérifiez la disponibilité des utilisateurs pour des filtres supplémentaires dans votre étape du canvas.
+
+### Confirmer qu'ils ont effectué l'événement personnalisé ou l'achat préalable.
+
+- Vérifiez s'il existe une condition de concurrence, qui a une incidence sur les messages que les utilisateurs reçoivent s'ils déclenchent plusieurs actions en même temps.
+- Assurez-vous qu'il n'y a pas de filtres spécifiques dans l'étape qui auraient pu empêcher les utilisateurs de recevoir le message.
+- Recherchez les conflits entre les différentes étapes d'un même Canvas. Par exemple, les utilisateurs qui n'ont pas reçu le message peuvent être arrêtés par un filtre qui exige la réalisation d'une autre étape sur une autre branche.
+- Confirmez que les utilisateurs satisfont à des règles de validation supplémentaires.
+- Confirmez que l'étape du canvas était connectée à l'étape précédente au moment de l'envoi.
+
+### Confirmez que votre canvas s'enregistre correctement et que toutes les étapes sont valables.
+
+Si votre Canvas ne se charge pas et ne progresse pas, cela peut être dû au fait qu'une version précédente du Canvas n'a pas été enregistrée correctement et contient des étapes non valides. Vous pouvez dupliquer le canvas à partir du tableau de bord. Si le problème persiste, ouvrez un [ticket d'assistance.]({{site.baseurl}}/braze_support/)
+
 ## Résolution des problèmes
 
-{% details Pourquoi mes utilisateurs ne reçoivent-ils pas mes messages Canvas ? %}
+{% details Why are my users not receiving my Canvas messages? %}
 **Vérifier la disponibilité des utilisateurs**
 - Assurez-vous qu'ils répondent à vos critères de segmentation.
 - Confirmez que leur état d'abonnement à Push est "abonné" ou "abonné" **et que** leur état " **Push Enabled** " est défini sur "true". Si vous avez ajouté ces règles d’entrées Canvas, il est possible que les utilisateurs aient été désinscrits entre le moment de leur accession au Canvas et l’étape de réception du message.
@@ -102,4 +125,3 @@ Après avoir passé en revue les détails de votre Canvas, consultez la rubrique
 - Confirmez que l'étape du canvas était connectée à l'étape précédente au moment de l'envoi.
 {% enddetails %}
 
-[1]: {% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}

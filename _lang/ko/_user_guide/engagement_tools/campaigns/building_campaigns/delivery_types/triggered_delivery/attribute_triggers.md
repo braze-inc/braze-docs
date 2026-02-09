@@ -22,7 +22,7 @@ tool:
 
 속성 트리거를 사용하려면 캠페인 또는 캔버스 구성요소를 생성하고 **실행 기반 전달**을 전달 방법으로 선택합니다. 그런 다음 사용하려는 속성 트리거를 선택합니다.
 
-![][1]
+!["트리거를 선택할 수 있는 드롭다운이 있는 '실행 기반 전달' 섹션을 클릭합니다.]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### 구독 상태 업데이트
 
@@ -41,7 +41,9 @@ tool:
 예를 들어, 사용자가 프로그램에 옵트인할 때 환영 SMS 메시지로 사용자를 타겟팅할 수 있습니다. 또한 업데이트 소스를 지정하여 메시지가 실행되는 시점을 보다 세밀하게 제어할 수도 있습니다. 
 
 사용 가능한 업데이트 소스는 채널마다 다릅니다:
+- 캔버스 사용자 업데이트 단계
 - CSV 가져오기
+- 목록 구독취소
 - 환경설정 센터
 - REST API
 - SDK
@@ -58,21 +60,21 @@ tool:
 
 `any new value` 옵션과 함께 `Change Custom Attribute Value` 트리거를 사용하여 부울, 정수, 문자열 또는 날짜 값이 새 값으로 변경될 때 사용자를 타겟팅합니다.
 
-예를 들어, 로열티 포인트 수가 변경되면 사용자를 타겟팅하여 현재 보유한 포인트 수를 알려줍니다. 이 예제에서는 사용자가 85개의 로열티 포인트를 보유하고 있고 로열티 포인트 속성이 새로운 값으로 변경될 때 트리거되도록 캠페인을 설정했다고 가정해 보겠습니다. 이 사용자의 로열티 포인트 속성 값이 새로운 값(e.g 83, 84, 86 등)으로 변경되면 캠페인이 트리거됩니다.
+예를 들어, 보상 포인트 수가 변경되면 사용자를 타겟팅하여 현재 보유한 포인트 수를 알려줍니다. 이 예제에서는 사용자에게 85개의 보상 포인트가 있고 보상 포인트 속성이 새로운 값으로 변경될 때 트리거되도록 캠페인을 설정했다고 가정해 보겠습니다. 이 사용자의 보상 포인트 속성 값이 새로운 값(예: 83, 84, 86 등)으로 변경되면 캠페인이 트리거됩니다.
 
-다음 사용 사례의 티어 업데이트 알림을 예로 들어 보겠습니다. 로열티 등급이 변경되면 사용자에게 알림을 보낼 수 있습니다. 이 사용 사례를 달성하려면 `Change Custom Attribute Value`에서 트리거되는 캠페인을 설정하고 커스텀 속성 로열티 티어가 새로운 값으로 변경될 때 트리거되도록 설정합니다.
+다음 사용 사례의 티어 업데이트 알림을 예로 들어 보겠습니다. 보상 등급이 변경되면 사용자에게 알림을 보낼 수 있습니다. 이 사용 사례를 달성하려면 `Change Custom Attribute Value` 에서 트리거되는 캠페인을 설정하고 커스텀 속성 보상 티어가 새로운 값으로 변경될 때 트리거되도록 설정하세요.
 
 {% alert important %}
 현재 배열 어트리뷰트에는 속성 트리거를 사용할 수 없습니다.
 {% endalert %}
 
-![임의의 새 값][2]
+!["AA_current_rewards_tier" 을 임의의 값으로 변경하는 '커스텀 속성 값 변경' 트리거입니다.]({% image_buster /assets/img_archive/any_value.png %})
 
-또한 Liquid를 사용하여 고객의 새로운 로열티 등급으로 메시지 본문을 맞춤 설정하고 고객에게 변경 사항에 대한 자세한 정보를 제공할 수 있습니다.
+또한 Liquid를 사용하여 고객의 새로운 보상 등급으로 메시지 본문을 개인화하고 고객에게 변경 사항에 대한 자세한 정보를 제공할 수 있습니다.
 
 {% raw %}
 ```liquid
-Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
+Your rewards tier was just changed to {{custom_attribute.${AA_current_rewards_tier}}}
 ```
 {% endraw %}
 
@@ -80,9 +82,9 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 `specific value` 옵션과 함께 `Change Custom Attribute Value` 트리거를 사용하여 부울, 정수 또는 문자열 사용자 지정 속성이 특정 값으로 변경될 때 사용자를 타겟팅합니다. 
 
-예를 들어, 로열티 등급이 최고 등급으로 변경된 사용자를 타겟팅할 수 있습니다. 이 예제에서는 최고 로열티 등급이 슈퍼 VIP라고 가정합니다. 사용자의 로열티 등급 커스텀 속성이 `Super VIP`로 변경될 때 트리거되도록 캠페인을 설정하여 사용자가 슈퍼 VIP가 된 것을 축하할 수 있습니다.
+예를 들어, 보상 등급이 최고 등급으로 변경될 때 사용자를 타겟팅할 수 있습니다. 이 예제에서는 최고 보상 등급이 슈퍼 VIP라고 가정합니다. 사용자의 보상 티어 커스텀 속성이 `Super VIP` 로 변경될 때 트리거되도록 캠페인을 설정하여 사용자가 슈퍼 VIP가 된 것을 축하할 수 있습니다.
 
-![][4]
+!["AA_current_rewards_tier" 이 특정 값인 "super vip"로 변경되는 "커스텀 속성 값 변경" 트리거입니다.]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - 배열 및 날짜 커스텀에는 특정 커스텀 속성에 대한 속성 트리거를 사용할 수 없습니다.
@@ -91,6 +93,3 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 - 사용자 지정 속성 값 변경 트리거는 새로 생성된 사용자에게도 적용됩니다.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

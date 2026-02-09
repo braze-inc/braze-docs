@@ -25,12 +25,14 @@ page_order: 6.2
 
 1. Go to **Analytics** > **Report Builder (New)**.
 2. Select **Create New Report**.
-3. In the **Rows** dropdown, select one of the following to create a report:
+3. In the **Rows** dropdown, select what you'd like to report on:
     - Campaigns
     - Canvases
     - Campaigns and Canvases
     - Channels
     - Tags
+
+    Note that your **Rows** selection will impact [the metrics that you can view](#metrics-availability). For example, you can view multivariate metrics only if you report on **Canvases**, or **Campaigns** with a **Variant** drilldown. You cannot view those metrics when reporting on **Campaigns and Canvases**, even if those campaigns and Canvases have multivariate tests. 
 
 ![The "Rows and columns" section with fields to select the rows and groupings for your report.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 
@@ -90,6 +92,10 @@ If you want to report on Canvas variants or steps, select **Canvases** for rows 
 | Unique Impressions | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. |
 | Unique Recipients | Available for Campaigns, Canvases, Campaigns and Canvases, Tags. Unavailable with **Channels** drilldown. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+### Deleted message variants
+
+Statistics for deleted message variants are not displayed when you break down your report by campaigns or Canvases. However, channel-level totals include all statistics regardless of whether the variant was deleted. For example, _Sends_ for email include all email sends, but if you break down those statistics by campaign, the numbers may be lower because sends for deleted message variants are filtered out.
 
 ## Viewing a report
 

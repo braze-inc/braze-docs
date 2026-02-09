@@ -3,7 +3,7 @@ nav_title: 채널 성능/성과 대시보드
 article_title: 채널 성능/성과 대시보드
 page_order: 2
 page_type: reference
-description: "이 참조 문서는 채널 성능 대시보드에 대해 다루며, 캠페인과 캔버스 전반에 걸쳐 전체 채널의 성능 측정기준을 볼 수 있습니다."
+description: "이 참고 문서에서는 캠페인과 캔버스 모두에서 전체 채널의 성능/성과 측정기준을 확인할 수 있는 채널 성과 대시보드에 대해 설명합니다."
 tool: 
   - Reports
 
@@ -13,7 +13,7 @@ tool:
 
 > 채널 실적 대시보드에는 캠페인과 캔버스 모두에서 전체 채널에 대한 종합적인 실적 지표가 표시됩니다. 이 대시보드는 현재 이메일 및 SMS에 사용할 수 있습니다.
 
-![이메일 성능/성과 대시보드가 지난 30일 동안의 이메일 채널 인게이지먼트를 표시합니다.][1]
+![이메일 성능/성과 대시보드가 지난 30일 동안의 이메일 채널 인게이지먼트를 표시합니다.]({% image_buster /assets/img_archive/email_performance_dashboard_1.png %})
 
 다음 대시보드를 볼 수 있습니다:
 - [이메일 성능/성과 대시보드](#email-performance-dashboard)
@@ -26,11 +26,11 @@ tool:
 
 ### 메트릭 계산 방법
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![335,630건, 하루 평균 11,187.667건을 전송한 이메일 캠페인의 예입니다.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
 이메일 성능 대시보드에서 다양한 측정기준에 대한 계산은 개별 메시지 수준(예: 캠페인 분석)과 동일합니다. 선택한 날짜 범위에 대해 모든 캠페인 및 캔버스의 측정기준이 집계된 대시보드입니다. 이 정의에 대해 자세히 알아보려면 [이메일 측정기준]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting#email-metrics)을 참조하십시오.
 
-각 타일은 먼저 비율 메트릭을 표시하고, 그 다음에 개수 메트릭을 표시합니다 (*Sends*의 경우는 예외로, 개수 메트릭을 먼저 표시하고 하루 평균을 표시합니다). 예를 들어, 고유 클릭 타일에는 선택한 기간의 *고유 클릭률*과 해당 기간의 고유 클릭 총 수가 포함됩니다. 각 타일은 또한 [지난 기간과의 비교](#comparison-to-last-period-change-in-totals-or-rates)를 보여줍니다.
+각 타일은 먼저 비율 메트릭을 표시하고, 그 다음에 개수 메트릭을 표시합니다 (*Sends*의 경우는 예외로, 개수 메트릭을 먼저 표시하고 하루 평균을 표시합니다). 예를 들어, 고유 클릭 타일에는 선택한 기간의 *고유 클릭률*과 해당 기간의 고유 클릭 총 수가 포함됩니다. 각 타일은 또한 [지난 기간과의 비교](#comparing-time-periods)를 보여줍니다.
 
 | 측정기준 | 유형 | 계산 |
 | --- | --- | ---- |
@@ -60,32 +60,32 @@ The “Other” category includes any user string that cannot be identified as d
 
 To better understand what is in this "Other" category, you can extract the user agents using either of these options:
 
-1. [Currents]({{site.baseurl}}/user_guide/data/braze_currents) will send you the exact user agent string that was retrieve from the your users' devices.
+1. [커런츠는]({{site.baseurl}}/user_guide/data/braze_currents) 사용자의 기기에서 검색된 정확한 사용자 에이전트 문자열을 전송합니다.
 2. Leverage our [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder) to use SQL or our [AI Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder#generating-sql-with-the-ai-query-builder) to view the user agents.
 
-![기기별 인게이지먼트 보고서에는 모바일, 데스크톱, 태블릿 및 기타 기기의 클릭 수가 표시됩니다. 클릭 수가 가장 많은 것은 모바일 기기에서 발생합니다.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
+![모바일, 데스크톱, 태블릿 및 기타 기기에 대한 클릭 수를 보여주는 기기별 참여 보고서입니다. 모바일 기기에서 가장 많은 클릭 수가 발생합니다.]({% image_buster /assets/img/engagement_by_device_type.png %}){: style="max-width:70%;"}
 
-이메일 열기에서는 Braze가 Google 이미지 프록시, Apple 이미지 프록시 및 Yahoo 메일 프록시를 분리합니다. 이 서비스는 이메일의 모든 포함된 이미지를 캐시하고 로드한 후 수신자에게 전달됩니다. 결과적으로, 이는 받은편지함 제공자의 서버에서 이메일을 여는 트리거가 되어 수신자의 서버가 아닌, 이메일 열람 수가 부풀려질 수 있습니다. 이 서비스는 이미지를 로드할 때 프라이버시, 보안, 성능/성과 및 효율성을 향상시키기 위한 것입니다. 이것은 또한 수신자로부터 실제 열람을 포함할 수 있습니다. 이러한 프록시 서비스는 사용자 에이전트를 마스킹하고, 우리는 사용자 에이전트를 사용하여 프록시 데이터를 분류합니다.
+이메일 열기에서는 Braze가 Google 이미지 프록시, Apple 이미지 프록시 및 Yahoo 메일 프록시를 분리합니다. 이 서비스는 이메일의 모든 포함된 이미지를 캐시하고 로드한 후 수신자에게 전달됩니다. 결과적으로, 이는 받은편지함 제공자의 서버에서 이메일을 여는 트리거가 되어 수신자의 서버가 아닌, 이메일 열람 수가 부풀려질 수 있습니다. 이 서비스는 이미지를 로드할 때 프라이버시, 보안, 성능/성과 및 효율성을 향상시키기 위한 것입니다. 이러한 프록시 서비스는 사용자 에이전트를 마스킹하고 사용자 에이전트를 사용하여 프록시 데이터를 분류하기 때문에 수신자의 실제 열람도 포함될 수 있습니다.
 
-![기기별 인게이지먼트 보고서에는 모바일, 데스크탑, 태블릿, Apple Privacy Proxy, Google Image Proxy, Yahoo Mail Proxy 및 기타에 대한 클릭 수가 표시됩니다. 가장 많은 수의 열림은 모바일 기기에서 발생합니다.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
+![모바일, 데스크톱, 태블릿, Apple 개인정보 보호 프록시, Google 이미지 프록시, Yahoo 메일 프록시 및 기타에 대한 클릭 수를 보여주는 기기별 참여 보고서입니다. 모바일 기기에서 가장 많은 열기 횟수가 발생합니다.]({% image_buster /assets/img/engagement_by_device_type_proxy.png %}){: style="max-width:70%;"}
 
 ### 받은편지함 제공자의 인게이지먼트
 
-**받은편지함 제공업체의 인게이지먼트** 보고서는 클릭 또는 열기에 기여하는 주요 받은편지함 제공업체를 표시합니다. 특정 주요 받은편지함 제공업체를 클릭하여 특정 수신 도메인으로 세부 분석할 수 있습니다. 예를 들어, Microsoft가 이 보고서에서 상위 받은편지함 제공업체 측정기준 중 하나로 나열된 경우, "outlook.com", "hotmail.com", "live.com" 등과 같은 수신 도메인에 대한 세부 정보를 추가로 확인할 수 있습니다.
+**받은편지함 제공업체의 인게이지먼트** 보고서는 클릭 또는 열기에 기여하는 주요 받은편지함 제공업체를 표시합니다. 특정 주요 받은편지함 제공업체를 클릭하여 특정 수신 도메인으로 세부 분석할 수 있습니다. 예를 들어 이 보고서에서 Microsoft가 상위 사서함 공급자 측정기준 중 하나로 표시되는 경우 "outlook.com", "hotmail.com", "live.com" 등과 같은 수신 도메인에 대한 세부 정보를 추가로 볼 수 있습니다.
 
-![][5]{: style="max-width:70%;"}
+![사서함 공급자별 참여 보고서 예시(구글, 애플 iCloud, 야후, 마이크로소프트, Mail.Ru 그룹 및 해당 클릭 수).]({% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}){: style="max-width:70%;"}
 
 ### 참여 시간
 
 **인게이지먼트 시간** 보고서는 사용자가 이메일에 인게이지먼트하는 시기에 대한 데이터를 표시합니다. 이것은 고객의 인게이지먼트가 가장 높은 요일이나 시간을 파악하는 데 도움이 될 수 있습니다. 이러한 통찰력을 통해 메시지를 보내는 최적의 날이나 시간을 실험하여 더 높은 참여를 유도할 수 있습니다. 이 시간은 회사의 표준 시간대를 기준으로 합니다.
 
-**요일** 참여 보고서는 요일별로 열림 또는 클릭을 분석합니다. 
+The **Day of the week** engagement report breaks down opens or clicks by day of the week. 
 
-![][6]
+![월요일과 수요일에 가장 많은 클릭이 발생한 요일 참여 보고서의 예입니다.]({% image_buster /assets/img_archive/time_engagement.png %})
 
-**하루 중 시간** 참여 보고서는 24시간 창 내에서 시간별로 열림 또는 클릭을 분류합니다.
+The **Time of the day** engagement report breaks down opens or clicks by each hour in a 24-hour time window.
 
-![][7]
+![오전 12시부터 오후 11시까지 열거나 클릭한 시간대별 참여 보고서의 예입니다.]({% image_buster /assets/img_archive/time_engagement_day.png %})
 
 이메일에 대한 분석에 대한 자세한 내용은 [이메일 보고서]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/)를 확인하세요.
 
@@ -95,9 +95,9 @@ SMS 성능 대시보드를 사용하려면 **분석** > **SMS 성능**으로 이
 
 ### 메트릭 계산 방법
 
-![][2]{: style="max-width:40%;float:right;margin-left:15px;border:none;"}
+![하루 평균 11,187.667건, 총 335,630건의 SMS 캠페인이 전송된 예시입니다.]({% image_buster /assets/img_archive/email_performance_dashboard_2.png %}){: style="max-width:40%;float:right;margin-left:15px;border:none;"}
 
-SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 개별 메시지 수준(예: 캠페인 분석)과 동일합니다. 선택한 날짜 범위에 대해 모든 캠페인 및 캔버스의 측정기준이 집계된 대시보드입니다. 이 정의에 대해 더 알아보려면 [SMS 측정기준]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_campaign_analytics/)을 참조하십시오.
+SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 개별 메시지 수준(예: 캠페인 분석)과 동일합니다. 선택한 날짜 범위에 대해 모든 캠페인 및 캔버스의 측정기준이 집계된 대시보드입니다. To learn more about these definitions, refer to [SMS metrics]({{site.baseurl}}/sms_mms_rcs_reporting/).
 
 각 타일은 먼저 비율 메트릭을 표시하고, 그 다음에 개수 메트릭을 표시합니다 (_Sends_의 경우는 예외로, 개수 메트릭을 먼저 표시하고 하루 평균을 표시합니다). 각 타일은 또한 [지난 기간과의 비교](#comparison-to-last-period-change-in-totals-or-rates)를 보여줍니다.
 
@@ -120,11 +120,11 @@ SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 
 - **캔버스:** 최대 10개의 캔버스를 선택하세요. 적용되면, 대시보드는 선택한 캔버스에 대한 측정기준만 표시됩니다. 먼저 태그 필터를 선택하면 캔버스 필터 옵션에는 선택한 태그가 포함된 캔버스만 포함됩니다.
 - **캠페인:** 최대 10개의 캠페인을 선택하세요. 적용되면, 대시보드는 선택한 캠페인에 대한 측정기준만 표시됩니다. 태그 필터를 먼저 선택하면 캠페인 필터 옵션에는 선택한 태그가 포함된 캠페인만 포함됩니다.
 
-![채널 성능/성과 대시보드에서 필터 옵션을 사용하여 태그와 필터링할 캔버스 목록을 선택할 수 있습니다.][3]
+![채널 성능/성과 대시보드에서 필터 옵션을 사용하여 태그와 필터링할 캔버스 목록을 선택할 수 있습니다.]({% image_buster /assets/img_archive/dashboard_filters.png %})
 
 ## 기간 비교
 
-채널 성능 대시보드는 날짜 범위에서 선택한 기간과 동일한 일수를 합산한 이전 기간을 자동으로 비교합니다. 예를 들어, 대시보드에서 날짜 범위로 "지난 7일"을 선택하면, 지난 기간과의 비교는 지난 7일의 측정기준을 그 이전 7일과 비교하게 됩니다. 커스텀 날짜 범위(예: 5월 10일부터 5월 15일까지, 총 6일간의 데이터)를 선택하면 대시보드는 해당 기간의 측정기준을 5월 4일부터 5월 9일까지의 측정기준과 비교합니다.
+채널 성능/성과 대시보드는 날짜 범위에서 선택한 기간과 이전 기간을 자동으로 비교하여 동일한 일수를 합산합니다. 예를 들어, 대시보드에서 날짜 범위로 "지난 7일"을 선택하면, 지난 기간과의 비교는 지난 7일의 측정기준을 그 이전 7일과 비교하게 됩니다. 커스텀 날짜 범위(예: 5월 10일부터 5월 15일까지, 총 6일간의 데이터)를 선택하면 대시보드는 해당 기간의 측정기준을 5월 4일부터 5월 9일까지의 측정기준과 비교합니다.
 
 비교는 두 기간 간의 차이를 계산하고 이를 이전 기간의 지표로 나누어 계산된 마지막 기간과 현재 기간 간의 백분율 변화입니다.
 
@@ -132,9 +132,9 @@ SMS 성능/성과 대시보드에서 다양한 측정기준에 대한 계산은 
 
 **합계의 변화 표시**—두 기간 동안의 총 수(예: 전달된 이메일 수)를 비교하는 것—와 **비율의 변화 표시**—비율(예: 전달 비율)을 비교하는 것— 사이를 전환할 수 있습니다.
 
-![채널 성능 대시보드의 총계 변화 또는 비율 변화를 표시하기 위해 전환하는 라디오 버튼입니다.][4]
+![라디오 버튼을 사용하여 채널 성능/성과 대시보드의 총액 변경 표시 또는 요금 변경 표시 간에 전환할 수 있습니다.]({% image_buster /assets/img_archive/email_performance_dashboard_3.png %}){: style="max-width:60%"}
 
-## 자주 묻는 질문
+## Frequently asked questions
 
 ### 왜 내 대시보드가 빈 값을 표시합니까?
 
@@ -168,10 +168,3 @@ This means Braze hasn't recorded any data for that metric during the time you se
 
 --->
 
-[1]: {% image_buster /assets/img_archive/email_performance_dashboard_1.png %}
-[2]: {% image_buster /assets/img_archive/email_performance_dashboard_2.png %}
-[3]: {% image_buster /assets/img_archive/dashboard_filters.png %}
-[4]: {% image_buster /assets/img_archive/email_performance_dashboard_3.png %}
-[5]: {% image_buster /assets/img_archive/mailbox_provider_time_engagement.png %}
-[6]: {% image_buster /assets/img_archive/time_engagement.png %}
-[7]: {% image_buster /assets/img_archive/time_engagement_day.png %}

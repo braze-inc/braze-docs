@@ -1,7 +1,7 @@
 ---
 page_order: 4
 nav_title: 푸시 스토리
-article_title: Braze SDK용 푸시 스토리 설정하기
+article_title: 푸시 스토리를 Braze 소프트웨어 개발 키트에 설정하다
 channel:
   - push notifications
 ---
@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/push_notifications/push_stories.md developer_ %}
+{% multi_lang_include developer_guide/cordova/push_notifications/push_stories.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/push_notifications/push_stories.md developer_ %}
+{% multi_lang_include developer_guide/react_native/push_notifications/push_stories.md %}
 {% endsdktab %}
 {% endsdktabs %}

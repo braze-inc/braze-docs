@@ -1,12 +1,12 @@
 ---
-nav_title: Configuration des valeurs par défaut
-article_title: Configuration des valeurs par défaut de Liquid
+nav_title: Définir les valeurs par défaut
+article_title: Définir les valeurs par défaut des liquides
 page_order: 5
 description: "Cet article de référence explique comment définir les valeurs de secours par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
 
 ---
 
-# Configuration des valeurs par défaut
+# Définir les valeurs par défaut
 
 {% raw %}
 
@@ -14,7 +14,7 @@ description: "Cet article de référence explique comment définir les valeurs d
 
 ## Comment ils fonctionnent
 
-Des valeurs par défaut peuvent être ajoutées en spécifiant un [filtre liquide][3] (utilisez `|` pour distinguer le filtre en ligne, comme indiqué) avec le nom "default".
+Des valeurs par défaut peuvent être ajoutées en spécifiant un [filtre liquide](http://docs.shopify.com/themes/liquid-documentation/filters) (utilisez `|` pour distinguer le filtre en ligne, comme indiqué) avec le nom "default".
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -172,7 +172,7 @@ Supposons que vous disposiez d'un attribut personnalisé de type tableau appelé
 {% endraw %}
 
 {: start="2"}
-2\. Indiquez le message à envoyer si `upcoming_trips` a un contenu :<br><br>**2a.** Adressez-vous à l'utilisateur et incluez une valeur par défaut, au cas où vous n'auriez pas son nom. <br>**2b.** Utilisez une étiquette `for` pour spécifier que vous allez extraire des propriétés (ou des informations) pour chaque voyage contenu dans `upcoming_trips`. <br>**2c.** Listez les propriétés dans le message et incluez une valeur par défaut si l'adresse `departure_date` n'est pas définie. (Disons qu'une adresse `destination` est requise pour la création d'un voyage, il n'est donc pas nécessaire de définir une valeur par défaut pour cela).<br>**2d.** Fermez l'étiquette `for`, puis la logique conditionnelle.
+2\. Indiquez le message à envoyer si `upcoming_trips` a un contenu :<br><br>**2a.** Adressez-vous à l'utilisateur et incluez une valeur par défaut, au cas où vous n'auriez pas son nom. <br>**2b.** Utilisez une étiquette `for` pour spécifier que vous allez extraire des propriétés (ou des informations) pour chaque voyage contenu dans `upcoming_trips`. <br>**2c.** Listez les propriétés dans le message et incluez une valeur par défaut si l'adresse `departure_date` n'est pas définie. (Disons qu'une adresse `destination` est requise pour la création d'un voyage, vous n'avez donc pas besoin de définir une valeur par défaut pour cela).<br>**2d.** Fermez l'étiquette `for`, puis la logique conditionnelle.
 
 {% raw %}
 ```liquid
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

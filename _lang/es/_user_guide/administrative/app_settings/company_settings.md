@@ -1,10 +1,10 @@
 ---
-nav_title: Configuración de administrador
+nav_title: Configuración del administrador
 article_title: Configuración de administrador
 page_order: 20
 layout: dev_guide
 guide_top_header: "Configuración de administrador"
-guide_top_text: "Esta página se encuentra en <b>Configuración</b> > <b>Configuración del administrador</b>. A continuación, puede seleccionar la pestaña correspondiente para navegar hasta los ajustes que desee gestionar. <br> <br> La mayoría de las funciones de <b>la configuración de administración</b> sólo están disponibles para los administradores de cuentas Braze. Si no tiene acceso pero cree que debería, póngase en contacto con el administrador de la cuenta Braze de su empresa."
+guide_top_text: "Esta página se encuentra en <b>Configuración</b> > <b>Configuración del administrador</b>. A continuación, puede seleccionar la pestaña correspondiente para navegar hasta los ajustes que desee gestionar. <br> <br> La mayoría de las funciones de <b>la configuración de administración</b> sólo están disponibles para los administradores de cuentas Braze. Si no tienes acceso pero crees que deberías, ponte en contacto con el administrador de la cuenta Braze de tu empresa."
 
 page_type: landing
 description: "Esta página contiene artículos sobre la configuración de administración. Aquí encontrarás artículos sobre cómo configurar la información de contacto, las preferencias de notificación y los ajustes de seguridad."
@@ -31,4 +31,3 @@ Cualquier modificación realizada en la sección **Configuración del administra
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/administrative/

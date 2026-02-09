@@ -1,12 +1,12 @@
 ---
 page_order: 0.1
-nav_title: Personnalisation des messages
-article_title: Personnaliser les notifications push pour le SDK de Braze
+nav_title: Personnaliser les messages
+article_title: Personnalisez les notifications push pour le SDK de Braze
 channel:
   - push notifications
 ---
 
-# Personnalisation des notifications push
+# Personnaliser les notifications push
 
 > Découvrez comment personnaliser les notifications push pour le SDK de Braze.
 
@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications/customization.md developer_ %}
+{% multi_lang_include developer_guide/swift/push_notifications/customization.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-guide/fireos/push_notifications/customization.md developer_ %}
+{% multi_lang_include developer_guide/fireos/push_notifications/customization.md %}
 {% endsdktab %}
 {% endsdktabs %}

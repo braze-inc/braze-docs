@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exporter les ID des produits"
+nav_title: "GET : Exporter les ID de produit"
 article_title: "GET : Exporter les ID des produits"
 search_tag: Endpoint
 page_order: 1
@@ -44,8 +44,6 @@ https://rest.iad-01.braze.com/purchases/product_list?page=1
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "products": [
     "product_name" (string), the name of the product

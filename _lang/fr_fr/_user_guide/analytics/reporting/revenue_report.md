@@ -1,5 +1,5 @@
 ---
-nav_title: "Rapport de chiffre d'affaires"
+nav_title: "Chiffre d'affaires"
 article_title: "Rapport de chiffre d'affaires"
 page_type: reference
 description: "Cette page décrit comment utiliser la page Rapport sur les recettes pour afficher des données sur les recettes sur des périodes spécifiques, les recettes d'un produit spécifique et les recettes totales de votre appli."
@@ -16,7 +16,7 @@ Pour afficher un rapport sur vos chiffres d'affaires à partir du tableau de bor
 
 Vous pouvez personnaliser votre rapport du chiffre d'affaires en sélectionnant une plage de dates, les applications sur lesquelles portera le rapport, ainsi que des paramètres.
 
-![Page « Rapport de chiffre d’affaires » montrant le graphique « Évolution des performances » avec « Chiffre d’affaires » comme paramètre.][1]
+![Page « Rapport de chiffre d’affaires » montrant le graphique « Évolution des performances » avec « Chiffre d’affaires » comme paramètre.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtrage par date et par application
 
@@ -39,6 +39,10 @@ Vous pouvez visualiser les données suivantes dans le **graphique des performanc
 
 ## Calcul du chiffre d'affaires
 
+{% alert note %}
+Lorsque vous enregistrez un chiffre d'affaires pour une devise sans taux de change, Braze l'enregistre comme un achat de 0,00 $ US.
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;
@@ -55,23 +59,23 @@ Vous pouvez visualiser les données suivantes dans le **graphique des performanc
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Revenus à vie</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Valeur vie client par utilisateur</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Chiffre d'affaires quotidien moyen</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Achats quotidiens</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Revenus quotidiens par utilisateur</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -80,8 +84,6 @@ Vous pouvez visualiser les données suivantes dans le **graphique des performanc
 
 Consultez le tableau **Ventilation des produits** pour obtenir la liste des produits achetés au cours de la période sélectionnée, le nombre de produits achetés et le chiffre d'affaires généré par chacun d'entre eux.
 
-![Tableau « Ventilation des produits » affichant les colonnes « Nom du produit », « Achetés » et « Chiffre d'affaires ».][2]
+![Tableau « Ventilation des produits » affichant les colonnes « Nom du produit », « Achetés » et « Chiffre d'affaires ».]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

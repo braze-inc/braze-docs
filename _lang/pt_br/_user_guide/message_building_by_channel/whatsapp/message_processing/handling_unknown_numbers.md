@@ -1,5 +1,5 @@
 ---
-nav_title: Como lidar com números de telefone desconhecidos
+nav_title: Lidar com números de telefone desconhecidos
 article_title: Como lidar com números de telefone desconhecidos
 description: "Este artigo de referência aborda como a Braze lidará com números de telefone desconhecidos para usuários do WhatsApp."
 page_type: reference
@@ -8,7 +8,7 @@ channel:
 page_order: 50
 ---
 
-# Como lidar com números de telefone desconhecidos
+# Lidar com números de telefone desconhecidos
 
 > É possível que, depois de colocar o WhatsApp em funcionamento com o Braze, você receba mensagens de usuários desconhecidos. As etapas a seguir descrevem como um usuário e um número não identificados são processados.
 

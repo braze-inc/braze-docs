@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Job-Synchronisationsstatus auflisten"
+nav_title: "GET: Status der Auftragssynchronisation auflisten"
 article_title: "GET: Job-Synchronisationsstatus auflisten"
 search_tag: Endpoint
 page_order: 1
@@ -23,7 +23,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berech
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='cdi job sync status' %}
+{% multi_lang_include rate_limits.md endpoint='cdi job sync status' %}
 
 ## Pfad-Parameter
 
@@ -108,6 +108,6 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `400 Invalid integration ID` | Prüfen Sie, ob Ihre `integration_id` gültig ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
+Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

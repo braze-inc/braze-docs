@@ -8,7 +8,7 @@ page_order: 5
 
 tool: Canvas
 page_type: landing
-description: "このランディングページには、ベストプラクティス、立ち上げ前後のチェックリスト、キャンバスでの立ち上げに関するガイダンスなど、キャンバスのアイデアや戦略が掲載されている。"
+description: "このランディングページには、ベストプラクティス、立ち上げ前後のチェックリスト、キャンバスでの立ち上げに関するガイダンスなど、キャンバスに関するアイデアや戦略が掲載されている。"
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
@@ -18,7 +18,7 @@ guide_featured_list:
   - name: 開始前後のチェックリスト
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: キャンバスフローで開始する
+  - name: キャンバスで立ち上げる
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 

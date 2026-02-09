@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Aliasage de lien
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} Aliasage de lien
  
 > Utilisez l’aliasage de lien pour créer des noms reconnaissables et générés par l’utilisateur pour identifier les liens envoyés dans les e-mails de Braze. Ces liens sont disponibles pour le reciblage de segmentation, le déclenchement basé sur l'action et l'analyse des liens.
 
@@ -27,6 +27,8 @@ Avec l'aliasage de lien, vous pouvez :
 
 Braze identifie de manière unique les liens contenus dans les e-mails en ajoutant un paramètre supplémentaire appelé `lid` (également connu sous le nom d'identifiant de lien) à chaque URL de lien. Cette valeur de `lid` permet à Braze de suivre, de contrôler et d'agréger les interactions des utilisateurs avec le lien, même si les autres paramètres de l'URL peuvent être différents. Cela permet de fournir des informations sur la façon dont les utilisateurs s'engagent avec le contenu de vos campagnes d'e-mail.
 
+Les identifiants de liens seront également mis à jour en cas de duplication d'une campagne de communication par e-mail, d'un canvas avec un message e-mail ou d'un bloc de contenu.
+
 ## Création d’un alias de lien
 
 Pour créer un alias de lien, suivez ces étapes : 
@@ -38,7 +40,7 @@ Pour créer un alias de lien, suivez ces étapes :
 
 Vous pouvez également définir un alias qui sera utilisé pour référencer un lien spécifique lors de la gestion des rapports ou de la segmentation. 
 
-![Page de gestion des liens avec quatre alias de liens.][2]
+![Page de gestion des liens avec quatre alias de liens.]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 L'aliasing de lien est uniquement pris en charge dans les attributs `href` des balises HTML où il est possible d’ajouter sans risque un paramètre de requête. La meilleure pratique consiste à inclure un point d'interrogation ( ?) à la fin de votre lien afin que Braze puisse facilement ajouter la valeur `lid`. Sans l’ajout de la valeur `lid`, Braze ne reconnaît pas l’URL pour l’aliasage de lien.
@@ -49,7 +51,7 @@ L'aliasing de lien est uniquement pris en charge dans les attributs `href` des b
 Pour afficher tous vos aliasages de liens suivis, procédez comme suit :
 
 1. Accédez à **Paramètres** > **Préférences de messagerie** sous **Paramètres de l'espace de travail**.
-2. Sélectionnez l'onglet **Paramètres d'aliasage de lien**.
+2. Sélectionnez l'onglet **Paramètres d'aliasage de lien.** 
 
 {% alert important %}
 Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/), ces paramètres se trouvent sous **Gérer les paramètres**.
@@ -57,7 +59,7 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrat
 
 Vous pouvez y effectuer des tris, des recherches et désactiver le suivi des aliasages de liens.
 
-![La page Alias de liens suivis montre deux alias de liens nommés "TechPartners" et "Help" qui sont associés à une campagne nommée "Email_Survey".][8]
+![La page Aliasage de lien suivi qui montre les aliasages de lien actifs et inactifs associés à diverses campagnes.]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Utilisez les endpoints [List link alias for campaign]({{site.baseurl}}/get_campaign_link_alias/) et [List link alias for Canvas]({{site.baseurl}}/get_canvas_link_alias/) pour extraire l'ensemble `alias` dans chaque variante du message d'une campagne ou d'un composant Canvas spécifique à l'e-mail.
@@ -126,18 +128,7 @@ Pour suivre les métriques d'engagement des liens, assurez-vous que votre lien c
 
 Braze vous permet de sélectionner un nombre illimité de liens à suivre, bien que vous ne puissiez recibler les utilisateurs que sur les liens les plus récents qu'ils ont ouverts. Les profils d'utilisateur incluent leurs 100 liens les plus récemment cliqués. Par exemple, si vous assurez le suivi de 500 liens et qu'un utilisateur clique sur ces 500 liens, vous pouvez recibler ou créer des segments en fonction des 100 liens les plus récemment cliqués.
 
-{% tabs local %}
-{% tab Éditeur par glisser-déposer %}
-
-![Onglet Gestion des liens de l'éditeur d'e-mails par glisser-déposer.]({% image_buster /assets/img/link_management_dnd.png %})
-
-{% endtab %}
-{% tab Éditeur HTML %}
-
-![Onglet de gestion des liens de l'éditeur d'e-mails HTML.]({% image_buster /assets/img/link_management_html.png %})
-
-{% endtab %}
-{% endtabs %}
+![L'onglet Gestion des liens avec deux liens sélectionnés.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 Braze suit uniquement les 100 derniers alias de liaison cliqués au niveau du profil.
@@ -147,7 +138,7 @@ Braze suit uniquement les 100 derniers alias de liaison cliqués au niveau du p
  
 Vous pouvez créer des messages basés sur des actions ciblant n'importe quel lien (suivi ou non) ou recibler les utilisateurs selon qu'ils ont cliqué ou non sur un alias dans n'importe quelle campagne e-mail ou composant Canvas.
 
-![Options basées sur l'action pour cibler les utilisateurs qui ont cliqué sur un alias dans un composant Canvas ou qui ont interagi avec une campagne.][6]
+![Options basées sur l'action pour cibler les utilisateurs qui ont cliqué sur un alias dans un composant Canvas ou qui ont interagi avec une campagne.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### Filtres de segmentation
 
@@ -161,11 +152,13 @@ Les filtres de segmentation suivants s'appliquent aux événements de clics qui 
 
 #### Abandon du suivi des liens
 
-La suppression d'un lien n'entraînera pas la réaffectation des segments existants avec le filtre à l'alias supprimé. Les anciennes données resteront dans les profils utilisateurs jusqu'à ce qu'elles soient remplacées par des données plus récentes.
+La suppression d'un lien n'entraînera pas la réaffectation des segments existants avec le filtre à l'alias supprimé. Les anciennes données resteront dans les profils utilisateurs jusqu'à ce qu'elles soient remplacées par des données plus récentes. 
 
-Par défaut et à des fins de segmentation, seuls 100 liens peuvent faire l’objet d’un suivi par espace de travail. Les liens dans les messages archivés ne seront automatiquement plus suivis. Cependant, si les messages archivés sont désarchivés, les liens devront être resuivis. Lorsque des alias de liaison sont suivis, les rapports de liens sont indexés par l’alias plutôt que par des domaines de niveau supérieur ou des URL complètes.
+Les liens dans les messages archivés ne seront automatiquement plus suivis. Cependant, si les messages archivés sont désarchivés, les liens devront être resuivis. Lorsque des alias de liaison sont suivis, les rapports de liens sont indexés par l’alias plutôt que par des domaines de niveau supérieur ou des URL complètes.
 
-![L'onglet Analyse/analytique de la campagne qui affiche trois aliasages de lien et le nombre total de clics qu'ils ont générés.][1]
+Pour afficher tous les liens de votre campagne e-mail et le nombre total de clics qu'ils ont générés, accédez à **Message Analytics** > **Email Performance** > **Preview & Heatmap**, et sélectionnez l'option **Show Heatmap toggle (Afficher la carte thermique)**.
+
+![Tableau des liens par nombre total de clics avec les alias de liens et leur nombre total de clics.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
 ### Événement de clic sur un e-mail
 
@@ -245,8 +238,3 @@ Si le lien contient des paramètres avec un point d'interrogation (`?`), vous po
 {% endraw %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[8]: {% image_buster /assets/img/tracked_aliases.png %}

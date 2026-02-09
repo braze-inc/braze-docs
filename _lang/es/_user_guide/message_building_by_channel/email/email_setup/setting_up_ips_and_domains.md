@@ -1,6 +1,6 @@
 ---
-nav_title: Configuración de IP y dominios
-article_title: Configuración de IP y dominios
+nav_title: Configurar IP y dominios
+article_title: Configurar IP y dominios
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "Este artículo le mostrará cómo configurar sus IPs y Dominios pa
 
 ---
 
-# Configuración de IP y dominios
+# Configurar IP y dominios
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -31,6 +31,10 @@ Tras recibir tu correo electrónico, nos pondremos manos a la obra para configur
 ### Paso 3: Añadir registros DNS
 
 Una vez configurados sus IP, dominios, subdominios y grupos de IP, le enviaremos una lista de registros DNS. Pida a sus ingenieros y desarrolladores que añadan estos registros DNS cuando sea necesario y, una vez añadidos, informe al equipo de Braze Onboarding.
+
+{% multi_lang_include dns_records.md %}
+
+Después de que Braze te proporcione tus registros de DNS, añádelos en cuanto tu equipo de TI o de DNS pueda hacerlo. La verificación del dominio está limitada en el tiempo, y si los registros se añaden demasiado tarde, la verificación puede fallar aunque los registros de DNS se resuelvan correctamente más adelante. Si tus registros de DNS parecen correctos pero falla la verificación, ponte en contacto con el equipo de incorporación o soporte de Braze para reiniciar la verificación.
 
 ### Próximos pasos
 
@@ -63,7 +67,9 @@ Un dominio de envío se utiliza en la dirección "de" al enviar un correo electr
 
 A continuación, añada los registros TXT y CNAME de la parte inferior de la página a su proveedor de DNS. A continuación, vuelva al panel de control de Braze y haga clic en **Verificar**.
 
-![][1]
+![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+
+Si la verificación falla y crees que tus registros de DNS son correctos, ponte en contacto con el soporte de Braze para obtener ayuda.
 
 {% alert important %}
 El dominio de envío debe estar subordinado a un dominio de su propiedad. Por ejemplo, si eres propietario de "example.com", un subdominio podría ser "mail.example.com", lo que te permitiría utilizar la dirección de envío "@mail.example.com".
@@ -85,4 +91,3 @@ Tenga en cuenta que los dominios adicionales que se hayan añadido no aparecerá
 
 Una vez completada la verificación del remitente, recomendamos el calentamiento de IP para que sus mensajes lleguen a las bandejas de entrada de destino con una frecuencia elevada y constante. Después de completar esta configuración, asegúrese también de consultar con el equipo Braze Onboarding para confirmar si sus dominios y [dirección IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) están funcionando.
 
-[1]: {% image_buster /assets/img_archive/email_setup_rdns_records.png %}

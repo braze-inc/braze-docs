@@ -1,5 +1,5 @@
 ---
-nav_title: Channel Filter
+nav_title: Channel filter
 article_title: Intelligent Channel Filter
 page_order: 1.5
 description: "This article cover the The Intelligent Channel filter, a filter that selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
@@ -16,7 +16,7 @@ search_rank: 11
 
 In this case, best means the channel that has the highest likelihood of engagement, given the user's history. You can select email, SMS, WhatsApp, web push, or mobile push (including any available mobile OS or device) as a channel.
 
-The Intelligent Channel computes the engagement rate for each user for each of the three channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last six months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user. 
+The Intelligent Channel computes the engagement rate for each user for each of the available channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last six months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user. 
 
 Every time a message is sent to a user, or a user interacts with a message, the engagement ratio is recalculated within seconds. A user can only be counted as interacting with a message once (for example, an open and click on the same email will cause that message to be marked as having been engaged with only once, not twice). 
 
@@ -28,7 +28,7 @@ To compute the engagement rate of the SMS channel, turn on [SMS link shortening]
 
 ## The "Not enough data" option
 
-For Braze to determine which channel is "best", there needs to be enough data. This means that a user must have received at least three or more messages across at least two of the three available channels. The messages don't necessarily need to have been opened. 
+For Braze to determine which channel is "best", there needs to be enough data. This means that a user must have received at least three or more messages per channel across at least two of the three available channels. The messages don't necessarily need to have been opened. 
 
 If users haven't received enough messages across the channels, those users will fall into the "Not Enough Data" option of this filter. This allows you to use any of the three available messaging channels to target these users.
 

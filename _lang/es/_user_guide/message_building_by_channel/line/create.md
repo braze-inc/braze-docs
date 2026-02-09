@@ -1,6 +1,6 @@
 ---
-nav_title: Creación de un mensaje LINE
-article_title: Creación de un mensaje LINE
+nav_title: Crear un mensaje LINE
+article_title: Crear un mensaje LINE
 page_order: 1
 description: "Este artículo explica cómo crear una campaña de mensajes LINE o Canvas."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 alias: /line/create/
 ---
 
-# Creación de un mensaje LINE
+# Crear un mensaje LINE
 
 > Las campañas de LINE pueden llegar directamente a sus clientes y chatear con ellos de forma programática. Puede utilizar Liquid y otros contenidos dinámicos para crear una experiencia personal con sus usuarios y crear un entorno que fomente y mejore una experiencia discreta del usuario con su marca.
 
@@ -27,10 +27,10 @@ Al enviar mensajes de LINE desde Braze, se utilizarán los créditos de mensajes
 
 ## Paso 1: Elige dónde construir tu mensaje
 
-¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
+¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para campañas de mensajería únicas y específicas, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 **Pasos:**
 
@@ -64,7 +64,7 @@ Si todos los mensajes de su campaña van a ser similares o van a tener el mismo 
 
 Escribe tu mensaje utilizando la personalización (como Liquid o Contenido conectado) según sea necesario. LINE permite hasta cinco burbujas de mensaje en cada mensaje, que pueden ser de cualquiera de los diseños de mensajes disponibles: texto, imagen, enriquecido o basado en tarjetas.
 
-![Compositor de LINE con un mensaje mostrado en la vista previa.][1]
+![Compositor de LINE con un mensaje mostrado en la vista previa.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Consejos
 
@@ -80,12 +80,12 @@ El aspecto final de los mensajes de derecha a izquierda depende en gran medida d
 
 Cambia a la pestaña **Prueba** para enviar un mensaje LINE de prueba a grupos de prueba de contenido o a usuarios individuales, o previsualiza el mensaje como usuario directamente en Braze.
 
-![La pestaña "Pruebas" muestra una vista previa de un mensaje de prueba.][2]
+![La pestaña "Pruebas" muestra una vista previa de un mensaje de prueba.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Paso 4: Construye el resto de tu campaña o Canvas
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 Construye el resto de tu campaña. Consulte las secciones siguientes para obtener más información sobre la mejor manera de utilizar nuestras herramientas para crear mensajes LINE.
 
@@ -97,9 +97,9 @@ Puede especificar controles de entrega, como permitir que los usuarios [vuelvan 
 
 ### Elige los usuarios a los que dirigirte
 
-[Dirígete a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) eligiendo segmentos o filtros para acotar tu audiencia. Ya deberías haber elegido el grupo de suscripción, que restringe a los usuarios según el nivel o categoría de comunicación que desean tener contigo. 
+[Dirígete a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para acotar tu audiencia. Ya deberías haber elegido el grupo de suscripción, que restringe a los usuarios según el nivel o categoría de comunicación que desean tener contigo. 
 
-Selecciona la audiencia más amplia de tus segmentos y, opcionalmente, acota aún más ese segmento con nuestros [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. Tenga en cuenta que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
+Selecciona la audiencia más amplia de tus segmentos y, opcionalmente, acota aún más ese segmento con nuestros [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Automáticamente recibirás una instantánea de cómo es esa población aproximada de segmentos. Ten en cuenta que la pertenencia exacta a un segmento siempre se calcula antes de enviar el mensaje.
 
 ### Elegir eventos de conversión
 
@@ -115,7 +115,7 @@ También puede establecer eventos de conversión personalizados basados en su ca
 {% endtab %}
 {% tab Canvas %}
 
-Si aún no lo has hecho, completa las secciones restantes de tu Canvas. Para obtener más información sobre cómo crear el resto del lienzo, utilizar las pruebas multivariantes y la selección inteligente, etc., consulte [Creación de un lienzo]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Si aún no lo has hecho, completa las secciones restantes de tu Canvas. Para más detalles sobre cómo construir el resto de tu Canvas, utilizar pruebas multivariantes e Intelligent Selection, y mucho más, consulta [Crear un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -127,5 +127,3 @@ Cuando hayas terminado de crear lo último de tu campaña o Canvas, revisa sus d
 A continuación, echa un vistazo a [los informes de LINE]({{site.baseurl}}/line/reporting/) para saber cómo puedes acceder a los resultados de tus campañas LINE.
 
 
-[1]: {% image_buster /assets/img/line/line_composer.png %}
-[2]: {% image_buster /assets/img/line/test_preview.png %}

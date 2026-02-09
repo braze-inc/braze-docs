@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Senden von Analytics exportieren"
+nav_title: "GET: Exportieren Sie Analytics"
 article_title: "GET: Senden von Analytics exportieren"
 search_tag: Endpoint
 page_order: 4
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

@@ -22,7 +22,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='atributos_personalizados' %}
+{% multi_lang_include rate_limits.md endpoint='custom_attributes' %}
 
 ## Parámetros de consulta
 
@@ -54,8 +54,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/custom_attributes?c
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "attributes" : [

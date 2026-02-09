@@ -1,11 +1,11 @@
 ---
-nav_title: ユーザーのリターゲット
-article_title: ランディングページを使用したユーザのリターゲット
+nav_title: ユーザーのリターゲティング
+article_title: ランディングページでユーザーをリターゲティングする
 description: "ランディングページを通じてフォームを送信したユーザーを再ターゲットする方法を学習します。"
 page_order: 3
 ---
 
-# ランディングページを使用したユーザーのターゲット変更
+# ランディングページからユーザーをリターゲティングする
 
 > 専用セグメントを作成するか、フォームが送信されたときにメッセージをトリガーすることによって、ランディングページを介してフォームを送信したユーザを再ターゲットする方法を学習します。
 
@@ -21,19 +21,24 @@ page_order: 3
 - **メッセージトリガーの使用:**メッセージトリガーを設定して、ユーザーがフォームを送信した後に自動的にユーザーにメッセージを送信したり、キャンバスに入力したりすることができます。
 
 {% tabs local %}
-{% tab セグメントの使用 %}
-[でセグメント]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)を作成する場合、"Retargeting"groupの下で、**ランディングページで送信フォーム**を選択します。
+{% tab Using a segment %}
+[セグメントを作成する]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)場合、「リターゲティング」グループの下で [**ランディングページで送信されたフォーム**] を選択します。
 
-![フィルタグループを&quot として選択したセグメントの作成;Landing Page&quot で送信されるフォーム;]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
+![フィルターグループを「ランディングページの送信フォーム」としてセグメンテーションを作成する。]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
-ここから、ランディングページのランディングページフォームを送信したかどうかに基づいて、ユーザをセグメンテーションできます。
+ここから、ランディングページのランディングページフォームを送信したかどうかに基づいてユーザをセグメンテーションできます。
 {% endtab %}
 
-{% tab メッセージトリガーの使用 %}
+{% tab Using a message trigger %}
 [campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/)または[Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/)の配信オプションを選択する場合は、**Action Based Delivery**を選択し、**Submitted Landing Page form**を選択します。
 
 このランディングページフォームを使用してフォームを送信するすべてのユーザは、選択したメッセージングチャネルを使用してメッセージを送信するか、選択したキャンバスに入力されます。
 
-![メッセージング]({% image_buster /assets/img/landing_pages/trigger.png %})のランディングページトリガアクション
+![メッセージングでランディングページのトリガーアクションを起こす。]({% image_buster /assets/img/landing_pages/trigger.png %})
+
+{% alert note %}
+ランディングページのアクションベースの配信オプションは、アプリ内メッセージでは使用できません。アプリ内メッセージを含むランディングページでフォームを送信したユーザーをターゲットにするには、キャンペーンの**Targeting Options** で**Submitted Form on Landing Page** フィルタを選択します。
+{% endalert %}
+
 {% endtab %}
 {% endtabs %}

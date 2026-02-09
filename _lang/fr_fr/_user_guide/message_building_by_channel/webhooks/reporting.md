@@ -14,4 +14,4 @@ tool:
 
 > Découvrez les différents indicateurs de reporting des webhooks et les options d'analyse proposées dans le tableau de bord Braze.
 
-{% multi_lang_include campaign_analytics.md channel="webhook" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="webhook" %}

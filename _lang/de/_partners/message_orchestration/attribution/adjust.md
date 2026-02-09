@@ -33,17 +33,17 @@ Mit der Integration von Braze und Adjust können Sie Daten zur nicht-organischen
 
 #### Android
 
-Wenn Sie eine Android App haben, müssen Sie Adjust eine eindeutige Braze ID für Ihr Gerät übergeben. Diese ID kann in der Methode `addSessionPartnerParameter()` des Adjust SDK festgelegt werden. Der folgende Code-Snippet muss vor der Initialisierung des SDK auf `Adjust.onCreate.`
+Wenn Sie eine Android App haben, müssen Sie Adjust eine eindeutige Braze ID für Ihr Gerät übergeben. Diese ID kann in der Methode `addGlobalPartnerParameter()` des Adjust SDK festgelegt werden. Der folgende Code-Snippet muss vor der Initialisierung des SDK auf `Adjust.initSdk.`
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
+Prior to February 2023, our Adjust attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation because there is no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -74,7 +74,7 @@ Wenn Sie planen, Ereignisse nach der Installation von Adjust an Braze zu senden,
 
 Navigieren Sie in Braze zu **Integrationen** > **Technologiepartner** und wählen Sie **Adjust**. 
 
-Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Adjust einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Technologie anpassen finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.][1]{: style="max-width:90%;"}
+Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Adjust einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Technologie anpassen finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Braze in Adjust konfigurieren
 
@@ -84,9 +84,9 @@ Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel f�
 
 ### Schritt 4: Bestätigen Sie die Integration
 
-Sobald Braze Attribution-Daten von Adjust erhält, ändert sich der Verbindungsstatus auf der Technologie-Partnerseite in Braze von "Nicht verbunden" auf "Verbunden". Ein Zeitstempel der letzten erfolgreichen Anfrage wird ebenfalls mitgeschickt. 
+Nachdem Braze Attribution-Daten von Adjust erhalten hat, ändert sich der Verbindungsstatus auf der Technologie-Partnerseite von Adjust in Braze von "Nicht verbunden" zu "Verbunden" und enthält einen Zeitstempel der letzten erfolgreichen Anfrage.
 
-Beachten Sie, dass dies erst dann geschieht, wenn wir Daten über eine attributierte Installation erhalten. Organische Installationen, die vom Adjust Postback ausgeschlossen werden sollten, werden von unserer API ignoriert und bei der Ermittlung, ob eine erfolgreiche Verbindung hergestellt wurde, nicht mitgezählt.
+Dieser Status ändert sich erst, wenn Braze Daten über eine attributierte Installation erhält. Braze ignoriert organische Installationen (schließt sie aus dem Adjust Postback aus) und zählt sie nicht, wenn es darum geht, ob die Verbindung erfolgreich ist.
 
 ## Verfügbare Datenfelder
 
@@ -141,5 +141,3 @@ Wenn Sie in Ihren Click-through-Links derzeit keine Geräte-Identifikatoren wie 
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/attribution/adjust.png %}
-[2]: {% image_buster /assets/img/attribution/adjust2.png %}

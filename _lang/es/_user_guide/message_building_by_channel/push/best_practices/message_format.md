@@ -1,5 +1,5 @@
 ---
-nav_title: Formatos de los mensajes
+nav_title: Formatos de mensajes
 article_title: Mensajes push y formatos de imagen
 page_order: 5
 page_type: reference
@@ -17,7 +17,7 @@ Para obtener los mejores resultados, consulte las siguientes directrices sobre e
 ## Push para iOS y Android
 
 {% tabs local %}
-{% tab Imágenes %}
+{% tab Images %}
 
 **Tipo de imagen** | **Tamaño de imagen recomendado** | **Tamaño máximo de imagen** | **Tipos de archivo**
 --- | --- | --- | ---
@@ -27,7 +27,7 @@ Para obtener los mejores resultados, consulte las siguientes directrices sobre e
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 
 | Tipo de mensaje | Longitud recomendada del mensaje (sólo texto) | Longitud de mensaje recomendada (enriquecida)
 --- | ---
@@ -41,7 +41,7 @@ Para obtener los mejores resultados, consulte las siguientes directrices sobre e
 ¿Te preguntas cuántos caracteres puedes utilizar en una notificación push de iOS sin que quede truncada? Consulta nuestras [directrices sobre el recuento de caracteres para iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
 
 {% endtab %}
-{% tab Tamaño de la carga útil %}
+{% tab Payload Size %}
 
 **Plataforma** | **Tamaño**
 --- | ---
@@ -51,7 +51,7 @@ Android (FCM) | 4 KB
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Ejemplo de imagen %}
+{% tab Image Example %}
 {% subtabs %}
 {% subtab iOS %}
 
@@ -70,7 +70,7 @@ Las notificaciones con imágenes grandes se muestran mejor cuando se utiliza una
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Ejemplo de texto %}
+{% tab Text Example %}
 {% subtabs %}
 {% subtab iOS %}
 
@@ -84,10 +84,10 @@ Las notificaciones con imágenes grandes se muestran mejor cuando se utiliza una
 {% endtab %}
 {% endtabs %}
 
-## Web push
+## Notificación push web
 
 {% tabs local %}
-{% tab Imágenes %}
+{% tab Images %}
 
 | **Navegador** | **Tamaño de icono recomendado**
 | --- | ---
@@ -112,7 +112,7 @@ Opera | macOS | N/A
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 
 | **Navegador** | **Plataforma** | **Longitud máxima del título**  | **Longitud máxima del cuerpo del mensaje**
 | --- | --- | --- | ---

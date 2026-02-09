@@ -1,5 +1,5 @@
 ---
-nav_title: Connected Content Retries
+nav_title: Connected Content retries
 article_title: Connected Content Retries
 page_order: 5
 description: "This reference article covers how to go about dealing with Connected Content retries."

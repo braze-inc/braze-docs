@@ -1,7 +1,7 @@
 ---
 page_order: 2
 nav_title: Notifications silencieuses
-article_title: Configuration des notifications push silencieuses pour le SDK de Braze
+article_title: Configurer les notifications push silencieuses pour le SDK de Braze
 channel:
   - push notifications
 ---
@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications/silent.md developer_ %}
+{% multi_lang_include developer_guide/swift/push_notifications/silent.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-guide/android/push_notifications/silent.md developer_ %}
+{% multi_lang_include developer_guide/android/push_notifications/silent.md %}
 {% endsdktab %}
 {% endsdktabs %}

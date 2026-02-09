@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Listar vários detalhes de itens de catálogo"
+nav_title: "OBTER: Listar vários detalhes de itens do catálogo"
 article_title: "OBTER: Listar vários detalhes de itens de catálogo"
 search_tag: Endpoint
 page_order: 3
@@ -25,7 +25,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='item de catálogo síncrono' %}
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Parâmetros da jornada
 

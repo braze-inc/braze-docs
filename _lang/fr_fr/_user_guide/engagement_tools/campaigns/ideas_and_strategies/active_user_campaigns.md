@@ -29,7 +29,7 @@ Si vous définissez des ID utilisateur pour identifier les utilisateurs lorsqu�
 
 À l'aide de notre sélection de filtres, créez un segment d'utilisateurs qui, selon vous, englobe votre base d'utilisateurs la plus fidèle et la plus cohérente. L’exemple de segment suivant définit les meilleurs utilisateurs.
 
-![][1]
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 De plus, vous n’aurez pas à continuer à mettre à jour ce segment car les utilisateurs qui rentrent ou sortent des restrictions de la campagne seront ciblés ou enlevés en fonction.
 
@@ -37,7 +37,7 @@ De plus, vous n’aurez pas à continuer à mettre à jour ce segment car les ut
 L’exemple précédent segmente les utilisateurs selon leur utilisation générale de l’application. Dans la plupart des cas, la collection totale de filtres nécessaires pour définir votre segment d'utilisateurs supérieur sera largement définie par les spécificités de votre application.
 {% endalert %}
 
-## Étape 2 : Contacter vos meilleurs utilisateurs
+## Étape 2 : Contactez vos principaux utilisateurs
 
 ### Faites en sorte que vos utilisateurs se sentent appréciés
 
@@ -45,11 +45,9 @@ Faites en sorte que vos utilisateurs se sentent appréciés en remerciant leur f
 
 Les récompenses inattendues peuvent être plus efficaces pour encourager des actions continues des utilisateurs que si vous les aviez promis dès le début !
 
-![Une campagne dans l’étape Composer avec une notification enrichie iOS qui affiche : « Merci encore d’avoir acheté chez nous ! Pour montrer notre reconnaissance, nous vous offrons une livraison gratuite lors de votre prochain achat. »][2]
+![Une campagne dans l’étape Composer avec une notification enrichie iOS qui affiche : « Merci encore d’avoir acheté chez nous ! Pour montrer notre reconnaissance, nous vous offrons une livraison gratuite lors de votre prochain achat. »]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### Surveiller vos résultats
 
 Suivez les ouvertures pour vous assurer de cibler l’ensemble approprié d’utilisateurs avec le type de message optimal. De plus, maintenez un suivi de tout désabonnement aux notifications push et évitez de perdre ces utilisateurs cruciaux.
 
-[1]: {% image_buster /assets/img_archive/define_top_users.png %} "Définissez vos principaux utilisateurs
-[2]: {% image_buster /assets/img/congratulations_push.jpg %}

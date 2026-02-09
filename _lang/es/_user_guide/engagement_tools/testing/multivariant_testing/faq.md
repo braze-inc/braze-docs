@@ -27,6 +27,10 @@ Braze comprueba todas las variantes entre sí con las pruebas chi-cuadrado de Pe
 
 Se trata de una prueba independiente de la puntuación de confianza, que sólo describe el rendimiento de una variante en comparación con el control con un valor numérico entre 0 y 100%. En concreto, representa nuestra confianza en que la diferencia estandarizada en la tasa de conversión entre la variante y el control es significativamente superior al azar.
 
+### ¿Por qué la distribución de variantes no es uniforme?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
+
 ## Ejecución y conclusión de las pruebas
 
 ### ¿Cuándo termina la prueba inicial?

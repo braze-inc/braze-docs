@@ -1,12 +1,12 @@
-{% multi_lang_include developer_guide/prerequisites/cordova.md %} [ set up push notifications]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) も必要です。これには`UNNotification` フレームワークの実装も含まれます。
+{% multi_lang_include developer_guide/prerequisites/swift.md %} [プッシュ通知の設定も]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift)必要で、これには`UNNotification` フレームワークの実装も含まれる。
 
-プッシュストーリーを受信するには、以下のSDKバージョンが必要である：
+プッシュストーリーを受信するには、以下のSDKの最低バージョンが必要である：
 
 {% sdk_min_versions swift:5.0.0 %}
 
 ## プッシュストーリーの設定
 
-### ステップ1:通知コンテンツ拡張ターゲットを追加する{#notification-content-extension}
+### ステップ 1: 通知コンテンツ拡張ターゲットを追加する{#notification-content-extension}
 
 アプリ・プロジェクトで、メニュー「**ファイル」＞「新規作成」＞「ターゲット**」と進み、新しい`Notification Content Extension` ・ターゲットを追加してアクティブにする。
 
@@ -19,13 +19,13 @@ Xcode によって新しいターゲットが生成され、次のようなフ�
 
 ### ステップ2:機能を有効にする {#enable-capabilities}
 
-Xcode で、[**署名 & 機能**] ペインを使ってメインアプリのターゲットにバックグラウンドモード機能を追加します。**バックグラウンドフェッチ**と**リモート通知**の両方のチェックボックスを選択します。
+Xcodeで、メインアプリターゲットの**Signing& Capabilities**ペインを使用して、Background Modesケイパビリティを追加する。**バックグラウンドフェッチ**と**リモート通知**の両方のチェックボックスを選択します。
 
 ![]({% image_buster /assets/img/swift/push_story/enable_background_mode.png %})
 
 #### アプリグループの追加
 
-さらに、Xcode の [**署名 & 機能**] ペインから、アプリグループ機能をメインアプリターゲットと通知コンテンツ拡張ターゲットに追加します。次に、**＋**ボタンをクリックする。アプリのバンドル ID を使用してアプリグループを作成します。たとえば、アプリのバンドル ID が `com.company.appname` の場合、アプリグループに `group.com.company.appname.xyz` という名前を付けることができます。
+さらに、Xcode の**Signing& Capabilities**ペインから、Notification Content Extension ターゲットと同様に、メインアプリターゲットに App Groups ケーパビリティを追加する。次に、**＋**ボタンをクリックする。アプリのバンドル ID を使用してアプリグループを作成します。たとえば、アプリのバンドル ID が `com.company.appname` の場合、アプリグループに `group.com.company.appname.xyz` という名前を付けることができます。
 
 {% alert important %}
 ここでいうApp Groupsとは、Appleの[App Groups Entitlementの](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_security_application-groups)ことであり、Brazeのワークスペース（旧App Group）IDのことではない。
@@ -40,14 +40,14 @@ Xcode で、[**署名 & 機能**] ペインを使ってメインアプリのタ�
 
 [Swift Package Manager の統合ガイド]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/sdk_integration/?tab=swift%20package%20manager/)に従って、`BrazePushStory` を `Notification Content Extension` に追加します。
 
-![Xcodeのフレームワークとライブラリの下にある「+」アイコンを選択して、フレームワークを追加する。]({% image_buster /assets/img/swift/push_story/spm1.png %})
+![Xcodeのフレームワークとライブラリーの下にある "+"アイコンを選択し、フレームワークを追加する。]({% image_buster /assets/img/swift/push_story/spm1.png %})
 
 ![]({% image_buster /assets/img/swift/push_story/spm2.png %})
 
 {% endtab %}
 {% tab CocoaPods %}
 
-次の行を Podfile に追加します。
+Podfile に次の行を追加します。
 
 ```ruby
 target 'YourAppTarget' do
@@ -73,7 +73,7 @@ end
 Podfile を更新したら、ターミナル内で Xcode アプリプロジェクトのディレクトリーに移動し、`pod install`　を実行します。
 
 {% endtab %}
-{% tab マニュアル %}
+{% tab Manual %}
 
 [GitHub リリースページ](https://github.com/braze-inc/braze-swift-sdk/releases)から最新の `BrazePushStory.zip` をダウンロードして展開し、`BrazePushStory.xcframework` をプロジェクトの `Notification Content Extension` に追加します。
 

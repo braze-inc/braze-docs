@@ -1,5 +1,5 @@
 ---
-nav_title: Keyword Processing
+nav_title: Keyword processing
 article_title: Keyword Processing
 page_order: 6
 layout: dev_guide

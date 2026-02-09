@@ -12,6 +12,10 @@ search_tag: Partner
 
 > A [Bluedot](https://bluedot.io/) é uma plataforma de localização que fornece recursos precisos e simples de geofencing para seus apps. Use o SDK da Bluedot para enviar mensagens mais inteligentes, automatizar check-ins de pedidos móveis, otimizar fluxos de trabalho e criar experiências sem atrito. 
 
+_Essa integração é mantida pela Bluedot._
+
+## Sobre a integração
+
 A integração entre Braze e Bluedot permite que você use os serviços de local geofence da Bluedot para criar eventos de usuário que podem ser usados para criar jornadas, campanhas e analisar os comportamentos e interesses dos clientes. Os eventos (entrada/saída) gerados pelo usuário em seu dispositivo são enviados imediatamente ao Braze com todas as informações relevantes. 
 
 ## Pré-requisitos
@@ -47,9 +51,10 @@ Você pode configurar uma campanha push ou uma canva que agirá a partir de even
 
 Configure uma campanha baseada em ações no Braze que enviará mensagens com base em um local definido. Para seu gatilho, use um evento personalizado de `bluedot_entry` ou `bluedot_exit`, conforme mostrado na captura de tela a seguir:
 
-![Uma campanha baseada em ação na etapa de entrega. Aqui, você tem duas opções de agendamento que enviarão a campanha se um usuário realizar um evento personalizado `bluedot_entry` ou `bluedot_exit`.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
+![Uma campanha baseada em ação na etapa de entrega. Aqui, você tem duas opções de agendamento que enviarão a campanha se um usuário executar uma ação personalizada `bluedot_entry` ou `bluedot_exit` event.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
 
 #### Direcionamento de usuários
 
 Certifique-se de direcionar **todos os usuários** para seu espaço de trabalho.
-![Uma campanha baseada em ações com a etapa de usuários-alvo que o incentiva a selecionar "Todos os usuários" como o segmento desejado.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+![Uma campanha baseada em ações com a etapa de usuários-alvo que o incentiva a selecionar "Todos os usuários" como o desejado segment.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+

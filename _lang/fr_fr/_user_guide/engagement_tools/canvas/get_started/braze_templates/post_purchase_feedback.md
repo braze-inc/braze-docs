@@ -1,5 +1,5 @@
 ---
-nav_title: "Rétroaction après l'achat"
+nav_title: "Retour d'information après l'achat"
 article_title: "Rétroaction après l'achat"
 page_order: 6
 page_type: reference
@@ -18,36 +18,36 @@ Cet article vous guidera à travers un cas d'utilisation du modèle **Feedback p
 Pour utiliser ce modèle avec succès, vous aurez besoin des éléments suivants :
 
 - Un [attribut personnalisé]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) à référencer pour les résultats de l'enquête de satisfaction.
-- Un Braze [Audience Sync]({{site.baseurl}}/partners/canvas_steps) configuré avec les partenaires et les audiences que vous utilisez.
+- Un Braze [Audience Sync]({{site.baseurl}}/partners/canvas_audience_sync/) configuré avec les partenaires et les audiences que vous utilisez.
 
 ## Adapter le modèle à vos besoins
 
 Supposons que nous travaillions pour Decorumsoft, un développeur de jeux vidéo mobiles. Nous utiliserons le modèle de retour d'information après achat pour évaluer les réactions à notre dernier jeu vidéo, Proxy War 3 : La guerre de la soif. Ces commentaires nous permettront d'élaborer nos plans de développement pour le pack d'extension Liquid Mirage.
 
-Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) afin de pouvoir ajouter les données comportementales des utilisateurs de Braze à Google Audiences pour envoyer des publicités basées sur des déclencheurs comportementaux, la segmentation, et plus encore.
+Avant de créer le Canvas, nous avons configuré l'intégration Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) afin de pouvoir ajouter les données comportementales des utilisateurs de Braze à Google Audiences pour envoyer des publicités basées sur des déclencheurs comportementaux, la segmentation, et plus encore.
 
 Pour accéder au modèle de retour d'information après achat, lorsque vous créez un nouveau canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles de Braze**. Ensuite, en regard de **Feedback post-achat**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Configurer les détails de Canvas
+### Étape 1 : Configurer les détails de Canvas
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
 1. Sélectionnez **Modifier** à côté du nom du modèle.
 
-![Titre et description actuels de la toile.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
+![Le titre et la description actuels de la toile.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_edit_details.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Mettez à jour le nom du canvas pour préciser qu'il s'agit d'un canvas destiné au ciblage des utilisateurs récents.
 3\. Mettez à jour la description pour préciser que le Canvas est destiné à encourager les utilisateurs à soumettre un retour d'information.
 4\. Ajoutez le tag **Feedback** pour le filtrer sur la page d'accueil de Canvas.
 
-![Le nouveau nom et la nouvelle description de la toile. La nouvelle description est la suivante : Canevas de réactions après l'achat pour évaluer l'intérêt pour la prochaine extension de PWD3, Liquid Mirage"]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
+![Le nouveau nom et la nouvelle description de la toile. La nouvelle description est la suivante : Canevas de commentaires post-achat pour évaluer l'intérêt pour l'extension à venir de PWD3, Liquid Mirage.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/enter_new_canvas_name.png %}){: style="max-width:50%;"}
 
 ### Étape 2 : Attribuer des événements de conversion
 
-Ensuite, attribuons nos événements de conversion. Mettez à jour l'**événement de conversion principal - A** en **effectuant un achat spécifique** et sélectionnez **Guerre par procuration**.
+Ensuite, attribuons nos événements de conversion. Mettez à jour l'**événement de conversion principal - A** pour **effectuer un achat spécifique** et sélectionnez **Guerre par procuration**.
 
-![Section "Assigner des événements de conversion" pour le type d'événement de conversion de l'achat d'un produit du jeu Proxy War.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
+![section "Attribuer des événements de conversion" pour le type d'événement de conversion de l'achat du produit de jeu Proxy War.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/select_conversion_event.png %}){: style="max-width:90%;"}
 
 Nous conservons le délai de conversion du modèle de trois jours car nous voulons cibler nos utilisateurs les plus récents.
 
@@ -80,13 +80,13 @@ Pour notre exemple, nous ne tiendrons pas compte des autres paramètres (limite 
 
 ### Étape 6 : Personnalisez votre canvas
 
-Ensuite, nous allons créer notre Canvas en personnalisant les canaux de communication et le contenu qui sera envoyé aux utilisateurs. Étant donné que nous sollicitons uniquement des commentaires par e-mail, par message in-app et par canal webhook, nous allons parcourir le modèle et supprimer les variantes SMS des étapes Message.
+Ensuite, nous allons créer notre Canvas en personnalisant les canaux de communication et le contenu qui sera envoyé aux utilisateurs. Étant donné que nous ne sollicitons des commentaires qu'à l'aide des canaux e-mail, message in-app et webhook, nous allons parcourir le modèle et supprimer les variantes SMS des étapes Message.
 
 Nous allons commencer notre personnalisation en passant en revue chaque composant d'envoi de messages pour en mettre à jour le contenu. Notre attribut personnalisé à référencer est `Experience Feedback`.
 
 1. Dans le générateur de canvas, sélectionnez la première étape du canvas dans le parcours de l'utilisateur.
 2. Sélectionnez la variante **e-mail**.
-3. Remplissez l'**info d'envoi** avec un sujet qui encourage le retour d'information des utilisateurs. 
+3. Remplissez les **informations d'envoi** avec un sujet qui encourage le retour d'information de la part des utilisateurs. 
 4. Sélectionnez **Modifier le** message pour remplacer le message e-mail du modèle par le message de l'enquête de satisfaction. Il s'agit notamment de remplacer les liens pour chaque call-to-action afin de capturer l'option sélectionnée, qui sera référencée dans l'étape du parcours d'action de notre parcours utilisateur.
 
 {% alert tip %}
@@ -103,7 +103,7 @@ Ensuite, nous allons devoir remplir les détails de la variante du **message in-
 4. Pour chacun des trois choix d'enquête, sélectionnez **Experience Feedback** comme attribut personnalisé. 
 5. Nous conserverons les valeurs des attributs du profil utilisateur telles quelles, car elles correspondent à notre attribut personnalisé.
 
-![Une enquête qui demande à l'utilisateur s'il a apprécié son récent achat de Proxy War 3 avec trois options : "J'ai adoré", "C'était bien" et "Pas pour moi".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
+![Une enquête qui demande à l'utilisateur s'il a apprécié son achat récent de Proxy War 3 avec trois options : "J'ai adoré", "C'était bien" et "Ce n'est pas pour moi".]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/survey_example_iam.png %}){: style="max-width:90%;"}
 
 #### Créer le parcours d'action
 
@@ -121,7 +121,7 @@ Ensuite, configurons le webhook pour déclencher des cas d'assistance potentiels
 
 Pour l'étape du message intitulée **Création d'un cas d'assistance**, nous allons mettre à jour le modèle pour composer un webhook pour les utilisateurs qui ne sont pas satisfaits de leur achat et qui souhaitent un remboursement.
 
-![Un webhook qui crée des cas de support pour les clients qui ont un sentiment négatif et qui veulent un remboursement pour leur achat de Proxy War 3.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
+![Un webhook qui crée des cas de support pour les clients qui ont un sentiment négatif et veulent un remboursement pour leur achat de Proxy War 3.]({% image_buster /assets/img/canvas_templates/post_purchase_feedback/webhook_example.png %}){: style="max-width:90%;"}
 
 ### Étape 6 : Testez et lancez le Canvas
 

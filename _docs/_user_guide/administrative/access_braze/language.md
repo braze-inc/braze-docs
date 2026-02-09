@@ -1,5 +1,5 @@
 ---
-nav_title: Language Settings
+nav_title: Language settings
 article_title: Language Settings
 page_order: 2.5
 page_type: reference

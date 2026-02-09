@@ -1,5 +1,5 @@
 ---
-nav_title: LINE Setup
+nav_title: LINE setup
 article_title: LINE Setup
 description: "This article covers how to set up the Braze LINE channel, including prerequisites and suggested next steps."
 page_type: partner
@@ -25,7 +25,11 @@ You'll need the following to integrate LINE with Braze:
 - [LINE developers account](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [LINE messaging API channel](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-Sending LINE messages from Braze will draw from your account's Message Credits.
+Sending LINE messages from Braze draws from your account's Message Credits.
+
+{% alert note %}
+**Setting `native_line_id`**: You can set `native_line_id` by sending user updates to Braze (for example, with the [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, [CSV import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import), or [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). If your client-side SDK doesn’t have a dedicated field for `native_line_id`, send it in server-side user updates using one of these methods.
+{% endalert %}
 
 ## Types of LINE accounts
 
@@ -60,6 +64,10 @@ To set up consistent user updates, bring over existing users' LINE IDs, and sync
 3. [Reconcile user IDs](#step-3-reconcile-user-ids)
 4. [Change user update methods](#step-4-change-your-user-update-methods)
 5. [(Optional) Merge user profiles](#step-5-merge-profiles-optional)
+
+{% alert note %}
+You can only have one LINE account in a single workspace. If you have multiple LINE accounts, we recommend using each one in a different workspace.
+{% endalert %}
 
 ## Step 1: Import or update existing LINE users
 

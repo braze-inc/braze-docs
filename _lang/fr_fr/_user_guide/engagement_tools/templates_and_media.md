@@ -35,17 +35,11 @@ guide_featured_list:
 
 Vous pouvez utiliser et gérer des modèles et du contenu créatif dans la section **Modèles** pour les fonctionnalités suivantes :
 
-- **[Modèles d'e-mail][2]**
-- **[Blocs de contenu][7]**
-- **[Modèles de webhook][3]**
-- **[Modèles de liens][6]**
-- **[Profils de couleurs des messages in-app et modèles CSS][4]**
-- **[Gérer les ressources dans la bibliothèque multimédia][5]**
+- **[Modèles d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template)**
+- **[Blocs de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)**
+- **[Modèles de webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template)**
+- **[Modèles de liens]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)**
+- **[Profils de couleurs des messages in-app et modèles CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile)**
+- **[Gérer les ressources dans la bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library)**
 <br><br><br>
 
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/webhook_template/#creating-a-webhook-template
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile
-[5]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates
-[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/

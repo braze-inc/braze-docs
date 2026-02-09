@@ -1,5 +1,5 @@
 ---
-nav_title: Post-Purchase Feedback
+nav_title: Post-purchase feedback
 article_title: Post-Purchase Feedback
 page_order: 6
 page_type: reference

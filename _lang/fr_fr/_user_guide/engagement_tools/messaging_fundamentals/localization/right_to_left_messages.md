@@ -1,12 +1,13 @@
 ---
-nav_title: Messages de droite à gauche
+nav_title: Envois de messages de droite à gauche
 article_title: Créer des messages de droite à gauche
 page_order: 1
+alias: /right_to_left_messages/
 page_type: reference
 description: "Cette page présente les meilleures pratiques pour l'envoi de messages dans Braze qui se lisent de droite à gauche."
 ---
 
-# Création d'envois de messages de droite à gauche
+# Créer des messages de droite à gauche
 
 > L'aspect final des messages de droite à gauche dépend en grande partie de la manière dont les fournisseurs de services (tels qu'Apple, Android et Google) les restituent. Cette page présente les meilleures pratiques pour rédiger des messages de droite à gauche afin que vos messages s'affichent avec le plus de précision possible.
 
@@ -22,7 +23,7 @@ En outre, vérifiez la ponctuation et les emojis pour déterminer si votre messa
 | Rendu occidental standard | Rendu de droite à gauche |
 |------------------|------------------------|
 | Affiche le point d'exclamation et l'emoji à la **fin** des phrases. | Affiche le point d'exclamation et l'emoji au **début de** la phrase. |
-| ![Exemple d'un message standard de droite à gauche.]({% image_buster /assets/img/right-to-left/standard.png %}) | ![Exemple d'envoi de messages de gauche à droite.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
+| ![Exemple d'un envoi de messages standard de droite à gauche.]({% image_buster /assets/img/right-to-left/standard.png %}) | ![Un exemple d'envoi de messages de gauche à droite.]({% image_buster /assets/img/right-to-left/right-to-left.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 
 ## Créer un message de droite à gauche
@@ -32,7 +33,7 @@ Pour créer votre message de droite à gauche dans Braze :
 1. Rédigez votre message standard dans l'éditeur de Braze.
 2. Copiez le texte du message depuis Braze, puis utilisez un outil de communication individualisée pour le convertir en un message de droite à gauche.
 3. Collez votre message converti dans Braze.
-4. Vérifiez la mise en forme et l'alignement du texte. Si vous créez un message e-mail glisser-déposer ou HTML, vous pouvez le faire dans le compositeur. Sinon, vous devrez utiliser un autre traitement de texte.<br><br>![Menu de l'éditeur par glisser-déposer de l'e-mail avec bouton pour basculer l'alignement du texte de droite à gauche et de gauche à droite.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
+4. Vérifiez la mise en forme et l'alignement du texte. Si vous créez un message e-mail glisser-déposer ou HTML, vous pouvez le faire dans le compositeur. Sinon, vous devrez utiliser un autre traitement de texte.<br><br>![Menu de l'éditeur glisser-déposer de l'e-mail avec bouton permettant de basculer l'alignement du texte entre la droite et la gauche et la gauche et la droite.]({% image_buster /assets/img/rtl_button.png %}){: style="max-width:50%;"}
 
 ## Considérations
  
@@ -40,7 +41,7 @@ Pour créer votre message de droite à gauche dans Braze :
 
 La méthode du copier-coller pour les messages push peut s'avérer difficile à utiliser avec des notifications push plus longues, car un contenu plus long peut s'afficher sur plusieurs lignes sur un appareil mobile. Si vous copiez le texte de votre message en dehors de Braze (par exemple dans un document Word) et que vous le collez directement dans Braze, l'alignement des phrases et l'emplacement des mots peuvent changer. Pour éviter ce scénario, copiez et collez en plusieurs fois et ajoutez un saut de ligne. Par exemple, copiez et collez les cinq premiers mots, ajoutez un saut de ligne, copiez les cinq mots suivants, ajoutez un saut de ligne, etc.
 
-Les fonctions de prévisualisation et de test sont créées pour les messages allant de gauche à droite. Les messages allant de droite à gauche ne s'afficheront donc pas correctement dans la section de **prévisualisation et de test**, mais s'afficheront correctement sur les appareils des utilisateurs si leurs paramètres sont configurés à cet effet. Nous vous conseillons de vous envoyer des messages dans un environnement en ligne/en production/instantané pour confirmer qu'ils s'affichent correctement en fonction des paramètres de l'appareil.
+Les fonctions de prévisualisation et de test sont créées pour les messages allant de gauche à droite. Les messages allant de droite à gauche ne s'afficheront donc pas correctement dans la section **Prévisualisation & Test**, mais s'afficheront correctement sur les appareils des utilisateurs si leurs paramètres sont configurés à cet effet. Nous vous conseillons de vous envoyer des messages dans un environnement en ligne/en production/instantané pour confirmer qu'ils s'affichent correctement en fonction des paramètres de l'appareil.
 
 ### Texte bidirectionnel
 

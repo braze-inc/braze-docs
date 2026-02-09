@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Version History
+nav_title: Canvas version history
 article_title: Canvas Version History
 alias: "/canvas_version_history/"
 page_order: 2

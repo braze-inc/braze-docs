@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Blocklist Emails"
+nav_title: "POST: Blocklist emails"
 article_title: "POST: Blocklist Emails"
 search_tag: Endpoint
 page_order: 8

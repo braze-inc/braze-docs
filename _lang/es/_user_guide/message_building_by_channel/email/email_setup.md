@@ -1,12 +1,12 @@
 ---
-nav_title: Configuración de correo electrónico
+nav_title: Configuración del correo electrónico
 article_title: Configuración del correo electrónico de incorporación
 layout: dev_guide
 page_order: 1
 guide_top_header: "Configuración de correo electrónico"
 guide_top_text: "Braze puede ayudarle a empezar a enviar campañas por correo electrónico. Sigue nuestras guías o consulta nuestro curso de Braze Learning sobre <a href='https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Incorporación por correo electrónico</a>."
 page_type: landing
-description: "Esta página de destino incluye recursos sobre cómo empezar con las campañas de correo electrónico, incluida la configuración de sus IP y dominios, el calentamiento de IP, la validación de correo electrónico y mucho más."
+description: "Esta página de destino incluye recursos sobre cómo empezar con las campañas de correo electrónico, incluida la configuración de tus IP y dominios, el calentamiento de IP, la validación del correo electrónico y mucho más."
 channel: email
 
 guide_featured_title: "Artículos de sección"
@@ -43,10 +43,10 @@ Antes de empezar a enviar correos electrónicos, hay algunas cosas que necesitas
 
 | Requisito | Descripción | Fuente |
 |---|---|---|
-| Una IP (Protocolo de Internet) dedicada| Una IP dedicada es una dirección de Internet única proporcionada exclusivamente a una sola cuenta de alojamiento. | Braze ofrece a sus clientes IP dedicadas, para garantizar el control de la reputación de su remitente de correo electrónico. La incorporación a Braze lo configurará por ti.|
+| Una IP (Protocolo de Internet) dedicada| Una IP dedicada es una dirección de Internet única proporcionada exclusivamente a una sola cuenta de alojamiento. | Braze te proporciona IP dedicadas para garantizar el control de la reputación del remitente de tu correo electrónico. La incorporación a Braze lo configurará por ti.|
 | Dominios con etiqueta blanca | Consisten en un dominio y un subdominio. Al utilizar la etiqueta sin marca, puedes pasar las comprobaciones de autenticación de correo electrónico para DKIM y SPF. | El equipo de Braze Onboarding generará estos dominios para usted, pero deberá elegir sus nombres. |
 | Subdominios | Se trata de una subdivisión de un dominio (como "@news.company.com") dentro de su dirección de correo electrónico. Tener un subdominio evitará cualquier error que pueda dañar la reputación del correo electrónico oficial de su empresa. | El equipo de Incorporación lo generará por ti, pero tú debes decidir el nombre del subdominio. No puede utilizar subdominios que se estén utilizando actualmente fuera de Braze. |
-| Grupos de IP | Se trata de una configuración opcional que se utiliza para separar la reputación de los distintos tipos de correo electrónico (como "promocional" y "transaccional") para evitar que la reputación de uno afecte al otro y favorecer una mayor entregabilidad. | El equipo de Incorporación configurará los grupos por ti. A continuación, cuando redactes el correo electrónico, selecciona el grupo de IP de tu correo electrónico en el menú desplegable **Grupo de IP** de la página **Usuarios de destino**.|
+| Grupos de IP | Se trata de una configuración opcional que se utiliza para separar la reputación de los distintos tipos de correo electrónico (como "promocional" y "transaccional") para evitar que la reputación de uno afecte al otro y favorecer una mayor entregabilidad. | El equipo de Incorporación configurará los grupos por ti. Después, al redactar tu correo electrónico, puedes ver el grupo de IP de tu correo electrónico en el paso **Audiencias objetivo**.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Calentamiento de IP
@@ -57,7 +57,7 @@ El calentamiento de IP es el **paso más importante** en el proceso de configura
 
 [El calentamiento IP]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ip_warming/) consiste en enviar un número relativamente pequeño de correos electrónicos en el primer lote y, con el tiempo, aumentar ligeramente el volumen en los lotes siguientes hasta alcanzar el volumen diario habitual. Esto se hace al final del proceso de configuración de tu correo electrónico.
 
-Al empezar con volúmenes más pequeños de correo electrónico, está estableciendo un nivel de confianza con su proveedor de correo electrónico, demostrando que sólo envía correos electrónicos a usuarios relevantes. Si envía su primer lote de correos electrónicos a los usuarios más comprometidos, podrá ganarse más rápidamente la confianza de su proveedor.
+Al empezar con volúmenes más pequeños de correo electrónico, está estableciendo un nivel de confianza con su proveedor de correo electrónico, demostrando que sólo envía correos electrónicos a usuarios relevantes. Enviar tu primer lote de envíos por correo electrónico a tus usuarios más comprometidos puede ayudarte a ganar confianza más rápidamente con tu proveedor.
 
 Cuando hayas terminado de calentar tu IP, podrás [empezar a crear y enviar correos electrónicos]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/).
 

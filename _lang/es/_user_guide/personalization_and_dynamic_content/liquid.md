@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "Personalización mediante etiquetas líquidas"
 guide_top_text: "Braze puede sustituir automáticamente los valores de un usuario determinado en tus mensajes. Coloque la expresión dentro de dos conjuntos de llaves para notificar a Braze que utilizará un valor interpolado. Dentro de estos corchetes, cualquier valor de usuario que desee sustituir debe ir rodeado de un conjunto adicional de corchetes con un signo de dólar delante.<br><br>Para más información sobre Liquid, consulta nuestra ruta guiada de <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Personalización dinámica con Liquid</a></b> de Braze Learning."
@@ -50,7 +51,7 @@ guide_featured_list:
 
 > Liquid es un lenguaje de plantillas de código abierto desarrollado por Shopify y escrito en Ruby. En Braze, Liquid se utiliza para incorporar datos del perfil de un usuario a los mensajes. 
 
-Por ejemplo, puede recuperar un atributo personalizado de un perfil de usuario que sea un tipo de datos entero y redondear ese valor al número entero más cercano. Para obtener más información sobre la sintaxis y el uso de Liquid, consulte [**Etiquetas de personalización compatibles**][1].
+Por ejemplo, puede recuperar un atributo personalizado de un perfil de usuario que sea un tipo de datos entero y redondear ese valor al número entero más cercano. Para obtener más información sobre la sintaxis y el uso de Liquid, consulte [**Etiquetas de personalización compatibles**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 El lenguaje de plantillas Liquid admite el uso de objetos, etiquetas y filtros.
 
@@ -109,4 +110,3 @@ Estos términos se reinterpretan a partir de [**documentación de Shopify**](htt
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

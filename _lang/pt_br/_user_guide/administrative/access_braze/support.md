@@ -7,15 +7,15 @@ page_type: reference
 search_rank: 7
 ---
 
-# [![curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}suporte da Braze
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Suporte da Braze
 
 ## Acesse o portal de suporte
 
 Para entrar em contato com a equipe de suporte da Braze, navegue até o dashboard da Braze. No dashboard, selecione **Suporte** > **Obter ajuda**.
 
-![O menu suspenso "Support" (Suporte) com a opção de obter ajuda.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
+![O menu suspenso "Suporte" com a opção de obter ajuda.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Dependendo das suas permissões no Braze e se você for um contato de suporte designado (premium), você será levado ao portal de suporte do Braze, onde poderá enviar e rastrear casos, ou ao nosso formulário de suporte padrão. Se não tiver certeza se é um contato de suporte da Braze, entre em contato com o administrador da Braze, o gerente de sucesso da Braze ou o proprietário da conta da sua empresa.
+Dependendo das suas permissões Braze e se você for um contato de suporte designado, você será direcionado para o portal de suporte Braze, onde poderá enviar e rastrear casos, ou para o nosso formulário de suporte padrão. Se não tiver certeza se é um contato de suporte da Braze, entre em contato com o administrador da Braze, o gerente de sucesso da Braze ou o proprietário da conta da sua empresa.
 
 ## Adição de contatos de suporte designados
 
@@ -28,11 +28,9 @@ Os contatos de suporte designados podem acessar todos os casos de suporte da sua
 
 ![A caixa de seleção para definir um usuário como um contato de suporte designado.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
-O número de contatos de suporte designados que você pode definir depende do seu limite de contatos. Entre em contato com o gerente de sucesso do cliente para saber mais.
-
 ### Obtenção de acesso
 
-Depois que um usuário for designado como um contato de suporte, o portal de suporte da Braze enviará a esse usuário um e-mail de boas-vindas com instruções para configurar seu acesso.
+Depois que um usuário for designado como contato de suporte, o portal de suporte da Braze enviará a esse usuário um e-mail de boas-vindas com instruções para configurar seu acesso.
 
 ## Forneça capturas de tela do console de desenvolvedor
 
@@ -60,17 +58,17 @@ Quanto mais insights você puder oferecer, melhor. Inclua detalhes como o espaç
 
 ### Forneça uma amostra de usuários
 
-Compartilhe uma amostra de usuários em vez de todo o segmento afetado. Fornecer uma quantidade menor de usuários nos ajuda a restringir nosso escopo e acelerar nossas investigações.
+Compartilhe uma amostra de usuários em vez de todo o segmento afetado. O fornecimento de um número menor de usuários nos ajuda a restringir nosso escopo e acelerar nossas investigações.
 
 ### Anexe os registros de rede (registros HAR)
 
-Se entrar em contato com o Suporte, será útil que o usuário afetado colete registros de rede (registros HAR) do navegador enquanto o problema ocorre. Isso mostrará as solicitações de rede entre o navegador e o servidor, para os componentes individuais de uma página da Web e o dashboard do Braze que o usuário está tentando abrir.
+Se entrar em contato com o Suporte, será útil que o usuário afetado colete registros de rede (registros HAR) do navegador enquanto o problema ocorre. Isso exibirá as solicitações de rede entre o navegador e o servidor para os componentes individuais de uma página da Web, bem como o dashboard do Braze que o usuário está tentando abrir.
 
 Peça para o usuário afetado fazer o seguinte:
 
 1. Abra suas ferramentas de desenvolvedor. Se estiver usando o Chrome, isso pode ser feito usando o atalho de teclado `option` + `⌘` + `J` (no MacOS). Se estiver usando o Windows ou o Linux, isso pode ser feito usando o atalho `shift` + `CTRL` + `J`.
 2. Selecione **Rede** > **Fetch/XHR** ou **XHR**.
-3. Faça uma gravação ou captura de tela mostrando o **nome**, o **status**, o **tamanho** e **a hora** dos elementos.<br><br>![A guia "Fetch/XHR" em um navegador Chrome.][1]{: style="max-width:60%;"}
+3. Faça uma gravação ou captura de tela mostrando o **nome**, o **status**, o **tamanho** e **a hora** dos elementos.<br><br>![A guia "Fetch/XHR" em um navegador Chrome.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
 Em seguida, anexe a gravação ou a captura de tela do usuário ao tíquete de suporte. Essas informações podem ajudar na investigação do Support.
 
@@ -87,7 +85,9 @@ Considere anexar uma captura de tela para ilustrar o problema. Fornecer essas im
 Selecione o nível de severidade apropriado para nos ajudar a atribuir os recursos certos para resolver o problema. 
 
 {% alert important %}
-Marcar um problema como "Crítico" significa que sua instância de produção está inativa e todo o trabalho dentro da Braze foi interrompido.
+Marcar um problema como "Crítico" significa que sua instância de produção está inativa e todo o trabalho no Braze foi interrompido.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}
+## Solução de problemas de acesso
+
+Se receber um erro ao registrar-se no Portal de Suporte da Braze, como `Check your entry`, certifique-se de ter seguido o link em seu e-mail de boas-vindas para definir uma senha para o portal. Se já tiver feito isso ou se já tiver conseguido registrar-se no portal, crie um tíquete de suporte.

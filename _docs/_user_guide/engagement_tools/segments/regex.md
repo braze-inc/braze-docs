@@ -1,5 +1,5 @@
 ---
-nav_title: "Regular Expressions"
+nav_title: "Regular expressions"
 article_title: Regular Expressions
 page_order: 10
 

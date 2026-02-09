@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Exportar perfil de usuario por identificador"
-article_title: "POST: Exportar perfil de usuario por identificador"
+nav_title: "PUBLICAR: Exportar perfil de usuario por identificador"
+article_title: "PUBLICAR: Exportar perfil de usuario por identificador"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -16,7 +16,7 @@ description: "En este artículo se describen los detalles del punto final Export
 
 > Utiliza este punto final para exportar datos de cualquier perfil de usuario especificando un identificador de usuario.
 
-Se pueden incluir hasta 50 `external_ids` o `user_aliases` en una sola solicitud. Si quieres especificar `device_id`, `email_address`, o `phone`, sólo se puede incluir uno de cada identificador por solicitud.
+Se pueden incluir hasta 50 `external_ids` o `user_aliases` en una sola solicitud. Si quieres especificar `device_id`, `email_address`, o `phone`, sólo se puede incluir uno de estos identificadores por solicitud.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export
+  "fields_to_export": (optional, array of strings) Name of user data fields to export
 }
 ```
 
@@ -61,8 +61,10 @@ Para los clientes que se hayan incorporado a Braze a partir del 22 de agosto de 
 | `braze_id`         | Opcional | Cadena                                                        | Identificador Braze de un usuario concreto.                                                      |
 | `email_address`    | Opcional | Cadena                                                        | Dirección de correo electrónico del usuario.                                                                       |
 | `phone`            | Opcional | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | Número de teléfono del usuario.                                                                        |
-| `fields_to_export` | Obligatoria | Matriz de cadenas                                              | Nombre de los campos de datos de usuario a exportar.                                                          |
+| `fields_to_export` | Opcional\*. | Matriz de cadenas                                              | Nombre de los campos de datos de usuario a exportar.<br><br>\*Este campo es necesario para utilizar el límite de velocidad de 40 peticiones por segundo. Si se omite, se utilizará en su lugar el límite de velocidad predeterminado de 250 peticiones por minuto. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+\*Requerido para clientes que se hayan incorporado a Braze a partir del 22 de agosto de 2024.
 
 ## Ejemplo de solicitud
 ```
@@ -92,10 +94,10 @@ La siguiente es una lista de elementos `fields_to_export` válidos. El uso de `f
 | Campo a exportar       | Tipo de datos       | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `apps`                | Matriz           | Aplicaciones para las que este usuario ha iniciado sesión, que incluye los campos:<br><br>- `name`: nombre de la aplicación<br>- `platform`: plataforma de la aplicación, como iOS, Android o Web<br>- `version`: número o nombre de la versión de la aplicación <br>- `sessions`: número total de sesiones de esta aplicación<br>- `first_used`: fecha de la primera sesión<br>- `last_used`: fecha de la última sesión<br><br>Todos los campos son cadenas.                                                                                                                                                                                                                                                                                       |
-| `attributed_campaign` | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/attribution), si están configuradas. Identificador de una campaña publicitaria concreta.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `attributed_source`   | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/attribution), si están configuradas. Identificador de la plataforma en la que estaba el anuncio.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `attributed_adgroup`  | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/attribution), si están configuradas. Identificador de una subagrupación opcional debajo de campaña.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `attributed_ad`       | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/attribution), si están configuradas. Identificador de un subgrupo opcional por debajo de la campaña y del grupo de anuncios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `attributed_campaign` | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/), si están configuradas. Identificador de una campaña publicitaria concreta.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `attributed_source`   | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/), si están configuradas. Identificador de la plataforma en la que estaba el anuncio.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `attributed_adgroup`  | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/), si están configuradas. Identificador de una subagrupación opcional debajo de campaña.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `attributed_ad`       | Cadena          | Datos de [las integraciones de atribución]({{site.baseurl}}/partners/message_orchestration/), si están configuradas. Identificador de un subgrupo opcional por debajo de la campaña y del grupo de anuncios.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `push_subscribe`      | Cadena          | Estado de la suscripción push del usuario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `email_subscribe`     | Cadena          | Estado de la suscripción por correo electrónico del usuario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `braze_id`            | Cadena          | Identificador único de usuario específico del dispositivo establecido por Braze para este usuario.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -130,8 +132,6 @@ Dependiendo de los datos solicitados, este punto final de la API puede no ser su
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,
@@ -146,7 +146,7 @@ Para ver un ejemplo de los datos accesibles a través de este punto final, consu
 Objeto de exportación del usuario (incluiremos los menos datos posibles; si falta un campo en el objeto, debe considerarse nulo o vacío):
 
 {% tabs %}
-{% tab Todos los campos %}
+{% tab All fields %}
 
 ```json
 {
@@ -288,7 +288,7 @@ Objeto de exportación del usuario (incluiremos los menos datos posibles; si fal
 ```
 
 {% endtab %}
-{% tab Muestra de resultados %}
+{% tab Sample output %}
 
 ```json
 {
@@ -416,7 +416,7 @@ Objeto de exportación del usuario (incluiremos los menos datos posibles; si fal
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

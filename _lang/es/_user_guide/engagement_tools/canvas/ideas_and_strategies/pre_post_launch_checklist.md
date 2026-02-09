@@ -1,5 +1,5 @@
 ---
-nav_title: Lista de comprobación previa y posterior al lanzamiento
+nav_title: Lista de control previa y posterior al lanzamiento
 article_title: Lista de comprobación previa y posterior al lanzamiento
 page_order: 2
 description: "Este artículo proporciona una guía de las cosas que debes comprobar antes y después de lanzar un Canvas."
@@ -15,10 +15,6 @@ tool: Canvas
 
 Antes de lanzar un Canvas, hay varios detalles que puedes comprobar para asegurarte de que tus mensajes y tiempos de envío se ajustan a las preferencias de tu audiencia. Entre las cosas que hay que tener en cuenta están las variaciones en las zonas horarias, los ajustes de entrada, etc. Utilizando esta lista de comprobación como guía, afine estas áreas en función de su caso de uso para contribuir al éxito de su Canvas. 
 
-{% alert important %}
-Desde el 28 de febrero de 2023 ya no puedes crear ni duplicar Canvas mediante la experiencia Canvas original. Braze recomienda a los clientes que utilicen la experiencia Canvas original que se pasen a Canvas Flow. Es una experiencia de edición mejorada para construir y gestionar mejor los Lienzos. Más información sobre la [clonación de tus lienzos en el flujo de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
-
 ### Revisar la configuración de la zona horaria
 
 Si está introduciendo usuarios según su zona horaria local utilizando un horario de entrada programado, debe lanzar su Canvas al menos 24 horas antes de la fecha en la que desea que los usuarios entren en su Canvas. Por ejemplo, aquí hay un Canvas que no ha dejado suficiente tiempo entre el lanzamiento y la hora de entrada programada. En este escenario, puede haber algunos usuarios que no entren en tu Canvas porque la hora de entrada programada ya ha pasado en determinadas zonas horarias. 
@@ -27,7 +23,7 @@ Si está introduciendo usuarios según su zona horaria local utilizando un horar
 Verás una alerta si no has programado un buffer suficiente. Una solución rápida es ajustar la hora de envío para garantizar que los usuarios puedan permanecer en el segmento objetivo durante 24 horas completas.
 {% endalert %}
 
-![][1]
+![Un Canvas programado para que los usuarios entren a la vez a partir de las 10 de la mañana del 30 de abril de 2025, en su hora local.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Considere el uso de expresiones regulares para los filtros de audiencia
 
@@ -72,7 +68,7 @@ Para un componente Mensaje en la mensajería multicanal, recomendamos lo siguien
 
 ### Muchas entradas, pero pocos envíos
 
-Por ejemplo, supongamos que ha observado una disparidad entre el número de mensajes enviados y el total de entradas. Puede identificar y descubrir áreas para ajustar su lienzo comprobando estas áreas clave.
+Por ejemplo, supongamos que has observado una disparidad entre el número de mensajes enviados y el total de entradas. Puede identificar y descubrir áreas para ajustar su lienzo comprobando estas áreas clave.
 
 #### Público de entrada
 
@@ -80,7 +76,7 @@ Si utilizas una campaña de envío programado, vuelve a comprobar tu audiencia o
 
 #### Primer componente del lienzo
 
-Revise los filtros de audiencia, los activadores de acciones o los segmentos utilizados en los componentes iniciales de su Canvas. ¿Hay faltas de ortografía o condiciones demasiado estrictas que impiden que su lienzo empiece bien? ¿Estás utilizando "Iguales" cuando deberías utilizar "Coincidencias regex"?
+Revise los filtros de audiencia, los activadores de acciones o los segmentos utilizados en los componentes iniciales de su Canvas. ¿Hay faltas de ortografía o condiciones demasiado estrictas que impiden que tu Canvas empiece bien? ¿Estás utilizando "Iguales" cuando deberías utilizar "Coincidencias regex"?
 
 #### Grupo de control en Canvas 
 
@@ -92,7 +88,7 @@ Si no ves ningún dato de entrada en tu Canvas, la razón de que los usuarios no
 
 Si utilizas la entrada basada en acciones en tu programa de entrada, comprueba que no has utilizado aquí la misma acción desencadenante que en tu **Audiencia objetivo**. Puede producirse una condición de carrera en la que el usuario no se encuentre entre el público en el momento de realizar el evento desencadenante, lo que significa que no entrará en el Canvas.
 
-Además, compruebe que el segmento seleccionado tiene usuarios revisando la tabla **Población objetivo** en la configuración de **Público objetivo**. Si este número es bajo, vea cómo puede ajustar la configuración de entrada, o revise los segmentos o filtros seleccionados en busca de errores.
+Además, compruebe que el segmento seleccionado tiene usuarios revisando la tabla **Población objetivo** en la configuración de **Público objetivo**. Si este número es bajo, comprueba cómo puedes ajustar la configuración de entrada o revisar los segmentos o filtros seleccionados para ver si hay algún error.
 
 ### Descenso inesperado entre pasos
 
@@ -103,10 +99,9 @@ A continuación, es importante identificar estos ajustes que pueden afectar a cu
 - Horas tranquilas
 - Validaciones de entrega
 
-En general, elija la Temporización Inteligente o las Horas de Silencio para su Lienzo, no ambas. La misma sugerencia se aplica a utilizar la sincronización inteligente o [la limitación de velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), no ambas. Para más información sobre la mejor manera de utilizar Intelligence Suite, lea nuestras [Preguntas frecuentes sobre Inteligencia]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
+En general, elija la Temporización Inteligente o las Horas de Silencio para su Lienzo, no ambas. La misma sugerencia se aplica a utilizar la sincronización inteligente o [la limitación de velocidad]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), no ambas. Para más información sobre cómo utilizar mejor la Intelligence Suite, lee nuestros [casos de uso de la Suite Inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases).
 
 ### Volúmenes de envío sospechosos entre rutas
 
 Cuando el volumen de envíos entre dos o más rutas (ya sean rutas de audiencia o rutas de acción) no es el esperado, puede ser una oportunidad para revisar sus segmentos, filtros o acciones de activación. Asegúrese también de identificar y eliminar los filtros superpuestos.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

@@ -1,12 +1,12 @@
 ---
-nav_title: Extraction des données de profil utilisateur
-article_title: Extraction des données de profil utilisateur dans les appels de contenu connectés
+nav_title: Extraire des données de profil utilisateur
+article_title: Récupérer les données du profil utilisateur dans les appels de contenu connecté
 page_order: 3
 description: "Le présent article explique comment extraire les profils d’utilisateur dans vos appels de contenu connecté et les bonnes pratiques impliquant la modélisation de Liquid."
 toc_headers: h2
 ---
 
-# Extraire des données de profil utilisateur
+# Extraire les données du profil utilisateur
 
 > Cette page explique comment intégrer les profils utilisateurs dans vos appels au contenu connecté et présente les meilleures pratiques en matière de création de modèles liquides. 
 

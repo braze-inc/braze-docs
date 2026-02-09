@@ -1,33 +1,31 @@
 ---
 nav_title: Configurações em vários idiomas
-article_title: Configurações em vários idiomas
+article_title: Configurações de tradução e de vários idiomas
 alias: "/multi_language_support/"
 page_order: 5.5
 description: "Este artigo fornece uma visão geral das configurações multilíngues no dashboard da Braze e como usar localidades em seu envio de mensagens."
 ---
 
-# Configurações em vários idiomas
+# Configurações de tradução e de vários idiomas
 
-> Ao ajustar as configurações multilíngues, é possível direcionar usuários em diferentes idiomas e locais com mensagens diferentes, tudo em uma única mensagem de e-mail.
+> O recurso multilíngue permite o uso de [tags de tradução]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) para direcionamento a usuários em diferentes idiomas e locais, tudo em uma única mensagem.
 
-## Pré-requisitos
+{% multi_lang_include locales.md section="Prerequisites" %}
 
-Para editar e gerenciar o suporte a vários idiomas, é necessário ter a permissão de usuário "Manage Multi-Language Settings" (Gerenciar configurações de vários idiomas). Para adicionar a localização a uma mensagem, você precisará de permissões para editar campanhas.
+## Adicionar um local
 
-## Adicionar uma localização
-
-1. Acesse **Configurações** > **Suporte a vários idiomas** em **Configurações do espaço de trabalho**.
-2. Selecione **Add locale (Adicionar localidade)** e, em seguida, selecione **Default locale (Localidade padrão)** ou **Custom Attributes (Atributos personalizados)**.<br><br>![O menu suspenso "Add locale" (Adicionar localidade) com opções para selecionar a localidade padrão ou atributos personalizados.][1]{: style="max-width:40%;"}
+1. Acesse **Settings** > **Localization Settings (** **Configurações** > **Configurações de localização**).
+2. Selecione **Add locale (Adicionar localidade)** e, em seguida, selecione **Default locale (Localidade padrão)** ou **Custom Attributes (Atributos personalizados)**.<br><br>![O menu suspenso "Add locale" (Adicionar localidade) com opções para selecionar a localidade padrão ou atributos personalizados.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Digite um nome para a localização.
 4. Selecione as respectivas atribuições do usuário para a opção de localização escolhida.
 
 {% tabs %}
-{% tab Localização padrão %}
+{% tab Default locale %}
 
-Para **Localização padrão**, use os menus suspensos para selecionar o idioma a ser adicionado e, opcionalmente, o país a ser associado ao idioma.<br><br>![Uma janela chamada "Add locale - Default Language and Country" (Adicionar localização - Idioma e país padrão) para especificar o idioma e o país.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+Para **Localização padrão**, use os menus suspensos para selecionar o idioma a ser adicionado e, opcionalmente, o país a ser associado ao idioma.<br><br>![Uma janela chamada "Add locale - Default Language and Country" para especificar o idioma e o país.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
-{% tab Atributos personalizados %}
+{% tab Custom attributes %}
 
 Para **atributos personalizados**, use o menu suspenso para selecionar o atributo personalizado associado e, no campo de texto, insira o valor.<br><br>![Uma janela chamada "Add locale - Custom Attributes" (Adicionar localidade - Atributos personalizados) para especificar o atributo personalizado e o valor.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
@@ -66,5 +64,3 @@ Os arquivos de tradução são armazenados no nível da campanha, o que signific
 #### O nome da localização precisa seguir um padrão ou formato específico?
 
 Não. Você pode usar sua convenção de nomenclatura preferida. O nome da localização é usado ao selecionar a localização no editor e estará nos cabeçalhos do arquivo baixado com os IDs de tradução.
-
-[1]: {% image_buster /assets/img/multi-language_support/add_locale_options.png %}

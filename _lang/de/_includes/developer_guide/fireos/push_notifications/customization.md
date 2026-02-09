@@ -14,19 +14,19 @@ Im Feld **Time to Live** (TTL) können Sie eine benutzerdefinierte Zeitspanne f�
 
 Mit dem Zusammenfassungstext können Sie zusätzlichen Text in der erweiterten Benachrichtigungsansicht einstellen. Es dient auch als Beschriftung für Benachrichtigungen mit Bildern.
 
-![Android-Nachricht mit dem Titel "Grüße von Appboy!", der Nachricht "Dies ist der Nachrichtentext! Sie können sogar Emojis hinzufügen." und Zusammenfassungstext "Dies ist der Zusammenfassungstext."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt.
+Der Zusammenfassungstext wird in der erweiterten Ansicht unter dem Text der Nachricht angezeigt. 
+
+![Eine Android Nachricht mit dem Titel "Dies ist der Titel der Benachrichtigung." und dem Zusammenfassungstext "Dies ist der Zusammenfassungstext der Benachrichtigung."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Bei Push-Benachrichtigungen, die Bilder enthalten, wird der Nachrichtentext in der eingeklappten Ansicht angezeigt, während der Zusammenfassungstext als Bildunterschrift angezeigt wird, wenn die Benachrichtigung erweitert wird. 
-
-![Eine Android Nachricht mit dem Titel "Appboy!", der Nachricht "Dies ist der Nachrichtentext..." und dem zusammenfassenden Text "und dies ist der zusammenfassende Text."]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### Benutzerdefinierte URIs {#custom-uri}
 
 Mit der Funktion **Benutzerdefinierte URI** können Sie eine Web-URL oder eine Android-Ressource angeben, zu der navigiert werden soll, wenn die Benachrichtigung angeklickt wird. Wenn kein benutzerdefinierter URI angegeben ist, gelangen Benutzer durch Klicken auf die Benachrichtigung zu Ihrer App. Sie können die angepasste URI verwenden, um Deeplinks in Ihrer App zu setzen und Nutzer zu Ressourcen außerhalb Ihrer App zu leiten. Dies kann über die [Messaging-API]({{site.baseurl}}/api/endpoints/messaging) oder unser Dashboard unter **Erweiterte Einstellungen** im Push Composer wie abgebildet festgelegt werden:
 
-![Erweiterte Einstellung für Deeplinking im Braze Push Composer.]({% image_buster /assets/img_archive/deep_link.png %})
+![Die fortschrittliche Einstellung für Deeplinks im Braze Push Composer.]({% image_buster /assets/img_archive/deep_link.png %})
 
 ### Benachrichtigungs-Anzeigepriorität
 
@@ -59,7 +59,7 @@ In Android O wurden die Benachrichtigungstöne eine Eigenschaft der Benachrichti
 
 Für Geräte mit Android-Versionen vor O können Sie mit Braze den Ton einer einzelnen Push-Nachricht über den Dashboard Composer einstellen. Hierzu können Sie eine lokale Tonressource auf dem Gerät angeben (z. B. `android.resource://com.mycompany.myapp/raw/mysound`). Wenn Sie in diesem Feld "default" angeben, wird der standardmäßige Benachrichtigungston auf dem Gerät abgespielt. Dies kann über die [Messaging-API]({{site.baseurl}}/api/endpoints/messaging) oder das Dashboard unter **Einstellungen** im Push Composer festgelegt werden.
 
-![Erweiterte Einstellung für Töne im Braze Push Composer.]({% image_buster /assets/img_archive/sound_android.png %})
+![Die Einstellung für den Fortschritt im Braze Push Composer.]({% image_buster /assets/img_archive/sound_android.png %})
 
 Geben Sie die vollständige URI der Tonressource (z. B. `android.resource://com.mycompany.myapp/raw/mysound`) in die Eingabeaufforderung des Dashboards ein.
 

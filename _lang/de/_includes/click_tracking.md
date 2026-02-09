@@ -26,7 +26,7 @@ Ja Es können sowohl statische als auch dynamische Parameter hinzugefügt werden
 
 ### Wie lange bleiben verkürzte URLs gültig?
 
-Dynamische URLs sind ab der URL-Registrierung zwei Monate lang gültig.
+Personalisierte URLs sind ab dem Zeitpunkt der URL-Registrierung zwei Monate lang gültig.
 
 ### Muss das Braze SDK installiert sein, um Links zu kürzen?
 
@@ -38,6 +38,6 @@ Nein. Die Linkverkürzung funktioniert ohne SDK-Integration.
 
 ## Angepasste Domains
 
-Die Verkürzung von Links ermöglicht es Ihnen auch, Ihre eigene Domain zu verwenden, um das Erscheinungsbild Ihrer verkürzten URLs zu personalisieren und so ein konsistentes Markenimage zu vermitteln. Weitere Informationen finden Sie unter [Angepasste Domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/link_shortening/custom_domains/).
+Die Verkürzung von Links ermöglicht es Ihnen auch, Ihre eigene Domain zu verwenden, um das Erscheinungsbild Ihrer verkürzten URLs zu personalisieren und so ein konsistentes Markenimage zu vermitteln. Weitere Informationen finden Sie unter [Angepasste Domains]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/link_shortening/custom_domains/).
 
 {% endif %}

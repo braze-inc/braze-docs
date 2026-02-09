@@ -1,8 +1,8 @@
 ---
-nav_title: 캔버스 테스트
-article_title: 캔버스 테스트
+nav_title: 테스트 캔버스
+article_title: 테스트 캔버스
 layout: dev_guide
-guide_top_header: "캔버스 테스트"
+guide_top_header: "테스트 캔버스"
 guide_top_text: "캔버스를 보낸 후에는 항상 결과를 확인하여 캔버스가 잘 되었는지, 그리고 향후 메시징에 긍정적인 영향을 미칠 것인지 확인해야 합니다.<br><br> 여기에서 사용자의 메시징 효과를 측정하는 데 도움이 되는 캔버스 분석 및 기타 보고서에 대한 리소스를 찾을 수 있습니다."
 page_order: 4
 

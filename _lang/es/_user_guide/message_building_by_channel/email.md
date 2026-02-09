@@ -1,20 +1,17 @@
 ---
 nav_title: Correo electrónico
 article_title: Correo electrónico
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "Correo electrónico"
-guide_top_text: "Con el correo electrónico en Braze, puede crear mensajes de correo electrónico completamente personalizados y adaptados a sus necesidades, ya sea en campañas o en Canvas, que captarán rápidamente la atención de sus usuarios. Consulte los siguientes artículos para saber más."
+guide_top_text: "Con el correo electrónico en Braze, puedes crear mensajes por correo electrónico completamente personalizados en campañas o Canvas que captarán la atención de tu usuario rápidamente fuera de tu aplicación o sitio web. Personalice sus mensajes de correo electrónico, desde la gestión de su audiencia hasta la inclusión de atractivos contenidos multimedia. Para ver ejemplos de campañas por correo electrónico, consulte nuestros <a href='https://www.braze.com/customers/'>estudios de casos</a>."
 description: "En esta página de inicio se encuentra el correo electrónico de Braze. Aquí podrá aprender a crear una campaña de correo electrónico, a utilizar el editor de arrastrar y soltar, a gestionar las suscripciones de los usuarios, el centro de preferencias y mucho más."
 channel:
   - email
 search_rank: 2
 guide_featured_title: "Artículos populares"
 guide_featured_list:
-- name: Acerca del correo electrónico
-  link: /docs/user_guide/message_building_by_channel/email/about/
-  image: /assets/img/braze_icons/check-square-broken.svg
-- name: Gestión de suscripciones de usuarios
+- name: Gestionar las suscripciones de los usuarios
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
 - name: Aliasing de enlaces
@@ -39,7 +36,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Locales en los mensajes
-  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/users-01.svg
 - name: Centro de preferencias
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
@@ -57,7 +54,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Identificador Cifrado a nivel de campo
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Herramienta de promoción de Gmail
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
@@ -77,8 +74,27 @@ guide_menu_list:
 - name: Preguntas frecuentes
   link: /docs/user_guide/message_building_by_channel/email/faq/
   image: /assets/img/braze_icons/annotation-question.svg
-
-
 ---
 
-<br><br>
+## [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Personaliza tus correos electrónicos
+
+Puede personalizar sus mensajes de correo electrónico de varias maneras, entre ellas:
+
+- [Plantillas de correo electrónico Braze]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/)
+- [Plantillas HTML personalizadas]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)
+- [Bloques para el editor de arrastrar y soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/)
+- [Suscripciones de usuarios]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)
+
+## Casos de uso positivos
+
+Aquí tienes algunos casos de uso que te servirán de inspiración.
+
+| Caso de uso | Explicación |
+| --- | --- |
+| Reactivación de la interacción | Llegue a usuarios ajenos a su aplicación, incluidos los que no la han instalado. |
+| Incorporación | Incorpore y anime a los nuevos usuarios a activar las notificaciones push o a compartir la aplicación en las redes sociales. |
+| Mensajes ricos | Permiten mensajes HTML ricos y dinámicos. |
+| Contenidos multimedia | Facilidad para colocar contenidos multimedia que atraigan a los usuarios, como vídeos e imágenes. |
+| Boletines | Envía cómodamente boletines mensuales o semanales para mantener la interacción de los usuarios. |
+| Transacciones | Notifique a los usuarios las compras recientes y proporcióneles información importante sobre productos y envíos con [correos electrónicos transaccionales]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/).
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -1,5 +1,5 @@
 ---
-nav_title: 보고서 구성
+nav_title: 보고 구성
 article_title: 보고 구성
 page_order: 1.1
 page_type: reference
@@ -8,7 +8,7 @@ tool: Reporting
 
 ---
 
-# 보고서 구성
+# 보고 구성
 
 > Braze는 앱과 메시징 캠페인의 성능을 이해하는 데 도움이 되는 주간 이메일 보고서를 자동으로 생성합니다. 
 

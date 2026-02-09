@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp은 전 세계에서 널리 사용되는 P2P 메시징 플랫폼으로, 기업용 대화 기반 메시징을 제공합니다. WhatsApp 메시징 채널은 WhatsApp 플랫폼에서 사용자와 고객에게 직접 다가갈 수 있는 방법을 제공합니다. <br><br>**왓츠앱 액세스는 일부 Braze 패키지에서만 사용할 수 있습니다. 시작하려면 계정 관리자 또는 고객 성공 관리자에게 문의하세요.**"
+guide_top_text: "WhatsApp은 전 세계에서 널리 사용되는 P2P 메시징 플랫폼으로, 기업용 대화 기반 메시징을 제공합니다. WhatsApp 메시징 채널은 WhatsApp 플랫폼에서 사용자와 고객에게 직접 다가갈 수 있는 방법을 제공합니다. <br><br>**WhatsApp 사용 가능 여부는 귀하의 Braze 패키지에 따라 다릅니다.** 시작하려면 귀하의 계정 매니저 또는 고객 성공 매니저에게 문의하십시오.**"
 description: "이 랜딩 페이지에서는 WhatsApp 캠페인을 만드는 방법, 옵트인 및 옵트아웃, 빠른 답장, 보고 등 WhatsApp에 관한 모든 것을 확인할 수 있습니다."
 search_rank: 3
 alias: /whatsapp/
@@ -15,6 +15,9 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "WhatsApp 설정"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "자신의 WhatsApp 커넥터 가져오기"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
   image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsApp 구독 그룹"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
@@ -51,6 +54,9 @@ guide_featured_list:
 - name: "사용자 정의 도메인"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
   image: /assets/img/braze_icons/link-03.svg
+- name: "WhatsApp 사용 사례"
+  link: /docs/whatsapp_use_cases/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "WhatsApp FAQ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

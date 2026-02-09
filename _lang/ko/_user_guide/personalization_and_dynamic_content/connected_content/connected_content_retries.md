@@ -1,5 +1,5 @@
 ---
-nav_title: 연결된 콘텐츠 재시도
+nav_title: Connected Content retries
 article_title: 연결된 콘텐츠 재시도
 page_order: 5
 description: "이 참조 문서에서는 연결된 콘텐츠 재시도 처리 방법에 대해 다룹니다."

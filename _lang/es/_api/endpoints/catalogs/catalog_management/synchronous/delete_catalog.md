@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Eliminar catálogo"
+nav_title: "DELETE: Borrar catálogo"
 article_title: "DELETE: Eliminar catálogo"
 search_tag: Endpoint
 page_order: 1
@@ -25,7 +25,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 
 ## Límite de velocidad
 
-{% multi_lang_include rate_limits.md endpoint='catálogo síncrono' %}
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog' %}
 
 ## Parámetros de la ruta
 
@@ -80,7 +80,7 @@ El código de estado `404` podría devolver el siguiente cuerpo de respuesta. Co
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
+La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
 
 | Error | Solución de problemas |
 | --- | --- |

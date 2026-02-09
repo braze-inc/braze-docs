@@ -1,5 +1,5 @@
 ---
-nav_title: In-App Message Delivery
+nav_title: In-App message delivery
 article_title: In-App Message Delivery for iOS
 platform: iOS
 page_order: 3

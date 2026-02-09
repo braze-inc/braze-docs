@@ -1,6 +1,6 @@
 ---
 nav_title: Campanhas de usuários ativos
-article_title: Campanhas de usuários ativos
+article_title: Campanhas de Usuários Ativos
 page_order: 0.5
 page_type: tutorial
 description: "Este artigo de instruções descreve os benefícios das campanhas de usuários ativos no dashboard do Braze e as etapas para criar e configurar uma."
@@ -29,7 +29,7 @@ Se você definir IDs de usuário para identificar usuários, quando um novo usu�
 
 Usando a nossa seleção de filtros, crie um segmento de usuários que, na sua opinião, engloba a sua base de usuários mais fiel e consistente. O segmento de amostra a seguir define os principais usuários.
 
-![][1]
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 Além disso, não será necessário continuar atualizando esse segmento, pois os usuários que entrarem ou saírem das restrições da campanha serão direcionados ou descartados de forma correspondente.
 
@@ -45,11 +45,9 @@ Faça com que seus usuários se sintam apreciados, agradecendo-lhes pela fidelid
 
 Recompensas inesperadas podem ser mais eficazes para incentivar ações contínuas dos usuários do que se você as tivesse prometido desde o início!
 
-![Uma campanha na etapa Criação com uma notificação Rich do iOS que diz "Mais uma vez, obrigado por comprar conosco! Para demonstrar nossa gratidão, estamos oferecendo frete grátis em sua próxima compra".][2]
+![Uma campanha na etapa Criação com uma notificação Rich do iOS que diz "Mais uma vez, obrigado por comprar conosco! Para demonstrar nossa gratidão, estamos oferecendo frete grátis em sua próxima compra".]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### Mantenha o controle de seus resultados
 
 Acompanhe as aberturas para garantir que esteja direcionando a coleção adequada de usuários com o tipo de mensagem ideal. Além disso, acompanhe todas as aceitações de push e tenha cuidado para não perder esses usuários cruciais.
 
-[1]: {% image_buster /assets/img_archive/define_top_users.png %} "Defina seus principais usuários"
-[2]: {% image_buster /assets/img/congratulations_push.jpg %}

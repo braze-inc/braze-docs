@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT: Update Preference Center"
+nav_title: "PUT: Update preference center"
 article_title: "PUT: Update Preference Center"
 search_tag: Endpoint
 page_order: 5
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## Request parameters

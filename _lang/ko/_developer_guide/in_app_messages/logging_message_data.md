@@ -1,14 +1,14 @@
 ---
-nav_title: 로깅 메시지 데이터
-article_title: Braze SDK를 통해 인앱 메시지 데이터를 로깅하는 중
+nav_title: 로그 메시지 데이터
+article_title: Braze 소프트웨어 개발 키트를 통한 인앱 메시지 데이터 로그
 page_order: 7
-description: "Braze SDK를 통해 인앱 메시지(IAM) 데이터를 로깅하는 방법을 배우세요."
+description: "Braze SDK를 통해 인앱 메시지(IAM) 데이터를 로그하는 방법을 알아보세요."
 noindex: true
 ---
 
-# 인앱 메시지 데이터 로깅
+# 인앱 메시지 데이터 기록
 
-> Braze SDK를 통해 인앱 메시지(IAM) 데이터를 로깅하는 방법을 배우세요.
+> Braze SDK를 통해 인앱 메시지(IAM) 데이터를 로그하는 방법을 알아보세요.
 
 {% sdktabs %}
 {% sdktab web %}
@@ -16,18 +16,18 @@ noindex: true
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_guide/flutter/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_guide/react_native/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_guide/roku/analytics/logging_iam_data.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/analytics/logging_iam_data.md developer_ %}
+{% multi_lang_include developer_guide/unity/analytics/logging_iam_data.md %}
 {% endsdktab %}
 {% endsdktabs %}

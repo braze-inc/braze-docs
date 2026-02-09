@@ -1,5 +1,5 @@
 ---
-nav_title: Locations & Geofences
+nav_title: Locations & geofences
 article_title: Location & Geofences for iOS
 platform: iOS
 page_order: 6

@@ -1,5 +1,5 @@
 ---
-nav_title: iOS 16 Upgrade Guide
+nav_title: iOS 16 upgrade guide
 article_title: iOS 16 Upgrade Guide
 page_order: 7
 platform: 

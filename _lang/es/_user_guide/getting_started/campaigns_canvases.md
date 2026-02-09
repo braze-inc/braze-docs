@@ -9,10 +9,10 @@ description: "Este artículo ofrece un resumen de las distintas formas en que pu
 
 # Cómo empezar: Campañas y Canvas
 
-En Braze, puedes enviar mensajes a través de una [campaña](#campaigns) o de un [Canvas](#canvas-flow).
+En Braze, puedes enviar mensajes a través de una [campaña](#campaigns) o de un [Canvas](#canvas).
 
 - Para enviar un único mensaje dirigido a un grupo de usuarios, elija una campaña. Una campaña es un paso de mensaje único para conectar con sus usuarios en varios canales de mensajería.
-- Para enviar una serie de mensajes continuos en un recorrido global del cliente, elija Canvas Flow. Canvas Flow es nuestra herramienta de orquestación de recorridos. Mientras que las campañas son buenas para enviar mensajes sencillos y específicos, en los lienzos es donde puede llevar sus relaciones con los clientes al siguiente nivel.
+- Para enviar una serie de mensajes continuos en un recorrido del cliente global, elige Canvas, nuestra herramienta de orquestación de recorridos. Mientras que las campañas son buenas para enviar mensajes sencillos y específicos, en los lienzos es donde puede llevar sus relaciones con los clientes al siguiente nivel.
 
 ## Campañas
 
@@ -38,19 +38,19 @@ Consulta estos recursos adicionales para saber más sobre las campañas en Braze
 - [Crear una campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign)
 - [Ideas y estrategias]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies)
 
-## Canvas Flow
+## Canvas
 
 En lugar de enviar mensajes esporádicos a lo largo de varias campañas, Canvases crea una conversación fluida y continua con los usuarios. Esto se debe a que el recorrido de un usuario a través de un Canvas puede dividirse en diferentes caminos en función de sus acciones (o inacción) con su marca, lo que le permite hacer avanzar automáticamente a los usuarios a través de un flujo específico en tiempo real.
 
-![][2]
+![]({% image_buster /assets/img/getting_started/canvas_flow.png %})
 
 De este modo, los lienzos son ideales para lanzar una red y captar a los usuarios que se quedan fuera del camino hacia la conversión y colocarlos en las iniciativas de difusión más eficaces.
 
 Cuando se crea un Canvas, se siguen muchos de los mismos pasos que para configurar una campaña: especificar un público general, las condiciones de entrada y la configuración de envío. Tu Canvas comienza cuando alguien coincide con tu condición de activación. A continuación, se mueven a través de un camino en el lienzo hasta que cumplan sus condiciones de salida.
 
-Tu lienzo puede tener cualquier combinación de [mensajes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [retrasos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), etc. Puede enviar en cualquier canal de mensajería compatible, e incluso [integrarse con plataformas sociales y publicitarias]({{site.baseurl}}/partners/canvas_steps/overview/) como Facebook, Google o TikTok.
+Tu lienzo puede tener cualquier combinación de [mensajes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [retrasos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), etc. Puede enviar en cualquier canal de mensajería compatible, e incluso [integrarse con plataformas sociales y publicitarias]({{site.baseurl}}/partners/canvas_audience_sync/overview/) como Facebook, Google o TikTok.
 
-Consulte estos recursos adicionales para obtener más información sobre Canvas Flow:
+Consulta estos recursos adicionales para saber más sobre Canvas:
 
 - Braze Learning: [Orquestación de recorridos con Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [Crear un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
@@ -60,7 +60,7 @@ Consulte estos recursos adicionales para obtener más información sobre Canvas 
 
 Los canales de mensajería son los distintos canales de comunicación a través de los cuales puede interactuar con sus clientes y transmitir mensajes específicos. 
 
-![][1]
+![]({% image_buster /assets/img/getting_started/channels.png %})
 
 En la tabla siguiente se describen los canales que admitimos.
 
@@ -70,11 +70,13 @@ En la tabla siguiente se describen los canales que admitimos.
 | [Notificaciones push móvil]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)                   | Envíe mensajes directamente a los dispositivos móviles de los usuarios en forma de notificaciones.                                                                                   |
 | [Web push]({{site.baseurl}}/user_guide/message_building_by_channel/push/web)                         | Envíe notificaciones a los navegadores de los usuarios, incluso cuando no estén activos en su sitio web.                                                         |
 | [Mensajes dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)    | Muestre mensajes dentro de su aplicación móvil mientras los usuarios la utilizan activamente.                                                                             |
-| [SMS/MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)                   | Enviar mensajes de texto a los teléfonos móviles de los usuarios.                                                                                                            |
+| [SMS, MMS y RCS*]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/).                   | Enviar mensajes de texto a los teléfonos móviles de los usuarios.                                                                                                            |
 | [WhatsApp*]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/)              | Envía mensajes a través de la popular plataforma de mensajería, WhatsApp, para llegar a tus usuarios e interactuar con ellos.                                                   |
+| [Pancartas]({{site.baseurl}}/user_guide/message_building_by_channel/banners/)       | Incrusta mensajes directamente en tu aplicación o sitio web. |
 | [Tarjetas de contenido*]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)       | Proporcione una bandeja de entrada dentro de su aplicación o sitio web donde los usuarios puedan recibir mensajes e interactuar con ellos, o muestre los mensajes en un carrusel, como un banner, etc. |
 | [TV conectada]({{site.baseurl}}/developer_guide/platforms/tv_and_ott/)                           | Interactúe con los usuarios en plataformas de televisión conectadas.                                                                                                   |
 | [Webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | Habilite la comunicación en tiempo real y la integración con sistemas externos mediante retrollamadas HTTP personalizadas.                                                    |
+| [LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/) | Relaciónate con los usuarios de LINE, la aplicación de mensajería más popular de Japón.                                                    |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 <sup>\*\*Disponible como característica adicional\*.</sup>
@@ -83,5 +85,3 @@ En la tabla siguiente se describen los canales que admitimos.
 Para mensajes cortos y urgentes que pueden comunicarse a través de la mayoría de los canales (correo electrónico, SMS, push), aproveche el filtro de [canal inteligente]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) para enviar automáticamente el mensaje a través del mejor canal para cada usuario.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/getting_started/channels.png %}
-[2]: {% image_buster /assets/img/getting_started/canvas_flow.png %}

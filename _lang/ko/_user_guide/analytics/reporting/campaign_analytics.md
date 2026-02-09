@@ -1,6 +1,6 @@
 ---
-nav_title: 캠페인 분석 
-article_title: 캠페인 분석 
+nav_title: 캠페인 분석
+article_title: 캠페인 분석
 page_order: 4.5
 layout: dev_guide
 guide_top_header: "캠페인 분석"
@@ -15,7 +15,7 @@ guide_featured_list:
   - name: 콘텐츠 카드
     link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
     image: /assets/img/braze_icons/user-square.svg
-  - name: 이메일
+  - name: Email
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     image: /assets/img/braze_icons/mail-01.svg
   - name: Feature Flags
@@ -28,7 +28,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/push/push_reporting/
     image: /assets/img/braze_icons/phone-01.svg
   - name: SMS
-    link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
+    link: /docs/sms_mms_rcs_reporting/
     image: /assets/img/braze_icons/phone-02.svg
   - name: 웹훅
     link: /docs/user_guide/message_building_by_channel/webhooks/reporting/

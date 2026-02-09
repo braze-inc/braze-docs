@@ -1,5 +1,5 @@
 ---
-nav_title: "Android 옵션"
+nav_title: "Android options"
 article_title: Android 푸시 옵션
 page_order: 7
 layout: dev_guide

@@ -5,7 +5,7 @@ description: "This reference article covers how to connect with a Shopify Hydrog
 page_type: partner
 search_tag: Partner
 alias: /shopify_custom_integration/
-page_order: 2
+page_order: 3
 ---
 
 # Shopify custom integration setup
@@ -662,7 +662,11 @@ Using an email address or a hashed email address as your Braze external ID can h
 
 By default, Braze automatically converts emails from Shopify to lowercase before using them as the external ID. If you’re using email or hashed email as your external ID, confirm that your email addresses are also converted to lowercase before you assign them as your external ID or before hashing them from other data sources. This helps prevent discrepancies in external IDs and avoid creating duplicate user profiles in Braze.
 
-If you selected a custom external ID type, proceed to steps 6.1—6.3. Otherwise, continue to step 6.4.
+{% alert note %}
+The next steps depend on your external ID selection:<br><br>
+- **If you selected a custom external ID type:** Complete steps 6.1—6.3 to set up your custom external ID configuration.
+- **If you selected Shopify customer ID, email, or hashed email:** Skip steps 6.1—6.3 and continue directly to step 6.4.
+{% endalert %}
 
 #### Step 6.1: Create the `braze.external_id` metafield
 
@@ -678,41 +682,46 @@ After the metafield is created, populate it for your customers. We recommend the
 
 #### Step 6.2: Create an endpoint to retrieve your external ID
 
-You need to create a public endpoint that Braze can call to retrieve the external ID. This is necessary for scenarios where Shopify can't provide the `braze.external_id` metafield. 
+You must create a public endpoint that Braze can call to retrieve the external ID. This allows Braze to fetch the ID in scenarios where Shopify cannot provide the `braze.external_id` metafield directly.
 
 ##### Endpoint specifications
 
-**Method:** `GET`
+**Method:** GET
 
-| Parameters | Description |
-| --- | --- |
-| `shopify_customer_id` | The Shopify customer ID. |
-| `email_address` | The email address of the logged-in user. |
-| `shopify_storefront` | The storefront for the request. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+Braze sends the following parameters to your endpoint:
+
+| Parameter            | Required | Data Type | Description                                                      |
+|----------------------|----------|-----------|------------------------------------------------------------------|
+| shopify_customer_id  | Yes      | String    | The Shopify customer ID.                                         |
+| shopify_storefront   | Yes      | String    | The storefront name for the request. Ex: `<storefront_name>.myshopify.com` |
+| email_address        | No       | String    | The email address of the logged-in user. <br><br>This field may be missing in certain webhook scenarios. Your endpoint logic should account for null values here (for example, fetch the email using the shopify_customer_id if your internal logic requires it). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ##### Example endpoint
 
+```http
+GET https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
 ```
-GET 
-https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
-```
+
 
 ##### Expected response
-
-Braze expects a `200` status code. Any other code is considered a failure.
-
-{% raw %}
+Braze expects a `200` status code returning the external ID JSON:
 ```json
-{ 
-    "external_id": "my_external_id" 
+{
+  "external_id": "my_external_id"
 }
 ```
-{% endraw %}
 
-{% alert important %}
-It's important to validate that the `shopify_customer_id` and `email_address` match the customer values in Shopify. You can use the [Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to validate these parameters and retrieve the `braze.external_id` metafield.
-{% endalert %}
+##### Validation
+
+It is critical to validate that the `shopify_customer_id` and `email_address` (if present) match the customer values in Shopify. You can use the [Shopify Admin API](https://shopify.dev/docs/api/admin-graphql) or [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) to validate these parameters and retrieve the correct `braze.external_id` metafield.
+
+##### Failure behavior and merging
+Any status code other than `200` is considered a failure.
+
+- **Merge implications:** If the endpoint fails (returns non-`200` or times out), Braze cannot retrieve the external ID. Consequently, the merge between the Shopify user and the Braze user profile will not happen at that time.
+- **Retry logic:** Braze may attempt standard immediate network retries, but if the failure persists, the merge will be deferred until the next qualifying event (for example, the next time the user updates their profile or completes a checkout).
+- **Supportability:** To support timely user merging, ensure your endpoint is highly available and handles the optional `email_address` field gracefully.
 
 #### Step 6.3: Input your external ID
 

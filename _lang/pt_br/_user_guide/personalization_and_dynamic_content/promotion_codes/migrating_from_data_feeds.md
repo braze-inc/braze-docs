@@ -1,11 +1,11 @@
 ---
-nav_title: Migração de Data Feeds para códigos promocionais
-article_title: Migração de Data Feeds para códigos promocionais
-page_order: 0
+nav_title: Migrar de Data Feeds
+article_title: Migrar de Data Feeds para códigos promocionais
+page_order: 10
 description: "Este artigo de referência fornece orientação sobre a migração de Data Feeds para códigos promocionais."
 ---
 
-# Migração de Data Feeds para códigos promocionais
+# Migrar de Data Feeds para códigos promocionais
 
 {% alert note %}
 Os feeds de dados estão sendo descontinuados. A Braze recomenda que os clientes que usam Data Feeds passem a usar listas de códigos promocionais.

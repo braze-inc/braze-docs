@@ -1,21 +1,21 @@
 ---
-nav_title: "PUT:カタログを差し替える"
-article_title: "PUT:カタログを差し替える"
+nav_title: "PUT:カタログ項目を置換"
+article_title: "PUT:カタログ項目を置換"
 search_tag: Endpoint
 page_order: 6
 
 layout: api_page
 page_type: reference
-description: "この記事では、カタログ項目の置換Brazeエンドポイントについての詳細を概説する。"
+description: "この記事では、「カタログ項目を置換」Braze エンドポイントの詳細について説明します。"
 
 ---
 {% api %}
-# カタログ項目を置き換える
+# カタログ項目を置換
 {% apimethod put %}
 /catalogs/{catalog_name}/items/{item_id}
 {% endapimethod %}
 
-> カタログのアイテムを置き換えるには、このエンドポイントを使う。
+> カタログの項目を置換するには、このエンドポイントを使用します。
 
 `item_id` が見つからない場合は、このエンドポイントがカタログにアイテムを作成する。このエンドポイントは同期である。
 

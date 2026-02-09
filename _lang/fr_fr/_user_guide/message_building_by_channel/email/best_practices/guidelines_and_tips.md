@@ -36,7 +36,7 @@ La validation de l'email est effectuée lorsqu'une adresse email utilisateur a �
 
 Les adresses e-mail ciblées via les serveurs Braze doivent être validées selon les normes [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822), Braze n'accepte pas certains caractères et les reconnaît comme invalides. Si un e-mail est renvoyé, Braze marque l’adresse e-mail comme non valide et le statut d’abonnement n’est pas modifié. 
 
-{% details Caractères non acceptés en dehors des normes RFC %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -60,12 +60,16 @@ Les adresses e-mail ciblées via les serveurs Braze doivent être validées selo
 
 Lorsque vous définissez vos adresses d’expéditeur, assurez-vous que votre domaine d’e-mail « De » correspond à votre domaine d’envoi (par exemple, `marketing.yourdomain.com`). Le non-respect de cette consigne peut entraîner un mauvais alignement SPF et DKIM. Tous les e-mails de réponse peuvent être définis dans votre domaine racine.
 
+{% alert note %}
+Le codage Unicode n'est pas pris en charge dans les adresses "from".
+{% endalert %}
+
 ### Vérification des détails HTML
 
 N’oubliez pas que certaines balises et attributs HTML ne sont pas autorisés car ils peuvent potentiellement permettre d’exécuter du code malveillant dans le navigateur.
 
 Consultez les listes suivantes pour voir les balises et les attributs HTML qui ne sont pas autorisés dans vos e-mails :
-{% details Développer pour les balises HTML non autorisées %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -83,7 +87,7 @@ Consultez les listes suivantes pour voir les balises et les attributs HTML qui n
 - `<svg>`
 {% enddetails %}
 
-{% details Développer pour les attributs HTML non autorisés %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`
@@ -229,5 +233,4 @@ Consultez les listes suivantes pour voir les balises et les attributs HTML qui n
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

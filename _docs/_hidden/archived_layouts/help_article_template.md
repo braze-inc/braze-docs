@@ -1,5 +1,5 @@
 ---
-nav_title: Help Article
+nav_title: Help article
 
 page_order: 3
 

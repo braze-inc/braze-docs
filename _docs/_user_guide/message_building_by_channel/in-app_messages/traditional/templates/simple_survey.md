@@ -1,5 +1,5 @@
 ---
-nav_title: "Simple Survey"
+nav_title: "Simple survey"
 article_title: Simple Survey In-App Message
 page_order: 1.5
 page_type: reference
@@ -63,7 +63,7 @@ To add a custom attribute to each choice, select a custom attribute name from th
 The data type of your custom attributes matters depending on how you've set up your survey.
 
 - **Multiple-choice selection:** The data type of the custom attribute must be an array. If the custom attribute is set to a different data type, responses will not be logged.
-- **Single-choice selection:** The data type of the custom attribute _must not_ be an array. Responses will not be logged if the attribute is an array.
+- **Single-choice selection:** The data type of the custom attribute must be a string. Custom attributes that are not string type will not appear in the dropdown, and responses will not be logged.
 
 {% alert important %} 
 When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
@@ -127,11 +127,14 @@ Selected choices will automatically flow through to Currents, under the [**In-Ap
 
 ## Use cases
 
+{% tabs %}
+{% tab User satisfaction %}
+
 ### User satisfaction
 
 **Goal:** Measure customer satisfaction and send win-back campaigns to users who left low scores.
 
-To set this up, use a single-choice selection survey with five options ranging from “😡 Very Dissatisfied” to “😍 Very Satisfied.” Each choice is mapped to the custom attribute `customer_satisfaction`, with a numeric value from 1 to 5—where 1 indicates the least satisfied and 5 the most satisfied.
+To set this up, use a single-choice selection survey with five options ranging from “😡 Very Dissatisfied” to “😍 Very Satisfied.” Each choice is mapped to the custom attribute `customer_satisfaction`, with a numeric value from 1 to 5—where 1 indicates the least satisfied and 5 the most satisfied. Note that these numeric values are stored as strings, as string custom attributes are required for single-choice selection.
 
 | Choice                                | Attribute              | Value |
 |---------------------------------------|------------------------|-------|
@@ -142,7 +145,10 @@ To set this up, use a single-choice selection survey with five options ranging f
 | 😍 Very Satisfied                     | `customer_satisfaction` | 5     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-When a user submits the survey, their selected value is logged as a custom attribute. You can then build follow-up campaigns using audience filters. For example, target win-back messages to users whose `customer_satisfaction` attribute is 1 or 2.
+When a user submits the survey, their selected value is logged as a custom attribute. You can then build follow-up campaigns using audience filters. For example, target win-back messages to users whose `customer_satisfaction` attribute is "1" or "2".
+
+{% endtab %}
+{% tab Notification preferences %}
 
 ### Notification preferences
 
@@ -158,6 +164,9 @@ To set this up, use a multiple-choice selection survey where each choice represe
 | Surveys & Feedback | `wants_surveys`        | `true` |
 | Tips & Tutorials   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Identify customer goals %}
 
 ### Identify customer goals
 
@@ -176,6 +185,9 @@ To set this up, use a single-choice selection survey with each option representi
 
 When a user submits the survey, the selected value is logged as a custom attribute on their profile. You can then use this data to personalize future experiences or segment users based on their primary goal.
 
+{% endtab %}
+{% tab Improve conversion rates %}
+
 ### Improve conversion rates
 
 **Goal:** Understand why customers aren’t upgrading or purchasing.
@@ -192,6 +204,9 @@ To set this up, use a single-choice selection survey with each option representi
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 When a user submits the survey, the selected value is saved to their profile. You can then target these users with campaigns tailored to their specific objection, like discount offers or usability improvements.
+
+{% endtab %}
+{% tab Favorite features %}
 
 ### Favorite features
 
@@ -212,5 +227,5 @@ To set this up, use a multiple-choice selection survey where each option represe
 
 Because this survey uses multiple-choice selection, the user's profile will be updated with a list of all selected feature values.
 
-
-
+{% endtab %}
+{% endtabs %}

@@ -1,12 +1,12 @@
 ---
 nav_title: Modelos de dados
-article_title: Criação de um modelo de dados B2B
+article_title: Criar um modelo de dados B2B
 page_order: 0
 page_type: reference
 description: "Saiba como usar as ferramentas de dados do Braze para criar modelos B2B."
 ---
 
-# Criação de um modelo de dados B2B
+# Criar um modelo de dados B2B
 
 > Esse caso de uso demonstra como você pode usar as ferramentas de dados do Braze para criar um modelo de dados B2B eficaz e eficiente que o ajude a direcionar, disparar, personalizar e enviar mensagens para seus usuários comerciais. 
 
@@ -42,9 +42,12 @@ Há dois métodos para criar e gerenciar seus objetos de negócios no Braze: cat
 
 | Método | Descrição |
 | --- | --- |
-| [Catálogos]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs) | Esses são objetos de dados independentes (objetos de dados suplementares) no perfil do usuário principal no Braze. Em um contexto B2B, você provavelmente teria catálogos para suas contas e oportunidades. |
+| [Catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs) | Esses são objetos de dados independentes (objetos de dados suplementares) no perfil do usuário principal no Braze. Em um contexto B2B, você provavelmente teria catálogos para suas contas e oportunidades. |
 | [Fontes conectadas]({{site.baseurl}}/user_guide/data/cloud_ingestion/connected_sources/) | Isso permite que o Braze consulte diretamente seu data warehouse. É provável que você já esteja sincronizando regularmente seus objetos de lead, contato, oportunidade e conta com o data warehouse, de modo que possa apontar a segmentação do Braze diretamente para esse data warehouse e ativá-la em um ambiente de cópia zero. |
 {: .reset-td-br-1 .reset-td-br-2 }
+
+{% tabs %}
+{% tab Catalogs %}
 
 ### Opção 1: Usar catálogos para contas e oportunidades
 
@@ -56,8 +59,8 @@ Para essa opção, recomendamos criar um catálogo para suas contas e outro para
 
 As tabelas abaixo incluem alguns exemplos de campos que você pode mapear a partir dos objetos de conta e oportunidade do seu CRM.
 
-{% tabs %}
-{% tab Catálogo de contas %}
+{% subtabs %}
+{% subtab Account catalog %}
 
 Nesse caso de uso, o Salesforce é o sistema de CRM de exemplo. Você pode mapear qualquer campo incluído nos objetos do seu CRM.
 
@@ -95,8 +98,8 @@ Nesse caso de uso, o Salesforce é o sistema de CRM de exemplo. Você pode mapea
 
 ![Tabela de contas do Salesforce com as respectivas informações, como endereço de cobrança e proprietário da conta.]({% image_buster /assets/img/b2b/sf_accounts.png %})
 
-{% endtab %}
-{% tab Catálogo de oportunidades %}
+{% endsubtab %}
+{% subtab Opportunity catalog %}
 
 Nesse caso de uso, o Salesforce é o sistema de CRM de exemplo. Você pode mapear qualquer campo incluído nos objetos do seu CRM.
 
@@ -134,14 +137,19 @@ Nesse caso de uso, o Salesforce é o sistema de CRM de exemplo. Você pode mapea
 
 ![Tabela de oportunidades do Salesforce com as respectivas informações, como endereço de cobrança e proprietário da conta.]({% image_buster /assets/img/b2b/sf_opportunities.png %})
 
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab Connected sources %}
 
 ### Opção 2: Usar fontes conectadas para contas e oportunidades
 
-Fontes conectadas são tabelas de dados hospedadas por você em seu próprio data warehouse e consultadas pelos [segmentos do Braze CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Ao contrário dos catálogos, em vez de duplicar seus objetos de negócios (contas e oportunidades) no Braze, você os manteria em seu data warehouse e os usaria como a fonte da verdade.
+Fontes conectadas são tabelas de dados hospedadas por você em seu próprio data warehouse e consultadas pelas [extensões de segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) do Braze [CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Ao contrário dos catálogos, em vez de duplicar seus objetos de negócios (contas e oportunidades) no Braze, você os manteria em seu data warehouse e os usaria como a fonte da verdade.
 
 Para configurar fontes conectadas, consulte [Integração de fontes conectadas]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/connected_sources#integrating-connected-sources).
+
+{% endtab %}
+{% endtabs %}
 
 ## Etapa 2: Relacione seus business objects aos perfis de usuário
 
@@ -169,7 +177,10 @@ Depois de sincronizar seus IDs, é necessário relacionar os perfis de usuário 
 
 ### Etapa 2.2: Crie uma relação entre os perfis de usuário e seus business objects
 
-#### Opção 1: Ao usar catálogos para business objects
+{% tabs %}
+{% tab Catalogs %}
+
+#### Opção 1: Ao usar catálogos
 
 Agora que os detalhes da oportunidade e da conta são contabilizados como catálogos do Braze, é necessário criar um relacionamento entre esses catálogos e os perfis de usuário para os quais você deseja enviar mensagens. Currents, isso requer duas etapas:
 
@@ -201,8 +212,14 @@ Agora que os detalhes da oportunidade e da conta são contabilizados como catál
 }
 ```
 
+{% endtab %}
+{% tab Connected sources %}
+
 #### Opção 2: Ao usar fontes conectadas
 
 Uma das tabelas da sua fonte conectada deve incluir um `user_id` que corresponda ao `external_user_id` definido no Braze para seus usuários. A configuração do perfil de usuário acima usa seu lead e `contact_ids` como seu `external_id`, portanto, você deve garantir que suas tabelas de lead/contato incluam esses IDs.
 
 Além de garantir a correspondência dos IDs, recomendamos gravar dados básicos no nível da conta, como `account_id`, `opportunity_id` e até mesmo atribuições firmográficas comuns, como `industry`, nos perfis de usuários para uma segmentação e personalização eficientes.
+
+{% endtab %}
+{% endtabs %}

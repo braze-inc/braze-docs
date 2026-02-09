@@ -106,6 +106,10 @@ Die <i>Gesamtzahl der Konversionen</i> ist die Gesamtzahl der Fälle, in denen e
 <i>Von Zustellungsfehlern</i> spricht man, wenn die SMS nicht versendet werden konnte, weil die Warteschlangen überfüllt waren (Versand von SMS mit einer höheren Rate, als Ihre Lang- oder Kurzcodes verarbeiten können).
 {% endif %}
 
+{% if include.metric == "Delivery Failures RCS" %}
+<i>Zustellungsfehler</i> liegen vor, wenn der RCS nicht gesendet werden konnte, weil die Warteschlangen überlaufen sind (RCS werden mit einer höheren Rate gesendet, als Ihr RCS-überprüfter Sender verarbeiten kann).
+{% endif %}
+
 {% if include.metric == "Failed Delivery Rate" %}
 Die <i>Rate der fehlgeschlagenen Zustellungen</i> ist der Prozentsatz der Sendungen, die fehlgeschlagen sind, weil die Nachricht nicht zugestellt werden konnte. Dafür kann es verschiedene Gründe geben, z. B. Überläufe in der Warteschlange, Kontosperrungen und Medienfehler bei MMS.
 {% endif %}
@@ -163,7 +167,7 @@ Der <i>Tagesumsatz pro Benutzer</i> ist der durchschnittliche Tagesumsatz pro t�
 {% endif %}
 
 {% if include.metric == "Opt-Out" %}
-Ein <i>Opt-Out</i> liegt vor, wenn ein Nutzer auf Ihre Nachricht mit einem <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">Opt-Out-Schlüsselwort</a> geantwortet hat und sich von Ihrem SMS-Programm abgemeldet hat.
+<i>Opt-Out</i> liegt vor, wenn ein Nutzer:innen auf Ihre Nachricht mit einem <a href="https://braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#default-opt-in-opt-out-keywords">Opt-Out-Schlüsselwort</a> geantwortet hat und sich von Ihrem SMS- oder RCS-Programm abgemeldet hat.
 {% endif %}
 
 {% if include.metric == "Pending Retry" %}
@@ -171,11 +175,11 @@ Ein <i>Opt-Out</i> liegt vor, wenn ein Nutzer auf Ihre Nachricht mit einem <a hr
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Primäre Conversions (A)</i> oder <i>primäres Conversion-Ereignis</i> ist die Anzahl der Male, die ein definiertes Ereignis nach der Interaktion mit oder dem Betrachten einer empfangenen Nachricht aus einer Braze-Kampagne eingetreten ist. Dieses definierte Event wird von Ihnen bei der Erstellung der Kampagne festgelegt.
+<i>Primäre Konversionen (A)</i> oder <i>primäres Konversions-Event</i> ist die Anzahl eindeutiger Nutzer:innen, die ein definiertes Ereignis ausführen, nachdem sie eine Nachricht aus einer Braze-Kampagne erhalten oder angesehen haben. Dieses Ereignis wird von Ihnen ausgewählt, wenn Sie die Kampagne einrichten, und wird als primäre Erfolgsmetrik für die Berichterstattung und Optimierung verwendet.
 {% endif %}
 
 {% if include.metric == "Reads" %}
-<i>Liest</i> ist, wenn der Benutzer die WhatsApp-Nachricht liest. Die Lesebestätigungen des Benutzers müssen aktiviert sein, damit Braze die Lesevorgänge verfolgen kann.
+<i>Gelesen</i> ist, wenn der Nutzer:innen die Nachricht liest. Die Lesebestätigungen des Benutzers müssen aktiviert sein, damit Braze die Lesevorgänge verfolgen kann.
 {% endif %}
 
 {% if include.metric == "Read Rate" %}
@@ -187,7 +191,7 @@ Der <i>Empfang</i> wird je nach Kanal unterschiedlich definiert und kann erfolge
 {% endif %}
 
 {% if include.metric == "Rejections" %}
-<i>Ablehnungen</i> liegen vor, wenn die SMS vom Netzbetreiber abgelehnt wurde. Dies kann verschiedene Gründe haben, z. B. die Filterung von Inhalten durch den Anbieter, die Verfügbarkeit des Zielgeräts, die Telefonnummer ist nicht mehr in Betrieb und ähnliches.
+<i>Ablehnungen</i> liegen vor, wenn die SMS oder RCS vom Netzbetreiber abgelehnt wurde. Dies kann verschiedene Gründe haben, z. B. die Filterung von Inhalten durch den Anbieter, die Verfügbarkeit des Zielgeräts, die Telefonnummer ist nicht mehr in Betrieb und ähnliches.
 {% endif %}
 
 {% if include.metric == "Revenue" %}
@@ -199,7 +203,7 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 {% endif %}
 
 {% if include.metric == "Sent" %}
-<i>Gesendet</i> wird jedes Mal, wenn eine Kampagne oder ein Canvas-Schritt gestartet oder ausgelöst wurde und eine SMS von Braze gesendet wurde. Es ist möglich, dass die SMS das Gerät eines Benutzers aufgrund von Fehlern nicht erreicht hat.
+<i>Gesendet</i> wird jedes Mal, wenn eine Kampagne oder ein Canvas-Schritt gestartet oder getriggert wurde und eine SMS oder RCS von Braze gesendet wurde. Es ist möglich, dass die SMS oder RCS das Gerät eines Nutzer:innen aufgrund von Fehlern nicht erreicht hat.
 {% endif %}
 
 {% if include.metric == "Sends" %}
@@ -227,7 +231,7 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 {% endif %}
 
 {% if include.metric == "Total Clicks" %}
-<i>Klicks insgesamt</i> ist die Anzahl eindeutiger Empfänger:innen, die auf einen Link in der zugestellten E-Mail geklickt haben.
+<i>Klicks insgesamt</i> ist die Anzahl eindeutiger Empfänger:innen, die auf einen Link in der zugestellten Nachricht geklickt haben.
 {% endif %}
 
 {% if include.metric == "Total Dismissals" %}
@@ -247,7 +251,12 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link in einer Nachricht geklickt haben und wird durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> gemessen.
+<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link in einer Nachricht geklickt haben, und wird gemessen durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+{% endif %}
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link innerhalb einer Nachricht geklickt haben.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}
@@ -257,11 +266,11 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>Unique Impressions</i> ist die Gesamtzahl der Nutzer, die eine bestimmte Nachricht an einem Tag erhalten und angesehen haben.
+<i>Unique Impressions</i> ist die Gesamtzahl der Nutzer:innen, die eine Nachricht aus einer bestimmten Kampagne erhalten und angesehen haben.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}
-<i>Eindeutige Empfänger</i> ist die Anzahl der eindeutigen täglichen Empfänger oder Nutzer, die eine bestimmte Nachricht an einem Tag erhalten haben.
+<i>Eindeutige Empfänger:innen</i> ist die Anzahl der eindeutigen täglichen Empfänger:innen, also der Nutzer:innen, die an einem Tag eine neue Nachricht erhalten haben. Damit diese Zahl für einen Nutzer:innen mehr als einmal erhöht wird, muss der Nutzer:innen eine neue Nachricht an einem anderen Tag erhalten.
 {% endif %}
 
 {% if include.metric == "Unique Opens" %}

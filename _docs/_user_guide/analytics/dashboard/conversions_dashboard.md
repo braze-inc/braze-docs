@@ -1,5 +1,5 @@
 ---
-nav_title: Conversions Dashboard
+nav_title: Conversions dashboard
 article_title: Conversions Dashboard
 alias: "/conversions_dashboard_v2/"
 description: "The conversions dashboard allows you to analyze conversions across campaigns, Canvases, and channels, using different attribution methods."
@@ -48,6 +48,20 @@ To calculate conversions of an event that wasn't set up as a conversion event on
 {% alert note %}
 If you select a custom event, you won't see the **Conversion Event** dropdown on the page and will have to re-run to report to view conversions for different custom events.
 {% endalert %}
+
+### Considerations
+
+For a user to be counted in the report, they must meet the following criteria within the selected date range:
+1. Enter the Canvas or campaign.
+2. Log an [attribution method]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+3. Perform the conversion event.
+
+For example, let's say a user does the following:
+1. Enters the Canvas on September 30.
+2. Logs an attribution method on October 1.
+3. Performs the conversion event on October 2.
+
+This user **will not** appear in a report with a date range of October 1 to October 7. This is because the user entered the Canvas before the reporting period, even though the conversion event occurred within the defined date range. For the user to appear in a report, the date range must include September 30.
 
 ## Understanding your report
 
@@ -115,3 +129,21 @@ To download the time series data, select <i class="fas fa-bars"></i> and then se
 | --- | --- |
 | Touch | A physical interaction or touchpoint with a message.<br><br>Touches can include:<br>{::nomarkdown}<ul><li>Email Click</li><li>Push Open</li><li>Content Card Click</li><li>In-App Message Click</li><li>SMS Click</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Troubleshooting
+
+### Why do I have low campaign or Canvas conversions?
+
+Your conversions might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
+
+To troubleshoot why that is, we recommend checking your event tracking and conversion deadlines.
+
+#### Event tracking
+
+When a campaign triggers a session start or custom event, you want to ensure that this event, or session, is happening frequently enough to trigger the message. Check the [home dashboard]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) for session data, or your [custom events]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/) report.
+
+#### Conversion deadlines
+
+For each conversion event that you select per campaign, you set the [deadline]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking). This means you are setting a time limit within which a conversion must happen in order for it to count toward each respective campaign.
+
+Check that you've reviewed information on [conversion tracking rules]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) to understand your campaign metrics. For user conversions in Canvas, refer to [Canvas FAQ]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 

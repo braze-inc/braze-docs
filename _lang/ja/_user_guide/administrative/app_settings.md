@@ -27,7 +27,7 @@ guide_featured_list:
     link: /docs/user_guide/administrative/app_settings/internal_groups_tab/
     image: /assets/img/braze_icons/users-01.svg
   - name: 識別子フィールドレベル暗号化
-    link: /docs/user_guide/analytics/field_level_encryption/
+    link: /docs/user_guide/data/field_level_encryption/
     image: /assets/img/braze_icons/mail-01.svg
 
 guide_menu_title: "Workspace settings"
@@ -38,8 +38,8 @@ guide_menu_list:
   - name: メール設定
     link: /docs/user_guide/administrative/app_settings/email_settings/
     image: /assets/img/braze_icons/mail-01.svg
-  - name: プッシュ TTL の設定
-    link: /docs/user_guide/administrative/app_settings/push_ttl_settings/
+  - name: プッシュ設定
+    link: /docs/user_guide/administrative/app_settings/push_settings/
     image: /assets/img/braze_icons/settings-01.svg
   - name: 多言語設定
     link: /docs/multi_language_support/

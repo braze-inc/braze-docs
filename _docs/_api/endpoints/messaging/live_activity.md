@@ -1,5 +1,5 @@
 ---
-nav_title: Live Activity
+nav_title: Live activity
 config_only: true
 noindex: true
 ---

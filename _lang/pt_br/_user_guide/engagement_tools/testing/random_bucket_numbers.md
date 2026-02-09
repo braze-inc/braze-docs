@@ -13,11 +13,19 @@ tool:
 
 # Números aleatórios de baldes
 
-> Um número de bucket aleatório é uma atribuição do usuário que pode ser usada para criar segmentos uniformemente distribuídos de usuários aleatórios. Quando um perfil de usuário é criado no Braze, é atribuído automaticamente a esse usuário um número de bucket aleatório entre 0 e 9999 (inclusive). É possível usar esses segmentos para testar a eficácia de várias campanhas ou Canvas em grupos de usuários ao longo do tempo.
+> Um número de bucket aleatório é uma atribuição do usuário que pode ser usada para criar segmentos uniformemente distribuídos de usuários aleatórios. 
 
 ## Visão geral
 
-Os números de bucket aleatórios são usados no seu Global Control Group (Grupo de controle global) - um grupo de usuários que não recebe nenhuma campanha ou Canvas. O Braze seleciona aleatoriamente vários intervalos de números de buckets aleatórios e inclui usuários desses buckets selecionados. 
+Quando um perfil de usuário é criado no Braze, é atribuído automaticamente a esse usuário um número de bucket aleatório entre 0 e 9999 (inclusive). É possível usar esses segmentos para testar a eficácia de várias campanhas ou Canvas em grupos de usuários ao longo do tempo.
+
+### Uso do grupo de controle global
+
+Os números de bucket aleatórios são usados no seu Global Control Group (Grupo de controle global) - um grupo de usuários que não recebe nenhuma campanha ou Canvas. O Braze seleciona aleatoriamente vários intervalos de números de buckets aleatórios e inclui usuários desses buckets selecionados. Números de balde aleatórios são atribuídos sem ponderação ou consideração de números alocados recentemente. 
+
+{% alert note %}
+Quando um usuário é excluído e recriado, é atribuído a ele um número de bucket aleatório diferente, pois ele é considerado um novo usuário.
+{% endalert %}
 
 Se você tiver um grupo de controle global configurado e quiser usar números aleatórios para outros casos de uso, consulte [Coisas a serem observadas]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
 
@@ -33,7 +41,7 @@ Se quiser segmentar usuários para testes em uma única campanha ou em um único
 
 Ao [criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), adicione o filtro "Random Bucket #". Em seguida, especifique um número ou intervalo de números para incluir em seu segmento.
 
-![][2]
+![Um filtro de segmento que é para números aleatórios de balde não mais que "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Talvez você queira usar esses tipos de segmentos se quiser executar um teste de três variantes diferentes e também incluir um grupo de controle. Considere o seguinte exemplo de plano para criar segmentos de tamanho igual para três variantes e um grupo de controle:
 
@@ -57,4 +65,3 @@ O reingresso aleatório do público pode ser útil para [Testes A/B]({{site.base
 5. Lance sua campanha e monitore a performance de cada pacote. É possível analisar métricas como taxas de engajamento e taxas de conversão para determinar a eficácia da reentrada aleatória do público no seu caso de uso.
 
 
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

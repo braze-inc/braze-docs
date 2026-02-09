@@ -1,6 +1,6 @@
 ---
 nav_title: Incrustar GIFs
-article_title: Incrustar GIFs en tarjetas de contenido
+article_title: Incrustar GIF en tarjetas de contenido
 page_order: 5
 description: "Aprende a incrustar GIFs en tarjetas de contenido utilizando el SDK de Braze."
 channel:
@@ -12,7 +12,7 @@ platform:
   - FireOS
 ---
 
-# Incrustar GIFs en tarjetas de contenido
+# Incrustar GIF en tarjetas de contenido
 
 > Aprende a incrustar GIFs en tarjetas de contenido utilizando el SDK de Braze.
 
@@ -21,15 +21,15 @@ Para los SDK envoltorio que no aparecen en la lista, utiliza en su lugar el mét
 {% endalert %}
 
 {% sdktabs %}
+{% sdktab web %}
+La compatibilidad con GIF está incluida por defecto en la integración del SDK Web.
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/_global/gifs.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/gifs.md developer_ %}
-{% endsdktab %}
-
-{% sdktab web %}
-En este momento, los GIF de tarjeta de contenido no son compatibles con el SDK de Web Braze.
+{% multi_lang_include developer_guide/swift/gifs.md %}
 {% endsdktab %}
 {% endsdktabs %}

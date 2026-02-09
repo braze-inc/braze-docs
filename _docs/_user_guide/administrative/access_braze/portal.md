@@ -1,5 +1,5 @@
 ---
-nav_title: Product Portal
+nav_title: Product portal
 article_title: Product Portal
 page_order: 6
 alias: /product_portal/

@@ -1,8 +1,8 @@
 ---
-nav_title: "GET: Liste der Segmente für den Export"
+nav_title: "GET: Liste der Segmente exportieren"
 article_title: "GET: Liste der Segmente für den Export"
 search_tag: Endpoint
-page_order: 4
+page_order: 1
 layout: api_page
 page_type: reference
 description: "Dieser Artikel beschreibt Details zum Export der Segmente Liste Braze Endpunkt."
@@ -45,8 +45,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/segments/list?page=
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "segments" : [

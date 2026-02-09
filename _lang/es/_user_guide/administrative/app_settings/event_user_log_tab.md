@@ -1,5 +1,5 @@
 ---
-nav_title: Registro de eventos de usuario
+nav_title: Registro de usuarios del evento
 article_title: Registro de eventos de usuario
 page_order: 7
 page_type: reference
@@ -32,11 +32,13 @@ Cada registro se divide en varias secciones, que pueden incluir:
 * Eventos de campaña
 * Datos de respuesta
 
-Haga clic en el botón **Datos sin procesar** para mostrar los datos JSON sin procesar de ese registro específico.
+Selecciona el icono **Expandir datos** para mostrar los datos JSON sin procesar de ese registro concreto.
 
-![Registros sin procesar de eventos][10]
+![El "Icono Expandir datos" junto a un registro concreto.]({% image_buster /assets/img_archive/expand_data.png %})
 
 Los registros de eventos de usuario permanecerán en el panel de control durante los 30 días posteriores a su registro.
+
+![Registros sin procesar de eventos]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
 
 ## Solución de problemas
 
@@ -67,4 +69,3 @@ En relación con las sesiones de usuario, puede utilizar Braze para supervisar d
 
 Estos comportamientos no se ven afectados por el evento de fin de sesión que se descarga en la siguiente sesión.
 
-[10]: {% image_buster /assets/img_archive/rawlogs.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "Números de teléfono de usuario"
+nav_title: "Números de teléfono de los usuarios"
 article_title: Números de teléfono de usuarios de WhatsApp
 page_order: 1.5
 description: "Este artículo de referencia trata sobre el formato de los números de teléfono de WhatsApp, cómo importar números de teléfono y cómo añadir usuarios a los grupos de suscripción de WhatsApp."
@@ -29,7 +29,7 @@ Todos los números de U.S. deben ser números de teléfono válidos de 10 dígit
 
 Todos los números internacionales deben empezar por `+`, seguido del prefijo del país y, a continuación, el número de teléfono. (e.g `+442071838750`)
 
-![][picture]{: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 Sin embargo, para garantizar la precisión en caso de que envíe a varias regiones con diferentes códigos de país o de área, se recomienda utilizar el formato `E.164`, incluso para los números de teléfono basados en U.S.
 
@@ -51,5 +51,4 @@ Para que un cliente reciba un mensaje de WhatsApp, debe tener un número de tel�
 
 Si varios usuarios tienen el mismo número de teléfono dentro de un segmento de una sola campaña o paso de Canvas, Braze deduplicará el envío y enviará un solo mensaje a ese único número de teléfono. 
 
-[picture]: {% image_buster /assets/img/sms/e164.png %}
 

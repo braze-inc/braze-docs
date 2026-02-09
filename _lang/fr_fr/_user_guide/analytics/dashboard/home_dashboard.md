@@ -13,11 +13,11 @@ tool:
 
 > La page **Accueil** du tableau de bord fournit des indicateurs clés qui vous permettent de suivre et de comprendre les performances de votre appli ou de votre site web, et vous donne un aperçu de haut niveau de votre base d'utilisateurs.
 
-![Tableau de bord de Braze.][1]
-
 La page d **'accueil** comporte deux sections principales :
 - [Reprendre là où vous vous êtes arrêté](#pick-up-where-you-left-off)
 - [Aperçu des performances](#peformance-overview)
+
+![Tableau de bord de Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Reprendre là où vous vous êtes arrêté
 
@@ -25,25 +25,29 @@ Vous pouvez reprendre là où vous vous étiez arrêté dans le tableau de bord 
 
 Vous pouvez revenir sur des campagnes, des canvas et des segments récemment modifiés ou créés. Chaque carte est associée à des tags qui indiquent le type de contenu (campagne, Canvas, segment) et le statut (actif, brouillon, archivé, arrêté).
 
-![Un projet de canvas, un segment actif et un projet de campagne dans la section "Reprendre là où vous vous êtes arrêté".][6]
+{% alert note %}
+La section **Reprendre là où vous vous étiez arrêté** apparaît après que vous avez modifié ou créé une campagne, un Canvas ou un segment.
+{% endalert %}
+
+![Un projet de canvas, un segment actif et un projet de campagne dans la section "Reprendre là où vous vous êtes arrêté".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Aperçu des performances
 
 Par défaut, la section **Aperçu des performances** affiche les données des 30 derniers jours pour toutes les apps et tous les sites. Vos indicateurs sont tous calculés sur la base de la plage de dates sélectionnée.
 
-![Champs de la plage de dates et de l'application dans le tableau de bord d'accueil.][5]{: style="max-width:60%;"}
+![Champs de la plage de dates et de l'application dans le tableau de bord d'accueil.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Les pourcentages sont calculés sur la base de la plage de dates actuelle par rapport à la plage de dates précédente, à l'exception des *Utilisateurs actifs mensuels* (MAU), qui utilisent le dernier jour de la période précédente au lieu d'une plage. 
 
 Par exemple, si vous définissez votre plage de dates sur les **7 derniers jours** et que votre *nombre d'utilisateurs actifs quotidiens* affiche un pourcentage d'augmentation de 1,8 %, cela signifie que vous avez eu 1,8 % d'utilisateurs actifs quotidiens en plus cette semaine par rapport à la semaine dernière.
 
-![][4]{: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### Afficher la répartition
 
 Sélectionnez **Afficher la décomposition** pour chaque ligne des statistiques de l'aperçu des performances afin d'afficher la valeur de chaque statistique par jour pour la plage de dates spécifiée.
 
-![Développer][2]
+![Développer]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Statistiques disponibles
 
@@ -53,7 +57,7 @@ Vous trouverez ci-dessous les définitions des statistiques dont vous disposez, 
 
 *Utilisateurs* est le nombre total d'utilisateurs créés dans cet espace de travail. Il s'agit de tous les utilisateurs que nous avons enregistrés et qui utilisent votre application ou votre site web à un moment donné, ainsi que ceux qui ne sont pas associés à une application ou à un site web spécifique. Ce chiffre correspond au pourcentage de vos utilisateurs actifs *mensuels* (MAU), ce qui est utile pour évaluer la fidélisation des utilisateurs sur une longue période.
 
-Un faible ratio MAU/utilisateur peut indiquer que vous devez diversifier vos canaux de communication ou redoubler d'efforts pour atteindre les utilisateurs en fin de carrière. Pour plus d'informations, reportez-vous à notre « quick win » sur la [capture des utilisateurs inactifs][3]. En général, le ratio MAU/durée de vie diminuera inévitablement au fil du temps en raison du désabonnement des utilisateurs, mais les outils d'engagement de Braze peuvent vous aider à minimiser cet effet en maintenant les utilisateurs engagés plus longtemps.
+Un faible ratio MAU/utilisateur peut indiquer que vous devez diversifier vos canaux de communication ou redoubler d'efforts pour atteindre les utilisateurs en fin de carrière. Pour plus d'informations, reportez-vous à notre solution rapide pour [capturer les utilisateurs qui perdent leur emploi]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users). En général, le ratio MAU/durée de vie diminuera inévitablement au fil du temps en raison du désabonnement des utilisateurs, mais les outils d'engagement de Braze peuvent vous aider à minimiser cet effet en maintenant les utilisateurs engagés plus longtemps.
 
 ### Sessions à vie
 
@@ -68,9 +72,34 @@ Le pourcentage figurant à côté du nombre de MAU indique l'évolution des MAU 
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### Règles de calcul des MAU
+
+Le calcul des MAU suit des règles spécifiques afin de garantir une facturation précise et cohérente :
+
+- **Moment du calcul**: Calculé une fois par jour à 12:05 UTC comme un instantané de 30 jours ; les chiffres ne changent jamais rétroactivement.
+- **Profils anonymes**: **Ne** comptez **que** lorsqu'au moins une session est enregistrée.
+- **Profils identifiés**: Compter automatiquement dès qu'ils existent.
+- **Profils orphelins**: Les doublons fusionnés avec un autre utilisateur **ne** sont **pas** comptabilisés.
+- **Téléchargement de fichiers CSV**: Les utilisateurs téléchargés par CSV ne sont pris en compte que lorsque `date_of_first_session` ou `date_of_last_session` est fourni, ou lorsqu'ils enregistrent une session ultérieurement.
+- **Suppressions d'API**: La suppression d'un utilisateur via l'API ne met pas immédiatement à jour l'UAM ; le décompte se corrige de lui-même lors du cycle mensuel suivant.
+
 {% alert note %}
 Les utilisateurs anonymes sont également pris en compte dans votre MAU. Pour les appareils mobiles, les utilisateurs anonymes dépendent de l’appareil. Pour les utilisateurs Web, les utilisateurs anonymes dépendent du cache du navigateur.
 {% endalert %}
+
+#### Exemple de calcul des MAU
+
+L'exemple suivant illustre le fonctionnement du calcul des MAU à travers différentes actions de l'utilisateur :
+
+| Étape | Action | Changement immédiat des MAU | Total résultant |
+|------|--------|----------------------|-----------------|
+| 1 | Créez l'**utilisateur anonyme 1** et ouvrez une session. | +1 | 1 |
+| 2 | Identifier l'**utilisateur anonyme 1** (le profil est converti en identifié) | 0 | 1 |
+| 3 | Créez l'**utilisateur anonyme 2** et ouvrez une session. | +1 | 2 |
+| 4 | Identifier l'**utilisateur anonyme 2** comme étant la **même personne** que l'utilisateur 1 (l'utilisateur 2 devient orphelin). | -1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+Les instantanés MAU sont calculés une fois par jour et ne sont jamais modifiés rétroactivement. Dans cet exemple, le nombre de MAU pour le jour suivant l'étape 3 reste en permanence à 2, même si l'utilisateur 2 devient orphelin par la suite. Toutefois, le décompte des MAU pour les jours suivants ne reflète que l'utilisateur non orphelin. Dans une fenêtre de 30 jours, ce flux consomme finalement 1 MAU puisqu'il ne reste qu'un seul utilisateur distinct, non orphelin.
 
 ### Utilisateurs actifs quotidiens
 
@@ -108,9 +137,3 @@ La valeur MAU est calculée chaque nuit et n'est mise à jour que le lendemain.
 
 Le nombre de *sessions quotidiennes par UAM* est le rapport entre le *nombre de sessions quotidiennes* et le nombre d'UAM pour un jour donné. Cette statistique vous indique le nombre de sessions par jour que vous pouvez espérer enregistrer par MAU. Une fois regroupés et calculés, ces chiffres peuvent vous donner une idée de la fréquence relative à laquelle vos utilisateurs utilisent votre application ou votre site. En d'autres termes, si le *nombre de sessions quotidiennes par MAU* est en moyenne de 0,5, vous pouvez vous attendre à ce que chaque utilisateur actif par mois enregistre une session tous les 2 jours environ.  
 
-[1]: {% image_buster /assets/img_archive/home_dashboard.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}
-[5]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[6]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

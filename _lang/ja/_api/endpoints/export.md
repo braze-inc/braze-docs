@@ -11,7 +11,7 @@ description: "このランディングページでは、Brazeエクスポート�
 page_type: landing
 
 guide_top_header: "エクスポートエンドポイント"
-guide_top_text: "このエンドポイントのコレクションを使用すると、KPI、ニュースフィードカード、アプリセッション、ユーザー、セグメント、キャンペーン、およびキャンバスに関するさまざまなレベルの詳細にアクセスしてエクスポートできます。<br> <br> パラメータとリクエストボディを作成する際には、<a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Brazeインスタンス</a>、<a href='/docs/api/api_key/' target='_blank'>API キー</a>、および<a href='/docs/api/identifier_types/' target='_blank'>API 識別子</a>を確認してください。"
+guide_top_text: "このエンドポイントのコレクションで、KPI、アプリセッション、ユーザー、セグメンテーション、キャンペーン、キャンバスに関する様々なレベルの詳細にアクセスし、エクスポートすることができます。<br> <br> パラメータとリクエストボディを作成する際には、<a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Brazeインスタンス</a>、<a href='/docs/api/api_key/' target='_blank'>API キー</a>、および<a href='/docs/api/identifier_types/' target='_blank'>API 識別子</a>を確認してください。"
 
 guide_featured_title: "エクスポートキャンペーンエンドポイント"
 guide_featured_list:
@@ -69,18 +69,6 @@ guide_menu_list3:
   - name: "取得:日付ごとのアンインストールのKPI"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
     image: /assets/img/braze_icons/target-04.svg
-
-guide_menu_title4: "Export News Feed endpoints"
-guide_menu_list4:
-  - name: "取得:ニュースフィード カード エンゲージメント 統計"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_analytics/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "取得:ニュースフィードカード詳細"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_card_details/
-    image: /assets/img/braze_icons/download-cloud-01.svg
-  - name: "取得:ニュースフィードカードリスト"
-    link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
-    image: /assets/img/braze_icons/download-cloud-01.svg
 
 guide_menu_title5: "Export purchase endpoints"
 guide_menu_list5:

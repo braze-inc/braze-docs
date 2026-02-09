@@ -15,40 +15,42 @@ platform:
 
 > Découvrez les cartes de contenu pour le SDK de Braze, notamment les différents modèles de données et les propriétés spécifiques aux cartes disponibles pour votre application.
 
+{% multi_lang_include banners/content_card_alert.md %}
+
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/content_cards.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/content_cards.md developer_ %}
-{% endsdktab %}
-
-{% sdktab web %}
-guide/web/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/swift/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/cordova/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/flutter/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/react_native/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab tvos %}
-guide/tvos/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/tvos/content_cards.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/content_cards.md developer_ %}
+{% multi_lang_include developer_guide/unity/content_cards.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
-guide/xamarin/content_cards.md developer_ %}
+{% sdktab .NET MAUI (Xamarin) %}
+{% multi_lang_include developer_guide/xamarin/content_cards.md %}
 {% endsdktab %}
 {% endsdktabs %}

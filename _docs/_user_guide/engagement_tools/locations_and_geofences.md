@@ -1,5 +1,5 @@
 ---
-nav_title: Locations and Geofences
+nav_title: Locations and geofences
 article_title: Locations and Geofences
 page_order: 6
 layout: dev_guide
@@ -14,7 +14,7 @@ guide_featured_list:
   - name: Location Tracking
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
     image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: Creating Geofences
+  - name: Create Geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Mobile Integrations

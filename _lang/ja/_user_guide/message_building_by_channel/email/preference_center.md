@@ -11,8 +11,8 @@ channel:
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-- name: 概要
-  link: /docs/user_guide/message_building_by_channel/email/preference_center/overview/
+- name: 原薬メール ユーザー設定センター
+  link: /docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/
   image: /assets/img/braze_icons/list.svg
 - name: ドラッグ・アンド・ドロップ プリファレンス・センター
   link: /docs/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/

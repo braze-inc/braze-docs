@@ -1,6 +1,6 @@
 ---
 page_order: 3
-nav_title: Reichhaltige Benachrichtigungen
+nav_title: Rich-Benachrichtigungen
 article_title: Einrichten von Rich-Push-Benachrichtigungen für das Braze SDK
 channel:
   - push notifications
@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/push_notifications/rich.md%} developer_
+{% multi_lang_include developer_guide/cordova/push_notifications/rich.md%}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/push_notifications/rich.md%} developer_
+{% multi_lang_include developer_guide/react_native/push_notifications/rich.md%}
 {% endsdktab %}
 {% endsdktabs %}

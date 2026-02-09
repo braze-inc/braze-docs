@@ -1,5 +1,5 @@
 ---
-nav_title: Creating Recommendations
+nav_title: Create recommendations
 page_order: 1.1
 noindex: true
 config_only: true

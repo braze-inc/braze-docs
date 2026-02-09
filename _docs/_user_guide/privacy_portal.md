@@ -1,5 +1,5 @@
 ---
-nav_title: Privacy Portal
+nav_title: Privacy portal
 article_title: Privacy Portal
 page_order: 60
 layout: dev_guide

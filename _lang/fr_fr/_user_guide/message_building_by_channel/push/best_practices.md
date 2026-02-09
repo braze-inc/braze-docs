@@ -18,6 +18,51 @@ Vos messages de notification push doivent être conformes aux directives de l’
 
 En guise de bonne pratique, Braze recommande de limiter chaque ligne de texte, tant pour le titre optionnel que pour le corps du message, à environ 30-40 caractères dans une notification push mobile. Notez que le compteur de caractères du compositeur ne tient pas compte des caractères Liquid. Cela signifie que le nombre final de caractères d'un message dépend du rendu de Liquid pour chaque utilisateur. En cas de doute, gardez le contenu bref et agréable.
 
+## Réduire la taille de la charge utile des notifications push
+
+La taille maximale de la charge utile dépend de la plate-forme.
+
+| Plateforme | Taille maximale de la charge utile |
+| --- | --- |
+| Web | 3 807 octets |
+| Android | 3 930 octets |
+| iOS | 3 960 octets |
+| Kindle | 5 985 octets |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+Si votre push dépasse la taille maximale de la charge utile, le message risque de ne pas être envoyé. La meilleure pratique consiste à limiter votre charge utile à quelques centaines d'octets.
+
+### Qu'est-ce qu'une charge utile de poussée ?
+
+Les fournisseurs de services push calculent si votre notification push peut être affichée à un utilisateur en examinant la taille en octets de l'ensemble de la charge utile push. La charge utile est limitée à **4 Ko (4 096 octets)** pour la plupart des services de notifications push, notamment :
+
+- Service de notification push d'Apple (APN)
+- Firebase Cloud Messaging (FCM) d'Android
+- Push Web
+- Notification push Huawei
+
+Ces services push refuseront toute notification dépassant cette limite.
+
+Braze réserve une partie de la charge utile du push à des fins d'intégration et d'analyse/analytique. Dans ces conditions, la taille maximale de notre charge utile est de **3 807 octets.** Si votre push dépasse cette taille, le message risque de ne pas être envoyé. La meilleure pratique consiste à limiter votre charge utile à quelques centaines d'octets.
+
+Les éléments suivants constituent la charge utile de votre push :
+
+- Copie, telle que le titre et le corps du message
+- Rendu final de toute personnalisation liquide
+- URL des images (mais pas la taille de l'image elle-même)
+- URL des cibles des clics
+- Noms des boutons
+- Paires clé-valeur
+
+### Conseils pour réduire la taille de la charge utile
+
+Pour réduire la taille de la charge utile :
+
+- Veillez à ce que votre message soit bref. Une bonne ligne de conduite générale consiste à faire en sorte que les informations soient exploitables et utiles en moins de 40 caractères.
+- Oubliez les espaces blancs et les sauts de ligne dans votre texte.
+- Réfléchissez à la manière dont Liquid s'affichera lors de l'envoi. Étant donné que le rendu final de toute personnalisation Liquid varie d'un utilisateur à l'autre, Braze ne peut pas déterminer si une charge utile de push dépassera la limite de taille lorsque Liquid est inclus. Si votre votre code Liquid génère un message plus court, cela ne devrait pas poser de problème. Cependant, si votre Liquid donne lieu à un message plus long, votre push peut dépasser la limite de taille de la charge utile. Testez toujours votre message push sur un appareil réel avant de l'envoyer aux utilisateurs.
+- Envisagez de raccourcir les URL à l'aide d'un raccourcisseur d'URL.
+
 ## Optimiser le ciblage
 
 ### Collecter des données utilisateur pertinentes
@@ -30,7 +75,7 @@ Vous pouvez créer une page de paramètres dans votre application qui permet aux
 
 Lorsque l'application de nouvelles souhaite créer une campagne ciblant uniquement les utilisateurs intéressés par la politique, elle ajoute le filtre d'attribut `Subscribes to Politics` au segment. Lorsqu’il est défini sur « vrai », seuls les utilisateurs qui s’abonnent aux notifications les recevront.
 
-Pour plus d'informations sur la définition des attributs personnalisés, consultez les articles suivants pour [iOS][6], [Android][7] ou [REST API][8].
+Pour plus d'informations sur la définition des attributs personnalisés, consultez les articles suivants pour [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes) ou [REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification).
 
 ## Augmenter les abonnements et la pertinence
 
@@ -42,38 +87,38 @@ Android 13 et les versions ultérieures nécessitent l'obtention d'une autorisat
 
 ### Préparer les utilisateurs pour les notifications push
 
-Vous n'avez qu'une seule chance de demander à un utilisateur l'autorisation d'envoyer des notifications push, et après qu'il ait refusé, il est très difficile de le convaincre de réactiver les notifications push dans les paramètres de son appareil. Pour cette raison, vous devriez préparer vos utilisateurs aux notifications push en utilisant un message in-app avant d’afficher l’invite système. Voir [Messages in-app d’amorce de notification push][2] pour en savoir plus sur l'augmentation des abonnements.
+Vous n'avez qu'une seule chance de demander à un utilisateur l'autorisation d'envoyer des notifications push, et après qu'il ait refusé, il est très difficile de le convaincre de réactiver les notifications push dans les paramètres de son appareil. Pour cette raison, vous devriez préparer vos utilisateurs aux notifications push en utilisant un message in-app avant d’afficher l’invite système. Voir [Messages in-app d’amorce de notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) pour en savoir plus sur l'augmentation des abonnements.
 
 ### Ajouter des contrôles d'abonnement push
 
-Pour éviter que les utilisateurs désactivent les notifications au niveau de l'appareil, ce qui supprime complètement leur jeton de push en premier plan, laissez les utilisateurs contrôler leur abonnement aux notifications directement dans votre application. Pour plus d’informations, voir [Mise à jour des états d’abonnement aux notifications push][10].
+Pour éviter que les utilisateurs désactivent les notifications au niveau de l'appareil, ce qui supprime complètement leur jeton de push en premier plan, laissez les utilisateurs contrôler leur abonnement aux notifications directement dans votre application. Pour plus d’informations, voir [Mise à jour des états d’abonnement aux notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions#update-push-subscription-state).
 
 ### Comprendre les états d'abonnement push
 
 L'état de l'abonnement push ne garantit pas qu'une notification push sera livrée—les utilisateurs doivent également être activés pour recevoir des notifications. C'est parce qu'un profil utilisateur peut avoir plusieurs appareils avec différentes autorisations de notification au premier plan, mais un seul état d'abonnement aux notifications.
 
-Si un utilisateur ne dispose pas d’un jeton de notification push de premier plan valide pour l’application (c’est-à-dire qu’il a désactivé les jetons de notification push au niveau de l’appareil par le biais des paramètres, en choisissant de ne pas recevoir de notifications), son statut d’abonnement peut toujours être considéré comme étant `subscribed` aux notifications push. Cependant, cet utilisateur ne sera pas `Push Enabled for App` dans Braze puisque le jeton de notification push de premier plan n'est pas valide.
+Si un utilisateur ne dispose pas d’un jeton de notification push de premier plan valide pour l’application (c’est-à-dire qu’il a désactivé les jetons de notification push au niveau de l’appareil par le biais des paramètres, en choisissant de ne pas recevoir de notifications), son statut d’abonnement peut toujours être considéré comme étant `subscribed` aux notifications push. Cependant, cet utilisateur ne sera pas `Foreground Push Enabled for App` dans Braze puisque le jeton de notification push de premier plan n'est pas valide.
 
-De plus, si un profil utilisateur n'a pas de jeton de notification push valide ou enregistré pour d'autres applications, son filtre `Push Enabled` dans la segmentation sera également faux.
+De plus, si un profil utilisateur n'a pas de jeton de notification push valide ou enregistré pour d'autres applications, son filtre `Foreground Push Enabled` dans la segmentation sera également faux.
 
 ## Mettre en œuvre une politique de coucher de soleil pour les utilisateurs non réactifs
 
 Même lorsque vous envoyez uniquement des notifications push pertinentes et opportunes, certains utilisateurs peuvent encore ne pas y répondre et les trouver indésirables. Supposons qu'un utilisateur montre un historique d'ignorance répétée de vos notifications push. Dans ce cas, il est judicieux d'arrêter de leur envoyer des notifications avant qu'ils ne deviennent agacés par les communications de votre application ou ne la désinstallent complètement. 
 
-Pour ce faire, créez une [politique de coucher de soleil][9] qui finit par arrêter d'envoyer des notifications push aux utilisateurs qui n'ont pas eu d'ouverture directe ou influencée depuis longtemps.
+Pour ce faire, créez une [politique de coucher de soleil]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies) qui finit par arrêter d'envoyer des notifications push aux utilisateurs qui n'ont pas eu d'ouverture directe ou influencée depuis longtemps.
 
 1. Identifier les utilisateurs non réactifs en fonction des ouvertures directes ou influencées.
 2. Arrêtez progressivement d'envoyer des notifications push à ces utilisateurs.
 3. Avant de supprimer complètement les notifications push, envoyez une dernière notification expliquant pourquoi ils ne les recevront plus. En ouvrant cette notification, les utilisateurs peuvent ainsi démontrer leur souhait de continuer à recevoir des notifications push.
-4. Après l'entrée en vigueur de la politique de coucher du soleil, utilisez un [message intégré à l'application][13] pour rappeler à ces utilisateurs que, bien qu'ils ne recevront plus de notifications push, les canaux de messagerie intégrée continueront à fournir des informations intéressantes et utiles.
+4. Après l'entrée en vigueur de la politique de coucher du soleil, utilisez un [message intégré à l'application]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) pour rappeler à ces utilisateurs que, bien qu'ils ne recevront plus de notifications push, les canaux de messagerie intégrée continueront à fournir des informations intéressantes et utiles.
 
 Bien que vous puissiez être réticent à arrêter d'envoyer des notifications push aux utilisateurs qui y ont initialement souscrit, rappelez-vous que d'autres canaux de messagerie peuvent atteindre plus efficacement ces utilisateurs, surtout s'ils ont déjà ignoré vos notifications push. Si l'utilisateur ouvre vos e-mails, les campagnes par e-mail sont un bon moyen de les atteindre en dehors de votre application. Si ce n’est pas le cas, les messages in-app sont la meilleure façon de fournir du contenu sans risquer que l’utilisateur désinstalle votre application.
 
 ## Définir des événements de conversion pour les ouvertures d'applications
 
-Lors de l'attribution d'[événements de conversion][11] à une campagne push, vous pouvez suivre les ouvertures d'application pendant une certaine période après la réception de la campagne. Définir un événement de conversion pour les ouvertures d'application fournit une perspective différente des statistiques de résultats que vous recevez normalement après une campagne de push.
+Lors de l'attribution d'[événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) à une campagne push, vous pouvez suivre les ouvertures d'application pendant une certaine période après la réception de la campagne. Définir un événement de conversion pour les ouvertures d'application fournit une perspective différente des statistiques de résultats que vous recevez normalement après une campagne de push.
 
-Bien que tous les résultats des campagnes push décomposent les ouvertures directes et les ouvertures d'un message (qui incluent à la fois les ouvertures directes et [influencées][12]), le suivi des conversions suivra tout type d'ouverture, qu'elle soit directe ou influencée.
+Bien que tous les résultats des campagnes push décomposent les ouvertures directes et les ouvertures d'un message (qui incluent à la fois les ouvertures directes et [influencées]({{site.baseurl}}/user_guide/analytics/tracking/influenced_opens/)), le suivi des conversions suivra tout type d'ouverture, qu'elle soit directe ou influencée.
 
 En outre, en utilisant l’événement de conversion « ouvrir l’application », vous suivez l’ouverture de l’application qui se produit avant la date limite de conversion (par exemple, trois jours). Ceci diffère d’une ouverture influencée en ce sens que le temps dont dispose l’utilisateur pour enregistrer une ouverture influencée peut varier d’un individu à l’autre, selon le comportement d’engagement passé de chaque utilisateur.
 
@@ -81,21 +126,7 @@ En outre, en utilisant l’événement de conversion « ouvrir l’application�
 
 Vous n'avez pas trouvé ce que vous cherchiez ? Consultez ces articles de meilleures pratiques supplémentaires :
 
-- [Formats d’images et de messages pour les notifications push][1]
-- [Messages in-app d’amorce de notification push][2]
-- [Livrabilité pour les appareils Android chinois][3]
-- [Être sûr avant d’envoyer : canaux][4]
-
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/
-[4]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/
-
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes
-[8]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions#update-push-subscription-state
-[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
+- [Formats d’images et de messages pour les notifications push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/)
+- [Messages in-app d’amorce de notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)
+- [Livrabilité pour les appareils Android chinois]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
+- [Être sûr avant d’envoyer : canaux]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/know_before_send/)

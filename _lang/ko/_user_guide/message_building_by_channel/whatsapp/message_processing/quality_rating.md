@@ -1,5 +1,5 @@
 ---
-nav_title: 품질 등급 및 메시지 제한
+nav_title: 품질 등급 및 메시징 제한
 article_title: 품질 등급 및 메시지 제한 
 description: "이 참고 문서에서는 메타가 WhatsApp 채널의 품질 등급 및 메시징 제한에 미치는 영향에 대해 설명합니다."
 page_type: partner

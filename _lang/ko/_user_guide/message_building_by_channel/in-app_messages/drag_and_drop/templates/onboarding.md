@@ -10,7 +10,7 @@ description: "이 페이지에서는 매력적인 클릭 유도 문안을 사용
 
 > **온보딩 흐름** 인앱 메시지 템플릿을 사용하여 캠페인 전략을 강화하는 사용자 속성, 인사이트 및 선호도를 수집할 수 있습니다. 
 
-{% multi_lang_include drag_and_drop/templates.md section='SDK 요구 사항' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## 온보딩 흐름 만들기
 
@@ -18,11 +18,11 @@ description: "이 페이지에서는 매력적인 클릭 유도 문안을 사용
 
 드래그 앤 드롭 인앱 메시지를 만들 때 템플릿에 대한 **온보딩 흐름을** 선택한 다음 **메시지 작성을** 선택합니다. 이 템플릿은 모바일 앱과 웹 브라우저 모두에서 지원됩니다.
 
-![온보딩 흐름 템플릿이 포함된 인앱 메시지 편집기][img1]
+![온보딩 플로우 템플릿이 포함된 인앱 메시지 편집기.]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
 ### 2단계: 메시지 스타일을 설정하세요
 
-{% multi_lang_include drag_and_drop/templates.md section='메시지 스타일' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### 3단계: 온보딩 흐름의 순서를 사용자 지정하세요.
 
@@ -32,12 +32,10 @@ description: "이 페이지에서는 매력적인 클릭 유도 문안을 사용
 
 ### 4단계: 메시지를 스타일링하세요
 
-드래그 앤 드롭 [인앱 메시지 구성 요소를][3] 사용하여 온보딩 흐름의 모양과 느낌을 사용자 지정할 수 있습니다.
+Customize the look and feel of your onboarding flow using the drag-and-drop [in-app message components]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components).
 
 ## 결과 분석
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-[img1]: {% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %}
 
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#message-components

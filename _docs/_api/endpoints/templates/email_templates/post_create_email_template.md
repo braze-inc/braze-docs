@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create Email Template"
+nav_title: "POST: Create email template"
 article_title: "POST: Create Email Templates"
 search_tag: Endpoint
 page_order: 4
@@ -51,13 +51,12 @@ Authorization: Bearer YOUR_REST_API_KEY
 | --------- | ---------| --------- | ----------- |
 |`template_name`|Required|String|Name of your email template.|
 |`subject`|Required|String|Email template subject line.|
-|`body`|Required|String|Email template body that may include HTML.|
+|`body`|Required|String|Email template body that may include HTML. Up to 400&nbsp;KB.|
 |`plaintext_body`|Optional|String|A plaintext version of the email template body.|
 |`preheader`|Optional|String|Email preheader used to generate previews in some clients.|
 |`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) must already exist.|
 |`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the app group. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
 
 ## Example request
 ```
@@ -77,8 +76,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/cr
 ## Example response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "email_template_id": "232b6d29-7e41-4106-a0ab-1c4fe915d701",
   "message": "success"

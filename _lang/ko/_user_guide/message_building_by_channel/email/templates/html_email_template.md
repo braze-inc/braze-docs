@@ -1,6 +1,6 @@
 ---
-nav_title: HTML 이메일 템플릿 업로드 중
-article_title: HTML 이메일 템플릿 업로드 중
+nav_title: HTML 이메일 템플릿 업로드하기
+article_title: HTML 이메일 템플릿 업로드하기
 page_order: 2
 description: "이 참조 문서에서는 Braze 대시보드를 사용하여 HTML 이메일 템플릿을 생성, 관리 및 문제를 해결하는 방법을 다룹니다."
 tool:
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# HTML 이메일 템플릿 업로드 중
+# HTML 이메일 템플릿 업로드하기
 
 > Braze 대시보드는 사용자가 직접 HTML 이메일 템플릿을 업로드하고 캠페인에서 나중에 사용할 수 있도록 저장할 수 있게 해줍니다. You can also [create an email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) using our editor.
 
@@ -35,7 +35,7 @@ channel:
 
 ### 3단계: 템플릿을 업로드하세요
 
-**파일에서 업로드**를 클릭하고 컴퓨터에서 템플릿을 선택하세요. [전제 조건](#upload-requirements) 섹션을 참조하여 템플릿이 업로드 요구 사항을 충족하는지 확인하십시오.
+Select **Upload From File** and select your template from your computer. [전제 조건](#upload-requirements) 섹션을 참조하여 템플릿이 업로드 요구 사항을 충족하는지 확인하십시오.
 
 #### 템플릿 업로드 오류 문제 해결
 
@@ -54,7 +54,7 @@ HTML 템플릿 파일을 업로드할 때 받을 수 있는 여러 이메일 오
 
 ### 4단계: 마치고 템플릿을 저장하세요
 
-템플릿을 **저장**을 클릭하여 템플릿을 저장하십시오. 이제 이 템플릿을 사용하여 원하는 모든 캠페인 또는 캔버스에서 사용할 준비가 되었습니다!
+Be sure to save your template by selecting **Save Template**. 이제 이 템플릿을 사용하여 원하는 모든 캠페인 또는 캔버스에서 사용할 준비가 되었습니다!
 
 {% alert note %}
 기존 템플릿을 수정하면 해당 템플릿의 이전 버전을 사용하여 생성된 캠페인에는 변경 사항이 반영되지 않습니다.
@@ -64,16 +64,14 @@ HTML 템플릿 파일을 업로드할 때 받을 수 있는 여러 이메일 오
 
 API 캠페인에 이메일을 사용하려면 `email_template_id`가 필요하며, 이는 Braze에서 생성된 모든 이메일 템플릿 하단에서 찾을 수 있습니다.
 
-![API 식별자 섹션의 HTML 이메일 템플릿.][4]
+![HTML 이메일 템플릿의 API 식별자 섹션입니다.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## 이메일 템플릿 관리
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) email templates! [템플릿]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
 
-## 자주 묻는 질문
+## Frequently asked questions
 
-이메일 템플릿에 대한 자주 묻는 질문에 대한 답변은 [이메일 및 링크 템플릿 FAQ][10] 페이지를 확인하세요.
+For answers to frequently asked questions about email templates, check out our [email and link templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
 
 
-[4]: {% image_buster /assets/img_archive/email_template_id.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/

@@ -1,5 +1,5 @@
 ---
-nav_title: Third Party Liability
+nav_title: Third party liability
 article_title: Third Party Liability
 page_order: 12
 page_type: reference

@@ -1,6 +1,6 @@
 ---
-page_order: 13
-nav_title: 모범 사례
+page_order: 14
+nav_title: Best practices
 article_title: 이메일 모범 사례
 layout: dev_guide
 guide_top_header: "이메일 모범 사례"
@@ -18,7 +18,7 @@ guide_featured_list:
   - name: "이메일 스타일링"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_styling/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: "활용 사례"
+  - name: "Use Cases"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
     image: /assets/img/braze_icons/edit-05.svg
   - name: "이메일 구독 관리"

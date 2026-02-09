@@ -13,11 +13,11 @@ tool:
 
 > La página de **inicio** del panel de control proporciona métricas clave para que pueda realizar un seguimiento y comprender el rendimiento de su aplicación o sitio web, y le ofrece una visión general de alto nivel de su base de usuarios.
 
-![Panel de inicio en Braze.][1]
-
 La página de **inicio** tiene dos secciones principales:
 - [Continuar donde lo dejaste](#pick-up-where-you-left-off)
 - [Resumen del rendimiento](#peformance-overview)
+
+![Panel de inicio en Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Continuar donde lo dejaste
 
@@ -25,25 +25,29 @@ Puedes continuar donde lo dejaste en el panel de Braze, con acceso directo a los
 
 Puedes volver a visitar campañas, lienzos y segmentos editados o creados recientemente. Cada tarjeta está emparejada con etiquetas que indican el tipo de contenido (campaña, Canvas, segmento) y el estado (activo, borrador, archivado, detenido).
 
-![Un borrador de Canvas, un segmento activo y un borrador de campaña en la sección "Continúa donde lo dejaste".][6]
+{% alert note %}
+La sección **Retomar donde lo dejaste** aparece después de haber editado o creado una campaña, Canvas o segmento.
+{% endalert %}
+
+![Un borrador de Canvas, un segmento activo y un borrador de campaña en la sección "Continúa donde lo dejaste".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Resumen del rendimiento
 
 Por defecto, la sección **Resumen de rendimiento** muestra los datos de los últimos 30 días de todas las aplicaciones y sitios. Todas las métricas se calculan en función del intervalo de fechas seleccionado.
 
-![Campos de intervalo de fechas y aplicación en el panel de inicio.][5]{: style="max-width:60%;"}
+![Campos de intervalo de fechas y aplicación en el panel de inicio.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Los porcentajes se calculan basándose en el intervalo de fechas actual en comparación con el intervalo de fechas anterior, con la excepción de *los Usuarios Activos Mensuales* (MAU), que utiliza el último día del periodo anterior en lugar de un intervalo. 
 
 Por ejemplo, si establece el intervalo de fechas en **los últimos 7 días** y *los usuarios activos diarios* muestran un aumento porcentual del 1,8%, significa que esta semana ha tenido un 1,8% más de usuarios activos diarios que la semana pasada.
 
-![][4]{: style="max-width:60%;"}
+![]({% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}){: style="max-width:60%;"}
 
 ### Desglose de la función de mostrar
 
 Selecciona **Mostrar desglose** en cada fila de las estadísticas del resumen de rendimiento para ver el valor de cada estadística por día para el intervalo de fechas especificado.
 
-![Expand][2]
+![Expand]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Estadísticas disponibles
 
@@ -53,7 +57,7 @@ A continuación encontrarás las definiciones de tus estadísticas disponibles, 
 
 *Usuarios* es el número total de usuarios creados en ese espacio de trabajo. Esto incluye a todos los usuarios que registramos utilizando tu aplicación o sitio web en cualquier momento, y a aquellos que podrían no estar asociados a una aplicación o sitio web específico. Este número es el porcentaje de cuántos de tus usuarios de toda la vida están representados como *usuarios activos al mes* (MAU), lo que resulta útil para ver la retención de usuarios durante un largo periodo de tiempo.
 
-Un ratio MAU-usuario bajo puede indicar que necesitas diversificar tus canales de mensajería o aumentar tus esfuerzos para llegar a los usuarios rezagados. Consulta nuestra ganancia rápida sobre [captura de usuarios inactivos][3] para obtener más información. En general, la proporción entre MAU y tiempo de vida disminuirá inevitablemente con el tiempo debido al abandono de usuarios, pero las herramientas de Braze pueden ayudarte a minimizar este efecto manteniendo a los usuarios comprometidos durante más tiempo.
+Un ratio MAU-usuario bajo puede indicar que necesitas diversificar tus canales de mensajería o aumentar tus esfuerzos para llegar a los usuarios rezagados. Para más información, consulta nuestra guía rápida sobre la [captura de usuarios caducados]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users). En general, la proporción entre MAU y tiempo de vida disminuirá inevitablemente con el tiempo debido al abandono de usuarios, pero las herramientas de Braze pueden ayudarte a minimizar este efecto manteniendo a los usuarios comprometidos durante más tiempo.
 
 ### Sesiones por ciclo de vida
 
@@ -68,9 +72,34 @@ El porcentaje junto al recuento de MAU muestra el cambio en MAU para este period
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### Reglas de cálculo de MAU
+
+Los cálculos de MAU siguen reglas específicas para garantizar una facturación precisa y coherente:
+
+- **Momento del cálculo**: Se calcula una vez al día a las 12:05 UTC como una instantánea de 30 días; los recuentos nunca cambian retroactivamente.
+- **Perfiles anónimos**: Cuenta **sólo** cuando se registre al menos una sesión.
+- **Perfiles identificados**: Cuéntalos automáticamente una vez que existan.
+- **Perfiles huérfanos**: Los duplicados fusionados con otro usuario **no** se contabilizan.
+- **Cargas CSV**: Los usuarios cargados por CSV sólo cuentan cuando se suministra `date_of_first_session` o `date_of_last_session`, o cuando registran posteriormente una sesión.
+- **Supresión de API**: Eliminar un usuario a través de la API no actualiza el MAU inmediatamente; el recuento se autocorrige en el siguiente ciclo mensual.
+
 {% alert note %}
 Los usuarios anónimos también cuentan para tu MAU. En el caso de los dispositivos móviles, los usuarios anónimos dependen del dispositivo. En el caso de los internautas, los usuarios anónimos dependen de la caché del navegador.
 {% endalert %}
+
+#### Ejemplo de cálculo de MAU
+
+El siguiente ejemplo muestra cómo funcionan los cálculos de MAU a través de diferentes acciones del usuario:
+
+| Paso | Acción | Cambio inmediato de MAU | Total resultante |
+|------|--------|----------------------|-----------------|
+| 1 | Crea **el usuario anónimo 1** y registra una sesión | +1 | 1 |
+| 2 | Identificar **usuario anónimo 1** (el perfil se convierte en identificado) | 0 | 1 |
+| 3 | Crear **usuario anónimo 2** y registrar una sesión | +1 | 2 |
+| 4 | Identificar al **usuario anónimo 2** como la **misma persona** que el usuario 1 (el usuario 2 queda huérfano) | -1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+Las instantáneas de MAU se calculan una vez al día y nunca cambian retroactivamente. En este ejemplo, el recuento de MAU para el día posterior al paso 3 sigue siendo permanentemente 2, aunque el usuario 2 quede huérfano más tarde. Sin embargo, el recuento de MAU de los días siguientes sólo refleja el usuario no huérfano. En cualquier ventana de 30 días, este flujo consume en última instancia 1 MAU, ya que sólo queda un usuario distinto, no huérfano.
 
 ### Usuarios activos diarios
 
@@ -108,9 +137,3 @@ El valor MAU se calcula cada noche y no se actualizará hasta el día siguiente.
 
 *Sesiones diarias por MAU* es la relación entre *Sesiones diarias* y MAU en un día determinado. Esta estadística te indica cuántas sesiones al día puedes esperar que se registren por MAU. Cuando se agregan y promedian, pueden darte una idea de la frecuencia relativa con la que tus usuarios utilizan tu aplicación o sitio web. Es decir, si tus *Sesiones diarias por MAU* fueran de media 0,5, entonces podrías esperar que cada MAU grabara una sesión aproximadamente cada 2 días.  
 
-[1]: {% image_buster /assets/img_archive/home_dashboard.png %}
-[2]: {% image_buster /assets/img_archive/home_dashboard_breakdown.png %}
-[3]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
-[4]: {% image_buster /assets/img_archive/home_dashboard_metric_tile.png %}
-[5]: {% image_buster /assets/img_archive/home_dashboard_select_date.png %}
-[6]: {% image_buster /assets/img/pick_up_where_you_left_off.png %}

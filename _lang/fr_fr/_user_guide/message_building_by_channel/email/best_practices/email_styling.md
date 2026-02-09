@@ -20,7 +20,7 @@ Le champ « De » doit indiquer clairement l’expéditeur. Essayez de ne pas
 
 ### Adresses « noreply »
 
-Les adresses noreply ne sont généralement pas recommandées pour plusieurs raisons, étant donné qu’elles désengagent vos clients. De nombreux destinataires répondent à l’e-mail pour se désabonner, donc s’ils ne sont pas autorisés à le faire, leur action suivante est le plus souvent de marquer l’e-mail comme étant du spam.
+Les adresses e-mail sans réponse sont généralement déconseillées pour de multiples raisons, car elles désengagent vos lecteurs. De nombreux destinataires répondent à l’e-mail pour se désabonner, donc s’ils ne sont pas autorisés à le faire, leur action suivante est le plus souvent de marquer l’e-mail comme étant du spam.
 
 Les réponses automatiques (de type « absent du bureau ») peuvent en fait fournir des informations précieuses, améliorer les taux d’ouverture et diminuer les signalements de spam (en retirant ceux qui ne veulent pas recevoir d’e-mails). Au niveau personnel, un message avec « Ne pas répondre » peut paraitre impersonnel aux destinataires et les faire renoncer à recevoir d’autres e-mails de votre marque ou entreprise.
 
@@ -28,9 +28,13 @@ Les réponses automatiques (de type « absent du bureau ») peuvent en fait fo
 
 Dans un e-mail, le texte d’accroche doit communiquer efficacement le point essentiel du message pour capter l’intérêt du lecteur et l’encourager à ouvrir le message. Le texte d’accroche est également souvent utilisé par les spécialistes du marketing d’e-mail pour fournir des informations supplémentaires sur le contenu d’un e-mail. Le texte d’accroche est le texte de prévisualisation affiché immédiatement après l’objet de l’e-mail. Dans l’exemple suivant, l’accroche est `- Brand. New. Lounge Shorts`.
 
-![Accroche dans une boîte de réception Gmail avec le texte « Nouveaux Bermudas. confortables ».][61]
+![Accroche dans une boîte de réception Gmail avec le texte « Nouveaux Bermudas. confortables ».]({% image_buster /assets/img_archive/preheader_example.png %})
 
 La quantité de texte d’accroche visible dépend du client d’e-mail de l’utilisateur et de la longueur de la ligne objet de l’e-mail. En général, nous recommandons que les accroches d’e-mail fassent entre 50 et 100 caractères.
+
+{% alert note %}
+L'accroche peut faire référence à Liquid dans le corps de l'e-mail, et le corps de l'e-mail peut faire référence à Liquid dans l'accroche. En effet, le texte de l'accroche fait partie du corps de l'e-mail lorsque vous envoyez des messages aux destinataires.
+{% endalert %}
 
 Voici quelques bonnes pratiques à garder à l’esprit au moment de rédiger vos accroches :
 
@@ -39,13 +43,13 @@ Voici quelques bonnes pratiques à garder à l’esprit au moment de rédiger vo
   - Utilisez des mots forts pour que le lecteur sache exactement ce que vous lui demandez, mais veillez à refléter la voix de la marque de votre entreprise et faites en sorte que chaque appel à l’action fournisse une certaine valeur au consommateur.
   - L’accroche ne doit pas faire plus de 85 caractères, et elle doit avoir une sorte d’appel à l’action descriptif lié à la ligne Objet.
 
-2. Les adresses e-mail et les sites vers lesquels vous dirigez vos utilisateurs doivent être optimisés pour le mobile :
+2. Les e-mails et les sites de destination vers lesquels vous dirigez vos utilisateurs doivent être optimisés pour les mobiles :
   - Pas de message interstitiel
   - Grands champs sur le formulaire
   - Navigation facile
   - Grand texte
   - Beaucoup d’espace vide
-  - Corps du message bref et concis
+  - Un texte court et concis
   - Appels à l’action clairs
 
 ### Limites de caractères de l’accroche
@@ -79,12 +83,16 @@ Voici quelques bonnes pratiques à garder à l’esprit au moment de rédiger vo
 
 ## Taille d’e-mail
 
-Assurez-vous de limiter la taille de vos e-mails. Les corps d'e-mails de plus de 102 Ko sont non seulement extrêmement contraignants pour les serveurs de Braze et de Sendgrid, mais ils sont également tronqués par Gmail et d'autres clients de messagerie. Essayez de limiter la taille de votre e-mail à moins de 25 Ko pour du texte et à moins de 60 Ko pour des images. Nous vous encourageons vivement à utiliser notre outil de chargement d'images pour héberger des images et y faire référence avec la balise `href`.
+Assurez-vous de limiter la taille de vos e-mails. Les corps d'e-mails de plus de 102 Ko sont non seulement extrêmement exigeants pour les serveurs de Braze, mais ils sont également coupés par Gmail et d'autres clients de messagerie. Essayez de limiter la taille de votre e-mail à moins de 25 Ko pour du texte et à moins de 60 Ko pour des images. Nous vous encourageons vivement à utiliser notre outil de chargement d'images pour héberger des images et y faire référence avec la balise `href`.
 
 |   Texte uniquement   | Texte avec images |     Largeur de l’e-mail    |
 |:-------------:|:----------------:|:------------------:|
 | 25 KB maximum |   60 KB maximum   | 600 pixels maximum |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% alert note %}
+Pour enregistrer votre campagne d'e-mail ou votre modèle, assurez-vous que le corps de votre e-mail ne dépasse pas 400 Ko.
+{% endalert %}
 
 ## Longueur du texte
 
@@ -112,4 +120,3 @@ Aujourd’hui, une grande partie des e-mails sont lus sur des appareils mobiles.
 
 Cependant, les e-mails ne permettent pas de savoir si les destinataires ont installé l’application. Et donc éviter le lien profond permet d’empêcher les messages d’erreur pour les destinataires d’e-mails qui n’ont pas l’application.
 
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}

@@ -1,16 +1,16 @@
 ---
 nav_title: Optimisations
-article_title: Optimisation des tests A/B avec une variante gagnante ou des variantes personnalisées
+article_title: Optimisez les tests A/B avec une variante gagnante ou des variantes personnalisées
 page_order: 1
 page_type: reference
 description: "Découvrez comment utiliser la variante gagnante ou la variante personnalisée lors de la création de tests multivariés et de tests A/B."
 ---
 
-# Optimisation des tests A/B avec la variante gagnante ou les variantes personnalisées
+# Optimisez les tests A/B avec la variante gagnante ou les variantes personnalisées.
 
-Lors de la [création d'un test A/B][1] pour les campagnes e-mail, push, webhook, SMS et WhatsApp planifiées pour être envoyées une fois, vous pouvez sélectionner une optimisation. Il existe deux options d’optimisation : **Variante gagnante** et **Variante personnalisée**.
+Lors de la [création d'un test A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) pour les campagnes e-mail, push, webhook, SMS et WhatsApp planifiées pour être envoyées une fois, vous pouvez sélectionner une optimisation. Il existe deux options d’optimisation : **Variante gagnante** et **Variante personnalisée**.
 
-![Options d’optimisation présentées dans la section de test A/B lorsque vous choisissez votre audience cible. Trois options sont présentées : Pas d'optimisation, variante gagnante et variante personnalisée. La variante personnalisée est sélectionnée.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![Options d’optimisation présentées dans la section de test A/B lorsque vous choisissez votre audience cible. Trois options sont présentées : Pas d'optimisation, variante gagnante et variante personnalisée. Variante personnalisée est sélectionnée.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 Les deux options fonctionnent en envoyant un test initial à un pourcentage de votre segment cible. Après la fin du test, les utilisateurs restants de votre audience sont envoyés soit à la variante la plus efficace (Variante gagnante) soit à la variante avec laquelle ils ont le plus de chance d’interagir (Variante personnalisée).
 
@@ -50,7 +50,5 @@ Pour déterminer la meilleure variante pour chaque utilisateur, Braze enverra le
 
 ## Analyse
 
-Pour en savoir plus sur les résultats de votre test A/B avec une optimisation, reportez-vous à la section [Analyses des tests A/B et multivariés][2].
+Pour en savoir plus sur les résultats de votre test A/B avec une optimisation, reportez-vous à la section [Analyses des tests A/B et multivariés]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/).
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/multivariate_analytics/

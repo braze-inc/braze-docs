@@ -30,7 +30,7 @@ description: "Le présent article de référence répertorie les filtres avancé
 | nom du filtre | description du filtre | exemple d’entrée | exemple de sortie |
 |---|---|---|---|
 | `url_escape` | Identifie tous les caractères dans une chaîne de caractères qui ne sont pas autorisés dans les URL, et remplace les caractères par leurs variantes échues | `{{'hey<>hi' | url_escape}}` | Bonjour %3C %3Ehi |
-| `url_param_escape` | Remplace tous les caractères d'une chaîne de caractères qui ne sont pas autorisés dans les URL par leurs variantes échappées, y compris l'esperluette (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C %26 %3Ehi |
+| `url_param_escape` | Remplace tous les caractères d'une chaîne qui ne sont pas autorisés dans les URL par leurs variantes échappées, y compris l'esperluette. (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C %26 %3Ehi |
 | `url_encode` | Code une chaîne de caractères qui fonctionne pour les URL | `{{ 'google search' | url_encode }}` | google+recherche |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -72,20 +72,68 @@ Il n'existe aucun moyen d'instancier un hachage en tant que variable (telle qu'u
 | nom du filtre | description du filtre | exemple d’entrée | exemple de sortie |
 |---|---|---|---|
 | `number_with_delimiter` | Formater un nombre avec des virgules | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## Filtre d'échappement/chaîne de caractères d'échappement JSON 
 
 | nom du filtre | description du filtre |
-|---|---|---|---|
+|---|---|
 | `json_escape` | Échappe tous les caractères spéciaux d'une chaîne de caractères (tels que les guillemets doubles `""` et la barre oblique inverse ''). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Ce filtre doit toujours être utilisé lors de la personnalisation d’une chaîne de caractères dans un dictionnaire JSON et est utile pour les webhooks en particulier.
+
+## Filtres de formatage JSON
+
+| nom du filtre | description du filtre |
+|---|---|
+| `json_parse` | Convertit une chaîne JSON en une structure de données correspondante, telle qu'un objet ou un tableau. | 
+| `as_json_string` | Convertit une structure de données, telle qu'un objet ou un tableau, en une chaîne JSON correspondante. | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% endraw %}
 
+{% details json_parse example input and output %}
+
+### Entrée 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### Sortie
+
+```liquid
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details as_json_string example input and output %}
+
+### Entrée
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+{% assign json_string = my_data | as_json_string %}
+```
+
+### Sortie
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

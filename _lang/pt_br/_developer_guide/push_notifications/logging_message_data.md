@@ -1,14 +1,14 @@
 ---
-nav_title: Registro de Mensagens de Dados
-article_title: Registrando dados de notificação por push através do SDK Braze
+nav_title: Dados de mensagens de registro
+article_title: Registre dados de notificação por push por meio do SDK do Braze
 page_order: 7.2
-description: "Aprenda como registrar dados de notificação por push através do SDK Braze."
+description: "Saiba como registrar dados de notificação por push por meio do SDK do Braze."
 noindex: true
 ---
 
-# Registrando dados de notificação por push
+# Registre dados de notificação por push
 
-> Aprenda como registrar dados de notificação por push através do SDK Braze.
+> Saiba como registrar dados de notificação por push por meio do SDK do Braze.
 
 {% sdktabs %}
 {% sdktab android %}
@@ -16,6 +16,6 @@ noindex: true
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/analytics/logging_push_data.md developer_ %}
+{% multi_lang_include developer_guide/swift/analytics/logging_push_data.md %}
 {% endsdktab %}
 {% endsdktabs %}

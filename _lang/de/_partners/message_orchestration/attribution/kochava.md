@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Kochava
 
-> Kochava bietet mobile Attribution und Analytics, damit Sie Ihre Daten für Ihr Wachstum nutzen können. Die Kochava Audience Platform ermöglicht Ihnen die Planung, das Targeting, die Aktivierung, die Messung und die Optimierung Ihrer Kampagnen für Apps.
+> [Kochava](https://www.kochava.com/) bietet mobile Attribution und Analytics, damit Sie Ihre Daten für Ihr Wachstum nutzen können. Die Kochava Audience Platform ermöglicht Ihnen die Planung, das Targeting, die Aktivierung, die Messung und die Optimierung Ihrer Kampagnen für Apps.
 
 _Diese Integration wird von Kochava gepflegt._
 
@@ -33,7 +33,7 @@ Die Integration von Braze und Kochava trägt zu einem ganzheitlicheren Verständ
 
 #### Android
 
-Das [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) SDK generiert eine GUID als Braze ID beim Start der Sitzung. Wir empfehlen, diesen Bezeichner in die Kochava-Methode `IdentityLink` einzugeben, da Braze damit die Daten mit dem richtigen Nutzerprofil abgleichen kann. Die Braze ID kann mit der folgenden Methode abgerufen werden:
+Das [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) SDK generiert beim Sitzungsstart einen Globally Unique Identifier (GUID) als Braze ID. Dieser Bezeichner sollte an die Kochava-Methode `IdentityLink` übergeben werden, damit Braze die Daten wieder mit dem richtigen Nutzerprofil abgleichen kann. Rufen Sie die Braze ID mit der folgenden Methode ab:
 
 ```java
 Apppboy.getInstance(context).getDeviceId();
@@ -42,7 +42,7 @@ Apppboy.getInstance(context).getDeviceId();
 #### iOS
 
 {% alert important %}
-Vor Februar 2023 verwendete unsere Kochava Attribution Integration den IDFV als primären Bezeichner, um iOS Attribution Daten abzugleichen. Für Braze-Kund:innen, die Objective-C verwenden, ist es nicht notwendig, die Braze `device_id` zu holen und bei der Installation an Kochava zu senden, da es keine Unterbrechung des Dienstes gibt.
+Vor Februar 2023 verwendete unsere Kochava Attribution Integration den Identifier for Vendor (IDFV) als primären Bezeichner, um iOS Attribution Daten abzugleichen. Für Braze-Kund:innen, die Objective-C verwenden, ist es nicht notwendig, die Braze `device_id` abzurufen und sie bei der Installation an Kochava zu senden, da es keine Unterbrechung des Dienstes gibt.
 {% endalert%}
 
 Wenn Sie das Swift SDK v5.7.0+ verwenden und weiterhin IDFV als gegenseitigen Bezeichner verwenden möchten, müssen Sie sicherstellen, dass das Feld `useUUIDAsDeviceId` auf `false` gesetzt ist, damit die Integration nicht unterbrochen wird. Wenn Sie diese Option auf `true` setzen, müssen Sie die Abbildung der iOS Geräte ID für Swift implementieren, um die Braze `device_id` bei der Installation der App an Kochava zu übergeben, damit Braze die iOS Attribute richtig zuordnen kann.
@@ -64,17 +64,17 @@ let deviceId = await AppDelegate.braze?.deviceId()
 
 Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und wählen Sie **Kochava** aus. 
 
-Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Kochava einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Kochava Technologieseite finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.][4]{: style="max-width:90%;"}
+Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. Der Datenimport-Schlüssel und der REST-Endpunkt werden im nächsten Schritt verwendet, wenn Sie ein Postback im Dashboard von Kochava einrichten.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Kochava Technologieseite finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.]({% image_buster /assets/img/attribution/kochava.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Einrichten eines Postbacks von Kochava
 
-Fügen Sie ein [Postback][18] in Ihrem Kochava Dashboard hinzu. Sie werden zur Eingabe des Datenimport-Schlüssels und des REST-Endpunkts aufgefordert, die Sie im Braze-Dashboard gefunden haben.
+Fügen Sie ein [Postback](https://support.kochava.com/campaign-management/create-a-kochava-certified-postback) in Ihrem Kochava Dashboard hinzu. Sie werden zur Eingabe des Datenimport-Schlüssels und des REST-Endpunkts aufgefordert, die Sie im Braze-Dashboard gefunden haben.
 
 ### Schritt 4: Bestätigen Sie die Integration
 
-Sobald Braze Attribution-Daten von Kochava erhält, ändert sich der Verbindungsstatus auf der Kochava Technologie-Partnerseite in Braze von "Nicht verbunden" auf "Verbunden". Ein Zeitstempel der letzten erfolgreichen Anfrage wird ebenfalls mitgeschickt. 
+Nachdem Braze Attribution-Daten von Kochava erhalten hat, ändert sich der Verbindungsstatus auf der Technologie-Partnerseite von Kochava in Braze von "Nicht verbunden" zu "Verbunden" und enthält einen Zeitstempel der letzten erfolgreichen Anfrage.
 
-Beachten Sie, dass dies erst dann geschieht, wenn wir Daten über eine attributierte Installation erhalten. Organische Installationen, die vom Kochava-Postback ausgeschlossen werden sollten, werden von unserer API ignoriert und bei der Ermittlung, ob eine erfolgreiche Verbindung hergestellt wurde, nicht mitgezählt.
+Dieser Status ändert sich erst, wenn Braze Daten über eine attributierte Installation erhält. Braze ignoriert organische Installationen (schließt sie aus dem Kochava-Postback aus) und zählt sie nicht, wenn es darum geht, ob die Verbindung erfolgreich war.
 
 ## Daten zur Attribution von Facebook und X (früher Twitter)
 
@@ -117,7 +117,3 @@ Wenn Sie derzeit keine Geräte-Identifikatoren - wie IDFV oder GAID - in Ihren C
 {% endalert %}
 
 
-[18]: https://support.kochava.com/campaign-management/create-a-kochava-certified-postback "Kochava Postbacks"
-[29]: https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3
-[30]: https://support.kochava.com/sdk-integration/windows-and-xbox-one-sdk-integration?scrollto=marker_8
-[4]: {% image_buster /assets/img/attribution/kochava.png %}

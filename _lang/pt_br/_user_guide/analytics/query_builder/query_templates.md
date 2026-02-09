@@ -1,7 +1,7 @@
 ---
 nav_title: Modelos de consulta
 article_title: Modelos do Query Builder
-page_order: 0
+page_order: 1
 page_type: reference
 toc_headers: h2
 description: "Este artigo de referência lista os tipos de relatórios que você pode criar usando os dados do Braze do Snowflake no Query Builder."

@@ -6,8 +6,7 @@ description: "Este artículo de referencia cubre las métricas LINE utilizadas e
 page_type: reference
 channel:
  - LINE
-hidden: true
-permalink: /line/reporting/
+alias: /line/reporting/
 ---
 
 # Informes LINE
@@ -40,7 +39,7 @@ Para medir el impacto de un mensaje LINE individual, puede añadir un [grupo de 
 
 El panel **LINE Performance** muestra el rendimiento de su mensaje en varias dimensiones. Las métricas de este panel varían en función del canal de mensajería elegido y de si está realizando o no una prueba multivariante. Puede hacer clic en el icono <i class="fa fa-eye preview-icon"></i> **Vista previa** para ver su mensaje para cada variante o canal.
 
-![El panel "Rendimiento de la línea" muestra las métricas de dos variantes.][1]
+![El panel "Rendimiento de la línea" muestra las métricas de dos variantes.]({% image_buster /assets/img/line/line_performance.png %})
 
 Si desea simplificar la vista, seleccione **\+ Añadir/Eliminar columnas** y borre las métricas que desee. Por defecto, se muestran todas las métricas.
 
@@ -59,7 +58,7 @@ Estas son algunas de las métricas clave de LINE que puede ver en sus análisis.
 
 ### Rendimiento histórico
 
-El panel de **Rendimiento histórico** permite ver las métricas del panel **Rendimiento de mensajes** en forma de gráfico a lo largo del tiempo. Utiliza los filtros de la parte superior del panel para modificar las estadísticas y los canales que aparecen en el gráfico. El intervalo de tiempo de este gráfico siempre reflejará el intervalo de tiempo especificado en la parte superior de la página.
+El panel **Rendimiento histórico** te permite ver las métricas del panel **Rendimiento de mensajes** como un gráfico a lo largo del tiempo. Utiliza los filtros de la parte superior del panel para modificar las estadísticas y los canales que aparecen en el gráfico. El intervalo de tiempo de este gráfico siempre reflejará el intervalo de tiempo especificado en la parte superior de la página.
 
 Para obtener un desglose día a día, seleccione el menú hamburguesa <i class="fas fa-bars"></i> y seleccione **Descargar CSV** para recibir una exportación CSV del informe.
 
@@ -69,7 +68,6 @@ El panel **Detalles del evento de conversión** le muestra el rendimiento de sus
 
 ### Correlación de conversión
 
-El panel **Correlación de conversiones** le ofrece información sobre qué atributos y comportamientos de los usuarios favorecen o perjudican los resultados que establece para las campañas. Para más información, consulta los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
+El panel **Correlación de conversiones** te da información sobre qué atributos y comportamientos de los usuarios ayudan o perjudican los resultados que estableces para las campañas. Para más información, consulta los [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 
-[1]: {% image_buster /assets/img/line/line_performance.png %}

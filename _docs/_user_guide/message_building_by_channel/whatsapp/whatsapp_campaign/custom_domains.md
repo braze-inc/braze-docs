@@ -1,5 +1,5 @@
 ---
-nav_title: Custom Domains
+nav_title: Custom domains
 layout: redirect
 page_order: 5
 alias: "/custom_domains_whatsapp/"

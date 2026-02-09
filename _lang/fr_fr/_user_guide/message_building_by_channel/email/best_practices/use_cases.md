@@ -14,19 +14,19 @@ channel: email
 
 ## Onboarding
 
-Une fois vos utilisateurs onboardés, donnez leur des conseils utiles pour démarrer et décrivez uniquement les fonctionnalités les plus essentielles. Essayez d’envoyer toujours un e-mail de bienvenue lorsqu’un utilisateur s’inscrit. Voici un exemple de LivingSocial qui contient des CTA (appel à l’action) simples et informe les utilisateurs sur une offre :
+Une fois vos utilisateurs onboardés, donnez leur des conseils utiles pour démarrer et décrivez uniquement les fonctionnalités les plus essentielles. Essayez d’envoyer toujours un e-mail de bienvenue lorsqu’un utilisateur s’inscrit. Voici un exemple de LivingSocial qui contient des appels à l'action clairs et informe les utilisateurs sur une offre :
 
-![L'e-mail d'onboarding envoyé par LivingSocial qui accueille les nouveaux utilisateurs.][26]{: style="max-width:70%;"}
+![L'e-mail d'onboarding envoyé par LivingSocial qui accueille les nouveaux utilisateurs.]({% image_buster /assets/img_archive/Livingsocial_email.png %}){: style="max-width:70%;"}
 
 Cependant, trop d’informations peuvent accabler voire désorienter l’utilisateur si ce dernier ne connait pas bien votre application ! Lorsque vous communiquez plus d’informations sur votre appli, il peut être utilise de fournir des liens vers votre documentation et d’informer les utilisateurs sur la façon d’obtenir de l’assistance.
 
 ## Ventes et promotions
 
-Votre contenu doit décrire la valeur d’une promotion, comme les remises, les informations commerciales et la durée de l’offre. Les graphiques sont un excellent moyen d’illustrer les produits dont vous faites la promotion. Gardez votre copie simple et concise de sorte qu’il ne gêne pas votre e-mail et ne détourne pas les utilisateurs du contenu essentiel. Faites en sorte que votre CTA soit clair, et donnez aux destinataires un moyen facile de participer à la promotion immédiatement.
+Votre contenu doit décrire la valeur d’une promotion, comme les remises, les informations commerciales et la durée de l’offre. Les graphiques sont un excellent moyen d’illustrer les produits dont vous faites la promotion. Veillez à ce que votre texte soit concis et ciblé afin qu'il n'encombre pas votre e-mail et ne détourne pas l'attention des utilisateurs du contenu essentiel. Faites en sorte que votre CTA soit clair, et donnez aux destinataires un moyen facile de participer à la promotion immédiatement.
 
 Pour recommander certains produits, essayez de les présenter comme des suggestions personnalisées susceptibles d'intéresser l’utilisateur. Si votre offre a une durée limitée, faites-le bien savoir à vos utilisateurs ! Dans cet e-mail, Ideeli réussit parfaitement à transmettre le sentiment d’urgence :
 
-![E-mail promotionnel envoyé par Ideeli pour informer les utilisateurs d’une offre à durée limitée. Une grande bannière contient le texte « Se termine à minuit. Vente flash de 6 heures. Dépêchez-vous ! Ces offres incroyables ne dureront pas longtemps. »][27]{: style="max-width:70%;"}
+![E-mail promotionnel envoyé par Ideeli pour informer les utilisateurs d’une offre à durée limitée. Une grande bannière contient le texte « Se termine à minuit. Vente flash de 6 heures. Dépêchez-vous ! Ces offres incroyables ne dureront pas longtemps. »]({% image_buster /assets/img_archive/Ideeli_email.png %}){: style="max-width:70%;"}
 
 ## Transactionnel
 
@@ -35,9 +35,9 @@ Une fois qu’un utilisateur a effectué un achat dans l’application, voici qu
 - Confirmez l’expédition du produit et donnez-leur un moyen de poser des questions sur le statut de leur commande.
 - Demandez-leur des commentaires, mais sans être top insistant.
 
-Comme vous venez de fournir un service à vos utilisateurs, ils seront peut-être plus enclins à donner leur avis. Voici un exemple d'e-mail provenant de Restaurant.com:
+Parce que vous avez fourni un service aux utilisateurs, ils peuvent être plus enclins à partager leurs réflexions. Voici un exemple d'e-mail provenant de Restaurant.com:
 
-![E-mail transactionnel envoyé par Restaurants.com qui demande aux utilisateurs de donner leur avis. L’e-mail dit « Dites-nous tout » Nous espérons que vous avez apprécié votre repas et votre expérience chez REDACTED. Pour nous permettre de vous fournir le meilleur service, les meilleurs plats et la meilleure expérience possible, merci de prendre un moment pour nous faire part de vos commentaires. Votre avis compte beaucoup pour nous et nous apprécions vos commentaires ». L’appel à l’action indique « Répondre à l’enquête ».][28]{: style="max-width:80%;"}
+![E-mail transactionnel envoyé par Restaurants.com qui demande aux utilisateurs de donner leur avis. L’e-mail dit « Dites-nous tout » Nous espérons que vous avez apprécié votre repas et votre expérience chez REDACTED. Pour nous permettre de vous fournir le meilleur service, les meilleurs plats et la meilleure expérience possible, merci de prendre un moment pour nous faire part de vos commentaires. Votre avis compte beaucoup pour nous et nous apprécions vos commentaires ». L’appel à l’action indique « Répondre à l’enquête ».]({% image_buster /assets/img_archive/Restaurant_email.png %}){: style="max-width:80%;"}
 
 ## Campagnes
 
@@ -48,15 +48,15 @@ Le ton utilisé doit être amical ! C’est peut-être votre dernière chance d
 
 Essayez de personnaliser votre message personnel pour montrer à l’utilisateur qu’il est toujours apprécié. Pour son e-mail de conservation, Rue La La, par exemple, envoie un message de son PDG :
 
-![E-mail de conservation envoyé aux clients sous la forme d’un message personnalisé du PDG de Rue La La. L’e-mail dit « Bonjour,  En tant que PDG de Rue La La, j’aime demander l’avis de nos clients. La plupart du temps, ils m’expliquent pourquoi ils aiment utiliser Rue. (Et nous en sommes très flattés) Mais on dirait que ce n’est pas (encore) votre cas. Je vais aller droit au but. Je vous offre une remise de 25 dollars sur vos achats sur notre site, qu’il s’agisse d’un sac de créateur, d’une nouvelle paire de jeans ou d’une chose incroyable pour votre maison. Je pense (vraiment) que cela vous permettra de commencer à apprécier Rue La La. Profitez-en ! »][29]{: style="max-width:80%;"}
+![E-mail de conservation envoyé aux clients sous la forme d’un message personnalisé du PDG de Rue La La. L’e-mail dit « Bonjour,  En tant que PDG de Rue La La, j’aime demander l’avis de nos clients. La plupart du temps, ils m’expliquent pourquoi ils aiment utiliser Rue. (Et nous en sommes très flattés) Mais on dirait que ce n’est pas (encore) votre cas. Je vais aller droit au but. Je vous offre une remise de 25 dollars sur vos achats sur notre site, qu’il s’agisse d’un sac de créateur, d’une nouvelle paire de jeans ou d’une chose incroyable pour votre maison. Je pense (vraiment) que cela vous permettra de commencer à apprécier Rue La La. Profitez-en ! »]({% image_buster /assets/img_archive/Ruelala_email.png %}){: style="max-width:80%;"}
 
 ## Réseaux sociaux
 
-L’e-mail peut vous aider à développer une fanbase en dirigeant les destinataires vers vos plateformes de réseaux sociaux. Incluez des liens vers vos comptes de réseaux sociaux dans l’e-mail pour que les utilisateurs puissent les trouver facilement.
+L'e-mail peut créer une fanbase sociale en dirigeant les destinataires vers vos réseaux sociaux. Incluez des liens vers vos comptes de réseaux sociaux pour simplifier la connexion des utilisateurs.
 
 Il faut que ce soit ludique ! Essayez d’organiser un concours photo, de promouvoir un hashtag ou d’offrir des cadeaux. Voici un e-mail de Hailo qui offre une récompense pour participer à des concours de photos :
 
-![Exemple d'e-mail social de Hailo qui informe ses utilisateurs de participer à un défi photo.][30]{: style="max-width:70%;"}
+![Exemple d'e-mail social de Hailo qui informe ses utilisateurs de participer à un défi photo.]({% image_buster /assets/img_archive/Hailo_social_email.png %}){: style="max-width:70%;"}
 
 ## Mises à jour
 
@@ -64,12 +64,6 @@ Envoyer des nouvelles fonctionnalités ou des améliorations à tous vos utilisa
 
 Si votre fonctionnalité nécessite une explication ou une démonstration, incluez un lien dans le message. Voici un exemple de Allrecipes.com:
 
-![Exemple d’e-mail mis à jour par Allrecipes pour informer les utilisateurs d’une nouvelle fonctionnalité. En haut de l’e-mail, on peut lire : « Trop de mots de passe. Vous en avez assez des mots de passe ? Nous aussi. » Le corps de l’e-mail demande aux utilisateurs de se connecter via Facebook ou Google Plus, avec un appel à l’action « Découvrez comment ».][31]{: style="max-width:70%;"}
+![Exemple d’e-mail mis à jour par Allrecipes pour informer les utilisateurs d’une nouvelle fonctionnalité. En haut de l’e-mail, on peut lire : « Trop de mots de passe. Vous en avez assez des mots de passe ? Nous aussi. » Le corps de l’e-mail demande aux utilisateurs de se connecter via Facebook ou Google Plus, avec un appel à l’action « Découvrez comment ».]({% image_buster /assets/img_archive/Allrecipes_email.png %}){: style="max-width:70%;"}
 
 
-[26]: {% image_buster /assets/img_archive/Livingsocial_email.png %}
-[27]: {% image_buster /assets/img_archive/Ideeli_email.png %}
-[28]: {% image_buster /assets/img_archive/Restaurant_email.png %}
-[29]: {% image_buster /assets/img_archive/Ruelala_email.png %}
-[30]: {% image_buster /assets/img_archive/Hailo_social_email.png %}
-[31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}

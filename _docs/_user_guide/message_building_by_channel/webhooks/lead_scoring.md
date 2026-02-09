@@ -1,5 +1,5 @@
 ---
-nav_title: Lead Scoring
+nav_title: Lead scoring
 page_order: 6
 noindex: true
 layout: redirect

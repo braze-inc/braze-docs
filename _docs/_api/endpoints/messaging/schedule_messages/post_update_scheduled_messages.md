@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Update Scheduled Messages"
+nav_title: "POST: Update scheduled messages"
 article_title: "POST: Update Scheduled Messages"
 search_tag: Endpoint
 page_order: 4
@@ -74,7 +74,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       "title": "Updated title!",
       "alert": "Updated message!"
     },
-    "sms": {  
+    "sms": {
       "subscription_group_id": "subscription_group_identifier",
       "message_variation_id": "message_variation_identifier",
       "body": "This is my SMS body.",

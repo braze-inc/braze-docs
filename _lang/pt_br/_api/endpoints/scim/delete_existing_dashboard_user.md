@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Remover conta de usuário do dashboard"
+nav_title: "DELETE: Remova a conta de usuário do dashboard"
 article_title: "DELETE: Remover conta de usuário do dashboard"
 alias: /delete_existing_dashboard_user/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "Este artigo traz informações sobre o endpoint da Braze \"Remover
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Use esse endpoint para excluir permanentemente um usuário do dashboard existente, especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/). 
+> Use esse endpoint para excluir permanentemente um usuário do dashboard existente, especificando o recurso `id` retornado pelo método SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/).
 
 Isso é semelhante à exclusão de um usuário na seção **Company Users (Usuários da empresa** ) do dashboard do Braze.
 
@@ -27,7 +27,7 @@ Para usar esse endpoint, você precisará de um token SCIM. Você usará a orige
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='excluir usuário do dashboard' %}
+{% multi_lang_include rate_limits.md endpoint='delete dashboard user' %}
 
 ## Parâmetros da jornada
 

@@ -1,6 +1,6 @@
 ---
 nav_title: 지속적인 항목 속성
-article_title: 지속적인 항목 속성
+article_title: 영구 항목 속성
 alias: "/persistent_entry/"
 page_type: reference
 description: "이 참조 문서에서는 캔버스에서 지속적인 항목 속성을 사용하여 더 정제된 메시지를 보내고 매우 정교한 최종 사용자 경험을 만드는 방법을 설명합니다."
@@ -10,9 +10,11 @@ page_order: 5
 
 # 지속적인 항목 속성
 
-> 캔버스가 커스텀 이벤트, 구매 또는 API 호출에 의해 트리거될 때, API 호출, 커스텀 이벤트 또는 구매 이벤트의 메타데이터를 사용하여 캔버스 워크플로의 각 단계에서 개인화를 할 수 있습니다. 
+> 캔버스가 커스텀 이벤트, 구매 또는 API 호출에 의해 트리거될 때, API 호출, 커스텀 이벤트 또는 구매 이벤트의 메타데이터를 사용하여 캔버스 워크플로의 각 단계에서 개인화를 할 수 있습니다. 이러한 속성을 사용하여 더욱 선별된 메시지를 보낼 수 있습니다.
 
-이 기능 이전에는 캔버스의 첫 번째 단계에서만 항목 속성을 사용할 수 있었습니다. 캔버스 여정 전반에 걸쳐 항목 속성을 사용할 수 있는 기능을 통해 고객은 보다 엄선된 메시지를 보내고 매우 정제된 최종 사용자 경험을 만들 수 있습니다.
+{% alert important %}
+지속성 항목 속성정보는 원래 캔버스 에디터의 아티팩트로, 과거 참조용으로 남아 있는 용어에 대한 참조가 더 이상 사용되지 않습니다. 현재 업데이트된 캔버스 편집기에 대해서는 [캔버스 항목 속성 및 이벤트 속성을]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties) 참조하세요.
+{% endalert %}
 
 ## 항목 속성 사용
 
@@ -77,17 +79,15 @@ url -X POST \
     }' \
 ```
  
-이 요청에서 "음식 알레르기"의 전역 값은 "없음"입니다. 고객_123의 경우, 값은 "dairy"입니다. 이 캔버스의 메시지에 Liquid 스니펫 {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%}이 포함된 경우 Customer_123에게는 "dairy"로 템플릿되고 다른 모든 사람에게는 "none"으로 템플릿됩니다. 
+이 요청에서 "음식 알레르기"의 전역 값은 "없음"입니다. Customer_123, 의 경우 값은 "유제품"입니다. Liquid 스니펫 {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} 이 포함된 캔버스의 메시지는 Customer_123 에 대해서는 "유제품"으로, 그 외에는 "없음"으로 템플릿이 지정됩니다. 
 
-## 사용 사례
+## Use case
 
 If you have a Canvas that is triggered when a user browses an item in your eCommerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}을 사용하여 제품 이름을 참조할 수 있습니다
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 두 번째 단계에서는 사용자가 장바구니에 상품을 추가했지만 아직 구매하지 않은 경우 결제를 유도하는 푸시 알림을 보낼 수 있습니다. `product_name` 항목 속성을 {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}을 사용하여 계속 참조할 수 있습니다.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

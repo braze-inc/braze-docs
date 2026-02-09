@@ -25,7 +25,7 @@ guide_featured_list:
 guide_menu_title: "Additional resources"
 guide_menu_list:
   - name: Asistente de redacción AI
-    link: /docs/user_guide/brazeai/generative_ai/ai_copywriting/
+    link: /docs/user_guide/brazeai/generative_ai/copywriting/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Flujo de trabajo de aprobación
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
@@ -33,7 +33,7 @@ guide_menu_list:
   - name: Eventos de conversión
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Segmentación de usuarios
+  - name: Dirigirse a los usuarios
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
     image: /assets/img/braze_icons/annotation-question.svg
 ---

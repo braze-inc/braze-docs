@@ -36,7 +36,7 @@ La validación del correo electrónico se realiza cuando la dirección de correo
 
 Las direcciones de correo electrónico dirigidas a través de los servidores Braze deben ser validadas según las normas [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822), Braze no acepta ciertos caracteres y los reconoce como no válidos. Si un correo electrónico es rebotado, Braze marca el correo electrónico como no válido y el estado de la suscripción no se modifica. 
 
-{% details Caracteres no aceptados fuera de las normas RFC %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -60,12 +60,16 @@ Las direcciones de correo electrónico dirigidas a través de los servidores Bra
 
 Cuando configure sus direcciones "de", asegúrese de que su dominio de correo electrónico "de" coincide con su dominio de envío (como `marketing.yourdomain.com`). Si no lo hace, puede producirse una desalineación entre SPF y DKIM. Todos los correos electrónicos de respuesta se pueden configurar en tu dominio raíz.
 
+{% alert note %}
+No se admite la codificación Unicode en las direcciones "de".
+{% endalert %}
+
 ### Comprobación de los detalles HTML
 
 Tenga en cuenta que algunas etiquetas y atributos HTML no están permitidos, ya que pueden permitir la ejecución de código malicioso en el navegador.
 
 Consulte las siguientes listas de etiquetas y atributos HTML que no están permitidos en sus mensajes de correo electrónico:
-{% details Ampliar para etiquetas HTML no permitidas %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -83,7 +87,7 @@ Consulte las siguientes listas de etiquetas y atributos HTML que no están permi
 - `<svg>`
 {% enddetails %}
 
-{% details Ampliar para atributos HTML no permitidos %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`
@@ -229,5 +233,4 @@ Consulte las siguientes listas de etiquetas y atributos HTML que no están permi
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

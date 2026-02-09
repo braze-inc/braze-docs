@@ -1,0 +1,3 @@
+{% alert important %}
+Sua mensagem só será enviada a usuários que já correspondam às condições definidas na etapa **Target Audience (Público-alvo** ). Depois disso, eles ainda precisam atender ao disparo que você definiu na etapa **Programar entrega**. Pense no público-alvo como uma sala de espera - somente as pessoas que já estão lá dentro podem seguir em frente quando a próxima ação acontecer.
+{% endalert %}

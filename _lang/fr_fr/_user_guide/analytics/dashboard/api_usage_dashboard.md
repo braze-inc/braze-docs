@@ -1,5 +1,5 @@
 ---
-nav_title: Tableau de bord d’utilisation de l’API
+nav_title: "Tableau de bord de l'utilisation de l'API"
 article_title: Tableau de bord d’utilisation de l’API
 alias: "/api_usage/"
 page_order: 3.5
@@ -10,19 +10,26 @@ description: "Cet article donne un aperçu du tableau de bord de l'utilisation d
 
 > Le tableau de bord de l'utilisation de l'API vous permet de surveiller le trafic de votre API REST entrant dans Braze afin de comprendre les tendances de votre utilisation de nos API REST et de résoudre les problèmes éventuels.
 
-Consultez le tableau de bord de l'utilisation de votre API en allant dans **Paramètres** > **API et identifiants** et en sélectionnant **Tableau de bord.** Le tableau de bord par défaut est une vue de toutes les demandes d'API REST entrantes pour votre espace de travail au cours de la dernière journée (24 heures). En fonction de votre cas d'utilisation, vous pouvez ajuster les contrôles du tableau de bord pour filtrer ou regrouper le trafic et également configurer la plage horaire du tableau de bord.
+## À propos du tableau de bord de l'utilisation de l'API
+
+Pour afficher votre tableau de bord d'utilisation des API, accédez à **Paramètres** > **API et identifiants**, puis sélectionnez **Tableau de bord.**
+
+Le tableau de bord par défaut est une vue de toutes les demandes d'API REST entrantes pour votre espace de travail au cours de la dernière journée (24 heures). En fonction de votre cas d'utilisation, vous pouvez ajuster les contrôles du tableau de bord pour filtrer ou regrouper le trafic et également configurer la plage horaire du tableau de bord.
 
 ![Tableau de bord de l'utilisation de l'API avec 130 demandes au total, avec un taux de réussite de 70 % et un taux d'échec de 30 %.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
 
-## Résumé des détails
+## Indicateurs disponibles
 
 Le tableau de bord de l'utilisation de l'API comprend les statistiques suivantes :
 
-- **Nombre total de requêtes :** Le nombre total de demandes envoyées à Braze pour votre espace de travail actuel, compte tenu des filtres et des contrôles appliqués au tableau de bord.
-- **Taux de succès :** Pourcentage du total des demandes pour lesquelles Braze a envoyé une réponse positive à l'adresse `2XX`.
-- **Taux d'erreur :** Pourcentage du total des demandes pour lesquelles Braze a émis une réponse d'erreur `4XX` ou `5XX`.
+| Indicateurs         | Description |
+|----------------|-------------|
+| Nombre total de demandes | Le nombre total de demandes envoyées à Braze pour votre espace de travail actuel, compte tenu des filtres et des contrôles appliqués au tableau de bord. |
+| Taux de succès   | Pourcentage du total des demandes pour lesquelles Braze a envoyé une réponse positive à l'adresse `2XX`. |
+| Taux d’erreur     | Pourcentage du total des demandes pour lesquelles Braze a émis une réponse d'erreur `4XX` ou `5XX`. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Contrôles du tableau de bord
+## Utilisation du tableau de bord
 
 ![Filtres à appliquer au tableau de bord, notamment : Clé API, endpoint, codes de réponse, données de groupe et date.]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
@@ -68,3 +75,8 @@ Les options **3 dernières heures** et **6 dernières heures** affichent le tr
 Le tableau de bord de l'utilisation de l'API inclut toutes les requêtes d'API REST que Braze a reçues et pour lesquelles la solution a renvoyé une réponse `2XX`, `4XX` ou `5XX`. Cela comprend les sorties de transformation des données et les synchronisations d'ingestion de données dans le cloud. Les étapes relatives au trafic de SDK et à la mise à jour des utilisateurs ne sont pas incluses dans ce tableau de bord.
 
 Les données affichées dans le tableau de bord peuvent afficher le trafic récent avec un délai pouvant aller jusqu'à un court instant. Pendant les périodes de forte utilisation, vous pouvez actualiser le tableau de bord jusqu'à 4 fois par minute. Il se peut que vous deviez attendre quelques minutes avant d'actualiser à nouveau le tableau de bord.
+
+## Articles connexes
+
+- [Alertes sur l'utilisation de l'API]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts)
+- [Limites de débit]({{site.baseurl}}/api/api_limits)

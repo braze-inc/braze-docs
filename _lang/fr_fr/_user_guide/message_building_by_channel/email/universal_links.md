@@ -75,7 +75,7 @@ Ces étapes sont adaptées de la documentation destinée aux développeurs d'App
 #### Étape 1a : Enregistrer votre application {#step-1a}
 
 1. Allez sur developer.apple.com et connectez-vous.
-2. Cliquez sur **Certificats, Identifiants et Profils.**
+2. Cliquez sur **Certificats, Identifiants & Profils**.
 3. Cliquez sur **Identifiants**.
 4. Si vous n'avez pas encore d'identifiant d'application enregistré, cliquez sur + pour en créer un.
    a. Saisissez un **nom**. Il peut s'agir de tout ce que vous voulez.
@@ -89,7 +89,7 @@ Ces étapes sont adaptées de la documentation destinée aux développeurs d'App
 
 ![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
-#### Étape 1c : Activez les domaines associés dans votre projet Xcode {#step-1c}
+#### Étape 1c: Activez les domaines associés dans votre projet Xcode {#step-1c}
 
 Avant de poursuivre, assurez-vous que votre projet Xcode a la même équipe sélectionnée que celle où vous venez d'enregistrer votre identifiant d'application. 
 
@@ -265,7 +265,7 @@ Ensuite, assurez-vous que votre application est configurée pour gérer correcte
 
 ### Désactiver le suivi des clics pour chaque lien
 
-Vous pouvez désactiver le suivi des clics pour des liens spécifiques en ajoutant du code HTML à votre message e-mail dans l'éditeur HTML ou aux composants dans l'éditeur par glisser-déposer.
+Vous pouvez désactiver le suivi des clics pour des liens spécifiques en ajoutant un code HTML à votre message e-mail pour l'éditeur HTML ou à un bloc HTML pour l'éditeur glisser-déposer.
 
 #### SendGrid
 
@@ -281,6 +281,14 @@ Si votre fournisseur de services d'e-mailing est SparkPost, utilisez le code HTM
 
 ```HTML
 <a data-msys-clicktrack="0" href="[INSERT https LINK HERE]">click here</a>
+```
+
+#### Amazon SES
+
+Si votre fournisseur de services d'e-mailing est Amazon SES, utilisez le code HTML `ses:no-track` comme suit :
+
+```HTML
+<a ses:no-track href="[INSERT https LINK HERE]">click here</a>
 ```
 
 #### Éditeur par glisser-déposer
@@ -303,7 +311,7 @@ Sélectionnez les éléments suivants pour l'attribut personnalisé :
 - **Nom :** `data-msys-clicktrack`
 - **Valeur :** `0`
 
-![Un attribut personnalisé pour un lien de texte.][2]{: style="max-width:60%;"}
+![Un attribut personnalisé pour un lien de texte.]({% image_buster /assets/img/text_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ##### Attribut personnalisé pour un bouton ou une image
 
@@ -323,7 +331,7 @@ Sélectionnez les éléments suivants pour l'attribut personnalisé :
 - **Valeur :** `0`
 - **Type :** Lien
 
-![Un attribut personnalisé pour un bouton.][1]{: style="max-width:60%;"}
+![Un attribut personnalisé pour un bouton.]({% image_buster /assets/img/button_click_tracking_off.png %}){: style="max-width:60%;"}
 
 ### Résolution des problèmes des liens universels avec le suivi des clics
 
@@ -345,5 +353,3 @@ Assurez-vous que les définitions des domaines que votre application est autoris
 - **iOS :** Passez en revue les domaines associés configurés dans Xcode pour votre app[(étape 1c)]({{site.baseurl}}/help/help_articles/email/universal_links/?tab=ios#step-1c). Vérifiez que le domaine de suivi des clics est inclus dans cette liste.
 - **Android :** Ouvrez la page d'information de l'application (appuyez longuement sur l'icône de l'application et cliquez sur ⓘ). Dans le menu d'information sur l'application, repérez l'**option Ouvrir par défaut** et appuyez dessus. Un écran devrait s'afficher avec tous les liens vérifiés que l'application est autorisée à ouvrir. Vérifiez que le domaine de suivi des clics est inclus dans cette liste.
 
-[1]: {% image_buster /assets/img/button_click_tracking_off.png %}
-[2]: {% image_buster /assets/img/text_click_tracking_off.png %}

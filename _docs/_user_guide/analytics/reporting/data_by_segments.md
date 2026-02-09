@@ -1,5 +1,5 @@
 ---
-nav_title: Metrics by Segments
+nav_title: Metrics by segments
 article_title: Metrics by Segments
 page_order: 2.5
 page_type: reference

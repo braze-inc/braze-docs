@@ -78,7 +78,8 @@ module Jekyll
         @minlevel = params[0].to_i
         collection = params[1]
         @currentpage = context.registers[:page]
-        Jekyll.logger.debug("Current Page: " + @currentpage.id)
+        @currentpage_id = @currentpage.respond_to?(:id) ? @currentpage.id : nil
+        Jekyll.logger.debug("Current Page: " + @currentpage_id.to_s) if @currentpage_id
 
         # print @currentpage.id +  ' '
         # puts @minlevel
@@ -143,7 +144,7 @@ module Jekyll
                           nav_page_url = page.data['custom_url']
                         end
                         page_id = ''
-                        unless page.id.nil?
+                        if page.respond_to?(:id) && !page.id.nil?
                           page_id = page.id
                         end
                         cur_hash[@menu_nav_list][path_key] = [path_key, path_part,page_title,page_weight,page_id, nav_page_url] #, page.path]
@@ -221,12 +222,12 @@ module Jekyll
                     page_key = ma[@page_key_index].to_s.gsub(/[^0-9a-z]/i, '')
                 end
 
-                # Check if it has a page assocated with it
+                # Check if it has a page associated with it
                 unless menu_hash[@menu_nav_pages].nil?
                   if menu_hash[@menu_nav_pages][ma[@page_key_index]].is_a?( Jekyll::Document)
                     curinfo = menu_hash[@menu_nav_pages][ma[@page_key_index]]
                     # check if current page
-                    if @currentpage.id == ma[@page_id_index]
+                    if @currentpage_id && @currentpage_id == ma[@page_id_index]
                       is_currentpage = true
                     end
                   end

@@ -1,5 +1,5 @@
 ---
-nav_title: Pruebas multivariante y A/B
+nav_title: Pruebas multivariantes y A/B
 article_title: Pruebas multivariante y A/B
 page_order: 2
 page_type: reference
@@ -51,19 +51,7 @@ Entre los escenarios específicos en los que las pruebas multivariantes y A/B pu
 
 ### Distribución de variantes
 
-La distribución entre variantes no siempre es uniforme. Así funciona la distribución de variantes
-
-Cada vez que se envía un mensaje en una campaña multivariante, el sistema selecciona de forma independiente una opción aleatoria en función de los porcentajes establecidos y asigna una variante en función del resultado. Es como lanzar una moneda al aire: las anomalías son posibles. Si alguna vez has tirado una moneda al aire 100 veces, sabrás que probablemente no siempre obtendrás un 50-50 exacto entre cara y cruz, aunque sólo tengas dos opciones. Podrías obtener 52 caras y 48 colas.
-
-Si tiene varias variantes que desea dividir por igual, también debe asegurarse de que el número de variantes es múltiplo de 100. De lo contrario, algunas variantes tendrán un mayor porcentaje de usuarios distribuidos a esa variante en comparación con otras. Por ejemplo, si su campaña tiene 7 variantes, no puede haber una distribución uniforme de variantes, ya que 7 no se divide igual por 100 como número entero. En este caso, tendrías 2 variantes del 15 % y 5 variantes del 14 %.
-
-#### Nota sobre los mensajes in-app
-
-Al ejecutar una prueba A/B en mensajes dentro de la aplicación, puede parecer que sus análisis muestran una distribución de variantes más alta entre una variante y otra, incluso si tienen una división porcentual equitativa. Por ejemplo, considere el siguiente gráfico de *Destinatarios Únicos* para la Variante A y la Variante C.
-
-![Gráfico de Receptores Únicos para dos variantes con una forma similar entre la Variante A y la Variante C, donde la Variante A tiene un mayor número de Receptores Únicos por día]({% image_buster /assets/img/variant_distribution_iam.png %})
-
-La variante A tiene un mayor número de *destinatarios únicos* que la variante C. Esto no se debe a la distribución de variantes, sino a cómo se calculan *los destinatarios únicos* para los mensajes dentro de la aplicación. Para los mensajes in-app, *los Destinatarios Únicos* son en realidad *Impresiones Únicas*, que es el número total de personas que recibieron y vieron el mensaje in-app. Esto significa que si un usuario no recibe el mensaje por cualquier motivo o decide no verlo, no se incluye en el recuento de *Destinatarios Únicos*, y la distribución de variantes puede aparecer sesgada.
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
 
 ## Consejos para pruebas multivariantes y A/B
 
@@ -99,16 +87,3 @@ Para obtener resultados precisos:
 Incluir un [grupo de control]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) le permite saber si sus mensajes tienen un mayor impacto en la conversión de los usuarios que no enviar ningún mensaje.
 
 
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[70]: #tips-different-channels
-[80]: #choosing-a-segment
-[160]: {% image_buster /assets/img/ab_create_1.png %}
-[170]: {% image_buster /assets/img/ab_create_2.png %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[180]: {% image_buster /assets/img/ab_create_4.png %}
-[210]: {% image_buster /assets/img/ab_create_8.png %}
-[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
-[272]: #intelligent-selection
-[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[intelselección]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

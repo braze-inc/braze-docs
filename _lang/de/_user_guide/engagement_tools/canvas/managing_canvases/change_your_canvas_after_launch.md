@@ -1,6 +1,6 @@
 ---
-nav_title: Bearbeiten von Leinwänden nach dem Start
-article_title: Bearbeiten von Leinwänden nach dem Start
+nav_title: Canvase nach dem Start bearbeiten
+article_title: Canvase nach dem Start bearbeiten
 page_order: 0
 description: "Dieser Referenzartikel befasst sich mit den verschiedenen Aspekten eines Canvas, die nach dem ersten Start geändert werden können."
 alias: "/post-launch_edits/"
@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Bearbeiten von Leinwänden nach dem Start
+# Canvase nach dem Start bearbeiten
 
 > In diesem Referenzartikel erfahren Sie, was in einem Canvas nach dem ersten Start geändert werden kann.
 
@@ -24,8 +24,6 @@ Sie können Ihre Canvase nach dem Start bearbeiten, indem Sie:
 {% alert note %}
 Die Verteilung der Kontrollvariante kann erst nach dem Start verringert werden.
 {% endalert %}
-
-Beachten Sie die folgenden zulässigen Bearbeitungen des Canvas nach dem Start, je nachdem, mit welchem Workflow Ihr Canvas erstellt wurde. Wenn Ihr Canvas den Original-Canvas-Workflow verwendet, müssen Sie zuerst zu Canvas Flow klonen, um nachträgliche Bearbeitungen vornehmen zu können.
 
 Sie können in Ihrer User Journey alle folgenden Einträge löschen:
 
@@ -45,29 +43,28 @@ Beachten Sie, dass Braze beim ersten Start eines Canvas die Benutzer in die Wart
 
 Siehe den Abschnitt [Bewährte Verfahren](#best-practices) für spezifische Anwendungsfälle bei der Bearbeitung. Generell ist es ratsam, die Bearbeitung von Live-Canvase zu vermeiden, da es zu unerwartetem Verhalten kommen kann.
 
-{% details Original-Canvas-Editor %}
+{% details Expand for original Canvas editor details %}
 
-{% alert important %}
-Seit dem 28\. Februar 2023 ist es nicht mehr möglich, Canvase in der klassischen Canvas-Umgebung zu erstellen oder zu duplizieren. Braze empfiehlt Kund:innen, die die ursprüngliche Canvas-Umgebung nutzen, den Wechsel zu Canvas Flow. Es handelt sich um eine verbesserte Bearbeitungsfunktion, mit der Sie Canvases besser erstellen und verwalten können. Erfahren Sie mehr über das [Klonen Ihrer Canvase in Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+Beachten Sie die folgenden zulässigen Bearbeitungen des Canvas nach dem Start, je nachdem, mit welchem Workflow Ihr Canvas erstellt wurde. Wenn Ihr Canvas den ursprünglichen Canvas-Workflow verwendet, müssen Sie ihn zunächst in Canvas Flow klonen, um nachträgliche Bearbeitungen vorzunehmen.
 
-Sie können bestehende Verbindungen weder bearbeiten noch löschen und auch keinen Schritt zwischen bestehenden verbundenen Schritten einfügen. Wenn Sie Ihre Canvas-Nutzer:innen bearbeiten oder weitere Schritte hinzufügen möchten, gelten die folgenden Angaben:
+Sie können bestehende Verbindungen weder bearbeiten noch löschen, und Sie können keinen Schritt zwischen bestehende verbundene Schritte einfügen. Wenn Sie Ihre Canvas-Nutzer:innen bearbeiten oder weitere Schritte hinzufügen möchten, gelten die folgenden Angaben:
 
 - Benutzer, die den Canvas noch nicht betreten haben, sind für alle neu erstellten Schritte berechtigt. 
 - Wenn Ihre Einstellungen für den Canvas-Eingang es Nutzern:innen erlauben, Schritte erneut zu betreten, sind Nutzer:innen, die bereits neu erstellte Schritte bestanden haben, zum erneuten Eintritt berechtigt.
 - Nutzer:innen, die sich derzeit in einem gestarteten Canvas befinden, aber noch nicht die neu hinzugefügten Schritte in der User Journey erreicht haben, sind berechtigt, diese neu hinzugefügten Schritte zu erhalten.
+- Wenn ein Verzögerungsschritt der letzte Schritt im Canvas ist, werden Benutzer, die diesen Schritt erreichen, automatisch aus dem Canvas befördert und erhalten keine neu erstellten Schritte mehr.
 
-Wenn Sie die Einstellungen für **Verzögerung** oder **Fenster** für einen Canvas-Schritt aktualisieren, erhalten nur neue Benutzer, die den Canvas betreten, und Benutzer, die noch nicht für diesen Schritt in die Warteschlange gestellt wurden, die Nachricht mit der aktualisierten Verzögerung. Wenn ein Verzögerungsschritt der letzte Schritt im Canvas ist, werden Benutzer, die diesen Schritt erreichen, automatisch aus dem Canvas befördert und erhalten keine neu erstellten Schritte mehr. 
-
-{% alert note %}
-Nutzer:innen, die auf den Empfang einer Nachricht warten, werden durch das Beenden eines Canvas nicht verlassen. Wenn Sie die Leinwand wieder aktivieren und die Benutzer immer noch auf die Nachricht warten, erhalten sie diese (es sei denn, der Zeitpunkt, zu dem sie die Nachricht hätten erhalten sollen, ist bereits verstrichen, dann erhalten sie sie nicht).
+{% alert important %}
+Wenn Sie die Einstellungen für **Verzögerung** oder **Fenster** für einen Canvas-Schritt aktualisieren, bleiben die Nutzer:innen, die sich zum Zeitpunkt der Aktualisierung in diesem Schritt befinden, bei der Verzögerungszeit, die ihnen beim ursprünglichen Eintritt in den Schritt zugewiesen wurde. Nur neue Nutzer:innen, die den Canvas betreten, und solche, die noch nicht in die Warteschlange für diesen Schritt aufgenommen wurden, erhalten die Nachricht zum aktualisierten Zeitpunkt.
 {% endalert %}
+
+Nutzer:innen, die auf den Empfang einer Nachricht warten, werden durch das Beenden eines Canvas nicht verlassen. Wenn Sie die Leinwand wieder aktivieren und die Benutzer immer noch auf die Nachricht warten, erhalten sie diese (es sei denn, der Zeitpunkt, zu dem sie die Nachricht hätten erhalten sollen, ist bereits verstrichen, dann erhalten sie sie nicht).
 
 {% enddetails %}
 
 ## Canvas-Details
 
-Sie können die folgenden Canvas-Einstellungen und Informationen bearbeiten, nachdem ein Canvas gestartet wurde:
+Sie können die folgenden Einstellungen und Details nach dem Start eines Canvas bearbeiten:
 
 * Name und Beschreibung der Leinwand
 * Teams und Tags
@@ -94,9 +91,9 @@ Für einzelne Canvas-Schritte können Sie nach dem Start die folgenden Details b
 * Trigger
 * Zielgruppe
 * Ausnahme-Events
-* Verspätungen
+* Verzögerungen (nur für Verzögerungsschritte)
 
-Der Zeitplantyp und die Kontrollprozentsätze des Schritts können jedoch nach dem Start nicht mehr bearbeitet werden. Bei den Schritten Aktionspfade und Publikumspfade sind die Ranglisten nach dem Start nicht mehr bearbeitbar.
+Der Zeitplantyp und die Kontrollprozentsätze des Schritts können jedoch nach dem Start nicht mehr bearbeitet werden. Bei Aktions-Pfaden und Zielgruppen-Pfaden sind die Ranglisten und Bewertungsfenster nach dem Start nicht mehr editierbar.
 
 ### Prozentuale Anteile der Leinwandvariante
 
@@ -118,6 +115,8 @@ Canvase, die für den Start zu einer Ortszeit geplant sind, können bis zu 24 St
 Wenn Sie größere Änderungen vornehmen wollen, die zu einer völlig neuen Canvas-Kopie führen, denken Sie daran, die Nutzer:innen auszuschließen, die das erste Canvas erhalten haben, und den Zeitplan für das Canvas neu anzupassen, um das Senden von Zeitzonen zu ermöglichen.
 {% endalert %}
 
+Wenn ein Zeitplan für den Eingang so eingestellt ist, dass Nutzer:innen sofort nach dem Start eingetragen werden, startet der Canvas zum nächstgelegenen Zeitpunkt in 5-Minuten-Schritten. Wenn Sie zum Beispiel ein Canvas aktualisieren, um Nutzer:innen sofort um 8:31 Uhr PST zu erfassen, wird die Startzeit auf 8:30 Uhr PST und in der Zeitzone des Unternehmens festgelegt.
+
 ### Löschen von Varianten
 
 Wenn Varianten aus einem Canvas gelöscht werden, geschieht Folgendes:
@@ -128,11 +127,15 @@ Wenn Varianten aus einem Canvas gelöscht werden, geschieht Folgendes:
 
 ### Eigenschaften der Leinwandeinträge
 
-Die Eigenschaften von Canvas-Einträgen werden beim Senden nicht in Steps eingebettet. Das bedeutet, wenn die Eigenschaften eines Canvas-Eintrags bearbeitet werden, nachdem ein Canvas gestartet wurde, gelten diese Änderungen nur für neue Benutzer, die das Canvas betreten. Wenn Ihr Canvas es zulässt, dass Benutzer den Canvas erneut betreten, werden alle Benutzer, die den Canvas erneut betreten, durch die aktualisierten Eigenschaften des Canvas-Eintrags bestimmt.
+Die Eigenschaften von Canvas-Einträgen werden beim Senden nicht in Steps eingebettet. Das bedeutet, dass bei der Bearbeitung der Eingangs-Eigenschaften eines Canvas nach dem Start des Canvas diese Änderungen nur für neue Nutzer:innen gelten, die das Canvas betreten. Wenn Ihr Canvas es zulässt, dass Benutzer den Canvas erneut betreten, werden alle Benutzer, die den Canvas erneut betreten, durch die aktualisierten Eigenschaften des Canvas-Eintrags bestimmt.
 
 ## Bewährte Praktiken
 
 Sehen Sie sich diese bewährten Verfahren an, die Sie beachten sollten, wenn Sie Ihr Canvas bearbeiten oder ergänzen, nachdem es gestartet wurde.
+
+{% alert important %}
+Vermeiden Sie es im Allgemeinen, Änderungen vorzunehmen, während der Canvas aktiv ist und Nutzer:innen in die Warteschlange aufgenommen werden.
+{% endalert %}
 
 ### Getrennte Schritte
 
@@ -140,17 +143,17 @@ Sie können Ihr Canvas mit getrennten Schritten starten und diese Canvases auch 
 
 Nehmen wir an, ein:e Nutzer:in befindet sich in einem nicht angeschlossenen Schritt Ihres Canvas-Workflows. Dieser Benutzer wird zum nächsten Schritt weitergehen, falls es einen gibt. Die Einstellungen des Schritts geben vor, wie der Benutzer vorgehen soll. 
 
-Indem Sie nicht verbundene Schritte erstellen oder bearbeiten, können Sie Änderungen an diesen unabhängigen Schritten vornehmen, ohne sie direkt mit dem Rest Ihres Canvas verbinden zu müssen. Auf diese Weise können Sie Ihre Schritte testen, bevor Sie Ihren Canvas erneut starten. 
+Indem Sie nicht verbundene Schritte erstellen oder bearbeiten, können Sie Änderungen an diesen unabhängigen Schritten vornehmen, ohne sie direkt mit dem Rest Ihres Canvas verbinden zu müssen. So können Sie Ihre Schritte testen, bevor Sie Ihren Canvas erneut starten. 
 
 ### Experiment Pfad Schritt
 
-Wenn Ihr Canvas über einen aktiven oder laufenden Experimentpfad-Schritt verfügt und Sie das aktive Canvas aktualisieren (auch wenn es sich nicht um den Experimentpfad-Schritt handelt), wird das laufende Experiment neu gestartet. Um zu vermeiden, dass Ihre Nutzer:innen den Experiment-Pfad erneut eingeben müssen, können Sie das Canvas duplizieren und ein neues erstellen, anstatt es zu aktualisieren.
+Wenn Ihr Canvas über ein aktives oder laufendes Experiment mit einem Gewinnerpfad oder einem personalisierten Pfad verfügt und Sie das aktive Canvas aktualisieren (unabhängig davon, ob Sie den Experiment-Pfad-Schritt selbst aktualisieren), wird das laufende Experiment beendet, und der Experiment-Pfad-Schritt ermittelt keinen Gewinnerpfad oder personalisierte Pfade. Um das Experiment neu zu starten, können Sie den bestehenden Experiment-Pfad trennen und einen neuen starten, oder Sie duplizieren das Canvas und starten ein neues Canvas. Andernfalls durchlaufen die Nutzer:innen den Experiment-Pfad, als ob keine Optimierungsmethode ausgewählt worden wäre.
 
 ### Zeitverzögerungen
 
 Die Bearbeitung von Leinwänden mit Zeitverzögerungen kann ein wenig knifflig sein! Beachten Sie also die folgenden Details, wenn Sie Ihre Canvases bearbeiten.
 
-Wenn Sie die Verzögerung in einem Verzögerungsschritt oder einem Bewertungsfenster im Schritt Aktionspfade aktualisieren, erhalten nur neue Benutzer, die den Canvas betreten, und Benutzer, die nicht für diesen Schritt in die Warteschlange gestellt wurden, die Nachricht mit der aktualisierten Verzögerung.
+Wenn Sie die Verzögerung in einem Verzögerungsschritt aktualisieren, erhalten nur neue Nutzer:innen, die den Canvas betreten, und Nutzer:innen, die nicht in die Warteschlange für diesen Schritt aufgenommen wurden, die Nachricht mit der aktualisierten Zeitverzögerung.
 
 Wenn Sie einen Schritt mit einer Zeitverzögerung (z. B. Verzögerung oder Aktionspfade) löschen und beschließen, diese Benutzer in einen anderen Canvas-Schritt umzuleiten, werden die Benutzer erst umgeleitet, wenn die Zeitverzögerung des Schritts abgelaufen ist. Nehmen wir an, Sie löschen einen Verzögerungsschritt mit einer eintägigen Verzögerung und leiten diese Nutzer:innen auf einen Schritt für Nachrichten um. In diesem Fall werden die Nutzer:innen erst dann weitergeleitet, wenn die eintägige Frist abgelaufen ist.
 
@@ -163,3 +166,19 @@ Das Beenden eines Canvas führt nicht dazu, dass Nutzer:innen, die in einem Schr
 Nehmen wir an, Sie haben ein Canvas, das mit dem Canvas-Flow-Workflow erstellt wurde und um 14 Uhr starten soll, mit einer Variante mit zwei Schritten: einem Verzögerungsschritt mit einer einstündigen Verzögerung, der in einen Nachrichten-Schritt übergeht. 
 
 Ein:e Nutzer:in öffnet dieses Canvas um 14:01 Uhr und öffnet gleichzeitig den Schritt „Delay“. Das bedeutet, dass der Nutzer:innen für den nächsten Schritt der User Journey (den Schritt Nachricht) um 15:01 Uhr eingeplant wird. Wenn Sie den Canvas um 14:30 Uhr anhalten und um 15:30 Uhr wieder aktivieren, wird der Nutzer:innen den Canvas verlassen, da es nach 15:01 Uhr ist. Wenn Sie jedoch das Canvas um 14:40 Uhr wieder aktivieren, wird der oder die Nutzer:in wie erwartet um 15:01 Uhr zum Schritt „Nachricht“ übergehen.
+
+## Was Sie wissen sollten
+
+Die folgenden häufigen Probleme können durch die Bearbeitung oder das Hinzufügen weiterer Komponenten zu einer anderen Komponente in einem Canvas nach dem Start ausgelöst werden. 
+
+{% alert important %}
+Die folgenden Probleme sind vermeidbar. Wenn Sie Änderungen an einem Canvas vornehmen müssen, nachdem dieser gestartet wurde, empfehlen wir Ihnen, sich zunächst zu vergewissern, dass alle Nutzer:innen, die den Canvas bereits betreten haben, ihre Nutzer:innenreise abgeschlossen haben. Wir empfehlen Ihnen außerdem, keine Schritte zu löschen, die bereits von mindestens einem Nutzer:innen bearbeitet wurden.
+{% endalert %}
+
+- Fehlende Daten für die Berichterstattung (wenn Varianten von Nachrichten gelöscht und wieder eingefügt werden)
+- Nutzer:innen folgen nicht dem erwarteten Pfad
+- Nachrichten werden zu unerwarteten Zeiten gesendet
+- Die Bearbeitungen überschreiben die Currents-Daten nicht, so dass Sie möglicherweise Diskrepanzen zwischen den Canvas-Schritten feststellen (z. B. `canvas_step_ids`, die aufgrund einer Löschung nicht im Canvas vorhanden sind).
+- Nutzer:innen können die gleiche Nachricht zweimal erhalten
+- Nutzer:innen erhalten aufgrund des bestehenden Rate-Limits keine Nachrichten
+  - Wenn Nutzer:innen in ein Canvas entsandt werden, wird das Rate-Limits, das für das Canvas gilt, wenn ein Nutzer:in entsandt wird, auf den Nutzer:innen angewendet. Nachdem das Canvas versendet wurde, kann das Rate-Limit für diesen Nutzer nicht mehr bearbeitet werden. Eine Erhöhung oder Verringerung des Rate-Limits nach dem Start hat also keine Auswirkungen auf Nutzer:innen, die bereits versendet wurden.

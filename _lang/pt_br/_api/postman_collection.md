@@ -1,5 +1,5 @@
 ---
-nav_title: Postman e Solicitações de Amostra
+nav_title: Postman e solicitações de amostra
 article_title: Postman e Solicitações de Amostra
 page_order: 3
 description: "Este artigo de referência fala sobre a coleção Postman, o que é, como configurar e usar a coleção, bem como como editar e enviar solicitações."
@@ -13,13 +13,13 @@ page_type: reference
 
 ## O que é o Postman?
 
-O Postman é uma ferramenta de edição visual gratuita para criar e testar solicitações de API. Ao contrário de outros métodos para interagir com APIs (por exemplo, usando cURL), o Postman permite que você edite facilmente as solicitações de API, visualize as informações do cabeçalho e muito mais. O Postman tem a capacidade de salvar Coleções ou bibliotecas de solicitações de API pré-fabricadas de amostra. Para facilitar que nossos clientes comecem a usar nossa API REST, criamos uma Coleção com exemplos prontos para todos os nossos endpoints de API.
+O Postman é uma ferramenta de edição visual gratuita para criar e testar solicitações de API. Em comparação com outros métodos (por exemplo, usando cURL), o Postman permite que você edite solicitações de API, visualize informações de cabeçalho e muito mais. Você pode salvar coleções (bibliotecas de exemplos de solicitações de API pré-fabricadas). Para acelerar a configuração com nossa API REST, fornecemos uma coleção com exemplos pré-fabricados para todos os pontos de extremidade.
 
 Visualize ou baixe nossa Coleção do Postman clicando em **Executar no Postman** em nossos [documentos do Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) para começar.
 
 ## Como usar a coleção Postman da Braze
 
-Se você tiver uma conta no Postman (você pode baixar as versões para MacOS, Windows e Linux do [site do Postman][1]), você pode abrir nossa documentação do Postman no seu próprio app do Postman clicando no botão laranja **Executar no Postman**. Você pode então [criar um ambiente](#setting-up-your-postman-environment), ou usar nosso ambiente de API REST Braze como um modelo, e editar as `POST` e `GET` solicitações disponíveis para atender às suas próprias necessidades.
+Se você tiver uma conta no Postman (você pode baixar as versões para MacOS, Windows e Linux do [site do Postman](https://www.getpostman.com)), você pode abrir nossa documentação do Postman no seu próprio app do Postman clicando no botão laranja **Executar no Postman**. Você pode então [criar um ambiente](#setting-up-your-postman-environment), ou usar nosso ambiente de API REST Braze como um modelo, e editar as `POST` e `GET` solicitações disponíveis para atender às suas próprias necessidades.
 
 ### Configurando seu ambiente Postman
 
@@ -31,14 +31,14 @@ Para configurar seu próprio ambiente, execute as seguintes etapas:
 
 1. Na guia **Workspaces**, selecione **Environments**.
 2. Clique no botão de **+** para criar um novo ambiente.
-3. Dê um nome a este ambiente (por exemplo, "Solicitações de API da Braze") e adicione chaves para `instance_url` e `api_key` com valores correspondentes à sua [instância da Braze][7] e [chave da API REST da Braze][8].
+3. Dê um nome a esse ambiente (por exemplo, "Braze API Requests") e adicione chaves para `instance_url` e `api_key` com valores correspondentes à sua [instância do Braze]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) e à [chave da API REST do Braze]({{site.baseurl}}/api/api_key/).
 4. Clique em **Salvar**.
 
 {% alert note %}
 Em `POST` corpos da solicitação, o `api_key` deve ser encapsulado em aspas: `"MY-API-KEY-EXAMPLE"`. Em `GET` URLs, não deveria ser. Já fornecemos esta formatação para você nos corpos da solicitação `POST` desta documentação, `GET` URLs e modelo de ambiente para `YOUR-API-KEY-HERE`.
 {% endalert %}
 
-![Como adicionar variáveis para chave de API e URL da instância ao ambiente da API REST da Braze no Postman.][3]
+![Como adicionar variáveis para chave de API e URL da instância ao ambiente da API REST da Braze no Postman.]({% image_buster /assets/img_archive/postman_variable.png %})
 
 ### Usando as solicitações pré-construídas da coleção
 
@@ -50,24 +50,17 @@ Em geral, existem dois tipos de solicitações que os endpoints da API da Braze 
 
 Ao editar uma `POST` solicitação, abra a solicitação e navegue até a seção **Corpo** no editor de solicitações. Para legibilidade, selecione o botão de rádio **raw** para formatar o corpo da solicitação `JSON`.
 
-![Guia "Corpo" ao editar uma solicitação POST Rastrear usuário no Postman][4]
+![Guia "Corpo" ao editar uma solicitação POST Rastrear usuário no Postman]({% image_buster /assets/img_archive/postman_post.png %})
 
 #### Editar uma solicitação GET
 
 Ao editar uma solicitação `GET`, edite os parâmetros passados no URL da solicitação. Para fazer isso, selecione a guia **Params** e edite os pares chave-valor nos campos que aparecem.
 
-![Guia de parâmetros ao editar uma consulta GET Lista de endereços de e-mail não inscritos no Postman.][5]
+![Guia de parâmetros ao editar uma consulta GET Lista de endereços de e-mail não inscritos no Postman.]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### Envie sua solicitação
 
 Depois que sua solicitação de API estiver pronta, clique em **Enviar**. A solicitação é enviada e os dados da resposta são preenchidos em uma seção abaixo do editor de solicitações. A partir daqui, você pode visualizar os dados brutos retornados da API da Braze, ver o código de resposta HTTP, ver quanto tempo a solicitação levou para processar e visualizar as informações do cabeçalho.
 
-![Exemplo de dados de resposta do corpo de uma solicitação POST com status de 201 Criado e tempo de resposta de 269 milissegundos.][6]
+![Exemplo de dados de resposta do corpo de uma solicitação POST com status de 201 Criado e tempo de resposta de 269 milissegundos.]({% image_buster /assets/img_archive/postman_response.png %})
 
-[1]: https://www.getpostman.com
-[3]: {% image_buster /assets/img_archive/postman_variable.png %}
-[4]: {% image_buster /assets/img_archive/postman_post.png %}
-[5]: {% image_buster /assets/img_archive/postman_get.png %}
-[6]: {% image_buster /assets/img_archive/postman_response.png %}
-[7]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-[8]: {{site.baseurl}}/api/api_key/

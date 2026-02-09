@@ -21,19 +21,59 @@ description: "Cet article présente en détail l’endpoint Braze Identifier les
 
 ## Fonctionnement
 
-L'appel à `/users/identify` combine un profil utilisateur identifié par un alias (profil alias seul), une adresse e-mail (profil e-mail seul) ou un numéro de téléphone (profil numéro de téléphone seul) avec un profil utilisateur possédant un `external_id` (profil identifié), puis supprime le profil alias seul. 
+L'appel à `/users/identify` combine un profil utilisateur identifié par un alias (profil alias seul), une adresse e-mail (profil e-mail seul) ou un numéro de téléphone (profil numéro de téléphone seul) avec un profil utilisateur possédant un `external_id` (profil identifié), puis supprime le profil alias seul.
 
-L'identification d'un utilisateur nécessite qu'un `external_id` soit inclus dans l'objet `aliases_to_identify` ou `emails_to_identify` ou `phone_numbers_to_identify`. S'il n'existe pas d'utilisateur possédant cette adresse `external_id`, l'adresse `external_id` sera ajoutée à l'enregistrement de l'utilisateur aliasé et l'utilisateur sera considéré comme identifié.
+L'identification d'un utilisateur nécessite qu'une adresse `external_id` soit incluse dans les objets suivants :
 
-Notez ce qui suit :
+- `aliases_to_identify`
+- `emails_to_identify`
+- `phone_numbers_to_identify`
 
-- Lorsque ces associations ultérieures sont effectuées avec le champ `merge_behavior` défini sur `none`, seuls les jetons de notification push et l’historique des messages associés à l’alias d’utilisateur sont conservés. Tous les attributs, événements ou achats deviendront « orphelins » et non disponibles pour l’utilisateur identifié. Une solution consiste à exporter les données de l'utilisateur aliasé avant l'identification à l'aide de l' [endpoint`/users/export/ids` ]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/), puis à réassocier les attributs, les événements et les achats à l'utilisateur identifié.
-- Lorsque des associations sont faites avec le champ `merge_behavior` défini sur `merge`, cet endpoint fusionnera les [champs spécifiques](#merge) trouvés sur l'utilisateur anonyme avec ceux de l'utilisateur identifié.
-- Les utilisateurs ne peuvent avoir qu'un seul alias pour un libellé donné. Si un utilisateur existe déjà sur le site `external_id` et qu'il dispose d'un alias existant avec le même libellé que le profil alias uniquement, les profils utilisateurs ne seront pas combinés.
+S'il n'existe pas d'utilisateur possédant ce `external_id`, le `external_id` est ajouté à l'enregistrement de l'utilisateur aliasé, et l'utilisateur est considéré comme identifié. Les utilisateurs ne peuvent avoir qu'un seul alias pour un libellé donné. Si un utilisateur existe déjà sur le site `external_id` et qu'il dispose d'un alias existant avec le même libellé que le profil alias uniquement, les profils utilisateurs ne sont pas combinés.
 
 {% alert tip %}
 Pour éviter toute perte inattendue de données lors de l'identification des utilisateurs, nous vous recommandons vivement de vous reporter d'abord aux [meilleures pratiques en]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) matière de [collecte de données]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/best_practices/#capturing-user-data-when-alias-only-user-info-is-already-present) pour savoir comment capturer les données des utilisateurs lorsque des informations sur les utilisateurs sous forme d'alias seulement sont déjà présentes.
 {% endalert %}
+
+### Comportement de fusion
+
+Par défaut, cet endpoint fusionne la liste suivante de champs trouvés **exclusivement** sur l'utilisateur anonyme vers l'utilisateur identifié.
+
+{% details List of fields that are merged %}
+- Prénom
+- Nom de famille
+- e-mail
+- Genre
+- Date de naissance
+- Numéro de téléphone
+- Fuseau horaire
+- Ville d'origine
+- Pays
+- Langue
+- Décompte des sessions (la somme des sessions des deux profils)
+- Date de la première session (Braze choisit la première des deux dates)
+- Date de la dernière session (Braze choisit la dernière des deux dates)
+- Attributs personnalisés
+- Données d'événements personnalisés et d'événements d'achat
+- Propriétés d'événement personnalisé et d'achat pour la segmentation "X fois dans Y jours" (où X<=50 et Y<=30)
+- Résumé des événements personnalisés pouvant être segmentés
+  - Nombre d’événements (la somme des deux profils)
+  - Date à laquelle l'événement s'est produit pour la première fois (Braze choisit la première des deux dates)
+  - Dernière date à laquelle l'événement s'est produit (Braze choisit la date la plus tardive des deux)
+- Total des achats intégrés à l’application en centimes (la somme des deux profils)
+- Nombre total d’achats (la somme des deux profils)
+- Date du premier achat (Braze choisit la première des deux dates)
+- Date du dernier achat (Braze choisit la date la plus tardive des deux dates)
+- Résumés des applications
+- Last_X_at champs (Braze met à jour les champs si les champs du profil orphelins sont plus récents)
+- Résumés de campagne (Braze sélectionne les champs de date les plus récents)
+- Résumés du flux de travail (Braze sélectionne les champs de date les plus récents)
+- Message et historique d’engagement du message
+- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates
+  - Ces champs fusionnés mettent à jour les filtres "pour X événements dans Y jours". Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
+- Données de session si l'application existe sur les deux profils utilisateurs.
+  - Par exemple, si notre utilisateur cible n'a pas de résumé d'application pour "ABCApp" mais que notre utilisateur d'origine en a un, l'utilisateur cible a le résumé d'application "ABCApp" sur son profil après la fusion.
+{% enddetails %}
 
 ## Conditions préalables
 
@@ -53,73 +93,37 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```json
 {
    "aliases_to_identify" : (required, array of alias to identify objects),
-   "emails_to_identify": (optional, array of string) User emails to identify,
-   "phone_numbers_to_identify": (optional, array of string) User phone numbers to identify,
-   "merge_behavior": (optional, string) one of 'none' or 'merge' is expected
-}
+   "emails_to_identify": (optional, array of alias to identify objects) User emails to identify,
+   "phone_numbers_to_identify": (optional, array of alias to identify objects) User phone numbers to identify,
+},
 ```
 
 ### Paramètres de demande
 
 Vous pouvez ajouter jusqu’à 50 alias utilisateur par demande. Vous pouvez associer plusieurs alias utilisateur supplémentaires à un seul `external_id`.
 
+{% alert important %}
+L'un des éléments suivants est requis : `aliases_to_identify`, `emails_to_identify`, ou `phone_numbers_to_identify` par demande. Par exemple, vous pouvez utiliser cet endpoint pour identifier les utilisateurs par e-mail en utilisant `emails_to_identify` dans votre requête.
+{% endalert %}
+
 | Paramètre                   | Requis | Type de données                           | Description                                                                                                                                                                 |
 |-----------------------------|----------|-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `aliases_to_identify`       | Requis | Tableau d’alias pour identifier l’objet | Voir [alias pour identifier l'objet]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) et [alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-| `emails_to_identify`        | Requis | Tableau d’alias pour identifier l’objet | Adresses e-mail pour identifier les utilisateurs. Voir [Identification des utilisateurs par e-mail](#identifying-users-by-email).                                                                                                              |
+| `emails_to_identify`        | Requis | Tableau d’alias pour identifier l’objet | Requis si `email` est spécifié comme identifiant. Adresses e-mail pour identifier les utilisateurs. Voir [Identification des utilisateurs par e-mail](#identifying-users-by-email).                                                                                                              |
 | `phone_numbers_to_identify` | Requis | Tableau d’alias pour identifier l’objet | Numéros de téléphone pour identifier les utilisateurs.                                                                                                                                            |
-| `merge_behavior`            | Facultatif | Chaîne de caractères                              | `none` ou `merge` est attendu.                                                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-#### Champ Merge_behavior {#merge}
+### Identification des utilisateurs par leurs adresses e-mail et leurs numéros de téléphone
 
-En attribuant la valeur `merge` au champ `merge_behavior`, l'endpoint fusionne avec l'utilisateur anonyme la liste suivante de champs trouvés **exclusivement** sur l'utilisateur identifié. Configurer le champ sur `none` ne fusionnera aucune donnée utilisateur avec le profil utilisateur identifié. Par défaut, ce champ est défini sur `merge`.
+Si une adresse e-mail ou un numéro de téléphone est spécifié comme identifiant, vous devez également inclure `prioritization` dans l'identifiant.
 
-{% details Liste des champs qui sont fusionnés %}
-- Prénom
-- Nom
-- E-mail
-- Genre
-- Date de naissance
-- Numéro de téléphone
-- Fuseau horaire
-- Ville d’origine
-- Pays
-- Langue
-- Décompte des sessions (la somme des sessions des deux profils)
-- Date de la première session (Braze choisira la date la plus ancienne parmi les deux)
-- Date de la dernière session (Braze choisira la date la plus récente parmi les deux)
-- Attributs personnalisés
-- Données d'événements personnalisés et d'événements d'achat
-- Propriétés de l’événement d’achat et personnalisées pour la segmentation « X fois en Y jours » (où X <= 50 et Y <= 30)
-- Résumé des événements personnalisés pouvant être segmentés
-  - Nombre d’événements (la somme des deux profils)
-  - Événement survenu pour la première fois (Braze choisira la date la plus ancienne parmi les deux)
-  - Événement survenu pour la dernière fois (Braze choisira la date la plus récente parmi les deux)
-- Total des achats intégrés à l’application en centimes (la somme des deux profils)
-- Nombre total d’achats (la somme des deux profils)
-- Date du premier achat (Braze choisira la date la plus ancienne parmi les deux)
-- Date du dernier achat (Braze choisira la date la plus récente parmi les deux)
-- Résumés des applications
-- Champs Last_X_at (Braze mettra à jour les champs si les champs du profil orphelins sont plus récents).
-- Résumés de campagne (Braze choisira les champs de date les plus récents)
-- Résumés du flux de travail (Braze choisira les champs de date les plus récents)
-- Message et historique d’engagement du message
-- Nombre d’événements d’achats et personnalisés, ainsi que les horodatages correspondant à la première et dernière dates 
-  - Ces champs fusionnés mettront à jour les filtres « pour X événements en Y jours ». Pour les événements d’achat, ces filtres incluent « nombre d’achats en Y jours » et « argent dépensé au cours des Y derniers jours ».
-- Données de session si l'application existe sur les deux profils utilisateurs.
-  - Par exemple, si votre utilisateur cible ne dispose pas d’un résumé d’application pour « ABCApp », mais que votre utilisateur d’origine l’a, l’utilisateur cible disposera du résumé d’application pour « ABCApp » sur son profil après la fusion.
-{% enddetails %}
-
-### Identifier les utilisateurs par e-mail
-
-Si un `email` est spécifié comme identifiant, vous devez également inclure `prioritization` dans l'identifiant. `prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'aura pas lieu.
+`prioritization` doit être un tableau spécifiant l'utilisateur à fusionner si plusieurs utilisateurs ont été trouvés. `prioritization` est un tableau ordonné, ce qui signifie que si plus d'un utilisateur correspond à un ordre de priorité, la fusion n'a pas lieu.
 
 Les valeurs autorisées pour le tableau sont les suivantes :
 
 - `identified`
 - `unidentified`
-- `most_recently_updated` (priorité à l'utilisateur le plus récemment mis à jour)
+- `most_recently_updated` (Priorité à l'utilisateur le plus récemment mis à jour)
 - `least_recently_updated` (Priorité à l'utilisateur le moins récemment mis à jour)
 
 Une seule des options suivantes peut exister à la fois dans le tableau de priorisation :
@@ -130,6 +134,7 @@ Une seule des options suivantes peut exister à la fois dans le tableau de prior
 Si vous indiquez `identified` dans le tableau, cela signifie que l'utilisateur **doit** avoir un `external_id` pour être inscrit dans le Canvas. Si vous souhaitez que les utilisateurs disposant d'une adresse e-mail entrent dans le message, qu'ils soient identifiés ou non, utilisez plutôt le paramètre `most_recently_updated` ou `least_recently_updated`.
 
 ## Exemple de demande
+
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \
@@ -151,7 +156,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
       "prioritization": ["unidentified", "most_recently_updated"]
     }
   ]
-  "merge_behavior": "merge"
 }'
 ```
 
@@ -162,8 +166,6 @@ Pour plus d'informations sur `alias_name` et `alias_label`, consultez notre docu
 ## Réponse
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
     "aliases_processed": 1,
     "message": "success"

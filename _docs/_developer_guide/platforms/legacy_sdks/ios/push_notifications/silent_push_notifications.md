@@ -1,5 +1,5 @@
 ---
-nav_title: Silent Push Notifications
+nav_title: Silent push notifications
 article_title: Silent Push Notifications for iOS
 platform: iOS
 page_order: 4

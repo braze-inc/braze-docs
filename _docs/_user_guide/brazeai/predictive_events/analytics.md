@@ -1,5 +1,5 @@
 ---
-nav_title: Event Analytics
+nav_title: Event analytics
 article_title: Predictive Event Analytics
 description: "This reference article covers the different components included in the Predictive Events Analytics page and how they can be used to make insightful driven decisions."
 page_order: 1.3
@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## About predictive event analytics
 
-As soon as the prediction is done training and this page is populated, you can start using [filters]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals.
+As soon as the prediction is done training and this page is populated, you can start using [filters]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals.
 
 These are the components that make up predictive event analytics:
 

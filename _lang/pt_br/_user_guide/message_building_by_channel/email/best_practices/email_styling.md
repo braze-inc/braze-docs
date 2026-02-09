@@ -1,6 +1,6 @@
 ---
 nav_title: Aplicação de estilo em e-mails
-article_title: Aplicação de estilo em e-mails
+article_title: Estilo de e-mail
 page_order: 2
 page_type: reference
 description: "Este artigo descreve as práticas recomendadas de estilo de e-mail que devem ser consultadas ao criar suas campanhas de e-mail."
@@ -28,9 +28,13 @@ Obter respostas fora do escritório pode, na verdade, fornecer informações val
 
 O texto do pré-cabeçalho em um e-mail comunica o ponto principal da mensagem de forma eficiente para atrair o interesse do leitor e incentivar a abertura. O texto do pré-cabeçalho também é frequentemente usado por profissionais de marketing de e-mail para fornecer informações adicionais sobre o conteúdo de um e-mail. Um pré-cabeçalho é o texto de prévia exibido imediatamente após o assunto de um e-mail. No exemplo a seguir, o pré-cabeçalho é `- Brand. New. Lounge Shorts`.
 
-![Texto de pré-cabeçalho em uma caixa de entrada do Gmail com o texto "Brand. Novo. Lounge Shorts".][61]
+![Texto de pré-cabeçalho em uma caixa de entrada do Gmail com o texto "Brand. Novo. Lounge Shorts".]({% image_buster /assets/img_archive/preheader_example.png %})
 
 A quantidade de texto visível do pré-cabeçalho depende do cliente de e-mail do usuário e do tamanho da linha de assunto do e-mail. Em geral, sugerimos que os pré-cabeçalhos de e-mail tenham entre 50 e 100 caracteres.
+
+{% alert note %}
+O pré-cabeçalho pode fazer referência ao Liquid no corpo do e-mail, e o corpo do e-mail pode fazer referência ao Liquid no pré-cabeçalho. Isso ocorre porque o texto do pré-cabeçalho faz parte do corpo do e-mail quando você envia mensagens para os destinatários.
+{% endalert %}
 
 Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrever seus pré-cabeçalhos:
 
@@ -45,7 +49,7 @@ Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrev
   - Fácil navegação
   - Texto grande
   - Espaço em branco generoso
-  - Corpo do texto curto e conciso
+  - Texto curto e conciso
   - Chamadas à ação claras
 
 ### Limites de caracteres do pré-cabeçalho
@@ -79,12 +83,16 @@ Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrev
 
 ## Tamanho do e-mail
 
-Certifique-se de limitar o tamanho de seu e-mail. Corpos de e-mail com mais de 102 KB não só são extremamente pesados para os servidores da Braze e do SendGrid, como também são cortados pelo Gmail e outros clientes de e-mail. Tente manter o tamanho de seu e-mail abaixo de 25 KB apenas para texto ou 60 KB com imagens. Recomendamos enfaticamente que você use nosso carregador de imagens para hospedar imagens e fazer referência a essas imagens pelo endereço `href`.
+Certifique-se de limitar o tamanho de seu e-mail. Os corpos de e-mail com mais de 102 KB não só são extremamente pesados para os servidores do Braze, como também são cortados pelo Gmail e outros clientes de e-mail. Tente manter o tamanho de seu e-mail abaixo de 25 KB apenas para texto ou 60 KB com imagens. Recomendamos enfaticamente que você use nosso carregador de imagens para hospedar imagens e fazer referência a essas imagens pelo endereço `href`.
 
 |   Apenas texto   | Texto com imagens |     Largura do e-mail    |
 |:-------------:|:----------------:|:------------------:|
 | Máximo de 25 KB |   Máximo de 60 KB   | Máximo de 600 pixels |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% alert note %}
+Para salvar sua campanha de e-mail ou modelo, certifique-se de que o corpo do e-mail não exceda 400 KB.
+{% endalert %}
 
 ## Comprimento do texto
 
@@ -112,4 +120,3 @@ Uma alta porcentagem de e-mails é lida em dispositivos móveis. O uso de [deep 
 
 No entanto, os e-mails não oferecem a clareza de saber se os destinatários têm o app instalado. Portanto, evitar o deep linking ajuda a evitar mensagens de erro para esses destinatários de e-mail que não têm o app.
 
-[61]: {% image_buster /assets/img_archive/preheader_example.png %}

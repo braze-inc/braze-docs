@@ -1,11 +1,11 @@
 ---
 nav_title: Abbrechen von Connected-Content
-article_title: Abbrechen von Connected-Content
+article_title: Connected-Content abbrechen
 page_order: 2
 description: "Dieser Referenzartikel behandelt einige Best Practices zum Abbrechen von Connected-Content."
 ---
 
-# Abbrechen von Connected-Content {#aborting-connected-content}
+# Connected-Content abbrechen {#aborting-connected-content}
 
 > Wenn Sie Liquid Templating verwenden, haben Sie die Möglichkeit, Nachrichten mit bedingter Logik abzubrechen. Auf dieser Seite erfahren Sie, wie Sie dabei am besten vorgehen.
 

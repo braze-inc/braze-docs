@@ -1,61 +1,69 @@
 ---
-nav_title: Mensagens no app
-article_title: Mensagens no app para o SDK do Braze
+nav_title: Mensagem no app
+article_title: Mensagens no aplicativo para o SDK Braze
 platform: 
   - Android
   - FireOS
   - Swift
 page_order: 2.2
-description: "Saiba mais sobre mensagens no app e como configurá-las para o Braze SDK."
+description: "Saiba mais sobre mensagens no aplicativo e como configurá-las para o SDK Braze."
 
 ---
 
 # Mensagem no app
 
-> Saiba mais sobre mensagens no app e como configurá-las para o Braze SDK.
+> Saiba mais sobre mensagens no aplicativo e como configurá-las para o SDK Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/in_app_messages.md developer_ %}
-{% endsdktab %}
-
-{% sdktab web %}
-guide/web/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/swift/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab android ott %}
-guide/android_ott/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/android_ott/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/cordova/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab flutter %}
-guide/flutter/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/flutter/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/react_native/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab roku %}
-guide/roku/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/roku/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab tvos %}
-guide/tvos/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/tvos/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab unity %}
-guide/unity/in_app_messages.md developer_ %}
+{% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
-guide/xamarin/in_app_messages.md developer_ %}
+{% sdktab .NET MAUI (Xamarin) %}
+{% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}
+
+## Próximos passos
+
+Pronto para se aprofundar? Confira estes tutoriais passo a passo:
+
+- Ajuste o tempo de entrega das mensagens [adiando e restaurando mensagens acionadas]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/deferring_triggered_messages).  
+- Refine o direcionamento das mensagens [definindo regras de exibição condicionais]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/conditionally_displaying_messages).  
+- Combine a aparência da sua marca [personalizando o estilo das mensagens com pares chave-valor]({{site.baseurl}}/developer_guide/in_app_messages/tutorials/customizing_message_styling).

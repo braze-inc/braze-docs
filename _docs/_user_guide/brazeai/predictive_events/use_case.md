@@ -1,5 +1,5 @@
 ---
-nav_title: Use Case
+nav_title: Use case
 article_title: Use Case Predict Subscription Upgrades
 description: "This example shows how a fictional brand uses Braze Predictive Events to define the outcomes that matter to their business—like upgrading to a pro membership—and build targeted strategies that improve results."
 page_type: tutorial
@@ -31,7 +31,7 @@ Jordan starts by defining the outcome that matters most for his upgrade strategy
 
 ## Step 2: Segment users based on upgrade probability
 
-After training is complete, Braze assigns an [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0–100) to each eligible user. Jordan uses this score to create actionable segments—one for high-intent users who may not need a discount, and another for users who likely won’t convert without support.
+After training is complete, Braze assigns an [Event Likelihood Score]({{site.baseurl}}/user_guide/brazeai/predictive_events/analytics/#purchase_score) (0-100) to each eligible user. Jordan uses this score to create actionable segments—one for high-intent users who may not need a discount, and another for users who likely won’t convert without support.
 
 1. Jordan navigates to Segments in Braze.
 2. He creates two [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) using the [Event Likelihood Score filter]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) and selects the prediction he created. The two segments are:

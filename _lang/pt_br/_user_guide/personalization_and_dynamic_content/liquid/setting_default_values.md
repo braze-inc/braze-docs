@@ -1,12 +1,12 @@
 ---
-nav_title: Definição de valores padrão
-article_title: Definição de valores padrão do Liquid
+nav_title: Definir valores padrão
+article_title: Definir valores Liquid padrão
 page_order: 5
 description: "Este artigo de referência cobre como definir valores de fallback padrão para qualquer atributo de personalização que você usa em suas mensagens."
 
 ---
 
-# Definição de valores padrão
+# Definir valores padrão
 
 {% raw %}
 
@@ -14,7 +14,7 @@ description: "Este artigo de referência cobre como definir valores de fallback 
 
 ## Como eles funcionam
 
-Os valores padrão podem ser adicionados especificando um [Liquid Filter][3] (use `|` para distinguir o filtro em linha, como mostrado) com o nome "default".
+Os valores padrão podem ser adicionados especificando um [Liquid Filter](http://docs.shopify.com/themes/liquid-documentation/filters) (use `|` para distinguir o filtro em linha, como mostrado) com o nome "default".
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

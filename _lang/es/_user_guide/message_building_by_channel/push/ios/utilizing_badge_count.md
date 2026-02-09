@@ -1,5 +1,5 @@
 ---
-nav_title: Utilización del recuento de insignias
+nav_title: Utilizar el recuento de insignias
 article_title: Utilización del recuento de insignias
 page_order: 8
 

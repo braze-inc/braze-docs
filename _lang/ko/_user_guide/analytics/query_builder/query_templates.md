@@ -1,7 +1,7 @@
 ---
 nav_title: 쿼리 템플릿
 article_title: 쿼리 빌더 템플릿
-page_order: 0
+page_order: 1
 page_type: reference
 toc_headers: h2
 description: "이 참조 문서에는 쿼리 빌더에서 Snowflake의 Braze 데이터를 사용하여 만들 수 있는 보고서 유형이 나와 있습니다."

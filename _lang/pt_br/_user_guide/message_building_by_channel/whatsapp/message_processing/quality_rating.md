@@ -1,5 +1,5 @@
 ---
-nav_title: Classificação de Qualidade e Limites de envio de mensagens
+nav_title: Classificação de qualidade e envio de mensagens limites
 article_title: Classificação de Qualidade e Limites de envio de mensagens 
 description: "Este artigo de referência cobre como o Meta influencia sua classificação de qualidade e os limites de envio de mensagens para o canal do WhatsApp."
 page_type: partner

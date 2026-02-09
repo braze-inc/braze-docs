@@ -7,4 +7,4 @@ description: "이 참고 문서에서는 SMS 및 WhatsApp 크레딧 사용량에
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}

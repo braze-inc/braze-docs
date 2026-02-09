@@ -16,15 +16,15 @@ guide_featured_list:
   - name: Créer un segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
     image: /assets/img/braze_icons/pie-chart-01.svg
-  - name: Gestion des segments
+  - name: Gérer les segments
     link: /docs/user_guide/engagement_tools/segments/managing_segments/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Filtres de segmentation
     link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
     image: /assets/img/braze_icons/flag-02.svg
-  - name: Entonnoirs de segments
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
-    image: /assets/img/braze_icons/users-right.svg
+  - name: Données du segment
+    link: /docs/viewing_and_understanding_segment_data/
+    image: /assets/img/braze_icons/pie-chart-01.svg
 
 guide_menu_title: "More articles"
 guide_menu_list:
@@ -91,5 +91,5 @@ Vous pouvez affiner vos segments en utilisant les [extensions de segments]({{sit
 - **Événements et interactions avec les messages :** Segmentez les utilisateurs selon qu'ils ont effectué un achat au cours des trente derniers jours et qu'ils ont également interagi avec un message in-app spécifique.
 - **Données de la requête :** 
   - **Requête Snowflake :** Segmentez les utilisateurs avec des données combinées provenant de Braze et de sources externes, telles qu'un CRM ou un entrepôt de données, en utilisant [SQL Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/) pour interroger Snowflake.
-  - **Synchronisation à partir de l'entrepôt de données :** Segmentez les utilisateurs dont les données sont directement synchronisées depuis votre entrepôt de données ou votre système de stockage de fichiers vers Braze en utilisant des [segments CDI.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)
+  - **Synchronisation à partir de l'entrepôt de données :** Segmentez les utilisateurs dont les données sont directement synchronisées depuis votre entrepôt de données ou votre système de stockage de fichiers vers Braze en utilisant les [extensions de segmentation CDI.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/)
 

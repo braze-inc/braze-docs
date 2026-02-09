@@ -11,11 +11,11 @@ hidden: true
 # Intégration de notifications Push
 {% multi_lang_include archive/windows_deprecation.md %}
 
-![Exemple de notification push pour Windows Universal.][10]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Exemple de notification push pour Windows Universal.]({% image_buster /assets/img_archive/windows_uni_push_sample.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Une notification push est une alerte hors application qui apparaît sur l’écran de l’utilisateur lorsqu’une mise à jour importante se produit. Les notifications push constituent un moyen précieux de fournir à vos utilisateurs un contenu urgent et pertinent, ou de les réengager dans votre application.
 
-Pour connaître d’autres bonnes pratiques, consultez notre [documentation][9].
+Consultez notre [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/) pour connaître les meilleures pratiques.
 
 ## Étape 1 : Configurer votre application pour les notifications push
 
@@ -25,10 +25,10 @@ Dans l'onglet **Application**, assurez-vous que `Toast Capable` est défini sur 
 
 ## Étape 2 : Configurer le tableau de bord de Braze
 
-1. [Trouvez votre SID et votre secret client][4]
-2. Dans la page **Paramètres** du tableau de bord de Braze, ajoutez le SID et le Secret client dans vos paramètres.<br>![][6]
+1. [Trouvez votre SID et votre secret client](http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx)
+2. Dans la page **Paramètres** du tableau de bord de Braze, ajoutez le SID et le Secret client dans vos paramètres.<br>![]({% image_buster /assets/img_archive/windows_sid.png %} "Windows SID dashboard")
 
-## Étape 3 : Mettre à jour pour l’enregistrement ouvert en arrière-plan
+## Étape 3 : Mettre à jour pour l’enregistrement ouvert en arrière-plan
 
 Dans votre méthode `OnLaunched` une fois que vous avez appelé `OpenSession` ajoutez l’extrait de code suivant.
 
@@ -66,15 +66,9 @@ Si vous spécifiez une chaîne de caractères de lancement supplémentaire dans 
 
 Spécifiez la chaîne de caractères à ajouter à la chaîne de caractères de lancement dans le champ « Additional Launch String Configuration (Configuration de la chaîne de caractères de lancement supplémentaire) » au sein des paramètres de notification push.
 
-![][15]
+![]({% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action")
 
 ### Partie 3 : Créer des liens profonds via l’API REST
 
-Braze permet également d'envoyer des liens profonds via l'API REST. Les [objets de notification push pour Windows Universal][13] acceptent un paramètre `extra_launch_string` facultatif.
+Braze permet également d’envoyer des liens profonds via l’API REST. Les [objets Windows Universal push]({{site.baseurl}}/api/objects_filters/) acceptent un paramètre facultatif `extra_launch_string`.
 
-[4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
-[6]: {% image_buster /assets/img_archive/windows_sid.png %} "Tableau de bord Windows SID"
-[9]: {{site.baseurl}}/user_guide/message_building_by_ (en anglais)channel/push/best_practices/
-[10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %}
-[13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
-[15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Action de clic sur les liens profonds"

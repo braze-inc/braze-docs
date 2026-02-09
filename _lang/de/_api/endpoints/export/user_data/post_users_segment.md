@@ -11,10 +11,10 @@ description: "Dieser Artikel enthält Einzelheiten zu den Nutzer:innen von Expor
 {% api %}
 # Nutzerprofile nach Segmenten exportieren
 {% apimethod post %}
-/users/export/segment
+/benutzer/export/segmente
 {% endapimethod %}
 
-> Verwenden Sie diesen Endpunkt, um alle Nutzer:innen eines Segments zu exportieren. 
+> Verwenden Sie diesen Endpunkt, um alle Nutzer:innen eines Segments zu exportieren.
 
 {% alert important %}
 Wenn Sie diesen Endpunkt verwenden, beachten Sie Folgendes:<br><br>1\. Das Feld `fields_to_export` in dieser API-Anfrage ist **erforderlich**.<br>2\. Die Felder für `custom_events`, `purchases`, `campaigns_received` und `canvases_received` enthalten nur Daten der letzten 90 Tage.
@@ -22,7 +22,11 @@ Wenn Sie diesen Endpunkt verwenden, beachten Sie Folgendes:<br><br>1\. Das Feld 
 
 Nutzerdaten werden als mehrere Dateien mit Nutzer:innen JSON-Objekten exportiert, die durch neue Zeilen getrennt sind (z.B. ein JSON-Objekt pro Zeile). Die Daten werden in eine automatisch generierte URL oder in ein S3-Bucket exportiert, wenn diese Integration bereits eingerichtet ist.
 
-Beachten Sie, dass ein Unternehmen zu einem bestimmten Zeitpunkt höchstens einen Export pro Segment über diesen Endpunkt durchführen kann. Warten Sie, bis Ihr Export abgeschlossen ist, bevor Sie es erneut versuchen. 
+{% alert important %}
+**Ausgabeformat exportieren**: Bei einem erfolgreichen Export erhalten Sie **immer** eine `.txt` Datei, die ein komprimiertes Archiv (ZIP- oder GZIP-Datei) enthält, unabhängig von der Menge der exportierten Nutzerdaten. Wenn der Export fehlschlägt, erhalten Sie stattdessen eine E-Mail-Benachrichtigung. Die Einrichtung von Zugangsdaten für Cloud-Speicher (S3, Azure oder Google Cloud Storage) minimiert das Risiko von Fehlern, da die Größe der Daten bei der Verwendung von Cloud-Speicher keine Rolle spielt.
+{% endalert %}
+
+Beachten Sie, dass ein Unternehmen zu einem bestimmten Zeitpunkt höchstens einen Export pro Segment über diesen Endpunkt durchführen kann. Warten Sie, bis Ihr Export abgeschlossen ist, bevor Sie es erneut versuchen.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
@@ -36,9 +40,9 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Auf Zugangsdaten basierende Antwortdetails
 
-Wenn Sie Ihre [S3-][1], [Azure-][2] oder [Google Cloud Storage-Zugangsdaten][3] zu Braze hinzugefügt haben, wird jede Datei in Ihrem Bucket als ZIP-Datei mit einem Schlüsselformat hochgeladen, das wie `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` aussieht. Wenn Sie Azure verwenden, vergewissern Sie sich, dass Sie auf der Übersichtsseite für Azure Partner in Braze das Kontrollkästchen **Dies zum Standardziel für den Datenexport machen** aktiviert haben. In der Regel erstellen wir 1 Datei pro 5.000 Nutzer:innen, um die Verarbeitung zu optimieren. Das Exportieren kleinerer Segmente innerhalb eines großen Workspace kann zu mehreren Dateien führen. Sie können dann die Dateien extrahieren und bei Bedarf alle `json` Dateien zu einer einzigen Datei zusammenfügen. Wenn Sie eine `output_format` von `gzip` angeben, lautet die Dateierweiterung `.gz` statt `.zip`.
+Wenn Sie Ihre [S3-][1], [Azure-][2] oder [Google Cloud Storage-Zugangsdaten][3] zu Braze hinzugefügt haben, wird jede Datei als ZIP-Datei mit einem Schlüsselformat, das wie `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip` aussieht, in Ihren Bucket hochgeladen. Wenn Sie Azure verwenden, vergewissern Sie sich, dass Sie auf der Übersichtsseite für Azure Partner in Braze das Kontrollkästchen **Dies zum Standardziel für den Datenexport machen** aktiviert haben. Im Allgemeinen erstellt Braze 1 Datei pro 5.000 Nutzer:innen, um die Verarbeitung zu optimieren. Das Exportieren kleinerer Segmente innerhalb eines großen Workspace kann zu mehreren Dateien führen. Sie können dann die Dateien extrahieren und bei Bedarf alle `json` Dateien zu einer einzigen Datei zusammenfügen. Wenn Sie eine `output_format` von `gzip` angeben, dann lautet die Dateierweiterung `.gz` statt `.zip`.
 
-{% details Aufschlüsselung des Exportpfads für ZIP %}
+{% details Export pathing breakdown for ZIP %}
 **ZIP-Format:**
 `bucket-name/segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`
 
@@ -58,13 +62,13 @@ Wenn Sie Ihre [S3-][1], [Azure-][2] oder [Google Cloud Storage-Zugangsdaten][3] 
 
 {% enddetails %}
 
-Wir empfehlen dringend, Ihre eigenen S3- oder Azure-Zugangsdaten einzurichten, wenn Sie diesen Endpunkt verwenden, um Ihre eigenen Bucket-Richtlinien für den Export durchzusetzen. Wenn Sie nicht über Ihre Zugangsdaten für den Cloud-Speicher verfügen, finden Sie in der Antwort auf die Anfrage die URL, unter der Sie eine ZIP-Datei mit allen Nutzer:innen herunterladen können. Die URL wird erst dann zu einem gültigen Standort, wenn der Export abgeschlossen ist. 
+Wir empfehlen dringend, Ihre eigenen S3- oder Azure-Zugangsdaten einzurichten, wenn Sie diesen Endpunkt verwenden, um Ihre eigenen Bucket-Richtlinien für den Export durchzusetzen. Wenn Sie nicht über Ihre Zugangsdaten für den Cloud-Speicher verfügen, finden Sie in der Antwort auf die Anfrage die URL, unter der Sie eine ZIP-Datei mit allen Nutzer:innen herunterladen können. Die URL wird erst dann zu einem gültigen Standort, wenn der Export abgeschlossen ist.
 
 Beachten Sie, dass die Menge der Daten, die Sie von diesem Endpunkt exportieren können, begrenzt ist, wenn Sie Ihre Zugangsdaten für den Cloud-Speicher nicht angeben. Je nach den Feldern, die Sie exportieren, und der Anzahl der Nutzer:innen kann die Dateiübertragung fehlschlagen, wenn sie zu groß ist. Am besten legen Sie fest, welche Felder Sie mit `fields_to_export` exportieren möchten und geben nur die Felder an, die Sie benötigen, um den Umfang der Übertragung gering zu halten. Wenn Sie bei der Generierung der Datei Fehler erhalten, sollten Sie Ihre Nutzer:innen auf der Grundlage einer zufälligen Bucket-Nummer in mehrere Segmente unterteilen (z.B. ein Segment erstellen, bei dem die zufällige Bucket-Nummer kleiner als 1.000 oder zwischen 1.000 und 2.000 ist).
 
-In beiden Szenarien können Sie optional eine `callback_endpoint` angeben, um benachrichtigt zu werden, wenn der Export fertig ist. Wenn Sie die Adresse `callback_endpoint` angeben, senden wir Ihnen eine Anfrage per Post an die angegebene Adresse, sobald der Download fertig ist. Der Text der Nachricht lautet "Erfolg":true. Wenn Sie keine S3-Anmeldedaten zu Braze hinzugefügt haben, enthält der Body des Posts zusätzlich das Attribut `url` mit der Download-URL als Wert.
+In beiden Szenarien können Sie optional eine `callback_endpoint` angeben, um benachrichtigt zu werden, wenn der Export fertig ist. Wenn die `callback_endpoint` angegeben ist, stellt Braze eine Anfrage an die angegebene Adresse, sobald der Download fertig ist. Der Text der Nachricht lautet "Erfolg":true. Wenn Sie keine S3-Anmeldedaten zu Braze hinzugefügt haben, enthält der Body des Posts zusätzlich das Attribut `url` mit der Download-URL als Wert.
 
-Größere Nutzer:innen haben längere Exportzeiten zur Folge. Eine App mit 20 Millionen Nutzer:innen könnte zum Beispiel eine Stunde oder länger dauern.
+Größere Nutzer:innen führen zu längeren Exportzeiten. Eine App mit 20 Millionen Nutzer:innen könnte zum Beispiel eine Stunde oder länger dauern.
 
 ## Anfragetext
 
@@ -131,10 +135,10 @@ Im Folgenden finden Sie eine Liste der gültigen `fields_to_export`. Die Verwend
 | Zu exportierendes Feld       | Datentyp       | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | --------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `apps`                | Array           | Apps, für die dieser Nutzer:innen Sitzungen angemeldet hat, einschließlich der Felder:<br><br>- `name`: Name der App<br>- `platform`: App-Plattform, wie iOS, Android oder Internet<br>- `version`: Versionsnummer oder Name der App <br>- `sessions`: Gesamtzahl der Sitzungen für diese App<br>- `first_used`: Datum der ersten Sitzung<br>- `last_used`: Datum der letzten Sitzung<br><br>Alle Felder sind Strings.                                                                                                                                                                                                                                                                                       |
-| `attributed_campaign` | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/attribution), falls eingerichtet. Bezeichner für eine bestimmte Kampagne.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `attributed_source`   | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/attribution), falls eingerichtet. Bezeichner für die Plattform, auf der die Anzeige geschaltet wurde.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `attributed_adgroup`  | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/attribution), falls eingerichtet. Bezeichner für eine optionale Untergruppierung unterhalb der Kampagne.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `attributed_ad`       | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/attribution), falls eingerichtet. Bezeichner für eine optionale Untergruppierung unterhalb von Kampagne und Anzeigengruppe.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `attributed_campaign` | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/), falls eingerichtet. Bezeichner für eine bestimmte Kampagne.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `attributed_source`   | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/), falls eingerichtet. Bezeichner für die Plattform, auf der die Anzeige geschaltet wurde.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `attributed_adgroup`  | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/), falls eingerichtet. Bezeichner für eine optionale Untergruppierung unterhalb der Kampagne.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| `attributed_ad`       | String          | Daten aus [Attribution Integrationen]({{site.baseurl}}/partners/message_orchestration/), falls eingerichtet. Bezeichner für eine optionale Untergruppierung unterhalb von Kampagne und Anzeigengruppe.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `push_subscribe`      | String          | Status des Push-Abos des Nutzers:in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `email_subscribe`     | String          | Status des E-Mail-Abos des Nutzers:in.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `braze_id`            | String          | Gerätespezifischer eindeutiger Bezeichner, der von Braze für diesen Nutzer:innen festgelegt wurde.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -164,31 +168,31 @@ Im Folgenden finden Sie eine Liste der gültigen `fields_to_export`. Die Verwend
 
 ## Wichtige Mahnungen
 
-- Die Felder für `custom_events`, `purchases`, `campaigns_received` und `canvases_received` enthalten nur die Daten der letzten 90 Tage.
-- Sowohl `custom_events` als auch `purchases` enthalten Felder für `first` und `count`. Beide Felder enthalten Informationen aus der gesamten Zeit und beschränken sich nicht nur auf Daten der letzten 90 Tage. Wenn zum Beispiel ein bestimmter Nutzer:innen das Ereignis vor 90 Tagen zum ersten Mal durchgeführt hat, wird dies im Feld `first` genau wiedergegeben, und das Feld `count` berücksichtigt auch Ereignisse, die vor den letzten 90 Tagen stattgefunden haben.
+- Die Felder für `custom_events`, `purchases`, `campaigns_received` und `canvases_received` enthalten nur Daten der letzten 90 Tage.
+- Sowohl `custom_events` als auch `purchases` enthalten Felder für `first` und `count`. Beide Felder enthalten Informationen aus der gesamten Zeit und sind nicht auf Daten der letzten 90 Tage beschränkt. Wenn ein bestimmter Nutzer:innen das Ereignis beispielsweise vor 90 Tagen zum ersten Mal durchgeführt hat, wird dies im Feld `first` genau widergespiegelt, und im Feld `count` werden auch Ereignisse berücksichtigt, die vor den letzten 90 Tagen stattgefunden haben.
 - Die Anzahl der gleichzeitigen Segmentexporte, die ein Unternehmen auf der Ebene des Endpunkts ausführen kann, ist auf 100 begrenzt. Versuche, die dieses Limit überschreiten, führen zu einem Fehler.
 - Der Versuch, ein Segment ein zweites Mal zu exportieren, während der erste Exportauftrag noch läuft, führt zu einem Fehler 429.
 
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
-    "object_prefix": (required, string) the filename prefix that will be used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
+    "object_prefix": (required, string) the filename prefix that is used for the JSON file produced by this export, for example, 'bb8e2a91-c4aa-478b-b3f2-a4ee91731ad1-1464728599',
     "url" : (optional, string) the URL where the segment export data can be downloaded if you do not have your own S3 credentials
 }
 ```
 
-Nachdem die URL zur Verfügung gestellt wurde, ist sie nur für einige Stunden gültig. Wir empfehlen Ihnen daher dringend, Ihre eigenen S3-Anmeldedaten zu Braze hinzuzufügen.
+Nachdem die URL zur Verfügung gestellt wurde, ist sie nur für ein paar Stunden gültig. Wir empfehlen Ihnen daher dringend, Ihre eigenen S3-Anmeldedaten zu Braze hinzuzufügen.
+
+Wenn Sie `object_prefix` in Ihrer API-Antwort sehen und keine URL zum Herunterladen der Daten, bedeutet dies, dass Sie bereits einen Amazon S3-Bucket für diesen Endpunkt eingerichtet haben. Alle Daten, die über diesen Endpunkt exportiert werden, gehen direkt in Ihr S3-Bucket.
 
 ## Beispiel für die Ausgabe der Nutzer:innen-Exportdatei
 
-Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt fehlt, wird angenommen, dass es null oder leer ist):
+Nutzer:in-Exportobjekt (Braze nimmt so wenig Daten wie möglich auf - wenn ein Feld im Objekt fehlt, sollte angenommen werden, dass es null oder leer ist):
 
 {% tabs %}
-{% tab Alle Felder %}
+{% tab All fields %}
 
 ```json
 {
@@ -276,7 +280,7 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
       {
         "name" : (string),
         "last_received" : (string) date,
-        "engaged" : 
+        "engaged" :
          {
            "opened_email" : (boolean),
            "opened_push" : (boolean),
@@ -330,7 +334,7 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
 ```
 
 {% endtab %}
-{% tab Beispielhafte Ausgabe %}
+{% tab Sample output %}
 
 ```json
 {
@@ -360,10 +364,10 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
     "attributed_source" : "braze_test_source_072219",
     "attributed_adgroup" : "braze_test_adgroup_072219",
     "attributed_ad" : "braze_test_ad_072219",
-    "push_subscribe" : "opted_in", 
+    "push_subscribe" : "opted_in",
     "push_opted_in_at": "2020-01-26T22:45:53.953Z",
     "email_subscribe" : "subscribed",
-    "custom_attributes": 
+    "custom_attributes":
     {
       "loyaltyId": "37c98b9d-9a7f-4b2f-a125-d873c5152856",
       "loyaltyPoints": "321",
@@ -423,12 +427,12 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
         "name": "Email Unsubscribe",
         "api_campaign_id": "d72fdc84-ddda-44f1-a0d5-0e79f47ef942",
         "last_received": "2022-06-02T03:07:38.105Z",
-        "engaged": 
+        "engaged":
         {
            "opened_email": true
         },
         "converted": true,
-        "multiple_converted": 
+        "multiple_converted":
         {
           "Primary Conversion Event - A": true
         },
@@ -458,7 +462,7 @@ Nutzer:in (wir nehmen so wenig Daten wie möglich auf - wenn ein Feld im Objekt 
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

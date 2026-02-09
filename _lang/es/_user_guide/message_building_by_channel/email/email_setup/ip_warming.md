@@ -20,9 +20,17 @@ El calentamiento de IP está diseñado para ayudarte a establecer una reputació
 
 Los ISP estrangulan el envío de correo electrónico cuando sospechan que se trata de spam para proteger a sus usuarios. Por ejemplo, si realiza un envío a 100.000 usuarios, el ISP podría entregar el correo electrónico sólo a 5.000 de esos usuarios durante la primera hora. A continuación, el ISP controla las medidas de interacción, como las tarifas abiertas, las tasas de clics, las cancelaciones de suscripción y los informes de correo no deseado. Así, si se produce un número significativo de informes de spam, podrían optar por relegar el resto de ese envío a la carpeta de spam en lugar de entregarlo en la bandeja de entrada del usuario. 
 
-Si el compromiso es moderado, pueden seguir estrangulando su correo electrónico para recopilar más datos de compromiso y determinar con mayor certeza si el correo es spam o no. Si el correo electrónico tiene unas métricas de interacción muy altas, pueden dejar de acelerar este correo electrónico por completo. Utilizan esos datos para crear una reputación de correo electrónico que, a la larga, determinará si sus mensajes se filtran automáticamente a spam o no.
+Si la interacción es moderada, pueden seguir estrangulando tu correo electrónico para recopilar más datos de interacción y determinar con mayor certeza si el correo es o no spam. Si el correo electrónico tiene unas métricas de interacción muy altas, pueden dejar de acelerar este correo electrónico por completo. Utilizan esos datos para crear una reputación de correo electrónico que, a la larga, determinará si sus mensajes se filtran automáticamente a spam o no.
 
 Si tu dominio o IP está bloqueado por un ISP, los registros de mensajes en el [Registro de Actividad de Mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) contendrán información sobre qué sitios web visitar para apelar a estos ISP y salir de esas listas.
+
+## Calentamiento de IP automatizado
+
+Puedes utilizar el calentamiento de IP automatizado para aumentar gradualmente tu volumen de envíos diarios, permitiendo que los proveedores de buzones de entrada aprendan y confíen en tus patrones de envío. Controla tu rastreador de calentamiento de IP seleccionando la baldosa **Calentamiento de IP Automatizado** en la sección **Continúa donde lo dejaste** del panel de tu casa. 
+
+Braze envía primero a tus suscriptores más comprometidos, lo que permite que el volumen diario crezca a un ritmo acorde con las mejores prácticas. Después, Braze hace un seguimiento de las señales de interacción y capacidad de entrega. Si se detecta algún problema, tu horario se ajusta automáticamente.
+
+![Seguimiento del calentamiento de IP con el volumen de envíos de la semana del 16 de enero.]({% image_buster /assets/img/automated_ip_warming_example.png %})
 
 ## Calendario de calentamiento de IP
 
@@ -51,7 +59,7 @@ Día | Nº de correos electrónicos a enviar
 
 Sugerimos calentar hasta tu envío máximo. Es decir, si normalmente envías 2 millones de correos electrónicos al día, pero tienes previsto enviar 7 millones durante un periodo estacional, ese "pico" de envíos es el que debes calentar.
 
-Una vez completado el calentamiento y alcanzado el volumen diario deseado, debes tratar de mantener ese volumen diariamente. Es de esperar cierta fluctuación, pero alcanzar el volumen deseado y luego hacer un envío masivo solo una vez a la semana puede afectar negativamente a tus métricas de entrega y a la reputación del remitente. 
+Una vez completado el calentamiento de IP y alcanzado el volumen diario deseado, debes tratar de mantener ese volumen diariamente. Es de esperar cierta fluctuación, pero alcanzar el volumen deseado y luego hacer un envío masivo sólo una vez a la semana, puede afectar negativamente a tus métricas de entrega y a la reputación del remitente. 
 
 {% alert important %}
 La mayoría de los ISP solo almacenan los datos de reputación durante 30 días. Si pasas un mes sin enviar ningún mensaje, tendrás que repetir el proceso de calentamiento de IP.
@@ -61,11 +69,11 @@ La mayoría de los ISP solo almacenan los datos de reputación durante 30 días.
 
 Nuestra función integrada de limitación de usuarios es una herramienta útil para ayudarle a calentar su dirección IP. Después de elegir los segmentos de mensajería deseados durante la creación de la campaña, en el paso [Usuarios objetivo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas), seleccione el menú desplegable **Opciones avanzadas** para limitar sus usuarios. A medida que tu programa de calentamiento continúe, puedes aumentar gradualmente este límite para incrementar el volumen de correos electrónicos que envías.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Segmentación de subdominios
 
-Muchos ISP y proveedores de acceso al correo electrónico ya no filtran únicamente por la reputación de la dirección IP. Estas tecnologías de filtrado ahora también tienen en cuenta la reputación basada en el dominio. Esto significa que los filtros examinarán todos los datos asociados al dominio del remitente y no sólo la dirección IP. Por esta razón, además de calentar la IP de su correo electrónico, también recomendamos tener dominios o subdominios separados para el correo de marketing, transaccional y corporativo. 
+Muchos ISP y proveedores de acceso al correo electrónico ya no filtran por reputación de la dirección IP. Estas tecnologías de filtrado ahora también tienen en cuenta la reputación basada en el dominio. Esto significa que los filtros examinarán todos los datos asociados al dominio del remitente y no sólo la dirección IP. Por esta razón, además de calentar la IP de su correo electrónico, también recomendamos tener dominios o subdominios separados para el correo de marketing, transaccional y corporativo. 
 
 {% alert important %}
 La segmentación por subdominios es especialmente importante para los remitentes de gran volumen. Estos remitentes deben trabajar con un representante de Braze al configurar su cuenta para confirmar que se adhieren a esta práctica.
@@ -75,7 +83,7 @@ Recomendamos segmentar sus dominios de modo que el correo corporativo se envíe 
 
 ## Buenas prácticas
 
-Todas las consecuencias de no calentar de IP pueden evitarse si sigues estas buenas prácticas de calentamiento de IP.
+Puedes evitar todas las consecuencias de no calentar de IP siguiendo estas buenas prácticas:
 
 ### Empezar con pequeños volúmenes de envío de correo electrónico
 
@@ -93,12 +101,12 @@ Consulte nuestro [calendario de calentamiento de IP](#ip-warming-schedules) para
 
 ### Limpie sus listas de correo electrónico
 
-Confirme que su lista de correo electrónico está limpia y no tiene correos electrónicos antiguos o no verificados. Lo ideal es que te asegures de que cumples tanto la [CASL- como la CAN-SPAM][40].
+Confirme que su lista de correo electrónico está limpia y no tiene correos electrónicos antiguos o no verificados. Lo ideal es que te asegures de que [cumples tanto la CASL como la CAN-SPAM]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/).
 
 ### Controla la reputación del remitente
 
 Cuando lleves a cabo el proceso de calentamiento de IP, asegúrate de vigilar cuidadosamente la reputación del remitente mientras realizas el proceso de calentamiento de IP. Es importante vigilar estas métricas específicas:
-- **Tasas de rebote:** Si alguna campaña rebota más de un 3-5%, debes evaluar la limpieza de tu lista siguiendo las directrices de nuestro artículo [Mantenla limpia: la importancia del saneamiento de las listas de correo electrónico][43]. Además, debería considerar la implementación de una [política de extinción][46] para dejar de enviar correos electrónicos a direcciones de correo electrónico no comprometidas o inactivas.
+- **Tasas de rebote:** Si alguna campaña rebota más de un 3-5%, deberías evaluar la limpieza de tu lista siguiendo las directrices de nuestro [Mantenla limpia: la importancia del saneamiento de las listas de correo electrónico](https://www.braze.com/blog/email-list-hygiene/). Además, deberías plantearte implantar una [política de suspensión]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) para dejar de enviar por correo electrónico a las direcciones de correo electrónico inactivas o no comprometidas.
 - **Informes de spam:** Si alguna campaña se considera spam en un porcentaje superior al 0,08%, debe reevaluar el contenido que envía, comprobar que está dirigido a un público interesado y asegurarse de que sus mensajes están redactados adecuadamente para despertar su interés.
 - **Tasas de apertura:** Las tasas de apertura son un indicador útil de la ubicación en la bandeja de entrada. Si sus tasas de apertura únicas superan el 25%, es probable que esté experimentando una alta colocación en la bandeja de entrada, lo que indica una reputación de remitente positiva.
 
@@ -110,9 +118,3 @@ Braze recomienda no utilizar [Intelligent Timing]({{site.baseurl}}/user_guide/br
 Es normal que se envíe correo a la carpeta de spam durante el calentamiento de IP porque su dominio e IP aún no han establecido una reputación positiva. Si el correo llega a la carpeta de spam, es posible que el administrador de correo tenga que añadir el dominio y la IP de envío Braze a la lista de permitidos de la empresa.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-[43]: https://www.braze.com/blog/email-list-hygiene/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

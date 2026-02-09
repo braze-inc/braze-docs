@@ -13,18 +13,12 @@ guide_featured_list:
   - name: 추적
     link: /docs/user_guide/analytics/tracking/
     image: /assets/img/braze_icons/line-chart-up-01.svg
-  - name: 데이터 변환
-    link: /docs/user_guide/data/data_transformation/
-    image: /assets/img/braze_icons/database-01.svg
   - name: 애널리틱스 대시보드
     link: /docs/user_guide/analytics/dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
   - name: 보고서
     link: /docs/user_guide/analytics/reporting/
     image: /assets/img/braze_icons/bar-chart-01.svg
-  - name: 카탈로그
-    link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
-    image: /assets/img/braze_icons/list.svg
   - name: 퀴리 빌더
     link: /docs/user_guide/analytics/query_builder/
     image: /assets/img/braze_icons/code-02.svg

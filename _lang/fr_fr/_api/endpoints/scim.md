@@ -17,7 +17,7 @@ guide_featured_list:
   - name: "POST : Créer un compte utilisateur de tableau de bord"
     link: /docs/post_create_user_account/
     image: /assets/img/braze_icons/plus-circle.svg
-  - name: "GET : Recherche d'un compte utilisateur de tableau de bord existant par ID de ressource"
+  - name: "GET : Recherche d'un compte utilisateur existant dans le tableau de bord par ID de ressource"
     link: /docs/get_see_user_account_information/
     image: /assets/img/braze_icons/eye.svg
   - name: "GET : Effectuer une recherche par e-mail d’un compte utilisateur de tableau de bord existant"

@@ -1,6 +1,6 @@
 ---
 nav_title: 이메일 목록 가져오기
-article_title: Braze로 이메일 목록 가져오기
+article_title: 이메일 목록을 Braze로 가져오기
 page_order: 4
 page_type: reference
 description: "이 참고 문서에서는 이메일 목록을 Braze로 가져오는 모범 사례를 다룹니다."
@@ -14,7 +14,7 @@ channel: email
 
 ## 가져오기 전 고려 사항
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### 이메일 목록 유효성 검사
 
@@ -22,11 +22,19 @@ channel: email
 
 이메일 목록 정리 서비스는 이메일 주소가 올바른 구문을 따르고 이메일 주소의 물리적 특성을 가지고 있는지 확인하고, 이메일 도메인을 확인하고, 이메일 서버에 연결하여 이메일 주소가 존재하는지 인증함으로써 이 작업을 대신 수행할 수 있습니다.
 
+### 이메일 주소가 이미 사용자와 연결되어 있는지 확인합니다.
+
+API 또는 SDK를 통해 사용자를 생성하기 전에 엔드포인트의 [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) 엔드포인트를 호출하고 사용자의 `email_address` 을 지정합니다. 사용자 프로필을 반환하면 해당 Braze 사용자는 이미 해당 이메일 주소와 연결되어 있는 것입니다.
+
+새 사용자를 만들 때는 고유한 이메일 주소를 찾고, 동일한 이메일 주소를 가진 사용자를 전달하거나 가져오지 않는 것이 좋습니다. 그렇지 않으면 메시지 전송, 타겟팅, 보고 및 기타 기능에 영향을 미치는 의도하지 않은 결과가 발생할 수 있습니다.
+
+예를 들어 프로필이 중복되어 있지만 특정 커스텀 속성이나 이벤트가 하나의 프로필에만 있다고 가정해 보겠습니다. 여러 기준이 있는 캠페인이나 캔버스를 트리거하려고 할 때, 사용자 프로필이 두 개이기 때문에 Braze에서 해당 사용자를 적격 사용자로 식별할 수 없습니다. 또는 두 명의 사용자가 공유하는 이메일 주소를 대상으로 하는 캠페인의 경우 **사용자 검색** 페이지에 두 사용자 프로필이 모두 캠페인을 수신한 것으로 표시됩니다.
+
 ### 참여도 높은 사용자 식별
 
 참여도가 가장 높은 사용자를 파악하려면 먼저 장기 휴면 사용자를 제거하세요. 6개월 이상 이메일에 참여하지 않은 사용자에게 이메일을 보내면 이메일 발송자 평판이 손상될 수 있으므로 이메일을 보내지 않는 것이 좋습니다. 이메일 목록을 가져올 때는 지난 6개월 이내에 회원님이 보낸 이메일을 열어본 사용자만 포함해야 합니다.
 
-장기적으로는 [일몰 정책][60]을 시행하는 것도 고려해야 합니다.
+In the long term, you should also consider implementing a [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### 금지 목록 피하기
 
@@ -36,4 +44,3 @@ channel: email
 
 이메일 목록이 준비되면 Braze REST API 또는 CSV 파일 등 여러 가지 방법으로 사용자를 Braze로 가져올 수 있습니다. Read more at our dedicated [User Import]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/) article.
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

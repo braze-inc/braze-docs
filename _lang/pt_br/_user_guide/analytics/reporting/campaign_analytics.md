@@ -1,5 +1,5 @@
 ---
-nav_title: Análises de dados da campanha
+nav_title: Análise de dados de campanha
 article_title: Análises de dados da campanha
 page_order: 4.5
 layout: dev_guide
@@ -28,7 +28,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/push/push_reporting/
     image: /assets/img/braze_icons/phone-01.svg
   - name: SMS
-    link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
+    link: /docs/sms_mms_rcs_reporting/
     image: /assets/img/braze_icons/phone-02.svg
   - name: Webhooks
     link: /docs/user_guide/message_building_by_channel/webhooks/reporting/

@@ -18,12 +18,12 @@ user_menu_list:
     image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
     bg_color: '#F8D3E8'
     link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-    description: Log into our platform.
+    description: Log into the platform.
   - name: Create a Canvas
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: Are you ready to start building a customer journey? We'll guide you through it.
+    description: This guide walks you through how to start building a customer journey.
 
 popular_topic_list:
   - name: User Import

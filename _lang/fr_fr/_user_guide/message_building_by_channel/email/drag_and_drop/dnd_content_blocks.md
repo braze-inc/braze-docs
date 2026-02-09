@@ -37,9 +37,9 @@ Pour ajouter un bloc de contenu dans l'éditeur, procédez comme suit :
 
 1. Allez à l'onglet **Rows** dans l'éditeur et sélectionnez **Content Blocks**. 
 2. Faites glisser et déposez votre bloc de contenu dans l'éditeur d'e-mail. 
-3. (Facultatif) Ajustez la largeur de votre bloc de contenu en sélectionnant le bouton dans le menu de navigation. La largeur par défaut est de 100 %. <br><br>![Une flèche double face avec une option permettant de modifier la largeur.][1]{: style="max-width:30%;" }<br><br>
+3. (Facultatif) Ajustez la largeur de votre bloc de contenu en sélectionnant le bouton dans le menu de navigation. La largeur par défaut est de 100 % si elle n'est pas spécifiée dans les paramètres de style globaux de votre e-mail ; dans le cas contraire, les paramètres globaux seront respectés. <br><br>![Une flèche double face avec une option permettant de modifier la largeur.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
-Après avoir ajouté le bloc de contenu à l'éditeur d'e-mails, vous pouvez y apporter des modifications qui n'affecteront pas le bloc de contenu original que vous avez créé dans **Modèles et médias.** En effet, les blocs de contenu ajoutés par glisser-déposer ne sont pas liés au bloc de contenu d'origine. Pour voir les modifications apportées au bloc de contenu original, faites-le glisser à nouveau dans l'éditeur d'e-mails. 
+Après avoir ajouté le bloc de contenu à l'éditeur d'e-mails, vous pouvez y apporter des modifications qui n'affecteront pas le bloc de contenu original que vous avez créé dans **Modèles et médias & **. En effet, les blocs de contenu ajoutés par glisser-déposer ne sont pas liés au bloc de contenu d'origine. Pour voir les modifications apportées au bloc de contenu original, faites-le glisser à nouveau dans l'éditeur d'e-mails. 
 
 Un désalignement dans l'éditeur de glisser-déposer peut se produire lorsque plusieurs blocs de contenu sont ajoutés à un seul bloc de ligne. Essayez d'utiliser des blocs de lignes séparés pour maintenir l'alignement de votre contenu au niveau de la ligne.
 
@@ -51,12 +51,12 @@ Pour ajouter un bloc de contenu en utilisant Liquid, procédez comme suit :
 2. Cliquez <i class="fas fa-plus"></i> **Personnalisation**.
 3. Localisez l'onglet **Ajouter une personnalisation** et sélectionnez **Blocs de contenu** dans le menu déroulant **Type de personnalisation**.
 4. Sélectionnez le nom de votre bloc de contenu dans le champ **Attribut**. Le champ d’extrait de code Liquid se remplira avec votre balise Liquid du bloc de contenu. 
-5. Copiez et collez l'extrait de code Liquid dans un bloc d'éditeur de texte. <br>![L'onglet Ajouter une personnalisation avec des options.][2]{: style="max-width:30%;"}
+5. Copiez et collez l'extrait de code Liquid dans un bloc d'éditeur de texte. <br>![L'onglet Ajouter une personnalisation avec des options.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
 Lorsque vous prévisualisez votre messagerie électronique, l'extrait Liquid s'affichera comme le bloc de contenu de l'éditeur par glisser-déposer. 
 
 {% alert important %}
-Lorsqu'un bloc de contenu est ajouté dans l'éditeur d'e-mails avec Liquid, ce bloc de contenu est lié au bloc de contenu original créé dans **Modèles et médias.** Ceci signifie que le bloc de contenu sera mis à jour pour afficher toutes les modifications effectuées sur le modèle de bloc de contenu d’origine.
+Lorsqu'un bloc de contenu est ajouté dans l'éditeur d'e-mails avec Liquid, ce bloc de contenu est lié au bloc de contenu original créé dans **Modèles et médias & **. Ceci signifie que le bloc de contenu sera mis à jour pour afficher toutes les modifications effectuées sur le modèle de bloc de contenu d’origine.
 {% endalert %}
 
 ## Mise à jour des blocs de contenu
@@ -65,5 +65,3 @@ Pour mettre à jour un bloc de contenu existant, vous pouvez soit modifier le bl
 
 Pour archiver un bloc de contenu, allez dans **Modèles** > **Blocs de contenu**, sélectionnez l'icône <i class="fas fa-ellipsis-vertical"></i> de l'ellipse verticale pour le bloc de contenu, et cliquez sur **Archiver**. Lorsque vous archivez un bloc de contenu, vos messages incluront toujours le contenu du bloc archivé. Cependant, les blocs de contenu archivés sont en lecture seule. Par conséquent, sortez le bloc de contenu des archives avant de le modifier. 
 
-[1]: {% image_buster /assets/img_archive/content_block_width.png %}
-[2]: {% image_buster /assets/img_archive/dnd_content_block_personalization.png %}

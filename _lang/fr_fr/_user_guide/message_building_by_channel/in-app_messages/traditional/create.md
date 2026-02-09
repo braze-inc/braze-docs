@@ -1,6 +1,6 @@
 ---
-nav_title: Création d’un message in-app
-article_title: Création d’un message in-app
+nav_title: Créer un message in-app
+article_title: Créer un message in-app
 page_order: 1
 description: "Cet article de référence explique comment créer un message in-app à l'aide de la plateforme Braze en utilisant des campagnes ou Canvas."
 channel:
@@ -8,18 +8,19 @@ channel:
 tool:
   - Campaigns
 search_rank: 4.8
+toc_headers: h2
 ---
 
-# Création d’un message in-app
+# Créer un message in-app
 
 > Vous pouvez créer un message in-app ou intégré au navigateur en utilisant la plateforme Braze par le biais de campagnes, de Canvas ou d’une campagne API. Nous vous recommandons vivement de planifier vos messages et de préparer tous les documents à l'avance à l'aide de notre [guide pratique de préparation des messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Étape 1 : Choisir où créer votre message {#create-new-campaign-in-app}
 
-Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 1. Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**.
 2. Sélectionnez **Message in-app.** Notez que les messages in-app ne sont pas disponibles dans les campagnes multicanaux.
@@ -57,18 +58,22 @@ Commencez par choisir les plateformes devant recevoir le message. Cette sélecti
 
 | Plateforme                        | Livraison des messages        |
 |---------------------------------|-------------------------|
-| Applications mobiles                     | SDK iOS et Android      |
+| Applications mobiles                     | iOS & SDK Android      |
 | Navigateurs Web                    | Web SDK                 |
-| Applications mobiles et navigateurs Web | SDK iOS, Android et Web |
+| Les deux applications mobiles & Navigateurs web | iOS, Android & Web SDKs |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Étape 3 : Spécifiez vos types de messages
 
 Une fois que vous avez sélectionné une plateforme d’envoi, parcourez les types de messages, les mises en page et autres options associées. Pour en savoir plus sur le comportement attendu et l'aspect de chacun de ces messages, consultez notre page [Détails créatifs]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/), ou cliquez sur les types de messages liés dans les tableaux suivants.
 
-Lorsque vous décidez quel type de message utiliser, vous devez réfléchir au degré d’intrusion que votre campagne de messages in-app doit avoir. Il s’agit d’évaluer la place que le message va occuper dans l’écran et l’interruption qu’il supposera pour l’expérience normale de votre client dans votre application ou votre site. Plus vous voulez fournir de contenu riche, plus votre message doit être intrusif.
+Lorsque vous décidez du type de message à utiliser, tenez compte de l'espace que votre message occupera et de l'effet perturbateur qu'il peut avoir sur l'expérience de l'utilisateur.
 
-![Graphique montrant une échelle du moins intrusif au plus intrusif, le moins intrusif étant avec le curseur, suivi de modal, le plein écran étant le plus intrusif]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+- Les messages **contextuels** sont les moins intrusifs, car ils apparaissent subtilement sans bloquer le contenu.
+- Les messages **modaux** se situent au milieu, suffisamment présents pour attirer l'attention sans envahir l'écran.
+- Les messages **en plein écran** sont ceux qui attirent le plus l'attention et qui conviennent le mieux aux annonces ou aux promotions importantes.
+
+Plus votre contenu est complexe, plus vous aurez besoin d'espace et plus votre message risque d'interrompre le flux de l'utilisateur.
 
 ### Types de messages
 
@@ -176,13 +181,13 @@ Si Braze détecte que vous n’avez pas de bouton de fermeture dans votre code, 
 
 L'onglet **Composer** vous permet de modifier tous les aspects du contenu et du comportement de votre message.
 
-![Un exemple de message in-app d'une marque pour accueillir les nouveaux clients et les inviter à configurer un profil utilisateur.][24]{: style="max-width:85%" }
+![Un exemple de message in-app d'une marque pour accueillir les nouveaux clients et les inviter à configurer un profil utilisateur.]({% image_buster /assets/img_archive/iam_compose.png %}){: style="max-width:85%" }
 
 Le contenu de l'onglet **Composer** varie en fonction des options de message que vous avez choisies à l'étape précédente, mais peut inclure l'une des options suivantes :
 
 ### Langue
 
-Sélectionnez **Ajouter des langues** et sélectionnez les langues souhaitées dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez notre [liste complète des langues disponibles][18].
+Sélectionnez **Ajouter des langues** et sélectionnez les langues souhaitées dans la liste proposée. Cela permettra d'insérer [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) dans votre message. Nous vous recommandons de sélectionner vos langues avant d’écrire votre contenu afin que vous puissiez remplir votre texte dans Liquid. Consultez la [liste complète des langues disponibles]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 ### Image
 
@@ -198,9 +203,9 @@ Certains types de messages ne requièrent pas et ne demandent donc pas d’en-t�
 
 ##### Générer une copie d'intelligence artificielle
 
-Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
+Besoin d’aide pour créer un texte d’exception ? Essayez d'utiliser l'[assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Saisissez un nom ou une description du produit et l’IA générera un texte marketing semblant d’origine humaine pour une utilisation dans votre envoi de messages.
 
-![Bouton Lancer le rédacteur IA situé dans le champ Message du composeur de messages in-app.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+![Lancez le bouton Copywriter de l'intelligence artificielle, situé dans le champ Message du compositeur de messages in-app.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### Création d'envois de messages de droite à gauche
 
@@ -210,13 +215,15 @@ Vous avez besoin d'aide pour rédiger des messages de droite à gauche dans des 
 
 Lorsque le type de message est disponible, jusqu’à deux boutons peuvent apparaître sous le corps du texte. Vous pouvez créer et modifier le texte et la couleur du bouton personnalisé. Vous pouvez également ajouter un lien aux conditions de service dans les formulaires de capture d’e-mail.
 
-![Boutons primaires et secondaires dans un message in-app]({% image_buster /assets/img/primary-secondary-buttons.png %}){: style="float:right;margin-left:15px;height:30%;width:30%"}
-
 Si vous choisissez d’utiliser un seul bouton, il s’ajuste automatiquement pour occuper l’espace disponible au bas de votre message au lieu de laisser de la place pour un autre bouton.
 
 #### Choisir un bouton principal
 
-Si vous décidez d’appliquer vos couleurs à ces boutons, nous vous recommandons d’utiliser le bouton 2 pour votre résultat préféré. En d’autres termes, si vous souhaitez que votre utilisateur clique sur un bouton plus que l’autre, assurez-vous qu’il se trouve sur la droite. Les clics s’avèrent plus fréquents sur le bouton de droite, notamment s’il a une couleur légèrement contrastée ou tranchante par rapport au reste du message. Ce cas ne se vérifie que si le bouton sur la gauche se fond davantage dans le message.
+Si vous décidez d’appliquer vos couleurs à ces boutons, nous vous recommandons d’utiliser le bouton 2 pour votre résultat préféré.
+
+En d’autres termes, si vous souhaitez que votre utilisateur clique sur un bouton plus que l’autre, assurez-vous qu’il se trouve sur la droite. Les clics s’avèrent plus fréquents sur le bouton de droite, notamment s’il a une couleur légèrement contrastée ou tranchante par rapport au reste du message. Ce cas ne se vérifie que si le bouton sur la gauche se fond davantage dans le message.
+
+![Boutons principaux et secondaires dans un message in-app]({% image_buster /assets/img/primary-secondary-buttons.png %})
 
 ### Comportement lors du clic {#button-actions}
 
@@ -278,7 +285,7 @@ Le contenu de l'onglet **Style** varie en fonction des options de message que vo
 |Chevron ou autre option de fermeture du message | Code de couleur HEX. | La couleur HEX souhaitée s’affiche. Vous pouvez également choisir l’opacité de la couleur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[Prévisualisez et testez]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) toujours votre message avant de l'envoyer.
+[Prévisualisez et testez]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) toujours votre message avant de l'envoyer.
 
 {% alert important %}
 Certains types de messages in-app n'ont pas d'option de style personnalisé autre que le téléchargement de HTML (ou CSS ou JavaScript) et de ressources à l'aide d'un fichier ZIP. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) vous permet de télécharger ou d'écrire des feuilles de style personnalisé (CSS) pour créer de magnifiques envois de messages personnalisés.
@@ -288,12 +295,12 @@ Certains types de messages in-app n'ont pas d'option de style personnalisé autr
 
 ### Paires clé-valeur
 
-Vous pouvez ajouter [des paires clé-valeur][19] pour envoyer des champs personnalisés supplémentaires aux appareils des utilisateurs.
+Vous pouvez ajouter des [paires clé-valeur]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) pour envoyer des champs personnalisés supplémentaires aux appareils des utilisateurs.
 
 ## Étape 7 : Créer le reste de votre campagne ou de votre Canvas
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 Élaborez le reste de votre campagne ; consultez les sections suivantes pour obtenir des conseils supplémentaires sur le meilleur usage de nos outils afin de créer des messages in-app.
 
@@ -305,7 +312,7 @@ Sélectionnez l’action à partir de laquelle votre message doit être déclenc
 Notez que si vous avez l'intention de déclencher votre message in-app sur la base d'un événement personnalisé, cet événement personnalisé doit être envoyé à l'aide du SDK.
 {% endalert %}
 
-![Campagne basée sur l'action avec l'action de déclenchement réglée sur "Démarrer la session".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
+![Campagne basée sur l'action avec l'action de déclenchement définie sur "Démarrer la session".]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 La livraison des messages in-app est entièrement basée sur les déclencheurs d’action suivants :
 
@@ -340,11 +347,11 @@ Vous pouvez choisir entre les priorités de message suivantes :
 
 Les options de priorité faible, moyenne et élevée pour les messages déclenchés sont des compartiments, et des messages multiples peuvent avoir la même priorité sélectionnée. Pour définir des priorités au sein de ces compartiments, cliquez sur **Définir une priorité exacte**. Vous pourrez alors glisser-déposer des campagnes pour les ordonner avec la priorité correcte.
 
-![Exemple de définition des priorités pour une campagne de messages in-app et Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
+![Un exemple de définition de la priorité pour une campagne de messages in-app et Canvas.]({% image_buster /assets/img_archive/bucket_prioritization.png %}){: style="max-width:70%"}
 
 #### Choisir les utilisateurs à cibler
 
-Ensuite, vous devez [cibler les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) en choisissant des segments ou des filtres pour réduire votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population approximative du segment à ce moment-là. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
+Ensuite, vous devez [cibler les utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) en choisissant des segments ou des filtres pour restreindre votre audience. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif. N'oubliez pas que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
 
 {% alert note %}
 En cas de retard à l’étape de message in-app, l’appartenance à un segment est évaluée après le délai. Si l’utilisateur est éligible, le message in-app se synchronise lors de la prochaine session disponible.
@@ -354,14 +361,14 @@ En cas de retard à l’étape de message in-app, l’appartenance à un segment
 
 Dans certains scénarios, vous voulez éventuellement réévaluer l’éligibilité d’un utilisateur lorsqu’il déclenche un message in-app à afficher. Les exemples incluent des campagnes qui ciblent un attribut personnalisé amené à changer fréquemment, ou des messages devant refléter les changements de profil de dernière minute.
 
-![Section Résumé de l’audience de l’étape Utilisateurs cibles avec l’option « Réévaluer l’éligibilité à la campagne avant d’afficher » sélectionnée.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %})
+![Case à cocher pour "Réévaluer l'éligibilité de la campagne avant de l'afficher" sélectionnée.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 Lorsque vous sélectionnez **Réévaluer l'éligibilité de la campagne avant l'affichage**, une demande supplémentaire sera adressée à Braze pour confirmer que l'utilisateur est toujours éligible pour ce message avant l'envoi. En outre, toute variable [liquide]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) ou [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) sera mis en forme à ce moment-là, avant l'affichage du message.
 
 Cela permet d'éviter que des messages in-app soient envoyés à des utilisateurs dans le cadre de campagnes expirées ou archivées. Si vous ne réévaluez pas l'éligibilité d'un utilisateur, celui-ci recevra le message in-app même après l'expiration ou l'archivage de la campagne, car le message se trouve dans votre SDK et attend que les utilisateurs le déclenchent.
 
 {% alert note %}
-L’activation de cette option entraîne un léger retard (< 100 ms) entre le déclenchement d’un message in-app et son affichage en raison de la demande ajoutée d’éligibilité et de mise en place.
+L'activation de cette option entraînera un léger retard (< 100ms) entre le moment où un utilisateur déclenche un message in-app et le moment où le message est affiché en raison de l'éligibilité supplémentaire et de la demande de templating.
 <br><br>
 N’utilisez pas cette option pour les messages qui peuvent être déclenchés lorsqu’un utilisateur est hors ligne ou lorsque l’éligibilité et la réévaluation de Liquid ne sont pas requises.
 {% endalert %}
@@ -382,7 +389,7 @@ Pour plus d'informations sur les options d'envoi de messages in-app spécifiques
 
 ## Étape 8 : Revue et déploiement
 
-Une fois que vous avez fini de créer la dernière partie de votre campagne ou de votre canvas, passez en revue ses détails, [testez-le]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/), puis envoyez-le !
+Une fois que vous avez fini de créer la dernière partie de votre campagne ou de votre canvas, passez en revue ses détails, [testez-le]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), puis envoyez-le !
 
 Ensuite, consultez le [rapport sur les messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) pour savoir comment accéder aux résultats de vos campagnes de communication.
 
@@ -390,7 +397,7 @@ Ensuite, consultez le [rapport sur les messages in-app]({{site.baseurl}}/user_gu
 
 ### Limites de campagnes actives de messages in-app
 
-Braze accorde de l’importance à la fiabilité et à la vitesse. Tout comme nous vous suggérons d’envoyer uniquement les données dont vous avez besoin à Braze, nous vous recommandons de désactiver les campagnes qui n’ajoutent plus de valeur à votre marque.
+Braze accorde de l’importance à la fiabilité et à la vitesse. Nous vous suggérons de n'envoyer à Braze que les données dont vous avez besoin et de désactiver les campagnes qui n'apportent plus de valeur ajoutée à votre marque.
 
 Le traitement des campagnes de messages in-app par événement, qui sont toujours actives mais n’envoient plus de messages ou qui sont devenues inutiles, ralentit la performance globale des services de Braze pour vous et d’autres clients. Ce temps supplémentaire nécessaire pour traiter ces nombreuses campagnes inactives ralentit l’affichage de tous les messages in-app sur les appareils de l’utilisateur final, ce qui affecte l’expérience de ce dernier.
 
@@ -400,12 +407,17 @@ Vous pouvez avoir jusqu'à 200 campagnes de messages in-app actives, basées sur
 
 Cette limite de 200 inclut des campagnes de communication in-app actives qui n’ont pas encore atteint l’heure de fin et celles qui n’en possèdent pas. Les campagnes de communication in-app actives qui ont dépassé leur heure de fin ne sont pas comptabilisées. Le client Braze standard possédant un total de 26 campagnes actives simultanées, vous ne risquez pas d’être affecté par cette limitation.
 
+### Évaluation de la réception/distribution locale
 
-[2]: {% image_buster /assets/img/iam-generations.gif %}
-[16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img_archive/iam_compose.png %}
-[25]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
-[26]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/
-[27]: {% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}
+Lorsqu'une campagne de messages in-app est planifiée en utilisant le fuseau horaire local de l'utilisateur, l'évaluation de l'heure de début et de fin de la campagne est gérée sur l'appareil lui-même.
+
+Les campagnes de messages in-app sont généralement envoyées à l'appareil de l'utilisateur lorsque la session de l'application démarre ou est actualisée. A ce moment-là :
+
+1. Le SDK évalue si l'utilisateur remplit les conditions requises pour recevoir des messages in-app basés sur des déclencheurs.
+2. L'appareil vérifie si l'événement déclencheur de l'utilisateur s'est produit pendant l'heure de début et de fin de la campagne (telle que définie par le fuseau horaire local de l'utilisateur).
+3. Si les deux conditions sont remplies, le message in-app peut être affiché.
+
+#### Considérations
+
+- Si un utilisateur déclenche un événement (tel qu'un appui sur un bouton) peu après l'envoi du message in-app, il se peut que le message n'apparaisse pas avant l'actualisation suivante de la session, à condition que tous les critères d'éligibilité soient toujours remplis.
+- Comme pour les autres types de canaux, les campagnes de messages in-app doivent idéalement être lancées 24 à 48 heures à l'avance. Ce tampon donne aux utilisateurs suffisamment de temps pour remplir les conditions d'admissibilité et lancer une session pour que le message soit évalué et affiché.

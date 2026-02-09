@@ -22,7 +22,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='events' %}
+{% multi_lang_include rate_limits.md endpoint='events' %}
 
 ## Abfrageparameter
 
@@ -54,8 +54,6 @@ curl --location --request GET 'https://rest.iad-03.braze.com/events?cursor=c2tpc
 ## Antwort
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [

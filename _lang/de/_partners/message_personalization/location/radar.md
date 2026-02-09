@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) ist die führende Plattform für Geoofencing und Standort-Tracking. Die Radar-Plattform besteht aus drei Kernprodukten: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking) und [Geo APIs](https://radar.io/product/api). Die Kombination der branchenführenden Engagement-Plattform von Braze mit den branchenführenden Geofencing-Funktionen von Radar erlaubt es Ihnen, durch eine breite Palette von standortbasierten Produkten und Diensten Ihren Umsatz zu steigern und Ihre Kunden zu binden. Dazu gehören das Tracking von Abholungen und Zustellungen, durch den Standort getriggerte Benachrichtigungen, kontextuelle Personalisierung, Standortüberprüfung, Shop-Locators, automatische Adressvervollständigung und mehr.
+> [Radar](https://www.radar.com/) ist die führende Plattform für Geoofencing und Standort-Tracking. Die Radar-Plattform besteht aus drei Kernprodukten: [Geofences](https://radar.com/product/geofencing), [Trip Tracking](https://radar.com/product/trip-tracking) und [Geo APIs](https://radar.com/product/api). Die Kombination der branchenführenden Engagement-Plattform von Braze mit den branchenführenden Geofencing-Funktionen von Radar erlaubt es Ihnen, durch eine breite Palette von standortbasierten Produkten und Diensten Ihren Umsatz zu steigern und Ihre Kunden zu binden. Dazu gehören das Tracking von Abholungen und Zustellungen, durch den Standort getriggerte Benachrichtigungen, kontextuelle Personalisierung, Standortüberprüfung, Shop-Locators, automatische Adressvervollständigung und mehr.
 
 _Diese Integration wird von Radar gepflegt._
 
@@ -18,7 +18,7 @@ _Diese Integration wird von Radar gepflegt._
 
 Die Integration von Braze und Radar erlaubt Ihnen den Zugriff auf ausgefeilte standortbasierte Kampagnen-Trigger und die Anreicherung von Nutzerprofilen mit umfangreichen First-Party-Standortdaten. Wenn Radar Geofence- oder Trip Tracking-Ereignisse generiert werden, werden angepasste Events und Attribute der Nutzer:innen in Echtzeit an Braze gesendet. Diese Ereignisse und Attribute können dann verwendet werden, um standortbezogene Kampagnen zu triggern, Abhol- und Zustellvorgänge auf der letzten Meile zu unterstützen, die Flotten- und Versandlogistik zu überwachen oder Nutzer:innen auf der Grundlage von Standortmustern zu segmentieren. 
 
-Darüber hinaus können Sie die Radar Geo APIs nutzen, um Ihre Kampagnen durch [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) zu bereichern oder zu personalisieren. 
+Darüber hinaus können die Radar Geo APIs verwendet werden, um Ihre Kampagnen durch [Connected-Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) anzureichern oder zu personalisieren. 
 
 ## Voraussetzungen
 
@@ -60,23 +60,23 @@ Sie können angepasste Events und Nutzer-Attribute verwenden, um standortbezogen
 
 Senden Sie eine Push-Benachrichtigung an die Nutzer:innen, wenn sie in Ihrem Shop eintreffen, um eine Abholung am Straßenrand vorzunehmen.
 
-![Eine aktionsbasierte Zustellung der Kampagne, die zeigt, dass die Kampagne zugestellt wird, wenn das angepasste Event "arrived_at_trip_destination" eintritt und die "trip_metadata" gleich "curbside" ist.]({% image_buster /assets/img_archive/radar-campaign.png %})
+![Eine Kampagne mit aktionsbasierter Zustellung, die anzeigt, dass die Kampagne zugestellt wird, wenn das angepasste Event "arrived_at_trip_destination" eintritt und die "trip_metadata" gleich "curbside" ist.]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Erstellen Sie ein Segment der Zielgruppe der letzten Besucher des Shops
 
 Stellen Sie zum Beispiel alle Nutzer:innen zusammen, die Ihren Shop innerhalb der letzten 7 Tage besucht haben, unabhängig davon, ob sie einen Kauf getätigt haben oder nicht.
 
-![Ein Segment, in dem "radar_geofence_tags" den Wert my_store enthält und "radar_updated_at" vor weniger als 7 Tagen war.]({% image_buster /assets/img_archive/radar-segment.png %})
+![Ein Segment, in dem "radar_geofence_tags" den Wert my_store enthält und "radar_updated_at" weniger als 7 Tage zurückliegt.]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Connected-Content
 
 Das folgende Beispiel zeigt, wie Sie eine Aktion durchführen, um Nutzer:innen in der Nähe mit einem digitalen Angebot in den Shop zu locken. 
 
-![Ein Android-Bild einer Connected-Content-Push-Nachricht, die "Neue In Store Deals, Walmart und Targeting in Ihrer Nähe" anzeigt.][1]{: style="float:right;max-width:30%;border:0;"}
+![Ein Android-Bild einer Connected-Content-Push-Nachricht, die "Neue In Store Deals, Walmart und Targeting in Ihrer Nähe" anzeigt.]({% image_buster /assets/img/radar_example.png %}){: style="float:right;max-width:30%;border:0;"}
 
 Um loszulegen, benötigen Sie Ihren Radar API-Schlüssel, den Sie in Ihren Anfrage-URLs verwenden können.
 
-Als nächstes stellen Sie innerhalb eines `connected_content` Tags eine GET-Anfrage an die [Search Places API](https://radar.io/documentation/api#search-places). Die Search Places API liefert Standorte in der Nähe, die auf [Radar Places](https://radar.io/documentation/places) basieren: eine Datenbank mit Standorten für Orte, Ketten und Kategorien, die einen umfassenden Überblick über die Welt bietet.
+Als nächstes stellen Sie innerhalb eines `connected_content` Tags eine GET-Anfrage an die [Search Places API](https://radar.com/documentation/api#search-places). Die Search Places API liefert Standorte in der Nähe, die auf [Radar Places](https://radar.com/documentation/places) basieren: eine Datenbank mit Standorten für Orte, Ketten und Kategorien, die einen umfassenden Überblick über die Welt bietet.
 
 Der folgende Code-Snippet ist ein Beispiel dafür, was Radar als JSON-Objekt vom API-Aufruf zurückgibt:
 
@@ -129,7 +129,7 @@ Der folgende Code-Snippet ist ein Beispiel dafür, was Radar als JSON-Objekt vom
 }
 ```
 
-Um die gezielte und personalisierte Connected-Content Nachricht von Braze zu erstellen, können Sie das Attribut Braze `most_recent_location` als Eingabe für den Parameter `near` in der URL der API-Anfrage nutzen. Das Attribut `most_recent_location` wird über die Radar-Ereignisintegration oder direkt über das Braze SDK erfasst.
+Um die gezielte und personalisierte Nachricht von Connected-Content zu erstellen, können Sie das Attribut Braze `most_recent_location` als Eingabe für den Parameter `near` in der URL der API-Anfrage verwenden. Das Attribut `most_recent_location` wird über die Radar-Ereignisintegration oder direkt über das Braze SDK erfasst.
 
 Im folgenden Beispiel wird der Radar-Kettenfilter für Target- und Walmart-Standorte angewendet, und der Suchradius für nahe gelegene Standorte wird auf 2 km festgelegt.
 
@@ -180,8 +180,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-In der [Dokumentation von Radar](https://radar.io/documentation/api) finden Sie alle Radar APIs, die Sie in Connected-Content nutzen können.
+In der [Dokumentation von Radar](https://radar.com/documentation/api) finden Sie alle Radar APIs, die in Connected-Content verwendet werden können.
 {% endalert %}
 
 
-[1]: {% image_buster /assets/img/radar_example.png %}

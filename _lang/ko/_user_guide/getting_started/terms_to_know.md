@@ -4,8 +4,8 @@ nav_title: 알아두어야 할 용어
 article_title: 알아두어야 할 Braze 용어
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
+glossary_top_header: "알아두어야 할 용어"
+glossary_top_text: "이 약관은 Braze와 고객 및 사용자 간의 유대감을 높이기 위한 여정을 시작할 때 도움이 될 것입니다. 온보딩을 시작하기 전에 이 글을 읽어보세요."
 page_type: glossary
 description: "이 용어집에서는 Braze 온보딩 과정을 진행하면서 알아야 할 중요한 용어에 대해 설명합니다."
 
@@ -30,7 +30,7 @@ glossaries:
     description: "Braze admins can divide a subset of dashboard users into <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/\">Teams</a> with varying user roles and permissions. This allows Braze admins to limit access to certain features by group membership."
   - name: 캠페인
     description: "Campaigns are customizable messaging methods to deliver personalized response to your customers. 다양한 메시징 채널을 사용하여 <a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/\">캠페인을 구축하여</a> 고유한 메시지를 보낼 수 있습니다." 
-  - name: 캔버스
+  - name: Canvas
     description: "<a href=\"https://www.braze.com/docs/user_guide/engagement_tools/canvas/\">Canvas</a> is a single unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey. Canvas allows you to compare and optimize those experiences using comprehensive analytics for the full user experience."
   - name: 연결된 콘텐츠
     description: "<a href=\"https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/\">연결된 콘텐츠</a>는 마케팅 개인화를 확장하여 고객 참여와 전환을 촉진합니다. You can insert any information accessible using API directly into messages you send to users. 연결된 콘텐츠를 사용하면 웹 서버 또는 공개적으로 액세스할 수 있는 API에서 직접 콘텐츠를 가져올 수 있습니다."
@@ -40,7 +40,7 @@ glossaries:
     description: "<a href = \"https://www.braze.com/docs/user_guide/data/braze_currents/\">Currents</a>, our data streaming export, is included in certain Braze packages. Braze Currents를 사용하면 플랫 파일을 사용하여 데이터 스토리지를 통해 통합하거나 지정된 엔드포인트에 일괄 처리된 JSON 페이로드를 사용하여 행동 분석 및 고객 데이터 파트너와 통합할 수 있습니다."
   - name: 커스텀 속성
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">Custom attributes</a> are a collection of your users' unique traits. 사용자에 대한 속성이나 애플리케이션 내에서 가치가 낮은 작업에 대한 정보를 저장하는 데 가장 적합합니다. 대시보드 내에서 사용자에게 사용자 지정 속성을 할당할 수 있습니다. You can filter and segment your users according to these attributes for both <a href=\"https://www.braze.com/docs/developer_guide/platforms/swift/analytics/setting_custom_attributes/\">iOS</a> and <a href=\"https://www.braze.com/docs/developer_guide/platforms/android/analytics/setting_custom_attributes/\">Android</a> campaigns."
-  - name: 사용자 지정 이벤트
+  - name: Custom Events
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">Custom events</a> are actions taken by your users; they're best suited for tracking high-value user interactions with your application."
   - name: 데이터 포인트
     description: "A data point is counted when a <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">custom attribute</a> is set or updated (even if you're updating it with the same value), a <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">custom event</a> or purchase event is logged, any standard data (for example, <code>email</code>, <code>first_name</code>, <code>last_name</code>, <code>country</code>, or <code>home_city</code>) is logged, when a session starts, and when a session ends."
@@ -81,9 +81,9 @@ glossaries:
   - name: 푸시 메시지
     description: "<a href=\"https://www.braze.com/docs/user_guide/message_building_by_channel/push/\">푸시 메시지</a> 또는 푸시 알림은 모바일 애플리케이션에서 표시되는 알림입니다. 푸시 알림은 iOS와 Android 모두에서 팝업 대화상자 및 배너로 표시되는 경우가 많습니다."
   - name: 푸시 토큰
-    description: "푸시 토큰은 앱과 iOS, Android 또는 웹 디바이스 간의 연결을 생성하기 위해 Apple 또는 Google에서 생성 및 할당하는 고유 키입니다. <a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">푸시 토큰 마이그레이션</a>은 이미 생성된 키를 Braze로 가져오는 것입니다."
+    description: "푸시 토큰은 앱과 iOS, Android 또는 웹 디바이스 간의 연결을 생성하기 위해 Apple 또는 Google에서 생성 및 할당하는 고유 키입니다. <a href=\"https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens\">푸시 토큰 마이그레이션</a>은 이미 생성된 키를 Braze로 가져오는 것입니다."
   - name: 푸시 TTL
-    description: "Also known as <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/\">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user."
+    description: "Also known as <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user."
   - name: 레이스 조건
     description: "<a href=\"http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/\">경합 조건</a>은 시스템이 여러 작업을 동시에 수행하려고 할 때 발생하는 바람직하지 않은 상황을 설명하는 소프트웨어 엔지니어링 개념으로, 시스템의 특성상 작업이 올바른 순서로 수행되어야 올바르게 수행될 수 있습니다. <br><br>Braze 플랫폼에서 이벤트 발생 시점에 기록된 사용자 데이터로 트리거된 캠페인을 세그먼트화하면 경쟁 조건이 발생할 수 있습니다. 이는 세그먼트 멤버십이 결정되고 캠페인이 전송될 때 캠페인이 세그먼트화되는 사용자 속성의 변경이 아직 처리되지 않아 사용자가 캠페인을 수신하지 못하는 경우에 발생합니다."
   - name: 사용량 제한

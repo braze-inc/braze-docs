@@ -10,7 +10,11 @@ search_tag: Partner
 
 # Singular
 
-> Singular es una plataforma unificada de análisis de marketing que ofrece atribución, agregación de costes, análisis de marketing, informes creativos y automatización del flujo de trabajo.
+> [Singular](https://www.singular.net/) es una plataforma unificada de análisis de marketing que entrega atribución, agregación de costes, análisis de marketing, informes creativos y automatización del flujo de trabajo.
+
+_Esta integración está mantenida por Singular._
+
+## Sobre la integración
 
 La integración de Braze y Singular te permite importar datos de atribución de instalación de pago para segmentar de forma inteligente dentro de tus campañas según el ciclo de vida.
 
@@ -39,7 +43,7 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-Antes de febrero de 2023, nuestra integración de atribución Singular utilizaba el IDFV como identificador principal para cotejar los datos de atribución de iOS. No es necesario que los clientes de Braze que utilicen Objective-C obtengan el Braze `device_id` y lo envíen a Singular al instalarlo, ya que no habrá interrupción del servicio.
+Antes de febrero de 2023, nuestra integración de atribución Singular utilizaba el Identificador de Vendedor (IDFV) como identificador principal para cotejar los datos de atribución de iOS. No es necesario que los clientes de Braze que utilicen Objective-C obtengan la dirección Braze `device_id` y la envíen a Singular al instalarla, porque no se interrumpe el servicio.
 {% endalert%}
 
 Para los que utilicen Swift SDK v5.7.0+, si deseas seguir utilizando IDFV como identificador mutuo, debes asegurarte de que el campo `useUUIDAsDeviceId` está configurado en `false` para que no haya interrupciones en la integración. 
@@ -47,7 +51,7 @@ Para los que utilicen Swift SDK v5.7.0+, si deseas seguir utilizando IDFV como i
 Si se establece en `true`, debes implementar el mapeado de ID de dispositivo iOS para Swift con el fin de pasar el `device_id` de Braze a Singular al instalar la aplicación para que Braze coincida adecuadamente con las atribuciones de iOS.
 
 {% tabs local %}
-{% tab Objetivo-C %}
+{% tab Objective-C %}
 
 ```objc
 SingularConfig* config = [[SingularConfig
@@ -72,19 +76,15 @@ config.setGlobalProperty("brazeDeviceId", withValue: brazeDeviceId, overrideExis
 
 En Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y selecciona **Singular**. 
 
-{% alert note %}
-Si utiliza la [navegación anterior]({{site.baseurl}}/navigation), encontrará a **los socios tecnológicos** en **Integraciones**.
-{% endalert %}
-
 Aquí encontrarás el punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puedes crear una nueva o invalidar una existente. 
 
-Tendrás que proporcionar la clave de importación de datos y el punto final REST a tu administrador de cuentas de Singular para completar la integración.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología Singular. En este cuadro, se te muestra la clave de importación de datos y el punto final REST.][4]{: style="max-width:90%;"}
+Tendrás que proporcionar la clave de importación de datos y el punto final REST a tu administrador de cuentas de Singular para completar la integración.<br><br>![Esta imagen muestra la casilla "Importación de datos para la atribución de instalación" que se encuentra en la página de tecnología Singular. En este cuadro, se te muestra la clave de importación de datos y el punto final REST.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Paso 3: Confirmar la integración
 
-Una vez que Braze reciba los datos de atribución de Singular, el indicador de estado de la conexión en la página de socios tecnológicos de Singular en Braze cambiará de "No conectado" a "Conectado". También se incluirá una marca de tiempo de la última solicitud realizada con éxito. 
+Después de que Braze reciba los datos de atribución de Singular, el indicador de estado de la conexión en la página de socios tecnológicos de Singular en Braze cambia de "No conectado" a "Conectado" e incluye una marca de tiempo de la última solicitud realizada con éxito.
 
-Ten en cuenta que esto no ocurrirá hasta que recibamos datos sobre una instalación atribuida. Las instalaciones orgánicas, que deben excluirse del postback de Singular, son ignoradas por nuestra API y no se tienen en cuenta a la hora de determinar si se ha establecido una conexión correcta.
+Este estado sólo cambia cuando Braze recibe datos sobre una instalación atribuida. Braze ignora las instalaciones orgánicas (las excluye del postback de Singular) y no las cuenta a la hora de determinar si la conexión se ha realizado correctamente.
 
 ## Datos de atribución de Facebook y X (antes Twitter)
 
@@ -126,4 +126,4 @@ idfv={{most_recently_used_device.${id}}}
 Si actualmente no utilizas ningún identificador de dispositivo -como el IDFV o el GAID- en tus enlaces de seguimiento de clics, o no piensas hacerlo en el futuro, Singular podrá seguir atribuyendo estos clics mediante su modelado probabilístico.
 {% endalert %}
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}
+

@@ -10,9 +10,9 @@ channel:
 
 # Pie de página de correo electrónico personalizado
 
-> Puede establecer un pie de página de correo electrónico personalizado para todo el espacio de trabajo, que puede incluir como plantilla en cada correo electrónico utilizando el atributo {% raw %}`{{${email_footer}}}`{% endraw %} Liquid.
+> Puedes establecer un pie de página de correo electrónico personalizado para todo el espacio de trabajo, que puedes plantillas en cada correo electrónico utilizando el atributo {% raw %}`{{${email_footer}}}`{% endraw %} Liquid.
 
-Al utilizar pies de página de correo electrónico personalizados, ya no tendrá que crear un pie de página nuevo para cada plantilla o campaña de correo electrónico que utilice. Los cambios que realice en su pie de página personalizado se reflejarán en todas las campañas de correo electrónico nuevas y existentes. Recuerde que el cumplimiento de la [Ley CAN-SPAM de 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) le obliga a incluir en sus correos electrónicos una dirección física de su empresa y un enlace para darse de baja.
+Al utilizar pies de página de correo electrónico personalizados, ya no tendrá que crear un pie de página nuevo para cada plantilla o campaña de correo electrónico que utilice. Todas las campañas de correo electrónico nuevas y existentes reflejan los cambios que realices en tu pie de página personalizado. Recuerde que el cumplimiento de la [Ley CAN-SPAM de 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) le obliga a incluir en sus correos electrónicos una dirección física de su empresa y un enlace para darse de baja.
 
 {% alert warning %}
 Es su responsabilidad asegurarse de que su pie de página personalizado cumple los requisitos mencionados.
@@ -22,20 +22,21 @@ Es su responsabilidad asegurarse de que su pie de página personalizado cumple l
 
 Para crear o editar su pie de página personalizado, haga lo siguiente:
 
-1. Vaya a **Configuración** > **Preferencias de correo electrónico**.
-2. Vaya a la sección **Pie de página** personalizado y active los pies de página personalizados.
-3. Edita tu pie de página en la sección **Redactar**.
-4. Envía un mensaje de prueba. 
+1. Ve a **Configuración** > **Preferencias de correo electrónico** > **Páginas de suscripción y pies de página**.
+2. Ve a la sección **Pie de página personalizado** y activa los pies de página personalizados.
+3. Selecciona **Editar** y luego edita tu pie de página en la sección **Redactar**.
+4. Selecciona **Vista previa** para ver cómo aparecerá el pie de página de tu correo electrónico en el buzón de entrada de un cliente. Opcionalmente, puedes seleccionar **Copiar enlace de vista previa** para generar y copiar un enlace de vista previa compartible que muestre el aspecto que tendrá el correo electrónico para un usuario aleatorio. El enlace durará siete días antes de que sea necesario regenerarlo.
+5. Envía un mensaje de prueba. 
 
-![Un ejemplo de pie de página personalizado.][20]
+![Un ejemplo de pie de página personalizado.]({% image_buster /assets/img_archive/custom_footer.png %})
 
-El pie de página por defecto utiliza el atributo {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} y nuestra dirección postal física. Si utilizas este predeterminado, asegúrate de seleccionar **<otro>** para el **Protocolo**.
+El pie de página por defecto utiliza el atributo {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} y nuestra dirección postal física. Si utilizas este predeterminado, asegúrate de seleccionar **<other>** para el **Protocolo**.
 
 {% alert important %}
-Para cumplir la normativa CAN-SPAM, su pie de página personalizado debe incluir {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}. No podrá guardar un pie de página personalizado sin este atributo.
+Para cumplir la normativa CAN-SPAM, tu pie de página personalizado debe incluir un enlace para cancelar suscripción. Puedes utilizar este atributo de Liquid {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} o tu propia URL personalizada para cancelar suscripción. No podrás guardar un pie de página personalizado sin un enlace para cancelar suscripción.
 {% endalert %}
 
-![Valores de protocolo y URL necesarios para el pie de página personalizado.][24]{: style="max-width:50%;"}
+![Valores de protocolo y URL necesarios para el pie de página personalizado.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
 
 ## Pies de página sin enlaces para darse de baja
 
@@ -43,11 +44,11 @@ Tenga mucho cuidado cuando utilice una plantilla con el pie de página personali
 
 Aquí tienes una advertencia en el compositor de correo electrónico:
 
-![Ejemplo de correo electrónico redactado sin pie de página.][21]
+![Ejemplo de correo electrónico redactado sin pie de página.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 Aquí tienes una advertencia en el compositor de la campaña:
 
-![Composición de la campaña sin pie de página.][22]
+![Composición de la campaña sin pie de página.]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### Añadir un enlace personalizado para cancelar suscripción
 
@@ -89,10 +90,5 @@ También puede optar por establecer un pie de página personalizado para los cor
 
 Si no incluye un pie de página en texto plano, Braze creará uno automáticamente a partir del pie de página HTML. Cuando tus pies de página personalizados estén a tu gusto, selecciona **Guardar**.
 
-![Correo electrónico con la opción Establecer pie de página de texto sin formato personalizado seleccionada.][23]{: style="max-width:70%" }
+![Correo electrónico con la opción Establecer pie de página de texto sin formato personalizado seleccionada.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 
-[20]: {% image_buster /assets/img_archive/custom_footer.png %}
-[21]: {% image_buster /assets/img_archive/no_unsub_link_warning.png %}
-[22]: {% image_buster /assets/img_archive/no_footer_test.png %}
-[23]: {% image_buster /assets/img_archive/custom_footer_save_changes.png %}
-[24]: {% image_buster /assets/img_archive/email_unsub_protocol.png %}

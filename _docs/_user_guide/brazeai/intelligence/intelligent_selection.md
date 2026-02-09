@@ -34,7 +34,7 @@ Before adding Intelligent Selection to your campaign, make sure you’ve set thi
 - Your campaign sends on a recurring schedule. Single-send campaigns aren’t supported.
 - You’ve added at least two message variants.
 - You’ve defined a conversion event to measure performance across variants.
-- The re-eligibility window is set to 24 hours or longer. Shorter windows aren’t supported, as they would affect the integrity of the control variant. To learn more, refer to [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
+- The re-eligibility window is set to 24 hours or longer. Shorter windows aren’t supported, as they would affect the integrity of the control variant. To learn more, refer to [this FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
 {% endtab %}
 
 {% tab Canvas %}
@@ -88,7 +88,7 @@ This means that during the early stages of the campaign, both the 99% and 1% Int
 
 If you don't want Intelligent Selection to send 50/50 during the early stages of the campaign, we recommend using a traditional A/B test with fixed variants.
 
-## Frequently Asked Questions (FAQ) {#faq}
+## Frequently asked questions {#faq}
 
 ### Why is re-eligibility in less than 24 hours not available when combined with Intelligent Selection?
 

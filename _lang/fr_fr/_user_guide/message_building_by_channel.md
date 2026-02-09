@@ -1,5 +1,5 @@
 ---
-nav_title: Création de message par canal
+nav_title: Créer des messages par canal
 article_title: Création de message par canal
 page_order: 5
 layout: dev_guide
@@ -10,6 +10,9 @@ description: "Cette page d’accueil couvre les canaux de communication Braze. L
 
 guide_featured_title: "Canaux disponibles"
 guide_featured_list:
+- name: Bannières
+  link: /docs/user_guide/message_building_by_channel/banners/
+  image: /assets/img/braze_icons/table.svg
 - name: Cartes de contenu
   link: /docs/user_guide/message_building_by_channel/content_cards/
   image: /assets/img/braze_icons/table.svg
@@ -22,8 +25,8 @@ guide_featured_list:
 - name: Messagerie de notification push
   link: /docs/user_guide/message_building_by_channel/push/
   image: /assets/img/braze_icons/marker-pin-01.svg
-- name: SMS &amp; MMS
-  link: /docs/user_guide/message_building_by_channel/sms/
+- name: "SMS, MMS et RCS"
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/
   image: /assets/img/braze_icons/message-text-circle-01.svg
 - name: Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/
@@ -33,6 +36,15 @@ guide_featured_list:
   image: /assets/img/braze_icons/whatsapp.svg
 ---
 
+## Ressources en matière d'accessibilité
+
+Vous pouvez utiliser Braze pour créer des campagnes de communication accessibles sur chaque canal. Vérifiez avec vos ingénieurs que vous répondez aux normes d’accessibilité lors de la mise en place. Si vous souhaitez obtenir des conseils supplémentaires, nous vous recommandons :
+
+- [Fondements de l'envoi de messages accessibles](https://learning.braze.com/accessible-messaging-foundations): Apprenez les principes fondamentaux de l'accessibilité qui s'appliquent aux communications de marque dans ce cours d'apprentissage de Braze.
+- [Créer des messages accessibles]({{site.baseurl}}/help/accessibility/): Apprenez à ajouter du texte alt et à structurer votre contenu pour les technologies d'assistance directement dans Braze.
+
+{% multi_lang_include accessibility/feedback.md %}
+
 ## Choisir un canal de communication
 
 Lorsque vous déterminez quel est le canal de communication le mieux adapté à vos campagnes et Canvas, pensez toujours au contenu et à l’urgence de votre message :
@@ -40,10 +52,10 @@ Lorsque vous déterminez quel est le canal de communication le mieux adapté à 
 - Le **contenu** désigne le degré d'attrait visuel de votre message. Vous pouvez ajouter du multimédia et d’autres supports à votre copie pour enrichir votre contenu.
 - L'**urgence** est une mesure de la rapidité avec laquelle un message est capable de notifier votre utilisateur et d'attirer son attention. Les notifications directement visibles par l’utilisateur ont un caractère urgent ; à l’inverse, les messages nécessitant une connexion de l’utilisateur à votre application n’ont pas de caractère d’urgence.
 
-La matrice suivante illustre les avantages et les inconvénients des canaux de communication en termes de contenu et d’urgence. Pensez toujours au degré d’urgence et à la richesse du contenu de votre message puis choisissez le canal approprié pour votre campagne.
+La matrice de messages de Braze rationalise la sélection des canaux en mappant la **complexité du contenu** avec l'**urgence de la réception/distribution**. En équilibrant ces deux facteurs, vous pouvez aider votre message à résonner plutôt qu'à interrompre.
 
-![Les push mobiles/web ont un contenu simple, un degré d'urgence élevé ; les e-mails ont un contenu riche, un degré d'urgence élevé ; les messages in-app/navigateurs ont un contenu simple, un degré d'urgence faible ; les cartes de contenu ont un degré d'urgence faible, un contenu riche]({% image_buster /assets/img_archive/messaging_matrix.png %}).
+![Les notifications push Web ou mobile ont un contenu simple avec une urgence élevée ; les e-mails ont un contenu riche, avec une urgence élevée ; les messages In-app/navigateur ont un contenu simple, une faible urgence ; les cartes de contenu ont une faible urgence, un contenu riche]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
-Pour en savoir plus sur la manière dont vous pouvez tirer parti de cette matrice, consultez notre cours d'apprentissage Braze sur la [compréhension de la matrice d'envoi de messages.](https://learning.braze.com/understand-the-messaging-matrix)
+Bien que la matrice mette l'accent sur les canaux essentiels, elle est adaptable : Les SMS et WhatsApp, par exemple, sont des outils très urgents qui se transforment en contenu riche lorsqu'ils utilisent des formats multimédias. Pour en savoir plus sur la manière dont vous pouvez tirer parti de cette matrice, consultez notre cours d'apprentissage Braze sur la [communication cross-canal des messages](https://learning.braze.com/cross-channel-messaging).
 
 <br><br>

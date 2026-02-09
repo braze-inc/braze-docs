@@ -16,7 +16,7 @@ guide_featured_list:
 - name: コネクテッドコンテンツのローカル変数
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/server-01.svg
-- name: コネクテッドコンテンツのレスポンスをキャッシュする
+- name: コネクテッドコンテンツの応答のキャッシュ
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/edit-05.svg
 - name: 接続されたコンテンツを中止する

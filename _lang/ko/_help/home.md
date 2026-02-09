@@ -17,7 +17,7 @@ resources_list:
     link: /docs/help/faqs/
     image: /assets/img/braze_icons/book-open-01.svg
   - name: 릴리스 정보
-    link: /docs/help/release_notes/most_recent/
+    link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
   - name: Braze 학습 로그인
     link: https://learning.braze.com/
@@ -26,12 +26,12 @@ resources_list:
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/braze_icons/youtube.svg
   - name: Braze 고객지원팀
-    link: /docs/braze_support/
+    link: /docs/user_guide/administrative/access_braze/support/
     image: /assets/img/braze_icons/mail-01.svg
 
 popular_topic_list:
   - name: 보내기 전에 알아두어야 할 사항
-    link: /docs/help/help_articles/campaigns_and_canvas/know_before_send/
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send/
   - name: 푸시 토큰 마이그레이션
     link: /docs/help/help_articles/push/push_token_migration/
   - name: 커스텀 이벤트 속성 로깅
@@ -39,13 +39,11 @@ popular_topic_list:
   - name: 디스패치 ID
     link: /docs/help/help_articles/data/dispatch_id/
   - name: 이메일 반송
-    link: /docs/help/help_articles/email/email_bounces/
+    link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
   - name: API를 통해 사용자 삭제하기
     link: /docs/help/help_articles/api/delete_user/
   - name: 사용자 지정 데이터 유형 변경
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: 인앱 메시지가 표시되지 않음
-    link: /docs/help/help_articles/in-app_messages/in-app_messages_not_displaying/  
   - name: 이벤트 로깅 사용
     link: /docs/help/help_articles/campaigns_and_canvas/using_event_logging/ 
 ---

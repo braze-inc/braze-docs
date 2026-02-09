@@ -1,6 +1,6 @@
 ---
-nav_title: Importação de sua lista de e-mails
-article_title: Importação de sua lista de e-mails para o Braze
+nav_title: Importe sua lista de e-mails
+article_title: Importe sua lista de e-mails para o Braze
 page_order: 4
 page_type: reference
 description: "Este artigo de referência aborda as práticas recomendadas para a importação de sua lista de e-mails para o Braze."
@@ -8,13 +8,13 @@ channel: email
 
 ---
 
-# Importação de sua lista de e-mails para o Braze {#importing-email-lists}
+# Importe sua lista de e-mails para o Braze {#importing-email-lists}
 
 > Uma etapa importante para se tornar um remetente de e-mail bem-sucedido é garantir que você tenha uma lista de e-mails de alta qualidade. O gerenciamento adequado da lista de e-mails pode melhorar a entregabilidade e fornecer resultados de campanha mais precisos e limpos.
 
 ## Considerações antes de importar
 
-{% multi_lang_include email-via-sms-warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}
 
 ### Valide suas listas de e-mail
 
@@ -22,11 +22,19 @@ Antes de importar sua lista de e-mails para o Braze, valide se sua lista inclui 
 
 Os serviços de limpeza de listas de e-mail podem fazer isso para você, determinando se o endereço de e-mail segue a sintaxe correta e tem as propriedades físicas de um endereço de e-mail, verificando o domínio do e-mail e conectando-se ao servidor de e-mail para autenticar se o endereço de e-mail existe lá.
 
+### Verifique se um endereço de e-mail já está associado a um usuário
+
+Antes de criar um usuário através da API ou SDK, chame o endpoint [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) e especifique o `email_address` do usuário. Se retornar um perfil de usuário, esse usuário do Braze já está associado a esse endereço de e-mail.
+
+Recomendamos fortemente que você procure endereços de e-mail únicos quando novos usuários forem criados e evite passar ou importar usuários com o mesmo endereço de e-mail. Caso contrário, você pode ter consequências indesejadas que impactam o envio de mensagens, direcionamento, relatórios e outros recursos.
+
+Por exemplo, digamos que você tenha perfis duplicados, mas certos atributos ou eventos personalizados residem em apenas um perfil. Quando você tenta disparar campanhas ou canvases com múltiplos critérios, o Braze não consegue identificar o usuário como elegível porque existem dois perfis de usuário. Ou, se uma campanha direciona um endereço de e-mail compartilhado por dois usuários, a página **Buscar Usuários** mostrará ambos os perfis de usuário como tendo recebido a campanha.
+
 ### Identifique seus usuários engajados
 
 Para identificar os usuários com maior engajamento, primeiro remova os usuários que estão profundamente desistentes. É uma prática recomendada não enviar e-mails a usuários que não tenham se engajado com um e-mail há mais de seis meses, pois isso pode prejudicar a reputação do remetente do e-mail. Ao importar sua lista de e-mails, certifique-se de incluir apenas os usuários que abriram um e-mail seu nos últimos seis meses.
 
-A longo prazo, você também deve considerar a implementação de uma [política de sunsetting][60].
+A longo prazo, você também deve considerar a implementação de uma [política de sunsetting]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/).
 
 ### Evitar listas de supressão
 
@@ -36,4 +44,3 @@ Se estiver fazendo a transição de um provedor de e-mail existente, certifique-
 
 Depois de preparar sua lista de e-mails, há várias maneiras de importar usuários para o Braze, como por meio da API REST de e-mail do Braze ou de arquivos CSV. Leia mais em nosso artigo dedicado à [importação de usuários]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/).
 
-[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

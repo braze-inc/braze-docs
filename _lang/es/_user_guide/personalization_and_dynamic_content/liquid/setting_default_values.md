@@ -1,12 +1,12 @@
 ---
-nav_title: Establecer valores por defecto
-article_title: Configuración de valores predeterminados de Liquid
+nav_title: Establecer valores predeterminados
+article_title: Establecer valores predeterminados de Liquid
 page_order: 5
 description: "En este artículo de referencia se explica cómo establecer valores de reserva predeterminados para cualquier atributo de personalización que utilices en tus mensajes."
 
 ---
 
-# Establecer valores por defecto
+# Establecer valores predeterminados
 
 {% raw %}
 
@@ -14,7 +14,7 @@ description: "En este artículo de referencia se explica cómo establecer valore
 
 ## Cómo funcionan
 
-Se pueden añadir valores por defecto especificando un filtro [Liquid][3] (utilice `|` para distinguir el filtro en línea, como se muestra) con el nombre "default".
+Se pueden añadir valores por defecto especificando un filtro [Liquid](http://docs.shopify.com/themes/liquid-documentation/filters) (utilice `|` para distinguir el filtro en línea, como se muestra) con el nombre "default".
 
 ```
 | default: 'Insert Your Desired Default Here'
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}
@@ -212,8 +212,6 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 {% endraw %}
 {% enddetails %}
 
-[3]: http://docs.shopify.com/themes/liquid-documentation/filters
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

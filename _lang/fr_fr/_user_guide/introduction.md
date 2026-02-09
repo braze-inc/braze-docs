@@ -4,8 +4,8 @@ nav_title: Accueil
 article_title: Guide de l’utilisateur Braze
 layout: user_guide
 
-user_top_header: "Braze User Guide"
-user_top_text: "This is where marketers and administrators can learn everything they need to know to get started with Braze, and how to design meaningful, data-driven customer interactions."
+user_top_header: "Guide de l’utilisateur Braze"
+user_top_text: "C’est ici que les spécialistes du marketing et administrateurs peuvent apprendre tout ce qu’il leur faut pour démarrer avec Braze et comment concevoir des interactions clientèle significatives axées sur les données."
 description: "Ceci est la page d’accueil du Guide de l’utilisateur. Ici, les spécialistes du marketing et administrateurs peuvent apprendre tout ce qu’il leur faut pour démarrer avec Braze et comment concevoir des interactions clientèle significatives axées sur les données."
 
 user_menu_list:
@@ -18,12 +18,12 @@ user_menu_list:
     image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
     bg_color: '#F8D3E8'
     link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-    description: Connectez-vous à notre plateforme.
+    description: Connectez-vous à la plateforme.
   - name: Créer un Canvas
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: Etes-vous prêt à commencer à créer un parcours client ? Nous sommes là pour vous guider.
+    description: Ce guide vous explique comment commencer à créer un parcours client.
 
 popular_topic_list:
   - name: Importation d’utilisateurs

@@ -1,7 +1,7 @@
 ---
-nav_title: Ressources Meta
+nav_title: Ressources méta
 article_title: Ressources Meta
-page_order: 81
+page_order: 12
 description: "Cet article fournit une documentation Meta utile, des informations et des ressources pour améliorer votre compréhension de l'intégration WhatsApp."
 page_type: reference
 channel:
@@ -22,6 +22,22 @@ Consultez la documentation Meta suivante pour obtenir des conseils sur les noms 
 - [Évaluation de la qualité](https://www.facebook.com/business/help/896873687365001)
 
 ## Mises à jour des produits WhatsApp
+
+### Avril 2025 : Arrêt des envois de messages marketing aux numéros de téléphone américains
+*Dernière mise à jour août 2025*
+
+Meta mettra en pause la réception/distribution de tous les messages de modèles marketing aux utilisateurs de WhatsApp qui ont un numéro de téléphone aux États-Unis (numéro composé d'un code de composition `+1` et d'un indicatif régional américain). Il n'y a pas de date planifiée pour la levée de cette pause. 
+
+Toute tentative d'envoi d'un modèle à un utilisateur de WhatsApp ayant un numéro de téléphone américain aboutira à l'erreur `131049`.
+
+### Mars 2025 : Limites de messages de modèle marketing par utilisateur
+*Dernière mise à jour août 2025*
+
+Meta limitera le nombre d'envois de messages marketeurs qu'un utilisateur peut recevoir dans toutes les entreprises au cours d'une période donnée, en commençant par les messages les moins susceptibles d'être lus. 
+
+Il existe une exception : si une personne répond à un message marketeur, cela déclenchera une fenêtre de service à la clientèle de 24 heures. Les messages marketing envoyés dans cette fenêtre ne sont pas pris en compte dans le calcul de la limite d'une personne.
+
+La limite spécifique varie selon l'utilisateur, en fonction de son niveau d'engagement. Pour en savoir plus sur les limites de messages des modèles de marketing par utilisateur de WhatsApp, [cliquez ici.](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits) 
 
 ### Janvier 2025 : WhatsApp met en pause l'envoi de messages marketing aux utilisateurs américains à partir du 1er avril.
 *Dernière mise à jour janvier 2025*
@@ -140,7 +156,7 @@ Notez que WhatsApp utilise le même système pour évaluer la qualité des modè
 
 En fin de compte, cette mise à jour vous offre une boucle de rétroaction plus rapide (30 minutes contre des heures ou des jours avec la pause du modèle), afin que vous puissiez ajuster vos modèles et offrir une meilleure expérience client.
 
-**Si vous avez d'autres questions concernant cette mise à jour, veuillez contacter votre conseiller partenaire Meta.**
+**Si vous avez d'autres questions concernant cette mise à jour, contactez votre conseiller partenaire Meta.**
 
 ### Juin 2023: Expérimentation de messagerie 
 *Dernière mise à jour juin 2023*

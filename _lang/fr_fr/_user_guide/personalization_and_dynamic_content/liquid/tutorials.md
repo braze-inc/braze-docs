@@ -69,7 +69,7 @@ Thanks for traveling with us! Enjoy your unique discount code: SUMMRTRVLS240.
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Happy summer, {{${first_name} | default: "traveler"}}!
@@ -106,7 +106,7 @@ Envoyons des messages personnalisés pour rappeler aux utilisateurs les articles
 {% endraw %}
 
 {: start="3"}
-3\. Rédigez un message qui salue l'utilisateur par son prénom ou, si celui-ci n'est pas disponible, utilisez "là" comme valeur par défaut. Indiquez ce qu'il convient de mentionner s'il y a plus de trois articles dans le panier. Comme nous ne voulons pas submerger l'utilisateur avec une liste complète, nous nous contenterons d'énumérer les trois premiers `cart_items`.
+3\. Rédigez un message qui accueille l'utilisateur par son prénom ou, si celui-ci n'est pas disponible, utilisez "là" comme valeur par défaut. Indiquez ce qu'il convient de mentionner s'il y a plus de trois articles dans le panier. Comme nous ne voulons pas submerger l'utilisateur avec une liste complète, nous nous contenterons d'énumérer les trois premiers `cart_items`.
 
 {% raw %}
 ```liquid
@@ -136,7 +136,7 @@ Hi {{${first_name} | default: 'there'}}, don't forget to complete your purchase!
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${cart_items}}} != blank %}
@@ -200,7 +200,7 @@ Get ready! Our Anniversary Sale is in {{ difference_days }} days!
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign sale_date = {{custom_attribute.${anniversary_date}}} | date: "%s" %}
@@ -270,7 +270,7 @@ We heard {{this_month}} is a special month! Enjoy a 50% discount on your purchas
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
@@ -370,7 +370,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% endraw %}
 
 {: start="10"}
-10\. Nous utiliserons l'étiquette `else` pour préciser ce qui doit se passer si la condition n'est pas remplie (parce que l'achat n'a pas eu lieu il y a au moins six mois).
+10\. Nous utiliserons l'étiquette `else` pour spécifier ce qui doit se passer si la condition n'est pas remplie (parce que l'achat n'a pas eu lieu il y a au moins six mois).
 
 {% raw %}
 ```liquid
@@ -388,7 +388,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 {% endraw %}
 
 {: start="12"}
-12\. Pour finir, nous terminerons le Liquid par deux étiquettes `endif`. Le premier `endif` ferme le contrôle conditionnel pour le produit préféré ou la date du dernier achat, et le second `endif` ferme le contrôle conditionnel pour la date du dernier achat datant d'au moins six mois.
+12\. Pour finir, nous terminerons le Liquid par deux étiquettes `endif`. Le premier site `endif` ferme le contrôle conditionnel pour le produit préféré ou la date du dernier achat, et le second site `endif` ferme le contrôle conditionnel pour la date du dernier achat datant d'au moins six mois.
 
 {% raw %}
 ```liquid
@@ -397,7 +397,7 @@ We noticed it’s been a while since you last purchased {{custom_attribute.${fav
 ```
 {% endraw %}
 
-{% details Code Liquid complet %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${favorite_product}}} == blank or {{custom_attribute.${last_purchase_date}}} == blank %}

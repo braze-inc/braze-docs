@@ -1,5 +1,5 @@
 ---
-nav_title: Como criar uma mensagem no app
+nav_title: Crie uma mensagem no app
 article_title: "Criação de uma mensagem no app com o recurso arrastar e soltar"
 description: "Este artigo de referência aborda a criação de uma mensagem no app com o editor de arrastar e soltar, pré-requisitos, detalhes criativos e muito mais."
 alias: "/create_dnd_iam/"
@@ -11,15 +11,16 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
   creative-details: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#creative-details'
 ---
 
-# Criando uma mensagem no app com o recurso de arrastar e soltar
+# Crie uma mensagem no app com o recurso de arrastar e soltar
 
 > Com o editor de arrastar e soltar, você pode criar mensagens no app totalmente personalizadas em campanhas ou no canva usando a experiência de edição de arrastar e soltar.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
+{% multi_lang_include video.html id="j94omgo73o" align="right" source="wistia" %}
 
 Se quiser usar seus modelos HTML personalizados existentes ou modelos criados por terceiros, eles deverão ser recriados no editor de arrastar e soltar.
 
-Não tem certeza se sua mensagem no app deve ser enviada usando uma campanha ou um [Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas. Depois de selecionar onde criar sua mensagem, vamos nos aprofundar nas etapas para criar uma mensagem no app do tipo arrastar e soltar.
+Não tem certeza se sua mensagem no app deve ser enviada usando uma campanha ou um [Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? As campanhas são melhores para campanhas de mensagens únicas e direcionadas, enquanto as canvas são melhores para jornadas de usuários em várias etapas. Depois de selecionar onde criar sua mensagem, vamos nos aprofundar nas etapas para criar uma mensagem no app do tipo arrastar e soltar.
 
 ## Pré-requisitos
 
@@ -30,7 +31,7 @@ Não tem certeza se sua mensagem no app deve ser enviada usando uma campanha ou 
 | {::nomarkdown}{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}{:/} | {::nomarkdown}{% sdk_min_versions swift:6.5.0 android:26.0.0 web:4.8.1 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% details Para saber mais sobre os SDKs mínimos %}
+{% details More information on minimum SDKs %}
 
 As mensagens criadas usando o editor de arrastar e soltar só podem ser enviadas a usuários com as versões mínimas do SDK (consulte a tabela acima). Se um usuário não tiver atualizado seu aplicativo (ou seja, se estiver em uma versão mais antiga do SDK), ele não receberá a mensagem no app.
 
@@ -69,7 +70,7 @@ Depois de selecionar o editor de arrastar e soltar como sua experiência de edi�
 
 Selecione **Criar mensagem** para começar a criar sua mensagem no app no editor de arrastar e soltar.
 
-![A seção Braze Templates, na qual é possível escolher um modelo básico, de imagem de fundo, de captura de número de telefone ou em branco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![A seção Braze Templates, onde é possível escolher um modelo básico, de imagem de fundo, de captura de número de telefone ou em branco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 Também é possível acessar todos os modelos na seção **Modelos** do dashboard.
 
@@ -77,10 +78,10 @@ Também é possível acessar todos os modelos na seção **Modelos** do dashboar
 
 Adicionar páginas à sua mensagem no app permite orientar os usuários por meio de um fluxo sequencial, como um fluxo de integração ou uma jornada de boas-vindas. É possível gerenciar páginas na seção **Páginas** da guia **Construir**.
 
-![Uma mensagem no app para uma empresa do setor de saúde, composta de três páginas.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
+![Uma mensagem no app para uma empresa de saúde composta de três páginas.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}
-{% tab Adicionar páginas %}
+{% tab Adding pages %}
 
 As mensagens no app começam com uma página por padrão. Para adicionar uma nova página:
 
@@ -99,7 +100,7 @@ Para duplicar uma página existente:
 3. Dê um nome significativo à página. Isso ajudará você a conectar as páginas.
 
 {% endtab %}
-{% tab Exclusão ou renomeação de páginas %}
+{% tab Deleting or renaming pages %}
 
 Para excluir ou renomear uma página:
 
@@ -121,7 +122,7 @@ Para conectar páginas:
 4. Selecione a página para a qual você deseja criar um link na página inicial.
 5. Continue até que todas as páginas estejam vinculadas.
 
-![Um usuário está editando o botão de ação principal para ir para a Página 2 da mensagem no app.]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
+![Um usuário está editando o botão de ação principal para ir para a página 2 da mensagem no app.]({% image_buster/assets/img_archive/dnd_iam_multipage.gif %})
 
 Se uma página não estiver vinculada a nenhuma outra página, a mensagem não poderá ser iniciada.
 
@@ -149,7 +150,7 @@ A seção **Preview & Test** permite a prévia de suas mensagens no app em difer
 Para enviar um teste para grupos de teste de conteúdo ou usuários individuais, o push deve ser ativado nos dispositivos de teste antes do envio.
 {% endalert %}
 
-É possível fazer a prévia das mensagens na guia **Preview & Test**, como se fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado:
+É possível fazer uma prévia das mensagens na guia **Preview & Test**, como se você fosse um usuário. Você pode selecionar um usuário específico, um usuário aleatório ou criar um usuário personalizado:
 
 - **Usuário aleatório:** O Braze selecionará aleatoriamente um usuário do banco de dados e fará a prévia da mensagem no app com base em suas atribuições ou informações de eventos.
 - **Selecione usuário:** É possível selecionar um usuário específico com base em seu endereço de e-mail ou `external_id`. A mensagem no app será prévia com base nas atribuições do usuário e nas informações do evento.
@@ -175,6 +176,8 @@ Os cliques no corpo não são coletados automaticamente para mensagens no app cr
 
 Sim, você pode segmentar com base em cliques em botões para até dois botões em sua mensagem. Para fazer isso, defina o **Identificador para relatórios** de seus botões como "0" e "1", que corresponderão aos filtros de segmento de mensagem "Clicou no botão de mensagem no app 1" e "Clicou no botão de mensagem no app 2", respectivamente.
 
+![O campo "Identifier for Reporting" com o valor "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### Posso personalizar minha mensagem no app usando HTML ou JavaScript personalizado ou transferir mensagens HTML existentes para o editor?
 
 Não é possível transferir diretamente mensagens HTML existentes para o editor, mas você pode inserir HTML, CSS e JavaScript brutos em um bloco de código personalizado. Você pode usar blocos de código personalizado para incorporar vídeos de terceiros e Liquid avançado, como conteúdo conectado ou declarações condicionais.
@@ -185,8 +188,8 @@ Atualmente, o editor está limitado apenas a mensagens modais e de tela cheia. �
 
 #### Posso salvar minha mensagem no app como um modelo depois de criá-la em minha campanha ou no Canva?
 
-Sim. Para qualquer mensagem no app que queira reutilizar em uma campanha futura ou etapa do Canva, é possível salvá-la como um modelo personalizado usando o botão **Salvar como modelo**, disponível depois que você sair do editor. Antes de poder salvá-la como modelo, você deve primeiro lançar a campanha OU salvá-la como rascunho.
+Sim. Para qualquer mensagem no app que queira reutilizar em uma campanha futura ou etapa do Canva, é possível salvá-la como um modelo personalizado usando o botão **Salvar como modelo**, disponível após sair do editor. Antes de poder salvá-la como modelo, você deve primeiro lançar a campanha OU salvá-la como rascunho.
 
-![Uma prévia de uma mensagem no app para inscrever-se em atualizações de texto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![Uma prévia de uma mensagem no app para um tour de produto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 Você também pode criar e salvar modelos de mensagens no app navegando até **Modelos** > **Modelos de mensagens no app**.

@@ -18,6 +18,51 @@ channel: push
 
 ベストプラクティスとして、Brazeは、モバイルプッシュ通知のオプションタイトルとメッセージ本文の各行のテキストを約30～40文字に抑えることを推奨している。コンポーザーの文字カウンターは Liquid 文字を考慮しません。つまり、メッセージの最終的な文字数は、Liquid が各ユーザーに対してどのようにレンダリングされるかに応じて異なります。迷ったときには、簡潔にまとめます。
 
+## プッシュ通知のペイロードサイズを小さくする
+
+最大積載量はプラットフォームによって異なる。
+
+| プラットフォーム | 最大ペイロードサイズ |
+| --- | --- |
+| Web | 3,807バイト |
+| Android | 3,930バイト |
+| iOS | 3,960バイト |
+| Kindle | 5,985バイト |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+プッシュが最大ペイロードサイズを超える場合、メッセージは送信されないことがある。ベストプラクティスとして、ペイロードを数百バイトに抑えてください。
+
+### プッシュペイロードとは何ですか？
+
+プッシュサービスプロバイダーは、プッシュペイロード全体のバイトサイズを確認することで、プッシュ通知がユーザーに表示できるかどうかを計算します。ペイロードはほとんどのプッシュサービスで**4KB（4,096バイト）**に制限されています。含む：
+
+- Appleプッシュ通知サービス（APNs）
+- Android の Firebase Cloud Messaging (FCM)
+- Web プッシュ
+- Huawei プッシュ
+
+これらのプッシュサービスは、この制限を超える通知を拒否します。
+
+Brazeは、統合および分析の目的でプッシュペイロードの一部を予約します。そのため、私たちの最大ペイロードサイズは**3,807バイト**です。プッシュがこのサイズを超えると、メッセージが送信されない場合があります。ベストプラクティスとして、ペイロードを数百バイトに抑えてください。
+
+プッシュ内の次の要素がプッシュペイロードを構成します：
+
+- コピー、タイトルやメッセージ本文など
+- Liquid パーソナライゼーションの最終レンダリング
+- 画像のURL（ただし、画像自体のサイズは含まれません）
+- クリックターゲットのURL
+- ボタン名
+- キーと値のペア
+
+### ペイロードサイズを削減するためのヒント
+
+ペイロードサイズを減らすには:
+
+- メッセージを簡潔に保つ。一般的なガイドラインとして、40文字以内で実行可能で有益なものにすることです。
+- 空白と改行をコピーから省略します。
+- Liquid が送信時にどのようにレンダリングされるかを考慮します。Liquidパーソナライゼーションの最終レンダーはユーザーごとに異なるため、Liquidが含まれている場合、Brazeはプッシュペイロードがサイズ制限を超えるかどうかを判断できません。Liquid が短いメッセージをレンダリングする場合は、大丈夫かもしれません。ただし、Liquidの結果が長いメッセージになる場合、プッシュがペイロードサイズの制限を超える可能性があります。常にプッシュメッセージをユーザーに送信する前に実際のデバイスでテストしてください。
+- URL短縮サービスを使用してURLを短縮することを検討してください。
+
 ## ターゲティングの最適化
 
 ### 関連するユーザーデータを収集する
@@ -30,7 +75,7 @@ channel: push
 
 ニュースアプリが政治に関心のあるユーザーだけをターゲットにしたキャンペーンを作成したい場合、`Subscribes to Politics` 属性フィルターをセグメントに追加する。trueに設定すると、通知を購読しているユーザーだけが通知を受け取る。
 
-カスタム属性の設定の詳細については、次の [iOS][6]、[Android][7]、または[REST API][8] の記事を参照してください。
+カスタム属性の設定の詳細については、次の [iOS]({{site.baseurl}}/developer_guide/analytics/setting_user_attributes/?sdktab=swift)、[Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes)、または[REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification) の記事を参照してください。
 
 ## オプトインと関連性を高める
 
@@ -42,38 +87,38 @@ Android 13 以降では、プッシュ通知を表示する前にアクセス許
 
 ### プッシュのプライムユーザー
 
-ユーザーにプッシュの許可を求めるチャンスは一度しかなく、断られた後、デバイスの設定でプッシュを再度有効にするよう説得するのは非常に難しい。このため、システムプロンプトが表示される前に、アプリ内メッセージを使用して、プッシュ対象としてユーザーを確保する必要があります。オプトインを増やす方法については、[アプリ内メッセージのプッシュ・プライマーを][2]参照のこと。
+ユーザーにプッシュの許可を求めるチャンスは一度しかなく、断られた後、デバイスの設定でプッシュを再度有効にするよう説得するのは非常に難しい。このため、システムプロンプトが表示される前に、アプリ内メッセージを使用して、プッシュ対象としてユーザーを確保する必要があります。オプトインを増やす方法については、[アプリ内メッセージのプッシュ・プライマーを]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)参照のこと。
 
 ### プッシュ購読コントロールを追加する
 
-ユーザーがデバイスレベルで通知をオフにすると、フォアグラウンドのプッシュトークンが完全に削除されるので、これを避けるために、ユーザーのプッシュサブスクリプションをアプリ内でコントロールさせるようにします。詳細は[プッシュサブスクリプションの状態を更新するを][10]参照のこと。
+ユーザーがデバイスレベルで通知をオフにすると、フォアグラウンドのプッシュトークンが完全に削除されるので、これを避けるために、ユーザーのプッシュサブスクリプションをアプリ内でコントロールさせるようにします。詳細は[プッシュサブスクリプションの状態を更新するを]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions#update-push-subscription-state)参照のこと。
 
 ### プッシュサブスクリプションの状態について
 
 プッシュサブスクリプションの状態は、プッシュが確実に配信されることを意味しません。ユーザーが通知を受信するには、プッシュも有効にする必要があります。この理由は、あるユーザープロファイルに異なるフォアグラウンドプッシュアクセス許可を持つ複数のデバイスが含まれていても、プッシュサブスクリプションの状態は 1 つしかないからです。
 
-あるアプリについて、ユーザーが有効なフォアグラウンドプッシュトークンを持っていない場合 (つまり、設定経由でプッシュトークンをデバイスレベルでオフにし、通知を受信しないことを選択した場合) でも、そのサブスクリプションの状態は、プッシュに`subscribed` とみなすことができます。しかし、フォアグラウンドプッシュトークンが有効でないため、このユーザーは Braze で `Push Enabled for App` になっていません。
+あるアプリについて、ユーザーが有効なフォアグラウンドプッシュトークンを持っていない場合 (つまり、設定経由でプッシュトークンをデバイスレベルでオフにし、通知を受信しないことを選択した場合) でも、そのサブスクリプションの状態は、プッシュに`subscribed` とみなすことができます。しかし、フォアグラウンドプッシュトークンが有効でないため、このユーザーは Braze で `Foreground Push Enabled for App` になっていません。
 
-さらに、ユーザープロファイルが他のアプリに対して有効なプッシュトークンを持っていないか、登録されていない場合、セグメンテーションの`Push Enabled` ・フィルターも偽になる。
+さらに、ユーザープロファイルが他のアプリに対して有効なプッシュトークンを持っていないか、登録されていない場合、セグメンテーションの`Foreground Push Enabled` ・フィルターも偽になる。
 
 ## 応答のないユーザーに対するサンセットポリシーを導入する
 
 適切でタイムリーなプッシュ通知だけを送っても、一部のユーザーは無反応だったり、スパム的だと感じたりする。あるユーザーがプッシュ通知を何度も無視した履歴があるとする。その場合、アプリのコミュニケーションにイライラしたり、アプリを完全にアンインストールしたりする前に、プッシュ配信を停止することをお勧めする。 
 
-これを行うには、[配信停止ポリシー][9]を作成します。これは、長期間、直接開封または誘発された開封を行っていないユーザーについて、プッシュ通知の送信を最終的に停止するものです。
+これを行うには、[配信停止ポリシー]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies)を作成します。これは、長期間、直接開封または誘発された開封を行っていないユーザーについて、プッシュ通知の送信を最終的に停止するものです。
 
 1. 直接開封または誘発された開封に基づいて、反応のないユーザーを特定します。
 2. それらのユーザーへのプッシュ通知の送信を徐々に停止する。
 3. プッシュ通知を完全に削除する前に、ユーザーへのプッシュ通知の送信を停止する理由を説明する最終通知を配信します。これにより、ユーザーはその通知を開封することで、継続的なプッシュへの関心を示す機会が得られます。
-4. サンセットポリシー発効後、[アプリ内メッセージを使って][13]、プッシュは受け取れなくなるものの、アプリ内メッセージングチャンネルでは引き続き興味深く有益な情報が配信されることを、これらのユーザーに思い出させる。
+4. サンセットポリシー発効後、[アプリ内メッセージを使って]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)、プッシュは受け取れなくなるものの、アプリ内メッセージングチャンネルでは引き続き興味深く有益な情報が配信されることを、これらのユーザーに思い出させる。
 
 もともとプッシュをオプトインしていたユーザーへのプッシュ配信を止めることに抵抗があるかもしれないが、特にこれまでプッシュを無視していたユーザーには、他のメッセージング・チャネルの方がより効果的にアプローチできることを忘れないでほしい。もしユーザーがEメールを開封してくれれば、Eメールキャンペーンはアプリの外でユーザーにアプローチする良い方法となる。そうでない場合、アプリ内メッセージは、ユーザーがアプリをアンインストールするリスクを冒すことなくコンテンツを配信する最良の方法である。
 
 ## アプリ開封時のコンバージョンイベントを設定する
 
-プッシュキャンペーンに[コンバージョンイベント][11]を割り当てた場合、キャンペーン受信後の一定期間、アプリを開いたかどうかを追跡できます。アプリ開封のコンバージョンイベントを設定することで、通常のプッシュキャンペーン後に受け取る結果統計とは異なるインサイトが得られる。
+プッシュキャンペーンに[コンバージョンイベント]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/)を割り当てた場合、キャンペーン受信後の一定期間、アプリを開いたかどうかを追跡できます。アプリ開封のコンバージョンイベントを設定することで、通常のプッシュキャンペーン後に受け取る結果統計とは異なるインサイトが得られる。
 
-すべてのプッシュキャンペーンの結果は、メッセージの直接開封と開封 (直接と[誘発された開封][12]の両方を含む) に分類されますが、コンバージョントラッキングでは、直接開封か誘発された開封を問わず、あらゆる種類の開封を追跡します。
+すべてのプッシュキャンペーンの結果は、メッセージの直接開封と開封 (直接と[誘発された開封]({{site.baseurl}}/user_guide/analytics/tracking/influenced_opens/)の両方を含む) に分類されますが、コンバージョントラッキングでは、直接開封か誘発された開封を問わず、あらゆる種類の開封を追跡します。
 
 さらに、コンバージョンイベント「アプリを開く」を使用することで、コンバージョン期限 (例えば 3 日間) の前にアプリが開かれたかどうかを追跡します。これは、各ユーザーの過去のエンゲージメント行動に応じて、誘発された開封を登録するまでの時間が異なる、誘発された開封とは異なります。
 
@@ -81,21 +126,7 @@ Android 13 以降では、プッシュ通知を表示する前にアクセス許
 
 お探しのものが見つからなかった？その他のベストプラクティスの記事もチェックしてほしい：
 
-- [プッシュメッセージと画像フォーマット][1]
-- [アプリ内メッセージでのプッシュ確保][2]
-- [中国の Android デバイスへの配信到達性][3]
-- [送信する前に知っておこう：チャンネル][4]
-
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/
-[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/
-[4]: {{site.baseurl}}/help/help_articles/campaigns_and_canvas/know_before_send/
-
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/setting_custom_attributes/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes
-[8]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions#update-push-subscription-state
-[11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/influenced_opens
-[13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/
+- [プッシュメッセージと画像フォーマット]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/)
+- [アプリ内メッセージでのプッシュ確保]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/)
+- [中国の Android デバイスへの配信到達性]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/)
+- [送信する前に知っておこう：チャンネル]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/know_before_send/)

@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Generate Preference Center URL"
+nav_title: "GET: Generate preference center URL"
 article_title: "GET: Generate Preference Center URL"
 search_tag: Endpoint
 page_order: 1

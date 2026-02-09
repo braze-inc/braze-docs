@@ -1,5 +1,5 @@
 ---
-nav_title: Projection des tests A/B
+nav_title: Test A/B projection
 article_title: Projection des tests A/B
 page_order: 20
 hidden: true

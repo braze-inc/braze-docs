@@ -15,7 +15,6 @@ channel:
 
 > Découvrez Push Max et apprenez comment utiliser cette fonctionnalité pour améliorer la livrabilité des notifications push Android sur les [appareils OEM chinois]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/chinese_push_deliverability/).
 
-
 ## Qu'est-ce que Push Max ?
 
 L’option Maximiser les notifications push amplifie les notifications push Android en suivant celles qui ont échoué pour les renvoyer lorsque les utilisateurs ont le plus de chances de les recevoir.
@@ -26,7 +25,7 @@ Certains appareils Android fabriqués par des équipementiers chinois, tels que 
 
 - Disponible uniquement pour les notifications push Android
 - Non pris en charge pour les messages basés sur une action ou déclenchés par l'API.
-- Non pris en charge lorsque l'option d' [envoi uniquement vers le dernier appareil utilisé par l'utilisateur]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#device-options) est sélectionnée.
+- Non pris en charge lorsque l'option d' [envoi uniquement vers le dernier appareil utilisé par l'utilisateur]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#device-options) est sélectionnée.
 
 ## Conditions préalables
 
@@ -37,7 +36,7 @@ Les notifications push envoyées à l'aide de Push Max ne seront délivrées qu'
 ## Utilisation de Push Max
 
 {% tabs %}
-{% tab Campagnes %}
+{% tab Campaigns %}
 
 Pour utiliser Push Max dans votre campagne :
 
@@ -46,7 +45,7 @@ Pour utiliser Push Max dans votre campagne :
 3. Passez à l'étape de la **Planifier l’envoi**.
 4. Sélectionnez **Envoyer à l'aide de Push Max.**
 
-![Section Livrabilité des notifications push Android de l'étape Planifier l’envoi, avec l'option « Envoyer avec Push Max ».]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+![La section Livrabilité Push Android de l'étape Planifier la livraison avec l'option "Envoyer à l'aide de Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
@@ -58,7 +57,7 @@ Pour utiliser Push Max dans votre canvas :
 3. Accédez à l'onglet **Paramètres de réception**.
 4. Sélectionnez **Envoyer à l'aide de Push Max.**
 
-![Onglet Paramètres de réception d'une étape Message de notifications push Android, avec l'option « Envoyer avec Push Max ».]({% image_buster /assets/img_archive/push_max_canvas.png %})
+![Onglet Paramètres de réception/distribution d'une étape du message Push Android avec l'option "Envoyer à l'aide de Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -73,9 +72,9 @@ Push Max fonctionne mieux lorsque le [timing intelligent]({{site.baseurl}}/user_
 
 La durée de vie peut assurer le suivi des échecs des notifications push vers Firebase Cloud Messaging (FCM) et réessayer de renvoyer la notification lorsque l'utilisateur est susceptible de la recevoir.
 
-Par défaut, la durée de vie est fixée à 28 jours, soit le maximum. Vous pouvez réduire la durée TTL par défaut pour tous les nouveaux messages push Android à partir de **Paramètres** > **Paramètres de l'espace de travail** > **Push Time to Live (TTL)**, ou vous pouvez configurer le nombre de jours par message dans l'onglet **Paramètres** lors de la composition d'une notification push Android.
+Par défaut, la durée de vie est fixée à 28 jours, soit le maximum. Vous pouvez diminuer le TTL par défaut pour tous les nouveaux messages push Android à partir de **Paramètres** > **Paramètres de l'espace de travail** > **Paramètres Push**, ou vous pouvez configurer le nombre de jours par message dans l'onglet **Paramètres** lors de la composition d'une notification push Android.
 
-![La durée en ligne/en vie est fixée à 28 jours.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:70%"}
+![La durée en ligne/instantanée est fixée à 28 jours.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 
 ## Choses à savoir
 

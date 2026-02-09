@@ -33,7 +33,7 @@
 3. Dependiendo de las circunstancias, los mensajes dentro de la aplicación descargarán o cargarán las imágenes relevantes del disco antes de su visualización. Si tienes una conexión de red lenta o un dispositivo de muy bajo rendimiento, este proceso puede tardar un poco. Asegúrate de que tus imágenes están optimizadas para ser lo más pequeñas posible.
 {% endcase %}
 
-Para profundizar en estas situaciones, visita [la sección de solución de problemas avanzados](#troubleshooting-in-app-advanced).
+Para profundizar en estas situaciones, visita <a id="troubleshooting-in-app-advanced">la sección de solución de problemas avanzados</a>.
 
 ## Problemas con los análisis de impresiones y clics
 
@@ -60,11 +60,11 @@ Si has configurado un delegado de mensajes dentro de la aplicación para que ges
 
 ![Enlace para ver el registro de cambios en la página Detalles de la campaña con siete cambios desde la última vez que el usuario vio la campaña]({% image_buster /assets/img_archive/trouble4.png %})
 
-2. Asegúrate de que no has reutilizado el evento desencadenante en una campaña de mensajes dentro de la aplicación con una prioridad más alta.
+2. Asegúrate de que no has reutilizado el evento desencadenante en una campaña de mensajes dentro de la aplicación con una prioridad mayor.
 
 ## Solución de problemas avanzada {#troubleshooting-in-app-advanced}
 
-La mayoría de los problemas de mensajes dentro de la aplicación pueden dividirse en dos categorías principales: entrega y visualización. Para solucionar los problemas por los que un mensaje dentro de la aplicación no se ha mostrado en tu dispositivo, confirma que el [mensaje dentro de la aplicación se ha entregado al dispositivo](#troubleshooting-in-app-message-delivery) y, a continuación, [soluciona el problema de la visualización del mensaje](#troubleshooting-in-app-message-display).
+La mayoría de los problemas de mensajes dentro de la aplicación pueden dividirse en dos categorías principales: entrega y visualización. Para solucionar los problemas por los que un mensaje dentro de la aplicación no se ha mostrado en tu dispositivo, confirma que el <a id="troubleshooting-in-app-message-delivery">mensaje dentro de la aplicación se ha entregado al dispositivo</a> y, a continuación, <a id="troubleshooting-in-app-message-display">soluciona el problema de la visualización del mensaje</a>.
 
 ### Solución de problemas de entrega {#troubleshooting-in-app-message-delivery}
 
@@ -72,7 +72,7 @@ El SDK solicita mensajes dentro de la aplicación a los servidores Braze al inic
 
 #### Comprueba si se solicitan y devuelven mensajes
 
-1. Añádete como [usuario de prueba]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) en el panel.
+1. Añádase como [usuario de prueba]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users) en el panel.
 2. Configura una campaña de mensajes dentro de la aplicación dirigida a tu usuario.
 3. Asegúrate de que se produce una nueva sesión en tu aplicación.
 4. Utiliza el [registro de usuarios del evento]({{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab) para comprobar que tu dispositivo solicita mensajes dentro de la aplicación al iniciar la sesión. Busca la solicitud SDK asociada al evento de inicio de sesión de tu usuario de prueba.
@@ -91,11 +91,11 @@ Si tus mensajes dentro de la aplicación no se solicitan, es posible que tu apli
 Si tus mensajes dentro de la aplicación no se devuelven, es probable que estés experimentando un problema de orientación de la campaña:
 
 1. Tu segmento no contiene a tu usuario.
-  - Comprueba la pestaña [\*\*Engagement**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de tu usuario para ver si aparece el segmento correcto en **Segmentos**.
+  - Comprueba la pestaña [\*\*Interacción**]({{ site.baseurl }}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) de tu usuario para ver si aparece el segmento correcto en **Segmentos**.
 2. Tu usuario ha recibido previamente el mensaje dentro de la aplicación y no era elegible para volver a recibirlo.
   - Comprueba la [configuración de elegibilidad de la campaña]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/) en el paso **Entrega** del **Compositor de campañas** y asegúrate de que la configuración de elegibilidad se ajusta a tu configuración de pruebas.
 3. Tu usuario alcanzó el límite de frecuencia de la campaña.
-  - Comprueba la configuración de la campaña [límite de frecuencia]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) y asegúrate de que coincide con la configuración de tus pruebas.
+  - Comprueba la configuración de la campaña [límite de frecuencia]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping) y asegúrate de que se ajusta a tu configuración de pruebas.
 4. Si había un grupo de control en la campaña, tu usuario puede haber caído en el grupo de control.
   - Puedes comprobar si esto ha ocurrido creando un segmento con un filtro de variante de campaña recibida, en el que la variante de campaña esté configurada como **Control**, y comprobando si tu usuario cayó en ese segmento.
   - Cuando crees campañas para realizar pruebas de integración, asegúrate de no añadir un grupo de control.

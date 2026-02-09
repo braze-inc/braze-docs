@@ -1,5 +1,5 @@
 ---
-nav_title: Benutzerverwaltung
+nav_title: "Nutzer:in Verwaltung"
 article_title: LINE Benutzerverwaltung
 page_order: 0
 description: "Dieser Artikel befasst sich mit der LINE-Benutzer-ID und wie Sie diese festlegen."
@@ -21,7 +21,7 @@ Wenn Sie LINE-Nachrichten über Braze versenden, verwendet Braze das Attribut `n
 Die LINE-Benutzer-IDs sind je nach LINE-Anbieter unterschiedlich. Ein bestimmter Benutzer hat verschiedene LINE-Benutzer-IDs für jeden Anbieter, dem er folgt. Es ist unwahrscheinlich, dass Benutzer ihre LINE ID kennen (im Gegensatz zu ihrer E-Mail oder Telefonnummer), da sie sich für jede Marke, der sie folgen, ändert.
 {% endalert %}
 
-## Einstellen des Attributs `native_line_id`
+## Einstellung des Attributs `native_line_id` 
 
 Es gibt eine Reihe von Szenarien, in denen `native_line_id` auf das Nutzerprofil gesetzt wird, die im Folgenden beschrieben werden.
 
@@ -29,7 +29,7 @@ Es gibt eine Reihe von Szenarien, in denen `native_line_id` auf das Nutzerprofil
 | --- | --- | --- |
 |Ein Benutzer folgt einem LINE-Kanal | Kein:e| Ein anonymes Benutzerprofil wird erstellt (eine Zusammenführung ist erforderlich):<br> - `native_line_id` ist auf die LINE ID des Benutzers eingestellt. <br>- `line_id` Nutzer-Alias wird auf die LINE ID der Nutzerin oder des Nutzers gesetzt<br>\- Der Benutzer ist bei der Braze-Abonnementgruppe des Kanals abonniert |
 |Ein Benutzer folgt einem LINE-Kanal| Ja | Alle Benutzerprofile mit dem `native_line_id`:<br>\- Sie sind bei der Braze-Abonnementgruppe des Kanals abonniert|
-|Unternehmen verwendet Benutzer-CSV-Upload mit einer n`ative_line_id` Spalte| Kein:e| Wenn kein Benutzerprofil für den angegebenen `external_id` oder Benutzer-Alias existiert:<br>- `native_line_id` wird auf den angegebenen Wert gesetzt<br> \- Alle anderen in der CSV-Datei angegebenen Attribute werden im Benutzerprofil festgelegt.|
+|Unternehmen verwendet Benutzer-CSV-Upload mit einer `native_line_id` Spalte| Kein:e| Wenn kein Benutzerprofil für den angegebenen `external_id` oder Benutzer-Alias existiert:<br>- `native_line_id` wird auf den angegebenen Wert gesetzt<br> \- Alle anderen in der CSV-Datei angegebenen Attribute werden im Benutzerprofil festgelegt.|
 |Unternehmen verwendet Benutzer-CSV-Upload mit einer `native_line_id` Spalte | Ja | Wenn ein Benutzerprofil für den angegebenen `external_id` oder Benutzer-Alias existiert:<br>- `native_line_id` wird auf den angegebenen Wert gesetzt<br>\- Alle anderen in der CSV-Datei angegebenen Attribute werden im Benutzerprofil festgelegt.<br>\- Mehrere Profile haben das gleiche `native_line_id` |
 | Das Unternehmen verwendet den Endpunkt `/users/track` und gibt das Attribut `native_line_id` an. | Kein:e | Wenn kein Nutzerprofil für den angegebenen Nutzer:in existiert[(angegeben durch `external_id`, `user_alias`, `braze_id` oder `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>- `native_line_id` wird auf den angegebenen Wert gesetzt<br>\- Alle anderen in der Anfrage angegebenen Attribute werden im Benutzerprofil festgelegt |
 | Das Unternehmen verwendet den Endpunkt `/users/track` und gibt das Attribut `native_line_id` an. | Ja | Wenn ein Nutzerprofil für den angegebenen Nutzer:in existiert[(angegeben durch `external_id`, `user_alias`, `braze_id` oder `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>- `native_line_id` wird auf den angegebenen Wert gesetzt<br>\- Alle anderen in der Anfrage angegebenen Attribute werden im Benutzerprofil festgelegt<br>\- Mehrere Profile haben das gleiche `native_line_id` |
@@ -43,6 +43,5 @@ Wenn Sie ein Benutzerprofil im Braze-Dashboard anzeigen, können Sie sehen, ob d
 
 Wenn die `native_line_id` eingestellt wurde, wird sie unter **LINE User ID** angezeigt. Andernfalls wird es nicht angezeigt.
 
-![Zeile Kontakteinstellungen auf dem Tab Engagement.][1]{: style="max-width:60%;"}
+![Zeile Kontakteinstellungen auf dem Tab Engagement.]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}

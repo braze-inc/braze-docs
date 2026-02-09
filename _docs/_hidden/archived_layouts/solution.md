@@ -1,5 +1,5 @@
 ---
-nav_title: Technical Solutions
+nav_title: Technical solutions
 page_order: 3
 
 #Required

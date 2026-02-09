@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [A Adjust](https://www.adjust.com/) é uma empresa de atribuição e análise de dados móveis que combina a atribuição de fontes de publicidade com análises avançadas para obter um quadro abrangente de business intelligence.
 
+_Essa integração é mantida pela Adjust._
+
+## Sobre a integração
+
 A integração do Braze e da Adjust permite importar dados de atribuição de instalação não orgânica para segmentar de forma mais inteligente suas campanhas de ciclo de vida.
 
 ## Pré-requisitos
@@ -29,17 +33,17 @@ A integração do Braze e da Adjust permite importar dados de atribuição de in
 
 #### Android
 
-Se você tiver um app Android, deve passar um ID de dispositivo Braze único para o Adjust. Esse ID pode ser definido no método `addSessionPartnerParameter()` do SDK da Adjust. O snippet de código a seguir deve ser incluído antes da inicialização do SDK em `Adjust.onCreate.`
+Se você tiver um app Android, deve passar um ID de dispositivo Braze único para o Adjust. Esse ID pode ser definido no método `addGlobalPartnerParameter()` do SDK da Adjust. O snippet de código a seguir deve ser incluído antes da inicialização do SDK em `Adjust.initSdk.`
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
+Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getDeviceId()););
 ```
 
 #### iOS
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
+Prior to February 2023, our Adjust attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation because there is no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -48,16 +52,16 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 --->
 
 {% tabs local %}
-{% tab Objective C %}
+{% tab Objective-C %}
 
 Se você tiver um app para iOS, seu IDFV será coletado pelo Adjust e enviado ao Braze. Esse ID será então mapeado para um ID de dispositivo exclusivo no Braze.
 
-O Braze ainda armazenará os valores de IDFA dos usuários que fizeram a aceitação se você estiver coletando o IDFA com o Braze, conforme descrito em nosso [Guia de atualização do iOS 14]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/archived_updates/ios_14/). Caso contrário, o IDFV será usado como um identificador de fallback para mapear os usuários.
+O Braze ainda armazenará os valores de IDFA dos usuários que fizeram a aceitação se você estiver coletando o IDFA com o Braze, conforme descrito em nosso [Guia de atualização do iOS]({{site.baseurl}}/developer_guide/platforms/swift/ios_18/). Caso contrário, o IDFV será usado como um identificador de fallback para mapear os usuários.
 
 {% endtab %}
 {% tab Swift %}
 
-Se você tiver um app para iOS, poderá aceitar a coleta de IDFV definindo o campo `useUUIDAsDeviceId` como `false`. Se não for definido, a atribuição do iOS provavelmente não será mapeada com precisão do Adjust para a Braze. Para saber mais, consulte [Coleta de IDFV]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/analytics/swift_idfv/).
+Se você tiver um app para iOS, poderá aceitar a coleta de IDFV definindo o campo `useUUIDAsDeviceId` como `false`. Se não for definido, a atribuição do iOS provavelmente não será mapeada com precisão do Adjust para a Braze. Para saber mais, consulte [Coleta de IDFV]({{site.baseurl}}/developer_guide/analytics/managing_data_collection/?sdktab=swift).
 
 {% endtab %}
 {% endtabs %}
@@ -70,23 +74,19 @@ Se estiver planejando enviar eventos pós-instalação da Adjust para a Braze, s
 
 Na Braze, navegue até **Integrações** > **Parceiros de tecnologia** e selecione **Adjust**. 
 
-{% alert note %}
-Se você estiver usando a [navegação mais antiga]({{site.baseurl}}/navigation), você pode encontrar **Parceiros de Tecnologia** em **Integrações**.
-{% endalert %}
-
-Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Adjust.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia Adjust (Ajustar). Essa caixa contém chave de importação de dados e o endpoint REST.][1]{: style="max-width:90%;"}
+Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Adjust.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia Adjust (Ajustar). Essa caixa contém chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: configurar a Braze na Adjust
 
 1. No dashboard do Adjust, navegue até **Configurações do app** e navegue até **Configuração de parceiros** e, em seguida, **Adicionar parceiros**.
 2. Selecione **Braze (formerly Appboy)** (Braze [antes Appboy]) e forneça a chave de importação de dados e o endpoint REST da Braze.
-3. Clique em **Save & Close (Salvar e fechar**).
+3. Clique em **Save (Salvar) & Close (Fechar**).
 
 ### Etapa 4: Confirmar a integração
 
-Depois que a Braze receber os dados de atribuição da Adjust, o indicador de status da conexão na página de parceiros de tecnologia da Adjust na Braze mudará de "Não conectado" para "Conectado". Um registro de data e hora da última solicitação bem-sucedida também será incluído. 
+Depois que o Braze receber dados de atribuição da Adjust, o indicador de status da conexão na página de parceiros de tecnologia da Adjust no Braze mudará de "Não conectado" para "Conectado" e incluirá um registro de data e hora da última solicitação bem-sucedida.
 
-Observe que isso não acontecerá até recebermos dados sobre uma instalação atribuída. Instalações orgânicas, que devem ser excluídas do postback da Adjust, são ignoradas pela nossa API e não são contadas ao determinar se uma conexão bem-sucedida foi estabelecida.
+Esse status é alterado somente depois que o Braze recebe dados sobre uma atribuição de instalação. O Braze ignora as instalações orgânicas (exclui-as do postback de ajuste) e não as conta ao determinar se a conexão foi bem-sucedida.
 
 ## Campos de dados disponíveis
 
@@ -112,7 +112,7 @@ Para começar a usar os links de rastreamento de cliques da Adjust, visite sua [
 
 {% tabs local %}
 {% tab Android %}
-Para Android, a Braze permite que os clientes façam a aceitação da [coleta do ID de publicidade do Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection). O GAID também é coletado nativamente pela integração SDK da Adjust. Você pode incluir o GAID nos seus links de rastreamento de cliques da Adjust utilizando a seguinte lógica Liquid:
+Para Android, a Braze permite que os clientes façam a aceitação da [coleta do ID de publicidade do Google (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/sdk_integration#google-advertising-id). O GAID também é coletado nativamente pela integração SDK da Adjust. Você pode incluir o GAID nos seus links de rastreamento de cliques da Adjust utilizando a seguinte lógica Liquid:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -140,5 +140,4 @@ idfv={{most_recently_used_device.${id}}}
 Se você atualmente não usa nenhum identificador de dispositivo - como o IDFV ou GAID - em seus links de rastreamento de cliques, ou não planeja usar no futuro, a Adjust ainda será capaz de atribuir esses cliques por meio de sua modelagem probabilística.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/attribution/adjust.png %}
-[2]: {% image_buster /assets/img/attribution/adjust2.png %}
+

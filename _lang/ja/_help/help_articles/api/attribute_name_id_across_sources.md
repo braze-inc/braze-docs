@@ -24,7 +24,7 @@ platform: API
 
 ### Currents
 
-キャンペーンとキャンバスの属性s は、Currents の[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) に関連付けられています。これは、プッシュ送信やメール開封が関連付けられているキャンペーンまたはキャンバスコンポーネントを特定するために重要です。
+キャンペーンとキャンバスの属性s は、Currents の[メッセージエンゲージメントイベント]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) に関連付けられています。これは、プッシュ送信やメール開封が関連付けられているキャンペーンまたはキャンバスコンポーネントを特定するために重要です。
 
 ## キャンペーン属性
 

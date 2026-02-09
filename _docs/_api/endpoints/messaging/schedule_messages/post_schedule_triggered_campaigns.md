@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Schedule API-Triggered Campaigns"
+nav_title: "POST: Schedule API-triggered campaigns"
 article_title: "POST: Schedule API-Triggered Campaigns"
 search_tag: Endpoint
 page_order: 4
@@ -147,8 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Example success response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
 {
 {
     "dispatch_id": "dispatch_identifier",

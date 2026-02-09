@@ -60,7 +60,7 @@ Exactly three years ago today we met for the first time!
 ```
 {% endraw %}
 
-**설명:** 여기서는 예약 변수 `now`를 사용하여 현재 날짜와 시간을 [ISO 8601ISO](http://en.wikipedia.org/wiki/ISO_8601 "8601 타임코드 위키") 형식으로 템플릿으로 만듭니다. 필터 `%B` (예: "5월")와 `%d`(예: "18일")는 현재 월과 일의 형식을 지정합니다. 그런 다음 `signup_date` 값에 동일한 날짜 및 시간 필터를 사용하여 조건부 태그와 논리를 사용하여 두 값을 비교할 수 있도록 합니다.
+**설명:** 여기서는 예약 변수 `now` 를 사용하여 현재 날짜와 시간을 [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) 형식으로 템플릿화합니다. 필터 `%B` (예: "5월")와 `%d`(예: "18일")는 현재 월과 일의 형식을 지정합니다. 그런 다음 `signup_date` 값에 동일한 날짜 및 시간 필터를 사용하여 조건부 태그와 논리를 사용하여 두 값을 비교할 수 있도록 합니다.
 
 그런 다음 변수 문을 세 개 더 반복하여 `signup_date`에 대해 `%B` 및 `%d`을 구하고 `%Y`("2021"과 같은 연도)를 추가합니다. 이렇게 하면 `signup_date`의 날짜와 시간이 연도로만 구성됩니다. 요일과 월을 알면 사용자의 기념일이 오늘인지 확인할 수 있고, 연도를 알면 몇 년이 지났는지 알 수 있으므로 축하할 수 있습니다!
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### 사용자의 전체 이름이 {#attribute-first-name} first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다
+### 사용자의 전체 이름이 first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다. {#attribute-first-name}
 
 이 사용 사례는 사용자의 이름(이름과 성이 모두 단일 필드에 저장되어 있는 경우)을 캡처한 다음 이 이름을 사용하여 환영 메시지를 표시합니다.
 
@@ -1324,6 +1324,38 @@ This is a message for Verizon users!
 
 {% api %}
 
+## SMS
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+- [인바운드 SMS 키워드에 따라 다양한 메시지로 응답하기](#sms-keyword-response)
+
+### 인바운드 SMS 키워드에 따라 다양한 메시지로 응답하기 {#sms-keyword-response}
+
+이 사용 사례는 동적 SMS 키워드 처리를 통합하여 다양한 메시지 카피로 특정 인바운드 메시지에 응답합니다. 예를 들어, 누군가 "START" 문자를 보낼 때와 "JOIN" 문자를 보낼 때 다른 응답을 보낼 수 있습니다.
+
+{% raw %}
+```liquid
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
+{% if inbound_message contains 'start' %}
+Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
+
+{% elsif inbound_message contains 'join' %}
+Thanks for joining our SMS program! Create an account to get the best deals!
+
+{% else %}
+Thanks for joining our SMS program!
+
+{% endif %}
+```
+{% endraw %}
+
+{% endapi %}
+
+{% api %}
+
 ## 시간대
 
 {% apitags %}
@@ -1460,10 +1492,10 @@ Check out this new bar after work today. HH specials!
 
 {% api %}
 
-## Week/Day/Month
+## 주/일/월
 
 {% apitags %}
-Week/Day/Month
+주/일/월
 {% endapitags %}
 
 - [전월의 이름을 메시지로 가져오기](#month-name)

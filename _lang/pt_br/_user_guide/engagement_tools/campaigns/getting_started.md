@@ -1,5 +1,5 @@
 ---
-nav_title: Como começar
+nav_title: Primeiros passos
 article_title: Primeiros passos com as campanhas
 layout: dev_guide
 guide_top_header: "Primeiros passos com as campanhas"

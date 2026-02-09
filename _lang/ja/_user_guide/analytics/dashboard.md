@@ -1,5 +1,5 @@
 ---
-nav_title: 分析ダッシュボード
+nav_title: あなたの分析 ダッシュボード
 article_title: 分析ダッシュボード
 page_order: 6.5
 layout: dev_guide
@@ -27,5 +27,8 @@ guide_featured_list:
   - name: API 使用状況ダッシュボード
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: eコマース収入ダッシュボード
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
 ---
 <br><br>

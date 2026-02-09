@@ -1,11 +1,11 @@
 ---
 page_order: 10
-nav_title: Termos a serem conhecidos
+nav_title: Termos a conhecer
 article_title: Termos de Braze para conhecer
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
+glossary_top_header: "Termos a serem conhecidos"
+glossary_top_text: "Esses termos devem ajudá-lo à medida que você começa sua jornada para melhores vínculos com clientes e usuários com a Braze. Leia isso antes de começar sua integração."
 page_type: glossary
 description: "Este glossário abrange termos importantes que você deve conhecer durante o processo de integração no Braze."
 
@@ -81,9 +81,9 @@ glossaries:
   - name: Envio de mensagens
     description: "Uma <a href=\"https://www.braze.com/docs/user_guide/message_building_by_channel/push/\">mensagem push</a>, ou notificação por push, é uma notificação que aparece em um aplicativo móvel. As notificações por push geralmente aparecem como caixas de diálogo pop-up e banners para iOS e Android."
   - name: Push token
-    description: "Um token por push é uma chave exclusiva, criada e atribuída pela Apple ou pelo Google para criar uma conexão entre um app e um dispositivo iOS, Android ou web. <a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">A migração de token por push</a> é a importação dessas chaves já geradas para o Braze."
+    description: "Um token por push é uma chave exclusiva, criada e atribuída pela Apple ou pelo Google para criar uma conexão entre um app e um dispositivo iOS, Android ou web. <a href=\"https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens\">A migração de token por push</a> é a importação dessas chaves já geradas para o Braze."
   - name: "TTL: Push Time to Live"
-    description: "Também conhecido como <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/\">Push TTL</a>, o tempo de vida refere-se ao período em que as campanhas continuarão a tentar ser entregues a um usuário off-line."
+    description: "Também conhecido como <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">Push TTL</a>, o tempo de vida refere-se ao período em que as campanhas continuarão a tentar ser entregues a um usuário off-line."
   - name: Condição de corrida
     description: "Uma <a href=\"http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/\">condição de corrida</a> é um conceito de engenharia de software que descreve uma situação indesejável que ocorre quando um sistema tenta realizar várias operações simultaneamente, mas, devido à natureza do sistema, as operações devem ser feitas na sequência correta para serem realizadas corretamente. <br><br>Na plataforma Braze, a segmentação de uma campanha disparada com base nos dados de usuários registrados no momento do evento pode causar uma condição de corrida. Isso acontece quando uma alteração na atribuição do usuário na qual a campanha é segmentada ainda não foi processada para o usuário no momento em que a associação ao segmento é determinada e a campanha é enviada, o que pode fazer com que o usuário não receba a campanha."
   - name: Limite de frequência

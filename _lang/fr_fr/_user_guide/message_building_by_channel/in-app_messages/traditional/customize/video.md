@@ -10,7 +10,7 @@ channel:
 
 # Vidéo {#video}
 
-> Pour lire une vidéo dans un message in-app HTML, incluez les éléments suivants `<video>` dans votre HTML, et remplacez le nom de la vidéo par celui de votre fichier (ou l’URL de la ressource distante). Pour connaître d'autres options `<video>` possibles, consultez la [documentation Web MDN][9].
+> Pour lire une vidéo dans un message in-app HTML, incluez les éléments suivants `<video>` dans votre HTML, et remplacez le nom de la vidéo par celui de votre fichier (ou l’URL de la ressource distante). Pour connaître d'autres options `<video>` possibles, consultez la [documentation Web MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
 
 ```html
 <video class="video" autoplay muted playsinline controls>
@@ -38,4 +38,3 @@ Pour prendre en charge les appareils iOS :
 - iOS ne prend pas en charge la lecture automatique par défaut. Pour mettre à jour cette option par défaut, vous pouvez modifier le [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 
 
-[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

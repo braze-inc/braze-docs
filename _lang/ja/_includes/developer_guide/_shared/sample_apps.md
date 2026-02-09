@@ -1,3 +1,3 @@
 {% alert tip%}
-このSDK を使用してサンプルアプリを表示するには、[リファレンス、リポジトリ、およびサンプルアプリのリスト]({{site.baseurl}}/docs/developer_guide/references/) をチェックアウトします。
+このSDKを使用したサンプルアプリを見るには、[リファレンス、リポジトリ、サンプルアプリのリストを]({{site.baseurl}}/developer_guide/references/)チェックアウトする。
 {% endalert %}

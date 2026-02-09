@@ -22,7 +22,7 @@ Les déclencheurs d’attributs sont disponibles pour les scénarios suivants :
 
 Pour commencer à utiliser les déclencheurs d'attributs, créez une campagne ou un composant Canvas et sélectionnez la **livraison par événement** comme méthode de livraison. Sélectionnez ensuite le déclencheur d’attribut que vous souhaitez utiliser.
 
-![][1]
+![La section "livraison/distribution par événement" avec un menu déroulant pour sélectionner un déclencheur.]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Mettre à jour le statut d’abonnement
 
@@ -41,7 +41,9 @@ Utilisez le déclencheur `Update Subscription Group Status` pour cibler les util
 Par exemple, vous pouvez cibler les utilisateurs en leur envoyant un message SMS de bienvenue lorsqu'ils s'inscrivent à votre programme. Vous pouvez également spécifier la source de la mise à jour afin d’obtenir un contrôle plus précis du moment où un message est envoyé. 
 
 Les sources de mise à jour disponibles varient selon le canal :
+- Étape de mise à jour de l’utilisateur du canvas
 - Importation CSV
+- List-Unsubscribe
 - Centre de préférences
 - API REST
 - SDK
@@ -58,21 +60,21 @@ Pour modifier l’attribut, le déclencheur est évalué en premier, puis les cr
 
 Utilisez le déclencheur `Change Custom Attribute Value` avec l’option `any new value` pour cibler les utilisateurs lorsqu’une valeur booléenne, entière, chaîne de caractères ou date change vers n’importe quelle nouvelle valeur.
 
-Par exemple, cibler les utilisateurs lorsque leur nombre de points de fidélité change pour leur indiquer combien de points ils ont maintenant. Dans cet exemple, disons qu’un utilisateur dispose de 85 points de fidélité et que vous avez configuré une campagne pour qu’elle se déclenche lorsque l’attribut de point de fidélité change vers n’importe quelle nouvelle valeur. Si la valeur de l'attribut des points de fidélité de cet utilisateur passe à une nouvelle valeur (e.g 83, 84, 86, etc.), la campagne se déclenchera.
+Par exemple, ciblez les utilisateurs lorsque leur nombre de points de récompense change pour leur faire savoir combien de points ils ont désormais. Dans cet exemple, disons qu'un utilisateur a 85 points de fidélité et que vous avez implémenté une campagne qui se déclenche lorsque l'attribut du point de fidélité change de valeur. Si la valeur de l'attribut de points de récompense de cet utilisateur passe à une nouvelle valeur (83, 84, 86, etc.), la campagne se déclenche.
 
-Examinez le prochain exemple de cas d’utilisation avec une notification de mise à jour de niveau. Vous pouvez désirer alerter les utilisateurs si leur niveau de fidélité change. Pour accomplir ce cas d’utilisation, configurez une campagne qui se déclenche à partir de `Change Custom Attribute Value` et définissez-la pour qu’elle le fasse lorsque l’attribut personnalisé de niveau de fidélité change vers n’importe quelle nouvelle valeur.
+Examinez le prochain exemple de cas d’utilisation avec une notification de mise à jour de niveau. Vous pourriez vouloir alerter les utilisateurs en cas de changement de leur niveau de récompense. Pour réaliser ce cas d'utilisation, configurez une campagne qui s'implémente à partir de `Change Custom Attribute Value` et définissez-la pour qu'elle se déclenche lorsque l'attribut personnalisé du niveau de récompense passe à une nouvelle valeur.
 
 {% alert important %}
 Les déclencheurs d’attributs ne sont pas actuellement disponibles pour les attributs de tableaux.
 {% endalert %}
 
-![N’importe quelle nouvelle valeur][2]
+![Un déclencheur "Changer la valeur de l'attribut personnalisé" pour le changement de valeur de l'adresse "AA_current_rewards_tier".]({% image_buster /assets/img_archive/any_value.png %})
 
-Vous pouvez également utiliser Liquid pour personnaliser le corps du message avec le nouveau niveau de fidélité du client et lui fournir plus d’informations sur le changement.
+Vous pouvez également utiliser Liquid pour personnaliser le corps du message avec le nouveau niveau de récompense du client et lui fournir plus d'informations sur le changement.
 
 {% raw %}
 ```liquid
-Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
+Your rewards tier was just changed to {{custom_attribute.${AA_current_rewards_tier}}}
 ```
 {% endraw %}
 
@@ -80,9 +82,9 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 Utilisez le déclencheur `Change Custom Attribute Value` avec l’option `specific value` pour cibler les utilisateurs lorsqu’un attribut personnalisé booléen, entier ou chaîne de caractères change vers n’importe quelle nouvelle valeur. 
 
-Par exemple, cibler les utilisateurs lorsque leur niveau de fidélité passe au niveau le plus haut. Pour cet exemple, disons que le niveau de fidélité le plus haut est Super VIP. Vous pouvez configurer une campagne pour qu’elle se déclenche lorsque l’attribut personnalisé de niveau de fidélité d’un utilisateur passe à `Super VIP` afin que vous puissiez le féliciter d’être devenu un Super VIP.
+Par exemple, ciblez les utilisateurs lorsque leur niveau de récompense passe au meilleur niveau. Pour cet exemple, disons que le meilleur niveau de récompense est Super VIP. Vous pouvez implémenter des campagnes qui se déclenchent lorsque l'attribut personnalisé du niveau de récompenses d'un utilisateur devient `Super VIP` afin de le féliciter d'être devenu un Super VIP.
 
-![][4]
+![Un déclencheur "Changer la valeur de l'attribut personnalisé" pour que le site "AA_current_rewards_tier" prenne la valeur spécifique de "super vip".]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Les déclencheurs d’attributs pour des valeurs d’attribut personnalisé spécifiques ne sont pas disponibles pour les attributs personnalisés de tableau et de date.
@@ -91,6 +93,3 @@ Par exemple, cibler les utilisateurs lorsque leur niveau de fidélité passe au 
 - Le déclencheur de changement de valeurs d’attribut personnalisé s’applique également aux nouveaux utilisateurs créés.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

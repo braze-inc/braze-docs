@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Remove External ID"
+nav_title: "POST: Remove external ID"
 article_title: "POST: Remove External ID"
 search_tag: Endpoint
 page_order: 2
@@ -14,9 +14,9 @@ description: "This article outlines details about the Remove external IDs endpoi
 /users/external_ids/remove
 {% endapimethod %}
 
-> Use this endpoint to remove your users' old deprecated external IDs. 
+> Use this endpoint to remove your users' old deprecated external IDs.
 
-You can send up to 50 external IDs per request. 
+You can send up to 50 external IDs per request.
 
 {% alert warning %}
 This endpoint completely removes the deprecated ID and cannot be undone. Using this endpoint to remove deprecated `external_ids` that are still associated with users in your system can permanently prevent you from finding those users' data.

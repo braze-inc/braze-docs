@@ -8,7 +8,7 @@ description: "Cette page de référence indique les opérateurs compatibles Liqu
 
 # Opérateurs
 
-> Liquid prend en charge de nombreux [opérateurs][25] qui peuvent être utilisés dans vos instructions conditionnelles. Cette page présente les opérateurs pris en charge par Liquid et fournit des exemples d'utilisation dans vos messages.
+> Liquid prend en charge de nombreux [opérateurs](https://docs.shopify.com/themes/liquid/basics/operators) qui peuvent être utilisés dans vos instructions conditionnelles. Cette page présente les opérateurs pris en charge par Liquid et fournit des exemples d'utilisation dans vos messages.
 
 Ce tableau énumère les opérateurs pris en charge. Notez que les parenthèses sont des caractères non valides dans Liquid et qu'elles empêchent vos étiquettes de fonctionner.
 
@@ -29,7 +29,7 @@ Ce tableau énumère les opérateurs pris en charge. Notez que les parenthèses 
 
 Passons en revue quelques tutoriels pour apprendre à utiliser ces opérateurs pour vos campagnes marketing :
 
-### Choisir un message avec un attribut personnalisé de type entier
+### Choisissez un message avec un attribut personnalisé de type entier
 
 Envoyons des notifications push avec des remises promotionnelles personnalisées aux utilisateurs qui ont ou n'ont pas effectué d'achats. La notification push utilisera un attribut personnalisé entier appelé `total_spend` pour vérifier les dépenses totales de l'utilisateur.
 
@@ -61,9 +61,9 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 ```
 {% endraw %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.][13]{: width="100%"}
+![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
@@ -75,7 +75,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Désormais, si l'attribut personnalisé "Dépenses totales" d'un utilisateur est supérieur à `0`, il recevra un message :
+Désormais, si l'attribut personnalisé "Dépenses totales" d'un utilisateur est supérieur à `0`, il recevra le message suivant :
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -86,7 +86,7 @@ Si l'attribut personnalisé "Dépenses totales" d'un utilisateur n'existe pas ou
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Choisir un message avec une chaîne de caractères attribut personnalisé
+### Choisissez un message avec une chaîne de caractères attribut personnalisé
 
 Envoyons des notifications push aux utilisateurs, et personnalisons le message en fonction du jeu le plus récemment joué par chaque utilisateur. Cet attribut utilise une chaîne personnalisée appelée `recent_game` pour vérifier le dernier jeu auquel l'utilisateur a joué.
 
@@ -110,11 +110,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Utilisez l'étiquette `elsif` avec les opérateurs does not equal (`!=`) et "and" (`&&`) pour vérifier que l'utilisateur a un jeu récent (c'est-à-dire que la valeur n'est pas vide) et que le jeu n'est pas *Awkward Dinner Party (dîner gênant* ) ou *Proxy War 3 (guerre par procuration) : La guerre de la soif*. Créez ensuite un message à envoyer à ces utilisateurs.
+3\. Utilisez l'étiquette `elsif` avec les opérateurs "does not equal" (`!=`) et "and" (`and`) pour vérifier que l'utilisateur a un jeu récent (c'est-à-dire que la valeur n'est pas vide) et que le jeu n'est pas *Awkward Dinner Party* ou *Proxy War 3 : La guerre de la soif*. Créez ensuite un message à envoyer à ces utilisateurs.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -138,14 +138,14 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
@@ -154,7 +154,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 {% endraw %}
 {% enddetails %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.][14]
+![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/liquid-if-elsif-games.png %})
 
 Désormais, si un utilisateur a joué pour la dernière fois à *Awkward Dinner Party*, il recevra ce message :
 
@@ -204,7 +204,7 @@ Stream now!
 ```
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{${time_zone}}} =='America/Los_Angeles' %}
@@ -216,13 +216,8 @@ Stream now!
 {% endraw %}
 {% enddetails %}
 
-![Un compositeur de notifications push avec le code Liquid complet du tutoriel.][26]
+![Un compositeur de notifications push avec le code Liquid complet du tutoriel.]({% image_buster /assets/img/abort-if.png %})
 
-Vous pouvez également [interrompre les messages][1] en fonction du contenu connecté.
+Vous pouvez également [interrompre les messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/) en fonction du contenu connecté.
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
-[13]: {% image_buster /assets/img/liquid-if-totalspend.png %}
-[14]: {% image_buster /assets/img/liquid-if-elsif-games.png %}
-Il y a [25]: https://docs.shopify.com/themes/liquid/basics/operators
-[26]: {% image_buster /assets/img/abort-if.png %}

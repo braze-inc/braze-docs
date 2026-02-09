@@ -13,7 +13,7 @@ page_order: 6.1
 
 > Use o Dashboard Builder para criar dashboards e visualizações usando relatórios criados no Report Builder ou no Query Builder.
 
-O Dashboard Builder permite que você crie e visualize dashboards analíticos personalizados a partir do zero e de modelos fornecidos pelo Braze. Você pode usar uma fonte de dados sem código (Report Builder) ou uma fonte de dados SQL (Query Builder) para alimentar seu dashboard ou começar com um dos muitos modelos do Braze.
+O Dashboard Builder permite que você crie e visualize painéis analíticos personalizados a partir do zero e de painéis fornecidos pela Braze. Você pode usar uma fonte de dados sem código (Report Builder) ou uma fonte de dados SQL (Query Builder) para alimentar seu dashboard ou começar com um dos muitos dashboards fornecidos pela Braze.
 
 ## Criação de um dashboard personalizado
 
@@ -21,12 +21,12 @@ O Dashboard Builder permite que você crie e visualize dashboards analíticos pe
 2. Selecione **Create Dashboard**.
 3. Selecione qual fonte de dados alimentará seus relatórios:
 - **Relatórios** criados no Report Builder
-- **Consultas personalizadas** que foram criadas no Query Builder<br><br>![Janela para selecionar a fonte de dados para seu dashboard.][4]<br><br>
+- **Consultas personalizadas** que foram criadas no Query Builder<br><br>![Janela para selecionar a fonte de dados para seu dashboard.]({% image_buster /assets/img/select_data_source.png %})<br><br>
 
 Agora, siga as respectivas etapas para sua fonte de dados:
 
 {% tabs %}
-{% tab Relatórios %}
+{% tab Reports %}
 
 {: start="4"}
 4\. Selecione **\+ Add Tile** e, em seguida, escolha um dos relatórios que você criou no [Report Builder (New)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
@@ -36,13 +36,13 @@ Agora, siga as respectivas etapas para sua fonte de dados:
 6\. Selecione **Save (Salvar)** depois de alterar a visualização de acordo com suas preferências.
 7\. Adicione um nome, uma descrição e uma tag para facilitar a localização de seu dashboard mais tarde.
 {% endtab %}
-{% tab Consultas personalizadas %}
+{% tab Custom Queries %}
 {: start="4"}
 4\. Selecione **\+ Add Tile** e escolha uma consulta que você tenha executado no Query Builder.
 5\. Para editar como os resultados da consulta são exibidos no bloco, selecione o ícone de lápis para alterar o título e o tipo de gráfico.
     \- Você pode alternar entre diferentes tipos de gráficos abaixo da visualização padrão. As opções atuais incluem tabelas, gráficos de barras (horizontais ou verticais) e gráficos de linhas.<br><br>![Alterna para diferentes tipos de gráficos.]({% image_buster /assets/img/query_builder_types.png %})<br><br>
-        \- Se você escolher uma das opções de gráfico, use o menu suspenso **do eixo X** para selecionar uma única coluna dos resultados da consulta a ser usada como eixo x.
-        \- Use o menu suspenso **do eixo Y** para selecionar quais métricas serão incluídas em sua visualização. Por padrão, todas as colunas dos resultados da consulta serão exibidas, portanto, desmarque as colunas que não lhe interessam.<br><br>![Alterna para diferentes tipos de gráficos.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
+        \- Se você escolher uma das opções de gráfico, use o menu suspenso **Eixo X** para selecionar uma única coluna dos resultados da consulta a ser usada como eixo x.
+        \- Use o menu suspenso **do eixo Y** para selecionar as métricas a serem incluídas em sua visualização. Por padrão, todas as colunas dos resultados da consulta serão exibidas, portanto, desmarque as colunas que não lhe interessam.<br><br>![Alterna para diferentes tipos de gráficos.]({% image_buster /assets/img/query_builder_axis.png %})<br><br>
         \- (Opcional) Você pode usar o menu suspenso **Agrupamento** para agrupar os resultados da consulta. Por exemplo, se você tiver o ID da campanha como resultado de uma coluna e quiser somar todas as linhas com esse valor, use o menu suspenso **Agrupamento**.  
         \- (Opcional) Para editar os dados que estão sendo exibidos, selecione a consulta que está anexada ao visual e faça suas edições no [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/).
 6\. Selecione **Save (Salvar)** depois de alterar a visualização de acordo com suas preferências.
@@ -74,23 +74,23 @@ Faça uma cópia de seu bloco selecionando **Duplicate Tile (Duplicar bloco** ) 
 
 Ajuste o tamanho do bloco arrastando o canto inferior direito do bloco e ajuste a posição do bloco no dashboard arrastando a alça no canto superior direito do bloco.
 
-## Execução de um modelo de dashboard
+## Execução de um dashboard
 
-1. Acesse **Análise de dados** > **Criador de dashboard**. A página inicial lista todos os dashboards existentes em seu espaço de trabalho, com modelos criados pelo Braze na parte superior. Eles são indicados com "(Braze)" no título.
+1. Acesse **Análise de dados** > **Criador de dashboard**. A página inicial lista todos os dashboards existentes em seu espaço de trabalho, com os dashboards criados pelo Braze na parte superior. Eles são indicados com "(Braze)" no título.
 2. Selecione o dashboard de seu interesse.
-3. Selecione **Run Dashboard (Executar painel)** para carregar o respectivo dashboard usando esse modelo.
+3. Selecione **Run Dashboard** para carregar o respectivo dashboard usando esse painel.
 
-### Modelos de dashboard disponíveis
+### Dashboards disponíveis
 
-A Braze oferece modelos de dashboards pré-criados para casos de uso frequente, como análise de receita usando a atribuição do último ponto de contato. Note que a capacidade de editar um dashboard de modelo ainda não está disponível. Entre em contato com seu gerente de sucesso do cliente se quiser ver determinados modelos de dashboard em futuras versões de modelos.
+O Braze fornece dashboards pré-construídos para casos de uso frequente, como a análise da receita usando a atribuição do último ponto de contato. Note que a capacidade de editar um dashboard ainda não está disponível. Entre em contato com o gerente de sucesso do cliente se quiser ver determinado dashboard no futuro.
 
 #### Receita – atribuição de último ponto de contato
 
-O modelo **Receita - Atribuição do último ponto de contato** fornece uma análise da receita em campanhas, telas e canais. Todos os dados de receita são atribuídos à última mensagem tocada durante a janela de atribuição.
+O dashboard **Receita - Atribuição do último ponto de contato** fornece uma análise da receita em campanhas, telas e canais. Todos os dados de receita são atribuídos à última mensagem tocada durante a janela de atribuição.
 
-Os toques incluem _clique em e-mail_, _clique em cartão de conteúdo_, _clique em mensagem no app_, _envio de mensagens SMS_, _leitura do WhatsApp_ e _envio de webhook_.
+Os toques incluem _clique em e-mail_ (clique em link), _clique em cartão de conteúdo_, _clique em mensagem no app_ (excluindo os botões de fechar), _push Opens_, _clique em link curto de SMS_, _leitura de WhatsApp_ e _envio de webhook_.
 
-| Métricas | Definição |
+| Métrico | Definição |
 | --- | --- |
 | Receita total do último ponto de contato | Uma soma de todos os eventos de receita da campanha e do Canva com um evento de último ponto de contato dentro do intervalo de datas e da janela de atribuição selecionados. |
 | Total de conversões de compras | Uma contagem de todos os eventos de receita da campanha e do Canva com um evento de último ponto de contato qualificado. |
@@ -109,7 +109,7 @@ Os toques incluem _clique em e-mail_, _clique em cartão de conteúdo_, _clique 
 
 #### Dispositivos e operadoras
 
-| Métricas | Definição |
+| Métrico | Definição |
 | --- | --- |
 | Operadoras de dispositivos | Contagem de usuários no intervalo de datas selecionado que abriram uma notificação por push, agrupados por operadora de dispositivo. |
 | Modelo do dispositivo | Contagem de usuários no intervalo de datas selecionado que abriram uma notificação por push, agrupados por modelo de dispositivo. |
@@ -117,11 +117,38 @@ Os toques incluem _clique em e-mail_, _clique em cartão de conteúdo_, _clique 
 | Tamanho da tela do dispositivo | Contagem de usuários no intervalo de datas selecionado que abriram uma notificação por push, agrupados pela resolução (tamanho) da tela do dispositivo. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+#### Insights de segmento - E-mail
+
+| Métrico  | Definição  |
+|---|---|
+| Métricas de envio semanal de e-mail (taxas) | Taxas de engajamento de e-mail (taxas de entrega, bounce, abertura, clique, cancelamento de inscrição) agrupadas por segmento e exibidas como séries temporais semanais.|
+| Métricas semanais de envio de e-mail (contagens) | Contagens de engajamento de e-mail (enviadas, entregues, bounces, aberturas, cliques, cancelamentos de inscrição) agrupadas por segmento e exibidas como séries temporais semanais.|
+| Métricas de compras semanais (taxas) | Taxas de conversão de compras (receita por destinatário) de aberturas e cliques de e-mail, agrupadas por segmento e exibidas como uma série temporal semanal.|
+| Métricas de compras semanais (contagens) | Contagens de compras e totais de receita de aberturas e cliques de e-mails, agrupados por segmento e exibidos como uma série temporal semanal.|
+| Engajamento de e-mail por segmento | Tabela de resumo mostrando o total de métricas de engajamento de e-mail (enviadas, entregues, bounces, aberturas, cliques, cancelamentos de inscrição e suas taxas) agregadas por segmento.|
+| Compras & Receita por segmento | Tabela de resumo que mostra as métricas totais de compra (compras, receita e receita por destinatário) de aberturas e cliques de e-mails, agregadas por segmento.|
+| As 10 principais campanhas para métricas de engajamento | Lista classificada de campanhas com as métricas de engajamento de e-mail mais altas (métrica configurável para classificação).|
+| As 10 campanhas mais baixas em termos de métricas de engajamento | Lista classificada de campanhas com as métricas de engajamento de e-mail mais baixas (métrica configurável para classificação).|
+| As 10 principais telas para métricas de engajamento | Lista classificada de Canvases com as métricas de engajamento de e-mail mais altas (métrica configurável para classificação).|
+| As 10 últimas telas para métricas de engajamento | Lista classificada de Canvases com as métricas de engajamento de e-mail mais baixas (métrica configurável para classificação).|
+| As 10 principais campanhas para métricas de compras | Lista classificada de campanhas com as métricas de conversão de compra mais altas do engajamento por e-mail (métrica configurável para classificação).|
+| As 10 campanhas mais baixas para métricas de compra | Lista classificada de campanhas com as métricas de conversão de compra mais baixas do engajamento por e-mail (métrica configurável para classificação).|
+| As 10 principais telas para métricas de compras | Lista classificada de Canvas com as métricas de conversão de compra mais altas do engajamento por e-mail (métrica configurável para classificação).|
+| As 10 menores telas para métricas de compra | Lista classificada de Canvas com as métricas de conversão de compra mais baixas do engajamento por e-mail (métrica configurável para classificação).|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Análise de dados da sessão
+
+| Métrico | Definição  |
+|---|---|
+| \# Número de sessões por dia (série temporal) | Contagem de sessões exclusivas agrupadas por dia no intervalo de datas selecionado, exibidas como uma série temporal.|
+| Número médio de sessões por usuário | Número médio de sessões por usuário, calculado como o total de sessões dividido por usuários únicos dentro do intervalo de datas selecionado.|
+| As campanhas são convertidas em sessões | Contagem de sessões exclusivas que ocorreram ao mesmo tempo que as conversões da campanha, agrupadas por ID da campanha e classificadas por contagem de sessões.|
+| As telas são convertidas em sessões | Contagem de sessões exclusivas que ocorreram ao mesmo tempo que as conversões do Canvas, agrupadas por ID do Canvas e classificadas por contagem de sessões.|
+| Número total de sessões por usuário | Lista dos 1.000 principais usuários por sua contagem total de sessões dentro do intervalo de datas selecionado.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Compartilhe seus comentários conosco
 
 Selecione o botão **Enviar feedback** ou entre em contato com o gerente de sucesso do cliente para compartilhar seu feedback conosco.
 
-[1]: {% image_buster /assets/img/chart_type.png %}
-[2]: {% image_buster /assets/img/sample_tile.png %}
-[3]: {% image_buster /assets/img/drag_tile.png %}
-[4]: {% image_buster /assets/img/select_data_source.png %}

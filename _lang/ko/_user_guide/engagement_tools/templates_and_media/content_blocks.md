@@ -23,10 +23,10 @@ tool:
 
 ## 콘텐츠 블록 만들기
 
-콘텐츠 블록을 생성하는 데 사용되는 편집기에는 클래식과 드래그 앤 드롭의 두 가지 유형이 있습니다. 이 두 가지 유형의 편집기는 콘텐츠 블록 유형에 해당합니다: HTML 및 드래그 앤 드롭. API를 사용하여 콘텐츠 블록을 생성하고 관리할 수도 있습니다[][5].
+콘텐츠 블록을 생성하는 데 사용되는 편집기에는 클래식과 드래그 앤 드롭의 두 가지 유형이 있습니다. 이 두 가지 유형의 편집기는 콘텐츠 블록 유형에 해당합니다: HTML 및 드래그 앤 드롭. You can also create and manage your Content Blocks [using the API]({{site.baseurl}}/api/endpoints/templates/).
 
 {% tabs %}
-{% tab 드래그 앤 드롭 %}
+{% tab Drag-and-drop %}
 
 {% multi_lang_include create_content_block.md location="dnd" %}
 
@@ -45,7 +45,7 @@ tool:
 | 이름 | 최대 100자까지 입력 가능한 필수 필드입니다. 콘텐츠 블록이 저장된 후에는 이름을 변경할 수 없습니다. 또한, 이전 콘텐츠 블록이 보관되었더라도 새 콘텐츠 블록에 이전 콘텐츠 블록과 동일한 이름을 지정할 수 없습니다. |
 | 설명 | (선택 사항) 최대 250자. 콘텐츠 블록을 설명하여 다른 Braze 사용자가 그것이 무엇을 위한 것이며 어디에 사용되는지 알 수 있도록 하세요. |
 | 콘텐츠 크기 | 최대 50KB. |
-| 배치 | 콘텐츠 블록은 이메일 바닥글 내에서 사용할 수 없습니다. |
+| 배치 | 콘텐츠 블록은 이메일 바닥글 내에서 사용할 수 없지만 [바닥글을 포함하는 콘텐츠 블록을 만들어](#email-footers) 이메일에 사용할 수 있습니다. |
 | 생성 | HTML 편집기 또는 드래그 앤 드롭 편집기. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -80,7 +80,7 @@ tool:
 
 After making edits to a Content Block, you can save and launch the updated Content Block by selecting **Launch Content Block**. 또는 **더보기** > **복제**를 선택하여 콘텐츠 블록의 복제본을 만들 수 있습니다.
 
-![A Content Block that reads "Welcome to our newsletter".][2]
+![A Content Block that reads "Welcome to our newsletter".]({% image_buster /assets/img/copy-content-block.png %})
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) a Content Block. 이것은 콘텐츠 블록의 초안 사본을 만듭니다.
 
@@ -90,7 +90,7 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 이 미리보기에는 콘텐츠 블록에 대한 정보가 포함되어 있습니다. 예를 들어, 누가 만들었는지, 태그, 생성 날짜, 마지막 편집 날짜, 설명, 편집기 유형, 세부 사항이 포함된 포함 횟수, 그리고 실제 콘텐츠 블록의 미리보기가 포함됩니다.
 
-![A preview of a Content Block "Workout_Promo" for cycling and dancing that has six inclusions.][7]{: style="max-width:60%;"} 
+![6개의 콘텐츠가 포함된 사이클링 및 댄스용 콘텐츠 블록( "Workout_Promo" )의 미리보기입니다.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### 중첩 콘텐츠 블록
 
@@ -100,13 +100,21 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 셋째 수준의 콘텐츠 블록을 중첩하는 것을 막을 수는 없지만, 콘텐츠가 두 번째 수준을 넘어 중첩되는 것은 볼 수 없습니다. 콘텐츠와 Liquid 스니펫이 메시지에서 제거됩니다.
 {% endalert %}
 
-또한 콘텐츠 블록은 이메일 바닥글 내에서 사용할 수 없지만, 이메일 바닥글은 콘텐츠 블록 내에서 사용할 수 있습니다.
+### 콘텐츠 블록에서 이메일 바닥글 사용 {#email-footers}
+
+콘텐츠 블록은 이메일 바닥글 내에서 사용할 수 없지만 바닥글 콘텐츠가 포함된 콘텐츠 블록을 만들어 이메일에 사용할 수 있습니다. To do so, follow these steps:
+
+1. **설정** > **이메일 환경설정** > **커스텀 바닥글로** 이동하여 바닥글을 작성합니다.
+2. **콘텐츠 블록 라이브러리에서** 콘텐츠 블록에 바닥글을 추가합니다.
+3. 해당 콘텐츠 블록을 이메일 템플릿이나 메시징에 추가하세요.
+
+이제 여러 메시징에 동일한 바닥글을 사용할 수 있습니다!
 
 ### 콘텐츠 블록 보관
 
-![확장된 설정 드롭다운 메뉴에는 세 가지 옵션이 표시됩니다: 워크스페이스로 아카이브, 복제 및 복사.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![확장된 설정 드롭다운 메뉴에는 세 가지 옵션이 표시됩니다: 워크스페이스로 아카이브, 복제 및 복사.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) page. 보관된 콘텐츠 블록은 읽기 전용이므로 편집하기 전에 콘텐츠 블록의 보관을 해제하십시오. 콘텐츠 블록은 메시지에서 사용되는 경우 보관할 수 없습니다.
+콘텐츠 블록 사용을 마치면 [템플릿 & 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) 페이지에서 콘텐츠 블록을 보관할 수 있습니다. 보관된 콘텐츠 블록은 읽기 전용이므로 편집하기 전에 콘텐츠 블록의 보관을 해제하십시오. 콘텐츠 블록은 메시지에서 사용되는 경우 보관할 수 없습니다.
 
 #### 모범 사례
 
@@ -115,11 +123,5 @@ Once you have finished using a Content Block, you can archive it from the [Templ
 - When your block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing all content from the block and archiving it. 이것은 새로 보낸 이메일에 오래된 정보가 포함되지 않도록 보장할 것입니다.
 - 콘텐츠 블록을 실수로 보관하면 보관 해제할 수 있습니다.
 
-![저장된 콘텐츠 블록 패널에서 "Test_32"의 설정 드롭다운 메뉴가 확장되어 세 가지 옵션이 표시됩니다: 보관 해제, 복제 및 작업 공간으로 복사][4]
+![저장된 콘텐츠 블록 패널에서 "Test_32" 에 대한 설정 드롭다운 메뉴가 확장되어 세 가지 옵션이 표시됩니다: 보관 해제, 복제 및 작업 공간으로 복사]({% image_buster /assets/img/unarchive-content-block.png %})
 
-[2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/template_archive_cog.png %}
-[4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{site.baseurl}}/api/endpoints/templates/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[7]: {% image_buster /assets/img/preview_tab_content_block.png %}

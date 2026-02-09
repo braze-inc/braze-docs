@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Create Multiple Catalog Items"
+nav_title: "POST: Create multiple catalog items"
 article_title: "POST: Create Multiple Catalog Items"
 search_tag: Endpoint
 page_order: 3

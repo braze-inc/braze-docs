@@ -51,19 +51,7 @@ Braze 설명서에서 "다변량 테스트"는 설정 과정이 동일하므로 
 
 ### 배리언트 배포
 
-배리언트 상품 간의 분포가 항상 균일한 것은 아닙니다. 배리언트 상품 배포 방식은 다음과 같습니다.
-
-다변량 캠페인에서 메시지를 보낼 때마다 시스템은 사용자가 설정한 비율에 따라 무작위 옵션을 독립적으로 선택하고 그 결과에 따라 변형을 할당합니다. 동전 던지기와 같이 예외적인 상황이 발생할 수 있습니다. 동전을 100번 던져본 적이 있다면, 선택지가 두 개뿐인데도 매번 앞면과 뒷면이 정확히 50대 50으로 나뉘지 않는다는 것을 알고 있을 것입니다. 52개의 머리와 48개의 꼬리를 얻을 수 있습니다.
-
-균등하게 분할하려는 이형 상품이 여러 개 있는 경우 이형 상품의 수가 100의 배수인지도 확인해야 합니다. 그렇지 않으면 일부 이형 상품은 다른 이형 상품에 비해 해당 이형 상품에 배포되는 사용자 비율이 더 높아집니다. 예를 들어 캠페인에 7개의 배리언트 상품이 있는 경우 7이 정수로 100으로 균등하게 나뉘지 않으므로 배리언트 상품 분포가 짝수일 수 없습니다. 이 경우 15%의 배리언트 상품 2개와 14%의 배리언트 상품 5개를 보유하게 됩니다.
-
-#### 인앱 메시지 관련 참고 사항
-
-인앱 메시지에 대해 A/B 테스트를 실행할 때, 분석 결과 한 이형 상품과 다른 이형 상품 간의 비율이 균등하더라도 이형 상품 분포가 더 높은 것처럼 보일 수 있습니다. 예를 들어, 배리언트 A와 배리언트 C에 대한 다음 *고유 수신자* 그래프를 생각해 보겠습니다.
-
-![배리언트 A와 배리언트 C의 모양이 비슷한 두 가지 배리언트에 대한 고유 수신자 그래프(여기서 배리언트 A의 일일 고유 수신자 수가 더 높음)]({% image_buster /assets/img/variant_distribution_iam.png %})
-
-이는 배리언트 분포 때문이 아니라 인앱 메시지의 *고유 수신자* 수가 계산되는 방식 때문이며, 배리언트 A가 배리언트 C보다 *고유 수신자* 수가 지속적으로 더 많습니다. 인앱 메시지의 경우, *고유 수신자*는 실제로 인앱 메시지를 수신하고 본 총 사용자 수인 *고유 노출* 횟수입니다. 즉, 사용자가 어떤 이유로든 메시지를 받지 못하거나 보지 않기로 결정한 경우 *고유 수신자* 수에 포함되지 않으며 변형 분포가 왜곡되어 나타날 수 있습니다.
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
 
 ## Tips for multivariate and A/B testing
 
@@ -99,16 +87,3 @@ For accurate test results:
 [대조 그룹을]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/#including-a-control-group) 포함하면 메시지를 전혀 보내지 않는 것보다 메시지를 보내는 것이 사용자 전환에 더 큰 영향을 미치는지 알 수 있습니다.
 
 
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[70]: #tips-different-channels
-[80]: #choosing-a-segment
-[160]: {% image_buster /assets/img/ab_create_1.png %}
-[170]: {% image_buster /assets/img/ab_create_2.png %}
-[175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/
-[180]: {% image_buster /assets/img/ab_create_4.png %}
-[210]: {% image_buster /assets/img/ab_create_8.png %}
-[10]: {% image_buster /assets/img/ab_send_winning_variant.png %}
-[272]: #intelligent-selection
-[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/
-[인텔셀렉션]: {{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/
-[confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

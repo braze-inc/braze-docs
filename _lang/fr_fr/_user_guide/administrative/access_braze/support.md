@@ -7,7 +7,7 @@ page_type: reference
 search_rank: 7
 ---
 
-# [![Cours Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Service d’assistance de Braze
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Braze Support
 
 ## Accéder au portail d'assistance
 
@@ -15,7 +15,7 @@ Pour contacter l'équipe d'assistance de Braze, accédez au tableau de bord de B
 
 ![Le menu déroulant "Support" avec la possibilité d'obtenir de l'aide.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-En fonction de vos autorisations Braze, et si vous êtes un contact d'assistance désigné (premium), vous serez dirigé soit vers le portail d'assistance Braze où vous pouvez soumettre et suivre des cas, soit vers notre formulaire d'assistance standard. Si vous n'êtes pas sûr d'être un contact d'assistance Braze, contactez l'administrateur Braze, le gestionnaire de succès Braze ou le propriétaire du compte de votre entreprise.
+En fonction de vos autorisations Braze et si vous êtes un contact d'assistance désigné, vous serez dirigé soit vers le portail d'assistance Braze, où vous pouvez soumettre et suivre des cas, soit vers notre formulaire d'assistance standard. Si vous n'êtes pas sûr d'être un contact d'assistance Braze, contactez l'administrateur Braze, le gestionnaire de succès Braze ou le propriétaire du compte de votre entreprise.
 
 ## Ajouter des contacts d'assistance désignés
 
@@ -26,9 +26,7 @@ Les contacts d'assistance désignés peuvent accéder à tous les cas d'assistan
 3. Dans le menu, sélectionnez **Modifier** pour être redirigé vers la page **Modifier l'utilisateur**.
 4. Cochez la case pour **Définir cet utilisateur comme contact d'assistance désigné pour le portail d'assistance de Braze**.
 
-![Case à cocher permettant de désigner un utilisateur comme contact d'assistance.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
-
-Le nombre de contacts d'assistance désignés que vous pouvez définir dépend de votre limite de contacts. Contactez votre gestionnaire satisfaction client pour plus d'informations.
+![Case à cocher permettant de définir un utilisateur comme contact d'assistance désigné.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
 ### Obtenir l'accès
 
@@ -64,15 +62,15 @@ Partagez un échantillon d'utilisateurs plutôt que l'ensemble du segment concer
 
 ### Joindre les journaux du réseau (journaux HAR)
 
-Si vous contactez le service d'assistance, il sera utile de demander à l'utilisateur concerné de collecter des journaux de réseau (journaux HAR) à partir de son navigateur pendant que le problème se produit. Vous y verrez les demandes de réseau entre le navigateur et le serveur, pour les différents composants d'une page web, ainsi que le tableau de bord de Braze que l'utilisateur tente d'ouvrir.
+Si vous contactez le service d'assistance, il sera utile de demander à l'utilisateur concerné de collecter des journaux de réseau (journaux HAR) à partir de son navigateur pendant que le problème se produit. Il affiche les requêtes réseau entre le navigateur et le serveur pour les différents composants d'une page web, ainsi que le tableau de bord de Braze que l'utilisateur tente d'ouvrir.
 
 Demandez à l'utilisateur concerné de faire ce qui suit :
 
 1. Ouvrez leurs outils de développement. Si vous utilisez Chrome, vous pouvez le faire en utilisant le raccourci clavier `option` + `⌘` + `J` (sur macOS). Si vous utilisez Windows ou Linux, vous pouvez le faire en utilisant le raccourci `shift` + `CTRL` + `J`.
 2. Sélectionnez **Réseau** > **Fetch/XHR** ou **XHR**.
-3. Effectuez un enregistrement ou une capture d'écran montrant le **nom**, l'**état**, la **taille** et l'**heure des** éléments.<br><br>![L'onglet "Fetch/XHR" dans un navigateur Chrome.][1]{: style="max-width:60%;"}
+3. Effectuez un enregistrement ou une capture d'écran montrant le **nom**, l'**état**, la **taille** et l'**heure des** éléments.<br><br>![L'onglet "Fetch/XHR" dans un navigateur Chrome.]({% image_buster /assets/img/network_xhr.png %}){: style="max-width:60%;"}
 
-Joignez ensuite l'enregistrement ou la capture d'écran de l'utilisateur au ticket d'assistance. Ces informations peuvent aider l'enquête de Support.
+Ensuite, joignez l'enregistrement ou la capture d'écran de l'utilisateur au ticket d'assistance. Ces informations peuvent aider l'enquête de Support.
 
 ### Clarifier le comportement attendu par rapport au comportement réel
 
@@ -87,7 +85,9 @@ Pensez à joindre une capture d'écran pour illustrer le problème. La fournitur
 Sélectionnez le niveau de gravité approprié pour nous aider à affecter les ressources adéquates à la résolution du problème. 
 
 {% alert important %}
-Marquer une instance comme "critique" signifie que votre instance de production est hors service et que tout le travail au sein de Braze est arrêté.
+Marquer un problème comme "critique" signifie que votre instance de production est hors service et que tout le travail au sein de Braze est arrêté.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/network_xhr.png %}
+## Résolution des problèmes d'accès
+
+Si vous recevez une erreur lors de la connexion au portail d'assistance de Braze, telle que `Check your entry`, assurez-vous que vous avez suivi le lien dans votre e-mail de bienvenue pour définir un mot de passe pour le portail. Si vous l'avez fait ou si vous avez pu vous connecter au portail, créez un ticket d'assistance.

@@ -10,9 +10,11 @@ page_order: 5
 
 # Propriétés d’entrées persistantes
 
-> Lorsqu'un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, vous pouvez utiliser les métadonnées de l'appel API, de l'événement personnalisé ou de l'événement d'achat pour la personnalisation à chaque étape de votre flux de travail Canvas. 
+> Lorsqu'un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, vous pouvez utiliser les métadonnées de l'appel API, de l'événement personnalisé ou de l'événement d'achat pour la personnalisation à chaque étape de votre flux de travail Canvas. Vous pouvez utiliser ces propriétés pour envoyer des messages plus élaborés.
 
-Avant cette fonctionnalité, les propriétés d’entrée pouvaient être utilisées uniquement dans la première étape du Canvas. La possibilité d’utiliser des propriétés d’entrée dans un parcours de Canvas permet aux clients d’envoyer des messages mieux agencés et de créer une expérience utilisateur final améliorée.
+{% alert important %}
+Les propriétés d'entrées persistantes sont un artefact de l'éditeur Canvas d'origine, il y a donc des références obsolètes à des termes qui restent pour référence historique. Pour la mise à jour actuelle de l'éditeur de canvas, reportez-vous aux [propriétés d'entrée du canvas et aux propriétés d'événement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties).
+{% endalert %}
 
 ## Utilisation des propriétés d’entrées
 
@@ -77,17 +79,15 @@ url -X POST \
     }' \
 ```
  
-Dans cette demande, la valeur globale pour « allergies alimentaires » est « aucune ». Pour Customer_123, la valeur est "dairy". Les messages de ce Canvas contenant l'extrait de code liquide {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} auront pour modèle "dairy" pour Customer_123 et "none" pour tous les autres. 
+Dans cette demande, la valeur globale pour « allergies alimentaires » est « aucune ». Pour Customer_123,, la valeur est "dairy". Les messages de ce Canvas contenant l'extrait de code liquide {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} auront pour modèle "dairy" pour Customer_123 et "none" pour tous les autres. 
 
 ## Cas d’utilisation
 
 Si vous avez un Canvas qui se déclenche lorsqu'un utilisateur parcourt un article sur votre site eCommerce mais ne l'ajoute pas à son panier, la première étape du Canvas pourrait être une notification push lui demandant s'il est intéressé par l'achat de l'article. Vous pourriez faire référence au nom du produit en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 Dans la seconde étape, une autre notification push pourrait être envoyée, invitant l’utilisateur à vérifier s’il a ajouté l’article dans le panier mais ne l’a pas encore acheté. Vous pouvez continuer à faire référence à la propriété d'entrée `product_name` en utilisant {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

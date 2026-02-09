@@ -11,7 +11,7 @@ description: "Braze SDK デバッガの使用方法について説明します�
 
 ## 前提条件
 
-Braze SDK デバッガーを使用するには、`View PII` と `View User Profiles PII Compliant` 権限が必要です。さらに、Braze SDK は、次の最小バージョンを満たしているか、参照している必要があります。 
+Braze SDKデバッガーを使用するには、"View PII "と "View User Profiles PII Compliant "の権限が必要。デバッグ・セッションのログをダウンロードするには、「ユーザーデータのエクスポート」権限も必要だ。さらに、Braze SDK は、次の最小バージョンを満たしているか、参照している必要があります。 
 
 {% sdk_min_versions swift:10.2.0 android:32.1.0 %}
 
@@ -29,19 +29,19 @@ Braze Web SDK のデバッグを有効にするには、[URL パラメータ]({{
 
 Braze で、**Settings** に移動し、**Setup and Testing** で**SDK Debugger** を選択します。
 
-![「SDK デバッガー」が強調表示された「設定およびテスト」セクション。]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
+![SDKデバッガ」がハイライトされた「セットアップとテスト」セクション。]({% image_buster /assets/img/sdk_debugger/select_sdk_debugger.png %})
 
 **デバッグセッションの作成**を選択します。
 
-![「SDK デバッガー」ページ。]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
+![SDKデバッガ」のページ。]({% image_buster /assets/img/sdk_debugger/select_create_debugging_session.png %})
 
-### ステップ3: ユーザーを選択
+### ステップ 3:ユーザーを選択
 
 メールアドレス、`external_id`、ユーザーエイリアス、またはプッシュトークンを使用してユーザーを検索します。セッションを開始する準備ができたら、**Select User**を選択します。
 
 ![選択したユーザーのデバッグページ。]({% image_buster /assets/img/sdk_debugger/search_and_select_user.png %}){: style="max-width:85%;"}
 
-### ステップ 4:アプリを再起動する
+### ステップ 4: アプリを再起動する
 
 まずアプリを起動し、デバイスがペアリングされていることを確認します。ペアリングが成功した場合は、アプリを再起動します。これにより、アプリの初期化ログが完全にキャプチャされます。
 
@@ -57,7 +57,7 @@ Braze で、**Settings** に移動し、**Setup and Testing** で**SDK Debugger*
 
 再現手順が完了したら、**End Session**> **Close**を選択します。
 
-![「セッションを終了」ボタンが表示されているデバッグセッション。]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
+![デバッグ・セッションに「End Session」ボタンが表示されている。]({% image_buster /assets/img/sdk_debugger/close_debugging_session.png %}){: style="max-width:85%;"}
 
 {% alert note %}
 セッションの長さとネットワーク接続に応じて、ログの生成に数分かかる場合があります。
@@ -67,4 +67,4 @@ Braze で、**Settings** に移動し、**Setup and Testing** で**SDK Debugger*
 
 セッション終了後、セッションログを CSV ファイルとしてエクスポートできます。また、他のユーザーは [**セッション ID**] を使用してデバッグセッションを検索できるため、ログを直接送信する必要はありません。
 
-![セッション後に表示される「ログをダウンロード」と「セッション ID をコピー」を含むデバッグページ。]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})
+![セッション終了後に表示される「ログのエクスポート」と「セッションIDのコピー」のデバッグページ。]({% image_buster /assets/img/sdk_debugger/copy_id_and_export_logs.png %})

@@ -15,10 +15,6 @@ tool: Canvas
 
 Avant de lancer un Canvas, plusieurs détails vous permettent de vérifier que vos envois de messages et vos heures d’envoi correspondent aux préférences de votre audience. Les choses à prendre en compte comprennent toutes les variations dans les fuseaux horaires, les paramètres d’entrée, etc. En utilisant cette liste de contrôle comme guide, finalisez ces domaines en fonction de votre cas d’utilisation pour contribuer à la réussite de votre Canvas. 
 
-{% alert important %}
-À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
-{% endalert %}
-
 ### Vérifier les paramètres de fuseau horaire
 
 Si vous saisissez des utilisateurs en fonction de leur fuseau horaire local à l’aide d’un calendrier d’entrée planifié, vous devez lancer votre Canvas au moins 24 heures avant le moment où vous souhaitez que les utilisateurs accèdent à votre Canvas. Par exemple, voici un Canvas qui n’a pas laissé suffisamment de temps entre le lancement et l’heure d’entrée prévue. Dans ce scénario, certains utilisateurs n’accèderont pas à votre Canvas, car l’heure d’entrée prévue a déjà été passée dans certains fuseaux horaires. 
@@ -27,7 +23,7 @@ Si vous saisissez des utilisateurs en fonction de leur fuseau horaire local à l
 Vous verrez une alerte si vous n’avez pas assez planifié un tampon. Une solution rapide consiste à ajuster l’heure d’envoi pour garantir que les utilisateurs peuvent rester dans le segment ciblé pendant 24 heures.
 {% endalert %}
 
-![][1]
+![Une toile planifiée pour entrer en une seule fois chez les utilisateurs à partir de 10 heures le 30 avril 2025, à leur heure locale.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### Envisager d’utiliser des expressions régulières pour les filtres d’audiences
 
@@ -72,7 +68,7 @@ Vous avez lancé votre Canvas ! Et maintenant ? Utilisez cette liste de contr�
 
 ### Beaucoup d'entrées, mais peu d'envois
 
-Par exemple, disons que vous avez remarqué une disparité entre votre nombre de messages envoyés par rapport aux entrées totales. Vous pouvez identifier et découvrir les zones pour ajuster votre Canvas en vérifiant ces zones clés.
+Par exemple, disons que vous avez remarqué une disparité entre le nombre de messages envoyés et le nombre total d'entrées. Vous pouvez identifier et découvrir les zones pour ajuster votre Canvas en vérifiant ces zones clés.
 
 #### Audience entrant
 
@@ -80,7 +76,7 @@ Si vous utilisez une campagne d’envoi programmée, vérifiez deux fois votre a
 
 #### Premier composant du Canvas
 
-Examinez les filtres d’audiences, les déclencheurs d’action ou les segments utilisés dans les composants initiaux de votre Canvas. Y a-t-il des fautes d’orthographe ou des conditions trop strictes qui empêchent votre Canvas de commencer à s’éteindre ? Utilisez-vous « Égal » lorsque vous devez utiliser « Correspondances Regex » ?
+Examinez les filtres d’audiences, les déclencheurs d’action ou les segments utilisés dans les composants initiaux de votre Canvas. Y a-t-il des fautes d'orthographe ou des conditions trop strictes qui empêchent votre toile de démarrer correctement ? Utilisez-vous « Égal » lorsque vous devez utiliser « Correspondances Regex » ?
 
 #### Dans le groupe de contrôle de Canvas 
 
@@ -92,7 +88,7 @@ Si vous ne voyez pas de données d'entrée pour votre Canvas, la raison pour laq
 
 Si vous utilisez la saisie par action dans votre planification de saisie, vérifiez que vous n'avez pas utilisé ici la même action de déclenchement que dans votre **audience cible.** Une condition de concurrence peut se produire lorsque l’utilisateur ne figure pas dans l’audience au moment de l’événement déclencheur, ce qui signifie qu’il ne pourra pas accéder au Canvas.
 
-En outre, vérifiez que le segment sélectionné contient des utilisateurs en consultant le tableau **Population cible** dans les paramètres de l'**audience cible.**  Si ce nombre est faible, voir comment ajuster vos paramètres d’entrée ou revoir les segments ou filtres sélectionnés pour détecter toute erreur.
+En outre, vérifiez que le segment sélectionné contient des utilisateurs en consultant le tableau **Population cible** dans les paramètres de l'**audience cible.**  Si ce chiffre est faible, voyez comment vous pouvez ajuster vos paramètres de saisie ou examinez les segments ou les filtres que vous avez sélectionnés pour y déceler d'éventuelles erreurs.
 
 ### Abandon inattendu entre les étapes
 
@@ -103,10 +99,9 @@ Ensuite, il est important d’identifier ces paramètres qui peuvent affecter qu
 - Heures calmes
 - Validation des distributions
 
-En général, choisissez le Timing intelligent ou les Heures calmes pour votre Canvas, pas les deux. La même suggestion s'applique pour utiliser soit le timing intelligent, soit la [limite de débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), mais pas les deux. Pour plus d'informations sur la meilleure façon d'utiliser l'Intelligence Suite, lisez notre [FAQ sur l'intelligence]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
+En général, choisissez le Timing intelligent ou les Heures calmes pour votre Canvas, pas les deux. La même suggestion s'applique pour utiliser soit le timing intelligent, soit la [limite de débit]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), mais pas les deux. Pour plus d'informations sur la meilleure façon d'utiliser l'Intelligence Suite, lisez nos [cas d'utilisation de l'Intelligence Suite.]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases)
 
 ### Volumes d’envoi suspects entre chemins
 
 Lorsque le volume d’envois entre deux chemins ou plus (parcours d’audience ou chemins d’action) n’est pas ce que vous attendez, cela peut être l’occasion de vérifier vos segments, filtres ou actions déclencheurs. Assurez-vous également d’identifier et de retirer les filtres qui se chevauchent.
 
-[1]: {% image_buster /assets/img_archive/canvas_checklist1.png %}

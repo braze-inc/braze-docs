@@ -1,5 +1,5 @@
 ---
-nav_title: Aliasing de enlaces
+nav_title: Alias de enlace
 article_title: Aliasing de enlaces
 alias: /link_aliasing/
 page_order: 3
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"}Aliasing de enlaces
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/link-aliasing){: style="float:right;width:120px;border:0;" class="noimgborder"} aliasing de enlaces
  
 > Utilice alias de enlaces para crear nombres reconocibles, generados por el usuario, para identificar los enlaces enviados en mensajes de correo electrónico desde Braze. Estos enlaces están disponibles para reorientar la segmentación, desencadenar acciones y realizar análisis de enlaces.
 
@@ -27,6 +27,8 @@ Con el aliasing de enlaces, puedes:
 
 Braze identifica de forma única los enlaces dentro de los correos electrónicos añadiendo un parámetro extra llamado `lid` (también conocido como identificador de enlace) a cada URL de enlace. Este valor de `lid` permite a Braze seguir, controlar y agregar las interacciones de los usuarios con el enlace aunque el resto de los parámetros de la URL puedan diferir. Esto ayuda a obtener información sobre cómo interactúan los usuarios con el contenido de tus campañas de correo electrónico.
 
+Los identificadores de enlace también se actualizarán si se duplica una campaña de correo electrónico, un Canvas con un mensaje de correo electrónico o un bloque de contenido.
+
 ## Creación de un alias de enlace
 
 Para crear un alias de enlace, siga estos pasos: 
@@ -38,7 +40,7 @@ Para crear un alias de enlace, siga estos pasos:
 
 También puede establecer un alias que se utilizará para hacer referencia a un enlace específico cuando se trate de informes o segmentación. 
 
-![Página de gestión de enlaces con cuatro aliasing de enlaces.][2]
+![Página de gestión de enlaces con cuatro aliasing de enlaces.]({% image_buster /assets/img/link_aliasing_composer.png %})
 
 {% alert note %}
 El alias de enlace sólo se admite en los atributos `href` dentro de las etiquetas de anclaje HTML, donde es seguro añadir un parámetro de consulta. Es una buena práctica incluir un signo de interrogación (?) al final de tu enlace para que Braze pueda añadir fácilmente el valor `lid`. Sin añadir el valor `lid`, Braze no reconocerá la URL para el alias de enlace.
@@ -57,7 +59,7 @@ Si utiliza la [navegación anterior]({{site.baseurl}}/user_guide/administrative/
 
 Aquí puedes ordenar, buscar y desactivar el seguimiento de aliasing de enlaces.
 
-![Página de aliasing de enlaces con seguimiento que muestra dos aliasing de enlaces llamados "TechPartners" y "Ayuda" que están asociados a una campaña llamada "Email_Survey".][8]
+![Página de aliasing de enlaces con seguimiento que muestra los aliasing de enlaces activos e inactivos asociados a varias campañas.]({% image_buster /assets/img/tracked_aliases.png %})
 
 {% alert tip %}
 Utiliza el [alias de enlace de lista para campaña]({{site.baseurl}}/get_campaign_link_alias/) y el [ alias de enlace de lista para puntos finales de Canvas]({{site.baseurl}}/get_canvas_link_alias/) para extraer el conjunto `alias` en cada variante de mensaje de una campaña o de un componente Canvas específico de correo electrónico.
@@ -126,18 +128,7 @@ Para realizar un seguimiento de las métricas de compromiso del enlace, asegúre
 
 Braze le permite seleccionar un número ilimitado de enlaces a los que realizar el seguimiento, aunque sólo podrá reorientar a los usuarios a los enlaces más recientes que hayan abierto. Los perfiles de los usuarios incluyen los 100 enlaces en los que se ha hecho clic más recientemente. Por ejemplo, si realiza un seguimiento de 500 enlaces y un usuario hace clic en los 500, puede volver a segmentar o crear segmentos basados en los 100 enlaces en los que se ha hecho clic más recientemente.
 
-{% tabs local %}
-{% tab Editor de arrastrar y soltar %}
-
-![Pestaña de gestión de enlaces del editor de correo electrónico de arrastrar y soltar.]({% image_buster /assets/img/link_management_dnd.png %})
-
-{% endtab %}
-{% tab Editor HTML %}
-
-![Pestaña de gestión de enlaces del editor de correo electrónico HTML.]({% image_buster /assets/img/link_management_html.png %})
-
-{% endtab %}
-{% endtabs %}
+![La pestaña Gestión de enlaces con dos enlaces seleccionados.]({% image_buster /assets/img/link_management_dnd.png %})
 
 {% alert note %}
 Braze sólo rastrea hasta los últimos 100 alias de enlaces en los que se ha hecho clic a nivel de perfil.
@@ -147,7 +138,7 @@ Braze sólo rastrea hasta los últimos 100 alias de enlaces en los que se ha hec
  
 Puedes crear mensajes basados en acciones dirigidos a cualquier enlace (con o sin seguimiento) o reorientar a los usuarios en función de si han hecho clic en un alias a través de cualquier campaña de correo electrónico o componente de Canvas.
 
-![Opciones basadas en acciones para dirigirse a usuarios que han hecho clic en un alias de un componente Canvas o han interactuado con una campaña.][6]
+![Opciones basadas en acciones para dirigirse a usuarios que han hecho clic en un alias de un componente Canvas o han interactuado con una campaña.]({% image_buster /assets/img/link_aliasing_action_based_filters.png %})
 
 ### Filtros de segmentación
 
@@ -161,11 +152,13 @@ Los siguientes filtros de segmentación se aplican a los eventos de clic que son
 
 #### Enlaces no rastreables
 
-Al eliminar el seguimiento de un enlace no se reasignarán los segmentos existentes con el filtro al alias no rastreado. Los datos antiguos permanecerán en los perfiles de usuario hasta que sean sustituidos por datos más recientes.
+Al eliminar el seguimiento de un enlace no se reasignarán los segmentos existentes con el filtro al alias no rastreado. Los datos antiguos permanecerán en los perfiles de usuario hasta que sean sustituidos por datos más recientes. 
 
-A efectos de segmentación, por defecto sólo se pueden rastrear 100 enlaces por área de trabajo. Los enlaces de los mensajes archivados se anulan automáticamente. Sin embargo, si los mensajes archivados se desarchivan, será necesario volver a rastrear los enlaces. Cuando se rastrean los alias de enlaces, los informes de enlaces se indexan por el alias en lugar de por los dominios de nivel superior o las URL completas.
+Los enlaces de los mensajes archivados se anulan automáticamente. Sin embargo, si los mensajes archivados se desarchivan, será necesario volver a rastrear los enlaces. Cuando se rastrean los alias de enlaces, los informes de enlaces se indexan por el alias en lugar de por los dominios de nivel superior o las URL completas.
 
-![Pestaña de análisis de campaña que muestra tres aliasing de enlaces y sus clics totales.][1]
+Para ver todos los enlaces de tu campaña de correo electrónico y sus respectivos clics totales, ve a **Análisis de mensajes** > **Rendimiento del correo electrónico** > **Vista previa del mapa de calor & **, y selecciona la opción de alternar **Mostrar mapa de calor**.
+
+![Panel Tabla de enlaces por clics totales con aliasing de enlaces y sus clics totales.]({% image_buster /assets/img/link_alias_total_clicks.png %}){: style="max-width:60%;"}
 
 ### Evento de clics de correo electrónico
 
@@ -245,8 +238,3 @@ Si el enlace tiene parámetros que contienen un signo de interrogación (`?`), p
 {% endraw %}
 
 
-[1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
-[2]: {% image_buster /assets/img/link_aliasing_composer.png %}
-[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
-[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
-[8]: {% image_buster /assets/img/tracked_aliases.png %}

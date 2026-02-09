@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Delete Multiple Catalog Items"
+nav_title: "DELETE: Delete multiple catalog items"
 article_title: "DELETE: Delete Multiple Catalog Items"
 search_tag: Endpoint
 page_order: 1

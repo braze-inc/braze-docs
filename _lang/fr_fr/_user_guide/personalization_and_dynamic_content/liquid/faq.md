@@ -32,7 +32,7 @@ Reportez-vous à la section [Balises de personnalisation prises en charge]({{sit
 
 Vous pouvez créer et affecter des variables en utilisant l'étiquette `assign`. Cela crée une variable dans le compositeur du message qui peut également être référencée dans votre message.
 
-### L'utilisation de Liquid consomme-t-elle des points de données ?
+### L'utilisation de Liquid permet-elle d'enregistrer des points de données ?
 
 Non.
 
@@ -72,9 +72,9 @@ La logique conditionnelle vous permet d'interrompre l'envoi d'un message si les 
 
 Les boucles "for" sont également connues sous le nom d'[étiquettes d'itération](https://shopify.github.io/liquid/tags/iteration/). L'utilisation de la logique de boucle dans vos extraits de code Liquid vous permet de répéter des blocs de Liquid jusqu'à ce qu'une condition soit remplie. 
 
-Dans Braze, cela pourrait être utilisé pour vérifier les éléments d'un attribut personnalisé de type tableau, ou une liste de valeurs et d'objets renvoyés par un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), une [sélection]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) ou une réponse à un appel de [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Plus précisément, vous pouvez utiliser une logique de boucle dans le cadre de votre communication pour vérifier si un produit est en stock ou si un produit présente une cote minimale. 
+Dans Braze, cela pourrait être utilisé pour vérifier les éléments d'un attribut personnalisé de type tableau, ou une liste de valeurs et d'objets renvoyés par un [catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), une [sélection]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) ou une réponse à un appel de [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Plus précisément, vous pouvez utiliser une logique de boucle dans le cadre de votre communication pour vérifier si un produit est en stock ou si un produit présente une cote minimale. 
 
-Par exemple, disons que vous avez un catalogue appelé "Jeux" qui contient une sélection appelée "cheap_games". Pour extraire les titres des jeux contenus dans "cheap_games", vous pouvez utiliser cet extrait de code Liquid :
+Par exemple, disons que vous avez un catalogue appelé "Jeux" dont la sélection s'appelle "cheap_games".. Pour extraire les titres des jeux contenus dans "cheap_games",, vous pourriez utiliser cet extrait de code liquide :
 
 {% raw %}
 ```liquid

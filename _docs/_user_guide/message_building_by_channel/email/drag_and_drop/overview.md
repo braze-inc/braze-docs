@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an Email
-article_title: Creating an Email with Drag-and-Drop
+nav_title: Create an email
+article_title: Create an Email with Drag-and-Drop
 alias: "/dnd/overview/"
 channel: email
 page_order: 0
@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Creating an email with drag-and-drop
+# Create an email with drag-and-drop
 
 > Using the drag-and-drop editor, you can create completely custom and personalized email messages for either campaigns or Canvases, all without using HTML to build your email body.
 
@@ -73,7 +73,7 @@ Although the drag-and-drop editor simplifies your workflow with these blocks, yo
 
 ## Using the drag-and-drop editor
 
-Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your email message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 After you've selected where to build your message, let's dive into the steps to create a drag-and-drop email.
 
@@ -128,6 +128,8 @@ Once you've finished designing and building your email message, it's time to add
 2. Select an email as the **Reply-To Address**. You can also customize this by selecting **Customize Reply-To Address**.
 3. Next, select an email as the **BCC Address** to make your email visible to this address.
 4. Add a subject line to your email. Optionally, you can also add a preheader and a whitespace after the preheader.
+
+{% multi_lang_include alerts/tip_alerts.md alert='Liquid email display name and reply-to address' %}
 
 A preview in the right-hand panel will populate with the sending information you've added. This information can also be updated by navigating to **Settings** > **Email Preferences** > **Sending Configuration**.
 
@@ -242,7 +244,11 @@ Liquid personalization is not supported for image blocks and button link type fi
 
 #### Dynamic images
 
-You can choose to include dynamic images in your email messaging by including Liquid in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+You can choose to include dynamic images in your email messaging by including [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) or [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) in your image source attribute. For example, instead of a static image, you can insert {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} as the image URL to include a user's first name in the image. This helps personalize your emails to each user.
+
+{% alert important %}
+Your image URL must begin with `https://`. Using `http://` crashes your app.
+{% endalert %}
 
 ### Text direction
 
@@ -310,3 +316,7 @@ Anything added outside of `<head>` tags will be added after the `<body>` tag in 
 | `style` | `media` | Specifies the media or device for which styles apply. | ```<style media="print">body { font-size: 12pt; }</style>``` |
 | `title` | No attributes | The `title` tag doesn't accept any attributes. | ```<title>Kitchenerie</title>``` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+Link names can be up to 63 bytes and are automatically truncated if they exceed the limit.
+{% endalert %}

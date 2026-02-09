@@ -19,7 +19,7 @@ Relatórios de Retenção não estão disponíveis para campanhas acionadas por 
 
 ### Etapa 1: Selecione um intervalo de datas
 
-![Data do Relatório][8]{: style="float:right;max-width:30%;margin-left:15px;"}
+![Data do Relatório]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Comece visitando qualquer campanha ou canva no seu dashboard do Braze e selecione um intervalo de datas para o seu relatório. Selecionar um intervalo de datas apropriado é crucial por causa da maneira como isso afeta os relatórios de retenção. 
 
@@ -30,25 +30,25 @@ Para selecionar um intervalo de datas, navegue até a página da campanha ou do 
 ### Etapa 2: Selecione um evento de retenção
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
 Em seguida, acesse a seção **Retenção de campanha**. A retenção da campanha mostra a taxa na qual qualquer usuário que recebeu esta campanha específica realizou um evento de retenção (especificado por você no relatório de retenção) ao longo dos 30 dias a partir do momento em que recebeu a campanha.
 
 {% endtab %}
-{% tab Canva %}
+{% tab Canvas %}
 
 Em seguida, selecione **Analisar variantes**. A partir daqui, você pode analisar suas variantes, conferir seu relatório de funil e visualizar seu relatório de retenção. A retenção da canva mostra a taxa na qual qualquer usuário que recebeu esta canva específica realizou um evento de retenção (especificado por você no relatório de retenção) ao longo dos 30 dias a partir do momento em que recebeu a canva.
 
 {% endtab %}
 {% endtabs %}
 
-![Selecione um evento de retenção][1]{: style="max-width:80%"}
+![Selecione um evento de retenção]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### Etapa 3: Gerar o relatório
 
 Depois de selecionar um evento de retenção, selecione **Gerar relatório** para iniciar a consulta.
 
-![Gerar relatório][2]{: style="max-width:80%"}
+![Gerar relatório]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 Essa consulta pode levar alguns minutos para ser executada, dependendo do volume de dados precisa ser recuperado para gerar os resultados. Se demorar muito, você verá uma notificação pedindo para tentar carregar o relatório novamente. Você pode precisar esperar até cinco minutos antes que o relatório seja carregado.
 
@@ -57,14 +57,14 @@ Depois que o relatório é gerado, ele não pode ser executado novamente com o m
 O relatório listará apenas os dias em que a campanha ou canva estava enviando mensagens. Para algumas campanhas e canvas, isso pode significar que o relatório mostra apenas um dia se foi enviado apenas uma vez. Se for recorrente ou acionado, você pode ver vários dias na tabela.
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
-![Relatório Completo]({% image_buster /assets/img/campaign_retention3.png %})
+![Relatório completo]({% image_buster /assets/img/campaign_retention3.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-![Relatório Completo]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
+![Relatório completo]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
 
 {% endtab %}
 {% endtabs %}
@@ -83,7 +83,7 @@ Um usuário que completa o evento várias vezes durante um período de 30+ dias 
 
 A maneira de ler o gráfico do relatório de retenção para uma coluna do terceiro dia seria Y% ou Y número de usuários (com base nas unidades escolhidas) que realizaram o evento três ou mais dias depois de receber a campanha no dia Z.
 
-![Relatório Contínuo]({% image_buster /assets/img/campaign_retention3.png %})
+![Relatório de rolagem]({% image_buster /assets/img/campaign_retention3.png %})
 
 Como outro exemplo, referindo-se à tabela na imagem anterior, no dia 25 de março, um total de 38 usuários realizaram o evento de retenção. A retenção no dia zero foi de 68,42%, o que significa que 68,42% dos usuários realizaram o evento de retenção zero ou mais dias (no dia zero ou depois) após o recebimento da campanha. A retenção no sétimo dia foi de 57,89%, o que significa que 57,89% dos usuários realizaram o evento sete ou mais dias (no sétimo dia ou depois) após receberem a campanha.
 
@@ -97,7 +97,7 @@ As medidas de retenção de intervalo mostram quantos usuários retornam no inte
 
 Relatórios de Intervalo são alguns dos relatórios mais intuitivos de ler. Eles afirmam claramente, de todos os usuários em uma coorte, qual porcentagem desses usuários realizou o evento de retenção dentro de um intervalo de datas específico. Por exemplo, na imagem a seguir, referenciando a coorte de Todos os Usuários, no intervalo de datas "Dia 0 (0-24hrs)", 35,71% da coorte realizou o relatório de retenção. Se um usuário realizar vários eventos de retenção em vários intervalos de datas, ele será contado como retido para cada intervalo.
 
-![Relatório de Retenção][5]
+![Relatório de Retenção]({% image_buster /assets/img/range_retention.png %})
 
 ### Componentes do relatório de retenção
 
@@ -121,14 +121,14 @@ Alguns casos de uso para mostrar performance por variante:
 - Veja como é a retenção se você não enviou uma mensagem, analisando os dados de retenção do grupo de controle.
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
-![Ver por Variante]({% image_buster /assets/img/variant_view.png %})
+![Exibir por variante]({% image_buster /assets/img/variant_view.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-![Ver por Variante]({% image_buster /assets/img/variant_view_canvas.png %})
+![Exibir por variante]({% image_buster /assets/img/variant_view_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ Alguns casos de uso para mostrar performance por variante:
 - **Intervalo de Datas**: Definido na página **Detalhes** da Campanha ou Canva, o intervalo de datas inclui todos os usuários que receberam a campanha ou Canva durante este período, e, desses usuários, os dados daqueles que realizaram seu evento de retenção durante o intervalo de datas aparecerão no relatório. Cada dia a taxa de retenção, a variação percentual do grupo de controle, e a confiança são medidas.
 - **Taxa de Retenção**: Mostra a taxa de retenção por variante. A taxa de retenção é equivalente ao número de usuários que realizaram o evento de retenção dividido pelo total de usuários que receberam a campanha ou canva.
 - **Mudança Percentual em Relação ao Controle**: Quantifica a mudança percentual por variante do grupo de controle.
-- **Confiança**: {% multi_lang_include metrics.md metric='Confidence' %} O Braze compara a taxa de conversão de cada variante com a taxa de conversão do controle com um procedimento estatístico chamado Teste Z para calcular uma porcentagem de [confiança]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence).
+- **Confiança**: {% multi_lang_include analytics/metrics.md metric='Confidence' %} O Braze compara a taxa de conversão de cada variante com a taxa de conversão do controle com um procedimento estatístico chamado Teste Z para calcular uma porcentagem de [confiança]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence).
 - **Unidades**: Você pode ajustar as unidades entre a porcentagem de usuários e o número de usuários no canto superior direito do gráfico, unidades específicas podem ser mais significativas ao julgar o impacto de uma campanha ou canva.
 - **Gráfico de Variantes**: Este gráfico resume os resultados por variante para o intervalo de datas selecionado.
 
@@ -151,9 +151,5 @@ Relatórios de Retenção são fáceis de gerar, mas desafiadores de interpretar
 - Você está vendo fadiga de envio de mensagens?
 - Uma otimização específica que você fez em uma campanha ou canva X dias atrás teve um impacto positivo?
 
-[1]: {% image_buster /assets/img/retention_1.png %}
-[2]: {% image_buster /assets/img/retention_2.png %}
-[5]: {% image_buster /assets/img/range_retention.png %}
-[8]: {% image_buster /assets/img/date_select_retention.png %}
 
 

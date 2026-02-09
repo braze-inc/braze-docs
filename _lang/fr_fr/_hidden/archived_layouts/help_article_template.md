@@ -1,5 +1,5 @@
 ---
-nav_title: Article d’aide
+nav_title: "Article d'aide"
 
 page_order: 3
 
@@ -118,6 +118,5 @@ Pour en savoir plus sur les sujets abordés dans cet article, consultez :
 
 ### Vous êtes toujours perdu ?
 
-Si cet article ne vous a pas aidé, laissez vos commentaires ou ouvrez un [ticket d'assistance][support]!
+Si cet article ne vous a pas aidé, laissez vos commentaires ou ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/)!
 
-[support]: {{site.baseurl}}/braze_support/

@@ -1,5 +1,5 @@
 ---
-title: Propriétés d’entrées persistantes Canvas
+nav_title: "Propriétés d'entrées persistantes canvas"
 article_title: Propriétés d’entrées persistantes Canvas
 page_order: 6
 layout: redirect

@@ -1,12 +1,12 @@
 ---
-nav_title: Configuración de ID de usuario
-article_title: Configuración de ID de usuario a través del SDK de Braze
-page_order: 1.2
+nav_title: Configurar ID de usuario
+article_title: Configura ID de usuario a través del SDK de Braze
+page_order: 1.1
 description: "Aprende a configurar ID de usuario a través del SDK de Braze."
 
 ---
 
-# Configuración de los ID de usuario
+# Configurar ID de usuario
 
 > Aprende a configurar ID de usuario a través del SDK de Braze. Son identificadores únicos que te permiten hacer un seguimiento de los usuarios en distintos dispositivos y plataformas, importar sus datos a través de [la API de datos de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) y enviar mensajes dirigidos a través de la [API de mensajería]({{site.baseurl}}/api/endpoints/messaging/). Si no asignas un ID único a un usuario, Braze le asignará en su lugar un ID anónimo; sin embargo, no podrás utilizar estas características hasta que lo hagas.
 
@@ -25,6 +25,20 @@ Para configurar un ID de usuario, llama al método `changeUser()` después de qu
 Si, en cambio, vas a aplicar hash a un identificador único, asegúrate de normalizar la entrada de tu función hash. Por ejemplo, al codificar una dirección de correo electrónico, elimina los espacios iniciales o finales y ten en cuenta la localización.
 
 {% tabs local %}
+{% tab WEB %}
+Para una implementación estándar del SDK Web, puedes utilizar el siguiente método:
+
+```javascript
+braze.changeUser(YOUR_USER_ID_STRING);
+```
+
+Si quieres utilizar Google Tag Manager en su lugar, puedes utilizar el tipo de etiqueta **Cambiar usuario** para llamar al [método`changeUser` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Utilízalo siempre que un usuario se conecte o se identifique de otro modo con su identificador único `external_id`.
+
+Asegúrate de introducir el ID único del usuario actual en el campo **ID externo del usuario**, que normalmente se rellena utilizando una variable de capa de datos enviada por tu sitio web.
+
+![Un cuadro de diálogo que muestra los ajustes de configuración de la etiqueta de acción Braze. Las configuraciones incluidas son "tipo de etiqueta" e "ID externo de usuario".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+{% endtab %}
+
 {% tab ANDROID %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -55,20 +69,6 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endsubtabs %}
 {% endtab %}
 
-{% tab WEB %}
-Para una implementación estándar del SDK Web, puedes utilizar el siguiente método:
-
-```javascript
-braze.changeUser(YOUR_USER_ID_STRING);
-```
-
-Si quieres utilizar Google Tag Manager en su lugar, puedes utilizar el tipo de etiqueta **Cambiar usuario** para llamar al [método`changeUser` ](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Utilízalo siempre que un usuario se conecte o se identifique de otro modo con su identificador único `external_id`.
-
-Asegúrate de introducir el ID único del usuario actual en el campo **ID externo del usuario**, que normalmente se rellena utilizando una variable de capa de datos enviada por tu sitio web.
-
-![Un cuadro de diálogo que muestra los ajustes de configuración de la etiqueta de acción Braze. Las configuraciones incluidas son "tipo de etiqueta" e "ID externo del usuario".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
-{% endtab %}
-
 {% tab CORDOVA %}
 ```javascript
 BrazePlugin.changeUser("YOUR_USER_ID");
@@ -81,15 +81,9 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 ```
 {% endtab %}
 
-{% tab UNIDAD %}
+{% tab UNITY %}
 ```csharp
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
-```
-{% endtab %}
-
-{% tab UNREAL ENGINE %}
-```cpp
-UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 ```
 {% endtab %}
 {% endtabs %}
@@ -102,13 +96,19 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 
 ### Cómo funcionan
 
-% multi_lang_include anonymous_users/about_user_aliases.md %}
+{% multi_lang_include anonymous_users/about_user_aliases.md %}
 
 ### Configuración de un alias de usuario
 
 Un alias de usuario consta de dos partes: un nombre y una etiqueta. El nombre se refiere al propio identificador, mientras que la etiqueta se refiere al tipo de identificador al que pertenece. Por ejemplo, si tienes un usuario en una plataforma de atención al cliente de terceros con el ID externo `987654`, puedes asignarle un alias en Braze con el nombre `987654` y la etiqueta `support_id`, para que puedas hacer su seguimiento en todas las plataformas.
 
 {% tabs local %}
+{% tab web %}
+```javascript
+braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -141,13 +141,7 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Web %}
-```javascript
-braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
-{% endtab %}
-
-{% tab API REST %}
+{% tab rest api %}
 ```json
 {
   "alias_name" : (required, string),
@@ -169,7 +163,7 @@ Aunque es esencial que nombres correctamente tus ID de usuario desde el principi
 | ------------ | ----------- |
 | 123e4567-e89b-12d3-a456-836199333115 | JonDoe829525552 |
 | 8c0b3728-7fa7-4c68-a32e-12de1d3ed2d5 | Anna@email.com |
-| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | NombreEmpresa-1-2-19 |
+| f0a9b506-3c5b-4d86-b16a-94fc4fc3f7b0 | CompanyName-1-2-19 |
 | 2d9e96a1-8f15-4eaf-bf7b-eb8c34e25962 | jon-doe-1-2-19 |
 {: .reset-td-br-1 .reset-td-br-2}
 

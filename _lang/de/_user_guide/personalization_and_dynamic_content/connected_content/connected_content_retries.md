@@ -1,5 +1,5 @@
 ---
-nav_title: Wiederholungen verbundener Inhalte
+nav_title: Erneute Connected-Content-Versuche
 article_title: Wiederholungen verbundener Inhalte
 page_order: 5
 description: "In diesem Referenzartikel erfahren Sie, wie Sie mit Connected-Content-Wiederholungen umgehen können."

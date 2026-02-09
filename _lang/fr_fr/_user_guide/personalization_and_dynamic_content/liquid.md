@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "Personnalisation à l’aide des Balise Liquids"
 guide_top_text: "Braze peut automatiquement remplacer les valeurs d’un utilisateur donné dans vos messages. Placez votre expression à l’intérieur de deux ensembles de parenthèses courbes pour notifier Braze que vous utiliserez une valeur interpolée. À l’intérieur de ces parenthèses, toutes les valeurs d’utilisateur que vous souhaitez remplacer doivent être entourées d’un ensemble supplémentaire de parenthèses précédées d’un signe dollar.<br><br>Pour en savoir plus sur Liquid, consultez notre parcours d’apprentissage guidé Braze <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Personnalisation dynamique avec Liquid</a></b> !"
@@ -50,12 +51,12 @@ guide_featured_list:
 
 > Liquid est un langage de modélisation open-source développé par Shopify et écrit en Ruby. Chez Braze, Liquid est utilisé pour modéliser les données d’un profil utilisateur dans des messages. 
 
-Par exemple, vous pouvez extraire un attribut utilisateur d’un profil utilisateur qui est un type de données entières et arrondir cette valeur au nombre entier le plus proche. Pour plus d'informations sur la syntaxe et l'utilisation de Liquid, reportez-vous à la section [**Tags de personnalisation pris en charge**][1].
+Par exemple, vous pouvez extraire un attribut utilisateur d’un profil utilisateur qui est un type de données entières et arrondir cette valeur au nombre entier le plus proche. Pour plus d'informations sur la syntaxe et l'utilisation de Liquid, reportez-vous à la section [**Tags de personnalisation pris en charge**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 Le langage de modélisation Liquid prend en charge l’utilisation d’objets, de balises et de filtres.
 
 - [**Les objets**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) vous permettent d'insérer des attributs personnalisés dans vos messages.
-- [**Les étiquettes**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) vous permettent d'insérer des données dans les messages et d'utiliser une logique conditionnelle pour envoyer des messages si certaines conditions sont remplies. Par exemple, vous pouvez utiliser des balises pour inclure une logique intelligente, telle que des énoncés « si », dans vos campagnes.
+- [**Les tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) vous permettent d'insérer des données dans les messages et d'utiliser une logique conditionnelle pour envoyer des messages si certaines conditions sont remplies. Par exemple, vous pouvez utiliser des balises pour inclure une logique intelligente, telle que des énoncés « si », dans vos campagnes.
 - [**Les filtres**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) vous permettent de reformater les attributs personnalisés et le contenu dynamique. Par exemple, vous pouvez utiliser le [filtre`date` ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#date-filter) pour convertir un horodatage, tel que *2016-09-07 08:43:50 UTC*, en une date, telle que le *7 septembre 2016.*
 
 {% alert warning %}
@@ -109,4 +110,3 @@ Ces termes sont réinterprétés à partir de la documentation de [**documentati
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

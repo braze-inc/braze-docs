@@ -1,6 +1,6 @@
 ---
-nav_title: Gerenciamento de canvas
-article_title: Gerenciamento de canvas
+nav_title: Gerenciar Canvases
+article_title: Gerenciar Canvases
 page_order: 2
 layout: dev_guide
 guide_top_header: "Gerenciamento de canvas"
@@ -30,10 +30,16 @@ guide_menu_list:
   - name: Fluxo de aprovação
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Arquivamento de mensagens
+  - name: Regras de Envio de Mensagens para Aprovação
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    image: /assets/img/braze_icons/check-square.svg
+  - name: Arquivando Mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
-  - name: Duplicação de mensagens
+  - name: Cópia entre espaços de trabalho
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
+  - name: Duplicando Mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
 ---

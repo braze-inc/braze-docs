@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE: Excluir item de catálogo"
+nav_title: "DELETE: exclui item do catálogo"
 article_title: "DELETE: Excluir item de catálogo"
 search_tag: Endpoint
 page_order: 1
@@ -25,7 +25,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='item de catálogo síncrono' %}
+{% multi_lang_include rate_limits.md endpoint='synchronous catalog item' %}
 
 ## Parâmetros da jornada
 

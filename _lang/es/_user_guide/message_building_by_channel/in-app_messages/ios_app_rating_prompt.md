@@ -1,6 +1,6 @@
 ---
-nav_title: Aviso de valoración en la aplicación para iOS
-article_title: Aviso de valoración en la aplicación para iOS
+nav_title: Aviso de valoración dentro de la aplicación para iOS
+article_title: Aviso de valoración dentro de la aplicación para iOS
 page_order: 6
 description: "Este artículo describe los enfoques y las implicaciones de utilizar Braze para pedir a los usuarios que revisen tu aplicación."
 channel:
@@ -14,7 +14,7 @@ channel:
 
 Apple ofrece una opción nativa, introducida con iOS 10.3, que permite a los usuarios valorar aplicaciones desde la propia aplicación. Si desea solicitar valoraciones de aplicaciones a los usuarios mediante un mensaje dentro de la aplicación en iOS, debe utilizar la solicitud nativa, ya que Apple no permite solicitudes de valoración personalizadas (consulte [Directrices de valoración de la App Store](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct), sección 5.6.1).
 
-Según las directrices de Apple, las solicitudes de revisión de aplicaciones pueden mostrarse a un usuario hasta tres veces al año, por lo que cualquier campaña de revisión de aplicaciones debe aprovechar la [limitación de la tasa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Los usuarios también pueden optar por no ver los avisos de revisión de la aplicación en la configuración de la misma. Para más información sobre las valoraciones del App Store, consulte el artículo de Apple sobre [valoraciones, reseñas y respuestas](https://developer.apple.com/app-store/ratings-and-reviews/).
+Según las directrices de Apple, las solicitudes de revisión de aplicaciones pueden mostrarse a un usuario hasta tres veces al año, por lo que cualquier campaña de revisión de aplicaciones debe aprovechar la [limitación de la tasa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Los usuarios también pueden optar por no ver los avisos de revisión de la aplicación en su configuración. Para más información sobre las valoraciones del App Store, consulte el artículo de Apple sobre [valoraciones, reseñas y respuestas](https://developer.apple.com/app-store/ratings-and-reviews/).
 
 ## Utilizar Braze para pedir a los usuarios opiniones sobre las aplicaciones
 
@@ -24,7 +24,7 @@ Aunque Apple exige que utilices el aviso nativo, puedes aprovechar las campañas
 
 Con este enfoque, quiere animar a los usuarios a visitar la App Store para añadir una reseña. Para ello, crea una campaña de mensajería dentro de la aplicación que [se vincule en profundidad]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) con la App Store.
 
-![Dos pantallas de móvil una al lado de la otra. El primero es un mensaje in-app que pide al usuario que valore la aplicación en la App Store. La segunda es la página de la App Store de iOS de esa aplicación.][1]
+![Dos pantallas de móvil una al lado de la otra. El primero es un mensaje in-app que pide al usuario que valore la aplicación en la App Store. La segunda es la página de la App Store de iOS de esa aplicación.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Enfoque 2: Preparación suave
 
@@ -32,7 +32,7 @@ Si no quieres que los usuarios abandonen tu aplicación, puedes prepararles prim
 
 Para conocer los pasos detallados, consulta la [solicitud de revisión personalizada de la App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![Dos mensajes in-app uno al lado del otro. La primera anima al usuario a valorar la aplicación preguntándole si tiene un momento para hacerlo. El segundo es el mensaje nativo de revisión de la App Store de iOS, que muestra una escala de cinco estrellas que el usuario puede seleccionar para valorar la aplicación.][2]
+![Dos mensajes in-app uno al lado del otro. La primera anima al usuario a valorar la aplicación preguntándole si tiene un momento para hacerlo. El segundo es el mensaje nativo de revisión de la App Store de iOS, que muestra una escala de cinco estrellas que el usuario puede seleccionar para valorar la aplicación.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 Los usuarios enviarán una valoración a través de la solicitud de valoración nativa de la App Store, y pueden escribir y enviar una valoración sin salir de la aplicación.
 
@@ -44,5 +44,3 @@ Como alternativa a la imprimación suave, también puede mostrar directamente el
 No cree mensajes HTML personalizados dentro de la aplicación que imiten el mensaje de valoración de una aplicación nativa de iOS, ya que esto infringe las directrices de Apple.
 {% endalert %}
 
-[1]: {% image_buster /assets/img_archive/app_store_app_review.png %}
-[2]: {% image_buster /assets/img_archive/prime_app_review.png %}

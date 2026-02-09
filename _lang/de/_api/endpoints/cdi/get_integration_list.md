@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Listen-Integrationen"
+nav_title: "GET: Integrationen auflisten"
 article_title: "GET: Listen-Integrationen"
 search_tag: Endpoint
 page_order: 1
@@ -24,7 +24,7 @@ Um diesen Endpunkt zu verwenden, müssen Sie einen API-Schlüssel mit der Berech
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpunkt='cdi list integrationen' %}
+{% multi_lang_include rate_limits.md endpoint='cdi list integrations' %}
 
 ## Abfrageparameter
 
@@ -97,6 +97,6 @@ In der folgenden Tabelle finden Sie eine Liste möglicher zurückgegebener Fehle
 | `400 Invalid cursor` | Prüfen Sie, ob Ihre `cursor` gültig ist. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler und Antworten.]({{site.baseurl}}/api/errors/#fatal-errors)
+Weitere Statuscodes und zugehörige Nachrichten finden Sie unter [Schwerwiegende Fehler & Antworten]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

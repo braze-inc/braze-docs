@@ -1,5 +1,5 @@
 ---
-nav_title: キャンペーンを作成
+nav_title: キャンペーンを作成する
 article_title: キャンペーンを作成
 layout: dev_guide
 page_order: 0
@@ -24,10 +24,10 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
   image: /assets/img/braze_icons/channel-mobile-push.svg
 - name: SMSキャンペーン
-  link: /docs/user_guide/message_building_by_channel/sms/campaign/create/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/sms/create/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: MMSキャンペーン
-  link: /docs/user_guide/message_building_by_channel/sms/mms/create/
+  link: /docs/user_guide/message_building_by_channel/sms_mms_rcs/mms/create/
   image: /assets/img/braze_icons/channel-sms.svg
 - name: Webhook キャンペーン
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/

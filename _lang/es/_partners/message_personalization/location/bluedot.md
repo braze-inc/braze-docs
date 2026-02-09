@@ -12,6 +12,10 @@ search_tag: Partner
 
 > [Bluedot](https://bluedot.io/) es una plataforma de ubicación que proporciona una plataforma de geovallado precisa y sencilla para tus aplicaciones. Utilice el SDK de Bluedot para enviar mensajes de forma más inteligente, automatizar el registro de pedidos móviles, optimizar los flujos de trabajo y crear experiencias sin fricciones. 
 
+_Esta integración está mantenida por Bluedot._
+
+## Sobre la integración
+
 La integración de Braze y Bluedot le permite utilizar los servicios de localización de geofence de Bluedot para crear eventos de usuario que se pueden utilizar para crear recorridos, campañas y analizar los comportamientos e intereses de los clientes. Los eventos (entrada/salida) generados por el usuario en su dispositivo se envían inmediatamente a Braze con toda la información relevante. 
 
 ## Requisitos previos
@@ -47,9 +51,10 @@ Puedes configurar una campaña push o Canvas que actúe a partir de eventos de u
 
 Configure una campaña basada en acciones dentro de Braze que enviará mensajes basados en una ubicación establecida. Para su activador, utilice un evento personalizado de `bluedot_entry` o `bluedot_exit` como se muestra en la siguiente captura de pantalla:
 
-![Una campaña basada en la acción en la fase de entrega. Aquí tiene dos opciones de programación que enviarán la campaña si un usuario realiza un evento personalizado `bluedot_entry` o `bluedot_exit`.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
+![Una campaña basada en la acción en la fase de entrega. Aquí tienes dos opciones de programación que enviarán la campaña si un usuario realiza un `bluedot_entry` personalizado o `bluedot_exit` event.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
 
 #### Dirigirse a los usuarios
 
 Asegúrese de seleccionar **Todos los usuarios** para su área de trabajo.
-![Una campaña basada en acciones con el paso de usuarios objetivo que le anima a seleccionar "Todos los usuarios" como segmento deseado.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+![Una campaña basada en acciones con el paso de usuarios objetivo que te anima a seleccionar "Todos los usuarios" como segment.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+

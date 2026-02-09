@@ -1,5 +1,5 @@
 ---
-nav_title: 연결된 콘텐츠 중단하기
+nav_title: Aborting Connected Content
 article_title: 연결된 콘텐츠 중단하기
 page_order: 2
 description: "이 참조 문서에서는 연결된 콘텐츠의 메시지 중단 모범 사례에 대해 설명합니다."

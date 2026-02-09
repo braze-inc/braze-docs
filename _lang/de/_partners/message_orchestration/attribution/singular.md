@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Singular
 
-> Singular ist eine einheitliche Analytics-Plattform für Marketing, die Attribution, Kostenaggregation, Marketing-Analysen, kreative Berichte und Workflow-Automatisierung zustellt.
+> [Singular](https://www.singular.net/) ist eine einheitliche Analytics-Plattform für Marketing, die Attribution, Kostenaggregation, Marketing-Analysen, kreative Berichte und Workflow-Automatisierung zustellt.
 
 _Diese Integration wird von Singular gepflegt._
 
@@ -43,7 +43,7 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-Vor Februar 2023 verwendete unsere Singular Attribution Integration den IDFV als primären Bezeichner, um iOS Attribution Daten abzugleichen. Für Braze-Kund:innen, die Objective-C verwenden, ist es nicht notwendig, die Braze `device_id` zu holen und bei der Installation an Singular zu senden, da es zu keiner Unterbrechung des Dienstes kommt.
+Vor Februar 2023 verwendete unsere Singular Attribution Integration den Identifier for Vendor (IDFV) als primären Bezeichner, um iOS Attribution Daten abzugleichen. Für Braze-Kund:innen, die Objective-C verwenden, ist es nicht notwendig, die Braze `device_id` abzurufen und sie bei der Installation an Singular zu senden, da es keine Unterbrechung des Dienstes gibt.
 {% endalert%}
 
 Wenn Sie das Swift SDK v5.7.0+ verwenden und weiterhin IDFV als gegenseitigen Bezeichner verwenden möchten, müssen Sie sicherstellen, dass das Feld `useUUIDAsDeviceId` auf `false` gesetzt ist, damit die Integration nicht unterbrochen wird. 
@@ -78,13 +78,13 @@ Navigieren Sie in Braze zu **Partnerintegrationen** > **Technologiepartner** und
 
 Hier finden Sie den REST-Endpunkt und generieren Ihren Datenimport-Schlüssel für Braze. Nachdem der Schlüssel generiert wurde, können Sie einen neuen Schlüssel erstellen oder einen bestehenden Schlüssel ungültig machen. 
 
-Sie müssen den Datenimport-Schlüssel und den REST-Endpunkt an Ihren Singular Account Manager:in weitergeben, um die Integration abzuschließen.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Singular Technologie finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.][4]{: style="max-width:90%;"}
+Sie müssen den Datenimport-Schlüssel und den REST-Endpunkt an Ihren Singular Account Manager:in weitergeben, um die Integration abzuschließen.<br><br>![Dieses Bild zeigt das Feld "Datenimport für Install-Attribution", das Sie auf der Seite Singular Technologie finden. In diesem Feld werden Ihnen der Datenimport-Schlüssel und der REST-Endpunkt angezeigt.]({% image_buster /assets/img/attribution/singular.png %}){: style="max-width:90%;"}
 
 ### Schritt 3: Bestätigen Sie die Integration
 
-Sobald Braze Attribution-Daten von Singular erhält, ändert sich der Verbindungsstatus auf der Technologie-Partnerseite von Singular in Braze von "Nicht verbunden" auf "Verbunden". Ein Zeitstempel der letzten erfolgreichen Anfrage wird ebenfalls mitgeschickt. 
+Nachdem Braze Attribution-Daten von Singular erhalten hat, ändert sich der Status der Verbindungsanzeige auf der Technologie-Partnerseite von Singular in Braze von "Nicht verbunden" zu "Verbunden" und enthält einen Zeitstempel der letzten erfolgreichen Anfrage.
 
-Beachten Sie, dass dies erst dann geschieht, wenn wir Daten über eine attributierte Installation erhalten. Organische Installationen, die vom Singular Postback ausgeschlossen werden sollten, werden von unserer API ignoriert und bei der Ermittlung, ob eine erfolgreiche Verbindung hergestellt wurde, nicht mitgezählt.
+Dieser Status ändert sich erst, wenn Braze Daten über eine attributierte Installation erhält. Braze ignoriert organische Installationen (schließt sie aus dem Singular Postback aus) und zählt sie nicht, wenn es darum geht, ob die Verbindung erfolgreich war.
 
 ## Daten zur Attribution von Facebook und X (früher Twitter)
 
@@ -127,4 +127,3 @@ Wenn Sie derzeit keine Geräte-Identifikatoren - wie IDFV oder GAID - in Ihren C
 {% endalert %}
 
 
-[4]: {% image_buster /assets/img/attribution/singular.png %}

@@ -1,7 +1,7 @@
 ---
-nav_title: Migration des numéros de téléphone WhatsApp
+nav_title: Migration du numéro de téléphone WhatsApp
 article_title: Migration des numéros de téléphone WhatsApp
-page_order: 2
+page_order: 3
 description: "Cet article de référence explique comment migrer votre numéro de téléphone WhatsApp."
 page_type: reference
 channel:
@@ -26,7 +26,5 @@ Pour plus d'informations sur la migration de votre numéro de téléphone WhatsA
 ## Migration de votre numéro de téléphone WhatsApp
 
 1. Dans le gestionnaire de WhatsApp, sélectionnez le compte professionnel WhatsApp (WABA) associé à votre numéro de téléphone, puis allez dans **Outils de compte** > **Numéros de téléphone**.
-2. Sélectionnez **Désactiver la vérification en deux étapes** et suivez les étapes suivantes.<br><br>![Gestionnaire WhatsApp Business ouvert sur la page « Numéros de téléphone ».][1]{: style="max-width:80%;"} <br><br> Si vous migrez un numéro de téléphone vers un autre WhatsApp Business Group et que l'inscription intégrée de Meta exige que le nom d'affichage corresponde, prenez note du nom d'affichage existant sur la page **Numéros de téléphone**. Vous indiquerez ce nom à l'étape suivante.<br><br>![Page Numéros de téléphone du gestionnaire WhatsApp Business avec un nom d'utilisateur Braze à côté d'un numéro de téléphone.]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
-3. Terminez le processus d'inscription intégrée de Meta. 
-
-[1]: {% image_buster /assets/img/whatsapp/waba_manager.png %}
+2. Sélectionnez **Désactiver la vérification en deux étapes** et suivez les étapes suivantes.<br><br>![Gestionnaire WhatsApp Business ouvert sur la page « Numéros de téléphone ».]({% image_buster /assets/img/whatsapp/waba_manager.png %}){: style="max-width:80%;"} <br><br> Si vous migrez un numéro de téléphone vers un autre WhatsApp Business Group et que l'inscription intégrée de Meta exige que le nom d'affichage corresponde, prenez note du nom d'affichage existant sur la page **Numéros de téléphone**. Vous indiquerez ce nom à l'étape suivante.<br><br>![La page des numéros de téléphone du gestionnaire de WhatsApp avec un nom d'affichage "Braze" inscrit à côté d'un numéro de téléphone.]({% image_buster /assets/img/whatsapp/phone_numbers.png %}){: style="max-width:80%;"}<br><br>
+3. Terminez le processus d'inscription intégrée de Meta.

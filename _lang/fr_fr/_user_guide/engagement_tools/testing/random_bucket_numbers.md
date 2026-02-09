@@ -13,11 +13,19 @@ tool:
 
 # Numéros de compartiment aléatoire
 
-> Un numéro de compartiment aléatoire est un attribut utilisateur qui peut être utilisé pour créer des segments distribués uniformément d’utilisateurs aléatoires. Lorsqu’un profil d’utilisateur est créé dans Braze, l’utilisateur reçoit automatiquement un numéro de compartiment aléatoire compris entre 0 et 9999. Vous pouvez utiliser ces segments pour tester l'efficacité de plusieurs campagnes ou Canvases sur des groupes d'utilisateurs au fil du temps.
+> Un numéro de compartiment aléatoire est un attribut utilisateur qui peut être utilisé pour créer des segments distribués uniformément d’utilisateurs aléatoires. 
 
 ## Aperçu
 
-Les numéros de compartiment aléatoire sont utilisés dans votre groupe de contrôle global, un groupe d'utilisateurs qui ne reçoit aucune campagne ni aucune toile. Braze sélectionne de manière aléatoire plusieurs plages de numéros de compartiment aléatoires et inclut les utilisateurs faisant partie des compartiments sélectionnés. 
+Lorsqu’un profil d’utilisateur est créé dans Braze, l’utilisateur reçoit automatiquement un numéro de compartiment aléatoire compris entre 0 et 9999. Vous pouvez utiliser ces segments pour tester l'efficacité de plusieurs campagnes ou Canvases sur des groupes d'utilisateurs au fil du temps.
+
+### Utilisation du groupe de contrôle global
+
+Les numéros de compartiment aléatoire sont utilisés dans votre groupe de contrôle global, un groupe d'utilisateurs qui ne reçoit aucune campagne ni aucune toile. Braze sélectionne de manière aléatoire plusieurs plages de numéros de compartiment aléatoires et inclut les utilisateurs faisant partie des compartiments sélectionnés. Des numéros de compartiment aléatoires sont attribués sans pondération ni prise en compte des numéros récemment attribués. 
+
+{% alert note %}
+Lorsqu'un utilisateur est supprimé et recréé, un numéro de compartiment aléatoire différent lui est attribué car il est considéré comme un nouvel utilisateur.
+{% endalert %}
 
 Si vous avez mis en place un groupe de contrôle global et que vous souhaitez utiliser des numéros de compartiment aléatoire pour d'autres cas d'utilisation, consultez les [points à surveiller.]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for)
 
@@ -33,7 +41,7 @@ Si vous souhaitez segmenter les utilisateurs pour des essais au sein d'une même
 
 Lors de la [création d'un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), ajoutez le filtre "Random Bucket #". Ensuite, indiquez un nombre ou une plage de nombres à inclure dans votre segmentation.
 
-![][2]
+![Un filtre de segmentation qui porte sur des numéros de compartiment aléatoires ne dépassant pas "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Vous voudrez peut-être utiliser ces types de segments si vous souhaitez exécuter un test de trois variantes différentes et inclure également un groupe de contrôle. Observez le plan d’échantillonnage suivant pour la création de segments de taille égale pour trois variantes et un groupe de contrôle :
 
@@ -57,4 +65,3 @@ La réinscription aléatoire d'une audience peut être utile pour les [tests A/B
 5. Lancez votre campagne et surveillez les performances de chaque compartiment. Vous pouvez analyser des indicateurs tels que les taux d'engagement et les taux de conversion pour déterminer l'efficacité de la réinscription aléatoire de l'audience dans le cadre de votre cas d'utilisation.
 
 
-[2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %}

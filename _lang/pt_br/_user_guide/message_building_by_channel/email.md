@@ -1,23 +1,20 @@
 ---
 nav_title: E-mail
 article_title: E-mail
-page_order: 2
+page_order: 1.5
 layout: dev_guide
 guide_top_header: "E-mail"
-guide_top_text: "Com o e-mail na Braze, você pode criar mensagens de e-mail completamente personalizadas e customizadas em campanhas ou canva que chamarão a atenção do seu usuário rapidamente. Confira os seguintes artigos para saber mais."
+guide_top_text: "Com o envio de e-mail no Braze, você pode criar mensagens de e-mail totalmente personalizadas em campanhas ou no Canva que chamarão a atenção do usuário rapidamente fora do seu app ou site. Personalize suas mensagens de e-mail, desde o gerenciamento do público até a inclusão de conteúdo multimídia atraente. Para ver exemplos de campanhas de e-mail, confira nossos <a href='https://www.braze.com/customers/'>estudos de caso</a>."
 description: "Esta landing page é a página inicial do e-mail Braze. Aqui, você pode aprender como criar uma campanha de e-mail, como usar o editor de arrastar e soltar, como gerenciar assinaturas de usuários, a Central de Preferências e mais."
 channel:
   - email
 search_rank: 2
 guide_featured_title: "Artigos populares"
 guide_featured_list:
-- name: Sobre e-mail
-  link: /docs/user_guide/message_building_by_channel/email/about/
-  image: /assets/img/braze_icons/check-square-broken.svg
-- name: Gerenciando inscrições de usuários
+- name: Gerenciar inscrições de usuários
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
-- name: Alias de Link
+- name: Aliasing de links
   link: /docs/user_guide/message_building_by_channel/email/templates/link_aliasing/
   image: /assets/img/braze_icons/link-03.svg
 - name: Criar uma Campanha de e-mail
@@ -39,7 +36,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Locais em Mensagens
-  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/users-01.svg
 - name: Central de Preferências
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
@@ -57,7 +54,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/transactional_message_api_campaign/
   image: /assets/img/braze_icons/bank-note-02.svg
 - name: Criptografia do campo de identificador
-  link: /docs/user_guide/analytics/field_level_encryption/
+  link: /docs/user_guide/data/field_level_encryption/
   image: /assets/img/braze_icons/database-01.svg
 - name: Ferramenta de Promoção do Gmail
   link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
@@ -77,8 +74,27 @@ guide_menu_list:
 - name: Perguntas frequentes
   link: /docs/user_guide/message_building_by_channel/email/faq/
   image: /assets/img/braze_icons/annotation-question.svg
-
-
 ---
 
-<br><br>
+## [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Personalize seus e-mails
+
+É possível personalizar o envio de mensagens por e-mail de várias maneiras, inclusive:
+
+- [Modelos de e-mail do Braze]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/)
+- [Modelos HTML personalizados]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)
+- [Blocos para o editor de arrastar e soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/)
+- [Inscrições de usuários]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)
+
+## Ótimos casos de uso
+
+Aqui estão alguns casos de uso excelentes para você se inspirar!
+
+| Caso de uso | Explicação |
+| --- | --- |
+| Reengajamento | Alcance usuários fora do seu app, incluindo aqueles que não instalaram o aplicativo. |
+| Onboarding | Integre e incentive os novos usuários a ativar as notificações por push ou a compartilhar o app nas redes sociais. |
+| Envio de mensagens Rich | Permitir o envio de mensagens HTML ricas e dinâmicas. |
+| Conteúdo multimídia | Facilidade de colocação de conteúdo multimídia que engaja os usuários, como vídeos e imagens. |
+| Boletins informativos | Envie convenientemente boletins informativos mensais ou semanais para manter o engajamento dos usuários. |
+| Transações | Notifique os usuários sobre compras recentes e forneça informações importantes sobre produtos e remessas com [e-mails de transação]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/).
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Iterate
 
-> [Iterate](https://iteratehq.com) makes it easy to learn from your customers, offering smart, user-friendly research tools that look and feel like your brand.
+> [Iterate](https://iteratehq.com) provides survey and feedback tools to help you learn from your customers, offering user-friendly research experiences that match your brand.
 
 _This integration is maintained by Iterate._
 

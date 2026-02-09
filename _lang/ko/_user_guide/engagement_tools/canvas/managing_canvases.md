@@ -1,6 +1,6 @@
 ---
-nav_title: 캔버스 관리
-article_title: 캔버스 관리
+nav_title: 캔버스 관리하기
+article_title: 캔버스 관리하기
 page_order: 2
 layout: dev_guide
 guide_top_header: "캔버스 관리"
@@ -30,9 +30,15 @@ guide_menu_list:
   - name: 승인 워크플로우
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
+  - name: Messaging Rules for Approval
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
+    image: /assets/img/braze_icons/check-square.svg
   - name: 메시지 보관
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Copying Across Workspaces
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: 메시지 복제
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg

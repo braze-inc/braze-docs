@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Liste de contrôle avant et après lancement
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: Lancement avec Canvas Flow
+  - name: Lancement avec Canvas
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 

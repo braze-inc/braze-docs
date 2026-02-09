@@ -29,7 +29,7 @@ CSV를 [업로드]({{site.baseurl}}/user_guide/data_and_analytics/user_data_coll
 
 모든 국제 번호는 `+`로 시작하고 그 뒤에 해당 국가 코드와 전화번호를 입력해야 합니다. (e.g `+442071838750`)
 
-![][그림]{: style="max-width:50%;border: 0;"}
+![]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 그러나 국가 또는 지역 번호가 다른 여러 지역으로 보내는 경우 정확성을 보장하기 위해 U.S.기반 전화번호라도 `E.164` 형식을 사용하는 것이 좋습니다.
 
@@ -51,5 +51,4 @@ CSV를 [업로드]({{site.baseurl}}/user_guide/data_and_analytics/user_data_coll
 
 여러 사용자가 단일 캠페인 또는 캔버스 단계의 세그먼트 내에서 동일한 전화번호를 가지고 있는 경우, Braze는 발송을 중복 제거하고 해당 전화번호로 하나의 메시지만 보냅니다. 
 
-[picture]: {% image_buster /assets/img/sms/e164.png %}
 

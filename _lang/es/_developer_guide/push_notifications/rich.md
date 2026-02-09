@@ -1,7 +1,7 @@
 ---
 page_order: 3
 nav_title: Notificaciones enriquecidas
-article_title: Configuración de notificaciones push enriquecidas para el SDK de Braze
+article_title: Configurar notificaciones push enriquecidas para el SDK de Braze
 channel:
   - push notifications
 ---
@@ -16,10 +16,10 @@ channel:
 {% endsdktab %}
 
 {% sdktab cordova %}
-guide/cordova/push_notifications/rich.md%} developer_
+{% multi_lang_include developer_guide/cordova/push_notifications/rich.md%}
 {% endsdktab %}
 
 {% sdktab react native %}
-guide/react_native/push_notifications/rich.md%} developer_
+{% multi_lang_include developer_guide/react_native/push_notifications/rich.md%}
 {% endsdktab %}
 {% endsdktabs %}

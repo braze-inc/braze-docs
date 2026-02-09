@@ -1,7 +1,7 @@
 ---
 nav_title: クエリテンプレート
 article_title: クエリビルダーテンプレート
-page_order: 0
+page_order: 1
 page_type: reference
 toc_headers: h2
 description: "この記事では、クエリビルダーで Snowflake の Braze データを使用して作成できるレポートのタイプを示します。"

@@ -51,10 +51,10 @@ Sie können eine Push-Kampagne oder ein Canvas einrichten, das auf Standort-Erei
 
 Richten Sie in Braze eine aktionsbasierte Kampagne ein, die Nachrichten auf der Grundlage eines bestimmten Standorts versendet. Verwenden Sie für Ihren Trigger ein angepasstes Event von `bluedot_entry` oder `bluedot_exit`, wie im folgenden Screenshot gezeigt:
 
-![Eine aktionsbasierte Kampagne in der Phase der Zustellung. Hier haben Sie zwei Zeitplan-Optionen, die die Kampagne senden, wenn ein Nutzer:innen ein angepasstes `bluedot_entry` oder `bluedot_exit` Event ausführt.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
+![Eine aktionsbasierte Kampagne in der Phase der Zustellung. Hier haben Sie zwei Zeitplan-Optionen, die die Kampagne senden, wenn ein Nutzer:in eine angepasste `bluedot_entry` oder `bluedot_exit` event.]({%image_buster /assets/img_archive/Campaign-Delivery-BD.png %}){: style="max-width:80%"}
 
 #### Targeting von Nutzer:innen
 
 Stellen Sie sicher, dass Sie **Alle Nutzer**:innen für Ihren Workspace als Targeting auswählen.
-![Eine aktionsbasierte Kampagne mit dem Schritt der Zielgruppe Nutzer:innen fordert Sie auf, "Alle Nutzer:innen" als gewünschtes Segment auszuwählen.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
+![Eine aktionsbasierte Kampagne mit dem Schritt der Zielgruppe Nutzer:innen fordert Sie auf, "Alle Nutzer:innen" als gewünschtes segment.]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}) auszuwählen.{: style="max-width:80%"}
 

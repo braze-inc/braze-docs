@@ -1,6 +1,6 @@
 ---
-nav_title: Carregando um Modelo de E-mail HTML
-article_title: Carregando um Modelo de E-mail HTML
+nav_title: Fazer upload de um modelo de e-mail em HTML
+article_title: Fazer upload de um modelo de e-mail HTML
 page_order: 2
 description: "Este artigo de referência explica como criar, gerenciar e solucionar problemas de um modelo de e-mail HTML usando o dashboard da Braze."
 tool:
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Carregando um modelo de e-mail HTML
+# Fazer upload de um modelo de e-mail em HTML
 
 > O dashboard da Braze permite que você faça upload de seus próprios modelos de e-mail em HTML e os salve para uso posterior em campanhas. Você também pode [criar um modelo de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) usando nosso editor.
 
@@ -35,7 +35,7 @@ Na seção **Tipo de Modelo**, selecione **editor de HTML** e role para baixo at
 
 ### Etapa 3: Faça o upload do seu modelo
 
-Clique em **Fazer upload do arquivo** e selecione seu modelo do seu computador. Consulte a seção [Pré-requisitos](#upload-requirements) para garantir que seu modelo atenda aos requisitos de fazer upload.
+Selecione **Upload From File (Fazer upload do arquivo** ) e selecione o modelo em seu computador. Consulte a seção [Pré-requisitos](#upload-requirements) para garantir que seu modelo atenda aos requisitos de fazer upload.
 
 #### Solucionar problemas de erros de upload de modelo
 
@@ -54,7 +54,7 @@ Há várias mensagens de erro de e-mail que você pode receber ao enviar um arqu
 
 ### Etapa 4: Conclua e salve seu modelo
 
-Certifique-se de salvar seu modelo clicando em **Salvar Modelo**. Agora você está pronto para usar este modelo em qualquer campanha ou canva que escolher!
+Certifique-se de salvar seu modelo selecionando **Save Template (Salvar modelo)**. Agora você está pronto para usar este modelo em qualquer campanha ou canva que escolher!
 
 {% alert note %}
 Se você fizer qualquer edição em um modelo existente, essas alterações não serão refletidas em campanhas que foram criadas usando versões anteriores desse modelo.
@@ -64,7 +64,7 @@ Se você fizer qualquer edição em um modelo existente, essas alterações não
 
 Para usar seu e-mail em uma campanha de API, você precisa do `email_template_id`, que pode ser encontrado na parte inferior de qualquer modelo de e-mail criado no Braze.
 
-![Seção de Identificador de API de um modelo de e-mail HTML.][4]
+![Seção API Identifier de um modelo de e-mail HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## Gerenciando templates de e-mail
 
@@ -72,8 +72,6 @@ Você pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and
 
 ## Perguntas frequentes
 
-Para respostas a perguntas frequentes sobre modelos de e-mail, confira nossa [FAQ de modelos de e-mail e links][10] página.
+Para obter respostas às perguntas mais frequentes sobre modelos de e-mail, consulte nossa página de [perguntas frequentes sobre modelos de e-mail e links]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 
 
-[4]: {% image_buster /assets/img_archive/email_template_id.png %}
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/

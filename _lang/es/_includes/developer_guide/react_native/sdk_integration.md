@@ -28,7 +28,7 @@ Para integrar el SDK, se necesita la versión 0.71 o posterior de React Native. 
 npm install @braze/react-native-sdk
 ```
 {% endtab %}
-{% tab hilo %}
+{% tab yarn %}
 ```bash
 yarn add @braze/react-native-sdk
 ```
@@ -48,7 +48,7 @@ Asegúrate de que tu SDK de React Native de Braze sea de la versión 1.37.0 en a
 Para instalar el complemento Braze Expo, ejecuta el siguiente comando:
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### Paso 2.2: Añade el plugin a tu app.json
@@ -80,6 +80,7 @@ En tu `app.json`, añade el Plugin Braze Expo. Puedes proporcionar las siguiente
 | `enableBrazeIosRichPush`                      | booleano | Solo para iOS. Si se habilitan las características de notificaciones push enriquecidas para iOS.                                                                                                  |
 | `enableBrazeIosPushStories`                   | booleano | Solo para iOS. Habilitar o no las Historias push de Braze para iOS.                                                                                                  |
 | `iosPushStoryAppGroup`                        | cadena  | Solo para iOS. El grupo de aplicaciones utilizado para las historias push de iOS.                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | booleano | Solo para iOS. Si el ID del dispositivo utilizará un UUID generado aleatoriamente.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Ejemplo de configuración:
@@ -125,7 +126,7 @@ Ejemplo de configuración:
 Preconstruir tu aplicación generará los archivos nativos necesarios para que funcione el plugin Braze Expo.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 Ejecuta tu aplicación como se especifica en [los documentos de la Expo](https://docs.expo.dev/workflow/customizing/). Ten en cuenta que si realizas algún cambio en las opciones de configuración, tendrás que precompilar y ejecutar de nuevo la aplicación.
@@ -156,8 +157,8 @@ Para conectarte a los servidores de Braze, crea un archivo `braze.xml` en la car
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -249,10 +250,10 @@ Desde la carpeta raíz del proyecto:
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### Paso 2.3: Configurar el SDK de Braze
@@ -263,6 +264,7 @@ cd ios && pod install
 Importa el SDK de Braze en la parte superior del archivo `AppDelegate.swift`:
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 En el método `application(_:didFinishLaunchingWithOptions:)`, sustituye la [clave de]({{site.baseurl}}/api/identifier_types/) API y el [punto final]({{site.baseurl}}/api/basics/#endpoints) por los valores de tu aplicación. A continuación, crea la instancia de Braze utilizando la configuración, y crea una propiedad estática en la dirección `AppDelegate` para facilitar el acceso:

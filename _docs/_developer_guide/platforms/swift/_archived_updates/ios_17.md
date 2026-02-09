@@ -1,5 +1,5 @@
 ---
-nav_title: iOS 17 Upgrade Guide
+nav_title: iOS 17 upgrade guide
 article_title: iOS 17 Upgrade Guide
 page_order: 7
 platform: 

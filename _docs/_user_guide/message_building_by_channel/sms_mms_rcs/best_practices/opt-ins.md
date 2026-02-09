@@ -1,5 +1,5 @@
 ---
-nav_title: "Collecting User Opt-Ins"
+nav_title: "Collecting user opt-ins"
 article_title: Best Practices for Collecting User SMS Opt-Ins
 page_order: 7
 description: "This reference article cover three best practices for collecting user opt-ins."

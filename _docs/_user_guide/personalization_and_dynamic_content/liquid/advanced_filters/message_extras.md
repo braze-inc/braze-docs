@@ -1,5 +1,5 @@
 ---
-nav_title: Message Extras Tag
+nav_title: Message extras tag
 article_title: Message Extras Tag
 page_order: 1
 description: "This article explains how to use the message extras Liquid tag and how to check for syntax."
@@ -53,6 +53,10 @@ Any other input that doesn't match the tag standard discussed above may fail to 
 - Extra text before keys or values are defined
 - Out of order keys and values 
   - {% raw %}For example, ```{% message_extras :value 123 :key test %}```{% endraw %}
+
+## Sending promotion code information to Currents
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
 
 ## Considerations
 

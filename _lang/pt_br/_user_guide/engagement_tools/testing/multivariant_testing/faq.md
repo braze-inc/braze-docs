@@ -1,10 +1,10 @@
 ---
 nav_title: Perguntas frequentes
-article_title: Perguntas frequentes sobre testes multivariantes e Testes A/B
+article_title: FAQs sobre Multivariantes e Testes A/B
 page_order: 21
 page_type: reference
 toc_headers: h2
-description: "Este artigo aborda as perguntas frequentes sobre testes multivariantes e A/B com o Braze."
+description: "Este artigo cobre FAQs para testes multivariantes e A/B com Braze."
 ---
 
 # Perguntas frequentes sobre testes multivariantes e A/B
@@ -23,13 +23,17 @@ Os testes multivariantes são uma extensão dos Testes A/B, que permitem que o p
 
 ### Como os resultados dos Testes A/B são calculados?
 
-O Braze testa todas as variantes umas contra as outras com os testes de qui-quadrado de Pearson, que medem se uma variante supera estatisticamente todas as outras em um nível de significância de p < 0,05, ou o que chamamos de significância de 95%. Em todas as variantes que excedem esse limite de significância, a variante com melhor performance é determinada como a "vencedora".
+Braze testa todas as variantes umas contra as outras com testes qui-quadrado de Pearson, que medem se uma variante supera estatisticamente todas as outras em um nível de significância de p < 0,05, ou o que chamamos de 95% de significância. Em todas as variantes que excedem esse limite de significância, a variante com melhor performance é determinada como a "vencedora".
 
 Esse é um teste separado da pontuação de confiança, que descreve apenas a performance de uma variante em comparação com o controle com um valor numérico entre 0 e 100%. Especificamente, ele representa nossa confiança de que a diferença padronizada na taxa de conversão entre a variante e o controle é significativamente maior do que o acaso.
 
+### Por que a distribuição das variantes não é uniforme?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
+
 ## Execução e conclusão de testes
 
-### Quando termina o teste inicial?
+### Quando o teste inicial termina?
 
 Ao usar a Variante vencedora para campanhas de envio único, o teste termina quando chega a hora de envio da Variante vencedora. O Braze considerará uma variante como vencedora se ela apresentar a maior taxa de conversão por uma margem estatisticamente significativa.
 

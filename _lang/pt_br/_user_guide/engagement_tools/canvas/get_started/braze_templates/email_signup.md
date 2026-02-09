@@ -1,5 +1,5 @@
 ---
-nav_title: Cadastro de E-mail com Aceitação Dupla
+nav_title: Cadastro de e-mail com aceitação dupla
 article_title: Cadastro de E-mail com Aceitação Dupla
 page_order: 2
 page_type: reference
@@ -33,20 +33,20 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 1. Selecione **Editar** ao lado do nome do modelo.
 
-![O título e a descrição atuais do Canva.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
+![O título e a descrição atuais do canva.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Atualize o canva para especificar que o canva é para direcionamento de novos usuários quando eles usam o app pela primeira vez.
 3\. Atualize a descrição para explicar que este canva contém envio de mensagens personalizadas para os usuários aceitarem duas vezes.
 4\. Adicione a tag **E-mail** para que possamos filtrá-la na página inicial do canva.
 
-![O novo nome, a descrição e a tag do Canva.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
+![O novo nome, descrição e tag para o canva.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
 
 ### Etapa 2: Atribuir eventos de conversão
 
-Em seguida, vamos atribuir nossos eventos de conversão. Os eventos de conversão são um tipo de métrica que pode ser usada para medir o sucesso do Canva. Em **Tipo de evento de conversão**, selecione **Realiza evento personalizado**. Em seguida, selecione **e-mail_opt_in** em **Nome do evento personalizado**.
+Em seguida, vamos atribuir nossos eventos de conversão. Os eventos de conversão são um tipo de métrica que pode ser usada para medir o sucesso do Canva. Em **Tipo de evento de conversão**, selecione **Realiza evento personalizado**. Em seguida, selecione **email_opt_in** para o **evento personalizado**.
 
-![Seção "Atribuir eventos de conversão" para o tipo de evento de conversão de aceitação para e-mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+![Seção "Atribuir Eventos de Conversão" para o tipo de evento de conversão de optar por e-mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 Manteremos o prazo de conversão do modelo de três dias porque queremos direcionar nossos usuários mais recentes.
 
@@ -60,19 +60,19 @@ Nós também manteremos as **Opções baseadas em ação** como estão, para que
 
 Em **Período de entrada**, atualizaremos o **Horário de início (obrigatório)** para a data e hora desejadas.
 
-![Um período de entrada com o horário de início 16 de janeiro de 2025 às 12:30. Os usuários inserirão esta mensagem em seu fuso local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+![Um período de entrada com o horário de início 16 de janeiro de 2025 às 12:30. Os usuários entrarão nesta mensagem em seu fuso horário local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
 ### Etapa 4: Selecione o público-alvo
 
 Definiremos nosso público-alvo como usuários de Steppington que não têm um e-mail em seu perfil de usuário. Faremos isso mantendo o [filtro de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) padrão do modelo como `Email Available is false`.
 
-![Entrada público com o filtro "Email Available is false".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
+![Público de Entrada com o filtro "E-mail Disponível é falso".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
 ### Etapa 5: Selecione suas configurações de envio
 
 Manteremos as configurações padrão de inscrição, para que enviemos apenas aos usuários que se inscreveram ou aceitaram receber mensagens ou notificações, e ignoraremos as outras configurações (limite de frequência, horário de silêncio e grupos de teste).
 
-![Opções de envio padrão para enviar apenas para usuários que estão inscritos ou optaram por participar.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
+![Opções de envio padrão para enviar apenas para usuários que estão inscritos ou optaram por receber.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### Etapa 6: Personalize sua tela
 

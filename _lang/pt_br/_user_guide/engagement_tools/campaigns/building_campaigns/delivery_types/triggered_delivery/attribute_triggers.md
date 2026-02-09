@@ -1,5 +1,5 @@
 ---
-nav_title: Disparos de atribuição
+nav_title: Disparos de atribuições
 article_title: Disparos de atribuição
 page_order: 1
 alias: /attribute_triggers/
@@ -22,7 +22,7 @@ Os disparadores de atribuição estão disponíveis para os seguintes cenários:
 
 Para começar a usar os disparos de atribuição, crie uma campanha ou um componente do Canvas e selecione **Entrega baseada em ação** como seu método de entrega. Em seguida, selecione o disparador de atribuição que você gostaria de usar.
 
-![][1]
+![Seção "Entrega baseada em ação" com um menu suspenso para selecionar um disparo.]({% image_buster /assets/img_archive/trigger_attribute.png %})
 
 ### Atualizar o status da inscrição
 
@@ -41,7 +41,9 @@ Use o disparador `Update Subscription Group Status` para direcionar os usuários
 Por exemplo, é possível direcionar aos usuários uma mensagem SMS de boas-vindas quando eles aceitarem participar do seu programa. Também é possível especificar a origem da atualização para ter um controle mais preciso sobre quando uma mensagem é disparada. 
 
 As fontes de atualização disponíveis variam de acordo com o canal:
+- Etapa de atualização do usuário do canva
 - Importação de CSV
+- Cancelar inscrição de lista
 - Central de Preferências
 - API REST
 - SDK
@@ -58,21 +60,21 @@ Para atribuição de alteração, o disparador é avaliado primeiro e, em seguid
 
 Use o disparador `Change Custom Attribute Value` com a opção `any new value` para direcionar os usuários quando um valor booleano, inteiro, string ou data for alterado para qualquer novo valor.
 
-Por exemplo, direcione os usuários quando o número de pontos de fidelidade mudar para que eles saibam quantos pontos têm agora. Neste exemplo, digamos que um usuário tenha 85 pontos de fidelidade e você tenha configurado uma campanha para disparar quando a atribuição do ponto de fidelidade for alterada para qualquer novo valor. Se o valor da atribuição do ponto de fidelidade desse usuário mudar para qualquer novo valor (e.g 83, 84, 86, etc.), a campanha será disparada.
+Por exemplo, direcione os usuários quando o número de pontos de recompensas mudar para que eles saibam quantos pontos têm agora. Neste exemplo, digamos que um usuário tenha 85 pontos de recompensa e você tenha configurado uma campanha para disparar quando a atribuição de pontos de recompensa for alterada para qualquer novo valor. Se o valor da atribuição de pontos de recompensa desse usuário mudar para qualquer novo valor (como 83, 84, 86 e assim por diante), a campanha será disparada.
 
-Considere o próximo exemplo de caso de uso com uma notificação de atualização de camada. Talvez queira alertar os usuários se o nível de fidelidade deles mudar. Para realizar esse caso de uso, configure uma campanha que seja disparada pelo site `Change Custom Attribute Value` e defina-a para ser disparada quando o atributo personalizado fidelidade mudar para qualquer novo valor.
+Considere o próximo exemplo de caso de uso com uma notificação de atualização de camada. Talvez queira alertar os usuários se o nível de recompensas deles mudar. Para realizar esse caso de uso, configure uma campanha que seja disparada pelo site `Change Custom Attribute Value` e defina-a para ser disparada quando o atributo personalizado reward tier mudar para qualquer novo valor.
 
 {% alert important %}
 Os disparadores de atributos não estão disponíveis atualmente para atributos de matriz.
 {% endalert %}
 
-![Qualquer novo valor][2]
+![Um disparador "Change Custom Attribute Value" (Alterar valor de atributo personalizado) para o site "AA_current_rewards_tier" que muda para qualquer valor.]({% image_buster /assets/img_archive/any_value.png %})
 
-Você também pode usar o Liquid para personalizar o corpo da mensagem com o novo nível de fidelidade do cliente e fornecer a ele mais informações sobre a mudança.
+Você também pode usar o Liquid para personalizar o corpo da mensagem com o novo nível de recompensas do cliente e fornecer a ele mais informações sobre a mudança.
 
 {% raw %}
 ```liquid
-Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
+Your rewards tier was just changed to {{custom_attribute.${AA_current_rewards_tier}}}
 ```
 {% endraw %}
 
@@ -80,9 +82,9 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 Use o disparador `Change Custom Attribute Value` com a opção `specific value` para direcionar os usuários quando um atributo personalizado booleano, inteiro ou string for alterado para um valor específico. 
 
-Por exemplo, direcione os usuários quando o nível de fidelidade deles mudar para o melhor nível. Para este exemplo, digamos que o melhor nível de fidelidade seja o Super VIP. É possível configurar uma campanha para disparar quando o atributo personalizado de nível de fidelidade de um usuário mudar para `Super VIP`, para que você possa parabenizar o usuário por se tornar um Super VIP.
+Por exemplo, direcione os usuários quando o nível de recompensas mudar para o melhor nível. Para este exemplo, digamos que o melhor nível de recompensas seja o Super VIP. É possível configurar uma campanha para disparar quando o atributo personalizado de nível de recompensas de um usuário mudar para `Super VIP`, para que você possa parabenizar o usuário por se tornar um Super VIP.
 
-![][4]
+![Um disparador "Change Custom Attribute Value" (Alterar valor de atributo personalizado) para o site "AA_current_rewards_tier" que muda para o valor específico de "super vip".]({% image_buster /assets/img_archive/super_vip.png %})
 
 {% alert important %}
 - Os disparadores de atributos para valores específicos de atributos personalizados não estão disponíveis para atributos personalizados de matriz e data.
@@ -91,6 +93,3 @@ Por exemplo, direcione os usuários quando o nível de fidelidade deles mudar pa
 - O disparo de alteração de valores de atributos personalizados também se aplica a novos usuários criados.
 {% endalert %}
 
-[1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
-[2]:{% image_buster /assets/img_archive/any_value.png %}
-[4]:{% image_buster /assets/img_archive/super_vip.png %}

@@ -13,7 +13,7 @@ page_order: 6.1
 
 > Utiliza el Generador de informes para crear paneles y visualizaciones utilizando informes creados en el Generador de informes o en el Generador de consultas.
 
-Dashboard Builder te permite componer y visualizar paneles de análisis personalizados desde cero y a partir de plantillas suministradas por Braze. Puedes utilizar un origen de datos sin código (Generador de informes) o un origen de datos SQL (Generador de consultas) para potenciar tu panel, o partir de una de las muchas plantillas Braze.
+Dashboard Builder te permite componer y visualizar paneles de análisis personalizados desde cero y a partir de paneles suministrados por Braze. Puedes utilizar un origen de datos sin código (Generador de informes) o un origen de datos SQL (Generador de consultas) para potenciar tu panel, o partir de uno de los muchos paneles suministrados por Braze.
 
 ## Crear un panel personalizado
 
@@ -21,12 +21,12 @@ Dashboard Builder te permite componer y visualizar paneles de análisis personal
 2. Selecciona **Crear panel**.
 3. Selecciona qué origen de datos alimentará tus informes:
 - **Informes** creados con el Generador de informes
-- **Consultas personalizadas** creadas en el Generador de consultas<br><br>![Ventana para seleccionar el origen de datos de tu panel.][4]<br><br>
+- **Consultas personalizadas** creadas en el Generador de consultas<br><br>![Ventana para seleccionar el origen de datos de tu panel.]({% image_buster /assets/img/select_data_source.png %})<br><br>
 
 Ahora, sigue los pasos correspondientes a tu origen de datos:
 
 {% tabs %}
-{% tab Informes %}
+{% tab Reports %}
 
 {: start="4"}
 4\. Selecciona **\+ Añadir ficha** y, a continuación, elige uno de los informes que creaste en [el Generador de informes (Nuevo)]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/).
@@ -36,7 +36,7 @@ Ahora, sigue los pasos correspondientes a tu origen de datos:
 6\. Selecciona **Guardar** cuando hayas modificado la visualización a tu gusto.
 7\. Añade un nombre, una descripción y una etiqueta para que sea más fácil encontrar tu panel más adelante.
 {% endtab %}
-{% tab Consultas personalizadas %}
+{% tab Custom Queries %}
 {: start="4"}
 4\. Selecciona **\+ Añadir ficha** y, a continuación, elige una consulta que hayas ejecutado en el Generador de consultas.
 5\. Para editar cómo se muestran los resultados de la consulta en el mosaico, selecciona el icono del lápiz para cambiar el título y el tipo de gráfico.
@@ -72,25 +72,25 @@ Haz una copia de tu ficha seleccionando **Duplicar ficha** en la parte inferior 
 
 ### Ajusta el tamaño y la posición de las baldosas
 
-Adjust the tile size by dragging the bottom right corner of the tile, and adjust the tile position on the panel by dragging the handle at the top right corner of the tile.
+Adjust the tile size by dragging the bottom-right corner of the tile, and adjust the tile position on the panel by dragging the handle at the top right corner of the tile.
 
-## Ejecutar una plantilla de panel de control
+## Ejecutar un panel de control
 
-1. Ve a **Análisis** > **Generador de paneles**. La página de inicio enumera todos los paneles existentes en tu espacio de trabajo, con las plantillas creadas por Braze en la parte superior. Se indican con "(Braze)" en el título.
+1. Ve a **Análisis** > **Generador de paneles**. La página de inicio enumera todos los paneles existentes en tu espacio de trabajo, con los paneles creados por Braze en la parte superior. Se indican con "(Braze)" en el título.
 2. Selecciona el panel que te interese.
-3. Selecciona **Ejecutar panel** para cargar el panel correspondiente utilizando esa plantilla.
+3. Selecciona **Ejecutar panel** para cargar el panel correspondiente utilizando ese panel.
 
-### Plantillas de paneles disponibles
+### Paneles disponibles
 
-Braze proporciona plantillas de paneles preconstruidas para casos de uso frecuente, como el análisis de los ingresos mediante la atribución de último toque. Ten en cuenta que la posibilidad de editar un panel de plantilla aún no está disponible. Ponte en contacto con tu administrador del éxito del cliente si deseas ver determinadas plantillas de paneles en futuras versiones de plantillas.
+Braze proporciona paneles preconstruidos para casos de uso frecuente, como el análisis de los ingresos mediante la atribución de último toque. Nota que la posibilidad de editar un panel aún no está disponible. Ponte en contacto con tu administrador del éxito del cliente si deseas ver determinados paneles en el futuro.
 
 #### Ingresos - Atribución de última intervención
 
-La plantilla **Ingresos - Atribución al último toque** proporciona una revisión de los ingresos en todas las campañas, lienzos y canales. Todos los datos de ingresos se atribuyen al último mensaje tocado durante la ventana de atribución.
+El panel **Ingresos - Atribución de último toque** proporciona una revisión de los ingresos en campañas, Canvases y canales. Todos los datos de ingresos se atribuyen al último mensaje tocado durante la ventana de atribución.
 
-Los toques incluyen _clic de correo electrónico_, _clic de tarjeta de contenido_, _clic de mensaje dentro de la aplicación_, _entrega de SMS_, _lectura de WhatsApp_ y _envío de webhook_.
+Los toques incluyen _Clic de correo electrónico_ (clic de enlace), _Clic de tarjeta de contenido_, _Clic de mensaje dentro de la aplicación_ (excluyendo los botones de cierre), _Apertura push_, _Clic de enlace corto de SMS_, _Lectura de WhatsApp_ y _Envío de webhook_.
 
-| Métricas | Definición |
+| Métrica | Definición |
 | --- | --- |
 | Total de ingresos de último contacto | Suma de todos los eventos de ingresos de campaña y Canvas con un evento de último toque dentro del intervalo de fechas y la ventana de atribución seleccionados. |
 | Conversiones totales de compra | Un recuento de todos los eventos de ingresos de campaña y Canvas con un evento de último contacto cualificado. |
@@ -109,7 +109,7 @@ Los toques incluyen _clic de correo electrónico_, _clic de tarjeta de contenido
 
 #### Dispositivos y operadores
 
-| Métricas | Definición |
+| Métrica | Definición |
 | --- | --- |
 | Operadores de dispositivos | Recuento de usuarios en el intervalo de fechas seleccionado que abrieron una notificación push, agrupados por operador del dispositivo. |
 | Modelo del dispositivo | Recuento de usuarios en el intervalo de fechas seleccionado que abrieron una notificación push, agrupados por modelo de dispositivo. |
@@ -117,11 +117,38 @@ Los toques incluyen _clic de correo electrónico_, _clic de tarjeta de contenido
 | Tamaño de la pantalla del dispositivo | Recuento de usuarios en el intervalo de fechas seleccionado que abrieron una notificación push, agrupados por resolución de pantalla del dispositivo (tamaño). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
+#### Información del segmento - Correo electrónico
+
+| Métrica  | Definición  |
+|---|---|
+| Métricas semanales de correo electrónico (tasas) | Tasas de interacción por correo electrónico (tasas de entrega, rebote, apertura, clic, cancelación suscripción) agrupadas por segmentos y mostradas como series temporales semanales.|
+| Métricas semanales de correo electrónico (recuentos) | Recuentos de interacción con el correo electrónico (envíos, entregas, rebotes, aperturas, clics, cancelaciones de suscripción) agrupados por segmentos y mostrados como series temporales semanales.|
+| Métricas semanales de compra (tasas) | Tasas de conversión de compras (ingresos por destinatario) a partir de aperturas y clics de correo electrónico, agrupadas por segmentos y mostradas como una serie temporal semanal.|
+| Métricas semanales de compra (recuentos) | Recuentos de compras y totales de ingresos de aperturas y clics de correos electrónicos, agrupados por segmentos y mostrados como una serie temporal semanal.|
+| Interacción por correo electrónico por segmento | Tabla resumen que muestra las métricas totales de interacción del correo electrónico (enviados, entregados, rebotes, aperturas, clics, cancelaciones de suscripción y sus tasas) agregadas por segmento.|
+| Compras & Ingresos por segmento | Tabla resumen que muestra las métricas de compra totales (compras, ingresos e ingresos por destinatario) de aperturas y clics de correo electrónico, agregadas por segmento.|
+| Las 10 mejores campañas en cuanto a métricas de interacción | Lista clasificada de campañas con las métricas de interacción por correo electrónico más altas (métrica configurable para la clasificación).|
+| Las 10 campañas con las métricas de interacción más bajas | Lista ordenada de las campañas con las métricas de interacción por correo electrónico más bajas (métrica configurable para la clasificación).|
+| Los 10 mejores lienzos para las métricas de interacción | Lista ordenada de las Lienzos con las métricas de interacción por correo electrónico más altas (métrica configurable para la clasificación).|
+| Los 10 lienzos más bajos para las métricas de interacción | Lista ordenada de las Lienzos con las métricas de interacción por correo electrónico más bajas (métrica configurable para la clasificación).|
+| Las 10 mejores campañas en métricas de compra | Lista clasificada de las campañas con las métricas de conversión de compra más altas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
+| Las 10 campañas con las métricas de compra más bajas | Lista clasificada de las campañas con las métricas de conversión de compra más bajas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
+| Los 10 mejores lienzos para métricas de compra | Lista clasificada de Lienzos con las métricas de conversión de compra más altas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
+| Los 10 lienzos más bajos para las métricas de compra | Lista ordenada de las Lonas con las métricas de conversión de compra más bajas a partir de la interacción por correo electrónico (métrica configurable para la clasificación).|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+#### Análisis de sesión
+
+| Métrica | Definición  |
+|---|---|
+| \# Nº de sesiones por día (serie temporal) | Recuento de sesiones únicas agrupadas por día dentro del intervalo de fechas seleccionado, mostrado como una serie temporal.|
+| Nº medio de sesiones por usuario | Cantidad media de sesiones por usuario calculada como el total de sesiones dividido por los usuarios únicos dentro del intervalo de fechas seleccionado.|
+| Las campañas se convierten en sesiones | Recuento de sesiones únicas que se produjeron al mismo tiempo que las conversiones de campaña, agrupadas por ID de campaña y clasificadas por recuento de sesiones.|
+| Los lienzos se convierten en sesiones | Recuento de sesiones únicas que se produjeron al mismo tiempo que las conversiones de Canvas, agrupadas por ID de Canvas y clasificadas por recuento de sesiones.|
+| Nº total de sesiones por usuario | Lista de los 1.000 usuarios principales por su número total de sesiones dentro del intervalo de fechas seleccionado.|
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Comparte tu opinión con nosotros
 
 Selecciona el botón **Enviar opinión** o ponte en contacto con tu administrador del éxito del cliente para compartir tu opinión con nosotros.
 
-[1]: {% image_buster /assets/img/chart_type.png %}
-[2]: {% image_buster /assets/img/sample_tile.png %}
-[3]: {% image_buster /assets/img/drag_tile.png %}
-[4]: {% image_buster /assets/img/select_data_source.png %}

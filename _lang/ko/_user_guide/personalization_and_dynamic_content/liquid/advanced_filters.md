@@ -8,7 +8,7 @@ description: "이 참고 문서에는 고급 필터, 예제 및 캠페인에서 
 
 # 고급 필터
 
-> 이 참조 기사는 Liquid의 고급 필터에 대한 개요와 그것들이 어떻게 사용될 수 있는지를 제공합니다.
+> 이 참조 기사는 Liquid의 고급 필터에 대한 개요와 이를 사용하는 방법을 제공합니다.
 
 ## 인코딩 필터
 
@@ -30,7 +30,7 @@ description: "이 참고 문서에는 고급 필터, 예제 및 캠페인에서 
 | 필터 이름 | 필터 설명 | 입력 예시 | 출력 예시 |
 |---|---|---|---|
 | `url_escape` | URLS에서 허용되지 않는 문자열의 모든 문자를 식별하고 해당 문자를 이스케이프된 변형으로 바꿉니다. | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | URL에서 허용되지 않는 문자열의 모든 문자를 앰퍼샌드(&)를 포함한 이스케이프된 변형으로 바꿉니다. | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
+| `url_param_escape` | URL에서 허용되지 않는 모든 문자를 이스케이프된 변형으로 대체합니다. 여기에는 앰퍼샌드 (&)이 포함됩니다. | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
 | `url_encode` | URL 친화적인 문자열을 인코딩합니다. | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -72,20 +72,68 @@ Braze 내에서는 Liquid에서 해시를 변수(예: 표현식)로 인스턴스
 | 필터 이름 | 필터 설명 | 입력 예시 | 출력 예시 |
 |---|---|---|---|
 | `number_with_delimiter` | 쉼표로 숫자 서식 지정 | `{{ 123456 | number_with_delimiter }}` | 123,456 |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## JSON 이스케이프 / 문자열 이스케이프 필터
 
 | 필터 이름 | 필터 설명 |
-|---|---|---|---|
+|---|---|
 | `json_escape` | 문자열에 있는 모든 특수 문자(예: 큰따옴표 `""` 및 백슬래시 '')를 이스케이프 처리합니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 이 필터는 JSON 사전에서 문자열을 개인화할 때 항상 사용해야 하며 특히 웹훅에 유용합니다.
+
+## JSON-formatting filters
+
+| 필터 이름 | 필터 설명 |
+|---|---|
+| `json_parse` | Converts a JSON string into a corresponding data structure, such as an object or array. | 
+| `as_json_string` | Converts a data structure, such as an object or array, into a corresponding JSON string. | 
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 {% endraw %}
 
+{% details json_parse example input and output %}
+
+### Input 
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+```
+
+### Output
+
+```liquid
+{% for item in my_data %}
+Item ID: {{ item.id }}
+Item Name: {{ item.store_name }}
+{% endfor %}
+```
+{% endraw %}
+
+{% enddetails %}
+
+{% details as_json_string example input and output %}
+
+### Input
+
+{% raw %}
+```liquid
+{% assign my_data_string = '[{"id":"1","store_name":"demo-store"}]'  %}
+{% assign my_data = my_data_string | json_parse %}
+{% assign json_string = my_data | as_json_string %}
+```
+
+### Output
+
+```liquid
+{{json_string}}
+```
+{% endraw %}
+{% enddetails %}
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#null 속성 값에 대한 회계 처리
+[37]:#accounting-for-null-attribute-values

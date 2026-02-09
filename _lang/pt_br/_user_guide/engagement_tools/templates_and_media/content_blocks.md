@@ -23,17 +23,17 @@ Com os blocos de conteúdo, você pode:
 
 ## Criar um bloco de conteúdo
 
-Há dois tipos de editores usados para criar um bloco de conteúdo: o clássico e o de arrastar e soltar. Esses dois tipos de editores correspondem ao tipo de bloco de conteúdo: HTML e arrastar e soltar. Você também pode criar e gerenciar seus blocos de conteúdo [usando a API][5].
+Há dois tipos de editores usados para criar um bloco de conteúdo: o clássico e o de arrastar e soltar. Esses dois tipos de editores correspondem ao tipo de bloco de conteúdo: HTML e arrastar e soltar. Você também pode criar e gerenciar seus blocos de conteúdo [usando a API]({{site.baseurl}}/api/endpoints/templates/).
 
 {% tabs %}
-{% tab Arrastar e soltar %}
+{% tab Drag-and-drop %}
 
-{% multi_lang_include create_content_block.md local="dnd" %}
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% endtab %}
 {% tab HTML %}
 
-{% multi_lang_include create_content_block.md local="html" %}
+{% multi_lang_include create_content_block.md location="html" %}
 
 {% endtab %}
 {% endtabs %}
@@ -45,7 +45,7 @@ Há dois tipos de editores usados para criar um bloco de conteúdo: o clássico 
 | Nome | Campo obrigatório com um máximo de 100 caracteres. Ele não pode ser renomeado depois que o bloco de conteúdo tiver sido salvo. Além disso, você não pode nomear um novo bloco de conteúdo com o mesmo nome de um bloco de conteúdo anterior, mesmo que o anterior tenha sido arquivado. |
 | Descrição | (opcional) Máximo de 250 caracteres. Descreva o bloco de conteúdo para que outros usuários do Braze saibam para que serve e onde é usado. |
 | Tamanho do conteúdo | Máximo de 50 KB. |
-| Posicionamento | Os blocos de conteúdo não podem ser usados em um rodapé de e-mail. |
+| Posicionamento | Os blocos de conteúdo não podem ser usados em um rodapé de e-mail, mas é possível [criar um bloco de conteúdo que inclua um rodapé](#email-footers) para uso em seus e-mails. |
 | Criação | Editor de HTML ou editor de arrastar e soltar. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -80,7 +80,7 @@ Se quiser atualizar um bloco de conteúdo para uma única mensagem ou fazer uma 
 
 Depois de fazer edições em um bloco de conteúdo, você pode salvar e iniciar o bloco de conteúdo atualizado selecionando **Lançar bloco de conteúdo**. Ou, você pode selecionar **Mais** > **Duplicar**para criar uma duplicata do seu bloco de conteúdo.
 
-![Um bloco de conteúdo que diz "Welcome to our newsletter" (Bem-vindo ao nosso boletim informativo).][2]
+![Um bloco de conteúdo que diz "Welcome to our newsletter" (Bem-vindo ao nosso boletim informativo).]({% image_buster /assets/img/copy-content-block.png %})
 
 Você também pode [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) um bloco de conteúdo. Isso cria uma cópia de rascunho do bloco de conteúdo.
 
@@ -90,7 +90,7 @@ Depois de adicionar um bloco de conteúdo em uma campanha ou canvas ativo, é po
 
 Essa prévia inclui informações sobre o bloco de conteúdo, como quem o criou, tags, data de criação, data da última edição, descrição, tipo de editor, contagem de inclusão com detalhes e uma prévia real do bloco de conteúdo.
 
-![Uma prévia de um bloco de conteúdo "Workout_Promo" para ciclismo e dança que tem seis inclusões.][7]{: style="max-width:60%;"} 
+![Uma prévia de um bloco de conteúdo "Workout_Promo" para ciclismo e dança que tem seis inclusões.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Aninhamento de blocos de conteúdo
 
@@ -100,13 +100,21 @@ Os blocos de conteúdo podem ser aninhados, mas apenas uma vez. Você pode aninh
 Nada impedirá você de aninhar um terceiro nível de bloco de conteúdo, mas você não verá a expansão do conteúdo em aninhamentos além do segundo. O conteúdo e o snippet Liquid são removidos da mensagem.
 {% endalert %}
 
-Além disso, os blocos de conteúdo não podem ser usados em um rodapé de e-mail, embora os rodapés de e-mail possam ser usados em blocos de conteúdo.
+### Uso de rodapés de e-mail em blocos de conteúdo {#email-footers}
+
+Os blocos de conteúdo não podem ser usados em um rodapé de e-mail, mas é possível criar um bloco de conteúdo que inclua conteúdo de rodapé para uso em seus e-mails. Para fazer isso, siga estas etapas:
+
+1. Acesse **Configurações** > **Preferências de e-mail** > **Rodapé personalizado** e crie o rodapé.
+2. Adicione o rodapé a um bloco de conteúdo na **biblioteca de blocos de conteúdo**.
+3. Adicione esse bloco de conteúdo a seus modelos ou mensagens de e-mail.
+
+Agora você pode usar o mesmo rodapé em várias mensagens!
 
 ### Arquivamento de blocos de conteúdo
 
-![Menu suspenso Configurações expandido que mostra três opções: Arquivar, Duplicar e Copiar para o espaço de trabalho.][3]{: style="max-width:20%;float:right;margin-left:15px;" }
+![Menu suspenso Configurações expandido que mostra três opções: Arquivar, Duplicar e Copiar para o espaço de trabalho.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Quando terminar de usar um bloco de conteúdo, você poderá arquivá-lo na página [Modelos e mídias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Os blocos de conteúdo arquivados são somente leitura, portanto, desarquive o bloco de conteúdo antes de editá-lo. Os blocos de conteúdo não podem ser arquivados se forem usados em alguma mensagem.
+Quando terminar de usar um bloco de conteúdo, você poderá arquivá-lo na página [Modelos & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Os blocos de conteúdo arquivados são somente leitura, portanto, desarquive o bloco de conteúdo antes de editá-lo. Os blocos de conteúdo não podem ser arquivados se forem usados em alguma mensagem.
 
 #### Melhores práticas
 
@@ -115,11 +123,5 @@ Quando terminar de usar um bloco de conteúdo, você poderá arquivá-lo na pág
 - Quando seu bloco for usado em mais mensagens do que você pode gerenciar razoavelmente com a primeira sugestão desta lista, recomendamos remover todo o conteúdo do bloco e arquivá-lo. Isso garantirá que nenhuma informação desatualizada seja incluída em qualquer e-mail recém-enviado.
 - Se você arquivar acidentalmente um bloco de conteúdo, poderá desarquivá-lo.
 
-![Painel Blocos de conteúdo salvos em que o menu suspenso de configurações para "Test_32" é expandido para mostrar três opções: Desarquivar, duplicar e copiar para o espaço de trabalho][4]
+![Painel Blocos de conteúdo salvos, onde o menu suspenso de configurações para "Test_32" é expandido para mostrar três opções: Desarquivar, duplicar e copiar para o espaço de trabalho]({% image_buster /assets/img/unarchive-content-block.png %})
 
-[2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/template_archive_cog.png %}
-[4]: {% image_buster /assets/img/unarchive-content-block.png %}
-[5]: {{site.baseurl}}/api/endpoints/templates/
-[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
-[7]: {% image_buster /assets/img/preview_tab_content_block.png %}

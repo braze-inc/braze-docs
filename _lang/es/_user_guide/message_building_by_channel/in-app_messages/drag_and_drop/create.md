@@ -1,5 +1,5 @@
 ---
-nav_title: Crear un mensaje dentro de la aplicación
+nav_title: Crear un mensaje en la aplicación
 article_title: "Crear un mensaje In-App con arrastrar y soltar"
 description: "Este artículo de referencia trata sobre la creación de un mensaje in-app con el editor de arrastrar y soltar, los requisitos previos, los detalles creativos y mucho más."
 alias: "/create_dnd_iam/"
@@ -11,15 +11,16 @@ local_redirect: #set-message-level-styles, #add-a-custom-font, #drag-and-drop-in
   creative-details: '/docs/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/style_settings/#creative-details'
 ---
 
-# Crear un mensaje in-app con arrastrar y soltar
+# Crea un mensaje dentro de la aplicación con arrastrar y soltar
 
 > Con el editor de arrastrar y soltar, puedes crear mensajes dentro de la aplicación completamente personalizados, tanto en campañas como en Canvas, utilizando la experiencia de edición de arrastrar y soltar.
 
-{% multi_lang_include video.html id="tbrgv_mU1zI" align="right" source="youtube" %}
+
+{% multi_lang_include video.html id="j94omgo73o" align="right" source="wistia" %}
 
 Si desea utilizar sus plantillas HTML personalizadas existentes o plantillas creadas por terceros, deberá volver a crearlas en el editor de arrastrar y soltar.
 
-¿No estás seguro de si tu mensaje in-app debe enviarse utilizando una campaña o un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos. Una vez que hayas seleccionado dónde crear tu mensaje, vamos a ver los pasos para crear un mensaje in-app de arrastrar y soltar.
+¿No estás seguro de si tu mensaje in-app debe enviarse utilizando una campaña o un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/)? Las campañas son mejores para campañas de mensajería únicas y específicas, mientras que los lienzos son mejores para recorridos de usuario de varios pasos. Una vez que hayas seleccionado dónde crear tu mensaje, vamos a ver los pasos para crear un mensaje in-app de arrastrar y soltar.
 
 ## Requisitos previos
 
@@ -30,7 +31,7 @@ Si desea utilizar sus plantillas HTML personalizadas existentes o plantillas cre
 | {::nomarkdown}{% sdk_min_versions swift:5.0.0 android:8.0.0 web:2.5.0 %}{:/} | {::nomarkdown}{% sdk_min_versions swift:6.5.0 android:26.0.0 web:4.8.1 %}{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-{% details Más información sobre los SDK mínimos %}
+{% details More information on minimum SDKs %}
 
 Los mensajes creados con el editor de arrastrar y soltar sólo pueden enviarse a usuarios con las versiones mínimas del SDK (véase la tabla anterior). Si un usuario no ha actualizado su aplicación (es decir, está en una versión anterior del SDK), no recibirá el mensaje in-app.
 
@@ -69,7 +70,7 @@ Después de seleccionar el editor de arrastrar y soltar como su experiencia de e
 
 Selecciona **Crear mensaje** para empezar a diseñar tu mensaje dentro de la aplicación en el editor de arrastrar y soltar.
 
-![La sección de plantillas de Braze donde puedes elegir una plantilla básica, de imagen de fondo, de captura de número de teléfono o en blanco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %}){: style="max-width:75%"}
+![La sección Plantillas de Braze, donde puedes elegir una plantilla básica, de imagen de fondo, de captura de número de teléfono o en blanco.]({% image_buster /assets/img_archive/dnd_iam_select_template.png %})
 
 También puede acceder a todas las plantillas desde la sección **Plantillas** del panel de control.
 
@@ -80,7 +81,7 @@ Añadir páginas a tu mensaje dentro de la aplicación te permite guiar a los us
 ![Un mensaje dentro de la aplicación para una empresa sanitaria que se compone de tres páginas.]({% image_buster /assets/img_archive/dnd_iam_mockup.png %})
 
 {% tabs %}
-{% tab Añadir páginas %}
+{% tab Adding pages %}
 
 Los mensajes in-app empiezan con una página por defecto. Para añadir una nueva página:
 
@@ -99,7 +100,7 @@ Para duplicar una página existente:
 3. Nombra la página con algo significativo. Esto le ayudará a conectar las páginas entre sí.
 
 {% endtab %}
-{% tab Borrar o renombrar páginas %}
+{% tab Deleting or renaming pages %}
 
 Para borrar o renombrar una página:
 
@@ -139,7 +140,7 @@ Aquí es donde su mensaje se pavonea por la pasarela, vestido con el estilo cara
 
 ## Paso 5: Prueba tu mensaje in-app
 
-La sección **Vista previa y prueba** te permite previsualizar tus mensajes in-app en diferentes dispositivos y enviar un mensaje de prueba a tu dispositivo. Aquí, puede asegurarse de que los detalles están alineados en todas sus plataformas para su campaña de mensajes in-app de arrastrar y soltar. 
+La sección **Vista previa & Prueba** te permite previsualizar tus mensajes dentro de la aplicación en diferentes dispositivos y enviar un mensaje de prueba a tu dispositivo. Aquí, puede asegurarse de que los detalles están alineados en todas sus plataformas para su campaña de mensajes in-app de arrastrar y soltar. 
 
 Es importante que siempre pruebes tus mensajes dentro de la aplicación antes de enviar tus campañas para ayudarte a visualizar cómo será tu mensaje final desde la perspectiva de tu usuario.
 
@@ -149,7 +150,7 @@ Es importante que siempre pruebes tus mensajes dentro de la aplicación antes de
 Para enviar una prueba a grupos de prueba de contenido o a usuarios individuales, debe activarse la función push en los dispositivos de prueba antes de enviarla.
 {% endalert %}
 
-Puedes previsualizar los mensajes desde la pestaña **Previsualizar y probar**, como si fueras un usuario. Puede seleccionar un usuario específico, un usuario aleatorio o crear un usuario personalizado:
+Puedes obtener una vista previa de los mensajes desde la pestaña **Vista previa & Test**, como si fueras un usuario. Puede seleccionar un usuario específico, un usuario aleatorio o crear un usuario personalizado:
 
 - **Usuario aleatorio:** Braze seleccionará aleatoriamente un usuario de la base de datos y previsualizará el mensaje en la aplicación en función de sus atributos o de la información del evento.
 - **Seleccionar usuario:** Puedes seleccionar un usuario concreto basándote en su dirección de correo electrónico o `external_id`. El mensaje de la aplicación se previsualizará en función de los atributos del usuario y la información del evento.
@@ -175,6 +176,8 @@ Los clics en el cuerpo no se recopilan automáticamente para los mensajes in-app
 
 Sí, puede segmentar en función de los clics de hasta dos botones de su mensaje. Para ello, establezca el **Identificador para informes** para sus botones en "0" y "1", que corresponderán a los filtros de segmentación "Botón de mensaje dentro de la aplicación pulsado 1" y "Botón de mensaje dentro de la aplicación pulsado 2" respectivamente.
 
+![El campo "Identificador para informar" con valor "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+
 #### ¿Puedo personalizar mi mensaje in-app utilizando HTML o JavaScript personalizado o transferir mensajes HTML existentes al editor?
 
 No puede transferir directamente mensajes HTML existentes al editor, pero puede insertar HTML, CSS y JavaScript sin procesar en un bloque de código personalizado. Puede utilizar bloques de Código personalizado para incrustar vídeos de terceros y Líquido avanzado, como Contenido conectado o sentencias condicionales.
@@ -185,8 +188,8 @@ Actualmente, el editor está limitado únicamente a los mensajes modales y a pan
 
 #### ¿Puedo guardar mi mensaje in-app como una plantilla después de construirlo dentro de mi campaña o Canvas?
 
-Sí. Para cualquier mensaje in-app que desee reutilizar en una futura campaña o paso de Canvas, puede guardarlo como una plantilla personalizada utilizando el botón **Guardar como plantilla**, disponible después de salir del editor. Antes de poder guardarla como plantilla, primero debe lanzar la campaña O guardarla como borrador.
+Sí. Para cualquier mensaje dentro de la aplicación que quieras reutilizar en una futura campaña o paso en Canvas, puedes guardarlo como una plantilla personalizada utilizando el botón **Guardar como plantilla**, disponible después de salir del editor. Antes de poder guardarla como plantilla, primero debe lanzar la campaña O guardarla como borrador.
 
-![Una vista previa de un mensaje dentro de la aplicación para registrarse en las actualizaciones de texto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
+![Vista previa de un mensaje dentro de la aplicación para la visita a un producto.]({% image_buster /assets/img_archive/dnd_iam_save_as_template.png %})
 
 También puedes crear y guardar plantillas de mensajes dentro de la aplicación accediendo a **Plantillas** > **Plantillas de mensajes dentro de la aplicación**.

@@ -1,5 +1,5 @@
 ---
-nav_title: Message Usage Dashboard
+nav_title: Message usage dashboard
 article_title: Message Usage Dashboard
 page_order: 10
 page_type: reference

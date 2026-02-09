@@ -25,7 +25,7 @@ channel: in-app messages
 - 사용자가 메시지를 어디에 표시하기를 원하나요? 웹 앱? 모바일 앱?
 - 어떤 이벤트가 이 메시지를 트리거해야 하나요?
 - 이전 버전의 앱을 사용하는 사용자가 있나요? 그렇다면 메시지의 일부 요소를 보지 못할 수도 있습니다.
-- 이 메시지를 작성하는 기기 유형은 무엇인가요? **미리보기** 상자 또는 **테스트** 탭을 사용하여 메시지를 미리 볼 수 있다는 점을 기억하세요. 자세한 내용은 [테스트]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)를 참조하세요.
+- 이 메시지를 작성하는 기기 유형은 무엇인가요? **미리보기** 상자 또는 **테스트** 탭을 사용하여 메시지를 미리 볼 수 있다는 점을 기억하세요. 자세한 내용은 [테스트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/)를 참조하세요.
 
 ## 콘텐츠 고려 사항
 
@@ -40,12 +40,10 @@ channel: in-app messages
 
 - 이 메시지의 목표는 무엇인가요? 이를 메시지에서 어떻게 표현할 수 있을까요?
 - 버튼이 사용자에게 적합한 옵션을 제공하나요? [주요 클릭 유도 문안은]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons) 무엇인가요?
-- [다른 인앱 콘텐츠로 딥링킹하고][1] 있나요? 이 인앱 메시지를 사용하여 [권한 또는 푸시 프라이밍 요청][21]을 보내고 수락하고 있나요?
+- [다른 인앱 콘텐츠로 딥링킹하고]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) 있나요? 이 인앱 메시지를 사용하여 [권한 또는 푸시 프라이밍 요청]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/)을 보내고 수락하고 있나요?
 - 메시지 종료 옵션이 있나요? 그렇지 않은 경우 언제든지 이 스니펫을 복사하여 붙여넣어 빠른 버튼을 만들 수 있습니다:
     ```html
     <a href="appboy://close">X</a>
     ```
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

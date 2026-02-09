@@ -1,6 +1,6 @@
 ---
 nav_title: Feed
-article_title: Personalizando o feed para Cartões de Conteúdo
+article_title: Personalize o feed dos cartões de conteúdo
 page_order: 3
 description: "Este artigo aborda as opções de personalização do feed do Content Card."
 channel:
@@ -12,24 +12,46 @@ platform:
   - Web
 ---
 
-# Personalizando o feed para Cartões de Conteúdo
+# Personalize o feed dos cartões de conteúdo
 
-> Um feed de cartão de conteúdo é a sequência de cartões de conteúdo em seus aplicativos móveis ou da Web. Este artigo aborda a configuração de quando o feed é atualizado, a ordem dos cartões, o gerenciamento de vários feeds e as mensagens de erro de "feed vazio". Para a lista completa de tipos de cartões de conteúdo, veja [Sobre Cartões de Conteúdo]({{site.baseurl}}/developer_guide/content_cards/). 
+> Um feed de cartão de conteúdo é a sequência de cartões de conteúdo em seus aplicativos móveis ou da Web. Este artigo aborda a configuração de quando o feed é atualizado, a ordem dos cartões, o gerenciamento de vários feeds e as mensagens de erro de "feed vazio". Para obter a lista completa dos tipos de cartões de conteúdo, consulte [Sobre cartões de conteúdo]({{site.baseurl}}/developer_guide/content_cards/). 
+
+{% multi_lang_include developer_guide/_shared/about_session_lifecycle.md %}
 
 ## Atualizar o feed
 
-Por padrão, o feed do cartão de conteúdo será atualizado automaticamente nas seguintes instâncias: 
-1. Uma nova sessão é iniciada
-2. Quando o feed é aberto e mais de 60 segundos se passaram desde a última atualização. Isso se aplica somente ao feed padrão do cartão de conteúdo e ocorre apenas uma vez por abertura de feed.
+### Atualização automática
 
-Você também pode configurar o SDK para atualizar manualmente em horários específicos.
+Por padrão, o feed do cartão de conteúdo será atualizado automaticamente quando:
+
+- Uma nova sessão é iniciada
+- O feed está aberto e mais de 60 segundos se passaram desde a última atualização. (Isso se aplica somente ao feed padrão do cartão de conteúdo e ocorre uma vez por abertura de feed).
 
 {% alert tip %}
 Para mostrar dinamicamente os cartões de conteúdo atualizados sem atualizar manualmente, selecione **Na primeira impressão** durante a criação do cartão. Esses cartões serão atualizados quando estiverem disponíveis.
 {% endalert %}
 
-{% tabs localização %}
-{% tab Android %}
+### Atualização manual
+
+Para atualizar manualmente o feed em um momento específico:
+
+{% tabs %}
+{% tab web %}
+
+Solicite uma atualização manual dos cartões de conteúdo da Braze a partir do SDK para Web a qualquer momento, chamando [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
+
+Você também pode chamar [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) para obter todos os cartões disponíveis no momento a partir da última atualização dos cartões de conteúdo. 
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+function refresh() {
+  braze.requestContentCardsRefresh();    
+}
+```
+
+{% endtab %}
+{% tab android %}
 
 Solicite uma atualização manual dos cartões de conteúdo Braze a partir do SDK do Android a qualquer momento, chamando [`requestContentCardsRefresh`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze/request-content-cards-refresh.html). 
 
@@ -50,7 +72,7 @@ Braze.getInstance(context).requestContentCardsRefresh()
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 Solicite uma atualização manual dos cartões de conteúdo da Braze a partir do SDK Swift a qualquer momento, chamando o método [`requestRefresh`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class/requestrefresh(_:)) na [`Braze.ContentCards`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcards-swift.class) classe:
 
@@ -59,7 +81,7 @@ Solicite uma atualização manual dos cartões de conteúdo da Braze a partir do
 
 No Swift, os cartões de conteúdo podem ser atualizados com um manipulador de conclusão opcional ou com um retorno assíncrono usando as APIs de simultaneidade nativas do Swift.
 
-### Manipulador de conclusão
+#### Manipulador de conclusão
 
 ```swift
 AppDelegate.braze?.contentCards.requestRefresh { result in
@@ -67,7 +89,7 @@ AppDelegate.braze?.contentCards.requestRefresh { result in
 }
 ```
 
-### Async/Await
+#### Async/Await
 
 ```swift
 let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
@@ -84,26 +106,18 @@ let contentCards = await AppDelegate.braze?.contentCards.requestRefresh()
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-Solicite uma atualização manual dos cartões de conteúdo da Braze a partir do SDK para Web a qualquer momento, chamando [`requestContentCardsRefresh()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestcontentcardsrefresh). 
-
-Você também pode chamar [`getCachedContentCards`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getcachedcontentcards) para obter todos os cartões disponíveis no momento a partir da última atualização dos cartões de conteúdo. 
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-function refresh() {
-  braze.requestContentCardsRefresh();    
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
+### Limite de taxa
+
+O Braze usa um algoritmo de token bucket para impor os seguintes limites de frequência:
+- Até 5 chamadas de atualização por dispositivo, compartilhadas entre usuários e chamadas para `openSession()`
+- Após atingir o limite, uma nova chamada fica disponível a cada 180 segundos (3 minutos)
+- O sistema manterá até cinco chamadas para você usar a qualquer momento
+- `subscribeToContentCards()` ainda retornará cartões em cache, mesmo quando a taxa for limitada
 
 {% alert important %}
-Você pode fazer até cinco chamadas em rápida sucessão. Depois disso, uma nova chamada estará disponível a cada 180 segundos. O sistema armazenará até cinco chamadas para serem usadas a qualquer momento.
+O Braze SDK também aplica limites de frequência para performance e confiabilidade. Tenha isso em mente quando estiver executando testes automatizados ou realizando controle de qualidade manual. Para saber mais, consulte [Limites de frequência do Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/rate_limits/).
 {% endalert %}
 
 ## Personalização da ordem dos cartões exibidos
@@ -111,15 +125,25 @@ Você pode fazer até cinco chamadas em rápida sucessão. Depois disso, uma nov
 Você pode alterar a ordem em que seus cartões de conteúdo são exibidos. Isso permite ajustar a experiência do usuário, priorizando determinados tipos de conteúdo, como promoções sensíveis ao tempo.
 
 {% tabs %}
-{% tab Sistema de visualização Android %}
+{% tab web %}
 
+Personalize a ordem de exibição dos cartões de conteúdo em seu feed usando o param de [`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards) `showContentCards():`. Por exemplo:
+
+```javascript
+braze.showContentCards(null, (cards) => {
+  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
+});
+```
+
+{% endtab %}
+{% tab android %}
+{% subtabs %}
+{% subtab android view controller %}
 O [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) se baseia em um [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) para lidar com qualquer classificação ou modificação dos cartões de conteúdo antes que eles sejam exibidos no feed. Um manipulador de atualização personalizado pode ser definido por meio de [`setContentCardUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/set-content-card-update-handler.html) em seu site `ContentCardsFragment`.
 
 O seguinte é o padrão `IContentCardsUpdateHandler` e pode ser usado como ponto de partida para a personalização:
 
-{% subtabs local %}
-{% subtab Java %}
-
+{% details Show Java example %}
 ```java
 public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
 
@@ -185,10 +209,9 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
   }
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% subtab Kotlin %}
-
+{% details Show Kotlin example %}
 ```kotlin
 class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
@@ -246,14 +269,13 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
   }
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% endsubtabs %}
-
+{% alert tip %}
 O código-fonte do `ContentCardsFragment` pode ser encontrado no [GitHub](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.kt).
-
-{% endtab %}
-{% tab Criador do Jetpack %}
+{% endalert %}
+{% endsubtab %}
+{% subtab Jetpack Compose %}
 Para filtrar e classificar os cartões de conteúdo no Jetpack Compose, defina o parâmetro `cardUpdateHandler`. Por exemplo:
 
 ```kotlin
@@ -282,8 +304,10 @@ ContentCardsList(
     }
 )
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 {% subtabs %}
 {% subtab Swift %}
@@ -314,17 +338,6 @@ A personalização via `BrazeContentCardUI.ViewController.Attributes` não está
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-Personalize a ordem de exibição dos cartões de conteúdo em seu feed usando o param de [`filterFunction`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards) `showContentCards():`. Por exemplo:
-
-```javascript
-braze.showContentCards(null, (cards) => {
-  return sortBrazeCards(cards); // Where sortBrazeCards is your sorting function that returns the sorted card array
-});
-```
-
-{% endtab %}
 {% endtabs %}
 
 ## Personalização da mensagem "feed vazio
@@ -334,7 +347,14 @@ Quando um usuário não se qualifica para nenhum cartão de conteúdo, o SDK exi
 ![Uma mensagem de erro de feed vazio que diz "Esta é uma mensagem personalizada de estado vazio".]({% image_buster/assets/img/content_cards/content-card-customization-empty.png %})
 
 {% tabs %}
-{% tab Sistema de visualização Android %}
+{% tab web %}
+
+O Web SDK não oferece suporte à substituição programática da linguagem "feed vazio". Você pode aceitar substituí-lo sempre que o feed for exibido, mas isso não é recomendado porque o feed pode levar algum tempo para ser atualizado e o texto vazio do feed não será exibido imediatamente. 
+
+{% endtab %}
+{% tab android %}
+{% subtabs %}
+{% subtab android view system %}
 
 Se o [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) determinar que o usuário não se qualifica para nenhum cartão de conteúdo, ele exibirá a mensagem de erro de feed vazio.
 
@@ -355,9 +375,9 @@ O estilo usado para exibir essa mensagem pode ser encontrado em [`Braze.ContentC
 ```
 
 Para saber mais sobre como personalizar os elementos de estilo do cartão de conteúdo, consulte [Personalização de estilo]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/style/).
-{% endtab %}
-{% tab Criador do Jetpack %}
-Para personalizar a mensagem de erro "feed vazio" com o Jetpack Compose, você pode passar um `emptyString` para `ContentCardsList`. Você também pode enviar `emptyTextStyle` para `ContentCardListStyling` para personalizar ainda mais essa mensagem.
+{% endsubtab %}
+{% subtab Jetpack Compose %}
+Para personalizar a mensagem de erro "feed vazio" com o Jetpack Compose, você pode passar um `emptyString` para [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). Você também pode enviar [`emptyTextStyle`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards.styling/-content-card-list-styling/index.html#1193499348%2FProperties%2F-1725759721) para `ContentCardListStyling` para personalizar ainda mais essa mensagem.
 
 ```kotlin
 ContentCardsList(
@@ -368,7 +388,7 @@ ContentCardsList(
 )
 ```
 
-Se você tiver um criador que gostaria de exibir, pode passar `emptyComposable` para `ContentCardsList`. Se `emptyComposable` for especificado, o `emptyString` não será usado.
+Se, em vez disso, você tiver um criador que gostaria de exibir, poderá passar o endereço `emptyComposable` para [`ContentCardsList`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.jetpackcompose.contentcards/-content-cards-list.html). Se `emptyComposable` for especificado, o `emptyString` não será usado.
 
 ```kotlin
 ContentCardsList(
@@ -380,8 +400,10 @@ ContentCardsList(
     }
 )
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 {% subtabs local %}
 {% subtab Swift %}
 
@@ -406,14 +428,9 @@ Se você quiser atualizar essa mensagem em diferentes idiomas de localização, 
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-O Web SDK não oferece suporte à substituição programática da linguagem "feed vazio". Você pode aceitar substituí-lo sempre que o feed for exibido, mas isso não é recomendado porque o feed pode levar algum tempo para ser atualizado e o texto vazio do feed não será exibido imediatamente. 
-
-{% endtab %}
 {% endtabs %}
 
-## Vários feeds
+## Implementação de vários feeds
 
 Os cartões de conteúdo podem ser filtrados em seu app para que apenas cartões específicos sejam exibidos, o que o capacita a ter vários feeds de cartões de conteúdo para diferentes casos de uso. Por exemplo, você pode manter um feed transacional e um feed de marketing. Para isso, crie diferentes categorias de cartões de conteúdo definindo pares de valores-chave no dashboard do Braze. Em seguida, crie feeds em seu app ou site que tratem esses tipos de cartões de conteúdo de forma diferente, filtrando alguns tipos e exibindo outros.
 
@@ -428,17 +445,45 @@ Para este exemplo, definiremos um par de valores chave com a chave `feed_type` q
 Depois que os pares de valores-chave tiverem sido atribuídos, crie um feed com lógica que exibirá os cartões que você deseja exibir e filtrará cartões de outros tipos. Neste exemplo, exibiremos apenas os cartões com um par de valores-chave correspondente a `feed_type: "Transactional"`.
 
 {% tabs %}
-{% tab Sistema de visualização Android %}
+{% tab web %}
 
-A filtragem dos cartões de conteúdo pode ser feita lendo os pares de valores-chave definidos no dashboard por meio de [`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) e filtrando (ou executando qualquer outra lógica que desejar) usando um manipulador de atualização personalizado.
+O exemplo a seguir mostrará o feed dos cartões de conteúdo para cartões do tipo `Transactional`:
 
-Para elaborar, o feed do seu cartão de conteúdo é exibido em um arquivo [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html). O padrão `IContentCardsUpdateHandler` recebe um [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) do SDK da Braze e retorna uma lista de cartões para exibição, mas apenas classifica os cartões e não realiza nenhuma remoção ou filtragem por conta própria.
+```javascript
 
-Para permitir que um `ContentCardsFragment` filtre, crie um arquivo [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html). Modifique este `IContentCardsUpdateHandler` para remover todos os cartões da lista que não correspondam ao valor desejado para o `feed_type` que definimos anteriormente. Por exemplo:
+/**
+ * @param {String} feed_type - value of the "feed_type" KVP to filter
+ */
+function showCardsByFeedType(feed_type) {
+  braze.showContentCards(null, function(cards) {
+    return cards.filter((card) => card.extras["feed_type"] === feed_type);
+  });
+}
+```
 
-{% subtabs local %}
-{% subtab Java %}
+Em seguida, você pode configurar um botão de alternância para seu feed personalizado:
 
+```javascript
+// show the "Transactional" feed when this button is clicked
+document.getElementById("show-transactional-feed").onclick = function() {
+  showCardsByFeedType("Transactional"); 
+};
+```
+
+Para saber mais, consulte a [documentação do método SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
+
+{% endtab %}
+{% tab android %}
+{% subtabs %}
+{% subtab android view system %}
+
+Por padrão, o feed do cartão de conteúdo é exibido em um [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) e [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) retorna uma lista de cartões a serem exibidos após receber um [`ContentCardsUpdatedEvent`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html) do SDK do Braze. No entanto, ele apenas classifica os cartões e não manipula nenhuma filtragem diretamente.
+
+#### Etapa 2.1: Criar um manipulador personalizado
+
+Você pode filtrar os cartões de conteúdo implementando um [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html) personalizado usando os pares de valores-chave definidos por [`Card.getExtras()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html) no dashboard e, em seguida, modificando-o para remover todos os cartões da lista que não correspondam ao valor de `feed_type` que você definiu anteriormente.
+
+{% details Show Java example %}
 ```java
 private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desiredFeedType) {
   return new IContentCardsUpdateHandler() {
@@ -477,10 +522,9 @@ private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desi
   };
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% subtab Kotlin %}
-
+{% details Show Kotlin example %}
 ```kotlin
 private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsUpdateHandler {
   return IContentCardsUpdateHandler { event ->
@@ -516,36 +560,30 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
   }
 }
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% endsubtabs %}
+#### Etapa 2.2: Adicione-o a um fragmento
 
-Depois de criar um `IContentCardsUpdateHandler`, crie um `ContentCardsFragment` que o utilize. Esse feed personalizado pode ser usado como qualquer outro `ContentCardsFragment`. Nas diferentes partes de seu app, exiba diferentes feeds de cartão de conteúdo com base na chave fornecida no dashboard. Cada feed do `ContentCardsFragment` terá um conjunto exclusivo de cartões exibidos graças ao `IContentCardsUpdateHandler` personalizado em cada fragmento. 
+Depois de criar um [`IContentCardsUpdateHandler`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html)crie um [`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html) que o utiliza. Esse feed personalizado pode ser usado como qualquer outro `ContentCardsFragment`. Nas diferentes partes de seu app, exiba diferentes feeds de cartão de conteúdo com base na chave fornecida no dashboard. Cada feed do `ContentCardsFragment` terá um conjunto exclusivo de cartões exibidos graças ao `IContentCardsUpdateHandler` personalizado em cada fragmento.
 
-Por exemplo:
-
-{% subtabs local %}
-{% subtab Java %}
-
+{% details Show Java example %}
 ```java
 // We want a Content Cards feed that only shows "Transactional" cards.
 ContentCardsFragment customContentCardsFragment = new ContentCardsFragment();
 customContentCardsFragment.setContentCardUpdateHandler(getUpdateHandlerForFeedType("Transactional"));
 ```
+{% enddetails %}
 
-{% endsubtab %}
-{% subtab Kotlin %}
-
+{% details Show Kotlin example %}
 ```kotlin
 // We want a Content Cards feed that only shows "Transactional" cards.
 val customContentCardsFragment = ContentCardsFragment()
 customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedType("Transactional")
 ```
-
+{% enddetails %}
 {% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Criador do Jetpack %}
+
+{% subtab Jetpack Compose %}
 Para filtrar quais cartões de conteúdo são mostrados nesse feed, use `cardUpdateHandler`. Por exemplo:
 
 ```kotlin
@@ -557,8 +595,10 @@ ContentCardsList(
      }
  )
  ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 O exemplo a seguir mostrará o feed dos cartões de conteúdo para cartões do tipo `Transactional`:
 
@@ -598,34 +638,4 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Web %}
-
-O exemplo a seguir mostrará o feed dos cartões de conteúdo para cartões do tipo `Transactional`:
-
-```javascript
-
-/**
- * @param {String} feed_type - value of the "feed_type" KVP to filter
- */
-function showCardsByFeedType(feed_type) {
-  braze.showContentCards(null, function(cards) {
-    return cards.filter((card) => card.extras["feed_type"] === feed_type);
-  });
-}
-```
-
-Em seguida, você pode configurar um botão de alternância para seu feed personalizado:
-
-```javascript
-// show the "Transactional" feed when this button is clicked
-document.getElementById("show-transactional-feed").onclick = function() {
-  showCardsByFeedType("Transactional"); 
-};
-```
-
-Para saber mais, consulte a [documentação do método SDK](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showcontentcards).
-
-{% endtab %}
 {% endtabs %}
-
-

@@ -11,23 +11,23 @@ channel:
 > Découvrez comment résoudre les problèmes liés aux notifications push pour le SDK de Braze.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/push_notifications/troubleshooting.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/push_notifications/troubleshooting.md developer_ %}
-{% endsdktab %}
-
-{% sdktab web %}
-guide/web/push_notifications/troubleshooting.md developer_ %}
+{% multi_lang_include developer_guide/swift/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
 {% sdktab fireos %}
-guide/android/push_notifications/troubleshooting.md developer_ %}
+{% multi_lang_include developer_guide/android/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
-guide/xamarin/push_notifications/troubleshooting.md developer_ %}
+{% sdktab .NET MAUI (Xamarin) %}
+{% multi_lang_include developer_guide/xamarin/push_notifications/troubleshooting.md %}
 {% endsdktab %}
 {% endsdktabs %}

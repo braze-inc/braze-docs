@@ -2,7 +2,7 @@
 
 > You can generate a Segment Extension using Snowflake SQL queries of [Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/) data. SQL can help you unlock new segment use cases because it offers the flexibility to describe the relationships between data in ways that aren't achievable through other segmentation features.
 >
-> Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension.
+> Like standard Segment Extensions, you can query events from up to the past two years (730 days) in your SQL Segment Extension. Unlike standard Segment Extensions, SQL Segment Extensions [consume credits](#credits).
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Because it's possible to access PII data through this feature, you must have PII
 There are two types of SQL editors to choose from when creating your SQL Segment Extension: the SQL Editor, and the Incremental SQL Editor.
 
 - **Full Refresh:** Each time your segment refreshes, Braze will query all available data to update your segment, which will use more credits than incremental refreshes. Full refresh extensions can automatically regenerate membership daily, but can’t be refreshed using incremental refresh.
-- **Incremental refresh:** Incremental refresh calculates only the last two days' worth of data, which is more cost-efficient and uses up fewer credits each time. When you create an incremental refresh SQL segment, you can set it to automatically regenerate membership daily. This let's you set your segment to automatically refresh membership daily, which helps reduce the cost of a daily data refresh for SQL Segment Extensions.
+- **Incremental refresh:** Incremental refresh is a more cost-efficient way to set up your query, although the setup involves a few more [steps](#step-2-write-your-sql). If you can complete these additional steps when constructing your segment, then it’s worth choosing this option because your query will run using fewer credits. 
 - **AI SQL generator:** The AI SQL Generator lets you write a prompt in plain language and turns it into a SQL query for your segment. It's a quick way to get started without needing to write the SQL yourself.
 
 {% alert tip %}
@@ -37,7 +37,7 @@ To create a full refresh SQL Segment Extension:
 {% endtab %}
 {% tab Incremental refresh %}
 
-The Incremental refresh SQL editor allows user query aggregations to happen on a per date basis for an event within a given time frame. To create an incremental refresh SQL Segment Extension:
+To create an incremental refresh SQL Segment Extension:
 
 1. Go to **Audience** > **Segment Extensions**.
 
@@ -208,7 +208,7 @@ Select a SQL Segment Extension to view where the extension is being used, archiv
 
 {% multi_lang_include segments.md section='Refresh settings' %}
 
-## Snowflake credits
+## Snowflake credits {#credits}
 
 Each Braze workspace has 5 Snowflake credits available per month. If you need more credits, contact your account manager. Credits are used whenever you refresh, or save and refresh, a SQL Segment’s membership. Credits are not used when you run previews within a SQL Segment or save or refresh a classic Segment Extension.
 

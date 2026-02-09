@@ -1,5 +1,5 @@
 ---
-nav_title: "Templates and Media"
+nav_title: "Templates and media"
 article_title: Templates and Media
 page_order: 5
 layout: dev_guide
@@ -23,7 +23,7 @@ guide_featured_list:
   - name: Canvas Templates
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_templates/#available-braze-templates
     image: /assets/img/braze_icons/palette.svg
-  - name: Managing Templates
+  - name: Manage Templates
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
   - name: Frequently Asked Questions

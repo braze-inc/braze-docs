@@ -25,7 +25,7 @@ channel: in-app messages
 - Où souhaitez-vous que vos utilisateurs voient votre message ? Dans votre application Web ? Dans votre application mobile ?
 - Quel événement devrait déclencher ce message ?
 - Vos utilisateurs emploient-ils des versions plus anciennes de votre application ? Dans ce cas, il risquent de ne pas voir certains éléments de votre message.
-- Pour quel type d’appareil créez-vous ce message ? N'oubliez pas que vous pouvez prévisualiser votre message à l'aide de la boîte de **prévisualisation** ou de l'onglet **Test.**  Pour plus d'informations, reportez-vous à la section [Test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/).
+- Pour quel type d’appareil créez-vous ce message ? N'oubliez pas que vous pouvez prévisualiser votre message à l'aide de la boîte de **prévisualisation** ou de l'onglet **Test.**  Pour plus d'informations, reportez-vous à la section [Test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/).
 
 ## Considérations relatives au contenu
 
@@ -40,12 +40,10 @@ channel: in-app messages
 
 - Quel est votre objectif pour ce message ? Comment pouvez-vous le représenter dans votre message ?
 - Vos boutons offrent-ils des options pertinentes ? Quel est votre [principal appel à l'action]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons) ?
-- Établissez-vous des [liens profonds vers d'autres contenus in-app][1] ? Utilisez-vous ce message in-app pour envoyer et accepter une [demande de permission ou d'amorçage push][21]?
+- Établissez-vous des [liens profonds vers d'autres contenus in-app]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content) ? Utilisez-vous ce message in-app pour envoyer et accepter une [demande de permission ou d'amorçage push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/)?
 - Avez-vous une option de sortie de message ? Sinon, vous pouvez copier et coller cet extrait de code pour créer un bouton rapide :
     ```html
     <a href="appboy://close">X</a>
     ```
 
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

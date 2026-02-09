@@ -11,10 +11,10 @@ channel:
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Création d’un modèle d’e-mail
+- name: Créer un modèle d’e-mail
   link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   image: /assets/img/braze_icons/brush-02.svg
-- name: Téléchargement d’un modèle d’e-mail
+- name: "Télécharger un modèle d'e-mail"
   link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
   image: /assets/img/braze_icons/upload-01-alt.svg
 - name: Aliasage de lien

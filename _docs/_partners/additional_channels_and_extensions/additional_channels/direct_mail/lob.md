@@ -96,7 +96,7 @@ Remember to save your template before leaving the page! <br>Updated webhook temp
 [Braze Data Transformation]({{site.baseurl}}/user_guide/data/data_transformation/overview) lets you build and manage webhooks for automating data flow from external platforms into Braze. Each transformation is given a unique endpoint, which other platforms can use for their webhook's destination.
 
 {% alert important %}
-Lob's Data Transformation template sends events using your [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which consumes data points in Braze. We recommend setting a rate limit in your Lob webhook settings, so you can avoid over-consuming data.
+Lob's Data Transformation template sends events using your [`/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track), which logs data points. We recommend setting a rate limit in your Lob webhook settings to avoid over-logging data.
 {% endalert %}
 
 ### Step 1: Create a transformation in Braze

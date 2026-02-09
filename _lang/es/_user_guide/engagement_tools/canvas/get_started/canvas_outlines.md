@@ -10,19 +10,16 @@ tool: Canvas
 
 # Contornos de lienzo
 
-[![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
+[![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/page/courses){: style="float:right;width:120px;border:0;" class="noimgborder"}
 
 > En este artículo se destacan varios ejemplos que demuestran cómo puede utilizar Canvas para lograr una mensajería dirigida y personalizada utilizando una combinación de pasos de [Retraso]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) y [Mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-Braze Learning también ofrece varios cursos dedicados de Canvas que repasan esquemas comunes de Canvas. Compruébelos para obtener valiosos conocimientos sobre términos y conceptos técnicos explicados a través de una mezcla de vídeos, lecciones y ejercicios interactivos. 
+Braze Learning también ofrece varios cursos dedicados de Canvas que repasan esquemas comunes de Canvas. Compruébelos para obtener valiosos conocimientos sobre términos y conceptos técnicos explicados a través de una mezcla de vídeos, lecciones y ejercicios interactivos.
+
 - [Crear recorridos del cliente con Canvas Flow](https://learning.braze.com/create-customer-journeys-with-canvas-flow)
 - [Incorporación de nuevos miembros fidelizados](https://learning.braze.com/new-loyalty-member-onboarding)
 - [Usuarios inactivos](https://learning.braze.com/lapsing-users)
 - [Construir un recorrido del usuario con carritos abandonados](https://learning.braze.com/build-an-abandoned-cart-user-journey)
-
-{% alert important %}
-Desde el 28 de febrero de 2023 ya no puedes crear ni duplicar Canvas mediante la experiencia Canvas original. Braze recomienda a los clientes que utilicen la experiencia Canvas original que se pasen a Canvas Flow. Es una experiencia de edición mejorada para construir y gestionar mejor los Lienzos. Más información sobre la [clonación de tus lienzos en el flujo de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Incorporación
 

@@ -16,9 +16,9 @@ description: "Cet article présente les détails de l'envoi de messages immédia
 
 > Utilisez cet endpoint pour envoyer des messages immédiats aux utilisateurs désignés à l'aide de l'API de Braze.
 
-Veillez à inclure les objets Messagerie dans votre corps pour finaliser vos demandes.
-
 Si vous souhaitez cibler un segment, un enregistrement de votre requête sera stocké dans la [console de développement](https://dashboard.braze.com/app_settings/developer_console/activitylog/).
+
+{% multi_lang_include api/payload_size_alert.md %}
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
@@ -31,6 +31,10 @@ Pour utiliser cet endpoint, vous devrez générer une clé API avec l’autorisa
 {% multi_lang_include rate_limits.md endpoint='send endpoints' category='message send endpoint' %}
 
 ## Corps de la demande
+
+{% alert tip %}
+Veillez à inclure des [objets de messages]({{site.baseurl}}/api/objects_filters/#messaging-objects) dans votre corps pour compléter vos demandes.
+{% endalert %}
 
 ```
 Content-Type: application/json
@@ -73,10 +77,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`broadcast`| Facultatif | Valeur booléenne | Vous devez définir `broadcast` sur « true » lorsque vous envoyez un message à un segment entier qui est ciblé par une campagne ou un Canvas. Ce paramètre est défini sur Faux par défaut (au 31 août 2017). <br><br> Si `broadcast` est défini sur « true », une liste `recipients` ne peut pas être incluse. Cependant, faites attention lors de la configuration de `broadcast: true` car en configurant involontairement cet indicateur, vous pourriez envoyer votre message à une audience plus importante que prévue. |
 |`external_user_ids` | Facultatif | Tableau de chaînes de caractères | Voir [ID externe]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields). |
 |`user_aliases`| Facultatif | Tableau des objets Alias utilisateur| Voir l'[objet alias d'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
-|`segment_id `| Facultatif | Chaîne de caractères | Voir [identifiant de segmentation]({{site.baseurl}}/api/identifier_types/). |
+|`segment_id `| Facultatif | Chaîne de caractères | Voir [identifiant de segmentation]({{site.baseurl}}/api/identifier_types/#segment-identifier). |
 |`audience`| Facultatif | Objet Audience connectée | Voir [audience connectée]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`campaign_id`| En option* | Chaîne de caractères | Pour plus d'informations, voir l'[identifiant de la campagne]({{site.baseurl}}/api/identifier_types/). <br><br>\*Nécessaire si vous souhaitez suivre les statistiques de la campagne (par exemple, les envois, les clics, les rebonds, etc.) sur le tableau de bord de Braze. |
-|`send_id`| Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/) |
+|`campaign_id`| En option* | Chaîne de caractères | Pour plus d'informations, voir l'[identifiant de la campagne]({{site.baseurl}}/api/identifier_types/#campaign-identifier/). <br><br>\*Nécessaire si vous souhaitez suivre les indicateurs de la campagne (tels que les _envois_, les _clics_ ou les _rebonds_) sur le tableau de bord de Braze. |
+|`send_id`| Facultatif | Chaîne de caractères | Voir [identifiant d'envoi]({{site.baseurl}}/api/identifier_types/#send-identifier). |
 |`override_frequency_capping`| Facultatif | Valeur booléenne | Ignorez `frequency_capping` pour les campagnes, la valeur par défaut est `false`. |
 |`recipient_subscription_state`| Facultatif | Chaîne de caractères | Utilisez cette option pour envoyer des messages uniquement aux utilisateurs qui ont confirmé l’abonnement (`opted_in`), aux utilisateurs qui ont souscrit à ou confirmé l’abonnement (`subscribed`) ou à tous les utilisateurs, y compris les utilisateurs désabonnés (`all`). <br><br>Appliquer l’option `all` pour les utilisateurs est utile pour les e-mails transactionnels. Par défaut, `subscribed`. |
 |`messages`| Facultatif | Objets Messagerie | Voir les [objets d'envoi de messages disponibles]({{site.baseurl}}/api/objects_filters/#messaging-objects). |

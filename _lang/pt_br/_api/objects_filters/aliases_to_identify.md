@@ -9,7 +9,7 @@ description: "Este artigo explica os aliases para identificar a especificação 
 
 # Aliases para identificar o objeto
 
-Uma solicitação de API com qualquer campo no objeto de atribuições criará ou atualizará um atributo desse nome com o valor fornecido no perfil de usuário especificado. 
+Uma solicitação de API com qualquer campo no objeto de atribuições cria ou atualiza um atributo desse nome com o valor fornecido no perfil de usuário especificado.
 
 Use os nomes de campo do perfil de usuário do Braze (listados a seguir ou qualquer outro listado na seção de [campos de perfil de usuário do Braze]({{site.baseurl}}/api/objects_filters/user_attributes_object/#braze-user-profile-fields)) para atualizar esses valores especiais no perfil de usuário no dashboard ou adicionar seus próprios dados de atributo personalizado ao usuário.
 
@@ -21,7 +21,7 @@ Use os nomes de campo do perfil de usuário do Braze (listados a seguir ou qualq
   [
     {
       "external_id" : (required, string) see External user ID,
-      // external_ids for users that do not exist will return a non-fatal error.
+      // external_ids for users that do not exist return a non-fatal error.
       // See server responses for details.
       "user_alias" : {
         "alias_name" : (required, string) see User aliases,

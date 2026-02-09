@@ -1,5 +1,5 @@
 ---
-nav_title: Synchronisation d’audience Canvas
+nav_title: "Synchronisation de l'audience de Canvas"
 page_order: 10
 noindex: true
 tool: Canvas

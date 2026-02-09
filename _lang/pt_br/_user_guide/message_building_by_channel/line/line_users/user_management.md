@@ -1,5 +1,5 @@
 ---
-nav_title: Gerenciamento de Usuários
+nav_title: Gerenciamento de usuários
 article_title: LINE Gerenciamento de Usuários
 page_order: 0
 description: "Este artigo cobre o ID de usuário LINE e como configurá-lo."
@@ -21,7 +21,7 @@ Quando você envia mensagens LINE através do Braze, o Braze usa o `native_line_
 Os IDs de usuário do LINE são distintos por provedor do LINE. Um usuário específico terá diferentes LINE IDs de usuário para cada provedor que eles seguem. Os usuários provavelmente não saberão seu ID do LINE (diferente de seu e-mail ou número de telefone), pois eles mudam para cada marca que seguem.
 {% endalert %}
 
-## Definindo o atributo `native_line_id`
+## Configuração da atribuição `native_line_id` 
 
 Existem vários cenários onde `native_line_id` está definido no perfil do usuário, que estão descritos abaixo.
 
@@ -29,7 +29,7 @@ Existem vários cenários onde `native_line_id` está definido no perfil do usu�
 | --- | --- | --- |
 |Um usuário segue um canal LINE | Não| Um perfil de usuário anônimo é criado (a fusão será necessária):<br> `native_line_id` é definido como o ID de LINE do usuário <br>`line_id` o alias do usuário é definido como o ID do LINE do usuário<br>O usuário está inscrito no grupo de inscrições Braze do canal. |
 |Um usuário segue um canal LINE| Sim | Todos os perfis de usuário com o `native_line_id`:<br>Estão inscritos no grupo de inscrições do canal Braze|
-|A empresa usa o upload de CSV do usuário com uma coluna n `ative_line_id`| Não| Se nenhum perfil de usuário existir para o `external_id` especificado ou alias de usuário:<br>`native_line_id` é definido para o valor especificado<br> Todos os outros atributos especificados no CSV são definidos no perfil do usuário.|
+|A empresa utiliza o upload de CSV do usuário com uma `native_line_id` coluna| Não| Se nenhum perfil de usuário existir para o `external_id` especificado ou alias de usuário:<br>`native_line_id` é definido para o valor especificado<br> Todos os outros atributos especificados no CSV são definidos no perfil do usuário.|
 |A empresa utiliza o upload de CSV do usuário com uma `native_line_id` coluna | Sim | Se um perfil de usuário existir para o `external_id` especificado ou alias de usuário:<br>`native_line_id` é definido para o valor especificado<br>Todos os outros atributos especificados no CSV são definidos no perfil do usuário.<br>Vários perfis têm o mesmo `native_line_id` |
 | A empresa usa `/users/track` ponto de extremidade e especifica `native_line_id` atributo | Não | Se nenhum perfil de usuário existir para o usuário especificado ([especificado por `external_id`, `user_alias`, `braze_id` ou `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>`native_line_id` é definido para o valor especificado<br>Todos os outros atributos especificados na solicitação estão definidos no perfil do usuário. |
 | A empresa usa `/users/track` ponto de extremidade e especifica `native_line_id` atributo | Sim | Se um perfil de usuário existir para o usuário especificado ([especificado por `external_id`, `user_alias`, `braze_id` ou `email`]({{site.baseurl}}/api/objects_filters/user_attributes_object/)):<br>`native_line_id` é definido para o valor especificado<br>Todos os outros atributos especificados na solicitação estão definidos no perfil do usuário.<br>Vários perfis têm o mesmo `native_line_id` |
@@ -41,8 +41,7 @@ Existem vários cenários onde `native_line_id` está definido no perfil do usu�
 
 Ao visualizar um perfil de usuário no dashboard do Braze, você pode ver se ele tem o atributo `native_line_id` definido indo para a guia **Engajamento** > seção **Configurações de Contato** > seção **LINE**.
 
-Se o `native_line_id` foi definido, estará sob **LINE User ID**. Caso contrário, não aparecerá.
+Se o endereço `native_line_id` tiver sido definido, ele será mostrado em **LINE User ID (ID de usuário LINE**). Caso contrário, não aparecerá.
 
-![Configurações de Contato de Linha na guia de Engajamento.][1]{: style="max-width:60%;"}
+![LINE Contact Settings (Configurações de contato) na guia Engagement (Engajamento).]({% image_buster /assets/img/line/line_contact_settings.png %}){: style="max-width:50%;"}
 
-[1]: {% image_buster /assets/img/line/line_contact_settings.png %}

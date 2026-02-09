@@ -1,10 +1,10 @@
 ---
 nav_title: 창의적인 세부 사항
-article_title: 창의적인 세부 사항
-page_order: 4
+article_title: 크리에이티브 디테일
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "창의적인 세부 사항"
-guide_top_text: "창의적인 인앱 메시지를 작성하기 전에 몇 가지 지침을 알아두어야 합니다. 모든 인앱 메시지 템플릿은 최신 기기에서 다양한 길이의 텍스트와 크기의 이미지를 표시하도록 설계되었습니다. 모든 휴대폰, 태블릿 및 컴퓨터에서 메시지가 잘 표시되도록 하려면 이러한 지침을 따르고 항상 <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>메시지</a>를 테스트하는 것이 좋습니다."
+guide_top_text: "창의적인 인앱 메시지를 작성하기 전에 몇 가지 지침을 알아두어야 합니다. 모든 인앱 메시지 템플릿은 최신 기기에서 다양한 길이의 텍스트와 크기의 이미지를 표시하도록 설계되었습니다. 모든 휴대폰, 태블릿 및 컴퓨터에서 메시지가 잘 표시되도록 하려면 이러한 지침을 따르고 항상 <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>메시지</a>를 테스트하는 것이 좋습니다."
 description: "이 랜딩 허브는 세 가지 유형의 인앱 메시지, 모달, 슬라이드업 및 전체 화면에 대한 디자인 및 콘텐츠 요구 사항을 다룹니다."
 
 channel:
@@ -46,9 +46,9 @@ guide_featured_list:
 - 이미지를 [미디어 라이브러리]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)에 호스팅하여 Braze SDK가 오프라인 메시지 표시를 위해 CDN에서 에셋을 다운로드할 수 있도록 권장합니다.
 - 전체 화면 메시지의 경우 [이미지 안전 영역]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone)에 대한 지침을 따르십시오.
 
-{% alert tip %} 자신감을 가지고 자산을 만드세요! Braze 인앱 메시지 이미지 템플릿과 안전 영역 오버레이는 모든 크기의 기기와 잘 어울리도록 설계되었습니다. [디자인 템플릿 ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %} 다운로드
+{% alert tip %} 자신 있게 에셋을 제작하세요! 인앱 메시지 이미지 템플릿과 안전 영역 오버레이는 모든 크기의 기기에 잘 어울리도록 디자인되었습니다. [디자인 템플릿 ZIP 다운로드]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab 전체 화면 %}
+{% tabs %}{% tab Fullscreen %}
 
 ![앱 화면을 차지하는 전체 화면 인앱 메시지. 전체 화면 메시지에는 큰 이미지, 헤더, 메시지 본문 및 두 개의 버튼이 포함됩니다.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
@@ -62,9 +62,9 @@ guide_featured_list:
 
 
 {% endtab %}
-{% tab 모달 %}
+{% tab Modal %}
 
-![앱 및 웹사이트의 중앙에 대화 상자로 표시되는 모달 인앱 메시지. 모달에는 이미지, 헤더, 메시지 본문 및 두 개의 버튼이 포함되어 있습니다.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![앱 및 웹사이트의 중앙에 대화 상자로 표시되는 모달 인앱 메시지. 모달에는 이미지, 헤더, 메시지 본문 및 두 개의 버튼이 포함됩니다.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | 레이아웃 | 애셋 크기 | 참고 |
 |--- | --- | ------ |
@@ -75,7 +75,7 @@ guide_featured_list:
 [추가 세부 사항]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
 {% endtab %}
-{% tab 슬라이드업 %}
+{% tab Slideup %}
 
 ![앱 화면 하단에서 슬라이드업 인앱 메시지가 나타납니다. 슬라이드업에는 아이콘 이미지와 간단한 메시지가 포함됩니다.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 

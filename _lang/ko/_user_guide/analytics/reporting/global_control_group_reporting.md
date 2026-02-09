@@ -1,5 +1,5 @@
 ---
-nav_title: 전역 대조군 
+nav_title: 글로벌 컨트롤 그룹
 article_title: 글로벌 제어 그룹 보고
 page_type: reference
 description: "이 페이지에서는 대시보드의 글로벌 관리 그룹 보고 페이지에 있는 보고 메트릭에 대해 설명합니다."
@@ -18,7 +18,7 @@ tool:
 
 그런 다음 보고서를 실행할 매개변수(세션 또는 특정 사용자 지정 이벤트)를 선택하고 **보고서 실행을** 선택합니다.
 
-![][6]
+![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## 보고서 구성
 
@@ -49,4 +49,3 @@ tool:
 | 사용자 당 이벤트 | 선택한 기간 동안 각 그룹에 속한 사용자가 전환 이벤트를 완료한 예상 평균 횟수입니다. | 총 이벤트 수 ÷ 예상 그룹 규모. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

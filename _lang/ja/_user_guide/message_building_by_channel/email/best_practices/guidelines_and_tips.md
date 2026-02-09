@@ -1,5 +1,5 @@
 ---
-nav_title: Eメールガイドライン
+nav_title: 電子メールのガイドライン
 article_title: Eメールガイドライン
 page_order: 1
 page_type: reference
@@ -36,7 +36,7 @@ channel: email
 
 Braze サーバーを介してターゲットされるメールアドレスは、[RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) 標準に従って検証されなければなりません。Braze は特定の文字を受け入れず、無効として認識します。メールがバウンスされた場合、Braze はメールを無効としてマークし、その購読ステータスは変更されません。 
 
-{% details RFC標準外の受け入れ不可能な文字 %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -60,12 +60,16 @@ Braze サーバーを介してターゲットされるメールアドレスは�
 
 from "アドレスを設定する際は、"from "メールドメインが送信ドメイン（`marketing.yourdomain.com` など）と一致していることを確認すること。一致しない場合、SPF と DKIM の不一致が生じる可能性があります。すべての返信先メールアドレスをルートドメインに設定できます。
 
+{% alert note %}
+Unicodeエンコーディングは、「差出人」のアドレスではサポートされていません。
+{% endalert %}
+
 ### HTMLの詳細をチェックする
 
 HTMLのタグや属性の中には、ブラウザ上で悪意のあるコードを実行させる可能性があるため、許可されていないものがあることを覚えておいてほしい。
 
 Eメールで使用できないHTMLタグや属性については、以下のリストをチェックしよう：
-{% details 展開して、許可されていない HTML タグを表示 %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -83,7 +87,7 @@ Eメールで使用できないHTMLタグや属性については、以下のリ
 - `<svg>`
 {% enddetails %}
 
-{% details 展開して、許可されていない HTML 属性を表示 %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`
@@ -229,5 +233,4 @@ Eメールで使用できないHTMLタグや属性については、以下のリ
 {% enddetails %}
 
 
-[24]: http://tools.ietf.org/html/rfc2822
 

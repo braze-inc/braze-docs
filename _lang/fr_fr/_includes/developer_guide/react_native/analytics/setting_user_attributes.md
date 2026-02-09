@@ -36,7 +36,7 @@ Braze.setCustomUserAttribute("attribute_key", "attribute_value", function(){
 });
 ```
 
-#### Enlever la configuration d’un attribut personnalisé
+#### Désactivation des attributs personnalisés
 
 ```javascript
 Braze.unsetCustomUserAttribute("attribute_key", function(){
@@ -48,7 +48,7 @@ Braze.unsetCustomUserAttribute("attribute_key", function(){
 
 ```javascript
 
-// Adds a string to a custom atttribute string array, or creates that array if one doesn't exist.
+// Adds a string to a custom attribute string array, or creates that array if one doesn't exist.
 Braze.addToCustomUserAttributeArray("my-attribute-array", "new or existing value", optionalCallback);
 
 // Removes a string from a custom attribute string array.

@@ -1,4 +1,4 @@
-guide/prerequisites/unity.md developer_ %}
+{% multi_lang_include developer_guide/prerequisites/unity.md %}
 
 ## コンテンツカードをネイティブに表示する {#unity-content-cards-native-ui}
 

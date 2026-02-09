@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "Personalização Usando Liquid Tags"
 guide_top_text: "Braze pode substituir automaticamente valores de um determinado usuário em suas mensagens. Coloque sua expressão dentro de dois conjuntos de chaves para notificar a Braze que você usará um valor interpolado. Dentro destes colchetes, quaisquer valores de usuário que você queira substituir devem ser cercados por um conjunto adicional de colchetes com um cifrão na frente deles.<br><br>Para mais informações sobre Liquid, confira nossa jornada guiada <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Personalização Dinâmica com Liquid</a></b> no Braze Learning!"
@@ -50,7 +51,7 @@ guide_featured_list:
 
 > O Liquid é uma linguagem de modelo de código aberto desenvolvida pela Shopify e escrita em Ruby. Na Braze, Liquid é usado para modelar dados do perfil de um usuário em mensagens. 
 
-Por exemplo, você pode recuperar um atributo personalizado de um perfil de usuário que é um tipo de dado inteiro e arredondar esse valor para o número inteiro mais próximo. Para mais informações sobre a sintaxe e uso do Liquid, consulte [**Tags de personalização compatíveis**][1].
+Por exemplo, você pode recuperar um atributo personalizado de um perfil de usuário que é um tipo de dado inteiro e arredondar esse valor para o número inteiro mais próximo. Para mais informações sobre a sintaxe e uso do Liquid, consulte [**Tags de personalização compatíveis**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
 A linguagem de modelo Liquid é compatível com o uso de objetos, tags e filtros.
 
@@ -90,7 +91,7 @@ Você também pode aproveitar a previsão do Liquid para atributos personalizado
 
 ![]({% image_buster /assets/img/liquid_auto_complete.gif %}){: style="max-width:70%;"}
 
-## Termos a saber
+## Termos a conhecer
 
 Estes termos são reinterpretados a partir da [**documentação da Shopify**](https://shopify.github.io/liquid/basics/introduction/) com base no nosso nível de suporte.
 
@@ -109,4 +110,3 @@ Estes termos são reinterpretados a partir da [**documentação da Shopify**](ht
 
 <br>
 
-[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/

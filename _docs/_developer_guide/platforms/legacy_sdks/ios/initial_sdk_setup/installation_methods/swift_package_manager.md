@@ -1,5 +1,5 @@
 ---
-nav_title: Swift Package Manager
+nav_title: Swift package manager
 article_title: Swift Package Manager Integration for iOS
 platform: iOS
 page_order: 3

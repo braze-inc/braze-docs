@@ -1,7 +1,7 @@
 ---
-nav_title: 다중 비즈니스 계정 
+nav_title: 다수의 비즈니스 계정
 article_title: 다중 WhatsApp 비즈니스 계정 및 전화번호
-page_order: 2
+page_order: 3
 description: "이 참조 문서에서는 WhatsApp 비즈니스 계정 및 전화번호를 추가하는 단계를 다룹니다."
 page_type: reference
 channel:
@@ -18,12 +18,18 @@ channel:
 
 동일한 Meta Business 매니저 내에 중첩된 비즈니스 계정도 사용자 액세스 권한 관리 및 카탈로그를 공유합니다(Braze에서는 아직 지원되지 않음).
 
+![브레이징 및 WhatsApp 생태계 다이어그램으로, 작업 공간과 WhatsApp 비즈니스 계정이 서로 연결되는 방식을 보여줍니다: 하나의 구독 그룹을 하나의 전화번호에 연결할 수 있으며, 여러 WhatsApp 비즈니스 계정을 하나의 작업 공간에 연결하고, 하나의 작업 공간을 여러 Meta 비즈니스 포트폴리오에 연결할 수 있습니다.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+
 ### WhatsApp 비즈니스 계정 추가
 
-워크스페이스당 최대 10개의 WhatsApp 비즈니스 계정을 추가할 수 있습니다. 계정을 추가하려면:
+워크스페이스당 최대 10개의 WhatsApp 비즈니스 계정을 추가할 수 있습니다. The business accounts can be nested in different Meta Business Managers. 계정을 추가하려면:
 
-1. **기술 파트너** > **WhatsApp**을 선택하고 **WhatsApp 비즈니스 계정 추가**를 선택하세요. ![WhatsApp 메시징 통합 섹션에는 비즈니스 계정을 추가하거나 구독 그룹 및 번호를 추가할 수 있는 옵션이 있습니다.][1]<br>
-2. 가입 워크플로를 진행하세요. 자세한 단계별 절차는 [WhatsApp 임베디드 가입]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)을 참조하세요.
+1. Go to **Technology Partners** > **WhatsApp** and select **Add WhatsApp Business Account**. 
+
+![WhatsApp 메시징 통합 섹션에는 비즈니스 계정을 추가하거나 구독 그룹 및 번호를 추가할 수 있는 옵션이 있습니다.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. 가입 워크플로를 진행하세요. For a detailed step-by-step walkthrough, refer to [WhatsApp embedded signup]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/).
 
 {% alert important %}
 전화번호는 다른 WhatsApp 계정에 등록되지 않은 것을 포함하여 모든 WhatsApp 전화번호 요구 사항을 충족해야 합니다.
@@ -43,12 +49,14 @@ channel:
 
 WhatsApp 비즈니스 계정당 최대 20개의 구독 그룹(및 발신 전화번호)을 추가할 수 있습니다. 구독 그룹 및 전화번호를 추가하려면:
 
-1. **기술 파트너** > **WhatsApp**으로 이동하여 **구독 그룹 및 번호 추가**를 선택합니다.![비즈니스 계정을 추가하거나 구독 그룹 및 번호를 추가할 수 있는 WhatsApp 메시징 통합 섹션입니다.][1]<br>
-2. 가입 워크플로를 진행하세요. <br><br> **WhatsApp 비즈니스 계정 선택** 단계에서 기존 WhatsApp 비즈니스 계정을 선택하고 새 전화번호를 추가하세요. 이 번호는 다른 WhatsApp 계정에 등록되지 않는 것을 포함하여 모든 WhatsApp 전화번호 요구 사항을 충족해야 합니다.
+1. Go to **Technology Partners** > **WhatsApp** and select **Add Subscription Group and Number**.
+
+![WhatsApp 메시징 통합 섹션에는 비즈니스 계정을 추가하거나 구독 그룹 및 번호를 추가할 수 있는 옵션이 있습니다.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+
+{: start="2"}
+2\. 가입 워크플로를 진행하세요. <br><br> **WhatsApp 비즈니스 계정 선택** 단계에서 기존 WhatsApp 비즈니스 계정을 선택하고 새 전화번호를 추가하세요. 이 번호는 다른 WhatsApp 계정에 등록되지 않는 것을 포함하여 모든 WhatsApp 전화번호 요구 사항을 충족해야 합니다.
 
 ### 구독 그룹 및 전화번호 제거 
 
 1. **오디언스** > **구독** 및 구독 그룹을 보관하세요.
 2. Meta Business 매니저로 이동하여 전화번호를 삭제하세요.
-
-[1]: {% image_buster /assets/img/whatsapp/multiple_wabas.png %} 

@@ -11,7 +11,7 @@ Die folgende Mindestversion des SDK ist mit allen Apps kompatibel, die [die neue
 Ab SDK-Version 6.0.0 verwendet Braze ein React Native Turbo-Modul, das sowohl mit der New Architecture als auch mit der Legacy-Bridge-Architektur kompatibel ist, d.h. es ist keine zusätzliche Einrichtung erforderlich.
 
 {% alert warning %}
-Wenn Ihre iOS App mit `RCTAppDelegate` konform ist und unserem früheren `AppDelegate` Setup folgt, überprüfen Sie die Beispiele in [Vollständiges natives Setup](#reactnative_step-2-complete-native-setup), um Abstürze beim Abonnieren von Ereignissen im Turbo Modul zu vermeiden.
+Wenn Ihre iOS App mit `RCTAppDelegate` konform ist und unserem früheren `AppDelegate` Setup folgt, lesen Sie die Beispiele in [Vollständiges natives Setup](#reactnative_step-2-complete-native-setup), um Abstürze beim Abonnieren von Ereignissen im Turbo Modul zu vermeiden.
 {% endalert %}
 
 ## Integration des React Native SDK
@@ -20,7 +20,7 @@ Wenn Ihre iOS App mit `RCTAppDelegate` konform ist und unserem früheren `AppDel
 
 Für die Integration des SDK ist React Native Version 0.71 oder höher erforderlich. Die vollständige Liste der unterstützten Versionen finden Sie in unserem [React Native SDK GitHub-Repository](https://github.com/braze-inc/braze-react-native-sdk?tab=readme-ov-file#version-support).
 
-### Schritt 1: Braze-Bibliothek integrieren
+### Schritt 1: Integrieren der Braze-Bibliothek
 
 {% tabs local %}
 {% tab npm %}
@@ -48,7 +48,7 @@ Stellen Sie sicher, dass Sie mindestens Version 1.37.0 des Braze React Native SD
 Um das Braze Expo Plugin zu installieren, führen Sie den folgenden Befehl aus:
 
 ```bash
-expo install @braze/expo-plugin
+npx expo install @braze/expo-plugin
 ```
 
 #### Schritt 2.2: Plugin zu app.json hinzufügen
@@ -80,6 +80,7 @@ Fügen Sie in Ihrem `app.json` das Braze Expo Plugin hinzu. Sie können die folg
 | `enableBrazeIosRichPush`                      | boolean | Nur iOS. Ob Sie Rich-Push-Funktionen für iOS aktivieren möchten.                                                                                                  |
 | `enableBrazeIosPushStories`                   | boolean | Nur iOS. Ob Sie Braze Push Stories für iOS aktivieren möchten.                                                                                                  |
 | `iosPushStoryAppGroup`                        | String  | Nur iOS. Die App-Gruppe, die für iOS Push Stories verwendet wird.                                                                                                       |
+| `iosUseUUIDAsDeviceId`                        | boolean | Nur iOS. Ob die ID des Geräts eine zufällig generierte UUID verwenden soll.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Beispielkonfiguration:
@@ -125,7 +126,7 @@ Beispielkonfiguration:
 Die Vorerstellung Ihrer Anwendung generiert die nativen Dateien, die für das Braze Expo-Plugin erforderlich sind.
 
 ```bash
-expo prebuild
+npx expo prebuild
 ```
 
 Führen Sie Ihre Anwendung wie in den [Expo-Dokumenten](https://docs.expo.dev/workflow/customizing/) beschrieben aus. Denken Sie daran, dass Sie, wenn Sie Änderungen an den Konfigurationsoptionen vornehmen, die Anwendung neu erstellen und ausführen müssen.
@@ -156,8 +157,8 @@ Um eine Verbindung zu Braze-Servern herzustellen, erstellen Sie die Datei `braze
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
-<string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+  <string translatable="false" name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+  <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
 
@@ -249,10 +250,10 @@ Aus dem Stammordner des Projekts:
 
 ```bash
 # To install using the React Native New Architecture
-cd ios && RCT_NEW_ARCH_ENABLED=1 pod install
+cd ios && pod install
 
 # To install using the React Native legacy architecture
-cd ios && pod install
+cd ios && RCT_NEW_ARCH_ENABLED=0 pod install
 ```
 
 #### Schritt 2.3: Konfigurieren Sie das Braze SDK
@@ -263,6 +264,7 @@ cd ios && pod install
 Importieren Sie das Braze SDK am Anfang der Datei `AppDelegate.swift`:
 ```swift
 import BrazeKit
+import braze_react_native_sdk
 ```
 
 Ersetzen Sie in der Methode `application(_:didFinishLaunchingWithOptions:)` den [API-Schlüssel]({{site.baseurl}}/api/identifier_types/) und den [Endpunkt]({{site.baseurl}}/api/basics/#endpoints) durch die Werte Ihrer App. Erstellen Sie dann die Braze-Instanz mithilfe der Konfiguration und legen Sie eine statische Eigenschaft in `AppDelegate` an, um den Zugriff zu erleichtern:

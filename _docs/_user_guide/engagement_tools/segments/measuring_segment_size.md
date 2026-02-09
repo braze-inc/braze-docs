@@ -1,6 +1,6 @@
 ---
-nav_title: Measuring Segment Size
-article_title: Measuring Segment Size
+nav_title: Measure segment size
+article_title: Measure Segment Size
 page_order: 5
 page_type: reference
 tool: 
@@ -8,7 +8,7 @@ tool:
 description: "This page covers how you can monitor your segment’s membership and size."
 ---
 
-# Measuring segment size
+# Measure segment size
 
 > This page covers how you can monitor your segment’s membership and size.
 
@@ -25,8 +25,8 @@ It is possible that the number of total users is different than the number of us
 ![A table displaying total reachable users broken down by users reachable by email, iOS push, Android push, web push, and Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 For a user to be listed as reachable through a certain channel, the user must have both:
-* A valid email address or push token associated with their profile; and
-* Opted in or subscribed to your app.
+* A valid email address or push token associated with their profile, and
+* Opted-in or subscribed to your app.
 
 A single user may belong to different reachable user groups. For example, a user might have both a valid email address and valid Android push token and be opted in to both, but have no associated iOS push token. The gap between the total reachable users and the sum of the different channels are the number of users who qualified for the segment but they are not reachable through those communication channels.
 
@@ -75,6 +75,17 @@ For a user to be listed as reachable through a certain channel, the user must ha
 - A valid email address or push token associated with their profile, and
 - Opted-in or subscribed to your app.
 
+#### Applied filters for channel-specific reachable users
+
+The following filters are applied for each channel when determining reachable users.
+
+| Channel | Filter |
+| --- | --- |
+| Email | **Email Available** is true. |
+| Push | **Foreground Push Enabled** is true. |
+| SMS | **Subscription Group** is any SMS subscription group. **Invalid Phone Number** is false. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Calculating exact statistics 
 
 To view an accurate count of the number of users in your segment, select **Calculate exact stats** in the **Reachable users** pane.
@@ -82,6 +93,10 @@ To view an accurate count of the number of users in your segment, select **Calcu
 To update the stats for a calculation you've previously run, select **Refresh exact statistics**. The date this calculation was last ran will automatically be updated.
 
 Note that a calculation's accuracy is only 99.999% or greater. So for large segments, you may notice slight variations&#8212;even when calculating exact statistics&#8212;which is normal behavior. In addition, exact statistics results are cached for 24 hours unless you make edits to your segment, in which case you can re-calculate the exact statistics.
+
+{% alert note %}
+Segments divided evenly by [random bucket numbers]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) won't be the same size. For example, if you create one segment with the filter **Random Bucket # less than 5000** and one segment with the filter **Random Bucket # at least 5000**, it is possible and expected for the segment sizes to vary by up to a few percentage points. This is because of situations such as inactive users getting deleted and users being unreachable.
+{% endalert %}
 
 ![The "Reachable users" panel with an option to show the breakdown.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 

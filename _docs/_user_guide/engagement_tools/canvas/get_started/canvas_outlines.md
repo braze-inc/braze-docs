@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas Outlines
+nav_title: Canvas outlines
 article_title: Canvas Outlines
 page_order: 3
 page_type: reference

@@ -6,7 +6,7 @@ layout: dev_guide
 
 guide_top_header: "パーソナライズされたメッセージング"
 guide_top_text: "Braze では、ユーザーの名前などのユーザー固有の情報をメールに挿入することで、キャンペーンをカスタマイズできます。"
-description: "このランディングページには、リキッド、コネクテッドコンテンツ、ディープリンク、コンテンツブロック、プロモーションコードなど、Brazeのパーソナライゼーションとダイナミックなの内容が含まれています。"
+description: "このランディングページには、Liquid、コネクテッドコンテンツ、ディープリンク、コンテンツブロック、プロモーションコードなど、Brazeのパーソナライゼーションとダイナミックなの内容が含まれています。"
 
 guide_featured_title: "トピック"
 guide_featured_list:
@@ -32,7 +32,7 @@ guide_featured_list:
   link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties/canvas_persistent_entry_properties/
   image: /assets/img/braze_icons/dataflow-03.svg
 - name: カタログ
-  link: /docs/user_guide/personalization_and_dynamic_content/catalogs/
+  link: /docs/user_guide/data/activation/catalogs/
   image: /assets/img/braze_icons/list.svg
 ---
 
@@ -40,5 +40,4 @@ guide_featured_list:
 
 [31]:https://docs.shopify.com/themes/liquid/tags/variable-tags
 [32]:https://docs.shopify.com/themes/liquid/tags/iteration-tags
-[34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
-[37]:\#accounting-for-null-attribute-values
+[37]:#accounting-for-null-attribute-values

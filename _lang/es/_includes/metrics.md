@@ -175,7 +175,7 @@ El <i>reintento pendiente</i> hace referencia al número de solicitudes que fuer
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Conversiones primarias (A)</i> o <i>evento de conversión primaria</i> es el número de veces que se ha producido un evento definido tras interactuar o ver un mensaje recibido de una campaña Braze. Este evento definido lo determinas tú al crear la campaña.
+<i>Conversiones primarias (A)</i> o <i>evento de conversión primaria</i> es el número de usuarios únicos que realizan un evento definido tras recibir o ver un mensaje de una campaña Braze. Este evento lo seleccionas tú al configurar la campaña y se utiliza como métrica principal de éxito para los informes y la optimización.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -252,6 +252,11 @@ Se <i>envía</i> cada vez que se ha lanzado o desencadenado una campaña o un pa
 
 {% if include.metric == "Unique Clicks" %}
 <i>Clics únicos</i> es el número distinto de destinatarios que han hecho clic en un enlace dentro de un mensaje al menos una vez y se mide por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+{% endif %}
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>Clics únicos</i> es el número distinto de destinatarios que han hecho clic en un enlace dentro de un mensaje al menos una vez.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

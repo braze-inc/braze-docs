@@ -1,5 +1,5 @@
 ---
-nav_title: Integração com Pesquisa de Preferências
+nav_title: Integração com pesquisa de preferências
 article_title: Integração com Pesquisa de Preferências
 page_order: 5.5
 page_type: reference
@@ -24,7 +24,7 @@ Para usar esse modelo com sucesso, você precisará do seguinte:
 
 ## Adaptar o modelo às suas necessidades
 
-Vamos dizer que estamos trabalhando para StyleRyde, um app de caronas sob demanda que leva as pessoas aonde elas precisam ir. Antes de criar o canva, [configuramos uma pesquisa simples]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) que inclui uma série de perguntas envolventes para determinar a experiência e a impressão da primeira viagem de um usuário com o app.
+Vamos dizer que estamos trabalhando para StyleRyde, um app de caronas sob demanda que leva as pessoas aonde elas precisam ir. Antes de criar o canva, [configuramos uma pesquisa simples]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) que inclui uma série de perguntas envolventes para determinar a experiência e a impressão da primeira viagem de um usuário com o app.
 
 Para acessar o modelo, ao criar um novo canva, selecione **Usar um modelo do canvas** > **Modelos da Braze**. Em seguida, ao lado de **Integração com Pesquisa de Preferências**, selecione **Aplicar modelo**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
@@ -47,7 +47,7 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 Atualizar o **Evento de conversão primária – A** para **Executa evento personalizado**. Em seguida, selecione o **Usou o app pela última vez** para o evento personalizado.
 
-![Último uso do app como o nome do evento personalizado selecionado para o evento de conversão.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
+![Last Used App como o nome do evento personalizado selecionado para o evento de conversão.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: Adaptar o cronograma de entrada
 
@@ -55,19 +55,19 @@ Vamos manter o cronograma de entrada como **Baseado em ação** para que os usu�
 
 Faremos uma atualização nesta seção ajustando o **Período de entrada** para a data e hora desejadas.
 
-![Seção "Período de entrada" com o horário de início 30 de janeiro de 2025 às 12h.]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
+![Seção "Entry Window" (Janela de entrada) com o horário de início em 30 de janeiro de 2025 às 12 horas.]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
 
 ### Etapa 4: Selecione o público-alvo
 
 Manteremos o público-alvo como está para direcionar nossos usuários que usaram o app StyleRyde pela primeira vez há menos de um dia.
 
-![O filtro "Usou estes apps pela primeira vez há menos de 1 dia" selecionado para direcionar o público de entrada.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+![O filtro "First used these apps less than 1 days ago" foi selecionado para direcionamento ao público de entrada.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### Etapa 5: Selecione suas configurações de envio
 
 Manteremos as configurações de inscrição padrão, para que enviemos apenas para usuários que se inscreveram ou optaram por receber mensagens ou notificações com o horário de silêncio ativado, e ignoraremos as outras configurações (limitação de frequência e grupos de semente).
 
-![Seção "Enviar Configurações" com as configurações de inscrição para usuários que estão inscritos ou optaram por participar com o Horário de Silêncio ativado entre 12h e 20h.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+![Seção "Send Settings" (Configurações de envio) com as configurações de inscrição para usuários inscritos ou com aceitação com o Horário de silêncio ativado entre 12 e 20 horas.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
 ### Etapa 6: Personalize sua tela
 
@@ -79,7 +79,7 @@ Agora, vamos construir nosso canva personalizando o conteúdo que será enviado 
 - Usuários que iniciaram uma sessão ou clicaram no e-mail de integração
 - Usuários que não iniciaram uma sessão ou clicaram no e-mail de integração
 
-![Um passo da jornada de ação dividido em dois caminhos, com um para usuários que iniciaram uma sessão e outro para todos os outros.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
+![Uma etapa de jornadas de ação dividida em duas jornadas, uma para usuários que iniciaram uma sessão e outra para todos os outros.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
 
 A partir daqui, vamos direcionar nossos usuários e envio de mensagens com base nos grupos mencionados anteriormente.
 

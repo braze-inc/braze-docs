@@ -1,5 +1,5 @@
 ---
-nav_title: "Función de icono de aplicación personalizado (iOS)"
+nav_title: "Característica de icono de aplicación personalizado (iOS)"
 article_title: Icono de aplicación personalizado
 page_order: 7
 page_type: reference

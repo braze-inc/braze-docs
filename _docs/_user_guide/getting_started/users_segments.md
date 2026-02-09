@@ -1,5 +1,5 @@
 ---
-nav_title: Users and Segments
+nav_title: Users and segments
 article_title: Getting Started&#58; Users and Segments
 page_order: 2
 page_type: reference
@@ -7,7 +7,7 @@ description: "This article provides an overview of users and segments, outlining
 
 ---
 
-# Getting Started: Users and segments
+# Get started: Users and segments
 
 Understanding your users and effectively targeting them is crucial for sending personalized and targeted marketing campaigns. This article provides an overview of users and segments, outlining their significance and how they can be leveraged to engage your audience.
 

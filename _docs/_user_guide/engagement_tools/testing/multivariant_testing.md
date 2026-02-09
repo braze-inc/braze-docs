@@ -1,5 +1,5 @@
 ---
-nav_title: Multivariate & A/B Testing
+nav_title: Multivariate & A/B testing
 article_title: Multivariate and A/B Testing
 page_order: 2
 page_type: reference

@@ -15,10 +15,10 @@ Este artículo describe cómo cambiar el idioma en el que aparece el panel de co
 
 El panel de Braze está disponible en [varios idiomas](#supported-languages). Puedes cambiar el idioma de la pantalla al que prefieras en cualquier momento.
 
-1. En el encabezado global, haz clic en <i class="fa-solid fa-globe" aria-label="Selecciona tu idioma"></i>.
+1. En la cabecera global, selecciona <i class="fa-solid fa-globe" aria-label="Selecciona tu idioma"></i>.
 2. Elija su idioma en la lista.
 
-![][1]{: style="max-width:60%"}
+![Inglés seleccionado para el idioma del panel de Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 El panel puede tardar unos instantes en volver a cargarse.
 
@@ -26,6 +26,7 @@ El panel puede tardar unos instantes en volver a cargarse.
 
 Puede seleccionar uno de los siguientes idiomas admitidos:
 
+- Alemán (Deutsch)
 - Inglés
 - Español (Español)
 - Francés (Français)
@@ -58,4 +59,3 @@ If you have limited permissions, your notification language is set to the defaul
 
 -->
 
-[1]: {% image_buster /assets/img_archive/language_dashboard.png %}

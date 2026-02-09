@@ -10,19 +10,26 @@ description: "Este artigo fornece uma visão geral do dashboard de uso da API."
 
 > O dashboard de uso da API permite monitorar o tráfego de entrada da API REST na Braze para entender as tendências de uso de nossas APIs REST e solucionar possíveis problemas.
 
-Visualize seu painel de uso da API acessando **Configurações** > **APIs e identificadores** e selecionando **Dashboard**. O dashboard padrão é uma visualização de todas as solicitações de entrada da API REST para seu espaço de trabalho no último dia (24 horas). Dependendo do seu caso de uso, é possível ajustar os controles do dashboard para filtrar ou agrupar o tráfego e também configurar o intervalo de tempo do dashboard.
+## Sobre o dashboard de uso da API
 
-![Painel de uso da API com 130 solicitações no total, com uma taxa de sucesso de 70% e uma taxa de falha de 30%.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
+Para visualizar o painel de uso da API, acesse **Configurações** > **APIs e identificadores** e selecione **Dashboard**.
 
-## Detalhes do resumo
+O dashboard padrão é uma visualização de todas as solicitações de entrada da API REST para seu espaço de trabalho no último dia (24 horas). Dependendo do seu caso de uso, é possível ajustar os controles do dashboard para filtrar ou agrupar o tráfego e também configurar o intervalo de tempo do dashboard.
+
+![Dashboard de uso da API com 130 solicitações no total, com uma taxa de sucesso de 70% e uma taxa de falha de 30%.]({% image_buster /assets/img/api_usage_dashboard/api_usage_dashboard.png %})
+
+## Métricas disponíveis
 
 O dashboard de uso da API inclui as seguintes estatísticas:
 
-- **Total de solicitações:** O número total de solicitações enviadas ao Braze para o seu espaço de trabalho atual, considerando os filtros e controles aplicados ao dashboard.
-- **Taxa de sucesso:** A porcentagem do total de solicitações em que o Braze emitiu uma resposta de sucesso `2XX`.
-- **Taxa de erro:** A porcentagem do total de solicitações em que o Braze emitiu uma resposta de erro `4XX` ou `5XX`.
+| Métrico         | Descrição |
+|----------------|-------------|
+| Total de solicitações | O número total de solicitações enviadas ao Braze para o seu espaço de trabalho atual, considerando os filtros e controles aplicados ao dashboard. |
+| Taxa de sucesso   | A porcentagem do total de solicitações em que o Braze emitiu uma resposta de sucesso `2XX`. |
+| Taxa de erros     | A porcentagem do total de solicitações em que o Braze emitiu uma resposta de erro `4XX` ou `5XX`. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-## Controles do dashboard
+## Usando o dashboard
 
 ![Filtros a serem aplicados ao dashboard, incluindo: Chave de API, ponto de extremidade, códigos de resposta, dados de grupo e data.]({% image_buster /assets/img/api_usage_dashboard/filters.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
@@ -68,3 +75,8 @@ As opções **Últimas 3 horas** e **Últimas 6 horas** mostrarão o tráfego po
 O dashboard de uso da API inclui todas as solicitações da API REST que a Braze recebeu e para as quais retornou uma resposta `2XX`, `4XX` ou `5XX`. Isso inclui saídas de transformação de dados e sincronizações de ingestão de dados na nuvem. As etapas de tráfego do SDK e de atualização do usuário não estão incluídas nesse dashboard.
 
 Os dados mostrados no dashboard podem ter até uma pequena postergação na exibição do tráfego recente. Durante períodos de alta utilização, você pode atualizar o dashboard até 4 vezes por minuto. Talvez seja necessário aguardar alguns minutos antes de atualizar o dashboard novamente.
+
+## Artigos relacionados
+
+- [Alertas de uso da API]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts)
+- [Limites de taxa]({{site.baseurl}}/api/api_limits)

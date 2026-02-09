@@ -1,5 +1,5 @@
 ---
-nav_title: SharePlay
+nav_title: Shareplay
 article_title: SharePlay In-App Message Implementation Guide
 platform: iOS
 page_order: 1

@@ -1,10 +1,10 @@
 ---
 nav_title: Détails créatifs
 article_title: Détails créatifs
-page_order: 4
+page_order: 3.5
 layout: dev_guide
 guide_top_header: "Détails créatifs"
-guide_top_text: "Avant de faire preuve de créativité avec nos messages in-app, vous devez connaître certaines directives. Tous les modèles de messages in-app sont conçus pour afficher des longueurs de texte et des tailles d’images variables sur des appareils modernes. Pour que votre message s'affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et de toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant de les lancer."
+guide_top_text: "Avant de faire preuve de créativité avec nos messages in-app, vous devez connaître certaines directives. Tous les modèles de messages in-app sont conçus pour afficher des longueurs de texte et des tailles d’images variables sur des appareils modernes. Pour que votre message s'affiche correctement sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et de toujours <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>tester vos messages</a> avant de les lancer."
 description: "Ce hub d’accueil couvre les exigences de conception et de contenu pour les trois types de messages in-app, à savoir modal, slideup et plein écran."
 
 channel:
@@ -46,11 +46,11 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 - Nous vous recommandons d'héberger les images dans la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) afin de permettre au SDK de Braze de télécharger des ressources à partir de notre réseau de diffusion contenu pour l'affichage des messages hors ligne.
 - Pour les messages en plein écran, suivez nos lignes directrices pour la [zone de sécurité de l'image.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone)
 
-{% alert tip %} Créez des ressources en toute confiance ! Nos modèles d'images de messages in-app et nos superpositions de zones de sécurité sont conçus pour s'adapter aux appareils de toutes tailles. [Télécharger le ZIP de modèles de conception]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Créez des ressources en toute confiance ! Nos modèles d'images de messages in-app et nos superpositions de zones de sécurité sont conçus pour s'adapter aux appareils de toutes tailles. [Téléchargez les modèles de conception ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Plein écran %}
+{% tabs %}{% tab Fullscreen %}
 
-![Message in-app plein écran sur un écran d’application. Le message plein écran comprend une grande image, un en-tête, le corps du message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Message in-app plein écran sur un écran d’application. Le message en plein écran comprend une grande image, un en-tête, le corps du message et deux boutons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | --- |
@@ -62,9 +62,9 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 
 
 {% endtab %}
-{% tab Fenêtre modale %}
+{% tab Modal %}
 
-![Message in-app modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. Le message modal comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Message in-app modal apparaissant au centre d’une application et d’un site Web comme boîte de dialogue. La fenêtre modale comprend une image, un en-tête, un corps de message et deux boutons.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | Disposition | Taille de la ressource | Remarques |
 |--- | --- | ------ |
@@ -75,7 +75,7 @@ En général, Braze recommande d’utiliser des images tenant dans un écran 16:
 [Détails supplémentaires pour les modaux]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
 {% endtab %}
-{% tab Contextuel %}
+{% tab Slideup %}
 
 ![Message in-app slideup apparaissant en bas de l’écran de l’application. Le contextuel comprend une image d'icône et un bref message.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 

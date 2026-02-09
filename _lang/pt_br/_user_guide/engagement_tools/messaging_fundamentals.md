@@ -1,5 +1,5 @@
 ---
-nav_title: Fundamentos de mensagens (Messaging Fundamentals)
+nav_title: Fundamentos do envio de mensagens
 article_title: Fundamentos de mensagens (Messaging Fundamentals)
 layout: dev_guide
 page_order: 0
@@ -30,6 +30,9 @@ guide_featured_list:
   - name: Tipos de entrega
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Blocos do Editor
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: Localização
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
@@ -57,10 +60,16 @@ guide_menu_list:
   - name: Arquivamento de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Cópia entre espaços de trabalho
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Duplicação de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: Status de envio de mensagens
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: Saiba antes de enviar
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---

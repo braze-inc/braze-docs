@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Vinculación en profundidad
+nav_title: Vínculos profundos
 article_title: Vinculación en profundidad de mensajes dentro de la aplicación para el SDK de Braze
 channel:
   - push notifications
@@ -16,6 +16,6 @@ channel:
 {% endsdktab %}
 
 {% sdktab swift %}
-guide/swift/deep_linking.md%} developer_
+{% multi_lang_include developer_guide/swift/deep_linking.md%}
 {% endsdktab %}
 {% endsdktabs %}

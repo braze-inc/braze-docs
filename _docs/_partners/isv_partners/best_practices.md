@@ -92,7 +92,7 @@ Use the email address as the identifier in the user track endpoint.
 }
 ```
 {% alert important %}
-This functionality is currently in early access.
+This functionality is in early access.
 {% endalert %}
 
 ## Syncing data to user profiles
@@ -105,12 +105,12 @@ This functionality is currently in early access.
 - Similar to the user track endpoint, data can be synced to user profiles through Cloud Data Ingestion. When using this tool, attributes, events, and purchases are logged to profiles by setting up and connecting the data warehouse table or view you would like to sync to the desired Braze workspace.
 
 [Data points]({{site.baseurl}}/user_guide/data/data_points/)
-- Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
+- Braze has a data point model where data points are logged per “write” to the user profile regardless of whether the value has changed. For this reason, we recommend that only those attributes that have changed are sent to Braze. 
 
 ## Sending audiences of users to Braze
 
 [Cohort import sync partner documentation]({{site.baseurl}}/partners/isv_partners/cohort_import/)<br>
-- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This can make finding and targeting a particular segment of users easier and more simple for customers.
+- Audiences of users can be synced to Braze as a cohort using the Braze Cohort Import API endpoints. Rather than these audiences being stored on the user profile as user attributes, customers can build and target this cohort through a Partner branded filter within our Segmentation tool. This enables you to more efficiently find and target a particular segment of users.
 - Cohort Import endpoints are not public and are specific to each Partner. For this reason, syncs to the cohort endpoints will not count toward a customer’s workspace rate limits. 
 
 [User track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/)<br>
@@ -118,7 +118,7 @@ This functionality is currently in early access.
 - When using this endpoint, ensure that you are including the `partner` key as shown in our [Partner documentation]({{site.baseurl}}/partners/isv_partners/api_partner).
 
 [Data points]({{site.baseurl}}/user_guide/data/data_points/)<br>
-- Braze has a data point consumption model where data points are incurred per “write” to the user profile regardless of if the value has changed.
+- Braze has a data point model where data points are logged per “write” to the user profile regardless of if the value has changed.
 - Data points are incurred by both cohort import and the user track endpoints.
 
 ## Engagement analytics streaming to partner
@@ -176,7 +176,7 @@ Connected Contents' versatility makes this a feature used by many of our custome
 - Localization and translation
 
 Things to be aware of:
-- Braze does not charge for API calls and will not count toward your data point allotment.
+- Braze does not charge for API calls and will not count toward your data point usage.
 - There is a limit of 1 MB for Connected Content responses.
 - Connected Content calls will happen when the message is sent, except for in-app messages, which will make this call when the message is viewed.
 - Connected Content calls do not follow redirects.Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.

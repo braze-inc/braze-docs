@@ -1,6 +1,6 @@
 ---
 page_order: 0.1
-nav_title: Getting Started
+nav_title: Getting started
 article_title: Getting Started with Braze
 layout: dev_guide
 search_rank: 4

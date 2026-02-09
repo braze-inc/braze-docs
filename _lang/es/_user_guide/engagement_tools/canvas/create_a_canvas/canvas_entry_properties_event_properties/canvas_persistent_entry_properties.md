@@ -1,5 +1,5 @@
 ---
-nav_title: Propiedades de entrada persistente
+nav_title: Propiedades de entrada persistentes
 article_title: Propiedades de entrada persistente
 alias: "/persistent_entry/"
 page_type: reference
@@ -10,9 +10,11 @@ page_order: 5
 
 # Propiedades de entrada persistentes
 
-> Cuando un lienzo se activa mediante un evento personalizado, una compra o una llamada a la API, puede utilizar los metadatos de la llamada a la API, el evento personalizado o el evento de compra para la personalización en cada paso del flujo de trabajo del lienzo. 
+> Cuando un lienzo se activa mediante un evento personalizado, una compra o una llamada a la API, puede utilizar los metadatos de la llamada a la API, el evento personalizado o el evento de compra para la personalización en cada paso del flujo de trabajo del lienzo. Puedes utilizar estas propiedades para enviar mensajes más seleccionados.
 
-Antes de esta función, las propiedades de entrada sólo podían utilizarse en el primer paso de Canvas. La posibilidad de utilizar propiedades de entrada a lo largo de un recorrido de Canvas permite a los clientes enviar mensajes más curados y crear una experiencia de usuario final muy refinada.
+{% alert important %}
+Las propiedades de entrada persistentes son un artefacto del editor original de Canvas, por lo que hay referencias obsoletas a términos que permanecen como referencia histórica. Para el editor de Canvas actualizado, consulta [Propiedades de la entrada y Propiedades del evento en Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties).
+{% endalert %}
 
 ## Uso de las propiedades de entrada
 
@@ -77,17 +79,15 @@ url -X POST \
     }' \
 ```
  
-En esta solicitud, el valor global de "alergias alimentarias" es "ninguna". Para Cliente_123, el valor es "lácteos". Los mensajes de este Canvas que contengan el fragmento de Liquid {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} tendrán como plantilla "dairy" para Customer_123 y "none" para todos los demás. 
+En esta solicitud, el valor global de "alergias alimentarias" es "ninguna". Para Customer_123, el valor es "lácteos". Los mensajes de este Canvas que contengan el fragmento de código Liquid {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} tendrán una plantilla con "lácteos" para Customer_123 y "ninguno" para todos los demás. 
 
-## Caso de uso
+## Casos de uso
 
 Si tienes un Canvas que se desencadena cuando un usuario navega por un artículo en tu sitio de comercio electrónico pero no lo añade a su cesta, el primer paso del Canvas podría ser una notificación push preguntándole si está interesado en comprar el artículo. Puede hacer referencia al nombre del producto utilizando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}
 
-![][1]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP1.png %}){: style="border:0;margin-left:15px;"}
 
 El segundo paso puede enviar otra notificación push para pedir al usuario que realice el pago si ha añadido el artículo a su cesta pero aún no lo ha comprado. Puede seguir haciendo referencia a la propiedad de entrada `product_name` utilizando {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
 
-![][2]{: style="border:0;margin-left:15px;"}
+![]({% image_buster /assets/img/persistent_entry_properties/PEP12.png %}){: style="border:0;margin-left:15px;"}
 
-[1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
-[2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Criar Seleção de Catálogo"
+nav_title: "POST: Criar seleção de catálogo"
 article_title: "POST: Criar Seleção de Catálogo"
 search_tag: Endpoint
 page_order: 2
@@ -23,7 +23,7 @@ Para usar esse endpoint, você precisará de uma [chave de API]({{site.baseurl}}
 
 ## Limite de taxa
 
-{% multi_lang_include rate_limits.md endpoint='seleções de catálogo assíncronas' %}
+{% multi_lang_include rate_limits.md endpoint='asynchronous catalog selections' %}
 
 ## Parâmetros da jornada
 

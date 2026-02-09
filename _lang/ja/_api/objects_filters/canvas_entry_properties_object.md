@@ -1,5 +1,5 @@
 ---
-nav_title: "キャンバス・エントリー・プロパティ・オブジェクト"
+nav_title: "キャンバスエントリのプロパティオブジェクト"
 article_title: API キャンバスエントリのプロパティオブジェクト
 page_order: 2
 page_type: reference
