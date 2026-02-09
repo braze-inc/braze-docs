@@ -34,6 +34,25 @@ Common failures may include:
 {% endtab %}
 {% tab iOS %}
 
+### Error sending push because the payload was invalid
+
+This message can appear in the user profile **Engagement** tab under **Contact Settings** > **Push Changelog** when Apple Push Notification service (APNs) rejects the push request because of an invalid payload.
+
+In Braze, this dashboard message can map to one of the following APNs error reasons:
+
+- `PayloadEmpty`: The payload was missing required content for the type of push being sent.
+- `PayloadTooLarge`: The payload exceeded APNs' maximum payload size.
+
+Common causes include:
+
+- Custom keys (and their values) making the payload too large (this can include unexpectedly large Liquid-rendered values).
+- An empty or missing alert or body where required (or an otherwise malformed `aps` payload).
+
+Next steps:
+
+- Reduce payload size by trimming custom keys and shortening large dynamic values.
+- If you send through the API, validate the final JSON payload (including size) before sending.
+
 ### Push bounced: BadToken
 
 The `BadToken` error may occur for several reasons:

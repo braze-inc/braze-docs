@@ -1,11 +1,11 @@
 ---
-nav_title: Afficher les rapports
-article_title: Visualiser les rapports du studio de prise de décision
+nav_title: Rapports et Insights
+article_title: Rapports et Insights
 page_order: 3
 description: "Découvrez comment afficher les rapports BrazeAI Decisioning Studio™ dans Braze afin de comprendre l'impact des décisions basées sur l'IA sur vos campagnes."
 ---
 
-# Visualiser les rapports du studio de prise de décision
+# Rapports et Insights
 
 > Découvrez comment afficher les rapports BrazeAI Decisioning Studio™ dans Braze afin de comprendre l'impact des décisions basées sur l'IA sur vos campagnes. Des indicateurs de performances à la santé des données et aux modifications du système, ces rapports vous aident à comprendre les résultats, à résoudre les problèmes et à prendre des décisions avisées en toute confiance.
 

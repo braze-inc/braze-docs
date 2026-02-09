@@ -73,3 +73,19 @@ If you're participating in the Canvas Context early access, Canvas entry propert
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == 'dynamic image URL' %}
+
+{% alert important %}
+You can pull in dynamic images by using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in the image URL field, but your image URL must begin with `https://`. Using `http://` may cause issues with your message.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'network dependency' %}
+
+{% alert important %}
+Content Cards, in-app messages, Banners, and feature flags rely on device connectivity to sync with Braze servers. Because network conditions can vary, there is a chance content or updates may not sync, display, or be cleared immediately (for example, if a user is offline). We recommend avoiding these channels for critical, time-sensitive updates.
+{% endalert %}
+
+{% endif %}

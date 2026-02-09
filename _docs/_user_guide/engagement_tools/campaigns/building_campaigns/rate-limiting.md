@@ -162,6 +162,14 @@ Instead of trying to make up for the delay and send the remaining 6,000 messages
 
 Connected Content requests are not rate-limited independently and will follow the webhook rate limit. This means if there is one Connected Content call to a unique endpoint per webhook, you would expect 5,000 webhooks and also 5,000 Connected Content calls per minute. Note that caching may affect this and reduce the number of Connected Content calls. Additionally, retries may increase the Connected Content calls, so we recommend checking that the Connected Content endpoint can handle some fluctuation here.
 
+{% alert note %}
+**Rate limits are speed limits and do not define an exact send speed.** Generally, messages are spread out evenly within any given minute, and in the vast majority of cases they are sent at or very close to the configured limit. This is not always the case—for example, when messages are very large (such as emails with many Content Blocks, Connected Content tags, or Catalog item tags), or when there are many Liquid aborts (aborted messages still consume a slot and can reduce effective send rates).
+
+In practice, the sustained send rate (completed messages per minute) may be lower than the configured rate limit due to retries, network variability, downstream endpoint latency, and per-minute smoothing.
+
+If you consistently see significantly lower throughput than expected, check Connected Content response times, error rates (such as `429`), and retry behavior.
+{% endalert %}
+
 ## About frequency capping
 
 As your user base continues to grow and your messaging scales to include lifecycle, triggered, transactional, and conversion campaigns, it's important to prevent your notifications from appearing "spammy" or disruptive. By providing greater control over your users' experience, frequency capping enables you to create the campaigns you desire without overwhelming your audience.

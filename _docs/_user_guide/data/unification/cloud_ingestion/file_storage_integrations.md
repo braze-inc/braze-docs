@@ -53,8 +53,9 @@ The default settings are:
 - Block all public access
 - Disable bucket versioning
 - SSE-S3 encryption
+  - SSE-S3 is the only supported server-side encryption type. Amazon KMS encryption is not supported.
 
-Take note of the region you’ve created the bucket in, as you will create an SQS queue in the same region in the next step.
+Take note of the region you've created the bucket in, as you will create an SQS queue in the same region in the next step.
 
 ### Step 2: Create SQS queue
 
@@ -204,9 +205,9 @@ Give the role a name and a description, and select **Create Role**.
 <br><br> ![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
 {: start="5"}
-5. Finally, test the connection and save the sync. 
+5. Finally, select **Test connection** to confirm Braze can access your bucket and list the files available to ingest (not the data inside those files). Then, save the sync. 
 
-<br><br>![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+<br><br>![An option to test the connection and list available files.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Required file formats
 
@@ -368,7 +369,7 @@ When the sync runs, rows with `deleted: true` cause the matching catalog item to
 
 CDI will only process files that are added after the sync is created. In this process, Braze looks for new files to be added, which triggers a new message to SQS. This will kick off a new sync to process the new file.
 
-Existing files can be used to validate the data structure in the test connection, but they will not be synced to Braze. Any existing files that should be synced must be reuploaded to S3 to be processed by CDI.
+You can use existing files to validate that Braze can access your bucket and detect files to ingest, but they are not synced to Braze. For the CDI to process them, you must re-upload to S3 any existing files that you want synced. 
 
 ### Handling unexpected file errors
 

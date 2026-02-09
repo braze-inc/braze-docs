@@ -360,6 +360,41 @@ When using the automatic push integration, `subscribeToUpdates(_:)` is the only 
 Create your push notification subscription in `application(_:didFinishLaunchingWithOptions:)` to ensure your subscription is triggered after an end-user taps a notification while your app is in a terminated state.
 {% endalert %}
 
+## Handling foreground notifications
+
+By default, when a push notification arrives while your app is in the foreground, iOS does not display it automatically. To display push notifications in the foreground and track them with Braze analytics, call the `handleForegroundNotification(notification:)` method inside your `UNUserNotificationCenterDelegate.userNotificationCenter(_:willPresent:withCompletionHandler:)` implementation.
+
+### How it works
+
+When you call `handleForegroundNotification(notification:)`, Braze processes the notification payload to log analytics and handle any deep links or button actions. The actual display behavior is controlled by the `UNNotificationPresentationOptions` you pass to the completion handler.
+
+```swift
+import BrazeKit
+import UserNotifications
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(
+    _ center: UNUserNotificationCenter,
+    willPresent notification: UNNotification,
+    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
+  ) {
+    // Let Braze process the notification payload
+    if let braze = AppDelegate.braze {
+      braze.notifications.handleForegroundNotification(notification: notification)
+    }
+    
+    // Control how the notification appears in the foreground
+    if #available(iOS 14.0, *) {
+      completionHandler([.banner, .list, .sound])
+    } else {
+      completionHandler([.alert, .sound])
+    }
+  }
+}
+```
+
+For a complete example, see the [push notifications manual integration sample](https://github.com/braze-inc/braze-swift-sdk/blob/e31907eaa0dbd151dc2e6826de66cc494242ba60/Examples/Swift/Sources/PushNotifications-Manual/AppDelegate.swift#L1-L120) in the Braze Swift SDK repository.
+
 ## Push primers {#push-primers}
 
 Push primer campaigns encourage your users to enable push notifications on their device for your app. This can be done without SDK customization using our [no code push primer]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).

@@ -1,11 +1,11 @@
 ---
-nav_title: Visualização de relatórios
-article_title: Visualizar relatórios do estúdio de tomada de decisões
+nav_title: Relatórios e Insights
+article_title: Relatórios e Insights
 page_order: 3
 description: "Saiba como visualizar os relatórios do BrazeAI Decisioning Studio™ na Braze, para que você possa entender como as decisões baseadas em IA afetam suas campanhas."
 ---
 
-# Visualizar relatórios do estúdio de tomada de decisões
+# Relatórios e Insights
 
 > Saiba como visualizar os relatórios do BrazeAI Decisioning Studio™ na Braze, para que você possa entender como as decisões baseadas em IA afetam suas campanhas. Desde as métricas de desempenho até a integridade dos dados e as alterações no sistema, esses relatórios ajudam você a entender os resultados, solucionar problemas e tomar decisões informadas com confiança.
 

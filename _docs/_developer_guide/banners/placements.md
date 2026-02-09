@@ -508,6 +508,32 @@ Test Banners are like any other banners, except they're removed at the next app 
 
 Braze automatically logs impressions for Banners that are in view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
 
+## Logging clicks
+
+The method used to log Banner clicks depends on how your Banner is rendered and where your click handler is located.
+
+### Standard Banner content (automatic)
+
+If you're using default, out-of-the-box SDK methods to insert Banners, and your Banner uses standard editor components (images, buttons, text), clicks are tracked automatically. The SDK attaches click listeners to these elements, and no additional code is needed.
+
+### Custom Code Blocks
+
+If your Banner uses the **Custom Code** editor block in the Braze dashboard, you must use `brazeBridge.logClick()` to log clicks from within that custom HTML. This applies even when using SDK methods to render the Banner, because the SDK cannot automatically attach listeners to elements inside your custom code.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+This is similar to the [JavaScript bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) used for HTML in-app messages. The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
+
+### Custom UI implementations (headless)
+
+If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks (and impressions) from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
+
+Use the `logClick()` method on the Banner object.
+
 ## Dimensions and sizing
 
 Here's what you need to know about Banner dimensions and sizing:
