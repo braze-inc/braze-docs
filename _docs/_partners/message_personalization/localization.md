@@ -12,15 +12,15 @@ partner_top_header: "Localization Partners"
 
 valid_partner_list:
 - name: Crowdin
-  link: /docs/partners/message_personalization/localization/crowdin/
+  url: /docs/partners/message_personalization/localization/crowdin/
 - name: LILT
-  link: /docs/partners/message_personalization/localization/lilt/
+  url: /docs/partners/message_personalization/localization/lilt/
 - name: Lokalise
-  link: /docs/partners/message_personalization/localization/lokalise/
+  url: /docs/partners/message_personalization/localization/lokalise/
 - name: Phrase
-  link: /docs/partners/message_personalization/localization/phrase/
+  url: /docs/partners/message_personalization/localization/phrase/
 - name: Smartling
-  link: /docs/partners/message_personalization/localization/smartling/
+  url: /docs/partners/message_personalization/localization/smartling/
 - name: Transifex
-  link: /docs/partners/message_personalization/localization/transifex/
+  url: /docs/partners/message_personalization/localization/transifex/
 ---
