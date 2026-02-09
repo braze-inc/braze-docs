@@ -41,9 +41,9 @@ Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in 
 
 1. In Okta, go to **Applications** > **Applications**, then select **Create App Integration**. Select **SAML 2.0** as the sign-in method.
 2. Fill in the following details to create a custom app:
-- Braze app logo
-- Single sign-on URL
-- Audience URL (SP entity ID)
+   - Braze app logo
+   - Single sign-on URL
+   - Audience URL (SP entity ID)
 3. Select **Finish**.
 4. Select the **General** tab. 
 5. In the **App Settings** section, select **Edit**.
