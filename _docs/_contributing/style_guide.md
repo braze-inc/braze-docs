@@ -6,7 +6,7 @@ page_order: 7
 noindex: true
 ---
 
-# Braze docs style guide
+# Braze Docs style guide
 
 Refer to the following style guides when contributing to Braze Docs.
 
