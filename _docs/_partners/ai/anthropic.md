@@ -22,7 +22,6 @@ The Braze and Anthropic integration lets you connect your Anthropic API key to B
 |---|---|
 | Anthropic account with API key | An Anthropic account with an API key. For help, contact your admin or [Anthropic support](https://support.anthropic.com/). |
 | Braze instance | You can find your Braze instance on the [API overview page]({{site.baseurl}}/api/basics/#endpoints) or from your Braze onboarding manager. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
