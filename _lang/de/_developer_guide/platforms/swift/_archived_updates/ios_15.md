@@ -1,5 +1,5 @@
 ---
-nav_title: Anleitung zum Upgrade für iOS 15
+nav_title: iOS 15 upgraden Anleitung
 article_title: Upgrade-Leitfaden für das iOS 15 SDK
 page_order: 7
 platform: iOS

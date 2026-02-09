@@ -19,7 +19,7 @@ Für den Zugriff auf den Landing Page Builder benötigen Sie [bestimmte Berechti
 
 Gehen Sie zu **Messaging** > **Landing Pages** und wählen Sie dann **Landing Page erstellen**. Sie können auch den Namen einer bestehenden Landing Page auswählen, um sie zu duplizieren oder zu ändern.
 
-![Der Bereich Landing Pages im Braze-Dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+![Der Bereich Landing Pages auf dem Braze-Dashboard.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### Schritt 2: Geben Sie die Seitendetails ein
 
@@ -47,11 +47,11 @@ Wir empfehlen Ihnen, diese bewährten Verfahren zu befolgen:
 
 Falls Sie das noch nicht getan haben, wählen Sie **Als Entwurf speichern**. Um mit der Anpassung Ihrer Seite zu beginnen, wählen Sie **Landing Page bearbeiten**. Der Drag-and-Drop-Editor wird mit einem Standard Template vorgeladen, das Sie an Ihren Anwendungsfall anpassen können.
 
-![Ein Beispiel für eine Landing Page, die per Drag-and-Drop-Editor erstellt wird.]({% image_buster /assets/img/landing_pages/template.png %})
+![Ein Beispiel für eine Landing Page, die im Drag-and-Drop-Editor erstellt wird.]({% image_buster /assets/img/landing_pages/template.png %})
 
 Der Editor verwendet zwei Arten von Komponenten für die Gestaltung von Landing Pages: Basisblöcke und Formularblöcke. Alle Blöcke müssen in einer Reihe platziert werden.
 
-![Der Abschnitt 'Erstellen' mit 'Zeilen' und 'Formularblöcken'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+![Der Bereich 'Erstellen' mit 'Zeilen' und 'Formularblöcken'.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
 {% tabs %}
 {% tab Basic blocks %}
@@ -79,7 +79,7 @@ Sie können diese Blöcke verwenden, um Inhalte hinzuzufügen und das Layout Ihr
 
 Mit diesen Blöcken können Sie ein Formular erstellen, das von Nutzern:innen übermittelte Daten mit ihrem Profil in Braze verknüpft. Denken Sie daran, dass Sie bei Verwendung von Formularblöcken auch eine zusätzliche Landing Page für den Bestätigungsstatus erstellen müssen.
 
-![Ein Formularblock, der eine neue Kund:in registriert und einen Rabattcode an ihre E-Mail sendet.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+![Ein Formularblock, der einen neuen Kunden registriert und einen Rabattcode an dessen E-Mail sendet.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | Block Typ     | Beschreibung |
 |---------------|-------------|
@@ -104,7 +104,7 @@ Auf dem Tab **Seitencontainer** können Sie Stile festlegen, die auf alle releva
 
 Wir empfehlen, die Stile auf der Ebene der Seitencontainer einzurichten, bevor Sie die Stile auf der Blockebene anpassen. Sie können auch ein Hintergrundbild für die gesamte Seite hinzufügen.
 
-![Der Abschnitt 'Seitencontainer' mit Optionen zum Anpassen von Hintergrundbildern, Farben, Rahmendetails und der Gestaltung des Inhalts.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+![Der Bereich 'Seitencontainer' mit Optionen zum Anpassen von Hintergrundbildern, Farben, Rahmendetails und dem Styling des Inhalts.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
 
 #### Responsiv auf Nutzer:innen-Geräte
 
@@ -138,11 +138,15 @@ Wenn Sie keine Bestätigungsseite einfügen, wissen die Nutzer:innen möglicherw
 Wenn Ihre Bestätigungsseite in einem neuen Tab geöffnet wird, kann ein Nutzer:innen, der zur ursprünglichen Landing Page zurückkehrt und eine erneute Anmeldung mit aktualisierten Daten vornimmt, die vorherige Anmeldung überschreiben, was zu inkonsistenten Daten führt.
 {% endalert %}
 
+{% alert important %}
+Wenn Sie einen Button mit dem Enablement **Formular abschicken, wenn auf den Button geklickt wird** konfigurieren und das **Verhalten beim Klicken** verwenden, um eine Internet-URL in einem neuen Tab zu öffnen, kann der in iOS Safari integrierte Popup-Blocker die Navigation verhindern. Dies liegt daran, dass die Übermittlung eines Formulars und die anschließende Öffnung eines neuen Tabs als Popup behandelt wird.<br><br>Um dieses Problem zu vermeiden, konfigurieren Sie Buttons mit Formularübermittlung so, dass die resultierende URL in demselben Tab geöffnet wird (nicht in einem neuen Tab). Buttons ohne Formularübermittlung können URLs ohne Probleme in neuen Tabs öffnen.
+{% endalert %}
+
 ### Schritt 5: Vorschau auf die Seite
 
 Auf der Registerkarte **Vorschau** des Editors können Sie eine Vorschau Ihrer Landing Page anzeigen. Nachdem Sie Ihre Landing Page als Entwurf gespeichert haben, können Sie die URL aufrufen, indem Sie zu **Landing Pages** gehen und **URL kopieren** neben Ihrer Landing Page wählen. Sie können die URL auch mit anderen Personen teilen.
 
-![Eine Landing Page, bei der das Menü geöffnet ist, um die Option "URL kopieren" anzuzeigen.]({% image_buster /assets/img/landing_pages/copy-url.png %})
+![Eine Landing Page mit geöffnetem Menü, das die Option "URL kopieren" anzeigt.]({% image_buster /assets/img/landing_pages/copy-url.png %})
 
 Vergewissern Sie sich, bevor Sie veröffentlichen:
 

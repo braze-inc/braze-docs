@@ -1,5 +1,5 @@
 ---
-nav_title: "POST : Mettre à jour les campagnes déclenchées par l'API planifiées"
+nav_title: "POST : Mettre à jour les campagnes planifiées déclenchées par API"
 article_title: "POST : Mettre à jour les campagnes déclenchées par l'API planifiées"
 search_tag: Endpoint
 page_order: 4
@@ -15,13 +15,13 @@ description: "Cet article présente en détail l’endpoint Braze Mettre à jour
 
 > Utilisez cet endpoint pour mettre à jour des campagnes planifiées déclenchées par API et créées dans le tableau de bord, ce qui vous permet de décider quelle action doit déclencher le message à envoyer.
 
-Vous pouvez indiquer les `trigger_properties` qui seront modélisées dans le message lui-même.
+Vous pouvez intégrer `trigger_properties` que Braze modélise dans le message lui-même.
 
 Notez que pour envoyer des messages avec ce point de terminaison, vous devez avoir un ID de campagne, créé lorsque vous construisez une [campagne déclenchée par API]({{site.baseurl}}/api/api_campaigns/).
 
-Toute planification remplacera complètement celle que vous avez fournie dans la demande de création de planification ou dans les demandes de mise à jour de planification précédentes. Par exemple, si vous avez initialement fixé la planification à `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` et que vous l'avez ensuite mise à jour à `"schedule" : {"time" : "2015-02-20T14:14:47"}`, le message sera désormais envoyé à l'heure spécifiée en UTC, et non à l'heure locale de l'utilisateur.
+Toute planification écrase complètement celle que vous avez fournie dans la demande de création de planification ou dans les demandes de mise à jour de planification précédentes. Par exemple, si vous avez initialement défini la planification sur `"schedule" : {"time" : "2015-02-20T13:14:47", "in_local_time" : true}` et que vous la mettez à jour ultérieurement sur `"schedule" : {"time" : "2015-02-20T14:14:47"}`, Braze envoie le message à l'heure spécifiée en UTC, et non à l'heure locale de l'utilisateur.
 
-Les déclencheurs planifiés qui sont mis à jour très près de l'heure à laquelle ils étaient censés être envoyés, ou pendant cette heure, seront mis à jour au mieux afin que les changements de dernière seconde puissent être appliqués à tous, à certains ou à aucun de vos utilisateurs ciblés. Les mises à jour ne sont pas appliquées si la planification d'origine utilisait l'heure locale et que l'heure d'origine est déjà passée dans n'importe quel fuseau horaire.
+Les déclencheurs planifiés qui sont mis à jour à proximité ou pendant l'heure à laquelle ils étaient censés être envoyés sont mis à jour avec les meilleurs efforts afin que Braze puisse appliquer les changements de dernière seconde à tous, à certains ou à aucun de vos utilisateurs ciblés. Les mises à jour ne sont pas appliquées si la planification d'origine utilisait l'heure locale et que l'heure d'origine est déjà passée dans n'importe quel fuseau horaire.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 

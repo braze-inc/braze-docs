@@ -30,6 +30,8 @@ Führen Sie diese Schritte aus, um Ihre AWS Secret Key-Authentifizierungsmethode
 3. Sie müssen KMS in den folgenden AWS Regionen einrichten:
     - **Braze US-Cluster:** `us-east-1`
     - **Braze EU-Cluster:** `eu-central-1`
+    - **Braze AU cluster:** `ap-southeast-2`
+    - **Braze ID cluster:** `ap-southeast-3`
 4. Erstellen Sie im AWS Key Management Service zwei Schlüssel und vergewissern Sie sich, dass der IAM Nutzer:in den Schlüsselverwendungsberechtigungen hinzugefügt ist:
     - **[Verschlüsseln/Entschlüsseln](https://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html#create-symmetric-cmk):** Wählen Sie den Typ des **symmetrischen** Schlüssels und die Verwendung des Schlüssels **zum Ver- und Entschlüsseln** aus.
     - **[Hash](https://docs.aws.amazon.com/kms/latest/developerguide/hmac-create-key.html):** Wählen Sie den Typ **Symmetrischer** Schlüssel und **Generieren und überprüfen Sie die** Verwendung des **MAC-Schlüssels**. Die Schlüsselspezifikation sollte lauten **HMAC_256**. Notieren Sie sich nach der Erstellung des Schlüssels irgendwo die HMAC-Schlüssel-ID, da Sie diese in Braze eingeben müssen.

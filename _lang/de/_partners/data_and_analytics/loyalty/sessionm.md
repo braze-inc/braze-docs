@@ -22,9 +22,9 @@ search_tag: Partner
 | SessionM | Ein SessionM Core REST Endpunkt | Ihr Endpunkt hängt von der SessionM URL Ihrer Instanz ab. Diese kann im Dashboard von SessionM unter **Digitale Eigenschaften** erstellt werden. |
 | SessionM | Ein SessionM Core REST API-Schlüssel | Der SessionM API-Schlüssel, der mit Ihrer Instanz und der Braze Integration verbunden ist. Dieser Schlüssel kann für alle Core-basierten Aufrufe einschließlich Tags verwendet werden. Diese kann im Dashboard von SessionM unter **Digitale Eigenschaften** erstellt werden. |
 | SessionM | Ein SessionM Core REST API Geheimnis | Das SessionM API-Geheimnis, das mit Ihrer Instanz und der Braze-Integration verbunden ist. Dieser Schlüssel kann für alle Core-basierten Aufrufe einschließlich Tags verwendet werden. Diese kann im Dashboard von SessionM unter **Digitale Eigenschaften** erstellt werden. |
-| SessionM | Ein SessionM Connect REST Endpunkt | Ihr Endpunkt hängt von der SessionM URL Ihrer Instanz ab. Bitte wenden Sie sich an Ihren technischen Account Manager oder Ihr Zustellungsteam von SessionM. |
-| SessionM | A SessionM Connect REST Autorisierungs-String | Der SessionM Connect Basic Authorization String, der mit Ihrer Instanz verknüpft ist. Dieser String zur Authentifizierung kann für alle connect-basierten Aufrufe verwendet werden, einschließlich get_user_offers. Bitte wenden Sie sich an Ihren technischen Account Manager oder Ihr Zustellungsteam von SessionM. |
-| SessionM | A SessionM Connect REST Einzelhändler ID | Eine eindeutige Kennung für den spezifischen Kunden, der mit Ihrer Instanz verbunden ist. Wenden Sie sich an Ihren technischen Account Manager oder Ihr Zustellungsteam von SessionM. |
+| SessionM | Ein SessionM Connect REST Endpunkt | Ihr Endpunkt hängt von der SessionM URL Ihrer Instanz ab. Wenden Sie sich an Ihren technischen Account Manager oder Ihr Team für die Zustellung von SessionM. |
+| SessionM | A SessionM Connect REST Autorisierungs-String | Der SessionM Connect Basic Authorization String, der mit Ihrer Instanz verknüpft ist. Dieser String kann für alle verbindungsbasierten Anrufe verwendet werden, einschließlich get_user_offers.. Bitte wenden Sie sich an Ihren technischen Account Manager von SessionM oder an Ihr Zustellungsteam, um ihn bereitzustellen. |
+| SessionM | A SessionM Connect REST Einzelhändler ID | Eine eindeutige Kennung für den spezifischen Kunden, der mit Ihrer Instanz verbunden ist. Wenden Sie sich an Ihren technischen Account Manager oder Ihr Team für die Zustellung von SessionM. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert note %}
@@ -47,7 +47,7 @@ Die folgenden Anwendungsfälle zeigen einige Möglichkeiten, wie Sie die Integra
 
 Erstellen Sie in Braze ein Segment von Nutzer:innen für das Targeting mit SessionM-Aktionen und Angeboten. 
 
-![Segment Builder mit dem ausgewählten Filter "Angepasste Attribute".]({% image_buster /assets/img/sessionm/CreateSegment.png %})
+![Segment Builder mit dem Filter "Angepasste Attribute" ausgewählt.]({% image_buster /assets/img/sessionm/CreateSegment.png %})
 
 ### Schritt 2: Segmente von Braze in SessionM importieren
 
@@ -190,7 +190,7 @@ Nachdem eine Anfrage an den Endpunkt gestellt wurde, gibt SessionM die vollstän
 Mit der Liquid-Dot-Notation kann dies in die Nachricht eingefügt werden. Um die Nachricht mit dem Ergebnis `offer_id` zu personalisieren, könnten Sie beispielsweise die Rückgabe-Nutzlast nutzen, indem Sie {% raw %}`{{wallet.payload.available_points}`{% endraw %} verwenden, die `100` zurückgibt.
 
 {% alert note %}
-Dies ist eine individuelle API. Wenn Sie beabsichtigen, einen Stapel von mehr als 500 Nutzer:innen zu versenden, setzen Sie sich mit Ihrem SessionM Team in Verbindung, um zu erfahren, wie Sie Massendaten in die Integration einbeziehen können.
+Dies ist eine individuelle API. Wenn Sie beabsichtigen, einen Stapel von mehr als 500 Nutzer:innen zu versenden, erkundigen Sie sich bei Ihrem SessionM Team, wie Sie Massendaten in die Integration einbeziehen können.
 {% endalert %}
 
 ## Einrichten von getriggerten Nachrichten

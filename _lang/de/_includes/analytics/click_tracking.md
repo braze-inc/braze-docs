@@ -6,7 +6,7 @@ Um UTM-Parameter zu Ihrer URL hinzuzufügen, gehen Sie wie folgt vor:
 
 1. Beginnen Sie mit Ihrer Basis-URL. Dies ist die URL der Seite, die Sie verfolgen möchten (z. B. `https://www.example.com`).
 2. Fügen Sie ein Fragezeichen (?) nach Ihrer Basis-URL ein.
-3. Fügen Sie jeden UTM-Parameter durch ein kaufmännisches Und (&) getrennt hinzu.
+3. Fügen Sie jeden UTM-Parameter durch ein kaufmännisches Und getrennt hinzu (&).
 
 Ein Beispiel ist `https://www.example.com?utm_source=newsletter&utm_medium=sms`.
 

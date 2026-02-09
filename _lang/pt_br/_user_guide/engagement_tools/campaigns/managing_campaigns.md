@@ -1,6 +1,6 @@
 ---
-nav_title: Gerenciamento de campanhas
-article_title: Gerenciamento de campanhas
+nav_title: Gerenciar campanhas
+article_title: Gerenciar campanhas
 layout: dev_guide
 guide_top_header: "Gerenciamento de campanhas"
 guide_top_text: "Depois de lançar sua campanha, é hora de sentar e observar os dados. Se você precisar fazer alterações em sua campanha, configurar alertas ou arquivar sua campanha, consulte os artigos a seguir para obter ajuda."
@@ -8,7 +8,7 @@ page_order: 3
 
 tool: Campaigns
 page_type: landing
-description: "Essa página de destino aborda o gerenciamento de campanhas. Aqui, você pode encontrar artigos sobre aprovação de campanhas, duplicação, alertas, arquivamento, alteração de sua campanha após o lançamento e muito mais."
+description: "Esta landing page aborda o gerenciamento de campanhas. Aqui, você pode encontrar artigos sobre aprovação de campanhas, duplicação, alertas, arquivamento, alteração de sua campanha após o lançamento e muito mais."
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
@@ -24,10 +24,10 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: Fluxo de trabalho de aprovação
+  - name: Fluxo de aprovação
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
-  - name: Regras de mensagens para aprovação
+  - name: Regras de envio de mensagens para aprovação
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/messaging_rules/
     image: /assets/img/braze_icons/check-square.svg
   - name: Arquivamento de campanhas

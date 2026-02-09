@@ -26,13 +26,13 @@ Um Feature-Flags im Dashboard zu verwalten, müssen Sie entweder Administrator s
 
 Gehen Sie zu **Messaging** > **Funktionskennzeichen** und wählen Sie dann **Funktionskennzeichen erstellen**.
 
-![Eine Datentabelle, die ein bestehendes Feature-Flag zeigt und wie man ein neues erstellt.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
+![Eine Datentabelle, die ein bestehendes Feature-Flag anzeigt und zeigt, wie Sie ein neues erstellen können.]({% image_buster /assets/img/feature_flags/create_ff.png %}){: style="max-width:75%"}
 
 ### Schritt 2: Details angeben
 
 Geben Sie unter **Feature-Flag Details** einen Namen, eine ID und eine Beschreibung für Ihr Feature-Flag ein.
 
-![Ein Formular, das zeigt, dass Sie einem Feature-Flag einen Namen, eine ID, eine Beschreibung und Eigenschaften hinzufügen können.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+![Ein Formular, mit dem Sie einem Feature-Flag einen Namen, eine ID, eine Beschreibung und Eigenschaften hinzufügen können.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
 
 | Feld        | Beschreibung                                                                |
@@ -48,7 +48,7 @@ Geben Sie unter **Feature-Flag Details** einen Namen, eine ID und eine Beschreib
 Unter **Eigenschaften** können Sie optional angepasste Eigenschaften erstellen, auf die Ihre App über das Braze SDK zugreifen kann, wenn Ihr Feature aktiviert ist. Sie können jeder Variablen einen String-, booleschen, Bild-, Zeitstempel-, JSON- oder Zahlenwert zuweisen sowie einen Standardwert festlegen.
 
 {% tabs local %}
-{% tab Beispiel %}
+{% tab example %}
 Im folgenden Beispiel zeigt das Feature-Flag ein Banner für einen E-Commerce Shop an, in dem die angepassten Eigenschaften aufgeführt sind: 
 
 |Eigenschaftsname|Typ|Wert|
@@ -82,7 +82,7 @@ Legen Sie den Rollout-Traffic erst dann auf einen Wert über 0 % fest, wenn Sie 
 {% endalert %}
 
 {% alert important %}
-Wenn Sie eine Flagge mit nur einer Regel oder für eine singuläre Zielgruppe ausrollen möchten, fügen Sie Ihre erste Regel mit ausgewählten Segmentierungskriterien und Ausrollungsprozentsätzen hinzu. Bestätigen Sie abschließend, dass die Regel **Alle anderen** ausgeschaltet ist, und speichern Sie Ihre Markierung.
+Wenn Sie eine Flagge mit nur einer Regel oder für eine singuläre Zielgruppe ausrollen möchten, fügen Sie Ihre erste Regel mit ausgewählten Segmentierungskriterien und Ausrollungsprozentsätzen hinzu. Vergewissern Sie sich abschließend, dass die Regel **Alle anderen** ausgeschaltet ist, und speichern Sie Ihre Markierung.
 {% endalert %}
 
 ## Multi-Regel Feature-Flags Rollouts
@@ -93,7 +93,7 @@ Verwenden Sie Rollouts von Feature-Flags mit mehreren Regeln, um eine Abfolge vo
 
 Feature-Flag Regeln werden von oben nach unten ausgewertet, in der Reihenfolge, in der sie aufgelistet sind. Ein Nutzer:in qualifiziert sich für die erste Regel, die er erfüllt. Erfüllt ein Nutzer:innen keine der Regeln, wird seine Berechtigung durch die Standard-Regel "Alle anderen" bestimmt.
 
-### Nutzer:innen Qualifikation
+### Nutzer:in Qualifikation
 
 - Wenn ein Nutzer:innen die Kriterien der ersten Regel erfüllt, kommt er sofort für den Erhalt des Feature-Flags in Frage.
 - Wenn ein Nutzer:innen nicht für die erste Regel in Frage kommt, wird er anhand der zweiten Regel bewertet, und so weiter.
@@ -847,7 +847,7 @@ m.BrazeTask.ObserveField("BrazeFeatureFlags", "onFeatureFlagChanges")
 ```
 {% endtab %}
 
-{% tab React-Hook %}
+{% tab React Hook %}
 ```typescript
 import { useEffect, useState } from "react";
 import {
@@ -889,17 +889,17 @@ Auf dem Tab **Feature-Flags Berechtigung** können Sie die Liste der in Frage ko
 
 Um das Änderungsprotokoll eines Feature-Flags anzuzeigen, öffnen Sie ein Feature-Flag und wählen Sie **Änderungsprotokoll**.
 
-![Seite "Bearbeiten" eines Feature-Flags mit dem hervorgehobenen Button "Changelog"]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
+![Die Seite "Bearbeiten" eines Feature-Flags, wobei der Button "Changelog" hervorgehoben ist.]({% image_buster /assets/img/feature_flags/changelog/open_changelog.png %}){: style="max-width:60%;"}
 
 Hier können Sie nachsehen, wann eine Änderung stattgefunden hat, wer die Änderung vorgenommen hat, zu welcher Kategorie sie gehört und vieles mehr.
 
-![Changelog des ausgewählten Feature-Flags]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
+![Das Changelog des ausgewählten Feature-Flags.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
 ## Segmentieren mit Feature-Flags {#segmentation}
 
 Braze merkt sich automatisch, welche Benutzer derzeit für ein Feature-Flag aktiviert sind. Mit dem [Filter **Feature-Flag**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags) können Sie ein Segment oder ein gezieltes Messaging erstellen. Weitere Informationen zum Filtern nach Segmenten finden Sie unter [Erstellen eines Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![Der Bereich "Filter" mit dem in die Suchleiste des Filters eingegebenen Suchbegriff "Feature-Flag"]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![Der Bereich "Filter" mit der Eingabe von "Feature-Flag" in der Suchleiste des Filters.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 Um rekursive Segmente zu vermeiden, ist es nicht möglich, ein Segment zu erstellen, das auf andere Feature-Flags referenziert.

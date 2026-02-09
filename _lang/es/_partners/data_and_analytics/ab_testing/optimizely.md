@@ -14,7 +14,7 @@ search_tag: Partner
 
 La integración de Braze y Optimizely es una integración bidireccional que te permite:
 
-- Sincroniza tus segmentos y eventos de clientes Braze con la plataforma de datos Optimizely (ODP) cada noche para enriquecer los perfiles, informes y segmentación de clientes Optimizely.
+- Sincroniza tus segmentos y eventos de clientes Braze con la Plataforma de Datos Optimizely (ODP) cada noche para enriquecer los perfiles, informes y segmentación de clientes Optimizely.
 - Envía eventos de Braze Currents desde Braze a la herramienta de informes de Optimizely.
 - Sincroniza datos de clientes y eventos ODP con Braze para enriquecer tus datos de clientes Braze y desencadenar mensajería Braze basada en eventos de clientes en ODP.
 
@@ -41,14 +41,14 @@ La integración de Braze y Optimizely es una integración bidireccional que te p
 4. Selecciona **Crear nueva corriente** > **Exportar Currents personalizados**.
 5. Configura las Corrientes utilizando el endpoint y el token proporcionados en ODP. Esto es necesario para sincronizar los eventos de Braze con ODP. 
 
-![Autorización optimizada.]({% image_buster /assets/img/optimizely/image1_authorization.png %})
+![Autorización de Optimizely.]({% image_buster /assets/img/optimizely/image1_authorization.png %})
 
 {:start="6"}
 6\. En ODP, expande la sección **Segmentos** y selecciona segmentos específicos de la lista **Segmentos a sincronizar**, o selecciona **Importar todos los clientes** para sincronizar todos los segmentos.
 7\. Añade los [mapeados de campo adicionales](https://www.google.com/url?q=https://support.optimizely.com/hc/en-us/articles/29918568615949-Integrate-Braze%23h_01J6Z1P53JVDBFZ758Q78CK1QB&sa=D&source=editors&ust=1733948158380300&usg=AOvVaw3WSAND5ie3LCVuSxUlLanR) que quieras entre Braze y ODP.
 8\. Seleccione **Guardar**.
 
-![Optimizely Braze sincronización de segmentos.]({% image_buster /assets/img/optimizely/image2_syncsegment.png %})
+![Optimiza la sincronización de segmentos Braze.]({% image_buster /assets/img/optimizely/image2_syncsegment.png %})
 
 {% alert tip %}
 Debes seleccionar segmentos para importar perfiles de clientes Braze. Si no seleccionas ningún segmento, la integración no importará ningún perfil de cliente.
@@ -68,16 +68,16 @@ Si hay campos de datos adicionales en Braze que quieras mapear en ODP, haz lo si
 2. Selecciona el campo ODP de la lista desplegable **Campos de cliente ODP**.
 3. Selecciona **Guardar mapa de campo**.
 
-![Optimizely Braze Segmento Guardar Mapas de Campo]({% image_buster /assets/img/optimizely/image4_mapfields.png %})
+![Optimizar Braze Guardar segmento Mapas de campo]({% image_buster /assets/img/optimizely/image4_mapfields.png %})
 
 #### Borrar mapeados de campos no obligatorios (opcional)
 
 También puedes eliminar los mapeados de campos de datos que no sean necesarios. Haz lo siguiente en ODP:
 
 1. En la sección **Segmentos** de la aplicación, selecciona el mapeado de campos que quieras eliminar de la lista desplegable **Mapa de campos**.
-2. Selecciona **Eliminar mapa de campos**.
+2. Selecciona **Borrar mapa de campos**.
 
-![Optimizely Braze Segmento Eliminar Mapas de Campo]({% image_buster /assets/img/optimizely/image5_deletephonefield.png %})
+![Optimizar Braze Borrar segmento Mapas de campo]({% image_buster /assets/img/optimizely/image5_deletephonefield.png %})
 
 ### Paso 3: Sincronizar datos de la Plataforma de Datos Optimizely (ODP) con Braze
 
@@ -87,8 +87,8 @@ Después de configurar la integración, puedes establecer una activación en ODP
 2. Selecciona **Comportamiento** para configurar una sincronización automatizada y recurrente.
 3. Selecciona **Crear desde cero** y, a continuación, introduce un nombre para tu activación que represente los datos que vas a sincronizar con Braze (como **Sincronización de datos Braze**).
 4. En la sección **Inscripción**, puedes sincronizar los datos de los clientes que coincidan con un segmento o sincronizar los datos de los clientes que desencadenen un evento (como cuando ODP registra que un cliente abre un correo electrónico):
-   - **Clientes que coinciden con un segmento:** Selecciona el segmento que desees y, a continuación, selecciona **Siguiente**.<br><br>![Optimizely Selecciona Segmento]({% image_buster /assets/img/optimizely/image6_segment.png %})
-   - **Clientes que desencadenan un evento:** Despliega la lista desplegable **Filtrar** y selecciona el evento ODP que se va a utilizar como desencadenante de esta sincronización de datos con Braze. A continuación, expande **Reglas de automatización** y ajústalas como desees. <br><br>![Evento desencadenante Optimizely]({% image_buster /assets/img/optimizely/image7_trigger.png %})
+   - **Clientes que coinciden con un segmento:** Selecciona el segmento que desees y, a continuación, selecciona **Siguiente**.<br><br>![Optimizely Seleccionar segmento]({% image_buster /assets/img/optimizely/image6_segment.png %})
+   - **Clientes que desencadenan un evento:** Despliega la lista desplegable **Filtrar** y selecciona el evento ODP que se va a utilizar como desencadenante de esta sincronización de datos con Braze. A continuación, expande **Reglas de automatización** y ajústalas como desees. <br><br>![Evento desencadenante de Optimizely]({% image_buster /assets/img/optimizely/image7_trigger.png %})
 5. Despliega **Puntos de intervención**, selecciona para editar **el Punto de intervención 1** y, a continuación, selecciona **Braze**.
 6. Despliega la sección **Destino** y, a continuación, selecciona el **Identificador de destino**.
 7. Selecciona una de las siguientes opciones para **Añadir usuarios a** en la sección **Configurar**:
@@ -98,7 +98,7 @@ Después de configurar la integración, puedes establecer una activación en ODP
 8. (Opcional) Selecciona el **Número de campos adicionales** que quieres sincronizar con Braze (hasta 20).  
     A continuación, selecciona lo siguiente para cada lista desplegable de campo adicional y campo de entrada que:
     - En cada lista desplegable **Campo #**, selecciona el campo Braze que quieras rellenar. 
-    - En cada **Valor # de campo** correspondiente, introduce el campo ODP que quieres enviar al campo Braze seleccionado. Por ejemplo, si seleccionaste **Nombre de la empresa** en la lista desplegable **Campo nº**, introduce `{{customer.company_name}}` para el correspondiente **Valor de campo nº**.
+    - En cada **Valor # de campo** correspondiente, introduce el campo ODP que quieres enviar al campo Braze seleccionado. Por ejemplo, si seleccionaste **Nombre de empresa** en la lista desplegable **Campo nº**, introduce `{{customer.company_name}}` para el correspondiente **Valor de campo nº**.
 9. Selecciona **Guardar** y, a continuación, selecciona tu nombre de activación en la ruta de migas de pan.
 10. Selecciona **Seleccionar hora de inicio y horario** en la sección **Puntos de contacto** si has seleccionado **Clientes que coinciden con un segmento** para la inscripción.
 11. Completa la siguiente configuración:
@@ -107,7 +107,7 @@ Después de configurar la integración, puedes establecer una activación en ODP
     - **De extremo a extremo:** Predeterminado a **Nunca**. Si quieres finalizar la sincronización de datos Braze en una fecha concreta, establécelo aquí.
     - **Repite:** Ajústalo a **Diario**.
     - **Repetir cada** \- Fijar en **1 día**.
-    - **Horario:** Introduce la hora a la que quieres enviar los datos a Braze.
+    - **Plazo:** Introduce la hora a la que quieres enviar los datos a Braze.
     - **Zona horaria:** Selecciona la zona horaria en la que quieres enviar estos datos.
 12. Selecciona **Aplicar**, **Guardar** y, a continuación, **Ir en vivo**. Tu sincronización comienza en la fecha y hora de inicio que designes (o cuando se produzca el evento desencadenante).
 

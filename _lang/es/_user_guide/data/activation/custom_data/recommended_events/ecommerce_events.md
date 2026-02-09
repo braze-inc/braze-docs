@@ -1,6 +1,6 @@
 ---
 nav_title: Eventos recomendados en eCommerce
-article_title: Eventos recomendados por eCommerce
+article_title: Eventos recomendados de comercio electrónico
 page_type: reference
 alias: /ecommerce_events/
 toc_headers: h2
@@ -30,14 +30,14 @@ Puedes utilizar el evento producto visto para desencadenar el evento cuando un c
 
 #### Propiedades
 
-| Nombre de la propiedad | Necesario | Tipo de datos | Descripción | 
+| Nombre de la propiedad | Obligatoria | Tipo de datos | Descripción | 
 |---|---|---|---|
-| `product_id` | Sí | Cadena | Un identificador único del producto visualizado. <br> Para los clientes que no son de Shopify, será el valor que establezcas para los ID de artículos de catálogo, como las SKU. |
-| `product_name` | Sí | Cadena | El nombre del producto visualizado. | 
+| `product_id` | Sí | Cadena | Un identificador único del producto visualizado. <br> Para los clientes que no son de Shopify, será el valor que establezcas para los ID de los artículos del catálogo, como las SKU. |
+| `product_name` | Sí | Cadena | El nombre del producto que se ha visto. | 
 | `variant_id` | Sí | Cadena | Un identificador único para la variante del producto. Un ejemplo es `shirt_medium_blue` |
 | `image_url` | No | Cadena | URL de la imagen del producto. |
 | `product_url` | No | Cadena | URL a la página del producto para más detalles. |
-| `price` | Sí | Flotador | El precio unitario variante del producto en el momento de verlo. |
+| `price` | Sí | Flotante | El precio unitario variante del producto en el momento de verlo. |
 | `currency` | Sí | Cadena | La moneda en la que se indica el precio del producto (como "USD" o "EUR") en [formato ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
 | `source` | Sí | Cadena | Fuente de la que procede el evento. (Para Shopify, es el escaparate). |
 | `metadata` | No | Objeto | |
@@ -186,19 +186,19 @@ Si hay dos carros, añade ambos al usuario fusionado. Vuelve a poner en cola el 
 
 #### Propiedades
 
-| Nombre de la propiedad | Necesario | Tipo de datos | Descripción | 
+| Nombre de la propiedad | Obligatoria | Tipo de datos | Descripción | 
 |---|---|---|---|
-| `cart_id` | Sí | Cadena | Identificador único del carrito. Si no se pasa ningún valor, determinaremos un valor predeterminado (compartido entre los eventos de carrito, pago y pedido) para el mapeado del carrito del usuario. |
-| `total_value` | Sí | Flotador | Valor monetario total del carro. | 
+| `cart_id` | Sí | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar el [ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `total_value` | Sí | Flotante | Valor monetario total del carro. | 
 | `currency` | Sí | Cadena | La moneda en la que se indica el precio del producto (como "USD" o "EUR") en [formato ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
 | `products` | Sí | Matriz |  |
 | `product_id` | Sí | Cadena | Un identificador único del producto visualizado. <br> Este valor puede ser el ID o el SKU del producto. |
-| `product_name` | Sí | Cadena | El nombre del producto visualizado. |
+| `product_name` | Sí | Cadena | El nombre del producto que se ha visto. |
 | `variant_id` | Sí | Cadena | Un identificador único para la variante del producto. Un ejemplo es `shirt_medium_blue` |
 | `image_url` | No | Cadena | URL de la imagen del producto. |
 | `product_url` | No | Cadena | URL a la página del producto para más detalles. |
 | `quantity` | Sí | Entero | Número de unidades del producto en el carrito. |
-| `price` | Sí | Flotador | El precio unitario variante del producto en el momento de verlo. |
+| `price` | Sí | Flotante | El precio unitario variante del producto en el momento de verlo. |
 | `metadata` | No | Objeto | Campo de metadatos adicional sobre el producto que el cliente quiere añadir para sus casos de uso. Para Shopify, añadiremos SKU. <br> Esto tendrá un límite basado en nuestro límite general de propiedades del evento de 50kb. |
 | `sku` | No | Cadena | (sólo Shopify) SKU de Shopify. Puede configurarse como campo ID del catálogo. |
 | `source` | Sí | Cadena | Fuente de la que procede el evento. (Para Shopify, es el escaparate). |
@@ -347,7 +347,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.cart_updated", properties: pr
 {% endtab %}
 {% tab ecommerce.checkout_started %}
 
-Puedes utilizar el evento de pago iniciado para reorientar a los clientes que han iniciado el proceso de pago pero no han realizado un pedido.
+Puedes utilizar el evento de pago iniciado para reorientar a los clientes que han iniciado el proceso de pago pero no han realizado el pedido.
 
 Similar al evento `ecommerce.cart_updated`, este evento te permite aprovechar la etiqueta de Liquid del carrito de la compra para acceder a todos los productos de su carrito para los mensajes de pago abandonado:
 
@@ -361,20 +361,20 @@ Similar al evento `ecommerce.cart_updated`, este evento te permite aprovechar la
 
 #### Propiedades
 
-| Nombre de la propiedad | Necesario | Tipo de datos | Descripción | 
+| Nombre de la propiedad | Obligatoria | Tipo de datos | Descripción | 
 |---|---|---|---|
 | `checkout_id` | Sí | Cadena | Identificador único de la caja. |
-| `cart_id` | No | Cadena | Identificador único del carrito. Si no se pasa ningún valor, determinaremos un valor predeterminado (compartido entre los eventos de carrito, pago y pedido) para el mapeado del carrito del usuario.. | 
-| `total_value` | Sí | Flotador | Valor monetario total del carro. |
+| `cart_id` | No | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar el [ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
+| `total_value` | Sí | Flotante | Valor monetario total del carro. |
 | `currency` | Sí | Cadena | Moneda en la que se valora el carro. |
-| `products` | Sí | Matriz de objetos |  |
+| `products` | Sí | Conjunto de objetos |  |
 | `product_id` | Sí | Cadena | Un identificador único del producto visualizado. Por ejemplo, este valor podría ser el ID o la SKU del producto. |
-| `product_name` | Sí | Cadena | El nombre del producto visualizado.  |
+| `product_name` | Sí | Cadena | El nombre del producto que se ha visto.  |
 | `variant_id` | Sí | Cadena | Un identificador único para la variante del producto. Un ejemplo es `shirt_medium_blue` |
 | `image_url` | No | Cadena | URL de la imagen del producto. |
 | `product_url` | No | Cadena | URL a la página del producto para más detalles. |
 | `quantity` | Sí | Entero | Número de unidades del producto en el carrito. |
-| `price` | Sí | Flotador | El precio unitario variante del producto en el momento de verlo. |
+| `price` | Sí | Flotante | El precio unitario variante del producto en el momento de verlo. |
 | `metadata` | No | Objeto | Campo de metadatos adicional sobre el producto que el cliente quiere añadir para sus casos de uso. Para Shopify, añadiremos SKU. <br> Esto tendrá un límite basado en nuestro límite general de propiedades del evento de 50kb. |
 | `sku` | No | Cadena | (sólo Shopify) SKU de Shopify. Puede configurarse como campo ID del catálogo. |
 | `source` | Sí | Cadena | Fuente de la que procede el evento. (Para Shopify, es el escaparate). |
@@ -527,26 +527,25 @@ Puedes utilizar el evento pedido realizado para desencadenar el evento cuando un
 
 #### Propiedades
 
-| Nombre de la propiedad | Necesario | Tipo de datos | Descripción | 
+| Nombre de la propiedad | Obligatoria | Tipo de datos | Descripción | 
 |---|---|---|---|
 | `order_id` | Sí | Cadena | Identificador único del pedido realizado. |
-| `cart_id` | No | Cadena | Identificador único del carrito. Si no se pasa ningún valor, determinaremos un valor predeterminado (compartido entre los eventos de carrito, pago y pedido) para el mapeado del carrito del usuario. |
-| `total_value` | Sí | Flotador | Valor monetario total del carro. | 
+| `cart_id` | No | Cadena | Si no utilizas una plataforma de terceros que proporcione un `cart_id`, puedes utilizar el [ID de sesión de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `total_value` | Sí | Flotante | Valor monetario total del carro. | 
 | `currency` | Sí | Cadena | Moneda en la que se valora el carro. |
-| `total_discounts` | No | Flotador | Importe total de los descuentos aplicados al pedido. | 
-| `discounts`| No | Matriz de objetos | Lista detallada de los descuentos aplicados al pedido. |
-| `products` | Sí | Matriz de objetos |  |
+| `total_discounts` | No | Flotante | Importe total de los descuentos aplicados al pedido. | 
+| `discounts`| No | Conjunto de objetos | Lista detallada de los descuentos aplicados al pedido. |
+| `products` | Sí | Conjunto de objetos |  |
 | `product_id` | Sí | Cadena | Un identificador único del producto visualizado. Este valor puede ser el ID o el SKU del producto. |
-| `product_name` | Sí | Cadena | El nombre del producto visualizado. |
+| `product_name` | Sí | Cadena | El nombre del producto que se ha visto. |
 | `variant_id` | Sí | Cadena | Un identificador único para la variante del producto. Un ejemplo es `shirt_medium_blue` |
 | `image_url` | No | Cadena | URL de la imagen del producto. |
 | `product_url` | No | Cadena | URL a la página del producto para más detalles. |
 | `quantity` | Sí | Entero | Número de unidades del producto en el carrito. |
-| `price` | Sí | Flotador | El precio unitario variante del producto en el momento de verlo. |
+| `price` | Sí | Flotante | El precio unitario variante del producto en el momento de verlo. |
 | `metadata` | No | Objeto | Campo de metadatos adicional sobre el producto que el cliente quiere añadir para sus casos de uso. Para Shopify, añadiremos SKU. <br> Esto tendrá un límite basado en nuestro límite general de propiedades del evento de 50kb. |
 | `sku` | No | Cadena | (sólo Shopify) SKU de Shopify. Puede configurarse como campo ID del catálogo. |
 | `source` | Sí | Cadena | Fuente de la que procede el evento. (Para Shopify, es el escaparate). |
-| `metadata` | No | Objeto |  |
 | `order_status_url` | No | Cadena | URL para ver el estado del pedido. |
 | `order_number` | No | Cadena | (Sólo Shopify) Número de pedido único para el pedido realizado. |
 | `tags` | No | Matriz | (Sólo Shopify) Etiquetas de pedido
@@ -745,21 +744,21 @@ Puedes utilizar el evento pedido reembolsado para desencadenar el reembolso parc
 
 #### Propiedades
 
-| Nombre de la propiedad       | Necesario | Tipo de datos | Descripción   |
+| Nombre de la propiedad       | Obligatoria | Tipo de datos | Descripción   |
 |---------------|---------|-----------|-------------------------|
 | `order_id`            | Sí      | Cadena    | Identificador único del pedido realizado.        |
-| `total_value`         | Sí      | Flotador     | Valor monetario total del carro.    |
+| `total_value`         | Sí      | Flotante     | Valor monetario total del carro.    |
 | `currency`            | Sí      | Cadena    | Moneda en la que se valora el carro.    |
-| `total_discounts`     | No       | Flotador     | Importe total de los descuentos aplicados al pedido.   |
-| `discounts`           | No       | Matriz de objetos     | Lista detallada de los descuentos aplicados al pedido. |
-| `products`            | Sí      | Matriz de objetos     |  |
+| `total_discounts`     | No       | Flotante     | Importe total de los descuentos aplicados al pedido.   |
+| `discounts`           | No       | Conjunto de objetos     | Lista detallada de los descuentos aplicados al pedido. |
+| `products`            | Sí      | Conjunto de objetos     |  |
 | `product_id`       | Sí      | Cadena    | Un identificador único del producto visualizado. Este valor puede ser el ID del producto, SKU o similar. <br>Si se emite una devolución parcial y no hay ningún `product_id` asignado a la devolución (por ejemplo, una devolución a nivel de pedido), proporciona un `product_id` generalizado.             |
-| `product_name`     | Sí      | Cadena    | El nombre del producto visualizado.                                                                      |
+| `product_name`     | Sí      | Cadena    | El nombre del producto que se ha visto.                                                                      |
 | `variant_id`       | Sí      | Cadena    | Un identificador único de la variante del producto (como `shirt_medium_blue`).                                         |
 | `image_url`        | No       | Cadena    | URL de la imagen del producto.     |
 | `product_url`      | No       | Cadena    | URL a la página del producto para más detalles.  |
 | `quantity`         | Sí      | Entero   | Número de unidades del producto en el carrito.   |
-| `price`            | Sí      | Flotador     | El precio unitario variante del producto en el momento de verlo.  |
+| `price`            | Sí      | Flotante     | El precio unitario variante del producto en el momento de verlo.  |
 | `metadata`         | No       | Objeto    | Campo de metadatos adicional sobre el producto que el cliente quiere añadir para sus casos de uso. Para Shopify, añadiremos SKU. Esto tendrá un límite basado en nuestro límite general de propiedades del evento de 50kb. |
 | `sku`            | No       | Cadena    | (sólo Shopify) SKU de Shopify. Puede configurarse como campo ID del catálogo.  |
 | `source`              | Sí      | Cadena    | Fuente de la que procede el evento. (Para Shopify, es el escaparate).    |
@@ -953,22 +952,22 @@ Puedes utilizar el evento pedido cancelado para desencadenar cuando un cliente c
 
 #### Propiedades
 
-| Nombre de la propiedad      | Necesario | Tipo de datos | Descripción       |
+| Nombre de la propiedad      | Obligatoria | Tipo de datos | Descripción       |
 |---------------------|----------|-----------|-------------------|
 | `order_id`            | Sí      | Cadena    | Identificador único del pedido realizado.              |
 | `cancel_reason`       | Sí      | Cadena    | Motivo por el que se canceló el pedido.           |
-| `total_value`         | Sí      | Flotador     | Valor monetario total del carro.         |
+| `total_value`         | Sí      | Flotante     | Valor monetario total del carro.         |
 | `currency`            | Sí      | Cadena    | Moneda en la que se valora el carro.           |
-| `total_discounts`     | No       | Flotador     | Importe total de los descuentos aplicados al pedido.     |
-| `discounts`           | No       | Matriz de objetos     | Lista detallada de los descuentos aplicados al pedido.             |
-| `products`            | Sí      | Matriz de objetos     |         |
+| `total_discounts`     | No       | Flotante     | Importe total de los descuentos aplicados al pedido.     |
+| `discounts`           | No       | Conjunto de objetos     | Lista detallada de los descuentos aplicados al pedido.             |
+| `products`            | Sí      | Conjunto de objetos     |         |
 | `product_id`          | Sí      | Cadena    | Un identificador único del producto visualizado. Este valor puede ser el ID del producto, SKU o similar.             |
-| `product_name`        | Sí      | Cadena    | El nombre del producto visualizado.          |
+| `product_name`        | Sí      | Cadena    | El nombre del producto que se ha visto.          |
 | `variant_id`          | Sí      | Cadena    | Un identificador único de la variante del producto (como `shirt_medium_blue`).        |
 | `image_url`           | No       | Cadena    | URL de la imagen del producto.           |
 | `product_url`         | No       | Cadena    | URL a la página del producto para más detalles.                                                                     |
 | `quantity`            | Sí      | Entero   | Número de unidades del producto en el carrito.        |
-| `price`               | Sí      | Flotador     | El precio unitario variante del producto en el momento de verlo.     |
+| `price`               | Sí      | Flotante     | El precio unitario variante del producto en el momento de verlo.     |
 | `metadata`            | No       | Objeto    | Campo de metadatos adicional sobre el producto que el cliente quiere añadir para sus casos de uso. Para Shopify, añadiremos SKU. Esto tendrá un límite basado en nuestro límite general de propiedades del evento de 50kb. |
 | `sku`                 | No       | Cadena    | (sólo Shopify) SKU de Shopify. Puede configurarse como campo ID del catálogo.        |
 | `source`              | Sí      | Cadena    | Fuente de la que procede el evento. (Para Shopify, es el escaparate).    |
@@ -1174,4 +1173,4 @@ Utilizamos cálculos estandarizados de campos de usuario para los siguientes cam
 
 Estos cálculos de campo de usuario también se incluyen en la pestaña **Transacciones** de los perfiles de usuario.
 
-Pestaña "Transacciones" con campos calculados por el usuario.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![La pestaña "Transacciones" con campos calculados por el usuario.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}

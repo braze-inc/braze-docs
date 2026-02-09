@@ -254,8 +254,16 @@ You can name the project, dataset, and table as you'd like, but the column names
     - `PHONE` - The user's phone number. If multiple profiles with the same phone number exist, the most recently updated profile is prioritized for updates.
 - `PAYLOAD` - This is a JSON string of the fields you want to sync to the user in Braze.
 
-{% alert tip %}
-Braze queries your BigQuery tables in your own project (using the predefined schema) with predicates on `UPDATED_AT`. Partitioning large tables by `UPDATED_AT` with an appropriate granularity (for example, daily granularity) lets BigQuery prune partitions so only relevant data is scanned. This may help improve performance and lower cost. Refer to [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables) for more information.
+{% alert important %}
+**BigQuery partitioning**
+
+CDI supports partitions for BigQuery. If you partition by a function of `UPDATED_AT` (for example, at the granularity of a day, week, or hour, depending on the size of your dataset), BigQuery can prune the data it needs to scan. This improves performance and efficiency for very large tables.
+
+Don't partition by any other fields. Test different configurations to find the best setup for your specific data.
+
+All CDI queries filter by `UPDATED_AT`, but this behavior could change. Design your table schema to _not_ require that queries include this clause.
+
+For more information, refer to the [BigQuery partitioning documentation](https://docs.cloud.google.com/bigquery/docs/partitioned-tables).
 {% endalert %}
 
 #### Step 1.2: Create a Service Account and grant permissions 
@@ -470,7 +478,11 @@ In the Braze Dashboard, go to **Data Settings** > **Cloud Data Ingestion**, sele
 
 #### Step 2.1: Add Redshift connection information and source table
 
-Input the information for your Redshift data warehouse and source table. If you're using a private network tunnel, toggle the slider and input the tunnel information. Then proceed to the next step.
+Input the information for your Redshift data warehouse and source table. If you're using a private network tunnel, toggle the slider and input the tunnel information. Then, proceed to the next step. 
+
+{% alert note %}
+In the Braze dashboard, the **Database name** field only accepts letters (A–Z, a–z), numbers (0–9), and underscores (_), even though Amazon Redshift supports additional characters in database identifiers.
+{% endalert %}
 
 ![The "Create new import sync" page for Redshift in the Braze dashboard, set to Step 1: "Set up connection".]({% image_buster /assets/img/cloud_ingestion/ingestion_6.png %})
 

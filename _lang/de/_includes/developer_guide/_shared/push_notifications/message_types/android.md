@@ -21,7 +21,7 @@ Das In-App-Nachricht-Objekt `slideup` erweitert [`InAppMessageBase`](https://bra
 
 Dieser Nachrichtentyp ist eine Unterklasse von [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html), einer abstrakten Klasse, die `IInAppMessageImmersive` implementiert. Damit haben Sie die Möglichkeit, Ihre lokal generierten In-App-Nachrichten um angepasste Funktionen zu erweitern.
 
-![Eine Modal-In-App-Nachricht in der Mitte des Telefondisplays mit dem Text "Menschen sind kompliziert. Custom Engagement sollte nicht sein." Im Hintergrund wird die gleiche In-App-Nachricht in der Mitte einer Webseite angezeigt.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Eine Modal-In-App-Nachricht in der Mitte des Telefondisplays mit dem Text "Menschen sind kompliziert. Custom Engagement sollte nicht sein." Im Hintergrund wird die gleiche In-App-Nachricht in der Mitte einer Internetseite angezeigt.]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Full Screen %}
@@ -29,7 +29,7 @@ Dieser Nachrichtentyp ist eine Unterklasse von [`InAppMessageImmersiveBase`](htt
 
 Dieser Nachrichtentyp erweitert [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html)und bietet Ihnen die Möglichkeit, Ihre lokal generierten In-App-Nachrichten um angepasste Funktionen zu erweitern.
 
-![Eine In-App-Nachricht im Vollbildmodus, die über den gesamten Bildschirm des Telefons angezeigt wird und lautet: "Menschen sind kompliziert. Custom Engagement sollte nicht sein." Im Hintergrund wird dieselbe In-App-Nachricht weitgehend in der Mitte einer Internetseite angezeigt.]({% image_buster /assets/img_archive/In-App_Full.png %})
+![Eine In-App-Nachricht im Vollbildmodus, die über den gesamten Bildschirm des Telefons angezeigt wird und lautet: "Menschen sind kompliziert. Custom Engagement sollte nicht sein." Im Hintergrund wird die gleiche In-App-Nachricht weitgehend in der Mitte einer Internetseite angezeigt.]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endsubtab %}
 {% subtab Custom HTML %}
@@ -39,7 +39,7 @@ Diese Nachrichten Instanzen von [`InAppMessageHtml`](https://braze-inc.github.io
 
 Android In-App-Nachrichten unterstützen eine JavaScript `brazeBridge` Schnittstelle, um Methoden des Braze Web SDK aus Ihrem HTML-Code heraus aufzurufen. Weitere Informationen finden Sie in unseren <a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/">Best Practices</a>.
 
-![Eine HTML-In-App-Nachricht mit einem Karussell von Inhalten und interaktiven Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Eine HTML In-App-Nachricht mit einem Karussell von Inhalten und interaktiven Buttons.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% alert important %}
 Die Anzeige angepasster In-App-Nachrichten im HTML-Format in einem iFrame wird derzeit auf den Plattformen iOS und Android nicht unterstützt.

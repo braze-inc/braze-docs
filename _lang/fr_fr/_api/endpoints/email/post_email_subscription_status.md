@@ -49,7 +49,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Paramètre | Requis | Type de données | Description |
 | --------- | ---------| --------- | ----------- |
 | `email` | Requis | Chaîne de caractères ou tableau | Envoyez une adresse e-mail par chaîne de caractères ou un tableau de 50 adresses e-mail pour effectuer des modifications. |
-| `subscription_state` | Requis | Chaîne de caractères | Soit "abonné", "désabonné" ou "opted_in". |
+| `subscription_state` | Requis | Chaîne de caractères | Soit "abonné", soit "désabonné", soit "opted_in". |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Exemple de demande

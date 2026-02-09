@@ -53,7 +53,7 @@ valid_partner_list:
   url: /docs/partners/blayer/
 - name: Dyspatch
   url: /docs/partners/dyspatch/
-- name: E-mail Amor
+- name: Amor por e-mail
   url: /docs/partners/email_love/
 - name: Estúdio IAM
   url: /docs/partners/iam_studio/
@@ -88,7 +88,7 @@ valid_partner_list:
 - name: LINE
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
-  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+  url: /docs/partners/ecommerce/shopify
 - name: Yotpo
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/yotpo/
 - name: Knak
@@ -129,4 +129,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/narvar/
 - name: Tapcart
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/tapcart/
+- name: Jasper
+  url: /docs/partners/jasper/
 ---

@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE : Supprimer le compte utilisateur de tableau de bord"
+nav_title: "DELETE : Supprimer un compte utilisateur de tableau de bord"
 article_title: "DELETE : Supprimer le compte utilisateur de tableau de bord"
 alias: /delete_existing_dashboard_user/
 search_tag: Endpoint
@@ -15,7 +15,7 @@ description: "Cet article présente en détail l’endpoint Braze Supprimer un c
 /scim/v2/Users/{id}
 {% endapimethod %}
 
-> Utilisez cet endpoint pour supprimer définitivement un utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) . 
+> Utilisez cet endpoint pour supprimer définitivement un utilisateur de tableau de bord existant en spécifiant la ressource `id` renvoyée par la méthode SCIM [`POST`]({{site.baseurl}}/api/endpoints/scim/post_create_user_account/) .
 
 Cette opération est similaire à la suppression d'un utilisateur dans la section **Utilisateurs de l'entreprise** du tableau de bord Braze.
 

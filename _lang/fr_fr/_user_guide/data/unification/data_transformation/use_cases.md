@@ -1,9 +1,9 @@
 ---
-nav_title: "Cas d'utilisation"
+nav_title: Cas d’utilisation
 article_title: "Cas d'utilisation de la transformation des données de Braze"
 page_order: 2
 page_type: reference
-description: "Cet article de référence présente quelques cas d'utilisation de Braze Data Transformation."
+description: "Cet article de référence présente quelques cas d'utilisation de la transformation des données Braze."
 ---
 
 # Cas d'utilisation de la transformation des données
@@ -19,9 +19,9 @@ Vous hébergez un formulaire Typeform de génération de leads sur votre site we
 
 ## Ouverture des tickets de service
 
-Lorsque les clients ouvrent des tickets de service client sur une plateforme comme Zendesk, vous pouvez :
-- Écrivez un événement personnalisé dans Braze lorsqu'un ticket Zendesk est créé.
-- Écrivez un événement personnalisé avec des propriétés d'événement dans Braze lorsqu'une note CSAT négative est fournie à Zendesk.
+Lorsque les clients ouvrent des tickets de service client sur une plateforme comme Zendesk, vous pouvez :
+- Écrire un événement personnalisé dans Braze lorsqu'un ticket Zendesk est créé.
+- Écrire un événement personnalisé avec des propriétés d'événement dans Braze lorsqu'une note CSAT négative est fournie à Zendesk.
 
 ## Intégration avec Braze
 
@@ -31,7 +31,7 @@ Braze dispose d'une intégration avec [Iterate]({{site.baseurl}}/partners/additi
 
 Considérez cet exemple de charge utile provenant de Typeform, une plateforme d'enquête, qui est envoyée chaque fois qu'une réponse à l'enquête est reçue.
 
-\![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
+![]({% image_buster /assets/img/data_transformation/data_transformation2.png %})
 
 {% tabs local %}
 {% tab Basic transformation %}
