@@ -51,6 +51,10 @@ An app or website can only have one push subscription per device. So when a user
 
 Because there isn't a way for push providers (APNs/FCM) to distinguish between multiple users on one device, we pass the push token to the last user who was logged in to determine which user to target on the device for push.
 
+{% alert tip %}
+If you see an error message in **Contact Settings** > **Push Changelog**, refer to [Common push error messages]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_error_codes/) for explanations and next steps.
+{% endalert %}
+
 ## Push token registration
 
 Each device platform handles push token registration differently. Refer to the following for platform-specific details:
@@ -76,7 +80,7 @@ iOS does not automatically generate push tokens for an app when it's installed. 
 | Version                         | Provisional Authorization? | Details                                                                                                                                                     |
 |------------------------------------|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **iOS 12**      | Yes                         | When a user opts-in to push notifications, you're given standard authorization, allowing you to send [foreground push notifications](#foreground-vs-background). However, you can also request [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push), which let's you send silent [background push notifications](#foreground-vs-background) directly to the notification center. |
-| **iOS 11 and later** | No                          | All users must explicitly opt-in to receive push notifications. A push token is generated only after permission is granted.                                     |
+| **iOS 11 or earlier** | No                          | All users must explicitly opt-in to receive push notifications. A push token is generated only after permission is granted.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
