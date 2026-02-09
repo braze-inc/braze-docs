@@ -1260,7 +1260,7 @@ Consider using tabs when information can be grouped together to avoid duplicatio
 
 For example, you can use tabs to show code examples in different programming languages. In this case, a reader would toggle between the examples based on the tab labels as opposed to scrolling through the article.
 
-For formatting details, refer to the GItHub page on [Special Formatting](https://github.com/braze-inc/braze-docs/wiki/Special-Formatting). Alternatively, you can also use a [list](#lists) or [table](#tables-1) to organize information.
+For formatting details, refer to the GitHub page on [Special Formatting](https://github.com/braze-inc/braze-docs/wiki/Special-Formatting). Alternatively, you can also use a [list](#lists) or [table](#tables-1) to organize information.
 
 ### Formatting and organizing {#formatting-and-organizing}
 
