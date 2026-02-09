@@ -5512,10 +5512,10 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 ## Email Retry events {#email-retry-events}
 
 {% apitags %}
-Email
+Email, Retry
 {% endapitags %}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -7898,13 +7898,13 @@ This event occurs when a LINE message is received from a user.
 {% endapi %}
 
 {% api %}
-## Line Retry events {#line-retry-events}
+## LINE Retry events {#line-retry-events}
 
 {% apitags %}
-LINE
+LINE, Retry
 {% endapitags %}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -9429,10 +9429,10 @@ In rare cases, a push open may appear before the corresponding push send event i
 ## Push Notification Retry events {#push-notification-retry-events}
 
 {% apitags %}
-Push
+Push, Retry
 {% endapitags %}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -12476,10 +12476,10 @@ This event occurs when an SMS send gets rejected by the carrier. This can happen
 ## SMS Retry events {#sms-retry-events}
 
 {% apitags %}
-SMS
+SMS, Retry
 {% endapitags %}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -13496,10 +13496,10 @@ This event occurs if a webhook message was delivered but failed with an error re
 ## Webhook Retry events {#webhook-retry-events}
 
 {% apitags %}
-Webhooks
+Webhooks, Retry
 {% endapitags %}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -15194,10 +15194,10 @@ This event occurs when an WhatsApp message is read by the user.
 ## WhatsApp Retry events {#whatsapp-retry-events}
 
 {% apitags %}
-WhatsApp
+WhatsApp, Retry
 {% endapitags %}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
