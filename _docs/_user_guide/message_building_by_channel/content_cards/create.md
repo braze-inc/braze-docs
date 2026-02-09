@@ -222,7 +222,7 @@ Do you want your content to last longer than 30 days? Try [Banners]({{site.baseu
 
 #### How re-eligibility is calculated
 
-If you turn on re-eligibility, the countdown for when a user can "re-enter" a campaign begings after they are sent the message. The specific moment this countdown starts depends on your card creation settings:
+If you turn on re-eligibility, the countdown for when a user can "re-enter" a campaign begins after they are sent the message. The specific moment this countdown starts depends on your card creation settings:
 
 * Content Cards using [at first impression]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression) use impression time to calculate re-eligibility.
 * Content Cards created at campaign launch or Canvas step entry use whichever send time or impression time is latest.
