@@ -311,7 +311,7 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ##### Card expiration
 
-All Content Cards are automatically purged from Braze's systems 30 days after they are sent and removed from a user's feed. 
+Content Cards remain available for up to 30 days from when they are sent; after 30 days, Braze removes them from user feeds and purges them from Braze's systems.
 
 #### Making cards last longer than 30 days
 
