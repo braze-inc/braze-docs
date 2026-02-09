@@ -12,9 +12,7 @@ alias: /scim/automated_user_provisioning/
 
 > Use SCIM provisioning to automatically create and manage Braze users through API. This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
 
-{% alert important %}
-SCIM provisioning is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='SCIM provisioning' %}
 
 ## Accessing SCIM provisioning settings
 
@@ -29,9 +27,7 @@ SCIM provisioning is currently in early access. Contact your Braze account manag
 {% tabs %}
 {% tab Okta - Braze app %}
 
-{% alert important %}
-The Okta integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
 
 ## Step 1: Set up SCIM provisioning
 
@@ -70,9 +66,7 @@ Select **Test API Credentials**. A verification message appears if the integrati
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-{% alert important %}
-The Okta integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
 
 ## Step 1: Set up SCIM provisioning
 
@@ -110,9 +104,7 @@ The Okta integration is currently in early access. Contact your Braze account ma
 {% endtab %}
 {% tab Entra ID %}
 
-{% alert important %}
-The Entra ID integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Entra ID integration' %}
 
 ## Step 1: Set up SCIM provisioning app
 
