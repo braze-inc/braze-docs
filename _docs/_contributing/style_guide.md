@@ -6,7 +6,7 @@ page_order: 7
 noindex: true
 ---
 
-# Braze Docs Style Guide
+# Braze docs style guide
 
 Refer to the following sections when contributing to Braze Docs.
 
@@ -14,7 +14,7 @@ Refer to the following sections when contributing to Braze Docs.
 
 ### General guidelines {#general-guidelines}
 
-#### Voice and Tone {#voice-and-tone}
+#### Voice and tone {#voice-and-tone}
 
 The Braze brand voice is smart, conversational, and direct. We are a human voice in a world of tech buzzwords; we provide clarity and guidance to anyone interested in the craft of customer engagement; and we eschew jargon in favor of concise language that is as easy to understand as it is powerful.
 
@@ -84,7 +84,7 @@ Braze aims to provide an inclusive experience. Use the following guidelines to e
 * Use a [screen reader](https://support.apple.com/guide/mac-help/use-accessibility-features-mh35884/mac) to test your content.  
 * Don’t use an [ampersand](#ampersands) (&) in place of “and” unless referencing UI elements that use an ampersand. 
 
-##### Language and Formatting
+##### Language and formatting
 
 * Use [plain language](https://www.plainlanguage.gov/guidelines/).  
 * Front-load sections with the most important information. Use the journalism model of the [inverted pyramid](https://en.wikipedia.org/wiki/Inverted_pyramid_(journalism)).  
@@ -105,7 +105,7 @@ Braze aims to provide an inclusive experience. Use the following guidelines to e
 * [Links to download files](#links-for-file-download) should indicate clicking the link downloads the file, as well as the file type (PDF, CSV, and so on)  
 * If it isn’t clear from the context, links to sections in the same document should use a [standard phrase](#structuring-links) indicating this action.
 
-##### Images, Videos, and GIFs
+##### Images, videos, and GIFs
 
 * Provide [alt text](#alt-text) for every image that summarizes the information presented in the image.  
 * Don’t use images as the only way to show information. Always provide the steps, content, or other details presented in the image in the surrounding text.  
@@ -118,7 +118,7 @@ Braze aims to provide an inclusive experience. Use the following guidelines to e
 * Always use an introductory sentence to describe the purpose of the table.   
 * Avoid tables in the middle of a list, especially a list of steps.
 
-#### Global Audience {#global-audience}
+#### Global audience {#global-audience}
 
 We write our learning content in American English. However, Braze is a global brand, and as such, we write for a global audience. Use the following guidelines to make sure customers understand your writing even when English isn’t their first language.
 
@@ -140,7 +140,7 @@ We write our learning content in American English. However, Braze is a global br
   * Use diverse [example names](#heading=h.o9yy4y0bxgg).  
   * Avoid culturally specific humor.
 
-#### Inclusive Language {#inclusive-language}
+#### Inclusive language {#inclusive-language}
 
 We may be a B2B company, but people are at the center of what we do, and ours is a global brand. Whenever we refer to a person in our content, we are mindful of being inclusive and considerate. When in doubt, consult this section or [The Diversity Style Guide](https://www.diversitystyleguide.com/).
 
@@ -171,7 +171,7 @@ Don’t rely on color to be the only indicator for interactive elements. For exa
 
 Avoid relying solely on green and red for “good” and “bad” (or, more often, “do” and “don’t”) indicators. Red/green color blindness is the most common type of color blindness. If you use color to communicate do’s and don’ts, make sure to also include other text or symbols to convey the same point.
 
-##### Condescending Language {#condescending-language}
+##### Condescending language {#condescending-language}
 
 When writing instructions or detailing steps for a reader to follow, avoid using words or phrases such as:
 
@@ -182,7 +182,7 @@ When writing instructions or detailing steps for a reader to follow, avoid using
 
 If someone has difficulty with the steps or instructions, your casual descriptors can feel condescending. You may also unintentionally exclude people from your documentation who interpret that as an indicator they are in some way not skilled enough to follow your instructions.
 
-##### Customers vs. Clients
+##### Customers vs. clients
 
 When referring to Braze users and their consumers, use the following terms accordingly:
 
@@ -191,7 +191,7 @@ When referring to Braze users and their consumers, use the following terms accor
 * **Consumers:** Customers of a brand we work with.   
 * **Users:** Generally reserved for a specific statistic that depends on “user” metrics (such as “user retention”). When referring to “users” in our content, first aim to be more specific. Think shoppers, consumers, patients, players.
 
-##### Departments and Teams
+##### Departments and teams
 
 Capitalize the names of departments or teams. Do not capitalize “team” or “department.”
 
@@ -231,15 +231,15 @@ When describing an illness, avoid words like “suffer,” “struggle,” or �
 {:/}
 
 
-##### Inclusivity in Content
+##### Inclusivity in content
 
 Highlight and represent a diverse community. Be mindful and inclusive when involving our customers, speakers, industry experts, and Braze team members. 
 
-##### Job Titles
+##### Job titles
 
 When it comes to job titles, we veer off-course from AP Style. In all cases, we capitalize job titles when referring to someone specifically. 
 
-###### Job Title with Company Name
+###### Job title with company name
 
 Capitalize formal job titles when they come before or after a person’s name. We format them three ways:
 
@@ -284,7 +284,7 @@ Capitalize formal job titles when they come before or after a person’s name. W
 </table>
 {:/}
 
-###### Job Title without Company Name
+###### Job title without company name
 
 When referring to a specific person by formal title, capitalize their formal title and name like so:
 
@@ -357,7 +357,7 @@ When addressing groups of people in your content, avoid gendering your audience 
 
 “They/them/theirs” is always acceptable to use as a single or plural pronoun in all of our content.
 
-##### Mental Health
+##### Mental health
 
 Mental health and illness cover a broad range of conditions. Unless it’s relevant to what you are writing, don’t refer to a person’s mental health. Avoid stigmatizing words and phrases. Don’t use medical terms colloquially (example: “The depressing state of things...”).
 
@@ -369,7 +369,7 @@ The first time you mention a person, use their first and full name. From there o
 
 For information on appropriate use of pronouns, refer to the Language and Grammar section on [Pronouns](#pronouns).
 
-##### Race, Religion, and Ethnicity
+##### Race, religion, and ethnicity
 
 Don’t refer to a person’s race, religion, or ethnicity unless it’s relevant to what you are writing. In writing where race or ethnicity factors in, ask your subject how they self-identify.
 
@@ -419,7 +419,7 @@ Don’t co-opt words or turns of phrase that belong to African American Vernacul
 
 Don’t co-opt words or turns of phrase specific to indigenous peoples (example: spirit animal, powwow). 
 
-#### Third-Party Sources {#third-party-sources}
+#### Third-party sources {#third-party-sources}
 
 Never copy content from other sites, as it may violate copyright. Content can be both text and images.
 
@@ -468,7 +468,7 @@ Treat abbreviations as regular words when making them plural, and don't add an a
 </table>
 {:/}
 
-#### Active Voice {#active-voice}
+#### Active voice {#active-voice}
 
 We use the active voice at Braze when possible. Active voice is our gold standard. Avoid passive voice, in which it can be difficult to determine who or what is performing a particular action.
 
@@ -521,7 +521,7 @@ To determine if you should use “a” or “an”, look at the pronunciation of
 
 #### Pronouns {#pronouns}
 
-##### Personal Pronouns
+##### Personal pronouns
 
 Use second-person pronouns (you) whenever possible. 
 
@@ -533,13 +533,13 @@ Avoid first-person pronouns (I, we, us, our) except in the following cases:
 * Using “we” to refer to Braze as an organization.   
  * If it may be unclear who “we” is referring to, first refer to Braze by name, then use “we” in subsequent mentions.
 
-##### Gender-Neutral Pronouns
+##### Gender-neutral pronouns
 
 Use the pronouns your subjects use. If there is any uncertainty, use “they,” “them,” and “their” for singular pronouns. Don’t use “he/she” or “(s)he” as an alternative to the singular “they”.  
 
 Only use gendered pronouns (he/she, him/her, his/hers) if the person you’re referring to is actually that gender.  
 
-##### Ambiguous Pronouns {#ambiguous-pronouns}
+##### Ambiguous pronouns {#ambiguous-pronouns}
 
 Pronouns substitute for nouns. The word a pronoun refers to is called its antecedent. When writing instructions or learning material, be sure to make clear references between a pronoun and its antecedent. This may require repeating subjects to make the meaning clear.
 
@@ -557,7 +557,7 @@ Pronouns substitute for nouns. The word a pronoun refers to is called its antece
 </table>
 {:/}
 
-##### Optional Pronouns
+##### Optional pronouns
 
 To add additional clarity to your writing and to aid in localization, use pronouns such as “that”, “which”, and “who”.
 
@@ -618,13 +618,13 @@ Avoid unnecessary capitalization. In most instances, use sentence case. Title ca
 </table>
 {:/}
 
-##### Brands and Products
+##### Brands and products
 
 When referring to a brand or product, use the capitalization the brand uses. In most cases, capitalize the names of brands (Grindr, Walmart) and products (Benchmarks, Looker Blocks). It’s fine to begin a sentence with lowercase if the first word is the stylized name of a brand like eBay or iTunes. 
 
 For intercaps, always refer to the usage preferred by the brand in print (OkCupid, YouTube). Do not use intercaps that only appear in logos or graphic design treatments (Amazon). 
 
-#### Clause Order {#clause-order}
+#### Clause order {#clause-order}
 
 If you want to tell the reader to do something in a specific circumstance, try to mention the circumstance before you provide the instruction. This lets the reader skip the instruction if the circumstance doesn't apply.
 
@@ -640,7 +640,7 @@ If you want to tell the reader to do something in a specific circumstance, try t
 </table>
 {:/}
 
-#### Combining Forms {#combining-forms}
+#### Combining forms {#combining-forms}
 
 [Hyphenate](#hyphens) combined forms when the phrase is used as an adjective before the noun. 
 
@@ -663,7 +663,7 @@ A contraction is a shortened version of a word or phrase. Use contractions to ke
 </table>
 {:/}
 
-#### Dangling and Misplaced Modifiers {#dangling-and-misplaced-modifiers}
+#### Dangling and misplaced modifiers {#dangling-and-misplaced-modifiers}
 
 Modifiers are words of phrases that modify other words or phrases. A dangling modifier doesn’t modify any subject in the sentence. A misplaced modifier is placed far away from the subject that it’s meant to modify. Essentially, dangling and misplaced modifiers may cause confusion by connecting to the wrong part of the sentence.
 
@@ -698,7 +698,7 @@ There’s nothing wrong with ending a sentence in a preposition when it improves
 </table>
 {:/}
 
-#### Present Tense {#present-tense}
+#### Present tense {#present-tense}
 
 Use present tense instead of future tense. Present tense conveys immediacy and demonstrates confidence. Avoid using “will” or hypothetical “would”, especially when referring to the result of user action.
 
@@ -720,7 +720,7 @@ Only use future tense when you’re actually talking about the future. Avoid pre
 
 Keep it PG. This has less to do with morality than the fact profanity can be divisive and off-putting to an audience as broad and international as ours. There’s also a case to be made that sometimes profanity is a cover-up for half-baked writing. That’s simply not our vibe. 
 
-#### Plurals in Parentheses {#plurals-in-parentheses}
+#### Plurals in parentheses {#plurals-in-parentheses}
 
 Do not use plurals in parentheses. Instead, use the plural or singular form of the word.
 
@@ -735,7 +735,7 @@ Do not use plurals in parentheses. Instead, use the plural or singular form of t
 </table>
 {:/}
 
-#### Second Person and First Person {#second-person-and-first-person}
+#### Second person and first person {#second-person-and-first-person}
 
 Use second person in your instructions instead of first person—”you” rather than “we”. 
 
@@ -768,7 +768,7 @@ If you’re telling the reader to do something, then you can omit the “you” 
 
 When using second person, make sure you know who the audience of the document is, and to be consistent about who you’re talking to.
 
-#### Slang and Idioms {#slang-and-idioms}
+#### Slang and idioms {#slang-and-idioms}
 
 We’re a plainspoken bunch. Avoid using trendy slang or idioms that speak too specifically to a singular audience. It can also quickly date materials, and make it difficult to localize content. 
 
@@ -890,7 +890,7 @@ If an independent clause and a dependent clause are used in the same sentence, d
 
 #### Dashes {#dashes}
 
-##### Em Dash
+##### Em dash
 
 Use an em dash (—) when using a dash in a sentence to indicate a separate thought or interruption. Don’t put any spaces before or after the em dash. Don’t use an em dash where a comma or parenthesis would work just as well.
 
@@ -899,7 +899,7 @@ Refer to your operating system for how to type an em dash:
 * **macOS:** Press Option + Shift + Hyphen.  
 * **Windows:** Turn num lock on, then hold down the left Alt key and type 0151 on the num pad.
 
-##### En Dash {#en-dash}
+##### En dash {#en-dash}
 
 Use an en dash (–) to indicate a range of numbers, as a minus sign, or to indicate negative numbers. Don’t put any spaces before or after the en dash except for when it’s used as a minus sign. Don’t use a hyphen (-). 
 
@@ -950,7 +950,7 @@ Refer to your operating system for how to type an en dash:
 
 An ellipsis is a series of three periods (...) that indicates an omission of one or more words. In general, avoid using ellipses when possible while writing instructions or learning content. 
 
-#### Exclamation Points {#exclamation-points}
+#### Exclamation points {#exclamation-points}
 
 An exclamation point can be used sparingly for an informal tone. However, avoid overly using exclamation points throughout text. Instead, consider using Alerts.
 
@@ -1099,7 +1099,7 @@ Use slashes as needed in file paths and URLs.
 </table>
 {:/}
 
-#### Quotation Marks {#quotation-marks}
+#### Quotation marks {#quotation-marks}
 
 There are two types of quotation marks: straight (" ") and curly (“ ”). Periods and commas go inside the quotation marks. An exception is when the quotation marks include exact information such as a string. Use quotation marks when directing users to input a specific string of text into a text field.
 
@@ -1115,15 +1115,15 @@ Code examples must use straight quotation marks. For more information about form
 
 ### Technical documentation {#technical-documentation}
 
-#### API Endpoints {#api-endpoints}
+#### API endpoints {#api-endpoints}
 
 In general, documentation for API endpoints should follow the guidelines in this style guide. However, there are niche topics that may require different content guidelines listed in this document. For more information on how to format and reference endpoints, refer to [API Endpoint Documentation Guidelines](https://docs.google.com/document/d/1PotRvG7A4JS6hGaH1knMF1HPEM-HkwBo3O90q1Zul-4/edit?usp=sharing). 
 
-#### Avoid Guarantees {#avoid-guarantees}
+#### Avoid guarantees {#avoid-guarantees}
 
 Our documentation must refrain from making commitments that could potentially result in legal implications. Avoid using definitive terms such as "guarantee" or "ensure." Instead, employ forward-looking statements like "Designed to" or "Intended to" to accurately convey the product's capabilities and intentions.
 
-#### Describing Interactions with the UI {#describing-interactions-with-the-ui}
+#### Describing interactions with the UI {#describing-interactions-with-the-ui}
 
 When referring to UI elements, match the capitalization as it appears in the UI. However, If a label is all caps, use sentence case (exception: short labels, like AND or OR operators). 
 
@@ -1157,7 +1157,7 @@ For guidance on what verbs to use when describing interactions with the UI, refe
 </table>
 {:/}
 
-#### Describing Limitations {#describing-limitations}
+#### Describing limitations {#describing-limitations}
 
 Write candidly about the product's limitations, without distortion or manipulation. Readers react in an intense fashion to being manipulated, hoodwinked, and otherwise bamboozled, and this jeopardizs the documentation's efficacy as a source of utilitarian truth. Customers rely on documentation to understand the limits of the system to which they are building so that they can use Braze successfully.
 
@@ -1175,7 +1175,7 @@ At the same time, support the intentionality of the product's development by fra
 * When referring to limits around custom data, use the term "capacity" instead of limits.   
  * For example: By default, you can have 20 segmentable event properties per workspace. Contact your Braze account manager to increase your capacity. 
 
-#### Future Features {#future-features}
+#### Future features {#future-features}
 
 Avoid references to future features, or suggestions that something may be supported in the future.
 
@@ -1195,7 +1195,7 @@ Specifically avoid the following list of words and phrases, taken from Google’
 * presently, at present  
 * soon
 
-#### Features Deprecations {#features-deprecations}
+#### Feature deprecations {#features-deprecations}
 
 Before including information about feature deprecations, be sure you have a general time frame of when readers can expect the feature to be deprecated (for example, late 2025).
 
@@ -1203,7 +1203,7 @@ After you have a general time frame, communicate the feature deprecation early. 
 
 Don't use phrases that might incite fear, uncertainty, or doubt with readers. Provide a clear path forward, such as what the deprecated feature is being replaced by or an alternative solution.
 
-#### General vs Specific {#general-vs-specific}
+#### General vs. specific {#general-vs-specific}
 
 As a best practice, write articles that discuss functionality in a generally applicable way. If more detail is needed for specific cases or exceptions, create a separate section (or separate article if the content is web article length, ~500 words) that outlines this outlier. Create cross-references from the general article to the specific to help users connect these concepts.
 
@@ -1216,7 +1216,7 @@ Instead of creating one article for each engagement tool and each channel, creat
 
 Articles in Braze documentation require certain metadata for search and index purposes. For information on what metadata is required, refer to the GitHub page on [YAML and Metadata Layouts](https://github.com/braze-inc/braze-docs/wiki/YAML-%26-Metadata-Layouts).
 
-#### Naming Conventions {#naming-conventions}
+#### Naming conventions {#naming-conventions}
 
 When naming articles and filenames, make sure to describe the general topic in the title. Always include a keyword and brief description that readers easily understand, especially with article titles. 
 
@@ -1241,7 +1241,7 @@ In general, for articles and image files, use the same spelling and capitalizati
 
 When referring to a specific file, use the same spelling of the filename and code font. For formatting details, refer to the GitHub page on [Special Formatting](https://github.com/braze-inc/braze-docs/wiki/Special-Formatting). 
 
-#### Procedures and Instructions {#procedures-and-instructions}
+#### Procedures and instructions {#procedures-and-instructions}
 
 This section covers some guidelines to keep in mind when writing instructions for procedures in the Braze dashboard. 
 
@@ -1286,7 +1286,7 @@ To display a full address, use the numeral, followed by the street name, followe
 
 *330 W. 34th St., New York, NY 10001*
 
-#### Buttons Labels {#buttons-labels}
+#### Button labels {#buttons-labels}
 
 Button labels should be clear and predictable—the user should know what action occurs upon clicking the button. Use sentence case for button labels, and lead with a strong verb. If it may be unclear what the verb is referring to, use the format [verb] + [noun]. 
 
@@ -1306,7 +1306,7 @@ Button labels should be clear and predictable—the user should know what action
 
 Omit unnecessary words and articles, such as “a”, “an,” or “the”.
 
-#### Callouts and Alerts {#callouts-and-alerts}
+#### Callouts and alerts {#callouts-and-alerts}
 
 Alerts, also known as callouts, are used to draw attention to information that is helpful to the reader. There are four alerts types that are used in our documentation:
 
@@ -1317,7 +1317,7 @@ Alerts, also known as callouts, are used to draw attention to information that i
 
 Use alerts sparingly throughout articles. For more information, refer to [Best Practices for Alerts]({#alerts}).
 
-#### Code in Text {#code-in-text}
+#### Code in text {#code-in-text}
 
 There are a few scenarios where you should use code font to format text within a sentence. Here is an incomplete list of items that should be in code font:
 
@@ -1332,7 +1332,7 @@ There are a few scenarios where you should use code font to format text within a
 
 To create in-line code text in Braze documentation, surround the text in backticks (`). 
 
-#### Code Samples {#code-samples}
+#### Code samples {#code-samples}
 
 Code samples refer to blocks of code text that display a sample snippet of code. For accessibility purposes, introduce the code sample with an expository sentence where possible.
 
@@ -1340,7 +1340,7 @@ To make sure your code samples are legible, indent each line by two spaces per i
 
 To create code blocks in Braze documentation, refer to [Code Snippet Test](https://github.com/braze-inc/braze-docs/blob/develop/_docs/_home/styling_test_page.md#code-snippet-test). Remember that code blocks should specify the language type to ensure proper syntax highlighting.
 
-#### Dates and Times {#dates-and-times}
+#### Dates and times {#dates-and-times}
 
 Spell out the month and days of the week. Avoid abbreviations when possible. For instances when abbreviating months are required, only abbreviate the following: 
 
@@ -1434,13 +1434,13 @@ Exceptions include the following scenarios:
 * When using ✅ and ❌ in tables to denote content that is supported versus unsupported, or recommended versus not recommended  
 * When used in example copy for a campaign or Canvas message
 
-#### Example Names {#example-names}
+#### Example names {#example-names}
 
 Never use real names, email addresses, or any other personally identifiable information (PII). Instead, use fictional examples or [placeholder text](#placeholder-text). 
 
 When you need to include names in your writing, refer to Wikipedia’s list of [Unisex names](https://en.wikipedia.org/wiki/Unisex_name). Use the pronouns “they”, “their”, and “theirs” when possible, and avoid using examples that are limited to a specific gender.
 
-##### Example Email Addresses
+##### Example email addresses
 
 Use the format “name@example.com” for generic email addresses. Replace “name” with an example name. For example:
 
@@ -1448,11 +1448,11 @@ Use the format “name@example.com” for generic email addresses. Replace “na
 * lee@example.com  
 * yuri@example.com
 
-#### Figures and Other Images {#figures-and-other-images}
+#### Figures and other images {#figures-and-other-images}
 
 When creating figures and images, refer to the [Image Copy Style Guide]({#image_style_guide}). Never include personally identifiable information (PII) in figures or images.
 
-##### Alt Text {#alt-text}
+##### Alt text {#alt-text}
 
 Always include alt text with images. Screen readers announce alt text to explain images to people with loss of vision. As such, your alt text must convey all the key information depicted in the image.  
 Use the following guidelines when writing alt text:
@@ -1482,7 +1482,7 @@ Adding alt text to every image does not automatically make webpage content easy 
 
 If possible, take screenshots from [dashboard-06](https://dashboard-06.braze.com/) so that you’re using one of the FakeBrandz company names.
 
-#### File Types and Filenames {#file-types-and-filenames}
+#### File types and filenames {#file-types-and-filenames}
 
 When you’re referring to a file type, use the standard name of the type. If the file type is an acronym, refer to the file type in all caps. 
 
@@ -1522,7 +1522,7 @@ Footnotes are annotations that provide additional information and are usually pl
 * If you are presenting one or two pieces of information, use a link or an alert.  
 * If you need to provide additional information to items in a table, use an asterisk (*) symbol next to the table item and present the information after the table.
 
-#### Formatting Text in Instructions {#formatting-text-in-instructions}
+#### Formatting text in instructions {#formatting-text-in-instructions}
 
 Use consistent text formatting to help readers find and interpret information. This section provides guidelines on what formatting to use when describing or referring to different text elements in your instructions.
 
@@ -1605,7 +1605,7 @@ When referring to a checkbox, use bold text for the checkbox label. Don’t incl
 
 When referring to command-line commands or options, use code formatting. Match capitalization to how it appears, or how it must be typed. 
 
-##### Dialog boxes (Modals) {#dialog-boxes-(modals)}
+##### Dialog boxes (modals) {#dialog-boxes-(modals)}
 
 Avoid referring to dialog boxes by name unless clarity is needed. Instead, describe what the reader needs to do. If you refer to a dialog box, use bold text for the name of the dialog box and match the capitalization of the UI.
 
@@ -1651,7 +1651,7 @@ When referring to the names of filters and operators for segments or other areas
 </table>
 {:/}
 
-##### Folder and Filenames {#folder-and-filenames}
+##### Folder and filenames {#folder-and-filenames}
 
 When referring to folder names and filenames, use code text. 
 
@@ -1758,7 +1758,7 @@ When instructing a reader to type a specific string of text, enclose the text in
 </table>
 {:/}
 
-#### Frequently Asked Questions (FAQs) {#frequently-asked-questions-(faqs)}
+#### Frequently asked questions (FAQs) {#frequently-asked-questions-(faqs)}
 
 Order the FAQs by starting with the information that people most want or need to know, and then organize the FAQs by issue category if there are multiple ones.
 
@@ -1821,13 +1821,13 @@ Capitalize proper nouns describing a specific region or place.
 
 **Example:** West Midlands, South America, South Chicago
 
-##### States and Provinces
+##### States and provinces
 
 Capitalize all states and provinces. 
 
 **Example:** New York, Quebec
 
-#### Headings and Titles {#headings-and-titles}
+#### Headings and titles {#headings-and-titles}
 
 For article headings and titles, use sentence case capitalization. Be descriptive when writing headings and titles, and focus on the main purpose of the content based on the article type. 
 
@@ -1905,7 +1905,7 @@ For list item capitalization, start each list item with a capital letter. For li
 * If the list item is in code font  
 * If the list item is a link or document title
 
-#### Media Formatting {#media-formatting}
+#### Media formatting {#media-formatting}
 
 This section includes general guidelines for formatting images and GIFs in your content. For more information, including example screenshots, refer to the [Image Copy Style Guide]({#image_style_guide}).
 
@@ -1950,7 +1950,7 @@ Use the decimal for amounts where the number of cents is greater than zero. For 
 </table>
 {:/}
 
-##### Telephone Numbers
+##### Telephone numbers
 
 When a phone number is referenced, place hyphens between the digits. Do not place the area code within parentheses. 
 
@@ -2025,11 +2025,11 @@ For ranges of numbers with units, repeat the unit of measurement after the numbe
 </table>
 {:/}
 
-#### Placeholder Text  {#placeholder-text}
+#### Placeholder text  {#placeholder-text}
 
 Use placeholder text to signify where the reader should supply the relevant value. Placeholder text should indicate the content that’s being represented. For example *YOUR_API_KEY* indicates the reader’s API key.
 
-##### Writing Placeholders
+##### Writing placeholders
 
 When creating placeholder text, refer to the following guidelines:
 
@@ -2050,7 +2050,7 @@ When creating placeholder text, refer to the following guidelines:
 </table>
 {:/}
 
-##### Using Placeholders
+##### Using placeholders
 
 When introducing or explaining a placeholder, refer to the following guidelines:
 
@@ -2093,7 +2093,7 @@ Using tables can be a helpful and organized way to display information. Make sur
 
 Always use an introductory sentence to describe the purpose of the table. Avoid using tables in the middle of numbered procedures. Instead, consider using a list. 
 
-#### Units of Measurement {#units-of-measurement}
+#### Units of measurement {#units-of-measurement}
 
 For HTML and Markdown, use a nonbreaking space (&nbsp) between the number and the unit when specifying a unit of measurement. This includes most units of measurement such as distance, pixels, points, weight, and degrees of temperature (between the degree and unit of measurement). 
 
@@ -2103,19 +2103,19 @@ For ranges of numbers with units, repeat the unit for each number. Similarly, fo
 
 ### Linking {#linking}
 
-#### Cross-reference Links {#cross-reference-links}
+#### Cross-reference links {#cross-reference-links}
 
 Use cross-references to guide users to additional resources. In Braze documentation, use site-root-relative URLs to link to other Braze docs (replace “www.braze.com/docs” with “{{site.baseurl}}”).
 
 Avoid adding multiple links to the same document within a given page, as this can cause link fatigue. Duplicate links are fine in moderation if you’re linking to a specific section on another page, or if the page you’re linking from is long.
 
-#### Embedding Videos {#embedding-videos}
+#### Embedding videos {#embedding-videos}
 
 Similar to images, use videos to create variety in your learning materials. Most people learn best with a combination of mediums, so make sure that any content you include in a video is also covered in the article or lesson.
 
 To embed a video in Braze documentation, refer to [Embedded Video Test]({{site.baseurl}}/home/styling_test_page/#embedded-video-test).
 
-#### Headings as Link Targets {#headings-as-link-targets}
+#### Headings as link targets {#headings-as-link-targets}
 
 In Braze documentation, anchors are automatically created for headings. However, you may want to add a custom anchor to a heading if:
 
@@ -2124,11 +2124,11 @@ In Braze documentation, anchors are automatically created for headings. However,
 
 To add an anchor to a heading in Braze documentation, refer to [Custom Anchors]({{site.baseurl}}/home/styling_test_page/#custom-header-anchor).
 
-#### Link Text {#link-text}
+#### Link text {#link-text}
 
 Effective link text helps to improve the findability, discoverability, and accessibility of your content. 
 
-##### Structuring Links {#structuring-links}
+##### Structuring links {#structuring-links}
 
 Use one of the following formats when writing links:
 
@@ -2156,7 +2156,7 @@ If you’re linking to a section on the same page, use a standard phrase that in
 * In this document, refer to [heading].  
 * For more information, refer to the section [heading].
 
-##### Writing Links {#writing-links}
+##### Writing links {#writing-links}
 
 Apply the following guidelines when writing link text:
 
@@ -2188,7 +2188,7 @@ Apply the following guidelines when writing link text:
 </table>
 {:/}
 
-#### Links for Endpoints {#links-for-endpoints}
+#### Links for endpoints {#links-for-endpoints}
 
 When referencing endpoint articles, be sure to use [meaningful link text](https://docs.google.com/document/d/e/2PACX-1vTluyDFO3ZEV7V6VvhXE4As_hSFwmnFFdU9g6_TrAYTgH1QmbRoEDDdn5GzKAB9vdBbIdyiFdoaJcNk/pub#h.79ujl0qtumog) that can make sense out of context. If you’re using the endpoint’s path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint’s function.    
 
@@ -2204,7 +2204,7 @@ When referencing endpoint articles, be sure to use [meaningful link text](https:
 </table>
 {:/}
 
-#### Links for File Download {#links-for-file-download}
+#### Links for file download {#links-for-file-download}
 
 If a link downloads a file, then make that clear in the link text, and mention the file type.
 
@@ -2221,7 +2221,7 @@ If a link downloads a file, then make that clear in the link text, and mention t
 </table>
 {:/}
 
-#### Links to Other Sites {#links-to-other-sites}
+#### Links to other sites {#links-to-other-sites}
 
 As a general rule, don’t link to another site if you can cover the information with a brief explanation. We can’t keep track of when the content on another site changes. 
 
@@ -2229,7 +2229,7 @@ If you do link to an external site, make sure that the site you link to is high 
 
 Use an external link icon to indicate that the link goes to a different domain. For Braze documentation, this is automatically applied to external links.
 
-#### URLs for Images {#urls-for-images}
+#### URLs for images {#urls-for-images}
 
 In Braze documentation, use site-root-relative URLs to link to images. For more information, refer to [Adding and Editing Images](https://github.com/braze-inc/braze-docs/wiki/Editing-Content#adding-and-editing-images).
 
@@ -2769,11 +2769,11 @@ Because Braze docs already add a border to each image, omit borders in a section
 
 ## Alerts (best practices) {#alerts}
 
-### Best Practices for Alerts {#best-practices-for-alerts}
+### Best practices for alerts {#best-practices-for-alerts}
 
 This document contains information, general guidelines, and examples for alert types used in Braze documentation. 
 
-### Alert Types {#alert-types}
+### Alert types {#alert-types}
 
 Alerts categorize information that a reader should be aware of. There are four alert types that can be used in our documentation:
 
@@ -2782,7 +2782,7 @@ Alerts categorize information that a reader should be aware of. There are four a
 * Tip  
 * Warning
 
-### When to Use an Alert {#when-to-use-an-alert}
+### When to use an alert {#when-to-use-an-alert}
 
 Use alerts to draw a reader’s attention to important information. Keep the content short and to the point. We want to make sure that information sticks with the reader.
 
@@ -2811,11 +2811,11 @@ As a general rule of thumb, avoid using alerts for content that is essential to 
 | Avoid using two or more alerts in a row if possible. Instead, reorganize or include the information as part of the text instead. | ![An example of two alerts next to each other, which you should avoid.]({% image_buster /assets/img/contributing/style_guide/alert_7.png %}) <br><br> [Setting User IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_user_ids/) |
 | If you find your alert is lengthy, consider creating a new section that includes the information as a list. For example, instead of including troubleshooting steps in an alert, consider creating a troubleshooting section or providing a link to a related article.  | ![Example of a new section of content.]({% image_buster /assets/img/contributing/style_guide/alert_8.png %}) <br><br> [Tip alert in Canvas and Campaign Tag Differences Section]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) |
 
-### Alert Examples {#alert-examples}
+### Alert examples {#alert-examples}
 
 Refer to the following examples for how and why each alert type is used in our documentation. 
 
-### Important Alert  {#important-alert}
+### Important alert  {#important-alert}
 
 {% include alerts/important_alerts.md alert='Web push private browsing' %}
 
@@ -2837,7 +2837,7 @@ Refer to the following examples for how and why each alert type is used in our d
 * **Use Case:** Includes pressing feature caveat about the Notification Priority. Redirects the reader to new information that's available.
 * **Alert Reasoning:** The Important alert is best used here to redirect the reader to current information and to highlight that the section is applicable only to certain users. It's also placed after the section header, which forces the user to address the important alert before reading the rest of the section.
 
-### Note Alert {#note-alert}
+### Note alert {#note-alert}
 
 {% include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
@@ -2857,7 +2857,7 @@ Refer to the following examples for how and why each alert type is used in our d
 * **Use Case:** Includes general information that a reader should be aware of. Redirects to Braze contact for further information.
 * **Alert Reasoning:** This Note alert provides additional information about data storage that would be helpful for a reader to know as they manage their custom attributes. However, the content does not require a stronger indication of importance to the reader, so a Note alert is acceptable here.
 
-### Tip Alert {#tip-alert}
+### Tip alert {#tip-alert}
 
 {% include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
@@ -2872,7 +2872,7 @@ Refer to the following examples for how and why each alert type is used in our d
 * **Use Case:** Provides troubleshooting advice when using this endpoint.
 * **Alert Reasoning:** The Tip alert provides additional support for the reader. Use a Tip alert as opposed to a Note alert because the focus of the content is to assist the reader by providing the troubleshooting article.
 
-### Warning Alert {#warning-alert}
+### Warning alert {#warning-alert}
 
 {% include alerts/warning_alerts.md alert='User profile external_id' %}
 
@@ -3128,4 +3128,4 @@ In general, adhere to standard English conventions when providing inline comment
 ### Additional resources
 
 * [Google developer documentation style guide](https://developers.google.com/style)  
-  * [API reference code and comments](https://developers.google.com/style/api-reference-comments)
+  - [API reference code and comments](https://developers.google.com/style/api-reference-comments)
