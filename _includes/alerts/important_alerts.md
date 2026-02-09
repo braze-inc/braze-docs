@@ -9,7 +9,7 @@ A [new version of the Shopify integration]({{site.baseurl}}/partners/shopify/#ne
 {% if include.alert == 'Web push private browsing' %}
 
 {% alert important %}
-Private browsing windows do not currently support web push.
+Private browsing windows do not support web push.
 {% endalert %}
 
 {% endif %}
