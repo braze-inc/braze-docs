@@ -669,5 +669,5 @@ event_documentation:
   agentconsole.ToolInvocation:
     description: This is the Kafka record schema for when a tool is executed.
     api_tags:
-      - Invocation
+      - Agent
 

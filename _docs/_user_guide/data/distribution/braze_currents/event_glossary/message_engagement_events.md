@@ -129,7 +129,7 @@ This is the Kafka record schema for when an Agent Console agent is executed.
 ## Tool invocation events {#tool-invocation-events}
 
 {% apitags %}
-Invocation
+Agent
 {% endapitags %}
 
 This is the Kafka record schema for when a tool is executed.
