@@ -197,7 +197,7 @@ During test sends, Content Cards that exceed 2 KB can still be delivered and dis
 
 Here are some best practices for managing Content Card payload size:
 
-* Use URL shorteners for long links. URLs, especially those with extensize tracking parameters, can run into size limit issues. Using a URL shortening service can dramatically reduce the character count and free up space in the payload.
+* Use URL shorteners for long links. URLs, especially those with extensive tracking parameters, can run into size limit issues. Using a URL shortening service can dramatically reduce the character count and free up space in the payload.
 * Truncate dynamic content with Liquid. When personalizing cards with dynamic text from user attributes or API calls, the length of the content can be unpredictable. Proactively use Liquid fliters like `truncate` to cap the length of any dynamic text.
 * Be efficient with multi-platform URLs. The 2 KB limit includes the URLs for all platforms you define. Using long, unique URLs for each platform can multiply the size of the payload. If possible, use a single link that works across all platforms, or use URL shorteners as needed.
 * Consider Banners for richer content. For use cases that consistently require large amounts of content, Content Cards may not be the right channel. Banners do not have the same 2 KB payload limitation and are better suited for embedding richer content directly into an app or website experience.
