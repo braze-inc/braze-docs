@@ -395,9 +395,21 @@ function getCharacterEncoding(char, type) {
 
 function displayCharacterEncoding(text, type) {
   const characters = smsutil.unicodeCharacters(text);
+  const escapeHtml = (text) =>
+    text.replace(/[&<>"'\/]/g, function (c) {
+      switch (c) {
+        case '&': return '&amp;';
+        case '<': return '&lt;';
+        case '>': return '&gt;';
+        case '"': return '&quot;';
+        case "'": return '&#39;';
+        case '/': return '&#x2F;';
+        default: return c;
+      }
+    });
   return characters.map((char, index) => {
     const encoding = getCharacterEncoding(char, type);
-    const displayChar = char === " " ? "&nbsp;" : char;
+    const displayChar = char === " " ? "&nbsp;" : escapeHtml(char);
     const encodingClass = encoding === "gsm" ? "encoding_gsm" : "encoding_ucs2";
     const encodingLabel = encoding === "gsm" ? "GSM" : "UCS";
     return `<span id="character_encoding_data_${index}" class="${encodingClass}" title="${displayChar} - ${encoding.toUpperCase()}">${encodingLabel}</span>`;
@@ -417,7 +429,7 @@ function updateSMSSplit(){
     $('#character_encoding').html(displayCharacterEncoding(sms_text, sms_type));
 
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
-    const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
+    const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join("")).join("");
 
     // Create message output with both segment and character indexing
     let characterIndex = 0;
@@ -443,22 +455,6 @@ function updateSMSSplit(){
     );
     $('#sms_output').html(messageOutput.join(""));
     $('#sms_segments_data').html(segmentsHtml);
-    $('#segment_section').click(function() {
-      if($(this).is(":checked")) {
-        $("#sms_segments_data").show();
-      }
-      else {
-        $("#sms_segments_data").hide();
-      }
-    });
-    $('#encoding_section').click(function() {
-      if($(this).is(":checked")) {
-        $("#character_encoding_container").show();
-      }
-      else {
-        $("#character_encoding_container").hide();
-      }
-    })
 }
 // Enhanced hover functionality with three-way highlighting
 $("#sms_segments_data").mouseover(function(e){
@@ -511,6 +507,22 @@ $("#character_encoding").mouseover(function(e){
         $(elementsToHighlight).removeClass("hover_segment");
       });
     }
+  }
+});
+$('#segment_section').click(function() {
+  if($(this).is(":checked")) {
+    $("#sms_segments_data").show();
+  }
+  else {
+    $("#sms_segments_data").hide();
+  }
+});
+$('#encoding_section').click(function() {
+  if($(this).is(":checked")) {
+    $("#character_encoding_container").show();
+  }
+  else {
+    $("#character_encoding_container").hide();
   }
 });
 $('#sms_message_split').on("input", function(e){
