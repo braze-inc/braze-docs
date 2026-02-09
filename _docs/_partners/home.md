@@ -391,5 +391,9 @@ valid_partner_list:
 - name: Canva
   url: /docs/partners/canva/
 - name: OpenAI
-  url: /docs/partners/openai
+  url: /docs/partners/openai/
+- name: Google Gemini
+  url: /docs/partners/google_gemini/
+- name: Anthropic
+  url: /docs/partners/anthropic/
 ---
