@@ -12,6 +12,8 @@ search_tag: Partner
 
 > [Anthropic](https://www.anthropic.com/) is an AI safety and research company developing Claude, a next-generation AI assistant built to be helpful, honest, and safe for a wide range of language tasks.
 
+_This integration is maintained by Anthropic._
+
 ## About the integration
 
 The Braze and Anthropic integration lets you connect your Anthropic API key to Braze so you can use Claude models when building custom AI agents. With this integration, your agents can generate personalized copy, make real-time decisions, or update catalog fields using Anthropic's Claude models.
