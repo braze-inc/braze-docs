@@ -133,9 +133,7 @@ Content Cards can be delivered based on a scheduled time, an action, or an API t
 
 You can also set the campaign's duration and [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/#quiet-hours) and determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
 
-{% alert note %}
-Frequency capping doesn't apply to Content Cards.
-{% endalert %}
+{% multi_lang_include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
 ##### Scheduled delivery
 

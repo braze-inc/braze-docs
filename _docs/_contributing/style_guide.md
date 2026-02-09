@@ -2817,176 +2817,80 @@ Refer to the following examples for how and why each alert type is used in our d
 
 ### Important Alert  {#important-alert}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/important_alert_1.png %}" alt="Example of an important alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/push/web/">Push for Web</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Includes essential feature caveat that the reader should know as they set up their web push</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> Use an Important alert as opposed to a Note alert because the content’s importance is greater for a reader to know as they set up their web push.</td>
-</tr>
-</table>
-{:/}
+{% include alerts/important_alerts.md alert='Web push private browsing' %}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/important_alert_2.png %}" alt="Example of an important alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/">Email Settings</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> <ul><li>Provides important feature caveat about the possibility of doubling billable emails</li><li>Redirects reader to contact their Customer Success Manager as needed</li></ul></td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> The Important alert is used here to communicate details about the BCC addresses in their email settings. <br><br> This information is best presented using an Important alert as opposed to a Warning alert because omitting this information does not impact the feature irreversibly (feature breaking, permanent data loss, etc.)</td>
-</tr>
-</table>
-{:/}
+* **Article:** [Push for Web]({{site.baseurl}}/user_guide/message_building_by_channel/push/web/)
+* **Use Case:** Includes essential feature caveat that the reader should know as they set up their web push.
+* **Alert Reasoning:** Use an Important alert as opposed to a Note alert because the content's importance is greater for a reader to know as they set up their web push.
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/important_alert_3.png %}" alt="Example of an important alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/advanced_settings/?redirected=true">Advanced Settings</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Includes pressing feature caveat about the Notification Priority Redirects the reader to new information that’s available</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> The Important alert is best used here to redirect the reader to current information and to highlight that the section is applicable only to certain users. It’s also placed after the section header, which forces the user to address the important alert before reading the rest of the section.</td>
-</tr>
-</table>
-{:/}
+{% include alerts/important_alerts.md alert='BCC address billable emails' %}
+
+* **Article:** [Email Settings]({{site.baseurl}}/user_guide/administrative/app_settings/email_settings/)
+* **Use Case:**
+  - Provides important feature caveat about the possibility of doubling billable emails
+  - Redirects reader to contact their Customer Success Manager as needed
+* **Alert Reasoning:** The Important alert is used here to communicate details about the BCC addresses in their email settings. This information is best presented using an Important alert as opposed to a Warning alert because omitting this information does not impact the feature irreversibly (feature breaking, permanent data loss, etc.).
+
+{% multi_lang_include alerts/important_alerts.md alert='Android notification priority' %}
+
+* **Article:** [Advanced Campaign Settings]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/#notification-display-priority)
+* **Use Case:** Includes pressing feature caveat about the Notification Priority. Redirects the reader to new information that's available.
+* **Alert Reasoning:** The Important alert is best used here to redirect the reader to current information and to highlight that the section is applicable only to certain users. It's also placed after the section header, which forces the user to address the important alert before reading the rest of the section.
 
 ### Note Alert {#note-alert}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/note_alert_1.png %}" alt="Example of a note alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/">Create a Content Card</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Includes additional information that a reader should be aware of as they learn more about Content Cards</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> This Note alert provides background information on how Braze cycles older Content Cards for users.  This is helpful, supplemental information for the reader to be aware of and does not require the use of an Important or Tip alert.</td>
-</tr>
-</table>
-{:/}
+{% include alerts/note_alerts.md alert='Content Cards frequency capping' %}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/note_alert_2.png %}" alt="Example of a note alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/">Custom Attributes</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Includes general information that a reader should be aware of Provides an article to learn more about related content (time attributes)</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> This information is best relayed using a Note alert as opposed to an Important alert because the content is directed to provide general information. Disregarding this information would not impact the ease of use for this feature.</td>
-</tr>
-</table>
-{:/}
+* **Article:** [Create a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/)
+* **Use Case:** Includes additional information that a reader should be aware of as they learn more about Content Cards.
+* **Alert Reasoning:** This Note alert provides background information on how Braze cycles older Content Cards for users. This is helpful, supplemental information for the reader to be aware of and does not require the use of an Important or Tip alert.
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/note_alert_3.png %}" alt="Example of a note alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/#managing-properties">Custom Events and Attribute Management</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Includes general information that a reader should be aware of Redirects to Braze contact for further information</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> This Note alert provides <strong>additional</strong> information about data storage that would be helpful for a reader to know as they manage their custom attributes.  However, the content does not require a stronger indication of importance to the reader, so a Note alert is acceptable here.</td>
-</tr>
-</table>
-{:/}
+{% include alerts/note_alerts.md alert='Custom Attributes time attribute' %}
+
+* **Article:** [Custom Attributes]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_attributes/)
+* **Use Case:** Includes general information that a reader should be aware of. Provides an article to learn more about related content (time attributes).
+* **Alert Reasoning:** This information is best relayed using a Note alert as opposed to an Important alert because the content is directed to provide general information. Disregarding this information would not impact the ease of use for this feature.
+
+{% include alerts/note_alerts.md alert='Manage custom data storage' %}
+
+* **Article:** [Manage Custom Data]({{site.baseurl}}/user_guide/data/activation/custom_data/managing_custom_data/#managing-properties)
+* **Use Case:** Includes general information that a reader should be aware of. Redirects to Braze contact for further information.
+* **Alert Reasoning:** This Note alert provides additional information about data storage that would be helpful for a reader to know as they manage their custom attributes. However, the content does not require a stronger indication of importance to the reader, so a Note alert is acceptable here.
 
 ### Tip Alert {#tip-alert}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/tip_alert_1.png %}" alt="Example of a tip alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/">SMS Message Segments and Copy Limits</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Includes tool for the reader to understand their message length and SMS segment count Provides information that may be helpful for the reader in their understanding of copy limits</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> This is a lengthy Tip alert because it provides a space for entering the copy to see how many segments a message dispatches. The Tip alert is the best option here because this is a helpful generator for the reader to use in the process of setting up their SMS messages.</td>
-</tr>
-</table>
-{:/}
+{% include alerts/tip_alerts.md alert='SMS segment calculator' %}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/tip_alert_2.png %}" alt="Example of a tip alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date/">Daily App Uninstalls by Date Endpoint</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Provides troubleshooting advice when using this endpoint</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> The Tip alert provides additional support for the reader. Use a Tip alert as opposed to a Note alert because the focus of the content is to assist the reader by providing the troubleshooting article.</td>
-</tr>
-</table>
-{:/}
+* **Article:** [SMS and RCS Billing Calculators]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/)
+* **Use Case:** Includes tool for the reader to understand their message length and SMS segment count. Provides information that may be helpful for the reader in their understanding of copy limits.
+* **Alert Reasoning:** This is a lengthy Tip alert because it provides a space for entering the copy to see how many segments a message dispatches. The Tip alert is the best option here because this is a helpful generator for the reader to use in the process of setting up their SMS messages.
+
+#### Example 2
+{% include alerts/tip_alerts.md alert='Export troubleshooting' %}
+
+* **Article:** [Export KPIs for Daily App Uninstalls by Date]({{site.baseurl}}/api/endpoints/export/kpi/get_kpi_uninstalls_date/)
+* **Use Case:** Provides troubleshooting advice when using this endpoint.
+* **Alert Reasoning:** The Tip alert provides additional support for the reader. Use a Tip alert as opposed to a Note alert because the focus of the content is to assist the reader by providing the troubleshooting article.
 
 ### Warning Alert {#warning-alert}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/warning_alert_1.png %}" alt="Example of a warning alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/">User Profile Lifecycle</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Indicates something that the reader should not do when creating their user profiles in Braze</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> The Warning alert is used to caution the reader against assigning an external_id before uniquely identifying them. This information is best relayed using a Warning alert as opposed to an Important alert because it includes irreversible consequences for the user profile.</td>
-</tr>
-</table>
-{:/}
+{% include alerts/warning_alerts.md alert='User profile external_id' %}
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/warning_alert_2.png %}" alt="Example of a warning alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/">Segments for Currents</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Cautions the reader when creating Currents connectors Includes the consequence of incorrectly creating these connectors</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> The Warning alert is best used here to describe the limitations of the Braze Segment Currents integration. Use a Warning alert as opposed to an Important alert because creating more than one of the same Currents connectors incorrectly may result in losing data.</td>
-</tr>
-</table>
-{:/}
+* **Article:** [User Profile Lifecycle]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+* **Use Case:** Indicates something that the reader should not do when creating their user profiles in Braze.
+* **Alert Reasoning:** The Warning alert is used to caution the reader against assigning an external_id before uniquely identifying them. This information is best relayed using a Warning alert as opposed to an Important alert because it includes irreversible consequences for the user profile.
 
-{::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
-<tr>
-<td colspan="2"><img src="{% image_buster /assets/img/contributing/style_guide/warning_alert_3.png %}" alt="Example of a warning alert."></td>
-</tr>
-<tr>
-<td colspan="2"><strong>Article:</strong> <a href="{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/">Creating a Canvas</a></td>
-</tr>
-<tr>
-<td style="width: 50%;"><strong>Use Case</strong> Lists the information that may cause the feature to not work Details how the intended audience may not receive the campaign or enter the Canvas</td>
-<td style="width: 50%;"><strong>Alert Reasoning</strong> The Warning alert is used here to note how the feature may work incorrectly. This information is best relayed using a Warning alert as opposed to an Important alert because the information is critical and may result in breaking the Canvas delivery.</td>
-</tr>
-</table>
-{:/}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
+
+* **Article:** [Segment for Currents]({{site.baseurl}}/partners/data_and_analytics/customer_data_platform/segment/segment_for_currents/)
+* **Use Case:** Cautions the reader when creating Currents connectors. Includes the consequence of incorrectly creating these connectors.
+* **Alert Reasoning:** The Warning alert is best used here to describe the limitations of the Braze Segment Currents integration. Use a Warning alert as opposed to an Important alert because creating more than one of the same Currents connectors incorrectly may result in losing data.
+
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
+
+* **Article:** [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)
+* **Use Case:** Lists the information that may cause the feature to not work. Details how the intended audience may not receive the campaign or enter the Canvas.
+* **Alert Reasoning:** The Warning alert is used here to note how the feature may work incorrectly. This information is best relayed using a Warning alert as opposed to an Important alert because the information is critical and may result in breaking the Canvas delivery.
 
 ## Braze API endpoint documentation guidelines {#api-endpoint-documentation-guidelines}
 

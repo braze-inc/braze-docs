@@ -6,6 +6,30 @@ A [new version of the Shopify integration]({{site.baseurl}}/partners/shopify/#ne
 
 {% endif %}
 
+{% if include.alert == 'Web push private browsing' %}
+
+{% alert important %}
+Private browsing windows do not currently support web push.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'BCC address billable emails' %}
+
+{% alert important %}
+Appending a BCC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Android notification priority' %}
+
+{% alert important %}
+The Notification Display Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
+{% endalert %}
+
+{% endif %}
+
 {% if include.alert == "Email via SMS" %}
 
 {% alert important %}
