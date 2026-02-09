@@ -944,7 +944,7 @@ An ellipsis is a series of three periods (...) that indicates an omission of one
 
 #### Exclamation points {#exclamation-points}
 
-An exclamation point can be used sparingly for an informal tone. However, avoid overly using exclamation points throughout text. Instead, consider using Alerts.
+An exclamation point can be used sparingly for an informal tone. However, avoid overly using exclamation points throughout text. Instead, consider using [Alerts](#callouts-and-alerts).
 
 {::nomarkdown}
 <table class="style-guide-table" style="table-layout: fixed; width: 100%;">
@@ -1303,7 +1303,7 @@ Alerts, also known as callouts, are used to draw attention to information that i
 * Tip  
 * Warning
 
-Use alerts sparingly throughout articles. For more information, refer to [Best practices for alerts]({{site.baseurl}}/contributing/style_guide/alerts/).
+Use alerts sparingly throughout articles. For more information, refer to [Alerts best practices]({{site.baseurl}}/contributing/style_guide/alerts/).
 
 #### Code in text {#code-in-text}
 

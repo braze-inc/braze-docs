@@ -16,7 +16,7 @@ noindex: true
 }
 </style>
 
-In general, documentation for API endpoints should follow the guidelines indicated in the [General guidelines]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#general-guidelines). However, there are niche topics that may require different content guidelines listed in this document. 
+> In general, documentation for API endpoints should follow the guidelines indicated in the [General guidelines]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#general-guidelines). However, there are niche topics that may require different content guidelines listed in this document. 
 
 Braze supports the following REST API methods:
 
@@ -26,11 +26,11 @@ Braze supports the following REST API methods:
 * POST  
 * PUT
 
-### Creating a new endpoint article
+## Creating a new endpoint article
 
 When creating a new endpoint article, be sure to also add this endpoint into the [Braze API guide]({{site.baseurl}}/api/home) so that the endpoint is searchable. Navigate to  **`_docs`** folder  **`> _api`** folder **`> home.md`** file to add the endpoint by its path and a one-sentence description.
 
-### Referencing endpoints
+## Referencing endpoints
 
 In general, there isn't a clear convention for referring to endpoints in documentation. When referring to Braze endpoints, use your best judgment to determine how to refer to an endpoint depending on your use case. 
 
@@ -56,7 +56,7 @@ Don't put quotation marks around the endpoint name. Don't use plain text when re
 </table>
 {:/}
 
-#### Linking to endpoint articles
+### Linking to endpoint articles
 
 When referencing endpoint articles, be sure to use [meaningful link text]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#writing-links) that can make sense out of context. If you're using the endpoint's path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint's function.    
 
@@ -72,7 +72,7 @@ When referencing endpoint articles, be sure to use [meaningful link text]({{site
 </table>
 {:/}
 
-### Headings
+## Headings
 
 The introduction of an endpoint article must include the following information:
 
@@ -94,7 +94,7 @@ Use this checklist to ensure that the proper headings (and content) are included
 
 Refer to [Headings and titles]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#headings-and-titles) for formatting guidelines. 
 
-#### Path parameters
+### Path parameters
 
 If there are path parameters for the endpoint, include a Path parameters header and table (similar to the Request parameters table)
 
@@ -113,7 +113,7 @@ There are no path or request parameters for this endpoint.
 {:/}
 {% endraw %}
 
-### Naming conventions
+## Naming conventions
 
 Start each endpoint name with an active verb after its method. This lets users know the function of the endpoint immediately. 
 
@@ -133,7 +133,7 @@ Don't use the API method as the leading verb for the endpoint name.
 
 Exceptions to this naming convention are the endpoints in the [Export section]({{site.baseurl}}/api/endpoints/export) as the section name is a verb that indicates that the listed information can be exported.
 
-### API key permissions
+## API key permissions
 
 API key permissions are permissions you can assign a user or group to limit their access to certain API calls. For each endpoint documentation, include the following callout after the Postman documentation link: 
 
@@ -143,17 +143,17 @@ To find the full list of API key permissions, go to **Settings > API Keys** unde
 
 Note that SCIM endpoints do not have listed API key permissions since they're specific to the SCIM integration that occurs outside of the developer console. 
 
-### Rate limits
+## Rate limits
 
 In general, your rate limit should specify the number of requests and the allotted time. 
 
 Be mindful of endpoints that share a total rate limit. For example, all asynchronous catalog item endpoints share a total rate limit, so it's important to indicate that in the respective articles.
 
-#### How to update rate limit file
+### How to update rate limit file
 
 If your endpoint documentation requires updating or listing a new rate limit, go to **_docs > _api > api_limits.md** to make edits to the rate limit.
 
-### Parameters
+## Parameters
 
 Define both the request and response parameters in two separate tables.  These tables should contain the following columns:
 
@@ -164,7 +164,7 @@ Define both the request and response parameters in two separate tables.  These t
 
 When directly referring to an endpoint's parameters and when listing the values in the **Parameters** column, use code text. When listing the values in the **Required**, **Data Type**, and **Description** columns, use initial caps. 
 
-#### Placeholder text
+### Placeholder text
 
 For placeholder text, use curly brackets with a brief description of what the user should include. 
 
@@ -184,7 +184,7 @@ For API key placeholders, use `YOUR_REST_API_KEY`, not `YOUR-REST-API-KEY`.
 
 For API key placeholders, use `YOUR_REST_API_KEY` (with underscores), not `YOUR-REST-API-KEY` (with hyphens).
 
-### Requests and responses
+## Requests and responses
 
 An API request includes the header and request parameters. The request parameters should be formatted like this:
 
@@ -221,23 +221,23 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/update
 }'
 ```
 
-#### Status and error codes 
+### Status and error codes 
 
 Status codes indicate whether a user's specific request has been successfully completed. It can be helpful to include the status codes for users to know what's considered a success. For example, 400 and 404 can be indicators of an error response for the endpoint.
 
 If your endpoint documentation requires listing out error codes, link out to the [API Error and Responses]({{site.baseurl}}/api/errors/) article instead at **_docs** folder  **> _api** folder **> errors.md** file
 
-### Sample code
+## Sample code
 
 Sample code, like sample requests and responses, should be able to be copied and used with minimal work. With the exception of placeholder text (for example, the API key in the header), example requests should work as-is. Use Postman to ensure that your request is formatted correctly. 
 
-#### Beautify vs. minified code
+### Beautify versus minified code
 
 If the endpoint's request contains a body, beautify the example in Postman. This makes it easier for developers learning Braze conventions to understand each piece of the request.  
 
 If the endpoint's request body is very short or does not contain a body, minify the request so that unnecessary whitespace is removed. Use a tool like [JSON Minifier](https://codebeautify.org/jsonminifier) to do this. 
 
-#### Inline comments
+### Inline comments
 
 Use two forward slashes (//) to indicate single-line comments in example code. 
 
@@ -249,7 +249,7 @@ Avoid inline comments that simply restate human-readable code or method names. I
 
 In general, adhere to standard English conventions when providing inline comments. For example, begin sentences with a capital letter, spell out words completely, and so on.
 
-### Additional resources
+## Additional resources
 
-* [Google developer documentation style guide](https://developers.google.com/style)  
+- [Google developer documentation style guide](https://developers.google.com/style)  
   - [API reference code and comments](https://developers.google.com/style/api-reference-comments)
