@@ -6,7 +6,7 @@ page_order: 0
 noindex: true
 ---
 
-# Braze docs style guide
+# Braze Docs style guide
 
 ## Writing style guide
 
