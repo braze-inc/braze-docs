@@ -8,6 +8,14 @@ noindex: true
 
 # API endpoint documentation guidelines
 
+<style>
+.style-guide-table td {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+}
+</style>
+
 In general, documentation for API endpoints should follow the guidelines indicated in the [General guidelines]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#general-guidelines). However, there are niche topics that may require different content guidelines listed in this document. 
 
 Braze supports the following REST API methods:
@@ -37,7 +45,7 @@ There are instances where an endpoint is referred to as an API. For example, thi
 Don't put quotation marks around the endpoint name. Don't use plain text when referring to the path.
 
 {::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
+<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
@@ -53,7 +61,7 @@ Don't put quotation marks around the endpoint name. Don't use plain text when re
 When referencing endpoint articles, be sure to use [meaningful link text]({{site.baseurl}}/contributing/style_guide/writing_style_guide/#writing-links) that can make sense out of context. If you're using the endpoint's path as a link, be sure to provide details in the surrounding text as the path may not clearly communicate the endpoint's function.    
 
 {::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
+<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
@@ -97,8 +105,10 @@ If there are no path or request parameters for the endpoint, merge the caveat in
 {% raw %}
 {::nomarkdown}
 <div style="margin-left: 2em;">
+<code>
 ## Path and request parameters <br>
 There are no path or request parameters for this endpoint.
+</code>
 </div>
 {:/}
 {% endraw %}
@@ -110,7 +120,7 @@ Start each endpoint name with an active verb after its method. This lets users k
 Don't use the API method as the leading verb for the endpoint name.
 
 {::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
+<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
@@ -158,10 +168,10 @@ When directly referring to an endpoint's parameters and when listing the values 
 
 For placeholder text, use curly brackets with a brief description of what the user should include. 
 
-For API key placeholders, use YOUR_REST_API_KEY, not YOUR-REST-API-KEY.
+For API key placeholders, use `YOUR_REST_API_KEY`, not `YOUR-REST-API-KEY`.
 
 {::nomarkdown}
-<table style="table-layout: fixed; width: 100%;">
+<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
 <thead>
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>

@@ -27,28 +27,52 @@ Use alerts to draw a reader's attention to important information. Keep the conte
 
 Refer to the following table for definitions of each alert:
 
-| Alert Type | Definition |
-| :---- | :---- |
-| Important | Includes essential information that **should** be addressed by the reader, such as: {::nomarkdown}<ul><li>Deprecated features</li><li>Impacts on billing</li><li>Information pertaining to relevant updates</li><li>Pressing feature caveats (ex: beta features)</li><li>Other important tidbits of information</li></ul>{:/} |
-| Note | Includes one-off information that the reader should know, such as: {::nomarkdown}<ul><li>Feature caveats</li><li>Formatting guidance</li><li>Helpful callouts</li><li>Information that is demoted from an Important alert due to the alert's content dropping in severity (ex: a long-standing important alert shifting to a standard note)</li></ul>{:/} |
-| Tip | Includes supplementary knowledge and recommendations for the reader to be aware of, such as: {::nomarkdown}<ul><li>Additional troubleshooting articles</li><li>Steps and shortcuts that help increase usability (ex: additional customization for in-app messages)</li></ul>{:/} |
-| Warning | Includes essential information that a reader must address and can include: {::nomarkdown}<ul><li>Irreversible consequences (ex: Campaign and Canvas deletion)</li><li>Feature-breaking behavior</li><li>Loss of data</li><li>Other crucial warnings</li></ul>{:/} |
+<style>
+.style-guide-table td {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+}
+</style>
+
+{::nomarkdown}
+<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<colgroup><col style="width: 20%;"><col style="width: 80%;"></colgroup>
+<thead>
+<tr><th>Alert Type</th><th>Definition</th></tr>
+</thead>
+<tbody>
+<tr><td>Important</td><td>Includes essential information that <strong>should</strong> be addressed by the reader, such as: <ul><li>Deprecated features</li><li>Impacts on billing</li><li>Information pertaining to relevant updates</li><li>Pressing feature caveats (ex: beta features)</li><li>Other important tidbits of information</li></ul></td></tr>
+<tr><td>Note</td><td>Includes one-off information that the reader should know, such as: <ul><li>Feature caveats</li><li>Formatting guidance</li><li>Helpful callouts</li><li>Information that is demoted from an Important alert due to the alert's content dropping in severity (ex: a long-standing important alert shifting to a standard note)</li></ul></td></tr>
+<tr><td>Tip</td><td>Includes supplementary knowledge and recommendations for the reader to be aware of, such as: <ul><li>Additional troubleshooting articles</li><li>Steps and shortcuts that help increase usability (ex: additional customization for in-app messages)</li></ul></td></tr>
+<tr><td>Warning</td><td>Includes essential information that a reader must address and can include: <ul><li>Irreversible consequences (ex: Campaign and Canvas deletion)</li><li>Feature-breaking behavior</li><li>Loss of data</li><li>Other crucial warnings</li></ul></td></tr>
+</tbody>
+</table>
+{:/}
 
 **Alert Best Practices**  
 Here are general guidelines and best practices for alerts. 
 
 As a general rule of thumb, avoid using alerts for content that is essential to the article structure (like feature introductions, setup instructions, and steps to use a feature.). When in doubt, consult with the team during peer review.
 
-| Guideline | Example |
-| :---- | :---- |
-| Explain the information in the alert in a clear, concise statement.  | ![An alert with a clear, concise statement.]({% image_buster /assets/img/contributing/style_guide/alert_1.png %}) <br><br> [Note alert in Step 4: Add Filters to Your Segment Section]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment) |
-| For alerts that apply to different sections of the same article, consider creating a new section that captures these details to avoid repetitive content. | ![Example of a new section instead of an alert.]({% image_buster /assets/img/contributing/style_guide/alert_2.png %}) <br><br> [Property Details header in Push Send Events Section]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events) |
-| Separate the information into short paragraphs or lists within the alert. | ![Example of separating the information into short paragraphs.]({% image_buster /assets/img/contributing/style_guide/alert_3.png %}) <br><br> [Important alert in Canvas Persistent Entry Properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/#using-entry-properties) |
-| Consider any additional formatting that may impact how the alert displays (code snippets, steps, surrounding images, and more.). | ![An alert code styling.]({% image_buster /assets/img/contributing/style_guide/alert_4.png %}) <br><br> [Important alert in Step 2: Add Code Snippet to Email Body]({{site.baseurl}}/partners/message_orchestration/channel_extensions/loyalty/voucherify/#step-2-add-code-snippet-to-email-body) |
-| Include a line break for alerts that begin an article. | ![Example of an alert beginning an article.]({% image_buster /assets/img/contributing/style_guide/alert_5.png %}) <br><br> [Content Card Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/) |
-| When writing about beta features, include an Important alert that calls out the beta status and related Braze contact information.  Place this beta alert after the overview text and before the first main heading. | ![Example of an important alert for a beta feature.]({% image_buster /assets/img/contributing/style_guide/alert_6.png %}) <br><br> [Canvas Persistent Entry Properties]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_persistent_entry_properties/)  |
-| Avoid using two or more alerts in a row if possible. Instead, reorganize or include the information as part of the text instead. | ![An example of two alerts next to each other, which you should avoid.]({% image_buster /assets/img/contributing/style_guide/alert_7.png %}) <br><br> [Setting User IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_user_ids/) |
-| If you find your alert is lengthy, consider creating a new section that includes the information as a list. For example, instead of including troubleshooting steps in an alert, consider creating a troubleshooting section or providing a link to a related article.  | ![Example of a new section of content.]({% image_buster /assets/img/contributing/style_guide/alert_8.png %}) <br><br> [Tip alert in Canvas and Campaign Tag Differences Section]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) |
+{::nomarkdown}
+<table class="style-guide-table" style="table-layout: fixed; width: 100%;">
+<colgroup><col style="width: 50%;"><col style="width: 50%;"></colgroup>
+<thead>
+<tr><th>Guideline</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td>Explain the information in the alert in a clear, concise statement.</td><td>{% include alerts/note_alerts.md alert='Segment profiles first app use' %}<br><br> <a href="{{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment">Note alert in Step 4: Add Filters to Your Segment Section</a></td></tr>
+<tr><td>For alerts that apply to different sections of the same article, consider creating a new section that captures these details to avoid repetitive content.</td><td>{% include currents/property_details_dispatch_state_source.md %}<br><br> <a href="{{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#subscription-group-state-change-events">Property details in Message Engagement Events</a></td></tr>
+<tr><td>Separate the information into short paragraphs or lists within the alert.</td><td>{% include alerts/important_alerts.md alert='Email via SMS' %}<br><br> <a href="{{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/import_your_email_list/">Important alert in Import your email list</a></td></tr>
+<tr><td>Consider any additional formatting that may impact how the alert displays (code snippets, steps, surrounding images, and more).</td><td>{% include alerts/tip_alerts.md alert='catalog data images' %}<br><br> <a href="{{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/price_drop_notifications/#considerations">Tip alert with code snippet in Price drop notifications</a></td></tr>
+<tr><td>Include a line break for alerts that begin an article.</td><td><img src="{% image_buster /assets/img/contributing/style_guide/alert_5.png %}" alt="Example of an alert beginning an article."><br><br> <a href="{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/">Content Card Implementation Guide</a></td></tr>
+<tr><td>When writing about beta features, include an Important alert that calls out the beta status and related Braze contact information. Place this beta alert after the overview text and before the first main heading.</td><td><img src="{% image_buster /assets/img/contributing/style_guide/alert_6.png %}" alt="Example of an important alert for a beta feature."></td></tr>
+<tr><td>Avoid using two or more alerts in a row if possible. Instead, reorganize or include the information as part of the text.</td><td><img src="{% image_buster /assets/img/contributing/style_guide/alert_7.png %}" alt="An example of two alerts next to each other, which you should avoid."></td></tr>
+<tr><td>If you find your alert is lengthy, consider creating a new section that includes the information as a list. For example, instead of including troubleshooting steps in an alert, consider creating a troubleshooting section or providing a link to a related article.</td><td><img src="{% image_buster /assets/img/contributing/style_guide/alert_8.png %}" alt="Example of a new section of content."></td></tr>
+</tbody>
+</table>
+{:/}
 
 ### Alert examples {#alert-examples}
 

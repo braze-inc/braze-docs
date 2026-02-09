@@ -21,3 +21,11 @@ All user profile data (custom events, custom attributes, custom data) is stored 
 {% endalert %}
 
 {% endif %}
+
+{% if include.alert == 'Segment profiles first app use' %}
+
+{% alert note %}
+Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
+{% endalert %}
+
+{% endif %}
