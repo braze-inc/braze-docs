@@ -421,14 +421,27 @@ function updateSMSSplit(){
 
     // Create message output with both segment and character indexing
     let characterIndex = 0;
+    const escapeHtml = (text) =>
+      text.replace(/[&<>"'\/]/g, function (c) {
+        switch (c) {
+          case '&': return '&amp;';
+          case '<': return '&lt;';
+          case '>': return '&gt;';
+          case '"': return '&quot;';
+          case "'": return '&#39;';
+          case '/': return '&#x2F;';
+          default: return c;
+        }
+      });
     const messageOutput = smsSegments.map((segment,segment_index) =>
       segment.text.map((ch, i) => {
-        const result = `<div id='message_output_data_${segment_index}-${i}' data-char-index='${characterIndex}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`;
+        const safeCh = ch === " " ? "\u00A0" : escapeHtml(ch);
+        const result = `<div id='message_output_data_${segment_index}-${i}' data-char-index='${characterIndex}' class='message_output_char ${segmentColors(segment_index)}'>${safeCh}</div>`;
         characterIndex++;
         return result;
       }).join("")
     );
-    $('#sms_output').html(messageOutput);
+    $('#sms_output').html(messageOutput.join(""));
     $('#sms_segments_data').html(segmentsHtml);
     $('#segment_section').click(function() {
       if($(this).is(":checked")) {
