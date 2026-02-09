@@ -20,8 +20,7 @@ tool:
 
 Before you create a rich push notification for Android, note the following details:
 
-- Android rich notifications aren't available when creating a quick push campaign.
-- Android Extended Notification images must be 2:1 ratio, but do not have a size limit.
+- Android extended notification images must be 2:1 ratio, but do not have a size limit.
 - Android also allows for setting a separate image for the standard notification view. These are the recommended size images: 
   - **Small:** 512x256
   - **Medium:** 1024x512 
@@ -42,19 +41,18 @@ Follow the steps to [create a campaign]({{site.baseurl}}/user_guide/message_buil
 
 ### Step 2: Add captioning
 
-Add the **Summary Text/Image Caption** that you'd like to display before the image in the notification.
+Add the **Summary Text** that you'd like to display before the image in the notification.
 
-![The Expanded notification image section where you can add an image or enter an image URL.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
+![A rich push Notification from a pet food app called Dog indicating that it is time to order more food for spot with summary text.]({% image_buster /assets/img_archive/android_rich_summarytext.png %})
 
 ### Step 3: Add media
 
-Add your image in the **Expanded Notification Image** field in the composer of the message. Images can be uploaded directly through the dashboard or by specifying a content URL that is hosted elsewhere.
+Add your image in the **Android Notification Image** field in the composer of the message. Images can be uploaded directly through the dashboard or by specifying a content URL that is hosted elsewhere.
 
 For details about supported images, check out [Image specifications]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#push).
 
-![A user receives a push notification for iOS with "Hi there" as the title and "Thanks for joining out loyalty program!" as the text.]({% image_buster /assets/img_archive/android_rich_image.png %})
+![The Android notification image section where you can add an image or enter an image URL.]({% image_buster /assets/img_archive/android_rich_image.png %})
 
 ### Step 4: Continue creating your campaign
 
 After your rich notification content is uploaded to the dashboard, you can continue [scheduling your campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
-
