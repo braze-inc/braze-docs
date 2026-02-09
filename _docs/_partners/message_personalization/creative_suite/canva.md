@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## About the integration
 
-The Braze and Canva integration allows you to push assets from Canva directly into the Braze Media Library.
+The Braze and Canva integration allows you to push assets from Canva directly into the Braze media library.
 
 ## Integration
 
