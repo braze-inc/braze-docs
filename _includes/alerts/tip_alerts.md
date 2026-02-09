@@ -384,6 +384,20 @@ function countLength(type, s) {
   }
 }
 
+function escapeHtml(text) {
+  return text.replace(/[&<>"'\/]/g, function (c) {
+    switch (c) {
+      case '&': return '&amp;';
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '"': return '&quot;';
+      case "'": return '&#39;';
+      case '/': return '&#x2F;';
+      default: return c;
+    }
+  });
+}
+
 function getCharacterEncoding(char, type) {
   if (type === "ucs2") return "ucs2";
   if (type === "gsm") return "gsm";
@@ -395,24 +409,13 @@ function getCharacterEncoding(char, type) {
 
 function displayCharacterEncoding(text, type) {
   const characters = smsutil.unicodeCharacters(text);
-  const escapeHtml = (text) =>
-    text.replace(/[&<>"'\/]/g, function (c) {
-      switch (c) {
-        case '&': return '&amp;';
-        case '<': return '&lt;';
-        case '>': return '&gt;';
-        case '"': return '&quot;';
-        case "'": return '&#39;';
-        case '/': return '&#x2F;';
-        default: return c;
-      }
-    });
   return characters.map((char, index) => {
     const encoding = getCharacterEncoding(char, type);
     const displayChar = char === " " ? "&nbsp;" : escapeHtml(char);
+    const titleChar = char === " " ? "space" : char;
     const encodingClass = encoding === "gsm" ? "encoding_gsm" : "encoding_ucs2";
     const encodingLabel = encoding === "gsm" ? "GSM" : "UCS";
-    return `<span id="character_encoding_data_${index}" class="${encodingClass}" title="${displayChar} - ${encoding.toUpperCase()}">${encodingLabel}</span>`;
+    return `<span id="character_encoding_data_${index}" class="${encodingClass}" title="${escapeHtml(titleChar)} - ${encoding.toUpperCase()}">${encodingLabel}</span>`;
   }).join("");
 }
 
@@ -433,18 +436,6 @@ function updateSMSSplit(){
 
     // Create message output with both segment and character indexing
     let characterIndex = 0;
-    const escapeHtml = (text) =>
-      text.replace(/[&<>"'\/]/g, function (c) {
-        switch (c) {
-          case '&': return '&amp;';
-          case '<': return '&lt;';
-          case '>': return '&gt;';
-          case '"': return '&quot;';
-          case "'": return '&#39;';
-          case '/': return '&#x2F;';
-          default: return c;
-        }
-      });
     const messageOutput = smsSegments.map((segment,segment_index) =>
       segment.text.map((ch, i) => {
         const safeCh = ch === " " ? "\u00A0" : escapeHtml(ch);
