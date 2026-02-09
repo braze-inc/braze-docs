@@ -1147,7 +1147,7 @@ For guidance on what verbs to use when describing interactions with the UI, refe
 
 #### Describing limitations {#describing-limitations}
 
-Write candidly about the product's limitations, without distortion or manipulation. Readers react in an intense fashion to being manipulated, hoodwinked, and otherwise bamboozled, and this jeopardizs the documentation's efficacy as a source of utilitarian truth. Customers rely on documentation to understand the limits of the system to which they are building so that they can use Braze successfully.
+Write candidly about the product's limitations, without distortion or manipulation. Readers react in an intense fashion to being manipulated, hoodwinked, and otherwise bamboozled, and this jeopardizes the documentation's efficacy as a source of utilitarian truth. Customers rely on documentation to understand the limits of the system to which they are building so that they can use Braze successfully.
 
 At the same time, support the intentionality of the product's development by framing limitations with appropriate, positive context.
 
