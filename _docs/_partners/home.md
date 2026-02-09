@@ -390,4 +390,6 @@ valid_partner_list:
   url: /docs/partners/mailizio/
 - name: Canva
   url: /docs/partners/canva/
+- name: OpenAI
+  url: /docs/partners/openai
 ---
