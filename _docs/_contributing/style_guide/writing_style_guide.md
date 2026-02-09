@@ -703,7 +703,7 @@ Use present tense instead of future tense. Present tense conveys immediacy and d
 <tr><th style="width: 50%;">Do</th><th style="width: 50%;">Don't</th></tr>
 </thead>
 <tbody>
-<tr><td style="width: 50%;">Archived subscription groups cannot be edited and no longer appear in segment filters.</td><td style="width: 50%;">Archived subscription groups cannot be edited and no longer appear in segment filters.</td></tr>
+<tr><td style="width: 50%;">Archived subscription groups cannot be edited and no longer appear in segment filters.</td><td style="width: 50%;">Archived subscription groups cannot be edited and will no longer appear in segment filters.</td></tr>
 <tr><td style="width: 50%;">Using a short code is the most reliable number type for including links.</td><td style="width: 50%;">Using a short code would be the most reliable number type for including links.</td></tr>
 </tbody>
 </table>
