@@ -24,6 +24,7 @@ The Braze and OpenAI integration lets you connect your OpenAI API key to Braze s
 |---|---|
 | OpenAI account with API key | An OpenAI account with an API key. Contact your admin or [OpenAI support](https://help.openai.com/) with any issues or questions. |
 | Braze instance | You can find your Braze instance on the [API overview page]({{site.baseurl}}/api/basics/#endpoints) or from your Braze onboarding manager. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Integration
 
