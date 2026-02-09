@@ -22,6 +22,7 @@ This page is a reference of tables and columns available to be queried in the [Q
 
 Table | Description
 ------|------------
+[CATALOGS_ITEMS_SHARED](#CATALOGS_ITEMS_SHARED) | Non-deleted catalog items
 [CHANGELOGS_GLOBALCONTROLGROUP_SHARED](#CHANGELOGS_GLOBALCONTROLGROUP_SHARED) | When the Global Control Group is changed
 [USERS_BEHAVIORS_CUSTOMEVENT_SHARED](#USERS_BEHAVIORS_CUSTOMEVENT_SHARED) | When a user performs a custom event
 [USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED](#USERS_BEHAVIORS_INSTALLATTRIBUTION_SHARED) | When a user installs an app and we attribute it to a partner
@@ -119,6 +120,20 @@ Table | Description
 [USERS_USERDELETEREQUEST_SHARED](#USERS_USERDELETEREQUEST_SHARED) | When a user is deleted by a customer request
 [USERS_USERORPHAN_SHARED](#USERS_USERORPHAN_SHARED) | When a user is merged with another user's profile and the original profile is orphaned
 
+
+## Catalogs
+
+### CATALOGS_ITEMS_SHARED {#CATALOGS_ITEMS_SHARED}
+
+Field | Type | Description
+------|------|------------
+`catalog_id` | `string` | BSON ID of the catalog
+`item_id` | `string` | BSON ID of the catalog item
+`app_group_id` | `null,`&nbsp;`string` | BSON ID of the app group
+`app_group_api_id` | `null,`&nbsp;`string` | API ID of the app group
+`field_name` | `null,`&nbsp;`string` | Name of the field
+`field_value` | `null,`&nbsp;`string` | Value of the field
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Changelogs
 

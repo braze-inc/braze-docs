@@ -1,3 +1,11 @@
+CATALOGS_ITEMS_SHARED: Non-deleted catalog items
+	CATALOG_ID (VARCHAR(16777216)): BSON ID of the catalog
+	ITEM_ID (VARCHAR(16777216)): BSON ID of the catalog item
+	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group
+	APP_GROUP_API_ID (VARCHAR(16777216)): API ID of the app group
+	FIELD_NAME (VARCHAR(16777216)): Name of the field
+	FIELD_VALUE (VARCHAR(16777216)): Value of the field
+
 CHANGELOGS_GLOBALCONTROLGROUP_SHARED: Global Control Group changed
 	ID (VARCHAR(16777216)): Globally unique ID for this event
 	APP_GROUP_ID (VARCHAR(16777216)): BSON ID of the app group this user belongs to
