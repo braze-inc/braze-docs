@@ -158,28 +158,32 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 1. Within the same IAM section of the console where you created the IAM policy, go to **Roles** > **Create Role**. 
 
-<br><br>![The "Create role" button.]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
+![The "Create role" button.]({% image_buster /assets/img/create_role_1_list.png %})
 
 {: start="2"}
 2. Copy the Braze AWS account ID from your Braze dashboard. Go to **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import**.
 
 3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox.
-4. In Braze, go to **Partner Integrations** > **Currents**, select **Create New Current** (or **Create New Test Current**), then select **Amazon S3**. In the **Credentials** section, copy the automatically generated **Braze External ID**. 
-5. In AWS, paste the external ID and then select **Next**.
+4. In Braze, go to **Partner Integrations** > **Currents**, select **Create New Current** (or **Create New Test Current**), then select **Amazon S3 Data Export**. In the **Credentials** section, select **AWS Role ARN**, and then copy the automatically generated **Braze External ID**. 
 
-<br><br> ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+![Credentials section with the Braze External ID field.]({% image_buster /assets/img/braze_external_id.png %})
 
 {: start="5"}
-5. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+5. In AWS, paste the external ID and then select **Next**.
 
-<br><br>![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+
+{: start="6"}
+6. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+
+![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})
 
 Give the role a name and a description, and select **Create Role**.
 
-<br><br>![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
+![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})
 
-{: start="6"}
-6. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
+{: start="7"}
+7. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
 
 ## Setting up Cloud Data Ingestion in Braze
 
@@ -198,17 +202,17 @@ Give the role a name and a description, and select **Create Role**.
 {: start="3"}
 3. Name your integration, and select the data type for this integration. 
 
-<br><br>![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+![Setting up sync details for "cdi-s3-as-source-integration" with user attributes as the data type.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})
 
 {: start="4"}
 4. Add a contact email for notifications if the sync breaks because of access or permissions issues. Optionally, turn on notifications for user-level errors and sync successes. 
 
-<br><br> ![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+![Setting up notification preferences for sync error notifications.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})
 
 {: start="5"}
 5. Finally, test the connection and save the sync. 
 
-<br><br>![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+![An option to test the connection with a data preview.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Required file formats
 
