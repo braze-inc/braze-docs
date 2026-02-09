@@ -1,29 +1,35 @@
-## Analyse de campagne
+## Visualisation de l'analyse/analytique (si utilisée anjective)
 
-Une fois que vous avez lancé votre campagne, vous pouvez revenir à la page des détails de cette campagne pour afficher les indicateurs clés. Accédez à la page des **campagnes** et sélectionnez votre campagne pour ouvrir la page des détails. Pour les cartes de contenu {% if include.channel == "Content Card" %} {% elsif include.channel == "email" %} e-mail {% elsif include.channel == "in-app message" %}messages in-app {% elsif include.channel == "push" %}messages push {% elsif include.channel == "SMS" %}messages SMS {% elsif include.channel == "whatsapp" %}messages WhatsApp {% elsif include.channel == "webhook" %}webhooks {% endif %}envoyés dans Canvas, reportez-vous à [Analytique Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).
+Une fois que vous avez lancé votre campagne, vous pouvez revenir à la page des détails de cette campagne pour afficher les indicateurs clés. Accédez à la page des **campagnes** et sélectionnez votre campagne pour ouvrir la page des détails.{% if include.channel != "banner" %} Pour les cartes de contenu {% if include.channel == "Content Card" %} {% elsif include.channel == "banner" %} Bannière {% elsif include.channel == "email" %}e-mail {% elsif include.channel == "in-app message" %}messages in-app {% elsif include.channel == "push" %}messages push {% elsif include.channel == "SMS" %}SMS {% elsif include.channel == "whatsapp" %}messages WhatsApp {% elsif include.channel == "webhook" %}webhooks {% endif %}envoyés dans Canvas, reportez-vous à [Canvas analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/).{% endif %}
 
 {% alert tip %}
 Vous recherchez des définitions pour les termes et les indicateurs répertoriés dans votre rapport ? Consultez notre
   {% if include.channel == "email" %}[Glossaire analytique pour l’e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/)
-  {% elsif include.channel == "Content Card" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par cartes de contenu
-  {% elsif include.channel == "in-app message" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtrage par message in-app
-  {% elsif include.channel == "push" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par Push
-  {% elsif include.channel == "SMS" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtrage par SMS
-  {% elsif include.channel == "whatsapp" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par WhatsApp
-  {% elsif include.channel == "webhook" %}[Report Metrics Glossaire]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par webhook{% endif %}.
+  {% elsif include.channel == "banner" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par bannières.
+  {% elsif include.channel == "Content Card" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par cartes de contenu.
+  {% elsif include.channel == "in-app message" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtrage par message in-app.
+  {% elsif include.channel == "push" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par Push.
+  {% elsif include.channel == "SMS" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par SMS/MMS et RCS.
+  {% elsif include.channel == "whatsapp" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par WhatsApp.
+  {% elsif include.channel == "webhook" %}[Glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data/report_metrics/) et filtre par webhook.{% endif %}
 {% endalert %}
 
 À partir de l'onglet **Analyse/analytique de la campagne**, vous pouvez consulter vos rapports dans une série d'adjectifs. Vous pouvez voir plus ou moins que ceux énumérés dans les sections ci-dessous, mais chacun a son propre objectif utile.
 
+### Intervalle de temps
+
+Par défaut, l'intervalle de temps pour l'**analyse/analytique de campagne** affichera les 90 derniers jours à partir de l'heure actuelle. Cela signifie que si la campagne a été lancée il y a plus de 90 jours, l'analyse/analytique affichera "0" pour la période donnée. Pour afficher toutes les analyses/analytiques des campagnes plus anciennes, ajustez l'intervalle de temps des rapports.
+
 ### Détails de la campagne
 
-Le panneau **Détails de la campagne** présente un aperçu de haut niveau de l'ensemble des performances de votre
-  {% if include.channel == "Content Card" %}Carte de contenu.
+Le premier panneau de l'**analyse/analytique de la campagne** présente un aperçu de haut niveau de l'ensemble des performances de votre campagne.
+  {% if include.channel == "banner" %}Bannière.
+  {% elsif include.channel == "Content Card" %}Carte de contenu.
   {% elsif include.channel == "email" %}e-mail.
   {% elsif include.channel == "in-app message" %}message in-app.
-  {% elsif include.channel == "push" %}message push.
-  {% elsif include.channel == "SMS" %}SMS.
-  {% elsif include.channel == "whatsapp" %}messages WhatApp.
+  {% elsif include.channel == "push" %}envoi de messages.
+  {% elsif include.channel == "SMS" %}SMS, MMS et RCS.
+  {% elsif include.channel == "whatsapp" %}Envois de messages par WhatApp.
   {% elsif include.channel == "webhook" %}webhook.
   {% endif %}
 
@@ -36,26 +42,29 @@ Le canal WhatsApp comprend le taux de lecture. Cette mesure n'est fournie que po
 {% endif %}
 
 {% if include.channel == "Content Card" %}
-![Panneau Détails de la campagne avec un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/cc-campaign-details.png %})
+![Panel avec un aperçu des indicateurs utilisés pour déterminer la performance des campagnes.]({% image_buster /assets/img/cc-campaign-details.png %})
+
+{% elsif include.channel == "banner" %}
+![Panel avec un aperçu des indicateurs utilisés pour déterminer la performance des campagnes.]({% image_buster /assets/img/banners/campaign_details.png %})
 
 {% elsif include.channel == "email" %}
-![Panneau Détails de la campagne avec un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_email.png %})
+![Panel avec un aperçu des indicateurs utilisés pour déterminer la performance des campagnes.]({% image_buster /assets/img/campaign_details_email.png %})
 
 {% elsif include.channel == "push" %}
-![Panneau Détails de la campagne avec un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_push.png %})
+![Panel avec un aperçu des indicateurs utilisés pour déterminer la performance des campagnes.]({% image_buster /assets/img/campaign_details_push.png %})
 
 {% elsif include.channel == "SMS" %}
-![Panneau Détails de la campagne avec un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_sms.png %})
+![Panel avec un aperçu des indicateurs utilisés pour déterminer la performance des campagnes.]({% image_buster /assets/img/campaign_details_sms.png %})
 
 {% elsif include.channel == "in-app message" %}
-![Panneau Détails de la campagne avec un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_iam.png %})
+![Panel avec un aperçu des indicateurs utilisés pour déterminer la performance des campagnes.]({% image_buster /assets/img/campaign_details_iam.png %})
 
 Dans Canvas, vous verrez les performances des messages in-app cartographiés sur le Canvas que vous avez créé. Vous pouvez utiliser le panneau de commande en haut de la page pour effacer les autres types de messages (canaux) et afficher uniquement les messages in-app dans votre Canvas.
 
 ![]({% image_buster /assets/img/in-app_message_canvas_reporting.png %})
 
 {% elsif include.channel == "webhook" %}
-![Panneau Détails de la campagne avec un aperçu des indicateurs utilisés pour déterminer les performances de la campagne.]({% image_buster /assets/img/campaign_details_webhook.png %})
+![Panel avec un aperçu des indicateurs utilisés pour déterminer la performance des campagnes.]({% image_buster /assets/img/campaign_details_webhook.png %})
 
 {% endif %}
 
@@ -63,25 +72,25 @@ Dans Canvas, vous verrez les performances des messages in-app cartographiés sur
 
 #### Groupes de contrôle {#cc-control-group}
 
-Pour mesurer l'impact d'une carte de contenu individuelle, vous pouvez ajouter un [groupe de contrôle][2] à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
+Pour mesurer l'impact d'une carte de contenu individuelle, vous pouvez ajouter un [groupe de contrôle]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
 
 {% elsif include.channel == "SMS" %}
 
 #### Groupes de contrôle {#sms-control-group}
 
-Pour mesurer l'impact d'un message SMS individuel, vous pouvez ajouter un [groupe de contrôle][2] à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
+Pour mesurer l'impact d'un SMS, MMS ou message RCS individuel, vous pouvez ajouter un [groupe de contrôle]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
 
 {% elsif include.channel == "whatsapp" %}
 
 #### Groupes de contrôle {#whatsapp-control-group}
 
-Pour mesurer l'impact d'un message WhatsApp individuel, vous pouvez ajouter un [groupe de contrôle][2] à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
+Pour mesurer l'impact d'un message WhatsApp individuel, vous pouvez ajouter un [groupe de contrôle]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
 
 {% elsif include.channel == "webhook" %}
 
 #### Groupes de contrôle {#webhook-control-group}
 
-Pour mesurer l'impact d'un message webhook individuel, vous pouvez ajouter un [groupe de contrôle][2] à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
+Pour mesurer l'impact d'un message webhook individuel, vous pouvez ajouter un [groupe de contrôle]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants) à un test A/B. Le panneau supérieur **Détails de la campagne** n'inclut pas les indicateurs de la variante Groupe de contrôle.
 
 {% endif %}
 
@@ -123,11 +132,18 @@ Le panneau " **Push Performance"** donne un aperçu de la performance de votre m
 ![Analyse des performances des messages push]({% image_buster /assets/img_archive/push_message_performance.png %})
 
 {% elsif include.channel == "SMS" %}
-### Performances des SMS
+### SMS/MMS/RCS Performance
 
-Le panneau " **Performance SMS"** indique le niveau de performance de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
+Le tableau de bord **SMS/MMS/RCS Performance** présente les performances de votre message en fonction de différents critères. Les indicateurs de ce volet varient en fonction de votre canal de communication choisi, et selon que vous exécutez ou non un test multivarié. Vous pouvez cliquer sur l'icône <i class="fa fa-eye preview-icon"></i> **Preview** pour visualiser votre message pour chaque variante ou canal de communication.
 
-![Volet des performances des SMS/MMS qui comprend un tableau d'indicateurs pour un groupe de contrôle, la variante 1 et la variante 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
+![SMS/MMS/RCS Panneau de performance comprenant un tableau d'indicateurs pour un groupe de contrôle, la variante 1 et la variante 2.]({% image_buster /assets/img_archive/sms_message_performance.png %})
+
+{% elsif include.channel == "banner" %}
+### Performance des bannières
+
+Le panneau **Performance de la bannière** indique le niveau de performance de votre message en fonction de différents critères. Ces indicateurs varient en fonction de votre canal de communication et de l'exécution ou non d'un test multivarié.
+
+![Panneau de performance SMS/MMS comprenant un tableau d'indicateurs pour un groupe de contrôle, la variante 1 et la variante 2.]({% image_buster /assets/img/banners/banner_performance.png %})
 
 {% elsif include.channel == "webhook" %}
 ### Performances des webhooks
@@ -167,7 +183,7 @@ Nous vous conseillons d'activer CORS pour vos URL d'images afin d'éviter que le
 
 #### Métriques de la carte de contenu
 
-Voici une description de certaines indicateurs clés que vous pouvez voir lors de l’examen des performances de vos messages. Pour obtenir les définitions complètes de tous les indicateurs des cartes de contenu, reportez-vous au [glossaire des indicateurs de rapport][1] et filtrez par cartes de contenu.
+Voici une description de certaines indicateurs clés que vous pouvez voir lors de l’examen des performances de vos messages. Pour obtenir les définitions complètes de tous les indicateurs des cartes de contenu, reportez-vous au [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par carte de contenu.
 
 <style>
     .no-split {
@@ -184,9 +200,9 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
     </thead>
     <tbody>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#messages-sent">Messages envoyés</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Messages Sent' %} <br><br>
-                Ce montant est calculé différemment en fonction de ce que vous avez choisi pour
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#messages-sent">Envois de messages</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Messages Sent' (if used as anjective) %} <br><br>
+                Ce montant est calculé différemment en fonction de ce que vous avez choisi pour 
                 <a href="/docs/user_guide/message_building_by_channel/content_cards/create/card_creation/#differences-between-creating-cards-at-launch-or-entry-versus-at-first-impression">Création de cartes</a>:<br><br>
                 <ul>
                     <li><b>Au moment du lancement ou de l'entrée d’étape :</b> Le nombre de cartes créées et disponibles pour être vues. Le fait que les utilisateurs aient consulté ou non la carte n’est pas comptabilisé.</li>
@@ -195,24 +211,24 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
             </td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impressions totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %} Ceci peut être incrémenté plusieurs fois pour le même utilisateur.</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#total-impressions">Impressions totales</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' %} Ceci peut s'incrémenter plusieurs fois pour le même utilisateur.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressions uniques</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Ce compte</span> ne s'incrémente pas la deuxième fois qu'un utilisateur consulte une carte.</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-impressions">Impressions uniques</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Ce compte</span> ne s'incrémente pas la deuxième fois qu'un utilisateur consulte une carte de contenu.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinataires uniques</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %} <br><br> Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i></td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-recipients">Destinataires uniques</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' (if used as anjective) %} <br><br> Pour les cartes de contenu, chaque carte de contenu ne peut être reçue qu'une seule fois, de sorte que la consultation de la même carte de contenu une deuxième fois, quel que soit le jour, n'augmentera pas ce décompte. Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i></td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics uniques</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Clicks' %} Ceci inclut les clics sur les liens de désabonnement fournis par Braze.</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-clicks">Clics uniques</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Ceci inclut les clics sur les liens de désinscription fournis par Braze.</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-dismissals">Rejets uniques</a></td>
-            <td>{% multi_lang_include metrics.md metric='Unique Dismissals' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data/report_metrics/#unique-dismissals">Licenciements uniques</a></td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Unique Dismissals' (if used as an adjective) %}</td>
         </tr>
     </tbody>
 </table>
@@ -223,9 +239,9 @@ En matière de méthode d’enregistrement des impressions, il existe quelques d
 
 #### Destinataires uniques et impressions uniques
 
-Plusieurs indicateurs sont disponibles pour couvrir la visibilité de votre message. Il s'agit notamment des _messages envoyés_, des _destinataires uniques_ et des _impressions uniques_. En particulier, la différence entre les _destinataires uniques_ et les _impressions uniques_ peut prêter à confusion. Prenons quelques exemples de scénarios pour mieux comprendre ces indicateurs.
+Plusieurs indicateurs sont disponibles pour couvrir la visibilité de votre message. Cela comprend les _destinataires uniques_ et les _impressions uniques._ Prenons quelques exemples de scénarios pour mieux comprendre ces indicateurs.
 
-Supposons que vous consultiez une carte de contenu aujourd'hui, puis la même carte demain, et encore après-demain - vous serez compté comme _destinataire unique_ trois fois. Cependant, vous ne serez comptabilisé que pour une seule _impression unique_. Vous serez également inclus dans le nombre d' _envois de messages_, car la carte était disponible sur votre appareil.
+Supposons que vous visualisiez une carte de contenu aujourd'hui, puis que vous receviez une nouvelle carte de la même campagne demain, et encore après-demain - vous serez compté comme _destinataire unique_ trois fois. Cependant, vous ne serez comptabilisé que pour une seule _impression unique_. Vous serez également inclus dans le nombre d'_envois de messages_, car la carte était disponible sur votre appareil.
 
 Autre exemple, supposons que vous obteniez cinq _impressions uniques_ sur une campagne de cartes de contenu affichant 150 000 _messages envoyés_. Cela signifie que la carte a été mise à disposition (en arrière-plan) à une audience de 150 000 utilisateurs, mais que seuls cinq utilisateurs ont effectué toutes les étapes suivantes après l’envoi :
 
@@ -234,6 +250,77 @@ Autre exemple, supposons que vous obteniez cinq _impressions uniques_ sur une ca
 3. Le SDK a enregistré une impression et l’a consignée sur le serveur
 
 Vos _messages envoyés_ se réfèrent aux cartes de contenu disponibles pour être vues, tandis que les _destinataires uniques_ se réfèrent aux cartes de contenu qui ont été effectivement vues.
+
+{% elsif include.channel == "banner" %}
+
+### Indicateurs pour les bannières
+
+Ce sont les indicateurs clés à suivre lors de l'évaluation des performances de votre campagne Bannière. Les clics et les impressions pour les bannières sont suivis automatiquement avec le SDK. 
+
+Pour obtenir les définitions complètes de tous les indicateurs relatifs aux bannières, reportez-vous au [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par bannière.
+
+<style>
+    .no-split {
+        word-break: keep-all;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>Indicateurs</th>
+            <th>Définition</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impressions totales</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' (if used as anjective) %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressions uniques</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' %} <span style="white-space: nowrap">Chaque utilisateur n'est compté qu'une seule fois.</span></td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Nombre total de clics</a></td>
+            <td class="no-split">Le <i>nombre total de clics</i> est le nombre total (et le pourcentage) d'utilisateurs qui ont cliqué dans le message envoyé, indépendamment du fait que le même utilisateur clique plusieurs fois.</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics uniques</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Chaque utilisateur n'est compté qu'une seule fois.</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#primary-conversions">Conversions primaires</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversions primaires (A) ou événement de conversion principal' %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinataires uniques</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' (if used as anjective) %} <br><br> Étant donné qu'un spectateur peut être un destinataire unique chaque jour, vous devriez vous attendre à ce que ce chiffre soit plus élevé que celui des <i>impressions uniques.</i></td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#revenue">Chiffre d'affaires</a></td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Revenue' (if used as anjective) %}</td>
+        </tr>
+        <tr>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confidence">Confiance</a></td>
+            <td>{% multi_lang_include analytics/metrics.md metric='Confidence' (if used as anjective) %}</td>
+        </tr>
+    </tbody>
+</table>
+
+#### Exemples de calcul des indicateurs Banner
+
+Plusieurs indicateurs sont disponibles pour couvrir la visibilité de votre message. Cela comprend les _destinataires uniques_ et les _impressions uniques._ Prenons quelques exemples de scénarios pour mieux comprendre ces indicateurs.
+
+Supposons que vous regardiez une bannière aujourd'hui, puis la même bannière demain, et encore après-demain - vous serez compté comme un _destinataire unique_ trois fois. Cependant, vous ne serez comptabilisé que pour une seule _impression unique_.
+
+Autre exemple, supposons que vous obteniez cinq _impressions uniques_ pour une campagne de bannières. Cela signifie que seuls les appareils de cinq utilisateurs ont effectué toutes les étapes suivantes :
+
+1. Vous avez démarré une session ou l'application a explicitement demandé une synchronisation Banner (ou les deux).
+2. Navigué vers la vue Bannières
+3. Le SDK a enregistré une impression et l’a consignée sur le serveur
+
+Les _destinataires uniques_ correspondent aux bannières qui ont été vues.
 
 {% elsif include.channel == "email" %}
 
@@ -258,56 +345,56 @@ Voici quelques indicateurs clés spécifiques aux e-mails que vous ne verrez pas
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-clicks">Clics uniques</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Clicks' %} Ce suivi est effectué sur une période de sept jours pour les e-mails et mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>. Cela inclut les clics sur les liens de désinscription fournis par Braze. Ce nombre doit être compris entre 5 et 10 %. Tout ce qui est supérieur à 10 % est exceptionnel !
+                {% multi_lang_include analytics/metrics.md metric='Unique Clicks' %} Ceci est suivi sur une période de sept jours pour l'e-mail et mesuré par <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id.</a> Cela inclut les clics sur les liens de désinscription fournis par Braze. Ce nombre doit être compris entre 5 et 10 %. Tout ce qui est supérieur à 10 % est exceptionnel !
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-opens">Ouvertures uniques</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Unique Opens' %} Pour les e-mails, le suivi est effectué sur une période de 7 jours. Ce chiffre devrait se situer entre 30 et 40 %. Tout ce qui est supérieur à 40 % est exceptionnel !
+                {% multi_lang_include analytics/metrics.md metric='Unique Opens' %} Pour l'e-mail, le suivi se fait sur une période de 7 jours. Ce chiffre devrait se situer entre 30 et 40 %. Tout ce qui est supérieur à 40 % est exceptionnel !
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#click-to-open-rate">Taux de Click-to-Open</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Click-to-Open Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Click-to-Open Rate' (if used as an clics ouverture) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#spam">Taux de courriers indésirables</a></td>
             <td class="no-split">
-                {% multi_lang_include metrics.md metric='Spam' %} Si cet indicateur est supérieur à 0,08, cela peut être le signe que votre message est trop commercial ou que vous devriez reconsidérer vos méthodes de collecte d'adresses e-mail (de manière à n’envoyer des messages qu’aux destinataires intéressés par votre correspondance).
+                {% multi_lang_include analytics/metrics.md metric='Spam' %} Si cette métrique est supérieure à 0,08, cela peut être le signe que votre message est trop vendeur ou que vous devriez reconsidérer vos indicateurs de collecte d'adresses e-mail (pour confirmer que vous envoyez des messages à ceux qui sont intéressés par votre correspondance).
             </td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unsubscribers-or-unsub">Désabonnés</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric= 'Unsubscribers or Unsub' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unsubscribers or Unsub' (if used as an adjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#other-opens">Autre ouverture</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Other Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Other Opens' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#estimated-real-opens">Estimation des ouvertures réelles</a></td>
-            <td class="no-split"> {% multi_lang_include metrics.md metric='Estimated Real Opens' %} Voir la section suivante pour plus de détails.</td>
+            <td class="no-split"> {% multi_lang_include analytics/metrics.md metric='Estimated Real Opens' %} Voir la section suivante pour plus d'indicateurs.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#machine-opens">Ouverture automatique</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Machine Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Machine Opens' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Rebonds</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#hard-bounce">Échec d'envoi définitif</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Hard Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Hard Bounce' (if used as anjective envoi définitif) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#soft-bounce">Échec provisoire de livraison</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Soft Bounce' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Soft Bounce' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deferral">Report</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deferral' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deferral' (if used as anjective) %}</td>
         </tr>
     </tbody>
 </table>
@@ -322,7 +409,7 @@ Notez que les _requêtes SQL_ ne sont actuellement disponibles qu'en utilisant l
 
 ##### Taux d'ouverture réel estimé {#estimated-real-open-rate}
 
-Cette statistique utilise un modèle analytique propriétaire créé par Braze pour reconstruire une estimation du taux d'ouverture unique de la campagne comme si les ouvertures automatiques n'existaient pas. Alors que nous recevons des étiquettes de *Machine Opens* sur certains événements d'ouverture de la part des expéditeurs d'e-mails (voir ci-dessus), ces étiquettes peuvent souvent étiqueter les ouvertures réelles comme des ouvertures réelles. En d'autres termes, les *autres ouvertures* sont probablement une sous-estimation des ouvertures réelles (par des utilisateurs réels). Au lieu de cela, Braze utilise les données de clics de chaque campagne pour déduire le taux d'ouverture du message par des humains réels. Cela permet de compenser les divers mécanismes d'ouverture des machines, y compris la protection de confidentialité dans Mail d'Apple.
+Cette statistique utilise un modèle analytique propriétaire créé par Braze pour reconstruire une estimation du taux d'ouverture unique de la campagne comme si les ouvertures automatiques n'existaient pas. Bien que nous recevions des étiquettes d'*ouverture de machine* sur certains événements d'ouverture de la part des expéditeurs d'e-mails (voir ci-dessus), ces étiquettes peuvent être incohérentes et ne pas identifier toutes les ouvertures de machine. Cela signifie que les *autres ouvertures* sont probablement une sous-estimation des ouvertures réelles par les utilisateurs réels. Au lieu de cela, Braze utilise les données de clics de chaque campagne pour déduire le taux d'ouverture du message par des humains réels. Cela permet de compenser les divers mécanismes d'ouverture des machines, y compris la protection de confidentialité dans Mail d'Apple.
 
 Le _taux d'ouverture réel estimé_ est calculé 36 heures après le début de l'envoi de l'e-mail et est ensuite recalculé toutes les 24 heures. Si une campagne se répète, l'estimation est recalculée 36 heures après un nouvel envoi.
 
@@ -336,7 +423,13 @@ Le taux d'ouverture réel estimé n'est disponible que dans les campagnes et n'e
 
 #### Métriques de message in-app
 
-Voici quelques indicateurs clés de messages in-app que vous pouvez voir dans vos analyses. Pour consulter les définitions complètes de tous les indicateurs des messages in-app utilisés dans Braze, reportez-vous à notre [Glossaire des indicateurs de rapport][1].
+Voici quelques indicateurs clés de messages in-app que vous pouvez voir dans vos analyses. Pour consulter les définitions complètes de tous les indicateurs des messages in-app utilisés dans Braze, reportez-vous à notre [Glossaire des indicateurs de rapport.]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)
+
+{% alert note %}
+Les rapports pour les _clics sur le bouton 1_ et les _clics sur le bouton 2_ ne fonctionnent que si vous spécifiez l'**identifiant pour les rapports** comme étant respectivement "0" et "1" dans le message in-app.
+
+![Le champ "Identifiant pour le rapport" avec une valeur de "0".]({% image_buster /assets/img/identifier_for_reporting.png %}){: style="max-width:50%;"}
+{% endalert %}
 
 <style>
     .no-split {
@@ -354,39 +447,39 @@ Voici quelques indicateurs clés de messages in-app que vous pouvez voir dans vo
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#body-clicks">Clics sur le corps du message</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Body Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Body Clicks' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-1-clicks">Clics Boutons 1</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 1 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 1 Clicks' (if used as an anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#button-2-clicks">Clics Boutons 2</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Button 2 Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Button 2 Clicks' (if used as an adjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-impressions">Impressions uniques</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Impressions' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-impressions">Impressions totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Impressions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Impressions' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversions-b-c-d">Conversions (B, C, D)</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversions (B, C, D)' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversions (B, C, D)' if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-conversions">Conversions totales</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Conversions' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Conversions' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#conversion-rate">Taux de conversion</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Conversion Rate' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Conversion Rate' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#close-message">Fermer le message</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Close Message' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Close Message' (si utilisé comme envoi adjectif) %}</td>
         </tr>
     </tbody>
 </table>
@@ -395,7 +488,7 @@ Voici quelques indicateurs clés de messages in-app que vous pouvez voir dans vo
 
 #### Métriques de notification push
 
-Voici une description de certaines indicateurs clés que vous pouvez voir lors de l’examen des performances de vos messages. Pour obtenir les définitions complètes de tous les indicateurs de poussée, consultez le [glossaire des indicateurs de rapport][1] et filtrez par poussée.
+Voici une description de certaines indicateurs clés que vous pouvez voir lors de l’examen des performances de vos messages. Pour obtenir les définitions complètes de tous les indicateurs de poussée, consultez le [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par poussée.
 
 <style>
     .no-split {
@@ -413,15 +506,15 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#bounces">Rebonds</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Bounces' %} Voir <a href="#bounced-push">Rebonds de notification push</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Bounces' %} Voir les notifications push rebondies.</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#direct-opens">Ouvertures directes</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Direct Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Direct Opens' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opens">Ouvertures</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opens' (if used as anjective) %}</td>
         </tr>
     </tbody>
 </table>
@@ -473,9 +566,9 @@ La messagerie cloud Firebase (FCM) peut être utilisée dans trois cas :
 
 {% elsif include.channel == "SMS" %}
 
-#### Métriques de messages SMS
+#### Indicateurs SMS, MMS et RCS
 
-Voici une description de certaines indicateurs clés que vous pouvez voir lors de l’examen des performances de vos messages. Pour obtenir les définitions complètes de tous les indicateurs SMS, consultez le [glossaire des indicateurs de rapport][1] et filtrez par SMS.
+Voici une description de certaines indicateurs clés que vous pouvez voir lors de l’examen des performances de vos messages. Pour obtenir les définitions complètes de tous les indicateurs SMS, MMS et RCS, consultez le [glossaire des indicateurs de rapport]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) et filtrez par SMS/MMS et RCS.
 
 <style>
     .no-split {
@@ -493,35 +586,31 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sent">Envoyé</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sent' %}</td>
-        </tr>
-        <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends-to-carrier">Envois à l’opérateur</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends to Carrier' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sent' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#delivery-failures">Échecs de réception</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Delivery Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Delivery Failures' (if used as an adjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#confirmed-delivery">Livraison confirmée</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Confirmed Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Confirmed Deliveries' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#rejections">Rejets</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Rejections' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Rejections' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#opt-out">Désabonnement</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Opt-Out' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Opt-Out' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#help">Aide</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Help' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Help' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#total-clicks">Nombre total de clics</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' (if used as anjective) %}</td>
         </tr>
     </tbody>
 </table>
@@ -530,7 +619,7 @@ Voici une description de certaines indicateurs clés que vous pouvez voir lors d
 
 #### Indicateurs de webhook
 
-Voici quelques indicateurs clés de webhook qui peuvent apparaître dans vos analyses. Pour voir les définitions complètes de tous les indicateurs de webhook utilisés dans Braze, reportez-vous à notre [glossaire des indicateurs de rapport][1].
+Voici quelques indicateurs clés de webhook qui peuvent apparaître dans vos analyses. Pour voir les définitions complètes de tous les indicateurs webhook utilisés dans Braze, reportez-vous à notre [Glossaire des indicateurs de rapport.]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)
 
 <style>
     .no-split {
@@ -548,15 +637,15 @@ Voici quelques indicateurs clés de webhook qui peuvent apparaître dans vos ana
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#unique-recipients">Destinataires uniques</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Unique Recipients' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Unique Recipients' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Envois</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#errors">Erreurs</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Errors' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Errors' (if used as anjective) %}</td>
         </tr>
     </tbody>
 </table>
@@ -565,7 +654,7 @@ Voici quelques indicateurs clés de webhook qui peuvent apparaître dans vos ana
 
 #### Indicateurs WhatsApp
 
-Voici quelques indicateurs clés de WhatsApp qui peuvent apparaître dans vos analyses. Pour consulter les définitions complètes de tous les indicateurs WhatsApp utilisés dans Braze, reportez-vous à notre [Glossaire des indicateurs de rapport.][1]
+Voici quelques indicateurs clés de WhatsApp qui peuvent apparaître dans vos analyses. Pour voir les définitions complètes de tous les indicateurs WhatsApp utilisés dans Braze, reportez-vous à notre [Glossaire des indicateurs de rapport.]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/)
 
 <style>
     .no-split {
@@ -583,32 +672,32 @@ Voici quelques indicateurs clés de WhatsApp qui peuvent apparaître dans vos an
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#sends">Envois</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Sends' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Sends' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#deliveries">Réceptions</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Deliveries' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Deliveries' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#reads">Lectures</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Reads' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Reads' (if used as anjective) %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#failures">Échecs</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Failures' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Failures' (if used as anjective) %}</td>
         </tr>
     </tbody>
 </table>
 
 #### Blocage de l'utilisateur final et indicateurs de reporting
 
-D'autres indicateurs peuvent être consultés via le [tableau de bord du gestionnaire WhatsApp](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx), bien qu'une [confirmation de votre accès soit](https://www.facebook.com/business/help/218116047387456) nécessaire pour accéder à toutes les informations disponibles.
+D'autres indicateurs peuvent être consultés via le [tableau de bord du gestionnaire WhatsApp](https://www.facebook.com/business/help/683499390267496?content_id=NZUBj7XjkYjYuWx), bien qu'une [confirmation de votre accès soit](https://www.facebook.com/business/help/218116047387456) nécessaire pour accéder à toutes les informations disponibles. 
 
 {% endif %}
 
 ### Performances historiques
 
-Le panneau **Performances historiques** vous permet de visualiser les indicateurs du panneau **Performances des messages** sous la forme d'un graphique dans le temps. Utilisez les filtres en haut du volet pour modifier les statistiques et les canaux affichés dans le graphique. La plage temporelle de ce graphique reflète toujours la plage de temps spécifiée en haut de la page.
+Le panneau **Performances historiques** vous permet de visualiser les indicateurs du panneau **Performances des messages** sous la forme d'un graphique dans le temps. Utilisez les filtres en haut du volet pour modifier les statistiques et les canaux affichés dans le graphique. La plage temporelle de ce graphique reflète toujours la plage de temps spécifiée en haut de la page. 
 
 Pour obtenir une ventilation jour par jour, cliquez sur le menu hamburger <i class="fas fa-bars"></i> et sélectionnez **Télécharger CSV** pour recevoir une exportation CSV du rapport.
 
@@ -628,7 +717,7 @@ Si vous choisissez d'envoyer uniquement aux utilisateurs qui peuvent voir la der
 
 Le panneau **Réponses par mot-clé** vous montre une chronologie des mots-clés entrants avec lesquels les utilisateurs ont répondu après avoir reçu votre message.  
 
-![Panneau de réponses aux mots-clés SMS/MMS au niveau de la campagne qui comprend un graphique linéaire de la distribution des mots-clés dans le temps et une section Catégories de mots-clés avec des cases à cocher pour l'abonnement, l'exclusion, l'aide, l'autre, plus et l'accompagnement.]({% image_buster /assets/img/sms/keyword_responses.png %})
+![Au niveau de la campagne SMS/MMS/RCS Panneau de réponses aux mots-clés qui comprend un graphique linéaire de la distribution des mots-clés dans le temps et une section Catégories de mots-clés avec des cases à cocher pour l'abonnement, l'exclusion, l'aide, l'autre, plus et le coaching.]({% image_buster /assets/img/sms/keyword_responses.png %})
 
 Ici, vous pouvez également consulter la répartition des réponses pour chaque catégorie de mots clés afin de déterminer les prochaines étapes du [reciblage]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns) et de [création d’un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment).
 
@@ -652,7 +741,7 @@ Le panneau **Corrélation de conversion** vous donne des informations sur les at
 
 ### Analyses Meta
 
-En plus des analyses/analytiques de Braze, des analyses au niveau des modèles sont accessibles dans le gestionnaire d'entreprise de WhatsApp. Pour plus d'informations, consultez la [documentation de Meta](https://www.facebook.com/business/help/218116047387456).
+En plus des analyses/analytiques de Braze, des analyses au niveau des modèles sont accessibles dans le gestionnaire d'entreprise de WhatsApp. Pour plus d'informations, consultez la [documentation de Meta](https://www.facebook.com/business/help/218116047387456). 
 
 {% endif %}
 
@@ -660,7 +749,7 @@ En plus des analyses/analytiques de Braze, des analyses au niveau des modèles s
 
 ### Événements SMS Currents
 
-Comme pour les e-mails, Braze reçoit des événements au niveau utilisateur liés à un message SMS à mesure qu’il effectue son parcours à destination d’un utilisateur. Tout événement SMS entrant sera également envoyé en tant qu'événement Currents par le biais de l'événement [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events). Cela vous permet d'effectuer des actions supplémentaires ou des rapports sur les messages que vos utilisateurs envoient en dehors de la plateforme Braze.
+Comme pour les e-mails, Braze reçoit des événements au niveau utilisateur liés à un message SMS à mesure qu’il effectue son parcours à destination d’un utilisateur. Tout événement SMS entrant sera également envoyé en tant qu'événement Currents par le biais de l'événement [SMS InboundReceived]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#sms-inbound-received-events). Cela vous permet d'effectuer des actions supplémentaires ou des rapports sur les messages que vos utilisateurs envoient en dehors de la plateforme Braze. 
 
 {% alert note %}
 Les messages entrants sont tronqués au-delà de 1 600 caractères.
@@ -672,15 +761,13 @@ Les messages entrants sont tronqués au-delà de 1 600 caractères.
 
 ## Rapport de rétention
 
-Les rapports de rétention indiquent les taux auxquels vos utilisateurs ont effectué un événement de rétention sélectionné sur les périodes dans une campagne ou un Canvas spécifique. Pour plus d'informations, reportez-vous aux [rapports de rétention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
+Les rapports de rétention vous indiquent les taux auxquels vos utilisateurs ont effectué un événement de rétention sélectionné sur des périodes de temps dans une campagne spécifique{% if include.channel != "banner" %} ou Canvas{% endif %}. Pour plus d'informations, reportez-vous aux [rapports de rétention]({{site.baseurl}}/user_guide/analytics/reporting/retention_reports/).
 
 ## Rapport d'entonnoir
 
-Le rapport d’entonnoir offre un rapport visuel qui vous permet d’analyser les parcours de vos clients après la réception d’une campagne ou d’un Canvas. Si votre campagne ou votre Canvas utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre comment les différentes variantes ont impacté le tunnel de conversion à un niveau plus précis et de l’optimiser en fonction de ces données.
+Le rapport d'entonnoir offre un rapport visuel qui vous permet d'analyser les parcours que vos clients effectuent après avoir reçu une campagne{% if include.channel != "banner" %} ou Canvas{% endif %}. Si votre campagne {% if include.channel != "banner" %}ou Canvas {% endif %}utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre l'impact des différentes variantes sur l'entonnoir de conversion à un niveau plus granulaire et d'optimiser en fonction de ces données.
 
 Pour plus d'informations, reportez-vous aux [rapports d'entonnoirs]({{site.baseurl}}/user_guide/analytics/reporting/funnel_reports/).
 
 {% endif %}
 
-[1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
-[2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants

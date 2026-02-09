@@ -1,6 +1,6 @@
 ---
-nav_title: Usuários de envio de mensagens
-article_title: Direcionamento de usuários para eventos de previsão
+nav_title: Envio de mensagens para usuários
+article_title: Usuários-alvo para eventos preditivos
 description: "Este artigo de referência aborda as possíveis próximas etapas após a criação de uma previsão de eventos, como a implementação de filtros e considerações estratégicas."
 page_order: 1.2
 
@@ -18,9 +18,9 @@ As previsões prévias e de demonstração não permitirão que os usuários sej
 
 Na página **Previsões** individuais, depois de decidir o intervalo de pontuação de probabilidade ou categoria que deseja direcionar, você pode usar os botões **Criar segmento** ou **Criar campanha** para criar um novo segmento ou campanha. Esse segmento ou campanha filtrará os usuários com a pontuação de probabilidade ou a categoria selecionada com o controle deslizante.
 
-Você também pode usar os filtros "Pontuação de Probabilidade de Evento" e "Categoria de Probabilidade de Evento" em campanhas, canva ou segmentos para segmentar usuários de acordo com sua pontuação de probabilidade ou categoria, assim como você usa qualquer outro filtro no Braze.
+Você também pode usar os filtros "Pontuação de Probabilidade de Evento" e "Categoria de Probabilidade de Evento" em campanhas, canva ou segmentos para segmentar usuários de acordo com sua pontuação ou categoria de probabilidade, assim como você usa qualquer outro filtro no Braze.
 
-![Os filtros disponíveis ao definir um público incluem Categoria de Probabilidade e Pontuação de Probabilidade.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
+![Os filtros disponíveis ao definir um público incluem Categoria de probabilidade e Pontuação de probabilidade.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
 ## Considerações estratégicas {#strategy}
 

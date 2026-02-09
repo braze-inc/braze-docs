@@ -51,13 +51,13 @@ Cuando caduque una tarjeta de contenido, se eliminará automáticamente del feed
 
 Las tarjetas de contenido se pueden eliminar cuando los usuarios completan una compra o realizan un evento personalizado. Puedes seleccionar uno de los siguientes como evento de eliminación: **Realiza el evento personalizado** y **efectúa la compra**. A continuación, selecciona **Añadir Evento**.
 
-!["Eliminar tarjetas cuando los usuarios completen una compra o realicen un evento personalizado" seleccionado con el desencadenante de eliminar tarjetas para los usuarios que realicen una compra específica para "Pulsera".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
+!["Quitar tarjetas cuando los usuarios completen una compra o realicen un evento personalizado", seleccionado con el desencadenante para quitar tarjetas a los usuarios que realicen una compra específica para "Pulsera".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Informes y análisis
 
 Después de lanzar un paso de Tarjetas de contenido en Canvas, puede comenzar a analizar varias métricas diferentes para este paso. Estas métricas incluyen el número de mensajes enviados, los destinatarios únicos, las tasas de conversión, los ingresos totales, etc.
 
-![Análisis de un paso de mensaje con el rendimiento del mensaje de la tarjeta de contenido.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
+![Análisis de un paso de Mensaje con el rendimiento del mensaje de la tarjeta de contenido.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
 Para más información sobre las métricas disponibles y sus definiciones, consulta nuestro [Glosario de métricas de los informes]({{site.baseurl}}/user_guide/data/report_metrics/).
 

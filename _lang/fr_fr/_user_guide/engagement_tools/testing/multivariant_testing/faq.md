@@ -27,6 +27,10 @@ Braze teste toutes les variantes les unes par rapport aux autres à l'aide de te
 
 Ce test est différent du score de confiance, qui décrit uniquement la performance d’une variante par rapport au groupe de contrôle avec une valeur numérique comprise entre 0 et 100 %. Plus précisément, il représente notre confiance dans le fait que la différence standardisée du taux de conversion entre la variante et le contrôle est significativement plus grande que le hasard.
 
+### Pourquoi la répartition des variantes n'est-elle pas uniforme ?
+
+{% multi_lang_include multivariant_testing.md section='Variant distribution' %}
+
 ## Exécution et conclusion des tests
 
 ### Quand le test initial sera-t-il terminé ?

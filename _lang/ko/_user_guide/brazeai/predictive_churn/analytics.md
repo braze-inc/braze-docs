@@ -1,5 +1,5 @@
 ---
-nav_title: 이탈 분석
+nav_title: 고객이탈 분석
 article_title: 이탈 예측 분석
 description: "이 참조 문서에서는 고객이탈 예측 분석 페이지에 포함된 다양한 구성 요소와 이를 사용하여 통찰력 있고 주도적인 의사 결정을 내리는 방법에 대해 설명합니다."
 page_order: 1.5
@@ -12,7 +12,7 @@ page_order: 1.5
 
 ## 이탈 예측 분석 정보
 
-예측 학습이 완료되고 이 페이지가 채워지면 세그먼트 또는 캠페인에서 [필터]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters)를 사용하여 모델의 결과물을 사용하기 시작할 수 있습니다. 하지만 오디언스을 결정하는 데 도움이 필요하고 그 이유를 알고 싶다면, 이 페이지는 모델의 역사적 정확성과 비즈니스 목표에 따라 도움을 줄 수 있습니다. 
+예측 학습이 완료되고 이 페이지가 채워지면 세그먼트 또는 캠페인에서 [필터]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters)를 사용하여 모델의 결과물을 사용하기 시작할 수 있습니다. 하지만 오디언스을 결정하는 데 도움이 필요하고 그 이유를 알고 싶다면, 이 페이지는 모델의 역사적 정확성과 비즈니스 목표에 따라 도움을 줄 수 있습니다. 
 
 이것이 바로 예측 이탈 분석을 구성하는 요소입니다:
 

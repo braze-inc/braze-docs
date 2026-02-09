@@ -15,7 +15,7 @@ channel:
 
 | Exemplo de Android (expandido) | Exemplo de IOS (expandido) |
 | :-----: | :----------: |
-| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![![ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -61,7 +61,7 @@ Se estiver extraindo imagens com [conteúdo conectado]({{site.baseurl}}/user_gui
 As especificações de imagem e texto a seguir se aplicam à parte do carrossel de fotos do Push Stories. Para obter informações sobre o push básico com o qual os usuários interagem para ativar o Push Story, consulte as [diretrizes de texto para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications).
 
 {% tabs %}
-{% tab Imagens %}
+{% tab Images %}
 
 - **Proporção da imagem:** 2:1 (obrigatório)
 - **Tamanho de imagem recomendado:** 500 KB
@@ -69,7 +69,7 @@ As especificações de imagem e texto a seguir se aplicam à parte do carrossel 
 - **Tipos de arquivos:** PNG, JPEG
 
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 
 - **Título:** 30 caracteres (recomendado)
 - **Descrição:** 30 caracteres (recomendado)
@@ -89,7 +89,7 @@ Ao criar uma campanha ou uma tela, é possível filtrar os usuários que deseja 
 
 A análise de dados será muito semelhante à seção de análise atual para notificações por push. Para a análise de dados de "Push Stories", você pode abrir a métrica de **aberturas diretas** para visualizar os cliques por página.
 
-![Tabela de performance de push do iOS com análise de dados de amostra e detalhes expandidos para a métrica de aberturas diretas.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![Tabela de performance de push do iOS com exemplos de análises de dados e detalhes expandidos para a métrica de aberturas diretas.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Solução de problemas
 

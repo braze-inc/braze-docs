@@ -407,7 +407,7 @@ Provide a layout that mimics the standard modal in-app message, but supply your 
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <!-- giving the parent layout a white backround color will obscure the app behind the IAM. You could also do this within your custom view -->
+    <!-- giving the parent layout a white background color will obscure the app behind the IAM. You could also do this within your custom view -->
     <LinearLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center"> 
         <!-- ... -->
         <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"

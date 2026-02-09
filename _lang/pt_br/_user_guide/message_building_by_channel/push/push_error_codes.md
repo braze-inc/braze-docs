@@ -1,9 +1,9 @@
 ---
-nav_title: Mensagens Comuns de Erro de Push
+nav_title: Mensagens comuns de erro de push
 article_title: Envio de mensagens de erro comuns do push
 page_order: 22
 page_type: reference
-description: "Este artigo aborda as mensagens de erro comuns relacionadas ao push para iOS e Android e o orienta quanto às possíveis soluções."
+description: "Este artigo cobre mensagens de erro comuns relacionadas a push para iOS e Android, e orienta você sobre soluções potenciais."
 channel: push
 platform:
 - iOS
@@ -12,7 +12,7 @@ platform:
 
 # Mensagens comuns de erro de push
 
-> Esta página aborda mensagens de erro comuns para envio de mensagens.
+> Esta página cobre mensagens de erro comuns para envio de mensagens por push.
 
 {% tabs %}
 {% tab Android %} 
@@ -36,9 +36,9 @@ Falhas comuns podem incluir:
 
 ### Push devolvido: BadToken
 
-O erro `BadToken` pode ocorrer por vários motivos:
+O erro `BadToken` pode ocorrer por várias razões:
 - O token por push não está sendo enviado para nós corretamente em `[[Appboy sharedInstance] registerPushToken:]`
-	- Verifique o token no [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Em geral, deve se parecer com uma longa string de letras e números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Se isso não acontecer, verifique o código envolvido no envio de erros de token por push do Braze.<br><br>
+	- Verifique o token no [Registro de Atividade de Mensagens]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Geralmente deve parecer uma longa sequência de letras e números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Se não parecer, verifique o código envolvido no envio de erros de token por push do Braze.<br><br>
 - Ambiente de provisionamento incompatível:
 	- Se você se registrar com um certificado de desenvolvimento e tentar enviar com um de produção, poderá ver este erro.  
 	- Braze só suporta certificados universais para ambientes de produção. Testar push em ambientes de desenvolvimento com um certificado universal não funcionará. 

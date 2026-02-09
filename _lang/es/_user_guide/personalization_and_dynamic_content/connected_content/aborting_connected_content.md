@@ -1,11 +1,11 @@
 ---
 nav_title: Anular contenidos conectados
-article_title: Anular contenidos conectados
+article_title: Abortar contenido conectado
 page_order: 2
 description: "Este artículo de referencia cubre algunas de las mejores prácticas de cancelación de mensajes para el Contenido conectado."
 ---
 
-# Anular contenidos conectados {#aborting-connected-content}
+# Abortar contenido conectado {#aborting-connected-content}
 
 > Cuando utilizas la plantilla Liquid, tienes la opción de abortar mensajes con lógica condicional. Esta página cubre las mejores prácticas al hacerlo.
 

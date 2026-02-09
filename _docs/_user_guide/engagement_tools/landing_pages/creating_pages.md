@@ -1,11 +1,11 @@
 ---
-nav_title: Creating landing pages
-article_title: Creating Landing Pages
+nav_title: Create landing pages
+article_title: Create Landing Pages
 description: "This article covers how to create and customize Braze landing pages with the drag-and-drop editor."
 page_order: 0
 ---
 
-# Creating landing pages
+# Create landing pages
 
 > Learn how to create and customize a landing page using the drag-and-drop editor, so you can grow your audience and collect preferences directly in Braze.
 
@@ -88,6 +88,7 @@ You can use these blocks to create a form that links user-submitted data to thei
 | Input Field   | A form field that supports standard attributes (such as first and last name) or a custom attribute string of your choice. |
 | Dropdown      | Users can select an item from a pre-defined list. You can add any custom attribute strings to the list. |
 | Checkbox      | If a user checks the box, the block's attribute is set to `true`. If left unchecked, it's attribute is set to `false`. |
+| Checkbox Group| Users can select from multiple choices presented. Values are either set or added to a defined array custom attribute. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
@@ -108,6 +109,8 @@ We recommend setting up page container-level styles before you customize styles 
 #### Responsive to user devices
 
 You can make your landing page responsive to the size of a user's device by vertically stacking columns on smaller screens. To enable this, add a column into the row you want to make responsive, and then toggle on **Vertically stack on smaller screens** in the **Customize columns** section.
+
+When enabled, you can also reverse stack columns to control the vertical order of multi-column content on smaller screens. This makes pages look and feel better on mobile without custom code.
 
 ![The "Vertically stack on smaller screens" toggle in the "Customize columns" section.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
@@ -130,6 +133,14 @@ To link the confirmation page:
 - Use the **Open web URL** action to link to your confirmation page
 
 If you don’t include a confirmation page, users may not know their form was submitted successfully. Always include a confirmation experience to complete the journey.
+
+{% alert note %} 
+If your confirmation page opens in a new tab, a user who returns to the original landing page and resubmits with updated information can overwrite the previous submission, resulting in inconsistent data. 
+{% endalert %}
+
+{% alert important %}
+If you configure a button with **Submit form when button is clicked** enabled and use **On-click Behavior** to open a web URL in a new tab, iOS Safari's built-in pop-up blocker may prevent the navigation from working. This occurs because form submission followed by opening a new tab is treated as a pop-up.<br><br>To avoid this issue, configure buttons with form submission to open the resulting URL in the same tab (not a new tab). Buttons without form submission can open URLs in new tabs without issues.
+{% endalert %}
 
 ### Step 5: Preview the page
 

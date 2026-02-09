@@ -34,7 +34,7 @@ You can crop an existing image by selecting the image from the media library and
 
 ![Preview of media library image.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
-You'll then be redirected to a cropping composer where you can select your ratio type, and edit the name of the new image. When you hit **Save**, your new image can be used.
+You'll then be redirected to a cropping composer where you can select your ratio type, and edit the name of the new image. When you select **Save**, your new image can be used.
 
 ![Window to crop and save media library image.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 

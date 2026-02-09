@@ -1,5 +1,5 @@
 ---
-nav_title: 인앱 콘텐츠 딥링킹
+nav_title: 인앱 콘텐츠에 대한 딥링킹
 article_title: 인앱 콘텐츠 딥링킹
 page_order: 3
 description: "이 참조 문서에서는 인앱 메시지 콘텐츠에 딥링크를 추가하는 방법에 대한 지침을 다룹니다."
@@ -23,7 +23,7 @@ Deep linking is a way of launching a native app and providing additional informa
 딥링크 내 콜론 이후의 모든 내용은 자유 형식 텍스트입니다. It's up to you to define its structure and interpretation; however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (for example, `?foo=1&bar=2`). 이전 예제에서 `twitter://user?screen_name=[id]`는 앱에서 특정 프로필을 실행하는 데 사용됩니다.
 
 {% alert important %}
-Braze doesn't support using a wrapper like Flutter to send deep links. 이 기능을 사용하려면 네이티브 레이어에서 딥 링크를 구성해야 합니다.
+Braze doesn't support using a wrapper like Flutter to send deep links. 이 기능을 사용하려면 네이티브 레이어에서 딥링크를 구성해야 합니다.
 {% endalert %}
 
 ## UTM 태그 및 캠페인 어트리뷰션
@@ -46,11 +46,11 @@ If you want to use UTM tags with regular HTTP (web) links (for example, to do ca
 
 To use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK](https://developers.google.com/analytics/devguides/collection/) integrated and correctly configured to handle deep links. 확실하지 않은 경우 개발자에게 문의하세요.
 
-Analytics SDK가 통합되고 구성된 후, UTM 태그는 Braze 캠페인에서 딥 링크와 함께 사용할 수 있습니다. 캠페인을 위한 UTM 태그를 설정하려면, 대상 URL 또는 딥 링크에 필요한 UTM 태그를 포함하세요. 다음 예는 푸시 알림 및 인앱 메시지에서 UTM 태그를 사용하는 방법을 보여줍니다.
+분석 SDK가 통합 및 구성되면 UTM 태그를 Braze 캠페인에서 딥링크와 함께 사용할 수 있습니다. 캠페인에 대한 UTM 태그를 설정하려면 대상 URL 또는 딥링크에 필요한 UTM 태그를 포함하세요. 다음 예는 푸시 알림 및 인앱 메시지에서 UTM 태그를 사용하는 방법을 보여줍니다.
 
 #### UTM 태그로 푸시 열기 어트리뷰션
 
-푸시 알림을 위한 딥링크에 UTM 태그를 포함하려면, 푸시 메시지의 클릭 동작을 딥링크로 설정한 다음, 딥링크 주소를 작성하고 원하는 UTM 태그를 다음과 같은 방식으로 포함하세요:
+푸시 알림용 딥링크에 UTM 태그를 포함하려면 푸시 메시지의 클릭 시 동작을 딥링크로 설정한 다음 딥링크 주소를 작성하고 다음과 같은 방식으로 원하는 UTM 태그를 포함하세요:
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
@@ -60,7 +60,7 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 
 #### UTM 태그를 사용한 인앱 메시지 클릭 어트리뷰션
 
-앱 내 메시지의 딥 링크에 UTM 태그를 포함하려면 다음을 사용하세요:
+인앱 메시징의 딥링크에 UTM 태그를 포함하려면 다음을 사용하세요:
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=iam&utm_campaign=spring2021giftcards&utm_content=web_link

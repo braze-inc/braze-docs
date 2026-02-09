@@ -1,5 +1,5 @@
 ---
-nav_title: Réception par événement
+nav_title: Livraison par événement
 article_title: Réception par événement
 page_order: 1
 page_type: reference
@@ -65,7 +65,7 @@ Supposons, par exemple, que nous ayons une campagne avec un événement personna
 L'événement déclencheur « démarrer la session » peut être la toute première ouverture de l'application par l'utilisateur si le segment de votre campagne s'applique aux nouveaux utilisateurs. (par exemple, si votre segment se compose de ceux qui n'ont pas de sessions).
 {% endalert %}
 
-N’oubliez pas que vous pouvez toujours envoyer une campagne déclenchée à un segment spécifique d’utilisateurs, afin que ceux qui ne font pas partie du segment ne reçoivent pas la campagne même s’ils effectuent l’événement déclencheur. Si vous remarquez que des utilisateurs ne reçoivent pas la campagne alors qu'ils se sont qualifiés pour le segment, consultez notre section sur les [raisons pour lesquelles un utilisateur pourrait ne pas avoir reçu une campagne déclenchée]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/).
+N’oubliez pas que vous pouvez toujours envoyer une campagne déclenchée à un segment spécifique d’utilisateurs, afin que ceux qui ne font pas partie du segment ne reçoivent pas la campagne même s’ils effectuent l’événement déclencheur.
 
 En ce qui concerne l’événement déclencheur défini quand un utilisateur ajoute une adresse e-mail à son profil, les règles suivantes s’appliquent :
 
@@ -76,7 +76,7 @@ En outre, les messages in-app déclenchés sont toujours conformes aux règles d
 
 ![]({% image_buster /assets/img_archive/schedule_triggered1.png %})
 
-### Étape 2 : Sélectionner la longueur du délai
+### Étape 2 : Sélectionner la longueur du délai
 
 Sélectionnez la durée d’attente avant d’envoyer la campagne une fois les critères de déclenchement satisfaits. Si la longueur du délai choisi est supérieure à la durée d’envoi du message, aucun utilisateur ne recevra la campagne. 
 
@@ -89,7 +89,7 @@ Vous pouvez également choisir d’envoyer la campagne soit un jour spécifique 
 ![]({% image_buster /assets/img_archive/schedule_triggered7.png %})
 ![]({% image_buster /assets/img_archive/schedule_triggered8.png %})
 
-### Étape 3 : Sélectionner des événements d’exception
+### Étape 3 : Sélectionner des événements d’exception
 
 Sélectionnez un événement d’exception qui disqualifiera les utilisateurs pour la réception de cette campagne. Vous ne pouvez le faire que si votre message déclenché est envoyé après un délai temporel. Les [événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/#exception-events) peuvent être la réalisation d'un achat, le démarrage d'une session, l'exécution de l'un des [événements de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events) désignés par une campagne ou l'exécution d'un événement personnalisé. Si un utilisateur effectue l’événement déclencheur mais effectue ensuite votre événement d’exception avant que le message ne soit envoyé en raison du délai temporel, il ne recevra pas la campagne. Les utilisateurs qui ne reçoivent pas la campagne en raison de l'événement d'exception seront automatiquement éligibles pour la recevoir à l'avenir, la prochaine fois qu'ils complètent l'événement déclencheur, même si vous ne choisissez pas que les utilisateurs deviennent [à nouveau éligibles]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/).
 

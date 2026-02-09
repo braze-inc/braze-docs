@@ -15,7 +15,7 @@ channel:
 > 링크 템플릿을 사용하면 매개변수를 추가하거나 URL을 앞에 붙여 이메일 캠페인을 위한 동적이고 재사용 가능한 링크를 만들 수 있습니다. 이것은 캠페인과 메시지 전반에 걸쳐 URL의 일관성을 생성할 수 있습니다. 
 
 {% alert note %}
-링크 템플릿은 선택적 기능입니다. **이메일 링크 템플릿**이(가) **템플릿** 섹션에 없으면 기능을 켜기 위해 계정 매니저에게 문의하세요.
+링크 템플릿은 선택적 기능입니다. **템플릿** 섹션에서 **이메일 링크 템플릿이** 누락된 경우 계정 매니저에게 문의하여 기능을 사용 설정하세요.
 {% endalert %}
 
 ## 작동 방식
@@ -54,7 +54,7 @@ channel:
 
 **템플릿 미리보기**는 링크 템플릿이 URL 앞에 어떻게 삽입될지를 보여주는 예시를 제공합니다.
 
-![템플릿 위치, URL 앞에 URL 추가 및 링크 템플릿 삽입 프로세스를 위한 템플릿 미리보기 필드.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
+![템플릿 위치, URL 추가, 템플릿 미리보기 필드는 URL 앞에 링크 템플릿 삽입 프로세스를 위한 필드입니다.]({% image_buster /assets/img_archive/link_template_preappend.png %}){: style="max-width:90%;"}
 
 ### 추가: URL {#append-link-template} 뒤에 삽입되는 링크 템플릿을 만드십시오
 
@@ -64,7 +64,7 @@ URL 뒤에 쿼리 매개변수를 추가하려면 이메일 메시지에서:
 2. **URL 뒤**에 **템플릿 위치**를 설정합니다. 
 3. 각 URL의 끝에 쿼리 매개변수(`value=example`)를 입력하세요. URL 끝에 여러 매개변수를 추가할 수 있습니다.
 
-![템플릿 위치, 쿼리 매개변수 및 URL 뒤의 링크 템플릿 삽입 프로세스를 위한 템플릿 미리보기 필드.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
+![템플릿 위치, 쿼리 매개변수, 템플릿 미리보기 필드에 URL 후 링크 템플릿 삽입 프로세스를 위한 템플릿을 추가할 수 있습니다.]({% image_buster /assets/img_archive/link_template_postappend.png %}){: style="max-width:90%;"}
 
 ## 이메일 캠페인에서 링크 템플릿 사용
 
@@ -78,23 +78,23 @@ URL 뒤에 쿼리 매개변수를 추가하려면 이메일 메시지에서:
 
 - **드래그 앤 드롭 편집기:** **콘텐츠** > **링크 관리** 탭을 선택합니다. 그런 다음, **링크 템플릿 추가**를 선택합니다. 드래그 앤 드롭 편집기에서 링크 템플릿에 액세스하려면 [링크 별칭 지정]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/link_aliasing/)이(가) 켜져 있어야 합니다.
 
-![Link Management tab in the drag-and-drop editor with an example list of link templates.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
+![드래그 앤 드롭 편집기의 링크 관리 탭에 링크 템플릿의 예제 목록이 있습니다.]({% image_buster /assets/img_archive/link_template_messagecomposer2.png %})
 
 {% alert note %}
-링크 템플릿은 일반 텍스트에 적용되지 않습니다. 이것은 커런츠가 링크 템플릿의 매개변수를 포함하지 않는 클릭을 표시할 수 있음을 의미합니다. 이러한 클릭은 이메일의 일반 텍스트 버전에서 올 수 있습니다.
+링크 템플릿은 일반 텍스트에는 적용되지 않습니다. 즉, 링크 템플릿의 매개변수가 포함되지 않은 클릭은 이메일의 일반 텍스트 버전에서 발생한 클릭일 수 있으므로 커런츠에 표시되지 않을 수 있습니다.
 {% endalert %}
 
 **링크 관리** 탭에 링크 템플릿을 추가하면 추가한 템플릿을 보려면 오른쪽으로 스크롤하십시오. If existing links within an email already have a link template added, newly added links will also have the link template added by default.
 
 ## 링크 템플릿 관리
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) link templates. [템플릿 및 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)에서 템플릿 및 창의적인 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요.
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) link templates. 템플릿에서 템플릿 및 크리에이티브 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요 [ & 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
 링크 템플릿에 대한 템플릿 보관은 현재 사용할 수 없습니다.
 {% endalert %}
 
-## 자주 묻는 질문
+## Frequently asked questions
 
 For answers to frequently asked questions about link templates, check out our [Templates FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/) page.
 

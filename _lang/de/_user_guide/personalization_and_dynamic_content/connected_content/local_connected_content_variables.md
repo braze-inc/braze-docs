@@ -1,5 +1,5 @@
 ---
-nav_title: Lokal verknüpfte Inhaltsvariablen
+nav_title: Lokale Variablen für verknüpfte Inhalte
 article_title: Lokal verknüpfte Inhaltsvariablen
 page_order: 1
 description: "In diesem Referenzartikel erfahren Sie, wie Sie lokale Connected-Content-Variablen verwenden und speichern können."
@@ -12,7 +12,7 @@ search_rank: 1
 
 Braze stellt zum Sendezeitpunkt eine standardmäßige GET-Anfrage an den im Tag `connected_content` angegebenen Endpunkt. Wenn der Endpunkt JSON zurückgibt, wird es automatisch geparst und in einer Variablen namens `connected` gespeichert. Wenn der Endpunkt Text zurückgibt, wird dieser direkt in die Nachricht anstelle des Tags `connected_content` eingefügt.
 
-Wenn Sie Ihre Antwort in einer Variablen speichern möchten, empfiehlt es sich, JSON-Objekte zurückzugeben. Und wenn Sie möchten, dass die Antwort von Connected-Content den Tag durch den Text ersetzt, stellen Sie sicher, dass die Antwort kein gültiges JSON ist (wie von [json.org][46] definiert)
+Wenn Sie Ihre Antwort in einer Variablen speichern möchten, empfiehlt es sich, JSON-Objekte zurückzugeben. Und wenn Sie möchten, dass die Antwort von Connected-Content den Tag durch den Text ersetzt, stellen Sie sicher, dass die Antwort kein gültiges JSON ist (wie von [json.org](http://www.json.org))
 
 Sie können auch `:save your_variable_name` nach der URL angeben, um die Daten unter einem anderen Namen zu speichern. Der folgende Tag `connected_content` zum Beispiel speichert die Antwort in einer lokalen Variable namens `localweather` (Sie können mehrere `connected_content` JSON-Variablen speichern):
 
@@ -84,36 +84,13 @@ Enjoy the weather!
 
 Wenn die API mit {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} antwortet und `Rain` zurückgibt, würde die:der Nutzer:in diesen Push erhalten.
 
-![Push-Benachrichtigung mit der Nachricht "Es regnet! Nehmen Sie einen Regenschirm!"][17]{:style="max-width:50%" }
+![Push-Benachrichtigung mit der Nachricht "Es regnet! Nehmen Sie einen Regenschirm!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
-Standardmäßig setzt Connected-Content einen `Content-Type` -Header auf eine GET-HTTP-Anfrage, die es an `application/json` mit `Accept: */*` stellt. Wenn Sie einen anderen Content-Typ benötigen, geben Sie ihn explizit an, indem Sie dem Tag `:content_type your/content-type` hinzufügen. Braze setzt dann sowohl den Content-Type- als auch den Accept-Header auf den von Ihnen angegebenen Typ.
-
-{% raw %}
-```js
-{% connected_content http://numbersapi.com/random/trivia :content_type application/json %}
-```
-{% endraw %}
+{% multi_lang_include connected_content.md section='default behavior' %}
 
 ## HTTP POST
 
-Standardmäßig stellt Connected-Content eine HTTP GET-Anfrage an die angegebene URL. Um stattdessen eine POST-Anfrage zu stellen, geben Sie `:method post` an.
-
-Sie können optional einen POST-Body bereitstellen, indem Sie `:body` angeben, gefolgt von entweder einem Abfrage-String des Formats `key1=value1&key2=value2&...` oder einem Verweis auf erfasste Werte. Content-Type ist standardmäßig auf `application/x-www-form-urlencoded` eingestellt. Wenn Sie `:content_type application/json` angeben und einen form-url-codierten Body wie `key1=value1&key2=value2` bereitstellen, codiert Braze den Body vor dem Senden automatisch in JSON.
-
-Connected-Content zwischenspeichert standardmäßig auch keine POST-Aufrufe. Sie können dieses Verhalten aktualisieren, indem Sie `:cache_max_age` zum Connected-Content-POST-Aufruf hinzufügen.
-
-#### Standard Content-Typ
-
-{% raw %}
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
-```
-#### Anwendung/JSON Inhalt-Typ
-
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
-```
-{% endraw %}
+{% multi_lang_include connected_content.md section='http post' %}
 
 ### JSON-Körper bereitstellen
 
@@ -184,5 +161,3 @@ Dieser Schlüssel wird nur dann automatisch zum Connected-Content-Objekt hinzuge
 
 
 [16]: [success@braze.com](mailto:success@braze.com)
-[17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Beispiel für die Verwendung von Connected Content Push"
-[46]: http://www.json.org

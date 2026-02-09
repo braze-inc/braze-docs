@@ -17,7 +17,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 > Braze 거래 이메일은 발신자와 수신자 간에 합의된 거래를 진행하기 위해 전송됩니다. 이 참조 문서에서는 Braze 대시보드에서 트랜잭션 이메일 캠페인을 생성하고 [`/transactional/v1/campaigns/{campaign_id}/send` 엔드포인트]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message)에 대한 API 호출에 포함할 `campaign_id`를 생성하는 방법을 설명합니다.
 
 {% alert important %}
-Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할 수 있습니다. 자세한 내용은 Braze 고객 성공 관리자에게 문의하거나 [지원 티켓을]({{site.baseurl}}/braze_support/) 개설하세요.
+Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할 수 있습니다. Braze 고객 성공 매니저에게 연락하거나 [지원 티켓]({{site.baseurl}}/braze_support/)을 열어 더 많은 세부정보를 확인하세요.
 {% endalert %}
 
 거래 이메일 캠페인 유형은 판매자와 고객 간의 합의된 거래를 촉진하기 위해 자동화된 비프로모션 이메일 메시지를 전송하기 위해 특별히 고안된 유형입니다. 여기에는 다음과 같은 정보가 포함됩니다:
@@ -37,7 +37,7 @@ Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할
 
 새 트랜잭션 이메일 캠페인을 만들려면 캠페인을 만들고 메시징 채널로 **트랜잭션 이메일**을 선택합니다.
 
-![Create Campaign dropdown with the highlighted option for transactional email.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![거래 이메일에 대한 옵션이 강조 표시된 캠페인 만들기 드롭다운을 클릭합니다.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 이제 거래 이메일 캠페인 구성으로 넘어갈 수 있습니다.
 
@@ -51,7 +51,7 @@ Braze 트랜잭션 이메일은 일부 Braze 패키지의 일부로만 사용할
 - The **Target Audiences** step has been removed. 트랜잭션 이메일은 전체 사용자층(수신 거부한 사용자 포함)을 적격 사용자로 등록하므로 필터나 세그먼트를 지정할 필요가 없습니다. 따라서 이 메시지를 수신해야 하는 대상에 적용할 로직이 있는 경우, 특정 사용자에게 메시지를 트리거하기 위해 Braze에 API 요청을 할 것인지 결정하기 전에 해당 로직을 적용하는 것이 좋습니다.
 - **전환** 단계가 제거되었습니다. 현재 트랜잭션 이메일은 전환 이벤트 추적을 지원하지 않습니다.
 
-![Compose, Delivery, and Confirm workflow to create a Transactional Email campaign.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
+![작업 흐름을 작성하여 트랜잭션 이메일 캠페인을 구성하고, 전달 및 확인합니다.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 거래 이메일 캠페인을 구성하려면 다음 단계를 따르세요:
 

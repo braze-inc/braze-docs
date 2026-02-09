@@ -14,11 +14,11 @@ description: "Cette page explique comment utiliser l'éditeur glisser-déposer d
 
 ## Créer une annonce de produit
 
-### Étape 1 : Choisissez votre modèle
+### Étape 1 : Choisissez votre modèle
 
-Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Annonce de produit** pour votre modèle, puis choisissez **Créer un message.** Ce modèle est pris en charge à la fois pour les applications mobiles et les navigateurs web.
+Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Annonce de produit** pour votre modèle, puis **Construire un message.** Ce modèle est pris en charge à la fois pour les applications mobiles et les navigateurs web.
 
-![L'éditeur de messages in-app avec le modèle d'annonce de produit.]({% image_buster /assets/img/drag_and_drop/templates/product_announcement.png %})
+![L'éditeur de messages in-app avec le modèle d'une annonce produit.]({% image_buster /assets/img/drag_and_drop/templates/product_announcement.png %})
 
 ### Étape 2 : Définissez les styles de vos messages
 

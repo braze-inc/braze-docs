@@ -52,7 +52,7 @@ Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(c
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Branch attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Branch upon install as there will be no disruption of service. 
+Prior to February 2023, our Branch attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and send it to Branch upon install because there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -95,9 +95,9 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from Branch, the status connection indicator on the Branch technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
+After Braze receives attribution data from Branch, the status connection indicator on the Branch technology partners page in Braze changes from "Not Connected" to "Connected" and includes a timestamp of the last successful request.
 
-Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Branch postback, are ignored by our API and are not counted when determining if a successful connection was established.
+This status changes only after Braze receives data about an attributed install. Braze ignores organic installs (excludes them from the Branch postback) and does not count them when determining if the connection is successful.
 
 ## Facebook and X (formerly Twitter) attribution data
 

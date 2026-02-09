@@ -1,5 +1,5 @@
 ---
-nav_title: Portail de confidentialité
+nav_title: Portail de la protection de la vie privée
 article_title: Portail de confidentialité
 page_order: 60
 layout: dev_guide

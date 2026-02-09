@@ -141,7 +141,7 @@ Si votre rapport contient des campagnes multivariantes, votre exportation inclur
 
 Le fichier contenant des indicateurs de variante aura un préfixe `variant_`. La première fois que vous exportez un rapport automatisé, une fenêtre contextuelle s'affiche, vous demandant d'autoriser le téléchargement de plusieurs fichiers - cliquez sur **Autoriser.**
 
-![Campagne Télécharger]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
+![Téléchargement de la campagne]({% image_buster /assets/img/campaign_comparison/download.png %}){: style="max-width:60%;"}
 
 ### Exportation des rapports de comparaison Canvas
 
@@ -156,7 +156,7 @@ Si vous téléchargez un rapport Canvas ventilé par variante, vous recevrez deu
 
 Utilisez des graphiques pour visualiser un indicateur sélectionné dans votre rapport. Des graphiques sont disponibles pour les rapports comportant des campagnes et qui ont au moins un indicateur ajouté à leurs colonnes.
 
-![Graphique des performances de la campagne avec les indicateurs Envoi de messages sélectionnés]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
+![Tableau Performance de campagne avec l’indicateur Messages envoyés sélectionné]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 Par défaut, le graphique de chaque rapport affiche l’indicateur dans la première colonne du rapport. Pour sélectionner un indicateur différent à représenter graphiquement, choisissez-le dans la liste déroulante. Tout indicateur dans votre tableau de rapport pourra être affiché sur votre graphique.
 

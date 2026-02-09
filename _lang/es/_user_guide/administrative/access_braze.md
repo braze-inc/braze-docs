@@ -11,18 +11,15 @@ description: "En esta página encontrará artículos sobre cómo acceder a su cu
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-- name: Navegar por Braze
-  link: /docs/user_guide/administrative/access_braze/navigation/
-  image: /assets/img/braze_icons/list.svg
-- name: Buscar en tu panel
-  link: /docs/user_guide/administrative/access_braze/global_search/
-  image: /assets/img/braze_icons/search-sm.svg
-- name: API y puntos finales SDK
-  link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Acceder a tu cuenta
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
   image: /assets/img/braze_icons/user-circle.svg
+- name: El panel de Braze
+  link: /docs/user_guide/administrative/access_braze/braze_dashboard/
+  image: /assets/img/braze_icons/browser.svg
+- name: API y puntos finales SDK
+  link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Configuración de idioma
   link: /docs/user_guide/administrative/access_braze/language/
   image: /assets/img/braze_icons/globe-04.svg

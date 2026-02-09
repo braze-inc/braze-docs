@@ -11,7 +11,7 @@ channel:
 
 # Botones de acción para notificación push
 
-![Una notificación push de iOS con dos botones de acción para push: Aceptar y Rechazar.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Una notificación push de iOS con dos botones de acción para push: Aceptar y rechazar.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Los botones de acción push permiten configurar el contenido y las acciones de los botones cuando se utilizan las notificaciones push Braze de iOS y Android. Con los botones de acción, sus usuarios pueden interactuar directamente con su aplicación desde una notificación sin necesidad de hacer clic en una experiencia de aplicación.
 
@@ -36,7 +36,7 @@ Para utilizar botones de acción en tus mensajes push de iOS, haz lo siguiente:
  - Más
  - Categoría iOS personalizada prerregistrada
 
-![Menú desplegable de categorías de notificaciones de iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![Menú desplegable Categoría de notificación de iOS.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
 Debido a la forma en que iOS gestiona los botones, es necesario realizar pasos de integración adicionales al configurar botones de acción push, que se describen en nuestra [documentación para desarrolladores]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). En concreto, es necesario configurar las categorías de iOS o seleccionar entre determinadas opciones de botones predeterminados. Para las integraciones de Android, estos botones funcionarán automáticamente.

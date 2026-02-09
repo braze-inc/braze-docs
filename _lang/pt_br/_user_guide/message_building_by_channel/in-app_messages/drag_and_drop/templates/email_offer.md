@@ -1,5 +1,5 @@
 ---
-nav_title: Inscrição de e-mail com oferta
+nav_title: Cadastro de e-mail com oferta
 article_title: Envio de e-mail com oferta especial
 alias: "/email_offer/"
 page_order: 5
@@ -18,7 +18,7 @@ description: "Esta página aborda como usar o editor de arrastar e soltar mensag
 
 Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Envio de e-mail com oferta especial** para o modelo e, em seguida, selecione **Montar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
 
-![O editor de mensagens no app com o modelo para um formulário de envio de e-mail com uma oferta especial.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
+![O editor de mensagens no app com o modelo para um formulário de cadastro de e-mail com uma oferta especial.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
 
 ### Etapa 2: Configure seus estilos de mensagens
 

@@ -43,7 +43,7 @@ Adjust.addGlobalPartnerParameter("braze_device_id", Braze.getInstance(getApplica
 
 <!--
 {% alert important %}
-Prior to February 2023, our Adjust attribution integration used the IDFV as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation as there will be no service disruption. 
+Prior to February 2023, our Adjust attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. Braze customers don't need to use Objective-C to fetch the Braze `device_id` and send it to Adjust upon installation because there is no service disruption. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -52,7 +52,7 @@ If set to `true`, you must implement the iOS device ID mapping for Swift to pass
 --->
 
 {% tabs local %}
-{% tab Objective C %}
+{% tab Objective-C %}
 
 Se você tiver um app para iOS, seu IDFV será coletado pelo Adjust e enviado ao Braze. Esse ID será então mapeado para um ID de dispositivo exclusivo no Braze.
 
@@ -74,19 +74,19 @@ Se estiver planejando enviar eventos pós-instalação da Adjust para a Braze, s
 
 Na Braze, navegue até **Integrações** > **Parceiros de tecnologia** e selecione **Adjust**. 
 
-Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Adjust.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia Adjust (Ajustar). Nessa caixa, você verá a chave de importação de dados e o ponto de extremidade REST.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
+Aqui você encontra o endpoint REST e gera sua chave de importação de dados da Braze. Depois que a chave é gerada, você pode criar outra ou invalidar uma existente. A chave de importação de dados e o ponto de extremidade REST são usados na próxima etapa ao configurar um postback no dashboard do Adjust.<br><br>![Esta imagem mostra a caixa "Data Import for Install Attribution" (Importação de dados para atribuição de instalação) encontrada na página de tecnologia Adjust (Ajustar). Essa caixa contém chave de importação de dados e o endpoint REST.]({% image_buster /assets/img/attribution/adjust.png %}){: style="max-width:90%;"}
 
 ### Etapa 3: configurar a Braze na Adjust
 
 1. No dashboard do Adjust, navegue até **Configurações do app** e navegue até **Configuração de parceiros** e, em seguida, **Adicionar parceiros**.
 2. Selecione **Braze (formerly Appboy)** (Braze [antes Appboy]) e forneça a chave de importação de dados e o endpoint REST da Braze.
-3. Clique em **Save & Close (Salvar e fechar**).
+3. Clique em **Save (Salvar) & Close (Fechar**).
 
 ### Etapa 4: Confirmar a integração
 
-Depois que a Braze receber os dados de atribuição da Adjust, o indicador de status da conexão na página de parceiros de tecnologia da Adjust na Braze mudará de "Não conectado" para "Conectado". Um registro de data e hora da última solicitação bem-sucedida também será incluído. 
+Depois que o Braze receber dados de atribuição da Adjust, o indicador de status da conexão na página de parceiros de tecnologia da Adjust no Braze mudará de "Não conectado" para "Conectado" e incluirá um registro de data e hora da última solicitação bem-sucedida.
 
-Observe que isso não acontecerá até recebermos dados sobre uma instalação atribuída. Instalações orgânicas, que devem ser excluídas do postback da Adjust, são ignoradas pela nossa API e não são contadas ao determinar se uma conexão bem-sucedida foi estabelecida.
+Esse status é alterado somente depois que o Braze recebe dados sobre uma atribuição de instalação. O Braze ignora as instalações orgânicas (exclui-as do postback de ajuste) e não as conta ao determinar se a conexão foi bem-sucedida.
 
 ## Campos de dados disponíveis
 

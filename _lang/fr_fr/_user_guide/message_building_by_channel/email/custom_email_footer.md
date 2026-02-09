@@ -1,5 +1,5 @@
 ---
-nav_title: "Pied de page personnalisé pour l'e-mail"
+nav_title: Pied de page personnalisé pour les e-mails
 article_title: "Pied de page personnalisé pour l'e-mail"
 page_order: 6.5
 description: "Cet article explique comment configurer un pied de page d'e-mail personnalisé à l'échelle de l'espace de travail."
@@ -10,9 +10,9 @@ channel:
 
 # Pied de page personnalisé pour les e-mails
 
-> Vous pouvez définir un pied de page d'e-mail personnalisé pour l'ensemble de votre espace de travail, que vous pouvez intégrer dans chaque e-mail à l'aide de l'attribut Liquid {% raw %}`{{${email_footer}}}`{% endraw %}.
+> Vous pouvez définir un pied de page d'e-mail personnalisé pour l'ensemble de l'espace de travail, que vous pouvez intégrer dans chaque e-mail à l'aide de l'attribut Liquid {% raw %}`{{${email_footer}}}`{% endraw %}.
 
-En utilisant des pieds de page d'e-mail personnalisés, vous n'avez plus besoin de créer un nouveau pied de page pour chaque modèle d'e-mail ou campagne d'e-mail que vous utilisez. Les modifications apportées à votre pied de page personnalisé seront reflétées dans toutes les campagnes par e-mail existantes et nouvelles. N'oubliez pas que le respect de la [loi CAN-SPAM de 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) vous oblige à inclure une adresse physique pour votre entreprise et un lien de désabonnement dans vos e-mails.
+En utilisant des pieds de page d'e-mail personnalisés, vous n'avez plus besoin de créer un nouveau pied de page pour chaque modèle d'e-mail ou campagne d'e-mail que vous utilisez. Toutes les campagnes d'e-mail existantes et nouvelles reflètent les modifications apportées à votre pied de page personnalisé. N'oubliez pas que le respect de la [loi CAN-SPAM de 2003](https://www.ftc.gov/tips-advice/business-center/guidance/can-spam-act-compliance-guide-business) vous oblige à inclure une adresse physique pour votre entreprise et un lien de désabonnement dans vos e-mails.
 
 {% alert warning %}
 Il est de votre responsabilité de vous assurer que votre pied de page personnalisé répond aux exigences susmentionnées.
@@ -22,17 +22,18 @@ Il est de votre responsabilité de vous assurer que votre pied de page personnal
 
 Pour créer ou modifier votre pied de page personnalisé, procédez comme suit :
 
-1. Allez dans **Paramètres** > **Préférences e-mail.**
+1. Allez dans **Paramètres** > **Préférences e-mail** > **Pages et pieds de page d'abonnement**.
 2. Allez dans la section **Pied de page personnalisé** et activez les pieds de page personnalisés.
-3. Modifiez votre pied de page dans la section **Composer**.
-4. Envoyez un message test. 
+3. Sélectionnez **Modifier** puis modifiez votre pied de page dans la section **Composer**.
+4. Sélectionnez **Aperçu** pour voir comment votre pied de page d'e-mail s'affichera dans la boîte de réception d'un client. Vous pouvez éventuellement sélectionner **Copier le lien de prévisualisation** pour générer et copier un lien de prévisualisation partageable qui montre à quoi ressemblera l'e-mail pour un utilisateur aléatoire. Le lien durera sept jours avant de devoir être régénéré.
+5. Envoyez un message test. 
 
-![Exemple de pied de page personnalisé.]({% image_buster /assets/img_archive/custom_footer.png %})
+![Un exemple de pied de page personnalisé.]({% image_buster /assets/img_archive/custom_footer.png %})
 
-Le pied de page par défaut utilise l'attribut {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} et notre adresse postale. Si vous utilisez cette option par défaut, veillez à sélectionner **<autre>** pour le **protocole**.
+Le pied de page par défaut utilise l'attribut {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} et notre adresse postale. Si vous utilisez cette option par défaut, veillez à sélectionner **<other>** pour le **protocole**.
 
 {% alert important %}
-Pour être conforme à la réglementation CAN-SPAM, votre pied de page personnalisé doit inclure {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %}. Vous ne pourrez pas enregistrer un pied de page personnalisé sans cet attribut.
+Pour respecter la réglementation CAN-SPAM, votre pied de page personnalisé doit comporter un lien de désabonnement. Vous pouvez utiliser cet attribut liquid {% raw %}`{{${set_user_to_unsubscribed_url}}}`{% endraw %} ou votre propre URL de désinscription personnalisée. Vous ne pourrez pas enregistrer un pied de page personnalisé sans lien de désabonnement.
 {% endalert %}
 
 ![Valeurs de protocole et d'URL nécessaires pour le pied de page personnalisé.]({% image_buster /assets/img_archive/email_unsub_protocol.png %}){: style="max-width:50%;"}
@@ -43,11 +44,11 @@ Soyez très prudent lorsque vous utilisez un modèle avec le pied de page person
 
 Voici un avertissement dans le compositeur de l'e-mail :
 
-![Exemple d'e-mail composé sans pied de page.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
+![Exemple de courriel composé sans pied de page.]({% image_buster /assets/img_archive/no_unsub_link_warning.png %})
 
 Voici un avertissement dans le compositeur de la campagne :
 
-![Composition de la campagne No-Footer.]({% image_buster /assets/img_archive/no_footer_test.png %})
+![Composition de campagne sans pied de page.]({% image_buster /assets/img_archive/no_footer_test.png %})
 
 ### Ajouter un lien de désinscription personnalisé
 
@@ -89,5 +90,5 @@ Vous pouvez également choisir de définir un pied de page personnalisé pour le
 
 Si vous n’ajoutez pas de pied de page en texte brut, Braze en créera automatiquement un à partir du pied de page HTML. Lorsque vos pieds de page personnalisés sont à votre goût, sélectionnez **Enregistrer.**
 
-![E-mail avec l'option Set Custom Plaintext Footer sélectionnée.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
+![E-mail avec l'option Set Custom Plaintext Footer (Définir un pied de page en texte clair personnalisé) personnalisée.]({% image_buster /assets/img_archive/custom_footer_save_changes.png %}){: style="max-width:70%" }
 

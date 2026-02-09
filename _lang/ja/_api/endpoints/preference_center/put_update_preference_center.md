@@ -1,5 +1,5 @@
 ---
-nav_title: "PUT:ユーザー設定センターの更新"
+nav_title: "PUT:ユーザー設定センターを更新"
 article_title: "PUT:ユーザー設定センターの更新"
 search_tag: Endpoint
 page_order: 5
@@ -61,7 +61,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       }
     ]
   }
-} 
+}
 ```
 
 ## リクエストパラメーター

@@ -1,5 +1,5 @@
 ---
-nav_title: "Envío de mensajes SMS"
+nav_title: Enviar mensajes SMS
 article_title: Visión general del envío de mensajes SMS
 page_order: 4
 alias: /sms_message_sending/
@@ -44,7 +44,7 @@ Algunas marcas pueden desear enviar a un grupo de usuarios que tienen números d
 
 Para superar esta limitación, durante [el proceso de configuración de]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process) los grupos de suscripción, se pueden establecer grupos que contengan códigos largos y abreviados de varios países diferentes. Una vez completado, los números de teléfono de envío con el mismo código de país que el número de teléfono del usuario objetivo se utilizarán automáticamente al lanzar una campaña. No tendrá que crear campañas separadas para usuarios con números de teléfono con códigos de país diferentes, lo que le permitirá lanzar una sola campaña o utilizar un solo componente de Canvas para dirigirse a los usuarios pertinentes.
 
-![Las cargas útiles del SMS se envían utilizando el mismo código de país que el número de teléfono del usuario de destino]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
+![Las cargas útiles de los SMS se envían utilizando el mismo código de país que el número de teléfono del usuario de destino]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
 
 #### Buenas prácticas
 

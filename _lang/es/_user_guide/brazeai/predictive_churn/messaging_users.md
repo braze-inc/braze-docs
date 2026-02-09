@@ -1,6 +1,6 @@
 ---
 nav_title: Usuarios de mensajería
-article_title: Selección de usuarios para el Predictive Churn
+article_title: Usuarios objetivo para el Predictive Churn
 description: "Este artículo de referencia cubre los posibles pasos siguientes después de haber creado una predicción de abandono, como la implementación de un filtro y consideraciones estratégicas."
 page_order: 1.2
 

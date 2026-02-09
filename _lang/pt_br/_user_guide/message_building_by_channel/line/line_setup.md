@@ -25,7 +25,11 @@ Você precisará dos seguintes itens para integrar o LINE ao Braze:
 - [Conta de desenvolvedor do LINE](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [Canal de envio de mensagens do LINE](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-O envio de mensagens LINE a partir do Braze será feito com os créditos de mensagens de sua conta.
+O envio de mensagens LINE do Braze utiliza os Créditos de Mensagem da sua conta.
+
+{% alert note %}
+**Configuração `native_line_id`**: Você pode definir `native_line_id` enviando atualizações de usuário para o Braze (por exemplo, com o endpoint [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/), [importação CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Se o seu SDK do lado do cliente não tiver um campo dedicado para `native_line_id`, envie-o nas atualizações de usuário do lado do servidor usando um desses métodos.
+{% endalert %}
 
 ## Tipos de contas LINE
 
@@ -61,6 +65,10 @@ Para configurar atualizações consistentes de usuários, traga os IDs LINE dos 
 4. [Alterar os métodos de atualização do usuário](#step-4-change-your-user-update-methods)
 5. [(Opcional) Mesclar perfis de usuário](#step-5-merge-profiles-optional)
 
+{% alert note %}
+Você só pode ter uma conta LINE em um único espaço de trabalho. Se você tiver várias contas LINE, recomendamos usar cada uma em um espaço de trabalho diferente.
+{% endalert %}
+
 ## Etapa 1: Importação ou atualização de usuários existentes do LINE
 
 Essa etapa é necessária se você tiver um usuário LINE existente e identificado, pois o Braze extrairá automaticamente o estado da inscrição e atualizará o perfil de usuário correto. Se não tiver reconciliado anteriormente os usuários com o respectivo LINE ID, pule esta etapa. 
@@ -82,14 +90,14 @@ Depois que o processo de integração for concluído, o Braze puxará automatica
 1. No LINE, acesse a guia **Envio de mensagens API** e edite suas **configurações de webhook**:
    - Defina o **URL do webhook** como `https://anna.braze.com/line/events`.
       - A Braze mudará automaticamente para um URL diferente ao fazer a integração, com base no cluster de seu dashboard.
-   - Ative **Usar webhook** e **Reentrega de webhook**. <br><br> ![Página de configurações do webhook para verificar ou editar o URL do webhook, ativar ou desativar "Use webhook", "Webhook redelivery" e "Error statistics aggregation".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
+   - Ative **Usar webhook** e **Reentrega de webhook**. <br><br> ![Página de configurações do webhook para verificar ou editar o URL do webhook, ativar ou desativar "Usar webhook", "Reentrega de webhook" e "Agregação de estatísticas de erros".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. Observe as seguintes informações na guia **Providers (Provedores** ):
 
 | Tipo de informação | Local |
 | --- | --- |
 | ID do provedor | Selecione seu provedor e acesse **\*Configurações** > **Informações básicas** |
 | ID do canal | Selecione seu provedor e, em seguida, acesse **Canais** > seu canal > **Configurações básicas** |
-| Segredo do canal | Selecione seu provedor e acesse **Channels (Canais** ) > your channel (seu canal) > **Basic settings (Configurações básicas**). |
+| Segredo do canal | Selecione seu provedor e depois acesse **Canais** > seu canal > **Configurações básicas**. |
 | Token de acesso ao canal | Selecione seu provedor e acesse **Canais** > seu canal > **API de envio de mensagens**. Se não houver um token de acesso ao canal, selecione **Problema**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -109,10 +117,10 @@ Depois que o processo de integração for concluído, o Braze puxará automatica
    - Segredo do canal
    - Token de acesso ao canal
 
-Se quiser adicionar a lista de permissões de IP em sua conta LINE, adicione todos os endereços IP listados para seu cluster na [lista de permissões de IP]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting) à sua lista de permissões.
+Se você quiser adicionar a lista de permissões de IP na sua conta LINE, adicione todos os endereços IP listados para seu cluster em [Lista de permissões de IP]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-allowlisting) à sua lista de permissões.
 
 {% alert important %}
-Durante a integração, certifique-se de verificar se o segredo do canal está correto. Se estiver incorreto, pode haver inconsistências no status da inscrição.
+Durante a integração, certifique-se de que o segredo do seu canal está correto. Se estiver incorreto, pode haver inconsistências no status da inscrição.
 {% endalert %}
 
 ![Página de integração de envio de mensagens do LINE com a seção de integração do LINE.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
@@ -120,7 +128,7 @@ Durante a integração, certifique-se de verificar se o segredo do canal está c
 {: start="2"}
 2\. Após a conexão, o Braze gerará automaticamente um grupo de inscrições do Braze para cada integração LINE adicionada com sucesso ao seu espaço de trabalho. <br><br> Todas as alterações em sua lista de seguidores (como novos seguidores ou pessoas que deixaram de segui-lo) serão automaticamente pushadas para o Braze.
 
-![Seção de grupos de inscrições LINE exibindo um grupo de inscrições para o canal "LINE".]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
+![A seção Grupos de inscrições LINE exibe um grupo de inscrições para o canal "LINE".]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## Etapa 3: Reconciliar IDs de usuários
 
@@ -174,7 +182,7 @@ Aqui está um exemplo de carga útil para `/users/track` que atualiza um perfil 
 
 ## Etapa 5: Mesclar perfis (opcional)
 
-Conforme descrito acima, existe a possibilidade de existirem vários perfis de usuário com o mesmo `native_line_id`. Se os seus métodos de atualização criarem perfis de usuário duplicados, você poderá mesclar perfis de usuário não identificados a perfis de usuário identificados com o ponto de extremidade `/user/merge`. 
+Como descrito acima, há a possibilidade de múltiplos perfis de usuário existirem com o mesmo `native_line_id`. Se os seus métodos de atualização criarem perfis de usuário duplicados, você poderá mesclar perfis de usuário não identificados a perfis de usuário identificados com o ponto de extremidade `/user/merge`. 
 
 Aqui está um exemplo de carga útil para `/users/merge` que direciona um perfil de usuário não identificado pelo alias de usuário `line_id`:
 
@@ -320,7 +328,7 @@ Para adquirir a ID LINE correta para cada usuário, configure o Login LINE com o
 
 Esse método permite que os usuários vinculem suas contas LINE à conta de usuário do seu app. Em seguida, é possível usar o Liquid no Braze, como {% raw %}`{{line_id}}`{% endraw %}, para criar um URL personalizado para o usuário que passa o LINE ID do usuário de volta para o seu site ou app, que pode então ser associado a um usuário conhecido.
 
-1. Crie um Canva baseado em ação que se baseie em uma alteração de estado de inscrição e dispare quando um usuário se inscrever no seu canal LINE.<br>![Canva que é disparada quando um usuário se inscreve no canal LINE.]({% image_buster /assets/img/line/account_link_1.png %})
+1. Crie um Canva baseado em ação que se baseie em uma alteração de estado de inscrição e dispare quando um usuário se inscrever no seu canal LINE.<br>![Canva que é acionado quando um usuário se inscreve no canal LINE.]({% image_buster /assets/img/line/account_link_1.png %})
 2. Crie uma mensagem incentivando os usuários a registrar seu site ou app, passando o LINE ID do usuário como um parâmetro de consulta (por meio do Liquid), como, por exemplo:
 
 ```
@@ -329,7 +337,7 @@ Thanks for following Flash n' Thread on LINE! For personalized offers and 20% of
 
 {: start="3"}
 3\. Crie uma mensagem de acompanhamento que forneça o código do cupom.
-4\. (Opcional) Crie uma campanha baseada em ação ou Canva que seja disparada quando o usuário do LINE for identificado para enviar ao usuário o código do cupom. <br>![Campanha baseada em ação que dispara quando o usuário do LINE é identificado.]({% image_buster /assets/img/line/account_link_2.png %})
+4\. (Opcional) Crie uma campanha baseada em ação ou Canva que seja disparada quando o usuário do LINE for identificado para enviar ao usuário o código do cupom. <br>![Campanha baseada em ação que é acionada quando o usuário LINE é identificado.]({% image_buster /assets/img/line/account_link_2.png %})
 
 #### Como funciona?
 
@@ -375,7 +383,7 @@ if (user && isLoggedIn && lineUserId) {
 
 É possível testar seu canal LINE antes de configurar a [reconciliação do usuário](#user-id-reconciliation) criando um Canva ou uma campanha "Who am I".
 
-1. Configure uma tela que retorne o ID de usuário Braze de um usuário em uma palavra específica disparada. <br><br>Exemplo de disparo <br><br>![Disparar para enviar a campanha aos usuários que enviaram um LINE de entrada para um grupo de inscrições específico.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Exemplo de mensagem<br><br>![Mensagem LINE informando a ID de usuário do Braze.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
+1. Configure uma tela que retorne o ID de usuário Braze de um usuário em uma palavra específica disparada. <br><br>Exemplo de disparo <br><br>![Disparar para enviar a campanha aos usuários que enviaram uma LINE de entrada para um grupo de inscrições específico.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Exemplo de mensagem<br><br>![Mensagem LINE informando o ID de usuário do Braze.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. No Braze, você pode usar o Braze ID para pesquisar usuários específicos e modificá-los conforme necessário.
 

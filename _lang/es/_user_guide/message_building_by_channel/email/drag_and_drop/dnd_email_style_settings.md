@@ -16,7 +16,7 @@ tool:
 
 Para editar la configuración global de estilo, vaya a **Configuración** > **Preferencias de correo electrónico** > **Preferencias de correo electrónico de arrastrar y soltar**. Después de editar los estilos en el editor de arrastrar y soltar de correo electrónico, selecciona **Guardar**. Para personalizar aún más tus campañas de correo electrónico y tus Lienzos, comprueba cómo puedes incorporar [bloques de editor de arrastrar y soltar]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks).
 
-![Sección de configuración del estilo global del correo electrónico en la pestaña de configuración del editor de arrastrar y soltar correo electrónico.]({% image_buster /assets/img_archive/dnd_global_style_settings.png %})
+![Sección Configuración del estilo global del correo electrónico en la pestaña Configuración del editor de arrastrar y soltar correo electrónico.]({% image_buster /assets/img_archive/dnd_global_style_settings.png %})
 
 {% alert note %}
 Las actualizaciones realizadas en los ajustes de estilo globales se aplicarán a todas las campañas de correo electrónico y lienzos futuros.
@@ -26,7 +26,7 @@ Las actualizaciones realizadas en los ajustes de estilo globales se aplicarán a
 
 En **Estilos básicos**, puede establecer los colores de fondo predeterminados del correo electrónico y del contenido para sus campañas de correo electrónico y lienzos. También puede seleccionar una fuente predeterminada, añadir una fuente personalizada y editar los colores de los enlaces.
 
-![Opciones básicas de estilo que incluyen opciones para editar los colores de fondo del correo electrónico y del contenido, el nombre predeterminado de la fuente y el color predeterminado del enlace.]({% image_buster /assets/img_archive/dnd_basic_styling.png %}) 
+![Opciones básicas de estilo que incluyen opciones para editar los colores de fondo del correo electrónico y del contenido, el nombre de la fuente predeterminada y el color predeterminado de los enlaces.]({% image_buster /assets/img_archive/dnd_basic_styling.png %}) 
 
 ## Fuente personalizada
 
@@ -48,7 +48,7 @@ Ten en cuenta que el proveedor de fuentes personalizadas puede recopilar datos p
 Para añadir una fuente personalizada, haz lo siguiente:
 
 1. En la sección **Nombre de fuente predeterminado** de **Estilos básicos**, selecciona **Añadir una fuente personalizada**.
-2. En el campo **Nombre de fuente**, introduzca el mismo nombre de fuente que aparece en su archivo fuente personalizado. Asegúrate de que este nombre se escribe en mayúsculas y a espacio correcto.
+2. En el campo **Nombre de fuente**, introduzca el mismo nombre de fuente que aparece en su archivo fuente personalizado. Asegúrate de que este nombre está en mayúsculas y a espacio correcto.
 3. Introduzca la URL correspondiente en el campo **URL de fuente**.
 4. Comprueba que la vista previa muestra tu fuente personalizada.
 5. Selecciona **Guardar** para utilizar la fuente personalizada como fuente predeterminada de tu correo electrónico. 
@@ -69,9 +69,9 @@ Puedes añadir hasta 17 fuentes de reserva. La primera fuente alternativa selecc
 
 ## Estilo del título
 
-Aquí puede ajustar los estilos de los títulos de sus correos electrónicos editando el tamaño de la fuente, el color y la alineación del texto. Esto se aplica a la cabecera principal y a la cabecera secundaria. 
+Aquí puede ajustar los estilos de los títulos de sus correos electrónicos editando el tamaño de la fuente, el color y la alineación del texto. 
 
-![Configuración del estilo del título para un encabezado principal alineado al centro y un encabezado secundario.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
+![Título Configuración de estilo para un encabezado principal alineado al centro y un encabezado secundario.]({% image_buster /assets/img_archive/dnd_title_styling.png %})
 
 Opcionalmente, puede anular el estilo predeterminado del tema del editor de arrastrar y soltar. Selecciona **Anular estilo predeterminado** para aplicar el estilo de título que elijas. Esto puede incluir establecer un tipo de letra y un color de enlace diferentes.
 
@@ -99,7 +99,7 @@ Al añadir listas a su mensajería, la sección **Estilización de listas** crea
 
 Puede establecer que el **Tipo de lista** sea numerada o con viñetas. El **Tipo de estilo de lista** proporciona personalización adicional para el estilo de sus listas. Por ejemplo, puede establecer que los tipos de lista sean siempre con viñetas y que cada viñeta sea un cuadrado.  
 
-![Configuración del estilo de una lista con viñetas.]({% image_buster /assets/img_archive/dnd_list_styling.png %})
+![Lista Configuración del estilo de una lista con viñetas.]({% image_buster /assets/img_archive/dnd_list_styling.png %})
 
 ## Estilo de los botones
 
@@ -112,7 +112,7 @@ En la sección **Estilo del botón**, puedes editar los siguientes estilos prede
 - Peso del borde
 - Relleno de botones
 
-![Configuración del estilo del botón rectangular con fondo azul.]({% image_buster /assets/img_archive/dnd_button_styling.png %})
+![Configuración del estilo de un botón rectangular con fondo azul.]({% image_buster /assets/img_archive/dnd_button_styling.png %})
 
 Al igual que con el resto de secciones de estilo, puede ajustar el estilo del bloque editando los valores de **Relleno superior**, **Relleno derecho**, **Relleno inferior** y **Relleno izquierdo**.
 
@@ -120,10 +120,12 @@ Al igual que con el resto de secciones de estilo, puede ajustar el estilo del bl
 
 Mediante la anchura de la plantilla de correo electrónico, puede ajustar y establecer una anchura para mantener la coherencia en todas sus campañas de correo electrónico. 
 
-![Anchura de la plantilla de correo electrónico establecida en 600px.]({% image_buster /assets/img_archive/dnd_email_template_width.png %})
+![La anchura de la plantilla de correo electrónico se ha ajustado a 600px.]({% image_buster /assets/img_archive/dnd_email_template_width.png %})
 
 ## Anchura del bloque de contenido
 
-También puede establecer el ancho del bloque de contenido en el editor de arrastrar y soltar de correo electrónico. Recomendamos que el ancho del bloque de contenido coincida con el ancho de la plantilla de correo electrónico.
+Esta configuración será la preconfigurada para todos los futuros Bloques de contenido. Los bloques de contenido existentes no se actualizarán. Puedes establecer que todos los Bloques de contenido se fijen al 100%, respetando la anchura en la que se inserta un Bloque de contenido, o definir un valor de píxel específico.
 
-![Anchura del bloque de contenido ajustada a 600px.]({% image_buster /assets/img_archive/dnd_content_block_width.png %})
+Recomendamos que el ancho del bloque de contenido coincida con el ancho de la plantilla de correo electrónico.
+
+![Anchura del bloque de contenido ajustada a 600px.]({% image_buster /assets/img_archive/dnd_content_block_width_update.png %})

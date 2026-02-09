@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:識別子によるユーザプロファイルのエクスポート"
+nav_title: "POST:識別子によるユーザープロファイルのエクスポート"
 article_title: "POST:識別子によるユーザプロファイルのエクスポート"
 search_tag: Endpoint
 page_order: 4
@@ -16,7 +16,7 @@ description: "この記事では、「識別子ごとにユーザーをエクス
 
 > このエンドポイントを使用して、ユーザー識別子を指定して任意のユーザープロファイルからデータをエクスポートします。
 
-1 つのリクエストには、最大 50 個の `external_ids` または `user_aliases` を含めることができます。`device_id`、`email_address`、または `phone` を指定する場合は、リクエストごとにいずれか 1 つの識別子のみを含めることができます。
+1 つのリクエストには、最大 50 個の `external_ids` または `user_aliases` を含めることができます。`device_id`、`email_address`、または`phone` を指定する場合、リクエストごとに、これらの識別子s の1 つのみを含めることができます。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export
+  "fields_to_export": (optional, array of strings) Name of user data fields to export
 }
 ```
 
@@ -61,10 +61,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `braze_id`         | オプション | 文字列                                                        | 特定のユーザーのBraze 識別子。                                                      |
 | `email_address`    | オプション | 文字列                                                        | ユーザーのメールアドレス。                                                                       |
 | `phone`            | オプション | [E.164](https://en.wikipedia.org/wiki/E.164)形式の文字列 | ユーザーの電話番号。                                                                        |
-| `fields_to_export` | 必須 | 文字列の配列                                              | エクスポートするユーザーデータ フィールドの名前。                                                          |
+| `fields_to_export` | オプション* | 文字列の配列                                              | エクスポートするユーザーデータ フィールドの名前。<br><br>\* このフィールドは、1 秒あたり40 リクエストという高速なレート制限を使用するために必要です。省略した場合、1 分あたり 250 リクエストのデフォルト レート制限が代わりに使用されます。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 例のリクエスト
+\* 2024年8月22日以降にBrazeに乗船した顧客に必要。
+
+## リクエスト例
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
 --header 'Content-Type: application/json' \
@@ -96,8 +98,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 | `attributed_source`   | 文字列          | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/)からのデーター(設定されている場合)。広告が表示されたプラットフォームのID。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `attributed_adgroup`  | 文字列          | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/)からのデーター(設定されている場合)。キャンペーン の下のオプションのサブグループのID。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `attributed_ad`       | 文字列          | [アトリビューション積分]({{site.baseurl}}/partners/message_orchestration/)からのデーター(設定されている場合)。キャンペーンと広告グループの下にある任意のサブグループの識別子。                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `push_subscribe`      | 文字列          | ユーザーのプッシュ通知の購読ステータス。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `email_subscribe`     | 文字列          | ユーザーのメールサブスクリプションステータス。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `push_subscribe`      | string          | ユーザーのプッシュ通知の購読ステータス。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `email_subscribe`     | string          | ユーザーのメールサブスクリプションステータス。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | `braze_id`            | 文字列          | このユーザーにBrazeで設定されたデバイス固有の一意のユーザー 識別子。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `country`             | 文字列          | [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) 標準を使用するユーザーの国。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | `created_at`          | 文字列          | ユーザープロファイルが作成された日時 (ISO 8601形式)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
@@ -130,8 +132,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,
@@ -146,7 +146,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ユーザーエクスポートオブジェクト (できるだけ少ないデータを含めます。オブジェクトにフィールドがない場合は、null または空であると見なされます):
 
 {% tabs %}
-{% tab すべてのフィールド %}
+{% tab All fields %}
 
 ```json
 {
@@ -288,7 +288,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 {% endtab %}
-{% tab 出力例 %}
+{% tab Sample output %}
 
 ```json
 {
@@ -416,7 +416,7 @@ Authorization: Bearer YOUR-REST-API-KEY
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

@@ -81,11 +81,11 @@ Algunas desventajas de este enfoque son:
 
 ### ¿Cómo se autorizan las URL de los SMS?
 
-Antes de enviar mensajes SMS que contengan URL a usuarios de determinados países (por ejemplo, Suecia o los países nórdicos), debes conseguir que estas URL queden registradas en el operador. Póngase en contacto con el responsable del servicio de atención al cliente de Braze para que le ayude. Este proceso durará unos cinco días.  
+Antes de enviar mensajes SMS que contengan URL a usuarios de determinados países (por ejemplo, Suecia o los países nórdicos), debes conseguir que estas URL queden registradas en el operador. Ponte en contacto con tu administrador del servicio de atención al cliente de Braze para que te ayude. Este proceso durará unos cinco días.  
 
 ### ¿Qué ocurre si varios usuarios tienen el mismo número de teléfono?
 
-Cuando varios perfiles de usuario que comparten un número de teléfono (habilitado para SMS) son elegibles para una campaña basada en acciones o un componente Canvas al mismo tiempo, desencadenado por el evento de un SMS entrante, Braze deducirá los usuarios en el nivel del componente Canvas. Esto evitará que los usuarios reciban más de un SMS de un componente de Canvas, aunque varios usuarios compartan el mismo número de teléfono. 
+Cuando varios perfiles de usuario que comparten un número de teléfono (habilitado para SMS) son elegibles para una campaña basada en acciones o un componente Canvas al mismo tiempo, desencadenado por el evento de un SMS entrante, Braze deducirá los usuarios en el nivel del componente Canvas. Esto evitará que los usuarios reciban más de un SMS para un componente de Canvas, aunque varios usuarios compartan el mismo número de teléfono. 
 
 {% alert note %}
 Braze no deduplica por número de teléfono para los Lienzos programados.
@@ -101,6 +101,8 @@ Si recibe una palabra clave "START" o "STOP" del número de teléfono compartido
 {% alert important %}
 Si escalona a sus usuarios en un Lienzo y tiene diferentes horas de programación para cada componente del Lienzo, puede enviar a un usuario con el mismo correo electrónico o teléfono mensajes duplicados.
 {% endalert %}
+
+Para evitar actualizaciones innecesariamente grandes, Braze actualizará un máximo de 100 perfiles de usuario que compartan un identificador cuando se realice una actualización de la suscripción. Si más de 100 perfiles de usuario comparten el mismo número de teléfono, no se actualizarán todos los perfiles.
 
 ### ¿Las propiedades de los eventos SMS capturarán palabras clave en una frase?
 
@@ -118,7 +120,7 @@ Puedes encontrar tu `app_id` accediendo a **Ajustes** > **Ajustes de la aplicaci
 
 ### ¿Cómo se me facturarán los SMS?
 
-Además de las tarifas de los códigos cortos y largos, Braze ofrece una asignación de mensajes SMS para diferentes países. Es decir, trabajamos contigo para establecer un determinado número de segmentos de mensajes para diferentes países, que utilizarás para enviar campañas de SMS. La facturación se realiza por el número de segmentos de mensajes enviados por país. Para saber más sobre cómo se calculan los segmentos de mensajes, consulte nuestra guía [Segmentos de mensajes y límites de copia]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Su gestor de cuenta se pondrá en contacto con usted para informarle de si está cerca de alcanzar su máximo y le facilitará los informes pertinentes para mantenerle informado. Si tienes más preguntas sobre los excedentes, ponte en contacto con tu representante de Braze.
+Además de las tarifas de los códigos cortos y largos, Braze ofrece una asignación de mensajes SMS para diferentes países. Es decir, trabajamos contigo para establecer un determinado número de segmentos de mensajes para diferentes países, que utilizarás para enviar campañas de SMS. La facturación se realiza por el número de segmentos de mensajes enviados por país. Para saber más sobre cómo se calculan los segmentos de mensajes, consulte nuestra guía [Segmentos de mensajes y límites de copia]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Tu director de cuentas se pondrá en contacto contigo para informarte de si estás cerca de alcanzar tu máximo, proporcionándote informes relevantes para ayudarte a mantenerte informado. Si tienes más preguntas sobre los excedentes, ponte en contacto con tu representante de Braze.
 
 ### Si se envía un mensaje a un teléfono fijo, ¿seguirá contando para el recuento de envíos de SMS?
 
@@ -131,4 +133,4 @@ En otros países:
 
 ### Si un usuario está excluido y envía una palabra clave a nuestro código corto y largo, ¿recibe la respuesta que hemos configurado para esa palabra clave en Braze?
 
-Si un usuario está excluido y envía una palabra clave de una de las [categorías de palabras clave predeterminadas]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), recibirá la respuesta para esa palabra clave. Si un usuario está excluido y envía una [palabra clave personalizada]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), no recibirá la respuesta para esa palabra clave. 
+Si un usuario está excluido y envía una palabra clave de una de las [categorías de palabras clave predeterminadas]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), recibirá la respuesta para esa palabra clave. Si un usuario está excluido y envía una [palabra clave personalizada]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), no recibirá la respuesta para esa palabra clave.

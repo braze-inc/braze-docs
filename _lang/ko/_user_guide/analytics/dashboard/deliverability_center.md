@@ -24,8 +24,8 @@ channel:
 2. 오른쪽 하단에서 <i class="fas fa-plus-circle"></i> 더하기 아이콘을 선택합니다.
 3. 루트 도메인 또는 하위 도메인을 입력하여 이메일을 인증합니다. 루트 도메인을 추가하고 확인하는 경우 하위 도메인에 대한 확인을 다운스트림에 적용할 수 있습니다. 예를 들어 `braze.com` 을 인증하면 나중에 `demo.braze.com` 및 기타 하위 도메인을 개별적으로 인증할 필요 없이 추가할 수 있습니다.
 4. Google은 도메인의 DNS에 직접 추가할 수 있는 TXT 레코드를 생성합니다. 일반적으로 DNS를 관리하는 사람이 소유합니다. 특정 DNS를 업데이트하는 방법에 대한 정보와 지침은 [도메인 확인(호스트별 단계)](https://support.google.com/a/topic/1409901)을 참조하세요.
-5. **다음**을 선택합니다. <br>![An example domain "demo.braze.com" to authenticate an email.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. TXT 레코드가 DNS에 추가되면 Google Postmaster 툴 대시보드로 돌아가서 **확인**을 선택합니다. 이 단계를 통해 도메인을 소유하고 있음을 확인하면 Postmaster 계정에서 Gmail 전달 가능성 측정지표에 액세스할 수 있습니다. <br> ![A prompt to verify ownership of the domain "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+5. **다음**을 선택합니다. <br>![이메일을 인증하기 위한 예시 도메인 "demo.braze.com".]({% image_buster /assets/img_archive/domain_authentication.png %})
+6. TXT 레코드가 DNS에 추가되면 Google Postmaster 툴 대시보드로 돌아가서 **확인**을 선택합니다. 이 단계를 통해 도메인을 소유하고 있음을 확인하면 Postmaster 계정에서 Gmail 전달 가능성 측정지표에 액세스할 수 있습니다. <br> ![도메인 "demo.braze.com"의 소유권을 확인하기 위한 프롬프트.]({% image_buster /assets/img_archive/domain_verification.png %})
 
 {% alert tip %}
 TXT 레코드가 Braze를 통해 사용 중인 하위 도메인이 아닌 상위 도메인에 연결되어 있는지 확인하세요.
@@ -42,13 +42,13 @@ Before setting up your Deliverability Center, check that your domains have been 
 다음 단계에 따라 Google Postmaster와 통합하고 전달 가능성 센터를 설정하세요.
 
 1. **분석** > **이메일 성능**으로 이동합니다.
-2. **배송 센터** 탭을 선택합니다. <br>![A Deliverability Center with Google Postmaster unconnected.]({% image_buster /assets/img_archive/deliverability_center1.png %})
+2. **배송 센터** 탭을 선택합니다. <br>![Google Postmaster와 연결되지 않은 전달 가능성 센터.]({% image_buster /assets/img_archive/deliverability_center1.png %})
 3. **Google 포스트마스터와 연결을** 선택합니다. 
 4. Google 계정을 선택한 다음 **허용을** 선택하여 Braze가 포스트마스터 도구에 등록된 도메인에 대한 이메일 트래픽 지표를 볼 수 있도록 허용합니다. 
 
 확인된 도메인은 배달 가능성 센터에 표시됩니다. 
 
-![Two verified domains for Google Postmaster with a medium and low reputation.]({% image_buster /assets/img_archive/deliverability_center2.png %})
+![중간 및 낮은 평판을 가진 Google Postmaster의 두 개의 인증된 도메인.]({% image_buster /assets/img_archive/deliverability_center2.png %})
 
 Braze 대시보드에서 **파트너 통합** > **기술 파트너** > **Google 포스트마스터로** 이동하여 Google 포스트마스터에 액세스할 수도 있습니다. 통합 후 Braze는 지난 30일 동안의 평판 및 오류 데이터를 가져옵니다. 데이터를 즉시 사용할 수 없으며 데이터를 채우는 데 몇 분 정도 걸릴 수 있습니다.
 
@@ -80,7 +80,7 @@ IP 평판에 대한 등급을 이해하는 데 도움이 되는 표를 참조하
 | 나쁨 | 스팸 불만 접수율이 높은 이력이 있습니다. 이 도메인에서 보낸 이메일은 거의 항상 연결 시 거부되거나 스팸 폴더로 필터링됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-#### 인증
+#### Authentication
 
 인증 대시보드를 사용하여 발신자 정책 프레임워크(SPF), 도메인 키 식별 메일(DKIM) 및 도메인 기반 메시지 인증, 보고 및 적합성(DMARC)을 통과한 이메일의 비율을 검토하세요.
 
@@ -111,7 +111,7 @@ Microsoft가 기본 사서함 제공업체인 경우 이 통합 기능을 사용
 전달 가능성에 센터에 데이터가 표시되지 않으면 [지원팀]({{site.baseurl}}/user_guide/administrative/access_braze/support/)에 IP 주소 목록과 함께 문의하세요.
 {% endalert %}
 
-![An example of results from Microsoft SNDS, including sample IPs, recipients, RCPT commands, data commands, filter result, complaint rate, trap message period start and end, and spam trap hits.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
+![Microsoft SNDS의 결과 예시로, 샘플 IP, 수신자, RCPT 명령, 데이터 명령, 필터 결과, 불만 비율, 트랩 메시지 기간 시작 및 종료, 스팸 트랩 적중을 포함합니다.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
 
 ### 메트릭 및 정의
 

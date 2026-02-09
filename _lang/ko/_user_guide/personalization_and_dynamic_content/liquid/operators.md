@@ -8,11 +8,11 @@ description: "이 참조 페이지에는 Liquid가 지원하는 연산자와 관
 
 # 연산자
 
-> Liquid supports many [operators](https://docs.shopify.com/themes/liquid/basics/operators) that can be used in your conditional statements. 이 페이지에서는 Liquid가 지원하는 연산자를 다루고, 메시지에서 어떻게 사용할 수 있는지에 대한 사용 사례를 제공합니다.
+> Liquid supports many [operators](https://docs.shopify.com/themes/liquid/basics/operators) that can be used in your conditional statements. 이 페이지에서는 Liquid에서 지원하는 연산자를 다루고 메시징에 어떻게 사용할 수 있는지에 대한 사용 사례를 제공합니다.
 
 이 표에는 지원되는 연산자가 나열되어 있습니다. 괄호는 Liquid에서 유효하지 않은 문자이며 태그가 작동하지 않도록 합니다.
 
-|   구문| 연산자 설명|
+|   Syntax| 연산자 설명|
 |---------|-----------|
 | ==  | 동등함        |
 | !=  | 동등하지 않음|
@@ -29,7 +29,7 @@ description: "이 참조 페이지에는 Liquid가 지원하는 연산자와 관
 
 Let's go through a few tutorials to learn how to use these operators for your marketing campaigns:
 
-### 정수 사용자 지정 속성이 있는 메시지 선택하기
+### 정수 커스텀 속성이 있는 메시지를 선택합니다.
 
 Let's send push notifications with personalized promotional discounts to users who have or haven't made purchases. The push notification will use an integer custom attribute called `total_spend` to check a user's total spend.
 
@@ -75,7 +75,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Now if a user's "Total Spend" custom attribute is greater than `0`, they will get the message:
+이제 사용자의 '총 지출' 커스텀 속성이 `0` 보다 크면 메시지가 표시됩니다:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -86,7 +86,7 @@ If a user's "Total Spend" custom attribute does not exist or is equal to `0`, th
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### 문자열 사용자 지정 속성이 있는 메시지 선택
+### 문자열 커스텀 속성이 있는 메시지를 선택합니다.
 
 Let's send push notifications to users, and personalize the message based on each user's most recently played game. This will use a string custom attribute called `recent_game` to check which game a user has last played.
 
@@ -110,11 +110,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Use the `elsif` tag with the does not equal (`!=`) and "and" (`&&`) operators to check if the user has a recent game (meaning the value isn't blank), and that the game isn't *Awkward Dinner Party* or *Proxy War 3: War of Thirst*. Then, create a message to send to those users.
+3\. `elsif` 태그에 '같지 않음'(`!=`) 및 '와'(`and`) 연산자를 사용하여 사용자가 최근 게임을 했는지(값이 비어 있지 않음을 의미), *어색한 디너 파티나* *대리 전쟁 3이 아닌지 확인합니다: War of Thirst*. Then, create a message to send to those users.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -145,7 +145,7 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!

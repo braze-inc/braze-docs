@@ -1,5 +1,5 @@
 ---
-nav_title: Configuration de WhatsApp
+nav_title: Configuration WhatsApp
 article_title: Configuration de WhatsApp
 alias: /partners/whatsapp/
 description: "Cet article explique comment configurer le canal WhatsApp de Braze, y compris les conditions préalables et les étapes suivantes suggérées."
@@ -41,13 +41,13 @@ Dans Braze, allez dans **Intégrations partenaires** > **Partenaires technologiq
 
 Sur la page partenaire de WhatsApp, sélectionnez **Commencer l'intégration**.
 
-![Page partenaire de WhatsApp avec un bouton pour commencer l'intégration.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
+![La page partenaire de WhatsApp avec un bouton pour commencer l'intégration.]({% image_buster /assets/img/whatsapp/whatsapp1.png %}){: style="max-width:70%;"}
 
 Dans la fenêtre ouverte, sélectionnez **Suivant** jusqu'à ce que le bouton **Commencer l'intégration** apparaisse. Sélectionnez le bouton pour lancer le processus d'intégration.
 
 ![Instructions pour connecter Braze à WhatsApp.]({% image_buster /assets/img/whatsapp/instructions.png %}){: style="max-width:50%;"}
 
-### Étape 2 : Configuration WhatsApp
+### Étape 2 : Configuration WhatsApp
 
 Ensuite, vous serez invité à suivre le flux de configuration de Braze. Pour une marche à suivre étape par étape, reportez-vous à l'[inscription intégrée à WhatsApp.]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/) 
 
@@ -64,16 +64,18 @@ Les modèles de message WhatsApp approuvés sont les seuls à pouvoir être util
 
 1. **Accédez au [gestionnaire de modèles](https://business.facebook.com/wa/manage/message-templates)**<br>
 Dans le gestionnaire Meta Business, sous **Outils de compte**, sélectionnez **Modèles de message**.
-Sélectionnez ensuite **Créer des modèles.**<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
+Sélectionnez ensuite **Créer des modèles.**<br><br>![Gestionnaire WhatsApp avec une liste de modèles d'envoi de messages.]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Paramètres des messages**<br>
 Dans le compositeur de nouveaux modèles de messages, sélectionnez la catégorie de votre message, nommez votre modèle et choisissez les langues que vous souhaitez prendre en charge. Vous pouvez en supprimer ou ajouter d’autres langues par la suite.<br><br> 
 	Les catégories de modèle de message disponibles comprennent les suivantes :
 	- Marketing : Envoyer des offres promotionnelles, annoncer des produits et plus encore pour accroître la connaissance et l’engagement
 	- Utilitaire : Envoyer des mises à jour de compte, de commande, des alertes et plus encore pour partager des informations importantes
 	- Authentification : Envoyer des codes permettant à vos clients d’accéder à leur compte<br><br> 
-	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
+	![Compositeur de modèles de messages avec des catégories pour le marketing, les services publics et l'authentification.]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Modifier le modèle**<br>
-Il vous sera ensuite demandé de créer votre modèle de message. <br><br>Vous pouvez fournir ici un en-tête sous forme de texte ou de média, le texte du corps, un pied de page de message et des boutons. Notez que les en-têtes de vidéo et de document ne sont pas disponibles actuellement, et que les en-têtes doivent être de type texte ou image. La prévisualisation de votre message s’affichera à droite. <br><br>Même si Meta ne prend pas Liquid en charge, vous pouvez modéliser des variables qui seront ensuite remplacées par des variables Liquid dans Braze. Pour ce faire, sélectionnez le bouton **\+ Ajouter une variable.** <br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>Une fois que vous avez terminé votre modèle, cliquez sur **Envoyer**. 
+Ensuite, créez votre modèle de message. <br><br>Vous pouvez fournir un en-tête de texte ou de média, le corps du texte, un pied de message et des boutons. Notez que les en-têtes de vidéo et de document ne sont pas disponibles actuellement, et que les en-têtes doivent être de type texte ou image. Les modèles et médias que vous ajoutez servent d'exemple pour le processus de révision et **ne sont pas** inclus dans le message type. Les médias doivent être ajoutés dans Braze. Un aperçu de votre message s'affiche dans un panneau. <br><br>Même si Meta ne prend pas Liquid en charge, vous pouvez modéliser des variables qui seront ensuite remplacées par des variables Liquid dans Braze. Pour ce faire, sélectionnez le bouton **\+ Ajouter une variable.** <br><br>![Modèle de compositeur.]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}
+
+Une fois que vous avez terminé votre modèle, cliquez sur **Envoyer**. 
 
 #### Délai d’approbation du modèle
 

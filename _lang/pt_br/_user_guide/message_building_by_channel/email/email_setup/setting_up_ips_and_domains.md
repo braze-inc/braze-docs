@@ -1,6 +1,6 @@
 ---
-nav_title: Configuração de IPs e domínios
-article_title: Configuração de IPs e domínios
+nav_title: Configurar IPs e domínios
+article_title: Configurar IPs e domínios
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "Este artigo explica como configurar seus IPs e domínios para o en
 
 ---
 
-# Configuração de IPs e domínios
+# Configurar IPs e domínios
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -32,7 +32,11 @@ Depois de receber seu e-mail, começaremos a trabalhar na configuração de seus
 
 Depois que seus IPs, domínios, subdomínios e pools de IPs estiverem configurados, enviaremos uma lista de registros DNS. Peça aos seus engenheiros e desenvolvedores que adicionem esses registros DNS onde for necessário e, depois que eles forem adicionados, informe a equipe de integração do Braze.
 
-### Próximas etapas
+{% multi_lang_include dns_records.md %}
+
+Depois que o Braze fornecer seus registros DNS, adicione-os assim que sua equipe de DNS ou de TI puder. A verificação do domínio tem limite de tempo e, se os registros forem adicionados muito tarde, a verificação poderá falhar, mesmo que os registros DNS sejam resolvidos corretamente mais tarde. Se seus registros DNS parecerem corretos, mas a verificação falhar, entre em contato com a equipe de integração ou suporte da Braze para reiniciar a verificação.
+
+### Próximos passos
 
 Verificaremos sua configuração e validaremos todas as informações em nossos sistemas internos. A equipe de integração do Braze o avisará quando estiver pronto para acessar ou se houver problemas com seus registros DNS que devam ser resolvidos com sua equipe de engenharia.
 
@@ -64,6 +68,8 @@ Um domínio de envio é usado no endereço do remetente na hora de enviar um e-m
 Em seguida, adicione os registros TXT e CNAME da parte inferior da página ao seu provedor DNS. Em seguida, retorne ao dashboard da Braze e clique em **Verificar**.
 
 ![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+
+Se a verificação falhar e você acreditar que seus registros DNS estão corretos, entre em contato com o suporte da Braze para obter assistência.
 
 {% alert important %}
 O domínio de envio deve ser subordinado a um domínio que você possui. Por exemplo, se você é proprietário de "example.com", um subdomínio poderia ser "mail.example.com", o que lhe permite usar o endereço de envio "@mail.example.com".

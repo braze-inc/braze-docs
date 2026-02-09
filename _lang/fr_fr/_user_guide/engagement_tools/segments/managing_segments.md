@@ -1,6 +1,6 @@
 ---
-nav_title: Gestion des segments
-article_title: Gestion des segments
+nav_title: Gérer les segments
+article_title: Gérer les segments
 page_order: 1
 page_type: tutorial
 tool: Segments
@@ -8,7 +8,7 @@ description: "Cet article couvre les actions que vous pouvez entreprendre pour g
 
 ---
 
-# Gestion des segments
+# Gérer les segments
 
 > La section Segments vous permet d'afficher une liste complète de vos segments existants, de créer de nouveaux segments et de modifier des segments existants. Vous pouvez affiner la liste des segmentations en sélectionnant divers filtres et colonnes afin de n'afficher que les informations les plus pertinentes pour vous.
 
@@ -48,9 +48,17 @@ Il s'agit des colonnes d'informations que vous pouvez sélectionner pour les aff
 
 En sélectionnant **Afficher uniquement les** segments marqués d'un astérisque, vous réduisez votre affichage aux segments que vous avez marqués d'un astérisque.
 
+## Visualisation de l'utilisation de l'envoi de messages par un segment
+
+Accédez à la section **Utilisation des messages d'** un segment pour obtenir un aperçu de l'utilisation du segment, par exemple au sein d'autres segments, de campagnes et de canevas.
+
+{% alert note %}
+Pour éviter que des boucles de segments ne se réfèrent les unes aux autres, les segments qui utilisent le filtre d **'appartenance à un segment** ne peuvent pas être référencés par d'autres segments. Pour plus de détails, reportez-vous à la section [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+{% endalert %}
+
 ## Gérer des segments spécifiques
 
-![Le menu de modification d'un segment présente les options "Modifier", "Dupliquer", "Archiver" et "Ajouter à la liste".]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
+![Menu d'édition d'un segment avec les options Modifier, Dupliquer, Archiver et Ajouter aux segments étoilés.]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
 
 Pour gérer un segment spécifique, survolez-le et sélectionnez l'icône de menu au bout de la ligne pour faire apparaître les options suivantes :
 - **Modifier :** Modifiez les filtres de votre segmentation.
@@ -60,7 +68,7 @@ Pour gérer un segment spécifique, survolez-le et sélectionnez l'icône de men
  
 Vous pouvez également effectuer des actions en masse, notamment l'archivage et le tagging en masse, en cochant les cases situées à côté de plusieurs noms de segments.
 
-![Plusieurs segments sélectionnés avec "CRM" dans le champ déroulant "Tag As".]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
+![Plusieurs segments sélectionnés avec CRM sélectionné dans le champ déroulant Étiqueter en tant que.]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ### modifications depuis la dernière consultation
 
@@ -71,5 +79,5 @@ Recherchez des noms de segmentation en saisissant des termes dans le champ de re
 
 Tous les termes et chaînes de caractères saisis dans ce champ feront l'objet d'une recherche. Par exemple, la recherche de « segment d'essai 1 » renverra les segments dont le nom contient « essai », « segment » ou « 1 ». Pour rechercher une chaîne de caractères exacte, ajoutez des guillemets avant et après votre terme de recherche. En recherchant ["segment d'essai 1"], vous obtiendrez tous les segments dont le nom contient l'expression exacte "segment d'essai 1".
 
-![Les résultats de la recherche d'utilisateurs sont les suivants : "Tous les utilisateurs (Test)", "Tous les utilisateurs", "Tous les utilisateurs 15".]({% image_buster /assets/img/segment/segments_search.png %})
+![Lorsque vous saisissez « tous les utilisateurs » dans le champ de recherche, les résultats incluent, entre autres, « Tous les utilisateurs (Test) », « Tous les utilisateurs », « Tous les utilisateurs 15 ».]({% image_buster /assets/img/segment/segments_search.png %})
 

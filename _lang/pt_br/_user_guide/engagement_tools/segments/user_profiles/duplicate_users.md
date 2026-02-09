@@ -21,7 +21,7 @@ Se uma pesquisa de usuário retornar perfis duplicados, você poderá mesclar ca
 
 No Braze, selecione **Público** > **Pesquisa de usuários**.
 
-![O bloco "User Search" destacado no menu de navegação.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
+![O bloco "User Search" (Pesquisa de usuários) destacado no menu de navegação.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_search_users.png %}){: style="max-width:60%;"}
 
 Insira um identificador exclusivo, como um endereço de e-mail ou número de telefone, para o perfil duplicado e, em seguida, selecione **Pesquisar**.
 
@@ -31,11 +31,11 @@ Insira um identificador exclusivo, como um endereço de e-mail ou número de tel
 
 Para iniciar o processo de mesclagem, selecione **"Mesclar duplicatas"**.
 
-![Um dos perfis de usuário duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
+![Um dos perfis de usuário duplicados.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_duplicates.png %}){: style="max-width:50%;"}
 
 Escolha qual perfil de usuário deve ser mantido e qual deve ser mesclado e, em seguida, selecione **Mesclar perfis**. Repita esse processo até que você tenha mesclado todos os perfis duplicados.
 
-![A página de mesclagem individual de um perfil duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:80%;"}
+![A página de mesclagem individual para um perfil duplicado.]({% image_buster /assets/img/audience_management/duplicate_users/individual_merging/select_merge_profiles.png %}){: style="max-width:80%;"}
 
 {% alert warning %}
 Os perfis de usuário duplicados não podem ser recuperados após a fusão.
@@ -49,13 +49,13 @@ Quando você mescla em massa usuários duplicados, a Braze encontra perfis com i
 
 No dashboard da Braze, selecione **Público** > **Gerenciar Público**.
 
-![O bloco "Manage Audience" (Gerenciar público) destacado no menu de navegação.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
+![O bloco "Gerenciar público" é destacado no menu de navegação.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_manage_audience.png %}){: style="max-width:60%;"}
 
 ### Etapa 2: Prévia dos resultados (opcional)
 
 Para fazer uma prévia dos resultados antes de mesclar as duplicatas, selecione **Gerar lista de duplicatas**.
 
-![A página "Gerenciar público" com a opção "Gerar lista de duplicatas" destacada.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %})
+![A página "Manage Audience" (Gerenciar público) com a opção "Generate list of duplicates" (Gerar lista de duplicatas) destacada.]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_generate_list.png %})
 
 O Braze gerará sua prévia e a enviará para seu endereço de e-mail como um arquivo CSV.
 
@@ -64,7 +64,7 @@ O Braze gerará sua prévia e a enviará para seu endereço de e-mail como um ar
 No exemplo a seguir, o Braze usa a ID externa do usuário para sinalizar perfis duplicados e identificar qual deles deve ser mantido. Se esses perfis forem mesclados em massa, o Braze usará o perfil com um ID externo como o novo perfil principal do usuário.
 
 {% tabs local %}
-{% tab exemplo de arquivo CSV %}
+{% tab example csv file %}
 | Endereço de e-mail | ID externo | Número de telefone | ID do Braze | Identificador da regra | Perfil a ser mantido | Perfil a ser mesclado
 | ---------------- | ----------- | -------------- | --------------------- | ------------------- | --------------- | ---------------- |
 | alex@company.com | A8i3mkd99   | (555) 123-4567 | 65fcaa547f470494d1370 | e-mail               | TRUE            | FALSE            |
@@ -120,7 +120,7 @@ Os perfis de usuário duplicados não podem ser recuperados após a fusão.
 
 Semelhante à mesclagem baseada em regras, a mesclagem programada permite automatizar a mesclagem de perfis de usuários diariamente usando regras pré-configuradas.
 
-![A página "Gerenciar público" com o botão "Agendar".]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
+![A página "Manage Audience" (Gerenciar público) com o botão "schedule" (agendar).]({% image_buster /assets/img/audience_management/duplicate_users/bulk_merging/select_scheduled_merge_rules.png %})
 
 Depois que o recurso for ativado, o Braze atribuirá automaticamente um intervalo de tempo para realizar o processo de mesclagem diariamente, aproximadamente às 12 horas, no fuso horário da empresa do usuário. Você pode desativar a mesclagem programada a qualquer momento. O Braze notificará os administradores de seu espaço de trabalho 24 horas antes da mesclagem programada, fornecendo um lembrete e tempo para revisar a configuração.
 

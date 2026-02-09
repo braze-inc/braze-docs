@@ -1,5 +1,5 @@
 ---
-nav_title: Modèles de requête
+nav_title: Modèles de requêtes
 article_title: Modèles de générateurs de requêtes
 page_order: 1
 page_type: reference

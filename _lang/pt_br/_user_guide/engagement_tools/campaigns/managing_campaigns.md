@@ -1,6 +1,6 @@
 ---
-nav_title: Gerenciamento de campanhas
-article_title: Gerenciamento de campanhas
+nav_title: Gerenciar campanhas
+article_title: Gerenciar campanhas
 layout: dev_guide
 guide_top_header: "Gerenciamento de campanhas"
 guide_top_text: "Depois de lançar sua campanha, é hora de sentar e observar os dados. Se você precisar fazer alterações em sua campanha, configurar alertas ou arquivar sua campanha, consulte os artigos a seguir para obter ajuda."

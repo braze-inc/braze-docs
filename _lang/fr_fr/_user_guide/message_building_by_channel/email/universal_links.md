@@ -75,7 +75,7 @@ Ces étapes sont adaptées de la documentation destinée aux développeurs d'App
 #### Étape 1a : Enregistrer votre application {#step-1a}
 
 1. Allez sur developer.apple.com et connectez-vous.
-2. Cliquez sur **Certificats, Identifiants et Profils.**
+2. Cliquez sur **Certificats, Identifiants & Profils**.
 3. Cliquez sur **Identifiants**.
 4. Si vous n'avez pas encore d'identifiant d'application enregistré, cliquez sur + pour en créer un.
    a. Saisissez un **nom**. Il peut s'agir de tout ce que vous voulez.
@@ -89,7 +89,7 @@ Ces étapes sont adaptées de la documentation destinée aux développeurs d'App
 
 ![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
-#### Étape 1c : Activez les domaines associés dans votre projet Xcode {#step-1c}
+#### Étape 1c: Activez les domaines associés dans votre projet Xcode {#step-1c}
 
 Avant de poursuivre, assurez-vous que votre projet Xcode a la même équipe sélectionnée que celle où vous venez d'enregistrer votre identifiant d'application. 
 

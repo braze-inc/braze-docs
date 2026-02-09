@@ -32,10 +32,10 @@ Al crear audiencias con retargeting de usuarios, es posible que desee incluir o 
 
 Los usuarios pueden ser filtrados por cuándo recibieron por última vez un SMS, MMS o RCS o si han recibido un SMS, MMS o RCS de una campaña específica. Los filtros se pueden establecer en el paso **Audiencias objetivo** del creador de campañas. 
 
-**Filtrar por último recibido SMS/MMS/RCS**<br>
-![Filtro de segmentación Últimos SMS recibidos después del 8 de diciembre de 2020.]({% image_buster /assets/img/sms/filter2.png %})
+**Filtrar por último SMS/MMS/RCS recibido**<br>
+![Filtro de segmentación Último SMS recibido después del 8 de diciembre de 2020.]({% image_buster /assets/img/sms/filter2.png %})
 
-**Filtrar por mensajes recibidos de la campaña SMS/MMS/RCS **<br>
+**Filtrar por mensajes recibidos de la campaña SMS/MMS/RCS**<br>
 Filtra los usuarios que han recibido un mensaje de una campaña específica. Con este filtro, también tienes la opción de filtrar a los que no han recibido mensajes de una campaña. <br>
 ![Filtro de segmentación Ha recibido un mensaje de la campaña "SMS retargeting".]({% image_buster /assets/img/sms/filter1.png %})
 
@@ -72,20 +72,20 @@ Además de las tres categorías de palabras clave predeterminadas (Opt-in, Opt-o
 
 Filtra la frecuencia con la que un usuario responde a tu programa de SMS, MMS o RCS. Este filtro evaluará la última fecha en la que un usuario envió un mensaje entrante que esté dentro de una de las categorías de palabras clave. 
 
-![Filtro de segmentación Último SMS enviado al grupo de suscripción "Marketing SMS" con la palabra clave "Adhesión voluntaria" después del 11 de agosto de 2020.]({% image_buster /assets/img/sms/retargeting1.png %})
+![Filtro de segmentación Último SMS enviado al grupo de suscripción "Marketing SMS" con la palabra clave "Opt-in" después del 11 de agosto de 2020.]({% image_buster /assets/img/sms/retargeting1.png %})
 
 ### Filtrar por campaña o atribución Canvas
 
 Filtra a los usuarios que hayan respondido a una campaña específica de SMS, MMS o RCS o a un componente de Canvas, una categoría de palabras clave o una etiqueta.
 
 **Filtrar por responder a una campaña específica con categoría de palabra clave**<br>
-![Campaña con el filtro "Ha respondido al SMS" para la campaña "SMS-283" "Promoción". Debajo del filtro, la característica menciona "Este filtro caducará 25 meses después de que se envíe el último mensaje desde "Promoción" si no se está utilizando en ninguna campaña activa."]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
+![Campaña con el filtro "Ha respondido al SMS" para la campaña "SMS-283" "Promoción". Debajo del filtro, la función menciona "Este filtro caducará 25 meses después de que se envíe el último mensaje desde "Promoción" si no se está utilizando en ninguna campaña activa."]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
 
 **Filtrar por respuesta a una campaña o Canvas con una etiqueta específica**
-![Campaña con el filtro "Ha respondido a SMS" para campaña o Canvas con etiqueta "Servicio de mensajería de acera C".]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
+![Campaña con el filtro "Ha respondido al SMS" para campaña o Canvas con la etiqueta "Servicio de mensajería en acera C".]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
 
 **Filtrar por respuesta a un paso específico**
-![Campaña con el filtro "Ha respondido a SMS" para el paso "SMS Doble Opt" "Paso - Ayuda".]({% image_buster /assets/img/sms/clicked_opened_step.png %})
+![Campaña con el filtro "Ha respondido al SMS" para el paso "Doble adhesión voluntaria por SMS" "Paso - Ayuda".]({% image_buster /assets/img/sms/clicked_opened_step.png %})
 
 ### Mensajes de activación por palabra clave
 
@@ -98,11 +98,11 @@ Si un Canvas basado en acciones es desencadenado por un mensaje SMS o MMS entran
 {% endalert %}
 
 **Activación por categoría de palabras clave entrantes**<br>
-![Campaña SMS basada en acciones con el filtro de segmentación Palabra clave enviada "Adhesión voluntaria" al grupo de suscripción "Marketing SMS".]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
+![Campaña SMS basada en acciones con el filtro de segmentación Palabra clave enviada "Adhesión voluntaria" al grupo de suscripción "Marketing por SMS".]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
 
 **Activación por palabras clave arbitrarias**<br>
 Tenga en cuenta que al activar un mensaje en una respuesta de palabra clave "Otra", tendrá la oportunidad de evaluar el cuerpo de la palabra clave en una coincidencia de texto exacta. Esta coincidencia sigue las mismas reglas que las anotadas: Sólo se procesará el **mensaje exacto, de una sola palabra** ( _sin distinguir_ mayúsculas de minúsculas). Una palabra clave enviada de `Hello Braze!` no coincidiría con los criterios mostrados en el siguiente ejemplo.
-![Campaña de mensajería SMS basada en acciones con la categoría de palabras clave "Otros", en la que el cuerpo del mensaje es exactamente "Hola" o "Eh".]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
+![Campaña de SMS basada en acciones con la categoría de palabras clave "Otros" en la que el cuerpo del mensaje es exactamente "Hola" o "Eh".]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
 
 **Palabras clave de la plantilla**<br>
 Al activar una campaña o un componente del lienzo en un SMS o MMS entrante, puede incorporar opcionalmente el texto o los archivos multimedia adjuntos que el usuario envió al cuerpo de la campaña o del lienzo con Liquid. Esto le permitirá acceder a la respuesta del usuario, que podrá incluir en su respuesta, aplicarle lógica condicional o cualquier otra cosa que pueda hacer con Liquid. 

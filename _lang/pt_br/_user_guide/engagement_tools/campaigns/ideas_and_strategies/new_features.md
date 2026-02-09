@@ -1,6 +1,6 @@
 ---
-nav_title: Conscientização sobre os recursos e a nova versão do app
-article_title: Conscientização sobre os recursos e a nova versão do app
+nav_title: Reconhecimento de recursos e nova versão do app
+article_title: Consciência de Recursos e Nova Versão do App
 page_order: 9
 page_type: reference
 description: "Este artigo de referência discute como manter os usuários informados e entusiasmados com o lançamento de novos recursos ou versões."
@@ -20,7 +20,11 @@ As campanhas de conscientização de recursos são uma ótima maneira de incenti
 
 Os SDKs do Braze rastreiam automaticamente a versão mais recente do app de um usuário. Essas versões podem ser usadas em filtros e segmentos para determinar quais usuários devem receber uma mensagem ou campanha.
 
-![O painel Opções de direcionamento na etapa Usuários-alvo no fluxo de trabalho de criação de campanhas. A seção Filtros adicionais inclui o seguinte filtro "O número da versão mais recente do app para Android Stopwatch (Android) é inferior a 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+![O painel Opções de direcionamento na etapa Usuários-alvo no fluxo de trabalho de criação de campanhas. A seção Additional Filters inclui o seguinte filtro "Most Recent App Version Number for Android Stopwatch (Android) is below 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+
+{% alert note %}
+Pode levar algum tempo para que as versões atuais do app sejam preenchidas. A versão do aplicativo no perfil do usuário é atualizada quando as informações são capturadas pelo SDK, que se baseia em quando os usuários abrem seus apps. Se o usuário não abrir o app, a versão atual não será atualizada. <br><br> Esses filtros também não serão aplicados retroativamente. É bom usar "maior que" ou "igual" para versões atuais e futuras, mas o uso de filtros de versões anteriores pode causar comportamentos inesperados.
+{% endalert %}
 
 ### Número da versão do app
 
@@ -45,7 +49,7 @@ Esse novo filtro pode substituir o antigo filtro "App Version Name", que exigiri
 
 Os valores para esse filtro são coletados a partir do Braze Android SDK v3.6.0+ e iOS SDK v3.21.0+. Mesmo que esse filtro tenha requisitos de SDK, você ainda poderá direcionar os usuários que estão em versões inferiores (mais antigas) do seu app usando esse recurso!
 
-Para Android, esse número de versão é baseado no [código de versão longa](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) do [pacote](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) para o app.
+Para Android, esse número de versão é baseado no [código de versão longa](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) do [pacote](https://developer.android.com/reference/android/content/pm/PackageInfo.html#getLongVersionCode()) do app.
 
 Para iOS, esse número de versão é baseado na [Short Version String](https://developer.apple.com/documentation/bundleresources/information_property_list/cfbundleshortversionstring) do aplicativo.
 

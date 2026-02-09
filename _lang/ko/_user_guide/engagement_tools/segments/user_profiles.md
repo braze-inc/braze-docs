@@ -17,16 +17,20 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 
 사용자의 프로필에 액세스하려면 **사용자 검색** 페이지로 이동하여 다음 중 하나로 사용자를 검색합니다:
 
-- 외부 사용자 ID
+- External user ID
 - Braze ID
-- 이메일
+- Email
 - 전화번호
 - 푸시 토큰
-- "[user_alias]:[alias_name]" 형식의 사용자 별칭, 예: "amplitude_id:user_123"
+- 사용자 별칭 형식 "[user_alias]:[alias_name]", 예: "amplitude_id:user_123"
 
 일치하는 항목이 발견되면 Braze SDK를 통해 해당 사용자에 대해 기록한 정보를 확인할 수 있습니다. 그렇지 않으면 검색에서 여러 사용자 프로필이 반환되는 경우 각 프로필을 개별적으로 병합하거나 일괄 사용자 병합을 수행할 수 있습니다. 전체 안내는 [중복 사용자]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/)를 참조하세요.
 
-![Search results with a banner that reads "Multiple users match your search criteria" and two buttons labeled Previous and Next.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
+{% alert important %}
+전화번호가 검색에 사용될 때, [`E.164`](https://en.wikipedia.org/wiki/e.164) 형식으로 변경됩니다. 전화번호를 `E.164` 형식으로 변경할 수 없는 사용자(예: 전화번호에 유효하지 않은 국가 코드나 지역 코드가 있는 경우)는 전화번호로 검색할 수 없습니다.
+{% endalert %}
+
+![ "여러 사용자가 검색 기준에 일치합니다"라는 배너가 있는 검색 결과와 이전 및 다음이라는 두 개의 버튼이 있습니다.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## 사용 사례
 
@@ -52,16 +56,16 @@ description: "이 참고 문서에서는 대시보드에서 고객 프로필에 
 | 개요 카테고리 | 포함 사항 |
 | --- | --- |
 | 프로필 | 성별, 연령대, 위치, 언어, 로캘, 시간대, 생일을 입력합니다. |
-| 세션 개요 | 세션 수, 첫 번째 세션과 마지막 세션이 언제인지, 어떤 앱에서 사용했는지 등을 확인할 수 있습니다. |
-| 사용자 지정 속성 | 이 사용자에게 귀속되는 커스텀 속성 및 중첩 커스텀 속성을 포함한 관련 값입니다. |
+| 세션 개요 | 그들이 가진 세션 수, 첫 번째 및 마지막 세션이 언제였는지, 어떤 앱에서였는지. |
+| Custom attributes | 이 사용자에게 귀속되는 커스텀 속성 및 중첩 커스텀 속성을 포함한 관련 값입니다. |
 | 최근 기기 | 로그인한 기기 수, 각 기기에 대한 세부 정보 및 관련 광고 ID(있는 경우). |
 | 사용자 지정 이벤트 | 이 사용자가 수행한 커스텀 이벤트, 횟수, 각 이벤트를 마지막으로 수행한 시간. |
 | 구매 | 이 사용자의 평생 매출 속성, 마지막 구매, 총 구매 횟수, 각 구매 목록이 표시됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-For more information on this data, see [User Data Collection]({{site.baseurl}}/user_guide/data/user_data_collection/).
+이 데이터에 대한 자세한 내용은 [SDK 데이터 수집]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/)을 참조하십시오.
 
-![The Overview tab of a user profile.]({% image_buster /assets/img_archive/user_profile2.png %})
+![고객 프로필의 개요 탭.]({% image_buster /assets/img_archive/user_profile2.png %})
 
 ### 인게이지먼트 탭 {#engagement-tab}
 
@@ -72,14 +76,14 @@ For more information on this data, see [User Data Collection]({{site.baseurl}}/u
 | 연락처 설정 | 이메일, SMS, 푸시의 구독 상태 및 이 사용자가 이 세 가지 채널에 대해 연결된 구독 그룹입니다. 이 섹션에는 푸시 토큰에 대한 변경 로그 정보도 포함되어 있습니다. Refer to [email]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/), and [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) for information on how subscriptions and opt-ins are set. |
 | 수신된 캠페인 | 캠페인은 사용자가 캠페인을 받을 때 또는 사용자의 상호작용 데이터가 처음 감지될 때 표시됩니다. 목록에서 캠페인을 선택하여 확인합니다. |
 | 세그먼트 | 이 사용자가 포함된 세그먼트입니다. 목록에서 세그먼트를 선택하면 해당 세그먼트를 볼 수 있습니다. |
-| 커뮤니케이션 통계 | 이 사용자가 각 채널에서 마지막으로 메시지를 받은 시기입니다. |
+| 커뮤니케이션 통계 | 이 사용자가 각 채널에서 마지막으로 당신으로부터 메시지를 받은 시점. |
 | 설치 속성 | 사용자가 앱을 설치한 방법과 시기에 대한 정보입니다. [사용자 설치 이해]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/)에 대해 자세히 알아보세요. |
 | 기타 | The user's [random bucket number]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/). |
 | 캔버스 메시지 수신 | 이 사용자가 수신한 캔버스 메시지와 시기. 목록에서 메시지를 선택하면 해당 메시지를 볼 수 있습니다. |
 | 예측 | [Churn prediction]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) and [event prediction]({{site.baseurl}}/user_guide/brazeai/predictive_events/) scores for this user. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![The Engagement tab of a user profile displaying their contact settings and communication statistics.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
+![사용자 프로필의 참여 탭은 연락처 설정 및 커뮤니케이션 통계를 표시합니다.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### 메시징 내역 탭
 
@@ -89,7 +93,7 @@ The **Message History** tab of the user profile shows recent messaging-related e
 If you have feedback on this table or would like to see specific events, please email [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) with the subject line "Messaging History Tab Feedback".
 {% endalert %}
 
-![The Messaging History tab showing which campaigns and Canvases a user has received.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
+![메시징 기록 탭은 사용자가 받은 캠페인과 캔버스를 보여줍니다.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### 이벤트 보기 및 이해
 
@@ -101,7 +105,7 @@ If you have feedback on this table or would like to see specific events, please 
 
 | 채널 | 사용 가능한 참여 이벤트 |
 | --- | --- |
-| 이메일 | 반송<br>클릭<br>전달<br>스팸으로 표시<br>열기( [이메일 열기 이벤트에 대한 참고 사항](#note-on-email-open-event) 참조)<br>발송<br>소프트바운스<br>구독취소 |
+| 이메일 | 반송<br>클릭<br>연기 이벤트<br>전달<br>스팸으로 표시<br>열기( [이메일 열기 이벤트에 대한 참고 사항](#note-on-email-open-event) 참조)<br>발송<br>소프트바운스<br>구독취소 |
 | SMS | 이동통신사 발송<br>전달<br>전달 실패<br>인바운드 수신<br>거부<br>발송 |
 | 푸시 | 반송<br>영향받은 열람<br>iOS 포그라운드<br>열기<br>발송 |
 | 인앱 메시지 | 클릭<br>노출 |
@@ -138,5 +142,20 @@ A frequency cap event occurs when a user is qualified to receive a message, but 
 Email open tracking is error-prone in any tool, including Braze. 다양한 이메일 클라이언트에서 제공하는 다양한 개인 정보 보호 기능으로 이미지의 자동 로딩을 차단하거나 서버에서 사전에 이미지를 로드하기 때문에 이메일 열기 이벤트는 오탐과 오탐에 모두 취약합니다.
 
 While email open statistics can be useful in aggregate, for example, to compare the effectiveness of different subject lines, you should not assume an individual open event for an individual user is meaningful.
+
+#### 메시지 기록 탭에서 특정 필드가 비어 있는 이유는 무엇입니까?
+
+다음 시나리오에서 사용자의 **메시지 기록** 탭에 필드가 없을 수 있습니다:
+
+- 이벤트가 **메시지 전송**에 대한 데이터가 누락된 경우, 이는 캠페인에 메시지 변형이 없음을 나타냅니다.
+- 이벤트가 **캠페인/캔버스** 및 **메시지 전송**에 대한 데이터가 누락된 경우, 이는 이 메시지가 `campaign_id` 및 `message_variation_id`를 지정하지 않은 API 캠페인(API 트리거 캠페인이 아님)에서 전송되었음을 나타냅니다. 이 필드는 선택 사항이며 요청 본문에서 생략할 수 있습니다. 이 필드가 지정되면 해당 정보가 메시지 기록 로그에 채워집니다.
+   - 특정 메시지가 메시징 기록에서 완전히 누락되었지만 **수신한 캠페인** 로그에 나타나는 경우, 사용자가 현재 사용자로 식별되기 전에 캠페인을 수신했을 가능성이 높습니다. 기존 프로필이 고아 상태인 경우, **수신한 캠페인** 로그가 전송되지만 메시징 기록은 전송되지 않습니다. 
+- **캠페인/캔버스**에 대한 데이터가 누락된 경우, 수동 테스트가 전송되었을 수 있습니다. 수동 테스트는 **메시징 기록** 탭에 기록되지만, 전송된 캠페인이나 캔버스는 기록되지 않습니다.
+
+## 관련 문서
+
+- [사용자 프로필 수명 주기]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [게시: 식별자로 사용자 프로필 내보내기]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [게시: 사용자 삭제]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 

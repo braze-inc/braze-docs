@@ -78,7 +78,7 @@ Eine API-Kampagne ermöglicht das Tracking von Metriken für alle SmarterSends-M
 Legen Sie für jede Gruppe, die Sie in SmarterSends erstellen, eine ID für eine Variante der Nachricht an, um die Metriken für die Sendungen jeder Gruppe separat in Ihrem Braze Workspace anzuzeigen. Dies kann hilfreich sein, um beim Erstellen von Berichten in Braze gruppenübergreifende Trends zu erkennen.
 {% endalert %}
 
-## Anpassung
+## Customization
 
 Jede Instanz von SmarterSends lässt sich vollständig an die Farben Ihres Markenlogos und Ihren angepassten Domain-Namen anpassen, wodurch eine vertraute Umgebung geschaffen wird. Darüber hinaus können Sie zur weiteren Personalisierung die Attribute und angepassten Attribute definieren, um Nutzer:innen in Kampagnen auf der Grundlage der Segmente innerhalb Ihres Braze Arbeitsbereichs anzusprechen.
 

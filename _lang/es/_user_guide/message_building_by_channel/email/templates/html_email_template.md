@@ -1,6 +1,6 @@
 ---
-nav_title: Cargar una plantilla de correo electrónico HTML
-article_title: Cargar una plantilla de correo electrónico HTML
+nav_title: Subir una plantilla de correo electrónico HTML
+article_title: Subir una plantilla de correo electrónico HTML
 page_order: 2
 description: "Este artículo de referencia explica cómo crear, gestionar y solucionar problemas de una plantilla de correo electrónico HTML mediante el panel de control de Braze."
 tool:
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Cargar una plantilla de correo electrónico HTML
+# Subir una plantilla de correo electrónico HTML
 
 > El panel de control de Braze le permite cargar sus propias plantillas de correo electrónico HTML y guardarlas para utilizarlas posteriormente en campañas. También puede [crear una plantilla de correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) utilizando nuestro editor.
 
@@ -64,7 +64,7 @@ Si modifica una plantilla existente, los cambios no se reflejarán en las campa�
 
 Para utilizar su correo electrónico en una campaña API, necesita la dirección `email_template_id`, que se encuentra en la parte inferior de cualquier plantilla de correo electrónico creada en Braze.
 
-![Sección del identificador API de una plantilla de correo electrónico HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
+![Sección del identificador de la API de una plantilla de correo electrónico HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## Gestión de plantillas de correo electrónico
 

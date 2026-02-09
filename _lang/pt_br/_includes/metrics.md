@@ -135,7 +135,7 @@ As <i>falhas</i> ocorrem quando a mensagem do WhatsApp não pode ser enviada por
 {% endif %}
 
 {% if include.metric == "Lifetime Revenue" %}
-<i>A receita vitalícia</i> é o total de  <code>PurchaseEvents</code> valor do preço (em USD) recebido desde o início.
+<i>A receita vitalícia</i> é o total de <code>PurchaseEvents</code> valor do preço (em USD) recebido desde o início.
 {% endif %}
 
 {% if include.metric == "Lifetime Value Per User" %}
@@ -175,7 +175,7 @@ As <i>aberturas</i> são instâncias que incluem <i>aberturas diretas</i> e <i>a
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Conversões primárias (A)</i> ou <i>evento de conversão primária</i> é o número de vezes que um evento definido ocorreu após a interação ou a visualização de uma mensagem recebida de uma campanha do Braze. Esse evento definido é determinado por você ao criar a campanha.
+<i>Conversões primárias (A)</i> ou <i>Evento de conversão primária</i> é o número de usuários únicos que realizam um evento definido após receberem ou visualizarem uma mensagem de uma campanha do Braze. Esse evento é selecionado por você ao configurar a campanha e é usado como a principal métrica de sucesso para relatórios e otimização.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -252,6 +252,11 @@ A <i>taxa de envios para a operadora</i> é a porcentagem do total de mensagens 
 
 {% if include.metric == "Unique Clicks" %}
 <i>Cliques únicos</i> é o número distinto de destinatários que clicaram em um link em uma mensagem pelo menos uma vez e é medido por <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+{% endif %}
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>Cliques únicos</i> é o número distinto de destinatários que clicaram em um link em uma mensagem pelo menos uma vez.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

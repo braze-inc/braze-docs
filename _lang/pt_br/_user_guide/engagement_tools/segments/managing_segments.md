@@ -1,6 +1,6 @@
 ---
-nav_title: Gerenciamento de segmentos
-article_title: Gerenciamento de segmentos
+nav_title: Gerenciar segmentos
+article_title: Gerenciar segmentos
 page_order: 1
 page_type: tutorial
 tool: Segments
@@ -8,7 +8,7 @@ description: "Este artigo aborda as ações que você pode executar para gerenci
 
 ---
 
-# Gerenciamento de segmentos
+# Gerenciar segmentos
 
 > A seção Segments (Segmentos) permite visualizar uma lista abrangente dos segmentos existentes, criar novos segmentos e editar segmentos existentes. Você pode refinar a lista de segmentos selecionando uma variedade de filtros e colunas para que apenas as informações mais relevantes para você sejam exibidas.
 
@@ -48,6 +48,14 @@ Essas são as colunas de informações que você pode selecionar para exibir na 
 
 A seleção de **Show Starred Only** restringe sua visualização aos segmentos que foram marcados com estrela por você.
 
+## Visualização do uso de mensagens de um segmento
+
+Acesse a seção **Uso de mensagens** de um segmento para obter uma visão geral de onde o segmento está sendo usado, como em outros segmentos, campanhas e Canvas.
+
+{% alert note %}
+Para evitar loops de segmentos que fazem referência uns aos outros, os segmentos que usam o filtro **Segment Membership** não podem ser referenciados por outros segmentos. Para obter mais detalhes, consulte [Filtros de segmentação]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+{% endalert %}
+
 ## Gerenciamento de segmentos específicos
 
 ![O menu de edição de um segmento mostra as opções "Edit" (Editar), "Duplicate" (Duplicar), "Archive" (Arquivar) e "Add to starred" (Adicionar aos favoritos).]({% image_buster /assets/img/segment/segments_page_edit_menu.png %}){: style="float:right;max-width:25%;"}
@@ -60,7 +68,7 @@ Para gerenciar um segmento específico, passe o mouse sobre ele e selecione o í
  
 Você também pode executar ações em massa. Especificamente, arquivamento em massa e tag em massa, marcando as caixas ao lado de vários nomes de segmentos.
 
-![Vários segmentos selecionados com "CRM" selecionado no campo suspenso "Tag As".]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
+![Vários segmentos selecionados com "CRM" selecionado no campo suspenso "Marcar como".]({% image_buster /assets/img/segment/segments_bulk_action.png %}){: style="max-width:45%;"}
 
 ### alterações desde a última visualização
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Deep linking para conteúdo no aplicativo
+nav_title: Deep linking para conteúdo no app
 article_title: Deep linking para conteúdo no aplicativo
 page_order: 3
 description: "Este artigo de referência aborda orientações sobre como adicionar deep linking ao conteúdo de suas mensagens no app."

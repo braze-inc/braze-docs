@@ -1,5 +1,5 @@
 ---
-nav_title: Registro de exportações
+nav_title: Registro de exportação
 article_title: Registro de exportações
 page_order: 15
 page_type: reference
@@ -18,7 +18,7 @@ description: "Esta página abrange o registro de exportações, que permite visu
 
 É possível cancelar exportações pendentes diretamente na página **Registro de exportações**, selecionando o menu <i class="fas fa-ellipsis-vertical"></i> e, em seguida, **Cancelar exportação**, ou selecionando o **ID de exportação** e, em seguida, **Cancelar exportação** na página da exportação.
 
-![O registro de exportação mostra uma exportação pendente e a opção de "Cancelar exportação".]({% image_buster /assets/img/export_logs_cancel.png %})
+![O registro de exportações mostra uma exportação pendente e a opção de "Cancelar exportação".]({% image_buster /assets/img/export_logs_cancel.png %})
 
 ## Compartilhamento de um registro de exportação específico
 

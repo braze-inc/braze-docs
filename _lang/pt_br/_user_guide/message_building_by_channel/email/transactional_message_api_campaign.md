@@ -51,7 +51,7 @@ Como resultado, você notará que várias configurações com as quais você pod
 - A etapa de **direcionamento ao público** foi removida. Como os e-mails de transação inscrevem toda a sua base de usuários como elegível (incluindo usuários com inscrição cancelada), não há necessidade de especificar filtros ou segmentos. Como resultado, se você tiver alguma lógica para aplicar a quem deve receber essa mensagem, recomendamos aplicar essa lógica antes de determinar se deve fazer a solicitação da API ao Braze para disparar a mensagem para um usuário específico.
 - A etapa **Conversões** foi removida. Os e-mails de transação não suportam o rastreamento de eventos de conversão no momento.
 
-![Fluxo de trabalho de criação, entrega e confirmação para criar uma campanha de e-mail de transação.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
+![Crie, entregue e confirme o fluxo de trabalho para criar uma campanha de e-mail de transação.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 Para configurar sua campanha de e-mail de transação, siga estas etapas:
 

@@ -1,12 +1,12 @@
 ---
 nav_title: Nube de ventas Salesforce
-article_title: Gestión de clientes potenciales con Salesforce Sales Cloud
+article_title: Gestionar clientes potenciales con Salesforce Sales Cloud
 page_order: 3
 page_type: reference
 description: "Aprende a utilizar los webhooks Braze para crear y actualizar clientes potenciales en Salesforce Sales Cloud a través del punto final Salesforce sobjects/Lead."
 ---
 
-# Gestión de clientes potenciales con Salesforce Sales Cloud
+# Gestionar clientes potenciales con Salesforce Sales Cloud
 
 > [Salesforce](https://www.salesforce.com/) es una de las principales plataformas de gestión de relaciones con los clientes (CRM) en la nube del mundo, diseñada para ayudar a las empresas a gestionar todo su proceso de ventas, incluida la generación de prospectos, el seguimiento de oportunidades y la administración de cuentas.<br><br>Esta página muestra cómo utilizar webhooks Braze para crear y actualizar clientes potenciales en Salesforce Sales Cloud mediante una integración enviada por la comunidad.
 
@@ -154,7 +154,7 @@ Puedes añadir rápidamente tus plantillas a tus flujos de trabajo operativos en
 
 Para crear un cliente potencial en Salesforce cuando un usuario proporcione su dirección de correo electrónico, puedes crear una campaña que utilice la plantilla de webhook "Actualizar cliente potencial" y se desencadene cuando un usuario añada su dirección de correo electrónico (por ejemplo, cuando rellene un formulario Web).
 
-![Paso 2 para crear una campaña basada en una acción y cuya acción desencadenante sea "Añadir una dirección de correo electrónico".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
+![Paso 2 de la creación de una campaña basada en acciones y con la acción desencadenante "Añadir una dirección de correo electrónico".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Lead scoring Canvas para superar el umbral de Lead Cualificado en Marketing (MQL) {#lead-scoring}
 
@@ -181,7 +181,7 @@ Añade un paso posterior a tu actualización de usuarios para comprobar si un us
 
 ¡Ahora tu flujo Canvas actualizará a los usuarios que hayan cruzado tu umbral de MQL!
 
-![Un paso de actualización de usuarios en Canvas que comprueba si un usuario supera el umbral MQL y, si lo supera, actualiza Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
+![Un paso en Canvas de actualización de usuarios que comprueba si un usuario supera el umbral MQL y, si lo supera, actualiza Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Solución de problemas
 

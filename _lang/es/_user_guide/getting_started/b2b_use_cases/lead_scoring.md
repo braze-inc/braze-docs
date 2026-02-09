@@ -1,12 +1,12 @@
 ---
 nav_title: Puntuación de clientes potenciales
-article_title: Creación de un flujo de trabajo de puntuación de clientes potenciales
+article_title: Crear un flujo de trabajo de puntuación de clientes potenciales
 page_order: 1
 page_type: reference
 description: "Aprenda a utilizar Braze para realizar la puntuación simple de clientes potenciales, la puntuación externa de clientes potenciales y el traspaso de clientes potenciales."
 ---
 
-# Creación de un flujo de trabajo de puntuación de clientes potenciales
+# Crea un flujo de trabajo de puntuación de clientes potenciales
 
 > Este caso de uso demuestra cómo puede utilizar Braze para actualizar las puntuaciones de clientes potenciales de los usuarios en tiempo real y entregar automáticamente los clientes potenciales a sus equipos de ventas.
 
@@ -70,7 +70,7 @@ En **Configuración de la suscripción**, en **Enviar a estos usuarios:** selecc
 
 Bajo tu variante, selecciona el ícono más y, a continuación, selecciona **Rutas de acción**.
 
-![Canvas con "Rutas de acción" mostradas en el menú abierto por el icono más.]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
+![Canvas con "Rutas de acción" en el menú que se abre con el ícono más.]({% image_buster /assets/img/b2b/action_paths_simple.png %}){: style="max-width:60%;"}
 
 #### Paso 4b: Crear grupos de acción
 
@@ -83,7 +83,7 @@ Añada los siguientes grupos a su ruta de acción:
 - **Grupo 3:** Todos los eventos que cuentan para un decremento de 1 punto.
 - **Todos los demás:** Las rutas de acción permiten definir la ventana para esperar a ver si un usuario realiza una acción, antes de incluirlo en un grupo de "todos los demás". Para la puntuación de clientes potenciales, esta es una oportunidad para disminuir la puntuación por "inactividad".
 
-![Ruta de acción que contiene Grupos de Acción para sumar un punto, cinco puntos y diez puntos; restar un punto y diez puntos; y "Todos los demás".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %})
+![Ruta de acción que contiene Grupos de Acción para sumar un punto, cinco puntos y diez puntos; restar un punto y diez puntos; y "Todos los demás".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### Paso 4c: Configure cada grupo para incluir los eventos pertinentes
 
@@ -95,7 +95,7 @@ En cada Grupo de Acciones, seleccione **Seleccionar activador** y elija el event
 
 Añada un paso de Actualización de Usuario a cada ruta Canvas creada debajo de su Ruta de Acción. 
 
-![Canvas que muestra la ruta de acción con rutas de actualización de usuario ramificadas para cada grupo de acción.]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
+![Lienzo que muestra la ruta de acción con rutas de actualización de usuario ramificadas para cada grupo de acciones.]({% image_buster /assets/img/b2b/user_update_paths_simple.png %}){: style="max-width:80%;"}
 
 {: start=”2”}
 En la pestaña **Redactar** de cada paso de Actualización de usuario, haga lo siguiente para los campos respectivos:
@@ -126,7 +126,7 @@ Puede integrar Braze con sus modelos de datos internos, incluidos los modelos de
 #### Almacén de datos en la nube integrado
 
 {% tabs %}
-{% tab Braze como fuente de datos %}
+{% tab Braze as a data source %}
 
 Como herramienta de marketing, Braze contiene datos extremadamente relevantes que podrían complementar el modelo interno de puntuación de clientes potenciales de su equipo. 
 
@@ -136,7 +136,7 @@ Por ejemplo, los datos de participación en la mensajería (como aperturas y cli
 - [Intercambio seguro de datos Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
 
 {% endtab %}
-{% tab Braze como destino %}
+{% tab Braze as a destination %}
 
 Después de que sus equipos internos hayan creado y ejecutado su modelo de puntuación de clientes potenciales, puede volver a introducir esos datos en Braze para poder segmentar y dirigir mejor a los clientes potenciales los mensajes pertinentes. Puedes hacerlo con [la Ingesta de datos en la nube Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/). 
 
@@ -182,11 +182,11 @@ Para actualizar el registro de clientes potenciales en Salesforce con el estado 
 
 | Encabezado | Contenido |
 | --- | --- |
-| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_d664afea-b595-417b-accb-0a485396cb13/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorización | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar un token, [configura una aplicación conectada](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para el flujo de credenciales de cliente OAuth 2.0 y, a continuación, utiliza Contenido conectado para recuperar el portador de Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_a97638e9-a9fb-441c-9749-b5b688d1a3e3/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![Webhook que se compone con una URL de webhook de Salesforce, método HTTP PATCH, cuerpo de solicitud de texto sin procesar y encabezados de solicitud.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
+![Webhook que se compone de una URL de webhook de Salesforce, un método HTTP PATCH, un cuerpo de solicitud de texto sin formato y encabezados de solicitud.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
 
 #### Paso 2b: Programar envíos de webhooks
 
@@ -200,7 +200,7 @@ En el paso **Programar entrega**, seleccione lo siguiente:
 
 En el paso **Públicos objetivo**, incluya un filtro que excluya a los usuarios cuyo estado de cliente potencial ya esté en MQL o más allá, como "`lead_status` `is none of` `MQL`".
 
-![Las opciones de orientación del webhook con el filtro de "lead_status" no es ninguna de "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
+![Las opciones de orientación del webhook con el filtro de “lead_status” no es ninguna de "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Paso 3: Lanzar campaña
 

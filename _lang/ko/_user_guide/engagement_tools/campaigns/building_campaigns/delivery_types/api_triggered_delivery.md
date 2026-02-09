@@ -1,5 +1,5 @@
 ---
-nav_title: API 트리거 전달
+nav_title: API-트리거된 전달
 article_title: API 트리거 전달
 page_order: 2
 page_type: reference
@@ -30,7 +30,7 @@ API로 시작된 캠페인은 [API 캠페인]({{site.baseurl}}/developer_guide/r
 메시지를 트리거하는 것 외에도 `trigger_properties` 객체 내에서 메시지로 템플릿화할 콘텐츠를 API 요청에 포함할 수 있습니다. 이 콘텐츠는 메시지 본문에서 참조할 수 있습니다. 예를 들어, 다음을 포함할 수 있습니다:
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``. 다음 소셜 알림 예제를 추가 컨텍스트로 참조하세요:
 
-![앞서 언급한 트리거 속성은 메시지에 포함되어 사용자의 이름을 자동으로 채운 후 다음 텍스트를 추가합니다: "님이 당신의 사진을 좋아합니다!" Click here to see what they've been up to.".]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
+![앞서 언급한 트리거 속성은 메시지에 포함되어 사용자의 이름을 자동으로 채운 후 다음 텍스트를 추가합니다: "님이 당신의 사진을 좋아합니다!" 클릭 here to see what they've been up to.".]({% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}){: style="max-width:70%;"}
 
 ## API로 트리거된 캠페인의 재적격성
 

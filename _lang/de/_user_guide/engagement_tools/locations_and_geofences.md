@@ -1,5 +1,5 @@
 ---
-nav_title: Standorte und Geofences
+nav_title: Standorte und Geoofences
 article_title: Standorte und Geofences
 page_order: 6
 layout: dev_guide
@@ -18,11 +18,8 @@ guide_featured_list:
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Mobile Integrationen
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/mobile_integrations/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/#mobile-integrations
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Häufig gestellte Fragen
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    image: /assets/img/braze_icons/annotation-question.svg
 ---
 
 ## Über Standorte und Geofences
@@ -36,4 +33,3 @@ Sie können die Standortdaten der Benutzer auf verschiedene Weise erfassen und n
 
 - Wenn ein Benutzer Ihre App öffnet, erfasst die Standortverfolgung seine letzten Standorte anhand von GPS-Standortdaten. So können Sie sehen, wo sich Ihre Nutzer aufgehalten haben, und auf der Grundlage dieser Daten segmentieren.
 - Geofences sind definierte virtuelle geografische Gebiete. Wenn ein:e Nutzer:indas Standort-Tracking im Hintergrund aktiviert hat, können Sie Geofences verwenden, um Kampagnen in Realtime zu triggern, wenn sich ein:e Nutzer:in in einem Geofence befindet.
-<br><br><br>

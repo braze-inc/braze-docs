@@ -1,6 +1,6 @@
 ---
 nav_title: Datos de los segmentos
-article_title: Visualización y comprensión de los datos de los segmentos
+article_title: Ver y comprender los datos de los segmentos
 page_order: 4
 page_type: reference
 description: "Esta página explica la sección de segmentos de tu panel de Braze, e incluye un resumen de las estadísticas proporcionadas."
@@ -24,7 +24,7 @@ Tras seleccionar el nombre de un segmento, puedes ver las estadísticas y los fi
 
 Cuando activas el [seguimiento de análisis para un segmento]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/), puedes ver las sesiones, eventos personalizados e ingresos a lo largo del tiempo para este segmento.
 
-![Alternar el seguimiento de análisis para un segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Activación del seguimiento analítico de un segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 ### Estadísticas de los segmentos
 
@@ -58,7 +58,7 @@ Puedes ver las siguientes estadísticas de segmentos, que se actualizan en tiemp
         </tr>
         <tr>
             <td class="no-split">Envío por correo electrónico (adhesión voluntaria)</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Debido a <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">las normativas sobre correo electrónico no deseado</a>, es una buena idea pedir a tus usuarios que se adhieran voluntariamente de forma explícita, implementando una política de doble adhesión en la que los usuarios deban hacer clic en un enlace en un correo electrónico de confirmación inicial. Para animar a más usuarios a que se adhieran voluntariamente, puedes dirigir un mensaje a <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">aquellos que ni se han adherido ni se han excluido</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Emailable' %} Debido a <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">la normativa sobre correo no deseado</a>, es una buena idea pedir a tus usuarios que se adhieran explícitamente mediante la implementación de una política de doble adhesión en la que los usuarios deban hacer clic en un enlace en un correo electrónico de confirmación inicial. Para animar a más usuarios a que se adhieran voluntariamente, puedes dirigir un mensaje a <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">aquellos que ni se han adherido ni se han excluido</a>.</td>
         </tr>
         <tr>
             <td class="no-split">Push habilitado (adhesión voluntaria)</td>
@@ -78,7 +78,7 @@ La sección **Uso de la mensajería** muestra qué segmentos, campañas habilita
 
 La sección **Afiliación histórica** muestra cómo ha cambiado el tamaño de tu segmento a lo largo del tiempo. Utilice el menú desplegable para filtrar los miembros del segmento por intervalo de fechas.
 
-Para saber más sobre cómo controlar el número de miembros y el tamaño de tu segmento, consulta [Medir el tamaño del segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
+Para saber más sobre cómo controlar la composición y el tamaño de tu segmento, consulta [Medir el tamaño del segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/).
 
 ### Vista previa del usuario
 

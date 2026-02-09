@@ -14,26 +14,28 @@ platform:
 
 # コンテンツカードの作成
 
-> この記事では、カスタムコンテンツカードを実装するときに使用する基本的なアプローチと、バナー画像、メッセージ受信トレイ、画像のカルーセルの3つの一般的なユースケースについて説明します。コンテンツ・カードのカスタマイズ・ガイドの他の記事をすでに読んで、デフォルトでできることと、カスタム・コードが必要なことを理解していることを前提としている。カスタム・コンテンツ・カードの[log analytics]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/)の方法を理解することは特に役立ちます。 
+> この記事では、カスタムコンテンツカードを実装するときに使用する基本的なアプローチと、3 つの一般的なユースケースについて説明します。コンテンツ・カードのカスタマイズ・ガイドの他の記事をすでに読んで、デフォルトでできることと、カスタム・コードが必要なことを理解していることを前提としている。特に、カスタムコンテンツカードの[アナリティクスを記録]({{site.baseurl}}/developer_guide/content_cards/logging_analytics/)する方法を理解すると役立ちます。 
+
+{% multi_lang_include banners/content_card_alert.md %}
 
 ## カードを作成する
 
 ### ステップ1:カスタム UI を作成する 
 
 {% tabs local %}
-{% tab Android %}
-
-まず、独自のカスタムフラグメントを作成します。デフォルトの[`ContentCardFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)は、デフォルトのコンテンツカードタイプのみに対応するよう設計されていますが、良い出発点です。
-
-{% endtab %}
-{% tab iOS %}
-
-まず、独自のカスタムビューコントローラーコンポーネントを作成します。デフォルトの[`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller)は、デフォルトのコンテンツカードタイプのみに対応するよう設計されていますが、良い出発点です。
-
-{% endtab %}
-{% tab Web %}
+{% tab web %}
 
 まず、カードのレンダリングに使用するカスタム HTML コンポーネントを作成します。 
+
+{% endtab %}
+{% tab android %}
+
+まず、独自のカスタムフラグメントを作成します。デフォルトの[`ContentCardsFragment`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html)は、デフォルトのコンテンツカードタイプのみに対応するよう設計されていますが、良い出発点です。
+
+{% endtab %}
+{% tab swift %}
+
+まず、独自のカスタムビューコントローラーコンポーネントを作成します。デフォルトの[`BrazeContentCardUI.ViewController`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcardui/viewcontroller)は、デフォルトのコンテンツカードタイプのみに対応するよう設計されていますが、良い出発点です。
 
 {% endtab %}
 {% endtabs %}
@@ -46,19 +48,19 @@ platform:
 
 コンテンツカードのインプレッション数、クリック数、却下数は、カスタムビューに自動的に記録されません。すべての指標が Braze ダッシュボードの分析に適切に記録されるように、[それぞれのメソッドを実装]({{site.baseurl}}/developer_guide/customization_guides/content_cards/logging_analytics/#logging-events)する必要があります。
 
-### ステップ 4:カードのテスト(オプション)
+### ステップ4:カードのテスト (オプション)
 
 コンテンツカードをテストするには:
 
 1. [`changeUser()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser) メソッドを呼び出して、アプリケーションでアクティブなユーザーを設定します。
-2. ブレーズで、**Campaigns**に移動し、[新しいコンテンツカードキャンペーンを作成します]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create)。
-3. キャンペーンで、**Test** を選択し、テストユーザの`user-id` を入力します。準備ができたら、**Send Test**を選択します。すぐにデバイスでコンテンツカードを起動できます。
+2. Braze で、[**キャンペーン**] に移動し、[新しいコンテンツカードキャンペーンを作成します]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create)。
+3. キャンペーンで、[**テスト**] を選択し、テストユーザーの `user-id` を入力します。準備ができたら、[**テストを送信**] を選択します。すぐにデバイスでコンテンツカードを起動できます。
 
-![]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test") 自分のユーザーIDをテスト受信者として追加して、コンテンツカードをテストできることを示すBrazeコンテンツカードキャンペーン。
+![Brazeのコンテンツカードキャンペーンでは、自分のユーザーIDをテスト受信者として追加し、コンテンツカードをテストすることができる。]({% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test")
 
 ## コンテンツカードの配置
 
-コンテンツカードはさまざまな方法で使用できます。一般的な3つの実装は、メッセージセンター、バナー広告、または画像カルーセルとして使用することです。これらの配置ごとに、[キーと値のペア]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (データモデルの`extras`プロパティ) をコンテンツカードに割り当て、その値に基づいて、ランタイム時にカードの動作、外観、または機能を動的に調整します。 
+コンテンツカードはさまざまな方法で使用できます。3つの一般的な実装は、それらをメッセージセンター、動的画像広告、または画像カルーセルとして使用することである。これらの配置ごとに、[キーと値のペア]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#key-value-pairs) (データモデルの`extras`プロパティ) をコンテンツカードに割り当て、その値に基づいて、ランタイム時にカードの動作、外観、または機能を動的に調整します。 
 
 ![]({% image_buster /assets/img_archive/cc_placements.png %}){: style="border:0px;"}
 
@@ -68,24 +70,24 @@ platform:
 
 #### 例
 
-たとえば、ユーザがおすすめを読めるようにするためのコール・トゥ・アクションと、新しいサブスクライバ・セグメントに付与されるクーポン・コードという2つのメッセージ・カードを作成できます。
+たとえば、ユーザーがおすすめを有効にするためのコールトゥアクションと、新しいサブスクライバセグメントに付与されるクーポンコードという 2 つのメッセージカードを作成できます。
 
 `body`、`title`、`buttonText`などのキーは、マーケターが設定できる単純な文字列値を持つ場合があります。`terms`のようなキーは、法務部門が承認したフレーズの小さなコレクションを提供する値を持つ場合があります。`style` や`class_type` などのキーには、アプリやサイトでのカードのレンダリング方法を決定するために設定できる文字列値があります。
 
 {% tabs local %}
-{% tab おすすめを読む %}
+{% tab Reading recommendations %}
 読み取り推奨カードのキーと値のペア:
 
 | キー         | 値                                                                |
 |------------|----------------------------------------------------------------------|
 | `body`       | Politer Weekly のプロファイルに興味のある内容を追加して、個人的な読書レコメンデーションを手に入れましょう。 |
 | `style`      | info                                                                 |
-| `class_type` | 通知センター                                                 |
+| `class_type` | notification_center                                                 |
 | `card_priority` | 1                                                                 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 
-{% tab 新規サブスクライバークーポン %}
+{% tab New subscriber coupon %}
 新しいサブスクライバクーポンのキーと値のペア:
 
 | キー         | 値                                                            |
@@ -94,14 +96,14 @@ platform:
 | `body`       | 夏の終わりスペシャル - Politer ゲームが10%オフ              |
 | `buttonText` | 今すぐ購読する                                                    |
 | `style`      | プロモーション                                                            |
-| `class_type` | 通知センター                                              |
+| `class_type` | notification_center                                              |
 | `card_priority` | 2                                                              |
 | `terms`      | new_subscribers_only                                             |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 {% endtab %}
 {% endtabs %}
 
-{% details Android の追加情報 %}
+{% details Additional information for Android %}
 
 Android と FireOS SDK では、メッセージセンターのロジックは Braze のキーと値のペアが提供する`class_type`値によって駆動されます。[`createContentCardable`]({{site.baseurl}}/developer_guide/content_cards/)メソッドを使用すると、これらのクラスタイプをフィルタリングして識別できます。
 
@@ -237,8 +239,8 @@ protected void onCreate(Bundle savedInstanceState) {
 カルーセルをセカンダリコンテンツカードフィードとして実装する場合は、[ キーと値のペア]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) を使用してカードを正しいフィードにソートします。
 {% endalert %}
 
-### バナー
+### 画像のみ
 
-コンテンツカードは「カード」のように見せる必要はありません。たとえば、コンテンツカードは動的なバナーとして表示され、ホームページや指定ページの上部に永続的に表示されます。
+コンテンツカードは「カード」のように見せる必要はありません。たとえば、コンテンツカードは、ホームページまたは指定されたページの上部に永続的に表示される動的イメージとして表示できます。
 
 これを実現するために、マーケターは**画像のみ**タイプのコンテンツカードでキャンペーンまたはキャンバスステップを作成します。次に、[コンテンツカードを補足コンテンツとして]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_behavior/#content-cards-as-supplemental-content)使用するのに適したキーと値のペアを設定します。

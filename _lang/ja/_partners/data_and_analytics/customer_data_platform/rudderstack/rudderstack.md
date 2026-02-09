@@ -38,7 +38,7 @@ Brazeデスティネーションで、アプリキー、Braze REST APIキー、�
 
 ![]({% image_buster /assets/img/RudderStack/braze_settings.png %}){: style="max-width:70%;margin-bottom:15px;border:none;"}
 
-### ステップ 3: 統合のタイプを選ぶ
+### ステップ 3:統合のタイプを選ぶ
 
 次のいずれかの方法を使用して、RudderStack の Web ライブラリとネイティブクライアント側ライブラリを Braze と統合できます。
 
@@ -59,7 +59,7 @@ RudderStack の[接続モード](https://www.rudderstack.com/docs/destinations/r
 - [Android](https://github.com/rudderlabs/rudder-integration-braze-android)
 - [iOS](https://github.com/rudderlabs/rudder-integration-braze-ios/tree/master)
 - [Swift](https://github.com/rudderlabs/rudder-integration-braze-swift)
-- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/production/src/integrations/Braze)
+- [Web](https://github.com/rudderlabs/rudder-sdk-js/tree/develop/packages/analytics-js-integrations/src/integrations/Braze)
 - [React Native](https://github.com/rudderlabs/rudder-sdk-react-native/tree/develop/libs/rudder-integration-braze-react-native)
 - [Flutter](https://github.com/rudderlabs/rudder-sdk-flutter/tree/develop/packages/integrations/rudder_integration_braze_flutter)
 
@@ -131,12 +131,12 @@ RudderStackの[`track` メソッドは](https://rudderstack.com/docs/destination
 [RudderStack Ecommerce API](https://www.rudderstack.com/docs/event-spec/ecommerce-events-spec/) を使用して `Order Completed` という名前のイベントに対して track メソッドを呼び出すと、RudderStack はそのイベントにリストされている製品を [`purchases`]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data). として Braze に送信します。
 
 {% endtab %}
-{% tab スクリーン %}
+{% tab Screen %}
 
 RudderStack の [`screen` メソッド](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#screen)を使用して、ユーザーのモバイル画面ビューを、表示されている画面に関する追加情報とともに記録できます。
 
 {% endtab %}
-{% tab ページ %}
+{% tab Page %}
 
 RudderStack の [`page` メソッド](https://rudderstack.com/docs/destinations/marketing/braze/#page) を使用して、Web サイトのページビューを記録できます。また、そのページに関するその他の関連情報もキャプチャされます。
 
@@ -149,7 +149,7 @@ RudderStackの[`group` メソッドでは](https://rudderstack.com/docs/destinat
 サブスクリプショングループのステータスを更新するには、RudderStack ダッシュボードの [Enable subscription groups in group call] 設定を有効にし、グループ呼び出しでサブスクリプショングループのステータスを送信します。
 
 {% endtab %}
-{% tab 別名 %}
+{% tab Alias %}
 
 RudderStack の [`alias` メソッド](https://www.rudderstack.com/docs/destinations/streaming-destinations/braze/#alias) を使用して、既知のユーザーの複数の ID をマージできます。RudderStack は、クラウドモードでのみ Braze のエイリアス呼び出しをサポートしていることに注意してください。
 

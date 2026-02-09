@@ -1,12 +1,12 @@
 ---
-nav_title: Definição de valores padrão
-article_title: Definição de valores padrão do Liquid
+nav_title: Definir valores padrão
+article_title: Definir valores Liquid padrão
 page_order: 5
 description: "Este artigo de referência cobre como definir valores de fallback padrão para qualquer atributo de personalização que você usa em suas mensagens."
 
 ---
 
-# Definição de valores padrão
+# Definir valores padrão
 
 {% raw %}
 
@@ -78,7 +78,7 @@ Hi {{${first_name} | default: 'valued user'}}, consider upgrading to premium for
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% assign is_premium_user = {{custom_attribute.${premium_user}}} | default: false %}
@@ -144,7 +144,7 @@ State: {{custom_attribute.${address.state} | default: 'Unknown'}}
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 Hi {{${first_name} | default: 'valued user'}}
@@ -191,7 +191,7 @@ Hello {{${first_name} | default: 'fellow traveler'}},
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${upcoming_trips}}} == blank %}

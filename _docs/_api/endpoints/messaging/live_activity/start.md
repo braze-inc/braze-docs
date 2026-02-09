@@ -19,7 +19,7 @@ description: "This article outlines details about the Start Live Activity endpoi
 
 After you create a Live Activity, you can make a POST request to remotely start your activity for any given segment. For more information about Apple's Live Activities, see [Starting and updating Live Activities with ActivityKit push notifications](https://developer.apple.com/documentation/activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications).
 
-If `content-available` isn't set, the default Apple Push Notification service (APNs) priority is 10. If `content-available` is set, this priority is 5. Refer to [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object) for more details. 
+If `content-available` isn't set, the default Apple Push Notification service (APNs) priority is 10. If `content-available` is set, this priority is 5. Refer to [Apple push object]({{site.baseurl}}/api/objects_filters/messaging/apple_object) for more details.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -123,7 +123,7 @@ A `201` status code is returned if the request was formatted correctly and we re
 
 The `4XX` class of status code indicates a client error. Refer to the [API errors and responses article]({{site.baseurl}}/api/errors/) for more information about errors you may encounter.
 
-The status code `400` could return the following response body. 
+The status code `400` could return the following response body.
 
 ```json
 {

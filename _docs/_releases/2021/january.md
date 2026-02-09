@@ -25,7 +25,7 @@ Expand Braze's email capabilities to deliver your best content (high-quality vid
 
 ## Zendesk partnership is live
 
-[Zendesk Support Suite (ZSS)]({{site.baseurl}}/partners/zendesk/) offers businesses the ability to have natural conversations with their customers through omnichannel support using email, webchat, voice, or social messaging apps. ZSS values customer support through tracking and prioritizing interactions, allowing businesses to have a unified historical view of their customers. Powerful tools such as a streamlined ticketing system allow businesses to reach out directly to customers with a personalized approach. Braze offers a server-to-server integration with Zendesk, allowing you to utilize the Braze webhooks that can sync support ticket data between Braze and Zendesk. 
+[Zendesk Support Suite (ZSS)]({{site.baseurl}}/partners/zendesk/) offers businesses the ability to have natural conversations with their customers through omnichannel support using email, webchat, voice, or social messaging apps. ZSS values customer support through tracking and prioritizing interactions, allowing businesses to have a unified historical view of their customers. Powerful tools such as a streamlined ticketing system allow businesses to contact customers directly with a personalized approach. Braze offers a server-to-server integration with Zendesk, allowing you to utilize the Braze webhooks that can sync support ticket data between Braze and Zendesk. 
 
 ## Crowdin partnership is live
 

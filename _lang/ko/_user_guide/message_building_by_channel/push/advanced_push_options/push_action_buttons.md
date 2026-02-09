@@ -1,5 +1,5 @@
 ---
-nav_title: "푸시 실행 버튼"
+nav_title: "푸시 액션 버튼"
 article_title: 푸시 실행 버튼
 page_order: 1
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 
 # 푸시 액션 버튼
 
-![두 개의 푸시 동작 버튼이 있는 iOS 푸시 알림입니다: Accept and Decline.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![두 개의 푸시 동작 버튼이 있는 iOS 푸시 알림입니다: 수락 및 거부.]({% image_buster /assets/img_archive/push_action_example.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > 푸시 액션 버튼을 사용하면 Braze iOS 및 Android 푸시 알림을 사용할 때 버튼의 콘텐츠와 액션을 설정할 수 있습니다. 액션 버튼을 사용하면 사용자가 앱 환경을 클릭할 필요 없이 알림에서 앱과 직접 상호 작용할 수 있습니다.
 
@@ -36,7 +36,7 @@ iOS 푸시 메시지에서 액션 버튼을 사용하려면 다음과 같이 하
  - 더 보기
  - 사전 등록된 사용자 지정 iOS 카테고리
 
-![iOS 알림 카테고리 드롭다운 메뉴]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![iOS 알림 카테고리 드롭다운 메뉴.]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
 
 {% alert note %}
 Due to iOS's handling of buttons, you need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/push_notifications/customization/?sdktab=swift#swift_customizing-push-categories). 특히 iOS 카테고리를 구성하거나 특정 기본 버튼 옵션 중에서 선택해야 합니다. Android 통합의 경우 이러한 버튼은 자동으로 작동합니다.
@@ -61,7 +61,7 @@ Android 푸시 메시지에서 액션 버튼을 사용하려면 다음과 같이
 
 쌓아 올리는 iOS 버튼과 달리 Android 버튼은 일렬로 나란히 표시됩니다. 즉, 버튼을 더 많이 추가할수록(최대 3개까지) 버튼 복사 공간이 줄어듭니다. 
 
-![텍스트가 잘린 Android 푸시 동작 버튼]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
+![잘린 텍스트가 있는 Android 푸시 실행 버튼.]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%"}
 
 다음 표에는 버튼 복사본이 잘리기 전에 추가할 수 있는 문자 수가 버튼 수에 따라 간략하게 나와 있습니다.
 

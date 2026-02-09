@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 환경설정 센터 세부 정보 보기"
+nav_title: "GET: 환경설정 센터에 대한 세부 정보 보기"
 article_title: "GET: 환경설정 센터 세부 정보 보기"
 search_tag: Endpoint
 page_order: 3
@@ -18,7 +18,7 @@ description: "이 문서에서는 기본 설정 센터 Braze 엔드포인트의 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6a47fd7c-2997-4832-aedb-d101a2dd03a5 {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 
 이 엔드포인트를 사용하려면 `preference_center.get` 권한이 있는 [API 키]({{site.baseurl}}/api/basics#rest-api-key/)가 필요합니다.
 
@@ -30,7 +30,7 @@ description: "이 문서에서는 기본 설정 센터 Braze 엔드포인트의 
 
 | 매개변수 | 필수 | 데이터 유형 | 설명 |
 | --------- | ---------| --------- | ----------- |
-|`preferenceCenterExternalID`| 필수 | 문자열 | 환경설정 센터의 ID입니다. |
+|`preferenceCenterExternalID`| Required | 문자열 | 환경설정 센터의 ID입니다. |
 {: role="presentation" }
 
 ## 요청 매개변수

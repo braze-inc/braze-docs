@@ -1,6 +1,6 @@
 ---
-nav_title: Captura de usuários ausentes
-article_title: Captura de usuários ausentes
+nav_title: Capturar usuários inativos
+article_title: Capturar usuários ausentes
 page_order: 1
 page_type: tutorial
 description: "Este artigo de instruções aborda a questão dos usuários inativos e como usar efetivamente as campanhas da Braze para reengajar esses usuários."
@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Captura de usuários ausentes
+# Capturar usuários inativos
 
 > Se o seu público estiver diminuindo, é crucial tentar atraí-lo de volta. Com o Braze, você pode configurar campanhas de reengajamento recorrentes e automatizadas para capturar usuários inativos. Você pode escolher o período de reengajamento e a recorrência mais adequados ao seu app, mas, para demonstrar, começaremos com um plano de reengajamento de 14 dias.
 

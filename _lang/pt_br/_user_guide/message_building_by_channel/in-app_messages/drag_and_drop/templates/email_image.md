@@ -1,5 +1,5 @@
 ---
-nav_title: Envio de e-mail com imagem
+nav_title: Cadastro de e-mail com imagem
 article_title: Cadastro de e-mail com imagem de fundo
 alias: "/email_image/"
 page_order: 4
@@ -18,7 +18,7 @@ description: "Esta página aborda como usar o editor de arrastar e soltar mensag
 
 Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Envio de e-mail com imagem de fundo** para o modelo e, em seguida, selecione **Criar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
 
-![O editor de mensagens no app com o modelo para um formulário de envio de e-mail com uma imagem de fundo.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %})
+![O editor de mensagem no app com o modelo para um formulário de cadastro de e-mail com uma imagem de fundo.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_image.png %})
 
 ### Etapa 2: Configure seus estilos de mensagens
 
@@ -30,7 +30,7 @@ Para começar a criar seu formulário de envio de e-mail, selecione o elemento d
 
 Você pode personalizar o texto do espaço reservado e o texto do rótulo do elemento de captura de e-mail.
 
-![O editor de mensagens no app com um menu lateral para personalizar o elemento de captura de e-mail.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %})
+![O editor de mensagem no app com um menu lateral para personalizar o elemento de captura de e-mail.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_image.png %})
 
 #### Validação de e-mail
 

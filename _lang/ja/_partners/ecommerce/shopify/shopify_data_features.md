@@ -1,21 +1,25 @@
 ---
-nav_title: Shopifyのデータ機能
-article_title: "Shopifyのデータ機能"
-description: "この参考記事では、Shopify のデータ機能について説明します。"
+nav_title: Shopify のデータ機能
+article_title: "Shopify のデータ機能"
+description: "このリファレンス記事では、Shopify のデータ機能について説明します。"
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
-page_order: 3
+page_order: 4
 ---
 
 # Shopify のデータ機能
 
-> この記事では、どのようなShopifyデータがトラッキング追跡されるのか、ペイロードの例、履歴の埋め戻し、商品の同期など、Shopify機能の概要を説明する。
+> この記事では、Shopify の機能の概要を示します。これには、追跡対象の Shopify データ、ペイロード例、履歴バックフィル、および製品の同期などが含まれます。
 
-## Shopify のイベント追跡
+## 追跡対象の Shopifyイベント
+
+Shopifyインテグレーションでは、[eコマース推奨イベント]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/)を使用して、主要な買い物行動をキャプチャします。これらのイベントを使用した実装例およびマーケティング方法については、[eCommerce ユースケース s]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/)を参照してください。
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
 {% tabs %}
-{% tab ペイロードの例 %}
+{% tab Example Payload %}
 {% subtabs global %}
 {% subtab Product viewed %}
 ```json
@@ -396,25 +400,25 @@ page_order: 3
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Shopify イベント %}
+{% tab Shopify events %}
 {% subtabs global %}
 {% subtab Product viewed %}
 **イベント**： `ecommerce.product_viewed`<br>
 **タイプ**：推奨イベント<br>
-**トリガー済み**いつ顧客が製品ページを表示したのか<br>
+**トリガー済み**顧客による製品ページの閲覧<br>
 **ユースケース**ブラウズ放棄
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| 変数| Liquid テンプレート |
 | --- | --- |
 \|------------------|-----------------------------------------------------|
 | `product_id`       | `{{event_properties.${product_id}}}`                |
 | `product_name `    | `{{event_properties.${product_name}}}`              |
 | `variant_id`       | `{{event_properties.${variant_id}}}`                |
 | `image_url `       | `{{event_properties.${image_url}}}`                 |
-| `product_url`      | `<your-store.myshopify.com>{{event_properties.${product_url}}}`<br><br>URLの前にShopifyサイトのドメインを追加する。|
+| `product_url` | `<your-store.myshopify.com>{{event_properties.${product_url}}}`<br><br>URL の前にShopify サイトドメインを追加します。|
 | `price`            | `{{event_properties.${price}}}`                     |
-\|`currency` ｜`{{event_properties.${currency}}}` ｜。
+| `currency`         | `{{event_properties.${currency}}}`                  |
 | `source`           | `{{event_properties.${source}}}`                    |
 | `sku`              | `{{event_properties.${metadata}[0].sku}}`          |
 | `type`             | `event_properties.${type}`          |
@@ -425,7 +429,7 @@ page_order: 3
 {% subtab Cart updated %}
 **イベント**： `ecommerce.cart_updated`<br>
 **タイプ**：推奨イベント<br>
-**トリガー済み**いつ顧客がショッピングカートを追加、削除、または更新したのか<br>
+**トリガー済み**顧客によるショッピングカートの追加、削除、更新<br>
 **ユースケース**カート放棄
 
 カート放棄キャンバスでは、まず最初のショッピングカートの Liquid タグを追加し、メッセージ内のショッピングカートのコンテキストを取得する必要があります。 
@@ -439,18 +443,18 @@ page_order: 3
 そして、次のショッピングカートの Liquid タグをメッセージに追加できます。
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| Variable         | Liquid テンプレート                                   |
 \|------------------|-----------------------------------------------------|
 | `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
 | `currency`         | `{{ shopping_cart.currency }}`                      |
 | `total_value`      | `{{ shopping_cart.total_value }}`                   |
 | `product_id`       | `{{ shopping_cart.products[0].product_id }}`       |
-\|`product_name` ｜`{{ shopping_cart.products[0].product_name }}` ｜。
+| `product_name`     | `{{ shopping_cart.products[0].product_name }}`     |
 | `variant_id`       | `{{ shopping_cart.products[0].variant_id }}`       |
-\|`image_url` ｜`{{ shopping_cart.products[0].image_url }}` ｜。
+| `image_url`        | `{{ shopping_cart.products[0].image_url }}`        |
 | `product_url`      | `{{ shopping_cart.products[0].product_url }}`      |
 | `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
-\|`price` ｜`{{ shopping_cart.products[0].price }}` ｜。
+| `price`            | `{{ shopping_cart.products[0].price }}`            |
 | `sku`              | `{{ shopping_cart.products[0].metadata[0].sku }}`  |
 | `source`           | `{{ shopping_cart.source }}`                        |
 | `metadata (value)` | `{{ shopping_cart.metadata[0].<add_value_here> }}` |
@@ -458,17 +462,17 @@ page_order: 3
 {% endraw %}
 
 {% alert tip %}
-すべての商品をダイナミックにメールに追加するための Liquid `for` ループの構築方法については、[メール用のカート放棄商品のパーソナライゼーション]({{site.baseurl}}/ecommerce_use_cases/#abandoned-cart)を参照してください。
+Liquid `for` ループを構築してすべての製品をメールに動的に追加する方法の詳細については、[メール用の放棄されたカートの商品のパーソナライゼーション]({{site.baseurl}}/ecommerce_use_cases/#abandoned-cart)を参照してください。
 {% endalert %}
 
 {% endsubtab %}
 {% subtab Checkout started %}
 **イベント**： `ecommerce.checkout_started`<br>
 **タイプ**：推奨イベント<br>
-**トリガー済み**いつ顧客がショッピングカートを追加、削除、または更新したのか<br>
+**トリガー済み**ユーザーがチェックアウトページに移動したとき<br>
 **ユースケース**チェックアウト放棄
 
-放棄されたチェックアウトのキャンバスでは、まず以下の Liquid タグを使う必要があります。
+放棄されたチェックアウトキャンバスでは、まず次の Liquid タグを使用する必要があります。
 
 {% raw %}
 ```liquid
@@ -480,21 +484,21 @@ page_order: 3
 次に、以下の Liquid タグをメッセージに追加し、チェックアウト時にカート内の商品を参照できます。
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| Variable         | Liquid テンプレート                                   |
 \|------------------|-----------------------------------------------------|
 | `cart_id`          | `{{ shopping_cart.cart_id }}`                       |
 | `currency`         | `{{ shopping_cart.currency }}`                      |
 | `total_value`      | `{{ shopping_cart.total_value }}`                   |
 | `product_id`       | `{{ shopping_cart.products[0].product_id }}`       |
-\|`product_name` ｜`{{ shopping_cart.products[0].product_name }}` ｜。
+| `product_name`     | `{{ shopping_cart.products[0].product_name }}`     |
 | `variant_id`       | `{{ shopping_cart.products[0].variant_id }}`       |
-\|`image_url` ｜`{{ shopping_cart.products[0].image_url }}` ｜。
+| `image_url`        | `{{ shopping_cart.products[0].image_url }}`        |
 | `product_url`      | `{{ shopping_cart.products[0].product_url }}`      |
 | `quantity`         | `{{ shopping_cart.products[0].quantity }}`         |
-\|`price` ｜`{{ shopping_cart.products[0].price }}` ｜。
+| `price`            | `{{ shopping_cart.products[0].price }}`            |
 | `sku`              | `{{ shopping_cart.products[0].metadata.sku }}`     |
 | `source`           | `{{ shopping_cart.source }}`                        |
-\|`checkout_url` ｜`{{ shopping_cart.metadata[0].checkout_url }}` ｜。
+| `checkout_url`     | `{{ shopping_cart.metadata[0].checkout_url }}`     |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
@@ -502,11 +506,11 @@ page_order: 3
 {% subtab Order placed %}
 **イベント**： `ecommerce.order_placed`<br>
 **タイプ**：推奨イベント<br>
-**トリガー済み**ユーザーがチェックアウトプロセスを正常に完了し、注文した場合<br>
-**ユースケース**注文確認、購入後のリターゲティング、アップセルまたはクロスセル 
+**トリガー済み**ユーザーがチェックアウトプロセスを正常に完了し、注文を出すとき<br>
+**ユースケース**注文確認、購入後リターゲット、アップセル、クロスセル 
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成                                   |
+| 変数| 液体テンプレーティング|
 \|-------------------------|-----------------------------------------------------|
 | cart_id                 | `{{event_properties.${cart_id}}}`                   |
 | currency                | `{{event_properties.${currency}}}`                  |
@@ -516,7 +520,7 @@ page_order: 3
 | product_name            | `{{event_properties.${products}[0].product_name}}` |
 | variant_id              | `{{event_properties.${products}[0].variant_id}}`   |
 | quantity                | `{{event_properties.${products}[0].quantity}}`     |
-| sku                     | `{{event_properties.${products}[0].metadata.sku}}` |
+| sku | `{{event_properties.${products}[0].metadata.sku}}` |
 | total_discounts         | `{{event_properties.${total_discounts}}}`           |
 | order_status_url        | `{{event_properties.${metadata}.order_status_url}}` |
 | order_number            | `{{event_properties.${metadata}.order_number}}`     |
@@ -534,11 +538,11 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {% subtab Fulfilled order %}
 **イベント**： `shopify_fulfilled_order`<br>
 **タイプ**：[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**トリガー済み**ユーザーの注文が完了し、発送準備ができた場合<br>
+**トリガー済み**ユーザーの注文が満たされ、発送の準備ができたとき<br>
 **ユースケース**(トランザクション) フルフィルメントの更新 
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| 変数| Liquid テンプレート |
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
@@ -584,11 +588,11 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {% subtab Partially fulfilled order %}
 **イベント**： `shopify_partially_fulfilled_order`<br>
 **タイプ**：[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**トリガー済み**ユーザーの注文の一部が完了し、出荷準備が整った場合。<br> 
+**トリガー済み**ユーザーの注文の一部が履行され、発送の準備ができたとき<br> 
 **ユースケース**(トランザクション) フルフィルメントの更新 
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| 変数| Liquid テンプレート |
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
@@ -634,11 +638,11 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {% subtab Paid order %}
 **イベント**： `shopify_paid_order`<br>
 **タイプ**：[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**トリガー済み**ユーザーの注文がShopify内で支払い済みとマークされた場合<br>  
+**トリガー済み**ユーザの注文がShopify内で支払済みとマークされたとき<br>  
 **ユースケース**(トランザクション) 支払いの確認
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| 変数| Liquid テンプレート |
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
 | 確認ステータス | `{{event_properties.${confirmed}}}` |
@@ -671,7 +675,7 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 **ユースケース**(取引）注文のキャンセル確認
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| 変数| Liquid テンプレート |
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
 | 価格｜総額｜`{{event_properties.${total_price}}}` ｜
@@ -702,11 +706,11 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {% subtab Order refunded %}
 **イベント**： `shopify_order_refunded`<br>
 **タイプ**：[カスタムイベント]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)<br>
-**トリガー済み**ユーザーの注文が返金される場合<br>
+**トリガー済み**利用者の注文が払い戻されたとき<br>
 **ユースケース**(取引) 返金の確認
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| 変数| Liquid テンプレート |
 | --- | --- |
 | オーダーID｜`{{event_properties.${order_id}}}` ｜
 | 注文メモ | `{event_properties.${note}}}` |
@@ -732,14 +736,14 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 **ユースケース**ウェルカムシリーズ
 
 {% raw %}
-| 変数｜Liquid・テンプレート作成
+| 変数| Liquid テンプレート |
 | --- | --- |
 | `source` | {{event_properties.${source}}} |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
 {% alert note %}
-現在、Shopify 統合では、Braze [購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events)への入力はサポートされていません。その結果、購入フィルター、Liquidタグ、アクションベースのトリガー、分析は、ecommerce.order_placedイベントを使用する必要がある。
+現在、Shopify 統合では、Braze [購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events)への入力はサポートされていません。このため、フィルターs、リキッドタグs、アクション ベースのトリガーs、および分析 は、`ecommerce.order_placed` を使用する必要があります。
 {% endalert %}
 
 {% endsubtab %}
@@ -748,8 +752,9 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {% endtabs %}
 
 ## サポートされているShopifyカスタム属性
+
 {% tabs local %}
-{% tab ペイロードの例 %}
+{% tab Example Payload %}
 {% subtabs %}
 {% subtab Shopify Tags %}
 ```json
@@ -770,7 +775,7 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Shopifyカスタム属性 %}
+{% tab Shopify Custom Attributes %}
 | 属性名 | 説明 |
 | --- | --- |
 | `shopify_total_spent` | 注文履歴全体で顧客が支払った総額。 |
@@ -781,15 +786,24 @@ Shopify のチェックアウト完了 Webhook には、商品 URL や画像 URL
 | `shopify_province` | 顧客のデフォルトの住所の都道府県。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+{% alert important %}
+現行のShopify API バージョンに既知の問題があると、`shopify_last_order_name` ユーザー 属性が正しく入力されません。ユーザーs への影響は以下のとおりです。<br><br>
+
+- **既設ユーザーs:**すでに`shopify_last_order_name` の値を持っているユーザーの場合、その値は保持されますが、後続の順序では更新d になりません。
+- **新しいユーザー:**新しいユーザーs の場合、フィールドは入力せず、空またはNULL のままになります。
+
+このページは、Shopify がこの問題を解決した後に更新されます。
+{% endalert %}
+
 ### Liquid のパーソナライゼーション
 
 Shopify カスタム属性に Liquid パーソナライゼーションを追加するには、[**\+ パーソナライゼーション**] を選択します。次に、[パーソナライゼーションタイプ] として [**カスタム属性**] を選択します。
 
-![パーソナライズの追加」セクションの「属性」ドロップダウンが拡張された。]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
+!["Add Personalization"セクションで"Attribute"ドロップダウンが拡張されています。]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
 
 カスタム属性を選択したら、デフォルト値を入力して Liquid スニペットをメッセージにコピーします。
 
-![リキッドのスニペットをメッセージに貼り付ける。]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
+![液体スニペットをメッセージにペーストする。]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -822,14 +836,14 @@ Shopify ストアのオンボーディング中に、履歴バックフィルを
 
 1. **Shopify データの追跡**ステップで、履歴バックフィルをオンにします。
 
-![Shopify 統合の「Shopify データを追跡」ステップで、履歴バックフィルが選択されています。]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
+!["Track Shopify data"選択した履歴バックフィルを示すShopifyインテグレーションのステップ。]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
 {: start="2"}
 
-2. 統合設定が完了すると、Braze は最初のデータ同期を開始します。進捗状況は、統合設定の [**Shopify データ**] タブで確認できます。 
+2. 統合設定が完了すると、Braze は初期データ同期を開始します。進捗状況は、統合設定の [**Shopify データ**] タブで確認できます。 
 
-![Shopifyの統合設定ページで、イベントがアクティブに同期されていることを示すスピナーがある。]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
+![「Shopify統合設定」ページには、イベントがアクティブに同期していることを示すスピナーが表示されます。]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
 
 ### 同期データ 
 
-初期データ同期では、Braze は、Shopify 統合接続前の過去90日間の顧客と注文をインポートします。Braze が Shopify の顧客をインポートする際、設定にて選択した `external_id` タイプを割り当てます。
+初期データ同期の場合、Braze は、Shopify 統合接続の直前の 90 日分の顧客と注文をインポートします。Braze が Shopify の顧客をインポートする際、設定にて選択した `external_id` タイプを割り当てます。

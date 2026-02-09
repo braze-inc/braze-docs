@@ -1,7 +1,7 @@
 ---
-nav_title: "Comptes d'entreprise multiples" 
+nav_title: Comptes professionnels multiples
 article_title: Plusieurs comptes et numéros de téléphone WhatsApp pour les entreprises
-page_order: 2
+page_order: 3
 description: "Cet article de référence décrit les étapes à suivre pour ajouter des comptes et des numéros de téléphone WhatsApp Business."
 page_type: reference
 channel:
@@ -18,7 +18,7 @@ Disposer de plusieurs comptes WhatsApp Business est utile si vous souhaitez envo
 
 Les comptes commerciaux imbriqués dans le même gestionnaire Meta Business Manager partageront également la gestion des autorisations d'accès des utilisateurs et les catalogues (pas encore pris en charge sur Braze).
 
-![Diagramme de l'écosystème Braze et WhatsApp, montrant comment les espaces de travail et les comptes WhatsApp Business se connectent les uns aux autres : vous pouvez connecter un groupe d'abonnement à un numéro de téléphone, plusieurs comptes WhatsApp Business à un espace de travail, et un espace de travail à plusieurs portefeuilles Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}). 
+![Schéma de l'écosystème Braze et WhatsApp, montrant comment les espaces de travail et les comptes WhatsApp Business se connectent les uns aux autres : vous pouvez connecter un groupe d'abonnement à un numéro de téléphone, plusieurs comptes WhatsApp Business à un espace de travail, et un espace de travail à plusieurs portefeuilles Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### Ajouter un compte WhatsApp Business
 
@@ -26,7 +26,7 @@ Vous pouvez ajouter jusqu'à 10 comptes WhatsApp Business par espace de travail.
 
 1. Allez dans **Partenaires technologiques** > **WhatsApp** et sélectionnez **Ajouter un compte professionnel WhatsApp.** 
 
-![Section sur l'intégration de l'envoi de messages WhatsApp avec des options permettant d'ajouter un compte professionnel ou d'ajouter un groupe d'abonnement et un numéro.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![Section d'intégration de l'envoi de messages WhatsApp avec des options pour ajouter un compte professionnel ou ajouter un groupe d'abonnement et un numéro.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Suivez le processus d'inscription. Pour une description détaillée des étapes, reportez-vous à l'[inscription intégrée à WhatsApp.]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/overview/embedded_signup/)
@@ -51,7 +51,7 @@ Vous pouvez ajouter jusqu'à 20 groupes d'abonnement (et numéros de téléphon
 
 1. Allez dans **Partenaires technologiques** > **WhatsApp** et sélectionnez **Ajouter un groupe d'abonnement et un numéro.**
 
-![Section sur l'intégration de l'envoi de messages WhatsApp avec des options permettant d'ajouter un compte professionnel ou d'ajouter un groupe d'abonnement et un numéro.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
+![Section d'intégration de l'envoi de messages WhatsApp avec des options pour ajouter un compte professionnel ou ajouter un groupe d'abonnement et un numéro.]({% image_buster /assets/img/whatsapp/multiple_wabas.png %})
 
 {: start="2"}
 2\. Suivez le processus d'inscription. <br><br> À l'étape **Sélectionner votre compte WhatsApp Business**, sélectionnez votre compte WhatsApp Business existant et ajoutez un nouveau numéro de téléphone. Ce numéro doit répondre à toutes les exigences d'un numéro de téléphone WhatsApp, notamment ne pas être associé à d'autres comptes WhatsApp.

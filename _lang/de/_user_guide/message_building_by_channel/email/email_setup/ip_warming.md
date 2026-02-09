@@ -1,5 +1,5 @@
 ---
-nav_title: IP Erwärmung
+nav_title: IP-Warming
 article_title: IP Erwärmung
 page_order: 1
 page_type: reference
@@ -20,13 +20,21 @@ IP-Warming soll Ihnen helfen, einen positiven Ruf bei Internet-Dienstanbieter (I
 
 ISPs drosseln die E-Mail-Zustellung, wenn der Verdacht auf Spam aufkommt, damit sie ihre Benutzer schützen können. Wenn Sie z. B. an 100.000 Nutzer:innen senden, kann es sein, dass der ISP die E-Mail in der ersten Stunde nur an 5.000 dieser Nutzer:innen zustellt. Dann überwacht der ISP Maßnahmen wie Öffnungsraten, Klickraten, Abmeldungen und Spam-Berichte. Wenn also eine beträchtliche Anzahl von Spam-Meldungen auftritt, kann es sein, dass sie den Rest der Sendung in den Spam-Ordner verschieben, anstatt sie an den Posteingang des Benutzers zu senden. 
 
-Wenn das Engagement mäßig ist, kann es sein, dass sie Ihre E-Mail weiter drosseln, um mehr Daten über das Engagement zu sammeln und mit größerer Sicherheit feststellen zu können, ob es sich bei der E-Mail um Spam handelt oder nicht. Wenn die E-Mail sehr hohe Engagement-Metriken aufweist, werden sie diese E-Mail möglicherweise nicht mehr drosseln. Sie verwenden diese Daten, um eine E-Mail-Reputation zu erstellen, die letztendlich bestimmt, ob Ihre E-Mails automatisch als Spam gefiltert werden oder nicht.
+Wenn das Engagement mäßig ist, kann es sein, dass sie Ihre E-Mail weiter drosseln, um mehr Daten über das Engagement zu sammeln, damit sie mit größerer Sicherheit feststellen können, ob es sich bei der E-Mail um Spam handelt oder nicht. Wenn die E-Mail sehr hohe Engagement-Metriken aufweist, werden sie diese E-Mail möglicherweise nicht mehr drosseln. Sie verwenden diese Daten, um eine E-Mail-Reputation zu erstellen, die letztendlich bestimmt, ob Ihre E-Mails automatisch als Spam gefiltert werden oder nicht.
 
 Wenn Ihre Domain oder IP von einem ISP blockiert wird, finden Sie in den [Nachrichtenprotokollen]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) Informationen darüber, welche Websites Sie besuchen sollten, um diese ISPs anzusprechen und von diesen Listen zu entfernen.
 
+## Automatisiertes IP-Warming
+
+Mit der Automatisierung des IP-Warming können Sie Ihr tägliches Sendevolumen allmählich erhöhen, so dass die Posteingangsprovider Ihre Sendemuster lernen und ihnen vertrauen können. Überwachen Sie Ihren IP-Warming-Tracker, indem Sie die Kachel **Automatisiertes IP-Warming** im Abschnitt **Weitermachen, wo Sie aufgehört haben** auf Ihrem Dashboard zu Hause auswählen. 
+
+Braze sendet zuerst an die Abonnent:innen mit dem größten Engagement, so dass das tägliche Volumen in einem Tempo wachsen kann, das den besten Praktiken entspricht. Dann verfolgt Braze die Signale für Engagement und Zustellbarkeit. Wenn irgendwelche Probleme entdeckt werden, wird Ihr Zeitplan automatisch angepasst.
+
+![IP-Warming-Tracker mit Sendevolumen für die Woche vom 16\. Januar.]({% image_buster /assets/img/automated_ip_warming_example.png %})
+
 ## Zeitplan für das IP-Warming
 
-Wir empfehlen dringend, diesen Zeitplan für das IP-Warming strikt einzuhalten, um die Zustellbarkeit zu unterstützen. Es ist auch wichtig, dass Sie keine Tage auslassen, denn eine konsequente Skalierung verbessert die Zustellungsmetriken.
+Wir empfehlen dringend, diesen Zeitplan für das IP-Warming strikt einzuhalten, um die Zustellbarkeit zu unterstützen. Es ist auch wichtig, dass Sie keine Tage auslassen, denn eine konsequente Skalierung verbessert die Metriken für die Zustellung.
 
 Tag | Anzahl der zu sendenden Emails
 ----|--------------------------|
@@ -51,7 +59,7 @@ Tag | Anzahl der zu sendenden Emails
 
 Zum Erreichen Ihrer Höchstleistung empfehlen wir Ihnen, ein Warming durchzuführen. Das heißt, wenn Sie normalerweise 2 Millionen E-Mails pro Tag senden, aber planen, in einer bestimmten Saison 7 Millionen zu senden, sollten Sie sich auf diesen „Spitzenwert“ vorbereiten.
 
-Sobald das Warming abgeschlossen ist und Sie Ihr gewünschtes tägliches Volumen erreicht haben, sollten Sie versuchen, dieses Volumen täglich beizubehalten. Eine gewisse Fluktuation ist zu erwarten, aber wenn Sie das gewünschte Volumen erreichen und dann nur einmal pro Woche einen Massenversand durchführen, kann sich das negativ auf Ihre Zustellungskennzahlen und Ihren Ruf als Absender auswirken. 
+Nachdem das IP-Warming abgeschlossen ist und Sie Ihr gewünschtes Tagesvolumen erreicht haben, sollten Sie versuchen, dieses Volumen täglich beizubehalten. Eine gewisse Fluktuation ist zu erwarten, aber wenn Sie das gewünschte Volumen erreichen und dann nur einmal pro Woche einen Massenversand durchführen, kann sich dies negativ auf Ihre Metriken für die Zustellung und die Absender-Reputation auswirken. 
 
 {% alert important %}
 Die meisten ISPs speichern Reputationsdaten nur für 30 Tage. Wenn Sie einen Monat lang keine Nachrichten senden, müssen Sie das IP-Warming wiederholen.
@@ -61,11 +69,11 @@ Die meisten ISPs speichern Reputationsdaten nur für 30 Tage. Wenn Sie einen Mon
 
 Unsere integrierte Funktion zur Nutzereinschränkung ist ein nützliches Hilfsmittel, um Ihnen beim Warming Ihrer IP-Adresse zu helfen. Nachdem Sie bei der Kampagnenerstellung die gewünschten Nachrichtensegmente ausgewählt haben, wählen Sie im Schritt [Zielbenutzer]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) das Dropdown-Menü **Erweiterte Optionen**, um Ihre Benutzer einzuschränken. Mit fortschreitendem Warming können Sie dieses Limit schrittweise erhöhen, um das Volumen der von Ihnen gesendeten E-Mails zu steigern.
 
-![][18]
+![]({% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %})
 
 ## Segmentierung von Subdomains
 
-Viele ISPs und E-Mail-Zugangsanbieter filtern nicht mehr nur nach der Reputation der IP-Adresse. Diese Filtertechnologien berücksichtigen jetzt auch die Domain-basierte Reputation. Das bedeutet, dass die Filter alle mit der Domain des Absenders oder der Absenderin verbundenen Daten prüfen und nicht nur die IP-Adresse herausfiltern. Aus diesem Grund empfehlen wir Ihnen, nicht nur Ihre E-Mail-IP aufzuwärmen, sondern auch separate Domänen oder Subdomänen für Marketing-, Transaktions- und Unternehmensmails zu verwenden. 
+Viele ISPs und E-Mail-Zugangsanbieter filtern nicht mehr nach der Reputation der IP-Adresse. Diese Filtertechnologien berücksichtigen jetzt auch die Domain-basierte Reputation. Das bedeutet, dass die Filter alle mit der Domain des Absenders oder der Absenderin verbundenen Daten prüfen und nicht nur die IP-Adresse herausfiltern. Aus diesem Grund empfehlen wir Ihnen, nicht nur Ihre E-Mail-IP aufzuwärmen, sondern auch separate Domänen oder Subdomänen für Marketing-, Transaktions- und Unternehmensmails zu verwenden. 
 
 {% alert important %}
 Die Segmentierung von Subdomains ist besonders wichtig für Absender:innen mit großem Volumen. Diese Absender:innen sollten bei der Einrichtung ihres Kontos mit einem Vertreter von Braze zusammenarbeiten, um zu bestätigen, dass sie sich an diese Vorgaben halten.
@@ -75,7 +83,7 @@ Wir empfehlen Ihnen, Ihre Domains so zu segmentieren, dass Unternehmensmails üb
 
 ## Bewährte Praktiken
 
-Alle Folgen eines fehlenden IP-Warmings können vermieden werden, wenn Sie die folgenden Best Practices zum IP-Warming befolgen.
+Sie können alle Folgen von nicht vorhandenem IP-Warming vermeiden, wenn Sie diese bewährten Verfahren befolgen:
 
 ### Beginnen Sie mit einem kleinen E-Mail-Aufkommen
 
@@ -93,12 +101,12 @@ Nutzen Sie unseren [Zeitplan für das IP-Warming](#ip-warming-schedules), um Ihr
 
 ### Bereinigen Sie Ihre E-Mail-Listen
 
-Vergewissern Sie sich, dass Ihre E-Mail-Liste bereinigt ist und keine alten oder ungeprüften E-Mail-Adressen enthält. Es ist ideal, wenn Sie sicherstellen, dass Sie sowohl [CASL- als auch CAN-SPAM-konform ][40] sind.
+Vergewissern Sie sich, dass Ihre E-Mail-Liste bereinigt ist und keine alten oder ungeprüften E-Mail-Adressen enthält. Es ist ideal, wenn Sie sicherstellen, dass Sie sowohl [CASL- als auch CAN-SPAM-konform]({{site.baseurl}}/user_guide/administrative/privacy/spam_regulations/) sind.
 
 ### Überwachen Sie Ihre Absender-Reputation
 
 Achten Sie bei der Durchführung des IP-Warming-Prozesses darauf, dass Sie Ihre Absender-Reputation sorgfältig überwachen. Diese spezifischen Metriken sind wichtig zu beobachten:
-- **Absprungraten:** Wenn eine Kampagne eine Rücklaufquote von mehr als 3–5 % aufweist, sollten Sie die Qualität Ihrer Liste anhand der Richtlinien in unserem Artikel „Keep It Clean: The Importance of Email List Hygiene][43]. Darüber hinaus sollten Sie eine [Sunset-Policy][46] in Erwägung ziehen, um den Versand von E-Mails an nicht aktivierte oder inaktive E-Mail-Adressen einzustellen.
+- **Absprungraten:** Wenn eine Kampagne zu mehr als 3-5% abprallt, sollten Sie die Sauberkeit Ihrer Liste überprüfen, indem Sie die Richtlinien in unserem [Keep It Clean befolgen: The Importance of Email List Hygiene](https://www.braze.com/blog/email-list-hygiene/). Außerdem sollten Sie eine [Sunsetting-Richtlinie]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/) in Betracht ziehen, um das Mailen von nicht aktivierten oder inaktiven E-Mail-Adressen einzustellen.
 - **Spam-Berichte:** Wenn eine Kampagne zu mehr als 0,08% als Spam gemeldet wird, sollten Sie den Inhalt, den Sie versenden, neu bewerten, überprüfen, ob er auf eine interessierte Zielgruppe ausgerichtet ist, und sicherstellen, dass Ihre E-Mails so formuliert sind, dass sie deren Interesse wecken.
 - **Öffnungsraten:** Öffnungsraten sind ein nützlicher Indikator für die Platzierung im Posteingang. Wenn Ihre einmaligen Öffnungsraten über 25% liegen, haben Sie wahrscheinlich eine hohe Platzierung im Posteingang, was auf einen guten Ruf des Absenders hinweist.
 
@@ -110,9 +118,3 @@ Braze empfiehlt, [Intelligent Timing]({{site.baseurl}}/user_guide/brazeai/intell
 Es ist normal, dass E-Mails während der IP-Warming-Phase an den Spam-Ordner gesendet werden, da Ihre Domain und IP noch keinen positiven Ruf aufgebaut haben. Wenn eine E-Mail in Ihrem Spam-Ordner landet, muss Ihr E-Mail-Administrator Ihre Braze-Sendedomäne und IP-Adresse zur Liste der erlaubten Mails in Ihrem Unternehmen hinzufügen.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
-[40]: {{site.baseurl}}/user_guide/onboarding_with_braze/spam_regulations/
-[43]: https://www.braze.com/blog/email-list-hygiene/
-[44]: https://senderscore.org/
-[45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/sunset_policies/

@@ -23,7 +23,7 @@ You can use nested objects—objects that are inside of another object—to send
 
 The following SDK versions support nested objects:
 
-{% sdk_min_versions swift:5.0.0 android:1.0.0 web:3.3.0 %}
+{% sdk_min_versions swift:5.0.0 android:20.0.0 web:3.3.0 %}
 
 ## Step 1: Generate a schema
 
@@ -84,14 +84,14 @@ The following is a `/users/track` example with a "Created Playlist" custom event
 {% tab Restaurant Example%}
 
 The following is a `/users/track` example with an "Ordered" custom event. After an order has been completed, capture properties of that order by sending:
-- An API request that lists "r_details" as a property
+- An API request that lists `r_details` as a property
 - The nested properties of that order
 
 ```
 ...
 "properties": {
   "r_details": {
-    "name": "McDonalds",
+    "name": "SandwichEmperor",
     "identifier": "12345678",
     "location" : {
       "city": "Montclair",
@@ -154,9 +154,9 @@ The **does not equal** filter only matches if none of the properties in your arr
 
 Triggering a campaign with nested properties from the "Ordered" event:
 
-![A user adding the property filter r_details.name is McDonalds for a custom event.]({% image_buster /assets/img/nested_object1.png %})
+![A user adding the property filter r_details.name is SandwichEmperor for a custom event.]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name`: "Mcdonalds"<br>
+`r_details.name`: "SandwichEmperor"<br>
 `r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}

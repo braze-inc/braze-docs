@@ -18,6 +18,51 @@ Vos messages de notification push doivent être conformes aux directives de l’
 
 En guise de bonne pratique, Braze recommande de limiter chaque ligne de texte, tant pour le titre optionnel que pour le corps du message, à environ 30-40 caractères dans une notification push mobile. Notez que le compteur de caractères du compositeur ne tient pas compte des caractères Liquid. Cela signifie que le nombre final de caractères d'un message dépend du rendu de Liquid pour chaque utilisateur. En cas de doute, gardez le contenu bref et agréable.
 
+## Réduire la taille de la charge utile des notifications push
+
+La taille maximale de la charge utile dépend de la plate-forme.
+
+| Plateforme | Taille maximale de la charge utile |
+| --- | --- |
+| Web | 3 807 octets |
+| Android | 3 930 octets |
+| iOS | 3 960 octets |
+| Kindle | 5 985 octets |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+Si votre push dépasse la taille maximale de la charge utile, le message risque de ne pas être envoyé. La meilleure pratique consiste à limiter votre charge utile à quelques centaines d'octets.
+
+### Qu'est-ce qu'une charge utile de poussée ?
+
+Les fournisseurs de services push calculent si votre notification push peut être affichée à un utilisateur en examinant la taille en octets de l'ensemble de la charge utile push. La charge utile est limitée à **4 Ko (4 096 octets)** pour la plupart des services de notifications push, notamment :
+
+- Service de notification push d'Apple (APN)
+- Firebase Cloud Messaging (FCM) d'Android
+- Push Web
+- Notification push Huawei
+
+Ces services push refuseront toute notification dépassant cette limite.
+
+Braze réserve une partie de la charge utile du push à des fins d'intégration et d'analyse/analytique. Dans ces conditions, la taille maximale de notre charge utile est de **3 807 octets.** Si votre push dépasse cette taille, le message risque de ne pas être envoyé. La meilleure pratique consiste à limiter votre charge utile à quelques centaines d'octets.
+
+Les éléments suivants constituent la charge utile de votre push :
+
+- Copie, telle que le titre et le corps du message
+- Rendu final de toute personnalisation liquide
+- URL des images (mais pas la taille de l'image elle-même)
+- URL des cibles des clics
+- Noms des boutons
+- Paires clé-valeur
+
+### Conseils pour réduire la taille de la charge utile
+
+Pour réduire la taille de la charge utile :
+
+- Veillez à ce que votre message soit bref. Une bonne ligne de conduite générale consiste à faire en sorte que les informations soient exploitables et utiles en moins de 40 caractères.
+- Oubliez les espaces blancs et les sauts de ligne dans votre texte.
+- Réfléchissez à la manière dont Liquid s'affichera lors de l'envoi. Étant donné que le rendu final de toute personnalisation Liquid varie d'un utilisateur à l'autre, Braze ne peut pas déterminer si une charge utile de push dépassera la limite de taille lorsque Liquid est inclus. Si votre votre code Liquid génère un message plus court, cela ne devrait pas poser de problème. Cependant, si votre Liquid donne lieu à un message plus long, votre push peut dépasser la limite de taille de la charge utile. Testez toujours votre message push sur un appareil réel avant de l'envoyer aux utilisateurs.
+- Envisagez de raccourcir les URL à l'aide d'un raccourcisseur d'URL.
+
 ## Optimiser le ciblage
 
 ### Collecter des données utilisateur pertinentes
@@ -52,9 +97,9 @@ Pour éviter que les utilisateurs désactivent les notifications au niveau de l'
 
 L'état de l'abonnement push ne garantit pas qu'une notification push sera livrée—les utilisateurs doivent également être activés pour recevoir des notifications. C'est parce qu'un profil utilisateur peut avoir plusieurs appareils avec différentes autorisations de notification au premier plan, mais un seul état d'abonnement aux notifications.
 
-Si un utilisateur ne dispose pas d’un jeton de notification push de premier plan valide pour l’application (c’est-à-dire qu’il a désactivé les jetons de notification push au niveau de l’appareil par le biais des paramètres, en choisissant de ne pas recevoir de notifications), son statut d’abonnement peut toujours être considéré comme étant `subscribed` aux notifications push. Cependant, cet utilisateur ne sera pas `Push Enabled for App` dans Braze puisque le jeton de notification push de premier plan n'est pas valide.
+Si un utilisateur ne dispose pas d’un jeton de notification push de premier plan valide pour l’application (c’est-à-dire qu’il a désactivé les jetons de notification push au niveau de l’appareil par le biais des paramètres, en choisissant de ne pas recevoir de notifications), son statut d’abonnement peut toujours être considéré comme étant `subscribed` aux notifications push. Cependant, cet utilisateur ne sera pas `Foreground Push Enabled for App` dans Braze puisque le jeton de notification push de premier plan n'est pas valide.
 
-De plus, si un profil utilisateur n'a pas de jeton de notification push valide ou enregistré pour d'autres applications, son filtre `Push Enabled` dans la segmentation sera également faux.
+De plus, si un profil utilisateur n'a pas de jeton de notification push valide ou enregistré pour d'autres applications, son filtre `Foreground Push Enabled` dans la segmentation sera également faux.
 
 ## Mettre en œuvre une politique de coucher de soleil pour les utilisateurs non réactifs
 

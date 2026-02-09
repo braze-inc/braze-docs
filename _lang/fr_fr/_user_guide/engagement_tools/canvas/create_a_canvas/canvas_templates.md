@@ -1,13 +1,13 @@
 ---
-nav_title: "Création d'un modèle de canvas"
-article_title: "Création d'un modèle de canvas"
+nav_title: Créer un modèle de canvas
+article_title: Créer un modèle de canvas
 alias: "/canvas_templates/"
 page_order: 0.5
 description: "Cet article de référence explique comment créer un modèle pour Canvas."
 page_type: reference
 ---
 
-# Création d'un modèle de canvas
+# Créer un modèle de canvas
 
 > Cet article de référence explique comment créer et gérer des modèles pour Canvas. L'utilisation de modèles permet d'affiner vos messages en créant un cadre cohérent qui peut être facilement personnalisé pour répondre à vos objectifs spécifiques sur l'ensemble de vos canvas.
 
@@ -27,7 +27,7 @@ Dans l'éditeur de canvas, sélectionnez **Modifier le canvas** ou **Modifier le
 
 ![]({% image_buster /assets/img/save_canvas_as_template.png %})
 
-### Étape 3 : Enregistrer votre modèle
+### Étape 3 : Enregistrer votre modèle
 
 Ensuite, attribuez un nom à votre modèle et ajoutez les éventuelles étiquettes pertinentes. Sélectionnez ensuite **Enregistrer**. Votre modèle est maintenant prêt à être utilisé pour créer un canvas, ce qui vous donne une longueur d'avance avec vos paramètres et étapes de base déjà en place.
 
@@ -38,14 +38,14 @@ Ensuite, attribuez un nom à votre modèle et ajoutez les éventuelles étiquett
 Dans le tableau de bord de Braze, sélectionnez **Modèles** > **Modèles de canvas**.
 
 {% alert note %}
-Si vous utilisez l'ancienne navigation, vous trouverez cette page sous **Engagement** > **Modèles et médias** > **Modèles de canvas**.
+Si vous utilisez l'ancienne navigation, vous trouverez cette page sous **Engagement** > **Modèles & Media** > Canvas Templates.
 {% endalert %}
 
 ### Étape 2 : Créer un nouveau modèle
 
 Sélectionnez **Créer un modèle** et commencez à configurer les détails de votre Canvas. Vous pouvez commencer par donner un nom à votre modèle Canvas.
 
-![Un exemple de canvas nommé "Annual sale Canvas template" avec la description "Use for annual spring promotion".]({% image_buster /assets/img/canvas_template_example.png %})
+![Exemple de canvas nommé « Modèle Canvas pour ventes annuelles » avec la description « Utilisation pour la promotion annuelle du printemps ».]({% image_buster /assets/img/canvas_template_example.png %})
 
 ### Étape 3 : Personnaliser votre modèle
 
@@ -64,75 +64,7 @@ Il existe deux façons d'utiliser votre modèle lors de la composition d'un canv
 
 ### Modèles de Braze disponibles
 
-Braze met à votre disposition une sélection de modèles de Canvas que vous pouvez référencer et utiliser comme meilleures pratiques pour les cas d'utilisation courants. Bien que ces modèles ne puissent pas être modifiés, vous pouvez les visualiser dans **Modèles** > **Modèles Braze** ou les utiliser dans vos canvas.
-
-![Modèles de Braze dans la section Modèles de canevas avec six modèles disponibles.]({% image_buster /assets/img/braze_canvas_templates.png %})
-
-Sélectionnez l'un des modèles suivants pour vous y référer ou l'utiliser comme canevas.
-
-{% tabs %}
-{% tab Intention abandonnée %}
-
-Dialoguez avec les utilisateurs en temps réel pour les encourager à terminer leurs achats.
-
-Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
-
-- Ajouter une audience spécifique. Actuellement, les parcours d'audience sont déclenchés sur la base de "Tout achat", mais vous pouvez les adapter aux produits spécifiques que vous souhaitez cibler.
-- Ce modèle suppose que vous avez un parcours post-achat distinct, de sorte que la réalisation d'un achat amènera les utilisateurs à quitter le Canvas.
-- Complétez les détails dans l'étape de synchronisation de l'audience.
-
-{% endtab %}
-{% tab En stock %}
-
-Encouragez les achats en informant vos utilisateurs lorsqu'un article est de nouveau en stock grâce à des messages personnalisés. Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
-
-- Dans **Entry Schedule**, sélectionnez un catalogue à utiliser. Cela vous permet d'accéder à des données, telles que les produits, les remises et les promotions, afin de mieux cibler vos utilisateurs.
-- Dans **Audience cible**, ajoutez un segment pour cibler les utilisateurs qui ont manifesté de l'intérêt pour un certain article.
-- Dans les étapes du message tout au long du canvas, mettez à jour le code  Liquid pour faire référence à votre catalogue.
-
-{% endtab %}
-{% tab Fonctionnalité Adoption %}
-
-Envoyez des messages personnalisés au moment opportun pour souligner les avantages et les conseils d'utilisation. Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
-
-- Exclure les utilisateurs qui ont déjà utilisé le produit. Par exemple, dans **Target Audience**, ajoutez un filtre dans 
--  Pour utiliser l'étape des chemins d'expérience, définissez un événement de conversion. Cet événement devrait être le signal de l'adoption de la fonctionnalité.
-- Configurez l'étape du parcours d'action dans le modèle avec des événements personnalisés pour "Activated Feature" (fonctionnalité activée) et "Taken Tour" (visite guidée).
-- Configurez les attributs personnalisés dans l'étape du message intitulée "Enquête sur le retour d'information" pour capturer le sentiment du retour d'information.
-
-{% endtab %}
-{% tab Utilisateur déchu %}
-
-Faites revenir les utilisateurs sur votre application en leur proposant des incitations basées sur leurs engagements passés. Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
-
-- Dans **Basics**, sélectionnez une app spécifique pour laquelle vous souhaitez suivre les conversions.
-- Dans l'éditeur de canvas, ajoutez des applications spécifiques pour les étapes des parcours d'action.
-- Configurez l'étape de synchronisation de l'audience avec les partenaires et les audiences correspondant à votre cas d'utilisation.
-
-{% endtab %}
-{% tab Onboarding %}
-
-Créez des parcours d'onboarding qui favorisent une forte adoption initiale et encouragent des relations durables avec vos utilisateurs. Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
-
-- Dans l'étape des parcours d'audience nommée " Fractionnement de l'audience ", pensez à personnaliser les actions clés pour les utilisateurs engagés. Dans le modèle, le filtre de segmentation est "A cliqué sur l'e-mail de bienvenue".
-
-{% endtab %}
-{% tab Rétroaction après l'achat %}
-
-Orchestrez des expériences personnalisées qui vous permettent de répondre aux commentaires et de créer une relation avec vos utilisateurs. Tenez compte des éléments suivants lorsque vous utilisez ce modèle :
-
-- Dans la première étape de l'éditeur de canvas :
-    - Spécifiez les attributs personnalisés dans le message in-app pour indiquer le sentiment du retour d'information en fonction de l'option d'enquête sélectionnée. 
-    - Spécifiez les attributs des liens pour chaque appel à l'action afin de déterminer l'option sélectionnée. Ces attributs sont référencés dans le parcours d'audience suivant.
-- Personnalisez le parcours d'audience avec les attributs de la première étape de ce modèle.
-- Configurez l'étape de synchronisation de l'audience nommée " reciblage publicitaire ".
-
-{% endtab %}
-{% endtabs %}
-
-{% alert tip %}
-Pour obtenir un guide étape par étape sur la création d'un canvas d'exemple à l'aide de ces modèles de Braze, reportez-vous à la section [Utilisation des modèles de Braze]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates).
-{% endalert %}
+Pour obtenir une liste des modèles Canvas disponibles, reportez-vous à la section [Modèles Canvas]({{site.baseurl}}/canvas_templates/templates/). Pour plus de détails sur l'utilisation des modèles eCommerce Canvas, reportez-vous à la section [Comment utiliser les événements recommandés par eCommerce]({{site.baseurl}}/ecommerce_use_cases/).
 
 ## Gestion des modèles de Canvas
 

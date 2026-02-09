@@ -1,7 +1,7 @@
 ---
-nav_title: Copiar entre espacios de trabajo
+nav_title: Copia entre espacios de trabajo
 article_title: Copiar entre espacios de trabajo
-page_order: 4.5
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "Este artículo de referencia ofrece un resumen de cómo copiar campañas y Lienzos en diferentes espacios de trabajo."
@@ -10,14 +10,14 @@ tool:
     - Canvas
 ---
 
-# Copiar campañas y lienzos en distintos espacios de trabajo
+# Campañas de copias y lonas en todos los espacios de trabajo
 
 > La copia de campañas entre espacios de trabajo le permite iniciar la composición de sus mensajes comenzando con una copia de una campaña en un espacio de trabajo diferente. Esta página explica cómo copiar campañas a diferentes espacios de trabajo y enumera lo que se copia y lo que no.
 
 Cuando copies una campaña o Canvas en un espacio de trabajo diferente, la copia permanecerá como borrador hasta que la edites y la lances, lo que te ayudará a mantener y desarrollar tus estrategias de mensajería de éxito.
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 {% alert important %}
 La copia de campañas entre espacios de trabajo está disponible en general. El soporte de canal para las tarjetas de contenido no está disponible actualmente.
@@ -32,7 +32,7 @@ Para copiar una campaña a otro espacio de trabajo:
 3. Después de copiar, revisa y prueba tu campaña para confirmar que todos los campos funcionan correctamente.
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 {% alert important %}
 La copia de lienzos entre espacios de trabajo está disponible en general. Los siguientes canales no son compatibles actualmente: LINE, Tarjetas de contenido y WhatsApp.
@@ -58,7 +58,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Detalles
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -74,7 +74,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -95,7 +95,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Comportamientos de conversión
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -106,7 +106,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -122,7 +122,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Acciones
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -133,7 +133,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -149,7 +149,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Variaciones de los mensajes
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -160,7 +160,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -177,7 +177,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Variación del mensaje de correo electrónico
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -190,7 +190,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -208,7 +208,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Cuerpo del correo electrónico
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -220,7 +220,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -237,7 +237,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Plantillas de correo electrónico
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -249,7 +249,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -266,7 +266,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Bloques de contenido
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -277,7 +277,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|
@@ -293,7 +293,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 ### Variación del mensaje SMS
 
 {% tabs local %}
-{% tab campañas %}
+{% tab campaigns %}
 
 | Copiado | Omitido |
 |---|---|
@@ -304,7 +304,7 @@ Ten en cuenta que la siguiente no es una lista exhaustiva de lo que se copia ent
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Canvas %}
+{% tab canvas %}
 
 | Copiado | Omitido |
 |---|---|

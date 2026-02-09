@@ -29,7 +29,7 @@ Hightouch の Personalization API は、Braze の設定で使用する REST エ�
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab 使用例 %}
+{% tab Use Cases %}
 
 ### ユースケース
 
@@ -42,7 +42,7 @@ Hightouch の Personalization API は、Braze の設定で使用する REST エ�
 - **財務データまたは医療データに基づくレコメンデーション** \- 財務データに厳しい要件があり、Hightouch はその[厳格なデータセキュリティポリシー](https://hightouch.com/docs/security/overview#compliance)によってこれらの要件を満たします。Hightouch を使用すると、セグメンテーション基準で使用される基本的な属性を公開せずに、財務データまたは医療データに基づいて顧客セグメントを作成できます。
 
 {% endtab %}
-{% tab データセット %}
+{% tab Datasets %}
 
 ### データセット
 
@@ -68,7 +68,7 @@ Hightouch の Personalization API は、Braze の設定で使用する REST エ�
 ハイタッチ・モデルは、ソースからどのようなデータを引き出すかを定義する。新しいモデルをセットアップするには、以下の手順に従う：
 
 1. Hightouch で [[**Models overview**](https://app.hightouch.com/models)] > [**Add model**] に移動し、接続したソースを選択します。<br><br>
-2. 次に[モデリング方法](https://hightouch.com/docs/models/creating-models)を選択します。すべての情報を1つのテーブルにまとめる必要があるので、ビジュアル・テーブル・セレクタを使って定義することができる。あるいは、必要なカラムだけを含むSQLを書いたり、既存のdbtモデル、ルッカー・ルック、シグマ・ワークブックに頼ることもできる。<br><br>
+2. 次に[モデリング方法](https://hightouch.com/docs/models/creating-models)を選択します。すべての情報を1つのテーブルに結合する必要があるので、ビジュアル・テーブル・セレクタを使って定義することができる。あるいは、必要なカラムだけを含むSQLを書いたり、既存のdbtモデル、ルッカー・ルック、シグマ・ワークブックに頼ることもできる。<br><br>
 3. 続行する前に、モデルをプレビューして、興味のあるデータを照会していることを確認する。デフォルトでは、Brazeはプレビューを最初の100レコードに制限している。データを検証したら、[**Continue**] をクリックします。<br><br>
 4. 例えば、"User recommendations "のように、モデルに名前をつける。<br><br>
 5. 最後に主キーを選択し、[**Finish**] をクリックします。主キーは、一意の識別子を持つ列である必要があります。これは、特定のユーザーのレコメンデーションを取得するために Personalization API を呼び出すときに使用するフィールドでもあります。

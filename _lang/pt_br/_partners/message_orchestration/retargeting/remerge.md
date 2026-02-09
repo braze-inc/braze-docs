@@ -12,7 +12,7 @@ search_tag: Partner
 
 > A [Remerge](https://www.remerge.io/) é criada para o redirecionamento de apps em larga escala, oferecendo ferramentas para segmentar públicos do app e redirecionar usuários de forma eficiente.
 
-_Essa integração é mantida pela Remerge._
+_Esta integração é mantida pela Remerge._
 
 ## Sobre a integração
 
@@ -62,7 +62,7 @@ No URL do webhook, você precisa:
 - Passe o identificador exclusivo do aplicativo do seu app para Android (como "com.example") e iOS (como "012345678") para a Remerge.
 - Defina uma chave; a Remerge a fornecerá.
 
-![O URL do webhook e a prévia da mensagem mostrados no construtor de webhooks do Braze.]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
+![O URL do webhook e a prévia da mensagem mostrados no construtor de webhook da Braze.]({% image_buster /assets/img_archive/webhook_remerge_preview.png %})
 
 {% alert important %}
 A Braze não coleta automaticamente o IDFA/AAID do dispositivo, então você deve armazenar esses valores. Esteja ciente de que você pode precisar do consentimento do usuário para coletar esses dados.
@@ -76,7 +76,7 @@ O webhook do Remerge requer um método HTTP e um cabeçalho de solicitação.
 - **Cabeçalhos de solicitação**:
   - **Content-Type**: application/json
 
-![Os cabeçalhos de solicitação, o método HTTP e a prévia da mensagem mostrados no construtor de webhooks do Braze.]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
+![Os cabeçalhos da solicitação, o método HTTP e a prévia da mensagem mostrados no construtor de webhook da Braze.]({% image_buster /assets/img_archive/httpmethod_remerge.png %})
 
 #### Corpo da solicitação
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Produkt-Portal
+nav_title: Produktportal
 article_title: Produkt-Portal
 page_order: 6
 alias: /product_portal/
@@ -7,7 +7,7 @@ page_type: reference
 description: "In diesem Referenzartikel erfahren Sie, wie Sie auf das Braze-Produktportal zugreifen und es nutzen können, um über das Dashboard Feedback zu geben."
 ---
 
-# Produktportal ![Menü Ressourcen im Braze-Dashboard][1]{: style="float:right;max-width:33%;margin-left:15px;margin-top:15px;"}
+# Produktportal ![Menü Ressourcen im Braze-Dashboard]({% image_buster /assets/img/portal.png %}){: style="float:right;max-width:33%;margin-left:15px;margin-top:15px;"}
 
 > Über das Produktportal können Sie auf die Braze-Produkt-Roadmap zugreifen und Ideen einreichen. Hier erhalten Sie Insights darüber, was wir kürzlich veröffentlicht haben, an welchen neuen Features wir arbeiten und welche Ideen wir in Betracht ziehen. Im Portal können Sie für die von Ihnen gewünschten Funktionen abstimmen, indem Sie die Wichtigkeit einer Funktion für Sie einstufen und einen Kommentar mit Feedback oder einer Anfrage hinterlassen. 
 
@@ -53,4 +53,3 @@ Je mehr Informationen und Kontext, desto besser! Fügen Sie Links zu Kampagnen, 
 
 Ein Beispiel für eine gut formulierte Produktanfrage finden Sie in diesem [Beispiel für eine Produktanfrage]({{site.baseurl}}/product_request/). 
 
-[1]: {% image_buster /assets/img/portal.png %}

@@ -1,15 +1,15 @@
 ---
-nav_title: e コマースのユースケース
-article_title: e コマースのユースケース
+nav_title: eコマースのユースケース
+article_title: eコマースのユースケース
 alias: /ecommerce_use_cases/
 page_order: 4
 description: "このリファレンス記事では、e コマースのマーケター向けにカスタマイズされた、事前構築済みのさまざまな Braze テンプレートについて説明し、必要な戦略を簡単に実施できるようにします。"
 toc_headers: h2
 ---
 
-# eコマースのユースケース
+# eコマースおすすめイベントの使い方
 
-> Braze Canvas には、eCommerce マーケター専用にあらかじめ作成されたテンプレートがいくつか用意されています。これにより、必須戦略の実装が容易になります。このページには、カスタマージャーニーを強化するために使用できるいくつかの主要なテンプレートが用意されています。
+> このページでは、Braze eコマースキャンバステンプレートの使用方法など、プラットフォーム全体でeコマースの推奨イベントをどのように、どこで使用できるかについて説明します。
 
 {% alert important %}
 [e コマースの推奨イベント]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/)は現在、早期アクセス段階です。早期アクセスに参加したい場合は、Braze カスタマーサクセスマネージャーにお問い合わせください。<br><br>新しいShopifyコネクターを使用している場合、eCommerceの推奨イベントは統合によって自動的に利用可能になります。
@@ -21,303 +21,13 @@ toc_headers: h2
 1. [**メッセージング**] > [**キャンバス**] に進みます。
 2. [**キャンバスを作成** > [**キャンバステンプレートを使用**] を選択します。
 3. 使用するテンプレートの [**Braze テンプレート**] タブを参照します。テンプレートの名前を選択すると、テンプレートをプレビューできます。
-4. 使用するテンプレートの [**テンプレートを適用**] を選択します。<br><br>![[Braze テンプレート] タブが開いており、最近使用したテンプレートと選択可能な Braze テンプレートのリストが表示されている [キャンバステンプレート] ページ。]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
+4. 使用するテンプレートの [**テンプレートを適用**] を選択します。<br><br>!["Canvas テンプレート s" page 開封 to the " Braze テンプレート &s" tab と表示され、最近使用したテンプレートと選択可能なBraze テンプレートを表示します。]({% image_buster /assets/img_archive/apply_template.png %}){: style="max-width:80%;"}
 
-## eコマーステンプレート
+## eコマースキャンバスのテンプレート
 
-- [閲覧の放棄](#abandoned-browse)
-- [カート放棄](#abandoned-cart)
-- [購入手続き放棄](#abandoned-checkout)
-- [注文確認とフィードバック調査](#order-confirmation--feedback-survey)
+Brazeは4つのeコマースキャンバステンプレートを提供している。
 
-## 閲覧の放棄
-
-製品を閲覧したが、カートへの追加や注文を行わなかったユーザーにエンゲージするには、**閲覧の放棄**テンプレートを使用します。
-
-![適用された「閲覧の放棄」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/abandoned_browse.png %})
-
-### 設定
-
-キャンバスページで [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択し、**閲覧の放棄**テンプレートを適用します。 
-
-#### デフォルト設定
-
-キャンバスでは、次の設定が事前に行われています。
-- 基本情報 
-    - キャンバス名:**閲覧の放棄**
-    - 変換イベント: `ecommerce.order placed`
-        - コンバージョンの期限:3日間 
-- エントリスケジュール 
-    - ユーザーが `ecommerce.product_viewed` イベントを実行する場合はアクションベース
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry.png %})<br><br> 
-- ターゲットオーディエンス 
-    - エントリオーディエンス 
-        - メールが**空白ではない**
-        - また、ビジネスニーズを満たすようにエントリオーディエンス基準を変更することもできます
-    - 入力コントロール
-        - キャンバスの完全な期間が完了した後で、ユーザーはこのキャンバスに再エントリできます。
-    - 終了条件 
-        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスのエントリコントロールと終了条件。]({% image_buster /assets/img/ecommerce/abandoned_browse_entry_exit.png %})<br><br> 
-- 送信設定 
-    - 登録済みまたはオプトイン済みのユーザー 
-- 遅延ステップ
-    - 1時間遅延
-- メッセージステップ 
-    - Liquid のテンプレート作成の例を使用して、メールテンプレートと HTML ブロックを確認し、あらかじめ用意されているテンプレートでメッセージに製品を追加します。独自のメールテンプレートを使用する場合は、次のセクションに示すように、[液体変数](#message-personalization) を参照することもできます。
-
-### メール向けの閲覧の放棄の製品パーソナライゼーション 
-
-閲覧の放棄のメール用の HTML 製品ブロックを追加する方法の例を以下に示します。 
-
-{% raw %}
-```java
-<table style="width:100%">
-  <tr>
-    <th><img src="{{context.${image_url}}}" width="200" height="200"><img></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{context.${product_name}}}</li>
-        <li>Price: ${{context.${price}}}</li>
-      </ul>
-    </th>
-  </tr>
-</table>
-```
-{% endraw %}
-
-#### 製品URL
-
-{% raw %}
-```liquid
-{{context.${product_url}}}
-```
-{% endraw %}    
-
-## カート放棄
-
-カートに製品を追加したが、購入手続きまたは注文に進まなかった顧客からの潜在的な売上の損失に対応するには、**カート放棄**テンプレートを使用します。 
-
-![適用された「カート放棄」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/abandoned_cart.png %})
-
-### 設定
-
-キャンバスページで [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択し、**カート放棄**テンプレートを適用します。 
-
-#### デフォルト設定
-
-キャンバスでは、次の設定が事前に行われています。
-- 基本情報 
-    - キャンバス名:**カート放棄**
-    - 変換イベント: `ecommerce.order_placed`
-        - コンバージョンの期限:3日間 
-- エントリスケジュール 
-    - ユーザーが (ドロップダウンにある) [**カート更新済みイベントの実行**] をトリガーしたときのアクションベースのトリガー
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry.png %})<br><br> 
-- ターゲットオーディエンス 
-    - エントリオーディエンス 
-        - これらのアプリを**1回以上**使用したことがある 
-        - メールが**空白ではない**
-    - 入力コントロール
-        - ユーザーのキャンバスへのエントリが即時に可能になります。
-    - 終了条件 
-        - `ecommerce.cart_updated`、`ecommerce.checkout_started`、または `ecommerce.order_placed` を実行する<br><br>![キャンバスのエントリコントロールと終了条件。]({% image_buster /assets/img/ecommerce/abandoned_cart_entry_exit.png %})<br><br> 
-- 送信設定 
-    - 登録済みまたはオプトイン済みのユーザー 
-- 遅延ステップ
-     - 4時間遅延
-- メッセージステップ 
-    - Liquid のテンプレート作成の例を使用して、メールテンプレートと HTML ブロックを確認し、あらかじめ用意されているテンプレートでメッセージに製品を追加します。独自のメールテンプレートを使用する場合は、次のセクションに示すように、[液体変数](#message-personalization) を参照することもできます。
-
-### メール向けのカート放棄の製品パーソナライゼーション {#abandoned-cart-checkout}
-
-カート放棄のユーザージャーニーでは、製品のパーソナライズに特別な Liquid タグ `shopping_cart` が必要です。 
-
-以下の例は、`shopping_cart` Liquid タグを使用してHTML ブロックを追加し、製品をメールに追加する方法を示しています。 
-
-{% raw %}
-```java
-<table style="width:100%">
-  {% shopping_cart {{context.${cart_id}}} %}
-  {% for item in shopping_cart.products %}
-  {% catalog_items <add_your_catalog_name> {{item.variant_id}} %}
-  <tr>
-    <th><img src="{{ items[0].variant_image_url }}" width="200" height="200"><img></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{ item.product_name }}</li>
-        <li>Price: ${{ item.price }}</li>
-        <li>Quantity: ${{ item.quantity }}</li>
-        <li>Variant ID: {{ item.variant_id }}</li>
-        <li>Product URL:{{ item.product_url }}</li>
-        <li>SKU: {{ item.metadata.sku }}</li>
-      </ul>
-    </th>
-  </tr>
-  {% endfor %}
-</table>
-```
-{% endraw %}
-
-{% alert note %}
-Shopify を使用する場合は、カタログ名を追加してバリアントイメージURL を取得します。
-{% endalert %}
-
-#### HTML カート URL
-
-ユーザーをカートに戻す場合は、メタデータオブジェクトの下に次のような階層化イベントプロパティを追加できます。
-
-{% raw %}
-```liquid
-{{context.${metadata}.cart_url}}
-```
-{% endraw %}
-
-Shopifyを使用する場合は、次のLiquidテンプレートを使用してカートURLを作成します。
-
-{% raw %}
-```liquid
-{{context.source}}/checkouts/cn/{{context.cart_id}}
-```
-{% endraw %}
-
-## 購入手続き放棄
-
-**購入手続き放棄**テンプレートを使用して、購入手続きプロセスを開始したが発注前に離脱した顧客をターゲットにします。 
-
-![適用された「購入手続き放棄」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/abandoned_checkout.png %})
-
-### 設定
-
-キャンバスページで [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択し、**購入手続き放棄**テンプレートを適用します。 
-
-#### デフォルト設定
-
-キャンバスでは、次の設定が事前に行われています。
-
-- 基本情報 
-    - キャンバス名:**購入手続き放棄**
-    - 変換イベント: `ecommerce.order_placed`
-        - コンバージョンの期限:3日間 
-- エントリスケジュール 
-    - ユーザが`ecommerce.checkout_started` イベントを実行したときのアクションベースのトリガ
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry.png %})
-- ターゲットオーディエンス 
-    - エントリオーディエンス 
-        - これらのアプリを**1回以上**使用したことがある 
-        - メールが**空白ではない**
-    - 入力コントロール
-        - ユーザーのキャンバスへのエントリが即時に可能になります。
-        - 終了条件 
-            - `ecommerce.order_placed` イベントを実行します<br><br>![キャンバスのエントリコントロールと終了条件。]({% image_buster /assets/img/ecommerce/abandoned_checkout_entry_exit.png %})<br><br>
-- 送信設定 
-    - 登録済みまたはオプトイン済みのユーザー 
-- 遅延ステップ
-    - 4時間遅延
-- メッセージステップ 
-    - Liquid のテンプレート作成の例を使用して、メールテンプレートと HTML ブロックを確認し、あらかじめ用意されているテンプレートでメッセージに製品を追加します。独自のメールテンプレートを使用する場合は、次のセクションに示すように、[液体変数](#message-personalization) を参照することもできます。
-
-### メール向けの購入手続き放棄の製品パーソナライゼーション
-
-購入手続き放棄のユーザージャーニーでは、製品のパーソナライズに特別な Liquid タグ `shopping_cart` が必要です。 
-
-以下の例は、`shopping_cart` Liquid タグを使用してHTML ブロックを追加し、製品をメールに追加する方法を示しています。 
-
-{% raw %}
-```java
-<table style="width:100%">
-  {% shopping_cart {{context.${cart_id}}} :abort_if_not_abandoned false %}
-  {% for item in shopping_cart.products %}
-  {% catalog_items <add_your_catalog_name> {{item.variant_id}} %}
-  <tr>
-    <th><img src="{{ items[0].variant_image_url }}" width="200" height="200"><img></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{ item.product_name }}</li>
-        <li>Price: ${{ item.price }}</li>
-        <li>Quantity: ${{ item.quantity }}</li>
-        <li>Variant ID: {{ item.variant_id }}</li>
-        <li>Product URL:{{ item.product_url }}</li>
-        <li>SKU: {{ item.metadata.sku }}</li>
-      </ul>
-    </th>
-    {% endfor %}
-</table>
-```
-{% endraw %}
-
-#### チェックアウトURL
-
-{% raw %}
-```liquid
-{{context.${metadata}.checkout_url}}
-```
-{% endraw %}
-
-## 注文確認とフィードバック調査
-
-注文の成功を確認し、顧客満足度を高めるには、**注文確認とフィードバック調査**テンプレートを使用します。
-
-![適用された「注文確認」キャンバステンプレートで [エントリルール] が展開されている。]({% image_buster /assets/img_archive/order_confirmation_feedback.png %})
-
-### 設定
-
-キャンバスページで [**キャンバステンプレートを使用**] > [**Braze テンプレート**] を選択し、**注文確認とフィードバック調査**テンプレートを適用します。 
-
-#### デフォルト設定
-
-キャンバスでは、次の設定が事前に行われています。
-
-- 基本情報 
-    - キャンバス名:**注文確認とフィードバック調査**
-    - 変換イベント: `ecommerce.session_start`
-        - コンバージョンの期限:10日間 
-- エントリスケジュール 
-    - ユーザが`ecommerce.cart_updated` イベントを実行したときのアクションベースのトリガ
-    - 開始時刻は、キャンバステンプレートを作成するときです<br><br>![キャンバスの [アクションベースのオプション]。]({% image_buster /assets/img/ecommerce/feedback_entry.png %})<br><br>
-- ターゲットオーディエンス 
-    - エントリオーディエンス 
-        - これらのアプリを**1回以上**使用したことがある 
-        - メールが**空白ではない**
-    - 入力コントロール
-        - ユーザーのキャンバスへのエントリが即時に可能になります。
-    - 終了条件 
-        - 該当しない<br><br>![キャンバスの追加のフィルターとエントリコントロール。]({% image_buster /assets/img/ecommerce/feedback_entry_exit.png %})<br><br>
-- 送信設定 
-    - 登録済みまたはオプトイン済みのユーザー 
-- メッセージステップ 
-    - Liquid のテンプレート作成の例を使用して、メールテンプレートと HTML ブロックを確認し、あらかじめ用意されているテンプレートでメッセージに製品を追加します。独自のメールテンプレートを使用する場合は、次のセクションに示すように、[液体変数](#message-personalization) を参照することもできます。
-
-### メール向けの注文の確認のパーソナライゼーション
-
-ここでは、注文後に注文確認にHTML 製品ブロックを追加する方法の例を示します。
-
-{% raw %}
-```json
-<table style="width:100%">
-  {% for item in {{context.${products}}} %}
-  {% catalog_items <add_your_catalog_name> {{item.variant_id}} %}
-  <tr>
-    <th><img src="{{ items[0].variant_image_url }}" width="200" height="200" /></th>
-    <th align="left">
-      <ul style="list-style-type: none">
-        <li>Item: {{item.product_name}}</li>
-        <li>Price: {{item.price}}</li>
-        <li>Quantity: {{item.quantity}}</li>
-      </ul>
-    </th>
-  </tr>
-  {% endfor %}
-</table>
-```
-{% endraw %}
-
-#### 注文状況 URL
-
-{% raw %}
-```liquid
-{{context.${metadata}.order_status_url}}
-```
-{% endraw %}
+{% multi_lang_include canvas/ecommerce_templates.md %}
 
 ## メッセージのパーソナライズ
 
@@ -349,13 +59,13 @@ e コマースイベントは、[推奨イベント]({{site.baseurl}}/recommende
 
 ### eコマースのフィルター
 
-**Ecommerce Source** および**Total Revenue** などのeCommerce フィルタを使用して、セグメンテータ内の**Ecommerce** セクションに移動して、ユーザをeCommerce フィルタでセグメント化します。
+**Ecommerce Source** および**Total Revenue** などのeCommerce フィルタを使用して、セグメンテータ内の**Ecommerce** セクションに移動して、ユーザをeCommerce フィルタでセグメント化します。 
 
-![「e コマース」フィルターを示すセグメントフィルターのドロップダウン。]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:80%"}
+eコマースフィルターsとその定義の一覧については、[セグメントフィルターs]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/)を参照し、"eCommerce"検索カテゴリを選択してください。
 
-{% alert important %}
-購入イベントは最終的に非推奨になり、[eCommerce 推奨イベント]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/) に置き換えられます。この置き換えが行われると、セグメントフィルターでは、購入動作でデータが入力されることがなくなります。購入イベントの完全なリストについては、[購入イベントの記録]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events)を参照してください。
-{% endalert %}
+![セグメントフィルターは"Ecommerce"フィルター sでドロップダウンします。]({% image_buster /assets/img_archive/ecommerce_filters.png %}){: style="max-width:50%"}
+
+{% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation for eCommerce filters' %}
 
 ## ネストされたイベントプロパティ
 
@@ -363,13 +73,30 @@ e コマースイベントは、[推奨イベント]({{site.baseurl}}/recommende
 
 ## 分析
 
-{% alert note %}
-現時点では、Shopify 統合は、Braze [購入イベント]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) の入力をサポートしていません。その結果、購入フィルタ、Liquid タグ、アクションベースのトリガ、およびアナリティクスでは、ecommerce.order_placed イベントを使用する必要があります。
-{% endalert %}
+### カスタムイベントレポート
+
+eコマースの推奨イベントボリュームは、[カスタムイベントレポート]({{site.baseurl}}/user_guide/data/activation/custom_data/custom_events/#analytics)で追跡できます。**カスタムイベントを実行** でフィルタリングし、[eCommerce 推奨イベント名]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/#types-of-ecommerce-recommended-events) を指定して、そのパフォーマンスを経時的に表示します。
+
+![選択した6 つのイベントの結果を表示するカスタムイベントチャート。]({% image_buster /assets/img/ecommerce/custom_events_chart.png %})
+
+### 換算レポート 
+
+### カスタムイベントレポート
 
 統合でサポートされているイベントを誰が実行したかに基づいて[カスタムイベントレポート]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events#analytics) を作成するには、特定の[イベント名]({{site.baseurl}}/shopify_data_features/) を指定します。
 
-開始したキャンバスからの注文に関連するトレンドを把握するには、[コンバージョンダッシュボード]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard)を設定し、キャンバスを指定する必要があります。
+### ダッシュボード
 
-より高度なレポートユースケースでは、Braze [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/)を使用してカスタムレポートを生成できます。 
+#### コンバージョンダッシュボード
 
+起動したキャンバスからの注文に関連するトレンドをインサイトするには、[コンバージョンダッシュボード]({{site.baseurl}}/user_guide/data_and_analytics/analytics/conversions_dashboard#conversions-dashboard)を設定し、キャンバスを指定します。
+
+#### イーコマース収入ダッシュボード
+
+インサイトを収益属性に取り込むには、d ユーザーが最後のキャンペーンまたはキャンバスに移動してから発注するには、[eCommerce revenue ダッシュボード]({{site.baseurl}}/ecommerce_revenue_dashboard/) を使用し、コンバージョンウィンドウを選択します。
+
+### クエリビルダー
+
+### 収益レポート 
+
+これらの新しいイベントのデータを分析するには、[ ダッシュボード Builder]({{site.baseurl}}/user_guide/analytics/reporting/dashboard_builder/) に移動し、[**eCommerce Revenue - Last Touch Attribution** ダッシュボード]({{site.baseurl}}/ecommerce_revenue_dashboard/) を表示します。

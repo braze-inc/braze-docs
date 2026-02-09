@@ -1,6 +1,6 @@
 ---
-nav_title: "Creación de un mensaje push"
-article_title: Creación de una campaña Push
+nav_title: Crear un mensaje push
+article_title: Crear una campaña push
 page_order: 4
 page_type: tutorial
 description: "Esta página tutorial cubre los diferentes componentes involucrados en la creación de un Mensaje Push, incluyendo la configuración, el envío, la orientación, y más."
@@ -17,11 +17,11 @@ tool:
 ## Paso 1: Elige dónde construir tu mensaje {#create-new-campaign-push}
 
 {% alert tip %}
-¿No estás seguro de si utilizar una campaña o un Canvas? Las campañas son mejores para campañas de mensajería sencillas y únicas, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
+¿No estás seguro de si utilizar una campaña o un Canvas? Las campañas son mejores para campañas de mensajería únicas y específicas, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
 {% endalert %}
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 1. Ve a **Mensajería** > **Campañas** y, a continuación, selecciona **Crear campaña**.
 2. Para campañas dirigidas a varios canales, selecciona **Multicanal**. Si no, selecciona **Notificación push**. Si aún no estás seguro, consulta **Decidir entre una campaña push normal o multicanal** más abajo.
 3. Ponle a tu campaña un nombre claro y significativo.
@@ -34,7 +34,7 @@ Las etiquetas facilitan la búsqueda de sus campañas y la elaboración de infor
 {: start="5"}
 5\. Añade y nombra tantas variantes como necesites para tu campaña. Puede elegir diferentes plataformas, tipos de mensaje y diseños para cada una de sus variantes añadidas. Para saber más sobre este tema, consulta [Multivariante y pruebas A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
-{% details Decidir entre una campaña push normal o multicanal %}
+{% details Deciding between regular or multichannel push campaign %}
 
 Si tiene intención de dirigirse a varios dispositivos y plataformas, como cualquier combinación de móvil, web, Kindle, iOS y Android, su selección en este paso puede afectar a la disponibilidad de algunas funciones y ajustes más adelante.
 
@@ -87,7 +87,7 @@ Hay varias formas de hacerlo en función de tus selecciones anteriores:
 
 Si estás creando una campaña push rápida, el tipo de notificación se establece automáticamente en **Push estándar** y no se puede cambiar.
 
-![Tipo de notificación con Push Estándar seleccionado como ejemplo.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Tipo de Notificación con Push Estándar seleccionado como ejemplo.]({% image_buster /assets/img_archive/push_2.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 De lo contrario, para iOS y Android, selecciona tu tipo de notificación:
 
@@ -138,7 +138,7 @@ Para que tu push sea personalizado y dirigido, puedes incluir [Liquid]({{site.ba
 {% alert tip %}
 ¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Introduzca el nombre o la descripción de un producto y la IA generará un texto de marketing similar al humano para utilizarlo en sus mensajes.
 
-![Botón de Lanzar el redactor de IA, situado en la pestaña Cuerpo del compositor de correo electrónico.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
+![Lanza el botón AI Copywriter, situado en el campo Cuerpo del compositor push.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_push.png %}){: style="max-width:60%"}
 {% endalert %}
 
 #### Imagen
@@ -165,9 +165,9 @@ Aquí también puedes configurar avisos de botón dentro de tu notificación pus
 
 Si un usuario tiene su aplicación instalada en varios dispositivos, por defecto, su mensaje push se envía a todos los dispositivos que tengan asignado un token push válido. Si lo deseas, puedes seleccionar **el dispositivo utilizado más recientemente**.
 
-![Casilla de opciones del dispositivo para enviar este push sólo al dispositivo utilizado más recientemente por el usuario.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
+![Casilla de verificación de opciones de dispositivo para enviar esta notificación push únicamente al último dispositivo utilizado por el usuario.]({% image_buster /assets/img_archive/push_recent_device.png %}){: style="max-width:70%;" }
 
-Esta configuración tiene algunos matices. Si se selecciona esta opción, Braze limitará los envíos múltiples, excepto cuando una campaña se dirija a varias plataformas, como iOS y Android. Si el usuario tiene tu aplicación tanto en un dispositivo iOS como Android, recibirá un push para ambas plataformas. Si el último dispositivo utilizado por un usuario no está [habilitado para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-enabled), el mensaje no se enviará.
+Esta configuración tiene algunos matices. Si se selecciona esta opción, Braze limitará los envíos múltiples, excepto cuando una campaña se dirija a varias plataformas, como iOS y Android. Si el usuario tiene tu aplicación tanto en un dispositivo iOS como Android, recibirá un push para ambas plataformas. Si el último dispositivo utilizado por un usuario no está [habilitado para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#foreground-push-enabled), el mensaje no se enviará.
 
 Para iOS, puedes limitar aún más la mensajería enviando notificaciones push solo a dispositivos iPad, o solo a dispositivos iPhone y iPod.
 
@@ -178,7 +178,7 @@ Podría decirse que las pruebas son uno de los pasos más críticos. Cuando term
 ## Paso 6: Construye el resto de tu campaña o Canvas
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 Construya el resto de su campaña; consulte las siguientes secciones para obtener más detalles sobre la mejor manera de utilizar nuestras herramientas para construir notificaciones push.
 
@@ -192,9 +192,11 @@ En este paso también puede especificar controles de entrega, como permitir que 
 
 #### Elige los usuarios a los que dirigirte
 
-A continuación, tienes que [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para reducir tu audiencia. Automáticamente obtendrá una instantánea de cómo es la población de ese segmento aproximado en este momento. En el pie de página encontrará estadísticas detalladas sobre la audiencia de los canales a los que se dirige su campaña. Para ver a qué porcentaje de tu base de usuarios se dirige y el valor de duración del ciclo de vida de este segmento, selecciona **Mostrar estadísticas adicionales**.
+A continuación, debes [dirigirte a los usuarios]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) eligiendo segmentos o filtros para limitar tu audiencia. Automáticamente recibirás una vista previa del aspecto aproximado de la población de ese segmento. En el pie de página encontrará estadísticas detalladas sobre la audiencia de los canales a los que se dirige su campaña. Para ver a qué porcentaje de tu base de usuarios se dirige y el valor de duración del ciclo de vida de este segmento, selecciona **Mostrar estadísticas adicionales**.
 
-{% details ¿Por qué mi métrica de usuarios alcanzables totales no coincide con la suma de todos los canales? %}
+{% multi_lang_include target_audiences.md %}
+
+{% details Why does my Total Reachable Users metric not match the sum of all channels? %}
 
 Cuando vea el Total de usuarios a los que se puede llegar para su audiencia filtrada, es posible que observe que la suma de las columnas individuales es menor que el Total de usuarios a los que se puede llegar. Esta brecha suele deberse a que hay una serie de usuarios que cumplen los requisitos para el segmento o los filtros de la campaña, pero a los que no se puede llegar a través de push (por ejemplo, porque no tienen [tokens push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens) válidos o activos).
 
@@ -202,7 +204,7 @@ Cuando vea el Total de usuarios a los que se puede llegar para su audiencia filt
 
 ![Tabla de estadísticas detalladas de audiencia para los usuarios alcanzables.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
-Tenga en cuenta que la pertenencia exacta a un segmento siempre se calcula justo antes de enviar el mensaje.
+Ten en cuenta que la pertenencia exacta a un segmento siempre se calcula antes de enviar el mensaje.
 
 También puede optar por enviar su campaña sólo a los usuarios que tengan un [estado de suscripción]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) específico, como los que estén suscritos y hayan optado por recibir push.
 
@@ -219,7 +221,7 @@ En el caso de las campañas multicanal dirigidas tanto al correo electrónico co
 Para ello, en **Resumen de audiencia**, seleccione enviar esta campaña sólo a "usuarios que hayan optado por ella". Esta opción garantizará que sólo los usuarios que hayan optado por recibirla reciban su correo electrónico, y Braze sólo enviará su push a los usuarios que estén habilitados para push de forma predeterminada.
 
 {% alert important %}
-Con esta configuración, no incluyas ningún filtro en el paso **Audiencias objetivo** que limite la audiencia a un único canal (por ejemplo, `Push Enabled = True` o `Email Subscription = Opted-In`).
+Con esta configuración, no incluyas ningún filtro en el paso **Audiencias objetivo** que limite la audiencia a un único canal (por ejemplo, `Foreground Push Enabled = True` o `Email Subscription = Opted-In`).
 {% endalert %}
 
 #### Elegir eventos de conversión
@@ -237,7 +239,7 @@ Si aún no lo ha hecho, complete las secciones restantes de su componente Canvas
 
 ## Paso 7: Revisar y desplegar {#review-and-deploy-push}
 
-Cuando hayas terminado de crear la última parte de tu campaña o Canvas, revisa sus detalles. En el caso de las campañas, la última página le ofrecerá un resumen de la campaña que acaba de diseñar. Confirme todos los datos relevantes, asegúrese de que ha probado su mensaje y, a continuación, envíelo para ver cómo llegan los datos.
+Cuando hayas terminado de crear la última parte de tu campaña o Canvas, revisa sus detalles. Para las campañas, la página final te ofrece un resumen de la campaña que has diseñado. Confirme todos los datos relevantes, asegúrese de que ha probado su mensaje y, a continuación, envíelo para ver cómo llegan los datos.
 
 A continuación, consulte [Informes push]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_reporting/) para saber cómo puede acceder a los resultados de su campaña push. En el caso de las notificaciones push, podrás ver estadísticas sobre el número de mensajes enviados, entregados, rebotados, abiertos y abiertos directamente.
 

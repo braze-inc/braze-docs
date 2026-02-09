@@ -1,6 +1,6 @@
 ---
-nav_title: Gestion des numéros de téléphone inconnus
-article_title: Gestion des numéros de téléphone inconnus
+nav_title: Traiter les numéros de téléphone inconnus
+article_title: Traiter les numéros de téléphone inconnus
 page_order: 4
 description: "Cet article de référence explique comment Braze traite les numéros de téléphone inconnus des nouveaux utilisateurs."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
   
 ---
 
-# Gestion des numéros de téléphone inconnus - nouveaux utilisateurs
+# Traiter les numéros de téléphone inconnus - nouveaux utilisateurs
 
 > Il se peut qu'après avoir mis en service les SMS, MMS et RCS avec Braze, vous receviez des messages d'utilisateurs inconnus. Les étapes suivantes décrivent comment un utilisateur et un numéro non identifiés sont traités.
 

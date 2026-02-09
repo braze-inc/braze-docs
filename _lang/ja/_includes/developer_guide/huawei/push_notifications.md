@@ -4,13 +4,13 @@
 
 [Huawei](https://huaweimobileservices.com/) 製の新しいスマートフォンには、プッシュ配信に使用されるサービス、Huawei Mobile Services (HMS) が、Google の Firebase Cloud Messaging (FCM) の代わりに搭載されています。
 
-### ステップ1:Huawei 開発者アカウントに登録する
+### ステップ 1: Huawei 開発者アカウントに登録する
 
 始める前に、[Huawei 開発者アカウント](https://developer.huawei.com/consumer/en/console)への登録と設定が必要です。Huawei アカウントで、**[My Projects] > [Project Settings] > [App Information]** に移動し、`App ID` と`App secret` を書き留めます。
 
 ![]({% image_buster /assets/img/huawei/huawei-credentials.png %})
 
-### ステップ2:Braze ダッシュボードで新しい Huawei アプリを作成する
+### ステップ 2:Braze ダッシュボードで新しい Huawei アプリを作成する
 
 Braze ダッシュボードで、[**設定**] ナビゲーションの下にある [**アプリ設定**] に移動します。
 
@@ -83,7 +83,7 @@ class CustomPushService: HmsMessageService() {
 </service>
 ```
 
-### ステップ4:プッシュ通知のテスト(オプション)
+### ステップ 4: プッシュ通知をテストする（オプション）
 
 ここまでで、Braze ダッシュボードに新しい Huawei Android アプリを作成し、Huawei 開発者の認証情報を使用して設定し、Braze および Huawei SDK をアプリに統合しました。
 
@@ -95,7 +95,7 @@ class CustomPushService: HmsMessageService() {
 
 キャンペーンに名前を付けたら、プッシュプラットフォームとして [**Android プッシュ通知**] を選択します。
 
-![使用可能なプッシュプラットフォームを表示するキャンペーン登録コンポーザ。]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
+![利用可能なプッシュ・プラットフォームを表示するキャンペーン作成コンポーザー。]({% image_buster /assets/img/huawei/huawei-test-push-platforms.png %})
 
 次に、タイトルとメッセージを付けてプッシュキャンペーンを作成します。
 
@@ -107,11 +107,11 @@ class CustomPushService: HmsMessageService() {
 
 この時点で、Braze から Huawei (HMS) デバイスにテストプッシュ通知が届くはずです。
 
-#### ステップ4.3：Huawei セグメンテーションのセットアップ(オプション)
+#### ステップ4.3：ファーウェイのセグメンテーションを設定する（オプション）
 
 Braze ダッシュボードの Huawei アプリは Android プッシュプラットフォーム上に構築されているため、すべての Android ユーザー (Firebase Cloud Messaging および Huawei Mobile Services) にプッシュを送信するか、キャンペーンオーディエンスを特定のアプリにセグメント化するかを柔軟に選択できます。
 
-Huaweiアプリのみにプッシュを送信するには、[新しいSegment]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform))を作成し、**Apps**セクションでHuaweiアプリを選択します。
+Huawei アプリのみにプッシュを送信するには、[新しいセグメントを作成]({{ site.baseurl }}/user_guide/engagement_tools/segments/creating_a_segment/#step-3-choose-your-app-or-platform) して、[**アプリ**] セクション内で Huawei アプリを選択します。
 
 ![]({% image_buster /assets/img/huawei/huawei-segmentation.png %})
 

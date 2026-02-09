@@ -1,7 +1,7 @@
 ---
-nav_title: Migration des flux de données vers les codes de promotion
+nav_title: Migration à partir de flux de données
 article_title: Migration des flux de données vers les codes de promotion
-page_order: 0
+page_order: 10
 description: "Cet article de référence fournit des conseils sur la migration des flux de données vers les codes de promotion."
 ---
 

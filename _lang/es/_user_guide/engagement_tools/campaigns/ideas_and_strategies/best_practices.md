@@ -62,7 +62,7 @@ Para conseguir mejores valoraciones, pida a sus usuarios avanzados que revisen s
 - Ha utilizado estas aplicaciones más de 10 veces en los últimos 14 días
 - Ha gastado más de 50 dólares
 
-![Un ejemplo de segmento dirigido a usuarios avanzados de una aplicación.]({% image_buster /assets/img_archive/ratings_power_users.png %})
+![Un ejemplo de segmento dirigido a los usuarios avanzados de una aplicación.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Visitar la tienda de aplicaciones lleva tiempo a tus usuarios. Para maximizar la probabilidad de que hagan un esfuerzo adicional, pídales una valoración o reseña después de que hayan tenido una experiencia positiva con su aplicación. Por ejemplo, pregúnteles después de superar un nivel del juego o de realizar una compra utilizando un código de descuento. Nuestro artículo sobre [la inclusión voluntaria de datos]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) contiene más información sobre las formas de garantizar que su solicitud coincide con las expectativas del flujo de trabajo de los usuarios.
 

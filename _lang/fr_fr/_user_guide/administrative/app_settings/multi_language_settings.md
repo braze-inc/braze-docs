@@ -1,39 +1,33 @@
 ---
 nav_title: Paramètres multilingues
-article_title: Paramètres multilingues
+article_title: Traduction et paramètres multilingues
 alias: "/multi_language_support/"
 page_order: 5.5
 description: "Cet article donne un aperçu des paramètres multilingues du tableau de bord de Braze et explique comment utiliser les paramètres régionaux dans vos messages."
 ---
 
-# Paramètres multilingues
+# Traduction et paramètres multilingues
 
-> En ajustant les paramètres multilingues, vous pouvez cibler les utilisateurs dans différentes langues et emplacements avec des messages différents dans un seul e-mail.
+> La fonctionnalité multilingue vous permet d'utiliser [les étiquettes de traduction]({{ site.baseurl }}/user_guide/engagement_tools/messaging_fundamentals/localization/locales) ] pour cibler des utilisateurs de langues et d'emplacements différents dans un seul et même message.
 
-## Conditions préalables
-
-Pour modifier et gérer la prise en charge multilingue, vous devez disposer de l’autorisation « Gérer les paramètres multilingues ». Pour ajouter le paramètre régional à un message, vous devez disposer des autorisations nécessaires pour modifier les campagnes.
-
-{% alert important %}
-La prise en charge du multilinguisme est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
-{% endalert %}
+{% multi_lang_include locales.md section="Prerequisites" %}
 
 ## Ajouter un paramètre régional
 
-1. Allez dans **Paramètres** > **Prise en charge multilingue** sous **Paramètres de l'espace de travail**.
-2. Sélectionnez **Ajouter des paramètres régionaux**, puis sélectionnez **Paramètres régionaux par défaut** ou **Attributs personnalisés**.<br><br>![Le menu déroulant "Ajouter un paramètre local" permet de sélectionner le paramètre local par défaut ou des attributs personnalisés.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
+1. Allez dans **Paramètres** > **Paramètres de localisation**.
+2. Sélectionnez **Ajouter des paramètres régionaux**, puis sélectionnez **Paramètres régionaux par défaut** ou **Attributs personnalisés**.<br><br>![La liste déroulante "Ajouter des paramètres régionaux" avec des options pour sélectionner les paramètres régionaux par défaut ou des attributs personnalisés.]({% image_buster /assets/img/multi-language_support/add_locale_options.png %}){: style="max-width:40%;"}
 3. Saisissez un nom pour le paramètre régional.
 4. Sélectionnez les attributs de l'utilisateur correspondant à l'option locale que vous avez choisie.
 
 {% tabs %}
-{% tab Paramètres régionaux par défaut %}
+{% tab Default locale %}
 
-Pour les **Paramètres régionaux par défaut**, utilisez les menus déroulants pour sélectionner la langue à ajouter et, éventuellement, le pays à associer à la langue.<br><br>![Une fenêtre intitulée "Ajouter des paramètres régionaux - Langue et pays par défaut" permet de spécifier la langue et le pays.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
+Pour les **Paramètres régionaux par défaut**, utilisez les menus déroulants pour sélectionner la langue à ajouter et, éventuellement, le pays à associer à la langue.<br><br>![Une fenêtre intitulée "Add locale - Default Language and Country" permet de spécifier la langue et le pays.]({% image_buster /assets/img/multi-language_support/default_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
-{% tab Attributs personnalisés %}
+{% tab Custom attributes %}
 
-Pour les **attributs personnalisés**, utilisez le menu déroulant pour sélectionner l'attribut personnalisé associé et dans le champ de texte, saisissez la valeur.<br><br>![Une fenêtre intitulée "Ajouter des paramètres régionaux - Attributs personnalisés" permet de spécifier l'attribut personnalisé et sa valeur.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
+Pour les **attributs personnalisés**, utilisez le menu déroulant pour sélectionner l'attribut personnalisé associé et dans le champ de texte, saisissez la valeur.<br><br>![Une fenêtre intitulée "Add locale - Custom Attributes" pour spécifier l'attribut personnalisé et sa valeur.]({% image_buster /assets/img/multi-language_support/custom_attributes_option.png %}){: style="max-width:80%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -70,4 +64,3 @@ Les fichiers de traduction sont stockés au niveau d'une campagne, ce qui signif
 #### Le nom de la locale doit-il suivre un modèle ou un format spécifique ?
 
 Non. Vous pouvez utiliser la convention de dénomination de votre choix. Le nom du paramètre régional est utilisé lors de la sélection du paramètre régional dans l'éditeur et figurera dans les titres du fichier que vous téléchargez avec les ID de traduction.
-

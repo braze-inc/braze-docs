@@ -43,7 +43,7 @@ Cuando diseñe su plantilla de correo electrónico, si no incluye un enlace de c
 
 Los errores de correo electrónico se presentan en la pestaña **Redactar** del flujo de trabajo del mensaje. Los errores le impiden avanzar. Las "advertencias" indican recordatorios para ayudarle a seguir las mejores prácticas. Dependiendo de su negocio, puede optar por ignorarlos.
 
-![Lista de errores y advertencias de un ejemplo de correo electrónico.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Lista de errores y advertencias de un correo electrónico de ejemplo.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 He aquí una lista de errores que se tienen en cuenta en nuestro editor:
 
@@ -69,7 +69,7 @@ También puede alternar entre las vistas de escritorio, móvil y texto sin forma
 
 Cuando esté listo para una comprobación final, seleccione **Probar envío** y envíe un mensaje de prueba a usted mismo o a un grupo de evaluadores de contenido para asegurarse de que su correo electrónico se muestra correctamente en una variedad de dispositivos y clientes de correo electrónico.
 
-![Ejemplo de vista previa de correo electrónico que se enviará para pruebas.]({% image_buster /assets/img_archive/newEmailTest.png %})
+![Ejemplo de vista previa de correo electrónico que se enviará para realizar pruebas.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 Si ves algún problema con tu plantilla o quieres hacer algún cambio, selecciona **Editar correo electrónico** para volver al editor.
 
@@ -89,7 +89,7 @@ A medida que cree más plantillas de correo electrónico, podrá [duplicarlas]({
 
 Para utilizar su correo electrónico en una campaña API, necesita un `email_template_id`, que puede encontrar en la parte inferior de cualquier plantilla de correo electrónico creada en Braze.
 
-![Identificador de la API situado en la parte inferior de una plantilla de correo electrónico.]({% image_buster /assets/img/email_templates/template5.png %})
+![Identificador API situado en la parte inferior de una plantilla de correo electrónico.]({% image_buster /assets/img/email_templates/template5.png %})
 
 ### Comentarios sobre las plantillas de correo electrónico
 
@@ -103,7 +103,7 @@ Puedes colaborar y comentar plantillas de correo electrónico en el editor de ar
 
 Una vez guardada la plantilla, los usuarios pueden ver iconos sobre los comentarios sin respuesta. Seleccione **Resolver** para resolver estos comentarios.
 
-![Un comentario de una plantilla de correo electrónico que dice "Me parece bien".]({% image_buster /assets/img/email_templates/template_comment.png %})
+![Un comentario de plantilla de correo electrónico que dice "Me parece bien".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
 Para obtener respuestas a las preguntas más frecuentes sobre plantillas de correo electrónico, consulta nuestras [Preguntas frecuentes sobre plantillas]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/).
 

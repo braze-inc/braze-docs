@@ -1,0 +1,1 @@
+Se tiver algum comentário sobre a acessibilidade do Braze ou sobre as mensagens enviadas pelo Braze, gostaríamos de ouvi-lo. Abra o menu **Suporte** no cabeçalho global e selecione **Compartilhar feedback** para nos enviar suas ideias.

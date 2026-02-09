@@ -1,13 +1,13 @@
 ---
-nav_title: Envoyer des Canvas de test
-article_title: Envoyer des Canvas de test
+nav_title: "Envoyer des toiles d'essai"
+article_title: "Envoyez des toiles d'essai"
 page_order: 1
 description: "Cet article de référence explique comment tester un Canvas avant son lancement et les bonnes pratiques."
 page_type: reference
 tool: Canvas
 ---
 
-# Envoyer des Canvas de test
+# Envoyer des toiles d'essai
 
 > Après avoir [créé votre Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), vous pouvez effectuer plusieurs vérifications avant de le lancer, en fonction de détails tels que la taille de votre audience ou le nombre de filtres de segmentation.
 

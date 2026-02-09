@@ -1,5 +1,5 @@
 ---
-nav_title: Declaração de Inovação
+nav_title: Declaração de inovação
 article_title: Declaração de Inovação
 description: "Este artigo de referência contém a declaração de inovação da Braze."
 noindex: true

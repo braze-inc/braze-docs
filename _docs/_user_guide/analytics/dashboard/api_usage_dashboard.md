@@ -1,5 +1,5 @@
 ---
-nav_title: API Usage Dashboard
+nav_title: API usage dashboard
 article_title: API Usage Dashboard
 alias: "/api_usage/"
 page_order: 3.5
@@ -75,3 +75,8 @@ The **Last 3 Hours** and **Last 6 Hours** options will show traffic by minutes. 
 The API usage dashboard includes all REST API requests that Braze received and returned a `2XX`, `4XX`, or `5XX` response for. This includes Data Transformation outputs and Cloud Data Ingestion syncs. SDK traffic and User Update steps are not included in this dashboard.
 
 Data shown in the dashboard may have up to a short delay in showing recent traffic. During periods of high usage, you can refresh the dashboard up to 4 times per minute. You may need to wait a few minutes before refreshing the dashboard again.
+
+## Related articles
+
+- [API usage alerts]({{site.baseurl}}/user_guide/analytics/dashboard/api_usage_alerts)
+- [Rate limits]({{site.baseurl}}/api/api_limits)

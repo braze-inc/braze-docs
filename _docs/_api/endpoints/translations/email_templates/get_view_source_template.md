@@ -15,7 +15,7 @@ description: "This article outlines details about the View source translations f
 /templates/email/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view the source translations for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
+> Use this endpoint to view the source translations for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -34,17 +34,16 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 | Parameter     | Required | Data Type | Description                     |
 |---------------|----------|-----------|---------------------------------|
 | `template_id` | Required | String    | The ID for your email template. |
-| `locale_id`   | Required | String    | The ID of the locale.           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-Note all translation IDs are considered universal unique identifiers (UUIDs), which can be found in **Multi-Language Support** settings or in the request response.
 
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source' \
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source?template_id={template_id}'
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
+--Request Body
+---template_id: "6ad1507f-ca10-44c4-95bf-aj39fm10fm1ps"
 ```
 
 ## Response
@@ -56,8 +55,6 @@ There are four status code responses for this endpoint: `200`, `400`, `404`, and
 The status code `200` could return the following response header and body.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": {
         "translation_map": {
@@ -82,17 +79,5 @@ The status code `400` could return the following response body. Refer to [Troubl
     ]
 }
 ```
-
-## Troubleshooting
-
-The following table lists possible returned errors and their associated troubleshooting steps.
-
-| Error message                           | Troubleshooting                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_LOCALE_ID`                     | Confirm your locale ID exists in your message translation.                         |
-| `LOCALE_NOT_FOUND`                      | Confirm the locale exists in your multi-language settings.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email templates and email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

@@ -34,7 +34,7 @@ channel:
 
 ### 3단계: 선택적 필드
 
-![연락처 카드 생성기의 선택적 필드.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![연락처 카드 생성기를 위한 선택적 필드.]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 #### 연락처 카드 연락처 사진 업로드
 

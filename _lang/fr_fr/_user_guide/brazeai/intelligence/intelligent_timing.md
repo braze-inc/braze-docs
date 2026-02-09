@@ -6,7 +6,7 @@ description: "Cet article propose un aperçu du Timing Intelligent (appelé aupa
 
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"}Timing intelligent
+# [![Braze cours d'apprentissage]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/intelligent-timing){: style="float:right;width:120px;border:0;" class="noimgborder"} Intelligent Timing
 
 > Utilisez le Timing Intelligent pour livrer vos messages à chaque utilisateur lorsque Braze détermine que cet utilisateur a plus de chance de s’engager (ouvrir ou cliquer), ce qui est appelé l’heure d’envoi optimale. Vous pouvez ainsi vérifier plus facilement que vous envoyez des messages à vos utilisateurs au moment qu'ils préfèrent, ce qui peut conduire à un engagement plus important.
 
@@ -35,8 +35,8 @@ Si un utilisateur ne dispose pas de suffisamment de données d'engagement pour q
 Cette section décrit comment configurer le Timing Intelligent pour vos campagnes et vos Canvas.
 
 {% tabs local %}
-{% tab Campagne %}
-### Étape 1 : Ajouter un timing intelligent
+{% tab Campaign %}
+### Étape 1 : Ajouter un timing intelligent
 
 1. Créez une campagne et composez votre message.
 2. Sélectionnez la **livraison planifiée** comme type de réception/distribution.
@@ -45,20 +45,20 @@ Cette section décrit comment configurer le Timing Intelligent pour vos campagne
 5. En option, configurez les [heures calmes](#quiet-hours).
 6. Spécifiez un [délai de repli](#campaign-fallback). Il s’agit du moment où votre message sera envoyé si un profil utilisateur n’a pas assez de données pour calculer une heure optimale.
 
-![Écran de planification de la campagne montrant le timing intelligent avec l'heure de repli et les heures calmes]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
+![L'écran de planification de la campagne montre le timing intelligent avec l'heure de repli et les heures calmes.]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
 #### Heures calmes {#quiet-hours}
 
 Utilisez les heures calmes pour empêcher l'envoi de messages pendant certaines heures. Cette fonction est utile lorsque vous souhaitez éviter d'envoyer des messages tôt le matin ou pendant la nuit, tout en permettant à Intelligent Timing de déterminer le meilleur créneau de réception/distribution.
 
 {% alert note %}
-Le paramètre Heures calmes a remplacé le paramètre **N'envoyer qu'à des heures précises.**  Au lieu de choisir quand les messages peuvent être envoyés, vous choisissez maintenant quand ils ne doivent pas être envoyés. Par exemple, pour envoyer des messages entre 16 et 18 heures, réglez les heures calmes de 18 à 16 heures le lendemain.
+Le paramètre Heures calmes a remplacé le paramètre **N'envoyer qu'à des heures précises.** Au lieu de choisir quand les messages peuvent être envoyés, vous choisissez maintenant quand ils ne doivent pas être envoyés. Par exemple, pour envoyer des messages entre 16 et 18 heures, réglez les heures calmes de 18 à 16 heures le lendemain.
 {% endalert %}
 
 1. Sélectionnez **Activer heures calmes**.
 2. Sélectionnez l'heure de début et de fin à laquelle il **ne faut pas** envoyer de messages.
 
-![La bascule des heures calmes est activée avec l'heure de début et de fin définie pour bloquer la réception/distribution des messages pendant la nuit]({% image_buster /assets/img/intelligent_timing/quiet_hours.png %}).
+![Les heures calmes sont basculées avec l'heure de début et de fin pour bloquer la réception/distribution des messages pendant la nuit.]({% image_buster /assets/img/intelligent_timing/quiet_hours.png %})
 
 Lorsque les heures calmes sont activées, Braze n'envoie pas de messages pendant la période de silence, même si cette période correspond à l'heure d'envoi optimale de l'utilisateur. Si l'heure optimale d'un utilisateur se situe à l'intérieur de la fenêtre de silence, le message sera envoyé à la place au bord le plus proche de la fenêtre.
 
@@ -72,7 +72,7 @@ Pour afficher une estimation du nombre d’utilisateurs qui recevront le message
 2. Dans la section **Prévisualiser les horaires de livraison** (qui apparaît à la fois dans les étapes d’audiences cibles et de livraison planifiée), sélectionnez votre canal.
 3. Cliquez sur **Actualiser les données**.
 
-![Graphique de réception/distribution pour Android Push montrant un pic d'engagement entre 12 et 14 heures, et l'heure de l'application la plus populaire étant 14 heures.]({% image_buster /assets/img/intel-timing-preview.png %})
+![Graphique de réception/distribution pour Android Push montrant un pic d'engagement entre 12h et 14h, et l'heure de l'application la plus populaire étant 14h.]({% image_buster /assets/img/intel-timing-preview.png %})
 
 ### Étape 2 : Choisissez une date d'envoi
 
@@ -90,7 +90,7 @@ Si une campagne est lancée et que le moment optimal pour un utilisateur était 
 
 Si vous ciblez une audience qui a effectué une action au cours d’une certaine période, autorisez une fenêtre d’au moins 3 jours dans vos filtres de segment. Par exemple, au lieu de `First used app more than 1 day ago` et `First used app less than 3 days ago`, utilisez 1 jour et 4 jours.
 
-![Filtres pour l'audience cible où la campagne vise les utilisateurs qui ont utilisé l'application pour la première fois il y a 1 à 4 jours.]({% image_buster /assets/img/intelligent_timing/first_used_app.png %})
+![Filtres pour l'audience cible où la campagne vise les utilisateurs qui ont utilisé l'application pour la première fois il y a entre 1 et 4 jours.]({% image_buster /assets/img/intelligent_timing/first_used_app.png %})
 
 Cela est également dû aux fuseaux horaires : sélectionner une période de moins de 3 jours peut faire sortir certains utilisateurs du segment avant que leur moment optimal ne soit atteint.
 
@@ -102,7 +102,7 @@ Si vous exploitez les [tests A/B avec une optimisation]({{site.baseurl}}/user_gu
 
 Lorsque vous utilisez le timing intelligent, nous vous recommandons de planifier l'heure d'envoi de la variante gagnante au moins **2 jours après le** début du test A/B. Par exemple, si votre test A/B commence le 16 avril à 16h00, planifiez l'envoi de la variante gagnante au plus tôt le 18 avril à 16h00. Cela donne à Braze suffisamment de temps pour évaluer le comportement de l'utilisateur et envoyer des messages au moment optimal.
 
-![Sections du test A/B montrant le test A/B avec la variante gagnante sélectionnée, avec les critères gagnants, la date d'envoi et l'heure d'envoi locale sélectionnés]({% image_buster /assets/img/intelligent_timing/ab_testing_intelligent_timing.png %})
+![Sections du test A/B montrant le test A/B avec la variante gagnante sélectionnée, avec les critères gagnants, la date d'envoi et l'heure d'envoi locale sélectionnées.]({% image_buster /assets/img/intelligent_timing/ab_testing_intelligent_timing.png %})
 
 ### Étape 3 : Choisissez une fenêtre de réception/distribution (facultatif)
 
@@ -115,15 +115,15 @@ Pour définir une fenêtre de réception/distribution :
 1. Lors de la configuration du timing intelligent, sélectionnez **N'envoyer les messages qu'à des heures précises**.
 2. Saisissez l’heure de début et de fin de la fenêtre de livraison.
 
-![Case à cocher pour "N'envoyer des messages qu'au cours d'heures spécifiques", où la fenêtre temporelle est fixée entre 8 heures et 12 heures du matin à l'heure locale de l'utilisateur.]({% image_buster /assets/img/intelligent_timing_hours.png %})
+![Case à cocher avec « N’envoyer des messages que pendant une plage horaire donnée » sélectionné, pour laquelle la fenêtre horaire est définie entre 8 h et 24 h dans le fuseau horaire de l’utilisateur.]({% image_buster /assets/img/intelligent_timing_hours.png %})
 
 ### Étape 4 : Choisissez une heure de repli {#campaign-fallback}
 
 Choisissez une heure de repli à utiliser si le profil d'un utilisateur ne dispose pas de suffisamment de données pour calculer une heure de réception/distribution optimale.
 
-![Planification d'une campagne avec Intelligent Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
+![Planifier une campagne avec le timing intelligent]({% image_buster /assets/img/intelligent_timing_1.png %})
 
-{% multi_lang_include brazeai/intelligent_suite/fallback_time.md type="campagne" %}
+{% multi_lang_include brazeai/intelligent_suite/fallback_time.md type="campaign" %}
 
 ### Étape 5 : Prévisualiser les horaires de livraison
 
@@ -141,11 +141,8 @@ Le graphique affiche en bleu les utilisateurs qui ont assez de données pour cal
 {% endtab %}
 
 {% tab Canvas %}
-{% alert important %}
-À partir du 28 février 2023, les toiles utilisant l'éditeur original ne pourront plus être créées ou dupliquées. Pour savoir comment passer au nouveau flux de toiles, reportez-vous à la section [Clonage des toiles]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
-### Étape 1 : Ajouter un timing intelligent
+### Étape 1 : Ajouter un timing intelligent
 
 Dans votre Canvas, ajoutez une [étape Message]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), puis allez dans **Paramètres de réception/distribution** et sélectionnez **Utiliser le timing intelligent**.
 
@@ -153,7 +150,7 @@ Les messages seront envoyés aux utilisateurs qui ont franchi l'étape ce jour-l
 
 ### Étape 2 : Choisissez une heure de repli
 
-Choisissez une heure de repli pour le message à envoyer aux utilisateurs de votre audience qui ne disposent pas de suffisamment de données d'engagement pour que Braze calcule une heure d'envoi optimale. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
+Choisissez une heure de repli pour le message à envoyer aux utilisateurs de votre audience qui n'ont pas suffisamment de données d'engagement pour que Braze calcule une heure d'envoi optimale. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
 
 ### Étape 4 : Ajouter une étape de retard
 
@@ -177,11 +174,11 @@ Par exemple, imaginons que le moment optimal de Luka est à 14 h. Il entre dans
 
 Cependant, le timing intelligent est défini pour livrer à 14 h, heure qui est déjà passée. Luka ne recevra donc pas le message avant le jour suivant : 4 mars à 14 h 00.
 
-![Graphique montrant la différence entre les jours et les jours civils dans lequel le moment optimal d’un utilisateur est 14 h, mais où il entre dans l’étape de délai à 14 h 01 et le délai est défini sur 2 jours. L’option Jours délivre le message 3 jours plus tard parce que l'utilisateur est entré dans l'étape après son heure optimale, alors que l’option Jours calendaires délivre le message 2 jours plus tard, le dernier jour du délai.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
+![Graphique montrant la différence entre les jours et les jours civils dans lequel le moment optimal d’un utilisateur est 14 h, mais où il entre dans l’étape de délai à 14 h 01 et le délai est défini sur 2 jours. Days délivre le message 3 jours plus tard parce que l'utilisateur est entré dans l'étape après son heure optimale, tandis que calendar days délivre le message 2 jours plus tard, le dernier jour du délai.]({% image_buster /assets/img/intelligent_timing_daysvcalendardays.png %}){: style="border:none;"}
 {% endtab %}
 {% endtabs %}
 
-## Limitations
+## Restrictions
 
 - Les messages in-app, les cartes de contenu et les webhooks sont délivrés immédiatement et ne bénéficient pas d’heures optimales.
 - Le timing intelligent n’est pas disponible pour les campagnes par événement ou déclenchées par API.
@@ -194,6 +191,12 @@ Cependant, le timing intelligent est défini pour livrer à 14 h, heure qui est
 ### Graphique de prévisualisation affichant peu d’utilisateurs disposant de moments optimaux
 
 Braze a besoin d’un certain nombre de données d’engagement pour réaliser une estimation correcte. S’il n’y a pas assez de données de session ou que les utilisateurs ciblés ont peu ou pas de clics ou d’ouvertures (tels que les nouveaux utilisateurs), Braze passera par défaut sur l’heure de secours. Selon votre configuration, ceci pourrait être soit l’heure la plus populaire pour l’application ou une heure de secours personnalisée.
+
+### Impact du fuseau horaire sur la réception/distribution du timing intelligent
+
+Le timing intelligent s'appuie sur le fuseau horaire local spécifié de chaque utilisateur, de sorte que la date et l'heure de réception/distribution prévues peuvent varier d'un utilisateur à l'autre.
+
+Si les utilisateurs ne reçoivent pas les messages comme prévu, vérifiez que le champ du fuseau horaire dans leur profil est correctement renseigné. Si le champ du fuseau horaire est vide, l'utilisateur peut recevoir des messages qui s'alignent sur le fuseau horaire de l'entreprise au lieu de son heure locale.
 
 ### Envoyer au-delà de la date planifiée
 
@@ -237,7 +240,7 @@ Le timing intelligent planifie les messages pendant l'heure où l'utilisateur es
 
 #### Quels sont les calculs de secours en cas de manque de données ?
 
-S'il y a moins de cinq événements pertinents pour un utilisateur, le timing intelligent utilise l'heure de repli indiquée dans les paramètres de votre message. 
+Si aucune donnée n'est disponible pour un utilisateur, le timing intelligent utilise l'heure de repli indiquée dans les paramètres de votre message. 
 
 ### Campagnes
 

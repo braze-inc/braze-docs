@@ -1,6 +1,6 @@
 ---
-nav_title: Usuário caduco
-article_title: Usuário caduco
+nav_title: Usuário desistente
+article_title: Usuários inativos
 page_order: 4
 page_type: reference
 description: "Este artigo descreve como usar um modelo do Braze Canvas para trazer os usuários de volta ao seu app com incentivos baseados em seus engajamentos anteriores."
@@ -31,20 +31,20 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 1. Selecione **Editar** ao lado do nome do modelo.
 
-![O título e a descrição atuais do Canva.]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}){: style="max-width:45%;"}
+![O título e a descrição atuais do canva.]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}){: style="max-width:45%;"}
 
 {:start="2"}
 2\. Atualize o nome do Canvas para especificar que esse Canvas enviará mensagens aos usuários com promoções e fará uma sincronização de público para aqueles que iniciarem uma sessão.
 3\. Atualize a descrição para explicar que essa tela contém vantagens e promoções.
 4\. Adicione a tag **Lapsing/Retention** para que possamos filtrar esse Canvas na página inicial do Canvas.
 
-![Etapa "Set Up Canvas Details" (Configurar detalhes do Canvas) com o nome do Canvas "Lapsed User - Visit App" (Usuário expirado - Visitar app) e uma breve descrição do Canva]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
+![Etapa do canva "Set Up Canvas Details" (Configurar detalhes do canvas) com o nome do canvas "Lapsed User - Visit App" (Usuário expirado - Visitar aplicativo) e uma breve descrição do canvas]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### Etapa 2: Atribua seus eventos de conversão
 
-Atualize o **evento de conversão primária - A** para direcionar os usuários do nosso app (MovieCanon) e deixe **o evento de conversão primária - B** como o padrão para fazer qualquer compra.
+Atualize **conversão primária Evento - A** para direcionar usuários do nosso app (MovieCanon), e deixe **conversão primária Evento - B** como o padrão de fazer qualquer compra.
 
-![Seção "Atribuir eventos de conversão" com uma conversão primária, mesmo de um usuário iniciando uma sessão em um app específico.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
+![Seção "Atribuir eventos de conversão" com uma conversão primária, até mesmo de um usuário que inicia uma sessão em um app específico.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### Etapa 3: Adaptar o cronograma de entrada
 
@@ -61,7 +61,7 @@ Faremos dois ajustes nesta etapa:
 
 Manteremos as configurações padrão para o público de entrada, que é definido como usuários que não usam nosso app há mais de 30 dias. Também manteremos os controles de entrada padrão para que os usuários possam entrar novamente no Canva após quatro semanas. Isso significa que toda vez que um usuário não visitar nosso app por mais de 30 dias seguidos, ele será incluído no Canva.
 
-![Etapa "Público-alvo" direcionada a usuários que usaram os apps pela última vez em 30 dias.]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
+![Etapa "Público-alvo" direcionamento aos usuários que usaram os apps pela última vez em 30 dias.]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### Etapa 5: Selecione suas configurações de envio
 
@@ -73,7 +73,7 @@ Manteremos a maioria das configurações de inscrição padrão:
 
 A única configuração que mudaremos é o que fazer quando uma mensagem for disparada durante o horário de silêncio. Em vez de cancelar a mensagem, selecione **Enviar no próximo horário disponível** para que nossos usuários não percam nenhuma promoção.
 
-![Seção "Horário de silêncio" com horário de início às 12 horas e de ponta a ponta às 8 horas.]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
+![Seção "Horário de silêncio" com horário de início às 12h e horário de término às 8h.]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### Etapa 6: Personalize sua tela
 
@@ -86,7 +86,7 @@ Agora, criaremos nosso Canvas personalizando as etapas do modelo:
 {: start="2"}
 2\. Personalize o componente da jornada de ação chamado "Start Session?" selecionando nosso app para a jornada **Started Session**. 
 
-![Jornada de ação para sessões iniciadas em um app específico.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
+![Jornada de ação para sessões que são iniciadas em um app específico.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3\. Mantenha o padrão para a etapa de divisão de decisão chamada "Sessions?", que define o grupo ">1 Session" como usuários que usaram nosso app mais de uma vez no último dia do calendário.

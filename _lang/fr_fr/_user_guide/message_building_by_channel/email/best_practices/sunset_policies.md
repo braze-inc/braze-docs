@@ -1,5 +1,5 @@
 ---
-nav_title: Politiques de temporisation 
+nav_title: Politiques de temporisation
 article_title: Politiques de temporisation des e-mails
 page_order: 8
 page_type: reference
@@ -30,7 +30,7 @@ Pour configurer ces segments, choisissez les filtres `Has Marked You As Spam` et
 
 Lorsque vous appliquez le filtre `Last Engaged With Message`, spécifiez le type de message (push, e-mail ou notification in-app) avec lequel l’utilisateur a ou n’a pas interagi, ainsi que le nombre de jours depuis la dernière interaction avec l’utilisateur. Après avoir créé un segment, choisissez de cibler ce segment avec n'importe quel [canal de communication]({{site.baseurl}}/user_guide/message_building_by_channel/).
 
-![Page des détails du segment avec le filtre "Dernier envoi de message" sélectionné.]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
+![Page Détails du segment avec filtre « Last Engaged with Message (Message de la dernière interaction) » sélectionné.]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
 
 Alors que Braze arrête automatiquement d'envoyer des e-mails aux utilisateurs qui vous ont marqué comme spam, le filtre `Has Marked You As Spam` vous permet d'envoyer également à ces utilisateurs des messages push ciblés et des notifications in-app. Ce filtre est utile pour les [campagnes de reciblage]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns). Par exemple, vous pouvez envoyer aux utilisateurs désengagés des messages pour leur rappeler les fonctionnalités ou offres qu’ils manquent quand ils n’ouvrent pas vos e-mails.
 

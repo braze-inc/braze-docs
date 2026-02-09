@@ -17,10 +17,10 @@ guide_featured_list:
   - name: Construir campañas
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     image: /assets/img/braze_icons/list.svg
-  - name: Administrador de campañas
+  - name: Administrar campañas
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Campañas de pruebas
+  - name: Campañas de prueba
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
     image: /assets/img/braze_icons/beaker-02.svg
   - name: Ideas y estrategias

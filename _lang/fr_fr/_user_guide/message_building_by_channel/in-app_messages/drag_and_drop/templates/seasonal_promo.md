@@ -1,5 +1,5 @@
 ---
-nav_title: "Promotion saisonnière par l'image"
+nav_title: Promotion saisonnière avec image
 article_title: Promotion saisonnière avec image de fond
 alias: "/seasonal_promotion/"
 page_order: 8
@@ -14,7 +14,7 @@ description: "Cette page explique comment utiliser l'éditeur glisser-déposer d
 
 ## Créer une promotion saisonnière avec une image de fond
 
-### Étape 1 : Choisissez votre modèle
+### Étape 1 : Choisissez votre modèle
 
 Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Promotion saisonnière avec image d'arrière-plan** pour votre modèle, puis sélectionnez **Créer un message.** Ce modèle prend en charge à la fois les applications mobiles et les web navigateurs.
 

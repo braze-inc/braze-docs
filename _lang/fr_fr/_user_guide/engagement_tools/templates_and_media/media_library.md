@@ -31,13 +31,13 @@ Dans la bibliothèque multimédia, vous pouvez voir le type de ressource, la tai
 * Glisser et déposer des images ou dossiers à télécharger
 * Supprimer des images
 
-![Page Media Library (Bibliothèque multimédia) qui inclut une section « Upload To Library (Envoyer vers la bibliothèque) » pour glisser-déposer ou télécharger des fichiers. Vous trouverez également une liste des contenus téléchargés dans la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_main.png %})
+![Page Media Library (Bibliothèque multimédia) qui inclut une section « Upload To Library (Envoyer vers la bibliothèque) » pour glisser-déposer ou télécharger des fichiers. La bibliothèque multimédia contient également une liste des contenus chargés.]({% image_buster /assets/img_archive/media_library_main.png %})
 
 Plus tard, lorsque vous rédigez un message dans Braze, vous pouvez extraire vos images de la bibliothèque multimédia.
 
-![Deux moyens habituels d’accéder à la bibliothèque multimédia selon l’éditeur de message. Un montre l’éditeur Drag & Drop e-mail avec le titre « Images et GIF » et un bouton « Ajouter depuis la bibliothèque multimédia ». L'autre montre les éditeurs standard, tels que les messages in-app et push, avec le titre "Media" et un bouton pour "Ajouter une image".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
+![Deux moyens habituels d’accéder à la bibliothèque multimédia selon l’éditeur de message. Un montre l’éditeur Drag & Drop e-mail avec le titre « Images et GIF » et un bouton « Ajouter depuis la bibliothèque multimédia ». L'autre montre les éditeurs standard, tels que les messages push et in-app, avec le titre "Media" et un bouton pour "Ajouter une image".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
-{% alert tip %} Si vous avez besoin d’aide avec la bibliothèque multimédia, consultez notre [FAQ sur les modèles et médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
+{% alert tip %} Pour plus d'aide sur la bibliothèque multimédia, consultez notre [FAQ sur les modèles et médias & ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 
 ## Spécifications des images
 
@@ -49,11 +49,11 @@ Toutes les images chargées dans la bibliothèque multimédia doivent être inf�
 
 ### E-mail
 
-{% multi_lang_include image_specs.md variable_name="e-mail"  %}
+{% multi_lang_include image_specs.md variable_name="email"  %}
 
 ### in-app Messages
 
-{% multi_lang_include image_specs.md variable_name="messages in-app"  %}
+{% multi_lang_include image_specs.md variable_name="in-app messages"  %}
 
 Pour plus d'informations, reportez-vous à la rubrique [Informations créatives sur les messages in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
@@ -68,10 +68,6 @@ Pour des ressources supplémentaires, voir les [spécifications de l'image et du
 ### Vidéo
 
 Les vidéos téléchargées dans la bibliothèque multimédia ne peuvent pour l'instant être utilisées que dans les messages WhatsApp. Pour plus d'informations, reportez-vous à la section [Création d'un message Whatsapp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages).
-
-{% alert important %}
-L'ajout de vidéos aux messages WhatsApp est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à l’accès anticipé.
-{% endalert %}
 
 ## Générer des images avec <sup>BrazeAITM</sup> {#generate-ai}
 

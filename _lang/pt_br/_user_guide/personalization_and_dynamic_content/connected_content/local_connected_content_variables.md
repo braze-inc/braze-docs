@@ -1,6 +1,6 @@
 ---
-nav_title: Variáveis de Conteúdo Conectado Local
-article_title: Variáveis de Conteúdo Conectado Local
+nav_title: Variáveis de Conteúdo Local Conectado
+article_title: Variáveis de conteúdo local conectado
 page_order: 1
 description: "Este artigo de referência cobre como usar e armazenar variáveis de conteúdos conectados locais."
 search_rank: 1
@@ -84,36 +84,13 @@ Enjoy the weather!
 
 Se a API respondesse com {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} retornando `Rain`, o usuário receberia este push.
 
-![Notificação por push com a mensagem "Está chovendo!" Pegue um guarda-chuva!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
+![Notificação por push com a mensagem "Está chovendo!" Leve um guarda-chuva!"]({% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"){:style="max-width:50%" }
 
-Por padrão, o conteúdo conectado definirá um `Content-Type` cabeçalho em uma solicitação HTTP GET que ele faz para `application/json` com `Accept: */*`. Se precisar de outro tipo de conteúdo, especifique-o explicitamente adicionando `:content_type your/content-type` à tag. A Braze definirá então tanto o cabeçalho Content-Type quanto o cabeçalho Accept para o tipo que você especificar.
-
-{% raw %}
-```js
-{% connected_content http://numbersapi.com/random/trivia :content_type application/json %}
-```
-{% endraw %}
+{% multi_lang_include connected_content.md section='default behavior' %}
 
 ## POST HTTP
 
-Por padrão, o conteúdo conectado faz uma solicitação HTTP GET para a URL especificada. Para fazer uma solicitação POST, especifique `:method post`.
-
-Você pode opcionalmente fornecer um corpo POST especificando `:body` seguido por uma consulta string do formato `key1=value1&key2=value2&...` ou uma referência aos valores capturados. O tipo de conteúdo padrão é `application/x-www-form-urlencoded`. Se você especificar `:content_type application/json` e fornecer um corpo codificado em formulário, como `key1=value1&key2=value2`, a Braze codificará automaticamente o corpo em JSON antes de enviar.
-
-O Connected Content também não armazena em cache as chamadas POST por padrão. Você pode atualizar esse comportamento adicionando `:cache_max_age` à chamada POST do Connected Content.
-
-#### Tipo de conteúdo padrão
-
-{% raw %}
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
-```
-#### Tipo de Conteúdo Application/JSON
-
-```js
-{% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
-```
-{% endraw %}
+{% multi_lang_include connected_content.md section='http post' %}
 
 ### Fornecimento de corpo JSON
 

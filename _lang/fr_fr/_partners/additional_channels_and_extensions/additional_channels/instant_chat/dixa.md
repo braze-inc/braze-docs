@@ -35,7 +35,7 @@ Vous devez être un administrateur Dixa pour configurer les intégrations dans D
 
 ![]({% image_buster /assets/img/dixa/dixa-create-integration.png %}){: style="width:450px;"}
 
-### Étape 1 : Créer l'intégration à Dixa
+### Étape 1 : Créer l'intégration à Dixa
 
 Sur la page **Créer un widget Braze**, remplissez les champs obligatoires suivants pour créer l'intégration :
 
@@ -71,11 +71,11 @@ Choisissez d'afficher ou de masquer les événements personnalisés de Braze de 
 
 #### Afficher une liste d'achats
 
-Choisissez d'afficher ou de masquer la liste des produits achetés par l'utilisateur. Ici, vous pouvez voir combien de fois il a été acheté. Pour afficher la première et la dernière date d'achat, survolez l'article. 
+Choisissez d'afficher ou de masquer la liste des produits achetés par l'utilisateur. Ici, vous pouvez voir combien de fois l'utilisateur a acheté le produit. Pour afficher la première et la dernière date d'achat, survolez l'article. 
 
 ### Exemple d’intégration
 
 Vous trouverez ci-dessous un exemple d'intégration :
 
-![L'intégration de Braze et Dixa dans Dixa qui affiche l'état de l'abonnement à l'e-mail, les attributs personnalisés, les événements personnalisés et les achats d'un utilisateur.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
+![L'intégration de Braze et Dixa dans Dixa qui affiche l'état de l'abonnement à l'e-mail d'un utilisateur, ses attributs personnalisés, ses événements personnalisés et ses achats.]({% image_buster /assets/img/dixa/dixa-braze-integration.png %}){: style="width:350px;"}
 

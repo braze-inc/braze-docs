@@ -1,5 +1,5 @@
 ---
-nav_title: 실행 기반 전달
+nav_title: 액션 기반 전달
 article_title: 실행 기반 전달
 page_order: 1
 page_type: reference
@@ -65,7 +65,7 @@ You can also further filter trigger events through Braze [custom event propertie
 캠페인의 세그먼트가 신규 사용자에게 적용되는 경우 트리거 이벤트 "세션 시작"은 사용자의 첫 번째 앱 실행이 될 수 있습니다. (예를 들어, 세그먼트가 세션이 없는 사용자로 구성된 경우).
 {% endalert %}
 
-특정 사용자 세그먼트에 트리거된 캠페인을 보낼 수 있으므로 해당 세그먼트에 속하지 않은 사용자는 트리거 이벤트를 완료하더라도 캠페인을 받지 못합니다. If you notice users not receiving the campaign even though they qualified for the segment, see our section on [why a user might not have received a triggered campaign]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/).
+특정 사용자 세그먼트에 트리거된 캠페인을 보낼 수 있으므로 해당 세그먼트에 속하지 않은 사용자는 트리거 이벤트를 완료하더라도 캠페인을 받지 못합니다.
 
 사용자가 프로필에 이메일 주소를 추가할 때의 트리거 이벤트와 관련하여 다음 규칙이 적용됩니다:
 
@@ -127,7 +127,7 @@ You can also further filter trigger events through Braze [custom event propertie
 
 ### 6단계: 재적격 여부 결정
 
-Determine whether users can become [re-eligible]({% image_buster /assets/img_archive/ReEligible.png %}) for the campaign. 사용자가 다시 캠페인을 받을 수 있도록 허용하는 경우, 사용자가 캠페인을 다시 받을 수 있는 기간을 지정할 수 있습니다. 이렇게 하면 트리거된 캠페인이 "스팸성"이 되는 것을 방지할 수 있습니다.
+사용자가 캠페인에 [재적격]({% image_buster /assets/img_archive/ReEligible.png %})이 될 수 있는지 여부를 결정합니다. 사용자가 다시 캠페인을 받을 수 있도록 허용하는 경우, 사용자가 캠페인을 다시 받을 수 있는 기간을 지정할 수 있습니다. 이렇게 하면 트리거된 캠페인이 "스팸성"이 되는 것을 방지할 수 있습니다.
 
 ![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
@@ -169,9 +169,9 @@ Determine whether users can become [re-eligible]({% image_buster /assets/img_arc
 
 ### Troubleshooting custom events
 
-First, confirm that the custom event is being passed to Braze. Go to **Analytics** > **Custom Events Report**, and then select the respective custom event and date range. If the event doesn't display, confirm that it's set up correctly and that the user performed the correct action.
+First, confirm that the custom event is being passed to Braze. **애널리틱스** > **사용자 지정 이벤트 보고서로** 이동한 다음 해당 사용자 지정 이벤트와 날짜 범위를 선택합니다. 이벤트가 표시되지 않으면 이벤트가 올바르게 설정되었는지, 사용자가 올바른 작업을 수행했는지 확인하세요.
 
-If the custom event displays, further troubleshoot by doing the following:
+사용자 지정 이벤트가 표시되면 다음을 수행하여 추가 문제를 해결하세요:
 
 - Check the user's profile download to confirm they triggered the event and when they did it. If the event was triggered, compare the timestamp for when the event was triggered to the time the campaign went live. The event may have been triggered before the campaign went live.
 - Review changelogs for the campaign and any segments used in targeting to determine if the user was in the segment when their custom event was triggered. If they weren't in the segment, they wouldn't have received the campaign.
@@ -179,6 +179,6 @@ If the custom event displays, further troubleshoot by doing the following:
 - If there is a scheduled delay, check if the user's custom event was triggered before the delay. If the event was triggered before the delay, they wouldn't have received the campaign.
 
 {% alert note %}
-In-app messages can only be triggered by events sent through the SDK, not the REST API.
+인앱 메시지는 REST API가 아닌 SDK를 통해 전송된 이벤트에 의해서만 트리거될 수 있습니다.
 {% endalert %}
 

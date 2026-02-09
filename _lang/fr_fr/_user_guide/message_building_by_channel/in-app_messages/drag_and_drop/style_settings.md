@@ -1,5 +1,5 @@
 ---
-nav_title: Paramètres de style
+nav_title: Réglages de style
 article_title: "Paramètres du style de message in-app"
 description: "Cet article de référence couvre les options de style disponibles lors de la création d'un message in-app avec l'éditeur glisser-déposer."
 page_order: 3
@@ -7,15 +7,15 @@ page_order: 3
 
 # Paramètres de style des messages in-app
 
-> L'expérience de modification par glisser-déposer est divisée en deux sections : **Créer** et **Aperçu et test**. Cet article décrit ce que vous devez savoir pour travailler dans l'onglet **Créer** de l'éditeur et suppose que vous avez déjà [créé un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
+> L'expérience de modification par glisser-déposer est divisée en deux sections : **Créer** et **prévisualiser & Test**. Cet article décrit ce que vous devez savoir pour travailler dans l'onglet **Créer** de l'éditeur et suppose que vous avez déjà [créé un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create/).
 
-![Onglet "styles de messages".]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
+![onglet "styles de messages".]({% image_buster /assets/img_archive/dnd_iam_message_styles.png %}){: style="float:right;max-width:25%;margin-left:15px;max-width:30%"}
 
 ## Styles au niveau des messages
 
 Vous pouvez définir certains styles à appliquer à tous les blocs pertinents de votre message in-app à partir de l'onglet **Styles de message.**  Par exemple, vous pouvez personnaliser la police de tout le texte ou la couleur de tous les liens de votre message.
 
-Les styles définis dans cette section sont utilisés partout dans votre message sauf aux endroits où vous les remplacez pour un bloc spécifique. Si votre message comporte [plusieurs pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), vous pouvez également remplacer les styles au niveau du message pour les pages individuelles, à l'exception du type d'affichage et de la largeur maximale. Si vous essayez d'appliquer à la fois un style au niveau de la page et un style au niveau du message, le style au niveau de la page prévaudra sur le style au niveau du message.
+Les styles définis dans cette section sont utilisés partout dans votre message sauf aux endroits où vous les remplacez pour un bloc spécifique. Si votre message comporte [plusieurs pages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/create#multi-page), vous pouvez également remplacer les styles au niveau du message pour les pages individuelles, à l'exception du type d'affichage et de la largeur maximale.
 
 Pour une expérience de conception plus facile, nous vous recommandons de configurer des styles au niveau des messages avant de personnaliser les styles au niveau des blocs.
 
@@ -42,23 +42,43 @@ La police au niveau du message ne s’appliquera qu’au message en cours et à 
 
 ## Composants du message
 
-![GIF montrant la création d'un message in-app promotionnel.]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
+![Un GIF montrant la création d'un message in-app promotionnel.]({% image_buster /assets/img_archive/dnd_iam_create.gif %})
 
 L'éditeur par glisser-déposer utilise deux éléments clés pour la composition des messages in-app : les **lignes** et les **blocs**. Tous les blocs doivent être placés dans une ligne.
+
+### Fermer le bouton x
+
+Pour les messages in-app modaux et plein écran, vous pouvez personnaliser le bouton de fermeture affiché sous forme de <i class="fa-solid fa-xmark"></i> dans le coin supérieur droit de votre message. Les options de personnalisation comprennent la position du bouton, sa taille, la couleur de remplissage, la couleur d'arrière-plan, le style de la bordure et le rayon de la bordure.
+
+![Options permettant de personnaliser le bouton de fermeture x dans les messages in-app, notamment la taille du bouton, la couleur de remplissage, la couleur d'arrière-plan, le style de bordure et le rayon de la bordure.]({% image_buster /assets/img_archive/close_x_button.png %}){: style="max-width:40%"}
+
+### Style des travées
+
+L'ajout d'un style personnalisé au texte des messages in-app permet de personnaliser davantage l'aspect des messages, en utilisant des couleurs, des polices et des tailles de texte différentes. Le style Span offre à vos utilisateurs une expérience plus engageante et visuellement attrayante en attirant leur attention sur les informations clés et en améliorant la clarté globale du message.
+
+![Option affichée lors de l'envoi de messages in-app. Une petite icône en forme de pinceau indique que vous pouvez envelopper le texte d'une portée pour lui donner du style.]({% image_buster /assets/img_archive/span_1.png %}){: style="max-width:40%"}
+
+![Panneau latéral pour "Propriétés de la portée" qui permet à l'utilisateur final de personnaliser la famille de polices, le poids des polices, la taille des polices, l'espacement des lettres et la couleur du texte.]({% image_buster /assets/img_archive/span_2.png %}){: style="max-width:40%"}
 
 ### Lignes
 
 Les lignes sont des unités structurelles qui définissent la composition horizontale d’une section du message en utilisant des cellules.
 
-![Vous pouvez ajouter des rangées dans votre message in-app.]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
+![Des rangs que vous pouvez ajouter dans votre message in-app.]({% image_buster /assets/img_archive/dnd_iam_rows.png %}){: style="max-width:40%"}
 
 Lorsqu'une ligne est sélectionnée, vous pouvez ajouter ou supprimer le nombre de colonnes dont vous avez besoin dans la section **Personnalisation des colonnes** pour placer différents éléments de contenu côte à côte. 
 
 Vous pouvez également faire glisser pour ajuster la taille des colonnes existantes.
 
-![Ajustement des colonnes à partir de la section "Personnalisation des colonnes".]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
+![Ajuster les colonnes à partir de la section "Personnalisation des colonnes".]({% image_buster /assets/img_archive/dnd_iam_column_customization.gif %}){: style="max-width:40%"}
 
 En tant que bonne pratique, formatez vos propriétés de ligne et de colonne avant de formater l’un des blocs à l’intérieur des lignes. Il existe de nombreux endroits où vous pouvez ajuster l’espacement et l’alignement. Il est plus facile de le modifier au fur et à mesure en commençant à la base.
+
+#### Image d’arrière-plan
+
+Vous pouvez ajouter une image d'arrière-plan à une ligne dans le panneau des **propriétés de la ligne**. Basculez sur **Image d'arrière-plan**, puis indiquez l'URL de l'image ou sélectionnez une image dans la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). Enfin, configurez le texte alt, la taille, la position et la répétition éventuelle de l'image pour créer des motifs sur toute la ligne.
+
+![Image d'arrière-plan en rangée d'une pizza avec un motif de répétition horizontal.]({% image_buster /assets/img_archive/background_row.png %})
 
 ### Blocs
 
@@ -70,13 +90,9 @@ Avant d'ajouter des blocs, définissez des [styles au niveau du message](#set-me
 
 ![Glisser-déposer des cases à sélectionner.]({% image_buster /assets/img_archive/dnd_iam_editor_blocks.png %}){: style="max-width:40%"}
 
-Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de style pour l’élément de contenu sélectionné. Pour plus d'informations, voir [Propriétés du bloc éditeur]({{site.baseurl}}/editor_blocks_dnd_iam/).
+Chaque bloc possède ses propres paramètres, comme un contrôle granulaire sur la marge intérieure. Le panneau latéral droit passe automatiquement à un panneau de style pour l’élément de contenu sélectionné. Pour plus d'informations, voir [Propriétés du bloc éditeur]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=in-app%20messages#inappmessages_properties).
 
 Lorsque vous créez votre message in-app, vous pouvez sélectionner un affichage sur mobile, tablette ou ordinateur dans la barre d’outils pour prévisualiser l’affichage de votre message in-app pour vos groupes utilisateur. Cela garantira que votre contenu est réactif et que vous pouvez effectuer tous les ajustements nécessaires au fur et à mesure.
-
-#### Texte de la travée
-
-{% multi_lang_include span_text.md %}
 
 ## Détails créatifs
 
@@ -84,7 +100,7 @@ Lorsque vous créez votre message in-app, vous pouvez sélectionner un affichage
 
 Sur une tablette ou un navigateur de bureau, un message in-app en plein écran se trouve au centre de l'écran de l'application. Toute modification de la largeur maximale de l'envoi du message en plein écran ne s'appliquera qu'aux appareils de type tablette et ordinateur de bureau. 
 
-![Exemple de message in-app en plein écran.]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
+![Exemple d'envoi de messages in-app en plein écran.]({% image_buster /assets/img_archive/dnd_iam_fullscreen_example.png %}){: style="border:none"}
 
 ### Ajout d'une image de fond
 
@@ -100,11 +116,11 @@ Si vous avez des difficultés à sélectionner un bloc donné, vous pouvez utili
 
 ### Ajout de Liquid
 
-![Icône pour ajouter une personnalisation Liquid.]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
+![Icône pour ajouter la personnalisation du liquide.]({% image_buster /assets/img_archive/dnd_iam_liquid.png %}){: style="float:right;max-width:25%;margin-left:15px"}
 
 Pour ajouter du [liquide]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid) dans votre message in-app, sélectionnez <i class="fa-solid fa-circle-plus"></i> **Ajouter une personnalisation** dans la barre d'outils de l'éditeur. Ici, vous pouvez ajouter différents types de personnalisation tels que des attributs par défaut, des attributs d'appareil, des attributs personnalisés, etc.
 
-Ensuite, prenez votre extrait de code Liquid généré et insérez-le dans votre message. Après avoir conçu et créé votre message in-app, allez dans **Prévisualisation et test** pour prévisualiser votre message.
+Ensuite, prenez votre extrait de code Liquid généré et insérez-le dans votre message. Après avoir conçu et créé votre message in-app, allez sur **Prévisualisation & Test** pour prévisualiser votre message.
 
 ### Utiliser le rédacteur basé sur l’IA
 
@@ -114,7 +130,7 @@ Lorsqu'un bloc de texte est sélectionné dans votre message in-app, cliquez sur
 Vous pouvez enregistrer quelques clics en surlignant le texte à l'intérieur du bloc avant de cliquer sur l'icône. Le texte en surbrillance sera ajouté à l'outil et une copie sera générée immédiatement.
 {% endalert %}
 
-![GIF du rédacteur d'intelligence artificielle.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
+![GIF de la rédactrice en chef de l'intelligence artificielle.]({% image_buster /assets/img_archive/dnd_iam_ai_copywriter.gif %})
 
 ### Réinitialiser les styles par défaut
 

@@ -69,7 +69,7 @@ Les spécifications suivantes en matière d'image et de texte s'appliquent à la
 - **Types de fichiers :** PNG, JPEG
 
 {% endtab %}
-{% tab Texte %}
+{% tab Text %}
 
 - **Titre :** 30 caractères (recommandé)
 - **Description :** 30 caractères (recommandé)
@@ -89,7 +89,7 @@ Lorsque vous créez une campagne ou un Canvas, vous pouvez filtrer les utilisate
 
 L’analytique sera très similaire à la section analytique actuelle pour les notifications push. Pour Push Stories analytics, vous pouvez ouvrir l'indicateur **Direct Opens** pour afficher les clics par page.
 
-![Tableau iOS Push Performance avec des exemples d'analyses/analytiques et des détails étendus pour l'indicateur Direct Opens.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![Tableau des performances de notification push iOS avec un exemple d’analytique et des détails étendus pour la métrique Direct Opens (Ouvertures directes).]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Résolution des problèmes
 

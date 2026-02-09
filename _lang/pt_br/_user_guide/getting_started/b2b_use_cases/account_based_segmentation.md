@@ -1,12 +1,12 @@
 ---
 nav_title: Segmentação baseada em contas
-article_title: Configuração da segmentação baseada em contas
+article_title: Configurar a segmentação baseada em contas
 page_order: 2
 page_type: reference
 description: "Saiba como usar vários recursos do Braze para potencializar seus casos de uso de segmentação baseada em contas B2B."
 ---
 
-# Configuração da segmentação baseada em contas
+# Configure a segmentação baseada em contas
 
 > Esta página mostra como usar vários recursos do Braze para potencializar seus casos de uso de segmentação baseada em contas B2B.
 
@@ -25,7 +25,7 @@ Para ajudá-lo a começar, criamos modelos SQL básicos para segmentação simpl
 
 Digamos que você queira segmentar os usuários que são colaboradores de uma conta corporativa de destino. 
 
-1. Acesse **Público** > **Extensões de segmento** > **Criar nova extensão** > **Iniciar com um modelo** e selecione o modelo **Catálogo de segmento para eventos**. <br><br> ![Modal "Select a Template" (Selecione um modelo) com opções de segmento de catálogo para eventos ou compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>O editor SQL é preenchido automaticamente com um modelo que une os dados de eventos de usuários com os dados do catálogo para segmentar os usuários que se engajam com determinados itens do catálogo. <br><br>![Um editor SQL para uma nova extensão com uma guia "Variables" (Variáveis) aberta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
+1. Acesse **Público** > **Extensões de segmento** > **Criar nova extensão** > **Iniciar com um modelo** e selecione o modelo **Catálogo de segmento para eventos**. <br><br> ![Modal "Select a Template" (Selecione um modelo) com opções de segmento de catálogo para eventos ou compras.]({% image_buster /assets/img/b2b/select_a_template.png %})<br><br>O editor SQL é preenchido automaticamente com um modelo que une os dados de eventos de usuários com os dados do catálogo para segmentar os usuários que se engajam com determinados itens do catálogo. <br><br>![Um editor SQL para uma nova extensão com uma guia "Variables" aberta.]({% image_buster /assets/img/b2b/enter_new_name.png %})<br><br>
 2. Use a guia **Variables (Variáveis** ) para fornecer os campos necessários para seu modelo antes de gerar seu segmento.<br><br>Para que o Braze identifique os usuários com base no engajamento deles com os itens do catálogo, é necessário fazer o seguinte:
 - Selecione um catálogo que contenha um campo de catálogo
 - Selecione um evento personalizado que contenha uma propriedade de evento
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Opção 2: Ao usar fontes conectadas para seus business objects
 
-Para obter informações básicas sobre como usar fontes conectadas na segmentação, consulte [Segmentos CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use os modelos abordados em [Ao usar catálogos](#option-1-when-using-catalogs-for-your-business-objects) para se inspirar em como formatar as tabelas de origem, pois você pode formatá-las da maneira que quiser.
+Para obter informações básicas sobre como usar fontes conectadas na segmentação, consulte [Extensões de segmento do CDI]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Use os modelos abordados em [Ao usar catálogos](#option-1-when-using-catalogs-for-your-business-objects) para se inspirar em como formatar as tabelas de origem, pois você pode formatá-las da maneira que quiser.
 
 ## Usando sua extensão baseada em conta em um segmento
 

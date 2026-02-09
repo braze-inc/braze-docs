@@ -6,9 +6,9 @@ El sistema operativo iOS puede incluir notificaciones para algunas característi
 
 ## Configuración de notificaciones push silenciosas
 
-Para utilizar las notificaciones push silenciosas para desencadenar el trabajo en segundo plano, debes configurar tu aplicación para que reciba notificaciones incluso cuando esté en segundo plano. Para ello, añade la capacidad Modos de fondo utilizando el panel **Firma y capacidades** al objetivo principal de la aplicación en Xcode. Selecciona la casilla **Notificaciones remotas**.
+Para utilizar las notificaciones push silenciosas para desencadenar el trabajo en segundo plano, debes configurar tu aplicación para que reciba notificaciones incluso cuando esté en segundo plano. Para ello, añade la capacidad Modos de fondo utilizando el panel **Capacidades de la firma & ** al objetivo principal de la aplicación en Xcode. Selecciona la casilla **Notificaciones remotas**.
 
-![Xcode muestra la casilla de verificación del modo "notificaciones remotas" en "capacidades".]({% image_buster /assets/img_archive/background_mode.png %} "modo en segundo plano habilitado")
+![Xcode muestra la casilla de verificación del modo "notificaciones remotas" en "capacidades".]({% image_buster /assets/img_archive/background_mode.png %} "background mode enabled")
 
 Incluso con el modo de fondo de notificaciones remotas habilitado, el sistema no lanzará tu aplicación en segundo plano si el usuario ha forzado la salida de la aplicación. El usuario debe iniciar explícitamente la aplicación o reiniciar el dispositivo para que el sistema pueda iniciar automáticamente la aplicación en segundo plano.
 
@@ -28,13 +28,13 @@ La bandera `content-available` puede establecerse en el panel de Braze, así com
 No se recomienda adjuntar un título y un cuerpo con `content-available=1` porque puede provocar un comportamiento indefinido. Para asegurarte de que una notificación es realmente silenciosa, excluye tanto el título como el cuerpo cuando configures la flag `content-available` en `1.`. Para más detalles, consulta la [documentación de Apple sobre actualizaciones en segundo plano](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app) oficial.
 {% endalert %}
 
-![El panel de Braze muestra la casilla "contenido disponible" que se encuentra en la pestaña "configuración" del compositor push.]({% image_buster /assets/img_archive/remote_notification.png %} "contenido disponible")
+![El panel de Braze muestra la casilla "contenido-disponible" que se encuentra en la pestaña "configuración" del creador push.]({% image_buster /assets/img_archive/remote_notification.png %} "content available")
 
 Al enviar una notificación push silenciosa, puede que también quieras incluir algunos datos en la carga útil de la notificación, para que tu aplicación pueda hacer referencia al evento. Esto podría ahorrarte unas cuantas peticiones de red y aumentar la capacidad de respuesta de tu aplicación.
 
 ## Ignorar las notificaciones push internas
 
-Braze utiliza notificaciones push silenciosas para gestionar internamente ciertas características avanzadas, como el seguimiento de desinstalaciones o las geovallas. Si tu aplicación lleva a cabo acciones automáticas en el lanzamiento de aplicaciones o notificaciones push en segundo plano, considera la posibilidad de desencadenar esa actividad mediante notificaciones push internas.
+Braze utiliza notificaciones push silenciosas para gestionar internamente ciertas características avanzadas, como el seguimiento de desinstalaciones o las geovallas. Si tu aplicación lleva a cabo acciones automáticas en el lanzamiento de aplicaciones o en notificaciones push en segundo plano, considera la posibilidad de desencadenar esa actividad mediante notificaciones push internas.
 
 Por ejemplo, si tienes una lógica que llama a tus servidores para obtener nuevo contenido en cada push de fondo o lanzamiento de aplicación, puede que quieras evitar desencadenar los push internos de Braze para evitar un tráfico de red innecesario. Dado que Braze envía ciertos tipos de push internos a todos los usuarios aproximadamente al mismo tiempo, puede producirse una carga significativa del servidor si no se controlan las llamadas a la red durante el lanzamiento de los push internos.
 
@@ -66,7 +66,7 @@ func application(_ application: UIApplication,
 ```
 
 {% endtab %}
-{% tab OBJETIVO-C %}
+{% tab OBJECTIVE-C %}
 
 
 ```objc

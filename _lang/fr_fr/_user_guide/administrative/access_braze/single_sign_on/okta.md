@@ -15,7 +15,7 @@ description: "Cet article vous expliquera comment configurer Braze pour utiliser
 
 | Condition | Détails |
 | ----------- | ------- |
-| Okta a activé votre compte | Contactez votre gestionnaire de compte Braze pour activer cette fonctionnalité pour votre compte. |
+| Okta a activé votre compte | Contactez votre gestionnaire de compte Braze pour activer cette fonction pour votre compte. |
 | Privilèges d’administrateur Okta | Assurez-vous d'avoir les privilèges d'administrateur avant de configurer Okta. |
 | Privilèges administrateur Braze | Assurez-vous d'avoir les privilèges d'administrateur avant de configurer Okta. |
 | RelayState API key | Pour activer l'identifiant IdP, sélectionnez **Paramètres** > **Clés API** et créez une clé API avec les autorisations `sso.saml.login`. |
@@ -27,11 +27,11 @@ description: "Cet article vous expliquera comment configurer Braze pour utiliser
 
 Après que votre gestionnaire de compte a activé SAML SSO pour votre compte, allez dans **Paramètres** > **Paramètres d'administration** > **Paramètres de sécurité** et basculez la section SAML SSO sur **ACTIVÉ**.
 
-![Okta SAML SSO activé sur la page Paramètres de sécurité.]({% image_buster/assets/img/Okta/okta1.png %})
+![Authentification unique (SSO) SAML Okta activée sur la page Paramètres de sécurité.]({% image_buster/assets/img/Okta/okta1.png %})
 
 ### Étape 1b : Modifier les paramètres de l’Authentification unique (SSO) SAML
 
-Depuis votre tableau de bord d'administration Okta, vous recevrez une URL cible (URL de connexion) et `x.509` certificat, que vous devez saisir dans la page **Sécurité** de votre compte Braze.
+Depuis votre tableau de bord d'administration Okta, Okta vous fournit une URL cible (URL d'identification) et un certificat `x.509`, que vous devez saisir dans la page **Paramètres de sécurité** de votre compte Braze.
 
 ![]({% image_buster /assets/img/Okta/okta5.png %}){: style="max-width:75%"}
 
@@ -50,7 +50,7 @@ Dans Okta, sélectionnez l'onglet **Connexion** pour l'application Braze SAML, p
 
 Ensuite, entrez la clé API RelayState avec l’autorisation `sso.saml.login` dans le champ **État du RelayState par défaut**. 
 
-![Okta Default RelayState dans l'onglet Sign On.]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
+![État du RelayState par défaut d'Okta dans l'onglet Connexion.]({% image_buster /assets/img/Okta/okta2.png %}){: style="max-width:75%"}
 
 Assurez-vous d’enregistrer ces nouveaux paramètres.
 
@@ -62,5 +62,5 @@ Si vous souhaitez que les utilisateurs de votre compte Braze se connectent uniqu
 
 Vous devriez maintenant pouvoir vous connecter à Braze en utilisant Okta !
 
-![Tableau de bord de Braze identifiant avec Okta SSO activé.]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
+![Connexion au tableau de bord de Braze avec l’authentification unique Okta activée.]({% image_buster /assets/img/Okta/okta4.png %}){: style="max-width:60%"}
 

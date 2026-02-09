@@ -33,7 +33,7 @@ No Braze, uma das condições de corrida mais comuns ocorre com mensagens direci
 1. Um usuário é criado;
 2. O mesmo usuário é imediatamente direcionado para uma mensagem, realiza um evento personalizado ou registra um atributo personalizado.
 
-Entretanto, em alguns casos, o segundo evento será disparado primeiro. Isso significa que uma mensagem está tentando ser enviada para um usuário que ainda não existe. Como resultado, o usuário nunca a recebe. Isso também se aplica a eventos ou atribuições, em que o evento ou atributo tenta ser registrado de usuários de eventos em um perfil de usuário que ainda não foi criado.
+No entanto, em alguns casos, o segundo evento é disparado primeiro. Isso significa que uma mensagem está tentando ser enviada para um usuário que ainda não existe. Como resultado, o usuário nunca a recebe. Isso também se aplica a eventos ou atribuições, em que o evento ou atributo tenta ser registrado de usuários de eventos em um perfil de usuário que ainda não foi criado.
 
 ### Melhores práticas
 
@@ -47,12 +47,16 @@ Também é possível adicionar essa postergação no [SDK do Braze]({{site.baseu
 
 ## Cenário 2: Uso de vários endpoints de API
 
+{% alert important %}
+Usamos o processamento assíncrono para maximizar a velocidade e a flexibilidade. Isso significa que, quando as chamadas de API são enviadas para nós separadamente, não podemos garantir que elas sejam processadas na ordem em que foram enviadas.
+{% endalert %}
+
 Há alguns cenários em que vários endpoints da API também podem resultar nessa condição de corrida, como quando:
 
 - Usar endpoints de API separados para criar usuários e disparar Canvas ou campanhas
 - Fazer várias chamadas separadas para o endpoint `/users/track` para atualizar atributos, eventos ou compras personalizados
 
-Quando as informações do usuário são enviadas para o Braze usando o [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), elas podem ocasionalmente levar alguns segundos para serem processadas. Isso significa que quando as solicitações são feitas simultaneamente aos endpoints `/users/track` e de envio de mensagens, como `/campaign/trigger/send`, não há garantia de que as informações do usuário serão atualizadas antes do envio de uma mensagem.
+Quando as informações do usuário são enviadas para o Braze usando o [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track), elas podem ocasionalmente levar alguns segundos para serem processadas. Isso significa que quando as solicitações são feitas simultaneamente aos endpoints `/users/track` e de envio de mensagens, como `/campaign/trigger/send`, não há garantia de que as informações do usuário sejam atualizadas antes do envio de uma mensagem.
 
 {% alert note %}
 Se as atribuições e os eventos do usuário forem enviados na mesma solicitação (de `/users/track` ou do SDK), o Braze processará os atributos antes dos eventos ou da tentativa de enviar qualquer mensagem.
@@ -70,7 +74,7 @@ Se estiver enviando uma solicitação de API de mensagem programada, essas solic
 
 Em vez de usar vários pontos de extremidade, é possível incluir as [atribuições do usuário]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) e as [propriedades do gatilho]({{site.baseurl}}/api/objects_filters/trigger_properties_object) em uma única chamada de API usando o [endpoint `campaign/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). 
 
-Quando esses objetos forem incluídos no disparador, as atribuições serão processadas primeiro, antes que a mensagem seja disparada, eliminando possíveis condições de corrida. Note que as propriedades do disparador não atualizam o perfil do usuário, mas são usadas apenas no contexto da mensagem.
+Quando esses objetos são incluídos no disparador, as atribuições são processadas primeiro, antes que a mensagem seja disparada, eliminando possíveis condições de corrida. Note que as propriedades do disparador não atualizam o perfil do usuário, mas são usadas apenas no contexto da mensagem.
 
 #### Use o POST: Ponto de extremidade de rastreamento de usuários (sincronização)
 
@@ -100,7 +104,7 @@ Por exemplo, se o disparo de sua campanha for "Fez uma compra" e o filtro do pú
 
 #### Evite filtros de público que presumam que o evento de gatilho foi atualizado
 
-Essa prática recomendada é semelhante a evitar filtros redundantes com o evento de gatilho. Normalmente, um filtro que presume que o evento de gatilho é atualizado no perfil do usuário falhará.
+Essa prática recomendada é semelhante a evitar filtros redundantes com o evento de gatilho. Normalmente, um filtro que presume que o evento de gatilho é atualizado para o perfil do usuário falha.
 
 #### Use Liquid aborts (somente atribuições)
 
@@ -117,4 +121,10 @@ Nesse caso, é possível implementar uma postergação de disparo em uma campanh
 ```
 {% endraw %}
 
+#### Confirme como os dados de usuários estão sendo gerenciados
 
+Se houver uma condição de corrida durante a avaliação de entrada do Canvas, os usuários poderão entrar em um Canvas que não deveriam ter entrado. Por exemplo, o perfil do usuário pode ser definido para ser incluído no público e posteriormente atualizado depois que o Canva enfileirar os usuários para que não sejam mais elegíveis no público. 
+
+Se um usuário disparar o evento de entrada do Canvas várias vezes no mesmo segundo, o Braze permitirá apenas uma entrada para esse segundo (mesmo que a reentrada esteja ativada). Isso evita entradas duplicadas, de modo que o número total de entradas do Canva pode ser menor do que o total de eventos de gatilho.
+
+Recomendamos confirmar como os dados de usuários são gerenciados e atualizados, especificamente quando e como as atribuições específicas são atualizadas, como por SDK, API, API em lote e outros métodos. Isso pode ajudar a identificar e esclarecer por que um usuário entrou em uma campanha ou no Canva em relação a quando o perfil do usuário foi atualizado.

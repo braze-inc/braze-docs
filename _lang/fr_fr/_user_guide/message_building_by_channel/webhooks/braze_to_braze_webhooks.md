@@ -1,6 +1,6 @@
 ---
-nav_title: "Création d'un webhook Braze à Braze"
-article_title: "Création d'un webhook Braze à Braze"
+nav_title: Créer un webhook Braze à Braze
+article_title: Créer un webhook Braze à Braze
 page_order: 3
 channel:
   - webhooks
@@ -8,7 +8,7 @@ description: "Cet article explique comment créer un webhook Braze à Braze pour
 
 ---
 
-# Création d'un webhook Braze à Braze
+# Créer un webhook Braze à Braze
 
 > Vous pouvez utiliser des webhooks pour communiquer avec l'[API REST de]({{site.baseurl}}/api/basics/) Braze, essentiellement pour faire tout ce que notre API vous permet de faire. C’est ce que nous appelons un webhook Braze à Braze, un webhook qui communique depuis Braze vers Braze. Les cas d'utilisation présentés sur cette page supposent que vous connaissez le [fonctionnement des webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) et que vous savez comment [créer un webhook à]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) Braze.
 
@@ -53,7 +53,7 @@ Suivez les étapes générales de création d'un webhook Braze à Braze, et repo
 Braze nécessite pour l’autorisation un en-tête HTTP qui comprend votre clé API et un autre qui déclare votre `content-type`.
 
 - **En-tête de la requête :**
-  - **Autorisation :** Porteur {YOUR_API_KEY}
+  - **Autorisation :** Bearer {YOUR_API_KEY}
   - **Content-Type :** application/json
 - **Méthode HTTP :** POST
 

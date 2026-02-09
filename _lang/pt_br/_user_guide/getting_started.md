@@ -1,6 +1,6 @@
 ---
 page_order: 0.1
-nav_title: Como começar
+nav_title: Primeiros passos
 article_title: Primeiros passos com o Braze
 layout: dev_guide
 search_rank: 4

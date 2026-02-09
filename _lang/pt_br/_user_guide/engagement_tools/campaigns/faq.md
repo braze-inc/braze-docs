@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### Como faço para criar uma campanha multicanal?
 
-Para criar uma campanha em vários canais, selecione **Mensagens** > Campanhas. Em seguida, selecione **Create Campaign** > **Multichannel**( **Criar campanha** > **Multicanal**). A partir daí, você pode selecionar os seguintes canais de envio de mensagens: Cartões de conteúdo, e-mail, LINE, notificações por push, webhook SMS/MMS/RCS, ou WhatsApp.
+Para criar uma campanha em vários canais, selecione **Mensagens** > Campanhas. Em seguida, selecione **Create Campaign** > **Multichannel**( **Criar campanha** > **Multicanal**). A partir daí, você pode selecionar os seguintes canais de envio de mensagens: Cartões de conteúdo, e-mail, LINE, notificações por push, SMS/MMS/RCS, webhook ou WhatsApp.
 
 ### Posso adicionar um grupo de controle à minha campanha multicanal?
 
@@ -37,6 +37,12 @@ Por padrão, as campanhas verificam os filtros de público no momento da entrada
 Uma possível explicação poderia ser que a campanha ou o Canva tem a reelegibilidade ativada, o que significa que os usuários que se qualificam para o segmento e as configurações de entrega poderão receber a mensagem mais de uma vez. Se a re-eligibilidade não estiver ativada, a provável explicação para a diferença entre envios e destinatários únicos pode ser devido a usuários com vários dispositivos, em diferentes plataformas, associados aos seus perfis. 
 
 Por exemplo, se você tiver uma canva que tenha notificações push para iOS e web, um determinado usuário com dispositivos móveis e de desktop pode receber mais de uma mensagem.
+
+### Por que o número de conversões pode exceder o número de usuários únicos em campanhas multicanais?
+
+Para campanhas multicanal, o Braze conta as conversões por canal, não por usuário. Quando um usuário realiza uma única ação de conversão dentro da janela de conversão, o Braze atribui essa conversão a cada canal do qual o usuário recebeu uma mensagem. Isso significa que, se um usuário receber mensagens em vários canais (por exemplo, tanto por e-mail quanto por push) e converter, o Braze contabilizará várias conversões, uma para cada canal. Como resultado, a contagem total de conversões pode exceder o número de usuários únicos que converteram.
+
+Por exemplo, se uma campanha de vários canais enviar uma notificação por e-mail e uma notificação por push para um usuário, e esse usuário realizar uma ação de conversão após receber as duas mensagens e dentro da janela de conversão, o Braze conta isso como duas conversões, uma atribuída ao e-mail e outra atribuída ao push, mesmo que seja uma única ação do mesmo usuário.
 
 ### Por que minha campanha tem uma base de usuários alcançável menor do que o segmento que estou usando para a campanha?
 
@@ -123,10 +129,10 @@ Se precisar fazer alterações, recomendamos interromper a campanha atual (isso 
 
 ### Por que o número de usuários que entram em uma campanha não corresponde ao número esperado?
 
-O número de usuários que entram em uma campanha pode diferir do seu número esperado por causa de como as audiências e os gatilhos são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários saiam da campanha se não fizerem parte do público selecionado inicialmente, antes que qualquer ação-gatilho seja avaliada.
+O número de usuários que entram em uma campanha pode diferir do seu número esperado por causa de como as audiências e os gatilhos são avaliados. Na Braze, um público é avaliado antes do disparador (a menos que esteja usando um disparador de [alteração de atribuição]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/#change-custom-attribute-value)). Isso fará com que os usuários saiam da campanha se inicialmente não fizerem parte do público selecionado antes que qualquer ação-gatilho seja avaliada.
 
 {% alert tip %}
-Para obter mais assistência com a solução de problemas de campanha, entre em contato com o suporte da Braze dentro de 30 dias após a ocorrência do problema, pois só temos os registros de diagnóstico dos últimos 30 dias.
+Para obter mais assistência com a solução de problemas da campanha, entre em contato com o suporte da Braze dentro de 30 dias após a ocorrência do problema, pois só temos os registros de diagnóstico dos últimos 30 dias.
 {% endalert %}
 
 ### Qual é a diferença entre as opções Exportar dados de usuários em CSV e Exportar endereço de e-mail em CSV na página de análise de dados da minha campanha?
@@ -136,6 +142,14 @@ Selecionar a opção **Exportar Endereços de E-mail em CSV** só vai baixar dad
 ### Posso procurar uma campanha pelo seu identificador de API?
 
 Sim, use o filtro `api_id:YOUR_API_ID` na página **Campanhas** para procurar uma campanha pelo seu identificador API. Consulte [procurando por campanhas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) para saber mais.
+
+### Por que os espaços em branco aparecem de forma diferente nos campos de entrada e no texto exibido? 
+
+O tratamento de espaços em branco é diferente entre os campos de entrada e os componentes de texto exibidos devido ao estilo CSS. Nos componentes de texto com o CSS padrão `white-space: normal`, vários espaços consecutivos são recolhidos em um único espaço quando exibidos. Esse é o comportamento padrão do HTML para texto renderizado. 
+
+Os campos de entrada preservam vários espaços exatamente como você os insere, pois é necessário ver e editar o espaçamento exato para uma entrada de dados precisa. Isso significa que o texto com vários espaços pode aparecer de forma diferente quando visualizado em um campo de entrada (onde todos os espaços são preservados) e quando exibido em outras partes do dashboard (onde o CSS pode recolher vários espaços). 
+
+Por exemplo, se você inserir um nome de campanha ou parâmetro UTM com vários espaços em um campo de entrada, verá todos os espaços preservados. No entanto, quando esse mesmo texto aparece em resultados de pesquisa, listas de campanhas ou outros componentes de texto, vários espaços podem aparecer como um único espaço devido ao tratamento de espaços em branco do CSS. 
 
 ### Qual é a diferença entre campanhas de API e campanhas disparadas por API?
 
@@ -169,6 +183,6 @@ As campanhas acionadas por API e por servidor são ideais para lidar com transa�
 
 | Benefícios | Considerações | 
 | ---- | ---- |
-| • Não consome pontos de dados<br><br>• Elementos de personalização estão incluídos nas propriedades da carga útil JSON | • Não permite que você crie um segmento de usuários elegíveis para a mensagem nas propriedades da carga útil JSON<br><br>\- Não é possível ver cargas úteis JSON de entrada com o **registro de atividades de mensagens**|
+| \- Não registra pontos de dados<br><br>• Elementos de personalização estão incluídos nas propriedades da carga útil JSON | • Não permite que você crie um segmento de usuários elegíveis para a mensagem nas propriedades da carga útil JSON<br><br>\- Não é possível ver cargas úteis JSON de entrada com o **registro de atividades de mensagens**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

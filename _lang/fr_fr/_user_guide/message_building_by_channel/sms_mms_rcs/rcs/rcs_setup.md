@@ -40,7 +40,7 @@ Avant de pouvoir envoyer des messages RCS, vous devez vous inscrire en tant qu'e
 
 ![Un exemple d'expéditeur vérifié par RCS dans un message RCS intitulé "Cat Failz Cafe".]({% image_buster /assets/img/rcs/rcs_sender.png %}){: style="max-width:60%;"}
 
-Après avoir ajouté la ou les unités de gestion des stocks à votre formulaire de commande, Braze en sera informé et vous contactera pour vous communiquer les informations relatives à l'enregistrement de l'expéditeur RCS. Leur format dépend des pays auxquels vous souhaitez envoyer des messages RCS. 
+Une fois que vous avez ajouté l'unité de gestion des stocks à votre formulaire de commande, Braze en sera informé et vous contactera pour vous communiquer les informations relatives à l'enregistrement de l'expéditeur RCS. Leur format dépend des pays auxquels vous souhaitez envoyer des messages RCS. 
 
 Une fois que vous aurez envoyé vos formulaires remplis à Braze, nous effectuerons la procédure d'enregistrement en votre nom. 
 

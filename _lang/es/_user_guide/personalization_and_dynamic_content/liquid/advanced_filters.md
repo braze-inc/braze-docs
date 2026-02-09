@@ -30,7 +30,7 @@ description: "Este artículo de referencia enumera filtros avanzados, ejemplos y
 | nombre del filtro | descripción del filtro | ejemplo de entrada | ejemplo de salida |
 |---|---|---|---|
 | `url_escape` | Identifica todos los caracteres de una cadena que no están permitidos en las URLS y los sustituye por sus variantes escapadas. | `{{'hey<>hi' | url_escape}}` | hey%3C%3Ehi |
-| `url_param_escape` | Sustituye todos los caracteres de una cadena no permitidos en las URL por sus variantes escapadas, incluido el ampersand (&). | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
+| `url_param_escape` | Sustituye todos los caracteres de una cadena que no están permitidos en las URL por sus variantes escapadas, incluido el ampersand (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
 | `url_encode` | Codifica una cadena que sea compatible con la URL | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -93,7 +93,7 @@ Este filtro debe utilizarse siempre que se personalice una cadena en un dicciona
 
 {% endraw %}
 
-{% details json_parse ejemplo de entrada y salida %}
+{% details json_parse example input and output %}
 
 ### Entrada de datos 
 
@@ -115,7 +115,7 @@ Item Name: {{ item.store_name }}
 
 {% enddetails %}
 
-{% details as_json_string ejemplo de entrada y salida %}
+{% details as_json_string example input and output %}
 
 ### Entrada de datos
 

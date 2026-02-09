@@ -1,6 +1,6 @@
 ---
-nav_title: Mensagens no app
-article_title: Envio de mensagens no app no Canva
+nav_title: Mensagem no app
+article_title: Mensagens no app na canva
 alias: "/canvas_in-app_messages/"
 page_order: 2
 page_type: reference
@@ -34,17 +34,17 @@ Você pode selecionar um gatilho para que suas mensagens no app sejam disparadas
 
 Depois que as postergações passam e as opções de público são verificadas, as mensagens no app são definidas para serem transmitidas quando um usuário chega à etapa Mensagem. Se um usuário iniciar uma sessão e executar o evento de gatilho para a mensagem no app, o usuário verá a mensagem no app. 
 
-Para etapas do Canva que têm entrada acionada por ação, os usuários podem entrar no Canvas no meio da sessão. As mensagens no app não são definidas para serem ativadas até que uma sessão seja iniciada, portanto, se um usuário estiver no meio da sessão quando chegar à etapa Mensagem, ele não receberá a mensagem no app até que inicie outra sessão e dispare o gatilho relevante.
+Para etapas do Canva que têm entrada acionada por ação, os usuários podem entrar no Canvas no meio da sessão. As mensagens no app não são definidas para serem ativadas até que uma sessão seja iniciada, portanto, se um usuário estiver no meio de uma sessão quando chegar à etapa Mensagem, ele não receberá a mensagem no app até que inicie outra sessão e dispare o comando relevante.
 
 ## Expiração de mensagens no app
 
 Você pode escolher quando a mensagem no app expirará. Durante esse tempo, a mensagem no app ficará aguardando para ser visualizada até atingir a data de vencimento. Depois que a mensagem no app é enviada, ela pode ser visualizada uma única vez.
 
-![A seção Controles de Mensagens de uma etapa de Mensagem para uma mensagem no app. A mensagem no app expirará três dias após a etapa estar disponível.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
+![A seção Controles de mensagens de uma etapa de Mensagem para uma mensagem no app. A mensagem no app expirará três dias após a etapa estar disponível.]({% image_buster /assets/img_archive/canvas_expiration2.png %}){: style="max-width:90%"}
 
 | Opção | Descrição | Exemplo |
 |---|---|---|
-| **Uma duração após a etapa está disponível** | Define a mensagem no app para expirar em relação a quando a etapa se torna disponível para o usuário. | Uma mensagem no app com expiração de dois dias ficaria disponível após o término da postergação da etapa e a verificação das opções do público. Em seguida, ficaria disponível por dois dias (48 horas) e, durante esses dois dias, os usuários poderão ver a mensagem no app se abrirem o aplicativo. |
+| **Uma duração após a etapa está disponível** | Define a mensagem no app para expirar em relação a quando a etapa se torna disponível para o usuário. | Uma mensagem no app com expiração de dois dias ficaria disponível quando o usuário entrasse na etapa Mensagem e as opções de público fossem marcadas. Qualquer postergação antes de chegar a essa etapa viria das etapas anteriores de Atraso em seu Canva. A mensagem no app ficaria então disponível por dois dias (48 horas) a partir do momento em que o usuário entrasse na etapa e, durante esses dois dias, os usuários poderiam ver a mensagem no app se abrissem o aplicativo. |
 | **Em uma data e horário específicas** | Selecione uma data e hora específicas em que a mensagem no app não estará mais disponível. | Se tiver uma venda que termina em 30 de novembro de 2024, selecione essa opção para que os usuários não vejam mais a mensagem no app associada quando a venda terminar. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
@@ -53,7 +53,7 @@ Você pode escolher quando a mensagem no app expirará. Durante esse tempo, a me
 A Braze recomenda que você considere o uso desse recurso em suas telas promocionais e de integração.
 
 {% tabs %}
-  {% tab Promocional %}
+  {% tab Promotional %}
 
 As promoções, os cupons e as vendas geralmente têm datas de expiração rígidas. O Canva a seguir deve alertar seus usuários, nos momentos mais oportunos, de que há uma promoção que eles podem usar e, talvez, influenciar uma compra. Essa promoção expira em 28 de fevereiro de 2019, às 11h15 no fuso horário de sua empresa.
 
@@ -108,7 +108,7 @@ As promoções, os cupons e as vendas geralmente têm datas de expiração rígi
 As mensagens no app expiram quando a promoção expira para evitar discrepâncias entre as mensagens e a experiência do cliente.
 
   {% endtab %}
-  {% tab Integração do usuário %}
+  {% tab User Onboarding %}
 
 Sua primeira impressão com um usuário é, talvez, a mais crítica. Isso pode ser decisivo para futuras visitas ao seu app. Suas comunicações iniciais com o usuário devem ter um tempo sensato e incentivar visitas frequentes ao seu app para promover o uso.
 
@@ -135,7 +135,7 @@ Sua primeira impressão com um usuário é, talvez, a mais crítica. Isso pode s
     <td>Envio de e-mail inicial que dá as boas-vindas aos seus usuários em um projeto, associação ou outro programa de integração. <br><br>O objetivo é levar os usuários ao seu app para iniciar a integração.</td>
   </tr>
   <tr>
-    <td>mensagem no app dos dias 3 a 6</td>
+    <td>Dia 3-6 mensagem no app</td>
     <td>3 dias após o usuário receber a etapa anterior</td>
     <td>Tudo a partir da entrada</td>
     <td>Mensagem no app</td>
@@ -175,17 +175,17 @@ Se você fizer alterações na prioridade de mensagens no app em **Configuraçõ
 
 ## Comportamento de avanço
 
-As etapas de mensagens avançam automaticamente todos os usuários que entram na etapa. Note que ele não espera que a mensagem no app seja disparada ou exibida. Não há necessidade de especificar o comportamento de avanço de mensagens, o que simplifica a configuração da etapa geral.
+As etapas de mensagens avançam automaticamente todos os usuários que entram na etapa. Observe que ele não espera que a mensagem no app seja disparada ou exibida. Não há necessidade de especificar o comportamento de avanço de mensagens, o que simplifica a configuração da etapa geral.
 
 Quando um usuário entra em uma etapa de mensagem no app, ele sai dela imediatamente, em vez de ficar retido na janela de expiração. Nesse caso, ter uma etapa de postergação na jornada do usuário pode ser útil.
 
-Para usar a opção **Advance when message sent**, adicione uma [jornada de público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) separada para filtrar os usuários que não receberam a etapa anterior.
+Para usar a opção **Avançar quando a mensagem for enviada**, adicione uma [jornada de público]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) separada para filtrar os usuários que não receberam a etapa anterior.
 
-{% details Editor de tela original %}
+{% details Original Canvas editor %}
 
 Não é mais possível criar ou duplicar Canvas usando o editor original. Esta seção está disponível para referência ao entender como o comportamento de avanço funciona para etapas com mensagens no app.
 
-As telas criadas no editor original precisam especificar um comportamento de avanço - os critérios para avançar em seu componente Canvas. As [etapas com apenas mensagens no app](#steps-iam-only) têm opções de avanço diferentes das [etapas com vários tipos de mensagens](#steps-multiple-channels) (como push ou envio de e-mail). Para mensagens no app em um fluxo de trabalho do Canvas Flow, essa opção é definida para sempre avançar imediatamente o público.
+As telas criadas no editor original precisam especificar um comportamento de avanço - os critérios para avançar em seu componente Canvas. As [etapas com apenas mensagens no app](#steps-iam-only) têm opções de avanço diferentes das [etapas com vários tipos de mensagens](#steps-multiple-channels) (como push ou envio de e-mail). Para mensagens no app no fluxo de trabalho atual do Canva, essa opção é definida para sempre avançar imediatamente o público.
 
 A entrega baseada em ação não está disponível para etapas do Canva com mensagens no app. As etapas do canva com mensagens no app devem ser agendadas. Em vez disso, as mensagens no app do Canvas aparecerão na primeira vez que o usuário abrir o app (disparadas pela sessão inicial) depois que a mensagem programada no componente do Canvas tiver sido enviada a ele.
 
@@ -217,11 +217,11 @@ Quando a opção **Todo o público** for selecionada, a mensagem no app ficará 
 
 - **Faça a compra:** Direcionamento para usuários que fazem qualquer compra ou uma compra específica
 - **Iniciar sessão:** Direcionamento para usuários que iniciam uma sessão em qualquer aplicativo ou em um aplicativo específico
-- **Realizar evento personalizado:** Direcionamento para usuários que realizam o evento personalizado selecionado
+- **Realizar evento personalizado:** Direcionamento aos usuários que realizam o evento personalizado selecionado (o evento personalizado deve ser enviado usando o SDK).
 
 Um usuário precisa entrar na etapa do Canva, iniciar uma sessão e, em seguida, disparar para receber uma mensagem no app. Isso significa que não há suporte para atualizações no meio da sessão. Por exemplo, se o disparo for para iniciar uma sessão, o usuário só precisará entrar na etapa do Canva e iniciar uma sessão para receber a mensagem no app. Se o disparador não for para iniciar uma sessão, o usuário deverá entrar na etapa do Canva, iniciar uma sessão e, em seguida, executar o disparador para receber a mensagem no app.
 
-!["Fazer uma compra específica" selecionada como ação-gatilho.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
+!["Fazer uma compra específica" selecionada como a ação-gatilho.]({% image_buster /assets/img_archive/canvas_trigger_actions.png %}){: style="max-width:90%"}
 
 Os seguintes recursos do Canva não estão disponíveis com mensagens no app, portanto, não serão aplicados às mensagens no app, mesmo que estejam ativados.
 
@@ -240,5 +240,5 @@ Há suporte para propriedades de eventos personalizados em mensagens no app para
 Aqui estão algumas considerações ao enviar mensagens no app em um Canva.
 
 - Se o usuário nunca reiniciar o aplicativo ou nunca iniciar uma sessão, o app não conseguirá descobrir se o usuário é elegível para a mensagem no app, o que significa que uma mensagem no app não será enviada.
-- Quando ocorrer o primeiro clique e houver uma variável de contexto do Canvas (propriedades da entrada do Canvas), e um usuário entrar novamente em um Canvas cinco vezes, o Braze pegará a quinta entrada e usará essa variável de contexto na mensagem no app.
-- Um usuário só pode ser elegível para 10 mensagens no app de cada vez. Por exemplo, se um usuário passar por diferentes etapas do Canva para 10 mensagens no app, você só poderá ter até 10 dessas etapas.
+- Quando ocorrer o primeiro clique e houver uma variável de contexto do Canvas (propriedades de entrada do Canvas), e um usuário entrar novamente em um Canvas cinco vezes, o Braze pegará a quinta entrada e usará essa variável de contexto na mensagem no app.
+- Um usuário pode ser elegível para até 10 mensagens no app na mesma etapa do Canva. Por exemplo, se um Canvas permitir a reentrada e um usuário entrar no Canvas 11 vezes, ele receberá apenas 10 mensagens no app se nenhuma tiver expirado.

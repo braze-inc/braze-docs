@@ -1,6 +1,6 @@
 ---
-nav_title: Envoi d’e-mails au relais privé d’Apple
-article_title: Envoi d’e-mails au relais privé d’Apple
+nav_title: Envoyer des e-mails à Apple Private Relay
+article_title: "Envoi d'e-mails à Apple Private Relay"
 alias: /email_relay/
 page_order: 0
 description: "Le présent article explique le processus d’envoi d’e-mails au relais privé d’Apple."
@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Envoi d’e-mails au relais privé d’Apple
+# Envoyer des e-mails à Apple Private Relay
 
 > La fonctionnalité d'authentification unique (SSO) d'Apple permet aux utilisateurs de partager leur adresse e-mail (`example@icloud.com`) ou de la dissimuler en masquant ce qui est fourni aux marques (`tq1234snin@privaterelay.appleid.com`) au lieu de leur adresse e-mail personnelle. Apple transfère alors les messages envoyés aux adresses relais vers l'adresse e-mail réelle de l'utilisateur. 
 
@@ -22,7 +22,7 @@ Si un utilisateur décide de désactiver le transfert par e-mail vers l’e-mail
 Si vous utilisez SendGrid comme fournisseur de messagerie, vous pouvez envoyer des e-mails à Apple sans modifier le DNS. 
 
 1. Connectez-vous au [portail des développeurs Apple](https://developer.apple.com/)
-2. Accédez à la page **Certificats, identifiants et profils.** 
+2. Allez à la page **Certificats, Identifiants & Profils**.
 3. Sélectionnez **Services** > **Se connecter avec Apple pour la communication par e-mail**.
 4. Dans la section **Sources d'e-mail**, ajoutez les domaines et sous-domaines.
 - L'adresse doit être formatée comme suit : `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>` (par exemple : `bounces+1234567@braze.online.docs.com`). 
@@ -45,7 +45,7 @@ Si un domaine d'envoi est également utilisé comme domaine de rebond, vous ne p
 
 | Instance | Enregistrement MX                   | Enregistrement TXT                                    |
 |----------|-----------------------------|-----------------------------------------------|
-| US       | `smtp.sparkpostmail.com`    | `"v=spf1 redirect=_spf.sparkpostmail.com"`    |
+| États-Unis       | `smtp.sparkpostmail.com`    | `"v=spf1 redirect=_spf.sparkpostmail.com"`    |
 | EU       | `smtp.eu.sparkpostmail.com` | `"v=spf1 redirect=_spf.eu.sparkpostmail.com"` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
 

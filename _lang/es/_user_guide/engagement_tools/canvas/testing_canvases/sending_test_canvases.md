@@ -1,13 +1,13 @@
 ---
-nav_title: Envío de lienzos de prueba
-article_title: Envío de lienzos de prueba
+nav_title: Enviar lienzos de prueba
+article_title: Enviar lienzos de prueba
 page_order: 1
 description: "Este artículo de referencia trata sobre cómo probar un Canvas antes de su lanzamiento y las mejores prácticas."
 page_type: reference
 tool: Canvas
 ---
 
-# Envío de lonas de prueba
+# Enviar lienzos de prueba
 
 > Después de [crear tu Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/), hay varias comprobaciones que puedes querer realizar antes de lanzarlo, dependiendo de detalles como el tamaño de tu audiencia o el número de filtros de segmentación.
 

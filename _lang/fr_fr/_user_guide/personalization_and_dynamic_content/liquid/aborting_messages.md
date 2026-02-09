@@ -1,12 +1,12 @@
 ---
-nav_title: Abandon des messages
-article_title: Abandon des messages Liquid
+nav_title: Abandonner des messages
+article_title: Abandon des messages liquides
 page_order: 7
 description: "Cet article de référence présente l’abandon des messages Liquid et quelques exemples de cas d’utilisation."
 
 ---
 
-# Abandonner des messages
+# Envois de messages d'annulation
 
 > En option, vous pouvez utiliser l'étiquette Liquid message `abort_message("optional reason for aborting")` dans les conditionnels pour empêcher l'envoi d'un message à un utilisateur. Cet article de référence répertorie quelques exemples de la manière dont cette fonctionnalité peut être utilisée dans les campagnes marketing.
 
@@ -59,7 +59,7 @@ Vous pouvez également faire en sorte que le message d'abandon enregistre quelqu
 ```
 {% endraw %}
 
-![Message d'erreur dans la console de développement avec un message d'abandon "language was nil".]({% image_buster /assets/img_archive/developer_console.png %})
+![Le journal des erreurs de message dans la console de développement avec un message d’abandon de « langue était nulle ».]({% image_buster /assets/img_archive/developer_console.png %})
 
 ## Demande d'envoi de messages d'annulation
 

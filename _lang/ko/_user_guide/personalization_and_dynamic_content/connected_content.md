@@ -19,7 +19,7 @@ guide_featured_list:
 - name: 연결된 콘텐츠 응답 캐싱
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/
   image: /assets/img/braze_icons/edit-05.svg
-- name: 연결된 콘텐츠 중단하기
+- name: Aborting Connected Content
   link: /docs/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
   image: /assets/img/braze_icons/stop-circle.svg
 - name: 사용자 프로필 데이터 가져오기

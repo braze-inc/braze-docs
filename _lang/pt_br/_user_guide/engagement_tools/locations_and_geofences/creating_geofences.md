@@ -1,6 +1,6 @@
 ---
-nav_title: Criando geofences
-article_title: Criando geofences
+nav_title: Criar geofences
+article_title: Criar Geofences
 page_order: 1
 page_type: reference
 toc_headers: h2
@@ -16,7 +16,7 @@ search_rank: 9
 
 ## Como funciona?
 
-As geofences podem ser usados para disparar campanhas em tempo real à medida que os usuários entram e saem de suas bordas, ou enviar campanhas de acompanhamento horas ou dias depois. Os usuários que entram ou saem de suas geofences adicionam uma nova camada de dados de usuários que podem ser usados para segmentação e direcionamento.
+Os geofences podem ser usados para disparar campanhas em tempo real à medida que os usuários entram e saem de suas bordas, ou enviar campanhas de acompanhamento horas ou dias depois. Os usuários que entram ou saem de suas geofences adicionam uma nova camada de dados de usuários que podem ser usados para segmentação e direcionamento.
 
 As geofences são organizadas em conjuntos de geofences - um grupo de geofences que pode ser usado para segmentar ou engajar usuários em toda a plataforma. Cada conjunto de geofences pode conter um máximo de 10.000 geofences.
 
@@ -27,12 +27,12 @@ Você pode criar ou fazer upload de um número ilimitado de geofences.
 - Se o usuário for elegível para receber mais de 20 geofences, a Braze fará o download da quantidade máxima de locais com base na proximidade do usuário no início da sessão.
 - Para que as geofences funcionem corretamente, você deve garantir que seu app não esteja usando todos os pontos de geofence disponíveis.
 
-Consulte a tabela a seguir para termos comuns de geofence e suas descrições.
+Consulte a tabela a seguir para termos comuns de geofences e suas descrições.
 
 | Prazo | Descrição |
 |---|---|
 | Latitude e longitude | O centro geográfico da geofence. |
-| Raio | O raio da geofence em metros, medido a partir do centro geográfico. Recomendamos definir um raio mínimo de 100 a 150 metros para todas as geofences. |
+| Raio | O raio da geofence em metros, medido a partir do centro geográfico. Recomendamos definir um raio mínimo de 100-150 metros para todos os geofences. |
 | Resfriamento | Os usuários recebem notificações disparadas por geofences depois de realizar transições de entrada ou saída em geofences individuais. Após a ocorrência de uma transição, há um tempo predefinido durante o qual o usuário não pode realizar a mesma transição nessa geofence individual novamente. Esse tempo é chamado de "cooldown" e é pré-definido pela Braze, e seu principal objetivo é evitar solicitações de rede desnecessárias. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -47,7 +47,7 @@ Para criar um geofence, você precisará criar um conjunto de geofences primeiro
 3. Para **Nome do conjunto**, insira um nome para seu conjunto de geofences.
 4. (Opcional) Adicione tags para filtrar seu conjunto.
 
-### Etapa 2: Adicione os geofences
+### Etapa 2: Adicionar os geofences
 
 Em seguida, você pode adicionar geofences ao seu conjunto de geofences.
 
@@ -56,21 +56,21 @@ Em seguida, você pode adicionar geofences ao seu conjunto de geofences.
 3. Selecione **Salvar Conjunto de Geofences** para salvar.
 
 {% alert tip %}
-Recomendamos a criação de geofences com um raio de pelo menos 200 metros para otimizar a funcionalidade. Para saber mais sobre opções configuráveis, consulte [Integrações móveis](#mobile-integrations).
+Recomendamos a criação de geofences com um raio de pelo menos 200 metros para otimizar a funcionalidade. Para mais informações sobre opções configuráveis, consulte [Integrações móveis](#mobile-integrations).
 {% endalert %}
 
 ![Um conjunto de geofences com dois geofences "EastCoastGreaterNY" e "WesternRegion" com dois círculos no mapa.]({% image_buster /assets/img/geofence_example.png %})
 
 ## Upload em massa de geofences {#creating-geofence-sets-via-bulk-upload}
 
-As geofences podem ser feitas upload em massa como um objeto GeoJSON do tipo `FeatureCollection`. Cada geofence é um tipo de geometria `Point` na coleção de recursos. As propriedades de cada recurso exigem uma chave `radius` e uma chave `name` opcional para cada geofence. 
+As geofences podem ser feitas upload em massa como um objeto GeoJSON do tipo `FeatureCollection`. Cada geofence é um `Point` tipo de geometria na coleção de recursos. As propriedades para cada recurso requerem uma `radius` chave e uma chave `name` opcional para cada geofence. 
 
 Para fazer upload do seu GeoJSON, selecione **Mais** > **Fazer upload do GeoJSON**.
 
 Ao criar seus geofences, considere os seguintes detalhes:
 
 - O valor `coordinates` no GeoJSON é formatado como `[Longitude, Latitude]`.
-- O raio máximo do geofence que pode ser enviado é de 10.000 metros (cerca de 100 quilômetros ou 62 milhas).
+- O raio máximo do geofence que pode ser enviado é de 10.000 metros (cerca de 10 quilômetros ou 6,2 milhas).
 
 ### Exemplo
 
@@ -108,7 +108,7 @@ O seguinte exemplo representa o GeoJSON correto para especificar dois geofences:
 
 ## Uso de eventos de geofence
 
-Depois que os geofences forem configurados, você pode usá-los para melhorar e enriquecer a forma como se comunica com seus usuários.
+Depois que os geofences forem configurados, você pode usá-los para aprimorar e enriquecer a forma como se comunica com seus usuários.
 
 ### Disparando campanhas e Canvases
 
@@ -147,7 +147,7 @@ As campanhas disparadas por geofence estão disponíveis no iOS e no Android. Pa
 A partir da versão 3.6.0 do SDK do Braze, a coleta de locais do Braze é desativada por padrão. Para verificar se a capacitação está ativada no Android, confirme se `com_braze_enable_location_collection` está definido como `true` em seu `braze.xml`.
 {% endalert %}
 
-Consulte a documentação [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) ou [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) para mais orientações com base na sua plataforma.
+Consulte a documentação [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing#choose-the-optimal-radius-for-your-geofence) ou [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW5) para mais orientações com base em sua plataforma.
 
 {% alert tip %}
 Você também pode aproveitar os geofences com nossos Parceiros de Tecnologia, como [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) e [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
@@ -165,13 +165,13 @@ O monitoramento de localização é usado para coletar e armazenar os dados de l
 
 As geofences do Braze usam uma combinação de todos os provedores de localização disponíveis em um dispositivo para triangular a localização do usuário. Isso inclui Wi-Fi, GPS e torres de celular.
 
-A precisão típica está na faixa de 20 a 50 m e a melhor precisão será na faixa de 5 a 10 m. Em áreas rurais, a precisão pode se degradar significativamente, podendo chegar a vários quilômetros. Braze recomenda a criação de geofences com raios maiores em locais rurais.
+A precisão típica está na faixa de 20-50m, e a melhor precisão estará na faixa de 5-10m. Em áreas rurais, a precisão pode se degradar significativamente, podendo chegar a vários quilômetros. Braze recomenda a criação de geofences com raios maiores em locais rurais.
 
 Para saber mais sobre a precisão das geofences, consulte a documentação do [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) e do [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1).
 
 ### Como o geofences afeta a duração da bateria?
 
-Nossa solução de geofencing usa o serviço de sistema geofence nativo no iOS e Android e é ajustada para equilibrar inteligentemente precisão e consumo de energia, economizando a vida útil da bateria e melhorando o desempenho à medida que o serviço subjacente melhora.
+Nossa solução de geofencing usa o serviço de sistema de geofence nativo no iOS e Android e é ajustada para equilibrar inteligentemente precisão e energia, economizando a vida útil da bateria e melhorando o desempenho à medida que o serviço subjacente melhora.
 
 ### Quando as geofences estão ativas?
 
@@ -185,5 +185,5 @@ Não, a Braze não armazena dados de geofence nos perfis de usuários. As geofen
 
 ### Posso configurar uma geofence dentro de uma geofence?
 
-Como prática recomendada, evite configurar geofences entre si, pois isso pode causar problemas com o disparo de notificações.
+Como uma boa prática, evite configurar geofences que se sobreponham, pois isso pode causar problemas com a ativação de notificações.
 

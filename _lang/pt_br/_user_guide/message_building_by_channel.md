@@ -38,10 +38,10 @@ guide_featured_list:
 
 ## Recursos de acessibilidade
 
-Você pode usar o Braze para criar campanhas de envio de mensagens acessíveis em cada canal. Trabalhe com seus engenheiros para garantir que você atenda aos padrões de acessibilidade em sua implementação. Se você gostaria de orientação adicional, recomendamos:
+Você pode usar o Braze para criar campanhas de envio de mensagens acessíveis em cada canal. Trabalhe com seus engenheiros para garantir que você atenda aos padrões de acessibilidade em sua implementação. Se você quiser obter orientação adicional, recomendamos:
 
-- [Fundamentos de Mensagens Acessíveis](https://learning.braze.com/accessible-messaging-foundations): Aprenda princípios fundamentais de acessibilidade que se aplicam às comunicações de marca neste curso do Braze Learning.
-- [Construindo Mensagens Acessíveis]({{site.baseurl}}/help/accessibility/): Aprenda como adicionar texto alternativo e estruturar seu conteúdo para tecnologias assistivas diretamente no Braze.
+- [Fundamentos do envio de mensagens acessíveis](https://learning.braze.com/accessible-messaging-foundations): Aprenda os princípios fundamentais de acessibilidade que se aplicam às comunicações da marca neste curso do Braze Learning.
+- [Criação de envios de mensagens acessíveis]({{site.baseurl}}/help/accessibility/): Saiba como adicionar texto alternativo e estruturar seu conteúdo para tecnologias assistivas diretamente no Braze.
 
 {% multi_lang_include accessibility/feedback.md %}
 
@@ -52,10 +52,10 @@ Ao determinar qual canal de envio de mensagens é melhor para suas campanhas e C
 - **O conteúdo** é o engajamento visual de sua mensagem. É possível adicionar multimídia e outros ativos ao seu texto para tornar seu conteúdo mais rico.
 - **A urgência** é uma medida da rapidez com que uma mensagem é capaz de notificar o usuário e atrair sua atenção. As notificações que o usuário pode visualizar imediatamente têm uma alta urgência, enquanto as mensagens que precisam que o usuário registre no app têm uma baixa urgência.
 
-A matriz a seguir ilustra os pontos fortes e fracos dos principais canais de envio de mensagens em termos de conteúdo e urgência. Pense sempre em quão urgente e rica em conteúdo deve ser sua mensagem e, em seguida, escolha o canal certo para sua campanha.
+A Matriz Braze de Envio de Mensagens simplifica a seleção de canais mapeando **a Complexidade do Conteúdo** em relação à **Urgência de Entrega**. Ao equilibrar esses dois fatores, você pode ajudar sua mensagem a repercutir em vez de interromper.
 
-![Push para mobile e web são de conteúdo simples, alta urgência; e-mails são de conteúdo rico, alta urgência; mensagens no app e no navegador são de conteúdo simples, baixa urgência; cartões de conteúdo são de baixa urgência, conteúdo rico]({% image_buster /assets/img_archive/messaging_matrix.png %})
+![Mensagens no mobile e na web são de conteúdo simples e de alta urgência; e-mails são de conteúdo rico e de alta urgência; mensagens no app e no navegador são de conteúdo simples e de baixa urgência; cartões de conteúdo são de baixa urgência e de conteúdo rico]({% image_buster /assets/img_archive/messaging_matrix.png %})
 
-Para saber mais sobre como você pode aproveitar essa matriz, confira nosso curso do Braze Learning sobre [Entendendo a Matriz de Envio de Mensagens](https://learning.braze.com/understand-the-messaging-matrix).
+Embora a matriz destaque os canais principais, ela é adaptável: O SMS e o WhatsApp, por exemplo, são ferramentas de alta urgência que se transformam em conteúdo rico ao utilizar formatos multimídia. Para saber mais sobre como você pode aproveitar essa matriz, confira nosso curso do Braze Learning sobre [envio de mensagens entre canais](https://learning.braze.com/cross-channel-messaging).
 
 <br><br>

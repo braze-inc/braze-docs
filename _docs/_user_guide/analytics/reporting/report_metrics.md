@@ -357,7 +357,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures' %}
 
-Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+Contact <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
 
 <span class="calculation-line">Calculation: (Sends) - (Sends to Carrier)</span>
 
@@ -373,7 +373,7 @@ RCS
 
 {% multi_lang_include analytics/metrics.md metric='Delivery Failures RCS' %}
 
-Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+Contact <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
 
 <span class="calculation-line">Calculation: (Sends) - (Sends to Carrier)</span>
 
@@ -389,7 +389,7 @@ SMS/MMS
 
 {% multi_lang_include analytics/metrics.md metric='Failed Delivery Rate' %}
 
-Reach out to <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
+Contact <a href="/docs/braze_support/">Braze Support</a> for assistance in understanding the reasons for delivery failures.
 
 <span class="calculation-line">Calculation: (Delivery Failures) / (Sends)</span>
 
@@ -643,17 +643,17 @@ Content Cards, Email, In-App Message, Web Push, iOS Push, Android Push, Webhook,
 
 {% multi_lang_include analytics/metrics.md metric='Primary Conversions (A) or Primary Conversion Event' %} 
 
-|Channel|Additional information|
+|Channel|Behavior|
 |-------------|----------------------|
-|Email, Push, Webhooks|After the initial send.|
-|Content Cards, In-app messages|When the user views the Content Card or message for the first time.|
+|Email, Push, Webhooks|The user is counted as a recipient after the message is sent.|
+|Content Cards, In-app messages|The user is counted as a recipient after they view the message for the first time.|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 {::nomarkdown}
 <span class="calculation-line">
     Calculation:
     <ul>
-        <li><i>Primary Conversions (A) or Primary Conversion Event</i>: Count</li>
+        <li><i>Primary Conversions (A) or Primary Conversion Event</i>: Number of users who completed the primary conversion event within the defined conversion window </li>
         <li><i>Primary Conversions (A) %</i> or <i>Primary Conversion Event Rate</i>: (Primary Conversions) / (Unique Recipients)</li>
     </ul>
 </span>

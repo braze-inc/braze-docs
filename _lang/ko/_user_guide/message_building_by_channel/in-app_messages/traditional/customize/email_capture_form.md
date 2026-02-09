@@ -1,5 +1,5 @@
 ---
-nav_title: 이메일 수집 양식
+nav_title: Email capture form
 article_title: 이메일 수집 양식
 page_order: 3
 page_type: reference
@@ -28,7 +28,7 @@ channel:
         - `example@gnail.com`(오타 포함)
     - For more information on email validation in Braze, refer to [Email technical guidelines and notes]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
-{% details 식별된 사용자와 익명 사용자에 대해 자세히 알아보기 %}
+{% details More on identified versus anonymous users %}
 
 일반적으로 이메일 캡처 양식의 로직은 간단합니다. 현재 활성 상태인 사용자의 Braze 내 고객 프로필에 이메일 주소가 설정됩니다. 그러나 이는 사용자가 식별되었는지(로그인, `changeUser` 호출) 여부에 따라 동작이 달라진다는 의미입니다.
 
@@ -42,7 +42,7 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 ## 1단계: 인앱 메시지 캠페인 만들기
 
-이 옵션으로 이동하려면 인앱 메시징 캠페인을 만들어야 합니다. 여기에서 사용 사례에 따라 **받는 사람**을 **웹 브라우저**, **모바일 앱** 또는 **모바일 앱과 웹 브라우저 모두로** 설정한 다음 **메시지 유형**으로 **이메일 캡처 양식**을 선택합니다.
+이 옵션으로 이동하려면 인앱 메시징 캠페인을 만들어야 합니다. 그곳에서 사용 사례에 따라 **Send To**를 **Web Browsers**, **Mobile Apps** 또는 **Both Mobile Apps & Web Browsers** 중 하나로 설정한 다음, **Email Capture Form**을 **Message Type**으로 선택하십시오.
 
 {% alert note %}
 **Targeting web users?** <br>To enable HTML in-app messages through the Web SDK, you must supply the `allowUserSuppliedJavascript` initialization option to Braze, for example, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. 이는 보안상의 이유로, HTML 인앱 메시지는 JavaScript를 실행할 수 있으므로 사이트 관리자가 이를 활성화해야 합니다.
@@ -59,7 +59,7 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 - 키-값 쌍
 - 머리글 및 본문 텍스트, 버튼, 버튼 테두리 색상, 배경 및 오버레이 스타일
 
-![Composer for email capture form.]({% image_buster /assets/img/email_capture.png %})
+![이메일 캡처 양식용 작성기입니다.]({% image_buster /assets/img/email_capture.png %})
 
 추가 커스텀이 필요한 경우 **메시지 유형**에 대한 **커스텀 코드**를 선택합니다. 이 [이메일 캡처 모달 템플릿](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal)은 [Braze 템플릿](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) GitHub 리포지토리에서 시작 코드로 사용할 수 있습니다.
 

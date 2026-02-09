@@ -1,5 +1,5 @@
 ---
-nav_title: Como começar
+nav_title: Primeiros passos
 article_title: Primeiros passos com o Canva
 page_order: 0
 layout: dev_guide

@@ -29,9 +29,9 @@ With the Braze and Extole integration, you can pull customer events and attribut
 
 ## Use cases
 
-The following use cases showcase a few ways to leverage Extole’s integration with Braze. Work with your Extole implementation and customer success managers to develop an option that fits your company’s specific needs.
+The following use cases showcase a few ways to use Extole’s integration with Braze. Work with your Extole implementation and customer success managers to develop an option that fits your company’s specific needs.
 
-- Leverage custom events from your referral and engagement programs to trigger a Braze campaign or Canvas
+- Use custom events from your referral and engagement programs to trigger a Braze campaign or Canvas
 - Create custom segments, dashboards, and reporting using data from your Extole-powered programs
 - Automatically unsubscribe or subscribe users to your marketing list in Braze
 
@@ -52,7 +52,7 @@ Complete the following steps to quickly get your integration up and running. You
 
 ### Extole program events
 
-Below are the default events, event properties, and user attributes Extole will send to Braze. Reach out to your Extole implementation or customer success managers to identify and add additional Extole events to your integration.
+Below are the default events, event properties, and user attributes Extole will send to Braze. Contact your Extole implementation or customer success managers to identify and add additional Extole events to your integration.
 
 | Event | Description | Event Properties | User Attributes |
 | ----------- | ----------- | ----------- | ----------- |

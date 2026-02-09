@@ -18,7 +18,7 @@ channel: email
 
 Cette méthode confirme que votre adresse IP d’envoi d’e-mail Braze est autorisée à envoyer un courrier en votre nom. SPF est votre authentification de base et est réalisée en publiant les enregistrements de texte dans les paramètres DNS. Le serveur de réception vérifie les enregistrements DNS et détermine s’ils sont authentiques ou non. Cette méthode est conçue pour valider l’expéditeur de l’e-mail.
 
-Votre enregistrement SPF sera configuré lorsque Braze configure vos IP et domaines ; au-delà de l’ajout des enregistrements DNS que nous vous fournissons, aucune autre action n’est requise.
+Braze met en place votre enregistrement SPF lorsque nous configurons vos IP et vos domaines. Outre l'ajout des enregistrements DNS que nous fournissons, vous n'avez pas besoin de prendre d'autres mesures.
 
 ### E-mail identifié des clés de domaine (DKIM)
 
@@ -26,13 +26,13 @@ Cette méthode confirme que votre domaine d’envoi d’e-mail Braze est autoris
 
 Braze signe le courrier avec votre clé privée secrète. Les fournisseurs de services Internet vérifient la signature de votre clé publique, qui est stockée dans votre dossier DNS personnalisé. Aucune signature n’est exactement identique et, seule votre clé publique peut vérifier avec succès votre signature clé privée.
 
-Votre enregistrement DKIM sera configuré lorsque Braze configure vos adresses IP et domaines. Au-delà de l’ajout des enregistrements DNS que nous vous fournissons, aucune autre action n’est requise.
+Braze établit votre enregistrement DKIM lorsque nous configurons vos IP et vos domaines. Outre l'ajout des enregistrements DNS que nous fournissons, vous n'avez pas besoin de prendre d'autres mesures.
 
 ### Authentification, reporting et conformité des messages basés sur les domaines (DMARC)
 
-Le protocole [DMARC (Domain-based Message Authentication, Reporting & Conformance)](https://dmarc.org/) est un protocole d'authentification des e-mails permettant aux expéditeurs de prouver la légitimité de leur courrier, ce qui renforce la confiance des destinataires et encourage l'acceptation des e-mails. DMARC permet aux expéditeurs d'e-mails de spécifier comment traiter les e-mails qui n'ont pas été authentifiés à l'aide de Sender Policy Framework (SPF) ou Domain Keys Identified Mail (DKIM). Pour ce faire, il faut vérifier que les contrôles SPF et DKIM sont réussis. 
+[Domain-based Message Authentication, Reporting & Conformance (DMARC)](https://dmarc.org/) est un protocole d'authentification des e-mails permettant aux expéditeurs de prouver la légitimité de leur courrier, ce qui renforce la confiance des destinataires et encourage l'acceptation des e-mails. DMARC permet aux expéditeurs d'e-mails de spécifier comment traiter les e-mails qui n'ont pas été authentifiés à l'aide de Sender Policy Framework (SPF) ou Domain Keys Identified Mail (DKIM). Pour ce faire, il faut vérifier que les contrôles SPF et DKIM sont réussis. 
 
-Les expéditeurs peuvent indiquer aux fournisseurs de boîtes aux lettres comment traiter les courriers dont la signature ou l'authentification n'a pas été vérifiée. Les échecs peuvent indiquer que d’autres essaient de vous imiter, vous ou votre e-mail. Les expéditeurs peuvent demander aux fournisseurs de boîtes aux lettres de rejeter ou de mettre en quarantaine le courrier et même d'envoyer des rapports automatisés sur les courriers qui ne passent pas les contrôles. Ce faisant, les fournisseurs de boîtes aux lettres peuvent mieux identifier les expéditeurs de courrier indésirable et empêcher les e-mails malveillants d'envahir les boîtes de réception tout en minimisant les faux positifs et en fournissant de meilleurs rapports d'authentification pour une plus grande transparence sur le marché.
+Les expéditeurs indiquent aux fournisseurs de boîtes aux lettres comment traiter le courrier dont la signature ou l'authentification n'a pas été vérifiée. Les échecs peuvent indiquer une usurpation d'identité. Vous pouvez demander aux fournisseurs de rejeter ou de mettre en quarantaine le courrier défaillant et d'envoyer des rapports automatisés. Cela permet aux fournisseurs d'identifier les expéditeurs de courrier indésirable, de bloquer les e-mails malveillants, de minimiser les faux positifs et d'améliorer la transparence des rapports d'authentification.
 
 #### Fonctionnement
 
@@ -40,7 +40,7 @@ Pour déployer DMARC, vous devez publier un enregistrement DMARC dans votre Doma
 
 Un enregistrement DMARC indique également aux serveurs de messagerie de renvoyer des rapports XML à l'adresse e-mail de rapport indiquée dans l'enregistrement DMARC. Ces rapports fournissent des informations sur la manière dont votre e-mail circule dans l'écosystème et vous permettent d'identifier tout ce qui tente d'utiliser votre domaine d'e-mail pour envoyer des communications par e-mail.
 
-La politique que vous avez définie dans votre enregistrement DMARC indique au serveur d'e-mail du destinataire participant ce qu'il doit faire des e-mails qui ne passent pas les tests SPF et DKIM mais qui prétendent provenir de votre domaine. Braze recommande de définir une politique DMARC sur le domaine racine, qui sera appliquée à tous les sous-domaines. Cela signifie qu'aucune configuration supplémentaire ne sera nécessaire pour les sous-domaines actuels et les nouveaux sous-domaines à l'avenir. Vous pouvez définir trois types de politiques :
+Définissez une politique DMARC sur le domaine racine afin qu'elle s'applique à tous les sous-domaines. Cela permet d'éviter une configuration supplémentaire sur les sous-domaines actuels et futurs. Vous pouvez définir l'une des politiques suivantes :
 
 | Politique | Impact |
 | --- | --- |
@@ -63,5 +63,5 @@ Par exemple, si vous utilisez Gmail, procédez comme suit :
 2. Sélectionnez **Afficher l'original**.
 3. Vérifiez si vous avez un statut « PASS » pour **DMARC**.
 
-![Un e-mail dont la valeur DMARC est « PASS ».]({% image_buster /assets/img_archive/dmarc_example.png %})
+![Un e-mail dont la valeur DMARC est "PASS".]({% image_buster /assets/img_archive/dmarc_example.png %})
 

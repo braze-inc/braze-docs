@@ -5,8 +5,8 @@ article_title: Términos SMS que debes conocer
 alias: /sms_terms_to_know/
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "SMS–everyone has it and knows what it is. What they don't know is the nuance. Check out the following terms to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "Términos que debe conocer"
+glossary_top_text: "SMS: todo el mundo lo tiene y sabe lo que es. Lo que no conocen son los matices. Consulta los siguientes términos para saber más sobre ecosistemas, tecnologías y procesos SMS."
 page_type: glossary
 description: "En este glosario se definen varios términos de SMS que debes conocer."
 channel: SMS 

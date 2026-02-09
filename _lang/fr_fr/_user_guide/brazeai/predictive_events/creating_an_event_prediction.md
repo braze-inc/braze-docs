@@ -1,12 +1,12 @@
 ---
-nav_title: "Création d'une prédiction d'événement"
-article_title: "Création d'une prédiction d'événement"
+nav_title: "Créer une prédiction d'événement"
+article_title: "Créer une prédiction d'événement"
 page_order: 1.1
 description: "Cet article explique comment créer une prédiction d'événement dans le tableau de bord de Braze."
 
 ---
 
-# Création d'une prédiction d'événement
+# Créer une prédiction d'événement
 
 > Une prédiction est une instance d'un modèle d'apprentissage automatique formé et de tous les paramètres et données qu'il utilise. Pour en savoir plus sur les prédictions, consultez l'[aperçu des prédictions]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
 
@@ -44,9 +44,13 @@ La fenêtre d'événement est le laps de temps dans lequel vous souhaitez prédi
 
 Votre audience de prédictions est le groupe d'utilisateurs dont vous souhaitez prédire le score de probabilité. Si vous le souhaitez, vous pouvez effectuer une prédiction sur l'ensemble de votre population d'utilisateurs. Pour ce faire, laissez l'option par défaut **Tous les utilisateurs** sélectionnée.
 
-Le modèle est généralement plus performant si vous filtrez les utilisateurs que vous souhaitez évaluer à l'aide de certains critères. Pour ce faire, sélectionnez **Définir ma propre audience de prédictions** et choisissez vos filtres d'audience. Par exemple, vous souhaiterez peut-être vous concentrer sur les utilisateurs qui utilisent votre application depuis au moins 30 jours en réglant le filtre « A utilisé l’app pour la première fois » sur 30 jours.
+En fonction de votre cas d'utilisation, vous pouvez utiliser des filtres pour spécifier les utilisateurs que vous souhaitez évaluer pour le modèle. Pour ce faire, sélectionnez **Définir ma propre audience de prédictions** et choisissez vos filtres d'audience. Par exemple, vous souhaiterez peut-être vous concentrer sur les utilisateurs qui utilisent votre application depuis au moins 30 jours en réglant le filtre « A utilisé l’app pour la première fois » sur 30 jours. La configuration de cette audience indique à Braze que vous souhaitez que votre modèle apprenne spécifiquement des utilisateurs qui (au moment où le modèle s'exécute) ont utilisé l'application pendant au moins 30 jours.
 
-La définition de l'audience de prédictions est également utilisée pour interroger les données historiques afin de permettre au modèle de machine learning d'apprendre du passé. Comme à la page précédente, la quantité de données fournies par ces filtres est affichée ainsi que l’exigence. Si vous spécifiez l'audience souhaitée et n'atteignez pas le minimum requis, essayez de spécifier un filtre plus large ou utilisez l'option **Tous les utilisateurs**.
+{% alert important %}
+Concentrez vos filtres sur les caractéristiques des utilisateurs pertinentes pour votre cas d'utilisation, telles que les utilisateurs actifs, les nouveaux utilisateurs, les utilisateurs à forte valeur ajoutée ou les utilisateurs d'un pays spécifique. Évitez de filtrer votre audience de prédictions en fonction du fait que les utilisateurs ont déjà effectué l'événement que vous prédisez. L'audience de la prédiction définit les personnes dont vous voulez que le modèle tire des enseignements, et non le résultat de l'événement lui-même. Le modèle doit observer à la fois les utilisateurs qui ont participé à l'événement et ceux qui ne l'ont pas fait, afin d'apprendre et de prédire avec précision la probabilité d'une participation future à l'événement.
+{% endalert %}
+
+L'audience de prédiction définit le groupe d'utilisateurs que le modèle de machine learning examine pour tirer des enseignements du passé. Braze vous indiquera la taille estimée de votre audience de prédictions. Si vous spécifiez l'audience souhaitée et que vous n'atteignez pas le minimum requis pour exécuter le modèle, essayez de spécifier un filtre plus large ou utilisez l'option **Tous les utilisateurs.**  Gardez à l'esprit que de nombreux cas d'utilisation ne nécessitent pas que vous sélectionniez une audience de prédictions spécifique. Par exemple, si votre cas d'utilisation consiste à cibler les utilisateurs de la région UE qui sont les plus susceptibles de se désabonner, vous pouvez exécuter votre modèle sur tous les utilisateurs, puis inclure un filtre pour la région UE dans le segment de la campagne.
 
 {% alert note %}
 L'audience des prédictions ne peut dépasser 100 millions d'utilisateurs.
@@ -62,7 +66,9 @@ Par exemple, si la fenêtre d'événement est définie sur 14 jours, il faudra 1
 
 ### Étape 4 : Choisissez la planification de la mise à jour
 
-Le modèle de machine learning créé lorsque vous remplissez cette page sera utilisé selon une planification que vous sélectionnez ici, pour générer de nouveaux scores de probabilité des utilisateurs de réaliser l'événement (score de vraisemblance). Sélectionnez la **fréquence maximale des mises à jour** que vous jugerez utile. Par exemple, si vous prévoyez des prédictions d'achats et que vous envisagez d'envoyer une promotion hebdomadaire, réglez la fréquence de mise à jour sur **Hebdomadaire** au jour et à l'heure de votre choix.
+Le modèle d'apprentissage automatique générera des scores de probabilité d'événement pour les utilisateurs, et ces scores seront mis à jour en fonction de la planification que vous sélectionnez ici. Vous pourrez cibler les utilisateurs en fonction de leur score de probabilité d'événement. 
+
+Sélectionnez la **fréquence maximale des mises à jour** que vous jugerez utile. Par exemple, si vous prévoyez des prédictions d'achats et que vous envisagez d'envoyer une promotion hebdomadaire, réglez la fréquence de mise à jour sur **Hebdomadaire** au jour et à l'heure de votre choix.
 
 {% alert note %}
 Les prédictions de prévisualisation et de démonstration ne mettront jamais à jour les scores de vraisemblance des utilisateurs.
@@ -72,7 +78,7 @@ Les prédictions de prévisualisation et de démonstration ne mettront jamais à
 
 Vérifiez que les informations que vous avez fournies sont correctes, puis choisissez **Créer la prédiction**. Vous pouvez également enregistrer vos modifications sous forme de brouillon en sélectionnant **Enregistrer comme brouillon** pour revenir à cette page et créer le modèle ultérieurement. 
 
-Une fois que vous avez cliqué sur **Créer une prédiction**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que la formation est en cours pour la durée du processus de création du modèle.
+Une fois que vous avez cliqué sur **Créer une prédiction**, le processus qui génère le modèle commence. Cela peut prendre entre 30 minutes et quelques heures en fonction du volume de données. Pour cette prédiction, vous verrez une page expliquant que la formation est en cours pour la durée du processus de création du modèle. Le modèle de Braze prend en compte les événements personnalisés, les événements d'achat, les événements d'interaction avec la campagne et les données de session.
 
 Une fois terminé, la page basculera automatiquement vers la vue analyse/analytique et vous recevrez un e-mail vous informant que la prédiction et les résultats sont prêts. En cas d’erreur, la page revient en mode Édition avec une explication de ce qui s’est mal passé.
 

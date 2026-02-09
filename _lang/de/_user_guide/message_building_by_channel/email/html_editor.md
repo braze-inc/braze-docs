@@ -12,7 +12,7 @@ channel: email
 
 guide_featured_title: "Abschnittsartikel"
 guide_featured_list:
-  - name: "Erstellen einer E-Mail mit benutzerdefiniertem HTML"
+  - name: "Erstellen Sie eine E-Mail mit angepasstem HTML"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "CSS-Inlining"
@@ -21,5 +21,8 @@ guide_featured_list:
   - name: "Tab \"Gmail-Aktionen\""
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
     image: /assets/img/braze_icons/message-check-circle.svg
+  - name: Fehlersuche
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

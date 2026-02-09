@@ -1,17 +1,17 @@
 ---
 nav_title: Recomendações baseadas em regras
-article_title: Criação de recomendações de itens baseadas em regras
+article_title: Criar recomendações de itens com base em regras
 description: "Este artigo de referência aborda como criar uma recomendação de item IA para itens em um catálogo."
 page_order: 2
 ---
 
-# Criação de recomendações de itens baseadas em regras
+# Criar recomendações de itens baseadas em regras
 
 > Saiba como criar um mecanismo de recomendação baseado em regras a partir de itens em seu catálogo.
 
 ## Sobre recomendações de itens baseadas em regras
 
-Um mecanismo de recomendação baseado em regras usa dados de usuários e informações de produtos para sugerir itens relevantes aos usuários dentro das mensagens. Ele usa [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) e [os catálogos]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) do Braze ou [o Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) para personalizar dinamicamente o conteúdo com base no comportamento e nas atribuições do usuário.
+Um mecanismo de recomendação baseado em regras usa dados de usuários e informações de produtos para sugerir itens relevantes aos usuários dentro das mensagens. Ele usa [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) e [os catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/) do Braze ou [o Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) para personalizar dinamicamente o conteúdo com base no comportamento e nas atribuições do usuário.
 
 {% alert important %}
 As recomendações baseadas em regras são baseadas em uma lógica fixa que você deve definir manualmente. Isso significa que suas recomendações não se ajustarão ao histórico de compras e aos gostos do usuário, a menos que você atualize a lógica.<br><br>Para criar recomendações personalizadas de IA que se ajustam automaticamente ao histórico de um usuário, confira [as recomendações de itens de IA]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
@@ -25,9 +25,9 @@ Ao decidir qual mecanismo de recomendação se adequa aos seus recursos disponí
   <thead>
     <tr>
       <th>Mecanismo de recomendação</th>
-      <th>Nenhum ponto de dados consumido</th>
+      <th>Nenhum ponto de dados registrado</th>
       <th>Solução sem código</th>
-      <th>Sem Liquid avançado</th>
+      <th>Nenhum Liquid avançado</th>
       <th>Atualiza automaticamente o feed de produtos</th>
       <th>Gerado com a interface do usuário do Braze</th>
       <th>Sem hospedagem de dados ou solução de problemas</th>
@@ -79,11 +79,11 @@ Ao decidir qual mecanismo de recomendação se adequa aos seus recursos disponí
 Crie seu mecanismo de recomendação usando um catálogo ou o Connected Content:
 
 {% tabs local %}
-{% tab usando um catálogo %}
+{% tab using a catalog %}
 Para criar seu mecanismo de recomendação usando um catálogo:
 
-1. [Crie um catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/) de produtos.
-2. Para cada produto, adicione uma lista de produtos recomendados como uma string separada por um delimitador (como um pipe `|`) em uma coluna chamada "product_recommendations".
+1. [Crie um catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) de produtos.
+2. Para cada produto, adicione uma lista de produtos recomendados como uma string separada por um delimitador (como um pipe `|`) em uma coluna chamada “product_recommendations”.
 3. Passe para o catálogo o ID do produto para o qual você deseja encontrar recomendações.
 4. Obtenha o valor `product_recommendations` para esse item de catálogo e divida-o pelo delimitador com um filtro de divisão Liquid.
 5. Passe um ou mais desses IDs de volta para o catálogo para coletar os outros detalhes do produto.
@@ -178,7 +178,7 @@ Acesse a guia **Teste** e selecione **Usuário personalizado** em **Pré-visuali
 ![Um exemplo de atributo personalizado chamado 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
-{% tab usando o Connected Content %}
+{% tab using Connected Content %}
 Para criar seu mecanismo de recomendação usando o Connected Content, primeiro crie um novo endpoint usando um dos métodos a seguir:
 
 |Opção|Descrição|
@@ -328,6 +328,6 @@ Good places
 
 Veja na captura de tela abaixo um exemplo de como a resposta é exibida no dispositivo de um usuário.
 
-![Renderização de uma lista de restaurantes gerada pelo exemplo de chamada final.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![Renderização de uma lista de restaurantes gerada pela chamada final do exemplo.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

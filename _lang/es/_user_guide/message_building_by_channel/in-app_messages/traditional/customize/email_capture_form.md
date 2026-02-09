@@ -28,7 +28,7 @@ Cuando un usuario final introduce su dirección de correo electrónico en este f
         - `example@gnail.com` (con una errata)
     - Para obtener más información sobre la validación de correo electrónico en Braze, consulte [Directrices y notas técnicas sobre correo electrónico]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
-{% details Más sobre usuarios identificados frente a anónimos %}
+{% details More on identified versus anonymous users %}
 
 En general, la lógica del formulario de captura de correo electrónico es sencilla. Establecerá la dirección de correo electrónico en el perfil de usuario en Braze para el usuario que está activo actualmente. Sin embargo, eso significa que el comportamiento difiere en función de si el usuario está identificado (conectado, llamada a `changeUser` ) o no.
 
@@ -42,7 +42,7 @@ Para más información, consulte el [Ciclo de vida del perfil de usuario]({{site
 
 ## Paso 1: Crear una campaña de mensajes in-app
 
-Para acceder a esta opción, debe crear una campaña de mensajería in-app. A partir de ahí, en función de su caso de uso, establezca **Enviar a** en **Navegadores web**, **Aplicaciones móviles** o **Aplicaciones móviles y Navegadores web**, y seleccione **Formulario de captura de correo electrónico** como **Tipo de mensaje**.
+Para acceder a esta opción, debe crear una campaña de mensajería in-app. A partir de ahí, dependiendo de tu caso de uso, establece **Enviar a** en **Navegadores Web**, **Aplicaciones Móviles** o **Ambas Aplicaciones Móviles & Navegadores Web**, y luego selecciona **Formulario de captura de correo electrónico** como **Tipo de mensaje**.
 
 {% alert note %}
 **¿Dirigirte a los usuarios de la Web?** <br>Para habilitar los mensajes HTML dentro de la aplicación a través del SDK Web, debes proporcionar la opción de inicialización `allowUserSuppliedJavascript` a Braze, por ejemplo, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Esto es por razones de seguridad, ya que los mensajes dentro de la aplicación en HTML pueden ejecutar JavaScript, por lo que requerimos que un mantenedor del sitio los habilite.
@@ -65,9 +65,9 @@ Si necesita una mayor personalización, elija **Código personalizado** para su 
 
 ## Paso 3: Configura tu audiencia de entrada
 
-Si utilizas un mensaje dentro de la aplicación para capturar los correos electrónicos de los usuarios, es posible que quieras limitar la audiencia a los usuarios que aún no hayan proporcionado esta información.
+Si utilizas un mensaje dentro de la aplicación para captar los correos electrónicos de los usuarios, es posible que quieras limitar la audiencia a los usuarios que aún no hayan proporcionado esta información.
 
-- **Para dirigirse a usuarios sin dirección de correo electrónico:** Utiliza el filtro `Email Available` es `false`. Esto hace que el formulario sólo aparezca a los usuarios que no tienen un correo electrónico registrado, ayudándote a evitar indicaciones redundantes para usuarios conocidos.
+- **Para dirigirse a usuarios sin dirección de correo electrónico:** Utiliza el filtro `Email Available` es `false`. Esto hace que el formulario sólo aparezca a los usuarios que no tienen un correo electrónico registrado, ayudándote a evitar indicaciones redundantes para los usuarios conocidos.
 - **Para dirigirte a usuarios anónimos sin ID externos:** Utiliza el filtro `External User ID` `is blank`. Es útil cuando quieres identificar a usuarios que aún no se han autentificado o registrado.
 
 Si lo deseas, también puedes combinar los dos filtros utilizando la lógica `AND`. Esto hace que el formulario sólo aparezca a los usuarios a los que les falta tanto una dirección de correo electrónico como un ID externo de usuario, lo que es ideal para captar nuevos clientes potenciales o solicitar la creación de una cuenta.

@@ -20,7 +20,11 @@ Las campañas de concienciación sobre las funciones son una forma estupenda de 
 
 Los SDK de Braze rastrean automáticamente la versión más reciente de la aplicación del usuario. Estas versiones pueden utilizarse en filtros y segmentos para determinar qué usuarios deben recibir un mensaje o una campaña.
 
-![El panel Opciones de segmentación en el paso Usuarios objetivo del flujo de trabajo de creación de campañas. La sección Filtros adicionales incluye el siguiente filtro "El número de versión de la aplicación más reciente para Android Cronómetro (Android) es inferior a 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+![El panel Opciones de segmentación en el paso Usuarios objetivo del flujo de trabajo de creación de campañas. La sección Filtros adicionales incluye el siguiente filtro "El número de versión más reciente de la aplicación Cronómetro Android (Android) es inferior a 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+
+{% alert note %}
+Las versiones actuales de la aplicación pueden tardar un poco en aparecer. La versión de la aplicación en el perfil de usuario se actualiza cuando la información es capturada por el SDK, que se basa en el momento en que los usuarios abren sus aplicaciones. Si el usuario no abre la aplicación, la versión actual no se actualizará. <br><br> Estos filtros tampoco se aplicarán con carácter retroactivo. Es bueno utilizar "mayor que" o "igual" a las versiones actuales y futuras, pero utilizar filtros de versiones anteriores puede provocar comportamientos inesperados.
+{% endalert %}
 
 ### Número de versión de la aplicación
 

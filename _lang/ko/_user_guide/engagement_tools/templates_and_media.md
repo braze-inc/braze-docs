@@ -26,7 +26,7 @@ guide_featured_list:
   - name: 템플릿 관리
     link: /docs/user_guide/engagement_tools/templates_and_media/managing_templates/
     image: /assets/img/braze_icons/archive.svg
-  - name: 자주 묻는 질문
+  - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
     image: /assets/img/braze_icons/annotation-question.svg
 ---

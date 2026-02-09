@@ -7,23 +7,23 @@
 アプリ内メッセージは、SDKが以下のカスタムイベントタイプのいずれかを記録すると自動的にトリガーされる：`Any Purchase` `Specific Purchase` 、`Session Start` 、`Custom Event` 、`Push Click` 。`Specific Purchase` 、`Custom Event` のトリガーには、ロバストなプロパティフィルターも含まれている。
 
 {% alert note %}
-アプリ内メッセージは、APIやAPIイベントによってトリガーされることはなく、SDKによって記録されるカスタムイベントによってのみトリガーされる。ロギングの詳細については、[カスタムイベントの学習を]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)参照のこと。
+アプリ内メッセージは、API または API イベントによってトリガーすることはできません。SDK によってログに記録されるカスタムイベントによってのみトリガーされます。ロギングの詳細については、[カスタムイベントのログ記録]({{site.baseurl}}/developer_guide/analytics/logging_events/?tab=swift)を参照してください。
 {% endalert %}
 
 ### 配信セマンティクス
 
-対象となるアプリ内メッセージはすべて、セッション開始時にユーザーの端末に配信される。SDKは配信時にアセットをプリフェッチするため、トリガー時にアセットを利用でき、表示レイテンシを最小限に抑えることができる。トリガーイベントに複数のアプリ内メッセージがある場合、最も優先度の高いメッセージのみが配信される。
+対象となるアプリ内メッセージはすべて、セッション開始時にユーザーの端末に配信される。SDKは配信時にアセットをプリフェッチするため、トリガー時にアセットを利用でき、表示レイテンシを最小限に抑えることができる。トリガーイベントに複数の適格なアプリ内メッセージがある場合、最も優先度の高いメッセージのみが配信されます。
 
 SDKのセッション開始セマンティクスの詳細については、セッション[ライフサイクルを]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift)参照のこと。
 
 ### デフォルトレート制限
 
-デフォルトでは、アプリ内メッセージは30秒に1回送信できる。
+デフォルトでは、アプリ内メッセージは 30 秒に 1 回送信できます。
 
 これをオーバーライドするには、Brazeインスタンスが初期化される前に、Braze設定に`triggerMinimumTimeInterval` プロパティを追加する。これは任意の正の整数に設定でき、最小の時間間隔を秒単位で表す。以下に例を示します。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 let configuration = Braze.Configuration(
@@ -52,10 +52,10 @@ AppDelegate.braze = braze;
 
 ## キーと値のペア
 
-Brazeでキャンペーンを作成する際、キーと値のペアを`extras` 、アプリ内メッセージングオブジェクトがアプリにデータを送信する際に使用できるように設定できる。以下に例を示します。
+Braze でキャンペーンを作成する場合は、キーと値のペアを `extras` として設定できます。これは、アプリ内メッセージングオブジェクトがアプリにデータを送信するために使用できます。以下に例を示します。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 let customization = message.extras["custom-display"] as? String
@@ -90,7 +90,7 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 
 ## 手動でメッセージをトリガーする
 
-### サーバー側イベントを使う
+### サーバー側のイベントを使用する
 
 サーバーサイドイベントを使用してアプリ内メッセージをトリガーするには、デバイスにサイレントプッシュを送信して、デバイスで SDK ベースのイベントを記録できるようにします。この SDK イベントは、その後、ユーザー向けのアプリ内メッセージをトリガーできます。
 
@@ -99,7 +99,7 @@ if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
 次の関数を実装し、[`application(_:didReceiveRemoteNotification:fetchCompletionHandler:)`: メソッド](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623013-application/)内で呼び出します。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 func handleExtras(userInfo: [AnyHashable : Any]) {
@@ -135,11 +135,11 @@ SDK のログに記録されたカスタムイベントの記録にプッシュ�
 
 サーバー送信イベントを介してトリガーされる[サイレントプッシュキャンペーン]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=swift)を作成します。 
 
-![カスタムイベント「server_event」を持つユーザープロファイルのユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンです。]({% image_buster /assets/img_archive/iosServerSentPush.png %})
+![ユーザープロファイルにカスタムイベント"server_event".]({% image_buster /assets/img_archive/iosServerSentPush.png %}が設定されているユーザーに配信されるアクションベースのアプリ内メッセージキャンペーン)
 
 プッシュキャンペーンにはキーと値のペアエクストラを含める必要があります。これは、このプッシュキャンペーンが SDK カスタムイベントを記録するために送信されることを示します。このイベントは次のアプリ内メッセージをトリガーするために使用されます。
 
-![アクションベースの配信アプリ内メッセージキャンペーンで、2つのキーと値のペアがあります。「キャンペーン_NAME」を「アプリ内メッセージ名の例」に設定し、「IS_SERVER_EVENT」を「true」に設定します。]({% image_buster /assets/img_archive/iOSServerPush.png %})
+!["CAMPAIGN_NAME" 。"アプリ内メッセージ名の例 "として設定され、"IS_SERVER_EVENT" 。"true "に設定されている。2つのキーと値のペアを持つアクションベースの配信アプリ内メッセージキャンペーン。]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` メソッド内のコードはキー `IS_SERVER_EVENT` をチェックし、SDK カスタムイベントがあればログに記録します。
 
@@ -151,7 +151,7 @@ Braze ダッシュボードで、ユーザーに表示されるアプリ内メ�
 
 以下の例では、イベントプロパティを最初のサイレントプッシュの一部として送信することで、トリガーされる特定のアプリ内メッセージが設定されています。
 
-![カスタムイベント「アプリ内メッセージトリガー」を実行したユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーンで、「campaign_name」が「IAM Campaign Name Example」と等しい場合に配信されます。]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
+!["campaign_name" が "IAM Campaign Name Example "に等しいカスタムイベント "アプリ内メッセージトリガー "を実行したユーザーに配信されるアクションベースの配信アプリ内メッセージキャンペーン。]({% image_buster /assets/img_archive/iosIAMeventTrigger.png %})
 
 {% alert note %}
 なお、これらのアプリ内メッセージは、アプリケーションがフォアグラウンドにある間にサイレントプッシュが受信された場合にのみトリガーされます。
@@ -159,7 +159,7 @@ Braze ダッシュボードで、ユーザーに表示されるアプリ内メ�
 
 ### あらかじめ定義されたものを表示する
 
-事前に定義したアプリ内メッセージを手動で表示するには、以下の方法を使用する：
+事前定義したアプリ内メッセージを手動で表示するには、以下の方法を使用します。
 
 ```swift
 if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMessage() {
@@ -172,7 +172,7 @@ if let inAppMessage = AppDelegate.braze?.inAppMessagePresenter?.nextAvailableMes
 を手動で呼び出すことで、アプリ内メッセージをリアルタイムで表示することもできる。 [`present(message:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/brazeinappmessagepresenter/present(message:))`inAppMessagePresenter` 。以下に例を示します。
 
 {% tabs %}
-{% tab SWIFT %}
+{% tab swift %}
 
 ```swift
 let customInAppMessage = Braze.InAppMessage.slideup(

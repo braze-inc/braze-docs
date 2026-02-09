@@ -1,5 +1,5 @@
 ---
-nav_title: Recorridos de experimentos 
+nav_title: Recorridos de experimentos
 article_title: Recorridos de experimentos 
 alias: /experiment_step/
 page_order: 4
@@ -14,7 +14,7 @@ tool: Canvas
 
 Cuando incluyas un paso de ruta de experimentos en tu recorrido de usuario, asignará aleatoriamente a los usuarios a las diferentes rutas (o a un grupo de control opcional) que crees. Porciones de la audiencia se asignarán a diferentes rutas según los porcentajes que selecciones, lo que te permitirá probar diferentes mensajes o rutas entre sí y determinar cuál es más eficaz. 
 
-![Un paso de ruta de experimentos que se divide en ruta 1, ruta 2 y control.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Un paso de ruta de experimentos que se divide en Ruta 1, Ruta 2 y Control.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 ## Ejemplos
 
@@ -45,7 +45,7 @@ Puede añadir hasta cuatro rutas haciendo clic en **Añadir ruta** y un grupo de
 
 También puede elegir si los usuarios del grupo de control deben continuar por el Canvas o salir después de la ventana de seguimiento de conversiones para el **Comportamiento del grupo de control**. Opcionalmente, puede añadir una descripción para explicar a los demás lo que esta ruta de experimento pretende probar o incluir información adicional que podría ser útil tener en cuenta.
 
-![Configuración de experimentos donde puedes añadir rutas y distribuir el porcentaje de usuarios en cada ruta.]({% image_buster /assets/img/experiment_step/exp_settings.png %})
+![Configuración del experimento donde puede añadir rutas y distribuir el porcentaje de usuarios en cada ruta.]({% image_buster /assets/img/experiment_step/exp_settings.png %})
 
 {% alert note %}
 Si se activa la reelegibilidad del Canvas, los usuarios que entren en el Canvas y recorran un camino elegido al azar volverán a recorrer el mismo camino si se convierten en reelegibles y vuelven a entrar en el Canvas. Esto mantiene la validez del experimento y de los análisis asociados. Si desea que el paso asigne siempre de forma aleatoria las rutas, seleccione **Rutas aleatorias en Rutas del experimento**. Esta opción no está disponible cuando se utilizan Rutas Ganadoras o Rutas Personalizadas.
@@ -64,12 +64,12 @@ Por último, debes construir tus rutas descendentes. Seleccione **Hecho** y vuel
 Tenga en cuenta que las rutas y sus pasos descendentes no pueden eliminarse de un lienzo una vez creados. Sin embargo, cuando se lanza, puedes modificar la distribución de la audiencia entre las rutas según te convenga. Por ejemplo, si un día después de lanzar un Canvas, llega a la conclusión de que una ruta es superior al resto basándose en los análisis, puede establecer esa ruta al 100% y las demás al 0%. O, según tus necesidades, puedes seguir enviando a los usuarios por varias rutas.
 
 {% alert important %}
-Para evitar la contaminación de experimentos, si tu Canvas tiene un experimento activo o en curso y actualizas el Canvas activo (aunque no sea al paso de ruta de experimentos), el experimento en curso finalizará. Para reiniciar el experimento, puedes desconectar la Ruta de experimentos existente y lanzar una nueva, o duplicar el Canvas y lanzar un nuevo Canvas. Tampoco puede activar Rutas Personalizadas o Rutas Ganadoras para un Lienzo ya activo con un paso de Ruta de Experimento.<br><br>Para más información, consulta [Editar Canvas después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
+Para evitar la contaminación del experimento, si tu Canvas tiene un experimento de ruta ganadora o de ruta personalizada activo o en curso y actualizas el Canvas activo, independientemente de si actualizas el propio paso de ruta de experimentos, el experimento en curso finalizará y el paso de experimentos no determinará una ruta ganadora o rutas personalizadas. Para reiniciar el experimento, puedes desconectar la Ruta de experimentos existente y lanzar una nueva, o duplicar el Canvas y lanzar un nuevo Canvas. De lo contrario, los usuarios fluirán por la ruta de experimentos como si no se hubiera seleccionado ningún método de optimización. Tampoco puede activar Rutas Personalizadas o Rutas Ganadoras para un Lienzo ya activo con un paso de Ruta de Experimento.<br><br>Para más información, consulta [Editar Canvas después del lanzamiento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Seguimiento del rendimiento
 
-En la página **Canvas Analytics**, haga clic en la ruta del experimento para abrir una [tabla detallada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idéntica a la pestaña **Analizar variantes** para comparar estadísticas detalladas de rendimiento y conversión entre rutas. También puede exportar la tabla mediante CSV y comparar los cambios porcentuales de las métricas de interés en relación con la ruta o el control que seleccione.
+En la página **de análisis de Canvas**, selecciona la ruta de experimentos para abrir una [tabla detallada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idéntica a la pestaña **Analizar variantes** para comparar estadísticas detalladas de rendimiento y conversión entre las distintas rutas. También puede exportar la tabla mediante CSV y comparar los cambios porcentuales de las métricas de interés en relación con la ruta o el control que seleccione.
 
 Cada paso de cada ruta mostrará estadísticas en la vista [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), igual que cualquier paso de Canvas. Sin embargo, ten en cuenta que el análisis de los pasos individuales **no** tiene en cuenta la estructura del experimento. El análisis en el Paso de Experimentos debe utilizarse para comparar entre rutas.
 

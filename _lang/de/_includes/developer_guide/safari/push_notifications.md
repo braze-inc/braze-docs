@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/swift.md %} Sie müssen auch [Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) für das Swift SDK [einrichten]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift). Beachten Sie, dass Sie Push-Benachrichtigungen nur an iOS- und iPadOS-Nutzer:innen senden können, die [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) oder höher verwenden.
+{% multi_lang_include developer_guide/prerequisites/web.md %} Sie müssen auch [Push-Benachrichtigungen]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=web) für das Internet SDK einrichten. Beachten Sie, dass Sie Push-Benachrichtigungen nur an iOS- und iPadOS-Nutzer:innen senden können, die [Safari v16.4](https://developer.apple.com/documentation/safari-release-notes/safari-16_4-release-notes) oder höher verwenden.
 
 ## Safari Push für Mobiltelefone einrichten
 
@@ -38,7 +38,7 @@ Ihre Website muss über eine Service-Teammitglied-Datei verfügen, die die Servi
 
 ### Schritt 4: Zum Startbildschirm hinzufügen {#add-to-homescreen}
 
-Beliebte Browser (wie Safari, Chrome, FireFox und Edge) unterstützen in ihren neueren Versionen alle Web-Push-Benachrichtigungen. Um die Push-Erlaubnis unter iOS oder iPadOS anzufordern, muss Ihre Website zum Startbildschirm des Nutzers:innen hinzugefügt werden, indem Sie **Freigeben an** > **Zum Startbildschirm hinzufügen** auswählen. Mit [Zu Homescreen hinzufügen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) können Nutzer:innen Ihre Website mit einem Lesezeichen versehen und Ihr Symbol auf ihrem wertvollen Homescreen platzieren.
+Beliebte Browser (wie Safari, Chrome, FireFox und Edge) unterstützen in ihren neueren Versionen alle Web-Push-Benachrichtigungen. Um die Push-Erlaubnis unter iOS oder iPadOS anzufordern, muss Ihre Website zum Startbildschirm des Nutzers:innen hinzugefügt werden, indem Sie **Freigeben an** > **Zum Startbildschirm hinzufügen** auswählen. Mit [Add to Homescreen](https://support.apple.com/guide/iphone/bookmark-favorite-webpages-iph42ab2f3a7/ios#iph4f9a47bbc) können Nutzer:innen Ihre Website mit einem Lesezeichen versehen, so dass Ihr Symbol auf ihrem wertvollen Home Screen erscheint.
 
 ![Ein iPhone mit Optionen zum Setzen von Lesezeichen für eine Website und zum Speichern auf dem Startbildschirm]({% image_buster /assets/img/push_implementation_guide/add-to-homescreen.png %}){: style="max-width:40%"}
 
@@ -49,7 +49,7 @@ Nachdem die App zu Ihrem Startbildschirm hinzugefügt wurde, können Sie jetzt d
 Nachdem Sie die Aufforderung akzeptiert oder abgelehnt haben, müssen Sie die Website auf Ihrem Startbildschirm löschen und neu installieren, um die Aufforderung wieder anzeigen zu können.
 {% endalert %}
 
-![Eine Push-Abfrage mit der Aufforderung, Push-Benachrichtigungen zuzulassen oder nicht zuzulassen]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
+![Eine Push-Benachrichtigung mit der Aufforderung "Zulassen" oder "Nicht zulassen" Benachrichtigungen]({% image_buster /assets/img/push_implementation_guide/safari-mobile-push-prompt.png %}){: style="max-width:40%"}
 
 Zum Beispiel:
 

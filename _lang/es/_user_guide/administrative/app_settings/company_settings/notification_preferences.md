@@ -13,9 +13,13 @@ description: "Este artículo de referencia cubre las opciones disponibles para s
 
 La página **Preferencias de notificación** es donde puede configurar quién (si alguien) recibe notificaciones sobre su empresa. Puede configurar quién debe recibir notificaciones sobre la entrega de campañas o errores técnicos. También puede especificar destinatarios para el informe analítico semanal. Para la mayoría de las notificaciones, Braze admite canales de correo electrónico y webhook.
 
-![Página de Preferencias de Notificación en el panel de Braze]({% image_buster /assets/img_archive/notification_preferences.png %})
+![Página de preferencias de notificación en el panel de control de Braze]({% image_buster /assets/img_archive/notification_preferences.png %})
 
 Para acceder a esta página, vaya a **Configuración** > **Configuración del administrador** > **Preferencias de notificación**.
+
+{% alert tip %}
+También puedes integrarte con Slack para recibir notificaciones. Para conocer los pasos, consulta [Enviar mensajes utilizando webhooks entrantes](https://api.slack.com/incoming-webhooks).
+{% endalert %}
 
 ## Notificaciones disponibles
 
@@ -43,21 +47,4 @@ Braze envía opcionalmente un informe semanal por correo electrónico a las pers
 
 Puede seleccionar hasta cinco eventos para incluirlos en su informe semanal:
 
-![Seleccionar los eventos que se incluirán en el informe de análisis]({% image_buster /assets/img_archive/company_analytics_report_new.png %})
-
-## Integración del webhook entrante de Slack
-
-Slack tiene una [aplicación de webhook entrante](https://my.slack.com/services/new/incoming-webhook/) que permite enviar mensajes desde fuentes externas a Slack. Para empezar, abre la aplicación de webhooks entrantes.
-
-1. Seleccione el canal de Slack al que desea que lleguen las notificaciones y haga clic en **Añadir integración de Webhooks entrantes**.<br><br>
-    ![Añadir integración de webhooks entrantes en Slack]({% image_buster /assets/img_archive/slack_f.png %})<br><br>
-  Slack generará una URL que tendrás que introducir en Braze para las notificaciones que desees recibir.<br><br>
-2. Copie la **URL del Webhook**.<br><br>
-    ![Copia la URL del webhook]({% image_buster /assets/img_archive/copy_url.png %})<br><br>
-3. Vaya a la pestaña **Preferencias de notificación** en **Configuración de la empresa**.<br><br>
-4. Seleccione la notificación que desea activar para Slack. O, si tienes varias notificaciones que quieres enviar a este canal de Slack, utiliza **Añadir en bloque** para añadir el webhook a varias notificaciones.<br><br>
-    ![Selecciona las notificaciones de Slack para habilitar]({% image_buster /assets/img_archive/click_edit_f.png %}){: style="max-width:60%;"}<br><br>
-5. Introduce la URL que Slack ha generado para ti.
-
-Eso es todo. Deberías empezar a recibir notificaciones sobre tu empresa en este canal de Slack. También puedes consultar el artículo de ayuda de Slack sobre este tema: [Envío de mensajes mediante webhooks entrantes](https://api.slack.com/incoming-webhooks).
-
+![Seleccionar los eventos que se incluirán en el Informe Analítico]({% image_buster /assets/img_archive/company_analytics_report_new.png %})

@@ -27,7 +27,7 @@ Le service 10DLC a été créé pour faciliter spécifiquement l’envoi de mess
 - **Conformité améliorée**: L'utilisation d'un code long local pour les messages texte commerciaux est contraire aux directives [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf). Les numéros 10DLC ont été conçus pour la communication de masse et permettent aux marques de se conformer aux réglementations du secteur sans s’appuyer sur les codes courts.
 - **Abordable** : 10DLC est une excellente option pour les entreprises qui souhaitent commencer à envoyer des SMS ou envoyer des SMS en petits volumes. Pour les marques envoyant des volumes de plus de 100 000 messages par jour, nous recommandons d'utiliser un code court. 
 
-Depuis 2019, les opérateurs ont commencé à adopter 10DLC pour la communication commerciale ; Verizon et AT&T prennent actuellement en charge 10DLC, et nous nous attendons à ce que tous les principaux opérateurs fassent de même. Bien qu’il puisse entraîner des inconvénients à court terme, les clients bénéficieront de meilleurs taux de livrabilité tout en protégeant leurs consommateurs contre les messages indésirables. 
+Depuis 2019, les opérateurs ont commencé à adopter 10DLC pour les messages commerciaux, Verizon et AT&T prenant actuellement en charge 10DLC, et nous nous attendons à ce que tous les principaux opérateurs suivent bientôt. Bien qu’il puisse entraîner des inconvénients à court terme, les clients bénéficieront de meilleurs taux de livrabilité tout en protégeant leurs consommateurs contre les messages indésirables. 
 
 ## Ce que vous devez savoir
 
@@ -82,7 +82,7 @@ Selon votre cas d’utilisation, le score de confiance nécessaire pour atteindr
 | Marketing | Contenu promotionnel tel que des ventes et des offres à durée limitée. |
 | Mixte | Campagne qui couvre plusieurs cas d'utilisation, tels que le service client. | 
 | Enseignement supérieur | Campagnes destinées aux établissements d’enseignement supérieur. |
-| Sondage et vote | Sondages et votes non politiques, tels que les enquêtes auprès des clients. |
+| Bureau de vote & Vote | Sondages et votes non politiques, tels que les enquêtes auprès des clients. |
 | Annonce de service public (PSA) | Des annonces pour sensibiliser à un sujet donné. |
 | Service client | Assistance, gestion de compte et autres interactions avec la clientèle. |
 | Notifications de livraison | Statut des messages de livraison. |
@@ -93,7 +93,7 @@ Selon votre cas d’utilisation, le score de confiance nécessaire pour atteindr
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab Cas d'utilisation déclaré %}
+{% tab Declared Use Case %}
 Un cas d’utilisation déclaré signifie que vous avez choisi un cas d’utilisation non marketing spécifique (par exemple, 2FA ou Notifications de compte).
 
 | Score de confiance | Débit total vers les principaux réseaux américains | AT&T | T-Mobile | Verizon |
@@ -104,7 +104,7 @@ Un cas d’utilisation déclaré signifie que vous avez choisi un cas d’utilis
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab Cas d'utilisation marketing mixte %}
+{% tab Mixed Marketing Use Case %}
 
 Des cas d'utilisation marketing mixtes peuvent être enregistrés pour les clients qui souhaitent envoyer des messages pour plusieurs cas d'utilisation à partir du même ensemble de numéros ou à des fins de marketing.
 
@@ -122,4 +122,4 @@ Consultez l’article 10DLC de Twilio pour vérifier les dernières [estimations
 
 ## Étapes suivantes
 
-Les clients qui ne se sont pas encore inscrits pour 10DLC doivent contacter leur gestionnaire du succès des clients pour enregistrer leurs codes longs. **Si des clients ne parviennent pas à enregistrer leurs codes longs, à compter du 1er octobre 2021, tout expéditeur A2P utilisant des codes longs connaîtra un filtrage intensif de tous les messages.** Contactez votre gestionnaire du succès des clients pour commencer votre inscription à 10DLC. 
+Les clients qui ne se sont pas encore inscrits pour 10DLC doivent contacter leur gestionnaire du succès des clients pour enregistrer leurs codes longs. **Si des clients ne parviennent pas à enregistrer leurs codes longs, à compter du 1er octobre 2021, tout expéditeur A2P utilisant des codes longs connaîtra un filtrage intensif de tous les messages.** Contactez votre gestionnaire satisfaction client pour commencer l'enregistrement de votre 10DLC.

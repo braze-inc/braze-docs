@@ -6,7 +6,7 @@ page_type: reference
 description: "Apprenez à utiliser les différentes fonctionnalités de Braze pour alimenter vos cas d'utilisation de segmentation basée sur les comptes B2B."
 ---
 
-# Mise en place d'une segmentation basée sur les comptes
+# Mettre en place une segmentation basée sur les comptes
 
 > Cette page montre comment utiliser diverses fonctionnalités de Braze pour alimenter vos cas d'utilisation de segmentation basée sur les comptes B2B.
 
@@ -39,7 +39,7 @@ Sélectionnez les variables suivantes pour un cas d'utilisation de segmentation 
 | --- | --- |
 | Catalogue | Catalogue des comptes |
 | Champ du catalogue | ID |
-| Événement personnalisé | lien_compte |
+| Événement personnalisé | account_linked |
 | Propriété de l'événement personnalisé | account_id |
 | (sous Filtrer les résultats SQL) Champ du catalogue | Classification |
 | (sous Filtrer les résultats SQL) Valeur | Entreprise |
@@ -108,7 +108,7 @@ AND salesforce_opportunities.Stage = 'Closed Won'
 
 ### Option 2 : Lorsque vous utilisez des sources connectées pour vos objets de gestion
 
-Pour savoir comment utiliser les sources connectées dans la segmentation, reportez-vous aux [segments CDI.]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/) Utilisez les modèles décrits dans la section [Utilisation des catalogues](#option-1-when-using-catalogs-for-your-business-objects) pour vous inspirer de la manière de formater les tables sources, car vous pouvez les formater comme vous le souhaitez.
+Pour savoir comment utiliser les sources connectées dans la segmentation, reportez-vous à [CDI Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/cdi_segments/). Utilisez les modèles décrits dans la section [Utilisation des catalogues](#option-1-when-using-catalogs-for-your-business-objects) pour vous inspirer de la manière de formater les tables sources, car vous pouvez les formater comme vous le souhaitez.
 
 ## Utilisation de votre extension basée sur le compte dans un segment
 

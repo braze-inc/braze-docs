@@ -48,15 +48,15 @@ OneTrust **Integrations** メニューで、**Credentials**> **Add New** ボタ�
 #### ステップ1:ワークフローの作成
 
 {% tabs %}
-{% tab ユーザー同意の更新 %}
-1. OneTrust 統合メニューで [**Gallery**] > [**Braze**] > [**Add**] に移動し、新しいワークフローを作成します。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+{% tab User Consent Update %}
+1. OneTrust統合メニューで、**Gallery**>**Braze**>**Addに**移動し、新しいワークフローを作成する。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. ワークフローモーダルに名前と通知 メールを入力します。**Create**ボタンをクリックします。作成時に Workflow Builder が表示されます。Brazeワークフローには、削除リクエストの処理に使用できるAPI コールとアクションがシードされます。<br><br>
 3. Workflow Builder で、ワークフローでトリガーするアクションを選択します。<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
-{% tab ユーザー削除 %}
+{% tab User Deletion %}
 
-1. OneTrust 統合メニューで [**Gallery**] > [**Braze**] > [**Add**] に移動し、新しいワークフローを作成します。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. OneTrust統合メニューで、**Gallery**>**Braze**>**Addに**移動し、新しいワークフローを作成する。![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. ワークフローモーダルに名前と通知 メールを入力します。**Create**ボタンをクリックします。作成時に Workflow Builder が表示されます。Brazeワークフローには、削除リクエストの処理に使用できるAPI コールとアクションがシードされます。<br><br>
 3. Workflow Builder で、ワークフローでトリガーするアクションを選択します。<br>![]({% image_buster /assets/img/onetrust/onetrust8.png %})
 {% endtab %}
@@ -64,7 +64,7 @@ OneTrust **Integrations** メニューで、**Credentials**> **Add New** ボタ�
 
 #### ステップ2:アクションの選択
 {% tabs %}
-{% tab ユーザー同意の更新 %}
+{% tab User Consent Update %}
 
 1. 完了したら、**Done**をクリックし、**Add Action**を選択します。選択するアクションは、更新される設定のタイプと使用するエンドポイントによって異なることに注意してください。
 - ユーザーのグローバルサブスクリプション設定を更新するには、**POST ユーザートラック-属性s**アクションを選択します。
@@ -72,7 +72,7 @@ OneTrust **Integrations** メニューで、**Credentials**> **Add New** ボタ�
 2. 目的のアクションを選択し、以前に作成したBraze 認証情報s を選択して、**Next** をクリックします。<br>![]({% image_buster /assets/img/onetrust/onetrust5.png %})
 
 {% endtab %}
-{% tab ユーザー削除 %}
+{% tab User Deletion %}
 
 1. 完了したら、**Done**をクリックし、**Add Action**を選択します。
 - ユーザーをBrazeから削除するには、**POST ユーザー 削除アクション** アクションを選択します。
@@ -83,7 +83,7 @@ OneTrust **Integrations** メニューで、**Credentials**> **Add New** ボタ�
 {% endtabs %}
 #### ステップ3:更新リクエストボディ
 {% tabs %}
-{% tab ユーザー同意の更新 %}
+{% tab User Consent Update %}
 
 1. 本文を更新して、必要なすべてのダイナミック値を含めます。アクションの本体が[`/users/track` エンドポイント](https://www.braze.com/docs/api/endpoints/user_data/post_user_track/) と[`/subscription/status/set` エンドポイント](https://www.braze.com/docs/api/endpoints/subscription_groups/post_update_user_subscription_group_status/) に一致することを確認します。
 2. 組織のニーズを満たすように、追加のパラメータまたは条件付きロジックを使用してワークフローをカスタマイズします。
@@ -96,7 +96,7 @@ OneTrust ワークフローを使用して Braze でサブスクリプション�
 ![]({% image_buster /assets/img/onetrust/onetrust6.png %})
 
 {% endtab %}
-{% tab ユーザー削除 %}
+{% tab User Deletion %}
 
 1. 本文を更新して、必要なすべてのダイナミック値を含めます。アクションの本体が[`/users/delete`エンドポイント]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)と一致することを確認します。
 2. 編集が終了したら、**Finish**、**Activate**を選択してワークフローを有効にします。

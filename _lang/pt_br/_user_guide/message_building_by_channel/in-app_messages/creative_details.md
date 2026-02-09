@@ -4,7 +4,7 @@ article_title: Detalhes criativos
 page_order: 3.5
 layout: dev_guide
 guide_top_header: "Detalhes criativos"
-guide_top_text: "Antes de ser criativo com nossas mensagens no app, você deve conhecer algumas das diretrizes. Todos os modelos de mensagens no app foram projetados para exibir textos de diferentes comprimentos e tamanhos de imagens em dispositivos modernos. Para garantir que sua mensagem seja bem exibida em todos os telefones, tablets e computadores, recomendamos que você siga estas diretrizes e sempre <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>teste suas mensagens</a> antes de lançá-las."
+guide_top_text: "Antes de ser criativo com nossas mensagens no app, você deve conhecer algumas das diretrizes. Todos os modelos de mensagens no app foram projetados para exibir textos de diferentes comprimentos e tamanhos de imagens em dispositivos modernos. Para garantir que sua mensagem seja bem exibida em todos os telefones, tablets e computadores, recomendamos que você siga estas diretrizes e sempre <a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>teste suas mensagens</a> antes de lançá-las."
 description: "Este hub de destino abrange os requisitos de design e conteúdo para os três tipos de mensagens no app: modal, slideup e tela cheia."
 
 channel:
@@ -48,7 +48,7 @@ Em geral, a Braze recomenda o uso de imagens que caibam em uma tela 16:10.
 
 {% alert tip %} Crie ativos com confiança! Nossos modelos de imagem de mensagem no app e sobreposições de zona segura foram projetados para funcionar bem em dispositivos de todos os tamanhos. [Baixe os modelos de design ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab Tela cheia %}
+{% tabs %}{% tab Fullscreen %}
 
 ![Mensagem no app em tela cheia ocupando a tela do aplicativo. A mensagem em tela cheia inclui uma imagem grande, cabeçalho, corpo da mensagem e dois botões.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 

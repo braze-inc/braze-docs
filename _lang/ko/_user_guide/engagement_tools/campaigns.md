@@ -11,13 +11,13 @@ description: "이 랜딩 페이지에는 Braze 대시보드 캠페인이 있습�
 search_rank: 3
 guide_featured_title: "섹션"
 guide_featured_list:
-  - name: 시작하기
+  - name: Getting Started
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: 캠페인 작성
+  - name: 캠페인 구축하기
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     image: /assets/img/braze_icons/list.svg
-  - name: 캠페인 관리
+  - name: 캠페인 관리하기
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
     image: /assets/img/braze_icons/edit-05.svg
   - name: 테스트 캠페인

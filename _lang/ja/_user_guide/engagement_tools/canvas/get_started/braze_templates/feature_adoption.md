@@ -1,5 +1,5 @@
 ---
-nav_title: 機能採用
+nav_title: 機能の採用
 article_title: 機能採用
 page_order: 3
 page_type: reference
@@ -29,16 +29,16 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:60%;"}
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、このキャンバスがユーザフィードバック収集対象のユーザーをターゲット設定するためのものであることを示すようにします。
 3\.説明を更新し、このキャンバスの目的はユーザーにフィードバックの送信を促し、新しいクルーズコントロール機能に対するユーザセンチメントを追跡することであることを明記します。
 4. タグ**Feature approduction** を追加して、キャンバスのホームページでフィルターできるようにします。
 
-![キャンバスの新しい名前と説明。新しい説明では、次のように記述されます。'クルーズコントロールの採用とユーザーセンチメントを追跡するための機能採用キャンバス、繰り返しの食品配送をスケジュールする機能']({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
+![キャンバスの新しい名前と説明。新しい記述にはこうある：'クルーズコントロールの採用とユーザーセンチメントを追跡するための機能採用キャンバス、繰り返しの食品配送をスケジュールするための機能'。]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
-### ステップ 2: コンバージョンイベントの割り当て
+### ステップ 2:コンバージョンイベントの割り当て
 
 次に、機能の導入を通知するためにキャンバスのコンバージョンイベントを追加します。これにより、後でユーザージャーニーで実験パスを調整できます。
 
@@ -69,7 +69,7 @@ tool: Canvas
 2. テンプレートの追加フィルタを削除します。 
 3. カスタムイベント`Has scheduled_delivery for exactly 0 times` を使用してこのフィルターを作成します。これにより、この機能をすでに使用しているユーザーをキャンバスに入ることができなくなります。
 
-![クルーズコントロールを使用したことがないすべてのユーザーを対象とするセグメント。]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
+![クルーズコントロールを使用していないすべてのユーザーのSegment。]({% image_buster /assets/img/canvas_templates/feature_adoption/cruise_control_segment.png %}){: style="max-width:90%;"}
 
 {: start="4"}
 4. Calorie Rocket では、数人のユーザーが新しい機能の Cruise Control をベータテストできるようになっています。ここでは、これらのユーザーがキャンバスに入らないように出口条件を更新します。
@@ -86,16 +86,16 @@ tool: Canvas
 
 1. クルーズコントロール機能は、注文がカートに追加された後でのみ利用可能になるため、最初のアクショングループには「**Added to cart**」という名前を付け、カスタムイベントとして `added_to_cart` を選択します。
 
-![アクショングループ名が「Added to cart」に設定され、「カスタムイベントを実行」が「added_to_cart」に設定されている。]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
+![&quot に設定されたアクショングループ名;cart&quot に追加;および"Perform Custom Event" set to "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\.2番目のアクショングループ**Taken Tour** はそのままにしておきます。ユーザーがアプリをツアーしたかどうかを評価し、アプリがあれば2番目のパスに進みます。
 3\.後続のアクションパス「**使用状況の確認**」については、「**使用されている機能 >3x**」を「**Viewed Cruise Control settings**」に置き換えます。
 4. [**カスタムイベントを実行**] ドロップダウンを選択し、カスタムイベントとして `scheduled_delivery` を選択します。
 
-![アクショングループ名が「使用されている機能 >3x」に設定され、「カスタムイベントを実行」が「scheduled_delivery」に設定されている。]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
+![アクショングループ名が'Used Feature >3x' に設定され、'Perform Custom Event' が'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %} に設定されている。{: style="max-width:60%;"}
 
-#### フィードバック調査の設定
+#### フィードバック調査を設定する
 
 次に、**フィードバック調査**という名前のメッセージステップに進み、初めてクルーズコントロールを使用した後にユーザーが入力するフィードバック調査を追加します。調査でのユーザーの回答の選択肢は次のとおりです。
 

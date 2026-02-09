@@ -15,7 +15,7 @@ channel: content cards
 
 다른 캔버스 메시징 채널과 마찬가지로, 콘텐츠 카드는 사용자가 해당 단계에 대해 지정된 오디언스 및 타겟팅 기준을 충족할 때 사용자의 기기로 전송됩니다. 콘텐츠 카드가 전송된 후, 각 해당 사용자의 피드가 새로 고쳐질 때 다음 번에 카드 피드에서 사용할 수 있습니다.
 
-![Content Cards selected as the messaging channel for a Message step.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
+![메시징 채널로 선택된 콘텐츠 카드가 메시지 단계에 있습니다.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
 Two options that will change how the Content Card step will interact with Canvas are its [expiration](#content-card-expiration) and [removal](#removal).
 
@@ -23,7 +23,7 @@ Two options that will change how the Content Card step will interact with Canvas
 
 새 콘텐츠 카드를 작성할 때 발송 시간에 따라 사용자 피드에서 만료되는 시점을 선택할 수 있습니다. 콘텐츠 카드의 만료에 대한 카운트다운은 사용자가 카드가 전송된 캔버스의 메시지 단계에 도달할 때 시작됩니다. 카드는 이 시점부터 만료될 때까지 사용자의 피드에서 활성화됩니다. 카드는 사용자의 피드에 최대 30일 동안 존재할 수 있습니다. 
 
-![Expiration settings for a Content Card for a Message step that will be removed after three hours in a user's feed.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
+![사용자의 피드에서 3시간 후에 제거될 메시지 단계의 콘텐츠 카드에 대한 만료 설정입니다.]({% image_buster /assets/img_archive/content-cards-in-canvas-expiration.png %})
 
 ### Types of expiration
 
@@ -51,13 +51,13 @@ When you choose a relative date, like "Remove sent cards after 5 days in a user'
 
 Content Cards can be removed when users complete a purchase or perform a custom event. You can select one of the following as the removal event: **Perform Custom Event** and **Make Purchase**. Then, select **Add Event**.
 
-!["Remove cards when users complete a purchase or perform a custom event." selected with the trigger to remove cards for users who make a specific purchase for "Bracelet".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
+!["사용자가 특정 구매를 할 때 카드를 제거하는 트리거와 함께 선택된 '구매 완료 또는 커스텀 이벤트 수행 시 카드를 제거합니다.'입니다." '팔찌'에 대한 특정 구매를 하는 사용자에게 카드를 제거합니다.]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## 보고 및 분석
 
 캔버스에서 콘텐츠 카드 단계를 시작한 후 이 단계를 분석하기 위해 여러 측정기준을 분석할 수 있습니다. 이러한 측정기준에는 발송된 메시지 수, 고유 수신자, 전환율, 총 매출 등이 포함됩니다.
 
-![Analytics for a Message step with the Content Card message performance.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
+![콘텐츠 카드 메시지 성능이 포함된 메시지 단계의 분석입니다.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
 For more information on the available metrics and their definitions, see our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data/report_metrics/).
 

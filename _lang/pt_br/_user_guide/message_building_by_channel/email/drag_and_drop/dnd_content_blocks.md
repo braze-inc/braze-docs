@@ -21,7 +21,7 @@ Os blocos de conteúdo do tipo arrastar e soltar só estão disponíveis para us
 
 Para criar um bloco de conteúdo, faça o seguinte:
 
-{% multi_lang_include create_content_block.md local="dnd" %}
+{% multi_lang_include create_content_block.md location="dnd" %}
 
 {% alert important %}
 Cada bloco de conteúdo de arrastar e soltar é limitado a uma linha. No entanto, você pode usar blocos do editor de arrastar e soltar para criar e personalizar o bloco de conteúdo de acordo com seu envio de mensagens por e-mail.
@@ -37,9 +37,9 @@ Para adicionar um bloco de conteúdo no editor, faça o seguinte:
 
 1. Acesse a guia **Rows (Linhas)** no editor e selecione **Content Blocks (Blocos de conteúdo**). 
 2. Arraste e solte seu bloco de conteúdo no editor de e-mail. 
-3. (Opcional) Ajuste a largura de seu bloco de conteúdo selecionando o botão no menu de navegação. A largura padrão é 100%. <br><br>![Uma seta de dois lados com uma opção para editar a largura.]({% image_buster /assets/img_archive/content_block_width.png %}){: style="max-width:30%;" }<br><br>
+3. (Opcional) Ajuste a largura de seu bloco de conteúdo selecionando o botão no menu de navegação. A largura padrão é 100% quando não especificada nas configurações globais de estilo de seu e-mail; caso contrário, as configurações globais serão respeitadas. <br><br>![Uma seta de dois lados com uma opção para editar a largura.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
-Depois de adicionar o bloco de conteúdo ao editor de e-mail, é possível fazer edições no bloco de conteúdo que não afetarão o bloco de conteúdo original criado em **Modelos e mídias**. Isso ocorre porque os blocos de conteúdo adicionados por arrastar e soltar não estão vinculados ao bloco de conteúdo original. Para visualizar as alterações feitas no bloco de conteúdo original, arraste-o para o editor de e-mail novamente. 
+Depois de adicionar o bloco de conteúdo ao editor de e-mail, é possível fazer edições no bloco de conteúdo que não afetarão o bloco de conteúdo original criado em **Modelos & Media**. Isso ocorre porque os blocos de conteúdo adicionados por arrastar e soltar não estão vinculados ao bloco de conteúdo original. Para visualizar as alterações feitas no bloco de conteúdo original, arraste-o para o editor de e-mail novamente. 
 
 O desalinhamento no editor de arrastar e soltar pode ocorrer quando vários blocos de conteúdo são adicionados a um único bloco de linha. Tente usar blocos de linhas separados para manter o alinhamento de seu conteúdo no nível da linha.
 
@@ -51,12 +51,12 @@ Para adicionar um bloco de conteúdo usando o Liquid, faça o seguinte:
 2. Clique em <i class="fas fa-plus"></i> **Personalization**.
 3. Localize a guia **Add Personalization (Adicionar personalização** ) e selecione **Content Blocks (Blocos de conteúdo** ) no menu suspenso **Personalization Type (Tipo de personalização** ).
 4. Selecione o nome de seu bloco de conteúdo no campo **Atribuição**. O campo Snippet Liquid será preenchido com a Liquid tag do bloco de conteúdo. 
-5. Copie e cole o snippet Liquid em um bloco do editor de texto. <br>![A guia Adicionar personalização com opções.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
+5. Copie e cole o snippet Liquid em um bloco do editor de texto. <br>![A guia Add Personalization com opções.]({% image_buster /assets/img_archive/dnd_content_block_personalization.png %}){: style="max-width:30%;"}
 
 Ao fazer a prévia do envio de mensagens por e-mail, o snippet do Liquid será exibido como o bloco de conteúdo do editor de arrastar e soltar. 
 
 {% alert important %}
-Quando um bloco de conteúdo é adicionado ao editor de e-mail com o Liquid, esse bloco de conteúdo é vinculado ao bloco de conteúdo original criado em **Modelos e mídias**. Isso significa que o bloco de conteúdo será atualizado para refletir quaisquer alterações no modelo original do bloco de conteúdo.
+Quando um bloco de conteúdo é adicionado ao editor de e-mail com o Liquid, esse bloco de conteúdo é vinculado ao bloco de conteúdo original criado em **Modelos & mídias**. Isso significa que o bloco de conteúdo será atualizado para refletir quaisquer alterações no modelo original do bloco de conteúdo.
 {% endalert %}
 
 ## Atualização de blocos de conteúdo

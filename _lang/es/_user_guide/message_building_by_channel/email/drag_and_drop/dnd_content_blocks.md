@@ -37,9 +37,9 @@ Para añadir un Bloque de Contenido en el editor, haga lo siguiente:
 
 1. Vaya a la pestaña **Filas** del editor y seleccione **Bloques de contenido**. 
 2. Arrastre y suelte su Bloque de contenido en el editor de correo electrónico. 
-3. (Opcional) Ajusta la anchura de tu Bloque de contenido seleccionando el botón en el menú de navegación. La anchura predeterminada es 100%. <br><br>![Una flecha de doble cara con una opción para editar la anchura.]({% image_buster /assets/img_archive/content_block_width.png %}){: style="max-width:30%;" }<br><br>
+3. (Opcional) Ajusta la anchura de tu Bloque de contenido seleccionando el botón en el menú de navegación. La anchura predeterminada es del 100% cuando no se especifica en la configuración global de estilo de tu correo electrónico; de lo contrario, se respetará la configuración global. <br><br>![Una flecha de doble cara con una opción para editar la anchura.]({% image_buster /assets/img_archive/content_block_width_updated.png %}){: style="max-width:30%;" }<br><br>
 
-Después de añadir el Bloque de contenido al editor de correo electrónico, puedes realizar ediciones en el Bloque de contenido que no afectarán al Bloque de contenido original que creaste en **Plantillas y medios.** Esto se debe a que los Bloques de contenido añadidos mediante arrastrar y soltar no están vinculados al Bloque de contenido original. Para ver los cambios realizados en el Bloque de contenido original, arrástrelo de nuevo al editor de correo electrónico. 
+Después de añadir el Bloque de contenido al editor de correo electrónico, puedes realizar ediciones en el Bloque de contenido que no afectarán al Bloque de contenido original que creaste en **Plantillas & Medios**. Esto se debe a que los Bloques de contenido añadidos mediante arrastrar y soltar no están vinculados al Bloque de contenido original. Para ver los cambios realizados en el Bloque de contenido original, arrástrelo de nuevo al editor de correo electrónico. 
 
 Puede producirse una desalineación en el editor de arrastrar y soltar cuando se añaden varios bloques de contenido a un único bloque de fila. Pruebe a utilizar bloques de fila separados para mantener la alineación del contenido a nivel de fila.
 
@@ -56,7 +56,7 @@ Para añadir un bloque de contenido mediante Liquid, haga lo siguiente:
 Cuando previsualice su mensaje de correo electrónico, el fragmento de Liquid se mostrará como Bloque de contenido del editor de arrastrar y soltar. 
 
 {% alert important %}
-Cuando se añade un Bloque de contenido en el editor de correo electrónico con Liquid, este Bloque de contenido se vincula al Bloque de contenido original creado en **Plantillas y medios.** Esto significa que el Bloque de Contenido se actualizará para reflejar cualquier cambio en la plantilla original del Bloque de Contenido.
+Cuando se añade un Bloque de contenido en el editor de correo electrónico con Liquid, este Bloque de contenido se vincula al Bloque de contenido original creado en **Plantillas & Medios**. Esto significa que el Bloque de Contenido se actualizará para reflejar cualquier cambio en la plantilla original del Bloque de Contenido.
 {% endalert %}
 
 ## Actualización de bloques de contenido

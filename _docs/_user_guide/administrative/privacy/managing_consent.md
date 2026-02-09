@@ -1,12 +1,12 @@
 ---
-nav_title: Managing consent
-article_title: Managing Consent
+nav_title: Manage consent
+article_title: Manage Consent
 page_order: 10
 page_type: reference
 description: "This reference article provides tips on how to manage consent using Braze."
 ---
 
-# Managing consent
+# Manage consent
 
 > This reference articles provides tips on how to manage consent from your users using Braze.
 

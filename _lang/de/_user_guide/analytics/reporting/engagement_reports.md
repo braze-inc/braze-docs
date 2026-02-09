@@ -43,7 +43,7 @@ Fügen Sie die Kampagnen und Canvas-Nachrichten hinzu, die Sie in Ihrem Bericht 
 - Kampagnen und Canvase manuell auswählen
 - Wählen Sie Kampagnen und Canvase automatisch nach bestimmten Regeln aus.
 
-![engagement_reports_message_selection][2]
+![engagement_reports_message_selection]({% image_buster /assets/img_archive/engagement_report_add_messages.png %})
 
 #### Kampagnen oder Canvase manuell auswählen
 
@@ -57,7 +57,7 @@ Mit dieser Option können Sie automatisch alle Nachrichten aufnehmen, die einen 
 
 Der Schritt **Statistiken hinzufügen** zeigt Ihnen Statistiken für die Arten von Kampagnen oder Canvase, die Sie ausgewählt haben. Wenn Sie zum Beispiel E-Mail Nachrichten ausgewählt haben, können Sie nur die relevanten Nachrichtenstatistiken einsehen. Wenn Sie eine Kombination aus E-Mail und Push gewählt haben, können Sie die Statistiken für diese beiden Kanäle einsehen.
 
-![engagement_report_add_stats][3]
+![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
 | Kanal | Verfügbare Statistiken |
 | ------| --------------|
@@ -94,7 +94,7 @@ Standardmäßig basiert der angezeigte Datenbereich auf der Zeitzone Ihres Unter
 
 Standardmäßig werden die Daten in den Engagement-Berichten täglich angezeigt (ein Tag). Um diese Daten in verschiedenen Intervallen anzuzeigen, wählen Sie eine bestimmte Anzahl von Tagen oder Wochen, um die Daten für den Bericht zu aggregieren. Anstatt also tägliche Metriken zu sehen, können Sie Ihr Engagement nach Woche, Monat, Quartal oder ähnlichem betrachten. Sollte eine zeitgebundene Aggregation nicht ausreichen, können Sie die Daten auch auf Kampagnen- oder Canvas-Ebene exportieren.
 
-![engagement_reports_data_coverage][4]
+![engagement_reports_data_coverage]({% image_buster /assets/img_archive/engagement_report_datacoverage.png %})
 
 #### Bericht planen
 
@@ -103,7 +103,7 @@ Es gibt zwei Berichtszeitpläne:
 - **Sofort:** Wenn der Bericht gestartet wird, versendet Braze ihn sofort.
 - **Mit Termin:** Mit dieser Option können Sie flexibel wählen, wie oft Sie diesen Bericht erhalten möchten. Sie können wählen, ob Sie ihn alle paar Tage, Wochen oder Monate versenden möchten. Sie können auch festlegen, wann der Berichtsversand beendet werden soll.
 
-![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
+![engagement_reports_schedule_report]({% image_buster /assets/img_archive/engagement_report_reportschedule.png %}){: style="max-width:65%;" }
 
 ### Schritt 5: Überprüfen und starten
 
@@ -116,7 +116,3 @@ Sie erhalten eine E-Mail mit Links zu Ihren Berichten zu dem von Ihnen gewählte
 Der Bericht enthält alle Statistiken, die im Abschnitt [Statistiken hinzufügen](#add-statistics-to-your-reports) des Einrichtungsvorgangs ausgewählt wurden.
 
 
-[2]: {% image_buster /assets/img_archive/engagement_report_add_messages.png %}
-[3]: {% image_buster /assets/img_archive/engagement_report_add_stats.png %}
-[4]: {% image_buster /assets/img_archive/engagement_report_datacoverage.png %}
-[5]: {% image_buster /assets/img_archive/engagement_report_reportschedule.png %}

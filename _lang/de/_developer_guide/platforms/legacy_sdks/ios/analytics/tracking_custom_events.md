@@ -1,6 +1,6 @@
 ---
-nav_title: Verfolgen von benutzerdefinierten Ereignissen
-article_title: Verfolgen von benutzerdefinierten Ereignissen für iOS
+nav_title: Tracking angepasster Events
+article_title: Tracking angepasster Events für iOS
 platform: iOS
 page_order: 2
 description: "Dieser referenzierte Artikel beschreibt, wie Sie angepasste Events für Ihre iOS-Anwendung hinzufügen und tracken können."
@@ -10,7 +10,7 @@ noindex: true
 
 {% multi_lang_include deprecations/objective-c.md %}
 
-# Tracking von angepassten Events für iOS
+# Tracking angepasster Events für iOS
 
 Sie können in Braze benutzerdefinierte Ereignisse aufzeichnen, um mehr über die Nutzungsmuster Ihrer App zu erfahren und Ihre Benutzer nach ihren Aktionen auf dem Dashboard zu segmentieren.
 
@@ -26,7 +26,7 @@ Lesen Sie vor der Implementierung unbedingt die Beispiele für die Segmentierung
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logCustomEvent("YOUR_EVENT_NAME")
@@ -57,7 +57,7 @@ Sie können Metadaten zu angepassten Events hinzufügen, indem Sie ein `NSDictio
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 Appboy.sharedInstance()?.logCustomEvent(

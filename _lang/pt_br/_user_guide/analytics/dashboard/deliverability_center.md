@@ -42,7 +42,7 @@ Antes de configurar seu Centro de Entregabilidade, verifique se seus domínios f
 Siga estas etapas para integrar com o Google Postmaster e configurar seu Centro de Entregabilidade:
 
 1. Acessar **análise de dados** > **performance de e-mail**.
-2. Selecione a guia **Centro de Entregabilidade**. <br>![Um Centro de Entregabilidade com o Google Postmaster desconectado.]({% image_buster /assets/img_archive/deliverability_center1.png %})
+2. Selecione a guia **Centro de Entregabilidade**. <br>![Um Centro de Entregabilidade desconectado do Google Postmaster.]({% image_buster /assets/img_archive/deliverability_center1.png %})
 3. Selecione **Conectar com o Google Postmaster**. 
 4. Selecione sua Conta do Google e, em seguida, selecione **Permitir** para permitir que o Braze visualize as métricas de tráfego de e-mail para os domínios registrados nas Ferramentas do Google Postmaster. 
 
@@ -101,7 +101,7 @@ Consulte esta tabela para entender qual porcentagem do seu tráfego de entrada e
 | TLS Saída | Mostra a porcentagem de e-mails enviados (do Gmail) aceitos via TLS em comparação com todos os e-mails enviados para esse domínio. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para mais ideias sobre como melhorar a entregabilidade, leia [armadilhas de entregabilidade e armadilhas de spam]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps). Certifique-se de consultar nossas [Melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) para coisas que você deve verificar antes de enviar uma campanha de e-mail.
+Para mais ideias sobre como melhorar a entregabilidade, leia [armadilhas de entregabilidade e armadilhas de spam]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/#deliverability-pitfalls-and-spam-traps). Certifique-se de consultar nossas [melhores práticas de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) para coisas que você deve verificar antes de enviar uma campanha de e-mail.
 
 ## Configuração do Microsoft Smart Network Data Services (SNDS)
 

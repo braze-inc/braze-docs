@@ -21,12 +21,12 @@ channel:
 웹 푸시 알림은 긴급하고 실행 가능한 업데이트를 전달하여 빠른 전환을 유도합니다. 웹 푸시를 사용하면 다음이 가능합니다.
 
 - 가격 하락과 같이 중요한 데이터가 변경되면 바로 메시지 트리거
-- 간단한 클릭 유도 실행 버튼으로 웹사이트 방문을 유도
+- 명확한 클릭 유도 버튼으로 사람들을 웹사이트로 다시 유도하세요
 - 제품 및 고객 정보로 푸시를 개인화하여 메시지 관련성을 높입니다.
 
-웹 푸시는 앱 푸시 알림이 휴대폰에서 작동하는 방식과 동일하게 작동합니다. For more information on composing a web push, check out [Creating a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+웹 푸시는 앱 푸시 알림이 휴대폰에서 작동하는 방식과 동일하게 작동합니다. 웹 푸시 작성에 대한 자세한 정보는 [Create a push notification]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)을 확인하세요.
 
-![Web push example with the same push message displayed on a laptop and phone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
+![노트북과 휴대폰에 동일한 푸시 메시지가 표시되는 웹 푸시 예시입니다.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## 잠재적 사용 사례
 

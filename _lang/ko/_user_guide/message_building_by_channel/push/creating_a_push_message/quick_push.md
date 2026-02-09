@@ -1,5 +1,5 @@
 ---
-nav_title: Quick Push Messages
+nav_title: Quick push messages
 article_title: Quick Push Messages
 alias: "/quick_push/"
 description: "이 문서에서는 빠른 푸시 편집 환경을 사용하여 푸시 캠페인 또는 캔버스를 만들 때 알아야 할 사항에 대해 설명합니다."
@@ -25,7 +25,7 @@ When creating a push campaign or Canvas in Braze, you can select multiple platfo
 3. 원하는 플랫폼(모바일, 웹, Kindle) 및 모바일 디바이스(iOS, Android)를 선택합니다. 여러 기기를 선택하면 캠페인에 다변량 테스트를 사용할 수 없습니다.
 
 ### Selecting platforms for a campaign
-![Options to select multiple platforms for a push campaign, such as Mobile, Web, and Kindle, and multiple devices, such as iOS and Android.]({% image_buster /assets/img_archive/quick_push_1.png %})
+![푸시 캠페인에 대해 모바일, 웹, 킨들 등 여러 플랫폼과 iOS, Android 등 여러 기기를 선택할 수 있는 옵션입니다.]({% image_buster /assets/img_archive/quick_push_1.png %})
 
 ### Selecting platforms for a Canvas step
 ![Options to select multiple platforms for a push Message step, such as Mobile, Web, and Kindle, and multiple devices, such as iOS and Android.]({% image_buster /assets/img_archive/quick_push_4.png %})
@@ -42,11 +42,11 @@ When creating a push campaign or Canvas in Braze, you can select multiple platfo
 
 미리보기 창에는 각 플랫폼에서 메시지가 어떻게 보일지에 대한 대략적인 모습이 표시됩니다. 글자 수 제한에 도달할 수 있는 지점을 파악할 수 있지만, 캠페인을 보내기 전에 항상 실제 기기에서 메시지를 테스트해야 한다는 점을 잊지 마세요.
 
-![Single editing view with one title, message, and on-click behavior field for three push types: iOS, Android, and Web.]({% image_buster /assets/img_archive/quick_push_2.png %})
+![iOS, Android, 웹의 세 가지 푸시 유형에 대해 하나의 제목, 메시지, 클릭 시 동작 필드가 포함된 단일 편집 보기를 제공합니다.]({% image_buster /assets/img_archive/quick_push_2.png %})
 
-**자산** 섹션에서 각 플랫폼에 표시할 이미지를 선택하거나 업로드합니다. 기기마다 이미지와 글자 수에 대한 사양이 다르다는 점에 유의하세요. Refer to [Push message and image formats]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) for help.
+**자산** 섹션에서 각 플랫폼에 표시할 이미지를 선택하거나 업로드합니다. 기기마다 이미지와 글자 수에 대한 사양이 다르다는 점에 유의하세요. 도움이 필요하면 [푸시 메시지 및 이미지 형식을]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) 참조하세요.
 
-![Assets section of the single editing view with fields for Push Icon Image, iOS notification image, Android notification image, and Web notification image.]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
+![단일 편집 보기의 자산 섹션에 푸시 아이콘 이미지, iOS 알림 이미지, Android 알림 이미지 및 웹 알림 이미지 필드가 있습니다.]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
 
 그런 다음 평소와 같이 푸시 캠페인 설정을 완료합니다. See [Creating a push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) for more details.
 

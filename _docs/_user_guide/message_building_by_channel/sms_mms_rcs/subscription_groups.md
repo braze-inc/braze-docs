@@ -62,7 +62,7 @@ To enable subscription groups for SMS, MMS, or RCS, refer to the following:
 
 {% tabs local %}
 {% tab SMS %}
-During your SMS onboarding process, a Braze onboarding manager will set up subscription groups for your dashboard account. They will work with you to determine how many subscription groups you need and add the appropriate sending phone numbers to your subscription groups. Timelines for setting up a subscription group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions about your Braze dashboard setup, reach out to your Braze representative for support.  
+During your SMS onboarding process, a Braze onboarding manager will set up subscription groups for your dashboard account. They will work with you to determine how many subscription groups you need and add the appropriate sending phone numbers to your subscription groups. Timelines for setting up a subscription group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions about your Braze dashboard setup, contact your Braze representative for support.  
 {% endtab %}
 
 {% tab MMS %}
@@ -99,7 +99,7 @@ Define your audience using one of the following methods. Next, go to the **Send 
 
 | Method                          | Description                                                                                                                                                                                                 |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (e.g., a random 5–10%). Segments update before each send to reflect your current user base.        |
+| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (such as a random 5-10%). Segments update before each send to reflect your current user base.        |
 | **Apply campaign or Canvas filters** | Refine the audience in the **Target Audience** step of your campaign or Canvas. Adjust targeting options without leaving the page for added flexibility.                                         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 

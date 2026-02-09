@@ -32,12 +32,12 @@ Lorsque vous créez des audiences avec le reciblage utilisateur, vous pouvez sou
 
 Les utilisateurs peuvent être filtrés en fonction de la date à laquelle ils ont reçu pour la dernière fois un SMS, un MMS ou un RCS, ou en fonction de la date à laquelle ils ont reçu un SMS, un MMS ou un RCS dans le cadre d'une campagne spécifique. Les filtres peuvent être définis dans l'étape " **Audiences cibles"** du générateur de campagne. 
 
-**Filtre sur la dernière réception SMS/MMS/RCS**<br>
-![Filtre de segmentation Dernier SMS reçu après le 8 décembre 2020.]({% image_buster /assets/img/sms/filter2.png %})
+**Filtre sur le dernier SMS/MMS/RCS reçu**<br>
+![Filtre de segmentation Dernier SMS reçu après le 8 décembre 2020.]({% image_buster /assets/img/sms/filter2.png %})
 
-**Filtre sur les messages reçus dans le cadre de la campagne SMS/MMS/RCS **<br>
+**Filtre sur les messages reçus dans le cadre d'une campagne SMS/MMS/RCS**<br>
 Filtre les utilisateurs qui ont reçu un message d'une campagne spécifique. Avec ce filtre, vous avez également la possibilité de filtrer les personnes qui n'ont pas reçu de messages d'une campagne. <br>
-![Filtre de segmentation A reçu un message de la campagne "SMS retargeting".]({% image_buster /assets/img/sms/filter1.png %})
+![Filtre de segmentation A reçu un message de la campagne « Reciblage SMS ».]({% image_buster /assets/img/sms/filter1.png %})
 
 ### Déclencher des messages lorsque les utilisateurs reçoivent des SMS, MMS ou RCS {#trigger-messages}
 
@@ -72,20 +72,20 @@ Outre les trois catégories de mots-clés par défaut (Abonnement, Désabonnemen
 
 Filtrez la récurrence de la réponse d'un utilisateur à votre programme SMS, MMS ou RCS. Ce filtre évalue la dernière date à laquelle un utilisateur a envoyé un message entrant entrant dans l'une des catégories de mots-clés. 
 
-![Filtre de segmentation Dernier SMS envoyé au groupe d'abonnement "Marketing sms" avec le mot-clé "Abonnement" après le 11 août 2020.]({% image_buster /assets/img/sms/retargeting1.png %}).
+![Filtre de segmentation Dernier SMS envoyé au groupe d’abonnement « SMS marketing » avec le mot-clé « Abonnement » après le 11 août 2020.]({% image_buster /assets/img/sms/retargeting1.png %})
 
 ### Filtrer par attribution de campagne ou de Canvas
 
 Filtre pour les utilisateurs qui ont répondu à une campagne SMS, MMS ou RCS spécifique ou à un composant Canvas, une catégorie de mots clés ou une étiquette.
 
 **Filtrer les réponses à une campagne spécifique par catégorie de mots-clés**<br>
-![Campagne avec le filtre « A répondu au SMS » pour la campagne « Promotion » « SMS-283 ». Sous le filtre, la fonctionnalité mentionne "Ce filtre expirera 25 mois après l'envoi du dernier message de "Promotion" s'il n'est pas utilisé dans le cadre d'une campagne active".]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
+![Campagne avec le filtre « A répondu au SMS » pour la campagne « Promotion » « SMS-283 ». Dans le filtre, la fonction indique « Ce filtre expirera 25 mois après l’envoi du dernier message de « Promotion » s’il n’est utilisé dans aucune campagne active. »]({% image_buster /assets/img/sms/clicked_opened_campaign.png %})
 
 **Filtrer en fonction des réponses à une campagne ou à un canvas avec une étiquette spécifique**
-![Campagne avec le filtre "A répondu au SMS" pour la campagne ou le canvas avec l'étiquette "Curbside Messaging Service C".]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
+![Campagne avec le filtre « A répondu au SMS » pour la campagne ou le Canvas avec la balise « Service de messagerie Curbside C ».]({% image_buster /assets/img/sms/clicked_opened_campaign_canvas_tag.png %})
 
 **Filtrer en répondant à une étape spécifique**
-![Campagne avec le filtre "A répondu au SMS" pour l'étape "SMS Double Opt" "Étape - Aide".]({% image_buster /assets/img/sms/clicked_opened_step.png %})
+![Campagne avec le filtre « A répondu au SMS » pour l’étape « Double abonnement SMS » « Étape - Aide ».]({% image_buster /assets/img/sms/clicked_opened_step.png %})
 
 ### Déclencher des messages par mot-clé
 
@@ -98,11 +98,11 @@ Si un Canvas basé sur une action est déclenché par un message SMS ou MMS entr
 {% endalert %}
 
 **Déclencheur par catégorie de mots-clés entrants**<br>
-![Campagne SMS basée sur l'action avec le filtre de segmentation Envoi du mot-clé "Opt-in" au groupe d'abonnement "Marketing sms".]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
+![Campagne SMS par événement avec le filtre de segmentation Envoyer le mot-clé « Abonnement » au groupe d’abonnement « SMS marketing ».]({% image_buster /assets/img/sms/retargeting2.png %}){: style="margin-top:10px;"}
 
 **Déclenchement par mots-clés arbitraires**<br>
 Remarque : lorsque vous déclenchez un message à une réponse de mot-clé « Autre », vous pouvez évaluer la correspondance exacte du texte du corps du mot-clé. Cette correspondance obéit aux mêmes règles indiquées : Seul le **message avec exactement un mot** est traité (_non sensible_ à la casse). Un mot-clé envoyé `Hello Braze!` ne correspond pas aux critères montrés dans l’exemple suivant.
-![Campagne SMS basée sur l'action avec la catégorie de mots clés "Autre", le corps du message étant exactement "Bonjour" ou "Hey".]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
+![Campagne SMS par événement avec la catégorie de mots-clés « Autre », où le corps du message est exactement « Bonjour » ou « Salut ».]({% image_buster /assets/img/sms/retargeting3.png %}){: style="margin-top:10px;"}
 
 **Mots clés du modèle**<br>
 Lorsque vous déclenchez une campagne ou un composant Canvas sur un SMS ou MMS entrant, vous pouvez créer un modèle pour le texte ou les pièces jointes que votre utilisateur a envoyées dans le corps de votre campagne ou du Canvas avec Liquid. Vous pourrez accéder à la réponse de l’utilisateur et l’inclure dans votre réponse, puis appliquer une logique conditionnelle ou toute autre opération possible dans Liquid. 
@@ -125,5 +125,5 @@ Want to receive a specific deal? Just text us the category you're interested in.
 
 {% endraw %}
 
-[16]: {% image_buster /assets/img/keyword_example1.jpg %}
-[16]: {% image_buster /assets/img/sms/retargeting4.png %}
+[16] : {% image_buster /assets/img/keyword_example1.jpg %}
+[16] : {% image_buster /assets/img/sms/retargeting4.png %}

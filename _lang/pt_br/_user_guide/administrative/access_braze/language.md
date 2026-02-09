@@ -15,10 +15,10 @@ Este artigo descreve como alterar o idioma em que o dashboard da Braze é exibid
 
 O dashboard do Braze está disponível em [vários idiomas](#supported-languages). Você pode alterar o idioma do visor para o idioma de sua preferência a qualquer momento.
 
-1. No cabeçalho global, clique em <i class="fa-solid fa-globe" aria-label="Selecione seu idioma"></i>.
+1. No cabeçalho global, selecione <i class="fa-solid fa-globe" aria-label="Selecione seu idioma"></i>.
 2. Escolha seu idioma na lista.
 
-![]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:60%"}
+![Inglês selecionado para o idioma do dashboard do Braze.]({% image_buster /assets/img_archive/language_dashboard.png %}){: style="max-width:40%"}
 
 Pode levar alguns minutos para que o dashboard seja recarregado.
 
@@ -26,6 +26,7 @@ Pode levar alguns minutos para que o dashboard seja recarregado.
 
 Você pode selecionar entre os seguintes idiomas compatíveis:
 
+- Alemão (Deutsch)
 - Inglês
 - Espanhol (Español)
 - Francês (Français)

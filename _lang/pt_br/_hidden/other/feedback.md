@@ -1,58 +1,69 @@
 ---
-nav_title: Feedback da documentação
+nav_title: Feedback sobre a documentação
 permalink: /feedback/
 hide_toc: true
 ---
 
 <fieldset style="margin-top: 60px;">
-<legend style="font-size: 2.5rem;color: #212123;font-weight:bold;">Feedback da documentação</legend>
+<legend style="font-size: 2.5rem;color: #212123;font-weight:bold;">Feedback sobre a documentação</legend>
 <div id="feedback">
     <div id="feedback_section">
-    Tem ideias para melhorar nossos documentos ou notou algo errado? Gostaríamos muito de ouvir sua opinião! Nossa equipe analisa cada envio para continuar melhorando as coisas.<br /><br />
+    Tem ideias para melhorar nossos documentos ou notou algo errado? Adoraríamos ouvir de você! Nossa equipe revisa cada envio para continuar melhorando as coisas.<br /><br />
 
-    <b>Em média, qual é a utilidade dos documentos do Braze para você?</b><br />
+    <b>How useful do you find Braze docs, on average?</b><br />
 
     <div id="feedback_answer_star">
       <div class="rating-list">
         <div class="feedback-star">
-          <input type="radio" id="rating_1" name="feedback_rating" value="Very Unhelpful" tabindex="-1"> <label for="rating_1" class="star-label" tabindex="0" aria-label="Muito inútil"> <i class="fas fa-star" data-value="Very Unhelpful" title="Muito inútil"></i><br />1<br />Não é útil</label>
+          <input type="radio" id="rating_1" name="feedback_rating" value="Very Unhelpful" tabindex="-1">
+          <label for="rating_1" class="star-label" tabindex="0" aria-label="Very Unhelpful">
+            <i class="fas fa-star" data-value="Very Unhelpful" title="Very Unhelpful"></i><br />1<br />Not Useful</label>
         </div>
         <div class="feedback-star">
-          <input type="radio" id="rating_2" name="feedback_rating" value="Unhelpful" tabindex="-1"> <label for="rating_2" class="star-label" tabindex="0" aria-label="Inútil"> <i class="fas fa-star" data-value="Unhelpful" title="Inútil"></i><br />2<br />
+          <input type="radio" id="rating_2" name="feedback_rating" value="Unhelpful" tabindex="-1">
+          <label for="rating_2" class="star-label" tabindex="0" aria-label="Unhelpful">
+            <i class="fas fa-star" data-value="Unhelpful" title="Unhelpful"></i><br />2<br />
           </label>
         </div>
         <div class="feedback-star">
-          <input type="radio" id="rating_3" name="feedback_rating" value="Somewhat Helpful" tabindex="-1"> <label for="rating_3" class="star-label" tabindex="0" aria-label="Um pouco útil"> <i class="fas fa-star" data-value="Somewhat Helpful" title="Um pouco útil"></i><br />3<br />Um pouco útil</label>
+          <input type="radio" id="rating_3" name="feedback_rating" value="Somewhat Helpful" tabindex="-1">
+          <label for="rating_3" class="star-label" tabindex="0" aria-label="Somewhat helpful">
+            <i class="fas fa-star" data-value="Somewhat Helpful" title="Somewhat Helpful"></i><br />3<br />Somewhat Useful</label>
         </div>
 
         <div class="feedback-star">
-          <input type="radio" id="rating_4" name="feedback_rating" value="Helpful" tabindex="-1"> <label for="rating_4" class="star-label" tabindex="0" aria-label="Útil"> <i class="fas fa-star" data-value="Helpful" title="Útil"></i><br />4<br />
+          <input type="radio" id="rating_4" name="feedback_rating" value="Helpful" tabindex="-1">
+          <label for="rating_4" class="star-label" tabindex="0" aria-label="Helpful">
+            <i class="fas fa-star" data-value="Helpful" title="Helpful"></i><br />4<br />
           </label>
         </div>
 
         <div class="feedback-star">
-          <input type="radio" id="rating_5" name="feedback_rating" value="Very Helpful" tabindex="-1"> <label for="rating_5" class="star-label" tabindex="0" aria-label="Muito útil"> <i class="fas fa-star" data-value="Very Helpful" title="Muito útil"></i><br />5<br />Muito útil </label>
+          <input type="radio" id="rating_5" name="feedback_rating" value="Very Helpful" tabindex="-1">
+          <label for="rating_5" class="star-label" tabindex="0" aria-label="Very Helpful">
+            <i class="fas fa-star" data-value="Very Helpful" title="Very Helpful"></i><br />5<br />Very Useful
+          </label>
         </div>
 
       </div>
     </div>
     <div style="margin-top: 15px;">
-      <b>Compartilhe seu feedback</b> <br />
-      <textarea id="feedback_comment" placeholder="&quot;Não consegui encontrar nenhuma informação sobre essa mensagem de erro&quot;"></textarea><br />
-        Tem mais alguma dúvida? Fale com nossa equipe de suporte para saber mais.
+      <b>Share your feedback</b> <br />
+      <textarea id="feedback_comment" placeholder="&quot;I couldn’t find any information about this error message&quot;"></textarea><br />
+        Have questions? Contact our support team for assistance.
     </div>
-    <button type="submit" name="submit_feedback" value="Enviar feedback" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> Enviar feedback </button>
+    <button type="submit" name="submit_feedback" value="Submit feedback" class="btn btn-black" id="feedback_submit" role="button" style="margin-top:15px;"> Submit feedback </button>
   </div>
   <div id="feedback_msg">
   </div>
 
   <hr style="border: 1px solid #CDCDCF;margin-top:48px;"/>
 
-  <h3> Ajude-nos a tornar esses documentos excelentes</h3>
+  <h3> Ajude-nos a tornar estes documentos ótimos</h3>
 
-  O Braze Docs é um projeto de código aberto com o qual todos são bem-vindos a contribuir. Junte-se a mais de 288 colaboradores e envie sua primeira solicitação pull hoje mesmo. <br /><br />
+  Os Documentos Braze são um projeto de código aberto ao qual todos são bem-vindos para contribuir. Junte-se a 288+ colaboradores e envie sua primeira solicitação de pull hoje. <br /><br />
 
-  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="ContribuindoComece a" class="btn btn-white">contribuir</button>
+  <button type="submit" onclick="location.href='{{site.baseurl}}/contributing/home'" value="Contribuindo" class="btn btn-white">Comece a contribuir</button>
 
 </div>
 </fieldset>

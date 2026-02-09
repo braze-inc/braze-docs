@@ -24,12 +24,12 @@ This feature gives brands the option to control what specific first-party data i
 
 {% alert important %}
 **Audience Sync Pro disclaimer**<br>
-Braze Audience Sync to Criteo is an Audience Sync Pro integration. For more information on this integration, reach out to your Braze account manager. <br> 
+Braze Audience Sync to Criteo is an Audience Sync Pro integration. For more information on this integration, contact your Braze account manager. <br> 
 {% endalert %}
 
 ## Prerequisites 
 
-You will need to ensure that you have the following items created and/or completed prior to setting up your Audience Sync to Criteo.
+You must ensure that you have the following items created and/or completed prior to setting up your Audience Sync to Criteo.
 
 | Requirement | Origin | Description |
 | --- | --- | --- |
@@ -41,17 +41,21 @@ You will need to ensure that you have the following items created and/or complet
 
 ### Step 1: Connect to Criteo
 
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Criteo to your Braze account.
+{% endalert %}
+
 In the Braze dashboard, go to **Partner Integrations** > **Technology Partners** and select **Criteo**. Under Criteo Audience Export, select **Connect Criteo**.
 
 ![Criteo technology page in Braze that includes an Overview section and Criteo section with the Connected Criteo button.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
-A Criteo oAuth page will appear to authorize Braze for the permissions related to your Audience Sync integration.
+A Criteo oAuth page appears to authorize Braze for the permissions related to your Audience Sync integration.
 
 Once you have selected confirm, you’ll then be redirected back into Braze to select which Criteo ad accounts you wish to sync to. 
 
 ![A list of available ad accounts you can connect to Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
+After you have successfully connected, you are taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
 ![An updated version of the Criteo technology partners page showing the ad accounts successfully connected.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 
@@ -94,7 +98,7 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 ![Expanded view of the Custom Audience Canvas step. Here, the desired Ad account is selected, and a new audience is created.]({% image_buster /assets/img/criteo/criteo3.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze displays a notification at the top of the step editor if the audience is created successfully or if errors arise. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
 ![An alert that appears after a new audience is created in the Canvas component.]({% image_buster /assets/img/criteo/criteo1.png %})
 
@@ -119,9 +123,9 @@ You can view the audience in Criteo by going into your ads manager account and t
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync step, Braze will sync these users in near real-time while also respecting Criteo's API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Criteo.
+As users reach the Audience Sync step, Braze syncs them in near real time while respecting Criteo's API rate limits. Braze batches and processes as many users as possible every five seconds before sending them to Criteo.
 
-Criteo's API rate limit states no more than 250 requests per minute. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to ~13 hours. If the sync is not possible, these users are listed under the Users Errored metric. 
+Criteo's API rate limit allows no more than 250 requests per minute. If a customer reaches this limit, Braze retries the sync for up to ~13 hours. If the sync is still not possible, Braze lists these users under the Users Errored metric. 
 
 ## Understanding analytics
 

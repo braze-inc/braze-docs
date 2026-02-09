@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "WhatsApp は、企業向けの対話ベースのメッセージングを提供する、世界中で使用されている人気のピアツーピアメッセージング プラットフォームです。WhatsApp メッセージングチャネルは、WhatsApp プラットフォーム上のユーザーと顧客に直接リーチする方法を提供します。<br><br>** WhatsApp アクセスは、一部の Braze パッケージでのみ使用できます。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。**"
+guide_top_text: "WhatsApp は、企業向けの対話ベースのメッセージングを提供する、世界中で使用されている人気のピアツーピアメッセージング プラットフォームです。WhatsApp メッセージングチャネルは、WhatsApp プラットフォーム上のユーザーと顧客に直接リーチする方法を提供します。<br><br>**利用可能なWhatsAppはBrazeパッケージによって異なる。まずはアカウントマネージャーまたはカスタマーサクセスマネージャーにご連絡を。"
 description: "このランディングページは、WhatsApp キャンペーンの作成方法、オプトインとオプトアウト、クイック返信、レポートなど、WhatsApp のすべての機能のホームページです。"
 search_rank: 3
 alias: /whatsapp/
@@ -15,6 +15,9 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "WhatsApp設定"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "WhatsApp コネクタを持ち込む"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
   image: /assets/img/braze_icons/whatsapp.svg
 - name: "WhatsAppサブスクリプショングループ"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
@@ -51,6 +54,9 @@ guide_featured_list:
 - name: "カスタムドメイン"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
   image: /assets/img/braze_icons/link-03.svg
+- name: "WhatsApp ユースケース"
+  link: /docs/whatsapp_use_cases/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "WhatsAppに関するよくある質問"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

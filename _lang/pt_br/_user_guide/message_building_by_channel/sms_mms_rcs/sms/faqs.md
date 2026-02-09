@@ -88,7 +88,7 @@ Antes de enviar mensagens SMS contendo URLs para usuários em determinados país
 Quando vários perfis de usuários que compartilham um número de telefone (ativado para SMS) forem elegíveis para uma campanha baseada em ação ou um componente do Canvas ao mesmo tempo, disparado pelo evento de um SMS recebido, o Braze fará a deduplicação dos usuários no nível do componente do Canvas. Isso impedirá que os usuários recebam mais de um texto SMS para um componente do Canva, mesmo que vários usuários compartilhem o mesmo número de telefone. 
 
 {% alert note %}
-O Braze não faz a deduplicação por número de telefone para as telas programadas.
+O Braze não faz a deduplicação por número de telefone para as telas agendadas.
 {% endalert %}
 
 O Braze usará o seguinte fluxo para determinar o perfil do destinatário:
@@ -101,6 +101,8 @@ Se você receber uma palavra-chave "START" ou "STOP" do número de telefone comp
 {% alert important %}
 Se você escalonar seus usuários em um Canvas e tiver horários de agendamento diferentes para cada componente do Canvas, poderá enviar mensagens duplicadas a um usuário com o mesmo e-mail ou telefone.
 {% endalert %}
+
+Para evitar atualizações desnecessariamente grandes, o Braze atualizará um máximo de 100 perfis de usuários que compartilham um identificador quando for feita uma atualização de inscrição. Se mais de 100 perfis de usuários compartilharem o mesmo número de telefone, nem todos os perfis serão atualizados.
 
 ### As propriedades do evento SMS capturarão palavras-chave em uma frase?
 
@@ -118,7 +120,7 @@ Você pode encontrar seu `app_id` navegando até **Configurações** > **Configu
 
 ### Como serei cobrado pelo SMS?
 
-Além das tarifas para códigos curtos e longos, o Braze oferece uma cota de mensagens SMS para diferentes países. Ou seja, trabalhamos com você para definir um determinado número de segmentos de mensagens para diferentes países, que você usará para enviar campanhas de mensagens SMS. O faturamento é feito pelo número de segmentos de mensagens enviados por país. Para saber mais sobre como os segmentos de mensagens são calculados, consulte nosso guia [Segmentos de mensagens e limites de cópia]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Seu gerente de conta entrará em contato com você para informá-lo se estiver próximo de atingir seu limite máximo, fornecendo relatórios relevantes para ajudá-lo a se manter informado. Para mais perguntas sobre excedentes, entre em contato com seu representante Braze.
+Além das tarifas para códigos curtos e longos, o Braze oferece uma cota de mensagens SMS para diferentes países. Ou seja, trabalhamos com você para definir um determinado número de segmentos de mensagens para diferentes países, que você usará para enviar campanhas de mensagens SMS. O faturamento é feito pelo número de segmentos de mensagens enviados por país. Para saber mais sobre como os segmentos de mensagens são calculados, consulte nosso guia [Segmentos de mensagens e limites de cópia]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Seu gerente de conta entrará em contato com você para informá-lo se estiver próximo de atingir o máximo, fornecendo relatórios relevantes para ajudá-lo a se manter informado. Para obter mais informações sobre excedentes, entre em contato com o representante da Braze.
 
 ### Se uma mensagem for enviada para um telefone fixo, ela ainda será contabilizada em minha contagem de envios de SMS?
 
@@ -131,4 +133,4 @@ Em outros países:
 
 ### Se um usuário tiver aceitação e enviar uma palavra-chave para nosso código curto e longo, ele receberá a resposta que configuramos para essa palavra-chave na Braze?
 
-Se um usuário tiver aceitação e enviar uma palavra-chave de uma das [categorias de palavras-chave padrão]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), ele receberá a resposta para essa palavra-chave. Se um usuário tiver aceitação e enviar uma [palavra-chave personalizada]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), ele não receberá a resposta para essa palavra-chave. 
+Se um usuário tiver aceitação e enviar uma palavra-chave de uma das [categorias de palavras-chave padrão]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), ele receberá a resposta para essa palavra-chave. Se um usuário tiver aceitação e enviar uma [palavra-chave personalizada]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), ele não receberá a resposta para essa palavra-chave.

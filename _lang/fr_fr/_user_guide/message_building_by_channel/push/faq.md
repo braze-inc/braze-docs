@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: FAQ sur la poussée
-page_order: 80
+page_order: 25
 description: "Cet article aborde certaines des questions les plus fréquemment posées lors de l'implémentation des campagnes de push."
 page_type: FAQ
 channel:

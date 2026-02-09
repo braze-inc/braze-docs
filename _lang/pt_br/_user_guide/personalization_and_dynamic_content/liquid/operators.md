@@ -8,9 +8,9 @@ description: "Esta página de referência nota os operadores que o Liquid suport
 
 # Operadores
 
-> O Liquid suporta muitos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que podem ser usados em suas declarações condicionais. Esta página cobre os operadores que Liquid suporta e fornece casos de uso de como você pode usá-los em suas mensagens.
+> O Liquid oferece suporte a muitos [operadores](https://docs.shopify.com/themes/liquid/basics/operators) que podem ser usados em suas instruções condicionais. Esta página cobre os operadores que Liquid suporta e fornece casos de uso de como você pode usá-los em suas mensagens.
 
-Esta tabela lista os operadores que são suportados. Nota que parênteses são caracteres inválidos em Liquid e impedem que suas tags funcionem.
+Esta tabela lista os operadores que são suportados. Note que os parênteses são caracteres inválidos no Liquid e impedem que suas tags funcionem.
 
 |   Sintaxe| Descrição do operador|
 |---------|-----------|
@@ -29,7 +29,7 @@ Esta tabela lista os operadores que são suportados. Nota que parênteses são c
 
 Vamos passar por alguns tutoriais para aprender como usar esses operadores em suas campanhas de marketing:
 
-### Escolha a mensagem com um atributo personalizado inteiro
+### Escolha uma mensagem com um atributo personalizado inteiro
 
 Vamos enviar notificações por push com descontos promocionais personalizados para usuários que fizeram ou não fizeram compras. A notificação por push usará um atributo personalizado inteiro chamado `total_spend` para verificar o total gasto por um usuário.
 
@@ -63,7 +63,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 
 ![Um criador de notificações por push com o código Liquid completo do tutorial.]({% image_buster /assets/img/liquid-if-totalspend.png %}){: width="100%"}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
@@ -75,7 +75,7 @@ Need a sign to update your wardrobe? We added a 15% discount code to your accoun
 {% endraw %}
 {% enddetails %}
 
-Agora, se o atributo personalizado "Total Gasto" de um usuário for maior que `0`, eles receberão a mensagem:
+Agora, se o atributo personalizado "Total Spend" de um usuário for maior que `0`, ele receberá a mensagem:
 
 ```
 Surprise! We added a 15% discount code to your account that automatically applies to your next order.
@@ -86,7 +86,7 @@ Se o atributo personalizado "Total Gasto" de um usuário não existir ou for igu
 Need a sign to update your wardrobe? We added a 15% discount code to your account that will automatically apply to your first order.
 ```
 
-### Escolha a mensagem com um atributo personalizado de string
+### Escolha uma mensagem com um atributo personalizado string
 
 Vamos enviar notificações por push para usuários e personalizar a mensagem com base no jogo mais recentemente jogado por cada usuário. Isso usará um atributo personalizado string chamado `recent_game` para verificar qual jogo um usuário jogou por último.
 
@@ -110,11 +110,11 @@ Your fleet awaits your next orders. Log on when you're ready to rejoin the war f
 {% endraw %}
 
 {: start="3"}
-3\. Use a tag `elsif` com os operadores diferente de (`!=`) e "e" (`&&`) para verificar se o usuário tem um jogo recente (significa que o valor não está em branco) e que o jogo não é *Awkward Dinner Party* ou *Proxy War 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
+3\. Use a tag `elsif` com os operadores "does not equal" (`!=`) e "and" (`and`) para verificar se o usuário tem um jogo recente (ou seja, se o valor não está em branco) e se o jogo não é *Awkward Dinner Party* ou *Proxy War 3: War of Thirst*. Em seguida, crie uma mensagem para enviar a esses usuários.
 
 {% raw %}
 ```liquid
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 ```
 {% endraw %}
@@ -138,14 +138,14 @@ Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{custom_attribute.${recent_game}}} == 'Awkward Dinner Party' %}
 You are formally invited to our next dinner party. Log on next week for another round of delectable dishes and curious conversations.
 {% elsif {{custom_attribute.${recent_game}}} == 'Proxy War 3: War of Thirst' %}
 Your fleet awaits your next orders. Log on when you're ready to rejoin the war for hydration.
-{% elsif {{custom_attribute.${recent_game}}} != blank && 'Awkward Dinner Party' or 'Proxy War 3: War of Thirst' %}
+{% elsif {{custom_attribute.${recent_game}}} != blank and {{custom_attribute.${recent_game}}} != 'Awkward Dinner Party' and {{custom_attribute.${recent_game}}} != 'Proxy War 3: War of Thirst' %}
 Limited Time Deal! Get 15% off our best-selling classics!
 {% else %}
 Hey! I've got a deal for you. Buy 2 of our newest releases and get 10% off!
@@ -204,7 +204,7 @@ Stream now!
 ```
 {% endraw %}
 
-{% details Código Liquid completo %}
+{% details Full Liquid code %}
 {% raw %}
 ```liquid
 {% if {{${time_zone}}} =='America/Los_Angeles' %}

@@ -27,7 +27,7 @@ Notification étendue (Android) | 500 KB | 5 MB | PNG, JPEG
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab Texte %}
+{% tab Text %}
 
 | Type de message | Longueur recommandée du message (texte uniquement) | Longueur recommandée du message (riche)
 --- | ---
@@ -41,7 +41,7 @@ Barre de notification (Android) | 597 caractères | S.O.
 Vous vous demandez combien de caractères vous pouvez utiliser dans une notification push iOS sans qu’elle soit tronquée ? Consultez nos [directives sur le nombre de caractères pour iOS.]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
 
 {% endtab %}
-{% tab Taille de la charge utile %}
+{% tab Payload Size %}
 
 **Plateforme** | **Taille**
 --- | ---
@@ -51,12 +51,12 @@ Android (FCM) | 4 Ko
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Exemple d'image %}
+{% tab Image Example %}
 {% subtabs %}
 {% subtab iOS %}
 
 ![Notification push iOS avec un texte qui dit : «∘Bonjour ! Ceci est une notification push iOS avec une image » avec un émoji. Une petite image figure à côté du texte.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
-![Notification push iOS sur une notification push dure avec le même texte que le message précédent avec une image développée précédant le texte.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
+![Notification push iOS sur un hard push avec le même texte que le message précédent avec une image développée précédant le texte.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endsubtab %}
 {% subtab Android %}
@@ -70,15 +70,15 @@ Les notifications avec de grandes images s’affichent mieux lorsque vous utilis
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Exemple de texte %}
+{% tab Text Example %}
 {% subtabs %}
 {% subtab iOS %}
 
-![Notification push iOS avec un texte qui dit : «∘Bonjour ! Ceci est une notification push iOS. »]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![Notification push iOS avec un texte qui dit : «∘Bonjour ! Ceci est une notification push iOS ».]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endsubtab %}
 {% subtab Android %}
-![Notification push Android affichée sur l'écran d'accueil.]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![Notification push Android affichée sur l’écran d’accueil.]({% image_buster /assets/img_archive/Push_Android_2.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -112,7 +112,7 @@ Opera | macOS | S.O.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Texte %}
+{% tab Text %}
 
 | **Navigateur** | **Plateforme** | **Longueur maximale du titre**  | **Longueur maximale du corps du message**
 | --- | --- | --- | ---

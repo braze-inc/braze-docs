@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## Acerca del análisis predictivo de eventos
 
-En cuanto la predicción haya terminado de entrenarse y esta página esté llena, puedes empezar a utilizar [filtros]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) en segmentos o campañas para empezar a utilizar los resultados del modelo. Si quieres ayuda para decidir a quién dirigirte y por qué, esta página puede ayudarte basándose en la precisión histórica del modelo y en tus propios objetivos de negocio.
+En cuanto la predicción haya terminado de entrenarse y esta página esté llena, puedes empezar a utilizar [filtros]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) en segmentos o campañas para empezar a utilizar los resultados del modelo. Si quieres ayuda para decidir a quién dirigirte y por qué, esta página puede ayudarte basándose en la precisión histórica del modelo y en tus propios objetivos de negocio.
 
 Estos son los componentes del análisis predictivo de eventos:
 

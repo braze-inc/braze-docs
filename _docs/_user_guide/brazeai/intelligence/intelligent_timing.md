@@ -22,7 +22,7 @@ Braze calculates the optimal send time based on a statistical analysis of your u
 
 For example, Sam might open your emails in the morning regularly, but she opens your app and interacts with notifications in the evening. That means Sam would receive an email campaign with Intelligent Timing in the morning, while she would receive campaigns with push notifications in the evening, when she's more likely to engage.
 
-If a user doesn't have enough engagement data for Braze to calculate the optimal send time, you can specify a fallback time.
+If a user doesn't have any relevant engagement data for Braze to calculate the optimal send time, you can specify a fallback time.
 
 ## Use cases
 
@@ -43,7 +43,7 @@ This section describes how to configure Intelligent Timing for your campaigns an
 3. Under **Time-Based Scheduling Options**, select **Intelligent Timing**.
 4. Set the entry frequency. For one-time sends, select **Once** and select a send date. For recurring sends, select **Daily**, **Weekly**, or **Monthly** and configure the recurrence options. See [limitations](#limitations) for more guidance.
 5. Optionally, configure [Quiet Hours](#quiet-hours).
-6. Specify a [fallback time](#campaign-fallback). This is when the message will send if a user's profile doesn't have enough data to calculate an optimal time.
+6. Specify a [fallback time](#campaign-fallback). This is when the message will send if a user's profile doesn't have any relevant events to calculate an optimal time.
 
 ![Campaign scheduling screen showing Intelligent Timing with fallback time and Quiet Hours settings]({% image_buster /assets/img/intelligent_timing/campaign_scheduling.png %})
 
@@ -108,7 +108,7 @@ When using Intelligent Timing, we recommend scheduling the Winning Variant send 
 
 Optionally, you can choose to limit the delivery window. This may be useful if your campaign pertains to a specific event, sale, or promotion, but is generally not recommended when using Intelligent Timing. For more information, refer to [limitations](#limitations).
 
-When specified, Braze only uses engagement data within that window to determine a user's optimal delivery time. If there isn't enough engagement data within that window, the message sends at your set fallback time.
+When specified, Braze only uses engagement data within that window to determine a user's optimal delivery time. If there aren't any relevant events within that window, the message sends at your set fallback time.
 
 To set a delivery window:
 
@@ -119,7 +119,7 @@ To set a delivery window:
 
 ### Step 4: Choose a fallback time {#campaign-fallback}
 
-Choose a fallback time to use if a user's profile doesn't have enough data to calculate an optimal delivery time.
+Choose a fallback time to use if a user's profile doesn't have any relevant events to calculate an optimal delivery time.
 
 ![Scheduling a campaign with Intelligent Timing]({% image_buster /assets/img/intelligent_timing_1.png %})
 
@@ -137,7 +137,7 @@ To see an estimate of how many users will receive the message in each hour of th
 
 Whenever you change any settings about Intelligent Timing or your campaign audience, refresh the data again to view an updated chart.
 
-The chart shows users who had enough data to calculate an optimal time in blue and users who will use the fallback time in red. Use the calculation filters to adjust the preview view for a more granular look at either user group.
+The chart shows users who had relevant events to calculate an optimal time in blue and users who will use the fallback time in red. Use the calculation filters to adjust the preview view for a more granular look at either user group.
 {% endtab %}
 
 {% tab Canvas %}
@@ -150,7 +150,7 @@ Messages will be sent to users who entered the step that day at their optimal lo
 
 ### Step 2: Choose a fallback time
 
-Choose a fallback time for the message to send to users in your audience who don't have enough engagement data for Braze to calculate an optimal send time. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
+Choose a fallback time for the message to send to users in your audience who don't have any relevant engagement data for Braze to calculate an optimal send time. {% multi_lang_include brazeai/intelligent_suite/fallback_time.md %}
 
 ### Step 4: Add a Delay step
 
@@ -190,7 +190,7 @@ However, Intelligent Timing is set to deliver at 2 pm, which has already passed.
 
 ### Preview chart showing few users with optimal times
 
-Braze needs a certain amount of engagement data to make a good estimate. If there isn't enough session data or the targeted users have little to no clicks or opens (such as new users), Braze will default to the fallback time. Depending on your configuration, this could be either the most popular app time or a custom fallback time.
+If there aren't any relevant events for a user (for example, new users with little to no engagement), Braze uses the configured fallback setting—either your custom fallback time or the most popular time to use the app among all users.
 
 ### Impact of time zone on Intelligent Timing delivery
 
@@ -238,9 +238,9 @@ No, [Machine Opens]({{site.baseurl}}/user_guide/data/report_metrics/#machine-ope
 
 Intelligent Timing schedules messages during each user’s “most engaged hour” based on their session starts and message open events. Within that hour, the message timing is rounded to the nearest five minutes. For example, if a user’s optimal time is calculated as 4:58 PM, the message will be scheduled for 5:00 PM. There may be slight delays in delivery due to system activity during busy periods.
 
-#### What are the fallback calculations if there is not enough data?
+#### What are the fallback calculations if there are no relevant events?
 
-If there are fewer than five relevant events for a user, Intelligent Timing uses the fallback time in your message settings. 
+If there are no relevant events for a user, Intelligent Timing uses the configured fallback setting in your message settings—either a custom fallback time or the most popular time to use the app among all users. 
 
 ### Campaigns
 
@@ -250,7 +250,7 @@ Braze calculates the optimal time at midnight in Samoa time, one of the first ti
 
 #### Why is my Intelligent Timing campaign showing little to no sends?
 
-Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (such as new users), Intelligent Timing may default to the workspace's most popular hour on that day of the week. If there isn't enough information about the workspace, we fall back to a default time of 5 pm. You can also choose to set a specific fallback time.
+If there aren't any relevant engagement events for a user (for example, new users with little to no clicks or opens), Intelligent Timing uses the configured fallback setting—either your custom fallback time or the most popular time to use the app among all users.
 
 #### Why is my Intelligent Timing campaign sending past the scheduled date?
 
@@ -279,7 +279,7 @@ If the determined optimal time falls within Quiet Hours, Braze finds the nearest
 
 #### Can I use Intelligent Timing and rate-limiting?
 
-Rate limiting can be used on a campaign that uses Intelligent Timing. However, the nature of rate limiting means that some users may receive their message at a less-than-optimal time, particularly if a large number of users relative to the rate limit size are scheduled at the fallback time because of insufficient data. 
+Rate limiting can be used on a campaign that uses Intelligent Timing. However, the nature of rate limiting means that some users may receive their message at a less-than-optimal time, particularly if a large number of users relative to the rate limit size are scheduled at the fallback time because they have no relevant events. 
 
 We recommend using rate limiting on an Intelligent Timing campaign only when there are technical requirements that must be met using rate limiting.
 
@@ -300,6 +300,3 @@ Yes, machine opens are filtered out by Intelligent Timing, so they do not influe
 #### How can I make sure Intelligent Timing works as well as possible?
 
 Intelligent Timing uses each user’s individual history of message engagement at whatever times they received messages. Before using Intelligent Timing, make sure that you have sent users messages at different times of the day. That way, you can “sample” when might be the best time for each user. Inadequately sampling different times of day may result in Intelligent Timing picking a suboptimal time of send for a user.
-
-
-

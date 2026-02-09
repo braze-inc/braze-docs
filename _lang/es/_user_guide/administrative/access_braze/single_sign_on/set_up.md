@@ -71,14 +71,14 @@ Asegúrese de que su certificado `x.509` sigue este formato cuando lo añada al 
 
 Guarde su configuración de seguridad y cierre la sesión. A continuación, vuelve a iniciar sesión con tu proveedor de identidad.
 
-![Pantalla de inicio de sesión con SSO habilitado]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
+![Pantalla de inicio de sesión del panel con SSO habilitado]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Configuración de tu RelayState
 
 1. En Braze, ve a **Configuración** > **API e identificadores**.
 2. En la pestaña **Claves de API**, selecciona el botón **Crear clave de API**.
 3. En el campo **Nombre de la clave de API**, introduce un nombre para tu clave.
-4. Amplía el desplegable **SSO** en **Permisos** y marca **sso.saml.login**.<br><br>![La sección "Permisos" con sso.saml.login marcado.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
+4. Amplía el desplegable **SSO** en **Permisos** y marca **sso.saml.login**.<br><br>![La sección "Permisos" con sso.saml.login marcada.]({% image_buster /assets/img/relaystate_troubleshoot.png %}){: style="max-width:70%;"}<br><br>
 5. Selecciona **Crear clave de API**.
 6. En la pestaña **Claves de API**, copia el identificador que aparece junto a la clave de API que has creado.
 7. Pega la clave de API RelayState en el RelayState de tu IdP (también puede aparecer como "Estado de retransmisión" o "Estado de retransmisión predeterminado" en función de tu IdP).
@@ -167,7 +167,7 @@ Si recibes el error `ERROR_CODE_SSO_INVALID_RELAY_STATE`, tu RelayState podría 
 
 ### ¿Está el usuario atrapado en un bucle de inicio de sesión entre Okta y Braze?
 
-Si un usuario no puede iniciar sesión porque está bloqueado entre el SSO de Okta y el panel de Braze, tienes que ir a Okta y establecer el destino de la URL SSO en tu [instancia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (por ejemplo, `https://dashboard-07.braze.com`). 
+Si un usuario no puede iniciar sesión porque está bloqueado entre el SSO de Okta y el panel de Braze, tienes que ir a Okta y establecer el destino de la URL del SSO en tu [instancia de Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) (por ejemplo, `https://dashboard-07.braze.com`). 
 
 Si utilizas otro IdP, comprueba si tu empresa ha cargado en Braze el certificado SAML o x.509 correcto.
 

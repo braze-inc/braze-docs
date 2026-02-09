@@ -13,5 +13,5 @@ tool: Reports
 
 > Este artigo cobre o relatório de push, que você pode usar para visualizar e analisar o sucesso de suas campanhas de push.
 
-{% multi_lang_include campaign_analytics.md canal="push" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="push" %}
 

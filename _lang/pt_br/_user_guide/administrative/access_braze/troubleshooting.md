@@ -9,7 +9,7 @@ description: "Este artigo o orienta na solução de problemas que você pode ter
 
 # Solução de problemas de acesso ao Braze
 
-> Este artigo o ajuda a solucionar problemas que possam ocorrer ao tentar acessar o Braze.
+> Este artigo ajuda a solucionar problemas que possam ocorrer ao tentar acessar o Braze.
 
 ## Bloqueio da conta
 
@@ -61,4 +61,23 @@ Se o problema ocorrer em todos os navegadores, tente o seguinte:
 
 Se tiver resolvido os problemas anteriores e o dashboard ainda não carregar ou não funcionar como esperado, entre em contato com [o Suporte]({{site.baseurl}}/braze_support/).
 
+## O usuário não pertence a nenhum espaço de trabalho
 
+Para verificar isso, acesse **Configurações** > **Usuários da empresa** e verifique as permissões do usuário no espaço de trabalho. Adicione os espaços de trabalho necessários aos **Espaços de trabalho**.
+
+## Solução de problemas como um novo usuário
+
+Se for um novo usuário do Braze e estiver com problemas para registrar ou acessar sua conta pela primeira vez, siga estas etapas para resolver problemas comuns:
+
+### Nunca recebi o e-mail de boas-vindas
+
+- Verifique sua pasta de spam: Confirme se o e-mail de ativação da conta não foi filtrado em sua pasta de spam ou lixo eletrônico.
+- Verifique seu endereço de e-mail: Peça a seu administrador que verifique o endereço de e-mail associado à sua nova conta Braze para confirmar se está correto.
+- Políticas de TI: Confirme com sua equipe de TI se não há políticas em vigor que possam impedir o recebimento do e-mail de ativação.
+
+### Recebi o e-mail, mas não consigo configurar a autenticação de dois fatores (2FA)
+
+- Redefinir a 2FA: Se estiver tendo problemas para configurar a 2FA, o administrador pode redefinir a 2FA para sua conta de usuário nas configurações.
+- Adicionar novamente o usuário: Se os problemas persistirem, o administrador poderá excluir sua conta de usuário do dashboard e adicioná-la novamente. Isso permite a criação de um usuário com os mesmos detalhes.
+
+Se os problemas continuarem após essas etapas, entre em contato com [o Suporte]({{site.baseurl}}/braze_support/) para obter mais assistência.

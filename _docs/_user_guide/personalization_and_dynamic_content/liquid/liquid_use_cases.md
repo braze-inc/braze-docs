@@ -1324,6 +1324,38 @@ This is a message for Verizon users!
 
 {% api %}
 
+## SMS
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+- [Respond with different messages based on inbound SMS keyword](#sms-keyword-response)
+
+### Respond with different messages based on inbound SMS keyword {#sms-keyword-response}
+
+This use case incorporates dynamic SMS keyword processing to respond to specific inbound messages with different message copy. For example, you can send different responses when someone texts "START" versus "JOIN".
+
+{% raw %}
+```liquid
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
+{% if inbound_message contains 'start' %}
+Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
+
+{% elsif inbound_message contains 'join' %}
+Thanks for joining our SMS program! Create an account to get the best deals!
+
+{% else %}
+Thanks for joining our SMS program!
+
+{% endif %}
+```
+{% endraw %}
+
+{% endapi %}
+
+{% api %}
+
 ## Time zones
 
 {% apitags %}

@@ -205,7 +205,7 @@ En la tabla siguiente se describen las ventajas e inconvenientes de estos dos en
         <td>Duplicación de contenidos</td>
         <td>N/A</td>
         <td>No se pueden duplicar segmentos, campañas push o de tarjeta de contenido, ni lienzos entre espacios de trabajo.</td>
-        <td>Puedes [duplicar campañas entre espacios de trabajo]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
+        <td>Puedes [duplicar campañas en workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) para los siguientes canales compatibles: SMS, mensajes dentro de la aplicación, correo electrónico, plantillas de correo electrónico y bloques de contenido. <br><br>Puede duplicar segmentos, campañas y lienzos para reutilizar el contenido de una aplicación a otra.</td>
         <td>N/A</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ Debe tener más de un usuario Braze con permisos de administrador para un mismo 
 
 ## Próximos pasos
 
-Una vez que hayas determinado tu plan de espacio de trabajo, es hora de crear tu espacio de trabajo y añadir instancias de aplicaciones. Para conocer los pasos, consulta [Crear y gestionar espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+Una vez que hayas determinado tu plan de espacio de trabajo, es hora de crear tu espacio de trabajo y añadir instancias de aplicaciones. Para conocer los pasos, consulta [Crear y administrar espacios de trabajo]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 

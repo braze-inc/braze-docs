@@ -30,11 +30,11 @@ Non, la bibliothèque multimédia ne permet pas de recadrer les images GIF.
 
 ### Comment rogner une image existante ?
 
-Vous pouvez recadrer une image existante en la sélectionnant dans la bibliothèque multimédia et en cliquant sur **Recadrer et enregistrer une nouvelle image**. 
+Vous pouvez recadrer une image existante en la sélectionnant dans la bibliothèque multimédia et en cliquant sur **Recadrer & Enregistrer une nouvelle image**. 
 
 ![Aperçu de l'image de la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
-Vous serez ensuite redirigé vers un outil de rognage avec lequel vous pourrez sélectionner votre type de proportions et modifier le nom de la nouvelle image. Lorsque vous cliquez sur **Enregistrer**, votre nouvelle image peut être utilisée.
+Vous serez ensuite redirigé vers un outil de rognage avec lequel vous pourrez sélectionner votre type de proportions et modifier le nom de la nouvelle image. Lorsque vous sélectionnez **Enregistrer**, votre nouvelle image peut être utilisée.
 
 ![Fenêtre permettant de recadrer et d'enregistrer l'image de la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Localisations et géorepérages
+nav_title: Fonctions de localisation et de géorepérage
 article_title: Localisations et géorepérages
 page_order: 6
 layout: dev_guide
@@ -14,7 +14,7 @@ guide_featured_list:
   - name: Suivi de localisation
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
     image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: Création de géorepérages
+  - name: Créer des géorepérages
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Intégrations mobiles

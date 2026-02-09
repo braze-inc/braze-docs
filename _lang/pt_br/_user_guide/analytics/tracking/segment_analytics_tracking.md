@@ -1,6 +1,6 @@
 ---
-nav_title: Rastreamento da análise de dados por segmento
-article_title: Rastreamento da análise de dados por segmento
+nav_title: Rastreamento de análise de dados por segmento
+article_title: Rastreamento de análises do segmento
 page_order: 8
 page_type: reference
 description: "Este artigo de referência aborda o rastreamento da análise de dados do segmento e como visualizar a receita e as compras ao longo do tempo, as sessões ao longo do tempo e os eventos personalizados ao longo do tempo."
@@ -19,7 +19,7 @@ Se você não ativar o rastreamento da análise de dados para um segmento, ainda
 
 Na seção **Segment Details** da página de um segmento, ative **o rastreamento do Analytics**.
 
-![Alternância de rastreamento de análise de dados para um segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Alternar o rastreamento de análise de dados para um segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 Um app pode ter o rastreamento ativado para até 25 segmentos. O Braze recomenda o rastreamento de segmentos que são importantes para sua análise ao entender os efeitos de suas campanhas sobre sessões, receita e compras.
 
@@ -33,13 +33,13 @@ Para comparar visualmente os dados do segmento para qualquer intervalo de tempo 
 
 Selecione qualquer nome de segmento acima do gráfico para ativar ou desativar a visibilidade das métricas desse segmento.
 
-![Receita de vários segmentos]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
+![Receita para vários segmentos]({% image_buster /assets/img_archive/segment_revenue_multiple.png %})
 
 ## Sessões ao longo do tempo
 
 Da mesma forma, você pode encontrar dados sobre [sessões ao longo do tempo para esse segmento específico]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data) na página **inicial**.
 
-![Dados da sessão por segmento]({% image_buster /assets/img_archive/events_over_time2.png %})
+![Dados de sessão por segmento]({% image_buster /assets/img_archive/events_over_time2.png %})
 
 ## Visualizar eventos personalizados ao longo do tempo
 

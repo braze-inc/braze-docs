@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expresiones regulares
+# [![Curso de Braze](https://learning.braze.com/regular-expression-basics-for-braze) Learning []({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expresiones regulares
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -33,7 +33,7 @@ Las expresiones regulares para las propiedades del evento personalizado y los fi
 {% endalert %}
 
 {% tabs %}
-{% tab Depurador regex %}
+{% tab Regex Debugger %}
 <div>
 Este formulario permite la validación básica y la comprobación de expresiones regulares.
 ​
@@ -164,7 +164,7 @@ Podemos dividir esta expresión regular en las tres partes siguientes:
 
 Digamos que desea filtrar los correos electrónicos que terminan en "@braze.com". Utilice el filtro de direcciones de correo electrónico, configúrelo en `matches regex` e introduzca "@braze.com" en el campo regex. Lo mismo se aplica a cualquier otro dominio de correo electrónico.
 
-![Filtrar una dirección de correo electrónico que coincida con el regex de "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
+![Filtrar una dirección de correo electrónico que coincida con la regex de "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### Cómo puedo utilizar cadenas de números de filtro para valores ≥ x o ≤ x?
 
@@ -190,7 +190,7 @@ Utilice el símbolo de intercalación (`^`) para indicar el comienzo de la caden
 
 Por ejemplo, si intenta dirigirse a usuarios que viven en ciudades que empiezan por "San", su regex sería `^San \w`. Con esta expresión regular, podrá dirigirse a usuarios de ciudades como San Francisco, San Diego, San José, etc.
 
-![Filtrar por una ciudad que coincida con el regex de "^San \\w".]({% image_buster /assets/img/regex/regeximg2.png %})
+![Filtrar una ciudad que coincida con el regex de "^San \\w".]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### ¿Cómo puedo filtrar por números de teléfono específicos?
 
@@ -206,6 +206,6 @@ Por ejemplo, supongamos que desea filtrar usuarios por número de teléfono para
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![Filtrar un número de teléfono que coincida con la regex de "^1?718\\d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
+![Filtrar un número de teléfono que coincida con la regex "^1?718d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

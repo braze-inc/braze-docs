@@ -1,11 +1,11 @@
 ---
 page_order: 10
-nav_title: Begriffe zum Kennenlernen
+nav_title: "Begriffe, die Sie kennen sollten"
 article_title: Begriffe zum Thema Braze
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
+glossary_top_header: "Begriffe zum Kennenlernen"
+glossary_top_text: "Diese Begriffe sollen Ihnen helfen, Ihre Reise zu einer besseren Bindung von Kund:innen und Nutzern:innen mit Braze zu beginnen. Lesen Sie dies, bevor Sie mit Ihrem Onboarding beginnen."
 page_type: glossary
 description: "Dieses Glossar enthält wichtige Begriffe, die Sie während des Onboarding-Prozesses bei Braze kennen sollten."
 
@@ -40,7 +40,7 @@ glossaries:
     description: "<a href = \"https://www.braze.com/docs/user_guide/data/braze_currents/\">Currents</a>, unser Daten-Streaming-Export, ist in bestimmten Braze-Paketen enthalten. Braze Currents ermöglicht Ihnen die Integration durch Datenspeicherung unter Verwendung von Flat Files oder durch unsere Partner für Verhaltensanalyse und Kundendaten unter Verwendung von gebündelten JSON-Payloads an einen bestimmten Endpunkt."
   - name: Angepasste Attribute
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">Benutzerdefinierte Attribute</a> sind eine Sammlung der einzigartigen Eigenschaften Ihrer Benutzer. Sie eignen sich am besten zum Speichern von Attributen über Ihre Benutzer oder von Informationen über geringwertige Aktionen innerhalb Ihrer Anwendung. Sie können Benutzern innerhalb des Dashboards benutzerdefinierte Attribute zuweisen. Sie können Ihre Nutzer nach diesen Attributen filtern und segmentieren, sowohl für <a href=\"https://www.braze.com/docs/developer_guide/platforms/swift/analytics/setting_custom_attributes/\">iOS-</a> als auch für <a href=\"https://www.braze.com/docs/developer_guide/platforms/android/analytics/setting_custom_attributes/\">Android-Kampagnen</a>."
-  - name: Angepasste Events
+  - name: Benutzerdefinierte Ereignisse
     description: "<a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">Angepasste Events</a> sind Aktionen, die von Ihren Nutzer:innen ausgeführt werden. Sie eignen sich am besten für das Tracking hochwertiger Nutzer:innen-Interaktionen mit Ihrer Anwendung."
   - name: Datenpunkt
     description: "Ein Datenpunkt wird gezählt, wenn ein <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_attributes/\">angepasstes Attribut</a> gesetzt oder aktualisiert wird (auch wenn Sie es mit demselben Wert aktualisieren), ein <a href=\"https://www.braze.com/docs/user_guide/data/custom_data/custom_events\">angepasstes Event</a> oder Kauf-Event protokolliert wird, beliebige Standarddaten (z.B., <code>email</code>, <code>first_name</code>, <code>last_name</code>, <code>country</code>, oder <code>home_city</code>) protokolliert wird, wann eine Sitzung beginnt und wann eine Sitzung endet."
@@ -81,9 +81,9 @@ glossaries:
   - name: Push-Nachrichten
     description: "Eine <a href=\"https://www.braze.com/docs/user_guide/message_building_by_channel/push/\">Push-Nachricht</a> oder Push-Benachrichtigung ist eine Benachrichtigung, die von einer mobilen Anwendung angezeigt wird. Push-Benachrichtigungen erscheinen oft als Popup-Dialoge und Banner für iOS und Android."
   - name: Push-Token
-    description: "Ein Push-Token ist ein eindeutiger Schlüssel, der von Apple oder Google erstellt und zugewiesen wird, um eine Verbindung zwischen einer App und einem iOS-, Android- oder Web-Gerät herzustellen. <a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">Die Push-Token-Migration</a> ist das Importieren dieser bereits generierten Schlüssel in Braze."
+    description: "Ein Push-Token ist ein eindeutiger Schlüssel, der von Apple oder Google erstellt und zugewiesen wird, um eine Verbindung zwischen einer App und einem iOS-, Android- oder Web-Gerät herzustellen. <a href=\"https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens\">Die Push-Token-Migration</a> ist das Importieren dieser bereits generierten Schlüssel in Braze."
   - name: Push Time to Live
-    description: "Die auch als <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/\">Push-TTL</a> bezeichnete Zeit bis zur Auslieferung bezieht sich auf den Zeitraum, in dem Kampagnen weiterhin versuchen, einem Offline-Nutzer zugestellt zu werden."
+    description: "Die auch als <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">Push-TTL</a> bezeichnete Zeit bis zur Auslieferung bezieht sich auf den Zeitraum, in dem Kampagnen weiterhin versuchen, einem Offline-Nutzer zugestellt zu werden."
   - name: Race-Condition
     description: "Eine <a href=\"http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/\">Race Condition</a> ist ein Konzept aus der Softwaretechnik, das eine unerwünschte Situation beschreibt, die auftritt, wenn ein System versucht, mehrere Operationen gleichzeitig auszuführen. Aufgrund der Beschaffenheit des Systems müssen die Operationen jedoch in der richtigen Reihenfolge ausgeführt werden, um korrekt zu funktionieren. <br><br>In der Braze-Plattform kann die Segmentierung einer getriggerten Kampagne anhand von Nutzerdaten, die zum Zeitpunkt des Events aufgezeichnet wurden, eine Race-Condition verursachen. Dies geschieht, wenn eine Änderung des Attributs der Nutzerin oder des Nutzers, auf dessen Grundlage die Kampagne segmentiert wird, zum Zeitpunkt der Bestimmung der Segmentzugehörigkeit und des Versands der Kampagne noch nicht die:den Nutzer:in verarbeitet wurde und dazu führen kann, dass die:der Nutzer:in die Kampagne nicht erhält."
   - name: Rate-Limiting

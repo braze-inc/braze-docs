@@ -1,16 +1,16 @@
 ---
 nav_title: Optimizaciones
-article_title: Optimización de pruebas A/B con variante ganadora o variantes personalizadas
+article_title: Optimiza las pruebas A/B con variantes ganadoras o personalizadas
 page_order: 1
 page_type: reference
 description: "Aprenda a utilizar Variante ganadora o Variante personalizada al crear pruebas multivariante y A/B."
 ---
 
-# Optimización de pruebas A/B con Variante Ganadora o Variantes Personalizadas
+# Optimiza las pruebas A/B con Variantes Ganadoras o Variantes Personalizadas
 
 Al [crear una prueba A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/create_multivariate_campaign/) para campañas de correo electrónico, push, webhook, SMS y WhatsApp programadas para enviarse una vez, puede seleccionar una optimización. Hay dos opciones de optimización: **Variante Ganadora** y **Variante Personalizada**.
 
-![Opciones de optimización enumeradas en la sección Pruebas A/B al elegir tu audiencia objetivo. Hay tres opciones: Sin optimización, Variante ganadora y Variante personalizada. Variante personalizada seleccionada.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
+![Opciones de optimización enumeradas en la sección Pruebas A/B al elegir tu audiencia objetivo. Hay tres opciones: Sin optimización, Variante ganadora y Variante personalizada. Se selecciona la variante de personalización.]({% image_buster /assets/img_archive/ab_personalized_variant.png %})
 
 Ambas opciones funcionan enviando una prueba inicial a un porcentaje de su segmento objetivo. Una vez finalizada la prueba, se envía a los usuarios restantes la variante con mejores resultados (variante ganadora) o la variante con la que es más probable que interactúen (variante personalizada).
 

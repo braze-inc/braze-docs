@@ -1,13 +1,13 @@
 ---
 nav_title: Análise de dados
 article_title: "Análise de dados de recomendação de itens"
-description: "Saiba mais sobre a análise de dados de recomendação de itens e como visualizá-los no Braze."
+description: "Saiba mais sobre a análise de dados de recomendação de itens e como visualizá-las no Braze."
 page_order: 1.3
 ---
 
 # Análise de dados de recomendação de itens
 
-> Saiba mais sobre a análise de dados de recomendação de itens e como visualizá-los no Braze.
+> Saiba mais sobre a análise de dados de recomendação de itens e como visualizá-las no Braze.
 
 ## Visualização de análises de dados
 
@@ -20,9 +20,9 @@ page_order: 1.3
 
 ### Público
 
-Essas são métricas relacionadas ao seu público de recomendação, que incluem precisão, cobertura e tipo de recomendação.
+Estas são métricas relacionadas ao seu público de recomendação, que inclui precisão, cobertura e tipo de recomendação.
 
-![Métricas do público de recomendação mostrando precisão (25,3%), cobertura (54,3%) e tipos de recomendação divididos entre itens personalizados e mais populares.]({% image_buster /assets/img/item_recs_analytics_1.png %})
+![Métricas de público de recomendação mostrando precisão (25,3%), cobertura (54,3%) e tipos de recomendação divididos entre itens personalizados e os mais populares.]({% image_buster /assets/img/item_recs_analytics_1.png %})
 
 Consulte a tabela a seguir para saber mais:
 
@@ -35,20 +35,20 @@ Consulte a tabela a seguir para saber mais:
 
 ### Itens
 
-Essa tabela inclui métricas sobre seus itens personalizados, mais recentes e mais populares de seu catálogo.
+Esta tabela inclui métricas sobre seus itens personalizados, mais recentes e mais populares do seu catálogo.
 
-![Tabelas lado a lado que listam itens atribuídos aos usuários, separados por recomendações personalizadas e recomendações mais populares.]({% image_buster /assets/img/item_recs_analytics_2.png %})
+![Tabelas lado a lado listando itens atribuídos a usuários, separados por recomendações personalizadas e recomendações mais populares.]({% image_buster /assets/img/item_recs_analytics_2.png %})
 
 Consulte a tabela a seguir para saber mais:
 
 | Métrico              | Descrição |
 | ------------------- | ---------- |
-| **Itens personalizados**<br><br>**Itens mais recentes** | Essa coluna lista cada item do catálogo em ordem decrescente dos mais frequentemente recomendados aos usuários. Essa coluna também mostra quantos usuários foram atribuídos a cada item pelo modelo.<br><br>Os itens **personalizados** ou **mais recentes** serão listados, dependendo do [tipo de recomendação]({{site.baseurl}}/user_guide/brazeai/recommendations/). |
+| **Itens personalizados**<br><br>**Itens mais recentes** | Essa coluna lista cada item do catálogo em ordem decrescente dos mais frequentemente recomendados aos usuários. Essa coluna também mostra quantos usuários foram atribuídos a cada item pelo modelo.<br><br>Itens **Personalizados** ou **Mais recentes** serão listados dependendo do [tipo de recomendação]({{site.baseurl}}/user_guide/brazeai/recommendations/). |
 | **Itens mais populares** | Essa coluna lista cada item do catálogo em ordem decrescente de popularidade. A popularidade aqui se refere aos itens do catálogo com os quais os usuários interagem com mais frequência em todo o espaço de trabalho. O mais popular é usado como fallback quando o personalizado ou o mais recente não pode ser calculado para um usuário individual. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Visão geral
 
-Essa é uma visão geral da configuração de recomendação escolhida, que inclui quando a recomendação foi atualizada pela última vez.
+Esta é uma visão geral da configuração de recomendação escolhida, que inclui quando a recomendação foi atualizada pela última vez.
 
-![Tabela de visão geral da recomendação que exibe o tipo, o catálogo, o tipo de evento, o nome do evento personalizado, o nome da propriedade e a data da última atualização.]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:50%" }
+![Tabela de visão geral da recomendação exibindo tipo, catálogo, tipo de evento, nome do evento personalizado, nome da propriedade e data da última atualização.]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:50%" }

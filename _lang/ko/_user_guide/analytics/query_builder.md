@@ -25,7 +25,7 @@ alias: /query_builder/
 6. 쿼리를 저장합니다.
 7. 보고서의 CSV를 다운로드하려면 **내보내기**를 선택하세요.
 
-![쿼리 빌더가 템플릿 쿼리 "채널 인게이지먼트 및 매출 지난 30일 동안"에 대한 결과를 보여줍니다.]({% image_buster /assets/img_archive/query_builder.png %})
+![템플릿 쿼리 "지난 30일 동안의 채널 참여도 및 매출"에 대한 결과를 보여주는 쿼리 빌더.]({% image_buster /assets/img_archive/query_builder.png %})
 
 각 보고서의 결과는 하루에 한 번 생성할 수 있습니다. 하루에 같은 보고서를 한 번 이상 실행하면 두 보고서에서 동일한 결과를 볼 수 있습니다.
 
@@ -66,11 +66,17 @@ send_date_sydney;
 ```
 {% endraw %}
 
+### 쿼리 기록
+
+쿼리 빌더의 쿼리 **기록** 섹션에는 이전에 실행한 쿼리가 표시되어 작업을 추적하고 재사용할 수 있습니다. 쿼리 기록은 7일 동안 보관되므로 7일이 지난 쿼리는 자동으로 삭제됩니다.
+
+장기간 쿼리 사용을 감사하거나 7일 이상의 기록을 유지해야 하는 경우 중요한 쿼리 결과는 만료되기 전에 내보내거나 저장하는 것이 좋습니다.
+
 ## AI 쿼리 빌더로 SQL 생성
 
 AI 쿼리 빌더는 [GPT](https://openai.com/gpt-4)를 활용하여 OpenAI에서 제공하는 SQL을 추천합니다.
 
-![The SQL AI query builder.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![SQL AI 쿼리 빌더.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 AI 쿼리 빌더를 사용하여 SQL을 생성하는 방법:
 
@@ -80,7 +86,7 @@ AI 쿼리 빌더를 사용하여 SQL을 생성하는 방법:
 
 ### 팁
 
-- 사용 가능한 [Snowflake 데이터 테이블]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/)에 익숙해집니다. 이러한 테이블에 존재하지 않는 데이터를 요청하면 ChatGPT가 가짜 테이블을 구성하게 될 수 있습니다.
+- Familiarize yourself with the available [Snowflake data tables]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/). 이러한 테이블에 존재하지 않는 데이터를 요청하면 ChatGPT가 가짜 테이블을 구성하게 될 수 있습니다.
 - 이 기능에 대한 [SQL 작성 규칙을]({{site.baseurl}}/user_guide/data_and_analytics/query_builder/#custom-sql) 숙지하세요. 이 규칙을 따르지 않으면 오류가 발생합니다.
 - AI 쿼리 빌더를 사용하여 분당 최대 20개의 프롬프트를 보낼 수 있습니다.
 
@@ -219,7 +225,7 @@ LIMIT 100
 
 모든 메시징 변수는 하나의 그룹에서 상태를 결합하려면 동일한 식별자를 공유해야 합니다.
 
-##### 캔버스
+##### Canvas
 
 하나의 캔버스를 선택하기 위해서. 캠페인과 동일한 이름을 공유하면 **변수** 탭 내에서 라디오 버튼이 생성되어 캔버스 또는 캠페인을 선택할 수 있습니다.
 

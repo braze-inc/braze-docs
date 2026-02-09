@@ -1,6 +1,6 @@
 ---
 nav_title: Planifier votre campagne
-article_title: Planifier votre campagne
+article_title: Planifiez votre campagne
 layout: dev_guide
 page_order: 3
 guide_top_header: "Planifier votre campagne"

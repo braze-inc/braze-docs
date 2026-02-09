@@ -1,5 +1,5 @@
 ---
-nav_title: Encurtamento de link
+nav_title: Encurtamento de links
 article_title: Encurtamento de link
 page_order: 3
 description: "Este artigo de referência aborda como ativar o encurtamento de links em suas mensagens SMS e algumas perguntas frequentes."
@@ -23,11 +23,11 @@ O encurtamento de links e o rastreamento de cliques podem ser ativados no [níve
 
 O comprimento do URL é determinado pelo tipo de rastreamento que está ativado:
 - **O rastreamento básico** ativa o rastreamento de cliques no nível da campanha. Os URLs estáticos terão um comprimento de 20 caracteres e os URLs personalizados terão um comprimento de 25 caracteres.
-- **O rastreamento avançado** permite o rastreamento de cliques no nível da campanha e do usuário, além de ativar o uso de recursos de segmentação e redirecionamento que dependem de cliques. Os cliques também gerarão um [evento de clique por SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) enviado pelo Currents. Os URLs estáticos com rastreamento avançado terão um comprimento de 27 a 28 caracteres, o que permite criar segmentos de usuários que clicaram nos URLs. Para URLs personalizados, eles terão um comprimento de 32 a 33 caracteres.
+- **O rastreamento avançado** permite o rastreamento de cliques no nível da campanha e do usuário, além de ativar o uso de recursos de segmentação e redirecionamento que dependem de cliques. Os cliques também gerarão um [evento de clique por SMS]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) enviado pelo Currents. Os URLs estáticos com rastreamento avançado terão um comprimento de 27 a 28 caracteres, o que permite criar segmentos de usuários que clicaram nos URLs. Os URLs personalizados terão um comprimento de 32 a 33 caracteres.
 
-Os links serão encurtados usando nosso domínio curto compartilhado (`brz.ai`). Um exemplo de URL pode ter a seguinte aparência: `https://brz.ai/8jshX` (básico, estático) ou `https://brz.ai/p/8jshX/2dj8d` (avançado, personalizado). Para saber mais, consulte [Testes](#testing).
+Os links são encurtados usando nosso domínio curto compartilhado (`brz.ai`). Um exemplo de URL pode ter a seguinte aparência: `https://brz.ai/8jshX` (básico, estático) ou `https://brz.ai/p/8jshX/2dj8d` (avançado, personalizado). Para saber mais, consulte [Testes](#testing).
 
-Todos os URLs estáticos que começam com `http://` ou `https://` serão encurtados. Os URLs estáticos encurtados serão válidos por um ano a partir da data em que foram criados. Os URLs encurtados que contêm a personalização Liquid serão válidos por dois meses.
+Todos os URLs estáticos que começam com `http://` ou `https://` são encurtados. Os URLs estáticos encurtados são válidos por um ano a partir da data em que foram criados. Os URLs encurtados que contêm personalização Liquid são válidos por dois meses.
 
 {% alert note %}
 Se planeja usar o [filtro]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) <sup>BrazeAITM</sup> [Intelligent Channel]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_channel/) e deseja que os canais SMS e RCS sejam selecionáveis, ative o encurtamento de links com rastreamento avançado.
@@ -39,13 +39,13 @@ Para usar o encurtamento de links, certifique-se de que a opção de encurtament
 
 ![Criador de mensagens com um botão para encurtar links.]({% image_buster /assets/img/link_shortening/shortening1.png %})
 
-A Braze só reconhecerá URLs que comecem com `http://` ou `https://`. Quando um URL é reconhecido, a seção **Prévia** é atualizada com um URL de espaço reservado. O Braze estimará o comprimento do URL após o encurtamento, mas um aviso solicitará que você selecione um usuário teste e salve a mensagem como rascunho para obter uma estimativa mais precisa.
+O Braze reconhece apenas URLs que começam com `http://` ou `https://`. Quando um URL é reconhecido, a seção **Prévia** é atualizada com um URL de espaço reservado. O Braze estima o comprimento do URL após o encurtamento, mas um aviso solicita que você selecione um usuário teste e salve a mensagem como rascunho para obter uma estimativa mais precisa.
 
 ![Criador de mensagens com um URL longo na caixa "Mensagem" e um link encurtado gerado na prévia.]({% image_buster /assets/img/link_shortening/shortening3.png %})
 
 ### Adição de parâmetros UTM
 
-{% multi_lang_include click_tracking.md section='Parâmetros UTM' %}
+{% multi_lang_include analytics/click_tracking.md section='UTM parameters' %}
 
 ## Personalização Liquid em URLs
 
@@ -76,7 +76,7 @@ https://example.com/{{url_var}}
 
 Encurtamos os URLs que são renderizados pelo Liquid, mesmo aqueles incluídos nas propriedades do API-trigger. Por exemplo, se {% raw %}`{{api_trigger_properties.${url_value}}}`{% endraw %} representar um URL válido, encurtaremos e rastrearemos esse URL antes de enviar a mensagem. 
 
-### Encurtar URLs no ponto de extremidade /messages/send
+### Encurtar URLs no ponto de extremidade `/messages/send` 
 
 O encurtamento de links também está ativado para mensagens somente da API por meio do [endpoint `/messages/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/). Para também ativar o rastreamento básico ou avançado, use os parâmetros de solicitação `link_shortening_enabled` ou `user_click_tracking_enabled`.
 
@@ -92,15 +92,17 @@ Para obter uma lista completa dos parâmetros de solicitação, acesse [parâmet
 
 Antes de lançar sua campanha ou Canva, é uma prática recomendada fazer uma prévia e testar sua mensagem primeiro. Para fazer isso, acesse a guia **Teste** para fazer uma prévia e enviar uma mensagem SMS ou RCS para [grupos de teste de conteúdo]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab#content-test-groups) ou para um usuário individual. 
 
-Essa prévia será atualizada com a personalização relevante e o URL encurtado. O número de caracteres e os [segmentos faturáveis]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) também serão atualizados para refletir a personalização renderizada e o URL encurtado. 
+Essa prévia é atualizada com a personalização relevante e o URL encurtado. O número de caracteres e [os segmentos faturáveis]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/) também são atualizados para refletir a personalização renderizada e o URL encurtado.
 
-Certifique-se de salvar a campanha ou o Canva antes de enviar uma mensagem de teste para receber uma representação do URL encurtado que será enviado em sua mensagem. Se a campanha ou o Canva não for salvo antes de um envio de teste, o envio de teste incluirá uma URL de espaço reservado.
+Certifique-se de salvar a campanha ou o Canva antes de enviar uma mensagem de teste para receber uma representação da URL encurtada que é enviada em sua mensagem. Se a campanha ou o Canva não for salvo antes de um envio de teste, o envio de teste incluirá uma URL de espaço reservado.
+
+Para que os Canvas apareçam no filtro "Clicou no link SMS encurtado", a etapa do Canva que contém o link curto também deve ser ativada com rastreamento avançado, que permite o rastreamento de cliques no nível do usuário. Se o link curto estiver configurado com rastreamento básico, a opção de filtrar eventos de clique em links curtos de SMS não estará disponível.
 
 {% alert important %}
 Se um rascunho for criado em um Canva ativo, não será gerado um URL encurtado. O URL encurtado real é gerado quando o rascunho do Canva é ativado.
 {% endalert %}
 
-![Guia "Teste" de mensagens com campos para selecionar destinatários de teste.]({% image_buster /assets/img/link_shortening/shortening2.png %})
+![Guia "Teste" de mensagens com campos para selecionar os destinatários do teste.]({% image_buster /assets/img/link_shortening/shortening2.png %})
 
 {% alert note %}
 A personalização Liquid e os URLs encurtados são modelos na guia **Teste** depois que um usuário é selecionado. Certifique-se de que um usuário esteja selecionado para receber uma contagem precisa de caracteres.
@@ -118,25 +120,29 @@ As tabelas **Historical Performance** e **SMS/MMS/RCS Performance** também incl
 
 Para obter orientação sobre redirecionamento, visite [Retargeting]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/#filter-by-advanced-tracking-links).
 
-{% multi_lang_include click_tracking.md section='Domínios personalizados' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
-{% multi_lang_include click_tracking.md section='Perguntas frequentes' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### Eu sei quais usuários individuais estão clicando em um URL?
 
 Sim. Quando o **rastreamento avançado** está ativado, é possível redirecionar os usuários que clicaram em URLs, aproveitando os [filtros de redirecionamento de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) ou os eventos de clique de SMS (`users.messages.sms.ShortLinkClick`) enviados via Currents.
 
 {% alert note %}
-No momento, os eventos RCS Click não estão disponíveis no Currents.
+No momento, os eventos de cliques do RCS não estão disponíveis no Currents.
 {% endalert %}
 
 ### O encurtamento de links funciona com deep links ou links universais?
 
-O encurtamento de links não funciona com deep links. Você pode encurtar links universais de provedores como Branch ou Appsflyer, mas o Braze não pode solucionar problemas que possam surgir ao fazer isso (como quebrar a atribuição ou causar um redirecionamento).
+O encurtamento de links não funciona com deep links. Como alternativa, é possível encurtar links universais de provedores de terceiros, como Branch ou Appsflyer, mas os usuários podem experimentar um breve redirecionamento ou um efeito de "cintilação". Isso ocorre porque o link encurtado é roteado primeiro pela Web antes de ser resolvido para o link universal que suporta a abertura do app. Além disso, o Braze não consegue solucionar problemas que possam surgir ao encurtar links universais, como quebrar a atribuição ou causar redirecionamentos inesperados.
+
+{% alert note %}
+Teste a experiência do usuário antes de implementar o encurtamento de links com links universais para confirmar se ele atende às suas expectativas.
+{% endalert %}
 
 ### O site `send_ids` está associado aos eventos de clique do SMS?
 
-Não. No entanto, se o rastreamento avançado estiver ativado, você poderá atribuir `send_ids` com eventos de clique usando o [Query Builder]({{site.baseurl}}/query_builder/) para consultar os dados do Currents com essa consulta:
+Não. No entanto, se você tiver o rastreamento avançado ativado, poderá atribuir `send_ids` com eventos de clique usando o [Query Builder]({{site.baseurl}}/query_builder/) para consultar os dados do Currents com essa consulta:
 
 ```sql
 SELECT c.*, s.send_id

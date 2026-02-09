@@ -15,11 +15,11 @@ platform:
   - Unity
 ---
 
-# [![Braze-Lernkurs]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Erste Schritte: Überblick über die Integration
+# [![Braze Lernkurse]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} Erste Schritte: Überblick über die Integration
 
 > Dieser Artikel bietet einen grundlegenden Überblick über den Onboarding-Prozess.
 
-![Venn-Diagramm mit vier Kreisen – Identifizierung, Integration, Qualitätssicherung und Wartung –, in dessen Mittelpunkt die "Time-to-Value" steht.]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
+![Ein Venn-Diagramm mit vier Kreisen - Entdeckung, Integration, Qualitätssicherung und Wartung - in dessen Mittelpunkt die "Zeit bis zur Wertschöpfung" steht.]({% image_buster /assets/img/getting-started/getting-started-integrate-flower.png %}){: style="max-width:50%;float:right;margin-left:15px;border:none;"} 
 
 Als technische Ressource stärken Sie Ihr Team durch die Integration von Braze in Ihren Tech-Stack. Das Onboarding gliedert sich im Wesentlichen in vier Schritte:
 * [Identifizierung und Planung](#discovery): Arbeiten Sie mit Ihrem Team zusammen, um den Projektumfang abzustimmen, eine Struktur für Daten und Kampagnen zu planen und eine geeignete Workspace-Struktur zu erstellen. 
@@ -44,7 +44,7 @@ Die Entdeckungs- und Planungsphase dauert im Durchschnitt etwa sechs Wochen. Tec
 Während der Einführungsphase Ihres Unternehmens wird Braze technische Übersichtssitzungen abhalten. Wir empfehlen Ingenieuren dringend, diese Sitzungen zu besuchen. Technische Übersichtssitzungen bieten Ihnen die Möglichkeit, Gespräche über die Skalierbarkeit der Plattformarchitektur zu führen und praktische Beispiele dafür zu sehen, wie Unternehmen Ihrer Größe mit ähnlichen Anwendungsfällen bereits erfolgreich waren.
 {% endalert %}
 
-![Symbole für verschiedene Kanäle, wie E-Mail, Warenkorb, Bilder, Geolokalisierung usw.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
+![Symbole für verschiedene Kanäle wie E-Mail, Warenkorb, Bilder, Geolocation und so weiter.]({% image_buster /assets/img/getting-started/data-graphic-2.png %}){: style="max-width:40%;float:right;margin-left:15px;"} 
 
 ### Kampagnenplanung
 
@@ -97,7 +97,7 @@ Wichtig ist, dass Sie unterschiedliche Umgebungen für die Entwicklung und die P
 
 ## Integration {#integration}
 
-![Abstrakte Pyramidengrafik, die den Informationsfluss von einer Datenquelle zu einem Nutzergerät darstellt.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
+![Abstrakte Pyramidengrafik, die den Informationsfluss von einer Datenquelle zu einem Nutzer:in-Gerät darstellt.]({% image_buster /assets/img/getting-started/data-graphic.png %}){: style="max-width:45%;float:right;margin-left:15px;"} 
 
 Braze unterstützt iOS-Apps, Android-Apps, Web-Apps und mehr. Sie können sich auch für ein plattformübergreifendes Wrapper SDK entscheiden, wie z. B. React Native oder Unity. In der Regel dauert eine Integration bei unseren Kunden zwischen 1 und 6 Wochen. Viele Kunden haben für die Braze-Integration nur einen einzigen Techniker benötigt. Der tatsächliche Personalaufwand hängt jedoch von den technischen Fähigkeiten der beteiligten Teammitglieder und der Bandbreite des Unternehmens ab. Letztlich kommt es darauf an, welchen Umfang Ihre spezifische Integration hat und wie viel Zeit Ihr Team dem Braze-Projekt widmet. 
 
@@ -225,9 +225,9 @@ Aktualisierungen an der Braze-Plattform können Sie über das Braze [GitHub](htt
 
 ## SDK Rate-Limits 
 
-### Monatlich aktive Nutzer:innen CY 24-25 
+### Monatlich aktive Nutzer:innen CY 24-25, Universal MAU, Web MAU und Mobile MAU  
 
-Für Kunden, die Monatlich aktive:r Nutzer:in - CY 24-25 erworben haben, setzt Braze serverseitige Ratenbeschränkungen für API-Anfragen durch, die von unseren SDKs zur Aktualisierung von Sitzungen, Nutzer-Attributen, Events und anderen Daten des Nutzerprofils verwendet werden. Dies dient der Stabilität der Plattform und der Aufrechterhaltung eines schnellen, zuverlässigen Dienstes. 
+Für Kunden, die Monthly Active Users CY 24-25, Universal MAU, Web MAU und Mobile MAU erworben haben, setzt Braze serverseitige Ratenbeschränkungen für API-Anfragen durch, die von unseren SDKs zur Aktualisierung von Sitzungen, Benutzerattributen, Events und anderen Benutzerprofildaten verwendet werden. Dies dient der Stabilität der Plattform und der Aufrechterhaltung eines schnellen, zuverlässigen Dienstes. 
 
 * Die stündlichen Rate-Limits richten sich nach dem erwarteten SDK-Traffic auf Ihrem Konto, der der Anzahl der monatlich aktiven Nutzer:innen (MAU), die Sie erworben haben, der Branche, der Saisonalität oder anderen Faktoren entsprechen kann. Wenn das stündliche Rate-Limit erreicht ist, drosselt Braze die Anfragen bis zur nächsten Stunde.
 * Alle Rate-Limiting-Anfragen werden vom SDK automatisch erneut versucht.

@@ -1,5 +1,5 @@
 ---
-nav_title: オファーによる電子メールサインアップ
+nav_title: オファー付きメール登録
 article_title: 特別オファーによる電子メールサインアップ
 alias: "/email_offer/"
 page_order: 5
@@ -10,7 +10,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 > アプリ内メッセージのドラッグアンドドロップエディタを使用して、サインアップ時に特別割引を提供することでメールリストを構築します。
 
-{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## 特別なオファーを使用した電子メールサインアップフォームの作成
 
@@ -18,9 +18,9 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ドラッグアンドドロップのアプリ内メッセージを作成する場合は、テンプレートに対して**特別なオファー**を使用した電子メールサインアップを選択し、**メッセージのビルド**を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![特別なオファー]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})を含むメールサインアップフォームのテンプレートを含むアプリ内メッセージエディタ
+![アプリ内メッセージエディターと特別オファー付きメール登録フォームのテンプレート。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_offer.png %})
 
-### ステップ2: メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
@@ -30,13 +30,13 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %})
+![アプリ内メッセージエディターには、メールキャプチャエレメントをカスタマイズするためのサイドメニューが用意されている。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_offer.png %})
 
 #### メール検証
 
 {% multi_lang_include drag_and_drop/templates.md section='email validation' %}
 
-### ステップ 4:免責事項の言語を追加（オプション）
+### ステップ 4: 免責事項の言語を追加（オプション）
 
 {% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 

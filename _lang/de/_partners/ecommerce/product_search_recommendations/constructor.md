@@ -53,7 +53,7 @@ Sie können die Offsite Discovery API URL von Constructor verwenden, um Produktb
 
 | Parameter | Beschreibung |
 |-------------|-------------|
-| `position` | Verweist auf die Rangfolge des spezifischen empfohlenen Artikels innerhalb der Vorschlagsliste (z.B. `position = 2`). <br>![Rangfolge der Artikel.]({% image_buster /assets/img/constructor/constructor_position.png %}) |
+| `position` | Verweist auf die Rangfolge des spezifischen empfohlenen Artikels innerhalb der Vorschlagsliste (z.B. `position = 2`). <br>![Positionierung des Artikels.]({% image_buster /assets/img/constructor/constructor_position.png %}) |
 | `ui` | Stellt den Bezeichner des Nutzers:in dar, der für die Personalisierung der Empfehlungsergebnisse entscheidend ist. Legen Sie den Parameter `ui` als `external_id` der Kund:in in Braze fest. Wenn Sie diese Option auslassen, gibt Constructor allgemeine Empfehlungen anstelle von Nutzer:innen zurück. |
 | `pod_id` | Bezeichner für den Pod, der die Strategie und die Suchregeln für Empfehlungen enthält (z.B. erzeugt ein Pod mit einer Bestseller-Strategie personalisierte Bestseller). |
 | `key` | Der Constructor-Indexschlüssel für diese Kund:in. |

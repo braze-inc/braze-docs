@@ -1,5 +1,5 @@
 ---
-nav_title: 確認付きのメールによる登録
+nav_title: 確認の電子メールサインアップ
 article_title: 確認ページ付きメールサインアップ
 alias: "/email_confirmation_page/"
 page_order: 6
@@ -10,7 +10,7 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 > in-app メッセージのドラッグアンドドロップエディタを使用して、確認ページ付きの電子メールサインアップフォームを作成します。
 
-{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## 確認ページ付きの電子メールサインアップフォームの作成
 
@@ -18,9 +18,9 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートとして [**確認ページ付きメールサインアップ**] を選択し、その後 [**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![確認ページがあるメールサインアップフォームのテンプレートを含むアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %})
+![アプリ内メッセージエディタには、確認ページ付きのメールサインアップフォームのテンプレートがあります。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_confirmation.png %})
 
-### ステップ2: メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
@@ -30,13 +30,13 @@ description: "このページでは、アプリ内メッセージのドラッグ
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %})
+![メールキャプチャ要素をカスタマイズするためのサイドメニュー付きのアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field_confirmation.png %})
 
 #### メール検証
 
 {% multi_lang_include drag_and_drop/templates.md section='email validation' %}
 
-### ステップ 4:免責事項の言語を追加（オプション）
+### ステップ 4: 免責事項の言語を追加（オプション）
 
 {% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 

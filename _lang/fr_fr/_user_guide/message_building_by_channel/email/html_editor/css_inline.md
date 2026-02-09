@@ -24,5 +24,5 @@ Vous pouvez contrôler si l'insertion CSS est activée ou désactivée pour n'im
 
 Vous pouvez définir un état activé ou désactivé par défaut de manière globale à partir de **Paramètres** > **Préférences d'e-mail.** Recherchez le paramètre pour l'**insertion CSS**. Ce paramètre détermine la valeur par défaut souhaitée par laquelle commencent tous les nouveaux messages e-mail. Notez que la modification de ce paramètre n’affectera pas vos e-mails existants. Vous pouvez également remplacer cette valeur par défaut à tout moment au moment de composer vos e-mails.
 
-![Option d'insertion CSS par défaut dans les nouveaux e-mails, située dans les emplacements des e-mails.]({% image_buster /assets/img_archive/css-inline1.png %})
+![L'option par défaut de l'inclusion CSS des nouveaux e-mails figure dans les paramètres de messagerie.]({% image_buster /assets/img_archive/css-inline1.png %})
 

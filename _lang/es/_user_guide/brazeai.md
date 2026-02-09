@@ -13,6 +13,14 @@ guide_top_text: "BrazeAI<sup>TM</sup> impulsa una colección de herramientas acc
 
 guide_featured_title: "Características"
 guide_featured_list:
+- name: BrazeAI Decisioning Studio<sup>TM</sup>
+  link: /docs/user_guide/brazeai/decisioning_studio/
+- name: Agentes de Braze
+  link: /docs/user_guide/brazeai/agents/
+  image: /assets/img/braze_icons/star-06.svg
+- name: Operador BrazeAI
+  link: /docs/operator/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/
   image: /assets/img/braze_icons/clock.svg
@@ -24,10 +32,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/calendar-check-01.svg
 - name: Recomendaciones
   link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/user-check-01.svg
+  image: /assets/img/braze_icons/hearts.svg
 - name: IA generativa
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
+- name: Servidor MCP Braze
+  link: /docs/mcp/
+  image: /assets/img/braze_icons/dataflow-01.svg
 - name: Variante ganadora y variante personalizada
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg
@@ -37,9 +48,6 @@ guide_featured_list:
 - name: Recorridos personalizados
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
   image: /assets/img/braze_icons/chevron-up-double.svg
-- name: Recomendaciones
-  link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/hearts.svg
 ---
 
 <br>

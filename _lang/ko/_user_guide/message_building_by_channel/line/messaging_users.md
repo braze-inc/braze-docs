@@ -1,6 +1,6 @@
 ---
-nav_title: 사용자 메시징
-article_title: LINE 사용자 메시지 보내기
+nav_title: 사용자 메시징하기
+article_title: 메시지 LINE 사용자
 page_order: 2
 description: "이 참고 문서에서는 템플릿 캠페인과 캔버스를 사용하여 사용자와 채팅하는 방법에 대해 설명합니다."
 page_type: reference
@@ -11,7 +11,7 @@ alias: /line/messaging_users/
 
 # LINE 사용자에게 메시지 보내기
 
-> LINE은 양방향 커뮤니케이션 채널입니다. 템플릿 캠페인과 캔버스를 사용하여 사용자에게 메시지를 보내는 것을 넘어 사용자와의 대화에 참여할 수 있습니다. 이 기사에서는 수신 메시지 및 인식되지 않은 응답에 대한 트리거 단어를 설정하는 방법과 같은 사용자 메시징의 세부 사항을 다룹니다.
+> LINE은 양방향 커뮤니케이션 채널입니다. 템플릿 캠페인과 캔버스를 사용하여 사용자에게 메시지를 보내는 것을 넘어 사용자와의 대화에 참여할 수 있습니다. 이 문서에서는 인바운드 메시지 및 인식되지 않은 응답에 대한 트리거 단어를 설정하는 방법 등 메시징 사용자에 대한 자세한 내용을 다룹니다.
 
 LINE 트리거 단어를 사용하는 등 LINE을 통해 사용자와 대화할 수 있는 방법은 다양합니다. 클릭 유도 문안(CTA)을 사용하여 LINE 메시지에 대한 사용자 참여를 유도할 수도 있습니다.
 
@@ -23,13 +23,13 @@ LINE 트리거 단어를 사용하는 등 LINE을 통해 사용자와 대화할 
 
 실행 기반 전달 캠페인을 예약할 때 트리거 단어를 설정하세요.
 
-![Action-based trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+!["메시지 본문이 있는 구독 그룹으로 인바운드 LINE을 보낸 사용자에게 이 캠페인 보내기"의 액션 기반 트리거와 빈 필드입니다.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### 캔버스
 
 캔버스의 [작업 경로]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) 내에 트리거 단어를 설정하세요.
 
-![Action path with a trigger of "Send this campaign to users who sent inbound LINE to subscription group where the message body is" and a blank field.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+!["메시지 본문이 있는 구독 그룹으로 인바운드 LINE을 보낸 사용자에게 이 캠페인 보내기"라는 트리거와 빈 필드가 있는 액션 경로입니다.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### 요구 사항
 

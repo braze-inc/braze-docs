@@ -8,10 +8,12 @@ These instructions are for contributors using GitHub Copilot to draft or edit do
 
 ## Pull request titles
 
-The title of the pull request should always match the corresponding issue title, which includes the pre-pended ticket number in the title as `[BD-NUMBER]` where `NUMBER` is the Jira ticket number listed in the corresponding issue. For example:
+The title of the pull request should always match the corresponding issue title.
 
-- **Issue:** `[BD-5016]:Update behaviour on link shortening when used with universal link`
-- **PR Title:** `[BD-5016]:Update behaviour on link shortening when used with universal link`
+1. Retrieve the corresponding issue’s title from the GitHub context (issue.title).
+2. Set the pull request title to exactly match issue.title (PR title := issue.title)
+3. Do not hardcode, paraphrase, or insert example text. Preserve the title exactly as written, including the pre-pended Jira ticket number in the format [BD-NUMBER] if present.
+4. If no linked issue is found or issue.title is empty, stop and prompt for a valid issue with a properly formatted title.
 
 ## Pull request body
 
@@ -25,9 +27,9 @@ The pull request body should always use the [PULL_REQUEST_TEMPLATE](./PULL_REQUE
 
 When describing Braze products and features, avoid the following:
 
-1. References to future features, or suggestions that something may be supported in the future.
+1. References to future features or suggestions that something may be supported in the future.
 2. Using definitive terms such as "guarantee" or "ensure." Instead, use forward-looking statements like "designed to" or "intended to" to accurately convey the product's capabilities and intentions.
-3. Using words and phrases that anchor your writing to a point in time, as they make content become quickly outdated. Focus on how the product works right now, not on what has changed (except for time-focused content, such as in release notes).
+3. Using words and phrases that anchor your writing to a point in time, as they make the content quickly outdated. Focus on how the product works right now, not on what has changed (except for time-focused content, such as in release notes).
 4. Specifically avoid the following words and phrases, as they make documentation less clear or more likely to become outdated:
    - as of this writing
    - currently

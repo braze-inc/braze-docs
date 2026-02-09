@@ -1,6 +1,6 @@
 ---
 nav_title: Cartões de conteúdo
-article_title: Cartões de conteúdo no Canvas
+article_title: Cartões de Conteúdo na Canva
 page_order: 1
 page_type: reference
 description: "Este artigo de referência descreve os recursos e as nuances específicas do uso dos cartões de conteúdo como um canal de envio de mensagens no Canva."
@@ -17,7 +17,7 @@ Assim como em outros canais de envio de mensagens do Canva, os cartões de conte
 
 ![Cartões de conteúdo selecionados como o canal de envio de mensagens para uma etapa de Mensagem.]({% image_buster /assets/img_archive/content-cards-in-canvas.png %})
 
-Duas opções que mudarão a forma como a etapa do cartão de conteúdo interagirá com o Canva são a [expiração](#content-card-expiration) e a [remoção](#removal).
+Duas opções que mudarão a forma como a etapa do cartão de conteúdo interagirá com o Canva são sua [expiração](#content-card-expiration) e [remoção](#removal).
 
 ## Expiração do cartão de conteúdo {#content-card-expiration}
 
@@ -49,15 +49,15 @@ Após a expiração de um cartão de conteúdo, ele será automaticamente removi
 
 ## Remoção do cartão de conteúdo {#removal}
 
-Os cartões de conteúdo podem ser removidos quando os usuários concluem uma compra ou realizam um evento personalizado. Você pode selecionar uma das seguintes opções como o evento de remoção: **Execute o evento personalizado** e **faça a compra**. Em seguida, selecione **Add Event (Adicionar evento**).
+Os cartões de conteúdo podem ser removidos quando os usuários concluem uma compra ou realizam um evento personalizado. Você pode selecionar uma das seguintes opções como o evento de remoção: **Realize o evento personalizado** e **faça a compra**. Em seguida, selecione **Add Event (Adicionar evento**).
 
-!["Remove cards when users complete a purchase or perform a custom event." selecionado com o disparo para remover cartões para usuários que fazem uma compra específica para "Bracelet".]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
+!["Remove cards when users complete a purchase or perform a custom event." (Remover cartões quando os usuários concluem uma compra ou realizam um evento personalizado) selecionado com o disparo para remover cartões para usuários que fazem uma compra específica para "Bracelet" (Pulseira).]({% image_buster /assets/img_archive/content-cards-in-canvas-removal-event.png %})
 
 ## Relatórios e análise de dados
 
 Depois de iniciar uma etapa dos cartões de conteúdo no Canva, você pode começar a analisar várias métricas diferentes para essa etapa. Essas métricas incluem o número de mensagens enviadas, destinatários únicos, taxas de conversão, receita total e muito mais.
 
-![Análise de dados para uma etapa de mensagem com a performance de mensagem do cartão de conteúdo.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
+![Análise de dados para uma etapa de mensagem com a performance da mensagem do cartão de conteúdo.]({% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %})
 
 Para saber mais sobre as métricas disponíveis e suas definições, consulte nosso [Glossário de métricas do relatório]({{site.baseurl}}/user_guide/data/report_metrics/).
 

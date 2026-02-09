@@ -1,5 +1,5 @@
 ---
-nav_title: Mise à jour utilisateur 
+nav_title: "Mise à jour de l'utilisateur"
 article_title: Mise à jour utilisateur 
 alias: "/user_update/"
 page_order: 6
@@ -16,7 +16,7 @@ tool: Canvas
 
 ![Une étape de mise à jour de l'utilisateur nommée "Mise à jour de la loyauté" qui met à jour un attribut "Est membre Premium" à "true".]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-Lorsque vous utilisez ce composant dans votre Canvas, les mises à jour ne sont pas prises en compte dans votre limite de débit de `/users/track` requêtes par minute. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant ne consomme pas de [points de données]({{site.baseurl}}/user_guide/data/data_points/) lorsqu'il est utilisé pour mettre à jour des points de données non facturables (tels que les groupes d'abonnement).
+Lorsque vous utilisez ce composant dans votre Canvas, les mises à jour ne sont pas prises en compte dans votre limite de débit de `/users/track` requêtes par minute. Au lieu de cela, les mises à jour sont regroupées pour que Braze puisse les traiter plus efficacement qu’un webhook Braze-à-Braze. Notez que ce composant n'enregistre pas les [points de données]({{site.baseurl}}/user_guide/data/data_points/) lorsqu'il est utilisé pour mettre à jour des points de données non facturables (tels que les groupes d'abonnement).
 
 Les utilisateurs ne passeront à l’étape Canvas suivante qu’une fois les mises à jour pertinentes de l’utilisateur effectuées. Cela signifie que tout envoi de messages ultérieurs reposant sur ces mises à jour de l'utilisateur sera à jour lors de l'exécution de l'étape suivante.
 
@@ -34,13 +34,13 @@ Vous pouvez également tester les modifications apportées à ce composant en re
 
 Pour ajouter ou mettre à jour un attribut personnalisé, sélectionnez un nom d’attribut dans votre liste d’attributs et entrez la valeur clé.
 
-![Étape de mise à jour de l'utilisateur qui met à jour les deux attributs "Membre fidèle" et "Programme de fidélité" à "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
+![L'étape de mise à jour de l'utilisateur qui met à jour les deux attributs "Membre Fidèle" et "Programme Fidèle" à "true".]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### Suppression des attributs personnalisés
 
 Pour supprimer un attribut personnalisé, sélectionnez un nom d’attribut à l’aide de la liste déroulante. Vous pouvez passer au [compositeur JSON avancé](#advanced-json-composer) pour apporter d’autres modifications. 
 
-![Étape de mise à jour de l'utilisateur qui supprime l'attribut "Membre fidèle".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui supprime un attribut "Membre Fidèle".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Valeurs croissantes et décroissantes
 
@@ -62,7 +62,7 @@ L'étape de mise à jour de l'utilisateur peut ajouter ou supprimer des attribut
 
 L'ajout ou la suppression d'un élément dans un tableau met à jour la liste de souhaits de l'utilisateur.
 
-![Utilisateur Mise à jour de l'étape qui ajoute un article "crème solaire" à l'attribut "articles_dans_la_liste_de_souvenirs".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui ajoute un élément "sunblock" à l'attribut "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
 #### Cas d’utilisation : Calculer le total du panier d'achat
 
@@ -124,7 +124,7 @@ L'attribut `shopping_cart` contient le total de nombreux événements personnali
 
 Vous pouvez utiliser l’étape de mise à jour de l’utilisateur pour faire persister un `canvas_entry_property`. Imaginons que vous ayez un événement qui se déclenche lorsqu’un article est ajouté à un panier. Vous pouvez stocker l’ID de l’article le plus récemment ajouté au panier et l’utiliser pour une campagne de remarketing. Utilisez la fonctionnalité de personnalisation pour récupérer une propriété d’entrée Canvas et la stocker dans un attribut.
 
-![Étape de mise à jour de l'utilisateur qui met à jour l'attribut "most_recent_cart_item" avec l'ID d'un article.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
+![Étape de mise à jour de l'utilisateur qui met à jour l'attribut "most_recent_cart_item" avec un ID d'article.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### Personnalisation
 

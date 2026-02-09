@@ -138,7 +138,7 @@ The AASA file contains a JSON object with a list of apps and the URL paths on th
 ```
 
 - `appID`: Built by combining your app’s **Team ID** (go to `https://developer.apple.com/account/#/membership/` to get the team ID) and the **Bundle Identifier**. In the example above, "JHGFJHHYX" is the team ID, and "com.facebook.ios" is the bundle ID.
-- `paths`: Array of strings that specify which paths are included or excluded from association. You can use `NOT` before the path to disable paths. In this example, all the links on this path will go to the web instead of opening the app. You can use `*` as a wildcard to enable all paths in a directory and `?` to match a single character (such as /archives/201?/ to match all numbers from 2010–2019).
+- `paths`: Array of strings that specify which paths are included or excluded from association. You can use `NOT` before the path to disable paths. In this example, all the links on this path will go to the web instead of opening the app. You can use `*` as a wildcard to enable all paths in a directory and `?` to match a single character (such as /archives/201?/ to match all numbers from 2010-2019).
 
 {% alert note %}
 These strings are case-sensitive and query strings and fragment identifiers are ignored.
@@ -216,7 +216,7 @@ Finally, you can test your deep links. Sending yourself a link through a messagi
 ## Universal links, App Links, and click-tracking
 
 {% alert note %}
-Click-tracking links are typically set up as part of your onboarding for email. If this was not completed during customer onboarding, reach out to your account manager for help.
+Click-tracking links are typically set up as part of your onboarding for email. If this was not completed during customer onboarding, contact your account manager for help.
 {% endalert %}
 
 Our email sending partners, SendGrid and SparkPost, use click-tracking domains to wrap all links and include URL parameters for click-tracking in Braze emails.

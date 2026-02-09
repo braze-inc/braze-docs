@@ -283,7 +283,7 @@ Lors de la planification d'une campagne, vous devez choisir de l'envoyer à une 
 
 Braze recommande vivement que toutes les campagnes selon le fuseau horaire local soient planifiées 24 heures à l’avance. Étant donné qu'une telle campagne doit être envoyée au cours d'une journée entière, le fait de les planifier 24 heures à l'avance permet à votre message d'atteindre l'ensemble de votre segmentation. Cependant, vous pouvez planifier ces campagnes moins de 24 heures à l’avance si nécessaire. N’oubliez pas que Braze n’enverra pas de messages aux utilisateurs qui ont manqué l’heure d’envoi de plus d’une heure.
 
-Par exemple, s’il est 13 h et que vous planifiez une campagne selon un fuseau horaire local pour 15 h, la campagne sera envoyée immédiatement à tous les utilisateurs dont l’heure locale est de 15 h à 16 h, mais pas aux utilisateurs dont l’heure locale est 17 h. De plus, l’heure d’envoi que vous choisissez pour votre campagne ne doit pas encore être dépassée dans le fuseau horaire de votre société.
+Par exemple, s'il est 13 heures et que vous planifiez une campagne pour un fuseau horaire local à 15 heures, la campagne sera immédiatement envoyée à tous les utilisateurs dont l'heure locale est de 15 à 16 heures, mais pas à ceux dont l'heure locale est de 17 heures. De plus, l’heure d’envoi que vous choisissez pour votre campagne ne doit pas encore être dépassée dans le fuseau horaire de votre société.
 
 La modification d’une campagne selon un fuseau horaire local qui est programmée moins de 24 heures à l’avance ne modifiera pas la planification du message. Si vous décidez de modifier une campagne selon un fuseau horaire local pour qu’elle soit envoyée ultérieurement (par exemple, à 19 h au lieu de 18 h), les utilisateurs qui se trouvaient dans le segment ciblé lorsque l’heure d’envoi initiale a été choisie recevront toujours le message à l’heure d’origine (18 h). Si vous modifiez un fuseau horaire local pour que l’envoi se fasse plus tôt (par exemple, à 16 h au lieu de 17 h), la campagne sera toujours envoyée à tous les membres du segment à l’heure d’origine (17 h).
 
@@ -466,7 +466,7 @@ Un utilisateur peut uniquement effectuer une conversion par entrée Canvas.
 
 Les conversions sont affectées au message le plus récent reçu par l’utilisateur pour cette entrée. Le blocage de synthèse au début d’un Canvas illustre toutes les conversions effectuées par les utilisateurs dans ce parcours, qu’ils aient reçu un message ou pas. Chaque message suivant affichera uniquement les conversions effectuées lorsque l’utilisateur a reçu l’étape la plus récente.
 
-{% details Cas d'utilisation %}
+{% details Use cases %}
 
 #### Cas d'utilisation 1
 

@@ -11,8 +11,8 @@ channel:
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-- name: Visão geral
-  link: /docs/user_guide/message_building_by_channel/email/preference_center/overview/
+- name: Central de Preferências de e-mail da API
+  link: /docs/user_guide/message_building_by_channel/email/preference_center/api_preference_center/
   image: /assets/img/braze_icons/list.svg
 - name: Central de Preferências de arrastar e soltar
   link: /docs/user_guide/message_building_by_channel/email/preference_center/dnd_preference_center/

@@ -31,20 +31,20 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:45%;"}
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/lapsed_user_old_name_description.png %}){: style="max-width:45%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、このキャンバスはプロモーションを使用してユーザーにメッセージを送信し、セッションを開始するユーザーに対してオーディエンス同期を実行することを示すようにします。
 3\.このキャンバスにパークとプロモーションが含まれていることを説明する説明を更新します。
 4. **Lapsing/Retention** というタグを追加して、キャンバスのホームページでこのキャンバスをフィルターできるようにします。
 
-![キャンバス名が「Lapsed User - Visit App」で簡単なキャンバスの説明がある [キャンバスの詳細を設定] ステップ]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
+![キャンバス名が「Lapsed User - Visit App」で簡単なキャンバスの説明がある「キャンバスの詳細を設定」ステップ]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### ステップ2:コンバージョンイベントを割り当てる
 
 [**1次コンバージョンイベント - A**] を更新してアプリ (MovieCanon) のユーザーをターゲットに設定し、[**1次コンバージョンイベント - B**] はデフォルトの購入のままにしておきます。
 
-![特定のアプリでセッションを開始するユーザーの1次コンバージョンイベントが示されている [コンバージョンイベントを割り当てる] セクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
+![特定のアプリでセッションを開始するユーザーの1次コンバージョンイベントが示されている「コンバージョンイベントを割り当てる」セクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### ステップ 3:エントリスケジュールを調整する
 
@@ -55,13 +55,13 @@ tool: Canvas
 1. 開始日時を選択する。
 2. [**特定の日**] の終了パラメーターと、2か月後の日付を選択します。このキャンバスの後に開始する別の離脱ユーザーキャンバスがあるとします。
 
-![指定した時刻にユーザーをエントリさせるスケジュールされたキャンバスの [エントリスケジュール] ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
+![指定した時刻にユーザーをエントリさせるスケジュールされたキャンバスの「エントリスケジュール」ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### ステップ4:ターゲットオーディエンスを選択する
 
 エントリーオーディエンスのデフォルト設定は、30 日以上アプリを使用していないユーザーに設定されています。また、4週間後にユーザーがキャンバスに再びエントリできるように、デフォルトのエントリコントロールを保持します。これは、ユーザーが30 日以上連続してアプリにアクセスしないたびに、キャンバスに入力されることを意味します。
 
-![アプリを最後に使用した時点が30日以内のユーザーをターゲット設定する [ターゲットオーディエンス] ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
+![アプリを最後に使用した時点が30日以内のユーザーをターゲット設定する「ターゲットオーディエンス」ステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_4.png %})
 
 ### ステップ 5: 送信設定を選択する
 
@@ -73,7 +73,7 @@ tool: Canvas
 
 ここで変更する唯一の設定は、静かな時間帯にメッセージがトリガーされたときに行うことです。メッセージをキャンセルする代わりに、**次回利用可能時間に送信**を選択して、ユーザーがプロモーションを見逃さないようにします。
 
-![開始時刻が午前12時で終了時刻が午前8時の[サイレント時間] セクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
+![" Quiet Hours" 開始時刻が午前12 時で終了時刻が午前8 時のセクション。]({% image_buster /assets/img/canvas_templates/lapsing_user_5.png %})
 
 ### ステップ 6:キャンバスをカスタマイズする
 
@@ -81,7 +81,7 @@ tool: Canvas
 
 1. 30日間以上アプリを訪問していないすべてのユーザーに送信する最初のメールをカスタマイズします。このユースケースでは、本日アプリにアクセスしたときに新しい特典のロックを解除するようにユーザーに伝えるメールをカスタマイズします。 
 
-![ユーザーが今日訪問すると、新しい特典のロックが解除されることを伝えるメールのキャンバスメッセージステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
+![ユーザが今日訪問したときに新しい特典のロックを解除するように指示するメールのキャンバスメッセージステップ。]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2\.**Started Session**パスのアプリを選択して、"Start Session?"というアクションパスコンポーネントをカスタマイズします。 

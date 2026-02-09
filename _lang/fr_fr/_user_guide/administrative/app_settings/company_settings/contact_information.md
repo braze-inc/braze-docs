@@ -19,7 +19,7 @@ description: "Cet article de référence contient des informations importantes p
 
 Pour accéder à cette page, allez dans **Paramètres** > **Paramètres d'administration** > **Informations de contact**.
 
-Cette page est l'endroit où vous pouvez gérer les informations de contact de votre entreprise et le fuseau horaire. Assurez-vous de cliquer sur **Enregistrer** avant de quitter la page !
+Cette page est l'endroit où vous pouvez gérer les informations de contact de votre entreprise et le fuseau horaire. Veillez à sélectionner **Enregistrer** avant de quitter la page !
 
 ## Conséquences du changement de fuseau horaire
 

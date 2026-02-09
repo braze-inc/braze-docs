@@ -18,13 +18,13 @@ alias: /geographic_permissions/
 
 Si vous êtes administrateur, vous pouvez configurer les pays qui figurent sur la liste des pays autorisés. La liste des pays autorisés est configurée au niveau du [groupe d'abonnement]({{site.baseurl}}/sms_rcs_subscription_groups/). Vous pouvez y accéder en allant dans **Audience** > **Abonnements** et en sélectionnant un groupe d'abonnement SMS, MMS ou RCS. La liste d'autorisation se trouve sous la rubrique " **Autorisations géographiques"**.
 
-![La section modifiable des autorisations géographiques par SMS pour un administrateur ayant sélectionné plusieurs pays dans la "liste des pays autorisés".]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+![La section modifiable des autorisations géographiques par SMS pour un administrateur ayant sélectionné plusieurs pays dans la "liste d'autorisations par pays".]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### Sélection des pays
 
 Ajoutez des pays à la liste des pays autorisés à l'aide de la liste déroulante. Les pays les plus courants en matière de SMS et de RCS sont indiqués en haut de la page, les autres étant indiqués en dessous. Vous pouvez également rechercher des pays en tapant dans le champ de texte.
 
-![Le menu déroulant "Liste blanche des pays" avec les pays les plus courants affichés en haut.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
+![Liste déroulante « Liste des pays autorisés » avec les pays les plus courants affichés en haut.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 Supprimez les pays précédemment sélectionnés en décochant les cases correspondantes.
 
@@ -32,7 +32,7 @@ Supprimez les pays précédemment sélectionnés en décochant les cases corresp
 
 Les modifications prendront effet une fois que vous aurez sélectionné **Enregistrer**. En supprimant des pays de votre liste d'autorisation, vous empêcherez l'envoi de tous les messages SMS, MMS et RCS vers des numéros situés dans ces pays.
 
-![Fenêtre modale d'avertissement confirmant les pays qui seront supprimés de la liste des pays autorisés.]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
+![Fenêtre modale confirmant les pays qui seront supprimés de la liste d'autorisation.]({% image_buster /assets/img/sms/delete_allowlist_warning.png %}){: style="max-width:70%;"}
 
 ## Pays à haut risque
 

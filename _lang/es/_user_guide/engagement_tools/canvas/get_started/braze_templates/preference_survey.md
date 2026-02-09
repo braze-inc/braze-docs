@@ -24,7 +24,7 @@ Para utilizar correctamente esta plantilla, necesitarás lo siguiente:
 
 ## Adaptar la plantilla a tus necesidades
 
-Digamos que trabajamos para StyleRyde, una aplicación de transporte compartido a la carta que lleva a la gente a donde necesita ir. Antes de crear el Canvas, creamos [un cuestionario sencillo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) que incluye una serie de preguntas atractivas para determinar la experiencia y la impresión del primer viaje de un usuario con la aplicación.
+Digamos que trabajamos para StyleRyde, una aplicación de transporte compartido a la carta que lleva a la gente a donde necesita ir. Antes de crear el Canvas, creamos [un cuestionario sencillo]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) que incluye una serie de preguntas atractivas para determinar la experiencia y la impresión del primer viaje de un usuario con la aplicación.
 
 Para acceder a la plantilla, al crear un nuevo Canvas, selecciona **Utilizar una plantilla de Canvas** > **Plantillas de Braze**. A continuación, junto a **Cuestionario de incorporación con preferencias**, selecciona **Aplicar plantilla**. Ahora, podemos repasar la plantilla para adaptarla a nuestras necesidades.
 
@@ -41,7 +41,7 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 3\. Actualiza la descripción para explicar que este Canvas contiene mensajería personalizada.
 4\. Añade la etiqueta **Incorporación** para que podamos filtrarla en la página de inicio de Canvas.
 
-![El nuevo nombre, descripción y etiqueta para el Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
+![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/preference_survey2.png %}){: style="max-width:90%;"}
 
 ### Paso 2: Asignar eventos de conversión
 
@@ -61,13 +61,13 @@ Haremos una actualización en esta sección ajustando la **Ventana de Entrada** 
 
 Mantendremos la audiencia objetivo tal cual para dirigirnos a nuestros usuarios que utilizaron por primera vez la aplicación StyleRyde hace menos de un día.
 
-![El filtro "Utilizó por primera vez estas aplicaciones hace menos de 1 día" seleccionado para dirigirse a la audiencia de entrada.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+![El filtro "Utilizó estas aplicaciones por primera vez hace menos de 1 día" se seleccionó para dirigirse a la audiencia de entrada.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### Paso 5: Selecciona tu configuración de envío
 
 Mantendremos la configuración predeterminada de la suscripción, de modo que sólo enviemos a los usuarios que se hayan suscrito o hayan optado por recibir mensajes o notificaciones con las horas tranquilas activadas, y omitiremos las demás configuraciones (limitación de frecuencia y grupos de semilla).
 
-![Sección "Configuración de envío" con la configuración de la suscripción para los usuarios suscritos o con adhesión voluntaria con las horas tranquilas activadas entre las 12 y las 20 horas.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+![Sección "Configuración de envío" con la configuración de suscripción para los usuarios suscritos o con adhesión voluntaria con las horas tranquilas activadas entre las 12 de la mañana y las 8 de la tarde.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
 ### Paso 6: Personaliza tu Canvas
 
@@ -79,7 +79,7 @@ Ahora, construiremos nuestro Canvas personalizando el contenido que se enviará 
 - Usuarios que han iniciado una sesión o han hecho clic en el correo electrónico de incorporación
 - Usuarios que no han iniciado sesión o no han hecho clic en el correo electrónico de incorporación
 
-![Un paso de la ruta de acción dividido en dos rutas, una para los usuarios que han iniciado una sesión y otra para todos los demás.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
+![Un paso de Ruta de acción dividido en dos rutas, una para los usuarios que han iniciado una sesión y otra para todos los demás.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
 
 A partir de aquí, orientaremos a nuestros usuarios y la mensajería en función de los grupos mencionados.
 

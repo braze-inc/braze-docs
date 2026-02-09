@@ -1,6 +1,6 @@
 ---
-nav_title: Creación de una campaña MMS
-article_title: Creación de una campaña MMS
+nav_title: Crear una campaña MMS
+article_title: Crear una campaña MMS
 page_order: 2
 description: "Este artículo de referencia cubre los pasos necesarios para crear, enviar y obtener una vista previa de un mensaje MMS."
 page_type: reference
@@ -56,4 +56,4 @@ Braze proporciona una vista previa de la imagen que has cargado en el panel **Vi
 El orden de los activos SMS o MMS no se puede personalizar. El pedido depende del teléfono que recibe este mensaje.
 {% endalert %}
 
-![Un ejemplo de mensaje "¿Listo para llegar a casa gym...at?". La vista previa muestra el mensaje y la imagen enviados como textos.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Un ejemplo de mensaje "¿Listo para ir al gimnasio... en casa?". La vista previa muestra el mensaje y la imagen enviados como textos.]({% image_buster /assets/img/sms/mms_preview.png %})

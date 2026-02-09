@@ -21,7 +21,7 @@ Pour chaque campagne, Braze vérifie une liste d'attributs et de comportements d
 
 Pour effectuer une analyse de corrélation de conversion, sélectionnez l'événement de conversion qui vous intéresse dans le menu déroulant.
 
-![Le panneau de corrélation des conversions montre un exemple où l'option "Sélectionner un événement de conversion" est réglée sur "Événement de conversion principal - A" et où le paramètre de l'événement est "Achat effectué dans les 12 heures (tout produit)".]({% image_buster /assets/img/convcorr.png %})
+![Le panneau Conversion Correlation (Corrélation de conversion) qui montre un exemple où l’option « Select a conversion event (Sélectionner un événement de conversion) » est définie sur « Primary Conversion Event - A (Événement de conversion primaire - A) » et le paramètre d’événement est défini sur « Made Purchase within 12 hours (Any product) (Achat effectué dans les 12 heures [tout produit]) ».]({% image_buster /assets/img/convcorr.png %})
 
 ## Quels éléments Braze vérifie-t-il ?
 

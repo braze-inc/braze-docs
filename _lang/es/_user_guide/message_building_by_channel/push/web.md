@@ -21,7 +21,7 @@ Web push es otra forma estupenda de interacción con los usuarios de tu aplicaci
 Las notificaciones web push ofrecen actualizaciones urgentes y prácticas que impulsan conversiones rápidas. Con web push, puedes:
 
 - Activar mensajes justo cuando cambien datos importantes, como una bajada de precios
-- Haga que la gente vuelva a su sitio web con sencillos botones de llamada a la acción
+- Haz que la gente vuelva a tu sitio web con botones de acción claros
 - Personalice su push con información sobre productos y clientes para que su mensaje sea relevante
 
 Web push funciona de la misma manera que las notificaciones push de las aplicaciones en tu teléfono. Para más información sobre cómo componer una notificación push web, consulta [Crear una notificación push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).

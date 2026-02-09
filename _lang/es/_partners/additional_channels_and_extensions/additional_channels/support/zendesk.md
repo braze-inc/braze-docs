@@ -21,7 +21,7 @@ La integración de servidor a servidor de Braze y Zendesk permite utilizar:
 | Requisito | Descripción |
 |---|---|
 | Cuenta de Zendesk | Se requiere una [cuenta de administrador de Zendesk](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) para aprovechar esta asociación. |
-| Token de la API de Zendesk | Se necesita un token de Zendesk [API](https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) para enviar solicitudes desde Braze al punto final de tickets de Zendesk. |
+| Token de la API de Zendesk | Se necesita un [token de API] de Zendesk (https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-) para enviar solicitudes desde Braze al punto final de tickets de Zendesk. |
 | Identificador común (recomendado) | Se recomienda un [identificador común](#common-identifier) entre Braze y Zendesk. |
 | Clave API Braze | Se necesita una clave de API de Braze para enviar solicitudes desde Zendesk a un punto final de Braze. Asegúrese de que la clave de API que utiliza tiene los permisos correctos para el punto final de Braze que utiliza su webhook de Zendesk. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -43,7 +43,7 @@ Otros casos de uso pueden gestionarse a través [de las API de soporte de Zendes
 
 #### Cabecera y método de la solicitud
 
-Zendesk requiere un encabezado HTTP para la autorización y un método HTTP. En la pestaña **Configuración**, sustituya <email_address> por su correo electrónico de administrador de Zendesk y <api_token> por su token de API de Zendesk.
+Zendesk requiere un encabezado HTTP para la autorización y un método HTTP. En la pestaña **Configuración**, sustituye <email_address> por tu correo electrónico de administrador de Zendesk y <api_token> por tu token de la API de Zendesk.
 
 - **Método HTTP**: POST
 - **Encabezados de solicitud**:

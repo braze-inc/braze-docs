@@ -45,23 +45,6 @@ L’éligibilité d’un message in-app est calculée au moment de la livraison.
 
 Une fois un message in-app affiché, son éligibilité dépend du moment auquel il est téléchargé et déclenché.
 
-### Qu'est-ce que les messages intégrés dans l'application modélisés ?
-
-Les messages intégrés à l'application seront livrés sous forme de messages intégrés à l'application modélisés lorsque **Réévaluer l'éligibilité de la campagne avant l'affichage** est sélectionné ou si l'un des tags Liquid suivants existe dans le message :
-
-- `canvas_entry_properties`
-- `connected_content`
-- Les variables SMS telles que {% raw %}`{sms.${*}}`{% endraw %}
-- `catalog_items`
-- `catalog_selection_items`
-- `event_properties`
-
-Cela signifie qu'au début de la session, l'appareil recevra le déclencheur de ce message intégré plutôt que le message entier. Lorsque l'utilisateur déclenche le message intégré à l'application, l'appareil de l'utilisateur effectuera une demande réseau pour récupérer le message réel.
-
-{% alert note %}
-Le message ne sera pas livré si l'appareil n'a pas accès à Internet. Le message pourrait ne pas être livré si la logique Liquid prend trop de temps à se résoudre.
-{% endalert %}
-
 ### Pourquoi ma campagne de messages in-app archivée envoie-t-elle toujours des impressions de messages in-app ?
 
 Ce cas peut se produire pour les utilisateurs qui répondaient aux critères du segment lorsque la campagne de messages in-app était active.

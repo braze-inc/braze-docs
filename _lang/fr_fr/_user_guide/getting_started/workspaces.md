@@ -6,7 +6,7 @@ page_type: reference
 description: "Tout ce que vous faites dans la plateforme Braze se produit au sein d'un espace de travail. Cet article décrit leur fonctionnement et les éléments importants à prendre en compte lors de la planification de vos espaces de travail dans Braze."
 ---
 
-# Pour commencer : Espaces de travail
+# Pour démarrer : Espaces de travail
 
 Tout ce que vous faites dans la plateforme Braze se produit au sein d'un espace de travail. Les espaces de travail agissent comme des silos de données distincts et vous permettent de séparer différentes marques ou activités. Plusieurs versions de votre site web ou de votre application mobile peuvent envoyer des données au même espace de travail. Les différents sites et applications rassemblés au sein d'un espace de travail sont appelés des « instances d’applications ».
 
@@ -178,7 +178,7 @@ Le tableau suivant décrit les avantages et les inconvénients de ces deux appro
         <td>Les attributs et les événements personnalisés sont garantis comme étant spécifiques à une instance d'application.</td>
         <td>Impossible de suivre le comportement des utilisateurs dans les espaces de travail.<br><br><b>Conseil :</b> Pour ce faire, vous pouvez utiliser plusieurs connecteurs Currents.</td>
         <td>Peut suivre le comportement de l'utilisateur dans toutes les instances d'applications de l'espace de travail.</td>
-        <td>Les attributs et attributs personnalisés s'appliqueraient à toutes les instances de l'application, ce qui pourrait rendre difficile de déterminer quelles données d'un profil utilisateur sont pertinentes pour telle ou telle instance de l'application. Par exemple, "date_de_parking" est-il pertinent pour l'application 1 ou l'application 2 ? Pour y remédier, veillez à utiliser des conventions de dénomination bien structurées.</td>
+        <td>Les attributs et attributs personnalisés s'appliqueraient à toutes les instances de l'application, ce qui pourrait rendre difficile de déterminer quelles données d'un profil utilisateur sont pertinentes pour telle ou telle instance de l'application. Par exemple, "date_of_parking" est-il pertinent pour l'application 1 ou l'application 2 ? Pour y remédier, veillez à utiliser des conventions de dénomination bien structurées.</td>
     </tr>
     <tr>
         <td>Limite de fréquence</td>
@@ -205,7 +205,7 @@ Le tableau suivant décrit les avantages et les inconvénients de ces deux appro
         <td>Duplication de contenu</td>
         <td>S.O.</td>
         <td>Vous ne pouvez pas dupliquer des segments, des campagnes de cartes de contenu ou de push, ou des canevas dans les espaces de travail.</td>
-        <td>Vous pouvez [dupliquer des campagnes dans les espaces de travail]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) pour les canaux pris en charge suivants : SMS, messages in-app, e-mails, modèles d'e-mails et blocs de contenu. <br><br>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
+        <td>Vous pouvez [dupliquer des campagnes sur workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) pour les canaux pris en charge suivants : SMS, messages in-app, e-mails, modèles d'e-mails et blocs de contenu. <br><br>Peut dupliquer les segments, les campagnes et les Canvases pour réutiliser le contenu d'une instance d'appli à l'autre.</td>
         <td>S.O.</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ Vous devez avoir plus d'un utilisateur Braze avec des droits d'administrateur po
 
 ## Étapes suivantes
 
-Après avoir déterminé votre plan d'espace de travail, il est temps de créer votre espace de travail et d'ajouter des instances d'apps. Pour connaître la marche à suivre, consultez la rubrique [Création et gestion des espaces de travail]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+Après avoir déterminé votre plan d'espace de travail, il est temps de créer votre espace de travail et d'ajouter des instances d'apps. Pour connaître la marche à suivre, consultez la rubrique [Créer et gérer des espaces de travail]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 

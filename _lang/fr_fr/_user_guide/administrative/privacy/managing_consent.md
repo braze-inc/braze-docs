@@ -1,12 +1,12 @@
 ---
-nav_title: Gestion du consentement
-article_title: Gestion du consentement
+nav_title: Gérer le consentement
+article_title: Gérer le consentement
 page_order: 10
 page_type: reference
 description: "Cet article de référence fournit des conseils sur la manière de gérer le consentement avec Braze."
 ---
 
-# Gestion du consentement
+# Gérer le consentement
 
 > Cet article de référence fournit des conseils sur la manière de gérer le consentement de vos utilisateurs à l'aide de Braze.
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Parcours d’audience 
+nav_title: "Parcours d'audience"
 article_title: Parcours d’audience 
 alias: /audience_paths/
 page_order: 1
@@ -17,7 +17,7 @@ Ce composant Canvas remplace la nécessité de créer des étapes complètes sup
 
 ## Fonctionnement
 
-![Un parcours d'audience avec deux groupes : les utilisateurs engagés et les autres.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
+![Un parcours d'audience avec deux groupes : les utilisateurs engagés et tous les autres.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
 Les Parcours d’audience sont identiques aux entonnoirs de tri avec des critères de classement. Les utilisateurs sont évalués pour chaque critère par ordre de priorité et sont dirigés vers le critère le plus élevé auquel ils répondent. Cela réduit l'ambiguïté quant à l'endroit où les utilisateurs se rendront et aux messages qu'ils recevront. Notez que les classements ne sont pas [modifiables après le lancement]({{site.baseurl}}/post-launch_edits/).
 
@@ -31,7 +31,7 @@ Le parcours d’audience vous permet d’effectuer les actions suivantes :
 
 ### Prévoir du temps pour l'évaluation des utilisateurs
 
-![Canvas montrant un délai de 24 heures après un envoi de messages, suivi d'un parcours audience.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Canvas montrant un délai de 24 heures après une étape du message, suivi d'un parcours audience.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Les utilisateurs sont évalués dès qu'ils atteignent l'étape du parcours d'audience. Après avoir été évalués, ils passeront immédiatement à l'étape suivante. Il est donc important de prévoir un délai approprié si le parcours d'audience est déterminé par une action de l'utilisateur.
 
@@ -60,7 +60,7 @@ Par exemple, si vous souhaitez cibler l'envoi de messages d'onboarding à un gro
 
 Une fois l'étape Parcours d'audience terminée, chaque groupe d'audience disposera d'une branche distincte. Vous pouvez continuer à utiliser Parcours d'audience pour filtrer davantage votre audience, ou poursuivre votre parcours Canvas avec les étapes de canvas standard. 
 
-![Deux parcours d'audience avec différents groupes basés sur l'engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Deux parcours d'audience avec des groupes différents en fonction de l'engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Tester les groupes d’audience
 
@@ -74,7 +74,7 @@ Le véritable pouvoir des parcours d’audience réside dans la capacité à aff
 
 En attribuant une grande priorité à ces groupes, vous pouvez cibler les utilisateurs relevant de filtres et segments spécifiques tout en ciblant des utilisateurs pouvant ne pas répondre à ces critères spécifiques, le tout dans une étape de Canvas.
 
-![Un parcours d'audience avec des groupes pour "Aime les chaussures de grande marque", "Aime la grande marque" et "Tous les autres".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![Un parcours d'audience avec des groupes pour " Aime les chaussures de grande marque ", " Aime la grande marque " et " Tous les autres ".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Par exemple, supposons que vous souhaitiez envoyer des annonces à un groupe d’utilisateurs pour de nouveaux produits. Vous commenceriez par le classement de filtres pour lesquels ces produits sont pertinents sur le parcours d’audience. Si vous créez une campagne de marketing pour l'entreprise "Big Brand" et qu'une nouvelle marque de détail vient d'être lancée, vous pouvez sélectionner des filtres tels que "Aime les chaussures Big Brand" ou "Aime les sacs Big Brand", et envoyer des messages e-mail différents en fonction du groupe filtré auquel ils appartiennent. 
 

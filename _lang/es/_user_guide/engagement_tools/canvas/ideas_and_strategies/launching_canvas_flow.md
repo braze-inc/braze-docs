@@ -1,5 +1,5 @@
 ---
-nav_title: Lanzamiento con Canvas Flow
+nav_title: Lanzamiento con flujo Canvas
 article_title: Lanzamiento con Canvas Flow
 page_order: 3
 description: "Este artículo de referencia explica cómo preparar y probar un lienzo creado con el flujo de lienzo antes de su lanzamiento."
@@ -83,9 +83,32 @@ De forma similar a las Rutas de acción, puede aprovechar los pasos de [las Ruta
 
 Después de revisar los detalles de su lienzo, consulte [Enviar lienzos de prueba]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) para conocer los diferentes métodos que puede utilizar para probar su lienzo con usuarios de prueba.
 
+## Lista de control de lanzamiento
+
+### Comprobar la disponibilidad del usuario
+
+- Asegúrate de que tus usuarios cumplen tus criterios de segmentación.
+- Confirma que su estado de suscripción es "suscrito" o "adhesión voluntaria" y que existe su token de notificaciones push. Si las añadiste como reglas de entrada a Canvas, es posible que los usuarios se dieran de baja entre la entrada a tu Canvas y la recepción del paso en Mensajería.
+- Confirma que coinciden con tu configuración de envío de Canvas. (Si los usuarios están "suscritos" pero la configuración es "Adhesión voluntaria", los usuarios no estarán habilitados para el canal).
+- Si la limitación de frecuencia global está habilitada para tu Canvas, comprueba si tus reglas están limitando cuántas veces puede recibir cada usuario un mensaje de un canal específico.
+- Si se habilitan las Horas tranquilas, la hora de envío de tu mensaje podría verse afectada, lo que significa que tu mensaje podría enviarse a la siguiente hora disponible (cuando finalicen las Horas tranquilas) o cancelarse por completo.
+- Comprueba la disponibilidad del usuario para filtrar más en tu paso en Canvas.
+
+### Confirma que han realizado el evento personalizado o la compra necesarios
+
+- Comprueba si existe una condición de carrera, que afecta a los mensajes que reciben los usuarios si desencadenan varias acciones al mismo tiempo.
+- Asegúrate de que no hay filtros específicos en el paso que podrían haber bloqueado a los usuarios la recepción del mensaje.
+- Busca conflictos entre diferentes pasos dentro del mismo Canvas. Por ejemplo, los usuarios que no recibieron el mensaje podrían ser detenidos por un filtro que requiere la realización de otro paso en una rama diferente.
+- Confirma que los usuarios cumplen las normas de validación adicionales.
+- Confirma que el paso en Canvas estaba conectado al paso anterior en el momento del envío.
+
+### Confirma que tu Canvas se guarda correctamente y que todos los pasos son válidos
+
+Si tu Canvas no se carga y no avanza, puede deberse a que una versión anterior del Canvas no se guardó correctamente y contiene pasos no válidos. Puedes duplicar el Canvas desde el panel. Si el problema persiste, abre un [ticket de soporte]({{site.baseurl}}/braze_support/).
+
 ## Solución de problemas
 
-{% details ¿Por qué mis usuarios no reciben mis mensajes Canvas? %}
+{% details Why are my users not receiving my Canvas messages? %}
 **Comprobar la disponibilidad del usuario**
 - Asegúrate de que cumplen tus criterios de segmentación.
 - Confirma que su estado de suscripción push es "suscrito" o "habilitado" **y** que su estado **de habilitación push** es "verdadero". Si las ha añadido como reglas de entrada en el lienzo, es posible que los usuarios se hayan dado de baja entre el momento en que entraron en el lienzo y recibieron el paso Mensaje.

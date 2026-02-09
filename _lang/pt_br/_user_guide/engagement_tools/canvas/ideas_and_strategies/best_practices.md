@@ -1,5 +1,5 @@
 ---
-nav_title: Práticas recomendadas
+nav_title: Melhores práticas
 article_title: Práticas recomendadas do Canva
 page_order: 1
 description: "Este artigo fornece algumas práticas recomendadas para criar e personalizar as jornadas do usuário com o Canvas e o Canvas Flow."

@@ -1,7 +1,7 @@
 ---
-nav_title: "Copie d'un espace de travail à l'autre"
-article_title: "Copie d'un espace de travail à l'autre"
-page_order: 4.5
+nav_title: Copie entre espaces de travail
+article_title: "Copier d'un espace de travail à l'autre"
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "Cet article de référence donne un aperçu de la manière de copier des campagnes et des toiles dans différents espaces de travail."
@@ -10,14 +10,14 @@ tool:
     - Canvas
 ---
 
-# Copie des campagnes et des toiles dans les espaces de travail
+# Copier les campagnes et les toiles dans tous les espaces de travail
 
 > La copie de campagnes entre espaces de travail vous permet d'accélérer la composition de vos messages en commençant par une copie d'une campagne dans un espace de travail différent. Cette page explique comment copier des campagnes dans différents espaces de travail et indique ce qui est copié et ce qui ne l'est pas.
 
 Lorsque vous copiez une campagne ou un Canvas dans un autre espace de travail, la copie reste à l'état de brouillon jusqu'à ce que vous la modifiiez et la lanciez, ce qui vous permet de conserver et de créer des stratégies d'envoi de messages qui ont fait leurs preuves.
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 {% alert important %}
 La copie de campagnes entre espaces de travail est généralement disponible. La prise en charge des canaux pour les cartes de contenu n'est pas encore disponible.
@@ -58,7 +58,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Détails
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -95,7 +95,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Comportements de conversion
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -122,7 +122,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Actions
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -149,7 +149,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Variantes de messages
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -177,7 +177,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Variation du message e-mail
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -208,7 +208,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Corps de l’e-mail
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -237,7 +237,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Modèles d'e-mail
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -266,7 +266,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Blocs de contenu
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|
@@ -293,7 +293,7 @@ Notez que la liste suivante n'est pas une liste exhaustive de ce qui est copié 
 ### Variation des messages SMS
 
 {% tabs local %}
-{% tab campagnes %}
+{% tab campaigns %}
 
 | Copié | Omis |
 |---|---|

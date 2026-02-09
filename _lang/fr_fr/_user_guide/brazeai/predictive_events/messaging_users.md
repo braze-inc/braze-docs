@@ -1,6 +1,6 @@
 ---
-nav_title: Écrire aux utilisateurs
-article_title: Ciblage des utilisateurs pour des événements prédictions
+nav_title: "Utilisateurs de l'envoi de messages"
+article_title: Cibler les utilisateurs pour les événements prédictions
 description: "Cet article de référence aborde les étapes qui peuvent suivre la création d'une prédiction d'événement, telles que la mise en place d'un filtre et les considérations stratégiques."
 page_order: 1.2
 

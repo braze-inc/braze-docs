@@ -1,6 +1,6 @@
 ---
 nav_title: Usuarios de mensajería
-article_title: Selección de usuarios para eventos de predicción
+article_title: Usuarios objetivo de los eventos de predicción
 description: "Este artículo de referencia cubre los posibles pasos siguientes después de haber creado una predicción de eventos, como la implementación de filtros y las consideraciones estratégicas."
 page_order: 1.2
 

@@ -13,11 +13,10 @@ description: "Este artigo o orientará sobre como configurar os recursos de logo
 
 ## Solicitações
 
-Após a configuração, solicitaremos que você forneça uma URL de login e um URL do Assertion Consumer Service (ACS).  
+Após a configuração, você será solicitado a fornecer um URL do Assertion Consumer Service (ACS).  
 
 | Requisito | Informações |
 |---|---|
-| URL de login | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> Para o subdomínio, use o subdomínio de coordenação listado no [URL de]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) sua [instância do Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). Por exemplo, se sua instância for `US-01`, seu URL será `https://dashboard-01.braze.com`. Isso significa que seu subdomínio será `dashboard-01`. |
 | URL do serviço de consumidor de asserção (ACS) | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> Para alguns provedores de identidade, isso também pode ser chamado de URL de resposta, URL do público ou URI do público. |
 | ID da entidade | `braze_dashboard`|
 | Chave de API do RelayState | Para ativar o login do provedor de identidade, acesse **Settings** > **API Keys (** **Configurações** > **Chaves de API** ) e crie uma chave de API com permissões `sso.saml.login`. |
@@ -37,11 +36,16 @@ Após a configuração, solicitaremos que você forneça uma URL de login e um U
 3. Na página **Configurar logon único com SAML**, selecione o ícone de edição para **Configuração básica de SAML**.
 4. Configure o aplicativo no modo iniciado por IdP inserindo um **URL de resposta** que combine sua [instância da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) com o seguinte padrão: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 5. Opcionalmente, configure o RelayState inserindo sua chave de API gerada pelo Relay State no campo **Relay State (Optional)**.
-6. Se quiser configurar o aplicativo no modo iniciado por SP, selecione **Definir URLs adicionais** e insira um URL de login que combine sua [instância da Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) com o seguinte padrão: `https://<SUBDOMAIN>.braze.com/sign_in`.
-7. Formatar as asserções SAML no formato específico esperado pelo Braze. Consulte as guias a seguir sobre atribuições e reivindicações do usuário para entender como esses atributos e valores devem ser formatados.
+
+{% alert important %}
+**Não** defina o campo **URL de logon**. Deixe esse campo em branco para evitar problemas com o SSO SAML iniciado pelo IdP.
+{% endalert %}
+
+{: start="6"}
+6\. Formatar as asserções SAML no formato específico esperado pelo Braze. Consulte as guias a seguir sobre atribuições e reivindicações do usuário para entender como esses atributos e valores devem ser formatados.
 
 {% tabs %}
-{% tab Atribuições do usuário %}
+{% tab User Attributes %}
 É possível gerenciar os valores dessas atribuições na seção **Atributos do usuário** na página **Integração de aplicativos**.
 
 Use os seguintes pares de atribuições:
@@ -60,7 +64,7 @@ Use os seguintes pares de atribuições:
 {% endalert %}
 
 {% endtab %}
-{% tab Reivindicações do usuário %}
+{% tab User Claims %}
 
 Na página **Configurar logon único com SAML**, selecione **Editar** para abrir a caixa de diálogo **Atribuições do usuário**. Em seguida, edite as reivindicações do usuário de acordo com o formato adequado.
 

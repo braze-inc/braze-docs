@@ -1,5 +1,5 @@
 ---
-nav_title: テクニカルソリューション
+nav_title: 技術ソリューション
 page_order: 3
 
 #Required
@@ -82,6 +82,5 @@ this is the code snippet you need to do it.
 
 ### まだ迷っていますか？
 
-この記事がお役に立たなかった場合は、フィードバックを残すか、[サポートチケット][support]を開封してください！
+この記事がお役に立たなかった場合は、フィードバックを残すか、[サポートチケット]({{site.baseurl}}/braze_support/)を開封してください！
 
-[support]: {{site.baseurl}}/braze_support/

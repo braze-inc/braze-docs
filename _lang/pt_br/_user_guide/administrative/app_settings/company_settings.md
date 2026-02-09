@@ -4,7 +4,7 @@ article_title: Configurações de administrador
 page_order: 20
 layout: dev_guide
 guide_top_header: "Configurações de administrador"
-guide_top_text: "Esta página está localizada em <b>Configurações</b> > <b>Configurações de Administração</b>. Você pode então selecionar a respectiva guia para navegar até as configurações que deseja gerenciar. <br> <br> A maioria dos recursos dentro de <b>Configurações de Admin</b> estão disponíveis apenas para administradores de contas Braze. Se você não tiver acesso, mas sentir que deveria, entre em contato com o administrador da conta Braze da sua empresa."
+guide_top_text: "Esta página está localizada em <b>Configurações</b> > <b>Configurações de Administração</b>. Você pode então selecionar a respectiva guia para navegar até as configurações que deseja gerenciar. <br> <br> A maioria dos recursos dentro de <b>Configurações de Admin</b> estão disponíveis apenas para administradores de contas Braze. Se não tiver acesso, mas achar que deveria, entre em contato com o administrador da conta Braze da sua empresa."
 
 page_type: landing
 description: "Esta landing page lista artigos sobre configurações de administração. Aqui, você pode encontrar artigos sobre como configurar informações de contato, preferências de notificação e configurações de segurança."

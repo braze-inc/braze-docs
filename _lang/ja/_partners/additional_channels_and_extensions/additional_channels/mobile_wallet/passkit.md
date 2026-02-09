@@ -22,8 +22,8 @@ Braze と PassKit の統合により、Apple ウォレットと Google Pay の�
 
 | 必要条件 | 説明 |
 | ----------- | ----------- |
-| PassKitアカウント | PassKit アカウントと PassKit アカウントマネージャーが必要です。 |
-| `userDefinedID` | PassKit と Braze の間でユーザーに対しカスタムイベントとカスタム属性を適切に更新するには、Braze external ID を`userDefinedID` として設定する必要があります。この`userDefinedID` は、PassKit エンドポイントに対する API 呼び出しの実行時に使用されます。 |
+| PassKitアカウント | PassKitアカウントとPassKitアカウントマネージャーが必要である。 |
+| `userDefinedID` | PassKitとBrazeの間でユーザーへのカスタムイベントやカスタム属性を適切に更新するには、Brazeの外部IDを`userDefinedID` に設定する必要がある。この`userDefinedID` は、PassKit のエンドポイントに API コールを行う際に使用される。 |
 | Braze REST API キー | `users.track` 権限を持つ Braze REST API キー。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
 | Braze RESTエンドポイント  | REST エンドポイントのURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -44,17 +44,17 @@ PassKit から共有するデータの例を以下に示します。
 
 PassKit からデータを渡すには、Braze external ID を PassKit の`externalId` として設定していることを確認します。
 
-1. PassKit パスプロジェクトまたはプログラムの [**Settings**] の [**Integrations**] で、[**Braze**] タブの [**Connect**] をクリックします。<br>![PassKit プラットフォームの Braze 統合タイル。]({% image_buster /assets/img/passkit/passkit5.png %}){: style="max-width:80%"}<br><br>
+1. PassKit パスプロジェクトまたはプログラムの [**Settings**] の [**Integrations**] で、[**Braze**] タブの [**Connect**] をクリックします。<br>![PassKitプラットフォームのBraze統合タイル。]({% image_buster /assets/img/passkit/passkit5.png %}){: style="max-width:80%"}<br><br>
 2. Braze API キーとエンドポイント URL を入力し、コネクターの名前を入力します。<br><br>
 3. **Enable Integration（統合を有効にする**）をトグルし、Brazeでメッセージをトリガーまたはパーソナライズしたいイベントを選択する。<br>![API キー、エンドポイント URL、統合名、有効化設定、メンバーシップ設定、およびパス設定を受け入れるために展開されている PassKit Braze 統合タイル。]({% image_buster /assets/img/passkit/passkit4.png %}){: style="max-width:70%"}
 
 ## SmartPass リンクを使用してパスを作成する
 
-Braze では、SmartPass リンクを設定して、顧客が Android またはiOS にパスをインストールするための一意のURL を生成するようにできます。そのためには、Brazeコンテンツブロックから呼び出せる暗号化されたSmartPassデータペイロードを定義する必要がある。この[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks)は、今後のパスやクーポンに再利用できます。以下は、統合の際に使用される：
+Braze では、SmartPass リンクを設定して、顧客が Android またはiOS にパスをインストールするための一意のURL を生成するようにできます。そのためには、Brazeコンテンツブロックから呼び出せる暗号化されたSmartPassデータペイロードを定義する必要がある。この[コンテンツブロック]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks)は、今後のパスやクーポンに再利用できます。以下は統合の際に使用される：
 
 - **PassKit URL**:PassKit URL は、PassKit プログラムの一意のURL です。<br>各プログラムには固有のURLがあり、PassKitプログラムまたはプロジェクトの「**Distribution」**タブで見つけることができる。(例えば、https://pub1.pskt.io/c/ww0jir ）<br><br>
-- **PassKit シークレット**:URL に加えて、このプログラムの PassKit キーが必要です。<br>これは PassKit URL と同じページで確認できます。<br><br>
-- **プログラム (またはプロジェクト) ID**:SmartPass URL を作成するには、PassKit プログラム IDが必要です。<br>プロジェクトやプログラムの**"Settings "**タブにある。
+- **PassKit シークレット**:URLとともに、このプログラムのPassKit Keyを手元に用意しておく必要がある。<br>これは PassKit URL と同じページで確認できます。<br><br>
+- **プログラム (またはプロジェクト) ID**:スマートパスのURLを作成するには、PassKitプログラムIDが必要である。<br>プロジェクトやプログラムの**"Settings "**タブにある。
 
 暗号化されたスマートパス・リンクの作成に関する詳細は、こちらの [PassKit の記事](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links)を参照してください。
 
@@ -94,7 +94,7 @@ Braze ダッシュボード内の [**テンプレート**] > [**コンテンツ�
 
 次に、**コンテンツブロックの Liquid タグ**を定義します。このコンテンツブロックを保存したら、メッセージを作成するときにこの Liquid タグを参照できます。この例では、リキッドタグを{% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %} として割り当てている。 
 
-このコンテンツブロック内では、ペイロードを直接含めませんが、{% raw %}`{{passData}}`{% endraw %} 変数でペイロードを参照します。コンテンツ・ブロックに追加しなければならない最初のコード・スニペットは、{% raw %}`{{passData}}`{% endraw %} 変数の Base64 エンコードをキャプチャする。
+このコンテンツブロック内部では、ペイロードを直接含めず、{% raw %}`{{passData}}`{% endraw %} 変数で参照する。コンテンツ・ブロックに追加しなければならない最初のコード・スニペットは、{% raw %}`{{passData}}`{% endraw %} 変数の Base64 エンコードをキャプチャする。
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passDatapassData|base64_encode}}{% endcapture %}
@@ -103,7 +103,7 @@ Braze ダッシュボード内の [**テンプレート**] > [**コンテンツ�
 
 ### ステップ3:SHA1 HMACハッシュを使用して暗号化署名を作成する。
 
-次に、プロジェクトの URL とペイロードの [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) ハッシュ]を使って暗号化署名を作成します。 
+次に、プロジェクトのURLとペイロードの[SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC)ハッシュを使って暗号化署名を作成する。 
 
 コンテンツ・ブロックに追加しなければならない2つ目のコード・スニペットは、ハッシュに使用するURLをキャプチャするものだ。
 {% raw %}
@@ -135,7 +135,7 @@ Braze ダッシュボード内の [**テンプレート**] > [**コンテンツ�
 ```
 {% endraw %}
 
-この時点で、以下のようなコンテンツブロックが作成されます。
+この時点で、あなたは次のようなコンテンツブロックを作ったことになる：
 
 {% raw %}
 ```liquid
@@ -224,7 +224,7 @@ Brazeでは、WebhookキャンペーンやCanvas内のWebhookを設定して、�
 
 ### ステップ1:BrazeのWebhookテンプレートを作成する
 
-今後のキャンペーンやCanvasで使用するPassKitウェブフックテンプレートを作成するには、Brazeダッシュボードの「**テンプレート＆メディア」**セクションに移動する。単発のPassKitウェブフックキャンペーンを作成する場合、または既存のテンプレートを使用する場合は、新しいキャンペーンを作成する際にBrazeで**ウェブフックを**選択する。
+今後のキャンペーンやCanvasesで使用するPassKit Webhookテンプレートを作成するには、Brazeダッシュボードの**Templates& Media**セクションに移動する。単発のPassKitウェブフックキャンペーンを作成する場合、または既存のテンプレートを使用する場合は、新しいキャンペーンを作成する際にBrazeで**ウェブフックを**選択する。
 
 PassKitウェブフック・テンプレートを選択すると、以下のように表示される：
 - **Webhook URL**: `https://api-pub1.passkit.io/coupon/singleUse/coupon`

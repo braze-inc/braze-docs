@@ -29,7 +29,7 @@ Si establece ID de usuario para identificar a los usuarios, cuando un nuevo usua
 
 Utilizando nuestra selección de filtros, cree un segmento de usuarios que considere que engloba a su base de usuarios más fieles y constantes. El siguiente segmento de muestra define a los principales usuarios.
 
-![]({% image_buster /assets/img_archive/define_top_users.png %} "Define tus principales usuarios")
+![]({% image_buster /assets/img_archive/define_top_users.png %} "Define your top users")
 
 Además, no tendrá que seguir actualizando este segmento, ya que los usuarios que pasen dentro o fuera de las restricciones de la campaña serán correspondientemente apuntados o descartados.
 
@@ -37,7 +37,7 @@ Además, no tendrá que seguir actualizando este segmento, ya que los usuarios q
 El ejemplo anterior segmenta a los usuarios según el uso general de la aplicación. En la mayoría de los casos, la colección total de filtros necesarios para definir su segmento de usuarios principales vendrá definida en gran medida por las características específicas de su aplicación.
 {% endalert %}
 
-## Paso 2: Llega a tus mejores usuarios
+## Paso 2: Contacta con tus principales usuarios
 
 ### Haz que tus usuarios se sientan apreciados
 
@@ -45,7 +45,7 @@ Haz que tus usuarios se sientan apreciados agradeciéndoles su fidelidad y dedic
 
 Las recompensas inesperadas pueden ser más efectivas para animar a los usuarios a seguir actuando que si se las hubieras prometido desde el principio.
 
-![Una campaña en el paso Redactar con una notificación enriquecida de iOS que dice: "¡Gracias de nuevo por comprar con nosotros! Para mostrarte nuestro agradecimiento, te regalamos los gastos de envío en tu próxima compra".]({% image_buster /assets/img/congratulations_push.jpg %})
+![Una campaña en el paso Redactar con una notificación enriquecida de iOS que dice: "¡Gracias de nuevo por comprar con nosotros! Como muestra de nuestro agradecimiento, te regalamos los gastos de envío de tu próxima compra".]({% image_buster /assets/img/congratulations_push.jpg %})
 
 ### Haz un seguimiento de tus resultados
 

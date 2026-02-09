@@ -39,7 +39,7 @@ Lorsque vous configurez les paramètres OAuth nécessaires pour l'application co
 
 En tant que plateforme d'engagement client, Braze peut générer de nouveaux prospects en fonction des flux d'utilisateurs, par exemple en remplissant un formulaire sur une page de renvoi. Lorsque cela se produit, vous pouvez utiliser un webhook Braze Salesforce Sales Cloud pour créer un lead correspondant dans Salesforce.
 
-### Étape 1 : Rassemblez vos `client_id` et `client_secret`
+### Étape 1 : Rassemblez vos `client_id` et `client_secret`
 
 1. Dans Salesforce, accédez à **Outils de plate-forme** > **Apps** > **Gestionnaire d'applications**.
 2. Recherchez votre application Braze nouvellement créée et sélectionnez **View.**
@@ -88,7 +88,7 @@ Sélectionnez **\+ Add New Header** pour chacun des en-têtes de requête suivan
 {: start="4" }
 4\. Sélectionnez **Enregistrer le modèle**.
 
-![Un modèle de webhook rempli pour créer une piste.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
+![Un modèle de webhook rempli pour créer un lead.]({% image_buster /assets/img/b2b/create_lead_webhook.png %}){: style="max-width:70%;"}
  
 ## Mise à jour d'une piste dans Salesforce Sales Cloud {#updating-lead}
 
@@ -96,7 +96,7 @@ Pour configurer un webhook Braze Salesforce Sales Cloud qui met à jour les lead
 
 Cet exemple montre spécifiquement comment mettre à jour le stade d'un lead en "MQL" (Marketing Qualified Lead) après qu'il ait franchi un certain seuil de leads. Il s'agit d'un élément essentiel de notre cas d'utilisation du [workflow de scoring des prospects B2B]({{site.baseurl}}/user_guide/getting_started/b2b_use_cases/lead_scoring/).
 
-### Étape 1 : Rassemblez vos `client_id` et `client_secret`
+### Étape 1 : Rassemblez vos `client_id` et `client_secret`
 
 1. Dans Salesforce, accédez à **Outils de plate-forme** > **Apps** > **Gestionnaire d'applications**.
 2. Recherchez votre application Braze nouvellement créée et sélectionnez **View.**
@@ -141,7 +141,7 @@ Sélectionnez **\+ Add New Header** pour chacun des en-têtes de requête suivan
 {: start="4"}
 4\. Sélectionnez **Enregistrer le modèle**.
 
-![Un modèle de webhook rempli pour mettre à jour une piste.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
+![Un modèle de webhook rempli pour mettre à jour un lead.]({% image_buster /assets/img/b2b/update_lead_webhook.png %}){: style="max-width:70%;"}
 
 ## Utilisation de ces webhooks dans un flux de travail opérationnel
 
@@ -167,7 +167,7 @@ Ajoutez une étape ultérieure à votre mise à jour des utilisateurs pour véri
 1. Ajoutez une étape de **parcours d'audience** avec deux groupes : "Seuil MQL" et "Tous les autres".
 2. Dans le groupe "Seuil MQL", recherchez les utilisateurs dont le statut n'est pas "MQL" (par exemple, `lead_stage` est égal à "Lead"), mais dont le score est supérieur au seuil que vous avez défini (par exemple, `lead_score` supérieur à 50). Si c'est le cas, ils passent à l'étape suivante, sinon ils sortent.
 
-![Le groupe "MQL Threshold Audience Path" avec des filtres pour un `lead_stage` égal à "Lead" et un `lead_score` supérieur à "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
+![Le groupe "MQL Threshold" Audience Path avec des filtres pour un `lead_stage` égal à "Lead" et un `lead_score` supérieur à "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. Ajoutez une étape de **mise à jour de l'** utilisateur qui met à jour la valeur de l'attribut `lead_stage` de l'utilisateur à "MQL".
@@ -177,11 +177,11 @@ Ajoutez une étape ultérieure à votre mise à jour des utilisateurs pour véri
 {: start="4" }
 4\. Ajoutez une étape webhook qui met à jour Salesforce avec la nouvelle étape MQL.
 
-![L'étape du webhook "Update Salesforce" avec les détails complétés.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
+![L'étape du webhook "Mise à jour de Salesforce" avec les détails complétés.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 Désormais, votre flux Canvas mettra à jour les utilisateurs qui ont franchi votre seuil MQL !
 
-![Une étape de mise à jour de l'utilisateur Canvas qui vérifie si un utilisateur franchit le seuil MQL et, si c'est le cas, met à jour Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
+![Une étape de mise à jour de l'utilisateur Canvas qui vérifie si un utilisateur franchit le seuil MQL et, si l'utilisateur le franchit, met à jour Salesforce.]({% image_buster /assets/img/b2b/salesforce_canvas.png %}){: style="max-width:50%;"}
 
 ## Résolution des problèmes
 

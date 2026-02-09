@@ -24,7 +24,7 @@ Haz clic en **Guardar perfil de color** cuando hayas terminado.
 
 ### Gestión de perfiles de color
 
-También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Obtén más información sobre cómo crear y administrar plantillas y contenido creativo en [Plantillas & Medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Plantilla CSS {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ Como puedes ver, puedes editarlo todo, desde el color de fondo hasta el tamaño 
 
 ### Gestión de plantillas CSS
 
-También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Más información sobre la creación y gestión de plantillas y contenido creativo en [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+También puedes [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) y [archivar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) plantillas. Obtén más información sobre cómo crear y administrar plantillas y contenido creativo en [Plantillas & Medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modal con CSS (sólo web) {#web-modal-css}
 

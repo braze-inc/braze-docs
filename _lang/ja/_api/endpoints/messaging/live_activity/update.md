@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:ライブアクティビティを更新"
+nav_title: "POST:ライブ活動を更新する"
 article_title: "POST:ライブアクティビティを更新"
 search_tag: Endpoint
 page_order: 1
@@ -18,6 +18,8 @@ description: "この記事では、ライブ・アクティビティを更新す
 > このエンドポイントを使用して、iOSアプリが表示する[ライブ・アクティビティを]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift)更新・終了する。このエンドポイントは追加のセットアップが必要です。
 
 ライブ・アクティビティを登録した後、アップル・プッシュ・ノーティフィケーション・サービス（APN）をアップデートするためにJSONペイロードを渡すことができる。詳しくは、[プッシュ通知ペイロードを使ったライブアクティビティの更新](https://developer.apple.com/documentation/activitykit/updating-and-ending-your-live-activity-with-activitykit-push-notifications)に関する Apple のドキュメントを参照してください。
+
+`content-available` が設定されていない場合、デフォルトのAppleプッシュ通知サービス（APN）の優先順位は10である。`content-available` が設定されている場合、この優先順位は5となる。詳しくは[Apple push objectを]({{site.baseurl}}/api/objects_filters/messaging/apple_object)参照のこと。
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2300226e-f26a-4154-9bcc-5883f1f294cd {% endapiref %}
 
@@ -58,7 +60,7 @@ description: "この記事では、ライブ・アクティビティを更新す
 | `end_activity` | オプション | ブール値 | `true` の場合、このリクエストはライブアクティビティを終了します。 |
 | `dismissal_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ユーザーのUIからライブアクティビティを削除する時間を定義します。この時間が過去のもので、`end_activity` が `true` の場合、ライブアクティビティは直ちに削除されます。<br><br> `end_activity` が`false` であるか、省略された場合、このパラメーターはライブアクティビティのみを更新します。|
 | `stale_date` | オプション | 日時 <br>（[ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) 文字列） | このパラメーターは、ライブアクティビティのコンテンツがユーザーの UI で古いものとしてマークされたときに、システムに通知します。 |
-| `notification` | オプション | オブジェクト | プッシュ通知を定義する[`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)オブジェクトを含めます。このプッシュ通知の動作は、ユーザーがアクティブであるか、ユーザーがプロキシデバイスを使用しているかによって異なります。{::nomarkdown}<ul><li>もし  <code>notification</code> 含まれており、更新が配信されたときにユーザーがiPhoneでアクティブである場合、更新されたライブアクティビティUIがスライドダウンしてプッシュ通知のように表示されます。</li><li>もし  <code>notification</code> が含まれており、ユーザーがiPhoneでアクティブでない場合、ロック画面に更新されたライブアクティビティUIを表示するために画面が点灯します。</li><li>この  <code>notification alert</code> は、標準のプッシュ通知として表示されません。さらに、ユーザーがApple Watchのようなプロキシデバイスを持っている場合、 <code>alert</code> そこに表示されます。</li></ul>{:/} |
+| `notification` | オプション | オブジェクト | プッシュ通知を定義する[`apple_push`]({{site.baseurl}}/api/objects_filters/messaging/apple_object/)オブジェクトを含めます。このプッシュ通知の動作は、ユーザーがアクティブか、プロキシデバイスを使用しているかに依存する。 {::nomarkdown}<ul><li>もし  <code>notification</code> 含まれており、更新が配信されたときにユーザーがiPhoneでアクティブである場合、更新されたライブアクティビティUIがスライドダウンしてプッシュ通知のように表示されます。</li><li>もし  <code>notification</code> が含まれており、ユーザーがiPhoneでアクティブでない場合、ロック画面に更新されたライブアクティビティUIを表示するために画面が点灯します。</li><li>この  <code>notification alert</code> は、標準のプッシュ通知として表示されません。さらに、ユーザーがApple Watchのようなプロキシデバイスを持っている場合、 <code>alert</code> そこに表示されます。</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## 例のリクエスト
@@ -104,7 +106,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_acti
 
 ステータスコードの`4XX`クラスはクライアントエラーを示します。エラーに関する詳細は、[APIエラーと応答の記事]({{site.baseurl}}/api/errors/)を参照してください。
 
-ステータスコード `400` は、次の応答本文を返す可能性があります。 
+ステータスコード `400` は、次の応答本文を返す可能性があります。
 
 ```json
 {

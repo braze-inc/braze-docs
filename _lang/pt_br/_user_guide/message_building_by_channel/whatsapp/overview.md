@@ -64,16 +64,18 @@ Somente modelos de mensagens do WhatsApp aprovados podem ser usados para iniciar
 
 1. **Navegue até o [gerenciador de modelos](https://business.facebook.com/wa/manage/message-templates)**<br>
 No Meta Business Manager, em **Ferramentas de Conta**, selecione **Modelos de Mensagem**.
-Em seguida, selecione **Criar Modelos**.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
+Em seguida, selecione **Criar Modelos**.<br><br>![WhatsApp Manager com uma lista de modelos de mensagens.]({% image_buster /assets/img/whatsapp/whatsapp2.png %}){: style="max-width:100%;"}<br><br>
 2. **Configurações de mensagem**<br>
 No novo criador de modelo de mensagem, selecione a categoria da sua mensagem, nomeie seu modelo e escolha os idiomas que deseja suportar. Você pode excluir ou adicionar mais idiomas depois.<br><br> 
 	As categorias de modelo de mensagem disponíveis incluem as seguintes:
 	- Marketing: Envie ofertas promocionais, anúncios de produtos e mais para aumentar a conscientização e o engajamento
 	- Utilidade: Enviar atualizações de conta, atualizações de pedidos, alertas e mais para compartilhar informações importantes
 	- Autenticação: Envie códigos que permitam aos seus clientes acessar suas contas<br><br> 
-	![]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
+	![Criador de modelos de mensagens com categorias para marketing, utilidade e autenticação.]({% image_buster /assets/img/whatsapp/whatsapp3.png %}){: style="max-width:100%;"}<br><br>
 3. **Editar modelo**<br>
-Em seguida, solicitaremos que você crie seu modelo de mensagem. <br><br>Aqui, você pode fornecer um cabeçalho de texto ou mídia, o corpo do texto, um rodapé de mensagem e botões. Observe que cabeçalhos de vídeo e documento não estão disponíveis atualmente, e cabeçalhos devem ser do tipo texto ou imagem. Uma prévia da sua mensagem será mostrada à direita. <br><br>Embora o Meta não seja compatível com o Liquid, você pode criar modelos em variáveis que podem ser substituídas posteriormente na Braze por variáveis Liquid. Selecione o botão **\+ Adicionar variável** para fazer isso.<br><br>![]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}<br><br>Após concluir seu modelo, pressione **Enviar**. 
+Em seguida, crie seu modelo de mensagem. <br><br>É possível fornecer um cabeçalho de texto ou mídia, o corpo do texto, um rodapé de mensagem e botões. Observe que cabeçalhos de vídeo e documento não estão disponíveis atualmente, e cabeçalhos devem ser do tipo texto ou imagem. Qualquer mídia adicionada serve como exemplo para o processo de revisão e **não é** incluída no modelo de mensagem. A mídia precisa ser adicionada no Braze. Uma prévia da sua mensagem será exibida em um painel. <br><br>Embora o Meta não seja compatível com o Liquid, você pode criar modelos em variáveis que podem ser substituídas posteriormente na Braze por variáveis Liquid. Selecione o botão **\+ Adicionar variável** para fazer isso.<br><br>![Criador do modelo.]({% image_buster /assets/img/whatsapp/whatsapp4.png %}){: style="max-width:100%;"}
+
+Após concluir seu modelo, pressione **Enviar**. 
 
 #### Tempo de aprovação do modelo
 

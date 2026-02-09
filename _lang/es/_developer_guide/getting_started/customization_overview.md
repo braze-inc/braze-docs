@@ -32,7 +32,7 @@ table td {
 </style>
 
 {% tabs %}
-{% tab Gatear %}
+{% tab Crawl %}
 
 ![Ejemplo de aplicación financiera que muestra tarjetas de contenido con imagen subtitulada y sólo imagen]({% image_buster/assets/img_archive/cc_pyrite_crawl.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
@@ -76,9 +76,9 @@ Los especialistas en marketing determinan el contenido, la audiencia y el moment
 </table>
 
 {% endtab %}
-{% tab Caminar %}
+{% tab Walk %}
 
-![Ejemplo de aplicación financiera que muestra tarjetas de contenido con personalización]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
+![Ejemplo de aplicación financiera que muestra tarjetas de contenido personalizadas]({% image_buster/assets/img_archive/cc_pyrite_walk.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 
 Un enfoque híbrido de la implementación, el enfoque Walk implica que tanto el equipo de marketing como el de desarrolladores colaboren para hacer coincidir la marca de tu aplicación o sitio web. 
 
@@ -122,7 +122,7 @@ Los especialistas en marketing siguen manteniendo el control de la audiencia, el
 </table>
 
 {% endtab %}
-{% tab Correr %}
+{% tab Run %}
 
 ![Ejemplo de aplicación financiera que muestra tarjetas de contenido personalizadas con captura de correo electrónico]({% image_buster/assets/img_archive/cc_pyrite_run.png %}){: style="max-width:35%;float:right;margin-left:15px;border:none;"}
 

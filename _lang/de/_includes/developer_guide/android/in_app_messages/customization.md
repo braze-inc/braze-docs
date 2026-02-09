@@ -1,13 +1,13 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch [Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/in_app_messages/setup/?sdktab=android).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch [In-App-Nachrichten einrichten]({{site.baseurl}}/developer_guide/in_app_messages).
 
 ## Angepasste Manager:in Hörer einstellen
 
 {% tabs %}
-{% tab globaler Hörer %}
+{% tab global listener %}
 Während der `BrazeInAppMessageManager` Listener die Anzeige und den Lebenszyklus von In-App-Nachrichten automatisch verarbeiten kann, müssen Sie einen angepassten Manager:in implementieren, wenn Sie Ihre Nachrichten vollständig anpassen möchten.
 {% endtab %}
 
-{% tab html Listener %}
+{% tab html listener %}
 Das Braze SDK verfügt über die Standardklasse `DefaultHtmlInAppMessageActionListener`. Sie wird verwendet, wenn kein angepasster Listener definiert ist, und führt automatisch die entsprechenden Aktionen durch. Wenn Sie mehr Kontrolle darüber benötigen, wie ein Nutzer mit verschiedenen Buttons in einer angepassten HTML-In-App-Nachricht interagiert, implementieren Sie eine angepasste Klasse des Typs `IHtmlInAppMessageActionListener`.
 {% endtab %}
 {% endtabs %}
@@ -15,12 +15,12 @@ Das Braze SDK verfügt über die Standardklasse `DefaultHtmlInAppMessageActionLi
 ### Schritt 1: Implementieren Sie den angepassten Manager:in Hörer
 
 {% tabs %}
-{% tab globaler Hörer %}
+{% tab global listener %}
 #### Schritt 1.1: Implementieren Sie `IInAppMessageManagerListener` 
 
 Erstellen Sie eine Klasse, die [`IInAppMessageManagerListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html) implementiert.
 
-Die Callbacks in Ihrer `IInAppMessageManagerListener` werden ebenfalls an verschiedenen Punkten im Lebenszyklus der In-App-Nachricht aufgerufen. Wenn Sie zum Beispiel einen angepassten Manager-Listener für den Empfang einer In-App-Nachricht von Braze festlegen, wird die Methode `beforeInAppMessageDisplayed()` aufgerufen. Wenn Ihre Implementierung dieser Methode [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html#27659854%2FClasslikes%2F-1725759721) zurückgibt, weiß Braze, dass die In-App-Nachricht von der Host-App verarbeitet wird und nicht von Braze angezeigt werden sollte. Wir `InAppMessageOperation.DISPLAY_NOW` zurückgegeben, versucht Braze, die In-App-Nachricht anzuzeigen. Diese Methode sollte verwendet werden, wenn die In-App-Nachricht auf angepasste Art und Weise angezeigt werden soll.
+Die Callbacks in Ihrer `IInAppMessageManagerListener` werden ebenfalls an verschiedenen Punkten im Lebenszyklus der In-App-Nachricht aufgerufen. Wenn Sie zum Beispiel einen angepassten Manager:in-Listener einstellen, wenn eine In-App-Nachricht von Braze eingeht, wird die [`beforeInAppMessageDisplayed()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/before-in-app-message-displayed.html) Methode aufgerufen werden. Wenn Ihre Implementierung dieser Methode [`InAppMessageOperation.DISCARD`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-c-a-r-d/index.html) zurückgibt, weiß Braze, dass die In-App-Nachricht von der Host-App verarbeitet wird und nicht von Braze angezeigt werden sollte. Wenn [`InAppMessageOperation.DISPLAY_NOW`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/-d-i-s-p-l-a-y_-n-o-w/index.html) zurückgegeben wird, wird Braze versuchen, die In-App-Nachricht anzuzeigen. Diese Methode sollte verwendet werden, wenn die In-App-Nachricht auf angepasste Art und Weise angezeigt werden soll.
 
 `IInAppMessageManagerListener` enthält auch Delegate-Methoden für Klicks auf Nachrichten und Buttons, die z.B. dazu verwendet werden können, eine Nachricht abzufangen, wenn ein Button oder eine Nachricht angeklickt wird, um sie weiter zu verarbeiten.
 
@@ -40,7 +40,7 @@ Die Anwendung dieser Methoden ist nicht erforderlich. Sie werden nur zum Trackin
 {% endalert %}
 {% endtab %}
 
-{% tab html Listener %}
+{% tab html listener %}
 Erstellen Sie eine Klasse, die [`IHtmlInAppMessageActionListener`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-html-in-app-message-action-listener/index.html) implementiert.
 
 Die Callbacks in Ihrem `IHtmlInAppMessageActionListener` werden immer dann aufgerufen, wenn der Benutzer eine der folgenden Aktionen innerhalb der HTML-In-App-Nachricht auslöst:
@@ -72,13 +72,6 @@ public class CustomHtmlInAppMessageActionListener implements IHtmlInAppMessageAc
   }
 
   @Override
-  public boolean onNewsfeedClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
-    Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show();
-    BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
-    return true;
-  }
-
-  @Override
   public boolean onOtherUrlAction(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
     Toast.makeText(mContext, "Custom url pressed: " + url + " . Ignoring", Toast.LENGTH_LONG).show();
     BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
@@ -101,12 +94,6 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
         return true
     }
 
-    override fun onNewsfeedClicked(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
-        Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show()
-        BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
-        return true
-    }
-
     override fun onOtherUrlAction(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
         Toast.makeText(mContext, "Custom url pressed: $url . Ignoring", Toast.LENGTH_LONG).show()
         BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
@@ -122,7 +109,7 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
 ### Schritt 2: Weisen Sie Braze an, den angepassten Manager:in Listener zu verwenden
 
 {% tabs %}
-{% tab globaler Hörer %}
+{% tab global listener %}
 Nachdem Sie `IInAppMessageManagerListener` erstellt haben, rufen Sie `BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` auf, um anzuweisen `BrazeInAppMessageManager`
 um Ihren eigenen `IInAppMessageManagerListener` anstelle des Standard-Hörers zu verwenden. Tun Sie dies in Ihrem [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) vor allen anderen Aufrufen von Braze, damit der angepasste Hörer eingestellt wird, bevor In-App-Nachrichten angezeigt werden.
 
@@ -160,7 +147,7 @@ Mit dem Rückgabewert `InAppMessageOperation()` kann gesteuert werden, wann die 
 | `null` | Die Nachricht wird ignoriert. Diese Methode sollte **NICHT** zurückgeben `null` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Weitere Informationen finden Sie unter [`InAppMessageOperation.java`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html).
+Weitere Informationen finden Sie unter [`InAppMessageOperation`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html).
 
 {% alert tip %}
 Wenn Sie sich für `DISCARD` entscheiden und Ihre In-App-Nachrichten-Ansicht verwenden, müssen Sie die Klicks und Impressionen der In-App-Nachricht manuell protokollieren.
@@ -173,7 +160,7 @@ Sobald eine In-App-Nachricht im Stack platziert wurde, können Sie jederzeit [`B
 {% endalert %}
 {% endtab %}
 
-{% tab html Listener %}
+{% tab html listener %}
 Nachdem Sie `IHtmlInAppMessageActionListener` erstellt haben, rufen Sie `BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` auf, um `BrazeInAppMessageManager` anzuweisen, Ihren angepassten `IHtmlInAppMessageActionListener` anstelle des Standard-Aktionshörers zu verwenden.
 
 Wir empfehlen, Ihre `IHtmlInAppMessageActionListener` in Ihrem [`Application.onCreate()`](https://developer.android.com/reference/android/app/Application.html#onCreate()) vor allen anderen Aufrufen von Braze zu setzen. Dadurch wird der angepasste Aktions-Listener festgelegt, bevor eine In-App-Nachricht angezeigt wird:
@@ -230,7 +217,7 @@ public class BrazeDemoApplication extends Application {
 {% endtabs %}
 
 {% tabs %}
-{% tab ansehen %}
+{% tab view %}
 Die in Braze verfügbaren Typen von In-App-Nachrichten sind vielseitig genug, um die meisten angepassten Anwendungsfälle abzudecken. Wenn Sie jedoch das visuelle Erscheinungsbild Ihrer In-App-Nachrichten selbst definieren möchten, anstatt einen Standardtyp zu verwenden, haben Sie dazu in Braze die Möglichkeit, indem Sie eine angepasste Ansichts-Factory festlegen.
 {% endtab %}
 
@@ -238,7 +225,7 @@ Die in Braze verfügbaren Typen von In-App-Nachrichten sind vielseitig genug, um
 `BrazeInAppMessageManager` platziert das In-App-Nachrichten-Modell mit [`DefaultInAppMessageViewWrapper`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html)standardmäßig automatisch in der bestehende Hierarchie der Aktivitätsansicht. Wenn Sie die Platzierung der In-App-Nachrichten in der Ansichtshierarchie anpassen müssen, sollte Sie eine angepasste [`IInAppMessageViewWrapperFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html) verwenden.
 {% endtab %}
 
-{% tab Animation %}
+{% tab animation %}
 In-App-Nachrichten haben ein voreingestelltes Animationsverhalten. `Slideup` Nachrichten gleiten in den Bildschirm hinein; `full` und `modal` Nachrichten werden ein- und ausgeblendet. Wenn Sie benutzerdefinierte Animationsverhalten für Ihre In-App-Nachrichten definieren möchten, ermöglicht Braze dies durch die Einrichtung einer benutzerdefinierten Animationsfabrik.
 {% endtab %}
 {% endtabs %}
@@ -246,7 +233,7 @@ In-App-Nachrichten haben ein voreingestelltes Animationsverhalten. `Slideup` Nac
 ### Schritt 1: Implementieren Sie die Fabrik
 
 {% tabs %}
-{% tab ansehen %}
+{% tab view %}
 Erstellen Sie eine Klasse, die [`IInAppMessageViewFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-view-factory/index.html) implementiert:
 
 {% subtabs %}
@@ -364,7 +351,7 @@ class CustomInAppMessageViewWrapper(inAppMessageView: View,
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Animation %}
+{% tab animation %}
 Erstellen Sie eine Klasse, die [`IInAppMessageAnimationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-i-in-app-message-animation-factory/index.html) implementiert:
 
 {% subtabs %}
@@ -416,7 +403,7 @@ class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
 ### Schritt 2: Weisen Sie Braze an, die Werkseinstellungen zu verwenden
 
 {% tabs %}
-{% tab ansehen %}
+{% tab view %}
 Nachdem Ihr `IInAppMessageViewFactory` erstellt wurde, rufen Sie `BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` an, um die `BrazeInAppMessageManager`
 Ihre angepasste `IInAppMessageViewFactory` anstelle der standardmäßigen Ansichts-Factory zu verwenden.
 
@@ -449,7 +436,7 @@ BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(C
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Animation %}
+{% tab animation %}
 Nach dem Erstellen von `IInAppMessageAnimationFactory` rufen Sie `BrazeInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` auf, um `BrazeInAppMessageManager` anzuweisen,
 Ihre angepasste `IInAppMessageAnimationFactory` anstelle der standardmäßigen Animations-Factory zu verwenden.
 
@@ -492,7 +479,7 @@ Sie können einige Farben direkt in Ihrer Braze Kampagne anpassen, ohne die XML-
 
 ### Anpassen der Schriftart
 
-Braze erlaubt das Anpassen einer angepassten Schriftart mit Hilfe der [Schriftfamilienführung]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization). Um sie zu verwenden, überschreiben Sie den Stil für Nachrichtentext, Überschriften und Button-Text und verwenden das Attribut `fontFamily`, um Braze anzuweisen, Ihre angepasste Schriftfamilie zu verwenden.
+Sie können eine angepasste Schriftart festlegen, indem Sie die Schriftart im Verzeichnis `res/font` suchen. Um sie zu verwenden, überschreiben Sie den Stil für Nachrichtentext, Überschriften und Button-Text und verwenden das Attribut `fontFamily`, um Braze anzuweisen, Ihre angepasste Schriftfamilie zu verwenden.
 
 Wenn Sie beispielsweise die Schriftart für den Text Ihres In-App-Nachricht-Buttons aktualisieren möchten, überschreiben Sie den Stil `Braze.InAppMessage.Button` und referenzieren Ihre angepasste Schriftfamilie. Der Wert des Attributs sollte auf eine Schriftfamilie in Ihrem Verzeichnis `res/font` verweisen.
 
@@ -577,7 +564,7 @@ BrazeInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessa
 
 ## Anpassen der Ausrichtung
 
-Um eine feste Ausrichtung für eine In-App-Nachricht festzulegen, [legen Sie zunächst einen angepassten In-App-Nachrichten-Manager-Listener fest]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Rufen Sie dann `setOrientation()` für das Objekt `IInAppMessage` in der Delegiertenmethode `beforeInAppMessageDisplayed()` auf:
+Um eine feste Ausrichtung für eine In-App-Nachricht festzulegen, [legen Sie zunächst einen angepassten In-App-Nachrichten-Manager-Listener fest]({{site.baseurl}}/developer_guide/in_app_messages/customization/?sdktab=android#android_setting-custom-manager-listeners). Aktualisieren Sie dann die Ausrichtung des `IInAppMessage` Objekts in der Delegatenmethode `beforeInAppMessageDisplayed()`:
 
 {% tabs %}
 {% tab JAVA %}

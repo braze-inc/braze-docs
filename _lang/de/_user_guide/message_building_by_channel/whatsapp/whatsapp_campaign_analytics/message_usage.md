@@ -1,5 +1,5 @@
 ---
-nav_title: Dashboard zur Nutzung von Nachrichten
+nav_title: Dashboard für die Nutzung von Nachrichten
 article_title: Dashboard zur Nutzung von Nachrichten
 page_order: 0
 page_type: reference
@@ -7,4 +7,4 @@ description: "Dieser Referenzartikel befasst sich mit dem Dashboard für die Nac
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}

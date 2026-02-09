@@ -1,5 +1,5 @@
 ---
-nav_title: Ferramentas de engajamento
+nav_title: ferramentas de engajamento
 article_title: Ferramentas de engajamento
 page_order: 4
 layout: dev_guide
@@ -28,4 +28,7 @@ guide_menu_list:
   - name: Localização e geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/
     image: /assets/img/braze_icons/marker-pin-06.svg
+  - name: Feature Flag
+    link: /docs/user_guide/engagement_tools/feature_flags/
+    image: /assets/img/braze_icons/flag-02.svg
 ---

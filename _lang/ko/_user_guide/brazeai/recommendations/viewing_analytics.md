@@ -22,7 +22,7 @@ page_order: 1.3
 
 이것은 정밀도, 범위 및 추천 유형을 포함하는 추천 오디언스와 관련된 측정기준입니다.
 
-![정밀도(25.3%), 범위(54.3%) 및 개인화된 항목과 가장 인기 있는 항목으로 나뉜 추천 유형을 보여주는 추천 오디언스 측정기준.]({% image_buster /assets/img/item_recs_analytics_1.png %})
+![정밀도(25.3%), 범위(54.3%), 추천 유형을 개인화된 항목과 가장 인기 있는 항목으로 구분하여 보여주는 추천 오디언스 측정기준을 확인할 수 있습니다.]({% image_buster /assets/img/item_recs_analytics_1.png %})
 
 자세한 내용은 다음 표를 참조하세요:
 
@@ -37,7 +37,7 @@ page_order: 1.3
 
 이 표에는 귀하의 카탈로그에서 개인화된 항목, 가장 최근 항목 및 가장 인기 있는 항목에 대한 측정기준이 포함되어 있습니다.
 
-![개인화된 추천과 가장 인기 있는 추천으로 구분된 사용자에게 할당된 항목을 나란히 나열한 표.]({% image_buster /assets/img/item_recs_analytics_2.png %})
+![Side-by-side tables listing items assigned to users, separated by personalized recommendations and most popular recommendations.]({% image_buster /assets/img/item_recs_analytics_2.png %})
 
 자세한 내용은 다음 표를 참조하세요:
 
@@ -51,4 +51,4 @@ page_order: 1.3
 
 이것은 추천이 마지막으로 업데이트된 시점을 포함하여 선택한 추천 구성에 대한 개요입니다.
 
-![유형, 카탈로그, 이벤트 유형, 커스텀 이벤트 이름, 속성 이름 및 마지막 업데이트 날짜를 표시하는 추천 개요 표.]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:50%" }
+![Recommendation overview table displaying type, catalog, event type, custom event name, property name, and last updated date.]({% image_buster /assets/img/item_recs_analytics_3.png %}){: style="max-width:50%" }

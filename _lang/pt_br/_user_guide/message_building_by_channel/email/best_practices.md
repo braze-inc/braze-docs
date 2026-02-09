@@ -1,6 +1,6 @@
 ---
-page_order: 13
-nav_title: Práticas recomendadas
+page_order: 14
+nav_title: Melhores práticas
 article_title: Práticas recomendadas de envio de e-mail
 layout: dev_guide
 guide_top_header: "Práticas recomendadas de envio de e-mail"
@@ -21,7 +21,7 @@ guide_featured_list:
   - name: "Casos de uso"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/use_cases/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: "Gerenciamento de envios de e-mail"
+  - name: "Gerenciar inscrições de e-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/duplicate_emails/
     image: /assets/img/braze_icons/list.svg
   - name: "Serviços de e-mail"

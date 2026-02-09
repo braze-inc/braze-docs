@@ -1,5 +1,5 @@
 ---
-nav_title: "Notification push Web"
+nav_title: "Push Web"
 article_title: Notifications push Web
 page_order: 8.5
 page_type: reference
@@ -21,12 +21,12 @@ Les notifications push pour Web sont un autre excellent moyen d’interagir avec
 Les notifications push Web fournissent des informations urgentes et exploitables qui favorisent des conversions rapides. Avec les notifications push Web :
 
 - Déclenchez des messages dès que des données importantes changent, comme une baisse de prix.
-- Renvoyez les internautes vers votre site web à l'aide de boutons d'appel à l'action simples.
+- Renvoyez les internautes vers votre site web grâce à des boutons d'appel à l'action clairs.
 - Personnalisez votre push avec des informations sur le produit et le client pour rendre votre message pertinent.
 
-Les notifications push pour Web fonctionnent de la même façon que les notifications push de l’application sur votre téléphone. Pour plus d'informations sur la composition d'une notification push Web, consultez la rubrique [Création d'une notification push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+Les notifications push pour Web fonctionnent de la même façon que les notifications push de l’application sur votre téléphone. Pour plus d'informations sur la composition d'un push web, consultez la rubrique [Créer une notification push.]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message)
 
-![Exemple de communication web avec le même message affiché sur un ordinateur portable et un téléphone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
+![Exemple de push web avec le même message push affiché sur un ordinateur portable et un téléphone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## Cas d’usage potentiels
 

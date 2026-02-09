@@ -36,7 +36,7 @@ To set a different default Push TTL:
 2. For each Android platform, define a default time to live value. You can set smaller increments like hours or seconds for more precise control.
 3. Select **Save** to apply your changes.
 
-![Firebase, 웹, Kindle 및 Huawei 디바이스에 대한 푸시 TTL 설정.]({% image_buster /assets/img/push_ttl.png %})
+![파이어베이스, 웹, 킨들, 화웨이 기기에 대한 푸시 TTL 설정.]({% image_buster /assets/img/push_ttl.png %})
 
 ## 안드로이드 캠페인의 기본 FCM 우선 순위
 
@@ -56,7 +56,7 @@ FCM 우선 순위 옵션에는 다음이 포함됩니다:
 2. FCM 우선순위 섹션에서 기본 설정으로 '보통' 또는 '높음'을 선택합니다.
 3. Select **Save** to apply your changes.
 
-![Android 배달 우선순위 설정]({% image_buster /assets/img/push_fcm_priority_settings.png %})
+![Android 전달 우선 순위 설정.]({% image_buster /assets/img/push_fcm_priority_settings.png %})
 
 이 설정은 특정 캠페인을 만들 때 다른 우선순위를 선택하지 않는 한 모든 새 Android 푸시 캠페인에 전역적으로 적용됩니다. 
 

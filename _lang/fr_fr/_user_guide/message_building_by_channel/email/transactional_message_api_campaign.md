@@ -51,7 +51,7 @@ Par conséquent, vous remarquerez que plusieurs paramètres que vous connaissez 
 - L'étape des **audiences ciblées** a été supprimée. Étant donné que les e-mails transactionnels enregistrent l’intégralité de votre base d’utilisateurs comme étant admissible (y compris les utilisateurs non abonnés), il n’est pas nécessaire de spécifier des filtres ou des segments. Par conséquent, si vous avez une logique à appliquer à qui doit recevoir ce message, nous vous recommandons de l’appliquer avant de déterminer si la demande d’API doit être envoyée à Braze pour déclencher le message à un utilisateur spécifique.
 - L'étape des **conversions** a été supprimée. Pour le moment, les e-mails transactionnels ne prennent pas en charge le suivi des événements de conversion.
 
-![Flux de travail de composition, réception/distribution et confirmation pour créer une campagne d'e-mails transactionnels.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
+![Composer, réception/distribution et confirmation pour créer une campagne d'e-mails transactionnels.]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 Pour configurer votre campagne d'e-mails transactionnels, procédez comme suit :
 

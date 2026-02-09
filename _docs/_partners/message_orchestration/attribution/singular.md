@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Singular
 
-> Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
+> [Singular](https://www.singular.net/) is a unified marketing analytics platform that delivers attribution, cost aggregation, marketing analytics, creative reporting, and workflow automation.
 
 _This integration is maintained by Singular._
 
@@ -43,7 +43,7 @@ SingularConfig config = new SingularConfig("SDK KEY", "SDK SECRET")
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Singular attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Singular upon install as there will be no disruption of service. 
+Prior to February 2023, our Singular attribution integration used the Identifier for Vendor (IDFV) as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and send it to Singular upon install because there is no disruption of service. 
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -82,9 +82,9 @@ You will need to provide the data import key and REST endpoint to your Singular 
 
 ### Step 3: Confirm the integration
 
-Once Braze receives attribution data from Singular, the status connection indicator on the Singular technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
+After Braze receives attribution data from Singular, the status connection indicator on the Singular technology partners page in Braze changes from "Not Connected" to "Connected" and includes a timestamp of the last successful request.
 
-Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Singular postback, are ignored by our API and are not counted when determining if a successful connection was established.
+This status changes only after Braze receives data about an attributed install. Braze ignores organic installs (excludes them from the Singular postback) and does not count them when determining if the connection is successful.
 
 ## Facebook and X (formerly Twitter) attribution data
 

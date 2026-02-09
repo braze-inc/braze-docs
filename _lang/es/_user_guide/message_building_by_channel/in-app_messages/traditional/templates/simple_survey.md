@@ -1,5 +1,5 @@
 ---
-nav_title: "Cuestionario simple"
+nav_title: "Encuesta simple"
 article_title: Mensaje de cuestionario simple dentro de la aplicación
 page_order: 1.5
 page_type: reference
@@ -16,7 +16,7 @@ tool:
 
 Por ejemplo, pregunte a los usuarios cómo les gustaría utilizar su aplicación, conozca mejor sus preferencias personales o incluso pregúnteles por su satisfacción con una función concreta.
 
-![Tres sencillos mensajes de encuesta: preferencias de notificación, preferencias dietéticas y una encuesta de satisfacción del cliente. Las opciones seleccionadas en las encuestas corresponden a atributos personalizados que se registrarán para ese usuario.]({% image_buster /assets/img/iam/iam-survey.png %})
+![Tres sencillos mensajes de encuesta: preferencias de notificación, preferencias dietéticas y una encuesta de satisfacción del cliente. Las opciones seleccionadas en los cuestionarios corresponden a atributos personalizados que se registrarán para ese usuario.]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## Requisitos del SDK {#supported-sdk-versions}
 
@@ -38,7 +38,7 @@ Esta plantilla de encuesta es compatible tanto con aplicaciones móviles como co
 
 Para empezar a construir tu cuestionario, añade tu pregunta en el campo **Encabezado** del cuestionario. Si lo desea, puede añadir un mensaje opcional **en el cuerpo** que aparecerá debajo de la pregunta de la encuesta.
 
-![Pestaña de composición del editor de cuestionarios simples, con campos para un encabezado, un cuerpo opcional y un texto de ayuda opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![Pestaña Componer del editor de cuestionarios simples, con campos para un encabezado, un cuerpo opcional y un texto de ayuda opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Estos campos pueden incluir tanto Liquid como emojis, ¡así que ponte elegante!
@@ -52,7 +52,7 @@ Selecciona **Selección simple** o **Selección múltiple**. El **texto de ayuda
 
 A continuación, determina si vas a [recoger atributos personalizados](#custom-attributes) o [sólo respuestas de registro](#no-attributes).
 
-![Desplegable de opciones con la opción "Registrar atributos al enviar" seleccionada.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![Opciones desplegables con la opción "Registrar atributos al enviar" seleccionada.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### Recopilar atributos personalizados {#custom-attributes}
 
@@ -101,7 +101,7 @@ Si desea guiar a los usuarios a otra página de su aplicación o sitio web, camb
 
 Puede personalizar el color de la fuente y el color de acento del mensaje utilizando el selector **Tema de color**.
 
-![Pestaña Componer del editor de encuestas simple con el selector Tema de color expandido después de que un usuario haya hecho clic en la paleta de colores.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![Pestaña Componer del editor de cuestionarios simples con el selector Tema de color expandido después de que un usuario haya hecho clic en la paleta de colores.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## Analizar los resultados {#analytics}
 
@@ -127,6 +127,9 @@ Las opciones seleccionadas pasarán automáticamente a Currents, en la sección 
 
 ## Ejemplos
 
+{% tabs %}
+{% tab User satisfaction %}
+
 ### Satisfacción de los usuarios
 
 **Objetivo:** Mida la satisfacción de los clientes y envíe campañas de recuperación a los usuarios que hayan dejado puntuaciones bajas.
@@ -144,20 +147,26 @@ Para configurarlo, utiliza un cuestionario de selección de una sola opción con
 
 Cuando un usuario envía el cuestionario, su valor seleccionado se registra como un atributo personalizado. A continuación, puedes crear campañas de seguimiento utilizando filtros de audiencia. Por ejemplo, dirige mensajes de recuperación a usuarios cuyo atributo `customer_satisfaction` sea 1 ó 2.
 
+{% endtab %}
+{% tab Notification preferences %}
+
 ### Preferencias de notificación
 
 **Objetivo:** Deja que los usuarios opten por tipos específicos de notificaciones.
 
-Para configurarlo, utiliza un cuestionario de selección múltiple en el que cada opción represente un tema de notificación. En lugar de asignar el mismo atributo con valores distintos, cada elección mapea un atributo booleano distinto que refleja el interés del usuario por ese tema. Si un usuario selecciona una opción, el atributo correspondiente se establece en `true`. Si no se selecciona, el atributo no se modifica.
+Para configurarlo, utiliza un cuestionario de selección múltiple en el que cada opción represente un tema de notificación. En lugar de asignar el mismo atributo con distintos valores, cada elección mapea un atributo booleano distinto que refleja el interés del usuario por ese tema. Si un usuario selecciona una opción, el atributo correspondiente se establece en `true`. Si no se selecciona, el atributo no cambia.
 
 | Elección             | Atributo              | Valor  |
 |--------------------|------------------------|--------|
 | Actualizaciones de productos    | `wants_product_updates`| `true` |
 | Promociones         | `wants_promotions`     | `true` |
 | Invitaciones a eventos      | `wants_event_invites`  | `true` |
-| Cuestionarios y opiniones | `wants_surveys`        | `true` |
-| Consejos y tutoriales   | `wants_tips`           | `true` |
+| Cuestionarios & Opiniones | `wants_surveys`        | `true` |
+| Consejos & Tutoriales   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Identify customer goals %}
 
 ### Identificar los objetivos del cliente
 
@@ -176,6 +185,9 @@ Para configurarlo, utiliza un cuestionario de selección de una sola opción, en
 
 Cuando un usuario envía el cuestionario, el valor seleccionado se registra como un atributo personalizado en su perfil. A continuación, puedes utilizar estos datos para personalizar futuras experiencias o segmentar a los usuarios en función de su objetivo principal.
 
+{% endtab %}
+{% tab Improve conversion rates %}
+
 ### Mejorar los índices de conversión
 
 **Objetivo:** Comprende por qué los clientes no actualizan o no compran.
@@ -192,6 +204,9 @@ Para configurarlo, utiliza un cuestionario de selección de una sola opción, en
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Cuando un usuario envía el cuestionario, el valor seleccionado se guarda en su perfil. A continuación, puedes dirigirte a estos usuarios con campañas adaptadas a su objeción específica, como ofertas de descuento o mejoras de usabilidad.
+
+{% endtab %}
+{% tab Favorite features %}
 
 ### Características favoritas
 
@@ -212,5 +227,5 @@ Para configurarlo, utiliza un cuestionario de selección múltiple en el que cad
 
 Como este cuestionario utiliza la selección múltiple, el perfil del usuario se actualizará con una lista de todos los valores de características seleccionados.
 
-
-
+{% endtab %}
+{% endtabs %}

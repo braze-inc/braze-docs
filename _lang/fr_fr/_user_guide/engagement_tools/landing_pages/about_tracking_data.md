@@ -30,3 +30,12 @@ Avant qu'un utilisateur ne soumette un formulaire, les données suivies sur une 
 
 Ces données n'étant pas liées à des utilisateurs identifiables, elles ne peuvent pas être utilisées pour recibler ou suivre le comportement d'utilisateurs individuels.
 
+## Fusion de profils utilisateurs dupliqués
+
+Braze ne fusionne pas automatiquement les utilisateurs en fonction d'attributs, tels que l'e-mail ou le téléphone, lorsqu'un formulaire de page d'atterrissage est soumis. Si un formulaire est soumis avec un e-mail ou un numéro de téléphone qui correspond à un profil utilisateur existant, Braze crée un profil utilisateur distinct.
+
+Pour fusionner des profils utilisateurs en double, vous pouvez :
+
+- Déclenchez l'[endpoint`/users/merge` ]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) lorsqu'un formulaire de page d'atterrissage est soumis pour fusionner le nouveau profil avec un profil existant.
+- Planifiez la [fusion en bloc]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#bulk-merging) pour fusionner périodiquement les profils en double sur la base des identifiants correspondants.
+

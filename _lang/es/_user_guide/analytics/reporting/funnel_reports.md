@@ -9,15 +9,15 @@ tool: Reports
 
 # Informes de embudo
 
-> Los informes de embudo ofrecen un informe visual que le permite analizar los recorridos que realizan sus clientes tras recibir una campaña o Canvas. ![Informe de embudo 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
+> Los informes de embudo ofrecen un informe visual que le permite analizar los recorridos que realizan sus clientes tras recibir una campaña o Canvas. ![Informe del embudo 2]({% image_buster /assets/img/funnel_report/funnel_report2.png %}){: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 Si su campaña o Canvas utiliza un grupo de control o múltiples variantes, puede comprender cómo las diferentes variantes han impactado en el embudo de conversión a un nivel más granular y optimizar en base a estos datos.
 
-![Informe de embudo 1]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
+![Informe del embudo 1]({% image_buster /assets/img/funnel_report/funnel_report1.jpg %}){: style="max-width:80%;"}
 
 ## Configuración de los informes de embudo
 
-![Informe de embudo 5]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
+![Informe del embudo 5]({% image_buster /assets/img/funnel_report/canvas_campaign.png %}){: style="float:right;max-width:40%;border:0;margin-left:15px;"}
 
 Puede ejecutar informes de embudo para campañas activas existentes y Canvases. Estos informes muestran una serie de eventos por los que pasa el destinatario de una campaña a lo largo de 1-30 días desde la fecha en que entra en el Canvas o en la campaña. Un usuario se considera convertido a través de un paso del embudo si realiza el evento en el orden especificado.
 
@@ -38,13 +38,23 @@ Puedes seleccionar un marco temporal para tu informe (dentro de los últimos sei
 Si estableces la ventana para completar el embudo en un día, entonces el evento del embudo debe producirse en las 24 horas siguientes a la recepción del mensaje. Sin embargo, si selecciona varios días, la ventana de tiempo se cuenta como días naturales en la zona horaria de la empresa.
 {% endalert %}
 
-![Informe de embudo 5]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
+![Informe de embudo para un Canvas con "Últimos 7 días" seleccionado en el desplegable de marco temporal.]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
 
 ### Paso 2: Seleccionar eventos para los pasos del embudo
 
-Para cada informe de embudo, el primer evento es cuando el usuario recibe su mensaje. A partir de ahí, los eventos posteriores que elijas canalizan el número de usuarios que realizaron esos eventos, así como los eventos anteriores. Los eventos del informe de embudo tanto para los embudos de campaña como para los de Canvases permiten iniciar sesión, realizar una compra y eventos personalizados, mientras que sólo los embudos de campaña incluyen eventos de participación en el mensaje.
+Para cada informe de embudo, el primer evento es cuando el usuario recibe su mensaje. A partir de ahí, los eventos posteriores que elijas canalizan el número de usuarios que realizaron esos eventos, así como los eventos anteriores. 
 
-![Informe de embudo 3]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
+#### Eventos disponibles del informe de embudo
+
+| Campaña | Sesión Iniciada, Compra Realizada, Evento Personalizado Realizado, Evento de Interacción con Mensaje | Campaña | Sesión Iniciada, Compra Realizada, Evento Personalizado Realizado, Evento de Interacción con Mensaje | Campaña | Sesión Iniciada, Compra Realizada, Evento Personalizado Realizado, Evento de Interacción con Mensaje
+| Canvas | Sesión Iniciada, Compra Realizada, Evento Personalizado Realizado, Paso en Canvas Recibido, Interacción con el Paso | Canvas
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% alert note %}
+El evento de informe **Interactuado con Paso** sólo puede utilizarse con pasos en Canvas que utilicen los canales de mensajería correo electrónico o push.
+{% endalert %}
+
+![Informe de embudo para un Canvas con un desplegable de los eventos de informe disponibles.]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
 
 Los informes de embudo le permiten comparar el éxito de sus mensajes más allá de los eventos de conversión o de participación en el mensaje que configuró inicialmente. Por lo tanto, si hay un evento de conversión que no añadió inicialmente, todavía puede realizar un seguimiento de las conversiones para ese evento utilizando un embudo.
 
@@ -65,7 +75,7 @@ En su informe de embudo, puede comparar directamente el grupo de control con las
 - **Opción Regenerar**: Permite regenerar el informe e indica cuándo se generó por última vez el informe actual. 
 - **Variantes**: Denotado por columnas de color, el informe de embudo permite hasta 8 variantes y un grupo de control. Por defecto, el **gráfico** sólo mostrará tres variantes. Para ver más, puede seleccionar manualmente el resto de variantes.
 
-![Informe de embudo 4]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
+![Gráfico del informe de embudo.]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
 
 **Para campañas con múltiples variantes**: Braze mostrará una tabla con las métricas de cada evento y variante y el porcentaje de cambio con respecto al control. La tasa de conversión es el número de usuarios que han realizado el evento (y los siguientes) por destinatario del mensaje.
 
@@ -73,4 +83,8 @@ En su informe de embudo, puede comparar directamente el grupo de control con las
 - Tenga en cuenta que puede haber una discrepancia entre el embudo y los valores de conversión estándar, ya que los usuarios pueden convertir más de una vez con la re-elegibilidad, pero los informes de embudo convertirán un máximo de una vez, incluso si un usuario realiza el evento más de una vez. 
 
 **Para campañas multivariantes con reelegibilidad**: Si un usuario recibe múltiples variantes de la campaña durante la ventana de tiempo del informe, Braze determinará si deben incluirse en el embudo de variantes en función de las acciones que este usuario realizó después de la primera vez que recibió la variante de la campaña. Esto significa que el mismo usuario podría contar para múltiples variantes diferentes si recibiera múltiples variantes durante la ventana de tiempo del embudo.
+
+{% alert important %}
+Los usuarios huérfanos no son objeto de seguimiento en los informes de embudo. Cuando un usuario anónimo entra en un Canvas o en una campaña y más tarde se identifica a través del método `changeUser()`, su ID de Braze cambia. Los informes de embudo sólo registran los eventos de seguimiento que coinciden con el ID del usuario en el momento de la entrada y no tienen en cuenta los eventos realizados por el usuario después de cambiar su ID. Esto significa que los eventos de conversión realizados por el usuario después de identificarse no se incluirán en el informe de embudo.
+{% endalert %}
 

@@ -30,6 +30,9 @@ guide_featured_list:
   - name: Arten der Zustellung
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: Editor-Blöcke
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: Lokalisierung
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
@@ -57,10 +60,16 @@ guide_menu_list:
   - name: Nachrichten archivieren
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
+  - name: Kopieren über Arbeitsbereiche hinweg
+    link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
+    image: /assets/img/braze_icons/copy-07.svg
   - name: Duplizieren von Nachrichten
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/duplicating/
     image: /assets/img/braze_icons/copy-04.svg
   - name: Messaging Status
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/about_statuses/
+    image: /assets/img/braze_icons/book-closed.svg
+  - name: Vor dem Versenden wissen
+    link: /docs/know_before_send/
     image: /assets/img/braze_icons/book-closed.svg
 ---

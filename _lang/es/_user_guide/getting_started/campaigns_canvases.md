@@ -9,10 +9,10 @@ description: "Este artículo ofrece un resumen de las distintas formas en que pu
 
 # Cómo empezar: Campañas y Canvas
 
-En Braze, puedes enviar mensajes a través de una [campaña](#campaigns) o de un [Canvas](#canvas-flow).
+En Braze, puedes enviar mensajes a través de una [campaña](#campaigns) o de un [Canvas](#canvas).
 
 - Para enviar un único mensaje dirigido a un grupo de usuarios, elija una campaña. Una campaña es un paso de mensaje único para conectar con sus usuarios en varios canales de mensajería.
-- Para enviar una serie de mensajes continuos en un recorrido global del cliente, elija Canvas Flow. Canvas Flow es nuestra herramienta de orquestación de recorridos. Mientras que las campañas son buenas para enviar mensajes sencillos y específicos, en los lienzos es donde puede llevar sus relaciones con los clientes al siguiente nivel.
+- Para enviar una serie de mensajes continuos en un recorrido del cliente global, elige Canvas, nuestra herramienta de orquestación de recorridos. Mientras que las campañas son buenas para enviar mensajes sencillos y específicos, en los lienzos es donde puede llevar sus relaciones con los clientes al siguiente nivel.
 
 ## Campañas
 
@@ -38,7 +38,7 @@ Consulta estos recursos adicionales para saber más sobre las campañas en Braze
 - [Crear una campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign)
 - [Ideas y estrategias]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies)
 
-## Canvas Flow
+## Canvas
 
 En lugar de enviar mensajes esporádicos a lo largo de varias campañas, Canvases crea una conversación fluida y continua con los usuarios. Esto se debe a que el recorrido de un usuario a través de un Canvas puede dividirse en diferentes caminos en función de sus acciones (o inacción) con su marca, lo que le permite hacer avanzar automáticamente a los usuarios a través de un flujo específico en tiempo real.
 
@@ -50,7 +50,7 @@ Cuando se crea un Canvas, se siguen muchos de los mismos pasos que para configur
 
 Tu lienzo puede tener cualquier combinación de [mensajes]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [retrasos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/), etc. Puede enviar en cualquier canal de mensajería compatible, e incluso [integrarse con plataformas sociales y publicitarias]({{site.baseurl}}/partners/canvas_audience_sync/overview/) como Facebook, Google o TikTok.
 
-Consulte estos recursos adicionales para obtener más información sobre Canvas Flow:
+Consulta estos recursos adicionales para saber más sobre Canvas:
 
 - Braze Learning: [Orquestación de recorridos con Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [Crear un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)

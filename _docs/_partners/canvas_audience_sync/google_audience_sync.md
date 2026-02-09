@@ -91,11 +91,15 @@ After you have synced to Braze, the following consent attributes will be availab
 - `$google_ad_user_data`
 - `$google_ad_personalization`
 
-In any Canvas where you're targeting EEA, UK, and Switzerland end users using a Google Audience Sync to add users to an audience, you need to exclude these users whenever both consent attributes are any value that isn't `true`. This can be achieved by segmenting these users when the consent values are set to `true`. This also ensures that the more accurate analytics of users are synced, since we know Google will reject these users from the audiences. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
+In any Canvas where you're targeting EEA, UK, and Switzerland end users using a Google Audience Sync to add users to an audience, you must exclude these users whenever both consent attributes are any value that isn't `true`. You can do this by segmenting these users when the consent values are set to `true`. This also ensures that the more accurate analytics of users are synced, because we know Google will reject these users from the audiences. Note that if you're using Google Audience Sync to remove users from an audience, consent attributes are not required.
 
 ## Integration
 
 ### Step 1: Connect Google account
+
+{% alert important %}
+You must have the ["Admin" permission]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) to connect Google Ads to your Braze account.
+{% endalert %}
 
 To get started, go to **Partner Integrations** > **Technology Partners** > **Google Ads** and select **Connect Google Ads**. You'll be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
@@ -139,6 +143,10 @@ Add a component in your Canvas, then select **Audience Sync**.
 
 - **Customer Contact Info**: Contains your users' email or phone numbers, or both, if they exist in Braze. Google requires this to be a single field to sync instead of separate identifiers. You can still use this single field if you only have one of the identifiers.
 - **Mobile Advertiser ID**: Select either iOS IDFA or Android GAID. Due to Google’s Customer Match requirements, you can't have both mobile advertiser IDs in the same customer lists.
+
+{% alert note %}
+**About the "Missing Mobile Ad IDs? Let's fix that." banner:** When you sync to an audience using iOS IDFA or Android GAID as the field to match, this message may appear in the step editor. It is **informational, not an error**. It reminds you to confirm that the mobile ad ID field you're matching on exists in your audience data (for example, that users in the Canvas path have the corresponding identifier collected). You can dismiss it after you've verified your data.
+{% endalert %}
 
 {: start="4"}
 4. Next, save your audience by selecting the **Create Audience** button at the bottom of the step editor.

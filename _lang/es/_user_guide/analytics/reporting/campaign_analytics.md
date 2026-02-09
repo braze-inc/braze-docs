@@ -1,5 +1,5 @@
 ---
-nav_title: Análisis de la campaña
+nav_title: Análisis de campaña
 article_title: Análisis de la campaña
 page_order: 4.5
 layout: dev_guide

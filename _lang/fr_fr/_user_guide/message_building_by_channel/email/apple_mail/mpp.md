@@ -25,7 +25,7 @@ Tout destinataire utilisant l’application native Apple Mail sur :
 - macOS Monterey
 - watchOS 8
 
-Cela s’applique à tous les utilisateurs qui ont connecté leur compte de messagerie à l’application Apple Mail et qui se sont abonnés à la fonctionnalité de sécurité, quel que soit le service par e-mail (Gmail, Outlook, Yahoo, AOL, etc.). Cet impact n'est pas limité aux abonnés qui reçoivent des e-mails sur des adresses Apple/iCloud/me.com.
+Cela s’applique à tous les utilisateurs qui ont connecté leur compte de messagerie à l’application Apple Mail et qui se sont abonnés à la fonctionnalité de sécurité, quel que soit le service par e-mail (Gmail, Outlook, Yahoo, AOL, etc.). Cet impact ne se limite pas aux abonnés qui reçoivent des e-mails sur les adresses Apple/iCloud/me.com.
 
 {% alert important %}
 Bien que ces mises à jour de la livrabilité des e-mails soient importantes, la protection de la confidentialité dans Mail ne modifie fondamentalement aucune des règles qui régissent les e-mails et la livrabilité. En revanche, cela aura un impact sur la manière dont nous évaluons la réussite et les outils et fonctionnalités d’e-mails qui peuvent être utilisés à l’avenir.

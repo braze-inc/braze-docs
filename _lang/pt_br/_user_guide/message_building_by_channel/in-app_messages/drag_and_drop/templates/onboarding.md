@@ -1,5 +1,5 @@
 ---
-nav_title: "Fluxo de Integração"
+nav_title: "Fluxo de integração"
 article_title: Fluxo de Integração
 alias: "/onboarding_flow/"
 page_order: 0

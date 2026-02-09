@@ -147,8 +147,6 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 ### Example success response
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-API-KEY-HERE
 {
 {
     "dispatch_id": "dispatch_identifier",

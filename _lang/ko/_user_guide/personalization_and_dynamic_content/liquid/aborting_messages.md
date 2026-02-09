@@ -1,6 +1,6 @@
 ---
 nav_title: 메시지 중단하기
-article_title: 리퀴드 메시지 중단하기
+article_title: Liquid 메시지 중단하기
 page_order: 7
 description: "이 참고 문서에서는 Liquid 메시지 중단과 몇 가지 사용 사례에 대해 설명합니다."
 
@@ -59,9 +59,9 @@ Send this message in English!
 ```
 {% endraw %}
 
-![개발자 콘솔에 "언어가 없음"이라는 중단 메시지가 포함된 메시지 오류 로그가 표시됩니다.]({% image_buster /assets/img_archive/developer_console.png %})
+!["언어가 없음"이라는 중단 메시지와 함께 개발자 콘솔에 메시지 오류 로그가 표시됩니다.]({% image_buster /assets/img_archive/developer_console.png %})
 
-## 중단 메시지 쿼리
+## 중단 메시지 쿼리하기
 
 [쿼리 빌더]({{site.baseurl}}/user_guide/analytics/query_builder/) 또는 자체 데이터 웨어하우스(Braze에 연결된 경우)를 사용하여 Liquid 로직으로 인해 메시지가 중단될 때 트리거되는 특정 중단 메시지를 쿼리할 수 있습니다.
 

@@ -39,5 +39,5 @@ Braze también se comunica con los Usuarios del Panel para educarles e informarl
 
 Braze posee todos los derechos, títulos e intereses sobre cualquier material resultante de cualquiera de sus actividades de innovación.
 
-_Esta página ha sido preparada y se incorpora al acuerdo del cliente en inglés, cuya versión en inglés regirá en todos los aspectos. Las traducciones de esta página son sólo para fines prácticos y de referencia._
+_Esta página ha sido preparada y se incorpora al acuerdo del cliente en inglés, cuya versión en inglés regirá en todos los aspectos. Las traducciones de esta página son sólo para fines de conveniencia y referencia._
 {% endif %}

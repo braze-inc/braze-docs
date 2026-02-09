@@ -1,5 +1,5 @@
 ---
-nav_title: División de decisiones 
+nav_title: División de decisiones
 article_title: División de decisiones 
 alias: /decision_split/
 page_order: 2
@@ -13,7 +13,7 @@ tool: Canvas
 
 > El componente Decision Split de Canvas le permite ofrecer experiencias personalizadas y en tiempo real a sus usuarios.
 
-![Un paso para la división de decisiones llamado "¿Push habilitado?" para usuarios que no están habilitados para push y usuarios que sí lo están.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
+![Un paso para la división de decisiones llamado "¿Push habilitado?" para usuarios que no tienen push habilitado y usuarios que sí lo tienen.]({% image_buster /assets/img/decision-split-1.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
 
 Este componente puede utilizarse para crear ramas Canvas en función de si un usuario coincide con una consulta.
 
@@ -25,7 +25,7 @@ Para crear una división de decisiones en tu flujo de trabajo, añade un paso a 
 
 ¿Cómo quiere dividir a sus usuarios? Puedes utilizar [segmentos]({{site.baseurl}}/user_guide/engagement_tools/segments/) y filtros para trazar la línea. Básicamente, está creando una consulta en `true` o `false` que evaluará a sus usuarios y luego los dirigirá a un paso u otro. Debe utilizar al menos un segmento o un filtro. No es necesario utilizar a la vez un segmento y un filtro.
 
-![Un paso para la división de decisiones con el filtro "Push habilitado es verdadero" seleccionado.]({% image_buster /assets/img/define-split-2.png %}){: style="max-width:90%;"}
+![Un paso para la división de decisiones con el filtro "Push en primer plano habilitado es verdadero" seleccionado.]({% image_buster /assets/img/define-split-2.png %})
 
 {% alert note %}
 Por defecto, los segmentos y filtros de un paso para la división de decisiones se comprueban justo después de recibir un paso anterior, a menos que añadas un retraso.

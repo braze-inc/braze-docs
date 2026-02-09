@@ -19,7 +19,7 @@ Si no activas el seguimiento analítico para un segmento, podrás acceder a [las
 
 En la sección **Detalles del segmento** de la página de un segmento, active **Seguimiento de análisis**.
 
-![Alternar el seguimiento de análisis para un segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Activación del seguimiento analítico de un segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 Una aplicación puede tener activado el seguimiento de hasta 25 segmentos. Braze recomienda realizar un seguimiento de los segmentos que le resulten importantes para analizar los efectos de sus campañas sobre las sesiones, los ingresos y las compras.
 

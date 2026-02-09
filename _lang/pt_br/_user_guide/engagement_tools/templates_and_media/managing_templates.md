@@ -1,6 +1,6 @@
 ---
-nav_title: Gerenciamento de modelos
-article_title: Gerenciamento de modelos
+nav_title: Gerenciar modelos
+article_title: Gerenciar modelos
 page_order: 3
 
 page_type: reference
@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# Gerenciamento de modelos
+# Gerenciar modelos
 
 > Arquivar ou duplicar modelos pode ajudar a organizá-los e gerenciá-los melhor. Este artigo de referência cobre como arquivar e duplicar modelos na seção **Templates** do dashboard da Braze.
 
@@ -38,7 +38,7 @@ Modelos duplicados podem ser encontrados classificando a coluna **Última Ediç�
 
 {% endraw %}
 
-![Três modelos classificados pela hora em que foram editados pela última vez, com um modelo copiado no topo da lista.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
+![Três modelos classificados de acordo com a hora em que foram editados pela última vez, com um modelo copiado no topo da lista.]({% image_buster /assets/img/duplicate_multiple_template.gif %})
 
 ## Arquivando modelos
 
@@ -52,7 +52,7 @@ Para arquivar um modelo individual, selecione o ícone de configurações na tel
 
 Para arquivar vários modelos, selecione a caixa de seleção ao lado de cada modelo que você deseja arquivar. Depois de selecionar vários modelos, selecione **Archive**. Você pode encontrar seus **modelos** arquivados selecionando **Arquivados** em **Mostrar** na grade de **modelos**.
 
-![Seção Drop & Drop Email Templates salvos que mostra dois modelos selecionados e uma barra de ferramentas com a opção de arquivamento.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
+![Saved Drop & Seção de envio de e-mail que mostra dois modelos selecionados e a barra de ferramentas com a opção de arquivamento.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 O arquivamento não está disponível atualmente para [modelos de link]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).

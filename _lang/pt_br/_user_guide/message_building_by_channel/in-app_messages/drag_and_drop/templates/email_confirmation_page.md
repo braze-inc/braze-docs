@@ -1,5 +1,5 @@
 ---
-nav_title: Envio de e-mail com confirmação
+nav_title: Inscrição de e-mail com confirmação
 article_title: Envio de e-mail com página de confirmação
 alias: "/email_confirmation_page/"
 page_order: 6

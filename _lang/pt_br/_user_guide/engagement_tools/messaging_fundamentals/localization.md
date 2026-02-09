@@ -1,7 +1,7 @@
 ---
 nav_title: Localização
 article_title: Localização
-page_order: 7
+page_order: 8
 description: "Este artigo de referência aborda os conceitos básicos de localização, lista os benefícios de diferentes abordagens de orquestração em campanhas e Canvas e lista as diferentes maneiras pelas quais os usuários podem lidar com a personalização em seus envios de mensagens."
 tool:
     - Campaigns
@@ -14,10 +14,10 @@ tool:
 
 ## Como funciona?
 
-Após a [integração do SDK do Braze]({{site.baseurl}}/developer_guide/sdk_integration/), as informações de localização dos dispositivos dos usuários são coletadas automaticamente. O local contém o idioma e um identificador de região. Esta informação está disponível na ferramenta de segmentação da Braze em **País** e **Idioma**.
+As informações de localização são armazenadas no perfil de um usuário com base nos dados que você coleta usando um [Braze SDK]({{site.baseurl}}/developer_guide/sdk_integration/) (automaticamente) ou [REST API]({{ site.baseurl }}/api/endpoints/user_data/post_user_track). O local contém o idioma e um identificador de região. Esta informação está disponível na ferramenta de segmentação da Braze em **País** e **Idioma**.
 
 {% alert tip %}
-Para obter detalhes técnicos sobre como a localização é recebida, consulte a documentação oficial [do iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html) e [do Android](http://developer.android.com/reference/java/util/Locale.html).
+Para obter detalhes técnicos sobre como a localização é coletada por nossos SDKs, consulte a documentação oficial [do iOS](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html), [do Android](http://developer.android.com/reference/java/util/Locale.html) e [da Web](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/language).
 {% endalert %}
 
 ## Gerenciamento de traduções
@@ -25,7 +25,7 @@ Para obter detalhes técnicos sobre como a localização é recebida, consulte a
 Considere as seguintes abordagens para gerenciar suas traduções.
 
 {% tabs local %}
-{% tab campanha %}
+{% tab campaign %}
 ### Um modelo para todos
 
 Nessa abordagem, a localização é aplicada a um único modelo no Braze usando o [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid). Após o envio, o dashboard fornece análise de dados agregada da campanha. O engajamento no nível do usuário pode ser medido usando funis de segmento personalizados, por exemplo, combinando os filtros **País** e **Campanha Recebida**.
@@ -82,10 +82,18 @@ Uma vez enviado, o dashboard fornece análise de dados dinâmica por país e den
 
 ## Envio de mensagens traduzidas
 
-Para enviar mensagens personalizadas com base no idioma ou na localização de um usuário, use um dos seguintes métodos:
+Para enviar mensagens personalizadas com base no idioma, na localização ou nos atributos personalizados de um usuário, use um dos seguintes métodos.
+
+### Tradução Liquid tags (recomendado) {#translation-liquid-tag}
+
+O Braze oferece suporte a uma tag {% raw %}`{% translation salutation %}Hello!{% endtranslation %}`{% endraw %} Liquid para direcionamento a usuários em diferentes idiomas com uma única mensagem. 
+
+Para obter um passo a passo completo, consulte o [guia sobre o uso de tags de tradução]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales).
+  
+### Abordagens alternativas
 
 {% tabs local %}
-{% tab Manualmente %}
+{% tab Custom Liquid %}
 Você pode colar manualmente seu conteúdo no corpo da mensagem e usar [o Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/) para exibir [condicionalmente]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) o idioma correto para o destinatário. Para isso:
 
 1. Crie sua mensagem e selecione **Idioma** para gerar a lógica condicional Liquid para cada um dos idiomas selecionados.
@@ -113,7 +121,7 @@ Sempre recomendamos incluir uma {% raw %}`{% else %}`{% endraw %} declaração n
 {% endalert %}
 {% endtab %}
 
-{% tab Blocos de Conteúdo %}
+{% tab Content Blocks %}
 Braze [Blocos de Conteúdo]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) são blocos de conteúdo reutilizáveis. Quando um bloco é alterado, todas as referências a esse bloco são alteradas. Por exemplo, atualizações em um cabeçalho ou rodapé de e-mail serão refletidas em todos os e-mails ou para abrigar traduções. Esses blocos também podem ser [criados]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_create_email_content_block/#create-content-block) e [atualizados]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) usando a API REST, e os usuários podem fazer upload de traduções programaticamente. 
 
 Ao criar uma campanha no dashboard, os Blocos de Conteúdo podem ser referenciados usando a tag {% raw %}`{{content_blocks.${name_of_content_block}}}`{% endraw %}. Esses blocos podem conter todas as traduções dentro da lógica condicional para cada idioma, como mostrado na opção 1, ou um bloco separado para cada idioma pode ser usado.
@@ -126,8 +134,8 @@ Os blocos de conteúdo também podem ser utilizados como um processo de gerencia
 5. Seu serviço atinge o [`/content_block/update` endpoint]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) para atualizar o conteúdo traduzido e atualizar a tag para "Tradução Completa".
 {% endtab %}
 
-{% tab Catálogos %}
-[Catálogos]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) permitem acessar dados de objetos JSON importados via API e arquivos CSV para enriquecer suas mensagens, semelhante a atributos personalizados ou propriedades de eventos personalizados através do Liquid. Por exemplo:
+{% tab Catalogs %}
+[Catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/) permitem acessar dados de objetos JSON importados via API e arquivos CSV para enriquecer suas mensagens, semelhante a atributos personalizados ou propriedades de eventos personalizados através do Liquid. Por exemplo:
 
 {% subtabs local %}
 {% subtab API %}
@@ -222,7 +230,7 @@ Crie um CSV no seguinte formato:
 {% endsubtab %}
 {% endsubtabs %}
 
-Esses itens de catálogo podem ser referenciados usando [personalização]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/#using-catalogs-in-a-message), mostrado abaixo, ou [seleções]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections) que permitem criar grupos de dados. 
+Esses itens de catálogo podem ser referenciados usando [personalização]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog/#using-catalogs-in-a-message), mostrado abaixo, ou [seleções]({{site.baseurl}}/user_guide/data/activation/catalogs/selections) que permitem criar grupos de dados. 
 
 {% raw %}
 ```liquid
@@ -233,15 +241,7 @@ Esses itens de catálogo podem ser referenciados usando [personalização]({{sit
 {% endraw %}
 {% endtab %}
 
-{% tab Envio de mensagens de localização %}
-Adicione e use localidades em sua mensagem para direcionar usuários em diferentes idiomas em uma única campanha ou Canvas para os canais de envio de mensagens ou e-mail. Para obter um passo a passo completo, consulte [Localidades em mensagens de e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/using_locales/) ou [Localidades em mensagens push]({{site.baseurl}}/user_guide/message_building_by_channel/push/using_locales/).
-
-{% alert important %}
-Este recurso está atualmente em acesso antecipado. Entre em contato com seu gerente de conta Braze se estiver interessado em participar do acesso antecipado.
-{% endalert %}
-{% endtab %}
-
-{% tab Parceiros do Braze %}
+{% tab Braze partners %}
 Muitos parceiros da Braze oferecem soluções de localização, incluindo [Transifex]({{site.baseurl}}/partners/message_personalization/localization/transifex/#about-transifex) e [Crowdin](https://crowdin.com/). Normalmente, os usuários usam a plataforma junto com uma equipe interna e uma agência de tradução. Essas traduções são então carregadas lá e são então acessíveis via API REST. Esses serviços também costumam aproveitar [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), permitindo que os usuários obtenham as traduções via API.
 
 Por exemplo, as seguintes chamadas de Conteúdo Conectado chamam Transifex e Crowdin para buscar uma tradução, aproveitando {% raw %}`{{${language}}}`{% endraw %} para identificar a tradução correta para um determinado usuário. Esta tradução é então salva no bloco JSON "strings" e referenciada.
@@ -266,7 +266,7 @@ Por exemplo, as seguintes chamadas de Conteúdo Conectado chamam Transifex e Cro
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Planilhas eletrônicas %}
+{% tab Spreadsheets %}
 Hospede as traduções em uma planilha e, em seguida, use um dos seguintes métodos para enviar sua mensagem no idioma relevante.
 
 {% subtabs local %}
@@ -283,7 +283,7 @@ Esta opção fornece um método alternativo de transformar Google Sheets em obje
 
 A estrutura da planilha segue as etapas da opção 4, mas o SheetDB também fornece [filtros adicionais](https://docs.sheetdb.io/#sheetdb-api) para consulta dos objetos.
 
-Alguns usuários podem preferir implementar o SheetDB com menos dependências de Liquid e Connected Block, implementando o [método de busca](https://docs.sheetdb.io/#get-search-in-document) do SheetDB em chamadas de solicitação GET para filtrar os objetos JSON com base no {% raw %}`{{${language}}}`{% endraw %} Liquid tag para retornar automaticamente os resultados para um único idioma, em vez de construir grandes blocos condicionais.
+Alguns usuários podem preferir implementar o SheetDB com menos dependências do Liquid e do Connected Block, implementando o [método de pesquisa](https://docs.sheetdb.io/#get-search-in-document) do SheetDB em chamadas de solicitação GET para filtrar os objetos JSON com base na {% raw %}`{{${language}}}`{% endraw %} Liquid tag para retornar automaticamente os resultados para um único idioma, em vez de criar grandes blocos condicionais.
 
 #### Etapa 1: Formate a planilha do Google
 

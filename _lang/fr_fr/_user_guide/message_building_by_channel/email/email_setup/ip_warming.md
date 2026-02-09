@@ -20,13 +20,21 @@ Le réchauffement d’adresses IP est conçu pour vous aider à établir une ré
 
 Les fournisseurs de services Internet arrêtent la livraison des e-mails lorsque la suspicion de spam se produit afin de protéger leurs utilisateurs. Par exemple, si vous envoyez à 100 000 utilisateurs, le fournisseur de services Internet peut envoyer l’e-mail à seulement 5 000 de ces utilisateurs au cours de la première heure. Le fournisseur de services Internet surveille ensuite les mesures d’engagement telles que les taux d’ouverture, les taux de clics, les désinscriptions et les rapports de courriers indésirables. Donc, si un nombre important de rapport de courrier indésirable se produit, ils peuvent choisir de reléguer le reste de cet envoi dans le dossier spam plutôt que de le remettre dans la boîte de réception de l'utilisateur. 
 
-Si l’engagement est modéré, il peut continuer à faire passer votre e-mail afin de recueillir davantage de données d’engagement afin de déterminer si le courrier est un spam avec plus de certitude. Si l’e-mail a des mesures d’engagement très élevées, il peut cesser de faire passer cet e-mail entièrement. Ils utilisent ces données pour créer une réputation de courrier électronique qui déterminera finalement si vos e-mails sont filtrés automatiquement vers le spam.
+Si l'engagement est modéré, ils peuvent continuer à étrangler votre e-mail pour collecter davantage de données d'engagement afin de déterminer avec plus de certitude si l'e-mail est un spam ou non. Si l’e-mail a des mesures d’engagement très élevées, il peut cesser de faire passer cet e-mail entièrement. Ils utilisent ces données pour créer une réputation de courrier électronique qui déterminera finalement si vos e-mails sont filtrés automatiquement vers le spam.
 
 Si votre domaine ou votre IP est bloqué par un FAI, les messages du [journal d'activité des messages]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) contiendront des informations sur les sites web à visiter pour faire appel à ces FAI et pour sortir de ces listes.
 
+## IP warming automatisé
+
+Vous pouvez utiliser le réchauffement d'adresses IP automatisé pour augmenter progressivement votre volume d'envoi quotidien, ce qui permet aux fournisseurs de boîtes de réception d'apprendre et de faire confiance à vos habitudes d'envoi. Surveillez votre réchauffeur IP en sélectionnant la tuile **Réchauffement IP automatisé** dans la section **Reprendre là où vous vous êtes arrêté de** votre tableau de bord d'accueil. 
+
+Braze envoie d'abord à vos abonnés les plus engagés, ce qui permet au volume quotidien d'augmenter à un rythme correspondant aux meilleures pratiques. Ensuite, Braze suit les signaux d'engagement et de livrabilité. Si un problème est détecté, votre planification est ajustée automatiquement.
+
+![Suivi du réchauffement d'adresses IP avec le volume d'envoi pour la semaine du 16 janvier.]({% image_buster /assets/img/automated_ip_warming_example.png %})
+
 ## Planifications de réchauffement d’adresses IP
 
-Nous recommandons fortement de respecter strictement cette planification de réchauffement d’adresses IP pour garantir la livrabilité. Il est également important de ne pas sauter de jours, car une mise à l'échelle régulière améliore les indicateurs de livraison.
+Nous recommandons fortement de respecter strictement cette planification de réchauffement d’adresses IP pour garantir la livrabilité. Il est également important de ne pas sauter de jours, car une mise à l'échelle cohérente améliore les indicateurs de réception/distribution.
 
 Jour | Nombre d’e-mails à envoyer
 ----|--------------------------|
@@ -51,7 +59,7 @@ Jour | Nombre d’e-mails à envoyer
 
 Nous vous conseillons un réchauffement jusqu'à votre envoi maximal. En d'autres termes, si vous envoyez normalement 2 millions d'e-mails par jour mais que vous prévoyez d'en envoyer 7 millions pendant une période saisonnière, c'est à ce "pic" d'envoi que vous devez vous préparer.
 
-Une fois le réchauffement terminé et que vous avez atteint le volume quotidien souhaité, vous devez viser à maintenir ce volume tous les jours. Il est normal qu'il y ait des fluctuations, mais si vous atteignez le volume souhaité et que vous ne procédez à un envoi massif qu'une fois par semaine, vous risquez de nuire à vos indicateurs de livraison et à votre réputation d'expéditeur. 
+Une fois le réchauffement d'adresses IP terminé et que vous avez atteint le volume quotidien souhaité, vous devez viser à maintenir ce volume quotidiennement. Une certaine fluctuation est normale, mais si vous atteignez le volume souhaité et que vous ne procédez à un envoi massif qu'une fois par semaine, vous risquez de nuire à vos indicateurs de réception/distribution et à la réputation de l'expéditeur. 
 
 {% alert important %}
 La plupart des fournisseurs de services Internet stockent les données de réputation uniquement pendant 30 jours. Si vous passez un mois sans envoi de messages, vous devrez répéter le processus de réchauffement d’adresses IP.
@@ -65,7 +73,7 @@ Notre fonctionnalité intégrée de limitation du nombre d'utilisateurs est un o
 
 ## Segmentation du sous-domaine
 
-De nombreux fournisseurs de services d’accès aux courriels et fournisseurs d’accès aux courriels ne filtrent plus uniquement la réputation de l’adresse IP. Ces technologies de filtrage représentent désormais une réputation basée sur le domaine. Cela signifie que les filtres analyseront toutes les données associées au domaine de l’expéditeur et non pas seulement à l’adresse IP. Pour cette raison, en plus de réchauffer votre e-mail adresse IP, nous vous recommandons également de disposer de domaines ou sous-domaines distincts pour le marketing, la transaction et la messagerie d’entreprise. 
+De nombreux FAI et fournisseurs d'accès à l'e-mail ne filtrent plus en fonction de la réputation des adresses IP. Ces technologies de filtrage représentent désormais une réputation basée sur le domaine. Cela signifie que les filtres analyseront toutes les données associées au domaine de l’expéditeur et non pas seulement à l’adresse IP. Pour cette raison, en plus de réchauffer votre e-mail adresse IP, nous vous recommandons également de disposer de domaines ou sous-domaines distincts pour le marketing, la transaction et la messagerie d’entreprise. 
 
 {% alert important %}
 La segmentation sous-domaine est particulièrement importante pour les expéditeurs à gros volumes. Ces expéditeurs doivent travailler avec un conseiller de Braze lors de la configuration de leur compte afin de s’assurer qu’ils respectent cette pratique.
@@ -75,7 +83,7 @@ Nous vous recommandons de segmenter vos domaines de sorte que le courrier d’en
 
 ## Bonnes pratiques
 
-Toutes les conséquences d’une absence de réchauffement d’adresses IP peuvent être évitées si vous suivez ces bonnes pratiques de réchauffement.
+Vous pouvez éviter toutes les conséquences de l'absence de réchauffement d'adresses IP en suivant ces bonnes pratiques :
 
 ### Commencez par envoyer de petits volumes d’e-mails
 

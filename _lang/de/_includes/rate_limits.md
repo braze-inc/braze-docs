@@ -1,4 +1,3 @@
-
 <!---DEFAULT RATE LIMIT-->
 
 {% if include.endpoint == "default" %}
@@ -33,16 +32,25 @@ Für diesen Endpunkt gilt ein Rate-Limit von 1.000 Anfragen pro Minute, wie in [
 <!---/users/track-->
 
 {% elsif include.endpoint == "users track" %}
-Ab dem 28\. Oktober 2024 gilt für diesen Endpunkt für alle Kund:innen ein Basisgeschwindigkeitslimit von 3.000 Anfragen pro drei Sekunden. Jede `/users/track` Anfrage kann bis zu 75 Event-Objekte, 75 Attribut-Objekte und 75 Kauf-Objekte enthalten. Jedes Objekt (Ereignis-, Attribut- und Kauf-Arrays) kann jeweils eine:n Nutzer:in aktualisieren. Insgesamt bedeutet dies, dass maximal 225 Nutzer:innen in einem einzigen Anruf aktualisiert werden können. Darüber hinaus kann ein einzelnes Nutzerprofil durch mehrere Objekte aktualisiert werden.
+Ab dem 28\. Oktober 2024 gilt für diesen Endpunkt für alle Kund:innen ein Basisgeschwindigkeitslimit von 3.000 Anfragen pro drei Sekunden. Jede `/users/track` Anfrage kann bis zu 75 Event-Objekte, 75 Attribut-Objekte und 75 Kauf-Objekte enthalten. Jedes Objekt (Ereignis-, Attribut- und Kauf-Arrays) kann jeweils eine:n Nutzer:in aktualisieren. Insgesamt können Sie also bis zu 225 Nutzer:innen mit einem einzigen Aufruf aktualisieren. Darüber hinaus können Sie ein einzelnes Nutzerprofil mit mehreren Objekten aktualisieren.
 
-Für Kund:innen, die **Monatlich aktive Nutzer:innen - CY 24-25** erworben haben, gelten andere Grenzen. Einzelheiten zu diesen Grenzen finden Sie unter [Monatlich aktive Nutzer:innen - CY 24-25 Grenzen]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25).
+Für Kund:innen, die **Monatlich aktive Nutzer:innen - CY 24-25** erworben haben, gelten andere Grenzen. Einzelheiten zu diesen Grenzen finden Sie unter [Monatlich aktive Nutzer:innen - CY 24-25 Grenzen]({{site.baseurl}}/api/endpoints/user_data/post_user_track/#monthly-active-users-cy-24-25-universal-mau-web-mau-and-mobile-mau).
 
-Weitere Informationen finden Sie auf unserer Seite über [API-Ratenbegrenzungen]({{site.baseurl}}/api/api_limits/). Wenden Sie sich an Ihren Customer-Success-Manager, wenn Sie Ihr Limit erhöhen möchten.
+Weitere Informationen finden Sie auf unserer Seite über [API Rate-Limits]({{site.baseurl}}/api/api_limits/). Wenden Sie sich an Ihren Customer-Success-Manager:in, wenn Sie Ihr Limit erhöhen möchten.
 
 <!---/users/export/ids-->
 
 {% elsif include.endpoint == "users export ids" %}
 Wenn Sie Braze am oder nach dem 22\. August 2024 aktiviert haben, gilt für diesen Endpunkt ein Rate-Limit von 250 Anfragen pro Minute, wie unter [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) beschrieben.
+
+Sie können das Rate-Limits dieses Endpunkts auch auf 40 Anfragen pro Sekunde erhöhen, wenn Sie die folgenden Voraussetzungen erfüllen:
+
+- In Ihrem Workspace ist das Standard Rate-Limiting (250 Anfragen pro Minute) aktiviert. Wenden Sie sich an Ihren Braze-Konto Manager:in, um weitere Unterstützung bei der Aufhebung eines bereits bestehenden Rate-Limits zu erhalten.
+- Ihre Anfrage enthält den Parameter `fields_to_export`, um alle Felder aufzulisten, die Sie erhalten möchten.
+
+{% alert important %}
+Wenn Sie `canvases_received` oder `campaigns_received` in den Parameter `fields_to_export` eingeben, kommt Ihre Anfrage nicht für das schnellere Rate-Limit in Frage. Wir empfehlen, diese nur dann in Ihre Anfrage aufzunehmen, wenn Sie einen speziellen Anwendungsfall dafür haben.
+{% endalert %}
 
 <!---/users/delete-->
 
@@ -104,7 +112,7 @@ Für Transaktions-E-Mails von Braze gibt es kein Rate-Limit. Je nach dem von Ihn
 <!---/sends/id/create-->
 
 {% elsif include.endpoint == "sends id create" %}
-Die tägliche Höchstzahl der angepassten Sendebezeichner, die über diesen Endpunkt erstellt werden können, beträgt 100 für einen bestimmten Workspace. Jede `send_id` und `campaign_id` Kombination, die Sie erstellen, wird auf Ihr Tageslimit angerechnet. Die Antwort-Header für jede gültige Anfrage enthalten den aktuellen Status der Gebührenbeschränkung, siehe [API-Rate-Limits]({{site.baseurl}}/api/api_limits/) für weitere Einzelheiten.
+Sie können mit diesem Endpunkt bis zu 100 angepasste Bezeichner pro Tag für einen bestimmten Workspace erstellen. Jede `send_id` und `campaign_id` Kombination, die Sie erstellen, wird auf Ihr Tageslimit angerechnet. Die Antwort-Header für jede gültige Anfrage enthalten den aktuellen Rate-Limits-Status. Einzelheiten finden Sie unter [Rate-Limits für APIs]({{site.baseurl}}/api/api_limits/).
 
 <!---/subscription/status/set-->
 {% elsif include.endpoint == "subscription status set" %}
@@ -134,6 +142,15 @@ Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/ap
 
 - Bis zu 50 spezifische `external_ids`, jeweils mit individuellen Nachrichtenparametern
 - Ein im Braze-Dashboard erstelltes Segment beliebiger Größe, das durch seine `segment_id` angegeben wird
+- Ein Zielgruppensegment beliebiger Größe, das in der Anfrage als [verbundenes Zielgruppenobjekt]({{site.baseurl}}/api/objects_filters/connected_audience/) definiert ist
+
+{% endif %}
+
+{% if include.category == "send messages endpoints" %}
+
+Braze-Endpunkte unterstützen das [Stapeln von API-Anfragen]({{site.baseurl}}/api/api_limits/#batching-api-requests). Eine einzelne Anfrage an die Messaging-Endpunkte kann eines der folgenden Ziele erreichen:
+
+- Bis zu 50 spezifische `external_ids`, jeweils mit individuellen Nachrichtenparametern
 - Ein Zielgruppensegment beliebiger Größe, das in der Anfrage als [verbundenes Zielgruppenobjekt]({{site.baseurl}}/api/objects_filters/connected_audience/) definiert ist
 
 {% endif %}

@@ -1,8 +1,8 @@
 ---
-nav_title: Mensagens de Push Rápidas
+nav_title: Mensagens de push rápidas
 article_title: Mensagens de Push Rápidas
 alias: "/quick_push/"
-description: "Este artigo descreve coisas a saber ao criar uma campanha de push ou Canvas usando a experiência de edição rápida de push."
+description: "Este artigo descreve coisas a saber ao criar uma campanha de push ou um canva usando a experiência de edição rápida de push."
 ---
 
 # Mensagens de push rápidas
@@ -25,10 +25,10 @@ Para criar uma campanha com direcionamento para várias plataformas e dispositiv
 3. Selecione as plataformas desejadas (Mobile, Web, Kindle) e os dispositivos móveis (iOS, Android). Se você selecionar vários dispositivos, os testes multivariantes não estarão disponíveis para sua campanha.
 
 ### Selecionando plataformas para uma campanha
-![Opções para selecionar várias plataformas para uma campanha de push, como Mobile, Web e Kindle, e vários dispositivos, como iOS e Android.]({% image_buster /assets/img_archive/quick_push_1.png %})
+![Opções para selecionar várias plataformas para uma campanha push, como Mobile, Web e Kindle, e vários dispositivos, como iOS e Android.]({% image_buster /assets/img_archive/quick_push_1.png %})
 
 ### Selecionando plataformas para uma etapa do Canvas
-![Opções para selecionar várias plataformas para um passo de Mensagem push, como Mobile, Web e Kindle, e vários dispositivos, como iOS e Android.]({% image_buster /assets/img_archive/quick_push_4.png %})
+![Opções para selecionar várias plataformas para uma etapa de Mensagem por push, como Móvel, Web e Kindle, e vários dispositivos, como iOS e Android.]({% image_buster /assets/img_archive/quick_push_4.png %})
 
 {:start="4"}
 4\. Selecione **Confirmar**. Após selecionar **Confirmar**, você não poderá alterar suas plataformas ou dispositivos selecionados.
@@ -42,11 +42,11 @@ Na guia **Compose**, é possível especificar um título, uma mensagem e um comp
 
 O painel de prévia mostra uma aproximação da aparência de sua mensagem em cada plataforma. Embora isso possa lhe dar um bom indicador de onde você pode atingir os limites de caracteres, lembre-se de sempre testar suas mensagens em um dispositivo real antes de enviar sua campanha.
 
-![Visualização de edição única com um título, mensagem e campo de comportamento ao clicar para três tipos de push: iOS, Android e Web.]({% image_buster /assets/img_archive/quick_push_2.png %})
+![Visualização de edição única com um campo de título, mensagem e comportamento ao clicar para três tipos de push: iOS, Android e Web.]({% image_buster /assets/img_archive/quick_push_2.png %})
 
 Na seção **Assets (Ativos** ), selecione ou faça upload das imagens que deseja exibir para cada plataforma. Lembre-se de que dispositivos diferentes têm especificações diferentes para imagens e contagem de caracteres. Consulte [Formatos de mensagens e imagens push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/message_format/) para obter ajuda.
 
-![Seção de ativos da visualização de edição única com campos para Imagem do Ícone de Push, imagem de notificação do iOS, imagem de notificação do Android e imagem de notificação da Web.]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
+![Seção de ativos da visualização de edição única com campos para imagem de ícone por push, imagem de notificação do iOS, imagem de notificação do Android e imagem de notificação da Web.]({% image_buster /assets/img_archive/quick_push_3.png %}){:style="max-width:50%"}
 
 Em seguida, termine de configurar sua campanha push normalmente. Consulte [Criação de uma campanha push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) para obter mais detalhes.
 

@@ -16,7 +16,7 @@ tool: Campaigns
 
 Si eliges enviar un mensaje en cuanto se lance, tu mensaje empezará a enviarse en cuanto termines de crear tu campaña.
 
-![La sección "Entrega" con la opción "Programada" seleccionada y la opción de programación en función del tiempo de envío en cuanto se lance la campaña.]({% image_buster /assets/img_archive/schedule_immediately.png %})
+![La sección "Entrega" con "Programada" seleccionada y la opción de programación en función del tiempo de envío en cuanto se lance la campaña.]({% image_buster /assets/img_archive/schedule_immediately.png %})
 
 Este tipo de programación está pensado para campañas puntuales que desea enviar inmediatamente, como mensajes sobre un acontecimiento actual. Una aplicación deportiva, por ejemplo, puede programar notificaciones push sobre actualizaciones de resultados utilizando esta opción. Además, cuando envíe mensajes de prueba dirigidos sólo a usted o a su equipo, esta opción le permite entregarlos inmediatamente. 
 

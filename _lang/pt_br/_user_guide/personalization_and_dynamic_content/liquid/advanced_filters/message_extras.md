@@ -1,5 +1,5 @@
 ---
-nav_title: Tag de mensagens extras
+nav_title: Tag de extras de mensagens
 article_title: Tag de mensagens extras
 page_order: 1
 description: "Este artigo explica como usar a tag Liquid de extras de mensagens e como verificar a sintaxe."
@@ -32,13 +32,13 @@ A tag `message_extras` é compatível com todos os tipos de mensagens com um eve
 
 1. No corpo da mensagem do canal, digite a tag `message_extras` Liquid. Ou, você pode usar o modal **Add Personalization** e selecionar **Message Extras** para o tipo de personalização. 
 
-![O modal Adicionar personalização com Extras de mensagens selecionado como o tipo de personalização.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
+![O modal Add Personalization com Message Extras selecionado como o tipo de personalização.]({% image_buster /assets/img_archive/message_extras1.png %}){: style="max-width:35%;"}
 
 {: start="2"}
 
 2. Digite o [par chave-valor]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) para cada tag `message_extras`. 
 
-![Um exemplo de pares de chave-valor para a tag de extras de mensagens. O campo de título diz "Seus novos favoritos". A mensagem lê pares de chave-valor para a tag de extras da mensagem e a frase a seguir: "Estamos entusiasmados em oferecer uma seleção de produtos novos e interessantes que certamente se tornarão seus novos favoritos"]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
+![Um exemplo de pares de chave-valor para a tag de extras de mensagens. O campo de título diz "Seus novos favoritos". A mensagem lê pares de chave-valor para a tag de extras da mensagem e a frase a seguir: "Estamos felizes em oferecer uma seleção de produtos novos e interessantes que certamente se tornarão seus novos favoritos".]({% image_buster /assets/img_archive/message_extras2.png %}){: style="max-width:70%;"}
 
 {: start="3"}
 
@@ -53,6 +53,10 @@ Qualquer outra entrada que não corresponda ao padrão de tag discutido acima po
 - Texto extra antes da definição de chaves ou valores
 - Chaves e valores fora de ordem 
   - {% raw %}Por exemplo, ```{% message_extras :value 123 :key test %}```{% endraw %}
+
+## Envio de informações sobre códigos promocionais para o Currents
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
 
 ## Considerações
 

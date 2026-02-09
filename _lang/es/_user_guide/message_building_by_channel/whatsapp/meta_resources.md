@@ -1,7 +1,7 @@
 ---
-nav_title: Meta Recursos
+nav_title: Meta recursos
 article_title: Meta Recursos
-page_order: 81
+page_order: 12
 description: "Este artículo proporciona documentación, información y recursos útiles de Meta para mejorar tu comprensión de la integración de WhatsApp."
 page_type: reference
 channel:
@@ -22,6 +22,22 @@ Revisa la siguiente documentación de Meta para obtener orientación sobre nombr
 - [Puntuación de calidad](https://www.facebook.com/business/help/896873687365001)
 
 ## Actualizaciones de productos de WhatsApp
+
+### Abril de 2025: Pausa de mensajes de mensajería a números de teléfono de EE.UU.
+*Última actualización agosto 2025*
+
+Meta detendrá la entrega de todos los mensajes de plantillas de marketing a los usuarios de WhatsApp que tengan un número de teléfono de Estados Unidos (un número compuesto por un código de marcación `+1` y un código de área de Estados Unidos). Actualmente no hay fecha prevista para el levantamiento de esta pausa. 
+
+Cualquier intento de enviar una plantilla a un usuario de WhatsApp con un número de teléfono de EE.UU. dará lugar al error `131049`.
+
+### Marzo de 2025: Límites de mensajes de plantillas de marketing por usuario
+*Última actualización agosto 2025*
+
+Meta limitará el número de mensajes de plantillas de marketing que un usuario puede recibir en todas las empresas en un periodo de tiempo determinado, empezando por los mensajes que tienen menos probabilidades de ser leídos. 
+
+Una excepción es que, si una persona responde a un mensaje de marketing, se iniciará una ventana de servicio al cliente de 24 horas. Los mensajes de mensajería enviados dentro de esta ventana no contarán para el límite de una persona.
+
+El límite específico varía según el usuario, dependiendo de su nivel de interacción. Obtén más información sobre los límites de mensajes de plantilla de marketing por usuario de WhatsApp [aquí](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits). 
 
 ### Enero de 2025: WhatsApp pausa el envío de mensajes de marketing a usuarios de EE.UU. a partir del 1 de abril
 *Última actualización Enero 2025*
@@ -140,7 +156,7 @@ Tenga en cuenta que WhatsApp utiliza el mismo sistema para evaluar la calidad de
 
 En última instancia, esta actualización le proporciona un bucle de retroalimentación más rápido (30 minutos frente a horas o días con la pausa de la plantilla), para que pueda ajustar sus plantillas y ofrecer una mejor experiencia al cliente.
 
-**Si tienes más preguntas sobre esta actualización, ponte en contacto con tu representante de Meta.**
+**Si tienes más preguntas sobre esta actualización, ponte en contacto con tu representante socio de Meta.**
 
 ### Junio de 2023: Experimentación con mensajes 
 *Última actualización: junio de 2023*

@@ -1,5 +1,5 @@
 ---
-nav_title: Projeção de Testes A/B
+nav_title: Projeção de testes A/B
 article_title: Projeção de Testes A/B
 page_order: 20
 hidden: true

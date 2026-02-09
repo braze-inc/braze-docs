@@ -1,6 +1,6 @@
 ---
 nav_title: Links universais e links de aplicativos
-article_title: Links universais e links de aplicativos
+article_title: Links Universais e Links de App
 page_order: 6.4
 page_type: reference
 description: "Este artigo de ajuda o orienta sobre como configurar os links universais da Apple e os app links do Android."
@@ -75,7 +75,7 @@ Estas etapas foram adaptadas da documentação do desenvolvedor da Apple. Para s
 #### Etapa 1a: Registre seu app {#step-1a}
 
 1. Acesse developer.apple.com e faça o registro.
-2. Clique em **Certificates, Identifiers & Profiles (Certificados, Identificadores e Perfis**).
+2. Clique em **Certificados, Identificadores & Profiles**.
 3. Clique em **Identificadores**.
 4. Se ainda não tiver um identificador de app registrado, clique em + para criar um.
    a. Digite um **nome**. Pode ser o que você quiser.
@@ -216,7 +216,7 @@ Por fim, você pode testar seus deep linkings. Enviar um link para si mesmo por 
 ## Links universais, links de apps e rastreamento de cliques
 
 {% alert note %}
-Os links de rastreamento de cliques geralmente são configurados como parte de sua integração para envio de e-mail. Se isso não tiver sido concluído durante a integração do cliente, entre em contato com seu gerente de conta para obter ajuda.
+Os links de rastreamento de cliques geralmente são configurados como parte de sua integração para envio de e-mail. Se isso não tiver sido concluído durante a integração do cliente, entre em contato com o gerente da sua conta para obter ajuda.
 {% endalert %}
 
 Nossos parceiros de envio de e-mail, SendGrid e SparkPost, usam domínios de rastreamento de cliques para envolver todos os links e incluir parâmetros de URL para rastreamento de cliques nos e-mails do Braze.
@@ -265,7 +265,7 @@ Em seguida, confira se seu app está configurado para lidar corretamente com a j
 
 ### Desativar o rastreamento de cliques em uma base de link a link
 
-É possível desativar o rastreamento de cliques para links específicos adicionando código HTML à mensagem de e-mail para o editor de HTML ou a um bloco HTML para o editor de arrastar e soltar.
+É possível desativar o rastreamento de cliques para links específicos adicionando código HTML à mensagem de e-mail para o editor de HTML ou a um bloco de HTML para o editor de arrastar e soltar.
 
 #### SendGrid
 
@@ -293,7 +293,7 @@ Se o seu provedor de serviço de e-mail for o Amazon SES, use o código HTML `se
 
 #### Editor de arrastar e soltar
 
-Ao usar o editor de arrastar e soltar de e-mail, insira seu código HTML como um atributo personalizado se o link estiver anexado ao texto, a um botão ou a uma imagem.
+Ao usar o editor de arrastar e soltar de e-mail, insira seu código HTML como um atributo personalizado se o link estiver anexado a um texto, um botão ou uma imagem.
 
 ##### Atributo personalizado para um link de texto
 

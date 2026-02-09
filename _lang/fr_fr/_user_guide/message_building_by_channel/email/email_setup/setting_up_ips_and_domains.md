@@ -1,6 +1,6 @@
 ---
-nav_title: Configuration des IP et des domaines
-article_title: Configuration des IP et des domaines
+nav_title: Configurer les IP et les domaines
+article_title: Configurer les IP et les domaines
 page_order: 0
 page_type: tutorial
 channel: email
@@ -8,7 +8,7 @@ description: "Le présent article pratique vous expliquera comment configurer vo
 
 ---
 
-# Configuration des IP et des domaines
+# Configurer les IP et les domaines
 
 {% multi_lang_include video.html id="iTm3yQkJ0UU" align="right"  %}
 
@@ -31,6 +31,10 @@ Après avoir reçu votre e-mail, nous allons travailler pour configurer vos IP, 
 ### Étape 3 : Ajouter des enregistrements DNS
 
 Une fois que vos IP, domaines, sous-domaines et pools IP sont configurés, nous vous enverrons une liste des enregistrements DNS. Demandez à vos ingénieurs et développeurs d'ajouter ces enregistrements DNS là où c'est nécessaire, et une fois qu'ils ont été ajoutés, informez-en l'équipe Braze Onboarding.
+
+{% multi_lang_include dns_records.md %}
+
+Une fois que Braze vous a fourni vos enregistrements DNS, ajoutez-les dès que votre équipe DNS ou informatique en a la possibilité. La vérification du domaine est limitée dans le temps et si les enregistrements sont ajoutés trop tard, la vérification peut échouer même si les enregistrements DNS sont correctement résolus par la suite. Si vos DNS semblent corrects mais que la vérification échoue, contactez l'équipe d'onboarding ou d'assistance de Braze pour réinitialiser la vérification.
 
 ### Étapes suivantes
 
@@ -57,13 +61,15 @@ Pour utiliser la configuration des e-mails en libre-service, vous devez remplir 
 2. Ensuite, sélectionnez l'onglet **Vérification de l'expéditeur**. Pour afficher cet onglet, vous devez disposer de l'autorisation « Peut gérer les paramètres de l'entreprise » au niveau de l'entreprise.
 3. Cliquez sur le bouton **Démarrer la configuration**.
 
-### Étape 2 : Ajouter et vérifier un domaine d'envoi
+### Étape 2 : Ajouter et vérifier un domaine d'envoi
 
 Un domaine d'envoi est utilisé dans l'adresse "from" lors de l'envoi d'un e-mail. Entrez un domaine d'envoi et cliquez sur **Soumettre**. 
 
 Ensuite, ajoutez les enregistrements TXT et CNAME du bas de la page à votre fournisseur DNS. Retournez ensuite dans le tableau de bord de Braze et cliquez sur **Vérifier.**
 
 ![]({% image_buster /assets/img_archive/email_setup_rdns_records.png %})
+
+Si la vérification échoue et que vous pensez que vos enregistrements DNS sont corrects, contactez le service d'assistance de Braze pour obtenir de l'aide.
 
 {% alert important %}
 Le domaine d'envoi doit être subordonné à un domaine que vous possédez. Par exemple, si vous possédez « example.com », un sous-domaine pourrait être « mail.example.com », ce qui vous permettrait d'utiliser l'adresse d'envoi « @mail.example.com ».

@@ -1,5 +1,5 @@
 ---
-nav_title: "Envio de mensagens SMS"
+nav_title: Envio de mensagens SMS
 article_title: Visão geral do envio de mensagens SMS
 page_order: 4
 alias: /sms_message_sending/
@@ -44,9 +44,9 @@ Algumas marcas podem desejar enviar para um grupo de usuários que tenham númer
 
 Para superar essa limitação, durante o [processo de configuração]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process) dos grupos de inscrições, os grupos podem ser configurados para conter códigos longos e curtos de vários países diferentes. Quando concluído, o envio de números de telefone com o mesmo código de país que o número de telefone do usuário de direcionamento será automaticamente usado no lançamento de uma campanha. Não será necessário criar campanhas separadas para usuários com números de telefone com códigos de país diferentes, o que lhe permite lançar uma campanha ou usar um componente do Canva para direcionamento a usuários relevantes.
 
-![As cargas úteis de SMS são enviadas usando o mesmo código de país do número de telefone do usuário-alvo]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
+![As cargas úteis de SMS são enviadas usando o mesmo código de país do número de telefone do usuário-alvo.]({% image_buster /assets/img/sms/multi_country_subgroups.png %})
 
-#### Melhores práticas
+#### Práticas recomendadas
 
 1. **Obter permissão**. Uma das regras mais importantes para usar o SMS como empresa é que você deve primeiro obter permissão dos clientes para entrar em contato com eles. Deixar de fazer isso pode prejudicar sua marca e resultar em altas taxas legais.<br><br>
 2. **Escolha o número certo para seu caso de uso**. Três tipos principais de números de telefone podem enviar e receber mensagens SMS: códigos longos, códigos curtos e IDs de remetente alfanuméricos, e seus recursos e disponibilidade em diferentes regiões variam. Pense com antecedência se sua empresa será melhor atendida com um código personalizado. <br><br>

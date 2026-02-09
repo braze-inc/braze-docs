@@ -19,7 +19,7 @@ page_order: 0
 
 **메시징** > **랜딩 페이지로** 이동한 다음 **랜딩 페이지 만들기를** 선택합니다. 기존 랜딩 페이지의 이름을 선택하여 복제하거나 변경할 수도 있습니다.
 
-![Braze 대시보드의 랜딩 페이지 섹션]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
+![Braze 대시보드의 랜딩 페이지 섹션입니다.]({% image_buster /assets/img/landing_pages/landing-pages-homepage.png %})
 
 ### 2단계: 페이지 세부 정보를 입력합니다.
 
@@ -47,13 +47,14 @@ page_order: 0
 
 아직 저장하지 않았다면 **초안으로 저장을** 선택합니다. 페이지 사용자 지정을 시작하려면 **랜딩 페이지 편집을** 선택합니다. 끌어서 놓기 편집기에는 사용 사례에 맞게 사용자 지정할 수 있는 기본 템플릿이 미리 로드됩니다.
 
-![드래그 앤 드롭 편집기에서 생성 중인 랜딩 페이지 예시.]({% image_buster /assets/img/landing_pages/template.png %})
+![드래그 앤 드롭 편집기에서 생성 중인 랜딩 페이지 예시입니다.]({% image_buster /assets/img/landing_pages/template.png %})
 
-편집기는 랜딩 페이지 구성에 [기본 블록과](#basic-blocks) [양식 블록이라는](#form-blocks) 두 가지 유형의 구성 요소를 사용합니다. 모든 블록은 한 줄에 배치되어야 합니다.
+편집기는 랜딩 페이지 구성에 기본 블록과 양식 블록이라는 두 가지 유형의 컴포넌트를 사용합니다. 모든 블록은 한 줄에 배치되어야 합니다.
 
-!['행' 및 '양식 블록'이 포함된 '작성' 섹션]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
+!['구축' 섹션에는 '행' 및 '양식 블록'이 포함되어 있습니다.]({% image_buster /assets/img/landing_pages/dnd.png %}){: style="max-width:35%;"}
 
-#### 기본 블록
+{% tabs %}
+{% tab Basic blocks %}
 
 이러한 블록을 사용하여 콘텐츠를 추가하고 랜딩 페이지의 레이아웃을 사용자 지정할 수 있습니다.
 
@@ -73,11 +74,12 @@ page_order: 0
 
 {% multi_lang_include span_text.md %}
 
-#### 양식 블록
+{% endtab %}
+{% tab Form blocks %}
 
 이 블록을 사용하여 사용자가 제출한 데이터를 Braze의 프로필에 연결하는 양식을 만들 수 있습니다. 양식 블록을 사용하는 경우 확인 상태에 대한 추가 랜딩 페이지도 만들어야 한다는 점을 기억하세요.
 
-![신규 고객을 등록하고 이메일로 할인 코드를 전송하는 양식 블록입니다.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
+![새 고객을 등록하고 이메일로 할인 코드를 보내는 양식 블록입니다.]({% image_buster /assets/img/landing_pages/form.png %}){: style="max-width:70%;"}
 
 | 블록 유형     | 설명 |
 |---------------|-------------|
@@ -86,11 +88,15 @@ page_order: 0
 | 입력 필드   | 표준 속성(예: 이름 및 성)을 지원하는 양식 필드 또는 선택한 사용자 지정 속성 문자열입니다. |
 | 드롭다운      | 사용자는 미리 정의된 목록에서 항목을 선택할 수 있습니다. 목록에 사용자 지정 속성 문자열을 추가할 수 있습니다. |
 | 확인란      | 사용자가 이 확인란을 선택하면 블록의 속성이 `true` 로 설정됩니다. 선택하지 않으면 속성이 `false` 로 설정됩니다. |
+| 확인란 그룹| 사용자는 제시된 여러 선택지 중에서 선택할 수 있습니다. 값은 정의된 배열 커스텀 속성에 설정되거나 추가됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert important %}
 양식이 있는 랜딩 페이지를 만든 후에는 반드시 해당 [랜딩 페이지 Liquid 태그를]({{site.baseurl}}/user_guide/engagement_tools/landing_pages/tracking_users) 메시지에 삽입하세요. 이 태그를 사용하면 Braze는 기존 사용자가 양식을 제출할 때 자동으로 기존 사용자 프로필을 식별하고 업데이트할 수 있습니다.
 {% endalert %}
+
+{% endtab %}
+{% endtabs %}
 
 #### 페이지 컨테이너 스타일
 
@@ -98,7 +104,15 @@ page_order: 0
 
 페이지 컨테이너 수준 스타일을 설정한 후 블록 수준에서 스타일을 커스텀하는 것이 좋습니다. 페이지 전체에 배경 이미지를 추가할 수도 있습니다.
 
-![배경 이미지, 색상, 테두리 세부 정보 및 콘텐츠 스타일을 사용자 지정할 수 있는 옵션이 있는 '페이지 컨테이너' 섹션입니다.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+![배경 이미지, 색상, 테두리 세부 정보 및 콘텐츠 스타일을 커스텀할 수 있는 옵션이 있는 '페이지 컨테이너' 섹션입니다.]({% image_buster /assets/img/landing_pages/page_container.png %}){: style="max-width:40%;"}
+
+#### 사용자 기기에 대한 반응성
+
+작은 화면에서 세로로 열을 쌓아 랜딩 페이지를 사용자 기기의 크기에 맞게 반응하도록 만들 수 있습니다. 이 기능을 인에이블하려면 반응형으로 만들려는 행에 열을 추가한 다음 **열 커스텀** 섹션에서 **작은 화면에서 세로 스택을** 토글합니다.
+
+인에이블먼트가 활성화되면 작은 화면에서 여러 열로 된 콘텐츠의 세로 순서를 제어하기 위해 열을 역방향으로 쌓을 수도 있습니다. 이렇게 하면 커스텀 코드 없이도 모바일에서 페이지의 모양과 느낌을 개선할 수 있습니다.
+
+!['작은 화면에 세로로 쌓기' 토글은 '열 커스텀' 섹션에 있습니다.]({% image_buster /assets/img/landing_pages/device_responsive_toggle.png %}){: style="max-width:50%;"}
 
 #### 선택 및 필수 필드
 
@@ -106,7 +120,7 @@ page_order: 0
 
 예를 들어 양식 제출 전에 동의 캡처를 적용하려면 **필수 필드 입력을** 사용 설정하여 적절한 고지 사항 텍스트와 함께 확인란을 필수로 설정할 수 있습니다.
 
-!['필수 입력 필드' 토글이 선택된 체크박스 양식 필드.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
+!['필수 입력 필드' 토글이 선택된 체크박스 양식 필드입니다.]({% image_buster /assets/img/landing_pages/lp-optional-required.png %}){: style="max-width:50%;"}
 
 ### 4단계: 확인 페이지 만들기(선택 사항)
 
@@ -119,6 +133,14 @@ page_order: 0
 - **웹 URL 열기** 작업을 사용하여 확인 페이지로 연결합니다.
 
 확인 페이지를 포함하지 않으면 사용자가 양식이 성공적으로 제출되었는지 알지 못할 수 있습니다. 여정을 완료하려면 항상 확인 경험을 포함하세요.
+
+{% alert note %}
+확인 페이지가 새 탭에서 열리면 원래 랜딩 페이지로 돌아가서 업데이트된 정보로 다시 제출하는 사용자가 이전 제출을 덮어쓰면 데이터가 일관되지 않을 수 있습니다.
+{% endalert %}
+
+{% alert important %}
+**버튼 클릭 시 양식 제출이** 인에이블먼트된 버튼을 구성하고 **온클릭 동작을** 사용하여 새 탭에서 웹 URL을 열면 iOS Safari에 구축된 팝업 차단기로 인해 탐색이 작동하지 않을 수 있습니다. 이는 양식 제출 후 새 탭을 열면 팝업으로 처리되기 때문에 발생합니다.<br><br>이 문제를 방지하려면 양식 제출 버튼을 구성하여 새 탭이 아닌 동일한 탭에서 결과 URL이 열리도록 하세요. 양식 제출이 없는 버튼은 문제 없이 새 탭에서 URL을 열 수 있습니다.
+{% endalert %}
 
 ### 5단계: 페이지 미리보기
 
@@ -142,13 +164,13 @@ page_order: 0
 
 랜딩 페이지 템플릿을 미리 보고, 보관하고, 편집하거나 복제할 수 있습니다. 랜딩 페이지를 편집할 때 랜딩 페이지를 템플릿으로 저장하거나 템플릿을 변경하거나 랜딩 페이지의 콘텐츠를 삭제할 수도 있습니다. 
 
-![랜딩 페이지 저장, 변경, 삭제 옵션이 있는 드롭다운입니다.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
+![랜딩 페이지를 저장, 변경, 삭제할 수 있는 옵션이 있는 드롭다운입니다.]({% image_buster /assets/img/landing_pages/manage-lp-template.png %}){: style="max-width:60%;"}
 
 ## 분석 보기
 
 랜딩 페이지의 효과를 분석하려면 **메시징** > **랜딩 페이지로** 이동한 다음 게시한 랜딩 페이지를 선택합니다. 여기에서 페이지 조회 수, 페이지 클릭 수, 페이지 제출 수 및 랜딩 페이지의 제출 비율을 추적할 수 있습니다.
 
-![랜딩 페이지의 분석 섹션입니다.]({% image_buster /assets/img/landing_pages/analytics.png %})
+![랜딩 페이지에 대한 분석 섹션입니다.]({% image_buster /assets/img/landing_pages/analytics.png %})
 
 ## 양식 제출 오류 처리 {#handling-form-submission-errors}
 

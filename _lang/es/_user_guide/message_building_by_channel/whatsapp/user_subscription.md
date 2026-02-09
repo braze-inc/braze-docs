@@ -4,6 +4,7 @@ article_title: Grupos de suscripción de WhatsApp
 page_order: 1
 description: "En este artículo se describen los grupos de suscripción de WhatsApp, qué estados de suscripción se ofrecen y cómo se configuran los grupos de suscripción."
 page_type: reference
+alias: /whatsapp_subscription_groups/
 channel:
   - WhatsApp
  
@@ -47,7 +48,7 @@ Independientemente de los métodos de adhesión voluntaria y de cancelación que
 
 - Cree un [webhook Braze-to-Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) que actualice el estado de la suscripción a través de REST API, como en el ejemplo siguiente:
 
-![Webhook compositor de un mensaje utilizando el método POST.]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
+![Compositor de webhook con un mensaje utilizando el método POST.]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 Para evitar condiciones de carrera, cualquier mensaje de seguimiento después del webhook debe estar contenido en un segundo Canvas que se active por los resultados del primer Canvas (como que un usuario haya entrado en una variación del Canvas y esté en un grupo de suscripción de WhatsApp).
 
@@ -75,7 +76,7 @@ Para evitar condiciones de carrera, cualquier mensaje de seguimiento después de
 	}
 	```
 
-![Paso de actualización de usuario con un paso avanzado de editor JSON.]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
+![Paso de actualización de usuario con un paso de editor JSON avanzado.]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 La actualización del estado de suscripción de un usuario puede tardar hasta 60 segundos.

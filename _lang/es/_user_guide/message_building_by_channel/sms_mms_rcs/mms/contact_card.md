@@ -24,7 +24,7 @@ Se pueden crear tarjetas de contacto a partir del compositor de SMS y MMS. Selec
 
 A continuación, se le pedirá que introduzca el nombre o apodo de su empresa. Este es el nombre que sus usuarios verán cuando guarden la tarjeta. Se impone un límite de 20 caracteres para garantizar que el usuario pueda ver el nombre completo de tu empresa o alias en sus contactos y aplicación de mensajería. 
 
-![La pestaña del generador de tarjetas de contacto.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![La pestaña Generador de tarjetas de contacto.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Paso 2: Asignar número de teléfono
 

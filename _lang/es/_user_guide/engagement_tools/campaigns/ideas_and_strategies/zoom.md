@@ -27,13 +27,13 @@ POST: `/meetings/{webinarId}/registrants`
 Para más información, consulta el [punto final de Zoom Añadir participantes al seminario web](https://developers.zoom.us/docs/api/rest/reference/zoom-api/methods/#operation/webinarRegistrantCreate).<br><br>
 
 {% tabs %}
-{% tab Correo electrónico %}
+{% tab Email %}
 
 Cree una campaña de correo electrónico con un botón de llamada a la acción en el cuerpo del mensaje. Cuando un usuario haga clic en el botón, rediríjalo a la página de destino del seminario web (con los parámetros adecuados incluidos en el enlace de redirección). 
 
 Utilizando los parámetros de la URL para pasar los datos del usuario, cree una llamada a la API que se ejecute cuando se cargue la página para añadir al usuario al seminario web.
 
-![Mensaje de correo electrónico con plantilla Liquid utilizada para incluir nombre, apellidos, dirección de correo electrónico y ciudad.]({% image_buster /assets/img/zoom/zoom1.png %})
+![Mensaje de correo electrónico con la plantilla Liquid utilizada para incluir nombre, apellidos, dirección de correo electrónico y ciudad.]({% image_buster /assets/img/zoom/zoom1.png %})
 
 Los usuarios ya están registrados para el seminario web con los datos que ya existen en su perfil de Braze.
 
@@ -75,7 +75,7 @@ Los usuarios ya están registrados para el seminario web con los datos que ya ex
 3. Los usuarios ya están registrados para el seminario web con los datos que ya existen en su perfil de Braze.
 
 {% endtab %}
-{% tab Mensaje en la aplicación %}
+{% tab In-app message %}
 
 1. Crear una campaña de mensajes in-app<br><br>
 
@@ -90,7 +90,7 @@ Los usuarios ya están registrados para el seminario web con los datos que ya ex
 2. Cree una campaña webhook activada por el mensaje in-app o el clic en el botón.<br><br>
 	Utilizando los datos de usuario existentes en su perfil de Braze, registra al usuario para el seminario web.<br>
 
-	![Una campaña basada en acciones que se enviará a los usuarios que hayan hecho clic en un botón de una campaña específica.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
+	![Una campaña basada en la acción que se enviará a los usuarios que hayan hecho clic en un botón de una campaña específica.]({% image_buster /assets/img/zoom/zoom5.png %})<br><br>
 
 	Ejemplo de llamada webhook al endpoint Zoom.<br>
 	{% raw %}

@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas-Grundlagen
+nav_title: Canvas Grundlagen
 article_title: Canvas-Grundlagen
 page_order: 1
 page_type: reference
@@ -24,19 +24,19 @@ Bevor wir uns mit den Feinheiten der [Canvas-Einrichtung]({{site.baseurl}}/user_
 
   {% endtab %}
 
-  {% tab Reise %}
+  {% tab Journey %}
 
   Eine Reise, häufig als User Journey bezeichnet, ist die Erfahrung eines einzelnen Nutzers oder einer einzelnen Nutzerin innerhalb des Canvas.<br><br> ![Ein Chart mit der Customer Journey für eine neue Nutzer:in. Ein anonymer Nutzer:in installiert eine App, Kat erstellt ein Konto, Kat öffnet die App eine Woche lang nicht, eine Push-Benachrichtigung bringt Kat zurück zur App, dann nutzt Kat die App regelmäßig.]({% image_buster /assets/img_archive/Journey_2.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
   {% tab Canvas Builder %}
-  Der Canvas-Builder zeigt Ihnen die Schritte, die Sie bei der Erstellung Ihres Canvas ausführen müssen. Dazu gehören Grundlagen wie das Benennen Ihres Canvas und das Hinzufügen von Teams. Im Grunde genommen ist der Canvas-Builder die entscheidende Einrichtung, die Sie benötigen, bevor Sie mit der Erstellung Ihres Canvas beginnen können. Hier können Sie die Art und Weise steuern, wie Ihre Nutzer ihre Kundenreise beginnen und abschließen, indem Sie den [Zeitplan für die Eingabe]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), die [Zielgruppe]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) und die [Sendeeinstellungen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings) bearbeiten.<br><br> ![Der Canvas-Builder im Abschnitt Grundlagen für ein Canvas mit dem Namen "Neues Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
+  Der Canvas-Builder zeigt Ihnen die Schritte, die Sie bei der Erstellung Ihres Canvas ausführen müssen. Dazu gehören Grundlagen wie das Benennen Ihres Canvas und das Hinzufügen von Teams. Im Grunde genommen ist der Canvas-Builder die entscheidende Einrichtung, die Sie benötigen, bevor Sie mit der Erstellung Ihres Canvas beginnen können. Hier können Sie die Art und Weise steuern, wie Ihre Nutzer ihre Kundenreise beginnen und abschließen, indem Sie den [Zeitplan für die Eingabe]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule), die [Zielgruppe]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2c-set-your-target-entry-audience) und die [Sendeeinstellungen]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2d-select-your-send-settings) bearbeiten.<br><br> ![Der Canvas-Builder im Abschnitt Grundlagen für einen Canvas namens "Neuer Canvas".]({% image_buster /assets/img_archive/canvas_flow_entry_wizard.png %}){: style="max-width:90%;"}
 
   {% endtab %}
 
-  {% tab Varianten %}
-  Eine Variante ist der Weg, dem jede Kund:in auf ihrer Reise folgt. Canvas unterstützt bis zu acht Varianten mit einer Kontrollgruppe. Sie bestimmen, welches Segment Ihrer Zielgruppe jeder Variante folgen wird.<br><br> ![Auswählen des Buttons "Variante hinzufügen".]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
+  {% tab Variants %}
+  Eine Variante ist der Weg, dem jede Kund:in auf ihrer Reise folgt. Canvas unterstützt bis zu acht Varianten mit einer Kontrollgruppe. Sie bestimmen, welches Segment Ihrer Zielgruppe jeder Variante folgen wird.<br><br> ![Wählen Sie den Button "Variante hinzufügen".]({% image_buster /assets/img/canvas_intro/add_canvas_variant.gif %})
 
   {% endtab %}
 
@@ -107,7 +107,7 @@ Hier bestimmen wir, welche Messaging-Kanäle für Ihre Nutzer:innen am sinnvolls
 * [Push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/)
 * [In-App-Nachrichten]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/)
 * [Content-Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/)
-* [SMS oder MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/)
+* [SMS oder MMS]({{site.baseurl}}/about_sms/)
 * [Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/)
 
 ### Das "Wie": Erstellen Sie das komplette Erlebnis

@@ -7,4 +7,4 @@ description: "このリファレンス記事では、SMS とWhatsApp クレジ�
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}

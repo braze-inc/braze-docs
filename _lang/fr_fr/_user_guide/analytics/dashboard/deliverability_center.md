@@ -25,7 +25,7 @@ Avant de vous connecter au Centre de livrabilité, vous devez créer un compte G
 3. Saisissez votre domaine ou sous-domaine racine pour authentifier votre e-mail. Si vous ajoutez et vérifiez le domaine racine, cela permettra d'appliquer la vérification en aval aux sous-domaines. Par exemple, en vérifiant `braze.com`, vous pouvez ensuite ajouter `demo.braze.com` et d'autres sous-domaines sans devoir les vérifier individuellement.
 4. Google génère un enregistrement TXT qui peut être ajouté directement aux DNS de votre domaine. Il appartient généralement à la personne qui gère votre DNS. Pour obtenir des informations et des conseils sur la manière de mettre à jour votre DNS spécifique, consultez [Vérifier votre domaine (étapes spécifiques à l'hôte)](https://support.google.com/a/topic/1409901).
 5. Sélectionnez **Suivant.** <br>![Un exemple de domaine "demo.braze.com" pour authentifier un e-mail.]({% image_buster /assets/img_archive/domain_authentication.png %})
-6. Une fois l'enregistrement TXT ajouté aux DNS, retournez dans le tableau de bord de Google Postmaster Tools et sélectionnez **Vérifier.** Cette étape confirme que vous êtes propriétaire du domaine, ce qui vous permettra d'accéder aux indicateurs de livrabilité de Gmail dans votre compte Postmaster. <br> ![Demande de vérification de la propriété du domaine "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
+6. Une fois l'enregistrement TXT ajouté aux DNS, retournez dans le tableau de bord de Google Postmaster Tools et sélectionnez **Vérifier.** Cette étape confirme que vous êtes propriétaire du domaine, ce qui vous permettra d'accéder aux indicateurs de livrabilité de Gmail dans votre compte Postmaster. <br> ![Invitation à vérifier la propriété du domaine "demo.braze.com".]({% image_buster /assets/img_archive/domain_verification.png %})
 
 {% alert tip %}
 Assurez-vous que l'enregistrement TXT est lié au domaine parent, et non au sous-domaine que vous utilisez par l'intermédiaire de Braze.
@@ -111,7 +111,7 @@ Si Microsoft est votre principal fournisseur de messagerie, vous pouvez utiliser
 Si vous ne voyez pas vos données dans le Centre de livrabilité, contactez l’[assistance]({{site.baseurl}}/user_guide/administrative/access_braze/support/) avec une liste de vos adresses IP.
 {% endalert %}
 
-![Exemple de résultats de Microsoft SNDS, y compris des exemples d'adresses IP, de destinataires, de commandes RCPT, de commandes de données, de résultats de filtrage, de taux de plaintes, de début et de fin de la période des messages piégés et d'occurrences de messages piégés.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
+![Exemple de résultats provenant de Microsoft SNDS, y compris les IP d'échantillons, les destinataires, les commandes RCPT, les commandes de données, le résultat du filtrage, le taux de plaintes, le début et la fin de la période de message du piège, et les occurrences du piège à spam.]({% image_buster /assets/img_archive/deliverability_center_msnds.png %})
 
 ### Indicateurs et définitions
 

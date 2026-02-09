@@ -24,7 +24,7 @@ Exploremos juntos el poder de Braze.
 Braze es una plataforma de captación de clientes que ayuda a marcas de todos los tamaños a crear campañas personalizadas y dirigidas a través de diversos canales. Braze le ofrece la posibilidad de escuchar a sus clientes, comprender lo que su comportamiento está indicando y, a continuación, actuar enviando a los clientes el mensaje adecuado, a través del canal adecuado, en el momento adecuado.
 
 {% alert tip %}
-Asegúrate de [añadir a tus colegas a Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/#adding-braze-users) para que puedan explorar la plataforma contigo.
+Asegúrate de [añadir a tus colegas a Braze]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) para que puedan explorar la plataforma contigo.
 {% endalert %}
 
 ## Usuarios y segmentos

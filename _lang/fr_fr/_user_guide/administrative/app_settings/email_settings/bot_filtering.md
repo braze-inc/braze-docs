@@ -22,6 +22,10 @@ Braze dispose d'un système de détection qui emploie plusieurs entrées pour id
 
 ## Indicateurs affectés par les clics des robots
 
+{% alert note %}
+Le filtrage des robots bloque activement les clics automatisés suspects pour améliorer la précision de vos indicateurs d'engagement. Cependant, les scanners et les bots évoluent continuellement au fil du temps, et Braze ne peut donc pas garantir la suppression de toutes les interactions non humaines.
+{% endalert %}
+
 Les indicateurs suivants de Braze peuvent être affectés par les clics des robots :
 
 - Taux de clics totaux

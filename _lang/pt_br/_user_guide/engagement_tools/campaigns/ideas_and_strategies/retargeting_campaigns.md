@@ -1,5 +1,5 @@
 ---
-nav_title: Campanhas de redirecionamento
+nav_title: campanhas de redirecionamento
 article_title: Campanhas de redirecionamento
 page_order: 2
 page_type: reference
@@ -9,7 +9,7 @@ tool:
   
 ---
 
-# campanhas de redirecionamento
+# Campanhas de redirecionamento
 
 > Ao utilizar campanhas de redirecionamento baseadas nas ações anteriores do usuário, como se ele abriu ou não um e-mail, você pode ajudar a reclassificar seus usuários, abrindo a porta para uma abordagem eficaz de marketing baseado em dados.
 
@@ -17,7 +17,7 @@ Braze fornece suporte para redirecionamento de usuários com base nas mensagens 
 
 Cada um desses filtros de redirecionamento oferece várias opções depois que você os adiciona. Para mais informações sobre direcionamento de usuários, confira nosso [curso do Braze Learning](https://learning.braze.com/campaign-setup-delivery-targeting-conversions) sobre configuração de campanhas!
 
-![Seção Segment Details (Detalhes do segmento) com o menu suspenso para os filtros disponíveis.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![Seção de Detalhes do Segmento com o menu suspenso para os filtros disponíveis.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## Filtros de redirecionamento
 

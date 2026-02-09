@@ -1,12 +1,12 @@
 ---
 page_order: 1
-nav_title: 필수 용어
+nav_title: 알아두어야 할 용어
 article_title: 알아두어야 할 SMS 약관
 alias: /sms_terms_to_know/
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "SMS–everyone has it and knows what it is. What they don't know is the nuance. Check out the following terms to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "알아두어야 할 용어"
+glossary_top_text: "SMS는 모든 사람이 가지고 있고 그것이 무엇인지 알고 있습니다. 그들이 모르는 것은 뉘앙스입니다. SMS 생태계, 기술 및 프로세스에 대해 더 알아보려면 다음 용어를 확인하세요."
 page_type: glossary
 description: "이 용어집에서는 알아야 할 다양한 SMS 용어를 정의합니다."
 channel: SMS 

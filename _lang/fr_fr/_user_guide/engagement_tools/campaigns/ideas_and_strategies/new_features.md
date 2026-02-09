@@ -20,7 +20,11 @@ Les campagnes de sensibilisation sont un excellent moyen d’encourager les util
 
 Le SDK Braze suit automatiquement la version d’application la plus récente de l’utilisateur. Ces versions peuvent être utilisées dans des filtres et des segments pour déterminer quels utilisateurs doivent recevoir un message ou une campagne.
 
-![Le volet « Targeting Options » (Options de ciblage) de l’étape « Target Users » (Utilisateurs cibles) dans le flux de travail de création de la campagne. La section Filtres supplémentaires comprend le filtre suivant : "Le numéro de version le plus récent de l'application Android Stopwatch (Android) est inférieur à 3.7.0 (134.0.0.0)".]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+![Le volet « Targeting Options » (Options de ciblage) de l’étape « Target Users » (Utilisateurs cibles) dans le flux de travail de création de la campagne. La section « Additional Filters » (Filtres supplémentaires) comprend le filtre suivant « Le numéro de version le plus récent pour Android Stopwatch (Android) est inférieur à 3.7.0 (134.0.0.0) ».]({% image_buster /assets/img_archive/new_app_version.png %}){: style="max-width:90%;"}
+
+{% alert note %}
+Il peut s'écouler un certain temps avant que les versions actuelles de l'application ne soient mises à jour. La version de l'app sur le profil utilisateur se met à jour lorsque les informations sont capturées par le SDK, qui s'appuie sur le moment où les utilisateurs ouvrent leurs apps. Si l'utilisateur n'ouvre pas l'application, la version actuelle ne sera pas mise à jour. <br><br> Ces filtres ne s'appliquent pas non plus rétroactivement. Il est bon d'utiliser "supérieur à" ou "égal à" pour les versions actuelles et futures, mais l'utilisation de filtres de versions antérieures peut entraîner des comportements inattendus.
+{% endalert %}
 
 ### Numéro de version de l’application
 

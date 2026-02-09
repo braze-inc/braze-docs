@@ -155,11 +155,7 @@ Como esse tipo de mensagem só pode ser recebido por determinadas versões poste
 
 ### Criação de uma campanha {#instructions}
 
-Ao criar uma mensagem no app **com** **código personalizado**, escolha **HTML Upload with Preview** como o tipo personalizado. Se você não tiver criado anteriormente mensagens no app com código personalizado (ao vivo ou rascunhos), essa opção será aplicada automaticamente e você não precisará fazer uma seleção.
-
-![Criação de uma mensagem no app com código personalizado que é enviada para os navegadores móvel e da Internet, onde "Tipo de mensagem" é Código personalizado e "Tipo personalizado" é Upload do HTML com prévia.]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
-
-Lembre-se de que os usuários do aplicativo móvel precisam fazer upgrade para as versões do SDK compatíveis para receber essa mensagem. Recomendamos que você [incentive os usuários a fazer upgrade de]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) seus apps móveis antes de lançar campanhas que dependam de versões mais recentes do SDK da Braze.
+Os usuários do seu aplicativo móvel precisam fazer upgrade para as versões do SDK compatíveis para receber uma mensagem no app com **código personalizado**. Recomendamos que você [incentive os usuários a fazer upgrade de]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) seus apps móveis antes de lançar campanhas que dependam de versões mais recentes do SDK da Braze.
 
 #### Arquivos de ativos
 
@@ -197,24 +193,20 @@ Caso contrário, passe o mouse sobre um ativo da lista e selecione <i class="fas
 
 As alterações feitas no HTML são renderizadas automaticamente no painel de prévia à medida que você digita. Todos os métodos [JavaScript do`brazeBridge` ](#bridge) que você usar no HTML não atualizarão os perfis de usuário durante a prévia no dashboard.
 
-Você pode configurar **as Configurações do Editor** para ativar a quebra de texto, alterar o tamanho da fonte ou escolher um tema de cores. O editor de código inclui diferentes temas de cores para realce de sintaxe, o que ajuda a identificar possíveis erros de código diretamente no criador de mensagens e a organizar melhor o código (usando espaços ou guias - seja qual for o seu lado da discussão).
-
-![Opções de realce de sintaxe no menu suspenso "Configurações do editor" ao criar uma mensagem no app em HTML.]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
-
 {% alert tip %}
-Você pode pressionar <kbd>Ctrl</kbd> + <kbd>F</kbd> (Windows) ou <kbd>Command</kbd> + <kbd>F</kbd> (Mac) no editor de HTML para pesquisar em seu código!
+Você pode selecionar <i class="fa-solid fa-magnifying-glass"></i> **Search** no editor de HTML para pesquisar em seu código!
 {% endalert %}
 
 ### Rastreamento de botões {#button-tracking-improvements}
 
-Você pode rastrear a performance em sua mensagem no app com código personalizado usando o método [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript. Isso permite rastrear programaticamente o "Botão 1", o "Botão 2" e os "Cliques no corpo" usando `brazeBridge.logClick("0")`, `brazeBridge.logClick("1")` ou `brazeBridge.logClick()`, respectivamente.
+Você pode rastrear a performance em sua mensagem no app com código personalizado usando o método [`brazeBridge.logClick(button_id)`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) JavaScript. Isso permite rastrear programaticamente o "Botão 1", o "Botão 2" e os "Cliques no corpo" usando `brazeBridge.logClick('0')`, `brazeBridge.logClick('1')` ou `brazeBridge.logClick()`, respectivamente.
 
 | Cliques     | Método                       |
 | ---------- | ---------------------------- |
-| Botão 1   | `brazeBridge.logClick("0")` |
-| Botão 2   | `brazeBridge.logClick("1")` |
+| Botão 1   | `brazeBridge.logClick('0')` |
+| Botão 2   | `brazeBridge.logClick('1')` |
 | Clique no corpo | `brazeBridge.logClick()`    |
-| Rastreamento de botões personalizados |`brazeBridge.logClick("your custom name here")`|
+| Rastreamento de botões personalizados |`brazeBridge.logClick('your custom name here')`|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -227,7 +219,11 @@ Esse método de rastreamento de botões substitui os métodos anteriores de rast
 <a href="#" onclick="brazeBridge.logClick('1');brazeBridge.closeMessage()">✖</a>
 ``` 
 
-Você também pode rastrear novos nomes de botões personalizados - até 100 nomes exclusivos por campanha. Por exemplo, `brazeBridge.logClick("blue button")` ou `brazeBridge.logClick("viewed carousel page 3")`.
+Você também pode rastrear novos nomes de botões personalizados - até 100 nomes exclusivos por campanha. Por exemplo, `brazeBridge.logClick('blue button')` ou `brazeBridge.logClick('viewed carousel page 3')`.
+
+{% alert tip %}
+Ao usar métodos JavaScript em um atributo `onclick`, coloque os valores da string entre aspas simples para evitar conflitos com o atributo HTML com aspas duplas.
+{% endalert %}
 
 #### Limitações
 
@@ -246,8 +242,8 @@ Você também pode rastrear novos nomes de botões personalizados - até 100 nom
 
    | Antes | Após |
    |:-------- |:------------|
-   |<code>&lt;a href="<mem_c7d3c0bd-674f-41cd-a486-6b1e6d88b2c4/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_dd2d56d3-01b2-4125-8f3d-fe87b6b5dd85/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
-   |<code>&lt;a href="<mem_d4d4a757-1957-4637-94a2-7b72503cf587/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_1fc1669c-8db8-452d-b609-574609d541cb/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
-   |<code>&lt;script&gt;<br>location.href = "<mem_8772e922-7354-4949-b62f-0823657bbdee/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
+   |<code>&lt;a href="<mem_97fe6226-0c13-45a0-b5d7-a7948f9dc8af/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick();brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_fab573ad-177f-4a2c-bd02-ceef0c59cc6c/>"&gt;Close Button&lt;/a&gt;</code>|<code>&lt;a href="#" onclick="brazeBridge.logClick('0');brazeBridge.closeMessage()"&gt;Close Button&lt;/a&gt;</code>|
+   |<code>&lt;a href="<mem_3ce844b6-6a42-4233-b15f-e0be3798a696/>">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="<mem_d2f3e0e2-bab4-43f3-ac17-45283cd05d03/>" onclick="brazeBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
+   |<code>&lt;script&gt;<br>location.href = "<mem_f92d0e17-fbdd-4f32-9c68-9e4974fe35e9/>"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;brazeBridge.logClick("1");<br>&nbsp;&nbsp;brazeBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 

@@ -6,6 +6,7 @@ description: "Learn how to set up Live Updates for the Android Braze SDK."
 platform: 
   - Android
   - FireOS
+hidden: true
 ---
 
 # Live Updates for Android

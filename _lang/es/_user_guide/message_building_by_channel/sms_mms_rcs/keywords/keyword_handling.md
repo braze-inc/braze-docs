@@ -24,7 +24,7 @@ La mensajería bidireccional permite enviar mensajes y procesar las respuestas a
 SMS, MMS y RCS con Braze te da la opción de crear desencadenantes de palabras clave, respuestas personalizadas, definir conjuntos de palabras clave para varios idiomas y establecer categorías de palabras clave personalizadas. 
 
 {% tabs %}
-{% tab Añadir desencadenadores de palabras clave %}
+{% tab Add Keyword Triggers %}
 
 #### Añadir activadores de palabras clave
 
@@ -32,9 +32,9 @@ Además de las palabras clave predeterminadas de inclusión y exclusión, tambi�
 
 Para definir sus propias palabras clave, haga lo siguiente:
 
-1. En el panel de Braze, ve a **Audiencia** > **Grupos de suscripción** y selecciona tu grupo de suscripción.<br><br>
-2. En **Palabras clave globales**, selecciona el icono del lápiz situado junto a la categoría de palabras clave a la que quieras añadir una palabra clave. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
-3. En la pestaña que se abre, añada una palabra clave que desee que active esta categoría de palabras clave. Tenga en cuenta que las palabras clave no distinguen entre mayúsculas y minúsculas, y que las palabras clave universales como `START`, `YES` y `UNSTOP` no se pueden cambiar. ![Editar palabras clave para la categoría "Adhesión voluntaria". Las palabras clave añadidas son "START", "UNSTOP" y "YES". El campo de mensaje de respuesta dice "Te has dado de baja de los mensajes de este número. Responde AYUDA para obtener ayuda. Responde STOP para darse de baja. Pueden aplicarse tarifas de mensajes y datos".]({% image_buster /assets/img/sms/keyword_edit2.png %})
+1. En el panel de Braze, ve a **Audiencia** > **Gestión de grupos de suscripción** y selecciona un grupo de suscripción **SMS/MMS/RCS**.<br><br>
+2. En **Palabras clave globales**, selecciona el icono del lápiz situado junto a la categoría de palabras clave a la que quieras añadir una palabra clave. ![Palabras clave de adhesión voluntaria con el icono del lápiz.]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br>
+3. En la pestaña que se abre, añada una palabra clave que desee que active esta categoría de palabras clave. Tenga en cuenta que las palabras clave no distinguen entre mayúsculas y minúsculas, y que las palabras clave universales como `START`, `YES` y `UNSTOP` no se pueden cambiar. ![Editar palabras clave para la categoría "Adhesión voluntaria". Las palabras clave añadidas son "START", "UNSTOP" y "YES". El campo de mensaje de respuesta dice "Te has dado de baja de los mensajes de este número. Responde AYUDA para obtener ayuda. Responde STOP para darse de baja. Pueden aplicarse tasas de mensajería y datos".]({% image_buster /assets/img/sms/keyword_edit2.png %})
 
 Las siguientes reglas se aplican a las palabras clave y a las respuestas a palabras clave:
 
@@ -48,16 +48,16 @@ Las siguientes reglas se aplican a las palabras clave y a las respuestas a palab
 {% endalert %}
 {% endtab %}
 
-{% tab Gestionar las respuestas %}
+{% tab Manage responses %}
 
 #### Gestionar las respuestas
 
 Puede gestionar sus propias respuestas que se envían a los usuarios después de que escriban una palabra clave en una categoría de palabras clave específica.
 
-1. En el panel de Braze, ve a **Audiencia** > **Grupos de suscripción** y selecciona un **SMS/MMS/RCS** grupo de suscripción. <br><br>
-2. En **Palabras clave globales**, selecciona una categoría de palabras clave para editar una respuesta seleccionando el icono del lápiz. ![]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
-3. En la pestaña que se abre, edita tu respuesta. Tenga en cuenta nuestras [seis reglas para cumplirlas correctamente]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) al crear su respuesta, y lea las siguientes reglas que se aplican a las palabras clave y a las respuestas con palabras clave. ![Respuestas]({% image_buster /assets/img/sms/keyword_home.png %})<br><br>
-4. Para acortar automáticamente las URL estáticas en su respuesta, seleccione la opción **Acortar enlaces**. El contador de caracteres se actualizará para mostrar la longitud prevista de la URL acortada. ![Un GIF que muestra la actualización del contador de caracteres cuando está activada la opción "Acortar enlaces".]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:50%;"}
+1. En el panel de Braze, ve a **Audiencia** > **Gestión de grupos de suscripción** y selecciona un grupo de suscripción **SMS/MMS/RCS**. <br><br>
+2. En **Palabras clave globales**, selecciona una categoría de palabras clave para editar una respuesta seleccionando el icono del lápiz. ![Palabras clave de adhesión voluntaria con el icono del lápiz.]({% image_buster /assets/img/sms/sms_keywords.png %})<br><br> 
+3. En la pestaña que se abre, edita tu respuesta. Tenga en cuenta nuestras [seis reglas para cumplirlas correctamente]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) al crear su respuesta, y lea las siguientes reglas que se aplican a las palabras clave y a las respuestas con palabras clave. ![Respuestas]({% image_buster /assets/img/sms/keyword_home.png %}){: style="max-width:70%;"}<br><br>
+4. Para acortar automáticamente las URL estáticas en su respuesta, seleccione la opción **Acortar enlaces**. El contador de caracteres se actualizará para mostrar la longitud prevista de la URL acortada. ![Un GIF que muestra cómo se actualiza el contador de caracteres cuando se alterna "Acortar enlaces".]({% image_buster /assets/img/sms/link_shortening.gif %}){: style="max-width:60%;"}
 
 ##### Consideraciones
 
@@ -75,20 +75,20 @@ Si un Canvas basado en acciones es desencadenado por un mensaje SMS, MMS o RCS e
 
 ## Asistencia en varios idiomas
 
-Al enviar a determinados países, es posible que el remitente deba admitir palabras clave de entrada y respuestas de salida con un idioma local. Para ello, Braze permite crear una configuración de palabras clave específica para cada idioma.
-![]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
+Al enviar a determinados países, es posible que el remitente deba admitir palabras clave de entrada y respuestas de salida con un idioma local. Para ello, Braze permite crear una configuración de palabras clave específica para cada idioma. Una vez creada, la configuración de palabras clave específica del idioma se aplicará a todos los números de envío del grupo de suscripción.
+![Desplegable que muestra los idiomas para añadir como configuración de palabras clave.]({% image_buster /assets/img/sms/multi-language.png %}){: style="float:right;max-width:50%;margin-left:10px;"}
 
 ### Creación de palabras clave específicas para cada idioma
 
 Selecciona **Añadir un idioma** y selecciona tu idioma de destino o busca un idioma en el desplegable.
 
 {% alert important %}
-Los idiomas que no son el inglés no vienen con palabras clave y respuestas preestablecidas, por lo que los remitentes tendrán que trabajar con sus equipos jurídicos y de marketing para añadir las palabras clave necesarias a este conjunto. De lo contrario, Braze no gestionará los mensajes entrantes localizados para esos idiomas.
+Los idiomas distintos del inglés no vienen con palabras clave y respuestas preestablecidas, por lo que los remitentes tendrán que trabajar con sus equipos de marketing y jurídico para añadir las palabras clave necesarias a este conjunto. De lo contrario, Braze no gestionará los mensajes entrantes localizados para esos idiomas.
 {% endalert %}
 
 Si necesitas eliminar una lengua, selecciona el botón **Eliminar lengua** en la parte inferior derecha.
 
-![Página de Palabras clave globales con la pestaña "Francés" seleccionada. Existen pestañas adicionales para cada idioma añadido.]({% image_buster /assets/img/sms/multi-language2.png %})
+![Página de Palabras clave globales con la pestaña "Italiano" seleccionada. Existen pestañas adicionales para cada idioma añadido.]({% image_buster /assets/img/sms/multi-language2.png %})
 
 ## Categorías de palabras clave personalizadas
 
@@ -96,14 +96,14 @@ Además de las tres categorías de palabras clave predeterminadas (Opt-in, Opt-o
 
 Estas palabras clave personalizadas funcionan de forma "permanente", lo que significa que cualquier usuario suscrito a su servicio de mensajes puede enviar mensajes de texto con palabras clave y recibir una respuesta en cualquier momento. Además de este comportamiento, también tiene la opción de definir palabras clave específicas a las que sólo se puede enviar en [determinados momentos]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) del ciclo de vida del usuario. 
 
-![Palabras clave para una categoría "Dobleoptin". Si un usuario envía un mensaje "Y", recibe el mensaje "Gracias por confirmar tu inscripción en Hair Cuttery SMS."]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
+![Palabras clave para una categoría "Promoción". Si un usuario envía un mensaje de texto con la palabra "YO", recibirá un mensaje con un código promocional.]({% image_buster /assets/img/sms/sms_custom_keyword.png %})
 
 ### Crear una categoría personalizada
 
 Para crear una categoría de palabras clave personalizada, haga lo siguiente:
 
 1. Edite el grupo de suscripción correspondiente.
-2. Selecciona **Añadir palabra clave personalizada**. ![]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
+2. Selecciona **Añadir palabra clave personalizada**. ![Campos para añadir nuevas palabras clave.]({% image_buster /assets/img/sms/sms_custom_step.png %}){: style="max-width:90%;"}
 3. Proporcione un nombre de categoría de palabras clave y defina qué palabras clave puede escribir un usuario para recibir el mensaje de respuesta.
 
 Una vez creada esta categoría de palabras clave, estará disponible para [filtrar y activar]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) en sus campañas y Canvases.
@@ -118,19 +118,19 @@ Este activador admite el filtrado del mensaje entrante específico mediante comp
 
 #### Canvas
 
-![Paso en Canvas basado en una acción con el desencadenante Enviar SMS entrantes al grupo de suscripción "Servicio de mensajería" dentro de la categoría de palabras clave "Otros" en la que el cuerpo del mensaje coincida con la expresión regular "símbolo de intercalación omitir".]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
+![Paso Canvas basado en acciones con el activador Enviar SMS entrantes al grupo de suscripción "Servicio de mensajería" dentro de la categoría de palabras clave "Otros" cuando el cuerpo del mensaje coincida con la expresión regular "caret symbol skip."]({% image_buster /assets/img/sms/canvas_trigger.png %}){: style="max-width:90%;"}
 
 #### Campaña
 
-![Campaña basada en acciones con el desencadenante Enviar SMS entrantes al grupo de suscripción "Servicio de mensajería de marketing A" dentro de la categoría de palabras clave "Otros" en la que el cuerpo del mensaje sea "Palabra clave1" o sea "Palabra clave2" o no sea "Palabra clave A".]({% image_buster /assets/img/sms/campaign_trigger.png %}){: style="max-width:90%;"}
+![Campaña basada en acciones con el disparador Enviar SMS entrantes al grupo de suscripción "Servicio de mensajes de marketing A" dentro de la categoría de palabras clave "Otros" donde el cuerpo del mensaje es "Palabra clave1" o es "Palabra clave2" o no es "Palabra clave A".]({% image_buster /assets/img/sms/campaign_trigger.png %}){: style="max-width:90%;"}
 
 ### Palabras clave desconocidas
 
 Aunque no es obligatorio, recomendamos encarecidamente configurar una respuesta automática para cuando los usuarios envíen palabras clave entrantes que no coincidan con una palabra clave existente. Este mensaje notificará al usuario que la palabra clave no es reconocida y le ofrecerá alguna orientación. 
 
-Esto puede hacerse creando una campaña de SMS, MMS o RCS con un mensaje como "¡Lo siento! No reconocimos esa palabra clave, el texto STOP para parar o HELP para ayudar". A continuación, en el paso de entrega, seleccione **Entrega basada en acciones** y utilice el activador **Envío de SMS entrantes al grupo de suscripción dentro de la categoría de palabras clave OTRO**.
+Esto puede hacerse creando una campaña de SMS, MMS o RCS con un mensaje como "¡Lo sentimos! No reconocimos esa palabra clave, el texto STOP para parar o HELP para ayudar". A continuación, en el paso de entrega, seleccione **Entrega basada en acciones** y utilice el activador **Envío de SMS entrantes al grupo de suscripción dentro de la categoría de palabras clave OTRO**.
 
-![]({% image_buster /assets/img/sms/sms_other.png %})
+![Envío basado en acciones para una campaña con el desencadenante "Envío de SMS entrantes al grupo de suscripción dentro de la categoría de palabras clave "Otros"".]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
 ¿Le interesa saber cómo puede utilizar estas palabras clave y categorías de palabras clave en sus campañas y lienzos para reorientar y activar mensajes? Visita [Reorientación]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/) para más información.

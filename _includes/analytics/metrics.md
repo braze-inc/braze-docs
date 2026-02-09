@@ -239,7 +239,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 {% endif %}
 
 {% if include.metric == "Total Impressions" %}
-<i>Total Impressions</i> is the number of times the message has been loaded and appears on a user's screen, regardless of prior interaction (for example, if a user is shown a message twice, they will be counted twice).
+<i>Total Impressions</i> is the number of times a message is viewed. Braze logs an impression only when the message becomes visible to the user on their screen. For example, if a message is placed at the bottom of a page, the impression is not logged until the user scrolls down and the message comes into view. If a user is shown the same message twice, it will count as two impressions.
 {% endif %}
 
 {% if include.metric == "Total Opens" %}
@@ -261,7 +261,7 @@ The <i>Failed Delivery Rate</i> is the percentage of sends that failed because t
 <!-- Unique Impressions & Unique Recipients have a dedicated section in campaign_analytics.md -->
 
 {% if include.metric == "Unique Impressions" %}
-<i>Unique Impressions</i> is the total number of users who received and viewed a message from a given campaign.
+<i>Unique Impressions</i> is the total number of users who have viewed a message from a given campaign. An impression is logged only when the message becomes visible on a user's screen.
 {% endif %}
 
 {% if include.metric == "Unique Recipients" %}

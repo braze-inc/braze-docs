@@ -39,7 +39,7 @@ El editor de arrastrar y soltar utiliza [Contenido](#content) y [Filas](#rows) c
 **Contenido** incluye una serie de mosaicos que representan diferentes tipos de contenido que puede utilizar en su mensaje. Están organizados en tres categorías: básicos, medios y avanzados. 
 
 {% tabs %}
-{% tab Básico %}
+{% tab Basic %}
 
 Los bloques básicos son la base de su correo electrónico. Utilizando estos bloques, puede añadir cualquiera de los siguientes elementos en el cuerpo de su correo electrónico:
 
@@ -51,12 +51,12 @@ Los bloques básicos son la base de su correo electrónico. Utilizando estos blo
 - Espaciador
 
 {% endtab %}
-{% tab Medios de comunicación %}
+{% tab Media %}
 
 Con los bloques multimedia, puedes añadir diferentes contenidos visuales como imágenes, vídeos, iconos y enlaces de redes sociales e iconos personalizables.
 
 {% endtab %}
-{% tab Avanzado %}
+{% tab Advanced %}
 
 Aunque el editor de arrastrar y soltar simplifica el flujo de trabajo con estos bloques, también puede utilizar bloques avanzados para insertar HTML o añadir un menú al cuerpo del mensaje. Tenga en cuenta que el uso de su propio HTML puede afectar a la representación del mensaje.
 
@@ -73,7 +73,7 @@ Aunque el editor de arrastrar y soltar simplifica el flujo de trabajo con estos 
 
 ## Utilizar el editor de arrastrar y soltar
 
-¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para mensajes sencillos y únicos, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
+¿No estás seguro de si tu mensaje debe enviarse mediante una campaña o un Canvas? Las campañas son mejores para campañas de mensajería únicas y específicas, mientras que los lienzos son mejores para recorridos de usuario de varios pasos.
 
 Después de haber seleccionado dónde construir tu mensaje, vamos a sumergirnos en los pasos para crear un correo electrónico arrastrando y soltando.
 
@@ -99,13 +99,13 @@ A continuación, selecciona **Editar cuerpo del correo electrónico** para empez
 
 ### Paso 2: Crea tu correo electrónico
 
-La experiencia de edición mediante arrastrar y soltar se divide en tres secciones: **Configuración de envío**, **Contenido** y **Vista previa y prueba**. La magia de construir el cuerpo de su correo electrónico ocurre en la sección **Contenido**. Antes de crear su correo electrónico, es importante entender los componentes clave que guían su experiencia de creación de correo electrónico. Si necesitas revisar, consulta [Acerca del editor](#about-the-editor).
+La experiencia de edición mediante arrastrar y soltar se divide en tres secciones: **Envío de configuración**, **contenido** y **vista previa & Prueba**. La magia de construir el cuerpo de su correo electrónico ocurre en la sección **Contenido**. Antes de crear su correo electrónico, es importante entender los componentes clave que guían su experiencia de creación de correo electrónico. Si necesitas revisar, consulta [Acerca del editor](#about-the-editor).
 
 Cuando estés listo, utiliza los bloques de contenido de arrastrar y soltar para construir tu correo electrónico.
 
 1. Seleccione el panel **Filas**. Arrastre y suelte las configuraciones de las filas en el editor principal. Esto mapeará el diseño del contenido de tu correo electrónico.
 - Tenga en cuenta que las nuevas configuraciones deben arrastrarse a la parte superior o inferior de una sección existente.
-- Cuando seleccionas la configuración de una fila, aparece la configuración de **Propiedades de fila** para personalizar aún más los colores de fondo de las filas, las imágenes y los tamaños personalizados de las columnas.
+- Cuando seleccionas una configuración de fila, aparece la configuración de **Propiedades de fila** para personalizar aún más los colores de fondo de las filas, las imágenes y los tamaños personalizados de las columnas.
 2. Seleccione el panel **Contenido**. Arrastre y suelte los mosaicos de contenido que desee en los componentes de la fila.
 - También puede arrastrar cualquiera de los mosaicos de **contenido** al editor principal. Esto crea una fila para el mosaico.
 - Puede refinar aún más el mosaico seleccionándolo y ajustando los campos en **Propiedades de contenido** y **Opciones de bloque**. Esto incluye la edición del espaciado entre letras, el relleno, la altura de línea, etc.
@@ -117,7 +117,7 @@ A medida que construyes tu correo electrónico, puedes alternar entre una vista 
 {% alert tip %}
 ¿Necesitas ayuda para crear textos impactantes? Prueba a utilizar el [asistente de redacción de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Introduce el nombre o la descripción de un producto y la IA generará textos de marketing similares a los humanos para que los utilices en tus mensajes.
 
-![Botón Copywriter, situado en el panel Contenido junto a Ajustes de estilo en el editor de arrastrar y soltar.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
+![Botón Redactor, situado en el panel Contenido junto a Configuración de estilo en el editor de arrastrar y soltar.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_dnd.png %})
 {% endalert %}
 
 ### Paso 3: Añade tu información de envío
@@ -128,6 +128,8 @@ Una vez que hayas terminado de diseñar y crear tu mensaje de correo electrónic
 2. Selecciona un correo electrónico como **dirección de responder a**. También puedes personalizarlo seleccionando **Personalizar dirección de respuesta a**.
 3. A continuación, seleccione un correo electrónico como **dirección CCO** para que su correo electrónico sea visible para esta dirección.
 4. Añada una línea de asunto a su correo electrónico. Opcionalmente, también puede añadir un preencabezado y un espacio en blanco después del preencabezado.
+
+{% multi_lang_include alerts/tip_alerts.md alert='Liquid email display name and reply-to address' %}
 
 En el panel de la derecha aparecerá una vista previa con la información de envío que haya añadido. Esta información también puede actualizarse accediendo a **Configuración** > **Preferencias de correo electrónico** > **Configuración de envío**.
 
@@ -171,7 +173,7 @@ Ten en cuenta que cualquier modificación realizada en una plantilla de correo e
 
 #### Utilizar Inbox Vision
 
-Inbox Vision le permite ver sus campañas de correo electrónico desde la perspectiva de los clientes de correo electrónico y los dispositivos móviles. Para probar tu mensaje de correo electrónico utilizando Visión de Bandeja de Entrada, selecciona **Visión de Bandeja de Entrada** en la sección **Vista previa y prueba** y selecciona **Ejecutar Visión de Bandeja de Entrada**.
+Inbox Vision le permite ver sus campañas de correo electrónico desde la perspectiva de los clientes de correo electrónico y los dispositivos móviles. Para probar tu mensaje de correo electrónico utilizando **Visión de Bandeja de Entrada**, selecciona **Visión de Bandeja de Entrada** en la sección **Vista previa de prueba & ** y selecciona **Ejecutar Visión de Bandeja de Entrada**.
 
 {% alert tip %}
 Las imágenes de fondo en los mensajes de correo electrónico pueden provocar a veces la aparición de líneas blancas o desconexiones entre las imágenes, por lo que es importante probar y comprobar los detalles de su mensaje de correo electrónico.
@@ -179,7 +181,7 @@ Las imágenes de fondo en los mensajes de correo electrónico pueden provocar a 
 
 Después de utilizar el editor de arrastrar y soltar para diseñar y crear tu mensaje de correo electrónico, continúa [construyendo]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/#step-4-build-the-remainder-of-your-campaign-or-canvas) el resto de tu campaña o Canvas.
 
-{% details Acerca del motor HTML actualizado %}
+{% details About the updated HTML engine %}
 El motor subyacente que produce HTML a partir del editor de arrastrar y soltar se ha optimizado y actualizado, lo que se traduce en ventajas relacionadas con la compresión y el renderizado de archivos HTML.
 
 Se ha reducido el tamaño medio de nuestra huella de datos HTML exportados, lo que se traduce en una carga y representación más rápidas, menos recortes en los móviles y un menor consumo de ancho de banda.
@@ -221,9 +223,15 @@ Para ajustar el relleno, desplácese hasta **Opciones de bloque** y seleccione *
 
 Puede añadir una imagen de fondo a la configuración de sus filas, lo que le permitirá incorporar más diseño y contenido visual a su campaña de correo electrónico.
 
-### Añadir personalización
+### Atributo de lengua
 
-![Opciones para añadir personalización para el editor de arrastrar y soltar.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+Puedes configurar el atributo de idioma yendo a la pestaña **Configuración** y seleccionando el idioma deseado. También puedes dirigirte al atributo de usuario {%raw%} `{{${language}}}` {%endraw%} si el mensaje va dirigido a usuarios con valores de idioma dinámicos.
+
+![Configurar el valor de "Idioma" de un correo electrónico.]({% image_buster /assets/img/dnd/language_setting_dnd.png %}){: style="max-width:70%;"}
+
+### Personalización
+
+![Opciones para añadir personalización al editor de arrastrar y soltar.]({% image_buster /assets/img/dnd/dnd4.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 Basic Liquid es compatible con el editor de correo electrónico de arrastrar y soltar. Para añadir personalización a su correo electrónico:
 
@@ -238,7 +246,7 @@ La personalización líquida no es compatible con los bloques de imágenes y los
 
 Puede optar por incluir imágenes dinámicas en sus mensajes de correo electrónico incluyendo Liquid en su atributo de fuente de imagen. Por ejemplo, en lugar de una imagen estática, puede insertar {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL de la imagen para incluir el nombre de pila de un usuario en la imagen. Esto ayuda a personalizar sus correos electrónicos para cada usuario.
 
-### Cambiar la dirección del texto
+### Dirección del texto
 
 Al redactar tu mensaje, puedes alternar la dirección del texto entre izquierda-derecha y derecha-izquierda seleccionando el botón **Dirección del texto** correspondiente. Puedes utilizar esta opción cuando crees mensajes en idiomas como el árabe y el hebreo.
 
@@ -246,7 +254,9 @@ Al redactar tu mensaje, puedes alternar la dirección del texto entre izquierda-
 
 El aspecto final de los mensajes de derecha a izquierda depende en gran medida de cómo los presten los proveedores de servicios. Para conocer las mejores prácticas de elaboración de mensajes de derecha a izquierda que se muestren con la mayor precisión posible, consulta [Crear mensajes de derecha a izquierda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
-### Añadir atributos HTML a los enlaces
+### HTML
+
+#### Atributos HTML a los enlaces
 
 ![La sección "Atributos" con el atributo "clicktracking" desactivado para un enlace.]({% image_buster /assets/img/dnd_custom_attributes.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
@@ -268,9 +278,41 @@ También puede integrarse con uno de nuestros socios de atribución, como [Branc
 
 Por último, hay disponibles atributos predefinidos para ayudar a que tu mensaje sea accesible. Obtén más información en nuestro artículo dedicado [Construir mensajes accesibles en Braze]({{site.baseurl}}/help/accessibility).
 
-### Configuración de un idioma para el correo electrónico
+#### Etiquetas de cabecera personalizadas
 
-Puedes configurar el atributo de idioma yendo a la pestaña **Configuración** y seleccionando el idioma deseado. También puedes dirigirte al atributo de usuario {%raw%} `{{${language}}}` {%endraw%} si el mensaje va dirigido a usuarios con valores de idioma dinámicos.
+Utiliza las etiquetas `<head>` para añadir CSS y metadatos en tu mensaje de correo electrónico. Por ejemplo, puedes utilizar estas etiquetas para añadir una hoja de estilos o un favicon. Liquid es compatible con las etiquetas `<head>`.
 
-![Configuración del valor "Idioma" de un correo electrónico.]({% image_buster /assets/img/dnd/language_setting_dnd.png %})
+Todo lo que se añada fuera de las etiquetas `<head>` se añadirá después de la etiqueta `<body>` en tu correo electrónico. Esto significa que el contenido añadido se mostrará en el correo electrónico.
 
+##### Etiquetas y atributos permitidos por etiqueta
+
+| Nombre de la etiqueta | Descripción | Ejemplo |
+| --- | --- | --- |
+| `base` | Especifica la URL base para todas las URL relativas del mensaje. | `<base href="https://example.com" target="_blank">` |
+| `link`| Define las relaciones entre el mensaje y los recursos externos. | `<link href="styles.css" rel="stylesheet" type="text/css">` |
+| `meta` | Proporciona metadatos como la descripción de la página o palabras clave. | `<meta name="description" content="Free Web tutorials">` |
+| `style` | Incorpora estilos CSS internos. | `<style type="text/css" media="screen">body { font-size: 16px; }</style>` |
+| `title` | Establece el título del documento que se muestra en las pestañas del navegador. | `<title>StyleRyde</title>` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+| Etiqueta | Atributo | Descripción | Ejemplo |
+| --- | --- | --- | --- |
+| `base` | `href` | URL base a utilizar para las URL relativas. | ```<base href="https://braze.com">``` |
+| `base` | `target`| Objetivo predeterminado para todos los hipervínculos y formularios. | ```<base target="_blank">``` |
+| `link` | `href` | URL del recurso externo. | ```<link href="style.css">``` |
+| `link` | `rel` | Define las relaciones entre el mensaje actual y el vinculado. | ```<link rel="stylesheet">``` |
+| `link` | `type` | Tipo de recurso enlazado. | ```<link type="text/css">``` |
+| `link` | `sizes` | Especifica el tamaño de los iconos. | ```<link rel="icon" sizes="32x32" href="favicon-32.png">``` |
+| `link` | `media` | Especifica el soporte o dispositivo al que se aplican los estilos. | ```<link rel="stylesheet" media="screen" href="style.css">``` |
+| `meta` | `name` | Establece el título del documento que se muestra en las pestañas del navegador. | ```<meta name="viewport" content="width=device-width, initial-scale=1">``` |
+| `meta` | `content` | Establece el título del documento que se muestra en las pestañas del navegador. | ```<meta name="description" content="Page about our newest products">``` |
+| `meta` | `charset` | Declara la codificación de caracteres. | ```<meta charset="UTF-8">``` |
+| `meta` | `property` | Establece el título del documento que se muestra en las pestañas del navegador. | ```<meta property="og:title" content="Website title">``` |
+| `style` | `type` | Tipo MIME del contenido del estilo. | {% raw %}```<style type="text/css">p { color: red; }</style>```{% endraw %} |
+| `style` | `media` | Especifica el soporte o dispositivo al que se aplican los estilos. | ```<style media="print">body { font-size: 12pt; }</style>``` |
+| `title` | Sin atributos | La etiqueta `title` no acepta atributos. | ```<title>Kitchenerie</title>``` |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
+
+{% alert note %}
+Los nombres de enlace pueden tener hasta 63 bytes y se truncan automáticamente si superan el límite.
+{% endalert %}

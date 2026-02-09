@@ -57,7 +57,7 @@ Optilyz también requiere un encabezado HTTP para la autorización y un método 
   - **Autorización**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
   - **Content-Type**: application/json
 
-![Los encabezados de solicitud y el método HTTP que se muestran en el constructor de webhook Braze.]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
+![Las cabeceras de solicitud y el método HTTP mostrados en el constructor de webhooks Braze.]({% image_buster /assets/img/optilyz/optilyz_settings.png %}){: style="max-width:50%"}
 
 #### Cuerpo de la solicitud
 
@@ -84,13 +84,13 @@ El campo `variation` es opcional y puede definir qué diseño dentro de la autom
 ```
 {% endraw %}
 
-![Una imagen del código del cuerpo de la solicitud y la URL del webhook que se muestra en la pestaña de composición del constructor de webhook Braze.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
+![Una imagen del código del cuerpo de la solicitud y la URL del webhook mostrados en la pestaña de composición del constructor de webhooks Braze.]({% image_buster /assets/img/optilyz/optilyz_compose.png %})
 
 ### Paso 2: Vista previa de su solicitud
 
 A continuación, previsualice su solicitud en el panel **Vista previa** o vaya a la pestaña **Prueba**, donde puede seleccionar un usuario al azar, un usuario existente o personalizar el suyo propio para probar su webhook. Recuerda guardar tu plantilla antes de salir de la página.
 
-![Diferentes campos de prueba disponibles en la pestaña de prueba del constructor de webhook Braze.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
+![Diferentes campos de prueba disponibles en la pestaña de prueba del creador de webhooks Braze.]({% image_buster /assets/img/optilyz/optilyz_testing.png %})
 
 {% alert important %}
 Recuerda guardar tu plantilla antes de salir de la página. <br>Las plantillas webhook actualizadas pueden encontrarse en la lista **Plantillas webhook guardadas** al crear una nueva [campaña webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).

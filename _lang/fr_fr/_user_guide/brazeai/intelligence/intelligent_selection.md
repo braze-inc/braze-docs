@@ -15,7 +15,7 @@ toc_headers: h2
 
 Une variante qui semble être plus efficace qu’une autre sera envoyée à un plus grand nombre d’utilisateurs, tandis que les variantes moins efficaces cibleront moins d’utilisateurs. Chaque Adjust est effectué à l'aide d'un [algorithme statistique](https://en.wikipedia.org/wiki/Multi-armed_bandit) qui garantit que Braze s'adapte à de réelles différences de performances et pas seulement au hasard.
 
-![Section de test A/B d'une campagne avec sélection intelligente activée.]({% image_buster /assets/img/intelligent_selection1.png %})
+![Section de test A/B d'une campagne où la sélection intelligente est activée.]({% image_buster /assets/img/intelligent_selection1.png %})
 
 La sélection intelligente va :
 - Examinez à plusieurs reprises les données de performance et déplacez progressivement le trafic de la campagne vers les variantes gagnantes.
@@ -28,13 +28,13 @@ La sélection intelligente fonctionne mieux pour les campagnes qui sont envoyée
 ## Conditions préalables
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 Avant d'ajouter la sélection intelligente à votre campagne, assurez-vous que vous avez correctement implémenté les choses :
 
 - Votre campagne est envoyée selon une planification récurrente. Les campagnes à envoi unique ne sont pas prises en charge.
 - Vous avez ajouté au moins deux variantes de message.
 - Vous avez défini un événement de conversion pour mesurer les performances des variantes.
-- La fenêtre de réadmissibilité est fixée à 24 heures ou plus. Les fenêtres plus courtes ne sont pas prises en charge, car elles affecteraient l'intégrité de la variante de contrôle. Pour en savoir plus, consultez la [FAQ sur le renseignement.]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection)
+- La fenêtre de réadmissibilité est fixée à 24 heures ou plus. Les fenêtres plus courtes ne sont pas prises en charge, car elles affecteraient l'intégrité de la variante de contrôle. Pour en savoir plus, consultez [cette FAQ.]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection)
 {% endtab %}
 
 {% tab Canvas %}
@@ -49,7 +49,7 @@ Pour utiliser la sélection intelligente dans un canvas, confirmez les points su
 Vous pouvez ajouter la sélection intelligente à vos campagnes et à vos canevas.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 La sélection intelligente peut être ajoutée à n'importe quelle campagne multi-envoi dans l'étape **Audiences ciblées** du compositeur de campagne de Braze. Les campagnes qui n'envoient qu'une seule fois ne peuvent pas bénéficier de cette fonctionnalité.
 
 {% alert note %}
@@ -60,7 +60,7 @@ La sélection intelligente ne peut pas être utilisée dans les campagnes dont l
 {% tab Canvas %}
 Ajoutez au moins un événement de conversion et deux variantes à votre Canvas. Ensuite, sélectionnez l'un des pourcentages de variante à l'étape Créer. 
 
-![Un Canvas avec deux variantes, chacune réglée sur une distribution de variante de 50 %, permettant d'activer la sélection intelligente.]({% image_buster /assets/img/intelligent_selection.png %})
+![Un Canvas avec deux variantes, chacune définie à 50 % de distribution de la variante, permettant ainsi l’activation de la sélection intelligente.]({% image_buster /assets/img/intelligent_selection.png %})
 
 Vous pouvez ainsi modifier la répartition des variantes et activer la sélection intelligente. 
 
@@ -80,7 +80,15 @@ Dans la plupart des cas, la sélection intelligente choisira l'une des variantes
 Il est possible qu’une sélection intelligente s’arrête d’optimiser sans avoir choisi un seul gagnant. La sélection intelligente cesse d'optimiser lorsqu'elle est sûre à 95 % que la poursuite de l'expérience n'améliorera pas le taux de conversion de plus de 1 % par rapport au taux actuel.
 {% endalert %}
 
-## Foire aux questions (FAQ) {#faq}
+## Sélection intelligente distribution variante
+
+La sélection intelligente base la répartition des variantes sur l'état actuel des conversions de la campagne. Il ne détermine les distributions finales qu'après la période de formation. 
+
+Cela signifie qu'au cours des premières phases de la campagne, les sélections intelligentes à 99 % et à 1 % peuvent recevoir des envois à peu près égaux, mais que les pourcentages finaux pour l'attribution des variantes peuvent être fixés à 99 %-1 %.
+
+Si vous ne souhaitez pas que la sélection intelligente envoie 50/50 au cours des premières étapes de la campagne, nous vous recommandons d'utiliser un test A/B traditionnel avec des variantes fixes.
+
+## Foire aux Questions {#faq}
 
 ### Pourquoi la rééligibilité dans moins de 24 heures n’est-elle pas disponible lorsqu’elle est associée à une sélection intelligente ?
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Creating a content card
-article_title: Creating a Content Card
+nav_title: Create a Content Card
+article_title: Create a Content Card
 page_order: 0
 description: "This reference article covers how to create, compose, configure, and send Content Cards using Braze campaigns and Canvases."
 tool:
@@ -12,15 +12,13 @@ search_rank: 3.9
 
 ---
 
-{% multi_lang_include banners/content_card_alert.md %}
-
-# Creating a Content Card
+# Create a Content Card
 
 > This article covers how to create a Content Card in Braze when you build campaigns and Canvases. Here, we'll walk you through choosing a messaging type, composing your card, and scheduling your message delivery.
 
 ## Step 1: Choose where to build your message
 
-Not sure whether your message should be sent with a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns (such as informing users about a new product with a single message), while Canvases are better for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
+Use campaigns for single, simple messaging (such as informing users about a product with one message). Use Canvases for multi-step user journeys (such as sending tailored product suggestions based on user behavior over time).
 
 {% tabs %}
 {% tab Campaign %}
@@ -59,7 +57,7 @@ To learn more about the expected behavior and look of each type, refer to [Creat
 
 | Message Type | Example | Description |
 |---|---|---|
-|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
+|[Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![A Classic Content Card with a small icon and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |The Classic Card has a straightforward layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It's best to use a square image or icon with the Classic Card. |
 |[Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![A Captioned Content Card with a image of a weightlifter and text to encourage booking a workout class.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | The Captioned Image Card showcases your content with copy and an attention-grabbing image. |
 |[Image Only]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![An Image Only Content Card with text only.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | The Image Only Card commands attention with space for images, GIFs, and other creative non-text content. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -90,9 +88,11 @@ Write anything you want. There are no limits, but the faster you can get your me
 
 Add an image to your Content Card by selecting **Add Image** or providing an image URL. Selecting **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements, so be sure to check what those are before commissioning or making an image from scratch! Keep in mind that Content Card message fields are limited to 2&nbsp;KB in total size.
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Pin to top
 
-A pinned card will display at the top of a user's feed and can't be dismissed by the user. If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. After a card has been sent, you can't retroactively update its pinned option. Changing this option after a campaign has been sent will only affect future sends.
+Braze displays a pinned card at the top of a user's feed and the user can't dismiss it. If a user's feed has multiple pinned cards, Braze orders them chronologically. After you send a card, you can't retroactively update its pinned option. Changing this option after you send a campaign only affects future sends.
 
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
@@ -143,7 +143,7 @@ For Content Card campaigns with scheduled delivery, you can choose when Braze ev
 
 #### Choose users to target
 
-Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a preview of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow your audience. You automatically receive a preview of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% multi_lang_include target_audiences.md %}
 
@@ -162,7 +162,7 @@ If you haven't done so already, complete the remaining sections of your Canvas c
 
 ## Step 6: Review and deploy
 
-After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it when you're ready.
+After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it when you're ready.
 
 {% alert warning %}
 After a Content Card is launched, it can't be edited. It can only be stopped from sending to new users and removed from users' feeds. Refer to [Updating sent cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-launched-cards) to understand how you can approach this scenario.

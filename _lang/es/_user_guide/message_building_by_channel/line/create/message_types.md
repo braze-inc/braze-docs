@@ -1,5 +1,5 @@
 ---
-nav_title: Tipos de mensaje
+nav_title: Tipos de mensajes
 article_title: Tipos de mensajes LINE
 page_order: 0
 description: "Este artículo trata de los distintos tipos de mensajes de LINE."
@@ -17,7 +17,7 @@ alias: /line/create/message_types/
 
 Cuando redactas un mensaje de LINE, puedes arrastrar y soltar tipos de mensajes en el compositor y luego personalizarlos.
 
-![Panel de tipos de mensajes con tipos de mensajes para arrastrar al editor del compositor, incluyendo texto, imagen, mensajes enriquecidos y mensajes basados en tarjetas.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
+![Panel de tipos de mensaje con tipos de mensaje para arrastrar al editor compositor, incluyendo texto, imagen, mensaje enriquecido y mensaje basado en tarjeta.]({% image_buster /assets/img/line/line_message_types.png %}){: style="max-width:40%;"}
 
 ## Texto
 
@@ -28,7 +28,7 @@ Los casos de uso incluyen:
 - Envía felicitaciones de cumpleaños personalizadas con tarjetas de promoción únicas
 - Comparte actualizaciones rápidas sobre próximos eventos
 
-![Un mensaje de texto que recuerda al usuario que no se olvide de la fiesta del Viernes Negro y de la posibilidad de ahorrar hasta un 80% antes de medianoche.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
+![Un mensaje de texto que recuerda al usuario que no se olvide de la fiesta del Black Friday y de la posibilidad de ahorrar hasta un 80% antes de medianoche.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## Imagen
 
@@ -46,7 +46,7 @@ Los casos de uso incluyen:
 Utiliza imágenes de URL para casos de uso que incorporen:
 - Imágenes dinámicas Liquid incluyendo Liquid en tu atributo de fuente de la imagen. Por ejemplo, puedes insertar {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como URL de la imagen para incluir el nombre de pila de un usuario en la imagen
 - [Contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) extrayendo imágenes directamente de tu servidor Web o API de acceso público
-- [Braze los catálogos]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) accediendo a las imágenes desde archivos CSV importados y puntos finales de API
+- [Braze los catálogos]({{site.baseurl}}/user_guide/data/activation/catalogs/) accediendo a las imágenes desde archivos CSV importados y puntos finales de API
 
 | **Especificaciones** | **Propiedades recomendadas** |
 |--------------------------|----------------------------|

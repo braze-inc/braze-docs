@@ -51,7 +51,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 If there are multiple users (multiple `external_ids`) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
 {% endalert %}
 
-## Example request 
+## Example request
 
 {% tabs %}
 {% tab Multiple Users %}
@@ -83,17 +83,47 @@ Only subscription groups that have had a subscription status update in a user's 
 
 ```json
 {
-  "success": true,
-  "subscription_groups": [
-    {
-      "subscription_group_id": "group_id_1",
-      "subscription_status": "subscribed"
-    },
-    {
-      "subscription_group_id": "group_id_2",
-      "subscription_status": "unsubscribed"
-    }
-  ]
+    "users": [
+        {
+            "email": "test@example.com",
+            "phone": "50505050",
+            "external_id": "20500",
+            "subscription_groups": [
+                {
+                  "id": "ec2fcc919fca",
+                  "name": "ActivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "7d7af9dd5556",
+                  "name": "ReactivationGroup",
+                  "channel": "email",
+                  "status": "Subscribed"
+                },
+                {
+                  "id": "a5e84fd16220",
+                  "name": "MarketingGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "64d8cad9176c",
+                  "name": "TransactionalGroup",
+                  "channel": "sms",
+                  "status": "Unsubscribed"
+                },
+                {
+                  "id": "b2134cd63942",
+                  "name": "BankerMarketingGroup",
+                  "channel": "sms",
+                  "status": "Subscribed"
+                }
+            ]
+        }
+    ],
+    "total_count": 1,
+    "message": "success"
 }
 ```
 

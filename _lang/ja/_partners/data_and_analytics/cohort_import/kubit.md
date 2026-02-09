@@ -18,9 +18,9 @@ Brazeで [**パートナー連携**] > [**テクノロジーパートナー**] �
 
 生成されたら、新しいキーを作成するか、既存のキーを無効にできます。Kubit のダッシュボードでポストバックを設定する場合、次のステップでデータインポートキーと REST エンドポイントが使用されます。
 
-![Braze の Kubit テクノロジーパートナーページ.]({% image_buster /assets/img/kubit/kubit.png %}){: style="max-width:90%;"}
+![BrazeのKubitテクノロジーパートナーのページ。]({% image_buster /assets/img/kubit/kubit.png %}){: style="max-width:90%;"}
 
-### ステップ2:KubitでBrazeを設定する
+### ステップ 2:KubitでBrazeを設定する
 
 Kubit サポート担当者に、Braze データインポートキーと Braze REST エンドポイントを提供します。統合の設定は彼らが行い、統合が開始されたら知らせてくれる。  
 
@@ -50,7 +50,7 @@ Braze内に既に存在するユーザーのみがコホートに追加または
 ### ステップ4:KubitコホートでBrazeセグメントを作成する
 Braze にコホートをインポートしたら、それらのコホートをフィルターとして使用して、Braze セグメントを作成し、Braze キャンペーンまたはキャンバスに含めることができます。[Braze セグメントの作成方法]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment)の詳細については、セグメントのドキュメントを参照してください。
 
-![Braze セグメントビルダーで、ユーザー属性「Kubit コホート」が「includes_value」に設定されており、使用可能なコホートのリストが表示されている。]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
+![Brazeセグメントビルダーで、ユーザー属性「Kubitコホート」が"includes_value" に設定され、利用可能なコホートのリストが表示される。]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 
 ## ユーザーマッチング
 

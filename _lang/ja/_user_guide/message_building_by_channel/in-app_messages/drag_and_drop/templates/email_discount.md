@@ -1,6 +1,6 @@
 ---
 nav_title: 割引を使用したメールによる登録
-article_title: 割引を使用したメールによる登録
+article_title: 割引付きメール登録
 alias: "/email_discount/"
 page_order: 3
 description: "このリファレンスページでは、アプリ内メッセージのドラッグアンドドロップエディタを使用して、新しいサブスクライバの割引を提供する電子メールサインアップフォームを構築する方法について説明します。"
@@ -18,9 +18,9 @@ description: "このリファレンスページでは、アプリ内メッセー
 
 ドラッグアンドドロップのアプリ内メッセージを作成する場合は、テンプレートの** welcome discount** を使用したメールサインアップを選択し、**Build message** を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![割引を含むメールサインアップフォームのテンプレートが表示されているアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
+![割引によるメールサインアップフォームのテンプレートを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
 
-### ステップ2:メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
@@ -30,13 +30,13 @@ description: "このリファレンスページでは、アプリ内メッセー
 
 メールキャプチャ要素のプレースホルダーテキストとラベルテキストをカスタマイズできます。
 
-![メールキャプチャ要素をカスタマイズするためのサイドメニューを持つアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
+![メールキャプチャ要素をカスタマイズするためのサイドメニュー付きのアプリ内メッセージエディタ。]({% image_buster /assets/img/drag_and_drop/templates/email_capture_field.png %})
 
 #### メール検証
 
 {% multi_lang_include drag_and_drop/templates.md section='email validation' %}
 
-### ステップ 4:免責事項の言語を追加（オプション）
+### ステップ 4: 免責事項の言語を追加（オプション）
 
 {% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 

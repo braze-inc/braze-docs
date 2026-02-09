@@ -17,7 +17,7 @@ A página **inicial** tem duas seções principais:
 - [Continuar de onde parou](#pick-up-where-you-left-off)
 - [Visão geral de performance](#peformance-overview)
 
-![Home dashboard no Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
+![Painel de controle doméstico no Braze.]({% image_buster /assets/img_archive/home_dashboard.png %})
 
 ## Continuar de onde parou
 
@@ -25,13 +25,17 @@ Você pode continuar de onde parou no dashboard do Braze com acesso direto aos a
 
 Você pode revisitar campanhas, Canvas e segmentos recentemente editados ou criados. Cada cartão é emparelhado com tags que indicam o tipo de conteúdo (campanha, Canva, segmento) e o status (ativo, rascunho, arquivado, parado).
 
+{% alert note %}
+A seção **Continuar de onde parou** aparece depois de editar ou criar uma campanha, um Canva ou um segmento.
+{% endalert %}
+
 ![Um rascunho do Canva, um segmento ativo e um rascunho de campanha na seção "Continue de onde parou".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Visão geral de performance
 
 Por padrão, a seção **Visão geral da performance** mostra os últimos 30 dias de dados de todos os apps e sites. Suas métricas são todas calculadas com base no intervalo de datas selecionado.
 
-![Intervalo de datas e campos de app no dashboard inicial.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Campos de intervalo de datas e app na página inicial do dashboard.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Os Currents são calculados com base no intervalo de datas atual em comparação com o intervalo de datas anterior, com exceção dos *Usuários ativos mensais* (MAU), que usam o último dia do período anterior em vez de um intervalo. 
 
@@ -68,9 +72,34 @@ A porcentagem ao lado da contagem de MAU mostra a alteração em MAU para esse p
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### Regras de cálculo de MAU
+
+Os cálculos de MAU seguem regras específicas para garantir um faturamento preciso e consistente:
+
+- **Tempo de cálculo**: Calculado uma vez por dia às 12:05 UTC como um instantâneo de 30 dias; as contagens nunca mudam retroativamente.
+- **Perfis anônimos**: Conte **apenas** quando pelo menos uma sessão for registrada.
+- **Perfis identificados**: Contam automaticamente quando existem.
+- **Perfis órfãos**: As duplicatas mescladas com outro usuário **não** são contadas.
+- **Uploads de CSV**: Os usuários feitos upload por CSV contam apenas quando `date_of_first_session` ou `date_of_last_session` é fornecido, ou quando eles registram uma sessão posteriormente.
+- **Exclusões de API**: A exclusão de um usuário via API não atualiza o MAU imediatamente; a contagem se autocorrige no próximo ciclo mensal.
+
 {% alert note %}
 Os usuários anônimos também contam para o seu MAU. Para dispositivos móveis, os usuários anônimos dependem do dispositivo. Para usuários da Web, os usuários anônimos dependem do cache do navegador.
 {% endalert %}
+
+#### Exemplo de cálculo de MAU
+
+O exemplo a seguir demonstra como os cálculos de MAU funcionam por meio de diferentes ações do usuário:
+
+| Etapa | Ação | Mudança imediata de MAU | Total resultante |
+|------|--------|----------------------|-----------------|
+| 1 | Crie **o usuário anônimo 1** e registre uma sessão | +1 | 1 |
+| 2 | Identifique **o usuário anônimo 1** (o perfil é convertido em identificado) | 0 | 1 |
+| 3 | Crie **o usuário anônimo 2** e registre uma sessão | +1 | 2 |
+| 4 | Identificar **o usuário anônimo 2** como a **mesma pessoa** que o usuário 1 (o usuário 2 fica órfão) | -1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+Os instantâneos de MAU são calculados uma vez por dia e nunca são alterados retroativamente. Nesse exemplo, a contagem de MAUs para o dia após a etapa 3 permanece permanentemente 2, mesmo que o usuário 2 se torne órfão mais tarde. No entanto, a contagem de MAUs para os dias subsequentes reflete apenas o usuário não órfão. Em qualquer janela de 30 dias, esse fluxo acaba consumindo 1 MAU, pois resta apenas um usuário distinto e não órfão.
 
 ### Usuários ativos diários
 

@@ -1,5 +1,5 @@
 ---
-nav_title: 참여 도구
+nav_title: 참여 툴
 article_title: 참여 도구
 page_order: 4
 layout: dev_guide
@@ -28,4 +28,7 @@ guide_menu_list:
   - name: 위치 및 지오펜스
     link: /docs/user_guide/engagement_tools/locations_and_geofences/
     image: /assets/img/braze_icons/marker-pin-06.svg
+  - name: 기능 플래그
+    link: /docs/user_guide/engagement_tools/feature_flags/
+    image: /assets/img/braze_icons/flag-02.svg
 ---

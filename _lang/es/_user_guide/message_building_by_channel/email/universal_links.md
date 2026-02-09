@@ -75,7 +75,7 @@ Estos pasos están adaptados de la documentación para desarrolladores de Apple.
 #### Paso 1a: Registra tu aplicación {#step-1a}
 
 1. Ve a developer.apple.com y conéctate.
-2. Haz clic en **Certificados, identificadores y perfiles**.
+2. Haz clic en **Certificados, Identificadores & Perfiles**.
 3. Haz clic en **Identificadores**.
 4. Si aún no tienes un identificador de aplicación registrado, haz clic en + para crearlo.
    a. Introduce un **Nombre**. Puede ser lo que tú quieras.
@@ -85,7 +85,7 @@ Estos pasos están adaptados de la documentación para desarrolladores de Apple.
 
 1. En tu identificador de aplicación existente o recién creado, localiza la sección **Servicios de la aplicación**.
 2. Selecciona **Dominios asociados**.
-3. Haz clic en **Guardar**.
+3. Haga clic en **Guardar**.
 
 ![]({% image_buster /assets/img_archive/universal_links_1b.png %}){: style="max-width:75%;"}
 
@@ -216,7 +216,7 @@ Por último, puedes probar tus vínculos profundos. Enviarte un enlace a través
 ## Enlaces universales, enlaces de aplicaciones y seguimiento de clics
 
 {% alert note %}
-Los enlaces de seguimiento de clics suelen configurarse como parte de tu incorporación al correo electrónico. Si esto no se completó durante la incorporación del cliente, ponte en contacto con tu director de cuentas para que te ayude.
+Los enlaces de seguimiento de clics suelen configurarse como parte de tu incorporación al correo electrónico. Si esto no se completó durante la incorporación del cliente, ponte en contacto con tu director de cuentas para obtener ayuda.
 {% endalert %}
 
 Nuestros socios de envío por correo electrónico, SendGrid y SparkPost, utilizan dominios de seguimiento de clics para envolver todos los enlaces e incluir parámetros de URL para el seguimiento de clics en los correos electrónicos Braze.

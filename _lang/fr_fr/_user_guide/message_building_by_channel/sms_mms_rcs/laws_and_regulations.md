@@ -23,7 +23,7 @@ Le présent article n’est pas destiné à fournir, et ne peut être considér�
 
 De manière générale, nous vous encourageons à faire preuve de discernement lorsque vous envoyez des messages SMS, MMS ou RCS. Braze, ainsi que nos partenaires d'envoi, ont mis en place des contrôles qui empêchent la plupart des abus en matière de SMS, MMS et RCS.
 
-Il y a six règles que vous devez suivre :
+Utilisez les règles suivantes lors de l'envoi de messages :
 
 1. **Obtenez le consentement explicite des utilisateurs avant de leur envoyer des SMS, MMS ou RCS.** Chaque fois que les utilisateurs donnent leur consentement, il est de votre responsabilité de consigner, mettre à jour et conserver ces informations dans une base de données utilisateur conforme. Conformément aux directives juridiques de base, les informations les plus importantes que vous devez conserver à l’égard du consentement sont :
   - L’heure et la date auxquelles l’utilisateur a donné son consentement
@@ -33,7 +33,7 @@ Il y a six règles que vous devez suivre :
 
 2. **Communiquez clairement les types de SMS, MMS ou RCS que vous allez envoyer**. Les utilisateurs doivent comprendre quels messages ils peuvent attendre de votre marque dans ce canal et les types d’informations ou d’offres qu’ils recevront. Énoncez explicitement l’objectif de vos futures campagnes, la fréquence des messages et rappelez aux utilisateurs que des taux de messages/données s’appliquent.<br><br>
 
-3. **Gardez les informations essentielles à jour et visibles**. Veillez à ce que la version la plus récente des conditions générales de votre marque et de votre politique de confidentialité de SMS/MMS/RCS Marketing soit clairement visible et facilement accessible depuis votre page d'abonnement.<br><br>
+3. **Gardez les informations essentielles à jour et visibles**. Veillez à ce que la version la plus récente des conditions générales de votre marque et de la politique de confidentialité de votre marketing par SMS/MMS/RCS soit clairement visible et facilement accessible depuis votre page d'abonnement.<br><br>
 
 4. **N'envoyez des SMS, MMS ou RCS qu'à des numéros de téléphone obtenus légalement et ayant fait l'objet d'un abonnement**. Dans le cadre de la planification de la migration technique, assurez-vous que votre équipe comprend le mécanisme permettant d’associer la situation d’abonnement à chaque profil utilisateur sur votre plateforme d’engagement des clients.<br><br>
 
@@ -48,8 +48,8 @@ Le RCS est un espace émergent et évolutif. Les États, les pays et d'autres or
 {% endalert %}
 
 - **Comprendre le chevauchement des réglementations :** Comme le RCS et le SMS présentent de nombreuses similitudes, les mêmes lois, réglementations et politiques des opérateurs s'appliquent. Il s'agit notamment des règles de la TCPA relatives à l'obtention d'un abonnement et des lignes directrices de la CTIA (telles que SHAFT).
-- **Transfert de consentement :** Selon les recommandations du secteur, le consentement est transféré entre les SMS et le RCS **pour le même type d'envoi de messages (promotionnels ou transactionnels, par exemple)**, si l'utilisateur a déjà donné son abonnement pour recevoir ce type de messages. Inversement, si l'utilisateur n'a pas donné son accord pour recevoir des SMS promotionnels, vous ne devez pas commencer à envoyer des RCS promotionnels sans avoir recueilli l'abonnement à ce type d'envoi de messages.
-- **Mettez à jour les politiques et les clauses de non-responsabilité :** Il est recommandé de mettre à jour vos conditions de service mobile et votre politique de confidentialité pour y inclure les références au RCS. Il est également recommandé d'inclure dans vos campagnes d'abonnement des mentions relatives au RCS, en plus du SMS.
+- **Consentements :** Travaillez avec votre équipe juridique pour déterminer si vous devez recueillir des consentements supplémentaires pour envoyer du RCS à vos utilisateurs de SMS existants.
+- **Mettez à jour les politiques et les clauses de non-responsabilité :** Il est recommandé de mettre à jour vos conditions de service mobile & Politique de confidentialité pour inclure les références au RCS. Il est également recommandé d'inclure dans vos campagnes d'abonnement des mentions relatives au RCS, en plus du SMS.
 
 ## Ressources
 
@@ -81,7 +81,7 @@ Braze utilise des [Groupes d'abonnement]({{site.baseurl}}/user_guide/message_bui
 
 ### Spam et cadence
 
-Comme pour l’e-mail, vos utilisateurs ou clients peuvent connaître le burnout de la boîte de réception. Mais ce n’est qu’une des raisons de ne pas envoyer des messages sans cesse à vos clients. Vous devez vous référer spécifiquement à l'[article 5 de la loi sur la FTC](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) pour vous assurer de la conformité (sur le site U.S.).
+Comme dans le cas de l'e-mail, vos utilisateurs ou clients peuvent être victimes d'épuisement dans leur boîte de réception. Mais ce n’est qu’une des raisons de ne pas envoyer des messages sans cesse à vos clients. Vous devez vous référer spécifiquement à l'[article 5 de la loi sur la FTC](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf) pour vous assurer de la conformité (sur le site U.S.).
 
 Certaines considérations relatives aux spams sont intégrées aux capacités SMS en général (limites d'envoi de codes longs et courts), ainsi qu'aux limites de taux de Braze. Cependant, vous devez toujours tenir compte des lois sur la conformité lorsque vous planifiez vos campagnes.
 

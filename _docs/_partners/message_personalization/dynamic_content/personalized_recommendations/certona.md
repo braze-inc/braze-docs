@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Certona
 
-> Certona's platform drives personalization across the customer lifecycle. From highly individualized email campaigns to machine-learning-powered product recommendations, Certona ensures that you're harnessing the power of personalization.
+> [Certona](https://www.certona.com/)'s platform drives personalization across the customer lifecycle. From highly individualized email campaigns to machine-learning-powered product recommendations, Certona ensures that you're harnessing the power of personalization.
 
 _This integration is maintained by Certona._
 
 ## About the integration
 
-The Braze and Certona integration leverages Certona's machine learning product recommendations in Braze campaigns and Canvases through Connected Content.
+The Braze and Certona integration uses Certona's machine learning product recommendations in Braze campaigns and Canvases through Connected Content.
 
 ## Prerequisites
 

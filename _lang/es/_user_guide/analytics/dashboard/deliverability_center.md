@@ -42,7 +42,7 @@ Antes de configurar tu Centro de capacidad de entrega, comprueba que tus dominio
 Sigue estos pasos para integrarte con Google Postmaster y configurar tu Centro de entregabilidad:
 
 1. Vaya a **Análisis** > **Rendimiento del correo electrónico**.
-2. Seleccione la pestaña **Centro de entregabilidad**. <br>![Un centro de capacidad de entrega con Google Postmaster desconectado.]({% image_buster /assets/img_archive/deliverability_center1.png %})
+2. Seleccione la pestaña **Centro de entregabilidad**. <br>![Un Centro de capacidad de entrega con Google Postmaster desconectado.]({% image_buster /assets/img_archive/deliverability_center1.png %})
 3. Selecciona **Conectar con Google Postmaster**. 
 4. Selecciona tu cuenta de Google y, a continuación, selecciona **Permitir** para permitir que Braze vea las métricas de tráfico de correo electrónico de los dominios registrados en Postmaster Tools. 
 

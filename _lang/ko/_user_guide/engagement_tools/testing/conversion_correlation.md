@@ -21,7 +21,7 @@ For every campaign, Braze checks a list of attributes and user behaviors and com
 
 전환 상관관계 분석을 실행하려면 드롭다운 메뉴에서 관심 있는 전환 이벤트를 선택합니다.
 
-![Conversion Correlation panel that shows an example with "Select a conversion event" set to "Primary Conversion Event - A" with the Event Setting as "Made Purchase within 12 hours (Any product)".]({% image_buster /assets/img/convcorr.png %})
+!["전환 이벤트 선택"을 "주요 전환 이벤트 - A"로 설정하고 이벤트 설정을 "12시간 이내 구매(모든 제품)"로 설정한 예를 보여주는 전환 상관관계 패널입니다.]({% image_buster /assets/img/convcorr.png %})
 
 ## 무엇을 확인하나요?
 

@@ -1,11 +1,11 @@
 ---
 nav_title: Abandon du contenu connecté
-article_title: Abandon du contenu connecté
+article_title: Abandonner le contenu connecté
 page_order: 2
 description: "Cet article de référence couvre plusieurs bonnes pratiques d’abandon de messages pour le contenu connecté."
 ---
 
-# Abandonner du contenu connecté {#aborting-connected-content}
+# Abandonner le contenu connecté {#aborting-connected-content}
 
 > Lorsque vous utilisez le modèle Liquid, vous avez la possibilité d'interrompre les messages à l'aide d'une logique conditionnelle. Cette page présente les meilleures pratiques en la matière.
 

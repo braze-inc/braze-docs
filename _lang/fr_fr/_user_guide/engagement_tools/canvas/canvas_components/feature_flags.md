@@ -17,7 +17,7 @@ Vous souhaitez en savoir plus sur les indicateurs de fonctionnalités et leur ut
 
 ## Création d'un drapeau de fonctionnalité
 
-![Un exemple d'étape de l'indicateur de fonctionnalité pour la fonctionnalité du bouton de la ligne/instantané.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Exemple d'une étape de l'indicateur de fonctionnalité pour la fonctionnalité du bouton de discussion en ligne/instantané.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Pour créer un composant Indicateur de fonctionnalité, ajoutez d'abord une étape à votre canvas. Glissez-déposez le composant depuis la barre latérale ou cliquez sur le bouton plus <i class="fas fa-plus-circle"></i> au bas d'une étape et sélectionnez **Drapeau de fonctionnalité**. Ensuite, sélectionnez l’indicateur de fonctionnalité dans la liste déroulante, qui contient tous les indicateurs de fonctionnalités qui ne sont pas archivés.
 

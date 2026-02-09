@@ -1,5 +1,5 @@
 ---
-nav_title: Entender las instalaciones de usuario
+nav_title: Entender las instalaciones de los usuarios
 article_title: Entender las instalaciones de usuario 
 page_order: 7
 page_type: reference

@@ -1,6 +1,6 @@
 ---
-nav_title: Lista de Verificação Pré e Pós-Lançamento
-article_title: Lista de Verificação Pré e Pós-Lançamento
+nav_title: Lista de verificação pré e pós-lançamento
+article_title: Lista de verificação pré e pós-lançamento
 page_order: 2
 description: "Este artigo fornece um guia para coisas a serem verificadas antes e depois de lançar um canva."
 tool: Canvas
@@ -14,10 +14,6 @@ tool: Canvas
 ## Coisas a considerar antes do lançamento
 
 Antes de lançar uma canva, há vários detalhes que você pode verificar para garantir que seu envio de mensagens e horários de envio estejam alinhados com as preferências do seu público. Coisas a considerar incluem quaisquer variações nos fusos horários, configurações de entrada e mais. Usando esta lista de verificação como guia, ajuste essas áreas com base no seu caso de uso para ajudar a contribuir para o sucesso do seu canva. 
-
-{% alert important %}
-A partir de 28 de fevereiro de 2023, você não poderá mais criar ou duplicar canvas usando a experiência original do canvas. A Braze recomenda que os clientes que usam a experiência original do Canvas migrem para o Canvas Flow. É uma experiência de edição aprimorada para melhor construir e gerenciar canvas. Saiba mais sobre a [clonagem de canvas no Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Revisar configurações de fuso horário
 
@@ -80,7 +76,7 @@ Se você estiver usando uma campanha de envio agendada, verifique novamente seu 
 
 #### Primeiro componente da canva
 
-Revise quaisquer filtros de público, gatilhos de ação ou segmentos usados nos componentes iniciais do seu canva. Há algum erro de ortografia ou condições muito rigorosas que estão impedindo sua canva de começar bem? Você está usando "Equals" quando deveria estar usando "Matches regex"?
+Revise quaisquer filtros de público, gatilhos de ação ou segmentos usados nos componentes iniciais do seu canva. Há algum erro de ortografia ou condições muito rígidas que estejam impedindo que seu Canva comece bem? Você está usando "Equals" quando deveria estar usando "Matches regex"?
 
 #### Grupo de controle do canva 
 
@@ -92,7 +88,7 @@ Se não estiver vendo nenhum dado de entrada no seu Canvas, o motivo pelo qual o
 
 Se você estiver usando entrada baseada em ação em sua programação de entrada, verifique se não usou a mesma ação-gatilho aqui que em seu **público-alvo**. Uma condição de corrida pode ocorrer na qual o usuário não está no público no momento em que realiza o evento de gatilho, o que significa que ele não entrará no canva.
 
-Além disso, verifique se o segmento selecionado possui usuários revisando a tabela de **público-alvo** nas configurações de **público-alvo**. Se este número for baixo, veja como você pode ajustar suas configurações de entrada ou revise seus segmentos ou filtros selecionados para quaisquer erros.
+Além disso, verifique se o segmento selecionado possui usuários revisando a tabela de **público-alvo** nas configurações de **público-alvo**. Se esse número for baixo, veja como ajustar suas configurações de entrada ou revise os segmentos ou filtros selecionados para verificar se há erros.
 
 ### Queda inesperada entre as etapas
 
@@ -103,7 +99,7 @@ Em seguida, é importante identificar essas configurações que podem afetar qua
 - Horário de silêncio
 - Validações de entrega
 
-Em geral, escolha Intelligent Timing ou horário de silêncio para o seu canva, não ambos. A mesma sugestão se aplica ao uso de Intelligent Timing ou [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), não ambos. Para saber mais sobre como usar melhor o Intelligence Suite, leia nossas [Perguntas frequentes sobre inteligência]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
+Em geral, escolha Intelligent Timing ou horário de silêncio para o seu canva, não ambos. A mesma sugestão se aplica ao uso de Intelligent Timing ou [limitação de taxa]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), não ambos. Para saber mais sobre a melhor forma de usar o Intelligence Suite, leia nossos [casos de uso do Intelligent Suite]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases).
 
 ### Volumes de envio suspeitos entre caminhos
 

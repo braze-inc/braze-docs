@@ -4,8 +4,8 @@ nav_title: ホーム
 article_title: Braze ユーザーガイド
 layout: user_guide
 
-user_top_header: "Braze User Guide"
-user_top_text: "This is where marketers and administrators can learn everything they need to know to get started with Braze, and how to design meaningful, data-driven customer interactions."
+user_top_header: "Braze ユーザーガイド"
+user_top_text: "ここでは、マーケターや管理者が Braze を使い始めるために必要なすべての知識と、有意義でデータドリブン型の顧客インタラクションを設計する方法を学ぶことができます。"
 description: "これはユーザーガイドのランディングページです。ここでは、マーケティング担当者や管理者は、Braze を使い始めるために必要なすべての知識と、有意義でデータドリブン型の顧客とのインタラクションを設計する方法を学習できます。"
 
 user_menu_list:
@@ -18,12 +18,12 @@ user_menu_list:
     image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
     bg_color: '#F8D3E8'
     link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-    description: 私たちのプラットフォームにログインする。
+    description: プラットフォームにログインする。
   - name: キャンバスを作成する
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: カスタマージャーニーの構築を始める準備はできているだろうか？ガイドはお任せください。
+    description: このガイドでは、カスタマージャーニーの構築の始め方について説明する。
 
 popular_topic_list:
   - name: ユーザーインポート

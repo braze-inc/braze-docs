@@ -1,6 +1,6 @@
 ---
-nav_title: Criação de um modelo de e-mail
-article_title: Criação de um modelo de e-mail
+nav_title: Crie um modelo de e-mail
+article_title: Criar um modelo de e-mail
 page_order: 0
 description: "Este artigo de referência aborda como criar, personalizar e gerenciar modelos de e-mail."
 tool:
@@ -11,7 +11,7 @@ alias: "/dnd/email_template/"
 search_rank: 1
 ---
 
-# Criação de um modelo de e-mail
+# Crie um modelo de e-mail
 
 > O dashboard do Braze tem um editor de modelos de e-mail que permite que você crie e-mails personalizados e atraentes e os salve para uso posterior em campanhas. Também é possível fazer upload de seu próprio [modelo de e-mail em HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 
@@ -69,7 +69,7 @@ Quer saber como é o seu e-mail para os usuários no modo escuro? Selecione o bo
 
 Quando estiver pronto para uma verificação final, selecione **Test Send (Envio de teste)** e envie uma mensagem de teste para você mesmo ou para um grupo de testadores de conteúdo para garantir que seu e-mail seja exibido corretamente em uma variedade de dispositivos e clientes de e-mail.
 
-![Exemplo de prévia de e-mail a ser enviada para teste.]({% image_buster /assets/img_archive/newEmailTest.png %})
+![Exemplo de prévia de e-mail a ser enviado para teste.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 Se houver algum problema com seu modelo ou se quiser fazer alterações, selecione **Edit Email (Editar e-mail)** para retornar ao editor.
 
@@ -89,7 +89,7 @@ Se você fizer qualquer edição em um modelo existente, essas alterações não
 
 Para usar seu e-mail em uma campanha da API, você precisa de um `email_template_id`, que pode ser encontrado na parte inferior de qualquer modelo de e-mail criado no Braze.
 
-![Identificador de API localizado na parte inferior de um modelo de e-mail.]({% image_buster /assets/img/email_templates/template5.png %})
+![Identificador da API localizado na parte inferior de um modelo de e-mail.]({% image_buster /assets/img/email_templates/template5.png %})
 
 ### Comentários sobre modelos de e-mail
 

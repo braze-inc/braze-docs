@@ -1,6 +1,6 @@
 ---
 nav_title: Tipos de mensagens
-article_title: Tipos de Mensagem LINE
+article_title: Tipos de mensagens do LINE
 page_order: 0
 description: "Este artigo cobre os diferentes tipos de mensagens LINE."
 page_type: reference
@@ -28,7 +28,7 @@ Os casos de uso incluem:
 - Envie cumprimentos de aniversário personalizados com cartões de promoção exclusivos
 - Compartilhe atualizações rápidas sobre eventos futuros
 
-![Uma mensagem de texto lembrando o usuário de não esquecer de uma festa de Black Friday e a possibilidade de economizar até 80% antes da meia-noite.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
+![Uma mensagem de texto lembrando o usuário para não esquecer de uma festa de Black Friday e a possibilidade de economizar até 80% antes da meia-noite.]({% image_buster /assets/img/line/line_text_message.png %}){: style="max-width:40%;"}
 
 ## Imagem
 
@@ -46,7 +46,7 @@ Os casos de uso incluem:
 Use imagens de URL para casos de uso que incorporam:
 - Imagens dinâmicas Liquid, incluindo o Liquid no seu atributo de fonte de imagem. Por exemplo, você pode inserir {% raw %} `https://example.com/images/?imageBanner={{first_name}}` {% endraw %} como a URL da imagem para incluir o primeiro nome de um usuário na imagem
 - [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) puxando imagens diretamente do seu servidor web ou APIs acessíveis publicamente
-- [Braze catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) acessando imagens de arquivos CSV importados e pontos de extremidade da API
+- [Braze catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) acessando imagens de arquivos CSV importados e pontos de extremidade da API
 
 | **Especificações** | **Propriedades recomendadas** |
 |--------------------------|----------------------------|
@@ -64,7 +64,7 @@ Os casos de uso incluem:
 - Apresente um menu interativo que inicia um pedido em combo ao selecionar um item
 - Apresente várias promoções para os usuários escolherem selecionando um quadrado da grade
 
-![Uma mensagem rica de seis quadrados com uma foto de uma grade em preto e branco que os usuários podem tocar para receber uma oferta aleatória.]({% image_buster /assets/img/line/line_rich_message.png %})
+![Uma mensagem rica em seis quadrados com uma foto de uma grade em preto e branco na qual os usuários podem tocar para receber uma oferta aleatória.]({% image_buster /assets/img/line/line_rich_message.png %})
 
 ### Mapa da imagem 
 
@@ -90,14 +90,14 @@ Uma mensagem rica em texto pode conter até 400 caracteres.
 
 ## Cartão-baseado (carrossel)
 
-Uma mensagem baseada em cartão do LINE permite que os usuários rolem por várias mensagens, como um carrossel, e tomem ações nas mensagens mais relevantes para eles selecionando um cartão ou os botões de um cartão.
+Uma mensagem baseada em cartão LINE permite que os usuários percorram várias mensagens, como um carrossel, e tomem medidas em relação às mensagens mais relevantes para eles, selecionando um cartão ou os botões de um cartão.
 
 Os casos de uso incluem:
 - Exibir promoções para itens de menu específicos
 - Destaque os casacos mais vendidos desta temporada
 - Apresentar uma amostra de ferramentas e gadgets de cozinha que estão incluídos em um kit
 
-![Uma mensagem baseada em cartão com pelo menos dois cartões que promovem sanduíches no editor de criador.]({% image_buster /assets/img/line/line_card_message.png %})
+![Uma mensagem baseada em cartões com pelo menos dois cartões que promovem sanduíches no editor criador de mensagens.]({% image_buster /assets/img/line/line_card_message.png %})
 
 ### Mensagem
 

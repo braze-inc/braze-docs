@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Curso do Braze Learning]](https://learning.braze.com/regular-expression-basics-for-braze) ( [{% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expressões regulares
+# [![curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expressões regulares
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -22,7 +22,7 @@ No curso do Braze Learning vinculado, mostramos como as expressões regulares po
 
 - [Noções básicas de expressões regulares](https://learning.braze.com/regular-expression-basics-for-braze) Curso do Braze Learning
 - [Referência de regex]({{site.baseurl}}/regex_cheat_sheet/)
-- [Dados de amostra RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
+- [Dados de Amostra RTF]({% image_buster /assets/download_file/regex-dummy-data.rtf %})
 
 ## Depurador de regex
 
@@ -33,7 +33,7 @@ As expressões regulares para propriedades de disparo de eventos personalizados 
 {% endalert %}
 
 {% tabs %}
-{% tab Depurador de regex %}
+{% tab Regex Debugger %}
 <div>
 Esse formulário permite a validação básica e o teste de expressões regulares.
 ​
@@ -164,7 +164,7 @@ Podemos dividir esse regex nas três partes a seguir:
 
 Digamos que você queira filtrar os e-mails que terminam com "@braze.com". Você usaria o filtro de endereço de e-mail, o definiria como `matches regex` e digitaria "@braze.com" no campo regex. O mesmo se aplica a qualquer outro domínio de e-mail.
 
-![Filtro para um endereço de e-mail que corresponda ao regex de "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
+![Filtrar por um endereço de e-mail que corresponda ao regex "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### Como posso usar strings de números de filtro para valores ≥ x ou ≤ x?
 
@@ -190,7 +190,7 @@ Use o símbolo do acento circunflexo (`^`) para indicar com o que a string come�
 
 Por exemplo, se estiver tentando direcionar usuários que moram em cidades que começam com "San", seu regex seria `^San \w`. Com esse regex, você conseguiria direcionar com sucesso usuários de cidades como San Francisco, San Diego, San Jose e assim por diante.
 
-![Filtro para uma cidade que corresponda ao regex de "^San \\w".]({% image_buster /assets/img/regex/regeximg2.png %})
+![Filtrar por uma cidade que corresponda ao regex "^San \\w".]({% image_buster /assets/img/regex/regeximg2.png %})
 
 #### Como faço para filtrar números de telefone específicos?
 
@@ -206,6 +206,6 @@ Por exemplo, digamos que você queira filtrar os usuários por número de telefo
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![Filtre por um número de telefone que corresponda ao regex "^1?718\\d\\d\\d\\d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
+![Filtrar por um número de telefone que corresponda ao regex "^1?718\\d\\d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

@@ -66,11 +66,17 @@ send_date_sydney;
 ```
 {% endraw %}
 
+### Historial de la consulta
+
+La sección **Historial de consultas** del Generador de consultas muestra tus consultas ejecutadas anteriormente para ayudarte a hacer un seguimiento y reutilizar tu trabajo. El historial de consultas se conserva durante siete días, lo que significa que las consultas con más de siete días de antigüedad se eliminan automáticamente.
+
+Si necesitas auditar el uso de consultas durante periodos más largos o mantener registros más allá de siete días, te recomendamos exportar o guardar los resultados de consultas importantes antes de que caduquen.
+
 ## Generar SQL con el Generador de consultas con IA
 
 El Generador de consultas con IA aprovecha [la GPT](https://openai.com/gpt-4), impulsada por OpenAI, para recomendar SQL para tu consulta.
 
-![El constructor de consultas SQL AI.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![El generador de consultas SQL AI.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 Generar SQL con el Generador de consultas con IA
 

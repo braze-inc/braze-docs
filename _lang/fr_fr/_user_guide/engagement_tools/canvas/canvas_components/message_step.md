@@ -11,23 +11,24 @@ tool: Canvas
 
 # Message 
 
-> Les étapes du message vous permettent d'ajouter un message autonome à l'endroit de votre choix dans votre flux Canvas.
+> Les étapes du message vous permettent d'ajouter un message autonome à l'endroit de votre choix dans votre Canvas.
 
-![Une étape de message nommée "Lunch promo" utilisant le canal de communication.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Une étape Message nommée "Lunch promo" utilisant le canal de communication.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## Création d'un message
 
 Pour créer un composant de message, ajoutez d’abord une étape à votre Canvas. Glissez-déposez le composant depuis la barre latérale, ou sélectionnez le bouton <i class="fas fa-plus-circle"></i> plus au bas d'une étape et sélectionnez **Message.** 
 
-### Étape 1 : Sélectionnez votre canal d'envoi de messages
+### Étape 1 : Sélectionnez votre canal d'envoi de messages
 
 Vous pouvez choisir parmi les canaux de communication suivants : 
+- Bannières (en accès anticipé)
 - Cartes de contenu
 - E-mail
 - LINE
 - Notifications push
 - SMS/MMS/RCS
-- in-app Messages 
+- in-app Messages
 - Webhook
 - WhatsApp
 
@@ -47,7 +48,7 @@ Sélectionnez **Utiliser le timing intelligent** dans l'onglet **Paramètres de 
 
 Les validations de livraison fournissent un contrôle supplémentaire pour confirmer que votre audience répond aux critères de livraison pour l’envoi de message. Ce paramètre est recommandé si les options Heures calmes, Timing Intelligent ou Limitation du taux sont activées. Vous pouvez ajouter un segment ou des filtres supplémentaires pour valider l’heure d’envoi du message. Si un utilisateur ne correspond pas aux validations de livraison définies pour une étape de message, il sortira du Canvas à cette étape.
 
-![Onglet Paramètres de livraison pour les paramètres de lu composant de message. Les heures calmes sont activées et la case pour l’utilisation de Timing Intelligent est cochée pour envoyer le message à une heure optimale. Les validations de réception/distribution sont activées pour valider l'audience lors de l'envoi du message.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
+![Onglet Paramètres de livraison pour les paramètres de lu composant de message. Les heures calmes sont activées et la case pour l’utilisation de Timing Intelligent est cochée pour envoyer le message à une heure optimale. Les validations de distribution sont activées pour confirmer l’audience lors de l’envoi du message.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
 ## L'avancement des utilisateurs
 
@@ -96,9 +97,9 @@ Dans la première étape de message suivant un parcours d’action, vous pouvez 
 Vous ne pouvez pas utiliser les `event_properties` dans la première étape de message. Au lieu de cela, vous devez utiliser `canvas_entry_properties` ou ajouter une étape de parcours d’action avec l’événement correspondant avant l’étape de message qui comprend `event_properties`.
 {% endalert %}
 
-{% details Élargir pour l'éditeur original de Canvas %}
+{% details Expand for original Canvas editor %}
 
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Cette section n'est disponible qu'à titre de référence.
+Vous ne pouvez plus créer ou dupliquer des toiles à l'aide de l'éditeur original. Cette section n'est disponible qu'à titre de référence.
 
 - `event_properties` ne peut pas être utilisé dans des étapes complètes planifiées. Cependant, vous pouvez utiliser les `event_properties` dans la première étape complète d’un Canvas par événement, même si l’étape complète est planifiée.
 - `canvas_entry_properties` ne peut être référencée que dans la première étape complète d'un canvas.

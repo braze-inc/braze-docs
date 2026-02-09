@@ -22,7 +22,7 @@ channel:
 - **U.S. 番号:**すべてのU.S. 番号は有効で、有効な市外コードのある10 桁の電話番号である必要があります。10桁の電話番号に `+` と国コードがない場合、Braze はそれをU.S. 番号としてマッピングします。
 - **国際電話番号:**すべての国際番号は、`+` で始まり、国コード、電話番号の順に続く。たとえば `+442071838750` です。
 
-![有効なe164国際電話番号の例]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
+![有効なe164国際電話番号の例。]({% image_buster /assets/img/sms/e164.png %}){: style="max-width:50%;border: 0;"}
 
 ローカルの形式と `E.164` 形式の違いを示すいくつかの例を以下に示します。
 
@@ -48,7 +48,7 @@ channel:
 
 電話番号が無効であると判断された場合、Brazeはユーザーの電話番号を無効としてマークし、その電話番号に以降の通信を送信しようとしない。無効な電話番号には、ユーザープロファイルの [**エンゲージメント**] タブでマークが付けられます。
 
-![Brazeの無効な電話番号のエラーメッセージ例]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
+![Brazeの無効な電話番号に対するエラーメッセージの例。]({% image_buster /assets/img/sms/invalid_banner.png %}){: style="max-width:50%;border: 0;"}
 
 電話番号は以下の理由で無効とみなされる：
 

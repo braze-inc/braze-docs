@@ -13,11 +13,10 @@ description: "Este artículo te explicará cómo configurar las funciones de ini
 
 ## Requisitos
 
-Tras la configuración, se le pedirá que proporcione una URL de inicio de sesión y una URL de Assertion Consumer Service (ACS).  
+Al configurarlo, se te pedirá que proporciones una URL de Servicio al Consumidor de Afirmaciones (ACS).  
 
 | Requisito | Detalles |
 |---|---|
-| URL de inicio de sesión | `https://<SUBDOMAIN>.braze.com/sign_in` <br><br> Para el subdominio, utilice el subdominio de coordinación que aparece en la [URL de tu instancia Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). Por ejemplo, si tu instancia es `US-01`, tu URL es `https://dashboard-01.braze.com`. Esto significa que su subdominio será `dashboard-01`. |
 | URL del Servicio de Consumidor de Afirmaciones (ACS) | `https://<SUBDOMAIN>.braze.com/auth/saml/callback` <br> Para algunos proveedores de identidad, también puede denominarse URL de respuesta, URL de audiencia o URI de audiencia. |
 | ID de la entidad | `braze_dashboard`|
 | Clave API RelayState | Para habilitar el inicio de sesión del proveedor de identidad, vaya a **Configuración** > **Claves API** y cree una clave API con permisos `sso.saml.login`. |
@@ -37,11 +36,16 @@ Tras la configuración, se le pedirá que proporcione una URL de inicio de sesi�
 3. En la página **Configurar inicio de sesión único con SAML**, selecciona el icono de edición de **Configuración básica de SAML**.
 4. Configure la aplicación en modo iniciado por IdP introduciendo una **URL de respuesta** que combine su [instancia Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) con el siguiente patrón: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 5. Opcionalmente, configure RelayState introduciendo su clave API generada por Relay State en el campo **Relay State (Opcional)**.
-6. Si desea configurar la aplicación en modo iniciado por SP, seleccione **Establecer URL adicionales** e introduzca una URL de inicio de sesión que combine su [instancia Braze]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) con el siguiente patrón: `https://<SUBDOMAIN>.braze.com/sign_in`.
-7. Formatee las afirmaciones SAML en el formato específico esperado por Braze. Consulte las siguientes fichas sobre atributos de usuario y reclamaciones de usuario para comprender cómo deben formatearse estos atributos y valores.
+
+{% alert important %}
+**No** configures el campo **URL de inicio de sesión**. Deja este campo en blanco para evitar problemas con el SAML SSO iniciado por tu IdP.
+{% endalert %}
+
+{: start="6"}
+6\. Formatee las afirmaciones SAML en el formato específico esperado por Braze. Consulte las siguientes fichas sobre atributos de usuario y reclamaciones de usuario para comprender cómo deben formatearse estos atributos y valores.
 
 {% tabs %}
-{% tab Atributos del usuario %}
+{% tab User Attributes %}
 Puede gestionar los valores de estos atributos desde la sección **Atributos de usuario** de la página **Integración de aplicaciones**.
 
 Utilice las siguientes combinaciones de atributos:
@@ -60,7 +64,7 @@ Es muy importante que el campo de correo electrónico coincida con lo que está 
 {% endalert %}
 
 {% endtab %}
-{% tab Reclamaciones de usuarios %}
+{% tab User Claims %}
 
 En la página **Configurar inicio de sesión único con SAML**, seleccione **Editar** para abrir el cuadro de diálogo **Atributos de usuario**. A continuación, edite las reclamaciones de los usuarios de acuerdo con el formato adecuado.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: Creación de una plantilla Webhook
-article_title: Creación de una plantilla Webhook
+nav_title: Crear una plantilla webhook
+article_title: Crear una plantilla webhook
 page_order: 2
 tool:
   - Templates
@@ -10,7 +10,7 @@ description: "Este artículo de referencia explica cómo crear y personalizar pl
 
 ---
 
-# Creación de una plantilla de webhook
+# Crear una plantilla webhook
 
 > A medida que construyes y personalizas tus webhooks, puedes crear y aprovechar plantillas de webhook para su uso posterior dentro de la plataforma Braze. De esta forma, puedes crear de forma coherente una variedad de webhooks en tus diferentes campañas.
 
@@ -18,7 +18,7 @@ description: "Este artículo de referencia explica cómo crear y personalizar pl
 
 En el panel de Braze, ve a **Plantillas** > **Plantillas webhook**.
 
-![La página "Plantillas Webhook" con plantillas webhook prediseñadas y guardadas.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
+![La página "Plantillas de webhook" con plantillas de webhook prediseñadas y guardadas.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Paso 2: Elige tu plantilla
 

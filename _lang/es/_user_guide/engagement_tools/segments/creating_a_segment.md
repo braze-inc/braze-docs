@@ -1,6 +1,6 @@
 ---
-nav_title: Creación de un segmento
-article_title: Creación de un segmento
+nav_title: Crear un segmento
+article_title: Crear un segmento
 page_order: 0
 page_type: tutorial
 description: "Este artículo explica cómo configurar y crear un segmento con Braze."
@@ -8,7 +8,7 @@ tool: Segments
 search_rank: 3
 ---
 
-# [![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Creación de un segmento
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Crear un segmento
 
 > La segmentación le permite dirigirse a los usuarios en función de sus características y acciones demográficas, de comportamiento o técnicas. El uso creativo e inteligente de la segmentación y la automatización de la mensajería le permite hacer que sus usuarios pasen sin problemas del primer contacto al cliente a largo plazo. Los segmentos se actualizan en tiempo real a medida que cambian los datos, y usted puede crear tantos segmentos como necesite para sus fines de segmentación y mensajería.
 
@@ -25,19 +25,19 @@ Opcionalmente, puedes hacer lo siguiente:
 - Añade un [equipo]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) a tu segmento.
 - Añade [etiquetas]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) a tu segmento para organizarlo mejor.
 
-![Crear Segmento modal donde el segmento se llama "Usuarios Caducados" con la Descripción del Segmento como "Este es nuestro segmento principal de Usuarios Caducados para dirigirnos a los no activos en los últimos catorce días" con dos botones: Cancelar y crear segmento.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
+![Crear Segmento modal donde el segmento se llama "Usuarios Caducados" con la Descripción del Segmento como "Este es nuestro segmento principal de Usuarios Caducados para dirigirnos a los no activos en los últimos catorce días" con dos botones: Cancelar y Crear segmento.]({% image_buster /assets/img_archive/segment_app_selection.png %}){: style="max-width:80%;"}
 
 ## Paso 3: Elija su aplicación o plataforma
 
-Elige a qué aplicaciones o plataformas deseas dirigirte seleccionando **Usuarios de todas las aplicaciones** (por defecto) o **Usuarios de aplicaciones específicas**. Si selecciona **Usuarios de todas las aplicaciones**, el segmento incluye a todos los usuarios independientemente de cualquier dato de sesión o aplicación. Si eliges **Usuarios de aplicaciones específicas**, puedes seleccionar qué aplicaciones o plataformas quieres incluir en tu segmento.
+Elige a qué aplicaciones o plataformas deseas dirigirte seleccionando **Usuarios de todas las aplicaciones** (por defecto) o **Usuarios de aplicaciones específicas**. **Los usuarios de aplicaciones específicas** se dirigen a usuarios con al menos una sesión en las aplicaciones especificadas.
 
-Por ejemplo, si quieres enviar un mensaje dentro de la aplicación solo a dispositivos iOS, selecciona tu aplicación iOS. De este modo, los usuarios que utilicen tanto un dispositivo iOS como Android sólo recibirán el mensaje en su dispositivo iOS. En la lista de aplicaciones específicas, la opción **Usuarios sin aplicaciones** permite incluir usuarios sin sesiones y sin datos de aplicaciones (normalmente creados mediante importación de usuarios o API REST).
+Por ejemplo, si quieres enviar un mensaje dentro de la aplicación solo a dispositivos iOS, selecciona tu aplicación iOS. De este modo, los usuarios que utilicen tanto un dispositivo iOS como Android sólo recibirán el mensaje en su dispositivo iOS. En la lista de aplicaciones específicas, la opción **Usuarios de ninguna aplicación** te permite incluir usuarios sin sesiones ni datos de aplicación (normalmente creados mediante importación de usuarios o API REST).
 
 ![Panel de detalles del segmento con la opción "Usuarios de todas las aplicaciones" seleccionada en la sección Aplicaciones utilizadas.]({% image_buster /assets/img_archive/Segment2.png %}){: style="max-width:80%;"}
 
 ## Paso 4: Añade filtros a tu segmento
 
-Añade al menos un filtro a tu segmento. Puede combinar tantos filtros como desee para que su segmentación sea más específica.
+Añade al menos un filtro a tu segmento. Puede combinar tantos filtros como desee para que su segmentación sea más específica. 
 
 {% alert note %}
 Braze no genera perfiles para los usuarios hasta que han utilizado la aplicación por primera vez, por lo que no puedes dirigirte a usuarios que aún no han abierto tu aplicación.
@@ -47,7 +47,7 @@ Braze no genera perfiles para los usuarios hasta que han utilizado la aplicació
 
 Los filtros se organizan en grupos de filtros. Cada filtro debe formar parte de un grupo de filtros que tenga como mínimo un filtro. Un segmento puede tener varios grupos de filtros. Para añadir uno, seleccione **Añadir grupo de filtros**. Edite el nombre del grupo de filtros seleccionando el icono que aparece al pasar el ratón junto a él.
 
-![Filtrar grupo con un icono de edición junto a su nombre.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
+![Grupo de filtros con un icono de edición junto a su nombre.]({% image_buster /assets/img_archive/edit_filter_group_name.png %})
 
 Selecciona los iconos situados junto a cada filtro para contraer el editor de filtros o duplicar filtros individuales. Después de duplicar un filtro, puede ajustar sus valores dentro de cada desplegable.
 
@@ -62,6 +62,25 @@ Si selecciona "O" para sus filtros, su segmento contendrá usuarios que satisfag
 {% alert tip %}
 Cuando seleccione "O" para filtros que incluyan un filtro negativo (como "no está" en un grupo de suscripción), recuerde que los usuarios sólo necesitan cumplir uno de los filtros "O" para ser incluidos en el segmento. Para aplicar el filtro negativo independientemente de los demás filtros, utilice un [grupo de exclusión](#exclusion).
 {% endalert %}
+
+{% details When to avoid the OR operator %}
+
+Puede haber situaciones de selección de usuarios en las que deba evitarse utilizar el operador `OR`. El operador `OR` crea una sentencia que se evalúa como verdadera si un usuario cumple los criterios de uno o varios de los filtros de una sentencia. Por ejemplo, si quieres crear un segmento de usuarios que pertenezcan a "Foodies" pero que no pertenezcan ni a "Non-foodies" ni a "Candy-lovers", en este caso funcionaría el operador `OR`.
+
+![Filtrar el grupo de usuarios en el segmento "amantes de la comida" y no en los segmentos "no amantes de la comida" o "amantes de los dulces".]({% image_buster /assets/img_archive/or_operator_segment.png %})
+
+Sin embargo, si tu objetivo es segmentar a usuarios que pertenezcan al segmento "Foodies" y no estén en ninguno de los segmentos "Non-foodies" y "Candy-lovers", entonces utiliza el operador `AND`. De esta forma, los usuarios que reciben la campaña o el Canvas están en el segmento previsto ("foodies") y no en los otros segmentos ("Non-foodies" y "Candy-lovers") al mismo tiempo. 
+
+Los siguientes criterios negativos de selección no deben utilizarse con el operador `OR` cuando dos o más filtros hagan referencia al mismo atributo:
+
+- `not included`
+- `is not`
+- `does not equal`
+- `does not match regex`
+
+Si `not included`, `is not`, `does not equal`, o `does not match regex` se utilizan con el operador `OR` dos o más veces en una frase, se seleccionarán los usuarios con todos los valores del atributo correspondiente.
+
+{% enddetails %}
 
 #### Operadores de filtrado
 
@@ -91,11 +110,21 @@ Los usuarios excluidos no se contabilizarán en la estadística _Total de usuari
 
 ![Un grupo de exclusión con dos filtros.]({% image_buster /assets/img_archive/segmenter_exclusion_groups.png %})
 
+#### Visualización de las estadísticas del embudo
+
+Selecciona **Ver estadísticas del embudo** para mostrar las estadísticas de ese grupo de filtros y ver cómo afecta cada filtro añadido a tus estadísticas de segmento. Verás un recuento estimado y el porcentaje de usuarios a los que se dirigen todos los filtros hasta ese momento. Una vez mostradas las estadísticas de un grupo de filtros, se actualizarán automáticamente siempre que cambies los filtros. Estas estadísticas son estimadas y pueden tardar un momento en generarse.
+
+Ten en cuenta que si utilizas AND entre tus filtros, las estadísticas del embudo disminuirán; si utilizas OR entre tus filtros, las estadísticas del embudo aumentarán.
+
+![Dos filtros con estadísticas de embudo de segmento.]({% image_buster /assets/img_archive/segment_funnel_statistics.png %})
+
+Si añade filtros que documenten su flujo de usuarios, podrá ver los puntos en los que los usuarios se caen. Por ejemplo, si tienes una aplicación de redes sociales y quieres ver dónde puedes estar perdiendo usuarios durante tu proceso de incorporación, quizá quieras añadir filtros de datos personalizados para registrarte, añadir amigos y enviar el primer mensaje. Si descubres que el 85% de los usuarios se registran y añaden amigos, pero sólo el 45% envía el primer mensaje, sabrás que debes centrarte en fomentar más envíos de mensajes durante tus campañas de incorporación y marketing.
+
 #### Segmentos de prueba
 
-Después de añadir aplicaciones y filtros a su segmento, puede probar si su segmento está configurado como se esperaba buscando un usuario para confirmar si coincide con los criterios del segmento. Para ello, busque la dirección `external_id` o `braze_id` de un usuario en la sección **Búsqueda de usuarios**.
+Después de añadir aplicaciones y filtros a su segmento, puede probar si su segmento está configurado como se esperaba buscando un usuario para confirmar si coincide con los criterios del segmento. Para ello, busque la dirección `external_id` o `braze_id` de un usuario en la sección **Búsqueda de usuarios**. Ten en cuenta que no puedes buscar por dirección de correo electrónico en **la Búsqueda de usuarios**.
 
-![Sección de búsqueda de usuarios con un campo de búsqueda.]({% image_buster /assets/img_archive/user_lookup.png %})
+![Sección de búsqueda de usuarios con un campo de búsqueda.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%;"}
 
 La búsqueda de usuarios está disponible cuando:
 - Crear un segmento
@@ -104,11 +133,11 @@ La búsqueda de usuarios está disponible cuando:
 
 Cuando un usuario coincida con los criterios de segmento, filtro y aplicación, se emitirá una alerta.
 
-![Una búsqueda de usuario "usuarioprueba" desencadena una alerta que dice: "usuarioprueba coincide con todos los segmentos, filtros y aplicaciones.]({% image_buster /assets/img_archive/user_lookup_match.png %})
+![Una búsqueda de usuario de "usuario de prueba" desencadena una alerta que dice: "el usuario de prueba coincide con todos los segmentos, filtros y aplicaciones".]({% image_buster /assets/img_archive/user_lookup_match.png %})
 
 Cuando un usuario no coincide con parte o la totalidad de los criterios de segmento, filtro o aplicación, los criterios que faltan se enumeran a efectos de resolución de problemas.
 
-![Una búsqueda de usuario con una alerta que dice: "test1 no coincide con los siguientes criterios de selección:" y muestra los criterios que faltan.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
+![Una búsqueda de usuario con una alerta que dice: "prueba1 no coincide con los siguientes criterios de selección:" y muestra los criterios que faltan.]({% image_buster /assets/img_archive/user_lookup_nomatch.png %})
 
 #### Segmentos de usuario único
 
@@ -146,9 +175,9 @@ Al segmentar con filtros dependientes del dispositivo (modelo de dispositivo, si
 
 ### Notificaciones push
 
-Puede especificar que sólo se envíe una notificación push a cada usuario. Al [redactar el mensaje]({{ssite.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), seleccione **Sólo enviar al último dispositivo utilizado por el usuario** en **Configuración adicional**.
+Puede especificar que sólo se envíe una notificación push a cada usuario. Al [redactar el mensaje]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message#step-4-compose-your-push-message), seleccione **Sólo enviar al último dispositivo utilizado por el usuario** en **Configuración adicional**.
 
-!["Configuración adicional" con una casilla de verificación para que sólo se envíe al último dispositivo utilizado por el usuario.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
+!["Configuraciones adicionales" con una casilla de verificación para que sólo se envíe al último dispositivo utilizado por el usuario.]({% image_buster /assets/img_archive/send_to_last_device.png %}){: style="max-width:60%;"}
 
 ### Consideraciones
 

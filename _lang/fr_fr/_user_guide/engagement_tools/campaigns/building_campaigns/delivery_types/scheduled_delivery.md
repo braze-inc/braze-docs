@@ -16,7 +16,7 @@ tool: Campaigns
 
 Si vous choisissez d’envoyer un message dès qu’elle est lancée, il commencera à se lancer dès que vous aurez fini de créer votre campagne.
 
-![La section "réception/distribution" avec l'option "Planifié" sélectionnée et l'option de planification temporelle de l'envoi dès que la campagne est lancée.]({% image_buster /assets/img_archive/schedule_immediately.png %})
+![La section "Réception/distribution" avec l'option "Planifié" sélectionnée et l'option de planification temporelle d'envoi dès que la campagne est lancée.]({% image_buster /assets/img_archive/schedule_immediately.png %})
 
 Ce type de planification est conçu pour les campagnes ponctuelles que vous souhaitez envoyer immédiatement, telles que les messages concernant un événement en cours. Une application sportive, par exemple, peut planifier des notifications push basées sur les mises à jour des scores en utilisant cette option. En outre, lorsque vous envoyez des messages de test destinés à vous-même ou à votre équipe, cette option vous permet de les livrer immédiatement. 
 
@@ -28,7 +28,7 @@ La planification d’une campagne à un moment spécifié vous permet de stipule
 
 Si vous sélectionnez la **réception/distribution planifiée** et que vous ne choisissez pas d'envoyer à l'heure locale de l'utilisateur, votre campagne sera envoyée en fonction du fuseau horaire spécifié sur la page **Paramètres de l'entreprise**.
 
-![Options de planification basées sur le temps pour envoyer une campagne à une heure donnée.]({% image_buster /assets/img_archive/schedule_designated.png %})
+![Les options de planification basées sur le temps permettent d'envoyer une campagne à une heure donnée.]({% image_buster /assets/img_archive/schedule_designated.png %})
 
 ### Campagnes dans le fuseau horaire local
 
@@ -44,7 +44,7 @@ Les planifications temporelles spécifiées conviennent mieux aux messages plani
 
 Le [timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) vous permet de diffuser une campagne à chaque utilisateur à un moment différent. Braze calcule le temps pour chaque individu en fonction du moment où l’utilisateur s’engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes au timing intelligent ne soient envoyées qu’à un certain moment de la journée. Par exemple, si vous informez les utilisateurs qu’une promotion se termine à minuit, vous pouvez souhaiter que vos messages soient envoyés à 22 h au plus tard.
 
-![Les options de planification basées sur le temps pour utiliser le timing intelligent afin d'envoyer une campagne au moment le plus populaire de l'utilisation de l'application parmi tous les utilisateurs.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
+![Les options de planification basées sur le temps pour utiliser le timing intelligent afin d'envoyer une campagne au moment où l'utilisation de l'appli est la plus populaire parmi tous les utilisateurs.]({% image_buster /assets/img_archive/schedule_intelligent.png %})
 
 ### Règles de livraison
 

@@ -36,7 +36,7 @@ Pour personnaliser davantage votre copie, vous pouvez :
 
 Lorsque vous avez terminé, sélectionnez **Générer**. Nous utiliserons les informations que vous nous fournissez pour demander à GPT de rédiger un texte pour vous. La réponse sera récupérée depuis OpenAI et vous sera fournie. Pour plus d'informations, consultez la rubrique [Comment mes données sont-elles utilisées et envoyées à OpenAI ?](#ai-policy)
 
-![Modale de l'assistant de rédaction de l'intelligence artificielle montrant les différentes fonctionnalités disponibles"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3").{: style="max-width:70%;"}
+![Fenêtre modale de l'assistant de rédaction avec l’IA montrant les différentes fonctionnalités disponibles]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
 {% alert important %}
 Nous filtrons les réponses au contenu offensant qui viole la [politique de contenu](https://beta.openai.com/docs/usage-guidelines/content-policy) d'OpenAI.
@@ -44,7 +44,7 @@ Nous filtrons les réponses au contenu offensant qui viole la [politique de cont
 
 ## À propos des données relatives aux campagnes antérieures {#past-campaign-data}
 
-Lorsque vous utilisez les notifications push comme longueur de sortie, si vous sélectionnez **Faire référence aux données d’anciennes campagnes**, des campagnes de notifications push mobiles antérieures, sélectionnées au hasard, sont envoyées à OpenAI afin que GPT puisse s'en servir comme base pour sa génération de texte. Ne cochez pas cette case si vous ne souhaitez pas utiliser cette fonctionnalité. Consultez les sections suivantes pour en savoir plus sur la façon dont Braze et OpenAI utilisent vos données. 
+Lorsque vous utilisez push comme longueur de sortie, si vous sélectionnez **Reference past campaign data**, des campagnes push mobiles antérieures sélectionnées au hasard seront envoyées à OpenAI afin que GPT puisse les utiliser comme base pour sa génération de copie. Actuellement, le rédacteur de l'intelligence artificielle enverra à OpenAI des campagnes de push qui n'ont pas la syntaxe Liquid. Ne cochez pas cette case si vous ne souhaitez pas utiliser cette fonctionnalité. Consultez les sections suivantes pour en savoir plus sur la façon dont Braze et OpenAI utilisent vos données. 
 
 Si cette fonctionnalité est utilisée en conjonction avec une [directive de marque]({{site.baseurl}}/user_guide/brazeai/generative_ai//brand_guidelines/), la directive de marque et les données de la campagne antérieure seront incorporées dans le texte final généré.
 

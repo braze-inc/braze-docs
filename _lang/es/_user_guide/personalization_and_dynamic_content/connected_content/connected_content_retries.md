@@ -12,7 +12,7 @@ description: "Este artículo de referencia explica cómo tratar los reintentos d
 
 ## Cómo funcionan los reintentos 
 
-Dado que el Contenido conectado depende de la recepción de datos de las API, una API podría no estar disponible de forma intermitente mientras Braze realiza la llamada. En este caso, Braze admite la lógica de reintento para reintentar la solicitud utilizando un backoff exponencial.
+Dado que el Contenido conectado depende de la recepción de datos de las API, es posible que una API no esté disponible de forma intermitente mientras Braze realiza la llamada. En este caso, Braze admite la lógica de reintento para reintentar la solicitud utilizando un backoff exponencial.
 
 {% alert note %}
 Contenido conectado `:retry` no está disponible para los mensajes in-app.

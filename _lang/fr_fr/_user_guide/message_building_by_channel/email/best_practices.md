@@ -1,5 +1,5 @@
 ---
-page_order: 13
+page_order: 14
 nav_title: Bonnes pratiques
 article_title: Meilleures pratiques pour e-mail
 layout: dev_guide

@@ -1,5 +1,5 @@
 ---
-nav_title: Fonctionnalité Adoption
+nav_title: Adoption de fonctionnalités
 article_title: Fonctionnalité Adoption
 page_order: 3
 page_type: reference
@@ -23,24 +23,24 @@ Imaginons que vous travailliez chez Calorie Rocket, une appli de réception/dist
 
 Pour accéder au modèle en stock, lorsque vous créez une nouvelle toile, sélectionnez **Utiliser un modèle de toile** > **Modèles de Braze**. Ensuite, en regard de **Adoption des fonctionnalités**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
 1. Sélectionnez **Modifier** à côté du nom du modèle.
 
-![Titre et description actuels de la toile.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
+![Le titre et la description actuels de la toile.]({% image_buster /assets/img/canvas_templates/feature_adoption/select_edit_details.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Mettez à jour le nom du Canvas pour spécifier que le Canvas est destiné au ciblage des utilisateurs afin de recueillir leurs commentaires.
-3\. Mettez à jour la description pour spécifier que le Canvas a pour but d'encourager les utilisateurs à soumettre un retour d'information et à suivre l'opinion des utilisateurs sur la nouvelle fonctionnalité du régulateur de vitesse.
+3\. Mettez à jour la description pour préciser que le Canvas a pour but d'encourager les utilisateurs à soumettre un retour d'information et à suivre l'avis des utilisateurs sur la nouvelle fonctionnalité de régulation de la vitesse.
 4\. Ajoutez le tag **Adoption de fonctionnalité** afin que nous puissions le filtrer sur la page d'accueil de Canvas.
 
-![Le nouveau nom et la nouvelle description de la toile. La nouvelle description est la suivante : Canvas d'adoption de fonctionnalité pour suivre l'adoption et le sentiment des utilisateurs pour Cruise Control, une fonctionnalité permettant de planifier des réceptions/distributions de nourriture récurrentes"]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
+![Le nouveau nom et la nouvelle description de la toile. La nouvelle description est la suivante : Canvas d'adoption de fonctionnalité pour suivre l'adoption et le sentiment des utilisateurs pour Cruise Control, une fonctionnalité permettant de planifier des livraisons de nourriture récurrentes".]({% image_buster /assets/img/canvas_templates/feature_adoption/enter_new_canvas_name.png %}){: style="max-width:60%;"}
 
 ### Étape 2 : Attribuer un événement de conversion
 
-Ensuite, ajoutons un événement de conversion pour notre Canvas afin de signaler l'adoption de la fonctionnalité. Cela nous permettra d'adapter ultérieurement le chemin d'expérience dans notre parcours utilisateur.
+Ensuite, ajoutons un événement de conversion pour notre canvas afin de signaler l'adoption de la fonctionnalité. Cela nous permettra d'adapter ultérieurement le chemin d'expérience dans notre parcours utilisateur.
 
 1. Sous **Attribuer des événements de conversion**, sélectionnez **Ajouter un événement de conversion**.
 2. Sous **Événement de conversion principal - A**, sélectionnez **Exécuter un événement personnalisé** comme **type d'événement de conversion**.
@@ -51,7 +51,7 @@ Ensuite, ajoutons un événement de conversion pour notre Canvas afin de signale
 
 ### Étape 3 : Adapter la planification de l'entrée
 
-Notre objectif est d'encourager nos utilisateurs à adopter le régulateur de vitesse, mais nous ne voulons pas que nos envois de messages soient trop fréquents. Nous conserverons donc ce Canvas en tant que réception/distribution planifiée et apporterons les ajustements suivants à la section des **options basées sur le temps**.
+Notre objectif est d'encourager nos utilisateurs à adopter le régulateur de vitesse, mais nous ne voulons pas que nos envois de messages soient trop fréquents. Nous allons donc conserver ce Canvas en tant que réception/distribution planifiée et apporter les ajustements suivants à la section des **options basées sur le temps**.
 
 1. Mettez à jour la **fréquence d'entrée** en la faisant passer à **hebdomadaire**.
 2. Conservez la récurrence telle quelle.
@@ -86,14 +86,14 @@ Ensuite, créons la première étape du parcours d'action, qui a pour but d'indi
 
 1. Étant donné que la fonctionnalité de contrôle de vitesse n'est disponible qu'après l'ajout d'une commande au panier, nous nommerons le premier groupe d'actions **Ajouté au panier** et nous sélectionnerons `added_to_cart` pour l'événement personnalisé.
 
-![Le nom du groupe d'action est "Ajouté au panier" et l'"Événement personnalisé" est "Ajouté au panier".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
+![Le nom du groupe d'action est "Ajouté au panier" et l'événement personnalisé "Perform Custom Event" est "added_to_cart".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_added_to_cart.png %}){: style="max-width:60%;"}
 
 {: start="2"}
 2\. Conservez le deuxième groupe d'applications **Visite guidée** tel quel, car nous voulons évaluer si les utilisateurs ont fait une visite guidée de l'application, et s'ils l'ont fait, ils passeront au deuxième parcours d'actions.
 3\. Pour le parcours d'action suivant, intitulé **Évaluer l'utilisation**, remplacez **Fonctionnalité utilisée >3x** par **Paramètres du régulateur de vitesse consultés**.
 4\. Sélectionnez la liste déroulante **Perform Custom Event**, puis `scheduled_delivery` pour l'événement personnalisé.
 
-![Le nom du groupe d'action est "Used Feature >3x" et l'événement personnalisé "Perform Custom Event" est "scheduled_delivery".]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}){: style="max-width:60%;"}
+![Le nom du groupe d'action est défini sur "Used Feature >3x" et l'événement personnalisé est défini sur 'scheduled_delivery'.]({% image_buster /assets/img/canvas_templates/feature_adoption/action_path_assess_usage.png %}).{: style="max-width:60%;"}
 
 #### Mise en place d'une enquête de retour d'information
 

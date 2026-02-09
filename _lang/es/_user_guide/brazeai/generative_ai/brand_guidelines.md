@@ -5,7 +5,7 @@ page_order: 2.2
 description: "Este artículo de referencia cubre las directrices de marca para el asistente de redacción AI, una característica que te permite adaptar el estilo de la copia generada por el asistente de redacción AI a la voz y el estilo de tu marca."
 ---
 
-# Generar directrices de marca con <sup>BrazeAITM</sup>
+# Genera directrices de marca con <sup>BrazeAITM</sup>
 
 > Adapta el estilo de tus textos generados por IA para que coincidan con la voz y la personalidad de tu marca con directrices de marca personalizadas.
 
@@ -26,7 +26,7 @@ Sigue estos pasos para crear directrices de marca en el asistente de redacción 
 4. Para **¿Cuándo utilizarás estas directrices de marca?**, añade detalles para ayudar a tus colegas (y a ti en el futuro) a comprender el contexto de utilización de esta directriz.
 5. Si quieres que ésta sea la directriz de marca predeterminada para el espacio de trabajo actual, marca **Usar como directriz de marca predeterminada**.
 
-![Vista de creación de directrices de marca.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Directrices de marca")
+![Vista de la creación de la directriz de marca.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
 
 ### Paso 2: Describe la personalidad de tu marca
 

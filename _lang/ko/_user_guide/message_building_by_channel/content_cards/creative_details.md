@@ -1,5 +1,5 @@
 ---
-nav_title: 크리에이티브 디테일
+nav_title: 창의적인 세부 사항
 article_title: 콘텐츠 카드의 크리에이티브 세부 정보
 page_order: 1
 description: "이 문서에서는 세 가지 표준 콘텐츠 카드 유형에 대한 이미지 크기 권장 사항 및 해지 동작과 같은 창의적인 세부 사항을 다룹니다."
@@ -16,11 +16,11 @@ tool: Media
 ## 콘텐츠 카드 유형
 
 {% tabs %}
-{% tab 클래식 %}
+{% tab Classic %}
 
 클래식 카드는 표준 메시징과 알림을 보내거나 아이콘으로 메시지를 시각적으로 분류하는 데 유용합니다. 이미지는 선택 사항이지만 1:1 비율이어야 합니다.
 
-![권장 세부 정보가 포함된 클래식 카드 이미지와 클래식 카드 예시]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
+![추천 세부 정보가 포함된 클래식 카드 이미지 및 클래식 카드 예시]({% image_buster /assets/img/content_card_classic.png %}){: style="max-width:45%;border:0;"}
 
 | 카드 기능 | 세부 정보 |
 | --- | ---|
@@ -31,7 +31,7 @@ tool: Media
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab 캡션 이미지 %}
+{% tab Captioned Image %}
 
 캡션 이미지 카드는 대규모 세일이나 새로운 앱 기능과 같은 중요한 콘텐츠를 과시하고 관심을 끌 수 있는 좋은 방법입니다.
 
@@ -50,7 +50,7 @@ tool: Media
 
 If you want more creative control, the image-only card is for you. Create your image using any tooling you like and upload the image to this card type.
 
-![Image of an image-only Content Card with recommended details and an image-only example]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![추천 세부 정보가 포함된 이미지 전용 콘텐츠 카드 이미지 및 이미지 전용 예시]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | 카드 기능 | 세부 정보 |
 | --- | ---|
@@ -69,11 +69,11 @@ If you want more creative control, the image-only card is for you. Create your i
 
 사용자가 카드를 해지하려면 다음 스크린샷과 같이 모바일에서 스와이프하거나 `close X` 기능을 사용하면 됩니다. `x`는 웹 SDK의 경우에만 마우스를 가져가면 나타납니다.
 
-![Image that shows swipe or close dismissal behaviors for a card]({% image_buster /assets/img/dismissal-cc.png %})
+![카드의 스와이프 또는 닫기 해지 동작을 보여주는 이미지]({% image_buster /assets/img/dismissal-cc.png %})
 
 사용자가 모든 카드를 삭제했거나 새 업데이트를 푸시하지 않은 경우, 사용자의 피드는 일반적으로 다음과 같이 표시됩니다.
 
-![Image of an empty Content Card feed]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
+![빈 콘텐츠 카드 피드 이미지]({% image_buster /assets/img/empty-cc.png %}){: style="max-width:45%"}
 
 {% alert tip %}
 사용자가 관련 작업을 수행할 때 콘텐츠 카드가 해제되도록 설정하여 관련성을 유지하세요. 예를 들어, 사용자가 이미 구매한 제품에 대한 오퍼가 계속 표시되지 않도록 프로모션 콘텐츠 카드가 구매 즉시 해제되도록 설정할 수 있습니다.

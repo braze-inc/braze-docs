@@ -32,7 +32,7 @@ Consulte [tags de personalização compatíveis]({{site.baseurl}}/user_guide/per
 
 Você pode criar e atribuir variáveis usando a tag `assign`. Isso gera uma variável no criador de mensagem que também pode ser referenciada em toda a sua mensagem.
 
-### Usar Liquid consome pontos de dados?
+### Usar Liquid registra pontos de dados?
 
 Não.
 
@@ -72,9 +72,9 @@ A lógica de aborto permite que você pare uma mensagem de ser enviada se as con
 
 Os loops for também são conhecidos como [tags de iteração](https://shopify.github.io/liquid/tags/iteration/). Usar a lógica do loop em seus trechos de Liquid permite que você percorra blocos de Liquid até que uma condição seja atendida. 
 
-Na Braze, isso pode ser usado para verificar itens em um atributo personalizado de array, ou uma lista de valores e objetos retornados por uma resposta de [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [seleção]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/) ou chamada de [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Especificamente, você pode usar a lógica de loop for como parte do seu envio de mensagens para verificar se um produto está em estoque ou se um produto tem uma classificação mínima. 
+Na Braze, isso pode ser usado para verificar itens em um atributo personalizado de array, ou uma lista de valores e objetos retornados por uma resposta de [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs), [seleção]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) ou chamada de [Conteúdo Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content). Especificamente, você pode usar a lógica de loop for como parte do seu envio de mensagens para verificar se um produto está em estoque ou se um produto tem uma classificação mínima. 
 
-Por exemplo, digamos que você tenha um catálogo chamado "Jogos" que tem uma seleção chamada "jogos_baratos". Para puxar os títulos dos jogos em "jogos_baratos", você poderia usar este trecho Liquid:
+Por exemplo, digamos que você tenha um catálogo chamado "Jogos" que tem uma seleção chamada "cheap_games". Para puxar os títulos dos jogos em "cheap_games", você poderia usar este trecho Liquid:
 
 {% raw %}
 ```liquid

@@ -54,6 +54,10 @@ Any other input that doesn't match the tag standard discussed above may fail to 
 - Out of order keys and values 
   - {% raw %}For example, ```{% message_extras :value 123 :key test %}```{% endraw %}
 
+## Sending promotion code information to Currents
+
+{% multi_lang_include shopify.md section='Liquid promotion codes with Currents' %}
+
 ## Considerations
 
 - If your key-values exceed 1&nbsp;KB, they'll truncate. 

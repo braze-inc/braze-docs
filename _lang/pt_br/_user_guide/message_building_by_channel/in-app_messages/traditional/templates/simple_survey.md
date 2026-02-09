@@ -16,7 +16,7 @@ tool:
 
 Por exemplo, pergunte aos usuários como eles gostariam de usar seu app, saiba mais sobre suas preferências pessoais ou até mesmo pergunte sobre a satisfação deles com um recurso específico.
 
-![Três mensagens de pesquisa simples: preferências de notificação, preferências alimentares e uma pesquisa de satisfação do cliente. As opções selecionadas nas pesquisas correspondem a atributos personalizados que serão registrados para aquele usuário.]({% image_buster /assets/img/iam/iam-survey.png %})
+![Três mensagens de pesquisa simples: preferências de notificação, preferências alimentares e uma pesquisa de satisfação do cliente. As opções selecionadas nas pesquisas correspondem a atributos personalizados que serão registrados para esse usuário.]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## Requisitos do SDK {#supported-sdk-versions}
 
@@ -38,7 +38,7 @@ Este modelo de pesquisa é compatível com aplicativos móveis e navegadores da 
 
 Para começar a construir sua pesquisa, adicione sua pergunta ao campo **Header** da pesquisa. Se desejar, você pode adicionar uma mensagem opcional **Body** que aparecerá sob sua pergunta da pesquisa.
 
-![Guia de composição do editor de pesquisa simples, com campos para um cabeçalho, corpo opcional e texto auxiliar opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![Guia Criador do editor de questionário simples, com campos para um cabeçalho, corpo opcional e texto auxiliar opcional.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Esses campos podem incluir tanto Liquid quanto emojis, então seja criativo!
@@ -52,7 +52,7 @@ Selecione **Seleção de escolha única** ou **Seleção de escolha múltipla**.
 
 Em seguida, determine se [coletará](#custom-attributes) [apenas](#no-attributes) [atributos personalizados](#custom-attributes) ou [respostas de registro](#no-attributes).
 
-![Opções suspensas com "registro de atributos ao enviar" selecionado.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![Menu suspenso de opções com a opção "Registrar atributos no envio" selecionada.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### Coletar atributos personalizados {#custom-attributes}
 
@@ -93,7 +93,7 @@ Edite o texto do seu botão e o comportamento ao clicar na seção **Botão de E
 
 Se você optar por adicionar uma página de confirmação, mude para a guia **Confirmation Page** para personalizar sua mensagem:
 
-![Guia da Página de Confirmação do editor de pesquisa simples. Os campos disponíveis são cabeçalho, corpo opcional, texto do botão e comportamento ao clicar do botão.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
+![Guia da Página de Confirmação do editor de pesquisa simples. Os campos disponíveis são cabeçalho, corpo opcional, texto do botão e comportamento ao clicar no botão.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 Se você deseja guiar os usuários para outra página do seu app ou site, altere o **comportamento ao clicar** do botão.
 
@@ -101,7 +101,7 @@ Se você deseja guiar os usuários para outra página do seu app ou site, altere
 
 Você pode personalizar a cor da fonte e a cor de destaque da mensagem usando o seletor de **tema de cores**.
 
-![Guia de composição do editor de pesquisa simples com o seletor de tema de cores expandido após um usuário ter clicado na paleta de cores.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![Guia Compose do editor de questionário simples com o seletor Color Theme expandido depois que um usuário clica na paleta de cores.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## Analisar resultados {#analytics}
 
@@ -113,7 +113,7 @@ As escolhas de pesquisa excluídas ainda aparecerão na análise de dados, mas n
 
 É possível encontrar as métricas de desempenho do questionário expandindo o menu suspenso **Resultados** para uma variante específica na seção **Desempenho de mensagens no app** da análise de dados. Aqui está um resumo do que você verá:
 
-- **O engajamento com o questionário** mostra como os usuários interagiram com o questionário em geral, incluindo o total de envios, descartes e cliques no corpo da mensagem.
+- **O engajamento com o questionário** mostra como os usuários interagiram com o questionário em geral, incluindo o total de envios, recusas e cliques no corpo da mensagem.
 - **Os resultados da pesquisa** exibem um detalhamento de quantos usuários selecionaram cada opção de resposta, juntamente com a porcentagem do total de envios que cada opção representa.
 - **As métricas da página de confirmação** (se ativadas) incluem quantos usuários visualizaram a tela de confirmação, clicaram em seu botão ou a descartaram sem interagir.
 
@@ -126,6 +126,9 @@ Confira [mensagem no app relatórios]({{site.baseurl}}/user_guide/message_buildi
 As escolhas selecionadas serão automaticamente transferidas para Currents, no campo [**Eventos de Clique de Mensagem no App**]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe) `button_id`. Cada escolha será enviada com seu identificador único universal (UUID).
 
 ## Casos de uso
+
+{% tabs %}
+{% tab User satisfaction %}
 
 ### Satisfação do usuário
 
@@ -144,6 +147,9 @@ Para configurar isso, use uma pesquisa de seleção de escolha única com cinco 
 
 Quando um usuário envia a pesquisa, o valor selecionado é registrado como um atributo personalizado. Em seguida, você pode criar campanhas de acompanhamento usando filtros de público. Por exemplo, direcione mensagens de recuperação para usuários cujo atributo `customer_satisfaction` seja 1 ou 2.
 
+{% endtab %}
+{% tab Notification preferences %}
+
 ### Preferências de notificação
 
 **Objetivo:** Permita que os usuários aceitem tipos específicos de notificações.
@@ -155,9 +161,12 @@ Para configurar isso, use uma pesquisa de seleção de múltipla escolha em que 
 | Atualizações de produtos    | `wants_product_updates`| `true` |
 | Promoções         | `wants_promotions`     | `true` |
 | Convites para eventos      | `wants_event_invites`  | `true` |
-| Pesquisas e feedback | `wants_surveys`        | `true` |
-| Dicas e tutoriais   | `wants_tips`           | `true` |
+| Pesquisas & Feedback | `wants_surveys`        | `true` |
+| Dicas & Tutoriais   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Identify customer goals %}
 
 ### Identificar metas do cliente
 
@@ -176,6 +185,9 @@ Para configurar isso, use um questionário de seleção de escolha única com ca
 
 Quando um usuário envia a pesquisa, o valor selecionado é registrado como um atributo personalizado em seu perfil. Em seguida, é possível usar esses dados para personalizar experiências futuras ou segmentar usuários com base em seu objetivo principal.
 
+{% endtab %}
+{% tab Improve conversion rates %}
+
 ### Melhore as taxas de conversão
 
 **Objetivo:** Entenda por que os clientes não estão fazendo upgrade ou comprando.
@@ -193,6 +205,9 @@ Para configurar isso, use uma pesquisa de seleção de escolha única com cada o
 
 Quando um usuário envia a pesquisa, o valor selecionado é salvo em seu perfil. Em seguida, é possível direcionar esses usuários com campanhas adaptadas às suas objeções específicas, como ofertas de desconto ou melhorias de usabilidade.
 
+{% endtab %}
+{% tab Favorite features %}
+
 ### Recursos favoritos
 
 **Objetivo:** Compreenda quais recursos os clientes gostam de usar.
@@ -203,7 +218,7 @@ Para configurar isso, use uma pesquisa de seleção de múltipla escolha em que 
 |-------------------|--------------------|--------------|
 | Marcadores         | `favorite_features`| `bookmarks`  |
 | Aplicativo móvel        | `favorite_features`| `mobile`     |
-| Compartilhamento de publicações     | `favorite_features`| `sharing`    |
+| Compartilhamento de postagens     | `favorite_features`| `sharing`    |
 | Suporte ao cliente  | `favorite_features`| `support`    |
 | Personalização     | `favorite_features`| `custom`     |
 | Preço / Valor     | `favorite_features`| `value`      |
@@ -212,5 +227,5 @@ Para configurar isso, use uma pesquisa de seleção de múltipla escolha em que 
 
 Como essa pesquisa usa seleção de múltipla escolha, o perfil do usuário será atualizado com uma lista de todos os valores de recursos selecionados.
 
-
-
+{% endtab %}
+{% endtabs %}

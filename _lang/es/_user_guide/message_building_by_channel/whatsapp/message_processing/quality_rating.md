@@ -1,5 +1,5 @@
 ---
-nav_title: Calificación de calidad y límites de mensajería
+nav_title: Clasificación de calidad y límites de mensajería
 article_title: Calificación de calidad y límites de mensajería 
 description: "Este artículo de referencia explica cómo influye Meta en tu índice de calidad y en los límites de mensajería del canal WhatsApp."
 page_type: partner

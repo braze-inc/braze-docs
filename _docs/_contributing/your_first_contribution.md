@@ -32,7 +32,7 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]({{site.baseurl}}) and find a simple change you'd like to make.
 
-You'll make your change using the [same method you choose previously]({{site.baseurl}}/contributing/home#step-4-choose-how-to-contribute):
+You'll make your change using the [same method you chose previously]({{site.baseurl}}/contributing/home#step-4-choose-how-to-contribute):
 
 |Method           |Use Case                              |Additional Requirements                                                                                              |
 |-----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------|

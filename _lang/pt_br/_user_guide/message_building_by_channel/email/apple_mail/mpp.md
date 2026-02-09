@@ -25,7 +25,7 @@ Qualquer destinatário que esteja usando o app Apple Mail nativo:
 - MacOS Monterey
 - watchOS 8
 
-Isso se aplica a todos os usuários que conectaram suas contas de e-mail ao app Apple Mail e aceitaram o recurso de segurança, independentemente do serviço de e-mail (Gmail, Outlook, Yahoo, AOL, etc.). Esse impacto não se limita aos assinantes que recebem correspondência em Apple/iCloud/me.com endereços de e-mail.
+Isso se aplica a todos os usuários que conectaram suas contas de e-mail ao app Apple Mail e aceitaram o recurso de segurança, independentemente do serviço de e-mail (Gmail, Outlook, Yahoo, AOL, etc.). Este impacto não se limita a assinantes que recebem correspondência em endereços de e-mail Apple/iCloud/me.com.
 
 {% alert important %}
 Embora essas atualizações na entregabilidade de e-mail sejam significativas, o MPP não altera fundamentalmente nenhuma das regras que regem o e-mail e a entregabilidade. Em vez disso, isso afetará a forma como avaliamos o sucesso e quais ferramentas e funcionalidades de e-mail poderão ser usadas no futuro.

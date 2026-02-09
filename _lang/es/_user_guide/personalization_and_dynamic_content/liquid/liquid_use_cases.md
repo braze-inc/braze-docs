@@ -1,5 +1,5 @@
 ---
-nav_title: Biblioteca de casos de uso de líquidos
+nav_title: Biblioteca de casos de uso de Liquid
 article_title: Biblioteca de casos de uso de líquidos
 page_order: 10
 search_rank: 2
@@ -544,7 +544,7 @@ Atributo personalizado
 
 - [Personalizar un mensaje basándose en atributos personalizados coincidentes](#attribute-matching)
 - [Restar dos atributos personalizados para mostrar la diferencia como un valor monetario](#attribute-monetary-difference)
-- [Hacer referencia al nombre de pila de un usuario si su nombre completo está almacenado en el campo first_name.](#attribute-first-name)
+- [Haz referencia al nombre de pila de un usuario si su nombre completo está almacenado en el campo first_name ](#attribute-first-name)
 
 ### Personalizar un mensaje basándose en atributos personalizados coincidentes {#attribute-matching}
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### Hacer referencia al nombre de pila de un usuario si su nombre completo está almacenado en el campo first_name. {#attribute-first-name}
+### Haz referencia al nombre de pila de un usuario si su nombre completo está almacenado en el campo first_name  {#attribute-first-name}
 
 Este caso de uso captura el nombre de un usuario (si tanto el nombre como el apellido se almacenan en un único campo) y luego utiliza este nombre para mostrar un mensaje de bienvenida.
 
@@ -1324,6 +1324,38 @@ This is a message for Verizon users!
 
 {% api %}
 
+## SMS
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+- [Responde con mensajes diferentes en función de la palabra clave del SMS entrante](#sms-keyword-response)
+
+### Responde con mensajes diferentes en función de la palabra clave del SMS entrante {#sms-keyword-response}
+
+Este caso de uso incorpora el procesamiento dinámico de palabras clave de SMS para responder a mensajes entrantes específicos con diferentes textos de mensaje. Por ejemplo, puedes enviar respuestas diferentes cuando alguien envía un mensaje de texto de "INICIAR" frente a "UNIRSE".
+
+{% raw %}
+```liquid
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
+{% if inbound_message contains 'start' %}
+Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
+
+{% elsif inbound_message contains 'join' %}
+Thanks for joining our SMS program! Create an account to get the best deals!
+
+{% else %}
+Thanks for joining our SMS program!
+
+{% endif %}
+```
+{% endraw %}
+
+{% endapi %}
+
+{% api %}
+
 ## Zonas horarias
 
 {% apitags %}
@@ -1460,10 +1492,10 @@ Check out this new bar after work today. HH specials!
 
 {% api %}
 
-## Week/Day/Month
+## Semana/Día/Mes
 
 {% apitags %}
-Week/Day/Month
+Semana/Día/Mes
 {% endapitags %}
 
 - [Poner el nombre del mes anterior en un mensaje](#month-name)

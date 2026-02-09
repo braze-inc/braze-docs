@@ -21,7 +21,7 @@ Tout ce que vous faites dans Braze se passe dans un espace de travail. Les espac
 
 Avant de commencer, assurez-vous d'avoir travaillé avec votre équipe et votre gestionnaire onboarding de Braze pour déterminer la meilleure configuration d'espace de travail pour votre cas d'utilisation. Pour en savoir plus sur la planification de vos espaces de travail dans Braze, consultez notre site [Getting Started : Guide des espaces de travail]({{site.baseurl}}/user_guide/getting_started/workspaces/).
 
-### Étape 2 : Ajoutez votre espace de travail
+### Étape 2 : Ajoutez votre espace de travail
 
 Vous pouvez créer de nouveaux espaces de travail ou passer d'un espace de travail à l'autre à partir de la liste déroulante de l'espace de travail dans l'en-tête global.
 
@@ -39,20 +39,20 @@ Vous pouvez adopter une convention de dénomination afin que les autres membres 
 {:start="3"}
 3\. Sélectionnez **Créer**. La création de votre espace de travail par Braze peut prendre quelques secondes.
 
-![Fenêtre modale "Create Workspace" avec le nom "Upon Voyage US - Staging".]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
+![Modale "Create Workspace" avec le nom "Upon Voyage US - Staging".]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
 
 Vous accéderez à la page **Paramètres de l'application** pour commencer à ajouter vos instances d'application. Vous pouvez accéder à cette page à tout moment à partir de **Réglages** > **Réglages de l'application.**
 
-![Page "App Settings" pour le Upon Voyage US - Espace de travail avec un bouton pour ajouter une application.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
+![Page "App Settings" pour l'espace de travail Upon Voyage US - Staging avec un bouton pour ajouter une application.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
 
-### Étape 3 : Ajoutez vos instances d'application
+### Étape 3 : Ajoutez vos instances d'application
 
 Les différents sites et applications rassemblés au sein d'un espace de travail sont appelés des « instances d’applications ».
 
 1. Dans la page **Paramètres de l'application**, sélectionnez **\+ Ajouter une application.**
 2. Donnez un nom à votre instance d'application et sélectionnez la ou les plateformes sur lesquelles cette instance d'application est utilisée. Si vous sélectionnez plusieurs plateformes, Braze créera une instance d'application pour chaque plateforme.
 
-![Fenêtre modale "Add New App to Upon Voyage US - Staging" avec des options pour sélectionner les détails de l'application.]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
+!["Fenêtre modale/boîte de dialogue de Upon Voyage US - Staging" avec des options pour sélectionner les détails de l'application.]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
 
 {:start="3"}
 3\. Sélectionnez **Ajouter une application** pour confirmer.
@@ -61,7 +61,7 @@ Les différents sites et applications rassemblés au sein d'un espace de travail
 
 Après avoir ajouté votre instance d'application, vous aurez accès à sa clé API. La clé API est utilisée lors des requêtes entre votre instance d'application et l'API de Braze. La clé API est également importante pour l'intégration du SDK Braze à votre application ou à votre site Web.
 
-![Page de réglages pour l'application iOS Upon Voyage avec des champs pour la clé API et l'endpoint SDK.]({% image_buster /assets/img/workspaces/app_api_key.png %})
+![Page de paramètres pour l'application iOS Upon Voyage avec des champs pour la clé API et le point de terminaison SDK.]({% image_buster /assets/img/workspaces/app_api_key.png %})
 
 {% alert note %}
 Vous devez créer des instances d’application distinctes pour chaque version de votre application sur chaque plateforme. Par exemple, si vous avez des versions gratuite et pro de votre app sur iOS et Android, créez quatre instances d'app au sein de votre espace de travail (app iOS gratuite, app Android gratuite, app iOS pro et app Android pro). Cela vous donnera quatre clés API à utiliser, une pour chaque instance d’application.
@@ -73,7 +73,7 @@ La version du SDK affichée sur la page Paramètres des applications pour une ap
 
 Ce champ apparaît une fois que vous avez intégré le SDK de Braze à votre application ou site web. Si une version plus récente du SDK Braze est disponible pour votre plateforme, elle sera notée ici avec l'étiquette « Une version plus récente est disponible ».
 
-![La section "Version du SDK en ligne" contient la valeur "5.4.0" et une icône indiquant qu'une nouvelle version est disponible.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
+![La section "Live SDK Version" avec une valeur de champ de "5.4.0" et une icône qui indique qu'une nouvelle version est disponible.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
 
 ### Étape 4 : Répétez l'opération si nécessaire
 
@@ -89,7 +89,7 @@ Répétez les étapes 2 et 3 pour configurer autant d'espaces de travail que vot
 
 Vous pouvez ajouter des espaces de travail favoris pour accéder encore plus rapidement aux espaces de travail que vous utilisez le plus.
 
-![Espace de travail déroulant avec l'onglet "Espaces de travail favoris".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
+![Espace de travail avec l'onglet "Espaces de travail favoris".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
 
 Pour ajouter des espaces de travail favoris :
 
@@ -151,7 +151,7 @@ Par défaut, un segment cible toutes les applications et tous les sites Web de l
 2. Pour les **Apps et sites web ciblés**, sélectionnez les **utilisateurs d'apps spécifiques.**
 3. Dans le menu déroulant **Applications spécifiques**, sélectionnez votre application ou votre site.
 
-![Segmentation ciblant les utilisateurs d'applications spécifiques.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
+![Segmentation qui cible les utilisateurs d'applications spécifiques.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
 
 Vous pouvez ensuite ajouter ce segment à votre message et commencer à affiner votre audience avec d'autres segments et filtres si nécessaire.
 
@@ -163,13 +163,10 @@ Pour les campagnes, ajoutez votre segmentation à l'étape **Audiences cibles** 
 
 Dans Canvas, ajoutez votre segment à vos étapes du message, dans la section **Validations de l'envoi**. Les validations des envois vérifient que votre audience répond à vos critères de réception au moment de l’envoi du message. N'oubliez pas de spécifier des validations de réception/distribution pour chaque étape du message afin de vous assurer qu'il sera livré à la bonne application. Il n'est pas nécessaire de segmenter au niveau de l'entrée.
 
-{% details Développez les étapes du flux de travail Canvas d’origine %}
-
-{% alert important %}
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’éditeur Canvas d’origine. Ce contenu est disponible à titre de référence pour comprendre les segments et le ciblage dans l'éditeur d'origine.<br><br>Braze recommande aux clients qui utilisent l'expérience Canvas originale de cloner leurs Canvas vers l'éditeur mis à jour afin de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Expand for steps in the original Canvas workflow %}
 
 Dans le flux de travail original de Canvas, ajoutez votre segmentation au niveau du composant Canvas dans la section **Audience**. Il n'est pas nécessaire de segmenter au niveau de l'entrée.
+
 {% enddetails %}
 
 

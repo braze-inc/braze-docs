@@ -208,7 +208,7 @@ If you have network policies in place, you must give Braze network access to you
 For Braze to access Databricks, a personal access token needs to be created.
 
 1. In your Databricks workspace, select your Databricks username in the top bar, then select **User Settings** from the dropdown.
-2. Make sure the service account has `CREATE TABLE` priviliges on the schema used for the connected souce. 
+2. Make sure the service account has `CREATE TABLE` privileges on the schema used for the connected source. 
 3. On the **Access tokens** tab, select **Generate new token**.
 4. Enter a comment that helps you to identify this token, such as "Braze CDI", and change the token’s lifetime to no lifetime by leaving the Lifetime (days) box empty (blank).
 5. Select **Generate**.

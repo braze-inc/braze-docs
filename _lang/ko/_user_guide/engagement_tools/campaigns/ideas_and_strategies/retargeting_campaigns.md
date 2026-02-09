@@ -17,7 +17,7 @@ Braze는 사용자가 수신한 메시지를 기반으로 리타겟팅하는 기
 
 이러한 각 리타겟팅 필터는 추가한 후 몇 가지 옵션을 제공합니다. 사용자 타겟팅에 대한 자세한 내용은 캠페인 설정에 대한 [Braze 학습 과정](https://learning.braze.com/campaign-setup-delivery-targeting-conversions)을 확인하세요!
 
-![Segment Details section with the dropdown menu for the available filters.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
+![세그먼트 세부 정보 섹션에 사용 가능한 필터의 드롭다운 메뉴가 있습니다.]({% image_buster /assets/img_archive/retarget.png %}){: style="max-width:80%;"}
 
 ## 리타겟팅 필터
 
@@ -73,7 +73,7 @@ You can use the retargeting filters in this section for your users within your c
 
 ### 캔버스 대조군에 속함 
 
-이 필터를 사용하여 드롭다운에서 선택할 수 있는 대상 캔버스의 제어 그룹에 속하거나 속하지 않은 사용자를 찾을 수 있습니다.
+이 필터를 사용하면 드롭다운에서 선택할 수 있는 타겟 캔버스의 대조군에 속하거나 속하지 않는 사용자를 찾을 수 있습니다.
 
 ![]({% image_buster /assets/img_archive/canvas_control_group.png %})
 
@@ -89,7 +89,7 @@ You can use the retargeting filters in this section for your users within your c
 
 ![]({% image_buster /assets/img_archive/last_received_campaign_with_tag.png %})
 
-### 캠페인에서 메시지 수신 
+### 캠페인에서 메시지를 받았습니다 
 
 이 필터를 사용하여 타겟 캠페인을 수신했거나 수신하지 않은 사용자를 찾을 수 있습니다.
 

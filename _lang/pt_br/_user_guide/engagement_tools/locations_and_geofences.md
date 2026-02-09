@@ -1,5 +1,5 @@
 ---
-nav_title: Locais e geofences
+nav_title: Locais e geocercas
 article_title: Locais e geofences
 page_order: 6
 layout: dev_guide
@@ -14,7 +14,7 @@ guide_featured_list:
   - name: Monitoramento de localização
     link: /docs/user_guide/engagement_tools/locations_and_geofences/location_tracking
     image: /assets/img/braze_icons/marker-pin-01.svg
-  - name: Criando geofences
+  - name: Criar geofences
     link: /docs/user_guide/engagement_tools/locations_and_geofences/creating_geofences/
     image: /assets/img/braze_icons/marker-pin-01.svg
   - name: Integrações móveis

@@ -1,5 +1,5 @@
 ---
-nav_title: Vínculos profundos con Acciones Braze
+nav_title: Acciones Braze enlaces profundos
 article_title: Vínculos profundos con Acciones Braze
 page_order: 100
 description: "Este artículo de referencia explica cómo utilizar los enlaces profundos de acción Braze para realizar acciones del SDK dentro de los botones del canal de mensajería."

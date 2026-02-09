@@ -1,6 +1,6 @@
 ---
-nav_title: Enregistrer des ébauches pour Canvas
-article_title: Enregistrer des ébauches pour Canvas
+nav_title: Enregistrer les brouillons pour Canvas
+article_title: Enregistrer les brouillons pour Canvas
 alias: "/save_as_draft/"
 page_order: 1
 description: "Cet article de référence explique comment enregistrer un brouillon pour une toile qui a déjà été lancée."
@@ -8,7 +8,7 @@ page_type: reference
 tool: Canvas
 ---
 
-# Enregistrer des ébauches pour Canvas
+# Enregistrer les brouillons pour Canvas
 
 > Au fur et à mesure que vous créez et lancez des Canvases, vous pouvez modifier un Canvas actif et l'enregistrer en tant que brouillon, ce qui vous permet de tester vos modifications avant un autre lancement. 
 
@@ -16,7 +16,7 @@ Si vous avez un Canvas actif qui nécessite des modifications à grande échelle
 
 Comme pour tout canvas, un seul utilisateur peut modifier un brouillon à la fois, et un canvas ne peut avoir qu'un seul brouillon à la fois. Ces brouillons n'ont aucune analyse car les modifications du brouillon n'ont pas encore été lancées.
 
-![Un exemple d’ébauche Canvas avec une bannière indiquant à l’utilisateur qu’il édite une ébauche Canvas avec l’option d’afficher le Canvas actif. Le pied de page comporte des options permettant de revenir à la vue d'analyse/analytique, d'enregistrer un brouillon ou de lancer un brouillon.]({% image_buster /assets/img_archive/canvas_draft1.png %})
+![Un exemple d’ébauche Canvas avec une bannière indiquant à l’utilisateur qu’il édite une ébauche Canvas avec l’option d’afficher le Canvas actif. Le pied de page dispose d’options pour revenir à l’affichage analytique, enregistrer en tant qu’ébauche ou lancer l’ébauche.]({% image_buster /assets/img_archive/canvas_draft1.png %})
 
 ## Création d'un projet
 

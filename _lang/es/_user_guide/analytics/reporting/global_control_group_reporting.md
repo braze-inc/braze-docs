@@ -1,5 +1,5 @@
 ---
-nav_title: Grupo de control global 
+nav_title: Grupo de control global
 article_title: Informes de grupos de control global
 page_type: reference
 description: "Esta página cubre las métricas de los informes que se encuentran en la página Informes del grupo de control global del panel."

@@ -24,9 +24,9 @@ channel:
 
 次に、会社名またはニックネームを入力するよう求められる。これは、ユーザーがカードを保存するときに表示される名前である。ユーザーが連絡先やメッセージングアプリであなたの会社名や別名をすべて確認できるように、20文字の制限が設けられている。 
 
-![[連絡先カードジェネレーター] タブ。]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![連絡先カード作成タブ。]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
-### ステップ2:電話番号の割り当て
+### ステップ 2:電話番号の割り当て
 
 利用可能なドロップダウンオプションから、サブスクリプショングループと希望する電話番号を選択します。この番号はお客様の連絡先カードに記載され、保存後に購読グループ側の電話からテキスト送信ができます。
 
@@ -34,7 +34,7 @@ channel:
 
 ### ステップ 3:任意項目
 
-![連絡先カードジェネレーターのオプションのフィールド。]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![連絡先カードジェネレーターのオプションフィールド。]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 #### 連絡先カードの連絡先写真をアップロードする
 

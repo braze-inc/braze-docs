@@ -38,13 +38,23 @@ Os relatórios de funil não estão disponíveis para [campanhas de API]({{site.
 Se você definir a janela para concluir o funil como um dia, o evento do funil deverá ocorrer dentro de 24 horas após o recebimento da mensagem. No entanto, se você selecionar vários dias, a janela de tempo será contada como dias do calendário no fuso horário da empresa.
 {% endalert %}
 
-![Relatório de funil 5]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
+![Relatório de funil para um Canva com "Últimos 7 dias" selecionado no menu suspenso de período de tempo.]({% image_buster /assets/img/funnel_report/funnel_report5.png %}){: style="max-width:90%;"}
 
 ### Etapa 2: Selecionar eventos para etapas do funil
 
-Para cada relatório de funil, o primeiro evento é quando o usuário recebe sua mensagem. A partir daí, os eventos subsequentes que você escolher afunilam o número de usuários que realizaram esses eventos, bem como os eventos anteriores. Os eventos do relatório de funil para os funis da campanha e do Canvas permitem iniciar a sessão, fazer uma compra e eventos personalizados, enquanto somente os funis da campanha incluem eventos de engajamento com mensagens.
+Para cada relatório de funil, o primeiro evento é quando o usuário recebe sua mensagem. A partir daí, os eventos subsequentes que você escolher afunilam o número de usuários que realizaram esses eventos, bem como os eventos anteriores. 
 
-![Relatório de funil 3]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
+#### Eventos de relatório de funil disponíveis
+
+| Campanha | Sessão iniciada, Compra efetuada, Evento personalizado realizado, Evento de engajamento com mensagem
+| Iniciou a sessão, fez uma compra, executou um evento personalizado, recebeu uma etapa do canva, interagiu com a etapa
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+{% alert note %}
+O evento de relatório **Interagiu com a etapa** só pode ser usado com etapas do Canva que usam os canais de envio de mensagens por e-mail ou push.
+{% endalert %}
+
+![Relatório de funil para um Canva com um menu suspenso dos eventos de relatório disponíveis.]({% image_buster /assets/img/funnel_report/funnel_report3.png %}){: style="max-width:80%;"}
 
 Os relatórios de funil permitem comparar o sucesso de suas mensagens além dos eventos de conversão ou de engajamento com mensagens que você configurou inicialmente. Portanto, se houver um evento de conversão que você não adicionou inicialmente, ainda poderá rastrear as conversões desse evento usando um funil.
 
@@ -65,7 +75,7 @@ No relatório do funil, é possível comparar diretamente o grupo de controle co
 - **Opção Regenerar**: Permite que você gere novamente o relatório e indica quando o relatório atual foi gerado pela última vez. 
 - **Variantes**: Com colunas coloridas, o relatório de funil permite até 8 variantes e um grupo de controle. Por padrão, o **gráfico** mostrará apenas três variantes. Para ver mais, você pode selecionar manualmente o restante das variantes.
 
-![Relatório de funil 4]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
+![Gráfico de relatório de funil.]({% image_buster /assets/img/funnel_report/funnel_report4.jpg %})
 
 **Para campanhas com múltiplas variantes**: O Braze mostrará uma tabela com métricas para cada evento e variante e a alteração percentual em relação ao controle. A taxa de conversão é o número de usuários que realizaram o evento (e os subsequentes) por destinatário de mensagem.
 
@@ -73,4 +83,8 @@ No relatório do funil, é possível comparar diretamente o grupo de controle co
 - Note que pode haver uma discrepância entre o funil e os valores de conversão padrão, pois os usuários podem converter mais de uma vez com a reelegibilidade, mas os relatórios de funil converterão no máximo uma vez, mesmo que um usuário realize o evento mais de uma vez. 
 
 **Para campanhas multivariantes com reelegibilidade**: Se um usuário receber várias variantes da campanha durante a janela de tempo do relatório, o Braze determinará se elas devem ser incluídas no funil de variantes com base nas ações que esse usuário realizou após a primeira vez que recebeu a variante da campanha. Isso significa que o mesmo usuário poderia contar para várias variantes diferentes se recebesse várias variantes durante a janela de tempo do funil.
+
+{% alert important %}
+Os usuários órfãos não são rastreados nos relatórios de funil. Quando um usuário anônimo entra em uma tela ou campanha e depois é identificado pelo método `changeUser()`, sua ID Braze é alterada. Os relatórios de funil rastreiam apenas os eventos de acompanhamento que correspondem ao ID do usuário no momento da entrada e não levam em conta os eventos realizados pelo usuário após a alteração de seu ID. Isso significa que os eventos de conversão realizados pelo usuário após ser identificado não serão incluídos no relatório do funil.
+{% endalert %}
 

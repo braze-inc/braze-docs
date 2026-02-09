@@ -18,6 +18,51 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 As a best practice, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification. Note that the character counter in the composer doesn't account for Liquid characters. This means the final character count of a message depends on how Liquid renders for each user. When in doubt, keep it short and sweet.
 
+## Reduce push notification payload size
+
+The maximum payload size depend on the platform.
+
+| Platform | Maximum payload size |
+| --- | --- |
+| Web | 3,807 bytes |
+| Android | 3,930 bytes |
+| iOS | 3,960 bytes |
+| Kindle | 5,985 bytes |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+If your push exceeds the maximum payload size, the message may not be sent. As a best practice, keep your payload to a few hundred bytes.
+
+### What is a push payload?
+
+Push service providers calculate whether your push notification can be displayed to a user by looking at the byte size of the entire push payload. The payload is limited to **4KB (4,096 bytes)** for most push services, including:
+
+- Apple Push Notification service (APNs)
+- Android’s Firebase Cloud Messaging (FCM)
+- Web push
+- Huawei push
+
+These push services will refuse any notification that exceeds this limit.
+
+Braze reserves a portion of the push payload for integration and analytics purposes. Given that, our maximum payload size is **3,807 bytes**. If your push exceeds this size, the message may not be sent. As a best practice, keep your payload to a few hundred bytes.
+
+The following elements in your push make up your push payload:
+
+- Copy, such as the title and message body
+- Final render of any Liquid personalization
+- URLs for images (but not the size of the image itself)
+- URLs for click targets
+- Button names
+- Key-value pairs
+
+### Tips to reduce payload size
+
+To reduce payload size:
+
+- Keep your message brief. A good general guideline is to make it actionable and beneficial in less than 40 characters.
+- Omit whitespace and line breaks from your copy.
+- Consider how Liquid will render on send. Because the final render of any Liquid personalization will vary from user to user, Braze can't determine if a push payload will exceed the size limit when Liquid is included. If your Liquid renders a shorter message, you might be fine. However, if your Liquid results in a longer message, your push may exceed the payload size limit. Always test your push message on a real device before sending it to users.
+- Consider shortening URLs using a URL shortener.
+
 ## Optimize targeting
 
 ### Collect relevant user data

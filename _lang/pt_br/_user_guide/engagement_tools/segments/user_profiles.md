@@ -22,9 +22,13 @@ Para acessar o perfil de um usuário, acesse a página **Pesquisar usuários** e
 - E-mail
 - Número de telefone
 - Token por push
-- Alias de usuário com o formato "[user_alias]:[alias_name]", como "amplitude_id:user_123"
+- Alias de usuário com o formato "[user_alias]:[alias_name]",, como "amplitude_id:user_123"
 
 Se for encontrada uma correspondência, você poderá visualizar as informações que registrou para esse usuário com o Braze SDK. Caso contrário, se a pesquisa retornar vários perfis de usuário, será possível mesclar cada perfil individualmente ou realizar uma mesclagem de usuários em massa. Para obter um passo a passo completo, consulte [Usuários duplicados]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
+
+{% alert important %}
+Quando um número de telefone é usado na pesquisa, ele é alterado para o formato [`E.164`](https://en.wikipedia.org/wiki/e.164) formato. Os usuários cujos números de telefone não podem ser alterados para o formato `E.164` (por exemplo, porque o número de telefone tem um código de país ou código de área inválido) não podem ser pesquisados pelo número de telefone.
+{% endalert %}
 
 ![Resultados da pesquisa com um banner que diz "Vários usuários correspondem aos seus critérios de pesquisa" e dois botões denominados Anterior e Próximo.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
@@ -52,14 +56,14 @@ A guia **Visão geral** contém informações básicas sobre um usuário e suas 
 | Categoria de visão geral | Contém |
 | --- | --- |
 | Perfil | Gênero, faixa etária, localização, idioma, fuso local, fuso horário e aniversário. |
-| Visão geral das sessões | Quantas sessões eles tiveram, quando foi a primeira e a última sessão, e em quais apps. |
+| Visão geral das sessões | Quantas sessões eles tiveram, quando foram a primeira e a última sessão e em quais apps. |
 | Atributos personalizados | Quais atributos personalizados são atribuídos a esse usuário e seu valor associado, incluindo atributos personalizados aninhados. |
 | Dispositivos recentes | Em quantos dispositivos eles se registraram, detalhes de cada dispositivo e suas IDs de publicidade associadas (se houver). |
 | Eventos personalizados | Quais eventos personalizados foram realizados por esse usuário, quantas vezes e quando foi a última vez que ele realizou cada evento. |
 | Compras | Receita vitalícia atribuída a esse usuário, sua última compra, número total de compras e uma lista de cada compra. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para saber mais sobre esses dados, consulte [Coleta de dados de usuários]({{site.baseurl}}/user_guide/data/user_data_collection/).
+Para saber mais sobre esses dados, consulte [Coleta de dados do SDK]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 
 ![A guia Visão geral de um perfil de usuário.]({% image_buster /assets/img_archive/user_profile2.png %})
 
@@ -72,14 +76,14 @@ A guia **Engajamento** contém informações sobre as interações de um usuári
 | Configurações de contato | Status da inscrição para e-mail, SMS e push, e os grupos de inscrições aos quais esse usuário está associado para esses três canais. Esta seção também inclui informações de changelog para tokens por push. Consulte [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/), [SMS]({{site.baseurl}}/sms_rcs_subscription_groups/) e [push]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) para saber como configurar inscrições e aceitações. |
 | Campanhas recebidas | As campanhas recebidas são marcadas quando o usuário recebe a campanha ou quando detectamos pela primeira vez os dados de interação de um usuário. Selecione uma campanha na lista para visualizá-la. |
 | Segmentos | Segmentos em que esse usuário está incluído. Selecione um segmento da lista para visualizá-lo. |
-| Estatísticas de comunicação | Quando esse usuário recebeu as últimas mensagens suas de cada canal. |
+| Estatísticas de comunicação | Quando esse usuário recebeu mensagens suas pela última vez em cada canal. |
 | Atribuição da instalação | Informações sobre como e quando um usuário instalou seu app. Saiba mais sobre [como entender as instalações do usuário]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/install_attribution/). |
 | Diversos | O [número do balde aleatório]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) do usuário. |
 | Envio de mensagens do Canva recebidas | Mensagens de canvas que esse usuário recebeu e quando. Selecione uma mensagem da lista para visualizá-la. |
 | Previsões | Pontuações de [previsão de churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) e [previsão de eventos]({{site.baseurl}}/user_guide/brazeai/predictive_events/) para esse usuário. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-![A guia Engajamento de um perfil de usuário que exibe suas configurações de contato e estatísticas de comunicação.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
+![A guia Engajamento de um perfil de usuário exibe suas configurações de contato e estatísticas de comunicação.]({% image_buster /assets/img_archive/profiles_engagement_tab.png %})
 
 ### Guia Histórico de mensagens
 
@@ -101,7 +105,7 @@ Os seguintes eventos de engajamento com mensagens estão disponíveis para e-mai
 
 | Canal | Eventos de engajamento disponíveis |
 | --- | --- |
-| E-mail | Rejeição<br>Clique<br>Entrega<br>Marcar como spam<br>Aberto (veja [nota sobre evento aberto por e-mail](#note-on-email-open-event))<br>Enviar<br>Soft bounce<br>Cancelar inscrição |
+| E-mail | Rejeição<br>Clique<br>Eventos de diferimento<br>Entrega<br>Marcar como spam<br>Aberto (veja [nota sobre evento aberto por e-mail](#note-on-email-open-event))<br>Enviar<br>Soft bounce<br>Cancelar inscrição |
 | SMS | Envio da operadora<br>Entrega<br>Falha na entrega<br>Mensagem recebida<br>Rejeição<br>Enviar |
 | Push | Rejeição<br>Abertura por influência<br>Primeiro plano do iOS<br>Abrir<br>Enviar |
 | Mensagem no app | Clique<br>Impressão |
@@ -138,5 +142,20 @@ Os envios de cartões de conteúdo são registrados quando o cartão está dispo
 O rastreamento de abertura de e-mails é propenso a erros em qualquer ferramenta, inclusive no Braze. Com uma variedade de recursos de proteção de privacidade oferecidos por diferentes clientes de e-mail que bloqueiam o carregamento automático de imagens ou as carregam proativamente no servidor, os eventos de abertura de e-mail são suscetíveis a falsos positivos e falsos negativos.
 
 Embora as estatísticas de abertura de e-mail possam ser úteis de forma agregada, por exemplo, para comparar a eficácia de diferentes linhas de assunto, não se deve presumir que um evento de abertura individual para um usuário individual seja significativo.
+
+#### Por que alguns campos estão em branco na guia Histórico de mensagens?
+
+Alguns campos podem estar ausentes na guia **Histórico de mensagens** de um usuário nos seguintes cenários:
+
+- Quando um evento não tem dados para **Mensagem enviada**, isso indica que a campanha não tem nenhuma variação de mensagem.
+- Quando um evento está sem dados para **Campanha/Canva** e **Mensagem Enviada**, isso indica que essa mensagem foi enviada de uma campanha de mensagens API (não campanhas disparadas por API) que não especificou os endereços `campaign_id` e `message_variation_id`. Esses campos são opcionais e podem ser deixados de fora do corpo da solicitação. Quando esses campos são especificados, essas informações são preenchidas nos registros do histórico de mensagens.
+   - Se uma determinada mensagem estiver totalmente ausente do histórico de mensagens, mas aparecer no registro **Campaigns Received (Campanhas recebidas** ), é provável que o usuário tenha recebido a campanha antes de ser identificado como o usuário atual. Se um perfil existente for órfão, o registro **Campaigns Received (Campanhas recebidas** ) será transferido, mas o histórico de mensagens não. 
+- Quando faltam dados para **Campaign/Canva**, pode ter sido enviado um teste manual. Os testes manuais são registrados na guia **Histórico de mensagens**, mas a campanha ou o Canva que foi enviado não será registrado.
+
+## Artigos relacionados
+
+- [Ciclo de vida do perfil do usuário]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [POST: Exportar perfil de usuário por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [POST: Excluir usuários]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 

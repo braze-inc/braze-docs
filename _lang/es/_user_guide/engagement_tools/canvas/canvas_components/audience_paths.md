@@ -1,5 +1,5 @@
 ---
-nav_title: Rutas de audiencia 
+nav_title: Rutas de audiencia
 article_title: Rutas de audiencia 
 alias: /audience_paths/
 page_order: 1
@@ -31,7 +31,7 @@ Con las Rutas de audiencia, puedes:
 
 ### Dejar tiempo para las evaluaciones de los usuarios
 
-![Canvas muestra un retraso de 24 horas tras un paso en Mensaje, seguido de una ruta de audiencia.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Canvas muestra un retraso de 24 horas tras un paso en Mensaje, seguido de una Ruta de audiencia.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Los usuarios son evaluados en cuanto alcanzan el paso de la Ruta de audiencia. Una vez evaluados, pasarán inmediatamente al siguiente paso. Esto hace que sea importante dejar transcurrir una ventana de tiempo adecuada si la Ruta de audiencia viene determinada por una acción del usuario.
 
@@ -45,7 +45,7 @@ Ten en cuenta que los usuarios avanzan al siguiente paso en función de la prime
 
 Para añadir un paso de Rutas de audiencia, haz lo siguiente: 
 
-1. Añade un paso a tu Canvas. 
+1. Añade un paso en Canvas. 
 2. Arrastra y suelta el componente desde la barra lateral, o selecciona <i class="fas fa-plus-circle"></i> **Añadir** en la parte inferior de un paso y selecciona **Rutas de audiencia**.
 
 El componente por defecto Rutas de público contiene dos grupos de público por defecto, **Grupo 1** y **Todos los demás**. El grupo **Todos los demás** incluye a cualquier usuario que no pertenezca a un grupo de audiencia definido. Este grupo siempre irá último.
@@ -60,7 +60,7 @@ Por ejemplo, si quisieras dirigir la mensajería de incorporación a un grupo de
 
 Una vez completado el paso Rutas de audiencia, cada grupo de audiencia tendrá una rama independiente. Puedes seguir utilizando las Rutas de audiencia para filtrar aún más tu audiencia, o continuar tu recorrido en Canvas con los pasos en Canvas estándar. 
 
-![Dos rutas de audiencia con diferentes grupos basados en la interacción.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![Dos rutas de audiencia con grupos diferentes basados en la interacción.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### Probar los grupos de audiencia
 
@@ -74,7 +74,7 @@ El verdadero poder de las Rutas de audiencia reside en la capacidad de asignar p
 
 Al asignar una prioridad alta a estos grupos, puede dirigirse a los usuarios que entran en filtros y segmentos específicos y, al mismo tiempo, dirigirse a los usuarios que podrían no encajar en esos criterios específicos, todo en un único paso de Canvas.
 
-![Una ruta de audiencia con grupos para "Le gustan los zapatos de gran marca", "Le gustan los zapatos de gran marca" y "Todos los demás".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![Una ruta de audiencia con grupos para "Le gustan los zapatos de las grandes marcas", "Le gustan las grandes marcas" y "Todos los demás".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Por ejemplo, supongamos que desea enviar a un grupo de usuarios anuncios de nuevos productos. Empezarías por clasificar los filtros que corresponden a esos productos en la parte alta de la ruta de audiencia. Si estuvieras creando una campaña de marketing para la empresa "Gran Marca" y acabara de lanzarse una nueva marca minorista, podrías seleccionar filtros como "Le gustan los zapatos de Gran Marca" o "Le gustan los bolsos de Gran Marca", y enviar diferentes mensajes de mensajería electrónica en función del grupo filtrado en el que se encuentren. 
 

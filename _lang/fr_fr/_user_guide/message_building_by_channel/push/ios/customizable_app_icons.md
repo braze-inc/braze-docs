@@ -1,5 +1,5 @@
 ---
-nav_title: "Fonctionnalité Icône d’application personnalisée (iOS)"
+nav_title: "Fonctionnalité d'icône d'application personnalisée (iOS)."
 article_title: Fonctionnalité Icône d’application personnalisée
 page_order: 7
 page_type: reference

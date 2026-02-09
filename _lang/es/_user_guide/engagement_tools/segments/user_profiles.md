@@ -22,11 +22,15 @@ Para acceder al perfil de un usuario, vaya a la página **Buscar usuarios** y bu
 - Correo electrónico
 - Número de teléfono
 - Token de notificaciones push
-- Alias de usuario con el formato "[alias_usuario]:[nombre_alias]", como "amplitud_id:usuario_123"
+- Alias de usuario con el formato "[user_alias]:[alias_name]", como, por ejemplo "amplitude_id:user_123"
 
 Si se encuentra una coincidencia, puede ver la información que ha registrado para este usuario con el SDK Braze. De lo contrario, si su búsqueda devuelve varios perfiles de usuario, puede fusionar cada perfil individualmente o realizar una fusión de usuarios masiva. Para obtener más información, consulte [Usuarios duplicados]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/).
 
-![Resultados de la búsqueda con un banner que dice "Varios usuarios coinciden con tus criterios de búsqueda" y dos botones etiquetados como Anterior y Siguiente.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
+{% alert important %}
+Cuando se utiliza un número de teléfono en la búsqueda, se cambia al formato [`E.164`](https://en.wikipedia.org/wiki/e.164) formato Los usuarios cuyos números de teléfono no se pueden cambiar al formato `E.164` (por ejemplo, porque el número de teléfono tiene un código de país o de área no válido) no se pueden buscar por número de teléfono.
+{% endalert %}
+
+![Resultados de la búsqueda con un banner que dice "Varios usuarios coinciden con tus criterios de búsqueda" y dos botones denominados Anterior y Siguiente.]({% image_buster /assets/img_archive/User_Search_Nonunique.png %}){: style="max-width:60%;"}
 
 ## Ejemplos
 
@@ -52,14 +56,14 @@ La pestaña **Visión general** contiene información básica sobre un usuario y
 | Categoría general | Contiene |
 | --- | --- |
 | Perfil | Sexo, grupo de edad, ubicación, idioma, localidad, zona horaria y fecha de nacimiento. |
-| Resumen de las sesiones | Cuántas sesiones tuvieron, cuándo fue su primera y su última sesión, y en qué aplicaciones. |
+| Resumen de las sesiones | Cuántas sesiones tuvieron, cuándo fueron la primera y la última, y en qué aplicaciones. |
 | Atributos personalizados | Qué atributos personalizados se atribuyen a este usuario y su valor asociado, incluidos los atributos personalizados anidados. |
 | Dispositivos recientes | En cuántos dispositivos se conectaron, los detalles de cada dispositivo y sus identificadores de publicidad asociados (si los hubiera). |
 | Eventos personalizados | Qué eventos personalizados ha realizado este usuario, cuántas veces y cuándo realizó cada evento por última vez. |
 | Compras | Ingresos de por vida atribuidos a este usuario, su última compra, número total de compras y una lista de cada compra. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para más información sobre estos datos, véase [Recogida de datos de usuario]({{site.baseurl}}/user_guide/data/user_data_collection/).
+Para más información sobre estos datos, consulta la [recopilación de datos del SDK]({{site.baseurl}}/user_guide/data/unification/user_data/sdk_data_collection/).
 
 ![La pestaña Resumen de un perfil de usuario.]({% image_buster /assets/img_archive/user_profile2.png %})
 
@@ -89,7 +93,7 @@ La pestaña **Historial de mensajes** del perfil de usuario muestra los eventos 
 Si tienes algún comentario sobre esta tabla o quieres ver eventos concretos, envía un correo electrónico a [user-targeting@braze.com](mailto:user-targeting@braze.com?subject=Messaging%20History%20Tab%20Feedback) con el asunto "Comentarios sobre la pestaña del historial de mensajes".
 {% endalert %}
 
-![La pestaña Historial de mensajería que muestra las campañas y Lienzos que ha recibido un usuario.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
+![La pestaña Historial de mensajería muestra las campañas y Lienzos que ha recibido un usuario.]({% image_buster /assets/img_archive/profiles_messaging_history_tab.png %})
 
 #### Visualización y comprensión de los acontecimientos
 
@@ -101,7 +105,7 @@ Los siguientes eventos de compromiso de mensajes están disponibles para correo 
 
 | Canal | Actos de compromiso disponibles |
 | --- | --- |
-| Correo electrónico | Rebotar<br>Clic<br>Entrega<br>Marcar como correo no deseado<br>Abierto (ver [nota sobre el evento abierto por correo electrónico](#note-on-email-open-event))<br>Enviar<br>Rebote blando<br>Cancelar suscripción |
+| Correo electrónico | Rebotar<br>Clic<br>Eventos de aplazamiento<br>Entrega<br>Marcar como correo no deseado<br>Abierto (ver [nota sobre el evento abierto por correo electrónico](#note-on-email-open-event))<br>Enviar<br>Rebote blando<br>Cancelar suscripción |
 | SMS | Envío por operador<br>Entrega<br>Fallo de entrega<br>Recepción entrante<br>Rechazo<br>Enviar |
 | Push | Rebotar<br>Apertura influida<br>Primer plano de iOS<br>Abiertos<br>Enviar |
 | Mensaje dentro de la aplicación | Clic<br>Impresión |
@@ -138,5 +142,20 @@ Los envíos de tarjetas de contenido se registran cuando la tarjeta está dispon
 El seguimiento de apertura de correo electrónico es propenso a errores en cualquier herramienta, incluida Braze. Con una variedad de funciones de protección de la privacidad ofrecidas por diferentes clientes de correo electrónico que bloquean la carga automática de imágenes o las cargan proactivamente en el servidor, los eventos de apertura de correo electrónico son susceptibles tanto de falsos positivos como de falsos negativos.
 
 Aunque las estadísticas de apertura de correo electrónico pueden ser útiles en conjunto, por ejemplo, para comparar la eficacia de diferentes líneas del asunto, no debes asumir que un evento de apertura individual para un usuario individual es significativo.
+
+#### ¿Por qué algunos campos están en blanco en la pestaña Historial de mensajes?
+
+Algunos campos pueden estar ausentes en la pestaña **Historial de mensajes** de un usuario en los siguientes escenarios:
+
+- Cuando en un evento faltan datos para **Mensaje enviado**, esto indica que la campaña no tiene ninguna variación de mensaje.
+- Cuando a un evento le faltan datos para **Campaña/Canvas** y **Mensaje enviado**, esto indica que este mensaje fue enviado desde una campaña API (no campañas desencadenadas por API) que no especificó el `campaign_id` y `message_variation_id`. Estos campos son opcionales y pueden omitirse en el cuerpo de la solicitud. Cuando se especifican estos campos, esa información se rellena en los registros del historial de mensajes.
+   - Si un mensaje concreto falta por completo del historial de mensajes, pero aparece en el registro de **Campañas recibidas**, es probable que el usuario haya recibido la campaña antes de ser identificado como el usuario actual. Si un perfil existente queda huérfano, se transfiere el registro de **campañas recibidas**, pero no el historial de mensajes. 
+- Si faltan datos para **Campaign/Canvas**, es posible que se haya enviado una prueba manual. Las pruebas manuales se registran en la pestaña **Historial de mensajería**, pero no se registrará la campaña o Canvas que se envió.
+
+## Artículos relacionados
+
+- [Ciclo de vida del perfil de usuario]({{site.baseurl}}/user_guide/data/unification/user_data/user_profile_lifecycle/)
+- [POST: Exportar perfil de usuario por identificador]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/)
+- [POST: Borrar usuarios]({{site.baseurl}}/api/endpoints/user_data/post_user_delete/)
 
 
