@@ -2,7 +2,7 @@
 nav_title: Google Gemini
 article_title: Google Gemini
 description: "This reference article outlines the partnership between Braze and Google Gemini, which lets you connect Gemini models to Braze for use with custom AI agents."
-alias: /docs/partners/gemini/
+alias: /partners/gemini/
 page_type: partner
 search_tag: Partner
 
