@@ -1,14 +1,14 @@
 ---
-nav_title: AI
-article_title: AI Partners
+nav_title: AI Model Providers
+article_title: AI Model Providers
 page_order: 11
 
 page_type: landing
-description: "This landing page lists Braze partners (Alloys) who provide AI-powered capabilities you can integrate with Braze."
+description: "This landing page lists AI model providers you can integrate with Braze for use with custom AI agents."
 layout: partner_page
 search_tag: Partner
 
-partner_top_header: "AI"
+partner_top_header: "AI Model Providers"
 
 valid_partner_list:
 - name: OpenAI
