@@ -2,7 +2,7 @@
 nav_title: Google Gemini
 article_title: Google Gemini
 description: "This reference article outlines the partnership between Braze and Google Gemini, which lets you connect Gemini models to Braze for use with custom AI agents."
-alias: /partners/gemini/
+alias: /docs/partners/gemini/
 page_type: partner
 search_tag: Partner
 
@@ -11,6 +11,8 @@ search_tag: Partner
 # Google Gemini
 
 > [Google Gemini](https://deepmind.google/technologies/gemini/) is Google's family of AI models that combines advanced reasoning across text, code, and images to help brands deliver smarter, more personalized experiences.
+
+_This integration is maintained by Google._
 
 ## About the integration
 
