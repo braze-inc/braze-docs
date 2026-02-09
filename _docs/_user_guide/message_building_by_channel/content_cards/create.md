@@ -271,7 +271,7 @@ Let's say you've set a campaign to be triggered by a session start, and it has r
 We recommend using this option for unique messages in a notification center or message inbox (such as promotions), when it’s important for analytics to be unified, or when the timeliness of the message isn't a concern (such as existing recipients can wait for the eligibility window before seeing the updated cards).
 {% endalert %}
 
-This approach keeps all your analytics unified in a single campaign. Newly eligible users will get the new card but delays the update for existing recipients until they are re-eligible:
+This approach keeps all your analytics unified in a single campaign. Newly eligible users will get the new card, but it delays the update for existing recipients until they are re-eligible:
 
 1. Stop your campaign and, when prompted, select **Remove card after the next sync**.
 2. Edit your campaign as needed.
