@@ -26,11 +26,11 @@ channel:
 
 アラートの設定を開始するには、キャンペーンの分析ページに移動します。[**アラートを設定**] を選択すると、アラートの上限と下限のしきい値、およびアラートの受信者とチャネルを指定できます。
 
-\![「キャンペーンモニタリング」ダイアログボックスにある 2 つのボタン: [キャンセル] と [保存]。]({% image_buster /assets/img_archive/campaign_alerts.png %})
+![「キャンペーンモニタリング」ダイアログボックスにある 2 つのボタン: [キャンセル] と [保存]。]({% image_buster /assets/img_archive/campaign_alerts.png %})
 
 スケジュールされた定期的なキャンペーンでは、キャンペーンが送信するたびに送られるメッセージの上限と下限のしきい値を設定できます。トリガーキャンペーンでは、毎時および毎日送信されるメッセージ数の上限と下限を設定できます。
 
-メールアラート、Webhook アラート、またはその両方を設定できます。Webhook アラートは、Slack チャネルにアラートを送信できるため、非常に便利です。キャンペーンアラートと Slack の統合の詳細については、弊社の[ドキュメント]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#slack-incoming-webhook-integration)を参照してください。
+メールアラート、Webhook アラート、またはその両方を設定できます。Webhook アラートは、Slack チャネルにアラートを送信できるため、非常に便利です。キャンペーンアラートとSlackの統合の詳細については、[受信webhook](https://docs.slack.dev/messaging/sending-messages-using-incoming-webhooks/)を使用したメッセージの送信に関するSlackのドキュメントを参照してください。
 
 {% alert note %}
 今後のキャンペーンのキャンペーンアラートを設定する場合、キャンペーンの開始前と終了後に更新を受信することがあります。これは、キャンペーンアラートは、キャンペーンが手動で停止されるまで送信され続けるためです。

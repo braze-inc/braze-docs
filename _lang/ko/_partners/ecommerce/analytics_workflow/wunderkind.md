@@ -27,7 +27,7 @@ The Braze and Wunderkind integration allows you to analyze the performance lift 
 
 ## Integration
 
-Reach out to your WunderKind team to help set up the integration. You will be asked to provide your Braze ESP or API credentials so that Wunderkind can send out email deployments and subscription statuses through the API. 
+통합 설정에 도움을 받으려면 WunderKind 팀에 문의하세요. You will be asked to provide your Braze ESP or API credentials so that Wunderkind can send out email deployments and subscription statuses through the API. 
 
 Once connected, Wunderkind will:
 - Conduct preliminary testing to confirm a stable connection and ensure emails can deploy from the Wunderkind side to the ESP. 

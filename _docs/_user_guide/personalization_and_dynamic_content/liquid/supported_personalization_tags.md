@@ -96,7 +96,7 @@ User is in list of apps
 
 ## Targeted device information
 
-For push notifications and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes won't work for Content Cards. 
+For push notifications, in-app messages, and Banners, you can template in the following attributes for the device to which a message is being sent. That is, a push notification, in-app message, or Banner can include device attributes of the device on which the message is being read. Note that these attributes won't work for Content Cards. 
 
 |Tag | Description |
 |------------------|---|

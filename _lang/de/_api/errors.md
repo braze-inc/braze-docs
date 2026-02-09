@@ -1,14 +1,14 @@
 ---
 nav_title: Fehler &amp; Antworten
 article_title: API-Fehler &amp; Antworten
-description: "Dieser referenzierte Artikel behandelt die verschiedenen Fehler und Server-Antworten, die bei der Verwendung der Braze API auftreten können, und wie Sie diese beheben können." 
+description: "Dieser referenzierte Artikel behandelt die verschiedenen Fehler und Server-Antworten, die bei der Verwendung der Braze API auftreten können, und wie Sie diese beheben können."
 page_type: reference
 page_order: 2.3
 
 ---
 # API-Fehler und Antworten
 
-> Dieser referenzierte Artikel behandelt die verschiedenen Fehler und Server-Antworten, die bei der Verwendung der Braze API auftreten können, und wie Sie diese beheben können. 
+> Dieser referenzierte Artikel behandelt die verschiedenen Fehler und Server-Antworten, die bei der Verwendung der Braze API auftreten können, und wie Sie diese beheben können.
 
 {% raw %}
 
@@ -32,7 +32,7 @@ Wenn Ihre Nachricht erfolgreich ist, aber nicht schwerwiegende Fehler aufweist, 
 }
 ```
 
-Im Falle eines Erfolgs werden alle Nachrichten, die nicht von einem Fehler im Array `errors` betroffen waren, weiterhin zugestellt. Wenn Ihre Nachricht mit einem schwerwiegenden Fehler behaftet ist, erhalten Sie die folgende Antwort:
+Im Falle eines Erfolgs werden alle Nachrichten, die nicht von einem Fehler im Array `errors` betroffen waren, weiterhin zugestellt. Wenn Ihre Nachricht einen schwerwiegenden Fehler aufweist, erhalten Sie die folgende Antwort:
 
 ```json
 {
@@ -42,7 +42,7 @@ Im Falle eines Erfolgs werden alle Nachrichten, die nicht von einem Fehler im Ar
 
 ## Responses für getrackte Sende-IDs
 
-Analytics sind immer für Kampagnen verfügbar. Darüber hinaus sind Analytics für eine bestimmte Instanz des Kampagnenversands verfügbar, wenn die Kampagne als Broadcast gesendet wird. Wenn Tracking für eine bestimmte Kampagnen-Sendeinstanz verfügbar ist, erhalten Sie die folgende Antwort:
+Analytics sind immer für Kampagnen verfügbar. Darüber hinaus sind Analytics für eine bestimmte Instanz des Kampagnenversands verfügbar, wenn die Kampagne als Broadcast gesendet wird. Wenn Tracking für eine bestimmte Instanz des Kampagnenversands verfügbar ist, erhalten Sie die folgende Antwort:
 
 ```json
 {
@@ -58,7 +58,7 @@ Das Element Status Code einer Server-Antwort ist eine dreistellige Zahl, wobei d
 
 - Die **Klasse 2XX** des Status Codes (non-fatal) zeigt an, dass **Ihre Anfrage** erfolgreich empfangen, verstanden und akzeptiert wurde.
 - Die **Klasse 4XX** des Status Codes (fatal) weist auf einen **Client-Fehler** hin. In der Tabelle der schwerwiegenden Fehler finden Sie eine vollständige Liste der 4XX Fehlercodes und Beschreibungen.
-- Die **Klasse 5XX** des Status Codes (fatal) weist auf einen **Server-Fehler** hin. Es gibt mehrere mögliche Ursachen, z.B. kann der Server, auf den Sie zugreifen möchten, die Anfrage nicht ausführen, der Server wird gerade gewartet, so dass er die Anfrage nicht ausführen kann, oder der Server hat ein hohes Verkehrsaufkommen. In diesem Fall empfehlen wir Ihnen, Ihre Anfrage mit exponentiellem Backoff zu wiederholen. Im Falle eines Vorfalls oder Ausfalls ist Braze nicht in der Lage, REST API-Aufrufe, die während des Zeitfensters des Vorfalls fehlgeschlagen sind, wiederzugeben. Sie müssen alle Anrufe, die während des Störungsfensters fehlgeschlagen sind, erneut versuchen.
+- Die **Klasse 5XX** des Status Codes (fatal) weist auf einen **Server-Fehler** hin. Es gibt mehrere mögliche Ursachen, z.B. kann der Server, auf den Sie zugreifen möchten, die Anfrage nicht ausführen, der Server wird gerade gewartet, so dass er die Anfrage nicht ausführen kann, oder der Server hat ein hohes Verkehrsaufkommen. In diesem Fall empfehlen wir Ihnen, Ihre Anfrage mit exponentiellem Backoff zu wiederholen. Im Falle eines Vorfalls oder Ausfalls ist Braze nicht in der Lage, REST API-Aufrufe, die während des Zeitfensters des Vorfalls fehlgeschlagen sind, wiederzugeben. Sie müssen alle Anrufe, die während des Ereignisfensters fehlgeschlagen sind, erneut versuchen.
   - Ein **502-Fehler** ist ein Fehler, bevor er den Zielserver erreicht.
   - Ein **503-Fehler** bedeutet, dass die Anfrage den Zielserver zwar erreicht hat, wir die Anfrage aber nicht abschließen können, weil die Kapazität nicht ausreicht, ein Netzwerkproblem vorliegt oder ähnliches.
   - Ein **504-Fehler** zeigt an, dass ein Server keine Antwort von einem anderen vorgelagerten Server erhalten hat.
@@ -69,7 +69,7 @@ Die folgenden Statuscodes und zugehörigen Nachrichten werden zurückgegeben, we
 
 {% endraw %}
 {% alert warning %}
-Alle folgenden Fehlercodes bedeuten, dass keine Nachrichten gesendet werden.
+Alle der folgenden Fehlercodes zeigen an, dass keine Nachrichten gesendet werden.
 {% endalert %}
 {% raw %}
 

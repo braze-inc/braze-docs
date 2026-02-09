@@ -24,7 +24,7 @@ Wenn Sie Canvas-Daten abrufen möchten, referenzieren Sie auf den Endpunkt [Canv
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `campaigns.details`.
 
-## Rate-Limits
+## Rate-Limit
 
 {% multi_lang_include rate_limits.md endpoint='default' %}
 
@@ -47,8 +47,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 ## Antworten
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) the date created as ISO 8601 date,
@@ -89,7 +87,9 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
     "alert": (string) the alert body text,
     "extras": (hash) any key-value pairs provided,
     "title": (string) the alert title text,
-    "action": (string) action link from click
+    "action": (string) action link from click,
+    "image_url": (string) the image URL for an Android notification image, an iOS notification image, or a Web push icon image,
+    "large_image_url": (string) the web notification image URL for Android Chrome and Windows web push actions; null in other cases
 }
 ```
 
@@ -219,7 +219,7 @@ Die Antwort `messages` enthält Informationen zu jeder Nachricht. Im Folgenden f
 
 ### Verhalten bei Konversion
 
-Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-Event-Verhalten, das für die Kampagne festgelegt wurde. Diese Verhaltensweisen sind in der von der Kampagne vorgegebenen Reihenfolge. Zum Beispiel wird Konversions-Event A der erste Artikel im Array sein, Konversions-Event B der zweite usw. Im Folgenden finden Sie Beispiele für das Verhalten bei Konversions-Events:
+Das Array `conversion_behaviors` enthält Informationen über jedes Konversions-Event-Verhalten, das für die Kampagnen festgelegt wurde. Diese Verhaltensweisen sind in der von der Kampagne vorgegebenen Reihenfolge. Zum Beispiel ist Konversions-Event A der erste Artikel im Array, Konversions-Event B der zweite und so weiter. Im Folgenden finden Sie Beispiele für das Verhalten bei Konversions-Events:
 
 #### Klicks auf E-Mail
 

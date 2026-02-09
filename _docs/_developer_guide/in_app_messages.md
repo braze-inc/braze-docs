@@ -15,16 +15,16 @@ description: "Learn about in-app messages and how to set them up for the Braze S
 > Learn about in-app messages and how to set them up for the Braze SDK.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/web/in_app_messages.md %}
+{% endsdktab %}
+
 {% sdktab android %}
 {% multi_lang_include developer_guide/android/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab swift %}
 {% multi_lang_include developer_guide/swift/in_app_messages.md %}
-{% endsdktab %}
-
-{% sdktab web %}
-{% multi_lang_include developer_guide/web/in_app_messages.md %}
 {% endsdktab %}
 
 {% sdktab android ott %}
@@ -55,7 +55,7 @@ description: "Learn about in-app messages and how to set them up for the Braze S
 {% multi_lang_include developer_guide/unity/in_app_messages.md %}
 {% endsdktab %}
 
-{% sdktab xamarin %}
+{% sdktab .NET MAUI (Xamarin) %}
 {% multi_lang_include developer_guide/xamarin/in_app_messages.md %}
 {% endsdktab %}
 {% endsdktabs %}

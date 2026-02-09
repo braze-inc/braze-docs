@@ -1,5 +1,5 @@
 ---
-nav_title: Canvas-Zielgruppensynchronisierung
+nav_title: Canvas Zielgruppe synchronisieren
 page_order: 10
 noindex: true
 tool: Canvas

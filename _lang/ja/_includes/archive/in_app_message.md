@@ -1,33 +1,33 @@
 ### スライドアップアプリ内メッセージ
 
-[`Slideup`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} アプリ内メッセージは、画面の上部または下部から「スライドアップ」または「スライドダウン」するため、このような名前が付けられています。 画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
+[\`Slideup\`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} アプリ内メッセージ s は"slide up" または"slide down" 画面の上部または下部から非常に名前が付けられています。 画面の一部分だけを覆い、効果的で邪魔にならないメッセージング機能を提供します。
 
 ![スライドアップの例]({% image_buster /assets/img_archive/In-App_Slideup.png %})
 
 ### モーダルのアプリ内メッセージ
 
-[`Modal`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} アプリ内メッセージは画面中央に表示され、半透明のパネルに囲まれます。より重要なメッセージングに役立つ、最大2つのクリックアクションと分析有効ボタンを装備できます。
+[\`Modal\`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} アプリ内メッセージ s スクリーン中央のアプリの耳で、透過パネルで囲まれています。より重要なメッセージングに役立つ、最大2つのクリックアクションと分析有効ボタンを装備できます。
 
-![モーダルの例]({% image_buster /assets/img_archive/In-App_Modal.png %})
+![モーダル例]({% image_buster /assets/img_archive/In-App_Modal.png %})
 
 ### 完全なアプリ内メッセージ
 
-[`Full`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} アプリ内メッセージは、ユーザーコミュニケーションの内容とインパクトを最大化するのに有効です。 `full` アプリ内メッセージの上半分には画像が含まれ、下半分にはテキストが表示されます。また、最大2つのクリックアクションおよび分析が有効になっているボタンも表示されます。
+[\`Full\`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} アプリ内メッセージ s は、ユーザー通信の内容と影響を最大化するのに役立ちます。 `full` アプリ内メッセージの上半分には画像が含まれ、下半分にはテキストが表示されます。また、最大2つのクリックアクションおよび分析が有効になっているボタンも表示されます。
 
 ![完全な例]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 ### HTML フルアプリ内メッセージ
 
-[`HTML Full`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} アプリ内メッセージは、完全にカスタマイズされたユーザーコンテンツを作成するのに便利です。ユーザー定義の HTML アプリ内のフルメッセージコンテンツは、{% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} に表示され、必要に応じて画像やフォントなどの他のリッチコンテンツを含めることができます。これにより、メッセージの外観と機能を完全に制御できます。
+[\`HTML Full\`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} アプリ内メッセージ s は、完全にカスタマイズされたユーザー内容を作成するのに役立ちます。ユーザー定義の HTML アプリ内のフルメッセージコンテンツは、{% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} に表示され、必要に応じて画像やフォントなどの他のリッチコンテンツを含めることができます。これにより、メッセージの外観と機能を完全に制御できます。
 
  {% if include.platform == "iOS" %}
 次の例は、ページ分割された HTML の完全アプリ内メッセージを示しています。
 
-![HTML5の例]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![HTML5の事例]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
  {% elsif include.platform == "Android" %}次の例は、SoundCloud によって作成されたアンケート HTML の完全アプリ内メッセージを示しています。
 
-![HTML5の例]({% image_buster /assets/img_archive/HTML5.gif %})
+![HTML5の事例]({% image_buster /assets/img_archive/HTML5.gif %})
 {% endif %}
 
 完全 HTML アプリ内のメッセージコンテンツは、WKWebView に表示され、必要に応じて画像やフォントなどの他のリッチコンテンツを含めることができます。これにより、メッセージの外観と機能を完全に制御できます。**現在、iOS および Android プラットフォームでのiFrame でのカスタム HTML インアプリメッセージの表示はサポートされていません。**
@@ -40,19 +40,19 @@
 
 ![アプリ内メッセージングコンポーザー]({% image_buster /assets/img_archive/trigger-iam-composer.png %})
 
-非推奨の [`Original In-App Messaging`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages) 製品のドキュメントも参照できます。
+また、非推奨の[\`Origin al In-App Messaging\`]({{ site.baseurl }}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages) 製品のドキュメントも参照できます。
 
 #### トリガーの種類
 
 アプリ内メッセージ製品を使用すると、次のようなさまざまなイベントタイプの結果としてアプリ内メッセージ表示をトリガーできます: `Any Purchase`、`Specific Purchase`、`Session Start`、`Custom Event`、および `Push Click`。 さらに、`Specific Purchase` および `Custom Event` トリガーには堅牢なプロパティフィルターを含めることができます。
 
 {% alert note %}
-トリガーされたアプリ内メッセージは、Braze SDK を通じて記録されたカスタムイベントでのみ機能します。アプリ内メッセージは、API または API イベント (購入イベントなど) によってトリガーすることはできません。Android を使用している場合は、[Android でカスタムイベントをログに記録する方法]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events).)を確認してください。iOS で作業している場合は、[iOS でカスタムイベントをログに記録する方法]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).を確認してください。
+トリガーされたアプリ内メッセージは、Braze SDK を通じて記録されたカスタムイベントでのみ機能します。アプリ内メッセージは、API または API イベント (購入イベントなど) によってトリガーすることはできません。Android を使用している場合は、[Android]({{ site.baseurl }}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) にカスタムイベントを記録する] 方法を確認してください。iOS で作業している場合は、[iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events) でカスタムイベントをログオンする方法を確認してください。
 {% endalert %}
 
 #### 配信セマンティクス
 
-ユーザーが対象になるすべてのアプリ内メッセージは、セッション開始時にユーザーのデバイスに配信されます。SDK のセッション開始セマンティクスの詳細については、[session lifecycle documentation]{% if include.platform == "iOS" %}[in_app_message_15a]{% elsif include.platform == "Android" %}[in_app_message_15b]{% endif %} を参照してください。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
+ユーザーが対象になるすべてのアプリ内メッセージは、セッション開始時にユーザーのデバイスに配信されます。SDKのセッションスタートセマンティクスの詳細については、[セッションライフサイクルドキュメント]{% if include.platform == "iOS" %}[in_app_message_15a]{% elsif include.platform == "Android" %}[in_app_message_15b]{% endif %}を参照してください。配信時に、SDK はアセットをプリフェッチしてトリガー時にすぐに利用できるようにし、表示遅延を最小限に抑えます。
 
 トリガーイベントに複数の適格なアプリ内メッセージが関連付けられている場合、最も優先度の高いアプリ内メッセージのみが配信されます。
 

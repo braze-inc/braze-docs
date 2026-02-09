@@ -2,7 +2,7 @@
 
 ### Push doesn't appear after app is closed from task switcher
 
-If you observe that push notifications no longer appear after the app is closed from the task switcher, your app is likely in Debug mode. Xamarin adds scaffolding in Debug mode that prevents apps from receiving push after their process is killed. If you run your app in Release Mode, you should see push even after the app is closed from the task switcher.
+If you observe that push notifications no longer appear after the app is closed from the task switcher, your app is likely in Debug mode. .NET MAUI adds scaffolding in Debug mode that prevents apps from receiving push after their process is killed. If you run your app in Release Mode, you should see push even after the app is closed from the task switcher.
 
 ### Custom notification factory not being set correctly
 

@@ -1,225 +1,75 @@
 ---
 nav_title: Android用ライブ更新
-article_title: Android Braze SDKのライブ活動
+article_title: Android Braze SDKのライブ更新
 page_order: 0.1
-description: "Android Braze SDKのLive Activitiesの設定方法を学習する。"
+description: "Android Braze SDK の Live 更新の設定方法を学びます。"
 platform: 
   - Android
   - FireOS
+hidden: true
 ---
 
-# Android用ライブ・アクティビティ
+# Android用ライブ更新
 
-> Android Braze SDKでライブ更新をエミュレートする方法を学ぶ。Live Updatesは公式にはサポートされていないが、このガイドでは、[Swift Braze SDKのLive Activitiesに]({{site.baseurl}}/developer_guide/live_notifications/live_activities)似たインタラクティブなロック画面通知を表示できるように、その動作をエミュレートする方法を紹介する。公式のライブ更新とは異なり、この機能は古いバージョンのAndroidにも実装できる。
+> Braze SDK で Android Live 更新 ([Progress Centric Notifications とも言います](https://developer.android.com/about/versions/16/features/progress-centric-notifications)) を使用する方法について説明します。これらの通知は、[Swift Braze SDK のライブアクティビティ]({{site.baseurl}}/developer_guide/live_notifications/live_activities)に似ており、インタラクティブなロック画面通知を表示できます。Android 16 では、進行状況を中心とした通知が導入され、ユーザーが開始した最初から最後までのジャーニーをシームレスに追跡できます。
 
 ## CDI の仕組み
 
-この [`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html)インターフェイスを使って、Brazeプッシュ通知の表示方法をカスタマイズできる。`BrazeNotificationFactory` を拡張することで、Brazeはユーザーに通知が表示される前に、ファクトリーの`createNotification()` メソッドを呼び出す。そして、BrazeダッシュボードまたはREST APIを通して送信されるカスタムキーと値のペアを含むペイロードを渡す。
+[`IBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) インターフェイスを使用して、Braze プッシュ通知の表示方法をカスタマイズできます。`BrazeNotificationFactory` を拡張することで、通知がユーザーに表示される前に Braze はファクトリーの`createNotification()` メソッドを呼び出します。その後、Braze ダッシュボードまたは REST API を通じて送信されたカスタムのキーと値のペアを含むペイロードを渡します。
 
-## ライブ更新をエミュレートする
+## ライブ更新を表示する
 
-{% alert important %}
-ライブ更新はAndroid OSではネイティブにサポートされていない。以下のセクションでは、彼らの一般的な振る舞いをエミュレートする方法のみを紹介する。
-{% endalert %}
+このセクションでは、野生動物救助チームが誰が一番多くのフクロウを救えるかを競う新しいゲーム番組の司会者、スーパーブクロウとパートナーを組むことになる。Android アプリで Live 更新を活用して、進行中の一致のステータスを表示し、リアルタイムで通知をダイナミックに更新できるようにしようとしています。
 
-このセクションでは、野生動物救助チームが誰が一番多くのフクロウを救えるかを競う新しいゲーム番組の司会者、スーパーブクロウとパートナーを組むことになる。彼らはAndroidアプリでライブアップデートを活用し、進行中の試合のステータスを表示し、リアルタイムでダイナミックな通知を更新できるようにしようとしている。
-
-![スーパーフクロウが作りたがっているライブ更新は、「野鳥基金」と「フクロウ救助隊」の現在進行中の試合を表示している。現在第4クォーター、スコアは2-4でOWLがリードしている。]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+![Androidからのライブアップデートのサンプル]({% image_buster /assets/img/android/android-live-update.png %}){: style="max-width:40%;"}
 
 #{% multi_lang_include developer_guide/prerequisites/android.md %}
 
-### ステップ1:顧客レイアウトを追加する
+### ステップ 1: カスタム通知ファクトリーを作成する
 
-プロジェクトにカスタム・ライブ更新レイアウトを1つ以上追加できる。これらは、折りたたんだり広げたりしたときの通知の表示方法を処理するのに役立つ。ディレクトリ構造は以下のようになっているはずだ：
+アプリケーションで、[`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html) を拡張して Braze Live 更新の表示方法を処理する、`MyCustomNotificationFactory.kt` という名前の新しいファイルを作成します。
 
-```plaintext
-.
-├── app/
-└── res/
-    └── layout/
-        ├── liveupdate_collapsed.xml
-        └── liveupdate_expanded.xml
-```
+次の例では、Superb Owl は、進行中の一致の Live 更新を表示するカスタム通知ファクトリを作成しました。次のステップでは、`getTeamInfo` という新しいメソッドを作成し、チームのデータをアクティビティにマッピングする。
 
-各XMLファイルで、カスタムレイアウトを作成する。Superb Owlは、崩壊し拡張されたライブ更新のために以下のレイアウトを作成した：
-
-{% tabs local %}
-{% tab  例を挙げよう：折りたたまれたレイアウト %}
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/notification_title"
-        style="@style/TextAppearance.Compat.Notification.Title"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-</LinearLayout>
-```
-{% endtab %}
-
-{% tab 例:レイアウトの拡大 %}
-{% details サンプルコードを表示する %}
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/team1logo"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:src="@drawable/team_default1"/>
-
-        <TextView
-            android:id="@+id/team1name"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1.6"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/score"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="2-4"
-            android:textColor="#555555"
-            android:textAlignment="center"
-            android:textSize="32sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/timeInfo"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/team2logo"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:src="@drawable/team_default2"/>
-
-        <TextView
-            android:id="@+id/team2name"
-            android:textAlignment="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-</LinearLayout>
-```
-{% enddetails %}
-{% endtab %}
-{% endtabs %}
-
-### ステップ2: カスタム通知ファクトリーを作成する
-
-アプリケーションで、`MyCustomNotificationFactory.kt` という名前の新しいファイルを作成する。 [`BrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html)という名前の新しいファイルを作成する。
-
-次の例では、Superb Owlは、進行中の試合のライブ更新を表示するカスタム通知ファクトリーを作成した。[次のステップでは](#android_step-3-map-custom-data)、`getTeamInfo` という新しいメソッドを作り、チームのデータをアクティビティにマッピングする。
-
-{% details サンプルコードを表示する %}
 ```kotlin
-import android.app.Notification
-import android.widget.RemoteViews
-import androidx.core.app.NotificationCompat
-import com.braze.models.push.BrazeNotificationPayload
-import com.braze.push.BrazeNotificationFactory
-import com.braze.push.BrazeNotificationUtils.getOrCreateNotificationChannelId
-import com.braze.support.BrazeLogger.brazelog
-
-class MyCustomNotificationFactory : BrazeNotificationFactory() {
+class MyCustomNotificationFactory : IBrazeNotificationFactory {
     override fun createNotification(payload: BrazeNotificationPayload): Notification? {
-        if (payload.extras.containsKey("live_update")) {
-            val kvp = payload.extras
-            val notificationChannelId = getOrCreateNotificationChannelId(payload)
-            val context = payload.context
+        val notificationBuilder = populateNotificationBuilder(payload)
+        val context = payload.context ?: return null
 
-            if (context == null) {
-                brazelog { "BrazeNotificationPayload has null context. Not creating notification" }
-                return null
-            }
+        if (notificationBuilder == null) {
+            brazelog { "Notification could not be built. Returning null as created notification." }
+            return null
+        }
+        notificationBuilder.setContentTitle("Android Live Updates").setContentText("Ongoing updates below")
+        setProgressStyle(notificationBuilder, context)
+        return notificationBuilder.build()
+    }
 
-            val team1 = kvp["team1"]
-            val team2 = kvp["team2"]
-            val score1 = kvp["score1"]
-            val score2 = kvp["score2"]
-            val time = kvp["time"]
-            val quarter = kvp["quarter"]
-
-            // Superb Owl will define the 'getTeamInfo' method in the next step.
-            val (team1name, team1icon) = getTeamInfo(team1)
-            val (team2name, team2icon) = getTeamInfo(team2)
-
-            // Get the layouts to use in the custom notification.
-            val notificationLayoutCollapsed = RemoteViews(BuildConfig.APPLICATION_ID, R.layout.liveupdate_collapsed)
-            val notificationLayoutExpanded = RemoteViews(BuildConfig.APPLICATION_ID, R.layout.liveupdate_expanded)
-
-            // Very simple notification for the small layout
-            notificationLayoutCollapsed.setTextViewText(
-                R.id.notification_title,
-                "$team1 $score1 - $score2 $team2\n$time $quarter"
+    private fun setProgressStyle(notificationBuilder: NotificationCompat.Builder, context: Context) {
+        val style = NotificationCompat.ProgressStyle()
+            .setStyledByProgress(false)
+            .setProgress(200)
+            .setProgressTrackerIcon(IconCompat.createWithResource(context, R.drawable.notification_small_icon))
+            .setProgressSegments(
+                mutableListOf(
+                    NotificationCompat.ProgressStyle.Segment(1000).setColor(Color.GRAY),
+                    NotificationCompat.ProgressStyle.Segment(200).setColor(Color.BLUE),
+                )
+            )
+            .setProgressPoints(
+                mutableListOf(
+                    NotificationCompat.ProgressStyle.Point(60).setColor(Color.RED),
+                    NotificationCompat.ProgressStyle.Point(560).setColor(Color.GREEN)
+                )
             )
 
-            notificationLayoutExpanded.setTextViewText(R.id.score, "$score1 - $score2")
-            notificationLayoutExpanded.setTextViewText(R.id.team1name, team1name)
-            notificationLayoutExpanded.setTextViewText(R.id.team2name, team2name)
-            notificationLayoutExpanded.setTextViewText(R.id.timeInfo, "$time - $quarter")
-            notificationLayoutExpanded.setImageViewResource(R.id.team1logo, team1icon)
-            notificationLayoutExpanded.setImageViewResource(R.id.team2logo, team2icon)
-
-            val customNotification = NotificationCompat.Builder(context, notificationChannelId)
-                .setSmallIcon(R.drawable.notification_small_icon)
-                .setStyle(NotificationCompat.DecoratedCustomViewStyle())
-                .setCustomContentView(notificationLayout)
-                .setCustomBigContentView(notificationLayoutExpanded)
-                .build()
-            return customNotification
-        } else {
-            // Use the BrazeNotificationFactory for all other notifications
-            return super.createNotification(payload)
-        }
+        notificationBuilder.setStyle(style)
     }
 }
 ```
-{% enddetails %}
 
-### ステップ 3:顧客データをマップする
+### ステップ2: 顧客データをマップする
 
 `MyCustomNotificationFactory.kt` で、ライブ更新が表示されたときにデータを処理するための新しいメソッドを作成する。
 
@@ -243,13 +93,11 @@ class CustomNotificationFactory : BrazeNotificationFactory() {
 }
 ```
 
-### ステップ4:カスタム通知ファクトリーを設定する
+### ステップ 3:カスタム通知ファクトリーを設定する
 
-アプリケーション・クラスで [`customBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/custom-braze-notification-factory.html?query=var%20customBrazeNotificationFactory:%20IBrazeNotificationFactory?)を使用して、カスタム通知ファクトリを設定する。
+アプリケーションクラスで [`customBrazeNotificationFactory`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/custom-braze-notification-factory.html?query=var%20customBrazeNotificationFactory:%20IBrazeNotificationFactory?) を使用して、カスタム通知ファクトリを設定します。
 
 ```kotlin
-import com.braze.Braze
-
 class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
@@ -260,13 +108,13 @@ class MyApplication : Application() {
 }
 ```
 
-### ステップ 5: アクティビティを送信する
+### ステップ4:アクティビティを送信する
 
 あなたは [`/messages/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages)REST APIエンドポイントを使用して、ユーザーのAndroidデバイスにプッシュ通知を送信できる。
 
 #### curlコマンドの例
 
-Superb Owlは以下のcurlコマンドを使ってリクエストを送った：
+Superb Owl は以下の curl コマンドを使ってリクエストを送信しました。
 
 ```
 curl -X POST "https://BRAZE_REST_ENDPOINT/messages/send" \
@@ -294,7 +142,7 @@ curl -X POST "https://BRAZE_REST_ENDPOINT/messages/send" \
 ```
 
 {% alert tip %}
-curlコマンドはテストに役立つが、[iOSライブ・アクティビティを]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift)すでに処理しているバックエンドでこの呼び出しを処理することをお勧めする。
+curl コマンドはテストに役立ちますが、既に [iOS Live アクティビティ]({{site.baseurl}}/developer_guide/push_notifications/live_notifications/?sdktab=swift)を処理しているバックエンドでこの呼び出しを処理することをおすすめします。
 {% endalert %}
 
 #### リクエストパラメーター
@@ -304,12 +152,12 @@ curlコマンドはテストに役立つが、[iOSライブ・アクティビテ
 | `REST_API_KEY`               | `messages.send` 権限を持つ Braze REST API キー。<br><br> これはBrazeのダッシュボードで**設定** > **APIキー**から作成できます。 |
 | `BRAZE_REST_ENDPOINT`         | RESTエンドポイントのURL。エンドポイントはインスタンスの [Braze URL]({{site.baseurl}}/api/basics/#endpoints) に応じて異なります。 |
 | `USER_ID`                    | 通知を送信するユーザーのID。 |
-| `messages.android_push.title` | メッセージのタイトルだ。デフォルトでは、これはカスタム通知ファクトリーのライブ通知には使用されないが、フォールバックとして使用することができる。 |
-| `messages.android_push.alert` | メッセージの本文だ。デフォルトでは、これはカスタム通知ファクトリーのライブ通知には使用されないが、フォールバックとして使用することができる。 |
-| `messages.extra`             | カスタム通知ファクトリがライブ通知に使用するキーと値のペア。この値には任意の文字列を割り当てることができるが、上の例では、`live_updates` 、デフォルトかライブ・プッシュ通知かを判断するために使われている。 |
-| `ASSIGNED_NOTIFICATION_ID`   | 選択したユーザーのライブ通知に割り当てたい通知ID。このIDはこのゲームに固有のものでなければならず、[既存の通知を](#android_step-4-update-data-with-the-braze-rest-api)後で[更新](#android_step-4-update-data-with-the-braze-rest-api)するために使用しなければならない。 |
+| `messages.android_push.title` | メッセージのタイトル。デフォルトでは、これはカスタム通知ファクトリのライブ通知には使用されませんが、フォールバックとして使用できます。 |
+| `messages.android_push.alert` | メッセージの本文。デフォルトでは、これはカスタム通知ファクトリのライブ通知には使用されませんが、フォールバックとして使用できます。 |
+| `messages.extra`             | カスタム通知ファクトリがライブ通知に使用するキーと値のペア。この値には任意の文字列を割り当てることができます。ただし、上記の例では、`live_updates` を使用して、デフォルトのプッシュ通知かライブプッシュ通知かを判断します。 |
+| `ASSIGNED_NOTIFICATION_ID`   | 選択したユーザーのライブ通知に割り当てたい通知ID。ID はこのゲームに対して一意である必要があり、後で[既存の通知を更新する](#android_step-4-update-data-with-the-braze-rest-api)ために使用する必要があります。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-### ステップ 6: アクティビティを更新する
+### ステップ 5: アクティビティを更新する
 
 既存のライブアップデートを新しいデータで更新するには、`messages.extra` に割り当てられた関連するキーと値のペアを修正し、同じ`notification_id` を使用し、`/messages/send` エンドポイントを再度呼び出す。

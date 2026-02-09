@@ -2,6 +2,26 @@
 
 ## デフォルトのユーザー属性
 
+### 定義済みのメソッド
+
+Brazeには、以下のユーザー属性を設定するための定義済みメソッドがある。 [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)クラス内でメソッドの仕様については、[KDocを](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)参照のこと。
+
+- 名
+- 姓
+- 国
+- 言語
+- 生年月日
+- メールアドレス
+- 性別
+- 市区町村
+- 電話番号
+
+{% alert note %}
+姓、名、国、市区町村などの文字列値はすべて255文字に制限されています。
+{% endalert %}
+
+### デフォルト属性の設定
+
 ユーザーにデフォルト属性を設定するには、Brazeインスタンスで`getCurrentUser()` メソッドを呼び出し、アプリの現在のユーザーへの参照を取得する。そして、ユーザー属性を設定するメソッドを呼び出すことができる。
 
 {% tabs %}
@@ -28,21 +48,33 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-Brazeは、[BrazeUser クラス](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)内で以下のユーザー属性を設定するための定義済みメソッドを提供しています。メソッドの仕様については、[KDocを](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html)参照のこと。
+### デフォルト属性の設定を解除する
 
-- 名
-- 姓
-- 国
-- 言語
-- 生年月日
-- メールアドレス
-- 性別
-- 市区町村
-- 電話番号
+ユーザー属性を解除するには、関連するメソッドに`null` 。
 
-{% alert note %}
-姓、名、国、市区町村などの文字列値はすべて255文字に制限されています。
-{% endalert %}
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## カスタムユーザー属性
 
@@ -78,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 整数 %}
+{% tab Integers %}
 `int` 、カスタム属性を設定する：
 
 {% subtabs global %}
@@ -137,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 浮動小数点 %}
+{% tab Floating-points %}
 `float` 、カスタム属性を設定する：
 
 {% subtabs global %}
@@ -219,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 日付 %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -257,7 +289,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endalert %}
 
 {% endtab %}
-{% tab 配列 %}
+{% tab Array %}
 
 カスタム属性配列内の要素の最大数は、25にデフォルト設定されています。個々の配列の最大値は、Braze ダッシュボードの [**データ設定**] > [**カスタム属性**] で100まで増やすことができます。要素の最大数を超える配列は、含まれる要素が最大数になるよう切り捨てられます。カスタム属性配列とその動作の詳細については、[配列に関する]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)ドキュメントを参照してください。
 
@@ -296,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### カスタム属性の設定解除
+### カスタム属性の設定を解除する
 
-カスタム属性は、次のメソッドを使用して設定を解除することもできます。
+カスタム属性を解除するには、`unsetCustomUserAttribute` メソッドに関連する属性キーを渡す。
 
 {% tabs %}
 {% tab JAVA %}
@@ -324,9 +356,46 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### REST APIを使う
+### 階層化カスタム属性
 
-また、REST APIを使用して、ユーザー属性を設定または解除することもできる。詳しくは[ユーザーデータエンドポイントを]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)参照のこと。
+また、カスタム属性の中にプロパティを入れ子にすることもできる。以下の例では、階層化プロパティを持つ`favorite_book` オブジェクトが、ユーザープロファイルのカスタム属性として設定されている。詳しくは、[階層化カスタム]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)属性を参照のこと。
+
+{% tabs %}
+{% tab JAVA %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### REST API の使用
+
+また、REST APIを使用して、ユーザー属性を設定または解除することもできる。詳細については、[ユーザーデータエンドポイント]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data)を参照してください。
 
 ## ユーザーサブスクリプションの設定
 

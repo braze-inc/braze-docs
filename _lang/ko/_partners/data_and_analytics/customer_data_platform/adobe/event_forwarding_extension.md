@@ -15,7 +15,7 @@ search_tag: Partner
 This document covers the use cases of the extension, how to install it in your event-forwarding libraries, and how to employ its capabilities in an event-forwarding [rule](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=en).
 
 {% alert note %}
-Sending attributes to Braze may increase your Braze data point consumption. Consult with your Braze account manager before sending attributes. Refer to the Braze documentation on [billable data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points) for more information.
+Adobe 이벤트 전달 사용은 Braze 데이터 포인트 사용량을 증가시킬 수 있습니다. 자세한 내용은 [데이터 포인트]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#billable-data-points)에 대한 Braze 설명서를 참조하십시오.
 {% endalert %}
 
 ## Use cases
@@ -106,13 +106,13 @@ User attributes can be a JSON object containing fields that will create or updat
 | Country | The users country as a string in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | Language | The users language as a string in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
 | Date of Birth | The users data of birth in string in format “YYYY-MM-DD” (for example, 1980-12-21). |
-| Time Zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
+| Time Zone | [IANA 시간대](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 데이터베이스의 시간대 이름(예: ’America/New_York’ 또는 '동부 표준시 (미국 & 캐나다)'). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | Twitter | Hash containing any of id (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, ensure you know how this will affect your data point consumption.
+All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. 사용자 속성을 구성할 때, 이것이 데이터 포인트 사용량에 미치는 영향을 알고 있는지 확인하십시오.
 {% endalert %}
 
 {% endtab %}
@@ -174,13 +174,13 @@ User attributes can be a JSON object containing fields that will create or updat
 | Country | The users country as a string in [ISO-3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format. |
 | Language | The users language as a string in [ISO-639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) format. |
 | Date of birth | The users data of birth in string in format “YYYY-MM-DD” (for example, 1980-12-21). |
-| Time zone | Time zone name from [IANA Time Zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) database (for example, ’America/New_York’ or ’Eastern Time (US & Canada)’). |
+| Time zone | [IANA 시간대](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) 데이터베이스의 시간대 이름(예: ’America/New_York’ 또는 '동부 표준시 (미국 & 캐나다)'). |
 | Facebook | A hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | Twitter | Hash containing any of id (integer), `screen_name` (string, X (formerly Twitter) handle), `followers_count` (integer), `friends_count` (integer), `statuses_count`(integer). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
-All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. When configuring user attributes, please ensure you know how this will affect your data point consumption.
+All attributes added within the configuration will be sent each time the event is sent to Braze, regardless of whether the attribute's value has changed. 사용자 속성을 구성할 때, 이것이 데이터 포인트 사용량에 미치는 영향을 알고 있는지 확인하십시오.
 {% endalert %}
 
 {% endtab %}

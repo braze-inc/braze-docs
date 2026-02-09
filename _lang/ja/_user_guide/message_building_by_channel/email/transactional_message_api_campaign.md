@@ -17,7 +17,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 > Braze トランザクションメールは、送信者と受信者間で合意されたトランザクションを円滑に進めるために送信されます。この記事では、Braze ダッシュボードでトランザクションメールキャンペーンを作成し、[`/transactional/v1/campaigns/{campaign_id}/send` エンドポイント]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message)の API 呼び出しに含める`campaign_id` を生成する方法について説明します。
 
 {% alert important %}
-Braze トランザクションメールは、一部の Braze パッケージのみで利用できます。詳しくは、Braze 顧客のサクセスマネージャーに到達するか、[サポートチケット]({{site.baseurl}}/braze_support/)を開封してください。
+Braze トランザクションメールは、一部の Braze パッケージのみで利用できます。詳細については、Brazeカスタマーサクセスマネージャーにお問い合わせいただくか、[サポートチケットを]({{site.baseurl}}/braze_support/)開封してください。
 {% endalert %}
 
 トランザクションメールキャンペーンのタイプは、お客様とその顧客との間で合意されたトランザクションを円滑に進めるために、自動化された非プロモーションメールを送信する目的で構築されています。これには以下のような情報が含まれます。
@@ -37,7 +37,7 @@ Braze トランザクションメールは、一部の Braze パッケージの�
 
 新しいトランザクションのすべてのメールキャンペーンを作成するには、キャンペーンを作成し、メッセージングチャネルとして [**トランザクションメール**] を選択します。
 
-\![キャンペーンの作成]ドロップダウンで、トランザクションメールのオプションをハイライトする。]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![トランザクションメールの選択肢が強調表示された [キャンペーンの作成] ドロップダウン。]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 これで、トランスアクションのすべてのメール キャンペーンの設定に進むことができます。
 
@@ -51,7 +51,7 @@ Braze トランザクションメールは、一部の Braze パッケージの�
 - **ターゲットオーディエンス**ステップが削除されました。トランザクションメールはユーザー群全体を適格 (配信停止ユーザーを含む) として登録するので、フィルターやセグメントを指定する必要はありません。そのため、このメッセージを受信する必要のあるユーザーに適用するロジックがある場合、まずそのロジックを適用してから、特定のユーザーへのメッセージをトリガーする API リクエストを Braze に送信するかどうかを決定することをお勧めします。
 - **コンバージョン**ステップが削除されました。トランザクションメールは現時点ではコンバージョンイベントの追跡に対応していません。
 
-\![メール作成、配信、確認のワークフローで、トランザクションメールキャンペーンを作成する。]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
+![トランスアクションの電子メールキャンペーンを作成するためのコンポーズ、配信、および確認ワークフロー。]({% image_buster /assets/img/transactional_campaign_compose.png %}){: style="max-width:80%;"}
 
 トランスアクションのすべてのメール キャンペーンを設定するには、次のステップに従います。
 

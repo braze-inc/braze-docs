@@ -38,7 +38,7 @@ Eppo はデータウェアハウスで直接実験を分析します。統合を
 EppoでBrazeデータを使用して実験を実行するには、Brazeからエクスポートされたユーザーレベルのメッセージイベントデータに基づいて、データウェアハウスに[割り当てテーブルを](https://docs.geteppo.com/data-management/definitions/assignment-sql/)作成する。キャンバス実験とキャンペーン実験は、異なるメタデータに依存しているため、別々のテーブルを使用することを推奨します。
 
 {% tabs local %}
-{% tab キャンバス実験 %}
+{% tab canvas experiments %}
 キャンバスの実験では、割り当ては以下のいずれかで作成できます。
 
 - キャンバスエントリーレベル (`users.canvas.Entry`)
@@ -48,7 +48,7 @@ EppoでBrazeデータを使用して実験を実行するには、Brazeからエ
 
 {% endtab %}
 
-{% tab キャンペーン実験 %}
+{% tab campaign experiments %}
 キャンペーン実験では、送信イベント (プッシュ、メール、SMS など) を使って、ユーザーがいつ実験に参加したかを判断します。`campaign_name`、`message_variation_name`、および `time` は、割り当てテーブルに入力するために使用されます。
 
 {% endtab %}
@@ -60,6 +60,6 @@ Eppo は、これらの割り当てとファクトテーブルを使用して結
 
 ## サポート
 
-Braze Currents、Snowflakeデータ共有、多変量キャンペーンの設定に関するご質問は、Brazeカスタマーサクセスマネージャーまでお問い合わせください。
+Braze Currentsの設定、データシェアリングのSnowflake、または多変量 キャンペーンの設定については、Braze 顧客のサクセスマネージャーにお問い合わせください。
 
 Braze実験を測定するためのEppoの設定に関するサポートについては、Eppoのサポートチームに問い合わせること。

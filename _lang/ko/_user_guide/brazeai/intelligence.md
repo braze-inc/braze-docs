@@ -3,14 +3,14 @@ nav_title: Intelligence Suite
 article_title: About the Braze Intelligence Suite
 page_order: 1
 search_rank: 12
-description: "Braze Intelligence Suite는 데이터 기반 인사이트로 의사 결정을 자동화하는 데 도움을 줍니다. 전달 시간부터 다변량 테스트까지, 브랜드는 이러한 도구와 기능을 사용하여 대규모로 최적화되는 동적 크로스채널 경험을 만들 수 있습니다."
+description: "Braze Intelligence Suite는 데이터 기반 인사이트로 의사결정을 자동화합니다. 전달 시간부터 다변량 테스트까지, 브랜드는 이러한 도구와 기능을 사용하여 대규모로 최적화되는 동적 크로스채널 경험을 만들 수 있습니다."
 tool:
   - Dashboard
 ---
 
 # The Intelligence Suite
 
-> Braze Intelligence Suite는 데이터 기반 인사이트로 의사 결정을 자동화하는 데 도움을 줍니다. 전달 시간부터 다변량 테스트까지, 브랜드는 이러한 도구와 기능을 사용하여 대규모로 최적화되는 동적 크로스채널 경험을 만들 수 있습니다. Intelligence Suite는 세 가지 주요 기능으로 구성되어 있습니다. 바로 Intelligent Timing, 인텔리전트 채널, 지능형 선택입니다.
+> Braze Intelligence Suite는 데이터 기반 인사이트로 의사결정을 자동화합니다. 전달 시간부터 다변량 테스트까지, 브랜드는 이러한 도구와 기능을 사용하여 대규모로 최적화되는 동적 크로스채널 경험을 만들 수 있습니다. Intelligence Suite는 세 가지 주요 기능으로 구성되어 있습니다: 바로 Intelligent Timing, 인텔리전트 채널, 지능형 선택입니다.
 
 ## 사용 사례
 

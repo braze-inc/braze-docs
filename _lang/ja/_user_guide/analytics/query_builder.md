@@ -25,7 +25,7 @@ alias: /query_builder/
 6. クエリを保存します。
 7. レポートのCSV を読み込むするには、**エクスポート** を選択します。
 
-\![クエリビルダー。テンプレートの結果を表示します。d クエリ&クォート。過去 30 日間のチャネルエンゲージメントと収益。]({% image_buster /assets/img_archive/query_builder.png %})
+![クエリービルダーは、テンプレートdクエリー&クォートの結果を表示します。過去30日間のチャネルエンゲージメントと収益;。]({% image_buster /assets/img_archive/query_builder.png %})
 
 各レポートの結果は、1 日に 1 回生成できます。同じレポートを 1 日に複数回実行すると、それらのレポートに同じ結果が表示されます。
 
@@ -76,7 +76,7 @@ Query Builderの**Query history**セクションには、以前に実行した�
 
 AI クエリビルダーは OpenAI を搭載した [GPT](https://openai.com/gpt-4) を活用して、クエリの SQL を提案します。
 
-\![SQL AI クエリビルダー。]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![SQL AI クエリビルダー。]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 AI クエリビルダーで SQL を生成するには、次の手順に従います。
 

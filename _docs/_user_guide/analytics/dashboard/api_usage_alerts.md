@@ -16,7 +16,7 @@ You can use API usage alerts to monitor request volumes for the following catego
 | API Category | Details |
 |--------------|---------|
 | REST API Endpoints | Tracks usage of all REST API calls made to Braze’s backend, such as sending messages, creating campaigns, or exporting users. |
-| SDK API Requests | Tracks API requests made from Braze SDKs in client apps, such as triggering in-app messages or syncing user data.<br><br>_*Only available to customers who have purchased Monthly Active Users – CY 24–25._ |
+| SDK API Requests | Tracks API requests made from Braze SDKs in client apps, such as triggering in-app messages or syncing user data.<br><br>_*Only available to customers who have purchased Monthly Active Users – CY 24-25._ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Creating an API usage alert
@@ -124,7 +124,7 @@ This alert configuration notifies you when errors occur for API triggered campai
 
 | Endpoint | API key | Response code | Threshold condition | Threshold volume | Within |
 | --- | --- | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | All API keys | `4XX` and `5XX` | Greated than or equal to | 1 | 1 hour |
+| {::nomarkdown}<ul><li><code>/campaigns/trigger/send</code></li><li><code>/canvas/trigger/send</code></li><li><code>/messages/send</code></li></ul>{:/} | All API keys | `4XX` and `5XX` | Greater than or equal to | 1 | 1 hour |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 .reset-td-br-6 role="presentation" }
 {% endtab %}
 

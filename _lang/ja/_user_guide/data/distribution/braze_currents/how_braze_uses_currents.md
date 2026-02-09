@@ -10,11 +10,11 @@ tool: Currents
 
 # Braze で Currents を使用する方法
 
-> Braze では Currents を使用しています。自社製品を気に入っているため、弊社では[パートナー]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/)数社との連携に使用しています。
+> BrazeはCurrentsを選択した[パートナーと]({{site.baseurl}}/user_guide/data/braze_currents/available_partners/)内部で使用している。
 
-メールにフィルターを適用してデータを取り出し、キャンペーンをビジネスインサイトツールである Looker にプッシュしていますが、そこに到達するまでには興味深い経路をたどります。私たちは、ETL（Extract, Transform, Load）手法を少し反転させたものを使っている。つまり、順番をELT（Extract, Load, Transform）に切り替えるだけだ！
+私たちはメールやプッシュキャンペーンから得たデータをフィルターにかけ、ビジネスインサイトツールであるLookerに取り込んでいるが、そこにたどり着くまでには少し違ったルートがある。我々は、ETL（Extract, Transform, Load）手法の逆バージョンを使用している。つまり、順序をELT（Extract, Load, Transform）に切り替えるのだ。
 
-## ステップ 1:イベントデータの取り込みと集約
+## ステップ 1: イベントデータの取り込みと集約
 
 エンゲージメントツール（キャンペーンやキャンバスなど）を使用してキャンペーンを開始した後、独自のシステムとメールパートナーからのデータを使用してイベントデータを追跡する。このデータの一部は集計されてダッシュボードに表示されますが、さらに詳細を調べようと考えました。
 
@@ -22,7 +22,7 @@ tool: Currents
 
 保存と抽出の目的で、Braze のイベントデータを Amazon S3 に送信するように Currents を設定しました。これで、[Athena](https://aws.amazon.com/athena/) を使用して S3 の上でクエリを実行できることがわかりました。これは短期的に優れたソリューションです。しかし、弊社ではリレーショナルデータベースとビジネスインテリジェンス / 分析ツールを使用する長期的なソリューションを求めていました。(これはお客様に推奨するソリューションでもあります。）
 
-私たちは S3 を、宝箱を開ける鍵だと見なしています。必要な場所にデータを転送することで、データの移動、変換、および分析の可能性が広がります。ただし、S3 には非常に特殊な構造があるため、S3 でデータを変換しないように注意しています。
+S3は、データの移動、ピボット、分析のための柔軟なストレージとルーティングオプションを提供する。S3ではデータを変換しない。
 
 ## ステップ 3:リレーショナルデータベースでのイベントデータの変換
 
@@ -34,7 +34,7 @@ S3 からウェアハウス (弊社の場合では [Snowflake Data Sharing](http
 
 Snowflake Reader Accounts を使用すると、Snowflake アカウントや Snowflake との顧客関係がなくても、[Snowflake Data Sharing]({{site.baseurl}}/partners/snowflake/) と同じデータや機能にアクセスできます。Reader Accounts では、Braze がお客様のデータを作成してアカウントと共有し、またログインしてデータにアクセスするための認証情報を用意します。これにより、すべてのデータ共有と使用量請求は  Braze が完全に処理することになります。 
 
-詳細については、カスタマーサクセスマネージャーにお問い合わせください。
+詳細については、カスタマー・サクセス・マネージャーに問い合わせを。
 
 #### その他のリソース
 役立つ使用量監視リソースについては、Snowflake の[リソースモニター](https://docs.snowflake.com/en/user-guide/resource-monitors.html)と[ウェアハウスクレジット使用量の表示](https://docs.snowflake.com/en/user-guide/credits.html#viewing-warehouse-credit-usage-for-your-account)に関する記事を参照してください。

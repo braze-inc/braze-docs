@@ -9,7 +9,7 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS、MMS、RCS"
-guide_top_text: "SMS（Short Messaging Service）、MMS（Multimedia Messaging Service）、RCS（Rich Communication Services）は、ユーザーの電話番号を利用するため、他の多くのメッセージングチャネルよりもダイレクトな方法で、リアルタイムにユーザーにアプローチすることができる。Braze SMS、MMS、またはRCSを使い始めるには、以下のトピックをチェックしよう！<br><br>以下のトピックのどれにも準備ができていない？BrazeのSMSを知るには、<a href='/docs/about_sms/'>SMSセットアップ</a>コレクションに進んでください。<br><br>**SMS、MMS、RCSの使用可否はBrazeパッケージに依存する。使い始める場合は、アカウントマネージャーまたはカスタマーサクセスマネージャーにお問い合わせください。"
+guide_top_text: "SMS（Short Messaging Service）、MMS（Multimedia Messaging Service）、RCS（Rich Communication Services）は、ユーザーの電話番号を利用するため、他の多くのメッセージングチャネルよりもダイレクトな方法で、リアルタイムにユーザーにアプローチすることができる。Braze SMS、MMS、またはRCSを使い始めるには、以下のトピックをチェックしよう！<br><br>以下のトピックのどれにも準備ができていない？BrazeのSMSを知るには、<a href='/docs/about_sms/'>SMSセットアップ</a>コレクションに進んでください。<br><br>**SMS、MMS、RCSが利用できるかどうかは、Brazeのパッケージによって異なる。まずはアカウントマネージャーまたはカスタマーサクセスマネージャーにご連絡を。"
 description: "このランディングページには、SMS (ショートメッセージングサービス)、MMS (マルチメディアメッセージングサービス)、RCS (リッチコミュニケーションサービス) がまとめられています。これらのサービスは、ユーザーの電話番号を使用して、リアルタイムでユーザーに到達できるため、他のほとんどのメッセージングチャネルよりも直接的にユーザーにリーチする方法です。"
 
 guide_featured_title: "一般記事"

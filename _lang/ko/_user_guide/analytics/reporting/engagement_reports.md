@@ -1,5 +1,5 @@
 ---
-nav_title: 참여 보고서
+nav_title: Engagement reports
 article_title: 참여 보고서
 page_order: 3
 local_redirect:
@@ -59,7 +59,7 @@ tool:
 
 ![engagement_report_add_stats]({% image_buster /assets/img_archive/engagement_report_add_stats.png %})
 
-| 채널 | 사용 가능한 통계 |
+| Channel | 사용 가능한 통계 |
 | ------| --------------|
 | 이메일 | 전송, 열기, 고유 열기, 클릭, 고유 클릭, 클릭하여 열기, 수신 거부, 반송, 전달됨, 신고된 스팸 |
 | 푸시  | 전송, 열람, 영향받은 열람, 반송, 본문 클릭송 수 |

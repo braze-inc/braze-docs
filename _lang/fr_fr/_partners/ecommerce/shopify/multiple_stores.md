@@ -2,7 +2,7 @@
 nav_title: Connecter plusieurs magasins
 article_title: Prise en charge de plusieurs boutiques Shopify
 alias: /shopify_connecting_multiple_stores/
-page_order: 5
+page_order: 6
 description: "Cet article de référence explique comment connecter et configurer plusieurs boutiques Shopify à un seul espace de travail."
 ---
 
@@ -26,7 +26,7 @@ Cette fonctionnalité ne prend pas en charge Shopify Markets ou Markets Pro. Si 
 ## Connexion d'un magasin supplémentaire
 Après avoir installé l'appli Braze sur votre boutique Shopify et installé votre première boutique, sélectionnez **\+ Connecter une nouvelle boutique.**
 
-![Le bouton "+ Connect New Store" sur la page d'intégration de Shopify.]({% image_buster /assets/img/Shopify/begin_setup_button.png %}){: style="max-width:80%;"}
+![Le bouton "+ Connecter une nouvelle boutique" sur la page d'intégration de Shopify.]({% image_buster /assets/img/Shopify/begin_setup_button.png %}){: style="max-width:80%;"}
 
 Pour votre boutique régionale Shopify supplémentaire, sélectionnez **Commencer la configuration.**
 
@@ -34,7 +34,7 @@ Pour votre boutique régionale Shopify supplémentaire, sélectionnez **Commence
 
 Comme pour votre première intégration de boutique Shopify, vous pouvez choisir entre une configuration standard ou personnalisée.
 
-![La section "Enable the Braze SDKs" contient des options permettant d'implémenter le Braze Web SDK avec la configuration standard ou personnalisée.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
+![La section "Activer les SDK de Braze" contient des options permettant d'implémenter le SDK Web de Braze avec la configuration standard ou personnalisée.]({% image_buster /assets/img/Shopify/standard_or_custom.png %}){: style="max-width:80%;"}
 
 Choisissez l'option qui correspond le mieux à vos besoins :
 
@@ -42,7 +42,7 @@ Choisissez l'option qui correspond le mieux à vos besoins :
 
 Pour afficher l'intégration de chaque magasin et configurer les paramètres avancés, sélectionnez un magasin dans le menu déroulant.
 
-!["Paramètres d'intégration" avec un menu déroulant pour sélectionner une boutique Shopify.]({% image_buster /assets/img/Shopify/store_dropdown_menu.png %}).
+!["Paramètres d'intégration" avec un menu déroulant pour sélectionner une boutique Shopify.]({% image_buster /assets/img/Shopify/store_dropdown_menu.png %})
 
 ## Synchronisation des utilisateurs entre les magasins
 
@@ -69,7 +69,7 @@ Lorsqu'un profil utilisateur est synchronisé, les champs suivants sont fusionn�
 - Données personnalisées sur les événements et les achats
 - Propriétés d'événement personnalisées pour la segmentation (par exemple, "X fois en Y jours" où X ≤ 50 et Y ≤ 30).
 - Nombre d'événements (combiné des deux profils)
-- Dates du premier et du dernier événement (Braze sélectionne les dates les plus anciennes et les plus récentes)
+- Dates du premier et du dernier événement (Braze sélectionne les dates les plus anciennes et les plus récentes).
 - Données d'interaction de la campagne (champs de date les plus récents)
 - Résumés des flux de travail (champs de date les plus récents)
 - Historique des messages et de l'engagement
@@ -80,14 +80,14 @@ Lorsqu'un profil utilisateur est synchronisé, les champs suivants sont fusionn�
 Vous pouvez choisir de collecter les abonnés directement via Braze (dans les paramètres de votre connecteur Shopify) ou via des alternatives API et SDK qui synchronisent les données depuis Shopify.
 
 {% tabs local %}
-{% tab Connecteur Shopify %}
+{% tab Shopify connector %}
 Dans l'étape **Gérer les utilisateurs** des paramètres de votre connecteur Shopify, vous pouvez utiliser Braze pour collecter les abonnements par e-mail et SMS et les organiser dans un groupe d'abonnements dédié :
 
 1. Créez un groupe d'abonnement unique pour chaque magasin que vous connectez. Cela vous permet de conserver des données précises sur la provenance des abonnés.
 2. Activez la collecte d'abonnés par e-mail et par SMS.
 {% endtab %}
 
-{% tab API ou SDK de Braze %}
+{% tab Braze API or SDKs %}
 Vous pouvez également synchroniser les informations d'abonnement au marketing par e-mail et par SMS directement depuis Shopify à l'aide de l'API ou des SDK de Braze.
 
 |Option|Ressources|
@@ -123,7 +123,7 @@ Lorsque vous connectez plus d'un magasin, les attributs suivants seront synchron
 
 Lorsque vous connectez plusieurs magasins, les événements entrants recommandés par eCommerce incluront une propriété d'événement source. Cette propriété identifie l'URL de la vitrine d'où provient l'événement, ce qui vous permet d'utiliser cette information pour la segmentation ou le déclenchement de cas d'utilisation spécifiques.
 
-![Un Canvas basé sur une action avec un déclencheur pour entrer les utilisateurs qui effectuent l'événement personnalisé `ecommerce.order_placed`.]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
+![Un canevas basé sur une action avec un déclencheur pour entrer les utilisateurs qui effectuent l'événement personnalisé `ecommerce.order_placed`.]({% image_buster /assets/img/Shopify/ecommerce_order_placed.png %}){: style="max-width:80%;"}
 
 Les événements recommandés eCommerce pris en charge dans le cadre de l'intégration de Shopify sont les suivants :
 
@@ -138,7 +138,7 @@ Les événements recommandés eCommerce pris en charge dans le cadre de l'intég
 
 Les événements personnalisés entrants de Shopify comprennent une propriété d'événement appelée `shopify_storefront`. Cette propriété indique l'URL de la vitrine d'où provient l'événement, ce qui vous permet de l'exploiter pour la segmentation ou le déclenchement de cas d'utilisation.
 
-![Un Canvas basé sur une action avec un déclencheur pour entrer les utilisateurs qui effectuent l'événement personnalisé `shopify_paid_order`.]({% image_buster /assets/img/Shopify/shopify_paid_order.png %}){: style="max-width:80%;"}
+![Un canevas basé sur une action avec un déclencheur pour entrer les utilisateurs qui effectuent l'événement personnalisé `shopify_paid_order`.]({% image_buster /assets/img/Shopify/shopify_paid_order.png %}){: style="max-width:80%;"}
 
 Les événements personnalisés de Shopify pris en charge sont les suivants :
 
@@ -153,7 +153,7 @@ Pour un aperçu complet de toutes les charges utiles des événements, reportez-
 
 Lorsque vous connectez et configurez chaque boutique Shopify dans Braze, vous pouvez éventuellement activer la synchronisation des produits Shopify dans le cadre de l'intégration.
 
-Si vous activez la synchronisation des produits pour chaque magasin, Braze inclura le nom de votre magasin Shopify dans le nom du catalogue. Cela vous permet de distinguer les produits des différents magasins.
+Si vous activez la synchronisation des produits pour chaque magasin, Braze inclut le nom de votre magasin Shopify dans le nom du catalogue. Cela permet de distinguer les produits des différents magasins.
 
-![Catalogues Shopify avec leur boutique Shopify dans leur nom.]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
+![Catalogues Shopify avec leur boutique Shopify à leur nom.]({% image_buster /assets/img/Shopify/catalog_store_name.png %})
 

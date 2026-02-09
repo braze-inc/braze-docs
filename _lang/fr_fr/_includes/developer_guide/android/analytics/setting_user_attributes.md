@@ -2,6 +2,26 @@
 
 ## Attributs par défaut de l’utilisateur
 
+### Méthodes prédéfinies
+
+Braze propose des méthodes prédéfinies pour définir les attributs utilisateur suivants au sein de la classe [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) dans la classe. Pour les spécifications de la méthode, reportez-vous à [notre KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+
+- Prénom
+- Nom
+- Pays
+- Langue
+- Date de naissance
+- E-mail
+- Genre
+- Ville d’origine
+- Numéro de téléphone
+
+{% alert note %}
+Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de famille, le pays et la ville d’origine sont limitées à 255 caractères.
+{% endalert %}
+
+### Définition des attributs par défaut
+
 Pour définir un attribut par défaut pour un utilisateur, appelez la méthode `getCurrentUser()` sur votre instance Braze pour obtenir une référence à l'utilisateur actuel de votre application. Vous pouvez ensuite appeler des méthodes pour définir un attribut utilisateur.
 
 {% tabs %}
@@ -28,21 +48,33 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-Braze fournit des méthodes prédéfinies pour définir les attributs utilisateur suivants dans la [classe BrazeUser](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Pour les spécifications de la méthode, reportez-vous à [notre KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+### Désactivation des attributs par défaut
 
-- Prénom
-- Nom
-- Pays
-- Langue
-- Date de naissance
-- E-mail
-- Genre
-- Ville d’origine
-- Numéro de téléphone
+Pour désactiver un attribut utilisateur, passez `null` à la méthode correspondante.
 
-{% alert note %}
-Toutes les valeurs de chaîne de caractères telles que le prénom, le nom de famille, le pays et la ville d’origine sont limitées à 255 caractères.
-{% endalert %}
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Attributs utilisateur personnalisés
 
@@ -51,7 +83,7 @@ Outre les attributs par défaut, Braze vous permet de définir des attributs per
 ### Définition des attributs personnalisés
 
 {% tabs local %}
-{% tab Chaîne de caractères %}
+{% tab String %}
 Pour définir un attribut personnalisé avec une valeur `string`:
 
 {% subtabs global %}
@@ -78,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Entiers %}
+{% tab Integers %}
 Pour définir un attribut personnalisé avec une valeur `int`:
 
 {% subtabs global %}
@@ -137,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Points flottants %}
+{% tab Floating-points %}
 Pour définir un attribut personnalisé avec une valeur `float`:
 
 {% subtabs global %}
@@ -191,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Booléen %}
+{% tab Boolean %}
 Pour définir un attribut personnalisé avec une valeur `boolean`:
 
 {% subtabs global %}
@@ -257,7 +289,7 @@ Les dates transmises à Braze avec cette méthode doivent être au format [ISO 8
 {% endalert %}
 
 {% endtab %}
-{% tab Réseau %}
+{% tab Array %}
 
 Le nombre maximum d’éléments dans les tableaux d’attributs personnalisés est par défaut de 25. Le maximum pour les tableaux individuels peut être augmenté jusqu’à 100 dans le tableau de bord de Braze, sous **Paramètres des données** > **Attributs personnalisés**. Les tableaux dépassant le nombre maximum d’éléments seront tronqués pour contenir le nombre maximum d’éléments. Pour plus d'informations sur les tableaux d'attributs personnalisés et leur comportement, consultez notre documentation sur les [tableaux.]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)
 
@@ -296,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Enlever la configuration d’un attribut personnalisé
+### Désactivation des attributs personnalisés
 
-Les attributs personnalisés peuvent également être annulés à l’aide de la méthode suivante :
+Pour désactiver un attribut personnalisé, transmettez la clé de l'attribut concerné à la méthode `unsetCustomUserAttribute`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -321,6 +353,43 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 }
 ```
 
+{% endtab %}
+{% endtabs %}
+
+### Imbrication d'attributs personnalisés
+
+Vous pouvez également imbriquer des propriétés dans des attributs personnalisés. Dans l'exemple suivant, un objet `favorite_book` avec des propriétés imbriquées est défini comme un attribut personnalisé sur le profil utilisateur. Pour plus de détails, reportez-vous à la section [Attributs personnalisés imbriqués]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+{% tabs %}
+{% tab JAVA %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
 {% endtab %}
 {% endtabs %}
 

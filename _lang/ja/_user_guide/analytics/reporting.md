@@ -4,7 +4,7 @@ article_title: レポート
 page_order: 7
 layout: dev_guide
 guide_top_header: "あなたのレポート"
-guide_top_text: "貴社のデータは貴社にとって多くの意味を持つため、当社は Braze 内にいくつかのレポート処理のオプションが用意されています (ただし <a href='/docs/user_guide/data/distribution/braze_currents/'>Currents</a>を除く)。何から始めたらよいかわからない場合は、「<a href='/docs/user_guide/analytics/reporting/#reports-overview'>レポートの概要</a>」をチェックして、マーケティング戦略に関する一般的な質問に答えるためにどのレポートや分析が使えるか、ガイダンスを得よう。"
+guide_top_text: "貴社のデータは貴社にとって多くの意味を持つため、当社は Braze 内にいくつかのレポート処理のオプションが用意されています (ただし <a href='/docs/user_guide/data/distribution/braze_currents/'>Currents</a>を除く)。どこから始めるべきかわからない場合は、<a href='/docs/user_guide/analytics/reporting/#reports-overview'>レポート s Overview</a> をチェックして、一般的なマーケティング 戦略の疑問に答えるために使用できるレポート s と分析に関するガイダンスを入手してください。"
 
 page_type: landing
 description: "このランディングページには、セグメントレポート、エンゲージメントレポート、レポートビルダーなど、Braze (Currents を含まない) で利用可能なレポートオプションに関する記事がまとめられています。"
@@ -344,7 +344,7 @@ guide_menu_list:
 {% tab Predictive Churn %}
 **解約予測**
 
-[解約予測]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) は [Braze Predictive Suite]({{site.baseurl}}/user_guide/brazeai/) の最初のモデルです。解約予測を使用して予測の定義と生成を行うと、将来の解約を最小限に抑えるための先を見越したアプローチを提供できます。
+[Predictive Churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/)を使用して予測sを定義および生成し、将来の解約を最小限に抑えるための積極的なアプリを提供します。
 
 それぞれのビジネスで解約とリテンションの定義が異なるため、定義を解約予測に入力するだけで済み、あとは Braze が行います。また、予測を改善するキャンペーンまたはキャンバスを作成したり、詳細な分析のためにセグメントを構成したりできます。
 

@@ -1,18 +1,18 @@
 ---
 nav_title: Sync and delete account data
-article_title: Syncing account data using CDI
+article_title: Sync account data using CDI
 page_order: 4
 page_type: reference
 description: "Learn how to sync your Braze account data using CDI."
 
 ---
 
-# Syncing account data using CDI
+# Sync account data using CDI
 
 > Learn how to sync your Braze account data using CDI.
 
 {% alert important %}
-[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are currently in beta, which is required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
+[Account objects](https://braze.com/unlisted_docs/account_opportunity_object/) are in beta and are required to use this feature. Contact your Braze account manager if you’re interested in participating in the beta.
 {% endalert %}
 
 ## Prerequisites
@@ -30,8 +30,9 @@ Only make updates to your account schema when the sync is paused or not schedule
 - If `DELETED` is `true`, the account is deleted.
 - Syncing doesn’t log data points, but all synced data counts toward your total accounts usage, measured by total stored data—there’s no need to limit to only changed data.
 - Fields not in your accounts schema are dropped; update the schema before syncing new fields.
+- You can refresh, resume, or pause a sync by hovering over the sync name and selecting the relevant action.
 
-## Syncing your account data
+## Sync your account data
 
 You can sync your account data using CDI through a data warehouse or a file storage.
 
@@ -58,7 +59,7 @@ To integrate your data source with your data warehouse:
          DELETED BOOLEAN
     );
     ```
-2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a role, warehouse, and user, and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     ```json
     CREATE ROLE BRAZE_INGESTION_ROLE;
 
@@ -100,7 +101,7 @@ To integrate your data source with your data warehouse:
        deleted boolean
     )
     ```
-2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a user and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
     {% raw %}
     ```json 
     CREATE USER braze_user PASSWORD '{password}';
@@ -216,7 +217,7 @@ To integrate your data source with your data warehouse:
     ```
 
 {:start="2"}
-2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—just make sure they have access to the accounts table.
+2. Create a service principal and grant permissions. If you already have credentials from another sync, you can reuse them—make sure they have access to the accounts table.
 
 {:start="3"}
 3. If you use network policies, allow Braze IPs to access your Microsoft Fabric instance. For the list of IPs, see [Cloud Data Ingestion]({{site.baseurl}}/user_guide/data_and_analytics/cloud_ingestion/integrations/#step-1-set-up-tables-or-views).
@@ -274,7 +275,7 @@ ID,NAME,PAYLOAD
 {% endtab %}
 {% endtabs %}
 
-## Creating a sync view
+## Create a sync view
 
 Creating a sync view in your data warehouse lets the source refresh automatically without needing to rewrite additional queries.
 

@@ -1,13 +1,13 @@
 ---
 nav_title: Troubleshooting webhook and connected content requests
-article_title: Troubleshooting Webhook and Connected Content Requests
+article_title: Troubleshoot Webhook and Connected Content Requests
 page_order: 3
 channel:
   - webhooks
 description: "This article covers how to troubleshoot webhook and Connected Content error codes, including what the errors are and steps to resolve them."
 ---
 
-# Troubleshooting webhook and Connected Content requests
+# Troubleshoot webhook and Connected Content requests
 
 > This article covers how to troubleshoot common error codes for webhooks and Connected Content, and provides further explanations on how these errors can occur in your requests.
 
@@ -159,7 +159,7 @@ If you believe the unhealthy host detection may be causing issues, contact [Braz
 
 ### Setting up automated emails
 
-If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors. 
+If you experience more than 100,000 webhook or Connected Content endpoint errors (including retries) in a workspace in a 24-hour period, you will receive an email that includes the following information on how to resolve the errors.
 
 - Name of the workspace
 - A link to the Canvas or campaign
@@ -186,7 +186,7 @@ To sign up to receive these emails, do the following:
 
 ### Message Activity Log entries
 
-There will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to the error that triggered the automated email.
+If a failure occurs, there will be at least one entry in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab) related to it. If the request is retried and eventually succeeds, those details will be available in Currents and Snowflake Data Share. Note that even if a request eventually succeeds after a retry, the errors can still trigger the automated email.
 
 ### Additional failure insights in Braze Currents
 

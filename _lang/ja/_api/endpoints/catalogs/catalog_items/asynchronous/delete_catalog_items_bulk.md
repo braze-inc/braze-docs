@@ -100,7 +100,7 @@ curl --location --request DELETE 'https://rest.iad-03.braze.com/catalogs/restaur
 | `ids-too-large` | 項目 ID は250文字以内にする必要があります。 |
 | `ids-not-unique` | 項目 ID がリクエスト内で一意であることを確認します。 |
 | `ids-not-strings` | 項目 ID は文字列型でなければなりません。 |
-| `items-missing-ids` | アイテム ID を持たないアイテムもあります。各項目が項目 ID を持っていることを確認します。 |
+| `items-missing-ids` | 項目IDがない項目もあります。各項目が項目 ID を持っていることを確認します。 |
 | `invalid-ids` | 項目 ID には、英字、数字、ハイフン、アンダースコアのみを使用できます。 |
 | `request-includes-too-many-items` | あなたのリクエストは項目が多すぎます。リクエストごとの項目の上限は50個です。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

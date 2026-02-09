@@ -1,5 +1,5 @@
 ---
-nav_title: "ビデオ付きリファレンス"
+nav_title: "動画付リファレンス"
 
 page_order: 5
 

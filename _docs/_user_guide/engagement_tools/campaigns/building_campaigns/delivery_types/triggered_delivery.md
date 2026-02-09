@@ -65,7 +65,7 @@ For example, let's say we have a campaign with an abandoned cart custom event th
 The trigger event "start session" can be the user's very first app open if your campaign's segment applies to new users. (for example, if your segment consists of those with no sessions).
 {% endalert %}
 
-Keep in mind that you can still send a triggered campaign to a specific segment of users, so users who aren't a part of the segment won't receive the campaign even if they complete the trigger event. If you notice users not receiving the campaign even though they qualified for the segment, see our section on [why a user might not have received a triggered campaign]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/).
+Keep in mind that you can still send a triggered campaign to a specific segment of users, so users who aren't a part of the segment won't receive the campaign even if they complete the trigger event.
 
 With respect to the trigger event for when a user adds an email address to their profile, the following rules apply:
 

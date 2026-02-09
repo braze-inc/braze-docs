@@ -1,6 +1,6 @@
 ## Intégration du SDK Roku
 
-### Étape 1 : Ajouter des fichiers
+### Étape 1 : Ajouter des fichiers
 
 Les fichiers du SDK Braze sont disponibles dans le répertoire `sdk_files` du [référentiel SDK Roku de Braze](https://github.com/braze-inc/braze-roku-sdk).
 

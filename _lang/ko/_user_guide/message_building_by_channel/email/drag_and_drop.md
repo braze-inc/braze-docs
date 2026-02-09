@@ -19,7 +19,7 @@ guide_featured_list:
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
 - name: 편집기 블록
-  link: /docs/dnd/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=email
   image: /assets/img/braze_icons/align-left.svg
 - name: 전역 스타일 설정
   link: /docs/dnd/global_style_settings/

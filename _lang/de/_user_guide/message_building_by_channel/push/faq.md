@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Push-FAQs
-page_order: 80
+page_order: 25
 description: "Dieser Artikel behandelt einige der am häufigsten gestellten Fragen, die bei der Einrichtung von Push Kampagnen auftreten."
 page_type: FAQ
 channel:
@@ -18,7 +18,7 @@ Wenn sich ein Nutzer:in von einem Gerät oder einer Website abmeldet, bleibt er 
 
 Wenn ein Push-Token neu zugewiesen wird, wird die Änderung im **Push-Changelog** des Nutzerprofils angezeigt. Sie finden dies unter dem Tab **Engagement** im Nutzerprofil.
 
-![Das "Push Changelog" im Abschnitt "Kontakteinstellungen".][1]{: style="max-width:50%;"}
+![Das "Push Changelog" im Abschnitt "Kontakteinstellungen".]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
 ### Warum hat ein Opt-in Nutzer:innen kein Push-Token?
 
@@ -34,4 +34,3 @@ Wenn Sie möchten, dass das Push-Token dem ursprünglichen Nutzer:innen wieder z
 1. Lassen Sie den ursprünglichen Nutzer:innen sich bei dem Profil mit dem fehlenden Push-Token anmelden.
 2. Triggern Sie einen neuen Push-Versand. Dadurch wird das Token zurück auf das Konto übertragen, wenn Push auf dem Gerät noch aktiviert ist.
 
-[1]: {% image_buster /assets/img/push_changelog_faq.png %}

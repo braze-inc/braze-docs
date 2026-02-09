@@ -20,7 +20,7 @@ When you send a WhatsApp product message to a user, the user goes on the followi
 1. The user receives your product or catalog message in WhatsApp.
 2. The user adds products to their cart directly from WhatsApp.
 3. The user taps **Place order** in WhatsApp.
-4. Your website or app recieves the cart data from Braze and generates a checkout link.
+4. Your website or app receives the cart data from Braze and generates a checkout link.
 5. The user is directed to your website or app to complete their checkout.
 
 When users add items to their cart through catalog messages, Braze receives webhook data for follow-up actions.
@@ -75,7 +75,7 @@ You can either select the products manually with IDs or, if you’ve enabled cat
 
 ## Setting up product messages
 
-1. In the [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#), follow [Meta's instructions](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) to create your Meta catalog. Make sure you’re in the same Meta Business Portfolio where your Braze-connected WhatsApp Business Accont resides.
+1. In the [Meta Commerce Manager](https://business.facebook.com/business/loginpage/?next=https%3A%2F%2Fbusiness.facebook.com%2Fcommerce_manager%2F#), follow [Meta's instructions](https://www.facebook.com/business/help/1275400645914358?id=725943027795860&ref=search_new_1) to create your Meta catalog. Make sure you’re in the same Meta Business Portfolio where your Braze-connected WhatsApp Business Account resides.
 2. Follow Meta's instructions to [connect your Meta catalog](https://www.facebook.com/business/help/1953352334878186?id=2042840805783715) to your Braze-connected WhatsApp Business Account by assigning the "Manage Catalog" permission in Meta Business Manager. 
 
 ![Meta "Catalogs" page with an arrow pointing at the "Assign partner" button for the catalog called "sweeney_catalog".]({% image_buster /assets/img/whatsapp/meta_catalog.png %}){: style="max-width:90%;"}

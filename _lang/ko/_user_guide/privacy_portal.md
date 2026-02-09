@@ -1,5 +1,5 @@
 ---
-nav_title: 개인정보 보호 포털
+nav_title: 개인정보 포털
 article_title: 개인정보 보호 포털
 page_order: 60
 layout: dev_guide

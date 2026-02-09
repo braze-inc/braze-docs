@@ -1,6 +1,6 @@
 ---
-nav_title: 메시징 사용자
-article_title: 이탈 예측을 위한 사용자 타겟팅
+nav_title: 사용자 메시징하기
+article_title: 예측 이탈 사용자 타겟팅하기
 description: "이 참조 문서에서는 필터 구현 및 전략적 고려 사항과 같은 이탈 예측을 생성한 후 가능한 다음 단계에 대해 설명합니다."
 page_order: 1.2
 
@@ -18,7 +18,7 @@ page_order: 1.2
 
 캠페인 또는 세그먼트에서 필터를 사용하여 해당 임계값에 따라 사용자를 타겟팅할 수도 있습니다. 캠페인, 캔버스, 세그먼트에서 "이탈 점수" 또는 "이탈 카테고리"로 사용자를 필터링할 수 있으며, Braze의 다른 필터를 사용하는 것과 마찬가지로 사용할 수 있습니다.
 
-![고객이탈 필터는 오디언스를 정의할 때 구매 가능성 카테고리 및 구매 가능성 점수를 포함합니다.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
+![오디언스를 정의할 때 사용할 수 있는 고객이탈 필터에는 구매 가능성 카테고리와 구매 가능성 점수가 있습니다.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
 
 ## 전략적 고려 사항
 

@@ -1,11 +1,11 @@
 ---
-nav_title: Présentation du SDK
+nav_title: Aperçu du SDK
 article_title: Présentation du SDK pour les développeurs
 description: "Cette article de référence d’onboarding fournit un aperçu technique pour les développeurs de SDK Braze. Il aborde les analyses par défaut qui font l’objet d’un suivi par le SDK, le blocage de la collecte automatique de données et la version du SDK publiée de votre application."
 page_order: 0
 ---
 
-# [![Cours d’apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"}Aperçu du SDK pour les développeurs
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/developer/sdk-integration-basics){: style="float:right;width:120px;border:0;" class="noimgborder"} SDK aperçu pour les développeurs
 
 > Avant de commencer à intégrer les SDK Braze, vous vous demandez peut-être exactement ce que vous concevez et intégrez. Vous pourriez être curieux de savoir comment le SDK peut être personnalisé afin de mieux répondre à vos besoins. Cet article peut vous aider à répondre à toutes vos questions concernant SDK. 
 
@@ -25,11 +25,11 @@ Les SDK Braze ont une empreinte négligeable. Nous modifions automatiquement le 
 
 ## Compatibilité SDK
 
-Le SDK de Braze est conçu pour se comporter au mieux et ne pas interférer avec les autres SDK présents dans votre application. Si vous rencontrez des problèmes qui pourraient être dus à une incompatibilité avec un autre SDK, contactez le support Braze.
+Le SDK de Braze est conçu pour se comporter au mieux et ne pas interférer avec les autres SDK présents dans votre application. Si vous rencontrez des problèmes que vous pensez être dus à une incompatibilité avec un autre SDK, contactez le service d'assistance de Braze.
 
 ## Analyses par défaut et gestion de session
 
-Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans le calcul de votre nombre de points de données.
+Certaines données utilisateur sont collectées automatiquement par notre SDK, par exemple, Première application utilisée, Dernière application utilisée, Nombre total de sessions, Système d’exploitation de l’appareil, etc. Si vous suivez nos guides d'intégration pour mettre en œuvre nos SDK, vous pourrez profiter de cette [collecte de données par défaut]({{site.baseurl}}/user_guide/data/user_data_collection/sdk_data_collection/). Vérifier cette liste pour éviter de stocker plusieurs fois les mêmes informations sur les utilisateurs. À l'exception du début et de la fin de la session, toutes les autres données suivies automatiquement ne sont pas prises en compte dans l'utilisation de vos points de données.
 
 {% alert note %}
 Toutes nos fonctionnalités sont configurables, mais il est judicieux de mettre en œuvre le modèle de collecte de données par défaut.
@@ -96,7 +96,7 @@ Pour plus de détails sur l'utilisation, reportez-vous à la rubrique [Stockage]
 
 Vous pouvez utiliser le tableau de bord pour voir la version du SDK d'une application particulière en sélectionnant **Paramètres > Paramètres des applications**. La **version du SDK en ligne** indique la version la plus élevée du SDK de Braze utilisée par votre application en ligne/en production/instantanée la plus récente pour au moins 5 % de vos utilisateurs.
 
-![Une application nommée Swifty dans un espace de travail. La version du SDK Live est la 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
+![Une application nommée Swifty dans un espace de travail. La version du SDK en ligne est la 6.6.0.]({% image_buster /assets/img/live-sdk-version.png %}){: style="max-width:80%"} 
 
 {% alert tip %}
 Si vous avez une application iOS, vous pouvez confirmer que vous utilisez le [SDK Swift]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) au lieu de l'ancien [SDK iOS Objective-C]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/overview/) si la **version de votre Live SDK** est égale ou supérieure à 5.0.0, qui était la première version publiée du SDK Swift.

@@ -37,7 +37,15 @@ There are certain browsers, such as the Naver Android and iOS apps, that don’t
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-The plans to phase out the purchase event will be announced in late 2025. In the long run, the purchase event will be replaced by new [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), which will come with enhanced features for segmentation, reporting, analytics, and more. However, the new eCommerce events will not support existing features related to the purchase event, such as Lifetime Value (LTV) or revenue reporting in Canvases or campaigns. For a complete list of features related to purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+The plans to phase out the purchase event will be announced in 2026. The purchase event will eventually be replaced by new [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), which will come with enhanced features for segmentation, reporting, analytics, and more. However, the new eCommerce events will not support existing features related to the purchase event, such as Lifetime Value (LTV) or revenue reporting in Canvases or campaigns. For a complete list of features related to purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Purchase event deprecation for eCommerce filters' %}
+
+{% alert important %}
+The plans to phase out the purchase event will be announced in 2026. The purchase event will eventually be replaced by new [eCommerce recommended events]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), which will come with enhanced features for segmentation, reporting, analytics, and more. When this happens, segment filters will no longer populate under purchase behavior. For a full list of purchase events, refer to [Logging purchase events]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
 {% endalert %}
 
 {% endif %}
@@ -62,6 +70,22 @@ The Shopify integration supports Shopify customer create and customer update web
 
 {% alert important %}
 If you're participating in the Canvas Context early access, Canvas entry properties are part of Canvas context variables. This means `canvas_entry_properties` is now referenced as `context`. Each context variable includes a name, data type, and a value that can include Liquid. Currently, `canvas_entry_properties` are still backwards compatible. For more details, see [Context]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) and [Canvas  entry properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'dynamic image URL' %}
+
+{% alert important %}
+You can pull in dynamic images by using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in the image URL field, but your image URL must begin with `https://`. Using `http://` may cause issues with your message.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'network dependency' %}
+
+{% alert important %}
+Content Cards, in-app messages, Banners, and feature flags rely on device connectivity to sync with Braze servers. Because network conditions can vary, there is a chance content or updates may not sync, display, or be cleared immediately (for example, if a user is offline). We recommend avoiding these channels for critical, time-sensitive updates.
 {% endalert %}
 
 {% endif %}

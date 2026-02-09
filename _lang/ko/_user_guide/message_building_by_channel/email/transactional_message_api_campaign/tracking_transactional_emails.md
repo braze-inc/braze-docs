@@ -1,6 +1,6 @@
 ---
-nav_title: 트랜잭션 이메일 추적
-article_title: 트랜잭션 이메일 추적
+nav_title: 거래 이메일 추적
+article_title: 거래 이메일 추적
 page_order: 1
 description: "이 참조 문서에서는 트랜잭션 이메일 캠페인에 대한 실시간 추적을 설정하는 방법을 다룹니다."
 page_type: reference

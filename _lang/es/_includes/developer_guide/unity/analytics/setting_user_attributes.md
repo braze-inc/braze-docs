@@ -2,21 +2,85 @@
 
 ## Atributos predeterminados del usuario
 
-Para establecer los atributos del usuario, tienes que llamar al método apropiado del objeto `BrazeBinding`. La siguiente es una lista de atributos incorporados que pueden invocarse mediante este método.
+### Métodos predefinidos
 
-| Atributo                 | Ejemplo de código |
-|---------------------------|-------------|
-| Nombre                | `AppboyBinding.SetUserFirstName("first name");` |
-| Apellido                 | `AppboyBinding.SetUserLastName("last name");` |
-| Correo electrónico del usuario                | `AppboyBinding.SetUserEmail("email@email.com");` |
-| Género                    | `AppboyBinding.SetUserGender(Appboy.Models.Gender);` |
-| Fecha de nacimiento                | `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");` |
-| País del usuario              | `AppboyBinding.SetUserCountry("country name");` |
-| Ciudad de residencia del usuario            | `AppboyBinding.SetUserHomeCity("city name");` |
-| Suscripción por correo electrónico del usuario   | `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| Suscripción push de usuario    | `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);` |
-| Número de teléfono del usuario         | `AppboyBinding.SetUserPhoneNumber("phone number");` |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+Braze proporciona métodos predefinidos para configurar los siguientes atributos de usuario utilizando el objeto `BrazeBinding`. Para más información, consulta [el archivo de declaración de Unity de Braze](https://github.com/braze-inc/braze-unity-sdk/blob/master/Assets/Plugins/Appboy/BrazePlatform.cs).
+
+- Nombre
+- Apellido
+- Correo electrónico del usuario
+- Género
+- Fecha de nacimiento
+- País del usuario
+- Ciudad de residencia del usuario
+- Suscripción por correo electrónico del usuario
+- Suscripción push de usuario
+- Número de teléfono del usuario
+
+### Configuración de atributos predeterminados
+
+Para establecer un atributo predeterminado, llama al método correspondiente en el objeto `BrazeBinding`.
+
+{% tabs local %}
+{% tab First name %}
+```csharp
+BrazeBinding.SetUserFirstName("first name");
+```
+{% endtab %}
+{% tab Last name %}
+```csharp
+BrazeBinding.SetUserLastName("last name");
+```
+{% endtab %}
+{% tab Email %}
+```csharp
+BrazeBinding.SetUserEmail("email@email.com");
+```
+{% endtab %}
+{% tab Gender %}
+```csharp
+BrazeBinding.SetUserGender(Appboy.Models.Gender);
+```
+{% endtab %}
+{% tab Birth date %}
+```csharp
+BrazeBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");
+```
+{% endtab %}
+{% tab Country %}
+```csharp
+BrazeBinding.SetUserCountry("country name");
+```
+{% endtab %}
+{% tab Home city %}
+```csharp
+BrazeBinding.SetUserHomeCity("city name");
+```
+{% endtab %}
+{% tab Email subscription %}
+```csharp
+BrazeBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Push subscription %}
+```csharp
+BrazeBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);
+```
+{% endtab %}
+{% tab Phone number %}
+```csharp
+BrazeBinding.SetUserPhoneNumber("phone number");
+```
+{% endtab %}
+{% endtabs %}
+
+### Desactivar atributos predeterminados
+
+Para desactivar un atributo predeterminado del usuario, pasa `null` al método correspondiente.
+
+```csharp
+BrazeBinding.SetUserFirstName(null);
+```
 
 ## Atributos personalizados del usuario
 
@@ -24,8 +88,10 @@ Además de los atributos predeterminados de usuario, Braze también te permite d
 
 ### Establecer atributos personalizados
 
+Para establecer un atributo personalizado, utiliza el método correspondiente para el tipo de atributo: 
+
 {% tabs %}
-{% tab Cadena %}
+{% tab String %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
@@ -33,7 +99,7 @@ AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string cust
 
 {% endtab %}
 
-{% tab Entero %}
+{% tab Integer %}
 
 ```csharp
 // Set Integer Attribute
@@ -43,7 +109,7 @@ AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
 {% endtab %}
 
-{% tab Doble %}
+{% tab Double %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
@@ -51,14 +117,14 @@ AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double valu
 
 {% endtab %}
 
-{% tab Booleano %}
+{% tab Boolean %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 {% endtab %}
 
-{% tab Fecha %}
+{% tab Date %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
@@ -74,7 +140,7 @@ Las fechas pasadas a Braze deben estar en el formato [ISO 8601](http://en.wikipe
 
 {% endtab %}
 
-{% tab Matriz %}
+{% tab Array %}
 
 ```csharp
 // Setting An Array
@@ -93,7 +159,7 @@ Los valores de atributos personalizados tienen una longitud máxima de 255 carac
 
 ### Desactivar atributos personalizados
 
-Para desactivar un atributo personalizado de usuario, utiliza el siguiente método:
+Para desactivar un atributo personalizado, pasa la clave del atributo correspondiente al método `UnsetCustomUserAttribute`. 
 
 ```csharp
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");

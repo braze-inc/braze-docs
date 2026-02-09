@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## Integration von Datenimporten
 
-Jede Integration, die Sie einrichten, wird auf das Datenpunktvolumen Ihres Kontos angerechnet.
+Jede Integration, die Sie einrichten, protokolliert Datenpunkte. Wenn Sie Fragen zu den Datenpunkten von Braze haben, kann Ihr Braze-Konto Manager:in diese Fragen beantworten.
 
 {% alert important %}
 In Übereinstimmung mit den Richtlinien von Mixpanel zur Bindung von Daten werden Ereignisse, die vor dem 1\. Januar 2010 gesendet wurden, beim Import entfernt.
@@ -42,9 +42,9 @@ Nur Nutzer:innen, die bereits in Braze existieren, werden einer Kohorte hinzugef
 
 ### Schritt 4: Segmentierung der Nutzer:innen in Braze
 
-Um in Braze ein Segment dieser Nutzer:innen zu erstellen, gehen Sie zu **Zielgruppe** > **Segmente**, benennen Sie Ihr Segment und wählen Sie **Mixpanel_Cohorts** als Filter aus. Als nächstes verwenden Sie die Option "enthält" und wählen die Kohorte, die Sie in Mixpanel erstellt haben. 
+Um in Braze ein Segment für diese Nutzer:innen zu erstellen, gehen Sie zu **Zielgruppe** > **Segmente**, benennen Sie Ihr Segment und wählen Sie **Mixpanel_Cohorts** als Filter. Als nächstes verwenden Sie die Option "enthält" und wählen die Kohorte, die Sie in Mixpanel erstellt haben. 
 
-![In der Segmentierung von Braze wird der Filter für die Nutzer:in-Attribute "Mixpanel Kohorten" auf "umfasst" und "Braze Kohorte" gesetzt.]({% image_buster /assets/img_archive/mixpanel1.png %})
+![In der Segmentierung von Braze ist der Filter für die Nutzer:innen-Attribute "Mixpanel Kohorten" auf "umfasst" und "Braze Kohorte" eingestellt.]({% image_buster /assets/img_archive/mixpanel1.png %})
 
 Nach dem Speichern können Sie dieses Segment bei der Erstellung von Canvas oder Kampagnen im Schritt Targeting Nutzer:innen referenzieren.
 

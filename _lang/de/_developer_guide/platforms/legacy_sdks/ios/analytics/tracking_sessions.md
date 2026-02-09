@@ -1,6 +1,6 @@
 ---
-nav_title: Sitzungs-Tracking
-article_title: Sitzungs-Tracking für iOS
+nav_title: Tracking von Sitzungen
+article_title: Tracking-Sitzungen für iOS
 platform: iOS
 page_order: 0
 description: "Dieser Referenzartikel beschreibt, wie Sie Sitzungsupdates für Ihre iOS-Anwendung abonnieren können."
@@ -40,7 +40,7 @@ Alternativ können Sie in Ihrem `appboyOptions`-Objekt, das an [`startWithApiKey
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 // Sets the session timeout to 60 seconds
@@ -62,5 +62,5 @@ Der Mindestwert für `sessionTimeoutInSeconds` ist 1 Sekunde. Der Standardwert i
 
 Um Sitzungen über Ihren Benutzer zu erkennen, suchen Sie Ihren Benutzer im Dashboard und navigieren Sie im Benutzerprofil zu **App-Nutzung**. Um sicherzugehen, dass das Sitzungs-Tracking funktioniert, können Sie überprüfen, ob die Metrik "Sitzungen" ansteigt, wenn Sie es erwarten.
 
-![Der Bereich "App-Nutzung" eines Nutzerprofils, in dem die Anzahl der Sitzungen, das Datum der letzten Nutzung und das Datum der ersten Nutzung angezeigt wird.]({% image_buster /assets/img_archive/test_session.png %})
+![Der Abschnitt zur App-Nutzung eines Nutzerprofils, der die Anzahl der Sitzungen, das Datum der letzten Nutzung und das Datum der ersten Nutzung anzeigt.]({% image_buster /assets/img_archive/test_session.png %})
 

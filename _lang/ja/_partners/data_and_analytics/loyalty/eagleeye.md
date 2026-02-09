@@ -28,7 +28,7 @@ Eagle Eye Connect は、Braze と AIR 間の双方向統合で、ブランドは
 
 | 必要条件              | 説明 |
 |--------------------------|-------------|
-| Eagle Eye AIR アカウント    | このパートナーシップを利用するには、アクティブな Eagle Eye AIR アカウントが必要です。まずは、Eagle Eye のパートナーシップチーム ([partnerships@eagleeye.com](mailto:partnerships@eagleeye.com)) にご連絡ください。 |
+| Eagle Eye AIR アカウント    | このパートナーシップを利用するには、アクティブな Eagle Eye AIR アカウントが必要です。まずは、イーグル・アイのパートナーシップ・チーム（[partnerships@eagleeye.com](mailto:partnerships@eagleeye.com) ）にご連絡を。 |
 | Braze REST API キー       | `users.track` 権限を持つ Braze REST API キー。<br><br>これは、Braze ダッシュボードの**「設定」>「API キー」**から作成できます。 |
 | Braze RESTエンドポイント      | [あなたのRESTエンドポイントURL](https://www.braze.com/docs/api/basics/#endpoints)。エンドポイントはインスタンスの Braze URL に応じて異なります。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
@@ -38,7 +38,7 @@ Eagle Eye Connect は、Braze と AIR 間の双方向統合で、ブランドは
 以下の表は、Braze と Eagle Eye AIR の間でサポートされる 2 種類の統合の概要を示しています。Eagle Eye Connect は、AIR と Braze のようなパートナーシステム間のデータ交換を可能にするミドルウェアである。詳しくは、[Eagle Eye の Brazeドキュメント](https://developer.eagleeye.com/docs/braze)を参照してください。
 
 {% tabs local %}
-{% tab アウトバウンド %}
+{% tab outbound %}
 <table>
   <thead>
     <tr>
@@ -73,7 +73,7 @@ Eagle Eye Connect は、Braze と AIR 間の双方向統合で、ブランドは
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation"}
 {% endtab %}
 
-{% tab インバウンド %}
+{% tab inbound %}
 <table>
   <thead>
     <tr>
@@ -154,7 +154,7 @@ AIR で API 呼び出しを行い、AIR から受け取った Braze workspace.Va
 
 テストが成功した後は、統合を本番環境で稼働させ、Braze にデータを継続的に送信できます。AIR と Braze の本番環境でも同じ設定ステップが必要です。
 
-Eagle Eye カスタマーサクセスマネージャーに連絡して、リソースを割り当ててもらい EE Connect を設定します。
+Eagle Eyeカスタマーサクセスマネージャーに連絡してリソースを割り当て、EE Connectの設定を依頼する。
 
 ## サポート
 

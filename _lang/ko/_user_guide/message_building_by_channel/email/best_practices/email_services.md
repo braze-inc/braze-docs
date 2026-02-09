@@ -10,7 +10,7 @@ channel: email
 
 # 이메일 서비스 {#email-services}
 
-> 이메일 프로그램에 추가 지원이 필요하면 Braze는 추가 비용으로 정기 및 일회성 서비스를 제공합니다. 자세한 내용은 Braze 계정 매니저에게 문의하십시오.
+> 이메일 프로그램에 추가 지원이 필요하면 Braze는 추가 비용으로 정기 및 일회성 서비스를 제공합니다. 자세한 정보는 Braze 계정 매니저에게 문의하십시오.
 
 ## Email deliverability services {#email-deliverability-services}
 

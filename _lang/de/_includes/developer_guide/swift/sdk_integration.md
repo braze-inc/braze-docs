@@ -118,7 +118,7 @@ pod install
 
 Jetzt sollten Sie den von CocoaPods erstellten neuen Xcode-Projektarbeitsbereich öffnen können. Stellen Sie sicher, dass Sie diesen Xcode-Workspace anstelle Ihres Xcode-Projekts verwenden.
 
-![Ein Braze-Beispielordner, der erweitert wurde, um die neue `BrazeExample.workspace` zu zeigen.]({% image_buster /assets/img/braze_example_workspace.png %})
+![Ein Braze-Beispielordner wurde erweitert, um das neue \`BrazeExample.workspace\` zu zeigen.]({% image_buster /assets/img/braze_example_workspace.png %})
 
 #### Update des SDK mit CocoaPods
 
@@ -134,7 +134,7 @@ pod update
 
 Rufen Sie die [Braze SDK Release-Seite auf GitHub](https://github.com/braze-inc/braze-swift-sdk/releases) auf und laden Sie `braze-swift-sdk-prebuilt.zip` herunter.
 
-!["Die Braze SDK Release-Seite auf GitHub."]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
+!["Die Braze SDK Release-Seite auf GitHub".]({% image_buster /assets/img/swift/sdk_integration/download-braze-swift-sdk-prebuilt.png %})
 
 #### Schritt 1.2: Wählen Sie Ihre Frameworks aus
 
@@ -178,10 +178,10 @@ Als Nächstes integrieren Sie die **dynamischen** oder **statischen** XCFramewor
 
 Wählen Sie in Ihrem Xcode-Projekt Ihr Build-Target und dann **Allgemein**. Ziehen Sie die [Dateien, die Sie zuvor vorbereitet haben](#swift_step-3-prepare-your-files), per Drag-and-Drop unter **Frameworks, Bibliotheken und eingebettete Inhalte**.
 
-!["Ein Xcode-Beispielprojekt, bei dem jede Bibliothek von Braze auf 'Einbetten & Signieren' eingestellt ist."]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
+!["Ein Xcode-Beispielprojekt, bei dem jede Bibliothek von Braze auf ' & Zeichen einbetten' eingestellt ist."]({% image_buster /assets/img/swift/sdk_integration/embed-and-sign.png %})
 
 {% alert note %}
-Ab dem Swift SDK 12.0.0 sollten Sie für die Braze XCFrameworks sowohl für die statische als auch für die dynamische Variante immer **Embed & Sign** auswählen. Dadurch wird sichergestellt, dass die Ressourcen des Frameworks ordnungsgemäß in Ihr App-Bundle eingebettet werden.
+Ab dem Swift SDK 12.0.0 sollten Sie für die Braze XCFrameworks sowohl für die statische als auch für die dynamische Variante immer die Option **Embed & Sign** auswählen. Dadurch wird sichergestellt, dass die Ressourcen des Frameworks ordnungsgemäß in Ihr App-Bundle eingebettet werden.
 {% endalert %}
 
 {% alert tip %}
@@ -204,10 +204,82 @@ empty_swift_file.swift
 {% endtab %}
 {% endtabs local %}
 
-### Schritt 2: Aktualisieren Sie Ihren App-Delegierten
+### Schritt 2: Verzögerte Initialisierung einrichten (optional)
+
+Sie können die Initialisierung des Braze Swift SDK verzögern. Das ist nützlich, wenn Ihre App die Konfiguration laden oder auf die Zustimmung des Nutzers:innen warten muss, bevor Sie das SDK starten. Die verzögerte Initialisierung stellt sicher, dass Push-Benachrichtigungen von Braze in die Warteschlange gestellt werden, bis das SDK bereit ist.
+
+Um dies zu ermöglichen, rufen Sie `Braze.prepareForDelayedInitialization()` so früh wie möglich auf - idealerweise innerhalb oder vor Ihrem `application(_:didFinishLaunchingWithOptions:)`.
 
 {% alert note %}
-Im Folgenden wird davon ausgegangen, dass Sie bereits eine `AppDelegate` zu Ihrem Projekt hinzugefügt haben (die nicht standardmäßig generiert wird). Wenn Sie dies nicht vorhaben, sollten Sie das Braze SDK so früh wie möglich initialisieren, z.B. beim Start der App.
+Dies gilt nur für Push-Benachrichtigungen von Braze. Andere Push-Benachrichtigungen werden normalerweise von Systemdelegierten bearbeitet.
+{% endalert %}
+
+{% tabs %}
+{% tab Swift %}
+{% subtabs local %}
+{% subtab UIKit %}
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+  // Prepare the SDK for delayed initialization
+  Braze.prepareForDelayedInitialization()
+
+  // ... Additional non-Braze setup code
+
+  return true
+}
+```
+{% endsubtab %}
+
+{% subtab SwiftUI %}
+```swift
+@main
+struct MyApp: App {
+  @UIApplicationDelegateAdaptor var appDelegate: AppDelegate
+
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+    }
+  }
+}
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    // Prepare the SDK for delayed initialization
+    Braze.prepareForDelayedInitialization()
+
+    // ... Additional non-Braze setup code
+
+    return true
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab Objective-C %}
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Prepare the SDK for delayed initialization
+  [Braze prepareForDelayedInitialization];
+  
+  // ... Additional non-Braze setup code
+
+  return YES;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% alert note %}
+[`Braze.prepareForDelayedInitialization(pushAutomation:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/preparefordelayedinitialization(pushautomation:)) akzeptiert einen optionalen Parameter `pushAutomation`. Bei der Einstellung `nil` sind alle Features der Push-Automatisierung aktiviert, mit Ausnahme der Anfrage zur Push-Autorisierung beim Start.
+{% endalert %}
+
+### Schritt 3: Aktualisieren Sie Ihren App-Delegierten
+
+{% alert important %}
+Im Folgenden wird davon ausgegangen, dass Sie Ihrem Projekt bereits eine `AppDelegate` hinzugefügt haben (die nicht standardmäßig erstellt wird). Wenn Sie dies nicht vorhaben, sollten Sie das Braze SDK so früh wie möglich initialisieren, z.B. beim Start der App.
 {% endalert %}
 
 {% subtabs local %}
@@ -288,7 +360,7 @@ Die Standard-Protokollebene für das Braze Swift SDK ist `.error`- dies ist auch
 
 | Schnell       | Objective-C              | Beschreibung                                                  |
 | ----------- | ------------------------ | ------------------------------------------------------------ |
-| `.debug`    | `BRZLoggerLevelDebug`    | (Standard) Debugging-Informationen protokollieren + `.info` + `.error`.    |
+| `.debug`    | `BRZLoggerLevelDebug`    | Debugging-Informationen protokollieren + `.info` + `.error`.              |
 | `.info`     | `BRZLoggerLevelInfo`     | Allgemeine SDK-Informationen protokollieren (Nutzer:innen-Änderungen, etc.) + `.error`. |
 | `.error`    | `BRZLoggerLevelError`    | Fehler protokollieren.                                                  |
 | `.disabled` | `BRZLoggerLevelDisabled` | Es erfolgt keine Protokollierung.                                           |
@@ -300,7 +372,7 @@ Die Standard-Protokollebene für das Braze Swift SDK ist `.error`- dies ist auch
 Sie können die Protokollstufe zur Laufzeit in Ihrem `Braze.Configuration` Objekt zuweisen. Ausführliche Informationen zur Verwendung finden Sie unter [`Braze.Configuration.Logger`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/configuration-swift.class/logger-swift.class).
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 let configuration = Braze.Configuration(

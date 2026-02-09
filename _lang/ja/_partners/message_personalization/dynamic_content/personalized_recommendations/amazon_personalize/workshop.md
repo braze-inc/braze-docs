@@ -25,7 +25,7 @@ _この統合は Amazon Personalize によって管理されます。_
 
 Braze でユーザーにパーソナライズされたメッセージの送信を設定する前に、リテールデモストアのアーキテクチャを例にして、一般的な e コマース Web サイトに必要な関連コンポーネントを確認します。
 
-![さまざまなコンポーネントの相互作用を示すBraze パーソナライゼーションアーキテクチャの分解図。]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
+![画像、Brazeパーソナライゼーションアーキテクチャを分解した写真で、さまざまなコンポーネントがどのように相互作用しているかを示している。]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
 1. リテールデモストアのWeb UI では、AWS Amplify JavaScript ライブラリーを使用して、トレーニングリングイベントをAmazon Personalize に送信します。
 2. Braze キャンペーンユーザーレコードは、Global Store User サービスから更新されます。
@@ -42,7 +42,7 @@ Braze コネクテッドコンテンツは、AWS で実行されているレコ�
 
 ### ステップ1:AWS アカウントに Retail Demo Store をデプロイする
 
-![使用可能な AWS リージョンの画像。]({% image_buster /assets/img/amazon_personalize/region.png %}){: style="float:right;max-width:40%;margin-top:15px;margin-bottom:10px;"}
+![使用可能な AWS リージョン。]({% image_buster /assets/img/amazon_personalize/region.png %}){: style="float:right;max-width:40%;margin-top:15px;margin-bottom:10px;"}
 
 次の表で [**AWS Region**] を選択し、[**Launch Stack**] を選択します。このリストは、プロジェクトをデプロイできるすべてのリージョンを示すものではなく、Retail Demo Store のデプロイのために現在設定されているリージョンのみを示しています。
 

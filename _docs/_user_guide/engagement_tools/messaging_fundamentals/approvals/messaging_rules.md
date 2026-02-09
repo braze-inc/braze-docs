@@ -14,12 +14,8 @@ description: "This page covers how to use messaging rules in the approval workfl
 
 Messaging rules apply to a workspace and are made up of a message type and a maximum number of reachable users.
 
-- **Message type:** Defines what message type the rule will be applied to: campaign, Canvas, or both Canvas and campaigns.
-- **Maximum reachable users:** Determines what audience size that will require an additional approval.
-
-### Shared message types and maximum reachable users
-
-Two rules can exist with the same number of reachable users for the same message type. For example, you can set a maximum of 10,000 users for Canvas and 10,000 users for both Canvas and campaigns. 
+- **Message type:** Defines what message type the rule is applied to: campaign, Canvas, or both Canvas and campaigns.
+- **Maximum reachable users:** Determines what audience size requires an additional approval.
 
 ### Separate approvers
 
@@ -30,7 +26,7 @@ Two rules can share the same user maximum so that you can organize and separate 
 
 ### No overlapping reachable users
 
-You can’t set rules with an overlapping number of users for the same message type. For example, the following messaging rule **can't** be set: 
+To avoid confusion, you cannot set identical rules with an overlapping number of users for the same message type and approvers. For example, the following messaging rule **can't** be set: 
 
 - Rule C for Canvas with a maximum of 10,000 users 
 - Rule D for Canvas with a maximum of 1,000,000 users
@@ -62,8 +58,8 @@ Select **Allow launching with approval**. Next, for **With Approval From**, sele
 
 Note the following details on launching messages with approval:
 
-- If the maximum is met and an approver is selected, the Braze user with the approval permission will be able to select **Approved** from the **Target Audience** approval dropdown.
-- If the maximum is met an an approve is not selected, the Canvas or campaign will be prevented from launching.
+- If the maximum is met and an approver is selected, the Braze user with the approval permission can select **Approved** from the **Target Audience** approval dropdown.
+- If the maximum is met and an approver is not selected, the Canvas or campaign is prevented from launching.
 
 ![The "Summary" step of the Canvas workflow that shows you need an approval to launch.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 

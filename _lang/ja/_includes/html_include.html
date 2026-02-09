@@ -4,10 +4,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="google-site-verification" content="kI0o3QRqDw5zhtd9W5umZTzLTDe6X1tp-gybtFg_7bQ" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   {% noindex {{ page.path }} %}
+   {% noindex {{ page.パス }} %}
   <link rel="icon" type="image/x-icon" href="{{site.baseurl}}/assets/favicon.ico" sizes="160x160">
 
-  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncatewords:25 }}{% else %}{% if page.content.size &gt; 5 %}{{ page.content | strip_html | truncatewords:25 }}{% else %}{{ page.id | slice:1,page.id.size | replace: &apos;/&apos;, &apos; &apos; | replace: &apos;_&apos;, &apos; &apos; }}{% endif %}{% endif %}"><link rel="canonical" {% if page.url="=" site.index_url %} href="{{ site.baseurl | prepend: site.homeurl }}" else endif/><meta name="keywords" content="ろう、文書、appboy、academy{{ page.id | replace: &apos;_&apos;, &apos; &apos;| replace: &apos;/&apos;, &apos;, }} ">
+  <meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncatewords:25 }}{% else %}{% if page.content.size &gt; 5 %}{{ page.content | strip_html | truncatewords:25 }}{% else %}{{ page.id | slice:1,page.id.size | replace: &apos;/&apos;, &apos; &apos; | replace: &apos;_&apos;, &apos; &apos; }}{% endif %}{% endif %}">
+  <link rel="canonical" {% if page.url="=" site.index_url %} href="{{ site.baseurl | prepend: site.homeurl }}" else endif/>
+
+  <meta name="keywords" content="ろうそく、ドック、ドキュメント、アプリボーイ、アカデミー{{ page.id | replace: &apos;_&apos;, &apos; &apos;| replace: &apos;/&apos;, &apos;, }} ">
 
   <script type="application/ld+json">
   {
@@ -38,7 +41,7 @@
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/bootstrap.js"></script>
 
 
-{% include analytics.html %}
+{% include 分析.html %}
 
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css" />
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/algolia_theme.css"  />
@@ -60,11 +63,15 @@
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/clipboard.js"></script>
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/jquery.mark.js' ></script>
 
-{% javascript_asset_tag グローバル} - /assets/js/highlight.js - /assets/js/breadcrumb.js - /assets/js/left_nav.js - /assets/js/js.cookie.js - /assets/js/toc.js - /assets/js/documents.js - /assets/js/feedback.js - /assets/
+{% javascript_asset_タグ global %} - /assets/js/highlight.js - /assets/js/breadcrumb.js - /assets/js/left_nav.js - /assets/js/js.Cookie.js - /assets/js/toc.js - /assets/js/documents.js - /assets/js/フィードバック.js - /assets/js/contentカードs.js {% endjavascript_asset_タグ %}
 
-<script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script><script type="text/javascript" src="{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: " %s'}}'></script>
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script>
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: " %s'}}'></script>
 
 <script src="{{site.baseurl}}/assets/js/mermaid.js"></script>
+
+<script type="text/javascript" src="{{site.baseurl}}/assets/js/copy-heading-tag-links.js"></script>
 
 <script type="text/javascript">
 
@@ -134,4 +141,11 @@
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
 
+<meta name="tool" content="{{ page.tool | join: ', ' | default: '' }}" />
+<meta name="platform" content="{{ page.platform | join: ', ' | default: '' }}" />
+{% assign page_ids = page.id | split: '/' %}
+<meta name="type" content="{{ page_ids[1] | replace: '_', ' ' | default: '' }}" />
+<meta name="category" content="{{ page_ids[2] | replace: '_', ' ' | default: '' }}" />
+<meta name="page_name" content="{{ page_ids | last | replace: '_', ' ' | default: '' }}" />
+<meta name="channel" content="{{ page.channel | join: ', ' | default: '' }}" />
 </head>

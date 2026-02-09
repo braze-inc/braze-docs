@@ -1,5 +1,5 @@
 ---
-nav_title: 메시징 기초(Messaging Fundamentals)
+nav_title: 메시징 기본 사항
 article_title: 메시징 기초(Messaging Fundamentals)
 layout: dev_guide
 page_order: 0
@@ -30,6 +30,9 @@ guide_featured_list:
   - name: 배달 유형
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
+  - name: 편집기 블록
+    link: /docs/dnd/editor_blocks/
+    image: /assets/img/braze_icons/align-left.svg
   - name: 현지화
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/localization/
     image: /assets/img/braze_icons/globe-02.svg
@@ -57,7 +60,7 @@ guide_menu_list:
   - name: 메시지 보관
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
-  - name: 워크스페이스 간 복사
+  - name: Copying Across Workspaces
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
     image: /assets/img/braze_icons/copy-07.svg
   - name: 메시지 복제

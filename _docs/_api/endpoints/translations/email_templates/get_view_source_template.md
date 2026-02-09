@@ -15,7 +15,7 @@ description: "This article outlines details about the View source translations f
 /templates/email/translations/source
 {% endapimethod %}
 
-> Use this endpoint to view the source translations for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates).
+> Use this endpoint to view the source translations for an [email template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates). See [Locales in messages]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) for more information about translation features.
 
 {% alert important %}
 This endpoint is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
@@ -39,7 +39,7 @@ To use this endpoint, you'll need an [API key]({{site.baseurl}}/api/basics#rest-
 ## Example request
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source' 
+curl --location --request GET 'https://rest.iad-03.braze.com/templates/email/translations/source?template_id={template_id}'
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 --Request Body
@@ -55,8 +55,6 @@ There are four status code responses for this endpoint: `200`, `400`, `404`, and
 The status code `200` could return the following response header and body.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": {
         "translation_map": {
@@ -81,15 +79,5 @@ The status code `400` could return the following response body. Refer to [Troubl
     ]
 }
 ```
-
-## Troubleshooting
-
-The following table lists possible returned errors and their associated troubleshooting steps.
-
-| Error message                           | Troubleshooting                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `MULTI_LANGUAGE_NOT_ENABLED`            | Multi-language settings aren't turned on for your workspace.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Only email templates and email, push, and in-app-message campaigns or Canvas messages with emails can be translated.             |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}

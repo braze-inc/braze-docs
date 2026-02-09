@@ -20,9 +20,9 @@ search_rank: 1
 | -------------  | ---- |
 | 표준(기본) 속성 | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | 기기 속성 | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [이메일 목록 속성]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) | `{{${set_user_to_unsubscribed_url}}}` <br>이 태그는 이전 `{{${unsubscribe_url}}}` 태그를 대체합니다. 이전 태그는 이전에 작성한 이메일에서 계속 사용할 수 있지만, 대신 최신 태그를 사용하는 것이 좋습니다. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
-| [SMS 속성]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword) | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| [WhatsApp 속성]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/) | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>이메일 목록 속성</a> | `{{${set_user_to_unsubscribed_url}}}` <br>이 태그는 이전 `{{${unsubscribe_url}}}` 태그를 대체합니다. 이전 태그는 이전에 작성한 이메일에서 계속 사용할 수 있지만, 대신 최신 태그를 사용하는 것이 좋습니다. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>SMS 속성</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>WhatsApp 속성</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | 캠페인 속성 | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | 캔버스 속성 | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | 캔버스 스텝 속성 | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -31,7 +31,7 @@ search_rank: 1
 | 이벤트 등록정보 <br> (워크스페이스에 맞게 커스텀됩니다.)| `{{event_properties.${your_custom_event_property}}}` |
 | 캔버스 컨텍스트 변수 | `{{context}}` |
 | 커스텀 속성 <br> (워크스페이스에 맞게 커스텀됩니다.) | `{{custom_attribute.${your_custom_attribute}}}` |
-| [API 트리거 속성]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) |`{{api_trigger_properties}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>API 트리거 속성</a> |`{{api_trigger_properties}}` |
 | 캔버스 진입 등록정보 | `{{canvas_entry_properties.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -51,7 +51,7 @@ search_rank: 1
 - 캔버스에 `{{campaign.${name}}}` 태그를 사용하면 캔버스 구성 요소 이름이 표시됩니다. 이 태그를 캠페인에 사용하면 캠페인 이름이 표시됩니다.
 {% endraw %}
 
-## 가장 최근에 사용한 기기 정보
+## Most recently used device information
 
 모든 플랫폼에서 사용자의 가장 최근 디바이스에 대해 다음 속성을 템플릿으로 만들 수 있습니다. 사용자가 애플리케이션을 사용하지 않은 경우(예: REST API를 통해 사용자를 가져온 경우) 이 값은 모두 `null`입니다.
 
@@ -60,7 +60,7 @@ search_rank: 1
 |태그 | 설명 |
 |---|---|
 |`{{most_recently_used_device.${browser}}}` | 사용자 디바이스에서 가장 최근에 사용한 브라우저입니다. 예를 들어 'Chrome'과 'Safari'가 있습니다. |
-|`{{most_recently_used_device.${id}}}` | Braze 디바이스 식별자입니다. iOS에서는 공급업체용 Apple 식별자(IDFV) 또는 UUID가 될 수 있습니다. Android 및 기타 플랫폼의 경우 무작위로 생성된 UUID입니다. |
+|`{{most_recently_used_device.${id}}}` | Braze 기기 식별자입니다. iOS에서는 공급업체용 Apple 식별자(IDFV) 또는 UUID가 될 수 있습니다. Android 및 기타 플랫폼의 경우 무작위로 생성된 UUID입니다. |
 | `{{most_recently_used_device.${carrier}}}` | 가장 최근에 사용한 디바이스의 전화 서비스 통신사(가능한 경우). 예를 들면 "Verizon" 및 "Orange" 등이 있습니다. |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | 기기에서 광고 추적이 활성화되어 있는지 여부. 이 값은 부울 값입니다(`true` 또는 `false`). |
 | `{{most_recently_used_device.${idfa}}}` | iOS 기기의 경우, 애플리케이션이 [선택 사항인 IDFA 컬렉션으로]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) 구성된 경우 이 값은 광고용 식별자(IDFA)가 됩니다. iOS가 아닌 기기의 경우 이 값은 null이 됩니다. |
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## 타겟 기기 정보
 
-푸시 알림 및 인앱 메시지 채널의 경우 메시지가 전송되는 디바이스에 대해 다음 속성을 템플릿으로 설정할 수 있습니다. 즉, 푸시 알림 또는 인앱 메시지에는 메시지를 읽고 있는 기기의 기기 속성이 포함될 수 있습니다. 이러한 속성은 콘텐츠 카드에는 작동하지 않습니다. 
+푸시 알림, 인앱 메시지 및 배너의 경우 메시지가 전송되는 기기에 대해 다음 속성을 템플릿으로 만들 수 있습니다. 즉, 푸시 알림, 인앱 메시지 또는 배너에는 메시지를 읽고 있는 기기의 기기 속성이 포함될 수 있습니다. 콘텐츠 카드에는 이러한 속성이 작동하지 않습니다. 
 
 |태그 | 설명 |
 |------------------|---|
 | `{{targeted_device.${id}}}` | 이것은 Braze 디바이스 식별자입니다. iOS에서는 공급업체용 Apple 식별자(IDFV) 또는 UUID가 될 수 있습니다. Android 및 기타 플랫폼의 경우 무작위로 생성된 UUID입니다. 예를 들어, 사용자에게 5개의 디바이스가 있는 경우 각각 해당 디바이스 식별자를 사용하여 5개의 디바이스 모두에 대해 전송 시도가 발생합니다. 사용자가 가장 최근에 사용한 디바이스로 메시지를 보내도록 설정한 경우, Braze를 통해 가장 최근에 사용한 디바이스로 한 번만 전송 시도가 이루어집니다. |
 | `{{targeted_device.${carrier}}}` | 가장 최근에 사용한 디바이스의 전화 서비스 통신사(가능한 경우). 예를 들면 "Verizon" 및 "Orange" 등이 있습니다. |
 | `{{targeted_device.${idfa}}}` | iOS 기기의 경우, 애플리케이션이 [선택 사항인 IDFA 컬렉션으로]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/) 구성된 경우 이 값은 광고용 식별자(IDFA)가 됩니다. iOS가 아닌 기기의 경우 이 값은 null이 됩니다. |
-| `{{targeted_device.${google_ad_id}}}` | Android 기기의 경우, 애플리케이션이 선택 사항인 Google Play 광고 ID 컬렉션]으로 구성된 경우 이 값은 Google Play 광고 식별자가 됩니다. Android 이외의 기기의 경우 이 값은 null이 됩니다. |
+| `{{targeted_device.${google_ad_id}}}` | Android 기기의 경우, 애플리케이션이 [선택 사항인 Google Play 광고 ID 수집]으로 구성된 경우 이 값은 Google Play 광고 식별자가 됩니다. Android 이외의 기기의 경우 이 값은 null이 됩니다. |
 | `{{targeted_device.${roku_ad_id}}}` | Roku 기기의 경우, 이 값은 애플리케이션이 Braze로 구성될 때 수집되는 Roku 광고 식별자가 됩니다. Roku가 아닌 기기의 경우 이 값은 null이 됩니다. |
 | `{{targeted_device.${model}}}` | 디바이스의 모델명(사용 가능한 경우). 예를 들어 "iPhone 6S" 및 "Nexus 6P", "Firefox"가 있습니다. |
 | `{{targeted_device.${os}}}` | 디바이스의 운영 체제(사용 가능한 경우). 예를 들어 "iOS 9.2.1" 및 "Android(롤리팝)", "Windows"가 있습니다. |
@@ -115,15 +115,15 @@ User is in list of apps
 
 디바이스 사업자, 모델명, 운영 체제의 종류가 매우 다양하므로 이러한 값에 조건부로 의존하는 로직을 철저히 테스트하는 것이 좋습니다. 이 값은 특정 기기에서 사용할 수 없는 경우 `null`입니다. 
 
-또한, 푸시 알림의 경우 푸시 토큰을 API를 통해 가져온 경우와 같이 특정 상황에서 Braze가 푸시 알림에 연결된 디바이스를 식별하지 못해 해당 메시지에 대해 `null` 값이 표시될 수 있습니다.
+또한 푸시 알림의 경우 API를 통해 푸시 토큰을 가져온 경우와 같이 특정 상황에서 Braze가 푸시 알림에 연결된 기기를 식별하지 못해 해당 메시지에 대한 값이 `null` 가 될 수 있습니다.
 
-![푸시 메시지에서 이름 변수를 사용할 때 기본값 "there"를 사용하는 예.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![푸시 메시지에서 이름 변수를 사용할 때 기본값인 "there"를 사용하는 예시입니다.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
-### 기본값 대신 조건부 논리 사용
+### 기본값 대신 조건 로직 사용
 
 경우에 따라 기본값을 설정하는 대신 [조건부 논리를]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) 사용할 수도 있습니다. 조건부 논리를 사용하면 사용자 지정 속성의 값에 따라 달라지는 메시지를 보낼 수 있습니다. 또한 조건부 논리를 사용하여 속성 값이 0이거나 비어 있는 고객에 대한 [메시지를 중단할]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) 수 있습니다. 
 
-#### 사용 사례
+#### Use case
 
 예를 들어 고객에게 리워드 잔액 알림을 보낸다고 가정해 보겠습니다. 기본값을 사용하여 잔액이 낮거나 0인 고객을 설명할 수 있는 좋은 방법은 없습니다.
 
@@ -143,7 +143,7 @@ User is in list of apps
 
 {% endraw %}
 
-2. 이러한 고객에게는 다음과 같이 완전히 다른 메시지를 보내세요:
+2. 이러한 고객에게 다음과 같이 완전히 다른 메시지를 보내세요:
 
 {% raw %}
 
@@ -163,7 +163,7 @@ User is in list of apps
 
 `assign` 태그를 사용하여 메시지 작성기에서 변수를 만들 수 있습니다. 변수에 고유한 이름을 사용하는 것이 좋습니다. 지원되는 개인화 태그와 유사한 이름의 변수(예: `language`)를 만들면 메시징 로직에 영향을 줄 수 있습니다.
 
-변수를 만든 후에는 메시징 로직이나 메시지에서 해당 변수를 참조할 수 있습니다. 이 태그는 [연결된 콘텐츠]({% image_buster /assets/img_archive/personalized_firstname_.png %}) 기능에서 반환된 콘텐츠의 형식을 다시 지정할 때 유용하게 사용할 수 있습니다. [가변 태그에](https://docs.shopify.com/themes/liquid/tags/variable-tags) 대한 자세한 내용은 Shopify 문서에서 확인할 수 있습니다.
+변수를 만든 후에는 메시징 로직이나 메시지에서 해당 변수를 참조할 수 있습니다. 이 태그는 [연결된 콘텐츠]({% image_buster /assets/img_archive/personalized_firstname_.png %}) ] 기능에서 반환된 콘텐츠의 형식을 다시 지정하려는 경우에 유용합니다. [가변 태그에](https://docs.shopify.com/themes/liquid/tags/variable-tags) 대한 자세한 내용은 Shopify 문서에서 확인할 수 있습니다.
 
 {% alert tip %}
 모든 메시지에 동일한 변수를 할당하고 계신가요? `assign` 태그를 반복해서 작성하는 대신 해당 태그를 콘텐츠 블록으로 저장하여 메시지 상단에 넣을 수 있습니다.
@@ -176,7 +176,7 @@ User is in list of apps
 콘텐츠 블록이 메시지 상단에 있는 한, 변수가 객체로 메시지에 삽입될 때마다 선택한 커스텀 속성을 참조합니다!
 {% endalert %}
 
-### 사용 사례
+### Use case
 
 고객이 리워드 포인트 100점을 적립한 후 리워드 포인트를 현금화하여 경품으로 사용할 수 있도록 허용한다고 가정해 보겠습니다. 따라서 추가 구매를 하면 포인트 잔액이 100보다 크거나 같은 고객에게만 메시지를 보낼 수 있습니다.
 
@@ -194,9 +194,9 @@ Make a purchase to bring your rewards points to {{new_points_balance}} and cash 
 ## 반복 태그
 
 {% raw %}
-반복 태그는 코드 블록을 반복적으로 실행하는 데 사용할 수 있습니다. 아래 사용 사례에는 `for` 태그가 있습니다.
+반복 태그는 코드 블록을 반복적으로 실행하는 데 사용할 수 있습니다. 아래 사용 사례는 `for` 태그를 기능합니다.
 
-### 사용 사례
+### Use case
 
 나이키 운동화 세일을 진행하면서 나이키에 관심을 표명한 고객에게 메시지를 보내고 싶다고 가정해 보겠습니다. 각 고객의 프로필에서 다양한 제품 브랜드를 볼 수 있습니다. 이 배열에는 최대 25개의 제품 브랜드가 포함될 수 있지만, 가장 최근 5개 제품 조회 중 하나로 나이키 제품을 조회한 고객에게만 메시지를 보내려고 합니다.
 
@@ -213,9 +213,9 @@ Sale on Converse!
 {% endif %}
 ```
 
-이 사용 사례에서는 조회된 운동화 브랜드 배열의 처음 5개 항목을 확인합니다. 이러한 항목 중 하나가 대화인 경우 `converse_viewer` 변수를 생성하고 true로 설정합니다.
+이 사용 사례에서는 스니커즈 브랜드 조회 배열의 처음 5개 항목을 확인합니다. 이러한 항목 중 하나가 대화인 경우 `converse_viewer` 변수를 생성하고 true로 설정합니다.
 
-그런 다음 `converse_viewer` 이 참이면 판매 메시지를 보냅니다. 그렇지 않으면 메시지를 중단합니다.
+그런 다음 `converse_viewer` 이 참이면 세일 메시지를 보냅니다. 그렇지 않으면 메시지를 중단합니다.
 
 다음은 Braze 메시지 작성기에서 반복 태그를 사용하는 방법을 보여주는 간단한 예시입니다. 자세한 내용은 Shopify의 [반복 태그](https://docs.shopify.com/themes/liquid/tags/iteration-tags) 관련 문서에서 확인할 수 있습니다.
 
@@ -245,7 +245,7 @@ Sale on Converse!
 
 특정 로캘에 한정된 메시지를 보내야 하는 경우도 있습니다. 예를 들어 브라질 포르투갈어는 일반적으로 유럽식 포르투갈어와 다릅니다.
 
-### 사용 사례: 최근 로캘을 기반으로 현지화
+### Use case: 최근 로캘에 기반한 현지화
 
 다음은 가장 최신 로캘을 사용하여 국제화된 메시지를 더욱 현지화하는 방법에 대한 사용 사례입니다.
 
@@ -273,13 +273,13 @@ Message in default language
 {% endif %}
 ```
 
-이 사용 사례에서 가장 최근 로캘이 `pt_BR` 인 고객은 브라질 포르투갈어로 메시지를 받고, 가장 최근 로캘이 `pt_PT` 인 고객은 유럽 포르투갈어로 메시지를 받습니다. 앞의 두 조건을 충족하지 않지만 언어를 포르투갈어로 설정한 고객에게는 기본 포르투갈어 유형이 무엇이든 원하는 언어로 메시지가 표시됩니다.
+이 사용 사례에서 가장 최근 로캘이 `pt_BR` 인 고객은 브라질 포르투갈어로 메시지를 받고, 가장 최근 로캘이 `pt_PT` 인 고객은 유럽 포르투갈어로 메시지를 받게 됩니다. 앞의 두 조건을 충족하지 않지만 언어를 포르투갈어로 설정한 고객에게는 기본 포르투갈어 유형이 무엇이든 원하는 언어로 메시지가 표시됩니다.
 
-### 사용 사례: 시간대별 사용자 타겟팅
+### Use case: 시간대별 사용자 타겟팅
 
-시간대별로 사용자를 타겟팅할 수도 있습니다. 예를 들어, 상대방의 기준이 동부 표준시인 경우 한 메시지를 보내고 태평양 표준시인 경우 다른 메시지를 보내세요. 이렇게 하려면 현재 시간을 UTC로 저장하고 if/else 문과 사용자의 현재 시간을 비교하여 올바른 시간대에 맞는 메시지를 보내세요. 사용자의 현지 시간대에 캠페인을 전송하도록 설정하여 적절한 시간에 캠페인을 제공해야 합니다. 
+시간대별로 사용자를 타겟팅할 수도 있습니다. 예를 들어, 상대방의 기준이 동부 표준시인 경우 한 메시지를 보내고 태평양 표준시인 경우 다른 메시지를 보내세요. 이렇게 하려면 현재 시간을 UTC로 저장하고 if/else 문과 사용자의 현재 시간을 비교하여 올바른 시간대에 맞는 메시지를 보내세요. 사용자에게 적절한 시간에 캠페인을 제공하려면 사용자의 현지 시간대로 캠페인을 전송하도록 설정해야 합니다. 
 
-오후 2시에서 오후 3시 사이에 발송할 메시지를 작성하는 방법과 각 시간대에 대한 특정 메시지를 작성하는 방법은 다음 사용 사례를 참조하세요.
+오후 2시에서 오후 3시 사이에 발송할 메시지를 작성하는 방법과 각 시간대에 대한 특정 메시지를 포함하는 사용 사례는 다음 사용 사례를 참조하세요.
 
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}

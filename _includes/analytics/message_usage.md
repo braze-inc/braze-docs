@@ -29,7 +29,7 @@ The **Message Credits Usage over Contract** graph shows your usage over the sele
 
 ## SMS, MMS, and RCS
 
-**SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The columns in the data table generally require you to have purchased Message Credits (though Braze still supports older billing models temporarily), and the **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevent, MMS consumption across the selected date range.
+**SMS/MMS/RCS Credits Usage** shows the usage breakdown for the SMS, MMS, and RCS channel. The columns in the data table generally require you to have purchased Message Credits (though Braze still supports older billing models temporarily), and the **Credit ratio** and **Credits** columns indicate the respective country rate and consumed credits. Additionally, high-level tiles will indicate the total SMS and, when relevant, MMS consumption across the selected date range.
 
 Filters are available allowing you to filter by **Country** or SMS and RCS type.
 
@@ -64,5 +64,18 @@ You can filter your data by:
 The data shown in the **Message Usage** dashboard is at the contract level and isn't scoped to an individual dashboard company or workspace. This data reflects usage from all workspaces within your dashboard, and potentially across all dashboards (if you have multiple).
 {% endalert %}
 
-- The underlying data is provided in a daily cadence, with the data tables refreshed at 3 am, 9 am, 12 pm, and 6 pm EST. 
+- The underlying data is provided in a daily cadence, with the data tables refreshed at 3 am, 9 am, 12 pm, and 6 pm EST. The **Message Usage** dashboard may take longer than 24 hours to update.
 - Braze follows standard rounding methodology: numbers are rounded up to the nearest tenth.
+
+### Date range selection
+
+The **Message Usage** dashboard excludes the end date of the selected range from the results. For example, if you select October 1–31, usage statistics for October 31 are excluded. To include the last day of your desired period, extend the range by one day. For example, to include all of October, select October 1–November 1.
+
+### Comparing with third-party providers
+
+When comparing Braze message usage data with third-party providers (such as Infobip), keep in mind:
+
+- **Message segments vs messages**: Braze counts SMS messages by segments. A single SMS message that is split into multiple segments (for example, due to length) is counted as multiple segments in Braze. For more information, see [SMS and RCS billing calculators]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/segments/).
+- **Credit vs non-credit based messages**: The dashboard includes both credit-based and non-credit based messages. Third-party providers may count only credit-based messages, which can cause discrepancies in totals.
+- **Inbound vs outbound**: Ensure you're comparing the same message types. Some third-party dashboards include both inbound and outbound messages in their totals, while Braze allows you to filter by direction.
+- **Date range alignment**: Because the dashboard excludes the end date, day-by-day comparisons may align more closely than longer date ranges. If you're comparing data for a specific period, extend your Braze date range by one day to include the final day of your comparison period.

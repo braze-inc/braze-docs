@@ -1,5 +1,5 @@
 ---
-nav_title: 배지 수 활용
+nav_title: 배지 수 활용하기
 article_title: 배지 수 활용
 page_order: 8
 

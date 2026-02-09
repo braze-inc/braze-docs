@@ -1,7 +1,7 @@
 ---
-nav_title: 데이터 피드에서 프로모션 코드로 마이그레이션하기
+nav_title: 데이터 피드에서 마이그레이션하기
 article_title: 데이터 피드에서 프로모션 코드로 마이그레이션하기
-page_order: 0
+page_order: 10
 description: "이 참조 문서에서는 Data Feeds에서 프로모션 코드로 마이그레이션하는 방법에 대한 지침을 제공합니다."
 ---
 

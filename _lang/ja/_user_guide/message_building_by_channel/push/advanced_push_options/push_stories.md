@@ -15,7 +15,7 @@ channel:
 
 | Android の例 (展開表示) | IOSの例（拡大） |
 | :-----: | :----------: |
-| \![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | \![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -31,7 +31,7 @@ iOS SDKバージョン3.13.0以降では、SDKの画像ダウンロード方法�
 
 ## プッシュストーリーズの使い方
 
-\![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![]({% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 プッシュストーリーを使用するには、次の手順を実行します。
 
@@ -44,13 +44,13 @@ iOS SDKバージョン3.13.0以降では、SDKの画像ダウンロード方法�
 ページを作成するには、以下の手順を実行する：
 
 1. メインの作成画面から [**ページを管理**] をクリックします。
-    <br><br>\![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
+    <br><br>![]({% image_buster /assets/img_archive/pushstories_add_pages.png %}){: style="max-width:70%"}<br><br>
 2. 各ページに画像を挿入し、その画像をクリックする動作を追加する。
 3. 必要であれば、各ページに**タイトルと** **説明を**追加する。1つのページでタイトルとディスクリプションを使用する場合は、すべてのページに挿入する必要がある。
 
 プレビューは反映され、インタラクティブなものとなる。
 
-\![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
+![]({% image_buster /assets/img_archive/pushstories_composer.png %}){: style="max-width:60%"}
 
 {% alert important %}
 [コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content)で画像を取り込む場合は、画像の URL が `https://` で始まっていることを確認します。`http://` を使うとアプリがクラッシュする。
@@ -89,7 +89,7 @@ iOS SDKバージョン3.13.0以降では、SDKの画像ダウンロード方法�
 
 分析は、プッシュ通知の現行の分析セクションとよく似ています。Push Stories分析では、**Direct Opens**指標を開いてページごとのクリック数を見ることができる。
 
-\![iOS Push Performance table with sample 分析と、Direct Opens メトリクスの詳細を展開。]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![iOS のプッシュパフォーマンス表には、分析サンプルと直接開封数指標の詳細が表示されます。]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## トラブルシューティング
 

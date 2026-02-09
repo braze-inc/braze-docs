@@ -1,20 +1,20 @@
 ---
 nav_title: Erreurs et réponses
 article_title: Erreurs et réponses d’API
-description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre." 
+description: "Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre."
 page_type: reference
 page_order: 2.3
 
 ---
 # Erreurs et réponses d’API
 
-> Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre. 
+> Cet article de référence couvre les diverses erreurs et réponses du serveur qui peuvent apparaître lors de l’utilisation de l’API Braze et la façon de les résoudre.
 
 {% raw %}
 
 ## Réponses du serveur
 
-Si votre charge utile POST a été acceptée par nos serveurs, les messages réussis seront reçus avec la réponse suivante :
+Si votre charge utile POST a été acceptée par nos serveurs, les messages réussis reçoivent la réponse suivante :
 
 ```json
 {
@@ -24,7 +24,7 @@ Si votre charge utile POST a été acceptée par nos serveurs, les messages réu
 
 Notez que la réussite signifie que la charge utile de l’API RESTful a été correctement créée et transmise à notre notification push ou à nos e-mails ou autres services de messagerie. Cela ne signifie pas que les messages ont effectivement été envoyés, car des facteurs supplémentaires peuvent empêcher l'envoi du message (par exemple, un appareil peut être hors ligne, le jeton push peut être rejeté par les serveurs d'Apple, vous pouvez avoir fourni un ID utilisateur inconnu).
 
-Si votre message est réussi, mais que vous avez des erreurs non fatales, vous recevrez la réponse suivante :
+Si votre message aboutit mais comporte des erreurs non fatales, vous recevez la réponse suivante :
 
 ```json
 {
@@ -32,7 +32,7 @@ Si votre message est réussi, mais que vous avez des erreurs non fatales, vous r
 }
 ```
 
-Dans le cas d’un succès, tout message n’ayant pas été affecté par une erreur du tableau `errors` sera toujours livré. Si votre message contient une erreur fatale, vous recevrez la réponse suivante :
+En cas de succès, tous les messages qui n'ont pas été affectés par une erreur dans le tableau `errors` sont toujours envoyés. Si votre message comporte une erreur fatale, vous recevez la réponse suivante :
 
 ```json
 {
@@ -42,7 +42,7 @@ Dans le cas d’un succès, tout message n’ayant pas été affecté par une er
 
 ## Réponses pour les ID d’envoi suivis
 
-Les analyses sont toujours disponibles pour les campagnes. De plus, les analyses sont disponibles pour une instance spécifique de campagne lorsque celle-ci est envoyée en tant que diffusion. Lorsque le suivi est disponible pour une instance spécifique de campagne, vous recevrez la réponse suivante :
+Les analyses sont toujours disponibles pour les campagnes. De plus, les analyses sont disponibles pour une instance spécifique de campagne lorsque celle-ci est envoyée en tant que diffusion. Lorsque le suivi est disponible pour une instance d'envoi de campagne spécifique, vous recevez la réponse suivante :
 
 ```json
 {
@@ -58,18 +58,18 @@ L’élément du code d’état d’une réponse serveur est un numéro à 3 ch
 
 - Le code d'état de **classe 2XX** (non fatal) indique que **votre demande** a été reçue, comprise et acceptée avec succès.
 - La **classe 4XX** du code de statut (fatal) indique une **erreur du client**. Reportez-vous au tableau des erreurs fatales pour obtenir une liste complète des codes d’erreur et descriptions de la classe 4XX.
-- La **classe 5XX** du code de statut (fatal) indique une **erreur du serveur**. Il y a plusieurs causes possibles, par exemple, le serveur auquel vous essayez d'accéder n'est pas en mesure d'exécuter la requête, le serveur fait l'objet d'une maintenance qui l'empêche d'exécuter la requête, ou le serveur connaît des niveaux élevés de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel. En cas d'incident ou de panne, Braze n'est pas en mesure de lire à nouveau un appel d’API REST qui a échoué pendant la fenêtre d'incident. Vous devrez réessayer les appels qui ont échoué pendant la fenêtre d'incident.
+- La **classe 5XX** du code de statut (fatal) indique une **erreur du serveur**. Il y a plusieurs causes possibles, par exemple, le serveur auquel vous essayez d'accéder n'est pas en mesure d'exécuter la requête, le serveur fait l'objet d'une maintenance qui l'empêche d'exécuter la requête, ou le serveur connaît des niveaux élevés de trafic. Dans ce cas, nous vous recommandons de réessayer votre demande avec un délai exponentiel. En cas d'incident ou de panne, Braze n'est pas en mesure de lire à nouveau un appel d’API REST qui a échoué pendant la fenêtre d'incident. Vous devez réessayer tous les appels qui ont échoué pendant la fenêtre d'incident.
   - Une **erreur 502** est un échec avant que le message n'atteigne le serveur de destination.
   - Une **erreur 503** signifie que la demande est parvenue jusqu'au serveur de destination, mais que nous ne pouvons pas la traiter en raison d'un manque de capacité, d'un problème de réseau ou d'un problème similaire.
   - Une **erreur 504** indique qu'un serveur n'a pas reçu de réponse d'un autre serveur en amont.
 
 ### Erreurs fatales
 
-Les codes d’état suivants et les messages d’erreur associés seront renvoyés si votre demande rencontre une erreur fatale.
+Les codes d'état suivants et les messages d'erreur associés sont renvoyés si votre demande rencontre une erreur fatale.
 
 {% endraw %}
 {% alert warning %}
-Tous les codes d’erreur suivants indiquent qu’aucun message ne sera envoyé.
+Tous les codes d'erreur suivants indiquent qu'aucun message n'est envoyé.
 {% endalert %}
 {% raw %}
 

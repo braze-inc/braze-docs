@@ -22,7 +22,7 @@ Braze と Dynamics 365 Customer Insights の統合により、顧客セグメン
 | 必要条件 | 説明 |
 | ----------- | ----------- |
 | Dynamics 365 Customer Insights アカウント | このパートナーシップを活用するには、[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/en-gb/ai/customer-insights/) アカウントが必要です。必要なプラグインにアクセスするために Dynamics 365 Customer Insights アカウント内で接続を表示および編集するには、管理者としてアクセスする必要があります。 |
-| Braze REST API キー | Braze REST API キーには、`users.track` と `users.export.segment` の権限が必要です。<br><br> これは、Brazeダッシュボードの**「設定」**>「**APIキー**」から作成できる。 |
+| Braze REST API キー | Braze REST API キーには、`users.track` と `users.export.segment` の権限が必要です。<br><br> これは、Braze ダッシュボードの [**設定**] > [**API キー**] で作成できます。 |
 | プロファイル識別子の一致 | エクスポートされたセグメントの統一後の顧客プロファイルには、メールアドレスを表すフィールドと、Braze`external_id` が含まれます。 |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -52,8 +52,8 @@ Customer Insights で **[Admin] > [Connections]** に移動します。次に、
 
 1. Customer Insights で **[Data] > [Exports]** に移動します。新しいエクスポートを作成するには、[**Add destination**] を選択します。
 2. [**Connection for export**] フィールドで、Braze セクションの接続を選択します。このセクション名が表示されない場合は、このタイプの接続はない。
-3. Braze でセグメントのセグメントAPI ID を指定します。
-4. **Data matching**セクションの**Email**フィールドで、顧客のEメールアドレスを表すフィールドを選択する。次に、**Braze Customer ID** フィールドで、顧客の Braze ID を表すフィールドを選択します。また、データマッチング用の追加のオプションフィールドを選択することもできます。
+3. Braze でセグメントのセグメント API 識別子を指定します。
+4. **Data matching**セクションの**Email**フィールドで、顧客のEメールアドレスを表すフィールドを選択する。次に、[**Braze Customer ID**] フィールドで、顧客の Braze ID を表すフィールドを選択します。また、データマッチング用の追加のオプションフィールドを選択することもできます。
   a. Braze で `external_id` を Customer Insights の Braze 顧客 ID フィールドにマップすると、エクスポート時に Braze で既存のレコードが更新されます。
   b. Braze のレコードの `external_id` を表わさない別の ID フィールド、または空のフィールドをマップすると、エクスポート時に新しいレコードが Braze で作成されます。
 5. 最後に、エクスポートするセグメントを選択して、[**保存**] を選択します。 

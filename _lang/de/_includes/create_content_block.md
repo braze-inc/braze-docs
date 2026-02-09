@@ -7,7 +7,7 @@
 5. Nachdem Sie Ihren Content-Block erstellt haben, wählen Sie **Fertig**.
 6. Geben Sie Ihrem Inhaltsblock einen Namen. Dieser Name wird als Teil des **Content Block Liquid Tag** automatisch ausgefüllt.
 7. (Optional) Fügen Sie eine Beschreibung hinzu.
-8. Wählen Sie den Tab **Vorschau**, um zu sehen, wie Ihr Content-Block aussehen wird. Wählen Sie optional **Vorschau-Link kopieren** aus, um einen Vorschau-Link zu generieren und zu kopieren, der zeigt, wie die E-Mail für einen zufälligen Nutzer:innen aussehen wird. Der Link bleibt sieben Tage lang bestehen, bevor er erneuert werden muss.<br><br> ![Tab "Vorschau" für den Content-Block-Composer per Drag-and-Drop.]({% image_buster /assets/img_archive/dnd_content_block_preview_link.png %})<br><br>
+8. Wählen Sie den Tab **Vorschau**, um zu sehen, wie Ihr Content-Block aussehen wird. Wählen Sie optional **Vorschau-Link kopieren** aus, um einen Vorschau-Link zu generieren und zu kopieren, der zeigt, wie die E-Mail für einen zufälligen Nutzer:innen aussehen wird. Der Link bleibt sieben Tage lang bestehen, bevor er erneuert werden muss.<br><br> ![Tab "Vorschau" für den Drag-and-Drop-Content-Block-Composer.]({% image_buster /assets/img_archive/dnd_content_block_preview_link.png %})<br><br>
 9. Wählen Sie **Content-Block starten**.
 
 {% elsif include.location == "html" %}

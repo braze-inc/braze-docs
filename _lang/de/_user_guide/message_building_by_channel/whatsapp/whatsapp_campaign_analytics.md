@@ -15,6 +15,6 @@ channel:
 
 > Dieser Referenzartikel behandelt die bei Braze verwendeten WhatsApp-Metriken und wie Sie sie in Ihren WhatsApp-Kampagnen anzeigen können.
 
-{% multi_lang_include campaign_analytics.md channel="whatsapp" %}
+{% multi_lang_include analytics/campaign_analytics.md channel="whatsapp" %}
 
 

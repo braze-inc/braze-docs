@@ -1,5 +1,5 @@
 ---
-nav_title: "모범 사례"
+nav_title: "Best practices"
 article_title: "SMS, MMS 및 RCS에 대한 모범 사례" 
 page_order: 15
 description: "이 참조 문서에서는 SMS/MMS에 대한 모범 사례를 다룹니다."

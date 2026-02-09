@@ -1,5 +1,5 @@
 ---
-nav_title: Umsatzbericht
+nav_title: Bericht über die Einnahmen
 article_title: Umsatzbericht
 page_type: reference
 description: "Auf dieser Seite wird beschrieben, wie Sie die Seite Umsatzbericht verwenden, um Daten zu den Umsätzen über bestimmte Zeiträume, zu den Umsätzen eines bestimmten Produkts und zu den Gesamteinnahmen Ihrer App anzuzeigen."
@@ -16,7 +16,7 @@ Um einen Bericht über Ihre Einnahmen auf dem Dashboard anzuzeigen, gehen Sie zu
 
 Sie können Ihren Umsatzbericht anpassen, indem Sie einen Datumsbereich, Apps und Parameter auswählen.
 
-![Der Umsatzbericht enthält das Diagramm "Leistung im Zeitverlauf", wobei der Umsatz als Parameter eingestellt ist.][1]
+![Der Umsatzbericht enthält das Diagramm "Leistung im Zeitverlauf", wobei der Umsatz als Parameter eingestellt ist.]({% image_buster /assets/img/revenue_report.png %})
 
 ### Filtern nach Datum und Apps
 
@@ -39,6 +39,10 @@ Sie können die folgenden Daten im **Diagramm Performance im Zeitverlauf** anzei
 
 ## Die Umsatzberechnung
 
+{% alert note %}
+Wenn Sie einen Umsatz für eine Währung ohne Wechselkurs verbuchen, verbucht Braze ihn als einen Kauf von US $0,00.
+{% endalert %}
+
 <style>
     .no-split {
         word-break: keep-all;
@@ -55,23 +59,23 @@ Sie können die folgenden Daten im **Diagramm Performance im Zeitverlauf** anzei
     <tbody>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-revenue">Lifetime-Umsatz</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Revenue' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#lifetime-value-per-user">Lifetime-Value je Benutzer</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Lifetime Value Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Lifetime Value Per User' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#average-daily-revenue">Durchschnittlicher Tagesumsatz</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Average Daily Revenue' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Average Daily Revenue' %}</td>
         </tr>
         <tr>
-            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Tagesabsatz</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Purchases' %}</td>
+            <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-purchases">Tägliche Einkäufe</a></td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Purchases' %}</td>
         </tr>
         <tr>
             <td class="no-split"><a href="/docs/user_guide/data_and_analytics/report_metrics/#daily-revenue-per-user">Täglicher Umsatz pro Nutzer:in</a></td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Daily Revenue Per User' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Daily Revenue Per User' %}</td>
         </tr>
     </tbody>
 </table>
@@ -80,8 +84,6 @@ Sie können die folgenden Daten im **Diagramm Performance im Zeitverlauf** anzei
 
 In der Tabelle **Aufschlüsselung der Produkte** finden Sie eine Liste der Produkte, die während des von Ihnen ausgewählten Zeitraums gekauft wurden, wie viele Produkte gekauft wurden und wie viel Umsatz jedes Produkt generiert hat.
 
-![Die Produktaufschlüsselung mit den Spalten Produktname, Absatz und Umsatz.][2]
+![Die Produktaufschlüsselung mit den Spalten Produktname, Absatz und Umsatz.]({% image_buster /assets/img/revenue_report_product_breakdown.png %})
 
 
-[1]: {% image_buster /assets/img/revenue_report.png %}
-[2]: {% image_buster /assets/img/revenue_report_product_breakdown.png %}

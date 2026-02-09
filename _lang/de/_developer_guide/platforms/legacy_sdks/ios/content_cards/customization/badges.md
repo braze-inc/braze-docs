@@ -58,7 +58,7 @@ Implementieren Sie innerhalb dieser Methode den folgenden Code, der den Badge-ZÃ
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication)

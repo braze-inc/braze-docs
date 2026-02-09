@@ -1,5 +1,5 @@
 ---
-nav_title: "iOS 옵션"
+nav_title: "iOS options"
 article_title: iOS 푸시 옵션
 page_order: 8
 layout: dev_guide

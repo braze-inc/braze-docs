@@ -31,13 +31,13 @@ Using the media library instead of a Content Delivery Network (CDN) provides bet
 * 이미지나 폴더를 업로드하려면 드래그 앤 드롭하세요
 * 이미지 삭제
 
-![미디어 라이브러리 페이지에는 파일을 드래그 앤 드롭하거나 업로드할 수 있는 "라이브러리에 업로드" 섹션이 포함되어 있습니다. There is also a list of uploaded content in the media library.]({% image_buster /assets/img_archive/media_library_main.png %})
+![미디어 라이브러리 페이지에는 파일을 드래그 앤 드롭하거나 업로드할 수 있는 "라이브러리에 업로드" 섹션이 포함되어 있습니다. 미디어 라이브러리에는 업로드된 콘텐츠 목록도 있습니다.]({% image_buster /assets/img_archive/media_library_main.png %})
 
 Later when drafting a message in Braze, you can pull in your images from the media library.
 
-![메시지 작성기에 따라 미디어 라이브러리에 접근하는 두 가지 일반적인 방법. 하나는 제목이 "이미지 및 GIF"인 이메일 드래그 앤 드롭 편집기와 "미디어 라이브러리에서 추가" 버튼을 보여줍니다. The other shows the standard editors, such as push and in-app messages, with the title "Media" and a button to "Add Image".]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
+![메시지 작성기에 따라 미디어 라이브러리에 접근하는 두 가지 일반적인 방법. 하나는 제목이 "이미지 및 GIF"인 이메일 드래그 앤 드롭 편집기와 "미디어 라이브러리에서 추가" 버튼을 보여줍니다. 다른 하나는 푸시 및 인앱 메시지와 같은 표준 편집기를 보여주며, '미디어'라는 제목과 '이미지 추가' 버튼이 있습니다.]({% image_buster /assets/img_archive/media_library_composers.png %}){: style="border:none"}
 
-{% alert tip %} 미디어 라이브러리에 대한 추가 도움말은 [템플릿 및 미디어 FAQ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs)을(를) 확인하세요. {% endalert %}
+{% alert tip %} 미디어 라이브러리에 대한 자세한 도움말은 [템플릿 & 미디어 FAQ를]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs) 참조하세요. {% endalert %}
 
 ## 이미지 사양
 
@@ -68,10 +68,6 @@ For additional resources, see [Push image and text specifications]({{site.baseur
 ### 동영상
 
 미디어 라이브러리에 업로드된 동영상은 현재 WhatsApp 메시지에서만 사용할 수 있습니다. 자세한 내용은 [Whatsapp 메시지 만들기를]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/create/#outbound-messages) 참조하세요.
-
-{% alert important %}
-WhatsApp 메시지에 동영상 추가 기능은 현재 얼리 액세스 중입니다. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
 
 ## Generating images with BrazeAI<sup>TM</sup> {#generate-ai}
 

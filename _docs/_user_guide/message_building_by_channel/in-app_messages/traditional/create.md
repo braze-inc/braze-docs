@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an in-app message
-article_title: Creating an In-App Message
+nav_title: Create an in-app message
+article_title: Create an In-App Message
 page_order: 1
 description: "This reference article covers how to create an in-app message using the Braze platform using campaigns or Canvas."
 channel:
@@ -11,13 +11,13 @@ search_rank: 4.8
 toc_headers: h2
 ---
 
-# Creating an in-app message
+# Create an in-app message
 
 > You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
-Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, simple messaging campaigns, while Canvases are better for multi-step user journeys.
+Not sure whether your message should be sent using a campaign or a Canvas? Campaigns are better for single, targeted messaging campaigns, while Canvases are better for multi-step user journeys.
 
 {% tabs %}
 {% tab Campaign %}
@@ -191,7 +191,9 @@ Select **Add Languages** and select your desired languages from the provided lis
 
 ### Image
 
-Depending on your message type, you can **Upload Image**, **Pick a Badge**, or use **Font Awesome**. To upload an image, click **Add Image** or provide an image URL. Clicking **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch!
+Depending on your message type, you can **Upload Image**, **Pick a Badge**, or use **Font Awesome**. To upload an image, select **Add Image** or provide an image URL. Selecting **Add Image** opens the **Media Library**, where you can select a previously uploaded image or add a new one. Each message type and platform may have its own suggested proportions and requirements—be sure to check what those are before commissioning or making an image from scratch.
+
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
 
 ### Header and body
 
@@ -285,7 +287,7 @@ The content of the **Style** tab varies based on your chosen message options in 
 |Chevron or other Close Message Option | HEX color code. | Your desired HEX color will display. You will also be able to choose the opacity of the color. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Always [preview and test]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) your message before sending.
+Always [preview and test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) your message before sending.
 
 {% alert important %}
 Some in-app message types do not have the option for styling beyond uploading custom HTML (or CSS or JavaScript) and assets using a ZIP file. [Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) allows you to upload or write custom CSS to create beautiful, all-around custom-styled messaging.
@@ -351,7 +353,7 @@ The high, medium, and low options for triggered message priorities are buckets, 
 
 #### Choose users to target
 
-Next, you need to [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow down your audience. You'll automatically be given a snapshot of what that approximate segment population looks like right now. Keep in mind that exact segment membership is always calculated just before the message is sent.
+Next, you must [target users]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) by choosing segments or filters to narrow your audience. You automatically receive a snapshot of what that approximate segment population looks like. Keep in mind that exact segment membership is always calculated before the message is sent.
 
 {% alert note %} 
 If there's a delay on the in-app message step, segment membership will be evaluated after the delay. If the user is eligible, the in-app message will sync on the next available session.
@@ -389,7 +391,7 @@ For information on Canvas-specific in-app messaging options, refer to [In-app me
 
 ## Step 8: Review and deploy
 
-After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/), then send it!
+After you've finished building the last of your campaign or Canvas, review its details, [test it]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/), then send it!
 
 Next, check out [In-app message reporting]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) to learn how you can access the results of your messaging campaigns.
 
@@ -397,7 +399,7 @@ Next, check out [In-app message reporting]({{site.baseurl}}/user_guide/message_b
 
 ### Active in-app message campaign limits
 
-Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend turning off any campaigns that are no longer adding any value to your brand.
+Braze values reliability and speed. We suggest you send only the data you need to Braze and turn off any campaigns that no longer add value to your brand.
 
 Processing action-based in-app message campaigns that are still in an active state but no longer sending messages or are no longer needed slows down the overall performance of the Braze services for you and other customers. This extra time needed to process these large numbers of idle campaigns means that any in-app messages will take longer to appear on the end-user's devices, which impacts the end user's experience.
 
@@ -407,4 +409,17 @@ You can have up to 200 active, action-based in-app message campaigns per workspa
 
 The 200 count includes active in-app message campaigns that have not yet reached end time and those that have no end time. Active in-app message campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.
 
+### Local time delivery evaluation
 
+When an in-app message campaign is scheduled using the user's local time zone, the evaluation of the campaign's start and end time is handled on the device itself.
+
+In-app message campaigns are typically pushed to a user's device when the app session starts or refreshes. At that moment:
+
+1. The SDK evaluates whether the user qualifies for any trigger-based in-app messages.
+2. The device checks whether the user's trigger event occurred within the campaign's start and end time (as defined by the user's local time zone).
+3. If both conditions are met, the in-app message is eligible for display.
+
+#### Considerations
+
+- If a user triggers an event (such as a button tap) shortly after the in-app message is delivered, the message may not appear until the next session refresh—assuming all eligibility criteria are still met.
+- Similar to other channel types, in-app message campaigns should ideally be launched 24–48 hours in advance. This buffer gives users sufficient time to meet eligibility and initiate a session for the message to be evaluated and displayed.

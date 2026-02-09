@@ -22,7 +22,7 @@ tool: Campaigns
 
 ### 캠페인을 테스트하고 최적화하는 방법은 무엇입니까?
 
-다변량 캠페인 및 여러 배리언트가 있는 캔버스 실행은 시작하기에 좋은 방법입니다! 예를 들어, 다른 복사본이나 제목 줄이 있는 하나의 메시지를 테스트하기 위해 [다변량 캠페인]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/)을 실행할 수 있습니다. 여러 변형이 있는 캔버스는 전체 워크플로를 테스트하는 데 도움이 됩니다.
+다변량 캠페인 및 여러 배리언트가 있는 캔버스 실행은 시작하기에 좋은 방법입니다! 예를 들어, [다변량 캠페인을]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) 실행하여 사본이나 제목이 다른 하나의 메시지를 테스트할 수 있습니다. 여러 변형이 있는 캔버스는 전체 워크플로를 테스트하는 데 도움이 됩니다.
 
 ### 왜 내 캠페인의 열람율이 감소했습니까?
 
@@ -36,7 +36,13 @@ tool: Campaigns
 
 One potential explanation could be the campaign or Canvas has re-eligibility turned on, which means users who qualify for the segment and delivery settings will be able to receive the message more than once. 재인증이 켜져 있지 않은 경우 발신자와 고유 수신자 간의 차이에 대한 가능한 설명은 사용자가 프로필과 연결된 플랫폼에 여러 개의 기기를 가지고 있기 때문일 수 있습니다. 
 
-예를 들어, iOS 및 웹 푸시 알림이 모두 포함된 캔버스가 있는 경우, 모바일 및 데스크톱 장치를 모두 사용하는 사용자는 둘 이상의 메시지를 받을 수 있습니다.
+예를 들어 iOS와 웹 푸시 알림이 모두 있는 캔버스가 있는 경우 모바일과 데스크톱 기기를 모두 사용하는 특정 사용자가 두 개 이상의 메시지를 받을 수 있습니다.
+
+### 멀티채널 캠페인에서 전환 수가 순 사용자 수를 초과할 수 있는 이유는 무엇인가요?
+
+멀티채널 캠페인의 경우 Braze는 사용자 단위가 아닌 채널 단위로 전환 수를 계산합니다. 사용자가 전환 윈도우 내에서 하나의 전환 작업을 수행하면, Braze는 해당 전환을 사용자가 메시지를 수신한 각 채널에 기여도 속성을 부여합니다. 즉, 사용자가 여러 채널(예: 이메일과 푸시 모두)에서 메시지를 수신하고 전환하는 경우 Braze는 각 채널에 대해 하나씩 여러 전환을 계산합니다. 결과적으로 총 전환 수가 전환한 순 사용자 수를 초과할 수 있습니다.
+
+예를 들어, 멀티 채널 메시징 캠페인에서 사용자에게 이메일과 푸시 알림을 모두 전송하고 해당 사용자가 두 메시지를 모두 수신한 후 전환 기간 내에 하나의 전환 액션을 수행한 경우, 동일한 사용자의 단일 액션임에도 불구하고 Braze는 이를 이메일과 푸시의 기여도에 따른 두 개의 전환으로 계산합니다.
 
 ### 왜 내 캠페인이 내가 캠페인에 사용하는 세그먼트보다 도달 가능한 사용자 기반이 더 작은가요?
 
@@ -48,7 +54,7 @@ One potential explanation could be the campaign or Canvas has re-eligibility tur
 
 예를 들어, 런던에 본사를 둔 회사가 오후 12시에 캠페인을 보내면 미국 서부 해안의 사용자에게 새벽 4시에 도달하게 됩니다. If your app is only available in certain countries, this may not be a risk for you. Otherwise, we highly recommend avoiding sending early morning push notifications to your user base.
 
-### Braze는 사용자의 시간대를 어떻게 인식합니까?
+### Braze는 사용자의 시간대를 어떻게 인식하나요?
 
 Braze는 사용자의 기기에서 자동으로 사용자의 시간대를 결정합니다. 이것은 시간대 정확성과 사용자의 완전한 커버리지를 보장합니다. 사용자 API를 통해 생성된 사용자 또는 표준 시간대가 없는 사용자는 SDK에서 앱에서 인식할 때까지 회사의 표준 시간대가 기본 시간대로 사용됩니다. 
 
@@ -72,7 +78,7 @@ You can check your company's time zone in your [company settings]({{site.baseurl
 
 또 다른 예로, 같은 날 발송될 두 개의 캠페인을 만들고 싶다고 가정해 보겠습니다. 하나는 아침에, 하나는 저녁에 발송되며, 사용자가 첫 번째 캠페인을 이미 받은 경우에만 두 번째 캠페인을 받을 수 있도록 필터를 추가합니다. 현지 시간대 전달을 사용하면 일부 사용자가 두 번째 캠페인을 받지 못할 수 있습니다. 이는 사용자의 시간대가 확인될 때 자격을 확인하기 때문에 해당 시간대에 아직 예약된 시간이 발생하지 않았다면 첫 번째 캠페인을 받지 못한 것이므로 두 번째 캠페인에 참여할 수 없습니다.
 
-### 로컬 시간대 캠페인을 어떻게 예약하나요?
+### 현지 시간대 캠페인을 예약하려면 어떻게 해야 하나요?
 
 캠페인을 예약할 때 지정된 시간에 캠페인을 보내도록 선택한 다음 **현지 시간대의 사용자에게 캠페인 보내기를** 선택합니다.
 
@@ -88,7 +94,7 @@ For example, if it is 1 pm and you schedule a local time zone campaign for 3 pm,
 
 사용자가 캠페인에 다시 참여할 수 있도록 허용한 경우 원래 시간(오후 5시)에 다시 캠페인을 받게 됩니다. 그러나 이후의 모든 캠페인에 대해서는 업데이트된 시간에만 메시지가 전송됩니다.
 
-### 현지 시간대 캠페인의 변경 사항은 언제 적용됩니까?
+### 현지 시간대 캠페인의 변경 사항은 언제 적용되나요?
 
 현지 시간대 캠페인의 타겟 세그먼트에는 모든 시간 기반 필터에 최소 48시간의 기간이 포함되어야 전체 세그먼트에 전달이 보장됩니다. 예를 들어 다음 필터를 사용하여 둘째 날 사용자를 타겟팅하는 세그먼트를 생각해 보겠습니다:
 
@@ -116,7 +122,7 @@ We recommend making changes to messages within the following times:
 
 If you make changes to your message outside of these recommendations, you may not see the updates reflected in the message sent. For example, if you edit the send time three hours before a campaign is scheduled to send at 12 pm local time, the following may occur:
 
-- Braze는 발송 시간이 1시간 이상 지난 사용자에게 메시지를 보내지 않습니다.
+- Braze는 전송 시간을 1시간 이상 놓친 사용자에게는 메시지를 보내지 않습니다.
 - Pre-enqueued messages may still be sent at the originally enqueued time, rather than the adjusted time.
 
 If you need to make changes, we recommend stopping the current campaign (this will cancel any enqueued messages). 그런 다음 캠페인을 복제하고 필요에 따라 변경한 다음 새 캠페인을 시작할 수 있습니다. 이미 첫 번째 캠페인을 받은 사용자를 이 캠페인에서 제외해야 할 수도 있습니다. 시간대 전송이 가능하도록 캠페인 일정 시간을 다시 조정해야 합니다.
@@ -136,6 +142,14 @@ If you need to make changes, we recommend stopping the current campaign (this wi
 ### 캠페인의 API 식별자로 검색할 수 있나요?
 
 네, **캠페인** 페이지에서 필터 `api_id:YOUR_API_ID`을(를) 사용하여 API 식별자로 캠페인을 검색하세요. 캠페인 검색에 대해 알아보려면 [searching for campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/)를 참조하세요.
+
+### 입력 필드와 표시된 텍스트에서 공백이 다르게 나타나는 이유는 무엇인가요? 
+
+입력 필드와 표시되는 텍스트 컴포넌트 간 공백 처리는 CSS 스타일링으로 인해 다릅니다. 기본값이 `white-space: normal` CSS인 텍스트 컴포넌트에서는 여러 개의 연속된 공백이 표시될 때 하나의 공백으로 축소됩니다. 이는 렌더링된 텍스트에 대한 표준 HTML 동작입니다. 
+
+입력 필드는 정확한 데이터 입력을 위해 정확한 간격을 확인하고 편집해야 하므로 입력한 그대로 여러 공백을 유지합니다. 즉, 공백이 여러 개 있는 텍스트는 입력 필드(모든 공백이 보존됨)에서 볼 때와 대시보드의 다른 부분(CSS가 여러 공백을 축소할 수 있음)에서 볼 때 다르게 표시될 수 있습니다. 
+
+예를 들어 입력 필드에 공백이 여러 개 있는 캠페인 이름이나 UTM 매개변수를 입력하는 경우 모든 공백이 보존됩니다. 그러나 동일한 텍스트가 검색 결과, 캠페인 목록 또는 기타 텍스트 구성 요소에 표시되는 경우 CSS 공백 처리로 인해 여러 개의 공백이 하나의 공백으로 표시될 수 있습니다. 
 
 ### API 캠페인과 API 트리거 캠페인의 차이점은 무엇인가요?
 
@@ -167,8 +181,8 @@ table th:nth-child(3) {
 
 API 트리거 및 서버 트리거 캠페인은 자체 서버 및 시스템에서 캠페인 콘텐츠 전송을 트리거할 수 있어 고급 트랜잭션을 처리하는 데 이상적입니다. 메시지를 트리거하는 API 요청에는 실시간으로 메시지에 템플릿화할 추가 데이터를 포함할 수도 있습니다.
 
-| Benefits | Considerations | 
+| Benefits | 고려 사항 | 
 | ---- | ---- |
-| • 데이터 포인트를 소비하지 않습니다<br><br>\- 개인화 요소는 JSON 페이로드 속성에 포함됩니다 | • JSON 페이로드 속성에서 메시지에 적합한 사용자 세그먼트를 생성할 수 없습니다.<br><br>- **메시지 활동 로그로** 들어오는 JSON 페이로드를 볼 수 없음|
+| \- 데이터 포인트를 기록하지 않음<br><br>\- 개인화 요소는 JSON 페이로드 속성에 포함됩니다 | • JSON 페이로드 속성에서 메시지에 적합한 사용자 세그먼트를 생성할 수 없습니다.<br><br>- **메시지 활동 로그로** 들어오는 JSON 페이로드를 볼 수 없음|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

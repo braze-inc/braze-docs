@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:カタログフィールドの作成"
+nav_title: "POST:カタログ・フィールドを作成する"
 article_title: "POST:カタログフィールドの作成"
 search_tag: Endpoint
 page_order: 2
@@ -29,12 +29,12 @@ description: "この記事では、「カタログフィールドの作成」Bra
 
 | パラメータ      | required | データ型 | 説明          |
 | -------------- | -------- | --------- | -------------------- |
-| `catalog_name` | required | 文字列    | カタログ名。 |
+| `catalog_name` | 必須 | 文字列    | カタログ名。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 ## リクエストパラメーター
 
-| パラメーター | 必須 | データ型 | 説明                                                                                                  |
+| パラメーター | required | データ型 | 説明                                                                                                  |
 | --------- | -------- | --------- | ------------------------------------------------------------------------------------------------------------ |
 | `fields`  | required | 配列     | フィールドオブジェクトを含む配列。フィールドオブジェクトは、新しいフィールドの名前とタイプを含んでいなければなりません。 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }

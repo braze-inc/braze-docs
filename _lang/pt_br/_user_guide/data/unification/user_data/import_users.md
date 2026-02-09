@@ -1,21 +1,21 @@
 ---
-nav_title: Importando usuários
-article_title: Importando usuários
+nav_title: Importar usuários
+article_title: Importar usuários
 page_order: 4.1
-description: "Saiba mais sobre as várias opções de importação de usuários do Braze, como importação CSV, API REST, Ingestão de Dados na Nuvem e mais."
+description: "Saiba mais sobre as várias opções de importação de usuários do Braze, como importação de CSV, API REST, ingestão de dados na nuvem e muito mais."
 
 ---
-# Importando usuários
+# Importar usuários
 
-> Saiba mais sobre as várias opções de importação de usuários do Braze, como importação CSV, API REST, Ingestão de Dados na Nuvem e mais.
+> Saiba mais sobre as várias opções de importação de usuários do Braze, como importação de CSV, API REST, ingestão de dados na nuvem e muito mais.
 
 ## Sobre a validação de HTML
 
-Tenha em mente que o Braze não sanitiza, valida ou reformata dados HTML durante a importação, o que significa que as tags de script devem ser removidas de todos os dados de importação que você usa para personalização na web.
+Lembre-se de que o Braze não higieniza, valida ou reformata dados HTML durante a importação, o que significa que as tags de script devem ser removidas de todos os dados de importação que você usar para personalização da Web.
 
-Ao importar dados para o Braze que são especificamente destinados ao uso de personalização em um navegador da web, certifique-se de que estejam livres de HTML, JavaScript ou qualquer outra tag de script que possa ser utilizada maliciosamente quando renderizada em um navegador da web.
+Ao importar dados para o Braze que são especificamente destinados ao uso de personalização em um navegador web, certifique-se de que eles estejam livres de HTML, JavaScript ou qualquer outra tag de script que possa ser potencialmente usada de forma maliciosa quando renderizada em um navegador web.
 
-Alternativamente, para HTML, você pode usar filtros Liquid do Braze (`strip_html`) para escapar texto renderizado em HTML. Por exemplo:
+Alternativamente, para HTML, você pode usar os filtros de Liquid (`strip_html`) da Braze para escapar o texto renderizado em HTML. Por exemplo:
 
 {% tabs local %}
 {% tab Input %}
@@ -36,31 +36,31 @@ Have you read Ulysses?
 
 ## Opções de importação
 
-### Importação CSV do Braze
+### Importação de CSV da Braze
 
-Você pode usar a importação CSV para registrar e atualizar os seguintes atributos de usuário e eventos personalizados. Para começar, veja [Importação CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import).
+É possível usar a importação de CSV para registrar e atualizar os seguintes atributos de usuário e eventos personalizados. Para começar, consulte [Importação de CSV]({{site.baseurl}}/user_guide/data/user_data_collection/user_import/csv_import).
 
 |Tipo|Definição|Exemplo|Tamanho máximo do arquivo|
 |---|---|---|---|
-|Atributos padrão|Atributos de usuário reservados reconhecidos pelo Braze.|`first_name`, `email`|500 MB|
-|Atributos Personalizados|Atributos de usuário únicos para o seu negócio.|`last_destination_searched`|500 MB|
-|Eventos Personalizados|Eventos únicos para o seu negócio que representam ações do usuário.|`trip_booked`|50 MB|
+|Atributos padrão|Atribuições reservadas do usuário reconhecidas pelo Braze.|`first_name`, `email`|500 MB|
+|Atributos personalizados|Atribuições do usuário exclusivas para a sua empresa.|`last_destination_searched`|500 MB|
+|Eventos personalizados|Eventos exclusivos da sua empresa que representam ações do usuário.|`trip_booked`|50 MB|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-### Importação de CSV de usuário Lambda
+### Importação de CSV do usuário Lambda
 
-Você pode usar nosso script de importação de CSV Lambda S3 sem servidor para enviar atributos de usuário para o Braze. Esta solução funciona como um carregador de CSV onde você coloca seus CSVs em um bucket S3, e os scripts os enviam através da nossa API.
+Você pode usar nosso script de importação de CSV S3 Lambda sem servidor para fazer upload das atribuições do usuário para o Braze. Essa solução funciona como um carregador de CSV onde você solta seus CSVs em um bucket S3, e os scripts fazem upload através da nossa API.
 
-Os tempos de execução estimados para um arquivo com 1.000.000 de linhas devem ser em torno de cinco minutos. Veja [Atributo de usuário CSV para importação no Braze](https://www.braze.com/docs/user_guide/data/cloud_ingestion/) para mais informações.
+O tempo de execução estimado para um arquivo com 1.000.000 de linhas deve ser de cerca de cinco minutos. Para saber mais, consulte [CSV de atributos do usuário para importação da Braze](https://www.braze.com/docs/user_guide/data/cloud_ingestion/).
 
 ### API REST
 
-Use o [endpoint `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para registrar eventos personalizados, atributos de usuário e compras para usuários.
+Use o [ponto de extremidade`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) para registrar eventos personalizados, atributos de usuário e compras para usuários.
 
-### Ingestão de Dados na Nuvem
+### Ingestão de dados na nuvem
 
-Use o [Ingestão de Dados na Nuvem]({{site.baseurl}}/user_guide/data/cloud_ingestion/) do Braze para importar e manter atributos de usuário.
+Use [a ingestão de dados]({{site.baseurl}}/user_guide/data/cloud_ingestion/) do Braze [Cloud]({{site.baseurl}}/user_guide/data/cloud_ingestion/) para importar e manter as atribuições de usuários.
 
-## E-mails transacionais exigidos por lei
+## E-mails de transações legalmente exigidas
 
 {% multi_lang_include alerts/important_alerts.md alert='Email via SMS' %}

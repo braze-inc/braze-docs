@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Transifex
 
-> Transifex ermöglicht eine robuste Lokalisierung für Ihre Nutzer:innen, unabhängig von der Sprache.
+> [Transifex](https://www.transifex.com/) ermöglicht eine robuste Lokalisierung für Ihre Nutzer:innen, unabhängig von der Sprache.
 
 _Diese Integration wird von Transifex gepflegt._
 
@@ -42,7 +42,7 @@ curl --request GET \
      --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
-Wenn sich Ihr Transifex-Projekt zum Beispiel am Standort `https://www.transifex.com/appboy-3/french2/french_translationspo/` befindet, wird `project_name` zu "french2" und `resource_name` zu "french_translationspo".
+Wenn sich Ihr Transifex-Projekt beispielsweise am Standort `https://www.transifex.com/appboy-3/french2/french_translationspo/` befindet, wird `project_name` zu "french2" und `resource_name` zu "french_translationspo".
 
 ## Beispiel für Connected-Content-Nachrichten
 

@@ -14,7 +14,7 @@ guide_top_text: "Understanding the impact of your engagement strategy is critica
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-- name: "Setting Up Currents"
+- name: "Set Up Currents"
   link: /docs/user_guide/data/braze_currents/setting_up_currents/
   image: /assets/img/braze_icons/building-01.svg
 - name: "Available Partners"
@@ -57,6 +57,6 @@ There's so much more you can do with event data, accessed by Currents. Trust usâ
 
 ## How to access Currents
 
-A Currents connector is already included in many of our pro and enterprise-level packages. If you're interested in using Currents, reach out to your account manager. Your account manager and our data specialists can assist in your [Currents setup and integration]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/).
+A Currents connector is already included in many of our pro and enterprise-level packages. If you're interested in using Currents, contact your account manager. Your account manager and our data specialists can assist in your [Currents setup and integration]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/).
 
 <br><br>

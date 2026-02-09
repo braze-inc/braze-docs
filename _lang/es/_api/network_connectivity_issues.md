@@ -15,7 +15,7 @@ Los puntos finales de la API de Braze utilizan una CDN que dirige el tráfico al
 
 Observamos que algunos cortafuegos intentan modificar o proteger el tráfico HTTPS/TLS, lo que interfiere en las conexiones a los puntos finales de la API de Braze. Si tus servidores están detrás de algún tipo de cortafuegos físico, desactiva cualquier aceleración o modificación HTTPS/TLS que esté realizando el cortafuegos o el router. Además, puedes permitir el tráfico saliente a nuestros proveedores de CDN (Fastly.com) para ver si eso resuelve el problema.
 
-Ocasionalmente, las configuraciones de iptables que filtran los paquetes de SYN/ACK/RST también pueden causar problemas, así que si utilizas iptables en tu host también podrías permitir el tráfico saliente a nuestros proveedores de CDN (Fastly.com) para ver si eso resuelve el problema.
+Ocasionalmente, las configuraciones de iptables que filtran los paquetes SYN/ACK/RST también pueden causar problemas, así que si utilizas iptables en tu host también podrías permitir el tráfico saliente a nuestros proveedores de CDN (Fastly.com) para ver si eso resuelve el problema.
 
 Si sigues teniendo problemas de red al conectarte a los puntos finales de la API de Braze, proporciona una [prueba MTR](https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2) y los resultados de [Fastly Debug](http://www.fastly-debug.com/) mientras experimentas el problema y envíalos con tu solicitud de asistencia. Ten en cuenta que los resultados de la prueba deben obtenerse de un servidor que tenga problemas para conectarse a los puntos finales de la API de Braze, no de una máquina de desarrollo. Una captura de red (archivo tcpdump o .pcap) también será útil si se puede obtener.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: 지오펜스 생성
-article_title: 지오펜스 생성
+nav_title: 지오펜스 만들기
+article_title: 지오펜스 만들기
 page_order: 1
 page_type: reference
 toc_headers: h2
@@ -32,7 +32,7 @@ Refer to the following table for common geofence terms and their descriptions.
 | Term | Description |
 |---|---|
 | Latitude and longitude | The geographic center of the geofence. |
-| Radius | The radius of the geofence in meters, measured from the geographic center. We recommend setting a minimum radius of 100–150 meters for all geofences. |
+| Radius | The radius of the geofence in meters, measured from the geographic center. 모든 지오펜스에 대해 최소 반경 100~150미터를 설정하는 것이 좋습니다. |
 | Cooldown | Users receive geofence-triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined time during which that user may not perform the same transition on that individual geofence again. This time is called the "cooldown" and is pre-defined by Braze, and its main purpose is to prevent unnecessary network requests. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -59,20 +59,20 @@ Next, you can add geofences to your geofence set.
 최적의 기능을 위해 반경 최소 200미터의 지오펜스를 만드는 것을 권장합니다. For more information on configurable options, refer to [Mobile integrations](#mobile-integrations).
 {% endalert %}
 
-![A geofence set with two geofences "EastCoastGreaterNY" and "WesternRegion" with two circles on the map.]({% image_buster /assets/img/geofence_example.png %})
+![지도에 두 개의 원이 있는 두 개의 지오펜스 "EastCoastGreaterNY" 및 "WesternRegion"이 있는 지오펜스 세트입니다.]({% image_buster /assets/img/geofence_example.png %})
 
 ## Bulk upload geofences {#creating-geofence-sets-via-bulk-upload}
 
-지오펜스는 `FeatureCollection` 유형의 GeoJSON 객체로 일괄 업로드할 수 있습니다. Each geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `radius` key, and an optional `name` key for each geofence. 
+지오펜스는 `FeatureCollection` 유형의 GeoJSON 객체로 일괄 업로드할 수 있습니다. Each geofence is a `Point` geometry type in the feature collection. 각 기능의 속성에는 `radius` 키와 각 지오펜스에 대한 선택적 `name` 키가 필요합니다. 
 
 To upload your GeoJSON, select **More** > **Upload GeoJSON**.
 
 When creating your geofences, consider the following details:
 
 - The `coordinates` value in the GeoJSON is formatted as `[Longitude, Latitude]`.
-- The maximum geofence radius that may be uploaded is 10,000 meters (about 100 kilometers or 62 miles).
+- 업로드할 수 있는 최대 지오펜스 반경은 10,000미터(약 10킬로미터 또는 6.2마일)입니다.
 
-### Example
+### 예시
 
 The following example represents the correct GeoJSON for specifying two geofences: one for Braze headquarters in NYC, and one for the Statue of Liberty south of Manhattan.
 
@@ -114,7 +114,7 @@ After geofences have been configured, you can use them to enhance and enrich how
 
 캠페인 및 캔버스 트리거의 일부로 지오펜스 데이터를 사용하려면 전달 방법으로 **실행 기반 전달**을 선택하세요. 다음으로, `Trigger a Geofence`의 트리거 동작을 추가합니다. 마지막으로, 메시지에 대한 지오펜스 세트 및 지오펜스 전환 이벤트 유형을 선택하세요. 지오펜스 이벤트를 사용하여 캔버스를 통해 사용자들을 진전시킬 수도 있습니다.
 
-![An action-based campaign with a geofence that will trigger when a user enters German airports.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
+![사용자가 독일 공항에 들어올 때 트리거되는 지오펜스가 있는 액션 기반 캠페인입니다.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
 ### Personalizing messages
 
@@ -153,7 +153,7 @@ Refer to [Android](https://developer.android.com/develop/sensors-and-location/lo
 You can also leverage geofences with our Technology Partners, such as [Radar]({{site.baseurl}}/partners/message_personalization/location/radar/) and [Foursquare]({{site.baseurl}}/partners/message_personalization/location/foursquare/)
 {% endalert %}
 
-## 자주 묻는 질문
+## Frequently asked questions
 
 ### What's the difference between geofences and location tracking?
 
@@ -165,7 +165,7 @@ Location tracking is used to collect and store a user's most recent location dat
 
 Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wi-Fi, GPS, and cellular towers.
 
-Typical accuracy is in 20–50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
+일반적인 정확도는 20~50m 범위이며, 최상의 정확도는 5~10m 범위입니다. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
 
 For more information on the accuracy of geofences, refer to [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) and [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1) documentation.
 
@@ -185,5 +185,5 @@ No, Braze doesn't store geofence data on user profiles. Geofences are monitored 
 
 ### Can I set up a geofence within a geofence?
 
-As a best practice, avoid setting up geofences inside each other as this may cause issues with triggering notifications.
+알림 트리거에 문제가 발생할 수 있으므로 서로 겹치는 지오펜스는 설정하지 않는 것이 좋습니다.
 

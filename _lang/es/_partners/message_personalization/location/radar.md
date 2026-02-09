@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) es la principal plataforma de geovallado y seguimiento de ubicación. La plataforma Radar tiene tres productos principales: [Geovallas](https://radar.io/product/geofencing), [seguimiento de viajes](https://radar.io/product/trip-tracking) y [API geográficas](https://radar.io/product/api). La combinación de la plataforma de interacción líder del sector Braze y las capacidades de geovallado líderes del sector de Radar te permite impulsar los ingresos y la fidelización a través de una amplia gama de experiencias de productos y servicios basadas en la ubicación. Entre ellas se incluyen el seguimiento de la recogida y la entrega, las notificaciones activadas por la ubicación, la personalización contextual, la verificación de la ubicación, los localizadores de tiendas, la función de autocompletar direcciones, etc.
+> [Radar](https://www.radar.com/) es la principal plataforma de geovallado y seguimiento de ubicación. La plataforma Radar tiene tres productos principales: [Geovallas](https://radar.com/product/geofencing), [seguimiento de viajes](https://radar.com/product/trip-tracking) y [API geográficas](https://radar.com/product/api). La combinación de la plataforma de interacción líder del sector Braze y las capacidades de geovallado líderes del sector de Radar te permite impulsar los ingresos y la fidelización a través de una amplia gama de experiencias de productos y servicios basadas en la ubicación. Entre ellas se incluyen el seguimiento de la recogida y la entrega, las notificaciones activadas por la ubicación, la personalización contextual, la verificación de la ubicación, los localizadores de tiendas, la función de autocompletar direcciones, etc.
 
 _Esta integración está mantenida por Radar._
 
@@ -18,7 +18,7 @@ _Esta integración está mantenida por Radar._
 
 La integración de Braze y Radar le permite acceder a sofisticados activadores de campañas basados en la ubicación y al enriquecimiento del perfil del usuario con datos de ubicación enriquecidos y de primera mano. Cuando se generan eventos de geovalla Radar o de seguimiento de viajes, los eventos personalizados y los atributos de usuario se envían a Braze en tiempo real. Estos eventos y atributos pueden utilizarse para lanzar campañas basadas en la localización, impulsar operaciones de recogida y entrega en el último kilómetro, supervisar la logística de flotas y envíos o crear segmentos de usuarios basados en patrones de localización. 
 
-Además, las Geo API de Radar pueden aprovecharse para enriquecer o personalizar sus campañas de marketing a través [del Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
+Además, las Geo API de Radar pueden utilizarse para enriquecer o personalizar tus campañas de marketing a través [del Contenido Conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/). 
 
 ## Requisitos previos
 
@@ -60,7 +60,7 @@ Puede utilizar eventos personalizados y atributos de usuario para crear segmento
 
 Envía una notificación push al usuario con instrucciones de llegada cuando llegue a tu tienda para una recogida en acera.
 
-![Una campaña de entrega basada en acciones que muestra que la campaña se entregará cuando se produzca el evento personalizado "arrived_at_trip_destination" y los "trip_metadata" sean iguales a "curbside".]({% image_buster /assets/img_archive/radar-campaign.png %})
+![Una campaña de entrega basada en acciones que muestra que la campaña se entregará cuando se produzca el evento personalizado "arrived_at_trip_destination", y el "trip_metadata" es igual a "acera".]({% image_buster /assets/img_archive/radar-campaign.png %})
 
 ### Crear un segmento de audiencia de visitantes recientes de la tienda
 
@@ -76,7 +76,7 @@ El siguiente ejemplo muestra cómo realizar una promoción para llevar a los usu
 
 Para empezar, necesitará tener a mano su clave de API publicable de Radar para utilizarla en sus URL de solicitud.
 
-A continuación, dentro de una etiqueta `connected_content`, haz una petición GET a [la API Search Places](https://radar.io/documentation/api#search-places). La API de búsqueda de lugares devuelve ubicaciones cercanas basadas en [Radar Places](https://radar.io/documentation/places): una base de datos de ubicaciones de lugares, cadenas y categorías que proporciona una visión completa del mundo.
+A continuación, dentro de una etiqueta `connected_content`, haz una petición GET a [la API Search Places](https://radar.com/documentation/api#search-places). La API de búsqueda de lugares devuelve ubicaciones cercanas basadas en [Radar Places](https://radar.com/documentation/places): una base de datos de ubicaciones de lugares, cadenas y categorías que proporciona una visión completa del mundo.
 
 El siguiente fragmento de código es un ejemplo de lo que Radar devolverá como objeto JSON de la llamada a la API:
 
@@ -129,7 +129,7 @@ El siguiente fragmento de código es un ejemplo de lo que Radar devolverá como 
 }
 ```
 
-Para construir el mensaje Braze personalizado y orientado al contenido conectado, puede aprovechar el atributo Braze `most_recent_location` como entrada para el parámetro `near` en la URL de la solicitud de API. El atributo `most_recent_location` se recoge a través de la integración de eventos Radar o directamente a través del SDK Braze.
+Para construir el mensaje Braze dirigido y personalizado de contenido conectado, puedes utilizar el atributo Braze `most_recent_location` como entrada para el parámetro `near` en la URL de la solicitud API. El atributo `most_recent_location` se recoge a través de la integración de eventos Radar o directamente a través del SDK Braze.
 
 En el siguiente ejemplo, el filtrado de la cadena Radar se aplica a las ubicaciones de Target y Walmart, y el radio de búsqueda de las ubicaciones cercanas se establece en 2 km.
 
@@ -180,7 +180,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-Visita [la documentación de Radar](https://radar.io/documentation/api) para ver todas las API de Radar que pueden aprovecharse en el contenido conectado.
+Visita [la documentación de Radar](https://radar.com/documentation/api) para ver todas las API de Radar que pueden utilizarse en el Contenido conectado.
 {% endalert %}
 
 

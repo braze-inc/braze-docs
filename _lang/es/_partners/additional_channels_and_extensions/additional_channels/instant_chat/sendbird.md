@@ -71,7 +71,7 @@ Debe añadirse un ID de usuario de Sendbird a un perfil de usuario de Braze como
 
 ### Paso 5: Configure su plantilla de webhook
 
-En Braze, desde **Templates & Media**, vaya a **Webhook Templates** y elija **Sendbird Webhook Template**. Tenga en cuenta que esta plantilla sólo estará disponible si tiene instalada la extensión Sendbird Notification Builder.
+En Braze, desde **Plantillas & Media**, ve a **Plantillas Webhook** y elige la **Plantilla Webhook Sendbird**. Tenga en cuenta que esta plantilla sólo estará disponible si tiene instalada la extensión Sendbird Notification Builder.
 
 {% raw %}
 1. Proporcione un nombre de plantilla y añada equipos y etiquetas según sea necesario.

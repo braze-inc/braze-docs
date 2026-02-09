@@ -1,6 +1,6 @@
 ---
-nav_title: 규칙 기반 추천
-article_title: 규칙 기반 항목 추천 만들기
+nav_title: 규칙 기반 권장 사항
+article_title: 규칙 기반 항목 권장 사항 만들기
 description: "이 참조 기사에서는 카탈로그에 있는 항목에 대한 AI 항목 추천을 생성하는 방법을 다룹니다."
 page_order: 2
 ---
@@ -11,7 +11,7 @@ page_order: 2
 
 ## 규칙 기반 항목 추천에 대한 정보
 
-규칙 기반 추천 엔진은 사용자 데이터와 제품 정보를 사용하여 메시지 내에서 사용자에게 관련 항목을 제안합니다. 사용자 행동 및 속성을 기반으로 콘텐츠를 동적으로 개인화하기 위해 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)과 Braze [catalogs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) 또는 [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)을 사용합니다.
+규칙 기반 추천 엔진은 사용자 데이터와 제품 정보를 사용하여 메시지 내에서 사용자에게 관련 항목을 제안합니다. 사용자 행동 및 속성을 기반으로 콘텐츠를 동적으로 개인화하기 위해 [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/)과 Braze [catalogs]({{site.baseurl}}/user_guide/data/activation/catalogs/) 또는 [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/)을 사용합니다.
 
 {% alert important %}
 규칙 기반 추천은 수동으로 설정해야 하는 고정된 논리에 기반합니다. 즉, 로직을 업데이트하지 않으면 사용자의 구매 내역과 취향에 맞게 추천이 조정되지 않습니다.<br><br>사용자의 기록에 따라 자동으로 조정되는 개인화된 AI 추천을 만들려면 [AI 항목 추천]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/)을 확인하세요.
@@ -25,7 +25,7 @@ page_order: 2
   <thead>
     <tr>
       <th>추천 엔진</th>
-      <th>소비된 데이터 포인트 없음</th>
+      <th>기록된 데이터 포인트 없음</th>
       <th>코드 없는 솔루션</th>
       <th>고급 Liquid 없음</th>
       <th>제품 피드를 자동으로 업데이트</th>
@@ -79,11 +79,11 @@ page_order: 2
 카탈로그 또는 연결된 콘텐츠를 사용하여 추천 엔진을 만드세요:
 
 {% tabs local %}
-{% tab 카탈로그 사용 %}
+{% tab using a catalog %}
 카탈로그를 사용하여 추천 엔진을 만들려면:
 
-1. 제품 [카탈로그를 생성합니다]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/).
-2. 각 제품에 대해 추천 제품 목록을 "product_recommendations"라는 열에 구분 기호(예: 파이프 `|`)로 구분된 문자열로 추가합니다.
+1. 제품 [카탈로그를 생성합니다]({{site.baseurl}}/user_guide/data/activation/catalogs/create/).
+2. 각 제품에 대해 추천 제품 목록을 구분 기호(예: 파이프 `|`)로 구분된 문자열로 열에 추가합니다. “product_recommendations”.
 3. 카탈로그에 권장 사항을 찾으려는 제품 ID를 전달합니다.
 4. 해당 카탈로그 항목의 `product_recommendations` 값을 가져와서 Liquid 분할 필터를 사용하여 구분 기호로 분할합니다.
 5. 이러한 ID 중 하나 이상을 카탈로그에 다시 전달하여 다른 제품 세부 정보를 수집합니다.
@@ -103,7 +103,7 @@ page_order: 2
 
 카탈로그가 Braze에 업로드된 후 일부 카탈로그 항목의 미리 보기를 확인하여 가져온 정보가 정확하게 입력되었는지 확인합니다. 미리 보기에서 항목이 무작위로 표시될 수 있지만 추천 엔진의 출력에는 영향을 미치지 않습니다.
 
-![Braze의 예제 카탈로그입니다.]({% image_buster /assets/img/recs/catalog_items.png %})
+![Braze의 카탈로그 예시.]({% image_buster /assets/img/recs/catalog_items.png %})
 
 콘텐츠 카드 캠페인을 만듭니다. 작성기에서 Liquid 로직을 입력하여 캠페인을 수신할 사용자와 표시할 레시피 및 이미지를 결정합니다. 이 사용 사례에서 Braze는 사용자의 `start_date`(또는 가입 날짜)를 가져와 현재 날짜와 비교합니다. 날짜 차이에 따라 전송되는 콘텐츠 카드가 결정됩니다.
 
@@ -154,7 +154,7 @@ page_order: 2
 
 For example:
 
-![콘텐츠 카드 캠페인의 예제 메시지 작성기입니다.]({% image_buster /assets/img/recs/content_card_preview.png %})
+![콘텐츠 카드 캠페인의 메시지 작성기 예시입니다.]({% image_buster /assets/img/recs/content_card_preview.png %})
 
 **클릭 시 동작** 섹션에서 사용자가 iOS, Android 및 웹 기기에서 콘텐츠 카드를 클릭할 때 리디렉션해야 하는 위치에 대한 Liquid 로직을 입력합니다. 
 
@@ -171,14 +171,14 @@ For example:
 
 For example:
 
-![작성기에서 클릭 시 동작 블록의 예입니다.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
+![작성기의 클릭 시 동작 블록 예시입니다.]({% image_buster /assets/img/recs/on_click_behavior.png %}){: style="max-width:60%;"}<br><br>
 
 **테스트** 탭으로 이동하여 **사용자로 메시지 미리보기**에서 커스텀 **사용자를** 선택합니다. **커스텀 속성** 필드에 날짜를 입력하면 해당 날짜에 가입한 사용자에게 전송될 콘텐츠 카드를 미리 볼 수 있습니다. <br><br>
 
-![‘start_date’라는 이름의 예제 커스텀 속성입니다.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
+!['start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})라는 커스텀 속성의 예시입니다.
 {% endtab %}
 
-{% tab 연결된 콘텐츠 사용 %}
+{% tab using Connected Content %}
 연결된 콘텐츠를 사용하여 추천 엔진을 만들려면, 먼저 다음 방법 중 하나를 사용하여 새 엔드포인트를 생성하세요:
 
 |옵션|설명|
@@ -328,6 +328,6 @@ Good places
 
 아래 스크린샷에서 사용자 기기에 응답이 표시되는 방식에 대한 예를 참조하세요.
 
-![예제 최종 호출로 생성된 레스토랑 목록의 렌더링입니다.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![예제 최종 호출에서 생성된 레스토랑 목록의 렌더링입니다.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

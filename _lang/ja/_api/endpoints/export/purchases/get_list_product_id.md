@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:プロダクトIDをエクスポートする"
+nav_title: "取得:製品IDをエクスポートする"
 article_title: "取得:プロダクトIDをエクスポートする"
 search_tag: Endpoint
 page_order: 1
@@ -44,8 +44,6 @@ https://rest.iad-01.braze.com/purchases/product_list?page=1
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "products": [
     "product_name" (string), the name of the product

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST:スケジュールされたメッセージを削除"
+nav_title: "POST:スケジュールされたメッセージを削除する"
 article_title: "POST:スケジュールされたメッセージを削除"
 search_tag: Endpoint
 page_order: 4
@@ -10,7 +10,7 @@ description: "この記事では、Delete scheduled messages Brazeエンドポ�
 ---
 {% api %}
 # スケジュールされたメッセージを削除する
-{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /messages/schedule/delete
 {% endapimethod %}
 

@@ -2,9 +2,25 @@
 
 ## Standard-Nutzerattribute
 
+### Vordefinierte Methoden
+
+Braze stellt vordefinierte Methoden zum Festlegen der folgenden Nutzerattribute in der [Klasse `User`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) bereit:
+
+- Vorname
+- Nachname
+- Sprache
+- Land
+- Geburtsdatum
+- E-Mail
+- Geschlecht
+- Heimatstadt
+- Telefonnummer
+
+### Einstellung von Standardattributen
+
 {% tabs %}
-{% tab Standardimplementierung %}
-Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `getCurrentUser()` auf Ihrer Braze-Instanz auf, um eine Referenz auf den aktuellen Nutzer:innen Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
+{% tab using methods %}
+Um ein Standardattribut für einen Nutzer festzulegen, rufen Sie die Methode `getUser()` auf Ihrer Braze-Instanz auf, um eine Referenz auf den aktuellen Nutzer:innen Ihrer App zu erhalten. Dann können Sie Methoden aufrufen, um ein Nutzer:in-Attribut zu setzen.
 
 {% subtabs local %}
 {% subtab First name %}
@@ -25,7 +41,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Bei der Verwendung von Google Tag Manager sollten Standard-Attribute für Nutzer:innen (z.B. der Vorname eines Nutzers) auf die gleiche Weise protokolliert werden wie angepasste Attribute für Nutzer:innen. Stellen Sie sicher, dass die Werte, die Sie für Standardattribute übergeben, dem erwarteten Format entsprechen, das in der Dokumentation [Nutzerklasse](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) angegeben ist.
 
 Das Attribut "gender" kann zum Beispiel folgende Werte annehmen: `"m" | "f" | "o" | "u" | "n" | "p"`. Um also das Geschlecht eines Nutzers als weiblich festzulegen, erstellen Sie ein angepasstes HTML-Tag mit folgendem Inhalt:
@@ -38,22 +54,34 @@ window.braze.getUser().setGender("f")
 {% endtab %}
 {% endtabs %}
 
-Braze stellt vordefinierte Methoden zum Festlegen der folgenden Nutzerattribute in der [Klasse `User`](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) bereit:
+### Standardattribute zurücksetzen
 
-- Vorname
-- Nachname
-- Sprache
-- Land
-- Geburtsdatum
-- E-Mail
-- Geschlecht
-- Heimatstadt
-- Telefonnummer
+Um ein Standardattribut für Nutzer:innen zu deaktivieren, übergeben Sie `null` an die entsprechende Methode. Zum Beispiel:
+
+{% tabs local %}
+{% tab First name %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endtab %}
+{% tab Gender %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endtab %}
+{% tab Date of birth %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endtab %}
+{% endtabs %}
 
 ## Angepasste Nutzerattribute
 
+### Anpassen der Attribute
+
 {% tabs %}
-{% tab Standardimplementierung %}
+{% tab using methods %}
 Zusätzlich zu den Standardattributen können Sie auch [angepasste Attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) für Ihre Nutzer:innen festlegen. Die vollständigen Spezifikationen der Methode finden Sie in [unseren JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
@@ -137,7 +165,7 @@ Angepasste Attribut-Schlüssel und -Werte dürfen nur maximal 255 Zeichen lang s
 {% endalert %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Benutzerdefinierte Benutzerattribute sind aufgrund einer Einschränkung in der Skriptsprache von Google Tag Manager nicht verfügbar. Um angepasste Attribute zu protokollieren, erstellen Sie ein angepasstes HTML-Tag mit folgendem Inhalt:
 
 ```html
@@ -154,12 +182,28 @@ Die GTM-Vorlage unterstützt keine verschachtelten Eigenschaften für Ereignisse
 {% endtab %}
 {% endtabs %}
 
-### Zurücksetzen eines benutzerdefinierten Attributs
+### Angepasste Attribute nicht anpassen
 
-Angepasste Attribute können deaktiviert werden, indem ihr Wert auf `null` gesetzt wird.
+Um ein angepasstes Attribut zu deaktivieren, übergeben Sie `null` an die entsprechende Methode.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
+```
+
+### Verschachtelte angepasste Attribute
+
+Sie können auch Eigenschaften innerhalb angepasster Attribute verschachteln. Im folgenden Beispiel wird ein `favorite_book` Objekt mit verschachtelten Eigenschaften als angepasstes Attribut auf das Nutzerprofil gesetzt. Weitere Einzelheiten finden Sie unter [Verschachtelte angepasste Attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const favoriteBook = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publishing_date: "1937"
+};
+
+braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
 ```
 
 ### Verwendung der REST API

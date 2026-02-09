@@ -5,7 +5,7 @@ alias: "/dnd/editor_blocks/"
 channel: 
 - email
 - in-app messages
-page_order: 1
+page_order: 6
 description: "このリファレンス記事では、メール およびアプリ内メッセージ s のドラッグアンドドロップエディタで提供されるさまざまなエディタブロックについて説明します。"
 tool: Media
 ---

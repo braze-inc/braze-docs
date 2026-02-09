@@ -1,5 +1,5 @@
 ---
-nav_title: "DELETE:SDK 認証キーを削除"
+nav_title: "DELETE:SDK認証キーを削除する。"
 article_title: "DELETE:SDK 認証キーを削除"
 search_tag: Endpoint
 page_order: 3

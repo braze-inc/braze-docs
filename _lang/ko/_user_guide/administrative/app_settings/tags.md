@@ -14,7 +14,7 @@ description: "이 참조 문서에서는 Braze 대시보드의 태그에 대해 
 
 캠페인, 캔버스 또는 세그먼트를 만들거나 편집할 때 태그를 추가할 수 있습니다. 클릭 <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**태그** 참여 이름 아래에서 기존 태그를 선택하거나 새 태그를 추가하려면 입력을 시작하세요.
 
-![Adding tags during campaign creation.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
+![캠페인 생성 중 태그 추가하기.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 캠페인, 캔버스 또는 세그먼트에 최대 175개의 태그를 추가할 수 있습니다.
@@ -24,7 +24,7 @@ description: "이 참조 문서에서는 Braze 대시보드의 태그에 대해 
 
 You can also add tags to multiple campaigns, Canvases, or segments by selecting multiple engagements and selecting <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As**.
 
-![Adding tags to multiple campaigns at the same time.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+![여러 캠페인에 동시에 태그 추가하기.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
 
 {% alert important %}
 When you use bulk tagging to apply a new tag to multiple campaigns that already have different tags, each selected campaign will receive the new tag, and any tags present on a campaign will be applied to all other selected campaigns, even if those tags were not originally associated with them.
@@ -34,13 +34,13 @@ When you use bulk tagging to apply a new tag to multiple campaigns that already 
 
 The tags set on a campaign, Canvas, or segment are visible on the details page near the engagement name. They also appear on campaign analytics.
 
-![Tags shown on the Campaign Analytics page.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
+![캠페인 분석 페이지에 표시되는 태그.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
 
 ### Filtering by tag
 
 Tags are visible in the list of campaigns, Canvases, or segments, along with additional tags for status labels such as **Archived** and **Draft**. To filter by a tag, select the tag name from the list of tags.
 
-![Tags on the list of campaigns.]({% image_buster /assets/img_archive/tags_grid.png %})
+![캠페인 목록의 태그.]({% image_buster /assets/img_archive/tags_grid.png %})
 
 ## 커스텀 데이터 tags
 
@@ -54,13 +54,13 @@ Tags are visible in the list of campaigns, Canvases, or segments, along with add
 
 캠페인, 캔버스 및 세그먼트 전반에 걸쳐 동일한 태그를 사용할 수 있습니다. 대시보드에서 태그를 효율적으로 이름 바꾸기, 제거 또는 추가하려면 **설정** > **태그 관리**로 이동하십시오.
 
-![Tags tab on the Manage Settings page.]({% image_buster /assets/img_archive/tags_view.png %})
+![설정 관리 페이지의 태그 탭을 클릭합니다.]({% image_buster /assets/img_archive/tags_view.png %})
 
 태그를 더 잘 정리하려면 태그를 상위 태그 아래에 중첩하세요. 예를 들어, 모든 휴일 태그를 상위 `Holidays` 태그 아래에 중첩시키거나, 마케팅 퍼널의 단계와 관련된 모든 태그를 상위 `Funnel` 태그 아래에 중첩시킬 수 있습니다. 
 
 그렇게 하려면 새 태그를 만들고 **태그 아래에 중첩**을 선택한 다음 새 태그를 중첩할 기존 태그를 선택합니다. 기존 태그를 **태그 관리** 페이지에서 중첩할 수도 있습니다. 이 페이지에서 태그가 있는 행 위로 마우스를 가져가서 **<i class="fas fa-pencil-alt"></i>편집**을 클릭하세요. 그런 다음 이전과 동일한 단계를 따르십시오.
 
-![Create a nested tag.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
+![중첩 태그를 만듭니다.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
 
 ## 모범 사례 {#tags-best-practices}
 
@@ -100,7 +100,10 @@ table td {
 
 ## 사용 사례
 
-태그를 활용하여 메시징 생애주기를 관리하는 방법에 대한 영감을 찾고 계신가요? 다음은 몇 가지 일반적인 사용 사례입니다:
+태그를 활용하여 메시징 생애주기를 관리하는 방법에 대한 영감을 찾고 계신가요? 다음은 몇 가지 일반적인 사용 사례입니다.
+
+{% tabs %}
+{% tab Throttling %}
 
 ### 제한
 
@@ -110,6 +113,12 @@ table td {
 <br>`OR`<br>
 `Promo` 태그가 있는 `Has not received campaign`
 
+{% endtab %}
+{% tab Reporting %}
+
 ### 보고
 
 특정 태그가 있는 모든 캠페인의 볼륨을 주시하기 위해 참여 보고서를 설정하십시오. 예를 들어, 모든 푸시 캠페인을 모니터링하려면 해당 캠페인에 `Push Reporting`와 같은 태그를 추가한 다음, 태그된 캠페인의 보고서를 매일 보내는 [참여 보고서]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases)를 설정할 수 있습니다.
+
+{% endtab %}
+{% endtabs %}

@@ -32,7 +32,7 @@ tool: Canvas
 
 버전 기록 수가 증가함에 따라 사이드바에서 각 버전의 이름을 변경하여 정리할 수 있습니다. 기본적으로, 버전 이름은 이전에 생성된 버전 수를 기준으로 숫자로 생성됩니다. 버전이 더 이상 활성 상태가 아닐 때 이름을 변경하면, 이는 캔버스 체인지로그에 나타나지만 버전 기록 보기 내의 버전 체인지로그에는 나타나지 않습니다.
 
-![두 개의 새 캔버스 버전이 생성되었음을 보여주는 캔버스 변경 로그 예제]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
+![캔버스 체인지로그 예시로 두 개의 새로운 캔버스 버전이 생성되었음을 보여줍니다.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### 버전 폐기
 

@@ -35,22 +35,22 @@ Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**�
 
 トレジャーデータ内でデータ接続を作成する前に、認証が必要になります。まず、**インテグレーションハブ**を選択し、次に**カタログ**を選択します。
 
-![トレジャーデータの「Integrations Hub」と「Catalog」]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
+![Treasure Data Integrations Hub カタログ]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
 
 **カタログ**でBraze統合を検索し、アイコンにカーソルを合わせて**認証の作成**を選択します。資格情報を入力し、認証に名前を付けて、**完了**を選択します。
 
-![トレジャーデータの「Integrations Hub」と「Catalog」]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
+![Treasure Data Integrations Hub カタログ]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
 
-### ステップ3:コホートオーディエンスを定義する
+### ステップ 3:コホートオーディエンスを定義する
 
 **Audience Studio** でのアクティベーション、または **Data Workbench** でクエリを実行して、コホートを Braze に同期します。
 
 {% alert important %}
-Braze内に既に存在するユーザーのみがコホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
+Braze内にすでに存在するユーザーのみが、コホートに追加または削除されます。コホートインポートはBrazeに新しいユーザーを作成しません。
 {% endalert %}
 
-{% tabs ローカル %}
-{% tab データワークベンチ %}
+{% tabs local %}
+{% tab Data Workbench %}
 #### ステップ 3.1:クエリを定義する
 
 {% alert note %}
@@ -61,7 +61,7 @@ Braze内に既に存在するユーザーのみがコホートに追加または
 2. **新しいクエリ**を選択します。
 3. クエリを実行して結果セットを検証します。
 
-![トレジャーデータの「Integrations Hub」と「Catalog」]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
+![Treasure Data Integrations Hub カタログ]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
 
 ##### ユースケース:識別子によるコホートの同期
 
@@ -160,7 +160,7 @@ FROM
 
 クエリが構築されたら、**結果をエクスポート**を選択します。既存の認証 (前回の手順で作成した認証など) を選択するか、または出力に使用する新しい認証を作成できます。 
 
-![トレジャーデータの「Integrations Hub」と「Catalog」]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
+![Treasure Data Integrations Hub カタログ]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
 
 
 | エクスポート結果マッピング |	説明	| 
@@ -178,7 +178,7 @@ FROM
 クエリに名前を付けて保存して実行するか、またはクエリを実行します。クエリが正常に完了すると、クエリ結果は自動的にBrazeにエクスポートされます。
 
 {% endtab %}
-{% tab オーディエンス スタジオ %}
+{% tab Audience Studio %}
 #### ステップ 3.1:アクティベーションを作成する
 
 新しいSegmentを作成するか、既存のSegmentを選択して、コホートとしてBrazeに同期します。セグメント内で、**アクティベーションを作成**を選択します。
@@ -200,7 +200,7 @@ FROM
 
 #### ステップ 3.3:出力マッピングを設定する
 
-![トレジャーデータ インテグレーション アクティベーション 出力 マッピング]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
+![Treasure Data Integrations 有効化出力Mアプリing]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
 
 | アクティベーション出力マッピング |	説明	| 
 | ----------- | ----------- |
@@ -219,7 +219,7 @@ FROM
 
 希望する同期スケジュールを定義し、アクティベーションを保存します。
 
-![トレジャーデータ統合のアクティベーションのスケジュール]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
+![Treasure Data Integrations の有効化スケジュール]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -227,7 +227,7 @@ FROM
 
 Brazeで、**Segment**に移動し、新しいセグメントを作成して、フィルターとして**トレジャーデータコホート**を選択します。ここから、どのトレジャーデータコホートを含めるかを選択できます。トレジャーデータのコホートセグメントを作成したら、キャンペーンまたはキャンバスを作成するときにこのセグメントをオーディエンスフィルターとして選択できます。
 
-![トレジャーデータの「Integrations Hub」と「Catalog」]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+![Treasure Data Integrations Hub カタログ]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
 ## ユーザーマッチング
 

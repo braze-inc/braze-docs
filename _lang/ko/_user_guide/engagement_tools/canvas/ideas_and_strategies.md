@@ -1,5 +1,5 @@
 ---
-nav_title: 아이디어 및 전략
+nav_title: 아이디어와 전략
 article_title: 아이디어 및 전략
 layout: dev_guide
 guide_top_header: "아이디어 및 전략"
@@ -18,7 +18,7 @@ guide_featured_list:
   - name: 출시 전 및 출시 후 체크리스트
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/pre_post_launch_checklist/
     image: /assets/img/braze_icons/check-square-broken.svg
-  - name: 캔버스 플로우로 시작하기
+  - name: 캔버스로 시작하기
     link: /docs/user_guide/engagement_tools/canvas/ideas_and_strategies/launching_canvas_flow/
     image: /assets/img/braze_icons/git-branch-01.svg
 

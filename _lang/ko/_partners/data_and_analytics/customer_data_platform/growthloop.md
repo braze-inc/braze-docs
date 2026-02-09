@@ -14,7 +14,7 @@ search_tag: Partner
 
 _This integration is maintained by GrowthLoop._
 
-## About the integration
+## 통합 정보
 
 The Braze and GrowthLoop integration allows you to segment customer data directly from data warehouse and send it to Braze–ensuring that users can optimize the deep feature set of Braze in tandem with their single source of truth. Streamline marketing efforts for customer segmentation and activation, reducing the time it takes to segment, launch, test, and measure the results of targeted campaigns sent to Braze.
 

@@ -25,15 +25,15 @@ WhatsApp を購入したがメッセージクレジット契約をしていな�
 
 **契約期間中のメッセージクレジット使用量**グラフは、選択した期間の使用量を表示する。このチャートの粒度は、選択した時間枠によって異なる。グラフの右上隅にあるメニューを選択して、エクスポートオプションを選択します。
 
-![クレジットの使用状況、クレジット契約の概要、契約でのクレジット消費量のセクションがある [メッセージクレジットの使用状況の概要] ダッシュボード。]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
+![クレジットの使用状況、クレジット契約の概要、契約でのクレジット消費量のセクションがある「メッセージクレジットの使用状況の概要」ダッシュボード。]({% image_buster /assets/img/app_settings/credit_usage_over_contract1.png %}){: style="max-width:70%;"}
 
 ## SMS、MMS、RCS
 
-**SMS/MMS/RCS クレジットの使用状況**には、SMS、MMS、RCS チャネルの使用状況の内訳が表示されます。データテーブルの列は、一般的にメッセージクレジットを購入している必要があり (ただし、Braze では一時的に従来の課金モデルのサポートを継続しています)、[**クレジット比率**] と [**クレジット**] 列は、それぞれの国の比率と消費されたクレジットを示しています。さらに、高レベルのタイルは、選択した日付範囲におけるSMSと、関連する場合はMMSの消費量の合計を示す。
+**SMS/MMS/RCSクレジット使用状況**は、SMS、MMS、およびRCS チャネルの使用状況の内訳を示します。データテーブルの列は、一般的にメッセージクレジットを購入している必要があり (ただし、Braze では一時的に従来の課金モデルのサポートを継続しています)、[**クレジット比率**] と [**クレジット**] 列は、それぞれの国の比率と消費されたクレジットを示しています。さらに、高レベルのタイルには、選択した日付範囲全体のSMS と、該当する場合はMMS の消費量の合計が表示されます。
 
 フィルターを使用して、**国**や SMS、RCS の種類でフィルタリングできます。
 
-![全体的なデータを示すタイルと、アカウント別消費量のセクションがある [SMS/MSS/RCS クレジットの使用状況]。]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
+![SMS/MSS/RCS は、高レベルデータ用のタイルと、アカウント別に消費するセクションを使用したクレジットの使用状況を示します。]({% image_buster /assets/img/app_settings/sms_credit_consumption2.png %}){: style="max-width:70%;"}
 
 [**メッセージクレジットの使用状況の概要**] とは異なり、このセクションには過去の契約期間の履歴データが含まれています。 
 
@@ -41,7 +41,7 @@ WhatsApp を購入したがメッセージクレジット契約をしていな�
 クレジット以外の使用状況とメッセージクレジットの使用状況の両方が含まれる日付範囲を選択できます。この場合、メッセージクレジット外で発生した消費は、**クレジット比率と** **クレジット**列に`—` （null）と表示される。
 {% endalert %}
 
-![NULL 値の SMS/MMS/RCS クレジットの使用量テーブル。]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
+![SMS/MMS/RCS Credits Usage table with null values.]({% image_buster /assets/img/app_settings/sms_table_null3.png %}){: style="max-width:70%;"}
 
 ## WhatsApp
 
@@ -49,14 +49,14 @@ WhatsApp を購入したがメッセージクレジット契約をしていな�
 
 ### フィルター
 
-データを次の基準でフィルタリングできます。
+データを次の基準で絞り込むことができます。
 - 国
 - WhatsApp ビジネスアカウント
 - Braze ワークスペース
 - 会話カテゴリタイプ
 - 地域
 
-![消費済みクレジットの合計を示すタイルとアカウント別使用状況のテーブルが表示されている [WhatsApp クレジットの使用状況]。]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
+![消費済みクレジットの合計を示すタイルとアカウント別使用状況のテーブルが表示されている「WhatsApp クレジットの使用状況」。]({% image_buster /assets/img/app_settings/whatsapp_credit_consumption4.png %}){: style="max-width:70%;"}
 
 ## 知っておくべきこと
 

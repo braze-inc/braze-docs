@@ -194,6 +194,10 @@ hide_toc: true
     textarea {
       border-radius: 0 !important;
     }
+    #doc_release_notes_label {
+      font-size: 12pt !important;
+      font-family: Sailec W00 Regular,Arial,sans-serif;
+    }
     #doc_verify_label {
       font-size: 12pt !important;
       font-family: Sailec W00 Regular,Arial,sans-serif;
@@ -369,11 +373,17 @@ hide_toc: true
         var selectedValue = $('#doc_urgent').val();
         if (selectedValue === 'suggestion') {
             $('[id^="disclosure"]').show();
+            $('#doc_release_notes_group').hide();
             $('[id^="resource_urls"]').hide();
+            $('#doc_verify_div').show();
         } else if (selectedValue === 'feature') {
-            $('[id^="disclosure"]').hide();
-            $('[id^="resource_urls"]').show();
+            $('#disclosure-warning').hide();
+            $('#resource_urls').show();
+            $('#doc_verify_div').show();
+            $('#doc_release_notes_group').show();
         } else {
+            $('#doc_release_notes_group').hide();
+            $('#doc_verify_div').show();
             $('[id^="disclosure"]').hide();
             $('[id^="resource_urls"]').hide();
         }
@@ -405,7 +415,7 @@ hide_toc: true
           $('#doc_div').hide();
           $('#doc_thankyou').show();
           $('#doc_thankyou_msg').fadeTo(800,0,function(){
-              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will reach out to you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
+              $(this).html('<h3>Thanks for your submission!</h3> Someone from our team will contact you if we have any questions. To view the status of your ticket or add comments, check your email for your ticket confirmation.').fadeTo(800,1);
           });
         });
 
@@ -508,7 +518,7 @@ hide_toc: true
                 <span></span> I have verified this information with the respective product team
               </label>
               </div>
-              </div>
+              </div>          
               <div class="inline_text">
               Please wait up to ten seconds after submitting for your request to process.
               </div>

@@ -36,7 +36,7 @@ Push Time to Live (TTL) は、キャンペーンの送信時にオフライン�
 2. Android プラットフォームごとに、デフォルトの有効期限値を定義します。より正確な制御を行うには、時間や秒などのより小さな増分を設定できます。
 3. **Save**を選択して変更を適用します。
 
-\![Firebase、Web、Kindle、HuaweiデバイスのTTL設定をプッシュする。]({% image_buster /assets/img/push_ttl.png %})
+![Firebase、Web、Kindle、HuaweiデバイスのTTL設定をプッシュする。]({% image_buster /assets/img/push_ttl.png %})
 
 ## Android キャンペーンのデフォルトのFCM 優先順位
 
@@ -56,7 +56,7 @@ FCM の優先順位オプションは次のとおりです。
 2. [FCM 優先度] セクションで、デフォルト設定として [通常] または [高] のいずれかを選択します。
 3. **Save**を選択して変更を適用します。
 
-\![Androidの配信優先度設定。]({% image_buster /assets/img/push_fcm_priority_settings.png %})
+![Androidの配信優先度設定。]({% image_buster /assets/img/push_fcm_priority_settings.png %})
 
 この設定は、特定のキャンペーンの作成時に別の優先順位が選択されていない限り、すべての新しいAndroid プッシュキャンペーンにグローバルに適用されます。 
 

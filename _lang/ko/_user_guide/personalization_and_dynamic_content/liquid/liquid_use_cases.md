@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### 사용자의 전체 이름이 {#attribute-first-name} first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다
+### 사용자의 전체 이름이 first_name 필드에 저장되어 있는 경우 사용자의 이름을 참조합니다. {#attribute-first-name}
 
 이 사용 사례는 사용자의 이름(이름과 성이 모두 단일 필드에 저장되어 있는 경우)을 캡처한 다음 이 이름을 사용하여 환영 메시지를 표시합니다.
 
@@ -1324,6 +1324,38 @@ This is a message for Verizon users!
 
 {% api %}
 
+## SMS
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+- [인바운드 SMS 키워드에 따라 다양한 메시지로 응답하기](#sms-keyword-response)
+
+### 인바운드 SMS 키워드에 따라 다양한 메시지로 응답하기 {#sms-keyword-response}
+
+이 사용 사례는 동적 SMS 키워드 처리를 통합하여 다양한 메시지 카피로 특정 인바운드 메시지에 응답합니다. 예를 들어, 누군가 "START" 문자를 보낼 때와 "JOIN" 문자를 보낼 때 다른 응답을 보낼 수 있습니다.
+
+{% raw %}
+```liquid
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
+{% if inbound_message contains 'start' %}
+Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
+
+{% elsif inbound_message contains 'join' %}
+Thanks for joining our SMS program! Create an account to get the best deals!
+
+{% else %}
+Thanks for joining our SMS program!
+
+{% endif %}
+```
+{% endraw %}
+
+{% endapi %}
+
+{% api %}
+
 ## 시간대
 
 {% apitags %}
@@ -1460,10 +1492,10 @@ Check out this new bar after work today. HH specials!
 
 {% api %}
 
-## Week/Day/Month
+## 주/일/월
 
 {% apitags %}
-Week/Day/Month
+주/일/월
 {% endapitags %}
 
 - [전월의 이름을 메시지로 가져오기](#month-name)

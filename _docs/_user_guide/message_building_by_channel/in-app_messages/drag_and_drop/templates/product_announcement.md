@@ -16,7 +16,7 @@ description: "This page covers how to use the in-app message drag-and-drop edito
 
 ### Step 1: Choose your template
 
-When creating a drag-and-drop in-app message, select **Product announement** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
+When creating a drag-and-drop in-app message, select **Product announcement** for your template, then select **Build message**. This template is supported for both mobile apps and web browsers.
 
 ![The in-app message editor with the template for a product announcement.]({% image_buster /assets/img/drag_and_drop/templates/product_announcement.png %})
 

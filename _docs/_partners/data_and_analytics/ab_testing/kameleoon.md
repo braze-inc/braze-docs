@@ -89,7 +89,7 @@ The reporting tools associated with the experiment will display. Select **Edit**
 
 After the integration is set up, Kameleoon will send custom events called `kameleoon_exposure` with properties such as **Experiment name**, **Experiment ID**, **Variation name**, **Variation ID** to Braze.
 
-![The custom event user log in Braze, showing an example playload of the event that has been recieved by Braze from Kameleoon.]({% image_buster /assets/img/kameleoon/img_9.png %})
+![The custom event user log in Braze, showing an example payload of the event that has been received by Braze from Kameleoon.]({% image_buster /assets/img/kameleoon/img_9.png %})
 
 You can then view this data in the Custom Events, create custom event reports to identify Kameleoon campaign exposure, and enable segmentation based on event properties. You can use custom events when creating subsequent or linked campaigns and Canvases through [Action Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/#action-groups), [action-based triggers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery) or creating [segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/)
 

@@ -2,6 +2,26 @@
 
 ## Atributos predeterminados del usuario
 
+### Métodos predefinidos
+
+Braze proporciona métodos predefinidos para configurar los siguientes atributos de usuario dentro de la clase [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html) clase. Para las especificaciones del método, consulta [nuestro KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+
+- Nombre
+- Apellido
+- País
+- Idioma
+- Fecha de nacimiento
+- Correo electrónico
+- Género
+- Ciudad de origen
+- Número de teléfono
+
+{% alert note %}
+Todos los valores de cadena como nombre, apellidos, país y ciudad de residencia están limitados a 255 caracteres.
+{% endalert %}
+
+### Configuración de atributos predeterminados
+
 Para establecer un atributo predeterminado para un usuario, llama al método `getCurrentUser()` en tu instancia de Braze para obtener una referencia al usuario actual de tu aplicación. A continuación, puedes llamar a los métodos para establecer un atributo de usuario.
 
 {% tabs %}
@@ -28,21 +48,33 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-Braze proporciona métodos predefinidos para configurar los siguientes atributos de usuario dentro de la [clase BrazeUser](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html). Para las especificaciones del método, consulta [nuestro KDoc](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html).
+### Desactivar atributos predeterminados
 
-- Nombre
-- Apellido
-- País
-- Idioma
-- Fecha de nacimiento
-- Correo electrónico
-- Género
-- Ciudad de origen
-- Número de teléfono
+Para desactivar un atributo de usuario, pasa `null` al método correspondiente.
 
-{% alert note %}
-Todos los valores de cadena como nombre, apellidos, país y ciudad de residencia están limitados a 255 caracteres.
-{% endalert %}
+{% tabs %}
+{% tab JAVA %}
+
+```java
+Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
+  @Override
+  public void onSuccess(BrazeUser brazeUser) {
+    brazeUser.setFirstName(null);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Braze.getInstance(context).getCurrentUser { brazeUser ->
+  brazeUser.setFirstName(null)
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Atributos personalizados del usuario
 
@@ -51,7 +83,7 @@ Además de los atributos predeterminados de usuario, Braze también te permite d
 ### Establecer atributos personalizados
 
 {% tabs local %}
-{% tab Cadena %}
+{% tab String %}
 Para establecer un atributo personalizado con un valor `string`:
 
 {% subtabs global %}
@@ -78,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Enteros %}
+{% tab Integers %}
 Para establecer un atributo personalizado con un valor `int`:
 
 {% subtabs global %}
@@ -137,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Puntos flotantes %}
+{% tab Floating-points %}
 Para establecer un atributo personalizado con un valor `float`:
 
 {% subtabs global %}
@@ -191,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Booleano %}
+{% tab Boolean %}
 Para establecer un atributo personalizado con un valor `boolean`:
 
 {% subtabs global %}
@@ -219,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Fecha %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -257,7 +289,7 @@ Las fechas pasadas a Braze con este método deben estar en el formato [ISO 8601]
 {% endalert %}
 
 {% endtab %}
-{% tab Matriz %}
+{% tab Array %}
 
 El número máximo de elementos de las matrices de atributos personalizadas está predeterminado en 25. El máximo para matrices individuales puede aumentarse hasta 100 en el panel de Braze, en **Configuración de datos** > **Atributos personalizados**. Las matrices que superen la cantidad máxima de elementos se truncarán para contenerla. Para obtener más información sobre las matrices de atributos personalizadas y su comportamiento, consulta nuestra documentación sobre [Matrices]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
 
@@ -296,9 +328,9 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endtab %}
 {% endtabs %}
 
-### Desactivar un atributo personalizado
+### Desactivar atributos personalizados
 
-Los atributos personalizados también se pueden desactivar utilizando el siguiente método:
+Para desactivar un atributo personalizado, pasa la clave del atributo correspondiente al método `unsetCustomUserAttribute`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -321,6 +353,43 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 }
 ```
 
+{% endtab %}
+{% endtabs %}
+
+### Atributos personalizados anidados
+
+También puedes anidar propiedades dentro de atributos personalizados. En el siguiente ejemplo, se establece un objeto `favorite_book` con propiedades anidadas como atributo personalizado en el perfil de usuario. Para más detalles, consulta [Atributos personalizados anidados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+{% tabs %}
+{% tab JAVA %}
+```java
+JSONObject favoriteBook = new JSONObject();
+try {
+  favoriteBook.put("title", "The Hobbit");
+  favoriteBook.put("author", "J.R.R. Tolkien");
+  favoriteBook.put("publishing_date", "1937");
+} catch (JSONException e) {
+  e.printStackTrace();
+}
+
+braze.getCurrentUser(user -> {
+  user.setCustomUserAttribute("favorite_book", favoriteBook);
+  return null;
+});
+```
+{% endtab %}
+
+{% tab KOTLIN %}
+```kotlin
+val favoriteBook = JSONObject()
+  .put("title", "The Hobbit")
+  .put("author", "J.R.R. Tolkien")
+  .put("publishing_date", "1937")
+
+braze.getCurrentUser { user ->
+  user.setCustomUserAttribute("favorite_book", favoriteBook)
+}
+```
 {% endtab %}
 {% endtabs %}
 

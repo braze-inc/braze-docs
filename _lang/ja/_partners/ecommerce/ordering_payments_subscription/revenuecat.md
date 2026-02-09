@@ -45,7 +45,7 @@ Braze SDK では、RevenueCat アプリのユーザー ID に一致するよう�
 
 RevenueCat と同じアプリユーザー ID で Braze SDK を設定するか、Braze SDK `.changeUser()` メソッドを使用します。
 
-{% tabs ローカル %}
+{% tabs local %}
 {% tab swift %}
 ```swift
 // Configure Purchases SDK
@@ -115,7 +115,7 @@ RevenueCat が同じユーザー ID を持つようにRevenueCat purchases SDK �
 
 ![Braze インスタンス、API キー識別子、およびサンドボックス識別子のフィールドを含む RevenueCat での Braze 設定。]({% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %})
 
-### ステップ 3: イベント名を設定する {#configure-event-names}
+### ステップ3:イベント名を設定する {#configure-event-names}
 
 RevenueCat が送信するイベント名を入力するか、[**Use Default Event Names**] を選択してデフォルトのイベント名から選択します。RevenueCatが送信をサポートしているイベントは、以下の表の通りである。
 

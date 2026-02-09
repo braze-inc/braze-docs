@@ -1,5 +1,5 @@
 ---
-nav_title: "OBTER: Exportar Lista de Canva"
+nav_title: "OBTER: Exportar lista de canva"
 article_title: "OBTER: Exportar Lista de Canva"
 search_tag: Endpoint
 page_order: 4
@@ -50,8 +50,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvases" : [
   	{

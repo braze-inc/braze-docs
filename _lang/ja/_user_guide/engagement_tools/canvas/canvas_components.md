@@ -48,7 +48,7 @@ guide_featured_list:
 
 ### ユーザージャーニーのカスタマイズ
 
-\![ディシジョン分割ステップに続いて遅延ステップs とメッセージステップs を持つキャンバスユーザーの行程の例。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![デシジョン分割ステップの後に遅延ステップs とメッセージステップs が続くキャンバスユーザーのジャーニーの例。]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 [アクションパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths)を使用すると、アクションや購入などのエンゲージメントイベントに基づいてユーザージャーニーを分岐させることができます。オーディエンスをフィルタリングしでターゲティングしたい場合、[オーディエンスパス]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths)を利用すると、オーディエンスの条件に基づいてユーザーをさまざまなキャンバスパスに誘導できるため、ユーザーのターゲット設定が簡単になります。
 

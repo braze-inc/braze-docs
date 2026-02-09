@@ -1,5 +1,5 @@
 ---
-nav_title: 環境設定センター
+nav_title: ユーザー設定センター
 article_title: ユーザー設定センターのエンドポイント
 search_tag: Endpoint
 page_order: 4

@@ -4,25 +4,36 @@
 
 ## Wann erscheinen die Banner Updates für Nutzer:innen?
 
-Die Banner werden zu Beginn jeder neuen Nutzer:innen-Sitzung automatisch mit den neuesten Daten aktualisiert - Sie müssen Ihre Banner-Kampagne nicht erneut versenden oder aktualisieren.
+Die Banner werden mit den neuesten Daten aktualisiert, sobald Sie die Aktualisierungsmethode aufrufen. Sie müssen Ihre Banner-Kampagne nicht erneut versenden oder aktualisieren.
 
 ## Wie viele Vermittlungen kann ich in einer Sitzung anfragen?
 
-In einer einzigen Nutzer:innen-Sitzung können Sie maximal 10 Vermittlungen anfragen. Für jede Anfrage, die Sie stellen, gibt Braze das Banner mit der höchsten Priorität zurück, für das ein Nutzer:innen in Frage kommt. Weitere Anfragen führen zu einer Fehlermeldung.
+In einer einzigen Anfrage zur Aktualisierung können Sie maximal 10 Platzierungen anfragen. Für jede Anfrage, die Sie stellen, gibt Braze das Banner mit der höchsten Priorität zurück, für das ein Nutzer:innen in Frage kommt. Weitere Anfragen führen zu einer Fehlermeldung.
 
 Weitere Informationen finden Sie unter [Platzierungsanfragen]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners#requests{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#requests{% endif %}).
 
 ## Wie viele Banner Kampagnen können gleichzeitig aktiv sein?
 
-Jeder Workspace kann bis zu 100 aktive Banner-Kampagnen unterstützen. Wenn dieses Limit erreicht ist, müssen Sie eine bestehende Kampagne [archivieren oder deaktivieren]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status), bevor Sie eine neue Kampagne erstellen können.
+Jeder Workspace kann bis zu 200 aktive Banner-Kampagnen unterstützen. Wenn dieses Limit erreicht ist, müssen Sie eine bestehende Kampagne [archivieren oder deaktivieren]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/about_statuses/#changing-the-status), bevor Sie eine neue Kampagne erstellen können.
 
 ## Welcher Banner wird bei Kampagnen, die sich eine Platzierung teilen, zuerst angezeigt?
 
-Wenn sich ein Nutzer:innen für mehrere Kampagnen qualifiziert, die sich dieselbe Platzierung teilen, wird das Banner mit der höchsten Priorität angezeigt. Weitere Informationen finden Sie unter [Bannerpriorität]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "Entwickler" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
+Wenn sich ein Nutzer:innen für mehrere Kampagnen qualifiziert, die sich dieselbe Platzierung teilen, wird das Banner mit der höchsten Priorität angezeigt. Weitere Informationen finden Sie unter [Banner Priorität]({% if include.section == "user" %}{{site.baseurl}}/user_guide/message_building_by_channel/banners/#priority{% elsif include.section == "developer" %}{{site.baseurl}}/developer_guide/banners#priority{% endif %}).
 
 ## Kann ich Banner in meinem bestehenden Content-Card-Feed verwenden?
 
 Banner unterscheiden sich von Content-Cards, d.h. Sie können Banner und Content-Cards nicht im selben Feed verwenden. Um bestehende Content-Card-Feeds durch Banner zu ersetzen, müssen Sie [Platzierungen in Ihrer App oder Website erstellen]({{site.baseurl}}/developer_guide/banners/placements/).
+
+## Kann ich ein Banner auf der Grundlage von Nutzer:innen-Aktionen triggern?
+
+Banner unterstützen zwar keine [aktionsbasierte Zustellung]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery), aber Sie können Nutzer:innen auf der Grundlage ihrer früheren Aktionen mit Hilfe von Segmentierung und Priorität gezielt ansprechen.
+
+Zum Beispiel, um einen speziellen Banner nur Nutzern:innen zu zeigen, die ein `purchase` Ereignis abgeschlossen haben:
+1. **Targeting:** Stellen Sie in Ihrer Kampagne ein Segment von Nutzer:innen zusammen, die das angepasste Event `purchase` mindestens einmal durchgeführt haben.
+2. **Vorrangig:** Wenn Sie einen allgemeinen Banner für alle Nutzer:innen und diesen speziellen Banner für Käufer:innen haben, die auf dieselbe Platzierung abzielen, setzen Sie die Priorität des speziellen Banners auf **Hoch** und die des allgemeinen Banners auf **Mittel** oder **Niedrig**.
+
+Wenn die Nutzer:innen eine neue Sitzung starten oder die Banner nach der Ausführung der Aktion aktualisieren, bewertet Braze ihre Berechtigung. Wenn sie dem Segment "Kauf" entsprechen, wird das Banner mit der höchsten Priorität angezeigt.
+
 
 ## Können Nutzer:innen einen Banner manuell ablehnen?
 
@@ -44,7 +55,7 @@ Je einfacher das Messaging in Ihrem Banner ist, desto schneller wird es dargeste
 
 ## Werden alle Liquid-Tags unterstützt?
 
-Nein. Die meisten Liquid-Tags werden jedoch für Banner Nachrichten unterstützt, mit Ausnahme von `catalog_items`, die mit dem [Tag `:rerender`]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/using_catalogs/#using-liquid) neu gerendert werden.
+Nein. Die meisten Liquid-Tags werden jedoch für Banner Nachrichten unterstützt, mit Ausnahme von `catalog_items`, die mit dem [Tag `:rerender`]({{site.baseurl}}/user_guide/data/activation/catalogs/using_catalogs/#using-liquid) neu gerendert werden.
 
 ## Kann ich Klick-Ereignisse erfassen?
 
