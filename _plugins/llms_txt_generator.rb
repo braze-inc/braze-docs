@@ -33,7 +33,7 @@ module Jekyll
       site_dir = site.dest || File.join(site.source, '_site')
       
       # Define the main collections we want to include
-      target_collections = ['user_guide', 'developer_guide', 'api']
+      target_collections = ['developer_guide', 'api']
       
       # Crawl _site directory for index.md files in target collections only
       if Dir.exist?(site_dir)
