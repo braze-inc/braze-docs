@@ -25,7 +25,7 @@ RCS is a modern messaging system that offers more features than traditional SMS,
 | Pros |
 | ---- |
 | **Verified trust and branding**<br> Unlike traditional SMS, where your brand appears as a random 5-digit short code or long code, RCS allows for verified sender profiles. These profiles include your brand's logo, name, and a "verified" checkmark. |
-| **Rich messaging features**<br> RCS supports carousels, high-resolution videos, and suggested action buttons (such as "Book Now", "Track Package", or "Pay Bill"). Users can complete complex tasks without leaving their messaging app, which can lead to higher convcersion rates than a plain text link. |
+| **Rich messaging features**<br> RCS supports carousels, high-resolution videos, and suggested action buttons (such as "Book Now", "Track Package", or "Pay Bill"). Users can complete complex tasks without leaving their messaging app, which can lead to higher conversion rates than a plain text link. |
 {: .reset-td-br-1 role="presentation"}
 
 | Cons |
@@ -63,7 +63,7 @@ Some countries allow you to choose a specific number for an increased fee. These
 | Cons |
 | ---- |
 | **Short codes are available in fewer countries**<br> Short codes are not available in all countries. Contact your Braze account team to inquire about countries you plan to send messages in. |
-| **Longer application process**<br> Unlike long codes and alphanumeric sender IDs, which can be provisoned within 1-2 weeks at times, a short code can take 4-12 weeks or longer to be provisioned. Every major carrier must manually approve your specific application before the code is active on their network. If you have a marketing launch next week, a short code is not an option. |
+| **Longer application process**<br> Unlike long codes and alphanumeric sender IDs, which can be provisioned within 1-2 weeks at times, a short code can take 4-12 weeks or longer to be provisioned. Every major carrier must manually approve your specific application before the code is active on their network. If you have a marketing launch next week, a short code is not an option. |
 | **Higher cost**<br> Short codes tend to be the most expensive sender type because of the setup and yearly lease fees. |
 {: .reset-td-br-1 role="presentation"}
 
@@ -149,7 +149,7 @@ Toll-free numbers have distinct three-digit area codes (for example, 800, 888, 8
 
 | Cons |
 | --- |
-| **Impersonal ad geographix neutrality**<br> Because toll-free numbers lack a local area code, they can feel too "corporate" or anonymous. For a local service business, a toll-free number may perform worse than a standard long code because it lacks the community connection and can sometimes be mistaken for a random telemarketing line. |
+| **Impersonal and geographic neutrality**<br> Because toll-free numbers lack a local area code, they can feel too "corporate" or anonymous. For a local service business, a toll-free number may perform worse than a standard long code because it lacks the community connection and can sometimes be mistaken for a random telemarketing line. |
 | **Extra Layer of STOP Filtering**<br> Toll-Free numbers have a layer of opt-out handling outside of Braze that cannot be removed or customized. When a user texts "STOP" to your toll-free number, the user will be opted-out of further messaging from your number, and will receive a network-generated auto-reply. They will not receive further messages from your toll-free number until they text "START" to be removed from the toll-free number's blocklist. |
 {: .reset-td-br-1 role="presentation"}
 
@@ -180,7 +180,7 @@ RCS-verified senders are provisioned on a country-by-country basis. The verifica
 - **Website and privacy policy:** A live website and a privacy policy that explains how you handle user data and messaging.
 - **Use case description:** A clear explanation of what you are sending (for example, "Order delivery updates and customer support for retail purchases").
 
-RCS timelines fluctuate depending on country, and as more carriers adapt the channel. Currently, you can expect an RCS sender to be approved by carriers within 3-6 weeks of requesting launch.
+RCS timelines fluctuate depending on country, and as more carriers adopt the channel. Currently, you can expect an RCS sender to be approved by carriers within 3-6 weeks of requesting launch.
 
 {% endtab %}
 {% tab SMS short codes %}
@@ -240,14 +240,14 @@ All customers who currently have and/or use US long codes to send to US customer
 {% endtab %}
 {% tab SMS alphanumeric sender ID %}
 
-### SMS aphanumeric sender ID
+### SMS alphanumeric sender ID
 
 Alphanumeric sender IDs are highly regulated because they can be easily spoofed for phishing. While some countries allow anyone to set up and send from a name, in many countries you must first prove you own the brand.
 
 You may be asked for the following details to set up an alphanumeric sender ID.
 
 - **Preferred ID:** A string of up to 11 characters. It contains at least one letter and cannot be a generic word like "BANK" or "INFO".
-- **Proof of brand ownership:** Your Trademark Certificate or a Business Registration Document (for exmample, a Certificate of Incorporation issued within the last 12 months).
+- **Proof of brand ownership:** Your Trademark Certificate or a Business Registration Document (for example, a Certificate of Incorporation issued within the last 12 months).
 - **Letter of authorization:** A signed letter on your company letterhead authorizing Braze and our provider to send messages on your behalf using that specific ID.
 - **Sample message templates:** In several regions, you must register the exact "templates" of the messages you intend to send. Deviation in the actual messages can cause delivery failures in those countries.
 
