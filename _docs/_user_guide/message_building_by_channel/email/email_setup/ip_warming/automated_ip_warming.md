@@ -41,7 +41,7 @@ To perform automated IP warming, you must have the following:
 
 ### Step 1: Set a schedule
 
-1. In the **Sending information** section, select the from address to warm IP addresses for.
+1. In the **Sending information** section, select the **From address** to warm IP addresses for.
 2. Enter the current daily send volume and target send volume.
 3. Select the start date for automated IP warming. This date must be at least one day after the plan is launched.
 4. Select **Next: Segments** to continue the setup.
