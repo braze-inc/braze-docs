@@ -501,6 +501,8 @@ You can use `subscribeToSdkAuthenticationFailures` to subscribe to be notified w
 
 Failed requests will periodically be retried until your app supplies a new valid JWT. If that user is still logged in, you can use this callback as an opportunity to request a new JWT from your server and supply the Braze SDK with this new valid token.
 
+When you receive an authentication error, verify the `userId` in the error matches your currently logged-in user, then fetch a new signature from your server and provide it to the Braze SDK. You can also log these errors to your monitoring or error-reporting service.
+
 {% alert tip %}
 These callback methods are a great place to add your own monitoring or error-logging service to keep track of how often your Braze requests are being rejected.
 {% endalert %}
@@ -511,13 +513,12 @@ These callback methods are a great place to add your own monitoring or error-log
 import * as braze from "@braze/web-sdk";
 
 braze.subscribeToSdkAuthenticationFailures((error) => {
-  // TODO: Optionally log to your error-reporting service
   console.error("SDK authentication failed:", error);
   console.log("Error code:", error.errorCode);
   console.log("User ID:", error.userId);
   // Note: Do not log error.signature as it contains sensitive authentication credentials
   
-  // TODO: Check if the error.userId matches the currently logged-in user
+  // Verify the error.userId matches the currently logged-in user
   // Fetch a new token from your server and set it
   fetchNewSignature(error.userId).then((newSignature) => {
     braze.setSdkAuthenticationSignature(newSignature);
@@ -532,8 +533,6 @@ import Braze from '@braze/react-native-sdk';
 const sdkAuthErrorSubscription = Braze.addListener(
   Braze.Events.SDK_AUTHENTICATION_ERROR,
   (error) => {
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the `userId` within the `error` matches the currently logged-in user
     console.log(`SDK Authentication for ${error.userId} failed with error code ${error.errorCode}.`);
     
     const updated_jwt = getNewTokenSomehow(error);
@@ -548,8 +547,6 @@ const sdkAuthErrorSubscription = Braze.addListener(
 {% tab Java %}
 ```java
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures(error -> {
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the error user matches the currently logged-in user
     String newToken = getNewTokenSomehow(error);
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
@@ -558,8 +555,6 @@ Braze.getInstance(this).subscribeToSdkAuthenticationFailures(error -> {
 {% tab KOTLIN %}
 ```kotlin
 Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ error: BrazeSdkAuthenticationErrorEvent ->
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(error)
     Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
@@ -574,8 +569,6 @@ AppDelegate.braze = braze;
 
 // Method to implement in delegate
 - (void)braze:(Braze *)braze sdkAuthenticationFailedWithError:(BRZSDKAuthenticationError *)error {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
   NSLog(@"Invalid SDK Authentication Token.");
   NSString *newSignature = getNewTokenSomehow(error);
   [AppDelegate.braze setSDKAuthenticationSignature:newSignature];
@@ -591,8 +584,6 @@ AppDelegate.braze = braze
 
 // Method to implement in delegate
 func braze(_ braze: Braze, sdkAuthenticationFailedWithError error: Braze.SDKAuthenticationError) {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
   print("Invalid SDK Authentication Token.")
   let newSignature = getNewTokenSomehow(error)
   AppDelegate.braze?.set(sdkAuthenticationSignature: newSignature)
@@ -602,8 +593,6 @@ func braze(_ braze: Braze, sdkAuthenticationFailedWithError error: Braze.SDKAuth
 {% tab Dart %}
 ```dart
 braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the `user_id` within the `error` matches the currently logged-in user
   print("Invalid SDK Authentication Token.")
   let newSignature = getNewTokenSomehow(error)
   braze.setSdkAuthenticationSignature(newSignature);
@@ -617,8 +606,6 @@ import 'package:braze_plugin/braze_plugin.dart';
 BrazePlugin braze = BrazePlugin();
 
 braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the `userId` within the `error` matches the currently logged-in user
   print("SDK Authentication for ${error.userId} failed with error code ${error.errorCode}.");
   
   String newSignature = getNewTokenSomehow(error);
@@ -636,8 +623,6 @@ public class SdkAuthDelegate : BRZSdkAuthDelegate
 {
   public void Braze(Braze braze, BRZSDKAuthenticationError error)
   {
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the user ID within the error matches the currently logged-in user
     Debug.Log("Invalid SDK Authentication Token.");
     string newSignature = GetNewTokenSomehow(error);
     BrazeBinding.SetSdkAuthenticationSignature(newSignature);
@@ -649,8 +634,6 @@ public class SdkAuthDelegate : BRZSdkAuthDelegate
 
 ```csharp
 Braze.GetInstance(this).SubscribeToSdkAuthenticationFailures((error) => {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the error user matches the currently logged-in user
   string newToken = GetNewTokenSomehow(error);
   Braze.GetInstance(this).SetSdkAuthenticationSignature(newToken);
 });
@@ -659,8 +642,6 @@ Braze.GetInstance(this).SubscribeToSdkAuthenticationFailures((error) => {
 {% tab Cordova %}
 ```javascript
 BrazePlugin.subscribeToSdkAuthenticationFailures((error) => {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the error.userId matches the currently logged-in user
   console.log(`SDK Authentication for ${error.user_id} failed with error code ${error.error_code}.`);
   
   const newSignature = getNewTokenSomehow(error);
@@ -678,8 +659,6 @@ public class SdkAuthDelegate : BRZSdkAuthDelegate
 {
   public override void Braze(Braze braze, BRZSDKAuthenticationError error)
   {
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the user ID within the error matches the currently logged-in user
     Console.WriteLine("Invalid SDK Authentication Token.");
     string newSignature = GetNewTokenSomehow(error);
     Braze.SharedInstance?.SetSDKAuthenticationSignature(newSignature);
@@ -697,8 +676,6 @@ braze.SdkAuthDelegate = new SdkAuthDelegate();
 
 ```csharp
 Braze.GetInstance(this).SubscribeToSdkAuthenticationFailures((error) => {
-  // TODO: Optionally log to your error-reporting service
-  // TODO: Check if the error user matches the currently logged-in user
   string newToken = GetNewTokenSomehow(error);
   Braze.GetInstance(this).SetSdkAuthenticationSignature(newToken);
 });
@@ -713,8 +690,6 @@ import Braze from '@braze/react-native-sdk';
 const sdkAuthErrorSubscription = Braze.addListener(
   Braze.Events.SDK_AUTHENTICATION_ERROR,
   (error) => {
-    // TODO: Optionally log to your error-reporting service
-    // TODO: Check if the `userId` within the `error` matches the currently logged-in user
     console.log(`SDK Authentication for ${error.userId} failed with error code ${error.errorCode}.`);
     
     const updated_jwt = getNewTokenSomehow(error);
