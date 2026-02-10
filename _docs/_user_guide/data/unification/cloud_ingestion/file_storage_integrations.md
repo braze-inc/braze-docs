@@ -162,19 +162,19 @@ To complete the setup on AWS, you will create an IAM role and attach the IAM pol
 
 {: start="2"}
 2. Copy the Braze AWS account ID from your Braze dashboard. Go to **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import**.
-
 3. In AWS, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID. Select the **Require external ID** checkbox.
-4. In Braze, go to **Partner Integrations** > **Currents**, select **Create New Current** (or **Create New Test Current**), then select **Amazon S3 Data Export**. In the **Credentials** section, select **AWS Role ARN**, and then copy the automatically generated **Braze External ID**. 
+4. In Braze, go to **Data Settings** > **Cloud Data Ingestion**, select **Create New Data Sync**, and select **S3 Import** from the file sources section.
+5. Copy the automatically generated **Braze Account ID**. 
 
-![Credentials section with the Braze External ID field.]({% image_buster /assets/img/braze_external_id.png %})
+![Credentials section with the Braze Account ID field.]({% image_buster /assets/img/braze_account_id.png %})
 
-{: start="5"}
-5. In AWS, paste the external ID and then select **Next**.
+{: start="6"}
+6. In AWS, paste the account ID and then select **Next**.
 
 ![The S3 "Create Role" page. This page has fields for role name, role description, trusted entities, policies, and permissions boundary.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
-{: start="6"}
-6. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
+{: start="7"}
+7. Attach the policy created in step 4 to the role. Search for the policy in the search bar, and select a checkmark next to the policy to attach it. Select **Next** when complete.
 
 ![Role ARN with the new-policy-name selected.]({% image_buster /assets/img/create_role_3_attach.png %})
 
