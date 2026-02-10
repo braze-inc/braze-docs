@@ -44,7 +44,7 @@ The scores and the corresponding categories will be updated according to the sch
 To view the likelihood score for a single user, look up that user in the dashboard and go to **Engagement** > **Predictions** to see their score. To access scores and categories for many users at once, create a [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) using the [Event Likelihood Score]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-score) or [Event Likelihood Category]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#event-likelihood-category) filters, then export the users from that segment. When exporting, you can include the likelihood scores in the export data.
 
 {% alert note %}
-While both predictive events and [predictive churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) assign scores to users, there are important differences:<br>
+While both predictive events and [predictive churn]({{site.baseurl}}/user_guide/brazeai/predictive_churn/) assign scores to users, there are important differences:<br><br>
 
 - **Predictive events** (purchase predictions): Consider all users in the prediction audience, regardless of whether they've performed the target event before. For example, a purchase prediction can identify users likely to make their first purchase.
 - **Predictive churn**: Only considers users who have already performed the custom event. Churn predictions identify users who have done something before and are likely to stop doing it. A user who has never logged in cannot be considered "churned" if they don't log in.
