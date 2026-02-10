@@ -6,19 +6,13 @@ alias: /operator/
 description: "This reference article covers BrazeAI Operator, an AI-powered assistant built into the Braze dashboard."
 ---
 
-# BrazeAI<sup>TM</sup> Operator
+# BrazeAI Operator<sup>TM</sup>
 
-> BrazeAI<sup>TM</sup> Operator is an AI-powered assistant built into the Braze dashboard. Operator provides answers, troubleshooting guidance, and best practices within your workflow.
-
-{% alert important %}
-BrazeAI<sup>TM</sup> Operator is in a private beta with limited functionality. For help getting started, contact your customer success manager.
-{% endalert %}
+> BrazeAI Operator<sup>TM</sup> is an AI-powered assistant built into the Braze dashboard. Operator provides answers, troubleshooting guidance, and best practices within your workflow.
 
 ## About Operator
 
-Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow.
-
-During the beta, Operator supports **Ask** mode only. You can:
+Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow. You can:
 
 - Get answers from Braze documentation
 - Troubleshoot issues using [page-aware context](#page-aware-context)
@@ -26,19 +20,19 @@ During the beta, Operator supports **Ask** mode only. You can:
 
 ### Model providers as sub-processors or third-party providers
 
-Where Customer uses an integration with an LLM provider provided by Braze through the Braze Services (“Braze-provided LLM”), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. BrazeAI Operator integrates with OpenAI.
+Where Customer uses an integration with an LLM provider provided by Braze through the Braze Services ("Braze-provided LLM"), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. BrazeAI Operator integrates with OpenAI.
 
-If Customers chooses to bring their own API Key to integrate with Braze AI Operator, the provider of Customer’s own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
+If Customers chooses to bring their own API Key to integrate with Braze AI Operator, the provider of Customer's own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
 
 ### How is my data used and sent to OpenAI?
 
-In order to generate AI output through Braze AI features that Braze identifies as leveraging OpenAI (“Output”), Braze will send your prompts, the content displayed in the Dashboard and Workspace data relevant to your queries, as applicable (“Input”) to OpenAI. Per [OpenAI’s API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI’s API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
+In order to generate AI output through Braze AI features that Braze identifies as leveraging OpenAI ("Output"), Braze will send your prompts, the content displayed in the Dashboard and Workspace data relevant to your queries, as applicable ("Input") to OpenAI. Per [OpenAI's API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI's API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content generally, including Output.
 
 ## How to access Operator
 
 You can open Operator from any page in the Braze dashboard.  
 
-1. Select **BrazeAI<sup>TM</sup> Operator**, next to your user profile.
+1. Select **BrazeAI Operator<sup>TM</sup>**, next to your user profile.
 
 ![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
 
@@ -65,16 +59,16 @@ Operator can provide step-by-step instructions, links to Braze docs, and plain-l
 Think of Operator as a conversation, not a search engine. Short, natural prompts usually work best.
 
 - **Be specific:** Instead of "Tell me about Canvas", try "How do I use Action Paths in Canvas?".  
-- **Use follow-ups:** If the first response isn’t what you need, ask clarifying questions. Operator can refine answers.
-- **Rely on context:** Operator knows what page you're on in Braze. Open Operator while you’re on the page you’re working with for the most relevant results.
+- **Use follow-ups:** If the first response isn't what you need, ask clarifying questions. Operator can refine answers.
+- **Rely on context:** Operator knows what page you're on in Braze. Open Operator while you're on the page you're working with for the most relevant results.
 
 ## Features
 
-Operator includes the following features during beta:
+Operator includes the following features:
 
 ### GPT models
 
-You can select from these GPT models to use for different request types with Operator:
+You can select from these GPT models to use for different request types with Operator. Each model offers a different balance of cost, latency, and capability. Refer to the linked provider documentation to determine which model best fits your use case.
 
 - [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
 - [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
@@ -87,9 +81,17 @@ You can select from these GPT models to use for different request types with Ope
 
 Operator understands the page you're working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas without you needing to explain where you are. 
 
+### Brand guidelines
+
+You can add brand guidelines as context to your Operator queries so responses match your brand's voice, tone, and personality. Operator uses the brand guidelines configured in your workspace.
+
+To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more, see [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
+
+![Placeholder for Operator brand guidelines selection.]({% image_buster /assets/img/operator/operator_brand_guidelines.png %})
+
 ### Suggested prompts
 
-When you open Operator, you’ll see a few suggested prompts to help you get started. Select one to get started or type your own question.
+When you open Operator, you'll see a few suggested prompts to help you get started. Select one to get started or type your own question.
 
 ### Viewing reasoning
 
@@ -115,35 +117,75 @@ You can use the **maximize** button to expand Operator for easier reading, or **
 
 ### Sending feedback
 
-At the bottom of each response, use the thumbs up or thumbs down buttons to provide quick feedback. This helps improve Operator’s answers.
+At the bottom of each response, use the thumbs up or thumbs down buttons to provide quick feedback. This helps improve Operator's answers.
+
+## Approval flow
+
+When Operator proposes an action, it goes through an approval flow before executing in Braze.
+
+1. **Operator proposes an action:** Based on your prompt, Operator suggests a specific action.
+2. **You review:** You review the proposed action and its details, and either approve or decline the action.
+3. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
+
+{% alert note %}
+If an action fails after approval, Operator will notify you with details about the failure.
+{% endalert %}
+
+### Auto-approve all actions
+
+The **Auto-approve all actions** toggle is located in the Operator chat panel.
+
+- **On:** Operator's suggested actions execute immediately without requiring manual approval. Recommended for trusted workflows only.
+- **Off (default):** Operator-proposed actions are routed through the approval flow described above.
+
+When you enable auto-approve, a confirmation modal appears to verify your choice.
+
+![Placeholder for the Auto-approve toggle and confirmation modal.]({% image_buster /assets/img/operator/operator_auto_approve.png %})
+
+## Filing a support ticket
+
+You can file a support ticket directly from Operator without leaving the Braze dashboard.
+
+### How to file a ticket
+
+1. Open Operator and select **File a Support Ticket** (or ask Operator to file one).
+2. Fill in the title and description of your issue.
+3. Operator suggests relevant attachments and context to include.
+4. Review and select **Submit**.
+
+### Auto-included context
+
+When you file a ticket from Operator, the following context is automatically included:
+
+- Recent chat messages from your Operator session
+- Page-aware context (the page you were on when you opened Operator)
+- Your current workspace name
+- Relevant logs and session details
+
+You can also add additional context manually using the text field or by attaching files.
+
+### Tips for faster resolution
+
+- Include the workspace name and a timestamp.
+- Add a short description of the steps to reproduce the issue.
+- Review the auto-suggested attachments before submitting.
+
+![Placeholder for the support ticket filing flow.]({% image_buster /assets/img/operator/operator_support_ticket.png %})
 
 ## Troubleshooting
 
 | Issue | Troubleshooting |
 | --- | --- |
 | No response | Try refreshing the page and re-opening the Operator panel. |
-| Off-topic answers | Reframe your question more specifically. Mention the feature or workflow you’re asking about. |
-| Error messages | If Operator can’t stream content to you, you may see a “Try again” prompt. Operator may be temporarily unavailable or your connection was interrupted. Retry after a few minutes. |
+| Off-topic answers | Reframe your question more specifically. Mention the feature or workflow you're asking about. |
+| Error messages | If Operator can't stream content to you, you may see a "Try again" prompt. Operator may be temporarily unavailable or your connection was interrupted. Retry after a few minutes. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Limitations
 
-Operator is designed to help you navigate Braze and get work done more efficiently, but there are some current limits to keep in mind:
+- **Data access:** Operator can use the context of the page you're working on, but it can't query or return your company's data stored in Braze, such as campaign lists, segment performance, or Canvas analytics.
+- **Usage limits:** Operator has a daily usage limit that resets every 24 hours. The limit is generous and unlikely to be reached during normal use. More complex queries consume more of the limit than simpler ones.
 
-### No access to your data
-
-While Operator has access to the context of the work you're doing in Braze, Operator can’t query or return answers about your company’s data stored in Braze. For example, it **can’t** respond to requests like:
-
-- “Give me a list of all my email campaigns from last year.”
-- “Show me which segments had the highest engagement last quarter.”
-- “Analyze my Canvas performance and suggest improvements.”
-
-### Beta stability
-
-As a private beta, Operator may have occasional errors, interruptions, or incomplete features.
-
-If you’re unsure whether a question is supported, try phrasing it in terms of how Operator can help you navigate or take actions inside the Braze dashboard, rather than pulling analytics or historical data.
-
-### Number of messages sent
-
-There is a limit of how many messages you can send to Operator. We recommend using the default GPT-5 mini or GPT-5 nano for your queries and using GPT-5 judiciously for more complex tasks.
+{% alert tip %}
+To manage your usage, consider selecting a lighter model for simple queries and reserving more capable models for complex tasks.
+{% endalert %}

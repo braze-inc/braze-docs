@@ -360,7 +360,7 @@ You can now customize your [Braze Agent]({{site.baseurl}}/user_guide/brazeai/age
 - Structuring an agent's output by providing the [output format]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#output-format).
 - Adjusting the [temperature]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#temperature) for the level of deviation for your agent's output.
 
-### ChatGPT models with BrazeAI<sup>TM</sup> Operator
+### ChatGPT models with BrazeAI Operator<sup>TM</sup>
 
 {% multi_lang_include release_type.md release="Beta" %}
 
