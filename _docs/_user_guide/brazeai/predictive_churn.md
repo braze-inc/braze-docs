@@ -2,7 +2,7 @@
 nav_title: Predictive Churn
 article_title: Predictive Churn
 description: "This landing page covers Predictive Churn, a tool in the Braze Predictive Suite that allows you to define what churn means for your business as well as the users you'd like to prevent from churning."
-page_order: 2.0
+page_order: 9
 alias: /predictive_churn/
 search_rank: 2
 ---

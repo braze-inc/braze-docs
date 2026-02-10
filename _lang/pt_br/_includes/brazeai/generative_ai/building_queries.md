@@ -10,27 +10,27 @@ Você precisará de [ permissões "View IPI"]({{site.baseurl}}/user_guide/admini
 
 Para criar uma nova consulta, acesse **Análise de dados** > **Query Builder** e selecione **Criar consulta de SQL**.
 
-![As opções "Query Template" e "SQL Editor" encontradas no menu suspenso "Create SQL Query".]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
+![As opções "Query Template" (Modelo de consulta) e "SQL Editor" (Editor de SQL) encontram-se no menu suspenso "Create SQL Query" (Criar consulta SQL).]({% image_buster /assets/img_archive/create_sql_query_button.png %}){: style="max-width:60%;"}
 
 Se precisar de inspiração ou ajuda para elaborar sua consulta, escolha **Query Template (Modelo de consulta** ) e selecione um [modelo pré-fabricado]({{site.baseurl}}/user_guide/analytics/query_builder/query_templates/). Para começar com uma consulta em branco, selecione **SQL Editor**.
 
 Seu relatório recebe automaticamente um nome com a data e a hora atuais. Passe o mouse sobre o nome e selecione <i class="fas fa-pencil" alt="Edit"></i> para dar à sua consulta de SQL um nome significativo.
 
-![Um exemplo de relatório com o nome "Engajamento de canal para maio de 2025".]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
+![Um exemplo de relatório chamado "Engajamento de canal para maio de 2025".]({% image_buster /assets/img_archive/report_name_example.png %}){: style="max-width:80%;"}
 
 ### Etapa 2: Crie sua consulta
 
 Ao criar sua consulta, você pode optar por obter ajuda da IA ou criá-la por conta própria.
 
 {% tabs local %}
-{% tab Usando o BrazeAI %}
+{% tab Using BrazeAI %}
 O Criador de consultas com IA usa o [GPT](https://openai.com/gpt-4), desenvolvido pela OpenAI, para recomendar SQL para sua consulta. Para gerar SQL com o Criador de consultas com IA:
 
 1. Depois de criar um relatório no Criador de consultas, selecione a guia **Criador de consultas com IA**.
 2. Digite seu prompt ou selecione um prompt de amostra e selecione **Gerar** para traduzir seu prompt para SQL.
 3. Revise o SQL gerado para ter certeza de que está correto e, em seguida, selecione **Insert into Editor (Inserir no editor**).
 
-![O construtor de consultas de IA SQL.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![O construtor de consultas de SQL IA.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 #### Dicas
 
@@ -41,7 +41,7 @@ O Criador de consultas com IA usa o [GPT](https://openai.com/gpt-4), desenvolvid
 \##{% multi_lang_include brazeai/generative_ai/policy.md %}
 {% endtab %}
 
-{% tab Por conta própria %}
+{% tab On My Own %}
 Escreva sua consulta de SQL usando [a sintaxe do Snowflake](https://docs.snowflake.com/en/sql-reference). Consulte a [referência da tabela]({{site.baseurl}}/user_guide/engagement_tools/segments/sql_segments/sql_segments_tables/) para obter uma lista completa das tabelas e colunas disponíveis para consulta.
 
 Para visualizar os detalhes da tabela no Query Builder:
@@ -96,17 +96,17 @@ Sua consulta pode falhar por qualquer um dos seguintes motivos:
 
 ### Etapa 3: Gerar seu relatório
 
-Quando terminar de criar sua consulta, selecione **Run Query (Executar consulta**). Se não houver erros ou [tempo limite do relatório](#report-timeouts), será gerado um arquivo CSV a partir da consulta.
+Quando terminar de criar sua consulta, selecione **Run Query (Executar consulta**). Se não houver erros ou [tempo limite do relatório](#report-timeouts), um arquivo CSV será gerado a partir da consulta.
 
 Para baixar o relatório CSV, selecione **Exportar**.
 
-![O Criador de consultas mostra os resultados da consulta modelo "Engajamento e receita do canal nos últimos 30 dias".]({% image_buster /assets/img_archive/query_builder.png %})
+![O Query Builder mostra os resultados da consulta modelada "Engajamento do canal e receita nos últimos 30 dias".]({% image_buster /assets/img_archive/query_builder.png %})
 
 {% alert important %}
 Cada relatório só pode gerar resultados uma vez por dia. Se você executar o mesmo relatório várias vezes em um único dia do calendário, verá os mesmos resultados em cada relatório.
 {% endalert %}
 
-## Relatar tempos limite
+## Relatar timeouts
 
 Os relatórios que demorarem mais de seis minutos para serem executados serão encerrados. Se esta for a primeira consulta que você está executando em algum tempo, ela poderá levar mais tempo para ser processada e, portanto, terá uma probabilidade maior de atingir o tempo limite. Se isso acontecer, tente executar o relatório novamente.
 
@@ -128,6 +128,6 @@ O uso de crédito está correlacionado ao tempo de execução de sua consulta de
 
 Os créditos não são usados ao escrever, editar ou salvar relatórios no editor Braze SQL. Seus créditos serão redefinidos para 5 no primeiro dia de cada mês, às 12 horas UTC. Você pode monitorar o uso de seu crédito mensal na parte superior da página do Criador de consultas.
 
-![Construtor de consultas que mostra a quantidade de créditos usados no mês atual.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
+![O Construtor de consultas mostra a quantidade de créditos usados no mês atual.]({% image_buster /assets/img_archive/query_builder_credits.png %}){: style="max-width:60%;"}
 
 Quando você atinge o limite de crédito, não pode executar consultas, mas pode criar, editar e salvar relatórios de SQL. Se quiser comprar mais créditos do Criador de consultas, entre em contato com o gerente da sua conta.

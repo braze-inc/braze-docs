@@ -1,4 +1,4 @@
-{% multi_lang_include developer_guide/prerequisites/android.md %} Zusätzlich müssen Sie [stille Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Außerdem müssen Sie [stille Push-Benachrichtigungen einrichten]({{site.baseurl}}/developer_guide/push_notifications/silent/?sdktab=android).
 
 ## Einrichten von Geofences {#setting-up-geofences}
 

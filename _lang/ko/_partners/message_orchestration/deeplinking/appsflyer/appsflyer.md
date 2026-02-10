@@ -12,7 +12,7 @@ search_tag: Partner
 
 {% multi_lang_include video.html id="gQ9y2DA2LuQ" align="right" %}
 
-> AppsFlyer is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, mobile attribution, and deep linking.
+> [앱스플라이어는](https://www.appsflyer.com/) 마케팅 분석, 모바일 어트리뷰션, 딥링킹을 통해 앱을 분석하고 최적화할 수 있도록 도와주는 모바일 마케팅 분석 및 어트리뷰션 플랫폼입니다.
 
 The Braze and AppsFlyer integration allows you to better understand how to optimize and build more holistic campaigns by leveraging mobile install attribution data from AppsFlyer. 
 
@@ -35,9 +35,9 @@ You can also pass your AppsFlyer audiences (cohorts) directly to Braze with the 
 
 {% tabs local %}
 {% tab Android %}
-If you have an Android app, you will need to pass a unique Braze device ID to AppsFlyer. 
+Android 앱이 있는 경우, 앱스플라이어에 고유한 Braze 기기 ID를 전달해야 합니다. 
 
-Make sure the following lines of code are inserted at the correct place—after the Braze SDK is launched and before the initialization code for the AppsFlyer SDK. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
+다음 코드 줄이 올바른 위치에 삽입되었는지, 즉 Braze SDK가 실행된 후와 앱스플라이어 SDK의 초기화 코드 앞에 삽입되었는지 확인합니다. See the AppsFlyer [Android SDK integration guide](https://dev.appsflyer.com/hc/docs/integrate-android-sdk#initializing-the-android-sdk) for more information.
 
 ```kotlin
 val customData = HashMap<String, Any>()
@@ -50,10 +50,10 @@ Braze.getInstance(context).getDeviceIdAsync { deviceId ->
 
 {% tab ios %}
 {% alert important %}
-Prior to February 2023, our AppsFlyer attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to AppsFlyer upon install as there will be no disruption of service.
+2023년 2월 이전에는 앱스플라이어 어트리뷰션 데이터 통합을 위해 IDFV(Identifier for Vendor)를 기본 식별자로 사용하여 iOS 어트리뷰션 데이터를 매칭했습니다. Objective-C를 사용하는 Braze 고객은 서비스 중단이 발생하지 않으므로 설치 시 Braze `device_id` 를 가져와서 앱스플라이어로 전송할 필요가 없습니다.
 {% endalert%}
 
-For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must confirm that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
+Swift SDK v5.7.0+를 사용하는 경우 IDFV를 상호 식별자로 계속 사용하려면 `useUUIDAsDeviceId` 필드가 `false` 으로 설정되어 있는지 확인하여 통합이 중단되지 않도록 해야 합니다. 
 
 If set to `true`, you must implement the iOS device ID mapping for Swift in order to pass the Braze `device_id` to AppsFlyer upon app install in order for Braze to appropriately match iOS attributions.
 
@@ -99,9 +99,9 @@ AppsFlyer.setAdditionalData(customData);
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **AppsFlyer**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![The "Data Import for Install Attribution" box available on the AppsFlyer Technology page. Included in this box is the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/appsflyer.png %}){: style="max-width:70%;"}
+여기에서 REST 엔드포인트를 찾아 Braze 데이터 가져오기 키를 생성합니다. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![AppsFlyer 기술 페이지에서 사용 가능한 '설치 경로에 대한 데이터 가져오기'. 이 상자에는 데이터 가져오기 키와 REST 엔드포인트가 포함되어 있습니다.]({% image_buster /assets/img/attribution/appsflyer.png %}){: style="max-width:70%;"}
 
-### Step 3: Configure Braze in AppsFlyer's dashboard
+### 3단계: Configure Braze in AppsFlyer's dashboard
 
 1. In AppsFlyer, navigate to the **Integrated Partners** page on the left bar. Next, search for **Braze** and select the Braze logo to open a configuration window.
 2. Within the **Integration** tab, switch on **Activate Partner**.
@@ -112,15 +112,15 @@ Additional information on these instructions is available in [AppsFlyer's docume
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from AppsFlyer, the status connection indicator on the AppsFlyer technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
+Braze가 앱스플라이어로부터 기여도 데이터를 수신하면, 앱스플라이어 기술 파트너 페이지의 연결 상태 표시기가 "연결되지 않음"에서 "연결됨"으로 변경되고 마지막 요청 성공의 타임스탬프가 포함됩니다.
 
-Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the AppsFlyer postback, are ignored by our API and are not counted when determining if a successful connection was established.
+이 상태는 Braze가 속성 설치에 대한 데이터를 수신한 후에만 변경됩니다. Braze는 오가닉 인스톨을 무시하며(Appsflyer 포스트백에서 제외), 연결 성공 여부를 판단할 때 이를 계산하지 않습니다.
 
-### Step 5: Viewing user attribution data
+### 5단계: Viewing user attribution data
 
 #### Available data fields
 
-Assuming you configure your integration as suggested, Braze will map all non-organic install data to segment filters.
+데이터 통합에 성공하면 Braze는 모든 비오가닉 설치 데이터를 세그먼트 필터에 매핑합니다.
 
 | AppsFlyer data field | Braze segment filter |
 | -------------------- | --------------------- |
@@ -130,236 +130,112 @@ Assuming you configure your integration as suggested, Braze will map all non-org
 | `af_ad` | Attributed Ad |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Your user base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
+설치 어트리뷰션 필터를 사용하여 Braze 대시보드에서 속성 데이터를 기준으로 사용자 기반을 세분화할 수 있습니다.
 
-![Four available filters. The first is "Install Attribution Source is network_val_0". The second is "Install Attribution Source is campaign_val_0". The third is "Install Attribution Source is adgroup_val_0". The fourth is "Install Attribution Source is creative_val_0". Beside the listed filters, you can see how these attribution sources will be added to the user profile. In the "Install Attribution" box on a user's information page, Install Source is listed as network_val_0, campaign is listed as campaign_val_0, etc.]({% image_buster /assets/img/braze_attribution.png %})
+![Four available filters. 첫 번째는 "설치 어트리뷰션 소스는 network_val_0". 두 번째는 "설치 어트리뷰션 소스는 campaign_val_0". 세 번째는 "설치 어트리뷰션 소스는 adgroup_val_0". 네 번째는 "설치 어트리뷰션 소스는 creative_val_0". 나열된 필터 옆에서 이러한 어트리뷰션 소스가 고객 프로필에 어떻게 추가되는지 확인할 수 있습니다. 사용자 정보 페이지의 '설치 경로' 상자에 설치 소스는 network_val_0, 캠페인은 campaign_val_0, 등으로 표시됩니다.]({% image_buster /assets/img/braze_attribution.png %})
 
 Additionally, attribution data for a particular user is available on each user's profile in the Braze dashboard.
 
 {% alert note %}
-Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
+Attribution data for Facebook and X (formerly Twitter) campaigns is not available through our partners. 이러한 미디어 소스는 파트너가 서드파티와 기여도 데이터를 공유하는 것을 허용하지 않으므로, 파트너는 해당 데이터를 Braze로 전송할 수 없습니다.
 {% endalert %}
 
-## Integrate AppsFlyer with an Email Service Provider for deep linking
+## 딥링킹을 위한 앱스플라이어와 Braze의 통합
 
-AppsFlyer integrates with both SendGrid and SparkPost as Email Service Providers (ESPs) to support deep linking and click tracking. Follow the instructions below to integrate with your ESP of choice.
+Deep links—links that direct users toward a specific page or place within an app or website—are used to create a tailored user experience. 
 
-{% alert tip %}
-Deep links—links that direct users toward a specific page or place within an app or website—are used to create a tailored user experience. While widely used, issues can arise when using emailed deep links with click tracking, another important feature used in collecting user data. These issues are due to ESPs wrapping deep links in a click-recording domain, breaking the original link. As such, supporting deep links requires additional setup. By integrating AppsFlyer with either SendGrid or SparkPost, you avoid these issues. Learn more about this topic in [Universal links and App Links]({{site.baseurl}}/user_guide/message_building_by_channel/email/universal_links/).
-{% endalert %}
+널리 사용되고 있지만, 사용자 데이터 수집에 사용되는 또 다른 중요한 기능인 클릭 추적#8212과 함께 이메일 딥링크를 사용할 때 문제가 발생할 수 있습니다. 이러한 문제는 이메일 서비스 공급자(ESP)가 클릭 기록 도메인에 딥링크를 래핑하여 원래 링크를 끊어버리기 때문에 발생합니다. As such, supporting deep links requires additional setup.
 
-### Step 1: Set up OneLink in AppsFlyer
+앱스플라이어는 이러한 문제를 방지하는 [서비스를](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer) 제공하여 이메일 서비스 공급업체 서버와 도메인 이름 사이에서 앱스플라이어가 중개자 역할을 할 수 있도록 합니다.  프록시 역할은 딥링킹을 용이하게 하는 연결 파일(AASA/자산 링크)의 제공을 인에이블먼트합니다. 
 
-1. In AppsFlyer, select a OneLink template for your email campaigns. Make sure the template supports universal links (iOS) or App Links (Android). 
-2. Configure your app to support deep linking with OneLink. See the [AppsFlyer documentation](https://dev.appsflyer.com/hc/docs/dl_work_flow#initial-setup) for details on configuring your app to support OneLink.
+## 1단계 - 클릭 추적 도메인 만들기 
 
-### Step 2: Configure your app to support universal links and App Links
+[Braze의 이메일 설정 안내의]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/ssl/#acquiring-an-ssl-certificate) 초기 요소에 따라 이메일 전송 도메인과 클릭 추적 도메인을 만듭니다. 지원을 받으려면 Braze 대시보드를 통해 티켓을 제기하여 Braze 이메일 팀과 함께 새 CTD에 대한 설정을 시작할 수 있습니다.
 
-Universal links (iOS) or App Links (Android) are allowed by the device's operating system to open a specified app when clicked.
+![오른쪽 상단의 "지원" 버튼 아래에 있는 "도움말 받기" 버튼이 표시된 Braze UI]({% image_buster /assets/img/attribution/appsflyer/1.png %})
 
-Perform the following steps to support universal links and App Links.
+이미 기존 CTD를 사용 중이더라도 새 CTD를 생성해야 합니다. 이렇게 하면 현재 진행 중인 라이브 이메일 캠페인의 트래픽에 영향을 미치지 않습니다. 
 
-{% tabs local %}
-{% tab SendGrid %}
-{% subtabs %}
-{% subtab iOS %}
-Set up the Apple App Site Association (AASA) file hosting to enable universal links in your emails.
+{% alert important%}
+앱스플라이어가 SSL 인증서를 생성합니다. 이 단계에서는 이메일 링크가 보안되지 않았을 가능성이 높으며, 이는 URL 접두사가 HTTPS가 아닌 HTTP라는 의미입니다. 이 문제는 이후 단계에서 해결됩니다.	
+{%endalert%}
 
-1. Obtain an AASA file in one of the following methods:
-    * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports universal links.
-        * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
-        * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
-    * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
-2. Host the AASA file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`. 
+## 2단계 - 앱스플라이어에서 원링크 템플릿 만들기
+[원링크 템플릿을](https://support.appsflyer.com/hc/en-us/articles/207032246-Create-a-OneLink-template#procedures) 생성하고 '앱 설치 시'에서 유니버설 링크/앱 링크를 구성합니다. 이 템플릿은 나중에 이메일 캠페인용 원링크 링크를 만드는 데 사용됩니다.
 
-See the [SendGrid documentation](https://docs.sendgrid.com/ui/sending-email/universal-links) to learn how to configure the AASA file for SendGrid and set up CDN services to host the AASA file.
+{% alert note%} 유니버설 링크/앱 링크를 인에이블먼트하는 기존 원링크 템플릿이 이미 구성되어 있는 경우 이를 사용할 수 있습니다.
+{%endalert%}
 
-{% alert important %}
-Once the AASA file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new AASA file.
-{% endalert %}
-{% endsubtab %}
-{% subtab Android %}
-Set up the Digital Asset Links file hosting to enable App Links in your emails.
+## 3단계 - 앱스플라이어에서 Braze 통합 설정하기
+이제 앱스플라이어에서 Braze 통합을 설정할 차례입니다. 이 단계와 다음 단계('앱 구성')를 동시에 설정할 수 있습니다.
+앱스플라이어에서 Braze 통합을 설정하려면:
 
-1. Obtain a Digital Asset Links file in one of the following methods:
-    * If you've set up OneLink with App Links, you may already have a Digital Asset Links file associated with OneLink. To obtain the file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports App Links.
-        * Add `/.well-known/assetlinks.json` to the end of the OneLink URL.
-        * To download the Digital Asset Links file, paste the OneLink URL into your browser's address bar and press **Enter**. For example, `https://<OneLinkSubdomain>.onelink.me/.well-known/assetlinks.json`. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
-    * [Android's guide to App Links](https://developer.android.com/studio/write/app-link-indexing) explains how to create the Digital Asset Links file.
-2. Host the Digital Asset Links file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`.
+### 1\. 앱스플라이어의 사이드 메뉴에서 참여 > 이메일 서비스 공급자 통합을 선택합니다.
+![왼쪽 메뉴에 있는 "이메일 서비스 공급자 통합" 버튼이 표시된 앱스플라이어 UI]({% image_buster /assets/img/attribution/appsflyer/2.png %})
 
-See the [SendGrid documentation](https://docs.sendgrid.com/ui/sending-email/universal-links) to learn how to configure the Digital Asset Links file for SendGrid and set up CDN services to host the Digital Asset Links file.
+ 
+### 2\. Braze를 선택합니다.
+![Braze를 포함한 이메일 서비스 공급자 통합 목록이 표시된 앱스플라이어 UI.]({% image_buster /assets/img/attribution/appsflyer/3.png %})
 
-{% alert important %}
-Once the Digital Asset Links file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new file.
-{% endalert %}
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab SparkPost %}
-{% subtabs %}
-{% subtab iOS %}
-#### Step 2a: Set up AASA file hosting
-Set up the Apple App Site Association (AASA) file hosting to enable universal links in your emails.
+ 
+### 3\. 이메일 캠페인에 사용할 원링크 템플릿을 선택한 후 다음을 클릭합니다.
+![사용자가 템플릿을 선택할 수 있는 드롭다운이 표시된 앱스플라이어 UI.]({% image_buster /assets/img/attribution/appsflyer/4.png %})
 
-1. Obtain an AASA file in one of the following methods:
-    * If you've set up OneLink with universal links, you may already have an AASA file associated with OneLink. To obtain the AASA file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports universal links.
-        * Paste it instead of the placeholder in the following URL: `<OneLinkSubdomain>.onelink.me/.well-known/apple-app-site-association`
-        * To download the AASA file, paste the OneLink URL into your browser's address bar and press **Enter**. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
-    * [Apple's guide on universal links](https://developer.apple.com/documentation/xcode/allowing_apps_and_websites_to_link_to_your_content) explains how to create the AASA file.
-2. Host the AASA file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`. 
+ 
+### 4\. 클릭 추적 도메인과 1단계에서 생성한 새 CTD와 함께 제공된 "Braze 엔드포인트" 값을 입력한 다음 연결 유효성 검사를 클릭합니다.
 
-See the [SparkPost documentation](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve) to learn how to configure the AASA file for SparkPost and set custom link sub-paths.
+이렇게 하면 클릭 추적 도메인이 입력한 엔드포인트를 가리키는지 확인합니다.
 
-{% alert important %}
-Once the AASA file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new AASA file.
-{% endalert %}
+![고객이 클릭 추적 도메인과 관련 세부 정보를 추가해야 하는 위치를 강조 표시한 앱스플라이어 UI.]({% image_buster /assets/img/attribution/appsflyer/5.png %})
 
-#### Step 2b: Redirect your click-tracking domain to your AASA file host
-During your [email configuration]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/), you created a CNAME record in your DNS server. Perform the following steps after you verify your click-tracking domain in Braze. 
+앱스플라이어는 "Braze 엔드포인트"를 통해 이 가이드의 1단계에서 제공한 세부 정보, 특히 새로운 CTD를 요청하고 있습니다. 
 
-1. Delete the CNAME record that redirects your subdomain to the SparkPost domain.
-2. Create a CNAME record that redirects your click-tracking domain to the CDN hosting your app AASA file, instead of the record you deleted above.
-{% endsubtab %}
-{% subtab Android %}
-#### Step 2a: Set up Digital Asset Links file hosting
-Set up the Digital Asset Links file hosting to enable App Links in your emails.
+그런 다음 **연결 유효성** 검사를 클릭하여 클릭 추적 도메인이 입력한 엔드포인트를 가리키는지 확인합니다.
+완료했으면 **다음을** 클릭합니다.
 
-1. Obtain a Digital Asset Links file in one of the following methods:
-    * If you've set up OneLink with App Links, you may already have a Digital Asset Links file associated with OneLink. To obtain the file, perform the following:
-        * Copy the OneLink subdomain of your OneLink template. Make sure the template supports App Links.
-        * Add `/.well-known/assetlinks.json` to the end of the OneLink URL.
-        * To download the Digital Asset Links file, paste the OneLink URL into your browser's address bar and press **Enter**. For example, `https://<OneLinkSubdomain>.onelink.me/.well-known/assetlinks.json`. The file will then be downloaded to your computer, and you can open and view its contents using any text editor.
-    * [Android's guide to App Links](https://developer.android.com/studio/write/app-link-indexing) explains how to create the Digital Asset Links file.
-2. Host the Digital Asset Links file in your click-recording domain server. The file should be hosted in the path: `click.example.com/.well-known/apple-app-site-association`.
+### 5\. 링크 트래픽을 앱스플라이어로 라우팅합니다:
 
-See the [SparkPost documentation](https://support.sparkpost.com/docs/tech-resources/deep-links-self-serve) to learn how to configure the Digital Asset Links file for SparkPost and set custom link sub-paths.
+#### a. 앱스플라이어에서 미리 제작된 커스텀 지침을 복사하여 IT 또는 도메인 관리자에게 전송하세요. 
 
-{% alert important %}
-Once the Digital Asset Links file is hosted, any change of your OneLink configuration (modification or replacement) requires generating a new file.
-{% endalert %}
+관리자는 앱스플라이어가 제공한 새 도메인으로 DNS CNAME 레코드를 업데이트하여 이메일 서비스 공급자 서버에서 앱스플라이어 서버로 이메일 캠페인 트래픽을 리라우팅해야 합니다.
 
-#### Step 2b: Redirect your click-tracking domain to your digital asset links file host
-During your [email configuration]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/setting_up_ips_and_domains/), you created a CNAME record in your DNS server. Perform the following steps after you verify your click-tracking domain in Braze. 
+그 결과, 링크를 클릭할 때마다 클릭이 앱스플라이어로 리디렉션되고, 앱스플라이어는 다시 이메일 서비스 공급업체 엔드포인트로 리디렉션합니다.
 
-1. Delete the CNAME record that redirects your subdomain to the SparkPost domain.
-2. Create a CNAME record that redirects your click-tracking domain to the CDN hosting your app Digital Asset Links file, instead of the record you deleted above.
+![도메인에서 앱스플라이어, 이메일 서비스 공급업체 엔드포인트까지 클릭 데이터가 전달되는 과정을 보여주는 다이어그램]({% image_buster /assets/img/attribution/appsflyer/6.png %})
 
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% endtabs %}
+#### b. 지침을 복사하여 전송한 후 완료를 클릭합니다.
+Braze 통합이 완료되었습니다.
 
-### Step 3: Configure your AppsFlyer SDK to support deep linking
+{%alert important%}
+Braze 통합 상태는 보류 중이며 CNAME 레코드가 매핑된 후에만 작동을 시작합니다. 매핑 후 새 통합이 작동을 시작하고 활성화되려면 최대 24시간이 걸릴 수 있습니다.
+{%endalert%}
 
-{% tabs local %}
-{% tab SendGrid %}
-{% subtabs %}
-{% subtab iOS %}
-#### Step 3a: Configure your SDK to support the AASA file
-After you host the AASA file in your click-recording domain, configure your AppsFlyer SDK to support the AASA file.
+## 4단계: 앱 구성(개발자 작업)
+앱스플라이어는 유니버설 연동을 지원하기 위해 웹 또는 앱 팀이 따라야 하는 올바른 앱 구성에 대한 [지침을 제공합니다](https://support.appsflyer.com/hc/en-us/articles/26967438815377-Set-up-your-ESP-integration-with-AppsFlyer#step-2-configure-your-app-developer-task). 
 
-1. In Xcode, select your project.
-2. Select **Capabilities.**
-3. Turn on **Associated Domains.**
-4. Click **+**, and enter your click domain. For example, `applinks:click.example.com`.
-When a click on the universal link occurs, your app is opened and the SDK is initiated. To enable the app to extract the OneLink behind the click domain and resolve the deep link, perform the following:
+## 5단계: Braze로 SSL 클릭 추적 인에이블먼트 확인
 
-#### Step 3b: Handle the deep link data
-1. Provide the click recording domain to the SDK API [`resolveDeepLinkURLs`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlib#resolvedeeplinkurls). This API needs to be called before SDK initialization. `AppsFlyerLib.shared().resolveDeepLinkURLs = ["click.example.com","spgo.io"]`
-2. Use the [`onAppOpenAttribution`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlibdelegate#onappopenattribution) API to get the deep link parameters and handle the deep link data.
+이 단계에서는 앱스플라이어에서 CTD 세부 정보를 공유하고 유효성을 검사한 후 테스트 전송을 수행하여 원링크 전송 도메인에 SSL 인증서가 있는지 확인하는 것이 좋습니다. 이는 [이메일 설정](https://www.braze.com/docs/user_guide/message_building_by_channel/email/email_setup/ssl/#acquiring-an-ssl-certificate) 가이드와 일치합니다.
 
-{% endsubtab %}
-{% subtab Android %}
-#### Step 3a: Configure your SDK to support the Digital Asset Links file
+원링크를 사용하여 딥링크를 전송하여 품질 보증 및 문제 해결을 수행할 수 있습니다. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
 
-After you host the Digital Asset Links file in your click-recording domain in the previous step, configure your SDK to support the file.
+CTD 링크가 HTTP로 식별되는 경우 Braze의 이메일 운영팀에 문의하여 SSL 클릭 추적을 인에이블먼트하세요. 이렇게 하면 모든 HTTP 링크가 자동으로 HTTPS로 변환됩니다.
+고객 성공 매니저에게 연락할 때 다음 샘플 메시지 텍스트를 사용하거나 1단계에서와 같이 Braze 대시보드에 다시 티켓을 올리면 됩니다: 
 
-In your Android manifest, add the click domain host and any prefix in the activity tag of the activity you want to deep link into.
-
-```xml
-<activity android:name=".DeepLinkActivity">
-    <intent-filter android:autoVerify="true">
-      <action android:name="android.intent.action.VIEW" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <category android:name="android.intent.category.BROWSABLE" />
-      <data
-        android:scheme="https"
-        android:host="click.example.com"
-        android:pathPrefix="/campaign"
-      />
-    </intent-filter>
-  </activity>
 ```
-
-#### Step 3b: Handle the deep link data
-When a click on an App Link occurs, your app is opened and the SDK is initiated.  To enable the app to extract the OneLink behind the click domain and resolve the deep link, list the click domains in the SDK method [`setResolveDeepLinkURLs`](https://support.appsflyer.com/hc/en-us/articles/4408735106193#resolve-wrapped-deep-link-urls). This property needs to be set before SDK initialization. `AppsFlyerLib.getInstance().setResolveDeepLinkURLs("clickdomain.com", "myclickdomain.com", "anotherclickdomain.com");`
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab SparkPost %}
-{% subtabs %}
-{% subtab iOS %}
-#### Step 3a: Configure your SDK to support the AASA file
-After you host the AASA file in your click-recording domain, configure your SDK to support the AASA file.
-
-1. In Xcode, select your project.
-2. Select **Capabilities.**
-3. Turn on **Associated Domains.**
-4. Click **+**, and enter your click domain. For example, `applinks:click.example.com`.
-
-#### Step 3b: Handle the deep link data
-When a click on the universal link occurs, your app is opened and the SDK is initiated. To enable the SDK to extract the OneLink behind the click domain, perform the following:
-1. List the click domains in the SDK property  [`resolveDeepLinkURLs`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlib#resolvedeeplinkurls). Make sure to set this property before SDK initialization.
-2. Make sure that List <em>spgo.io</em> is one of the listed domains. SparkPost owns this domain and it's part of the redirection flow. `AppsFlyerLib.shared().resolveDeepLinkURLs = ["click.example.com","spgo.io"]`
-3. Use the [`onAppOpenAttribution`](https://dev.appsflyer.com/hc/docs/ios-sdk-reference-appsflyerlibdelegate#onappopenattribution) API to get the deep link parameters and handle the deep link data.
-{% endsubtab %}
-{% subtab Android %}
-#### Step 3a: Configure your SDK to support the Digital Asset Links file
-
-After you host the Digital Asset Links file in your click-recording domain in the previous step, configure your SDK to support the file.
-
-In your Android manifest, add the click domain host and any prefix in the activity tag of the activity you want to deep link into.
-
-```xml
-<activity android:name=".DeepLinkActivity">
-    <intent-filter android:autoVerify="true">
-      <action android:name="android.intent.action.VIEW" />
-      <category android:name="android.intent.category.DEFAULT" />
-      <category android:name="android.intent.category.BROWSABLE" />
-      <data
-        android:scheme="https"
-        android:host="click.example.com"
-        android:pathPrefix="/campaign"
-      />
-    </intent-filter>
-  </activity>
+Hi Team,
+Could you please enable SSL click tracking for CTD XXX? It is currently set to HTTP instead of HTTPS. 
 ```
-
-#### Step 3b: Handle the App Link data
-When a click on an App Link occurs, your app is opened and the SDK is initiated. To enable the app to extract the OneLink behind the click domain and resolve the deep link, perform the following:
-
-1. List the click domains in the SDK method [`setResolveDeepLinkURLs`](https://support.appsflyer.com/hc/en-us/articles/4408735106193#resolve-wrapped-deep-link-urls). This property needs to be set before SDK initialization.
-2. Make sure that List *spgo.io* is one of the listed domains. SparkPost owns this domain and it's part of the redirection flow. `AppsFlyerLib.getInstance().setResolveDeepLinkURLs("clickdomain.com", "myclickdomain.com", "spgo.io");`
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% endtabs %}
-
-Once you've completed the integration steps, you can perform quality assurance and troubleshooting by sending a deep link using OneLink. See the [AppsFlyer documentation](https://support.appsflyer.com/hc/en-us/articles/360001437497-Integrating-AppsFlyer-and-Braze#step-3-sending-your-first-email::2ffdb79a) for details on using OneLink.
 
 ### AppsFlyer click tracking URLs in Braze (optional)
 
-You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions.
+You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. 이를 통해 Braze 캠페인의 설치 또는 재참여 기여도 데이터를 앱스플라이어로 다시 전송할 수 있습니다. 결과적으로 마케팅 활동을 보다 효과적으로 측정하고 데이터 중심 의사 결정을 내릴 수 있습니다.
 
-You can simply create your OneLink tracking URL in AppsFlyer and directly insert it into your Braze campaigns. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.AppsFlyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link. We recommend appending your AppsFlyer tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. This will deterministically attribute the user that has clicked on the link.
+You can simply create your OneLink tracking URL in AppsFlyer and directly insert it into your Braze campaigns. 그런 다음 앱스플라이어는 [확률적 어트리뷰션 방법론을](https://support.AppsFlyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) 사용하여 링크를 클릭한 사용자의 기여도를 측정합니다. We recommend appending your AppsFlyer tracking links with a device identifier to improve the accuracy of attributions from your Braze campaigns. 이는 링크를 클릭한 사용자에게 결정적인 속성을 부여합니다.
 
 {% tabs local %}
 {% tab Android %}
-For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the AppsFlyer SDK integration. You can include the GAID in your AppsFlyer click tracking links by utilizing the following Liquid logic:
+Android의 경우, Braze를 통해 고객은 [Google 광고 ID 수집(GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id)을 옵트인할 수 있습니다. 앱스플라이어 SDK 통합은 GAID도 수집합니다. 다음 Liquid 로직을 사용하여 앱스플라이어 클릭 추적 링크에 GAID를 포함시킬 수 있습니다:
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
@@ -370,7 +246,7 @@ aifa={{most_recently_used_device.${google_ad_id}}}
 {% endtab %}
 
 {% tab iOS %}
-For iOS, both Braze and AppsFlyer automatically collect the IDFV natively through our SDK integrations. This can be used as the device identifier. You can include the IDFV in your AppsFlyer click tracking links by utilizing the following Liquid logic:
+For iOS, both Braze and AppsFlyer automatically collect the IDFV natively through our SDK integrations. IDFC를 기기 식별자로 사용할 수 있습니다. 다음 Liquid 로직을 사용하여 앱스플라이어 클릭 추적 링크에 IDFV를 포함시킬 수 있습니다:
 
 {% raw %}
 ```
@@ -381,6 +257,3 @@ idfv={{most_recently_used_device.${id}}}
 {% endraw %}
 {% endtab %}
 {% endtabs %}
-
-
-

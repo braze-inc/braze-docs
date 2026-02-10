@@ -13,33 +13,42 @@ tool: Canvas
 
 guide_featured_title: "Section articles"
 guide_featured_list:
-  - name: Message Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
-    image: /assets/img/braze_icons/message-square-02.svg
-  - name: Delay Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
-    image: /assets/img/braze_icons/clock-stopwatch.svg
-  - name: Decision Split Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
-    image: /assets/img/braze_icons/dataflow-04.svg
-  - name: Audience Paths Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    image: /assets/img/braze_icons/users-01.svg 
   - name: Action Paths Step  
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
     image: /assets/img/braze_icons/zap.svg
+  - name: Agent Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/agent_step/
+    image: /assets/img/braze_icons/briefcase-01.svg
+  - name: Audience Paths Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
+    image: /assets/img/braze_icons/users-01.svg 
+  - name: Audience Sync Step
+    link: /docs/partners/canvas_audience_sync/
+    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: Content Optimizer Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/content_optimizer_step/
+    image: /assets/img/braze_icons/target-04.svg
+  - name: Context Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/context/
+    image: /assets/img/braze_icons/file-search-02.svg
+  - name: Decision Split Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
+    image: /assets/img/braze_icons/dataflow-04.svg
+  - name: Delay Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/delay_step/
+    image: /assets/img/braze_icons/clock-stopwatch.svg
   - name: Experiment Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
     image: /assets/img/braze_icons/columns-01.svg
-  - name: User Update Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
-    image: /assets/img/braze_icons/user-check-01.svg
   - name: Feature Flags in Canvas
     link: /docs/developer_guide/feature_flags/canvas/
     image: /assets/img/braze_icons/dataflow-03.svg
-  - name: Canvas Audience Sync
-    link: /docs/partners/canvas_audience_sync/
-    image: /assets/img/braze_icons/refresh-ccw-02.svg
+  - name: Message Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
+    image: /assets/img/braze_icons/message-square-02.svg
+  - name: User Update Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/user_update/
+    image: /assets/img/braze_icons/user-check-01.svg
 ---
 
 ## About Canvas components

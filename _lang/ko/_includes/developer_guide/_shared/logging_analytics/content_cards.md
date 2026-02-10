@@ -9,10 +9,41 @@
 * **`id`**: 콘텐츠 카드 ID 문자열을 나타냅니다. 이것은 커스텀 콘텐츠 카드에서 분석을 기록하는 데 사용되는 고유 식별자입니다.
 * **`extras`**: Braze 대시보드의 모든 키-값 쌍을 포함합니다. 
 
-커스텀 콘텐츠 카드에 대한 구문 분석에서 `id` 및 `extras` 외의 모든 속성정보는 선택 사항입니다. 자세한 데이터 모델 정보는 각 플랫폼의 통합 기사를 참조하십시오: [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android), [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift), [웹]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web).
+커스텀 콘텐츠 카드에 대한 구문 분석에서 `id` 및 `extras` 외의 모든 속성정보는 선택 사항입니다. 자세한 데이터 모델 정보는 각 플랫폼의 통합 기사를 참조하십시오: [Android]({{site.baseurl}}/developer_guide/content_cards/?sdktab=android), [iOS]({{site.baseurl}}/developer_guide/content_cards/?sdktab=swift), [Web]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web).
 
 
 {% tabs %}
+{% tab web %}
+
+콜백 함수를 등록하여 카드를 새로 고칠 때 업데이트에 가입합니다.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.subscribeToContentCardsUpdates((updates) => {
+  const cards = updates.cards;
+// For example:
+  cards.forEach(card => {
+    if (card.isControl) {
+      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
+    }
+    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
+      // Use `card.title`, `card.imageUrl`, etc.
+    }
+    else if (card instanceof braze.ImageOnly) {
+      // Use `card.imageUrl`, etc.
+    }
+  })
+});
+
+braze.openSession();
+```
+
+{% alert note %}
+콘텐츠 카드는 `openSession()` 전에 가입 요청을 호출한 경우에만 세션을 시작할 때 새로 고쳐집니다. 항상 [피드를 수동으로 새로고침]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/)할 수도 있습니다.
+{% endalert %}
+
+{% endtab %}
 {% tab android %}
 {% subtabs local %}
 {% subtab Java %}
@@ -144,37 +175,6 @@ BRZCancellable *cancellable = [self.braze.contentCards subscribeToUpdates:^(NSAr
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 웹 %}
-
-콜백 함수를 등록하여 카드를 새로 고칠 때 업데이트에 가입합니다.
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.subscribeToContentCardsUpdates((updates) => {
-  const cards = updates.cards;
-// For example:
-  cards.forEach(card => {
-    if (card.isControl) {
-      // Do not display the control card, but remember to call `logContentCardImpressions([card])`
-    }
-    else if (card instanceof braze.ClassicCard || card instanceof braze.CaptionedImage) {
-      // Use `card.title`, `card.imageUrl`, etc.
-    }
-    else if (card instanceof braze.ImageOnly) {
-      // Use `card.imageUrl`, etc.
-    }
-  })
-});
-
-braze.openSession();
-```
-
-{% alert note %}
-콘텐츠 카드는 `openSession()` 전에 가입 요청을 호출한 경우에만 세션을 시작할 때 새로 고쳐집니다. 항상 [피드를 수동으로 새로고침]({{site.baseurl}}/developer_guide/content_cards/customizing_cards/feed/)할 수도 있습니다.
-{% endalert %}
-
-{% endtab %}
 {% endtabs %}
 
 ## 로그 이벤트
@@ -182,6 +182,25 @@ braze.openSession();
 가치 있는 측정기준(예: 노출 수, 클릭 수, 해제 수)을 기록하는 것은 빠르고 간단합니다. 이러한 분석을 수동으로 처리하도록 커스텀 클릭 리스너를 설정합니다.
 
 {% tabs %}
+{% tab web %}
+
+사용자가 [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)를 사용하여 카드를 볼 때 노출 횟수 이벤트를 기록합니다.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardImpressions([card1, card2, card3]);
+```
+
+사용자가 [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)을 사용하여 카드와 상호 작용할 때 카드 클릭 이벤트를 기록합니다.
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+braze.logContentCardClick(card);
+```
+
+{% endtab %}
 {% tab android %}
 
 는 [`BrazeManager`](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) 는 콘텐츠 카드 오브젝트 배열 목록과 같은 Braze 소프트웨어 개발 키트 종속성을 참조하여 [`Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) 를 사용하여 Braze 로깅 메서드를 호출할 수 있습니다. `ContentCardable` 기본 클래스를 사용하여 데이터를 쉽게 참조하고 `BrazeManager`에 해당 데이터를 제공합니다. 
@@ -235,6 +254,7 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 커스텀 UI에서 제어 배리언트 콘텐츠 카드를 처리하려면 [`com.braze.models.cards.Card`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/index.html) 오브젝트를 전달한 다음, 다른 콘텐츠 카드 유형에서와 마찬가지로 `logImpression` 메서드를 호출합니다. 오브젝트는 사용자가 제어 카드를 보았을 때를 분석 팀에 알릴 제어 노출 횟수를 암시적으로 기록합니다.{% endalert %}
 
 {% endtab %}
+
 {% tab swift %}
 
 [`BrazeContentCardUIViewControllerDelegate`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazeui/brazecontentcarduiviewcontrollerdelegate) 프로토콜을 구현하고 위임 객체를 `BrazeContentCardUI.ViewController`의 `delegate` 속성으로 설정하십시오. 이 위임은 기록할 커스텀 오브젝트의 데이터를 Braze로 다시 전달하여 처리합니다. 예를 들어, [콘텐츠 카드 UI 튜토리얼](https://braze-inc.github.io/braze-swift-sdk/tutorials/braze/c2-contentcardsui/)을 참조하세요.
@@ -278,25 +298,5 @@ contentCardsController.delegate = delegate;
 {% alert important %}
 커스텀 UI에서 제어 배리언트 콘텐츠 카드를 처리하려면 [`Braze.ContentCard.Control`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/control(_:)) 오브젝트를 전달한 다음, 다른 콘텐츠 카드 유형에서와 마찬가지로 `logImpression` 메서드를 호출합니다. 오브젝트는 사용자가 제어 카드를 보았을 때를 분석 팀에 알릴 제어 노출 횟수를 암시적으로 기록합니다.
 {% endalert %}
-{% endtab %}
-
-{% tab 웹 %}
-
-사용자가 [`logContentCardImpressions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardimpressions)를 사용하여 카드를 볼 때 노출 횟수 이벤트를 기록합니다.
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.logContentCardImpressions([card1, card2, card3]);
-```
-
-사용자가 [`logContentCardClick`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcontentcardclick)을 사용하여 카드와 상호 작용할 때 카드 클릭 이벤트를 기록합니다.
-
-```javascript
-import * as braze from "@braze/web-sdk";
-
-braze.logContentCardClick(card);
-```
-
 {% endtab %}
 {% endtabs %}

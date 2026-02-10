@@ -1,5 +1,5 @@
 ---
-nav_title: Aufschieben von getriggerten Nachrichten
+nav_title: Aufschieben getriggerter Nachrichten
 article_title: "Anleitung: Aufschieben und Wiederherstellen getriggerter Nachrichten"
 description: ""
 page_order: 1
@@ -11,12 +11,98 @@ layout: scrolly
 > Folgen Sie dem Beispielcode in diesem Tutorial, um mit dem Braze SDK getriggerte In-App-Nachrichten aufzuschieben und wiederherzustellen.
 
 {% sdktabs %}
+{% sdktab web %}
+{% multi_lang_include developer_guide/prerequisites/web.md %} Es ist jedoch keine zusätzliche Einrichtung erforderlich.
+
+## Aufschieben und Wiederherstellen von getriggerten Nachrichten für das Internet
+
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Web" %}
+
+{% scrolly %}
+
+```js file=index.js
+import * as braze from "@braze/web-sdk";
+// Remove any calls to `braze.automaticallyShowInAppMessages()`
+
+braze.initialize("YOUR-API-KEY", {
+  baseUrl: "YOUR-ENDPOINT",
+  enableLogging: true,
+});
+
+braze.subscribeToInAppMessage(function (message) {
+  const shouldDefer = true; // customize for your own logic
+  if (shouldDefer) {
+    braze.deferInAppMessage(message);
+  } else {
+    braze.showInAppMessage(message);
+  }
+});
+
+// elsewhere in your app
+document.getElementById("button").onclick = function () {
+  const deferredMessage = braze.getDeferredInAppMessage();
+  if (deferredMessage) {
+    braze.showInAppMessage(deferredMessage);
+  }
+};
+```
+
+!Schritt
+Zeilen-index.js=2
+
+#### 1\. Entfernen Sie Aufrufe von `automaticallyShowInAppMessages()`
+
+Entfernen Sie alle Aufrufe von [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) da sie jede angepasste Logik, die Sie später implementieren, außer Kraft setzen werden.
+
+!Schritt
+Zeilen-index.js=6
+
+#### 2\. Enablement von Fehlersuchen (optional)
+
+Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren.
+
+!Schritt
+Zeilen-index.js=9-16
+
+#### 3\. Abonnieren Sie den Callback Handler für In-App-Nachrichten
+
+Registrieren Sie einen Callback mit [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) um jedes Mal eine Nachricht zu erhalten, wenn eine In-App-Nachricht ausgelöst wird.
+
+!Schritt
+Zeilen-index.js=11-12
+
+#### 4\. Verschieben Sie die Instanz `message` 
+
+Um die Nachricht aufzuschieben, rufen Sie [`deferInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage). Braze serialisiert und speichert diese Nachricht, damit Sie sie bei einem späteren Laden der Seite anzeigen können.
+
+!Schritt
+Zeilen-index.js=18-24
+
+#### 5\. Rufen Sie eine zuvor aufgeschobene Nachricht ab
+
+Um alle zuvor zurückgestellten Nachrichten abzurufen, rufen Sie [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage). 
+
+!Schritt
+Zeilen-index.js=21-23
+
+#### 6\. Anzeige der aufgeschobenen Nachricht
+
+Nachdem Sie eine aufgeschobene Nachricht abgerufen haben, zeigen Sie sie an, indem Sie sie an [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage).
+
+!Schritt
+Zeilen-index.js=13-15
+
+#### 7\. Eine Nachricht sofort anzeigen
+
+Um eine Nachricht anzuzeigen, anstatt sie zu verschieben, rufen Sie [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) direkt in Ihrem `subscribeToInAppMessage` Callback auf.
+{% endscrolly %}
+{% endsdktab %}
 {% sdktab android %}
-{% multi_lang_include developer_guide/prerequisites/android.md %} Sie müssen auch [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
+{% multi_lang_include developer_guide/prerequisites/android.md %} Außerdem müssen Sie [In-App-Nachrichten für Android aktivieren]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=android#android_enabling-in-app-messages).
 
 ## Aufschieben und Wiederherstellen getriggerter Nachrichten für Android
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Android" %}
 
 {% scrolly %}
 
@@ -172,7 +258,7 @@ Um die zuvor aufgeschobene Nachricht anzuzeigen, rufen Sie `showDeferredMessage(
 
 ## Aufschieben und Wiederherstellen von getriggerten Nachrichten für Swift
 
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
+{% multi_lang_include developer_guide/_shared/tutorial_feedback.md tutorial="Deferring Triggered Messages Swift" %}
 
 {% scrolly %}
 
@@ -300,92 +386,6 @@ Zeilen-ContentView.swift=1-14
 
 Um die zuvor aufgeschobene Nachricht anzuzeigen, rufen Sie `showDeferredMessage(true)` von Ihrer UI aus auf, z. B. über einen Button oder durch Antippen.
 
-{% endscrolly %}
-{% endsdktab %}
-{% sdktab web %}
-{% multi_lang_include developer_guide/prerequisites/web.md %} Es ist jedoch keine zusätzliche Einrichtung erforderlich.
-
-## Aufschieben und Wiederherstellen von getriggerten Nachrichten für das Internet
-
-{% multi_lang_include developer_guide/_shared/tutorial_feedback.md %}
-
-{% scrolly %}
-
-```js file=index.js
-import * as braze from "@braze/web-sdk";
-// Remove any calls to `braze.automaticallyShowInAppMessages()`
-
-braze.initialize("YOUR-API-KEY", {
-  baseUrl: "YOUR-ENDPOINT",
-  enableLogging: true,
-});
-
-braze.subscribeToInAppMessage(function (message) {
-  const shouldDefer = true; // customize for your own logic
-  if (shouldDefer) {
-    braze.deferInAppMessage(message);
-  } else {
-    braze.showInAppMessage(message);
-  }
-});
-
-// elsewhere in your app
-document.getElementById("button").onclick = function () {
-  const deferredMessage = braze.getDeferredInAppMessage();
-  if (deferredMessage) {
-    braze.showInAppMessage(deferredMessage);
-  }
-};
-```
-
-!Schritt
-Zeilen-index.js=2
-
-#### 1\. Entfernen Sie Aufrufe von `automaticallyShowInAppMessages()`
-
-Entfernen Sie alle Aufrufe von [`automaticallyShowInAppMessages()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#automaticallyshowinappmessages) da sie jede angepasste Logik, die Sie später implementieren, außer Kraft setzen werden.
-
-!Schritt
-Zeilen-index.js=6
-
-#### 2\. Enablement von Fehlersuchen (optional)
-
-Um die Fehlerbehebung während der Entwicklung zu erleichtern, sollten Sie das Debugging aktivieren.
-
-!Schritt
-Zeilen-index.js=9-16
-
-#### 3\. Abonnieren Sie den Callback Handler für In-App-Nachrichten
-
-Registrieren Sie einen Callback mit [`subscribeToInAppMessage(callback)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetoinappmessage) um jedes Mal eine Nachricht zu erhalten, wenn eine In-App-Nachricht ausgelöst wird.
-
-!Schritt
-Zeilen-index.js=11-12
-
-#### 4\. Verschieben Sie die Instanz `message` 
-
-Um die Nachricht aufzuschieben, rufen Sie [`deferInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#deferinappmessage). Braze serialisiert und speichert diese Nachricht, damit Sie sie bei einem späteren Laden der Seite anzeigen können.
-
-!Schritt
-Zeilen-index.js=18-24
-
-#### 5\. Rufen Sie eine zuvor aufgeschobene Nachricht ab
-
-Um alle zuvor zurückgestellten Nachrichten abzurufen, rufen Sie [`getDeferredInAppMessage()`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#getdeferredinappmessage). 
-
-!Schritt
-Zeilen-index.js=21-23
-
-#### 6\. Anzeige der aufgeschobenen Nachricht
-
-Nachdem Sie eine aufgeschobene Nachricht abgerufen haben, zeigen Sie sie an, indem Sie sie an [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage).
-
-!Schritt
-Zeilen-index.js=13-15
-
-#### 7\. Eine Nachricht sofort anzeigen
-
-Um eine Nachricht anzuzeigen, anstatt sie zu verschieben, rufen Sie [`showInAppMessage(message)`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#showinappmessage) direkt in Ihrem `subscribeToInAppMessage` Callback auf.
 {% endscrolly %}
 {% endsdktab %}
 {% endsdktabs %}

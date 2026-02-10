@@ -14,7 +14,7 @@ sequenceDiagram
   participant BrazeAPI as Braze Server
   participant Firebase as Google Firebase
   Note over Device, Firebase: Register Option 1<br/>Register Automatically using `com_braze_firebase_cloud_messaging_registration_enabled` in braze.xml
-  App ->> Braze: App intializes Braze with the first Braze call<br>This could be automatic session handling
+  App ->> Braze: App initializes Braze with the first Braze call<br>This could be automatic session handling
   BrazeSDK ->> App: Get push token from Firebase Manager
   BrazeSDK ->> BrazeAPI: Send push token to Braze Server
   Note right of BrazeAPI: Braze will remove push token from any<br>other user who may have previously<br> been logged in on the same device.
@@ -33,7 +33,7 @@ sequenceDiagram
   Firebase ->> Device: Push message sent
   Device ->> App: Android will send the push to the App.<br>This could be blocked to Do Not Disturb, Power Saving Mode, etc.
   App ->> BrazeSDK: Message is sent to BrazeFirebaseMessagingService
-  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notfication and displayed.
+  BrazeSDK ->> Device: SDK will check if the push is from Braze.<br>If so, push data is transformed into a Push Notification and displayed.
 
 ```
 
@@ -172,7 +172,7 @@ Les utilisateurs ont désinstallé l’application. Cela invalidera leur jeton d
 
 La clé du serveur Firebase Cloud Messaging fournie dans le tableau de bord de Braze n’est pas valide. L’ID d’expéditeur fourni doit correspondre à celui référencé dans le fichier `braze.xml` de votre application. La clé du serveur et l’ID d’expéditeur sont disponibles ici dans votre console Firebase :
 
-![La plateforme Firebase, sous "Settings" puis "Cloud Messaging", affichera votre ID et votre clé de serveur.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey").
+![La plateforme Firebase sous Paramètres, puis Messagerie cloud affiche votre ID de serveur et votre clé de serveur.]({% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey")
 
 ### Les clics de notification push ne sont pas enregistrés
 

@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Transifex
 
-> O Transifex oferece serviços de tradução robustos aplicáveis a toda a sua base de usuários, independentemente do idioma.
+> [A Transifex](https://www.transifex.com/) ativa a localização robusta em toda a sua base de usuários, independentemente do idioma.
 
 _Essa integração é mantida pela Transifex._
 
 ## Sobre a integração
 
-A integração do Braze e Transifex aproveita o Connected Content para permitir que você extraia uma coleção de strings de recursos e inclua traduções relevantes em suas mensagens, em vez de linhas de formatação condicional baseada em idioma. Isso automatiza a tradução e libera suas equipes para se concentrarem em oferecer experiências brilhantes aos clientes.
+A integração do Braze e da Transifex usa o Connected Content para permitir que você extraia uma coleção de strings de recursos e inclua traduções relevantes em suas mensagens, em vez de linhas de formatação condicional baseada em idioma. Isso automatiza a tradução e libera suas equipes para se concentrarem em oferecer experiências brilhantes aos clientes.
 
 {% alert important %}
 Em 7 de abril de 2022, a Transifex descontinuou as versões 2 e 2.5 de sua API para abrir caminho para a versão 3\. As versões v2 e v2.5 não estão mais operacionais, e as solicitações feitas por elas apresentarão falhas. <br><br>As seguintes instruções de integração refletem a atualização da versão 3. Atualize suas chamadas de Conteúdo Conectado de acordo.
@@ -42,7 +42,7 @@ curl --request GET \
      --header 'Authorization: Bearer 1/<TRANSFIX_BEARER_TOKEN>'
 ```
 
-Por exemplo, se o seu projeto do Transifex estiver localizado em `https://www.transifex.com/appboy-3/french2/french_translationspo/`, o `project_name` será "french2" e o `resource_name` será "french_translationspo".
+Por exemplo, se seu projeto Transifex estiver localizado em `https://www.transifex.com/appboy-3/french2/french_translationspo/`, o `project_name` será "french2" e o `resource_name` será "french_translationspo".
 
 ## Exemplo de mensagem de conteúdo conectado
 

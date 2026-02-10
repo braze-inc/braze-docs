@@ -1,6 +1,6 @@
 
-{% tab Android %}
-O Braze oferece vários tipos de mensagens no app padrão, cada uma personalizável com mensagens, imagens, ícones [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2), ações de clique, análises de dados, esquemas de cores e muito mais.
+{% tab android %}
+O Braze oferece vários tipos de mensagens no app padrão, cada um personalizável com mensagens, imagens, ícones [Font Awesome](https://fontawesome.com/icons?d=gallery&p=2), ações de clique, análises de dados, esquemas de cores e muito mais.
 
 Seu comportamento básico e suas características são definidos pela [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html) em uma subclasse chamada [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html). `IInAppMessage` também inclui uma subinterface, [`IInAppMessageImmersive`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html)que permite adicionar [botões](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html) de fechar, de ação de clique e de análise de dados ao seu app.
 
@@ -14,7 +14,7 @@ Lembre-se de que as mensagens no app que contêm botões incluirão a mensagem `
 
 O objeto de mensagem no app `slideup` estende [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html).
 
-![Uma mensagem no app que desliza da parte inferior da tela do telefone exibindo "Os seres humanos são complicados. O engajamento personalizado não deveria ser." Em segundo plano, a mesma mensagem no app exibida no canto inferior direito de uma página da Internet.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Uma mensagem no app que desliza da parte inferior da tela do telefone exibindo "Os seres humanos são complicados. O engajamento personalizado não deveria ser." Em segundo plano está a mesma mensagem no app exibida no canto inferior direito de uma página da Web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Modal %}
@@ -30,13 +30,17 @@ Esse tipo de mensagem é uma subclasse de [`InAppMessageImmersiveBase`](https://
 
 Esse tipo de mensagem estende [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html)dando-lhe a opção de adicionar funcionalidade personalizada às mensagens no app geradas localmente.
 
-![Uma mensagem no app de tela cheia exibida em toda a tela do telefone mostrando: "Os humanos são complicados." O engajamento personalizado não deveria ser." No plano de fundo está a mesma mensagem no app exibida em grande parte no centro de uma página da Internet.]({% image_buster /assets/img_archive/In-App_Full.png %})
+![Uma mensagem no app de tela cheia exibida em toda a tela do telefone mostrando: "Os humanos são complicados." O engajamento personalizado não deveria ser." Em segundo plano está a mesma mensagem no app exibida em grande parte no centro de uma página da Web.]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endsubtab %}
 {% subtab Custom HTML %}
 [`HTML`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html/index.html) As mensagens no app são úteis para criar conteúdo totalmente personalizado para o usuário. O conteúdo HTML definido pelo usuário da mensagem no app é exibido em `WebView` e pode, opcionalmente, conter outros conteúdos avançados, como imagens e fontes, permitindo controle total sobre a aparência e a funcionalidade da mensagem.
 
 Esse tipo de mensagem implementa [`IInAppMessageHtml`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html)que é uma subclasse de [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html).
+
+{% alert note %}
+No Android, os links configurados com `target="_blank"` em mensagens no app em HTML personalizado abrem no navegador da Web padrão do dispositivo.
+{% endalert %}
 
 As mensagens no app do Android suportam uma interface JavaScript `brazeBridge` para chamar métodos no Braze Android SDK a partir do seu HTML; consulte nossa página de <a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">ponte JavaScript</a> para obter mais detalhes.
 

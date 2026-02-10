@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Exporter les détails de la toile"
+nav_title: "GET : Exporter les détails du Canvas"
 article_title: "GET : Exporter les détails de la toile"
 search_tag: Endpoint
 page_order: 4
@@ -46,12 +46,10 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?c
 ## Réponses
 
 {% alert note %}
-Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de données `{name, next_step_id}`. Pour les étapes complètes et les étapes de message, le champ `next_step_ids` sera présent mais ne contiendra pas de données pour les autres étapes de Canvas Flow.
+Toutes les étapes Canvas ont un champ `next_paths` qui est un tableau de données `{name, next_step_id}`. Pour les étapes du message, le champ `next_step_ids` sera présent, mais ne contiendra pas de données pour les autres étapes de Canvas.
 {% endalert %}
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "created_at": (string) the date created as ISO 8601 date,
   "updated_at": (string) the date updated as ISO 8601 date,

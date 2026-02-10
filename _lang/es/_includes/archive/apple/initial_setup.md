@@ -117,7 +117,7 @@ Se ha eliminado el soporte del SDK versión 3.17.0 del iOS de Braze para la conf
 {% endalert %}
 
 {% alert important %}
-Para conocer tu clúster específico, pregunta a tu administrador del éxito del cliente o ponte en contacto con nuestro equipo de soporte.
+Para conocer tu grupo específico, pregunta a tu administrador del éxito del cliente o ponte en contacto con nuestro equipo de soporte.
 {% endalert %}
 
 ### Integración de SDK completa

@@ -34,7 +34,7 @@ First, connect your Voucherify account with Braze.
     ![]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_enter_API_key.png %}){: style="max-width:60%;margin-top:15px;margin-left:25px;margin-bottom:15px;"}
 
 
-## Step 2: Code distribution
+## 2단계: Code distribution
 
 When connected, you can start a new Voucherify [distribution](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work) that assigns a code to the custom attribute in the user profile in Braze. Later on, you can use received attributes with codes in your Braze campaigns.
 
@@ -49,7 +49,7 @@ You can distribute codes to Braze using two modes:
 
 In both manual and automatic modes, Voucherify sends unique codes with their attributes and assigns them to Braze Custom Attributes in users' profiles.
 
-![Map fields to custom attributes]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
+![필드를 커스텀 속성에 매핑하기]({% image_buster /assets/img/voucherify/voucherify_custom_attributes_fields_mapping.png %})
 
 {% tabs %}
 {% tab Manual distribution %}

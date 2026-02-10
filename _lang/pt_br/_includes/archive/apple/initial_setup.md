@@ -48,7 +48,7 @@ Nesse ponto, você deve conseguir abrir o novo espaço de trabalho do projeto Xc
 ### Etapa 4: Atualização do delegate do seu app
 
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 Adicione a seguinte linha de código ao seu arquivo `AppDelegate.m`:
 
@@ -101,7 +101,7 @@ Não de esqueça de inicializar a Braze na thread principal de seu aplicativo. A
 Observe que, a partir de dezembro de 2019, os pontos de extremidade personalizados não serão mais fornecidos. Se você tiver um ponto de extremidade personalizado pré-existente, poderá continuar a usá-lo. Para obter mais informações, consulte nossa <a href="{{site.baseurl}}/api/basics/#endpoints">lista de endpoints disponíveis</a>.
 {% endalert %}
 
-Seu representante da Braze já deve ter informado sobre o [endpoint correto]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
+O representante da Braze já deve tê-lo informado sobre o [endpoint correto]({{ site.baseurl }}/user_guide/administrative/access_braze/sdk_endpoints/).
 
 #### Configuração do endpoint em tempo de compilação (recomendado)
 Se for fornecido um ponto de extremidade personalizado pré-existente...
@@ -136,7 +136,7 @@ pod update
 
 Se desejar personalizar a Braze na inicialização, você poderá usar o método de inicialização da Braze `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions` e passar um `NSDictionary` opcional de chaves de inicialização da Braze.
 {% tabs %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 Em seu arquivo `AppDelegate.m`, no método `application:didFinishLaunchingWithOptions`, adicione o seguinte métoda Braze:
 

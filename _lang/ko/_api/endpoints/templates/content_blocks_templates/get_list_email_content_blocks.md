@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: 사용 가능한 콘텐츠 블록 목록"
+nav_title: "GET: 사용 가능한 콘텐츠 블록 목록 보기"
 article_title: "GET: 사용 가능한 콘텐츠 블록 목록"
 search_tag: Endpoint
 page_order: 4
@@ -18,7 +18,7 @@ description: "이 문서에서는 사용 가능한 콘텐츠 블록 Braze 엔드
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
-## 필수 구성 요소
+## Prerequisites
 이 엔드포인트를 사용하려면 `content_blocks.list` 권한이 있는 [API 키]({{site.baseurl}}/api/api_key/)가 필요합니다.
 
 ## 사용량 제한
@@ -35,7 +35,7 @@ description: "이 문서에서는 사용 가능한 콘텐츠 블록 Braze 엔드
 | `offset`  |  선택 사항 | 양수 | 검색 기준에 맞는 나머지 템플릿을 반환하기 전에 건너뛸 콘텐츠 블록의 수입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-## 요청 예시
+## 예시 요청
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list?modified_after=2020-01-01T01:01:01.000000&modified_before=2020-02-01T01:01:01.000000&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'
@@ -44,8 +44,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/content_blocks/list
 ## 응답
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "count": "integer",
   "content_blocks": [
@@ -65,7 +63,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## 문제 해결
 
-다음 표에는 반환될 수 있는 오류와 관련 문제 해결 단계가 나와 있습니다.
+다음 표에는 가능한 반환 오류와 관련된 문제 해결 단계가 나와 있습니다.
 
 | 오류 | 문제 해결 |
 | --- | --- |

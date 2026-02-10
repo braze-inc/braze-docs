@@ -413,6 +413,8 @@ This statistic uses a proprietary analytical model created by Braze to reconstru
 
 _Estimated Real Open Rate_ is calculated 36 hours after email sending has begun and is recalculated every 24 hours thereafter. If a campaign recurs, the estimate is recalculated 36 hours after another send occurs.
 
+Because this metric is recalculated on an ongoing cadence, the _Estimated Real Open Rate_ value can change over time as new engagement signals (such as opens and clicks) are received and incorporated into the model. In practice, the _Estimated Real Open Rate_ can continue to update daily while a campaign remains active.
+
 Typically around 10,000 delivered emails are required for the statistic to be computed successfully, though that number can vary depending on click rate. If the statistic can't be computed, then the column displays "--".
 
 ###### Limitations

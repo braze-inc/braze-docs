@@ -32,7 +32,7 @@ Allez dans **Messagerie** > **Indicateurs de fonctionnalité**, puis sélectionn
 
 Sous **Détails de l'**indicateur de fonctionnalité, saisissez un nom, un ID et une description pour votre indicateur de fonctionnalité.
 
-![Un formulaire montrant que vous pouvez ajouter un nom, un ID, une description et des propriétés à un drapeau de fonctionnalité.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
+![Un formulaire vous permet d'ajouter un nom, un ID, une description et des propriétés à un drapeau de fonctionnalité.]({% image_buster /assets/img/feature_flags/create_ff_properties.png %}){: style="max-width:75%"}
 
 
 | Champ        | Description                                                                |
@@ -48,7 +48,7 @@ Sous **Détails de l'**indicateur de fonctionnalité, saisissez un nom, un ID et
 Sous **Propriétés**, vous pouvez éventuellement créer des propriétés personnalisées auxquelles votre application peut accéder via le SDK de Braze lorsque votre fonctionnalité est activée. Vous pouvez attribuer à chaque variable une valeur booléenne, une chaîne de caractères, une image, un horodatage, une valeur JSON ou un nombre, ainsi que définir une valeur par défaut.
 
 {% tabs local %}
-{% tab exemple %}
+{% tab example %}
 Dans l'exemple suivant, l'indicateur de fonctionnalité affiche une bannière de rupture de stock pour un magasin de commerce électronique utilisant les propriétés personnalisées répertoriées : 
 
 |Nom de la propriété|Type|Valeur|
@@ -71,7 +71,7 @@ Il n'y a pas de limite au nombre de propriétés que vous pouvez ajouter. Toutef
 
 Avant de déployer un indicateur de fonctionnalité, vous devez choisir un [segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) d’utilisateurs à cibler. Sélectionnez **Ajouter une règle** sur votre drapeau nouvellement créé, puis utilisez les menus déroulants Groupe de filtrage et Segment pour filtrer les utilisateurs de votre audience cible. Ajoutez plusieurs filtres pour restreindre davantage votre audience.
 
-![Une zone de texte intitulée Trafic de déploiement avec la possibilité d'ajouter des segmentations et des filtres.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
+![Une zone de texte intitulée Trafic de déploiement avec la possibilité d'ajouter des segments et des filtres.]({% image_buster /assets/img/feature_flags/segmentation_ff.png %}){: style="max-width:75%;"}
 
 ### Étape 5 : Définir le trafic de déploiement {#rollout}
 
@@ -110,7 +110,7 @@ Par défaut, les règles sont classées dans l'ordre de leur création, mais vou
 
 ![Une image montrant qu'un utilisateur peut ajouter une règle à un indicateur de fonctionnalité.]({% image_buster /assets/img/feature_flags/add_rule.png %}){: style="max-width:80%;"}
 
-![Une image montrant un résumé d'un drapeau de fonctionnalité avec plusieurs règles ajoutées et une règle pour tous les autres.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
+![Une image montrant le résumé d'un indicateur de fonctionnalité avec plusieurs règles ajoutées et une règle pour tous les autres.]({% image_buster /assets/img/feature_flags/mr_rules_overview.png %}){: style="max-width:80%;"}
 
 ### Cas d'utilisation des drapeaux à fonctionnalité multiple
 
@@ -879,7 +879,7 @@ export const useFeatureFlag = (id: string): FeatureFlag => {
 
 ## Vérification de l'éligibilité de l'utilisateur
 
-Pour vérifier quels drapeaux de fonctionnalité un utilisateur est éligible dans **Braze**, allez dans **Audience** > **Rechercher des utilisateurs**, puis recherchez et sélectionnez un utilisateur.
+Pour vérifier les drapeaux de fonctionnalité auxquels un utilisateur a droit dans Braze, allez dans **Audience** > **Rechercher des utilisateurs**, puis recherchez et sélectionnez un utilisateur.
 
 Dans l'onglet **Éligibilité des drapeaux de** fonctionnalité, vous pouvez filtrer la liste des drapeaux de fonctionnalité éligibles par plateforme, application ou appareil. Vous pouvez également prévisualiser la charge utile qui sera renvoyée à l'utilisateur en sélectionnant <i class="fa-solid fa-eye"></i> à côté d'un drapeau de fonctionnalité.
 
@@ -893,13 +893,13 @@ Pour afficher le journal des modifications d'un indicateur de fonctionnalité, o
 
 Vous pouvez y consulter la date d'une modification, son auteur, la catégorie à laquelle elle appartient, et bien d'autres choses encore.
 
-![Le journal des modifications de l'indicateur de fonctionnalité sélectionné.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
+![Le journal des modifications du drapeau de fonctionnalité sélectionné.]({% image_buster /assets/img/feature_flags/changelog/changelog.png %}){: style="max-width:90%;"}
 
 ## Segmentation avec les indicateurs de fonctionnalités {#segmentation}
 
 Braze garde automatiquement la trace des utilisateurs qui sont actuellement activés pour un indicateur de fonctionnalité. Vous pouvez créer un segment ou un envoi de messages ciblés à l'aide du [filtre**Drapeau de fonctionnalité**]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#feature-flags). Pour plus d'informations sur le filtrage sur les segments, voir [Créer un segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/).
 
-![La section "Filtres" avec "Indicateur de fonctionnalité" tapé dans la barre de recherche des filtres.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
+![La section "Filtres" avec "Drapeau de fonctionnalité" tapé dans la barre de recherche des filtres.]({% image_buster /assets/img/feature_flags/feature-flags-filter-name.png %}){: style="max-width:75%;"}
 
 {% alert note %}
 Pour éviter les segments récursifs, il n'est pas possible de créer un segment faisant référence à d'autres indicateurs de fonctionnalité.

@@ -14,7 +14,7 @@ As mensagens no app não podem ser disparadas pela API ou por eventos da API - s
 
 Todas as mensagens no app elegíveis são enviadas para o dispositivo do usuário no início da sessão. Quando entregue, o SDK fará a pré-busca de ativos para que eles estejam disponíveis no momento do disparo, minimizando a latência da exibição. Se o evento de gatilho tiver mais de uma mensagem elegível no app, somente a mensagem com a prioridade mais alta será entregue.
 
-Para saber mais sobre a semântica de início de sessão do SDK, consulteSession[Lifecycle (Ciclo de vida]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift) da sessão).
+Para saber mais sobre a semântica de início de sessão do SDK, consulteSession[Lifecycle]({{site.baseurl}}/developer_guide/analytics/tracking_sessions/?tab=swift).
 
 ### Limite de frequência padrão
 
@@ -36,7 +36,7 @@ let braze = Braze(configuration: configuration)
 AppDelegate.braze = braze
 ```
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZConfiguration *configuration =
@@ -65,7 +65,7 @@ if customization == "colorful-slideup" {
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 if ([message.extras[@"custom-display"] isKindOfClass:[NSString class]]) {
@@ -111,7 +111,7 @@ func handleExtras(userInfo: [AnyHashable : Any]) {
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 - (void)handleExtrasFromPush:(NSDictionary *)userInfo {
@@ -139,7 +139,7 @@ Crie uma [campanha de push silenciosa]({{site.baseurl}}/developer_guide/push_not
 
 A campanha de push precisa incluir extras de pares chave-valor, que indicam que esta campanha de push é enviada para registrar um evento personalizado do SDK. Este evento será usado para disparar a mensagem no app.
 
-![Uma campanha de mensagem no app de entrega baseada em ação que possui dois pares chave-valor. "CAMPAIGN_NAME" definido como "Exemplo de nome de mensagem no app" e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
+![Uma campanha de mensagens no app com entrega baseada em ação que tem dois pares de valores-chave. "CAMPAIGN_NAME" definido como "Exemplo de nome de mensagem no app" e "IS_SERVER_EVENT" definido como "true".]({% image_buster /assets/img_archive/iOSServerPush.png %})
 
 O código dentro do método `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` verifica a chave `IS_SERVER_EVENT` e registra um evento personalizado do SDK se estiver presente.
 
@@ -182,7 +182,7 @@ AppDelegate.braze?.inAppMessagePresenter?.present(message: customInAppMessage)
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 BRZInAppMessageRaw *customInAppMessage = [[BRZInAppMessageRaw alloc] init];

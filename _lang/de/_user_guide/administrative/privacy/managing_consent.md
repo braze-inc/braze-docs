@@ -1,12 +1,12 @@
 ---
-nav_title: Verwaltung der Zustimmung
+nav_title: Zustimmung verwalten
 article_title: Zustimmung verwalten
 page_order: 10
 page_type: reference
 description: "In diesem Referenzartikel finden Sie Tipps für die Verwaltung von Einwilligungen mit Braze."
 ---
 
-# Verwaltung der Zustimmung
+# Zustimmung verwalten
 
 > In diesem Referenzartikel finden Sie Tipps, wie Sie die Zustimmung Ihrer Nutzer:innen mit Braze verwalten können.
 

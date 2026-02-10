@@ -7,7 +7,7 @@ layout: dev_guide
 guide_top_header: "Données"
 guide_top_text: "Les données jouent un rôle crucial dans l'amélioration de votre stratégie d'engagement client en vous permettant de créer des expériences personnalisées, de comprendre le comportement des clients et d'optimiser les stratégies d'envoi de messages. Chez Braze, nous créons toutes les capacités de données en gardant à l'esprit trois points essentiels : <br><br>**1.** <a href='/docs/user_guide/data/#making-customer-data-work-harder/'>Faites travailler davantage les données des clients.</a><br> **2.** <a href='/docs/user_guide/data/#enhancing-data-agility-to-drive-performance/'>Améliorez l'agilité des données pour stimuler la performance.</a><br>**3.** <a href='/docs/user_guide/data/#keeping-brands-data-secure-safe-and-compliant/'>Conservez les données des marques en toute sécurité et conformité.</a>" 
 
-guide_featured_title: "Plate-forme de données de Braze"
+guide_featured_title: "Plateforme de données Braze"
 guide_featured_list:
   - name: Unification des données
     link: /docs/user_guide/data/unification/
@@ -27,7 +27,7 @@ guide_menu_list2:
   - name: Centres de données
     link: /docs/user_guide/data/infrastructure/data_centers/
     image: /assets/img/braze_icons/database-02.svg
-  - name: Cryptage au niveau du terrain
+  - name: Chiffrement au niveau des champs
     link: /docs/user_guide/data/infrastructure/field_level_encryption/
     image: /assets/img/braze_icons/book-closed.svg
   - name: Points de données

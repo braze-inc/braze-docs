@@ -1,7 +1,7 @@
 ---
 nav_title: Digioh
 article_title: Digioh
-description: "Este artículo de referencia describe la asociación entre Braze y Digioh, una plataforma de cuestionarios que te permite crear fácilmente ventanas emergentes, formularios, encuestas y centros de preferencias de comunicación que impulsan la interacción real a través de tus campañas Braze."
+description: "Este artículo de referencia describe la asociación entre Braze y Digioh, una plataforma de encuestas para crear ventanas emergentes, formularios, encuestas y centros de preferencias de comunicación que impulsan la interacción a través de tus campañas Braze."
 alias: /partners/digioh/
 page_type: partner
 search_tag: Partner
@@ -10,15 +10,15 @@ search_tag: Partner
 
 # Digioh
 
-> [Digioh](https://www.digioh.com/) te ayuda a hacer crecer tus listas, capturar datos propios y poner tus datos al servicio de tus campañas Braze.
+> [Digioh](https://www.digioh.com/) apoya el crecimiento de la lista, la captura de datos propios y el uso de esos datos en las campañas de Braze.
 
 _Esta integración está mantenida por Digioh._
 
 ## Sobre la integración
 
-La integración de Braze y Digioh te permite utilizar su flexible constructor de arrastrar y soltar para crear formularios de marca, ventanas emergentes, centros de rendimiento, páginas de destino y cuestionarios que te conecten con tus clientes. Digioh te ayudará a configurar la integración y a crear, diseñar y lanzar tu primera campaña.
+La integración de Braze y Digioh te permite utilizar un constructor de arrastrar y soltar para crear formularios de marca, ventanas emergentes, centros de preferencias, páginas de destino y cuestionarios que te conecten con tus clientes. Digioh te ayuda a configurar la integración y puede crear, diseñar y lanzar tu primera campaña.
 
-!["Crea centros de preferencias flexibles de correo electrónico y comunicaciones con Digioh"]({% image_buster /assets/img/digioh/pref_pop_examples.png %}){: style="border:0"}
+!["Crea centros de preferencias de correo electrónico y comunicaciones flexibles con Digioh"]({% image_buster /assets/img/digioh/pref_pop_examples.png %}){: style="border:0"}
 
 ## Requisitos previos
 

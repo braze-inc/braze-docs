@@ -49,14 +49,14 @@ Follow the prompts in the **Enter Credential Details** screen and provide the fo
 
 {% tabs %}
 {% tab User Consent Update %}
-1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. OneTrust 통합 메뉴에서 **갤러리** > **Braze** > **추가로** 이동하여 새 워크플로를 만듭니다.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you will be taken to the Workflow Builder. Your Braze workflow will be seeded with API calls and actions that can be used to process deletion requests. <br><br>
 3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![]({% image_buster /assets/img/onetrust/onetrust2.png %})
 
 {% endtab %}
 {% tab User Deletion %}
 
-1. In the OneTrust integrations menu, navigate to **Gallery** > **Braze** > **Add** to create a new workflow.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
+1. OneTrust 통합 메뉴에서 **갤러리** > **Braze** > **추가로** 이동하여 새 워크플로를 만듭니다.![]({% image_buster /assets/img/onetrust/onetrust.png %})<br><br>
 2. Provide a name and notification email in the workflow modal. Click the **Create** button. On creation, you will be taken to the Workflow Builder. Your Braze workflow will be seeded with API calls and actions that can be used to process deletion requests. <br><br>
 3. In the Workflow Builder, choose the action you want to trigger in the workflow.<br>![]({% image_buster /assets/img/onetrust/onetrust8.png %})
 {% endtab %}

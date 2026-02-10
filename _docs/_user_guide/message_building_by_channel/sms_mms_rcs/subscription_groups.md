@@ -99,7 +99,7 @@ Define your audience using one of the following methods. Next, go to the **Send 
 
 | Method                          | Description                                                                                                                                                                                                 |
 |------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (e.g., a random 5–10%). Segments update before each send to reflect your current user base.        |
+| **Create a segment**         | Build a segment that includes all users in a subscription group or a subset using segmentation filters (such as a random 5-10%). Segments update before each send to reflect your current user base.        |
 | **Apply campaign or Canvas filters** | Refine the audience in the **Target Audience** step of your campaign or Canvas. Adjust targeting options without leaving the page for added flexibility.                                         |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
