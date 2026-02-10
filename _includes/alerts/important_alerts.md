@@ -25,7 +25,7 @@ Appending a BCC address to your campaign or Canvas results in doubling your bill
 {% if include.alert == 'Android notification priority' %}
 
 {% alert important %}
-The Notification Display Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
+The Notification Display Priority setting is no longer used on devices running Android O or later. On these devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
 {% endalert %}
 
 {% endif %}
