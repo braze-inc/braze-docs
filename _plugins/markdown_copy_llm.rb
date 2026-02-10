@@ -279,6 +279,9 @@ module Jekyll
       # Emit files after normal site write
       Jekyll::Hooks.register :site, :post_write do |site|
         copy_markdown_files(site)
+        if defined?(Jekyll::LlmsTxtGenerator)
+          Jekyll::LlmsTxtGenerator.generate_llms_txt(site)
+        end
       end
     end
 

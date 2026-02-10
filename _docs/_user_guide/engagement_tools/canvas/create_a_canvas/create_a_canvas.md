@@ -136,9 +136,7 @@ Only the users who match your defined criteria can enter the journey in the **Ta
 
 In **Entry Controls**, you can limit the number of users every time the Canvas is scheduled to run. For API trigger-based and action-based Canvases, this limit occurs at every UTC hour. 
 
-{% alert important %}
-Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (such as a changed attribute or performed a custom event). A [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Canvas race condition audience trigger' %}
 
 ##### Testing your audience
 

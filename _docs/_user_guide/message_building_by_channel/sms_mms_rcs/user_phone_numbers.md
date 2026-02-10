@@ -41,7 +41,7 @@ When importing phone numbers, it's important that you follow the [recommended fo
 - [Using the `/users/track` endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track)
 
 {% alert important %}
-User phone numbers are displayed in Braze as a string of digits. If you import a number that contains any non-digits (such as `,`, `-`, `(`, or others), the non-digits will be removed when rendered in Braze. For example, importing `+1 (724) 123-4567` will show as `17241234567`.
+User phone numbers appear in Braze as a string of digits. If you import a number that contains non-digits (such as `,`, `-`, or `(`) other than the leading {% raw %}`+`{% endraw %}, the non-digits are removed when rendered in Braze. For example, importing `+1 (724) 123-4567` appears as `+17241234567`.
 {% endalert %}
 
 ## Handling invalid phone numbers

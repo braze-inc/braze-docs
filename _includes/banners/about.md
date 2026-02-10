@@ -40,7 +40,7 @@ Banner placements are specific locations in your app or website [you create with
 
 Common locations include the top of your homepage, product detail pages, and checkout flows. After placements are created, Banners can be [assigned in your Banner campaign]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/).
 
-There is no fixed limit on the number of placements you can create per workspace, and you can create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 10 active campaigns at the same time.
+There is no fixed limit on the number of placements you can create per workspace, and you can create as many placement IDs as your experience requires. Each placement must be unique within a workspace. A single placement ID can be referenced by up to 25 active messages at the same time.
 
 {% alert important %}
 Avoid modifying placement IDs after launching a Banner campaign.
@@ -61,6 +61,8 @@ If multiple Banners are set to the same priority, the newest Banner that the use
 Banner messages are delivered to your app or website as HTML content, typically rendered inside an iframe. This ensures that your Banners render consistently across devices, and helps you keep their styles and scripts separate from the rest of your code.
 
 Iframes allow for dynamic and personalized content updates that don't require changes to your codebase. Each iframe retrieves and displays the HTML for each user session using campaign targeting and personalization logic.
+
+{% multi_lang_include alerts/important_alerts.md alert='network dependency' %}
 
 ### Dimensions and sizing
 

@@ -54,7 +54,9 @@ Consider using an in-browser message to prime users to opt in for web push, also
 
 ## Supported browsers
 
-The following browsers support web push notifications. However, private browsing windows do not currently support web push.
+The following browsers support web push notifications.
+
+{% multi_lang_include alerts/important_alerts.md alert='Web push private browsing' %}
 
 - Chrome (and Chrome for Android mobile)
 - Safari
