@@ -44,8 +44,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/content_blocks/i
 ## Respuesta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
 {
   "content_block_id": (string) the Content Block identifier,
   "name": (string) the name of the Content Block,
@@ -63,7 +61,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 ## Solución de problemas
 
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
+La siguiente tabla enumera los posibles errores devueltos y sus pasos asociados para la solución de problemas.
 
 | Error | Solución de problemas |
 | --- | --- |

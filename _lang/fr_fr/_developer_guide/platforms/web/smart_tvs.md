@@ -15,7 +15,7 @@ description: "Cet article explique comment utiliser le SDK Braze pour le Web pou
 Pour une référence technique complète, consultez notre [documentation JavaScript](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) ou nos [exemples d'applications](https://github.com/Appboy/smart-tv-sample-apps) pour voir le SDK Web fonctionner sur un téléviseur.
 {% endalert %}
 
- %} developer_guide/prerequisites/web.md
+{% multi_lang_include developer_guide/prerequisites/web.md %}
 
 ## Configuration du SDK de Braze Web
 
@@ -32,4 +32,4 @@ Toutes ces méthodes d’analyse du SDK pour le Web peuvent être utilisées sur
 
 Le SDK Web de Braze prend en charge à la fois [les messages in-app]({{site.baseurl}}/developer_guide/in_app_messages/?sdktab=web) et les [cartes de contenu]({{site.baseurl}}/developer_guide/content_cards/?sdktab=web) sur les téléviseurs intelligents. Notez que vous devez utiliser le [SDK Web « de base »](https://www.npmjs.com/package/@braze/web-sdk) car le rendu des messages in-app et des cartes de contenu n'est pas pris en charge par l’affichage de notre interface utilisateur standard et doit être personnalisé par votre application pour s'intégrer à l'expérience de votre application TV.
 
-Pour plus d'informations sur la façon dont votre TV connectée peut recevoir et afficher des messages in-app, voir [Déclencher des messages.]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web)
+Pour plus d'informations sur la manière dont votre TV connectée peut recevoir et afficher des messages in-app, voir [Déclencher des messages.]({{site.baseurl}}/developer_guide/in_app_messages/triggering_messages/?tab=web)

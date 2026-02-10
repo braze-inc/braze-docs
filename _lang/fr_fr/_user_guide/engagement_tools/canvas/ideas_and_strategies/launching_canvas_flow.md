@@ -1,87 +1,87 @@
 ---
-nav_title: Lancement avec le flux Canvas
-article_title: Lancement avec Canvas Flow
+nav_title: Lancer avec le flux Canvas
+article_title: Lancer avec Canvas Flow
 page_order: 3
-description: "Cet article de référence explique comment préparer et tester un canvas créé avec Canvas Flow avant son lancement."
+description: "Cet article de référence explique comment préparer et tester un Canvas créé à l’aide de Canvas Flow avant son lancement."
 page_type: reference
 tool: Canvas
 ---
 
-# Lancement avec Canvas Flow
+# Lancer avec Canvas Flow
 
-> Cet article de référence explique comment préparer et tester un canvas créé à l'aide de Canvas Flow avant son lancement. Il s'agit notamment d'identifier les points de contrôle Canvas importants, tels que les conditions d'entrée dans Canvas, les résumés d'audience et les segments d'utilisateurs.
+> Cet article de référence explique comment préparer et tester un Canvas créé à l’aide de Canvas Flow avant son lancement. Ceci comprend le fait d’identifier les points de contrôle importants de Canvas tel que les conditions d’entrée dans le Canvas, les sommaires d’audiences et les segments d’utilisateur.
 
-Alors que vous vous préparez à lancer votre Canvas, Braze vous recommande de vérifier votre Canvas à chaque étape du générateur de Canvas pour les paramètres qui peuvent avoir un impact sur l'envoi de votre message, notamment :
+Lorsque vous vous préparez à lancer votre Canvas, Braze vous conseille de vérifier, à chaque étape du générateur de Canvas, les paramètres de votre Canvas susceptible d’avoir un impact sur l’envoi de votre message, y compris :
 * [Conditions de concurrence](#race-conditions)
-* [Délais de réception/distribution](#delivery-times)
-* [Segments d'utilisateurs](#segment-users)
+* [Heures de livraison](#delivery-times)
+* [Segments utilisateurs](#segment-users)
 
 ## Conditions de concurrence 
 
 Prenez en compte les [conditions de concurrence]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) susceptibles de se produire avant de lancer votre Canvas. 
 
-Pour entrer dans un Canvas, les utilisateurs doivent se trouver dans l'audience d'entrée avant que la planification d'entrée ne se produise, que le Canvas soit planifié, basé sur une action ou déclenché par l'API. 
+Pour entrer dans un Canvas, les utilisateurs doivent se trouver dans l’audience d’entrée avant que sa planification n’arrive, que le Canvas soit planifié, par événement ou déclenché par API. 
 
-Un canvas basé sur l'action qui entre dans les utilisateurs lorsqu'ils effectuent un achat pendant l'heure locale de l'utilisateur du 30 avril 2025 à 12 heures au 7 mai 2025 à 12 heures.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
+![Un canvas basé sur des actions qui saisit les utilisateurs lorsqu'ils effectuent un achat pendant l'heure locale d'un utilisateur du 30 avril 2025 à 12 heures au 7 mai 2025 à 12 heures.]({% image_buster /assets/img_archive/launch_with_canvas_flow_example.png %}){: style="max-width:75%;"}
 
-Notez que les utilisateurs qui se qualifient pour votre audience après le lancement du Canvas n'entreront pas dans le Canvas.
+Notez que les utilisateurs qui se qualifient pour votre audience d’entrée après le lancement du Canvas n’y entreront pas.
 
 {% alert tip %}
-Consultez les [types de planification d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule) pour obtenir des conseils et des détails sur l'utilisation de la réception/distribution planifiée, basée sur des actions ou déclenchée par l'API pour votre Canvas !
+Consultez la rubrique [Types de planification d'entrée]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2b-set-your-canvas-entry-schedule) pour obtenir des conseils et des détails sur le moment où il convient d'utiliser la réception/distribution planifiée, basée sur des actions ou déclenchée par l'API pour votre Canvas !
 {% endalert %}
 
-### Examinez les filtres d'audience d'entrée
+### Vérifiez les filtres d’audience d’entrée
 
-En général, évitez de configurer un Canvas basé sur une action ou déclenché par une API avec le même déclencheur que le filtre d'audience. Par exemple, après le lancement d'un Canvas, les utilisateurs qui effectuent une action spécifique seront inclus dans l'audience d'entrée, il n'est donc pas nécessaire d'ajouter l'événement en tant que filtre d'audience. 
+De façon générale, évitez de configurer un Canvas par événement ou déclenché par API avec le même déclencheur que le filtre d’audience. Par exemple, après le lancement d’un Canvas, les utilisateurs effectuant une action données seront ajoutés dans l’audience d’entrée. Il n’est donc pas nécessaire d’ajouter cet événement en tant que filtre d’audience. 
 
 Pour plus de détails sur les filtres de segmentation disponibles pour cibler votre audience, voir [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters).
 
-### Regrouper plusieurs demandes d'API en lots
+### Requêtes API multiples par lots
 
-Effectuez vos demandes dans le même appel API, plutôt que dans plusieurs appels, pour confirmer que le profil utilisateur est créé ou mis à jour en premier. Reportez-vous à la section [Utilisation de plusieurs endpoints]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#using-multiple-api-endpoints) pour plus d'exemples.
+Effectuez vos requêtes avec le même appel API plutôt que plusieurs appels pour confirmer que le profil utilisateur est créé et mis à jour au préalable. Reportez-vous à la section [Utilisation de plusieurs endpoints]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/#using-multiple-api-endpoints) pour plus d'exemples.
 
 ### Ajouter un délai
 
-Une autre option pour éviter les conditions de concurrence consiste à utiliser l'étape du délai (idéalement réglée sur 5 minutes) comme première étape de votre canvas. 
+Une autre option permettant d’éviter les conditions de concurrence est d’utiliser l’étape de délai (de préférence réglée sur 5 minutes) en tant que première étape de votre Canvas. 
 
-Cela laisse le temps aux attributs, aux adresses e-mail et aux jetons de poussée d'être traités dans les nouveaux profils utilisateurs avant qu'ils ne soient ciblés pour les étapes suivantes de Canvas. Sans cette étape de délai, il est possible qu'un e-mail soit envoyé à un utilisateur dont l'e-mail n'a pas encore été mis à jour.
+Ceci laisse le temps nécessaire pour envoyer les attributs, adresses e-mail et jetons de notification push vers les nouveaux profils utilisateur avant qu’ils ne soient ciblés par les étapes Canvas suivantes. Sans cette étape de délai, il est possible qu'un e-mail soit envoyé à un utilisateur dont l'e-mail n'a pas encore été mis à jour.
 
-## Délais de réception/distribution
+## Heures de livraison
 
-La définition d'un délai de réception/distribution de Canvas en temps réel peut conduire à l'augmentation des taux d'engagement et de conversion. Prenez note de l'heure de réception/distribution que vous avez fixée pour votre Canvas. Pour aider à augmenter les taux d'engagement et de conversion, il est préférable de déclencher les Canvases en temps réel plutôt que de manière planifiée et récurrente.
+La définition d'un délai de réception/distribution de Canvas en temps réel peut conduire à l'augmentation des taux d'engagement et de conversion. Prenez en compte l’heure de livraison que vous avez définie pour votre Canvas. Pour aider à augmenter les taux d'engagement et de conversion, il est préférable de déclencher les Canvases en temps réel plutôt que de manière planifiée et récurrente.
 
-Si vous avez choisi une réception/distribution planifiée pour votre Canvas, Braze recommande de planifier votre Canvas au moins 24 heures avant son lancement afin de permettre d'éventuels ajustements à votre Canvas.
+Si vous avez sélectionné une livraison planifiée pour votre Canvas, Braze conseille de planifier votre Canvas au moins 24 heures avant l’heure de déclenchement prévue pour laisser la possibilité d’effectuer des ajustements dans votre Canvas.
 
-## Segments d'utilisateurs
+## Segments utilisateurs
 
-Avant de sursaturer votre parcours utilisateur Canvas Flow de composants, réfléchissez à la manière dont vous pourriez garder un parcours utilisateur simple. Utilisez la vue simplifiée dans l'éditeur Canvas pour avoir une meilleure idée de la façon dont votre parcours utilisateur se ramifie. 
+Avant des saturer le Canvas Flow de votre parcours utilisateur avec des composants, prenez en compte le fait que vous pourriez désirer que votre parcours utilisateur reste simple. Utilisez la vision simplifiée de l’éditeur Canvas pour avoir une meilleure idée des ramifications de votre parcours utilisateur. 
 
-Vous pouvez utiliser quatre éléments principaux pour segmenter vos utilisateurs de manière simple et efficace :
+Il existe quatre composants principaux pouvant être utilisés pour segmenter vos utilisateurs d’une manière simple et efficace :
 
-* [Parcours d'audience](#audience-paths)
+* [Parcours d’audience](#audience-paths)
 * [Arbre décisionnel](#decision-split)
-* [Parcours d'action](#action-paths)
-* [Chemins d'expérience](#experiment-paths)
+* [Parcours d’actions](#action-paths)
+* [Chemins d’expérience](#experiment-paths)
 
-### Parcours d'audience
+### Parcours d’audience
 
 Utilisez les étapes [des parcours audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths/) pour segmenter les utilisateurs dans le Canvas en fonction des attributs personnalisés, des événements personnalisés et des données d'engagement aux messages précédents provenant des profils des utilisateurs.
 
 ### Arbre décisionnel
 
-L'étape de l'arbre [décisionnel]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) vous permet d'envoyer vos utilisateurs vers différents parcours en fonction de leurs réponses à une question polaire.
+L'étape de [l’arbre décisionnel]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/) vous permet d'envoyer vos utilisateurs vers différents parcours en fonction de leurs réponses à une question centrale.
 
-### Parcours d'action
+### Parcours d’actions
 
 [Les parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths/) se concentrent sur la segmentation des utilisateurs en fonction de leurs comportements en temps réel, tels que les événements personnalisés, les achats et les changements d'attributs personnalisés. 
 
-### Chemins d'expérience
+### Chemins d’expérience
 
-À l'instar des parcours d'action, vous pouvez exploiter les étapes des [chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) dans votre Canvas pour tester plusieurs parcours Canvas les uns par rapport aux autres, ainsi qu'un groupe de contrôle. Cela permet de suivre les performances du parcours, ce qui vous permet de prendre des décisions éclairées lorsque vous créez votre parcours Canvas. 
+À l'instar des parcours d'action, vous pouvez tirer parti des étapes [des chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) dans votre Canvas pour tester plusieurs parcours Canvas les uns par rapport aux autres, ainsi qu'un groupe de contrôle. Ceci permet de suivre la performance des chemins, vous permettant de prendre des décisions bien renseignées lorsque vous construisez votre parcours Canvas. 
 
-## Tests avant le lancement
+## Tester avant le lancement
 
-Après avoir revu les détails de votre Canvas, consultez la rubrique [Envoi de Canvas de test]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) pour connaître les différentes méthodes que vous pouvez utiliser pour tester votre Canvas auprès d'utilisateurs test.
+Après avoir passé en revue les détails de votre Canvas, consultez la rubrique [Envoi de Canvas de test]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/) pour connaître les différentes méthodes que vous pouvez utiliser pour tester votre Canvas auprès d'utilisateurs test.
 
 ## Liste de contrôle pour le lancement
 
@@ -111,7 +111,7 @@ Si votre Canvas ne se charge pas et ne progresse pas, cela peut être dû au fai
 {% details Why are my users not receiving my Canvas messages? %}
 **Vérifier la disponibilité des utilisateurs**
 - Assurez-vous qu'ils répondent à vos critères de segmentation.
-- Confirmez que leur état d'abonnement à Push est "abonné" ou "abonné" **et que** leur état " **Push Enabled** " est défini sur "true". Si vous avez ajouté ces règles en tant que règles d'entrée dans le Canvas, il est possible que les utilisateurs aient été désabonnés entre le moment où ils sont entrés dans le Canvas et celui où ils ont reçu l'étape du message.
+- Confirmez que leur état d'abonnement à Push est "abonné" ou "abonné" **et que** leur état " **Push Enabled** " est défini sur "true". Si vous avez ajouté ces règles d’entrées Canvas, il est possible que les utilisateurs aient été désinscrits entre le moment de leur accession au Canvas et l’étape de réception du message.
 - Confirmez qu'ils correspondent à vos paramètres d'envoi de Canvas. (Si les utilisateurs sont "abonnés" mais que les paramètres sont "Abonnés", les utilisateurs ne seront pas activés pour le canal).
 - Si la limite de fréquence globale est activée pour votre Canvas, vérifiez si vos règles limitent le nombre de fois où chaque utilisateur peut recevoir un message provenant d'un canal spécifique. 
 - Si les heures calmes sont activées, l'heure d'envoi de votre message peut être affectée, ce qui signifie que votre message peut être envoyé à la prochaine heure disponible (à la fin des heures calmes) ou être entièrement annulé.

@@ -32,15 +32,15 @@ table td {
 }
 </style>
 
-| Destination | Time for destination to match audience members | Rate limit | Lookalike or actalike | Tips |
+| 대상 | Time for destination to match audience members | 사용량 제한 | Lookalike or actalike | Tips |
 | --- | --- | --- | --- | --- |
-| [Criteo]({{site.baseurl}}/partners/canvas_audience_sync/criteo_audience_sync/) | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | Yes | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
-| [Facebook or Instagram]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) | Up to 24 hours | 190,000 ad accounts per hour | Yes | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul>{:/} |
-| [Google Ads or YouTube]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | No | {::nomarkdown}<ul><li><b>Customer match:</b> Use either mobile ad, or email address or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
+| [Criteo]({{site.baseurl}}/partners/canvas_audience_sync/criteo_audience_sync/) | Up to 24 hours | 250,000 requests per minute. Batched every 5 seconds with an auto-retry based on Google feedback. | 예 | {::nomarkdown}<ul><li>Criteo supports up to 1,000 ad audiences.</li><li>The minimum audience size is 500, and the recommend is over 20,000.</li></ul>{:/} |
+| [Facebook or Instagram]({{site.baseurl}}/partners/canvas_audience_sync/facebook_audience_sync/) | Up to 24 hours | 190,000 ad accounts per hour | 예 | {::nomarkdown}<ul><li>Facebook supports up to 500 ad audiences.</li><li>Facebook requires audiences to be at least 1,000 users.</li></ul>{:/} |
+| [Google Ads or YouTube]({{site.baseurl}}/partners/canvas_audience_sync/google_audience_sync/) | Between 6 to 12 hours | Batched every 5 seconds with an auto-retry based on Google feedback | 아니요 | {::nomarkdown}<ul><li><b>Customer match:</b> Use either mobile ad, or email address or phone number.</li><li>Google Audiences require at least 5,000 users to start serving ads.</li><li>The audience size will show as zero until there are at least 1,000 users.</li></ul>{:/} |
 | [LinkedIn]({{site.baseurl}}/partners/canvas_audience_sync/linkedin_audience_sync/) | 48 hours | LinkedIn processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | AI predictive audiences | {::nomarkdown}<ul><li>The minimum audience size is 300 members with location targeting taken into consideration.</li><li>LinkedIn shows match the rate in the Braze dashboard.</li></ul>{:/} |
-| [Pinterest]({{site.baseurl}}/partners/canvas_audience_sync/pinterest_audience_sync/) | Between 24 and 48 hours | Pinterest processes 7 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Pinterest audiences require at least 100 users. |
-| [Snapchat]({{site.baseurl}}/partners/canvas_audience_sync/snapchat_audience_sync/) | N/A | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | Yes | Snapchat supports up to 1,000 ad audiences. |
-| [TikTok]({{site.baseurl}}/partners/canvas_audience_sync/tiktok_audience_sync/) | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | Yes | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul>{:/} |
+| [Pinterest]({{site.baseurl}}/partners/canvas_audience_sync/pinterest_audience_sync/) | Between 24 and 48 hours | Pinterest는 초당 7개의 쿼리를 처리하고 요청당 1,900명의 사용자를 처리합니다. Braze batches users every 5 seconds. | 예 | Pinterest audiences require at least 100 users. |
+| [Snapchat]({{site.baseurl}}/partners/canvas_audience_sync/snapchat_audience_sync/) | N/A | Snapchat processes 10 queries per second and 100,000 users per request. Braze batches users every 5 seconds. | 예 | Snapchat supports up to 1,000 ad audiences. |
+| [TikTok]({{site.baseurl}}/partners/canvas_audience_sync/tiktok_audience_sync/) | Between 24 and 48 hours | TikTok processes 50 queries per second and 10,000 users per request. Braze batches users every 5 seconds. | 예 | {::nomarkdown}<ul><li>TikTok supports up to 400 ad audiences.</li><li>TikTok audiences require at least 1,000 users to start serving ads.</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 .reset-td-br-5 role="presentation" }
 <sup>When the rate limit is reached, Braze will retry syncs for 13 hours.</sup>
 
@@ -109,7 +109,7 @@ If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/deve
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
-![A Canvas with an entry audience of "opted_in_marketing equals true".]({% image_buster /assets/img/audience_sync/audience_sync.png %})
+![입장 관객이 "opted_in_marketing인 캔버스는 참입니다".]({% image_buster /assets/img/audience_sync/audience_sync.png %})
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 

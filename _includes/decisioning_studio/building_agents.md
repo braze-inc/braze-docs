@@ -16,7 +16,7 @@ To build a good agent, you'll:
 - Define which dimensions to test, such as offer, subject line, creative, channel, or send time.
 - Select the options for each dimension, such as email versus SMS, or daily versus weekly frequency.
 
-![Example diagram of a decisioning studio agent for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
+![Example diagram of a Decisioning Studio agent for referral emails.]({% image_buster /assets/img/offerfit/example_use_cases_referral_email.png %})
 
 ## Sample agents
 
@@ -49,7 +49,7 @@ With the design in hand, the team will work with you to identify and complete an
 
 ### Step 3: Set up your delivery platform
 
-Next, the AI Expert Service team will help you set up your marketing automation platform. While the decisioning studio works best with Braze, a variety of other platforms are supported&#8212;contact your AI Expert Service team for additional resources.
+Next, the AI Expert Service team will help you set up your customer engagement platform. While the Decisioning Studio works best with Braze, a variety of other platforms are supported&#8212;contact your AI Expert Service team for additional resources.
 
 {% tabs local %}
 {% tab Braze %}

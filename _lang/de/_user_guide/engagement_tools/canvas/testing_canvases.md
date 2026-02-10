@@ -1,8 +1,8 @@
 ---
-nav_title: Canvase testen
-article_title: Canvase testen
+nav_title: Test Canvase
+article_title: Test Canvase
 layout: dev_guide
-guide_top_header: "Canvase testen"
+guide_top_header: "Test Canvase"
 guide_top_text: "Nachdem Sie Ihr Canvas verschickt haben, sollten Sie sich immer die Ergebnisse ansehen, um sicherzustellen, dass Ihr Canvas gut gelaufen ist und sich positiv auf Ihre zukünftigen Mitteilungen auswirken wird.<br><br> Hier finden Sie Ressourcen zu Canvas-Analysen und anderen Berichten, mit denen Sie die Effektivität Ihrer Nachrichten für Ihre Nutzer messen können."
 page_order: 4
 
@@ -17,7 +17,7 @@ guide_featured_list:
   - name: Vorschau der Benutzerpfade
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths/
     image: /assets/img/braze_icons/target-04.svg
-  - name: Test-Canvase verschicken
+  - name: Test Canvase versenden
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/sending_test_canvases/
     image: /assets/img/braze_icons/user-check-01.svg
   - name: Canvas-Analytik

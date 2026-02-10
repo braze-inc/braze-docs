@@ -1,5 +1,5 @@
 ---
-nav_title: "GET: Liste Präferenz-Zentren"
+nav_title: "GET: Liste der Präferenzzentren"
 article_title: "GET: Liste Präferenz-Zentren"
 search_tag: Endpoint
 page_order: 2
@@ -22,7 +22,7 @@ description: "Dieser Artikel beschreibt die Details des Braze-Endpunkts List pre
 
 Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.baseurl}}/api/basics#rest-api-key/) mit der Berechtigung `preference_center.list`.
 
-## Preisgrenze
+## Rate-Limit
 
 Dieser Endpunkt hat ein Ratenlimit von 1.000 Anfragen pro Minute und Arbeitsbereich.
 

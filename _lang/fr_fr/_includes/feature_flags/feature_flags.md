@@ -18,7 +18,7 @@ Il s'agit des versions minimales du SDK nécessaires pour commencer à utiliser 
 
 Utilisez des indicateurs de fonctionnalités pour activer progressivement les entités à une population d’échantillons. Par exemple, vous pouvez commencer par lancer une nouvelle fonctionnalité pour vos utilisateurs VIP. Cette stratégie aide à atténuer les risques associés à l’expédition de nouvelles fonctionnalités à tout le monde en même temps et permet de détecter les bogues rapidement.
 
-![Image animée de la barre de défilement du trafic passant de 0 % à 100 %.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
+![L’image mobile du curseur du trafic de déploiement passe de 0 % à 100 %.]({% image_buster /assets/img/feature_flags/feature-flags-rollout.gif %})
 
 Par exemple, disons que nous avons décidé d'ajouter un nouveau lien "Live Chat Support" à notre application pour un service client plus rapide. Nous pourrions publier cette fonctionnalité à tous les clients en même temps. Cependant, une publication globale comporte des risques, tels que : 
 
@@ -35,7 +35,7 @@ Avec les indicateurs de fonctionnalités de Braze, nous pouvons progressivement 
 
 Pour déployer progressivement cette fonctionnalité, nous pouvons [créer un indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/create/) nommé "Live Chat Widget".
 
-![Détails de l’indicateur de fonctionnalité pour un exemple nommé Widget d’assistance en direct. L'ID est enable_live_chat. La description de cette fonctionnalité indique que le widget de ligne/en production/instantané s'affichera sur la page d'assistance.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
+![Détails de l’indicateur de fonctionnalité pour un exemple nommé Widget d’assistance en direct. L'ID est enable_live_chat. La description de cette fonctionnalité indique que le widget de discussion en ligne/instantané s'affichera sur la page d'assistance.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-livechat-1.png %})
 
 Dans le code de notre application, nous n'afficherons le bouton **Start Live Chat** que lorsque l’indicateur de fonctionnalité Braze sera activé :
 
@@ -140,7 +140,7 @@ Avec des indicateurs de fonctionnalité, nous pouvons laisser Braze alimenter le
 
 Pour configurer à distance cette fonctionnalité, nous allons créer un indicateur de fonctionnalité appelé `navigation_promo_link` et définissez les propriétés initiales suivantes :
 
-![Indicateur de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente générique.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
+![Drapeau de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente générique.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-1.png %})
 
 Dans notre application, nous utiliserons les méthodes getter de Braze pour récupérer les propriétés de cet indicateur de fonctionnalité et créer les liens de navigation en fonction de ces valeurs :
 
@@ -219,7 +219,7 @@ liveChatView.promoText = featureFlag?.stringProperty("text")
 
 Aujourd'hui, veille de Thanksgiving, il nous suffit de modifier ces valeurs de propriété dans le tableau de bord de Braze.
 
-![Indicateur de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente de Thanksgiving.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
+![Drapeau de fonctionnalité avec lien et propriétés de texte renvoyant à une page de vente de Thanksgiving.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-navigation-link-2.png %})
 
 Ainsi, la prochaine fois que quelqu'un chargera l'application, il verra les nouvelles offres de Thanksgiving.
 
@@ -231,11 +231,11 @@ Imaginons que nous lancions un nouveau programme de fidélité pour nos utilisat
 
 Pour coordonner efficacement le déploiement et l’envoi de messages des entités, nous allons créer un indicateur de fonctionnalité appelé `show_loyalty_program`. Pour notre première version progressive, nous allons laisser Canvas contrôler quand et pour qui l’indicateur de fonctionnalité est activé. Pour l’instant, nous allons laisser le pourcentage de déploiement à 0 % et ne sélectionner aucun segment cible.
 
-![Indicateur de fonctionnalité portant le nom de Programme de fidélité. L'ID est show_loyalty_program, et la description indique que ce programme affiche le nouveau programme de fidélisation sur l'écran d'accueil et la page de profil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
+![Indicateur de fonctionnalité portant le nom de Programme de fidélité. L'ID est show_loyalty_program, et la description indique que cela montre le nouveau programme de récompenses de fidélité sur l'écran d'accueil et la page de profil.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-loyalty.png %})
 
 Ensuite, dans Canvas, nous créerons une [étape d']({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/feature_flags/) indicateur de fonctionnalité qui activera l'indicateur de fonctionnalité `show_loyalty_program` pour notre segment "High Value Customers" :
 
-![Exemple d'un canvas avec une étape du découpage de l'audience où le segment des clients à forte valeur ajoutée active la fonctionnalité show_loyalty_program.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
+![Exemple d'un canvas avec une étape de division de l'audience où le segment des clients à forte valeur ajoutée active le drapeau de la fonctionnalité show_loyalty_program.]({% image_buster /assets/img/feature_flags/feature-flags-use-case-canvas-flow.png %})
 
 Maintenant, les utilisateurs de ce segment vont commencer à voir le nouveau programme de fidélisation, et après son activation, un e-mail et une enquête seront envoyés automatiquement pour aider notre équipe à recueillir des commentaires.
 
@@ -310,11 +310,11 @@ if let featureFlag, featureFlag.enabled {
 
 Nous mettrons en place notre test A/B dans le cadre d'une [expérience d’indicateur de fonctionnalité]({{site.baseurl}}/developer_guide/feature_flags/experiments/).
 
-Désormais, 50 % des utilisateurs verront l'ancienne expérience, tandis que les 50 % restants verront la nouvelle expérience. Nous pouvons ensuite analyser les deux variantes pour déterminer quel flux de paiement a entraîné un taux de conversion plus élevé. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' (si le taux de conversion est plus élevé) %}
+Désormais, 50 % des utilisateurs verront l'ancienne expérience, tandis que les 50 % restants verront la nouvelle expérience. Nous pouvons ensuite analyser les deux variantes pour déterminer quel flux de paiement a permis d'obtenir un taux de conversion plus élevé. {% multi_lang_include analytics/metrics.md metric='Conversion Rate' %}
 
-![Une expérience d’indicateur de fonctionnalité divisant le trafic en deux groupes de 50 %.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
+![Une expérience de drapeau de fonctionnalité divisant le trafic en deux groupes de 50 %.]({% image_buster /assets/img/feature_flags/feature-flag-use-case-campaign-experiment.png %})
 
-Une fois que nous aurons déterminé le gagnant, nous pourrons arrêter cette campagne et augmenter le pourcentage de déploiement de l’indicateur de fonctionnalité à 100 % pour tous les utilisateurs pendant que notre équipe d'ingénieurs codera en dur cette fonctionnalité dans la prochaine version de l'application.
+Une fois que nous aurons déterminé le gagnant, nous pourrons arrêter cette campagne et augmenter le pourcentage de déploiement du drapeau de fonctionnalité à 100 % pour tous les utilisateurs pendant que notre équipe d'ingénieurs codera en dur cette fonctionnalité dans la prochaine version de l'application.
 
 ### Segmentation
 

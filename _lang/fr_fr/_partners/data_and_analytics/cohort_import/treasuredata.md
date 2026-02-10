@@ -35,23 +35,23 @@ Dans Braze, naviguez vers **Intégrations partenaires** > **Partenaires technolo
 
 Avant de créer votre connexion de données dans Treasure data, vous devez vous authentifier. Tout d'abord, sélectionnez **Centre des intégrations**, puis **Catalogue**.
 
-![Catalogue du centre d’intégrations de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
+![Catalogue du Hub d'intégration de données Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort1.png %}) 
 
 Recherchez l'intégration Braze dans le **catalogue**, puis survolez l'icône et sélectionnez **Créer une authentification**. Saisissez vos informations d'identification, nommez votre authentification, puis sélectionnez **Terminé**.
 
-![Catalogue du centre d’intégrations de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
+![Catalogue du Hub d'intégration de données Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort2.png %}) 
 
 ### Étape 3 : Définissez l'audience de votre cohorte
 
 Synchronisez vos cohortes avec Braze par le biais d'une activation dans l'**Audience Studio** ou en exécutant une requête dans le **Data Workbench.**
 
 {% alert important %}
-Seuls les utilisateurs qui existent déjà dans Braze pourront être ajoutés ou supprimés d'une cohorte. L'importation d'une cohorte ne créera pas de nouveaux utilisateurs dans Braze.
+Seuls les utilisateurs qui existent déjà dans Braze sont ajoutés ou supprimés d'une cohorte. L'importation d'une cohorte ne créera pas de nouveaux utilisateurs dans Braze.
 {% endalert %}
 
 {% tabs local %}
-{% tab Atelier de données %}
-#### Étape 3.1 : Définissez votre requête
+{% tab Data Workbench %}
+#### Étape 3.1 : Définissez votre requête
 
 {% alert note %}
 Les colonnes de la requête doivent être spécifiées avec les noms de colonnes et le type de données exacts. Les colonnes de la requête doivent inclure au moins une des valeurs suivantes : `user_ids`, `device_ids` ou la colonne d’alias Braze correspondant à la configuration dans l’IU. Seuls les profils utilisateurs existant dans Braze seront ajoutés à une cohorte. L'importation d'une cohorte ne crée pas de nouveaux profils utilisateurs.
@@ -61,15 +61,15 @@ Les colonnes de la requête doivent être spécifiées avec les noms de colonnes
 2. Sélectionnez **Nouvelle requête**.
 3. Exécutez la requête pour valider l'ensemble des résultats.
 
-![Catalogue du centre d’intégrations de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
+![Catalogue du Hub d'intégration de données Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort3.png %})
 
-##### Cas d'utilisation : Synchronisation des cohortes par identifiant
+##### Cas d’utilisation : Synchronisation des cohortes par identifiant
 
 {% subtabs local %}
 {% subtab Syncing External IDs %}
 Voici un exemple de tableau dans Treasure data :
 
-| external_id |	e-mail	| device_ids |
+| external_id |	email	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -100,7 +100,7 @@ Après l'exécution de la requête, ces alias d'utilisateurs seront ajoutés à 
 {% subtab Syncing User Aliases %}
 Voici un exemple de tableau dans Treasure data :
 
-| external_id |	e-mail	| device_ids |
+| external_id |	email	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -127,7 +127,7 @@ Après l'exécution de la requête, ces alias d'utilisateurs seront ajoutés à 
 {% subtab Syncing Device IDs %}
 Voici un exemple de tableau dans Treasure data :
 
-| external_id |	e-mail	| device_ids |
+| external_id |	email	| device_ids |
 | ----------- | ----------- | ----------- |
 | `TDCohort1`	| `TDCohort1@gmail.com`	| `1a2b3c` |
 | `TDCohort2`	| `TDCohort2@gmail.com`	| `4d5f6g` |
@@ -160,7 +160,7 @@ Après l'exécution de la requête, ces ID d'appareils seront ajoutés à la coh
 
 Une fois la requête créée, sélectionnez **Exporter les résultats**. Vous pouvez sélectionner une authentification existante, telle que celle créée dans les dernières étapes, ou créer une nouvelle authentification à utiliser pour la sortie. 
 
-![Catalogue du centre d’intégrations de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
+![Catalogue du Hub d'intégration de données Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort5.png %}) 
 
 
 | Exportation du mappage des résultats |	Description	| 
@@ -179,13 +179,13 @@ Enregistrez la requête en lui donnant un nom et exécutez-la, ou exécutez simp
 
 {% endtab %}
 {% tab Audience Studio %}
-#### Étape 3.1 : Créer une activation
+#### Étape 3.1 : Créer une activation
 
 Créez un nouveau segment ou choisissez un segment existant à synchroniser avec Braze en tant que cohorte. Dans le segment, sélectionnez **Créer l’activation**.
 
 #### Étape 3.2 : Complétez vos données d'activation
 
-![Détails de l'activation des intégrations de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort7.png %}) 
+![Détails de l'activation de Treasure Data Integrations]({% image_buster /assets/img/treasure_data/cohort/cohort7.png %}) 
 
 | Réglage des détails de l'activation |	Description	| 
 | ----------- | ----------- |
@@ -200,7 +200,7 @@ Créez un nouveau segment ou choisissez un segment existant à synchroniser avec
 
 #### Étape 3.3 : Établir le mappage des sorties
 
-![Mappage des sorties d’activation des intégrations Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
+![Treasure Data Integrations Activation Output Mapping (intégration de données)]({% image_buster /assets/img/treasure_data/cohort/cohort6.png %}) 
 
 | Mappage des sorties d'activation |	Description	| 
 | ----------- | ----------- |
@@ -219,7 +219,7 @@ Tous les noms de colonnes non pertinents ou mal nommés seront ignorés. Vous po
 
 Définissez la planification de la synchronisation souhaitée et enregistrez votre activation.
 
-![Planning de l’activation des intégrations Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
+![Treasure Data Integrations Planification de l'activation]({% image_buster /assets/img/treasure_data/cohort/cohort8.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -227,7 +227,7 @@ Définissez la planification de la synchronisation souhaitée et enregistrez vot
 
 Dans Braze, naviguez vers **Segments**, créez un nouveau segment et sélectionnez **Cohortes Treasure Data** comme filtre. À partir de là, vous pouvez choisir la cohorte Treasure Data que vous souhaitez inclure. Une fois votre segment de cohorte Treasure Data créé, vous pouvez le sélectionner comme filtre d'audience lors de la création d'une campagne ou d'un canvas.
 
-![Catalogue du centre d’intégrations de Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
+![Catalogue du Hub d'intégration de données Treasure Data]({% image_buster /assets/img/treasure_data/cohort/cohort4.png %}) 
 
 ## Correspondance entre les utilisateurs
 

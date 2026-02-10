@@ -1,5 +1,5 @@
 ---
-nav_title: Briefträger und Musteranfragen
+nav_title: Postbote und Musteranfragen
 article_title: Briefträger und Musteranfragen
 page_order: 3
 description: "Dieser referenzierte Artikel behandelt die Braze Postman Collection, was sie ist, wie Sie die Collection einrichten und verwenden und wie Sie Anfragen bearbeiten und versenden können."
@@ -13,7 +13,7 @@ page_type: reference
 
 ## Was ist Postman?
 
-Postman ist ein kostenloses visuelles Bearbeitungstool zum Erstellen und Testen von API-Anfragen. Im Gegensatz zu anderen Methoden für die Interaktion mit APIs (z.B. mit cURL) können Sie mit Postman API-Anfragen einfach bearbeiten, Header-Informationen anzeigen und vieles mehr. Postman bietet Ihnen die Möglichkeit, Sammlungen oder Bibliotheken mit vorgefertigten API-Anfragen zu speichern. Um unseren Kund:innen den Einstieg in unsere REST API zu erleichtern, haben wir eine Sammlung mit vorgefertigten Beispielen für alle unsere API-Endpunkte erstellt.
+Postman ist ein kostenloses visuelles Bearbeitungstool zum Erstellen und Testen von API-Anfragen. Im Vergleich zu anderen Methoden (z.B. cURL) können Sie mit Postman API-Anfragen bearbeiten, Header-Informationen einsehen und vieles mehr. Sie können Sammlungen (Bibliotheken mit vorgefertigten API-Anfragen) speichern. Um die Einrichtung mit unserer REST API zu beschleunigen, stellen wir eine Sammlung mit vorgefertigten Beispielen für alle Endpunkte zur Verfügung.
 
 Sehen Sie sich unsere Postman Collection an oder laden Sie sie herunter, indem Sie auf **Run in Postman** in unseren [Postman-Dokumenten](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) klicken.
 
@@ -56,11 +56,11 @@ Wenn Sie eine `POST` Anfrage bearbeiten, öffnen Sie die Anfrage und navigieren 
 
 Wenn Sie eine `GET` Anfrage bearbeiten, bearbeiten Sie die in der Anfrage-URL übergebenen Parameter. Wählen Sie dazu den Tab **Params** und bearbeiten Sie die Schlüssel-Wert-Paare in den angezeigten Feldern.
 
-![Tab "Parameter" bei der Bearbeitung einer Anfrage GET Query List of Unsubscribed Email Addresses in Postman.]({% image_buster /assets/img_archive/postman_get.png %})
+![Tab Params bei der Bearbeitung einer Anfrage GET Query List of Unsubscribed Email Addresses in Postman.]({% image_buster /assets/img_archive/postman_get.png %})
 
 ### Senden Sie Ihre Anfrage
 
 Nachdem Ihre API-Anfrage fertig ist, klicken Sie auf **Senden**. Die Anfrage wird gesendet und die Daten der Antwort werden in einem Bereich unterhalb des Anfrage-Editors angezeigt. Von hier aus können Sie die von der Braze API zurückgegebenen Rohdaten, den HTTP Response Code, die Dauer der Bearbeitung der Anfrage und die Header-Informationen einsehen.
 
-![Beispiel Body-Antwortdaten einer POST-Anfrage mit dem Status 201 Created und einer Antwortzeit von 269 Millisekunden.]({% image_buster /assets/img_archive/postman_response.png %})
+![Beispiel für Body-Antwortdaten aus einer POST-Anfrage mit dem Status 201 Erstellt und einer Antwortzeit von 269 Millisekunden.]({% image_buster /assets/img_archive/postman_response.png %})
 

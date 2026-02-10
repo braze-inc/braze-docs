@@ -1,15 +1,15 @@
 ---
 nav_title: "Principes de base de l'envoi de messages"
-article_title: "Principes de base de l'envoi de messages"
+article_title: Principes de base de l’envoi de messages (Messaging Fundamentals)
 layout: dev_guide
 page_order: 0
-guide_top_header: "Principes de base de l'envoi de messages"
+guide_top_header: "Principes de base de l’envoi de messages (Messaging Fundamentals)"
 guide_top_text: "> Dans Braze, vous pouvez composer, envoyer et gérer vos messages en utilisant <a href='/docs/user_guide/getting_started/campaigns_canvases'>une campagne ou un Canvas</a>. Pour ces deux méthodes d'envoi de messages, il existe des principes fondamentaux communs de composition (mise en place de votre message) et de gestion (traitement administratif de votre message)."
 page_type: landing
 tool: 
     - Campaigns
     - Canvas
-description: "Cette page d'atterrissage contient des articles sur les principes fondamentaux de l'envoi de messages avec les campagnes et Canvases. Vous trouverez ici des ressources sur l'utilisation stratégique des événements de conversion et la détermination du type de réception/distribution lors de la composition de vos messages, ainsi que sur l'utilisation du flux de travail d'approbation et la compréhension des statuts lors de la gestion de vos messages."
+description: "Cette page d'atterrissage contient des articles sur les principes fondamentaux de l'envoi de messages à l'aide de campagnes et de Canvases. Vous trouverez ici des ressources sur l'utilisation stratégique des événements de conversion et la détermination du type de réception/distribution lors de la composition de vos messages, ainsi que sur l'utilisation du flux de travail d'approbation et la compréhension des statuts lors de la gestion de vos messages."
 
 guide_featured_title: "Composition"
 guide_featured_description: |
@@ -27,10 +27,10 @@ guide_featured_list:
   - name: Événements de conversion
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: Types de réception/distribution
+  - name: Types de livraison
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/delivery_types/
     image: /assets/img/braze_icons/beaker-02.svg
-  - name: Blocs éditeurs
+  - name: Blocs éditeur
     link: /docs/dnd/editor_blocks/
     image: /assets/img/braze_icons/align-left.svg
   - name: Localisation
@@ -39,7 +39,7 @@ guide_featured_list:
   - name: Rééligibilité
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/reeligibility/
     image: /assets/img/braze_icons/users-01.svg
-  - name: Le ciblage des utilisateurs
+  - name: Ciblage des utilisateurs
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
     image: /assets/img/braze_icons/target-04.svg
 
@@ -54,13 +54,13 @@ guide_menu_description: |
 
   ### Related articles
 guide_menu_list:
-  - name: "Processus d'approbation"
+  - name: Flux de travail d’approbation
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/approvals/
     image: /assets/img/braze_icons/brush-02.svg
   - name: Archivage des messages
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/archiving/
     image: /assets/img/braze_icons/archive.svg
-  - name: "Copier d'un espace de travail à l'autre"
+  - name: "Copie d'un espace de travail à l'autre"
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/
     image: /assets/img/braze_icons/copy-07.svg
   - name: Duplication des messages

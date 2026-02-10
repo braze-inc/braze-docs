@@ -11,9 +11,9 @@ search_tag: Partner
 <!--
 {% multi_lang_include video.html id="xFZ3HMleYYE" align="right" %}
 -->
-> O Amazon Personalize é como ter seu próprio sistema de recomendação de machine learning da Amazon o dia todo. Com base em mais de 20 anos de experiência em recomendações, o Amazon Personalize o capacita a melhorar o engajamento dos clientes, fornecendo recomendações personalizadas de produtos e conteúdo em tempo real e promoções de marketing direcionadas.
+> [Amazon Personalize](https://aws.amazon.com/personalize/) é como ter seu próprio sistema de recomendação de machine learning da Amazon durante todo o dia. Com base em mais de 20 anos de experiência em recomendações, o Amazon Personalize o capacita a melhorar o engajamento dos clientes, fornecendo recomendações personalizadas de produtos e conteúdo em tempo real e promoções de marketing direcionadas.
 
-_Essa integração é mantida pela Amazon Personalize._
+_Esta integração é mantida pelo Amazon Personalize._
 
 ## Sobre a integração
 
@@ -31,7 +31,7 @@ Este artigo de referência o ajudará a entender os casos de uso que o Amazon Pe
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% tabs %}
-{% tab Casos de uso %}
+{% tab Use Cases %}
 
 **Casos de uso**
 
@@ -43,7 +43,7 @@ Antes de criar um modelo, determine seu caso de uso para essa integração. Algu
 No guia a seguir, vamos nos concentrar na receita de recomendações personalizadas do usuário.
 
 {% endtab %}
-{% tab Conjuntos de dados %}
+{% tab Datasets %}
 
 **Conjuntos de dados**
 
@@ -150,6 +150,6 @@ This seems like a great fit for you:
 
 Incluindo o título, a imagem e o link para o URL, é assim que o cartão de conteúdo completo ficaria:
 
-![Uma imagem de uma campanha com conteúdo conectado adicionada ao corpo da mensagem e ao campo "Adicionar imagem". Essa imagem também mostra a lógica do Connected Content adicionada ao campo "Redirect to Web URL", vinculando os usuários a um URL de recomendação.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
+![Uma imagem de uma campanha com conteúdo conectado adicionada ao corpo da mensagem e ao campo "Adicionar imagem". Essa imagem também mostra a lógica do conteúdo conectado adicionada ao campo "Redirecionar para URL da Web", vinculando os usuários a um URL de recomendação.]({% image_buster /assets/img/amazon_personalize/content-card-campaign.png %})
 
 

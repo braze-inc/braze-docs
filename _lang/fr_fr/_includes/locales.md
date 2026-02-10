@@ -1,3 +1,22 @@
+{% if include.section == "Prerequisites" %}
+## Conditions préalables
+
+Pour modifier et gérer la [prise en charge multilingue]({{site.baseurl}}/multi_language_support/), vous devez disposer de l’autorisation « Gérer les paramètres multilingues ». Pour ajouter le paramètre régional à un message, vous devez disposer des autorisations nécessaires pour modifier les campagnes.
+
+{% alert important %}
+La prise en charge du multilinguisme est actuellement en accès anticipé. Contactez votre gestionnaire de compte Braze si vous souhaitez participer à cet accès anticipé.
+{% endalert %}
+
+{% endif %}
+
+{% if include.section == "Preview" %}
+
+## Prévisualiser vos paramètres régionaux
+
+Dans la liste déroulante **Prévisualiser le message en tant qu'utilisateur** de l'onglet **Test**, sélectionnez **Utilisateur personnalisé** et entrez différentes langues pour prévisualiser le message afin de vérifier si votre message se traduit comme prévu.
+
+{% endif %}
+
 {% if include.section == "Frequently Asked Questions" %}
 
 ## Foire aux questions

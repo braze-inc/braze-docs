@@ -34,7 +34,7 @@ The Braze and Segment integration allows you to use [Engage](https://segment.com
 1. In Segment, navigate to the **Audiences** tab in Engage, and click **New**.
 2. Create your audience. A lightning bolt in the top corner of the page will indicate if the audience updates in real-time.
 3. Next, select Braze as your destination.
-4. Preview your audience by clicking **Review & Create**. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
+4. **검토 & 만들기를** 클릭하여 오디언스를 미리 봅니다. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
 
 ### Step 2: Capture your cohort data import key
 
@@ -57,7 +57,7 @@ In Braze, navigate to **Segments**, create a new segment, and select **Segment C
 1. In Segment, navigate to the **Computed Traits** or **Audiences** tab in **Engage**, and click **New**.
 2. Create your computed trait or audience. A lightning bolt in the top corner of the page will indicate if the computation updates in real-time.
 3. Next, select **Braze** as your destination. 
-4. Preview your audience by clicking  **Review & Create**. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
+4. **검토 & 만들기를** 클릭하여 오디언스를 미리 봅니다. By default, Segment queries all historical data to set the current value of the computed trait and audience. To omit this data, uncheck **Historical Backfill**.
 5. In the computed trait or audience settings, adjust the connection settings based on how you would like your data sent to Braze.
 
 #### Computed traits and audiences
@@ -77,7 +77,7 @@ For example, if you have an Engage computed trait for "Last Product Viewed Item,
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
-| ![The custom attribute section within a user profile lists "last_product_viewed_item" as "Sweater".]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![The custom attribute section within a user profile lists "dormant_shopper" as "true".]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
+| ![고객 프로필 내의 커스텀 속성 섹션에 "last_product_viewed_item" 이 "스웨터"로 표시됩니다.]({% image_buster /assets/img/segment/last_viewed-id-braze.png %}) | ![고객 프로필 내의 커스텀 속성 섹션에 "dormant_shopper" 이 "true"로 표시됩니다.]({% image_buster /assets/img/segment/dormant-identify-braze.png %}) |
 
 {% endtab %}
 {% tab Track %}
@@ -88,7 +88,7 @@ Continuing the previous example, if a user has a computed trait for "Last Produc
 
 | Computed Trait | Audiences |
 | -------------- | --------- |
-| ![The custom event section within a user profile lists "Trait Computed" "1" time, with the last time being "20 hours ago".]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![The custom attribute section within a user profile lists "Audience Entered" "1" time, with the last time being "March 9 at 1:45 am".]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
+| ![고객 프로필 내 커스텀 이벤트 섹션에는 "특성 계산" "1" 시간이 표시되며, 마지막 시간은 "20시간 전"입니다.]({% image_buster /assets/img/segment/last_viewed-track-braze.png %}) | ![고객 프로필 내의 커스텀 속성 섹션에는 "오디언스 입력" "1" 시간이 나열되며, 마지막 시간은 "3월 9일 오전 1시 45분"입니다.]({% image_buster /assets/img/segment/dormant-track-braze.png %}) |
 
 {% endtab %}
 {% endtabs %}

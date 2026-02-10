@@ -1,10 +1,10 @@
-{% if include.page == "testing" %}Während [Sie Ihre Banner Nachricht verfassen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#compose-a-banner), wählen Sie{% elsif include.page == "campaigns" %}Wählen Sie{% endif %} **Vorschau**, um eine Vorschau Ihres Banners zu erhalten oder eine Testnachricht zu senden.
+{% if include.page == "testing" %}Während [Sie Ihre Banner Nachricht verfassen]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#compose-a-banner), wählen Sie{% elsif include.page == "campaigns" %}Wählen Sie{% endif %} **Vorschau**, um eine Vorschau Ihres Banners zu erhalten oder eine Testnachricht zu senden.
 
 ![Tab Vorschau des Banner Composers.]({% image_buster /assets/img/banners/select_preview.png %}){: style="max-width:50%;"}
 
 Denken Sie daran, dass Ihre Vorschau aufgrund von Unterschieden in der Hardware möglicherweise nicht mit der endgültigen Darstellung auf dem Gerät eines Nutzers:innen identisch ist.
 
-Um eine Nachricht zu testen, fügen Sie entweder eine Testgruppe oder einen oder mehrere einzelne Nutzer:innen als **Empfänger:innen** hinzu und wählen dann **Test senden**. Sie können Ihre Nachricht bis zu 5 Minuten lang auf dem Gerät sehen.
+Um eine Nachricht zu testen, fügen Sie entweder eine Testgruppe oder einen oder mehrere einzelne Nutzer:innen als **Empfänger:innen** hinzu und wählen dann **Test senden**. Sie können Ihre Nachricht bis zu 5 Minuten lang auf dem Gerät sehen. Sie können dann **Vorschau-Link** auswählen, um einen teilbaren Vorschau-Link zu generieren und zu kopieren, der zeigt, wie das Banner für einen zufälligen Nutzer:innen aussehen wird. Der Link bleibt sieben Tage lang bestehen, bevor er erneuert werden muss.
 
 ![Tab Vorschau des Banner Composers.]({% image_buster /assets/img/banners/preview_banner.png %})
 

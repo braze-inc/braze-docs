@@ -11,7 +11,7 @@ A tabela a seguir descreve como você pode usar cada tipo de bloco de editor.
 | Título | Insere um texto de título na mensagem. |
 | Parágrafo | Insere um texto de parágrafo na mensagem. |
 | Botão | Adiciona um botão padrão. As propriedades desse bloco permitem a edição, a configuração de links e a análise de dados de registro. |
-| Botão de opção | Adiciona uma lista de opções das quais os usuários podem selecionar uma. Quando enviado, o perfil do usuário registra o atributo personalizado associado. |
+| Botão de opção | Adiciona uma lista de opções das quais os usuários podem selecionar uma. Quando enviado, o perfil do usuário registra o atributo personalizado associado, que deve ser uma string a ser salva. Atributos personalizados com outros tipos de dados não são salvos no perfil do usuário. |
 | Imagem | Insere uma imagem da [biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). |
 | Link | Insere um hiperlink no qual os usuários podem clicar para navegar até um URL especificado. Pode ser incorporado ao texto ou autônomo. |
 | Espaçador | Adiciona espaço ou preenchimento entre outros blocos. |

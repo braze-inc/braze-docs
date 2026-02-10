@@ -457,17 +457,17 @@ Die folgenden HTTP Status Codes werden von unserem Konnektor Client erkannt:
     <tr>
       <td><code>401</code></td>
       <td>Nicht autorisiert</td>
-      <td>Der Konnektor wurde mit ungültigen Zugangsdaten konfiguriert. Ereignisdaten werden mit einer Verzögerung von 2-5 Minuten erneut gesendet. Wenn innerhalb von 48 Stunden keine Lösung gefunden wird, werden die Daten des Ereignisses gelöscht.</td>
+      <td>Der Konnektor wurde mit ungültigen Zugangsdaten konfiguriert. Ereignisdaten werden nach einer Verzögerung von 2-5 Minuten erneut gesendet. Wenn innerhalb von 48 Stunden keine Lösung gefunden wird, werden die Daten des Ereignisses gelöscht.</td>
     </tr>
     <tr>
       <td><code>403</code></td>
       <td>Verbotene</td>
-      <td>Der Konnektor wurde mit ungültigen Zugangsdaten konfiguriert. Ereignisdaten werden mit einer Verzögerung von 2-5 Minuten erneut gesendet. Wenn innerhalb von 48 Stunden keine Lösung gefunden wird, werden die Daten des Ereignisses gelöscht.</td>
+      <td>Der Konnektor wurde mit ungültigen Zugangsdaten konfiguriert. Ereignisdaten werden nach einer Verzögerung von 2-5 Minuten erneut gesendet. Wenn innerhalb von 48 Stunden keine Lösung gefunden wird, werden die Daten des Ereignisses gelöscht.</td>
     </tr>
     <tr>
       <td><code>404</code></td>
       <td>Nicht gefunden</td>
-      <td>Der Konnektor wurde mit ungültigen Zugangsdaten konfiguriert. Ereignisdaten werden mit einer Verzögerung von 2-5 Minuten erneut gesendet. Wenn innerhalb von 48 Stunden keine Lösung gefunden wird, werden die Daten des Ereignisses gelöscht.</td>
+      <td>Der Konnektor wurde mit ungültigen Zugangsdaten konfiguriert. Ereignisdaten werden nach einer Verzögerung von 2-5 Minuten erneut gesendet. Wenn innerhalb von 48 Stunden keine Lösung gefunden wird, werden die Daten des Ereignisses gelöscht.</td>
     </tr>
     <tr>
       <td><code>413</code></td>

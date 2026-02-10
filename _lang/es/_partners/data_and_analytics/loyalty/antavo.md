@@ -15,7 +15,7 @@ _Esta integración está mantenida por Antavo._
 
 ## Sobre la integración
 
-La integración de Antavo y Braze te permite utilizar los datos relacionados con el programa de fidelización para crear campañas personalizadas que mejoren la experiencia del cliente. Antavo admite la sincronización de datos de fidelización entre las dos plataformas; se trata de una sincronización de datos unidireccional únicamente, de Antavo a Braze. La integración admite el campo `external_id` Braze, que Antavo utiliza para sincronizar el ID de miembro de fidelización.
+La integración de Antavo y Braze te permite utilizar los datos relacionados con el programa de fidelización para crear campañas personalizadas que mejoren la experiencia del cliente. Antavo admite la sincronización de datos de fidelización entre las dos plataformas; se trata de una sincronización de datos unidireccional únicamente, de Antavo a Braze. La integración admite el campo Braze de `external_id`, que Antavo utiliza para sincronizar el ID de miembro de fidelización.
 
 ## Requisitos previos
 
@@ -64,17 +64,17 @@ Puedes encontrar tu lista de atributos personalizados en Braze, en **Configuraci
 
 Cuando cualquier valor de los campos configurados cambia en Antavo, no solo se desencadena la sincronización de ese único valor, sino que todos los campos añadidos al mapeado de campos se incluyen en la solicitud.
 
-![Página de Sincronización de Campos en Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
+![Página Sincronizar campos en Antavo.]({% image_buster /assets/img/antavo/data_field_mapping.png %})
 
 {% alert important %}
-Para minimizar el consumo de puntos de datos, recomendamos mapear solo los campos sobre los que se actuará dentro de Braze.
+Para minimizar el uso de punto de datos, recomendamos mapear sólo los campos sobre los que se actuará dentro de Braze.
 {% endalert %}
 
 #### Tipos de datos admitidos
 
 La integración admite todos los [tipos de datos de]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-storage) atributos personalizados de Braze, a saber: número (entero, flotante), cadena, matriz, booleano, objeto, matriz de objetos y fecha.
 
-![Perfil Braze que muestra diferentes atributos personalizados.]({% image_buster /assets/img/antavo/braze_profile.png %})
+![El perfil de Braze que muestra diferentes atributos personalizados.]({% image_buster /assets/img/antavo/braze_profile.png %})
 
 Los campos de datos se rellenan según el mapeado de campos configurado.
 

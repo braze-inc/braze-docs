@@ -19,7 +19,7 @@ Opcionalmente, puede proporcionar un cuerpo POST especificando `:body` seguido d
 El Contenido conectado tampoco almacena en caché las llamadas POST de forma predeterminada. Puedes actualizar este comportamiento añadiendo `:cache_max_age` a la llamada POST de Contenido conectado.
 
 {% tabs %}
-{% tab Tipo de contenido predeterminado %}
+{% tab Default content-type %}
 
 {% raw %}
 ```js
@@ -28,7 +28,7 @@ El Contenido conectado tampoco almacena en caché las llamadas POST de forma pre
 {% endraw %}
 
 {% endtab %}
-{% tab Application/JSON Tipo de contenido %}
+{% tab Application/JSON Content-Type %}
 
 {% raw %}
 ```js

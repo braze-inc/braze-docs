@@ -1,6 +1,6 @@
 ---
-nav_title: 동작
-article_title: 콘텐츠 카드의 동작 사용자 지정
+nav_title: Behavior
+article_title: 콘텐츠 카드의 행동 커스텀하기
 page_order: 2
 description: "이 구현 가이드에서는 콘텐츠 카드의 동작 변경, 페이로드에 키-값 페어와 같은 추가 항목 추가, 일반적인 사용자 지정에 대한 레시피에 대해 설명합니다."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# 콘텐츠 카드의 동작 사용자 지정
+# 콘텐츠 카드의 행동 커스텀하기
 
 > 이 구현 가이드에서는 콘텐츠 카드의 동작 변경, 페이로드에 키-값 페어와 같은 추가 항목 추가, 일반적인 사용자 지정에 대한 레시피에 대해 설명합니다. 콘텐츠 카드 유형 전체 목록은 [콘텐츠 카드 정보를]({{site.baseurl}}/developer_guide/content_cards/) 참조하세요. 
 
@@ -25,19 +25,19 @@ Braze를 사용하면 키-값 페어를 사용하여 콘텐츠 카드를 통해 
 {% endalert %}
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
+
+키-값 쌍은 <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> 객체에 `extras` 로 저장됩니다. 애플리케이션에서 추가 처리를 위해 카드와 함께 데이터를 전송하는 데 사용할 수 있습니다. `card.extras`를 호출하여 이러한 값에 액세스합니다.
+
+{% endtab %}
+{% tab android %}
 
 키-값 쌍은 <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/#-2118252107%2FProperties%2F-1725759721" target="_blank">`card`</a> 객체에 `extras` 로 저장됩니다. 애플리케이션에서 추가 처리를 위해 카드와 함께 데이터를 전송하는 데 사용할 수 있습니다. <a href="https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.cards/-card/extras.html" target="_blank">`card.extras`</a>를 호출하여 이러한 값에 액세스합니다.
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 키-값 쌍은 <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard" target="_blank">`card`</a> 객체에 `extras` 로 저장됩니다. 애플리케이션에서 추가 처리를 위해 카드와 함께 데이터를 전송하는 데 사용할 수 있습니다. <a href="https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/contentcard/data-swift.struct/extras" target="_blank">`card.extras`</a>를 호출하여 이러한 값에 액세스합니다.
-
-{% endtab %}
-{% tab 웹 %}
-
-키-값 쌍은 <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.card.html" target="_blank">`card`</a> 객체에 `extras` 로 저장됩니다. 애플리케이션에서 추가 처리를 위해 카드와 함께 데이터를 전송하는 데 사용할 수 있습니다. `card.extras`를 호출하여 이러한 값에 액세스합니다.
 
 {% endtab %}
 {% endtabs %}
@@ -58,7 +58,7 @@ Braze를 사용하면 키-값 페어를 사용하여 콘텐츠 카드를 통해 
 
 [API 트리거 캠페인은]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/) 카드의 값이 외부 요인에 따라 사용자에게 표시할 콘텐츠를 결정할 때 사용할 수 있는 좋은 전략입니다. 예를 들어 보충 콘텐츠를 표시하려면 Liquid를 사용하여 키-값 페어를 설정합니다. 설정 시 `class_type`을 알아야 합니다.
 
-![추가 콘텐츠 카드 사용 사례에 대한 키-값 쌍입니다. 이 예시에서는 Liquid를 사용하여 "tile_id", "tile_deeplink", "tile_title" 등 카드의 다양한 측면을 설정했습니다.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
+![추가 콘텐츠 카드 사용 사례에 대한 키-값 쌍입니다. 이 예제에서는 "tile_id", "tile_deeplink", 및 "tile_title" 등 카드의 다양한 측면이 Liquid를 사용하여 설정되었습니다.]({% image_buster /assets/img/cc_implementation/supplementary_content.png %}){: style="max-width:60%;"}
 
 ## 대화형 콘텐츠로서의 콘텐츠 카드
 ![화면 왼쪽 하단에 50% 프로모션을 표시하는 대화형 콘텐츠 카드가 나타납니다. 클릭하면 프로모션이 장바구니에 적용됩니다.]({% image_buster /assets/img/cc_implementation/discount2.png %}){: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
@@ -82,9 +82,20 @@ Braze를 사용하면 키-값 페어를 사용하여 콘텐츠 카드를 통해 
 미열람 콘텐츠 카드 수를 앱 아이콘에 배지로 표시할 수 있습니다. 
 
 {% tabs %}
-{% tab Android %}
+{% tab web %}
 
-언제든지 전화로 읽지 않은 카드의 수를 요청할 수 있습니다:
+언제든지 다음 번호로 전화하여 읽지 않은 카드의 수를 요청할 수 있습니다:
+
+```javascript
+braze.getCachedContentCards().getUnviewedCardCount();
+```
+
+그런 다음 이 정보를 사용하여 읽지 않은 콘텐츠 카드의 수를 나타내는 배지를 표시할 수 있습니다. 자세한 내용은 <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">SDK 참조 설명서</a>를 참조하세요.
+
+{% endtab %}
+{% tab android %}
+
+언제든지 다음 번호로 전화하여 읽지 않은 카드의 수를 요청할 수 있습니다:
 
 {% subtabs %}
 {% subtab Java %}
@@ -107,7 +118,7 @@ Braze.getInstance(context).contentCardUnviewedCount
 
 
 {% endtab %}
-{% tab iOS %}
+{% tab swift %}
 
 다음 샘플은 `braze.contentCards`를 사용하여 미열람 콘텐츠 카드 수를 요청하고 표시합니다. 앱이 닫히고 사용자 세션이 종료된 후 이 코드는 카드 수를 요청하여 `viewed` 속성정보를 기준으로 카드 수를 필터링합니다.
 
@@ -146,17 +157,6 @@ for (BRZContentCardRaw *card in AppDelegate.braze.contentCards.cards) {
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab 웹 %}
-
-언제든지 전화로 읽지 않은 카드의 수를 요청할 수 있습니다:
-
-```javascript
-braze.getCachedContentCards().getUnviewedCardCount();
-```
-
-그런 다음 이 정보를 사용하여 읽지 않은 콘텐츠 카드의 수를 나타내는 배지를 표시할 수 있습니다. 자세한 내용은 <a href="https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.contentcards.html" target="_blank">SDK 참조 설명서</a>를 참조하세요.
-
 {% endtab %}
 {% endtabs %}
 

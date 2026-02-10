@@ -1,7 +1,7 @@
 ---
 page_order: 2
-nav_title: 무음 알림
-article_title: Braze SDK에 대한 무음 푸시 알림 설정하기
+nav_title: 조용한 알림
+article_title: Braze SDK를 위한 조용한 푸시 알림 설정
 channel:
   - push notifications
 ---

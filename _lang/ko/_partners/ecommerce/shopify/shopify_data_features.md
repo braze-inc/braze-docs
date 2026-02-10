@@ -5,7 +5,7 @@ description: "This reference article covers Shopify data features."
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
-page_order: 3
+page_order: 4
 ---
 
 # Shopify data features
@@ -13,6 +13,10 @@ page_order: 3
 > This article provides an overview of our Shopify features, including what Shopify data is tracked and example payloads, historical backfill, and product syncs.
 
 ## Tracked Shopify events
+
+Shopify 통합은 [전자상거래 추천 이벤트를]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/) 사용하여 주요 쇼핑 행동을 캡처합니다. 이러한 이벤트를 활용한 구현 사례 및 마케팅 전략은 [이커머스 사용 사례를]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/) 참조하세요.
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
 
 {% tabs %}
 {% tab Example Payload %}
@@ -465,7 +469,7 @@ For more information on how to build out a Liquid `for` loop to dynamically add 
 {% subtab Checkout started %}
 **Event**: `ecommerce.checkout_started`<br>
 **Type**: Recommended event<br>
-**Triggered**: When a customer adds, removes, or updates their shopping cart<br>
+**Triggered**: 사용자가 결제 페이지로 이동하는 경우<br>
 **Use Case**: Checkout abandonment
 
 For Abandoned Checkout Canvases, you first need to use the following Liquid tag:
@@ -508,21 +512,21 @@ Then you can add the following Liquid tags into your message to reference the pr
 {% raw %}
 | Variable                | Liquid templating                                   |
 \|-------------------------|-----------------------------------------------------|
-| cart_id                 | `{{event_properties.${cart_id}}}`                   |
+| cart_id | `{{event_properties.${cart_id}}}` |
 | currency                | `{{event_properties.${currency}}}`                  |
 | discounts               | `{{event_properties.${discounts}}}`                 |
-| order_id                | `{{event_properties.${order_id}}}`                  |
-| product_id              | `{{event_properties.${products}[0].product_id}}`   |
-| product_name            | `{{event_properties.${products}[0].product_name}}` |
-| variant_id              | `{{event_properties.${products}[0].variant_id}}`   |
+| order_id | `{{event_properties.${order_id}}}` |
+| product_id | `{{event_properties.${products}[0].product_id}}` |
+| product_name | `{{event_properties.${products}[0].product_name}}` |
+| variant_id | `{{event_properties.${products}[0].variant_id}}` |
 | quantity                | `{{event_properties.${products}[0].quantity}}`     |
 | sku                     | `{{event_properties.${products}[0].metadata.sku}}` |
-| total_discounts         | `{{event_properties.${total_discounts}}}`           |
-| order_status_url        | `{{event_properties.${metadata}.order_status_url}}` |
-| order_number            | `{{event_properties.${metadata}.order_number}}`     |
+| total_discounts | `{{event_properties.${total_discounts}}}` |
+| order_status_url | `{{event_properties.${metadata}.order_status_url}}` |
+| order_number | `{{event_properties.${metadata}.order_number}}` |
 | tags                    | `{{event_properties.${metadata}.tags}}`             |
-| referring_site          | `{{event_properties.${metadata}.referring_site}}`   |
-| payment_gateway_names    | `{{event_properties.${metadata}.payment_gateway_names}}` |
+| referring_site | `{{event_properties.${metadata}.referring_site}}` |
+| payment_gateway_names | `{{event_properties.${metadata}.payment_gateway_names}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
@@ -739,7 +743,7 @@ Shopify’s checkout completed webhook doesn't contain product URLs or image URL
 {% endraw %}
 
 {% alert note %}
-The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). As a result, purchase filters, Liquid tags, action-based triggers, and analytics should use the ecommerce.order_placed event.
+The Shopify integration currently doesn't support populating the Braze [purchase event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events). 따라서 구매 필터, Liquid 태그, 액션 기반 트리거 및 분석은 `ecommerce.order_placed` 이벤트를 사용해야 합니다.
 {% endalert %}
 
 {% endsubtab %}
@@ -748,6 +752,7 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 {% endtabs %}
 
 ## Supported Shopify custom attributes
+
 {% tabs local %}
 {% tab Example Payload %}
 {% subtabs %}
@@ -781,15 +786,24 @@ The Shopify integration currently doesn't support populating the Braze [purchase
 | `shopify_province` | The customer's province from their default address. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+{% alert important %}
+현재 Shopify API 버전에서 알려진 문제로 인해 `shopify_last_order_name` 사용자 속성이 올바르게 채워지지 않습니다. 사용자에게 미치는 영향은 다음과 같습니다:<br><br>
+
+- **기존 사용자:** 이미 `shopify_last_order_name` 값이 있는 사용자의 경우 해당 값은 유지되지만 후속 주문에 의해 업데이트되지 않습니다.
+- **신규 사용자:** 새 사용자의 경우 필드가 채워지지 않고 비어 있거나 null로 유지됩니다.
+
+이 페이지는 Shopify에서 이 문제를 해결한 후에 업데이트됩니다.
+{% endalert %}
+
 ### Liquid personalization
 
 To add Liquid personalization for your Shopify custom attributes, select **\+ Personalization**. Then select **Custom Attributes** as your personalization type.
 
-![The "Add Personalization" section with the "Attribute" dropdown extended.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
+!['속성' 드롭다운이 확장된 '개인화 추가' 섹션이 표시됩니다.]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
 
 After selecting your custom attribute, input a default value and copy the Liquid snippet into your message.
 
-![Pasting a Liquid snippet into a message.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
+![Liquid 스니펫을 메시징에 붙여넣기.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -822,13 +836,13 @@ If you plan to integrate with a custom external ID (for either the [standard int
 
 1. Turn on historical backfill in the **Track Shopify data** step.
 
-![The "Track Shopify data" step of the Shopify integration showing historical backfill selected.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
+![선택된 과거 백필을 보여주는 Shopify 통합의 "Shopify 데이터 추적" 단계.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
 {: start="2"}
 
 2. After you complete your integration setup, Braze will begin the initial data sync. You can monitor progress on the **Shopify Data** tab of your integration settings. 
 
-![The Shopify Integration Settings page with a spinner showing that events are actively syncing.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
+![이벤트가 활발하게 동기화 중임을 표시하는 스피너가 있는 Shopify 통합 설정 페이지입니다.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
 
 ### Synced data 
 

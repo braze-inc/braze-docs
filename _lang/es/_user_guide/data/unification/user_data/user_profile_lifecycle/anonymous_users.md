@@ -33,7 +33,7 @@ Puedes hacer lo siguiente con los usuarios anónimos capturados:
 
 A veces, los perfiles de usuario anónimos son duplicados que tienen el mismo número de teléfono o dirección de correo electrónico que otros perfiles de usuario. Uno de los duplicados puede ser incluso un perfil de usuario identificado. Estos duplicados pueden fusionarse en un solo perfil de usuario utilizando el POST [: Fusiona el punto final de los usuarios]({{site.baseurl}}/api/endpoints/user_data/post_users_merge/) o una de las herramientas de fusión de la plataforma Braze, como la [fusión basada en reglas]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/duplicate_users/#rules-based-merging).
 
-## Casos de uso
+## Ejemplos
 
 ### Dirígete a usuarios anónimos de tu segmento
 
@@ -44,7 +44,7 @@ Digamos que asignas el atributo personalizado "is_lead_profile" a cada perfil de
 - **El ID de usuario externo está en blanco**
 - "is_lead_profile" **es cierto**
 
-\![Filtros de segmento para un ID externo de usuario en blanco y un atributo personalizado verdadero "is_lead_profile".]({% image_buster /assets/img/getting_started/anonymous_users.png %})
+![Filtros de segmento para un ID externo de usuario en blanco y un atributo personalizado verdadero "is_lead_profile".]({% image_buster /assets/img/getting_started/anonymous_users.png %})
 
 ### Capturar datos de pago de un usuario anónimo
 

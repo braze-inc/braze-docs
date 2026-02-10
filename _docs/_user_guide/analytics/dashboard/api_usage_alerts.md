@@ -16,7 +16,7 @@ You can use API usage alerts to monitor request volumes for the following catego
 | API Category | Details |
 |--------------|---------|
 | REST API Endpoints | Tracks usage of all REST API calls made to Braze’s backend, such as sending messages, creating campaigns, or exporting users. |
-| SDK API Requests | Tracks API requests made from Braze SDKs in client apps, such as triggering in-app messages or syncing user data.<br><br>_*Only available to customers who have purchased Monthly Active Users – CY 24–25._ |
+| SDK API Requests | Tracks API requests made from Braze SDKs in client apps, such as triggering in-app messages or syncing user data.<br><br>_*Only available to customers who have purchased Monthly Active Users – CY 24-25._ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ## Creating an API usage alert

@@ -102,9 +102,10 @@ Using {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%}
 
 Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}}``{%endraw%} at the top of your message, then use {%raw%}`{{items[0].<field_name>}}`{%endraw%} to access data about that item throughout the message.
 
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
+
 ## Considerations
 
 - Users are subscribed for 90 days. If an item does not drop in price in 90 days, the user is removed from the subscription.
 - When using the **Notify all subscribed users** notification rule, Braze will notify 100,000 users over 10 minutes.
-- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request, supporting up to 500 item updates per minute that can trigger back-in-stock notifications
-
+- Braze will process 10 requests to update catalog items per minute. Update endpoints allow for 50 item updates per request, supporting up to 500 item updates per minute that can trigger back-in-stock notifications.

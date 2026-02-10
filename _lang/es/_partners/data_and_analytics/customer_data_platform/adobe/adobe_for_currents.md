@@ -47,7 +47,7 @@ Para más información sobre los esquemas, consulta la documentación de Adobe s
     - Cambia el mapeado de `id` de `to _braze.appID` a `_id` en el nivel raíz del esquema.
     - Asegúrate de que `properties.is_amp` está mapeado en `_braze.messaging.email.isAMP`.
     - Elimina el mapeado `time` y `timestamp`, luego selecciona el icono añadir > **Añadir campo calculado** e introduce **tiempo * 1000**. Seleccione **Guardar**.
-    - Selecciona **Mapear campo de destino** junto al nuevo campo de origen y mapearlo a **marca de tiempo** en el nivel raíz del esquema. <br><br>![Página de Adobe "Añadir datos" con mapeados.]({% image_buster /assets/img/adobe/currents_mapping.png %})<br><br>
+    - Selecciona **Mapear campo de destino** junto al nuevo campo de origen y mapearlo a **marca de tiempo** en el nivel raíz del esquema. <br><br>![Página "Añadir datos" de Adobe con mapeados.]({% image_buster /assets/img/adobe/currents_mapping.png %})<br><br>
 6. Selecciona **Validar** para confirmar que has resuelto los problemas.
 
 {% alert important %}

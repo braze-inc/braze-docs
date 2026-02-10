@@ -1,13 +1,13 @@
 ---
 nav_title: Nachrichten von rechts nach links
-article_title: Erstellen von Nachrichten von rechts nach links
+article_title: Erstellen Sie Nachrichten von rechts nach links
 page_order: 1
 alias: /right_to_left_messages/
 page_type: reference
 description: "Auf dieser Seite finden Sie bewährte Verfahren für die Erstellung von Nachrichten in Braze, die von rechts nach links gelesen werden."
 ---
 
-# Erstellen von Nachrichten von rechts nach links
+# Nachrichten von rechts nach links erstellen
 
 > Wie Nachrichten von rechts nach links letztendlich aussehen, hängt weitgehend davon ab, wie Dienstanbieter (wie Apple, Android und Google) sie darstellen. Auf dieser Seite finden Sie bewährte Verfahren für die Gestaltung von Nachrichten von rechts nach links, damit Ihre Nachrichten so genau wie möglich angezeigt werden.
 

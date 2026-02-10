@@ -90,6 +90,8 @@ As the name implies, RCS text messages focus on text as a medium. If you type up
 {% tab Media %}
 RCS media messages allow you to use engaging media formats that aren't possible with SMS. These include image, video, and document files. These media options exist to help you engage your audience even more deeply and enable entirely new use cases. At the moment, only image uploading is supported through the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). 
 
+{% multi_lang_include alerts/important_alerts.md alert='dynamic image URL' %}
+
 #### Features
 
 - Media message types support everything available in text message types, which includes text, suggested replies, and suggested actions.
