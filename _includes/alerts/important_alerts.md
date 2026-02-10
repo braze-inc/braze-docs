@@ -6,6 +6,30 @@ A [new version of the Shopify integration]({{site.baseurl}}/partners/shopify/#ne
 
 {% endif %}
 
+{% if include.alert == 'Web push private browsing' %}
+
+{% alert important %}
+Private browsing windows do not support web push.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'BCC address billable emails' %}
+
+{% alert important %}
+Appending a BCC address to your campaign or Canvas results in doubling your billable emails for the campaign or Canvas component since Braze sends one message to your user and one to your BCC address.
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Android notification priority' %}
+
+{% alert important %}
+The Notification Display Priority setting is no longer used on devices running Android O or later. On these devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
+{% endalert %}
+
+{% endif %}
+
 {% if include.alert == "Email via SMS" %}
 
 {% alert important %}
@@ -74,10 +98,17 @@ If you're participating in the Canvas Context early access, Canvas entry propert
 
 {% endif %}
 
-{% if include.alert == 'dynamic image URL' %}
+{% if include.alert == 'time filter types' %}
 
 {% alert important %}
-You can pull in dynamic images by using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) or [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in the image URL field, but your image URL must begin with `https://`. Using `http://` may cause issues with your message.
+**Choosing between "Day of year" and "Time" filter types**: When filtering context variables that contain dates, choose the correct comparison type based on whether the date repeats every year:
+
+- **Use "Day of year"** when the date repeats every year (for example, birthdays, anniversaries, or holidays like Christmas). This comparison type calculates based on the day of the year (1-365/366), ignoring the year component.
+- **Use "Time"** when the date is an absolute date that doesn't repeat (for example, contract end dates, appointment dates, or subscription renewal dates). This comparison type calculates based on the full timestamp, including the year.
+
+Using "Day of year" for absolute dates can produce incorrect or unexpected results because the calculation ignores the year component. For example, if you're comparing a future contract end date in April to determine if it's within 63 days, using "Day of year" may incorrectly match dates because it only compares day numbers (119 vs 359) without considering that April is actually 188 days away.
+
+**General guideline**: Does the date repeat every year? **Yes** → Use "Day of year". **No** → Use "Time".
 {% endalert %}
 
 {% endif %}

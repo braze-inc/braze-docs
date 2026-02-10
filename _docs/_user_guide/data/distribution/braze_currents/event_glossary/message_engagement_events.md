@@ -77,7 +77,11 @@ If complete consistency is required, we recommend waiting an hour from the last 
 {% api %}
 ## Agent executed events {#agent-executed-events}
 
-Kafka record schema for when an Agent Console agent is executed
+{% apitags %}
+Agent
+{% endapitags %}
+
+This is the Kafka record schema for when an Agent Console agent is executed.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -124,7 +128,11 @@ Kafka record schema for when an Agent Console agent is executed
 {% api %}
 ## Tool invocation events {#tool-invocation-events}
 
-Kafka record schema for when a tool is executed
+{% apitags %}
+Agent
+{% endapitags %}
+
+This is the Kafka record schema for when a tool is executed.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -723,24 +731,8 @@ Subscription groups are only available for email, SMS, RCS, and WhatsApp channel
 {% endtab %}
 {% endtabs %}
 
-#### Property details
-
-- `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
-- `state_change_source` will return a string of the full source name. For example, the source CSV import will return the string `CSV Import`. Available sources are listed below:
-
-| Source | Description |
-| --- | --- |
-| SDK | SDK endpoints |
-| Dashboard | When a user's subscription state is updated from the User Profile page in Dashboard |
-| Subscription Page | When a user unsubscribes through an email link that is not the preference center |
-| REST API | REST API endpoints |
-| CSV import | CSV user import |
-| Preference Center | When a user is updated from the preference center |
-| Inbound Message | When a user is updated by inbound messages from end-users through channels such as SMS |
-| Migration | When a user is updated by internal migrations or maintenance scripts |
-| User Merge | When a user is updated by the user merge process |
-| Canvas User Update Step | When a user is updated by the Canvas user update step |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+#### Property details {#property-details}
+{% include currents/property_details_dispatch_state_source.md %}
 
 {% endapi %}
 
@@ -2412,6 +2404,10 @@ This event occurs when an originally scheduled banner message was aborted for so
 {% endtab %}
 {% endtabs %}
 
+#### Property details
+
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Banner messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -3008,6 +3004,8 @@ This event occurs if a Content Card message was aborted based on Liquid aborts, 
 #### Property details
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 Content Card messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -4114,6 +4112,8 @@ This event occurs if an email message was aborted based on Liquid aborts, etc.
 #### Property details
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 email messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -5495,7 +5495,11 @@ It's known behavior that the email open event fields `device_model` and `mailbox
 {% api %}
 ## Email Retry events {#email-retry-events}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+{% apitags %}
+Email, Retry
+{% endapitags %}
+
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -6768,6 +6772,11 @@ This event occurs when an originally scheduled in-app message was aborted.
 {% endtab %}
 {% endtabs %}
 
+#### Property details
+
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 in-app messages every 1 week`
+
 {% endapi %}
 
 {% api %}
@@ -7452,6 +7461,9 @@ This event occurs when a scheduled LINE message cannot be delivered, before send
 #### Property details
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 LINE messages every 1 week`
+
 {% endapi %}
 
 {% api %}
@@ -7870,9 +7882,13 @@ This event occurs when a LINE message is received from a user.
 {% endapi %}
 
 {% api %}
-## Line Retry events {#line-retry-events}
+## LINE Retry events {#line-retry-events}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+{% apitags %}
+LINE, Retry
+{% endapitags %}
+
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -8763,6 +8779,8 @@ This event occurs if a push notification message was aborted based on Liquid abo
 #### Property details
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 push messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -9394,7 +9412,11 @@ In rare cases, a push open may appear before the corresponding push send event i
 {% api %}
 ## Push Notification Retry events {#push-notification-retry-events}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+{% apitags %}
+Push, Retry
+{% endapitags %}
+
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -10001,6 +10023,10 @@ This event is created when an RCS send is interrupted due to an error detected w
 {% endtab %}
 {% endtabs %}
 
+#### Property details
+
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 RCS messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -11381,6 +11407,10 @@ This event occurs if an SMS message was aborted based on Liquid aborts, etc.
 {% endtab %}
 {% endtabs %}
 
+#### Property details
+
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 SMS messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -12429,7 +12459,11 @@ This event occurs when an SMS send gets rejected by the carrier. This can happen
 {% api %}
 ## SMS Retry events {#sms-retry-events}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+{% apitags %}
+SMS, Retry
+{% endapitags %}
+
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -13209,6 +13243,8 @@ This event occurs if a webhook message was aborted based on Liquid aborts, etc.
 #### Property details
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 webhook messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -13443,7 +13479,11 @@ This event occurs if a webhook message was delivered but failed with an error re
 {% api %}
 ## Webhook Retry events {#webhook-retry-events}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+{% apitags %}
+Webhooks, Retry
+{% endapitags %}
+
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
@@ -14027,6 +14067,8 @@ This event occurs if a WhatsApp message was aborted based on Liquid aborts, etc.
 #### Property details
 
 - `dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).
+- `abort_type` will be `frequency_capped` if the message was aborted due to a global frequency cap rule. 
+- `abort_log` includes information about the specific rule that triggered the abort. An example is: `Frequency cap rule: 5 WhatsApp messages every 1 week`
 {% endapi %}
 
 {% api %}
@@ -15135,7 +15177,11 @@ This event occurs when an WhatsApp message is read by the user.
 {% api %}
 ## WhatsApp Retry events {#whatsapp-retry-events}
 
-This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers
+{% apitags %}
+WhatsApp, Retry
+{% endapitags %}
+
+This event occurs when a message is deprioritized or frequency capped and will be retried later within the configured retry window. This is only available for Message Prioritization beta customers.
 
 {% tabs %}
 {% tab Cloud Storage %}
