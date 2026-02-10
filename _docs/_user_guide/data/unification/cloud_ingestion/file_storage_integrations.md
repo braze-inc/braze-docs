@@ -183,8 +183,8 @@ Give the role a name and a description, and select **Create Role**.
 
 ![An example role named "new-role-name".]({% image_buster /assets/img/create_role_4_name.png %})
 
-{: start="7"}
-7. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
+{: start="8"}
+8. Take note of the ARN of the role you created and the external ID you generated, because you need them to create the Cloud Data Ingestion integration.
 
 ## Setting up Cloud Data Ingestion in Braze
 
