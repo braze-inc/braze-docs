@@ -24,16 +24,6 @@ If engagement is moderate, they may continue to throttle your email to collect m
 
 If your domain or IP is blocked by an ISP, the message logs in the [Message Activity Log]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/) will contain information about what websites to visit to appeal to these ISPs and to get off those lists.
 
-## Automated IP warming
-
-You can use automated IP warming to gradually increase your daily send volume, allowing inbox providers to learn and trust your sending patterns. Monitor your IP warming tracker by selecting the **Automated IP Warming** tile in the **Pick up where you left off** section of your home dashboard. 
-
-{% include early_access_beta_alert.md feature='Automated IP warming' %}
-
-Braze sends to your most engaged subscribers first, which allows daily volume to grow at a pace that matches best practices. Then, Braze tracks engagement and deliverability signals. If any issues are detected, your schedule is adjusted automatically.
-
-![IP warming tracker with send volume for the week of January 16.]({% image_buster /assets/img/automated_ip_warming_example.png %})
-
 ## IP warming schedules
 
 We strongly recommend adhering to this IP warming schedule strictly to support deliverability. It's also important that you don't skip days, as consistent scaling improves delivery metrics.
