@@ -17,7 +17,7 @@ Private browsing windows do not support web push.
 {% if include.alert == 'BCC address billable emails' %}
 
 {% alert important %}
-Appending a BCC address to your campaign or Canvas will result in doubling your billable emails for the campaign or Canvas component since Braze will send one message to your user and one to your BCC address.
+Appending a BCC address to your campaign or Canvas results in doubling your billable emails for the campaign or Canvas component since Braze sends one message to your user and one to your BCC address.
 {% endalert %}
 
 {% endif %}
