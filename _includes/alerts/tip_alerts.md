@@ -448,57 +448,49 @@ function updateSMSSplit(){
     $('#sms_segments_data').html(segmentsHtml);
 }
 // Enhanced hover functionality with three-way highlighting
-$("#sms_segments_data").mouseover(function(e){
-  if(e.target.id.startsWith("sms_segments_data_")) {
-    const segmentIndex = e.target.id.split("sms_segments_data_")[1];
-    const messageOutputElement = `#message_output_data_${segmentIndex}`;
-    const charIndex = $(messageOutputElement).attr('data-char-index');
-    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
+// Using mouseenter/mouseleave to avoid handler accumulation
+$("#sms_segments_data").on("mouseenter", "[id^='sms_segments_data_']", function(e){
+  const segmentIndex = e.target.id.split("sms_segments_data_")[1];
+  const messageOutputElement = `#message_output_data_${segmentIndex}`;
+  const charIndex = $(messageOutputElement).attr('data-char-index');
+  const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
 
-    let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
-    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+  let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
+  if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
 
-    $(elementsToHighlight).addClass("hover_segment");
-    $(`#${e.target.id}`).mouseleave(function() {
-      $(elementsToHighlight).removeClass("hover_segment");
-    });
-  }
+  $(elementsToHighlight).addClass("hover_segment");
+}).on("mouseleave", "[id^='sms_segments_data_']", function(e){
+  $(".hover_segment").removeClass("hover_segment");
 });
 
-$("#sms_output").mouseover(function(e){
-  if(e.target.id.startsWith("message_output_data_")) {
-    const segmentIndex = e.target.id.split("message_output_data_")[1];
+$("#sms_output").on("mouseenter", "[id^='message_output_data_']", function(e){
+  const segmentIndex = e.target.id.split("message_output_data_")[1];
+  const segmentElement = `#sms_segments_data_${segmentIndex}`;
+  const charIndex = $(e.target).attr('data-char-index');
+  const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
+
+  let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
+  if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+  $(elementsToHighlight).addClass("hover_segment");
+}).on("mouseleave", "[id^='message_output_data_']", function(e){
+  $(".hover_segment").removeClass("hover_segment");
+});
+
+$("#character_encoding").on("mouseenter", "[id^='character_encoding_data_']", function(e){
+  const charIndex = e.target.id.split("character_encoding_data_")[1];
+  const messageOutputElement = $(`[data-char-index='${charIndex}']`);
+  const messageOutputId = messageOutputElement.attr('id');
+
+  if(messageOutputId) {
+    const segmentIndex = messageOutputId.split("message_output_data_")[1];
     const segmentElement = `#sms_segments_data_${segmentIndex}`;
-    const charIndex = $(e.target).attr('data-char-index');
-    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
 
-    let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
-    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
-
+    const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
     $(elementsToHighlight).addClass("hover_segment");
-    $(`#${e.target.id}`).mouseleave(function() {
-      $(elementsToHighlight).removeClass("hover_segment");
-    });
   }
-});
-
-$("#character_encoding").mouseover(function(e){
-  if(e.target.id.startsWith("character_encoding_data_")) {
-    const charIndex = e.target.id.split("character_encoding_data_")[1];
-    const messageOutputElement = $(`[data-char-index='${charIndex}']`);
-    const messageOutputId = messageOutputElement.attr('id');
-
-    if(messageOutputId) {
-      const segmentIndex = messageOutputId.split("message_output_data_")[1];
-      const segmentElement = `#sms_segments_data_${segmentIndex}`;
-
-      const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
-      $(elementsToHighlight).addClass("hover_segment");
-      $(`#${e.target.id}`).mouseleave(function() {
-        $(elementsToHighlight).removeClass("hover_segment");
-      });
-    }
-  }
+}).on("mouseleave", "[id^='character_encoding_data_']", function(e){
+  $(".hover_segment").removeClass("hover_segment");
 });
 $('#segment_section').click(function() {
   if($(this).is(":checked")) {
