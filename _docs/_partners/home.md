@@ -388,4 +388,10 @@ valid_partner_list:
   url: /docs/partners/dots.eco/
 - name: Mailizio
   url: /docs/partners/mailizio/
+- name: OpenAI
+  url: /docs/partners/openai/
+- name: Google Gemini
+  url: /docs/partners/gemini/
+- name: Anthropic
+  url: /docs/partners/anthropic/
 ---
