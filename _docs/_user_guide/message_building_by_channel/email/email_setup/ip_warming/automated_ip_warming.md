@@ -71,7 +71,7 @@ Changes made to the campaigns created from the IP warming tool (such as changing
 
 Review the details of your IP warming plan. Then, select **Launch**.
 
-## During active IP warmup
+## During active IP warming
 
 IP warming campaigns are created 1 to 2 days in advance, unless you are launching an IP warmup the next day. These campaigns are automatically named with the following format: `IP Warming Day [X] - [Date] - [Template Name]`.
 
@@ -86,7 +86,7 @@ The system monitors your health based on the following industry benchmarks:
 
 If stats are below our benchmarks, the system holds volume the next day rather than increasing the volume to mitigate risk to your sender reputation.
 
-## Stop an IP warm up plan
+## Stop an IP warmup plan
 
 Braze allows you to stop the IP warming and the creation of future campaigns, but if a campaign is already Active or scheduled for the next 24 to 48 hours, you may need to stop the specific campaign manually.
 
