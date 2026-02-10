@@ -32,7 +32,7 @@ To perform automated IP warming, you must have the following:
 - Permissions to view and launch an IP warmup
     - "View Usage Data" to view the IP warming section
     - "View Email Templates" to view and select the email templates for IP warming
-    - "Manage Email settings" to launch the IP warmup
+    - "Manage Email Settings" to launch the IP warmup
 - "Access Campaigns" 
 - "Approve and Deny Campaigns" if the approval workflow for campaigns is turned on 
     - Braze automatically approves the campaigns created from automated IP warming on your behalf.
