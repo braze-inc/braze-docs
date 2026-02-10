@@ -38,6 +38,7 @@ For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl
 <br>
 
 If you'd like to see how many segments your message will dispatch, enter your copy into the calculator. Note that this will not process or predict the output of Liquid or Connected Content.
+<!-- Note: This calculator uses fixed DOM IDs and global variables. Include only once per page to avoid conflicts. -->
 <style>
   .segment_data_hide {
     display: none;
@@ -118,6 +119,8 @@ If you'd like to see how many segments your message will dispatch, enter your co
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
+(function() {
+// SMS Segment Calculator - Note: Uses fixed DOM IDs, include only once per page
 var unicodeToGsm = {
 0x000A: [0x0A],
 0x000C: [0x1B, 0x0A],
@@ -448,57 +451,49 @@ function updateSMSSplit(){
     $('#sms_segments_data').html(segmentsHtml);
 }
 // Enhanced hover functionality with three-way highlighting
-$("#sms_segments_data").mouseover(function(e){
-  if(e.target.id.startsWith("sms_segments_data_")) {
-    const segmentIndex = e.target.id.split("sms_segments_data_")[1];
-    const messageOutputElement = `#message_output_data_${segmentIndex}`;
-    const charIndex = $(messageOutputElement).attr('data-char-index');
-    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
+// Using mouseenter/mouseleave to avoid handler accumulation
+$("#sms_segments_data").on("mouseenter", "[id^='sms_segments_data_']", function(e){
+  const segmentIndex = e.target.id.split("sms_segments_data_")[1];
+  const messageOutputElement = `#message_output_data_${segmentIndex}`;
+  const charIndex = $(messageOutputElement).attr('data-char-index');
+  const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
 
-    let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
-    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+  let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
+  if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
 
-    $(elementsToHighlight).addClass("hover_segment");
-    $(`#${e.target.id}`).mouseleave(function() {
-      $(elementsToHighlight).removeClass("hover_segment");
-    });
-  }
+  $(elementsToHighlight).addClass("hover_segment");
+}).on("mouseleave", "[id^='sms_segments_data_']", function(e){
+  $(".hover_segment").removeClass("hover_segment");
 });
 
-$("#sms_output").mouseover(function(e){
-  if(e.target.id.startsWith("message_output_data_")) {
-    const segmentIndex = e.target.id.split("message_output_data_")[1];
+$("#sms_output").on("mouseenter", "[id^='message_output_data_']", function(e){
+  const segmentIndex = e.target.id.split("message_output_data_")[1];
+  const segmentElement = `#sms_segments_data_${segmentIndex}`;
+  const charIndex = $(e.target).attr('data-char-index');
+  const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
+
+  let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
+  if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+  $(elementsToHighlight).addClass("hover_segment");
+}).on("mouseleave", "[id^='message_output_data_']", function(e){
+  $(".hover_segment").removeClass("hover_segment");
+});
+
+$("#character_encoding").on("mouseenter", "[id^='character_encoding_data_']", function(e){
+  const charIndex = e.target.id.split("character_encoding_data_")[1];
+  const messageOutputElement = $(`[data-char-index='${charIndex}']`);
+  const messageOutputId = messageOutputElement.attr('id');
+
+  if(messageOutputId) {
+    const segmentIndex = messageOutputId.split("message_output_data_")[1];
     const segmentElement = `#sms_segments_data_${segmentIndex}`;
-    const charIndex = $(e.target).attr('data-char-index');
-    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}` : null;
 
-    let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
-    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
-
+    const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
     $(elementsToHighlight).addClass("hover_segment");
-    $(`#${e.target.id}`).mouseleave(function() {
-      $(elementsToHighlight).removeClass("hover_segment");
-    });
   }
-});
-
-$("#character_encoding").mouseover(function(e){
-  if(e.target.id.startsWith("character_encoding_data_")) {
-    const charIndex = e.target.id.split("character_encoding_data_")[1];
-    const messageOutputElement = $(`[data-char-index='${charIndex}']`);
-    const messageOutputId = messageOutputElement.attr('id');
-
-    if(messageOutputId) {
-      const segmentIndex = messageOutputId.split("message_output_data_")[1];
-      const segmentElement = `#sms_segments_data_${segmentIndex}`;
-
-      const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
-      $(elementsToHighlight).addClass("hover_segment");
-      $(`#${e.target.id}`).mouseleave(function() {
-        $(elementsToHighlight).removeClass("hover_segment");
-      });
-    }
-  }
+}).on("mouseleave", "[id^='character_encoding_data_']", function(e){
+  $(".hover_segment").removeClass("hover_segment");
 });
 $('#segment_section').click(function() {
   if($(this).is(":checked")) {
@@ -524,6 +519,7 @@ $('#sms_split input[name=sms_type]').change(function(e){
     $('#auto_encoding').html("");
     updateSMSSplit();
 });
+})(); // End IIFE
 </script>
 
 {% endalert %}
