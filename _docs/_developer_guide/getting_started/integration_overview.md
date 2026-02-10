@@ -129,7 +129,7 @@ When fully integrated with your app or site, the Braze SDK offers a completely-r
 {% endalert %}
 
 {% alert note %}
-To add an additional layer of security, you can optionally enable [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) to prevent unauthorized SDK requests. This feature is available across all major platforms including Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin), and Expo.
+To add an additional layer of security, you can enable [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) to prevent unauthorized SDK requests. This feature is available across all major platforms including Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin), and Expo.
 {% endalert %}
 
 During SDK implementation, you will:
