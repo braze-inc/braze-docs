@@ -19,7 +19,7 @@ SCIM provisioning is currently in early access. Contact your Braze account manag
 ## Accessing SCIM provisioning settings
 
 1. In the Braze dashboard, go to **Settings** > **Admin Settings** > **SCIM Provisioning**, and then select **Configure SCIM integration**.
-2. In the **Braze provisioning** step, select a provisioning method and provide access settings.
+2. In the **Braze configuration** step, select a provisioning method and provide access settings.
 
 ![A page to set up the SCIM integration with sections for selecting a provisioning method and providing access settings.]({% image_buster /assets/img_archive/scim_braze_config.png %}){: style="max-width:70%;"}
 
@@ -40,8 +40,8 @@ Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in 
 ### Step 1.1: Enable SCIM
 
 1. In Okta, go to **Applications** > **Applications**, then select **Create App Integration**. Select **SAML 2.0** as the sign-in method.
-2. Fill in the following details to create a custom app:
-- Braze app logo
+2. Fill in the following details, found in your Braze dashboard, to create a custom app:
+- App logo
 - Single sign-on URL
 - Audience URL (SP entity ID)
 3. Select **Finish**.
