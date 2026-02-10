@@ -180,7 +180,7 @@ SDK Authentication must be enabled as part of initializing the SDK in native iOS
 To enable SDK Authentication, set the `configuration.api.sdkAuthentication` property to `true` in your native iOS code:
 
 ```swift
-let configuration = Braze.Configuration(apiKey: "YOUR-API-KEY", endpoint: "YOUR-ENDPOINT")
+let configuration = Braze.Configuration(apiKey: "{YOUR-BRAZE-API-KEY}", endpoint: "{YOUR-BRAZE-ENDPOINT}")
 configuration.api.sdkAuthentication = true
 let braze = Braze(configuration: configuration)
 ```
@@ -232,7 +232,7 @@ To enable SDK Authentication, set the `enableSDKAuthentication` property to `tru
 
 After enabling SDK Authentication in the native layer, you can use the Cordova JavaScript methods shown in the following steps.
 {% endtab %}
-{% tab .NET MAUI (XAMARIN) %}
+{% tab .NET MAUI (Xamarin) %}
 SDK Authentication must be enabled during native SDK initialization. Configure SDK Authentication separately for iOS and Android:
 
 **iOS**
@@ -442,7 +442,7 @@ Or, when you have refreshed the user's token mid-session:
 BrazePlugin.setSdkAuthenticationSignature("NEW-JWT-FROM-SERVER");
 ```
 {% endtab %}
-{% tab .NET MAUI (XAMARIN) %}
+{% tab .NET MAUI (Xamarin) %}
 
 Supply the JWT when calling `ChangeUser`:
 
@@ -593,8 +593,8 @@ func braze(_ braze: Braze, sdkAuthenticationFailedWithError error: Braze.SDKAuth
 {% tab Dart %}
 ```dart
 braze.setBrazeSdkAuthenticationErrorCallback((BrazeSdkAuthenticationError error) async {
-  print("Invalid SDK Authentication Token.")
-  let newSignature = getNewTokenSomehow(error)
+  print("Invalid SDK Authentication Token.");
+  final newSignature = getNewTokenSomehow(error);
   braze.setSdkAuthenticationSignature(newSignature);
 });
 ```
@@ -649,7 +649,7 @@ BrazePlugin.subscribeToSdkAuthenticationFailures((error) => {
 });
 ```
 {% endtab %}
-{% tab .NET MAUI (XAMARIN) %}
+{% tab .NET MAUI (Xamarin) %}
 **iOS**
 
 Set the SDK authentication delegate on your `Braze` instance:
