@@ -12,7 +12,7 @@ En [Google Tag Manager](https://tagmanager.google.com/), elige tu espacio de tra
 
 En la galería de plantillas, busca `braze-inc`, y luego selecciona **Etiqueta de inicialización Braze**.
 
-![La galería de plantillas que muestra las distintas plantillas 'braze-inc'.]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
+![La galería de plantillas que muestra las distintas plantillas "braze-inc".]({% image_buster /assets/img/web-gtm/template_gallery_results.png %}){: style="max-width:80%;"}
 
 Selecciona **Añadir al espacio de trabajo** > **Añadir**.
 
@@ -26,7 +26,7 @@ En la sección **Plantillas**, selecciona la plantilla que acabas de añadir.
 
 Selecciona el icono del lápiz para abrir el desplegable **Configuración de etiquetas**.
 
-![El mosaico de Configuración de Etiquetas con el icono del "lápiz" mostrado.]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
+![Se muestra el mosaico de Configuración de etiquetas con el icono del "lápiz".]({% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %})
 
 Introduce la información mínima requerida:
 
@@ -39,7 +39,7 @@ Introduce la información mínima requerida:
 
 Para otras configuraciones de inicialización, selecciona **Opciones de Inicialización de Braze** y elige las opciones que necesites.
 
-![La lista de Opciones de Inicialización de Braze en 'Configuración de Etiquetas'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
+![La lista de Opciones de Inicialización de Braze está en 'Configuración de etiquetas'.]({% image_buster /assets/img/web-gtm/braze_initialization_options.png %}){: style="max-width:65%;"}
 
 ### Paso 4: Configurar para desencadenar en *todas las páginas*
 

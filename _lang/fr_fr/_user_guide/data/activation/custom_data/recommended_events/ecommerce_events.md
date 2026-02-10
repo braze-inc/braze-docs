@@ -21,7 +21,7 @@ Braze reconnaît que la planification des données prend du temps. Nous encourag
 
 {% multi_lang_include alerts/important_alerts.md alert='Purchase event deprecation' %}
 
-Toute devise autre que le dollar américain s'affichera dans Braze en dollars américains, sur la base du taux de change en vigueur à la date de la déclaration. Pour éviter la conversion des devises, coder en dur la devise en USD.
+Toute devise autre que le dollar américain s'affichera dans Braze en dollars américains, sur la base du taux de change en vigueur à la date de la déclaration. Pour éviter la conversion des devises, codifiez en dur la devise en USD.
 
 {% tabs %}
 {% tab ecommerce.product_viewed %}
@@ -30,14 +30,14 @@ Vous pouvez utiliser l'événement "produit consulté" pour déclencher une acti
 
 #### Propriétés
 
-| Nom du bien | Exigée | Type de données | Description | 
+| Nom de la propriété | Requis | Type de données | Description | 
 |---|---|---|---|
 | `product_id` | Oui | Chaîne de caractères | Identifiant unique du produit consulté. <br> Pour les clients non-Shopify, il s'agira de la valeur que vous définissez pour les ID d'articles du catalogue, comme les UGS. |
 | `product_name` | Oui | Chaîne de caractères | Le nom du produit qui a été consulté. | 
 | `variant_id` | Oui | Chaîne de caractères | Un identifiant unique pour la variante du produit. En voici un exemple `shirt_medium_blue` |
 | `image_url` | Non | Chaîne de caractères | URL de l'image du produit. |
 | `product_url` | Non | Chaîne de caractères | URL vers la page du produit pour plus de détails. |
-| `price` | Oui | Float | Le prix unitaire variante du produit au moment de la consultation. |
+| `price` | Oui | float | Le prix unitaire variante du produit au moment de la consultation. |
 | `currency` | Oui | Chaîne de caractères | La devise dans laquelle le prix du produit est indiqué (par exemple "USD" ou "EUR") au [format ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
 | `source` | Oui | Chaîne de caractères | Source d'où provient l'événement. (Pour Shopify, il s'agit de storefront). |
 | `metadata` | Non | Objet | |
@@ -186,19 +186,19 @@ S'il y a deux paniers, ajoutez les deux à l'utilisateur fusionné. Remettez le 
 
 #### Propriétés
 
-| Nom du bien | Exigée | Type de données | Description | 
+| Nom de la propriété | Requis | Type de données | Description | 
 |---|---|---|---|
-| `cart_id` | Oui | Chaîne de caractères | Identifiant unique du panier. Si aucune valeur n'est transmise, nous déterminerons une valeur par défaut (partagée entre les événements panier, caisse et commande) pour le mappage du panier de l'utilisateur. |
-| `total_value` | Oui | Float | Valeur monétaire totale du panier. | 
+| `cart_id` | Oui | Chaîne de caractères | Si vous n'utilisez pas une plateforme tierce qui fournit un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `total_value` | Oui | float | Valeur monétaire totale du panier. | 
 | `currency` | Oui | Chaîne de caractères | La devise dans laquelle le prix du produit est indiqué (par exemple "USD" ou "EUR") au [format ISO 4217](https://www.iso.org/iso-4217-currency-codes.html). |
-| `products` | Oui | Réseau |  |
+| `products` | Oui | Tableau |  |
 | `product_id` | Oui | Chaîne de caractères | Identifiant unique du produit consulté. <br> Cette valeur peut être l'ID du produit ou l'unité de gestion des stocks. |
 | `product_name` | Oui | Chaîne de caractères | Le nom du produit qui a été consulté. |
 | `variant_id` | Oui | Chaîne de caractères | Un identifiant unique pour la variante du produit. En voici un exemple `shirt_medium_blue` |
 | `image_url` | Non | Chaîne de caractères | URL de l'image du produit. |
 | `product_url` | Non | Chaîne de caractères | URL vers la page du produit pour plus de détails. |
 | `quantity` | Oui | Entier | Nombre d'unités du produit dans le panier. |
-| `price` | Oui | Float | Le prix unitaire variante du produit au moment de la consultation. |
+| `price` | Oui | float | Le prix unitaire variante du produit au moment de la consultation. |
 | `metadata` | Non | Objet | Champ de métadonnées supplémentaires sur le produit que le client souhaite ajouter pour ses cas d'utilisation. Pour Shopify, nous ajouterons l'unité de gestion des stocks. <br> Cette limite est basée sur la limite générale de 50 kb fixée pour les propriétés d'un événement. |
 | `sku` | Non | Chaîne de caractères | (Shopify uniquement) Unité de gestion des stocks Shopify. Ce champ peut être configuré comme le champ ID du catalogue. |
 | `source` | Oui | Chaîne de caractères | Source d'où provient l'événement. (Pour Shopify, il s'agit de storefront). |
@@ -361,20 +361,20 @@ Semblable à l'événement `ecommerce.cart_updated`, cet événement vous permet
 
 #### Propriétés
 
-| Nom du bien | Exigée | Type de données | Description | 
+| Nom de la propriété | Requis | Type de données | Description | 
 |---|---|---|---|
 | `checkout_id` | Oui | Chaîne de caractères | Identifiant unique de la caisse. |
-| `cart_id` | Non | Chaîne de caractères | Identifiant unique du panier. Si aucune valeur n'est transmise, nous déterminerons une valeur par défaut (partagée entre les événements panier, caisse et commande) pour le mappage du panier de l'utilisateur... | 
-| `total_value` | Oui | Float | Valeur monétaire totale du panier. |
+| `cart_id` | Non | Chaîne de caractères | Si vous n'utilisez pas une plateforme tierce qui fournit un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). | 
+| `total_value` | Oui | float | Valeur monétaire totale du panier. |
 | `currency` | Oui | Chaîne de caractères | Devise dans laquelle le panier est évalué. |
-| `products` | Oui | Tableau d'objets |  |
+| `products` | Oui | Tableau d’objets |  |
 | `product_id` | Oui | Chaîne de caractères | Identifiant unique du produit consulté. Par exemple, cette valeur peut être l'ID du produit ou l'unité de gestion des stocks. |
 | `product_name` | Oui | Chaîne de caractères | Le nom du produit qui a été consulté.  |
 | `variant_id` | Oui | Chaîne de caractères | Un identifiant unique pour la variante du produit. En voici un exemple `shirt_medium_blue` |
 | `image_url` | Non | Chaîne de caractères | URL de l'image du produit. |
 | `product_url` | Non | Chaîne de caractères | URL vers la page du produit pour plus de détails. |
 | `quantity` | Oui | Entier | Nombre d'unités du produit dans le panier. |
-| `price` | Oui | Float | Le prix unitaire variante du produit au moment de la consultation. |
+| `price` | Oui | float | Le prix unitaire variante du produit au moment de la consultation. |
 | `metadata` | Non | Objet | Champ de métadonnées supplémentaires sur le produit que le client souhaite ajouter pour ses cas d'utilisation. Pour Shopify, nous ajouterons l'unité de gestion des stocks. <br> Cette limite est basée sur la limite générale de 50 kb fixée pour les propriétés d'un événement. |
 | `sku` | Non | Chaîne de caractères | (Shopify uniquement) Unité de gestion des stocks Shopify. Ce champ peut être configuré comme le champ ID du catalogue. |
 | `source` | Oui | Chaîne de caractères | Source d'où provient l'événement. (Pour Shopify, il s'agit de storefront). |
@@ -527,31 +527,30 @@ Vous pouvez utiliser l'événement "commande passée" pour déclencher le proces
 
 #### Propriétés
 
-| Nom du bien | Exigée | Type de données | Description | 
+| Nom de la propriété | Requis | Type de données | Description | 
 |---|---|---|---|
 | `order_id` | Oui | Chaîne de caractères | Identifiant unique de la commande passée. |
-| `cart_id` | Non | Chaîne de caractères | Identifiant unique du panier. Si aucune valeur n'est transmise, nous déterminerons une valeur par défaut (partagée entre les événements panier, caisse et commande) pour le mappage du panier de l'utilisateur. |
-| `total_value` | Oui | Float | Valeur monétaire totale du panier. | 
+| `cart_id` | Non | Chaîne de caractères | Si vous n'utilisez pas une plateforme tierce qui fournit un `cart_id`, vous pouvez utiliser l'[ID de session de Braze]({{site.baseurl}}/developer_guide/analytics/tracking_sessions). |
+| `total_value` | Oui | float | Valeur monétaire totale du panier. | 
 | `currency` | Oui | Chaîne de caractères | Devise dans laquelle le panier est évalué. |
-| `total_discounts` | Non | Float | Montant total des réductions appliquées à la commande. | 
-| `discounts`| Non | Tableau d'objets | Liste détaillée des réductions appliquées à la commande. |
-| `products` | Oui | Tableau d'objets |  |
+| `total_discounts` | Non | float | Montant total des réductions appliquées à la commande. | 
+| `discounts`| Non | Tableau d’objets | Liste détaillée des réductions appliquées à la commande. |
+| `products` | Oui | Tableau d’objets |  |
 | `product_id` | Oui | Chaîne de caractères | Identifiant unique du produit consulté. Cette valeur peut être l'ID du produit ou l'unité de gestion des stocks. |
 | `product_name` | Oui | Chaîne de caractères | Le nom du produit qui a été consulté. |
 | `variant_id` | Oui | Chaîne de caractères | Un identifiant unique pour la variante du produit. En voici un exemple `shirt_medium_blue` |
 | `image_url` | Non | Chaîne de caractères | URL de l'image du produit. |
 | `product_url` | Non | Chaîne de caractères | URL vers la page du produit pour plus de détails. |
 | `quantity` | Oui | Entier | Nombre d'unités du produit dans le panier. |
-| `price` | Oui | Float | Le prix unitaire variante du produit au moment de la consultation. |
+| `price` | Oui | float | Le prix unitaire variante du produit au moment de la consultation. |
 | `metadata` | Non | Objet | Champ de métadonnées supplémentaires sur le produit que le client souhaite ajouter pour ses cas d'utilisation. Pour Shopify, nous ajouterons l'unité de gestion des stocks. <br> Cette limite est basée sur la limite générale de 50 kb fixée pour les propriétés d'un événement. |
 | `sku` | Non | Chaîne de caractères | (Shopify uniquement) Unité de gestion des stocks Shopify. Ce champ peut être configuré comme le champ ID du catalogue. |
 | `source` | Oui | Chaîne de caractères | Source d'où provient l'événement. (Pour Shopify, il s'agit de storefront). |
-| `metadata` | Non | Objet |  |
 | `order_status_url` | Non | Chaîne de caractères | URL pour consulter le statut de la commande. |
 | `order_number` | Non | Chaîne de caractères | (Shopify uniquement) Numéro de commande unique pour la commande passée. |
-| `tags` | Non | Réseau | (Shopify uniquement) Tags de commande
+| `tags` | Non | Tableau | (Shopify uniquement) Tags de commande
 | `referring_site` | Non | Chaîne de caractères | (Shopify uniquement) Le site d'où provient la commande (comme Meta). |
-| `payment_gateway_names` | Non | Réseau | (Shopify uniquement) Source du système de paiement (point de vente ou mobile). |
+| `payment_gateway_names` | Non | Tableau | (Shopify uniquement) Source du système de paiement (point de vente ou mobile). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Exemples d'objets
@@ -745,21 +744,21 @@ Vous pouvez utiliser l'événement "commande remboursée" pour déclencher le re
 
 #### Propriétés
 
-| Nom du bien       | Exigée | Type de données | Description   |
+| Nom de la propriété       | Requis | Type de données | Description   |
 |---------------|---------|-----------|-------------------------|
 | `order_id`            | Oui      | Chaîne de caractères    | Identifiant unique de la commande passée.        |
-| `total_value`         | Oui      | Float     | Valeur monétaire totale du panier.    |
+| `total_value`         | Oui      | float     | Valeur monétaire totale du panier.    |
 | `currency`            | Oui      | Chaîne de caractères    | Devise dans laquelle le panier est évalué.    |
-| `total_discounts`     | Non       | Float     | Montant total des réductions appliquées à la commande.   |
-| `discounts`           | Non       | Tableau d'objets     | Liste détaillée des réductions appliquées à la commande. |
-| `products`            | Oui      | Tableau d'objets     |  |
+| `total_discounts`     | Non       | float     | Montant total des réductions appliquées à la commande.   |
+| `discounts`           | Non       | Tableau d’objets     | Liste détaillée des réductions appliquées à la commande. |
+| `products`            | Oui      | Tableau d’objets     |  |
 | `product_id`       | Oui      | Chaîne de caractères    | Identifiant unique du produit consulté. Cette valeur peut être l'ID du produit, l'unité de gestion des stocks ou une valeur similaire. <br>Si un remboursement partiel est effectué et qu'aucune adresse `product_id` n'est attribuée au remboursement (par exemple, un remboursement au niveau de la commande), fournissez une adresse généralisée `product_id`.             |
 | `product_name`     | Oui      | Chaîne de caractères    | Le nom du produit qui a été consulté.                                                                      |
 | `variant_id`       | Oui      | Chaîne de caractères    | Un identifiant unique pour la variante du produit (tel que `shirt_medium_blue`).                                         |
 | `image_url`        | Non       | Chaîne de caractères    | URL de l'image du produit.     |
 | `product_url`      | Non       | Chaîne de caractères    | URL vers la page du produit pour plus de détails.  |
 | `quantity`         | Oui      | Entier   | Nombre d'unités du produit dans le panier.   |
-| `price`            | Oui      | Float     | Le prix unitaire variante du produit au moment de la consultation.  |
+| `price`            | Oui      | float     | Le prix unitaire variante du produit au moment de la consultation.  |
 | `metadata`         | Non       | Objet    | Champ de métadonnées supplémentaires sur le produit que le client souhaite ajouter pour ses cas d'utilisation. Pour Shopify, nous ajouterons l'unité de gestion des stocks. Cette limite est basée sur la limite générale de 50 kb fixée pour les propriétés d'un événement. |
 | `sku`            | Non       | Chaîne de caractères    | (Shopify uniquement) Unité de gestion des stocks Shopify. Ce champ peut être configuré comme le champ ID du catalogue.  |
 | `source`              | Oui      | Chaîne de caractères    | Source d'où provient l'événement. (Pour Shopify, il s'agit de storefront).    |
@@ -767,7 +766,7 @@ Vous pouvez utiliser l'événement "commande remboursée" pour déclencher le re
 | `order_status_url`  | Non       | Chaîne de caractères    | URL pour consulter le statut de la commande.     |
 | `order_note`       | Non       | Chaîne de caractères    | (Shopify uniquement) Note ajoutée à la commande par le commerçant.    |
 | `order_number`     | Non       | Chaîne de caractères    | (Shopify uniquement) Numéro de commande unique pour la commande passée.   |
-| `tags`             | Non       | Réseau     | (Shopify uniquement) Tags de la commande.  |
+| `tags`             | Non       | Tableau     | (Shopify uniquement) Tags de la commande.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Exemples d'objets
@@ -953,29 +952,29 @@ Vous pouvez utiliser l'événement "commande annulée" pour déclencher l'annula
 
 #### Propriétés
 
-| Nom du bien      | Exigée | Type de données | Description       |
+| Nom de la propriété      | Requis | Type de données | Description       |
 |---------------------|----------|-----------|-------------------|
 | `order_id`            | Oui      | Chaîne de caractères    | Identifiant unique de la commande passée.              |
 | `cancel_reason`       | Oui      | Chaîne de caractères    | Raison pour laquelle la commande a été annulée.           |
-| `total_value`         | Oui      | Float     | Valeur monétaire totale du panier.         |
+| `total_value`         | Oui      | float     | Valeur monétaire totale du panier.         |
 | `currency`            | Oui      | Chaîne de caractères    | Devise dans laquelle le panier est évalué.           |
-| `total_discounts`     | Non       | Float     | Montant total des réductions appliquées à la commande.     |
-| `discounts`           | Non       | Tableau d'objets     | Liste détaillée des réductions appliquées à la commande.             |
-| `products`            | Oui      | Tableau d'objets     |         |
+| `total_discounts`     | Non       | float     | Montant total des réductions appliquées à la commande.     |
+| `discounts`           | Non       | Tableau d’objets     | Liste détaillée des réductions appliquées à la commande.             |
+| `products`            | Oui      | Tableau d’objets     |         |
 | `product_id`          | Oui      | Chaîne de caractères    | Identifiant unique du produit consulté. Cette valeur peut être l'ID du produit, l'unité de gestion des stocks ou une valeur similaire.             |
 | `product_name`        | Oui      | Chaîne de caractères    | Le nom du produit qui a été consulté.          |
 | `variant_id`          | Oui      | Chaîne de caractères    | Un identifiant unique pour la variante du produit (tel que `shirt_medium_blue`).        |
 | `image_url`           | Non       | Chaîne de caractères    | URL de l'image du produit.           |
 | `product_url`         | Non       | Chaîne de caractères    | URL vers la page du produit pour plus de détails.                                                                     |
 | `quantity`            | Oui      | Entier   | Nombre d'unités du produit dans le panier.        |
-| `price`               | Oui      | Float     | Le prix unitaire variante du produit au moment de la consultation.     |
+| `price`               | Oui      | float     | Le prix unitaire variante du produit au moment de la consultation.     |
 | `metadata`            | Non       | Objet    | Champ de métadonnées supplémentaires sur le produit que le client souhaite ajouter pour ses cas d'utilisation. Pour Shopify, nous ajouterons l'unité de gestion des stocks. Cette limite est basée sur la limite générale de 50 kb fixée pour les propriétés d'un événement. |
 | `sku`                 | Non       | Chaîne de caractères    | (Shopify uniquement) Unité de gestion des stocks Shopify. Ce champ peut être configuré comme le champ ID du catalogue.        |
 | `source`              | Oui      | Chaîne de caractères    | Source d'où provient l'événement. (Pour Shopify, il s'agit de storefront).    |
 | `metadata`            | Non       | Objet    |       |
 | `order_status_url`    | Non       | Chaîne de caractères    | URL pour consulter le statut de la commande.                                                                          |
 | `order_number`        | Non       | Chaîne de caractères    | (Shopify uniquement) Numéro de commande unique pour la commande passée.  |
-| `tags`                | Non       | Réseau     | (Shopify uniquement) Tags de la commande.            |
+| `tags`                | Non       | Tableau     | (Shopify uniquement) Tags de la commande.            |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation" }
 
 #### Exemples d'objets
@@ -1162,7 +1161,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.order_cancelled", properties:
 
 Braze a créé des modèles Canvas préconstruits qui sont alimentés par des événements personnalisés recommandés par l'eCommerce, comme le ciblage des clients qui ont commencé le processus de paiement mais sont partis avant de passer leur commande. Vous pouvez utiliser ces événements pour prendre des décisions éclairées afin d'améliorer votre parcours utilisateur en personnalisant les messages et en ciblant des audiences spécifiques.
 
-Consultez nos [cas d'utilisation]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) dédiés à [l'e-commerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) pour savoir comment utiliser ces événements avec les modèles Canvas.
+Consultez nos [cas d'utilisation dédiés à l'e-commerce]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases) pour savoir comment utiliser ces événements avec les modèles Canvas.
 
 ## Champs calculés par l'utilisateur
 
@@ -1174,4 +1173,4 @@ Nous utilisons des calculs normalisés pour les champs suivants :
 
 Ces calculs de champ d'utilisateur sont également inclus dans l'onglet **Transactions** des profils utilisateurs.
 
-!L'onglet "Transactions" avec des champs calculés par l'utilisateur.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![L'onglet "Transactions" avec les champs calculés par l'utilisateur.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}

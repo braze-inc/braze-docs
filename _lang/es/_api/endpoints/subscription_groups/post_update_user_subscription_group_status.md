@@ -1,6 +1,6 @@
 ---
-nav_title: "POST: Actualizar el estado del grupo de suscripción del usuario"
-article_title: "POST: Actualizar el estado del grupo de suscripción del usuario"
+nav_title: "PUBLICAR: Actualizar el estado del grupo de suscripción de los usuarios"
+article_title: "PUBLICAR: Actualizar el estado del grupo de suscripción del usuario"
 search_tag: Endpoint
 page_order: 4
 layout: api_page
@@ -13,7 +13,7 @@ description: "En este artículo se describen los detalles del punto final Actual
 /subscription/status/set
 {% endapimethod %}
 
-> Utiliza este punto final para actualizar por lotes el estado de suscripción de hasta 50 usuarios en el panel de Braze. 
+> Utiliza este punto final para actualizar por lotes el estado de suscripción de hasta 50 usuarios en el panel de Braze.
 
 Puedes acceder a la página `subscription_group_id` de un grupo de suscripción navegando a la página **Grupo de suscripción**.
 
@@ -29,6 +29,10 @@ Si quieres ver ejemplos o probar este punto final para **Grupos de suscripción 
 
 Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}/api/basics#rest-api-key/) con el permiso `subscription.status.set`.
 
+{% alert note %}
+Si estás interesado en utilizar este punto final con [grupos de suscripción de LINE]({{site.baseurl}}/user_guide/message_building_by_channel/line/line_users/subscription_groups/), ponte en contacto con tu administrador del éxito del cliente.
+{% endalert %}
+
 ## Límite de velocidad
 
 {% multi_lang_include rate_limits.md endpoint='subscription status set' %}
@@ -36,7 +40,7 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 ## Cuerpo de la solicitud
 
 {% tabs %}
-{% tab SMS y RCS %}
+{% tab SMS and RCS %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -48,13 +52,13 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
-   // SMS and RCS subscription group - one of external_id or phone is required
+   // SMS and RCS subscription group - you must include one of external_id or phone
  }
 ```
-\* Grupos de suscripción SMS y RCS: Solo se acepta `external_id` o `phone`.
+\* Grupos de suscripción SMS y RCS: Braze sólo acepta `external_id` o `phone`.
 
 {% endtab %}
-{% tab Correo electrónico %}
+{% tab Email %}
 ```
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -66,11 +70,11 @@ Authorization: Bearer YOUR-REST-API-KEY
    "subscription_state": (required, string) available values are "unsubscribed" (not in subscription group) or "subscribed" (in subscription group),
    "external_id": (required*, array of strings) the external ID of the user or users, may include up to 50 IDs,
    "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
-   // Email subscription group - one of external_id or email is required
-   // Note that sending an email address that is linked to multiple profiles will update all relevant profiles
+   // Email subscription group - you must include one of external_id or email
+   // Note that sending an email address that is linked to multiple profiles updates all relevant profiles
  }
 ```
-\* Grupos de suscripción por correo electrónico: Se requiere `email` o `external_id`.
+\* Grupos de suscripción por correo electrónico: Debes incluir `email` o `external_id`.
 {% endtab %}
 {% endtabs %}
 
@@ -87,8 +91,8 @@ Al crear nuevos usuarios utilizando el punto final [/users/track]({{site.baseurl
 | [`subscription_group_id`]({{site.baseurl}}/api/identifier_types/?tab=subscription%20group%20ids) | Obligatoria | Cadena | La dirección `id` de su grupo de suscripción. |
 | `subscription_state` | Obligatoria | Cadena | Los valores disponibles son `unsubscribed` (no en el grupo de suscripción) o `subscribed` (en el grupo de suscripción). |
 | `external_id` | Requerido* | Matriz de cadenas | El `external_id` del usuario o usuarios, puede incluir hasta 50 `id`s. |
-| `email` | Requerido* | Cadena o matriz de cadenas | La dirección de correo electrónico del usuario, se puede pasar como una matriz de cadenas. Debes incluir al menos una dirección de correo electrónico (con un máximo de 50). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten la misma dirección de correo electrónico, todos los usuarios que compartan la dirección de correo electrónico se actualizarán con los cambios del grupo de suscripción. |
-| `phone` | Requerido* | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | El número de teléfono del usuario, puede pasarse como una matriz de cadenas. Debe incluir al menos un número de teléfono (hasta 50). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten el mismo número de teléfono, todos los usuarios que comparten el número de teléfono se actualizan con los mismos cambios de grupo de suscripción. |
+| `email` | Requerido* | Cadena o matriz de cadenas | La dirección de correo electrónico del usuario, se puede pasar como una matriz de cadenas. Debe incluir al menos una dirección de correo electrónico (con un máximo de 50). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten la misma dirección de correo electrónico, entonces Braze actualiza a todos los usuarios que comparten la dirección de correo electrónico con los cambios del grupo de suscripción. |
+| `phone` | Requerido* | Cadena en [E.164](https://en.wikipedia.org/wiki/E.164) formato | El número de teléfono del usuario, puede pasarse como una matriz de cadenas. Debe incluir al menos un número de teléfono (hasta 50). <br><br>Si varios usuarios (`external_id`) del mismo espacio de trabajo comparten el mismo número de teléfono, entonces Braze actualiza a todos los usuarios que comparten el número de teléfono con los mismos cambios de grupo de suscripción. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 ## Ejemplos de solicitudes
@@ -123,7 +127,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Ejemplo de respuesta satisfactoria
+## Ejemplo de respuesta positiva
 
 El código de estado `201` podría devolver el siguiente cuerpo de respuesta.
 
@@ -134,7 +138,7 @@ El código de estado `201` podría devolver el siguiente cuerpo de respuesta.
 ```
 
 {% alert important %}
-El punto final solo acepta el valor `email` o `phone`, no ambos. Si se te dan las dos cosas, recibirás esta respuesta: `{"message":"Either an email address or a phone number should be provided, but not both."}`
+El punto final sólo acepta el valor `email` o `phone`, no ambos. Si proporcionas ambas cosas, recibirás esta respuesta: `{"message":"Either an email address or a phone number should be provided, but not both."}`
 {% endalert %}
 
 {% endapi %}

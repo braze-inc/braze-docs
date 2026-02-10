@@ -52,7 +52,7 @@ Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(c
 #### iOS
 
 {% alert important %}
-Prior to February 2023, our Branch attribution integration used the IDFV as the primary identifier to match iOS attribution data. It is not necessary for Braze customers using Objective-C to fetch the Braze `device_id` and sent to Branch upon install as there will be no disruption of service.
+2023년 2월 이전에는 Branch 어트리뷰션 데이터 통합에 공급업체 식별자(IDFV)를 기본 식별자로 사용하여 iOS 어트리뷰션 데이터를 일치시켰습니다. Objective-C를 사용하는 Braze 고객은 서비스 중단이 없으므로 설치 시 Braze `device_id` 를 가져와서 Branch로 전송할 필요가 없습니다.
 {% endalert%}
 
 For those using the Swift SDK v5.7.0+, if you wish to continue using IDFV as the mutual identifier, you must ensure that the `useUUIDAsDeviceId` field is set to `false` so there is no disruption of the integration. 
@@ -84,9 +84,9 @@ braze.deviceId { deviceId in
 
 In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Branch**. 
 
-Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![This image shows the "Data Import for Install Attribution" box found in the Branch technology page. In this box, you are shown the data import key and the REST endpoint.]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
+Here, you will find the REST endpoint and generate your Braze data import key. After the key is generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Branch's dashboard.<br><br>![이 이미지는 Branch 기술 페이지에 있는 '설치 경로에 대한 데이터 가져오기' 상자를 보여줍니다. 이 상자에 데이터 가져오기 키와 REST 엔드포인트가 표시됩니다.]({% image_buster /assets/img/attribution/branch.png %}){: style="max-width:90%;"}
 
-### Step 3: Set up data feeds
+### 3단계: Set up data feeds
 
 1. In Branch, under the **Exports** section, select **Data Feeds**.
 2. On the **Data Feeds Manager** page, select the **Data Integrations** tab at the top of the page. 
@@ -95,9 +95,9 @@ Here, you will find the REST endpoint and generate your Braze data import key. A
 
 ### Step 4: Confirm the integration
 
-Once Braze receives attribution data from Branch, the status connection indicator on the Branch technology partners page in Braze will change from "Not Connected" to "Connected". A timestamp of the last successful request will also be included. 
+Braze가 Branch로부터 기여도 데이터를 수신하면, Braze의 기술 파트너 페이지에서 연결 상태 표시기가 "연결되지 않음"에서 "연결됨"으로 변경되고 마지막으로 성공한 요청의 타임스탬프가 포함됩니다.
 
-Note that this will not happen until we receive data about an attributed install. Organic installs, which should be excluded from the Branch postback, are ignored by our API and are not counted when determining if a successful connection was established.
+이 상태는 Braze가 속성 설치에 대한 데이터를 수신한 후에만 변경됩니다. Braze는 오가닉 인스톨을 무시하고(Branch 포스트백에서 제외) 연결 성공 여부를 판단할 때 이를 계산하지 않습니다.
 
 ## Facebook and X (formerly Twitter) attribution data
 

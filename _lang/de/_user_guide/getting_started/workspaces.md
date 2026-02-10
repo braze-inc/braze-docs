@@ -6,7 +6,7 @@ page_type: reference
 description: "Alles, was Sie auf der Braze-Plattform tun, geschieht innerhalb eines Workspace. Dieser Artikel beschreibt, wie sie funktionieren und was Sie bei der Planung Ihrer Workspaces in Braze beachten sollten."
 ---
 
-# Erste Schritte: Workspaces
+# Beginnen Sie: Workspaces
 
 Alles, was Sie auf der Braze-Plattform tun, geschieht innerhalb eines Workspace. Workspaces fungieren als separate Silos von Daten und ermöglichen es Ihnen, verschiedene Marken oder Aktivitäten getrennt zu halten. Mehrere Versionen Ihrer Website oder mobilen Anwendung können Daten an denselben Arbeitsbereich senden. Wir bezeichnen die verschiedenen Websites und Apps, die innerhalb eines Workspace gesammelt werden, als "App-Instanzen"
 
@@ -240,5 +240,5 @@ Sie sollten mehr als einen Braze-Benutzer mit Admin-Rechten für einen einzelnen
 
 ## Nächste Schritte
 
-Nachdem Sie Ihren Workspace-Plan festgelegt haben, ist es an der Zeit, Ihren Workspace zu erstellen und App-Instanzen hinzuzufügen. Weitere Schritte finden Sie unter [Erstellen und Verwalten von Arbeitsbereichen]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+Nachdem Sie Ihren Workspace-Plan festgelegt haben, ist es an der Zeit, Ihren Workspace zu erstellen und App-Instanzen hinzuzufügen. Weitere Schritte finden Sie unter [Workspaces erstellen und verwalten]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 

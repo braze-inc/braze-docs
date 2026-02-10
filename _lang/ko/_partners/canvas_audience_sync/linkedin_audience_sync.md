@@ -32,24 +32,28 @@ You must make sure that you have the following items created, completed, or acce
 | Requirement | Origin | Description |
 | --- | --- | --- |
 | LinkedIn ad account | [LinkedIn](https://www.linkedin.com/campaignmanager) | An active LinkedIn ad account tied to your brand.<br><br>Make sure that you have accepted any relevant LinkedIn terms and conditions to access and use that account and that your LinkedIn admin has granted you the appropriate permissions to manage Audiences. |
-| LinkedIn Terms & Policies | LinkedIn | Agree to comply with any of LinkedIn’s required terms, policies, guidelines, and documentation related to your use of the LinkedIn Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include LinkedIn’s: Services Terms, Ads Agreement, Data Processing Agreement, and Professional Community Guidelines. |
+| LinkedIn 약관 & 정책 | LinkedIn | Agree to comply with any of LinkedIn’s required terms, policies, guidelines, and documentation related to your use of the LinkedIn Audience Sync, including any terms, policies, guidelines, and documentation incorporated by reference therein, which may include LinkedIn’s: Services Terms, Ads Agreement, Data Processing Agreement, and Professional Community Guidelines. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Integration
 
 ### Step 1: Connect to LinkedIn
 
-In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. In the **LinkedIn Audience Sync** section, select **Connect LinkedIn**.
+{% alert important %}
+LinkedIn을 Braze 계정에 연결하려면 ['관리자' 권한이]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) 있어야 합니다.
+{% endalert %}
 
-![LinkedIn technology page in Braze includes an Overview section and LinkedIn Audience Sync section with the Connected LinkedIn button.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}
+In the Braze dashboard, go to **Technology Partners** and select **LinkedIn**. **LinkedIn 대상 동기화** 섹션에서 **LinkedIn 연결을** 선택합니다.
+
+![Braze의 LinkedIn 기술 페이지에는 개요 섹션과 연결된 LinkedIn 버튼이 있는 LinkedIn 오디언스 동기화 섹션이 있습니다.]({% image_buster /assets/img/linkedin/linkedin3.png %}){: style="max-width:75%;"}
 
 You’ll then be redirected to the LinkedIn OAuth page to authorize Braze for the permissions related to your Audience Sync integration. After you have selected **Confirm**, you’ll be redirected back into Braze to select which LinkedIn ad accounts you wish to sync to. 
 
-!["Braze Self Service" is selected as the ad account to connect.]({% image_buster /assets/img/linkedin/linkedin7.png %}){: style="max-width:75%;"}
+!["연결할 광고 계정으로 'Braze 셀프 서비스'가 선택되어 있습니다.]({% image_buster /assets/img/linkedin/linkedin7.png %}){: style="max-width:75%;"}
 
 Once you have successfully connected, you will be returned to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![A successfully connected LinkedIn account.]({% image_buster /assets/img/linkedin/linkedin6.png %}){: style="max-width:75%;"}
+![LinkedIn 계정에 성공적으로 연결되었습니다.]({% image_buster /assets/img/linkedin/linkedin6.png %}){: style="max-width:75%;"}
 
 Your LinkedIn connection will be applied at the Braze workspace level. If your LinkedIn admin removes you from your LinkedIn ad account, Braze will detect an invalid token. As a result, your active Canvases using LinkedIn will show errors, and Braze will not be able to sync users.
 
@@ -59,11 +63,11 @@ When building audiences for Ad Tracking, you may wish to include or exclude cert
 
 If you have collected the [iOS IDFA through the Braze SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/swift/initial_sdk_setup/overviewother_sdk_customizations/#optional-idfa-collection), you will be able to use the **Ads Tracking Enabled** filter. Select the value as `true` to only send users into Audience Sync destinations where they have opted in. 
 
-![An entry audience with the filter "Ad Tracking Enabled is true".]({% image_buster /assets/img/linkedin/linkedin5.png %}){: style="max-width:75%;"}
+!['광고 추적 사용' 필터가 적용된 응모 대상은 참입니다.]({% image_buster /assets/img/linkedin/linkedin5.png %}){: style="max-width:75%;"}
 
 If you are collecting `opt-ins`, `opt-outs`, `Do Not Sell Or Share`, or any other relevant custom attributes, you should include these within your Canvas entry criteria as a filter:
 
-![A Canvas with an entry audience of "opted_in_marketing" equals "true".]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
+![엔트리 오디언스가 "opted_in_marketing" 인 캔버스는 "true"와 같습니다.]({% image_buster /assets/img/linkedin/linkedin4.png %}){: style="max-width:75%;"}
 
 To learn more on how to comply with these Data Protection laws within the Braze platform, see [Data Protection Technical Assistance]({{site.baseurl}}/dp-technical-assistance/).
 
@@ -71,17 +75,17 @@ To learn more on how to comply with these Data Protection laws within the Braze 
 
 Add a component in your Canvas and select Audience Sync. Click on the **Custom Audience** button to open the component editor.
 
-![The Canvas editor with the list of available components.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![The selected Audience Sync component.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
+![사용 가능한 구성 요소 목록이 있는 캔버스 편집기입니다.]({% image_buster /assets/img/linkedin/linkedin2.png %}){: style="max-width:35%;"} ![선택한 오디언스 동기화 구성 요소입니다.]({% image_buster /assets/img/linkedin/linkedin1.png %}){: style="max-width:29%;"}
 
-### Step 4: Sync setup
+### 4단계: Sync setup
 
 Select **LinkedIn** as the desired Audience Sync partner.
 
-![The "Set up Audience Sync" details with the multiple partners to choose from.]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
+!['오디언스 동기화 설정' 세부 정보에서 여러 파트너를 선택할 수 있습니다.]({% image_buster /assets/img/linkedin/linkedin.png %}){: style="max-width:70%;"}
 
 Then select the desired LinkedIn ad account. Under the **Choose a New or Existing Audience** dropdown, type in the name of a new or existing audience.
 
-![Audience Sync to LinkedIn with Braze selected as the ad account.]({% image_buster /assets/img/linkedin/linkedin20.png %})
+![광고 계정으로 Braze를 선택한 상태에서 오디언스를 LinkedIn에 동기화합니다.]({% image_buster /assets/img/linkedin/linkedin20.png %})
 
 {% tabs %}
 {% tab Create a New Audience %}
@@ -94,11 +98,11 @@ Enter a name for the new audience, select **Add Users to Audience**, and select 
 
 Next, save your audience by clicking the **Create Audience** button at the bottom of the step editor.
 
-![An example "leads" audience with the selected Braze ad account, "leads" audience, the action to add users to the audience, and email, Android GAID, and first and last name as fields to match.]({% image_buster /assets/img/linkedin/linkedin10.png %})
+![선택한 Braze 광고 계정이 있는 '리드' 오디언스, 오디언스에 사용자를 추가하는 액션인 '리드' 오디언스, 일치시킬 필드로 이메일, Android GAID, 이름 및 성을 예로 들어 설명합니다.]({% image_buster /assets/img/linkedin/linkedin10.png %})
 
-Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
+Braze는 오디언스가 성공적으로 생성되거나 오류가 발생하면 단계 편집기 상단에 알림을 표시합니다. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode.
 
-![Confirmation that the "leads" audience was created.]({% image_buster /assets/img/linkedin/linkedin9.png %})
+!["리드" 오디언스가 생성되었음을 확인합니다.]({% image_buster /assets/img/linkedin/linkedin9.png %})
 
 When you launch a Canvas with a new audience, Braze syncs users in near real-time as they enter the Audience Sync component.
 
@@ -108,7 +112,7 @@ When you launch a Canvas with a new audience, Braze syncs users in near real-tim
 **Sync with an Existing Audience**<br>
 Braze also offers the ability to add users to existing LinkedIn audiences to confirm that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and **Add to the Audience**. Braze will then add users in near real-time as they enter the Audience Sync component.
 
-![Expanded view of the Custom Audience Canvas step. Here, the desired ad account and existing audience are selected.]({% image_buster /assets/img/linkedin/linkedin17.png %})
+![Expanded view of the Custom Audience Canvas step. 여기에서 원하는 광고 계정과 기존 오디언스가 선택됩니다.]({% image_buster /assets/img/linkedin/linkedin17.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -117,15 +121,15 @@ Braze also offers the ability to add users to existing LinkedIn audiences to con
 
 Once you have configured your Audience Sync to LinkedIn, simply launch the Canvas! The new audience will be created, and users who flow through the Audience Sync step will be passed into this audience on LinkedIn. If your Canvas contains subsequent components, your users will advance to the next step in their user journey.
 
-You can view the audience on LinkedIn by going into your ad account and selecting **Audiences** under the **Assets** section of the navigation. From the **Audiences** page, you can see each audience's size after reaching more than 300 members.
+You can view the audience on LinkedIn by going into your ad account and selecting **Audiences** under the **Assets** section of the navigation. **오디언스** 페이지에서 300명 이상의 회원에게 도달한 후 각 오디언스의 규모를 확인할 수 있습니다.
 
-![LinkedIn page listing the following metrics for the given audience.]({% image_buster /assets/img/linkedin/linkedin8.png %})
+![주어진 대상에 대한 다음 메트릭을 나열하는 LinkedIn 페이지입니다.]({% image_buster /assets/img/linkedin/linkedin8.png %})
 
 ## User syncing and rate limit considerations
 
-As users reach the Audience Sync Step, Braze will sync these users in near real-time while respecting LinkedIn’s API rate limits. In practice, Braze will try to batch and process as many users every 5 seconds before sending these users to LinkedIn.
+사용자가 오디언스 동기화 단계에 도달하면 Braze는 LinkedIn의 API 속도 제한을 준수하면서 거의 실시간으로 동기화합니다. Braze는 5초마다 가능한 한 많은 사용자를 배치하고 처리한 후 LinkedIn으로 보냅니다.
 
-LinkedIn’s API rate limit states no more than ten queries per second and 100,000 users per request. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to about 13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
+LinkedIn의 API 속도 제한은 초당 쿼리 10건, 요청당 사용자 수 100,000명을 넘지 못하도록 설정되어 있습니다. 고객이 이 제한에 도달하면 Braze는 최대 약 13시간 동안 동기화를 다시 시도합니다. 그래도 동기화가 되지 않으면 Braze는 이러한 사용자를 사용자 오류 측정기준 아래에 나열합니다.
 
 ## Understanding analytics
 
@@ -151,7 +155,7 @@ LinkedIn provides additional metrics around match rates within their platform. T
 <br><br>
 Select the partner as **LinkedIn**, your ad account, and the audience to see the audience size and match rate from LinkedIn.
 
-![An example of Audience Sync step metrics with 10,000 entered users.]({% image_buster /assets/img/linkedin/linkedin11.png %})
+![입력된 사용자가 10,000명인 오디언스 동기화 단계 측정기준의 예입니다.]({% image_buster /assets/img/linkedin/linkedin11.png %})
 {% endalert %}
 
 ## Frequently asked questions

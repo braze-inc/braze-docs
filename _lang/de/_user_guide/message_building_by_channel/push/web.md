@@ -21,12 +21,12 @@ Web-Push ist eine weitere großartige Möglichkeit, mit den Nutzer:innen Ihrer W
 Web-Push-Benachrichtigungen liefern dringende, umsetzbare Updates, die zu schnellen Konversionen führen. Das können Sie mit Web-Push tun:
 
 - Lösen Sie Nachrichten aus, wenn sich wichtige Daten ändern, z. B. ein Preisrückgang.
-- Bringen Sie Besucher mit einfachen Aktions-Buttons zurück auf Ihre Website
+- Bringen Sie Besucher mit eindeutigen Aktions-Buttons zurück auf Ihre Website
 - Passen Sie Ihren Push mit Produkt- und Kundeninformationen an, damit Ihre Nachricht relevant ist.
 
-Web-Push funktioniert genauso wie die Push-Benachrichtigungen von Apps auf Ihrem Telefon. Weitere Informationen zum Verfassen einer Web-Push-Nachricht finden Sie unter [Erstellen einer Push-Benachrichtigung]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+Web-Push funktioniert genauso wie die Push-Benachrichtigungen von Apps auf Ihrem Telefon. Weitere Informationen zum Verfassen eines Web-Push finden Sie unter [Erstellen einer Push-Benachrichtigung]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
-![Web-Push-Beispiel mit der gleichen Push Nachricht, die auf einem Laptop und einem Telefon angezeigt wird.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
+![Beispiel für Web-Push mit der gleichen Nachricht, die auf einem Laptop und einem Telefon angezeigt wird.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## Potenzielle Anwendungsfälle
 

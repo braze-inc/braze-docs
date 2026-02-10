@@ -33,9 +33,11 @@ Instructions for creating a data source can be found on the [Tealium](https://do
 
 ### Step 2: Create Current
 
-In Braze, navigate to **Currents > + Create Current > Tealium Export**. Provide an integration name, contact email, and your Tealium URL. Next, select what you want to track from the list of available events. Lastly, click **Launch Current**
+In Braze, navigate to **Currents** > **+ Create Current** > **Tealium Export**. Provide an integration name, contact email, and your Tealium URL. 
 
-All events sent to Tealium will include the user's `external_user_id`. At this time, Braze does not send event data to Tealium for users who do not have their `external_user_id` set.
+Next, select what you want to track from the list of available events. By default, all events sent to Tealium include the user's `external_user_id`. However, you can select the **Include events from anonymous users** checkbox to also send events that do not have an `external_user_id` to Tealium.
+
+After setting up your integration, select **Launch Current**.
 
 {% alert important %}
 It's important to keep your Tealium URL up to date. If your connector's URL is incorrect, Braze will be unable to send events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.

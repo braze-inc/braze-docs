@@ -144,7 +144,7 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 {% tab Android Native %}
 [Braze Expoプラグインを]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option)使用している場合、`app.json` で`androidHandlePushDeepLinksAutomatically` を`true` に設定することで、プッシュ通知のディープリンクを自動的に処理することができる。
 
-ディープリンクを手動で処理するには、Androidネイティブのドキュメントを参照すること：[ディープリンクを追加する]({{site.baseurl}}/developer_guide/push_notifications/deep_linking)。
+代わりにディープリンクを手動で扱うには、Androidネイティブのドキュメントを参照のこと：[ディープリンクを追加する]({{site.baseurl}}/developer_guide/push_notifications/deep_linking)。
 
 {% endtab %}
 {% tab iOS Native %}

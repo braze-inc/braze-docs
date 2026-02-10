@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Criar Seleção de Catálogo"
+nav_title: "POST: Criar seleção de catálogo"
 article_title: "POST: Criar Seleção de Catálogo"
 search_tag: Endpoint
 page_order: 2

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Geplante Nachrichten erstellen"
+nav_title: "POST: Erstellen Sie geplante Nachrichten"
 article_title: "POST: Geplante Nachrichten erstellen"
 search_tag: Endpoint
 page_order: 4
@@ -11,7 +11,7 @@ description: "Dieser Artikel beschreibt Details zum Endpunkt Zeitplan Nachrichte
 {% api %}
 # Erstellen Sie geplante Nachrichten
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %}
-/messages/schedule/create
+/nachrichten/zeitplan/erstellen
 {% endapimethod %}
 
 > Verwenden Sie diesen Endpunkt, um einen Zeitplan für eine Kampagne, ein Canvas oder eine andere Nachricht zu erstellen, die zu einem bestimmten Zeitpunkt versendet werden soll, und geben Sie einen Bezeichner an, mit dem Sie diese Nachricht für Updates referenzieren können.
@@ -30,7 +30,7 @@ Um diesen Endpunkt zu verwenden, benötigen Sie einen [API-Schlüssel]({{site.ba
 
 ## Rate-Limit
 
-{% multi_lang_include rate_limits.md endpoint='default' category='message endpoints' %}
+{% multi_lang_include rate_limits.md endpoint='default' category='send messages endpoints' %}
 
 ## Anfragetext
 
@@ -49,7 +49,6 @@ Authorization: Bearer YOUR-REST-API-KEY
   "external_user_ids": (optional, array of strings) see external user identifier,
   "user_aliases": (optional, array of user alias object) see user alias,
   "audience": (optional, connected audience object) see connected audience,
-  "segment_id": (optional, string) see segment identifier,
   "campaign_id": (optional, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
   "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,

@@ -10,7 +10,7 @@ Wenn Sie mehrere Varianten haben, die Sie gleichmäßig aufteilen möchten, müs
 
 Wenn Sie einen A/B-Test für In-App-Nachrichten durchführen, kann es sein, dass Ihre Analytics eine höhere Verteilung zwischen einer Variante und einer anderen anzeigen, auch wenn die prozentuale Aufteilung gleich ist. Betrachten Sie zum Beispiel das folgende Diagramm der *eindeutigen Empfänger* für Variante A und Variante C.
 
-![Grafik der eindeutigen Empfänger:innen für zwei Varianten mit einer ähnlichen Form zwischen Variante A und Variante C, wobei Variante A eine höhere Anzahl von eindeutigen Empfänger:innen pro Tag aufweist]({% image_buster /assets/img/variant_distribution_iam.png %})
+![Grafik der eindeutigen Empfänger:innen für zwei Varianten mit einer ähnlichen Form zwischen Variante A und Variante C, wobei Variante A eine höhere Anzahl eindeutiger Empfänger:innen pro Tag aufweist]({% image_buster /assets/img/variant_distribution_iam.png %})
 
 Variante A hat eine durchgängig höhere Anzahl von *Unique Recipients* als Variante C. Das liegt nicht an der Verteilung der Varianten, sondern daran, wie *Unique Recipients* für In-App-Nachrichten berechnet werden. Bei In-App-Nachrichten sind *Unique Recipients* eigentlich *Unique Impressions*, also die Gesamtzahl der Personen, die die In-App-Nachricht erhalten und angesehen haben. Das bedeutet, dass ein Benutzer, der die Nachricht aus irgendeinem Grund nicht erhält oder sich entscheidet, sie nicht anzusehen, nicht in die Zählung der *eindeutigen Empfänger* einbezogen wird und die Variantenverteilung verzerrt erscheinen kann.
 

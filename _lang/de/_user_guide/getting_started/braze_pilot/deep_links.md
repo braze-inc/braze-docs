@@ -8,7 +8,7 @@ description: "Dieser Artikel beschreibt die erforderlichen Integrationsschritte 
 
 # Navigation Deeplinks in Braze Pilot setzen
 
-> Braze Pilot unterstützt Deeplinks vom Braze Messaging zu bestimmten Teilen der Pilot App. Damit ist es zulässig, Engagement-Anwendungsfälle zu erstellen, die Nutzer:innen in verschiedene Bereiche der Pilot-Anwendung führen. Sie können auch optionale Deeplinks-Parameter verwenden, um die Inhalte auf bestimmten Seiten in der App für den Nutzer:innen anzupassen. Mehr über Deeplinks erfahren Sie unter [Deeplinks setzen zu In-App-Inhalten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking).
+> Braze Pilot unterstützt Deeplinks vom Braze Messaging zu bestimmten Teilen der Pilot App. Damit ist es zulässig, Engagement-Anwendungsfälle zu erstellen, die Nutzer:innen in verschiedene Bereiche der Pilot-Anwendung führen. Sie können auch optionale Deeplinks-Parameter verwenden, um die Inhalte auf bestimmten Seiten in der App für den Nutzer:innen anzupassen. Mehr über Deeplinks erfahren Sie unter [Deeplinks zu In-App-Inhalten]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking) setzen.
 
 ## Allgemein
 
@@ -35,7 +35,7 @@ Dies sind die Deeplinks für die App der fiktiven Marke Steppington in Pilot.
 
 | Bildschirm | Deeplinks setzen |
 | --- | --- |
-| Splash Screen | `braze-pilot://navigation/steppington/splash` |
+| Splash-Bildschirm | `braze-pilot://navigation/steppington/splash` |
 | Home | `braze-pilot://navigation/steppington/home` |
 | Steppington+ Seite | `braze-pilot://navigation/steppington/plus` |
 | Bildschirm Ziele | `braze-pilot://navigation/steppington/goals` |
@@ -89,7 +89,7 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>Titel</code></td>
+            <td><code>title</code></td>
             <td>Der Titel, der am oberen Rand des Bildschirms verwendet werden soll.</td>
             <td>Ja</td>
             <td></td>
@@ -97,7 +97,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>Läuft …</td>
         </tr>
         <tr>
-            <td><code>Ikone</code></td>
+            <td><code>icon</code></td>
             <td>Ein String, der angibt, welches Symbol verwendet werden soll.</td>
             <td>Kein:e</td>
             <td><code>RUNNING_HOME</code></td>
@@ -105,7 +105,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>HEART_DETAILS</td>
         </tr>
         <tr>
-            <td><code>Bild</code></td>
+            <td><code>image</code></td>
             <td>Die URL des Bildes des Artikels.</td>
             <td>Ja</td>
             <td></td>
@@ -113,7 +113,7 @@ th:nth-child(6), td:nth-child(6) {
             <td><code>https://picsum.photos/400</code></td>
         </tr>
         <tr>
-            <td><code>Infos</code></td>
+            <td><code>info</code></td>
             <td>Informationen über das Training, die über dem Button zum Starten des Trainings angezeigt werden.</td>
             <td>Ja</td>
             <td></td>
@@ -121,24 +121,24 @@ th:nth-child(6), td:nth-child(6) {
             <td>This%20workout%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>Workout</code></td>
-            <td>Der Name des Workouts. Gesendet in dem <code>st_completed_class</code> Ereignis.</td>
+            <td><code>workout</code></td>
+            <td>Der Name des Workouts. Gesendet im <code>st_completed_class</code> Veranstaltung.</td>
             <td>Ja</td>
             <td></td>
             <td>Zahl</td>
             <td>5k%20Lauf</td>
         </tr>
         <tr>
-            <td><code>Kalorien</code></td>
-            <td>Die Anzahl der Kalorien, die auf dem Bildschirm für das aktive Training angezeigt werden soll. Gesendet in dem <code>st_completed_class</code> Ereignis.</td>
+            <td><code>calories</code></td>
+            <td>Die Anzahl der Kalorien, die auf dem Bildschirm für das aktive Training angezeigt werden soll. Gesendet im <code>st_completed_class</code> Veranstaltung.</td>
             <td>Kein:e</td>
             <td>Zufallszahl zwischen 500 und 1.250</td>
             <td>Zahl</td>
             <td>600</td>
         </tr>
         <tr>
-            <td><code>Länge</code></td>
-            <td>Die Länge des Workouts. Gesendet in dem <code>st_completed_class</code> Ereignis.</td>
+            <td><code>length</code></td>
+            <td>Die Länge des Workouts. Gesendet im <code>st_completed_class</code> Veranstaltung.</td>
             <td>Kein:e</td>
             <td></td>
             <td>Zahl</td>
@@ -219,7 +219,7 @@ Dies sind die Deeplinks für die App der fiktiven Marke PantsLabyrinth in Pilot.
 
 | Bildschirm | Deeplinks setzen |
 | --- | --- |
-| Splash Screen | `braze-pilot://navigation/pantslabyrinth/splash` |
+| Splash-Bildschirm | `braze-pilot://navigation/pantslabyrinth/splash` |
 | Willkommensbildschirm | `braze-pilot://navigation/pantslabyrinth/welcome` |
 | Listing-Bildschirm | `braze-pilot://navigation/pantslabyrinth/listing` |
 | Warenkorb Seite | `braze-pilot://navigation/pantslabyrinth/cart` |
@@ -272,7 +272,7 @@ th:nth-child(6), td:nth-child(6) {
     </thead>
     <tbody>
         <tr>
-            <td><code>Name</code></td>
+            <td><code>name</code></td>
             <td>Der Name des Artikels.</td>
             <td>Ja</td>
             <td></td>
@@ -280,7 +280,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>Jeans</td>
         </tr>
         <tr>
-            <td><code>Preis</code></td>
+            <td><code>price</code></td>
             <td>Der Preis des Artikels.</td>
             <td>Ja</td>
             <td></td>
@@ -288,7 +288,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>85</td>
         </tr>
         <tr>
-            <td><code>Bild</code></td>
+            <td><code>image</code></td>
             <td>Die URL des Bildes des Artikels.</td>
             <td>Ja</td>
             <td></td>
@@ -296,7 +296,7 @@ th:nth-child(6), td:nth-child(6) {
             <td><code>https://picsum.photos/400</code></td>
         </tr>
         <tr>
-            <td><code>Beschreibung</code></td>
+            <td><code>description</code></td>
             <td>Die Beschreibung des Artikels.</td>
             <td>Ja</td>
             <td></td>
@@ -304,7 +304,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>This%20item%20is%20awesome%21</td>
         </tr>
         <tr>
-            <td><code>Menge</code></td>
+            <td><code>quantity</code></td>
             <td>Die Menge des Artikels.</td>
             <td>Kein:e</td>
             <td>(1 %)</td>
@@ -320,7 +320,7 @@ th:nth-child(6), td:nth-child(6) {
             <td>Groß</td>
         </tr>
         <tr>
-            <td><code>Farben</code></td>
+            <td><code>colors</code></td>
             <td>Eine Liste von Hex-Farben, die durch Kommas getrennt sind. Dies sind die verfügbaren Farben für den Artikel.</td>
             <td>Kein:e</td>
             <td>%23000000</td>
@@ -358,7 +358,7 @@ Dies sind die Deeplinks für die App der fiktiven Marke Steppington in Pilot.
 
 | Bildschirm | Deeplinks setzen |
 | --- | --- |
-| Splash Screen | `braze-pilot://navigation/moviecannon/splash` |
+| Splash-Bildschirm | `braze-pilot://navigation/moviecannon/splash` |
 | Willkommensbildschirm | `braze-pilot://navigation/moviecannon/welcome` |
 | Filmliste Seite | `braze-pilot://navigation/moviecannon/moviecannon` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }

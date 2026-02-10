@@ -1,7 +1,7 @@
 ---
 nav_title: Accéder à votre compte
 article_title: Accéder à votre compte
-page_order: 2
+page_order: 0
 page_type: reference
 description: "Cet article explique comment obtenir votre compte Braze, comment vous connecter une fois l'accès accordé et comment réinitialiser votre mot de passe Braze."
 
@@ -11,20 +11,20 @@ description: "Cet article explique comment obtenir votre compte Braze, comment v
 
 > Cet article explique comment obtenir votre compte Braze, comment vous connecter après avoir obtenu un accès, et comment résoudre les problèmes d'accès à votre tableau de bord et de performance de votre tableau de bord.
 
-Si vous êtes le premier utilisateur de Braze au sein de votre entreprise et que vous vous connectez pour la première fois, vous recevrez un e-mail de bienvenue de `@alerts.braze.com` vous demandant de confirmer votre e-mail et de vous connecter le premier jour de votre contrat.
+Si vous êtes le premier utilisateur Braze de votre entreprise et vous connectez pour la première fois, vous recevrez un e-mail de bienvenue de `@alerts.braze.com` vous demandant de confirmer votre e-mail et de vous connecter le premier jour de votre contrat.
 
-Après avoir confirmé votre compte, vous pouvez ajouter des utilisateurs supplémentaires à partir de la page [Utilisateurs de l'entreprise de]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/adding_users_to_your_dashboard/) votre tableau de bord. Tous les utilisateurs recevront un e-mail leur demandant de confirmer leur compte après avoir été ajoutés.
+Après avoir confirmé votre compte, vous pouvez ajouter des utilisateurs supplémentaires à partir de la page [Utilisateurs de l'entreprise de]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) votre tableau de bord. Tous les utilisateurs recevront un e-mail leur demandant de confirmer leur compte après avoir été ajoutés.
 
-Si vous n'êtes pas le premier utilisateur du compte Braze de votre entreprise, contactez l'administrateur du compte Braze de votre entreprise et demandez-lui de créer votre compte. Vous recevrez alors un e-mail de bienvenue de `@alerts.braze.com` vous demandant de confirmer votre e-mail et de vous connecter.
+Si vous n'êtes pas le premier utilisateur du compte Braze de votre entreprise, contactez l'administrateur du compte Braze de votre entreprise et demandez-lui de créer votre compte. Vous recevrez ensuite un e-mail de bienvenue de `@alerts.braze.com` vous demandant de confirmer votre e-mail et de vous connecter.
 
 ## Connexion
 
-Voyons comment vous connecter, que ce soit la première ou la millionième fois ! Si vous êtes le premier utilisateur de votre entreprise, suivez les conseils de la section précédente. Si ce n'est pas le cas, vous pouvez vous connecter après que l'administrateur Braze de votre entreprise a créé votre compte.
+Voyons comment vous connecter, que ce soit la première ou la millionième fois ! Si vous êtes le premier utilisateur de votre entreprise, suivez les directives de la section précédente. Si ce n'est pas le cas, vous pouvez vous connecter après que l'administrateur Braze de votre entreprise a créé votre compte.
 
-Vous pouvez soit vous connecter à partir du site d'accueil, soit utiliser l'URL de votre tableau de bord correspondant à votre instance Braze spécifique. [Braze.com](https://www.braze.com) ou utiliser l'URL de votre tableau de bord correspondant à votre [instance Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/). Pour vous faciliter la tâche, Braze propose plusieurs options d'authentification unique (SSO), notamment :
+Vous pouvez soit vous connecter à partir du site d'accueil [Braze.com](https://www.braze.com), soit utiliser l'URL de votre tableau de bord qui correspond à votre [instance Braze]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/) spécifique. Pour vous faciliter la tâche, Braze propose plusieurs options d'authentification unique (SSO), notamment :
 
 * [AUTHENTIFICATION UNIQUE (SSO) SAML]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/)
-    * [Approvisionnement SAML juste à temps]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit/)
+    * [Approvisionnement SAML juste-à-temps]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/saml_jit/)
 * [Microsoft Entra SSO]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/entra/)
 * [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 * [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/)
@@ -45,11 +45,11 @@ Si votre tableau de bord de Braze indique que vous avez une erreur inattendue et
 
 ## Accéder à plusieurs tableaux de bord de Braze
 
-Braze ne vous permet pas d'enregistrer la même adresse e-mail pour plusieurs utilisateurs de tableaux de bord dans le même cluster (par exemple, si vous avez deux tableaux de bord sur US-01). Vous pouvez utiliser le même e-mail pour créer des comptes sur différents clusters (par exemple, si vous avez un tableau de bord sur US-01 et un sur US-05). Si vous devez accéder à plusieurs tableaux de bord de Braze dans le même cluster, vous pouvez procéder comme suit :
+Braze ne vous permet pas d'enregistrer la même adresse e-mail pour plusieurs utilisateurs de tableau de bord dans le même cluster (par exemple, si vous avez deux tableaux de bord sur US-01). Vous pouvez utiliser le même e-mail pour créer des comptes sur différents clusters (par exemple, si vous avez un tableau de bord sur US-01 et un sur US-05). Si vous devez accéder à plusieurs tableaux de bord de Braze dans le même cluster, vous pouvez procéder comme suit :
 
 ### Utilisez des alias d'e-mail
 
-Si votre fournisseur d'e-mail est Gmail, vous pouvez créer des alias en ajoutant un signe `+` suivi d'un texte quelconque à votre adresse e-mail. Par exemple :
+Si votre fournisseur d'e-mail est Gmail, vous pouvez créer des alias en ajoutant un signe `+` suivi d'un texte quelconque à votre adresse e-mail. Par exemple :
 - **E-mail original :** `rocky@gmail.com`
 - **Alias e-mail :** `rocky+1@gmail.com`
 
@@ -73,11 +73,11 @@ Si vous utilisez l'authentification unique (SSO), sachez que le fait d'avoir plu
 
 ## Résolution des problèmes
 
-### Réinitialisation de votre mot passe
+### Réinitialisation de votre mot de passe
 
 Pour réinitialiser votre mot de passe, sélectionnez le lien **Mot de passe oublié ?** sur la page d'identification du tableau de bord. Vous serez invité à saisir votre e-mail pour recevoir un lien vous permettant de réinitialiser votre mot de passe.
 
-Identifiant du tableau de bord avec l'invite "Mot de passe oublié".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
+![Identifiant du tableau de bord avec l'invite "Mot de passe oublié".]({% image_buster /assets/img_archive/enable_reset.png %}){: style="max-width:60%"}
 
 ### Effacer la mémoire cache de votre navigateur et les cookies
 
@@ -130,11 +130,11 @@ Un administrateur doit réinitialiser le 2FA pour l'utilisateur concerné en pro
 4. Confirmez la réinitialisation 2FA lorsque vous y êtes invité.
 5. Si la réinitialisation ne résout pas immédiatement le problème, effacez vos cookies et votre cache.
 
-Braze ne peut pas réinitialiser 2FA au nom des utilisateurs pour des raisons de sécurité, donc si l'administrateur n'est pas en mesure de réinitialiser 2FA, un ticket d'assistance doit être créé.
+Braze ne peut pas réinitialiser 2FA au nom des utilisateurs pour des raisons de sécurité, donc si l'administrateur est incapable de réinitialiser 2FA, créez un ticket d'assistance.
 
 #### Considérations
 
-- Si le 2FA est appliqué au niveau de l'entreprise : Après la réinitialisation, l'utilisateur sera invité à configurer à nouveau son 2FA lors de sa prochaine connexion.
+- Si le 2FA est appliqué au niveau de l'entreprise : Après la réinitialisation, Braze invite l'utilisateur à configurer à nouveau son 2FA lors de sa prochaine connexion.
 - Si le 2FA n'est pas appliqué au niveau de l'entreprise : L'utilisateur se connectera au tableau de bord sans avoir besoin de configurer à nouveau 2FA. S'ils souhaitent activer la fonction 2FA, ils peuvent le faire dans les paramètres du compte.
 
 {% alert note %}

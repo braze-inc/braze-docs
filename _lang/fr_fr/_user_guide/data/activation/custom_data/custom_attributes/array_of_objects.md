@@ -1,25 +1,25 @@
 ---
-nav_title: "Tableau d'objets"
-article_title: "Tableau d'objets"
+nav_title: Tableau d’objets
+article_title: Tableau d’objets
 alias: "/array_of_objects/"
 page_order: 0
 page_type: reference
-description: "Cet article de référence traite de l'utilisation d'un tableau d'objets comme type de données pour les attributs personnalisés, y compris les limitations et les exemples d'utilisation." 
+description: "Cet article de référence couvre l'utilisation d'un tableau d'objets comme type de données pour les attributs personnalisés, y compris les limitations et les exemples d'utilisation." 
 ---
 
-# Tableau d'objets
+# Tableau d’objets
 
-> Cette page explique comment utiliser un tableau d'objets pour regrouper des attributs connexes. Par exemple, vous pouvez avoir un groupe d'objets animaux, d'objets chansons et d'objets comptes qui appartiennent tous à un même utilisateur. Ces tableaux d'objets peuvent être utilisés pour personnaliser votre envoi de messages avec Liquid, ou pour créer des segments d'audience si l'un des éléments d'un objet correspond aux critères.
+> Cette page explique comment utiliser un tableau d'objets pour regrouper des attributs connexes. Vous pouvez, par exemple, avoir un groupe d’objets « animaux de compagnie », un groupe d’objets « chansons » et un groupe d’objets « Compte » pour le même utilisateur. Ces array d’objets peuvent être utilisées pour personnaliser votre envoi de messages avec Liquid, ou segmenter votre audience si un élément d’un objet correspond aux critères.
 
 {% multi_lang_include nested_attribute_objects/supported_data_types.md %}
 
-## Limites
+## Restrictions
 
-- Les tableaux d'objets sont destinés aux attributs personnalisés envoyés par l'API. Les téléchargements CSV ne sont pas pris en charge. En effet, les virgules dans le fichier CSV seront interprétées comme un séparateur de colonnes et les virgules dans les valeurs provoqueront des erreurs d'analyse. 
+- Les tableaux d'objets sont destinés aux attributs personnalisés envoyés par l'API. Les téléchargements de fichiers CSV ne sont pas pris en charge. C'est parce que les virgules dans le fichier CSV seront interprétées comme un séparateur de colonnes, et les virgules dans les valeurs provoqueront des erreurs d'analyse. 
 - Les tableaux d'objets n'ont pas de limite quant au nombre d'éléments, mais leur taille maximale est de 100 Ko.
-- Tous les partenaires Braze ne prennent pas en charge les tableaux d'objets. Consultez la [documentation du partenaire]({{site.baseurl}}/partners/home) pour savoir si l'intégration prend en charge cette fonctionnalité.
+- Tous les partenaires de Braze ne prennent pas en charge les tableaux d'objets. Consultez la [documentation du partenaire]({{site.baseurl}}/partners/home) pour savoir si l'intégration prend en charge cette fonctionnalité.
 
-La mise à jour ou la suppression d'éléments d'un tableau nécessite l'identification de l'élément par sa clé et sa valeur ; pensez donc à inclure un identifiant unique pour chaque élément du tableau. L'unicité est limitée au tableau et est utile si vous souhaitez mettre à jour et supprimer des objets spécifiques de votre tableau. Cette règle n'est pas appliquée par Braze.
+La mise à jour ou la suppression d'éléments d'un tableau nécessite l'identification de l'élément par sa clé et sa valeur ; pensez donc à inclure un identifiant unique pour chaque élément du tableau. Ces identifiants uniques s’appliqueront uniquement au tableau. Ils sont utiles si vous souhaitez mettre à jour ou supprimer des objets dans votre tableau. Braze n’oblige pas à utiliser de tels identifiants uniques. 
 
 {% alert tip %}
 Pour plus d'informations sur l'utilisation de tableaux d'objets pour les objets d'attributs utilisateur, reportez-vous à [Objet d'attributs utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object).
@@ -30,7 +30,7 @@ Pour plus d'informations sur l'utilisation de tableaux d'objets pour les objets 
 {% tabs local %}
 {% tab Create %}
 
-Voici un exemple de `/users/track` avec un tableau de `pets`. Pour capturer les propriétés des animaux, envoyez une requête API qui répertorie `pets` comme un tableau d'objets. Notez que chaque objet s'est vu attribuer un `id` unique qui peut être référencé ultérieurement lors des mises à jour.
+Voici un `/users/track` exemple avec un tableau `pets`. Pour capturer les propriétés des animaux domestiques, envoyez une demande API qui répertorie `pets` en tant que tableau d’objets. Notez que chaque objet a reçu un `id` unique qui peut être utilisé plus tard lors des mises à jour.
 
 ```json
 {
@@ -58,7 +58,7 @@ Voici un exemple de `/users/track` avec un tableau de `pets`. Pour capturer les 
 {% endtab %}
 {% tab Add %}
 
-Ajoutez un autre élément au tableau à l'aide de l'opérateur `$add`. L'exemple suivant montre l'ajout de trois objets animaux supplémentaires au tableau d'objets de l'utilisateur `pets`.
+Ajoutez un autre élément au tableau en utilisant l’opérateur `$add`. L’exemple suivant montre l’ajout d’autres objets animaux de compagnie dans le tableau `pets` de l’utilisateur.
 
 ```json
 {
@@ -94,11 +94,11 @@ Ajoutez un autre élément au tableau à l'aide de l'opérateur `$add`. L'exempl
 {% endtab %}
 {% tab Update %}
 
-Mettez à jour les valeurs d'objets spécifiques dans un tableau en utilisant le paramètre `_merge_objects` et l'opérateur `$update`. Comme pour les mises à jour d'objets d'[attributs personnalisés]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples [imbriqués]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body), il s'agit d'une fusion en profondeur.
+Mettez à jour les valeurs pour des objets spécifiques dans un tableau en utilisant le paramètre `_merge_objects` et l’opérateur `$update`. Cela effectue une fusion profonde (deep merge) comme pour les mises à jour d’objets d’[attributs personnalisés imbriqués]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) simples.
 
 Notez que `$update` ne peut pas être utilisé pour supprimer une propriété imbriquée d'un objet à l'intérieur d'un tableau. Pour ce faire, vous devez supprimer l'élément entier du tableau, puis ajouter l'objet sans cette clé spécifique (en utilisant une combinaison de `$remove` et `$add`).
 
-L'exemple suivant montre la mise à jour de la propriété `breed` en `goldfish` pour l'objet dont l'adresse `id` est `4`. Cet exemple de demande met également à jour l'objet dont l'adresse `id` est égale à `5` avec une nouvelle adresse `name` de `Annette`. Étant donné que le paramètre `_merge_objects` est défini sur `true`, tous les autres champs de ces deux objets restent identiques.
+L’exemple suivant montre la mise à jour de propriété `breed` sur `goldfish` pour l’objet avec un `id` de `4`. Cet exemple de requête met également à jour l’objet avec `id` égal à `5` et un nouveau `name` de `Annette`. Comme le paramètre `_merge_objects` est défini sur `true`, tous les autres champs de ces deux objets restent les mêmes.
 
 ```json
 {
@@ -130,15 +130,15 @@ L'exemple suivant montre la mise à jour de la propriété `breed` en `goldfish`
 ```
 
 {% alert warning %}
-Vous devez attribuer la valeur "true" à `_merge_objects`, sinon vos objets seront écrasés. `_merge_objects` est "false" par défaut.
+Vous devez définir `_merge_objects` sur True (vrai) ou vos objets seront écrasés. Par défaut, `_merge_objects` est défini sur False (faux).
 {% endalert %}
 
 {% endtab %}
 {% tab Remove %}
 
-Supprimez des objets d'un tableau en utilisant l'opérateur `$remove` en combinaison avec une clé (`$identifier_key`) et une valeur (`$identifier_value`) correspondantes.
+Supprimer des objets d’un tableau en utilisant l’opérateur `$remove` en combinaison avec une clé (`$identifier_key`) et valeur (`$identifier_value`) correspondantes.
 
-L'exemple suivant montre la suppression de tout objet du tableau d'objets `pets` qui possède un `id` avec la valeur `1`, un `id` avec la valeur `2`, et un `type` avec la valeur `dog`. S'il existe plusieurs objets dont la valeur `type` est `dog`, tous les objets correspondants seront supprimés.
+L’exemple suivant montre la suppression d’un objet dans un `pets`tableau qui a un`id` avec une valeur de `1`, un `id` avec une valeur de `2`, et un `type` avec une valeur de `dog`. S’il y a plusieurs objets avec une valeur`type` égale à `dog`, tous les objets correspondants seront supprimés.
 
 ```json
 {
@@ -170,7 +170,7 @@ L'exemple suivant montre la suppression de tout objet du tableau d'objets `pets`
 {% endtab %}
 {% endtabs %}
 
-### Horodatage
+### Horodatages
 
 Lorsque vous incluez des champs tels que des horodatages dans un tableau d'objets, utilisez le format `$time` au lieu de chaînes de caractères simples ou d'entiers d'époque Unix.
 
@@ -405,7 +405,7 @@ braze.user.setCustomAttribute(key: "pets", dictionary: json, merge: true)
 {% endsubtabs %}
 
 {% alert important %}
-Les attributs personnalisés imbriqués ne sont pas pris en charge par AppboyKit.
+Les attributs personnalisés imbriqués ne sont pas pris en charge pour AppboyKit.
 {% endalert %}
 {% endtab %}
 
@@ -505,9 +505,9 @@ braze.getUser().setCustomUserAttribute("pets", json, true);
 {% endtab %}
 {% endtabs %}
 
-## Modèle liquide
+## Modèles Liquid
 
-Vous pouvez utiliser ce tableau `pets` pour personnaliser un message. L'exemple de modèle Liquid suivant montre comment référencer les propriétés de l'objet attribut personnalisé enregistrées à partir de la requête API précédente et les utiliser dans votre envoi de messages.
+Vous pouvez utiliser ce tableau `pets` pour personnaliser un message. Les exemples de templating Liquid suivants montrent comment référencer les propriétés d’objet d’attribut personnalisées de la requête API précédente pour les utiliser dans vos communications Liquid.
 
 {% raw %}
 ```liquid
@@ -519,29 +519,29 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 ```
 {% endraw %}
 
-Dans ce scénario, vous pouvez utiliser Liquid pour parcourir en boucle le tableau `pets` et imprimer une déclaration pour chaque animal. [Attribuez une variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) à l'attribut personnalisé `pets` et utilisez la notation par points pour accéder aux propriétés d'un objet. Indiquez le nom de l'objet, suivi d'un point `.`, suivi du nom de la propriété.
+Dans ce scénario, vous pouvez utiliser Liquid pour parcourir le tableau `pets` et identifier chaque animal de compagnie. [Attribuez une variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) à l'`pets` attribut personnalisé et utilisez la notation par points pour accéder aux propriétés d'un objet. Spécifiez le nom de l’objet, suivi d’une période `.`, suivi du nom de la propriété.
 
 ## Segmentation
 
-Lors de la segmentation des utilisateurs sur la base de tableaux d'objets, un utilisateur sera qualifié pour la segmentation si un objet du tableau correspond aux critères. 
+Lorsque vous segmentez des utilisateurs en fonction d’un tableau d’objets, un utilisateur sera admissible pour le segment si un objet du tableau correspond aux critères. 
 
-Créez un nouveau segment et sélectionnez **Attribut personnalisé imbriqué** comme filtre. Ensuite, recherchez et sélectionnez le nom de votre tableau d'objets.
+Créez un nouveau segment et sélectionnez **Nested Custom Attribute** comme filtre. Recherchez et sélectionnez le nom de votre tableau d’objets.
 
-\![Filtre par tableau d'objets.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
+![Filtre sur un tableau d'objets.]({% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %})
 
-Utilisez la notation par points pour spécifier le champ du tableau d'objets que vous souhaitez utiliser. Commencez le champ de texte par un ensemble vide de crochets `[]` pour indiquer à Braze que vous cherchez dans un tableau d'objets. Ensuite, ajoutez un point `.`, suivi du nom du champ que vous souhaitez utiliser.
+Utilisez la notation par points pour spécifier les champ du tableau d’objets que vous souhaitez utiliser. Commencez le champ de texte par deux crochets vides `[]` pour indiquer à Braze que vous regardez dans un tableau (array) d’objets. Ensuite, ajoutez une période `.`, suivi du nom du champ que vous souhaitez utiliser.
 
-Par exemple, si vous souhaitez filtrer le tableau d'objets `pets` sur la base du champ `type`, saisissez `[].type` et choisissez le type d'animal à filtrer, par exemple `snake`.
+Par exemple, si vous souhaitez filtrer un tableau d’objets`pets` basés sur le `type` champ, entrez `[].type` et filtrez sur le type d’animal de compagnie, comme `snake`.
 
-\![Filtrer par type d'animal équivaut à un serpent.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
+![Filtrer par type d'animal équivaut à un serpent.]({% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %})
 
-Vous pouvez aussi filtrer les animaux qui ont un `type` de `dog`. Ici, un utilisateur a au moins un chien, de sorte qu'il entre dans la segmentation "tout utilisateur ayant au moins un animal de compagnie de type chien".
+Ou vous pouvez filtrer les animaux domestiques qui ont un `type` égal à  `dog`. Ici, l’utilisateur a au moins un chien donc il entre dans le segment «  tout utilisateur ayant au moins un animal de compagnie de type chien ».
 
-\![Filtrer par type d'animal équivaut à chien.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
+![Filtrer par type d'animal de compagnie équivaut à un chien.]({% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %})
 
-### Niveaux d'imbrication
+### Niveaux d’imbrication
 
-Vous pouvez créer un segment avec un maximum d'un niveau d'imbrication de tableaux (tableau à l'intérieur d'un autre tableau). Par exemple, compte tenu des attributs suivants, vous pouvez créer un segment pour `pets[].name` contient `Gus`, mais vous ne pouvez pas créer un segment pour `pets[].nicknames[]` contient `Gugu`.
+Vous pouvez créer un segment avec un tableau (array) imbriqué dans un autre tableau (array).  Par exemple, compte tenu des attributs suivants, vous pouvez faire en sorte qu’un segment pour `pets[].name` contienne `Gus`, mais vous ne pouvez pas faire en sorte qu’un segment pour `pets[].nicknames[]` contienne `Gugu`.
 
 {% raw %}
 ```json
@@ -584,7 +584,7 @@ Les points de données sont enregistrés différemment selon que vous créez, me
 {% tabs local %}
 {% tab Create %}
 
-La création d'un nouveau tableau d'objets enregistre un point de données pour chaque attribut d'un objet. Cet exemple coûte huit points de données - chaque objet animal possède quatre attributs et il y a deux objets.
+La création d'un nouveau tableau d'objets enregistre un point de données pour chaque attribut d'un objet. Cet exemple coûte huit points de données : chaque objet animal de compagnie possède quatre attributs et il y a deux objets.
 
 ```json
 {
@@ -612,7 +612,7 @@ La création d'un nouveau tableau d'objets enregistre un point de données pour 
 {% endtab %}
 {% tab Update %}
 
-La mise à jour d'un tableau existant enregistre un point de donnée pour chaque propriété ajoutée. Cet exemple coûte deux points de données car il ne met à jour qu'une propriété dans chacun des deux objets.
+La mise à jour d'un tableau existant enregistre un point de donnée pour chaque propriété ajoutée. Cet exemple coûte deux points de données, car il met uniquement à jour une propriété dans chacun des deux objets.
 
 ```json
 {
@@ -645,7 +645,7 @@ La mise à jour d'un tableau existant enregistre un point de donnée pour chaque
 {% endtab %}
 {% tab Remove %}
 
-La suppression d'un objet d'un tableau enregistre un point de donnée pour chaque critère de suppression que vous envoyez. Cet exemple coûte trois points de données, bien que vous puissiez retirer plusieurs chiens avec cette déclaration.
+La suppression d'un objet d'un tableau enregistre un point de donnée pour chaque critère de suppression que vous envoyez. Cet exemple coûte trois points de données, même si vous pouvez supprimer plusieurs chiens avec cette requête.
 
 ```json
 {

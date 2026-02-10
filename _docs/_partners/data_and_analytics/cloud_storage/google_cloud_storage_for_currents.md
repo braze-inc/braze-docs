@@ -77,7 +77,7 @@ At the bottom of the page, use the **Create Key** button to create a **JSON** pr
 
 In Braze, navigate to **Currents** > **+ Create Current** > **Google Cloud Storage Data Export** and provide your integration name and contact email.
 
-Next, upload your JSON private key under **GCS JSON Credentials** and provide your CGS bucket name and GCS prefix (optional). 
+Next, upload your JSON private key under **GCS JSON Credentials** and provide your GCS bucket name and GCS prefix (optional). Note that you must generate these credentials through Google Cloud Platform, as described in the previous steps.
 
 {% alert important %}
 It's important to keep your credentials file up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
@@ -115,7 +115,7 @@ To verify these permissions in the Braze dashboard, go to the **Google Cloud Sto
 
 ## Export behavior
 
-Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
+Users who have integrated a cloud data storage solution and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
 
 - All API exports will not return a download URL in the response body and must be retrieved through data storage.
 - All dashboard reports and CSV reports will be sent to the user's email for download (no storage permissions required) and backed up on Data Storage.

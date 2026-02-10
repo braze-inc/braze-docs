@@ -1,5 +1,5 @@
 ---
-nav_title: Définition des attributs personnalisés
+nav_title: Définir des attributs personnalisés
 article_title: Définir des attributs personnalisés pour Windows Universal
 platform: Windows Universal
 page_order: 3
@@ -7,12 +7,12 @@ description: "Cet article de référence explique comment définir des attributs
 hidden: true
 ---
 
-# Définition des attributs personnalisés
+# Définir des attributs personnalisés
 {% multi_lang_include archive/windows_deprecation.md %}
 
 Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
-Avant de procéder à la mise en œuvre, n'oubliez pas de consulter les exemples d'options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d'achat dans nos [meilleures pratiques.][7]
+Avant de procéder à la mise en œuvre, n'oubliez pas de consulter les exemples d'options de segmentation offertes par les événements personnalisés, les attributs personnalisés et les événements d'achat dans nos [meilleures pratiques.]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection)
 
 Les attributs utilisateur peuvent être attribués au `IAppboyUser` actuel. Pour obtenir une référence au `IAppboyUser` actuel, appelez `Appboy.SharedInstance.AppboyUser`
 
@@ -42,23 +42,23 @@ En plus des attributs utilisateur par défaut, Braze vous permet également de d
 ### Définir des valeurs d’attributs personnalisés
 
 {% tabs %}
-{% tab Booléen %}
+{% tab Boolean %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, BOOL_VALUE);
 ```
 {% endtab %}
-{% tab Entier %}
+{% tab Integer %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, INT_VALUE);
 ```
 {% endtab %}
-{% tab Double ou float %}
+{% tab Double or Float %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, DOUBLE_VALUE);
 ```
 Braze traite les valeurs FLOAT et DOUBLE exactement de la même manière au sein de la base de données.
 {% endtab %}
-{% tab Chaîne de caractères %}
+{% tab String %}
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "STRING_VALUE");
 ```
@@ -72,9 +72,9 @@ bool SetCustomAttribute(STRING_KEY, LONG_VALUE);
 ```csharp
 bool SetCustomAttribute(STRING_KEY, "DATE_VALUE");
 ```
->  Les dates transmises à Braze doivent être soit au format [ISO 8601][2], e.g `2013-07-16T19:20:30+01:00` ou au format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` e.g `2016-12-14T13:32:31.601-0800`
+>  Les dates transmises à Braze doivent être soit au format [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601), e.g `2013-07-16T19:20:30+01:00` ou au format `yyyy-MM-dd'T'HH:mm:ss:SSSZ` e.g `2016-12-14T13:32:31.601-0800`
 {% endtab %}
-{% tab Réseau %}
+{% tab Array %}
 ```csharp
 // Setting a custom attribute with an array value
 Appboy.SharedInstance.EventLogger.SetCustomAttributeArray("custom_attribute_array_test", testSetArray);
@@ -104,7 +104,7 @@ bool UnsetCustomAttribute(STRING_KEY);
 
 ### Définir un attribut personnalisé via l’API REST
 
-Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l'[API des utilisateurs][4] pour plus de détails.
+Vous pouvez également utiliser notre API REST pour définir les attributs utilisateur. Reportez-vous à la documentation de l'[API des utilisateurs]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) pour plus de détails.
 
 ### Limites de valeur d’attribut personnalisé
 
@@ -126,10 +126,5 @@ Pour configurer un abonnement pour vos utilisateurs (par e-mail ou notification 
 - `PushNotificationSubscriptionType`
   - Les utilisateurs seront définis sur `Subscribed` automatiquement dès l’enregistrement d’une notification push valide. Cependant, nous vous suggérons d’établir un processus d’abonnement explicite et de définir cette valeur sur `OptedIn` dès réception du consentement explicite de votre utilisateur.
 
->  Ces types tombent dans la catégorie `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Pour plus d'informations, consultez la page [Gestion des abonnements des utilisateurs][10].
+>  Ces types tombent dans la catégorie `AppboyPlatform.PCL.Models.NotificationSubscriptionType`. Pour plus d'informations, consultez la page [Gestion des abonnements des utilisateurs]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#user-id-integration-best-practices--notes
-[2]: http://en.wikipedia.org/wiki/ISO_8601
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions

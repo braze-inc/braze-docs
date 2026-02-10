@@ -1,5 +1,5 @@
 ---
-nav_title: Activités en ligne/instantanées pour Swift
+nav_title: Activités en ligne/en production/instantanée pour Swift
 article_title: Activités en ligne/en production/instantanée pour le SDK Swift Braze
 page_order: 0.2
 description: "Découvrez comment configurer des activités en ligne/en production/instantanée pour le SDK Swift Braze."
@@ -13,7 +13,7 @@ platform:
 
 ## Fonctionnement
 
-![Un suivi de livraison d’activité en direct sur l’écran de verrouillage d’un iPhone. Une barre d’état avec une voiture est presque à moitié remplie. Le texte indique « 2 min jusqu’à la récupération »]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
+![Un suivi de livraison d’activité en direct sur l’écran de verrouillage d’un iPhone. Une barre d’état avec une voiture est presque à moitié remplie. Le texte indique "2 min jusqu'à l'enlèvement"]({% image_buster /assets/img/swift/live_activities/example_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 Les activités en direct présentent une combinaison d’informations statiques et dynamiques que vous mettez à jour. Par exemple, vous pouvez créer une activité en direct qui fournit un suivi de statut pour une livraison. Cette activité en direct comporterait le nom de votre entreprise comme information statique, ainsi qu’un « délai de livraison » dynamique qui serait mis à jour à mesure que le livreur approche de sa destination.
 
@@ -22,8 +22,8 @@ En tant que développeur, vous pouvez utiliser Braze pour gérer les cycles de v
 ## Diagramme de séquence {#sequence-diagram}
 
 {% tabs %}
-{% tab Diagramme de séquence des activités en ligne/instantanées %}
-{% details Afficher le diagramme %}
+{% tab Live Activities Sequence Diagram %}
+{% details Show Diagram %}
 ```mermaid
 ---
 config:
@@ -81,7 +81,7 @@ Si les activités en direct et les notifications push sont similaires, leurs aut
 
 {% sdk_min_versions swift:5.11.0 %}
 
-### Étape 1 : Créer une activité {#create-an-activity}
+### Étape 1 : Créer une activité {#create-an-activity}
 
 Tout d'abord, assurez-vous d'avoir suivi [Afficher des données en ligne/instantanées avec les activités en direct](https://developer.apple.com/documentation/activitykit/displaying-live-data-with-live-activities) dans la documentation d'Apple pour configurer les activités en direct dans votre application iOS. Dans le cadre de cette tâche, assurez-vous d’inclure `NSSupportsLiveActivities` défini sur `YES` dans votre `Info.plist`.
 
@@ -118,7 +118,7 @@ struct SportsActivityAttributes: ActivityAttributes {
 }
 ```
 
-### Étape 2 : Démarrer l'activité {#start-the-activity}
+### Étape 2 : Démarrer l'activité {#start-the-activity}
 
 Tout d'abord, choisissez le mode d'enregistrement de votre activité :
 
@@ -126,7 +126,7 @@ Tout d'abord, choisissez le mode d'enregistrement de votre activité :
 - **Localement :** Créez une instance de votre activité en direct, puis utilisez la méthode [`launchActivity`](<https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/liveactivities-swift.class/launchactivity(pushtokentag:activity:fileid:line:)>) pour créer des jetons de notifications push à gérer par Braze.
 
 {% tabs local %}
-{% tab à distance %}
+{% tab remote %}
 {% alert important %}
 Pour enregistrer à distance une activité en direct, vous devez disposer d'iOS 17.2 ou d'une version ultérieure.
 {% endalert %}
@@ -135,7 +135,7 @@ Pour enregistrer à distance une activité en direct, vous devez disposer d'iOS�
 
 Dans votre projet Xcode, sélectionnez le nom de votre application, puis **Général**. Sous **Infrastructures et bibliothèques**, vérifiez que `BrazeKit` est inclus dans la liste.
 
-![Framework BrazeKit sous Infrastructures et bibliothèques dans un exemple de projet Xcode.]({% image_buster /assets/img/swift/live_activities/xcode_frameworks_and_libraries.png %})
+![Le framework BrazeKit se trouve sous Frameworks and Libraries dans un exemple de projet Xcode.]({% image_buster /assets/img/swift/live_activities/xcode_frameworks_and_libraries.png %})
 
 #### Étape 2.2 : Ajouter le protocole BrazeLiveActivityAttributes {#brazeActivityAttributes}
 
@@ -178,7 +178,7 @@ Le système d'exploitation iOS ne génère des jetons push-to-start que lors de 
 
 ###### Exemple
 
-Dans l'exemple suivant, la classe `LiveActivityManager` gère des objets de type activité en direct. Ensuite, la méthode `registerPushToStart` enregistre `SportActivityAttributes`:
+Dans l'exemple suivant, la classe `LiveActivityManager` gère des objets de type activité en direct. Ensuite, la méthode `registerPushToStart` enregistre `SportsActivityAttributes`:
 
 ```swift
 import BrazeKit
@@ -252,11 +252,11 @@ class LiveActivityManager {
 
 Votre gadget Activité en direct affichera ce contenu initial à vos utilisateurs. 
 
-![Une activité en direct sur l’écran de verrouillage d’un iPhone avec les scores de deux équipes. Les équipes Wild Bird Fund et Owl Rehab ont toutes deux un score de 0.]({% image_buster /assets/img/swift/live_activities/example_1_1.png %}){: style="max-width:40%;"}
+![Une activité en direct sur l’écran de verrouillage d’un iPhone avec les scores de deux équipes. Les équipes du Fonds pour les oiseaux sauvages et de la réhabilitation des hiboux ont toutes deux un score de 0.]({% image_buster /assets/img/swift/live_activities/example_1_1.png %}){: style="max-width:40%;"}
 {% endtab %}
 {% endtabs %}
 
-### Étape 3 : Suivi de l'activité du CV {#resume-activity-tracking}
+### Étape 3 : Suivi de l'activité du CV {#resume-activity-tracking}
 
 Pour que Braze suive votre activité en direct dès le lancement de l'application :
 
@@ -299,7 +299,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ### Étape 4 : Mettre à jour l'activité {#update-the-activity}
 
-![Une activité en direct sur l’écran de verrouillage d’un iPhone avec les scores de deux équipes. L’équipe Wild Bird Fund a 2 points et la Owl Rehab a 4 points.]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
+![Une activité en direct sur l’écran de verrouillage d’un iPhone avec les scores de deux équipes. Le Wild Bird Fund a 2 points et le Owl Rehab a 4 points.]({% image_buster /assets/img/swift/live_activities/example_1_2.png %}){: style="max-width:40%;float:right;margin-left:15px;"}
 
 Le point de terminaison [`/messages/live_activity/update`]({{site.baseurl}}/api/endpoints/messaging/live_activity/update) vous permet de mettre à jour une activité en direct par le biais de notifications push transmises par l'API REST de Braze. Utilisez cet endpoint pour mettre à jour le `ContentState` de votre activité en direct.
 
@@ -307,7 +307,7 @@ Lorsque vous mettez à jour votre `ContentState`, votre gadget Activité en dire
 
 Pour plus de détails, consultez notre article sur le [point de terminaison`/messages/live_activity/update` ]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).
 
-### Étape 5 : Fin de l'activité {#end-the-activity}
+### Étape 5 : Terminer l'activité {#end-the-activity}
 
 Lorsqu’une activité en direct est active, elle s’affiche à la fois sur l’écran de verrouillage d’un utilisateur et sur Dynamic Island. Il existe plusieurs façons de mettre fin à une activité en direct et de la supprimer de l’interface utilisateur d’un utilisateur. 
 
@@ -318,13 +318,26 @@ Lorsqu’une activité en direct est active, elle s’affiche à la fois sur l�
 
 Pour plus de détails, consultez notre article sur le [point de terminaison`/messages/live_activity/update` ]({{site.baseurl}}/api/endpoints/messaging/live_activity/update).
 
+## Suivi des activités en ligne/instantané
+
+Les événements Live Activity sont disponibles dans Currents, Snowflake Data Sharing et Query Builder. Les événements suivants peuvent vous aider à comprendre et à surveiller le cycle de vie de vos activités en direct, à suivre la disponibilité des jetons et à diagnostiquer de manière indépendante les problèmes ou à vérifier les statuts de réception/distribution.
+
+- [Activité en ligne/en production/instantanée Changement de jeton]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-push-to-start-token-change-events): Capture le moment où un jeton push-to-start (PTS) est ajouté ou mis à jour dans Braze, ce qui vous permet de suivre les enregistrements et la disponibilité des jetons par utilisateur.
+- [Mise à jour de l'activité en ligne/instantanée Changement de jeton]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/customer_behavior_events/#live-activity-update-token-change-events): Suivi de l'ajout, de la mise à jour ou de la suppression de jetons de production/instantanée (LAU).
+- [En ligne]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-send-events)/en production/instantané : Enregistre chaque fois qu'une ligne/en production/instantanée est démarrée, mise à jour ou terminée par Braze.
+- [Résultat de l'activité en ligne/instantanée]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/#live-activity-outcome-events): Indique l'état final de réception/distribution au service de notification push d'Apple (APN) pour chaque activité en direct envoyée depuis Braze.
+
 ## Foire aux questions (FAQ) {#faq}
 
 ### Fonctionnalité et support
 
 #### Quelles plateformes prennent en charge les activités en direct ?
 
-Les activités en direct sont actuellement une fonctionnalité spécifique à iOS. L’article Activités en direct couvre les [conditions préalables]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#prerequisites) à la gestion des activités en direct via le SDK Swift de Braze.
+Actuellement, les activités en direct sont une fonctionnalité propre à iOS et iPadOS. Par défaut, les activités lancées sur un iPhone ou un iPad s'affichent en plus sur tout appareil watchOS 11+ ou macOS 26+ apparié.
+
+![Capture d'écran d'une barre de menu macOS affichant une activité en direct sous forme d'alerte.]({% image_buster /assets/img/live-activity-macos.png %}){: style="max-width:60%;"}
+
+L’article Activités en direct couvre les [conditions préalables]({{site.baseurl}}/developer_guide/platforms/swift/live_activities/#prerequisites) à la gestion des activités en direct via le SDK Swift de Braze.
 
 #### Les applications React Native prennent-elles en charge les activités en direct ?
 
@@ -340,7 +353,7 @@ Non, cela n’est pas pris en charge actuellement.
 
 #### Que se passe-t-il si une notification push est envoyée alors qu’une activité en direct est active ? 
 
-![Écran de téléphone avec un match sportif Bulls contre Bears en ligne/en production/instantané vers le milieu de l'écran et un texte de notification push lorem ipsum au bas de l'écran.]({% image_buster /assets/img/push-vs-live-activities.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
+![Écran de téléphone avec une activité sportive en direct « Bulls vs Bears » vers le milieu de l’écran et un texte « lorem ipsum » de notification push en bas de l’écran.]({% image_buster /assets/img/push-vs-live-activities.png %}){: style="max-width:30%;float:right;margin-left:15px;"}
 
 Les activités en direct et les notifications push occupent différents écrans et n'entrent pas en conflit sur l'écran d'un utilisateur.
 
@@ -371,6 +384,8 @@ Pour vérifier que votre notification push-to-start est bien arrivée à l'appar
 Vérifiez que vous avez correctement mis en œuvre les instructions décrites [ci-dessus](#swift_brazeActivityAttributes). Votre site `ActivityAttributes` doit contenir à la fois la conformité au protocole `BrazeLiveActivityAttributes` et la propriété `brazeActivityId`.
 
 Après avoir reçu une notification push-to-start de Live Activity, vérifiez que vous pouvez voir une requête réseau sortante vers l'endpoint `/push_token_tag` de votre URL Braze et qu'elle contient le bon ID d'activité dans le champ `"tag"`.
+
+Enfin, assurez-vous que le type d'attribut Activité en direct dans votre charge utile de mise à jour correspond à la chaîne de caractères et à la classe exactes utilisées dans votre appel de méthode SDK à `registerPushToStart`. Utilisez des constantes pour éviter les fautes de frappe.  
 
 #### Je reçois une réponse « Accès refusé » lorsque j’essaie d’utiliser l’endpoint `live_activity/update`. Pourquoi ?
 

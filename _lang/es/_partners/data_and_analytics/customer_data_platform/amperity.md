@@ -112,7 +112,7 @@ Nombra la tabla "Braze Customer Attributes" y guárdala. Verifique que la tabla 
 
 En la plataforma Amperity, vaya a la pestaña **Destinos**. Busque la opción de añadir un nuevo destino. Entre las opciones disponibles, seleccione **Braze**.
 
-![La sección Nuevo destino con el nombre "API Braze", la descripción "Enviar atributos de audiencia a Braze" y el plugin "Braze".]({% image_buster /assets/img/amperity/destination_name.png %}){: style="max-width:60%;"}
+![La sección Nuevo destino con el nombre "API de Braze", la descripción "Enviar atributos de audiencia a Braze" y el plugin "Braze".]({% image_buster /assets/img/amperity/destination_name.png %}){: style="max-width:60%;"}
 
 #### Paso 2d: Configurar los detalles del destino
 
@@ -120,7 +120,7 @@ En **Configuración de Braze**, proporcione las credenciales de Braze y la confi
 - `braze_id`: Identificador Braze asignado automáticamente, inalterable y asociado a un usuario concreto cuando se crea en Braze.
 - `external_id`: Un identificador asignado por el cliente, normalmente un UUID. 
 
-![La sección de configuración de Braze con una instancia de "US-03", un identificador de usuario de "external_id", un nombre de segmento en blanco, un contenedor de S3 de "amperity-training-abc123" y una carpeta de S3 de "braze-attributes".]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
+![La sección Configuración de Braze con una instancia de "US-03", identificador de usuario de "external_id", nombre de segmento en blanco, contenedor de S3 de "amperity-training-abc123" y carpeta de S3 de "braze-attributes".]({% image_buster /assets/img/amperity/braze_settings.png %}){: style="max-width:60%;"}
 
 #### Paso 2e: Añadir un modelo de datos
 

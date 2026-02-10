@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "Este artigo de referência descreve a parceria entre a Braze e a Stripo, um construtor de modelos de e-mail de arrastar e soltar que permite criar facilmente e-mails sofisticados com elementos interativos."
+description: "Este artigo de referência descreve a parceria entre o Braze e o Stripo, um construtor de modelos de e-mail do tipo arrastar e soltar para criar e-mails sofisticados com elementos interativos."
 page_type: partner
 search_tag: Partner
 
@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Stripo
 
-> [Stripo](https://stripo.email/) é um criador de e-mail de arrastar e soltar que ajuda você a criar e projetar e-mails responsivos com elementos interativos. Os usuários do Stripo também podem editar em HTML e decidir quais elementos exibir ou ocultar em vários dispositivos através do editor Stripo.
+> [O Stripo](https://stripo.email/) é um construtor de modelos de e-mail do tipo arrastar e soltar para criar e-mails responsivos com elementos interativos. Os usuários do Stripo também podem editar em HTML e decidir quais elementos exibir ou ocultar em vários dispositivos através do editor Stripo.
 
 _Essa integração é mantida pela Stripo._
 
@@ -41,7 +41,7 @@ Na caixa de diálogo que aparece, selecione **Braze** como seu método de export
 
 Em seguida, insira seu **nome da conta** (como nome do espaço de trabalho), **chave de API** e sua **instância do cluster**.
 
-![Stripo Form]({% image_buster /assets/img_archive/stripo_form.png %})
+![Formulário Stripo]({% image_buster /assets/img_archive/stripo_form.png %})
 
 {% alert important %}
 Esta é uma configuração única, e qualquer exportação no futuro utilizará automaticamente esta chave de API.
@@ -49,6 +49,6 @@ Esta é uma configuração única, e qualquer exportação no futuro utilizará 
 
 ## Uso
 
-Encontre seu modelo Stripo carregado na seção **Modelos e mídias > Modelos de e-mail** da sua conta Braze. Agora você pode usar este modelo de e-mail para começar a enviar mensagens de e-mail envolventes para seus clientes!
+Encontre o modelo Stripo feito upload na seção **Modelos** da sua conta Braze ** & Media > Email Templates**. Agora você pode usar este modelo de e-mail para começar a enviar mensagens de e-mail envolventes para seus clientes!
 
 

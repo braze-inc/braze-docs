@@ -63,7 +63,7 @@ pod install
 
 En este punto, deberías poder abrir el nuevo espacio de trabajo del proyecto Xcode creado por CocoaPods. Asegúrate de utilizar este espacio de trabajo de Xcode en lugar de tu proyecto de Xcode. 
 
-![Una carpeta de ejemplo de Appboy ampliada para mostrar el nuevo `AppbpyExample.workspace`.]({% image_buster /assets/img_archive/podsworkspace.png %})
+![Una carpeta de ejemplo de Appboy ampliada para mostrar el nuevo \`AppbpyExample.workspace\`.]({% image_buster /assets/img_archive/podsworkspace.png %})
 
 ## Próximos pasos
 

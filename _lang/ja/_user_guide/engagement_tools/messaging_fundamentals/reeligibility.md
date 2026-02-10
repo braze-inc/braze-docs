@@ -1,7 +1,7 @@
 ---
 nav_title: 再適格性
 article_title: 再適格性
-page_order: 8
+page_order: 10
 page_type: reference
 description: "この参照記事では、キャンペーンおよびキャンバスの再適格性を説明します。"
 tool:

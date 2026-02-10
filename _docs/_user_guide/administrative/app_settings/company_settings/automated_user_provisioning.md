@@ -12,6 +12,8 @@ alias: /scim/automated_user_provisioning/
 
 > Use SCIM provisioning to automatically create and manage Braze users through API. This article walks you through what information to provide, how to generate your SCIM token, and where to find your SCIM API endpoint.
 
+{% include early_access_beta_alert.md feature='SCIM provisioning' %}
+
 ## Accessing SCIM provisioning settings
 
 1. In the Braze dashboard, go to **Settings** > **Admin Settings** > **SCIM Provisioning** and add an identity provider.
@@ -25,9 +27,7 @@ alias: /scim/automated_user_provisioning/
 {% tabs %}
 {% tab Okta - Braze app %}
 
-{% alert important %}
-The Okta integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
 
 ## Step 1: Set up SCIM provisioning
 
@@ -47,7 +47,7 @@ The Okta integration is currently in early access. Contact your Braze account ma
 
 Select **Test API Credentials**. A verification message appears if the integration is successful and you can save.
 
-### Step 1.4: Enable provisioning to app
+### Step 1.4: Enable provisioning to the app
 
 1. In **Provisioning** > **Settings** > **To App** > **Provisioning to App**, select **Edit**.
 2. Enable the following:
@@ -60,15 +60,13 @@ Select **Test API Credentials**. A verification message appears if the integrati
 
 1. Select the **Assignment** tab.
 2. Select **Assign** and select an option.
-3. Assign the app to the people that should have access to Braze.
+3. Assign the app to the people who should have access to Braze.
 4. Select **Done** when you’ve completed the assignment.
 
 {% endtab %}
 {% tab Okta - Custom app integration %}
 
-{% alert important %}
-The Okta integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Okta integration' %}
 
 ## Step 1: Set up SCIM provisioning
 
@@ -87,7 +85,7 @@ The Okta integration is currently in early access. Contact your Braze account ma
 3. Test the API credentials by selecting **Test API Credentials**.
 4. Select **Save**.
 
-### Step 1.3: Enable provisioning to app
+### Step 1.3: Enable provisioning to the app
 
 1. In **Provisioning** > **Settings** > **To App** > **Provisioning to App**, select **Edit**.
 2. Enable the following:
@@ -106,14 +104,13 @@ The Okta integration is currently in early access. Contact your Braze account ma
 {% endtab %}
 {% tab Entra ID %}
 
-{% alert important %}
-The Entra ID integration is currently in early access. Contact your Braze account manager if you're interested in participating in the early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='The Entra ID integration' %}
 
 ## Step 1: Set up SCIM provisioning app
 
-### Step 1.1. Log into Microsoft Entra admin center
-Log into your Microsoft Entra admin center.
+### Step 1.1: Log into Microsoft Entra admin center
+
+Log in to your Microsoft Entra admin center.
 
 ### Step 1.2: Create and set up your SCIM app
 
@@ -129,7 +126,7 @@ Log into your Microsoft Entra admin center.
 1. Go to the **Manage** > **Provisioning** section of your SCIM application.
 2. Select **Connect your application** or **New configuration** and fill in the field values that populate within the table on the **Setup SCIM provisioning** page.
 
-### Step 1.4: Enable provisioning to app
+### Step 1.4: Enable provisioning to the app
 
 1. Go to the **Manage** > **Attribute mapping (Preview)** section of your SCIM application.
 2. Select **Provision Microsoft Entra ID Users**.
@@ -152,7 +149,7 @@ Log into your Microsoft Entra admin center.
 - **Service Origin:** Enter the origin domain of your SCIM requests. Braze uses this in the `X-Request-Origin` header to verify where requests are coming from.
 - **IP Allowlisting (optional):** You can restrict SCIM requests to specific IP addresses. Enter a comma-separated list or range of IP addresses to allow. The `X-Request-Origin` header in each request is used to check the request IP address against the allowlist.
 
-![SCIM Provisioning settings form with three fields: Default Workspace, Service Origin , and optional IP Allowlisting. The “Generate SCIM Token” button is disabled.]({% image_buster /assets/img/scim_unfilled.png %})
+![SCIM Provisioning settings form with three fields: Default Workspace, Service Origin, and optional IP Allowlisting. The “Generate SCIM Token” button is disabled.]({% image_buster /assets/img/scim_unfilled.png %})
 
 ## Step 2: Generate a SCIM token
 
