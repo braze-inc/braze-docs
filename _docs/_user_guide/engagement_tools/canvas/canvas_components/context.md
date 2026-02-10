@@ -97,6 +97,8 @@ When referencing context variables, always use the format {% raw %}`{{context.${
 
 You can create filters using context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. For filter setup, comparison logic, and advanced examples, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
 
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
+
 ## Previewing user paths
 
 We recommend testing and [previewing your user paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/preview_user_paths) to make sure your messages are sent to the right audience and context variables are evaluated to the expected outcomes.
