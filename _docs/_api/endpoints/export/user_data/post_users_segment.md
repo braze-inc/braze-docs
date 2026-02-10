@@ -23,7 +23,7 @@ When using this endpoint, note the following:<br><br>1. The `fields_to_export` f
 User data is exported as multiple files of user JSON objects separated by new lines (such as one JSON object per line). Data is exported to an automatically generated URL or to an S3 bucket if this integration is already set up.
 
 {% alert important %}
-**Export output format**: When an export is successful, you **always** receive a `.txt` file that contains a compressed archive (ZIP or GZIP file), regardless of the amount of user data exported. If the export fails, you receive an email notification instead. Setting up cloud storage credentials (S3, Azure, or Google Cloud Storage) minimizes the chance of failures because data size is not an issue when using cloud storage.
+**Export output format**: When an export is successful, the HTTP response contains a URL to download a compressed archive (ZIP or GZIP file), regardless of the amount of user data exported. If the export fails, you receive an email notification instead. Setting up cloud storage credentials (S3, Azure, or Google Cloud Storage) minimizes the chance of failures because data size is not an issue when using cloud storage.
 {% endalert %}
 
 Note that a company may run at most one export per segment using this endpoint at a given time. Wait for your export to complete before trying again.
