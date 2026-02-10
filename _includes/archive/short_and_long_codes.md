@@ -30,7 +30,7 @@ RCS is a modern messaging system that offers more features than traditional SMS,
 
 | Cons |
 | ---- |
-| **Fragmented Supported**<br> Through Google has pushed RCS heavily for Android, and Apple has recently introduced RCS support for iOS, the implementation can still be uneven across different carriers and regions. If a user's phone or carrier doesn't support RCS, the message usually sends as a plain SMS, consequently losing all the "rich" RCS features. |
+| **Fragmented support**<br> Though Google has pushed RCS heavily for Android, and Apple has recently introduced RCS support for iOS, the implementation can still be uneven across different carriers and regions. If a user's phone or carrier doesn't support RCS, the message usually sends as a plain SMS, consequently losing all the "rich" RCS features. |
 | **Higher cost of rich messaging**<br> RCS messages that use a lot of rich messaging capabilities tend to cost more per message than SMS messages. This isn’t surprising given the benefits of rich features, but can be important to note for your marketing budget. |
 {: .reset-td-br-1 role="presentation"}
 
