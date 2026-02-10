@@ -1,4 +1,3 @@
-#### Property details
 <ul>
 <li><code>dispatch_id</code> is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same <code>dispatch_id</code>. Use <code>dispatch_id</code> to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open).</li>
 <li><code>state_change_source</code> returns a string of the full source name. For example, the source CSV import will return the string <code>CSV Import</code>. Available sources are listed below:</li>
