@@ -55,9 +55,7 @@ Keep in mind, Braze only sends event data for users without an `external_user_id
 
 Lastly, select **Launch Current**.
 
-{% alert warning %}
-If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different workspaces. Because the Braze Segment Currents integration cannot isolate events by different apps in a single workspace, failure to do this will lead to unnecessary data deduping and lost data. 
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 To read more, visit Segment [documentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/).
 
