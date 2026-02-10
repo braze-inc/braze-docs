@@ -16,7 +16,7 @@ channel: email
 
 ## How it works
 
-You can use automated IP warming to gradually increase your daily send volume, allowing inbox providers to learn and trust your sending patterns. When a a domain has been added to your workspace, you can select the **Automated IP Warming** tile in the **Pick up where you left off** section of your home dashboard, and this tile remains here for 60 days.
+You can use automated IP warming to gradually increase your daily send volume, allowing inbox providers to learn and trust your sending patterns. When a domain has been added to your workspace, you can select the **Automated IP Warming** tile in the **Pick up where you left off** section of your home dashboard, and this tile remains here for 60 days.
 
 Braze sends to your most engaged subscribers first, which allows daily volume to grow at a pace that matches best practices. Then, Braze tracks engagement and deliverability signals. If any issues are detected, your schedule is adjusted automatically.
 
@@ -51,7 +51,7 @@ To perform automated IP warming, you must have the following:
 ### Step 2: Select and rank segments
 
 1. Next, select the segments to target. During IP warming, Braze starts sending to your highest engaged users and gradually increases send volume over time and slowly adds in segments with less engagement. 
-2. Then, drag and drop the segments to rank them from high to low engagement. High engagement includes recipients who consistently click or interact with your emails. Low engagement includes recipients who are inconsistent in their engagement with your emails or haven't been in your audience log enough to have earned a higher rating.
+2. Then, drag and drop the segments to rank them from high to low engagement. High engagement includes recipients who consistently click or interact with your emails. Low engagement includes recipients who are inconsistent in their engagement with your emails or haven't been in your audience long enough to have earned a higher rating.
 3. Select **Next: Messages** to continue the setup.
 
 ![Two segments selected to target for automated IP warming.]({% image_buster /assets/img/automated_ip_warming_segment.png %})
@@ -73,7 +73,7 @@ Review the details of your IP warming plan. Then, select **Launch**.
 
 ## During active IP warmup
 
-IP warming campaigns are created 1 to 2 days in advance, unless you are launching an IP warmup the next day. These campaigns are automatically named with following the format: `IP Warming Day [X] - [Date] - [Template Name]`.
+IP warming campaigns are created 1 to 2 days in advance, unless you are launching an IP warmup the next day. These campaigns are automatically named with the following format: `IP Warming Day [X] - [Date] - [Template Name]`.
 
 When the targeted daily send goal is reached, the system stops sending for that day to protect your reputation. 
 
@@ -94,11 +94,11 @@ However, when stopped, the IP warmup cannot be resumed. Instead, you must set up
 
 - Downloading the existing data for your stopped plan to keep for your record, as once you start a new IP warmup, the previous tracker will be removed
 - Updating the **Current daily send volume** to the most recent volume
-Adding a filter to a segment if you plan to use the same segment from the last IP warmup by excluding users that have already received previous campaigns
+- Adding a filter to a segment if you plan to use the same segment from the last IP warmup by excluding users that have already received previous campaigns
 
 ## When an IP warmup completes
 
-IP Warming is marked as completed when the last day of IP warming ends at midnight in your company’s timezone. For example if the last campaign sent in the IP warming plan sends at 8 pm, then the plan is marked as done after four hours.
+IP warming is marked as completed when the last day of IP warming ends at midnight in your company’s timezone. For example, if the last campaign sent in the IP warming plan sends at 8 pm, then the plan is marked as done after four hours.
 
 The tracker stays on the homepage for 90 days after the plan ends. After 90 days, the tracker is removed. Downloading the data includes these standard email metrics:
 
