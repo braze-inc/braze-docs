@@ -38,6 +38,7 @@ For help with CSV and API exports, visit [Export troubleshooting]({{site.baseurl
 <br>
 
 If you'd like to see how many segments your message will dispatch, enter your copy into the calculator. Note that this will not process or predict the output of Liquid or Connected Content.
+<!-- Note: This calculator uses fixed DOM IDs and global variables. Include only once per page to avoid conflicts. -->
 <style>
   .segment_data_hide {
     display: none;
@@ -118,6 +119,8 @@ If you'd like to see how many segments your message will dispatch, enter your co
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
+(function() {
+// SMS Segment Calculator - Note: Uses fixed DOM IDs, include only once per page
 var unicodeToGsm = {
 0x000A: [0x0A],
 0x000C: [0x1B, 0x0A],
@@ -516,6 +519,7 @@ $('#sms_split input[name=sms_type]').change(function(e){
     $('#auto_encoding').html("");
     updateSMSSplit();
 });
+})(); // End IIFE
 </script>
 
 {% endalert %}
