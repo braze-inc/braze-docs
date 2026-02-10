@@ -188,7 +188,7 @@ When writing instructions or detailing steps for a reader to follow, avoid using
 
 If someone has difficulty with the steps or instructions, your casual descriptors can feel condescending. You may also unintentionally exclude people from your documentation who interpret that as an indicator they are in some way not skilled enough to follow your instructions.
 
-##### Customers vs. clients
+##### Customers versus clients
 
 When referring to Braze users and their consumers, use the following terms accordingly:
 
@@ -1191,7 +1191,7 @@ After you have a general time frame, communicate the feature deprecation early. 
 
 Don't use phrases that might incite fear, uncertainty, or doubt with readers. Provide a clear path forward, such as what the deprecated feature is being replaced by or an alternative solution.
 
-#### General vs. specific {#general-vs-specific}
+#### General versus specific {#general-vs-specific}
 
 As a best practice, write articles that discuss functionality in a generally applicable way. If more detail is needed for specific cases or exceptions, create a separate section (or separate article if the content is web article length, ~500 words) that outlines this outlier. Create cross-references from the general article to the specific to help users connect these concepts.
 
@@ -2221,6 +2221,15 @@ In Braze documentation, use site-root-relative URLs to link to images. For more 
 ⚠️ = Use caution, refer to relevant notes  
 ⛔️ = Don’t use 
 
+#### Numerals
+
+**24/7**  
+Hyphenate (24-7) only when used as a modifier before a noun.
+
+**2D / two-dimensional**
+
+**3D / three-dimensional**
+
 #### A
 
 **A/B testing**
@@ -2228,20 +2237,16 @@ In Braze documentation, use site-root-relative URLs to link to images. For more 
 ⚠️ **abort**  
 Avoid using unless referring to a specifically named process. Instead, use words like “stop”, “exit”, “cancel”, or “end”.
 
-**AccuWeather (partner)**
-
 **action buttons**
 
 **action-based delivery**  
 Lowercase except when referring to a UI element that is capitalized. 
 
-**Adjust (partner)**
-
 ⛔️ **ad hoc**
-
 Don’t use. Use “one-time” or similar.
 
-**Airbridge (partner)**
+**AI**  
+Preferred over "artificial intelligence" after the first mention.
 
 **AI item recommendation**
 
@@ -2249,17 +2254,51 @@ Don’t use. Use “one-time” or similar.
 Always capitalized.
 
 **alphanumeric**  
-Don’t hyphenate.
+Don't hyphenate.
+
+**always-on**
+
+**am**  
+Lowercase when used for time (for example, "10 am"). See also [pm](#glossary).
+
+**Amazon S3**
+
+**Amazon Web Services (AWS)**  
+Always capitalized. Spell out at the first mention, then it's fine to use the acronym.
+
+**AMP for Email / Braze AMP for Email**
+
+**Android**
+
+**API / Application Programming Interface**  
+Spell out at the first mention, then it's fine to use the acronym.
+
+**API key**
+
+**APNs / Apple Push Notification service**
 
 **⛔️ app group**  
 Don't use. App group has been renamed to workspace.
 
-**Amazon Web Services (AWS)**  
-Always capitalized. Spell out at the first mention, then it’s fine to use the acronym.
+**Apple iOS platform**
+
+**AppleWatch**
+
+**.avro**
 
 #### B
 
+**behavior, behaviors**
+
+**Benchmarks**
+
 **beta**
+
+**BI Insights**
+
+**bingeing**
+
+**Binge-watch**
 
 **Bonfire / Bonfire community / Braze Bonfire community**  
 Use “Braze Bonfire community” on the first mention, then it’s fine to use just “Bonfire” or “Bonfire community”.
@@ -2269,27 +2308,24 @@ Use “Braze Bonfire community” on the first mention, then it’s fine to use 
 ⛔️ **blacklist**  
 Don’t use. Instead, use “blocklist” or “denylist”. For the verb form of these words, consider rewording the sentence to remove the problematic term. For example:
 
-✅ **Recommended:** To block an existing property from being used in new messages, click **Manage Properties**.
-
-⛔️ **Not recommended:** To blocklist an existing property, click **Manage Properties**. 
-
-**Bluedot (partner)**
-
-**Branch (partner)**
+>✅ **Recommended:** To block an existing property from being used in new messages, click **Manage Properties**. <br>
+>⛔️ **Not recommended:** To blocklist an existing property, click **Manage Properties**. 
 
 **Braze-to-Braze webhook**
 
+**Business Intelligence (BI)**  
+Spell out at the first mention, then it's fine to use the acronym.
+
 #### C
 
-**California Consumer Privacy Act (CCPA)**  
-Spell out at the first mention, then it’s fine to use the acronym.
+**California Consumer Privacy Act (CCPA)** 
+Spell out at the first mention, then it’s fine to use the acronym. See also [CCPA compliance (noun) / CCPA-compliant (adjective)](#ccpa-compliance)
 
 **can**  
 Use “can” to refer to an optional action or outcome. For example:
 
-✅ **Recommended:** You can also upload and update user profiles via CSV files.
-
-✅ **Recommended:** The import process can take a few minutes.
+> ✅ **Recommended:** You can also upload and update user profiles with CSV files.
+> ✅ **Recommended:** The import process can take a few minutes.
 
 Don’t use “can” for directions. Instead, prefer the imperative verb. For examples, see [Second Person and First Person](#second-person-and-first-person).
 
@@ -2308,11 +2344,9 @@ Use when referring to custom data limits instead of the word "limit."
 **catalog**  
 Lowercase except when referring to a UI element that is capitalized.
 
-**CCPA compliance (noun) / CCPA-compliant (adjective)**
+**CCPA compliance (noun) / CCPA-compliant (adjective)** {#ccpa-compliance}
 
-**Census (partner)**
-
-**Certona (partner)**
+**CEO, CFO, CMO, COO, CTO**
 
 **churn**  
 Use to refer to customer turnover or loss.
@@ -2320,13 +2354,38 @@ Use to refer to customer turnover or loss.
 **churn prediction**  
 Lowercase except when referring to the UI.
 
+**checkbox**
+
+**Check-in (noun) / check in (verb)**
+
+**City x City**
+
+**Cofounder**
+
+**Content Cards / Braze Content Cards**
+
 **Content Blocks**
+
+**control group**
+
+**conversion**
 
 **conversion group analysis**  
 Lowercase.
 
+**Cordova**
+
 **Currents / Braze Currents**  
 Always capitalized.
+
+**CRM / customer relationship management**  
+Spell out at the first mention, then it's fine to use the acronym.
+
+**cross-channel messaging / cross-channel personalization**
+
+**C-suite**
+
+**CSV / comma-separated values**
 
 **custom attributes**  
 Lowercase except when referring to a UI element that is capitalized.
@@ -2334,40 +2393,86 @@ Lowercase except when referring to a UI element that is capitalized.
 **custom events**  
 Lowercase except when referring to a UI element that is capitalized.
 
+**customer attributes**
+
+**customer behavior**
+
 **customer data platform (CDP)**  
 Lowercase.
 
+**customer engagement**
+
+**customer events**
+
+**customer journey**
+
+**customer permissions**
+
+**customer retention**
+
 #### D
+
+**Dark Mode**
 
 **dashboard / Braze dashboard**  
 Use to refer to Braze as a platform. Use lowercase (dashboard not Dashboard).
 
-**Digioh (partner)**
+**data-driven (adjective)**
 
-**drag and drop (verb)  / drag-and-drop (adjective)**  
+**data privacy**
+
+**data sheet**
+
+**data streaming**
+
+**DAU / Daily Active Users**
+
+**Decision Splits**
+
+**deep linking**
+
+**Delay Messages**
+
+**Downtime**
+
+**drag and drop (verb) / drag-and-drop (adjective)** {#drag-and-drop}
 Use when referring to dragging files into an upload zone.
 
 **Drag-And-Drop Editor**  
-Use title case when referring to the feature in the UI. Otherwise, use lowercase (drag-and-drop editor). Use the verb when referencing how customers can [drag and drop](#glossary) elements in the editor.
+Use title case when referring to the feature in the UI. Otherwise, use lowercase (drag-and-drop editor). Use the verb when referencing how customers can [drag and drop](#drag-and-drop) elements in the editor.
 
 **drill down (verb) / drilldown (noun or adjective)**  
 Use in content about data and the reports generated from them. 
 
-**Dyspatch (partner)**
+**DTC / direct to consumer**
+
+**dynamic content**
 
 #### E
 
 **early access**
 
 ⛔️ **e.g.**  
-Don't use. Use the phrases “for example,“ "such as,” "like" or similar.
+Don't use. Use the phrases “for example,“ "such as,” "like", or similar.
+
+**eBook**
 
 **eCommerce**  
 Not “ecommerce” or “e-commerce”.  
-*Note: Updated from "ecommerce" to "eCommerce" Feb 4, 2025*
+
+**ecosystem**
 
 **email**  
 Not “Email” or “e-mail”.
+
+**email deliverability**
+
+**email reputation**
+
+**EMEA (Europe, Middle East, and Asia)**
+
+**emoji**  
+Singular and plural form.
 
 **end user (noun) / end-user  (adjective)**  
 Prefer “your users” over “end users”.
@@ -2375,10 +2480,14 @@ Prefer “your users” over “end users”.
 ⚠️ **ensure**  
 Avoid using when talking about what a feature does. Refer to [Avoid guarantees](#avoid-guarantees) for more information.
 
+**ESP / email service provider**
+
 **event prediction**
 
 **event properties / custom event properties**  
 Lowercase except when referring to a UI element that is capitalized.
+
+**exception events**
 
 **extract**  
 Use “extract” instead of “unzip” to refer to extracting files from a compressed folder.
@@ -2388,22 +2497,59 @@ Not "External ID". When referencing code snippets, use external_id.
 
 #### F
 
+**Facebook**
+
+**FCM / Firebase Cloud Messaging**
+
+**Firebrand / Firebrands**
+
+**Forge [YEAR]**
+
+**frequency capping**
+
 **Fullscreen**   
 When used as an adjective (for example, "Fullscreen in-app messages"), render without the hyphen.
 
 #### G
 
+**GDPR / General Data Protection Regulation**  
+Spell out at the first mention, then it's fine to use the acronym.
+
+**GDPR compliance (noun) / GDPR-compliant (adjective)**
+
+**geofence**
+
+**GIF**
+
 **GitHub**  
 Not “Github” or “github”.
 
+**Google / google-able**
+
 #### H
 
+**High-performance**
+
 **High-Value Actions**
+
+**HQ / headquarters**
+
+**HTML Email Editor**
+
+**HTTP**
 
 #### I
 
 ⛔️ **i.e.**  
 Don't use. Use the phrase “that is” or similar.
+
+**in-app messages**
+
+**in-browser message (IBM)**
+
+**infographic**
+
+**install attribution**
 
 **integer**
 
@@ -2422,19 +2568,60 @@ Use title case.
 ⛔️ **Internet of things**  
 Don’t use.
 
+**iOS**
+
+**IP warming**
+
+**iPad**
+
+**iPhone**
+
+**IT**
+
 #### J
 
+**JavaScript**
+
+**JPEG / JPG**
+
+**JSON / JavaScript Object Notation**
+
 #### K
+
+**Keynote (program) / keynote (noun)**
+
+**kick off (verb) / kickoff (noun)**
 
 ⚠️ **kill**  
 Avoid using unless referring to a specifically named process. Instead, use words like “stop”, “exit”, “cancel”, or “end”.
 
+**KPI / key performance indicator**
+
 #### L
+
+**landing page**
+
+**lifecycle**
+
+**Lift-rate**
+
+**LinkedIn**
 
 **Liquid**  
 Always capitalized.
 
+**Live Preview**
+
+**long term (noun) / long-term (adjective)**
+
+**LTV / Lifetime Value**
+
 #### M
+
+**marketing technology**  
+Preferred over "martech".
+
+**MAU / Monthly Active Users**
 
 **maximum**  
 Not “max”.
@@ -2442,10 +2629,26 @@ Not “max”.
 **media library**  
 Lowercase except when referring to a UI element that is capitalized.
 
+**Microsoft**
+
+**Microsoft Azure**
+
+**ML / machine learning**
+
+**mobile marketing**
+
+**mobile marketing automation**
+
+**mobile moment**
+
+**mobile phone**
+
 **multichannel campaign**  
 Lowercase except when referring to a UI element that is capitalized. No hyphen.
 
 **multi-language support**
+
+**multivariate testing**
 
 #### N
 
@@ -2455,15 +2658,39 @@ Not “NA”. Use “N/A” as needed in tables to denote column or row content 
 ⚠️ **new**  
 Avoid using in product documentation and learning material, as this can quickly date your content. For more information, see [Future Features](#describing-limitations).
 
+**NRT / near real-time (adjective) / near real time (noun)**
+
+**NYC / New York City**
+
 #### O
 
+**on demand**
+
+**onboarding**
+
 **once**  
-Use to refer to performing an action a single time. Don’t use “once” in place of “after”.
+Use to refer to performing an action a single time. Don’t use “once” in place of “after” or "when".
+
+**open rate (OR)**
+
+**opt-in prompt**
+
+**orchestration**
+
+**OS / Operating System**
+
+**OTT / Over-the-top media services**
 
 ⛔️ **out-of-the-box**  
 Don’t use. Instead, use an alternative like “default”.
 
 #### P
+
+**partner, partners, partnership**
+
+**persona (singular) / personas (plural)**
+
+**personalization**
 
 **personally identifiable information (PII)**
 
@@ -2473,10 +2700,17 @@ Use title case.
 **Personalized Variant**  
 Use title case.
 
+**PhD / PhDs**
+
+**pm**  
+Lowercase when used for time (for example, "10 pm"). See also [am](#glossary).
+
 **preceding**
 
 **prediction**  
 Lowercase unless preceded by “Braze”, such as “A Braze Prediction is…”.
+
+**predictive analytics**
 
 **Predictive Churn**  
 Use title case. Predictive Churn is the product name, whereas customers create a [churn prediction](#glossary).
@@ -2493,6 +2727,10 @@ Use title case.
 **preference center**  
 Lowercase except when referring to a UI element that is capitalized.
 
+**priming for location**
+
+**priming for push**
+
 **promotion code**  
 Lowercase except when referring to a UI element that is capitalized. Don’t use “promo code”.
 
@@ -2506,6 +2744,8 @@ Lowercase except when referring to a UI element that is capitalized.
 
 **Push Max**  
 Use title case.
+
+**push notification**
 
 **Push Stories**  
 Use title case.
@@ -2524,12 +2764,32 @@ Avoid using. What is quick for you may not be quick for others. For related guid
 
 #### R
 
+**rate limiting**
+
+**real time (noun) / real-time (adjective)**
+
 **re-engagement**
 
 ⚠️ **regular expression / regex**  
 Prefer the spelled-out version over its abbreviated “regex”. Don’t use “RegEx”.
 
+**relationship marketing**
+
+**retargeting**
+
+**retention**
+
+**rich push**
+
+**right-click**
+
+**right-swipe**
+
+**ROI / return on investment**
+
 #### S
+
+**Sage AI by Braze™**
 
 ⛔️ **sanity check**  
 Don’t use. Instead, use a term like “quick check” or “preliminary check”. Alternatively, introduce check-in instructions with a phrase like “Let's check to make sure everything is working”.
@@ -2537,10 +2797,13 @@ Don’t use. Instead, use a term like “quick check” or “preliminary check�
 **scheduled delivery**  
 Lowercase except when referring to a UI element that is capitalized.
 
-**segment (audience)**
+**screencap**
 
-**Segment (partner)**  
-Always capitalized.
+**screengrab**
+
+**SDK / Software Developer Kit**
+
+**segment (audience)**
 
 **Segment Extensions**  
 Use title case.
@@ -2548,35 +2811,71 @@ Use title case.
 **Segment Insights**  
 Use title case.
 
+**Segmentation**
+
 **selection**  
 As in, the feature within catalogs. Lowercase except when referring to a UI element that is capitalized.
 
+**SF / San Francisco**
+
+**Silicon Valley**
+
+**silo, silos, siloed**
+
 **simple survey**
 
-**Snowflake (partner)**
+**slideshow**
+
+**Smartphone**
+
+**Smartwatch**
+
+**SMS**
 
 **software as a service (SaaS)**   
 Spell out at the first mention, then it’s fine to use the acronym.
+
+**spam testing**
+
+**SQL / structured query language**
 
 **SQL Segment Extensions**  
 Use title case.
 
 **stickiness**
 
+**streaming**
+
 **string**  
 For non-technical audiences, define a string as text that contains “alphanumeric characters”. For technical audiences, it’s fine not to define this term.
 
 **subscription group**
 
+**sunset, sunsetting**
+
 #### T
+
+**targeted response**
 
 ⚠️ **terminate**  
 Avoid using unless referring to a specifically named process. Instead, use words like “stop”, “exit”, “cancel”, or “end”.
 
+**third-party**
+
 **time zone**  
 Not "timezone".
 
+**timestamp**
+
+**touchscreen**
+
+**triggered message**
+
+**Twitter**
+
 #### U
+
+**UK / United Kingdom**
 
 ⛔️ **unzip**  
 Don’t use. Instead, use “extract”.
@@ -2584,8 +2883,17 @@ Don’t use. Instead, use “extract”.
 **URL**  
 Pronounced as the individual letters U-R-L, so write “a URL” rather than “an URL”. Use all caps. For plurals, use URLs.
 
+**US / USA**  
+No periods.
+
+**use cases**
+
 **user attributes / default user attributes**  
 Use to refer to user data automatically captured by Braze.
+
+**user profile**
+
+**username**
 
 ⚠️ **utilize**  
 Don’t use “utilize” when you mean “use”. Use “utilize” to refer to something being used beyond its original intended purpose. 
@@ -2602,10 +2910,6 @@ Don’t use. Instead, use terms like “conversely” or a phrase like “the ot
 
 **view-only**
 
-**Vizbee (partner)**
-
-**Voucherify (partner)**
-
 ⚠️ **vs.**  
 Don’t use “vs.” as an abbreviation for “versus”. Instead, spell out the word.
 
@@ -2616,6 +2920,8 @@ Don’t use “vs.” as an abbreviation for “versus”. Instead, spell out th
 **web push**
 
 **webhook**
+
+**webinar**
 
 **whitelabel**
 
@@ -2637,11 +2943,11 @@ Use title case.
 ⛔️ **wizard**  
 Don't use. Instead, use "composer".
 
+**WordPress**
+
 **workspace**
 
-#### X
-
-**Xamarin (partner)**
+**www**
 
 #### Y
 
@@ -2652,12 +2958,9 @@ Don’t use a file extension to refer to the type of file. For example, use “Y
 
 #### Z
 
-**Zapier (partner)**
-
-**Zendesk (partner)**
-
 **zip code**
+
+**zip file / zipped files**
 
 **ZIP**  
 Don’t use a file extension to refer to the type of file. For example, use “ZIP file” instead of “.zip file”.
-
