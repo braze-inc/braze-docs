@@ -11,7 +11,7 @@ page_order: 3
 
 ## Prerequisites
 
-Before you can view Decisioning Studio reports in the Braze, you'll need to:
+Before you can view Decisioning Studio reports in Braze, you'll need to:
 
 - Have an active contract for Braze and BrazeAI Decisioning Studio™. 
 - Contact your CSM to enable BrazeAI Decisioning Studio™ for you on your behalf.
@@ -41,9 +41,7 @@ To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, t
 
 ### Performance
 
-The performance report offers high-level agent metrics that compare treatment groups (from Braze) to one or more control groups (like revenue). It supports two different views: **Trending** and **Driver Tree**.
-
-By default, the report uses the **Trending** view, which compares how BrazeAI™ performs over time compared to your control groups, and tracks the uplift evolution.
+The performance report offers high-level agent metrics that compare treatment groups (from Braze) to one or more control groups (like revenue). It supports two different views: **Trending** and **Driver Tree**. By default, the report uses the **Trending** view, which compares how BrazeAI™ performs over time compared to your control groups and tracks the uplift evolution. Note that the metrics are calculated on a daily basis, and KPIs are calculated when you go to the portal.
 
 ![Performance report trending view showing a line chart comparing BrazeAI™ and control group performance over time. The chart displays two lines labeled BrazeAI™ and Control, with the y-axis labeled Uplift and the x-axis showing dates. A legend identifies each group by color.]({% image_buster /assets/img/decisioning_studio/reporting_agent_performance_trending.png %})
 
@@ -87,7 +85,7 @@ Refer to the following table for more details about this report:
 {% endtab %}
 
 {% tab shaps %}
-The **SHAPs** report uses the Shapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation agent. Each point on the chart represents one SHAP and the distribution of the points represent a general sense of a feature's directional impact.
+The **SHAPs** report uses the Shapley Additive exPlanations (SHAP) model to help you quantify how each feature or variable contributes to your recommendation agent. Each point on the chart represents one SHAP, and the distribution of the points represents a general sense of a feature's directional impact.
 
 ![SHAPs report chart displaying a horizontal bar graph with multiple colored bars representing different features or variables. Each bar shows the impact of a feature on the recommendation agent, with the x-axis labeled SHAP value and the y-axis listing feature names such as Recency, Frequency, and Channel. The chart visualizes how each feature contributes positively or negatively to the agent's predictions.]({% image_buster /assets/img/decisioning_studio/reporting_insights_shaps.png %})
 
