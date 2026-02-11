@@ -30,7 +30,7 @@ Cursor fills out the PR automatically:
 * List of changes to help the reviewer understand the scope
 
 
-Step 5: Assign Reviewers Based Code Ownership where possible
+Step 5: Assign Reviewers Based on Code Ownership where possible
 Cursor identifies team members based on CODEOWNERS file. If no owner, assign to @docs-team
 
 
