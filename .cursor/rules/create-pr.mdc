@@ -9,7 +9,7 @@ This workflow streamlines branch creation, PR generation and reviewer assignment
 ---
 
 ## Step 2: Create a Properly Named Branch
-For each file that is change, create a Branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>-`  
+For each file that is changed, create a Branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>-`  
 Example: `Cursor-02112026-liquid_use_cases`  
 
 Cursor handles this automatically and consistently.
