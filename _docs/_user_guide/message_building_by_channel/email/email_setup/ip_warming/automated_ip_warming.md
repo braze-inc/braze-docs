@@ -18,7 +18,7 @@ channel: email
 
 You can use automated IP warming to gradually increase your daily send volume, allowing inbox providers to learn and trust your sending patterns. When you add a domain to your workspace, you can select the **Automated IP Warming** tile in the **Pick up where you left off** section of your home dashboard, and this tile remains here for 60 days.
 
-Braze sends to your most engaged subscribers first, which allows daily volume to grow at a pace that matches best practices. Then, Braze tracks engagement and deliverability signals. If any issues are detected, your schedule is adjusted automatically.
+Braze sends to your most engaged subscribers first, which allows daily volume to grow at a pace that matches best practices. Then, Braze tracks engagement and deliverability signals. If Braze detects any issues, the system adjusts your schedule automatically.
 
 {% alert note %}
 You can perform only one IP warming.
