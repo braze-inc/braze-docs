@@ -88,7 +88,7 @@ If stats are below our benchmarks, the system holds volume the next day rather t
 
 ## Stop an IP warmup plan
 
-Braze allows you to stop the IP warming and the creation of future campaigns, but if a campaign is already Active or scheduled for the next 24 to 48 hours, you may need to stop the specific campaign manually.
+Braze allows you to stop the IP warming and the creation of future campaigns, but if a campaign is already active or scheduled for the next 24 to 48 hours, you may need to stop the specific campaign manually. Stopping an IP warming plan also stops all associated campaigns.
 
 However, when stopped, the IP warmup cannot be resumed. Instead, you must set up a new plan to pick up from where you left off by:
 
