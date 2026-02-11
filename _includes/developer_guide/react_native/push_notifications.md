@@ -61,6 +61,10 @@ In your project's `app.json` file, add the path to your `google-services.json` f
 ```
 
 Note that you will need to use these settings instead of the native setup instructions if you are depending on additional push notification libraries like [Expo Notifications](https://docs.expo.dev/versions/latest/sdk/notifications/).
+
+{% alert important %}
+Even in an Expo-managed app, Braze still requires valid push credentials uploaded to the Braze dashboard in order to send push notifications. You must upload your FCM Server Key (Android) and APNs authentication key or certificate (iOS) under **Settings** > **App Settings** in the Braze dashboard. Without these credentials, push notifications will not be delivered, even if the SDK is configured correctly.
+{% endalert %}
 {% endtab %}
 
 {% tab Android Native %}
