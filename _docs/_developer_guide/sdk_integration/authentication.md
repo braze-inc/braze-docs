@@ -173,7 +173,7 @@ AppDelegate.braze = braze
 Currently, SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. To enable SDK Authentication in the Flutter SDK, follow the integrations for iOS and Android from the other tabs. After SDK Authentication is enabled, the rest of the feature can be integrated in Dart.
 {% endtab %}
 {% tab Flutter %}
-SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. Once enabled in the native layer, you can use Flutter SDK methods to pass the JWT signature.
+SDK Authentication must be enabled as part of initializing the SDK in native iOS and Android code. When enabled in the native layer, you can use Flutter SDK methods to pass the JWT signature.
 
 **iOS**
 
