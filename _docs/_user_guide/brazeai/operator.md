@@ -32,11 +32,11 @@ Open Operator from any page in the Braze dashboard.
 
 1. Select **BrazeAI Operator<sup>TM</sup>**, next to the user profile.
 
-![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
+> Add image for Operator icon next to user profile.
 
 2. The Operator chat panel will open on the right-hand side of the screen.
 
-![The chat panel for Operator.]({% image_buster /assets/img/operator/operator_panel.png %})
+> Add image for Operator chat panel.
 
 {% alert tip %}
 Maximize to expand the panel for easier reading, or minimize to keep Operator available while working.  
@@ -73,7 +73,7 @@ Select from these GPT models to use for different request types with Operator. R
 - [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1)
 - [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2) (default)
 
-![Dropdown for different GPT models to choose.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
+> Add image for GPT model dropdown.
 
 ### Page-aware context
 
@@ -85,7 +85,7 @@ Add brand guidelines as context to Operator queries so responses match the brand
 
 To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more, see [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
-![Placeholder for Operator brand guidelines selection.]({% image_buster /assets/img/operator/operator_brand_guidelines.png %})
+> Add image for Operator brand guidelines selection.
 
 ### Suggested prompts
 
@@ -95,7 +95,7 @@ When Operator is opened, suggested prompts appear. Select one or type a custom q
 
 Operator shows its reasoning steps in collapsible sections labeled **Reasoned**. Select the dropdown to expand these sections and see how Operator arrived at an answer.
 
-![Dropdown for "Reasoned" expanded with more details on how Operator answered.]({% image_buster /assets/img/operator/operator_reasoning.png %}){:style="max-width:50%"}
+> Add image for Operator reasoning dropdown.
 
 ### Suggested actions
 
@@ -152,7 +152,7 @@ Auto-approve resets when you refresh the page, open a new tab, or log out and ba
 
 When auto-approve is enabled, a confirmation modal appears to verify your choice.
 
-![Placeholder for the Auto-approve toggle and confirmation modal.]({% image_buster /assets/img/operator/operator_auto_approve.png %})
+> Add image for auto-approve toggle and confirmation modal.
 
 ## File a support ticket
 
@@ -182,7 +182,7 @@ You can add additional context manually using the text field or by attaching fil
 - Include relevant error messages or unexpected behavior.
 - Review the auto-suggested attachments before submitting.
 
-![Placeholder for the support ticket filing flow.]({% image_buster /assets/img/operator/operator_support_ticket.png %})
+> Add image for support ticket filing flow.
 
 ## Troubleshooting
 
