@@ -36,7 +36,6 @@ For each **actionable** ticket:
 2. **Verify** - Cross-reference with source code of the Main Product at `../platform`
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
 
-
 ### Output Format Per Ticket to output.md and chat console
 
 ```markdown
