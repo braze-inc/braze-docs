@@ -85,6 +85,24 @@ Consider the following example on how analytics are calculated:
 3. Another five users exit the Canvas after five minutes but perform the conversion event after two days (the number of exit events remains the same, but the conversion event increases to eight).
 4. The last two users exit the Canvas after five minutes but don't perform the conversion event, or perform it after three days and five minutes (they aren't counted in either exit events or conversion events metrics).
 
+## Common pitfalls
+
+### Attribute updates and evaluation timing
+
+When using exit criteria based on custom attributes or time-based filters, keep in mind that these are evaluated at the end of the current step—not at the moment the attribute changes.
+
+For example, if a user enters a 24-hour Delay step and their custom attribute updates 2 hours into the delay, the exit criteria won't be checked until the delay completes (22 hours later). If the exit filter requires the attribute to have been updated within a recent time window, the condition may no longer be true by the time it's evaluated.
+
+{% alert tip %}
+To troubleshoot why a user didn't exit as expected, compare the timestamp of the attribute update in the user's activity log with the timestamp when the step completed. For more details, see [Troubleshoot Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/troubleshooting/).
+{% endalert %}
+
+### Race conditions with newly created users
+
+If your Canvas is triggered by a custom event that also creates the user profile (such as a first-time signup event sent via the `/users/track` endpoint), a [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) may occur. The user could enter the Canvas before their profile attributes are fully populated, which means exit criteria that depend on those attributes won't match as expected.
+
+**Best practice:** Add a short delay after user creation before triggering the Canvas, or include key user attributes in the same API request that triggers the Canvas entry.
+
 ## Example
 
 Let's say we want to target users who haven't made any purchases at our backpack supply company yet. To set up the exit criteria, we would:

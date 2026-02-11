@@ -52,6 +52,22 @@ Consider the following questions for your target audience:
 - Have you added any additional filters that would limit the number of users entering the Canvas?
 - Do the users qualify to receive the first step of your variants? For example, if the first step of your Canvas is a push notification, but the entry audience is all push-disabled, then no users will receive messages.
 
+## Why didn't a user exit the Canvas when they met the exit criteria?
+
+Exit criteria are evaluated at the end of the current step, not immediately when the exception event occurs. If a user is in a Delay step and performs the exception event early, they won't exit until the delay finishes and the exit criteria are re-evaluated at that time.
+
+Common reasons a user might not exit as expected:
+
+- **Timing with attribute-based exit criteria:** If your exit criteria use a time-based filter (such as "Last made purchase less than 1 hour ago"), the user is evaluated at the end of the step—not when the event occurs. By the time the step ends, the condition may no longer be true.
+- **Race condition with user creation:** If users are created at the same time they trigger a Canvas entry event, a [race condition]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions/) can occur. The event may be logged before the user profile is fully created, causing the user to enter the Canvas without the expected attributes.
+- **Attribute updates after send:** If an attribute updates shortly after a message send but before the step ends, the attribute value at the time of send may not match the exit criteria. Check user activity logs to compare the timestamp of the attribute update with the send timestamp.
+
+{% alert tip %}
+For time-sensitive exit criteria, consider using shorter delay steps or adding [delivery validations]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/#edit-delivery-settings) in Message steps as an additional check.
+{% endalert %}
+
+For more details on how exit criteria are evaluated, see [Exit criteria]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exit_criteria/).
+
 ## Why didn't my audience split evenly between the control group and variant group?
 
 When creating your Canvas, you may have expected your audience to split evenly between your control group and your variant group, like in the following [use case](#use-case). Let's discuss why that is and how to fix it!
