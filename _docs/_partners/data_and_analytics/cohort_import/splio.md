@@ -1,7 +1,7 @@
 ---
 nav_title: Splio
 article_title: Splio
-aliases: /partners/splio/
+alias: /partners/splio/
 description: "This reference article outlines the partnership between Braze and Splio, which lets you send more targeted campaigns, find new product opportunities, and elevate revenue."
 page_type: partner
 search_tag: Partner
