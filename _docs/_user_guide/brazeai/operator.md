@@ -12,7 +12,7 @@ description: "This reference article covers BrazeAI Operator, an AI-powered assi
 
 ## About Operator
 
-Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow. You can:
+Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow. Use Operator to:
 
 - Get answers from Braze documentation
 - Troubleshoot issues using [page-aware context](#page-aware-context)
@@ -30,7 +30,7 @@ In order to generate AI output through Braze AI features that Braze identifies a
 
 ## How to access Operator
 
-You can open Operator from any page in the Braze dashboard.  
+Open Operator from any page in the Braze dashboard.  
 
 1. Select **BrazeAI Operator<sup>TM</sup>**, next to your user profile.
 
@@ -68,7 +68,7 @@ Operator includes the following features:
 
 ### GPT models
 
-You can select from these GPT models to use for different request types with Operator. Each model offers a different balance of cost, latency, and capability. Refer to the linked provider documentation to determine which model best fits your use case.
+Select from these GPT models to use for different request types with Operator. Each model offers a different balance of cost, latency, and capability. Refer to the linked provider documentation to determine which model best fits your use case.
 
 - [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
 - [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
@@ -83,7 +83,7 @@ Operator understands the page you're working on in Braze and can tailor response
 
 ### Brand guidelines
 
-You can add brand guidelines as context to your Operator queries so responses match your brand's voice, tone, and personality. Operator uses the brand guidelines configured in your workspace.
+Add brand guidelines as context to your Operator queries so responses match your brand's voice, tone, and personality. Operator uses the brand guidelines configured in your workspace.
 
 To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more, see [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
@@ -91,7 +91,7 @@ To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more,
 
 ### Suggested prompts
 
-When you open Operator, you'll see a few suggested prompts to help you get started. Select one to get started or type your own question.
+When you open Operator, suggested prompts appear to help you get started. Select one to get started or type your own question.
 
 ### Viewing reasoning
 
@@ -109,11 +109,11 @@ While the Operator is generating a response, the **Send** button becomes a **Sto
 
 ### Clearing chat history
 
-To reset your conversation, select **Clear chat history**. This removes the current content so you can start fresh.
+To reset your conversation, select **Clear chat history**. This removes the current content to start fresh.
 
 ### Maximizing and minimizing the panel
 
-You can use the **maximize** button to expand Operator for easier reading, or **minimize** to keep the panel tucked away while you continue working in Braze.
+Use the **maximize** button to expand Operator for easier reading, or **minimize** to keep the panel tucked away while you continue working in Braze.
 
 ### Sending feedback
 
@@ -144,7 +144,7 @@ When you enable auto-approve, a confirmation modal appears to verify your choice
 
 ## Filing a support ticket
 
-You can file a support ticket directly from Operator without leaving the Braze dashboard.
+File a support ticket directly from Operator without leaving the Braze dashboard.
 
 ### How to file a ticket
 
@@ -162,7 +162,7 @@ When you file a ticket from Operator, the following context is automatically inc
 - Your current workspace name
 - Relevant logs and session details
 
-You can also add additional context manually using the text field or by attaching files.
+Add additional context manually using the text field or by attaching files.
 
 ### Tips for faster resolution
 
