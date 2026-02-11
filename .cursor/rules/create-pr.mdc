@@ -1,0 +1,41 @@
+# Automated PR Creation Workflow
+
+This workflow streamlines branch creation, PR generation and reviewer assignment.
+
+---
+
+## Step 1: Fetch the list of staged changes
+
+---
+
+## Step 2: Create a Properly Named Branch
+For each file that is change, create a Branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>-`  
+Example: `Cursor-02112026-liquid_use_cases`  
+
+Cursor handles this automatically and consistently.
+
+---
+
+## Step 3: Commit and Push Changes
+All staged changes are committed with a meaningful message derived from the summary
+
+---
+
+## Step 4: Generate the PR with Our Business Template
+Cursor fills out the PR automatically:
+
+```text
+# Changes
+* [Cursor analyzes code changes and lists them]
+* List of changes to help the reviewer understand the scope
+
+
+Step 5: Assign Reviewers Based Code Ownership where possible
+Cursor identifies team members based on CODEOWNERS file. If no owner, assign to @docs-team
+
+
+## Example Prompt
+
+```
+@create-pr.mdc Create PRs for the staged changes in `_docs`
+```
