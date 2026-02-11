@@ -1049,7 +1049,7 @@ The following step checks if the time_to_reminder is less than seven days away b
 Users are scheduled to enter the journey on day 2.
 {% endcomment %}
 
-{% else {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
+{% elsif {{time_to_reminder}} < 604799 and {{time_to_reminder}} > 172860 %}
 {% assign time_to_first_message = reminder_start_date | plus: 172800 %}
 
 {
