@@ -133,6 +133,17 @@ It's common for a Canvas variant's conversion total to be greater than the sum o
 
 By default, filters and segments for full steps in the Canvas are checked at send time. The Decision Split step performs an evaluation right after receiving a previous step (or before a delay).
 
+### Why aren't my Canvas filters matching users even when the attribute values look identical?
+
+Filter values are **whitespace-sensitive**. If your filter value contains leading or trailing spaces (for example, `'IN_PROGRESS '` instead of `'IN_PROGRESS'`), it won't match the stored attribute value. 
+
+To troubleshoot:
+1. Delete the filter value and re-enter it carefully without extra spaces.
+2. Use the **User Lookup** tool to verify the exact stored attribute value.
+3. Copy the attribute value directly from a user profile to ensure an exact match.
+
+This commonly occurs when filter values are copied from external sources like spreadsheets or emails.
+
 {% alert tip %}
 For further assistance with Canvas troubleshooting, be sure to contact Braze Support within 30 days of your issue's occurrence as we only have the last 30 days of diagnostic logs.
 {% endalert %}
