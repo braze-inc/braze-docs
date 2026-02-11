@@ -1,7 +1,10 @@
 ---
 nav_title: Splio
 article_title: Splio
-alias: /partners/splio/
+aliases:
+  - /partners/splio/
+  - /partners/tinyclues/
+  - /partners/data_and_analytics/cohort_import/tinyclues
 description: "This reference article outlines the partnership between Braze and Splio, which lets you send more targeted campaigns, find new product opportunities, and elevate revenue."
 page_type: partner
 search_tag: Partner
