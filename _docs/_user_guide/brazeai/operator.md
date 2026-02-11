@@ -47,7 +47,7 @@ Try maximizing to expand the panel for easier reading, or minimizing it to keep 
 
 ## How to talk to Operator
 
-Use prompts to communicate with Operator. The best approach is to speak naturally—like speaking to a coworker or a friend. Prompts can range from simple questions to complex requests:
+Use prompts to communicate with Operator. The best approach is to speak naturally—as if speaking to a coworker or a friend. Prompts can range from simple questions to complex requests:
 
 - **Simple:** How can I ensure that users don't get cart abandonment emails while they are still on the site shopping?
 - **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
@@ -79,7 +79,7 @@ Select from these GPT models to use for different request types with Operator. E
 
 ### Page-aware context
 
-Operator understands the page being worked on in Braze and can tailor responses based on that context. For example, if Operator is opened while building a Canvas, it can suggest steps or provide guidance relevant to Canvas without needing to explain where the user is. 
+Operator understands the current page in Braze and tailors responses based on that context. For example, when opened while building a Canvas, it can suggest steps or provide guidance relevant to Canvas without requiring additional context. 
 
 ### Brand guidelines
 
@@ -91,7 +91,7 @@ To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more,
 
 ### Suggested prompts
 
-When Operator is opened, suggested prompts appear to help get started. Select one to get started or type a custom question.
+When Operator is opened, suggested prompts appear. Select one or type a custom question.
 
 ### Viewing reasoning
 
@@ -109,7 +109,7 @@ While Operator is generating a response, the **Send** button becomes a **Stop** 
 
 ### Clearing chat history
 
-To reset the conversation, select **Clear chat history**. This removes the current content to start fresh.
+To reset the conversation, select **Clear chat history**. This removes the current content and starts a fresh conversation.
 
 ### Maximizing and minimizing the panel
 
@@ -158,7 +158,7 @@ File a support ticket directly from Operator without leaving the Braze dashboard
 When filing a ticket from Operator, the following context is automatically included:
 
 - Recent chat messages from the Operator session
-- Page-aware context (the page that was active when Operator was opened)
+- Page-aware context (the active page when Operator was opened)
 - Current workspace name
 - Relevant logs and session details
 
