@@ -18,8 +18,6 @@ RCS is a modern messaging system that offers more features than traditional SMS,
 | - Brand name<br>- logo<br>- optional caption<br> - verified badge | 4—6 weeks for carrier approval | Throughput and delivery rely on the recipient having an active data connection (mobile data or Wi-Fi). RCS doesn’t rely on fixed network-imposed limits like SMS does; RCS messages are sent over data networks rather than the traditional cellular signaling channels used by SMS. | N/A | 2-way |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-![Example of an RCS message sent from a RCS-verified sender.]({% image_buster /assets/img/sms/rcs-verified_sender.png %}){: style="max-width:45%;"}
-
 ##### Pros and cons
 
 | Pros |
@@ -50,8 +48,6 @@ Some countries allow you to choose a specific number for an increased fee. These
 | 5-6 digits | 4-12 week application| 100 messages per second or more | Yes | 2-way |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-![Example of a message sent from an SMS short code.]({% image_buster /assets/img/sms/short_code.png %}){: style="max-width:45%;"}
-
 ##### Pros and cons
 
 | Pros |
@@ -80,8 +76,6 @@ A long code is a standard phone number used to send and receive SMS messages. Th
 | --- | --- | --- | --- | --- |
 | 10 digits | 4-6 week application (can be shorter or longer for different countries) | In the United States, long code throughput depends on your 10DLC trust score; in international markets, throughput can vary or increase in some circumstances, but typically starts around 10 message segments per second (MPS). | Yes | 2-way (depending on where you're sending) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
-
-![Example of a message sent from an SMS long code.]({% image_buster /assets/img/sms/long_code.png %}){: style="max-width:45%;"}
 
 ##### Pros and cons
 
@@ -113,8 +107,6 @@ They can have up to 11 characters and contain upper (A-Z) and lower (a-z) case l
 | Up to 11 characters | Available immediately if pre-registration is not required. Otherwise, 1-4 weeks in most countries where registration is required. | Varies depending on country | No | 1-way |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
-![Example of a message sent from an SMS alphanumeric sender ID.]({% image_buster /assets/img/sms/alphanumeric.png %}){: style="max-width:45%;"}
-
 ##### Pros and cons
 
 | Pros | Cons |
@@ -136,8 +128,6 @@ Toll-free numbers have distinct three-digit area codes (for example, 800, 888, 8
 | --- | --- | --- | --- | --- |
 | 10 digits	 | 2-4 week application | Starts at 3 MPS (segments per second), can be increased for additional fees | Yes | 2-way |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
-
-![Example of a message sent from an SMS-enabled toll-free number.]({% image_buster /assets/img/sms/toll_free_number.png %}){: style="max-width:45%;"}
 
 ##### Pros and cons
 
