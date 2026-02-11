@@ -134,3 +134,13 @@ In other countries:
 ### If a user is opted out and sends a keyword to our short and long code, do they receive the response we configured for that keyword in Braze?
 
 If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), they will not receive the response for that keyword.
+
+### Why can't my users opt out by replying STOP to my SMS?
+
+If your subscription group uses an **alphanumeric sender ID** (for example, "BrandName" instead of a phone number), users cannot reply to your messages at all—including opt-out keywords like STOP. Alphanumeric sender IDs are send-only and cannot receive inbound messages.
+
+To enable opt-out for alphanumeric senders:
+- Include an unsubscribe link in your SMS message body
+- Direct users to a short code or long code for opt-out (for example, "Reply STOP to 12345 to unsubscribe")
+
+To check your sender type, go to **Audience** > **Subscription Groups** and review the phone numbers in your SMS subscription group.

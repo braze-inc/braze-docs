@@ -16,6 +16,14 @@ channel:
 
 > Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [subscription group state]({{site.baseurl}}/sms_rcs_subscription_groups/) for the user and their associated phone number on all inbound requests.
 
+{% alert important %}
+**Alphanumeric sender IDs cannot receive replies.** If your subscription group uses an alphanumeric sender ID (for example, "BrandName" instead of a phone number), users cannot reply with STOP or other keywords to opt out. For alphanumeric senders, you must provide an alternative opt-out method, such as:
+- An unsubscribe link in your SMS message
+- A dedicated short code or long code for opt-out (for example, "Reply STOP to 12345")
+
+To check your sender type, go to **Audience** > **Subscription Groups** and review the phone numbers associated with your SMS subscription group.
+{% endalert %}
+
 ## Keyword overview
 
 Braze will process the following keywords automatically and update the subscription group state for the phone number on all inbound requests. Note that these default keywords and responses may also be customized. 
