@@ -132,7 +132,7 @@ In the **Logs** section of the **Agent Console**, you can review the details for
 
 ## Catalogs and fields
 
-Choose specific catalogs for an agent to reference and to give your agent the context it needs to understand your products and other non-user data when relevant.
+Choose specific catalogs for an agent to reference and to give your agent the context it needs to understand your products and other non-user data when relevant. Agents use tools to find the relevant items only and send those to the LLM to minimize token use.
 
 ![The "restaurants" catalog and "Loyalty_Program" column selected for the agent to search.]({% image_buster /assets/img/ai_agent/search_catalog.png %}){: style="max-width:85%;"}
 
