@@ -40,7 +40,7 @@ Use the **Okta - Braze app** option if you set up the Braze app for SAML SSO in 
 ### Step 1.1: Enable SCIM
 
 1. In Okta, go to **Applications** > **Applications**, then select **Create App Integration**. Select **SAML 2.0** as the sign-in method.
-2. Fill in the following details, located in your Braze dashboard, to create a custom app:
+2. Fill in the following details (which are located in the Braze [**IdP configuration** step](#accessing-scim-provisioning-settings)) to create a custom app:
 - App logo
 - Single sign-on URL
 - Audience URL (SP entity ID)
