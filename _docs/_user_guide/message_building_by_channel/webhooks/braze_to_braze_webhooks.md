@@ -96,7 +96,7 @@ Add your `/canvas/trigger/send` request in the text field. For details, see [Sen
 
 When a user reaches this webhook step in the first Canvas, Braze triggers the second Canvas for that user via the API.
 
-## Things to know
+## Considerations
 
 - **User updates:** For updating user profiles from Canvas (attributes, events, purchases), use [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) instead of Braze-to-Braze webhooks for better efficiency and cost-effectiveness.
 - Braze-to-Braze webhooks are subject to endpoint [Rate limits]({{site.baseurl}}/api/api_limits/).
