@@ -71,8 +71,8 @@ For each docs update:
 
 
 ## Step 5: Create a Properly Named Branch
-For each file that is changed in `_docs`, create a Branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>-`  
-Example: `Cursor-02112026-liquid_use_cases`  
+For each file that is changed in `_docs`, create a branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>`  
+Example: `Cursor-liquid_use_cases-update-02112026`  
 
 Cursor handles this automatically and consistently.
 
