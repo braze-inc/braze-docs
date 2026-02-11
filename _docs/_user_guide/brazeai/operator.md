@@ -147,13 +147,13 @@ If an action fails after approval, Operator will notify with details about the f
 
 ### Modifying a plan
 
-Undo is not supported. To change something Operator proposed, tell it in the chat using natural language. Operator will refresh the approval list with updated items. Previously approved items stay as they are.
+Undo is not supported. To change something Operator proposed, tell it in the chat using natural language. Operator will refresh the approval list with updated items. Previously approved items remain executed and are not affected by the refresh.
 
 ### Auto-approve all actions
 
 The **Auto-approve all actions** toggle is located in the Operator chat panel.
 
-- **On:** Operator's suggested actions execute immediately without requiring manual approval for most changes. Some actions that modify the workspace, such as generating images, will still require explicit approval even when auto-approve is on.
+- **On:** Operator's suggested actions execute immediately without requiring manual approval for most changes. Some actions, such as generating images or making significant workspace modifications, will still require explicit approval even when auto-approve is on.
 - **Off (default):** Operator-proposed actions are routed through the approval flow described above.
 
 {% alert important %}
