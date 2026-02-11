@@ -5708,7 +5708,7 @@ This event occurs when a message is deprioritized or frequency capped and will b
 Email, Sends
 {% endapitags %}
 
-This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
+This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox. It is expected behavior to not log events to user profiles or to Snowflake that can not be matched to the email and user ID associated with email events.
 
 {% tabs %}
 {% tab Cloud Storage %}
