@@ -134,7 +134,7 @@ valid_partner_list:
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
 - name: Splio
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/splio/
+  url: /docs/partners/splio/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
 - name: RevenueCat
