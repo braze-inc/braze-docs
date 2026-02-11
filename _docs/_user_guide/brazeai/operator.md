@@ -24,7 +24,7 @@ Operator can assist with a wide range of tasks within Braze:
 - **Troubleshoot issues:** Why messages aren't sending, delivery problems, or configuration errors
 - **Brainstorm strategies:** Campaign ideas, segmentation approaches, or how to tackle complex use cases
 
-Operator uses [page-aware context](#page-aware-context) to provide relevant guidance based on the active page in the dashboard.
+Operator uses [page-aware context](#page-aware-context) to tailor guidance based on your location in the dashboard.
 
 ## How to access Operator
 
@@ -34,31 +34,30 @@ Open Operator from any page in the Braze dashboard.
 
 ![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
 
-{: start="2"} 
 2. The Operator chat panel will open on the right-hand side of the screen.
 
 ![The chat panel for Operator.]({% image_buster /assets/img/operator/operator_panel.png %})
 
 {% alert tip %}
-Try maximizing to expand the panel for easier reading, or minimizing it to keep Operator available while you continue working.  
+Maximize to expand the panel for easier reading, or minimize to keep Operator available while working.  
 {% endalert %} 
 
 ## How to use Operator
 
-Describe what you are trying to accomplish. Use natural language as you would when asking a colleague for help. Prompts can range from simple questions to complex requests:
+Describe what you are trying to accomplish using natural language. Prompts can range from simple questions to complex requests:
 
 - **Simple:** Why isn't my Liquid rendering?
 - **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
 
-Be specific and ask follow-up questions as needed. Operator can provide step-by-step instructions, links to Braze documentation, and plain-language explanations. Clear and specific questions lead to more helpful responses. 
+Operator can provide step-by-step instructions, links to Braze documentation, and plain-language explanations. Clear and specific questions lead to more helpful responses. 
 
 ### Best practices
 
 Treat Operator as a conversation, not a search engine. Short, natural prompts work best.
 
 - **Be specific:** Instead of "Tell me about Canvas", try "How do I use Action Paths in Canvas?".  
-- **Ask follow-up questions:** If the first response doesn't address your need, ask for clarification. Operator can refine answers based on additional context.
-- **Use page-aware context:** Operator understands the active page in Braze. Open Operator while viewing the relevant page for the most accurate results.
+- **Ask follow-up questions:** If the first response doesn't address your need, ask for clarification or additional details.
+- **Use page-aware context:** Operator understands your location in Braze. Open Operator while viewing the relevant page for the most accurate results.
 
 ## Features
 
@@ -77,7 +76,7 @@ Select from these GPT models to use for different request types with Operator. E
 
 ### Page-aware context
 
-Operator understands the active page in Braze and tailors responses based on that context. For example, when opened while building a Canvas, Operator can suggest steps or provide guidance relevant to Canvas without requiring you to specify the feature. 
+Operator understands your location in Braze and tailors responses based on that context. For example, when opened while building a Canvas, Operator can suggest steps or provide guidance relevant to that feature without requiring you to specify it. 
 
 ### Brand guidelines
 
@@ -109,10 +108,6 @@ While Operator is generating a response, the **Send** button becomes a **Stop** 
 
 To reset the conversation, select **Clear chat history**. This removes the current content and starts a fresh conversation.
 
-### Maximizing and minimizing the panel
-
-Use the **maximize** button to expand Operator for easier reading, or **minimize** to keep the panel tucked away while you continue working in Braze.
-
 ### Sending feedback
 
 At the bottom of each response, use the thumbs up or thumbs down buttons to provide quick feedback. This helps improve Operator's answers.
@@ -123,12 +118,12 @@ When Operator proposes changes in the dashboard (such as filling in form fields,
 
 ### How approval cards work
 
-1. **Operator summarizes the plan:** Before showing approval cards, Operator explains what it's planning to do.
-2. **Individual approval cards appear:** Each proposed change is presented as a separate card showing:
+1. **Operator summarizes the plan:** Operator explains what it plans to do before showing approval cards.
+2. **Individual approval cards appear:** Each proposed change is presented as a separate card that shows:
    - What Operator wants to change
    - The proposed value
-   - For changes to existing values: both the previous value and proposed value for comparison
-3. **Review and approve:** Review each card individually and either approve or decline it.
+   - For changes to existing values: both the previous value and the proposed value for comparison
+3. **Review and approve:** Review each card and either approve or decline it.
 4. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
 
 {% alert note %}
@@ -151,14 +146,14 @@ The **Auto-approve all actions** toggle is located in the Operator chat panel.
 - **Off (default):** All proposed actions follow the approval flow described above.
 
 {% alert important %}
-Auto-approve resets when you refresh the page, open a new tab, or log out and back in. Navigation within the dashboard does not reset it. Auto-approve can be turned off at any time.
+Auto-approve resets when you refresh the page, open a new tab, or log out and back in. Moving between pages in the dashboard does not reset it. Auto-approve can be turned off at any time.
 {% endalert %}
 
 When auto-approve is enabled, a confirmation modal appears to verify your choice.
 
 ![Placeholder for the Auto-approve toggle and confirmation modal.]({% image_buster /assets/img/operator/operator_auto_approve.png %})
 
-## Filing a support ticket
+## File a support ticket
 
 File a support ticket directly from Operator without leaving the Braze dashboard.
 
@@ -182,8 +177,8 @@ You can add additional context manually using the text field or by attaching fil
 
 ### Tips for faster resolution
 
-- Include the workspace name and a timestamp.
-- Add a short description of the steps to reproduce the issue.
+- Add a detailed description of the steps to reproduce the issue.
+- Include relevant error messages or unexpected behavior.
 - Review the auto-suggested attachments before submitting.
 
 ![Placeholder for the support ticket filing flow.]({% image_buster /assets/img/operator/operator_support_ticket.png %})
