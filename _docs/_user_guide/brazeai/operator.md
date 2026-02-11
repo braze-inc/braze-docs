@@ -12,7 +12,7 @@ description: "This reference article covers BrazeAI Operator, an AI-powered assi
 
 ## About Operator
 
-Operator is Braze's AI assistant built into the dashboard. It is designed to help you accomplish tasks in Braze—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
+Operator is Braze's AI assistant built into the dashboard. It is designed to help you accomplish tasks in Braze—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas. Operator uses conversational language to provide guidance and support, similar to consulting with a knowledgeable colleague.
 
 ### What Operator can help with
 
@@ -203,7 +203,7 @@ If you choose to bring your own API Key to integrate with BrazeAI Operator, the 
 
 ### How data is used with OpenAI
 
-To generate AI output through Braze AI features that leverage OpenAI ("Output"), Braze will send your prompts, the content displayed in the dashboard, and workspace data relevant to your queries ("Input") to OpenAI. Per [OpenAI's API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI's API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content, including Output.
+To generate AI output through BrazeAI features that leverage OpenAI ("Output"), Braze will send certain information ("Input") to OpenAI. Input consists of your prompts, the content displayed in the dashboard, and workspace data relevant to your queries. Per [OpenAI's API platform commitments](https://openai.com/enterprise-privacy/), data sent to OpenAI's API via Braze is not used to train or improve OpenAI models. Between you and Braze, Output is your intellectual property. Braze will not assert any claims of copyright ownership on such Output. Braze makes no warranty of any kind with respect to any AI-generated content, including Output.
 
 ## Limitations
 
