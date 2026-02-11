@@ -16,7 +16,7 @@ Analyze Braze support case CSVs to identify documentation gaps and propose docs 
 | `Support Cases Email Message Text Body` | Raw message content |
 | `Support Cases Email Message Text Body Cleaned` | Cleaned message for analysis |
 
-## Step 1: Triage & Categorize
+## Step 1: Triage and categorize
 
 For each unique Case ID, determine if docs action is needed:
 
