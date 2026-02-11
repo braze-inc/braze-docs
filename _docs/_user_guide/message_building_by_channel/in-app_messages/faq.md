@@ -54,3 +54,16 @@ To prevent this, during your campaign setup, select **Re-evaluate campaign eligi
 ### How does Braze calculate an in-app message expiration set to "after 1 day(s)"?
 
 Braze calculates an expiration time of one day as 24 hours after users are eligible to receive a message.
+
+### Why aren't my custom HTML in-app messages displaying on my web app?
+
+If you're using custom HTML in-app messages on the web and they're not appearing, verify that your Web SDK initialization includes the `allowUserSuppliedJavascript` option set to `true`:
+
+```javascript
+braze.initialize('YOUR-API-KEY', {
+    baseUrl: "YOUR-SDK-ENDPOINT",
+    allowUserSuppliedJavascript: true
+});
+```
+
+This option is required for custom HTML in-app messages to render properly. For security reasons, this option is disabled by default. Refer to [SDK initialization options]({{site.baseurl}}/developer_guide/sdk_integration_guides/web/initial_sdk_setup/#step-2-initialize-the-braze-sdk) for more details.
