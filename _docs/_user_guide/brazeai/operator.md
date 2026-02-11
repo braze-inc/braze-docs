@@ -8,15 +8,23 @@ description: "This reference article covers BrazeAI Operator, an AI-powered assi
 
 # BrazeAI Operator<sup>TM</sup>
 
-> BrazeAI Operator<sup>TM</sup> is an AI-powered assistant built into the Braze dashboard. Operator provides answers, troubleshooting guidance, and best practices within your workflow.
+> BrazeAI Operator<sup>TM</sup> is Braze's AI assistant built into the dashboard. Operator helps get things done—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
 
 ## About Operator
 
-Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow. Use Operator to:
+Operator is Braze's AI assistant built into the dashboard. It's designed to help get things done in Braze—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas. Operator is designed to sound like a knowledgeable teammate, not a support bot.
 
-- Get answers from Braze documentation
-- Troubleshoot issues using [page-aware context](#page-aware-context)
-- Learn best practices and onboarding guidance
+### What Operator can help with
+
+Operator can assist with a wide range of tasks within Braze:
+
+- **Explain anything on the current page:** Metrics, settings, or how a feature works
+- **Walk through configuration:** Campaigns, segments, integrations, or workspace settings
+- **Write or debug code:** Liquid templates, webhooks, or answer data and API questions
+- **Troubleshoot issues:** Why messages aren't sending, delivery problems, or configuration errors
+- **Brainstorm strategies:** Campaign ideas, segmentation approaches, or how to tackle complex use cases
+
+Operator uses [page-aware context](#page-aware-context) to provide relevant guidance based on where you are in the dashboard.
 
 ### Model providers as sub-processors or third-party providers
 
@@ -47,12 +55,12 @@ Try maximizing to expand the panel for easier reading, or minimizing it to keep 
 
 ## How to talk to Operator
 
-Use prompts to communicate with Operator. The best approach is to speak naturally—as if speaking to a coworker or a friend. Prompts can range from simple questions to complex requests:
+Tell Operator what you're trying to do. Ask naturally, the way you'd ask a teammate. Prompts can range from simple questions to complex requests:
 
-- **Simple:** How can I ensure that users don't get cart abandonment emails while they are still on the site shopping?
+- **Simple:** Why isn't my Liquid rendering?
 - **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
 
-Operator can provide step-by-step instructions, links to Braze docs, and plain-language explanations. The clearer and more specific the question, the more useful the response will be. 
+Be specific, and ask follow-ups. Operator can provide step-by-step instructions, links to Braze docs, and plain-language explanations. The clearer and more specific the question, the more useful the response will be. 
 
 ### Best practices
 
@@ -121,22 +129,36 @@ At the bottom of each response, use the thumbs up or thumbs down buttons to prov
 
 ## Approval flow
 
-When Operator proposes an action, it goes through an approval flow before executing in Braze.
+When Operator proposes changes in the dashboard (such as filling in form fields, updating settings, or generating images), it presents each change as an approval card for review.
 
-1. **Operator proposes an action:** Based on the prompt, Operator suggests a specific action.
-2. **Review:** Review the proposed action and its details, and either approve or decline the action.
-3. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
+### How approval cards work
+
+1. **Operator summarizes the plan:** Before showing approval cards, Operator explains what it's planning to do.
+2. **Individual approval cards appear:** Each proposed change is presented as a separate card showing:
+   - What Operator wants to change
+   - The proposed value
+   - For changes to existing values: both the previous value and proposed value for comparison
+3. **Review and approve:** Review each card individually and either approve or decline it.
+4. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
 
 {% alert note %}
 If an action fails after approval, Operator will notify with details about the failure.
 {% endalert %}
 
+### Modifying a plan
+
+Undo is not supported. To change something Operator proposed, tell it in the chat using natural language. Operator will refresh the approval list with updated items. Previously approved items stay as they are.
+
 ### Auto-approve all actions
 
 The **Auto-approve all actions** toggle is located in the Operator chat panel.
 
-- **On:** Operator's suggested actions execute immediately without requiring manual approval. Recommended for trusted workflows only.
+- **On:** Operator's suggested actions execute immediately without requiring manual approval for most changes. Some actions that modify the workspace, such as generating images, will still require explicit approval even when auto-approve is on.
 - **Off (default):** Operator-proposed actions are routed through the approval flow described above.
+
+{% alert important %}
+Auto-approve resets when you refresh the page, open a new tab, or log out and back in. In-page navigation does not reset it. Auto-approve can be turned off at any time.
+{% endalert %}
 
 When auto-approve is enabled, a confirmation modal appears to verify the choice.
 
@@ -179,12 +201,13 @@ Add additional context manually using the text field or by attaching files.
 | No response | Try refreshing the page and re-opening the Operator panel. |
 | Off-topic answers | Reframe the question more specifically. Mention the feature or workflow being asked about. |
 | Error messages | If Operator can't stream content, a "Try again" prompt may appear. Operator may be temporarily unavailable or the connection was interrupted. Retry after a few minutes. |
+| Daily usage limit exceeded | The company-wide usage limit has been reached. Wait for the limit to reset (resets every 24 hours). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Limitations
 
 - **Data access:** Operator can use the context of the page being worked on, but it can't query or return company data stored in Braze, such as campaign lists, segment performance, or Canvas analytics.
-- **Usage limits:** Operator has a daily usage limit that resets every 24 hours. The limit is generous and unlikely to be reached during normal use. More complex queries consume more of the limit than simpler ones.
+- **Usage limits:** Operator has a company-wide daily usage limit that resets every 24 hours. The limit is generous and unlikely to be reached during normal use. If the limit is reached, a "Daily usage limit exceeded" banner error will appear in the chat, and no further requests can be made until the limit resets.
 
 {% alert tip %}
 To manage usage, consider selecting a lighter model for simple queries and reserving more capable models for complex tasks.
