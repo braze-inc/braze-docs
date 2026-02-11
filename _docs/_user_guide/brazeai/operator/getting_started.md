@@ -106,6 +106,6 @@ At the bottom of each response, use the thumbs up or thumbs down buttons to prov
 
 ## Next steps
 
-- [Approval flow]({{site.baseurl}}/user_guide/brazeai/operator/approval_flow/) - Learn how to review and approve Operator's proposed changes
+- [Reviewing actions]({{site.baseurl}}/user_guide/brazeai/operator/reviewing_actions/) - Learn how to review and approve Operator's proposed changes
 - [Support tickets]({{site.baseurl}}/user_guide/brazeai/operator/support_tickets/) - File support tickets directly from Operator
 - [Troubleshooting]({{site.baseurl}}/user_guide/brazeai/operator/troubleshooting/) - Common issues and solutions
