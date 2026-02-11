@@ -31,7 +31,7 @@ Cursor fills out the PR automatically:
 
 
 Step 5: Assign Reviewers Based on Code Ownership where possible
-Cursor identifies team members based on CODEOWNERS file. If no owner, assign to @docs-team
+Cursor identifies team members based on CODEOWNERS file. If no owner, assign to @docs-team.
 
 
 ## Example Prompt
