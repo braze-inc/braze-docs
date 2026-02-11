@@ -3233,5 +3233,7 @@ validurls['/docs/user_guide/brazeai/decisioning_studio/go/report_bau_campaign'] 
 validurls['/docs/user_guide/brazeai/decisioning_studio/integration'] = '/docs/user_guide/brazeai/decisioning_studio/getting_started/';
 
 validurls['/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/#automated-ip-warming'] = '/docs/user_guide/message_building_by_channel/email/email_setup/ip_warming/automated_ip_warming/';
+validurls['/docs/partners/tinyclues/'] = '/docs/partners/splio/';
+validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/partners/splio/';
 
 // validurls['OLD'] = 'NEW';

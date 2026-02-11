@@ -249,7 +249,7 @@ event_documentation:
       - If you're using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data/braze_currents/) data, contact your customer success manager or account manager to enable the feature flipper for sending `ad_id`.
       - "`dispatch_id` is an ID for a specific message dispatch, such as a campaign send. All push events that originate from the same dispatch include the same `dispatch_id`. Use `dispatch_id` to group events that belong to the same dispatch, allowing you to group and correlate the push message lifecycle for that dispatch (such as Send, Bounce, and Open)."
   users.messages.email.Send:
-    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. Though, this does not mean the email was received in the user's inbox.
+    description: This event occurs when an email send request was successfully communicated between Braze and SendGrid. However, this does not mean the email was received in the user's inbox. Braze does not log events to user profiles or any Currents destination (such as Snowflake) if the event cannot be matched to both the email and user ID associated with the email event
     api_tags:
       - Email
       - Sends
