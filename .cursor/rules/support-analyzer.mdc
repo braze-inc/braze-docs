@@ -85,5 +85,3 @@ Stage and Commit all changes in `_docs` with a meaningful message derived from t
 
 ## Step 7: Generate the PR for each branch
 Cursor fills out the PR automatically:
-
-```text
