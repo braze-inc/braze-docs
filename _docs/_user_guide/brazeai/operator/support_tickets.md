@@ -1,7 +1,7 @@
 ---
 nav_title: Support Tickets
 article_title: File support tickets with BrazeAI Operator<sup>TM</sup>
-page_order: 4
+page_order: 3
 description: "Learn how to file support tickets directly from BrazeAI Operator<sup>TM</sup> without leaving the Braze dashboard."
 ---
 

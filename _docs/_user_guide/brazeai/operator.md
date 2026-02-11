@@ -13,9 +13,6 @@ guide_featured_list:
 - name: Getting Started
   link: /docs/user_guide/brazeai/operator/getting_started/
   image: /assets/img/braze_icons/book-open-01.svg
-- name: Features
-  link: /docs/user_guide/brazeai/operator/features/
-  image: /assets/img/braze_icons/settings-01.svg
 - name: Approval Flow
   link: /docs/user_guide/brazeai/operator/approval_flow/
   image: /assets/img/braze_icons/check-square-broken.svg
@@ -27,26 +24,6 @@ guide_featured_list:
   image: /assets/img/braze_icons/alert-circle.svg
 
 ---
-
-# BrazeAI Operator<sup>TM</sup>
-
-> BrazeAI Operator<sup>TM</sup> is Braze's AI assistant built into the dashboard. Operator helps get things done—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
-
-## About Operator
-
-Operator is Braze's AI assistant built into the dashboard. It is designed to help you accomplish tasks in Braze—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas. Operator uses conversational language to provide guidance and support, similar to consulting with a knowledgeable colleague.
-
-## What Operator can help with
-
-Operator can assist with a wide range of tasks within Braze:
-
-- **Explain anything on the active page:** Metrics, settings, or how a feature works
-- **Walk through configuration:** Campaigns, segments, integrations, or workspace settings
-- **Write or debug code:** Liquid templates, webhooks, or answer data and API questions
-- **Troubleshoot issues:** Why messages aren't sending, delivery problems, or configuration errors
-- **Brainstorm strategies:** Campaign ideas, segmentation approaches, or how to tackle complex use cases
-
-Operator uses [page-aware context]({{site.baseurl}}/user_guide/brazeai/operator/features/#page-aware-context) to tailor guidance based on your location in the dashboard.
 
 ## Data privacy and security
 

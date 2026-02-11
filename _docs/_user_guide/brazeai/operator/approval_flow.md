@@ -1,7 +1,7 @@
 ---
 nav_title: Approval Flow
 article_title: BrazeAI Operator<sup>TM</sup> approval flow
-page_order: 3
+page_order: 2
 description: "Learn how the approval flow works when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard."
 ---
 
