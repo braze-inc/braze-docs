@@ -65,12 +65,13 @@ Operator includes the following features:
 
 ### GPT models
 
-Select from these GPT models to use for different request types with Operator. Each model offers a different balance of cost, latency, and capability. Refer to the linked provider documentation to determine which model best fits your use case.
+Select from these GPT models to use for different request types with Operator. Refer to the linked provider documentation to determine which model best fits your use case.
 
-- [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
-- [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
+- [GPT-5 Nano](https://platform.openai.com/docs/models/gpt-5-nano)
+- [GPT-5 Mini](https://platform.openai.com/docs/models/gpt-5-mini)
 - [GPT-5](https://platform.openai.com/docs/models/gpt-5)
-- [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1) (default)
+- [GPT-5.1](https://platform.openai.com/docs/models/gpt-5.1)
+- [GPT-5.2](https://platform.openai.com/docs/models/gpt-5.2) (default)
 
 ![Dropdown for different GPT models to choose.]({% image_buster /assets/img/operator/operator_model.png %}){:style="max-width:70%"}
 
