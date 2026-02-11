@@ -87,7 +87,7 @@ This section includes two example `curl` requests, one for adding an asset using
 This request shows an example of adding an asset to the media library using an `asset_url`.
 
 ```
-curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create' \
+curl -X POST --location 'https://rest.iad-05.braze.com/media_library/create' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --header 'Content-Type: application/json' \
 --data '{"asset_url": "https://cdn.example.com/assets/cat.jpg", "name": "Cat Graphic"}'
@@ -96,11 +96,19 @@ curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create'
 This request shows an example of adding an asset to the media library using an `asset_file`.
 
 ```
-curl -X POST --location 'http://api.dashboard-03.braze.com/media_library/create' \
+curl -X POST --location 'https://rest.iad-05.braze.com/media_library/create' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --header 'Content-Type: application/json' \
 --data '{"asset_file":<BINARY FILE DATA>, "name":"Cat Graphic"}'
 ```
+
+
+
+Braze provides multiple dashboard and REST endpoint instances. For API requests, use the REST endpoint for the instance where your workspace is provisioned. For SDK integrations, use the SDK endpoint.
+
+To find your REST endpoint, log in to Braze and go to **Settings** > **APIs and Identifiers** > **API Keys**. Select an existing API key and use its corresponding `Identifier`, or create a new API key in this tab. You can also copy your REST endpoint from this tab.
+
+For more information, see [Endpoints]({{site.baseurl}}/api/basics/#endpoints).
 
 ### Error responses
 
