@@ -53,6 +53,16 @@ Soft bounces are emails that bounce due to a temporary or transient issue such a
 
 Users will be prevented from entering the Canvas and no further messages will be sent out. For email campaigns and Canvases, the stop button does not mean that send will immediately stop. This is because when the send requests are sent out, they cannot be stopped from being delivered to the user.
 
+### What is the difference between "Unique Opens" and "Machine Opens"?
+
+Braze separates email open metrics into *Unique Opens*, *Machine Opens*, and *Other Opens* to help you understand true user engagement.
+
+- **Machine Opens** are opens identified as being triggered by non-human processes (such as Apple's Mail Privacy Protection feature), which pre-fetches email content regardless of whether the user actually views the message. These are tracked separately and are **not** included in *Unique Opens*.
+- **Unique Opens** reflect the number of times a delivered email was opened by a user at least once, excluding machine opens. This is tracked over a 7-day period.
+- **Other Opens** are opens that are not identified as *Machine Opens*. If a user opens an email after a machine open event from a non-Apple Mail inbox, it counts toward *Other Opens*.
+
+Because Machine Opens can significantly inflate apparent open rates, we recommend using *Unique Opens* or *Click-to-Open Rate* as a more accurate measure of user engagement.
+
 ### Why am I seeing more email clicks than opens?
 
 You may be seeing more clicks than opens for any of the following reasons:
