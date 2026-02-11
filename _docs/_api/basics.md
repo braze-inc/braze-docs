@@ -40,7 +40,7 @@ Braze manages a number of different instances for our dashboard and REST endpoin
 To find your REST endpoint in Braze:
 
 1. Log in to Braze and go to **Settings** > **APIs and Identifiers** > **API Keys**.
-2. Select an existing API key and use its corresponding `Identifier`, or select **Create API Key** to make a new key.
+2. Select an existing API key, or select **Create API Key** to make a new key.
 3. Copy the REST endpoint shown on this tab and use that endpoint for your API requests.
 
 {% alert important %}
