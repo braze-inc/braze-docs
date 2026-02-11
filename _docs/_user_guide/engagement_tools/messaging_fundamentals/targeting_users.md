@@ -86,6 +86,10 @@ The **Audience Summary** will show an overview of who is in your target audience
 
 In the **A/B Testing** section, you can set up a test to compare users' responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style. The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
 
+{% alert note %}
+When creating a new campaign, Braze will default to including a 20% Control Group in the **A/B Testing** section. You can adjust or remove this Control Group as needed for your testing strategy.
+{% endalert %}
+
 For more information and best practices, refer to [Multivariate & A/B Testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 
 #### Audience statistics
