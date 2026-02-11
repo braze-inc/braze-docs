@@ -1,14 +1,14 @@
 ---
 nav_title: Operator
-article_title: BrazeAI Operator
+article_title: BrazeAI Operator™
 page_order: 8
 alias: /operator/
-description: "This reference article covers BrazeAI Operator, an AI-powered assistant built into the Braze dashboard."
+description: "This reference article covers BrazeAI Operator™, an AI-powered assistant built into the Braze dashboard."
 ---
 
-# BrazeAI Operator<sup>TM</sup>
+# BrazeAI Operator™
 
-> BrazeAI Operator<sup>TM</sup> is Braze's AI assistant built into the dashboard. Operator helps get things done—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
+> BrazeAI Operator™ is Braze's AI assistant built into the dashboard. Operator helps get things done—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
 
 ## About Operator
 
@@ -30,7 +30,7 @@ Operator uses [page-aware context](#page-aware-context) to tailor guidance based
 
 Open Operator from any page in the Braze dashboard.  
 
-1. Select **BrazeAI Operator<sup>TM</sup>**, next to the user profile.
+1. Select **BrazeAI Operator™**, next to the user profile.
 
 ![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
 
@@ -198,9 +198,9 @@ You can add additional context manually using the text field or by attaching fil
 
 ### Model providers as sub-processors or third-party providers
 
-When you use an integration with an LLM provider provided by Braze through the Braze Services ("Braze-provided LLM"), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. BrazeAI Operator integrates with OpenAI.
+When you use an integration with an LLM provider provided by Braze through the Braze Services ("Braze-provided LLM"), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. BrazeAI Operator™ integrates with OpenAI.
 
-If you choose to bring your own API Key to integrate with BrazeAI Operator, the provider of your own LLM subscription will be considered a Third Party Provider, as defined in the contract between you and Braze. 
+If you choose to bring your own API Key to integrate with BrazeAI Operator™, the provider of your own LLM subscription will be considered a Third Party Provider, as defined in the contract between you and Braze. 
 
 ### How data is used with OpenAI
 
