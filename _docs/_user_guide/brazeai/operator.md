@@ -8,21 +8,29 @@ description: "This reference article covers BrazeAI Operator, an AI-powered assi
 
 # BrazeAI Operator<sup>TM</sup>
 
-> BrazeAI Operator<sup>TM</sup> is an AI-powered assistant built into the Braze dashboard. Operator provides answers, troubleshooting guidance, and best practices within your workflow.
+> BrazeAI Operator<sup>TM</sup> is Braze's AI assistant built into the dashboard. Operator helps get things done—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas.
 
 ## About Operator
 
-Operator is a built-in AI assistant in the Braze dashboard. It answers questions, suggests next steps, and guides you through tasks—all within your workflow. You can:
+Operator is Braze's AI assistant built into the dashboard. It's designed to help get things done in Braze—answering questions, walking through setup, troubleshooting issues, and brainstorming ideas. Operator is designed to sound like a knowledgeable teammate, not a support bot.
 
-- Get answers from Braze documentation
-- Troubleshoot issues using [page-aware context](#page-aware-context)
-- Learn best practices and onboarding guidance
+### What Operator can help with
+
+Operator can assist with a wide range of tasks within Braze:
+
+- **Explain anything on the current page:** Metrics, settings, or how a feature works
+- **Walk through configuration:** Campaigns, segments, integrations, or workspace settings
+- **Write or debug code:** Liquid templates, webhooks, or answer data and API questions
+- **Troubleshoot issues:** Why messages aren't sending, delivery problems, or configuration errors
+- **Brainstorm strategies:** Campaign ideas, segmentation approaches, or how to tackle complex use cases
+
+Operator uses [page-aware context](#page-aware-context) to provide relevant guidance based on where you are in the dashboard.
 
 ### Model providers as sub-processors or third-party providers
 
 Where Customer uses an integration with an LLM provider provided by Braze through the Braze Services ("Braze-provided LLM"), the providers of such Braze-provided LLM act as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between Customer and Braze. BrazeAI Operator integrates with OpenAI.
 
-If Customers chooses to bring their own API Key to integrate with Braze AI Operator, the provider of Customer's own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
+If Customer chooses to bring their own API Key to integrate with Braze AI Operator, the provider of Customer's own LLM subscription will be considered a Third Party Provider, as defined in the contract between Customer and Braze. 
 
 ### How is my data used and sent to OpenAI?
 
@@ -30,9 +38,9 @@ In order to generate AI output through Braze AI features that Braze identifies a
 
 ## How to access Operator
 
-You can open Operator from any page in the Braze dashboard.  
+Open Operator from any page in the Braze dashboard.  
 
-1. Select **BrazeAI Operator<sup>TM</sup>**, next to your user profile.
+1. Select **BrazeAI Operator<sup>TM</sup>**, next to the user profile.
 
 ![The BrazeAI Operator icon next to a user profile.]({% image_buster /assets/img/operator/operator_profile.png %}){:style="max-width:60%"}
 
@@ -47,20 +55,20 @@ Try maximizing to expand the panel for easier reading, or minimizing it to keep 
 
 ## How to talk to Operator
 
-Use prompts to communicate with Operator. The best approach is to speak naturally—like you would a coworker or a friend. Your prompts can range from simple questions to complex requests:
+Tell Operator what you're trying to do. Ask naturally, the way you'd ask a teammate. Prompts can range from simple questions to complex requests:
 
-- **Simple:** How can I ensure that users don't get cart abandonment emails while they are still on the site shopping?
+- **Simple:** Why isn't my Liquid rendering?
 - **Complex:** How can I make the `abort_message` tag of my message include the user attribute that caused the abort?
 
-Operator can provide step-by-step instructions, links to Braze docs, and plain-language explanations. The clearer and more specific your question, the more useful the response will be. 
+Be specific, and ask follow-ups. Operator can provide step-by-step instructions, links to Braze docs, and plain-language explanations. The clearer and more specific the question, the more useful the response will be. 
 
 ### Best practices
 
 Think of Operator as a conversation, not a search engine. Short, natural prompts usually work best.
 
 - **Be specific:** Instead of "Tell me about Canvas", try "How do I use Action Paths in Canvas?".  
-- **Use follow-ups:** If the first response isn't what you need, ask clarifying questions. Operator can refine answers.
-- **Rely on context:** Operator knows what page you're on in Braze. Open Operator while you're on the page you're working with for the most relevant results.
+- **Use follow-ups:** If the first response isn't what's needed, ask clarifying questions. Operator can refine answers.
+- **Rely on context:** Operator knows what page is active in Braze. Open Operator while on the page being worked with for the most relevant results.
 
 ## Features
 
@@ -68,7 +76,7 @@ Operator includes the following features:
 
 ### GPT models
 
-You can select from these GPT models to use for different request types with Operator. Each model offers a different balance of cost, latency, and capability. Refer to the linked provider documentation to determine which model best fits your use case.
+Select from these GPT models to use for different request types with Operator. Each model offers a different balance of cost, latency, and capability. Refer to the linked provider documentation to determine which model best fits your use case.
 
 - [GPT-5 nano](https://platform.openai.com/docs/models/gpt-5-nano)
 - [GPT-5 mini](https://platform.openai.com/docs/models/gpt-5-mini)
@@ -79,11 +87,11 @@ You can select from these GPT models to use for different request types with Ope
 
 ### Page-aware context
 
-Operator understands the page you're working on in Braze and can tailor responses based on that context. For example, if you open Operator while building a Canvas, it can suggest steps or provide guidance relevant to Canvas without you needing to explain where you are. 
+Operator understands the current page in Braze and tailors responses based on that context. For example, when opened while building a Canvas, it can suggest steps or provide guidance relevant to Canvas without requiring additional context. 
 
 ### Brand guidelines
 
-You can add brand guidelines as context to your Operator queries so responses match your brand's voice, tone, and personality. Operator uses the brand guidelines configured in your workspace.
+Add brand guidelines as context to Operator queries so responses match the brand's voice, tone, and personality. Operator uses the brand guidelines configured in the workspace.
 
 To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more, see [Brand Guidelines]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
@@ -91,7 +99,7 @@ To set up brand guidelines, go to **Settings** > **Brand Guidelines**. For more,
 
 ### Suggested prompts
 
-When you open Operator, you'll see a few suggested prompts to help you get started. Select one to get started or type your own question.
+When Operator is opened, suggested prompts appear. Select one or type a custom question.
 
 ### Viewing reasoning
 
@@ -101,19 +109,19 @@ Operator shows its reasoning steps in collapsible sections labeled **Reasoned**.
 
 ### Suggested actions
 
-In some cases, Operator will recommend next steps and provide direct links to the relevant pages in your Braze dashboard. For example, if you ask about email bounce rates, Operator may link you to your **Deliverability Center** page. These shortcuts help you take action faster without needing to navigate manually.
+In some cases, Operator will recommend next steps and provide direct links to the relevant pages in the Braze dashboard. For example, if asked about email bounce rates, Operator may link to the **Deliverability Center** page. These shortcuts help take action faster without needing to navigate manually.
 
 ### Stopping generation
 
-While the Operator is generating a response, the **Send** button becomes a **Stop** button. If you'd like to end the response early, select **Stop**.
+While Operator is generating a response, the **Send** button becomes a **Stop** button. To end the response early, select **Stop**.
 
 ### Clearing chat history
 
-To reset your conversation, select **Clear chat history**. This removes the current content so you can start fresh.
+To reset the conversation, select **Clear chat history**. This removes the current content and starts a fresh conversation.
 
 ### Maximizing and minimizing the panel
 
-You can use the **maximize** button to expand Operator for easier reading, or **minimize** to keep the panel tucked away while you continue working in Braze.
+Use the **maximize** button to expand Operator for easier reading, or **minimize** to keep the panel tucked away while you continue working in Braze.
 
 ### Sending feedback
 
@@ -121,48 +129,62 @@ At the bottom of each response, use the thumbs up or thumbs down buttons to prov
 
 ## Approval flow
 
-When Operator proposes an action, it goes through an approval flow before executing in Braze.
+When Operator proposes changes in the dashboard (such as filling in form fields, updating settings, or generating images), it presents each change as an approval card for review.
 
-1. **Operator proposes an action:** Based on your prompt, Operator suggests a specific action.
-2. **You review:** You review the proposed action and its details, and either approve or decline the action.
-3. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
+### How approval cards work
+
+1. **Operator summarizes the plan:** Before showing approval cards, Operator explains what it's planning to do.
+2. **Individual approval cards appear:** Each proposed change is presented as a separate card showing:
+   - What Operator wants to change
+   - The proposed value
+   - For changes to existing values: both the previous value and proposed value for comparison
+3. **Review and approve:** Review each card individually and either approve or decline it.
+4. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
 
 {% alert note %}
-If an action fails after approval, Operator will notify you with details about the failure.
+If an action fails after approval, Operator will notify with details about the failure.
 {% endalert %}
+
+### Modifying a plan
+
+Undo is not supported. To change something Operator proposed, tell it in the chat using natural language. Operator will refresh the approval list with updated items. Previously approved items remain executed and are not affected by the refresh.
 
 ### Auto-approve all actions
 
 The **Auto-approve all actions** toggle is located in the Operator chat panel.
 
-- **On:** Operator's suggested actions execute immediately without requiring manual approval. Recommended for trusted workflows only.
+- **On:** Operator's suggested actions execute immediately without requiring manual approval for most changes. Some actions, such as generating images or making significant workspace modifications, will still require explicit approval even when auto-approve is on.
 - **Off (default):** Operator-proposed actions are routed through the approval flow described above.
 
-When you enable auto-approve, a confirmation modal appears to verify your choice.
+{% alert important %}
+Auto-approve resets when you refresh the page, open a new tab, or log out and back in. In-page navigation does not reset it. Auto-approve can be turned off at any time.
+{% endalert %}
+
+When auto-approve is enabled, a confirmation modal appears to verify the choice.
 
 ![Placeholder for the Auto-approve toggle and confirmation modal.]({% image_buster /assets/img/operator/operator_auto_approve.png %})
 
 ## Filing a support ticket
 
-You can file a support ticket directly from Operator without leaving the Braze dashboard.
+File a support ticket directly from Operator without leaving the Braze dashboard.
 
 ### How to file a ticket
 
 1. Open Operator and select **File a Support Ticket** (or ask Operator to file one).
-2. Fill in the title and description of your issue.
+2. Fill in the title and description of the issue.
 3. Operator suggests relevant attachments and context to include.
 4. Review and select **Submit**.
 
 ### Auto-included context
 
-When you file a ticket from Operator, the following context is automatically included:
+When filing a ticket from Operator, the following context is automatically included:
 
-- Recent chat messages from your Operator session
-- Page-aware context (the page you were on when you opened Operator)
-- Your current workspace name
+- Recent chat messages from the Operator session
+- Page-aware context (the active page when Operator was opened)
+- Current workspace name
 - Relevant logs and session details
 
-You can also add additional context manually using the text field or by attaching files.
+Add additional context manually using the text field or by attaching files.
 
 ### Tips for faster resolution
 
@@ -177,15 +199,16 @@ You can also add additional context manually using the text field or by attachin
 | Issue | Troubleshooting |
 | --- | --- |
 | No response | Try refreshing the page and re-opening the Operator panel. |
-| Off-topic answers | Reframe your question more specifically. Mention the feature or workflow you're asking about. |
-| Error messages | If Operator can't stream content to you, you may see a "Try again" prompt. Operator may be temporarily unavailable or your connection was interrupted. Retry after a few minutes. |
+| Off-topic answers | Reframe the question more specifically. Mention the feature or workflow being asked about. |
+| Error messages | If Operator can't stream content, a "Try again" prompt may appear. Operator may be temporarily unavailable or the connection was interrupted. Retry after a few minutes. |
+| Daily usage limit exceeded | The company-wide usage limit has been reached. Wait for the limit to reset (resets every 24 hours). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Limitations
 
-- **Data access:** Operator can use the context of the page you're working on, but it can't query or return your company's data stored in Braze, such as campaign lists, segment performance, or Canvas analytics.
-- **Usage limits:** Operator has a daily usage limit that resets every 24 hours. The limit is generous and unlikely to be reached during normal use. More complex queries consume more of the limit than simpler ones.
+- **Data access:** Operator can use the context of the page being worked on, but it can't query or return company data stored in Braze, such as campaign lists, segment performance, or Canvas analytics.
+- **Usage limits:** Operator has a company-wide daily usage limit that resets every 24 hours. The limit is generous and unlikely to be reached during normal use. If the limit is reached, a "Daily usage limit exceeded" banner error will appear in the chat, and no further requests can be made until the limit resets.
 
 {% alert tip %}
-To manage your usage, consider selecting a lighter model for simple queries and reserving more capable models for complex tasks.
+To manage usage, consider selecting a lighter model for simple queries and reserving more capable models for complex tasks.
 {% endalert %}
