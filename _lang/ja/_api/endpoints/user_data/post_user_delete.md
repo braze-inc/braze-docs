@@ -10,7 +10,7 @@ description: "この記事では、「ユーザーの削除」Braze エンドポ
 ---
 {% api %}
 # ユーザーを削除する
-{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}
+{% apimethod postcore_endpoint|https://www.braze.com/docs/core_endpoints %}。
 /users/delete
 {% endapimethod %}
 
@@ -52,7 +52,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```
 ### リクエストパラメーター
 
-| パラメーター         | required | データ型                  | 説明                                                                                      |
+| パラメーター         | 必須かどうか | データ型                  | 説明                                                                                      |
 |-------------------|----------|----------------------------|--------------------------------------------------------------------------------------------------|
 | `external_ids`    | オプション | 文字列の配列           | 削除する外部識別子。                                                    |
 | `user_aliases`    | オプション | ユーザー別名オブジェクトの配列 | 削除する[ユーザーエイリアス]({{site.baseurl}}/api/objects_filters/user_alias_object/)。 |

@@ -65,20 +65,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`| Required | String | See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
 |`context`| Optional | Object | This includes [Canvas entry properties]({{site.baseurl}}/api/objects_filters/context_object/). Personalization key-value pairs apply to all users in this request. The context object has a maximum size limit of 50 KB. |
-|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to an entire segment that a campaign or Canvas targets. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
-|`audience`| Optional| Connected audience object | See [Connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>If not provided and `broadcast` is set to `true`, the message is sent to the entire segment that the Canvas targets.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `context` object. This call requires an `external_user_id`, `user_alias`, or `email`. Requests must specify only one. <br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
+|`broadcast`| Optional | Boolean | You must set `broadcast` to true when sending a message to the entire segment configured as the Canvas's target audience in the Braze dashboard. This parameter defaults to false (as of August 31, 2017). <br><br> If `broadcast` is set to true, a `recipients` list cannot be included. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger-than-expected audience. |
+|`audience`| Optional| Connected audience object | See [Connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). When you include `audience`, the message is sent only to users who match the defined filters, such as custom attributes and subscription statuses. |
+|`recipients`| Optional | Array | See [Recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). <br><br>If not provided and `broadcast` is set to `true`, the message is sent to the entire segment configured as the Canvas's target audience in the Braze dashboard.<br><br> The `recipients` array may contain up to 50 objects, with each object containing a single `external_user_id` string and a `canvas_entry_properties` object. This call requires an `external_user_id`, `user_alias`, or `email`. Requests must specify only one. <br><br>If `email` is the identifier, you must include [`prioritization`]({{site.baseurl}}/api/endpoints/user_data/post_user_identify#identifying-users-by-email) in the recipients object. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
-
-{% alert important %}
-For the `recipients` parameter, when `send_to_existing_only` is `true`, Braze sends only the message to existing users. However, this flag can't be used with user aliases. <br><br>If `send_to_existing_only` is `false`, an attribute object must be included. When `send_to_existing_only` is `false` **and** a user with the given `id` does not exist, Braze creates a user with that ID and attributes before sending the message.
-{% endalert %}
-
-Customers using the API for server-to-server calls may need to allowlist the appropriate API URL if they're behind a firewall.
-
-{% alert note %}
-If you include both specific users in your API call and a target segment in the dashboard, Braze sends the message to specifically the user profiles that are both in the API call and qualify for the segment filters.
-{% endalert %}
 
 ## Example request
 ```
@@ -171,6 +161,17 @@ The status code `201` could return the following response body. If the Canvas is
 If your Canvas is archived, you see this `notice` message: "The Canvas is archived. Unarchive the Canvas to ensure trigger requests will take effect." If your Canvas is not active, you see this `notice` message: "The Canvas is paused. Resume the Canvas to ensure trigger requests will take effect."
 
 If your request encounters a fatal error, refer to [Errors and responses]({{site.baseurl}}/api/errors/#fatal-errors) for the error code and description.
+
+## Considerations
+
+Consider the following when making API calls to send Canvas messages using API-triggered delivery:
+
+- **Sending to existing users**: When `send_to_existing_only` is set to `true` (the default), the message is sent only to existing users in Braze.
+- **Creating new users**: When `send_to_existing_only` is set to `false`, you must include an `attributes` object. If a user with the specified ID does not exist, Braze creates a user with that ID and attributes before sending the message.
+- **User alias limitation**: The `send_to_existing_only` flag cannot be used with user aliases. To send to an alias-only user, the user must already exist in Braze.
+- **Segment targeting**: The `segment_id` parameter is not supported for this endpoint. To target a segment, configure the segment in the Canvas's target audience settings in the Braze dashboard and use `broadcast: true`, or use the `audience` parameter with [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) filters.
+- **Combined targeting**: When you include both the `recipients` parameter and configure a target segment in the dashboard, the message is sent only to user profiles that are specified in the API call and also match the segment's filters.
+- **Server-to-server calls**: If you're making server-to-server calls, you may need to allowlist the appropriate API URL if you're behind a firewall.
 
 ## Attributes object for Canvas
 

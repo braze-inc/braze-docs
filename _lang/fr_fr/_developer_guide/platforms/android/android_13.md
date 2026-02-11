@@ -8,4 +8,4 @@ platform:
 description: "Cet article concerne Android 13, les mises à niveau SDK, les modifications apportées aux autorisations des notifications push, la compatibilité SDK, etc."
 ---
 
- %} developer_guide/android/android_13.md
+{% multi_lang_include developer_guide/android/android_13.md %}

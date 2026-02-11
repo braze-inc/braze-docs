@@ -25,7 +25,7 @@ Braze는 [`BrazeUser`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-
 사용자에 대한 기본 속성을 설정하려면 Braze 인스턴스에서 `getCurrentUser()` 메서드를 호출하여 앱의 현재 사용자에 대한 참조를 가져옵니다. 그런 다음 사용자 속성을 설정하기 위해 메서드를 호출할 수 있습니다.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
@@ -37,7 +37,7 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).getCurrentUser { brazeUser ->
@@ -53,7 +53,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 사용자 속성을 해제하려면 관련 메서드에 `null`을 전달하십시오.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
@@ -65,7 +65,7 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).getCurrentUser { brazeUser ->
@@ -78,12 +78,12 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ## 사용자 지정 사용자 속성
 
-기본 사용자 속성 외에도 Braze는 여러 가지 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 [사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics)을 참조하십시오.
+기본 사용자 속성 외에도 Braze는 여러 다른 데이터 유형을 사용하여 커스텀 속성을 정의할 수 있도록 허용합니다. 각 속성의 세분화 옵션에 대한 자세한 내용은 [사용자 데이터 수집]({{site.baseurl}}/developer_guide/analytics)을 참조하십시오.
 
 ### 사용자 지정 속성 설정
 
 {% tabs local %}
-{% tab 문자열 %}
+{% tab String %}
 `string` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs global %}
@@ -110,7 +110,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 정수 %}
+{% tab Integers %}
 `int` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs global %}
@@ -169,7 +169,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 부동 소수점 %}
+{% tab Floating-points %}
 `float` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs global %}
@@ -223,7 +223,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 부울 %}
+{% tab Boolean %}
 `boolean` 값으로 커스텀 속성을 설정하려면:
 
 {% subtabs global %}
@@ -251,7 +251,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endsubtabs %}
 {% endtab %}
 
-{% tab 날짜 %}
+{% tab Date %}
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -289,7 +289,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 {% endalert %}
 
 {% endtab %}
-{% tab 배열 %}
+{% tab Array %}
 
 커스텀 속성 배열의 최대 요소 개수 기본값은 25개입니다. 개별 배열의 최대치는 Braze 대시보드의 **데이터 설정** > **커스텀 속성**에서 최대 100개로 늘릴 수 있습니다. 최대 요소 수를 초과하는 배열은 최대 요소 수를 포함하도록 잘립니다. 커스텀 속성 배열과 해당 동작에 대한 자세한 내용은 [배열]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays)에 대한 설명서를 참조하세요.
 
@@ -333,7 +333,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 커스텀 속성을 해제하려면 관련 속성 키를 `unsetCustomUserAttribute` 메서드에 전달하십시오.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
@@ -345,7 +345,7 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).getCurrentUser { brazeUser ->
@@ -358,10 +358,10 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 
 ### 커스텀 속성 중첩
 
-커스텀 속성 내에서 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩 속성이 있는 `favorite_book` 객체가 사용자 프로필의 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
+커스텀 속성 내에 속성을 중첩할 수도 있습니다. 다음 예제에서는 중첩 속성을 가진 `favorite_book` 객체가 고객 프로필에 커스텀 속성으로 설정됩니다. 자세한 내용은 [중첩 커스텀 속성]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support)을 참조하십시오.
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 ```java
 JSONObject favoriteBook = new JSONObject();
 try {
@@ -379,7 +379,7 @@ braze.getCurrentUser(user -> {
 ```
 {% endtab %}
 
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 ```kotlin
 val favoriteBook = JSONObject()
   .put("title", "The Hobbit")
@@ -415,7 +415,7 @@ Android에서 사용자에게 푸시 알림을 보내기 위해 명시적으로 
 ### 이메일 구독 설정
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
@@ -427,7 +427,7 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).getCurrentUser { brazeUser ->
@@ -441,7 +441,7 @@ Braze.getInstance(context).getCurrentUser { brazeUser ->
 ### 푸시 알림 구독 설정
 
 {% tabs %}
-{% tab 자바 %}
+{% tab JAVA %}
 
 ```java
 Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
@@ -453,7 +453,7 @@ Braze.getInstance(context).getCurrentUser(new IValueCallback<BrazeUser>() {
 ```
 
 {% endtab %}
-{% tab 코틀린 %}
+{% tab KOTLIN %}
 
 ```kotlin
 Braze.getInstance(context).getCurrentUser { brazeUser ->

@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: SDK 인증 키 생성"
+nav_title: "POST: 소프트웨어 개발 키트 인증 키 만들기"
 article_title: "POST: SDK 인증 키 생성"
 search_tag: Endpoint
 page_order: 0
@@ -32,19 +32,19 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "app_id": "App API identifier",
-  "rsa_public_key_str": "RSA public key string", 
-  "description": "description", 
+  "rsa_public_key_str": "RSA public key string",
+  "description": "description",
   "make_primary": false
 }
 ```
 
 ## 요청 매개변수
 
-| 매개변수 | 필수 | 데이터 유형 | 설명 |
+| 매개변수 | 필수 | 데이터 유형 | Description |
 | --------- | -------- | --------- | ----------- |
-| `app_id` | 필수 | 문자열 | 앱 API 식별자입니다. |
-| `rsa_public_key_str` | 필수 | 문자열 | RSA 공개 키 문자열입니다. 유효한 RSA 공개키여야 하며, 그렇지 않으면 오류가 반환됩니다. |
-| `description` | 필수 | 문자열 | SDK 인증 키에 대한 설명입니다. |
+| `app_id` | Required | 문자열 | 앱 API 식별자입니다. |
+| `rsa_public_key_str` | Required | 문자열 | RSA 공개 키 문자열입니다. 유효한 RSA 공개키여야 하며, 그렇지 않으면 오류가 반환됩니다. |
+| `description` | Required | 문자열 | SDK 인증 키에 대한 설명입니다. |
 | `make_primary` | 선택 사항 | 부울 | `true` 로 설정하면 이 키가 생성될 때 기본 SDK 인증 키가 됩니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
@@ -56,8 +56,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_auth
 --header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "app_id": "01234567-89ab-cdef-0123-456789abcdef",
-  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----", 
-  "description": "SDK Authentication Key for iOS App", 
+  "rsa_public_key_str": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvvD+fgA0YuCUd/v35htn...\n-----END PUBLIC KEY-----",
+  "description": "SDK Authentication Key for iOS App",
   "make_primary": false
 }'
 ```
@@ -71,7 +71,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/app_group/sdk_auth
 
 ## 응답 매개변수
 
-| 매개변수 | 데이터 유형 | 설명 |
+| 매개변수 | 데이터 유형 | Description |
 | --------- | --------- | ----------- |
 | `id` | 문자열 | 새로 생성된 SDK 인증 키의 ID입니다. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }

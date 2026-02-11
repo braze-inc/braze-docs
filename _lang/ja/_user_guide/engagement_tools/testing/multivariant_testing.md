@@ -1,5 +1,5 @@
 ---
-nav_title: 多変量&amp;アンプ;A/B 検定
+nav_title: 多変量テストと AB テスト
 article_title: 多変量テストと AB テスト
 page_order: 2
 page_type: reference

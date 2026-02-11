@@ -1,7 +1,7 @@
 {% if include.alert == "Shopify deprecation" %}
 
 {% alert important %}
-Una [nueva versión de la integración con Shopify]({{site.baseurl}}/partners/shopify/#new-shopify-integration) se lanzará por fases a partir de abril de 2025. Las fases se basarán en el tipo de tienda Shopify y en el ID externo utilizado para configurar la integración inicial. <br><br>**La versión antigua de la integración dejará de estar disponible a partir del 28 de agosto de 2025. Actualiza a la nueva versión antes de esta fecha para seguir utilizando la integración sin problemas.**
+Una [nueva versión de la integración con Shopify]({{site.baseurl}}/partners/shopify/#new-shopify-integration) se lanzará por fases a partir de abril de 2025. Las fases se basarán en el tipo de tienda Shopify y en el ID externo utilizado para configurar la integración inicial. <br><br>**La versión antigua de la integración dejará de estar disponible a partir del 28 de agosto de 2025. Actualiza a la nueva versión antes de esa fecha para seguir utilizando la integración sin problemas.**
 {% endalert %}
 
 {% endif %}
@@ -37,7 +37,15 @@ Hay ciertos navegadores, como las aplicaciones Naver para Android e iOS, que no 
 {% if include.alert == 'Purchase event deprecation' %}
 
 {% alert important %}
-Los planes para eliminar gradualmente el acto de compra se anunciarán a finales de 2025. A largo plazo, el evento de compra será sustituido por nuevos [eventos recomendados de comercio electrónico]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que vendrán con características mejoradas de segmentación, informes, análisis y mucho más. Sin embargo, los nuevos eventos de comercio electrónico no serán compatibles con las características existentes relacionadas con el evento de compra, como el valor de duración (LTV) o los informes de ingresos en Lienzos o campañas. Para obtener una lista completa de las características relacionadas con los eventos de compra, consulta [Registrar eventos de compra]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+Los planes para eliminar gradualmente el acto de compra se anunciarán en 2026. Con el tiempo, el evento de compra será sustituido por nuevos [eventos recomendados de comercio electrónico]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que vendrán con características mejoradas de segmentación, informes, análisis y mucho más. Sin embargo, los nuevos eventos de comercio electrónico no serán compatibles con las características existentes relacionadas con el evento de compra, como el valor de duración (LTV) o los informes de ingresos en Lienzos o campañas. Para obtener una lista completa de las características relacionadas con los eventos de compra, consulta [Registrar eventos de compra]({{site.baseurl}}/user_guide/data/activation/custom_data/purchase_events/#logging-purchase-events).
+{% endalert %}
+
+{% endif %}
+
+{% if include.alert == 'Purchase event deprecation for eCommerce filters' %}
+
+{% alert important %}
+Los planes para eliminar gradualmente el acto de compra se anunciarán en 2026. Con el tiempo, el evento de compra será sustituido por nuevos [eventos recomendados de comercio electrónico]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/ecommerce_events/), que vendrán con características mejoradas de segmentación, informes, análisis y mucho más. Cuando esto ocurra, los filtros de segmento dejarán de aparecer en el comportamiento de compra. Para ver una lista completa de eventos de compra, consulta [Registrar eventos de compra]({{site.baseurl}}/user_guide/data/custom_data/purchase_events/#logging-purchase-events).
 {% endalert %}
 
 {% endif %}
@@ -61,7 +69,7 @@ La integración de Shopify es compatible con los webhooks de creación y actuali
 {% if include.alert == 'context variable' %}
 
 {% alert important %}
-Si participas en el acceso anticipado al Contexto de Canvas, las propiedades de entrada de Canvas forman parte de las variables de contexto de Canvas. Esto significa que `canvas_entry_properties` se denomina ahora `context`. Cada variable contextual incluye un nombre, un tipo de datos y un valor que puede incluir Liquid. Actualmente, `canvas_entry_properties` sigue siendo compatible con versiones anteriores. Para más detalles, consulta [Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) y [objeto contextual Canvas]({{site.baseurl}}/api/objects_filters/context_object).
+Si participas en el acceso anticipado al Contexto de Canvas, las propiedades de entrada de Canvas forman parte de las variables de contexto de Canvas. Esto significa que `canvas_entry_properties` se denomina ahora `context`. Cada variable contextual incluye un nombre, un tipo de datos y un valor que puede incluir Liquid. Actualmente, `canvas_entry_properties` sigue siendo compatible con versiones anteriores. Para más detalles, consulta [Contexto]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/context/#how-it-works) y [objeto Propiedades de entrada en Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endalert %}
 
 {% endif %}

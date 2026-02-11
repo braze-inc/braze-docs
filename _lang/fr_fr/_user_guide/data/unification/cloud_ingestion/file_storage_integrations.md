@@ -11,7 +11,7 @@ page_type: reference
 
 > Cette page explique comment configurer la prise en charge de l'ingestion de données dans le cloud et synchroniser les données pertinentes de S3 vers Braze.
 
-## Comment cela fonctionne-t-il ?
+## Fonctionnement
 
 Vous pouvez utiliser Cloud Data Ingestion (CDI) for S3 pour intégrer directement un ou plusieurs compartiments S3 de votre compte AWS à Braze. Lorsque de nouveaux fichiers sont publiés sur S3, un message est envoyé à SQS et Braze Cloud Data Ingestion prend en charge ces nouveaux fichiers. 
 
@@ -32,18 +32,18 @@ L'intégration nécessite les ressources suivantes :
 
 ### Définitions AWS
 
-Tout d'abord, définissons certains des termes utilisés dans le cadre de cette tâche.
+Tout d'abord, définissez les termes utilisés dans le cadre de cette tâche.
 
-| Durée | Définition |
+| Terme | Définition |
 | --- | --- |
 | Nom de ressource Amazon (ARN) | L'ARN est un identifiant unique pour les ressources AWS. |
-| Gestion des identités et des accès (IAM) | IAM est un service web qui vous permet de contrôler en toute sécurité l'accès aux ressources AWS. Dans ce tutoriel, vous allez créer une politique IAM et l'attribuer à un rôle IAM pour intégrer votre compartiment S3 à Braze Cloud Data Ingestion. |
+| Gestion des identités et des accès (IAM) | IAM est un service Web qui vous permet de contrôler, en toute sécurité, l'accès aux ressources AWS. Dans ce tutoriel, vous allez créer une politique IAM et l'attribuer à un rôle IAM pour intégrer votre compartiment S3 à Cloud Data Ingestion de Braze. |
 | Amazon Simple Queue Service (SQS) | SQS est une file d'attente hébergée qui vous permet d'intégrer des systèmes et des composants logiciels distribués. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-## Configuration de l'ingestion de données dans le nuage (Cloud Data Ingestion) dans AWS
+## Configuration de l'ingestion de données Cloud dans AWS
 
-### Étape 1 : Créer un compartiment source
+### Étape 1 : Créer un compartiment source
 
 Créez un compartiment S3 à usage général avec les paramètres par défaut dans votre compte AWS. Les compartiments S3 peuvent être réutilisés d'une synchronisation à l'autre, à condition que le dossier soit unique.
 
@@ -51,12 +51,12 @@ Les paramètres par défaut sont les suivants :
 
 - ACL désactivés
 - Bloquer tout accès public
-- Désactiver le versionnement des compartiments
-- Cryptage SSE-S3
+- Désactiver la gestion des versions des compartiments
+- Chiffrement SSE-S3
 
-Prenez note de la région dans laquelle vous avez créé le compartiment, car vous créerez une file d'attente SQS dans la même région à l'étape suivante.
+Prenez note de la région dans laquelle vous avez créé le compartiment, car vous allez créer une file d'attente SQS dans la même région à l'étape suivante.
 
-### Étape 2 : Créer une file d'attente SQS
+### Étape 2 : Créer une file d'attente SQS
 
 Créez une file d'attente SQS pour suivre l'ajout d'objets dans le compartiment que vous avez créé. Utilisez pour l'instant les paramètres de configuration par défaut. 
 
@@ -68,11 +68,11 @@ Veillez à créer ce SQS dans la même région que celle dans laquelle vous avez
 
 Veillez à noter l'ARN et l'URL du SQS, car vous les utiliserez fréquemment au cours de cette configuration.
 
-\![Sélection de "Avancé" avec un exemple d'objet JSON pour définir qui peut accéder à une file d'attente.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
+![Sélection de "Advanced" avec un exemple d'objet JSON pour définir qui peut accéder à une file d'attente.]({% image_buster /assets/img/cloud_ingestion/s3_ARN.png %})
 
-### Étape 3 : Mise en place d'une politique d'accès
+### Étape 3 : Configurer une politique d'accès
 
-Pour configurer la politique d'accès, sélectionnez **Options avancées.** 
+Pour configurer la politique d'accès, sélectionnez **Options avancées**. 
 
 Ajoutez la déclaration suivante à la politique d'accès de la file d'attente, en prenant soin de remplacer `YOUR-BUCKET-NAME-HERE` par le nom de votre compartiment, et `YOUR-SQS-ARN` par l'ARN de votre file d'attente SQS, et `YOUR-AWS-ACCOUNT-ID` par l'ID de votre compte AWS : 
 
@@ -96,7 +96,7 @@ Ajoutez la déclaration suivante à la politique d'accès de la file d'attente, 
 } 
 ```
 
-### Étape 4 : Ajouter une notification d'événement au compartiment S3
+### Étape 4 : Ajouter une notification d'événement au compartiment S3
 
 1. Dans le compartiment créé à l'étape 1, allez dans **Propriétés** > **Notifications d'événements.**
 2. Donnez un nom à la configuration. Vous pouvez également spécifier un préfixe ou un suffixe à cibler si vous souhaitez que seul un sous-ensemble de fichiers soit ingéré par Braze.
@@ -106,11 +106,11 @@ Ajoutez la déclaration suivante à la politique d'accès de la file d'attente, 
 Si vous téléchargez vos fichiers dans le dossier racine d'un compartiment S3, puis que vous déplacez certains de ces fichiers vers un dossier spécifique du compartiment, vous risquez de rencontrer une erreur inattendue. Au lieu de cela, vous pouvez modifier les notifications d'événements pour qu'elles soient envoyées uniquement pour les fichiers du préfixe, éviter de placer des fichiers dans le compartiment S3 en dehors de ce préfixe, ou mettre à jour l'intégration sans préfixe, qui ingérera alors tous les fichiers.
 {% endalert %}
 
-### Étape 5 : Créer une politique IAM
+### Étape 5 : Créer une politique IAM
 
-Créez une politique IAM pour permettre à Braze d'interagir avec votre compartiment source. Pour commencer, connectez-vous à la console de gestion AWS en tant qu'administrateur de compte. 
+Créez une politique IAM pour permettre à Braze d'interagir avec votre compartiment source. Pour commencer, connectez-vous à la console de gestion AWS en tant qu’administrateur de compte. 
 
-1. Allez dans la section IAM de la console AWS, sélectionnez **Politiques** dans la barre de navigation, puis sélectionnez **Créer une politique.**<br><br>\![Le bouton "Créer une politique" dans la console AWS.]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
+1. Allez dans la section IAM de la console AWS, sélectionnez **Politiques** dans la barre de navigation, puis cliquez sur **Créer une politique**.<br><br>![Le bouton "Créer une politique" dans la console AWS.]({% image_buster /assets/img/create_policy_1_list.png %})<br><br>
 
 2. Ouvrez l'onglet **JSON** et saisissez l'extrait de code suivant dans la section **Policy Document**, en prenant soin de remplacer `YOUR-BUCKET-NAME-HERE` par le nom de votre compartiment et `YOUR-SQS-ARN-HERE` par le nom de votre file d'attente SQS : 
 
@@ -146,67 +146,67 @@ Créez une politique IAM pour permettre à Braze d'interagir avec votre comparti
 {: start="3"}
 3\. Sélectionnez **Réviser la politique** lorsque vous avez terminé.
 
-4. Donnez un nom et une description à la politique, puis sélectionnez **Créer une politique**.  
+4. Donnez un nom et une description à la politique, puis sélectionnez **Créer une politique.**  
 
-\![Un exemple de politique nommée "nouveau-nom-de-politique".]({% image_buster /assets/img/create_policy_3_name.png %})
+![Exemple de politique nommée "nouveau-nom-de-la-politique".]({% image_buster /assets/img/create_policy_3_name.png %})
 
-\![Champ de description de la politique.]({% image_buster /assets/img/create_policy_4_created.png %})
+![Champ de description de la politique.]({% image_buster /assets/img/create_policy_4_created.png %})
 
-### Étape 6 : Créer un rôle IAM
+### Étape 6 : Créer un rôle IAM
 
-Pour terminer la configuration sur AWS, vous allez créer un rôle IAM et y attacher la politique IAM de l'étape 4. 
+Pour terminer la configuration sur AWS, vous allez créer un rôle IAM et y associer la politique IAM de l'étape 4. 
 
 1. Dans la même section IAM de la console où vous avez créé la politique IAM, allez dans **Rôles** > **Créer un rôle**. 
 
-<br><br>\![Le bouton "Créer un rôle".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
+<br><br>![Le bouton "Créer un rôle".]({% image_buster /assets/img/create_role_1_list.png %})<br><br>
 
 {: start="2"}
 2\. Copiez l'ID du compte AWS de Braze à partir de votre tableau de bord de Braze. Accédez à **Cloud Data Ingestion**, sélectionnez **Create New Data Sync (Créer une nouvelle synchronisation de données)**, puis sélectionnez **S3 Import (Importer S3)**.
 
-3. Dans AWS, sélectionnez **Un autre compte AWS** comme type de sélecteur d'entité de confiance. Indiquez votre ID de compte Braze. Cochez la case **Require external ID** et saisissez un ID externe à utiliser par Braze. Il s'agit de l'ID externe généré lors de la création d'une connexion S3 Currents dans la section **Credentials** de votre connexion Currents dans le tableau de bord de Braze. Sélectionnez **Suivant** lorsque vous avez terminé. 
+3. Dans AWS, sélectionnez **Another AWS Account (Autre compte AWS)** comme type de sélecteur d'entité de confiance. Indiquez votre ID de compte Braze. Cochez la case **Require external ID** et saisissez un ID externe à utiliser par Braze. Il s'agit de l'ID externe généré lors de la création d'une connexion S3 Currents dans la section **Credentials** de votre connexion Currents dans le tableau de bord de Braze. Sélectionnez **Suivant** lorsque vous avez terminé. 
 
-<br><br> \![La page S3 "Create Role" (Créer un rôle). Cette page comporte des champs pour le nom du rôle, la description du rôle, les entités de confiance, les politiques et les limites des autorisations.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
+<br><br> ![Page S3 « Create Role (Créer un rôle) ». Cette page comporte des champs pour le nom du rôle, la description du rôle, les entités de confiance, les politiques et les restrictions d’autorisations.]({% image_buster /assets/img/create_role_2_another.png %})<br><br>
 
 {: start="4"}
 4\. Attachez la politique créée à l'étape 4 au rôle. Recherchez la police dans la barre de recherche et cochez la case à côté de la police pour la joindre. Sélectionnez **Suivant** lorsque vous avez terminé.
 
-<br><br>\![Rôle ARN avec le nouveau nom de politique sélectionné.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
+<br><br>![Rôle ARN avec le nouveau nom de politique sélectionné.]({% image_buster /assets/img/create_role_3_attach.png %})<br><br>
 
 Donnez un nom et une description au rôle, puis sélectionnez **Créer un rôle**.
 
-<br><br>\![Un exemple de rôle nommé "nouveau-nom-de-rôle".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
+<br><br>![Un exemple de rôle nommé "nouveau-nom-de-rôle".]({% image_buster /assets/img/create_role_4_name.png %})<br><br>
 
 {: start="5"}
-5\. Prenez note de l'ARN du rôle que vous venez de créer et de l'ID externe que vous avez généré, car vous les utiliserez pour créer l'intégration Cloud Data Ingestion.
+5\. Prenez note de l'ARN du rôle que vous avez créé et de l'ID externe que vous avez généré, car vous en avez besoin pour créer l'intégration Cloud Data Ingestion.
 
-## Configurer l'ingestion de données dans Braze
+## Configuration de Cloud Data Ingestion dans Braze
 
 1. Pour créer une nouvelle intégration, accédez à **Paramètres des données** > **Ingestion de données dans le cloud**, sélectionnez **Créer une nouvelle synchronisation de données**, puis sélectionnez **Importation S3** dans la section des sources de fichiers. 
 2. Saisissez les informations issues du processus de configuration d'AWS pour créer une nouvelle synchronisation. Précisez les éléments suivants :
 
-  - Rôle ARN
+  - ARN du rôle
   - ID externe
   - URL SQS (doit être unique pour chaque nouvelle intégration)
   - Nom du compartiment
   - Chemin d'accès au dossier (facultatif, doit être unique pour toutes les synchronisations d'un espace de travail)
   - Région
 
-\![Exemple d'identifiants de sécurité tels qu'affichés dans S3 pour créer une nouvelle synchronisation d'importation.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
+![Exemple d'identifiants de sécurité tels qu'affichés dans S3 pour créer une nouvelle synchronisation d'importation.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_1.png %})
 
 {: start="3"}
 3\. Donnez un nom à votre intégration et sélectionnez le type de données pour cette intégration. 
 
-<br><br>\![Configuration des détails de synchronisation pour "cdi-s3-as-source-integration" avec les attributs de l'utilisateur comme type de données.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
+<br><br>![Configuration des détails de synchronisation pour "cdi-s3-as-source-integration" avec les attributs de l'utilisateur comme type de données.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_2.png %})<br><br>
 
 {: start="4"}
 4\. Ajoutez un e-mail de contact pour recevoir des notifications si la synchronisation est interrompue en raison de problèmes d'accès ou de permissions. Si vous le souhaitez, vous pouvez activer les notifications pour les erreurs au niveau de l'utilisateur et les réussites de synchronisation. 
 
-<br><br> \![Configuration des préférences de notification des erreurs de synchronisation.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
+<br><br> ![Configuration des préférences de notification des erreurs de synchronisation.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_3.png %})<br><br>
 
 {: start="5"}
 5\. Enfin, testez la connexion et enregistrez la synchronisation. 
 
-<br><br>Une option pour tester la connexion avec un aperçu des données.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
+<br><br>![Une option pour tester la connexion avec un aperçu des données.]({% image_buster /assets/img/cloud_ingestion/s3_ingestion_4.png %})
 
 ## Formats de fichiers requis
 
@@ -220,10 +220,10 @@ Votre fichier source peut contenir une ou plusieurs colonnes ou clés d'identifi
 
 | Identifiant | Description |
 | --- | --- |
-| `EXTERNAL_ID` | Il identifie l'utilisateur que vous souhaitez mettre à jour. Cette valeur devrait correspondre à la valeur `external_id` utilisée dans Braze. |
+| `EXTERNAL_ID` | Il identifie l'utilisateur que vous souhaitez mettre à jour. Cela doit correspondre à la valeur `external_id` utilisée dans Braze. |
 | `ALIAS_NAME` et `ALIAS_LABEL` | Ces deux colonnes créent un objet alias d'utilisateur. `alias_name` doit être un identifiant unique et `alias_label` spécifie le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec des libellés différents, mais un seul `alias_name` par `alias_label`. |
-| `BRAZE_ID` | L'identifiant de l'utilisateur de Braze. Celui-ci est généré par le SDK de Braze, et il n'est pas possible de créer de nouveaux utilisateurs à l'aide d'un ID de Braze par le biais de l'ingestion de données dans le cloud. Pour créer de nouveaux utilisateurs, indiquez un ID externe ou un alias d'utilisateur. |
-| `EMAIL` | L'adresse e-mail de l'utilisateur. S'il existe plusieurs profils avec la même adresse e-mail, le profil le plus récemment mis à jour sera prioritaire pour les mises à jour. Si vous indiquez à la fois l'e-mail et le téléphone, nous utiliserons l'e-mail comme identifiant principal. |
+| `BRAZE_ID` | L'identifiant de l'utilisateur de Braze. Celui-ci est généré par le SDK de Braze, et il n'est pas possible de créer de nouveaux utilisateurs à l'aide d'un ID de Braze par le biais de l'ingestion de données dans le cloud. Pour créer de nouveaux utilisateurs, spécifiez un ID utilisateur externe ou un alias utilisateur. |
+| `EMAIL` | L’adresse e-mail de l’utilisateur. S'il existe plusieurs profils avec la même adresse e-mail, le profil le plus récemment mis à jour sera prioritaire pour les mises à jour. Si vous indiquez à la fois l'e-mail et le téléphone, nous utiliserons l'e-mail comme identifiant principal. |
 | `PHONE` | Le numéro de téléphone de l'utilisateur. S'il existe plusieurs profils avec le même numéro de téléphone, le profil le plus récemment mis à jour sera mis à jour en priorité. |
 |`PAYLOAD` | Il s'agit d'une chaîne JSON des champs que vous souhaitez synchroniser avec l'utilisateur dans Braze. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -284,9 +284,9 @@ ID,PAYLOAD
 
 {% endtabs %}  
 
-Pour obtenir des exemples de tous les types de fichiers pris en charge, consultez les fichiers d'exemple dans [braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
+Pour obtenir des exemples de tous les types de fichiers pris en charge, reportez-vous aux fichiers d'exemple figurant dans [Braze-examples](https://github.com/braze-inc/braze-examples/tree/main/cloud-data-ingestion/braze-examples/payloads/file_storage).  
 
-## Ce qu'il faut savoir
+## Choses à savoir
 
 - Les fichiers ajoutés au compartiment S3 ne doivent pas dépasser 512 Mo. Les fichiers de plus de 512 Mo entraîneront une erreur et ne seront pas synchronisés sur Braze.
 - Bien qu'il n'y ait pas de limite supplémentaire au nombre de lignes par fichier, nous vous recommandons d'utiliser des fichiers plus petits pour améliorer la rapidité de vos synchronisations. Par exemple, l'ingestion d'un fichier de 500 Mo prendrait beaucoup plus de temps que celle de cinq fichiers distincts de 100 Mo.

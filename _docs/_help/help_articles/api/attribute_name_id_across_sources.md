@@ -24,7 +24,7 @@ Campaign and Canvas attributes are also available in the [Export campaign detail
 
 ### Currents
 
-Campaign and Canvas attributes are tied to [message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) from Currents. This is important so that you can determine what campaign or Canvas component a push send or email open is associated with.
+Campaign and Canvas attributes are tied to [message engagement events]({{site.baseurl}}/user_guide/data/braze_currents/event_glossary/message_engagement_events/) from Currents. Note that only Message steps have access to campaign attributes, and other Canvas steps only have access to Canvas attributes. This is important so that you can determine what campaign or Canvas component a push send or email open is associated with.
 
 ## Campaign attributes
 
@@ -44,7 +44,7 @@ Campaign and Canvas attributes are tied to [message engagement events]({{site.ba
 | Canvas ID | {% raw %}`{{canvas.${api_id}}}`{% endraw %} | N/A (used as an input for the API call itself) | canvas_id |
 | Variant name | {% raw %}`{{canvas.${variant_name}}}`{% endraw %} | `variants.name` | `canvas_variation_name` |
 | Variant ID | {% raw %}`{{canvas.${variant_api_id}}}`{% endraw %} | `variants.name.id` | `canvas_variation_id` |
-| Step name | {% raw %}`{{campaign.${name}}}`{% endraw %} | `steps.name` | `canvas_step_name` |
+| Step name (for Message steps only) | {% raw %}`{{campaign.${name}}}`{% endraw %} | `steps.name` | `canvas_step_name` |
 | Step ID | {% raw %}`{{campaign.${api_id}}}`{% endraw %} | `steps.id` | `canvas_step_id` |
 | Message channel | N/A | `steps.messages.message_variation_id.channel` | N/A (inherent from event type, such as push send or email open) |
 | Message ID | {% raw %}`{{campaign.${message_api_id}}}`{% endraw %} | `steps.message.message_variation_id` | `canvas_step_message_variation_api_id` |

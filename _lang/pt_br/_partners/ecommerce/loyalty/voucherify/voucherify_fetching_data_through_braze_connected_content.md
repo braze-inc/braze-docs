@@ -1,6 +1,6 @@
 ---
-nav_title: Buscando dados através do Conteúdo Conectado
-article_title: Buscando dados através do Conteúdo Conectado com Voucherify
+nav_title: Obtenção de dados por conteúdo conectado
+article_title: Obtenha dados por meio do Connected Content com o Voucherify
 page_order: 2
 alias: /partners/voucherify/connected_content/
 description: "Este artigo de referência descreve como você pode buscar dados da API do Voucherify através do Braze Connected Content e enviar mensagens para segmentos específicos do Braze."
@@ -8,11 +8,11 @@ page_type: partner
 search_tag: Partner
 ---
 
-# Buscando dados através do Conteúdo Conectado
+# Obter dados por meio do Connected Content
 
 > Com o Braze Connected Content, você pode buscar dados da API da Voucherify e enviar mensagens para segmentos específicos da Braze. Este artigo de referência mostrará como configurar scripts de Conteúdo Conectado para publicar cupons do Voucherify, convidar novos indicados, recuperar o saldo de cartões de fidelidade e mais.
 
-_Esta integração é mantida pelo Voucherify._
+_Essa integração é mantida pela Voucherify._
 
 ## Sobre a integração
 
@@ -40,7 +40,7 @@ Visite o repositório [GitHub](https://github.com/voucherifyio/braze-connected-c
 Sem as seguintes configurações definidas cada vez que uma mensagem de Conteúdo Conectado é acionada, ela chamará a API da Voucherify pelo menos duas vezes. Essas configurações reduzem o número de chamadas de API faturadas para a Braze e diminuem o risco de atingir o limite de API, que pode interromper a entrega de mensagens.
 
 {% tabs %}
-{% tab Limitador de Taxa %}
+{% tab Rate Limiter %}
 
 **Limitador de taxa**
 
@@ -49,7 +49,7 @@ Certifique-se de [limitar o número de mensagens]({{site.baseurl}}/user_guide/en
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_limiter.png %})
 
 {% endtab %}
-{% tab Cache %}
+{% tab Caching %}
 
 **Cache em chamadas POST**
 
@@ -69,7 +69,7 @@ Para adicionar cache às chamadas POST:
 _Nota as consequências:_ Braze armazena em cache as chamadas de API com base na URL. A string única usada como parâmetro de consulta é ignorada pelo Voucherify, mas distingue diferentes solicitações de API para o Braze e permite armazenar em cache cada tentativa única separadamente. Sem esse parâmetro de consulta, todos os clientes receberão o mesmo código de cupom durante a duração do cache.
 
 {% endtab %}
-{% tab Repetir atributo %}
+{% tab Retry attribute %}
 
 **Repetir atributo**
 
@@ -80,7 +80,7 @@ Se você não usar {% raw %}`:retry`{% endraw %}, então, independentemente da r
 ![]({% image_buster /assets/img/voucherify/voucherify_cc_retry.png %})
 
 {% endtab %}
-{% tab Publicações únicas %}
+{% tab Unique publications %}
 
 **Publicação única por cliente**
 
@@ -99,7 +99,7 @@ Você pode modificar {% raw %}`{{source_id}}`{% endraw %} e seu efeito nas publi
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Participar uma vez %}
+{% tab Join-once %}
 
 **Participar uma vez**
 
@@ -428,7 +428,7 @@ Por exemplo, para exibir o código publicado em um modelo de mensagem, você dev
 
 Script de conteúdo conectado:
 
-![Script de Conteúdo Conectado mostrando como salvar uma resposta do Voucherify no final da chamada de Conteúdo Conectado]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
+![Script do Connected Content mostrando para salvar uma resposta do Voucherify no final da chamada do Connected Content]({% image_buster /assets/img/voucherify/voucherify_cc_save_parameter.png %})
 
 Snippet no modelo de mensagem da Braze:
 

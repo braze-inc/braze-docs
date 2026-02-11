@@ -21,11 +21,11 @@
 
 먼저 Firebase 콘솔로 이동하여 프로젝트를 연 다음, <i class="fa-solid fa-gear"></i> **설정** > **프로젝트 설정**을 선택합니다.
 
-!["설정" 메뉴가 열려 있는 Firebase 프로젝트]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
+!["설정" 메뉴가 열려 있는 Firebase 프로젝트입니다.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/select-project-settings.png %})
 
 **클라우드 메시징**을 선택하고 **Firebase 클라우드 메시징 API(V1)**에서 **발신자 ID**를 클립보드에 복사합니다.
 
-!['발신자 ID'가 강조 표시된 Firebase 프로젝트의 '클라우드 메시징' 페이지.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
+!["발신자 ID"가 강조 표시된 Firebase 프로젝트의 "클라우드 메시징" 페이지.]({% image_buster /assets/img/android/push_integration/set_up_automatic_token_registration/copy-sender-id.png %})
 
 그런 다음, 프로젝트의 `app.json` 파일을 열고 `firebaseCloudMessagingSenderId` 속성정보를 클립보드의 발신자 ID로 설정합니다. 예를 들어, 다음과 같습니다.
 
@@ -63,11 +63,11 @@
 [Expo 알림](https://docs.expo.dev/versions/latest/sdk/notifications/)과 같은 추가 푸시 알림 라이브러리를 사용하는 경우 기본 설정 지침 대신 이 설정을 사용해야 합니다.
 {% endtab %}
 
-{% tab Android 네이티브 %}
+{% tab Android Native %}
 Braze Expo 플러그인을 사용하지 않거나 대신 이러한 설정을 [네이티브로]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/) 구성하려는 경우 [네이티브 Android 푸시 통합 가이드를]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/?tab=android/) 참조하여 푸시 등록을 하세요.
 {% endtab %}
 
-{% tab iOS 네이티브 %}
+{% tab iOS Native %}
 Braze Expo 플러그인을 사용하지 않거나 대신 이러한 설정을 [네이티브로]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) 구성하려는 경우 [네이티브 iOS 푸시 통합 가이드의]({{site.baseurl}}/developer_guide/push_notifications/?sdktab=swift) 다음 단계를 참조하여 푸시 등록을 하세요:
 
 #### 1.1단계: 푸시 권한 요청하기
@@ -141,13 +141,13 @@ Braze.addListener(Braze.Events.PUSH_NOTIFICATION_EVENT, data => {
 딥링크 개념에 대한 자세한 내용은 [FAQ 문서]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking)를 참조하세요.
 
 {% tabs local %}
-{% tab Android 네이티브 %}
+{% tab Android Native %}
 [Braze Expo 플러그인을]({{site.baseurl}}/developer_guide/platforms/react_native/sdk_integration/?tab=expo#step-2-choose-a-setup-option) 사용하는 경우 `app.json` 에서 `androidHandlePushDeepLinksAutomatically` 을 `true` 으로 설정하여 푸시 알림 딥링크를 자동으로 처리할 수 있습니다.
 
 대신 딥링크를 수동으로 처리하려면 기본 Android 설명서를 참조하세요: [딥링크 추가하기]({{site.baseurl}}/developer_guide/push_notifications/deep_linking).
 
 {% endtab %}
-{% tab iOS 네이티브 %}
+{% tab iOS Native %}
 #### 3.1 단계: 앱 실행 시 푸시 알림 페이로드 저장하기
 {% alert note %}
 이 단계는 자동으로 처리되는 기능이므로 Braze Expo 플러그인을 사용하는 경우 3.1단계를 건너뛰세요.
@@ -273,7 +273,7 @@ macOS 13부터 특정 기기에서는 Xcode 14 이상에서 실행되는 iOS 16 
 2. **캠페인으로** 이동하여 새 푸시 알림 캠페인을 만듭니다. 테스트할 플랫폼을 선택합니다.
 3. 테스트 알림을 작성하고 **테스트** 탭으로 이동합니다. 테스트 사용자와 동일한 `user-id`를 추가하고 **테스트 보내기**를 클릭합니다. 곧 기기에서 알림을 받습니다.
 
-![자신의 사용자 아이디를 테스트 수신자로 추가하여 푸시 알림을 테스트할 수 있는 Braze 푸시 캠페인을 보여줍니다.]({% image_buster /assets/img/react-native/push-notification-test.png %} "푸시 캠페인 테스트").
+![자신의 사용자 아이디를 테스트 수신자로 추가하여 푸시 알림을 테스트할 수 있는 Braze 푸시 캠페인을 보여줍니다.]({% image_buster /assets/img/react-native/push-notification-test.png %} "Push Campaign Test")
 
 ## 엑스포 플러그인 사용
 

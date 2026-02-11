@@ -1,11 +1,11 @@
 ---
-nav_title: レポートの表示
-article_title: Decisioning Studio レポートの表示
+nav_title: レポートとインサイト
+article_title: レポートとインサイト
 page_order: 3
 description: "Braze で BrazeAI Decisioning Studio™ レポートを表示する方法について説明します。これにより、AI を活用した意思決定がキャンペーンにどのような影響を与えるかを理解できます。"
 ---
 
-# Decisioning Studio レポートの表示
+# レポートとインサイト
 
 > Braze で BrazeAI Decisioning Studio™ レポートを表示する方法について説明します。これにより、AI を活用した意思決定がキャンペーンにどのような影響を与えるかを理解できます。パフォーマンスの測定基準からデータの健全性とシステムの変更まで、これらのレポートは、結果の理解、問題のトラブルシューティング、情報に基づいた意思決定に役立ちます。
 

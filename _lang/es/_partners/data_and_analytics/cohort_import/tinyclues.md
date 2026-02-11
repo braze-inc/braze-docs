@@ -31,7 +31,7 @@ En Braze, ve a **Integraciones de socios** > **Socios tecnológicos** y seleccio
 
 Aquí encontrarás tu punto final REST y generarás tu clave de importación de datos Braze. Una vez generada la clave, puede crear una nueva o invalidar una existente.<br><br>![]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"} 
 
-Para completar la integración, tendrás que proporcionar la clave de importación de datos y el punto final REST a tu equipo de operaciones de datos de Tinyclues. Tinyclues establecerá la conexión y se pondrá en contacto contigo una vez finalizada la configuración.
+Para completar la integración, debes proporcionar la clave de importación de datos y el punto final REST a tu equipo de operaciones de datos de Tinyclues. Tinyclues establecerá la conexión y se pondrá en contacto contigo una vez finalizada la configuración.
 
 ### Paso 2: Exportar una campaña desde la plataforma Tinyclues
 
@@ -58,7 +58,7 @@ Sólo se añadirán o eliminarán de una cohorte los usuarios que ya existan en 
 
 Para utilizar tu segmento de Tinyclues, crea una campaña Braze o Canvas y selecciona el segmento como tu audiencia objetivo. 
 
-![En el constructor de campañas Braze, en el paso de segmentación, el filtro "Usuarios objetivo por segmento" se establece en "cohorte de Tinyclues".]({% image_buster /assets/img/tinyclues/tinyclues_5.png %}){: style="max-width:90%;"}
+![En el constructor de campañas Braze, en el paso de segmentación, el filtro "Usuarios objetivo por segmento" está establecido en "cohorte de Tinyclues".]({% image_buster /assets/img/tinyclues/tinyclues_5.png %}){: style="max-width:90%;"}
 
 ## Coincidencia de usuarios
 

@@ -1,6 +1,6 @@
 ---
 nav_title: 再入荷通知
-article_title: 再入荷通知の設定
+article_title: 在庫切れ通知の設定
 page_order: 2
 description: "カタログとカスタムイベントを使用して再入荷通知を設定する方法を説明します。このように設定することで、商品を再入荷したときに通知を受け取るように、顧客を自動的に購読登録できます。"
 ---
@@ -85,6 +85,8 @@ description: "カタログとカスタムイベントを使用して再入荷通
 {%raw%}``{{canvas_entry_properties.${catalog_update}.item_id}}``{%endraw%} を使用すると、再入荷したアイテムの ID が返されます。{%raw%}``{{canvas_entry_properties.${catalog_update}.previous_value}}``{%endraw%} は更新前のアイテムの在庫データを返し、{%raw%}``{{canvas_entry_properties.${catalog_update}.new_value}}``{%endraw%} は更新後の新しい在庫データを返します。
 
 この Liquid タグ {%raw%}``{% catalog_items <name_of_your_catalog> {{canvas_entry_properties.${catalog_update}.item_id}} %}``{%endraw%} をメッセージの冒頭で使い、{%raw%}``{{ items[0].<field_name> }}``{%endraw%} をメッセージ全体で使用してそのアイテムに関するデータにアクセスします。
+
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
 
 ## 考慮事項
 

@@ -22,8 +22,8 @@ In der folgenden Tabelle wird beschrieben, wie Nutzer:innen die einzelnen Editor
 |Spacer| Fügt Leerzeichen oder „Padding“ zwischen anderen Blöcken hinzu. |
 |Bild| Fügt ein Bild aus der [Mediathek]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) ein. | 
 |Video| Erzeugt einen Link zum Videoinhalt. |
-|Social| Fügt das Symbol einer sozialen Medienplattform ein. Für markenspezifische Icons können Sie eigene Bilder hochladen. |
-|Ikonen| Fügt ein Symbol ein. Benutzerdefinierte Bilder können hochgeladen werden. Es wird ein übergroßes Platzhaltersymbol verwendet, bis ein Bild hochgeladen wird. |
+|Social| Fügt das Symbol einer sozialen Medienplattform ein. Sie können angepasste Bilder für markenspezifische Icons hochladen. |
+|Ikonen| Fügt ein Symbol ein. Sie können angepasste Bilder hochladen. Braze verwendet ein übergroßes Platzhalter-Symbol, bis Sie ein Bild hochladen. |
 |HTML| Fügt rohes HTML ein. Empfohlen für [Liquid]({{site.baseurl}}/liquid/), wie Connected-Content oder bedingte Anweisungen. | 
 |Menü| Erzeugt ein flexibles Menü für die Nachricht, die Sie entwerfen. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" } 
@@ -220,7 +220,7 @@ In der folgenden Tabelle finden Sie Einzelheiten zum Editor-Block `Button`.
 |---|---|
 |Link Typ| Bestimmt die Aktion beim Klicken auf den Button und legt das entsprechende Protokoll fest. |
 |URL| Dynamisch, basierend auf dem Link-Typ **Öffnung der Internet-Seite**.|
-|Mail an, Betreff und Text| Für den Link-Typ **E-Mail senden** werden hier die E-Mail-Adresse des Empfängers, der Betreff und der Inhalt festgelegt, die in den Entwurf einer E-Mail eingefügt werden, wenn der Nutzer:innen den Button auswählt.|
+|Mail an, Betreff und Text| Für den Linktyp **E-Mail senden** werden hier die E-Mail-Adresse des Empfängers, der Betreff und der Inhalt festgelegt, die in den Entwurf einer E-Mail eingefügt werden, wenn der Nutzer:innen den Button auswählt.|
 |Tel| Für den Linktyp **Anruf tätigen** und **SMS senden** wird hier die Telefonnummer festgelegt, die der Nutzer:innen anruft oder schreibt, wenn er den Button auswählt.|
 |Nachricht| Für den Link-Typ **SMS senden** wird hier der Inhalt festgelegt, der in den Entwurf einer SMS-Nachricht eingefügt wird, wenn der Nutzer:innen den Button auswählt.|
 |Button Optionen| Legt verschiedene Button-Optionen fest, wie Schriftart, Breite, Farbe und andere.|

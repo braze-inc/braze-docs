@@ -2,7 +2,7 @@
 nav_title: Certona
 article_title: Certona
 alias: /partners/certona/
-description: "Este artigo de referência descreve a parceria entre o Braze e a Certona, uma solução de personalização omnicanal em tempo real que oferece personalização em todo o ciclo de vida do cliente. Use a Certona com o parceiro Braze Connected Content para inserir facilmente recomendações de conteúdo em campanhas multicanais."
+description: "Este artigo de referência descreve a parceria entre o Braze e a Certona, uma solução de personalização omnicanal em tempo real que oferece personalização em todo o ciclo de vida do cliente. Use Certona com o parceiro Braze Connected Content para inserir facilmente recomendações de conteúdo em campanhas multicanal."
 page_type: partner
 search_tag: Partner
 
@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Certona
 
-> A plataforma da Certona oferece personalização ao longo de todo o ciclo de vida do cliente. De campanhas de envio de e-mail altamente individualizadas a recomendações de produtos baseadas em machine learning, a Certona garante que você esteja aproveitando o poder da personalização.
+> A plataforma [Certona](https://www.certona.com/) impulsiona a personalização ao longo do ciclo de vida do cliente. De campanhas de envio de e-mail altamente individualizadas a recomendações de produtos baseadas em machine learning, a Certona garante que você esteja aproveitando o poder da personalização.
 
-_Essa integração é mantida pela Certona._
+_Esta integração é mantida pela Certona._
 
 ## Sobre a integração
 
-A integração entre a Braze e a Certona aproveita as recomendações de produtos de machine learning da Certona nas campanhas e canvas da Braze por meio do Connected Content.
+A integração entre Braze e Certona utiliza as recomendações de produtos de machine learning da Certona em campanhas e Canvases do Braze através do Connected Content.
 
 ## Pré-requisitos
 
@@ -43,6 +43,6 @@ Em seguida, defina o conteúdo que você gostaria de chamar, como texto ou image
 
 Depois de colocar essa mensagem no corpo do criador, faça uma prévia da chamada do conteúdo conectado para ter certeza de que as informações corretas são exibidas.
 
-![Uma imagem mostrando a guia "Test", incentivando os usuários a testar completamente a mensagem antes de enviá-la.]({% image_buster /assets/img/certona2.png %})
+![Uma imagem mostrando a guia "Test" (Teste), incentivando os usuários a testar completamente a mensagem antes de enviá-la.]({% image_buster /assets/img/certona2.png %})
 
 

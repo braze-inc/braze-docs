@@ -1,6 +1,6 @@
 ---
 page_order: 1
-nav_title: Vinculación en profundidad
+nav_title: Vínculos profundos
 article_title: Vinculación en profundidad en las notificaciones push del SDK de Braze
 channel:
   - push notifications

@@ -1,12 +1,12 @@
 ---
 nav_title: Unique Discount Codes 
-article_title: Sending Unique Discount Codes
+article_title: 고유 할인 코드 보내기
 alias: /shopify_discount_codes/
-page_order: 6
+page_order: 7
 description: "This reference article covers a community-submitted use case of using Braze promotion codes with the Shopify Bulk Discount Code Bot to send unique discount codes through your campaigns and Canvases."
 ---
 
-# Sending unique discount codes through Shopify
+# Shopify를 통해 고유 할인 코드 보내기
 
 > This community-submitted use case shows how to use Braze [promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) with the Shopify Bulk Discount Code Bot to generate unique discount codes for your campaigns and Canvases. Unique discount codes help avoid the exploitation of generic promotion codes.
 
@@ -14,7 +14,7 @@ description: "This reference article covers a community-submitted use case of us
 This is a community-submitted integration and isn’t directly supported by Braze. The Bulk Discount Code Bot is directly supported by Shopify. Only Braze promotion codes are supported by Braze.
 {% endalert %}
 
-## Requirements
+## 요구 사항
 
 | Requirement | Description |
 | --- | --- |
@@ -28,19 +28,19 @@ This is a community-submitted integration and isn’t directly supported by Braz
 
 Use the Bulk Discount Code Bot to configure your discount codes based on the number of codes to generate, code length, discount value, and more.
 
-![The configuration options for a discount set.][1]
+![할인 세트의 구성 옵션][1]
 
-### Step 2: Export your codes
+### 2단계: Export your codes
 
 Find your discount set in the Bulk Discount Code Bot's search bar, then select **Export Codes** > **Download Codes** to download a CSV file to your Downloads folder.
 
-![Search bar with a dropdown displaying the discount set and a row of buttons to select from.][2]{: style="max-width:70%;"}
+![할인 세트가 표시된 드롭다운과 선택할 수 있는 버튼 행이 있는 검색창.{: style="max-width:70%;"}
 
 In the CSV file, delete row 1 to remove the column header “Promo”. This will prevent "Promo" from becoming a discount code in Braze.
 
-![A flowchart showing the removal of the row header "Promo" in a CSV file.][3]{: style="max-width:60%;"}
+![CSV 파일에서 행 헤더 "Promo" 제거를 보여주는 순서도.][3]{: style="max-width:60%;"}
 
-### Step 3: Add your discount codes to Braze
+### 3단계: Add your discount codes to Braze
 
 In Braze, go to **Data Settings** > **Promotion Codes** > **Create Promotion Code List** and [configure your discount codes list]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#creating-a-promotion-code-list). Make sure you match the expiration date that was configured by the Bulk Discounts Code Bot.
 
@@ -50,13 +50,13 @@ Then, upload your CSV file and select **Save List**.
 
 If you want to use your unique discount codes in a single-send campaign, or you don't mind users receiving multiple unique codes across different campaigns or Canvas steps, copy the code's Liquid snippet from the promotion codes list you saved.
 
-![A Liquid code snipppet with a button copy it.][4]{: style="max-width:60%;"}
+![버튼이 있는 Liquid 코드 스니펫은 이를 복사합니다.][4]{: style="max-width:60%;"}
 
 Paste the Liquid snippet into a campaign or Canvas step. 
 
-![A GIF showing the Liquid snippet being added to a Canvas step.][5]
+![Liquid 스니펫이 캔버스 단계에 추가되는 것을 보여주는 GIF][5].
 
-If you want users to recieve a single unique discount code no matter how many times the discount code is referenced in campaigns or Canvases, create a [User Update]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) step directly before the first Message step that assigns the discount code to a custom attribute, like "Promo Code".
+캠페인이나 캔버스에서 할인 코드가 몇 번이나 참조되더라도 사용자에게 하나의 고유 할인 코드를 받도록 하려면 첫 번째 메시지 단계 바로 앞에 '프로모션 코드'와 같은 커스텀 속성에 할인 코드를 할당하는 [사용자 업데이트]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/user_update/) 단계를 만드세요.
 
 {% alert tip %}
 You can also [create a custom attribute]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/) by going to **Data Settings** > **Custom Attributes**.
@@ -67,7 +67,7 @@ In the User Update step, do the following for each field:
 - **Action:** Select **Update**.
 - **Key Value:** Paste the Liquid code snippet.
 
-![A User Update step that updates a "Promo Code" attribute with the Liquid snippet.][6]
+![Liquid 스니펫으로 "프로모션 코드" 속성을 업데이트하는 사용자 업데이트 단계입니다.][6].
 
 Now, you can add the custom attribute {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} to any message, and the discount code will be templated in.
 

@@ -1,6 +1,6 @@
 ---
-nav_title: メッセージユーザー
-article_title: LINE ユーザーへのメッセージング
+nav_title: ユーザーへのメッセージング
+article_title: メッセージラインユーザ
 page_order: 2
 description: "この記事では、テンプレート化されたキャンペーンとキャンバスを使用してユーザーとチャットする方法について説明します。"
 page_type: reference

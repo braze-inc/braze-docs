@@ -14,7 +14,7 @@ tool: Canvas
 
 ## Wie diese Komponente funktioniert
 
-![Ein Nutzer:innen-Update-Schritt namens "Loyalität aktualisieren", der ein Attribut "Ist Premium-Mitglied" auf "wahr" aktualisiert.]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Ein Update-Schritt für Nutzer:innen mit dem Namen "Loyalität aktualisieren", der ein Attribut "Ist Premium-Mitglied" auf "wahr" aktualisiert.]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 Wenn Sie diese Komponente in Ihrem Canvas verwenden, werden Updates nicht auf das Rate-Limit von `/users/track` für Anfragen pro Minute angerechnet. Stattdessen werden diese Updates gebündelt, damit Braze sie effizienter verarbeiten kann als ein Braze-to-Braze-Webhook. Beachten Sie, dass diese Komponente keine [Datenpunkte]({{site.baseurl}}/user_guide/data/data_points/) protokolliert, wenn sie zum Update nicht abrechenbarer Datenpunkte (wie Abo-Gruppen) verwendet wird.
 
@@ -34,13 +34,13 @@ Sie können die mit dieser Komponente vorgenommenen Änderungen auch testen, ind
 
 Um ein benutzerdefiniertes Attribut hinzuzufügen oder zu aktualisieren, wählen Sie einen Attributnamen aus Ihrer Attributliste und geben den Schlüsselwert ein.
 
-![Nutzer:in Update-Schritt, der die beiden Attribute "Loyalitätsmitglied" und "Loyalitätsprogramm" auf "wahr" aktualisiert.]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
+![Nutzer:innen Update-Schritt, der die beiden Attribute "Loyalitätsmitglied" und "Loyalitätsprogramm" auf "wahr" aktualisiert.]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### Anpassen von Attributen entfernen
 
 Um ein angepasstes Attribut zu entfernen, wählen Sie einen Attributnamen aus der Dropdown-Liste aus. Sie können zum [erweiterten JSON-Composer](#advanced-json-composer) wechseln, um ihn weiter zu bearbeiten. 
 
-![Nutzer:in Update-Schritt, der ein Attribut "Loyalty Member" entfernt.]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
+![Nutzer:innen Update Schritt, der ein Attribut "Loyalty Member" entfernt.]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Steigende und fallende Werte
 
@@ -62,7 +62,7 @@ Der Schritt Benutzeraktualisierung kann diesem Array von Objekten Attribute hinz
 
 Das Hinzufügen oder Entfernen eines Artikels zu einem Array aktualisiert die Wunschliste des Benutzers.
 
-![Nutzer:in Update-Schritt, der einen Artikel "sunblock" zum Attribut "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
+![Nutzer:in Update-Schritt, der einen Artikel "sunblock" zum Attribut "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}) hinzufügt{: style="max-width:90%;"}
 
 #### Anwendungsfälle: Berechnen der Gesamtsumme des Warenkorbs
 

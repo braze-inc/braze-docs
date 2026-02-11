@@ -2,7 +2,7 @@
 
 ## 内蔵機能
 
-以下の機能がBraze Android SDKに組み込まれている。その他のプッシュ通知機能を使うには、アプリの[プッシュ通知を設定する](#android_setting-up-push-notifications)必要がある。
+以下の機能がBraze Android SDKに組み込まれている。その他のプッシュ通知機能を使うには、アプリに[プッシュ通知を設定する](#android_setting-up-push-notifications)必要がある。
 
 |機能|説明|
 |-------|-----------|

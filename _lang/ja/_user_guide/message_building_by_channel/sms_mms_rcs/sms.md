@@ -1,7 +1,7 @@
 ---
 nav_title: "SMS"
 article_title: SMSについて
-page_order: 13
+page_order: 14
 description: "この記事では、SMS チャネルの全般的なユースケースと、SMS を起動して実行するために必要な条件について説明します。"
 page_type: reference
 alias: /about_sms/

@@ -1,127 +1,167 @@
 ---
-nav_title: SEEN
-article_title: SEEN
-description: "This reference article outlines the partnership between Braze and SEEN, a platform to design personalized videos to increase engagement throughout the customer journey."
+nav_title: 본
+article_title: 본
+description: "Seen은 대규모로 개인화된 비디오 경험을 제공하여 브랜드가 고객 여정 전반에서 더 높은 고객 참여를 유도할 수 있도록 지원합니다."
 alias: /partners/seen/
 page_type: partner
 search_tag: Partner
 ---
 
-# SEEN
+# 본
 
-> [SEEN](https://seen.io/) is a personalization video platform that allows companies to create and build videos around their customers to deliver a more engaging experience. With SEEN, you can design a video around your data, personalize it at scale in the cloud, then distribute it where it works best.
+> [Seen은](https://seen.io) 브랜드가 개인화된 동영상 경험을 대규모로 제작하고 전달할 수 있도록 인에이블먼트합니다. Seen을 사용하면 데이터를 중심으로 동영상을 디자인하고 클라우드에서 대규모로 개인화한 다음 가장 효과적인 곳에 배포할 수 있습니다.
+>
+> Braze와 Seen의 데이터 통합을 통해 사용자 데이터를 Braze에서 Seen으로 전송하고, 개인화된 동영상을 동적으로 생성하고, 고유한 플레이어 URL 및 썸네일과 같은 동영상 자산을 다시 Braze로 반환하여 캠페인과 캔버스에서 사용할 수 있습니다.
 
-## Use cases
 
-SEEN offers automated video personalization across the entire customer journey. Common uses include onboarding, loyalty, sign-ups and conversion, and win-back and anti-churn.
+## 사용 사례
 
-## Prerequisites
+Seen은 다음을 포함하여 고객 생애주기 전반에 걸쳐 자동화된 개인화된 비디오 전달을 지원합니다:
 
-Before you start, you'll need the following:
+- **Onboarding**: 프로필 또는 가입 상황에 맞게 개인화된 동영상으로 신규 사용자를 환영하세요.
+- **전환 및 활성화**: 상황별 비디오 메시징으로 주요 행동 강화하기
+- **로열티 및 업셀**: 개인화된 오퍼 또는 사용 마일스톤 강조하기
+- **윈백 및 고객 이탈 방지**: 맞춤형 동영상 콘텐츠로 비활성 사용자 재참여 유도하기
 
-| Prerequisite          | Description                                                                                                                                |
-|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| A SEEN campaign   | A SEEN campaign is required to take advantage of this partnership.                                                                     |
-| Data source   | You'll need to send data to SEEN to personalize your videos. Make sure you have all relevant data available in Braze, and that you pass data with **braze_id** as the identifier. |
-| Braze Data Transformation Webhook URL   | Braze Data Transformation will be used to reformat the incoming data from SEEN so it can be accepted by Braze’s /users/track endpoint. |
 
-## Rate limit
+## 필수 조건
 
-The SEEN API currently accepts 1,000 calls per hour.
+시작하기 전에 다음이 필요합니다:
 
-## Integrating SEEN with Braze
+| Prerequisite | 설명 |
+|--------------|-------------|
+| 플랫폼 액세스 보기 | Seen 플랫폼 구독 또는 활성화된 Seen 캠페인이 필요합니다. 워크스페이스 ID를 검색하고 API 토큰을 생성하려면 워크스페이스 설정에 액세스해야 합니다. |
+| Braze Data Transformation Webhook URL | Braze 데이터 트랜스포메이션은 Seen에서 들어오는 데이터를 Braze의 /사용자/추적 엔드포인트에서 받아들일 수 있도록 포맷을 다시 지정합니다. |
+| Braze 사용자 데이터 | 비디오 개인화를 위해서는 사용자 수준의 데이터가 필요합니다. 관련 속성을 Braze에서 사용할 수 있는지 확인하고 고유 식별자로 **braze_id** 를 고유 식별자로 전달해야 합니다. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
-In the following example, we'll send users' data to SEEN for video generation, and receive a unique landing page link and a unique, personalized thumbnail back to Braze for distribution. This example uses a POST webhook to send data to SEEN, and data transformation to receive the data back to Braze. If you have multiple video campaigns with SEEN, repeat the process to connect Braze with all video campaigns.
 
-{% alert tip %}
-If you experience any issues, reach out to your SEEN customer success manager for assistance.
-{% endalert %}
 
-### Step 1: Create a webhook campaign
 
-Create a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) in Braze. Give your campaign a name, then refer to the following table to compose your webhook:
+## 보이는 여정의 작동 방식
+
+Seen은 [여정을](https://docs.seen.io/journey) 사용하여 수신 데이터를 처리하는 방법과 비디오 출력을 생성하는 방법을 제어합니다.
+
+여정은 구성 가능한 워크플로입니다:
+- 외부 시스템(예: Braze)으로부터 데이터 수신
+- 로직 및 개인화 규칙 적용
+- 비디오 및 관련 자산 생성
+- 구성 가능한 응답 페이로드를 반환합니다.
+
+여정은 각각 특정 기능을 가진 **노드로** 구성됩니다:
+
+- **트리거 노드**: 여정이 시작되는 방법과 시기를 정의합니다(Braze 통합의 경우 `On Create` 트리거 사용).
+- **조건부 노드**: 데이터 값에 따라 다양한 로직 경로를 통해 사용자를 라우팅합니다.
+- **프로젝트 노드**: 수신 데이터를 사용하여 동적 비디오 개인화 적용
+- **플레이어 노드**: 고유한 동영상 플레이어 URL 생성
+- **웹훅 노드**: Braze로 다시 전송되는 응답 페이로드를 정의합니다.
+
+여정 응답은 구성할 수 있으므로, Seen에서 반환되는 출력 필드가 Braze 데이터 변환에서 예상하는 속성과 일치하는지 확인하세요.
+
+
+## 사용량 제한
+Seen API는 10초마다 최대 100건의 호출을 수락합니다.
+
+
+## Integration
+
+이 예시에서 Braze는 사용자 데이터를 Seen으로 전송하여 개인화된 동영상을 생성합니다. 그러면 고유한 동영상 플레이어 URL과 썸네일 URL이 반환되며, 이는 메시징에 사용할 수 있도록 Braze에 커스텀 속성으로 저장됩니다.
+
+Seen을 사용하는 동영상 캠페인이 여러 개 있는 경우, 이 과정을 반복하여 모든 동영상 캠페인에 Braze를 연결합니다.
+
+### 1단계: 웹훅 캠페인을 만들어 Seen에 데이터를 전송합니다.
+
+Braze에서 새 [웹훅 캠페인을]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks) 만듭니다.
+
+다음과 같이 웹훅을 구성합니다:
+
+- **Webhook URL**:  
+  `https://next.seen.io/v1/workspaces/{WORKSPACE_ID}/data`  
+  보이는 플랫폼 설정에서 워크스페이스 ID를 찾습니다.
+
+- **HTTP Method**: POST
+- **Request body**: Raw Text  
+  다음 예시를 시작점으로 삼으세요. 자세한 내용은 [Seen의 데이터 생성 설명서를](https://docs.seen.io/create-data) 참조하세요.
 
 {% raw %}
-<table>
-  <thead>
-    <tr>
-      <th><strong>Field</strong></th>
-      <th><strong>Details</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Webhook URL</strong></td>
-      <td>Use the following webhook URL. You will receive your <code>campaign_slug</code> from SEEN to call the correct endpoint.<br><br><code>https://api.seen.io/v1/campaigns/{campaign_slug}/receivers/</code></td>
-    </tr>
-    <tr>
-      <td><strong>HTTP Method</strong></td>
-      <td>Use the <code>POST</code> method.</td>
-    </tr>
-    <tr>
-      <td><strong>Request body</strong></td>
-      <td>Enter your request body in raw text similar to the following.<br><br><pre><code>[
-    {
-    "first_name":"{{${first_name}}}",
-    "last_name":"{{${last_name}}}",
-    "email":"{{${email_address}}}",
-    "customer_id":"{{${braze_id}}}"
-    }
-]</code></pre><br>For more information, see <a href="https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/overview/tvy2F5tS3JRM7DfcHwz5fK#request-content">SEEN API</a>.</td>
-    </tr>
-    <tr>
-      <td><strong>Request headers</strong></td>
-      <td>Use the following information to fill out your request headers:<br>- <strong>Authorization:</strong> <code>Token {token}</code><br>- <strong>Content-Type:</strong> <code>application/json</code><br><br>You will receive your Authentication Token from SEEN.</td>
-    </tr>
-  </tbody>
-</table>
+```json
+{
+  "first_name": "{{${first_name}}}",
+  "last_name": "{{${last_name}}}",
+  "email": "{{${email_address}}}",
+  "id": "{{${braze_id}}}"
+}
+```
 {% endraw %}
+- **요청 헤더**:
+  - `Authorization`: Bearer `{Seen_API_TOKEN}`
+  - `Content-Type`: `application/json`
+
+  > 워크스페이스 설정의 Seen 플랫폼에서 [API 토큰을](https://docs.seen.io/authorization) 생성합니다. Seen 고객 성공 매니저에게 도움을 요청할 수 있습니다.
+
+- 사용자를 대상으로 웹훅을 테스트하려면 **테스트** 탭으로 전환합니다.
+- 테스트가 의도한 대로 작동하는지 확인한 후 웹훅 설정을 완료합니다.
+
+
+### 2단계: 보이는 플랫폼에서 여정 구성하기
+
+Seen은 [Journeys를](https://docs.seen.io/journey) 사용하여 수신 데이터를 처리하고 개인화하여 Braze로 반환하는 방법을 정의합니다.  
+각 여정은 비디오 생성 로직과 응답 페이로드를 모두 제어할 수 있는 노드로 구성된 구성 가능한 워크플로우입니다.
+
+여정을 구성하려면:
+
+1. 보이는 플랫폼에서 새로운 여정 만들기
+2. **트리거 노드를** 추가하고 `On Create` 트리거를 선택합니다.  
+   이렇게 하면 Braze가 Seen에 데이터를 전송할 때 여정이 시작됩니다. 필요한 경우 워크스페이스 내에서 [세그먼트](https://docs.seen.io/segments) 로직을 만들고 추가하세요.
+3. 필요에 따라 다음 노드를 사용하여 로직을 구축하세요:
+   - **조건부 노드**: 속성 값(예: 요금제 유형 또는 지역)을 기반으로 사용자를 라우팅합니다.
+   - **프로젝트 노드**: 수신 데이터를 사용하여 동적 비디오 개인화 적용
+   - **플레이어 노드**: 고유한 동영상 플레이어 URL 생성
+4. **웹훅 노드를** 추가하여 Braze로 다시 전송되는 응답을 정의합니다.
+
+#### 웹훅 노드 응답 요구 사항
+
+응답 페이로드는 구성할 수 있으므로 다음 단계에서 설명하는 Braze 데이터 변환을 지원하기 위해 다음 필드가 반환되는지 확인하세요:
+
+| 필드 | Description |
+|------|-------------|
+| `id` | Braze에서 보낸 `braze_id` 과 일치해야 합니다. |
+| `player_url` | 개인화된 동영상 플레이어를 위한 고유 URL |
+| `email_thumbnail_url` | 생성된 동영상 미리보기 이미지의 URL |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-You can now test the webhook with a user by switching to the **Test** tab.
+사용 사례에 추가 속성이 필요한 경우 해당 속성을 응답에 포함시키고 Braze에 매핑하세요.
 
-If everything works as intended, go to Braze, then set the rate at which the campaign sends to 10 **messages per minute**. This way you won't exceed the SEEN's rate limit of 1,000 calls per hour.
 
-### Step 2: Create data transformation
+### 3단계: 데이터 변환을 생성하여 Seen에서 데이터를 수신합니다.
 
-1. Create new [custom attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) fields for `landing_page_url` and `email_thumbnail_url`. These are the two attributes we will be using in this example.
-2. Open [Data Transformation]({{site.baseurl}}/user_guide/data_and_analytics/data_transformation/creating_a_transformation/#prerequisites) under **Data Settings**, and select **Create transformation**.
-3. Give your transformation a name, then choose **Start from scratch** and set **Destination** to **POST: Track users**.
-4. Select **Share your Webhook URL with SEEN**.
-5. You can use the code below as the starting point for the transformation:
+Braze 데이터 변환을 사용하여 본 여정 응답을 수집하고 고객 프로필에 동영상 자산을 저장하세요.
+
+1. Braze에서 다음 [커스텀 속성을]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes) 생성하세요:
+   - `player_url`
+   - `email_thumbnail_url`
+2. **데이터 설정** → **데이터 변환으로** 이동하여 **변환 만들기를** 클릭합니다.
+3. 변환을 구성합니다:
+   - **처음부터 시작**
+   - **대상** → POST: 사용자 추적
+4. 생성된 웹훅 URL을 Seen과 공유하거나 여정 **웹훅 노드에** 직접 추가합니다.
+5. 다음 변환 코드를 사용합니다:
 
 ```javascript
 let brazecall = {
   "attributes": [
     {
-      "braze_id": payload.customer_id,
+      "braze_id": payload.id,
       "_update_existing_only": true,
-      "landing_page_url": payload.landing_page_url,
+      "player_url": payload.player_url,
       "email_thumbnail_url": payload.email_thumbnail_url
     }
   ]
 };
 return brazecall;
 ```
-{% alert note %}
-If you want to include other data, make sure to include those as well. Remember to discuss with SEEN as well so that the callback payload includes all needed fields.
-{% endalert %}
 
 {: start="6"}
-6\. Send a test payload to the provided endpoint. If you want to use the callback payload defined in the [SEEN documentation](https://docs.seen.io/api-documentation/ntRoJJ3rXoHzFXhA94JiHB/callbacks/k9DEbcgkq3Vr2pxbHyPQbp), you can send this yourself with [Postman](https://www.postman.com/) or another similar service:
-
-```json
-{
-        "customer_id": "101",
-        "campaign_slug": "onboarding",
-        "landing_page_url": "your.subdomain.com/v/12345",
-        "video_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/output.m3u8",
-        "thumbnail_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/thumbnail.jpg",
-        "email_thumbnail_url": "https://motions.seen.io/298abdcf-1f0f-46e7-9c26-a35b4c1e83cc/d3c1dffdf063986ad521a63e3e68fd7d1100c90a/email_thumbnail.jpg"
-       
-}
-```
-
-{: start="7"}
-7\. Select **Validate** to make sure everything works as intended.
+6\. Send a test payload to the provided endpoint. 데이터를 Seen Platform으로 전송하여 여정을 실행하거나, [Postman](https://www.postman.com/) 또는 다른 유사한 서비스를 통해 직접 Braze로 페이로드를 전송할 수 있습니다.
+7\. **유효성 검사를** 선택하여 모든 것이 의도한 대로 작동하는지 확인합니다.
 8\. Select **Save** and **Activate**.

@@ -18,12 +18,12 @@ user_menu_list:
     image: /assets/img/braze_icons/log-in-04-braze-pink-dark.svg
     bg_color: '#F8D3E8'
     link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-    description: 私たちのプラットフォームにログインする。
+    description: プラットフォームにログインする。
   - name: キャンバスを作成する
     bg_color: '#FFD4BC'
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/users-01-braze-orange-dark.svg
-    description: カスタマージャーニーの構築を始める準備はできているだろうか？ガイドはお任せください。
+    description: このガイドでは、カスタマージャーニーの構築の始め方について説明する。
 
 popular_topic_list:
   - name: ユーザーインポート

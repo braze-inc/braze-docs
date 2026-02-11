@@ -29,7 +29,6 @@ table td {
 [USERS_BEHAVIORS_UNINSTALL_SHARED](#USERS_BEHAVIORS_UNINSTALL_SHARED) | ユーザーがアプリをアンインストールする
 [USERS_BEHAVIORS_UPGRADEDAPP_SHARED](#USERS_BEHAVIORS_UPGRADEDAPP_SHARED) | ユーザーがアプリをアップグレードした場合
 [USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED](#USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED) | ユーザーが初回セッションを開始したとき
-[USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED](#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED) | ユーザーがニュースフィードを見るとき
 [USERS_BEHAVIORS_APP_SESSIONEND_SHARED](#USERS_BEHAVIORS_APP_SESSIONEND_SHARED) | ユーザーがアプリのセッションを終了するとき
 [USERS_BEHAVIORS_APP_SESSIONSTART_SHARED](#USERS_BEHAVIORS_APP_SESSIONSTART_SHARED) | ユーザーがアプリでセッションを開始するとき
 [USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED](#USERS_BEHAVIORS_GEOFENCE_DATAEVENT_SHARED) | ユーザーがジオフェンスされた領域をトリガーしたとき (例えば、ジオフェンスに出入りしたとき)。このイベントは、他のイベントとともにバッチ化され、標準的なイベントエンドポイントを通じて受信されたため、リアルタイムでエンドポイントによって受信されなかった可能性があります。
@@ -66,9 +65,6 @@ table td {
 [USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED](#USERS_MESSAGES_INAPPMESSAGE_ABORT_SHARED) | 当初予定されていたアプリ内メッセージが何らかの理由で中止された。
 [USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED](#USERS_MESSAGES_INAPPMESSAGE_CLICK_SHARED) | ユーザーがアプリ内メッセージをクリックした場合
 [USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED](#USERS_MESSAGES_INAPPMESSAGE_IMPRESSION_SHARED) | ユーザーがアプリ内メッセージを閲覧した場合
-[USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED) | 当初予定されていたニュースフィードカードメッセージが何らかの理由で中止された。
-[USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED) | ユーザーがニュースフィードカードをクリックすると
-[USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED](#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED) | ユーザーがニュースフィードカードを閲覧する
 [USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED) | 当初予定されていたプッシュ通知メッセージが、何らかの理由で中止された。
 [USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_BOUNCE_SHARED) | プッシュ通知がバウンスしたとき
 [USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED](#USERS_MESSAGES_PUSHNOTIFICATION_INFLUENCEDOPEN_SHARED) | ユーザーが通知を受け取った後、通知をクリックせずにアプリを開いた場合
@@ -235,23 +231,6 @@ table td {
 `language` | `null,` `string` | [PII] ユーザーの言語
 `device_id` | `null,` `string` | セッションが発生したデバイスの ID
 `sdk_version` | `null,` `string` | セッション中に使用されたBraze SDKのバージョン
-`platform` | `null,` `string` | デバイスのプラットフォーム
-`os_version` | `null,` `string` | デバイスのオペレーティング・システムのバージョン
-`device_model` | `null,` `string` | デバイスのモデル
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED {#USERS_BEHAVIORS_APP_NEWSFEEDIMPRESSION_SHARED}
-
-フィールド | タイプ | 説明
-------|------|------------
-`id` | `string` | このイベントのグローバルな一意の ID
-`user_id` | `string` | ニュースフィードを閲覧したユーザーのBraze ID
-`external_user_id` | `null,` `string` | [PII] ユーザーの外部ユーザーID
-`app_group_api_id` | `null,` `string` | このユーザーが所属するワークスペースのAPI ID
-`app_api_id` | `null,` `string` | ユーザーがニュースフィードを閲覧したアプリのAPI ID
-`time` | `int` | ユーザーがニュースフィードを閲覧したUnixタイムスタンプ
-`device_id` | `null,` `string` | インプレッションが発生したデバイスの ID
-`sdk_version` | `null,` `string` | インプレッションで使用したBraze SDKのバージョン
 `platform` | `null,` `string` | デバイスのプラットフォーム
 `os_version` | `null,` `string` | デバイスのオペレーティング・システムのバージョン
 `device_model` | `null,` `string` | デバイスのモデル
@@ -1252,83 +1231,6 @@ table td {
 `ad_id` | `null,` `string` | [PII] 広告識別子
 `ad_id_type` | `null,` `string` | `ios_idfa`、`google_ad_id`、`windows_ad_id`、`roku_ad_id` のいずれか
 `ad_tracking_enabled` | `null, boolean` | デバイスの広告トラッキングが有効かどうか
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_ABORT_SHARED}
-
-フィールド | タイプ | 説明
-------|------|------------
-`id` | `string` | このイベントのグローバルな一意の ID
-`user_id` | `string` | このイベントを実行したユーザーのBraze ID
-`external_user_id` | `null,` `string` | [PII] ユーザーの外部ユーザーID
-`app_group_api_id` | `null,` `string` | このユーザーが所属するワークスペースのAPI ID
-`time` | `int` | イベントが発生したUnixタイムスタンプ
-`app_api_id` | `null,` `string` | このイベントが発生したアプリのAPI ID
-`card_api_id` | `null,` `string` | カードのAPI ID
-`gender` | `null,` `string` | [PII] ユーザーの性別
-`country` | `null,` `string` | [PII] ユーザーの国名
-`timezone` | `null,` `string` | ユーザーのタイムゾーン
-`language` | `null,` `string` | [PII] ユーザーの言語
-`device_id` | `null,` `string` | イベントが発生したデバイスの ID
-`sdk_version` | `null,` `string` | イベント中に使用されたBraze SDKのバージョン
-`platform` | `null,` `string` | デバイスのプラットフォーム
-`os_version` | `null,` `string` | デバイスのオペレーティング・システムのバージョン
-`device_model` | `null,` `string` | デバイスのモデル
-`resolution` | `null,` `string` | デバイスの解像度
-`carrier` | `null,` `string` | デバイスの通信事業者
-`browser` | `null,` `string` | デバイスのブラウザ
-`abort_type` | `null,` `string` | 中止のタイプ。`liquid_abort_message` または `rate_limit` のいずれか
-`abort_log` | `null,` `string` | [PII] アボートの詳細を説明するログメッセージ（最大2,000文字）
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_CLICK_SHARED}
-
-フィールド | タイプ | 説明
-------|------|------------
-`id` | `string` | このイベントのグローバルな一意の ID
-`user_id` | `string` | このイベントを実行したユーザーのBraze ID
-`external_user_id` | `null,` `string` | [PII] ユーザーの外部ユーザーID
-`app_group_api_id` | `null,` `string` | このユーザーが所属するワークスペースのAPI ID
-`time` | `int` | イベントが発生したUnixタイムスタンプ
-`app_api_id` | `null,` `string` | このイベントが発生したアプリのAPI ID
-`card_api_id` | `null,` `string` | カードのAPI ID
-`gender` | `null,` `string` | [PII] ユーザーの性別
-`country` | `null,` `string` | [PII] ユーザーの国名
-`timezone` | `null,` `string` | ユーザーのタイムゾーン
-`language` | `null,` `string` | [PII] ユーザーの言語
-`device_id` | `null,` `string` | イベントが発生したデバイスの ID
-`sdk_version` | `null,` `string` | イベント中に使用されたBraze SDKのバージョン
-`platform` | `null,` `string` | デバイスのプラットフォーム
-`os_version` | `null,` `string` | デバイスのオペレーティング・システムのバージョン
-`device_model` | `null,` `string` | デバイスのモデル
-`resolution` | `null,` `string` | デバイスの解像度
-`carrier` | `null,` `string` | デバイスの通信事業者
-`browser` | `null,` `string` | デバイスのブラウザ
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
-
-### USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED {#USERS_MESSAGES_NEWSFEEDCARD_IMPRESSION_SHARED}
-
-フィールド | タイプ | 説明
-------|------|------------
-`id` | `string` | このイベントのグローバルな一意の ID
-`user_id` | `string` | このイベントを実行したユーザーのBraze ID
-`external_user_id` | `null,` `string` | [PII] ユーザーの外部ユーザーID
-`app_group_api_id` | `null,` `string` | このユーザーが所属するワークスペースのAPI ID
-`time` | `int` | イベントが発生したUnixタイムスタンプ
-`app_api_id` | `null,` `string` | このイベントが発生したアプリのAPI ID
-`card_api_id` | `null,` `string` | カードのAPI ID
-`gender` | `null,` `string` | [PII] ユーザーの性別
-`country` | `null,` `string` | [PII] ユーザーの国名
-`timezone` | `null,` `string` | ユーザーのタイムゾーン
-`language` | `null,` `string` | [PII] ユーザーの言語
-`device_id` | `null,` `string` | イベントが発生したデバイスの ID
-`sdk_version` | `null,` `string` | イベント中に使用されたBraze SDKのバージョン
-`platform` | `null,` `string` | デバイスのプラットフォーム
-`os_version` | `null,` `string` | デバイスのオペレーティング・システムのバージョン
-`device_model` | `null,` `string` | デバイスのモデル
-`resolution` | `null,` `string` | デバイスの解像度
-`carrier` | `null,` `string` | デバイスの通信事業者
-`browser` | `null,` `string` | デバイスのブラウザ
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ### USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED {#USERS_MESSAGES_PUSHNOTIFICATION_ABORT_SHARED}

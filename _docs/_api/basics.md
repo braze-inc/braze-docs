@@ -19,6 +19,7 @@ alias: /api/api_key/
 | [Cloud Data Ingestion]({{site.baseurl}}/api/endpoints/cdi/)                | Manage your data warehouse integrations and syncs.                                    |
 | [Email lists and addresses]({{site.baseurl}}/api/endpoints/email/)         | Set up and manage bi-directional sync between Braze and your email systems.           |
 | [Export]({{site.baseurl}}/api/endpoints/export/)                           | Access and export various details of your campaigns, Canvases, KPIs, and more.        |
+| [Media Library]({{site.baseurl}}/api/endpoints/media_library/)             | Manage assets within Braze.                                                           |
 | [Messages]({{site.baseurl}}/api/endpoints/messaging/)                      | Schedule, send, and manage your campaigns and Canvases.                               |
 | [Preference center]({{site.baseurl}}/api/endpoints/preference_center/)     | Build your preference center and update the styling of it.                            |
 | [SCIM]({{site.baseurl}}/api/endpoints/scim/)                               | Manage user identities in cloud-based applications and services.                      |

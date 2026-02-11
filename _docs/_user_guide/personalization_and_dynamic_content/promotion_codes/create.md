@@ -33,9 +33,9 @@ Here are some details to consider when creating a code snippet:
 
 ### Step 3: Choose promotion code options
 
-Each promotion code list has a corresponding expiration date and time that gets set upon creation. The maximum expiration length is six months from the day you're creating or editing your list.
+Each promotion code list has a corresponding expiration date and time that gets set upon creation. The maximum expiration length is six months from the day you create or edit your list.
 
-Within that time, you can change and update the expiration date repeatedly. This expiration date applies to all codes added to this list. Upon expiration, the codes are deleted from the Braze system, and any messages calling that list's code snippet is not sent.
+Within that time, you can change and update the expiration date repeatedly. This expiration date applies to all codes added to this list. Upon expiration, the codes are deleted from the Braze system, and any messages calling that list's code snippet are not sent.
 
 ![List expiration settings that all remaining codes will expire on April 30, 2025 at 12 am.]({% image_buster /assets/img/promocodes/promocode4.png %}){: style="max-width:80%"}
 
@@ -55,7 +55,7 @@ Make sure your CSV file follows these guidelines:
 You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/ecommerce/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/ecommerce/loyalty/talonone/) to create and export promotion codes.
 
 {% alert important %}
-The maximum file size is 100&nbsp;MB and the maximum list size is 20MM of unused codes. If you find the wrong file was uploaded, upload a new one to replace the previous file.
+The maximum file size is 100&nbsp;MB and the maximum list size is 20 million unused codes. If you find the wrong file was uploaded, upload a new one to replace the previous file.
 {% endalert %}
 
 1. After the upload is complete, select **Save List** to save all the details and codes you just entered.

@@ -88,6 +88,8 @@ Use this Liquid tag {%raw%}``{% catalog_items <name_of_your_catalog> {{context.$
 
 {% multi_lang_include alerts/important_alerts.md alert='context variable' %}
 
+{% multi_lang_include alerts/tip_alerts.md alert='catalog data images' %}
+
 ## Considerations
 
 - Users are only subscribed for 90 days. If the item isn't back in stock in 90 days, the user is unsubscribed.

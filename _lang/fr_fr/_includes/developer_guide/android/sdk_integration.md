@@ -13,7 +13,7 @@ repositories {
 Ensuite, ajoutez Braze à vos dépendances.
 
 {% tabs local %}
-{% tab base uniquement %}
+{% tab base only %}
 Si vous ne prévoyez pas d'utiliser les composants de l'interface utilisateur de Braze, ajoutez le code suivant à votre site `build.gradle`. Remplacez `SDK_VERSION` par la version actuelle de votre SDK Braze Android. Pour obtenir la liste complète des versions, consultez le [journal des modifications]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
@@ -24,7 +24,7 @@ dependencies {
 ```
 {% endtab %}
 
-{% tab avec des composants ui %}
+{% tab with ui components %}
 Si vous prévoyez d'utiliser ultérieurement les composants de l'interface utilisateur de Braze, ajoutez le code suivant à votre site `build.gradle`.  Remplacez `SDK_VERSION` par la version actuelle de votre SDK Braze Android. Pour obtenir la liste complète des versions, consultez le [journal des modifications]({{site.baseurl}}/developer_guide/changelogs/?sdktab=android).
 
 ```kotlin
@@ -82,7 +82,7 @@ Lorsque l'initialisation différée est activée, toutes les connexions réseau 
 L'initialisation différée est désactivée par défaut. Pour l'activer, utilisez l'une des options suivantes :
 
 {% tabs %}
-{% tab Fichier XML de Braze %}
+{% tab Braze XML file %}
 Dans le fichier `braze.xml` de votre projet, définissez `com_braze_enable_delayed_initialization` comme `true`.
 
 ```xml
@@ -90,7 +90,7 @@ Dans le fichier `braze.xml` de votre projet, définissez `com_braze_enable_delay
 ```
 {% endtab %}
 
-{% tab Au moment de l'exécution %}
+{% tab At runtime %}
 Pour activer l'initialisation différée au moment de l'exécution, utilisez la méthode suivante.
 
 {% subtabs %}
@@ -121,7 +121,7 @@ Lorsque l'initialisation différée est activée, les analyses/analytiques push 
 Pour mettre explicitement en file d'attente l'analyse/analytique push, choisissez l'une des options suivantes :
 
 {% tabs %}
-{% tab Fichier XML de Braze %}
+{% tab Braze XML file %}
 Dans votre fichier `braze.xml`, définissez `com_braze_delayed_initialization_analytics_behavior` comme `QUEUE`:
 
 ```xml
@@ -129,7 +129,7 @@ Dans votre fichier `braze.xml`, définissez `com_braze_delayed_initialization_an
 ```
 {% endtab %}
 
-{% tab Au moment de l'exécution %}
+{% tab At runtime %}
 Ajoutez `QUEUE` à votre [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) méthode :
 
 {% subtabs %}
@@ -156,7 +156,7 @@ Braze.enableDelayedInitialization(context, DelayedInitializationAnalyticsBehavio
 Pour abandonner l'analyse/analytique push, choisissez l'une des options suivantes :
 
 {% tabs %}
-{% tab Fichier XML de Braze %}
+{% tab Braze XML file %}
 Dans votre fichier `braze.xml`, définissez `com_braze_delayed_initialization_analytics_behavior` comme `DROP`: 
 
 ```xml
@@ -164,7 +164,7 @@ Dans votre fichier `braze.xml`, définissez `com_braze_delayed_initialization_an
 ```
 {% endtab %}
 
-{% tab Au moment de l'exécution %}
+{% tab At runtime %}
 Ajoutez `DROP` à la [`Braze.enableDelayedInitialization()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/-companion/enable-delayed-initialization.html) méthode :
 
 {% subtabs %}

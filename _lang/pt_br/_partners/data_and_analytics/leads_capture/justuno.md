@@ -36,7 +36,7 @@ Para sincronizar as atribuições do usuário do Justuno para o Braze, será nec
 
 Para adicionar o aplicativo Braze à sua conta Justuno, acesse **Configurações da conta** > **Apps** e, em seguida, procure e selecione o aplicativo Braze.
 
-![A página "Connect Apps" (Conectar aplicativos) no Justuno com o aplicativo Braze mostrado na lista de resultados de pesquisa.]({% image_buster /assets/img/justuno/search-for-braze.png %})
+![A página "Connect Apps" no Justuno com o aplicativo Braze mostrado na lista de resultados de pesquisa.]({% image_buster /assets/img/justuno/search-for-braze.png %})
 
 Digite a chave de API e o URL de base [que você criou anteriormente](#prerequisites) e selecione **Connect (Conectar**).
 
@@ -46,7 +46,7 @@ Digite a chave de API e o URL de base [que você criou anteriormente](#prerequis
 
 Para adicionar o aplicativo Braze ao seu [fluxo de trabalho Justuno](https://hub.justuno.com/knowledge/workflows-overview), arraste e solte a ação **Sync to App** em seu fluxo de trabalho e, em seguida, escolha **Select App** > **Braze**.
 
-![A opção "Select App" (Selecionar aplicativo), localizada na ação "Sync to App" (Sincronizar com o aplicativo).]({% image_buster /assets/img/justuno/select-app.png %}){: style="max-width:45%;"}
+![A opção "Select App" está localizada na ação "Sync to App".]({% image_buster /assets/img/justuno/select-app.png %}){: style="max-width:45%;"}
 
 ### Etapa 3: Conecte seus grupos de inscrições do Braze
 
@@ -69,7 +69,7 @@ Para localizar essas IDs no dashboard do Braze:
 
 Em seu fluxo de trabalho Justuno, abra o app Braze e insira os IDs de cada grupo de inscrições.
 
-![O aplicativo Braze foi aberto em um fluxo de trabalho Justuno com a opção de adicionar IDs de grupo de inscrições para e-mail e SMS.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
+![O app Braze foi aberto em um fluxo de trabalho Justuno com a opção de adicionar IDs de grupos de inscrições para e-mail e SMS.]({% image_buster /assets/img/justuno/enter-subscription-groups.png %}){: style="max-width:55%;"}
 
 ### Etapa 4: Configure suas atribuições
 
@@ -90,7 +90,7 @@ Para sincronizar atribuições adicionais:
 2. Escolha quais atribuições do Braze você gostaria de sincronizar.
 3. Combine as propriedades no Justuno com seus equivalentes no Braze (como identificadores sociais, data de aniversário, preferências de compras, respostas a pesquisas e similares). Lembre-se de que essas propriedades são consideradas dados de terceiros ou de terceiros. Para saber mais, consulte [Justuno: Coleta de dados de visitantes](https://www.justuno.com/guides/zero-first-party-data/).
 4. No construtor de fluxo de trabalho, escolha **Salvar**, **Pré-visualizar** ou **Publicar** seu fluxo de trabalho.
-    ![O menu "Publish" (Publicar) foi aberto com as opções de salvar, fazer uma prévia ou mostrar o histórico da versão.]({% image_buster /assets/img/justuno/publish-workflow.png %}){: style="max-width:45%;"}
+    ![O menu "Publish" foi aberto com as opções de salvar, prévia ou mostrar o histórico de versões.]({% image_buster /assets/img/justuno/publish-workflow.png %}){: style="max-width:45%;"}
 
 ## Coisas para saber
 
