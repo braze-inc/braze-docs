@@ -71,7 +71,7 @@ guides in `_docs/_contributing/style_guide/*`
 4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
 
 
-## Step 5: Create a Properly Named Branch
+## Step 5: Create a properly named branch
 For each file that is changed in `_docs`, create a Branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>-`  
 Example: `Cursor-02112026-liquid_use_cases`  
 
