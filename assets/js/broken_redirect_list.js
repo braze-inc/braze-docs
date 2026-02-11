@@ -3232,4 +3232,7 @@ validurls['/docs/user_guide/brazeai/decisioning_studio/go/configuring_sfmc'] = '
 validurls['/docs/user_guide/brazeai/decisioning_studio/go/report_bau_campaign'] = '/docs/user_guide/brazeai/decisioning_studio/reporting/';
 validurls['/docs/user_guide/brazeai/decisioning_studio/integration'] = '/docs/user_guide/brazeai/decisioning_studio/getting_started/';
 
+validurls['/docs/partners/tinyclues/'] = '/docs/partners/splio/';
+validurls['/docs/partners/data_and_analytics/cohort_import/tinyclues'] = '/docs/partners/splio/';
+
 // validurls['OLD'] = 'NEW';
