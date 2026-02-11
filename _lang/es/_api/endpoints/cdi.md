@@ -1,5 +1,5 @@
 ---
-nav_title: Ingesta de datos de Cloud
+nav_title: Ingesta de datos en la nube
 article_title: Puntos finales de ingesta de datos en la nube
 search_tag: Endpoint
 page_order: 0.5

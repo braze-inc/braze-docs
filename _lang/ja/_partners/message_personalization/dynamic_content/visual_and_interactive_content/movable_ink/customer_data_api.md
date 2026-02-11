@@ -1,12 +1,12 @@
 ---
 nav_title: Customer Data API への接続
-article_title: Movable Ink Customer Data API への接続
+article_title: Movable Ink カスタマーデータAPI への接続
 description: "このリファレンス記事では、Braze に保存されている顧客イベントデータをアクティブ化して、Movable Ink 内でパーソナライズされたコンテンツを生成するために、Customer Data API を使用して接続する方法について説明します。"
 page_type: partner
 search_tag: Partner
 ---
 
-# Movable Ink Customer Data API への接続
+# Movable Ink カスタマーデータAPI への接続
 
 > Braze と Movable Ink Customer Data API の統合により、マーケターは Braze に保存されている顧客イベントデータをアクティブ化して、Movable Ink 内でパーソナライズされたコンテンツを生成できます。
 

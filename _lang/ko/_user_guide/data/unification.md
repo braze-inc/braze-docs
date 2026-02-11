@@ -13,7 +13,7 @@ guide_featured_list:
   - name: 클라우드 데이터 수집
     link: /docs/user_guide/data/unification/cloud_ingestion/
     image: /assets/img/braze_icons/upload-cloud-01.svg
-  - name: 데이터 혁신
+  - name: 데이터 변환
     link: /docs/user_guide/data/unification/data_transformation/
     image: /assets/img/braze_icons/database-01.svg
   - name: 사용자 데이터 수집
@@ -31,7 +31,7 @@ guide_menu_list2:
   - name: Shopify
     link: /docs/partners/ecommerce/shopify/
     image: /assets/img/braze_icons/shopify.svg
-  - name: SDK 통합하기
+  - name: SDK 통합
     link: /docs/developer_guide/sdk_integration/
     image: /assets/img/braze_icons/code-square-01.svg
 ---

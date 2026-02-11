@@ -348,7 +348,7 @@ Os dispositivos que executam o Android 12 serão renderizados de forma diferente
 
 Ao criar uma mensagem push para Android, esse recurso está disponível no menu suspenso **Notification Type (Tipo de notificação** ).
 
-![O editor de campanhas push mostra o local do menu suspenso "Notification Type" (acima da prévia padrão do push).]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
+![O editor de campanhas push mostra o local do menu suspenso "Notification Type" (acima da prévia do push padrão).]({% image_buster /assets/img/android/push/android_inline_image_notification_type.png %})
 
 ## Configurações
 
@@ -372,11 +372,11 @@ O campo **TTL** permite que você defina um tempo personalizado para armazenar m
 
 O texto de resumo permite que você defina texto adicional na visualização expandida da notificação. Ele também serve como legenda para notificações com imagens.
 
-![Uma mensagem do Android com o título "Este é o título da notificação." e o texto de resumo "Este é o texto de resumo da notificação."]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![Uma mensagem do Android com o título "Este é o título da notificação" e o texto de resumo "Este é o texto de resumo da notificação".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
 O texto do resumo será exibido sob o corpo da mensagem na exibição expandida. 
 
-![Uma mensagem do Android com o título "Este é o título da notificação." e o texto de resumo "Este é o texto de resumo da notificação."]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![Uma mensagem do Android com o título "Este é o título da notificação" e o texto de resumo "Este é o texto de resumo da notificação".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Para notificações por push que incluem imagens, o texto da mensagem será mostrado na exibição recolhida, enquanto o texto do resumo será exibido como a legenda da imagem quando a notificação for expandida. 
 
@@ -384,7 +384,7 @@ Para notificações por push que incluem imagens, o texto da mensagem será most
 
 O recurso **Custom URI** permite que você especifique um URL da Web ou um recurso do Android para navegar quando a notificação for clicada. Se nenhum URI personalizado for especificado, clicar na notificação leva os usuários para o seu app. Você pode usar o URI personalizado para deep link dentro do seu app e direcionar os usuários para recursos que existem fora do seu app. Isso pode ser especificado por meio da [API de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) ou de nosso dashboard, em **Advanced Settings (Configurações avançadas)**, no criador de mensagens push, conforme ilustrado:
 
-![A configuração avançada de deep linking no criador do Braze.]({% image_buster /assets/img_archive/deep_link.png %})
+![A configuração avançada de deep linking no criador de push da Braze.]({% image_buster /assets/img_archive/deep_link.png %})
 
 ### Prioridade de exibição de notificação {#notification-priority}
 
@@ -396,7 +396,7 @@ O nível de prioridade de uma notificação por push afeta a forma como a notifi
 
 No Android O, a prioridade de notificação se tornou uma propriedade dos canais de notificação. Você precisará trabalhar com seu desenvolvedor para definir a prioridade de um canal durante sua configuração e, em seguida, usar o dashboard para selecionar o canal adequado ao enviar seus sons de notificação. Para dispositivos que executam versões do Android anteriores ao O, a especificação de um nível de prioridade para notificações do Android é possível por meio do dashboard do Braze e da API de envio de mensagens. 
 
-Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos especificar indiretamente a prioridade por meio da [configuração do canal de envio de](https://developer.android.com/training/notify-user/channels#importance) mensagens (para direcionar dispositivos O+) *e* enviar a prioridade individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens para toda a sua base de usuários com uma prioridade específica, recomendamos que especifique indiretamente a prioridade por meio da [configuração do canal de envio de](https://developer.android.com/training/notify-user/channels#importance) mensagens (para direcionar dispositivos O+) *e* envie a prioridade individual a partir do dashboard (para direcionar dispositivos <O).
 
 Os níveis de prioridade que você pode definir em notificações por push do Android ou Fire OS são:
 
@@ -417,8 +417,8 @@ No Android O, os sons de notificação se tornaram uma propriedade dos canais de
 
 Para dispositivos executando versões do Android anteriores ao O, o Braze permite que você defina o som de uma mensagem push individual através do criador do dashboard. Você pode fazer isso especificando um recurso de som local no dispositivo (por exemplo, `android.resource://com.mycompany.myapp/raw/mysound`). Especificar "padrão" neste campo reproduzirá o som de notificação padrão no dispositivo. Isso pode ser especificado por meio da [API de envio de mensagens]({{site.baseurl}}/api/endpoints/messaging/) ou do dashboard em **Configurações avançadas** no criador do push.
 
-![A configuração avançada de som no criador do Braze.]({% image_buster /assets/img_archive/sound_android.png %})
+![A configuração avançada de som no criador de push da Braze.]({% image_buster /assets/img_archive/sound_android.png %})
 
 Digite o URI completo do recurso de som (por exemplo, `android.resource://com.mycompany.myapp/raw/mysound`) no prompt do dashboard.
 
-Para enviar mensagens a toda a sua base de usuários com um som específico, recomendamos especificar indiretamente o som por meio da [configuração do canal de envio de mensagens](https://developer.android.com/training/notify-user/channels) (para direcionar dispositivos O+) *e* enviar o som individual a partir do dashboard (para direcionar dispositivos <O).
+Para enviar mensagens a toda a sua base de usuários com um som específico, recomendamos que especifique indiretamente o som por meio da [configuração do canal de envio de mensagens](https://developer.android.com/training/notify-user/channels) (para direcionar dispositivos O+) *e* envie o som individual a partir do dashboard (para direcionar dispositivos <O).

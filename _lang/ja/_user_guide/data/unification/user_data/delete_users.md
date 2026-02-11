@@ -1,17 +1,19 @@
 ---
-nav_title: ユーザーの削除
-article_title: ユーザーの削除
+nav_title: ユーザーを削除する
+article_title: ユーザーを削除する
 page_order: 4.2
 toc_headers: h2
-description: "個々のユーザーまたはユーザーのSegmentをBraze ダッシュボードから直接削除する方法について説明します。" 
+description: "個々のユーザーまたはユーザーのSegmentをBraze ダッシュボードから直接削除する方法について説明します。"
+alias: /delete_users/
+hidden: true
 ---
 
-# ユーザーの削除
+# ユーザーを削除する
 
 > 個々のユーザーまたはユーザーのSegmentをBraze ダッシュボードから直接削除する方法について説明します。
 
 {% alert important %}
-この機能は現在早期アクセス段階です。参加したい場合は、顧客のサクセスマネージャーにお問い合わせください。
+この機能の早期アクセスは一時的に終了します。詳しくは、顧客のサクセスマネージャーにお問い合わせください。
 {% endalert %}
 
 ## 前提条件

@@ -97,6 +97,6 @@ A tabela a seguir lista os possíveis erros retornados e as etapas de solução 
 | `400 Invalid cursor` | Verifique se o site `cursor` é válido. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Para obter códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais e respostas]({{site.baseurl}}/api/errors/#fatal-errors).
+Para obter códigos de status adicionais e mensagens de erro associadas, consulte [Erros fatais & responses]({{site.baseurl}}/api/errors/#fatal-errors).
 
 {% endapi %}

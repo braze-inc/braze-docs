@@ -24,12 +24,12 @@ Esta función ofrece a las marcas la opción de controlar qué datos específico
 
 {% alert important %}
 **Cláusula de exención de responsabilidad de Audience Sync Pro**<br>
-Braze Audience Sync to Criteo es una integración de Audience Sync Pro. Para obtener más información sobre esta integración, póngase en contacto con su gestor de cuentas Braze. <br> 
+Braze Audience Sync to Criteo es una integración de Audience Sync Pro. Para más información sobre esta integración, ponte en contacto con tu director de cuentas Braze. <br> 
 {% endalert %}
 
 ## Requisitos previos 
 
-Tendrás que asegurarte de que tienes los siguientes elementos creados y/o completados antes de configurar tu Sincronización de Audiencia con Criteo.
+Debes asegurarte de que tienes los siguientes elementos creados y/o completados antes de configurar la Sincronización de tu audiencia con Criteo.
 
 | Requisito | Origin | Descripción |
 | --- | --- | --- |
@@ -41,17 +41,21 @@ Tendrás que asegurarte de que tienes los siguientes elementos creados y/o compl
 
 ### Paso 1: Conectar con Criteo
 
+{% alert important %}
+Debes tener el [ permiso "Admin"]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/#admin) para conectar Criteo a tu cuenta Braze.
+{% endalert %}
+
 En el panel de control de Braze, vaya a **Integraciones de socios** > **Socios tecnológicos** y seleccione **Criteo**. En Exportar audiencia de Criteo, selecciona **Conectar Criteo**.
 
-![Página de la tecnología Criteo en Braze que incluye una sección de resumen y otra de Criteo con el botón Criteo Conectado.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
+![Página de tecnología Criteo en Braze que incluye una sección de Resumen y otra de Criteo con el botón Criteo Conectado.]({% image_buster /assets/img/criteo/criteo5.png %}){: style="max-width:80%;"}
 
-Aparecerá una página Criteo oAuth para autorizar a Braze los permisos relacionados con su integración Audience Sync.
+Aparecerá una página Criteo oAuth para autorizar a Braze los permisos relacionados con tu integración Audience Sync.
 
 Una vez que haya seleccionado confirmar, se le redirigirá de nuevo a Braze para que seleccione las cuentas de anuncios de Criteo con las que desea sincronizar. 
 
 ![Una lista de las cuentas de anuncios disponibles que puedes conectar a Criteo.]({% image_buster /assets/img/criteo/criteo7.png %}){: style="max-width:80%;"}
 
-Una vez que se haya conectado correctamente, volverá a la página de socios, donde podrá ver qué cuentas están conectadas y desconectar las cuentas existentes.
+Cuando te hayas conectado correctamente, volverás a la página del socio, donde podrás ver qué cuentas están conectadas y desconectar las cuentas existentes.
 
 ![Una versión actualizada de la página de socios tecnológicos de Criteo que muestra las cuentas de anuncios conectadas correctamente.]({% image_buster /assets/img/criteo/criteo4.png %}){: style="max-width:80%;"}
 
@@ -75,7 +79,7 @@ Para saber más sobre cómo cumplir estas leyes de Protección de Datos dentro d
 
 Añada un componente a su lienzo y seleccione **Sincronización con el público**.
 
-![Flujo de trabajo de los pasos anteriores para añadir un componente de Audiencia de Criteo en el Flujo de Canvas.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Flujo de trabajo de los pasos anteriores para añadir un componente de Audiencia de Criteo en el Flujo de Canvas.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
+![Flujo de trabajo de los pasos anteriores para añadir un componente de Audiencia de Criteo en Canvas.]({% image_buster /assets/img/criteo/criteo9.png %}){: style="max-width:35%;"} ![Flujo de trabajo de los pasos anteriores para añadir un componente de Audiencia de Criteo en Canvas.]({% image_buster /assets/img/criteo/criteo10.png %}){: style="max-width:28%;"}
 
 ### Paso 4: Configuración de la sincronización
 
@@ -85,26 +89,26 @@ Selecciona **Criteo** como socio de Audience Sync deseado.
 
 ![]({% image_buster /assets/img/criteo/criteo6.png %})
 
-A continuación, seleccione la cuenta de anuncios de Criteo que desee. En el menú desplegable **Elegir un público nuevo o existente**, escriba el nombre de un público nuevo o existente.
+A continuación, seleccione la cuenta de anuncios de Criteo que desee. En el desplegable **Elegir una audiencia nueva o existente**, escribe el nombre de una audiencia nueva o existente.
 
 {% tabs %}
-{% tab Crear una nueva audiencia %}
+{% tab Create a New Audience %}
 **Crear una nueva audiencia**<br>
 Introduce un nombre para la nueva audiencia, selecciona **Añadir usuarios a la audiencia** y selecciona los campos que deseas sincronizar con Criteo. A continuación, guarda tu audiencia haciendo clic en el botón **Crear audiencia** situado en la parte inferior del editor de pasos.
 
 ![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se selecciona la cuenta publicitaria deseada y se crea una nueva audiencia.]({% image_buster /assets/img/criteo/criteo3.png %})
 
-Los usuarios recibirán una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si surgen errores durante este proceso. Los usuarios también pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
+Braze muestra una notificación en la parte superior del editor de pasos si la audiencia se crea correctamente o si se producen errores. Los usuarios pueden hacer referencia a este público para la eliminación de usuarios más adelante en el recorrido Canvas, ya que el público se creó en modo borrador.
 
 ![Una alerta que aparece después de crear una nueva audiencia en el componente Canvas.]({% image_buster /assets/img/criteo/criteo1.png %})
 
-Cuando lanzas un Canvas con una nueva audiencia, Braze sincroniza a los usuarios casi en tiempo real a medida que entran en el componente Audience Sync.
+Cuando lanzas un Canvas con una nueva audiencia, Braze sincroniza a los usuarios casi en tiempo real a medida que entran en el componente Sincronización de Audiencias.
 {% endtab %}
-{% tab Sincronización con un público existente %}
+{% tab Sync with an Existing Audience %}
 **Sincronízate con una audiencia existente**<br>
 Braze también ofrece la posibilidad de añadir usuarios a las audiencias de Criteo existentes para garantizar que estas audiencias están actualizadas. Para sincronizar con una audiencia existente, escribe el nombre de la audiencia existente en el desplegable y selecciona **Añadir a la audiencia**. A continuación, Braze añadirá usuarios casi en tiempo real a medida que entren en el componente Audience Sync.
 
-![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se seleccionan la cuenta publicitaria deseada y el público existente.]({% image_buster /assets/img/criteo/criteo8.png %})
+![Vista ampliada del paso en Canvas Audiencia personalizada. Aquí se seleccionan la cuenta publicitaria deseada y la audiencia existente.]({% image_buster /assets/img/criteo/criteo8.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -119,9 +123,9 @@ Puede ver la audiencia en Criteo accediendo a su cuenta de administrador de anun
 
 ## Consideraciones sobre la sincronización de usuarios y el límite de velocidad
 
-A medida que los usuarios alcanzan el paso de Sincronización de Audiencia, Braze sincronizará estos usuarios casi en tiempo real respetando también los límites de velocidad de la API de Criteo. Lo que esto significa en la práctica es que Braze intentará procesar por lotes el mayor número de usuarios cada 5 segundos antes de enviarlos a Criteo.
+A medida que los usuarios alcanzan el paso de Sincronización de audiencia, Braze los sincroniza casi en tiempo real respetando los límites de velocidad de la API de Criteo. Braze agrupa y procesa el mayor número posible de usuarios cada cinco segundos antes de enviarlos a Criteo.
 
-El límite de velocidad de la API de Criteo establece no más de 250 solicitudes por minuto. Si un cliente Braze alcanza este límite de velocidad, Braze Canvas reintentará la sincronización durante un máximo de ~13 horas. Si la sincronización no es posible, estos usuarios aparecen en la lista de la métrica Users Errored. 
+El límite de velocidad de la API de Criteo no permite más de 250 solicitudes por minuto. Si un cliente alcanza este límite, Braze reintenta la sincronización durante un máximo de ~13 horas. Si la sincronización sigue sin ser posible, Braze lista a estos usuarios en la métrica Usuarios erróneos. 
 
 ## Comprender los análisis
 

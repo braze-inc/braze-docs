@@ -2,11 +2,11 @@
 nav_title: Einzigartige Rabattcodes 
 article_title: Eindeutige Rabattcodes versenden
 alias: /shopify_discount_codes/
-page_order: 6
+page_order: 7
 description: "Dieser Artikel referenziert einen von der Community eingereichten Anwendungsfall zur Verwendung von Braze Aktionscodes mit dem Shopify Bulk Discount Code Bot, um eindeutige Rabattcodes über Ihre Kampagnen und Canvase zu versenden."
 ---
 
-# Versenden eindeutiger Rabattcodes über Shopify
+# Senden Sie eindeutige Rabattcodes über Shopify
 
 > Dieser von der Community eingereichte Anwendungsfall zeigt, wie Sie Braze [Aktionscodes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) mit dem Shopify Bulk Discount Code Bot verwenden können, um eindeutige Rabattcodes für Ihre Kampagnen und Canvase zu generieren. Eindeutige Rabattcodes helfen dabei, die Ausnutzung von generischen Aktionscodes zu vermeiden.
 
@@ -34,11 +34,11 @@ Verwenden Sie den Bulk Discount Code Bot, um Ihre Rabattcodes nach der Anzahl de
 
 Suchen Sie Ihren Rabattcode in der Suchleiste des Bulk Discount Code Bot und wählen Sie dann **Codes exportieren** > **Codes herunterladen**, um eine CSV-Datei in Ihren Download-Ordner zu laden.
 
-![Suchleiste mit einer Dropdown-Liste, in der die Rabattsätze angezeigt werden, und einer Reihe von Buttons zum Auswählen.][2]{: style="max-width:70%;"}
+![Suchleiste mit einer Dropdown-Liste, in der die Rabattsätze angezeigt werden, und einer Reihe von Buttons zum Auswählen][2].{: style="max-width:70%;"}
 
 Löschen Sie in der CSV-Datei Zeile 1, um die Spaltenüberschrift "Promo" zu entfernen. Dadurch wird verhindert, dass "Promo" in Braze zu einem Rabattcode wird.
 
-![Ein Flussdiagramm, das das Entfernen der Zeilenüberschrift "Promo" in einer CSV-Datei zeigt.][3]{: style="max-width:60%;"}
+![Ein Flussdiagramm, das die Entfernung der Zeilenüberschrift "Promo" in einer CSV-Datei zeigt][3].{: style="max-width:60%;"}
 
 ### Schritt 3: Fügen Sie Ihre Rabattcodes zu Braze hinzu
 
@@ -50,7 +50,7 @@ Laden Sie dann Ihre CSV-Datei hoch und wählen Sie **Liste speichern**.
 
 Wenn Sie Ihre eindeutigen Rabattcodes in einer einzigen Kampagne verwenden möchten oder wenn es Ihnen nichts ausmacht, dass Nutzer:innen mehrere eindeutige Codes in verschiedenen Kampagnen oder Canvas-Schritten erhalten, kopieren Sie das Liquid-Snippet des Codes aus der Liste der Aktionscodes, die Sie gespeichert haben.
 
-![Ein Liquid Code-Snippet mit einem Button zum Kopieren.][4]{: style="max-width:60%;"}
+![Ein Liquid Code-Snippet mit einem Button zum Kopieren][4]{: style="max-width:60%;"}
 
 Fügen Sie das Liquid-Snippet in eine Kampagne oder einen Canvas-Schritt ein. 
 
@@ -67,19 +67,19 @@ Führen Sie im Schritt Nutzer:innen aktualisieren für jedes Feld folgende Schri
 - **Aktion:** Wählen Sie **Update** aus.
 - **Schlüssel-Wert:** Fügen Sie das Liquid Code Snippet ein.
 
-![Ein Nutzer:innen Update-Schritt, der ein Attribut "Promo Code" mit dem Liquid Snippet aktualisiert.][6]
+![Ein Update-Schritt für Nutzer:innen, der ein Attribut "Promo Code" mit dem Snippet von Liquid aktualisiert.][6]
 
 Jetzt können Sie das angepasste Attribut {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %} zu jeder Nachricht hinzufügen, und der Rabattcode wird als Template eingefügt.
 
 ## Rabattcode Verhalten
 
-{% details Multichannel-Kampagne oder Canvas-Schritt %}
+{% details Multichannel campaign or Canvas step %}
 
 Wenn ein Rabattcode-Snippet in einer Multichannel-Kampagne oder einem Canvas-Schritt verwendet wird, erhalten die Nutzer:innen immer einen eindeutigen Code. Wenn ein Nutzer:innen über mehr als einen Kanal einen Code erhalten kann, erhält er über jeden Kanal denselben Code. Mit anderen Worten, ein berechtigter Nutzer:innen erhält nur einen Code für alle Nachrichten, die von dieser Kampagne oder diesem Canvas-Schritt verschickt werden.
 
 {% enddetails %}
 
-{% details Verschiedene Canvas-Schritte oder separate Kampagnen %}
+{% details Different Canvas steps or separate campaigns %}
 
 Wenn ein Rabattcode in mehreren Canvas-Schritten oder separaten Kampagnen referenziert wird, erhält ein berechtigter Nutzer:innen mehrere eindeutige Rabattcodes (einen Code für jeden Canvas-Schritt oder jede Kampagne).
 

@@ -10,17 +10,17 @@ channel: email
 
 # Doppelte E-Mails
 
-> Bei doppelten E-Mails werden, wenn eine E-Mail abbestellt wird, andere Profile (bis zu 100 Profile) mit dieser E-Mail-Adresse aktualisiert, um denselben Abo-Status wiederzugeben. Dies gilt für Abmeldungen und andere Änderungen des Abo-Status, wie z. B. den globalen E-Mail-Abo-Status und den Status einzelner Abo-Gruppen.
+> Wenn sich mehrere Profile eine E-Mail Adresse teilen und sich ein Profil abmeldet, aktualisiert Braze die anderen Profile (bis zu 100) mit dieser Adresse auf den gleichen Abo-Status. Dies gilt für Abmeldungen und andere Änderungen wie den globalen Abo-Status und den Status der einzelnen Abo-Gruppen.
 
 ## Aktualisierung von E-Mail-Abos
 
-Braze prüft automatisch auf doppelte E-Mail-Adressen und entfernt diese, wenn eine E-Mail-Kampagne gesendet wird. Auf diese Weise wird eine E-Mail nur einmal versendet und "deduped", d.h. es wird sichergestellt, dass dieselbe E-Mail nicht mehrfach versendet wird, auch wenn mehrere Benutzerprofile eine gemeinsame Adresse haben.
+Braze sucht automatisch nach doppelten E-Mail-Adressen und entfernt diese, wenn es eine Kampagne versendet. Dadurch wird verhindert, dass Braze die E-Mail mehr als einmal sendet, selbst wenn mehrere Nutzerprofile eine Adresse gemeinsam nutzen.
 
 {% alert tip %}
 Vergewissern Sie sich, dass Sie mit den Tools vertraut sind, die Braze für die [Verwaltung von Benutzer-E-Mail-Abonnements]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) und die Ausrichtung von Kampagnen auf Benutzer mit bestimmten Abonnementstatus bietet. Diese Tools sind entscheidend für die Einhaltung von [Anti-Spam-Gesetzen]({{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations).
 {% endalert %}
 
-Wenn Nutzer:innen eine gemeinsame E-Mail-Adresse haben, wird die Aktualisierung eines dieser Nutzer:innen die Änderungen am Abo auf alle diese Nutzer:innen übertragen (bis zu 100 Nutzer:innen).
+Wenn Nutzer:innen eine gemeinsame E-Mail Adresse haben und Sie ein Profil aktualisieren, überträgt Braze die Änderungen am Abo auf alle Nutzer:innen (bis zu 100).
 
 ## Verhalten beim Senden von Nachrichten
 

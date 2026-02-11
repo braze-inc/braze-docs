@@ -60,7 +60,7 @@ First, select the following for each field in the User Update step:
 - **Action:** Update
 - **Key Value:** The promotion code's Liquid code snippet, such as {% raw %}`{% promotion('spring25') %}`{% endraw %}
 
-Second, add the custom attribute (in this example, {% raw %}`{{custom_attribute.${Promo Code}}`{% endraw %}) to a message. The discount code is templated in.
+Second, add the custom attribute (in this example, {% raw %}`{{custom_attribute.${Promo Code}}}`{% endraw %}) to a message. The discount code is templated in.
 
 ## Viewing promotion code usage
 

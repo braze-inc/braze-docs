@@ -1,7 +1,7 @@
 ---
-nav_title: "Targeting von Nutzer:innen"
-article_title: "Targeting von Nutzer:innen"
-page_order: 9
+nav_title: "Zielnutzer:innen"
+article_title: Zielgruppen zusammenstellen
+page_order: 12
 page_type: reference
 description: "In diesem referenzierten Artikel erfahren Sie, wie Sie Ihre Zielgruppe in Ihrer Kampagne und in den Canvas-Editoren ansprechen können."
 tool:
@@ -9,7 +9,7 @@ tool:
     - Canvas
 ---
 
-# Targeting von Nutzer:innen
+# Zielnutzer:innen
 
 > Die Festlegung des Targetings für Ihre Nutzer:innen ist einer der wichtigsten Schritte bei der Erstellung einer Kampagne oder eines Canvas. Wenn Sie verstehen, wie Sie Ihre Zielgruppe auf der Grundlage ihres Verhaltens, ihrer Vorlieben und ihrer demografischen Daten segmentieren können, können Sie Ihr Messaging maßgeschneidert und personalisiert gestalten.
 
@@ -57,7 +57,7 @@ Nehmen wir an, Sie möchten eine In-App-Nachricht nur an Android-Apps senden.
 {: start="2"}
 2\. Gehen Sie in Ihrer Kampagne oder in Canvas zum Schritt **Zielgruppen** und bestätigen Sie, dass Ihr Segment im Abschnitt **Nutzer:innen nach Segmenten** zusammengestellt ist. 
 
-![Der Schritt "Targeting Zielgruppen" mit einem ausgewählten Beispielsegment.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
+![Der Schritt "Zielgruppen" mit einem ausgewählten Beispielsegment.]({% image_buster /assets/img_archive/target_users_by_segment_example.png %})
 
 {% alert note %}
 Dies funktioniert nicht, wenn Sie Ihr Segment im Abschnitt **Zusätzliche Filter** über einen Filter für die Segmentzugehörigkeit hinzufügen. Sie müssen Ihr Segment in **Target Users By Segment** direkt referenzieren, um Ihre Nachricht nur an diese App zuzustellen.
@@ -99,7 +99,7 @@ Braze bietet in der Fußzeile detaillierte Statistiken zu den Zielgruppen der Ka
 
 {% multi_lang_include segments.md section='Differing audience size' %}
 
-![Der Abschnitt "Gesamtbevölkerung" mit geschätzten Zählungen für erreichbare Nutzer:innen in jedem Targeting-Kanal.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
+![Der Abschnitt "Gesamtbevölkerung" mit den geschätzten Zahlen der erreichbaren Nutzer:innen in jedem Targeting-Kanal.]({% image_buster /assets/img_archive/multi_channel_footer.png %})
 
 {% alert note %}
 Die Berechnung der genauen Statistiken kann einige Minuten in Anspruch nehmen. Diese Funktion berechnet die genauen Statistiken nur auf Segmentebene, nicht auf Filter- oder Filtergruppenebene.<br><br>
@@ -113,7 +113,7 @@ Wenn Sie eine Kampagne oder ein Canvas in Braze erstellen, erfolgt das Targeting
 1. **Zielgruppen:** Wer qualifiziert sich
 2. **Eingangskriterien:** Was die Zustellung auslöst
 
-Ordnung ist wichtig: Braze prüft, ob jemand zur Zielgruppe gehört, bevor die Eingabekriterien ausgewertet werden. Wenn sich ein Nutzer:innen zu diesem Zeitpunkt noch nicht für die Zielgruppe qualifiziert hat, wird er die Kampagne oder das Canvas nicht betreten - selbst wenn er später das Eintrittsereignis triggert. Stellen Sie sich die Zielgruppe wie einen Wartesaal vor: Nur Nutzer:innen, die sich bereits im Wartesaal befinden, wenn der Trigger ausgelöst wird, kommen weiter.
+Ordnung ist wichtig: Braze prüft, ob jemand zur Zielgruppe gehört, bevor die Eingabekriterien ausgewertet werden. Wenn sich ein Nutzer:innen zu diesem Zeitpunkt noch nicht für die Zielgruppe qualifiziert hat, wird er die Kampagne oder das Canvas nicht betreten - selbst wenn er später das Eintrittsereignis triggert. Stellen Sie sich die Zielgruppe wie einen Wartesaal vor: Nur Nutzer:innen, die sich bereits im Wartesaal befinden, wenn der Trigger auftritt, können weitergehen.
 
 ### Beispiel 1
 

@@ -13,7 +13,7 @@ search_tag: Partner
 > [Amazon S3](https://aws.amazon.com/s3/) is a highly scalable storage system offered by Amazon Web Services.
 
 {% alert important %}
-If you're switching between cloud storage providers, reach out to your Braze customer success manager for further assistance on setting up and validating your new integration.
+클라우드 스토리지 제공업체 간에 전환하는 경우, 새로운 통합을 설정하고 검증하는 데 대한 추가 지원을 받으려면 Braze 고객 성공 매니저에게 문의하세요.
 {% endalert %}
 
 The Braze and Amazon S3 integration features two integration strategies:
@@ -25,9 +25,9 @@ The Braze and Amazon S3 integration features two integration strategies:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Amazon S3 account | An Amazon S3 account is required to take advantage of this partnership. |
+| Amazon S3 account | 이 파트너십을 이용하려면 Amazon S3 계정이 필요합니다. |
 | Dedicated S3 bucket | Before integrating with Amazon S3, you must create an S3 bucket for your app.<br><br>If you already have an S3 bucket, we still recommend creating a new bucket specifically for Braze so you can limit permissions. Refer to the following instructions on how to create a new bucket. |
-| Currents | In order to export data back into Amazon S3, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+| Currents | 데이터를 Amazon S3로 다시 내보내려면 계정에 [Braze 커런츠가]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) 설정되어 있어야 합니다. 메시지 보관만 설정하는 경우에는 커런츠가 필요하지 않습니다. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 #### Creating a new S3 bucket
@@ -35,9 +35,9 @@ The Braze and Amazon S3 integration features two integration strategies:
 To create a bucket for your app, do the following:
 
 1. Open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**. 
-2. After signing in, select **S3** from the **Storage & Content Delivery** category. 
+2. 로그인한 후 **스토리지 & 콘텐츠 전달** 카테고리에서 **S3를** 선택합니다. 
 3. Select **Create Bucket** on the next screen. 
-4. You'll be prompted to create your bucket and select a region.
+4. 버킷을 만들고 지역을 선택하라는 메시지가 표시됩니다.
 
 {% alert note %}
 Currents does not support buckets with [Object Lock](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html) configured.
@@ -56,17 +56,21 @@ This authentication method generates a secret key and an access key ID that enab
 
 ### Step 1: Create user {#secret-key-1}
 
-To retrieve your access key ID and secret access key, you'll need to [create an IAM user and administrators group in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
+{% alert note %}
+메시지 보관만 설정하는 경우에는 **대시보드 데이터 내보내기** 탭의 단계를 따르세요.
+{% endalert %}
 
-### Step 2: Get credentials {#secret-key-2}
+액세스 키 ID와 비밀 액세스 키를 검색하려면 [AWS에서 IAM 사용자 및 관리자 그룹을 만드세요](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
-After creating a new user, select **Show User Security Credentials** to reveal your access key ID and secret access key. Next, note these credentials somewhere or select the **Download Credentials** button, as you will need to input these into the Braze dashboard later on.
+### 2단계: Get credentials {#secret-key-2}
+
+After creating a new user, select **Show User Security Credentials** to reveal your access key ID and secret access key. 그런 다음 자격 증명을 어딘가에 기록해 두거나 나중에 Braze 대시보드에 입력해야 하므로 **자격 증명 다운로드** 버튼을 선택합니다.
 
 ![]({% image_buster /assets/img_archive/S3_Credentials.png %})
 
-### Step 3: Create policy {#secret-key-3}
+### 3단계: Create policy {#secret-key-3}
 
-Navigate to **Policies** > **Get Started** > **Create Policy** to add permissions for your user. Next, select **Create Your Own Policy**. This will give limited permissions, so Braze can only access the specified buckets. 
+Navigate to **Policies** > **Get Started** > **Create Policy** to add permissions for your user. Next, select **Create Your Own Policy**. 이 권한은 제한된 권한을 부여하므로 Braze는 지정된 버킷에만 액세스할 수 있습니다. 
 
 ![]({% image_buster /assets/img_archive/S3_CreatePolicy.png %})
 
@@ -74,7 +78,11 @@ Navigate to **Policies** > **Get Started** > **Create Policy** to add permission
 Different policies are required for Currents and Dashboard Data Export. `s3:GetObject` is required to allow the Braze backend to perform error handling.
 {% endalert %}
 
-Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Without these permissions the integration will fail a credentials check and not be created.
+Specify a policy name of your choice, and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. 이러한 권한이 없으면 통합이 자격 증명 확인에 실패하여 생성되지 않습니다.
+
+{% alert note %}
+메시지 보관만 설정하는 경우에는 **대시보드 데이터 내보내기** 탭의 코드 스니펫을 사용하세요.
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -123,7 +131,11 @@ After creating a new policy, go to **Users** and select into your specific user.
 
 ![]({% image_buster /assets/img_archive/S3_AttachPolicy.png %})
 
-### Step 5: Link Braze to AWS {#secret-key-5}
+### 5단계: Link Braze to AWS {#secret-key-5}
+
+{% alert note %}
+메시지 보관만 설정하는 경우에는 **대시보드 데이터 내보내기** 탭의 단계를 따르세요.
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -137,17 +149,17 @@ Name your Current. In the **Credentials** section, make sure **AWS Secret Access
 ![]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
 {% alert warning %}
-Keep your AWS access key ID and secret access key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+Keep your AWS access key ID and secret access key up to date. 커넥터의 자격 증명이 만료되면 커넥터는 이벤트 전송을 중지합니다. 이 상태가 **5일** 이상 지속되면 커넥터의 이벤트가 삭제되고 데이터가 영구적으로 손실됩니다.
 {% endalert %}
 
 You can also add the following customization based on your needs:
 
-- **Folder Path:** Defaults to `currents`. If this folder does not exist, Braze will automatically create one for you. 
+- **Folder Path:** Defaults to `currents`. 이 폴더가 없는 경우 Braze에서 자동으로 폴더를 생성합니다. 
 - **Server-Side, At-Rest AES-256 Encryption:** Defaults to OFF and includes the `x-amz-server-side-encryption` header.
 
 Select **Launch Current** to continue.
 
-A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
+알림을 통해 자격 증명이 성공적으로 확인되었는지 여부를 알 수 있습니다. 이제 AWS S3가 Braze 커런츠를 위해 설정되었습니다.
 
 {% endtab %}
 {% tab Dashboard Data Export %}
@@ -162,7 +174,7 @@ On the **AWS Credentials** page, make sure **AWS Secret Access Key** is selected
 You can always retrieve new credentials by navigating to your user, and selecting **Create Access Key** in the **Security Credentials** tab within the AWS Console.
 {% endalert %}
 
-A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.
+알림을 통해 자격 증명이 성공적으로 확인되었는지 여부를 알 수 있습니다. 이제 AWS S3가 Braze 계정에 통합되었습니다.
 
 {% endtab %}
 {% endtabs %}
@@ -182,6 +194,10 @@ Different policies are required for Currents and Dashboard Data Export. `s3:GetO
 {% endalert %}
 
 Open the **JSON** tab and input the following code snippet into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your bucket name. Select **Review Policy** when you're finished.
+
+{% alert note %}
+메시지 보관만 설정하는 경우에는 **대시보드 데이터 내보내기** 탭의 코드 스니펫을 사용하세요.
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -241,8 +257,8 @@ Within the same IAM section of the console, select **Roles** > **Create Role**.
 ![]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
 Retrieve your Braze account ID and external ID from your Braze account:
-- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you will find the identifiers needed to create your role.
-- **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role.
+- **Currents**: In Braze, go to **Partner Integrations** > **Data Export**. Next, select **Create Current** then **Amazon S3 Data Export**. Here you'll find the identifiers needed to create your role.
+- **Dashboard data export**: In Braze, go to **Partner Integrations** > **Technology Partners** and select **Amazon S3**. Here you'll find the identifiers needed to create your role. (메시지 보관만 설정하는 경우에는 여기에서 역할을 만드세요.)
 
 Back on the AWS Console, select **Another AWS Account** as the trusted entity selector type. Provide your Braze account ID, check the **Require external ID** box, and enter the Braze external ID. Select **Next** when complete.
 
@@ -258,9 +274,9 @@ Give the role a name and a description, and select **Create Role**.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
-You should now see your newly created Role on the list.
+이제 목록에 새로 만든 역할이 표시됩니다.
 
-### Step 4: Link to Braze AWS {#role-arn-4}
+### 4단계: Link to Braze AWS {#role-arn-4}
 
 In the AWS Console, find your newly created role in the list. Select the name to open up the details of that role.
 
@@ -271,6 +287,10 @@ Take note of the **Role ARN** at the top of the Role summary page.
 ![]({{site.baseurl}}/assets/img/create_role_6_summary.png)
 
 Return to your Braze account and copy the role ARN into the field provided.
+
+{% alert note %}
+메시지 보관만 설정하는 경우에는 **대시보드 데이터 내보내기** 탭의 단계를 따르세요.
+{% endalert %}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -286,7 +306,7 @@ You can also add the following customization based on your needs:
 - Folder Path (defaults to `currents`)
 - Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the `x-amz-server-side-encryption` header
 
-Select **Launch Current** to continue. A notification will indicate if your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
+Select **Launch Current** to continue. 알림은 자격 증명이 성공적으로 확인되었는지 여부를 나타냅니다. 이제 AWS S3가 Braze 커런츠를 위해 설정되었습니다.
 
 {% alert important %}
 If you receive an "S3 credentials are invalid" error, this may be due to integrating too quickly after creating a role in AWS. Wait and try again.
@@ -305,22 +325,28 @@ On the **AWS Credentials** page, make sure the **AWS Role ARN** radio button is 
 You can always retrieve new credentials by navigating to your user, and selecting **Create Access Key** on the **Security Credentials** tab within the AWS Console.
 {% endalert %}
 
-A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.
+알림을 통해 자격 증명이 성공적으로 확인되었는지 여부를 알 수 있습니다. 이제 AWS S3가 Braze 계정에 통합되었습니다.
 
 {% endtab %}
 {% endtabs %}
 
 ## Export behavior
 
-Users that have integrated a cloud data storage solution, and are trying to export APIs, dashboard reports, or CSV reports will experience the following:
+클라우드 데이터 스토리지 솔루션을 통합하고 API, 대시보드 보고서 또는 CSV 보고서를 내보내는 사용자는 다음과 같은 경험을 하게 됩니다:
 
-- All API exports will not return a download URL in the response body and must be retrieved through data storage.
-- All dashboard reports and CSV reports will be sent to the users email for download (no storage permissions required) and backed up on Data Storage. 
+- 모든 API 내보내기는 응답 본문에서 다운로드 URL을 반환하지 않으며 데이터 저장소를 통해 검색해야 합니다.
+- 모든 대시보드 보고서와 CSV 보고서는 다운로드할 수 있도록 사용자의 이메일로 전송되며(저장 권한 필요 없음), 데이터 스토리지에 백업됩니다.
+
+{% alert important %}
+**JSON 형식 요구 사항**: JSON 내보내기의 경우 Braze는 각 줄에 별도의 JSON 개체가 포함되는 JSONL(줄 바꿈으로 구분된 JSON) 형식을 사용합니다. 이 형식은 단일 JSON 배열 또는 오브젝트인 표준 JSON과 다릅니다. 내보낸 파일의 각 줄은 유효한 JSON 객체이지만 파일 전체가 하나의 유효한 JSON 설명서가 아닙니다. 이러한 파일을 처리할 때는 전체 파일을 하나의 JSON 설명서로 구문 분석하지 말고 각 줄을 별도의 JSON 객체로 개별적으로 구문 분석하세요.
+
+커런츠 내보내기는 JSON이 아닌 Apache Avro 형식(`.avro` 파일)을 사용합니다. 이 JSON 형식 요구 사항은 대시보드 데이터 내보내기 및 API 내보내기에 적용됩니다.
+{% endalert %}
 
 ## Multiple connectors
 
-If you intend to create more than one Currents connector to send to your S3 bucket, you will be able to use the same credentials, but must specify a different folder path for each. These can be created in the same workspace, or split and created within multiple workspaces. You also have the option of creating a single policy for each integration, or create one policy that covers both integrations. 
+S3 버킷으로 보낼 커런츠 커넥터를 두 개 이상 만들려는 경우 동일한 자격 증명을 사용할 수 있지만 각각에 대해 다른 폴더 경로를 지정해야 합니다. 동일한 작업 공간에서 만들거나 여러 작업 공간에서 분할하여 만들 수 있습니다. 각 통합에 대해 단일 정책을 만들거나 두 통합을 모두 포함하는 하나의 정책을 만들 수도 있습니다. 
 
-If you plan on using the same S3 bucket for both Currents and data exports, you will need to create two separate policies as each integration requires different permissions.
+커런츠와 데이터 내보내기 모두에 동일한 S3 버킷을 사용하려는 경우, 각 통합에 서로 다른 권한이 필요하므로 두 개의 별도 정책을 만들어야 합니다.
 
 

@@ -29,7 +29,7 @@ Ab macOS 13 können Sie auf bestimmten Geräten Push-Benachrichtigungen mithilfe
 
 - Wenn Nutzer:innen Ihre App auf einem anderen Gerät installieren, wird ein weiteres Token erstellt und auf dieselbe Weise erfasst. 
 - Wenn Nutzer:innen Ihre App neu installieren, wird ein neues Token generiert und an Braze übergeben. Das ursprüngliche Token kann jedoch weiterhin von APNs und Braze als gültig protokolliert werden.
-- Wenn Nutzer:innen Ihre App deinstallieren, wird Braze nicht sofort darüber informiert und das Token erscheint weiterhin als gültig, bis es von APNs zurückgezogen wird. 
+- Wenn Nutzer:innen Ihre App deinstallieren, wird Braze nicht sofort darüber benachrichtigt und das Token erscheint weiterhin als gültig, bis es von APNs zurückgezogen wird. 
 - Irgendwann werden die APNs alte Token aus dem Verkehr ziehen. Braze hat hierüber keine Kontrolle oder Sicht. 
 
 ### Schritt 3: Starten Sie eine Braze-Push-Kampagne
@@ -139,7 +139,7 @@ Bei iOS-Versionen, die Push nicht über das Framework `UserNotifications` integr
 
 Das Folgende deutet auf ein Problem mit der Push-Registrierung hin oder darauf, dass das Token des Benutzers von den APNs nach dem Push-Vorgang als ungültig an Braze zurückgegeben wurde:
 
-![Ein Benutzerprofil, das die Kontakteinstellungen eines Benutzers anzeigt. Unter Push werden "Keine Apps" angezeigt.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
+![Ein Benutzerprofil, das die Kontakteinstellungen eines Benutzers anzeigt. Unter Push wird "Keine Apps" angezeigt.]({% image_buster /assets/img_archive/registration_problem.png %}){: style="max-width:50%"}
 
 ## Nicht protokollierte Push-Klicks {#push-clicks-not-logged}
 

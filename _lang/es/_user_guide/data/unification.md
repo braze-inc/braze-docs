@@ -10,13 +10,13 @@ description: "Esta sección incluye artículos relacionados con la unificación 
 
 guide_featured_title: "Artículos de sección"
 guide_featured_list:
-  - name: Ingesta de datos en la nube
+  - name: Ingesta de datos de Cloud
     link: /docs/user_guide/data/unification/cloud_ingestion/
     image: /assets/img/braze_icons/upload-cloud-01.svg
   - name: Transformación de datos
     link: /docs/user_guide/data/unification/data_transformation/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Recopilación de datos de usuario
+  - name: Recogida de datos de los usuarios
     link: /docs/user_guide/data/unification/user_data_collection/
     image: /assets/img/braze_icons/users-01.svg
   - name: Crear una fórmula
@@ -25,7 +25,7 @@ guide_featured_list:
 
 guide_menu_title2: "Related articles"
 guide_menu_list2:
-  - name: API REST Braze
+  - name: API REST de Braze
     link: /docs/api/home/
     image: /assets/img/braze_icons/code-02.svg
   - name: Shopify

@@ -1,6 +1,6 @@
 ---
 nav_title: 右から左に読むメッセージ
-article_title: 右から左へのメッセージを作成する
+article_title: 右から左へのメッセージの作成
 page_order: 1
 alias: /right_to_left_messages/
 page_type: reference

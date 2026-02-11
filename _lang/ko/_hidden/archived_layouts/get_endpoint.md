@@ -1,5 +1,5 @@
 ---
-nav_title: "가져오기: [엔드포인트 이름]"
+nav_title: "GET: [엔드포인트 이름]"
 article_title: "레이아웃 예시: 가져오기: [엔드포인트 이름]"
 search_tag: Endpoint
 page_order: 1
@@ -12,7 +12,7 @@ noindex: true
 #ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
-# 쿼리 또는 목록 [항목 엔드포인트 "Gets"]
+# 쿼리 또는 목록 [항목 엔드포인트 "Gets"]]
 
 {% apimethod get %}
 /sms/invalid_phone_numbers
@@ -47,7 +47,7 @@ This is the description of the endpoint. API descriptions usually start with "Us
 `start_date` 와 `end_date` 또는 `phone_numbers` 중 하나를 제공해야 합니다. `start_date`, `end_date`, `phone_numbers` 세 가지를 모두 제공하면 주어진 전화번호를 우선시하고 날짜 범위는 무시합니다.
 {% endalert %}
 
-## 요청 예시
+## 예시 요청
 
 <!--The following example demonstrates a request that will pull a list of phone numbers that have been deemed invalid via the API:-->
 ```
@@ -59,8 +59,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 
 <!-- An example response that defines the different variables returned-->
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

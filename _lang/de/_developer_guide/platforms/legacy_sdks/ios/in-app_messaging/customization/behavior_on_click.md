@@ -1,6 +1,6 @@
 ---
-nav_title: Benutzerdefiniertes On-Click-Verhalten
-article_title: Anpassen des On-Click-Verhaltens von In-App-Nachrichten für iOS
+nav_title: Benutzerdefiniertes Verhalten beim Klicken
+article_title: Anpassen des On-Click-Verhaltens für In-App-Nachrichten für iOS
 platform: iOS
 page_order: 5
 description: "Dieser Referenzartikel behandelt das benutzerdefinierte On-Click-Verhalten bei In-App-Nachrichten für Ihre iOS-Anwendung."
@@ -23,7 +23,7 @@ Die Eigenschaft `inAppMessageClickActionType` von `ABKInAppMessage` definiert da
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 inAppMessage.setInAppMessageClickAction(clickActionType: clickActionType, withURI: uri)
@@ -56,7 +56,7 @@ Wenn auf eine In-App-Nachricht geklickt wird, wird die folgende Delegate-Methode
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
@@ -82,7 +82,7 @@ Für Klicks auf In-App-Nachrichten-Buttons und HTML-In-App-Nachrichten-Buttons (
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 func onInAppMessageButtonClicked(inAppMessage: ABKInAppMessageImmersive!,
@@ -113,7 +113,7 @@ if ([inAppMessage isKindOfClass:[ABKInAppMessageImmersive class]]) {
 ```
 
 {% endtab %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 if inAppMessage is ABKInAppMessageImmersive {

@@ -14,7 +14,7 @@ Ten en cuenta que los mensajes dentro de la aplicación que contengan botones in
 
 El objeto de mensaje dentro de la aplicación `slideup` extiende [`InAppMessageBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html).
 
-![Un mensaje dentro de la aplicación que se desliza desde la parte inferior de la pantalla de un teléfono y que muestra "Los humanos somos complicados". La interacción personalizada no debería serlo". En el fondo se muestra el mismo mensaje dentro de la aplicación en la esquina inferior derecha de una página Web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Un mensaje dentro de la aplicación que se desliza desde la parte inferior de la pantalla de un teléfono y que muestra "Los humanos somos complicados". La interacción personalizada no debería serlo". En segundo plano aparece el mismo mensaje dentro de la aplicación en la esquina inferior derecha de una página web.]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 {% endsubtab %}
 {% subtab Modal %}
@@ -30,7 +30,7 @@ Este tipo de mensaje es una subclase de [`InAppMessageImmersiveBase`](https://br
 
 Este tipo de mensaje amplía [`InAppMessageImmersiveBase`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html)ofreciéndote la posibilidad de añadir funciones personalizadas a tus mensajes dentro de la aplicación generados localmente.
 
-![Un mensaje dentro de la aplicación a pantalla completa que se muestra en toda la pantalla del teléfono y que dice: "Los humanos somos complicados. La interacción personalizada no debería serlo". En el fondo se muestra el mismo mensaje dentro de la aplicación en gran parte en el centro de una página web.]({% image_buster /assets/img_archive/In-App_Full.png %})
+![Un mensaje dentro de la aplicación a pantalla completa que se muestra en toda la pantalla del teléfono y que dice: "Los humanos somos complicados. La interacción personalizada no debería serlo". En el fondo se muestra el mismo mensaje dentro de la aplicación, en gran parte en el centro de una página web.]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 {% endsubtab %}
 {% subtab Custom HTML %}
@@ -38,9 +38,13 @@ Este tipo de mensaje amplía [`InAppMessageImmersiveBase`](https://braze-inc.git
 
 Este tipo de mensaje implementa [`IInAppMessageHtml`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html)que es una subclase de [`IInAppMessage`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html).
 
+{% alert note %}
+En Android, los enlaces configurados con `target="_blank"` en mensajes dentro de la aplicación HTML personalizados se abren en el navegador web predeterminado del dispositivo.
+{% endalert %}
+
 Los mensajes dentro de la aplicación Android admiten una interfaz JavaScript `brazeBridge` para llamar a métodos del SDK de Android Braze desde dentro de tu HTML, consulta nuestra página de <a href="{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages#javascript-bridge/">puente JavaScript</a> para más detalles.
 
-![Un mensaje HTML dentro de la aplicación con un carrusel de contenido y botones interactivos.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Un mensaje HTML dentro de la aplicación con un carrusel de contenidos y botones interactivos.]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 {% alert important %}
 Actualmente no admitimos la visualización de mensajes HTML personalizados dentro de la aplicación en un iFrame en las plataformas iOS y Android.

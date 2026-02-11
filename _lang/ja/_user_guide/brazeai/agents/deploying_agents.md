@@ -1,5 +1,5 @@
 ---
-nav_title: エージェントのデプロイ
+nav_title: エージェントの展開
 article_title: カスタムエージェントのデプロイ
 description: "カスタムエージェントを作成した後にBraze で使用するためのカスタムエージェントを配置する方法について説明します。"
 alias: /deploying-agents/
@@ -70,11 +70,34 @@ Braze代理店は現在ベータ版である。始めるには、顧客のサク
 
 エージェントを使用するカタログのフィールドを更新および変更できます。列からエージェントを削除するには、**Apply AI agent** を選択解除します。これにより、列は非エージェント列に戻り、フィールドは、エージェントアプリが最後にカタログで実行されたときの最新の値を保持します。
 
+カタログの循環参照はサポートされていません。つまり、次のような状況は発生しません。
+
+- Agentic Column 1では、Agentic Column 2を入力として使用します
+- Agentic Column 2では、Agentic Column 1を入力として使用します
+
 ![カタログ フィールドの場合、"Apply AI agent"を選択します。]({% image_buster /assets/img/ai_agent/edit_agent_column.png %}){: style="max-width:80%;"}
 
 {% alert note %}
-ベータ期間中、カタログエージェントは1 行あたり最大10KB の入力値の処理に制限され、カタログの最初の10,000 行のみを更新します。
+ベータ期間中、カタログエージェントは、1 行につき最大25KB の入力値の処理に制限されます。
 {% endalert %}
+
+#### レスポンスフィールドの定義
+
+エージェントが出力形式として[フィールド s]({{site.baseurl}}/user_guide/brazeai/agents/creating_agents/#fields)を使用している場合は、**レスポンスフィールド**のエージェントから対応するフィールドを選択してカタログ フィールドで使用できます。 
+
+たとえば、次のフィールドs を含むカタログに商品説明を追加して、出力形式を構成するエージェントがあるとします。
+
+| フィールド名 | 値 |
+| --- | --- |
+| **記述** | テキスト |
+| **confidence_score_out_of_ten** | 数値 |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+**product_description** という名前のフィールドをカタログに追加し、**description** を**Response フィールド** として選択して、列にエージェントの説明を入力できます。
+
+!["Descriptor"エージェントアプリが嘘のフィールド"product_description"。"description"出力がレスポンスフィールドとして選択されます。]({% image_buster /assets/img/ai_agent/response_field.png %}){: style="max-width:80%;"}
+
+また、**Edit Item**を選択し、エージェント生成の説明を編集で更新することで、エージェント生成のセルを手動で上書きすることもできます。編集内容をエージェント生成の説明に戻すには、セルのリフレッシュ記号を選択します。
 
 ### カタログsの異常処理  
 

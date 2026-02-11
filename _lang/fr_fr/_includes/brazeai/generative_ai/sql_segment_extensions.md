@@ -15,7 +15,7 @@
 Vous avez le choix entre deux types d'éditeurs SQL lors de la création de votre extension de segment SQL : l'éditeur SQL et l'éditeur SQL incrémentiel.
 
 - **Actualiser complètement :** À chaque fois que votre segment est actualisé, Braze interroge toutes les données disponibles pour mettre à jour votre segment, ce qui utilise plus de crédits que les actualisations incrémentielles. Les extensions à actualisation complète peuvent régénérer automatiquement l’adhésion tous les jours, mais ne peuvent pas être actualisées à l'aide de l'actualisation incrémentielle.
-- **Actualisation progressive :** L'actualisation incrémentale ne calcule que les données des deux derniers jours, ce qui est plus économique et consomme moins de crédits à chaque fois. Lorsque vous créez un segment SQL à actualisation incrémentielle, vous pouvez le configurer pour qu'il régénère automatiquement l'adhésion tous les jours. Cela vous permet de configurer votre segment pour actualiser automatiquement les membres quotidiennement, ce qui permet de réduire le coût de l'actualisation quotidienne des données pour les extensions de segments SQL.
+- **Actualisation progressive :** L'actualisation incrémentielle est un moyen plus économique de configurer votre requête, bien que la configuration implique quelques [étapes](#step-2-write-your-sql) supplémentaires. Si vous pouvez effectuer ces étapes supplémentaires lors de la construction de votre segmentation, il vaut la peine de choisir cette option car votre requête sera exécutée en utilisant moins de crédits. 
 - **Générateur d'intelligence artificielle SQL :** Le générateur SQL de l'intelligence artificielle vous permet de rédiger une invite en langage clair et la transforme en requêtes SQL pour votre segmentation. C'est un moyen rapide de commencer sans avoir à écrire le code SQL vous-même.
 
 {% alert tip %}
@@ -23,7 +23,7 @@ Vous pouvez effectuer une actualisation complète manuelle sur tous les segments
 {% endalert %}
 
 {% tabs local %}
-{% tab Actualisation complète %}
+{% tab Full refresh %}
 
 Pour créer une extension de segments SQL entièrement actualisée :
 
@@ -31,13 +31,13 @@ Pour créer une extension de segments SQL entièrement actualisée :
 2. Sélectionnez **Créer une nouvelle extension**, puis sélectionnez **Actualiser complètement**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3. Ajoutez un nom pour votre Segment Extension et saisissez votre SQL. Reportez-vous à l'[étape 2](#step-2-write-your-sql) pour connaître les exigences et les ressources.<br><br>
-   ![Éditeur SQL montrant un exemple d'extension de segmentation SQL.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
+   ![L'éditeur SQL montrant un exemple d'extension de segmentation SQL.]({% image_buster /assets/img_archive/sql_segments_editor.png %}){: style="max-width:60%" }<br><br>
 4. Enregistrer votre Segment Extension.
 
 {% endtab %}
-{% tab Actualisation incrémentielle %}
+{% tab Incremental refresh %}
 
-L'éditeur SQL d'actualisation incrémentale permet à l'utilisateur d'effectuer des requêtes agrégées par date pour un événement situé dans un laps de temps donné. Pour créer une extension de segment SQL à actualisation incrémentielle :
+Pour créer une extension de segment SQL à actualisation incrémentielle :
 
 1. Sélectionnez **Audience** > **Extensions de segments**.
 
@@ -49,15 +49,15 @@ Si vous utilisez l'[ancienne navigation]({{site.baseurl}}/user_guide/administrat
 2\. Sélectionnez **Créer une nouvelle extension** et sélectionnez **Actualiser par incréments**.<br><br>
    ![]({% image_buster /assets/img/segment/segment_extension_modal.png %}){: style="max-width:50%" }<br><br>
 3\. Ajoutez un nom pour votre Segment Extension et saisissez votre SQL. Pour connaître les exigences et les ressources, reportez-vous à la section [Écriture de code SQL](#writing-sql).<br><br>
-   ![Éditeur SQL montrant un exemple d'extension de segments SQL à actualisation incrémentielle.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
+   ![L'éditeur SQL montrant un exemple d'extension incrémentielle de segments SQL.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:60%" }<br><br>
 4\. Si vous le souhaitez, sélectionnez **Regénérer l'extension quotidiennement**.<br><br>
-   ![Case à cocher pour regénérer l'extension quotidiennement.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
+   ![Case à cocher pour régénérer l'extension quotidiennement.]({% image_buster /assets/img_archive/sql_segments_regenerate.png %}){: style="max-width:60%" }<br><br>
    Lorsque cette option est sélectionnée, Braze met automatiquement à jour la segmentation chaque jour. Cela signifie que chaque jour à minuit dans le fuseau horaire de votre entreprise (avec un retard potentiel d'une heure), Braze vérifiera s'il y a de nouveaux utilisateurs dans votre segmentation et les ajoutera automatiquement à votre segmentation. Si une extension de segment n'a pas été utilisée depuis 7 jours, Braze interrompt automatiquement la regénération quotidienne. Une extension de segments inutilisée est une extension qui ne fait pas partie d'une campagne ou d'un Canvas (la campagne ou le Canvas n'a pas besoin d'être actif pour que l'extension soit considérée comme "utilisée").<br><br>
 5\. Enregistrer votre Segment Extension.
 
 {% endtab %}
 
-{% tab Générateur de SQL pour l'intelligence artificielle %}
+{% tab AI SQL Generator %}
 
 {% alert note %}
 Le générateur SQL basé sur l’IA est actuellement disponible en tant que fonctionnalité bêta. Si vous souhaitez participer à cet essai bêta, contactez votre gestionnaire de la satisfaction client.
@@ -65,7 +65,7 @@ Le générateur SQL basé sur l’IA est actuellement disponible en tant que fon
 
 Le générateur SQL basé sur l’IA s'appuie sur [GPT](https://openai.com/gpt-4) d’OpenAI pour recommander du code SQL pour votre segment SQL.
 
-![Générateur SQL basé sur l’IA, avec l'invite « Utilisateurs ayant reçu une notification au cours du mois passé »]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
+![Générateur d'intelligence artificielle avec l'invite "Utilisateurs ayant reçu une notification le mois dernier".]({% image_buster /assets/img/ai_sql_generator.png %}){: style="max-width:70%;"}
 
 Pour utiliser le générateur SQL basé sur l’IA, procédez comme suit :
 
@@ -101,7 +101,7 @@ Notez que les tables disponibles pour l'interrogation ne contiennent que des don
 {% endalert %} 
 
 {% tabs %}
-{% tab Éditeur SQL %}
+{% tab SQL Editor %}
 
 Votre SQL doit de surcroit respecter les règles suivantes :
 
@@ -122,24 +122,24 @@ En outre, votre requête SQL standard doit respecter les règles suivantes :
 
 - Vous ne pouvez pas utiliser les déclarations `DECLARE`.
 {% endtab %}
-{% tab Éditeur SQL incrémental %}
+{% tab Incremental SQL Editor %}
 
 Toutes les requêtes d'actualisation incrémentale se composent de deux parties : une requête et les détails du schéma.
 
 1. Dans l'éditeur, écrivez une requête qui sélectionne les `user_id` dans la table de votre choix.
 2. Ajoutez des détails sur le schéma en sélectionnant un **opérateur**, un **nombre de fois** et une **période de temps** dans les champs situés au-dessus de l'éditeur. La requête vérifiera si la somme de la colonne agrégée remplit une certaine condition spécifiée par les marqueurs substitutifs {% raw %}`{{operator}}` et `{{number of times}}`{% endraw %}. Le fonctionnement est similaire à celui du processus de création des extensions de segments classiques.<br><br>
    - **Opérateur :** Indiquez si l'événement s'est produit plus de fois, moins de fois ou autant de fois qu’un nombre d'occurrences donné.<br>
-   ![Champ opérateur avec "Plus de" sélectionné.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
+   ![Champ de l'opérateur avec "Plus de" sélectionné.]({% image_buster /assets/img_archive/sql_segments_operator.png %})<br><br>
    - **Nombre de fois :** Combien de fois souhaitez-vous évaluer l'événement par rapport à l'opérateur.<br>
-   ![Nombre de fois où "5" a été saisi.]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
+   ![Nombre de fois où le chiffre "5" a été saisi.]({% image_buster /assets/img_archive/sql_segments_times.png %})<br><br>
    - **Période :** Nombre de jours, de 1 à 730, pendant lesquels vous souhaitez vérifier les instances de l'événement. Cette période se réfère aux jours passés par rapport au jour actuel. L'exemple suivant présente une requête pour les utilisateurs qui ont effectué l'événement plus de 5 fois au cours des 365 derniers jours.<br>
    ![Champ de la période de temps avec "365" saisi.]({% image_buster /assets/img_archive/sql_segments_period.png %})
 
 Dans l'exemple suivant, le segment obtenu contiendra les utilisateurs qui ont effectué l'événement `favorited` plus de 3 fois au cours des 30 derniers jours, après une date spécifiée.
 
-![Éditeur SQL montrant un exemple d'extension de segments SQL à actualisation incrémentielle.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
+![L'éditeur SQL montrant un exemple d'extension incrémentielle de segments SQL.]({% image_buster /assets/img_archive/sql_segments_editor_incremental.png %}){: style="max-width:65%" }
 
-![Aperçu SQL d'une extension de segment SQL à actualisation incrémentielle.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
+![Aperçu SQL d'une extension de segments incrémentale.]({% image_buster /assets/img_archive/sql_segments_incremental_preview.png %}){: style="max-width:85%" }
 
 {% alert tip %}
 Les segments à actualisation incrémentielle prennent en compte les événements tardifs, c'est-à-dire les événements survenus il y a plus de 2 jours (par exemple, les événements SDK qui n'étaient pas envoyés au moment où ils ont été capturés).
@@ -186,7 +186,7 @@ Par exemple, pour cibler les utilisateurs qui ont effectué moins de trois achat
 À moins que vous ne visiez spécifiquement à cibler les utilisateurs n'ayant aucun événement, vous n'aurez pas besoin d'inverser SQL. Si l'option **Inverser SQL** est sélectionnée, confirmez que la fonctionnalité est nécessaire et que la segmentation correspond à l'audience souhaitée. Par exemple, si une requête cible les utilisateurs ayant au moins un événement, elle ne ciblera que les utilisateurs ayant zéro événement lorsqu'elle est inversée.
 {% endalert %}
 
-![Extension de segmentation nommée "A cliqué sur 1 à 4 e-mails au cours des 30 derniers jours" avec l'option d'inversion de SQL sélectionnée.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
+![Extension de segments nommée "A cliqué sur 1 à 4 e-mails au cours des 30 derniers jours" avec l'option d'inversion de SQL sélectionnée.]({% image_buster /assets/img_archive/sql_segment_invert_sql.png %}){: style="max-width:90%;"}
 
 ## Actualiser l’effectif du segment
 
@@ -202,7 +202,7 @@ Sur la page **Extensions de segments**, les segments générés à l'aide de SQL
 
 Sélectionnez une extension de segment SQL pour voir où l'extension est utilisée, archiver l'extension ou [actualiser manuellement l’appartenance à un segment](#refreshing-segment-membership).
 
-![Section de l'éditeur SQL consacrée à l'envoi de messages et montrant où le segment de message est utilisé.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
+![Section Utilisation des messages de l'éditeur SQL montrant où le segment de message est utilisé.]({% image_buster /assets/img_archive/sql_segments_usage.png %}){: style="max-width:70%;"}
 
 ### Désigner les paramètres d'actualisation
 
@@ -222,7 +222,7 @@ Pour économiser des crédits, affichez un aperçu de votre requête pour vous a
 
 Vos crédits seront rétablis à 5 le premier de chaque mois à 12 heures UTC. Vous pouvez suivre l'utilisation de votre crédit tout au long du mois dans le panneau d'utilisation des crédits. Dans la page **Extensions de segments**, cliquez sur <i class="fa-solid fa-chart-column"></i> **View SQL Credit Usage.**
 
-![Panneau "SQL Credit Usage" dans la page "SQL Segment Extensions"]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
+![Panneau Utilisation des crédits SQL dans la page Extensions de segments SQL]({% image_buster /assets/img_archive/sql_segments_credits.png %}){: style="max-width:60%"}
 
 Lorsque vos crédits atteignent zéro, il se produit ce qui suit :
 

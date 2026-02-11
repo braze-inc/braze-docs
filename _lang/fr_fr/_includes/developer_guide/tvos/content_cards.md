@@ -24,7 +24,7 @@ Dans les paramètres de votre application, sélectionnez votre nouvelle appli tv
 
 ![ALT_TEXT]({% image_buster /assets/img/tvos1.png %}){: style="width:70%"}
 
-### Étape 3 : Intégrer BrazeKit
+### Étape 3 : Intégrer BrazeKit
 
 Utilisez la clé API de votre application pour intégrer le [SDK Braze Swift](https://github.com/braze-inc/braze-swift-sdk) à votre projet tvOS dans Xcode. Il vous suffit d'intégrer BrazeKit à partir du SDK Swift de Braze.
 

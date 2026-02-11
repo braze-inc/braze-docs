@@ -1,6 +1,6 @@
 ---
 nav_title: Braze情報のエクスポート
-article_title: Braze データのエクスポート
+article_title: Braze情報のエクスポート
 page_order: 6
 layout: dev_guide
 guide_top_header: "Braze データのエクスポート"
@@ -56,7 +56,7 @@ guide_menu_list2:
   - name: Braze Currents
     link: /docs/user_guide/data/braze_currents/
     image: /assets/img/braze_icons/database-01.svg
-  - name: Currents の設定
+  - name: Currentsの設定
     link: /docs/user_guide/data/braze_currents/setting_up_currents/
     image: /assets/img/braze_icons/building-01.svg
   - name: Braze で Currents を使用する方法

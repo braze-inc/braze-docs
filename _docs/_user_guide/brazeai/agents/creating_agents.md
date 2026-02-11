@@ -69,7 +69,7 @@ This is the simplest option, with no extra setup required. Braze provides access
 
 ### Option 2: Bring your own API key
 
-With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, costs are billed directly through your provider, not from Braze.
+With this option, you can connect your Braze account with providers like OpenAI, Anthropic, AWS Bedrock, or Google Gemini. If you bring your own API key from an LLM provider, token costs are billed directly through your provider, not from Braze.
 
 {% alert important %}
 We recommend routinely testing the most recent models, as legacy models may be discontinued or deprecated after a few months.
@@ -82,6 +82,10 @@ To set this up:
 3. Select **Save**.
 
 Then, you can return to your agent and select your model.
+
+{% alert important %}
+When you use a Braze-provided LLM, the providers of such a model will be acting as Braze Sub-processors, subject to the terms of the Data Processing Addendum (DPA) between you and Braze. If you choose to bring your own API key, the provider of your LLM subscription is considered a Third Party Provider under the contract between you and Braze.  
+{% endalert %}
 
 ## Writing instructions
 
@@ -156,7 +160,10 @@ For more details on prompting best practices, refer to guides from the following
 
 ### Output format
 
-Use the **Output Format** field to organize and define the agent's output by manually structuring fields or using JSON.
+Use the **Output Format** field to organize and define the agent's output by manually structuring fields or using JSON. 
+
+- **Fields:** A no-code way to enforce an agent output that you can use consistently. 
+- **JSON:** A code approach to creating a precise output format, where you can nest variables and objects within the JSON schema.
 
 #### Fields
 

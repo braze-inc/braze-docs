@@ -1,6 +1,6 @@
 ---
 nav_title: Brazeテンプレートを使う
-article_title: Braze テンプレートの使用
+article_title: Brazeテンプレートを使う
 page_order: 2
 layout: dev_guide
 guide_top_header: "Braze テンプレートの使用"

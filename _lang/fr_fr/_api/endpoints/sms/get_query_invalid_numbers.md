@@ -34,7 +34,7 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 | `limit` | Facultatif | Entier | Champ facultatif pour limiter le nombre de résultats renvoyés. Par défaut à 100, le maximum est 500. |
 | `offset` | Facultatif | Entier | Point de départ facultatif dans la liste où récupérer les informations. |
 | `phone_numbers` | Facultatif <br>(voir la note) | Tableau de chaînes de caractères au format e.164  | S’il est fourni, nous renverrons le numéro de téléphone s’il s’avère non valide. |
-| `reason` | Facultatif <br>(voir la note) | Chaîne de caractères | Les valeurs disponibles sont "provider_error" (l'erreur du fournisseur indique que le téléphone ne peut pas recevoir de SMS) ou "deactivated" (le numéro de téléphone a été désactivé). En cas d'omission, tous les motifs sont renvoyés. |
+| `reason` | Facultatif <br>(voir la note) | Chaîne de caractères | Les valeurs disponibles sont "provider_error" (une erreur de l'opérateur indique que le téléphone ne peut pas recevoir de SMS) ou "désactivé" (le numéro de téléphone a été désactivé). En cas d'omission, tous les motifs sont renvoyés. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% alert note %}
@@ -53,8 +53,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 Les entrées sont répertoriées par ordre décroissant.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "sms": [
     {

@@ -7,7 +7,7 @@ description: "In diesem referenzierten Artikel erfahren Sie, wie Sie Daten aus S
 
 ---
 
-# Exportieren von Segmentdaten nach CSV
+# Daten für Segmente nach CSV exportieren
 
 > Auf dieser Seite erfahren Sie, wie Sie einen CSV-Export von Nutzer:innen eines Segments anfragen können und welche Daten im Export enthalten sind.
 

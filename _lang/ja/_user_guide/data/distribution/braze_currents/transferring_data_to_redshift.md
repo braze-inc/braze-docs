@@ -1,5 +1,5 @@
 ---
-nav_title: Redshift へのデータ転送
+nav_title: データをRedshiftに転送する
 article_title: Redshift へのデータ転送
 page_order: 8
 page_type: tutorial
@@ -8,7 +8,7 @@ tool: Currents
 
 ---
 
-# Redshift へのデータ転送
+# データをRedshiftに転送する
 
 > [Amazon Redshift](https://aws.amazon.com/redshift/) は、Amazon S3 と並んでAmazon Web Services 上で動作する、評判の良いデータウェアハウスです。CurrentsのBrazeデータは、Redshiftに直接転送できるように構造化されている。
 

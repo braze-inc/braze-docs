@@ -28,7 +28,7 @@ Benutzerdefinierte Ereignisse werden protokolliert, wenn `actionType` auf `logEv
 
 Um zu beginnen, erstellen Sie einen Trigger, der nach dem "event name" namens `played song` sucht.
 
-![Ein angepasster Trigger im Google Tag Manager, der für einige Events ausgelöst wird, wenn der "event name" "played song" lautet.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
+![Ein angepasster Trigger im Google Tag Manager:in, der für einige Events triggert, wenn "Ereignisname" gleich "abgespielter Song" ist.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %})
 
 Als Nächstes erstellen Sie ein neues Tag ("Funktionsaufruf") und geben den Klassenpfad Ihres [Custom Tag Provider](#adding-ios-google-tag-provider) ein, der später in diesem Artikel beschrieben wird. 
 
@@ -42,13 +42,13 @@ Wenn Sie ein angepasstes Event senden, setzen Sie `actionType` auf `logEvent` un
 Der angepasste Tag-Anbieter in unserem Beispiel verwendet diese Schlüssel, um zu bestimmen, welche Aktion er durchführen und welchen Event-Namen er an Braze senden soll, wenn er Daten vom Google Tag Manager erhält.
 {% endalert %}
 
-![Ein Tag in Google Tag Manager mit Klassenpfad und Schlüssel-Wert-Paar-Feldern. Dieses Tag ist so eingestellt, dass es mit dem zuvor erstellten Trigger "played song" ausgelöst wird.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
+![Ein Tag in Google Tag Manager mit Klassenpfad und Schlüssel-Wert-Paar-Feldern. Dieser Tag ist so eingestellt, dass er mit dem zuvor erstellten Trigger "Gespielter Song" triggert.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %})
 
 Sie können dem Tag auch zusätzliche Schlüssel-Wert-Paar-Argumente hinzufügen, die als Eigenschaften des angepassten Events an Braze gesendet werden. `eventName` und `actionType` werden für angepasste Event-Eigenschaften nicht ignoriert. Im folgenden Beispiel-Tag übergeben wir `genre`, das über eine Tag-Variable im Google Tag Manager definiert wurde und aus dem angepassten Event stammt, das wir in unserer App protokolliert haben.
 
 Die Event-Eigenschaft `genre` wird als Variable "Firebase - Event Parameter" an Google Tag Manager gesendet, da Google Tag Manager für iOS Firebase als Datenebene verwendet.
 
-![Eine Variable im Google Tag Manager, bei der "genre" als Event-Parameter für das Tag "Braze - Played Song Event" hinzugefügt wird.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
+![Eine Variable im Google Tag Manager, bei der "genre" als Ereignisparameter für den Tag "Braze - Played Song Event" hinzugefügt wird.]({% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %})
 
 Wenn ein Benutzer einen Song in unserer App abspielt, protokollieren wir ein Ereignis über Firebase und den Google Tag Manager unter Verwendung des Firebase-Analytics-Ereignisnamens, der mit dem Auslösernamen unseres Tags übereinstimmt: `played song`:
 

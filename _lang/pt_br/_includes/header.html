@@ -15,7 +15,7 @@ function OptanonWrapper() { }
 
 <header id="header_nav" >
 
-  <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="Navegação do cabeçalho" title="Navegação do cabeçalho">
+  <nav class="navbar navbar-expand-md  flex-column-md flex-md-row navbar-dark" aria-label="Navegação no cabeçalho" title="Navegação no cabeçalho">
     <div id="header_wrapper">
       <div id="nav_logo">
            <a id="logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-white.svg" alt="Braze"></a> <a id="icon_logo" href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/logos/braze-logo-monogram-purple.svg" alt="Braze"></a>
@@ -23,7 +23,7 @@ function OptanonWrapper() { }
       </div>
     <div class="navbarCollapse d-none d-md-block" id="header_navbar" >
       <ul class="navbar-nav" id="header_menu">
-        {%- assign collect = site.collections | sort: site.page_order -%} {%- assign active_url = '' -%} {%- assign active_title = ''-%} {%- atribuir isactive = '' -%} {%- for cl in collect -%} {%- if cl.title -%} {%- unless cl.hidden or cl.page_order == 1 -%} {%- if cl.label == 'home' -%} {%- atribuir nav_url = site.baseurl | append: '/' -%} {%- else -%} {%- atribuir nav_url = site.baseurl | append: '/' | append: cl.label | append: '/' -%} {%- endif -%} {%- if cl.default_nav_url -%} {%- atribuir nav_url = nav_url | append: cl.default_nav_url -%} {%- endif -%} {%- atribuir isactive = '' -%} {%- if (cl.label == page.collection) or (cl.label == page.custom_collection) -%} {%- atribuir isactive = 'active' -%} {%- atribuir active_url = nav_url -%} {%- assign active_title = cl.title -%} {%- endif -%}
+        {%- assign collect = site.collections | sort: site.page_order -%} {%- assign active_url = '' -%} {%- assign active_title = ''-%} {%- assign isactive = '' -%} {%- for cl in collect -%} {%- if cl.title -%} {%- unless cl.hidden or cl.page_order == 1 -%} {%- if cl.label == 'home' -%} {%- atribuir nav_url = site.baseurl | append: '/' -%} {%- else -%} {%- atribuir nav_url = site.baseurl | append: '/' | append: cl.label | append: '/' -%} {%- endif -%} {%- if cl.default_nav_url -%} {%- atribuir nav_url = nav_url | append: cl.default_nav_url -%} {%- endif -%} {%- atribuir isactive = '' -%} {%- if (cl.label == page.collection) or (cl.label == page.custom_collection) -%} {%- atribuir isactive = 'active' -%} {%- atribuir active_url = nav_url -%} {%- assign active_title = cl.title -%} {%- endif -%}
               <li class="nav-item {{isactive}}">
                   <a class="nav-link" href="{{nav_url}}"><div>{{cl.title}}</div></a>
               </li>
@@ -36,6 +36,7 @@ function OptanonWrapper() { }
 							<label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
 							<select class="lang-select" id="lang_select" aria-label="seleção de idioma">
                 <option value="en">PT</option>
+                <option value="de">DE</option>
                 <option value="es">ES</option>
                 <option value="fr">FR</option>
                 <option value="ja">JA</option>
@@ -57,6 +58,7 @@ function OptanonWrapper() { }
         <label for="lang_select"><i class="fa-solid fa-globe">‍</i> </label>
         <select class="lang-select" id="lang_select_responsive" aria-label="seleção de idioma">
           <option value="en">PT</option>
+          <option value="de">DE</option>
           <option value="es">ES</option>
           <option value="fr">FR</option>
           <option value="ja">JA</option>

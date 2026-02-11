@@ -1,5 +1,5 @@
 ---
-nav_title: MMSキャンペーンを作成する
+nav_title: MMS キャンペーンの作成
 article_title: MMSキャンペーンの作成
 page_order: 2
 description: "このリファレンス記事では、MMS メッセージの作成、送信、およびプレビューに関連するステップについて説明します。"
@@ -12,7 +12,7 @@ channel:
 search_rank: 1  
 ---
 
-# MMSキャンペーンを作成する
+# MMS キャンペーンの作成
 
 > この記事には、SMSコンポーザーの一部であるMMSコンポジション特有の情報が含まれている。SMS / MMS 作成画面の詳細については、[SMS 作成画面]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/create/)を参照してください。
 

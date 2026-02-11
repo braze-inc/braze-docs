@@ -12,10 +12,10 @@ description: "En este artículo se describen los detalles del punto final Ver la
 {% api %}
 # Ver la traducción de un Canvas
 {% apimethod get %}
-/canvas/translations/?locale_id={locale_id}
+/canvas/translations
 {% endapimethod %}
 
-> Utiliza este punto final para obtener una vista previa de un mensaje traducido para un Canvas.
+> Utiliza este punto final para obtener una vista previa de un mensaje traducido para un Canvas. Consulta [Locales en los mensajes]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/locales/) para obtener más información sobre las características de traducción.
 
 {% alert important %}
 Este punto final se encuentra actualmente en acceso anticipado. Ponte en contacto con tu director de cuentas de Braze si estás interesado en participar en el acceso anticipado.
@@ -35,16 +35,19 @@ Para utilizar este punto final, necesitarás una [clave de API]({{site.baseurl}}
 |------------------------|----------|-----------|------------------------------------|
 | `workflow_id`          | Obligatoria | Cadena    | ID del Canvas.              |
 | `step_id`              | Obligatoria | Cadena    | El ID de tu paso en Canvas.        |
-| `message_variation_id` | Obligatoria | Cadena    | El ID de su variación de mensaje. |
-| `locale_id`            | Obligatoria | Cadena    | El ID de la configuración regional.              |
+|`message_variation_id`| Obligatoria | Cadena | El ID de la variación de tu mensaje. |
+| `locale_id`            | Opcional | Cadena    | El ID (UUID) de la localización.       |
+| `post_launch_draft_version`| Opcional | Booleano | Cuando `true` devuelve la última versión borrador en lugar de la última versión publicada en vivo. Predetermina `false` devolviendo la última versión en vivo.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
-Ten en cuenta que todos los ID de traducción se consideran identificadores únicos universales (UUID), que se pueden encontrar en la configuración **del soporte multilingüe** o en la respuesta a la solicitud.
+{% alert note %}
+Todos los ID de traducción se consideran identificadores únicos universales (UUID), que pueden encontrarse en la respuesta del punto final GET.
+{% endalert %}
 
 ## Ejemplo de solicitud
 
 ```
-curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?locale_id={locale_uuid}' \
+curl --location --request GET 'https://rest.iad-03.braze.com/canvas/translations/?workflow_id={workflow_id}&step_id={step_id}&message_variation_id={message_variation_id}&locale_id={locale_uuid}&post_launch_draft_version=true' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
@@ -58,8 +61,6 @@ Hay cuatro respuestas de código de estado para este punto final: `200`, `400`, 
 El código de estado `200` podría devolver la siguiente cabecera y cuerpo de respuesta.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "translations": [
         {
@@ -93,21 +94,5 @@ El código de estado `400` podría devolver el siguiente cuerpo de respuesta. Co
 	]
 }
 ```
-
-## Solución de problemas
-
-La siguiente tabla enumera los posibles errores devueltos y los pasos asociados para solucionarlos.
-
-| Mensaje de error                           | Solución de problemas                                                                    |
-|-----------------------------------------|------------------------------------------------------------------------------------|
-| `INVALID_CAMPAIGN_ID`                   | Confirma que el ID de la campaña coincide con la campaña que estás traduciendo.                   |
-| `INVALID_LOCALE_ID`                     | Confirma que tu ID de configuración regional existe en la traducción de tu mensaje.                         |
-| `INVALID_MESSAGE_VARIATION_ID`          | Confirma que el ID de tu mensaje es correcto.                                                |
-| `MESSAGE_NOT_FOUND`                     | Comprueba el mensaje para traducir.                                           |
-| `LOCALE_NOT_FOUND`                      | Confirma que la configuración regional existe en tu configuración multilingüe.                         |
-| `MULTI_LANGUAGE_NOT_ENABLED`            | La configuración multilingüe no está activada para tu espacio de trabajo.                       |
-| `MULTI_LANGUAGE_NOT_ENABLED_ON_MESSAGE` | Sólo se pueden traducir las campañas de correo electrónico, push y mensajes dentro de la aplicación o los mensajes de Canvas con correos electrónicos.             |
-| `UNSUPPORTED_CHANNEL`                   | Sólo se pueden traducir las campañas por correo electrónico, push o mensajes dentro de la aplicación, o los mensajes de Canvas. |
-{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endapi %}
