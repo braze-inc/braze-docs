@@ -48,9 +48,9 @@ These are the columns of information that you can select to display in the segme
 
 Selecting **Show Starred Only** narrows your view to the segments that were starred by you.
 
-## Viewing a segment's messaging use
+## Viewing a segment's messaging use {#messaging-use}
 
-Go to a segment's **Messaging Use** section for an overview of where the segment is being used, such as within other segments, campaigns, and Canvases.
+Go to a segment's **Messaging Use** section for an overview of where the segment is being used, such as within other segments, campaigns, and Canvases. 
 
 {% alert note %}
 To prevent loops of segments referencing one another, segments that use the **Segment Membership** filter can't be referenced by other segments. For more details, refer to [Segmentation Filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
@@ -75,9 +75,15 @@ You can also perform bulk actions–specifically, bulk archiving and bulk taggin
 The number of updates to the segments from other members of your team is tracked by the *Changes Since Last Viewed* metric on the segment overview page. Select **Changes Since Last Viewed** to view a changelog of updates to the segment's name, description, and target audience. For each update, you can see who performed the update and when. You can use this changelog to audit changes to your segment.
 
 ## Searching for segments
+
 Search for segment names by entering terms into the search field. 
 
 All terms and strings entered in this field will be searched for. For example, searching for “test segment 1” will return segments with “test”, “segment”, or “1” anywhere in their name. To search for an exact string, put quotes around your search term. Searching for [“test segment 1”] will return all segments that contain the exact phrase “test segment 1” in their name.
 
 ![The search results for entering "all users" into the search field include "All Users (Test)", "All Users", "All Users 15".]({% image_buster /assets/img/segment/segments_search.png %})
 
+### Segments in Canvases
+
+To search for all segment references, including those in other segments, campaigns, or Canvases, go to a segment's [Messaging Use](#messaging-use) section. The **Target segment** filter on the **Canvas** page only searches Canvas Audience segments. 
+
+![Target segment filter on the Canvas page.]({% image_buster /assets/img/segment/target_segment.png %}){: style="max-width:45%;"}
