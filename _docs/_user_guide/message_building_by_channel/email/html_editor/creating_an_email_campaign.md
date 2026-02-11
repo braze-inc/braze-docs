@@ -243,7 +243,7 @@ You can also choose to only send your campaign to users who have a specific [sub
 Optionally, you can also limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
 {% alert note %}
-When creating a new email campaign, the **Target Audience** page defaults to including a 20% Control Group. You can adjust or remove this Control Group in the **A/B Testing** section as needed for your campaign.
+When creating a new email campaign, Braze defaults to including a 20% Control Group. This setting appears on the **Target Audience** page in the **A/B Testing** section and can be adjusted or removed as needed for your campaign.
 {% endalert %}
 
 ##### Multichannel campaigns with email and push
