@@ -21,7 +21,7 @@ You can use automated IP warming to gradually increase your daily send volume, a
 Braze sends to your most engaged subscribers first, which allows daily volume to grow at a pace that matches best practices. Then, Braze tracks engagement and deliverability signals. If any issues are detected, your schedule is adjusted automatically.
 
 {% alert note %}
-You can only perform one IP warming at this time.
+You can perform only one IP warming.
 {% endalert %}
 
 ## Prerequisites
