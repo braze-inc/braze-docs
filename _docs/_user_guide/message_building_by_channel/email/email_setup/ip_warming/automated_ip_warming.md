@@ -52,7 +52,7 @@ To perform automated IP warming, you must have the following:
 ### Step 2: Select and rank segments
 
 1. Next, select the segments to target. During IP warming, Braze starts sending to your highest engaged users and gradually increases send volume over time and slowly adds in segments with less engagement. 
-2. Then, drag and drop the segments to rank them from high to low engagement. High engagement includes recipients who consistently click or interact with your emails. Low engagement includes recipients who are inconsistent in their engagement with your emails or haven't been in your audience long enough to have earned a higher rating.
+2. Then, drag and drop the segments to rank them from high to low engagement. High engagement includes recipients who consistently open and click on your emails. Low engagement includes recipients who are inconsistent in their engagement with your emails or haven't engaged with your emails in a very long time.
 3. Select **Next: Messages** to continue the setup.
 
 ![Two segments selected to target for automated IP warming.]({% image_buster /assets/img/automated_ip_warming_segment.png %})
