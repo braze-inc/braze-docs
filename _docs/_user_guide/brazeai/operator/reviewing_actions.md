@@ -14,7 +14,7 @@ description: "Learn how to review and approve actions when BrazeAI Operator<sup>
 When Operator proposes changes in the dashboard (such as filling in form fields, updating settings, or generating images), it presents each change as an action card for review.
 
 1. **Operator summarizes the plan:** Operator explains what it plans to do before showing action cards.
-2. **Individual action cards appear:** Each proposed change is presented as a separate card that shows what Operator wants to change or do in the dashboard. For changes to existing values, both the previous value and the proposed value for comparison
+2. **Individual action cards appear:** Each proposed change is presented as a separate card that shows what Operator wants to change or do in the dashboard. For changes to existing values, both the previous value and the proposed value are shown side by side for comparison.
 3. **Review and approve:** Review each card and either approve or decline it.
 4. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
 
