@@ -2,9 +2,9 @@
 alwaysApply: false
 ---
 
-# Drafting Docs from Support Tickets
+# Drafting docs updates from support tickets
 
-Analyze Braze support case CSVs to identify documentation gaps and draft updates.
+Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
 
 ## CSV Schema
 
@@ -66,7 +66,7 @@ For each docs update:
 
 1. Read the target file to understand existing structure
 2. Draft changes following conventions in the codebase based on the style 
-guide at ../style-guide.md
+guides in `_docs/_contributing/style_guide/*`
 3. Keep additions concise and scannable (bullets, tables, code blocks)
 4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
 
