@@ -1,10 +1,7 @@
 ---
 nav_title: Splio
 article_title: Splio
-aliases:
-  - /partners/splio/
-  - /partners/tinyclues/
-  - /partners/data_and_analytics/cohort_import/tinyclues
+aliases: /partners/splio/
 description: "This reference article outlines the partnership between Braze and Splio, which lets you send more targeted campaigns, find new product opportunities, and elevate revenue."
 page_type: partner
 search_tag: Partner
@@ -30,7 +27,7 @@ To integrate Braze and Splio, you must configure the Splio platform, export an e
 
 ### Step 1: Get the Braze data import key
 
-In Braze, navigate to **Partner Integrations** > **Technology Partners** and select **Splio**.
+In Braze, go to **Partner Integrations** > **Technology Partners** and select **Splio**.
 
 Find your REST endpoint and generate your Braze data import key. After you generate the key, you can create a new key or invalidate an existing one.<br><br>![The Splio technology partner page with the REST endpoint and data import key.]({% image_buster /assets/img/tinyclues/tinyclues_6.png %}){: style="max-width:90%;"}
 
