@@ -16,7 +16,7 @@ Analyze Braze support case CSVs to identify documentation gaps and propose docs 
 | `Support Cases Email Message Text Body` | Raw message content |
 | `Support Cases Email Message Text Body Cleaned` | Cleaned message for analysis |
 
-## Step 1: Triage & Categorize
+## Step 1: Triage and categorize
 
 For each unique Case ID, determine if docs action is needed:
 
@@ -28,7 +28,7 @@ For each unique Case ID, determine if docs action is needed:
 | **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
 | **Bug/Product** | Issue requiring code fix, not docs | Skip (escalate to eng) |
 
-## Step 2: Per-Ticket Analysis
+## Step 2: Per-ticket analysis
 
 For each **actionable** ticket:
 
@@ -48,7 +48,7 @@ For each **actionable** ticket:
 - **Suggested Change**: [What to add/update]
 ```
 
-## Step 3: Consolidate & Prioritize
+## Step 3: Consolidate and prioritize
 
 After processing all tickets:
 
@@ -59,7 +59,7 @@ After processing all tickets:
    - Effort (quick clarification vs. new guide)
 3. **Batch by Doc** - Group changes targeting the same file
 
-## Step 4: Draft Updates
+## Step 4: Draft updates
 
 For each docs update:
 
@@ -68,18 +68,21 @@ For each docs update:
 3. Keep additions concise and scannable (bullets, tables, code blocks)
 4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
 
-## Step 5: Create a Properly Named Branch
-For each file that is changed in `_docs`, create a branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>`  
-Example: `Cursor-liquid_use_cases-update-02112026`  
+## Step 5: Create a properly named branch
+For each file that is changed in `_docs`, create a branch with the naming convention: `cursor-<pagename>-update-<ddmmyyyy>`  
+Example: `cursor-liquid_use_cases-update-02112026`  
 
 Cursor handles this automatically and consistently.
 
 ---
 
-## Step 6: Commit and Push Changes
-Stage and Commit all changes in `_docs` with a meaningful message derived from the summary
+## Step 6: Commit and push changes
+Stage and commit all changes in `_docs` with a meaningful message derived from the summary
 
 ---
 
 ## Step 7: Generate the PR for each branch
-Cursor fills out the PR automatically:
+
+1. Create each PR with the naming conventin: `[SA] update summary`
+Example: `[SA] Add FAQ entry about machine opens vs other opens`
+2. In the description, along with a summary of the update, include the source of the update, including the URLs of the specific Salesforce tickets the changes come from. 
