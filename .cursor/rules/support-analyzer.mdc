@@ -68,7 +68,6 @@ For each docs update:
 3. Keep additions concise and scannable (bullets, tables, code blocks)
 4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
 
-
 ## Step 5: Create a Properly Named Branch
 For each file that is changed in `_docs`, create a branch with the naming convention: `Cursor-<pagename>-update-<ddmmyyyy>`  
 Example: `Cursor-liquid_use_cases-update-02112026`  
