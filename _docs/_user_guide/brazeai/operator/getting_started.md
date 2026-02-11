@@ -7,13 +7,13 @@ description: "Learn how to access and use BrazeAI Operator<sup>TM</sup>, Braze's
 
 # Getting started with BrazeAI Operator<sup>TM</sup>
 
-> Learn how to access and use BrazeAI Operator<sup>TM</sup>, Braze's AI assistant built into the dashboard, including its features and best practices.
+> Learn how to access and use BrazeAI Operator<sup>TM</sup>, your AI assistant built into the dashboard, including its features and best practices.
 
 ## How to access Operator
 
 Open Operator from any page in the Braze dashboard.  
 
-1. Select **BrazeAI Operator<sup>TM</sup>**, next to the user profile.
+1. Select **BrazeAI Operator<sup>TM</sup>**, next to your user profile.
 
 > Add image for Operator icon next to user profile.
 

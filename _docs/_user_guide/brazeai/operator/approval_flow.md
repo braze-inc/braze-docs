@@ -9,15 +9,12 @@ description: "Learn how the approval flow works when BrazeAI Operator<sup>TM</su
 
 > Learn how the approval flow works when BrazeAI Operator<sup>TM</sup> proposes changes in the dashboard.
 
-When Operator proposes changes in the dashboard (such as filling in form fields, updating settings, or generating images), it presents each change as an approval card for review.
-
 ## How approval cards work
 
+When Operator proposes changes in the dashboard (such as filling in form fields, updating settings, or generating images), it presents each change as an approval card for review.
+
 1. **Operator summarizes the plan:** Operator explains what it plans to do before showing approval cards.
-2. **Individual approval cards appear:** Each proposed change is presented as a separate card that shows:
-   - What Operator wants to change
-   - The proposed value
-   - For changes to existing values: both the previous value and the proposed value for comparison
+2. **Individual approval cards appear:** Each proposed change is presented as a separate card that shows what Operator wants to change or do in the dashboard. For changes to existing values, both the previous value and the proposed value for comparison
 3. **Review and approve:** Review each card and either approve or decline it.
 4. **Action executes:** Approved actions are executed in Braze. Declined actions are not applied.
 
@@ -30,7 +27,7 @@ If an action fails after approval, Operator will notify with details about the f
 To change something Operator proposed, describe the modification in the chat using natural language. Operator will refresh the approval list with updated items. Previously approved and executed items remain unchanged.
 
 {% alert note %}
-Approved actions cannot be undone through Operator. Make changes manually in the Braze dashboard if needed.
+Approved actions can't be undone through Operator. Describe the new change to Operator or make changes manually in the dashboard.
 {% endalert %}
 
 ## Auto-approve all actions

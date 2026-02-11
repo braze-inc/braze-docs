@@ -9,8 +9,6 @@ description: "Learn how to file support tickets directly from BrazeAI Operator<s
 
 > Learn how to file support tickets directly from BrazeAI Operator<sup>TM</sup> without leaving the Braze dashboard.
 
-File a support ticket directly from Operator without leaving the Braze dashboard.
-
 ## How to file a ticket
 
 1. Open Operator and select **File a Support Ticket** (or ask Operator to file one).
