@@ -6,7 +6,7 @@ alwaysApply: false
 
 Analyze Braze support case CSVs to identify documentation gaps and propose docs updates.
 
-## CSV Schema
+## CSV schema
 
 | Column | Description |
 |--------|-------------|
