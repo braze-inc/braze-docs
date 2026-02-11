@@ -45,7 +45,7 @@ To perform automated IP warming, you must have the following:
 2. Enter the current daily send volume and target send volume.
 3. Select the start date for automated IP warming. This date must be at least one day after the plan is launched.
 4. Enter the send time. This sends the messages in the company's time zone.
-5. Select **Next: Segments** to continue the setup.```
+5. Select **Next: Segments** to continue the setup.
 
 ![Example schedule details.]({% image_buster /assets/img/automated_ip_warming_schedule.png %})
 
