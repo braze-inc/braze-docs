@@ -41,7 +41,7 @@ To set or exclude dates, select <i class="fa-solid fa-gear"></i> **Settings**, t
 
 ### Performance
 
-The performance report offers high-level agent metrics that compare treatment groups (from Braze) to one or more control groups (like revenue). It supports two different views: **Trending** and **Driver Tree**. By default, the report uses the **Trending** view, which compares how BrazeAI™ performs over time compared to your control groups and tracks the uplift evolution. Note that the metrics are calculated on a daily basis, and KPIs are calculated when you go to the portal.
+The performance report offers high-level agent metrics that compare treatment groups (from Braze) to one or more control groups (like revenue). It supports two different views: **Trending** and **Driver Tree**. By default, the report uses the **Trending** view, which compares how BrazeAI™ performs over time compared to your control groups and tracks the uplift evolution. Note that the metrics are calculated on a daily basis, and key performance indicators (KPIs) are calculated when you go to the portal.
 
 ![Performance report trending view showing a line chart comparing BrazeAI™ and control group performance over time. The chart displays two lines labeled BrazeAI™ and Control, with the y-axis labeled Uplift and the x-axis showing dates. A legend identifies each group by color.]({% image_buster /assets/img/decisioning_studio/reporting_agent_performance_trending.png %})
 
