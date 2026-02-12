@@ -88,7 +88,7 @@ Some corporate email security tools (such as Barracuda, Proofpoint, and similar 
 
 To mitigate this:
 
-- **Recommend recipients whitelist your sending domain**: Work with the affected recipients' IT teams to add your sending domain and Braze tracking domains to their email security allow list.
+- **Recommend recipients allowlist your sending domain:** Work with the affected recipients' IT teams to add your sending domain and Braze tracking domains to their email security allow list.
 - **Use a preference center:** Instead of a direct unsubscribe link, use a [preference center]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/) that requires user interaction to confirm the unsubscribe action. Security scanners typically won't complete multi-step forms.
 - **Review unsubscribe logs:** Check the user agent and IP address in your Currents unsubscribe event data to identify patterns consistent with automated scanning (such as consistent user agents across multiple unsubscribes).
 
