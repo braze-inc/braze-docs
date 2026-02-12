@@ -69,7 +69,7 @@ If an action-based Canvas is triggered by an inbound SMS message, you can refere
 
 Entry properties are configured in the **Entry Schedule** step of creating a Canvas and will indicate the trigger that enters a user into a Canvas. These properties can also access the properties of entry payloads in API-triggered Canvases. Note that the `context` object has a maximum size limit of 50 KB.
 
-Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``context.${property_name}``{% endraw %}. Events must be custom events or purchase events to be used this way.
+Entry properties can be used in Liquid in any Message step. Use the following Liquid when referencing these entry properties: {% raw %}``{context.${property_name}}``{% endraw %}. Events must be custom events or purchase events to be used this way.
 
 {% alert note %}
 For in-app message channels specifically, `context` can only be referenced in Canvas.

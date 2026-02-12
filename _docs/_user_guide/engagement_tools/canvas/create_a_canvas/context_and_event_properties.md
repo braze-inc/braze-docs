@@ -62,11 +62,7 @@ Given this behavior, Braze strongly recommends you use a Liquid timezone filter 
 
 {% raw %}
 ```liquid
-<<<<<<< HEAD:_docs/_user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties.md
-{{context.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }
-=======
-{{canvas_entry_properties.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }}
->>>>>>> develop:_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties.md
+{{context.${timestamp_property} | time_zone: "America/Los_Angeles" | date: "%H:%M" }}
 ```
 {% endraw %}
 
@@ -79,15 +75,9 @@ Given this behavior, Braze strongly recommends you use a Liquid timezone filter 
 
 ![An Action Path step followed by a Delay step and Message step for users who have added an item to their wishlist, and a path for everyone else.]({% image_buster /assets/img_archive/canvas_entry_properties1.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-<<<<<<< HEAD:_docs/_user_guide/engagement_tools/canvas/create_a_canvas/context_and_event_properties.md
-To further understand the differences for `context` and `event_properties`, let's consider this scenario where users will enter an action-based Canvas if they perform the custom event "add item to wishlist". 
+To further understand the differences for `context` and `event_properties`, let's consider this scenario where users enter an action-based Canvas if they perform the custom event "add item to wishlist". 
 
-Context is configured in the [Entry Schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) step of creating a Canvas and will correspond to when a user enters a Canvas. Context can also be referenced in any Message step.
-=======
-To further understand the differences for `canvas_entry_properties` and `event_properties`, let's consider this scenario where users enter an action-based Canvas if they perform the custom event "add item to wishlist". 
-
-The `canvas_entry_properties` are configured in the [Entry Schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) step of creating a Canvas and correspond to when a user enters a Canvas. These `canvas_entry_properties` can also be referenced in any Message step.
->>>>>>> develop:_docs/_user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties.md
+Context is configured in the [Entry Schedule]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas#step-2b-set-your-canvas-entry-schedule) step of creating a Canvas and correspond to when a user enters a Canvas. Context can also be referenced in any Message step.
 
 In this Canvas, we have a user journey that begins with an Action Paths step to determine if a user has added an item to their wishlist. From here, if the user has added an item, they experience a delay before receiving a message "New item in your wishlist!" from the Message step. 
 
