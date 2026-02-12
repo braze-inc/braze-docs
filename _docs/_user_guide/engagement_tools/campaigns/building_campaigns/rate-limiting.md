@@ -216,6 +216,16 @@ Different channels within a multichannel campaign individually count toward the 
 
 In-app messages and Content Cards are not counted as or toward caps on campaigns or Canvas components of any type.
 
+{% alert tip %}
+Because Content Cards are not subject to frequency capping, multi-channel campaigns that pair a push notification with a Content Card may result in "ghost messages" — where the push is suppressed by frequency capping but the Content Card is still delivered. To mitigate this:
+<br><br>
+<ul>
+<li><b>Design Content Cards to stand alone.</b> Ensure the Content Card makes sense even if the accompanying push notification is not delivered.</li>
+<li><b>Exempt paired Canvases from frequency caps.</b> Turn off frequency capping for the Canvas that sends both channels, while still counting sends toward the daily frequency limit. This ensures the push is delivered alongside the Content Card.</li>
+<li><b>Use throttling filters instead.</b> Add a filter like "Last received push notification more than 1 hour ago" to control message pacing without relying on global frequency capping.</li>
+</ul>
+{% endalert %}
+
 {% alert important %}
 Global frequency capping is scheduled based on the user's time zone, and is calculated by calendar days, not 24-hour periods. For example, if you set up a frequency capping rule of sending no more than one campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 {% endalert %}
