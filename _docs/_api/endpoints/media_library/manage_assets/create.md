@@ -103,9 +103,6 @@ curl -X POST --location 'https://rest.iad-01.braze.com/media_library/create' \
 ```
 
 
-
-Braze provides multiple dashboard and REST endpoint instances. For API requests, use the REST endpoint for the instance where your workspace is provisioned. For SDK integrations, use the SDK endpoint.
-
 To find your REST endpoint, log in to Braze and go to **Settings** > **APIs and Identifiers** > **API Keys**, then copy the REST endpoint value shown on the **API Keys** tab for your workspace.
 
 For more information, see [Endpoints]({{site.baseurl}}/api/basics/#endpoints).
