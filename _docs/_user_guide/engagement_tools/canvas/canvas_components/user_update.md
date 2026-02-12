@@ -136,7 +136,13 @@ To store the property of the trigger event for a Canvas as an attribute, use the
 * Multiple attribute or event updates per object
 
 {% alert warning %}
-We recommend careful use of Connected Content Liquid personalization in User Update steps, as this step type has a rate limit of 200,000 requests per minute. This rate limit overrides the Canvas rate limit.
+User Update steps that use personalization (such as Connected Content or Liquid logic) are subject to a **workspace-level** rate limit of **200,000 requests per minute**. This rate limit overrides any Canvas-level rate limit and applies across all Canvases and campaigns in the workspace that include personalized User Update steps.
+
+This limit is based on the number of requests, not the number of users. If multiple users enter a Canvas within a short period and each triggers one or more Connected Content requests, the total request volume can exceed this threshold even if the individual Canvas has low daily send volume.
+
+When the limit is exceeded, requests are **deferred** (not dropped). Braze retries them as capacity becomes available, which can result in delays of **several hours** during sustained high-traffic periods. For example, a user entering a Canvas at 5:00 PM may not receive the subsequent email until 10:00 PM if the workspace rate limit is saturated.
+
+To avoid unexpected delays, monitor your workspace's overall use of Connected Content in User Update steps, particularly during peak send times.
 {% endalert %}
 
 ## Advanced JSON composer
