@@ -1997,7 +1997,7 @@ Use numerals and a percent sign (%) without a space in between them. However, if
 </thead>
 <tbody>
 <tr><td style="width: 50%;">10%</td><td style="width: 50%;">10 %</td></tr>
-<tr><td style="width: 50%;">Twenty percent of Braze users are...</td><td style="width: 50%;">20% of Braze users are...</td></tr>
+<tr><td style="width: 50%;">Twenty percent of company users are...</td><td style="width: 50%;">20% of company users are...</td></tr>
 </tbody>
 </table>
 {:/}
