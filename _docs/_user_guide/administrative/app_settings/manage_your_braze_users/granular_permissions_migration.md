@@ -9,23 +9,23 @@ tool: Dashboard
 
 # Migrating to granular permissions
 
-> Managing who can access your account and perform specific actions is critical for both security and operational efficiency. To give you more control, Braze is introducing [granular permissions]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/user_permissions/?sdktab=granular%20permissions), a more flexible and precise way to manage user access across your account.
+> Managing who can access your account and perform specific actions is critical for both security and operational efficiency. To give you more control, Braze is introducing granular permissions, a more flexible and precise way to manage user access across your account.
 
 The migration includes these benefits:
-- **More precise control:** Granular permissions offer more control, better security, and clearer oversight. Users only get the access they need.
-- **Automatic mapping:** All current permissions are mapped automatically to their granular equivalents. Your users keep the same access level unless you change it.
+
+**More precise control:** Granular permissions offer more control, better security, and clearer oversight. Users only get the access they need.
+**Automatic mapping:** All current permissions are mapped automatically to their [granular equivalents](#legacy-to-granular-permissions-mapping). Your users keep the same access level unless you change it.
 
 ## What to review
 
 When migration is available for your company, your Braze admins will receive emails and in-dashboard banners notifying them of the granular permission migration. To prepare for the migration, we recommend that a Braze admin do the following. 
-
-1. Identify users, roles, or permission sets that may need to be updated for more tailored access after you migrate to the new permission framework. 
-2. If your company has automated user provisioning using SCIM or compliance tools that rely on permission strings, update them to match the new granular structure. 
-3. Inform your Braze users of any upcoming changes to prevent confusion.
-4. At the scheduled migration date and time, your company will automatically migrate to granular permissions. No further action is required from company admins.
+Identify users, roles, or permission sets that may need to be updated for more tailored access after you migrate to the new permission framework. 
+If your company has automated user provisioning using SCIM or compliance tools that rely on permission strings, update them to match the new granular structure. 
+Inform your Braze users of any upcoming changes to prevent confusion.
+At the scheduled migration date and time, your company will automatically migrate to granular permissions. No further action is required from company admins.
 
 {% alert important %}
-Permission updates will lock during the migration (within one minute for most companies, up to 15 minutes for larger companies).
+Permission updates will lock within 15 minutes of the scheduled migration time. This means you can’t change any permissions until the migration is over.
 {% endalert %}
 
 ## Legacy to granular permissions mapping
@@ -34,11 +34,13 @@ Permission updates will lock during the migration (within one minute for most co
 |---------------|---------------|---------------|
 | **Level** | **Name** | **Name** |
 | Admin | Admin | Admin |
+| Workspace | Workspace Admin | Workspace Admin |
 | Company | Create and delete workspaces | Create and delete workspaces |
 | Company | Manage company settings | Manage company settings |
 | Workspace | Access Campaigns, Canvases, Cards, Content Blocks, Feature Flags, Segments, Media Library, Locations, Promotion Codes, and Preference Centers | View Campaigns<br>Edit Campaigns<br>Archive Campaigns<br>View Canvases<br>Edit Canvases<br>Archive Canvases<br>View Frequency Capping Rules<br>Edit Frequency Capping Rules<br>View Message Prioritization<br>Edit Message Prioritization<br>View Content Blocks<br>View Feature Flags<br>Edit Feature Flags<br>Archive Feature Flags<br>View Segments<br>Edit Segments<br>Edit Global Control Group<br>View IAM Templates<br>Edit IAM Templates<br>Archive IAM Templates<br>View Email Templates<br>Edit Email Templates<br>Archive Email Templates<br>View Webhook Templates<br>Edit Webhook Templates<br>Archive Webhook Templates<br>View Link Templates<br>Edit Link Templates<br>View Media Library Assets<br>View Locations<br>Edit Locations<br>Archive Locations<br>View Promotion Codes<br>Edit Promotion Codes<br>Export Promotion Codes<br>View Preference Centers<br>Edit Preference Centers<br>Edit Reports<br>View Banner Templates<br>View Multi Language Settings<br>Use Operator<br>View Decisioning Studio Agents<br>View Decisioning Studio Conversion Event |
 | Workspace | Access Dev Console | View API Keys<br>Edit API Keys<br>View Internal Groups<br>Edit Internal Groups<br>Delete Internal Groups<br>View Message Activity Log<br>View Event User Log<br>View API Identifiers<br>View API Usage Dashboard<br>View API Limits<br>View API Usage Alerts<br>Edit API Usage Alerts<br>View SDK Debugger<br>Edit SDK Debugger |
-| Workspace | Approve and Deny Campaigns | Approve Campaigns<br>Approve Canvases |
+| Workspace | Approve and Deny Campaigns | Approve Campaigns |
+| Workspace | Approve and Deny Canvases | Approve Canvases |
 | Workspace | Export User Data | Export User Data |
 | Workspace | Import and Update User Data | View Import Users<br>Import Users<br>Edit User Data |
 | Workspace | Edit Segments | Archive Segments |
@@ -84,4 +86,6 @@ Permission updates will lock during the migration (within one minute for most co
 | Workspace | Edit Placements | Edit Placements |
 | Workspace | Archive Placements | Archive Placements |
 | Workspace | New | View Merge Users |
+| Workspace | New | View User Deletion Records |
+| Workspace | New | Delete Users From Dashboard |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation"}
