@@ -53,8 +53,8 @@ As a best practice, always filter by `app_group_id` in your queries to future-pr
 
 Send all Braze data into the same database and filter by `app_group_id` to distinguish between workspaces. This approach simplifies data management and ensures consistent reporting across your organization.
 
-### How many Snowflake Data Share connectors do I need for multiple workspaces?
+### How many Snowflake Data Share Connectors do I need for multiple workspaces?
 
-The number of connectors you need depends on your specific configuration and entitlements. Contact your Braze account team to learn more about which entitlements are right for your use case.
+The number of Connectors you need depends on your specific configuration and entitlements. Contact your Braze account team to learn more about which entitlements are right for your use case.
 
 
