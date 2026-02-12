@@ -112,6 +112,10 @@ Braze.enableDelayedInitialization(context)
 {% endtab %}
 {% endtabs %}
 
+{% alert note %}
+When delayed initialization is enabled and a push notification contains a deep link action, the deep link does not resolve.
+{% endalert %}
+
 #### Step 4.2: Configure push analytics (optional)
 
 When delayed initialization is enabled, push analytics are queued by default. However, you can choose to [explicitly queue](#explicitly-queue-push-analytics) or [drop](#drop-push-analytics) push analytics instead.
