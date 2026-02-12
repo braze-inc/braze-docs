@@ -12,7 +12,7 @@ description: "This reference article covers how to create catalogs that referenc
 
 ## Use cases
 
-Commons use cases for catalogs include:
+Commons use cases for catalogs include: TEST IGNORE
 
 - Products
 - Services
