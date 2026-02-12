@@ -1,5 +1,5 @@
 ---
-nav_title: Troubleshooting webhook and connected content requests
+nav_title: Troubleshooting webhook and Connected Content requests
 article_title: Troubleshoot Webhook and Connected Content Requests
 page_order: 3
 channel:
