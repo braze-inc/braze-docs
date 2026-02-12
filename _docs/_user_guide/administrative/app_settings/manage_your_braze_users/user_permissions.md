@@ -1,6 +1,6 @@
 ---
 nav_title: Permissions
-article_title: Braze permissions
+article_title: Company user permissions
 page_order: 2
 page_type: reference
 description: "This reference article covers how user permissions work at Braze. Here, you can learn how to edit and set user permissions, choosing who can access your apps in the dashboard."
@@ -8,7 +8,7 @@ tool: Dashboard
 
 ---
 
-# Braze permissions
+# Company user permissions
 
 > Learn how to create permission sets, create roles, edit user permissions, and export user permissions, so you can ensure your users only access the workspaces and features they need most.
 
@@ -65,7 +65,7 @@ Limited users have specific permissions that allow them to manage certain aspect
 
 | Limited user type | Description |
 | --- | --- |
-| App group admin | App Group Admins have permissions specific to managing app groups but do not have the same authority as Company Admins. Limited Users can inherit permissions similar to those of App Group Admins if they have the necessary permissions checked. |
+| App group admin | App Group Admins have permissions specific to managing app groups but do not have the same authority as Company Admins. Limited users can inherit permissions similar to those of App Group Admins if they have the necessary permissions checked. |
 | Company admin | Company Admins have broader permissions, including the ability to delete company users. However, they cannot delete their own accounts and must contact another Company Admin for that action. |
 | Basic read-only permission | To access certain parts of the dashboard, such as the Technology Partners page, users must have a basic read-only permission. This includes having "Manage External Integrations" enabled, along with permissions for Access Campaigns, Canvases, Cards, Segments, and Media Library. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
@@ -92,8 +92,8 @@ To edit a user's current admin, company, or workspace permissions, go to **Setti
 Admins have access to all features and the ability to modify any company setting. They can:
 
 - Change [approval settings]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
-- Add, edit, delete, suspend, or unsuspend other [Braze users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- Export Braze users as a CSV
+- Add, edit, delete, suspend, or unsuspend other [company users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- Export company users as a CSV
 
 To grant or remove admin privileges, select **This user is an admin**, then select **Update user**.
 
@@ -150,14 +150,14 @@ When you're finished, select **Update user**.
 
 ## Exporting user permissions
 
-To download a list of your users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
+To download a list of your company users and their permissions, go to **Settings** > **Company Users**, then select **Export Users**. A CSV file will be sent to your email address shortly.
 
 ![The "Company Users" page in Braze with the "Export Users" option in focus.]({% image_buster /assets/img/braze_permissions/exporting_user_permissions.png %})
 
 ## List of permissions
 
 {% alert important %}
-As of April 2024, to create or update promotion code lists, Braze users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
+As of April 2024, to create or update promotion code lists, company users need the “Access Campaigns, Canvases, Cards, Segments, Media Library” permission.
 {% endalert %}
 
 |Level|Name|Definition|
