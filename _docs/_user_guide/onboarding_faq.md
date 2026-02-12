@@ -16,7 +16,7 @@ description: "This page contains a collection of frequently asked questions, out
 
 {% api %}
 
-### How do I handle anonymous user data?
+### How do I handle anonymous user data? IGNORE TEST
 
 {% apitags %}
 Users
