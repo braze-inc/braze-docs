@@ -109,7 +109,7 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 
 ## Filtering bot traffic {#bot-filtering}
 
-MAU can include a percentage of bot users, which inflates Active Users. While the Braze Web SDK includes built-in detection for some common web crawlers (such as search engine bots and social media preview bots), it is especially important to stay proactive with robust solutions to detect bots, as SDK updates alone cannot consistently detect every new bot.
+MAU can include a percentage of bot users, which inflates your monthly active user count. While the Braze Web SDK includes built-in detection for some common web crawlers (such as search engine bots and social media preview bots), it is especially important to stay proactive with robust solutions to detect bots, as SDK updates alone cannot consistently detect every new bot.
 
 ### Limitations of SDK-side bot detection
 
