@@ -9,6 +9,7 @@ description: "This reference article covers common troubleshooting scenarios for
 # Export troubleshooting
 
 > This page covers common troubleshooting scenarios for exports in both CSV and API workflows.  
+
 Use the tabs to select whether you're exporting to the **default Braze S3 bucket** or to a **cloud storage partner**.
 
 {% sdktabs %}
@@ -45,9 +46,9 @@ Large API exports can also time out. If that happens, try making smaller request
 When you connect a storage partner (such as Amazon S3, Google Cloud Storage, or Azure Blob) and mark it as your default export destination from the **Technology Partners** page in the dashboard, Braze writes your exports directly to your bucket. This setup is typically more reliable for larger exports.  
 
 ## CSV exports  
-With CSV exports, Braze emails you a download link. That link expires after four hours, and the file stored in the Braze-managed S3 bucket is deleted when the link expires, just like with the default setup. When you have a storage partner connected, Braze also writes a copy of the export to your connected bucket. That copy lives in your own infrastructure, where expiration and retention follow your storage policies.  
+With CSV exports, Braze emails you a download link. That link expires after a short window (typically around four hours). When you have a storage partner connected and marked as your default export destination, Braze also delivers a copy of the export to your connected bucket. That copy lives in your own infrastructure, where expiration and retention follow your storage policies.  
 
-In cloud storage, CSV exports are bundled into a ZIP file. Inside the ZIP are multiple smaller CSV files—typically around 5,000 users each, though sometimes fewer. That doesn't necessarily indicate missing data. If the emailed link fails but the copy in your storage succeeds, you can always retrieve your data directly from your bucket.  
+In cloud storage, CSV exports are bundled into a ZIP file. Inside the ZIP are multiple smaller CSV files. Large exports are often split into chunks (for example, around 5,000 users each), and chunk size can vary. Smaller files don't indicate missing data. If the emailed link fails but the copy in your storage succeeds, you can always retrieve your data directly from your bucket.  
 
 ### Common errors
 
@@ -57,7 +58,7 @@ In cloud storage, CSV exports are bundled into a ZIP file. Inside the ZIP are mu
 - Apostrophes added at the start of certain fields (like `-`, `=`, `+`, or `@`) are expected. For example, `-1943` becomes `'-1943` in the CSV. Braze does this to prevent spreadsheet programs from misinterpreting the data. This doesn't apply to JSON exports, such as those returned by the [`/users/export/segment` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).  
 
 ## API exports  
-When you export data through the APIs with a storage partner connected, files are written directly to your bucket. No email is sent, and expiration is determined by your storage settings. Each ZIP file contains JSON objects, one per line. Large exports create multiple ZIP files instead of a single ZIP, which makes this method more reliable for heavy exports.  
+When you export data through the APIs with a storage partner connected, the export files are written to your bucket. No email is sent. The underlying objects live in your storage and follow your retention settings, even though the download URLs Braze returns may still be time-limited. Each ZIP file contains JSON objects, one per line. Large exports may be split into multiple ZIP files instead of a single ZIP, which generally makes this method more reliable for heavy exports.  
 
 ### Common errors
 
