@@ -117,7 +117,7 @@ The Web SDK includes basic user-agent-based bot detection that filters out known
 
 - **New bots emerge constantly**: AI companies and other actors regularly create new bots that may disguise themselves to avoid detection.
 - **User-agent spoofing**: Sophisticated bots can mimic legitimate browser user-agents.
-- **Custom bots**: Non-technical users can now easily create bots using LLMs, making bot behavior unpredictable.
+- **Custom bots**: Non-technical users can now easily create bots using large language models (LLMs), making bot behavior unpredictable.
 
 ### Implementing bot filtering
 
