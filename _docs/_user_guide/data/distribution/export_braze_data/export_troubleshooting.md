@@ -47,7 +47,7 @@ When you connect a storage partner (such as Amazon S3, Google Cloud Storage, or 
 ## CSV exports  
 With CSV exports, Braze emails you a download link. That link expires after four hours, and the file stored in the Braze-managed S3 bucket is deleted when the link expires, just like with the default setup. When you have a storage partner connected, Braze also writes a copy of the export to your connected bucket. That copy lives in your own infrastructure, where expiration and retention follow your storage policies.  
 
-In cloud storage, CSV exports aren’t bundled into a single ZIP. Instead, you’ll see multiple smaller files—typically around 5,000 users each, though sometimes fewer. That doesn’t necessarily indicate missing data. If the emailed link fails but the copy in your storage succeeds, you can always retrieve your data directly from your bucket.  
+In cloud storage, CSV exports are bundled into a ZIP file. Inside the ZIP are multiple smaller CSV files—typically around 5,000 users each, though sometimes fewer. That doesn’t necessarily indicate missing data. If the emailed link fails but the copy in your storage succeeds, you can always retrieve your data directly from your bucket.  
 
 ### Common errors
 
