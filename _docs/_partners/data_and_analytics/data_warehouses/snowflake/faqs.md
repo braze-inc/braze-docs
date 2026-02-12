@@ -37,7 +37,7 @@ The specified account is either not HIPAA-compliant or on [Snowflake Editions](h
 
 The system may still be processing the deletion of your previous data share. Wait a few minutes for the deprovisioning process to complete, then try creating the new data share again.
 
-### How many times do I need to run CREATE DATABASE when I have multiple workspaces sharing to the same Snowflake account?
+### How many times do I need to run `CREATE DATABASE` when I have multiple workspaces sharing data to the same Snowflake account?
 
 You only need to run `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` once. When multiple data shares from different Braze workspaces are shared to the same Snowflake account, they are automatically combined into the same share. After you create the initial database, data from additional workspaces is automatically added to the existing database without requiring additional share requests or database creation steps.
 
