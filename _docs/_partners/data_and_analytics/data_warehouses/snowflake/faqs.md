@@ -43,7 +43,7 @@ You need to run `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_nam
 
 For example, if you create a data share to Snowflake Account 123 from Workspace A, you accept the share request and create a database. When you later create a data share to the same Snowflake Account 123 from Workspace B, no new share request is sent—the data is immediately added to the existing share and becomes available in the previously created database.
 
-### If I have multiple workspaces, will a single database contain data from all of them?
+### If I have multiple workspaces, does a single database contain data from all of them?
 
 Yes. When you share data from multiple Braze workspaces to the same Snowflake account, all data is combined into a single share and available in the same database. You can filter the data by `app_group_id` to distinguish between workspaces.
 
