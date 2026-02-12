@@ -94,7 +94,7 @@ For the first task of auditing Canvases, use the [`/canvas/list` endpoint]({{sit
   		"name": "PatientReminder_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "2020"
-      },
+      }
   	},
   	{
   		"id": "canvas_identifier_2",
@@ -102,7 +102,7 @@ For the first task of auditing Canvases, use the [`/canvas/list` endpoint]({{sit
   		"name": "PatientReminder2_FluShot_2020",
   		"tags": {
         "flu_shots", "patienthealth", "reminder", "2020"
-      },
+      }
   	},
     ... (more Canvases)
   ],
@@ -182,7 +182,7 @@ At CashBlastr, the primary goal is to streamline how people can send and receive
 
 To send a request with the [`/sms/invalid_phone_numbers/remove` endpoint]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/), the phone numbers must be in an array of strings in [e.164 format](https://en.wikipedia.org/wiki/E.164), with up to 50 phone numbers per request. Because the list doesn’t exceed 50 phone numbers, here’s an example of the request body CashBlastr’s developer team would send:
 
-```json
+```http
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
 {
