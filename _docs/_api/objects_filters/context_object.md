@@ -27,5 +27,5 @@ This object body contains an example request.
 ```
 
 {% raw %}
-For example, a request with `"context": {"product_name" : "shoes", "product_price" : 79.99}` could add the word "shoes" to a message by adding ```{{context.${product_name}}}``` to the request.
+For example, you can include `"context": {"product_name" : "shoes", "product_price" : 79.99}` in your API request and then reference the word "shoes" in your message by adding ```{{context.${product_name}}}``` to the message template.
 {% endraw %}
