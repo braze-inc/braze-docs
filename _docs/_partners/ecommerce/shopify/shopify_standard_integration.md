@@ -127,7 +127,7 @@ Tracking custom data provides deeper insights into user behavior and supports ad
 
 For example, the following JavaScript snippet tracks if the current user subscribes to a newsletter, and logs that as a custom event on their profile in Braze:
 
-```json
+```javascript
 braze.logCustomEvent(
   “subscribed_to_newsletter”,
   {
