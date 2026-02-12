@@ -594,3 +594,41 @@ The Report Builder allows you to compare the results of multiple campaigns or Ca
 For more information on the uses of reports and analytics in Braze, refer to [reports overview]({{site.baseurl}}/user_guide/analytics/reporting/reports_overview/).
 
 {% endapi %}
+{% api %}
+
+### What is the difference between "Opened any email", "Other opens", and "Machine opens" segment filters?
+
+{% apitags %}
+Analytics
+{% endapitags %}
+
+These three email open segment filters each reference a different "last open" timestamp on the user profile:
+
+- **Opened any email**: Uses the user's most recent email open of any kind. This timestamp updates every time a user opens an email, regardless of whether the open is identified as a machine open or not.
+- **Opened any email (other opens)**: Uses a more specific timestamp that only updates when a non-machine open occurs, such as a real human open.
+- **Opened any email (machine opens)**: Uses a timestamp that only updates when a machine open (such as Apple Mail Privacy Protection) is detected.
+
+Because these timestamps update independently, combining them with the "more than X days ago" condition can produce counterintuitive results. For example, a user who recently had a machine open (but no recent human open) would be excluded from "Opened any email more than 7 days ago" (because their general open timestamp is recent), but included in "Opened any email (other opens) more than 7 days ago" (because their other-opens timestamp hasn't updated recently).
+
+If you're building segments based on email engagement, consider which type of open is most relevant to your use case. For maximum reach, you can combine multiple open filters with `OR` logic.
+
+{% endapi %}
+{% api %}
+
+### Why do my Currents open counts differ from my Engagement Reports?
+
+{% apitags %}
+Analytics
+{% endapitags %}
+
+Engagement Reports in the Braze dashboard are built on internal aggregated tables, while Currents, Snowflake Data Sharing, and Query Builder provide per-user event-level data. Because these data sources are aggregated and processed differently, small discrepancies (typically under 10%) between them are expected.
+
+Key differences:
+
+- **Engagement Reports** aggregate data at the campaign or Canvas level and are not available as per-user exports.
+- **Currents and Snowflake** provide raw, per-user event data that you can use to build your own dashboards and reports.
+- It isn't possible to export the exact per-user dataset that an Engagement Report uses, so direct 1:1 comparison is not possible.
+
+If you see significant discrepancies beyond what's typical, verify that your Currents integration is receiving all event types and that your dashboard date ranges align exactly.
+
+{% endapi %}
