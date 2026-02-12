@@ -65,7 +65,7 @@ To use this endpoint, you'll need to complete the following:
 
 ## Example request
 
-```json
+```bash
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/live_activity/update' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer {YOUR-REST-API-KEY}' \

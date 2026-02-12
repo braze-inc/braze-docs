@@ -64,7 +64,7 @@ The following are all available permissions you can assign at the Team level. An
 - Create and Edit Canvas Templates
 - View Canvas Templates
 - Archive Canvas Templates
-- Create and Edit Landing Page Templates
+- Edit Landing Page Templates
 - View Landing Page Templates
 - Archive Landing Page Templates
 

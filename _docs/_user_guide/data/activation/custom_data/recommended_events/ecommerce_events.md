@@ -140,7 +140,7 @@ AppDelegate.braze?.logCustomEvent(name: "ecommerce.product_viewed", properties: 
           "color": "ORANGE",
           "size": "6",
           "brand": "Braze"
-        }
+        },
         "type": [
           "price_drop",
           "back_in_stock"
@@ -1173,4 +1173,4 @@ We use standardized user field calculations for the following fields:
 
 These user field calculations are also included on the **Transactions** tab of user profiles.
 
-![The "Transactions" tab with user calculated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:60%;"}
+![The "Transactions" tab with user calculated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
