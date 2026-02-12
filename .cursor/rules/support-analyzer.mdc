@@ -16,7 +16,9 @@ Analyze Braze support case CSVs to identify documentation gaps and propose docs 
 | `Support Cases Email Message Text Body` | Raw message content |
 | `Support Cases Email Message Text Body Cleaned` | Cleaned message for analysis |
 
-## Step 1: Triage and categorize
+---
+
+## Step 1: Triage & Categorize
 
 For each unique Case ID, determine if docs action is needed:
 
@@ -28,13 +30,16 @@ For each unique Case ID, determine if docs action is needed:
 | **Support-Only** | Account-specific, requires Braze internal access, or one-off config | Skip (no docs change) |
 | **Bug/Product** | Issue requiring code fix, not docs | Skip (escalate to eng) |
 
-## Step 2: Per-ticket analysis
+---
+
+## Step 2: Per-Ticket Analysis
 
 For each **actionable** ticket:
 
 1. **Extract Q&A** - Distill the core question and resolution from message thread
 2. **Verify** - Cross-reference with source code of the Main Product at `../platform`
 3. **Identify Target** - Which existing doc page should be updated? (or flag as new page)
+4. **Document source support case number** - Which case numbers were analyzed?
 
 ### Output Format Per Ticket to output.md and chat console
 
@@ -47,8 +52,9 @@ For each **actionable** ticket:
 - **Target Doc**: `_docs/_user_guide/path/to/file.md` (or "NEW: suggested_location")
 - **Suggested Change**: [What to add/update]
 ```
+---
 
-## Step 3: Consolidate and prioritize
+## Step 3: Consolidate & Prioritize
 
 After processing all tickets:
 
@@ -58,29 +64,34 @@ After processing all tickets:
    - Impact (blocks core functionality vs. edge case)
    - Effort (quick clarification vs. new guide)
 3. **Batch by Doc** - Group changes targeting the same file
+4. **Maintain sources** - Maintain list of which Case IDs were referenced for the update
 
-## Step 4: Draft updates
+---
+
+## Step 4: Draft Updates
 
 For each docs update:
 
 1. Read the target file to understand existing structure
-2. Draft changes following conventions in the codebase based on the style guides in `_docs/_contributing/style_guide/*`
+2. Draft changes following conventions in the codebase based on the style 
+guides in `_docs/_contributing/style_guide/*`
 3. Keep additions concise and scannable (bullets, tables, code blocks)
 4. Add to FAQ sections when appropriate (see `_docs/_user_guide/**/faq.md` patterns)
 
-## Step 5: Create a properly named branch
-For each file that is changed in `_docs`, create a branch with the naming convention: `cursor-<pagename>-update-<ddmmyyyy>`  
-Example: `cursor-liquid_use_cases-update-02112026`  
+---
+
+## Step 5: Create a Properly Named Branch
+For each file that is changed in `_docs`, create a Branch with the naming convention: `[SA]-Cursor-<pagename>-update-<ddmmyyyy>-`  
+Example: `[SA]-Cursor-liquid_use_cases-02122026`  
 
 ---
 
-## Step 6: Commit and push changes
-Stage and commit all changes in `_docs` with a meaningful message derived from the summary
+## Step 6: Commit and Push Changes
+Stage and Commit all changes in `_docs` with a meaningful message derived from the summary
 
 ---
 
 ## Step 7: Generate the PR for each branch
-
 Create each PR with the naming conventin: `[SA] update summary`
 Example: `[SA] Add FAQ entry about machine opens vs other opens`
 
@@ -91,7 +102,7 @@ Cursor fills out the PR automatically:
 * [Cursor analyzes code changes and lists them]
 * List of changes to help the reviewer understand the scope
 * List the Salesforce case numbers that were addressed in the update
-
+```
 
 ## Step 8: Assign Reviewers Based Code Ownership where possible
 Cursor identifies team members based on the CODEOWNERS file. If no owner is found for that file, assign to @braze-inc/docs-team
