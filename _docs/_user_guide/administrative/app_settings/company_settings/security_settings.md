@@ -85,7 +85,7 @@ A reset can solve common authentication issues such as trouble with authenticato
 
 ### Requirements for 2FA at the company level
 
-First, verify whether 2FA is enabled for your dashboard by going to **Company Settings** > **Security Settings** > **Two Factor Authentication**. If the toggle is gray, 2FA hasn't been turned on for your company and isn't mandatory for all dashboard users.
+First, verify whether 2FA is enabled for your dashboard by going to **Company Settings** > **Security Settings** > **Two Factor Authentication**. If the toggle is gray, 2FA hasn't been turned on for your company and isn't mandatory for all company users.
 
 #### User options when 2FA isn't mandatory
 
@@ -273,7 +273,7 @@ For the existing team permission capabilities, refer to [Setting user permission
 ### Defining PII
 
 {% alert important %}
-Selecting and defining certain fields as PII fields only affects what Users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
+Selecting and defining certain fields as PII fields only affects what users can view on the Braze dashboard and does not impact how the End User data in such PII fields is handled.<br><br>Consult your legal team to align your dashboard's settings with any privacy regulations and policies applicable to your company, including those related to [data retention]({{site.baseurl}}/data_retention/).
 {% endalert %}
 
 You can select the fields your company designates as PII in the dashboard. To do this, go to **Company Settings** > **Admin Settings** > **Security Settings**.
