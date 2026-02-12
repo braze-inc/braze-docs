@@ -1174,3 +1174,44 @@ We use standardized user field calculations for the following fields:
 These user field calculations are also included on the **Transactions** tab of user profiles.
 
 ![The "Transactions" tab with user calculated fields.]({% image_buster /assets/img/Shopify/transactions_tab.png %}){: style="max-width:70%;"}
+
+## Frequently asked questions
+
+### Where can I view product-level purchase data?
+
+The user profile's **Transactions** tab shows high-level calculated fields (such as total revenue and total orders). To view product-level detail for a specific user, use the [Query Builder]({{site.baseurl}}/user_guide/analytics/query_builder/) to query eCommerce event data, or export event data through [Currents]({{site.baseurl}}/user_guide/data/braze_currents/).
+
+Unlike legacy purchase events, eCommerce recommended events store product details as nested event properties within the `products` array. These properties are available in messaging through Liquid and in segmentation through [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/).
+
+### How do I segment users by a specific product?
+
+The standard Segment Builder allows you to filter by the number of times a user performed an eCommerce event. To filter by specific product properties (such as `product_id` or `product_name`), use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/), which support nested event property filtering. For example, you can find all users who purchased product "SKU-123" in the last 90 days.
+
+### What's the difference between legacy purchase events and eCommerce recommended events?
+
+Legacy purchase events use the Braze [purchase object]({{site.baseurl}}/api/objects_filters/purchase_object/) and record individual product purchases with a `product_id` and `price`. eCommerce recommended events (such as `ecommerce.order_placed`) use custom event properties and capture the full order context, including multiple products, discounts, and metadata in a single event.
+
+With the launch of eCommerce recommended events, Braze will phase out the legacy purchase event in the future. If you're currently using purchase events, you will receive advance notice. In the meantime, you can continue using purchase events until the official deprecation date. Refer to the [recommended events overview]({{site.baseurl}}/user_guide/data/activation/custom_data/recommended_events/) for more details.
+
+### Can I add custom properties to eCommerce recommended events?
+
+eCommerce recommended events have a defined schema with required and optional fields. You can include additional custom data within the `metadata` object for each event. However, custom order-level tags or proprietary fields (such as purchase channel or retail store information) are not supported as top-level properties. If you need these fields for segmentation, continue sending them as separate custom events alongside your eCommerce events.
+
+### Do I need to include external_id when sending eCommerce events?
+
+It depends on how you're sending the events:
+
+- **Via the SDK**: No. The SDK logs events against the currently identified user (set via the `changeUser` method). You don't need to include an explicit user identifier with each event call.
+- **Via the REST API** (`/users/track`): Yes. Each API request must include a user identifier, such as `external_id`, `braze_id`, `user_alias`, `email`, or `phone`, because the API has no "current user" context.
+
+### Why don't nested product properties appear in the AI Recommendations setup dropdown?
+
+When configuring [AI item recommendations]({{site.baseurl}}/user_guide/brazeai/recommendations/), the property name dropdown only displays top-level event properties (such as `order_id`, `total_value`, and `currency`). Nested properties within the `products` array are not surfaced in this dropdown. To map product-level data for AI Recommendations, use a [catalog]({{site.baseurl}}/user_guide/data/activation/catalogs/) with item IDs that match your `product_id` or `variant_id` values.
+
+### Why are some of my eCommerce events not appearing in Braze?
+
+If events are not showing in user profiles or logs, check the following:
+
+- **SDK data flush timing**: The Braze SDK caches data locally and uploads it periodically (typically within 10–60 seconds). Call `requestImmediateDataFlush()` after `logCustomEvent()` to force an immediate upload.
+- **Required properties**: eCommerce events have required properties. If a required property is missing or has an invalid data type, the event may be rejected. Verify that your event payload matches the [required schema](#types-of-ecommerce-recommended-events).
+- **Event name accuracy**: eCommerce event names are case-sensitive and must match exactly (for example, `ecommerce.checkout_started`, not `ecommerce.checkoutStarted`).
