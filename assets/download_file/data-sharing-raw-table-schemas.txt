@@ -64,7 +64,7 @@ USERS_BEHAVIORS_APP_FIRSTSESSION_SHARED: when a user has their first session
 	GENDER (VARCHAR(16777216)): [PII] Gender of the user
 	COUNTRY (VARCHAR(16777216)): [PII] Country of the user
 	TIMEZONE (VARCHAR(16777216)): Time zone of the user
-	LANGUAGE (VARCHAR(16777216)): [PII] Languagae of the user
+	LANGUAGE (VARCHAR(16777216)): [PII] Language of the user
 	DEVICE_ID (VARCHAR(16777216)): ID of the device on which the event occurred
 	SDK_VERSION (VARCHAR(16777216)): Version of the Braze SDK in use during the event
 	PLATFORM (VARCHAR(16777216)): Platform of the device
