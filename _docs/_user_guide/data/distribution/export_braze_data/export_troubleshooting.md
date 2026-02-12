@@ -1,6 +1,6 @@
 ---
 nav_title: Export troubleshooting
-article_title: Export troubleshooting
+article_title: Export Troubleshooting
 page_order: 10
 page_type: reference
 description: "This reference article covers common troubleshooting scenarios for exports in both CSV and API workflows."
@@ -26,7 +26,7 @@ You need to be logged into the Braze dashboard to use the link, and the file wil
 - If you see an `AccessDenied` error, the file may have already expired or you may have tried to open it before it was ready. Larger reports take longer to generate, so wait a few minutes and try again.  
 - An `ExpiredToken` error means the four-hour window has passed. Re-run the export to generate a fresh link.  
 - The message `Looks like the file doesn't exist anymore` usually appears when the email is sent but the file hasn't finished uploading to S3. Waiting a few minutes typically resolves it.  
-- Apostrophes added at the start of certain fields (like `-`, `=`, `+`, or `@`) are expected. Braze does this to prevent spreadsheet programs from misinterpreting the data.  
+- Apostrophes added at the start of certain fields (like `-`, `=`, `+`, or `@`) are expected. For example, `-1943` becomes `'-1943` in the CSV. Braze does this to prevent spreadsheet programs from misinterpreting the data. This doesn't apply to JSON exports, such as those returned by the [`/users/export/segment` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).  
 
 ## API exports  
 When you export through the Export APIs without cloud storage, Braze writes the files to its S3 bucket. You won't receive an email—instead, the API response includes a temporary download URL. The export comes as a ZIP containing multiple JSON files, each with one user per line.  
@@ -54,6 +54,7 @@ In cloud storage, CSV exports are bundled into a ZIP file. Inside the ZIP are mu
 - `AccessDenied` means Braze couldn't write to your bucket. Double-check that your credentials and permissions are still valid.  
 - `ExpiredToken` appears if Braze has lost access to your bucket. Update your credentials in the Braze dashboard.  
 - If some files look smaller than expected, that's normal behavior. The export process intentionally splits files for stability.  
+- Apostrophes added at the start of certain fields (like `-`, `=`, `+`, or `@`) are expected. For example, `-1943` becomes `'-1943` in the CSV. Braze does this to prevent spreadsheet programs from misinterpreting the data. This doesn't apply to JSON exports, such as those returned by the [`/users/export/segment` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/).  
 
 ## API exports  
 When you export data through the APIs with a storage partner connected, files are written directly to your bucket. No email is sent, and expiration is determined by your storage settings. Each ZIP file contains JSON objects, one per line. Large exports create multiple ZIP files instead of a single ZIP, which makes this method more reliable for heavy exports.  
