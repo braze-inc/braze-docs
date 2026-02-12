@@ -69,7 +69,7 @@ If you delete and recreate a share in the Braze dashboard, you must drop the pre
 {% endalert %}
 
 {% alert tip %}
-If you have multiple workspaces sharing data to the same Snowflake account, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/faqs/) for guidance on managing multi-workspace configurations.
+If you have multiple workspaces sharing data to the same Snowflake account, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/faqs/) for guidance on managing multi-workspace configurations.
 {% endalert %}
 
 ## Usage and visualization
