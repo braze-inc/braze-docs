@@ -14,7 +14,7 @@ tool: Dashboard
 
 ## Criando um conjunto de permissões
 
-Use conjuntos de permissões para agrupar permissões relacionadas a áreas ou ações específicas. Eles podem ser aplicados aos usuários da empresa que precisam do mesmo acesso em diferentes espaços de trabalho. Para criar um conjunto de permissões, acessar **Configurações** > **Configurações de Permissão**, depois selecione **Criar conjunto de permissões**. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
+Use conjuntos de permissões para agrupar permissões relacionadas a áreas ou ações específicas. Eles podem ser aplicados aos usuários do dashboard que precisam do mesmo acesso em diferentes espaços de trabalho. Para criar um conjunto de permissões, acessar **Configurações** > **Configurações de Permissão**, depois selecione **Criar conjunto de permissões**. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
 
 {% tabs local %}
 {% tab example permission sets %}
@@ -22,14 +22,14 @@ Use conjuntos de permissões para agrupar permissões relacionadas a áreas ou a
 \|-----------|----------------|
 |Desenvolvedores|“Acessar Console de Desenvolvimento”|
 |Marketers|“Acesse Campanhas, canvas, Cartões, Feature Flags, Segmentos, Biblioteca de Mídia e Centrais de Preferências” <br> “Gerenciar ativos da biblioteca de mídia”|
-|Gerenciamento de Usuários|“Gerenciar usuários da empresa” <br> “Gerenciar equipes”|
+|Gerenciamento de Usuários|“Gerenciar Usuários do Dashboard” <br> “Gerenciar equipes”|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
 {% endtabs %}
 
 ## Criando uma função
 
-As funções permitem mais estrutura ao agrupar suas permissões personalizadas individuais com os controles de acesso do espaço de trabalho. Isso é especialmente útil se você tiver muitas marcas ou espaços de trabalho regionais em um dashboard. Com funções, você pode adicionar usuários da empresa aos espaços de trabalho certos e conceder diretamente as permissões associadas. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
+As funções permitem mais estrutura ao agrupar suas permissões personalizadas individuais com os controles de acesso do espaço de trabalho. Isso é especialmente útil se você tiver muitas marcas ou espaços de trabalho regionais em um dashboard. Com funções, você pode adicionar usuários do dashboard aos espaços de trabalho certos e conceder diretamente as permissões associadas. Para uma descrição de cada permissão, consulte [Lista de permissões](#list-of-permissions).
 
 {% tabs local %}
 {% tab example roles %}
@@ -37,7 +37,7 @@ As funções permitem mais estrutura ao agrupar suas permissões personalizadas 
 ----------- | ----------- | ---------
 | Profissional de marketing - Marcas de moda | {::nomarkdown}[DEV] Marca de moda, [QA] Marca de moda, [PROD] Marca de moda {:/} | "Acesse campanhas, telas, cartões, Feature Flags, segmentos, biblioteca de mídia e Central de Preferências"<br>“Gerenciar ativos da biblioteca de mídia” |
 | Profissional de marketing - Marcas de produtos para a pele | {::nomarkdown}[DEV] Marca de produtos para a pele, [QA] Marca de produtos para a pele, [PROD] Marca de produtos para a pele {:/} | "Acessar campanhas, canvas, cartões, Feature Flags, segmentos, biblioteca de mídia e centrais de preferências" <br>“Gerenciar ativos da biblioteca de mídia” |
-| Gerenciamento de usuários - Todas as marcas | {::nomarkdown}[DEV] Marca de moda, [QA] Marca de moda, [PROD] Marca de moda, [DEV] Marca de cuidados com a pele, [QA] Marca de cuidados com a pele, [PROD] Marca de cuidados com a pele {:/} | "Gerenciar usuários da empresa"<br>“Gerenciar equipes” |
+| Gerenciamento de usuários - Todas as marcas | {::nomarkdown}[DEV] Marca de moda, [QA] Marca de moda, [PROD] Marca de moda, [DEV] Marca de cuidados com a pele, [QA] Marca de cuidados com a pele, [PROD] Marca de cuidados com a pele {:/} | "Manage Dashboard Users" (Gerenciar usuários do dashboard)<br>“Gerenciar equipes” |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
 {% endtabs %}
@@ -56,9 +56,9 @@ Para adicionar com êxito um usuário a uma equipe e manter as mesmas permissõe
 
 Os usuários limitados têm permissões específicas que lhes permitem gerenciar determinados aspectos do dashboard do Braze, embora tenham restrições em comparação com os administradores da empresa e do espaço de trabalho.
 
-| Permissões | Os usuários limitados podem editar as permissões de outros usuários limitados se tiverem a permissão "Gerenciar usuários da empresa" marcada. Eles também podem criar novos usuários limitados e modificar seus conjuntos de permissões. No entanto, eles não podem criar ou gerenciar contas de administrador da empresa. |
+| Permissões | Os usuários limitados podem editar as permissões de outros usuários limitados se tiverem a permissão "Manage Dashboard Users" (Gerenciar usuários do dashboard) marcada. Eles também podem criar novos usuários limitados e modificar seus conjuntos de permissões. No entanto, eles não podem criar ou gerenciar contas de administrador da empresa. |
 | Limitações de função: Se um usuário limitado tiver todas as permissões, exceto "Administrador do grupo de app", ele ainda terá acesso a todas as outras permissões normalmente concedidas a um administrador de espaço de trabalho. |
-| Visibilidade das permissões: se um usuário limitado tiver a opção "Gerenciar usuários da empresa" marcada para um grupo de app (como Dev), mas não para outro (como Prod), ele não verá as permissões do grupo de app Prod em seu perfil "Gerenciar usuários". |
+| Visibilidade das permissões: se um usuário limitado tiver a opção "Gerenciar usuários do dashboard" marcada para um grupo de app (como Dev), mas não para outro (como Prod), ele não verá as permissões do grupo de app Prod em seu perfil "Gerenciar usuários". |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ### Comparação de usuários limitados
@@ -66,7 +66,7 @@ Os usuários limitados têm permissões específicas que lhes permitem gerenciar
 | Tipo de usuário limitado | Descrição |
 | --- | --- |
 | Administrador do grupo de app | Os administradores de grupos de aplicativos têm permissões específicas para gerenciar grupos de aplicativos, mas não têm a mesma autoridade que os administradores da empresa. Os usuários limitados podem herdar permissões semelhantes às dos administradores do grupo de app se tiverem as permissões necessárias verificadas. |
-| Administrador da empresa | Os administradores da empresa têm permissões mais amplas, incluindo a capacidade de excluir usuários da empresa. No entanto, eles não podem excluir suas próprias contas e devem entrar em contato com outro administrador da empresa para realizar essa ação. |
+| Administrador da empresa | Os administradores da empresa têm permissões mais amplas, incluindo a capacidade de excluir usuários do dashboard. No entanto, eles não podem excluir suas próprias contas e devem entrar em contato com outro administrador da empresa para realizar essa ação. |
 | Permissão básica de somente leitura | Para acessar certas partes do dashboard, como a página Technology Partners, os usuários devem ter uma permissão básica de somente leitura. Isso inclui ter a opção "Manage External Integrations" (Gerenciar integrações externas) ativada, juntamente com permissões para Access Campaigns (Acessar campanhas), Canvas, Cards (Cartões), Segments (Segmentos) e Media Library (Biblioteca de mídia). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -75,7 +75,7 @@ Os usuários limitados têm permissões específicas que lhes permitem gerenciar
 Os usuários podem encontrar mensagens como "Acesso limitado". Você não tem permissão para acessar esta página." Nesses casos, o administrador da conta deve verificar se é possível resolver o problema desativando e reativando as permissões do usuário.
 
 {% alert note %}
-Não é possível mesclar ou importar permissões de usuário de um usuário da empresa para outro.
+Não é possível mesclar ou importar permissões de usuário de um usuário do dashboard para outro.
 {% endalert %}
 
 ## Editando as permissões de um usuário
@@ -92,8 +92,8 @@ Para editar as permissões atuais de administrador, empresa ou espaço de trabal
 Os administradores têm acesso a todos os recursos e a capacidade de modificar qualquer configuração da empresa. Eles podem:
 
 - Alterar [configurações de aprovação]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_approval/#turning-on-campaign-approval)
-- Adicionar, editar, excluir, suspender ou reativar outros [usuários da empresa]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
-- Exportar usuários da empresa como um CSV
+- Adicionar, editar, excluir, suspender ou reativar outros [Braze usuários]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/)
+- Exportar usuários do Braze como um CSV
 
 Para conceder ou remover privilégios de administrador, selecione **Este usuário é um administrador**, depois selecione **Atualizar usuário**.
 
@@ -157,7 +157,7 @@ Para baixar uma lista de seus usuários e suas permissões, acesse **Configuraç
 ## Lista de permissões
 
 {% alert important %}
-A partir de abril de 2024, para criar ou atualizar listas de códigos promocionais, os usuários da empresa precisam da permissão “Acessar Campanhas, canvas, Cartões, Segmentos, Biblioteca de Mídia”.
+A partir de abril de 2024, para criar ou atualizar listas de códigos promocionais, os usuários do Braze precisam da permissão “Acessar Campanhas, canvas, Cartões, Segmentos, Biblioteca de Mídia”.
 {% endalert %}
 
 |Nível|Nome|Definição|
@@ -177,7 +177,7 @@ A partir de abril de 2024, para criar ou atualizar listas de códigos promociona
 |Espaço de trabalho|Abrir Centrais de Preferências|Permite que os usuários lancem [centros de preferências]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center/overview/).|
 |Espaço de trabalho|Gerenciar apps|Permite que os usuários editem **Configurações do app**.|
 |Espaço de trabalho|Permissão para gerenciar catálogos do dashboard|Permite aos usuários criar e gerenciar catálogos.|
-|Espaço de trabalho|Gerenciar usuários da empresa| Permite que os não administradores visualizem, editem e gerenciem a página **Usuários da empresa** e gerenciem os usuários da empresa em seu espaço de trabalho, modificando as permissões de qualquer usuário, inclusive eles próprios. Os usuários com essa permissão não podem excluir usuários (somente os administradores podem excluir usuários).<br><br>Isso corresponde à permissão herdada `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
+|Espaço de trabalho|Gerenciar usuários do dashboard| Permite que os não administradores visualizem, editem e gerenciem a página **Usuários da empresa** e gerenciem os usuários do dashboard em seu espaço de trabalho, modificando as permissões de qualquer usuário, inclusive eles próprios. Os usuários com essa permissão não podem excluir usuários (somente os administradores podem excluir usuários).<br><br>Isso corresponde à permissão herdada `MANAGE_DEVELOPERS_AND_PERMISSIONS`.|
 |Espaço de trabalho|Gerenciar configurações de e-mail|Permite que os usuários salvem as alterações de configuração de e-mail (**Configurações** > **Preferências de e-mail**).|
 |Espaço de trabalho|Gerenciar eventos, atributos, compras|Permite que os usuários editem atributos personalizados (usuários sem essa capacidade ainda podem visualizar atributos personalizados), editem e visualizem propriedades de eventos personalizados e editem e visualizem propriedades de produtos em **Configurações de Dados**.|
 |Espaço de trabalho|Gerenciar integrações externas|Permite o acesso a todas as guias em **Parceiros de tecnologia**, a capacidade de sincronizar o Braze com outras plataformas e o acesso para gerenciar [a ingestão de dados na nuvem]({{site.baseurl}}/user_guide/data/cloud_ingestion/).|
