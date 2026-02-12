@@ -25,7 +25,7 @@ You need to be logged into the Braze dashboard to use the link, and the file wil
 
 - If you see an `AccessDenied` error, the file may have already expired or you may have tried to open it before it was ready. Larger reports take longer to generate, so wait a few minutes and try again.  
 - An `ExpiredToken` error means the four-hour window has passed. Re-run the export to generate a fresh link.  
-- The message *“Looks like the file doesn’t exist anymore”* usually appears when the email is sent but the file hasn’t finished uploading to S3. Waiting a few minutes typically resolves it.  
+- The message `Looks like the file doesn't exist anymore` usually appears when the email is sent but the file hasn’t finished uploading to S3. Waiting a few minutes typically resolves it.  
 - Apostrophes added at the start of certain fields (like `-`, `=`, `+`, or `@`) are expected. Braze does this to prevent spreadsheet programs from misinterpreting the data.  
 
 ## API exports  
@@ -45,7 +45,7 @@ Large API exports can also time out. If that happens, try making smaller request
 When you connect a storage partner (such as Amazon S3, Google Cloud Storage, or Azure Blob) and mark it as your default export destination from the **Technology Partners** page in the dashboard, Braze writes your exports directly to your bucket. This setup is typically more reliable for larger exports.  
 
 ## CSV exports  
-With CSV exports, Braze emails you a download link. That link expires after four hours, just like with the default setup. The difference is that a duplicate copy of the export is also written to your connected bucket, where expiration and retention follow your own policies.  
+With CSV exports, Braze emails you a download link. That link expires after four hours, and the file stored in the Braze-managed S3 bucket is deleted when the link expires, just like with the default setup. When you have a storage partner connected, Braze also writes a copy of the export to your connected bucket. That copy lives in your own infrastructure, where expiration and retention follow your storage policies.  
 
 In cloud storage, CSV exports aren’t bundled into a single ZIP. Instead, you’ll see multiple smaller files—typically around 5,000 users each, though sometimes fewer. That doesn’t necessarily indicate missing data. If the emailed link fails but the copy in your storage succeeds, you can always retrieve your data directly from your bucket.  
 
@@ -56,7 +56,7 @@ In cloud storage, CSV exports aren’t bundled into a single ZIP. Instead, you�
 - If some files look smaller than expected, that’s normal behavior. The export process intentionally splits files for stability.  
 
 ## API exports  
-When you export data through the APIs with a storage partner connected, files are written directly to your bucket. No email is sent, and expiration is determined by your storage settings. Each file contains JSON objects, one per line. Large exports create multiple files instead of a single ZIP, which makes this method more reliable for heavy exports.  
+When you export data through the APIs with a storage partner connected, files are written directly to your bucket. No email is sent, and expiration is determined by your storage settings. Each ZIP file contains JSON objects, one per line. Large exports create multiple ZIP files instead of a single ZIP, which makes this method more reliable for heavy exports.  
 
 ### Common errors
 
