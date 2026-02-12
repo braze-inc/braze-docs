@@ -11,7 +11,7 @@ description: "이 도움말에서는 Braze 계정을 만드는 방법, 액세스
 
 > This article covers how to get your Braze account, how to log in after being granted access, and how to troubleshoot your dashboard access and dashboard performance.
 
-회사의 첫 번째 Braze 사용자이고 처음 로그인하는 경우, 계약 첫날에 이메일 확인 및 로그인을 요청하는 환영 이메일(`@alerts.braze.com`)을 받게 됩니다.
+회사의 첫 번째 회사 사용자이고 처음 로그인하는 경우, 계약 첫날에 이메일 확인 및 로그인을 요청하는 환영 이메일(`@alerts.braze.com`)을 받게 됩니다.
 
 After confirming your account, you can add additional users from the [Company Users]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/) page of your dashboard. 모든 사용자는 계정을 추가한 후 계정 확인을 요청하는 이메일을 받게 됩니다.
 
@@ -45,7 +45,7 @@ If your Braze dashboard says you have an unexpected error and your browser conso
 
 ## 여러 개의 Braze 대시보드에 액세스하기
 
-Braze에서는 동일한 클러스터에 있는 여러 대시보드 사용자에게 동일한 이메일 주소를 등록할 수 없습니다(예: US-01에 두 개의 대시보드가 있는 경우). 동일한 이메일을 사용하여 서로 다른 클러스터에 계정을 만들 수 있습니다(예: US-01에 대시보드가 하나 있고 US-05에 대시보드가 있는 경우). 동일한 클러스터에서 여러 개의 Braze 대시보드에 액세스해야 하는 경우 다음과 같이 할 수 있습니다:
+Braze에서는 동일한 클러스터에 있는 여러 회사 사용자에게 동일한 이메일 주소를 등록할 수 없습니다(예: US-01에 두 개의 대시보드가 있는 경우). 동일한 이메일을 사용하여 서로 다른 클러스터에 계정을 만들 수 있습니다(예: US-01에 대시보드가 하나 있고 US-05에 대시보드가 있는 경우). 동일한 클러스터에서 여러 개의 Braze 대시보드에 액세스해야 하는 경우 다음과 같이 할 수 있습니다:
 
 ### 이메일 별칭 사용
 
@@ -96,7 +96,7 @@ If clearing your browser cache and cookies doesn't resolve your issues, contact 
 
 ### Accessing the drag-and-drop editor
 
-For most Braze users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
+For most company users, the drag-and-drop editor should load. However, if you're using a VPN or are behind a firewall, you may need to allowlist a domain. Contact your IT administrator to check that `*.bz-rndr.com` is allowlisted.
 
 The editor may experience loading issues due to the following:
 

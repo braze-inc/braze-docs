@@ -27,7 +27,7 @@ glossaries:
   - name: Braze 참여 툴
     description: "Braze는 캠페인, 캔버스 도구를 통해 고객과 사용자에게 다가갈 수 있는 다양한 <a href=\"https://www.braze.com/docs/user_guide/engagement_tools/\">참여 도구를</a> 제공하며, 템플릿 및 미디어 도구를 사용하여 일관성을 위해 최적화하고 이미지 및 기타 콘텐츠를 업로드할 수 있습니다. 여기에서 세그먼트와 지오펜스를 생성하여 위치 또는 기타 속성별로 오디언스를 타겟팅할 수 있습니다."
   - name: Braze 팀
-    description: "Braze admins can divide a subset of dashboard users into <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/\">Teams</a> with varying user roles and permissions. This allows Braze admins to limit access to certain features by group membership."
+    description: "Braze admins can divide a subset of company users into <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/manage_your_braze_users/teams/\">Teams</a> with varying user roles and permissions. This allows Braze admins to limit access to certain features by group membership."
   - name: 캠페인
     description: "Campaigns are customizable messaging methods to deliver personalized response to your customers. 다양한 메시징 채널을 사용하여 <a href=\"https://www.braze.com/docs/user_guide/engagement_tools/campaigns/\">캠페인을 구축하여</a> 고유한 메시지를 보낼 수 있습니다." 
   - name: Canvas
