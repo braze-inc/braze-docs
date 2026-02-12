@@ -25,12 +25,12 @@ Avant de créer un message LINE, faites ce qui suit :
 
 L'envoi de messages LINE à partir de Braze est prélevé sur les crédits de messages de votre compte.
 
-## Étape 1 : Choisissez où créer votre message
+## Étape 1 : Choisissez où créer votre message
 
-Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 **Étapes :**
 
@@ -64,7 +64,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 Rédigez votre message en utilisant la personnalisation (comme le contenu Liquid ou connecté) si nécessaire. LINE autorise jusqu'à cinq bulles de message dans chaque message, qui peuvent correspondre à l'une des mises en page de messages disponibles : texte, image, riche ou à base de cartes.
 
-![Composez LINE avec un message affiché dans l'aperçu.]({% image_buster /assets/img/line/line_composer.png %})
+![LINE avec un message affiché dans l'aperçu.]({% image_buster /assets/img/line/line_composer.png %})
 
 ### Conseils
 
@@ -76,16 +76,16 @@ Si vous prévoyez d'utiliser Liquid, assurez-vous d'inclure une valeur par défa
 
 L'aspect final des messages de droite à gauche dépend largement de la manière dont les fournisseurs de services les restituent. Pour connaître les meilleures pratiques en matière d'élaboration de messages de droite à gauche qui s'affichent le plus précisément possible, reportez-vous à la section [Création de messages de droite à gauche.]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/)
 
-## Étape 3 : Prévisualiser et tester votre message
+## Étape 3 : Prévisualiser et tester votre message
 
 Passez à l'onglet **Test** pour envoyer un message LINE de test aux groupes de test de contenu ou aux utilisateurs individuels, ou prévisualisez le message en tant qu'utilisateur directement dans Braze.
 
-![L'onglet "Tests" affiche un aperçu d'un message de test.]({% image_buster /assets/img/line/test_preview.png %})
+![L'onglet "Tests" affichant un aperçu d'un message de test.]({% image_buster /assets/img/line/test_preview.png %})
 
 ## Étape 4 : Créer le reste de votre campagne ou de votre Canvas
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 
 Construisez le reste de votre campagne. Voir les sections suivantes pour plus de détails sur la meilleure façon d'utiliser nos outils pour créer des messages LINE.
 
@@ -99,7 +99,7 @@ Vous pouvez spécifier des contrôles de livraison, tels que permettre aux utili
 
 [Utilisez des segments ou des filtres pour cibler vos utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/). Vous devriez déjà avoir choisi le groupe d'abonnement, ce qui restreint les utilisateurs par le niveau ou la catégorie de communication qu'ils souhaitent avoir avec vous. 
 
-Sélectionnez le plus grand public parmi vos segments, et réduisez éventuellement ce segment davantage avec nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Vous recevez automatiquement un aperçu de ce à quoi ressemble la population approximative du segment à ce moment-là. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
+Sélectionnez le plus grand public parmi vos segments, et réduisez éventuellement ce segment davantage avec nos [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Vous recevez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif. N'oubliez pas que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
 
 ### Sélectionner des événements de conversion
 
@@ -115,7 +115,7 @@ Vous pouvez également définir des événements de conversion personnalisés pr
 {% endtab %}
 {% tab Canvas %}
 
-Si vous ne l'avez pas encore fait, complétez les sections restantes de votre canvas. Pour plus de détails sur la façon de construire le reste de votre Canvas, utilisez les tests multivariés et la Sélection Intelligente, et plus encore, consultez [Créer un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Si vous ne l'avez pas encore fait, complétez les sections restantes de votre Canvas. Pour plus de détails sur la manière de créer le reste de votre Canvas, d'utiliser les tests multivariés et la sélection intelligente, et plus encore, reportez-vous à la section [Créer un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}

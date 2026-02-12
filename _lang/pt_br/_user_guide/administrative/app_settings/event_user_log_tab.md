@@ -1,5 +1,5 @@
 ---
-nav_title: Registro de usuários de eventos
+nav_title: registro de usuários de eventos
 article_title: Registro de usuários de eventos
 page_order: 7
 page_type: reference
@@ -32,13 +32,13 @@ Cada registro é dividido em várias seções, que podem incluir:
 * Eventos da campanha
 * Dados de respostas
 
-Selecione o ícone **Expandir dados** para mostrar os dados JSON brutos desse registro específico.
+Selecione o ícone **Expandir dados** para mostrar os dados JSON brutos para esse registro específico.
 
 ![O ícone "Expandir dados" ao lado de um registro específico.]({% image_buster /assets/img_archive/expand_data.png %})
 
 Os registros de usuários de eventos permanecerão no dashboard por 30 dias após terem sido registrados.
 
-![Registros brutos de eventos]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
+![Registros brutos para eventos]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
 
 ## Solução de problemas
 

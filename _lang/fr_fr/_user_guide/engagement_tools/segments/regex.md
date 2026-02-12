@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expressions régulières
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/regular-expression-basics-for-braze){: style="float:right;width:120px;border:0;" class="noimgborder"} Expressions régulières
 
 <!--{% multi_lang_include video.html id="3h5Xbhl-TxE" align="right" %}-->
 
@@ -33,7 +33,7 @@ Les expressions régulières pour les propriétés d'événements personnalisés
 {% endalert %}
 
 {% tabs %}
-{% tab Débogueur d'expressions régulières %}
+{% tab Regex Debugger %}
 <div>
 Ce formulaire permet d’effectuer des validations et des tests de base des expressions régulières.
 ​
@@ -164,7 +164,7 @@ Cette expression régulière peut être divisée en trois parties :
 
 Supposons que vous souhaitiez filtrer les e-mails se terminant par "@braze.com". Vous devez utiliser le filtre d'adresses e-mail, le définir sur `matches regex`, et saisir "@braze.com" dans le champ de l'expression régulière. Il en va de même pour tout autre domaine e-mail.
 
-![Filtre pour une adresse e-mail qui correspond à l'expression régulière "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
+![Filtre pour une adresse e-mail qui correspond à l'expression régulière de "@braze.com".]({% image_buster /assets/img/regex/regeximg1.png %})
 
 #### Comment utiliser les chaînes de numéros de filtre pour les valeurs ≥ x et ≤ x ?
 
@@ -206,6 +206,6 @@ Supposons par exemple que vous souhaitiez filtrer les utilisateurs par numéro d
 ^1?718\d\d\d\d\d\d\d
 ```
 
-![Filtre pour un numéro de téléphone qui correspond à l'expression régulière "^1?718d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
+![Filtre pour un numéro de téléphone qui correspond à l'expression régulière de "^1?718\\d\\d\\d\\d\\d\\d".]({% image_buster /assets/img/regex/regeximg3.png %})
 
 

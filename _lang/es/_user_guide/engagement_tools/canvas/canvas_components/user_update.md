@@ -1,5 +1,5 @@
 ---
-nav_title: Actualización de usuario 
+nav_title: Actualización de usuarios
 article_title: Actualización de usuario 
 alias: "/user_update/"
 page_order: 6
@@ -14,9 +14,9 @@ tool: Canvas
 
 ## Cómo funciona este componente
 
-![Un paso de actualización de usuario llamado "Actualizar fidelización" que actualiza un atributo "Es miembro Premium" a "true".]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![Un paso de actualización de usuario llamado "Actualizar fidelización" que actualiza un atributo "Es Miembro Premium" a "verdadero".]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-Cuando utilices este componente en tu Canvas, las actualizaciones no cuentan para el límite de velocidad de `/users/track` peticiones por minuto. En su lugar, estas actualizaciones se agrupan por lotes para que Braze pueda procesarlas con mayor eficacia que un webhook de Braze a Braze. Tenga en cuenta que este componente no consume [puntos de datos]({{site.baseurl}}/user_guide/data/data_points/) cuando se utiliza para actualizar puntos de datos no facturables (como grupos de suscripción).
+Cuando utilices este componente en tu Canvas, las actualizaciones no cuentan para el límite de velocidad de `/users/track` peticiones por minuto. En su lugar, estas actualizaciones se agrupan por lotes para que Braze pueda procesarlas con mayor eficacia que un webhook de Braze a Braze. Ten en cuenta que este componente no registra [puntos de datos]({{site.baseurl}}/user_guide/data/data_points/) cuando se utiliza para actualizar puntos de datos no facturables (como grupos de suscripción).
 
 Los usuarios sólo avanzarán a los siguientes pasos de Canvas una vez que hayan completado las actualizaciones de usuario pertinentes. Esto significa que cualquier mensajería posterior que dependa de estas actualizaciones del usuario estará actualizada cuando se ejecute el siguiente paso.
 
@@ -40,7 +40,7 @@ Para añadir o actualizar un atributo personalizado, seleccione un nombre de atr
 
 Para eliminar un atributo personalizado, seleccione un nombre de atributo utilizando el desplegable. Puede cambiar al [compositor JSON avanzado](#advanced-json-composer) para seguir editando. 
 
-![Paso de actualización de usuario que elimina un atributo "Miembro fidelizado".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
+![Paso de actualización de usuario que elimina un atributo "Miembro de fidelización".]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### Valores crecientes y decrecientes
 
@@ -64,7 +64,7 @@ Al añadir o eliminar un elemento de una matriz se actualiza la lista de deseos 
 
 ![Paso de actualización de usuario que añade un elemento "bloqueador solar" al atributo "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
-#### Caso de uso: Calcular el total de la cesta de la compra
+#### Casos de uso: Calcular el total de la cesta de la compra
 
 Realice un seguimiento de cuándo un usuario tiene artículos en su cesta de la compra, cuándo añade nuevos artículos o los elimina, y cuál es el valor total de la cesta de la compra. 
 
@@ -124,7 +124,7 @@ El atributo `shopping_cart` lleva el total de muchos eventos personalizados: el 
 
 Puedes utilizar el paso de actualización de usuario para persistir un `canvas_entry_property`. Digamos que tienes un evento que se dispara cuando se añade un artículo al carrito. Puede almacenar el ID del último artículo añadido al carrito y utilizarlo para una campaña de remarketing. Utilice la función de personalización para recuperar una propiedad de entrada de Canvas y almacenarla en un atributo.
 
-![Paso de actualización de usuario que actualiza el atributo "most_recent_cart_item" con un ID de artículo.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
+![Paso de actualización de usuario que actualiza el atributo "most_recent_cart_item" con un ID de elemento.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### Personalización
 

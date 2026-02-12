@@ -28,14 +28,14 @@ Braze n’a aucun contrôle sur l’ordre d’affichage lorsque des images et un
 
 ### La tarification des MMS et des SMS diffère-t-elle ?
 
-Les MMS et les SMS ont des coûts différents et sont facturés séparément en fonction du volume. Contactez l’équipe d’onboarding de Braze pour obtenir des informations sur les tarifs.
+Les MMS et les SMS ont des coûts différents et sont facturés séparément en fonction du volume. Contactez l'équipe Braze Onboarding pour obtenir des informations sur les prix.
 
 ### Les MMS requièrent-ils un processus d’onboarding distinct ?
 
 Non ! Les MMS sont désormais inclus dans notre processus d’onboarding des SMS. Les clients existants qui sont déjà passés par l’étape d’onboarding peuvent commencer à envoyer des campagnes par MMS après avoir effectué les étapes suivantes :
 
 1. Acheter MMS.
-2. Contactez l’équipe d’onboarding de Braze pour demander l’activation de la fonctionnalité MMS. Les MMS sont ainsi activés et un groupe d’abonnement SMS/MMS est automatiquement créé ou mis à jour.
+2. Contactez l'équipe Braze Onboarding pour demander l'activation de la fonctionnalité MMS. Les MMS sont ainsi activés et un groupe d’abonnement SMS/MMS est automatiquement créé ou mis à jour.
 
 L’équipe d’onboarding de Braze s’assurera par ailleurs que vos codes courts et longs sont activés (aux États-Unis et au Canada) pour les MMS. Elle met également à jour vos groupes d’abonnement pour afficher vos numéros actuels ajoutés ou activés pour les MMS. Une fois ces étapes terminées, vous pouvez envoyer des messages MMS immédiatement depuis notre compositeur SMS natif.
 

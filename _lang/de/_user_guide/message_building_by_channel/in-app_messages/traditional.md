@@ -1,5 +1,5 @@
 ---
-nav_title: Klassischer Editor
+nav_title: Traditioneller Herausgeber
 article_title: Traditioneller Editor für In-App-Nachrichten
 page_order: 3
 layout: dev_guide

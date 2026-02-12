@@ -1,6 +1,6 @@
 ---
-nav_title: Créer une campagne par MMS
-article_title: Créer une campagne par MMS
+nav_title: Créer une campagne MMS
+article_title: Créer une campagne MMS
 page_order: 2
 description: "Cet article de référence couvre les étapes impliquées dans la création, l’envoi et la prévisualisation d’un message MMS."
 page_type: reference
@@ -56,4 +56,4 @@ Braze fournit un aperçu de l'image que vous avez téléchargée dans le panneau
 L’ordre des ressources SMS/MMS ne peut pas être personnalisé. L’ordre dépend du téléphone qui reçoit ce message.
 {% endalert %}
 
-![Exemple de message : "Prêt pour la maison gym...at?". L'aperçu montre le message et l'image envoyés en tant que textes.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Exemple de message : "Prêt à faire de la gym... à la maison ?". L'aperçu montre le message et l'image envoyés sous forme de textes.]({% image_buster /assets/img/sms/mms_preview.png %})

@@ -1,7 +1,7 @@
 ---
 nav_title: Bloques de producto
 article_title: Bloques de producto arrastrar y soltar
-page_order: 7
+page_order: 9
 description: "Este artículo de referencia trata de los bloques de producto de arrastrar y soltar, que permiten a los usuarios añadir y configurar rápidamente escaparates dinámicos o estáticos de artículos del catálogo."
 tool:
     - Campaigns
@@ -22,8 +22,9 @@ La característica de arrastrar y soltar bloques de productos está en acceso te
 | Requisito | Descripción |
 | --- | --- |
 | Eventos recomendados en eCommerce | [Los eventos recomendados para el comercio electrónico]({{site.baseurl}}/ecommerce_events/) proporcionan esquemas de datos estandarizados para los eventos de comportamiento clave que se producen antes y después de realizar un pedido. Estos eventos acabarán sustituyendo al evento de compra heredado de Braze y se convertirán en la norma para el seguimiento del comportamiento relacionado con el comercio. <br><br> Los eventos recomendados de comercio electrónico son necesarios para los bloques de productos dinámicos.<br><br> Los eventos recomendados por eCommerce están actualmente en acceso anticipado. Ponte en contacto con tu administrador del éxito del cliente de Braze si estás interesado en participar en este acceso anticipado. |
-| Plantillas eCommerce Canvas | Los eventos recomendados de eCommerce admiten plantillas preconstruidas, incluidas plantillas de eCommerce Canvas diseñadas para casos de uso esenciales, como navegación abandonada, carritos abandonados y confirmaciones de pedidos. <br><br>Si piensas poner en práctica alguno de estos casos de uso esenciales del comercio electrónico utilizando [las plantillas del Canvas de comercio electrónico]({{site.baseurl}}/ecommerce_use_cases/), debes utilizar o seguir la plantilla Canvas proporcionada. |
-| Catálogo Braze | Tienes que crear un catálogo Braze que incluya los siguientes campos, que se utilizarán en la configuración de tu bloque de productos:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Plantillas Canvas para comercio electrónico | Los eventos recomendados de eCommerce admiten plantillas preconstruidas, incluidas plantillas de eCommerce Canvas diseñadas para casos de uso esenciales, como navegación abandonada, carritos abandonados y confirmaciones de pedidos. <br><br>Si piensas poner en práctica alguno de estos casos de uso esenciales del comercio electrónico utilizando [las plantillas del Canvas de comercio electrónico]({{site.baseurl}}/ecommerce_use_cases/), debes utilizar o seguir la plantilla Canvas proporcionada. |
+| Catálogo Braze | Debes crear un catálogo Braze que incluya los siguientes campos, que utilizarás en la configuración de tu bloque de productos:{::nomarkdown}<code><ul><li>product_title</li><li>product_url</li><li>variant_image_url</li></ul></code>{:/} |
+| Selección del catálogo | Para los bloques de producto estáticos, debes crear una [selección de catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) para especificar qué productos incluir en tu bloque de producto. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
 ## Tipos de bloques de producto arrastrar y soltar
@@ -31,7 +32,7 @@ La característica de arrastrar y soltar bloques de productos está en acceso te
 | Bloque de productos | Propósito | Ejemplos | Disponibilidad |
 | --- | --- | --- | --- |
 | Dinámico | Personaliza tu mensajería con un escaparate de productos basado en las interacciones con los clientes utilizando [eventos recomendados de comercio electrónico]({{site.baseurl}}/ecommerce_events/) y catálogos dentro de nuestras [plantillas Canvas de comercio electrónico]({{site.baseurl}}/ecommerce_use_cases/). | {::nomarkdown}<ul><li>Navegar abandonada</li><li>Carrito abandonado</li><li>Compra abandonada</li><li>Confirmaciones de pedido</li></ul>{:/} | Disponible sólo en Canvas. |
-| Estática | Personaliza productos utilizando sólo los datos almacenados en un catálogo Braze o una [selección de catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/). | Perfecto para mostrar el lanzamiento de nuevos productos u ofertas de categorías específicas.| |
+| Estática | Personaliza productos utilizando datos almacenados en un catálogo Braze. Debes utilizar una [selección de catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/) para especificar qué productos incluir. | Perfecto para mostrar el lanzamiento de nuevos productos u ofertas de categorías específicas.| |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role=”presentation” }
 
 ## Configuración del bloque de contenido del producto
@@ -65,7 +66,7 @@ En la sección **Campos de producto**, selecciona tu tipo de bloque de producto 
 | Precio | Catálogos |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role=“presentation” }
 
-![Campos de producto para un bloque de producto estático, que están todos categorizados como datos de catálogo.]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
+![Campos de producto para un bloque de producto estático, que se clasifican como datos de catálogo.]({% image_buster /assets/img/product_blocks/static_fields.png %}){: style="max-width:50%;"}
 
 ### Opciones de diseño
 
@@ -79,7 +80,7 @@ Utiliza las opciones de diseño para personalizar cómo se muestran tus producto
 | Espacio entre productos | Configura el espaciado entre productos. |
 {: .reset-td-br-1 .reset-td-br-2 role=“presentation” }
 
-![Opciones de diseño para la orientación del producto, la alineación, el número máximo de productos por fila y el espaciado entre productos.]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
+![Opciones de diseño para la orientación de los productos, la alineación, el número máximo de productos por fila y el espaciado entre productos.]({% image_buster /assets/img/product_blocks/layout_options.png %}){: style="max-width:50%;"}
 
 ### Configuración global del estilo de correo electrónico 
 
@@ -87,7 +88,7 @@ Utiliza las opciones de diseño para personalizar cómo se muestran tus producto
 
 #### Cómo funcionan las configuraciones globales de estilo de correo electrónico con los bloques de producto
 
-Los estilos existentes para párrafos y botones se aplicarán automáticamente a los elementos de texto y botón dentro del bloque de producto. Esto significa que cualquier formato que hayas establecido para párrafos y botones se utilizará de forma coherente en tu bloque de producto, manteniendo un aspecto cohesivo en todo tu correo electrónico.
+Los estilos existentes para párrafos y botones se aplican automáticamente a los elementos de texto y botón dentro del bloque de producto. Esto significa que tu bloque de producto utiliza de forma coherente cualquier formato que hayas configurado para párrafos y botones, manteniendo un aspecto cohesionado en todo tu correo electrónico.
 
 ## Configuración de bloques de producto
 
@@ -97,7 +98,7 @@ Los estilos existentes para párrafos y botones se aplicarán automáticamente a
 Si utilizas la integración de Braze y Shopify para [sincronizar productos]({{site.baseurl}}/shopify_catalogs/), no necesitas dar ningún paso adicional para utilizar bloques de productos de arrastrar y soltar.<br><br> Si no tienes información sobre la variante del producto, tienes que duplicar su información de producto de nivel superior tanto en el campo del producto como en el de la variante del producto dentro de las cargas útiles y los catálogos de eventos. Esto significa que tienes que proporcionar los mismos detalles del producto para ambos identificadores a fin de mantener la coherencia para que el bloque de producto funcione correctamente.
 {% endalert %}
 
-Para utilizar bloques de producto de arrastrar y soltar, tienes que configurar un catálogo Braze que incluya valores de campo específicos. Estos campos se utilizarán en la configuración de tu bloque de producto. Asegúrate de que tu catálogo incluye los siguientes campos:
+Para utilizar bloques de producto de arrastrar y soltar, tienes que configurar un catálogo Braze que incluya valores de campo específicos. Utiliza estos campos en la configuración de tu bloque de productos. Asegúrate de que tu catálogo incluye los siguientes campos:
 
 | Campo | Descripción |
 | --- | --- |
@@ -107,7 +108,15 @@ Para utilizar bloques de producto de arrastrar y soltar, tienes que configurar u
 
 Empieza trabajando con este [Catálogo de productos de muestra]({{site.baseurl}}/assets/download_file/ecommerce_product_catalog_sample.csv), que incluye los campos obligatorios. 
 
-![Un archivo CSV de muestra con los campos requeridos además de otros.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+![Un archivo CSV de muestra con los campos obligatorios, además de otros.]({% image_buster /assets/img/ecommerce/sample_product_catalog.png %})
+
+#### Mapeado a los campos del catálogo
+
+En la pestaña **Configuración** de tu catálogo, puedes alternar **los Bloques de productos** para mapearlos con campos e información específicos de tu catálogo. Esto te permite seleccionar qué campos utilizar como título del producto, URL del producto y URL de la imagen. Ten en cuenta que los campos del catálogo de Shopify están mapeados por defecto y no se pueden cambiar.
+
+{% alert note %}
+Si no utilizas Shopify, puedes ponerte en contacto con tu administrador de cuentas para activar el mapeado de campos, que te permite conectar cualquier catálogo a bloques de productos y mapear sus campos a los de `product_title`, `product_url` y `variant_image_url`.
+{% endalert %}
 
 ## Crear bloques de producto
 
@@ -136,7 +145,7 @@ Crea una campaña de correo electrónico de arrastrar y soltar, un Canvas basado
 ### Paso 2: Añadir un bloque de producto
 
 {% tabs %}
-{% tab Bloque de producto dinámico %}
+{% tab Dynamic product block %}
 
 Dentro del paso de mensajes, crea un mensaje de correo electrónico o modifica la plantilla existente utilizando el creador de mensajes de arrastrar y soltar.
 Arrastra un bloque de producto a tu mensaje de correo electrónico.
@@ -144,17 +153,17 @@ Confirma que se ha seleccionado el tipo de bloque dinámico.
 Selecciona el catálogo de productos que quieres utilizar para la personalización. Asegúrate de que concuerda con los productos de los eventos entrantes a los que te diriges.
 
 {% endtab %}
-{% tab Bloque estático de producto %}
+{% tab Static product block %}
 
 Arrastra un bloque de producto a tu mensaje de correo electrónico y selecciona el tipo de bloque estático.
-Selecciona el catálogo que quieres utilizar para tu bloque de productos. Si tu catálogo tiene una selección, debes seleccionarla para restringir aún más los productos que se muestran en tu bloque de productos.
+Selecciona el catálogo que quieres utilizar para tu bloque de productos. Debes elegir una selección de catálogo para especificar qué productos se muestran en tu bloque de productos.
 
 {% endtab %}
 {% endtabs %}
 
-![La pestaña "Contenido" que contiene bloques de editor, como bloques de producto.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
+![La pestaña "Contenido" contiene bloques de editor, como los bloques de producto.]({% image_buster /assets/img/product_blocks/product_block.png %}){: style="max-width:40%;"}
 
-### Paso 3: Configurar campos de producto
+### Paso 3: Configurar los campos del producto
 
 Selecciona qué [campos de producto](#product-fields) deben mostrarse en el bloque de producto. Selecciona **Aplicar configuración** después de cada cambio para ver las actualizaciones en el editor. 
 
@@ -169,20 +178,20 @@ Cambia las [opciones de diseño](#layout-options) para actualizar cómo se muest
 ### Paso 5: Vista previa y prueba de tu mensaje
 
 {% tabs %}
-{% tab Bloque de producto dinámico %}
+{% tab Dynamic product block %}
 
-1. En la sección **Vista previa y prueba**, previsualiza el mensaje como usuario personalizado.
+1. En la sección **Vista previa & Prueba**, previsualiza el mensaje como usuario personalizado.
 2. Especifica cuántos elementos quieres mostrar en la vista previa.
 3. Confirma que aparece el número correcto de elementos y que tus opciones de diseño se aplican correctamente. Ten en cuenta que los elementos que aparecen se seleccionan al azar.
 
-!["Vista previa como usuario" pestaña con una sección desplegable "Bloque de producto dinámico" que especifica mostrar 4 artículos.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
+![Pestaña "Vista previa como usuario" con una sección desplegable "Bloque de productos dinámicos" que especifica que se muestren 4 artículos.]({% image_buster /assets/img/product_blocks/preview_as_a_user.png %}){: style="max-width:40%;"}
 
 {% endtab %}
-{% tab Bloque estático de producto %}
+{% tab Static product block %}
 
 Se generará una vista previa dentro del compositor arrastrar y soltar cuando apliques cambios a tu bloque de producto. 
 
-![Compositor de arrastrar y soltar por correo electrónico que muestra un bloque de producto generado con diferentes mosaicos de artículos.]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
+![El compositor de arrastrar y soltar de correo electrónico muestra un bloque de generación de productos con diferentes mosaicos de artículos.]({% image_buster /assets/img/product_blocks/static_block_preview.png %})
 
 {% endtab %}
 {% endtabs %}

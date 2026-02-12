@@ -4,17 +4,14 @@ article_title: E-mail
 page_order: 1.5
 layout: dev_guide
 guide_top_header: "E-mail"
-guide_top_text: "Avec Braze Email, vous pouvez créer des e-mails personnalisés sur mesure dans des campagnes ou dans Canvas pour capter rapidement l’attention de votre utilisateur. Consultez les articles suivants pour en savoir plus."
+guide_top_text: "Avec l'e-mail chez Braze, vous pouvez créer des messages e-mail complètement personnalisés et adaptés, que ce soit sous forme de campagnes ou de Canvas, qui attireront rapidement l'attention de votre utilisateur en dehors de votre application ou de votre site web. Personnalisez vos messages e-mail : gestion des audiences, contenu multimédia attrayant etc. Pour voir des exemples de campagnes d'e-mail, consultez nos <a href='https://www.braze.com/customers/'>études de cas.</a>"
 description: "Cette page d’accueil contient les informations concernant l’e-mail de Braze. Vous y apprendrez comment créer une campagne e-mail, comment utiliser l'éditeur par glisser-déposer, comment gérer les abonnements des utilisateurs, le centre de préférences, et bien plus encore."
 channel:
   - email
 search_rank: 2
 guide_featured_title: "Articles populaires"
 guide_featured_list:
-- name: À propos de l’e-mail
-  link: /docs/user_guide/message_building_by_channel/email/about/
-  image: /assets/img/braze_icons/check-square-broken.svg
-- name: Gérer les inscriptions des utilisateurs
+- name: Gestion des abonnements des utilisateurs
   link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
 - name: Aliasage de lien
@@ -39,7 +36,7 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/email/email_setup/
   image: /assets/img/braze_icons/mail-01.svg
 - name: Locales dans les messages
-  link: /docs/user_guide/message_building_by_channel/email/using_locales/
+  link: /docs/locales_in_messages/
   image: /assets/img/braze_icons/users-01.svg
 - name: Centre de préférences
   link: /docs/user_guide/message_building_by_channel/email/preference_center/
@@ -77,8 +74,27 @@ guide_menu_list:
 - name: Foire aux questions
   link: /docs/user_guide/message_building_by_channel/email/faq/
   image: /assets/img/braze_icons/annotation-question.svg
-
-
 ---
 
-<br><br>
+## [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/messaging-channels-email){: style="float:right;width:120px;border:0;" class="noimgborder"} Personnalisez vos e-mails
+
+Vous pouvez personnaliser vos communications e-mail de diverses manières, notamment :
+
+- [Modèles d'e-mail de Braze]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/)
+- [Modèles HTML personnalisés]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)
+- [Blocs pour l'éditeur par glisser-déposer]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks/)
+- [Abonnements des utilisateurs]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/)
+
+## Excellents exemples d’utilisation
+
+Voici quelques excellent exemples pour vous aider !
+
+| Cas d’utilisation | Explication |
+| --- | --- |
+| Ré-engagement | Atteignez les utilisateurs en dehors de votre application, y compris ceux qui ne l’ont pas installé. |
+| Onboarding | Accueillez les nouveaux utilisateurs et encouragez-les à activer les notifications push ou à partager votre application sur les réseaux sociaux. |
+| Messages riches | Utilisez des messages HTML riches et dynamiques. |
+| Contenu multimédia | Facilité de placement de contenus multimédias qui suscitent l'intérêt des utilisateurs, tels que les vidéos et les images. |
+| Newsletters | Envoyez facilement des bulletins d'information mensuels ou hebdomadaires pour maintenir l'engagement des utilisateurs. |
+| Transactions | Informez les utilisateurs de leurs achats récents et communiquez des informations importantes sur les produits et les frais d'expédition à l'aide d'[e-mails transactionnels]({{site.baseurl}}/user_guide/message_building_by_channel/email/transactional_message_api_campaign/).
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }

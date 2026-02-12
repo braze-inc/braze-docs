@@ -35,16 +35,16 @@ Braze と Komo の統合により、Komo Engagment Hub を通じてファース�
 ## ユースケース
 
 {% tabs local %}
-{% tab データキャプチャ (フォーム送信) %}
+{% tab Data Capture - Form Submission %}
 
 ユーザーが Komo でカスタマイズ可能なデータキャプチャフォームを送信すると、Braze 統合でマッピングされている Komo のフィールドが、`/users/track/` API 呼び出しを介して Braze に渡されます。
 
 データキャプチャフォームは、カードの開始時または終了時のいずれかに存在します。
 
 {% endtab %}
-{% tab マーケター・リサーチ - 近日公開予定 %}
+{% tab Market Research - Coming soon %}
 
-Komo は近々、ユーザーがクイズの質問、投票、性格診断、スワイパーなどに回答したときにキャプチャされる市場調査データをパススルーする機能を追加する予定です。このデータにより、フォーム送信でキャプチャしたデータを超えて、ユーザーのプロファイルを強化することができます。
+Komoはまた、ユーザーがクイズの質問、投票、パーソナリティテスト、スワイパーなどに回答したときに取得したマーケットリサーチデータを渡すこともできる。このデータにより、フォーム送信でキャプチャしたデータを超えて、ユーザーのプロファイルを強化することができます。
 
 {% endtab %}
 {% endtabs %}
@@ -53,32 +53,34 @@ Komo は近々、ユーザーがクイズの質問、投票、性格診断、ス
 
 ### ステップ1:Komoエンゲージメントハブとカードを公開する
 
-データキャプチャフォームを含む1つ以上のカードでKomo Engagement Hub を公開する必要があります。公開されると、ユーザーエクスペリエンスをエンドツーエンドでテストし、統合が正しく機能していることを確認できます。
+データキャプチャフォームを含む少なくとも1枚のカードを持つKomo Hubを発行する必要がある。公開されると、ユーザーエクスペリエンスをエンドツーエンドでテストし、統合が正しく機能していることを確認できます。
 
-![]({% image_buster /assets/img/komo/komo_hub_publish.png %})
+![コモ・ハブ]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step1.png %})
 
-### ステップ2: Brazeインテグレーションを追加
+### ステップ 2:Braze Connectedアプリを追加する 
 
-Komoでは、**ハブ設定**タブに移動し、**統合**セクションを選択します。次に、リストからBraze統合を見つけて、**接続**ボタンを選択して統合を有効にします。
+Komoの「**Company Settings」**タブで「**Connected Apps**」セクションを選択する。 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_integrations.png %})
+次に、リストからBraze統合を見つけて、**接続**ボタンを選択して統合を有効にします。
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_connect.png %})
+![Brazeの統合を接続する。]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2a.png %}){: style="max-width:50%;"}
 
-#### ユーザーのマッピングを構成する
+![Brazeインテグレーション・ステップ2bを接続する。]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step2b.png %})
 
-最初に設定する必要があるのは、Komo でキャプチャされたユーザーを Braze 内のユーザーにどのようにマッピングするかです。Komo 内のフィールドで `braze_id` または `external_id` をキャプチャする場合は、適切なキーを選択できます。それ以外の場合は、最も一般的なオプションを選択します。これは、メールまたは電話のユーザーエイリアスになります。
+#### ワークフローで統合を構成する
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_key.png %}){: style="max-width:65%;"}
+ワークスペース、サイト、カード内で、Brazeにデータを同期するワークフローを設定する必要がある。 
 
-次に、KomoフィールドをBraze属性に転送するためのマップを定義する必要があります。Komoは大量のデータをキャプチャするため、Braze統合でマッピングされたフィールドのみがBrazeに送信されます。
+ワークスペース全体、サイト（多くのカードを含む）、または単一のカードのいずれをワークフローのスコープとするかは、ワークフローを多くのカードまたはキャンペーンのいずれにトリガーさせたいかによる。 
 
-![]({% image_buster /assets/img/komo/komo_hub_settings_braze_settings.png %}){: style="max-width:65%;"}
+ワークフローを作成後、トリガーを定義し、ステップメニューでBrazeを検索し、「ユーザーを追跡」ステップを追加する。 
 
-最後に、API キーとRESTエンドポイントURLを追加し、**保存**をクリックして統合を有効にします。
+![トラッキングユーザーの設定。]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3a.png %})
 
-## 統合を使用する
+ここから、KomoからBrazeに同期させたいイベント、アトリビューション、サブスクリプションを設定する。 
 
-統合が完了すると、Brazeに送信されたKomoデータを使用してターゲティングのためのセグメントを作成できます。
+![Content blocks list.]({% image_buster /assets/img/Braze Komo Images v2/Braze-Komo-Step3b.png %})
 
+## 統合の使用
 
+これで統合は完了し、ワークフロー実行タブで各実行をモニターできる。 

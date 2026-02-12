@@ -1,5 +1,5 @@
 ---
-nav_title: Lien profond au contenu d’application
+nav_title: Lien profond vers le contenu in-app
 article_title: Lien profond au contenu d’application
 page_order: 3
 description: "Cet article de référence explique comment ajouter un lien profond dans le contenu de vos messages in-app."

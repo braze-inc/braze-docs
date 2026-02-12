@@ -35,6 +35,10 @@ Cette fonction vous permet de cibler les utilisateurs qui effectuent les interac
 - Cliquez une carte de contenu
 - Rejette une carte de contenu
 
+{% alert important %}
+Les déclencheurs de Campaign Connector ne peuvent pas être utilisés pour déclencher des campagnes de messages in-app. Les messages in-app ne peuvent être déclenchés que par des événements SDK, tels que des événements personnalisés ou le démarrage d'une session. Pour plus d'informations, voir [Créer un message in-app.]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/)
+{% endalert %}
+
 ### Règles de livraison
 
 Notez que vous ne pouvez pas utiliser Campaign Connector pour envoyer un message à un utilisateur après qu'il a terminé une interaction avec une campagne. Par exemple, si vous menez une campagne marketing pendant neuf semaines et que vous configurez une campagne de suivi qui utilise Campaign Connector au début de la quatrième semaine, la campagne de suivi n'enverra des messages qu'aux utilisateurs qui ont interagi avec la campagne marketing après la publication de la campagne de suivi (semaines 4 à 9). Par conséquent, afin de garantir que vos campagnes de suivi atteignent tous les utilisateurs que vous ciblez, vous devez :
@@ -51,7 +55,7 @@ Ces règles de livraison sont particulièrement pertinentes si vous ciblez des u
 
 Composez les messages que vous souhaitez envoyer à vos utilisateurs. Vous pouvez sélectionner une campagne monocanal ou multicanal, en fonction de votre cas d'utilisation.
 
-### Étape 2 : Sélectionner une interaction et cibler une campagne
+### Étape 2 : Sélectionner une interaction et cibler une campagne
 
 1. Sélectionnez la [réception/distribution basée sur l'action]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/) et ajoutez le déclencheur "Interagir avec la campagne" pour cibler les utilisateurs qui interagissent avec une campagne active. 
 2. Choisissez l'interaction du déclencheur. 
@@ -59,7 +63,7 @@ Composez les messages que vous souhaitez envoyer à vos utilisateurs. Vous pouve
 
 ![]({% image_buster /assets/img_archive/Campaign_Connector1.png %})
 
-### Étape 3 : Définir le délai de la planification et ajouter des exceptions (facultatif)
+### Étape 3 : Définir le délai de la planification et ajouter des exceptions (facultatif)
 
 Si vous choisissez de définir un délai de planification, vous pouvez ajouter une exception à l’action de déclenchement. Par exemple, vous pouvez désirer renvoyer une campagne e-mail aux utilisateurs qui n’ont pas ouvert l’e-mail d’origine.  Dans ce scénario, vous pouvez choisir « Recevoir un e-mail » comme déclencheur et définir un délai de planification d’une semaine. Ensuite, vous pouvez ajouter « Ouvrir l’e-mail » en tant qu’exception. Vous allez maintenant renvoyer l’e-mail aux utilisateurs qui n’ont pas ouvert l’e-mail d’origine dans la semaine qui suit la réception.
 
@@ -76,8 +80,6 @@ Continuez à créer votre campagne comme vous le feriez normalement. Notez que s
 Vous pouvez utiliser le connecteur de campagne pour cibler les utilisateurs qui s’engagent ou ne s’engagent pas avec des campagnes actives.
 
 Par exemple, vous pouvez choisir de cibler les utilisateurs qui ont cliqué sur un message publicitaire de notification push qui promouvait une expédition gratuite afin que vous puissiez leur envoyer un message publicitaire en notification push annonçant 15 % de réduction sur un achat.
-
-Vous pouvez également effectuer un suivi avec les utilisateurs qui ont cliqué sur un lien profond dans un message in-app d’onboarding en leur envoyant un autre message in-app qui met en valeur des fonctionnalités supplémentaires.  De cette façon, vous pouvez cibler les utilisateurs qui ont démontré qu’ils souhaitaient en savoir plus sur les caractéristiques de votre application et éviter d’ennuyer les utilisateurs qui préfèrent découvrir ces fonctionnalités par eux-mêmes.
 
 Le connecteur de campagne peut également cibler les utilisateurs qui reçoivent une notification push leur rappelant qu’ils ont abandonné leur panier. Par exemple, vous pouvez renvoyer la notification aux utilisateurs qui ne l’ont pas directement ouverte. Cependant, vous souhaiterez probablement exclure les utilisateurs qui ont effectué un achat depuis que vous avez envoyé la notification d’origine, même s’ils ne l’ont pas directement ouverte. Vous pouvez effectuer ce cas d’utilisation en ajoutant un déclencheur « Notification push reçue » pour la campagne « Panier abandonné », en définissant un délai de planification et en ajoutant « Effectuer l’achat » et « Notifications push ouvertes directement » en tant qu’exceptions.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Style
-article_title: Customizing the style of Content Cards
+article_title: Customize the style of Content Cards
 page_order: 1
 description: "This article covers styling options for your Content Cards."
 channel:
@@ -12,7 +12,7 @@ platform:
   - Web
 ---
 
-# Customizing the style of Content Cards
+# Customize the style of Content Cards
 
 > Braze Content Cards come with a default look and feel. This article covers styling options for your Content Cards to help you match your brand identity. For the full list of content card types, see [About Content Cards]({{site.baseurl}}/developer_guide/content_cards/).
 
@@ -28,6 +28,17 @@ Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., ar
 
 
 {% tabs %}
+{% tab web %}
+
+Braze’s default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause Content Cards to appear 800 px wide:
+
+``` css
+body .ab-feed {
+  width: 800px;
+}
+```
+
+{% endtab %}
 {% tab android %}
 
 By default, Android and FireOS SDK Content Cards match the standard Android UI guidelines to provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`](https://github.com/braze-inc/braze-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml) file in the Braze SDK distribution:
@@ -198,17 +209,6 @@ Customizing Content Cards through `Attributes` is not supported with Objective-C
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-Braze’s default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause Content Cards to appear 800 px wide:
-
-``` css
-body .ab-feed {
-  width: 800px;
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ## Customization examples
@@ -218,6 +218,18 @@ body .ab-feed {
 Customizing the font used in your Content Cards allows you to maintain your brand identity and create a visually appealing experience for your users. Use these recipes to set the font for all Content Cards programmatically. 
 
 {% tabs %}
+{% tab web %}
+
+Just like any other web element, you can easily customize the appearance of Content Cards through CSS. In your CSS file or inline styles, use the `font-family` property and specify the desired font name or font stack.
+
+```css
+/* CSS selector targeting the Content Card element */
+.card-element {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+```
+
+{% endtab %}
 {% tab android %}
 
 To change the default font programmatically, set a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
@@ -279,18 +291,6 @@ Check out the [Examples sample app](https://github.com/braze-inc/braze-swift-sdk
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-Just like any other web element, you can easily customize the appearance of Content Cards through CSS. In your CSS file or inline styles, use the `font-family` property and specify the desired font name or font stack.
-
-```css
-/* CSS selector targeting the Content Card element */
-.card-element {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-}
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Custom pinned icons
@@ -300,6 +300,35 @@ When creating a Content Card, marketers have the option of pinning the card. A p
 ![Side-by-side of the Content Card preview in Braze for Mobile and Web with the option "Pin this card to the top of the feed" selected.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 {% tabs %}
+{% tab web %}
+
+The structure of the Content Card pinned icon is:
+
+```css
+<div class="ab-pinned-indicator">
+  <i class="fa fa-star"></i>
+</div>
+```
+
+If you want to use a different FontAwesome icon, you can simply replace the class name of the `i` element with the class name of the desired icon. 
+
+If you want to swap out the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are a few different ways you can go about it, but one simple method would be to `replaceChildren()` on the `ab-pinned-indicator` element.
+
+For example:
+
+```javascript
+// Get the parent element
+const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
+
+// Create a new custom icon element
+const customIcon = document.createElement('span');
+customIcon.classList.add('customIcon');
+
+// Replace the existing icon with the custom icon
+pinnedIndicator.replaceChildren(customIcon);
+```
+
+{% endtab %}
 {% tab android %}
 
 To set a custom pinned icon, override the `Braze.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element. For example:
@@ -377,35 +406,6 @@ Customization of the pin indicator via `Attributes` is not supported in Objectiv
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-The structure of the Content Card pinned icon is:
-
-```css
-<div class="ab-pinned-indicator">
-  <i class="fa fa-star"></i>
-</div>
-```
-
-If you want to use a different FontAwesome icon, you can simply replace the class name of the `i` element with the class name of the desired icon. 
-
-If you want to swap out the icon altogether, remove the `i` element and add the custom icon as a child of `ab-pinned-indicator`. There are a few different ways you can go about it, but one simple method would be to `replaceChildren()` on the `ab-pinned-indicator` element.
-
-For example:
-
-```javascript
-// Get the parent element
-const pinnedIndicator = document.querySelector('.ab-pinned-indicator');
-
-// Create a new custom icon element
-const customIcon = document.createElement('span');
-customIcon.classList.add('customIcon');
-
-// Replace the existing icon with the custom icon
-pinnedIndicator.replaceChildren(customIcon);
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Changing the unread indicator color
@@ -415,6 +415,15 @@ Content Cards contain a blue line at the bottom of the card which indicates whet
 ![Two Content Cards displayed side by side. The first card has a blue line at the bottom, indicating it has not been seen. The second card does not have a blue line, indicating it has already been seen.]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %})
 
 {% tabs %}
+{% tab web %}
+
+To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, to set the color of the unviewed indicator to green:
+
+```css
+.ab-unread-indicator { background-color: green; }
+```
+
+{% endtab %}
 {% tab android %}
 
 Change the color of the unread indicator bar by altering the value in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file:
@@ -479,20 +488,21 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab web %}
-
-To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, to set the color of the unviewed indicator to green:
-
-```css
-.ab-unread-indicator { background-color: green; }
-```
-
-{% endtab %}
 {% endtabs %}
 
 ### Disabling unread indicator
 
 {% tabs %}
+{% tab web %}
+
+Hide the unread indicator bar by adding the following style to your `css`:
+
+```css
+.ab-unread-indicator { display: none; }
+```
+
+{% endtab %}
+
 {% tab android %}
 
 Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.view/-content-card-view-holder/set-unread-bar-visible.html?query=fun%20setUnreadBarVisible(isVisible:%20Boolean)) on `ContentCardViewHolder` to `false`. 
@@ -502,7 +512,6 @@ Hide the unread indicator bar by setting [`setUnreadBarVisible`](https://braze-i
 {% tab Jetpack Compose %}
 Disabling the unread indicator is not supported in Jetpack Compose.
 {% endtab %}
-
 {% tab swift %}
 {% subtabs %}
 {% subtab Swift %}
@@ -516,14 +525,5 @@ Customization of only the unviewed indicator via `Attributes` is not supported i
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-{% tab web %}
-
-Hide the unread indicator bar by adding the following style to your `css`:
-
-```css
-.ab-unread-indicator { display: none; }
-```
-
 {% endtab %}
 {% endtabs %}

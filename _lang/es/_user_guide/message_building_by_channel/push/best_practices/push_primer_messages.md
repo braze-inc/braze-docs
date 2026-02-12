@@ -1,5 +1,5 @@
 ---
-nav_title: Mensajes Push Primer In-App
+nav_title: Mensajes push primer dentro de la aplicación
 article_title: Mensajes Push Primer In-App
 page_order: 1
 page_type: reference
@@ -10,7 +10,7 @@ channel: push
 
 # Mensajes push primer dentro de la aplicación
 
-![Mensajes push primer dentro de la aplicación de streaming. La notificación dice "¿Recibir notificaciones push de Movie Cannon? Las notificaciones pueden incluir nuevas películas, programas de TV u otros avisos y se pueden desactivar en cualquier momento."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Mensajes push primer dentro de la aplicación de streaming. La notificación dice "¿Recibir notificaciones push de Movie Cannon? Las notificaciones pueden incluir nuevas películas, programas de televisión u otros avisos y pueden desactivarse en cualquier momento."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Sólo se tiene una oportunidad de pedir permiso a los usuarios, por lo que optimizar el registro es crucial para maximizar el alcance de los mensajes push. Para lograrlo, puede utilizar mensajes dentro de la aplicación para explicar qué tipo de mensajes pueden recibir los usuarios si deciden participar, antes de mostrarles el mensaje push nativo. Esto se conoce como push primer.
 
@@ -76,7 +76,7 @@ android.permission.POST_NOTIFICATIONS
 
 ## Paso 1: Crear un mensaje en la aplicación
 
-En primer lugar, [crea un mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) y, a continuación, selecciona el tipo de mensaje y el diseño.
+Primero, [crea un mensaje dentro de la aplicación]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) y, a continuación, selecciona el tipo de mensaje y el diseño.
 
 Para asegurarte de que tienes espacio suficiente tanto para tu mensaje como para los botones, utiliza un diseño de mensaje a pantalla completa o modal. Si eliges pantalla completa, ten en cuenta que se necesita una imagen.
 
@@ -115,11 +115,15 @@ Para configurar tu push primer para que se envíe en un momento relevante, debes
 
 Aunque el momento ideal varía, Braze sugiere esperar hasta que el usuario complete algún tipo de [acción de alto valor](https://www.braze.com/resources/videos/mapping-high-value-actions), lo que indica que están empezando a ver el valor de su aplicación o sitio, o cuando hay una necesidad imperiosa que las notificaciones push pueden abordar (por ejemplo, después de que hayan realizado un pedido y desea ofrecerles información de seguimiento del envío). De este modo, el aviso beneficia al cliente y no sólo a su marca.
 
-![Configuración de entrega basada en acciones para enviar a los usuarios que realizaron el evento personalizado de "Añadir a la lista de vigilancia".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
+![Configuración de entrega basada en acciones para enviar a los usuarios que realizaron el evento personalizado de "Añadir a la lista de seguimiento".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## Paso 5: Usuarios objetivo
 
-Dado que el objetivo de una campaña de imprimación push es incitar a los usuarios a aceptar la mensajería push, no debe dirigirse a usuarios que ya la hayan aceptado. Para ello, añada un segmento o filtro donde `Push Subscription Status is not Opted In`.
+El objetivo de una campaña de imprimación push es avisar a los usuarios de cualquier dispositivo en el que aún no hayan concedido permisos push. Puede tratarse de usuarios primerizos o de usuarios existentes que adquieren un nuevo dispositivo o reinstalan tu aplicación. Para orientar correctamente tu campaña push primer, añade un filtro donde `Foreground Push Enabled For App is false`. Este filtro identifica instalaciones de aplicaciones individuales que aún no han optado por las notificaciones push en primer plano.
+
+{% alert important %}
+Si utilizas un filtro a nivel de usuario como `Push Subscription Status is not Opted In`, excluirás a los usuarios que ya hayan recibido la adhesión voluntaria en otro dispositivo, lo que les impedirá recibir el mensaje en su nuevo dispositivo.
+{% endalert %}
 
 Más allá de eso, puede decidir qué segmentos adicionales le parecen más apropiados. Por ejemplo, puede dirigirse a usuarios que hayan completado una segunda compra, usuarios que acaben de crear una cuenta para convertirse en miembros o incluso usuarios que visiten su aplicación más de dos veces por semana. Dirigirse a los usuarios de estos segmentos cruciales aumenta la probabilidad de que los usuarios acepten y se conviertan en usuarios push.
 

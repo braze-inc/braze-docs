@@ -1,5 +1,5 @@
 ---
-nav_title: "Recopilación de la adhesión voluntaria de los usuarios"
+nav_title: "Recopilación de preferencias de adhesión voluntaria de los usuarios"
 article_title: Buenas prácticas para recopilar las preferencias de adhesión voluntaria de los usuarios de SMS
 page_order: 7
 description: "En este artículo de referencia se describen tres prácticas recomendadas para recopilar las preferencias de adhesión voluntaria de los usuarios."
@@ -21,7 +21,7 @@ Pida a los usuarios que envíen un mensaje de texto con las palabras "START", "U
 
 Para permitir que los usuarios opten por los SMS desde un mensaje de la aplicación, utiliza el [formulario de captura de números de teléfono]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/templates/phone_number_capture/) proporcionado por Braze para crear un formulario de marca que te permita recopilar números de teléfono y hacer crecer tu lista de SMS.
 
-![Creador de mensajes dentro de la aplicación con una plantilla para la captura de números de teléfono.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
+![Creador de mensajes dentro de la aplicación con una plantilla para capturar números de teléfono.]({% image_buster /assets/img_archive/dnd_iam_phone_capture_select.png %}){: style="max-width:80%;"}
 
 Braze recomienda que utilices también la característica [de doble adhesión voluntaria por SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/double_opt_in/). Esta función funciona automáticamente con el formulario de captura de números de teléfono para mensajes dentro de la aplicación, solicitando a los usuarios que confirmen su intención después de enviar su número de teléfono a través del formulario.
 

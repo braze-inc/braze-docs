@@ -22,8 +22,8 @@ The Braze and PassKit integration allows you to increase and measure the engagem
 
 | Requirement | Description |
 | ----------- | ----------- |
-| PassKit account | You will need to have a PassKit account and a PassKit account manager. |
-| `userDefinedID` | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you will need to set the Braze external ID as the `userDefinedID`. This `userDefinedID` will be used when making API calls to the PassKit endpoints. |
+| PassKit account | You must have a PassKit account and a PassKit account manager. |
+| `userDefinedID` | To appropriately update custom events and custom attributes to your users between PassKit and Braze, you must set the Braze external ID as the `userDefinedID`. This `userDefinedID` is used when making API calls to the PassKit endpoints. |
 | Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created in the Braze dashboard from **Settings** > **API Keys**. |
 | Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({{site.baseurl}}/api/basics/#endpoints). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
@@ -50,11 +50,11 @@ To pass data from PassKit, ensure that you have set your Braze external ID as Pa
 
 ## Create pass using a SmartPass link
 
-Within Braze, you can set up a SmartPass link to generate a unique URL for your customers to install their pass on either Android or iOS. To do this, you must define an encrypted SmartPass data payload that can be called from a Braze Content Block. This [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) can then be reused for future passes and coupons. The following will be used during your integration:
+Within Braze, you can set up a SmartPass link to generate a unique URL for your customers to install their pass on either Android or iOS. To do this, you must define an encrypted SmartPass data payload that can be called from a Braze Content Block. This [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) can then be reused for future passes and coupons. The following is used during your integration:
 
 - **PassKit URL**: Your PassKit URL is a unique URL for your PassKit program.<br>Each program has a unique URL, and you can find it under the **Distribution** tab of your PassKit program or project. (for example, https://pub1.pskt.io/c/ww0jir)<br><br>
-- **PassKit secret**: Along with the URL, you will need to have the PassKit Key for this program handy.<br>This can be found on the same page as your PassKit URL.<br><br>
-- **Program (or project) ID**: Your PassKit Program ID will be required to create the SmartPass URL. <br>You can find it under the **Settings** tab of your project or program.
+- **PassKit secret**: Along with the URL, you must have the PassKit Key for this program handy.<br>This can be found on the same page as your PassKit URL.<br><br>
+- **Program (or project) ID**: Your PassKit Program ID is required to create the SmartPass URL. <br>You can find it under the **Settings** tab of your project or program.
 
 For more information on creating encrypted SmartPass links, check out this [PassKit article](https://help.passkit.com/en/articles/3742778-hashed-smartpass-links).
 
@@ -94,7 +94,7 @@ Select **Create Content Block** to get started.
 
 Next, you must define your **Content Block Liquid Tag**. After saving this Content Block, this Liquid tag can be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 
-Within this Content Block, we will not directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
+Within this Content Block, we won't directly include the payload, but reference it in a {% raw %}`{{passData}}`{% endraw %} variable. The first code snippet you must add to your Content Block captures a Base64 encoding of the {% raw %}`{{passData}}`{% endraw %} variable.
 {% raw %}
 ```liquid
 {% capture base64JsonPayload %}{{passDatapassData|base64_encode}}{% endcapture %}
@@ -103,7 +103,7 @@ Within this Content Block, we will not directly include the payload, but referen
 
 ### Step 3: Create your encryption signature using a SHA1 HMAC hash
 
-Next, you will be creating your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
+Next, you will create your encryption signature using a [SHA1 HMAC](https://en.wikipedia.org/wiki/HMAC) hash of the project URL and the payload. 
 
 The second code snippet you must add to your Content Block captures the URL to be used for hashing.
 {% raw %}
@@ -135,7 +135,7 @@ Lastly, make sure you call your final URL so that it prints your SmartPass URL w
 ```
 {% endraw %}
 
-At this point, you will have created a Content Block that looks something like this:
+At this point, you have created a Content Block that looks something like this:
 
 {% raw %}
 ```liquid

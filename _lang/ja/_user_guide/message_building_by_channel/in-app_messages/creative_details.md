@@ -4,7 +4,7 @@ article_title: クリエイティブの詳細
 page_order: 3.5
 layout: dev_guide
 guide_top_header: "クリエイティブの詳細"
-guide_top_text: "アプリ内メッセージで創造力を発揮する前に、いくつかのガイドラインを知っておく必要があります。すべてのアプリ内メッセージテンプレートは、最新のデバイスでさまざまな長さのテキストや画像サイズを表示できるように設計されている。すべての携帯電話、タブレット、コンピューターでメッセージがうまく表示されるようにするため、以下のガイドラインに従い、起動前に必ず<a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>メッセージをテストする</a>ことをお勧めする。"
+guide_top_text: "アプリ内メッセージで創造力を発揮する前に、いくつかのガイドラインを知っておく必要があります。すべてのアプリ内メッセージテンプレートは、最新のデバイスでさまざまな長さのテキストや画像サイズを表示できるように設計されている。すべての携帯電話、タブレット、コンピューターでメッセージがうまく表示されるようにするため、以下のガイドラインに従い、起動前に必ず<a href='/docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/'>メッセージをテストする</a>ことをお勧めする。"
 description: "このランディングハブでは、モーダル、スライドアップ、フルスクリーンの3種類のアプリ内メッセージのデザインとコンテンツの要件をカバーしている。"
 
 channel:
@@ -46,11 +46,11 @@ guide_featured_list:
 - オフラインメッセージ表示のためにBraze SDKが当社のCDNからアセットをダウンロードできるように、[メディアライブラリに]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/)画像をホスティングすることを推奨する。
 - フルスクリーンのメッセージについては、[画像のセーフゾーンに関する]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone)ガイドラインに従うこと。
 
-{% alert tip %} 自信を持ってアセットを創造しましょう！当社のアプリ内メッセージ画像テンプレートとセーフゾーンオーバーレイは、あらゆるサイズのデバイスでうまく動作するように設計されている。[デザインテンプレートのダウンロード ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} 自信を持ってアセットを創造しましょう！アプリ内メッセージ "画像 テンプレート sとセーフゾーンオーバーレイは、すべてのサイズの機器でうまく動作するように設計されています。[Down 読み込む Design テンプレート s ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-{% tabs %}{% tab フルスクリーン %}
+{% tabs %}{% tab Fullscreen %}
 
-![アプリ内メッセージがフルスクリーンでアプリの画面を占領する。フルスクリーンのメッセージには、大きな画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![アプリ内メッセージがフルスクリーンでアプリの画面を占領する。フルスクリーンメッセージには、大きな"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれます。]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | --- |
@@ -62,9 +62,9 @@ guide_featured_list:
 
 
 {% endtab %}
-{% tab モーダル %}
+{% tab Modal %}
 
-![アプリやウェブサイトの中央にダイアログとして表示される、モーダルなアプリ内メッセージ。モーダルには、画像、ヘッダー、メッセージ本文、2つのボタンが含まれる。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![アプリやウェブサイトの中央にダイアログとして表示される、モーダルなアプリ内メッセージ。モーダルには、"画像、ヘッダー、メッセージ本文、および2つのボタンが含まれています。]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | ------ |
@@ -75,9 +75,9 @@ guide_featured_list:
 [モーダルの詳細]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
 {% endtab %}
-{% tab スライドアップ %}
+{% tab Slideup %}
 
-![アプリ画面下部から表示されるアプリ内メッセージのスライドアップ。スライドアップにはアイコン画像と簡単なメッセージが含まれる。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![アプリ画面下部から表示されるアプリ内メッセージのスライドアップ。スライドアップには、アイコン"画像と短いメッセージが表示されます。]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
 | レイアウト | アセットのサイズ | メモ |
 |--- | --- | --- |

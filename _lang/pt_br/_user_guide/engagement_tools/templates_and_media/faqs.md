@@ -30,11 +30,11 @@ Não, a biblioteca de mídia não é compatível com o corte de imagens GIF.
 
 ### Como faço para cortar uma imagem existente?
 
-É possível cortar uma imagem existente selecionando-a na biblioteca de mídia e clicando em **Crop & Save New Image (Cortar e salvar nova imagem**). 
+É possível recortar uma imagem existente selecionando a imagem na biblioteca de mídia e clicando em **Crop & Save New Image**. 
 
-![Prévia da imagem da biblioteca de mídia.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
+![Pré-visualização da imagem da biblioteca de mídia.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
-Em seguida, você será redirecionado para um criador de cortes, onde poderá selecionar o tipo de proporção e editar o nome da nova imagem. Quando você clicar em **Salvar**, sua nova imagem poderá ser usada.
+Em seguida, você será redirecionado para um criador de cortes, onde poderá selecionar o tipo de proporção e editar o nome da nova imagem. Quando você seleciona **Salvar**, a nova imagem pode ser usada.
 
 ![Janela para cortar e salvar a imagem da biblioteca de mídia.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 

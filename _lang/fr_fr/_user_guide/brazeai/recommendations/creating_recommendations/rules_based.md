@@ -1,6 +1,6 @@
 ---
 nav_title: Recommandations basées sur des règles
-article_title: "Création de recommandations d'articles basées sur des règles"
+article_title: "Créer des recommandations d'éléments basées sur des règles"
 description: "Cet article de référence explique comment créer une recommandation d'article d'intelligence artificielle pour les articles d'un catalogue."
 page_order: 2
 ---
@@ -11,7 +11,7 @@ page_order: 2
 
 ## À propos des recommandations d'articles basées sur des règles
 
-Un moteur de recommandation basé sur des règles utilise les données des utilisateurs et les informations sur les produits pour suggérer des articles pertinents aux utilisateurs dans les messages. Il utilise [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) et les [catalogues de]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/) Braze ou le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) pour personnaliser dynamiquement le contenu en fonction du comportement et des attributs de l'utilisateur.
+Un moteur de recommandation basé sur des règles utilise les données des utilisateurs et les informations sur les produits pour suggérer des articles pertinents aux utilisateurs dans les messages. Il utilise [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) et les [catalogues de]({{site.baseurl}}/user_guide/data/activation/catalogs/) Braze ou le [contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) pour personnaliser dynamiquement le contenu en fonction du comportement et des attributs de l'utilisateur.
 
 {% alert important %}
 Les recommandations basées sur des règles sont fondées sur une logique fixe que vous devez définir manuellement. Cela signifie que vos recommandations ne s'ajusteront pas à l'historique d'achat et aux goûts d'un utilisateur, à moins que vous ne mettiez à jour la logique.<br><br>Pour créer des recommandations personnalisées basées sur l’IA qui s'adaptent automatiquement à l'historique de l'utilisateur, consultez les [recommandations de produits basées sur l’IA]({{site.baseurl}}/user_guide/brazeai/recommendations/creating_recommendations/ai/).
@@ -25,7 +25,7 @@ Pour choisir un moteur de recommandation adapté à vos ressources disponibles e
   <thead>
     <tr>
       <th>Moteur de recommandation</th>
-      <th>Aucun point de données consommé</th>
+      <th>Aucun point de données enregistré</th>
       <th>Solution sans code</th>
       <th>Pas de liquide avancé</th>
       <th>Mise à jour automatique du flux de produits</th>
@@ -79,11 +79,11 @@ Pour choisir un moteur de recommandation adapté à vos ressources disponibles e
 Créez votre moteur de recommandation en utilisant soit un catalogue, soit du contenu connecté :
 
 {% tabs local %}
-{% tab utiliser un catalogue %}
+{% tab using a catalog %}
 Pour créer votre moteur de recommandation à l'aide d'un catalogue :
 
-1. [Créez un catalogue]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog/) de produits.
-2. Pour chaque produit, ajoutez une liste de produits recommandés sous forme de caractères séparés par un délimiteur (comme une pipe `|`) dans une colonne nommée « recommandations_produits ».
+1. [Créez un catalogue]({{site.baseurl}}/user_guide/data/activation/catalogs/create/) de produits.
+2. Pour chaque produit, ajoutez une liste de produits recommandés sous forme de chaînes de caractères séparées par un délimiteur (comme une pipe `|`) dans une colonne nommée “product_recommendations”.
 3. Transmettez au catalogue l'ID du produit pour lequel vous souhaitez trouver des recommandations.
 4. Obtenez la valeur `product_recommendations` pour ce produit de catalogue et divisez-la par le délimiteur à l'aide d'un filtre de division Liquid.
 5. Renvoyez un ou plusieurs de ces ID au catalogue pour collecter les autres détails du produit.
@@ -154,7 +154,7 @@ Créez une campagne de cartes de contenu. Dans le compositeur, saisissez la logi
 
 Par exemple :
 
-![Un exemple de message composé à partir d'une campagne de cartes de contenu.]({% image_buster /assets/img/recs/content_card_preview.png %})
+![Un exemple de message compositeur d'une campagne de cartes contenu.]({% image_buster /assets/img/recs/content_card_preview.png %})
 
 Dans la section **Comportement au clic**, entrez la logique Liquid pour savoir où les utilisateurs doivent être redirigés lorsqu'ils cliquent sur la carte de contenu sur les appareils iOS, Android et Web. 
 
@@ -175,10 +175,10 @@ Par exemple :
 
 Allez dans l'onglet **Test** et sélectionnez **Utilisateur personnalisé** sous **Prévisualiser le message en tant qu'utilisateur**. Saisissez une date dans le champ **Attribut personnalisé** pour prévisualiser la carte de contenu qui serait envoyée à un utilisateur s'étant inscrit à cette date. <br><br>
 
-![Exemple d'attribut personnalisé nommé "start_date".]({% image_buster /assets/img/recs/custom_attributes_test.png %})
+![Un exemple d'attribut personnalisé nommé 'start_date'.]({% image_buster /assets/img/recs/custom_attributes_test.png %})
 {% endtab %}
 
-{% tab l'utilisation du contenu connecté %}
+{% tab using Connected Content %}
 Pour créer votre moteur de recommandation à l'aide du contenu connecté, commencez par créer un nouvel endpoint à l'aide de l'une des méthodes suivantes :
 
 |Option|Description|
@@ -328,6 +328,6 @@ Good places
 
 Voir la capture d'écran ci-dessous pour un exemple d'affichage de la réponse sur l'appareil d'un utilisateur.
 
-![Représentation d'une liste de restaurants générée par l'exemple de l'appel final.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
+![Rendu d'une liste de restaurants générée par l'exemple d'appel final.]({% image_buster /assets/img/recs/sample_response.png %}){: style="max-width:30%;"}
 {% endtab %}
 {% endtabs %}

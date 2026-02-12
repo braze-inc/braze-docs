@@ -1,5 +1,5 @@
 ---
-nav_title: Campañas de correo electrónico transaccional
+nav_title: Campañas de correo electrónico transaccionales
 article_title: Campañas de correo electrónico transaccional
 page_order: 10
 
@@ -17,7 +17,7 @@ alias: "/api/api_campaigns/transactional_campaigns"
 > Los correos electrónicos transaccionales Braze se envían para facilitar una transacción acordada entre el remitente y el destinatario. Este artículo de referencia explica cómo crear una campaña de correo electrónico transaccional en el panel de control de Braze y generar un `campaign_id` para incluirlo en sus llamadas a la API para nuestro [punto final`/transactional/v1/campaigns/{campaign_id}/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 {% alert important %}
-El correo electrónico transaccional Braze solo está disponible como parte de determinados paquetes Braze. Póngase en contacto con su gestor de éxito de clientes de Braze o abra un [ticket de soporte]({{site.baseurl}}/braze_support/) para obtener más información.
+El correo electrónico transaccional Braze solo está disponible como parte de determinados paquetes Braze. Ponte en contacto con tu administrador del éxito del cliente de Braze o abre un [ticket de soporte]({{site.baseurl}}/braze_support/) para obtener más detalles.
 {% endalert %}
 
 El tipo de campaña de correo electrónico transaccional está diseñado para enviar mensajes de correo electrónico automatizados y no promocionales con el fin de facilitar una transacción acordada entre usted y sus clientes. Esto incluye información como:
@@ -37,7 +37,7 @@ Los correos electrónicos transaccionales difieren de las campañas transacciona
 
 Para crear una nueva campaña de correo electrónico transaccional, cree una campaña y seleccione **Correo electrónico transaccional** como canal de mensajería.
 
-![Crea el desplegable Campaña con la opción resaltada para el correo electrónico transaccional.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Desplegable Crear campaña con la opción resaltada para el correo electrónico transaccional.]({% image_buster /assets/img/transactional_email_campaign.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
 Ahora, puede pasar a configurar su campaña de correo electrónico transaccional.
 

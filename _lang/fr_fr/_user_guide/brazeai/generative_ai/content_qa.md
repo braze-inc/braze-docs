@@ -25,14 +25,14 @@ Les fonctionnalités suivantes sont prises en charge pour améliorer la qualité
 ## Utiliser <sup>BrazeAITM</sup> pour l'assurance qualité du contenu
 
 {% alert note %}
-Cette fonctionnalité n'est disponible que pour les canaux SMS, Android push et iOS push pour le moment.
+Pour l'instant, cette fonctionnalité n'est disponible que pour les SMS, Android push, iOS push et les messages in-app traditionnels.
 {% endalert %}
 
-1. Après avoir composé un message mobile push ou SMS, accédez à l'onglet **Test**.
+1. Après avoir composé un message mobile push, un SMS ou un message in-app traditionnel, accédez à l'onglet **Test**.
 2. Recherchez la section **Assurance qualité du contenu avec l’IA**.
 3. Cliquez sur **Tester le contenu**.
 
-![AQ du contenu avec la section intelligence artificielle de l'onglet Test.]({% image_buster /assets/img/content_qa_ai.png %})
+![Contenu de la section AQ avec intelligence artificielle de l'onglet Test.]({% image_buster /assets/img/content_qa_ai.png %})
 
 ## Bonnes pratiques
 

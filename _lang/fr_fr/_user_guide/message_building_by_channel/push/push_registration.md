@@ -1,5 +1,5 @@
 ---
-nav_title: "Enregistrement d’une notification push"
+nav_title: "Inscription aux notifications push"
 article_title: Enregistrement d’une notification push
 page_order: 2
 page_type: reference
@@ -33,10 +33,10 @@ Les jetons push sont utilisés pour envoyer des notifications push en avant-plan
 | Notification push d’arrière-plan | Non        | Une notification est délivrée silencieusement en arrière-plan sans être affichée. Souvent utilisé pour des fonctionnalités telles que le suivi des désinstallations. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Lorsqu'un utilisateur s'abonne aux notifications push pour votre application, il est considéré comme "enregistré", ce qui signifie qu'il peut désormais être ciblé à l'aide du filtre de segmentation `Push enabled for App` dans Braze.
+Lorsqu'un utilisateur s'abonne aux notifications push pour votre application, il est considéré comme "enregistré", ce qui signifie qu'il peut désormais être ciblé à l'aide du filtre de segmentation `Foreground Push Enabled for App` dans Braze.
 
 {% alert note %}
-Ceci est différent du filtre de segmentation `Push Enabled`, qui est utilisé pour identifier les utilisateurs qui se sont abonnés à au moins une de vos applications, et non à une application spécifique. Pour plus d'informations, voir [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#push-enabled).
+Ceci est différent du filtre de segmentation `Foreground Push Enabled`, qui est utilisé pour identifier les utilisateurs qui se sont abonnés à au moins une de vos applications, et non à une application spécifique. Pour plus d'informations, voir [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#foreground-push-enabled).
 {% endalert %}
 
 ### Plusieurs utilisateurs sur un appareil
@@ -47,7 +47,7 @@ Imaginons par exemple que vous ayez deux utilisateurs : Charlie et Kim. Si Char
 
 Une application ou un site Internet ne peuvent avoir qu’un seul abonnement aux notifications push par appareil. Lorsqu’un utilisateur se déconnecte d’un appareil ou d’un site Internet et qu’un utilisateur se connecte, le jeton de notification push est donc réaffecté au nouvel utilisateur. Cela se reflète sur le profil de l'utilisateur dans la section **Paramètres de contact** de l'onglet **Engagement :** 
 
-![Journal des modifications du jeton de poussée dans l'onglet \*\*Engagement** du profil d'un utilisateur, qui indique quand le jeton de poussée a été transféré à un autre utilisateur, et quel était le jeton.]({% image_buster /assets/img/push_token_changelog.png %})
+![Journal des modifications du jeton de notification push dans l'onglet \*\*Engagement** du profil d'un utilisateur, qui indique quand le jeton de notification push a été transféré à un autre utilisateur, et quel était le jeton.]({% image_buster /assets/img/push_token_changelog.png %})
 
 Étant donné que les fournisseurs de notifications push (APN/FCM) n’ont aucun moyen de faire la différence entre plusieurs utilisateurs sur un même appareil, nous transmettons le jeton de notification push au dernier utilisateur qui s’est connecté pour déterminer quel utilisateur cibler sur l’appareil pour les notifications push.
 
@@ -56,6 +56,10 @@ Une application ou un site Internet ne peuvent avoir qu’un seul abonnement aux
 Chaque plateforme d'appareil gère différemment l'enregistrement des jetons de poussée. Reportez-vous à ce qui suit pour les détails spécifiques à la plate-forme :
 
 {% tabs local %}
+{% tab web %}
+Vous devez demander l'abonnement explicite des utilisateurs via la boîte de dialogue d'autorisation native du navigateur. Recevra un jeton après que les utilisateurs se seront abonnés. Contrairement à Android et iOS qui laissent votre application afficher le dialogue d’autorisation n’importe quand, certains navigateurs modernes n’afficheront l’invite que si elle est déclenchée par une action de l’utilisateur (clic de souris ou touche du clavier). Si votre site essaie de demander une autorisation de notification push lors du chargement de la page, elle sera sûrement ignorée ou étouffée par le navigateur.
+{% endtab %}
+
 {% tab android %}
 Lorsque votre application est installée, un jeton push est automatiquement généré pour votre application - cependant, il ne peut être utilisé que pour les [notifications push en arrière-plan](#foreground-vs-background) jusqu'à ce que l'utilisateur opte explicitement pour cette option. En outre, l'enregistrement est géré différemment selon les versions d'Android :
 
@@ -75,10 +79,6 @@ iOS ne génère pas automatiquement des jetons push pour une app lorsqu'elle est
 | **iOS 11 et versions ultérieures** | Non                          | Tous les utilisateurs doivent s’abonner explicitement pour recevoir des notifications push. Un jeton de poussée n'est généré qu'une fois l'autorisation accordée.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 {% endtab %}
-
-{% tab web %}
-Vous devez demander l'abonnement explicite des utilisateurs via la boîte de dialogue d'autorisation native du navigateur. Recevra un jeton après que les utilisateurs se seront abonnés. Contrairement à Android et iOS qui laissent votre application afficher le dialogue d’autorisation n’importe quand, certains navigateurs modernes n’afficheront l’invite que si elle est déclenchée par une action de l’utilisateur (clic de souris ou touche du clavier). Si votre site essaie de demander une autorisation de notification push lors du chargement de la page, elle sera sûrement ignorée ou étouffée par le navigateur.
-{% endtab %}
 {% endtabs %}
 
 ### Vérification de l'état de l'abonnement push de l'utilisateur
@@ -96,7 +96,7 @@ Dans l'onglet **Engagement** du profil d'un utilisateur, vous verrez **Push Regi
 
 Si le nom de l’application de l’entrée de l’appareil est préfixé par `Foreground:`, l’application est autorisée à recevoir à la fois des notifications push de premier plan (visibles par l’utilisateur) et des notifications push d’arrière-plan (non visibles par l’utilisateur) sur cet appareil.
 
-![Journal des modifications avec un exemple de jeton.]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
+![Journal des modifications des notifications push avec un exemple de jeton de notification push.]({% image_buster /assets/img/push_changelog.png %}){: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
 En revanche, si le nom de l'application de l'entrée de l'appareil est préfixé par `Background:`, l'application est uniquement autorisée à recevoir des [push en arrière-plan]({{site.baseurl}}/user_guide/message_building_by_channel/push/types/#background-push-notifications) et ne peut pas afficher de notifications visibles par l'utilisateur sur cet appareil. Cela indique généralement que l’utilisateur a désactivé les notifications pour l’application sur cet appareil.
 
@@ -119,7 +119,7 @@ Lorsqu’un utilisateur ouvre une nouvelle application et accorde l’accès aux
 
 Si nous voulons lancer une campagne, nous créons une campagne dans Braze qui génère une charge de notifications push à envoyer au fournisseur. À partir de là, le fournisseur délivre la charge de notifications push vers l’appareil de l’utilisateur et le SDK transmet l’état de réception des messages à Braze.
 
-![Un organigramme qui mappe le processus de push susmentionné entre Braze, le client, et le service de notification push d'Apple ou Firebase Cloud Messaging.]({% image_buster /assets/img/push_process.png %})
+![Schéma du processus de notification push susmentionné entre Braze, le client et le service de notification push d’Apple (APN) ou la messagerie cloud de Firebase (FCM).]({% image_buster /assets/img/push_process.png %})
 
 | Étapes de l’inscription | Étapes d’envoi des messages |
 | ------------------ | --------------- |

@@ -14,10 +14,10 @@ guide_featured_list:
   - name: Como começar
     link: /docs/user_guide/engagement_tools/campaigns/getting_started/
     image: /assets/img/braze_icons/book-closed.svg
-  - name: Criação de campanhas
+  - name: Criar campanhas
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/
     image: /assets/img/braze_icons/list.svg
-  - name: Gerenciamento de campanhas
+  - name: Gerenciar campanhas
     link: /docs/user_guide/engagement_tools/campaigns/managing_campaigns/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Campanhas de teste

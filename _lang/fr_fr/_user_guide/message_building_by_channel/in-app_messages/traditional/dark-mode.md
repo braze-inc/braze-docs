@@ -1,5 +1,5 @@
 ---
-nav_title: Thèmes du mode sombre
+nav_title: Thèmes en mode sombre
 article_title: Mode sombre pour les messages in-app
 page_order: 5
 description: "Cet article de référence présente la prise en charge du mode sombre pour les messages in-app de Braze, y compris la manière de définir un thème de mode sombre et des observations sur la compatibilité."
@@ -10,9 +10,9 @@ channel:
 
 # Thèmes du mode sombre
 
-> Le mode sombre offre aux utilisateurs la possibilité de définir une préférence de couleur à l'échelle du système (introduit sur [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) et [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). Les thèmes sombres sont conçus pour préserver la durée de vie de la batterie et réduire la fatigue oculaire des utilisateurs. Les développeurs d’applications disposent aussi d’un moyen plus simple d’implémenter les thèmes de couleur sombre que les utilisateurs préfèrent.
+> Le mode sombre offre aux utilisateurs la possibilité de définir une préférence de couleur à l'échelle du système (introduit sur [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) et [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). Les thèmes "sombres" sont destinés à préserver l'autonomie de la batterie et à réduire la fatigue visuelle des utilisateurs, tout en offrant aux développeurs d'applications un moyen de mettre en œuvre des thèmes de couleurs sombres.
 
-Les messages in-app Braze prennent en charge un thème sombre distinct pour que les messages s’affichent dans la couleur appropriée en fonction des préférences utilisateur, tout en assurant la cohérence avec la conception de votre application.
+Les messages in-app de Braze prennent en charge l'ajout d'un thème alternatif Dark pour délivrer le bon message de couleur à vos utilisateurs en fonction de leurs préférences et maintenir la cohérence avec le design de votre application.
 
 ## Fonctionnement du mode sombre
 
@@ -22,7 +22,7 @@ Lorsque le mode sombre est activé, les menus et écrans natifs de l'appareil (n
 
 ## Définition d’un thème du mode sombre
 
-La nouvelle option Mode sombre, située dans l'onglet Style lors de la [création d'un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), vous permet d'ajouter facilement un thème de couleur alternatif pour les utilisateurs qui sont en mode sombre sur leur appareil.
+Le mode sombre, situé dans l'onglet **Conception** lors de la [création d'un message in-app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/), vous permet d'ajouter un thème de couleur alternatif pour les utilisateurs qui sont en mode sombre sur leur appareil.
 
 ![Utilisateur basculant entre les modes sombre et clair dans l’onglet Style lors de la création d’un message in-app.]({% image_buster /assets/img_archive/iam-dark-mode.gif %})
 

@@ -30,7 +30,7 @@ To set up these segments, choose the `Has Marked You As Spam` and `Last Engaged 
 
 `Last Engaged With Message` 필터를 적용할 때는 사용자가 상호 작용했거나 하지 않은 메시징 유형(푸시, 이메일 또는 인앱 알림)과 사용자가 마지막으로 상호 작용한 후 경과한 일수를 지정합니다. 세그먼트를 만든 후 이 세그먼트를 [메시징 채널]({{site.baseurl}}/user_guide/message_building_by_channel/)로 타겟팅하도록 선택합니다.
 
-![Segment Details page with the filter "Last Engaged with Message" selected.]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
+!["마지막으로 참여한 메시지" 필터가 선택된 세그먼트 세부정보 페이지로 이동합니다.]({% image_buster /assets/img_archive/email_sunset_policies_new.png %})
 
 Braze는 스팸으로 표시한 사용자에게 자동으로 이메일 전송을 중지하지만, `Has Marked You As Spam` 필터를 사용하면 이러한 사용자에게 타겟팅된 푸시 메시지와 인앱 알림을 보낼 수도 있습니다. This filter is useful for [retargeting campaigns]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns). 예를 들어, 참여하지 않는 사용자에게 이메일을 열람하지 않을 때 놓치고 있는 기능 및 할인을 상기시키는 메시지를 보낼 수 있습니다.
 

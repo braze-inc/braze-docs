@@ -1,6 +1,6 @@
 ---
-nav_title: Configuración de informes
-article_title: Configuración de informes
+nav_title: Configurar los informes
+article_title: Configurar informes
 page_order: 1.1
 page_type: reference
 description: "Esta página describe el informe de análisis generado automáticamente por Braze."
@@ -8,7 +8,7 @@ tool: Reporting
 
 ---
 
-# Configuración de los informes
+# Configurar los informes
 
 > Braze genera automáticamente un informe semanal por correo electrónico para ayudarle a comprender el rendimiento de sus aplicaciones y campañas de mensajería. 
 

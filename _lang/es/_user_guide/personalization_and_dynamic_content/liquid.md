@@ -3,6 +3,7 @@ nav_title: Liquid
 article_title: Liquid
 page_order: 0
 layout: dev_guide
+alias: /liquid/
 search_rank: 3
 guide_top_header: "Personalización mediante etiquetas líquidas"
 guide_top_text: "Braze puede sustituir automáticamente los valores de un usuario determinado en tus mensajes. Coloque la expresión dentro de dos conjuntos de llaves para notificar a Braze que utilizará un valor interpolado. Dentro de estos corchetes, cualquier valor de usuario que desee sustituir debe ir rodeado de un conjunto adicional de corchetes con un signo de dólar delante.<br><br>Para más información sobre Liquid, consulta nuestra ruta guiada de <b><a href='https://learning.braze.com/path/dynamic-personalization-with-liquid'>Personalización dinámica con Liquid</a></b> de Braze Learning."

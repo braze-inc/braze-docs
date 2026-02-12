@@ -25,7 +25,7 @@ Pour exécuter un rapport du générateur de rapports :
 6. Enregistrez votre requête.
 7. Pour télécharger un fichier CSV de votre rapport, sélectionnez **Exporter.**
 
-![Générateur de requêtes affichant les résultats de la requête modélisée « Engagement de canal et chiffre d’affaires au cours des 30 derniers jours ».]({% image_buster /assets/img_archive/query_builder.png %})
+![Générateur de requêtes affichant les résultats de la requête modélisée "Engagement et chiffre d'affaires des canaux pour les 30 derniers jours".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Les résultats de chaque rapport peuvent être générés une fois par jour. Si vous exécutez le même rapport plus d’une fois pour un jour civil, vous verrez les mêmes résultats dans les deux rapports.
 
@@ -66,11 +66,17 @@ send_date_sydney;
 ```
 {% endraw %}
 
+### Historique des requêtes
+
+La section **Historique des requêtes** de Query Builder affiche vos requêtes précédemment exécutées pour vous aider à suivre et à réutiliser votre travail. L'historique des requêtes est conservé pendant sept jours, ce qui signifie que les requêtes datant de plus de sept jours sont automatiquement supprimées.
+
+Si vous devez contrôler l'utilisation des requêtes sur de longues périodes ou conserver des enregistrements au-delà de sept jours, nous vous recommandons d'exporter ou d'enregistrer les résultats des requêtes importantes avant qu'ils n'expirent.
+
 ## Générer des requêtes SQL avec le générateur de requêtes basé sur l’IA
 
 Le générateur de requêtes basé sur l’IA s'appuie sur [GPT](https://openai.com/gpt-4) d’OpenAI afin de recommander le SQL pour votre requête.
 
-![Le générateur de requêtes SQL de l'intelligence artificielle.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![Le générateur de requêtes de l'intelligence artificielle SQL.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 Pour générer des requêtes SQL avec le générateur de requêtes basé sur l’IA :
 

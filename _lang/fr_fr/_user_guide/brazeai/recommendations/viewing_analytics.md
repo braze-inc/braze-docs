@@ -37,7 +37,7 @@ Pour plus d'informations, reportez-vous au tableau suivant :
 
 Ce tableau comprend des indicateurs sur les articles personnalisés, les plus récents et les plus populaires de votre catalogue.
 
-![Tableaux côte à côte répertoriant les éléments attribués aux utilisateurs, séparés par des recommandations personnalisées et des recommandations les plus populaires.]({% image_buster /assets/img/item_recs_analytics_2.png %})
+![Tableaux côte à côte répertoriant les éléments attribués aux utilisateurs, séparés par les recommandations personnalisées et les recommandations les plus populaires.]({% image_buster /assets/img/item_recs_analytics_2.png %})
 
 Pour plus d'informations, reportez-vous au tableau suivant :
 

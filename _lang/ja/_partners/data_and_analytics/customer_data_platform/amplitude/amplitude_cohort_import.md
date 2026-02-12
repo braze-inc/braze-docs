@@ -20,20 +20,20 @@ Brazeで、**Partner Integrations** > **Technology Partners** に移動し、**A
 
 生成されたら、新しいキーを作成するか、既存のキーを無効にできます。データインポートキーとREST エンドポイントは、Amplitude のダッシュボードでポストバックアップを設定するときに次回のステップで使用されます。<br><br>![]({% image_buster /assets/img/amplitude3.png %})
 
-### ステップ2:Amplitude でのBrazeインテグレーションの設定
+### ステップ 2:Amplitude でのBrazeインテグレーションの設定
 
-Amplitude で [**Sources & Destinations**] > [**project name]**] > [**Destinations**] > [**Braze**] に移動します。表示されるプロンプトで Braze データインポートキーと REST エンドポイントを指定し、[**Save**] をクリックします。
+Amplitudeで、**Sources & Destinations**> **[プロジェクト名]**> **Destinations**> **Braze** に移動します。表示されるプロンプトで Braze データインポートキーと REST エンドポイントを指定し、[**Save**] をクリックします。
 
 ![]({% image_buster /assets/img/amplitude.png %})
 
-### ステップ3:Amplitude コホートをBrazeにエクスポートする
+### ステップ 3:Amplitude コホートをBrazeにエクスポートする
 
 まず、Amplitude から Braze にユーザーをエクスポートするため、エクスポートするユーザーの[コホート](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts)を作成します。Amplitude は、以下の識別子を使用してコホートを Braze に同期できます。
 - ユーザー別名
 - デバイス ID
 - ユーザーID(外部ID)
 
-Amplitude アカウントで複数の Braze 接続を設定できます。これにより、1 つの接続を既知のユーザーのユーザー ID を同期するように設定し、もう 1 つの接続を匿名ユーザーのデバイス ID を同期するように設定できます。
+Amplitude は、多数の識別子 m アプリ ing プロパティーを優先順位でサポートします。プライマリ、セカンダリ、およびターシャリ識別子m アプリ ing を設定できます。同期中に、ユーザーにプライマリがない場合、Amplitude は次に使用可能なものを使用します。これにより、同期c 超過料金が向上し、ドロップされたユーザーが削減され、同期に匿名および部分的に識別されたユーザーが追加されます。 
 
 コホートを作成したら、**Sync to...**を押して、これらのユーザーsをBrazeにエクスポートします。
 
@@ -43,13 +43,15 @@ Braze内に既に存在するユーザーのみがコホートに追加または
 
 #### 同期ケイデンスの定義
 
-コホート同期は、1回限りの同期、毎日または毎時間のスケジュールされた同期、1分ごとに更新されるリアルタイム同期として設定できます。[データポイント]({{site.baseurl}}/user_guide/data/data_points/)の消費も考慮して、ビジネスニーズに適したオプションを選択してください。
+コホート同期は、1回限りの同期、毎日または毎時間のスケジュールされた同期、1分ごとに更新されるリアルタイム同期として設定できます。 
 
-### ステップ4:Braze でユーザーをセグメント化する
+設定したインテグレーションは、データポイントs を記録します。Braze データポイントsのニュアンスについて疑問があれば、Braze アカウントマネージャーが答えることができます。
+
+### ステップ 4: Braze でユーザーをセグメント化する
 
 Braze でこれらのユーザーのセグメントを作成するには、[**エンゲージメント**] の下の [**セグメント**] に移動し、セグメントに名前を付け、フィルターとして [**Amplitude コホート**] を選択します。次に、"includes"オプションを使用し、Amplitude で作成したコホートを選択します。 
 
-![Braze セグメントビルダーでフィルター「amplitude_cohorts」が「includes_value」と「Amplitude cohort test」に設定されている。]({% image_buster /assets/img/amplitude2.png %})
+![Braze Segment ビルダでは、フィルター"amplitude_cohorts" は"includes_value" および" Amplitude コホート test" に設定されます。]({% image_buster /assets/img/amplitude2.png %})
 
 保存後、キャンバスまたはキャンペーン作成時に、ユーザーをターゲティングするステップでこのセグメントを参照できる。
 

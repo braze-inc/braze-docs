@@ -121,7 +121,7 @@ L'étiquette `{% endif %}` indique que vous avez terminé votre logique conditio
 
 {% endraw %}
 
-{% details Code complet du liquide %}
+{% details Full Liquid code %}
 
 {% raw %}
 ```liquid
@@ -165,7 +165,7 @@ La balise suivante vous permet de spécifier un message pour les utilisateurs ay
 ```
 {% endraw %} 
 
-![Un exemple de message dans le tableau de bord de Braze, utilisant un attribut "prénom" nul.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
+![Un exemple de message dans le tableau de bord de Braze, utilisant un attribut null 'first name'.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -230,7 +230,7 @@ Les [nombres]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_
 
 {% endraw %}
 
-Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.dev/docs/themes/liquid/reference/basics/operators), tels que inférieur à (<) ou supérieur à (>) pour les nombres entiers :
+Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.dev/docs/themes/liquid/reference/basics/operators) tels que moins que (<) ou plus grand que (>) pour les nombres entiers :
 
 {% raw %}
 

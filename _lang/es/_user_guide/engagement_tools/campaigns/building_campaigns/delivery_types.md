@@ -1,6 +1,6 @@
 ---
-nav_title: Programar tu campaña
-article_title: Programar tu campaña
+nav_title: Programa tu campaña
+article_title: Programa tu campaña
 layout: dev_guide
 page_order: 3
 guide_top_header: "Programar tu campaña"

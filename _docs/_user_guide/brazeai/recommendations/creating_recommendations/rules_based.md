@@ -1,11 +1,11 @@
 ---
 nav_title: Rules-based recommendations
-article_title: Creating Rules-Based Item Recommendations
+article_title: Create Rules-Based Item Recommendations
 description: "This reference article covers how to create an AI item recommendation for items in a catalog."
 page_order: 2
 ---
 
-# Creating rules-based item recommendations
+# Create rules-based item recommendations
 
 > Learn how to create a rules-based recommendation engine from items in your catalog.
 
@@ -284,9 +284,9 @@ This is what the final call would look like:
 {% for list in restaurants %}
 {% if {{list.restaurant.user_rating.rating_text}} == `Excellent` %}
 {% assign excellent_restaurants = excellent_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Very Good` %}
 {% assign very_good_restaurants = very_good_restaurants | append: list.restaurant.name | append: `*` %}
-{% elseif {{list.restaurant.user_rating.rating_text}} == `Good` %}
+{% elsif {{list.restaurant.user_rating.rating_text}} == `Good` %}
 {% assign good_restaurants = good_restaurants | append: list.restaurant.name | append: `*` %}
 {% endif %}
 {% endfor %}

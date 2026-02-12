@@ -38,13 +38,13 @@ Ce modèle d’enquête est pris en charge pour les applications mobiles et les 
 
 Pour commencer à élaborer votre enquête, ajoutez votre question dans le champ **En-tête** de l’enquête. Si vous le souhaitez, vous pouvez ajouter un **corps** de message facultatif qui apparaîtra sous la question.
 
-![Onglet Composer de l’éditeur d’enquête simple, avec des champs pour un en-tête, un corps facultatif et un texte d’aide facultatif.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
+![Onglet Composer de l'éditeur d'enquête simple, avec des champs pour un en-tête, un corps optionnel et un texte d'aide optionnel.]({% image_buster /assets/img/iam/iam-survey2.png %}){: style="max-width:90%"}
 
 {% alert tip %}
 Ces champs peuvent inclure à la fois Liquid et des émojis, alors laissez place à la fantaisie !
 {% endalert %}
 
-### Étape 2 : Configurer les choix {#single-multiple-choice}
+### Étape 2 : Configurer les choix {#single-multiple-choice}
 
 Vous pouvez ajouter jusqu’à 12 choix dans une enquête.
 
@@ -52,7 +52,7 @@ Sélectionnez soit la **sélection à choix unique**, soit la **sélection à ch
 
 Ensuite, déterminez si vous allez [collecter des attributs personnalisés](#custom-attributes) ou [uniquement les réponses du journal.](#no-attributes)
 
-![Menu déroulant Choix avec l’option « Enregistrer les attributs lors de la soumission » sélectionnée.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
+![Liste déroulante des choix avec l'option "Log attributes upon submission" (enregistrer les attributs lors de la soumission) sélectionnée.]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:60%"}
 
 #### Recueillir des attributs personnalisés {#custom-attributes}
 
@@ -89,11 +89,11 @@ Une page de confirmation est l’endroit idéal pour remercier les utilisateurs 
 
 Modifiez le texte de votre bouton et le comportement au clic dans la section **Bouton de soumission** au bas de l'onglet **Enquête :** 
 
-![Comportement en cas de clic défini sur « Envoyer les réponses et afficher la page de confirmation ».]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
+![Le comportement au clic est réglé sur "Soumettre les réponses et afficher la page de confirmation".]({% image_buster /assets/img/iam/confirmation-option.png %}){: style="max-width:60%"}
 
 Si vous choisissez d'ajouter une page de confirmation, passez à l'onglet **Page de confirmation** pour personnaliser votre message :
 
-![Onglet Confirmation page (Page de confirmation) de l’éditeur d’enquête simple. Les champs disponibles sont l’en-tête, le corps optionnel, le texte du bouton et le comportement en cas de clic de bouton.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
+![Onglet Confirmation page (Page de confirmation) de l’éditeur d’enquête simple. Les champs disponibles sont l'en-tête, le corps optionnel, le texte du bouton et le comportement du bouton au clic.]({% image_buster /assets/img/iam/confirmation-page.png %}){: style="max-width:90%"}
 
 Si vous souhaitez guider les utilisateurs vers une autre page de votre application ou de votre site Web, modifiez le **comportement lors du clic** du bouton.
 
@@ -101,7 +101,7 @@ Si vous souhaitez guider les utilisateurs vers une autre page de votre applicati
 
 Vous pouvez personnaliser la couleur de la police et la couleur d'accentuation du message à l'aide du sélecteur de **thème de couleur**.
 
-![Onglet Composer de l'éditeur d'enquête simple avec le sélecteur de thème de couleur développé après que l'utilisateur ait cliqué sur la palette de couleurs.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
+![Onglet Composer de l'éditeur d'enquêtes simples avec le sélecteur de thème de couleur développé après qu'un utilisateur a cliqué sur la palette de couleurs.]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
 ## Analyser les résultats {#analytics}
 
@@ -127,6 +127,9 @@ Les choix sélectionnés seront automatiquement transférés dans Currents, sous
 
 ## Cas d’utilisation
 
+{% tabs %}
+{% tab User satisfaction %}
+
 ### Satisfaction des utilisateurs
 
 **Objectif :** Mesurer la satisfaction client et envoyer des campagnes de reconquête aux utilisateurs qui ont donné des notes faibles.
@@ -144,6 +147,9 @@ Pour ce faire, utilisez une enquête à choix unique comportant cinq options all
 
 Lorsqu'un utilisateur répond à l'enquête, la valeur qu'il a sélectionnée est enregistrée en tant qu'attribut personnalisé. Vous pouvez ensuite créer des campagnes de suivi à l'aide de filtres d'audience. Par exemple, ciblez les messages de reconquête sur les utilisateurs dont l'attribut `customer_satisfaction` est 1 ou 2.
 
+{% endtab %}
+{% tab Notification preferences %}
+
 ### Préférences de notification
 
 **Objectif :** Permettez aux utilisateurs d'opter pour des types de notifications spécifiques.
@@ -155,9 +161,12 @@ Pour ce faire, utilisez une enquête de sélection à choix multiples où chaque
 | Mises à jour des produits    | `wants_product_updates`| `true` |
 | Promotions         | `wants_promotions`     | `true` |
 | Invitations aux événements      | `wants_event_invites`  | `true` |
-| Enquêtes et commentaires | `wants_surveys`        | `true` |
-| Conseils et tutoriels   | `wants_tips`           | `true` |
+| Enquêtes & Retour d'information | `wants_surveys`        | `true` |
+| Conseils & Tutoriels   | `wants_tips`           | `true` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% endtab %}
+{% tab Identify customer goals %}
 
 ### Identifier les objectifs des clients
 
@@ -176,6 +185,9 @@ Pour ce faire, utilisez une enquête de sélection à choix unique, chaque optio
 
 Lorsqu'un utilisateur répond à l'enquête, la valeur sélectionnée est enregistrée en tant qu'attribut personnalisé sur son profil. Vous pouvez ensuite utiliser ces données pour personnaliser les expériences futures ou segmenter les utilisateurs en fonction de leur objectif principal.
 
+{% endtab %}
+{% tab Improve conversion rates %}
+
 ### Améliorer les taux de conversion
 
 **Objectif :** Comprendre pourquoi les clients n’effectuent pas de mises à niveau ou d’achats.
@@ -192,6 +204,9 @@ Pour ce faire, utilisez une enquête de sélection à choix unique, chaque optio
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 Lorsqu'un utilisateur répond à l'enquête, la valeur sélectionnée est enregistrée dans son profil. Vous pouvez ensuite cibler ces utilisateurs avec des campagnes adaptées à leur objection spécifique, comme des offres de réduction ou des améliorations de la convivialité.
+
+{% endtab %}
+{% tab Favorite features %}
 
 ### Fonctionnalités préférées
 
@@ -212,5 +227,5 @@ Pour mettre cela en place, utilisez un sondage de sélection à choix multiples 
 
 Comme cette enquête utilise une sélection à choix multiples, le profil de l'utilisateur sera mis à jour avec une liste de toutes les valeurs de fonctionnalité sélectionnées.
 
-
-
+{% endtab %}
+{% endtabs %}

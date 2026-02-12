@@ -1,5 +1,5 @@
 ---
-nav_title: 모범 사례
+nav_title: Best practices
 article_title: 캠페인 Best Practices
 page_order: 0
 description: "이 기사는 캠페인을 만들고 커스텀하는 모범 사례를 제공합니다."
@@ -62,18 +62,18 @@ If your goal is to draw your users toward a new feature or app version, use a mu
 - 지난 14일 동안 이 앱들을 10번 이상 사용했습니다
 - 50달러 이상 지출했습니다
 
-![An example of a segment that targets power users of an app.]({% image_buster /assets/img_archive/ratings_power_users.png %})
+![앱의 파워 유저를 겨냥한 세그먼트의 예입니다.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 사용자가 앱 스토어를 방문하는 데 시간이 걸립니다. 추가적인 노력을 기울일 가능성을 극대화하려면, 앱에서 긍정적인 경험을 한 후에 평가나 리뷰를 요청하세요. 예를 들어, 그들이 게임 레벨을 클리어하거나 할인 코드를 사용하여 구매를 한 후에 물어보세요. 사용자의 워크플로우 기대에 부합하는지 확인하는 방법에 대한 자세한 내용은 [데이터 옵트인]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)에 관한 저희 기사를 참조하세요.
 
-## 캠페인 예약하기
+## 캠페인을 예약하는 중
 
-캠페인 일정 또는 오디언스를 편집할 때는 다음 모범 사례를 참고하세요:
+캠페인 일정이나 대상을 편집할 때 다음의 모범 사례를 참고하세요:
 
-- **일회성 일정 캠페인:** 예약된 전송 시간까지 캠페인을 수정할 수 있습니다.
-- **Recurring scheduled campaigns:** 예약된 전송 시간까지 캠페인을 수정할 수 있습니다.
-- **현지 전송 시간 캠페인:** Don't make edits 24 hours before the scheduled send time.
-- **최적의 전송 시간 캠페인:** Don't make edits 24 hours before midnight of the day the campaign is scheduled to be sent on.
+- **일회성 일정 캠페인:** 예정된 발송 시간까지 캠페인을 편집할 수 있습니다.
+- **Recurring scheduled campaigns:** 예정된 발송 시간까지 캠페인을 편집할 수 있습니다.
+- **Local send time campaigns:** Don't make edits 24 hours before the scheduled send time.
+- **Optimal send time campaigns:** Don't make edits 24 hours before midnight of the day the campaign is scheduled to be sent on.
 
 {% alert note %}
 Editing a live campaign and changing the delivery to **Local Send Time** will cause a new batch of messages to be enqueued, meaning your users will receive the message twice due to the message being enqueued twice. To prevent this, first stop the original campaign, then launch a duplicate after updating the schedule.

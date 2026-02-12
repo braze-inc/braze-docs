@@ -175,7 +175,7 @@ Der <i>Tagesumsatz pro Benutzer</i> ist der durchschnittliche Tagesumsatz pro t�
 {% endif %}
 
 {% if include.metric == "Primary Conversions (A) or Primary Conversion Event" %}
-<i>Primäre Conversions (A)</i> oder <i>primäres Conversion-Ereignis</i> ist die Anzahl der Male, die ein definiertes Ereignis nach der Interaktion mit oder dem Betrachten einer empfangenen Nachricht aus einer Braze-Kampagne eingetreten ist. Dieses definierte Event wird von Ihnen bei der Erstellung der Kampagne festgelegt.
+<i>Primäre Konversionen (A)</i> oder <i>primäres Konversions-Event</i> ist die Anzahl eindeutiger Nutzer:innen, die ein definiertes Ereignis ausführen, nachdem sie eine Nachricht aus einer Braze-Kampagne erhalten oder angesehen haben. Dieses Ereignis wird von Ihnen ausgewählt, wenn Sie die Kampagne einrichten, und wird als primäre Erfolgsmetrik für die Berichterstattung und Optimierung verwendet.
 {% endif %}
 
 {% if include.metric == "Reads" %}
@@ -251,7 +251,12 @@ Der <i>Umsatz</i> ist der Gesamtumsatz in Dollar von Kampagnenempfängern innerh
 {% endif %}
 
 {% if include.metric == "Unique Clicks" %}
-<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link in einer Nachricht geklickt haben und wird durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a> gemessen.
+<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link in einer Nachricht geklickt haben, und wird gemessen durch <a href='https://braze.com/docs/help/help_articles/data/dispatch_id/'>dispatch_id</a>.
+{% endif %}
+
+<!-- Pull channels like Banners that don't have a Dispatch ID-->
+{% if include.metric == "Unique Clicks No Dispatch ID" %}
+<i>Eindeutige Klicks</i> ist die eindeutige Anzahl von Empfängern, die mindestens einmal auf einen Link innerhalb einer Nachricht geklickt haben.
 {% endif %}
 
 {% if include.metric == "Unique Dismissals" %}

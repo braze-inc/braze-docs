@@ -44,9 +44,9 @@ tool: Canvas
 
 ### 2단계: 전환 이벤트 할당
 
-다음으로 전환 이벤트를 할당해 보겠습니다. 전환 이벤트는 캔버스의 성공 여부를 측정하는 데 사용할 수 있는 일종의 지표입니다. **전환 이벤트 유형에서** **사용자 지정 이벤트 수행을** 선택합니다. 그런 다음 **사용자 지정 이벤트 이름에** **이메일_opt_in을** 선택합니다.
+다음으로 전환 이벤트를 할당해 보겠습니다. 전환 이벤트는 캔버스의 성공 여부를 측정하는 데 사용할 수 있는 일종의 지표입니다. **전환 이벤트 유형에서** **사용자 지정 이벤트 수행을** 선택합니다. 그런 다음 **email_opt_in** 을 **커스텀 이벤트 이름으로** 선택합니다.
 
-!["이메일 수신 동의의 전환 이벤트 유형에 대한 '전환 이벤트 할당' 섹션]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+!['전환 이벤트 할당' 섹션에서 이메일 옵트인 전환 이벤트 유형에 대해 설정합니다.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 가장 최근 사용자를 타겟팅하기 위해 템플릿의 전환 기한을 3일로 유지하겠습니다.
 
@@ -66,13 +66,13 @@ tool: Canvas
 
 타겟 고객을 사용자 프로필에 이메일 주소가 없는 스테핑턴팅 사용자로 정의하겠습니다. 템플릿의 기본 [세분화 필터]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) `Email Available is false` 를 유지하여 이 작업을 수행합니다.
 
-!["사용 가능한 이메일이 거짓입니다" 필터가 적용된 참가 대상]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
+!["사용 가능한 이메일이 거짓입니다" 필터가 있는 오디언스를 입력합니다.]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
 ### 5단계: 전송 설정을 선택하세요
 
 기본 구독 설정을 유지하여 구독하거나 메시지 또는 알림 수신을 선택한 사용자에게만 전송하고 다른 설정(빈도 제한, 조용한 시간, 시드 그룹)은 건너뜁니다.
 
-![기본 전송 옵션은 구독 또는 옵트인한 사용자에게만 전송합니다.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
+![가입하거나 옵트인한 사용자에게만 보내는 기본값 전송 옵션입니다.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### 6단계: 캔버스 사용자 지정
 

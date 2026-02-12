@@ -13,7 +13,7 @@ description: "This reference page lists filters that can be used to reformat sta
 Filters are how you can modify the output of numbers, strings, variables, and objects in Liquid. You can use filters to reformat static or dynamic text, such as changing a string from lowercase to uppercase or to perform mathematical operations, like addition or division.
 
 {% alert important %}
-Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. <br><br>If you have any questions about a filter that is not listed here, reach out to your customer success manager.
+Braze does not support all Liquid filters from Shopify. This page attempts to outline the Liquid filters that Braze has tested, but it may not be a complete list. Always test your Liquid before sending out any messages. <br><br>If you have any questions about a filter that is not listed here, contact your customer success manager.
 {% endalert %}
 
 ## Filter syntax
@@ -75,10 +75,11 @@ Array filters are used to change the output of arrays.
 | [last](https://shopify.dev/docs/api/liquid/filters/last)          | Returns the last element of an array. In a custom attribute array, this is the most recently added value.          | ✅  Yes   |
 | [compact](https://shopify.dev/api/liquid/filters/compact)       | Removes any `nil` items from an array.                                                                             | ✅  Yes   |
 | [concat](https://shopify.dev/api/liquid/filters/concat)        | Combines an array with another array.                                                                              | ✅  Yes   |
-| [find_index](https://shopify.dev/docs/api/liquid/filters/find_index)         | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ✅  Yes   |
+| [find_index](https://shopify.dev/docs/api/liquid/filters/find_index)         | Returns the item at the specified index location in an array. The first item in an array is referenced with `[0]`. | ⛔  No   |
 | [map](https://shopify.dev/api/liquid/filters/map)           | Accepts an array element's attribute as a parameter and creates an array out of each array element's value.        | ✅  Yes   |
 | [reverse](https://shopify.dev/api/liquid/filters/reverse)       | Reverses the order of the items in an array.                                                                       | ✅  Yes   |
 | [size](https://shopify.dev/api/liquid/filters/size)          | Returns the size of a string (the number of characters) or an array (the number of elements).                      | ✅  Yes   |
+| [slice](https://shopify.dev/api/liquid/filters/slice)        | Returns a substring of a string or a subset of an array, starting at the specified index.                          | ✅  Yes   |
 | [sort](https://shopify.dev/api/liquid/filters/sort)         | Sorts the elements of an array by a given attribute of an element in the array.                                    | ✅  Yes   |
 | [sort_natural](https://shopify.dev/api/liquid/sort_natural) | Sorts the items in an array in case-insensitive alphabetical order.                                                | ✅  Yes   |
 | [uniq](https://shopify.dev/api/liquid/filters/uniq)         | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |

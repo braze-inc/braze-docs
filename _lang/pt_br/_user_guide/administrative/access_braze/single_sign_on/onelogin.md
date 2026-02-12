@@ -26,11 +26,11 @@ Após a configuração, solicitaremos que você forneça uma URL de login e um U
 ### Etapa 1: Configurar o app Braze
 
 1. Faça o registro no [OneLogin](https://app.onelogin.com/login). Clique em **Administration**.![Página de administração do OneLogin.]({% image_buster /assets/img/onelogin_1.jpg %})<br><br>
-2. Acesse **Apps** > **Add Apps** na barra de navegação superior. Pesquise "Braze" e selecione o app Braze.![Resultados da pesquisa para a Braze no OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
-3. Salve o app da Braze em sua empresa.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
+2. Acesse **Apps** > **Add Apps** na barra de navegação superior. Pesquise por "Braze" e selecione o app Braze.![Resultados da pesquisa para o Braze no OneLogin.]({% image_buster /assets/img/onelogin_2.jpg %})<br><br>
+3. Salve o app Braze em sua empresa.![]({% image_buster /assets/img/onelogin_3.jpg %})<br><br>
 4. Quando salvo, acesse **Configuração** e adicione seu **domínio Braze** e a chave de API **RelayState**.![Guia Configuração do OneLogin para o aplicativo Braze.]({% image_buster /assets/img/onelogin_4.png %})<br><br>
-5. O Braze espera as asserções SAML em um [formato específico]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider). Em **Parâmetros**, as atribuições aceitas pela Braze devem ser pré-preenchidas. Verifique se eles estão corretos.![Parâmetros SAML da Braze no OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
-6. Copie o **certificado** e o **ponto de extremidade SAML 2.0 (HTTP)** necessários para configurar o dashboard do Braze na guia **SSO**.![Certificados para copiar da guia SSO do app do Braze no OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
+5. O Braze espera as asserções SAML em um [formato específico]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/set_up/#configure-your-identity-provider). Em **Parâmetros**, as atribuições aceitas pela Braze devem ser pré-preenchidas. Verifique se eles estão corretos.![Braze SAML parameters in OneLogin.]({% image_buster /assets/img/onelogin_5.jpg %})<br><br>
+6. Copie o **certificado** e o **ponto de extremidade SAML 2.0 (HTTP)** necessários para configurar o dashboard do Braze na guia **SSO**.![Certificados para copiar da guia SSO do app Braze no OneLogin.]({% image_buster /assets/img/onelogin_6.jpg %})
 
 ### Etapa 2: Configurar o OneLogin no Braze
 

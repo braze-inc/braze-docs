@@ -3,16 +3,16 @@ nav_title: Intelligence Suite
 article_title: Acerca de la línea de productos Braze Intelligence Suite
 page_order: 1
 search_rank: 12
-description: "La línea de productos Braze Intelligence Suite te ayuda a automatizar la toma de decisiones con información basada en datos. Desde el plazo de entrega hasta las pruebas multivariantes, las marcas pueden utilizar estas herramientas y características para crear experiencias dinámicas y a través de canales que se optimicen a escala."
+description: "La línea de productos Braze Intelligence Suite automatiza la toma de decisiones con información basada en datos. Desde el plazo de entrega hasta las pruebas multivariantes, las marcas pueden utilizar estas herramientas y características para crear experiencias dinámicas y a través de canales que se optimicen a escala."
 tool:
   - Dashboard
 ---
 
 # La Intelligence Suite
 
-> La línea de productos Braze Intelligence Suite te ayuda a automatizar la toma de decisiones con información basada en datos. Desde el plazo de entrega hasta las pruebas multivariantes, las marcas pueden utilizar estas herramientas y características para crear experiencias dinámicas y a través de canales que se optimicen a escala. La Intelligence Suite consta de tres características principales: Intelligent Timing, Canal inteligente e Intelligent Selection.
+> La línea de productos Braze Intelligence Suite automatiza la toma de decisiones con información basada en datos. Desde el plazo de entrega hasta las pruebas multivariantes, las marcas pueden utilizar estas herramientas y características para crear experiencias dinámicas y a través de canales que se optimicen a escala. La Intelligence Suite consta de tres características principales: Intelligent Timing, Canal inteligente e Intelligent Selection.
 
-## Casos prácticos
+## Ejemplos
 
 La Intelligence Suite proporciona potentes características para analizar el historial de usuarios y el rendimiento de campañas y Canvas, y luego hacer ajustes automáticos para aumentar la interacción, la audiencia y las conversiones. Para ver algunos ejemplos de cómo estas características pueden beneficiar a distintos sectores, consulta los siguientes casos de uso.
 

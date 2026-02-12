@@ -81,7 +81,7 @@ glossaries:
   - name: Push Messages
     description: A <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/">push message</a>, or push notification, is a notification that appears from a mobile application. Push notifications often appear as pop-up dialogs and banners for both iOS and Android.
   - name: Push Token
-    description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration">Push token migration</a> is the importing of those already-generated keys into Braze.
+    description: A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens">Push token migration</a> is the importing of those already-generated keys into Braze.
   - name: Push Time to Live
     description: Also known as <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user.
   - name: Race Condition

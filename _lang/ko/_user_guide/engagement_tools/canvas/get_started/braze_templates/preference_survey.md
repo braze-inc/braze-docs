@@ -24,7 +24,7 @@ tool: Canvas
 
 ## 필요에 맞게 템플릿 조정하기
 
-사람들이 필요한 곳으로 이동하는 온디맨드 차량 공유 앱인 StyleRyde에서 일한다고 가정해 보겠습니다. 캔버스를 만들기 전에 사용자가 앱을 처음 사용했을 때의 경험과 인상을 파악하기 위해 일련의 흥미로운 질문이 포함된 [간단한 설문조사를 설정했습니다]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog).
+사람들이 필요한 곳으로 이동하는 온디맨드 차량 공유 앱인 StyleRyde에서 일한다고 가정해 보겠습니다. 캔버스를 만들기 전에 사용자가 앱을 처음 사용했을 때의 경험과 인상을 파악하기 위해 일련의 흥미로운 질문이 포함된 [간단한 설문조사를 설정했습니다]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog).
 
 템플릿에 액세스하려면 새 캔버스를 만들 때 **캔버스 템플릿 사용** > **브레이즈 템플릿을** 선택합니다. 그런 다음 **선호도 조사를 통한 온보딩** 옆의 **템플릿 적용을** 선택합니다. 이제 템플릿을 검토하여 필요에 맞게 조정할 수 있습니다.
 
@@ -47,7 +47,7 @@ tool: Canvas
 
 **기본 전환 이벤트 - A를** **사용자 지정 이벤트 수행으로** 업데이트합니다. 그런 다음 사용자 지정 이벤트에 대해 **마지막으로 사용한 앱을** 선택합니다.
 
-![전환 이벤트에 대해 선택한 사용자 지정 이벤트 이름으로 마지막으로 사용한 앱을 입력합니다.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
+![전환 이벤트에 대해 선택한 커스텀 이벤트 이름으로 마지막으로 사용한 앱을 입력합니다.]({% image_buster /assets/img/canvas_templates/preference_survey3.png %}){: style="max-width:90%;"}
 
 ### 3단계: 참가 일정 맞춤 설정
 
@@ -55,19 +55,19 @@ tool: Canvas
 
 **입력 창을** 원하는 날짜와 시간으로 조정하여 이 섹션을 한 번 업데이트하겠습니다.
 
-!["시작 시간은 2025년 1월 30일 오후 12시인 '응모 기간' 섹션]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
+!["시작 시간은 2025년 1월 30일 오후 12시인 '참가 기간' 섹션입니다.]({% image_buster /assets/img/canvas_templates/preference_survey4.png %}){: style="max-width:90%;"}
 
 ### 4단계: 타겟 오디언스 선택
 
 스타일라이드 앱을 처음 사용한 지 하루가 지나지 않은 사용자를 타겟팅하기 위해 타겟층을 그대로 유지합니다.
 
-!["이 앱을 사용한 지 1일 미만" 필터를 선택하면 응모 대상을 타겟팅할 수 있습니다.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
+!['이 앱을 사용한 지 1일 미만' 필터를 선택하여 응모 오디언스를 타겟팅합니다.]({% image_buster /assets/img/canvas_templates/preference_survey5.png %}){: style="max-width:90%;"}
 
 ### 5단계: 전송 설정을 선택하세요
 
 기본 가입 설정을 유지하여 조용한 시간을 켜고 가입했거나 메시지 또는 알림 수신을 선택한 사용자에게만 알림을 보내고 다른 설정(빈도 제한 및 시드 그룹)은 건너뜁니다.
 
-!['설정 보내기' 섹션에는 오전 12시부터 오후 8시 사이에 조용한 시간을 켜고 구독 또는 옵트인한 사용자의 구독 설정이 있습니다.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
+!['설정 보내기' 섹션에는 오전 12시부터 오후 8시 사이에 방해금지 시간을 켜고 가입하거나 옵트인한 사용자의 구독 설정이 있습니다.]({% image_buster /assets/img/canvas_templates/preference_survey6.png %}){: style="max-width:90%;"}
 
 ### 6단계: 캔버스 사용자 지정
 
@@ -79,7 +79,7 @@ tool: Canvas
 - 세션을 시작했거나 온보딩 이메일을 클릭한 사용자
 - 세션을 시작하지 않았거나 온보딩 이메일을 클릭하지 않은 사용자
 
-![작업 경로 단계는 세션을 시작한 사용자를 위한 경로와 그 외 모든 사용자를 위한 경로로 나뉩니다.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
+![행동 경로 단계는 세션을 시작한 사용자와 다른 모든 사용자를 위한 두 가지 경로로 나뉩니다.]({% image_buster /assets/img/canvas_templates/preference_survey8.png %}){: style="max-width:50%;"}
 
 이제부터는 앞서 언급한 그룹을 기준으로 사용자와 메시지를 타겟팅할 것입니다.
 
@@ -91,7 +91,7 @@ tool: Canvas
 
 다음으로 **콘텐츠 기본** 설정 설문조사 메시지 단계를 업데이트하여 사용자에게 향후 정보를 받고 싶은 주제를 선택하라는 메시지를 표시하는 기본 설정 설문조사를 포함시킵니다.
 
-![사용자가 해당되는 모든 관심사를 선택하라는 메시지를 표시하는 선호도 조사 미리보기.]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
+![사용자에게 해당되는 모든 관심사를 선택하라는 메시지를 표시하는 선호도 설문조사의 미리보기입니다.]({% image_buster /assets/img/canvas_templates/preference_survey7.png %}){: style="max-width:90%;"}
 
 #### 온보딩을 시작하지 않은 사용자에게 넛지 유도하기 
 

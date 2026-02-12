@@ -1,5 +1,5 @@
 ---
-nav_title: ブランドガイドライン
+nav_title: ブランド・ガイドライン
 article_title: ブランドガイドライン
 page_order: 1
 page_type: reference
@@ -60,6 +60,6 @@ description: "このリファレンス記事では、AI コピーライティン
 
 メッセージを作成するときは、[AI コピーライティングアシスタント]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/)を開き、[**ブランドガイドラインを適用する**] ドロップダウンでブランドガイドラインを選択します。特定のブランド・ガイドラインをデフォルトに指定すると、ドロップダウンで自動的に選択されるが、別のガイドラインを選択することもできる。 
 
-![ブランドガイドラインとして「Important Alerts!!」が選択されているAIコピーライティングアシスタント。]({% image_buster /assets/img/guidelines_ai_assistant.png %})
+!["重要なお知らせ！"をブランド指針に選んだAIコピーライティングアシスタント]({% image_buster /assets/img/guidelines_ai_assistant.png %})
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

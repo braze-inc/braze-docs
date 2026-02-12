@@ -283,22 +283,25 @@ $(document).ready(function() {
   $(window).scroll(scrollHandler);
 
   // See if sdk tabs should be changed based on url hash
-  const sdk_hash = $(window.location.hash);
-  if (sdk_hash.is(':header')) {
-    const sdk_el = sdk_hash.closest("[data-sdk-tab]");
-    let sdk_tab = sdk_el.attr('data-sdk-tab');
-    // add sdk tab to query header
-    if (sdk_tab) {
-      sdk_tab = sdk_tab.replace('sdk-','');
-      let tab_replace = {
-        'sdktab': sdk_tab
-      };
-      let query_str = replaceParams(window.location.search, tab_replace, true) + '#' + sdk_hash.attr('id');
-      if (window.location.pathname.substr(-1) != '/')  {
-        window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
-      }
-      else {
-        window.history.replaceState(null, null,  window.location.pathname + query_str);
+  let location_hash = window.location.hash.slice(1);
+  if (location_hash) {
+    const sdk_hash = $('#' + decodeURIComponent(location_hash));
+    if (sdk_hash.is(':header')) {
+      const sdk_el = sdk_hash.closest("[data-sdk-tab]");
+      let sdk_tab = sdk_el.attr('data-sdk-tab');
+      // add sdk tab to query header
+      if (sdk_tab) {
+        sdk_tab = sdk_tab.replace('sdk-','');
+        let tab_replace = {
+          'sdktab': sdk_tab
+        };
+        let query_str = replaceParams(window.location.search, tab_replace, true) + '#' + sdk_hash.attr('id');
+        if (window.location.pathname.substr(-1) != '/')  {
+          window.history.replaceState(null, null, window.location.pathname + '/' + query_str);
+        }
+        else {
+          window.history.replaceState(null, null,  window.location.pathname + query_str);
+        }
       }
     }
   }

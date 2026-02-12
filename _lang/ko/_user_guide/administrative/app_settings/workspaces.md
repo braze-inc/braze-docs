@@ -1,13 +1,13 @@
 ---
-nav_title: 워크스페이스 만들기 및 관리
-article_title: 워크스페이스 만들기 및 관리
+nav_title: 워크스페이스 생성 및 관리
+article_title: 워크스페이스 생성 및 관리
 page_order: 0
 page_type: reference
 description: "이 도움말에서는 워크스페이스를 만들고, 설정하고, 관리하는 방법에 대해 설명합니다."
 
 ---
 
-# 작업 공간 만들기 및 관리
+# 워크스페이스 생성 및 관리
 
 > 이 도움말에서는 워크스페이스를 만들고, 설정하고, 관리하는 방법에 대해 설명합니다. 
 
@@ -125,7 +125,7 @@ You cannot delete app instances or workspaces that are currently being used for 
 
 ![The App Settings page with a button to delete a workspace and a trash can icon to delete an app.]({% image_buster /assets/img/workspaces/workspace_delete.png %})
 
-## 자주 묻는 질문
+## Frequently asked questions
 
 ### 업데이트된 앱을 출시할 때 새 워크스페이스를 만들어야 하나요?
 
@@ -151,7 +151,7 @@ If you're releasing an entirely new app to the app store, you should create a ne
 2. **타겟팅하는 앱 및 웹사이트**의 경우 **특정 앱의 사용자**를 선택합니다.
 3. **특정 앱** 드롭다운에서 앱 또는 사이트를 선택합니다.
 
-![Segment that is targeting users from specific apps.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
+![특정 앱의 사용자를 타겟팅하는 세그먼트입니다.]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
 
 그런 다음 이 세그먼트를 메시지에 추가하고 필요한 경우 추가 세그먼트 및 필터를 사용하여 오디언스를 더욱 세분화할 수 있습니다.
 
@@ -163,13 +163,10 @@ For campaigns, add your segment to the **Target Audiences** step of the composer
 
 In Canvas, add your segment to your Message steps, in the **Delivery Validations** section. 전달 검증은 메시지 발송 시 오디언스가 전달 기준을 충족했음을 재확인합니다. 각 메시지 단계마다 전달 검증을 지정하여 올바른 앱으로 전달되는지 확인하세요. 엔트리 레벨에서 세분화할 필요가 없습니다.
 
-{% details 원래 캔버스 워크플로우의 단계를 보려면 확장하세요. %}
-
-{% alert important %}
-2023년 2월 28일부터 더 이상 원본 편집기를 사용하여 캔버스를 만들거나 복제할 수 없습니다. 이 콘텐츠는 원본 편집기에서 세그먼트와 타겟팅을 이해하는 데 참조할 수 있습니다.<br><br>Braze recommends that customers who use the original Canvas experience clone their Canvases to the updated editor to better build and manage Canvases. Learn more about [cloning your Canvases]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Expand for steps in the original Canvas workflow %}
 
 원래 캔버스 워크플로에서 **대상** 섹션의 캔버스 컴포넌트 레벨에 세그먼트를 추가합니다. 엔트리 레벨에서 세분화할 필요가 없습니다.
+
 {% enddetails %}
 
 

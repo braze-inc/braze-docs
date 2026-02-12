@@ -3,26 +3,34 @@ nav_title: FAQ
 article_title: FAQ Canvas
 page_order: 8
 alias: "/canvas_v2_101/"
-description: "Cet article fournit des réponses aux questions fréquemment posées sur Canvas et Canvas Flow."
+description: "Cet article fournit des réponses aux questions fréquemment posées sur Canvas."
 tool: Canvas
 
 ---
 
 # Foire aux questions
 
-> Cet article apporte des réponses à certaines questions fréquemment posées sur Canvas et [Canvas Flow](#canvas-flow).
+> Cet article fournit des réponses à des questions fréquemment posées sur Canvas.
 
-{% alert important %}
-Depuis le 28 février 2023, vous ne pouvez plus créer ou dupliquer de Canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
-{% endalert %}
+### Combien d'étapes puis-je inclure dans un canvas ?
 
-## Généralités
+Vous pouvez ajouter jusqu'à 200 étapes dans un canvas.
 
 ### Que se passe-t-il si l’audience et l’heure d’envoi sont identiques pour un Canvas qui a une variante, mais plusieurs branches ?
 
 Nous mettons en file d’attente un travail pour chaque étape, ils sont exécutés à peu près simultanément et l’un d’entre eux « gagne ». En pratique ce processus peut être quelque peu uniforme, mais il y a parfois une légère distorsion par rapport à l’étape créée en premier. 
 
 De plus, nous ne pouvons pas garantir avec précision ce à quoi ressemblera cette répartition. Si vous souhaitez une répartition égale, ajoutez un filtre de [numéro de compartiment aléatoire]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/).
+
+### Puis-je lancer un Canvas avec des étapes déconnectées ?
+
+Oui. Vous pouvez également sauvegarder vos Canvas après lancement avec des étapes déconnectées. 
+
+### Où les utilisateurs se rendent-ils lorsqu'ils ont atteint une étape déconnectée ?
+
+Si un utilisateur se trouve à une étape déconnectée de votre flux de travail Canvas, il passera à l'étape suivante, s'il y en a une, et les paramètres de l'étape détermineront la manière dont l'utilisateur doit avancer. Ceci est prévu pour permettre aux utilisateurs d’effectuer des changements sur des étapes sans avoir à les connecter directement au reste du Canvas. Ceci vous offre également la possibilité de tester avant de le mettre immédiatement en ligne en permettant donc de sauvegarder un brouillon.
+
+Nous vous recommandons de vérifier l’affichage des analyses pour les utilisateurs en attente dans une étape Canvas avant de le déconnecter.
 
 ### Que se passe-t-il lorsque vous arrêtez un Canvas ?
 
@@ -36,7 +44,7 @@ Lorsque vous arrêtez un Canvas, les éléments suivants s’appliquent :
 
 En fonction de ce que vous cherchez à accomplir avec votre Canvas, vous pouvez avoir besoin de différentes approches dans la façon dont vous créez votre parcours utilisateur. La flexibilité de Canvas vous permet de mapper les parcours des utilisateurs pour n'importe quelle étape du cycle de vie de l'utilisateur. Consultez nos [modèles de canvas Braze]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/braze_templates) pour obtenir plusieurs exemples d'approches rationalisées pour créer des parcours utilisateurs efficaces.
 
-#### Messages in-app de Canvas
+### Quand les messages in-app sont-ils envoyés dans Canvas ?
 
 Les messages in-app sont envoyés au démarrage de la session suivante. Cela signifie que si l'utilisateur entre dans l'étape du canvas avant que le canvas ne soit interrompu, il recevra toujours le message in-app lors de son prochain démarrage de session, tant que le message in-app n'a pas encore expiré.
 
@@ -54,13 +62,17 @@ Les événements d'exception ne se déclenchent que lorsque l'utilisateur attend
 
 Si vous modifiez certaines étapes d’un Canvas à plusieurs étapes, les utilisateurs qui étaient déjà dans l’audience, mais n’ayant pas encore reçu les étapes, recevront la version mise à jour du message. Notez que ce cas se produit uniquement s’ils n’ont pas encore été évalués pour l’étape.
 
-Pour plus d'informations sur ce que vous pouvez modifier après le lancement, consultez la rubrique [Modifier votre canvas après le lancement]({{site.baseurl}}/post-launch_edits/).
+Pour plus d'informations sur ce que vous pouvez modifier après le lancement, reportez-vous à la section [Modifier votre canvas après le lancement]({{site.baseurl}}/post-launch_edits/).
 
 ### Comment le suivi des conversions utilisateur est-il effectué dans Canvas ?
 
 Un utilisateur peut uniquement effectuer une conversion par entrée Canvas. Les conversions sont affectées au message le plus récent reçu par l’utilisateur pour cette entrée. Le blocage de synthèse au début d’un Canvas illustre toutes les conversions effectuées par les utilisateurs dans ce parcours, qu’ils aient reçu un message ou pas. Chaque message suivant affichera uniquement les conversions effectuées lorsque l’utilisateur a reçu l’étape la plus récente.
 
-{% details Exemples %}
+{% alert note %}
+Lorsqu'un utilisateur entre à nouveau dans un canvas, les événements de conversion ne sont suivis que pour l'entrée la plus récente. Les événements de conversion ne sont pas enregistrés pour les entrées antérieures, même si l'événement de conversion est complété.
+{% endalert %}
+
+{% details Expand for examples %}
 
 **Exemple 1**
 
@@ -87,7 +99,7 @@ Il existe un Canvas à une seule étape avec les heures calmes activées :
 
 {% enddetails %}
 
-### Quelle est la différence entre les différents types de taux de conversion ?
+### Quelle est la différence entre les différents types de taux de conversion ?
 
 - Le nombre total de conversions Canvas reflète le nombre d'utilisateurs uniques ayant effectué un événement de conversion, et non le nombre de conversions effectuées par chacun d'entre eux. 
 - Le taux de conversion de la variante ou le bloc de synthèse au début d’un Canvas illustre toutes les conversions effectuées par les utilisateurs dans ce parcours, qu’ils aient reçu un message ou pas, sous forme d’un total additionné. 
@@ -119,49 +131,41 @@ Il est fréquent que le total des conversions pour une variante de Canvas soit p
 
 ### Comment les audiences de Canvas sont-elles évaluées ? 
 
-Par défaut, les filtres et segments pour des étapes complètes dans le Canvas sont cochés à l’heure de l’envoi. Pour Canvas Flow, le composant de Décision de séparation effectue une évaluation juste après avoir reçu l’étape précédente (ou avant un délai).
+Par défaut, les filtres et segments pour des étapes complètes dans le Canvas sont cochés à l’heure de l’envoi. L'étape de l'arbre décisionnel effectue une évaluation juste après la réception d'une étape précédente (ou avant un délai).
 
 {% alert tip %}
 Pour obtenir une aide supplémentaire dans la résolution des problèmes liés à Canvas, veillez à contacter le service d'assistance de Braze dans les 30 jours suivant l'apparition de votre problème, car nous ne disposons que des 30 derniers jours de journaux de diagnostic.
 {% endalert %}
 
-## Canvas Flow
+### Quelle est la différence entre "N'est pas entré dans la variation Canvas" et "N'est pas dans le groupe de contrôle Canvas" ?
 
-### Qu’est-ce que le Canvas Flow ?
+Reportez-vous à la section [Filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) pour obtenir les définitions complètes des filtres.
 
-Canvas Flow est l’expérience d’édition améliorée qui simplifie la façon dont les spécialistes du marketing peuvent développer et gérer leurs parcours d’utilisateur Canvas. Vous pouvez facilement voir et utiliser les composants Canvas dans le générateur de Canvas. Vous avez également accès à plus de fonctions de modification après le lancement pour modifier les connexions entre les étapes, supprimer les étapes et des variantes et rediriger les utilisateurs vers différentes étapes.
+#### N'est pas entré dans la variation de Canvas
 
-### Comment convertir un Canvas existant en Canvas Flow ?
+L'utilisateur n'a jamais saisi de chemin de variation d'un Canvas spécifique. Tous les utilisateurs qui ne font pas partie du groupe de contrôle sont inclus, qu'ils soient ou non entrés dans le Canvas. Cela inclut les utilisateurs qui ont saisi une autre variante et les utilisateurs qui n'ont saisi aucune variante. 
 
-Vous pouvez [cloner votre canvas dans Canvas Flow]({{site.baseurl}}/cloning_canvases/). Vous créerez ainsi une copie de votre Canvas d’origine dans le flux de travail Canvas Flow.
+#### Ne fait pas partie du groupe de contrôle de Canvas
 
-### Qu'adviendra-t-il des toiles que j'ai créées à l'aide de l'éditeur original ?
+L'utilisateur est entré dans le Canvas, mais ne fait pas partie du groupe de contrôle et a donc reçu une variante. Cela ne concerne que les utilisateurs qui sont entrés dans le Canvas.
 
-Tous vos Canvas existants et la version d’origine de Canvas continueront d’exister et seront pris en charge par Braze. Les clients qui choisissent de rejoindre Canvas Flow en accès anticipé auront la possibilité de créer un Canvas en utilisant le workflow Canvas d’origine ou de Flow.
+Notez que l'affectation des variations a lieu à l'entrée de la toile. Si un utilisateur n'a pas saisi de canvas, aucune variante ne lui sera attribuée. En d'autres termes, ils ne feront pas partie du groupe de contrôle ou d'une variante.
 
-### Y a-t-il une limite au nombre d'étapes que je peux inclure ?
+{% details Expand for original Canvas editor FAQs %}
 
-Oui. Un Canvas créé en utilisant Canvas Flow peut comprendre jusqu’à 200 étapes.
+### Comment convertir un canvas existant de l'éditeur d'origine vers l'éditeur actuel ?
 
-### Puis-je lancer un Canvas avec des étapes déconnectées ?
+Vous pouvez [cloner votre Canvas]({{site.baseurl}}/cloning_canvases/). Cela crée une copie de votre Canvas original dans le flux de travail Canvas le plus récent.
 
-Oui ! Canvas Flow vous permet de lancer votre Canvas avec des étapes déconnectées. Vous pouvez également sauvegarder vos Canvas après lancement avec des étapes déconnectées. 
+### Quelles sont les principales différences entre les éditeurs actuels et les éditeurs originaux de Canvas ?
 
-### Où les utilisateurs se rendent-ils lorsqu'ils ont atteint une étape déconnectée ?
+#### Barre d'outils du composant canvas
 
-Si un utilisateur se trouve dans une étape déconnectée d’un de vos flux de travail Canvas Flow, ils avanceront à l’étape suivante s’il en existe une et les paramètres de l’étape dicteront comment l’utilisateur devrait avancer. Ceci est prévu pour permettre aux utilisateurs d’effectuer des changements sur des étapes sans avoir à les connecter directement au reste du Canvas. Ceci vous offre également la possibilité de tester avant de le mettre immédiatement en ligne en permettant donc de sauvegarder un brouillon.
-
-Nous vous recommandons de vérifier l’affichage des analyses pour les utilisateurs en attente dans une étape Canvas avant de le déconnecter.
-
-### Quelles sont les principales différences entre Canvas Flow et l’éditeur Canvas d’origine ?
-
-#### Barre d’outils de composant de Canvas
-
-Auparavant, avec l’éditeur Canvas d’origine, une étape complète était ajoutée par défaut chaque fois que vous ajoutiez une étape dans votre parcours utilisateur. Maintenant avec Canvas Flow, ces étapes complètes sont remplacées par différents composants Canvas, vous offrant ainsi une meilleure visibilité et personnalisation pour apporter des modifications. Vous pouvez immédiatement voir tous vos composants Canvas dans la barre d’outils de l'étape de Canvas.
+Auparavant, avec l’éditeur Canvas d’origine, une étape complète était ajoutée par défaut chaque fois que vous ajoutiez une étape dans votre parcours utilisateur. Ces étapes complètes sont remplacées par différents composants Canvas, ce qui vous permet de bénéficier d'une visibilité et d'une personnalisation accrues pour votre expérience modificative. Vous pouvez immédiatement voir tous vos composants Canvas dans la barre d’outils de l'étape de Canvas.
 
 #### Comportement des étapes
 
-Auparavant, chaque étape complète comprenait des informations telles que les paramètres de délai et de planification, les événements d’exception, les filtres d’audience, la configuration des messages et les options d’avancement des messages dans un seul composant. Il s’agit de paramètres différents dans Canvas Flow pour rendre votre expérience de création de Canvas plus personnalisable et vous proposer des différences de fonctionnalité.
+Auparavant, chaque étape complète comprenait des informations telles que les paramètres de délai et de planification, les événements d’exception, les filtres d’audience, la configuration des messages et les options d’avancement des messages dans un seul composant. Il s'agit de paramètres distincts dans l'éditeur actuel afin de rendre votre expérience Canvas plus personnalisable et d'introduire quelques différences de fonctionnalité.
 
 #### Avancement du composant de message
 
@@ -173,14 +177,14 @@ Les [composants de la temporisation]({{site.baseurl}}/user_guide/engagement_tool
 
 Par exemple, le 12 avril, nous avons un composant de délai avec un délai défini de sorte que l’utilisateur est transféré sur l’étape suivante un jour plus tard, à 14 h 00. Un utilisateur saisit le composant à 14 h 01 le 13 avril. 
 - Pour le flux de travail d’origine, l’utilisateur passe à l’étape suivante à 14 h 00 le 14 avril, moins d’un jour après l’entrée. 
-- Pour Canvas Flow, l’utilisateur passera à l’étape suivante à 14 h 00 le 15 avril. Notez qu’il s’agit de la même heure, mais plus d’un jour après l’heure d’entrée. 
+- Dans l'éditeur actuel, l'utilisateur passera à l'étape suivante le 15 avril à 14 heures. Notez qu’il s’agit de la même heure, mais plus d’un jour après l’heure d’entrée. 
 
 #### Comportement du Timing Intelligent
 
 Étant donné que le [timing intelligent]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_timing/) est stocké dans le composant Message, les retards seront appliqués avant les calculs du timing intelligent. Cela signifie que, en fonction de l’heure à laquelle l’utilisateur accède au composant, il peut recevoir le message plus tard que dans un Canvas créé avec le flux de travail Canvas d’origine.
 
 Imaginons que votre délai est réglé sur 2 jours, que le timing intelligent est activé et qu’il a déterminé que la meilleure heure d’envoi de votre message était à 14 h 00. Un utilisateur entre dans l’étape ayant un délai à 14 h 01.
-- **Canvas Flow :** Il faudra 48 heures pour que le délai s’achève et l’utilisateur recevra donc le message le troisième jour à 14 h 00.
+- **Flux de travail actuel :** Il faudra 48 heures pour que le délai s’achève et l’utilisateur recevra donc le message le troisième jour à 14 h 00.
 - **Flux de travail original :** L’utilisateur reçoit le message le deuxième jour à 14 h 00.
 
 Prenez en compte le fait que si le timing intelligent est activé, le message sera envoyé dans les 24 heures suivant l’entrée de l’utilisateur dans le composant de message à l’heure intelligente identifiée (même si aucun composant de délai n’est impliqué).
@@ -189,10 +193,12 @@ Prenez en compte le fait que si le timing intelligent est activé, le message se
 
 ##### Heures calmes
 
-La fonctionnalité d’événement d’exception dans Canvas Flow fonctionne avec les parcours d’action, distincts des étapes de message. Les heures calmes sont appliquées dans le composant de message. Cela signifie que si un utilisateur a déjà franchi le parcours d’action (et n’a pas été exclu par l’événement d’exception à cet endroit), qu’il a atteint les heures calmes lorsqu’il est arrivé au composant de message, et que son Canvas a été configuré de telle sorte que le message soit renvoyé après la période des heures calmes, l’événement d’exception ne sera plus appliqué. Notez que ce cas d’utilisation n’est pas fréquent.
+L'événement d'exception est appliqué à l'aide de parcours d'action, qui sont distincts des étapes du message. Les heures calmes sont appliquées dans le composant de message. Cela signifie que si un utilisateur a déjà passé le parcours d'action (et n'a pas été exclu par l'événement d'exception), qu'il rencontre des heures calmes lorsqu'il arrive au composant Message et que son Canvas est configuré de manière à ce que le message soit envoyé à nouveau après la période d'heures calmes, l'événement d'exception ne s'appliquera plus. Notez que ce cas d’utilisation n’est pas fréquent.
 
-Pour les segments et filtres, le composant de message Canvas Flow comporte une nouvelle fonctionnalité appelée Validations de livraison qui permet aux utilisateurs de configurer des segments supplémentaires et des filtres validés au moment de l’envoi. Cela empêche le cas susmentionné avec les heures calmes.
+Pour les segments et les filtres, l'étape Message dispose de validations de réception/distribution qui permettent aux utilisateurs de configurer des segments et des filtres supplémentaires qui sont validés au moment de l'envoi. Cela empêche le cas susmentionné avec les heures calmes.
 
 ##### Réglage de la planification « dans » ou « suivant »/« prochain »
 
-Les événements d’exception dans Canvas Flow sont créés avec des parcours d’action. Les parcours d'action ne prennent en charge que l'expression "après une fenêtre de temps X" et non "dans X temps" ou "au prochain X temps".
+Les événements d'exception sont créés à l'aide de parcours d'action. Les parcours d'action ne prennent en charge que l'expression "après une fenêtre de temps X" et non "dans X temps" ou "au prochain X temps".
+
+{% enddetails %}

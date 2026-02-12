@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## Sobre análises preditivas de eventos
 
-Assim que a previsão terminar de treinar e esta página estiver populada, você pode começar a usar [filtros]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) em segmentos ou campanhas para começar a usar os resultados do modelo. Se você deseja ajuda para decidir quem direcionar e por quê, esta página pode ajudar com base na precisão histórica do modelo e nos seus próprios objetivos de negócios.
+Assim que a previsão terminar de treinar e esta página estiver populada, você pode começar a usar [filtros]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) em segmentos ou campanhas para começar a usar os resultados do modelo. Se você deseja ajuda para decidir quem direcionar e por quê, esta página pode ajudar com base na precisão histórica do modelo e nos seus próprios objetivos de negócios.
 
 Esses são os componentes que compõem as análises preditivas de eventos:
 
@@ -47,7 +47,7 @@ Na metade direita do painel abaixo do gráfico, mostramos estimativas da precis�
 
 ### Espera-se que tenha performance
 
-É possível usar a precisão estimada para verificar quantos usuários selecionados devem executar o evento.
+É possível usar a precisão estimada para verificar quantos usuários selecionados devem realizar o evento.
 
 A previsão não é perfeitamente precisa, e nenhuma previsão jamais é, o que significa que a Braze não será capaz de identificar todos os futuros usuários para realizar o evento. As pontuações de probabilidade são como um conjunto de previsões informadas e confiáveis. A barra de progresso indica quantos dos "verdadeiros positivos" esperados no público de previsão serão alvejados com o público selecionado. Observe que esperamos que este número de usuários realize o evento mesmo que você não envie uma mensagem para eles.
 

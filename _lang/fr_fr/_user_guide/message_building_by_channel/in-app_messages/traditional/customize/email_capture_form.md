@@ -1,5 +1,5 @@
 ---
-nav_title: Formulaire de capture d’adresses e-mail
+nav_title: "Formulaire de capture d'e-mail"
 article_title: Formulaire de capture d’adresses e-mail
 page_order: 3
 page_type: reference
@@ -28,7 +28,7 @@ Lorsqu’un utilisateur final saisit son adresse e-mail dans ce formulaire, l’
         - `example@gnail.com` (avec une erreur)
     - Pour plus d'informations sur la validation des e-mails dans Braze, reportez-vous aux [directives et notes techniques sur l'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/email_setup/email_validation/).
 
-{% details Plus d'informations sur les utilisateurs identifiés et anonymes %}
+{% details More on identified versus anonymous users %}
 
 En général, le formulaire de capture d’e-mail obéit à une logique simple. Elle définit l’adresse e-mail dans le profil utilisateur dans Braze pour l’utilisateur actuellement actif. Cependant, le comportement diffère selon que l’utilisateur est identifié (connecté, `changeUser` appelé) ou non.
 
@@ -42,7 +42,7 @@ Pour plus d'informations, reportez-vous au [cycle de vie du profil utilisateur](
 
 ## Étape 1 : Créer une campagne de communication in-app
 
-Pour accéder à cette option, vous devez créer une campagne de messagerie in-app. Ensuite, en fonction de votre cas d'utilisation, réglez l'option **Envoyer à sur** **Navigateurs web**, **Applis mobiles** ou **Applis mobiles et Navigateurs web**, puis sélectionnez **Formulaire de capture d'e-mail** comme **Type de message.**
+Pour accéder à cette option, vous devez créer une campagne de messagerie in-app. Ensuite, en fonction de votre cas d'utilisation, réglez l'option **Envoyer à** soit aux **navigateurs web**, soit aux **applications mobiles**, soit **aux deux applications mobiles & navigateurs web**, puis sélectionnez **Formulaire de capture d'e-mail** comme **Type de message.**
 
 {% alert note %}
 **Le ciblage des internautes ?** <br>Pour activer les messages in-app HTML via le SDK Web, vous devez fournir l'option d'initialisation `allowUserSuppliedJavascript` à Braze, par exemple, `braze.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. Pour des raisons de sécurité, les messages in-app HTML peuvent en effet exécuter du JavaScript, d’où le besoin d’un responsable de site pour les activer.
@@ -59,7 +59,7 @@ Ensuite, personnalisez votre formulaire si nécessaire. Vous pouvez personnalise
 - Paires clé-valeur
 - Style pour l’en-tête et le texte du corps, les boutons, la couleur de bordure de bouton, l’arrière-plan et l’incrustation
 
-![Compositeur de formulaire de capture d'e-mail.]({% image_buster /assets/img/email_capture.png %})
+![Composeur pour le formulaire de capture d’e-mail.]({% image_buster /assets/img/email_capture.png %})
 
 Si vous avez besoin d'une personnalisation plus poussée, choisissez le **code personnalisé** pour votre **type de message.** Vous pouvez utiliser ce [modèle modal de capture d'e-mail](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates/5-email-capture-modal) du dépôt GitHub de [modèles Braze](https://github.com/braze-inc/in-app-message-templates/tree/master/braze-templates) comme code de démarrage.
 

@@ -28,7 +28,7 @@ Lorsque vous créez votre audience de prédictions pour affiner le type d'utilis
 
 "Il n'y a pas assez de désabonnés dans le passé pour créer des prédictions fiables".
 
-![Les données de prédictions montrent 31 désabonnés passés (conforme aux exigences) et 0 non désabonné passé (inférieur au minimum). Un message d'envoi de messages indique qu'il n'y a pas assez de désabonnés pour créer la prédiction.]({% image_buster /assets/img/churn/audience_size_error.png %})
+![Les données de prédictions montrent 31 désabonnés passés (conforme aux exigences) et 0 non désabonné passé (inférieur au minimum). Un message d'avertissement indique qu'il n'y a pas assez de désabonnés pour créer la prédiction.]({% image_buster /assets/img/churn/audience_size_error.png %})
 
 Si la définition de votre audience de prédictions est trop stricte, vous risquez de ne pas disposer d'un vivier suffisamment important d'utilisateurs historiques et actifs. Pour y remédier, vous devrez soit modifier le nombre de jours et le type d'attributs utilisés dans cette définition, soit changer les actions qui définissent le désabonnement, soit les deux. 
 

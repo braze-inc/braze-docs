@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## 예측 이벤트 분석 정보
 
-예측이 훈련을 마치고 이 페이지가 채워지면, [필터]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters)를 세그먼트나 캠페인에서 사용하여 모델의 출력을 사용하기 시작할 수 있습니다. 대상을 결정하는 데 도움이 필요하고 그 이유를 알고 싶다면, 이 페이지는 모델의 역사적 정확성과 비즈니스 목표에 따라 도움을 줄 수 있습니다.
+예측이 훈련을 마치고 이 페이지가 채워지면, [필터]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters)를 세그먼트나 캠페인에서 사용하여 모델의 출력을 사용하기 시작할 수 있습니다. 대상을 결정하는 데 도움이 필요하고 그 이유를 알고 싶다면, 이 페이지는 모델의 역사적 정확성과 비즈니스 목표에 따라 도움을 줄 수 있습니다.
 
 이것이 예측 이벤트 분석을 구성하는 구성 요소입니다:
 
@@ -43,7 +43,7 @@ page_order: 1.3
 
 차트 아래 패널의 오른쪽 절반에는 선택한 예측 오디언스의 일부를 타겟팅할 때 예상되는 정확도의 추정치를 두 가지 방법으로 보여줍니다: 선택한 사용자가 이벤트를 수행할 것으로 예상되는 수와 그렇지 않을 것으로 예상되는 수입니다.
 
-![Braze 대시보드에 선택된 오디언스와 예상 정확도가 표시됩니다.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+![선택한 오디언스 및 예상 정확도가 Braze 대시보드에 표시됩니다.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### 예상 성능
 

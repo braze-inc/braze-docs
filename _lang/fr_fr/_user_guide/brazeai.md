@@ -9,14 +9,22 @@ Tool:
   - Dashboard
 
 guide_top_header: "BrazeAI<sup>TM</sup>"
-guide_top_text: "BrazeAI<sup>TM</sup> alimente une collection d'outils accessibles et faciles à utiliser qui favorisent et simplifient la créativité, la personnalisation et l'optimisation de votre stratégie d'engagement. Grâce aux fonctionnalités de BrazeAI<sup>TM</sup>, vous pouvez disposer d'un conseiller de confiance pour guider votre créativité, prendre de meilleures décisions et optimiser l'expérience utilisateur pour vos clients."
+guide_top_text: "BrazeAI<sup>TM</sup> offre une collection d'outils accessibles et faciles à utiliser qui favorisent et simplifient la créativité, la personnalisation et l'optimisation de votre stratégie d'engagement. Grâce aux fonctionnalités de BrazeAI<sup>TM</sup>, vous disposez d'un conseiller de confiance pour guider votre créativité, prendre de meilleures décisions et optimiser l'expérience utilisateur pour vos clients."
 
 guide_featured_title: "Fonctionnalités"
 guide_featured_list:
+- name: BrazeAI Decisioning Studio<sup>TM</sup>
+  link: /docs/user_guide/brazeai/decisioning_studio/
+- name: Agents Braze
+  link: /docs/user_guide/brazeai/agents/
+  image: /assets/img/braze_icons/star-06.svg
+- name: Opérateur BrazeAI
+  link: /docs/operator/
+  image: /assets/img/braze_icons/edit-05.svg
 - name: Intelligence Suite
   link: /docs/user_guide/brazeai/intelligence/
   image: /assets/img/braze_icons/clock.svg
-- name: Prédiction de l’attrition
+- name: Prédiction du taux d’attrition
   link: /docs/user_guide/brazeai/predictive_churn/
   image: /assets/img/braze_icons/stars-01.svg
 - name: Événements prévisionnels
@@ -24,10 +32,13 @@ guide_featured_list:
   image: /assets/img/braze_icons/calendar-check-01.svg
 - name: Recommandations
   link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/user-check-01.svg
-- name: Première introduction
+  image: /assets/img/braze_icons/hearts.svg
+- name: IA générative
   link: /docs/user_guide/brazeai/generative_ai/
   image: /assets/img/braze_icons/lightbulb-02.svg
+- name: Serveur MCP de Braze
+  link: /docs/mcp/
+  image: /assets/img/braze_icons/dataflow-01.svg
 - name: Variante gagnante et variante personnalisée
   link: /docs/user_guide/engagement_tools/testing/multivariant_testing/optimizations/
   image: /assets/img/braze_icons/trophy-01.svg
@@ -37,9 +48,6 @@ guide_featured_list:
 - name: Chemins personnalisés
   link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/personalized_paths/
   image: /assets/img/braze_icons/chevron-up-double.svg
-- name: Recommandations
-  link: /docs/user_guide/brazeai/recommendations/
-  image: /assets/img/braze_icons/hearts.svg
 ---
 
 <br>

@@ -33,14 +33,14 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 
 1. Selecione **Editar** ao lado do nome do modelo.
 
-![O título e a descrição atuais do Canva.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
+![O título e a descrição atuais do canva.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Atualize o nome do Canvas para especificar que o Canvas é para integração de novos usuários.
 3\. Atualize a descrição para especificar que o Canva mapeia uma jornada do usuário que promove a confiança e a fidelidade dos usuários.
 4\. Adicione a tag **Integração** para que possamos filtrá-la na página inicial do Canva.
 
-![O novo nome, a descrição e a tag do Canva.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
+![O novo nome, descrição e tag para o canva.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Etapa 2: Atribua seus eventos de conversão
 

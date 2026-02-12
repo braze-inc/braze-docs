@@ -1,5 +1,5 @@
 ---
-nav_title: メッセージパーソナライゼーション
+nav_title: メッセージのパーソナライズ
 article_title: メッセージパーソナライゼーションパートナー
 page_order: 1
 

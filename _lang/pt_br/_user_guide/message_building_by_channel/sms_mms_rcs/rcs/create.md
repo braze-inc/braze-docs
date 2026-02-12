@@ -1,6 +1,6 @@
 ---
-nav_title: "Criação de uma mensagem RCS"
-article_title: Criação de uma mensagem RCS
+nav_title: Criar uma mensagem RCS
+article_title: Criar um envio de mensagens RCS
 page_order: 2
 alias: /create_rcs_message/
 description: "Este artigo aborda como criar uma mensagem RCS."
@@ -9,7 +9,7 @@ channel:
   - RCS
 ---
 
-# Criação de uma mensagem RCS
+# Criar uma mensagem RCS
 
 > As campanhas de RCS são ótimas para alcançar diretamente e conversar de forma programática com seus clientes. É possível usar o Liquid e outros conteúdos dinâmicos para criar uma experiência pessoal com seus usuários e criar um ambiente que promova e aprimore uma experiência discreta do usuário com sua marca.
 
@@ -17,12 +17,12 @@ channel:
 
 ### Etapa 1: Escolha onde construir sua mensagem
 
-Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
+Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e direcionadas, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
-2. Selecione **SMS/MMS/RCS**ou, para campanhas com direcionamento para vários canais, selecione **Multicanal**.
+2. Selecione **SMS/MMS/RCS** ou, para campanhas com direcionamento para vários canais, selecione **Multicanal**.
 3. Dê à sua campanha um nome claro e significativo.
 4. Adicione [times]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) e [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) conforme necessário.
    * As tags facilitam a localização de suas campanhas e a criação de relatórios a partir delas. Por exemplo, ao usar o [Report Builder]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), você pode filtrar por tags específicas.
@@ -45,9 +45,9 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endalert %}
 
 {% endtab %}
-{% tab Canva %}
+{% tab Canvas %}
 1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
-2. Depois de configurar seu Canvas, adicione uma etapa **SMS/MMS/RCS** Mensagem no construtor do Canva. 
+2. Depois de configurar seu Canva, adicione uma etapa de mensagem **SMS/MMS/RCS** no construtor do Canvas. 
 3. Dê um nome claro e significativo à sua etapa.
 4. Selecione um [grupo de inscrições]({{site.baseurl}}/sms_rcs_subscription_groups/) ativado para RCS. Ao selecionar um grupo de inscrições, o Braze adicionará automaticamente um filtro de segmentação, garantindo que apenas os usuários inscritos recebam a campanha. Somente códigos longos e códigos curtos que pertencem a esse grupo de inscrições serão usados para direcionamento de usuários.
 - **SMS fallback**: A Braze recomenda enfaticamente que todo grupo de inscrições que contenha um remetente RCS também inclua pelo menos um código SMS para fallback. Isso é importante para a entregabilidade, caso as mensagens RCS não sejam entregues. Alguns motivos para isso podem incluir incompatibilidade do dispositivo do usuário e cobertura incompleta da operadora em um determinado país ou região. Ao ativar o fallback de SMS, sua mensagem ainda será entregue ao usuário e você nunca perderá a oportunidade de se conectar com ele.
@@ -67,7 +67,7 @@ Para o tipo de mensagem RCS, escolha entre **Texto** ou **Mídia**.
 ![Opções para selecionar um tipo de mensagem de texto ou de mídia.]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
 
 {% tabs %}
-{% tab Texto %}
+{% tab Text %}
 Como o nome indica, as mensagens de texto RCS se concentram no texto como um meio. Se você digitar até 160 caracteres, a mensagem RCS será cobrada como uma mensagem somente de texto (ou "básica"). Se você exceder 160 caracteres ou usar um elemento rico, a mensagem será cobrada como uma mensagem RCS rica (ou "única") (e o limite de caracteres aumentará para 3072 caracteres). 
 
 #### Recursos
@@ -77,7 +77,7 @@ Como o nome indica, as mensagens de texto RCS se concentram no texto como um mei
     - **As respostas sugeridas** são botões que contêm respostas sugeridas para os usuários clicarem e preencherem previamente em sua entrada de texto, eliminando o atrito de ter que pensar em uma resposta ao fornecer um conjunto restrito de opções para eles. 
     - **Ações sugeridas** são botões que iniciam uma ação no dispositivo do usuário. Normalmente, eles consistem em uma ou duas palavras descritivas e um ícone visual para ajudar o usuário a entender o que o botão faz. Atualmente, o Braze oferece suporte a ações sugeridas OpenURL. Isso funciona de forma semelhante a um URL, em que os usuários que selecionam o botão são redirecionados para uma página da Web ou outro local identificado pelo URL. 
 
-![Um GIF de três ações sugeridas para uma mensagem RCS que promove estilos de moda em alta: "Fairytale royalty" (realeza de contos de fadas), "Edgy academia" (academia ousada) e "Show me your other styles" (mostre-me seus outros estilos).]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![Um GIF de três ações sugeridas para uma mensagem RCS que promove estilos de moda em alta: "Fairytale royalty", "Edgy academia" e "Show me your other styles".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Considerações
 
@@ -87,7 +87,7 @@ Como o nome indica, as mensagens de texto RCS se concentram no texto como um mei
 - Em alguns casos, pode ser mais econômico enviar mensagens de texto mais longas somente por meio de RCS do que por SMS. Isso ocorre porque as mensagens SMS mais longas são divididas em vários segmentos, cada um dos quais é cobrado, enquanto as mensagens RCS são cobradas por mensagem. Entre em contato com seu gerente de conta Braze para obter mais detalhes e orientações.
 {% endtab %}
 
-{% tab Mídia %}
+{% tab Media %}
 As mensagens de mídia RCS permitem o uso de formatos de mídia envolventes que não são possíveis com SMS. Isso inclui arquivos de imagem, vídeo e documentos. Essas opções de mídia existem para ajudá-lo a engajar seu público ainda mais profundamente e ativar casos de uso totalmente novos. No momento, apenas o upload de imagens é suportado pela [Biblioteca de mídia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). 
 
 #### Recursos
@@ -97,7 +97,7 @@ As mensagens de mídia RCS permitem o uso de formatos de mídia envolventes que 
 - Oferece suporte a arquivos de vídeo, incluindo os formatos de arquivo MP4, MPEG e MV4. Os arquivos de vídeo podem ser adicionados por URL diretamente no criador de mensagens. 
 - Oferece suporte a arquivos de documentos no formato PDF. Os arquivos de documentos podem ser adicionados por meio do URL diretamente no criador de mensagens. 
 
-![RCS criador com uma opção para fazer upload de um arquivo de mídia.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
+![Criador do RCS com uma opção para fazer upload de um arquivo de mídia.]({% image_buster /assets/img/rcs/rcs_media_type.png %})
 
 #### Especificações do arquivo
 
@@ -127,7 +127,8 @@ Antes de continuar, leia nossas [diretrizes para limites de mensagens RCS](#step
 
 ### Etapa 4: Pré-visualize e teste sua mensagem
 
-O Braze sempre recomenda que você faça uma prévia e teste sua mensagem antes de enviá-la. Acesse a guia **Test (Teste** ) para enviar um RCS de teste para grupos de teste de conteúdo ou usuários individuais, ou para fazer uma prévia da mensagem como um usuário diretamente no Braze.
+Como a renderização do RCS é controlada pelo sistema operacional do usuário, pelo fabricante do dispositivo, pela operadora e pelo app de mensagens (por exemplo, Google Messages vs. Google Messages), o RCS é controlado pelo sistema operacional do usuário, pelo fabricante do dispositivo, pela operadora e pelo app de mensagens (por exemplo, Google Messages vs. Google Messages). Envio de mensagens da Apple), a aparência das mensagens pode variar. Como resultado, a prévia do RCS mostrada no Braze pode não corresponder exatamente ao que o usuário final recebe. As diferenças podem incluir layout, dimensionamento de mídia, botões, elementos de marca ou recursos compatíveis. O Braze sempre recomenda que você faça uma prévia e teste sua mensagem antes de enviá-la. Use a guia **Test (Teste** ) para enviar um RCS de teste para grupos de teste de conteúdo ou usuários individuais e fazer a prévia da mensagem como um usuário diretamente no Braze. No entanto, a renderização final deve ser sempre validada em dispositivos reais sempre que possível, pois o Braze não pode garantir a paridade perfeita em todas as combinações de sistema operacional, dispositivo e operadora.
+
 
 ### Etapa 5: Crie o restante de sua campanha ou Canva
 
@@ -135,7 +136,7 @@ Em seguida, crie o restante de sua campanha ou Canva. Consulte as seções a seg
 
 #### Etapa 5.1: Escolha a programação ou o disparo da entrega
 
-As mensagens RCS podem ser enviadas com base em um horário programado, em uma ação ou em um disparo da API. Para obter mais informações, consulte [Agendamento de sua campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
+As mensagens RCS podem ser enviadas com base em um horário programado, uma ação ou um disparo da API. Para obter mais informações, consulte [Agendamento de sua campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
 Para entrega baseada em ação, você também pode definir a duração da campanha e o Horário de silêncio.
 
@@ -143,9 +144,11 @@ Especifique seus controles de entrega, como permitir que os usuários se tornem 
 
 #### Etapa 5.2: Escolha os usuários a serem direcionados
 
-Direcione os usuários escolhendo segmentos ou filtros para restringir seu público. Você já deve ter selecionado o grupo de inscrições, que restringe os usuários pelo nível ou categoria de comunicação que desejam ter com você. 
+Direcione os usuários escolhendo segmentos ou filtros para restringir seu público. Você já deve ter selecionado o grupo de inscrições, que restringe os usuários pelo nível ou categoria de comunicação que desejam ter com você.
 
-Em seguida, você selecionará o público maior de seus segmentos e restringirá ainda mais esse segmento com [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) opcionais. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+{% multi_lang_include target_audiences.md %}
+
+Em seguida, você seleciona o público maior de seus segmentos e restringe esse segmento ainda mais com [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) opcionais. Você recebe automaticamente uma prévia de como é essa população aproximada do segmento. Lembre-se de que a associação exata ao segmento de mensagem é sempre calculada antes do envio da mensagem.
 
 {% alert tip %}
 Interessado em usar o redirecionamento de RCS para direcionar os usuários com base em suas interações de SMS e RCS? Consulte [Redirecionamento]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).
@@ -175,9 +178,9 @@ Se planeja usar o Liquid, certifique-se de incluir um valor padrão para a perso
 
 ### Geração de cópia de IA
 
-Precisa de ajuda para criar um texto envolvente? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto, e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
+Precisa de ajuda para criar um texto envolvente? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
-![Criador de mensagens com um ícone para abrir o Assistente de Copywriting de IA.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
+![Criador de mensagens com um ícone para abrir o assistente de Copywriting IA.]({% image_buster /assets/img/rcs/rcs_ai_copywriter.png %}){: style="max-width:70%;"}
 
 ## Perguntas frequentes
 

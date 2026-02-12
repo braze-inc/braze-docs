@@ -1,6 +1,6 @@
 ---
-nav_title: Como criar uma mensagem no app
-article_title: Como criar uma mensagem no app
+nav_title: Crie uma mensagem no app
+article_title: Criar uma mensagem no app
 page_order: 1
 description: "Este artigo de referência aborda como criar uma mensagem no app usando a plataforma Braze por meio de campanhas ou do Canva."
 channel:
@@ -11,16 +11,16 @@ search_rank: 4.8
 toc_headers: h2
 ---
 
-# Criar uma mensagem no app
+# Crie uma mensagem no app
 
 > Você pode criar uma mensagem no app ou no navegador usando a plataforma Braze por meio de campanhas, Canvas ou como uma campanha API. É altamente recomendável planejar suas mensagens e preparar todos os materiais com antecedência usando nosso prático [guia de preparação de mensagens no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Etapa 1: Escolha onde construir sua mensagem {#create-new-campaign-in-app}
 
-Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
+Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e direcionadas, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
 1. Acesse **Envio de mensagens** > **Campanhas** e selecione **Criar campanha**.
 2. Selecione **Mensagem no app**. Observe que as mensagens no app não estão disponíveis em campanhas de vários canais.
@@ -34,7 +34,7 @@ Se todas as mensagens em sua campanha forem semelhantes ou tiverem o mesmo conte
 {% endalert %}
 
 {% endtab %}
-{% tab Canva %}
+{% tab Canvas %}
 
 1. [Crie seu Canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) usando o criador do Canvas.
 2. Depois de configurar seu canvas, adicione uma etapa no construtor do canva. Dê um nome claro e significativo à sua etapa.
@@ -58,9 +58,9 @@ Comece escolhendo quais plataformas devem receber a mensagem. Use essa seleção
 
 | Plataforma                        | Envio de mensagens        |
 |---------------------------------|-------------------------|
-| Apps móveis                     | SDKs para iOS e Android      |
+| Apps móveis                     | iOS & Android SDKs      |
 | Navegadores                    | SDK da Web                 |
-| Apps móveis e navegadores de internet | SDKs para iOS, Android e Web |
+| Ambos os apps móveis & Navegadores da Web | iOS, Android & Web SDKs |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 ## Etapa 3: Especifique seus tipos de mensagens
@@ -70,7 +70,7 @@ Depois de selecionar uma plataforma de envio, navegue pelos tipos de mensagens, 
 Ao decidir qual tipo de mensagem usar, considere o espaço que a mensagem ocupará e o quanto ela pode atrapalhar a experiência do usuário.
 
 - As mensagens **slideup** são as menos intrusivas, aparecendo sutilmente sem bloquear o conteúdo.
-- As mensagens **modais** ficam no meio - proeminentes o suficiente para chamar a atenção sem ocupar totalmente a tela.
+- As mensagens **modais** ficam no meio, com destaque suficiente para chamar a atenção sem ocupar totalmente a tela.
 - As mensagens **em tela cheia** são as que mais chamam a atenção e são melhores para anúncios ou promoções importantes.
 
 Quanto mais complexo for o conteúdo, mais espaço será necessário e maior será a probabilidade de a mensagem interromper o fluxo do usuário.
@@ -205,7 +205,7 @@ Alguns tipos de mensagens não precisam de cabeçalhos e, portanto, não os soli
 
 Precisa de ajuda para criar um texto incrível? Tente usar o [Assistente de Copywriting da IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/copywriting/). Insira o nome ou a descrição de um produto e a IA gerará uma cópia de marketing semelhante à humana para uso em seu envio de mensagens.
 
-![Inicie o botão IA Copywriter, localizado no campo Mensagem do criador de mensagens no app.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
+![Inicie o botão IA Copywriter, localizado no campo Message (Mensagem) do criador de mensagens no app.]({% image_buster /assets/img/ai_copywriter/ai_copywriter_iam.png %}){: style="max-width:60%"}
 
 ##### Criação de mensagens da direita para a esquerda
 
@@ -285,7 +285,7 @@ O conteúdo da guia **Style (Estilo** ) varia de acordo com as opções de mensa
 |Chevron ou outra opção de mensagem de fechamento | Código de cores HEX. | A cor HEX desejada será exibida. Você também poderá escolher a opacidade da cor. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-Sempre [faça uma prévia e teste]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sua mensagem antes de enviá-la.
+Sempre [faça uma prévia e teste]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) sua mensagem antes de enviá-la.
 
 {% alert important %}
 Alguns tipos de mensagens no app não têm a opção de estilização além de fazer upload de HTML personalizado (ou CSS ou JavaScript) e ativos usando um arquivo ZIP. O [Web Modal com CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) permite que você faça upload ou escreva CSS personalizado para criar mensagens bonitas e com estilo personalizado.
@@ -300,7 +300,7 @@ Alguns tipos de mensagens no app não têm a opção de estilização além de f
 ## Etapa 7: Crie o restante de sua campanha ou Canva
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
 Crie o restante de sua campanha; consulte as seções a seguir para obter mais orientações sobre a melhor forma de usar nossas ferramentas para criar mensagens no app.
 
@@ -351,7 +351,7 @@ As opções alta, média e baixa para as prioridades das mensagens disparadas s�
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar [os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+Em seguida, é necessário [direcionar os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você recebe automaticamente um instantâneo de como é a população desse segmento aproximado. Lembre-se de que a associação exata ao segmento de mensagem é sempre calculada antes do envio da mensagem.
 
 {% alert note %}
 Se houver uma postergação na etapa da mensagem no app, a associação ao segmento será avaliada após o atraso. Se o usuário for elegível, a mensagem no app será sincronizada na próxima sessão disponível.
@@ -361,14 +361,14 @@ Se houver uma postergação na etapa da mensagem no app, a associação ao segme
 
 Em alguns cenários, talvez seja necessário reavaliar a elegibilidade de um usuário quando ele dispara uma mensagem no app para ser exibida. Os exemplos incluem campanhas que direcionam um atributo personalizado que muda com frequência ou mensagens que devem refletir qualquer alteração de perfil de última hora.
 
-![Caixa de seleção para "Reavaliar a elegibilidade da campanha antes de exibi-la" selecionada.]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
+![Marque a caixa de seleção "Reavaliar a elegibilidade da campanha antes de exibi-la".]({% image_buster /assets/img_archive/re-evaluate-iam-membership.png %}){:style="max-width:60%"}
 
 Ao selecionar **Reavaliar a elegibilidade da campanha antes de** exibi-la, será feita uma solicitação adicional ao Braze para confirmar que o usuário ainda é elegível para essa mensagem antes do envio. Além disso, todas as variáveis [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) ou [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) serão modeladas nesse momento, antes que a mensagem seja exibida.
 
 Isso evita que mensagens no app sejam enviadas a usuários em campanhas expiradas ou arquivadas. Se você não reavaliar a elegibilidade de um usuário, ele receberá a mensagem no app mesmo depois que a campanha expirar ou for arquivada, porque a mensagem está no seu SDK e aguardando que os usuários a disparem.
 
 {% alert note %}
-A capacitação dessa opção resultará em uma pequena postergação (< 100 ms) entre o momento em que um usuário dispara uma mensagem no app e o momento em que a mensagem é exibida, devido à elegibilidade adicionada e à solicitação de modelo.
+Ativar essa opção resultará em uma pequena postergação (< 100ms) entre o momento em que o usuário dispara uma mensagem no app e o momento em que a mensagem é exibida, devido à solicitação adicional de elegibilidade e modelo.
 <br><br>
 Não use essa opção para mensagens que possam ser disparadas enquanto o usuário estiver off-line ou quando a elegibilidade e a reavaliação do Liquid não forem necessárias.
 {% endalert %}
@@ -389,7 +389,7 @@ Para obter informações sobre as opções de envio de mensagens no aplicativo e
 
 ## Etapa 8: Revisão e implementação
 
-Depois de terminar de criar a última parte de sua campanha ou Canva, revise seus detalhes, [teste-a]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) e envie-a!
+Depois de terminar de criar a última parte de sua campanha ou Canva, revise seus detalhes, [teste-a]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) e envie-a!
 
 Em seguida, confira [Relatórios de mensagens no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/) para saber como acessar os resultados de suas campanhas de mensagens.
 
@@ -397,7 +397,7 @@ Em seguida, confira [Relatórios de mensagens no app]({{site.baseurl}}/user_guid
 
 ### Limites ativos da campanha de mensagens no app
 
-A Braze valoriza a confiabilidade e a velocidade. Assim como sugerimos que você envie ao Braze apenas os dados necessários, também recomendamos desativar as campanhas que não estejam mais agregando valor à sua marca.
+A Braze valoriza a confiabilidade e a velocidade. Sugerimos que você envie apenas os dados necessários para o Braze e desative todas as campanhas que não agregam mais valor à sua marca.
 
 O processamento de campanhas de mensagens no app baseadas em ações que ainda estão em um estado ativo, mas que não estão mais enviando mensagens ou que não são mais necessárias, diminui a performance geral dos serviços Braze para você e para outros clientes. Esse tempo extra necessário para processar esse grande número de campanhas sem atividades significa que qualquer mensagem no app levará mais tempo para aparecer nos dispositivos do usuário final, o que afeta a experiência do usuário final.
 
@@ -407,4 +407,17 @@ Você pode ter até 200 campanhas de mensagens no app ativas e baseadas em açã
 
 A contagem de 200 inclui campanhas ativas de mensagens no app que ainda não atingiram o horário de término e aquelas que não têm horário de término. Campanhas ativas de mensagens no app que tenham ultrapassado o horário de término não serão contadas. O cliente Braze médio tem um total de 26 campanhas ativas ao mesmo tempo, portanto, é improvável que essa limitação afete você.
 
+### Avaliação da entrega no horário local
 
+Quando uma campanha de mensagens no app é programada usando o fuso local do usuário, a avaliação da hora de início e de ponta da campanha é enviada de mensagens para o próprio dispositivo.
+
+As campanhas de mensagens no app normalmente são pushadas para o dispositivo do usuário quando a sessão do app é iniciada ou atualizada. Naquele momento:
+
+1. O SDK avalia se o usuário se qualifica para qualquer mensagem no app baseada em disparos.
+2. O dispositivo verifica se o evento de gatilho do usuário ocorreu dentro do horário de início e término da campanha (conforme definido pelo fuso local do usuário).
+3. Se ambas as condições forem atendidas, a mensagem no app será elegível para exibição.
+
+#### Considerações
+
+- Se um usuário disparar um evento (como um toque em um botão) logo após a entrega da mensagem no app, a mensagem poderá não aparecer até a próxima atualização da sessão - supondo que todos os critérios de elegibilidade ainda sejam atendidos.
+- Semelhante a outros tipos de canais, o ideal é que as campanhas de envio de mensagens no app sejam lançadas com 24 a 48 horas de antecedência. Esse buffer dá aos usuários tempo suficiente para atender à elegibilidade e iniciar uma sessão para que a mensagem seja avaliada e exibida.

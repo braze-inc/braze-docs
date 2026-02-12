@@ -15,7 +15,7 @@ channel:
 
 | Ejemplo de Android (ampliado) | Ejemplo de IOS (ampliado) |
 | :-----: | :----------: |
-| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![![ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -61,7 +61,7 @@ Si utiliza imágenes con [Connected Content]({{site.baseurl}}/user_guide/persona
 Las siguientes especificaciones de imagen y texto se aplican a la parte del carrusel de fotos de Push Stories. Para obtener información sobre el push básico con el que interactúan los usuarios para activar la historia push, consulte las [directrices de texto para push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications).
 
 {% tabs %}
-{% tab Imágenes %}
+{% tab Images %}
 
 - **Relación de imagen:** 2:1 (obligatorio)
 - **Tamaño de imagen recomendado:** 500 KB
@@ -69,7 +69,7 @@ Las siguientes especificaciones de imagen y texto se aplican a la parte del carr
 - **Tipos de archivos:** PNG, JPEG
 
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 
 - **Título,** 30 caracteres (recomendado)
 - **Descripción:** 30 caracteres (recomendado)
@@ -89,7 +89,7 @@ Cuando creas una campaña o Canvas, puedes filtrar a qué usuarios quieres dirig
 
 La analítica será muy similar a la actual sección de analítica de las notificaciones push. Para los análisis de Push Stories, puede abrir la métrica **Direct Opens** para ver los clics por página.
 
-![Tabla de rendimiento de iOS Push con ejemplos de análisis y detalles ampliados de la métrica Direct Opens.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![Tabla de rendimiento de Push de iOS con ejemplos de análisis y detalles ampliados de la métrica de aperturas directas.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## Solución de problemas
 

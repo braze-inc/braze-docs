@@ -40,7 +40,7 @@ Before you can use this feature, you'll need to complete the following:
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze access | To access this feature in Braze, you'll need to reach out to your Braze account or customer success manager. |
+| Braze access | To access this feature in Braze, you'll need to contact your Braze account or customer success manager. |
 | Snowflake account | A Snowflake account with `admin` permissions. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -131,7 +131,7 @@ The archive of historical event data in Snowflake goes back to April 2019. In th
 
 ### General Data Protection Regulation (GDPR) compliance
 
-Nearly every event record Braze stores includes a few fields representing users' personally identifiable information (PII). Some events may include email address, phone number, device ID, language, gender, and location information. If a user's request to be forgotten is submitted to Braze, we will null out those PII fields for any event belonging to those users. This way, we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
+{% include partners/snowflake_pii_gdpr.md %}
 
 ### Speed, performance, cost of queries
 

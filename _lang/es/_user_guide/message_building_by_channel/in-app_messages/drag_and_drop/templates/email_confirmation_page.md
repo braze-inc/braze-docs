@@ -10,7 +10,7 @@ description: "Esta página explica cómo utilizar el editor de arrastrar y solta
 
 > Utiliza el editor de arrastrar y soltar mensajes dentro de la aplicación para crear un formulario de registro por correo electrónico con una página de confirmación.
 
-{% multi_lang_include drag_and_drop/templates.md section='Requisitos SDK' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Crear un formulario de registro por correo electrónico con una página de confirmación
 
@@ -22,7 +22,7 @@ Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecci
 
 ### Paso 2: Configura tus estilos de mensaje
 
-{% multi_lang_include drag_and_drop/templates.md section='estilo del mensaje' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Paso 3: Personalice su componente de inscripción por correo electrónico
 
@@ -34,11 +34,11 @@ Puede personalizar el texto del marcador de posición y el texto de la etiqueta 
 
 #### Validación del correo electrónico
 
-{% multi_lang_include drag_and_drop/templates.md section='validación de correo electrónico' %}
+{% multi_lang_include drag_and_drop/templates.md section='email validation' %}
 
 ### Paso 4: Añadir cláusula de exención de responsabilidad (opcional)
 
-{% multi_lang_include drag_and_drop/templates.md section='descargo de responsabilidad por correo electrónico' %}
+{% multi_lang_include drag_and_drop/templates.md section='email disclaimer' %}
 
 ### Paso 5: Estiliza tu mensaje
 
@@ -46,10 +46,10 @@ Personaliza el aspecto de tu formulario de registro por correo electrónico y de
 
 ## Analizar los resultados
 
-{% multi_lang_include drag_and_drop/templates.md section='informes' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 ## Buenas prácticas
 
-{% multi_lang_include drag_and_drop/templates.md section='correo electrónico doble adhesión voluntaria' %}
+{% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 
 

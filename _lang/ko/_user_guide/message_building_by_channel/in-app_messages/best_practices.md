@@ -1,6 +1,6 @@
 ---
 page_order: 11
-nav_title: 모범 사례
+nav_title: Best practices
 article_title: 인앱 메시지 모범 사례
 layout: dev_guide
 guide_top_header: "인앱 메시지 모범 사례"

@@ -1,5 +1,5 @@
 ---
-nav_title: 모범 사례
+nav_title: Best practices
 article_title: 캔버스 모범 사례
 page_order: 1
 description: "이 문서는 캔버스 및 캔버스 플로우를 사용하여 사용자 여정을 생성하고 커스텀하는 모범 사례를 제공합니다."

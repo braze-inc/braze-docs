@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "La messagerie WhatsApp est une plateforme de messagerie pair-à-pair populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises. Le canal de communication WhatsApp propose un moyen direct d’atteindre vos utilisateurs et vos clients sur la plateforme WhatsApp. <br><br>**L'accès à WhatsApp n'est disponible que dans certaines formules de Braze. Pour démarrer, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients.**"
+guide_top_text: "La messagerie WhatsApp est une plateforme de messagerie pair-à-pair populaire utilisée dans le monde entier et qui propose une messagerie basée sur les conversations pour les entreprises. Le canal de communication WhatsApp propose un moyen direct d’atteindre vos utilisateurs et vos clients sur la plateforme WhatsApp. <br><br>**La disponibilité de l'application dépend de votre forfait Braze. Contactez votre gestionnaire de compte ou votre responsable satisfaction client pour commencer.**."
 description: "Cette page de destination contient tout ce qui concerne WhatsApp, y compris comment créer une campagne WhatsApp, les inscriptions et les désinscriptions, les réponses rapides, la création de rapports, etc."
 search_rank: 3
 alias: /whatsapp/
@@ -15,6 +15,9 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "Configuration de WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "Apportez votre propre connecteur WhatsApp"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
   image: /assets/img/braze_icons/whatsapp.svg
 - name: "Groupe d’abonnement WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
@@ -51,6 +54,9 @@ guide_featured_list:
 - name: "Domaines personnalisés"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
   image: /assets/img/braze_icons/link-03.svg
+- name: "Cas d'utilisation de WhatsApp"
+  link: /docs/whatsapp_use_cases/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "FAQ WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

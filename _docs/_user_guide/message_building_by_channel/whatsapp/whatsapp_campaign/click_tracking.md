@@ -19,6 +19,10 @@ Click tracking lets you measure when someone taps a link in your WhatsApp messag
 
 You can turn on click tracking in both response and template messages. It works with links in buttons and body text, and supports personalized URLs and custom domains. After it's turned on, you'll see click data in your WhatsApp performance reports and be able to segment users based on who clicked what.
 
+{% alert note %}
+Click tracking doesn’t work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
+{% endalert %}
+
 ## How it works
 
 ### Response messages 
@@ -58,6 +62,12 @@ When composing, Braze will automatically detect which templates have supportable
 The destination URL will need to be provided for any link with a base URL that matches either `brz.ai` or your custom domain. 
 
 !["Buttons" section with fields for a button name, website URL, and click tracking URL.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
+
+{% alert important %}
+**Sending template messages via the API**: WhatsApp click tracking (using `brz.ai` or a custom tracking domain and the **Click tracking URL** field in the message composer) isn't supported when sending WhatsApp template messages through the [`/messages/send` endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/).
+
+If you send a template message through the API, you can populate CTA URL variables (using `button_variables`), but Braze doesn't generate a click-tracking URL or redirect link in the API request flow. To use click tracking, send the template from the Braze dashboard or via a Braze campaign trigger.
+{% endalert %}
 
 {% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
@@ -116,10 +126,6 @@ You can use the `Clicked/Opened Step` filter and `clicked tracked WhatsApp link`
 ### Do I know which individual users are clicking on a URL?
 
 Yes. When click tracking is turned on (or enabled based on template configuration), you can retarget users who have clicked URLs by leveraging the WhatsApp retargeting filters or the WhatsApp click events (`users.messages.whatsapp.Click`) sent by Currents.
-
-### Does click tracking work with deep links or universal links?
-
-Click tracking doesn’t work with deep links. You can shorten universal links from providers such as Branch or Appsflyer, but Braze is unable to troubleshoot issues that may arise in doing so (such as breaking the attribution or causing a redirect).
 
 ### Do previews on the WhatsApp device count as clicks? 
 

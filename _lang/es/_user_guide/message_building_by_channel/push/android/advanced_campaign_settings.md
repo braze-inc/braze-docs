@@ -1,5 +1,5 @@
 ---
-nav_title: "Configuración avanzada de campañas push"
+nav_title: "Configuración avanzada de la campaña push"
 article_title: Configuración avanzada de campañas push
 page_order: 5
 page_layout: reference
@@ -34,7 +34,7 @@ Los valores predeterminados para el tiempo de vida los define tu administrador e
 
 Por ejemplo, supongamos que tu aplicación organiza un concurso semanal de preguntas y respuestas. Envía una notificación push una hora antes de que empiece. Al establecer el TTL en 1 hora, te aseguras de que los usuarios que abran la aplicación después de que comience el concurso no reciban una notificación sobre un evento que ya ha comenzado.
 
-{% details Buenas prácticas %}
+{% details Best practices %}
 
 #### Cuándo utilizar TTL más corto
 
@@ -74,13 +74,13 @@ Para obtener información más detallada sobre la [gestión](https://firebase.go
 
 El texto de resumen te permite establecer texto adicional en la vista ampliada de notificaciones. También sirve como pie de foto para las notificaciones con imágenes.
 
-![Un mensaje Android con el título "Este es el título de la notificación" y el texto resumen "Este es el texto resumen de la notificación"]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![Un mensaje Android con el título "Este es el título de la notificación" y el texto de resumen "Este es el texto de resumen de la notificación".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-El texto del resumen aparecerá debajo del cuerpo del mensaje en la vista ampliada. 
+El texto resumido se mostrará bajo el cuerpo del mensaje en la vista ampliada. 
 
-![Un mensaje Android con el título "Este es el título de la notificación" y el texto resumen "Este es el texto resumen de la notificación"]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![Un mensaje Android con el título "Este es el título de la notificación" y el texto de resumen "Este es el texto de resumen de la notificación".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
-En las notificaciones push que incluyen imágenes, el texto del mensaje se mostrará en la vista contraída, mientras que el texto resumido se mostrará como pie de imagen cuando se amplíe la notificación. 
+Para las notificaciones push que incluyan imágenes, el texto del mensaje se mostrará en la vista contraída, mientras que el texto del resumen se mostrará como pie de imagen cuando se expanda la notificación. 
 
 ## URI personalizados
 
@@ -100,7 +100,7 @@ Esta función es útil para diferenciar los mensajes en función de su importanc
 
 En Android O, la prioridad de las notificaciones pasó a ser una propiedad de los canales de notificación. Tendrás que trabajar con tu desarrollador para definir la prioridad de un canal durante su configuración y luego utilizar el panel de control para seleccionar el canal adecuado al enviar tus sonidos de notificación. En el caso de los dispositivos con versiones de Android anteriores a O, es posible especificar un nivel de prioridad para las notificaciones de Android y Fire OS a través del panel de control y la API de mensajería de Braze.
 
-Para enviar mensajes a toda tu base de usuarios con una prioridad específica, te recomendamos que especifiques indirectamente la prioridad mediante la [configuración del canal de notificación](https://developer.android.com/training/notify-user/channels#importance) (para dirigirte a dispositivos O+) y envíes la prioridad individual desde el panel (para dirigirte a dispositivos <O).
+Para enviar mensajes a toda tu base de usuarios con una prioridad específica, te recomendamos que especifiques indirectamente la prioridad a través de [la configuración del canal de notificación](https://developer.android.com/training/notify-user/channels#importance) (para dirigirte a dispositivos O+) y envíes la prioridad individual desde el panel (para dirigirte a dispositivos <O).
 
 Consulte en la siguiente tabla los niveles de prioridad que puede establecer en las notificaciones push de Android o Fire OS:
 
@@ -119,7 +119,7 @@ Para más información, consulte la documentación de Google sobre [notificacion
 
 Las notificaciones push de Android ofrecen la opción de especificar si la notificación pertenece a una categoría predefinida. La interfaz de usuario del sistema Android puede utilizar esta categoría para tomar decisiones de clasificación o filtrado sobre dónde colocar la notificación en la bandeja de notificaciones del usuario.
 
-![Pestaña de configuración con la Categoría establecida en Ninguna, que es la configuración predeterminada.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
+![Pestaña Configuración con la Categoría establecida en Ninguna, que es la configuración predeterminada.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | Categoría | Descripción |
 |---|-------|
@@ -154,7 +154,7 @@ Las notificaciones push de Android proporcionan un campo opcional para determina
 
 Además, los usuarios de Android pueden anular el modo en que las notificaciones push aparecen en su pantalla de bloqueo cambiando la configuración de privacidad de las notificaciones en su dispositivo. Esta configuración anulará la visibilidad de la notificación push.
 
-![Ubicación de la prioridad push del panel de control con la configuración de visibilidad habilitada y establecida en Privado.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Ubicación de la prioridad push del tablero de mandos con la opción Establecer visibilidad activada y configurada como Privada.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Independientemente de la visibilidad, todas las notificaciones se mostrarán en la pantalla de bloqueo del usuario si la configuración de privacidad de notificaciones de su dispositivo es **Mostrar todo el contenido** (configuración predeterminada). Del mismo modo, las notificaciones no se mostrarán en la pantalla de bloqueo si la privacidad de las notificaciones está configurada como **No mostrar notificaciones**. La visibilidad sólo tiene efecto si su privacidad de notificación está configurada en **Ocultar contenido sensible**.
 

@@ -1,12 +1,12 @@
 ---
-nav_title: Criação de uma previsão de evento
-article_title: Criação de uma previsão de evento
+nav_title: Criar uma previsão de evento
+article_title: Criar uma previsão de evento
 page_order: 1.1
 description: "Este artigo aborda como criar uma previsão de evento no dashboard do Braze."
 
 ---
 
-# Criação de uma previsão de evento
+# Criar uma previsão de evento
 
 > Uma previsão é uma instância de um modelo de machine learning treinado e todos os parâmetros e dados que ele usa. Para saber mais sobre eventos de previsão, consulte a [visão geral dos eventos de previsão]({{site.baseurl}}/user_guide/brazeai//predictive_events/).
 
@@ -44,9 +44,13 @@ A janela do evento é o período de tempo em que se deseja prever se um usuário
 
 Seu público de previsão é o grupo de usuários cuja pontuação de probabilidade você gostaria de prever. Se desejar, é possível executar uma previsão em toda a sua população de usuários. Para fazer isso, deixe a opção padrão **All Users (Todos os usuários** ) selecionada.
 
-Normalmente, o modelo tem melhor desempenho se você filtrar os usuários que deseja avaliar com alguns critérios. Para fazer isso, selecione **Definir meu próprio público de previsão** e escolha seus filtros de público. Por exemplo, talvez você queira se concentrar nos usuários que usam o seu app há pelo menos 30 dias, selecionando o filtro "Usou o app pela primeira vez" definido como 30 dias.
+Dependendo do seu caso de uso, talvez você queira usar filtros para especificar os usuários que deseja avaliar para o modelo. Para fazer isso, selecione **Definir meu próprio público de previsão** e escolha seus filtros de público. Por exemplo, talvez você queira se concentrar nos usuários que usam o seu app há pelo menos 30 dias, selecionando o filtro "Usou o app pela primeira vez" definido como 30 dias. A configuração desse público informa ao Braze que você deseja que seu modelo aprenda especificamente com os usuários que (no momento em que o modelo for executado) tenham usado o app por pelo menos 30 dias.
 
-A definição do público de previsão também é usada para consultar dados históricos para permitir que o modelo de machine learning aprenda com o passado. Da mesma forma que na página anterior, a quantidade de dados fornecidos por esses filtros é exibida junto com o requisito. Se você especificar o público desejado e não atingir o mínimo, tente especificar um filtro mais amplo ou use a opção **Todos os usuários**.
+{% alert important %}
+Concentre seus filtros em características de usuário relevantes para o seu caso de uso, como usuários ativos, novos usuários, usuários de alto valor ou usuários em um país específico. Evite filtrar o público da previsão pelo fato de os usuários já terem realizado o evento que você está prevendo. O público da previsão define com quem você deseja que o modelo aprenda, não o resultado do evento em si. O modelo precisa observar tanto os usuários que concluíram o evento quanto os que não o concluíram para aprender e prever com precisão a probabilidade de conclusão de eventos futuros.
+{% endalert %}
+
+O público da previsão define o grupo de usuários que o modelo de machine learning analisa para aprender com o passado. O Braze lhe mostrará o tamanho estimado de seu público de previsão. Se especificar o público desejado e não atingir o mínimo necessário para executar o modelo, tente especificar um filtro mais amplo ou use a opção **Todos os usuários**. Lembre-se de que muitos casos de uso não exigem que você selecione um público-alvo de previsão específico. Por exemplo, se o seu caso de uso for direcionar os usuários da região da UE com maior probabilidade de churn, é possível executar o modelo em todos os usuários e incluir um filtro para a região da UE no segmento da campanha.
 
 {% alert note %}
 O público da previsão não pode exceder 100 milhões de usuários.
@@ -62,7 +66,9 @@ Por exemplo, se a janela de eventos for definida como 14 dias, serão necessári
 
 ### Etapa 4: Escolha o cronograma de atualização
 
-O modelo de machine learning criado ao preencher esta página será usado em uma programação selecionada aqui para gerar novas pontuações da probabilidade de os usuários realizarem o evento (pontuação de probabilidade). Selecione a **frequência máxima de atualizações** que você considera útil. Por exemplo, se estiver prevendo compras e planejando enviar uma promoção semanal, defina a frequência de atualização como **Weekly (Semanal** ) no dia e hora de sua escolha.
+A máquina de machine learning gerará pontuações de probabilidade de eventos para os usuários, e essas pontuações serão atualizadas com base na programação selecionada aqui. Você poderá direcionar os usuários com base na pontuação de probabilidade de eventos. 
+
+Selecione a **frequência máxima de atualizações** que você considera útil. Por exemplo, se estiver prevendo compras e planejando enviar uma promoção semanal, defina a frequência de atualização como **Weekly (Semanal** ) no dia e hora de sua escolha.
 
 {% alert note %}
 A previsão prévia e de demonstração nunca atualizará as pontuações de probabilidade dos usuários.
@@ -72,7 +78,7 @@ A previsão prévia e de demonstração nunca atualizará as pontuações de pro
 
 Verifique se os detalhes que você forneceu estão corretos e selecione **Criar previsão**. Você também pode salvar suas alterações no formato de rascunho selecionando **Save As Draft** para retornar a essa página e criar o modelo posteriormente. 
 
-Depois de clicar em **Criar previsão**, o processo que gera o modelo será iniciado. Isso pode levar de 30 minutos a algumas horas, dependendo do volume de dados. Para essa previsão, você verá uma página explicando que o treinamento está em andamento durante o processo de construção do modelo.
+Depois de clicar em **Criar previsão**, o processo que gera o modelo será iniciado. Isso pode levar de 30 minutos a algumas horas, dependendo do volume de dados. Para essa previsão, você verá uma página explicando que o treinamento está em andamento durante o processo de construção do modelo. O modelo Braze leva em conta eventos personalizados, eventos de compra, eventos de interação de campanha e dados de sessão.
 
 Quando concluída, a página mudará automaticamente para a visualização de análises preditivas, e você receberá um envio de e-mail informando que a previsão e os resultados estão prontos. No caso de um erro, a página retornará ao modo de edição com uma explicação do que deu errado.
 

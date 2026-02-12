@@ -1,5 +1,5 @@
 ---
-nav_title: ブラウザーエクステンション
+nav_title: ブラウザの拡張機能
 article_title: Web のブラウザーエクステンション統合
 platform: Web
 page_order: 20
@@ -42,7 +42,7 @@ Braze は、エクステンションの以下の領域に含めることがで�
 
 Braze SDK (`braze.min.js`) をエクステンションとバンドルされたローカルファイルとして統合する場合、`manifest.json` で追加の権限は必要ありません。 
 
-ただし、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/), を使用するか、外部 URL から Braze SDK を参照するか、拡張子に厳密なコンテンツセキュリティポリシーを設定した場合は、`manifest.json` の [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) 設定を調整して、リモートスクリプトソースを許可する必要があります。
+ただし、[Googleタグマネージャ]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/)を使用するか、外部URLからBraze SDKを参照するか、拡張子に厳密なコンテンツセキュリティポリシーを設定した場合は、`manifest.json`の[`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy)設定を調整して、リモートスクリプトソースを許可する必要があります。
 
 ## はじめに
 
@@ -50,7 +50,7 @@ Braze SDK (`braze.min.js`) をエクステンションとバンドルされた�
 作業を始める前に、Web SDKの[初期SDK設定ガイド]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web)を読んで、JavaScriptの統合全般について理解してください。 <br><br>また、[JavaScript SDK リファレンス](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html) をブックマークして、さまざまなSDK方法と設定オプションの詳細を確認することもできます。
 {% endalert %}
 
-Braze Web SDKを統合するには、まず最新のJavaScriptライブラリーをダウンロードする必要がある。これはNPMを使うか、[Braze CDNから](https://js.appboycdn.com/web-sdk/latest/braze.min.js)直接ダウンロードする。
+Braze Web SDKを統合するには、まず最新のJavaScriptライブラリーをダウンロードする必要がある。これは、NPM を使用するか、[Braze の CDN](https://js.appboycdn.com/web-sdk/latest/braze.min.js) から直接的に読み込むことで実行できます。
 
 または、[Google Tag Manager]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/) を使用するか、Braze SDK の外部でホストされたコピーを使用する場合は、外部リソースを読み込むには [`content_security_policy`](https://developer.chrome.com/extensions/contentSecurityPolicy) 設定を `manifest.json` で調整する必要があることに注意してください。
 
@@ -58,7 +58,7 @@ Braze Web SDKを統合するには、まず最新のJavaScriptライブラリー
 
 ### 拡張機能ポップアップ {#popup}
 
-拡張ポップアップにBrazeを追加するには、通常のWeb サイトと同様に、`popup.html` でローカルJavaScript ファイルを参照します。Google Tag Manager を使用している場合は、代わりに[Google Tag Manager テンプレート]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/)) を使用してBraze を追加できます。
+拡張ポップアップにBrazeを追加するには、通常のWeb サイトと同様に、`popup.html` でローカルJavaScript ファイルを参照します。Google Tag Manager を使用している場合は、代わりに、[Google Tag Manager テンプレート]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/google_tag_manager/)を使用して Braze を追加できます。
 
 ```html
 <html>
@@ -110,5 +110,5 @@ braze.initialize("YOUR-API-KEY-HERE", {
 
 ## プッシュ
 
-拡張ポップアップダイアログでは、プッシュプロンプトは使用できません(ナビゲーションにURL バーはありません)。このため、エクステンションのポップアップダイアログ内でプッシュ通知の権限を登録して要求するには、[代替プッシュドメイン]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain). で説明されているように、代替ドメインの回避策を使用する必要があります。
+拡張ポップアップダイアログでは、プッシュプロンプトは使用できません(ナビゲーションにURL バーはありません)。このため、エクステンションのポップアップダイアログ内でプッシュ通知の権限を登録して要求するには、[代替プッシュドメイン]({{ site.baseurl }}/developer_guide/platform_integration_guides/web/push_notifications/alternate_push_domain)で説明されているように、代替ドメインの回避策を使用する必要があります。
 

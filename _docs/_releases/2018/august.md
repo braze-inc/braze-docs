@@ -17,7 +17,7 @@ You can now retarget users based on specific page clicks on Push Story slides. U
 
 ## S3 and Azure data events from anonymous users
 
-Customers exporting data to Amazon S3 and Microsoft Azure can now include events from anonymous users. This functionality will default to on for all newly created integrations, but will remain off for for all existing integrations. If you have any questions, reach out to your account manager or open a [support ticket]({{site.baseurl}}/braze_support/).
+ Customers exporting data to Amazon S3 and Microsoft Azure can now include events from anonymous users. This functionality will default to on for all newly created integrations, but will remain off for for all existing integrations. If you have any questions, contact your account manager or open a [support ticket]({{site.baseurl}}/braze_support/).
 
 ## Mixpanel Cohorts integration
 

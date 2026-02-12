@@ -36,7 +36,7 @@ As notificações por push enviadas usando o Push Max só serão entregues a dis
 ## Usando o Push Max
 
 {% tabs %}
-{% tab Campanhas %}
+{% tab Campaigns %}
 
 Para usar o Push Max em sua campanha:
 
@@ -45,7 +45,7 @@ Para usar o Push Max em sua campanha:
 3. Acesse a etapa **Schedule Delivery**.
 4. Selecione **Enviar usando Push Max**.
 
-![Seção de entregabilidade de Android Push da etapa Agendar entrega com a opção "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
+![Seção Android Push Deliverability da etapa Schedule Delivery com a opção "Send using Push Max".]({% image_buster /assets/img_archive/push_max_campaigns.png %})
 
 {% endtab %}
 {% tab Canvas %}
@@ -57,7 +57,7 @@ Para usar o Push Max em seu Canva:
 3. Acesse a guia **Configurações de entrega**.
 4. Selecione **Enviar usando Push Max**.
 
-![Guia Configurações de entrega de uma etapa de Mensagem push do Android com a opção "Enviar usando Push Max".]({% image_buster /assets/img_archive/push_max_canvas.png %})
+![Guia Delivery Settings (Configurações de entrega) de uma etapa do Android Push Message com a opção "Send using Push Max" (Enviar usando Push Max).]({% image_buster /assets/img_archive/push_max_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -72,7 +72,7 @@ O Push Max funciona melhor quando [o Intelligent Timing]({{site.baseurl}}/user_g
 
 O TTL (Time to Live) pode rastrear notificações por push com falha para o Firebase Cloud Messaging (FCM) e tentar novamente a notificação quando for provável que o usuário a receba.
 
-Por padrão, o TTL é definido como 28 dias, que é o máximo. Você pode diminuir o TTL padrão para todas as novas mensagens push do Android em **Configurações** > **Configurações do espaço de trabalho** > **Push Time to Live (TTL)** ou pode configurar o número de dias por mensagem na guia **Configurações** ao criar uma notificação por push do Android.
+Por padrão, o TTL é definido como 28 dias, que é o máximo. Você pode diminuir o TTL padrão para todas as novas mensagens push do Android em **Configurações** > **Configurações do espaço de trabalho** > Configurações **por push** ou pode configurar o número de dias por mensagem na guia **Configurações** ao criar uma notificação por push do Android.
 
 ![Campo TTL definido como 28 dias.]({% image_buster /assets/img_archive/time_to_live.png %}){: style="max-width:60%"}
 

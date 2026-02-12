@@ -14,31 +14,31 @@ description: "Este artigo de referência aborda as tags no dashboard do Braze, q
 
 Você pode adicionar tags ao criar ou editar uma campanha, uma tela ou um segmento. Clique em <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** sob o nome do engajamento e selecione uma tag existente ou comece a digitar para adicionar uma nova tag.
 
-![Adicionando tags durante a criação da campanha.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
+![Adição de tags durante a criação da campanha.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 Você pode adicionar até 175 tags a uma campanha, Canva ou segmento.
 {% endalert %}
 
-### Tagging em massa
+### Tag em massa
 
-Você também pode adicionar tags a várias campanhas, Canvases ou segmentos selecionando múltiplos engajamentos e selecionando <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As**.
+Você também pode adicionar tags a várias campanhas, Canvas ou segmentos selecionando vários engajamentos e selecionando <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As**.
 
-![Adicionando tags a várias campanhas ao mesmo tempo.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+![Adição de tags a várias campanhas ao mesmo tempo.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
 
 {% alert important %}
-Quando você usa tagging em massa para aplicar uma nova tag a várias campanhas que já têm tags diferentes, cada campanha selecionada receberá a nova tag, e quaisquer tags presentes em uma campanha serão aplicadas a todas as outras campanhas selecionadas, mesmo que essas tags não estivessem originalmente associadas a elas.
+Quando você usa a marcação em massa para aplicar uma nova tag a várias campanhas que já têm tags diferentes, cada campanha selecionada receberá a nova tag, e todas as tags presentes em uma campanha serão aplicadas a todas as outras campanhas selecionadas, mesmo que essas tags não tenham sido originalmente associadas a elas.
 {% endalert %}
 
-### Visualizando tags
+### Visualização de tags
 
-As tags definidas em uma campanha, Canvas ou segmento são visíveis na página de detalhes perto do nome do engajamento. Elas também aparecem na análise de campanhas.
+As tags definidas em uma campanha, Canva ou segmento são visíveis na página de detalhes, perto do nome do engajamento. Eles também aparecem na análise de dados da campanha.
 
-![Tags mostradas na página de Análise de Campanha.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
+![Tags mostradas na página de análise de dados da campanha.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
 
-### Filtrando por tag
+### Filtragem por tag
 
-As tags são visíveis na lista de campanhas, Canvases ou segmentos, junto com tags adicionais para rótulos de status, como **Arquivada** e **Rascunho**. Para filtrar por uma tag, selecione o nome da tag na lista de tags.
+As tags são visíveis na lista de campanhas, telas ou segmentos, juntamente com tags adicionais para rótulos de status, como **Arquivado** e **Rascunho**. Para filtrar por uma tag, selecione o nome da tag na lista de tags.
 
 ![Tags na lista de campanhas.]({% image_buster /assets/img_archive/tags_grid.png %})
 
@@ -50,17 +50,17 @@ As tags também podem ser adicionadas aos dados personalizados durante o gerenci
 Esse recurso está atualmente em acesso antecipado. Entre em contato com seu gerente de sucesso do cliente se tiver interesse em participar desse acesso antecipado.
 {% endalert %}
 
-## Gerenciando tags
+## Gerenciamento de tags
 
 Você pode usar as mesmas tags em campanhas, Canvas e segmentos. Para renomear, remover ou adicionar tags com eficiência em seu dashboard, acesse **Configurações** > **Gerenciamento de tags**.
 
-![Aba de tags na página Gerenciar Configurações.]({% image_buster /assets/img_archive/tags_view.png %})
+![Guia Tags na página Gerenciar configurações.]({% image_buster /assets/img_archive/tags_view.png %})
 
 Para organizar ainda mais suas tags, aninhe-as em uma tag principal. Por exemplo, você pode manter todas as tags de feriados aninhadas em uma tag principal `Holidays`, ou todas as tags relacionadas a um estágio do seu funil de marketing em uma tag principal `Funnel`. 
 
 Para fazer isso, crie uma nova tag, selecione **Aninhar tag em** e escolha em qual tag existente aninhar sua nova tag. Você também pode aninhar as tags existentes na página **Gerenciamento de tags**. Nessa página, passe o mouse sobre uma linha com sua tag e clique em **<i class="fas fa-pencil-alt"></i>Edit**. Em seguida, siga as mesmas etapas anteriores.
 
-![Criar uma tag aninhada.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
+![Crie uma tag aninhada.]({% image_buster /assets/img_archive/tag_nested.png %}){: style="max-width:70%;" }
 
 ## Práticas recomendadas {#tags-best-practices}
 
@@ -100,7 +100,10 @@ table td {
 
 ## Casos de uso
 
-Está procurando inspiração sobre como aproveitar as tags para gerenciar o ciclo de vida do envio de mensagens? Aqui estão alguns casos de uso comuns:
+Está procurando inspiração sobre como aproveitar as tags para gerenciar o ciclo de vida do envio de mensagens? Aqui estão alguns casos de uso comuns.
+
+{% tabs %}
+{% tab Throttling %}
 
 ### Throttling
 
@@ -110,6 +113,12 @@ Limite a frequência com que seus clientes recebem campanhas de um determinado t
 <br>`OR`<br>
 `Has not received campaign` com tag `Promo`
 
+{% endtab %}
+{% tab Reporting %}
+
 ### Relatórios
 
 Configure um relatório de engajamento para ficar de olho no volume de todas as campanhas com uma determinada tag. Por exemplo, se quiser monitorar todas as suas campanhas push, você pode adicionar uma tag como `Push Reporting` a essas campanhas e, em seguida, configurar um [relatório de engajamento]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) para enviar um relatório dessas campanhas marcadas todos os dias.
+
+{% endtab %}
+{% endtabs %}

@@ -90,7 +90,7 @@ curl --location --request PUT 'https://rest.iad-01.braze.com/app_group/sdk_authe
 
 Esse endpoint tem as seguintes regras de validação:
 
-- O endereço `key_id` deve ser uma ID de chave de autenticação do SDK válida.
+- O endereço `key_id` deve ser um ID de chave de autenticação do SDK válido.
 - O endereço `app_id` deve ser um identificador válido da API do app.
 - A chave de autenticação do SDK deve existir para o app especificado.
 

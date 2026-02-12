@@ -1,5 +1,5 @@
 ---
-nav_title: 캠페인 만들기
+nav_title: 캠페인을 생성하세요
 article_title: 캠페인 만들기
 layout: dev_guide
 page_order: 0

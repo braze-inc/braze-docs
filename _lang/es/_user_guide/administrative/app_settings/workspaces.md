@@ -1,13 +1,13 @@
 ---
-nav_title: Creación y gestión de espacios de trabajo
-article_title: Creación y gestión de espacios de trabajo
+nav_title: Crea y administra espacios de trabajo
+article_title: Crear y gestionar espacios de trabajo
 page_order: 0
 page_type: reference
 description: "Este artículo explica cómo crear, configurar y gestionar tus espacios de trabajo."
 
 ---
 
-# Creación y gestión de espacios de trabajo
+# Crea y administra espacios de trabajo
 
 > Este artículo explica cómo crear, configurar y gestionar tus espacios de trabajo. 
 
@@ -43,7 +43,7 @@ Es posible que desee adoptar una convención de nombres para que otras personas 
 
 Accederá a la página **Configuración de la aplicación** para empezar a añadir instancias de su aplicación. Puedes acceder a esta página en cualquier momento desde **Ajustes** > **Ajustes de la aplicación**.
 
-![Página "Configuración de la aplicación" para Upon Voyage US - Espacio de trabajo de puesta en escena con un botón para añadir una aplicación.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
+![Página "Configuración de la aplicación" para el espacio de trabajo Upon Voyage US - Staging con un botón para añadir una aplicación.]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
 
 ### Paso 3: Añada las instancias de su aplicación
 
@@ -73,7 +73,7 @@ La versión del SDK activa que se muestra en la página Configuración de la apl
 
 Este campo aparece después de haber integrado el SDK de Braze con tu aplicación o sitio web. Si hay disponible una versión más reciente del SDK de Braze para tu plataforma, se anotará aquí con la etiqueta "Versión más reciente disponible."
 
-![Sección "Versión del SDK en vivo" con un valor de campo "5.4.0" y un icono que dice que hay una nueva versión disponible.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
+![Sección "Versión del SDK en vivo" con un valor de campo de "5.4.0" y un icono que dice que hay una nueva versión disponible.]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
 
 ### Paso 4: Repetir según sea necesario
 
@@ -89,7 +89,7 @@ Repita los pasos 2 y 3 para configurar tantos espacios de trabajo como requiera 
 
 Puedes añadir espacios de trabajo favoritos para acceder aún más rápido a los que más utilizas.
 
-![Desplegable del espacio de trabajo con la pestaña de "Espacios de trabajo favoritos".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
+![Desplegable del espacio de trabajo con la pestaña "Espacios de trabajo favoritos".]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
 
 Para añadir espacios de trabajo favoritos:
 
@@ -163,13 +163,10 @@ Para las campañas, añade tu segmento al paso **Audiencias objetivo** del compo
 
 En Canvas, añade tu segmento a los pasos de tu Mensaje, en la sección **Validaciones de entrega**. Las validaciones de entrega comprueban que tu audiencia cumple los criterios de entrega al enviar los mensajes. Recuerde especificar validaciones de entrega para cada paso de Mensaje para asegurarse de que se entregará a la aplicación correcta. No hay necesidad de segmentar en el nivel de entrada.
 
-{% details Ampliar los pasos del flujo de trabajo original de Canvas %}
-
-{% alert important %}
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Este contenido está disponible como referencia para comprender los segmentos y la segmentación en el editor original.<br><br>Braze recomienda que los clientes que utilicen la experiencia original de Canvas clonen sus Canvas en el editor actualizado para construir y gestionar mejor los Canvases. Más información sobre la [clonación de tus Lienzos]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
+{% details Expand for steps in the original Canvas workflow %}
 
 En el flujo de trabajo original del lienzo, añada su segmento al nivel de componentes del lienzo en la sección **Audiencia**. No hay necesidad de segmentar en el nivel de entrada.
+
 {% enddetails %}
 
 

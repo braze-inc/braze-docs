@@ -28,7 +28,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 
 While there are no limits to how many text characters you can include in an in-app message (as well as buttons, headline, main body, and others), we moderate how many text characters you use. Too much text will require users to expand and scroll the message.
 
-All in-app messages have a recommended image size of 500 KB, maximum image size of 5 MB, and support PNG, JPEG, and GIF file types.
+All in-app messages have a recommended image size of 500 KB, maximum image size of 5 MB, and support PNG, JPEG, and GIF file types. WebP images aren't supported across all devices or browsers; we suggest converting WebP images to PNG or JPEG before adding them to in-app messages.
 
 {% tabs %}
 {% tab Portrait %}
@@ -61,7 +61,7 @@ All in-app messages have a recommended image size of 500 KB, maximum image size 
 
 | Type | Aspect ratio | Image quality | Notes |
 | --- | --- | --- | --- |
-| Modal (image only) | 1:1 | High resolution 1200 x 2000 px <br> Minimum resolution 600 x 600 px | The message will resize to fit images of most aspect ratios. |
+| Modal (image only) | 1:1 | Maximum recommended resolution: 1200 x 2000 px <br> Minimum resolution: 600 x 600 px | The message will resize to fit images of most aspect ratios. The recommended maximum resolution has a 3:5 aspect ratio, which may not provide optimal results. While larger images are usable, they may lead to longer load times. <br> The ideal aspect ratio for images is 1:1, and not meeting this ratio may trigger a warning during upload. This warning is a suggestion for best results and does not prevent the upload of larger images. |
 | Modal with text | 29:10 | High resolution 1450 x 500 px <br> Minimum resolution 600 x 205 px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 }
 
@@ -152,7 +152,7 @@ table td {
 | --- | --- | 
 | Size | 5 MB |
 | Width | Header: 600 px<br>Body: 480 px |
-| File types | PNG, JPEG, GIF |
+| File types | PNG, JPEG, GIF<br><br> WebP image support varies across email clients. For reliable rendering, convert WebP images to PNG or JPEG before adding them to email messages. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 | Text specifications | Recommended maximum properties |

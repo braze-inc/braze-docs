@@ -1,5 +1,5 @@
 ---
-nav_title: リキッド ユースケース ライブラリ
+nav_title: 流動ユースケース ライブラリー
 article_title: リキッド ユースケース ライブラリ
 page_order: 10
 search_rank: 2
@@ -544,7 +544,7 @@ Hi, the offer is only valid today.
 
 - [一致するカスタム属性に基づいてメッセージをパーソナライズする](#attribute-matching)
 - [2つのカスタム属性を引いて、その差を金額で表示する](#attribute-monetary-difference)
-- [フルネームがfirst_nameフィールドに格納されている場合、ユーザーのファーストネームを参照する。](#attribute-first-name)
+- [フルネームがfirst_name フィールドに保存されている場合、ユーザーの名を参照します](#attribute-first-name)
 
 ### 一致するカスタム属性に基づいてメッセージをパーソナライズする {#attribute-matching}
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### ユーザーの姓名が first_name フィールドに格納されている場合、ユーザーの名を参照します。{#attribute-first-name}
+### フルネームがfirst_name フィールドに保存されている場合、ユーザーの名を参照します {#attribute-first-name}
 
 このユースケースでは、ユーザーの名を取得し (姓と名の両方が単一のフィールドに格納されている場合)、ユーザーの名を使用してウェルカムメッセージを表示します。
 
@@ -1324,6 +1324,38 @@ This is a message for Verizon users!
 
 {% api %}
 
+## SMS
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+- [受信したSMS キーワードに基づいて、さまざまなメッセージに応答する](#sms-keyword-response)
+
+### 受信したSMS キーワードに基づいて、さまざまなメッセージに応答する {#sms-keyword-response}
+
+このユースケースには、ダイナミックなのSMS キーワード処理が組み込まれており、さまざまなメッセージコピーで特定の受信メッセージに応答します。たとえば、誰かのテキストが"START"vs "JOIN"の場合に、異なる応答を送信できます。
+
+{% raw %}
+```liquid
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
+{% if inbound_message contains 'start' %}
+Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
+
+{% elsif inbound_message contains 'join' %}
+Thanks for joining our SMS program! Create an account to get the best deals!
+
+{% else %}
+Thanks for joining our SMS program!
+
+{% endif %}
+```
+{% endraw %}
+
+{% endapi %}
+
+{% api %}
+
 ## タイムゾーン
 
 {% apitags %}
@@ -1460,10 +1492,10 @@ Check out this new bar after work today. HH specials!
 
 {% api %}
 
-## Week/Day/Month
+## 週/日/月
 
 {% apitags %}
-Week/Day/Month
+週/日/月
 {% endapitags %}
 
 - [前月の名前をメッセージに入れる](#month-name)

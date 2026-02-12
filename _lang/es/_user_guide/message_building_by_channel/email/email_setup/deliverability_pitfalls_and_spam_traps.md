@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}Trampas de capacidad de entrega y trampas de correo no deseado
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} Trampas de capacidad de entrega y trampas de correo no deseado
 
 La entregabilidad de su correo electrónico puede verse afectada por cualquiera de las siguientes trampas de spam:
 
@@ -32,3 +32,9 @@ Estas trampas pueden evitarse si se establece un proceso de opt-in confirmado. A
 {% alert tip %}
 Los equipos de éxito del cliente y capacidad de entrega de Braze pueden ayudarte a asegurarte de que sigues las mejores prácticas para maximizar la capacidad de entrega en todo el mundo.
 {% endalert %}
+
+## Eliminar una dirección de correo electrónico de tu lista de correo no deseado o rebotado
+
+Puedes eliminar los correos electrónicos rebotados y los correos de tu lista de correo no deseado de Braze con los siguientes puntos finales:
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)

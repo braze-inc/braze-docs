@@ -81,7 +81,7 @@ Voici quelques inconvénients de cette approche :
 
 ### Comment autoriser les URL pour les SMS ?
 
-Avant d’envoyer des SMS contenant des URL aux utilisateurs dans certains pays (comme la Suède ou les pays nordiques), vous devez faire enregistrer ces URL par l’opérateur. Adressez-vous à votre gestionnaire du service client de Braze pour obtenir de l’aide. Ce processus prend environ cinq jours.  
+Avant d’envoyer des SMS contenant des URL aux utilisateurs dans certains pays (comme la Suède ou les pays nordiques), vous devez faire enregistrer ces URL par l’opérateur. Contactez votre gestionnaire du service clientèle de Braze pour obtenir de l'aide. Ce processus prend environ cinq jours.  
 
 ### Que se passe-t-il si plusieurs utilisateurs ont le même numéro de téléphone ?
 
@@ -102,6 +102,8 @@ Si vous recevez un mot-clé « START » ou « STOP » provenant du numéro d
 Si vous échelonnez vos utilisateurs dans un Canvas et avez des heures de planification différentes pour chaque composant Canvas, vous pouvez envoyer à un utilisateur les mêmes messages par e-mail ou téléphone en double.
 {% endalert %}
 
+Pour éviter des mises à jour inutilement volumineuses, Braze mettra à jour un maximum de 100 profils utilisateurs qui partagent un identifiant lors d'une mise à jour de l'abonnement. Si plus de 100 profils utilisateurs partagent le même numéro de téléphone, tous les profils ne seront pas mis à jour.
+
 ### Les propriétés de l’événement SMS enregistrent-elles les mots-clés dans une phrase ?
 
 Pour qu'un mot-clé soit reconnu dans une phrase (par exemple, "s'il vous plaît, arrêtez de m'envoyer des SMS"), vous devez utiliser un énoncé liquide dans le message pour reconnaître le mot spécifique. Les propriétés de l’événement ont une limite de 256 caractères. Sinon, aucune limite n’est appliquée.
@@ -118,7 +120,7 @@ Vous pouvez trouver votre `app_id` en naviguant vers **Réglages** > **Réglages
 
 ### Comment serai-je facturé pour les SMS ?
 
-Outre les frais pour les codes courts et longs, Braze fournit une allocation de messages SMS pour différents pays. C’est-à-dire que nous travaillons avec vous pour définir un certain nombre de segments de message pour différents pays, que vous utiliserez pour envoyer des campagnes SMS. La facturation est effectuée par le nombre de segments de message envoyés par pays. Pour en savoir plus sur le calcul des segments de message, consultez notre guide sur [les segments de message et les limites de copie.]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown)  Votre gestionnaire de compte vous contactera pour vous informer si vous êtes proche de votre limite, avec des rapports pertinents pour illustrer la situation. Pour plus d’informations sur les dépassements, contactez votre conseiller Braze.
+Outre les frais pour les codes courts et longs, Braze fournit une allocation de messages SMS pour différents pays. C’est-à-dire que nous travaillons avec vous pour définir un certain nombre de segments de message pour différents pays, que vous utiliserez pour envoyer des campagnes SMS. La facturation est effectuée par le nombre de segments de message envoyés par pays. Pour en savoir plus sur le calcul des segments de message, consultez notre guide sur [les segments de message et les limites de copie.]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown)  Votre gestionnaire de compte vous contactera pour vous indiquer si vous êtes proche d'atteindre votre maximum, en vous fournissant des rapports pertinents pour vous aider à rester informé. Pour toute question concernant les dépassements, contactez votre conseiller Braze.
 
 ### Si un message est envoyé à un téléphone fixe, est-il toujours comptabilisé comme un envoi de SMS ?
 
@@ -131,4 +133,4 @@ Dans d’autres pays :
 
 ### Si un utilisateur se désabonne et envoie un mot-clé à notre code court et long, reçoit-il la réponse que nous avons configurée pour ce mot-clé dans Braze ?
 
-Si un utilisateur n'est pas abonné et qu'il envoie un mot-clé appartenant à l'une des [catégories de mots-clés par défaut]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), il recevra la réponse pour ce mot-clé. Si un utilisateur est exclu et envoie un [mot-clé personnalisé]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), il ne recevra pas de réponse pour ce mot-clé. 
+Si un utilisateur n'est pas abonné et qu'il envoie un mot-clé appartenant à l'une des [catégories de mots-clés par défaut]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), il recevra la réponse pour ce mot-clé. Si un utilisateur est exclu et envoie un [mot-clé personnalisé]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), il ne recevra pas de réponse pour ce mot-clé.

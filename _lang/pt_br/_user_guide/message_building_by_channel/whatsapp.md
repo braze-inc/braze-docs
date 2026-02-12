@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - WhatsApp
 guide_top_header: "WhatsApp"
-guide_top_text: "O WhatsApp é uma popular plataforma de envio de mensagens ponto a ponto usada em todo o mundo, que oferece mensagens baseadas em conversas para empresas. O canal de envio de mensagens do WhatsApp oferece uma maneira direta de alcançar usuários e clientes na plataforma WhatsApp. <br><br>**O acesso ao WhatsApp está disponível apenas em alguns pacotes Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar."
+guide_top_text: "O WhatsApp é uma popular plataforma de envio de mensagens ponto a ponto usada em todo o mundo, que oferece mensagens baseadas em conversas para empresas. O canal de envio de mensagens do WhatsApp oferece uma maneira direta de alcançar usuários e clientes na plataforma WhatsApp. <br><br>**A disponibilidade do WhatsApp depende de seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.**"
 description: "Essa landing page contém tudo sobre o WhatsApp, inclusive como criar uma campanha no WhatsApp, aceitação e desativação, respostas rápidas, relatórios e muito mais."
 search_rank: 3
 alias: /whatsapp/
@@ -15,6 +15,9 @@ guide_featured_title: "WhatsApp"
 guide_featured_list:
 - name: "Configuração do WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/overview
+  image: /assets/img/braze_icons/whatsapp.svg
+- name: "Traga seu próprio conector do WhatsApp"
+  link: /docs/user_guide/message_building_by_channel/whatsapp/overview/byo_connector/
   image: /assets/img/braze_icons/whatsapp.svg
 - name: "Grupo de inscrições do WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/user_subscription/
@@ -51,6 +54,9 @@ guide_featured_list:
 - name: "Domínios personalizados"
   link: /docs/user_guide/message_building_by_channel/whatsapp/whatsapp_campaign/custom_domains/
   image: /assets/img/braze_icons/link-03.svg
+- name: "Casos de uso do WhatsApp"
+  link: /docs/whatsapp_use_cases/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Perguntas frequentes sobre o WhatsApp"
   link: /docs/user_guide/message_building_by_channel/whatsapp/faqs/
   image: /assets/img/braze_icons/annotation-question.svg

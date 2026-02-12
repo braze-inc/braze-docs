@@ -22,7 +22,7 @@ Puedes consultar los análisis de tu recomendación para ver qué artículos se 
 
 Son métricas relacionadas con tu audiencia de recomendación, que incluyen precisión, cobertura y tipo de recomendación.
 
-![Métrica de la audiencia de las recomendaciones que muestra la precisión (25,3%), la cobertura (54,3%) y los tipos de recomendación divididos entre artículos personalizados y más populares.]({% image_buster /assets/img/item_recs_analytics_1.png %})
+![Métricas de audiencia de las recomendaciones que muestran la precisión (25,3%), la cobertura (54,3%) y los tipos de recomendación divididos entre artículos personalizados y más populares.]({% image_buster /assets/img/item_recs_analytics_1.png %})
 
 Consulta la tabla siguiente para obtener más información:
 
@@ -37,7 +37,7 @@ Consulta la tabla siguiente para obtener más información:
 
 Esta tabla incluye métricas sobre los artículos personalizados, más recientes y más populares de tu catálogo.
 
-![Tablas en paralelo que enumeran los elementos asignados a los usuarios, separados por recomendaciones personalizadas y recomendaciones más populares.]({% image_buster /assets/img/item_recs_analytics_2.png %})
+![Tablas contiguas que enumeran los elementos asignados a los usuarios, separados por recomendaciones personalizadas y recomendaciones más populares.]({% image_buster /assets/img/item_recs_analytics_2.png %})
 
 Consulta la tabla siguiente para obtener más información:
 

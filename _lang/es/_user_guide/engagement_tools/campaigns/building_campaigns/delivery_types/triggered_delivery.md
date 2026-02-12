@@ -1,5 +1,5 @@
 ---
-nav_title: Entrega basada en acciones
+nav_title: Entrega basada en la acción
 article_title: Entrega basada en acciones
 page_order: 1
 page_type: reference
@@ -65,7 +65,7 @@ Por ejemplo, supongamos que tenemos una campaña con un evento personalizado de 
 El evento desencadenante "iniciar sesión" puede ser la primera vez que el usuario abre la aplicación si el segmento de su campaña se aplica a usuarios nuevos. (por ejemplo, si el segmento está formado por usuarios sin sesión).
 {% endalert %}
 
-Tenga en cuenta que aún puede enviar una campaña activada a un segmento específico de usuarios, por lo que los usuarios que no formen parte del segmento no recibirán la campaña aunque completen el evento de activación. Si observas que los usuarios no reciben la campaña a pesar de estar cualificados para el segmento, consulta nuestra sección sobre [por qué un usuario puede no haber recibido una campaña desencadenada]({{site.baseurl}}/help/help_articles/campaigns_and_canvas/not_triggering/).
+Tenga en cuenta que aún puede enviar una campaña activada a un segmento específico de usuarios, por lo que los usuarios que no formen parte del segmento no recibirán la campaña aunque completen el evento de activación.
 
 Con respecto al evento desencadenante para cuando un usuario añade una dirección de correo electrónico a su perfil, se aplican las siguientes reglas:
 
@@ -127,11 +127,11 @@ Si también ha asignado a la campaña una duración determinada, entonces un usu
 
 ### Paso 6: Determinar la readmisibilidad
 
-Determina si los usuarios pueden convertirse en [re-elegibles]({% image_buster /assets/img_archive/ReEligible.png %}) para la campaña. Si permite que los usuarios vuelvan a ser elegibles, puede especificar un plazo de tiempo antes de que el usuario pueda volver a recibir la campaña. Esto evitará que tus campañas desencadenadas se conviertan en "correo no deseado".
+Determine si los usuarios pueden volver a ser [elegibles]({% image_buster /assets/img_archive/ReEligible.png %}) para la campaña. Si permite que los usuarios vuelvan a ser elegibles, puede especificar un plazo de tiempo antes de que el usuario pueda volver a recibir la campaña. Esto evitará que tus campañas desencadenadas se conviertan en "correo no deseado".
 
 ![]({% image_buster /assets/img_archive/schedule_triggered6.png %})
 
-## Casos prácticos
+## Ejemplos
 
 Las campañas activadas son muy eficaces para los mensajes transaccionales o basados en logros.
 

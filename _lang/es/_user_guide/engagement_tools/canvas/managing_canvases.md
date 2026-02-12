@@ -1,6 +1,6 @@
 ---
-nav_title: Gestión de lonas
-article_title: Gestión de lonas
+nav_title: Administrar lienzos
+article_title: Administrar lienzos
 page_order: 2
 layout: dev_guide
 guide_top_header: "Gestión de lonas"

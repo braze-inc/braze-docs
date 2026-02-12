@@ -14,19 +14,19 @@ El campo **Tiempo de vida** (TTL) te permite establecer un tiempo personalizado 
 
 El texto de resumen te permite establecer texto adicional en la vista ampliada de notificaciones. También sirve como pie de foto para las notificaciones con imágenes.
 
-![Un mensaje Android con el título "¡Saludos de Appboy!", el mensaje "¡Este es el cuerpo del mensaje! Incluso puedes añadir emojis." y texto resumen "Este es el texto resumen."]({% image_buster /assets/img_archive/summary_text.png %}){: style="max-width:65%;"}
+![Un mensaje Android con el título "Este es el título de la notificación" y el texto de resumen "Este es el texto de resumen de la notificación".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
-El texto resumido se mostrará bajo el cuerpo del mensaje en la vista ampliada.
+El texto resumido se mostrará bajo el cuerpo del mensaje en la vista ampliada. 
+
+![Un mensaje Android con el título "Este es el título de la notificación" y el texto de resumen "Este es el texto de resumen de la notificación".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Para las notificaciones push que incluyan imágenes, el texto del mensaje se mostrará en la vista contraída, mientras que el texto del resumen se mostrará como pie de imagen cuando se expanda la notificación. 
-
-![Un mensaje Android con el título "Appboy!", el mensaje "Este es el cuerpo del mensaje.." y el texto de resumen "y este es el Texto de Resumen".]({% image_buster /assets/img_archive/messagesummary.gif %}){: style="max-width:65%;"}
 
 ### URIs personalizadas {#custom-uri}
 
 La característica **URI personalizada** te permite especificar una URL Web o un recurso Android al que navegar cuando se haga clic en la notificación. Si no se especifica una URI personalizada, al hacer clic en la notificación los usuarios acceden a tu aplicación. Puedes utilizar el URI personalizado para establecer vínculos profundos dentro de tu aplicación y dirigir a los usuarios a recursos que existen fuera de ella. Esto puede especificarse a través de la [API de mensajería]({{site.baseurl}}/api/endpoints/messaging) o de nuestro panel en **Configuración avanzada** en el compositor push, como se muestra en la imagen:
 
-![La configuración avanzada de vinculación en profundidad en el compositor push de Braze.]({% image_buster /assets/img_archive/deep_link.png %})
+![La configuración avanzada de vínculos profundos en el creador push de Braze.]({% image_buster /assets/img_archive/deep_link.png %})
 
 ### Prioridad de visualización de notificaciones
 
@@ -59,7 +59,7 @@ En Android O, los sonidos de notificación pasaron a ser una propiedad de los ca
 
 Para los dispositivos que ejecutan versiones de Android anteriores a O, Braze te permite configurar el sonido de un mensaje push individual a través del compositor del panel. Puedes hacerlo especificando un recurso de sonido local en el dispositivo (por ejemplo, `android.resource://com.mycompany.myapp/raw/mysound`). Si especificas "predeterminado" en este campo, se reproducirá el sonido de notificación predeterminado en el dispositivo. Esto puede especificarse a través de la [API de mensajería]({{site.baseurl}}/api/endpoints/messaging) o del panel en **Configuración** en el compositor push.
 
-![La configuración avanzada del sonido en el compositor push de Braze.]({% image_buster /assets/img_archive/sound_android.png %})
+![La configuración avanzada del sonido en el creador push de Braze.]({% image_buster /assets/img_archive/sound_android.png %})
 
 Introduce el URI completo del recurso de sonido (por ejemplo, `android.resource://com.mycompany.myapp/raw/mysound`) en la consulta del panel.
 

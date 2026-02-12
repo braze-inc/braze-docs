@@ -16,7 +16,7 @@ description: "Este artigo descreve detalhes sobre o endpoint Exportar usuários 
 
 > Use esse endpoint para exportar dados de qualquer perfil de usuário, especificando um identificador de usuário.
 
-Até 50 `external_ids` ou `user_aliases` podem ser incluídos em uma única solicitação. Se quiser especificar `device_id`, `email_address` ou `phone`, somente um de cada identificador poderá ser incluído por solicitação.
+Até 50 `external_ids` ou `user_aliases` podem ser incluídos em uma única solicitação. Se você quiser especificar `device_id`, `email_address`, ou `phone`, somente um desses identificadores poderá ser incluído por solicitação.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_id": (optional, string) Braze identifier for a particular user,
   "email_address": (optional, string) Email address of user,
   "phone": (optional, string) Phone number of user,
-  "fields_to_export": (required, array of strings) Name of user data fields to export
+  "fields_to_export": (optional, array of strings) Name of user data fields to export
 }
 ```
 
@@ -61,8 +61,10 @@ Para clientes que fizeram a integração com o Braze em 22 de agosto de 2024 ou 
 | `braze_id`         | Opcional | String                                                        | Identificador do Braze para um usuário específico.                                                      |
 | `email_address`    | Opcional | String                                                        | Endereço de e-mail do usuário.                                                                       |
 | `phone`            | Opcional | String em [E.164](https://en.wikipedia.org/wiki/E.164) formato | Número de telefone do usuário.                                                                        |
-| `fields_to_export` | Obrigatória | Array de strings                                              | Nome dos campos de dados de usuários a serem exportados.                                                          |
+| `fields_to_export` | Opcional* | Array de strings                                              | Nome dos campos de dados de usuários a serem exportados.<br><br>\*Este campo é obrigatório para usar o limite de frequência mais rápido de 40 solicitações por segundo. Se omitido, será usado o limite de frequência padrão de 250 solicitações por minuto. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
+
+\*Requerido para clientes que tenham feito a integração com o Braze em 22 de agosto de 2024 ou após essa data.
 
 ## Exemplo de solicitação
 ```
@@ -130,8 +132,6 @@ Dependendo dos dados solicitados, esse endpoint da API pode não ser suficiente 
 ## Resposta
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "users" : (array of object) the data for each of the exported users, may be empty if no users are found,
@@ -146,7 +146,7 @@ Para obter um exemplo dos dados que podem ser acessados por meio desse endpoint,
 Objeto de exportação do usuário (incluiremos o mínimo de dados possível - se um campo estiver faltando no objeto, ele deverá ser considerado nulo ou vazio):
 
 {% tabs %}
-{% tab Todos os campos %}
+{% tab All fields %}
 
 ```json
 {
@@ -288,7 +288,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
 ```
 
 {% endtab %}
-{% tab Saída de amostra %}
+{% tab Sample output %}
 
 ```json
 {
@@ -416,7 +416,7 @@ Objeto de exportação do usuário (incluiremos o mínimo de dados possível - s
         ]
       }
       ...
-    ],    
+    ],
     "cards_clicked" : [
       {
         "name" : "Loyalty Promo"

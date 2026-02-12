@@ -1,6 +1,6 @@
 ---
-nav_title: Écrire aux utilisateurs
-article_title: Envoi de messages aux utilisateurs LINE
+nav_title: "Utilisateurs de l'envoi de messages"
+article_title: "LIGNE d'envoi des messages Utilisateurs"
 page_order: 2
 description: "Cet article de référence explique comment chatter avec les utilisateurs en utilisant des campagnes modélisées et des Canvases."
 page_type: reference
@@ -23,13 +23,13 @@ Vous pouvez créer des campagnes et des canevas qui démarrent, se ramifient et 
 
 Définissez vos mots déclencheurs lors de la planification d'une campagne de réception/distribution basée sur des actions.
 
-![Déclencheur basé sur l'action "Envoyer cette campagne aux utilisateurs qui ont envoyé un message entrant LINE au groupe d'abonnement dans lequel se trouve le corps du message" et un champ vide.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
+![Déclencheur basé sur l'action "Envoyer cette campagne aux utilisateurs qui ont envoyé une LINE entrante au groupe d'abonnement où se trouve le corps du message" et un champ vide.]({% image_buster /assets/img/line/trigger_word_campaign.png %})
 
 ### Canvas
 
 Placez vos mots déclencheurs dans les [parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) de votre canvas.
 
-![Parcours d'action dont le déclencheur est "Envoyer cette campagne aux utilisateurs qui ont envoyé un message LINE au groupe d'abonnement où se trouve le corps du message" et dont le champ est vide.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
+![Parcours d'action avec un déclencheur de "Envoyer cette campagne aux utilisateurs qui ont envoyé une LINE entrante au groupe d'abonnement où se trouve le corps du message" et un champ vide.]({% image_buster /assets/img/line/trigger_word_canvas.png %})
 
 ### Conditions
 

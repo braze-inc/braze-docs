@@ -10,7 +10,7 @@ channel: push
 
 # Messages in-app d’amorce de notification push
 
-![Messages in-app d’amorce de notification push pour une application de streaming. La notification affiche « Get push notifications from Movie Cannon? (Voulez-vous recevoir des notifications push de Movie Cannon ?) Les notifications peuvent concerner de nouveaux films, des émissions de télévision ou d'autres avis et peuvent être désactivées à tout moment."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![Messages in-app d’amorce de notification push pour une application de streaming. La notification affiche « Get push notifications from Movie Cannon? (Voulez-vous recevoir des notifications push de Movie Cannon ?) Les notifications peuvent inclure de nouveaux films, émissions télévisées ou autres avis et peuvent être désactivées à tout moment ».]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > Vous n’avez qu’une seule chance de demander aux utilisateurs la permission de les joindre par notification push. L’optimisation de l’inscription aux notifications est donc cruciale pour maximiser la portée de vos messages push. Pour y parvenir, vous pouvez utiliser des messages in-app pour expliquer le type de messages auquel vos utilisateurs peuvent s’attendre à recevoir s’ils choisissent de s’inscrire, avant de leur montrer l’invite de notification push native. C’est ce qu’on appelle amorce de notification push.
 
@@ -80,7 +80,7 @@ Tout d'abord, [créez un message in-app]({{site.baseurl}}/user_guide/message_bui
 
 Pour vous assurer que vous disposez de suffisamment d'espace pour votre message et vos boutons, utilisez une fenêtre modale/boîte de dialogue modale ou plein écran. Si vous choisissez le plein écran, notez qu'une image est nécessaire.
 
-## Étape 2 : Créer votre message
+## Étape 2 : Créer votre message
 
 Maintenant, il est temps d’ajouter votre copie ! Rappelez-vous qu’une amorce de notification push a l’objectif de pousser l’utilisateur à activer les notifications push. Dans votre corps de message, nous vous suggérons de mettre en exergue les raisons pour lesquelles vos utilisateurs devraient activer les notifications push. Soyez précis quant au type de notifications que vous souhaitez envoyer et à la valeur qu’ils peuvent fournir.
 
@@ -98,7 +98,7 @@ Get push notifications from Movie Cannon? Notifications may include new movies, 
 
 Pour connaître les meilleures pratiques et obtenir des ressources supplémentaires, reportez-vous à la section [Créer des demandes d'abonnement personnalisées]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/).
 
-## Étape 3 : Spécifier le comportement du bouton {#button-actions}
+## Étape 3 : Spécifier le comportement du bouton {#button-actions}
 
 Pour ajouter des boutons à votre message in-app, faites glisser deux blocs **Bouton** dans votre message, qui feront office de boutons principal et secondaire dans votre message in-app. Vous pouvez également faire glisser une rangée dans votre message, puis faire glisser les boutons dans la rangée, de manière à ce que les boutons se trouvent sur la même rangée horizontale (et non pas empilés les uns sur les autres). Nous recommandons d’activer les boutons « Allow notifications » (Autoriser les notifications) et « Not now » (Pas maintenant) comme boutons d’amorce, mais il existe de nombreuses invites de bouton différentes que vous pouvez attribuer.
 
@@ -115,11 +115,15 @@ Pour définir votre amorce push pour l'envoyer à un moment pertinent, vous deve
 
 Bien que le moment idéal puisse varier, Braze suggère d'attendre qu'un utilisateur effectue une sorte de [action de grande valeur](https://www.braze.com/resources/videos/mapping-high-value-actions), indiquant qu'il commence à voir la valeur de votre application ou site, ou lorsqu'il y a un besoin impérieux que les notifications push peuvent répondre (comme après qu'ils aient passé une commande et que vous souhaitiez leur offrir des informations de suivi d'expédition). De cette façon, l’invite représente un avantage pour le client plutôt que pour votre marque.
 
-![Paramètres de réception/distribution par événement à envoyer aux utilisateurs ayant effectué l'événement personnalisé "Ajouter à la liste de surveillance".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
+![Paramètres de réception/distribution par événement à envoyer aux utilisateurs qui ont effectué l'événement personnalisé "Ajouter à la liste de surveillance".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## Étape 5 : Utilisateurs cibles
 
-Étant donné que l’objectif d’une campagne de notification push est d’inciter les utilisateurs à s’abonner aux messages push, vous ne voulez pas cibler les utilisateurs qui y sont déjà abonnés. Pour ce faire, ajoutez un segment ou un filtre pour ces utilisateurs, à savoir, `Push Subscription Status is not Opted In`.
+L'objectif d'une campagne d'amorçage push est d'inviter les utilisateurs sur tout appareil sur lequel ils n'ont pas encore accordé de permissions push. Il peut s'agir de nouveaux utilisateurs ou d'utilisateurs existants qui obtiennent un nouvel appareil ou réinstallent votre application. Pour cibler correctement votre campagne de push primer, ajoutez un filtre où `Foreground Push Enabled For App is false`. Ce filtre identifie les installations d'apps individuelles qui n'ont pas encore opté pour les notifications push au premier plan.
+
+{% alert important %}
+L'utilisation d'un filtre au niveau de l'utilisateur comme `Push Subscription Status is not Opted In` exclura les utilisateurs qui sont déjà abonnés sur un autre appareil, ce qui les empêchera de recevoir la demande d'abonnement sur leur nouvel appareil.
+{% endalert %}
 
 Au-delà de cela, vous pouvez décider des segments supplémentaires qui vous semblent les plus appropriés. Par exemple, vous pouvez cibler les utilisateurs qui ont effectué un deuxième achat, les utilisateurs qui viennent de créer un compte pour devenir membre ou même ceux qui visitent votre application plus de deux fois par semaine. Cibler les utilisateurs pour ces segments essentiels augmente la probabilité que les utilisateurs s’abonnent et activent les notifications push.
 

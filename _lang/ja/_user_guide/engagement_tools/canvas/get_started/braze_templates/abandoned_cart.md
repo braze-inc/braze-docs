@@ -34,16 +34,16 @@ tool: Canvas
 
 1. テンプレート名の横にある**編集**を選択します。
 
-![]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}) キャンバスの現在のタイトルと説明。{: style="max-width:60%;"}
+![キャンバスの現在のタイトルと説明。]({% image_buster /assets/img/canvas_templates/abandoned_intent_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\.キャンバス名を更新し、カートを放棄したユーザーをターゲットとするキャンバスであることを示すようにします。
 3\.説明を更新し、ユーザーに最新の季節のキッチン用品の購入を促すことを目的としているキャンバスであることを明記します。
 4. **Abandon Cart** というタグを追加し、キャンバスのホームページでフィルターできるようにします。
 
-![キャンバスの新しい名前、説明、タグ。]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
+![キャンバスの新しい名前、説明、およびタグ。]({% image_buster /assets/img/canvas_templates/abandoned_intent_new_name_description.png %}){: style="max-width:60%;"}
 
-### ステップ 2: コンバージョンイベントを割り当てる
+### ステップ 2:コンバージョンイベントを割り当てる
 
 次に、コンバージョンイベントを割り当てよう。ここでは「Enormous Paper Plate」製品を中心に扱うため、**1次コンバージョンイベント A**について次の作業を行います。
 
@@ -51,7 +51,7 @@ tool: Canvas
 2. [**特定の購入**] を選択します。これにより、特定の製品名を選択できるようになります。
 3. [**Enormous Paper Plate**] を選択します。
 
-![「1次コンバージョンイベント - A」でコンバージョンタイプとして「購入」、製品名として「Enormous Paper Plate」が選択されている。コンバージョン期限は3日間。]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
+![「1次コンバージョンイベント - A」でコンバージョンタイプとして「購入」、製品名として「Enormous Paper Plate」が選択されている。コンバージョンの期限は3日間である。]({% image_buster /assets/img/canvas_templates/abandoned_intent1.png %})
 
 ### ステップ 3:エントリスケジュールを設定する
 
@@ -62,7 +62,7 @@ tool: Canvas
 3. エントリ期間の開始日時を選択します。
 4. ユーザーがローカルタイムゾーンでエントリできるようにするオプションを選択します。最適なタイミングでメッセージを送ることで、メッセージングの関連性を保ち、エンゲージメントを高めることができる。
 
-![カートを放棄したユーザーをターゲットにしたアクションベースのキャンバス。エントリウィンドウはユーザーのローカルタイムゾーンで2024年10月15日15時20分。]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
+![カートを放棄したユーザーをターゲットにするアクションベースのキャンバス。エントリ期間には、ユーザーのローカルタイムゾーンで2024年10月15日午後3時20分が設定されている。]({% image_buster /assets/img/canvas_templates/abandoned_intent2.png %})
 
 ### ステップ 4:キャンバスにエントリするユーザーを決定する
 
@@ -94,7 +94,7 @@ tool: Canvas
 4. 遅延ステップはそのままにしておきます。
 5. オーディエンスパスのステップに続くメッセージのステップでは、ユーザーが受け取るメールとSMSメッセージをカスタマイズする。そこで、パーソナライズされたメッセージングでユーザーに商品の購入を促したい。
 
-![ユーザーが受け取るSMSメッセージのプレビュー："こんにちは、巨大な紙皿をカートに置き忘れたね！今すぐ購入手続きを完了して、おもてなしをレベルアップしましょう。チェックアウト時にコード「MYPLATE」を使用すると、注文が 20％ 割引になります！"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
+![ユーザーが受け取るSMSメッセージのプレビュー："こんにちは、巨大な紙皿をカートに置き忘れたね！今すぐ購入手続きを完了して、おもてなしをレベルアップしましょう。会計時にコード「MYPLATE」を使用すると、注文が20％オフになる！"]({% image_buster /assets/img/canvas_templates/abandoned_intent6.png %})
 
 {: start="6"}
 6. 次のアクションパスステップで、[**購入済み**] アクショングループを選択します。［**特定の購入**] を選択し、製品として ［**Enormous Paper Plate**] を選択します。このステップでは、製品を購入したユーザーを退出させ、これらのユーザーが今後メッセージを受け取らないようにすることで、最初のアクションパスステップをミラーリングします。

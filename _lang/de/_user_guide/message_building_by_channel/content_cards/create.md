@@ -1,8 +1,8 @@
 ---
-nav_title: Erstellen einer Inhaltskarte
-article_title: Erstellen einer Inhaltskarte
+nav_title: Eine Inhaltskarte erstellen
+article_title: Eine Inhaltskarte erstellen
 page_order: 0
-description: "In diesem Referenzartikel erfahren Sie, wie Sie mit Braze Kampagnen und Canvases Content Cards erstellen, zusammenstellen, konfigurieren und versenden."
+description: "In diesem referenzierten Artikel erfahren Sie, wie Sie Content-Cards mit Kampagnen und Canvase von Braze erstellen, zusammenstellen, konfigurieren und versenden."
 tool:
   - Canvas
   - Campaigns
@@ -12,16 +12,16 @@ search_rank: 3.9
 
 ---
 
-# Erstellen einer Inhaltskarte
+# Eine Inhaltskarte erstellen
 
 > Dieser Artikel beschreibt, wie Sie eine Content-Card in Braze erstellen, wenn Sie Kampagnen und Canvase erstellen. Hier führen wir Sie durch die Auswahl eines Nachrichtentyps, das Verfassen Ihrer Karte und die Planung der Zustellung Ihrer Nachricht.
 
 ## Schritt 1: Wählen Sie, wo Sie Ihre Botschaft aufbauen möchten
 
-Sie sind sich nicht sicher, ob Ihre Nachricht mit einer Kampagne oder einem Canvas gesendet werden soll? Kampagnen eignen sich besser für einzelne, einfache Mitteilungskampagnen (z. B. um Benutzer mit einer einzigen Nachricht über ein neues Produkt zu informieren), während Canvases besser für mehrstufige User Journeys geeignet sind (z. B. um maßgeschneiderte Produktvorschläge auf der Grundlage des Benutzerverhaltens im Laufe der Zeit zu versenden).
+Verwenden Sie Kampagnen für einzelne, einfache Messagings (z.B. um Nutzer:innen mit einer Nachricht über ein Produkt zu informieren). Verwenden Sie Canvase für mehrstufige Nutzer:innen (z.B. um maßgeschneiderte Produktvorschläge auf der Grundlage des Nutzer:innenverhaltens im Laufe der Zeit zu versenden).
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 1. Gehen Sie zu **Messaging** > **Kampagnen** und wählen Sie **Kampagne erstellen**.
 2. Wählen Sie **Content-Cards** oder, für Kampagnen, die auf mehrere Kanäle zielen, **Multichannel** aus.
@@ -57,24 +57,24 @@ Wenn Sie mehr über das erwartete Verhalten und das Aussehen der einzelnen Typen
 
 | Nachrichtentyp | Beispiel | Beschreibung |
 |---|---|---|
-|[Klassisch]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Eine klassische Inhaltskarte mit einem kleinen Symbol und einem Text, der zur Buchung eines Trainingskurses anregt.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |Die Classic Card hat ein einfaches Layout mit einem fettgedruckten Titel, einem Nachrichtentext und einem optionalen Bild, das links neben dem Titel und dem Text platziert wird. Für die Classic Card verwenden Sie am besten ein quadratisches Bild oder Symbol. |
-|[Bild mit Bildunterschrift]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Eine Content-Card mit hervorgehobenem Bild eines Gewichthebers und Text, der zur Buchung eines Trainingskurses ermutigt.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | Die hervorgehobene Image-Card präsentiert Ihren Inhalt mit Text und einem aufmerksamkeitsstarken Bild. |
-|[Nur Bild]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Eine Karte mit reinem Bildinhalt und nur Text.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | Die Karte mit reinem Bildinhalt bietet Platz für Bilder, GIFs und andere kreative Nicht-Text-Inhalte. |
+|[Klassisch]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)| ![Eine klassische Content-Card mit einem kleinen Symbol und Text, um Sie zur Buchung eines Trainingskurses anzuregen.]({% image_buster/assets/img_archive/cc_steppington_classic.png %}) |Die Classic Card hat ein einfaches Layout mit einem fettgedruckten Titel, einem Nachrichtentext und einem optionalen Bild, das links neben dem Titel und dem Text platziert ist. Für die Classic Card verwenden Sie am besten ein quadratisches Bild oder Symbol. |
+|[Bild mit Bildunterschrift]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image)| ![Eine Contentful Content-Card mit dem Bild eines Gewichthebers und einem Text, der zur Buchung eines Trainingskurses anregt.]({% image_buster/assets/img_archive/cc_steppington_captioned.png %}) | Die hervorgehobene Image-Card präsentiert Ihren Inhalt mit Text und einem aufmerksamkeitsstarken Bild. |
+|[Nur Bild]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)| ![Eine Image Only Content-Card, die nur Text enthält.]({% image_buster/assets/img_archive/cc_steppington_banner.png %}) | Die Karte mit reinem Bildinhalt bietet Platz für Bilder, GIFs und andere kreative Nicht-Text-Inhalte. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 ## Schritt 3: Content-Card zusammenstellen
 
 Auf der Registerkarte **Verfassen** des Nachrichteneditors können Sie alle Aspekte des Inhalts und Verhaltens Ihrer Nachricht bearbeiten.
 
-![Details der Beispiel-Inhaltskarte auf der Registerkarte Verfassen des Nachrichteneditors.][24]
+![Details der Beispiel-Inhaltskarte auf der Registerkarte Verfassen des Nachrichteneditors.]({% image_buster /assets/img/content_card_compose.png %})
 
 Der Inhalt variiert je nach dem im vorherigen Schritt gewählten **Kartentyp**, kann aber eine der folgenden Optionen enthalten:
 
 #### Sprache
 
-Wählen Sie **Sprachen hinzufügen**, um die gewünschten Sprachen aus der vorgegebenen Liste hinzuzufügen. Dadurch wird [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) in Ihre Nachricht eingefügt. Wählen Sie die Sprachen am besten aus, bevor Sie den Content verfassen, damit Sie den Text dort einfügen können, wo er im Liquid hingehört. Eine vollständige Liste der Sprachen, die Sie verwenden können, finden Sie unter [Unterstützte Sprachen][18].
+Wählen Sie **Sprachen hinzufügen**, um die gewünschten Sprachen aus der vorgegebenen Liste hinzuzufügen. Dadurch wird [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#conditional-logic) in Ihre Nachricht eingefügt. Wählen Sie die Sprachen am besten aus, bevor Sie den Content verfassen, damit Sie den Text dort einfügen können, wo er im Liquid hingehört. Eine vollständige Liste der Sprachen, die Sie verwenden können, finden Sie unter [Unterstützte Sprachen]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
-![Ein Fenster mit den ausgewählten Sprachen Englisch, Spanisch und Französisch sowie Titel, Beschreibung und Linktext, die für die Internationalisierung der Felder ausgewählt wurden.][2]{: style="max-width:70%;"}
+![Ein Fenster mit den ausgewählten Sprachen Englisch, Spanisch und Französisch sowie Titel, Beschreibung und Linktext, die für die Internationalisierung der Felder ausgewählt wurden.]({% image_buster /assets/img/add_languages.png %}){: style="max-width:70%;"}
 
 ##### Erstellen von Nachrichten von rechts nach links
 
@@ -90,15 +90,15 @@ Fügen Sie ein Bild zu Ihrer Inhaltskarte hinzu, indem Sie **Bild hinzufügen** 
 
 #### Oben pinnen
 
-Eine angeheftete Karte wird oben im Feed eines Benutzers angezeigt und kann vom Benutzer nicht abgewählt werden. Wenn mehr als eine Karte im Feed eines Benutzers angeheftet ist, werden die angehefteten Karten in chronologischer Reihenfolge angezeigt. Nachdem eine Karte versendet wurde, können Sie die angeheftete Option nicht mehr rückwirkend aktualisieren. Wenn Sie diese Option nach dem Versand einer Kampagne ändern, wirkt sich dies nur auf zukünftige Sendungen aus.
+Braze zeigt eine gepinnte Karte ganz oben im Feed eines Nutzers an, und der Nutzer:innen kann sie nicht ausblenden. Wenn der Feed eines Nutzers:innen mehrere gepinnte Karten enthält, ordnet Braze sie chronologisch an. Nachdem Sie eine Karte verschickt haben, können Sie die gepinnte Option nicht mehr rückwirkend aktualisieren. Wenn Sie diese Option nach dem Senden einer Kampagne ändern, wirkt sich dies nur auf zukünftige Sendungen aus.
 
-![Side-by-Side-Vorschau der Content-Cards in Braze für Mobilgeräte und Web mit aktivierter Option „Diese Karte oben im Feed pinnen“.][1]{:style="border:none"}
+![Side-by-Side-Vorschau der Content-Cards in Braze für Mobilgeräte und Web mit aktivierter Option „Diese Karte oben im Feed pinnen“.]({% image_buster /assets/img/cc_pin_to_top.png %}){:style="border:none"}
 
 #### On-Click-Verhalten
 
 Wenn Ihr Kunde auf einen in der Karte dargestellten Link klickt, kann Ihr Link ihn entweder tiefer in Ihre App oder auf eine andere Website führen. Wenn Sie ein On-Click-Verhalten für Ihre Content Card wählen, denken Sie daran, Ihren **Linktext** entsprechend zu aktualisieren.
 
-Die folgenden Aktionen sind für Inhaltskarten-Links verfügbar:
+Die folgenden Aktionen sind für Content-Card-Verknüpfungen verfügbar:
 
 | Aktion | Beschreibung |
 |---|---|
@@ -108,32 +108,24 @@ Die folgenden Aktionen sind für Inhaltskarten-Links verfügbar:
 | Angepasstes Attribut protokollieren | Wählen Sie ein [benutzerdefiniertes Attribut]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/), das für den aktuellen Benutzer festgelegt werden soll. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-**Anmerkung**: Die Optionen __Benutzerdefiniertes Ereignis protokollieren__ und __Benutzerdefiniertes Attribut protokollieren__ erfordern die folgende SDK-Versionskompatibilität:
+Die Optionen **Angepasstes Event protokollieren** und **Angepasstes Attribut protokollieren** erfordern die folgende SDK-Versionskompatibilität:
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-{% alert warning %}
-Content-Card.Nachrichtenfelder sind auf eine Gesamtgröße von 2 KB begrenzt, die sich aus der Addition der Byte-Länge der folgenden Felder ergibt: Titel, Nachricht, Bild-URL, Linktext, Link-URL(s) und Schlüssel-Wert-Paare (Namen + Werte). Nachrichten, die diese Größe überschreiten, werden nicht gesendet. Beachten Sie, dass dies nicht die Größe des Bildes einschließt, sondern die Länge der Bild-URL.
-{% endalert %}
-
-{% alert warning %}
-Alle Nutzer:innen können bis zu 250 nicht abgelaufene Content-Cards gleichzeitig in ihrem Feed haben. Wenn dieses Limit überschritten wird, gibt Braze die ältesten Karten nicht mehr zurück, auch wenn sie ungelesen sind. Abgelehnte Karten zählen ebenfalls zu diesem Kartenlimit von 250, d. h. eine hohe Anzahl abgelehnter Karten kann den verfügbaren Platz für neue Karten verringern.
-{% endalert %}
-
 ## Schritt 4: Konfigurieren Sie zusätzliche Einstellungen (optional)
 
-Sie können [Schlüssel-Wert-Paare][19] verwenden, um Kategorien für Ihre Karten zu erstellen, [mehrere Content Card Feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) anzulegen und die Sortierung der Karten anzupassen.
+Sie können [Schlüssel-Wert-Paare]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) verwenden, um Kategorien für Ihre Karten zu erstellen, [mehrere Content Card Feeds]({{site.baseurl}}/developer_guide/customization_guides/content_cards/customizing_feed/#multiple-feeds) anzulegen und die Sortierung der Karten anzupassen.
 
 Um Schlüssel-Wert-Paare zu Ihrer Nachricht hinzuzufügen, gehen Sie auf die Registerkarte **Einstellungen** und wählen Sie **Neues Paar hinzufügen**.
 
 ## Schritt 5: Erstellen Sie den Rest Ihrer Kampagne oder Ihres Canvas
 
 {% tabs %}
-{% tab Kampagne %}
+{% tab Campaign %}
 
 Bauen Sie den Rest Ihrer Kampagne auf. In den nächsten Abschnitten erfahren Sie mehr darüber, wie Sie unsere Tools zur Erstellung von Content Cards am besten einsetzen.
 
-#### Wählen Sie einen Zeitplan für die Zustellung oder triggern Sie
+#### Wählen Sie einen Zustellungszeitplan oder einen Auslöser
 
 Content-Cards können auf der Grundlage eines Zeitplans, einer Aktion oder eines API-Triggers zugestellt werden. Mehr dazu erfahren Sie unter [Planen Ihrer Kampagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/).
 
@@ -147,11 +139,13 @@ Die Frequenzbegrenzung gilt nicht für Inhaltskarten.
 
 Für Content-Card-Kampagnen mit geplanter Zustellung können Sie festlegen, wann Braze die Eignung der Zielgruppe und die Personalisierung für neue Content-Card-Kampagnen bewertet, indem Sie angeben, wann die Karte erstellt wird. Mehr dazu erfahren Sie unter [Kartenerstellung]({{site.baseurl}}/card_creation).
 
-#### Wählen Sie Benutzer als Zielgruppe aus
+#### Zielgruppe auswählen
 
-Als nächstes können Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) durch Segmente oder Filter zusammenstellen, um Ihre Zielgruppe einzugrenzen. Sie erhalten automatisch einen Überblick über die ungefähre Zusammensetzung dieses Segments. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer erst kurz vor dem Versand der Nachricht berechnet wird.
+Als nächstes können Sie [Nutzer:innen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) durch Segmente oder Filter zusammenstellen, um Ihre Zielgruppe einzugrenzen. Sie erhalten automatisch eine Vorschau darauf, wie diese ungefähre Segmentpopulation aussieht. Denken Sie daran, dass die genaue Segmentzugehörigkeit immer berechnet wird, bevor die Nachricht gesendet wird.
 
-#### Wählen Sie Konversions-Events aus
+{% multi_lang_include target_audiences.md %}
+
+#### Wählen Sie Konversionsereignisse aus
 
 Mit Braze können Sie nachverfolgen, wie oft Benutzer nach Erhalt einer Kampagne bestimmte Aktionen, d.h. [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/), durchführen. Sie haben die Möglichkeit, ein Zeitfenster von bis zu 30 Tagen zuzulassen, in dem eine Konversion gezählt wird, wenn der Nutzer:innen die angegebene Aktion durchführt.
 
@@ -166,7 +160,7 @@ Falls noch nicht geschehen, füllen Sie die restlichen Abschnitte der Canvas-Kom
 
 ## Schritt 6: Überprüfen und einsetzen
 
-Nachdem Sie den letzten Teil Ihrer Kampagne oder Ihres Canvas erstellt haben, überprüfen Sie die Details, [testen Sie sie]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) und senden Sie sie, wenn Sie bereit sind.
+Nachdem Sie den letzten Teil Ihrer Kampagne oder Ihres Canvas erstellt haben, überprüfen Sie die Details, [testen Sie sie]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) und senden Sie sie, wenn Sie bereit sind.
 
 {% alert warning %}
 Nachdem eine Content-Card gestartet wurde, kann sie nicht mehr bearbeitet werden. Sie können nur den Versand an neue Nutzer unterbinden und sie aus den Feeds der Nutzer entfernen. Lesen Sie den Abschnitt [Aktualisierung der gesendeten Karten]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/#updating-launched-cards), um zu verstehen, wie Sie dieses Szenario angehen können.
@@ -176,39 +170,49 @@ Sehen Sie sich als nächstes die [Content Card-Berichterstattung]({{site.baseurl
 
 ## Was Sie wissen sollten
 
+### Größenbeschränkungen für Content-Cards
+
+Die Größe einer Content-Card-Nutzlast kann nach dem Liquid-Rendering bis zu 2 KB betragen. Dazu gehören der **Titel**, die **Nachricht**, die **Bild-URL**, der **Linktext**, die **Link-URL(s)** und die **Schlüssel-Wert-Paare** (Namen und Werte). Dieses Limit bezieht sich jedoch nicht auf die Größe des Bildes, sondern nur auf die Länge der Bild-URL.
+
+{% alert important %}
+Nachrichten, die größer als 2 KB sind, werden nicht gesendet. Während der Testsendungen können Content-Cards, die größer als 2 KB sind, noch zugestellt und korrekt angezeigt werden.
+{% endalert %}
+
+### Anzahl der Karten im Feed
+
+Alle Nutzer:innen können bis zu 250 nicht abgelaufene Content-Cards gleichzeitig in ihrem Feed haben. Wenn dieses Limit überschritten wird, gibt Braze die ältesten Karten nicht mehr zurück, auch wenn sie ungelesen sind. Abgeworfene Karten zählen ebenfalls zu diesem Limit, d.h. eine hohe Anzahl an abgeworfenen Karten kann den Platz für neue Karten verringern.
+
 ### Verhalten beim Senden
 
-Nachdem die Content Cards versendet wurden, warten sie in einem "Posteingang" darauf, dem Benutzer zugestellt zu werden (ähnlich wie bei E-Mails). Nachdem der Content in die Content-Card gezogen wurde (zum Zeitpunkt der Anzeige), kann er während seiner Lebensdauer nicht mehr geändert werden. Das gilt auch, wenn Sie eine API über Connected-Content aufrufen und sich die Daten des Endpunkts ändern. Diese Daten werden nicht mehr aktualisiert. Sie können nur den Versand an neue Nutzer unterbinden und sie aus den Feeds der Nutzer entfernen. Wenn Sie eine Kampagne ändern, werden nur zukünftige Karten, die verschickt werden, aktualisiert.
+Nachdem Braze Content-Cards versendet hat, liegen sie in einem "Posteingang" bereit, um dem Nutzer:innen zugestellt zu werden (ähnlich wie E-Mails). Nachdem Braze zum Zeitpunkt der Anzeige Inhalte in die Content-Card gezogen hat, ändert sich der Inhalt während der Lebensdauer der Karte nicht mehr. Dazu gehören auch API-Aufrufe über Connected-Content, wenn sich die Daten des Endpunkts ändern. Braze aktualisiert diese Daten nicht. Sie können nur den Versand neuer Karten einstellen und bestehende Karten aus den Feeds entfernen. Wenn Sie eine Kampagne ändern, wird das Update nur auf zukünftigen Karten angezeigt.
 
-Wenn Sie alte Karten entfernen möchten, müssen Sie zunächst die Kampagne beenden. Um eine Kampagne zu beenden, öffnen Sie Ihre Content-Card-Kampagne und wählen Sie **Kampagne beenden** aus. Wenn Sie die Kampagne stoppen, müssen Sie entscheiden, wie Sie mit Nutzern verfahren, die Ihre Karte bereits erhalten haben. 
+Wenn Sie alte Karten entfernen möchten, müssen Sie zunächst die Kampagne beenden. Um eine Kampagne zu beenden, öffnen Sie Ihre Content-Card-Kampagne und wählen Sie **Kampagne beenden** aus. Wenn Sie die Kampagne stoppen, müssen Sie entscheiden, wie Sie mit Nutzer:innen umgehen, die Ihre Karte bereits erhalten haben. 
 
 Wenn Sie die Content Card aus den Feeds Ihrer Benutzer entfernen möchten, wählen Sie **Karte aus Feed entfernen**. Die Karte wird dann bei der nächsten Synchronisierung vom SDK versteckt.
 
-![Dialogfeld zum Bestätigen der Deaktivierung von Content-Cards][25]{: style="max-width:75%" }
+![Dialogfeld zum Bestätigen der Deaktivierung von Content-Cards]({% image_buster /assets/img/cc_remove.png %}){: style="max-width:75%" }
 
 {% alert tip %}
-Möchten Sie, dass Ihre Content Cards den Eindruck erwecken, dass sie länger als die maximal zulässigen 30 Tage gültig sind? Eine Möglichkeit, dies zu erreichen, besteht darin, Folgendes zu tun:<br><br>
-
-1. Legen Sie die Dauer der Content-Card auf 30 Tage fest.
-2. Leggen Sie die erneute Qualifizierung der Kampagne auf 30 Tage fest.
-3. Stellen Sie die Kampagne so ein, dass sie bei „Sitzungsbeginn“ getriggert wird.
+Möchten Sie, dass Ihre Inhalte länger als 30 Tage verfügbar sind? Versuchen Sie es mit [Bannern]({{site.baseurl}}/user_guide/message_building_by_channel/banners).
 {% endalert %}
 
 ### Events zum Entfernen von Karten {#action-based-card-removal}
 
-Einige Content-Cards sind nur so lange relevant, bis ein Nutzer:innen eine Aktion ausführt. Eine Karte, die Nutzer:innen auffordert, ihr Konto zu aktivieren, sollte zum Beispiel nicht mehr angezeigt werden, nachdem der Nutzer:in diese Onboarding-Aufgabe eingestiegen ist.
+Einige Content-Cards sind nur relevant, bis ein Nutzer:innen eine Aktion ausführt. Eine Karte, die Nutzer:innen auffordert, ihr Konto zu aktivieren, sollte zum Beispiel nicht mehr angezeigt werden, nachdem der Nutzer:in diese Onboarding-Aufgabe eingestiegen ist.
 
-Innerhalb einer Kampagne oder Canvas-Nachricht können Sie optional ein **Entfernungsereignis** hinzufügen, um festzulegen, welche benutzerdefinierten Ereignisse oder Käufe dazu führen sollen, dass zuvor gesendete Karten aus dem Feed des Benutzers entfernt werden - ausgelöst durch das SDK oder die REST API.
+Innerhalb einer Kampagne oder einer Canvas-Nachricht können Sie optional ein **Removal Event** hinzufügen, um festzulegen, welche angepassten Events oder Käufe dazu führen sollen, dass zuvor gesendete Karten aus dem Feed des Benutzers entfernt werden, ausgelöst durch das SDK oder die REST API.
+
+Braze entfernt die Karten bei nachfolgenden Aktualisierungen, nachdem es das angegebene Ereignis verarbeitet hat.
 
 {% alert tip %}
 Sie können mehrere benutzerdefinierte Ereignisse und Käufe angeben, die eine Karte aus dem Feed eines Benutzers entfernen sollen. Wenn der Benutzer **eine** dieser Aktionen durchführt, werden alle vorhandenen Karten, die von den Karten der Kampagne gesendet wurden, entfernt. Alle zukünftigen Karten, die in Frage kommen, werden weiterhin gemäß dem Zeitplan der Nachricht verschickt.
 {% endalert %}
 
-![Fenster „Bedingungen für das Entfernen von Content-Cards“ mit der Option „Event zum Entfernen von Content-Cards“.]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Panel "Bedingungen für die Entfernung von Content-Cards" mit der Option "Ereignis für die Entfernung von Content-Cards".]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
 ### Aktualisieren der gestarteten Karten
 
-Inhaltskarten können nach dem Versenden nicht mehr bearbeitet werden. Wenn Sie feststellen, dass Sie Änderungen an bereits versendeten Karten vornehmen müssen, sollten Sie die [Wiederzulassung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) in Betracht ziehen, wie in den folgenden Optionen beschrieben.
+Sie können Content-Cards nicht mehr bearbeiten, nachdem Sie sie gesendet haben. Wenn Sie gesendete Karten ändern müssen, sollten Sie die [Wiederzulassung von Kampagnen]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/reeligibility/) mit den folgenden Optionen in Betracht ziehen.
 
 {% alert note %}
 Wenn eine Content-Card wieder zugelassen wird, kann sie erneut gesendet werden, wenn sich die ursprüngliche Karte noch in der App eines Nutzers:innen befindet. Um doppelte Karten in der App eines Nutzers zu vermeiden, können Sie die Wiederzulassung deaktivieren oder das Wiederzulassungsfenster verlängern, so dass Nutzer:innen erst dann eine neue Karte erhalten, wenn die ursprüngliche abgelaufen ist.
@@ -218,19 +222,19 @@ Beachten Sie auch, dass Content-Cards, die [bei der ersten Impression]({{site.ba
 
 #### Option 1: Duplizieren der Kampagne
 
-Eine Möglichkeit besteht darin, die Kampagne zu archivieren und aktive Karten aus dem Feed zu entfernen. Dann können Sie die Kampagne duplizieren und mit Aktualisierungen starten, damit alle berechtigten Nutzer die aktualisierten Karten erhalten.
+Eine Möglichkeit besteht darin, die Kampagne zu archivieren und aktive Karten aus dem Feed zu entfernen. Dann können Sie die Kampagne duplizieren und mit Updates starten, damit alle berechtigten Nutzer:innen die aktualisierten Karten erhalten.
 
 * Wenn Benutzer nie wieder für eine Content Card in Frage kommen sollen, können Sie nach Benutzern filtern, die die vorherige Version der Content Card nicht erhalten haben, indem Sie den Filter `Received Message from Campaign` auf die Bedingung `Has Not` setzen.
 * Wenn Benutzer, die die vorherige Karte erhalten haben, in X Tagen wieder berechtigt sein sollten, können Sie den Filter für `Last Received Message from specific campaign` auf vor mehr als X Tagen **ODER** `Received Message from Campaign` mit der Bedingung `Has Not` setzen.
 
 ##### Anwendungsfall
 
-Nehmen wir an, Sie haben eine Kampagne so eingestellt, dass sie durch den Beginn einer Sitzung ausgelöst wird und die Wiederzulässigkeit auf 30 Tage eingestellt ist. Ein Benutzer hat die Kampagne vor zwei Tagen erhalten, und Sie möchten die Kopie ändern. Zuerst würden Sie die Kampagne archivieren und die Karten aus dem Feed entfernen. Zweitens würden Sie die Kampagne duplizieren und mit der neuen Kopie neu starten. Wenn der oder die Nutzer:in eine weitere Sitzung hat, erhält er oder sie sofort die neue Karte.
+Nehmen wir an, Sie haben eine Kampagne so eingestellt, dass sie durch den Beginn einer Sitzung getriggert wird, und die Wiederzulässigkeit ist auf 30 Tage eingestellt. Ein Benutzer hat die Kampagne vor zwei Tagen erhalten, und Sie möchten die Kopie ändern. Zunächst würden Sie die Kampagne archivieren und die Karten aus dem Feed entfernen. Zweitens würden Sie die Kampagne duplizieren und mit der neuen Kopie neu starten. Wenn der oder die Nutzer:in eine weitere Sitzung hat, erhält er oder sie sofort die neue Karte.
 
 ##### Impact
 
-* **Berichterstattung:** Jede Version der Karte würde eine eigene Analyse haben.
-* **Bestehende Empfänger:** Neue und bestehende Empfänger sehen die aktualisierte Karte bei der nächsten Aktualisierung des Feeds, wenn sie dazu berechtigt sind.
+* **Berichterstattung:** Jede Kartenversion verfügt über eigene Analytics.
+* **Bestehende Empfänger:** Neue und bestehende Empfänger:innen sehen die aktualisierte Karte bei der nächsten Aktualisierung des Feeds, wenn sie dazu berechtigt sind.
 
 {% alert tip %}
 Wir empfehlen diese Option für Nachrichten, in denen Sie den neuesten Inhalt der Karte anzeigen (z. B. Homepage-Banner), Änderungen sofort angezeigt werden müssen oder wenn die Wiederzulassung deaktiviert ist.
@@ -238,14 +242,14 @@ Wir empfehlen diese Option für Nachrichten, in denen Sie den neuesten Inhalt de
 
 #### Option 2: Anhalten und neu starten
 
-Wenn für eine Karte die erneute Qualifizierung aktiviert ist, können Sie sich dafür entscheiden:
+Wenn für eine Karte die Wiederzulassung aktiviert ist, können Sie das tun:
 
 1. Stoppen Sie Ihre Kampagne.
 2. Entfernen Sie aktive Content Cards aus den Feeds der Benutzer.
 3. Bearbeiten Sie Ihre Kampagne nach Bedarf.
 4. Starten Sie Ihre Kampagne neu.
 
-Bei diesem Ansatz erhalten neu berechtigte Nutzer die neue Karte und bisherige Empfänger die neue Karte, wenn sie wieder berechtigt sind.
+Bei diesem Ansatz erhalten neu berechtigte Nutzer:innen die neue Karte, und bisherige Empfänger:innen erhalten die neue Karte, wenn sie wieder berechtigt sind.
 
 ##### Anwendungsfall
 
@@ -253,20 +257,14 @@ Nehmen wir an, Sie haben eine Kampagne, die durch den Beginn einer Sitzung ausge
 
 ##### Impact
 
-* **Berichterstattung:** Eine Kampagne enthält alle Reporting Analytics für die gestarteten Kartenversionen. Braze unterscheidet nicht zwischen den eingeführten Versionen.
-* **Bestehende Empfänger:** Benutzer, die die Karte bereits erhalten haben, würden die aktualisierten Karten erst dann erhalten, wenn sie wieder förderfähig werden. Wenn die erneute Qualifizierung deaktiviert ist, würden sie die neue Karte nie erhalten.
+* **Berichterstattung:** Eine Kampagne enthält alle Analytics für alle gestarteten Kartenversionen. Braze macht keinen Unterschied zwischen den Versionen.
+* **Bestehende Empfänger:** Nutzer:innen, die die Karte bereits erhalten haben, erhalten erst dann ein Update, wenn sie wieder berechtigt sind. Wenn die Wiederzulassung deaktiviert ist, erhalten sie die neue Karte nie.
 
 {% alert tip %}
-Wir empfehlen diese Option für einmalige Nachrichten in einer Mitteilungszentrale oder im Posteingang (z. B. Werbeaktionen), wenn es wichtig ist, dass die Analysen einheitlich sind, oder wenn die Aktualität der Nachricht keine Rolle spielt (z. B. wenn bestehende Empfänger auf das Berechtigungsfenster warten können, bevor sie die aktualisierten Karten sehen).
+Wir empfehlen diese Option für eindeutige Nachrichten in einer Mitteilungszentrale oder im Posteingang (z.B. Aktionen), wenn es wichtig ist, dass die Analytics einheitlich sind, oder wenn die Aktualität der Nachricht keine Rolle spielt (z.B. wenn bestehende Empfänger:innen auf das Berechtigungsfenster warten können, bevor sie die aktualisierten Karten sehen).
 {% endalert %}
 
 #### Aufbewahren der Karten in den Nutzer-Feeds
 
-Falls gewünscht, können Sie eine aktive Content-Card-Kampagne in den Feeds der Nutzer:innen beibehalten und sie nicht entfernen. Wenn die Live-Kampagne bearbeitet wird, ist die vorherige, unbearbeitete Version der Kampagnenkarte immer noch live, und nur Benutzer, die die Kriterien nach der Bearbeitung erfüllen, sehen die neue Version. Benutzer, die bereits mit der Kampagne in Berührung gekommen sind, sehen jedoch möglicherweise zwei Versionen der Karte.
+Wenn Sie möchten, können Sie eine aktive Content-Card-Kampagne in den Feeds der Nutzer:innen beibehalten und sie nicht entfernen. Wenn die Live-Kampagne bearbeitet wird, ist die vorherige, unbearbeitete Version der Kampagnenkarte immer noch live, und nur Nutzer:innen, die die Kriterien nach den Bearbeitungen erfüllen, sehen die neue Version. Benutzer, die bereits mit der Kampagne in Berührung gekommen sind, sehen jedoch möglicherweise zwei Versionen der Karte.
 
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
-[19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img/content_card_compose.png %}
-[25]: {% image_buster /assets/img/cc_remove.png %}
-[1]: {% image_buster /assets/img/cc_pin_to_top.png %}
-[2]: {% image_buster /assets/img/add_languages.png %}

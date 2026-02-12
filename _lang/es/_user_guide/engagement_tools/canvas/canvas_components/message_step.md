@@ -11,9 +11,9 @@ tool: Canvas
 
 # Mensaje 
 
-> Los pasos de mensaje te permiten añadir un mensaje independiente donde quieras en tu Flujo del lienzo.
+> Los pasos de mensajería te permiten añadir un mensaje independiente donde quieras en tu Canvas.
 
-![Un paso de mensaje llamado "Promoción almuerzo" utilizando el canal push.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![Un paso de Mensaje llamado "Promoción almuerzo" utilizando el canal push.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
 ## Crear un mensaje
 
@@ -22,16 +22,17 @@ Para crear un componente Mensaje, añade primero un paso a tu Canvas. Arrastra y
 ### Paso 1: Selecciona tu canal de mensajería
 
 Puedes seleccionar uno de los siguientes canales de mensajería: 
+- Banners (en acceso anticipado)
 - Tarjetas de contenido
 - Correo electrónico
 - LINE
 - Notificaciones push
 - SMS/MMS/RCS
-- Mensajes dentro de la aplicación 
+- Mensajes dentro de la aplicación
 - Webhook
 - WhatsApp
 
-![Una lista de canales de mensajería disponibles para seleccionar en el paso Mensaje.]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![Una lista de los canales de mensajería disponibles para seleccionar en el paso Mensaje.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
 ### Paso 2: Editar la configuración de entrega
 
@@ -47,7 +48,7 @@ Seleccione **Utilizar sincronización inteligente** en la pestaña **Configuraci
 
 Las validaciones de entrega proporcionan una comprobación adicional para confirmar que su público cumple los criterios de entrega en el envío del mensaje. Este ajuste se recomienda si están activadas las horas de silencio, la temporización inteligente o la limitación de velocidad. Puede añadir un segmento o filtros adicionales para validar en el momento del envío del mensaje. Si un usuario no cumple las validaciones de entrega establecidas para un paso de Mensaje, saldrá del Canvas en el paso.
 
-![La pestaña Configuración de entrega para la configuración del componente Mensaje. Las horas de silencio están activadas y la casilla de verificación Utilizar sincronización inteligente está seleccionada para enviar el mensaje a una hora óptima. Se habilitan las validaciones de entrega para validar la audiencia en el envío del mensaje.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
+![La pestaña Configuración de entrega para la configuración del componente Mensaje. Las horas de silencio están activadas y la casilla de verificación Utilizar sincronización inteligente está seleccionada para enviar el mensaje a una hora óptima. Las validaciones de entrega se activan para validar la audiencia en el envío del mensaje.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
 ## Cómo avanzan los usuarios
 
@@ -96,9 +97,9 @@ En el primer paso de Mensaje que sigue a una Ruta de Acción, puede utilizar `ev
 No puedes utilizar `event_properties` en el paso Mensaje principal. En su lugar, debe utilizar `canvas_entry_properties` o añadir un paso Rutas de acción con el evento correspondiente antes del paso Mensaje que incluye `event_properties`.
 {% endalert %}
 
-{% details Ampliar para el editor Canvas original %}
+{% details Expand for original Canvas editor %}
 
-A partir del 28 de febrero de 2023, ya no podrás crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible sólo como referencia.
+Ya no puedes crear o duplicar Lienzos utilizando el editor original. Esta sección está disponible sólo como referencia.
 
 - `event_properties` no puede utilizarse en pasos completos programados. Sin embargo, puede utilizar `event_properties` en el primer paso completo de un Canvas basado en acciones, incluso si el paso completo está programado.
 - `canvas_entry_properties` sólo puede referenciarse en el primer paso completo de un Canvas.

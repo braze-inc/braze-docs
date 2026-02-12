@@ -1,7 +1,7 @@
 ---
-nav_title: Seguimiento de clic
+nav_title: Seguimiento de clics
 article_title: Seguimiento de clic
-page_order: 2
+page_order: 3
 description: "Este artículo de referencia explica cómo activar el seguimiento de clics en tus mensajes de WhatsApp, probar los enlaces acortados, utilizar tu dominio personalizado en los enlaces rastreados y mucho más."
 page_type: reference
 alias: "/whatsapp_click_tracking/"
@@ -18,6 +18,10 @@ channel:
 El seguimiento de clics te permite medir cuándo alguien pulsa un enlace en tu mensaje de WhatsApp, dándote una visión clara de qué contenido está generando interacción. Braze acorta tus URL, añade seguimiento entre bastidores y registra los clics en el momento en que se producen.
 
 Puedes activar el seguimiento de clics tanto en los mensajes de respuesta como en los de plantilla. Funciona con enlaces en botones y cuerpo de texto, y admite URL personalizadas y dominios personalizados. Una vez activada, verás los datos de clics en tus informes de rendimiento de WhatsApp y podrás segmentar a los usuarios en función de quién hizo clic en qué.
+
+{% alert note %}
+El seguimiento de los clics no funciona con los vínculos en profundidad. Puedes acortar enlaces universales de proveedores como Branch o Appsflyer, pero Braze no puede solucionar los problemas que puedan surgir al hacerlo (como romper la atribución o provocar una redirección).
+{% endalert %}
 
 ## Cómo funciona
 
@@ -49,7 +53,7 @@ Para los mensajes de plantilla, la URL base debe enviarse correctamente al crear
 
 Al componer, Braze detectará automáticamente qué plantillas tienen dominios URL compatibles, tanto en el cuerpo del texto como en los botones CTA. El estado se mostrará en la parte inferior de la plantilla. 
 
-![Sección "Estado del enlace" que muestra un estado activo para el seguimiento de los clics.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
+![La sección "Estado del enlace" muestra un estado activo para el seguimiento de los clics.]({% image_buster /assets/img/whatsapp/click_tracking/link_status.png %}){: style="max-width:70%;"}
 
 - **Enlaces compatibles:** Los enlaces que se envíen con la URL base coincidente tendrán habilitado el seguimiento de clics.
 - **Enlaces con soporte parcial:** Si algunos enlaces de una plantilla se envían como URL completas, el seguimiento de clics **no** se aplicará a esos enlaces.
@@ -57,9 +61,9 @@ Al componer, Braze detectará automáticamente qué plantillas tienen dominios U
 
 Tendrás que indicar la URL de destino para cualquier enlace con una URL base que coincida con `brz.ai` o con tu dominio personalizado. 
 
-![Sección "Botones" con campos para el nombre de un botón, la URL del sitio web y la URL de seguimiento de los clics.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
+![Sección "Botones" con campos para el nombre del botón, la URL del sitio web y la URL de seguimiento de los clics.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md section='Dominios personalizados' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## Personalización líquida en las URL
 
@@ -111,15 +115,11 @@ Puedes utilizar el filtro `Clicked/Opened Step` y la interacción `clicked track
 
 ![Filtrar grupo con un filtro para "enlace de WhatsApp de seguimiento pulsado".]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
-{% multi_lang_include click_tracking.md section='Preguntas frecuentes' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### ¿Sé qué usuarios individuales hacen clic en una URL?
 
 Sí. Cuando el seguimiento de clics está activado (o habilitado según la configuración de la plantilla), puedes reorientar a los usuarios que han hecho clic en URL aprovechando los filtros de reorientación de WhatsApp o los eventos de clic de WhatsApp (`users.messages.whatsapp.Click`) enviados por Currents.
-
-### ¿Funciona el seguimiento de clics con vínculos profundos o universales?
-
-El seguimiento de los clics no funciona con los vínculos en profundidad. Puedes acortar enlaces universales de proveedores como Branch o Appsflyer, pero Braze no puede solucionar los problemas que puedan surgir al hacerlo (como romper la atribución o provocar una redirección).
 
 ### ¿Las vistas previas en el dispositivo de WhatsApp cuentan como clics? 
 

@@ -14,7 +14,7 @@ tool: Campaigns
 
 ### ¿Cómo creo una campaña multicanal?
 
-Para crear una campaña multicanal, selecciona **Mensajería** > Campañas. A continuación, selecciona **Crear campaña** > **Multicanal**. Desde aquí, puedes seleccionar uno de los siguientes canales de mensajería: Tarjetas de contenido, correo electrónico, LINE, notificaciones push, SMS/MMS/RCS, webhook, o WhatsApp.
+Para crear una campaña multicanal, selecciona **Mensajería** > Campañas. A continuación, selecciona **Crear campaña** > **Multicanal**. Desde aquí, puedes seleccionar uno de los siguientes canales de mensajería: Tarjetas de contenido, correo electrónico, LINE, notificaciones push, SMS/MMS/RCS, webhook o WhatsApp.
 
 ### ¿Puedo añadir un grupo de control a mi campaña multicanal?
 
@@ -37,6 +37,12 @@ Por defecto, las campañas comprueban los filtros de audiencia en el momento de 
 Una posible explicación podría ser que la campaña o Canvas tenga activada la re-elegibilidad, lo que significa que los usuarios elegibles para el segmento y la configuración de entrega podrán recibir el mensaje más de una vez. Si la reelegibilidad no está activada, la explicación probable de la diferencia entre los envíos y los destinatarios únicos puede deberse a que los usuarios tienen varios dispositivos, en distintas plataformas, asociados a sus perfiles. 
 
 Por ejemplo, si tienes un Canvas con notificaciones push tanto para iOS como para la web, un usuario determinado con dispositivos móviles y de escritorio podría recibir más de un mensaje.
+
+### ¿Por qué el número de conversiones puede superar al número de usuarios únicos en las campañas multicanal?
+
+Para las campañas multicanal, Braze cuenta las conversiones por canal, no por usuario. Cuando un usuario realiza una única acción de conversión dentro de la ventana de conversión, Braze atribuye esa conversión a cada canal del que el usuario recibió un mensaje. Esto significa que si un usuario recibe mensajes en varios canales (por ejemplo, tanto correo electrónico como push) y se convierte, Braze cuenta varias conversiones, una por cada canal. Como resultado, el recuento total de conversiones puede superar el número de usuarios únicos que convirtieron.
+
+Por ejemplo, si una campaña multicanal envía tanto un correo electrónico como una notificación push a un usuario, y ese usuario realiza una acción de conversión después de recibir ambos mensajes y dentro de la ventana de conversión, Braze cuenta esto como dos conversiones, una atribuida al correo electrónico y otra atribuida al push, aunque se trate de una única acción del mismo usuario.
 
 ### ¿Por qué mi campaña tiene una base de usuarios alcanzable menor que el segmento que estoy utilizando para la campaña?
 
@@ -76,7 +82,7 @@ Otro ejemplo: cree dos campañas programadas para enviarse el mismo día, una po
 
 Cuando programes una campaña, elige enviarla a una hora determinada y luego selecciona **Enviar campaña a los usuarios de su zona horaria local**.
 
-Braze recomienda encarecidamente que todas las campañas de zonas horarias locales se programen con 24 horas de antelación. Dado que una campaña de este tipo debe enviarse durante todo un día, programarla con 24 horas de antelación garantiza que tu mensaje llegará a todo tu segmento. Sin embargo, puedes programar estas campañas con menos de 24 horas de antelación si es necesario. Ten en cuenta que Braze no enviará mensajes a ningún usuario que haya incumplido la hora de envío en más de 1 hora. 
+Braze recomienda encarecidamente que todas las campañas de zonas horarias locales se programen con 24 horas de antelación. Dado que una campaña de este tipo debe enviarse a lo largo de todo un día, programarla con 24 horas de antelación garantiza que tu mensaje llegará a todo tu segmento. Sin embargo, puedes programar estas campañas con menos de 24 horas de antelación si es necesario. Ten en cuenta que Braze no enviará mensajes a los usuarios que hayan incumplido la hora de envío en más de 1 hora. 
 
 Por ejemplo, si es la 1 de la tarde y programa una campaña de zona horaria local para las 3 de la tarde, la campaña se enviará inmediatamente a todos los usuarios cuya hora local esté entre las 3 y las 4 de la tarde, pero no a los usuarios cuya hora local sea las 5 de la tarde. Además, la hora de envío que elija para su campaña tiene que no haber ocurrido todavía en la zona horaria de su empresa.
 
@@ -137,6 +143,14 @@ Al seleccionar la opción **CSV Exportar direcciones de correo electrónico** s�
 
 Sí, utilice el filtro `api_id:YOUR_API_ID` en la página **Campañas** para buscar una campaña por su identificador API. Consulte la [búsqueda de campañas]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/) para obtener más información.
 
+### ¿Por qué los espacios en blanco aparecen de forma diferente en los campos de entrada que en el texto mostrado? 
+
+El manejo de los espacios en blanco difiere entre los campos de entrada y los componentes de texto mostrados debido al estilo CSS. En los componentes de texto con el CSS predeterminado `white-space: normal`, varios espacios consecutivos se contraen en un solo espacio al mostrarse. Este es el comportamiento estándar de HTML para el texto renderizado. 
+
+Los campos de entrada conservan los espacios múltiples exactamente como los introduces, porque necesitas ver y editar el espaciado exacto para una entrada de datos precisa. Esto significa que el texto con varios espacios puede aparecer de forma diferente cuando se visualiza en un campo de entrada (donde se conservan todos los espacios) y cuando se muestra en otras partes del panel (donde CSS puede contraer varios espacios). 
+
+Por ejemplo, si introduces un nombre de campaña o un parámetro UTM con varios espacios en un campo de entrada, verás que se conservan todos los espacios. Sin embargo, cuando ese mismo texto aparece en resultados de búsqueda, listas de campaña u otros componentes de texto, varios espacios pueden aparecer como un único espacio debido a la gestión de espacios en blanco de CSS. 
+
 ### ¿Cuál es la diferencia entre las campañas API y las campañas desencadenadas por API?
 
 Las campañas desencadenadas por API te permiten gestionar la copia de la campaña, las pruebas multivariantes y las reglas de reelegibilidad dentro del panel de Braze, a la vez que desencadenan la entrega de ese contenido desde tus propios servidores y sistemas. Estos mensajes también pueden incluir datos adicionales que se incluirán en plantillas en los mensajes en tiempo real.
@@ -169,6 +183,6 @@ Las campañas activadas por API y por servidor son ideales para gestionar transa
 
 | Beneficios | Consideraciones | 
 | ---- | ---- |
-| \- No consume puntos de datos<br><br>\- Los elementos de personalización se incluyen en las propiedades de la carga útil JSON | \- No permite crear un segmento de usuarios elegibles para el mensaje en las propiedades de la carga útil JSON.<br><br>\- No se pueden ver las cargas útiles JSON entrantes con el **registro de actividad de mensajes**|
+| \- No registra puntos de datos<br><br>\- Los elementos de personalización se incluyen en las propiedades de la carga útil JSON | \- No permite crear un segmento de usuarios elegibles para el mensaje en las propiedades de la carga útil JSON.<br><br>\- No se pueden ver las cargas útiles JSON entrantes con el **registro de actividad de mensajes**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

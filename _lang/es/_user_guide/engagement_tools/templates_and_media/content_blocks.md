@@ -26,7 +26,7 @@ Con los bloques de contenido, puede:
 Existen dos tipos de editores para crear un bloque de contenido: el clásico y el de arrastrar y soltar. Estos dos tipos de editores corresponden al tipo de Bloque de Contenido: HTML y arrastrar y soltar. También puedes crear y gestionar tus bloques de contenido [utilizando la API]({{site.baseurl}}/api/endpoints/templates/).
 
 {% tabs %}
-{% tab Arrastrar y soltar %}
+{% tab Drag-and-drop %}
 
 {% multi_lang_include create_content_block.md location="dnd" %}
 
@@ -45,7 +45,7 @@ Existen dos tipos de editores para crear un bloque de contenido: el clásico y e
 | Apellidos | Campo obligatorio con un máximo de 100 caracteres. No se puede cambiar el nombre después de guardar el bloque de contenido. Además, no puede asignar a un nuevo Bloque de contenido el mismo nombre que a un Bloque de contenido anterior, aunque el anterior se haya archivado. |
 | Descripción | (opcional) Máximo 250 caracteres. Describa el Bloque de contenido para que otros usuarios de Braze sepan para qué sirve y dónde se utiliza. |
 | Tamaño del contenido | Máximo de 50 KB. |
-| Colocación | Los bloques de contenido no pueden utilizarse en el pie de página de un correo electrónico. |
+| Colocación | Los bloques de contenido no pueden utilizarse dentro de un pie de página de correo electrónico, pero puedes [crear un bloque de contenido que incluya un pie de página](#email-footers) para utilizarlo en tus correos electrónicos. |
 | Creación | Editor HTML o editor de arrastrar y soltar. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -80,7 +80,7 @@ Si quieres actualizar un Content Block para un solo mensaje o hacer una copia pa
 
 Después de editar un bloque de contenido, puedes guardar e iniciar el bloque de contenido actualizado seleccionando **Iniciar bloque de contenido**. También puede seleccionar **Más** > **Duplicar** para crear un duplicado de su Bloque de contenido.
 
-![Un bloque de contenido que dice "Bienvenido a nuestro boletín".]({% image_buster /assets/img/copy-content-block.png %})
+![Un bloque de contenido que diga "Bienvenido a nuestro boletín".]({% image_buster /assets/img/copy-content-block.png %})
 
 También puede [duplicar]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) un Bloque de contenido. Esto crea una copia borrador del Bloque de Contenido.
 
@@ -90,7 +90,7 @@ Después de añadir un Bloque de Contenido en una campaña o Lienzo activo, pued
 
 Esta vista previa incluye información sobre el bloque de contenido, como quién lo creó, etiquetas, fecha de creación, fecha de la última edición, descripción, tipo de editor, recuento de inclusiones con detalles y una vista previa real del bloque de contenido.
 
-![Una vista previa de un bloque de contenido "Workout_Promo" para ciclismo y baile que tiene seis inclusiones.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
+![Vista previa de un bloque de contenido "Workout_Promo" para ciclismo y baile que tiene seis inclusiones.]({% image_buster /assets/img/preview_tab_content_block.png %}){: style="max-width:60%;"} 
 
 ### Anidamiento de bloques de contenido
 
@@ -100,13 +100,21 @@ Los bloques de contenido pueden anidarse, pero sólo una vez. Puede anidar el bl
 Nada le impedirá anidar un tercer nivel de Bloque de Contenido, pero no verá expandirse el contenido en los anidados más allá del segundo. El contenido y el fragmento de Liquid se eliminan del mensaje.
 {% endalert %}
 
-Además, los bloques de contenido no pueden utilizarse dentro de un pie de página de correo electrónico, aunque sí pueden utilizarse dentro de bloques de contenido.
+### Utilizar pies de página de correo electrónico en bloques de contenido {#email-footers}
+
+Los bloques de contenido no pueden utilizarse dentro del pie de página de un correo electrónico, pero puedes crear un bloque de contenido que incluya contenido del pie de página para utilizarlo en tus correos electrónicos. Para ello, sigue estos pasos:
+
+1. Ve a **Configuración** > **Preferencias de correo electrónico** > **Pie de página personalizado** y crea el pie de página.
+2. Añade el pie de página a un bloque de contenido de **la biblioteca de bloques de contenido**.
+3. Añade ese bloque de contenido a tus plantillas de correo electrónico o mensajes.
+
+¡Ahora puedes utilizar el mismo pie de página en varios mensajes!
 
 ### Archivar bloques de contenido
 
-![Menú desplegable de Configuración ampliado que muestra tres opciones: Archivar, Duplicar y Copiar en el espacio de trabajo.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
+![Menú desplegable de Configuración ampliado que muestra tres opciones: Archivar, Duplicar y Copiar en espacio de trabajo.]({% image_buster /assets/img/template_archive_cog.png %}){: style="max-width:20%;float:right;margin-left:15px;" }
 
-Una vez que haya terminado de utilizar un Bloque de contenido, puede archivarlo desde la página [Plantillas y medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Los bloques de contenido archivados son de sólo lectura, así que desarchívelos antes de editarlos. Los bloques de contenido no pueden archivarse si se utilizan en algún mensaje.
+Cuando hayas terminado de utilizar un bloque de contenido, puedes archivarlo desde la página [Plantillas & Medios]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/). Los bloques de contenido archivados son de sólo lectura, así que desarchívelos antes de editarlos. Los bloques de contenido no pueden archivarse si se utilizan en algún mensaje.
 
 #### Buenas prácticas
 
@@ -115,5 +123,5 @@ Una vez que haya terminado de utilizar un Bloque de contenido, puede archivarlo 
 - Cuando tu bloque se utiliza en más mensajes de los que puedes gestionar razonablemente con la primera sugerencia de esta lista, te recomendamos eliminar todo el contenido del bloque y archivarlo. Esto garantizará que no se incluya información obsoleta en los nuevos correos electrónicos enviados.
 - Si accidentalmente archivas un bloque de contenido, puedes desarchivarlo.
 
-![Panel de bloques de contenido guardados en el que el menú desplegable de configuración de "Test_32" se amplía para mostrar tres opciones: Desarchivar, Duplicar y Copiar en el espacio de trabajo]({% image_buster /assets/img/unarchive-content-block.png %})
+![Panel de bloques de contenido guardados en el que el menú desplegable de configuración de "Test_32" se amplía para mostrar tres opciones: Desarchivar, duplicar y copiar en el espacio de trabajo]({% image_buster /assets/img/unarchive-content-block.png %})
 

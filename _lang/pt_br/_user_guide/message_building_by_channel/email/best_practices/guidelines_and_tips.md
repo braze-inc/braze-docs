@@ -1,5 +1,5 @@
 ---
-nav_title: Diretrizes para envio de e-mail
+nav_title: Diretrizes para o envio de e-mail
 article_title: Diretrizes para envio de e-mail
 page_order: 1
 page_type: reference
@@ -34,9 +34,9 @@ A validação é usada para endereços de e-mail do dashboard, endereços de e-m
 
 A validação de e-mail é feita quando o endereço de e-mail de um usuário foi atualizado ou está sendo importado para o Braze via API, upload de CSV, SDK ou modificado no dashboard. Note que seus endereços de e-mail não podem incluir espaços em branco e, se forem enviados usando a API, os espaços em branco resultarão em um erro 400.
 
-Os endereços de e-mail direcionados por meio dos servidores Braze devem ser validados de acordo com os padrões [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). O Braze não aceita determinados caracteres e os reconhece como inválidos. Se um e-mail for devolvido, a Braze o marcará como inválido e o status da inscrição não será alterado. 
+Os endereços de e-mail direcionados por meio dos servidores Braze devem ser validados de acordo com os padrões [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822). O Braze não aceita determinados caracteres e os reconhece como inválidos. Se um e-mail for devolvido, a Braze marcará o e-mail como inválido e o status da inscrição não será alterado. 
 
-{% details Caracteres não aceitos fora dos padrões RFC %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -69,7 +69,7 @@ A codificação Unicode não é compatível com os endereços "from".
 Lembre-se de que algumas tags e atribuições HTML não são permitidas, pois podem permitir a execução de códigos maliciosos no navegador.
 
 Confira as seguintes listas de tags e atribuições HTML que não são permitidas em seus e-mails:
-{% details Expandir para tags HTML não permitidas %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -87,7 +87,7 @@ Confira as seguintes listas de tags e atribuições HTML que não são permitida
 - `<svg>`
 {% enddetails %}
 
-{% details Expandir para atribuições HTML não permitidas %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`

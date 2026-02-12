@@ -1,5 +1,5 @@
 ---
-nav_title: 배달 가능성 함정 및 스팸 함정
+nav_title: 전달 가능성의 함정 및 스팸 트랩
 article_title: 배달 가능성 함정 및 스팸 함정
 page_order: 7
 page_type: reference
@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}전달 가능성 함정과 스팸 함정
+# [![브레이즈 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}전달 가능성의 함정 및 스팸 트랩
 
 이메일 전달률은 다음과 같은 스팸 함정에 의해 영향을 받을 수 있습니다:
 
@@ -32,3 +32,9 @@ channel: email
 {% alert tip %}
 Braze 고객 성공 및 전달 가능성 팀은 전 세계에서 전달성을 극대화하기 위한 모범 사례를 따르고 있는지 확인할 수 있도록 도와드립니다.
 {% endalert %}
+
+## 반송 또는 스팸 목록에서 이메일 주소 제거하기
+
+다음 엔드포인트를 사용하여 반송된 이메일과 브레이즈 스팸 목록의 이메일을 제거할 수 있습니다:
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)

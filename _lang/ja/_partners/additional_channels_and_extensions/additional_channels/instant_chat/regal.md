@@ -212,7 +212,7 @@ Data Transformation を作成するには、次のようにします。
 
 ![]({% image_buster /assets/img/regal/copy_webhook_url.png %})
 
-### ステップ2: Regalでレポートwebhookを有効にする
+### ステップ 2:Regalでレポートwebhookを有効にする
 
 レポートwebhookを設定するには:
 1. Regalアプリに移動して、**設定**ページを開きます。
@@ -250,7 +250,7 @@ Braze の [データ変換]({{site.baseurl}}/data_transformation)機能を使用
 ## ユースケース
 
 {% tabs %}
-{% tab メールをトリガーする %}
+{% tab Trigger an email %}
 
 **Regal でのコール処理に基づいて、Braze からメールをトリガーする**
 
@@ -348,7 +348,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab プロファイル属性を更新する %}
+{% tab Update profile attributes %}
 
 **Regalからの `contact.attribute.edited` イベントに基づいて、Braze のプロファイル属性を更新する**
 
@@ -412,7 +412,7 @@ return brazecall;
 ```
 
 {% endtab %}
-{% tab 実験の同期を維持する %}
+{% tab Keep your experiments in sync %}
 
 **`contact.experiment.assigned` イベントを使用して Braze と Regal で実験をの同期を維持する**
 
@@ -475,7 +475,7 @@ return brazecall;
 
 ```
 {% endtab %}
-{% tab 連絡先のサブスクリプションを解除する %}
+{% tab Unsubscribe a contact %}
 
 **Regal の `contact.unsubscribed` に基づいて、Braze で連絡先のサブスクリプションを解除する**
 

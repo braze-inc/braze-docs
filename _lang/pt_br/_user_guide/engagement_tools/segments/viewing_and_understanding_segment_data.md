@@ -1,6 +1,6 @@
 ---
 nav_title: Dados do segmento
-article_title: Visualização e compreensão dos dados do segmento
+article_title: Visualizar e compreender os dados do segmento
 page_order: 4
 page_type: reference
 description: "Esta página explica a seção de segmentos do seu dashboard do Braze e inclui um resumo das estatísticas fornecidas."
@@ -16,7 +16,7 @@ tool:
 
 ## Acesso a dados sobre seus segmentos e associação
 
-A página **Segments (Segmentos** ) de seu dashboard do Braze contém um resumo de todos os seus segmentos e permite que você examine os dados detalhados de cada um deles. Nessa página, pesquise e selecione o nome de um segmento para editar e visualizar seus dados. Para saber como criar um segmento, consulte [Criação de um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
+A página **Segments (Segmentos** ) de seu dashboard do Braze contém um resumo de todos os seus segmentos e permite que você examine os dados detalhados de cada um deles. Nessa página, pesquise e selecione o nome de um segmento para editar e visualizar seus dados. Para saber como criar um segmento, consulte [Criar um segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
 
 ![Página de segmentos]({% image_buster /assets/img_archive/segments.png %})
 
@@ -24,7 +24,7 @@ Depois de selecionar o nome de um segmento, você pode visualizar as estatístic
 
 Quando você ativa [o rastreamento de dados para um segmento]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/), pode visualizar sessões, eventos personalizados e receita ao longo do tempo para esse segmento.
 
-![Alternância de rastreamento de análise de dados para um segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Alternar o rastreamento de análise de dados para um segmento]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 ### Estatísticas do segmento
 
@@ -58,7 +58,7 @@ Você pode visualizar as seguintes estatísticas de segmento, que são atualizad
         </tr>
         <tr>
             <td class="no-split">Emailable (Optou por receber)</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} Devido às <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">regulamentações de spam</a>, é uma boa ideia pedir aos seus usuários que aceitem explicitamente, implementando uma política de aceitação dupla em que os usuários devem clicar em um link em um e-mail de confirmação inicial. Para incentivar mais usuários a aceitação, você pode direcionar uma mensagem para <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">aqueles que não optaram nem por aceitar nem por sair</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Emailable' %} Devido às <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">normas de spam</a>, é uma boa ideia pedir aos usuários que aceitem explicitamente, implementando uma política de aceitação dupla em que os usuários devem clicar em um link em um e-mail de confirmação inicial. Para incentivar mais usuários a aceitação, você pode direcionar uma mensagem para <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">aqueles que não optaram nem por aceitar nem por sair</a>.</td>
         </tr>
         <tr>
             <td class="no-split">Push Habilitado (Optado)</td>

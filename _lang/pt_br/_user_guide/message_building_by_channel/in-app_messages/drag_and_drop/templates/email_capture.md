@@ -48,7 +48,7 @@ Personalize a aparência do seu formulário de inscrição usando os [componente
 
 {% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
-## Práticas recomendadas
+## Melhores práticas
 
 {% multi_lang_include drag_and_drop/templates.md section='email double opt-in' %}
 

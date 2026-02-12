@@ -1,6 +1,6 @@
 ---
-nav_title: Managing placements
-article_title: Managing Banner placements for the Braze SDK
+nav_title: Manage placements
+article_title: Manage Banner placements for the Braze SDK
 description: "Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions."
 page_order: 2
 platform:
@@ -11,7 +11,7 @@ platform:
   - React Native
 ---
 
-# Managing Banner placements
+# Manage Banner placements
 
 > Learn how to create and manage Banner placements in the Braze SDK, including accessing their unique properties and logging impressions. For more general information, see [About Banners]({{site.baseurl}}/developer_guide/banners).
 
@@ -19,19 +19,19 @@ platform:
 
 {% multi_lang_include banners/placement_requests.md %}
 
-## Creating a placement
+## Create a placement
 
 ### Prerequisites
 
 These are the minimum SDK versions needed to create Banner placements:
 
-{% sdk_min_versions swift:11.3.0 android:33.1.0 web:5.8.1 reactnative:14.0.0 flutter:13.0.0 %}
+{% multi_lang_include sdk_versions.md feature='banners' %}
 
 {% multi_lang_include banners/creating_placements.md section="developer" %}
 
 ### Step 2: Refresh placements in your app {#requestBannersRefresh}
 
-Placements can be requested once per session and will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method. The SDK will not re-fetch placements if you call the refresh method again during the same session. Instead, it will log an error and return an error message to the caller.
+Placements can be refreshed by calling the refresh methods described below. These placements will be cached automatically when a user's session expires or when you change identified users using the `changeUser` method.
 
 {% alert tip %}
 Refresh placements as soon as possible to avoid delays in downloading or displaying Banners.
@@ -115,23 +115,48 @@ This feature is not currently supported on Roku.
 ### Step 3: Listen for updates {#subscribeToBannersUpdates}
 
 {% alert tip %}
-If you insert banners using the SDK methods in this guide, all analytics events will be handled automatically.
+If you insert Banners using the SDK methods in this guide, all analytics events (such as impressions and clicks) will be handled automatically, and impressions will only be logged when the banner is in view.
 {% endalert %}
 
 {% tabs %}
 {% tab Web %}
+{% subtabs %}
+{% subtab Javascript %}
+If you're using vanilla JavaScript with the Web Braze SDK, use [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) to listen for placement updates and then call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) to fetch them.
 
 ```javascript
 import * as braze from "@braze/web-sdk";
 
 braze.subscribeToBannersUpdates((banners) => {
-  console.log(`Banners were updated`);
+  console.log("Banners were updated");
 });
 
 // always refresh after your subscriber function has been registered
 braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
 ```
+{% endsubtab %}
+{% subtab React %}
+If you're using React with the Web Braze SDK, set up [`subscribeToBannersUpdates`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#subscribetobannersupdates) inside a `useEffect` hook and call [`requestBannersRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#requestbannersrefresh) after registering your listener.
 
+```typescript
+import * as braze from "@braze/web-sdk";
+
+useEffect(() => {
+  const subscriptionId = braze.subscribeToBannersUpdates((banners) => {
+    console.log("Banners were updated");
+  });
+
+  // always refresh after your subscriber function has been registered
+  braze.requestBannersRefresh(["global_banner", "navigation_square_banner"]);
+
+  // cleanup listeners
+  return () => {
+    braze.removeSubscription(subscriptionId);
+  }
+}, []);
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab Swift %}
 
@@ -473,15 +498,41 @@ This feature is not currently supported on Roku.
 
 ### Step 5: Send a test Banner (optional) {#handling-test-cards}
 
-Before you launch a Banner campaign, you can [send a test Banner]({{site.baseurl}}/user_guide/message_building_by_channel/banners/testing/) to verify your integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
+Before you launch a Banner campaign, you can [send a test Banner]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/) to verify your integration. Test Banners will be stored in a separate in-memory cache and won't persist across app restarts. While no extra setup is needed, your test device must be capable of receiving foreground push notifications so it can display the test.
 
 {% alert note %}
 Test Banners are like any other banners, except they're removed at the next app session.
 {% endalert %}
 
-## Logging impressions
+## Log impressions
 
-Braze automatically logs impressions when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually. 
+Braze automatically logs impressions for Banners that are in view when you use SDK methods to insert a Banner&#8212;so no need to track impressions manually.
+
+## Logging clicks
+
+The method used to log Banner clicks depends on how your Banner is rendered and where your click handler is located.
+
+### Standard Banner content (automatic)
+
+If you're using default, out-of-the-box SDK methods to insert Banners, and your Banner uses standard editor components (images, buttons, text), clicks are tracked automatically. The SDK attaches click listeners to these elements, and no additional code is needed.
+
+### Custom Code Blocks
+
+If your Banner uses the **Custom Code** editor block in the Braze dashboard, you must use `brazeBridge.logClick()` to log clicks from within that custom HTML. This applies even when using SDK methods to render the Banner, because the SDK cannot automatically attach listeners to elements inside your custom code.
+
+```html
+<button onclick="brazeBridge.logClick()">
+  Click me
+</button>
+```
+
+This is similar to the [JavaScript bridge]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/customize/html_in-app_messages/#javascript-bridge) used for HTML in-app messages. The `brazeBridge` provides a communication layer between the Banner's internal HTML and the parent Braze SDK.
+
+### Custom UI implementations (headless)
+
+If you're building a fully custom UI using the Banner's [custom properties](#custom-properties) rather than rendering the Banner HTML, you must manually log clicks (and impressions) from your application code. Because the SDK is not rendering the Banner, it has no way to automatically track interactions with your custom UI elements.
+
+Use the `logClick()` method on the Banner object.
 
 ## Dimensions and sizing
 
@@ -493,10 +544,6 @@ Here's what you need to know about Banner dimensions and sizing:
 
 ## Custom properties {#custom-properties}
 
-{% alert important %}
-Custom properties for Banners are currently in early access. Contact your Braze account manager if you're interested in participating
-{% endalert %}
-
 You can use custom properties from your Banner campaign to retrieve key–value data through the SDK and modify your app’s behavior or appearance. For example, you could:
 
 - Send metadata for your third-party analytics or integrations.
@@ -505,11 +552,11 @@ You can use custom properties from your Banner campaign to retrieve key–value 
 
 ### Prerequisites
 
-You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/creating_campaigns/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
+You'll need to [add custom properties]({{site.baseurl}}/user_guide/message_building_by_channel/banners/create/#custom-properties) to your Banner campaign. Additionally, these are the minimum SDK versions required to access custom properties:
 
-{% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 %}
+{% sdk_min_versions swift:13.1.0 android:38.0.0 web:6.1.0 reactnative:17.0.0 flutter:15.1.0 %}
 
-### Accessing custom properties
+### Access custom properties
 
 To access a banner's custom properties, use one of the following methods based on the property's type defined in the dashboard. If the key doesn't match a property of that type or does not exist, the method returns `null`.
 
@@ -623,5 +670,61 @@ val jsonObjectProperty: JSONObject? = banner.getJSONProperty("footer_settings")
 ```
 {% endsubtab %}
 {% endsubtabs %}
+{% endtab %}
+
+{% tab React Native %}
+
+```javascript
+// Get the Banner instance
+const banner = await Braze.getBanner('placement_id_homepage_top');
+if (!banner) return;
+
+// Get the string property
+const stringProperty = banner.getStringProperty('color');
+
+// Get the boolean property
+const booleanProperty = banner.getBooleanProperty('expanded');
+
+// Get the number property
+const numberProperty = banner.getNumberProperty('height');
+
+// Get the timestamp property (as a number)
+const timestampProperty = banner.getTimestampProperty('account_start');
+
+// Get the image URL property as a string
+const imageProperty = banner.getImageProperty('homepage_icon');
+
+// Get the JSON object property
+const jsonObjectProperty = banner.getJSONProperty('footer_settings');
+```
+
+{% endtab %}
+{% tab Flutter %}
+
+```dart
+// Fetch the banner asynchronously
+_braze.getBanner(placementId).then(('placement_id_homepage_top') {
+  // Get the string property
+  final String? stringProperty = banner?.getStringProperty('color');
+  
+  // Get the boolean property
+  final bool? booleanProperty = banner?.getBooleanProperty('expanded');
+  
+  // Get the number property
+  final num? numberProperty = banner?.getNumberProperty('height');
+  
+  // Get the timestamp property
+  final int? timestampProperty = banner?.getTimestampProperty('account_start');
+  
+  // Get the image URL property
+  final String? imageProperty = banner?.getImageProperty('homepage_icon');
+  
+  // Get the JSON object propertyßß
+  final Map<String, dynamic>? jsonObjectProperty = banner?.getJSONProperty('footer_settings');
+  
+  // Use these properties as needed in your UI or logic
+});
+```
+
 {% endtab %}
 {% endtabs %}

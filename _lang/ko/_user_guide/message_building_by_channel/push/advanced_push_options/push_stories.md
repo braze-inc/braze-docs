@@ -15,7 +15,7 @@ channel:
 
 | Android 예제 (확장됨) | IOS 예시 (확장됨) |
 | :-----: | :----------: |
-| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![]({% image_buster /assets/img_archive/pushstories_ios_preview.png %}) |
+| ![]({% image_buster /assets/img_archive/pushstories_android_preview.png %}) | ![![ |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -61,7 +61,7 @@ iOS SDK 버전 3.13.0+에서는 SDK가 이미지를 다운로드하는 방식의
 다음 이미지 및 텍스트 사양은 푸시 스토리의 사진 캐러셀 부분에 적용됩니다. 사용자가 푸시 스토리를 활성화하기 위해 상호작용하는 기본 푸시에 대한 정보는 [푸시 텍스트 지침]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#native-mobile-push-notifications)을 참조하십시오.
 
 {% tabs %}
-{% tab 이미지 %}
+{% tab Images %}
 
 - **이미지 비율:** 2:1 (필수)
 - **권장 이미지 크기:** 500 KB
@@ -69,7 +69,7 @@ iOS SDK 버전 3.13.0+에서는 SDK가 이미지를 다운로드하는 방식의
 - **파일 형식:** PNG, JPEG
 
 {% endtab %}
-{% tab 텍스트 %}
+{% tab Text %}
 
 - **제목:** 30자(권장)
 - **설명:** 30자(권장)
@@ -89,7 +89,7 @@ iOS SDK 버전 3.13.0+에서는 SDK가 이미지를 다운로드하는 방식의
 
 분석은 푸시 알림에 대한 현재 분석 섹션과 매우 유사하게 보일 것입니다. 푸시 스토리 분석의 경우 **직접 열기** 메트릭을 열어 페이지당 클릭 수를 확인할 수 있습니다.
 
-![iOS Push Performance table with sample analytics and expanded details for the Direct Opens metric.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
+![iOS 푸시 성능/성과 테이블, 샘플 분석 및 직접 열람 측정기준에 대한 확장된 세부 정보.]({% image_buster /assets/img_archive/pushstories_analytics.png %})
 
 ## 문제 해결
 

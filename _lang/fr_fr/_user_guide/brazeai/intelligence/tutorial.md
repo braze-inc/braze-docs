@@ -22,7 +22,7 @@ Nous utiliserons le timing intelligent pour analyser les interactions passées d
 
 Pour les utilisateurs qui n'ont pas suffisamment d'interactions passées à analyser, nous prévoyons un moment de repli : le moment le plus populaire de l'utilisation de l'application parmi tous les utilisateurs.
 
-![Paramètres de réception/distribution intelligente pour une étape du message.]({% image_buster /assets/img/intelligence_suite1.png %})
+![Paramètres de livraison du timing intelligent pour une étape Message.]({% image_buster /assets/img/intelligence_suite1.png %})
 
 ### Étape 2 : Utilisez la sélection intelligente pour sélectionner la promotion
 

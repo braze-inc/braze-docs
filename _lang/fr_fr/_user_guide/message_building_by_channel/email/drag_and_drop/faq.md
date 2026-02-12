@@ -21,7 +21,14 @@ Oui. Accédez à la section **Aperçu et test** de l'éditeur par glisser-dépos
 
 ### Comment puis-je modifier la marge intérieure des e-mails sur l’affichage mobile sans mettre à jour la marge intérieure dans l’affichage Web ?
 
-Il n’est pas possible de modifier la marge intérieure des affichages mobiles et Web exclusivement. Toutes les modifications apportées sont reflétées dans les deux vues. Pour contourner le problème, vous pouvez ajouter une logique CSS qui définit la marge intérieure en fonction des différentes tailles d’écran. Cependant, cela ne peut pas être réalisé à l’aide de l’éditeur par glisser-déposer. Nous vous conseillons donc d’exporter le fichier HTML et d’utiliser l’éditeur HTML.
+Vous ne pouvez pas modifier le remplissage pour les vues mobile et web exclusivement, de sorte que toute modification est répercutée dans les deux vues. Toutefois, vous pouvez ajouter une logique CSS dans l'éditeur HTML qui définit le rembourrage en fonction des différentes tailles d'écran. L'éditeur par glisser-déposer ne le permet pas. Vous pouvez donc exporter le fichier HTML et utiliser l'éditeur HTML à la place.
+
+### Comment optimiser une rangée de boutons pour qu'elle reste horizontale sur desktop et mobile ?
+
+Lorsque vous créez un e-mail à l'aide de l'éditeur glisser-déposer, si vous créez une rangée horizontale de boutons d'appel à l'action, vous pouvez constater que les boutons passent à une orientation verticale sur mobile. 
+
+Pour conserver le même format sur toutes les tailles d'appareils, nous vous recommandons de créer une rangée distincte avec des boutons CTA dont le rembourrage a été optimisé pour les mobiles et qui sont configurés pour masquer la rangée sur un appareil de bureau. Le fait d'avoir deux lignes distinctes signifie que vous pouvez définir le rembourrage souhaité pour un meilleur rendu du texte sur les appareils de bureau et mobiles.
+
 
 ### Puis-je ajuster la hauteur des lignes dans l'éditeur par glisser-déposer ?
 
@@ -40,4 +47,4 @@ Non, vous devez recréer l'e-mail dans **Modèles d'e-mail** pour l'enregistrer.
 
 ### Puis-je ajouter des pièces jointes aux e-mails dans l'éditeur par glisser-déposer ?
 
-Non, l'éditeur par glisser-déposer ne permet pas actuellement d'ajouter des pièces jointes à vos e-mails.
+Non, l'éditeur par glisser-déposer ne permet pas d'ajouter des pièces jointes à vos e-mails.

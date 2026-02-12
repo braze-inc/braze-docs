@@ -48,8 +48,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sessions/data_se
 ## 応答
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [

@@ -1,5 +1,5 @@
 ---
-nav_title: Painel de Uso de Mensagens
+nav_title: Painel de uso de mensagens
 article_title: Painel de Uso de Mensagens
 page_order: 10
 page_type: reference
@@ -8,4 +8,4 @@ description: "Este artigo de referência abrange o painel de Uso de Mensagens, o
 tool: Dashboard
 ---
 
-{% multi_lang_include message_usage.md %}
+{% multi_lang_include analytics/message_usage.md %}

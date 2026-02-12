@@ -1,7 +1,7 @@
 ---
 nav_title: Archivo
 article_title: Archivo
-page_order: 3
+page_order: 2
 page_type: reference
 description: "Este artículo de referencia explica cómo archivar tus campañas y Lienzos."
 tool:
@@ -18,7 +18,7 @@ tool:
 Cuando archives una campaña o Canvas, no se entregarán más mensajes y no se mostrarán tus mensajes dentro de la aplicación. Podrás seguir viendo los resultados una vez archivada, pero no podrás editar la campaña ni el Canvas. Para ello, primero tendrás que [desarchivarlo](#unarchiving-campaigns-and-canvases).
 
 {% tabs local %}
-{% tab campaña %}
+{% tab campaign %}
 Para archivar una campaña:
 
 1. Ve a **Mensajes** > **Campañas**.
@@ -26,7 +26,7 @@ Para archivar una campaña:
 3. Selecciona **Archivo**.
 {% endtab %}
 
-{% tab Canvas %}
+{% tab canvas %}
 Para archivar un Canvas:
 
 1. Ve a **Mensajería** > **Canvas**.
@@ -39,4 +39,4 @@ Para archivar un Canvas:
 
 Cuando desarchives una campaña o Canvas, no se activará, sólo cambiará su estado a **Activo**. Después de desarchivar, puedes editar y revisar cómo está configurado el mensaje sin que se envíe ningún mensaje.
 
-Para reanudar la campaña o Canvas y comenzar a enviar mensajes, selecciona el menú g<i class="fas fa-ellipsis-vertical"></i> de la fila correspondiente y selecciona **Reanudar**.
+Para reanudar la campaña o Canvas y empezar a enviar mensajes, selecciona el menú <i class="fas fa-ellipsis-vertical"></i> de la fila correspondiente y selecciona **Reanudar**.

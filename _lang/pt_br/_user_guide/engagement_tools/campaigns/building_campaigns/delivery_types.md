@@ -1,6 +1,6 @@
 ---
-nav_title: Agendamento da sua campanha
-article_title: Agendamento da sua campanha
+nav_title: Programe sua campanha
+article_title: Agende sua campanha
 layout: dev_guide
 page_order: 3
 guide_top_header: "Agendamento da sua campanha"

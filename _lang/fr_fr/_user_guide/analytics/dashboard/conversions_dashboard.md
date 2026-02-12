@@ -49,6 +49,20 @@ Pour calculer les conversions d'un événement qui n'a pas été configuré comm
 Si vous sélectionnez un événement personnalisé, vous ne verrez pas la liste déroulante des **événements de conversion** sur la page et vous devrez exécuter à nouveau le rapport pour afficher les conversions pour différents événements personnalisés.
 {% endalert %}
 
+### Considérations
+
+Pour qu'un utilisateur soit pris en compte dans le rapport, il doit répondre aux critères suivants dans la plage de dates sélectionnée :
+1. Saisissez le Canvas ou la campagne.
+2. Enregistrez une [méthode d'attribution]({{site.baseurl}}/user_guide/analytics/dashboard/conversions_dashboard/#attribution-methods).
+3. Effectuez l'événement de conversion.
+
+Par exemple, supposons qu'un utilisateur fasse ce qui suit :
+1. Entre dans la toile le 30 septembre.
+2. Enregistre une méthode d'attribution le 1er octobre.
+3. Effectue l'événement de conversion le 2 octobre.
+
+Cet utilisateur **n'** apparaîtra **pas** dans un rapport dont la plage de dates est comprise entre le 1er et le 7 octobre. Cela s'explique par le fait que l'utilisateur a saisi la toile avant la période de déclaration, même si l'événement de conversion s'est produit dans la plage de dates définie. Pour que l'utilisateur apparaisse dans un rapport, la plage de dates doit inclure le 30 septembre.
+
 ## Comprendre votre rapport
 
 Votre rapport est divisé en trois sections :
@@ -87,7 +101,7 @@ Pour télécharger les données de la série temporelle, sélectionnez une optio
 Ce graphique n'affiche les données que pour un seul canal à la fois. Utilisez le menu déroulant **Canal** sur le graphique pour sélectionner un seul canal.
 {% endalert %}
 
-![Graphique de l'entonnoir des conversions pour deux campagnes d'e-mail montrant des résultats similaires pour les e-mails délivrés, les e-mails ouverts, les e-mails cliqués et les conversions.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
+![Graphique à barres de l'entonnoir des conversions pour deux campagnes d'e-mails présentant des résultats similaires pour les e-mails délivrés, les e-mails ouverts, les e-mails cliqués et les conversions.]({% image_buster /assets/img_archive/conversions2_funnel.png %})
 
 ### Évolution des conversions
 
@@ -95,7 +109,7 @@ Ce graphique chronologique comprend une représentation des conversions par camp
 
 Pour télécharger les données de la série chronologique, sélectionnez <i class="fas fa-bars"></i>, puis choisissez votre option de téléchargement. Les options disponibles sont PNG, JPEG, PDF, SVG ou CSV.
 
-![Graphique des conversions dans le temps pour deux campagnes d'e-mail, montrant les conversions par jour.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
+![Graphique des conversions au fil du temps pour deux campagnes d'e-mail, montrant les conversions par jour.]({% image_buster /assets/img_archive/conversions2_over_time.png %})
 
 ### Méthodes d'attribution
 
@@ -115,3 +129,21 @@ Pour télécharger les données de la série chronologique, sélectionnez <i cla
 | --- | --- |
 | Toucher | Une interaction physique ou un point de contact avec un message.<br><br>Les touches peuvent inclure :<br>{::nomarkdown}<ul><li>Clics sur e-mails</li><li>Ouverture de notification push</li><li>Carte de contenu cliquée</li><li>Clic sur le in-app Message</li><li>SMS Click</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
+## Résolution des problèmes
+
+### Pourquoi mes campagnes ou mes conversions de Canvas sont-elles faibles ?
+
+Vos conversions peuvent ne pas être aussi élevées que prévu comparées aux campagnes précédentes ou à vos attentes. Les conversions sont une activité difficile, mais elles dépendent de quelques fonctions simples dans notre plateforme : le suivi des événements et les échéances de conversion.
+
+Pour en trouver la raison, nous vous recommandons de vérifier votre suivi des événements et vos délais de conversion.
+
+#### Suivi des événements
+
+Lorsqu'une campagne déclenche le démarrage d'une session ou un événement personnalisé, vous devez vous assurer que cet événement, ou cette session, se produit suffisamment souvent pour déclencher le message. Consultez le [tableau de bord d'accueil]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) pour obtenir des données sur les sessions, ou votre rapport d'[événements personnalisé]({{site.baseurl}}/user_guide/analytics/reporting/configuring_reporting/).
+
+#### Échéances de conversion
+
+Pour chaque événement de conversion que vous sélectionnez par campagne, vous fixez la [date limite]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#creating-a-campaign-with-conversion-tracking). Cela signifie que vous fixez un délai dans lequel une conversion doit avoir lieu pour qu'elle soit prise en compte dans chaque campagne.
+
+Vérifiez que vous avez examiné les informations sur les [règles de suivi des conversions]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/#conversion-tracking-rules) pour comprendre les indicateurs de votre campagne. Pour les conversions d'utilisateurs dans Canvas, reportez-vous à la [FAQ Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/faqs/#how-are-user-conversions-tracked-in-a-canvas). 

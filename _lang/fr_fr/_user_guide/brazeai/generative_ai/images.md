@@ -20,6 +20,6 @@ La bibliothèque multimédia vous permet de gérer vos ressources de façon cent
 3. Sélectionnez **Générer des images.** Il faudra environ une minute pour que vos images soient générées.
 4. Sélectionnez <i class="fas fa-download" title="Ajouter une image à la bibliothèque multimédia"></i> sur les images que vous souhaitez ajouter à votre bibliothèque multimédia.
 
-![Fenêtre modale/boîte de dialogue de l'intelligence artificielle dans la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
+![Fenêtre modale du générateur d’images par IA dans la bibliothèque multimédia.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

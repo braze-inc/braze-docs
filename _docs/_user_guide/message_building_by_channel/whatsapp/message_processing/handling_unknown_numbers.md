@@ -1,6 +1,6 @@
 ---
-nav_title: Handling unknown phone numbers
-article_title: Handling Unknown Phone Numbers
+nav_title: Handle unknown phone numbers
+article_title: Handle Unknown Phone Numbers
 description: "This reference article covers how Braze will go about handling unknown phone numbers for WhatsApp users."
 page_type: reference
 channel:
@@ -8,7 +8,7 @@ channel:
 page_order: 50
 ---
 
-# Handling unknown phone numbers
+# Handle unknown phone numbers
 
 > You may find that after you get WhatsApp up and running with Braze, you receive messages from unknown users. The following steps describe how an unidentified user and number get processed.
 

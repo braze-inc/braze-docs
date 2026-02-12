@@ -6,7 +6,7 @@ description: "Este artigo aborda o filtro Canal Inteligente, que seleciona a par
 search_rank: 11
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Filtro Canal Inteligente
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Filtro de canal inteligente
 
 > O filtro `Intelligent Channel` (anteriormente `Most Engaged`) seleciona a parte de seu público para a qual o canal de envio de mensagens selecionado é o "melhor" canal. 
 
@@ -16,7 +16,7 @@ search_rank: 11
 
 Neste caso, "melhor" significa que o canal "tem a maior probabilidade de engajamento, dado o histórico do usuário". Você pode selecionar o envio de e-mail, SMS, WhatsApp, web push ou mobile push (incluindo qualquer sistema operacional ou dispositivo móvel disponível) como um canal.
 
-O Canal Inteligente calcula a taxa de engajamento de cada usuário para cada um dos três canais, considerando a proporção de interações com mensagens (aberturas ou cliques) em relação ao número de mensagens recebidas nos últimos seis meses de atividade. Os canais disponíveis são classificados de acordo com suas respectivas taxas de engajamento, e o canal com a maior taxa é o "Mais engajado" para esse usuário. 
+O Canal Inteligente calcula a taxa de engajamento de cada usuário para cada um dos canais disponíveis, considerando a proporção de interações com mensagens (aberturas ou cliques) em relação ao número de mensagens recebidas nos últimos seis meses de atividade. Os canais disponíveis são classificados de acordo com suas respectivas taxas de engajamento, e o canal com a maior taxa é o "Mais engajado" para esse usuário. 
 
 Toda vez que uma mensagem é enviada a um usuário, ou que um usuário interage com uma mensagem, a taxa de engajamento é recalculada em segundos. Um usuário só pode ser contado como tendo interagido com uma mensagem uma vez (por exemplo, uma abertura e um clique no mesmo e-mail farão com que essa mensagem seja marcada como tendo sido engajada apenas uma vez, não duas). 
 
@@ -28,7 +28,7 @@ Para calcular a taxa de engajamento do canal de SMS, ative o [encurtamento de li
 
 ## A opção "Dados insuficientes"
 
-Para que a Braze determine qual é o "melhor" canal, é necessário que haja dados suficientes. Isso significa que um usuário deve ter recebido pelo menos três ou mais mensagens em pelo menos dois dos três canais disponíveis. As mensagens não precisam necessariamente ter sido abertas. 
+Para que a Braze determine qual é o "melhor" canal, é necessário que haja dados suficientes. Isso significa que um usuário deve ter recebido pelo menos três ou mais mensagens por canal em pelo menos dois dos três canais disponíveis. As mensagens não precisam necessariamente ter sido abertas. 
 
 Se os usuários não tiverem recebido mensagens suficientes em todos os canais, eles serão enquadrados na opção "Dados insuficientes" desse filtro. Isso permite que você use qualquer um dos três canais de envio de mensagens disponíveis para direcionar esses usuários.
 

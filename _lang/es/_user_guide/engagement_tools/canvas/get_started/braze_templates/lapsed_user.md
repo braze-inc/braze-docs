@@ -38,13 +38,13 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 3\. Actualiza la descripción para explicar que este Canvas contiene ventajas y promociones.
 4\. Añade la etiqueta **Lapsing/Retención** para poder filtrar este Canvas en la página de inicio de Canvas.
 
-!["Configurar detalles en Canvas" paso con el nombre en Canvas de "Usuario caducado - Visitar aplicación" y una breve descripción en Canvas]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
+![Paso en Canvas "Configurar detalles" con el nombre en Canvas de "Usuario caducado - Visitar aplicación" y una breve descripción en Canvas]({% image_buster /assets/img/canvas_templates/lapsing_user_1.png %})
 
 ### Paso 2: Asigna tus eventos de conversión
 
 Actualiza el **evento de conversión primaria** **\- A** para que se dirija a los usuarios de nuestra aplicación (MovieCanon), y deja el **evento de conversión primaria - B** como predeterminado para realizar cualquier compra.
 
-![Sección "Asignar eventos de conversión" con un evento de conversión primaria de un usuario que inicia una sesión en una aplicación específica.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
+![Sección "Asignar eventos de conversión" con un evento de conversión primaria de un usuario que inicia una sesión en una aplicación concreta.]({% image_buster /assets/img/canvas_templates/lapsing_user_2.png %})
 
 ### Paso 3: Adapta el horario de entrada
 
@@ -55,7 +55,7 @@ Haremos dos ajustes en este paso:
 1. Selecciona una fecha y hora de inicio.
 2. Selecciona los parámetros de finalización de **En una fecha concreta** y una fecha a dos meses vista. Supongamos que tenemos otro Canvas de usuario caducado que queremos iniciar después de éste.
 
-!["Paso en Canvas programado para la entrada de usuarios a una hora determinada.]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
+![Paso en Canvas "Horario de entrada" para un Canvas programado que introduce usuarios a una hora determinada.]({% image_buster /assets/img/canvas_templates/lapsing_user_3.png %})
 
 ### Paso 4: Selecciona nuestra audiencia objetivo
 
@@ -81,12 +81,12 @@ Ahora, construiremos nuestro Canvas personalizando los pasos de la plantilla:
 
 1. Personaliza el primer correo electrónico que se enviará a todos los usuarios que no hayan visitado nuestra aplicación en más de 30 días. Para nuestro caso de uso, personalizaremos un correo electrónico que informe a los usuarios de que desbloquearán nuevas ventajas cuando visiten hoy nuestra aplicación. 
 
-![Paso en Canvas Mensaje para un correo electrónico que indica a los usuarios que desbloqueen nuevas ventajas cuando lo visiten hoy.]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
+![Paso en Canvas Mensaje para un correo electrónico que indica a los usuarios que desbloqueen nuevas ventajas cuando te visiten hoy.]({% image_buster /assets/img/canvas_templates/lapsing_user_6.png %})
 
 {: start="2"}
 2\. Personaliza el componente de la ruta de acción llamado "¿Iniciar sesión?" seleccionando nuestra aplicación para la ruta **Sesión iniciada**. 
 
-![Ruta de acción para las sesiones que se inician en una aplicación específica.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
+![Ruta de acción para las sesiones que se inician en una aplicación concreta.]({% image_buster /assets/img/canvas_templates/lapsing_user_7.png %})
 
 {: start="3"}
 3\. Mantén el predeterminado para el paso para la división de decisiones llamado "¿Sesiones?", que define el grupo ">1 Sesión" como usuarios que han utilizado nuestra aplicación más de una vez en el último día del calendario.

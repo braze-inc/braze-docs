@@ -1,6 +1,6 @@
 ---
 nav_title: Registrar compras
-article_title: Registro de compras para Windows Universal
+article_title: Registrar compras para Windows Universal
 platform: Windows Universal
 page_order: 4
 description: "En este artículo de referencia se explica cómo registrar compras en la plataforma Universal de Windows."
@@ -14,7 +14,7 @@ Registra las compras dentro de la aplicación para que puedas hacer un seguimien
 
 Braze admite compras en varias divisas. Las compras que notifiques en una divisa distinta del USD se mostrarán en el panel en USD según la tasa de cambio en la fecha en que se notificaron.
 
-Antes de la implementación, asegúrate de revisar ejemplos de las opciones de segmentación que ofrecen los eventos personalizados, los atributos personalizados y los eventos de compra en nuestro artículo [Buenas prácticas][3]. También te recomendamos que te familiarices con [nuestras convenciones de denominación de eventos]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Antes de la implementación, asegúrate de revisar ejemplos de las opciones de segmentación que ofrecen los eventos personalizados, los atributos personalizados y los eventos de compra en nuestro artículo [Buenas prácticas]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection). También te recomendamos que te familiarices con [nuestras convenciones de denominación de eventos]({{site.baseurl}}/user_guide/data/custom_data/event_naming_conventions/).
 
 Para utilizar esta característica, añade esta llamada al método después de una compra con éxito en tu aplicación:
 
@@ -29,7 +29,5 @@ Si quieres registrar las compras a nivel de pedido en lugar de a nivel de produc
 
 ## API REST
 
-También puedes utilizar nuestra API REST para registrar las compras. Consulta la documentación de [la API de usuario][2] para más detalles.
+También puedes utilizar nuestra API REST para registrar las compras. Consulta la documentación de [la API de usuario]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data) para más detalles.
 
-[2]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

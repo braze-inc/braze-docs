@@ -1,6 +1,6 @@
 ---
-nav_title: Gestión de plantillas
-article_title: Gestión de plantillas
+nav_title: Administrar plantillas
+article_title: Administrar plantillas
 page_order: 3
 
 page_type: reference
@@ -11,7 +11,7 @@ tool:
 
 ---
 
-# Gestión de plantillas
+# Administrar plantillas
 
 > Archivar o duplicar plantillas puede ayudar a organizarlas y gestionarlas mejor. Este artículo de referencia explica cómo archivar y duplicar plantillas en la sección **Plantillas** del panel de control de Braze.
 
@@ -19,7 +19,7 @@ tool:
 
 ### Plantilla individual
 
-![Menú desplegable con opción de duplicado.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
+![Menú desplegable con opción de duplicar.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 Para duplicar una plantilla individual, seleccione el icono de engranaje <i class="fas fa-cog"></i> de la plantilla individual y seleccione **Duplicar** en el menú desplegable.
 <br><br>
@@ -52,7 +52,7 @@ Para archivar una plantilla individual, seleccione el icono de configuración en
 
 Para archivar varias plantillas, seleccione la casilla situada junto a cada plantilla que desee archivar. Cuando hayas seleccionado varias plantillas, selecciona **Archivar**. Puede encontrar sus plantillas archivadas seleccionando **Archivadas** en **Mostrar** en la cuadrícula de plantillas.
 
-![Sección de plantillas de correo electrónico de soltar y soltar guardadas que muestra dos plantillas seleccionadas y una barra de herramientas con la opción de archivar.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
+![Gota Guardada & Gota Sección de plantillas de correo electrónico que muestra dos plantillas seleccionadas y una barra de herramientas con la opción de archivar.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 El archivado no está disponible actualmente para [las plantillas de enlaces]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).

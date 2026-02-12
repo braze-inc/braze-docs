@@ -1,6 +1,6 @@
 ---
 page_order: 20
-nav_title: Práticas recomendadas
+nav_title: Melhores práticas
 article_title: Práticas recomendadas de push
 description: "Esta página contém as melhores práticas e casos de uso de push para garantir que suas mensagens de push inspirem engajamento em vez de aborrecimento."
 channel: push
@@ -17,6 +17,51 @@ Suas mensagens push devem estar dentro das diretrizes da Apple App Store e das p
 ## Crie sua mensagem push
 
 Como prática recomendada, a Braze recomenda manter cada linha de texto, tanto para o título opcional quanto para o corpo da mensagem, com aproximadamente 30 a 40 caracteres em uma notificação por push para celular. Nota que o contador de caracteres no criador não conta os caracteres Liquid. Isso significa que a contagem final de caracteres de uma mensagem depende de como Liquid renderiza para cada usuário. Em caso de dúvida, seja breve e direto.
+
+## Reduzir o tamanho da carga útil da notificação por push
+
+O tamanho máximo da carga útil depende da plataforma.
+
+| Plataforma | Tamanho máximo da carga útil |
+| --- | --- |
+| Web | 3.807 bytes |
+| Android | 3.930 bytes |
+| iOS | 3.960 bytes |
+| Kindle | 5.985 bytes |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+Se o seu push exceder o tamanho máximo da carga útil, a mensagem pode não ser enviada. Recomendamos que você mantenha sua carga útil em algumas centenas de bytes.
+
+### O que é uma carga útil push?
+
+Os provedores de notificação por push calculam se a notificação por push pode ser exibida para um usuário observando o tamanho em bytes de toda a carga útil do push. A carga útil é limitada a **4 KB (4.096 bytes)** para a maioria dos serviços push, incluindo:
+
+- Serviço de Notificações por Push da Apple (APNs)
+- Envio de mensagens do Firebase Cloud (FCM) para Android
+- Web push
+- Huawei push
+
+Esses serviços push recusarão qualquer notificação que exceda esse limite.
+
+A Braze reserva uma parte da carga útil do push para fins de integração e análise de dados. Com isso, nosso tamanho máximo de carga útil é de **3.807 bytes**. Se seu push exceder esse tamanho, a mensagem poderá não ser enviada. Recomendamos que você mantenha sua carga útil em algumas centenas de bytes.
+
+Os seguintes elementos em seu push compõem a carga útil do push:
+
+- Texto, como o título e o corpo da mensagem
+- Renderização final de qualquer personalização Liquid
+- URLs para imagens (mas não o tamanho da imagem em si)
+- URLs para direcionamentos de cliques
+- Nomes de botões
+- Pares de valores chave
+
+### Dicas para reduzir o tamanho da carga útil
+
+Para reduzir o tamanho da carga útil:
+
+- Mantenha sua mensagem breve. É importante que ela aponte para uma ação e tenha menos de 40 caracteres.
+- Omita espaços em branco e quebras de linha em sua cópia.
+- Considere como o Liquid será renderizado no envio. Como a renderização final de qualquer personalização Liquid varia de usuário para usuário, o Braze não pode determinar se uma carga útil push excederá o limite de tamanho quando o Liquid for incluído. Se o Liquid renderizar uma mensagem mais curta, talvez não haja problema. No entanto, se seu Liquid resultar em uma mensagem mais longa, seu push poderá exceder o limite de tamanho da carga útil. Sempre teste sua mensagem push em um dispositivo real antes de enviá-la aos usuários.
+- Considere encurtar URLs usando um encurtador de URL.
 
 ## Otimize o direcionamento
 
@@ -52,9 +97,9 @@ Para evitar que os usuários desativem as notificações no nível do dispositiv
 
 O estado da inscrição push não garante que um push será entregue—os usuários também devem estar habilitados para push para receber notificações. Isso ocorre porque um perfil de usuário pode ter vários dispositivos com diferentes permissões de push em primeiro plano, mas apenas um único estado de inscrição de push.
 
-Se um usuário não tiver um token por push válido em primeiro plano para um app (ou seja, eles desativam tokens por push no nível do dispositivo através das configurações, optando por não receber notificações), seu estado de inscrição ainda pode ser considerado `subscribed` para push. No entanto, este usuário não seria `Push Enabled for App` na Braze, pois o token por push em primeiro plano não é válido.
+Se um usuário não tiver um token por push válido em primeiro plano para um app (ou seja, eles desativam tokens por push no nível do dispositivo através das configurações, optando por não receber notificações), seu estado de inscrição ainda pode ser considerado `subscribed` para push. No entanto, este usuário não seria `Foreground Push Enabled for App` na Braze, pois o token por push em primeiro plano não é válido.
 
-Além disso, se um perfil de usuário não tiver um token por push válido ou registrado para quaisquer outros aplicativos, seu filtro `Push Enabled` na segmentação também será falso.
+Além disso, se um perfil de usuário não tiver um token por push válido ou registrado para quaisquer outros aplicativos, seu filtro `Foreground Push Enabled` na segmentação também será falso.
 
 ## Implementar uma política de pôr do sol para usuários não responsivos
 

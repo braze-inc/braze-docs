@@ -24,7 +24,7 @@ Los mensajes SMS se cobran por segmento del mensaje. Comprender cómo se dividen
 
 ### ¿Qué es un segmento SMS?
 
-El Servicio de Mensajes Cortos (SMS) es un protocolo de comunicación estandarizado que permite a los dispositivos enviar y recibir mensajes de texto breves. Se diseñó para "encajar" entre otros protocolos de señalización, por eso la longitud de los mensajes SMS está limitada a 160 caracteres de 7 bits, como 1120 bits, o 140 bytes. Los segmentos de mensajes SMS son los lotes de caracteres que las compañías telefónicas utilizan para medir los mensajes de texto. Los mensajes se cobran por segmento de mensajes, por lo que los clientes que utilizan SMS se benefician enormemente de comprender los matices de cómo se dividirán los mensajes. 
+El Servicio de Mensajes Cortos (SMS) es un protocolo de comunicación estandarizado que permite a los dispositivos enviar y recibir mensajes de texto breves. Se diseñó para "encajar" entre otros protocolos de señalización, por eso la longitud de los mensajes SMS está limitada a 160 caracteres de 7 bits, como 1120 bits, o 140 bytes. Los segmentos de mensajes SMS son los lotes de caracteres que las compañías telefónicas utilizan para medir los mensajes de texto. Los mensajes se cobran por segmento de mensajes, por lo que los clientes que utilizan SMS se benefician enormemente de comprender los matices de cómo se dividirán los mensajes.
 
 Cuando creas una campaña de SMS o Canvas con Braze, los mensajes que construyes en el compositor son representativos de lo que tus usuarios pueden ver cuando el mensaje llega a su teléfono, pero **no son indicativos de cómo se dividirá tu mensaje en segmentos y, en última instancia, de cómo se te cobrará**. Entender cuántos segmentos se enviarán y ser consciente de los posibles excesos que podrían producirse es su responsabilidad, pero le proporcionamos algunos recursos para facilitarle esta tarea. Consulta nuestra [calculadora interna de segmentos](#segment-calculator).
 
@@ -36,14 +36,14 @@ El límite de caracteres para **un segmento SMS independiente** es de 160 caract
 
 Es importante tener en cuenta que **, a medida que se supera el límite de caracteres del primer segmento, los caracteres adicionales harán que todo el mensaje se divida y se segmente en función de los nuevos límites de caracteres**:
 - **Codificación GSM-7**
-    - Los mensajes que superen el límite de 160 caracteres ahora se segmentarán en segmentos de 153 caracteres y se enviarán individualmente, para luego ser reconstruidos por el dispositivo del destinatario. Por ejemplo, un mensaje de 161 caracteres se enviará como dos mensajes, uno con 153 caracteres y el segundo con 8 caracteres. 
+    - Los mensajes que superen el límite de 160 caracteres ahora se segmentarán en segmentos de 153 caracteres y se enviarán individualmente, para luego ser reconstruidos por el dispositivo del destinatario. Por ejemplo, un mensaje de 161 caracteres se enviará como dos mensajes, uno con 153 caracteres y el segundo con 8 caracteres.
 - **Codificación UCS-2**
-    - Si incluyes caracteres no GSM, como Emojis, escritura china, coreana o japonesa, en los mensajes SMS, esos mensajes deben enviarse con codificación UCS-2. Los mensajes que superen el límite de segmento inicial de 70 caracteres harán que todo el mensaje se concatene en segmentos de mensaje de 67 caracteres. Por ejemplo, un mensaje de 71 caracteres se enviará como dos mensajes, uno con 67 caracteres y el segundo con 4 caracteres. 
+    - Si incluyes caracteres no GSM, como Emojis, escritura china, coreana o japonesa, en los mensajes SMS, esos mensajes deben enviarse con codificación UCS-2. Los mensajes que superen el límite de segmento inicial de 70 caracteres harán que todo el mensaje se concatene en segmentos de mensaje de 67 caracteres. Por ejemplo, un mensaje de 71 caracteres se enviará como dos mensajes, uno con 67 caracteres y el segundo con 4 caracteres.
 
 Independientemente del tipo de codificación, cada mensaje SMS enviado por Braze tiene un límite de hasta 10 segmentos y es compatible con [plantillas Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [contenido conectado]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), emojis y enlaces.
 
 {% tabs %}
-{% tab Codificación GSM-7 %}
+{% tab GSM-7 encoding %}
 | Número de caracteres | ¿Cuántos segmentos? |
 | -------------------- | ----------------- |
 | 0 - 160 caracteres 1 segmento
@@ -58,7 +58,7 @@ Independientemente del tipo de codificación, cada mensaje SMS enviado por Braze
 | 1378 - 1530 caracteres | 10 segmentos |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 {% endtab %}
-{% tab Codificación UCS-2 %}
+{% tab UCS-2 encoding %}
 | Número de caracteres | ¿Cuántos segmentos? |
 | -------------------- | ----------------- |
 | 0 - 70 caracteres | 1 segmento |
@@ -129,6 +129,34 @@ Si quieres ver cuántos segmentos enviará tu mensaje, introduce tu copia en la 
   .segment_color_3 {
     background-color: #27368f30;
   }
+  .encoding_gsm {
+    background-color: #28a745;
+    color: white;
+    padding: 1px 3px;
+    margin: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .encoding_ucs2 {
+    background-color: #dc3545;
+    color: white;
+    padding: 1px 3px;
+    margin: 1px;
+    border-radius: 2px;
+    font-size: 10px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .encoding_legend {
+    margin: 10px 0;
+    font-size: 12px;
+  }
+  .encoding_legend_item {
+    display: inline-block;
+    margin-right: 15px;
+  }
 </style>
 <form id="sms_split">
   <textarea id="sms_message_split" placeholder="Escribe aquí tu copia del SMS..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
@@ -139,7 +167,16 @@ Si quieres ver cuántos segmentos enviará tu mensaje, introduce tu copia en la 
   Longitud del mensaje: <span id="sms_length" style="padding-left: 5px;">0</span> caracteres.<br />
   Recuento de segmentos SMS: <span id="sms_segments" style="padding-left: 5px;">0</span> segmentos. <br />
   Salida de mensajes: <span id="sms_output" style="padding-left: 5px;"></span><br />
-  <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Visualizar segmentos: </label>
+  <input type="checkbox" id="encoding_section" name="encoding_section"> <label for="encoding_section" style="padding-left: 5px; margin-bottom: 0px;">Mostrar codificación de caracteres</label>
+  <div class="segment_data_hide" id="character_encoding_container">
+    <div class="encoding_legend">
+      <div class="encoding_legend_item"><span class="encoding_gsm">GSM</span> GSM-7 caracteres</div>
+      <div class="encoding_legend_item"><span class="encoding_ucs2">UCS</span> Caracteres UCS-2</div>
+    </div>
+    <span id="character_encoding_label">Codificación de caracteres: </span><span id="character_encoding" style="padding-left: 5px;"></span><br />
+  </div>
+  <br />
+  <input type="checkbox" id="segment_section" name="segment_section"> <label for="segment_section" style="padding-left: 5px; margin-bottom: 0px;">Segmentos de visualización</label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
@@ -403,75 +440,192 @@ function countLength(type, s) {
   const t = (tipo === "auto") ? smsutil.pickencoding(s) : tipo;
 
   if (t === "gsm") {
-    return s.length \+ (s.match(/^|€|{|}|[|]|~|/g) | []).length;
+    devuelve s.length \+ (s.match(/^|€|{|}|[|]||/g) || []).length;
   } else {
     devolver s.length;
   }
+}
+
+function getCodificaciónCaracteres(char, tipo) {
+  if (tipo === "ucs2") devuelve "ucs2";
+  si (tipo === "gsm") devuelve "gsm";
+
+  // Para la detección automática, comprueba si el carácter está en el conjunto GSM-7
+  const codePoint = char.charCodeAt(0);
+  return (codePoint en unicodeToGsm) ? "gsm" : "ucs2";
+}
+
+function mostrarCodificaciónCaracteres(texto, tipo) {
+  const caracteres = smsutil.unicodeCharacters(texto);
+  devuelve characters.map((char, index) => {
+    const codificación = getCodificaciónCaracteres(char, tipo);
+    const mostrarCar = char === " " ? " " : char;
+    const encodingClass = encoding === "gsm" ? "encoding_gsm": "encoding_ucs2";
+    const encodingLabel = encoding === "gsm" ? "GSM" : "UCS";
+    devolver `<span id="character_encoding_data_${index}" class="${encodingClass}" title="${displayChar} - ${encoding.toUpperCase()}">${encodingLabel}</span>`;
+  }).join("");
 }
 
 function updateSMSSplit(){
     var sms_text = $('#sms_message_split').val();
     var sms_type = $('#sms_split input[name=sms_type]:checked').val();
     var unicodeinput = smsutil.unicodeCharacters(sms_text);
-    var encodedChars = [encodersms_type](sms_text);
-    var smsSegments = segmenter[sms_type](unicodeinput);
+    var caracterescodificados = codificador[sms_type](sms_text);
+    var smsSegmentos = segmentador[sms_type](unicodeinput);
     $('#sms_length').html(countLength(sms_type, sms_text));
-    $('#sms_segments').html(smsSegments.length).;
+    $('#sms_segments').html(smsSegments.length);
+
+    // Display character encoding
+    $('#character_encoding').html(displayCharacterEncoding(sms_text, sms_type));
+
     const segmentColors = (i) => `segment_color_${i > 3 ? i%3 : i}`;
-    const segmentsHtml = smsSegments.map((segmento,segmento_índice) => segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
-    const messageOutput = smsSegments.map((segment,segment_index) =>  segment.text.map((ch, i) => `<div id='message_output_data_${segment_index}-${i}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`).join(""));
+    const segmentsHtml = smsSegments.map((segment,segment_index) =>  segment.bytes.map((byte, i) => `<div id='sms_segments_data_${segment_index}-${i}' class='segment ${segmentColors(segment_index)}'>${byte.map(b => smsutil.hexEncode(b)).join(" ")}</div>`).join(""));
+
+    // Create message output with both segment and character indexing
+    let characterIndex = 0;
+    const messageOutput = smsSegments.map((segment,segment_index) =>
+      segment.text.map((ch, i) => {
+        const result = `<div id='message_output_data_${segment_index}-${i}' data-char-index='${characterIndex}' class='message_output_char ${segmentColors(segment_index)}'>${ch !== " " ? ch : "&nbsp;"}</div>`;
+        characterIndex++;
+        return result;
+      }).join("")
+    );
     $('#sms_output').html(messageOutput);
     $('#sms_segments_data').html(segmentsHtml);
-    $('#segmento_seccion').click(function() {
-if($(this).is(":checked")) {
-$("#sms_segments_data").show();
-}
+    $('#segment_section').click(function() {
+      if($(this).is(":checked")) {
+        $("#sms_segments_data").show();
+      }
       else {
         $("#sms_segments_data").hide();
       }
-      })
-        }
-      const implementHover = (hover_id, input_id_prefix, output_id_prefix) => {
-    $(hover_id).mouseover(function(e){
-var input_id = e.target.id;
-var index = input_id.split(input_id_prefix)[1];
-  if(!index) {
-    return;
+    });
+    $('#encoding_section').click(function() {
+      if($(this).is(":checked")) {
+        $("#character_encoding_container").show();
+      }
+      else {
+        $("#character_encoding_container").hide();
+      }
+    })
+}
+// Funcionalidad hover mejorada con resaltado en tres direcciones
+$("#sms_segments_data").mouseover(function(e){
+  if(e.target.id.startsWith("sms_segments_data_")) {
+    const segmentIndex = e.target.id.split("sms_segments_data_")[1];
+    const mensajeElementoSalida = `#message_output_data_${segmentIndex}`;
+    const charIndex = $(messageOutputElement).attr('data-char-index');
+    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}`: null;
+
+    let elementsToHighlight = `${messageOutputElement}, #${e.target.id}`;
+    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+    $(elementsToHighlight).addClass("hover_segment");
+    $(`#${e.target.id}`).mouseleave(function() {
+      $(elementsToHighlight).removeClass("hover_segment");
+    });
+  }
+});
+
+$("#sms_output").mouseover(function(e){
+  if(e.target.id.startsWith("message_output_data_")) {
+    const segmentIndex = e.target.id.split("message_output_data_")[1];
+    const segmentoElemento = `#sms_segments_data_${segmentIndex}`;
+    const charIndex = $(e.target).attr('data-char-index');
+    const encodingElement = charIndex !== undefined ? `#character_encoding_data_${charIndex}`: null;
+
+    let elementsToHighlight = `${segmentElement}, #${e.target.id}`;
+    if(encodingElement) elementsToHighlight += `, ${encodingElement}`;
+
+    $(elementsToHighlight).addClass("hover_segment");
+    $(`#${e.target.id}`).mouseleave(function() {
+      $(elementsToHighlight).removeClass("hover_segment");
+    });
+  }
+});
+
+$("#character_encoding").mouseover(function(e){
+  if(e.target.id.startsWith("character_encoding_data_")) {
+    const charIndex = e.target.id.split("character_encoding_data_")[1];
+    const mensajeElementoDeSalida = $(`[data-char-index='${charIndex}']`);
+    const mensajeSalidaId = messageOutputElement.attr('id');
+
+    if(messageOutputId) {
+      const segmentIndex = messageOutputId.split("message_output_data_")[1];
+      const segmentElement = `#sms_segments_data_${segmentIndex}`;
+
+      const elementsToHighlight = `#${e.target.id}, #${messageOutputId}, ${segmentElement}`;
+      $(elementsToHighlight).addClass("hover_segment");
+      $(`#${e.target.id}`).mouseleave(function() {
+        $(elementsToHighlight).removeClass("hover_segment");
+      });
     }
-    var output_id = `#${output_id_prefix}${index}`;
-      $(`${output_id}, #${input_id}`).addClass("hover_segment");
-    $(`#${input_id}`).mouseleave(function() {
-    $(`${output_id}, #${input_id}`).removeClass("hover_segment");
-    });
-    });
-    };
-  /destacar segmento a la salida del mensaje
-implementHover("#sms_segments_data", "sms_segments_data_", "message_output_data_");
-/destacar mensaje de salida al segmento
-implementHover("#sms_output", "message_output_data_", "sms_segments_data_");
-$('#sms_message_split').on("input", function(e){
-$('#auto_encoding').html("");
-updateSMSSplit();
+  }
 });
-  $('#sms_split input[name=sms_type]').change(function(e){
+$('#sms_message_split').on("input", función(e){
   $('#auto_encoding').html("");
-updateSMSSplit();
+  updateSMSSplit();
 });
-    </script>
+$('#sms_split input[name=sms_type]').change(function(e){
+    $('#auto_encoding').html("");
+    updateSMSSplit();
+});
+</script>
 
 {% endalert %}
 
-## Calculadora de mensajes RCS
+## Facturación de mensajes RCS
 
-Los mensajes de RCS se cobran por mensaje. Comprender los tipos de mensajes RCS facturables es clave para entender tu facturación.
+Los mensajes RCS se facturan en función de su contenido y del país en el que se entrega el mensaje. Para calcular los costes con precisión, es esencial comprender los distintos tipos de mensajes y cómo se facturan.
 
-### Tipos de mensajes facturables RCS
+### Tipos de facturación RCS
 
-Los mensajes de RCS se facturan de varias formas distintas. Actualmente, Braze admite dos tipos de facturación: RCS básico y RCS único. 
+Nuestra plataforma admite dos modelos principales de facturación: un modelo global y un modelo para Estados Unidos.
 
-- **Mensajes RCS básicos**: Mensajes de sólo texto y de hasta 160 caracteres de longitud. 
-- **Mensajes RCS individuales:** Mensajes de sólo texto y de más de 160 caracteres de longitud O mensajes con cualquier elemento enriquecido. Los elementos enriquecidos incluyen imágenes y botones (como respuestas sugeridas o acciones sugeridas).
+#### Modelo global (mercados no estadounidenses)
 
-El tipo de facturación correspondiente se mostrará dentro del creador de mensajes RCS en una etiqueta que tiene uno de dos valores: RCS **sólo texto** (RCS Básico) y **RCS** (RCS Único).
+Los mensajes se facturan por mensaje y se clasifican como Básicos o Únicos.
 
-Los datos de tu tipo de facturación RCS se rellenarán en tu [panel de Uso de mensajes]({{site.baseurl}}/message_usage_dashboard/), que muestra tu consumo de créditos de mensajes especificando tu ratio de créditos y el número de créditos de mensajes utilizados. 
+{% tabs local %}
+{% tab Basic %}
+
+Los mensajes RCS básicos son mensajes de sólo texto de hasta 160 caracteres y se facturan como un único mensaje.
+
+{% alert note %}
+Si añades botones o cualquier elemento enriquecido, el tipo de mensaje cambiará a Mensaje RCS único.
+{% endalert %}
+
+{% endtab %}
+{% tab Single %}
+
+Los mensajes RCS simples son mensajes que tienen más de 160 caracteres O incluyen elementos enriquecidos como botones o medios. Se facturan como un único mensaje, independientemente de la longitud del mensaje.
+
+{% alert note %}
+Enviar un mensaje de texto y un archivo multimedia por separado se sigue considerando como dos mensajes distintos.
+{% endalert %}
+
+{% endtab %}
+{% endtabs %}
+
+#### Modelo de Estados Unidos
+
+Los mensajes se clasifican en Rich o Rich Media.
+
+{% tabs local %}
+{% tab Rich messages %}
+
+Los mensajes enriquecidos son mensajes de sólo texto con o sin botones. Se facturan por segmento, con cada segmento limitado a 160 bytes UTF-8, lo que significa que **el número de caracteres por segmento no es fijo**. Un mensaje con sólo 160 caracteres en inglés es un segmento, pero un mensaje con texto más largo y emojis podría ser varios segmentos.
+
+{% endtab %}
+{% tab Rich media messages %}
+
+Los mensajes multimedia enriquecidos incluyen un archivo multimedia (imagen, video) o una tarjeta enriquecida y se facturan como un único mensaje.
+
+{% endtab %}
+{% endtabs %}
+
+### Creador de mensajes y panel de uso de mensajes
+
+Mientras creas tu mensaje, el creador de mensajes mostrará el tipo de facturación en tiempo real a través de una etiqueta (RCS Básico, RCS Único, Rich o Rich Media), ayudándote a hacer un seguimiento de los costes antes de enviarlo.
+
+Tu [panel de uso de mensajes]({{site.baseurl}}/message_usage_dashboard/) reflejará estos tipos de facturación y proporcionará el número de segmentos utilizados para los mensajes de EE.UU., proporcionando una visión transparente de tu consumo de crédito de mensajes.

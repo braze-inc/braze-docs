@@ -1,5 +1,5 @@
 ---
-nav_title: Cartes de visite
+nav_title: Cartes de contact
 article_title: Cartes de visite
 page_order: 3
 description: "Cet article de référence explique comment créer une carte de contact à inclure dans vos envois MMS et SMS."
@@ -24,7 +24,7 @@ Des cartes de contact peuvent être créées à partir du compositeur de SMS et 
 
 Vous serez ensuite invité à saisir le nom ou surnom de votre entreprise. Il s’agit du nom que vos utilisateurs verront lorsqu’ils enregistrent la carte. Une limite de 20 caractères est imposée pour garantir que l'utilisateur puisse voir le nom complet de votre entreprise ou alias dans ses contacts et son application de messagerie. 
 
-![L'onglet du générateur de cartes de contact.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![L'onglet Générateur de cartes de contact.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Étape 2 : Attribuer un numéro de téléphone
 

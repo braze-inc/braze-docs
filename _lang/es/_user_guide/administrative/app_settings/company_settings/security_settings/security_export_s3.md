@@ -8,7 +8,11 @@ description: "Este artículo de referencia explica cómo exportar automáticamen
 
 # Exportación de eventos de seguridad con Amazon S3
 
-> Puedes exportar automáticamente los Eventos de Seguridad a Amazon S3, un proveedor de almacenamiento en la nube, con una tarea diaria que se ejecuta a medianoche UTC.  Una vez configurado, no necesitas exportar manualmente los Eventos de seguridad desde el panel.
+> Puedes exportar automáticamente los eventos de seguridad a Amazon S3, un proveedor de almacenamiento en la nube, con una tarea diaria que se ejecuta a medianoche UTC. Tras la configuración, no necesitas exportar manualmente los eventos de seguridad desde el panel. El trabajo exporta los eventos de seguridad de las últimas 24 horas en formato CSV a tu almacenamiento S3 configurado. El archivo CSV tiene la misma estructura que un informe exportado manualmente.
+
+{% alert note %}
+El límite de 10.000 filas sólo se aplica a la descarga manual de informes CSV desde el panel. Las exportaciones de eventos de seguridad a S3 no están sujetas a este límite de filas.
+{% endalert %}
 
 Braze admite dos métodos diferentes de autenticación y autorización de S3 para configurar la exportación a Amazon S3:
 
@@ -19,9 +23,9 @@ Braze admite dos métodos diferentes de autenticación y autorización de S3 par
 
 Este método genera una clave secreta y un ID de clave de acceso que permite a Braze autenticarse como usuario en tu cuenta de AWS para escribir datos en tu contenedor.
 
-### Paso 1: Crear un usuario de mensajes dentro de la aplicación
+### Paso 1: Crear un usuario de Gestión de Identidades y Accesos (IAM)
 
-Para recuperar tu clave de acceso secreta y tu ID de clave de acceso, tendrás que crear un usuario de mensajes dentro de la aplicación, siguiendo las instrucciones de [Configuración de tu cuenta de AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
+Para recuperar tu clave de acceso secreta y tu ID de clave de acceso, tendrás que crear un usuario de IAM, siguiendo las instrucciones de [Configuración de tu cuenta de AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
 
 ### Paso 2: Obtener credenciales
 
@@ -36,7 +40,7 @@ Para recuperar tu clave de acceso secreta y tu ID de clave de acceso, tendrás q
 
 ### Paso 3: Crear política
 
-1. Ve a **IAM** > **Políticas** > **Crear política** para añadir permisos para tu usuario. 
+1. Ve a **IAM** (Gestión de Identidades y Accesos) > **Políticas** > **Crear política** para añadir permisos a tu usuario. 
 2. Selecciona **Crear tu propia política**, que otorga permisos limitados para que Braze sólo pueda acceder a los contenedores especificados.
 3. Especifica un nombre de póliza de tu elección.
 4. Introduce el siguiente fragmento de código en la sección **Documento de Política**. Asegúrate de sustituir "INSERTBUCKETNAME" por el nombre de tu contenedor. Sin estos permisos, la integración no superará la comprobación de credenciales y no se creará.
@@ -92,7 +96,7 @@ El método ARN de rol de AWS genera un Nombre de Recurso de Amazon (ARN) de rol 
 ### Paso 1: Crear política
 
 1. Inicia sesión en la consola de administración de AWS como administrador de cuentas. 
-2. En la consola de AWS, ve a la sección **IAM** > **Políticas** y, a continuación, selecciona **Crear política**.
+2. En la consola de AWS, ve a la sección **IAM** (Identity and Access Management) > **Políticas** y, a continuación, selecciona **Crear política**.
 
 ![Una página con una lista de políticas y un botón para "Crear política".]({% image_buster /assets/img/security_export/policies.png %})
 
@@ -135,7 +139,7 @@ El método ARN de rol de AWS genera un Nombre de Recurso de Amazon (ARN) de rol 
 
 ![La página "Descarga de eventos de seguridad" con la cuenta Braze y los ID externos Braze rellenados.]({% image_buster /assets/img/security_export/security_event_download2.png %})
 
-4. En la consola de AWS, ve a la sección **IAM** > **Roles** > **Crear rol**. 
+4. En la consola de AWS, ve a la sección **IAM** (Identity and Access Management) > **Roles** > **Crear rol**. 
 5. Selecciona **Otra cuenta de AWS** como tipo de selector de entidad de confianza. 
 6. Proporciona tu ID de cuenta Braze, marca la casilla **Requerir ID externo** y, a continuación, introduce tu ID externo Braze. 
 7. Seleccione **Siguiente** cuando haya terminado.
@@ -165,7 +169,7 @@ El método ARN de rol de AWS genera un Nombre de Recurso de Amazon (ARN) de rol 
 {: start="2"}
 2\. En Braze, ve a **Configuración** > **Configuración de la empresa** > **Configuración de administrador** > **Configuración de seguridad** y desplázate hasta la sección **Descarga de eventos de seguridad**.
 
-![Sección "Descarga de eventos de seguridad" con un alternador activado para "Exportar a AWS S3".]({% image_buster /assets/img/security_export/security_event_download3.png %})
+![Sección "Descarga de eventos de seguridad" con un botón alternativo activado para "Exportar a AWS S3".]({% image_buster /assets/img/security_export/security_event_download3.png %})
 
 {: start="3"}
 3\. Asegúrate de que **el ARN del rol de AWS** está seleccionado, e introduce el ARN de tu rol y el nombre de contenedor de AWS S3 en los campos designados.

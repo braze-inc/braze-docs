@@ -1,6 +1,6 @@
 ---
-nav_title: Criação de uma campanha MMS
-article_title: Criação de uma campanha MMS
+nav_title: Criar uma campanha MMS
+article_title: Criar uma Campanha MMS
 page_order: 2
 description: "Este artigo de referência aborda as etapas envolvidas na criação, no envio e na prévia de uma mensagem MMS."
 page_type: reference
@@ -12,7 +12,7 @@ channel:
 search_rank: 1  
 ---
 
-# Criação de uma campanha MMS
+# Criar uma campanha MMS
 
 > Este artigo contém informações específicas sobre a composição de MMS, que faz parte do criador de SMS. Para saber mais informações detalhadas sobre o criador de SMS/MMS, consulte o [criador de SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/sms/create/).
 
@@ -38,7 +38,7 @@ Os cartões de contato (às vezes conhecidos como vCard ou Virtual Contact Files
 
 A criação de uma mensagem MMS requer que seu grupo de inscrições esteja configurado para o envio de MMS. Isso é indicado pela visualização da tag MMS ao selecionar um grupo de inscrições. Ao selecionar um grupo de inscrições habilitado para MMS, você poderá fazer upload de uma imagem, fazer referência a um URL de imagem ou incluir um cartão de contato.
 
-![A guia "Compose" para escrever sua mensagem.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
+![A guia "Compor" para escrever sua mensagem.]({% image_buster /assets/img/sms/mms_composer.png %}){: style="max-width:80%;"}
 
 ### Especificações da imagem
 
@@ -56,4 +56,4 @@ A Braze fornece uma prévia da imagem que você fez upload no painel **Pré-visu
 Não é possível personalizar a ordem dos ativos de SMS/MMS. O pedido depende do fato de o telefone receber essa mensagem.
 {% endalert %}
 
-![Um exemplo de mensagem "Ready to hit the gym...at home?" (Pronto para ir para casa?). A prévia mostra a mensagem e a imagem enviadas como textos.]({% image_buster /assets/img/sms/mms_preview.png %})
+![Um exemplo de mensagem "Pronto para ir à academia...em casa?". A prévia mostra a mensagem e a imagem enviadas como textos.]({% image_buster /assets/img/sms/mms_preview.png %})

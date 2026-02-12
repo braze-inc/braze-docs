@@ -4,8 +4,8 @@ nav_title: Términos que debe conocer
 article_title: Términos de soldadura fuerte
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
+glossary_top_header: "Términos que debe conocer"
+glossary_top_text: "Estos términos deberían ayudarte al comenzar tu viaje hacia unos mejores vínculos con el cliente y el usuario con Braze. Léelo antes de iniciar tu incorporación."
 page_type: glossary
 description: "Este glosario incluye términos importantes que debe conocer durante el proceso de incorporación a Braze."
 
@@ -81,7 +81,7 @@ glossaries:
   - name: Mensajes Push
     description: "Un <a href=\"https://www.braze.com/docs/user_guide/message_building_by_channel/push/\">mensaje push</a>, o notificación push, es una notificación que aparece desde una aplicación móvil. Las notificaciones push suelen aparecer como cuadros de diálogo emergentes y banners tanto para iOS como para Android."
   - name: Token de notificaciones push
-    description: "Un token push es una clave única, creada y asignada por Apple o Google para crear una conexión entre una aplicación y un dispositivo iOS, Android o web. La <a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">migración de tokens push</a> consiste en importar a Braze esas claves ya generadas."
+    description: "Un token push es una clave única, creada y asignada por Apple o Google para crear una conexión entre una aplicación y un dispositivo iOS, Android o web. La <a href=\"https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens\">migración de tokens push</a> consiste en importar a Braze esas claves ya generadas."
   - name: Push Time to Live
     description: "También conocido como <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">Push TTL</a>, el tiempo de vida se refiere al periodo durante el cual las campañas seguirán intentando ser entregadas a un usuario desconectado."
   - name: Condiciones de la carrera

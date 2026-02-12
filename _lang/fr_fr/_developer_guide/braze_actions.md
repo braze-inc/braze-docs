@@ -1,5 +1,5 @@
 ---
-nav_title: Actions deeplink de Braze
+nav_title: Actions de Braze liens profonds
 article_title: Actions deeplink de Braze
 page_order: 100
 description: "Cet article de référence explique comment utiliser les liens profonds d’action Braze pour effectuer des actions SDK dans les boutons du canal de communication."

@@ -1,5 +1,5 @@
 ---
-nav_title: Mensajes de error push comunes
+nav_title: Mensajes comunes de error push
 article_title: Mensajes de error push comunes
 page_order: 22
 page_type: reference
@@ -38,7 +38,7 @@ Los fallos más comunes pueden ser:
 
 El error `BadToken` puede producirse por varias razones:
 - El token de notificaciones push no se nos envía correctamente en `[[Appboy sharedInstance] registerPushToken:]`
-	- Comprueba el token en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Por lo general, debe parecerse a una larga cadena de letras y números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Si no lo hace, comprueba el código implicado en el envío de errores de token de notificaciones push Braze.<br><br>
+	- Comprueba el token en el [Registro de actividad de mensajes]({{site.baseurl}}/user_guide/administrative/app_settings/message_activity_log_tab/). Por lo general, debe parecerse a una larga cadena de letras y números (como `6e407a9be8d07f0cdeb9e714733a89445f57a89ec890d63867c482a483506fa6`). Si no es así, comprueba el código implicado en el envío de errores de token de notificaciones push Braze.<br><br>
 - Entorno de aprovisionamiento desajustado:
 	- Si te registras con un certificado de desarrollador e intentas enviar con uno de producción, puedes ver este error.  
 	- Braze sólo admite certificados universales para entornos de producción. Probar push en entornos de desarrollo con un certificado universal no funcionará. 

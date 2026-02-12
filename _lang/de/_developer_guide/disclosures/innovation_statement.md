@@ -1,6 +1,6 @@
 ---
-nav_title: Innovationserklärung
-article_title: Innovationserklärung
+nav_title: Erklärung zur Innovation
+article_title: Innovation Erklärung
 description: "In diesem Referenzartikel finden Sie die Innovationserklärung von Braze."
 noindex: true
 page_order: 9

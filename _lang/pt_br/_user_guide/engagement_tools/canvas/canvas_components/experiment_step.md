@@ -1,5 +1,5 @@
 ---
-nav_title: Jornadas do experimento 
+nav_title: Jornadas do experimento
 article_title: Jornadas do experimento 
 alias: /experiment_step/
 page_order: 4
@@ -14,7 +14,7 @@ tool: Canvas
 
 Quando você inclui uma etapa da jornada experimental na sua jornada do usuário, ela atribuirá aleatoriamente os usuários a diferentes caminhos (ou a um grupo de controle opcional) que você criar. Porções do público serão atribuídas a diferentes caminhos de acordo com as porcentagens que você selecionar, permitindo que você teste diferentes mensagens ou caminhos entre si e determine qual é o mais efetivo. 
 
-![Uma etapa da jornada experimental que se divide em Caminho 1, Caminho 2 e Controle.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Uma etapa da jornada experimental que se divide em jornada 1, jornada 2 e Controle.]({% image_buster /assets/img/experiment_step/experiment_step.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 ## Casos de uso
 
@@ -45,7 +45,7 @@ Você pode adicionar até quatro jornadas clicando em **Add Path** e um grupo de
 
 Você também pode escolher se os usuários no grupo de controle devem continuar no canva ou sair após a janela de rastreamento de conversão para o **Comportamento do Grupo de Controle**. Opcionalmente, você pode adicionar uma descrição para explicar aos outros o que esta jornada experimental pretende testar ou incluir informações adicionais que possam ser úteis para nota.
 
-![Configurações de jornada experimental onde é possível adicionar jornadas e distribuir a porcentagem de usuários em cada jornada.]({% image_buster /assets/img/experiment_step/exp_settings.png %})
+![Configurações de Experimento onde você pode adicionar jornadas e distribuir a porcentagem de usuários em cada jornada.]({% image_buster /assets/img/experiment_step/exp_settings.png %})
 
 {% alert note %}
 Se a re-eligibilidade do canva estiver ativada, os usuários que entrarem no canva e seguirem uma jornada escolhida aleatoriamente seguirão a mesma jornada novamente se se tornarem elegíveis novamente e reentrarem no canva. Isso mantém a validade do experimento e da análise de dados associada. Se você deseja que a etapa sempre randomize a atribuição de jornada, selecione **Jornadas aleatórias em jornadas de experimento**. Esta opção não está disponível ao usar Caminhos Vencedores ou Personalizados.
@@ -59,17 +59,17 @@ Você pode optar por otimizar seu experimento ativando [Jornada Vencedora]({{sit
 
 Por fim, você deve montar suas jornadas dependentes. Selecione **Concluído** e retorne ao construtor de canva. Clique no <i class="fas fa-plus-circle"></i> botão de mais sob cada jornada para começar a criar jornadas usando as ferramentas usuais do canva como achar melhor, e lance o canva quando estiver pronto.
 
-![Adição de etapas a cada caminho que se divide de um componente de Jornada Experimental.]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
+![Adicionando etapas a cada jornada que se divide de um componente de jornada experimental.]({% image_buster /assets/img/experiment_step/experiment_downstream_paths.gif %}){: style="max-width:75%"}
 
 Lembre-se de que os caminhos e seus passos subsequentes não podem ser removidos de uma canva depois de serem criados. No entanto, quando lançado, você pode modificar a distribuição do público entre as jornadas conforme achar adequado. Por exemplo, se um dia após lançar um canva, você concluir que uma jornada é superior às demais com base na análise de dados, você pode definir essa jornada para 100% e as outras para 0%. Ou, dependendo das suas necessidades, continue enviando os usuários por várias jornadas.
 
 {% alert important %}
-Para evitar a contaminação do experimento, se o seu Canvas tiver um experimento ativo ou em andamento e você atualizar o Canvas ativo (mesmo que não seja na etapa da jornada experimental), o experimento em andamento será encerrado. Para reiniciar o experimento, é possível desconectar a jornada experimental existente e iniciar uma nova, ou duplicar o Canvas e iniciar um novo Canvas. Você também não pode ativar Jornadas Personalizadas ou Jornadas Vencedoras para um canva já ativo com uma etapa de jornada experimental.<br><br>Para saber mais, consulte [Editar canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
+Para evitar a contaminação do experimento, se o seu Canva tiver um experimento de Caminho Vencedor ou Caminho Personalizado ativo ou em andamento e você atualizar o Canva ativo, independentemente de atualizar a etapa do Caminho do Experimento, o experimento em andamento será encerrado e a etapa do experimento não determinará um caminho vencedor ou caminhos personalizados. Para reiniciar o experimento, é possível desconectar a jornada experimental existente e iniciar uma nova, ou duplicar o Canvas e iniciar um novo Canvas. Caso contrário, os usuários percorrerão a jornada experimental como se nenhum método de otimização tivesse sido selecionado. Você também não pode ativar Jornadas Personalizadas ou Jornadas Vencedoras para um canva já ativo com uma etapa de jornada experimental.<br><br>Para saber mais, consulte [Editar canvas após o lançamento]({{site.baseurl}}/post-launch_edits/).
 {% endalert %}
 
 ## Rastreamento de performance
 
-Na página de **análise de dados da canva**, clique na jornada experimental para abrir uma [tabela detalhada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idêntica à guia **Analisar Variantes** para comparar estatísticas detalhadas de performance e conversão entre jornadas. Você também pode exportar a tabela via CSV e comparar as mudanças percentuais para métricas de interesse em relação à jornada ou controle que você selecionar.
+Na página **Análise do canva**, selecione o Caminho do experimento para abrir uma [tabela detalhada]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant) idêntica à guia **Analisar variantes** para comparar estatísticas detalhadas de performance e conversão entre as jornadas. Você também pode exportar a tabela via CSV e comparar as mudanças percentuais para métricas de interesse em relação à jornada ou controle que você selecionar.
 
 Cada etapa em cada jornada exibirá estatísticas na visualização [análise de dados do canva]({{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/), assim como qualquer etapa do canva. No entanto, tenha em mente que a análise de dados dos passos individuais **não** leva em conta a estrutura do experimento. A análise de dados na Etapa do Experimento deve ser usada para comparar entre jornadas.
 

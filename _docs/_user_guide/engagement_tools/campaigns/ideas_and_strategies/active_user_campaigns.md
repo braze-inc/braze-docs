@@ -37,7 +37,7 @@ Additionally, you will not have to continue updating this segment, as users who 
 The preceding example segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specifics of your app.
 {% endalert %}
 
-## Step 2: Reach out to your top users
+## Step 2: Contact your top users
 
 ### Make your users feel appreciated
 

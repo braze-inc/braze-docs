@@ -7,12 +7,12 @@ description: "Este artigo fornece uma visão geral das diferentes maneiras pelas
 
 ---
 
-# Primeiros passos: Campanhas e canvas
+# Comece agora: Campanhas e canvas
 
-No Braze, você pode enviar mensagens por meio de uma [campanha](#campaigns) ou de um [Canva](#canvas-flow).
+No Braze, você pode enviar mensagens por meio de uma [campanha](#campaigns) ou de um [Canva](#canvas).
 
 - Para enviar uma única mensagem direcionada a um grupo de usuários, escolha uma campanha. Uma campanha é uma etapa de mensagem única para se conectar com seus usuários em vários canais de envio de mensagens.
-- Para enviar uma série de mensagens contínuas em uma jornada abrangente do cliente, escolha o Canvas Flow. O Canvas Flow é nossa ferramenta de orquestração de jornada. Embora as campanhas sejam boas para o envio de mensagens simples e direcionadas, é nas Canvas que você leva o relacionamento com os clientes para o próximo nível.
+- Para enviar uma série de mensagens contínuas em uma jornada abrangente do cliente, escolha o Canva, nossa ferramenta de orquestração de jornada. Embora as campanhas sejam boas para o envio de mensagens simples e direcionadas, é nas Canvas que você leva o relacionamento com os clientes para o próximo nível.
 
 ## Campanhas
 
@@ -38,7 +38,7 @@ Confira estes recursos adicionais para saber mais sobre as campanhas no Braze:
 - [Criar uma campanha]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign)
 - [Ideias e estratégias]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies)
 
-## Canvas Flow
+## Canva
 
 Em vez de enviar mensagens esporádicas em várias campanhas, o Canvas cria uma conversa fluida e contínua com os usuários. Isso ocorre porque a jornada de um usuário por um Canvas pode se dividir em diferentes jornadas, dependendo de suas ações (ou inação) com sua marca, permitindo que você avance automaticamente os usuários por um fluxo específico em tempo real.
 
@@ -50,7 +50,7 @@ Ao criar um Canva, você segue muitas das mesmas etapas da configuração de uma
 
 Seu Canva pode ter qualquer combinação de [mensagens]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/), [postergações]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), [experimentos]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/) e muito mais. Você pode enviar em qualquer canal de envio de mensagens compatível e até mesmo [integrar-se a plataformas sociais e de anúncios]({{site.baseurl}}/partners/canvas_audience_sync/overview/), como Facebook, Google ou TikTok.
 
-Confira estes recursos adicionais para saber mais sobre o Canvas Flow:
+Confira estes recursos adicionais para saber mais sobre o Canva:
 
 - Braze Learning: [Orquestração de jornadas com o Canvas Flow](https://learning.braze.com/path/journey-orchestration-with-canvas-flow)
 - [Criar uma tela]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)

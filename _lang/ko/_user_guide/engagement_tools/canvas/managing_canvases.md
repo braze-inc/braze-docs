@@ -1,6 +1,6 @@
 ---
-nav_title: 캔버스 관리
-article_title: 캔버스 관리
+nav_title: 캔버스 관리하기
+article_title: 캔버스 관리하기
 page_order: 2
 layout: dev_guide
 guide_top_header: "캔버스 관리"

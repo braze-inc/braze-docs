@@ -1,5 +1,5 @@
 ---
-nav_title: Globale Kontrollgruppe 
+nav_title: Globale Kontrollgruppe
 article_title: Berichterstattung der globalen Kontrollgruppe
 page_type: reference
 description: "Auf dieser Seite finden Sie die Metriken für die Berichterstattung auf der Seite Globale Kontrollgruppe Reporting im Dashboard."
@@ -18,7 +18,7 @@ Um einen Bericht für Ihre [globale Kontrollgruppe]({{site.baseurl}}/user_guide/
 
 Wählen Sie dann den Parameter aus, mit dem Sie Ihren Bericht ausführen möchten (Sitzungen oder ein bestimmtes angepasstes Event) und wählen Sie **Bericht ausführen**.
 
-![][6]
+![]({% image_buster /assets/img/control_group/control_group6.png %})
 
 ## Konfigurieren Ihres Berichts
 
@@ -49,4 +49,3 @@ Jeder Workspace hat maximal eine globale Kontrollgruppe und eine Behandlungsstic
 | Events pro Nutzer:in | Die geschätzte durchschnittliche Häufigkeit abgeschlossener Konversionsereignisse im ausgewählten Zeitraum. | Ereignisse insgesamt ÷ geschätzte Gruppengröße. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
-[6]: {% image_buster /assets/img/control_group/control_group6.png %}

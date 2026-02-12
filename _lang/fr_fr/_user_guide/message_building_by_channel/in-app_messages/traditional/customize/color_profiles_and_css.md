@@ -24,7 +24,7 @@ Cliquez sur **Enregistrer le profil de couleur** lorsque vous avez terminé.
 
 ### Gestion des profils de couleur
 
-Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias à l'adresse & ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modèle CSS {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ Comme vous le constatez, vous pouvez tout modifier, de la couleur d’arrière-p
 
 ### Gestion des modèles CSS
 
-Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias.]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+Vous pouvez également [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) et [archiver des]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) modèles ! Pour en savoir plus sur la création et la gestion de modèles et de contenus créatifs, consultez la rubrique [Modèles et médias à l'adresse & ]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## Modal avec CSS (Web uniquement) {#web-modal-css}
 

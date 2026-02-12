@@ -1,5 +1,5 @@
 ---
-nav_title: Indicateurs par segmentation
+nav_title: Indicateurs par segments
 article_title: Indicateurs par segmentation
 page_order: 2.5
 page_type: reference
@@ -25,12 +25,12 @@ Pour exécuter ces rapports, procédez comme suit :
 - Achats et revenus par segment, pour les différentes variantes ou étapes
 - Performance des notifications push par segment
 
-![La page de répartition des segments contient un éditeur SQL, un panneau latéral avec des onglets pour les variables, les tables de données disponibles, l'historique des requêtes et le générateur de requêtes basé sur l’IA, ainsi qu'une section de résultats.]({% image_buster /assets/img_archive/segment_breakdown.png %})
+![La page de décomposition du segment contient un éditeur SQL, un panneau latéral avec des onglets pour les variables, les tables de données disponibles, l'historique de la requête et le générateur de requête d'intelligence artificielle, ainsi qu'une section de résultats.]({% image_buster /assets/img_archive/segment_breakdown.png %})
 
 ## Modèles de rapport
 
 {% tabs %}
-{% tab Indicateurs d'engagement par e-mail par segment %}
+{% tab Email engagement metrics by segment %}
 
 ### Visualisation des indicateurs pour les campagnes ou les canevas {#campaign-canvas-email}
 
@@ -75,7 +75,7 @@ Vos résultats montreront les indicateurs d'engagement par e-mail par segment po
 
 {% endtab %}
 
-{% tab Achats et chiffres d'affaires par segment %}
+{% tab Purchases and revenue by segment %}
 ### Visualisation des indicateurs pour les campagnes ou les canevas
 
 Pour afficher les indicateurs d'achats et d'affaires ventilés par segment pour une campagne ou un Canvas spécifique, utilisez l'onglet [Variables](#variables) pour spécifier les éléments suivants :
@@ -133,7 +133,7 @@ Vos résultats afficheront les indicateurs d'achat par segment pour les variante
 - **Colonnes :** Indicateurs d'achat
 
 {% endtab %}
-{% tab Envoi de messages par le haut ou par le bas pour l'engagement dans l'e-mail %}
+{% tab Top or bottom messaging for email engagement %}
 
 ### Visualisation des indicateurs pour les personnes les plus performantes ou les moins performantes.
 
@@ -167,7 +167,7 @@ Pour afficher ce rapport, vous devez spécifier les variables suivantes dans l'o
 Vos résultats afficheront les campagnes, les toiles ou les étapes du canvas les plus importantes (ou les moins importantes) que vous avez sélectionnées. Par exemple, si vous avez sélectionné les 10 meilleures campagnes pour le taux de clics, vos résultats afficheront les 10 meilleures campagnes classées du taux de clics le plus élevé au plus bas. Vos colonnes afficheront tous les indicateurs d'engagement par e-mail pour chaque ligne (campagnes, Canvas ou étapes de message).
 
 {% endtab %}
-{% tab Envoi de messages par le haut ou par le bas pour les achats %}
+{% tab Top or bottom messaging for purchases %}
 
 ### Visualisation des indicateurs pour les personnes les plus performantes ou les moins performantes.
 
@@ -204,7 +204,7 @@ Par exemple, disons qu'un segment contient 10 utilisateurs et que cinq d'entre e
 Vos résultats afficheront les campagnes, les toiles ou les étapes du canvas les plus importantes (ou les moins importantes) que vous avez sélectionnées. Par exemple, si vous avez sélectionné les 10 meilleures campagnes pour le "chiffre d'affaires au clic", vos résultats afficheront les 10 meilleures campagnes classées du plus élevé au plus faible "chiffre d'affaires au clic". Vos colonnes afficheront tous les indicateurs d'achat pour chaque ligne (campagnes, Canvas ou étapes d'envoi de messages).
 
 {% endtab %}
-{% tab Performances des notifications push par segment %}
+{% tab Push performance by segment %}
 
 ### Affichage des indicateurs de poussée pour les segments
 

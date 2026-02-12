@@ -1,5 +1,5 @@
 ---
-nav_title: Aperçu Canvas
+nav_title: Grandes lignes du Canvas
 article_title: Aperçu Canvas
 page_order: 3
 page_type: reference
@@ -14,15 +14,12 @@ tool: Canvas
 
 > Cet article présente plusieurs exemples qui montrent comment vous pouvez utiliser Canvas pour réaliser des envois de messages ciblés et personnalisés en combinant des étapes de [Délai]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) et de [Message.]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/) 
 
-L’apprentissage Braze propose également plusieurs cours Canvas dédiés, passant en revue des Canvas fréquents. Consultez-les pour obtenir des informations précieuses sur les termes et concepts expliqués dans un mélange de vidéos, cours et exercices interactifs. 
+L’apprentissage Braze propose également plusieurs cours Canvas dédiés, passant en revue des Canvas fréquents. Consultez-les pour obtenir des informations précieuses sur les termes et concepts expliqués dans un mélange de vidéos, cours et exercices interactifs.
+
 - [Créer des parcours clients avec Canvas Flow](https://learning.braze.com/create-customer-journeys-with-canvas-flow)
 - [Onboarding des nouveaux membres du programme de fidélité](https://learning.braze.com/new-loyalty-member-onboarding)
 - [Utilisateurs inactifs](https://learning.braze.com/lapsing-users)
 - [Créer un parcours utilisateur pour les paniers abandonnés](https://learning.braze.com/build-an-abandoned-cart-user-journey)
-
-{% alert important %}
-À compter du 28 février 2023, vous ne pourrez plus créer ou dupliquer de canvas à l’aide de l’expérience Canvas d’origine. Braze recommande aux clients qui utilisent l’expérience Canvas d’origine de passer à Canvas Flow. Il s’agit d’une expérience d’édition améliorée permettant de mieux créer et gérer les Canvas. En savoir plus sur le [clonage de vos toiles dans Canvas Flow.]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)
-{% endalert %}
 
 ### Onboarding
 

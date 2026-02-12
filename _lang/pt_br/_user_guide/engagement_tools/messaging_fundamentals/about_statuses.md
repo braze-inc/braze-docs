@@ -1,7 +1,7 @@
 ---
 nav_title: Statuses
 article_title: Status da campanha e do Canva
-page_order: 1
+page_order: 11
 description: "Saiba mais sobre status para campanhas e Canvas e como usá-los no dashboard."
 tool:
     - Campaigns
@@ -10,7 +10,7 @@ tool:
 
 # Status da campanha e do Canva
 
-> Saiba mais sobre status para campanhas e Canvas e como usá-los no dashboard.
+> Saiba mais sobre os status de campanhas e Canvas e como usá-los no dashboard.
 
 ## Filtragem por status
 
@@ -33,7 +33,7 @@ Esses são os status disponíveis para campanhas e telas:
 | Ativo | Campanhas ativas e Canvas estão em processo de envio. Por padrão, você verá campanhas ativas e Canvas nas respectivas páginas. |
 | Rascunho | Os rascunhos de campanhas e telas são salvos, mas não são lançados. Para continuar editando e começar a enviar, você pode selecionar o rascunho acessando **Envio de mensagens** no dashboard do Braze e selecionando **Canvas** ou **Campaigns**. |
 | Arquivado | Campanhas e Canvas arquivadas são mensagens que não estão mais sendo enviadas. Essas campanhas e telas também são removidas dos gráficos de estatísticas na seção [**Início**]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard) e [**Receita**]({{site.baseurl}}/user_guide/analytics/reporting/revenue_report) páginas.|
-| Interrompido | Campanhas e telas interrompidas são pausadas, mas você ainda pode editá-las. Para retomar, selecione o menu <i class="fas fa-ellipsis-vertical"></i> e, em seguida, **Resume (Retomar**). Para saber mais, consulte [Comportamento do Canva interrompido](#stopped-canvas-behavior). |
+| Interrompido | Campanhas e telas interrompidas são pausadas, mas você ainda pode editá-las. Para retomar um Canvas, acesse a etapa **Resumo** do construtor de Canvas e selecione **Retomar Canvas**. Para campanhas, selecione o menu <i class="fas fa-ellipsis-vertical"></i> e, em seguida, **Resume**. Para saber mais, consulte [Comportamento do Canva interrompido](#stopped-canvas-behavior). |
 | Sem atividade | Quando uma campanha ou Canvas não estiver mais enviando mensagens, o Braze atribuirá a ela um status sem atividades para ajudar a classificar e gerenciar sua lista de campanhas e Canvas. Você pode ver quais campanhas ou Canvas serão automaticamente interrompidas e a data de interrupção associada. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -44,8 +44,9 @@ Quando um Canva é interrompido, ocorre o seguinte:
 - **Envio de mensagens programadas:** Suas mensagens programadas não serão enviadas, independentemente da posição do usuário no Canva. Isso também inclui usuários que estavam na fila por causa do limite de frequência.
 - **Envio de e-mail:** Os envios de e-mail podem não ser interrompidos imediatamente, pois o provedor de serviço de e-mail (ESP) pode continuar processando as solicitações existentes.
 - **Etapas de postergação:** Os usuários em uma [etapa do]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) canva permanecerão lá normalmente, mas sairão do Canvas quando o período definido terminar.
+- **Alterações na minuta:** Qualquer rascunho de alteração no Canva será descartado quando o Canvas for interrompido.
 
-Para retomar o Canva, selecione o menu <i class="fas fa-ellipsis-vertical"></i> e, em seguida, **Resume (Retomar**). Quando reativado, todas as mensagens interrompidas anteriormente serão enviadas conforme programado, desde que o horário programado ainda não tenha passado.
+Para retomar o Canvas, acesse a etapa **Resumo** do construtor do Canvas e selecione **Retomar Canvas**. Quando reativado, todas as mensagens interrompidas anteriormente serão enviadas conforme programado, desde que o horário programado ainda não tenha passado.
 
 ## Melhores práticas
 

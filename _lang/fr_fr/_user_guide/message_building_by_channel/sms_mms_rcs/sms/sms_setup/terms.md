@@ -5,8 +5,8 @@ article_title: Conditions générales SMS
 alias: /sms_terms_to_know/
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "SMS–everyone has it and knows what it is. What they don't know is the nuance. Check out the following terms to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "Termes à connaître"
+glossary_top_text: "SMS : tout le monde l’a et sait ce qu’il est. Ce qu’ils ignorent est la nuance. Consultez les termes suivants pour en savoir plus sur les écosystèmes, technologies et processus SMS."
 page_type: glossary
 description: "Ce glossaire définit les différentes conditions de SMS que vous devez connaître."
 channel: SMS 

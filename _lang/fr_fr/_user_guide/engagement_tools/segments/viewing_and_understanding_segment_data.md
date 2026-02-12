@@ -1,6 +1,6 @@
 ---
-nav_title: Données du segment
-article_title: Afficher et comprendre les données de segment
+nav_title: Données de segment
+article_title: Visualiser et comprendre les données de segmentation
 page_order: 4
 page_type: reference
 description: "Cette page explique la section des segments de votre tableau de bord de Braze, et comprend un résumé des statistiques fournies."
@@ -16,15 +16,15 @@ tool:
 
 ## Accès aux données relatives à vos segments
 
-La page **Segments** de votre tableau de bord Braze contient un résumé de tous vos segments et vous permet d'examiner les données détaillées de chacun d'entre eux. Sur cette page, recherchez et sélectionnez le nom d'un segment pour modifier et consulter ses données. Pour savoir comment créer une segmentation, consultez la rubrique [Création d'un segment.]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment)
+La page **Segments** de votre tableau de bord Braze contient un résumé de tous vos segments et vous permet d'examiner les données détaillées de chacun d'entre eux. Sur cette page, recherchez et sélectionnez le nom d'un segment pour modifier et consulter ses données. Pour savoir comment créer une segmentation, consultez la rubrique [Créer un segment.]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment)
 
-![Segmentations page]({% image_buster /assets/img_archive/segments.png %})
+![Page Segments]({% image_buster /assets/img_archive/segments.png %})
 
 Après avoir sélectionné le nom d'un segment, vous pouvez afficher les statistiques et les filtres du segment, et modifier le segment en ajoutant ou en supprimant des filtres. Assurez-vous d’enregistrer vos modifications !
 
 Lorsque vous activez le [suivi analytique pour un segment]({{site.baseurl}}/user_guide/analytics/tracking/segment_analytics_tracking/), vous pouvez afficher les sessions, les événements personnalisés et le chiffre d'affaires au fil du temps pour ce segment.
 
-![Basculer le suivi analytique d'un segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
+![Basculer le suivi des analyses sur un segment]({% image_buster /assets/img_archive/A_Tracking_2.png %})
 
 ### Statistiques de segment
 
@@ -58,7 +58,7 @@ Vous pouvez consulter les statistiques de segmentation suivantes, qui se mettent
         </tr>
         <tr>
             <td class="no-split">E-mails (avec abonnement)</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Emailable' %} En raison de la <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">réglementation sur les spams</a>, il est conseillé de demander à vos utilisateurs d'accepter explicitement en mettant en œuvre une politique de double abonnement dans laquelle les utilisateurs doivent cliquer sur un lien dans un e-mail de confirmation initial. Pour encourager davantage d'utilisateurs à s'abonner, vous pouvez cibler un message destiné à <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">ceux qui n'ont pas choisi de s'abonner ou de se désabonner</a>.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Emailable' %} En raison de la <a href="/docs/help/best_practices/spam_regulations/#spam-regulationsspam regulations">réglementation anti-spam</a>, il est conseillé de demander à vos utilisateurs de s'abonner explicitement en mettant en œuvre une politique de double abonnement dans le cadre de laquelle les utilisateurs doivent cliquer sur un lien dans un e-mail de confirmation initial. Pour encourager davantage d'utilisateurs à s'abonner, vous pouvez cibler un message destiné à <a href="/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions">ceux qui n'ont pas choisi de s'abonner ou de se désabonner</a>.</td>
         </tr>
         <tr>
             <td class="no-split">Poussée activée (abonnement)</td>
@@ -88,7 +88,7 @@ Sur cette page, vous pouvez afficher un certain nombre d’attributs spécifique
 
 Notez que dans les cas où votre segmentation est très petite par rapport à la taille de votre espace de travail, il est possible que l'aperçu des utilisateurs renvoie zéro utilisateur. Cela ne signifie pas nécessairement qu'il n'y a aucun utilisateur dans votre segmentation ; exécutez [Calculer les statistiques exactes]({{site.baseurl}}/user_guide/engagement_tools/segments/measuring_segment_size/#statistics-for-segment-size) pour déterminer la taille exacte de votre segmentation.
 
-![Aperçu de l'utilisateur]({% image_buster /assets/img_archive/user_preview.png %})
+![Aperçu de l’utilisateur]({% image_buster /assets/img_archive/user_preview.png %})
 
 ## Visualisation des données de performance par segment
 

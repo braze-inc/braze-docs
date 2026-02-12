@@ -12,8 +12,8 @@ search_rank: 1
 
 > En este artículo de referencia se cubren los pasos necesarios para crear, mantener y probar un Canvas. Sigue esta guía o consulta nuestro [curso de Braze Learning en Canvas](https://learning.braze.com/quick-overview-canvas-setup).
 
-{% details Editor de lienzos original %}
-Ya no puedes crear o duplicar Lienzos utilizando la experiencia original de Canvas. Braze recomienda [clonar tus Lienzos en Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
+{% details Original Canvas editor %}
+Ya no puedes crear o duplicar Lienzos utilizando la experiencia original de Canvas. Braze recomienda [clonar tus Lienzos]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/) al editor más actual.
 {% enddetails %}
 
 ## Crear un lienzo
@@ -25,7 +25,7 @@ Primero, ve a **Mensajería** > **Canvas** y, a continuación, selecciona **Crea
 El Canvas Builder le guiará paso a paso en la configuración de su Canvas, desde la asignación de un nombre hasta la configuración de eventos de conversión y la introducción de los usuarios adecuados en el recorrido del cliente. Seleccione cada una de las pestañas siguientes para ver los ajustes que puede realizar en cada paso de la construcción.
 
 {% tabs local %}
-  {% tab Conceptos básicos %}
+  {% tab Basics %}
     Aquí configurarás los aspectos básicos de tu Canvas:
     \- Ponga nombre a su lienzo
     \- Añadir equipos
@@ -34,15 +34,15 @@ El Canvas Builder le guiará paso a paso en la configuración de su Canvas, desd
 
     Learn more about the [Basics step](#step-2a-set-up-your-canvas-basics).
   {% endtab %}
-  {% tab Horario de entrada %}
-    Aquí decidirás cómo entrarán tus usuarios en tu Canvas:
+  {% tab Entry Schedule %}
+    Aquí decidirás cómo y cuándo entrarán tus usuarios en tu Canvas:
     \- Programado: Se trata de una entrada en Canvas basada en el tiempo
     \- Basado en la acción: Tu usuario entrará en tu Canvas después de realizar una acción definida
     \- Activado por API: Utiliza una solicitud API para introducir usuarios en tu Canvas
 
     Learn more about the [Entry Schedule step](#step-2b-determine-your-canvas-entry-schedule).
   {% endtab %}
-  {% tab Audiencia objetivo %}
+  {% tab Target Audience %}
     Aquí seleccionará su público objetivo:
     \- Crea tu audiencia añadiendo segmentos y filtros
     \- Ajustar los límites de entrada y reentrada en el lienzo
@@ -50,7 +50,7 @@ El Canvas Builder le guiará paso a paso en la configuración de su Canvas, desd
 
     Learn more about the [Target Audience step](#step-2c-set-your-target-entry-audience).
   {% endtab %}
-  {% tab Configuración de envío %}
+  {% tab Send Settings %}
     Aquí seleccionarás tu configuración de envío de Canvas:
     \- Selecciona tu configuración de suscripción
     \- Establece un límite de velocidad de envío para tus mensajes Canvas
@@ -58,12 +58,12 @@ El Canvas Builder le guiará paso a paso en la configuración de su Canvas, desd
 
     Learn more about the [Send Settings step](#step-2d-select-your-send-settings).
   {% endtab %}
-  {% tab Crear Canvas %}
+  {% tab Build Canvas %}
     Aquí construirás tu Canvas.
 
     Learn how to [build your Canvas](#step-3-build-your-canvas) using the Canvas builder.
   {% endtab %}
-  {% tab Resumen %}
+  {% tab Summary %}
     Aquí encontrarás el resumen de los datos de tu Canvas. Si tienes activado el [flujo de trabajo de aprobación de Canvas]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/approvals/), puedes aprobar los detalles de Canvas listados antes de lanzarlo.
 
   {% endtab %}
@@ -83,7 +83,7 @@ Etiqueta tus lienzos para que sea fácil encontrarlos y crear informes a partir 
 
 Elija el tipo de evento de conversión y, a continuación, seleccione las conversiones que desea registrar. Estos [eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/conversion_events/) medirán la eficacia de tu Canvas. 
 
-![Evento de conversión primaria A con el tipo de evento de conversión Realiza una compra para registrar las conversaciones de los usuarios que realizan cualquier compra dentro de un plazo de conversión de tres días.]({% image_buster /assets/img/add_canvas_conversions.png %})
+![Evento de Conversión Principal A con el tipo de evento de conversión Realiza Compra para registrar las conversaciones de los usuarios que realizan cualquier compra dentro de un plazo de conversión de tres días.]({% image_buster /assets/img/add_canvas_conversions.png %})
 
 Si su Canvas tiene múltiples variantes o un grupo de control, Braze utilizará este evento de conversión para determinar la mejor variación para alcanzar este objetivo de conversión. Utilizando la misma lógica, puede crear varios eventos de conversión.
 
@@ -94,14 +94,14 @@ Puedes elegir una de las tres formas en que los usuarios pueden entrar en tu Can
 ##### Tipos de horarios de entrada
 
 {% tabs local %}
-  {% tab Entrega programada %}
+  {% tab Scheduled Delivery %}
     Con la entrega programada, los usuarios entrarán en un horario, de forma similar a como se programaría una campaña. Puede inscribir a los usuarios en un Canvas en cuanto se lance, introducirlos en su recorrido en algún momento en el futuro o de forma recurrente (diaria, semanal o mensualmente). 
 
     In this example, based on the time-based options, users will enter this Canvas every Tuesday at 12 pm in their local time zone every week, beginning November 14, 2025 until December 31, 2025.
 
     ![The "Entry Schedule" page with the type set to "Scheduled". Due to the selection, time-based options are shown, including frequency, start time, recurrence, days, and more.]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
-  {% tab Ejecución basada en la acción %}
+  {% tab Action-Based Delivery %}
     Con la entrega basada en acciones, los usuarios entrarán en el Canvas y empezarán a recibir mensajes cuando realicen determinadas acciones, como abrir tu aplicación, realizar una compra o activar un evento personalizado.
 
     You can control other aspects of the Canvas behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings. Note that action-based delivery is unavailable for Canvas components with in-app messages.
@@ -109,7 +109,7 @@ Puedes elegir una de las tres formas en que los usuarios pueden entrar en tu Can
     ![An example of action-based delivery. Users will enter the Canvas if they make a purchase with an entry window beginning at 1:30 pm on June 10, 2025.]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
 
   {% endtab %}
-  {% tab Entrega activada por API %}
+  {% tab API-Triggered Delivery %}
     Con la entrega activada por la API, los usuarios entrarán en tu Canvas y comenzarán a recibir mensajes después de que se hayan añadido utilizando el [punto final`/canvas/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) a través de la API. En el dashboard, puedes encontrar un ejemplo de petición cURL que hace esto así como asignar opcionales [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) utilizando el [objeto de propiedades de entrada Canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). 
 
     ![An example of API-triggered delivery with a Canvas ID and an example of a cURL request.]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
@@ -124,7 +124,7 @@ Puedes elegir una de las tres formas en que los usuarios pueden entrar en tu Can
 
 Tras seleccionar tu método de entrega, ajusta la configuración para que coincida con tu caso de uso, y luego continúa con la configuración de tu audiencia objetivo.
 
-{% details Comportamiento de deduplicación para los lienzos que utilizan el editor original %}
+{% details Deduplicate behavior for Canvases using the original editor %}
 En caso de que la ventana de reelegibilidad sea inferior a la duración máxima del Canvas, se permitirá a un usuario volver a entrar y recibir los mensajes de más de un componente. En el caso extremo de que la reentrada de un usuario llegue al mismo componente que su entrada anterior, Braze deduplicará los mensajes de ese componente. 
 
 Si un usuario vuelve a entrar en el Canvas, llega al mismo componente que su entrada anterior y puede recibir un mensaje in-app por cada entrada, el usuario recibirá el mensaje dos veces (dependiendo de la prioridad de los mensajes in-app) siempre que vuelva a abrir una sesión dos veces.
@@ -132,19 +132,19 @@ Si un usuario vuelve a entrar en el Canvas, llega al mismo componente que su ent
 
 #### Paso 1.3: Configura tu audiencia objetivo de entrada
 
-Puede establecer el público objetivo de su lienzo en el paso **Público objetivo**. Sólo los usuarios que cumplen los criterios definidos pueden entrar en el recorrido, lo que significa que Braze evalúa primero la elegibilidad del público objetivo antes de que los usuarios entren en el recorrido de Canvas. Por ejemplo, si desea dirigirse a nuevos usuarios, puede seleccionar un segmento de usuarios que utilizaron su aplicación por primera vez hace menos de una semana.
+Sólo los usuarios que coincidan con tus criterios definidos pueden entrar en el recorrido en el paso en Canvas **Audiencia objetivo**, lo que significa que Braze evalúa primero la elegibilidad de la audiencia objetivo **antes de** que los usuarios entren en el recorrido en Canvas. Por ejemplo, si desea dirigirse a nuevos usuarios, puede seleccionar un segmento de usuarios que utilizaron su aplicación por primera vez hace menos de una semana.
 
-En **Controles de entrada**, puede limitar el número de usuarios cada vez que se programe la ejecución del lienzo. Para los Canvas basados en acciones y desencadenantes de API, este límite se produce a cada hora UTC. 
+En **Controles de entrada**, puedes limitar el número de usuarios cada vez que se programe la ejecución del Canvas. Para los Canvas basados en acciones y desencadenantes de API, este límite se produce a cada hora UTC. 
 
-{% alert warning %}
-Evite configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede producirse una condición de carrera en la que el usuario no se encuentre entre el público en el momento de realizar el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en el Canvas.  
+{% alert important %}
+Evite configurar una campaña basada en acciones o Canvas con el mismo desencadenante que el filtro de audiencia (como un atributo modificado o la realización de un evento personalizado). Puede darse una [condición de carrera]({{site.baseurl}}/user_guide/engagement_tools/testing/race_conditions) en la que el usuario no esté en la audiencia en el momento de realizar el evento desencadenante, lo que significa que no recibirá la campaña ni entrará en el Canvas.
 {% endalert %}
 
 ##### Prueba tu audiencia
 
 Después de añadir segmentos y filtros a su público objetivo, puede comprobar si su público está configurado según lo esperado [buscando un usuario]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) para confirmar si coincide con los criterios del público.
 
-![El campo "Búsqueda de usuarios", que te permite buscar por ID de usuario externo o ID de Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:100%;"}{: style="max-width:80%;"}
+![El campo "Búsqueda de usuarios", que te permite buscar por ID externo de usuario o ID de Braze.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:80%;"}
 
 ##### Seleccionar controles de entrada
 
@@ -177,7 +177,7 @@ Para ver estadísticas adicionales, como los ingresos medios durante la vida út
 
 ##### Por qué el recuento de la audiencia objetivo puede diferir del recuento de usuarios alcanzables
 
-{% multi_lang_include segments.md section='Diferentes tamaños de audiencia' %}
+{% multi_lang_include segments.md section='Differing audience size' %}
 
 #### Paso 1.4: Selecciona tu configuración de envío
 
@@ -194,7 +194,7 @@ Para ello, configure **los Ajustes de suscripción** para enviar este lienzo "s�
 Estos ajustes de suscripción se aplican en cada paso, lo que significa que no hay ningún efecto sobre el público de entrada. Por lo tanto, esta configuración se utiliza para evaluar la elegibilidad de un usuario para recibir cada paso de Canvas.
 
 {% alert important %}
-Con esta configuración, no incluyas ningún filtro en el paso **Audiencia objetivo** que limite la audiencia a un único canal (por ejemplo, `Push Enabled = True` o `Email Subscription = Opted-In`).
+Con esta configuración, no incluyas ningún filtro en el paso **Audiencia objetivo** que limite la audiencia a un único canal (por ejemplo, `Foreground Push Enabled = True` o `Email Subscription = Opted-In`).
 {% endalert %}
 
 Si lo desea, especifique Horas de silencio (el tiempo durante el cual no se enviarán sus mensajes) para su Lienzo. Marque **Activar horas de silencio** en la **Configuración de envío**. A continuación, seleccione sus Horas de Silencio en la hora local de su usuario y la acción que seguirá si el mensaje se activa dentro de esas Horas de Silencio.
@@ -220,13 +220,13 @@ Puede añadir variantes adicionales seleccionando el botón <i class="fas fa-plu
 {% alert tip %}
 Por defecto, la asignación de variantes del lienzo se bloquea cuando los usuarios entran en el lienzo, lo que significa que si un usuario introduce por primera vez una variante, esa será su variante cada vez que vuelva a entrar en el lienzo. Sin embargo, hay formas de eludir este comportamiento. <br><br>Para ello, puede crear un generador de números aleatorios utilizando Liquid, ejecutarlo al principio de la entrada Canvas de cada usuario, almacenar el valor como un atributo personalizado y, a continuación, utilizar ese atributo para dividir aleatoriamente a los usuarios.
 
-{% details Expandir por pasos %}
+{% details Expand for steps %}
 
-1. Crea un atributo personalizado para almacenar tu número aleatorio. Ponle un nombre fácil de localizar, como "número_lotería" o "asignación_aleatoria". Puedes crear el atributo [en tu panel]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) o a través de llamadas API a nuestro [punto final `/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
-2. Crea una campaña webhook al principio de tu Canvas. Esta campaña será el medio en el que creará su número aleatorio y lo almacenará como atributo personalizado. Consulte [Crear un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) para obtener más información. Establezca la URL de nuestro punto final `/users/track`.<br><br>
+1. Crea un atributo personalizado para almacenar tu número aleatorio. Ponle un nombre fácil de localizar, como "lottery_number" o "random_assignment".. Puedes crear el atributo [en tu panel]({{site.baseurl}}/user_guide/data/custom_data/managing_custom_data/) o mediante llamadas a la API a nuestro [punto final`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
+2. Crea una campaña webhook al principio de tu Canvas. Esta campaña será el medio en el que creará su número aleatorio y lo almacenará como atributo personalizado. Para más información, consulta [Crear un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook). Establezca la URL de nuestro punto final `/users/track`.<br><br>
 3. Crea el generador de números aleatorios. Puedes hacerlo con el código que [se indica aquí](https://community.shopify.com/c/technical-q-a/is-there-any-way-to-generate-random-number-with-liquid-shopify/m-p/1595486), que aprovecha la hora única de entrada de cada usuario para crear un número aleatorio. Establezca el número resultante como una variable Liquid dentro de su campaña webhook.<br><br>
 4. Formatea la llamada `/users/track` en tu campaña webhook para que establezca el atributo personalizado que creaste en el paso 1 en el número aleatorio que has generado en el perfil de tu usuario actual. Cuando este paso se ejecute, habrá conseguido crear un número aleatorio que cambiará cada vez que un usuario entre en su campaña.<br><br>
-5. Ajuste las ramas de su lienzo para que, en lugar de estar divididas por variantes elegidas al azar, se dividan en función de las reglas de audiencia. En las reglas de audiencia de cada rama, establezca el filtro de audiencia según su atributo personalizado. <br><br>Por ejemplo, una rama puede tener "número_lotería es menor que 3" como filtro de audiencia, mientras que otra rama puede tener "número_lotería es mayor que 3 y menor que 6" como filtro de audiencia.
+5. Ajuste las ramas de su lienzo para que, en lugar de estar divididas por variantes elegidas al azar, se dividan en función de las reglas de audiencia. En las reglas de audiencia de cada rama, establezca el filtro de audiencia según su atributo personalizado. <br><br>Por ejemplo, una rama puede tener "lottery_number es menor de 3" como filtro de audiencia, mientras que otra rama puede tener "lottery_number es mayor de 3 y menor de 6" como filtro de audiencia.
 
 {% enddetails %}
 {% endalert %}
@@ -241,8 +241,8 @@ Cuando empiece a añadir más pasos, puede cambiar el nivel de zoom para centrar
 
 ![La ventana de búsqueda de componentes añade un paso en Canvas de Braze.]({% image_buster /assets/img_archive/add_components_flow.png %}){: style="max-width:80%;"}
 
-{% alert warning %}
-Un lienzo creado con el flujo del lienzo puede contener hasta 200 pasos. Si su lienzo supera los 200 pasos, se producirán problemas de carga.
+{% alert important %}
+Puedes añadir hasta 200 pasos en un Canvas. Si tu Canvas supera los 200 pasos, pueden producirse problemas de carga.
 {% endalert %}
 
 ##### Duración máxima
@@ -253,7 +253,7 @@ A medida que el recorrido de tu Canvas aumenta en pasos, la duración máxima es
 
 ¿Quieres editar un paso de tu recorrido de usuario? Comprueba cómo hacerlo en función de tu flujo de trabajo en Canvas.
 
-Puede editar cualquier paso de su flujo de trabajo Canvas Flow seleccionando cualquiera de los componentes. Por ejemplo, digamos que desea editar su primer paso, un componente de [Retraso]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), en su flujo de trabajo a un día específico. Selecciona el paso para ver su configuración y ajusta tu retraso al 1 de marzo. Esto significa que el 1 de marzo, tus usuarios pasarán al siguiente paso en tu Canvas.
+Puedes editar cualquier paso de tu flujo de trabajo Canvas seleccionando cualquiera de los componentes. Por ejemplo, digamos que desea editar su primer paso, un componente de [Retraso]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/), en su flujo de trabajo a un día específico. Selecciona el paso para ver su configuración y ajusta tu retraso al 1 de marzo. Esto significa que el 1 de marzo, tus usuarios pasarán al siguiente paso en tu Canvas.
 
 ![Un ejemplo de paso "Retraso" con el retraso ajustado a "Hasta un día concreto".]({% image_buster /assets/img_archive/edit_delay_flow.png %})
 
@@ -274,12 +274,12 @@ Utilice la etiqueta `campaign.${name}` Liquid en Canvas para mostrar el nombre d
 
 El componente Mensaje gestiona los mensajes enviados a los usuarios. Puedes seleccionar tus **canales de mensajería** y ajustar **la configuración de entrega** para optimizar tu mensajería en Canvas. Para más detalles sobre este componente, consulta [Mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-![El paso "Configurar mensajes", con la opción "Canales de mensajería" seleccionada, que muestra la lista de canales de mensajería disponibles, como push de Android, tarjetas de contenido, correo electrónico, etc.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
+![El paso "Configurar mensajes", con la opción "Canales de mensajería" seleccionada, que muestra la lista de canales de mensajería disponibles, como push de Android, tarjetas de contenido, correo electrónico y otros.]({% image_buster /assets/img_archive/message_setup_settings_flow.png %})
 
 Seleccione **Hecho** cuando haya terminado de configurar su componente Canvas.
 
 {% tabs local %}
-{% tab Propiedades de entrada del lienzo %}
+{% tab Canvas Entry Properties %}
 
 Las `canvas_entry_properties` se configuran en el paso Horario de entrada de la creación de un Canvas e indican el desencadenante que introduce a un usuario en un Canvas. Estas propiedades también pueden acceder a las propiedades de las cargas útiles de entrada en los lienzos activados por API. Nota que el objeto `canvas_entry_properties` puede ser de hasta 50 KB. 
 
@@ -291,10 +291,10 @@ Por ejemplo, considere la siguiente petición: `\"canvas_entry_properties\" : {\
 
 {% endtab %}
 
-{% tab Propiedades de los eventos %}
+{% tab Event Properties %}
 Las propiedades de los eventos son las propiedades establecidas por usted en los eventos y compras personalizados. Estos `event_properties` se pueden utilizar en campañas con entrega basada en la acción, así como Lienzos. 
 
-En el Flujo del lienzo, las propiedades de eventos personalizados y eventos de compra se pueden utilizar en Liquid en cualquier paso de Mensaje que siga a un paso de Rutas de acción. Utilice este líquido {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} cuando haga referencia a estos `event_properties`. Estos eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta forma en el componente Mensaje.
+En Canvas, las propiedades del evento personalizado y del evento de compra pueden utilizarse en Liquid en cualquier paso de Mensaje que siga a un paso de Ruta de acción. Utilice este líquido {% raw %} ``{{event_properties.${property_name}}}`` {% endraw %} cuando haga referencia a estos `event_properties`. Estos eventos deben ser eventos personalizados o eventos de compra para ser utilizados de esta forma en el componente Mensaje.
 
 En el primer paso de Mensaje que sigue a una Ruta de Acción, puede utilizar `event_properties` relacionado con el evento al que se hace referencia en esa Ruta de Acción. Puede tener otros pasos (que no sean otro paso de Rutas de acción o Mensaje) entre este paso de Rutas de acción y el paso de Mensaje. Ten en cuenta que solo tendrás acceso a `event_properties` si tu paso de Mensaje puede remontarse a una ruta que no sea Todos los demás en un paso de Ruta de acción.
 

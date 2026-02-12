@@ -1,5 +1,5 @@
 ---
-nav_title: "Push para a web"
+nav_title: "Web push"
 article_title: Notificações por push na Web
 page_order: 8.5
 page_type: reference
@@ -21,12 +21,12 @@ O web push é outra ótima maneira de interagir com os usuários do seu aplicati
 As notificações por push da Web fornecem atualizações urgentes e acionáveis que geram conversões rápidas. Com o web push, é possível:
 
 - Envio de mensagens quando dados importantes são alterados, como uma redução de preço
-- Leve as pessoas de volta ao seu site com botões simples de chamada para ação
+- Leve as pessoas de volta ao seu site com botões claros de chamada para ação
 - Personalize seu push com informações sobre produtos e clientes para tornar sua mensagem relevante
 
-O web push funciona da mesma forma que as notificações por push de app funcionam em seu telefone. Para saber mais sobre como criar um web push, consulte [Criação de uma notificação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
+O web push funciona da mesma forma que as notificações por push de app funcionam em seu telefone. Para saber mais sobre como criar um web push, consulte [Criar uma notificação por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message).
 
-![web push exemplo com a mesma mensagem push exibida em um laptop e telefone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
+![Exemplo de web push com a mesma mensagem push exibida em um laptop e em um telefone.]({% image_buster /assets/img_archive/Macbook_Push.png %}){: style="border:none"}
 
 ## Casos de uso em potencial
 

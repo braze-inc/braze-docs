@@ -1,6 +1,6 @@
 ---
-nav_title: 출시 전후 체크리스트
-article_title: 출시 전후 체크리스트
+nav_title: 출시 전 및 출시 후 체크리스트
+article_title: 출시 전 및 출시 후 체크리스트
 page_order: 2
 description: "이 문서는 캔버스를 시작하기 전과 후에 확인해야 할 사항에 대한 지침을 제공합니다."
 tool: Canvas
@@ -15,10 +15,6 @@ tool: Canvas
 
 캔버스를 시작하기 전에 메시징 및 전송 시간이 오디언스의 선호도와 일치하는지 확인할 수 있는 여러 세부 사항이 있습니다. 고려해야 할 사항으로는 시간대의 차이, 입장 설정 등 여러 가지가 있습니다. 이 체크리스트를 가이드로 사용하여 사용 사례에 따라 이러한 영역을 미세 조정하여 캔버스의 성공에 기여하세요. 
 
-{% alert important %}
-2023년 2월 28일부터 오리지널 캔버스 경험 환경에서는 더 이상 캔버스를 생성하거나 복제할 수 없습니다. Braze는 원래 캔버스 경험을 사용하는 고객이 캔버스 플로우로 이동할 것을 권장합니다. 향상된 편집 경험을 통해 캔버스를 더 잘 구축하고 관리할 수 있습니다. [캔버스를 캔버스 플로우에 복제하는 방법]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)에 대해 자세히 알아보세요.
-{% endalert %}
-
 ### 시간대 설정 검토
 
 사용자의 현지 시간대에 따라 예약된 항목 일정을 사용하여 사용자를 입력하는 경우, 사용자가 캔버스에 들어가기를 원하는 시간보다 적어도 24시간 전에 캔버스를 시작해야 합니다. 예를 들어, 여기에 출시와 예정된 입장 시간 사이에 충분한 시간을 남기지 않은 캔버스가 있습니다. 이 시나리오에서는 일부 사용자가 특정 시간대에서 예정된 진입 시간이 이미 지났기 때문에 캔버스에 들어오지 않을 수 있습니다. 
@@ -27,7 +23,7 @@ tool: Canvas
 버퍼를 충분히 예약하지 않은 경우 경고가 표시됩니다. 빠른 해결책은 사용자가 전체 24시간 동안 대상 세그먼트에 남아 있을 수 있도록 전송 시간을 조정하는 것입니다.
 {% endalert %}
 
-![A Canvas scheduled to enter users at one time starting at 10 am on April 30, 2025, in their local time.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
+![캔버스는 현지 시간으로 2025년 4월 30일 오전 10시부터 사용자에게 일시에 입장할 예정입니다.]({% image_buster /assets/img_archive/canvas_checklist1.png %}){: style="max-width:75%;"}
 
 ### 정규 표현식을 사용하여 오디언스 필터를 고려하십시오
 
@@ -72,7 +68,7 @@ Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/test
 
 ### 항목은 많은데 전송은 적은 경우
 
-예를 들어, 메시지 발송 수와 총 항목 수 사이에 차이가 있음을 발견했다고 가정해 봅시다. 이 주요 영역을 확인하여 캔버스를 조정할 수 있는 영역을 식별하고 발견할 수 있습니다.
+예를 들어, 보낸 메시지 수와 총 항목 수 사이에 불균형이 발생했다고 가정해 보겠습니다. 이 주요 영역을 확인하여 캔버스를 조정할 수 있는 영역을 식별하고 발견할 수 있습니다.
 
 #### 항목 오디언스
 
@@ -80,7 +76,7 @@ Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/test
 
 #### 캔버스의 첫 번째 구성 요소
 
-캔버스 시작 구성 요소에서 사용된 모든 오디언스 필터, 작업 트리거 또는 세그먼트를 검토하세요. 캔버스가 제대로 시작되지 않게 하는 철자 오류나 너무 엄격한 조건이 있습니까? "Equals"을(를) 사용해야 할 때 "정규식 일치"을(를) 사용하고 있습니까?
+캔버스 시작 구성 요소에서 사용된 모든 오디언스 필터, 작업 트리거 또는 세그먼트를 검토하세요. 캔버스를 제대로 시작하지 못하게 하는 철자가 틀렸거나 너무 엄격한 조건이 있나요? "Equals"을(를) 사용해야 할 때 "정규식 일치"을(를) 사용하고 있습니까?
 
 #### 캔버스 대조군 
 
@@ -88,11 +84,11 @@ Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/test
 
 ### 빈 총계 오디언스
 
-캔버스에 대한 응모 데이터가 표시되지 않는 경우, 사용자가 캔버스에 응모하지 않는 이유는 경쟁 조건 및 제한적인 오디언스 세분화 필터 때문일 수 있습니다.
+캔버스에 대한 입력 데이터가 표시되지 않는 경우 사용자가 캔버스에 입력하지 않는 이유는 경합 조건 및 제한적인 오디언스 세분화 필터 때문일 수 있습니다.
 
 액션 기반 항목을 항목 일정에 사용 중인 경우 여기에서 **타겟 오디언스**와 동일한 트리거 동작을 사용하지 않았는지 확인하세요. 경합 조건이 발생할 수 있으며, 사용자가 트리거 이벤트를 수행할 때 오디언스에 속하지 않으면 캔버스에 들어가지 못하게 됩니다.
 
-또한 **대상 집단** 테이블을 **오디언스** 설정에서 검토하여 선택한 세그먼트에 사용자가 있는지 확인하십시오. 이 숫자가 낮으면 입력 설정을 조정하거나 선택한 세그먼트 또는 필터에 오류가 있는지 검토하세요.
+또한 **대상 집단** 테이블을 **오디언스** 설정에서 검토하여 선택한 세그먼트에 사용자가 있는지 확인하십시오. 이 숫자가 낮으면 입력 설정을 조정하거나 선택한 세그먼트 또는 필터에 오류가 있는지 검토하는 방법을 참조하세요.
 
 ### 단계 간 예상치 못한 감소
 
@@ -103,7 +99,7 @@ Check out the [best practices]({{site.baseurl}}/user_guide/engagement_tools/test
 - 방해금지 시간
 - 전달 검증
 
-일반적으로 캔버스에 대해 Intelligent Timing 또는 방해금지 시간 중 하나를 선택하고 둘 다 선택하지 마세요. 동일한 제안은 Intelligent Timing 또는 [사용량 제한조치]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) 중 하나만 사용하고 둘 다 사용하지 않는 것입니다. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
+일반적으로 캔버스에 대해 Intelligent Timing 또는 방해금지 시간 중 하나를 선택하고 둘 다 선택하지 마세요. 동일한 제안은 Intelligent Timing 또는 [사용량 제한조치]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/) 중 하나만 사용하고 둘 다 사용하지 않는 것입니다. Intelligence Suite를 가장 효과적으로 사용하는 방법에 대한 자세한 내용은 [Intelligence Suite 사용 사례를]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases) 참조하세요.
 
 ### 경로 간의 의심스러운 전송량
 

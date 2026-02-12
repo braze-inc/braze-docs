@@ -1,5 +1,5 @@
 ---
-nav_title: ドラッグアンドドロップの電子メール環境設定センター
+nav_title: ドラッグアンドドロップメール ユーザー設定センター
 article_title: ドラッグアンドドロップの電子メール環境設定センター
 alias: "/dnd_preference_center/"
 description: "このリファレンスページでは、ドラッグ＆ドロップエディターでメールユーザー設定センターを作成する方法について説明します。"
@@ -8,17 +8,17 @@ page_order: 2
 
 # ドラッグ＆ドロップによるメールユーザー設定センターの作成
 
-> ドラッグ＆ドロップエディターを使用すると、ユーザー設定センターの作成およびカスタマイズを行って、特定タイプの通信を受信するユーザーの管理に役立てることができます。ワークスペースあたりのユーザー設定センターは最大 50 です。
+> ドラッグ＆ドロップエディターを使用すると、ユーザー設定センターの作成およびカスタマイズを行って、特定タイプの通信を受信するユーザーの管理に役立てることができます。1 ワークスペースにつき最大100 のユーザー設定センターを使用できます。
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}
 
-## ステップ 1:メールユーザー設定センターの作成
+## ステップ 1: メールユーザー設定センターの作成
 
-**Audience** > **Subscriptions** > **E メールユーザー設定センター** に移動して、ユーザー設定センターを作成します。
+**Audience**> **E メールユーザー設定センターs** に移動して、ユーザー設定センターを作成します。
 
 ここには、カスタムユーザー設定センターが一覧表示されます。**Create New**を選択して新しいユーザー設定センターを作成するか、既存の名前を選択して変更します。
 
-![名前、説明、タイプ、ステータス、最終編集日、ユーザーが作成したカスタム設定センターのリスト。]({% image_buster /assets/img/preference_center/preference_center1.png %})
+![名前、説明、タイプ、ステータス、最終編集日、および作成者が含まれるカスタムユーザー設定センターのリスト。]({% image_buster /assets/img/preference_center/preference_center1.png %})
 
 ## ステップ 2:メールユーザー設定センターの命名
 
@@ -26,7 +26,7 @@ page_order: 2
 
 このリキッドタグは、任意の送信メール キャンペーンs またはキャンバスステップs に含めることができ、ユーザーをユーザー設定センターに送信します。
 
-![ユーザー設定センターのLiquidの例。]({% image_buster /assets/img/preference_center/preference_center2.png %})
+![ユーザー設定センターの Liquid の例。]({% image_buster /assets/img/preference_center/preference_center2.png %})
 
 ## ステップ 3:ユーザー設定センターへの購読グループの追加
 
@@ -43,7 +43,7 @@ page_order: 2
 - [**すべてを購読**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループに登録されます。
 - [**すべて購読解除**] チェックボックスを追加するか削除します。このチェックボックスをオンにすると、ユーザーはこのブロックに表示されるすべての購読グループから削除されます。
 
-![]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"} ![]({% image_buster /assets/img/preference_center/preference_center4.png %}) 全てのメッセージ、マーケター、ニュースレター、ウィークリーメールの購読、 または全ての配信停止を選択できるユーザー設定センターの例。{: style="max-width:45%;"}
+![たとえば、すべてのメッセージ、マーケティング、ニュースレター、および週次のメールs にサブスクライブするか、すべての配信停止にサブスクライブするかを選択できるユーザー設定センターです。]({% image_buster /assets/img/preference_center/preference_center3.png %}){: style="max-width:38%;"} ![]({% image_buster /assets/img/preference_center/preference_center4.png %}){: style="max-width:45%;"}
 
 テンプレートの下部にある [**すべて購読解除**] ボタンは削除できず、ユーザーが受信しているすべてのメールメッセージを[グローバルに購読解除]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states)します。
 
@@ -64,7 +64,7 @@ page_order: 2
 ユーザー設定センターを簡単に作成できるように、ドラッグ＆ドロップエディターでは、行とブロックの 2 つの主要コンポーネントを使用使用します。すべてのブロックは行に配置する必要があります。
 
 {% tabs %}
-{% tab 行 %}
+{% tab Rows %}
 
 行は、セルを使用してメッセージのセクションの水平方向の構成を定義する構造単位です。
 
@@ -72,16 +72,16 @@ page_order: 2
 
 行を選択すると、列カスタマイズセクションに必要な列数を追加または削除して、異なるコンテンツ要素を並べて配置できます。スライドして、既存の列のサイズを調整することもできます。
 
-![背景色、ボーダースタイル、ボーダー半径、パディングなど、列のプロパティをカスタマイズするオプション。]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
+![バックグラウンドカラー、ボーダースタイル、ボーダー半径、パディングなどの列プロパティーをカスタマイズできます。]({% image_buster /assets/img/preference_center/preference_center7.png %}){: style="max-width:45%;"}
 
 ベストプラクティスとして、行および列のプロパティーを書式設定してから、行内のブロックを書式設定します。間隔と配置は、さまざまな場所で調整できるため、基礎から始めると簡単に編集できます。
 
 {% endtab %}
-{% tab ブロック %}
+{% tab Blocks %}
 
 ブロックは、メッセージで使用できるさまざまなタイプのコンテンツを表します。既存の行Segmentの内側に1 つドラッグすると、セルの幅に自動的に調整されます。
 
-![タイトル、段落、ボタン、画像、スペーサーなどのブロックを選択するオプション。]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
+![タイトル、段落、ボタン、"画像、スペーサーなどのブロックs を選択します。]({% image_buster /assets/img/preference_center/preference_center8.png %}){: style="max-width:45%;"}
 
 すべてのブロックには、パディング上の粒状コントロールなど、独自の設定s があります。右側のパネルは、選択したコンテンツ要素のスタイルパネルに自動的に切り替えるします。詳細については、[エディタのブロックプロパティー]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/drag_and_drop/editor_blocks/)を参照してください。
 
@@ -96,7 +96,7 @@ page_order: 2
 
 ![ユーザーの好みが更新されたことを伝える確認ページの例。]({% image_buster /assets/img/preference_center/preference_center9.png %}){: style="max-width:65%;"}
 
-## ステップ 6:ユーザー設定センターのプレビューと起動
+## ステップ 6: ユーザー設定センターのプレビューと起動
 
 エディタ内で**プレビュー**タブを選択することで、ユーザー設定センターをプレビューできます。ただし、テスト機能は無効です。ユーザー設定センターを編集したら、**Done**ボタンを選択してエディタを閉じることができます。
 
@@ -106,7 +106,7 @@ page_order: 2
 
 ## ユーザー設定センターの使用
 
-{% multi_lang_include preference_center_warning.md %}
+{% multi_lang_include alerts/important_alerts.md alert='Preference Center warning' %}
 
 ユーザー設定センターへのリンクをメールs に配置するには、**Copy Liquid** アイコンを選択して、目的のユーザー設定センターのLiquid タグをコピーします。
 
@@ -118,5 +118,5 @@ page_order: 2
 
 ユーザーがユーザー設定センターで**Save**を選択したときにエラーが発生すると、次のデフォルト エラーが表示されます。これは、エディタでカスタマイズまたはスタイル設定できません。ただし、これらのページでは、エラーメッセージのローカライゼーションが引き続きサポートされています。 
 
-![エラーメッセージ「ユーザー設定の保存中に問題が発生しました。もう一度やり直してください。」]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
+![エラーメッセージ「ユーザー設定の保存中に問題が発生しました。もう一度やり直してください。]({% image_buster /assets/img/preference_center/preference_center11.png %}){: style="max-width:55%;"}
 

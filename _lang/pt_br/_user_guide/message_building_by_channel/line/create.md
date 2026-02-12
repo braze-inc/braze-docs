@@ -1,6 +1,6 @@
 ---
-nav_title: Como criar uma mensagem LINE
-article_title: Como criar uma mensagem LINE
+nav_title: Criar uma mensagem LINE
+article_title: Criar uma mensagem LINE
 page_order: 1
 description: "Este artigo aborda como criar uma campanha de mensagens LINE ou Canva."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
 alias: /line/create/
 ---
 
-# Criação de uma mensagem LINE
+# Criar uma mensagem LINE
 
 > As campanhas do LINE podem alcançar diretamente e conversar de forma programática com seus clientes. É possível usar o Liquid e outros conteúdos dinâmicos para criar uma experiência pessoal com seus usuários e criar um ambiente que promova e aprimore uma experiência discreta do usuário com sua marca.
 
@@ -27,10 +27,10 @@ O envio de mensagens LINE a partir do Braze será feito com os créditos de mens
 
 ## Etapa 1: Escolha onde construir sua mensagem
 
-Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
+Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e direcionadas, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
 **Etapas:**
 
@@ -85,7 +85,7 @@ Alterne para a guia **Test (Teste** ) para enviar uma mensagem LINE de teste par
 ## Etapa 4: Crie o restante de sua campanha ou Canva
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
 Crie o restante de sua campanha. Consulte as seções a seguir para obter mais detalhes sobre a melhor forma de usar nossas ferramentas para criar mensagens LINE.
 
@@ -99,7 +99,7 @@ As mensagens do LINE podem ser enviadas com base em um horário programado, em u
 
 [Direcione os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Você já deve ter escolhido o grupo de inscrições, que restringe os usuários pelo nível ou categoria de comunicação que desejam ter com você. 
 
-Selecione o público maior de seus segmentos e, opcionalmente, restrinja esse segmento ainda mais com nossos [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+Selecione o público maior de seus segmentos e, opcionalmente, restrinja esse segmento ainda mais com nossos [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/). Você recebe automaticamente um instantâneo de como é a população desse segmento aproximado. Lembre-se de que a associação exata ao segmento de mensagem é sempre calculada antes do envio da mensagem.
 
 ### Selecionar eventos de conversão
 
@@ -115,7 +115,7 @@ Também é possível definir eventos personalizados de conversão com base em se
 {% endtab %}
 {% tab Canvas %}
 
-Se ainda não o fez, conclua as seções restantes do seu Canva. Para obter mais detalhes sobre como criar o restante de seu Canva, usar testes multivariantes e Intelligent Selection, entre outros, consulte [Criação de um Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Se ainda não o fez, conclua as seções restantes do seu Canva. Para obter mais detalhes sobre como criar o restante de seu Canvas, usar testes multivariantes e Intelligent Selection, entre outros, consulte [Criar um Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}

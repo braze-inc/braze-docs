@@ -1,30 +1,30 @@
 ---
-nav_title: Búsqueda en el panel de control de Braze
-article_title: Búsqueda en el panel de control de Braze
+nav_title: Buscar en tu panel de Braze
+article_title: Buscar en tu panel de Braze
 page_order: 0.5
 page_type: reference
-description: "Más información sobre la búsqueda global en Braze."
+description: "Aprende sobre la búsqueda global en Braze."
 ---
 
-# Buscar en el panel de control de Braze
+# Buscar en tu panel de Braze
 
-Puedes utilizar la barra de búsqueda para encontrar tu trabajo y otra información dentro de tu panel Braze. La barra de búsqueda se encuentra en la parte superior del panel de control de Braze. Haz clic en la barra de búsqueda o pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> en Windows o <kbd>⌘</kbd> + <kbd>K</kbd> en Mac para saltar directamente a la barra de búsqueda.
+Puedes utilizar la barra de búsqueda para encontrar tu trabajo y otra información dentro de tu panel de Braze. La barra de búsqueda está en la parte superior de tu panel de Braze. Haz clic en la barra de búsqueda o pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> en Windows o <kbd>⌘</kbd> + <kbd>K</kbd> en Mac para ir directamente a la barra de búsqueda.
 
-![Resultados de la búsqueda de la palabra clave "promo", mostrando campañas y artículos que incluyen el término promo, incluida la página Códigos promocionales.]({% image_buster /assets/img/navigation/global_search_new.png %})
+\![Resultados de la búsqueda de la palabra clave "promo", mostrando campañas y artículos que incluyen el término promo, incluida la página Códigos promocionales.]({% image_buster /assets/img/navigation/global_search_new.png %})
 
-## ¿Qué puede buscar?
+## ¿Qué puedes buscar?
 
-Puede buscar los siguientes elementos y acciones:
+Puedes buscar los siguientes elementos y acciones:
 
 - Nombres de las campañas
-- Nombres en lienzo
+- Nombres en Canvas
 - Bloques de contenido
 - Nombres de los segmentos
 - Nombres de plantillas de correo electrónico
 - [Páginas dentro de Braze](#find-pages-that-have-been-renamed)
 
 {% alert tip %}
-Para buscar un texto exacto, ponga el término de búsqueda entre comillas (""). Por ejemplo, la búsqueda ["todos los usuarios"] devolverá todos los elementos que contengan la frase exacta "todos los usuarios" en su nombre.
+Para buscar un texto exacto, pon el término de búsqueda entre comillas (""). Por ejemplo, buscar ["todos los usuarios"] devolverá todos los elementos que contengan la frase exacta "todos los usuarios" en su nombre.
 {% endalert %}
 
 ## Características principales
@@ -52,27 +52,27 @@ table td {
 
 | Acción                      | Atajo de teclado                                                             |
 | --------------------------- | ----------------------------------------------------------------------------- |
-| Abrir el menú de búsqueda        | {::nomarkdown} <ul> <li> Mac: <kbd>⌘</kbd> + <kbd>K</kbd> </li> <li>Windows: <kbd>Ctrl</kbd> + <kbd>K</kbd> </li> </ul> {:/}  |
-| Desplazarse entre los resultados de búsqueda | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
-| Seleccionar un resultado de búsqueda      | <kbd>Entrar</kbd>    |
-| Cerrar el menú de búsqueda       | <kbd>Esc</kbd>  |
+| Abre el menú de búsqueda        | {::nomarkdown} <ul> <li> Mac: <kbd>⌘</kbd> + <kbd>K</kbd> </li> <li>Ventanas: <kbd>Ctrl</kbd> + <kbd>K</kbd> </li> </ul> {:/}  |
+| Desplazarse entre los resultados de la búsqueda | <kbd>⬆</kbd> / <kbd>⬇</kbd>  |
+| Selecciona un resultado de búsqueda      | <kbd>Entra en</kbd>    |
+| Cierra el menú de búsqueda       | <kbd>Esc</kbd>  |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-### Tipo de contenido y etiquetas de estado
+### Etiquetas de tipo de contenido y estado
 
-Cada resultado de búsqueda se asocia con etiquetas que indican el tipo de contenido del resultado (página, campaña, lienzo, segmento, plantilla de correo electrónico) y el estado (activo, archivado, detenido, etc.).
+Cada resultado de búsqueda se empareja con etiquetas que indican el tipo de contenido del resultado (página, campaña, Canvas, segmento, plantilla de correo electrónico) y su estado (activo, archivado, detenido, etc.).
 
 ### Acceder a contenidos abiertos recientemente
 
-En el menú de búsqueda puede volver a consultar los contenidos a los que ha accedido recientemente. La interfaz de búsqueda muestra los resultados abiertos recientemente debajo de la barra de búsqueda, incluidos los elementos con los que se ha interactuado en toda la plataforma Braze. Esto le permite volver a páginas, campañas, lienzos, segmentos o plantillas de correo electrónico que haya visto anteriormente, de modo que puede continuar justo donde lo dejó con menos clics.
+Puedes volver a consultar los contenidos a los que has accedido recientemente desde el menú de búsqueda. La interfaz de búsqueda muestra los resultados abiertos recientemente debajo de la barra de búsqueda, incluidos los elementos con los que se ha interactuado en toda la plataforma Braze. Esto te permite volver a páginas, campañas, lienzos, segmentos o plantillas de correo electrónico vistos anteriormente, para que puedas continuar justo donde lo dejaste con menos clics.
 
-![Búsqueda ampliada, que muestra las páginas abiertas recientemente y el contenido de Braze para el usuario.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
+Búsqueda ampliada, mostrando las páginas abiertas recientemente y el contenido de Braze para el usuario.]({% image_buster /assets/img/navigation/search_recently_opened.png %})
 
-### Encontrar páginas que han cambiado de nombre
+### Buscar páginas que han cambiado de nombre
 
-La búsqueda comprende los sinónimos de las páginas que han cambiado de nombre en nuestra [navegación actualizada]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/). Por ejemplo, encontrará "Exportación de datos" cuando busque "Corrientes", ya que esa página ha cambiado de nombre.
+La búsqueda comprende los sinónimos de las páginas que han cambiado de nombre en nuestra [navegación actualizada]({{site.baseurl}}/user_guide/administrative/access_braze/navigation/). Por ejemplo, encontrará "Exportación de datos" cuando busques "Currents", ya que esa página ha cambiado de nombre.
 
-![Resultados de la búsqueda de "Exportación de datos" donde el usuario ha buscado "Currents".]({% image_buster /assets/img/navigation/global_search_synonym.png %})
+\![Resultados de la búsqueda de "Exportación de datos" donde el usuario ha buscado "Currents".]({% image_buster /assets/img/navigation/global_search_synonym.png %})
 
 <!---
 
@@ -86,13 +86,13 @@ Search for channels to see quick create options among your top 10 results. For e
 
 ### Filtrar contenido activo y borrador
 
-Puede incluir contenidos activos y borradores en los resultados de búsqueda seleccionando **Mostrar sólo activos y borradores**. Por defecto, la opción está activada y se muestran todos los contenidos, incluidos los archivados.
+Puedes incluir contenidos activos y borradores en los resultados de tu búsqueda seleccionando **Mostrar sólo activos y borradores**. Por predeterminado, la opción alternar está activada, y se muestra todo el contenido, incluido el archivado.
 
-![Alterna "Mostrar sólo activos y borradores".]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
+Alterna "Mostrar sólo activos y borradores".]({% image_buster /assets/img/navigation/show_active_draft_new.png %})
 
 ### Buscar emojis
 
-¿Utilizas emojis para nombrar tus obras en Braze? ¡Búscalos! Puedes utilizar emojis como consultas de búsqueda. 😎
+¿Utilizas emojis cuando nombras tu trabajo en Braze? ¡Búscalos! Puedes utilizar emojis como consultas de búsqueda. 😎
 
 
 

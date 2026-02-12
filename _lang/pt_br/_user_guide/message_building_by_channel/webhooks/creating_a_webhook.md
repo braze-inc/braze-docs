@@ -1,6 +1,6 @@
 ---
-nav_title: Criação de um webhook
-article_title: Criação de um webhook
+nav_title: Criar um webhook
+article_title: Criar um webhook
 page_order: 1
 channel:
   - webhooks
@@ -8,7 +8,7 @@ description: "Este artigo de referência aborda como criar e configurar uma camp
 search_rank: 2
 ---
 
-# Criação de uma campanha de webhook
+# Criar uma campanha de webhook
 
 > A criação de uma campanha de webhook ou a inclusão de um webhook em uma campanha multicanal permite disparar ações não relacionadas a aplicativos, fornecendo a outros sistemas e aplicativos informações em tempo real. 
 
@@ -20,10 +20,10 @@ Para saber mais sobre o que são webhooks e como você pode usá-los no Braze, c
 
 ## Etapa 1: Escolha onde construir sua mensagem
 
-Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e simples, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
+Não tem certeza se sua mensagem deve ser enviada por meio de uma campanha ou de um Canva? As campanhas são melhores para campanhas de mensagens únicas e direcionadas, enquanto as canvas são melhores para jornadas de usuários em várias etapas.
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
 **Etapas:**
 
@@ -71,7 +71,7 @@ A guia **Criador** consiste nos seguintes campos:
 
 A [internacionalização]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages) é compatível com o URL e o corpo da solicitação. Para internacionalizar sua mensagem, selecione **Adicionar idiomas** e preencha os campos obrigatórios. 
 
-Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para ver a lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
+Recomendamos selecionar seus idiomas antes de escrever seu conteúdo para que possa preencher o texto onde ele pertence no Liquid. Para nossa lista completa de idiomas disponíveis que você pode usar, consulte [Idiomas suportados]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported).
 
 Se estiver adicionando cópia em um idioma escrito da direita para a esquerda, note que a aparência final das mensagens da direita para a esquerda depende muito de como os prestadores de serviço as processam. Para obter práticas recomendadas sobre o envio de mensagens da direita para a esquerda que sejam exibidas da forma mais precisa possível, consulte [Criação de mensagens da direita para a esquerda]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/localization/right_to_left_messages/).
 
@@ -158,7 +158,7 @@ Depois de enviar o webhook de teste, será exibida uma caixa de diálogo com a m
 ## Etapa 5: Crie o restante de sua campanha ou Canva
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 
 Em seguida, crie o restante de sua campanha. Consulte as seções a seguir para obter mais detalhes sobre a melhor forma de usar nossas ferramentas para criar webhooks.
 
@@ -172,7 +172,9 @@ Nessa etapa, também é possível especificar controles de entrega, como permiti
 
 #### Escolha os usuários a serem direcionados
 
-Em seguida, é necessário direcionar os [usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Nessa etapa, você selecionará o público maior de seus segmentos e restringirá ainda mais esse segmento com nossos filtros, se desejar. Você receberá automaticamente um instantâneo de como é a população desse segmento aproximado no momento. Lembre-se de que a associação exata ao segmento de mensagens é sempre calculada imediatamente antes do envio da mensagem.
+Em seguida, é necessário [direcionar os usuários]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/targeting_users/) escolhendo segmentos ou filtros para restringir seu público. Nessa etapa, você seleciona o público maior de seus segmentos e restringe esse segmento ainda mais com nossos filtros, se desejar. Você recebe automaticamente uma prévia de como é essa população aproximada do segmento. Lembre-se de que a associação exata ao segmento de mensagem é sempre calculada antes do envio da mensagem.
+
+{% multi_lang_include target_audiences.md %}
 
 #### Selecionar eventos de conversão
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Statistiques des segments
+nav_title: Segment Insights
 article_title: Statistiques des segments
 page_order: 8
 page_type: tutorial
@@ -9,7 +9,7 @@ tool:
 description: "Cet article vous propose de découvrir comment utiliser, interpréter et partager des Segment Insights."
 ---
 
-# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Statistiques des segments
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Statistiques des segments
 
 > Apprenez à utiliser, interpréter et partager les statistiques des segments. 
 
@@ -19,7 +19,7 @@ Les informations sur les segments vous montrent comment un segment se comporte p
 
 Accédez à la page **Statistiques des segments de** votre tableau de bord, sous **Analyse/analytique**, et pour afficher jusqu'à 10 segments différents comparés à une base de référence.
 
-![Tableau de bord des informations segments comparant trois segments, "Utilisateurs britanniques", "Utilisateurs français" et "Utilisateurs canadiens", à un segment de référence, "Tous les utilisateurs".]({% image_buster /assets/img_archive/segment_insights.png %})
+![Tableau de bord des informations sur les segments comparant trois segments, les "utilisateurs britanniques", les "utilisateurs français" et les "utilisateurs canadiens", à un segment de référence, "tous les utilisateurs".]({% image_buster /assets/img_archive/segment_insights.png %})
 
 Le segment de référence peut être un segment de votre choix ou un segment contenant tous vos utilisateurs. Segment Insights vous permet de comparer les statistiques suivantes :
 
@@ -35,7 +35,7 @@ Le segment de référence peut être un segment de votre choix ou un segment con
 
 Vous pouvez facilement partager des comparaisons spécifiques avec vos coéquipiers en utilisant l'URL unique de la page, et vous pouvez également sélectionner l'icône de l'œil à côté de chaque segment pour révéler plus d'informations sur ce segment. Ces comparaisons seront réinitialisées lorsque vous changerez d'espace de travail.
 
-![Détails du segment "Utilisateurs Premium (iOS VideoApp)" avec un graphique affichant l'historique des adhésions et un graphique qui décompose la taille estimée pour les différents canaux d'envoi de messages.]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}).{: style="max-width:50%;"}
+![Détails pour le segment "Utilisateurs Premium (iOS VideoApp)" avec un graphique affichant l'historique des adhésions et un graphique qui décompose la taille estimée pour les différents canaux de communication.]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}){: style="max-width:50%;"}
 
 ## Page Segment Details (Informations relatives au segment)
 
@@ -66,7 +66,7 @@ Pour améliorer les conversions parmi les locuteurs de langues autres que l'angl
 
 Convertir des utilisateurs en acheteurs peut être difficile, et essayer de pousser de nouveaux utilisateurs ou des utilisateurs inactifs à effectuer un achat peut amener l’utilisateur à désinstaller votre application. Les informations exploitables par segment peuvent vous aider à découvrir des actions qui conduisent les utilisateurs plus loin dans l'entonnoir d'achat sans qu'ils aient besoin d'acheter tout de suite, par exemple en s'abonnant à votre newsletter, en partageant sur les réseaux sociaux ou en s'inscrivant pour recevoir des messages promotionnels. Par exemple, vous pouvez déterminer l'impact sur les achats des différents comportements au sein d'une application de commerce électronique.
 
-![Statistiques des segments pour les utilisateurs qui ont partagé sur les réseaux sociaux, se sont inscrits à des promotions et à des bulletins d'information.]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
+![La répartition des statistiques des segments pour les utilisateurs qui ont partagé sur les réseaux sociaux, se sont inscrits à des promotions et se sont inscrits à la lettre d'information.]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
 
 Dans ce cas, relativement peu d'utilisateurs sont actuellement inscrits à des messages promotionnels et ne sont pas aussi actifs, mais ces utilisateurs génèrent un chiffre d'affaires à vie plus élevé. Pour augmenter le chiffre d'affaires, il peut être judicieux d'inclure une invitation à s'inscrire à des messages promotionnels dans les campagnes d'onboarding. Pour réengager les anciens utilisateurs, un bon plan consisterait à envoyer une [campagne type pour les anciens utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) et à cibler les [utilisateurs qui se sont convertis]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter) avec une campagne ultérieure pour s'inscrire à des messages promotionnels.
 

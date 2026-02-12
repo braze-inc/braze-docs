@@ -32,7 +32,7 @@ Braze コネクテッドコンテンツは Liquid タグの一例です。これ
 
 `assign`タグを使用して変数を作成および割り当てることができます。これにより、メッセージ作成画面で変数が作成され、メッセージ全体で参照できるようになります。
 
-### Liquidを使用するとデータポイントが消費されますか？
+### リキッドログデータポイントs を使用していますか?
 
 いいえ。
 
@@ -72,9 +72,9 @@ API トリガーイベントのプロパティにアクセスするには、`api
 
 For loops are also known as [反復タグ](https://shopify.github.io/liquid/tags/iteration/).Liquid スニペットで for ループロジックを使用すると、条件が満たされるまで Liquid のブロックを反復実行できます。 
 
-Braze では、これは配列のカスタム属性、または[カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)、[セレクション]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/selections/)、または[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)の呼び出し応答によって返される値やオブジェクトのリストをチェックするために使用できます。具体的には、メッセージングの一環としてforループロジックを使用して、製品が在庫にあるかどうか、または製品が最低評価を持っているかどうかを確認できます。 
+Braze では、これは配列のカスタム属性、または[カタログ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs)、[セレクション]({{site.baseurl}}/user_guide/data/activation/catalogs/selections/)、または[コネクテッドコンテンツ]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content)の呼び出し応答によって返される値やオブジェクトのリストをチェックするために使用できます。具体的には、メッセージングの一環としてforループロジックを使用して、製品が在庫にあるかどうか、または製品が最低評価を持っているかどうかを確認できます。 
 
-たとえば、"Games"という名前のカタログがあり、"cheap_games"という名前の選択肢があるとします。"cheap_games" でゲームのタイトルをプルするには、次のLiquid スニペットを使用します。
+たとえば、"Games"という名前のカタログがあり、"cheap_games". という名前の選択肢があるとします。"cheap_games", でゲームのタイトルをプルするには、次のリキッドスニペットを使用できます。
 
 {% raw %}
 ```liquid

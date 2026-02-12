@@ -1,6 +1,6 @@
 ---
-nav_title: 캠페인 작성
-article_title: 캠페인 작성
+nav_title: 캠페인 구축하기
+article_title: 캠페인 구축하기
 layout: dev_guide
 guide_top_header: "캠페인 작성"
 guide_top_text: "이 랜딩 페이지에는 캠페인 작성에 대한 리소스가 있습니다. <a href='/docs/user_guide/engagement_tools/segments/'>세그먼트를</a> 생성한 후에는 여기에 있는 리소스를 사용하여 캠페인을 설정하고 사용 가능한 다양한 옵션에 대해 알아보세요.<br><br><a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>캠페인 설정</a> 브레이즈 학습 과정도 확인해 보시길 적극 권장합니다."
@@ -33,7 +33,7 @@ guide_menu_list:
   - name: 전환 이벤트
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/conversion_events/
     image: /assets/img/braze_icons/edit-05.svg
-  - name: 사용자 타겟팅
+  - name: 타겟팅 사용자
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/targeting_users/
     image: /assets/img/braze_icons/annotation-question.svg
 ---

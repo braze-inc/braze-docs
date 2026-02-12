@@ -1,12 +1,12 @@
 ---
-nav_title: Managing custom data
-article_title: Managing Custom Data
+nav_title: Manage custom data
+article_title: Manage Custom Data
 page_order: 20
 page_type: reference
 description: "This reference article covers how to manage custom data, such as pre-populating campaigns and segments or blocklisting and deleting data."
 ---
 
-# Managing custom data
+# Manage custom data
 
 > This page covers how to pre-populate custom data in your campaigns and segments, blocklist data that is no longer useful, and manage custom events and attributes and properties.<br><br>To learn how to manage custom attributes in particular, refer to [Managing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#managing-custom-attributes).
 
@@ -36,9 +36,7 @@ After you have created a custom event or product, select **Manage Properties** f
 
 To make these added custom attributes, events, products, or event properties traceable, you must ask your development team to create them in the SDK using the exact name you used to add them earlier. Or, you can use the Braze [API]({{site.baseurl}}/api/basics/) to import data on that attribute. After that, the custom attribute, event, or other will be actionable and applied to your users.
 
-{% alert note %}
-All user profile data (custom events, custom attributes, custom data) is stored as long as those profiles are active.
-{% endalert %}
+{% include alerts/note_alerts.md alert='Manage custom data storage' %}
 
 ## Blocklisting custom data
 

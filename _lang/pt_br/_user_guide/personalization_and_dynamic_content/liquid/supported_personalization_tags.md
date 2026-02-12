@@ -1,5 +1,5 @@
 ---
-nav_title: Tags de personalização suportadas
+nav_title: Tags de personalização compatíveis
 article_title: Tags de personalização do Liquid compatíveis
 page_order: 1
 description: "Este artigo de referência abrange uma lista completa de tags de personalização Liquid compatíveis."
@@ -12,7 +12,7 @@ search_rank: 1
 
 ## Resumo das tags suportadas
 
-Por conveniência, é fornecido um resumo das tags de personalização compatíveis. Para obter mais detalhes sobre cada tipo de tag e práticas recomendadas, continue lendo.
+Por conveniência, é fornecido um resumo das tags de personalização compatíveis. Para mais detalhes sobre cada tipo de tag e melhores práticas, continue lendo.
 
 {% raw %}
 
@@ -20,18 +20,18 @@ Por conveniência, é fornecido um resumo das tags de personalização compatív
 | -------------  | ---- |
 | Atribuições padrão (predefinidas) | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Atributos do dispositivo | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [Atribuições da lista de e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) | `{{${set_user_to_unsubscribed_url}}}` <br>Essa tag substitui a tag anterior `{{${unsubscribe_url}}}`. Embora a tag antiga ainda funcione em e-mails criados anteriormente, recomendamos que você use a tag mais recente. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
-| [Atribuições do SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword) | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| [Atribuições do WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/) | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Atributos da Lista de E-mail</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Essa tag substitui a tag anterior `{{${unsubscribe_url}}}`. Embora a tag antiga ainda funcione em e-mails criados anteriormente, recomendamos que você use a tag mais recente. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>Atributos de SMS</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>Atributos do WhatsApp</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | Atributos da campanha | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Atributos do canva | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Atribuições da etapa do canva | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Atributos do cartão | `{{card.${api_id}}}` <br> `{{card.${name}}}` |
 | Eventos de geofencing | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}` |
 | Propriedades do evento <br> (Elas são personalizadas para seu espaço de trabalho).| `{{event_properties.${your_custom_event_property}}}` |
-| Variáveis de contexto do Canva | `{{context}}` |
+| Variáveis de Contexto do Canva | `{{context}}` |
 | Atributos personalizados <br> (Elas são personalizadas para seu espaço de trabalho). | `{{custom_attribute.${your_custom_attribute}}}` |
-| [Propriedades do disparador da API]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) |`{{api_trigger_properties}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propriedades do gatilho da API</a> |`{{api_trigger_properties}}` |
 | Propriedades de entrada do canva | `{{canvas_entry_properties.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -47,13 +47,13 @@ Consulte este artigo de ajuda para saber mais sobre [como algumas dessas atribui
 
 O comportamento das seguintes tags difere entre o Canva e as campanhas:
 {% raw %}
-- `dispatch_id` O comportamento é diferente porque o Braze trata as etapas do Canva como eventos disparados, mesmo quando são "programadas" (exceto as etapas de entrada, que podem ser programadas). Para saber mais, consulte [Comportamento da ID de despacho]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- `dispatch_id` o comportamento difere porque a Braze trata as etapas do Canva como eventos acionados, mesmo quando estão "agendadas" (exceto para etapas de entrada, que podem ser agendadas). Para saber mais, consulte [comportamento do ID de Dispatch]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 - O uso da tag `{{campaign.${name}}}` com o canvas exibirá o nome do componente do canvas. Ao usar essa tag com campanhas, ela exibirá o nome da campanha.
 {% endraw %}
 
 ## Informações do dispositivo usado mais recentemente
 
-É possível modelar os seguintes atributos para o dispositivo mais recente do usuário em todas as plataformas. Se um usuário não tiver usado seu aplicativo (por exemplo, você importou o usuário via API REST), esses valores serão todos `null`.
+Você pode modelar os seguintes atributos para o dispositivo mais recente do usuário em todas as plataformas. Se um usuário não tiver usado seu aplicativo (por exemplo, você importou o usuário via API REST), esses valores serão todos `null`.
 
 {% raw %}
 
@@ -63,7 +63,7 @@ O comportamento das seguintes tags difere entre o Canva e as campanhas:
 |`{{most_recently_used_device.${id}}}` | O identificador do dispositivo Braze. No iOS, isso pode ser o Identificador de Fornecedor da Apple (IDFV) ou um UUID. Para Android e outras plataformas, é um UUID gerado aleatoriamente. |
 | `{{most_recently_used_device.${carrier}}}` | A operadora do serviço telefônico do dispositivo usado mais recentemente, se disponível. Os exemplos incluem "Verizon" e "Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | Se o dispositivo tem o rastreamento de anúncios ativado ou não. Esse é um valor booleano (`true` ou `false`). |
-| `{{most_recently_used_device.${idfa}}}` | Para dispositivos iOS, esse valor será o Identificador para Publicidade (IDFA) se seu aplicativo estiver configurado com nossa [coleção opcional de IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos não iOS, esse valor será nulo. |
+| `{{most_recently_used_device.${idfa}}}` | Para dispositivos iOS, esse valor será o Identificador para Publicidade (IDFA) se seu aplicativo estiver configurado com nossa [coleta opcional de IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos não iOS, esse valor será nulo. |
 | `{{most_recently_used_device.${google_ad_id}}}` | Para dispositivos Android, esse valor será o identificador de publicidade do Google Play se seu aplicativo estiver configurado com nossa coleção opcional de IDs de publicidade do Google Play. Para dispositivos não Android, esse valor será nulo. |
 | `{{most_recently_used_device.${roku_ad_id}}}` | Para dispositivos Roku, esse valor será o Roku Advertising Identifier coletado quando seu aplicativo for configurado com a Braze. Para dispositivos não Roku, esse valor será nulo. |
 | `{{most_recently_used_device.${model}}}` | O nome do modelo do dispositivo, se disponível. Os exemplos incluem "iPhone 6S", "Nexus 6P" e "Firefox". |
@@ -71,7 +71,7 @@ O comportamento das seguintes tags difere entre o Canva e as campanhas:
 | `{{most_recently_used_device.${platform}}}` | A plataforma do dispositivo, se disponível. Se definido, o valor será um dos seguintes: `ios`, `android`, `kindle`, `android_china`, `web`, ou `tvos`. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
-Como há uma grande variedade de operadoras de dispositivos, nomes de modelos e sistemas operacionais, recomendamos que você teste minuciosamente qualquer Liquid que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico.
+Como há uma ampla gama de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer Liquid que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico.
 
 ## Informações sobre aplicativos direcionados
 
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## Informações sobre dispositivos direcionados
 
-Para notificações por push e canais de envio de mensagens no app, é possível modelar os seguintes atributos para o dispositivo para o qual a mensagem está sendo enviada. Ou seja, uma notificação por push ou uma mensagem no app pode incluir atribuições do dispositivo no qual a mensagem está sendo lida. Note que essas atribuições não funcionarão para cartões de conteúdo. 
+Para notificações por push, mensagens no app e Banners, você pode modelar os seguintes atributos para o dispositivo ao qual uma mensagem está sendo enviada. Ou seja, uma notificação por push, mensagem no app ou Banner pode incluir atributos do dispositivo no qual a mensagem está sendo lida. Note que essas atribuições não funcionarão para cartões de conteúdo. 
 
 |Tag | Descrição |
 |------------------|---|
-| `{{targeted_device.${id}}}` | Este é o identificador do dispositivo Braze. No iOS, isso pode ser o Identificador de Fornecedor da Apple (IDFV) ou um UUID. Para Android e outras plataformas, é um UUID gerado aleatoriamente. Por exemplo, se um usuário tiver cinco dispositivos, ocorrerá uma tentativa de envio para todos os cinco dispositivos, cada um usando o identificador de dispositivo correspondente. Se uma mensagem estiver configurada para ser enviada ao dispositivo usado mais recentemente pelo usuário, ocorrerá apenas uma tentativa de envio ao dispositivo usado mais recentemente identificado pelo Braze. |
+| `{{targeted_device.${id}}}` | Este é o identificador do dispositivo Braze. No iOS, isso pode ser o Identificador de Fornecedor da Apple (IDFV) ou um UUID. Para Android e outras plataformas, é um UUID gerado aleatoriamente. Por exemplo, se um usuário tiver cinco dispositivos, uma tentativa de envio ocorrerá para todos os cinco dispositivos, cada um usando o identificador de dispositivo correspondente. Se uma mensagem estiver configurada para ser enviada ao dispositivo mais recentemente usado por um usuário, apenas uma tentativa de envio ocorrerá para o dispositivo mais recentemente usado identificado através da Braze. |
 | `{{targeted_device.${carrier}}}` | A operadora do serviço telefônico do dispositivo usado mais recentemente, se disponível. Os exemplos incluem "Verizon" e "Orange". |
-| `{{targeted_device.${idfa}}}` | Para dispositivos iOS, esse valor será o Identificador para Publicidade (IDFA) se seu aplicativo estiver configurado com nossa [coleção opcional de IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos não iOS, esse valor será nulo. |
-| `{{targeted_device.${google_ad_id}}}` | Para dispositivos Android, esse valor será o identificador de publicidade do Google Play se seu aplicativo estiver configurado com nossa [coleção opcional de IDs de publicidade do Google Play]. Para dispositivos não Android, esse valor será nulo. |
+| `{{targeted_device.${idfa}}}` | Para dispositivos iOS, esse valor será o Identificador para Publicidade (IDFA) se seu aplicativo estiver configurado com nossa [coleta opcional de IDFA]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Para dispositivos não iOS, esse valor será nulo. |
+| `{{targeted_device.${google_ad_id}}}` | Para dispositivos Android, esse valor será o Identificador de Publicidade do Google Play se seu aplicativo estiver configurado com nossa [coleta opcional de ID de Publicidade do Google Play]. Para dispositivos não Android, esse valor será nulo. |
 | `{{targeted_device.${roku_ad_id}}}` | Para dispositivos Roku, esse valor será o Roku Advertising Identifier coletado quando seu aplicativo for configurado com a Braze. Para dispositivos não Roku, esse valor será nulo. |
 | `{{targeted_device.${model}}}` | O nome do modelo do dispositivo, se disponível. Os exemplos incluem "iPhone 6S", "Nexus 6P" e "Firefox". |
 | `{{targeted_device.${os}}}` | O sistema operacional do dispositivo, se disponível. Os exemplos incluem "iOS 9.2.1", "Android (Lollipop)" e "Windows". |
@@ -113,7 +113,7 @@ Para notificações por push e canais de envio de mensagens no app, é possível
 
 {% endraw %}
 
-Como há uma grande variedade de operadoras de dispositivos, nomes de modelos e sistemas operacionais, recomendamos que você teste minuciosamente qualquer lógica que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico. 
+Como há uma ampla gama de operadoras de dispositivos, nomes de modelos e sistemas operacionais, aconselhamos que você teste minuciosamente qualquer lógica que dependa condicionalmente de qualquer um desses valores. Esses valores serão `null` se não estiverem disponíveis em um dispositivo específico. 
 
 Além disso, para notificações por push, é possível que o Braze não consiga discernir o dispositivo anexado à notificação por push em determinadas circunstâncias, como se o token por push tivesse sido importado por meio da API, resultando em valores `null` para essas mensagens.
 
@@ -121,7 +121,7 @@ Além disso, para notificações por push, é possível que o Braze não consiga
 
 ### Uso da lógica condicional em vez de um valor padrão
 
-Em algumas circunstâncias, você pode optar por usar [a lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) em vez de definir um valor padrão. A lógica condicional lhe permite enviar mensagens diferentes com base no valor de um atributo personalizado. Além disso, você pode usar a lógica condicional para [abortar mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) para clientes com valores de atributos nulos ou em branco. 
+Em algumas circunstâncias, você pode optar por usar [lógica condicional]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/) em vez de definir um valor padrão. A lógica condicional lhe permite enviar mensagens diferentes com base no valor de um atributo personalizado. Além disso, você pode usar lógica condicional para [abortar mensagens]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/) para clientes com valores de atributo nulos ou em branco. 
 
 #### Caso de uso
 
@@ -155,15 +155,15 @@ Nesse caso, há duas opções que podem funcionar melhor do que definir um valor
    {% endif %}
    ```
 
-Nesse caso de uso, um usuário com um nome em branco ou nulo receberá a mensagem "Thanks for downloading" (Obrigado por baixar). Você deve incluir um [valor padrão]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/) para o primeiro nome para garantir que seu cliente não veja o Liquid em caso de erro.
+Nesse caso de uso, um usuário com um nome em branco ou nulo receberá a mensagem "Thanks for downloading" (Obrigado por baixar). Você deve incluir um [valor padrão]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/) para o nome para garantir que seu cliente não veja Liquid em caso de erro.
 
 {% endraw %}
 
 ## Tags de variáveis
 
-Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Recomendamos o uso de um nome exclusivo para sua variável. Se você criar uma variável com um nome semelhante ao das tags de personalização compatíveis (como `language`), isso poderá afetar sua lógica de envio de mensagens.
+Você pode usar a tag `assign` para criar uma variável no criador de mensagens. Recomendamos usar um nome exclusivo para sua variável. Se você criar uma variável com um nome semelhante aos tags de personalização suportados (como `language`), isso pode afetar sua lógica de envio de mensagens.
 
-Depois de criar uma variável, você pode fazer referência a ela na lógica ou na mensagem de envio de mensagens. Essa tag é útil quando você deseja reformatar o conteúdo que é retornado pelo nosso recurso [Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %})]. Você pode ler mais na documentação da Shopify sobre [tags variáveis](https://docs.shopify.com/themes/liquid/tags/variable-tags).
+Depois de criar uma variável, você pode fazer referência a ela na lógica ou na mensagem de envio de mensagens. Essa tag é útil quando você deseja reformatar o conteúdo que é retornado pelo nosso recurso [conteúdo conectado]({% image_buster /assets/img_archive/personalized_firstname_.png %})]. Você pode ler mais na documentação da Shopify sobre [tags variáveis](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
 {% alert tip %}
 Está atribuindo as mesmas variáveis em todas as mensagens? Em vez de escrever a tag `assign` várias vezes, você pode salvar essa tag como um bloco de conteúdo e colocá-la na parte superior da mensagem.
@@ -223,7 +223,7 @@ Este é um exemplo simples de como as tags de iteração podem ser usadas no cri
 
 As tags de sintaxe podem ser usadas para controlar como o Liquid é renderizado. Você pode usar a tag `echo` para retornar uma expressão. É o mesmo que envolver uma expressão usando colchetes, exceto que você pode usar essa tag dentro de tags Liquid. Você também pode usar a tag `liquid` para ter um bloco de Liquid sem nenhum delimitador em cada tag. Cada tag deve estar em sua própria linha ao usar a tag `liquid`. Dê uma olhada na documentação da Shopify sobre [tags de sintaxe](https://shopify.dev/api/liquid/tags#syntax-tags) para saber mais informações e exemplos.
 
-Com o [controle de espaço em branco](https://shopify.github.io/liquid/basics/whitespace/), é possível remover espaços em branco ao redor das tags, o que ajuda a controlar ainda mais a aparência da saída do Liquid.
+Com [controle de espaços em branco](https://shopify.github.io/liquid/basics/whitespace/), você pode remover espaços em branco ao redor de suas tags, ajudando a controlar ainda mais como a saída do Liquid se parece.
 
 ## Códigos de status HTTP {#http-personalization}
 
@@ -243,11 +243,11 @@ Essa chave só será adicionada automaticamente ao objeto Connected Content se o
 
 ## Envio de mensagens com base no idioma, no fuso local mais recente e no fuso horário
 
-Em algumas situações, talvez você queira enviar mensagens específicas para determinadas localizações. Por exemplo, o português brasileiro é tipicamente diferente do português europeu.
+Em algumas situações, você pode desejar enviar mensagens que sejam específicas para locais particulares. Por exemplo, o português brasileiro é tipicamente diferente do português europeu.
 
 ### Caso de uso: Localize com base na localidade recente
 
-Aqui está um caso de uso de como você pode usar a localização mais recente para localizar ainda mais uma mensagem internacionalizada.
+Aqui está um caso de uso de como você pode usar o local mais recente para localizar ainda mais uma mensagem internacionalizada.
 
 {% raw %}
 

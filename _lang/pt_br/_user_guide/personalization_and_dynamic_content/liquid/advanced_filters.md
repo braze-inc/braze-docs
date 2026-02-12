@@ -83,17 +83,17 @@ Não há como instanciar um hash como uma variável (como uma expressão) no Liq
 
 Esse filtro deve ser sempre usado ao personalizar uma string em um dicionário JSON e é útil principalmente para webhooks.
 
-## filtros de formatação JSON
+## Filtros de formatação JSON
 
 | nome do filtro | descrição do filtro |
 |---|---|
-| `json_parse` | Converte uma string JSON em uma estrutura de dados correspondente, como um objeto ou array. | 
-| `as_json_string` | Converte uma estrutura de dados, como um objeto ou array, em uma string JSON correspondente. | 
+| `json_parse` | Converte uma string JSON em uma estrutura de dados correspondente, como um objeto ou um vetor de objeto. | 
+| `as_json_string` | Converte uma estrutura de dados, como um objeto ou vetor de objeto, em uma string JSON correspondente. | 
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endraw %}
 
-{% details exemplo de entrada e saída json_parse %}
+{% details json_parse example input and output %}
 
 ### Entrada 
 
@@ -115,7 +115,7 @@ Item Name: {{ item.store_name }}
 
 {% enddetails %}
 
-{% details exemplo de entrada e saída as_json_string %}
+{% details as_json_string example input and output %}
 
 ### Entrada
 

@@ -17,7 +17,7 @@ Para obter melhores resultados, consulte as seguintes diretrizes de tamanho de i
 ## Push para iOS e Android
 
 {% tabs local %}
-{% tab Imagens %}
+{% tab Images %}
 
 **Tipo de imagem** | **Tamanho de imagem recomendado** | **Tamanho máximo da imagem** | **Tipos de arquivos**
 --- | --- | --- | ---
@@ -27,7 +27,7 @@ Para obter melhores resultados, consulte as seguintes diretrizes de tamanho de i
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 
 | Tipo de mensagem | Comprimento recomendado da mensagem (somente texto) | Comprimento recomendado de mensagens (Rich)
 --- | ---
@@ -41,7 +41,7 @@ Para obter melhores resultados, consulte as seguintes diretrizes de tamanho de i
 Quer saber quantos caracteres você pode usar em uma notificação por push do iOS sem que ela seja truncada? Confira nossas [diretrizes de contagem de caracteres do iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
 
 {% endtab %}
-{% tab Tamanho da carga útil %}
+{% tab Payload Size %}
 
 **Plataforma** | **Tamanho**
 --- | ---
@@ -51,17 +51,17 @@ Android (FCM) | 4 KB
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Exemplo de imagem %}
+{% tab Image Example %}
 {% subtabs %}
 {% subtab iOS %}
 
 ![Notificação por push do iOS com texto que diz: "Oi! Este é um push do iOS com uma imagem" com um emoji. Há uma pequena imagem ao lado do texto.]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
-![Notificações por push do iOS em um hard push com o mesmo texto da mensagem anterior, com uma imagem expandida precedendo o texto.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
+![Notificação por push do iOS em um hard push com o mesmo texto da mensagem anterior, com uma imagem expandida precedendo o texto.]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endsubtab %}
 {% subtab Android %}
 
-![Notificações por push do Android com uma imagem grande sob o texto da mensagem.]({% image_buster /assets/img_archive/android_push_img2.png %})
+![Notificação por push do Android com uma imagem grande sob o texto da mensagem.]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
 As notificações de imagens grandes são mais bem exibidas quando se usa uma imagem de pelo menos 600x300 pixels.
@@ -70,7 +70,7 @@ As notificações de imagens grandes são mais bem exibidas quando se usa uma im
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Exemplo de texto %}
+{% tab Text Example %}
 {% subtabs %}
 {% subtab iOS %}
 
@@ -87,7 +87,7 @@ As notificações de imagens grandes são mais bem exibidas quando se usa uma im
 ## Web push
 
 {% tabs local %}
-{% tab Imagens %}
+{% tab Images %}
 
 | **Navegador** | **Tamanho recomendado do ícone**
 | --- | ---
@@ -112,7 +112,7 @@ Opera | MacOS | N/D
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Texto %}
+{% tab Text %}
 
 | **Navegador** | **Plataforma** | **Comprimento máximo do título**  | **Comprimento máximo do corpo da mensagem**
 | --- | --- | --- | ---

@@ -18,7 +18,7 @@ You can find the exports log by going to **Settings** > **Exports Log**. Here, y
 
 You can cancel pending exports directly from the **Exports Log** page by selecting the <i class="fas fa-ellipsis-vertical"></i> menu and then selecting **Cancel Export**, or selecting the **Export ID** and then selecting **Cancel Export** on the export's page.
 
-![The expors log showing a pending export and the option to "Cancel Export".]({% image_buster /assets/img/export_logs_cancel.png %})
+![The exports log showing a pending export and the option to "Cancel Export".]({% image_buster /assets/img/export_logs_cancel.png %})
 
 ## Sharing a specific export log
 

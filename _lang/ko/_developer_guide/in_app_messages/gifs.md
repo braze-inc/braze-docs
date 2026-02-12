@@ -1,12 +1,12 @@
 ---
 page_order: 2
-nav_title: GIF 삽입하기
-article_title: Braze SDK용 인앱 메시지에 GIF 삽입하기
+nav_title: GIF 삽입
+article_title: Braze 소프트웨어 개발 키트용 인앱 메시지에 GIF 삽입하기
 channel:
   - push notifications
 ---
 
-# 인앱 메시지에 GIF 삽입하기
+# 인앱 메시징에 GIF 삽입하기
 
 > Braze SDK용 인앱 메시지에 GIF를 삽입하는 방법을 알아보세요.
 

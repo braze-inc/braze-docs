@@ -1,5 +1,5 @@
 ---
-nav_title: Analyse/analytique (si utilisée comme adjective)
+nav_title: "Analyse/analytique de l'événement (si utilisé asjective)"
 article_title: Analyses prédictives (if used asjective)
 description: "Cet article de référence présente les différents composants de la page Analyses prédictives/analytiques d'événements et explique comment ils peuvent être utilisés pour prendre des décisions fondées sur des informations."
 page_order: 1.3
@@ -12,7 +12,7 @@ page_order: 1.3
 
 ## A propos de l'analyse prédictive/analytique (if used anjective)
 
-Dès que la prédiction est terminée et que cette page est remplie, vous pouvez commencer à utiliser les [filtres]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux.
+Dès que la prédiction est terminée et que cette page est remplie, vous pouvez commencer à utiliser les [filtres]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux.
 
 Tels sont les éléments constitutifs de l'analyse/analytique prévisionnelle des événements :
 
@@ -43,7 +43,7 @@ Les scores et les prédictions correspondantes seront mis à jour selon la plani
 
 Dans la moitié droite du panneau situé sous le graphique, nous présentons des estimations de la précision attendue du ciblage de la partie de l'audience de prédictions que vous avez sélectionnée de deux manières : combien d'utilisateurs sélectionnés sont censés réaliser l'événement, et combien sont censés ne pas le faire.
 
-![L'audience sélectionnée et la précision estimée affichées dans le tableau de bord de Braze.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
+![L'audience sélectionnée et la précision estimée s'affichent dans le tableau de bord de Braze.]({% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %})
 
 ### On attend d'eux qu'ils accomplissent
 

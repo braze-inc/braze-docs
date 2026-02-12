@@ -72,7 +72,7 @@ To update an existing object, send a POST to `users/track` with the `_merge_obje
 After this request is received, the custom attribute object will now look like the following:
 
 ```json
-"most_played_song": {
+{"most_played_song": {
   "song_name": "Solea",
   "artist_name" : "Miles Davis",
   "album_name": "Sketches of Spain",
@@ -82,7 +82,7 @@ After this request is received, the custom attribute object will now look like t
      "count": 1000,
      "top_10_listeners": true
   }
-}
+}}
 ```
 
 {% alert warning %}
@@ -328,14 +328,14 @@ You can generate a schema for your objects to build segment filters without need
 For this example, suppose we have an `accounts` object array that we've just sent to Braze:
 
 ```json
-"accounts": [
+{"accounts": [
   {"type": "taxable",
   "balance": 22500,
   "active": true},
   {"type": "non-taxable",
   "balance": 0,
-  "active": true},
- ]
+  "active": true}
+]}
 ```
 
 In the Braze dashboard, go to **Data Settings** > **Custom Attributes**.

@@ -18,7 +18,7 @@ alias: /geographic_permissions/
 
 Se você for um administrador, poderá configurar os países que estão na lista de permissões. A lista de permissão de países é configurada no nível do [grupo de inscrições]({{site.baseurl}}/sms_rcs_subscription_groups/). Para acessá-la, acesse **Acessar** > **Inscrições** e selecione um grupo de inscrições de SMS, MMS ou RCS. A lista de permissões está em **Geographic Permissions (Permissões geográficas**).
 
-![A seção SMS Geographic Permissions editável para um administrador com vários países selecionados na "Country allowlist" (Lista de permissão de países).]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+![A seção editável de permissões geográficas de SMS para um administrador com vários países selecionados na "Lista de permissão de países".]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### Seleção de países
 
@@ -38,7 +38,7 @@ As alterações entrarão em vigor depois que você selecionar **Salvar**. A rem
 
 Alguns países têm um risco maior de bombeamento de tráfego de SMS e RCS. Esses países são indicados por uma tag de **Alto risco** no menu suspenso de países.
 
-![O menu suspenso de países com o Azerbaijão tem uma tag de "Alto risco".]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
+![O menu suspenso de países com o Azerbaijão tem uma tag "Alto risco".]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
 
 Se você permitir o envio nesses países, deverá primeiro reconhecer o risco de fazê-lo antes que o país seja adicionado à sua lista de permissões.
 

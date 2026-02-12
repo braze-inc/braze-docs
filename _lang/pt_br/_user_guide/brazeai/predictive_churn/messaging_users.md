@@ -1,6 +1,6 @@
 ---
 nav_title: Usuários de envio de mensagens
-article_title: Direcionamento de usuários para previsão de churn
+article_title: Usuários desistentes para previsão de churn
 description: "Este artigo de referência aborda as possíveis próximas etapas após a criação de uma previsão de churn, como a implementação de filtros e considerações estratégicas."
 page_order: 1.2
 

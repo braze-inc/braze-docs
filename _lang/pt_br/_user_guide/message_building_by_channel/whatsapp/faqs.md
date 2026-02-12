@@ -1,7 +1,7 @@
 ---
 nav_title: Perguntas frequentes
 article_title: Perguntas frequentes sobre o WhatsApp
-page_order: 80
+page_order: 11
 description: "Este artigo aborda algumas das perguntas mais frequentes que surgem ao configurar campanhas do WhatsApp."
 page_type: FAQ
 channel:
@@ -34,9 +34,9 @@ Sim, você ainda precisa criar uma conta do WhatsApp Business. Recomendamos que 
 Depois de concluir o fluxo incorporado de inscrição, você pode acessar sua conta em business.facebook.com > [seção WhatsApp](https://business.facebook.com/wa/manage/home). 
 
 #### Posso conectar várias WABAs ao Braze? 
-Sim, você pode adicionar até 10 contas do WhatsApp Business por espaço de trabalho, e cada conta comercial pode ser aninhada em um Meta Business Manager diferente.
+Sim, você pode adicionar até 10 contas do WhatsApp Business por espaço de trabalho, e cada conta comercial pode estar aninhada sob um gerenciador de negócios Meta diferente.
 
-![Diagrama do ecossistema do Braze e do WhatsApp, mostrando como os espaços de trabalho e as contas do WhatsApp Business se conectam entre si: você pode conectar um grupo de inscrições a um número de telefone, várias contas do WhatsApp Business a um espaço de trabalho e um espaço de trabalho a vários portfólios do Meta Business.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
+![Diagrama do ecossistema Braze e WhatsApp, mostrando como os espaços de trabalho e as contas do WhatsApp Business se conectam: você pode conectar um grupo de inscrições a um número de telefone, várias contas do WhatsApp Business a um espaço de trabalho e um espaço de trabalho a vários Portfólios de Negócios Meta.]({% image_buster /assets/img/whatsapp/whatsapp_braze_ecosystem.png %}) 
 
 ### Números de telefone da conta empresarial do WhatsApp 
 

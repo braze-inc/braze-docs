@@ -11,18 +11,15 @@ description: "Cette page d’accueil contient des articles sur l’accès à vot
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Naviguer dans Braze
-  link: /docs/user_guide/administrative/access_braze/navigation/
-  image: /assets/img/braze_icons/list.svg
-- name: Recherche dans votre tableau de bord
-  link: /docs/user_guide/administrative/access_braze/global_search/
-  image: /assets/img/braze_icons/search-sm.svg
-- name: "Points d'extrémité de l'API et du SDK"
-  link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
-  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Accéder à votre compte
   link: /docs/user_guide/administrative/access_braze/accessing_your_account/
   image: /assets/img/braze_icons/user-circle.svg
+- name: Le tableau de bord de Braze
+  link: /docs/user_guide/administrative/access_braze/braze_dashboard/
+  image: /assets/img/braze_icons/browser.svg
+- name: "Points d'extrémité de l'API et du SDK"
+  link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
+  image: /assets/img/braze_icons/navigation-pointer-01.svg
 - name: Paramètres linguistiques
   link: /docs/user_guide/administrative/access_braze/language/
   image: /assets/img/braze_icons/globe-04.svg

@@ -20,6 +20,16 @@ platform:
 By default, Braze will collect the following device-level properties to allow device, language, and time zone-based message personalization:
 
 {% tabs %}
+{% tab web %}
+- `BROWSER`
+- `BROWSER_VERSION`
+- `LANGUAGE`
+- `OS`
+- `RESOLUTION`
+- `TIME_ZONE`
+- `USER_AGENT`
+{% endtab %}
+
 {% tab android %}
 - `AD_TRACKING_ENABLED`
 - `ANDROID_VERSION`
@@ -27,7 +37,7 @@ By default, Braze will collect the following device-level properties to allow de
 - `IS_BACKGROUND_RESTRICTED`
 - `LOCALE`
 - `MODEL`
-- `NOTIFICIATION_ENABLED`
+- `NOTIFICATION_ENABLED`
 - `RESOLUTION`
 - `TIMEZONE`
 
@@ -54,21 +64,23 @@ The Braze SDK does not collect IDFA automatically. Apps may optionally pass IDFA
 2. To set the identifier for advertiser (IDFA), use [`set(identifierForAdvertiser:)`](https://braze-inc.github.io/braze-swift-sdk/documentation/brazekit/braze/set(identifierforadvertiser:)/).
 {% endalert %}
 {% endtab %}
-
-{% tab web %}
-- `BROWSER`
-- `BROWSER_VERSION`
-- `LANGUAGE`
-- `OS`
-- `RESOLUTION`
-- `TIME_ZONE`
-- `USER_AGENT`
-{% endtab %}
 {% endtabs %}
 
 By default, all properties are enabled. However, you can choose to enable or disable them manually. Keep in mind, some Braze SDK features require specific properties (such as local time zone delivery and time zone), so be sure to test your configuration before releasing to production.
 
 {% tabs %}
+{% tab web %}
+For example, you can specify the device language to be allowlisted. For more information, see refer to the `devicePropertyAllowlist` option for [`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
+
+```javascript
+import * as braze from"@braze/web-sdk";
+braze.initialize("API-KEY", {
+    baseUrl: "BASE-URL",
+    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
+});
+```
+{% endtab %}
+
 {% tab android %}
 For example, you can specify the Android OS version and device locale to be allowlisted. For more information, see the [`setDeviceObjectAllowlistEnabled()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html) and [`setDeviceObjectAllowlist()`](https://braze-inc.github.io/braze-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html) methods. 
 
@@ -101,18 +113,6 @@ configuration.devicePropertyAllowList = @[
 
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab web %}
-For example, you can specify the device language to be allowlisted. For more information, see refer to the `devicePropertyAllowlist` option for [`InitializationOptions`](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#initializationoptions).
-
-```javascript
-import * as braze from"@braze/web-sdk";
-braze.initialize("API-KEY", {
-    baseUrl: "BASE-URL",
-    devicePropertyAllowlist: [ braze.DeviceProperties.LANGUAGE ] // list of `DeviceProperties` you want to collect
-});
-```
 {% endtab %}
 {% endtabs %}
 

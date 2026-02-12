@@ -36,7 +36,7 @@ channel: email
 
 Braze 서버를 통해 전송되는 이메일 주소는 [RFC 2822](https://datatracker.ietf.org/doc/html/rfc2822) 표준에 따라 유효성을 검사해야 하며, Braze는 특정 문자를 허용하지 않으며 유효하지 않은 것으로 인식합니다. 이메일이 반송되면 Braze는 이메일을 유효하지 않은 것으로 표시하고 구독 상태는 변경되지 않습니다. 
 
-{% details RFC 표준을 벗어난 허용되지 않는 문자 %}
+{% details Unaccepted characters outside of RFC standards %}
 - *
 - /
 - ?
@@ -69,7 +69,7 @@ Unicode encoding is not supported in "from" addresses.
 일부 HTML 태그 및 속성은 브라우저에서 악성코드가 실행될 수 있으므로 허용되지 않습니다.
 
 이메일에 허용되지 않는 HTML 태그 및 속성은 다음 목록을 확인하세요:
-{% details 허용되지 않는 HTML 태그 확장 %}
+{% details Expand for disallowed HTML tags %}
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -87,7 +87,7 @@ Unicode encoding is not supported in "from" addresses.
 - `<svg>`
 {% enddetails %}
 
-{% details 허용되지 않는 HTML 속성을 확장합니다 %}
+{% details Expand for disallowed HTML attributes %}
 - `<animationend>`
 - `<animationiteration>`
 - `<animationstart>`

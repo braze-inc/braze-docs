@@ -20,7 +20,7 @@ guide_featured_list:
 - name: Push Enablement and Subscription
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   image: /assets/img/braze_icons/users-01.svg
-- name: Creating a Push Message
+- name: Create a Push Message
   link: /docs/user_guide/message_building_by_channel/push/creating_a_push_message/
   image: /assets/img/braze_icons/edit-05.svg
 

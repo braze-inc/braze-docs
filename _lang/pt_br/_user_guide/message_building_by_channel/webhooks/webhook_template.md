@@ -1,6 +1,6 @@
 ---
-nav_title: Criação de um modelo de webhook
-article_title: Criação de um modelo de webhook
+nav_title: Crie um modelo de webhook
+article_title: Crie um Modelo de Webhook
 page_order: 2
 tool:
   - Templates
@@ -10,7 +10,7 @@ description: "Este artigo de referência aborda como criar e personalizar modelo
 
 ---
 
-# Criação de um modelo de webhook
+# Crie um modelo de webhook
 
 > Ao criar e personalizar seus webhooks, você pode criar e aproveitar modelos de webhooks para uso posterior na plataforma Braze. Dessa forma, você pode criar consistentemente uma variedade de webhooks em suas diferentes campanhas.
 
@@ -18,7 +18,7 @@ description: "Este artigo de referência aborda como criar e personalizar modelo
 
 No dashboard do Braze, acesse **Modelos** > **Modelos de Webhook**.
 
-![A página "Webhook Templates" com modelos de webhook predefinidos e salvos.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
+![A página "Modelos de Webhook" com modelos de webhook pré-projetados e salvos.]({% image_buster /assets/img_archive/webhook_template_campaign.png %})
 
 ## Etapa 2: Escolha seu modelo
 

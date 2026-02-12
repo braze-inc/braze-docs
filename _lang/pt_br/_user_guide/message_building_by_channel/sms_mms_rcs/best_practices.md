@@ -1,6 +1,6 @@
 ---
-nav_title: "Práticas recomendadas"
-article_title: "Melhores Práticas para SMS, MMS e RCS" 
+nav_title: "Melhores práticas"
+article_title: "Práticas recomendadas para SMS, MMS e RCS" 
 page_order: 15
 description: "Este artigo de referência aborda as práticas recomendadas para SMS/MMS."
 alias: /sms_mms_rcs_best_practices/
@@ -12,17 +12,17 @@ channel:
   
 ---
 
-# Melhores práticas para SMS, MMS e RCS 
+# Práticas recomendadas para SMS, MMS e RCS 
 
-> Saiba mais sobre as melhores práticas para SMS, MMS e RCS com a Braze, incluindo nossas recomendações para monitoramento de opt-out e aumento de tráfego.
+> Saiba mais sobre as práticas recomendadas para SMS, MMS e RCS com o Braze, incluindo nossas recomendações para monitoramento de aceitação e bombeamento de tráfego.
 
 ## Recomendações de monitoramento de aceitação
 
-O cumprimento das solicitações dos destinatários para aceitação de comunicações é exigido por lei. O não cumprimento das solicitações dos destinatários de SMS para aceitação do canal pode incorrer em penalidades, inclusive multas, e pode levar a ações judiciais. A Braze possui recursos para ativar a gestão robusta de opt-in e opt-out de SMS e MMS, além de mecanismos para ajudar a garantir que os pedidos sejam processados corretamente.
+O cumprimento das solicitações dos destinatários para aceitação de comunicações é exigido por lei. O não cumprimento das solicitações dos destinatários de SMS para aceitação do canal pode incorrer em penalidades, inclusive multas, e pode levar a ações judiciais. O Braze possui recursos para ativar um gerenciamento robusto de aceitação e exclusão de SMS e MMS, além de mecanismos para ajudar a garantir que as solicitações sejam processadas corretamente.
 
 De acordo com seus contratos de inscrição conosco, nossos clientes são os únicos responsáveis pela conformidade com a lei aplicável no uso de nossos serviços. Dessa forma, recomendamos enfaticamente que os clientes prestem muita atenção à configuração correta de suas definições de SMS e que testem essas configurações minuciosamente, tomem medidas para monitorar a conformidade com a aceitação e ajam prontamente caso identifiquem casos de não conformidade com pedidos de aceitação.
 
-Ao configurar SMS e MMS na Braze para gerenciar opt-ins e opt-outs, consulte a seguinte lista de recursos:
+Ao configurar o SMS e o MMS no Braze para gerenciar as aceitações e recusas, consulte a lista de recursos a seguir:
 * [Grupos de inscrições de SMS]({{site.baseurl}}/sms_rcs_subscription_groups/): Grupos de inscrições e métodos e status de aceitação/exclusão.
 * [APIs REST de grupos de inscrições]({{site.baseurl}}/api/endpoints/subscription_groups): Como processar aceitações e desistências recebidas de uma fonte que não seja uma resposta direta a uma mensagem.
 * [Processamento de palavras-chave]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/): Explicações sobre como o Braze aborda o processamento e o gerenciamento de palavras-chave.
@@ -31,7 +31,7 @@ Ao configurar SMS e MMS na Braze para gerenciar opt-ins e opt-outs, consulte a s
 
 ### Considerações
 
-Onde SMS e MMS foram configurados em várias instâncias, e devido a uma má configuração, um opt-out de campanha ou Canvas é enviado para o espaço de trabalho errado.
+Quando SMS e MMS foram configurados em várias instâncias e, devido a uma configuração incorreta, uma campanha ou aceitação do Canva é enviada para o espaço de trabalho errado.
 
 * A Braze possui um sistema de monitoramento para identificar tais instâncias. Se esse comportamento for sinalizado, a Braze repontuará as aceitações para a instância correta e preencherá novamente todas as aceitações que ocorreram durante o período.
 * Recomendamos enfaticamente que os clientes testem as aceitações para cada grupo de inscrições que tenham na Braze. Identificar esse problema antes de lançar uma mensagem é melhor do que fazer a mitigação depois que o problema foi identificado.

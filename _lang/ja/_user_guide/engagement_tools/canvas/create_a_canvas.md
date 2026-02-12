@@ -12,7 +12,7 @@ tool: Canvas
 
 guide_featured_title: "セクションの記事"
 guide_featured_list:
-  - name: キャンバスの作成
+  - name: キャンバスを作成する
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
     image: /assets/img/braze_icons/palette.svg
   - name: キャンバスのコメント
@@ -39,13 +39,10 @@ guide_featured_list:
   - name: キャンバスのアプリ内メッセージ
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: 昇進動作
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    image: /assets/img/braze_icons/users-01.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: AIコピーライティングアシスタント
+  - name: AI コピーライティングアシスタント
     link: /docs/user_guide/brazeai/generative_ai/copywriting/
     image: /assets/img/braze_icons/edit-05.svg
   - name: 配信タイプ

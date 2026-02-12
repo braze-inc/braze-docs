@@ -19,7 +19,7 @@ channel:
 
 Si quieres categorizar tus mensajes y agruparlos en la bandeja de notificaciones de tu usuario, puedes utilizar la función Grupos de notificaciones de iOS a través de Braze.
 
-Crea tu campaña push para iOS, luego ve a la pestaña **Configuración** y abre el desplegable **Grupo de notificaciones**.
+Crea tu campaña push de iOS, luego ve a la pestaña **Configuración** y abre el desplegable **Grupo de notificaciones**.
 
 ![La pestaña "Configuración" con un desplegable "Grupo de notificaciones" que seleccionó el valor "Cupones".]({% image_buster /assets/img_archive/notification_group_dropdown.png %}){: style="max-width:50%;" }
 
@@ -74,7 +74,7 @@ A continuación, introduzca el identificador de categoría de resumen que haya e
 
 Apple permite a las marcas la opción de enviar notificaciones push silenciosas a los Centros de Notificaciones de sus usuarios antes de que éstos se inscriban de forma oficial y explícita, lo que le da la oportunidad de demostrar el valor de sus mensajes con antelación. Todo lo que tienes que hacer es [configurar notificaciones push provision](#set-up-provisional-push-notifications) ales en tu aplicación, entonces cualquier usuario que tenga un token push provisional recibirá tus mensajes.
 
-A diferencia de los tokens push tradicionales de iOS, los tokens push provisionales actúan como un "pase de prueba" que permite a las marcas llegar a nuevos usuarios antes de que hayan visto y hecho clic en la solicitud de suscripción push nativa de Apple. Con esta función, tu notificación push llegará directamente a la bandeja de notificaciones de tu nuevo usuario con la opción de "Mantener" o "Desactivar" futuras notificaciones. En lugar de experimentar un recorrido de "adhesión voluntaria", los usuarios experimentarán algo más parecido a un recorrido de "cancelación".
+A diferencia de un token de notificaciones push tradicional de iOS, un token de notificaciones push provisional actúa como un "pase de prueba" que permite a las marcas llegar a nuevos usuarios antes de que hayan visto y hecho clic en el mensaje de adhesión voluntaria push nativo de Apple. Con esta función, tu notificación push llegará directamente a la bandeja de notificaciones de tu nuevo usuario con la opción de "Mantener" o "Desactivar" futuras notificaciones. En lugar de experimentar un recorrido de "adhesión voluntaria", los usuarios experimentarán algo más parecido a un recorrido de "cancelación".
 
 {% alert tip %}
 La Autorización provisional tiene el potencial de aumentar drásticamente tu tasa de adhesión voluntaria, pero solo si los usuarios ven valor en tus mensajes. Asegúrese de utilizar nuestras funciones de [segmentación de usuarios]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [localización]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/) y [personalización]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) para garantizar que los usuarios adecuados reciben estas notificaciones de "prueba" en el momento oportuno. A continuación, puede animar a los usuarios a aceptar plenamente sus notificaciones push, sabiendo que añaden valor a la experiencia de los usuarios con su aplicación.
@@ -86,14 +86,14 @@ Sea cual sea la opción elegida por el usuario, se añadirá el token o [estado 
 
 Podrá dirigirse a sus usuarios en función de si están autorizados provisionalmente o no utilizando nuestros [filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-![Panel de detalles de segmento con el filtro de segmento de ejemplo "Autorizado provisionalmente en iOS Cronómetro (iOS) es verdadero" para dirigirse a los usuarios.]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Panel Detalles del segmento con el filtro de segmento de muestra "Autorizado provisionalmente en Cronómetro iOS (iOS) es verdadero" para dirigirte a los usuarios.]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 Si los usuarios eligen "Desactivar" el push provisional, no verán más mensajes push provisionales tuyos. Tenga cuidado con el contenido y la cadencia de los mensajes enviados mediante esta función.
 {% endalert %}
 
 {% alert important %}
-Si utiliza avisos push adicionales o [primers push dentro de la aplicación](https://www.braze.com/resources/glossary/priming-for-push/) (un mensaje dentro de la aplicación que anima a los usuarios a optar por las notificaciones push), póngase en contacto con su representante de Braze para obtener orientación adicional.
+Si utilizas avisos push adicionales o [primers push dentro de la aplicación](https://www.braze.com/resources/glossary/priming-for-push/) (un mensaje dentro de la aplicación que anima a los usuarios a adherirse a las notificaciones push), ponte en contacto con tu representante de Braze para obtener orientación adicional.
 {% endalert %}
 
 #### Configurar notificaciones push provisionales
@@ -115,9 +115,9 @@ if #available(iOS 12.0, *) {
 }
 ```
   {% endtab %}
-  {% tab Objetivo-C %}
+  {% tab Objective-C %}
 
-**Objetivo-C**
+**Objective-C**
 
 ```
 UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
@@ -134,7 +134,7 @@ if (@available(iOS 12.0, *)) {
 
 Con el nuevo Modo Focus de iOS 15, los usuarios tienen más control sobre cuándo las notificaciones de las apps pueden "interrumpirles" con un sonido o una vibración.
 
-![Página de configuración de notificaciones de iOS que muestra las notificaciones activadas para entrega inmediata y con notificaciones sensibles al tiempo activadas.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
+![Página de configuración de notificaciones de iOS que muestra las notificaciones habilitadas para entrega inmediata y con notificaciones sensibles al tiempo habilitadas.]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="max-width:40%"}
 
 Las aplicaciones pueden ahora especificar qué nivel de interrupción debe incluir una notificación, en función de su urgencia.
 

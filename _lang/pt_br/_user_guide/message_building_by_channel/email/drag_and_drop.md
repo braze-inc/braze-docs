@@ -10,16 +10,16 @@ guide_top_text: "O editor de arrastar e soltar permite que você crie mensagens 
 channel: email
 tool: Media
 
-guide_featured_title: "Artigos da seção"
+guide_featured_title: "Artigos de seção"
 guide_featured_list:
-- name: Criando um e-mail de arrastar e soltar
+- name: Crie um e-mail com arrastar e soltar
   link: /docs/dnd/overview/
   image: /assets/img/braze_icons/brush-02.svg
-- name: Criação de um modelo de e-mail
+- name: Crie um modelo de e-mail
   link: /docs/dnd/email_template/
   image: /assets/img/braze_icons/table.svg
 - name: Blocos do Editor
-  link: /docs/dnd/editor_blocks/
+  link: /docs/user_guide/engagement_tools/messaging_fundamentals/drag_and_drop_editor_blocks/?sdktab=email
   image: /assets/img/braze_icons/align-left.svg
 - name: Configurações de estilo global
   link: /docs/dnd/global_style_settings/
@@ -30,7 +30,7 @@ guide_featured_list:
 
 guide_menu_title: "Other articles"
 guide_menu_list:
-- name: Blocos de produtos de arrastar e soltar
+- name: Blocos de produtos com arrastar e soltar
   link: /docs/dnd_product_blocks/
   image: /assets/img/braze_icons/columns-01.svg
 

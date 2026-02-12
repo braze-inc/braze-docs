@@ -13,9 +13,6 @@ resources_list:
   - name: Help Articles
     link: /docs/help/help_articles/overview/
     image: /assets/img/braze_icons/info-circle.svg
-  - name: Best Practices and FAQ
-    link: /docs/help/faqs/
-    image: /assets/img/braze_icons/book-open-01.svg
   - name: Release Notes
     link: /docs/help/release_notes/
     image: /assets/img/braze_icons/sticker-square.svg
@@ -32,8 +29,6 @@ resources_list:
 popular_topic_list:
   - name: Know Before You Send
     link: /docs/user_guide/engagement_tools/messaging_fundamentals/know_before_send/
-  - name: Migrating Push Token
-    link: /docs/help/help_articles/push/push_token_migration/
   - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
   - name: Dispatch ID

@@ -42,7 +42,7 @@ No campo **Localize Exports By** (Encontrar exportações por), você pode escol
 
 Depois de concluir um e-mail na Dyspatch, para enviar seu modelo para a Braze, visualize o modelo de e-mail publicado e clique em **Download/Export** (Baixar/exportar) e depois em **Export to integration** (Exportar para integração).
 
-Se você quiser fazer upload do seu modelo manualmente, visualize o modelo de e-mail publicado e clique em **Baixar/Exportar** e depois em **Baixar HTML**. Em seguida, na seção **modelos e mídias > Modelos de e-mail** da sua conta Braze, selecione **Do arquivo** para fazer upload do seu modelo.
+Se você quiser fazer upload do seu modelo manualmente, visualize o modelo de e-mail publicado e clique em **Baixar/Exportar** e depois em **Baixar HTML**. Em seguida, na seção **Templates & Media > Email Templates** da sua conta Braze, selecione **From File** para fazer upload do seu modelo.
 
 ![Modelo de exportação da Dyspatch]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
@@ -52,6 +52,6 @@ Não selecione **CSS Inline** na seção **Informações de Envio** para qualque
 
 ### Uso
 
-Encontre seu modelo Dyspatch carregado na seção **modelos e mídias > modelos de e-mail** da sua conta Braze. Agora você pode usar este modelo de e-mail para começar a enviar mensagens de e-mail envolventes para seus clientes!
+Encontre o modelo Dyspatch feito upload na seção **Modelos** da sua conta Braze ** & Media > Modelos de e-mail**. Agora você pode usar este modelo de e-mail para começar a enviar mensagens de e-mail envolventes para seus clientes!
 
 

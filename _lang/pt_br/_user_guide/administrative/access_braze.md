@@ -11,18 +11,15 @@ description: "Esta landing page contém artigos sobre como acessar sua conta Bra
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-- name: Navegando Braze
-  link: /docs/user_guide/administrative/access_braze/navigation/
-  image: /assets/img/braze_icons/list.svg
-- name: Pesquisando em seu dashboard
-  link: /docs/user_guide/administrative/access_braze/global_search/
-  image: /assets/img/braze_icons/search-sm.svg
+- name: Acesse sua conta
+  link: /docs/user_guide/administrative/access_braze/accessing_your_account/
+  image: /assets/img/braze_icons/user-circle.svg
+- name: Painel de controle do Braze
+  link: /docs/user_guide/administrative/access_braze/braze_dashboard/
+  image: /assets/img/braze_icons/browser.svg
 - name: Endpoints de API e SDK
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
-- name: Acesso à sua conta
-  link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-  image: /assets/img/braze_icons/user-circle.svg
 - name: Configurações de idioma
   link: /docs/user_guide/administrative/access_braze/language/
   image: /assets/img/braze_icons/globe-04.svg

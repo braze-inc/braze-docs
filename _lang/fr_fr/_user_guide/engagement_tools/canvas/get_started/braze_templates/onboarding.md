@@ -27,13 +27,13 @@ Disons que nous travaillons chez PantsLabyrinth, et que notre objectif est d'am�
 
 Pour accéder au modèle d'onboarding, lorsque vous créez un nouveau Canvas, sélectionnez **Utiliser un modèle de Canvas** > **Modèles de Braze**. Ensuite, à côté de **Onboarding**, sélectionnez **Apply Template**. Commençons à personnaliser ce modèle pour l'adapter à notre cas d'utilisation.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
 1. Sélectionnez **Modifier** à côté du nom du modèle.
 
-![Titre et description actuels de la toile.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
+![Le titre et la description actuels de la toile.]({% image_buster /assets/img/canvas_templates/onboarding_old_name_description.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\. Mettez à jour le nom du Canvas pour préciser qu'il s'agit d'un Canvas destiné à l'onboarding des nouveaux utilisateurs.
@@ -56,7 +56,7 @@ L'objectif étant de cibler les nouveaux utilisateurs de PantsLabyrinth, le Canv
 
 Ajustez ensuite la **fenêtre d'entrée** pour déterminer quand les utilisateurs peuvent entrer dans le Canvas. Supposons qu'un abonnement à PantsLabyrinth soit lancé à la fin du mois d'octobre. C'est ici que nous fixerons l'heure de début à **2024/10/28 8:00 am.** En option, nous pouvons également permettre aux utilisateurs de saisir le Canvas dans leur fuseau horaire local.
 
-![Une fenêtre d'entrée avec l'heure de début le 28 octobre 2024 à 8h. Les utilisateurs entreront ce message dans leur fuseau horaire local.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
+![Une fenêtre d'entrée avec l'heure de début le 28 octobre 2024 à 8h. Les utilisateurs saisiront ce message dans leur fuseau horaire local.]({% image_buster /assets/img/canvas_templates/onboarding4.png %})
 
 ### Étape 4 : Ciblez votre audience
 

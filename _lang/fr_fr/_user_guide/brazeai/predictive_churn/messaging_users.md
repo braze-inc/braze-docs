@@ -1,6 +1,6 @@
 ---
-nav_title: Écrire aux utilisateurs
-article_title: "Cibler des utilisateurs selon la prédiction du taux d'attrition"
+nav_title: "Utilisateurs de l'envoi de messages"
+article_title: "Les utilisateurs désabonnés prédictifs du taux d'attrition"
 description: "Cet article de référence couvre les étapes suivantes potentielles après avoir créé une prédiction du taux d'attrition, telles que la mise en œuvre du filtre et les considérations stratégiques."
 page_order: 1.2
 
@@ -18,7 +18,7 @@ Une fois que vous avez déterminé la plage de _score de risque de désabonnemen
 
 Vous pouvez également utiliser des filtres dans des campagnes ou des segments pour cibler les utilisateurs en fonction de ce seuil. Vous pouvez filtrer les utilisateurs par score ou catégorie d’attrition dans les campagnes, les canvas et les segments de la même manière que vous utilisez tout autre filtre de Braze.
 
-![Les filtres de désabonnement disponibles lors de la définition d'une audience comprennent la catégorie de probabilité d'achat et le score de probabilité d'achat.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
+![Les filtres d’attrition disponibles lors de la définition d’une audience comprennent la catégorie de probabilité d’achat et son score.]({% image_buster /assets/img_archive/predictive_churn_filters.png %})
 
 ## Considérations stratégiques
 

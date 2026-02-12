@@ -11,11 +11,11 @@ toc_headers: h2
 
 > O Intelligent Selection é um recurso que analisa a performance de uma campanha recorrente ou do Canvas duas vezes por dia e ajusta automaticamente a porcentagem de usuários que recebem cada variante de mensagem. 
 
-## Sobre a Seleção Inteligente
+## Sobre Seleção Inteligente
 
-Uma variante que pareça ter um desempenho melhor do que outras será enviada a mais usuários, enquanto as variantes com desempenho inferior serão direcionadas a menos usuários. Cada ajuste é feito usando um [algoritmo estatístico](https://en.wikipedia.org/wiki/Multi-armed_bandit) que garante que o Braze está ajustando para diferenças reais de desempenho e não apenas por acaso.
+Uma variante que pareça ter um desempenho melhor do que outras será enviada a mais usuários, enquanto as variantes com desempenho inferior serão direcionadas a menos usuários. Cada ajuste é feito usando um [algoritmo estatístico](https://en.wikipedia.org/wiki/Multi-armed_bandit) que garante que o Braze está ajustando para diferenças de desempenho reais e não apenas por acaso.
 
-![Seção de Testes A/B de uma campanha com Seleção Inteligente ativada.]({% image_buster /assets/img/intelligent_selection1.png %})
+![Seção Testes A/B de uma campanha com a Seleção Inteligente ativada.]({% image_buster /assets/img/intelligent_selection1.png %})
 
 A Seleção Inteligente:
 - Examine repetidamente os dados de performance e mude gradualmente o tráfego da campanha para as variantes vencedoras.
@@ -23,23 +23,23 @@ A Seleção Inteligente:
 - Exclua as variantes de baixo desempenho e identifique as variantes de alto desempenho mais rapidamente do que em um [teste A/B tradicional]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/).
 - Faça testes com mais frequência e com mais confiança de que seus usuários verão sua melhor mensagem. 
 
-A Seleção Inteligente funciona melhor para campanhas que enviam mais de uma vez. Ela precisa de dados de desempenho iniciais para começar a otimizar, então campanhas de envio único não se beneficiarão. Para essas campanhas, recomendamos usar um [teste A/B]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) tradicional em vez disso.
+A Seleção Inteligente funciona melhor para campanhas que enviam mais de uma vez. Ela precisa de dados de desempenho iniciais para começar a otimizar, então campanhas de envio único não se beneficiarão. Para essas campanhas, recomendamos usar um [teste A/B tradicional]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) em vez disso.
 
 ## Pré-requisitos
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 Antes de adicionar a Seleção Inteligente à sua campanha, certifique-se de que você configurou tudo corretamente:
 
 - Sua campanha é enviada em um cronograma recorrente. Campanhas de envio único não são suportadas.
 - Você adicionou pelo menos duas variantes de mensagem.
 - Você definiu um evento de conversão para medir o desempenho entre as variantes.
-- A janela de re-eligibilidade está definida para 24 horas ou mais. Janelas mais curtas não são suportadas, pois afetariam a integridade da variante de controle. Para saber mais, consulte [FAQ de Inteligência]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
+- A janela de re-eligibilidade está definida para 24 horas ou mais. Janelas mais curtas não são suportadas, pois afetariam a integridade da variante de controle. Para saber mais, consulte [esta FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
 {% endtab %}
 
-{% tab Canva %}
-Para usar a Seleção Inteligente em um Canva, confirme o seguinte:
-- Seu Canva inclui pelo menos duas variantes de mensagem em uma etapa de Mensagem.
+{% tab Canvas %}
+Para usar a Seleção Inteligente em um Canvas, confirme o seguinte:
+- Seu Canvas inclui pelo menos duas variantes de mensagem em um passo de Mensagem.
 - Você adicionou pelo menos um evento de conversão.
 {% endtab %}
 {% endtabs %}
@@ -49,7 +49,7 @@ Para usar a Seleção Inteligente em um Canva, confirme o seguinte:
 Você pode adicionar Seleção Inteligente às suas campanhas e Canvases.
 
 {% tabs %}
-{% tab Campanha %}
+{% tab Campaign %}
 O Intelligent Selection pode ser adicionado a qualquer campanha de múltiplos envios na etapa de direcionamento do **público** do criador de campanhas da Braze. As campanhas que enviam apenas uma vez não podem aproveitar esse recurso.
 
 {% alert note %}
@@ -57,10 +57,10 @@ A Seleção Inteligente não pode ser usada em campanhas com um período de re-e
 {% endalert %}
 {% endtab %}
 
-{% tab Canva %}
+{% tab Canvas %}
 Adicione pelo menos um evento de conversão e duas variantes ao seu canva. Em seguida, selecione uma das porcentagens de variante na etapa de Construção. 
 
-![Um canva com duas variantes, cada uma configurada para 50% de distribuição de variante, permitindo que a Seleção Inteligente seja ativada.]({% image_buster /assets/img/intelligent_selection.png %})
+![Um canva com duas variantes, cada uma definida com 50% de distribuição de variantes, permitindo que a Seleção Inteligente seja ativada.]({% image_buster /assets/img/intelligent_selection.png %})
 
 Isso permite que você edite a distribuição de variantes e ative a Seleção Inteligente. 
 
@@ -80,7 +80,15 @@ Na maioria dos casos, a Seleção Inteligente escolherá uma das variantes como 
 É possível que a Intelligent Selection pare de otimizar sem escolher um único vencedor claro. A Seleção Inteligente interrompe a otimização quando tem 95% de confiança de que a continuação do experimento não melhorará a taxa de conversão em mais de 1% da taxa atual.
 {% endalert %}
 
-## Perguntas Frequentes (FAQ) {#faq}
+## Distribuição de variantes de Seleção Inteligente
+
+A Seleção Inteligente baseia sua distribuição de variantes no status atual das conversões da campanha. Ela só determina as distribuições finais após o período de treinamento. 
+
+Isso significa que, durante as fases iniciais da campanha, tanto as Seleções Inteligentes de 99% quanto de 1% podem receber envios aproximadamente iguais, mas as porcentagens finais para alocação de variantes podem ser definidas em 99%—1%.
+
+Se você não quiser que a Seleção Inteligente envie 50/50 durante as fases iniciais da campanha, recomendamos usar um teste A/B tradicional com variantes fixas.
+
+## Perguntas frequentes {#faq}
 
 ### Por que a reelegibilidade em menos de 24 horas não está disponível quando combinada com o Intelligent Selection?
 

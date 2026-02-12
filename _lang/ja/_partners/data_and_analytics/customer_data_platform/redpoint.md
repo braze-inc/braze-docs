@@ -87,13 +87,13 @@ Redpoint CDP 属性sを**属性**列にドラッグアンドドロップしま�
 
 ![`external_id` および Output Name 属性を含むエクスポートテンプレートの例。]({% image_buster /assets/img/redpoint/rpi_to_braze_append_export_format.png %}){: style="max-width:75%;"}
 
-#### ステップ1c: 日付形式の設定
+#### ステップ1c:日付形式の設定
 
 両方のエクスポートテンプレートs で、**Options** タブに移動し、**Date Format** を**カスタム書式** の値に設定します。形式を**yyyy-MM-dd**に設定します。
 
 ![日付形式がyyyy-MM-dd に設定されているオプションタブ。]({% image_buster /assets/img/redpoint/rpi_to_braze_export_format_config.png %}){: style="max-width:75%;"}
 
-### ステップ2: アウトバウンドチャネルを作成する
+### ステップ2:アウトバウンドチャネルを作成する
 
 RPI で2つの新しいチャネルを作成します。両方のチャネルを [**Outbound Delivery**] に設定します。1つのチャネルに **Braze Onboarding and Upsert** という名前を付け、もう1つのチャネルに **Braze Append** という名前を付けます。
 
@@ -131,7 +131,7 @@ Braze 統合をサポートするための Redpoint Data Management (RPDM) ア�
 
 #### ステップ4a:Braze REST エンドポイントとベース RPI 出力ディレクトリで RPI to Braze オートメーションを更新する 
 
-Braze 関連のアーティファクトを Redpoint Data Management にインポートした後で、**AUTO_Process_RPI_to_Braze** という名前のオートメーションを開き、次の2つのオートメーション変数をご使用の環境に対応した値で更新します。
+Braze関連の成果物をRedpointデータマネージャーにインポートした後、以下の名前のオートメーションを開封する。 **AUTO_Process_RPI_to_Braze**という名前のオートメーションを開き、以下の2つのオートメーション変数をあなたの環境の値で更新する：
 
 * **BRAZE_API_URL**:Braze REST エンドポイント
 * **BASE_OUTPUT_DIRECTORY**:Redpoint Interaction と Redpoint Data Management 間の共有出力ディレクトリ
@@ -140,7 +140,7 @@ Braze 関連のアーティファクトを Redpoint Data Management にインポ
 
 #### ステップ 4b: RPI to Braze append プロジェクトを更新する 
 
-**PROJ_RPI_to_Braze_Append** という名前のRedpoint Data Management プロジェクトには、Braze の`rpi_cdp_attributes` カスタム属性オブジェクトのアウトバウンド配信エクスポートファイルスキーマとマッピングが含まれています。 
+というRedpointデータマネージメントプロジェクトがある。 **PROJ_RPI_to_Braze_Append**という名前のRedpoint Data Managementプロジェクトには、Brazeの`rpi_cdp_attributes` カスタム属性オブジェクトのための、配信エクスポートファイルのスキーマとマッピングが含まれている。 
 
 ファイル入力スキーマとドキュメント挿入ツール **RPI to Braze Document Injector** を、エクスポートファイルテンプレートに定義されている追加のカスタム CDP 属性で更新します。次の例に、education、income、marital_status の追加マッピングを示します。
 

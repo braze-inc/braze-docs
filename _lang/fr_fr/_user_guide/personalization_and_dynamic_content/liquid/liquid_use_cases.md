@@ -544,7 +544,7 @@ Attribut personnalisé
 
 - [Personnaliser un message en fonction d'attributs personnalisés](#attribute-matching)
 - [Soustraire deux attributs personnalisés pour afficher la différence sous la forme d'une valeur monétaire](#attribute-monetary-difference)
-- [Insérer le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name](#attribute-first-name)
+- [Référence le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name ](#attribute-first-name)
 
 ### Personnaliser un message en fonction des attributs personnalisés correspondants {#attribute-matching}
 
@@ -579,7 +579,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 ```
 {% endraw %}
 
-### Insérer le prénom d'un utilisateur si son nom complet est stocké dans le champ first_name{#attribute-first-name}
+### Indiquer le prénom d’un utilisateur si son nom complet est stocké dans le champ first_name {#attribute-first-name}
 
 Ce scénario d’utilisation capture le prénom d’un utilisateur (si le prénom et le nom sont stockés dans un champ unique), puis utilise ce prénom pour afficher un message de bienvenue.
 
@@ -1324,6 +1324,38 @@ This is a message for Verizon users!
 
 {% api %}
 
+## SMS
+
+{% apitags %}
+SMS
+{% endapitags %}
+
+- [Répondre par différents messages en fonction du mot-clé du SMS entrant.](#sms-keyword-response)
+
+### Répondre par différents messages en fonction du mot-clé du SMS entrant. {#sms-keyword-response}
+
+Ce cas d'utilisation intègre le traitement dynamique des mots-clés SMS pour répondre à des messages entrants spécifiques avec des envois de messages différents. Par exemple, vous pouvez envoyer des réponses différentes lorsque quelqu'un envoie un message "START" ou "JOIN".
+
+{% raw %}
+```liquid
+{% assign inbound_message = {{sms.${inbound_message_body}}} | downcase | strip %}
+{% if inbound_message contains 'start' %}
+Thanks for joining our SMS program! Make sure your account is up to date for the best deals!
+
+{% elsif inbound_message contains 'join' %}
+Thanks for joining our SMS program! Create an account to get the best deals!
+
+{% else %}
+Thanks for joining our SMS program!
+
+{% endif %}
+```
+{% endraw %}
+
+{% endapi %}
+
+{% api %}
+
 ## Fuseau horaire
 
 {% apitags %}
@@ -1460,10 +1492,10 @@ Check out this new bar after work today. HH specials!
 
 {% api %}
 
-## Week/Day/Month
+## Semaine/Jour/Mois
 
 {% apitags %}
-Week/Day/Month
+Semaine/Jour/Mois
 {% endapitags %}
 
 - [Insérer le nom du mois précédent dans un message](#month-name)

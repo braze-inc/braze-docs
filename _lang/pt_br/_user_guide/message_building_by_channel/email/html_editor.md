@@ -1,5 +1,5 @@
 ---
-nav_title: Editor de HTML
+nav_title: editor de HTML
 article_title: Editor de HTML para envio de e-mail
 page_order: 4
 layout: dev_guide
@@ -12,7 +12,7 @@ channel: email
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-  - name: "Criação de um envio de e-mail com HTML personalizado"
+  - name: "Criar um e-mail com HTML personalizado"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "CSS inline"
@@ -21,5 +21,8 @@ guide_featured_list:
   - name: "Guia Promoções do Gmail"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
     image: /assets/img/braze_icons/message-check-circle.svg
+  - name: Solução de problemas
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

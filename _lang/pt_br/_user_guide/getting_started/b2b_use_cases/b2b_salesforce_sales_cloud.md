@@ -1,12 +1,12 @@
 ---
 nav_title: Nuvem de vendas do Salesforce
-article_title: Gerenciamento de leads com o Salesforce Sales Cloud
+article_title: Gerenciar leads com o Salesforce Sales Cloud
 page_order: 3
 page_type: reference
 description: "Saiba como usar os webhooks do Braze para criar e atualizar leads no Salesforce Sales Cloud por meio do endpoint Salesforce sobjects/Lead."
 ---
 
-# Gerenciamento de leads com o Salesforce Sales Cloud
+# Gerenciar leads com o Salesforce Sales Cloud
 
 > A [Salesforce](https://www.salesforce.com/) é uma das principais plataformas de gestão de relacionamento com o cliente (CRM) baseada em nuvem do mundo, projetada para ajudar as empresas a gerenciar todo o processo de vendas, incluindo geração de leads, rastreamento de oportunidades e gerenciamento de contas.<br><br>Esta página demonstra como usar os webhooks do Braze para criar e atualizar leads no Salesforce Sales Cloud por meio de uma integração enviada pela comunidade.
 
@@ -154,7 +154,7 @@ Você pode adicionar rapidamente seus modelos a seus fluxos de trabalho operacio
 
 Para criar um lead no Salesforce quando um usuário fornece seu endereço de e-mail, é possível criar uma campanha que use o modelo de webhook "Atualizar lead" e dispare quando um usuário adicionar seu endereço de e-mail (por exemplo, preencher um formulário da Web).
 
-![Etapa 2 da criação de uma campanha baseada em ação e com a ação-gatilho de "Adicionar um endereço de e-mail".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
+![Etapa 2 da criação de uma campanha baseada em ação e com a ação-gatilho "Adicionar um endereço de e-mail".]({% image_buster /assets/img/b2b/salesforce_create_campaign.png %}){: style="max-width:70%;"}
 
 ### Canva de pontuação de leads para ultrapassar o limite de Leads Qualificados de Marketing (MQL) {#lead-scoring}
 
@@ -167,17 +167,17 @@ Adicione uma etapa subsequente à sua atualização de usuário para verificar s
 1. Adicione uma etapa de **Jornada do público** com dois grupos: "Limite de MQL" e "Todos os demais".
 2. No grupo "MQL Threshold" (Limite de MQL), procure todos os usuários que atualmente não tenham um status de "MQL" (por exemplo, `lead_stage` é igual a "Lead"), mas que tenham uma pontuação de lead acima do limite definido (por exemplo, `lead_score` maior que 50). Em caso afirmativo, eles avançam para a próxima etapa; em caso negativo, saem.
 
-![O grupo de jornada do público "MQL Threshold" com filtros para um `lead_stage` igual a "Lead" e um `lead_score` maior que "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
+![O grupo de jornada do público "MQL Threshold" com filtros para `lead_stage` igual a "Lead" e `lead_score` maior que "50".]({% image_buster /assets/img/b2b/salesforce_check_mql.png %}){: style="max-width:70%;"}
 
 {: start="3" }
 3\. Adicione uma etapa de **atualização de usuário** que atualize o valor do atributo `lead_stage` do usuário para "MQL".
 
-![A etapa de atualização do usuário "Update to MQL" que atualiza o atributo `lead_stage` para ter um valor de "MQL".]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
+![A etapa de atualização do usuário "Update to MQL" que atualiza a atribuição `lead_stage` para ter um valor de "MQL".]({% image_buster /assets/img/b2b/salesforce_update_mql.png %}){: style="max-width:70%;"}
 
 {: start="4" }
 4\. Adicione uma etapa de webhook que atualize o Salesforce com a nova etapa de MQL.
 
-![A etapa do webhook "Update Salesforce" com detalhes concluídos.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
+![A etapa do webhook "Update Salesforce" com os detalhes concluídos.]({% image_buster /assets/img/b2b/salesforce_webhook.png %}){: style="max-width:70%;"}
 
 Agora seu fluxo do Canvas Flow atualizará os usuários que ultrapassaram seu limite de MQL!
 

@@ -17,6 +17,10 @@ The **Notification Preferences** page is where you can configure who (if anyone)
 
 To access this page, go to **Settings** > **Admin Settings** > **Notification Preferences**.
 
+{% alert tip %}
+You can also integrate with Slack to receive notifications. For steps, refer to [Sending messages using incoming webhooks](https://api.slack.com/incoming-webhooks).
+{% endalert %}
+
 ## Available notifications
 
 The following table describes available notifications and which channels are used to deliver them.
@@ -44,20 +48,3 @@ Braze optionally sends a weekly report via email to individuals you designate wi
 You may select up to five events to be included in your weekly report:
 
 ![Selecting events to be included in the Analytics Report]({% image_buster /assets/img_archive/company_analytics_report_new.png %})
-
-## Slack incoming webhook integration
-
-Slack has an [incoming webhook app](https://my.slack.com/services/new/incoming-webhook/) that allows messages to be posted from external sources into Slack. To get started, open the incoming webhook app.
-
-1. Select the Slack channel that you'd like the notifications to go to and click **Add Incoming Webhooks Integration**.<br><br>
-    ![Add incoming webhooks integration in Slack]({% image_buster /assets/img_archive/slack_f.png %})<br><br>
-  Slack will generate a URL that you'll need to enter into Braze for the notifications that you wish to receive.<br><br>
-2. Copy the **Webhook URL**.<br><br>
-    ![Copy webhook URL]({% image_buster /assets/img_archive/copy_url.png %})<br><br>
-3. Navigate to the **Notification Preferences** tab in **Company Settings**.<br><br>
-4. Select the notification that you wish to enable for Slack. Or, if you have multiple notifications that you want to send to this Slack channel, use **Bulk Add** to add the webhook to multiple notifications.<br><br>
-    ![Select Slack notifications to enable]({% image_buster /assets/img_archive/click_edit_f.png %}){: style="max-width:60%;"}<br><br>
-5. Enter the URL that Slack generated for you.
-
-That's it! You should start receiving notifications about your company on this Slack channel. You can also check out Slack's help article on this topic: [Sending messages using Incoming Webhooks](https://api.slack.com/incoming-webhooks).
-

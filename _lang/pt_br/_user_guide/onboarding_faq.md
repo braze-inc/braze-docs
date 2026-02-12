@@ -283,7 +283,7 @@ Ao agendar uma campanha, você precisa escolher enviá-la em um horário designa
 
 A Braze recomenda fortemente que todas as campanhas no fuso local sejam agendadas com 24 horas de antecedência. Como tal campanha precisa ser enviada ao longo de um dia inteiro, agendá-la com 24 horas de antecedência permite que sua mensagem alcance todo o seu segmento. No entanto, você pode agendar essas campanhas com menos de 24 horas de antecedência, se necessário. Lembre-se de que a Braze não enviará mensagens para nenhum usuário que tenha perdido o horário de envio por mais de 1 hora.
 
-Por exemplo, se for 13h e você agendar uma campanha de fuso local para as 15h, a campanha será enviada imediatamente para todos os usuários cujo fuso local seja das 15h às 16h, mas não para os usuários cujo fuso local seja 17h. Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
+Por exemplo, se forem 13 horas e você programar uma campanha de fuso local para as 15 horas, a campanha será enviada imediatamente a todos os usuários cujo fuso local seja de 15 a 16 horas, mas não aos usuários cujo fuso local seja de 17 horas. Além disso, o horário de envio que você escolher para sua campanha ainda não deve ter ocorrido no fuso horário da sua empresa.
 
 Editar uma campanha de fuso local que está programada para menos de 24 horas de antecedência não alterará o cronograma da mensagem. Se você decidir editar uma campanha de fuso local para enviar em um horário posterior (por exemplo, 19h em vez de 18h), os usuários que estavam no segmento alvo quando o horário de envio original foi escolhido ainda receberão a mensagem no horário original (18h). Se você editar um fuso local para enviar em um horário anterior (por exemplo, 16h em vez de 17h), a campanha ainda será enviada a todos os membros do segmento no horário original (17h).
 
@@ -436,7 +436,7 @@ Parar uma canva não fará com que os usuários que estão esperando em uma etap
 Canvas
 {% endapitags %}
 
-Os eventos de exceção só disparam enquanto o usuário está esperando para receber o componente canva com o qual está associado. Se um usuário realizar uma ação com antecedência, o evento de exceção não disparará.
+Os eventos de gatilho só são disparados enquanto o usuário está esperando para receber o componente do Canva ao qual está associado. Se um usuário realizar uma ação com antecedência, o evento de exceção não disparará.
 
 Se você quiser excetuar usuários que realizaram um determinado evento com antecedência, use [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) em vez disso.
 
@@ -466,7 +466,7 @@ Um usuário só pode converter uma vez por entrada de canva.
 
 As conversões são atribuídas à mensagem mais recente recebida pelo usuário para essa entrada. O bloco de resumo no início de uma canva reflete todas as conversões realizadas pelos usuários dentro daquela jornada, independentemente de terem recebido uma mensagem ou não. Cada etapa subsequente mostrará apenas as conversões que ocorreram enquanto essa era a etapa mais recente que o usuário recebeu.
 
-{% details Casos de uso %}
+{% details Use cases %}
 
 #### Caso de uso 1
 

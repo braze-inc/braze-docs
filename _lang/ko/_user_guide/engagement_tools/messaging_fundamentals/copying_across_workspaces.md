@@ -1,7 +1,7 @@
 ---
-nav_title: 워크스페이스 간 복사
-article_title: 워크스페이스 간 복사
-page_order: 4.5
+nav_title: 여러 작업 공간에 복사
+article_title: 작업 공간 간 복사
+page_order: 4
 alias: "/copying_to_workspaces/"
 page_type: reference
 description: "이 참조 기사는 캠페인과 캔버스를 다른 작업 공간으로 복사하는 방법에 대한 개요를 제공합니다."
@@ -10,14 +10,14 @@ tool:
     - Canvas
 ---
 
-# 작업 공간 간 캠페인 및 캔버스 복사
+# 여러 작업 공간에서 캠페인 및 캔버스 복사하기
 
 > 워크스페이스 간에 캠페인을 복사하면 다른 워크스페이스에 있는 캠페인의 복사본으로 시작하여 메시지 구성을 바로 시작할 수 있습니다. 이 페이지는 캠페인을 다른 작업 공간으로 복사하는 방법을 다루고 복사되지 않는 항목과 복사되는 항목을 나열합니다.
 
 캠페인이나 캔버스를 다른 작업 공간으로 복사하면 복사본은 편집하고 시작할 때까지 초안으로 남아 있어 성공적인 메시징 전략을 유지하고 구축하는 데 도움이 됩니다.
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 {% alert important %}
 작업 공간 간 캠페인 복사는 일반적으로 가능합니다. 콘텐츠 카드에 대한 채널 지원은 현재 사용할 수 없습니다.
@@ -32,7 +32,7 @@ tool:
 3. 복사 후 캠페인을 검토하고 테스트하여 모든 필드가 제대로 작동하는지 확인합니다.
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 {% alert important %}
 작업 공간 간 캔버스 복사는 일반적으로 가능합니다. 다음 채널은 현재 지원되지 않습니다: LINE, 콘텐츠 카드 및 WhatsApp.
@@ -58,7 +58,7 @@ tool:
 ### 세부 정보
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -74,7 +74,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -95,7 +95,7 @@ tool:
 ### 전환 행동
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -106,7 +106,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -122,7 +122,7 @@ tool:
 ### 행동
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -133,7 +133,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -149,7 +149,7 @@ tool:
 ### 메시지 변형
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -160,7 +160,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -177,7 +177,7 @@ tool:
 ### 이메일 메시지 변형
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -190,7 +190,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -208,7 +208,7 @@ tool:
 ### 이메일 본문
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -220,7 +220,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -237,7 +237,7 @@ tool:
 ### 이메일 템플릿
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -249,7 +249,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -266,7 +266,7 @@ tool:
 ### 콘텐츠 블록
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -277,7 +277,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -293,7 +293,7 @@ tool:
 ### SMS 메시지 변형
 
 {% tabs local %}
-{% tab 캠페인 %}
+{% tab campaigns %}
 
 | 복사됨 | 생략 |
 |---|---|
@@ -304,7 +304,7 @@ tool:
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab canvas %}
 
 | 복사됨 | 생략 |
 |---|---|

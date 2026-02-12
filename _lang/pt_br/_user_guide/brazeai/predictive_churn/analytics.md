@@ -1,25 +1,25 @@
 ---
-nav_title: Churn Análise de Dados
-article_title: Análise de Dados de Churn Preditivo
+nav_title: Análise de dados de churn
+article_title: Análises preditivas de churn
 description: "Este artigo de referência cobre os diferentes componentes incluídos na página de análises de previsão de churn e como eles podem ser usados para tomar decisões perspicazes e orientadas."
 page_order: 1.5
 
 ---
 
-# análise de dados de churn preditivo
+# Análises preditivas de churn
 
 > Depois que sua previsão for construída e treinada, você terá acesso à página de **análises de previsão**. Esta página ajuda você a decidir quais usuários deve segmentar com base em seu _Pontução de risco de churn_ ou categoria. 
 
-## Sobre a análise de dados de churn preditivo
+## Sobre análises preditivas de churn
 
-Assim que a previsão estiver concluída e esta página estiver populada, você pode começar a usar [filtros]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) em segmentos ou campanhas para começar a usar os resultados do modelo. Mas, se você quiser ajuda para decidir quem direcionar e por quê, esta página pode ajudar com base na precisão histórica do modelo e nos seus próprios objetivos de negócios. 
+Assim que a previsão estiver concluída e esta página estiver populada, você pode começar a usar [filtros]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) em segmentos ou campanhas para começar a usar os resultados do modelo. Mas, se você quiser ajuda para decidir quem direcionar e por quê, esta página pode ajudar com base na precisão histórica do modelo e nos seus próprios objetivos de negócios. 
 
-Estes são os componentes que compõem a análise de dados de churn preditivo:
+Esses são os componentes que compõem as análises preditivas de churn:
 
-- [Pontuação de Churn e Categoria](#churn_score)
+- [Churn Score e categoria](#churn_score)
 - [Qualidade da previsão](#prediction_quality)
 - [Precisão estimada](#estimated_results)
-- [Tabela de Correlação de Churn](#correlation_table)
+- [Tabela de correlação de churn](#correlation_table)
 
 A distribuição das pontuações para todo o público de previsão é exibida no topo da página em um gráfico que você pode visualizar, por categoria ou por pontuação. Usuários em grupos mais à direita têm pontuações mais altas e são mais propensos a churn. Usuários em grupos mais à esquerda são menos propensos a churn. O controle deslizante abaixo do gráfico permitirá que você selecione um grupo de usuários e estime quais seriam os resultados do direcionamento de usuários na faixa selecionada de _Pontuação de Risco de Churn_ ou categoria.
 
@@ -46,17 +46,17 @@ Na metade direita do painel abaixo do gráfico, mostramos estimativas da precis�
 ![]({% image_buster /assets/img/churn/churnEstimatedResults.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 - Quantos usuários selecionados deverão fazer churn
-- Quantos usuários selecionados são esperados **não** churnar
+- Quantos usuários selecionados **não** devem churnar
 
 Usando essas informações, incentivamos você a decidir quantos dos clientes que cancelaram você deseja capturar e qual é o custo de um erro falso positivo para o seu negócio. Se você está enviando uma promoção importante, pode querer manter os não-desistentes direcionados ao mínimo enquanto obtém o máximo de desistentes verdadeiros esperados que o modelo permitir. Ou, se você for menos sensível a falsos positivos e os usuários receberem envio de mensagens extra, você pode enviar mensagens para mais do público para capturar mais churners esperados e ignorar os prováveis erros.
 
-### Usuários esperados para churnar
+### Espera-se que os usuários desistam
 
-Esta é uma estimativa de quantos churners reais serão corretamente segmentados. Claro, não conhecemos o futuro perfeitamente, então não sabemos exatamente quais usuários do público de previsão irão sofrer churn no futuro. Mas a previsão é uma inferência confiável. Com base na performance passada, esta barra de progresso indica quantos do total de "churners" "atuais" ou "verdadeiros" esperados no público de previsão (com base nas taxas de churn anteriores) serão direcionados com a seleção de direcionamento atual. Esperaríamos esse número de usuários com churn se você não os direcionar com qualquer envio de mensagens extra ou incomum.
+Essa é uma estimativa de quantos churners reais serão direcionados corretamente. Claro, não conhecemos o futuro perfeitamente, então não sabemos exatamente quais usuários do público de previsão irão sofrer churn no futuro. Mas a previsão é uma inferência confiável. Com base na performance passada, esta barra de progresso indica quantos do total de "churners" "atuais" ou "verdadeiros" esperados no público de previsão (com base nas taxas de churn anteriores) serão direcionados com a seleção de direcionamento atual. Esperaríamos esse número de usuários com churn se você não os direcionar com qualquer envio de mensagens extra ou incomum.
 
-### Usuários esperados para não churnar 
+### Espera-se que os usuários não churnem 
 
-Esta é uma estimativa de quantos usuários que não teriam churnado serão segmentados incorretamente. Todos os modelos de machine learning cometem erros. Pode haver usuários em sua seleção que tenham uma alta _pontuação de risco de churn_, mas que não acabem com churn. Eles não sofrerão churn mesmo que você não faça nada. Eles serão segmentados de qualquer maneira, então isso é um erro ou "falso positivo." A largura total desta segunda barra de progresso representa o número esperado de usuários que não churnarão, e a parte preenchida representa aqueles que serão segmentados incorretamente usando a posição atual do controle deslizante.
+Essa é uma estimativa de quantos usuários que não teriam feito churn serão direcionados incorretamente. Todos os modelos de machine learning cometem erros. Pode haver usuários em sua seleção que tenham uma alta _pontuação de risco de churn_, mas que não acabem com churn. Eles não sofrerão churn mesmo que você não faça nada. Eles serão segmentados de qualquer maneira, então isso é um erro ou "falso positivo." A largura total dessa segunda barra de progresso representa o número esperado de usuários que não churnarão, e a parte preenchida representa aqueles que serão direcionados incorretamente usando a posição atual do controle deslizante.
 
 ## Tabela de correlação de churn {#correlation_table}
 

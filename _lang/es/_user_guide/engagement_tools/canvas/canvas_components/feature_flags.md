@@ -1,5 +1,5 @@
 ---
-nav_title: Conmutador de características
+nav_title: Banderas de características
 article_title: Conmutador de características
 page_order: 8
 page_type: reference
@@ -17,7 +17,7 @@ local_redirect:
 
 ## Creación de un indicador de características
 
-![Un paso de ejemplo de la Bandera de Características para la característica Botón de Chat en Vivo.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Un ejemplo de paso de Marca de Característica para la característica Botón de Chat en vivo.]({% image_buster /assets/img/feature_flags/feature_flag_canvas_step.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Para crear un componente Bandera de Características, primero añada un paso a su Lienzo. Arrastre y suelte el componente desde la barra lateral, o haga clic en el botón <i class="fas fa-plus-circle"></i> más en la parte inferior de un paso y seleccione **Bandera de características**. A continuación, seleccione el indicador de características en el menú desplegable, que contiene los indicadores de características que no están archivados.
 
@@ -31,7 +31,7 @@ Las propiedades de un paso de Canvas se pueden cambiar después del lanzamiento,
 
 Al crear una bandera de característica se especifican las propiedades por defecto. Al configurar un paso del Lienzo de marcado de funciones, puede mantener los valores predeterminados o sobrescribir los valores para los usuarios que entren en este paso.
 
-![Una bandera de característica "Centro de preferencias" con "cadena" como propiedad, "url" como clave de propiedad y un valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![Una bandera de característica "Centro de preferencias" con "Cadena" como propiedad, "url" como clave de propiedad y un valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 Vaya a **Mensajería** > **Indicadores de funciones** para editar, añadir o eliminar propiedades adicionales.
 

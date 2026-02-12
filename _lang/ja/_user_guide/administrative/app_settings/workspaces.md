@@ -21,13 +21,13 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 
 始める前に、チームや Braze のオンボーディングマネージャーと協力して、ユースケースに最適なワークスペース構成を決定する必要があります。Braze でのワークスペース計画の詳細については、[はじめに:ワークスペース]({{site.baseurl}}/user_guide/getting_started/workspaces/)のガイドをご確認ください。
 
-### ステップ 2: ワークスペースの追加
+### ステップ 2:ワークスペースの追加
 
 グローバルヘッダーのワークスペースのドロップダウンから、新しいワークスペースを作成したり、既存のワークスペース間で切り替えたりできます。
 
 1. ワークスペースのドロップダウンを選択し、<i class="fa-solid fa-square-plus" style="color: #0b8294;"></i> [**ワークスペースを作成**] を選択します。
 
-![ワークスペースのドロップダウンに [ワークスペースを作成] ボタンがある。]({% image_buster /assets/img/workspaces/workspace_create.png %}){: style="max-width:60%;"}
+![ワークスペース・ドロップダウンに「ワークスペースを作成」ボタンがある。]({% image_buster /assets/img/workspaces/workspace_create.png %}){: style="max-width:60%;"}
 
 {:start="2"}
 2\.ワークスペースに名前を付けます。
@@ -39,20 +39,20 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 {:start="3"}
 3\.[**作成**] を選択します。Braze が ワークスペースを作成するまで数秒かかることがあります。
 
-![「Upon Voyage US-Staging」という名前の「ワークスペースを作成」モーダル。]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
+![「Upon Voyage US-Staging」という名前の「ワークスペースの作成」モーダル。]({% image_buster /assets/img/workspaces/workspace_name.png %}){: style="max-width:60%" }
 
 アプリインスタンスの追加を開始するための [**アプリ設定**] ページが表示されます。このページには、[**設定**] > [**アプリ設定**] からいつでもアクセスできます。
 
-![Upon Voyage USの "アプリ設定 "ページ - アプリを追加するボタンがあるステージングワークスペース]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
+![アプリを追加するためのボタンがある Upon Voyage US-Staging ワークスペースの [アプリ設定] ページ。]({% image_buster /assets/img/workspaces/workspace_empty_state.png %})
 
-### ステップ 3: アプリインスタンスの追加
+### ステップ 3:アプリインスタンスの追加
 
 ワークスペース内に収集したさまざまなサイトやアプリを「アプリインスタンス」と呼びます。
 
 1. [**アプリ設定**] ページで、[**\+ アプリを追加**] を選択します。
 2. アプリインスタンスに名前を付けて、配置先のプラットフォームを 1 つ以上選択します。複数のプラットフォームを選択した場合、Braze はプラットフォームごとにアプリインスタンスを 1 つ作成します。
 
-![アプリの詳細を選択するためのオプションがある「新規アプリを Upon Voyage US - Staging に追加」モーダル]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
+![「Add New App to Upon Voyage US - Staging" モーダルでアプリの詳細を選択できる。]({% image_buster /assets/img/workspaces/workspace_add_app.png %}){: style="max-width:60%" }
 
 {:start="3"}
 3\.[**アプリを追加**] を選択して確定します。
@@ -61,7 +61,7 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 
 アプリインスタンスを追加したら、その API キーにアクセスできます。API キーは、アプリインスタンスと Braze API の間でリクエストを行う際に使用されます。API キーは、Braze SDK とお客様のアプリや Web サイトとの連携にも重要です。
 
-![Upon Voyage iOSアプリの設定ページ。APIキーとSDKエンドポイントのフィールドがある。]({% image_buster /assets/img/workspaces/app_api_key.png %})
+![API キーと SDK エンドポイントのフィールドがある Upon Voyage iOS アプリの設定ページ。]({% image_buster /assets/img/workspaces/app_api_key.png %})
 
 {% alert note %}
 各プラットフォームでアプリのバージョンごとに個別のアプリインスタンスを作成する必要があります。例えば、iOS と Android の両方に無料版とプロ版のアプリがある場合は、ワークスペース内に 4 つのアプリインスタンス (無料版 iOS アプリ、無料版 Android アプリ、プロ版 iOS アプリ、プロ版 Android アプリ) を作成します。これにより、アプリインスタンスごとに 1 つずつ、使用する API キーが 4 つ得られます。
@@ -73,7 +73,7 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 
 このフィールドは、Braze SDK とアプリまたは Web サイトを連携した後に表示されます。新しいバージョンの Braze SDK がプラットフォームで利用可能の場合、「新しいバージョンが利用可能」というタグとともにここに表示されます。
 
-![フィールド値が「5.4.0」で、新しいバージョンが利用可能であることを示すアイコンが表示された [ライブ SDK バージョン] セクション。]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
+![フィールド値が「5.4.0」で、新しいバージョンが利用可能であることを示すアイコンが表示された「Live SDK バージョン」セクション。]({% image_buster /assets/img/workspaces/app_live_sdk_version.png %})
 
 ### ステップ 4: 必要に応じて繰り返し
 
@@ -89,7 +89,7 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 
 お気に入りのワークスペースを追加すると、最も頻繁に使用するワークスペースに、より迅速にアクセスできます。
 
-![ワークスペースのドロップダウンに「お気に入りワークスペース」のタブがある。]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
+![ワークスペース・ドロップダウンに「お気に入りワークスペース」のタブがある。]({% image_buster /assets/img/workspaces/workspace_favorites.png %}){: style="max-width:50%;"}
 
 お気に入りのワークスペースを追加するには、次の手順に従います。
 
@@ -108,7 +108,7 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 2. ワークスペースの名前にマウスポインタを置き、<i class="image: /assets/img/braze_icons/pencil-01.svg" style="color: #0b8294;"></i> を選択します。
 3. ワークスペースに新しい名前を付け、<i class="fa-solid fa-square-check" style="color: #0b8294;"></i>**保存**を選択します。
 
-![ワークスペース名の隣に表示される鉛筆アイコン]({% image_buster /assets/img/workspaces/workspace_rename.gif %}){: style="max-width:50%;"}
+![ワークスペース名の横に現れる鉛筆のアイコン。]({% image_buster /assets/img/workspaces/workspace_rename.gif %}){: style="max-width:50%;"}
 
 ### ワークスペースとアプリインスタンスを削除する
 
@@ -123,7 +123,7 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 ワークスペースを削除する際には注意してください。ワークスペースは、削除すると復元できません。
 {% endalert %}
 
-![ワークスペースを削除するボタンと、アプリを削除するゴミ箱アイコンがあるアプリ設定ページ]({% image_buster /assets/img/workspaces/workspace_delete.png %})
+![ワークスペースを削除するボタンと、アプリを削除するゴミ箱アイコンがあるアプリ設定ページ。]({% image_buster /assets/img/workspaces/workspace_delete.png %})
 
 ## よくある質問
 
@@ -151,7 +151,7 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 2. [**ターゲットに設定されたアプリと Web サイト**] で、[**特定のアプリのユーザー**] を選択します。
 3. [**特定のアプリ**] ドロップダウンで、アプリまたはサイトを選択します。
 
-![]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %}) 特定のアプリからのユーザーを対象としたセグメンテーション。
+![具体的なアプリsからユーザーsをターゲットとする部分。]({% image_buster /assets/img/workspaces/users_from_specific_apps_filter.png %})
 
 次に、このセグメントをメッセージに追加し、必要に応じてさらにセグメントやフィルターを追加して、オーディエンスの絞り込みを開始できます。
 
@@ -163,13 +163,10 @@ Braze での操作はすべて、ワークスペース内で行われます。�
 
 キャンバスで、**配信検証**セクションのメッセージステップにセグメンテーションを追加する。配信検証では、メッセージ送信時にオーディエンスが配信条件を満たしていることが再確認されます。正しいアプリに配信されるように、必ず各メッセージステップに配信検証を指定してください。エントリレベルでセグメンテーションを行う必要はありません。
 
-{% details 元のキャンバスワークフローでのステップs の展開 %}
-
-{% alert important %}
-2023 年 2 月 28 日以降、元のエディターを使用したキャンバスの作成や複製はできなくなりました。このコンテンツは参考用であり、元のエディターでのセグメントとターゲット設定を理解するためのものです。<br><br>Brazeは、オリジナルのキャンバスエクスペリエンスを使用している顧客に対し、キャンバスの構築と管理を改善するために、更新されたエディターにキャンバスを複製することを推奨している。[キャンバスの複製]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/)の詳細をご確認ください。
-{% endalert %}
+{% details Expand for steps in the original Canvas workflow %}
 
 元のキャンバスワークフローで、[**オーディエンス**] セクションのキャンバスコンポーネントレベルにセグメントを追加します。エントリレベルでセグメンテーションを行う必要はありません。
+
 {% enddetails %}
 
 

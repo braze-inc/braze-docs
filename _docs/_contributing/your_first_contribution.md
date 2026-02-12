@@ -32,7 +32,7 @@ The [Braze Docs GitHub repository](https://github.com/braze-inc/braze-docs) host
 
 Now that you're a little familiar with the docs repository, you're ready to start making changes. First, open [Braze Docs]({{site.baseurl}}) and find a simple change you'd like to make.
 
-You'll make your change using the [same method you choose previously]({{site.baseurl}}/contributing/home#step-4-choose-how-to-contribute):
+You'll make your change using the [same method you chose previously]({{site.baseurl}}/contributing/home#step-4-choose-how-to-contribute):
 
 |Method           |Use Case                              |Additional Requirements                                                                                              |
 |-----------------|--------------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -226,7 +226,7 @@ Finally, check **Allow edits and access to secrets from maintainers**. This will
 
 ### Step 4: Review your work
 
-Create your content by following the [Braze Docs Style Guide]({{sitebase.url}}/contributing/style_guide/) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
+Create your content by following the [Braze Docs Style Guide]({{site.baseurl}}/contributing/style_guide/) and reviewing your work in a site preview. If you need to make additional changes, see [Make additional changes](#step-6-make-additional-changes-optional). Otherwise, you can [request a review](#step-5-request-a-review) from the Braze Docs team.
 
 {% tabs %}
 {% tab github %}

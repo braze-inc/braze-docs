@@ -1,5 +1,5 @@
 ---
-nav_title: Configuration de la LIGNE
+nav_title: Configuration de la ligne
 article_title: Configuration de la LIGNE
 description: "Cet article explique comment configurer le canal LINE de Braze, y compris les conditions préalables et les prochaines étapes suggérées."
 page_type: partner
@@ -25,7 +25,11 @@ Vous aurez besoin des éléments suivants pour intégrer LINE avec Braze :
 - [Compte développeurs LINE](https://developers.line.biz/en/docs/line-developers-console/login-account/)
 - [Canal de l’API d’envoi de messages LINE](https://developers.line.biz/en/docs/line-developers-console/overview/#channel)
 
-L'envoi de messages LINE à partir de Braze est prélevé sur les crédits de messages de votre compte.
+L'envoi de messages LINE à partir de Braze puise dans les crédits de messages de votre compte.
+
+{% alert note %}
+**Réglage de `native_line_id`**: Vous pouvez définir `native_line_id` en envoyant des mises à jour d'utilisateurs à Braze (par exemple, avec le [`/users/track`]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) l'endpoint, l'[importation CSV]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#csv-import) ou l'[ingestion de données dans le nuage]({{site.baseurl}}/user_guide/data/cloud_ingestion/)). Si votre SDK côté client ne dispose pas d'un champ dédié à `native_line_id`, envoyez-le dans les mises à jour utilisateur côté serveur à l'aide de l'une des méthodes suivantes.
+{% endalert %}
 
 ## Types de comptes LINE
 
@@ -61,7 +65,11 @@ Pour mettre en place des mises à jour cohérentes pour les utilisateurs, repren
 4. [Modifier les méthodes de mise à jour des utilisateurs](#step-4-change-your-user-update-methods)
 5. [(Facultatif) Fusionner les profils utilisateurs](#step-5-merge-profiles-optional)
 
-## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
+{% alert note %}
+Vous ne pouvez avoir qu'un seul compte LINE dans un même espace de travail. Si vous possédez plusieurs comptes LINE, nous vous recommandons d'utiliser chacun d'entre eux dans un espace de travail différent.
+{% endalert %}
+
+## Étape 1 : Importation ou mise à jour des utilisateurs LINE existants
 
 Cette étape est nécessaire si vous avez un utilisateur LINE existant et identifié, car Braze récupérera ensuite automatiquement l'état de son abonnement et mettra à jour le profil utilisateur correct. Si vous n'avez pas encore rapproché les utilisateurs avec leur ID LINE, sautez cette étape. 
 
@@ -82,7 +90,7 @@ Une fois que le processus d'intégration est terminé, Braze intègre automatiqu
 1. Dans LINE, allez dans l'onglet **API de messagerie** et modifiez vos **paramètres de Webhook**:
    - Définissez l'URL du **Webhook** sur `https://anna.braze.com/line/events`.
       - Braze changera automatiquement cela en une URL différente lors de l'intégration, en fonction de votre cluster de tableau de bord.
-   - Activez **Utiliser le webhook** et **Rélivraison du webhook**. <br><br> ![Page des paramètres du webhook permettant de vérifier ou de modifier l'URL du webhook, de basculer sur ou hors "Utiliser le webhook", "Redélivrance du webhook" et "Agrégation des statistiques d'erreur".]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
+   - Activez **Utiliser le webhook** et **Rélivraison du webhook**. <br><br> ![Page des paramètres du webhook pour vérifier ou modifier l'URL du webhook, activer ou désactiver « Utiliser le webhook », « Renvoyer le webhook » et « Agrégation des statistiques d'erreurs ».]({% image_buster /assets/img/line/webhook_settings.png %}){: style="max-width:70%;"}
 2. Prenez note des informations suivantes dans l'onglet **Fournisseurs** :
 
 | Type d'information | Localisation |
@@ -99,7 +107,7 @@ Une fois que le processus d'intégration est terminé, Braze intègre automatiqu
    - Désactivez les **messages de réponse automatique**. Tous les messages déclenchés doivent passer par Braze. Cela ne vous empêchera pas d'envoyer directement depuis la console LINE.
    - Activez les **Webhooks**.
 
-![Page des paramètres de réponse avec des bascules pour la façon dont votre compte traitera les chats.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
+![Page des paramètres de réponse avec des commutateurs pour la gestion des discussions par votre compte.]({% image_buster /assets/img/line/response_settings.png %}){: style="max-width:80%;"}
 
 ### Étape 2.2 : Générer des groupes d'abonnement LINE dans Braze
 
@@ -115,12 +123,12 @@ Si vous souhaitez ajouter une liste blanche d'adresses IP à votre compte LINE, 
 Lors de l'intégration, veillez à vérifier que votre secret de canal est correct. S'il est incorrect, il peut y avoir des incohérences dans l'état de l'abonnement.
 {% endalert %}
 
-![Page d'intégration des messages LINE avec section d'intégration LINE.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
+![Page d'intégration de messagerie LINE avec section d'intégration LINE.]({% image_buster /assets/img/line/integration.png %}){: style="max-width:80%;"}
 
 {: start="2"}
 2\. Après la connexion, Braze générera automatiquement un groupe d'abonnement Braze pour chaque intégration LINE ajoutée avec succès à votre espace de travail. <br><br> Toute modification de votre liste d’abonnés (tels que de nouveaux abonnés ou des désabonnés) sera automatiquement transmise à Braze.
 
-![LINE subscription groups section affichant un groupe d'abonnement pour le canal "LINE".]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
+![Section des groupes d'abonnement LINE affichant un groupe d'abonnement pour le canal "LINE".]({% image_buster /assets/img/line/line_subscription_groups.png %}){: style="max-width:80%;"}
 
 ## Étape 3 : Rapprocher les ID des utilisateurs
 
@@ -375,7 +383,7 @@ if (user && isLoggedIn && lineUserId) {
 
 Vous pouvez tester votre canal LINE avant d'implémenter [la réconciliation des utilisateurs](#user-id-reconciliation) en créant un canevas ou une campagne "Qui suis-je".
 
-1. Configurer un Canvas qui renvoie l'ID utilisateur Braze d'un utilisateur sur un mot déclencheur spécifique. <br><br>Déclencheur d'exemple <br><br>![Déclencheur pour envoyer la campagne aux utilisateurs qui ont envoyé une LIGNE entrante à un groupe d'abonnement spécifique.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Message d'exemple<br><br>![Message LINE indiquant l'ID de l'utilisateur de Braze.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
+1. Configurer un Canvas qui renvoie l'ID utilisateur Braze d'un utilisateur sur un mot déclencheur spécifique. <br><br>Déclencheur d'exemple <br><br>![Déclencheur pour envoyer la campagne aux utilisateurs qui ont envoyé un message entrant LINE à un groupe d'abonnement spécifique.]({% image_buster /assets/img/line/trigger.png %}){: style="max-width:80%;"}<br><br>Message d'exemple<br><br>![Message LINE indiquant l'ID utilisateur Braze.]({% image_buster /assets/img/line/message.png %}){: style="max-width:40%;"}<br><br>
 
 2. Dans Braze, vous pouvez utiliser l'ID Braze pour rechercher des utilisateurs spécifiques et les modifier selon vos besoins.
 

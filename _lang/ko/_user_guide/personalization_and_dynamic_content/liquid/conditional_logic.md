@@ -8,7 +8,7 @@ description: "이 참조 문서에서는 캠페인에서 태그를 사용할 수
 
 # 조건부 메시징 로직
 
-> [태그를](https://docs.shopify.com/themes/liquid-documentation/tags) 사용하면 메시징 캠페인에 프로그래밍 로직을 포함할 수 있습니다. 태그는 조건문을 실행하는 데 사용할 수 있을 뿐만 아니라 변수 할당이나 코드 블록을 반복하는 등의 고급 사용 사례에도 사용할 수 있습니다. <br><br>이 페이지에서는 null, nil 및 빈 속성 값을 처리하는 방법, 사용자 정의 속성을 참조하는 방법 등 태그를 사용할 수 있는 방법과 사용해야 하는 방법에 대해 설명합니다.
+> [태그를](https://docs.shopify.com/themes/liquid-documentation/tags) 사용하면 메시징 캠페인에 프로그래밍 로직을 포함할 수 있습니다. 태그는 조건문을 실행하는 데 사용할 수 있을 뿐만 아니라 변수 할당이나 코드 블록을 반복하는 등의 고급 사용 사례에도 사용할 수 있습니다. <br><br>이 페이지에서는 null, nil 및 빈 속성 값을 처리하는 방법, 커스텀 속성을 참조하는 방법 등 태그를 사용할 수 있는 방법과 사용해야 하는 방법을 설명합니다.
 
 ## 태그 서식 지정
 
@@ -61,7 +61,7 @@ This is a message from Braze! This is going to go to anyone who did not match th
 
 #### `if` and `elsif`
 
-Conditional logic begins with the `if` tag, which states the first condition to check. Subsequent conditions use the `elsif` tag and will be checked if the previous conditions are not met. In this example, if a user's device isn't set to English, this code will check to see if the user's device is set to Spanish, and if that fails, it will check if the device is set to. 사용자의 디바이스가 이러한 조건 중 하나를 충족하면 해당 언어로 된 메시지를 받게 됩니다.
+Conditional logic begins with the `if` tag, which states the first condition to check. Subsequent conditions use the `elsif` tag and will be checked if the previous conditions are not met. In this example, if a user's device isn't set to English, this code will check to see if the user's device is set to Spanish, and if that fails, it will check if the device is set to. 사용자의 기기가 이러한 조건 중 하나를 충족하면 해당 언어로 된 메시징을 받게 됩니다.
 
 #### `else`
 
@@ -69,7 +69,7 @@ Conditional logic begins with the `if` tag, which states the first condition to 
 
 #### `endif`
 
-`{% endif %}` 태그는 조건부 로직이 완료되었음을 알립니다. 조건부 논리가 포함된 모든 메시지에는 `{% endif %}` 태그를 포함해야 합니다. 조건부 로직에 `{% endif %}` 태그를 포함하지 않으면 Braze가 메시지를 구문 분석할 수 없으므로 오류가 발생합니다.
+`{% endif %}` 태그는 조건 로직을 완료했음을 알립니다. 조건 로직이 있는 모든 메시징에는 `{% endif %}` 태그를 포함해야 합니다. 조건 로직에 `{% endif %}` 태그를 포함하지 않으면 Braze가 메시지를 구문 분석할 수 없으므로 오류가 발생합니다.
 
 ### Tutorial: Deliver location-based content
 
@@ -151,7 +151,7 @@ When you're finished with this tutorial, you'll be able to use tags with "if", "
 
 ### Null 및 nil 속성 값
 
-사용자 지정 속성의 값이 설정되지 않은 경우 null 또는 nil 값이 발생합니다. 예를 들어, 아직 이름을 설정하지 않은 사용자는 Braze에 로그인할 수 없습니다.
+커스텀 속성의 값이 설정되지 않은 경우 null 또는 nil 값이 발생합니다. 예를 들어 아직 이름을 설정하지 않은 사용자는 Braze에 이름이 로그인되지 않습니다.
 
 경우에 따라 이름 설정이 있는 사용자와 이름 설정이 없는 사용자에게 완전히 다른 메시지를 보내야 할 수도 있습니다.
 
@@ -165,7 +165,7 @@ When you're finished with this tutorial, you'll be able to use tags with "if", "
 ```
 {% endraw %} 
 
-!['이름' 속성이 널인 Braze 대시보드의 메시지 예시.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
+!['이름' 속성이 널인 Braze 대시보드의 메시지 예시입니다.]({% image_buster /assets/img/value_null.png %}){: style="max-width:60%;"}
 
 {% raw %}
 ```liquid
@@ -200,7 +200,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 조건 로직을 사용할 때는 올바른 구문을 사용하고 있는지 확인하려면 커스텀 속성의 데이터 유형을 알아야 합니다. 대시보드의 **사용자 지정** 속성 페이지에서 사용자 지정 속성과 연결된 데이터 유형을 찾은 다음 각 데이터 유형에 대해 나열된 다음 예제를 참조합니다.
 
-![사용자 지정 속성에 대한 데이터 유형을 선택합니다. 제공된 예는 데이터 유형이 문자열인 Favorite_Category의 속성을 보여줍니다.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![사용자 지정 속성에 대한 데이터 유형을 선택합니다. 제공된 예는 데이터 유형이 문자열인 Favorite_Category 속성을 보여줍니다.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 문자열과 배열에는 직선 아포스트로피가 필요하지만 부울과 정수에는 아포스트로피가 없습니다.
@@ -230,7 +230,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 {% endraw %}
 
-정수에 대해 <보다 작음(<) 또는 >보다 큼(>)과 같은 다른 [기본 연산자를](https://shopify.dev/docs/themes/liquid/reference/basics/operators) 사용할 수도 있습니다:
+정수의 경우 (<) 미만 또는 (>)보다 큰 값과 같은 다른 [기본 연산자를](https://shopify.dev/docs/themes/liquid/reference/basics/operators) 사용할 수도 있습니다:
 
 {% raw %}
 
@@ -268,7 +268,7 @@ null 속성 값은 값 유형과 엄격하게 연관되지 않으므로(예: "nu
 
 배열의 경우 "contains"를 사용해야 하며 "=="는 사용할 수 없습니다. 
 
-#### 시간
+#### Time
 
 이벤트가 발생한 시점의 타임스탬프입니다. 조건부 논리에 사용하려면 [시간]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time) 값에 [수학 필터가]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters) 있어야 합니다.
 

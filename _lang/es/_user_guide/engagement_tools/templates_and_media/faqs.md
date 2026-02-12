@@ -30,11 +30,11 @@ No, la biblioteca multimedia no permite recortar imágenes GIF.
 
 ### ¿Cómo recorto una imagen existente?
 
-Puedes recortar una imagen existente seleccionándola en la biblioteca multimedia y haciendo clic en **Recortar y guardar nueva imagen**. 
+Puedes recortar una imagen existente seleccionándola en la biblioteca multimedia y haciendo clic en **Recortar & Guardar nueva imagen**. 
 
-![Vista previa de la imagen de la biblioteca.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
+![Vista previa de la imagen de la biblioteca multimedia.]({% image_buster /assets/img_archive/media_library_crop1.png %}){: height="75%" width="75%"}
 
-A continuación, se te redirigirá a un compositor de recortes donde podrás seleccionar el tipo de proporción y editar el nombre de la nueva imagen. Cuando pulse **Guardar**, podrá utilizar su nueva imagen.
+A continuación, se te redirigirá a un compositor de recortes donde podrás seleccionar el tipo de proporción y editar el nombre de la nueva imagen. Cuando selecciones **Guardar**, se podrá utilizar tu nueva imagen.
 
 ![Ventana para recortar y guardar la imagen de la biblioteca multimedia.]({% image_buster /assets/img_archive/media_library_crop2.png %}){: height="75%" width="75%"}
 

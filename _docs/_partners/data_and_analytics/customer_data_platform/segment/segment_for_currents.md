@@ -32,7 +32,7 @@ The Braze and Segment integration allows you to leverage Braze Currents to expor
 In your Segment dashboard, select your Segment source. Next, go to **Settings > API keys**. Here you will find the **Segment Write Key**.
 
 {% alert warning %}
-It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+It's important to keep your Segment write key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **5 days**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
 ### Step 2: Create a new Currents connector
@@ -49,17 +49,13 @@ Next, select the message engagement events you would like to export. Reference t
 
 Keep in mind, Braze only sends event data for users without an `external_user_id` if **Include events from anonymous users** is checked.
 
-{% alert important %}
-Anonymous user export is currently in early access. Contact your Braze account manager if you’re interested in participating in this early access.
-{% endalert %}
+{% include early_access_beta_alert.md feature='Anonymous user export' %}
 
 ![List of all available message engagement events on the Segment Currents page in Braze.]({% image_buster /assets/img/segment/segment_currents_data_config.png %})
 
 Lastly, select **Launch Current**.
 
-{% alert warning %}
-If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different workspaces. Because the Braze Segment Currents integration cannot isolate events by different apps in a single workspace, failure to do this will lead to unnecessary data deduping and lost data. 
-{% endalert %}
+{% include alerts/warning_alerts.md alert='Segment Currents multiple connectors' %}
 
 To read more, visit Segment [documentation](https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/).
 

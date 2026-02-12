@@ -121,7 +121,7 @@ Cuando termines este tutorial, serás capaz de utilizar etiquetas con sentencias
 
 {% endraw %}
 
-{% details Código completo de Liquid %}
+{% details Full Liquid code %}
 
 {% raw %}
 ```liquid
@@ -200,7 +200,7 @@ Después de haber [creado atributos personalizados]({{site.baseurl}}/user_guide/
 
 Cuando utilice lógica condicional, necesitará conocer el tipo de datos del atributo personalizado para asegurarse de que está utilizando la sintaxis correcta. En la página **Atributos personalizados** del cuadro de mandos, busque el tipo de datos asociado a su atributo personalizado y, a continuación, consulte los siguientes ejemplos enumerados para cada tipo de datos.
 
-![Selección de un tipo de datos para un atributo personalizado. El ejemplo proporcionado muestra un atributo de Categoría_Favorita con un tipo de datos de cadena.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
+![Selección de un tipo de datos para un atributo personalizado. El ejemplo proporcionado muestra un atributo de Favorite_Category con un tipo de datos de cadena.]({% image_buster /assets/img_archive/custom_attribute_data_type.png %}){: style="max-width:80%;"}
 
 {% alert tip %}
 Las cadenas y las matrices deben ir rodeadas de apóstrofos rectos, mientras que los booleanos y los enteros nunca llevan apóstrofos.
@@ -230,7 +230,7 @@ Las cadenas y las matrices deben ir rodeadas de apóstrofos rectos, mientras que
 
 {% endraw %}
 
-También puede utilizar otros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators) como menor que (<) o mayor que (>) para números enteros:
+También puedes utilizar otros [operadores básicos](https://shopify.dev/docs/themes/liquid/reference/basics/operators) como menor que ( (<) ) o mayor que (>) para números enteros:
 
 {% raw %}
 

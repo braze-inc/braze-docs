@@ -1,5 +1,5 @@
 ---
-nav_title: Groupe de contrôle global 
+nav_title: Groupe de contrôle global
 article_title: Rapport sur le groupe de contrôle global
 page_type: reference
 description: "Cette page présente les indicateurs de reporting figurant sur la page Rapports sur les groupes de contrôle global du tableau de bord."

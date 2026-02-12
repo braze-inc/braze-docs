@@ -1,5 +1,5 @@
 ---
-nav_title: Inscription par e-mail avec Double Opt-In
+nav_title: Inscription par e-mail avec double abonnement
 article_title: Inscription par e-mail avec Double Opt-In
 page_order: 2
 page_type: reference
@@ -27,13 +27,13 @@ Imaginons que nous travaillions pour Steppington, une application de santé conn
 
 Pour accéder au modèle, lorsque vous créez un nouveau canvas, sélectionnez **Utiliser un modèle de canvas** > **Modèles de Braze**. Ensuite, à côté de **Inscription par e-mail avec double abonnement**, sélectionnez **Appliquer le modèle.** Nous pouvons maintenant parcourir le modèle pour l'adapter à nos besoins.
 
-### Étape 1 : Régler les détails
+### Étape 1 : Régler les détails
 
 Ajustons les détails du Canvas pour refléter notre objectif.
 
 1. Sélectionnez **Modifier** à côté du nom du modèle.
 
-![Titre et description actuels de la toile.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
+![Le titre et la description actuels de la toile.]({% image_buster /assets/img/canvas_templates/email_signup1.png %}){: style="max-width:50%;"}
 
 {:start="2"}
 2\. Mettez à jour le nom du Canvas pour préciser qu'il s'agit de cibler les nouveaux utilisateurs lorsqu'ils utilisent l'appli pour la première fois.
@@ -46,7 +46,7 @@ Ajustons les détails du Canvas pour refléter notre objectif.
 
 Ensuite, attribuons nos événements de conversion. Les événements de conversion sont un type d'indicateurs qui peuvent être utilisés pour mesurer le succès du canvas. Pour le **type d'événement de conversion**, sélectionnez **Effectue un événement personnalisé.** Sélectionnez ensuite **email_opt_in** pour le **nom de l'événement personnalisé**.
 
-![Section "Attribuer des événements de conversion" pour le type d'événement de conversion de l'abonnement à l'e-mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+![section "Attribuer des événements de conversion" pour le type d'événement de conversion de l'abonnement à l'e-mail.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 Nous conservons le délai de conversion du modèle de trois jours car nous voulons cibler nos utilisateurs les plus récents.
 
@@ -60,19 +60,19 @@ Nous conserverons également les **options basées sur l'action** telles quelles
 
 Pour la **fenêtre d'entrée**, nous mettrons à jour l' **heure de début (obligatoire)** en fonction de la date et de l'heure souhaitées.
 
-![Une fenêtre d'entrée avec l'heure de début le 16 janvier 2025 à 12h30. Les utilisateurs entreront ce message dans leur fuseau horaire local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
+![Une fenêtre d'entrée avec l'heure de début le 16 janvier 2025 à 12h30. Les utilisateurs saisiront ce message dans leur fuseau horaire local.]({% image_buster /assets/img/canvas_templates/email_signup5.png %}){: style="max-width:90%;"}
 
 ### Étape 4 : Sélectionner l'audience cible
 
 Nous définirons notre audience cible comme étant les utilisateurs de Steppington qui n'ont pas d'adresse e-mail dans leur profil utilisateur. Pour ce faire, nous conserverons le [filtre de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) par défaut du modèle `Email Available is false`.
 
-![Entrée Audience avec le filtre "Email disponible est faux".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
+![Entrée Audience avec le filtre d'audience "L'e-mail disponible est faux".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
 ### Étape 5 : Sélectionner vos paramètres d’envoi
 
 Nous conserverons les paramètres d'abonnement par défaut, afin de n'envoyer des messages qu'aux utilisateurs qui se sont abonnés ou qui ont choisi de recevoir des messages ou des notifications, et nous ignorerons les autres paramètres (limite de fréquence, heures calmes et groupes initiateurs).
 
-![Options d'envoi par défaut pour n'envoyer qu'aux utilisateurs abonnés ou ayant opté pour l'abonnement.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
+![Options d'envoi par défaut pour n'envoyer qu'aux utilisateurs qui sont abonnés ou qui ont opté pour l'option d'envoi.]({% image_buster /assets/img/canvas_templates/email_signup7.png %}){: style="max-width:90%;"}
 
 ### Étape 6 : Personnalisez votre canvas
 

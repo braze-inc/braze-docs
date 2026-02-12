@@ -1,6 +1,6 @@
 ---
 page_order: 2
-nav_title: Anpassung
+nav_title: Customization
 article_title: iOS In-App Nachrichten Anpassen
 layout: dev_guide
 

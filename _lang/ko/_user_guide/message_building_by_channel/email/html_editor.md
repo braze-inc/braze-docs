@@ -12,7 +12,7 @@ channel: email
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-  - name: "커스텀 HTML로 이메일 생성"
+  - name: "커스텀 HTML로 이메일 만들기"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/creating_an_email_campaign/
     image: /assets/img/braze_icons/mail-01.svg
   - name: "CSS 인라인"
@@ -21,5 +21,8 @@ guide_featured_list:
   - name: "Gmail 프로모션 탭"
     link: /docs/user_guide/message_building_by_channel/email/html_editor/gmail_promotions_tab/
     image: /assets/img/braze_icons/message-check-circle.svg
+  - name: 문제 해결
+    link: /docs/user_guide/message_building_by_channel/email/html_editor/troubleshooting/
+    image: /assets/img/braze_icons/annotation-question.svg
 
 ---

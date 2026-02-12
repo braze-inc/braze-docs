@@ -1,7 +1,7 @@
 ---
 nav_title: 사용자 리타겟팅
 article_title: 사용자 리타겟팅
-page_order: 3
+page_order: 4
 description: "이 참조 문서는 사용자가 WhatsApp 상호 작용을 통해 메시지를 리타겟하는 방법을 다룹니다."
 page_type: reference
 channel:
@@ -23,11 +23,11 @@ channel:
 사용자는 마지막으로 WhatsApp을 받았을 때 또는 특정 WhatsApp 캠페인에서 WhatsApp을 받았는지 여부에 따라 필터링할 수 있습니다. 필터는 캠페인 빌더의 타겟 사용자 단계에서 설정할 수 있습니다.
 
 **마지막으로 수신한 WhatsApp으로 필터**<br>
-![Filter for last receiving a WhatsApp message on April 22, 2025.]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
+![2025년 4월 22일에 마지막으로 받은 WhatsApp 메시지를 필터링합니다.]({% image_buster /assets/img/whatsapp/whatsapp23.png %}){: style="max-width:75%"}
 
 **받은 메시지로 필터링 WhatsApp 캠페인**<br>
 특정 WhatsApp 캠페인에서 메시지를 받은 사용자를 필터링합니다. 이 필터를 사용하면 WhatsApp 캠페인에서 메시지를 받지 않은 사람들을 필터링할 수도 있습니다.<br>
-![Filter for receiving a WhatsApp campaign.]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
+![WhatsApp 캠페인 수신을 위한 필터입니다.]({% image_buster /assets/img/whatsapp/whatsapp22.png %}){: style="max-width:75%"}
 
 ### 인게이지먼트로 필터
 리타겟 사용자가 WhatsApp 캠페인 또는 캔버스 단계를 읽었거나 읽지 않은 경우. 
@@ -35,19 +35,19 @@ channel:
 **리타겟 사용자가 특정 WhatsApp 캠페인을 열거나 읽은 경우**
 1. **클릭됨/열림 캠페인** 필터를 사용하여 세그먼트를 만드십시오.
 2. **WhatsApp 메시지 읽기**을 선택하십시오.
-3. 원하는 캠페인을 선택하세요.<br>
+3. 원하는 캠페인을 선택합니다.<br>
 
-![Filter for having read a WhatsApp message.]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
+![WhatsApp 메시지를 읽었는지 필터링합니다.]({% image_buster /assets/img/whatsapp/whatsapp21.png %}){: style="max-width:75%"}
 
 **리타겟 사용자가 특정 캔버스 단계를 열거나 읽은 경우**
 1. **클릭됨/열림 단계** 필터를 사용하여 세그먼트를 만듭니다.
 2. **WhatsApp 메시지 읽기**을 선택하십시오.
 3. 원하는 캔버스 및 캔버스 단계를 선택하십시오.<br>
 
-![Filter for reading a WhatsApp step.]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
+![WhatsApp 단계 읽기를 위한 필터.]({% image_buster /assets/img/whatsapp/whatsapp20.png %}){: style="max-width:75%"}
 
-**캠페인 또는 캔버스 기여도로 필터**<br>
+**캠페인 또는 캔버스 어트리뷰션으로 필터링**<br>
 사용자가 특정 WhatsApp 캠페인 또는 캔버스 구성 요소 또는 태그를 열거나 읽은 경우 필터링합니다.
 
-![Filter for opening a specific WhatsApp message.]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
+![특정 WhatsApp 메시지를 열기 위한 필터입니다.]({% image_buster /assets/img/whatsapp/whatsapp19.png %}){: style="max-width:75%"}
 

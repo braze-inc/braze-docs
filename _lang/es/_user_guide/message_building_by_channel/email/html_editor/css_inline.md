@@ -1,5 +1,5 @@
 ---
-nav_title: CSS Inlining
+nav_title: Inserción de CSS
 article_title: CSS Inlining
 page_order: 5.1
 description: "Este artículo de referencia explica cómo habilitar la inserción de CSS y algunas buenas prácticas."
@@ -18,11 +18,11 @@ Para algunos clientes de correo electrónico, la inserción de CSS puede mejorar
 
 Puedes controlar si la incrustación de CSS está activada o desactivada para cualquier mensaje de correo electrónico utilizando la pestaña **Habilitar CSS incrustado** en la pestaña **Información de envío** del editor HTML.
 
-![Casilla de verificación para administrar la inserción de CSS en HTML Composer.]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
+![Casilla para administrar la inserción de CSS en el compositor de HTML.]({% image_buster /assets/img_archive/css-inline2.png %}){: style="max-width:40%;"}
 
 ### Estado de inserción predeterminado
 
 Puede establecer un estado predeterminado de activación o desactivación de forma global desde **Configuración** > **Preferencias de correo electrónico**. Localiza la configuración de **Inserción de CSS**. Este parámetro determina el valor por defecto con el que comenzarán todos los nuevos mensajes de correo electrónico. Tenga en cuenta que el cambio de esta configuración no afectará a ninguno de sus mensajes de correo electrónico existentes. También puede anular este valor predeterminado en cualquier momento mientras redacta mensajes de correo electrónico.
 
-![CSS en línea en nuevos correos electrónicos por opción predeterminada ubicada en la configuración de correo electrónico.]({% image_buster /assets/img_archive/css-inline1.png %})
+![CSS en línea en los nuevos mensajes de correo electrónico por defecto opción situada en la configuración de correo electrónico.]({% image_buster /assets/img_archive/css-inline1.png %})
 

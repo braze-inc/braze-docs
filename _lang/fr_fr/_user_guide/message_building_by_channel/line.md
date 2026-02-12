@@ -6,7 +6,7 @@ layout: dev_guide
 channel:
   - LINE
 guide_top_header: "LINE"
-guide_top_text: "[LINE](https://www.lycbiz.com/sites/default/files/media/jp/download/LINE%20Business%20Guide_202310-202403.pdf) est l'application de messagerie la plus populaire au Japon, avec plus de 95 millions d'utilisateurs actifs mensuels. En plus de la messagerie, LINE offre à ses utilisateurs une plateforme « tout-en-un » pour les réseaux sociaux, les jeux, les achats et les paiements.<br><br>Vous pouvez intégrer vos comptes LINE avec Braze pour exploiter vos données clients de première et de zéro partie afin d'envoyer des messages LINE convaincants aux bons clients en fonction de leurs préférences, comportements et interactions multi-canaux.<br><br>L'envoi de messages LINE à partir de Braze est prélevé sur les crédits de messages de votre compte."
+guide_top_text: "[LINE](https://www.lycbiz.com/sites/default/files/media/jp/download/LINE%20Business%20Guide_202310-202403.pdf) est l'application de messagerie la plus populaire au Japon, avec plus de 95 millions d'utilisateurs actifs mensuels. En plus de la messagerie, LINE offre à ses utilisateurs une plateforme « tout-en-un » pour les réseaux sociaux, les jeux, les achats et les paiements.<br><br>Vous pouvez intégrer vos comptes LINE avec Braze pour exploiter vos données clients de première et de zéro partie afin d'envoyer des messages LINE convaincants aux bons clients en fonction de leurs préférences, comportements et interactions multi-canaux.<br><br>**La disponibilité de la ligne dépend de votre forfait Braze. Contactez votre gestionnaire de compte ou votre responsable satisfaction client pour commencer.**."
 description: "Cette page d’accueil est celle du canal LINE. Ici, vous pouvez trouver des articles sur la configuration de LINE, les groupes d'abonnement LINE, les campagnes LINE, les rapports LINE, et plus encore."
 alias: /line/
 
@@ -27,6 +27,9 @@ guide_featured_list:
 - name: Gestion des utilisateurs
   link: /docs/line/user_management/
   image: /assets/img/braze_icons/users-01.svg
+- name: LINE Suivi des clics
+  link: /docs/line/click_tracking/
+  image: /assets/img/braze_icons/bar-chart-01.svg
 - name: Rapports LINE
   link: /docs/line/reporting/
   image: /assets/img/braze_icons/bar-chart-01.svg
@@ -35,4 +38,4 @@ guide_featured_list:
   image: /assets/img/braze_icons/message-square-02.svg
 ---
 
-{% multi_lang_include drag_and_drop_access.md variable_name='dnd editors' %}
+{% multi_lang_include drag_and_drop/drag_and_drop_access.md variable_name='dnd editors' %}

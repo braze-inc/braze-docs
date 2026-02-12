@@ -1,5 +1,5 @@
 ---
-nav_title: Reorientar a los usuarios
+nav_title: Reorientar usuarios
 article_title: Reorientar a los usuarios a través de una página de destino
 description: "Aprende a reorientar a los usuarios que han enviado un formulario a través de una página de destino."
 page_order: 3
@@ -21,15 +21,15 @@ Braze realiza un seguimiento automático cuando un usuario envía un formulario 
 - **Utilizando un desencadenador de mensajes:** Puedes configurar un desencadenador de mensajes para enviar automáticamente mensajes a los usuarios o introducirlos en un Canvas después de que envíen el formulario.
 
 {% tabs local %}
-{% tab Utilizar un segmento %}
+{% tab Using a segment %}
 Cuando [crees un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), en el grupo "Reorientación", elige **Formulario de envío en la página de destino**.
 
-![Creación de segmento con el grupo de filtrado seleccionado como "Formulario enviado en la página de destino".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
+![Creación de segmento con el grupo de filtrado seleccionado como "Formulario enviado en página de destino".]({% image_buster /assets/img/landing_pages/segmentation_selected.png %})
 
 Desde aquí, puedes segmentar a los usuarios en función de si han enviado o no un formulario para tu página de destino.
 {% endtab %}
 
-{% tab Utilizar un desencadenador de mensajes %}
+{% tab Using a message trigger %}
 Cuando elijas la opción de entrega para tu [campaña]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) o [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/), selecciona **Entrega basada en acciones** y, a continuación, **el formulario Página de destino enviada**.
 
 Todos los usuarios que envíen un formulario a través de este formulario de la página de destino recibirán un mensaje a través del canal de mensajería elegido o entrarán en el Canvas elegido.

@@ -65,13 +65,13 @@ Assurez-vous que votre certificat `x.509` respecte ce format lorsque vous l'ajou
 -----END CERTIFICATE-----
 ```
 
-![Paramètres SAML SSO avec la bascule sélectionnée.]({% image_buster /assets/img/samlsso.png %})
+![Paramètres de l'authentification SAML unique (SSO) avec la bascule sélectionnée.]({% image_buster /assets/img/samlsso.png %})
 
-### Étape 3 : Se connecter à Braze
+### Étape 3 : Se connecter à Braze
 
 Enregistrez vos paramètres de sécurité et déconnectez-vous. Ensuite, reconnectez-vous avec votre fournisseur d'identité.
 
-![Écran de connexion du tableau de bord avec authentification unique activée]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
+![Écran d'identification du tableau de bord avec SSO activé]({% image_buster /assets/img/sso1.png %}){: style="max-width:60%;"}
 
 ## Mise en place de votre RelayState
 
@@ -112,11 +112,11 @@ Sélectionnez le traceur SAML dans la barre de navigation de votre navigateur. A
 
 ![Traceur SAML pour Google Chrome.]({% image_buster /assets/img/saml_tracer_example.png %})
 
-### Étape 2 : Connectez-vous à Braze à l'aide du SSO
+### Étape 2 : Connectez-vous à Braze à l'aide du SSO
 
 Rendez-vous sur votre tableau de bord de Braze et essayez de vous connecter à l'aide du SSO. Si vous rencontrez une erreur, ouvrez le traceur SAML et réessayez. Une trace SAML a été collectée avec succès s'il y a une ligne avec une URL comme `https://dashboard-XX.braze.com/auth/saml/callback` et une étiquette SAML orange.
 
-### Étape 3 : Exporter et envoyer à Braze
+### Étape 3 : Exporter et envoyer à Braze
 
 Sélectionnez **Exporter**. Pour **Sélectionner un profil de filtrage des cookies**, sélectionnez **Aucun.** Sélectionnez ensuite **Exporter**. Cela générera un fichier JSON que vous pourrez envoyer à l'assistance de Braze pour une résolution des problèmes plus poussée.
 

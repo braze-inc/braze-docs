@@ -1,7 +1,7 @@
 ---
 nav_title: Rastreamento de cliques
 article_title: Rastreamento de cliques
-page_order: 2
+page_order: 3
 description: "Este artigo de referência aborda como ativar o rastreamento de cliques em suas mensagens do WhatsApp, testar links encurtados, usar seu domínio personalizado em links rastreados e muito mais."
 page_type: reference
 alias: "/whatsapp_click_tracking/"
@@ -18,6 +18,10 @@ channel:
 O rastreamento de cliques permite medir quando alguém toca em um link na sua mensagem do WhatsApp, oferecendo uma visão clara de qual conteúdo está gerando engajamento. O Braze encurta seus URLs, adiciona rastreamento nos bastidores e registra os eventos de cliques à medida que eles acontecem.
 
 Você pode ativar o rastreamento de cliques nas mensagens de resposta e de modelo. Ele funciona com links em botões e no corpo do texto e oferece suporte a URLs personalizados e domínios personalizados. Depois de ativada, você verá os dados de cliques nos relatórios de performance do WhatsApp e poderá segmentar os usuários com base em quem clicou em quê.
+
+{% alert note %}
+O rastreamento de cliques não funciona com deep linkings. Você pode encurtar links universais de provedores como Branch ou Appsflyer, mas o Braze não pode solucionar problemas que possam surgir ao fazer isso (como quebrar a atribuição ou causar um redirecionamento).
+{% endalert %}
 
 ## Como funciona?
 
@@ -39,7 +43,7 @@ Para mensagens de modelo, o URL de base deve ser enviado corretamente ao criar o
 
 #### Etapa 1: Crie um modelo compatível com rastreamento de cliques no WhatsApp
 
-1. No Gerenciador do WhatsApp, crie uma URL de base que seja seu domínio personalizado ou `brz.ai`.
+1. No Gerenciador do WhatsApp, crie um URL de base que seja seu domínio personalizado ou `brz.ai`.
 2. Certifique-se de que os links incluídos no modelo sejam compatíveis com o rastreamento de cliques.
 3. Não altere as variáveis do modelo depois que ele for configurado como uma campanha no Braze; as alterações posteriores não poderão ser incorporadas.
 4. Para links de botões de CTA, selecione **Dynamic (Dinâmico**) e, em seguida, forneça o URL de base (`brz.ai` ou seu domínio personalizado).<br><br>![Seção para criar uma chamada para ação.]({% image_buster /assets/img/whatsapp/click_tracking/create_cta.png %})<br><br>
@@ -59,7 +63,7 @@ O URL de destino precisará ser fornecido para qualquer link com um URL de base 
 
 ![Seção "Buttons" com campos para o nome do botão, URL do site e URL de rastreamento de cliques.]({% image_buster /assets/img/whatsapp/click_tracking/buttons.png %}){: style="max-width:70%;"}
 
-{% multi_lang_include click_tracking.md section='Domínios personalizados' %}
+{% multi_lang_include analytics/click_tracking.md section='Custom Domains' %}
 
 ## Personalização Liquid em URLs
 
@@ -92,7 +96,7 @@ Antes de lançar sua campanha ou Canva, é uma prática recomendada fazer uma pr
 Essa prévia será atualizada com a personalização relevante e o URL encurtado. 
 
 {% alert important %}
-Se um rascunho for criado em um Canva ativo, não será gerado um URL abreviado. O URL encurtado real é gerado quando o rascunho do Canva é ativado.
+Se um rascunho for criado em um Canva ativo, não será gerado um URL encurtado. O URL encurtado real é gerado quando o rascunho do Canva é ativado.
 {% endalert %}
 
 ## Relatórios
@@ -111,15 +115,11 @@ Você pode usar o filtro `Clicked/Opened Step` e a interação `clicked tracked 
 
 ![Grupo de filtros com um filtro para "clicou no link rastreado do WhatsApp".]({% image_buster /assets/img/whatsapp/click_tracking/filter_group.png %})
 
-{% multi_lang_include click_tracking.md section='Perguntas frequentes' %}
+{% multi_lang_include analytics/click_tracking.md section='Frequently Asked Questions' %}
 
 ### Eu sei quais usuários individuais estão clicando em um URL?
 
 Sim. Quando o rastreamento de cliques está ativado (ou ativado com base na configuração do modelo), é possível redirecionar os usuários que clicaram em URLs, aproveitando os filtros de redirecionamento do WhatsApp ou os eventos de clique do WhatsApp (`users.messages.whatsapp.Click`) enviados pelo Currents.
-
-### O rastreamento de cliques funciona com deep links ou links universais?
-
-O rastreamento de cliques não funciona com deep linkings. Você pode encurtar links universais de provedores como Branch ou Appsflyer, mas o Braze não pode solucionar problemas que possam surgir ao fazer isso (como quebrar a atribuição ou causar um redirecionamento).
 
 ### As prévias no dispositivo WhatsApp contam como cliques? 
 

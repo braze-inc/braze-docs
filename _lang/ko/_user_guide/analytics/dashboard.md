@@ -1,5 +1,5 @@
 ---
-nav_title: 애널리틱스 대시보드
+nav_title: 분석 대시보드
 article_title: 애널리틱스 대시보드
 page_order: 6.5
 layout: dev_guide
@@ -27,5 +27,8 @@ guide_featured_list:
   - name: API 사용량 대시보드
     link: /docs/user_guide/analytics/dashboard/api_usage_dashboard/
     image: /assets/img/braze_icons/trend-up-01.svg
+  - name: 이커머스 매출 대시보드
+    link: /docs/ecommerce_revenue_dashboard/
+    image: /assets/img/braze_icons/line-chart-up-04.svg  
 ---
 <br><br>

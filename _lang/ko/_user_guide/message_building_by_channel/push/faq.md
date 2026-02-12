@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: 푸시 FAQ
-page_order: 80
+page_order: 25
 description: "이 문서에서는 푸시 캠페인을 설정할 때 가장 자주 발생하는 몇 가지 질문에 대해 설명합니다."
 page_type: FAQ
 channel:
@@ -18,7 +18,7 @@ channel:
 
 푸시 토큰이 재할당되면 사용자 프로필의 **푸시 변경 로그에** 변경 사항이 반영됩니다. 사용자 프로필의 **참여** 탭으로 이동하면 이 정보를 확인할 수 있습니다.
 
-!['연락처 설정' 섹션의 '푸시 변경 로그']({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
+!['연락처 설정' 섹션의 '푸시 체인지로그'를 클릭합니다.]({% image_buster /assets/img/push_changelog_faq.png %}){: style="max-width:50%;"}
 
 ### 옵트인한 사용자에게 푸시 토큰이 없는 이유는 무엇인가요?
 

@@ -32,7 +32,7 @@ Tenga en cuenta que si no realizó ninguna edición entre el lanzamiento de un l
 
 A medida que aumente tu historial de versiones, también podrás cambiar el nombre de cada versión en la barra lateral para mantenerte organizado. Por defecto, los nombres de las versiones se generan como un número basado en cuántas versiones se han creado previamente. Si cambia el nombre de una versión cuando ya no está activa, aparecerá en el registro de cambios de Canvas, pero no en el registro de cambios de la versión dentro de la vista del historial de versiones.
 
-![Ejemplo de registro de cambios en Canvas que muestra que se han creado dos nuevas versiones de Canvas.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
+![Ejemplo de registro de cambios de Canvas que muestra que se han creado dos nuevas versiones de Canvas.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Descartar versiones
 

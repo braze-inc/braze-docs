@@ -1,5 +1,5 @@
 ---
-nav_title: "GET : Répertorier le statut du groupe d’abonnement des utilisateurs"
+nav_title: "GET : Liste des statuts du groupe d'abonnement des utilisateurs"
 article_title: "GET : Répertorier le statut du groupe d’abonnement de l’utilisateur"
 search_tag: Endpoint
 page_order: 4
@@ -54,17 +54,17 @@ Pour utiliser cet endpoint, vous aurez besoin d'une [clé API]({{site.baseurl}}/
 - Pour les groupes d'abonnement aux SMS et à WhatsApp, un `external_id` ou un `phone` est nécessaire.  Lorsque les deux sont soumis, seul l’`external_id` est utilisé pour l'interrogation et le numéro de téléphone est appliqué à cet utilisateur.
 - Pour les groupes d’abonnement aux e-mails, `external_id` ou `email` est nécessaire.  Lorsque les deux sont soumis, seul l’`external_id` est utilisé pour la requête et l’adresse e-mail est appliquée à cet utilisateur.
 
-## Exemple de demande 
+## Exemple de demande
 
 {% tabs %}
-{% tab Utilisateurs multiples %}
+{% tab Multiple Users %}
 {% raw %}
 ```
 https://rest.iad-03.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&external_id[]=1&external_id[]=2
 ```
 {% endraw %}
 {% endtab %}
-{% tab SMS et WhatsApp %}
+{% tab SMS and WhatsApp %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&phone=+11112223333' \
@@ -72,7 +72,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 ```
 {% endraw %}
 {% endtab %}
-{% tab E-mail %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/status/get?subscription_group_id={{subscription_group_id}}&email=example@braze.com' \
@@ -87,8 +87,6 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 Toutes les réponses réussies renverront `Subscribed`, `Unsubscribed`, ou `Unknown` selon le statut et l’historique de l’utilisateur avec le groupe d’abonnement.
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "status": {
     "1": "Unsubscribed",
@@ -97,5 +95,9 @@ Authorization: Bearer YOUR-REST-API-KEY
   "message": "success"
 }
 ```
+
+{% alert note %}
+Lorsqu'un utilisateur se désabonne globalement, il est désabonné de chaque groupe d'abonnement. Cet endpoint renvoie le dernier statut du groupe d'abonnement pour chaque groupe d'abonnement. Ce comportement est attendu car si l'utilisateur décide de se réabonner globalement, Braze rétablit chaque état d'abonnement.
+{% endalert %}
 
 {% endapi %}

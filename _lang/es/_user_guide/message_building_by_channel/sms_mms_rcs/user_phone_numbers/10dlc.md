@@ -82,7 +82,7 @@ Dependiendo de su caso de uso, la puntuación de confianza necesaria para lograr
 | Marketing | Contenidos promocionales como rebajas y ofertas por tiempo limitado. |
 | Mixto | Campaña que cubre múltiples casos de uso, como la Atención al Cliente. | 
 | Enseñanza superior | Campañas para centros de enseñanza superior. |
-| Sondeos y votaciones | Sondeos y votaciones no políticos, como encuestas a clientes. |
+| Colegio electoral & Votar | Sondeos y votaciones no políticos, como encuestas a clientes. |
 | PSA | Anuncios de servicio público para sensibilizar sobre un tema determinado. |
 | Atención al cliente | Asistencia, gestión de cuentas y otras interacciones con los clientes. |
 | Notificaciones de entrega | Mensajes de estado de entrega. |
@@ -93,7 +93,7 @@ Dependiendo de su caso de uso, la puntuación de confianza necesaria para lograr
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% tabs %}
-{% tab Caso de uso declarado %}
+{% tab Declared Use Case %}
 Un caso de uso declarado significa que ha elegido un caso de uso específico no relacionado con el marketing (por ejemplo, 2FA o Notificaciones de cuenta).
 
 | Puntuación de confianza | Rendimiento total hacia las principales redes de EE. UU. | AT&T | T-Mobile | Verizon |
@@ -104,7 +104,7 @@ Un caso de uso declarado significa que ha elegido un caso de uso específico no 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab Caso de uso de marketing mixto %}
+{% tab Mixed Marketing Use Case %}
 
 Se pueden registrar casos de uso de marketing mixto para clientes que quieran enviar mensajes para varios casos de uso desde el mismo conjunto de números o para marketing.
 
@@ -122,4 +122,4 @@ Visita el artículo sobre Twilio 10DLC para consultar las [estimaciones de rendi
 
 ## Próximos pasos
 
-Los clientes que aún no se hayan registrado en 10DLC deben trabajar con su administrador del éxito del cliente para registrar sus códigos largos. **Si los clientes no registran sus códigos largos, a partir del 1 de octubre de 2021, cualquier remitente A2P que utilice códigos largos experimentará un fuerte filtrado de todos los mensajes.** Ponte en contacto con tu administrador del éxito del cliente para empezar a registrarte en 10DLC. 
+Los clientes que aún no se hayan registrado en 10DLC deben trabajar con su administrador del éxito del cliente para registrar sus códigos largos. **Si los clientes no registran sus códigos largos, a partir del 1 de octubre de 2021, cualquier remitente A2P que utilice códigos largos experimentará un fuerte filtrado de todos los mensajes.** Ponte en contacto con tu administrador del éxito del cliente para empezar a registrarte en 10DLC.

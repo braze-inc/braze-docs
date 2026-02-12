@@ -19,7 +19,7 @@ tool:
 
 ### 개별 템플릿
 
-![중복 옵션이 있는 드롭다운 메뉴]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
+![중복 옵션이 있는 드롭다운 메뉴.]({% image_buster /assets/img/template_duplicate_cog.png %}){: style="float:right;max-width:15%;margin-left:15px;"}
 
 개별 템플릿을 복제하려면 개별 템플릿의 <i class="fas fa-cog"></i> 톱니바퀴 아이콘을 선택하고 드롭다운 메뉴에서 **복제**를 선택합니다.
 <br><br>
@@ -42,7 +42,7 @@ tool:
 
 ## 템플릿 보관
 
-![세 가지 옵션을 보여주는 확장된 설정 드롭다운 메뉴: "보관", "복제" 및 "작업 공간에 복사" 옵션이 강조 표시된 상태로]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
+![세 가지 옵션을 보여주는 확장된 설정 드롭다운 메뉴: "보관", "복제", "작업 공간에 복사" 옵션이 강조 표시된 상태에서 "보관", "복제"를 클릭합니다.]({% image_buster /assets/img/template_archive_cog.png %}){: style="float:right;max-width:20%;margin-left:15px;"}
 
 개별 템플릿을 보관하려면 템플릿 그리드 화면에서 설정 아이콘을 선택하고 **보관**을 선택합니다. 템플릿이 보관될 때 다음과 같은 다양한 시나리오를 참고하십시오:
 
@@ -52,7 +52,7 @@ tool:
 
 여러 템플릿을 보관하려면 보관하려는 각 템플릿 옆의 체크박스를 선택하십시오. 여러 템플릿을 선택한 후 **보관을** 선택합니다. 템플릿 그리드에서 **보기** 아래 **보관됨**을 선택하여 보관된 템플릿을 찾을 수 있습니다.
 
-![저장된 드롭 앤 드롭 이메일 템플릿 섹션에는 선택한 두 개의 템플릿과 보관 옵션이 있는 툴바가 표시됩니다.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
+![저장된 드롭 & 이메일 템플릿 드롭 섹션에는 선택한 두 개의 템플릿과 보관 옵션이 있는 도구 모음이 표시됩니다.]({% image_buster /assets/img/archive_multiple_template.png %}){: style="max-width:60%;"}
 
 {% alert important %}
 보관은 현재 [링크 템플릿]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates)에 사용할 수 없습니다.

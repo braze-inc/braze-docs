@@ -40,13 +40,13 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 3\. Actualiza la descripción para explicar que este Canvas contiene mensajería personalizada para que los usuarios realicen una doble adhesión voluntaria.
 4\. Añade la etiqueta **Correo electrónico** para que podamos filtrarlo en la página de inicio de Canvas.
 
-![El nuevo nombre, descripción y etiqueta para el Canvas.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
+![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/email_signup2.png %}){: style="max-width:90%;"}
 
 ### Paso 2: Asignar eventos de conversión
 
 A continuación, vamos a asignar nuestros eventos de conversión. Los eventos de conversión son un tipo de métrica que puede utilizarse para medir el éxito del Canvas. Para el **tipo de evento de conversión**, selecciona **Realiza evento personalizado**. A continuación, selecciona **email_opt_in** para el **nombre del evento personalizado**.
 
-!["Asignar eventos de conversión" para el tipo de evento de conversión de adhesión por correo electrónico.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
+!["Asignar eventos de conversión" para el tipo de evento de conversión de adhesión voluntaria por correo electrónico.]({% image_buster /assets/img/canvas_templates/email_signup3.png %}){: style="max-width:90%;"}
 
 Mantendremos el plazo de conversión de la plantilla en tres días porque queremos dirigirnos a nuestros usuarios más recientes.
 
@@ -66,7 +66,7 @@ Para la **Ventana de entrada**, actualizaremos la **Hora de inicio (Obligatorio*
 
 Definiremos nuestra audiencia objetivo como usuarios de Steppington que no tienen una dirección de correo electrónico en su perfil de usuario. Lo haremos manteniendo el [filtro de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters) predeterminado de la plantilla `Email Available is false`.
 
-![Audiencia de entrada con el filtro "El correo electrónico disponible es falso".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
+![Audiencia de entrada con el filtro "Correo electrónico disponible es falso".]({% image_buster /assets/img/canvas_templates/email_signup6.png %}){: style="max-width:90%;"}
 
 ### Paso 5: Selecciona tu configuración de envío
 
@@ -83,7 +83,7 @@ Ahora, construiremos nuestro Canvas personalizando los canales y el contenido qu
 - La página 1 capturará los correos electrónicos.
 - La página 2 mostrará un mensaje de confirmación.
 
-![Dos páginas de un mensaje dentro de la aplicación para capturar correos electrónicos de usuarios y mostrar un mensaje de éxito.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
+![Dos páginas de un mensaje dentro de la aplicación para capturar los correos electrónicos de los usuarios y mostrar un mensaje de éxito.]({% image_buster /assets/img/canvas_templates/email_signup8.png %}){: style="max-width:90%;"}
 
 {:start="2"}
 2\. A partir de aquí, mantendremos el paso Ruta de acción **suscrita** tal como está. Este paso divide a nuestros usuarios en dos grupos en una ventana de un día:

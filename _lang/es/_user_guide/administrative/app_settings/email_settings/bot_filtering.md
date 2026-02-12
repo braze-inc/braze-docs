@@ -1,5 +1,5 @@
 ---
-nav_title: Filtrado de bots para correos electrónicos
+nav_title: Bot para filtrar correos electrónicos
 article_title: Filtrado de bots para correos electrónicos
 page_type: reference
 page_order: 1
@@ -22,6 +22,10 @@ Braze tiene un sistema de detección que emplea múltiples entradas para identif
 
 ## Métricas afectadas por los clics de los robots
 
+{% alert note %}
+El filtrado de bots bloquea activamente los clics sospechosos de automatización para mejorar la precisión de tus métricas de interacción. Sin embargo, los escáneres y los robots evolucionan continuamente con el tiempo, por lo que Braze no puede garantizar la eliminación de todas las interacciones no humanas.
+{% endalert %}
+
 Las siguientes métricas de Braze pueden verse afectadas por los clics de los robots:
 
 - Tasa de clics totales
@@ -31,7 +35,7 @@ Las siguientes métricas de Braze pueden verse afectadas por los clics de los ro
 - Mapa de calor
 - Algunos filtros de segmento
 
-[Las características de Braze Intelligence]({{site.baseurl}}/user_guide/brazeai/intelligence) que aprovechan los datos de los clics sobre nuestros sistemas de detección pueden verse afectadas. Activar la configuración tiene el potencial de perturbar temporalmente nuestros sistemas de detección, lo que puede dar lugar a una disminución de la métrica o de la entrada debido a esta exclusión de los clics sospechosos de ser bots:
+[Las características de Braze Intelligence]({{site.baseurl}}/user_guide/brazeai/intelligence) que aprovechan los datos de los clics sobre nuestros sistemas de detección pueden verse afectadas. Activar la configuración tiene el potencial de perturbar temporalmente nuestros sistemas de detección, lo que puede dar lugar a una disminución de la métrica o de la entrada debido a esta exclusión de presuntos clics de bots:
 
 - Intelligent Selection
 - Canal inteligente

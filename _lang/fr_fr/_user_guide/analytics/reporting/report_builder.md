@@ -16,7 +16,7 @@ page_order: 6.2
 ## Utilisation d'un modèle de rapport
 
 1. Allez dans **Analyse/analytique** > **Générateur de rapports (Nouveau)**.
-2. Sélectionnez la flèche **Autres options** en regard du bouton **Créer un nouveau rapport**, puis sélectionnez **Utiliser un modèle de rapport**.<br><br>![Bouton déroulant "Créer un nouveau rapport" avec options pour créer un rapport personnalisé ou utiliser un modèle.]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
+2. Sélectionnez la flèche **Autres options** en regard du bouton **Créer un nouveau rapport**, puis sélectionnez **Utiliser un modèle de rapport**.<br><br>![Bouton déroulant "Créer un nouveau rapport" avec des options permettant de créer un rapport personnalisé ou d'utiliser un modèle.]({% image_buster /assets/img/report_builder_2/create_new_report.png %}){: style="max-width:40%;"}<br><br>
 3. Sélectionnez l'un des modèles de rapport de la bibliothèque de modèles de Braze.
     - Utilisez les **éléments de la rangée** et le menu déroulant des **tags** pour trouver des rapports pertinents pour vos cas d'utilisation.<br><br>![Fenêtre "Modèles de rapport de Braze" avec une liste de modèles de Braze à sélectionner.]({% image_buster /assets/img/report_builder_2/report_templates.png %}){: style="max-width:90%;"}<br><br>
 4. Suivez les étapes 3 et suivantes de la section [Création d'un rapport](#creating-a-report) pour personnaliser davantage le rapport en fonction de votre cas d'utilisation.
@@ -25,14 +25,16 @@ page_order: 6.2
 
 1. Allez dans **Analyse/analytique** > **Générateur de rapports (Nouveau)**.
 2. Sélectionnez **Créer un nouveau rapport**.
-3. Dans le menu déroulant **Lignes**, sélectionnez l'une des options suivantes pour créer un rapport :
+3. Dans le menu déroulant **Lignes**, sélectionnez les éléments sur lesquels vous souhaitez établir un rapport :
     - Campagnes
     - Canvas
     - Campagnes et canvas
     - Canaux
     - Balises
 
-![La section "Lignes et colonnes" contient des champs permettant de sélectionner les lignes et les groupes internes de votre rapport.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
+    Notez que votre sélection de **lignes** aura un impact sur [les indicateurs que vous pouvez visualiser](#metrics-availability). Par exemple, vous ne pouvez afficher les indicateurs multivariés que si vous établissez un rapport sur les **toiles** ou les **campagnes** avec une analyse détaillée de la **variante**. Vous ne pouvez pas afficher ces indicateurs lorsque vous établissez des rapports sur les **campagnes** et **les canevas**, même si ces campagnes et canevas comportent des tests multivariés. 
+
+![La section "Lignes et colonnes" contient des champs permettant de sélectionner les lignes et les regroupements de votre rapport.]({% image_buster /assets/img/report_builder_2/rows_and_columns.png %}){: style="width:90%;"}
 
 {: start="4"}
 4\. (Facultatif) Sélectionnez **Ajouter un éclatement** pour décomposer vos données en vues plus granulaires :
@@ -59,10 +61,10 @@ Essayez différentes configurations d'options de recherche pour explorer les [no
     \- Réorganisez les indicateurs et les colonnes en faisant glisser l'icône en pointillé vers le haut ou vers le bas.
 7\. Dans **Contenu du rapport**, configurez la plage de dates pour laquelle vous souhaitez inclure des données dans votre rapport.
 8\. Ensuite, en fonction de vos sélections à l'étape 3, choisissez d'ajouter manuellement ou automatiquement des campagnes, des canevas ou les deux à votre rapport.
-    - **Ajouter manuellement :** Choisissez chaque campagne ou Canvas à inclure dans le rapport en utilisant les filtres pour les dates de **dernier envoi** et les tags ou canaux, ou en recherchant le nom de la campagne ou du Canvas.<br><br>![La section "Ajouter manuellement des campagnes et des toiles" contient une liste de campagnes à sélectionner.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
+    - **Ajouter manuellement :** Choisissez chaque campagne ou Canvas à inclure dans le rapport en utilisant les filtres pour les dates de **dernier envoi** et les tags ou canaux, ou en recherchant le nom de la campagne ou du Canvas.<br><br>![La section "Ajouter manuellement des campagnes et des toiles" avec une liste de campagnes à sélectionner.]({% image_buster /assets/img/report_builder_2/manually_add.png %}){: style="width:90%;"}<br><br>
     - **Ajouter automatiquement :** Définissez des règles pour les campagnes ou les canevas à inclure dans le rapport. Vous ne devez sélectionner qu'un seul champ sur cette page.
         \- Notez qu'au fur et à mesure que des campagnes ou des canevas supplémentaires remplissent les conditions que vous avez définies dans cet écran, ils seront automatiquement ajoutés aux exécutions futures de votre rapport.<br><br>![La section "Ajouter automatiquement des campagnes et des toiles" contient des champs permettant de définir des règles pour les campagnes et les toiles à ajouter au rapport.]({% image_buster /assets/img/report_builder_2/automatically_add.png %}){: style="width:90%;"}<br><br>
-9\. Exécutez le rapport en sélectionnant **Enregistrer et exécuter.**
+9\. Exécutez le rapport en sélectionnant **Enregistrer & Exécuter**.
 
 {% alert note %}
 L'exécution du rapport peut prendre jusqu'à quelques minutes, en fonction de la plage de dates et du nombre de campagnes ou de Canevas que vous avez sélectionnés lors de l'étape de configuration.
@@ -72,11 +74,17 @@ L'exécution du rapport peut prendre jusqu'à quelques minutes, en fonction de l
 
 Votre sélection de **rangées** affecte les indicateurs que vous pouvez sélectionner.
 
+{% alert tip %}
+Si vous souhaitez établir un rapport sur les variantes du canvas ou les étapes, sélectionnez **Canvas** pour les lignes et laissez le champ vide ou sélectionnez **Date** pour l'éclatement. Cela crée une liste déroulante **Vue Canvas** qui permet d'afficher les indicateurs pour le Canvas uniquement, ou de regrouper les indicateurs par variante, étape ou message. 
+
+![La liste déroulante "Canvas View" ouverte.]({% image_buster /assets/img/report_builder_2/canvas_view_dropdown.png %}){: style="width:40%;"}
+{% endalert %}
+
 | Indicateurs | Description |
 | --- | --- |
 | Indicateurs de conversion | Disponible pour les campagnes, les toiles, les campagnes et les toiles. |
 | Entrées | Disponible pour les Campagnes, Toiles, Campagnes et Toiles, Tags. |
-| Dernière date d'envoi | Disponible pour les campagnes, les toiles, les campagnes et les toiles. |
+| Dernière date d'envoi | Disponible pour les campagnes, les toiles, les campagnes et les toiles. S'affiche uniquement pour les campagnes planifiées - ne s'affiche pas pour les campagnes basées sur des actions ou déclenchées par l'API. |
 | Envois | Disponible pour chaque canal concerné. |
 | Envois de messages | Disponible pour les Campagnes, Toiles, Campagnes et Toiles, Tags. |
 | Ligne d'objet | Disponible pour les campagnes d'e-mail avec **Variante** drilldown, les Canvases et les Canvases avec **Variante** drilldown. |
@@ -84,6 +92,10 @@ Votre sélection de **rangées** affecte les indicateurs que vous pouvez sélect
 | Impressions uniques | Disponible pour les Campagnes, Toiles, Campagnes et Toiles, Tags. |
 | Destinataires uniques | Disponible pour les Campagnes, Toiles, Campagnes et Toiles, Tags. Indisponible avec la recherche de **canaux**. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
+
+### Variantes de messages supprimés
+
+Les statistiques relatives aux variantes d'envoi de messages supprimés ne sont pas affichées lorsque vous ventilez votre rapport par campagne ou par canevas. Toutefois, les totaux au niveau du canal incluent toutes les statistiques, que la variante ait été supprimée ou non. Par exemple, les _envois d'_ e-mails comprennent tous les envois d'e-mails, mais si vous décomposez ces statistiques par campagne, les chiffres peuvent être inférieurs parce que les envois pour les variantes de messages supprimés sont filtrés.
 
 ## Visualisation d'un rapport
 
@@ -105,7 +117,20 @@ Pour créer un graphique linéaire, sélectionnez **Date** comme option de reche
 
 Pour télécharger une image du graphique du rapport, sélectionnez l'icône en pointillé, puis choisissez une option de téléchargement.
 
-![Un menu avec des options de téléchargement pour différents formats de fichiers.]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:30%;"}
+![Un menu avec des options de téléchargement pour différents formats de fichiers.]({% image_buster /assets/img/report_builder_2/download_options.png %}){: style="max-width:70%;"}
+
+## Partager un rapport
+
+Vous pouvez partager un lien vers le tableau de bord du rapport en sélectionnant **Partager** et l'une de ces options :
+- **Partagez un lien :** Copiez et partagez le lien.
+
+![Le menu déroulant "Partager un lien" contient un lien vers le rapport.]({% image_buster /assets/img/report_builder_2/share_this_report.png %}){: style="max-width:70%;"}
+
+- **Envoyez ou planifiez un e-mail :** Envoyez un e-mail immédiatement ou à une heure donnée contenant un lien de téléchargement qui expire au bout d'une heure. Vous pouvez sélectionner les destinataires parmi les utilisateurs du tableau de bord répertoriés dans le menu déroulant **Destinataires de l'e-mail** ou saisir toute autre adresse e-mail.
+
+![Fenêtre "Planifier un e-mail" avec des champs permettant de choisir le format du rapport, le destinataire et la date d'envoi.]({% image_buster /assets/img/report_builder_2/schedule_an_email.png %}){: style="max-width:70%;"}
+
+- **Téléchargez le fichier CSV :** Téléchargez un fichier CSV du rapport.
 
 ## Ajouter un rapport à un tableau de bord
 

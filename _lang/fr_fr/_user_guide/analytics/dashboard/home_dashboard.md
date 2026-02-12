@@ -25,13 +25,17 @@ Vous pouvez reprendre là où vous vous étiez arrêté dans le tableau de bord 
 
 Vous pouvez revenir sur des campagnes, des canvas et des segments récemment modifiés ou créés. Chaque carte est associée à des tags qui indiquent le type de contenu (campagne, Canvas, segment) et le statut (actif, brouillon, archivé, arrêté).
 
-![Un projet de canvas, un segment actif et un projet de campagne dans la section "Reprenez là où vous vous êtes arrêté".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
+{% alert note %}
+La section **Reprendre là où vous vous étiez arrêté** apparaît après que vous avez modifié ou créé une campagne, un Canvas ou un segment.
+{% endalert %}
+
+![Un projet de canvas, un segment actif et un projet de campagne dans la section "Reprendre là où vous vous êtes arrêté".]({% image_buster /assets/img/pick_up_where_you_left_off.png %})
 
 ## Aperçu des performances
 
 Par défaut, la section **Aperçu des performances** affiche les données des 30 derniers jours pour toutes les apps et tous les sites. Vos indicateurs sont tous calculés sur la base de la plage de dates sélectionnée.
 
-![Champs de date et d'application sur le tableau de bord de l'accueil.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
+![Champs de la plage de dates et de l'application dans le tableau de bord d'accueil.]({% image_buster /assets/img_archive/home_dashboard_select_date.png %}){: style="max-width:60%;"}
 
 Les pourcentages sont calculés sur la base de la plage de dates actuelle par rapport à la plage de dates précédente, à l'exception des *Utilisateurs actifs mensuels* (MAU), qui utilisent le dernier jour de la période précédente au lieu d'une plage. 
 
@@ -43,7 +47,7 @@ Par exemple, si vous définissez votre plage de dates sur les **7 derniers jour
 
 Sélectionnez **Afficher la décomposition** pour chaque ligne des statistiques de l'aperçu des performances afin d'afficher la valeur de chaque statistique par jour pour la plage de dates spécifiée.
 
-![Développez]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
+![Développer]({% image_buster /assets/img_archive/home_dashboard_breakdown.png %})
 
 ## Statistiques disponibles
 
@@ -68,9 +72,34 @@ Le pourcentage figurant à côté du nombre de MAU indique l'évolution des MAU 
 
 $$\text{Change in MAU} = \frac{\text{MAU of last date in range} - \text{MAU of day before start date}}{\text{MAU of day before start date}}$$
 
+#### Règles de calcul des MAU
+
+Le calcul des MAU suit des règles spécifiques afin de garantir une facturation précise et cohérente :
+
+- **Moment du calcul**: Calculé une fois par jour à 12:05 UTC comme un instantané de 30 jours ; les chiffres ne changent jamais rétroactivement.
+- **Profils anonymes**: **Ne** comptez **que** lorsqu'au moins une session est enregistrée.
+- **Profils identifiés**: Compter automatiquement dès qu'ils existent.
+- **Profils orphelins**: Les doublons fusionnés avec un autre utilisateur **ne** sont **pas** comptabilisés.
+- **Téléchargement de fichiers CSV**: Les utilisateurs téléchargés par CSV ne sont pris en compte que lorsque `date_of_first_session` ou `date_of_last_session` est fourni, ou lorsqu'ils enregistrent une session ultérieurement.
+- **Suppressions d'API**: La suppression d'un utilisateur via l'API ne met pas immédiatement à jour l'UAM ; le décompte se corrige de lui-même lors du cycle mensuel suivant.
+
 {% alert note %}
 Les utilisateurs anonymes sont également pris en compte dans votre MAU. Pour les appareils mobiles, les utilisateurs anonymes dépendent de l’appareil. Pour les utilisateurs Web, les utilisateurs anonymes dépendent du cache du navigateur.
 {% endalert %}
+
+#### Exemple de calcul des MAU
+
+L'exemple suivant illustre le fonctionnement du calcul des MAU à travers différentes actions de l'utilisateur :
+
+| Étape | Action | Changement immédiat des MAU | Total résultant |
+|------|--------|----------------------|-----------------|
+| 1 | Créez l'**utilisateur anonyme 1** et ouvrez une session. | +1 | 1 |
+| 2 | Identifier l'**utilisateur anonyme 1** (le profil est converti en identifié) | 0 | 1 |
+| 3 | Créez l'**utilisateur anonyme 2** et ouvrez une session. | +1 | 2 |
+| 4 | Identifier l'**utilisateur anonyme 2** comme étant la **même personne** que l'utilisateur 1 (l'utilisateur 2 devient orphelin). | -1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+Les instantanés MAU sont calculés une fois par jour et ne sont jamais modifiés rétroactivement. Dans cet exemple, le nombre de MAU pour le jour suivant l'étape 3 reste en permanence à 2, même si l'utilisateur 2 devient orphelin par la suite. Toutefois, le décompte des MAU pour les jours suivants ne reflète que l'utilisateur non orphelin. Dans une fenêtre de 30 jours, ce flux consomme finalement 1 MAU puisqu'il ne reste qu'un seul utilisateur distinct, non orphelin.
 
 ### Utilisateurs actifs quotidiens
 

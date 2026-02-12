@@ -1,6 +1,6 @@
 ---
-nav_title: Gestion des Canvas
-article_title: Gestion des Canvas
+nav_title: Gérer les toiles
+article_title: Gérer les toiles
 page_order: 2
 layout: dev_guide
 guide_top_header: "Gestion des Canvas"

@@ -1,5 +1,5 @@
 ---
-nav_title: レポートビルダー (レガシー)
+nav_title: レポートビルダ(レガシー)
 article_title: レポートビルダー (レガシー)
 alias: /report_builder_legacy/
 page_order: 0
@@ -41,7 +41,7 @@ tool:
 
 キャンペーンに関するレポートを実行する場合は、**手動**レポートまたは**自動**レポートを選択できます。レポートには、キャンペーンまたはキャンバスのいずれかを含めることができますが、両方を含めることはできません。過去12 か月以内に最後にメッセージを送信したキャンペーンおよびキャンバスは、レポートの対象となります。
 
-![キャンペーンダッシュボード]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
+![キャンペーン・ダッシュボード]({% image_buster /assets/img/campaign_comparison/create_report.png %}){: style="max-width:80%;"}
 
 この 2 つのオプションの違いを以下に示します。
 
@@ -62,7 +62,7 @@ tool:
 
 レポートを作成すると、各行にキャンペーンを含む空白の表が表示される。[**列を編集**] を選択し、追加する指標を選択すると、テーブルにデータが読み込まれます。
 
-![キャンペーンオプション]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
+![キャンペーンのオプション]({% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}){: style="max-width:80%;"}
 
 選択した指標がテーブルに読み込まれます。指標の定義については、「[レポート指標の用語集]({{site.baseurl}}/user_guide/data/report_metrics/)」を参照してください。一部の指標は、キャンペーン比較レポートでのみ使用できます。
 
@@ -156,7 +156,7 @@ CSVエクスポートには、**エクスポートを**選択したときに表�
 
 レポートで選択した指標を可視化するには、チャートを使用します。チャートは、キャンペーンに関するレポートで、その列に少なくとも 1 つの指標が追加されている場合に使用できます。
 
-![メトリックメッセージ付きのキャンペーンパフォーマンスチャートが送信されました]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
+![[送信済みメッセージ] 指標が選択されたキャンペーンパフォーマンスのチャート]({% image_buster /assets/img/campaign_comparison/report_builder_charts.png %})
 
 デフォルトでは、各レポートのチャートに、レポートの最初の列の指標が表示されます。チャートに表示する別の指標を選択するには、ドロップダウンから指標を選択します。レポートのテーブルにある任意の指標をチャートに表示できます。
 

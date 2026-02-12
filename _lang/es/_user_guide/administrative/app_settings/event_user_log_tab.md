@@ -1,5 +1,5 @@
 ---
-nav_title: Registro de eventos de usuario
+nav_title: Registro de usuarios del evento
 article_title: Registro de eventos de usuario
 page_order: 7
 page_type: reference
@@ -34,11 +34,11 @@ Cada registro se divide en varias secciones, que pueden incluir:
 
 Selecciona el icono **Expandir datos** para mostrar los datos JSON sin procesar de ese registro concreto.
 
-![El "Icono de expandir datos" junto a un registro específico.]({% image_buster /assets/img_archive/expand_data.png %})
+![El "Icono Expandir datos" junto a un registro concreto.]({% image_buster /assets/img_archive/expand_data.png %})
 
 Los registros de eventos de usuario permanecerán en el panel de control durante los 30 días posteriores a su registro.
 
-![Registros sin procesar de los eventos]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
+![Registros sin procesar de eventos]({% image_buster /assets/img_archive/rawlogs.png %}){: style="max-width:60%;"}
 
 ## Solución de problemas
 

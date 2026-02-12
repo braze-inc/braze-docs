@@ -15,7 +15,7 @@ toc_headers: h2
 
 다른 배리언트보다 실적이 더 좋은 것으로 보이는 배리언트는 더 많은 사용자에게 전송되고, 실적이 저조한 배리언트는 더 적은 수의 사용자에게 타겟팅됩니다. Each adjustment is made using a [statistical algorithm](https://en.wikipedia.org/wiki/Multi-armed_bandit) that makes sure Braze is adjusting for real performance differences and not just random chance.
 
-![A/B Testing section of a campaign with Intelligent Selection enabled.]({% image_buster /assets/img/intelligent_selection1.png %})
+![지능형 선택이 활성화된 캠페인의 A/B 테스트 섹션입니다.]({% image_buster /assets/img/intelligent_selection1.png %})
 
 지능형 선택의 기능:
 - 성과 데이터를 반복적으로 살펴보고 캠페인 트래픽을 점차적으로 위닝 배리언트로 전환.
@@ -25,7 +25,7 @@ toc_headers: h2
 
 Intelligent Selection works best for campaigns that send more than once. It needs early performance data to start optimizing, so single-send campaigns won’t benefit. For those campaigns, we recommend using a traditional [A/B test]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) instead.
 
-## Prerequisites
+## 필수 조건
 
 {% tabs %}
 {% tab Campaign %}
@@ -34,7 +34,7 @@ Before adding Intelligent Selection to your campaign, make sure you’ve set thi
 - Your campaign sends on a recurring schedule. Single-send campaigns aren’t supported.
 - You’ve added at least two message variants.
 - You’ve defined a conversion event to measure performance across variants.
-- The re-eligibility window is set to 24 hours or longer. Shorter windows aren’t supported, as they would affect the integrity of the control variant. To learn more, refer to [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
+- The re-eligibility window is set to 24 hours or longer. Shorter windows aren’t supported, as they would affect the integrity of the control variant. 자세히 알아보려면 [이 FAQ를]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection) 참조하세요.
 {% endtab %}
 
 {% tab Canvas %}
@@ -60,11 +60,11 @@ Intelligent Selection cannot be used in campaigns with a re-eligibility period o
 {% tab Canvas %}
 Add at least one conversion event and two variants to your Canvas. Then, select one of the variant percentages in the Build step. 
 
-![A Canvas with two variants, each set to 50% variant distribution, allowing Intelligent Selection to be enabled.]({% image_buster /assets/img/intelligent_selection.png %})
+![두 개의 배리언트이 있는 캔버스에서 각각 50%의 배리언트 분포로 설정하여 지능형 선택을 활성화할 수 있습니다.]({% image_buster /assets/img/intelligent_selection.png %})
 
 이를 통해 배리언트 배포를 편집하고 지능형 선택을 켤 수 있습니다. 
 
-![Intelligent Selection option turned on for a Canvas]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
+![캔버스에 지능형 선택 옵션이 켜져 있습니다.]({% image_buster /assets/img_archive/canvas_intelligent_selection.png %})
 
 아직 캔버스에 전환 이벤트를 추가하지 않았거나 캠페인이 단독 배리언트로 구성된 경우에는 지능형 선택을 사용할 수 없습니다.
 {% endtab %}
@@ -80,7 +80,15 @@ Add at least one conversion event and two variants to your Canvas. Then, select 
 지능형 선택은 확실한 위너를 하나도 선택하지 않고 최적화를 중단할 수 있습니다. 지능형 선택은 실험을 계속해도 전환율이 현재 전환율의 1% 이상 개선되지 않을 것이라는 95%의 확신이 들면 최적화를 중지합니다.
 {% endalert %}
 
-## Frequently Asked Questions (FAQ) {#faq}
+## 지능형 선택 배리언트 배포
+
+지능형 선택은 캠페인 전환의 현재 상태를 기반으로 배리언트 분포를 결정합니다. 교육 기간이 지난 후에야 최종 배포가 결정됩니다. 
+
+즉, 캠페인 초기 단계에서는 99%와 1% 지능형 선택 모두 거의 동일한 전송을 받을 수 있지만 배리언트 할당의 최종 비율은 99%-1%로 설정할 수 있습니다.
+
+캠페인 초기 단계에서 지능형 선택이 50/50으로 전송되는 것을 원하지 않는 경우, 고정 배리언트가 있는 기존 A/B 테스트를 사용하는 것이 좋습니다.
+
+## Frequently asked questions {#faq}
 
 ### Why is re-eligibility in less than 24 hours not available when combined with Intelligent Selection?
 

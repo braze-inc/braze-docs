@@ -22,7 +22,7 @@ Un ID de notification est un identifiant unique pour une catégorie de message d
 
 Pour attribuer un ID de notification, accédez à la page de composition du push auquel vous souhaitez ajouter l'ID et sélectionnez l'onglet **Paramètres.**  Saisissez un nombre entier dans la section **ID de la notification.** Pour mettre à jour cette notification après l'avoir émise, envoyez une autre notification avec le même ID que celui utilisé précédemment.
 
-![Champ d'ID de notification.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
+![Champ ID de la notification.]({% image_buster /assets/img_archive/notification_ids.png %}){: style="max-width:60%;" }
 
 ## TTL (Durée de vie) {#ttl}
 
@@ -34,7 +34,7 @@ Les valeurs par défaut de la durée de vue sont définies par votre administrat
 
 Par exemple, supposons que votre application organise un concours hebdomadaire de jeux-questionnaires. Vous envoyez une notification push une heure avant qu'elle ne commence. En fixant le TTL à 1 heure, vous vous assurez que les utilisateurs qui ouvrent l'application après le début du concours ne recevront pas de notification concernant un événement qui a déjà commencé.
 
-{% details Meilleures pratiques %}
+{% details Best practices %}
 
 #### Quand utiliser un TTL plus court ?
 
@@ -74,11 +74,11 @@ Pour des informations plus détaillées sur la gestion des messages et la hiéra
 
 Le texte récapitulatif vous permet de définir un texte supplémentaire dans la vue de notification étendue. Il sert également de légende pour les notifications avec des images.
 
-![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
+![Un message Android avec le titre "Ceci est le titre de la notification" et le texte du résumé "Ceci est le texte du résumé de la notification".]({% image_buster /assets/img/android/push/collapsed-android-notification.png %}){: style="max-width:65%;"}
 
 Le texte récapitulatif s’affiche sous le corps du message dans la vue étendue. 
 
-![Un message Android avec le titre "Ceci est le titre de la notification" et le texte résumé "Ceci est le texte résumé de la notification".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
+![Un message Android avec le titre "Ceci est le titre de la notification" et le texte du résumé "Ceci est le texte du résumé de la notification".]({% image_buster /assets/img/android/push/expanded-android-notification.png %}){: style="max-width:65%;"}
 
 Pour les notifications push qui incluent des images, le texte du message s’affiche dans la vue réduite tandis que le texte récapitulatif s’affiche comme légende d’image lorsque la notification est étendue. 
 
@@ -119,7 +119,7 @@ Pour plus d'informations, consultez la documentation de Google sur les [notifica
 
 Les notifications push Android permettent de spécifier si votre notification tombe dans une catégorie prédéfinie. L’IU du système Android peut utiliser cette catégorie pour prendre des décisions de classement ou de filtrage concernant la localisation de la notification dans la zone de notification de l’utilisateur.
 
-![Onglet Paramètres avec la catégorie définie sur Aucun, qui est le paramètre par défaut.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
+![dans l'onglet Paramètres, la catégorie étant définie sur Aucun, ce qui est le paramètre par défaut.]({% image_buster /assets/img_archive/braze_category.png %}){: style="max-width:60%;"}
 
 | Catégorie | Description |
 |---|-------|
@@ -154,7 +154,7 @@ Les notifications push Android fournissent un champ facultatif pour déterminer 
 
 De plus, les utilisateurs d’Android peuvent modifier la façon dont les notifications push apparaissent sur leur écran de verrouillage en changeant le paramètre de confidentialité des notifications sur leur appareil. Ce paramètre remplacera la visibilité de la notification push.
 
-![Emplacement/localisation prioritaire du tableau de bord avec l'option Définir la visibilité activée et définie sur Privé.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Emplacement de la priorité de la notification push sur le tableau de bord avec l’option Définir la visibilité activée et définie sur Privé.]({% image_buster /assets/img_archive/braze_visibility.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Quelle que soit la visibilité, toutes les notifications seront affichées sur l'écran de verrouillage de l'utilisateur si le paramètre de confidentialité des notifications sur son appareil est **Afficher tout le contenu** (paramètre par défaut). De même, les notifications ne s'afficheront pas sur l'écran de verrouillage si la confidentialité des notifications est réglée sur **Ne pas afficher les notifications.** La visibilité n'a d'effet que si la confidentialité des notifications est réglée sur **Masquer les contenus sensibles**.
 
@@ -170,7 +170,7 @@ Pour les appareils fonctionnant dans des versions d’Android antérieures à An
 
 Si vous sélectionnez **Défaut** dans ce champ, le son de notification par défaut de l'appareil sera diffusé. Cela peut être spécifié via notre [API de messages]({{site.baseurl}}/api/endpoints/messaging/) ou dans les **paramètres** du compositeur de push.
 
-![Le champ "Son".]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
+![Le champ "Sound".]({% image_buster /assets/img_archive/sound_android.png %}){: style="float:right;max-width:50%;margin-left:15px;"}
 
 Ensuite, saisissez l'URI complet de la ressource sonore (par exemple, `android.resource://com.mycompany.myapp/raw/mysound`) dans l'invite du tableau de bord.
 

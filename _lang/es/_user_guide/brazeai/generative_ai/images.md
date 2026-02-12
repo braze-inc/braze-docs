@@ -20,6 +20,6 @@ La mediateca le permite gestionar sus activos en una única ubicación centraliz
 3. Seleccione **Generar imágenes**. Las imágenes pueden tardar aproximadamente un minuto en generarse.
 4. Selecciona <i class="fas fa-download" title="Añadir imagen a la biblioteca multimedia"></i> sobre las imágenes que quieras añadir a tu biblioteca multimedia.
 
-![Modalidad de generador de imágenes AI en la biblioteca multimedia.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
+![Modal de generador de imágenes con IA en la biblioteca multimedia.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

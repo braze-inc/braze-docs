@@ -24,7 +24,7 @@ Os cartões de contato podem ser criados a partir do criador de SMS e MMS. Selec
 
 Em seguida, você deverá inserir o nome ou apelido da sua empresa. Esse é o nome que seus usuários verão quando salvarem o cartão. Um limite de 20 caracteres é aplicado para garantir que o usuário possa ver todo o nome da empresa ou o alias nos contatos e no envio de mensagens no app. 
 
-![A guia do gerador de cartão de contato.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
+![A guia do gerador de Cartão de Contato.]({% image_buster /assets/img/sms/contact_card1.png %}){: style="max-width:60%" }
 
 ### Etapa 2: Atribuir número de telefone
 

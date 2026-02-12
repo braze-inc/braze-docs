@@ -39,7 +39,7 @@ Para medir o impacto de uma mensagem LINE individual, é possível adicionar um 
 
 O painel **LINE Performance** descreve o desempenho de sua mensagem em várias dimensões. As métricas nesse painel variam de acordo com o canal de envio de mensagens escolhido e com o fato de estar ou não executando um teste multivariante. Você pode clicar no ícone <i class="fa fa-eye preview-icon"></i> **Preview** para visualizar sua mensagem para cada variante ou canal.
 
-![O painel "Desempenho da LINHA" mostra métricas para duas variantes.]({% image_buster /assets/img/line/line_performance.png %})
+![O painel "LINE Performance" mostra métricas para duas variantes.]({% image_buster /assets/img/line/line_performance.png %})
 
 Se quiser simplificar sua visualização, selecione **\+ Add/Remove Columns (Adicionar/remover colunas** ) e limpe todas as métricas que desejar. Por padrão, todas as métricas são exibidas.
 
@@ -58,7 +58,7 @@ Aqui estão algumas das principais métricas da LINE que você pode ver em sua a
 
 ### Desempenho histórico
 
-O painel **Desempenho histórico** permite que você visualize as métricas do painel **Desempenho de mensagens** como um gráfico ao longo do tempo. Use os filtros na parte superior do painel para modificar as estatísticas e os canais mostrados no gráfico. O intervalo de tempo desse gráfico sempre refletirá o intervalo de tempo especificado na parte superior da página.
+O painel de **Desempenho Histórico** permite que você visualize as métricas do painel **Desempenho de Mensagens** como um gráfico ao longo do tempo. Use os filtros na parte superior do painel para modificar as estatísticas e canais mostrados no gráfico. O intervalo de tempo desse gráfico sempre refletirá o intervalo de tempo especificado na parte superior da página.
 
 Para obter um detalhamento dia a dia, selecione o menu de hambúrguer <i class="fas fa-bars"></i> e selecione **Baixar CSV** para receber uma exportação CSV do relatório.
 
@@ -68,6 +68,6 @@ O painel **Detalhes do evento de conversão** mostra a performance de seus event
 
 ### Correlação de conversão
 
-O painel **Correlação de conversões** oferece insight sobre quais atribuições e comportamentos do usuário ajudam ou prejudicam os resultados definidos para as campanhas. Para saber mais, consulte [Correlação de conversão]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
+O painel de **Correlação de conversão** oferece a você insight sobre quais atributos e comportamentos dos usuários ajudam ou prejudicam os resultados que você definiu para as campanhas. Para saber mais, consulte [Correlação de conversão]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation).
 
 

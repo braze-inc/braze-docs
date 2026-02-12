@@ -1,5 +1,5 @@
 ---
-nav_title: 푸시 프라이머 인앱 메시지
+nav_title: Push primer in-app messages
 article_title: 푸시 프라이머 인앱 메시지
 page_order: 1
 page_type: reference
@@ -10,13 +10,13 @@ channel: push
 
 # 푸시 프라이머 인앱 메시지
 
-![스트리밍 앱용 푸시 프라이머 인앱 메시지. 알림에는 "Movie Cannon에서 푸시 알림을 받으시겠습니까? Notifications may include new movies, TV shows, or other notices and can be turned off at any time."]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
+![스트리밍 앱용 푸시 프라이머 인앱 메시지. 알림에는 "Movie Cannon에서 푸시 알림을 받으시겠습니까? 알림에는 새 영화, TV 프로그램 또는 기타 알림이 포함될 수 있으며 언제든지 해제할 수 있습니다."라고 적혀 있습니다]({% image_buster /assets/img_archive/push_primer_iam.png %}){: style="float:right;max-width:40%;margin-left:15px;border:none;"}
 
 > 사용자에게 푸시 권한을 요청할 수 있는 기회는 한 번뿐이므로 푸시 등록을 최적화하는 것은 푸시 메시지의 도달 범위를 극대화하는 데 매우 중요합니다. 이를 위해 기본 푸시 메시지를 표시하기 전에 인앱 메시지를 사용하여 사용자가 옵트인할 경우 수신할 수 있는 메시지 유형을 설명할 수 있습니다. 이를 푸시 프라이머라고 합니다.
 
 Braze에서 푸시 프라이머 인앱 메시지를 생성하려면 iOS, Android 또는 웹용 인앱 메시지를 생성할 때 버튼 클릭 동작 "푸시 권한 요청"을 사용하면 됩니다.
 
-## 전제 조건
+## 필수 조건
 
 This feature requires [button on-click behavior](#button-actions), which is supported in the following minimum versions or later:
 
@@ -107,7 +107,7 @@ To add buttons to your in-app message, drag two **Button** blocks into your mess
 - **버튼 1:** 이를 '메시지 닫기'로 설정합니다. 이 버튼은 보조 버튼 또는 "지금 안 함" 옵션입니다.
 - **버튼 2:** 이를 "푸시 권한 요청"으로 설정합니다. 이 버튼은 기본 버튼 또는 "알림 허용" 옵션입니다.
 
-![In-app message composer with two buttons: "Allow notifications" and "Not now".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
+![In-app message composer with two buttons: "알림 허용" 및 "지금은 안함"을 선택합니다.]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## 4단계: 배송 예약
 
@@ -115,11 +115,15 @@ To add buttons to your in-app message, drag two **Button** blocks into your mess
 
 이상적인 시기는 다양하지만, Braze는 사용자가 앱이나 사이트에서 가치를 느끼기 시작했거나 푸시 알림으로 해결할 수 있는 강력한 요구 [사항](https://www.braze.com/resources/videos/mapping-high-value-actions)(예: 주문 후 배송 추적 정보를 제공하려는 경우)이 있을 때까지 기다릴 것을 제안합니다. 이렇게 하면 프롬프트가 브랜드에만 도움이 되는 것이 아니라 고객에게도 도움이 됩니다.
 
-![Action-based delivery settings to send to users who performed the custom event of "Add to Watch List".]({% image_buster /assets/img_archive/push_primer_trigger.png %})
+!["관심 목록에 추가"라는 커스텀 이벤트를 수행한 사용자에게 보낼 실행 기반 전달 설정입니다.]({% image_buster /assets/img_archive/push_primer_trigger.png %})
 
 ## 5단계: 타겟 사용자
 
-푸시 프라이머 캠페인의 목표는 사용자가 푸시 메시징에 옵트인하도록 유도하는 것이므로 이미 옵트인한 사용자를 타겟팅하고 싶지 않을 것입니다. 이렇게 하려면 `Push Subscription Status is not Opted In`에 세그먼트 또는 필터를 추가합니다.
+푸시 프라이머 캠페인의 목표는 아직 푸시 권한을 부여하지 않은 모든 기기의 사용자에게 푸시 권한을 부여하라는 메시지를 표시하는 것입니다. 여기에는 처음 사용하는 사용자나 새 기기를 구입하거나 애플리케이션을 다시 설치하는 기존 사용자가 포함될 수 있습니다. 푸시 프라이머 캠페인을 올바르게 타겟팅하려면 `Foreground Push Enabled For App is false` 에 필터를 추가하세요. 이 필터는 아직 포그라운드 푸시 알림에 옵트인하지 않은 개별 앱 설치를 식별합니다.
+
+{% alert important %}
+`Push Subscription Status is not Opted In` 같은 사용자 수준 필터를 사용하면 다른 기기에서 이미 옵트인한 사용자가 제외되어 새 기기에서 안내 메시지를 받지 못합니다.
+{% endalert %}
 
 그 외에도 가장 적절하다고 생각되는 추가 세그먼트를 결정할 수 있습니다. 예를 들어, 두 번째 구매를 완료한 사용자, 방금 계정을 만들어 회원이 된 사용자 또는 일주일에 두 번 이상 앱을 방문하는 사용자를 타겟팅할 수 있습니다. 이러한 중요한 세그먼트의 사용자를 타겟팅하면 사용자가 푸시 사용을 허용하고 옵트인할 가능성이 높아집니다.
 

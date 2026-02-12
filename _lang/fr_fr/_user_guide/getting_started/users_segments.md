@@ -7,7 +7,7 @@ description: "Cet article donne un aperçu des utilisateurs et des segments, en 
 
 ---
 
-# Pour commencer : Utilisateurs et segmentations
+# Pour démarrer : Utilisateurs et segmentations
 
 Comprendre vos utilisateurs et les cibler efficacement est crucial pour envoyer des campagnes marketing personnalisées et ciblées. Cet article donne un aperçu des utilisateurs et des segments, en soulignant leur importance et la façon dont ils peuvent être exploités pour engager votre audience.
 

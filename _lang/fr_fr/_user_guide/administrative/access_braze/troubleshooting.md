@@ -1,6 +1,6 @@
 ---
 nav_title: Résolution des problèmes
-article_title: Résolution des problèmes de Braze Access
+article_title: "Résolution des problèmes de l'accès à Braze"
 page_order: 8
 page_type: reference
 description: "Cet article vous guide dans la résolution des problèmes que vous pouvez rencontrer lorsque vous essayez d'accéder à Braze."
@@ -61,4 +61,23 @@ Si le problème se produit dans tous les navigateurs, essayez les solutions suiv
 
 Si vous avez résolu les problèmes précédents et que votre tableau de bord ne se charge toujours pas ou ne fonctionne toujours pas comme prévu, contactez l ['assistance.]({{site.baseurl}}/braze_support/)
 
+## L'utilisateur n'appartient à aucun espace de travail
 
+Vérifiez-le en allant dans **Paramètres** > **Utilisateurs de l'entreprise** et en vérifiant les autorisations de l'utilisateur au niveau de l'espace de travail. Ajoutez les espaces de travail nécessaires à **Espaces de travail**.
+
+## Résolution des problèmes en tant que nouvel utilisateur
+
+Si vous êtes un nouvel utilisateur de Braze et que vous avez des difficultés à vous connecter ou à accéder à votre compte pour la première fois, suivez ces étapes pour résoudre les problèmes les plus courants :
+
+### Je n'ai jamais reçu l'e-mail de bienvenue
+
+- Vérifiez votre dossier spam : Confirmez que l'e-mail d'activation du compte n'a pas été filtré dans votre dossier spam ou courrier indésirable.
+- Vérifiez votre adresse e-mail : Demandez à votre administrateur de vérifier l'adresse e-mail associée à votre nouveau compte Braze pour confirmer qu'elle est correcte.
+- Politiques informatiques : Confirmez auprès de votre équipe informatique qu'il n'existe pas de politiques en place susceptibles d'empêcher la réception de l'e-mail d'activation.
+
+### J'ai reçu l'e-mail, mais je ne parviens pas à configurer l'authentification à deux facteurs (2FA).
+
+- Réinitialisez 2FA : Si vous avez des difficultés à configurer 2FA, votre administrateur peut réinitialiser 2FA pour votre compte utilisateur dans les paramètres.
+- Ajoutez à nouveau l'utilisateur : Si les problèmes persistent, l'administrateur peut supprimer votre compte utilisateur du tableau de bord et vous réinscrire. Cela permet de créer un utilisateur avec les mêmes détails.
+
+Si le problème persiste après ces étapes, contactez le [service d'assistance]({{site.baseurl}}/braze_support/) pour obtenir de l'aide.

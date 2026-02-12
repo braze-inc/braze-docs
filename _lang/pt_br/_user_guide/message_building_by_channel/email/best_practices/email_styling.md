@@ -1,6 +1,6 @@
 ---
 nav_title: Aplicação de estilo em e-mails
-article_title: Aplicação de estilo em e-mails
+article_title: Estilo de e-mail
 page_order: 2
 page_type: reference
 description: "Este artigo descreve as práticas recomendadas de estilo de e-mail que devem ser consultadas ao criar suas campanhas de e-mail."
@@ -32,6 +32,10 @@ O texto do pré-cabeçalho em um e-mail comunica o ponto principal da mensagem d
 
 A quantidade de texto visível do pré-cabeçalho depende do cliente de e-mail do usuário e do tamanho da linha de assunto do e-mail. Em geral, sugerimos que os pré-cabeçalhos de e-mail tenham entre 50 e 100 caracteres.
 
+{% alert note %}
+O pré-cabeçalho pode fazer referência ao Liquid no corpo do e-mail, e o corpo do e-mail pode fazer referência ao Liquid no pré-cabeçalho. Isso ocorre porque o texto do pré-cabeçalho faz parte do corpo do e-mail quando você envia mensagens para os destinatários.
+{% endalert %}
+
 Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrever seus pré-cabeçalhos:
 
 1. As chamadas para ação entram em ação depois que os leitores abrem seu e-mail.
@@ -45,7 +49,7 @@ Aqui estão algumas práticas recomendadas que você deve ter em mente ao escrev
   - Fácil navegação
   - Texto grande
   - Espaço em branco generoso
-  - Corpo do texto curto e conciso
+  - Texto curto e conciso
   - Chamadas à ação claras
 
 ### Limites de caracteres do pré-cabeçalho
@@ -85,6 +89,10 @@ Certifique-se de limitar o tamanho de seu e-mail. Os corpos de e-mail com mais d
 |:-------------:|:----------------:|:------------------:|
 | Máximo de 25 KB |   Máximo de 60 KB   | Máximo de 600 pixels |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
+
+{% alert note %}
+Para salvar sua campanha de e-mail ou modelo, certifique-se de que o corpo do e-mail não exceda 400 KB.
+{% endalert %}
 
 ## Comprimento do texto
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Propriedades de entrada persistente
-article_title: Propriedades de entrada persistente
+article_title: Propriedades de Entrada Persistentes
 alias: "/persistent_entry/"
 page_type: reference
 description: "Este artigo de referência descreve como usar propriedades de entrada persistente em seu Canvas para enviar mensagens com mais curadoria e criar uma experiência de usuário final altamente refinada."
@@ -10,9 +10,11 @@ page_order: 5
 
 # Propriedades de entrada persistente
 
-> Quando um Canvas é disparado por um evento personalizado, uma compra ou uma chamada de API, você pode usar metadados da chamada de API, do evento personalizado ou do evento de compra para personalização em cada etapa do fluxo de trabalho do Canvas. 
+> Quando um Canvas é disparado por um evento personalizado, uma compra ou uma chamada de API, você pode usar metadados da chamada de API, do evento personalizado ou do evento de compra para personalização em cada etapa do fluxo de trabalho do Canvas. Você pode usar essas propriedades para enviar mensagens com mais curadoria.
 
-Antes desse recurso, as propriedades de entrada só podiam ser usadas na primeira etapa do canva. A capacidade de usar propriedades de entrada em toda a jornada do Canva permite que os clientes enviem mensagens com mais curadoria e criem uma experiência de usuário final altamente refinada.
+{% alert important %}
+As propriedades de entrada persistente são um artefato do editor original do Canva, portanto, há referências obsoletas a termos que permanecem para referência histórica. Para obter o editor de tela atualizado, consulte [Propriedades de entrada de tela e propriedades de evento]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/canvas_entry_properties_event_properties).
+{% endalert %}
 
 ## Uso de propriedades de entrada
 
@@ -77,7 +79,7 @@ url -X POST \
     }' \
 ```
  
-Nessa solicitação, o valor global de "food allergies" (alergias alimentares) é "none" (nenhuma). Para Customer_123, o valor é "dairy". As mensagens nesse Canva que contêm o snippet do Liquid {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} terão como modelo "dairy" para Customer_123 e "none" para todos os outros. 
+Nessa solicitação, o valor global de "food allergies" (alergias alimentares) é "none" (nenhuma). Para Customer_123,, o valor é "dairy" (laticínios). As mensagens neste Canva que contêm o snippet do Liquid {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} terão como modelo "dairy" para Customer_123 e "none" para todos os outros. 
 
 ## Caso de uso
 

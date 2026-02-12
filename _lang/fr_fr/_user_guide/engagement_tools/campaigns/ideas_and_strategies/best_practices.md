@@ -62,7 +62,7 @@ Pour garantir des évaluations plus élevées, demandez à vos utilisateurs prin
 - A utilisé ces applications plus de 10 fois au cours des 14 derniers jours
 - A dépensé plus de 50 dollars
 
-![Exemple de segmentation ciblant les utilisateurs intensifs d'une application.]({% image_buster /assets/img_archive/ratings_power_users.png %})
+![Un exemple de segmentation qui cible les utilisateurs intensifs d'une appli.]({% image_buster /assets/img_archive/ratings_power_users.png %})
 
 Le fait de visiter l’App Store prend du temps de la part de vos utilisateurs. Pour maximiser la probabilité qu’ils fournissent cet effort supplémentaire, demandez une évaluation ou une critique après qu’ils aient eu une expérience positive avec votre application. Par exemple, demandez-leur une fois qu’ils ont battu un niveau de jeu ou effectué un achat à l’aide d’un code de réduction. Notre article sur l' [abonnement aux données]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states) contient plus d'informations sur les moyens de s'assurer que votre demande correspond aux attentes des utilisateurs en matière de flux de travail.
 

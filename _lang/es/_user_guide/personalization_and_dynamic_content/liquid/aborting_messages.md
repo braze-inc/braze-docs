@@ -1,12 +1,12 @@
 ---
 nav_title: Anular mensajes
-article_title: Anular mensajes de Liquid
+article_title: Abortar mensajes Liquid
 page_order: 7
 description: "Este artículo de referencia trata sobre la cancelación de mensajes Liquid y algunos ejemplos de uso."
 
 ---
 
-# Anular mensajes
+# Abortar mensajes
 
 > Opcionalmente, puedes utilizar la etiqueta de mensaje `abort_message("optional reason for aborting")` Liquid dentro de condicionales para impedir el envío de un mensaje a un usuario. Este artículo de referencia enumera algunos ejemplos de cómo puede utilizarse esta función en campañas de marketing.
 

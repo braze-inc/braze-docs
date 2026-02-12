@@ -14,23 +14,19 @@ description: "Esta página aborda como usar regras de envio de mensagens no flux
 
 As regras de envio de mensagens se aplicam a um espaço de trabalho e são compostas por um tipo de mensagem e um número máximo de usuários acessíveis.
 
-- **Tipo de mensagem:** Define a que tipo de mensagem a regra será aplicada: campanha, Canva ou ambos, Canvas e campanhas.
-- **Máximo de usuários acessíveis:** Determina o tamanho do público que exigirá uma aprovação adicional.
-
-### Tipos de mensagens compartilhadas e usuários com alcance máximo
-
-Podem existir duas regras com o mesmo número de usuários acessíveis para o mesmo tipo de mensagem. Por exemplo, é possível definir um máximo de 10.000 usuários para o Canvas e 10.000 usuários para o Canvas e as campanhas. 
+- **Tipo de mensagem:** Define a que tipo de mensagem a regra é aplicada: campanha, Canva ou ambos, Canvas e campanhas.
+- **Máximo de usuários acessíveis:** Determina o tamanho do público que requer uma aprovação adicional.
 
 ### Aprovadores separados
 
 Duas regras podem compartilhar o mesmo usuário máximo para que você possa organizar e separar suas regras por aprovadores. Por exemplo, você cria as duas regras a seguir:
 
-- Regra A para o Canvas com um máximo de 100.000 usuários com aprovadores na sua equipe jurídica
+- Regra A para o Canvas com um máximo de 100.000 usuários com aprovadores em sua equipe jurídica
 - Regra B para o Canvas com um máximo de 100.000 usuários com aprovadores na sua equipe de marketing 
 
 ### Não há usuários acessíveis sobrepostos
 
-Não é possível definir regras com um número sobreposto de usuários para o mesmo tipo de mensagem. Por exemplo, a seguinte regra de envio de mensagens **não pode** ser definida: 
+Para evitar confusão, não é possível definir regras idênticas com um número sobreposto de usuários para o mesmo tipo de mensagem e aprovadores. Por exemplo, a seguinte regra de envio de mensagens **não pode** ser definida: 
 
 - Regra C para o Canva com um máximo de 10.000 usuários 
 - Regra D para o Canva com um máximo de 1.000.000 de usuários
@@ -58,12 +54,12 @@ Você pode criar até cinco regras de envio de mensagens.
 
 ### Etapa 2: Determinar o lançamento com aprovação (opcional)
 
-Selecione **Permitir lançamento com aprovação**. Em seguida, em **Com aprovação de**, selecione os aprovadores que têm permissão para aprovar o Canva ou a campanha se o máximo for atingido.
+Selecione **Permitir lançamento com aprovação**. Em seguida, para **Com aprovação de**, selecione os aprovadores que têm permissão para aprovar o Canva ou a campanha se o máximo for atingido.
 
 Observe os seguintes detalhes sobre o envio de mensagens com aprovação:
 
 - Se o máximo for atingido e um aprovador for selecionado, o usuário do Braze com a permissão de aprovação poderá selecionar **Aprovado** no menu suspenso de aprovação do **público-alvo**.
-- Se o máximo for atingido e uma aprovação não for selecionada, o Canva ou a campanha será impedida de ser lançada.
+- Se o máximo for atingido e um aprovador não for selecionado, o lançamento do Canva ou da campanha será impedido.
 
 ![A etapa "Resumo" do fluxo de trabalho do Canva que mostra que você precisa de uma aprovação para iniciar.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 

@@ -33,17 +33,17 @@ Die Integration von Braze und Clarisights lässt den Import von Daten aus Kampag
 Mit der Integration von Braze und Clarisights können Nutzer:innen verschiedene Visualisierungen und Tabellen erstellen, um Insights aus den von ihnen erstellten Kampagnen zu gewinnen. Beliebte Anwendungsfälle sind unter anderem:
 
 {% tabs %}
-{% tab Bessere Sichtbarkeit %}
+{% tab Better visibility %}
 Bessere Sichtbarkeit der gesamten Performance von Kampagnen und Canvase.
 
 ![Eine Grafik mit einem Beispiel für eine bessere Lebensfähigkeit in der Clarisights-Plattform. Diese Grafik enthält Statistiken über die Öffnungen von Kampagnen und Canvas, Klicks, gesendete Daten, Konversionen usw.]({{site.baseurl}}/assets/img/clarisights/overall_view.png)
 {% endtab %}
-{% tab Detaillierte Berichterstattung %}
+{% tab Granular reporting %}
 Detaillierte Berichte für Kampagnen und Canvase.
 
 ![Eine Grafik mit granularen Berichten, wie z.B. "insgesamt gesendet nach Kanal" und "Konversionsrate".]({{site.baseurl}}/assets/img/clarisights/unified_dashboard.png)
 {% endtab %}
-{% tab Einheitliche Dashboards %}
+{% tab Unified dashboards %}
 Einheitliche Dashboards für CMOs und CXOs.
 
 ![Eine Grafik mit einem Beispiel für vereinheitlichte Dashboards.]({{site.baseurl}}/assets/img/clarisights/granular_reporting.png)
@@ -61,7 +61,7 @@ Um Braze-Daten mit Clarisights zu synchronisieren, müssen Sie einen Braze-Konne
 
 Um Braze als Datenquelle in Ihre Clarisights-Berichte aufzunehmen, navigieren Sie zu **Neuer Bericht erstellen**. Benennen Sie Ihren Bericht und wählen Sie **Braze** als Datenquelle in der daraufhin angezeigten Aufforderung aus. Sie können auch die Metriken und Dimensionen auswählen, die in den Bericht aufgenommen werden sollen. Wenn Sie fertig sind, wählen Sie **Bericht erstellen**. 
 
-Die Daten aus Braze werden ab dem Zeitpunkt des nächsten geplanten Datenimports fließen. Wenden Sie sich an Ihren Customer-Success-Manager von Clarisights, um Anfragen für längere Zeiträume zu stellen. 
+Die Daten aus Braze werden ab dem Zeitpunkt des nächsten geplanten Datenimports fließen. Wenden Sie sich an Ihren Customer-Success-Manager:in von Clarisights, um Anfragen für längere Laufzeiten zu stellen. 
 
 ![Clarisight-Berichtseinstellungen mit Feldern für Name und Datenquelle. In diesem Beispiel wird "Braze" als Datenquelle ausgewählt.]({{site.baseurl}}/assets/img/clarisights/braze_report.png)
 

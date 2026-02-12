@@ -28,14 +28,14 @@ O Braze não tem controle sobre a ordem de exibição quando o corpo da mensagem
 
 ### O preço do MMS e do SMS é diferente?
 
-MMS e SMS têm custos diferentes e são cobrados separadamente com base no volume. Entre em contato com a equipe de integração da Braze para obter informações sobre preços.
+MMS e SMS têm custos diferentes e são cobrados separadamente com base no volume. Entre em contato com a equipe da Braze Onboarding para obter informações sobre preços.
 
 ### O MMS requer um processo de integração separado?
 
 Não! O MMS agora está incluído em nosso processo de integração de SMS. Os clientes existentes que já passaram pela integração podem começar a enviar campanhas MMS depois de concluir as etapas a seguir:
 
 1. Comprar MMS.
-2. Entre em contato com a equipe de integração da Braze para solicitar que o recurso MMS seja ativado. Isso ativará o MMS e um grupo de inscrições de SMS/MMS será criado ou atualizado para você.
+2. Entre em contato com a equipe de integração do Braze para solicitar que o recurso MMS seja ativado. Isso ativará o MMS e um grupo de inscrições de SMS/MMS será criado ou atualizado para você.
 
 Em seguida, a equipe de integração da Braze garantirá que seus códigos curtos e longos estejam ativados (nos EUA e no Canadá) para MMS. Eles também atualizarão seus grupos de inscrições para mostrar os números atuais que foram adicionados ou ativados para MMS. Depois que essas etapas forem concluídas, você poderá enviar mensagens MMS imediatamente a partir do nosso criador de mensagens SMS nativo.
 

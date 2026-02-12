@@ -30,7 +30,7 @@ Para seleccionar un intervalo de fechas, ve a la página **de análisis de** la 
 ### Paso 2: Seleccione un evento de retención
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 A continuación, ve a la sección **Retención de campaña**. La retención de campaña le muestra la tasa en la que cualquier usuario que ha recibido esta campaña específica ha realizado un evento de retención (especificado por usted en el informe de retención) durante los 30 días desde el momento en que recibió la campaña.
 
@@ -57,7 +57,7 @@ Una vez generado el informe, no se puede volver a ejecutar con el mismo evento d
 El informe sólo mostrará los días en los que la campaña o el Canvas enviaron mensajes. Para algunas campañas y lienzos, eso puede significar que el informe sólo muestre un día si sólo se envió una vez. Si es recurrente o se activa, es posible que aparezcan varios días en la tabla.
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
 ![Informe completo]({% image_buster /assets/img/campaign_retention3.png %})
 
@@ -83,7 +83,7 @@ Un usuario que complete el evento varias veces durante un periodo de más de 30 
 
 La forma de leer el gráfico del informe de retención para una columna del día tres sería Y% o Y número de usuarios (en función de las unidades elegidas) que realizaron el evento tres o más días después de recibir la campaña el día Z.
 
-![Informe escalonado]({% image_buster /assets/img/campaign_retention3.png %})
+![Informe rodante]({% image_buster /assets/img/campaign_retention3.png %})
 
 Como otro ejemplo, refiriéndonos a la tabla de la imagen anterior, el 25 de marzo, un total de 38 usuarios realizaron el evento de retención. La retención en el día cero fue del 68,42%, lo que significa que el 68,42% de los usuarios realizaron el evento de retención cero o más días (en el día cero o más tarde) después de recibir la campaña. La retención el séptimo día fue del 57,89%, lo que significa que el 57,89% de los usuarios realizaron el evento siete días o más (el séptimo día o más tarde) después de recibir la campaña.
 
@@ -121,14 +121,14 @@ Algunos casos de uso para mostrar el rendimiento por variante:
 - Comprueba cómo es la retención si no enviaste ningún mensaje indagando en los datos de retención del grupo de control.
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 
-![Vista por variante]({% image_buster /assets/img/variant_view.png %})
+![Ver por variante]({% image_buster /assets/img/variant_view.png %})
 
 {% endtab %}
 {% tab Canvas %}
 
-![Vista por variante]({% image_buster /assets/img/variant_view_canvas.png %})
+![Ver por variante]({% image_buster /assets/img/variant_view_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ Algunos casos de uso para mostrar el rendimiento por variante:
 - **Intervalo de fechas**: Establecido en la página **Detalles de** la campaña o del lienzo, el intervalo de fechas incluye a todos los usuarios que recibieron la campaña o el lienzo durante esta ventana, y de esos usuarios, aparecerán en el informe los datos de aquellos que realizaron su evento de retención durante el intervalo de fechas. Cada día se mide la tasa de retención, el porcentaje de cambio respecto al grupo de control y la confianza.
 - **Tasa de retención**: Muestra la tasa de retención por variante. La tasa de retención equivale al número de usuarios que han realizado el evento de retención dividido por el total de usuarios que han recibido la campaña o Canvas.
 - **Porcentaje de cambio respecto al control**: Cuantifica el cambio porcentual por variante respecto al grupo de control.
-- **Confianza**: {% multi_lang_include metrics.md metric='Confidence' %} Braze compara la tasa de conversión de cada variante con la tasa de conversión del control mediante un procedimiento estadístico llamado Prueba Z para calcular un porcentaje de [confianza]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence).
+- **Confianza**: {% multi_lang_include analytics/metrics.md metric='Confidence' %} Braze compara la tasa de conversión de cada variante con la tasa de conversión del control mediante un procedimiento estadístico llamado Prueba Z para calcular un porcentaje de [confianza]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence).
 - **Unidades**: Puede ajustar las unidades entre el porcentaje de usuarios y el número de usuarios en la esquina superior derecha del gráfico, las unidades específicas pueden resultar más significativas a la hora de juzgar el impacto de una campaña o Canvas.
 - **Gráfico de variante**: Este gráfico resume los resultados por variante para el intervalo de fechas seleccionado.
 

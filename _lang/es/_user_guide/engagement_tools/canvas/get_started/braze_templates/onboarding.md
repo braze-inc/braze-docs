@@ -40,13 +40,13 @@ Vamos a ajustar los detalles del Canvas para reflejar nuestro objetivo.
 3\. Actualiza la descripción para especificar que el Canvas mapea un recorrido del usuario que fomenta la confianza y la fidelización de los usuarios.
 4\. Añade la etiqueta **Incorporación** para que podamos filtrarla en la página de inicio de Canvas.
 
-![El nuevo nombre, descripción y etiqueta para el Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
+![El nuevo nombre, descripción y etiqueta del Canvas.]({% image_buster /assets/img/canvas_templates/onboarding_new_name_description.png %}){: style="max-width:60%;"}
 
 ### Paso 2: Asigna tus eventos de conversión
 
 A continuación, vamos a asignar nuestros eventos de conversión. Los eventos de conversión son un tipo de métrica que puede utilizarse para medir el éxito del Canvas. En **Nombre de evento personalizado**, selecciona **Enviar clic** como evento personalizado.
 
-![Evento de conversión primaria - A con el tipo de conversión "Realiza evento personalizado" con el nombre de evento personalizado "Clic de correo electrónico". Hay un plazo de 4 días para la conversión.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
+![Evento de conversión primaria - A con el tipo de conversión "Realiza evento personalizado" con el nombre de evento personalizado "Clic de correo electrónico". Hay un plazo de conversión de 4 días.]({% image_buster /assets/img/canvas_templates/onboarding1.png %})
 
 Esto significa que los nuevos usuarios tienen hasta cuatro días para hacer clic en el correo electrónico de bienvenida. En este caso, queremos que nuestros nuevos usuarios sientan la urgencia de interactuar con PantsLabyrinth y suscribirse a una entrega recurrente de ropa de temporada.
 

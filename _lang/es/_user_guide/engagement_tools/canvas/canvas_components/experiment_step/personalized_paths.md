@@ -1,5 +1,5 @@
 ---
-nav_title: Recorridos personalizados 
+nav_title: Recorridos personalizados
 article_title: Recorridos personalizados en recorridos de experimentos 
 page_type: reference
 description: "Las rutas personalizadas le permiten personalizar cualquier punto del recorrido de Canvas para usuarios individuales en función de la probabilidad de conversión."
@@ -14,7 +14,7 @@ tool: Canvas
 
 Cuando se activan las Rutas Personalizadas en un paso de Ruta de Experimento, el comportamiento es ligeramente diferente dependiendo de si su Lienzo está configurado para enviarse una vez o para repetirse:
 
-- **Canvas de envío único:** Un grupo de usuarios es retenido en un grupo de retraso. Los usuarios restantes pasan a una prueba inicial para entrenar un modelo similar durante el tiempo que usted configure (al menos 24 horas para obtener los mejores resultados). Tras la prueba, se crea un modelo para saber qué comportamientos de los usuarios se asociaron a una mayor probabilidad de conversión en una ruta determinada. Por último, se envía a cada usuario del grupo de retardo por el camino que tiene más probabilidades de resultar en una conversión para ellos, basándose en los comportamientos que muestran y en lo que el modelo de semejanza aprendió durante la prueba inicial.
+- **Canvas de envío único:** Un grupo de usuarios es retenido en un grupo de retraso. Los usuarios restantes pasan a una prueba inicial para entrenar un modelo de predicción durante un tiempo que tú configures: al menos 24 horas para obtener los mejores resultados. Tras la prueba, se crea un modelo para saber qué comportamientos de los usuarios se asociaron a una mayor probabilidad de conversión en una ruta determinada. Por último, se envía a cada usuario del grupo de retraso por el camino que tiene más probabilidades de dar lugar a una conversión para él, basándose en los comportamientos que muestra y en lo que el modelo predictivo aprendió durante la prueba inicial.
 - **Lienzos recurrentes, desencadenantes de acciones y desencadenantes de API:** Se realiza un experimento inicial con todos los usuarios que entran en la Ruta de Experimento durante una ventana especificada. Para mantener la integridad del experimento, si un usuario recibe varios mensajes antes de que termine la ventana, se le asignará la misma variante cada vez. Tras la ventana de experimentación, se envía a cada usuario por el camino que tiene más probabilidades de resultar en una conversión para él.
 
 ## Uso de rutas personalizadas
@@ -27,7 +27,9 @@ Añada una [Ruta de Experimento]({{site.baseurl}}/user_guide/engagement_tools/ca
 
 ### Paso 2: Configurar los ajustes de las rutas personalizadas
 
-Especifique el evento de conversión que debe determinar el ganador. Si no hay eventos de conversión disponibles, vuelve al primer paso de la configuración de Canvas y [asigna eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). Si elige un evento de conversión con aperturas o clics para determinar el ganador, sólo el primer paso de Mensaje en la ruta que genere aperturas o clics contribuirá a determinar el ganador. No se tienen en cuenta los pasos posteriores de la ruta.
+Especifique el evento de conversión que debe determinar el ganador. Si no hay eventos de conversión disponibles, vuelva al primer paso de la configuración de Canvas y [asigne eventos de conversión]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#choose-conversion-events). 
+
+Si eliges aperturas o clics como evento de conversión, asegúrate de que el primer paso de la ruta sea un [paso de Mensaje]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step). Braze sólo cuenta la interacción a partir del primer paso de Mensaje en cada ruta respectiva. Si la ruta comienza con un paso diferente (como un paso de Retraso o de Ruta de audiencia) y el mensaje llega más tarde, ese mensaje no se incluirá al evaluar el rendimiento.
 
 A continuación, ajuste la **Ventana de Experimento**. La **Ventana de Experimento** determina cuánto tiempo se enviará a los usuarios por todos los caminos antes de elegir el mejor camino para cada usuario del grupo de retardo. La ventana comienza cuando el primer usuario entra en el paso.
 
@@ -48,7 +50,7 @@ Esta opción enviará a los futuros usuarios por la mezcla de rutas según los p
 ### Paso 4: Añade tus rutas y lanza el Canvas
 
 {% tabs local %}
-{% tab Canvas de envío único %}
+{% tab Single-send Canvas %}
 
 Un único componente Ruta de experimento puede contener hasta cuatro rutas. Sin embargo, para los lienzos de un solo envío, puede añadir hasta tres rutas cuando las rutas personalizadas están activadas. La cuarta ruta debe reservarse para el grupo de retardo que Braze añade automáticamente a su experimento.
 
@@ -56,12 +58,12 @@ Termina de configurar tu Canvas como necesites y lánzalo. Cuando el primer usua
 
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_pending.png %}){: style="max-width:75%;" }
 
-Cuando pase la ventana del experimento y éste haya finalizado, Braze enviará a los usuarios del grupo de retraso a sus respectivas rutas con la mayor probabilidad personalizada de conversión basada en la recomendación del modelo de semejanza.
+Cuando pase la ventana del experimento y éste se complete, Braze enviará a los usuarios del grupo de retraso a sus respectivas rutas con la mayor probabilidad personalizada de conversión basada en la recomendación del modelo predictivo.
 
 ![]({% image_buster /assets/img/experiment_step/experiment_personalized_delay_group_complete.png %}){: style="max-width:75%;" }
 
 {% endtab %}
-{% tab Canvas recurrente o desencadenado por acción o API %}
+{% tab Recurring or action-triggered or API-triggered Canvas %}
 
 Puede probar hasta cuatro rutas en una única Ruta de Experimento. Añade tus rutas y termina de configurar tu Canvas como necesites, luego lánzalo.  
 
@@ -79,21 +81,21 @@ Cuando pase la ventana del experimento y éste se haya completado, todos los usu
 Si se han activado las rutas personalizadas, la vista de análisis se divide en dos pestañas: **Experimento inicial** y **trayectorias personalizadas**.
 
 {% tabs local %}
-{% tab Experimento inicial %}
+{% tab Initial Experiment %}
 
 La pestaña **Experimento inicial** muestra las métricas de cada ruta durante la ventana del experimento. Puede ver un resumen del rendimiento de todas las rutas para los eventos de conversión especificados.
 
 ![Resultados de un experimento inicial enviado para determinar la ruta de mejor rendimiento para cada usuario. Una tabla muestra el rendimiento de cada ruta en función de varias métricas para el canal de destino.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1.png %})
 
-Por defecto, la prueba busca asociaciones entre los eventos personalizados del usuario y sus preferencias de ruta. Este análisis detecta si los eventos personalizados aumentan o disminuyen la probabilidad de responder a una ruta determinada. Estas relaciones se utilizan para determinar a qué usuarios se asigna cada ruta una vez transcurrida la ventana del experimento.
+Por defecto, la prueba busca asociaciones entre los eventos personalizados del usuario y sus preferencias de ruta, o la variante de mensaje a la que mejor responde un usuario. Este análisis detecta si los eventos personalizados aumentan o disminuyen la probabilidad de responder a una ruta determinada. Estas relaciones se utilizan para determinar a qué usuarios se asigna cada ruta una vez transcurrida la ventana del experimento.
 
-Las relaciones entre los eventos personalizados y las preferencias de mensajes se muestran en la tabla de la pestaña **Experimento inicial**.
+Las relaciones entre los eventos personalizados y las preferencias de ruta se muestran en la tabla de la pestaña **Experimento inicial**.
 
 ![]({% image_buster /assets/img_archive/experiment_personalized_analytics_custom_data.png %})
 
-Si la prueba no puede encontrar una relación significativa entre los eventos personalizados y las preferencias de ruta, la prueba volverá a un método de análisis basado en la sesión.
+Si la prueba no puede encontrar una relación significativa entre los eventos personalizados y las preferencias de ruta, la prueba vuelve a un método de análisis basado en la sesión, y no se muestran tablas de datos de eventos personalizados.
 
-{% details Método de análisis retrospectivo %}
+{% details Fallback analysis method %}
 
 **Método de análisis basado en sesiones**<br>
 Si se utiliza el método alternativo para determinar las Rutas Personalizadas, la pestaña **Experimento Inicial** muestra un desglose de las variantes preferidas por los usuarios en función de una combinación de determinadas características.
@@ -104,7 +106,7 @@ Estas características son:
 - **Frecuencia:** Frecuencia de las sesiones
 - **Permanencia:** Cuánto tiempo llevan siendo usuarios
 
-![La tabla de características de los usuarios, que muestra qué usuarios se prevé que prefieran la Ruta 1 y la Ruta 2 en función de los tres grupos en los que se encuentran en cuanto a recurrencia, frecuencia y permanencia.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1_2.png %})
+![La tabla de características de los usuarios, que muestra qué usuarios se prevé que prefieran la Ruta 1 y la Ruta 2 en función de los tres contenedores en los que se encuentran en cuanto a antigüedad, frecuencia y permanencia.]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab1_2.png %})
 
 Piensa en la recencia como cuán reciente fue la última interacción contigo, en la frecuencia como cuán seguido interactúan contigo y en la permanencia como la duración total que llevan interactuando contigo. Agrupamos a los usuarios en "cubos" en función de estas tres cosas (como se explica en la tabla **Características de los usuarios** ) y luego vemos a qué cubo le gusta más cada ruta. Es como clasificar a los usuarios en cientos de listas diferentes en función de cuándo compraron por última vez con usted, con qué frecuencia compran y cuánto tiempo llevan siendo clientes.
 
@@ -124,7 +126,7 @@ Cada contenedor puede tener una contribución o "push" diferente hacia cada ruta
 {% enddetails %}
 
 {% endtab %}
-{% tab Caminos personalizados %}
+{% tab Personalized Paths %}
 
 La pestaña **Rutas personalizadas** muestra los resultados del experimento final, en el que los usuarios del grupo de retraso fueron enviados por la ruta con mejor rendimiento para ellos.
 
@@ -134,7 +136,7 @@ Las tres tarjetas de esta página muestran tu aumento proyectado, los resultados
 - **Resultados globales:** Los resultados del segundo envío basados en su evento de conversión.
 - **Resultados previstos:** Los resultados previstos del segundo envío en función de la métrica de optimización elegida si en su lugar hubiera enviado sólo la Variante Ganadora.
 
-![Pestaña Caminos personalizados para un lienzo. Las tarjetas muestran la elevación proyectada, las conversiones globales (con rutas personalizadas) y las aperturas únicas proyectadas (con ruta ganadora).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
+![Pestaña Caminos personalizados para un lienzo. Las tarjetas muestran el Ascenso Proyectado, las Conversiones Globales (con Rutas Personalizadas) y las Aperturas Únicas Proyectadas (con Ruta Ganadora).]({% image_buster /assets/img/experiment_step/experiment_personalized_analytics_tab2.png %})
 
 {% endtab %}
 {% endtabs %}

@@ -1,6 +1,6 @@
 ---
-nav_title: "Création d'un message RCS"
-article_title: "Création d'un message RCS"
+nav_title: Créer un message RCS
+article_title: Créer un message RCS
 page_order: 2
 alias: /create_rcs_message/
 description: "Cet article explique comment créer un message RCS."
@@ -9,7 +9,7 @@ channel:
   - RCS
 ---
 
-# Création d'un message RCS
+# Créer un message RCS
 
 > Les campagnes RCS sont parfaites pour atteindre directement vos clients et converser de manière programmatique avec eux. Vous pouvez utiliser Liquid et d’autres contenus dynamiques pour non seulement proposer une expérience originale à vos utilisateurs, mais aussi générer un environnement qui favorise et optimise une expérience utilisateur discrète avec votre marque.
 
@@ -17,12 +17,12 @@ channel:
 
 ### Étape 1 : Choisissez où créer votre message
 
-Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont mieux adaptées aux campagnes de communication simples et uniques, tandis que les Canvas sont mieux adaptés aux parcours client en plusieurs étapes.
+Vous ne savez pas si votre message doit être envoyé via une campagne ou un Canvas ? Les campagnes sont plus adaptées aux campagnes d'envoi de messages uniques et ciblés, tandis que les Canevas sont plus adaptés aux parcours utilisateurs en plusieurs étapes.
 
 {% tabs %}
-{% tab Campagne %}
+{% tab Campaign %}
 1. Allez dans **Messagerie** > **Campagnes** et sélectionnez **Créer une campagne**.
-2. Sélectionnez **SMS/MMS/RCS**ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
+2. Sélectionnez **SMS/MMS/RCS** ou, pour les campagnes ciblant plusieurs canaux, sélectionnez **Multicanal**.
 3. Donnez un nom clair et significatif à votre campagne.
 4. Ajoutez des [Teams]({{site.baseurl}}/user_guide/administrative/app_settings/manage_your_braze_users/teams/) et des [tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/) si nécessaire.
    * Les balises facilitent la recherche et l’identification des campagnes, et la création de rapports. Par exemple, lorsque vous utilisez le [générateur de rapports]({{site.baseurl}}/user_guide/analytics/reporting/report_builder/), vous pouvez filtrer les éléments en fonction de certaines étiquettes spécifiques.
@@ -47,7 +47,7 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 {% endtab %}
 {% tab Canvas %}
 1. [Créez votre canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) à l'aide du compositeur de canvas.
-2. Après avoir configuré votre Canvas, ajoutez une étape de **SMS/MMS/RCS** Message dans le générateur du canvas. 
+2. Après avoir configuré votre canvas, ajoutez une étape **SMS/MMS/RCS** Message dans le générateur de canvas. 
 3. Donnez un nom clair et significatif à votre étape.
 4. Sélectionnez un [groupe d'abonnement]({{site.baseurl}}/sms_rcs_subscription_groups/) compatible avec RCS. Lors de la sélection d’un groupe d’abonnement, Braze ajoute automatiquement un filtre de segmentation, garantissant que seuls les utilisateurs abonnés recevront la campagne. Seuls les codes longs et les codes courts appartenant à ce groupe d'abonnement seront utilisés pour le ciblage des utilisateurs.
 - **Repli sur le SMS :** Braze recommande vivement que chaque groupe d'abonnement qui contient un expéditeur RCS comprenne également au moins un code SMS de repli. Ceci est important pour la livrabilité dans les cas où les messages RCS n'aboutissent pas. Cela peut s'expliquer par l'incompatibilité de l'appareil de l'utilisateur et la couverture incomplète de l'opérateur dans un pays ou une région donné(e). En activant la fonction SMS fallback, votre message sera toujours transmis à l'utilisateur et vous ne manquerez jamais l'occasion d'entrer en contact avec lui.
@@ -64,10 +64,10 @@ Si tous les messages de votre campagne vont être similaires ou avoir le même c
 
 Pour votre type de message RCS, choisissez entre **Texte** ou **Média**.
 
-![Options permettant de sélectionner un type de message texte ou média.]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
+![Options permettant de sélectionner un type de message Texte ou Média.]({% image_buster /assets/img/rcs/rcs_text_media.png %}){: style="max-width:65%;"}
 
 {% tabs %}
-{% tab Texte %}
+{% tab Text %}
 Comme leur nom l'indique, les messages texte RCS se concentrent sur le texte en tant que support. Si vous tapez jusqu'à 160 caractères, le message RCS est facturé comme un message de texte seul (ou "de base"). Si vous dépassez 160 caractères ou utilisez un élément riche, le message est facturé comme un message RCS riche (ou "simple") (et la limite de caractères passe à 3072 caractères). 
 
 #### Fonctionnalités
@@ -77,7 +77,7 @@ Comme leur nom l'indique, les messages texte RCS se concentrent sur le texte en 
     - Les **réponses suggérées** sont des boutons contenant des suggestions de réponses sur lesquelles les utilisateurs peuvent cliquer et qui sont pré-remplies dans leur saisie de texte, ce qui leur évite d'avoir à réfléchir à une réponse en leur proposant un ensemble limité de choix. 
     - Les **actions suggérées** sont des boutons qui déclenchent une action sur l'appareil de l'utilisateur. Ils se composent généralement d'un ou deux mots descriptifs et d'une icône visuelle pour aider l'utilisateur à comprendre ce que fait le bouton. Braze prend actuellement en charge les actions suggérées OpenURL. Le fonctionnement est similaire à celui d'une URL : les utilisateurs qui sélectionnent le bouton sont redirigés vers une page web ou un autre emplacement/localisation identifié par une URL. 
 
-![Un GIF de trois actions suggérées pour un message RCS promouvant les styles de mode en vogue : "La royauté des contes de fées", "L'académisme audacieux" et "Montrez-moi vos autres styles".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
+![Un GIF de trois actions suggérées pour un message RCS promouvant les styles de mode en vogue : "La royauté des contes de fées", "L'université à la mode" et "Montrez-moi vos autres styles".]({% image_buster /assets/img/rcs/rcs_suggested_actions.gif %}){: style="max-width:70%;"}
 
 #### Considérations
 
@@ -87,7 +87,7 @@ Comme leur nom l'indique, les messages texte RCS se concentrent sur le texte en 
 - Dans certains cas, il peut être plus rentable d'envoyer des messages texte plus longs par RCS que par SMS. En effet, les messages SMS plus longs sont décomposés en plusieurs segments, chacun d'entre eux étant facturable, alors que les messages RCS sont plutôt facturés par message. Contactez votre gestionnaire de compte Braze pour plus de détails et de conseils.
 {% endtab %}
 
-{% tab Les médias %}
+{% tab Media %}
 Les messages média RCS vous permettent d'utiliser des formats média attrayants qui ne sont pas possibles avec les SMS. Il s'agit notamment de fichiers d'images, de vidéos et de documents. Ces options médiatiques existent pour vous aider à engager votre audience encore plus profondément et permettre des cas d'utilisation entièrement nouveaux. Pour l'instant, seul le téléchargement d'images est pris en charge par la [bibliothèque multimédia]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/). 
 
 #### Fonctionnalités
@@ -127,7 +127,8 @@ Avant de poursuivre, lisez nos [lignes directrices concernant les limites des me
 
 ### Étape 4 : Prévisualiser et tester votre message
 
-Braze recommande toujours de prévisualiser et de tester votre message avant de l’envoyer. Accédez à l'onglet **Test** pour envoyer un RCS de test à des groupes de test de contenu ou à des utilisateurs individuels, ou prévisualiser le message en tant qu'utilisateur directement dans Braze.
+Parce que le rendu RCS est contrôlé par le système d'exploitation de l'utilisateur, le fabricant de l'appareil, l'opérateur et l'application d'envoi de messages (par exemple, Google Messages vs. Apple Messages), l'apparence des messages peut varier. Par conséquent, l'aperçu du RCS affiché dans Braze peut ne pas correspondre exactement à ce que l'utilisateur final reçoit en fin de compte. Les différences peuvent porter sur la mise en page, la taille des médias, les boutons, les éléments de marque ou les fonctionnalités prises en charge. Braze recommande toujours de prévisualiser et de tester votre message avant de l’envoyer. Utilisez l'onglet **Test** pour envoyer un RCS de test à des groupes de test de contenu ou à des utilisateurs individuels, et prévisualiser le message en tant qu'utilisateur directement dans Braze. Cependant, le rendu final doit toujours être validé sur des appareils réels dans la mesure du possible, car Braze ne peut pas garantir une parité parfaite pour toutes les combinaisons d'OS, d'appareils et d'opérateurs.
+
 
 ### Étape 5 : Créer le reste de votre campagne ou de votre Canvas
 
@@ -143,9 +144,11 @@ Spécifiez vos contrôles de réception/distribution, par exemple en autorisant 
 
 #### Étape 5.2 : Choisir les utilisateurs à cibler
 
-Ciblez les utilisateurs en choisissant des segments ou des filtres pour réduire votre audience. Vous devriez avoir déjà sélectionné le groupe d'abonnement, qui restreint les utilisateurs en fonction du niveau ou de la catégorie de communication qu'ils souhaitent avoir avec vous. 
+Ciblez les utilisateurs en choisissant des segments ou des filtres pour réduire votre audience. Vous devriez avoir déjà sélectionné le groupe d'abonnement, qui restreint les utilisateurs en fonction du niveau ou de la catégorie de communication qu'ils souhaitent avoir avec vous.
 
-Ensuite, vous sélectionnerez l'audience la plus large à partir de vos segments et vous restreindrez davantage cette segmentation à l'aide de [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) facultatifs. Vous obtiendrez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif à l'heure actuelle. Gardez à l’esprit que l’appartenance à un segment exact est toujours calculée juste avant l’envoi du message.
+{% multi_lang_include target_audiences.md %}
+
+Ensuite, vous sélectionnez l'audience la plus large à partir de vos segments et vous affinez cette segmentation à l'aide de [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) facultatifs. Vous recevez automatiquement un aperçu de ce à quoi ressemble la population de ce segment approximatif. N'oubliez pas que l'appartenance exacte à un segment est toujours calculée avant l'envoi du message.
 
 {% alert tip %}
 Vous souhaitez utiliser le reciblage RCS pour cibler les utilisateurs en fonction de leurs interactions par SMS et RCS ? Reportez-vous à la rubrique " [reciblage"]({{site.baseurl}}/sms_mms_rcs_user_retargeting/).

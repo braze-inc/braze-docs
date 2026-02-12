@@ -1,5 +1,5 @@
 ---
-nav_title: Exportação de eventos de segurança com S3
+nav_title: Exportação de eventos de segurança com o S3
 article_title: Exportação de configurações de segurança com S3
 page_order: 1
 page_type: reference
@@ -8,7 +8,11 @@ description: "Este artigo de referência aborda como exportar automaticamente ev
 
 # Exportação de eventos de segurança com o Amazon S3
 
-> Você pode exportar automaticamente os Eventos de Segurança para o Amazon S3, um provedor de armazenamento em nuvem, com um trabalho diário que é executado à meia-noite UTC.  Uma vez configurado, você não precisa exportar manualmente os eventos de segurança do dashboard.
+> Você pode exportar automaticamente eventos de segurança para o Amazon S3, um provedor de armazenamento em nuvem, com um trabalho diário que é executado à meia-noite UTC. Após a configuração, não é necessário exportar manualmente os eventos de segurança do dashboard. O trabalho exporta os eventos de segurança das últimas 24 horas em formato CSV para o armazenamento S3 configurado. O arquivo CSV tem a mesma estrutura de um relatório exportado manualmente.
+
+{% alert note %}
+O limite de 10.000 linhas se aplica apenas ao download manual de relatórios CSV do dashboard. As exportações de eventos de segurança para o S3 não estão sujeitas a esse limite de linhas.
+{% endalert %}
 
 O Braze oferece suporte a dois métodos diferentes de autenticação e autorização do S3 para configurar a exportação do Amazon S3:
 
@@ -19,9 +23,9 @@ O Braze oferece suporte a dois métodos diferentes de autenticação e autoriza�
 
 Esse método gera uma chave secreta e um ID de chave de acesso que permite que o Braze se autentique como um usuário em sua conta da AWS para gravar dados em seu bucket.
 
-### Etapa 1: Crie um usuário de mensagem no app
+### Etapa 1: Criar um usuário de gerenciamento de identidade e acesso (IAM)
 
-Para recuperar a chave de acesso secreta e o ID da chave de acesso, será necessário criar um usuário de mensagem no app, seguindo as instruções em [Configurar sua conta da AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
+Para recuperar a chave de acesso secreta e o ID da chave de acesso, será necessário criar um usuário IAM, seguindo as instruções em [Configurar sua conta AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started-account-iam.html#create-an-admin).
 
 ### Etapa 2: Obter credenciais
 
@@ -36,7 +40,7 @@ Para recuperar a chave de acesso secreta e o ID da chave de acesso, será necess
 
 ### Etapa 3: Criar política
 
-1. Acesse **IAM** > **Políticas** > **Criar política** para adicionar permissões ao seu usuário. 
+1. Acesse **IAM** (Identity and Access Management) > **Políticas** > **Criar política** para adicionar permissões ao seu usuário. 
 2. Selecione **Criar sua própria política**, que concede permissões limitadas para que o Braze possa acessar apenas os buckets especificados.
 3. Especifique um nome de política de sua escolha.
 4. Insira o seguinte trecho de código na seção **Policy Document (Documento de política** ). Certifique-se de substituir "INSERTBUCKETNAME" pelo nome de seu bucket. Sem essas permissões, a integração falhará em uma verificação de credenciais e não será criada.
@@ -76,7 +80,7 @@ Agora, você está pronto para vincular suas credenciais da AWS à sua conta do 
     - Ao inserir essa chave, primeiro selecione **Test Credentials (Testar credenciais** ) para confirmar que suas credenciais funcionam.
 - Nome do bucket da AWS 
 
-![A página "Security Event Download" (Baixar evento de segurança) com conta Braze preenchida e IDs externas Braze.]({% image_buster /assets/img/security_export/security_event_download1.png %})
+![A página "Baixar evento de segurança" com a conta Braze preenchida e as IDs externas Braze.]({% image_buster /assets/img/security_export/security_event_download1.png %})
 
 {: start="4"}
 4\. Selecione **Salvar alterações**. 
@@ -92,7 +96,7 @@ O método ARN de função da AWS gera um nome de recurso amazônico (ARN) de fun
 ### Etapa 1: Criar política
 
 1. Faça login no console de gerenciamento da AWS como administrador da conta. 
-2. No console da AWS, acesse a seção **IAM** > **Políticas** e selecione **Criar política**.
+2. No console da AWS, acesse a seção **IAM** (Identity and Access Management) > **Políticas** e selecione **Criar política**.
 
 ![Uma página com uma lista de políticas e um botão para "Criar política".]({% image_buster /assets/img/security_export/policies.png %})
 
@@ -133,9 +137,9 @@ O método ARN de função da AWS gera um nome de recurso amazônico (ARN) de fun
 2. Selecione **AWS Role ARN**. 
 3. Note os identificadores, o ID da conta Braze e o ID externo Braze necessários para criar sua função.
 
-![A página "Security Event Download" (Baixar evento de segurança) com conta Braze preenchida e IDs externas Braze.]({% image_buster /assets/img/security_export/security_event_download2.png %})
+![A página "Baixar evento de segurança" com a conta Braze preenchida e as IDs externas Braze.]({% image_buster /assets/img/security_export/security_event_download2.png %})
 
-4. No console da AWS, acesse a seção **IAM** > **Funções** > **Criar função**. 
+4. No console da AWS, acesse a seção **IAM** (Identity and Access Management) > **Funções** > **Criar função**. 
 5. Selecione **Outra conta AWS** como o tipo de seletor de entidade confiável. 
 6. Forneça sua ID de conta Braze, marque a caixa **Exigir ID externa** e, em seguida, insira sua ID externa Braze. 
 7. Selecione **Avançar** quando terminar.
@@ -165,7 +169,7 @@ Sua função recém-criada aparecerá na lista!
 {: start="2"}
 2\. No Braze, acesse **Configurações** > **Configurações da empresa** > Configurações **administrativas** > **Configurações de segurança** e role até a seção **Baixar evento de segurança**.
 
-![Seção "Security Event Download" (Baixar evento de segurança) com um botão de alternância ativado para "Export to AWS S3" (Exportar para AWS S3).]({% image_buster /assets/img/security_export/security_event_download3.png %})
+![Seção "Security Event Download" (Baixar eventos de segurança) com um botão de alternância ativado para "Export to AWS S3" (Exportar para AWS S3).]({% image_buster /assets/img/security_export/security_event_download3.png %})
 
 {: start="3"}
 3\. Certifique-se de que **o ARN da função AWS** esteja selecionado e, em seguida, insira o ARN da função e o nome do bucket S3 da AWS nos campos designados.

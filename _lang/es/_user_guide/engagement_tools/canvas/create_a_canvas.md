@@ -1,6 +1,6 @@
 ---
-nav_title: Construir Canvas
-article_title: Construir Canvas
+nav_title: Construye lienzos
+article_title: Construye lienzos
 page_order: 1
 layout: dev_guide
 guide_top_header: "Construir Canvas"
@@ -39,9 +39,6 @@ guide_featured_list:
   - name: Mensajes dentro de la aplicación en Canvas
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/canvas_by_channel/in-app_messages_in_canvas/
     image: /assets/img/braze_icons/phone-02.svg
-  - name: Comportamientos de avance
-    link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/advancement/
-    image: /assets/img/braze_icons/users-01.svg
  
 guide_menu_title: "Additional resources"
 guide_menu_list:

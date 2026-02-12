@@ -1,24 +1,24 @@
 ---
 nav_title: Diretrizes da marca
-article_title: Diretrizes da marca geradas por IA
+article_title: Diretrizes de marca geradas por IA
 page_order: 2.2
 description: "Este artigo de referência aborda as diretrizes da marca para o assistente de copywriting de IA, um recurso que permite adaptar o estilo da cópia gerada pelo assistente de copywriting de IA à voz e ao estilo de sua marca."
 ---
 
-# Geração de diretrizes da marca com o <sup>BrazeAITM</sup>
+# Gerar diretrizes de marca com BrazeAI<sup>TM</sup>
 
 > Adapte o estilo de sua cópia gerada por IA para que corresponda à voz e à personalidade de sua marca com as diretrizes personalizadas da marca.
 
-## Geração de diretrizes da marca {#steps}
+## Gerando diretrizes de marca {#steps}
 
 Siga estas etapas para criar diretrizes da marca no assistente de copywriting da IA. Você também pode criar diretrizes da marca na página de configurações [Diretrizes da marca]({{site.baseurl}}/user_guide/administrative/app_settings/brand_guidelines/).
 
 ### Etapa 1: Crie uma diretriz para a marca
 
-1. Em seu criador de mensagens, localize e selecione <i class="fa-solid fa-wand-magic-sparkles" title="IA Copywriter"></i> para [abrir o Assistente de Copywriting de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
+1. Do seu criador de mensagem, encontre e selecione <i class="fa-solid fa-wand-magic-sparkles" title="IA Copywriter"></i> para [abrir o assistente de copywriting de IA]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
 2. Selecione **Aplicar diretriz da marca** e, em seguida, **Criar uma diretriz da marca**.
 
-![Dropdown para "Aplicar diretrizes da marca" expandido com o botão "Criar uma diretriz da marca" em destaque.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
+![Dropdown para "Aplicar diretrizes de marca" expandido com o botão "Criar uma diretriz de marca" em foco.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
 
 {: start="3"}
 
@@ -26,7 +26,7 @@ Siga estas etapas para criar diretrizes da marca no assistente de copywriting da
 4. Para **Quando você usará essas diretrizes da marca?**, adicione detalhes para ajudar seus colegas (e você no futuro) a entender o contexto de uso dessa diretriz.
 5. Se quiser que essa seja a diretriz de marca padrão para o espaço de trabalho atual, marque **Usar como diretriz de marca padrão**.
 
-![Visualização da criação de diretrizes da marca.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Diretrizes da marca")
+![Visualização da criação da diretriz da marca.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
 
 ### Etapa 2: Descreva a personalidade de sua marca
 
@@ -50,7 +50,7 @@ Para **Exclusões**, liste qualquer linguagem ou estilo que não esteja alinhado
 
 Teste suas diretrizes para ver como elas se comportam. Expanda **Teste suas diretrizes** para gerar exemplos de cópia e ajuste conforme necessário.
 
-![Teste das diretrizes da marca com uma promoção sobre uma liquidação de primavera para linhas de assunto de e-mail.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
+![Testando diretrizes de marca com uma promoção sobre uma venda de primavera para linhas de assunto de e-mail.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
 
 ### Etapa 5: Salve suas diretrizes
 
@@ -60,7 +60,7 @@ Quando estiver satisfeito com suas diretrizes, selecione **Save brand guideline 
 Você pode alterar o idioma de saída independentemente do idioma em que seu texto está, mas nem a Braze nem a OpenAI garantem a qualidade da tradução. Sempre teste e verifique as traduções antes de usá-las.
 {% endalert %}
 
-## Edição de diretrizes existentes
+## Editando diretrizes existentes
 
 Para editar suas diretrizes de marca existentes:
 

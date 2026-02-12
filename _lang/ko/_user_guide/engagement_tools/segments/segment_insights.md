@@ -9,7 +9,7 @@ tool:
 description: "이 사용 방법 문서는 세그먼트 인사이트를 사용하는 방법, 해석하는 방법 및 공유하는 방법을 안내합니다."
 ---
 
-# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}세그먼트 인사이트
+# [![Braze 학습 과정]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} 세그먼트 인사이트
 
 > 세그먼트 인사이트 사용, 해석 및 공유 방법을 배우세요. 
 
@@ -19,14 +19,14 @@ description: "이 사용 방법 문서는 세그먼트 인사이트를 사용하
 
 대시보드의 **애널리틱스** 아래 **세그먼트 인사이트** 페이지로 이동하여 기준선과 비교하여 최대 10개의 서로 다른 세그먼트를 볼 수 있습니다.
 
-![기준 세그먼트인 '전체 사용자'와 '영국 사용자', '프랑스 사용자', '캘리포니아 사용자'의 세 세그먼트를 비교하는 세그먼트 인사이트 대시보드]({% image_buster /assets/img_archive/segment_insights.png %})
+![기준 세그먼트인 '전체 사용자'와 '영국 사용자', '프랑스 사용자', '캘리포니아 사용자'의 세 세그먼트를 비교하는 세그먼트 인사이트 대시보드.]({% image_buster /assets/img_archive/segment_insights.png %})
 
 기준 세그먼트는 사용자가 선택한 특정 세그먼트이거나 모든 사용자를 포함하는 세그먼트일 수 있습니다. 세그먼트 인사이트를 사용하여 다음 통계를 비교할 수 있습니다:
 
 | 측정 | 설명 | 산출식 |
 | --------------------- | ------------- | ------------- |
 | 일일 세션 수 | 세그먼트 사용자 세션의 평균 일일 수 | (총 세션 수) / (첫 세션 이후 일수) |
-| 첫 세션 이후 일수 | 세그먼트 사용자의 첫 세션과 현재까지의 평균 일수 | 오늘 ~ 최초 세션 날짜 |
+| 첫 세션 이후 일수 | 세그먼트 사용자의 첫 세션과 현재까지의 평균 일 수 | 오늘 ~ 최초 세션 날짜 |
 | 마지막 세션 이후 일수 | 세그먼트 사용자의 마지막 세션과 현재 세션 사이의 평균 일수 | 오늘 ~ 마지막 세션 날짜 |
 | 평생 수익(달러) | 세그먼트 사용자의 평균 평생 수익(달러) | 사용자 생애주기 지출액 |
 | 첫 구매 이후 일수 | 세그먼트 사용자의 첫 세션과 첫 구매 사이의 평균 일수 | 첫 구매 날짜 – 첫 세션 날짜 |
@@ -66,7 +66,7 @@ description: "이 사용 방법 문서는 세그먼트 인사이트를 사용하
 
 사용자가 구매자로 전환하도록 하는 것은 어려울 수 있으며, 새로운 비활성 또는 참여하지 않는 사용자를 직접 구매로 유도하려고 하면 사용자가 앱을 제거할 수 있습니다. 세그먼트 인사이트를 사용하면 뉴스레터 구독, 소셜 미디어 공유, 프로모션 메시지 등록 등 사용자가 아직 구매를 하지 않아도 구매 퍼널에서 더 나아가도록 유도하는 행동을 발견할 수 있습니다. For example, you can chart out the impact on purchases different behaviors within an eCommerce app.
 
-![소셜 미디어에 공유하고, 프로모션에 가입하고, 뉴스레터를 신청한 사용자에 대한 세그먼트 인사이트 분석 결과]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
+![소셜 미디어에 공유한 사용자, 프로모션에 가입한 사용자, 뉴스레터에 가입한 사용자에 대한 세그먼트 인사이트 분석 결과입니다.]({% image_buster /assets/img_archive/Segment_Insights_Events1.png %})
 
 이 경우 현재 프로모션 메시지에 가입한 사용자가 상대적으로 적고 활동성이 높지 않지만, 이러한 사용자가 평생 더 높은 수익을 창출합니다. 수익을 늘리려면 온보딩 캠페인에 프로모션 메시지 등록 초대를 포함시키는 것이 좋습니다. 휴면 사용자의 재참여를 유도하려면 일반적인 [휴면 사용자 캠페인을]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users) 발송하고 후속 캠페인으로 [전환한 사용자를]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#converted-from-campaign-filter) 타겟팅하여 프로모션 메시지를 등록하도록 하는 것이 좋은 계획입니다.
 

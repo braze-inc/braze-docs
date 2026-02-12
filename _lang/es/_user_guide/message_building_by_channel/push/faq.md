@@ -1,7 +1,7 @@
 ---
 nav_title: Preguntas frecuentes
 article_title: Preguntas frecuentes sobre push
-page_order: 80
+page_order: 25
 description: "Este artículo aborda algunas de las preguntas más frecuentes que surgen al configurar campañas push."
 page_type: FAQ
 channel:

@@ -1,5 +1,5 @@
 ---
-nav_title: Jornadas do público 
+nav_title: Jornadas do público
 article_title: Jornadas do público 
 alias: /audience_paths/
 page_order: 1
@@ -31,7 +31,7 @@ Com as jornadas do público, você pode:
 
 ### Permitir tempo para avaliações de usuários
 
-![Canva mostrando uma postergação de 24 horas após uma etapa de Mensagem, seguida por uma jornada do público.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Canva mostrando uma postergação de 24 horas após uma etapa de Mensagem, seguida por uma Jornada do público.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Os usuários são avaliados assim que chegam à etapa da jornada do público. Depois de serem avaliados, eles passarão imediatamente para a próxima etapa. Isso torna importante permitir que uma janela de tempo apropriada passe se a Jornada do público for determinada por uma ação do usuário.
 
@@ -56,7 +56,7 @@ A captura de tela a seguir mostra o layout de uma etapa de Caminhos do público 
 
 Por exemplo, se quiser direcionar o envio de mensagens de integração para um grupo de usuários, poderá selecionar filtros de redirecionamento, como "Clicou no e-mail" e "Clicou na mensagem no app".
 
-![Uma jornada do público expandida com grupos para "Loves Asian Cuisine" (adora cozinha asiática), "Loves Latin Cuisine" (adora cozinha latina), "Loves European Cuisine" (adora cozinha europeia) e "Everyone Else" (todos os outros).]({% image_buster /assets/img/audience_path/audience_path3.png %})
+![Uma jornada do público expandida com grupos para "Adora cozinha asiática", "Adora cozinha latina", "Adora cozinha europeia" e "Todos os outros".]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 Depois que a etapa Jornada do público estiver concluída, cada grupo de público terá um ramo separado. Você pode continuar usando os Caminhos do Público para filtrar ainda mais seu público, ou continuar sua jornada no Canva com as etapas padrão do Canva. 
 
@@ -74,7 +74,7 @@ O verdadeiro poder dos Caminhos do público reside na capacidade de atribuir pri
 
 Ao atribuir alta prioridade a esses grupos, você pode direcionar usuários que se enquadram em filtros e segmentos específicos, enquanto ainda direciona usuários que podem não se encaixar nesses critérios específicos—tudo em uma única etapa do canva.
 
-![Uma jornada do público com grupos para "Likes Big Brand Shoes", "Likes Big Brand" e "Everyone Else".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+![Uma jornada do público com grupos para "Gosta de calçados de marca grande", "Gosta de marca grande" e "Todos os outros".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 Por exemplo, digamos que você queria enviar a um grupo de usuários anúncios de novos produtos. Você começaria classificando os filtros que se enquadram nesses produtos no topo da jornada do público. Se estivesse criando uma campanha de marketing para a empresa "Big Brand" e uma nova marca de varejo tivesse acabado de ser lançada, você poderia selecionar filtros como "Gosta de sapatos Big Brand" ou "Gosta de bolsas Big Brand" e enviar diferentes mensagens de e-mail com base no grupo filtrado em que eles se enquadram. 
 

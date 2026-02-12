@@ -1,6 +1,6 @@
 ---
-nav_title: Tratamiento de números de teléfono desconocidos
-article_title: Tratamiento de números de teléfono desconocidos
+nav_title: Gestionar números de teléfono desconocidos
+article_title: Manejar números de teléfono desconocidos
 description: "Este artículo de referencia explica cómo Braze gestionará los números de teléfono desconocidos de los usuarios de WhatsApp."
 page_type: reference
 channel:
@@ -8,7 +8,7 @@ channel:
 page_order: 50
 ---
 
-# Tratamiento de números de teléfono desconocidos
+# Gestionar números de teléfono desconocidos
 
 > Es posible que, después de poner en marcha WhatsApp con Braze, reciba mensajes de usuarios desconocidos. Los siguientes pasos describen cómo se procesan un usuario y un número no identificados.
 

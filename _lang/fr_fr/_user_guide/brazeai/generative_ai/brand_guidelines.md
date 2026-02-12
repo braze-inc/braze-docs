@@ -1,5 +1,5 @@
 ---
-nav_title: Directives de marque
+nav_title: Lignes directrices de la marque
 article_title: "Lignes directrices de la marque générées par l'intelligence artificielle."
 page_order: 2.2
 description: "Cet article de référence traite des directives de marque pour l'assistant de rédaction avec l’IA. Cette fonctionnalité vous permet d'adapter le style des textes générés par l'assistant de rédaction basé sur l'intelligence artificielle à la voix et au style de votre marque."
@@ -18,7 +18,7 @@ Procédez comme suit pour créer des directives de marque dans l'assistant de r�
 1. A partir de votre compositeur de messages, trouvez et sélectionnez <i class="fa-solid fa-wand-magic-sparkles" title="Intelligence artificielle Copywriter"></i> pour [ouvrir l'assistant de rédaction de l'intelligence artificielle]({{site.baseurl}}/user_guide/brazeai/generative_ai/ai_copywriting/#access).
 2. Sélectionnez **Appliquer la directive de marque**, puis **Créer une directive de marque**.
 
-![Le menu déroulant pour "Appliquer les directives de marque" a été élargi avec le bouton "Créer une directive de marque" en évidence.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
+![Le menu déroulant "Appliquer les directives de marque" a été élargi et le bouton "Créer une directive de marque" a été mis en évidence.]({% image_buster /assets/img/ai_copywriter/create_brand_guideline_button.png %}){:style="max-width:75%"}
 
 {: start="3"}
 
@@ -26,9 +26,9 @@ Procédez comme suit pour créer des directives de marque dans l'assistant de r�
 4. Pour la rubrique **Dans quels cas utiliserez-vous ces directives de marque ?**, ajoutez des détails afin d’aider vos collègues (et vous à l'avenir) à comprendre le contexte d'utilisation de ces directives.
 5. Si vous souhaitez qu'il s'agisse de la ligne directrice par défaut pour l'espace de travail actuel, cochez la case **Utiliser comme ligne directrice par défaut**.
 
-![Vue de la création des lignes directrices de la marque.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
+![Vue de la création des directives de marque.]({% image_buster /assets/img/ai_copywriter/manual_brand_guidelines.png %} "Brand Guidelines")
 
-### Étape 2 : Décrire la personnalité de votre marque
+### Étape 2 : Décrire la personnalité de votre marque
 
 Pour la **personnalité de la marque**, réfléchissez à ce qui rend votre marque unique. Incluez les caractéristiques, les valeurs, la voix et tous les archétypes qui définissent votre marque. Voici quelques caractéristiques à prendre en compte :
 
@@ -50,7 +50,7 @@ Pour les **exclusions**, énumérez tout langage ou style qui ne correspond pas 
 
 Testez vos directives pour en évaluer le résultat. Développez la section **Tester vos directives** pour générer des exemples de textes et, le cas échéant, les peaufiner.
 
-![Test des directives de marque avec une promotion sur les soldes de printemps pour les lignes d'objet des e-mails.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
+![Test des lignes directrices de la marque avec une promotion sur les soldes de printemps pour les lignes d'objet des e-mails.]({% image_buster /assets/img/ai_copywriter/test_brand_guidelines.png %})
 
 ### Étape 5 : Enregistrer vos directives
 

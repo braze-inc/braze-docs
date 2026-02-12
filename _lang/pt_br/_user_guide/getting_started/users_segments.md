@@ -1,13 +1,13 @@
 ---
-nav_title: Usuários e Segmentos
-article_title: "Primeiros Passos: Usuários e Segmentos"
+nav_title: Usuários e segmentos
+article_title: "Primeiros passos: Usuários e Segmentos"
 page_order: 2
 page_type: reference
 description: "Este artigo fornece uma visão geral dos usuários e segmentos, destacando sua importância e como eles podem ser aproveitados para engajar seu público."
 
 ---
 
-# Primeiros Passos: Usuários e segmentos
+# Comece agora: Usuários e segmentos
 
 Compreender seus usuários e efetivamente direcioná-los é crucial para enviar campanhas de marketing personalizadas e direcionadas. Este artigo fornece uma visão geral dos usuários e segmentos, destacando sua importância e como eles podem ser aproveitados para engajar seu público.
 

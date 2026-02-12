@@ -9,7 +9,7 @@ tool:
 description: "Este artículo te explicará cómo utilizar, interpretar y compartir la información del segmento."
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"}Información del segmento
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/segmentation-course){: style="float:right;width:120px;border:0;" class="noimgborder"} Información del segmento
 
 > Aprende a utilizar, interpretar y compartir la información del segmento. 
 
@@ -19,7 +19,7 @@ Segment Insights le muestra el rendimiento de un segmento en comparación con ot
 
 Ve a la página **Información del segmento** de tu panel, en **Análisis**, y para ver hasta 10 segmentos diferentes comparados con una línea de base.
 
-![Panel de información del segmento que compara tres segmentos, "Usuarios del Reino Unido", "Usuarios de Francia" y "Usuarios de California", con un segmento de referencia, "Todos los usuarios".]({% image_buster /assets/img_archive/segment_insights.png %})
+![Panel de información de segmentos que compara tres segmentos, "Usuarios del Reino Unido", "Usuarios de Francia" y "Usuarios de California", con un segmento de referencia, "Todos los usuarios".]({% image_buster /assets/img_archive/segment_insights.png %})
 
 El segmento base puede ser un segmento específico que usted seleccione o un segmento que contenga a todos sus usuarios. Puede comparar las siguientes estadísticas utilizando Segment Insights:
 
@@ -35,7 +35,7 @@ El segmento base puede ser un segmento específico que usted seleccione o un seg
 
 Puedes compartir fácilmente comparaciones específicas con tus compañeros de equipo utilizando la URL única de la página, y también puedes seleccionar el icono del ojo junto a cada segmento para revelar más información sobre ese segmento. Estas comparaciones se restablecerán cuando cambie de espacio de trabajo.
 
-![Detalles del segmento "Usuarios Premium (iOS VideoApp)" con un gráfico que muestra el historial de miembros y un cuadro que desglosa el tamaño estimado para varios canales de mensajería.]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}){: style="max-width:50%;"}
+![Detalles del segmento "Usuarios Premium (iOS VideoApp)" con un gráfico que muestra el historial de miembros y una tabla que desglosa el tamaño estimado para varios canales de mensajería.]({% image_buster /assets/img_archive/Segment_Insights_Info.png %}){: style="max-width:50%;"}
 
 ## Página de detalles del segmento
 

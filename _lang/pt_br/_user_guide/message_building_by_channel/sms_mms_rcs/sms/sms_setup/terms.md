@@ -1,12 +1,12 @@
 ---
 page_order: 1
-nav_title: Termos importantes
+nav_title: Termos a conhecer
 article_title: Termos importantes de SMS
 alias: /sms_terms_to_know/
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "SMS–everyone has it and knows what it is. What they don't know is the nuance. Check out the following terms to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "Termos a serem conhecidos"
+glossary_top_text: "SMS - todo mundo tem e sabe o que é. O que eles não sabem é a nuance. Confira os termos a seguir para saber mais sobre ecossistemas, tecnologias e processos de SMS."
 page_type: glossary
 description: "Este glossário define vários termos de SMS que você deve conhecer."
 channel: SMS 

@@ -20,7 +20,7 @@ Las geovallas pueden utilizarse para desencadenar campañas en tiempo real cuand
 
 Las geovallas se organizan en conjuntos de geovallas: un grupo de geovallas que pueden utilizarse para segmentar o interactuar con los usuarios en toda la plataforma. Cada conjunto de geovallas puede contener un máximo de 10 000 geovallas.
 
-Puedes crear o subir un número ilimitado de geovallas.
+Puedes crear o cargar un número ilimitado de geovallas.
 
 - Las aplicaciones de Android solo pueden almacenar localmente hasta 100 geovallas a la vez. Braze está configurado para almacenar solo hasta 20 geovallas localmente por aplicación.
 - Los dispositivos iOS pueden controlar hasta 20 geovallas a la vez por aplicación. Braze supervisará hasta 20 ubicaciones si hay espacio disponible. 
@@ -63,18 +63,18 @@ Recomendamos crear geovallas con un radio de al menos 200 metros para una funcio
 
 ## Carga masiva de geovallas {#creating-geofence-sets-via-bulk-upload}
 
-Las geocercas pueden cargarse en bloque como un objeto GeoJSON de tipo `FeatureCollection`. Cada geovalla es un tipo de geometría `Point` de la colección de características. Las propiedades de cada característica requieren una clave `radius`, y una clave opcional `name` para cada geovalla. 
+Las geocercas pueden cargarse en bloque como un objeto GeoJSON de tipo `FeatureCollection`. Cada geovalla es un tipo de geometría `Point` de la colección de características. Las propiedades de cada característica requieren una clave `radius` y una clave opcional `name` para cada geovalla. 
 
 Para subir tu GeoJSON, selecciona **Más** > **Subir GeoJSON**.
 
 Cuando crees tus geovallas, ten en cuenta los siguientes detalles:
 
 - El valor `coordinates` en el GeoJSON tiene el formato `[Longitude, Latitude]`.
-- El radio máximo de geovalla que se puede cargar es de 10.000 metros (unos 100 kilómetros o 62 millas).
+- El radio máximo de geovalla que se puede cargar es de 10.000 metros (unos 10 kilómetros o 6,2 millas).
 
 ### Ejemplo
 
-El siguiente ejemplo representa el GeoJSON correcto para especificar dos geovallas: una para la sede de Braze en Nueva York, y otra para la Estatua de la Libertad, al sur de Manhattan.
+El siguiente ejemplo representa el GeoJSON correcto para especificar dos geovallas: una para la sede de Braze en NYC, y otra para la Estatua de la Libertad al sur de Manhattan.
 
 ```
 {
@@ -114,7 +114,7 @@ Una vez configuradas las geovallas, puedes utilizarlas para mejorar y enriquecer
 
 Para utilizar datos de geocercas como parte de los activadores de campañas y Canvas, seleccione **Entrega basada en acciones** para el método de entrega. A continuación, añade una acción desencadenante de `Trigger a Geofence`. Por último, elige el conjunto de geovallas y los tipos de eventos de transición de geovalla para tu mensaje. También puede hacer avanzar a los usuarios a través de un lienzo mediante eventos de geovalla.
 
-![Una campaña basada en acciones con un geovallado que se desencadenará cuando un usuario entre en los aeropuertos alemanes.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
+![Una campaña basada en acciones con una geovalla que se desencadenará cuando un usuario entre en los aeropuertos alemanes.]({% image_buster /assets/img_archive/action_based_geofence_trigger.png %})
 
 ### Personalización de mensajes
 
@@ -165,7 +165,7 @@ El seguimiento de la ubicación se utiliza para recopilar y almacenar los datos 
 
 Las geocercas Braze utilizan una combinación de todos los proveedores de localización disponibles en un dispositivo para triangular la ubicación del usuario. Entre ellos se encuentran las torres Wi-Fi, GPS y de telefonía móvil.
 
-La precisión típica se sitúa en el intervalo de 20-50 m y la precisión en el mejor de los casos estará en el intervalo de 5-10 m. En las zonas rurales, la precisión puede degradarse significativamente, pudiendo llegar a varios kilómetros. Braze recomienda crear geocercas con radios mayores en las zonas rurales.
+La precisión típica está en el intervalo de 20-50 m, y en el mejor de los casos estará en el intervalo de 5-10 m. En las zonas rurales, la precisión puede degradarse significativamente, pudiendo llegar a varios kilómetros. Braze recomienda crear geocercas con radios mayores en las zonas rurales.
 
 Para más información sobre la precisión de las geocercas, consulte la documentación de [Android](https://developer.android.com/develop/sensors-and-location/location/geofencing) e [iOS](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html#//apple_ref/doc/uid/TP40009497-CH9-SW1).
 
@@ -185,5 +185,5 @@ No, Braze no almacena datos de geovallas en los perfiles de usuario. Las geovall
 
 ### ¿Puedo configurar una geovalla dentro de una geovalla?
 
-Como práctica recomendada, evite configurar geocercas una dentro de otra, ya que esto puede causar problemas con la activación de las notificaciones.
+Como buena práctica, evita configurar geovallas que se solapen entre sí, ya que esto puede desencadenar problemas con las notificaciones.
 

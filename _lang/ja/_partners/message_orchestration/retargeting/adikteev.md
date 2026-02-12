@@ -30,15 +30,15 @@ Braze と Adikteev の統合により、Braze CRM キャンペーン内で Adikt
 ## ユースケース
 
 {% tabs %}
-{% tab オーディエンスフィルタリング %}
+{% tab Audience filtering %}
 解約リスクに基づいてオーディエンスセグメントを絞り込みます。<br> Adikteev により送信されるカスタム属性の名前と値は設定可能です。
 
-![Adikteev により送信されるカスタム属性をオーディエンスセグメントフィルターとして使用する例。]({% image_buster /assets/img/adikteev/audience.png %})
+![Adikteevから送信されたカスタム属性をオーディエンスセグメントのフィルターとして使用する方法の例を示すスクリーンショット。]({% image_buster /assets/img/adikteev/audience.png %})
 {% endtab %}
-{% tab メッセージ・ターゲティング %}
+{% tab Message targeting %}
 受信者の解約リスクに基づいてBrazeメッセージングキャンペーンをカスタマイズ。
 
-![Adikteev により送信されるカスタム属性をキャンペーンターゲティングフィルターとして使用する例。]({% image_buster /assets/img/adikteev/campaign.png %})
+![Adikteevから送信されたカスタム属性をキャンペーンターゲティングフィルターとして使用する例を示すスクリーンショット。]({% image_buster /assets/img/adikteev/campaign.png %})
 {% endtab %}
 {% endtabs %}
 

@@ -42,7 +42,7 @@ Para obter uma lista completa dos clientes de e-mail compatíveis, consulte a [d
 
 Acesse as configurações do Gmail e selecione **Ativar e-mail dinâmico** em **Geral**.
 
-![Um exemplo das configurações do Gmail com a caixa de seleção "Ativar e-mail dinâmico" marcada.]({% image_buster /assets/img/dynamic-content.png %})
+![Um exemplo das configurações do Gmail com a caixa de seleção "Ativar envio de e-mail dinâmico" marcada.]({% image_buster /assets/img/dynamic-content.png %})
 
 ## Uso da API
 
@@ -90,7 +90,7 @@ Consulte estes recursos adicionais:
 Ao criar os elementos AMP, recomendamos que você verifique com sua equipe de engenharia e inclua recursos e elementos de design para obter uma camada extra de polimento.
 
 {% tabs %}
-  {% tab Essenciais %}
+  {% tab Essentials %}
 
 Cada um desses elementos é necessário no corpo de seu e-mail AMP.
 
@@ -102,7 +102,7 @@ Cada um desses elementos é necessário no corpo de seu e-mail AMP.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
   {% endtab %}
-  {% tab Dinâmico %}
+  {% tab Dynamic %}
 
 Use esses componentes para criar layouts e comportamentos dinâmicos em seus e-mails.
 
@@ -132,11 +132,11 @@ Qualquer componente que exija a autenticação do usuário deve usar [tokens de 
 {% endalert %}
 
   {% endtab %}
-  {% tab Outros %}
+  {% tab Other %}
 
 | Componente | Descrição |
 |---------|--------------|
-| [Vinculação de dados e expressões](https://amp.dev/documentation/components/amp-anim?format=email) <br><br> `amp-bind`| Adiciona interatividade personalizada com estado às suas páginas AMP por meio de vinculação de dados e expressões semelhantes a JavaScript. |
+| [Vinculação de dados & Expressões](https://amp.dev/documentation/components/amp-anim?format=email) <br><br> `amp-bind`| Adiciona interatividade personalizada com estado às suas páginas AMP por meio de vinculação de dados e expressões semelhantes a JavaScript. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% alert note %}
@@ -151,7 +151,7 @@ Para obter uma lista completa dos componentes do AMP, consulte [a documentação
 ### Casos de uso
 
 {% tabs local %}
-{% tab Pesquisas interativas %}
+{% tab Interactive Surveys %}
 
 Usando o componente `<amp-form>`, é possível criar pesquisas interativas que podem ser concluídas sem sair da caixa de entrada do e-mail. Isso pode ser feito usando o site `<amp-form>` para enviar a resposta da pesquisa e, em seguida, fazer com que o backend forneça esses dados agregados. 
 
@@ -163,20 +163,20 @@ Alguns exemplos incluem:
 Usando esse componente, os usuários podem enviar ou limpar valores de campo. Além disso, dependendo de como você configurar seu e-mail, você pode dar prompts adicionais aos usuários, como se a submissão da pesquisa foi bem-sucedida ou apresentar as respostas dos seus usuários mostrando os resultados da pesquisa (como uma campanha de votação).
 
 {% endtab %}
-{% tab Conteúdo dobrável %}
+{% tab Collapsable Content %}
 
 Expanda suas seções de conteúdo usando o componente `<amp-accordion>`. Esse componente permite exibir seções de conteúdo dobráveis e expansíveis, proporcionando uma maneira de os espectadores darem uma olhada no esboço do conteúdo e pularem para qualquer seção. 
 
 Se você tende a enviar artigos educacionais longos ou recomendações personalizadas, isso permite que os espectadores vejam o esboço do conteúdo e acessem qualquer seção ou recomendação específica do produto para obter mais detalhes. Isso pode ser particularmente útil para usuários móveis, onde até mesmo algumas frases em uma seção exigem rolagem.
 {% endtab %}
-{% tab E-mails com muitas imagens %}
+{% tab Image Heavy Emails %}
 
 Se você tende a enviar e-mails com muitas fotos profissionais, como as marcas de varejo, pode usar o componente `<amp-image-lightbox>` que permite que os usuários interajam com uma imagem que os atraia. Quando o usuário clica na imagem, esse componente exibe a imagem no centro da mensagem, criando um efeito de lightbox. 
 
 Além disso, o componente `<amp-image-lightbox>` permite que o usuário visualize uma descrição detalhada da imagem. Você pode usar o mesmo componente para mais de uma imagem. Por exemplo, se você tiver várias imagens incluídas no e-mail, quando o usuário clicar em uma delas, a imagem será exibida na lightbox.
 
 {% endtab %}
-{% tab Envio de e-mails com fontes %}
+{% tab Font Driven Emails %}
 
 Para e-mails que dependem principalmente de cópia de texto, o componente `<amp-fit-text>` permite gerenciar o tamanho e o ajuste do texto em uma área específica.
 
@@ -213,26 +213,26 @@ Ao envolver seu conteúdo na tag `raw`, o mecanismo de processamento do Braze ig
     <tbody>
         <tr>
             <td class="no-split">Total de aberturas</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Opens' %} Para e-mails AMP, isso é o total de aberturas para as versões HTML e texto simples.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Opens' %} Para e-mails AMP, esse é o total de aberturas para as versões HTML e de texto simples.</td>
         </tr>
         <tr>
             <td class="no-split">Total de cliques</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='Total Clicks' %} Para emails AMP, este é o total de cliques nas versões HTML e texto simples.</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='Total Clicks' %} Para envios de e-mail AMP, esse é o total de cliques nas versões HTML e de texto simples.</td>
         </tr>
         <tr>
             <td class="no-split">Aberturas de accelerated mobile pages</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Opens' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Opens' %}</td>
         </tr>
         <tr>
             <td class="no-split">Cliques de accelerated mobile pages</td>
-            <td class="no-split">{% multi_lang_include metrics.md metric='AMP Clicks' %}</td>
+            <td class="no-split">{% multi_lang_include analytics/metrics.md metric='AMP Clicks' %}</td>
         </tr>
     </tbody>
 </table>
 
 ## Testes e solução de problemas
 
-Note que o total de cliques e os cliques únicos não levam em conta os cliques que ocorrem em uma mensagem AMP (somente HTML e texto simples). Os cliques específicos de AMP são atribuídos à métrica *amp_click*.
+Note que o total de cliques e os cliques únicos não levam em conta os cliques que ocorrem em uma mensagem AMP (somente HTML e texto simples). Os cliques específicos de AMP são atribuídos à *amp_click* métrica.
 
 Antes de enviar seu e-mail AMP, recomendamos que você faça um teste de acordo com estas [diretrizes do Gmail](https://developers.google.com/gmail/ampemail/testing-dynamic-email).
 
@@ -243,12 +243,12 @@ Para que seu e-mail AMP seja entregue a qualquer conta do Gmail, o e-mail deve a
 - O e-mail deve incluir a parte AMP MIME antes da parte HTML MIME.
 - A parte AMP MIME deve ser menor que 100 KB.
 
-Se nenhuma dessas condições estiver causando o erro, entre em contato com [o suporte]({{site.baseurl}}/support_contact/).
+Se nenhuma dessas condições estiver causando o erro, entre em contato com [o Suporte]({{site.baseurl}}/support_contact/).
 
 ### Perguntas frequentes
 
 #### Devo segmentar com e-mails AMP?
 
-Defendemos a não segmentação para enviar a todos os tipos diferentes de usuários. Isso ocorre porque enviamos mensagens AMP em multipartes, com diferentes versões incluídas no e-mail original. Se um usuário não puder ver a versão AMP, ela voltará ao padrão HTML. 
+Defendemos a não segmentação para enviar a todos os tipos diferentes de usuários. Isso ocorre porque enviamos mensagens AMP em multipartes, com diferentes versões incluídas no e-mail original. Se um usuário não puder ver a versão AMP, ela voltará ao padrão HTML.
 
 

@@ -1,5 +1,5 @@
 ---
-nav_title: Parcours d’actions 
+nav_title: "Parcours d'action"
 article_title: Parcours d’actions 
 alias: /action_paths/
 page_order: 0.1
@@ -21,7 +21,7 @@ Les parcours d’action vous permettent d’effectuer les tâches suivantes :
 
 ## Créer un parcours d'action
 
-Pour créer un parcours d’actions, ajoutez un composant à votre Canvas. Glissez-déposez le composant à partir de la barre latérale ou sélectionnez le bouton plus <i class="fas fa-plus-circle"></i> au bas d'une étape et sélectionnez **Parcours d'action.** 
+Pour créer un parcours d’actions, ajoutez un composant à votre Canvas. Glissez-déposez le composant à partir de la barre latérale ou sélectionnez le bouton plus <i class="fas fa-plus-circle"></i> au bas d'une étape et sélectionnez **Parcours d'action.**
 
 ### Paramètres d’action
 
@@ -29,15 +29,17 @@ Dans les **paramètres de l'action**, définissez la **fenêtre d'évaluation** 
 
 Dans les **paramètres d'action**, vous pouvez également activer l'ordre de classement de vos composants en basculant sur l'option **Avancer les utilisateurs en fonction de l'ordre de classement**.
 
-![L'action Paramètres avec une fenêtre d'évaluation d'un jour.]({% image_buster /assets/img/actionpath_settings.png %})
+![L'action Paramètres est assortie d'une fenêtre d'évaluation d'un jour.]({% image_buster /assets/img/actionpath_settings.png %})
 
-Par défaut, le **classement** est désactivé. Lorsqu’un utilisateur accède au parcours d’action et effectue l’événement déclencheur annexe à tout groupe d’actions, il passe automatiquement au groupe d’actions pertinent. Si un utilisateur n'effectue pas d'événement déclencheur, il avancera dans le groupe par défaut **Tous les autres** à la fin de la période d'évaluation.
+Par défaut, le **classement** est désactivé. Lorsqu'un utilisateur entre dans le parcours d'action et effectue l'événement déclencheur lié à un groupe d'action, il avance immédiatement dans le groupe d'action concerné. Si un utilisateur n'effectue pas d'événement déclencheur, il avance dans le groupe par défaut **Tous les autres à** la fin de la période d'évaluation.
 
-Lorsque l'option **Utilisateurs avancés en fonction de l'ordre de classement** est activée, cela signifie que l'**option Classement** est activée. Tous les utilisateurs seront donc conservés jusqu’à la fin de la fenêtre d’évaluation. À la fin de la période d’évaluation, les utilisateurs passeront au groupe d’actions de priorité absolue auquel ils sont éligibles à la fin de la fenêtre d’évaluation. Les utilisateurs qui n'effectuent aucune des actions pendant la fenêtre d'évaluation avanceront dans le groupe par défaut **Tous les autres.**
+Lorsque l'option **Utilisateurs avancés en fonction de l'ordre de classement** est activée, cela signifie que l'**option Classement** est activée. Ainsi, tous les utilisateurs sont retenus jusqu'à la fin de la fenêtre d'évaluation. À la fin de la période d'évaluation, les utilisateurs avancent dans le groupe d'action prioritaire le plus élevé auquel ils sont éligibles à la fin de la fenêtre d'évaluation. Les utilisateurs qui n'effectuent aucune des actions pendant la fenêtre d'évaluation avancent dans le groupe par défaut **Tous les autres.** 
+
+Notez que vous pouvez déclencher un parcours d'action en cas de modification d'un objet d'attribut personnalisé imbriqué, mais pas pour les tableaux d'attributs personnalisés imbriqués ou les modifications des types de données des tableaux d'objets.
 
 #### in-app Messages
 
-Notez que lorsque le déclencheur du groupe d’actions est le démarrage d’une session et que l’étape suivante est un message in-app, l’utilisateur devra effectuer deux démarrages de session pour recevoir le message in-app. La première session affecte l’utilisateur au groupe d’actions dans le parcours d’action, et la deuxième session déclenche le message in-app.
+Notez que lorsque le déclencheur du groupe d'applications est le démarrage d'une session et que l'étape suivante est un message in-app, l'utilisateur doit effectuer deux démarrages de session pour recevoir le message in-app. La première session affecte l’utilisateur au groupe d’actions dans le parcours d’action, et la deuxième session déclenche le message in-app.
 
 #### Exemple de statut de classement
 
@@ -45,7 +47,7 @@ Supposons que vous ayez un parcours d’action avec une période d’évaluation
 
 Dans l'exemple précédent, si **le classement** est désactivé et qu'un utilisateur effectue l'un des événements déclencheurs ("Démarrer une session" ou "Effectuer un achat"), cet utilisateur est avancé dans le groupe d'actions approprié en fonction de l'action déclencheuse.
 
-Notez que les propriétés d’entrée Canvas diffèrent des propriétés de l’événement. Les propriétés d’entrée Canvas sont des propriétés issues de l’événement qui a déclenché le Canvas. Ces propriétés peuvent être uniquement utilisées dans la première étape complète d’un Canvas lorsque vous utilisez le flux de travail Canvas d’origine. Lorsque vous utilisez Canvas Flow, les Propriétés d’entrées persistantes sont activées et permettent de saisir des propriétés qui peuvent être réutilisées dans le Canvas tout entier. Inversement, les propriétés de l’événement proviennent d’un événement ou d’une action qui se produit lorsque l’utilisateur accède à son flux de travail.
+Notez que les propriétés d’entrée Canvas diffèrent des propriétés de l’événement. Les propriétés d’entrée Canvas sont des propriétés issues de l’événement qui a déclenché le Canvas. Ces propriétés peuvent être uniquement utilisées dans la première étape complète d’un Canvas lorsque vous utilisez le flux de travail Canvas d’origine. Lors de l'utilisation de Canvas, les propriétés d'entrées persistantes sont activées et permettent de réutiliser les propriétés d'entrée dans l'ensemble du Canvas. Inversement, les propriétés de l’événement proviennent d’un événement ou d’une action qui se produit lorsque l’utilisateur accède à son flux de travail.
 
 ### Groupes d’actions
 
@@ -56,7 +58,7 @@ Ajoutez un ou plusieurs déclencheurs pour définir vos groupes d’actions. Ici
 - Exécuter un [événement personnalisé]({{site.baseurl}}/user_guide/data/custom_data/custom_events/)
 - Effectuer un événement de conversion
 - Ajouter une adresse e-mail
-- Modifier la valeur d'un attribut personnalisé (pas les attributs personnalisés imbriqués)
+- Modifier la valeur d'un attribut personnalisé (y compris les tableaux, mais pas les attributs personnalisés imbriqués). Cela inclut l'ajout d'un nouvel attribut avec une valeur à un profil utilisateur pour la première fois (lorsque l'attribut n'était pas présent auparavant).
 - Mettre à jour leur statut du groupe d'abonnement ou leur statut du groupe d'abonnement
 - Interagir avec une campagne ou une carte de contenu
 - Saisir un emplacement
@@ -65,7 +67,7 @@ Ajoutez un ou plusieurs déclencheurs pour définir vos groupes d’actions. Ici
 
 ![Un groupe d'action nommé "Groupe 1" pour les utilisateurs qui effectuent un achat.]({% image_buster /assets/img/actionpath_group.png %})
 
-Dans chaque paramètre de groupe d'action, vous avez également la possibilité de cocher la case **Je veux que ce groupe quitte le Canvas**, ce qui signifie que les utilisateurs de ce groupe quitteront le Canvas à la fin de la période d'évaluation.
+Dans chaque paramètre de groupe d'action, vous avez également la possibilité de cocher la case **Je veux que ce groupe quitte le Canvas**, ce qui signifie que les utilisateurs de ce groupe quittent le Canvas à la fin de la période d'évaluation.
 
 ### Canvas avec rééligibilité
 
@@ -73,10 +75,8 @@ Si les utilisateurs entrent plusieurs fois dans un parcours d'action et ont plus
 
 | Statut de classement | Comportement de parcours d’action |
 |---|--------------|
-| **Désactivé** | Lorsqu’une action pertinente est effectuée, Braze va dupliquer les entrées et faire avancer immédiatement l’entrée la plus ancienne vers le groupe d’action pertinent. <br><br/> Lorsqu’une action pertinente n’est pas effectuée, toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
-| **Activé** | Toutes les entrées seront repoussées vers le bas de la fenêtre d’évaluation pertinente. Aucune déduplication n’est effectuée. |
+| **Désactivé** | Lorsqu'une action pertinente est effectuée, Braze dédoublonne les entrées et fait immédiatement avancer l'entrée la plus ancienne dans le groupe d'actions pertinent. <br><br/> Lorsqu'une action pertinente n'est pas effectuée, toutes les entrées avancent à la fin de la fenêtre d'évaluation concernée. Il n'y a pas de déduplication. |
+| **Activé** | Toutes les candidatures sont avancées à la fin de la fenêtre d'évaluation concernée. Il n'y a pas de déduplication. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Notez que les classements ne sont pas [modifiables après le lancement]({{site.baseurl}}/post-launch_edits/).
-
-

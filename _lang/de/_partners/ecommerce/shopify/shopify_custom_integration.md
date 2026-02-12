@@ -5,7 +5,7 @@ description: "In diesem referenzierten Artikel erfahren Sie, wie Sie eine Verbin
 page_type: partner
 search_tag: Partner
 alias: /shopify_custom_integration/
-page_order: 2
+page_order: 3
 ---
 
 # Shopify angepasste Integration einrichten
@@ -39,7 +39,7 @@ Der Shop muss "Shopify" heißen, sonst funktioniert die Integration möglicherwe
 
 ### Schritt 2: Subdomain und Umgebungsvariablen hinzufügen {#step-2}
 
-1. Richten Sie Ihre Shopify-Subdomain ein, um [den Traffic von Ihrem Shop auf Hydrogen umzuleiten](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic/).  
+1. Richten Sie Ihre Shopify-Subdomain ein, um [den Traffic von Ihrem Shop auf Hydrogen umzuleiten](https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/redirect-traffic).  
 2. Fügen Sie einen [Callback URI](https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/hydrogen#step-2-set-up-the-environment) für die Anmeldung hinzu. (Die URI wird automatisch hinzugefügt, wenn die Domain hinzugefügt wird.)
 3. Richten Sie Ihre [Shopify Umgebungsvariablen](https://shopify.dev/docs/storefronts/headless/hydrogen/environments#create-a-new-environment-variable) ein:
   - Erstellen Sie zwei Umgebungsvariablen mit den Werten aus der Website App, die Sie in [Schritt 1](#step-1) erstellt haben.
@@ -605,7 +605,7 @@ Diese Tabelle enthält die Daten, die anfänglich über das Backfill geladen wer
 
 | Braze empfohlene Veranstaltungen | Shopify angepasste Events | Braze Standard Attribute | Braze Abo-Status |
 | --- | --- | --- | --- |
-| {::nomarkdown}<ul><li>Bestellung aufgegeben</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_provinz</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail</li><li>Vorname</li><li>Nachname</li><li>Telefon</li><li>Ort</li><li>Land</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail Marketing Abos, die mit diesem Shopify Shop verbunden sind</li><li>SMS-Marketing Abos, die mit diesem Shopify Shop verbunden sind</li></ul>{:/} |
+| {::nomarkdown}<ul><li>Bestellung aufgegeben</li></ul>{:/}  | {::nomarkdown}<ul><li>shopify_tags</li><li>shopify_total_spent</li><li>shopify_order_count</li><li>shopify_last_order_id</li><li>shopify_last_order_name</li><li>shopify_zipcode</li>shopify_province</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail</li><li>Vorname</li><li>Nachname</li><li>Telefon</li><li>Ort</li><li>Land</li></ul>{:/} | {::nomarkdown}<ul><li>E-Mail Marketing Abos, die mit diesem Shopify Shop verbunden sind</li><li>SMS-Marketing Abos, die mit diesem Shopify Shop verbunden sind</li></ul>{:/} |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
 
 ### Schritt 5: Angepasstes Tracking von Daten (Fortschritt) 
@@ -647,7 +647,7 @@ Mit den Braze SDKs können Sie angepasste Events oder angepasste Attribute verfo
 
 Das SDK muss auf dem Gerät eines Nutzers initialisiert werden (auf Aktivitäten warten), um Events oder angepasste Attribute zu protokollieren. Um mehr über die Protokollierung angepasster Daten zu erfahren, lesen Sie [User object](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html) und [logCustomEvent](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#logcustomevent).
 
-### Schritt 6: Konfigurieren Sie, wie Sie Nutzer:innen verwalten (optional)
+### Schritt 6: Konfigurieren Sie, wie Sie Nutzer:innen verwalten (optional) {#step-6}
 
 Wählen Sie Ihren `external_id` Typ aus der Dropdown-Liste aus.
 
@@ -660,33 +660,80 @@ Die Verwendung einer E-Mail-Adresse oder einer gehashten E-Mail-Adresse als exte
 - **Risiko der Ausbeutung:** Wenn ein böswilliger Nutzer:innen seinen Webbrowser so verändert, dass er die E-Mail-Adresse einer anderen Person als externe ID verwendet, kann er möglicherweise auf sensible Nachrichten oder Kontoinformationen zugreifen.
 {% endalert %}
 
-Wenn Sie einen angepassten externen ID-Typ ausgewählt haben, fahren Sie mit den Schritten 6.1 und 6.2 fort. Andernfalls fahren Sie mit Schritt 6.3 fort.
+Standardmäßig wandelt Braze E-Mails von Shopify automatisch in Kleinbuchstaben um, bevor es sie als externe ID verwendet. Wenn Sie E-Mail oder gehashte E-Mail als externe ID verwenden, vergewissern Sie sich, dass Ihre E-Mail-Adressen auch in Kleinbuchstaben umgewandelt werden, bevor Sie sie als externe ID zuweisen oder bevor Sie sie aus anderen Datenquellen hashen. Dies hilft, Diskrepanzen bei externen IDs zu vermeiden und die Erstellung doppelter Nutzerprofile in Braze zu verhindern.
 
-#### Schritt 6.1: Erstellen Sie eine angepasste `external_id`
+{% alert note %}
+Die nächsten Schritte hängen davon ab, welche externe ID Sie ausgewählt haben:<br><br>
+- **Wenn Sie einen angepassten externen ID-Typ ausgewählt haben:** Führen Sie die Schritte 6.1-6.3 aus, um Ihre angepasste externe ID-Konfiguration einzurichten.
+- **Wenn Sie die ID, E-Mail oder Hash-E-Mail von Shopify ausgewählt haben:** Überspringen Sie die Schritte 6.1-6.3 und fahren Sie direkt mit Schritt 6.4 fort.
+{% endalert %}
 
-Gehen Sie zunächst zu Shopify und erstellen Sie das Metafeld `braze.external_id`. Wir empfehlen Ihnen, die Schritte unter [Anpassen von Metafeldbeschreibungen](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/creating-custom-metafield-definitions) zu befolgen. Geben Sie für **Namensraum und Schlüssel** `braze.external_id` ein. Für **Typ** empfehlen wir Ihnen, einen ID-Typ zu wählen.
+#### Schritt 6.1: Erstellen Sie das Metafeld `braze.external_id` 
 
-Nachdem Sie das Metafelder erstellt haben, hören Sie auf [`customer/create` Webhooks](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks), damit Sie das Metafelder schreiben können, wenn eine neue Kund:in erstellt wird. Verwenden Sie dann die [Admin API](https://shopify.dev/docs/api/admin-graphql) oder die [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer), um alle Ihre zuvor erstellten Kund:in mit diesem Metafeld zu versehen.
+1. Gehen Sie in Ihrem Shopify Admin Panel zu **Einstellungen** > **Metafelder**.
+2. Wählen Sie **Kunden** > **Definition hinzufügen**.
+3. Geben Sie für **Namensraum und Schlüssel** `braze.external_id` ein.
+4. Wählen Sie unter **Typ** den **ID-Typ** aus.
 
-#### Schritt 6.2: Einen Endpunkt erstellen
+Nachdem das Metafeld erstellt wurde, füllen Sie es für Ihre Kund:in aus. Wir empfehlen die folgenden Ansätze:
 
-Sie benötigen einen öffentlichen GET-Endpunkt, um Ihre externe ID abzurufen. Wenn Shopify das Metafeld nicht bereitstellen kann, ruft Braze diesen Endpunkt auf, um die externe ID abzurufen.
+- **Hören Sie sich die Webhooks zur Erstellung von Kund:in an:** Richten Sie einen Webhook ein, um auf die [Ereignisse von`customer/create` ](https://help.shopify.com/en/manual/fulfillment/setup/notifications/webhooks) zu warten. Damit können Sie das Metafeld schreiben, wenn eine neue Kund:in angelegt wird.
+- **Füllen Sie bestehende Kund:in nach:** Verwenden Sie die [Admin API](https://shopify.dev/docs/api/admin-graphql) oder die [Customer API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer), um das Metafeld für zuvor erstellte Kund:innen zu füllen.
 
-Ein Beispiel für einen Endpunkt ist: `https://mystore.com/custom_id?shopify_customer_id=1234&email_address=raghav.narain@braze.com&shopify_storefront=dev-store.myshopify.com`
+#### Schritt 6.2: Erstellen Sie einen Endpunkt zum Abrufen Ihrer externen ID
 
-##### Antwort
+Sie müssen einen öffentlichen Endpunkt erstellen, den Braze zum Abrufen der externen ID aufrufen kann. Dadurch kann Braze die ID in Szenarien abrufen, in denen Shopify das Metafeld `braze.external_id` nicht direkt bereitstellen kann.
 
-Braze erwartet einen 200 Status Code. Jeder andere Code wird als Fehler des Endpunkts betrachtet. Die Antwort sollte lauten:
+##### Endpunkt-Spezifikationen
 
-{% raw %}
-```json
-{ "external_id": "my_external_id" }
+**Methode:** GET
+
+Braze sendet die folgenden Parameter an Ihren Endpunkt:
+
+| Parameter            | Erforderlich | Datentyp | Beschreibung                                                      |
+|----------------------|----------|-----------|------------------------------------------------------------------|
+| shopify_customer_id  | Ja      | String    | Die Shopify ID des Kunden.                                         |
+| shopify_storefront   | Ja      | String    | Der Schaufenstername für die Anfrage. Ex: `<storefront_name>.myshopify.com` |
+| email_address        | Kein:e       | String    | Die E-Mail Adresse des angemeldeten Nutzers:in. <br><br>Dieses Feld kann in bestimmten Webhook-Szenarien fehlen. Ihre Endpunkt-Logik sollte hier Nullwerte berücksichtigen (z.B. holen Sie die E-Mail über shopify_customer_id, wenn Ihre interne Logik dies erfordert). |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4 role="presentation"}
+
+##### Beispiel Endpunkt
+
+```http
+GET https://mystore.com/custom_id?shopify_customer_id=1234&email_address=bob@braze.com&shopify_storefront=dev-store.myshopify.com
 ```
-{% endraw %}
 
-Passen Sie die `shopify_customer_id` und die E-Mail Adresse mit Hilfe der Admin API oder der Customer API an, um sicherzustellen, dass die Parameterwerte mit den Kunden:in in Shopify übereinstimmen. Nach der Validierung können Sie auch die APIs verwenden, um das Metafeld `braze.external_id` abzurufen und den Wert der externen ID zurückzugeben.
 
-#### Schritt 6.3: Sammeln Sie Ihre E-Mail- oder SMS-Opt-ins von Shopify (optional)
+##### Erwartete Antwort
+Braze erwartet einen `200` Status Code, der die externe ID JSON zurückgibt:
+```json
+{
+  "external_id": "my_external_id"
+}
+```
+
+##### Validierung
+
+Es ist wichtig, dass Sie überprüfen, ob `shopify_customer_id` und `email_address` (falls vorhanden) mit den Werten der Kund:in in Shopify übereinstimmen. Sie können die [Shopify Admin API](https://shopify.dev/docs/api/admin-graphql) oder die [Kund:in API](https://shopify.dev/docs/api/admin-rest/2025-04/resources/customer) verwenden, um diese Parameter zu validieren und das richtige `braze.external_id` Metafeld abzurufen.
+
+##### Versagensverhalten und Zusammenführung
+Jeder andere Status Code als `200` wird als Fehlschlag betrachtet.
+
+- **Auswirkungen der Verschmelzung:** Wenn der Endpunkt fehlschlägt (nicht`200` oder Timeout), kann Braze die externe ID nicht abrufen. Folglich wird die Zusammenführung zwischen dem Shopify Nutzer:in und dem Braze Nutzerprofil zu diesem Zeitpunkt nicht stattfinden.
+- **Wiederholungslogik:** Braze kann standardmäßig sofortige Wiederholungsversuche im Netzwerk unternehmen, aber wenn der Fehler weiterhin besteht, wird die Zusammenführung bis zum nächsten qualifizierenden Ereignis aufgeschoben (z.B. wenn der Nutzer:innen sein Profil aktualisiert oder einen Checkout abschließt).
+- **Unterstützbarkeit:** Um die rechtzeitige Zusammenführung von Nutzer:innen zu unterstützen, stellen Sie sicher, dass Ihr Endpunkt hochverfügbar ist und das optionale Feld `email_address` zuverlässig verarbeitet.
+
+#### Schritt 6.3: Geben Sie Ihre externe ID ein
+
+Wiederholen Sie [Schritt 6](#step-6) und geben Sie Ihre Endpunkt-URL ein, nachdem Sie die angepasste externe ID als Ihren externen ID-Typ von Braze ausgewählt haben.
+
+##### Überlegungen
+
+- Wenn Ihre externe ID nicht generiert wird, wenn Braze eine Anfrage an Ihren Endpunkt sendet, verwendet die Integration standardmäßig die Shopify Kund:innen-ID, wenn die Funktion `changeUser` aufgerufen wird. Dieser Schritt ist entscheidend für die Zusammenführung des anonymen Nutzerprofils mit dem identifizierten Nutzerprofil. Daher kann es vorübergehend vorkommen, dass in Ihrem Workspace verschiedene Arten von externen IDs existieren.
+- Wenn die externe ID im Metafeld `braze.external_id` verfügbar ist, wird die Integration diese externe ID priorisieren und zuweisen. 
+    - Wenn die Shopify Kund:in ID zuvor als externe ID von Braze eingestellt war, wird sie durch den Wert des Metafelds `braze.external_id` ersetzt. 
+
+#### Schritt 6.4: Sammeln Sie Ihre E-Mail- oder SMS-Opt-ins von Shopify (optional)
 
 Sie haben die Möglichkeit, Ihre Opt-ins für E-Mail- oder SMS-Marketing in Shopify zu sammeln. 
 

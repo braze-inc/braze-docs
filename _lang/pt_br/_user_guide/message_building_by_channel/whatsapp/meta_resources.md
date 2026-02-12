@@ -1,7 +1,7 @@
 ---
-nav_title: Recursos Meta
+nav_title: Recursos meta
 article_title: Recursos Meta
-page_order: 81
+page_order: 12
 description: "Este artigo apresenta documentação, informações e recursos úteis da Meta para melhorar sua compreensão da integração com o WhatsApp."
 page_type: reference
 channel:
@@ -22,6 +22,22 @@ Consulte a seguinte documentação da Meta para saber mais sobre nomes de exibi�
 - [Classificação de qualidade](https://www.facebook.com/business/help/896873687365001)
 
 ## Atualizações de produtos do WhatsApp
+
+### Abril de 2025: Pausa no envio de mensagens de marketing para números de telefone dos EUA
+*Última atualização em agosto de 2025*
+
+A Meta pausará o envio de todas as mensagens de modelo de marketing para usuários do WhatsApp que tenham um número de telefone dos Estados Unidos (um número composto por um código de discagem `+1` e um código de área dos EUA). Não há data programada para o término dessa pausa. 
+
+Qualquer tentativa de enviar um modelo para um usuário do WhatsApp com um número de telefone dos EUA resultará no erro `131049`.
+
+### Março de 2025: Limites de mensagens de modelo de marketing por usuário
+*Última atualização em agosto de 2025*
+
+O Meta limitará o número de mensagens de modelo de marketing que um usuário pode receber em todas as empresas em um determinado período de tempo, começando com mensagens que têm menos probabilidade de serem lidas. 
+
+Uma exceção é que, se uma pessoa responder a uma mensagem de marketing, ela iniciará uma janela de atendimento ao cliente de 24 horas. O envio de mensagens de marketing dentro dessa janela não será contabilizado no limite de uma pessoa.
+
+O limite específico varia de acordo com o usuário, dependendo do seu nível de engajamento. Saiba mais sobre os limites por usuário para mensagens de marketing com modelo no WhatsApp [aqui](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-message-templates#per-user-marketing-template-message-limits). 
 
 ### Janeiro de 2025: WhatsApp pausando o envio de mensagens de marketing para usuários dos EUA a partir de 1º de abril
 *Última atualização em janeiro de 2025*
@@ -140,7 +156,7 @@ Observe que o WhatsApp usa o mesmo sistema para avaliar a qualidade do modelo no
 
 Em última análise, essa atualização oferece um ciclo de feedback mais rápido (30 minutos em vez de horas ou dias com a pausa do modelo), para que você possa ajustar seus modelos e proporcionar uma melhor experiência ao cliente.
 
-**Se tiver outras dúvidas sobre essa atualização, entre em contato com o representante de parceiros da Meta.**
+**Se tiver mais dúvidas sobre essa atualização, entre em contato com o representante do parceiro Meta.**
 
 ### Junho de 2023: Experimentação de envio de mensagens 
 *Última atualização em junho de 2023*

@@ -1,5 +1,5 @@
 ---
-nav_title: "Coletando Opt-Ins do Usuário"
+nav_title: "Coleta de aceitações de usuários"
 article_title: Melhores Práticas para Coletar Opt-Ins de SMS de Usuários
 page_order: 7
 description: "Este artigo de referência abrange três melhores práticas para coletar aceitações de usuários."

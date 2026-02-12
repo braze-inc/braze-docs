@@ -1,5 +1,5 @@
 ---
-nav_title: Visão geral do SDK 
+nav_title: Visão geral do SDK
 article_title: Visão geral do SDK 
 page_order: 9
 page_type: reference
@@ -8,7 +8,7 @@ description: "Este artigo de referência aborda os conceitos básicos do SDK da 
 
 # Visão geral do SDK 
 
-> O Braze SDK facilita a coleta de dados de sessão, a identificação de usuários e o registro de compras e eventos personalizados por meio do seu site ou app. Também é possível usar o SDK para interagir com seus usuários, enviando mensagens no app e notificações por push diretamente do dashboard da Braze.
+> O SDK do Braze coleta dados de sessão, identifica usuários e registra compras e eventos personalizados através do seu site ou app. Você também pode usar o SDK para engajar usuários enviando mensagens no app e notificações por push diretamente do dashboard do Braze.
 
 Em resumo, o SDK da Braze:
 * Coleta e sincroniza dados de usuários em um perfil de usuário consolidado
@@ -28,11 +28,11 @@ Para economizar seu tempo e garantir uma integração tranquila, recomendamos qu
 
 ## Agregação de dados
 
-O Braze SDK captura automaticamente imensas quantidades de dados no nível do usuário, facilitando a visualização das principais métricas do seu app e da sua base de usuários. Você agrupará aplicativos semelhantes em um único espaço de trabalho em seu dashboard. Por exemplo, você agrupará as versões para iOS e Android do seu app no mesmo espaço de trabalho, o que lhe permitirá ver os dados coletados de usuários em ambas as plataformas. Isso lhe dá uma visão mais completa dos seus usuários nos canais da Web e móveis. Consulte o artigo na [página inicial]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) para obter mais informações.
+O SDK do Braze captura automaticamente dados em nível de usuário, fornecendo métricas chave para seu app e base de usuários. Agrupe aplicativos semelhantes em um único espaço de trabalho (por exemplo, versões iOS e Android juntas) para visualizar os dados coletados em várias plataformas e construir uma imagem completa da atividade do usuário. Consulte o artigo na [página inicial]({{site.baseurl}}/user_guide/analytics/dashboard/home_dashboard/) para obter mais informações.
 
 ## Envio de mensagens no app
 
-O SDK facilita a criação e o envio de mensagens no app para o engajamento direto com os usuários. É possível optar pelo envio de mensagens slideup, modal ou em tela cheia com base na sua estratégia de campanha. Para saber mais sobre como criar uma mensagem no app, consulte nossa página sobre como [criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
+Use o SDK para compor e enviar mensagens no app diretamente. Você pode escolher mensagens slideup, modais ou em tela cheia com base na sua estratégia de campanha. Para detalhes de composição, consulte [Criar uma mensagem no app]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/traditional/create/).
 
 ![Push exibido em um navegador da Web]({% image_buster /assets/img_archive/web_push_macbook.png %}){: style="float:right;max-width:45%;margin-left:20px;border:0;"}
 
@@ -40,44 +40,18 @@ O SDK facilita a criação e o envio de mensagens no app para o engajamento dire
 
 As notificações por push são outra ótima opção para engajamento com seus usuários e são especialmente úteis para lidar com chamadas à ação sensíveis ao tempo. As notificações por push para mobile aparecem nos dispositivos dos usuários, e as notificações por web push aparecem mesmo quando o site não está aberto. Para obter informações específicas sobre o uso de notificações por push, consulte nosso [artigo sobre notificações por push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/).
 
-Os usuários do seu site ou app precisam fazer a aceitação para receber notificações por push. Consulte [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) para obter mais detalhes. 
+Os usuários do seu site ou app precisam fazer a aceitação para receber notificações por push. Veja [preparação de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/push_primer_messages/) para mais detalhes. 
 
 ## Regras de segmentação e entrega
 
 Por padrão, uma campanha contendo mensagens no app será enviada para todas as versões do app nesse espaço de trabalho. Por exemplo, a mensagem será enviada tanto para usuários da Internet quanto para usuários móveis. Para enviar uma mensagem no app exclusivamente para a Web ou para dispositivos móveis, você precisará segmentar sua campanha de acordo, o que é suportado por padrão por meio d o SDK da Braze. 
 
-É possível criar um segmento de seus usuários da Web definindo **aplicativos e sites direcionados** a **usuários de aplicativos específicos** e, em seguida, selecionar apenas seu site para os **aplicativos específicos**.
+Você pode criar um segmento de seus usuários da web definindo **Aplicativos e sites direcionados** para **Usuários de aplicativos específicos**, e então selecionar apenas seu site para os **Aplicativos Específicos**.
 
-![Página de detalhes do segmento com o app da Web em foco]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
+![Página de Detalhes do Segmento com o app web em foco]({% image_buster /assets/img_archive/web-users-segment.png %}){:style="max-width:60%"}
 
 Isso permitirá direcionar os usuários com base em seu comportamento de forma inteligente. Se quisesse direcionar os usuários da Web para incentivá-los a baixar seu app móvel, você criaria esse segmento como seu público-alvo. Se você quisesse enviar uma campanha de mensagens que incluísse uma mensagem no app para celular, mas não uma mensagem na Internet, desmarcaria o ícone do seu site no segmento de mensagens.
 
-## Quais são as integrações do Braze?
-A Braze oferece uma versão de nosso SDK para muitas plataformas (Web, Android, iOS, Flutter, React Native e outras), mas todas elas funcionam essencialmente da mesma maneira. Portanto, se você vir uma referência a, digamos, "Web SDK", essa é apenas a versão do SDK da Braze destinada ao seu site.
+## Plataformas suportadas
 
-<style>
-table th:nth-child(1) {
-width: 33%;
-}
-table th:nth-child(2) {
-width: 33%;
-}
-table th:nth-child(3) {
-width: 33%;
-}
-table td {
-word-break: break-word;
-text-align: center;
-}
-</style>
-Integrações em destaque   |    |   
------------ |---------------- | --------------------
-[![Android]({% image_buster /assets/img/braze_icons/android.svg %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=android){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Android]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=android) |[![iOS]({% image_buster /assets/img/braze_icons/apple.svg %})]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift){: style="max-width:20%;margin-right:15px;border:0" class="noimgborder"} [iOS]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=swift) |[![Web]({% image_buster /assets/img/braze_icons/globe-02.png %})]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web){: style="max-width:25%;margin-right:15px;border:0" class="noimgborder"} [Web]({{site.baseurl}}/developer_guide/sdk_integration/?sdktab=web)  
-
-Todas as integrações   |    |   
------------ |---------------- | --------------------
-[![Cordova Android]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=android){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova Android]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=android) | [![Cordova iOS]({% image_buster /assets/img/cordova.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=ios){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Cordova iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=cordova&tab=ios) | [![Flutter Android e iOS]({% image_buster /assets/img/flutter_icon.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=flutter){: style="max-width:20%;margin-top:5%;border:0" class="noimgborder"}  [Flutter para Android e iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=flutter)
-[![React Native]({% image_buster /assets/img/reactnative_icon.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=react%20native){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [React Native]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=react%20native) | [![tvOS]({% image_buster /assets/img/tvos_icon.png %})]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [tvOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/tvos/initial_sdk_setup/) | [![MacOS]({% image_buster /assets/img/macOS_icon.png %})]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/macOS/initial_sdk_setup/){: style="max-width:40%;margin-top:15%;border:0" class="noimgborder"}  [MacOS]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/macOS/initial_sdk_setup/)
-[![Unity Android]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity Android]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Unity iOS]({% image_buster /assets/img/unity.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity){: style="max-width:40%;margin-right:15px;border:0" class="noimgborder"}  [Unity iOS]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unity) | [![Xamarin]({% image_buster /assets/img/xamarin.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin){: style="max-width:35%;margin-top:5%;border:0" class="noimgborder"}  [Xamarin]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=xamarin) 
-[![Roku]({% image_buster /assets/img/roku.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku){: style="max-width:40%;margin-top:5%;border:0" class="noimgborder"}  [Roku]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=roku) | [![Unreal Engine]({% image_buster /assets/img/unreal.png %})]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine){: style="max-width:30%;margin-right:15px;border:0" class="noimgborder"}  [Unreal Engine]({{site.baseurl}}/developer_guide/sdk_integration?sdktab=unreal%20engine)
-
+O Braze fornece SDKs para várias plataformas, como Web, Android e Swift. Para a lista completa, consulte o [Guia do Desenvolvedor do Braze]({{site.baseurl}}/developer_guide/home).

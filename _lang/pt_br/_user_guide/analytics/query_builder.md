@@ -25,7 +25,7 @@ Para executar um relatório do Query Builder:
 6. Salve sua consulta.
 7. Para baixar um CSV de seu relatório, selecione **Exportar**.
 
-![O Criador de consultas mostra os resultados da consulta modelo "Engajamento e receita do canal nos últimos 30 dias".]({% image_buster /assets/img_archive/query_builder.png %})
+![O Query Builder mostra os resultados da consulta modelada "Engajamento do canal e receita nos últimos 30 dias".]({% image_buster /assets/img_archive/query_builder.png %})
 
 Os resultados de cada relatório podem ser gerados uma vez por dia. Se você executar o mesmo relatório mais de uma vez em um dia do calendário, verá os mesmos resultados em ambos os relatórios.
 
@@ -66,11 +66,17 @@ send_date_sydney;
 ```
 {% endraw %}
 
+### Histórico de consultas
+
+A seção **Histórico de consultas** no Query Builder exibe as consultas executadas anteriormente para ajudá-lo a rastrear e reutilizar seu trabalho. O histórico de consultas é retido por sete dias, o que significa que as consultas com mais de sete dias são automaticamente removidas.
+
+Se precisar auditar o uso da consulta por períodos mais longos ou manter registros além de sete dias, recomendamos exportar ou salvar resultados importantes da consulta antes que eles expirem.
+
 ## Geração de SQL com o Criador de consultas com IA
 
 O Criador de consultas com IA usa o [GPT](https://openai.com/gpt-4), desenvolvido pela OpenAI, para recomendar SQL para sua consulta.
 
-![O construtor de consultas de IA SQL.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
+![O construtor de consultas de SQL IA.]({% image_buster /assets/img_archive/query_builder_ai_tab.png %}){: style="max-width:60%;" }
 
 Para gerar SQL com o Criador de consultas com IA:
 

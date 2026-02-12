@@ -1,5 +1,5 @@
 ---
-nav_title: Utilisateurs de la LIGNE
+nav_title: Utilisateurs de LINE
 config_only: true
 noindex: true
 layout: blank_config

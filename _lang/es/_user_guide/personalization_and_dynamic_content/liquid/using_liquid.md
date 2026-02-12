@@ -6,9 +6,9 @@ description: "Este artículo de referencia ofrece una visión general de los cas
 search_rank: 2
 ---
 
-# [![Curso Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Utilización de líquido
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Utilizando Liquid
 
-> Este artículo mostrará cómo puedes utilizar diversos atributos de usuario para insertar dinámicamente información personal en tu mensajería.
+> Este artículo muestra cómo puedes utilizar diversos atributos de usuario para insertar dinámicamente información personal en tu mensajería.
 
 Liquid es un lenguaje de plantillas de código abierto desarrollado por Shopify y escrito en Ruby. Puedes utilizarlo en Braze para introducir datos de perfil de usuario en tus mensajes y personalizar esos datos. Por ejemplo, puedes utilizar etiquetas de Liquid para crear mensajes condicionales, como enviar ofertas diferentes en función de la fecha de aniversario de la suscripción de un usuario. Además, los filtros pueden manipular datos, como formatear la fecha de registro de un usuario de una marca de tiempo a un formato más legible, como "15 de enero de 2022". Para más detalles sobre la sintaxis de Liquid y sus capacidades, consulta [Etiquetas de personalización compatibles]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -35,6 +35,10 @@ O...
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+Los comentarios HTML (`<!-- -->`) se eliminan antes de leer cualquier Liquid, por lo que las etiquetas de Liquid dentro de los comentarios HTML **no** aparecen en tu mensaje. Para una representación correcta, asegúrate de que todas las etiquetas de Liquid que quieras utilizar estén fuera de los comentarios HTML.
+{% endalert %}
 
 ## Valores admitidos para sustituir
 
@@ -71,13 +75,27 @@ Liquid sigue una estructura o sintaxis específica que deberá tener en cuenta a
 
 Si incluye el siguiente texto en su mensaje: `{{${first_name}}}`, el nombre de pila del usuario (extraído de su perfil) será sustituido cuando se envíe el mensaje. Puedes utilizar el mismo formato con otros atributos predeterminados de usuario.
 
-Si desea utilizar el valor de un atributo personalizado, debe añadir el espacio de nombres "custom_attribute" a la variable. Por ejemplo, para utilizar un atributo personalizado denominado "código postal", deberá incluir `{{custom_attribute.${zip code}}}` en su mensaje.
+Si quieres utilizar el valor de un atributo personalizado, debes añadir el espacio de nombres "custom_attribute" a la variable. Por ejemplo, para utilizar un atributo personalizado denominado "código postal", deberá incluir `{{custom_attribute.${zip code}}}` en su mensaje.
 
 ### Insertar etiquetas
 
 Puedes insertar etiquetas escribiendo dos llaves abiertas `{{` en cualquier mensaje, lo que activará una función de autocompletado que se irá actualizando a medida que escribas. Incluso puede seleccionar una variable entre las opciones que aparecen a medida que escribe.
 
 Si utilizas una etiqueta personalizada, puedes copiarla y pegarla en el mensaje que desees.
+
+#### Excepciones para paréntesis dobles
+
+Si utilizas una etiqueta dentro de otra etiqueta de Liquid, como `{% assign %}` o `{% if %}`, puedes utilizar corchetes dobles o ningún corchete. Sólo cuando la etiqueta está sola debe ir entre corchetes dobles. Para simplificar, siempre puedes utilizar paréntesis dobles. 
+
+Las siguientes etiquetas son todas correctas:
+
+```liquid
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
+{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
+
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign value_one = custom_attribute.${one} %}
+```
 
 {% endraw %}
 

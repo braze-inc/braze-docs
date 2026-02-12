@@ -1,5 +1,5 @@
 ---
-nav_title: Esboços do Canva
+nav_title: Contornos da tela
 article_title: Esboços do Canva
 page_order: 3
 page_type: reference
@@ -14,15 +14,12 @@ tool: Canvas
 
 > Este artigo destaca vários exemplos que demonstram como você pode usar o Canva para realizar envios de mensagens direcionados e personalizados usando uma combinação de etapas de [postergação]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/delay_step/) e [mensagem]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/message_step/).
 
-O Braze Learning também oferece vários cursos dedicados ao Canvas que abordam os tópicos comuns do Canvas. Dê uma olhada neles para obter insights valiosos sobre termos técnicos e conceitos explicados por meio de uma mistura de vídeos, lições e exercícios interativos. 
+O Braze Learning também oferece vários cursos dedicados ao Canvas que abordam os tópicos comuns do Canvas. Dê uma olhada neles para obter insights valiosos sobre termos técnicos e conceitos explicados por meio de uma mistura de vídeos, lições e exercícios interativos.
+
 - [Crie jornadas do cliente com o Canvas Flow](https://learning.braze.com/create-customer-journeys-with-canvas-flow)
 - [Integração de novos membros de fidelidade](https://learning.braze.com/new-loyalty-member-onboarding)
 - [Usuários inativos](https://learning.braze.com/lapsing-users)
 - [Crie uma jornada de usuário de carrinho abandonado](https://learning.braze.com/build-an-abandoned-cart-user-journey)
-
-{% alert important %}
-A partir de 28 de fevereiro de 2023, você não poderá mais criar ou duplicar canvas usando a experiência original do canvas. A Braze recomenda que os clientes que usam a experiência original do Canvas migrem para o Canvas Flow. É uma experiência de edição aprimorada para melhor construir e gerenciar canvas. Saiba mais sobre a [clonagem de canvas no Canvas Flow]({{site.baseurl}}/user_guide/engagement_tools/canvas/managing_canvases/cloning_canvases/).
-{% endalert %}
 
 ### Onboarding
 

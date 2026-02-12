@@ -1,5 +1,5 @@
 ---
-nav_title: "사용자 지정 앱 아이콘 기능(iOS)"
+nav_title: "커스텀 앱 아이콘 기능(iOS)"
 article_title: 사용자 지정 앱 아이콘 기능
 page_order: 7
 page_type: reference

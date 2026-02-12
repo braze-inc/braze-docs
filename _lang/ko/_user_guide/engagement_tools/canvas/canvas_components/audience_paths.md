@@ -1,5 +1,5 @@
 ---
-nav_title: 오디언스 경로 
+nav_title: 오디언스 경로
 article_title: 오디언스 경로 
 alias: /audience_paths/
 page_order: 1
@@ -15,9 +15,9 @@ tool: Canvas
 
 이 캔버스 구성 요소는 과도한 오디언스 기반 전체 단계를 만들 필요를 대체하여, 여덟 개의 전체 구성 요소가 하나로 결합될 수 있게 합니다. 이것은 불필요한 혼란과 복잡성에서 캔버스를 정리하면서 사용자 타겟팅을 단순화하는 데 도움이 됩니다. 
 
-## How it works
+## 작동 방식
 
-![An Audience Path with two groups: engaged users and everyone else.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
+![참여 사용자와 그 외의 모든 사용자라는 두 그룹으로 구성된 오디언스 경로입니다.]({% image_buster /assets/img/audience_path/audience_path.png %}){: style="float:right;max-width:45%;margin-left:15px;margin-top:15px;"}
 
 오디언스 경로는 순위 기준이 있는 정렬 깔때기와 유사합니다. 사용자는 우선 순위 순서대로 각 기준에 대해 평가되며 자격을 갖춘 가장 높은 순위의 기준 경로로 보내집니다. 이것은 사용자가 어디로 갈지, 어떤 메시지를 받을지에 대한 모호성을 줄여줍니다. Note that the rankings aren't [editable after launch]({{site.baseurl}}/post-launch_edits/).
 
@@ -31,7 +31,7 @@ tool: Canvas
 
 ### 사용자 평가를 위한 시간을 허용합니다.
 
-![Canvas showing a 24-hour delay after a Message step, followed by an Audience Path.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![메시지 단계 후 24시간 지연 후 오디언스 경로를 보여주는 캔버스.]({% image_buster /assets/img/audience_path/audience_path5.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 사용자는 오디언스 경로 단계에 도달하자마자 평가됩니다. 평가가 완료되면 즉시 다음 단계로 진행됩니다. 오디언스 경로가 사용자 행동에 의해 결정되는 경우 적절한 시간 창이 경과하도록 허용하는 것이 중요합니다.
 
@@ -45,7 +45,7 @@ Note that users advance to the next step based on the first action they performe
 
 오디언스 경로 단계를 추가하려면 다음을 수행하세요. 
 
-1. 캔버스에 단계를 추가하세요. 
+1. 캔버스에 단계를 추가합니다. 
 2. 사이드바에서 구성 요소를 드래그 앤 드롭하거나 단계 하단에서 <i class="fas fa-plus-circle"></i> **추가**를 선택하고 **오디언스 경로**를 선택합니다.
 
 기본 오디언스 경로 구성 요소에는 두 개의 기본 오디언스 그룹, **Group 1** 및 **Everybody Else**가 포함되어 있습니다. **Everybody Else** 그룹에는 정의된 오디언스 그룹에 속하지 않는 모든 사용자가 포함됩니다. 이 그룹은 항상 마지막에 순위가 매겨집니다.
@@ -56,17 +56,17 @@ Note that users advance to the next step based on the first action they performe
 
 For example, if you wanted to target onboarding messaging to a group of users, you might select retargeting filters, such as "Has clicked email" and "Has clicked in-app message".
 
-![An expanded Audience Path with groups for "Loves Asian Cuisine”, “Loves Latin Cuisine”, “Loves European Cuisine”, and "Everyone Else".]({% image_buster /assets/img/audience_path/audience_path3.png %})
+!['아시아 요리 좋아하기', '라틴 요리 좋아하기', '유럽 요리 좋아하기', '그 외 모든 요리' 그룹으로 오디언스 경로가 확장되었습니다.]({% image_buster /assets/img/audience_path/audience_path3.png %})
 
 오디언스 경로 단계가 완료되면 각 오디언스 그룹은 별도의 분기를 갖게 됩니다. 오디언스 경로를 계속 사용하여 오디언스를 추가로 필터링하거나 표준 캔버스 단계를 사용하여 캔버스 여정을 계속할 수 있습니다. 
 
-![Two Audience Paths with different groups based on engagement.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
+![참여도에 따라 그룹이 다른 두 가지 오디언스 경로.]({% image_buster /assets/img/audience_path/audience_path4.png %}){: style="max-width:50%"}
 
 ### 테스팅 오디언스 그룹
 
 After adding segments and filters to your audience, you can test if your audience groups are set up as expected by [looking up a user]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) to confirm they match the audience criteria.
 
-![The "User Lookup" section.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
+!['사용자 조회' 섹션입니다.]({% image_buster /assets/img_archive/user_lookup.png %}){: style="max-width:70%"}
 
 ## 오디언스 경로 사용
 
@@ -74,7 +74,7 @@ After adding segments and filters to your audience, you can test if your audienc
 
 이 그룹에 높은 우선순위를 할당함으로써 특정 필터 및 세그먼트에 속하는 사용자를 타겟팅하면서도 특정 기준에 맞지 않는 사용자를 여전히 타겟팅할 수 있습니다. 모두 단일 캔버스 단계에서 가능합니다.
 
-![An Audience Path with groups for “Likes Big Brand Shoes”, “Likes Big Brand”, and "Everyone Else".]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
+!["대형 브랜드 신발 좋아함", "대형 브랜드 좋아함", "기타 모두" 그룹이 있는 오디언스 경로입니다.]({% image_buster /assets/img/audience_path/audience_path2.png %}){: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
 예를 들어, 새로운 제품 광고를 사용자 그룹에게 보내고 싶다고 가정해 봅시다. 오디언스 경로에서 해당 제품에 속하는 필터를 높은 순위로 시작할 것입니다. If you were creating a marketing campaign for the company "Big Brand" and a new retail brand had just released, you might select filters like "Likes Big Brand Shoes" or "Likes Big Brand Bags", and send different email messages based on what filtered group they fall into. 
 

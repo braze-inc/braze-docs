@@ -19,7 +19,7 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 
 ### 1단계: 날짜 범위 선택
 
-![Report Date]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+![보고 날짜]({% image_buster /assets/img/date_select_retention.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
 시작하려면 Braze 대시보드에서 캠페인이나 캔버스를 방문하여 보고서의 날짜 범위를 선택하세요. 적절한 날짜 범위를 선택하는 것은 유지 리포트에 영향을 미치기 때문에 매우 중요합니다. 
 
@@ -30,25 +30,25 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 ### 2단계: 보존 이벤트 선택
 
 {% tabs %}
-{% tab 캠페인 %}
+{% tab Campaign %}
 
 다음으로 **캠페인 리텐션** 섹션으로 이동합니다. 캠페인 유지는 특정 캠페인을 수신한 사용자가 캠페인을 수신한 시점부터 30일 동안 유지 이벤트(유지 보고서에서 지정한)를 수행한 비율을 보여줍니다.
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab Canvas %}
 
 다음으로 **이형 상품 분석을** 선택합니다. 여기에서 배리언트 상품을 분석하고, 퍼널 보고서를 확인하고, 유지 보고서를 확인할 수 있습니다. 캔버스 유지는 특정 캠페인을 수신한 사용자가 캔버스를 수신한 시점부터 30일 동안 유지 이벤트(유지 보고서에서 지정한)를 수행한 비율을 보여줍니다.
 
 {% endtab %}
 {% endtabs %}
 
-![Select a Retention event]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
+![리텐션 이벤트 선택]({% image_buster /assets/img/retention_1.png %}){: style="max-width:80%"}
 
 ### 3단계: 보고서 생성
 
 보존 이벤트를 선택한 후 **보고서 실행을** 선택하여 쿼리를 시작합니다.
 
-![Run Report]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
+![보고서 실행]({% image_buster /assets/img/retention_2.png %}){: style="max-width:80%"}
 
 이 쿼리는 결과를 생성하기 위해 검색해야 하는 데이터의 양에 따라 실행하는 데 몇 분 정도 걸릴 수 있습니다. 시간이 너무 오래 걸리면 보고서를 다시 로드해 보라는 알림이 표시됩니다. 보고서가 로드될 때까지 최대 5분 정도 기다려야 할 수 있습니다.
 
@@ -57,14 +57,14 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 보고서에는 캠페인 또는 캔버스에서 메시지를 보낸 날짜만 나열됩니다. 일부 캠페인 및 캔버스의 경우, 보고서가 한 번만 전송된 경우 보고서가 하루만 표시될 수 있습니다. 반복되거나 트리거되는 경우 표에 여러 날짜가 표시될 수 있습니다.
 
 {% tabs %}
-{% tab 캠페인 %}
+{% tab Campaign %}
 
-![보고서 전문]({% image_buster /assets/img/campaign_retention3.png %})
+![전체 보고서]({% image_buster /assets/img/campaign_retention3.png %})
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab Canvas %}
 
-![보고서 전문]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
+![전체 보고서]({% image_buster /assets/img/canvas_retention_report.png %}){: style="max-width:70%"}
 
 {% endtab %}
 {% endtabs %}
@@ -83,7 +83,7 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 
 3일차 열의 리텐션 보고서 차트를 읽는 방법은 Z일에 캠페인을 받은 후 3일 이상 이벤트를 수행한 사용자 수(선택한 단위 기준)를 Y% 또는 Y명으로 표시하는 것입니다.
 
-![롤링 리포트]({% image_buster /assets/img/campaign_retention3.png %})
+![롤링 보고서]({% image_buster /assets/img/campaign_retention3.png %})
 
 또 다른 예로, 앞 이미지의 표를 참조하면 3월 25일에는 총 38명의 사용자가 유지 이벤트를 수행했습니다. 0일차 리텐션은 68.42%로, 68.42%의 사용자가 캠페인을 받은 후 0일 이상(0일차 이후) 리텐션 이벤트를 수행했음을 의미합니다. 7일차 리텐션은 57.89%로, 캠페인을 받은 후 7일 이상(7일차 이후) 이벤트를 실행한 사용자가 57.89%에 달했습니다.
 
@@ -97,7 +97,7 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 
 범위 보고서는 가장 직관적으로 읽을 수 있는 보고서 중 하나입니다. 코호트의 모든 사용자 중 지정된 날짜 범위 내에서 유지 이벤트를 수행한 사용자의 비율을 명확하게 명시합니다. 예를 들어, 다음 이미지에서 모든 사용자 코호트를 참조하는 날짜 범위 "0일(0-24시간)"의 경우 코호트 중 35.71%가 유지 리포트를 수행했습니다. 사용자가 여러 날짜 범위 내에서 여러 개의 유지 이벤트를 수행하면 각 범위에 대해 유지된 것으로 계산됩니다.
 
-![Retention Report]({% image_buster /assets/img/range_retention.png %})
+![리텐션 보고서]({% image_buster /assets/img/range_retention.png %})
 
 ### 리텐션 보고서 구성 요소
 
@@ -121,14 +121,14 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 - 대조군의 유지 데이터를 분석하여 메시지를 보내지 않은 경우 유지율이 어떻게 되는지 확인하세요.
 
 {% tabs %}
-{% tab 캠페인 %}
+{% tab Campaign %}
 
-![변형으로 보기]({% image_buster /assets/img/variant_view.png %})
+![배리언트별로 보기]({% image_buster /assets/img/variant_view.png %})
 
 {% endtab %}
-{% tab 캔버스 %}
+{% tab Canvas %}
 
-![변형으로 보기]({% image_buster /assets/img/variant_view_canvas.png %})
+![배리언트별로 보기]({% image_buster /assets/img/variant_view_canvas.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -138,7 +138,7 @@ API 트리거 캠페인에는 유지 보고서를 사용할 수 없습니다.
 - **날짜 범위**: 캠페인 또는 캔버스 **세부 정보** 페이지에서 설정한 날짜 범위에는 이 기간 동안 캠페인 또는 캔버스를 받은 모든 사용자가 포함되며, 해당 사용자 중 날짜 범위 동안 리텐션 이벤트를 수행한 사용자의 데이터가 보고서에 표시됩니다. 매일 유지율, 대조군과의 변화율, 신뢰도를 측정합니다.
 - **유지율**: 이형 상품별 리텐션 비율을 표시합니다. 유지율은 유지 이벤트를 수행한 사용자 수를 캠페인 또는 캔버스를 수신한 총 사용자 수로 나눈 값입니다.
 - **대조군 대비 백분율 변화**: 대조군과의 배리언트 상품별 변화 비율을 정량화합니다.
-- **신뢰도**: {% multi_lang_include metrics.md metric='Confidence' %} Braze는 Z 테스트라는 통계 절차를 통해 각 이형 상품의 전환율과 대조 상품의 전환율을 비교하여 [신뢰도를]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence) 계산합니다.
+- **신뢰도**: {% multi_lang_include analytics/metrics.md metric='Confidence' %} Braze는 Z 테스트라는 통계적 절차를 통해 각 배리언트의 전환율을 대조군의 전환율과 비교하여 [신뢰도를]({{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence) 계산합니다.
 - **단위**: 차트의 오른쪽 상단에서 사용자 비율과 사용자 수 사이의 단위를 조정할 수 있으며, 캠페인이나 캔버스의 영향력을 판단할 때 특정 단위가 더 중요할 수 있습니다.
 - **배리언트 그래프**: 이 그래프는 선택한 날짜 범위에 대한 변형별 결과를 요약한 것입니다.
 

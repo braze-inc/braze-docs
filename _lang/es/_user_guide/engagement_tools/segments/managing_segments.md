@@ -1,6 +1,6 @@
 ---
-nav_title: Administrador de segmentos
-article_title: Administrador de segmentos
+nav_title: Administrar segmentos
+article_title: Administrar segmentos
 page_order: 1
 page_type: tutorial
 tool: Segments
@@ -8,11 +8,11 @@ description: "Este artículo cubre las acciones que puede realizar para gestiona
 
 ---
 
-# Administrador de segmentos
+# Administrar segmentos
 
 > La sección Segmentos le permite ver una lista completa de sus segmentos existentes, crear nuevos segmentos y editar segmentos existentes. Puede refinar la lista de segmentos seleccionando una variedad de filtros y columnas para que sólo se muestre la información más relevante para usted.
 
-![La sección Segmentos muestra una lista de los segmentos Activos.]({% image_buster /assets/img/segment/segments_page.png %})
+![La sección Segmentos muestra una lista de los segmentos activos.]({% image_buster /assets/img/segment/segments_page.png %})
 
 ## Personalizar la vista
 
@@ -47,6 +47,14 @@ Estas son las columnas de información que puede seleccionar para mostrar en la 
 ### Mostrar solo marcados con estrellas
 
 Si selecciona **Mostrar sólo marcados**, la vista se limitará a los segmentos marcados por usted.
+
+## Ver el uso de la mensajería de un segmento
+
+Ve a la sección **Uso de la mensajería** de un segmento para obtener una visión general de dónde se está utilizando el segmento, como dentro de otros segmentos, campañas y Lienzos.
+
+{% alert note %}
+Para evitar bucles de segmentos que se referencian entre sí, los segmentos que utilizan el filtro **Pertenencia a segmento** no pueden ser referenciados por otros segmentos. Para más detalles, consulta [Filtros de segmentación]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/).
+{% endalert %}
 
 ## Gestión de segmentos específicos
 

@@ -4,8 +4,8 @@ nav_title: Termes à connaître
 article_title: Termes de Braze à connaître
 
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze. Give this a read before you begin your onboarding."
+glossary_top_header: "Termes à connaître"
+glossary_top_text: "Ces termes devraient vous aider à entamer votre parcours vers de meilleurs liens avec les clients et les utilisateurs de Braze. Veuillez lire ce document avant de commencer votre onboarding."
 page_type: glossary
 description: "Ce glossaire couvre les termes importants à connaître lorsque vous suivez le processus d’onboarding de Braze."
 
@@ -81,7 +81,7 @@ glossaries:
   - name: Messages de notification push
     description: "Un <a href=\"https://www.braze.com/docs/user_guide/message_building_by_channel/push/\">message de notification push</a>, ou notification push, est une notification qui s’affiche depuis une application mobile. Les notifications push s’affichent souvent sous forme de boîtes de dialogue contextuelles et de bannières pour iOS et Android."
   - name: Jeton de notification push
-    description: "Un Jeton de notification push est une clé unique, créée et attribuée par Apple ou Google pour créer une connexion entre une application et un appareil iOS, Android ou un appareil Web. La <a href=\"https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration\">migration des jetons de poussée</a> consiste à importer ces clés déjà générées dans Braze."
+    description: "Un Jeton de notification push est une clé unique, créée et attribuée par Apple ou Google pour créer une connexion entre une application et un appareil iOS, Android ou un appareil Web. La <a href=\"https://www.braze.com/docs/api/objects_filters/user_attributes_object/#migrating-push-tokens\">migration des jetons de poussée</a> consiste à importer ces clés déjà générées dans Braze."
   - name: Durée de vie de notification push
     description: "Également connu sous le nom de <a href=\"https://www.braze.com/docs/user_guide/administrative/app_settings/push_settings/\">TTL (Durée de vie) de notification push</a>, elle signifie le temps de mise en service cours de laquelle les campagnes continueront à être livrées à un utilisateur hors ligne."
   - name: Conditions de concurrence

@@ -1,8 +1,8 @@
 ---
-nav_title: Assistência técnica de proteção de dados
-article_title: Assistência técnica de proteção de dados
+nav_title: Assistência técnica em proteção de dados
+article_title: Assistência Técnica de Proteção de Dados nos Serviços Braze
 page_order: 1
-description: "Esta página fornece instruções técnicas para ativá-lo a gerenciar, por meio da Plataforma Braze, solicitações de indivíduos em relação a seus direitos de dados pessoais."
+description: "Esta página fornece instruções técnicas para ativá-lo a gerenciar, por meio dos Serviços Braze, solicitações de indivíduos em relação a seus direitos de dados pessoais."
 alias: /help/dp-technical-assistance/
 permalink: /dp-technical-assistance/
 hide_toc: true
@@ -12,11 +12,15 @@ hide_toc: true
 Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
-# Assistência técnica de proteção de dados
+# Assistência Técnica de Proteção de Dados nos Serviços Braze
 
 Há uma série de leis de proteção de dados que regulam o que as organizações podem fazer com os dados pessoais ("Leis de Proteção de Dados"), incluindo o Regulamento Geral de Proteção de Dados da UE e do Reino Unido ("GDPR"), a Lei de Privacidade do Consumidor da Califórnia ("CCPA") e a Lei de Portabilidade e Responsabilidade de Seguros de Saúde ("HIPAA"). Existem outras leis e normas nacionais, estaduais e específicas do setor que podem se aplicar à sua empresa.
 
-Essas leis de proteção de dados concedem aos indivíduos "direitos de privacidade" sobre seus dados pessoais. As organizações são obrigadas a receber e responder às solicitações de indivíduos que exercem seus direitos de privacidade. A plataforma Braze pode ajudá-lo a cumprir essas Leis de Proteção de Dados, fornecendo recursos para facilitar determinadas ações exigidas por essas leis. Este documento fornece instruções técnicas para usar esses recursos para gerenciar solicitações de direitos de privacidade. Cabe a você determinar quais leis de proteção de dados se aplicam à sua empresa e agir em conformidade com elas.
+Essas leis de proteção de dados concedem aos indivíduos "direitos de privacidade" sobre seus dados pessoais. As organizações são obrigadas a receber e responder às solicitações de indivíduos que exercem seus direitos de privacidade. Os Serviços Braze podem ajudá-lo a cumprir essas Leis de Proteção de Dados, fornecendo recursos para facilitar determinadas ações exigidas por essas leis. Este documento fornece instruções técnicas para usar esses recursos para gerenciar solicitações de direitos de privacidade. Cabe a você determinar quais leis de proteção de dados se aplicam à sua empresa e agir em conformidade com elas.
+
+{% alert important %}
+As recomendações do Braze nesta página não se aplicam ao BrazeAI Decisioning Studio™. Para gerenciar quaisquer solicitações de direitos de privacidade relacionadas a dados pessoais no BrazeAI Decisioning Studio™, entre em contato com o gerente da sua conta.
+{% endalert %}
 
 ## Isenção de responsabilidade legal
 
@@ -34,11 +38,11 @@ A maioria das leis de privacidade define três partes interessadas principais qu
 - Um controlador de dados é uma entidade que determina as finalidades e os meios de processamento dos Dados Pessoais
 - Um processador de dados é uma entidade que processa Dados Pessoais em nome e sob as instruções do controlador de dados
 
-Em relação à plataforma Braze:
+Em relação aos Serviços Braze:
 
-- Os titulares dos dados são, por exemplo, os usuários finais do seu aplicativo de cliente (e.g., seus clientes) ou seus colaboradores que são usuários do dashboard na sua instância da plataforma Braze.
-- Você, o cliente Braze, é o controlador de dados que decide como e por que os Dados Pessoais dos titulares dos dados serão coletados e processados na plataforma Braze.
-- A Braze é uma processadora de dados que processa os Dados Pessoais na plataforma Braze em seu nome e de acordo com as instruções que recebemos de você.
+- Os titulares dos dados são, por exemplo, os usuários finais do seu aplicativo de cliente (e.g., seus clientes) ou seus colaboradores que são usuários do dashboard na sua instância dos Serviços Braze.
+- Você, o cliente Braze, é o controlador de dados que decide como e por que os Dados Pessoais dos titulares dos dados serão coletados e processados dentro dos Serviços Braze.
+- A Braze é uma processadora de dados que processa os Dados Pessoais nos Serviços Braze em seu nome e de acordo com as instruções que recebemos de você.
 
 Os termos acima são do GDPR, mas, por exemplo, os termos comparáveis da CCPA são:
 
@@ -46,7 +50,7 @@ Os termos acima são do GDPR, mas, por exemplo, os termos comparáveis da CCPA s
 - "empresas" para controladores de dados.
 - "prestadores de serviço" para processadores de dados.
 
-Você encontrará abaixo informações relevantes sobre as solicitações de direitos de privacidade mais comuns dos titulares dos dados, incluindo como você pode respondê-las por meio dos recursos técnicos da plataforma Braze.
+Você encontrará abaixo informações relevantes sobre as solicitações de direitos de privacidade mais comuns dos titulares dos dados, incluindo como você pode respondê-las por meio dos recursos técnicos do Serviço Braze.
 
 ## O direito de ser informado
 
@@ -84,10 +88,10 @@ O direito de exclusão também é conhecido como "direito de ser esquecido" ou "
 
 #### Eliminação padrão 
 
-Depois de interromper a coleta de dados, você poderá usar [o endpoint da API REST de Exclusão de Usuário do Braze](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) para excluir um usuário final, o que removerá todos os registros desse usuário final dos Serviços do Braze:
+Depois de interromper a coleta de dados, você poderá usar [o endpoint da API REST de exclusão de usuário do Braze](https://www.braze.com/docs/api/endpoints/user_data/post_user_delete/) para excluir um usuário final, o que removerá todos os registros desse usuário final dos Serviços Braze:
 
-- Para usuários finais que têm um external_id nos Serviços, é possível usar esse ID para excluir os dados desse usuário final.
-- Para usuários finais anônimos que não têm um external_id nos Serviços, você pode recuperar o identificador do dispositivo desse usuário final usando o Braze SDK e pode usar o identificador do dispositivo para encontrar o perfil do usuário final associado a esse dispositivo. Em seguida, é possível usar a API de exclusão de usuário para excluir o perfil associado a esse usuário final.
+- Para usuários finais que têm um external_id nos Serviços Braze, você pode usar esse ID para excluir os dados desse usuário final.
+- Para usuários finais anônimos que não têm um external_id nos Serviços Braze, é possível recuperar o identificador de dispositivo desse usuário final usando o Braze SDK e usar o identificador de dispositivo para encontrar o perfil de usuário final associado a esse dispositivo. Em seguida, é possível usar a API de exclusão de usuário para excluir o perfil associado a esse usuário final.
 
 A exclusão de um usuário final dos Serviços Braze excluirá permanentemente o Perfil de Usuário centralizado da Braze para esse usuário final, conforme definido pelo `external_id` fornecido. Isso inclui informações de perfil estruturadas que o Braze coletou por padrão ou que você configurou os Serviços Braze para coletar, como informações do dispositivo, país, idioma e endereço de e-mail.
 
@@ -111,7 +115,7 @@ Observe que o endereço de e-mail ou o número de telefone associado ao perfil d
         <p>As configurações padrão são aplicadas no nível da empresa, mas você pode optar por excluir os seguintes campos quando o processo de exclusão for executado, no nível do grupo de app/espaço de trabalho:</p>
     <ul>
         <li>PROPRIEDADES para USERS_BEHAVIORS_CUSTOMEVENT</li>
-        <li>PROPERTIES for USERS_BEHAVIORS_PURCHASE</li>
+        <li>PROPRIEDADES para USERS_BEHAVIORS_PURCHASE</li>
         <li>MESSAGE_EXTRAS para:</li>
             <ul>
             <li>USERS_MESSAGES_CONTENTCARD</li>
@@ -166,7 +170,7 @@ Os indivíduos podem ter o direito de se opor a:
 
 ### Recomendação de Braze
 
-O Braze oferece a capacidade de marcar um perfil de usuário como tendo cancelado a inscrição de SMS, e-mails ou notificações por push por meio de nossas [APIs REST](https://www.braze.com/docs/api/home/) de e-mail e dos SDKs [para iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/), [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) e [Web](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). Se receber objeções dos Titulares dos Dados quanto ao recebimento de tais mensagens, poderá usar as APIs do Braze para cancelar a inscrição desses usuários finais.
+O Braze oferece a capacidade de marcar um perfil de usuário como tendo cancelado a inscrição de SMS, e-mails ou notificações por push por meio de nossas [APIs REST](https://www.braze.com/docs/api/home/) de e-mail e dos SDKs para [iOS](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/), [Android](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) e [Web](https://www.braze.com/docs/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/). Se receber objeções dos Titulares dos Dados quanto ao recebimento de tais mensagens, poderá usar as APIs do Braze para cancelar a inscrição desses usuários finais.
 
 Se isso não for suficiente, para evitar o processamento de dados pessoais de usuários finais pela Braze, o perfil do usuário final deverá ser excluído da mesma forma que a especificada no "Direito de Exclusão".
 
@@ -176,7 +180,7 @@ Algumas leis de proteção de dados impedem ou permitem que os titulares dos dad
 
 ### Recomendação de Braze
 
-A Braze não realiza nenhuma ação automatizada de criação de perfil ou tomada de decisão com ramificações legais ou equivalentes para os titulares dos dados. Se o usuário acreditar que seu próprio uso da Plataforma Braze terá impactos legais ou equivalentes e tiver recebido uma objeção a isso, poderá optar por excluir o Perfil de Usuário da mesma forma que no "Direito de Exclusão".
+A Braze não realiza nenhuma ação automatizada de criação de perfil ou tomada de decisão com ramificações legais ou equivalentes para os titulares dos dados. Se o usuário acreditar que seu próprio uso dos Serviços Braze terá impactos legais ou equivalentes e tiver recebido uma objeção a isso, poderá optar por excluir o Perfil de Usuário da mesma forma que no "Direito de Exclusão".
 
 ## Direcionamento da publicidade
 

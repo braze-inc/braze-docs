@@ -1,5 +1,5 @@
 ---
-nav_title: Composants Canvas
+nav_title: Composants de la toile
 article_title: Composants Canvas
 page_order: 2
 alias: "/user_guide/engagement_tools/canvas/canvas_components/about/"
@@ -48,7 +48,7 @@ Avec les composants Canvas, vous pouvez débloquer de nouveaux parcours utilisat
 
 ### Parcours utilisateur de Customizing
 
-![Exemple d'un parcours utilisateur Canvas avec une étape de l'arbre décisionnel suivie d'étapes de délai et de message.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
+![Exemple d'un parcours utilisateur Canvas avec une étape décisionnelle suivie d'étapes de délai et d'envoi de messages.]({% image_buster /assets/img/canvas_intro/canvas_intro.gif %}){: style="float:right;max-width:55%;margin-left:15px;"}
 
 Utilisez les [parcours d'action]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/action_paths) pour diviser votre parcours utilisateur en fonction des actions et des événements d'engagement tels que la réalisation d'un achat. Si vous souhaitez filtrer et cibler vos audiences, les [parcours d'audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) permettent de simplifier le ciblage des utilisateurs en leur faisant suivre différents parcours canvas en fonction de critères d'audience.
 

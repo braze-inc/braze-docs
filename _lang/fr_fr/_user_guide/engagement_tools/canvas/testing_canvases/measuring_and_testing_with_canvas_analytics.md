@@ -1,5 +1,5 @@
 ---
-nav_title: Analyses Canvas
+nav_title: Analytique Canvas
 article_title: Analyses Canvas
 page_order: 2
 page_type: reference
@@ -38,7 +38,7 @@ Pour Canvas Flow, un utilisateur quittera le Canvas après être entré et avoir
 
 Ces indicateurs comprennent également les impressions, les destinataires uniques, le nombre de conversions et le revenu généré. Vous pouvez cliquer sur un composant pour décomposer vos données avec plus de précision et voir la performance spécifique au canal.
 
-![Deux exemples de détails de performance pour des composants Canvas. À gauche, les détails de la performance s’affichent pour un parcours utilisateur avec un composant Canvas. À droite, vous trouverez des détails sur les performances d'un composant Canvas étendu et d'une étape imbriquée qui indique le nombre d'impressions de messages in-app.]({% image_buster /assets/img_archive/Journey_6.png %})
+![Deux exemples de détails de performance pour des composants Canvas. À gauche, les détails de la performance s’affichent pour un parcours utilisateur avec un composant Canvas. Sur la droite, les détails de la performance pour un composant Canvas étendu et une étape imbriquée qui affiche le nombre d’impressions du message in-app.]({% image_buster /assets/img_archive/Journey_6.png %})
 
 ## Décomposition de performance par variante
 
@@ -74,6 +74,26 @@ Au-delà de cela, vous pouvez voir une répartition plus explicite des [événem
 - Totaux de conversion et taux de conversion pour chaque événement de conversion
 - Progression par rapport à la variante de contrôle
 - Seuil de confiance des statistiques pour chaque événement de conversion
+
+### Comment les conversions sont-elles suivies ? 
+
+Un utilisateur ne peut effectuer qu'une seule conversion par événement de conversion et par entrée dans le Canvas. Les conversions sont affectées au message le plus récent reçu par l’utilisateur pour cette entrée. Le résumé Canvas reflète toutes les conversions effectuées par les utilisateurs dans ce chemin et indique s'ils ont reçu un message ou non. Chaque message suivant affichera uniquement les conversions effectuées lorsque l’utilisateur a reçu l’étape la plus récente. 
+
+Considérez l'exemple suivant : un Canvas a 10 notifications push et l'événement de conversion est " Opens App " (ou " Session Start ").
+- L’utilisateur A ouvre l’application après l’accès, mais avant la réception du premier message.
+- L’utilisateur B ouvre l’application après chaque notification push.
+
+L'étape du canvas indique deux conversions, tandis que les étapes individuelles indiquent une conversion pour la première étape et aucune pour toutes les étapes suivantes. Si des heures calmes sont actives au moment de l'événement de conversion, les mêmes règles s'appliquent. 
+
+Supposons maintenant que nous ayons un canvas avec des heures calmes et que les événements suivants se produisent :
+
+1. L'utilisateur A entre dans un Canvas.
+2. La première étape est une étape de retardement dans les heures calmes définies, de sorte que le message est supprimé.
+3. L'utilisateur A effectue l'événement de conversion.
+
+L'utilisateur A sera comptabilisé comme converti dans la variante globale du canvas, mais pas dans l'étape du canvas puisqu'il n'a pas reçu l'étape.
+
+Pour notre dernier exemple, disons que nous avons un canvas dont la rééligibilité est activée. Si un utilisateur rééligible effectue l'événement de conversion lors de la première entrée et de la deuxième entrée, deux conversions seront comptabilisées.
 
 ### Rapport d'entonnoir
 

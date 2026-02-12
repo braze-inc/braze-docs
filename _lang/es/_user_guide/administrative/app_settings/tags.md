@@ -24,7 +24,7 @@ Puedes añadir hasta 175 etiquetas a una campaña, Canvas o segmento.
 
 También puedes añadir etiquetas a varias campañas, lienzos o segmentos seleccionando varias interacciones y seleccionando <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Etiquetar como**.
 
-![Añadir etiquetas a varias campañas al mismo tiempo.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+![Añadir etiquetas a varias campañas a la vez.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
 
 {% alert important %}
 Cuando utilices el etiquetado masivo para aplicar una nueva etiqueta a varias campañas que ya tengan etiquetas diferentes, cada campaña seleccionada recibirá la nueva etiqueta, y cualquier etiqueta presente en una campaña se aplicará a todas las demás campañas seleccionadas, aunque esas etiquetas no estuvieran asociadas originalmente a ellas.
@@ -100,7 +100,10 @@ table td {
 
 ## Ejemplos
 
-¿Buscas inspiración sobre cómo aprovechar las etiquetas para gestionar el ciclo de vida de tus mensajes? He aquí algunos casos de uso habituales:
+¿Buscas inspiración sobre cómo aprovechar las etiquetas para gestionar el ciclo de vida de tus mensajes? He aquí algunos casos de uso comunes.
+
+{% tabs %}
+{% tab Throttling %}
 
 ### Limitación
 
@@ -110,6 +113,12 @@ Limite la frecuencia con la que sus clientes reciben campañas de un determinado
 <br>`OR`<br>
 `Has not received campaign` con etiqueta `Promo`
 
+{% endtab %}
+{% tab Reporting %}
+
 ### Informe
 
 Configure un informe de participación para controlar el volumen de todas las campañas con una etiqueta determinada. Por ejemplo, si quieres controlar todas tus campañas push, puedes añadir una etiqueta como `Push Reporting` a esas campañas, y luego configurar un [Informe de participación]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) para que te envíe un informe de esas campañas etiquetadas cada día.
+
+{% endtab %}
+{% endtabs %}

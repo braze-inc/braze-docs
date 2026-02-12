@@ -5,7 +5,7 @@ page_order: 2.1
 description: "Este artigo de referência aborda o Assistente de Copywriting de IA, recurso que passa um breve nome ou descrição do produto para a ferramenta de geração de cópia GPT da OpenAI para gerar uma cópia de marketing semelhante à humana para uso em seu envio de mensagens."
 ---
 
-# Geração de cópia com o <sup>BrazeAITM</sup>
+# Gerar cópia com o <sup>BrazeAITM</sup>
 
 > O assistente de Copywriting de IA passa um breve nome ou descrição do produto para uma ferramenta de geração de cópia GPT de um provedor terceirizado de propriedade da OpenAI para gerar uma cópia de marketing semelhante à humana para uso em seu envio de mensagens. Essa funcionalidade está disponível por padrão para a maioria dos criadores de mensagens no dashboard da Braze.
 
@@ -34,7 +34,7 @@ Para personalizar ainda mais sua cópia, você pode:
 
 ### Etapa 4: Gerar sua cópia
 
-Quando terminar, selecione **Generate (Gerar**). Usaremos as informações que você fornecer para solicitar que a GPT escreva um texto para você. A resposta será obtida da OpenAI e fornecida a você. Para saber mais, consulte [Como meus dados são usados e enviados para a OpenAI?](#ai-policy)
+Quando terminar, selecione **Generate (Gerar**). Usaremos as informações que você fornecer para solicitar à GPT que escreva um texto para você. A resposta será obtida da OpenAI e fornecida a você. Para saber mais, consulte [Como meus dados são usados e enviados para a OpenAI?](#ai-policy)
 
 ![Modal do Assistente de Copywriting de IA mostrando vários recursos disponíveis"]({% image_buster /assets/img/ai_copywriter/gpt3.png %} "GPT3"){: style="max-width:70%;"}
 
@@ -44,7 +44,7 @@ Filtramos respostas para conteúdo ofensivo que viole a [política de conteúdo]
 
 ## Sobre dados de campanhas anteriores {#past-campaign-data}
 
-Ao usar push como comprimento de saída, se você selecionar **Faz referência a dados de campanhas antigas**, campanhas push móveis anteriores selecionadas aleatoriamente serão enviadas à OpenAI para que a GPT possa usá-las como base para a geração de cópias. Deixe essa caixa desmarcada se não quiser aproveitar esse recurso. Consulte as seções a seguir para saber mais sobre como a Braze e a OpenAI usam seus dados. 
+Ao usar push como comprimento de saída, se você selecionar **Dados de campanha anteriores de referência**, campanhas push móveis anteriores selecionadas aleatoriamente serão enviadas para a OpenAI para que o GPT possa usá-las como base para a geração de cópias. Atualmente, o redator de IA enviará campanhas push para a OpenAI que não têm a sintaxe Liquid. Deixe essa caixa desmarcada se não quiser aproveitar esse recurso. Consulte as seções a seguir para saber mais sobre como a Braze e a OpenAI usam seus dados. 
 
 Se usado em conjunto com uma [diretriz]({{site.baseurl}}/user_guide/brazeai/generative_ai//brand_guidelines/) da marca, tanto a diretriz da marca quanto os dados de campanhas anteriores serão incorporados ao resultado final.
 

@@ -1,11 +1,11 @@
 ---
 nav_title: Imagens
-article_title: Geração de imagens com o BrazeAI
+article_title: Gerar imagens com o BrazeAI
 page_order: 10
 description: "Saiba como gerar imagens para sua biblioteca de mídia usando o DALL-E 3, um sistema de IA da OpenAI e um provedor terceirizado da Braze."
 ---
 
-# Geração de imagens com o <sup>BrazeAITM</sup>
+# Gerar imagens com o <sup>BrazeAITM</sup>
 
 > {% multi_lang_include brazeai/generative_ai/about_images.md %}
 
@@ -20,6 +20,6 @@ A biblioteca de mídia permite que você gerencie seus ativos em um único local
 3. Selecione **Gerar Imagens**. Pode levar cerca de um minuto para as imagens serem geradas.
 4. Selecionar <i class="fas fa-download" title="Add image to Media Library (Adicionar imagem à biblioteca de mídia)"></i> nas imagens que deseja adicionar à sua biblioteca de mídia.
 
-![Modal do gerador de imagens IA na biblioteca de mídia.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
+![Gerador de imagens de IA modal na biblioteca de mídia.]({% image_buster /assets/img_archive/media_library_dalle.png %}){: style="max-width:75%"}
 
 {% multi_lang_include brazeai/generative_ai/policy.md %}

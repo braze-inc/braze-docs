@@ -1,12 +1,12 @@
 ---
-nav_title: Setting user IDs
-article_title: Setting user IDs through the Braze SDK
+nav_title: Set user IDs
+article_title: Set user IDs through the Braze SDK
 page_order: 1.1
 description: "Learn how to set user IDs through the Braze SDK."
 
 ---
 
-# Setting user IDs
+# Set user IDs
 
 > Learn how to set user IDs through the Braze SDK. These are unique identifiers that let you track users across devices and platforms, import their data through the [user data API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-data), and send targeted messages through the [messaging API]({{site.baseurl}}/api/endpoints/messaging/). If you don't assign a unique ID to a user, Braze will assign them an anonymous ID instead&#8212;however, you won't be able to use these features until you do.
 
@@ -25,6 +25,20 @@ To set a user ID, call the `changeUser()` method after the user initially log in
 If you're hashing a unique identifier instead, be sure to normalize the input of your hashing function. For example, when hashing an email address, remove any leading or trailing spaces and account for localization.
 
 {% tabs local %}
+{% tab WEB %}
+For a standard Web SDK implementation, you can use the following method:
+
+```javascript
+braze.changeUser(YOUR_USER_ID_STRING);
+```
+
+If you'd like to use Google Tag Manager instead, you can use the **Change User** tag type to call the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Use it whenever a user logs in or is otherwise identified with their unique `external_id` identifier.
+
+Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a data layer variable sent by your website.
+
+![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
+{% endtab %}
+
 {% tab ANDROID %}
 {% subtabs %}
 {% subtab JAVA %}
@@ -55,20 +69,6 @@ AppDelegate.braze?.changeUser(userId: "YOUR_USER_ID")
 {% endsubtabs %}
 {% endtab %}
 
-{% tab WEB %}
-For a standard Web SDK implementation, you can use the following method:
-
-```javascript
-braze.changeUser(YOUR_USER_ID_STRING);
-```
-
-If you'd like to use Google Tag Manager instead, you can use the **Change User** tag type to call the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/braze.html#changeuser). Use it whenever a user logs in or is otherwise identified with their unique `external_id` identifier.
-
-Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a data layer variable sent by your website.
-
-![A dialog box showing the Braze Action Tag configuration settings. Settings included are "tag type" and "external user ID".]({% image_buster /assets/img/web-gtm/gtm-change-user.png %})
-{% endtab %}
-
 {% tab CORDOVA %}
 ```javascript
 BrazePlugin.changeUser("YOUR_USER_ID");
@@ -84,12 +84,6 @@ m.Braze.setUserId(YOUR_USER_ID_STRING)
 {% tab UNITY %}
 ```csharp
 AppboyBinding.ChangeUser("YOUR_USER_ID_STRING");
-```
-{% endtab %}
-
-{% tab UNREAL ENGINE %}
-```cpp
-UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 ```
 {% endtab %}
 {% endtabs %}
@@ -109,6 +103,12 @@ UBraze->ChangeUser(TEXT("YOUR_USER_ID_STRING"));
 A user alias consists of two parts: a name and a label. The name refers to the identifier itself, while the label refers to the type of identifier it belongs to. For example, if you have a user in a third-party customer support platform with the external ID `987654`, you can assign them an alias in Braze with the name `987654` and the label `support_id`, so you can track them across platforms.
 
 {% tabs local %}
+{% tab web %}
+```javascript
+braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
+{% endtab %}
+
 {% tab android %}
 {% subtabs %}
 {% subtab java %}
@@ -139,12 +139,6 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 ```
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab web %}
-```javascript
-braze.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
 {% endtab %}
 
 {% tab rest api %}

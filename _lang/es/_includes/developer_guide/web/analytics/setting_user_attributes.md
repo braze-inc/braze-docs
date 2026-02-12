@@ -2,9 +2,25 @@
 
 ## Atributos predeterminados del usuario
 
+### Métodos predefinidos
+
+Braze proporciona métodos predefinidos para configurar los siguientes atributos de usuario dentro de la [clase`User`:](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)
+
+- Nombre
+- Apellido
+- Idioma
+- País
+- Fecha de nacimiento
+- Correo electrónico
+- Género
+- Ciudad natal
+- Número de teléfono
+
+### Configuración de atributos predeterminados
+
 {% tabs %}
-{% tab aplicación de las normas %}
-Para establecer un atributo predeterminado para un usuario, llama al método `getCurrentUser()` en tu instancia de Braze para obtener una referencia al usuario actual de tu aplicación. A continuación, puedes llamar a los métodos para establecer un atributo de usuario.
+{% tab using methods %}
+Para establecer un atributo predeterminado para un usuario, llama al método `getUser()` en tu instancia de Braze para obtener una referencia al usuario actual de tu aplicación. A continuación, puedes llamar a los métodos para establecer un atributo de usuario.
 
 {% subtabs local %}
 {% subtab First name %}
@@ -25,7 +41,7 @@ braze.getUser().setDateOfBirth(2000, 12, 25);
 {% endsubtabs %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Al utilizar Google Tag Manager, los atributos estándar de usuario (como el nombre de pila de un usuario), deben registrarse del mismo modo que los atributos personalizados de usuario. Asegúrate de que los valores que pasas para los atributos estándar coinciden con el formato esperado especificado en la documentación de [la clase Usuario](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 Por ejemplo, el atributo género puede aceptar cualquiera de los siguientes valores: `"m" | "f" | "o" | "u" | "n" | "p"`. Por lo tanto, para establecer el sexo de un usuario como femenino, crea una etiqueta HTML personalizada con el siguiente contenido:
@@ -38,22 +54,34 @@ window.braze.getUser().setGender("f")
 {% endtab %}
 {% endtabs %}
 
-Braze proporciona métodos predefinidos para configurar los siguientes atributos de usuario dentro de la [clase`User`:](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html)
+### Desactivar atributos predeterminados
 
-- Nombre
-- Apellido
-- Idioma
-- País
-- Fecha de nacimiento
-- Correo electrónico
-- Género
-- Ciudad natal
-- Número de teléfono
+Para desactivar un atributo predeterminado del usuario, pasa `null` al método correspondiente. Por ejemplo:
+
+{% tabs local %}
+{% tab First name %}
+```javascript
+braze.getUser().setFirstName(null);
+```
+{% endtab %}
+{% tab Gender %}
+```javascript
+braze.getUser().setGender(null);
+```
+{% endtab %}
+{% tab Date of birth %}
+```javascript
+braze.getUser().setDateOfBirth(null, null, null);
+```
+{% endtab %}
+{% endtabs %}
 
 ## Atributos personalizados del usuario
 
+### Establecer atributos personalizados
+
 {% tabs %}
-{% tab aplicación de las normas %}
+{% tab using methods %}
 Además de los métodos predeterminados de atributos de usuario, también puedes establecer [atributos personalizados]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types) para tus usuarios. Especificaciones completas del método, consulta [nuestros JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/classes/braze.user.html).
 
 {% subtabs local %}
@@ -137,7 +165,7 @@ Las claves y valores de los atributos personalizados sólo pueden tener un máxi
 {% endalert %}
 {% endtab %}
 
-{% tab Google Tag Manager %}
+{% tab google tag manager %}
 Los atributos personalizados de usuario no están disponibles debido a una limitación del lenguaje de programación de Google Tag Manager. Para registrar atributos personalizados, crea una etiqueta HTML personalizada con el siguiente contenido:
 
 ```html
@@ -154,12 +182,28 @@ La plantilla GTM no admite propiedades anidadas sobre eventos o compras. Puedes 
 {% endtab %}
 {% endtabs %}
 
-### Desactivar un atributo personalizado
+### Desactivar atributos personalizados
 
-Los atributos personalizados pueden desactivarse estableciendo su valor en `null`.
+Para desactivar un atributo personalizado, pasa `null` al método correspondiente.
 
 ```javascript
 braze.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
+```
+
+### Atributos personalizados anidados
+
+También puedes anidar propiedades dentro de atributos personalizados. En el siguiente ejemplo, se establece un objeto `favorite_book` con propiedades anidadas como atributo personalizado en el perfil de usuario. Para más detalles, consulta [Atributos personalizados anidados]({{site.baseurl}}/user_guide/data/custom_data/custom_attributes/nested_custom_attribute_support).
+
+```javascript
+import * as braze from "@braze/web-sdk";
+
+const favoriteBook = {
+  title: "The Hobbit",
+  author: "J.R.R. Tolkien",
+  publishing_date: "1937"
+};
+
+braze.getUser().setCustomUserAttribute("favorite_book", favoriteBook);
 ```
 
 ### Utilizar la API REST

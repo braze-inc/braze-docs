@@ -1,5 +1,5 @@
 ---
-nav_title: 사용자 업데이트 
+nav_title: 사용자 업데이트
 article_title: 사용자 업데이트 
 alias: "/user_update/"
 page_order: 6
@@ -14,9 +14,9 @@ tool: Canvas
 
 ## 이 구성 요소의 작동 방식
 
-!["프리미엄 회원임" 속성을 "true"로 업데이트하는 "충성도 업데이트"라는 이름의 사용자 업데이트 단계]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
+!["프리미엄 회원입니다" 속성을 "true"로 업데이트하는 "로열티 업데이트"라는 이름의 사용자 업데이트 단계입니다.]({% image_buster /assets/img_archive/canvas_user_update_step.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 
-캔버스에서 이 구성 요소를 사용하는 경우 업데이트는 분당 요청 수 제한( `/users/track` )에 포함되지 않습니다. 대신, 이러한 업데이트는 일괄 처리되므로 Braze가 Braze-to-Braze 웹훅보다 더 효율적으로 처리할 수 있습니다. Note that this component doesn't consume [data points]({{site.baseurl}}/user_guide/data/data_points/) when being used to update non-billable data points (such as subscription groups).
+캔버스에서 이 구성 요소를 사용하는 경우 업데이트는 분당 요청 수 제한( `/users/track` )에 포함되지 않습니다. 대신, 이러한 업데이트는 일괄 처리되므로 Braze가 Braze-to-Braze 웹훅보다 더 효율적으로 처리할 수 있습니다. 이 컴포넌트는 청구할 수 없는 데이터 포인트(예: 구독 그룹)를 업데이트하는 데 사용될 때는 [데이터 포인트를]({{site.baseurl}}/user_guide/data/data_points/) 기록하지 않습니다.
 
 사용자는 관련 사용자 업데이트가 완료된 후에만 다음 캔버스 단계로 진행할 수 있습니다. 즉, 이러한 사용자 업데이트에 의존하는 모든 후속 메시징은 다음 단계가 실행될 때 최신 상태로 유지됩니다.
 
@@ -34,13 +34,13 @@ tool: Canvas
 
 사용자 지정 속성을 추가하거나 업데이트하려면 속성 목록에서 속성 이름을 선택하고 키 값을 입력합니다.
 
-![사용자 업데이트 단계에서는 '로열티 회원' 및 '로열티 프로그램' 두 속성을 'true'로 업데이트합니다.]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
+![사용자 업데이트 단계로 '로열티 회원' 및 '로열티 프로그램' 두 속성을 'true'로 업데이트합니다.]({% image_buster /assets/img_archive/canvas_user_update_update.png %}){: style="max-width:90%;"}
 
 ### 사용자 지정 속성 제거하기
 
 사용자 지정 속성을 제거하려면 드롭다운을 사용하여 속성 이름을 선택합니다. [고급 JSON 작성기로](#advanced-json-composer) 전환하여 추가로 편집할 수 있습니다. 
 
-!['로열티 회원' 속성을 제거하는 사용자 업데이트 단계]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
+![사용자 업데이트 단계에서 '로열티 회원' 속성을 제거합니다.]({% image_buster /assets/img_archive/canvas_user_update_remove.png %}){: style="max-width:90%;"}
 
 ### 값 증가 및 감소
 
@@ -50,7 +50,7 @@ tool: Canvas
 
 이벤트를 추적하는 사용자 지정 속성을 증분하여 사용자가 일주일 동안 수강한 수업 수를 추적할 수 있습니다. 이 구성 요소를 사용하면 한 주가 시작될 때 수업 수를 재설정하고 추적을 다시 시작할 수 있습니다. 
 
-!["class_count" 속성을 1씩 증가시키는 사용자 업데이트 단계]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
+![사용자 업데이트 단계는 "class_count" 속성을 1씩 증가시킵니다.]({% image_buster /assets/img_archive/canvas_user_update_increment.png %}){: style="max-width:90%;"}
 
 ### 개체 배열 업데이트하기
 
@@ -62,9 +62,9 @@ An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attrib
 
 배열에 항목을 추가하거나 제거하면 사용자의 위시리스트가 업데이트됩니다.
 
-!["items_in_wishlist" 속성에 "선블록" 항목을 추가하는 사용자 업데이트 단계.]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
+![기여도 속성에 "선블록" 항목을 추가하는 사용자 업데이트 단계 "items_in_wishlist".]({% image_buster /assets/img_archive/canvas_user_update_wishlist.png %}){: style="max-width:90%;"}
 
-#### 사용 사례: 장바구니 총액 계산
+#### Use case: 장바구니 총액 계산
 
 사용자가 장바구니에 품목이 있는 시기, 새 품목을 추가하거나 품목을 삭제하는 시기, 총 장바구니 금액을 추적합니다. 
 
@@ -124,7 +124,7 @@ An [array of objects]({{site.baseurl}}/user_guide/data/custom_data/custom_attrib
 
 사용자 업데이트 단계를 사용하여 `canvas_entry_property`를 지속할 수 있습니다. 카트에 품목이 추가될 때 트리거되는 이벤트가 있다고 가정해 보겠습니다. 가장 최근에 장바구니에 추가한 품목의 ID를 저장하여 리마케팅 캠페인에 사용할 수 있습니다. 개인화 기능을 사용하여 캔버스 항목 속성정보를 검색하고 속성정보에 저장합니다.
 
-![사용자 업데이트 단계에서는 "most_recent_cart_item" 속성을 항목 ID로 업데이트합니다.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
+![사용자 업데이트 단계는 "most_recent_cart_item" 속성을 항목 ID로 업데이트합니다.]({% image_buster /assets/img_archive/canvas_user_update_cep.png %}){: style="max-width:90%;"}
 
 ### 개인화
 

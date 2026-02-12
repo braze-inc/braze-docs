@@ -1,6 +1,6 @@
 ---
-nav_title: メールテンプレートの作成
-article_title: メールテンプレートの作成
+nav_title: メールテンプレートを作成する
+article_title: メールテンプレートを作成する
 page_order: 0
 description: "この記事では、メールテンプレートの作成、カスタマイズ、および管理の方法について説明します。"
 tool:
@@ -11,7 +11,7 @@ alias: "/dnd/email_template/"
 search_rank: 1
 ---
 
-# メール テンプレートの作成
+# メールテンプレートを作成する
 
 > Braze ダッシュボードにはメールテンプレートエディターがあり、これにより、カスタムの目を引くメールを作成し、後でキャンペーンで使用するために保存することができます。独自の[HTML メール テンプレート]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)をアップロードすることもできます。
 
@@ -25,7 +25,7 @@ search_rank: 1
 
 次に、あらかじめデザインされたBrazeテンプレートから選択するか、新しいテンプレートを作成するか、既存のテンプレート（プレーンまたは[モバイル・レスポンシブ]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)）を編集する。
 
-![]({% image_buster /assets/img/email_templates/template2.png %}) ドラッグ＆ドロップエディタかHTMLエディタか、Brazeテンプレートから選択するオプションがある、企業の春のセール用メールテンプレート。
+![ドラッグアンドドロップエディタまたはHTMLエディタを選択するか、Braze テンプレートs から選択するかを選択できる、企業の春物セールのメール テンプレート。]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 既存のカスタムHTML テンプレートs は、ドラッグアンドドロップエディタを使用して再作成する必要があります。
@@ -89,7 +89,7 @@ search_rank: 1
 
 API キャンペーンでメールを使用するには、`email_template_id` が必要です。これは、Braze で作成されたメール テンプレートの下部にあります。
 
-![メールテンプレートの下部にあるAPI識別子。]({% image_buster /assets/img/email_templates/template5.png %})
+![メール テンプレートの下部にあるAPI 識別子。]({% image_buster /assets/img/email_templates/template5.png %})
 
 ### メール テンプレートのコメント
 

@@ -466,7 +466,7 @@ For more information on what you can or can't edit after launch, check out [Chan
 
 전환은 해당 항목에 대해 사용자가 가장 최근에 수신한 메시지에 할당됩니다. 캔버스 시작 부분의 요약 블록은 메시지 수신 여부와 관계없이 해당 경로 내에서 사용자가 수행한 모든 전환을 반영합니다. 이후의 각 단계는 사용자가 가장 최근에 받은 단계인 동안에 발생한 전환만 표시합니다.
 
-{% details 사용 사례 %}
+{% details Use cases %}
 
 #### 사용 사례 1
 

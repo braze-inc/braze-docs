@@ -6,7 +6,7 @@ description: "Cet article de référence donne un aperçu des cas d'utilisation 
 search_rank: 2
 ---
 
-# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Utilisation de Liquid
+# [![Cours d'apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Utilisation de liquides
 
 > Cet article montre comment vous pouvez utiliser une variété d'attributs d'utilisateur pour insérer dynamiquement des informations personnelles dans votre envoi de messages.
 
@@ -35,6 +35,10 @@ OU
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+Les commentaires HTML (`<!-- -->`) sont supprimés avant la lecture de Liquid, de sorte que les étiquettes Liquid contenues dans les commentaires HTML **ne** s'affichent **pas** dans votre message. Pour un rendu correct, assurez-vous que toutes les étiquettes Liquid que vous souhaitez utiliser se trouvent en dehors des commentaires HTML.
+{% endalert %}
 
 ## Valeurs prises en charge à remplacer
 
@@ -71,13 +75,27 @@ Liquid suit une structure ou une syntaxe spécifique que vous devrez garder à l
 
 Si vous incluez le texte suivant dans votre message : `{{${first_name}}}`, le prénom de l’utilisateur (tiré du profil de l’utilisateur) sera remplacé lorsque le message est envoyé. Vous pouvez utiliser le même format avec d'autres attributs par défaut de l'utilisateur.
 
-Si vous souhaitez utiliser la valeur d'un attribut personnalisé, vous devez ajouter l'espace de noms « custom_attribute » à la variable. Par exemple, pour utiliser un attribut personnalisé nommé « code postal », vous ajoutez `{{custom_attribute.${zip code}}}` à votre message.
+Si vous souhaitez utiliser la valeur d'un attribut personnalisé, vous devez ajouter l'espace de noms "custom_attribute" à la variable. Par exemple, pour utiliser un attribut personnalisé nommé « code postal », vous ajoutez `{{custom_attribute.${zip code}}}` à votre message.
 
 ### Insertion des balises
 
 Vous pouvez insérer des balises en saisissant deux parenthèses courbes `{{` dans n’importe quel message, ceci déclenchera une fonctionnalité d’achèvement automatique qui continuera à être mise à jour lors de votre saisie. Vous pouvez même sélectionner une variable à partir des options qui s’affichent alors que vous saisissez.
 
 Si vous utilisez une balise personnalisée, vous pouvez copier et coller la balise dans le message que vous souhaitez.
+
+#### Exceptions pour les doubles crochets
+
+Si vous utilisez une étiquette à l'intérieur d'une autre étiquette Liquid, comme `{% assign %}` ou `{% if %}`, vous pouvez utiliser des doubles crochets ou ne pas utiliser de crochets. Ce n'est que lorsque l'étiquette est isolée qu'elle doit être placée entre doubles crochets. Pour plus de simplicité, vous pouvez toujours utiliser des doubles crochets. 
+
+Les étiquettes suivantes sont toutes correctes :
+
+```liquid
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
+{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
+
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign value_one = custom_attribute.${one} %}
+```
 
 {% endraw %}
 
@@ -94,11 +112,11 @@ Si vous utilisez Liquid dans vos messages e-mail, veillez à le faire :
 
 Vous pouvez insérer des variables préformatées avec des valeurs par défaut dans la fenêtre modale/boîte de dialogue **Ajouter une personnalisation** située à proximité de n'importe quel champ de texte modèle.
 
-![La fenêtre modale/boîte de dialogue de personnalisation qui apparaît après avoir sélectionné insérer une personnalisation. La fenêtre modale comporte des champs pour le type de personnalisation, l'attribut, la valeur par défaut facultative et affiche un aperçu de la syntaxe Liquid.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
+![La fenêtre modale/boîte de dialogue de personnalisation qui apparaît après avoir sélectionné insérer une personnalisation. La fenêtre modale comporte des champs pour le type de personnalisation, l'attribut, la valeur par défaut facultative, et affiche un aperçu de la syntaxe du liquide.]({% image_buster /assets/img_archive/insert_liquid_var_arrow.png %}){: style="max-width:90%;"}
 
 La fenêtre modale insère Liquid avec la valeur par défaut que vous avez spécifiée à l'endroit où se trouvait votre curseur. Le point d'insertion est également spécifié par la boîte de prévisualisation, qui contient le texte avant et après. Si un bloc de texte est mis en surbrillance, le texte mis en surbrillance sera remplacé.
 
-![Une image GIF de la fenêtre modale Ajouter une personnalisation qui montre l'utilisateur insérant "compagnon de voyage" comme valeur par défaut, et la fenêtre modale remplaçant le texte en surbrillance "nom" dans le compositeur par l'extrait de code Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![Un GIF de la modale Ajouter une personnalisation qui montre l'utilisateur insérant "compagnon de voyage" comme valeur par défaut, et la modale remplaçant le texte en surbrillance "nom" dans le compositeur par l'extrait de code Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Attribution des variables
 

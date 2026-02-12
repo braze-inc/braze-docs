@@ -45,23 +45,6 @@ A elegibilidade para uma mensagem no app é calculada no momento da entrega. Se 
 
 Quando a mensagem no app for exibida, a elegibilidade dependerá de quando a mensagem no app for baixada e disparada.
 
-### O que são mensagens no app modeladas?
-
-As mensagens no app serão entregues como modelos de mensagens no app quando a opção **Reavaliar elegibilidade da campanha antes de exibir** estiver selecionada ou se qualquer uma das seguintes Liquid tags existir na mensagem:
-
-- `canvas_entry_properties`
-- `connected_content`
-- Variáveis de SMS, como {% raw %}`{sms.${*}}`{% endraw %}
-- `catalog_items`
-- `catalog_selection_items`
-- `event_properties`
-
-Isso significa que, durante o início da sessão, o dispositivo receberá o disparo dessa mensagem no app, em vez da mensagem inteira. Quando o usuário dispara a mensagem no app, o dispositivo do usuário faz uma solicitação de rede para buscar a mensagem real.
-
-{% alert note %}
-A mensagem não será entregue se o dispositivo não tiver acesso à Internet. A mensagem pode não ser entregue se a lógica do Liquid demorar muito para ser resolvida.
-{% endalert %}
-
 ### Por que minha campanha de mensagens no app arquivada ainda está fornecendo impressões de mensagens no app?
 
 Isso pode ocorrer para usuários que atenderam aos critérios do segmento quando a campanha de mensagens no app estava ativa.

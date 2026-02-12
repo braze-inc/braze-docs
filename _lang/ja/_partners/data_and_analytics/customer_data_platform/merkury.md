@@ -15,7 +15,7 @@ _この統合は Merkury によって管理されます。_
 
 ## 統合について
 
-Braze と Merkury の統合により、`MerkuryID` を活用して、Braze のお客様のサイト訪問者認識率を向上させることができます。Merkury はブランドのメールサブスクライバーである訪問者を認識すると、Braze プロファイルを更新し、サブスクライバーのメールアドレスをプロファイルに含めます。`MerkuryID` の認識機能の向上により、エンゲージメントとパーソナライゼーションの機会が拡大し、送信されるサイト放棄メールの量と関連収益がすぐに増加します。 
+Braze と Merkury の統合により、`MerkuryID` を活用して、Braze のお客様のサイト訪問者認識率を向上させることができます。ブランドのメール購読者である訪問者を認識すると、Merkuryはサブスクライバーのメールアドレスを含むようにプロファイルを更新する。`MerkuryID` の認識機能の向上により、エンゲージメントとパーソナライゼーションの機会が拡大し、送信されるサイト放棄メールの量と関連収益がすぐに増加します。 
 
 ## 前提条件
 
@@ -29,7 +29,7 @@ Braze と Merkury の統合により、`MerkuryID` を活用して、Braze の�
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% alert important %}
-Braze への Merkury アイデンティティコネクターのリクエストは、Braze API レート制限仕様の範囲内で動作します。ご質問がある場合は、Braze または Merkle アカウントマネージャーにお問い合わせください。<br><br>Merkuryは、適格なセッションの終了時に少なくとも1つのリクエストを送信します。
+Braze への Merkury アイデンティティコネクターのリクエストは、Braze API レート制限仕様の範囲内で動作します。ご質問がある場合は、Braze または Merkle アカウントマネージャーにお問い合わせください。<br><br>Merkuryは、修飾されたセッションの最後に少なくとも1つのリクエストを送信する。
 {% endalert %}
 
 ## サイドバイサイドの SDK 統合
@@ -42,11 +42,11 @@ Merkle のクライアントサイド Merkury タグを使用して Braze デバ
 
 ### ステップ2:Merkle の Merkury タグを導入する
 
-Merkuryタグをウェブサイトに配置する。これにより、Merkury アイデンティティコネクターが Web サイトで使用できるようになります。Merkle アカウントマネージャーから、手順を含む詳細なガイドが提供されます。
+WebサイトにMerkuryタグを配置して、Merkury IDコネクタをWebサイトで利用できるようにする。Merkleアカウントマネージャーから詳しいガイドが提供される。
 
-### ステップ3:カスタム属性を作成する
+### ステップ 3:カスタム属性を作成する
 
-以下のフィールドは Merkury アイデンティティコネクターによって入力され、Braze で[カスタム属性]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes) として作成する必要があるものです。
+Merkuryアイデンティティコネクターは以下のフィールドを入力するが、これらは[カスタム属性として]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes#custom-attributes)Brazeで作成する必要がある。
 
 | 属性名 | データタイプ | 説明 |
 | --- | --- | --- |

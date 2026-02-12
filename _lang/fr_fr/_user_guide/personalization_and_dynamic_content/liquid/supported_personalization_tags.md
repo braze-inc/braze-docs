@@ -20,9 +20,9 @@ Un résumé des balises de personnalisation prises en charge est fourni. Pour pl
 | -------------  | ---- |
 | Attributs standard (par défaut) | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` <br> `{{subscribed_state.${email_global}}}` <br> `{{subscribed_state.${subscription_group_id}}}` |
 | Attributs de l’appareil | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${foreground_push_enabled}}}`|
-| [Attributs de la liste d'e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions) | `{{${set_user_to_unsubscribed_url}}}` <br>Cette étiquette remplace l'ancienne étiquette `{{${unsubscribe_url}}}`. Bien que l'ancienne étiquette fonctionne toujours dans les e-mails créés précédemment, nous vous recommandons d'utiliser plutôt la nouvelle étiquette. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
-| [Attributs du SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword) | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
-| [Attributs de WhatsApp]({{site.baseurl}}/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/) | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions'>Attributs de la liste d'e-mails</a> | `{{${set_user_to_unsubscribed_url}}}` <br>Cette étiquette remplace l'ancienne étiquette `{{${unsubscribe_url}}}`. Bien que l'ancienne étiquette fonctionne toujours dans les e-mails créés précédemment, nous vous recommandons d'utiliser plutôt la nouvelle étiquette. <br><br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`|
+| <a href='/docs/user_guide/message_building_by_channel/sms_mms_rcs/retargeting/#trigger-messages'>Attributs du SMS</a> | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}` |
+| <a href='/docs/user_guide/message_building_by_channel/whatsapp/message_processing/user_messages/'>Attributs de WhatsApp</a> | `{{whats_app.${inbound_message_body}}}` <br> `{{whats_app.${inbound_media_urls}}}` <br> `{{whats_app.${inbound_flow_response}}}` <br> `{{whats_app.${inbound_product_id}}}` <br> `{{whats_app.${inbound_catalog_id}}}` |
 | Campagne attribuée | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
 | Attributs de canvas | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}` |
 | Attributs de l'étape de Canvas | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}` |
@@ -31,7 +31,7 @@ Un résumé des balises de personnalisation prises en charge est fourni. Pour pl
 | Propriétés d’événement <br> (Ceux-ci sont personnalisés en fonction de votre espace de travail).| `{{event_properties.${your_custom_event_property}}}` |
 | Variables de contexte Canvas | `{{context}}` |
 | Attributs personnalisés <br> (Ceux-ci sont personnalisés en fonction de votre espace de travail). | `{{custom_attribute.${your_custom_attribute}}}` |
-| [Propriétés du déclencheur API]({{site.baseurl}}/api/objects_filters/trigger_properties_object/) |`{{api_trigger_properties}}` |
+| <a href='/docs/api/objects_filters/trigger_properties_object/'>Propriétés du déclencheur API</a> |`{{api_trigger_properties}}` |
 | Propriétés d’entrées de canvas | `{{canvas_entry_properties.${property_name}}}` |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
@@ -96,14 +96,14 @@ User is in list of apps
 
 ## Informations sur les dispositifs ciblés
 
-Pour les notifications push et les canaux de messages in-app, vous pouvez insérer dans le modèle les attributs suivants pour l'appareil auquel un message est envoyé. C’est-à-dire, une notification push ou un message in-app peut inclure des attributs d'appareil de l’appareil sur lequel le message est lu. Notez que ces attributs ne fonctionnent pas pour les cartes de contenu. 
+Pour les notifications push, les messages in-app et les Bannières, vous pouvez insérer un modèle dans les attributs suivants pour l'appareil auquel un message est envoyé. Autrement dit, une notification push, un message in-app ou une Bannière peuvent inclure les attributs de l'appareil sur lequel le message est lu. Notez que ces attributs ne fonctionnent pas pour les cartes de contenu. 
 
 |Balise | Description |
 |------------------|---|
 | `{{targeted_device.${id}}}` | Ceci est l'identifiant de l'appareil Braze. Sur iOS, il s’agit de l’identifiant Apple pour le fournisseur (IDFV) ou un UUID. Pour Android et d'autres plateformes, il s'agit d'un UUID généré de manière aléatoire. Par exemple, si un utilisateur possède cinq appareils, une tentative d'envoi a lieu pour les cinq appareils, chacun utilisant l'identifiant de l'appareil correspondant. Si un message est configuré pour être envoyé à l'appareil le plus récemment utilisé par l'utilisateur, une seule tentative d'envoi sera effectuée vers l'appareil le plus récemment utilisé, identifié par Braze. |
 | `{{targeted_device.${carrier}}}` | Le fournisseur de téléphonie le plus récemment utilisé, le cas échéant. Par exemple, « Verizon » et « Orange ». |
 | `{{targeted_device.${idfa}}}` | Pour les appareils iOS, cette valeur sera l'identifiant pour la publicité (IDFA) si votre application est configurée avec notre [collection IDFA optionnelle]({{site.baseurl}}/developer_guide/platforms/legacy_sdks/ios/initial_sdk_setup/other_sdk_customizations/). Pour les appareils non iOS, cette valeur sera nulle. |
-| `{{targeted_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur sera l'identifiant publicitaire Google Play si votre application est configurée avec notre [collecte facultative d'identifiant publicitaire Google Play]. Pour les appareils non Android, cette valeur sera nulle. |
+| `{{targeted_device.${google_ad_id}}}` | Pour les appareils Android, cette valeur sera l'identifiant publicitaire Google Play si votre application est configurée avec notre [collecte facultative de l'identifiant publicitaire Google Play]. Pour les appareils non Android, cette valeur sera nulle. |
 | `{{targeted_device.${roku_ad_id}}}` | Pour les appareils Roku, cette valeur sera l’identifiant Roku Advertising collectée configurée lorsque votre application est configurée avec Braze Pour les appareils non Roku, cette valeur sera nulle. |
 | `{{targeted_device.${model}}}` | Le nom du modèle du dispositif, si disponible. Par exemple, « Iphone 6S » et « Nexus 6P » et « Firefox ». |
 | `{{targeted_device.${os}}}` | Le système d’exploitation du dispositif, si disponible. Par exemple, « iOS 9.2.1 » et « Android (Lollipop) » et « Windows ». |
@@ -117,7 +117,7 @@ En raison de la diversité des supports d'appareils, des noms de modèles et des
 
 En outre, pour les notifications push, il est possible que Braze ne soit pas en mesure de discerner l'appareil lié à la notification push dans certaines circonstances, par exemple si le jeton push a été importé via l'API, ce qui entraîne l'envoi de valeurs à `null` pour ces messages.
 
-![Exemple d'utilisation de la valeur par défaut "là" lors de l'utilisation d'une variable prénom dans un message push.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
+![Exemple d’utilisation d’une valeur par défaut de « là » lors de l’utilisation d’une variable de prénom dans un message de notification push.]({% image_buster /assets/img_archive/personalized_firstname_.png %})
 
 ### Utiliser une logique conditionnelle au lieu d'une valeur par défaut
 
@@ -163,7 +163,7 @@ Dans ce cas d'utilisation, un utilisateur dont le prénom est vide ou nul recevr
 
 Vous pouvez utiliser la balise `assign` pour créer une variable dans le compositeur de message. Nous vous recommandons d'utiliser un nom unique pour votre variable. Si vous créez une variable dont le nom est similaire à celui des étiquettes de personnalisation prises en charge (telles que `language`), cela peut affecter votre logique d'envoi de messages.
 
-Après avoir créé une variable, vous pouvez y faire référence dans votre logique d'envoi de messages ou dans votre message. Cette étiquette est utile lorsque vous souhaitez reformater le contenu renvoyé par notre fonctionnalité [Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %})]. Vous pouvez en savoir plus dans la documentation de Shopify sur les [balises variables](https://docs.shopify.com/themes/liquid/tags/variable-tags).
+Après avoir créé une variable, vous pouvez y faire référence dans votre logique d'envoi de messages ou dans votre message. Cette étiquette est utile lorsque vous souhaitez reformater le contenu renvoyé par notre fonctionnalité [Connected Content]({% image_buster /assets/img_archive/personalized_firstname_.png %}) ]. Vous pouvez en savoir plus dans la documentation de Shopify sur les [balises variables](https://docs.shopify.com/themes/liquid/tags/variable-tags).
 
 {% alert tip %}
 Vous envoyez les mêmes variables dans chaque message ? Au lieu d’écrire la balise `assign` sans arrêt vous pouvez enregistrer cette balise comme un bloc de contenu et la placer en haut de votre message.

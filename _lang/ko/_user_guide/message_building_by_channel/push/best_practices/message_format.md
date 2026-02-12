@@ -17,7 +17,7 @@ channel: push
 ## iOS 및 Android 푸시
 
 {% tabs local %}
-{% tab 이미지 %}
+{% tab Images %}
 
 **이미지 유형** | **권장 이미지 크기** | **최대 이미지 크기** | **파일 유형**
 --- | --- | --- | ---
@@ -27,7 +27,7 @@ channel: push
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4 role="presentation" }
 
 {% endtab %}
-{% tab 텍스트 %}
+{% tab Text %}
 
 | 메시지 유형 | 권장 메시지 길이(텍스트만 해당) | 권장 메시지 길이(리치)
 --- | ---
@@ -41,7 +41,7 @@ channel: push
 iOS 푸시 알림에서 잘리지 않고 몇 자까지 사용할 수 있는지 궁금하신가요? [iOS 문자 수 가이드라인]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)을 확인하세요.
 
 {% endtab %}
-{% tab 페이로드 크기 %}
+{% tab Payload Size %}
 
 **플랫폼** | **크기**
 --- | ---
@@ -51,7 +51,7 @@ Android(FCM) | 4 KB
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab 이미지 예시 %}
+{% tab Image Example %}
 {% subtabs %}
 {% subtab iOS %}
 
@@ -70,15 +70,15 @@ Android(FCM) | 4 KB
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab 텍스트 예제 %}
+{% tab Text Example %}
 {% subtabs %}
 {% subtab iOS %}
 
-![다음과 같은 텍스트가 포함된 iOS 푸시 알림입니다: "안녕하세요! 이것은 iOS 푸시입니다."]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![다음과 같은 텍스트가 포함된 iOS 푸시 알림입니다: "안녕하세요! iOS 푸시입니다".]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endsubtab %}
 {% subtab Android %}
-![홈 화면에 표시되는 Android 푸시 알림.]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![Android 푸시 알림이 홈 화면에 표시됩니다.]({% image_buster /assets/img_archive/Push_Android_2.png %})
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -87,7 +87,7 @@ Android(FCM) | 4 KB
 ## 웹 푸시
 
 {% tabs local %}
-{% tab 이미지 %}
+{% tab Images %}
 
 | **브라우저** | **권장 아이콘 크기**
 | --- | ---
@@ -112,7 +112,7 @@ Opera | macOS | N/A
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab 텍스트 %}
+{% tab Text %}
 
 | **브라우저** | **플랫폼** | **최대 타이틀 길이**  | **최대 메시지 본문 길이**
 | --- | --- | --- | ---

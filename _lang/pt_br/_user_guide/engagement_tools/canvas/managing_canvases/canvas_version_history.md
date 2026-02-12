@@ -1,5 +1,5 @@
 ---
-nav_title: Histórico da versão do Canva
+nav_title: Histórico de versões do Canva
 article_title: Histórico da versão do Canva
 alias: "/canvas_version_history/"
 page_order: 2
@@ -32,7 +32,7 @@ Note que, se você não fez nenhuma edição entre o lançamento de um Canvas e 
 
 À medida que a contagem do histórico de versões aumenta, você também pode renomear cada versão na barra lateral para manter a organização. Por padrão, os nomes das versões são gerados como um número com base em quantas versões foram criadas anteriormente. Se você renomear uma versão enquanto ela não estiver mais ativa, isso aparecerá no changelog do Canva, mas não no changelog da versão na visualização do histórico de versões.
 
-![canva changelog exemplo mostrando que duas novas versões do canva foram criadas.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
+![Exemplo de changelog do Canvas mostrando que duas novas versões do canva foram criadas.]({% image_buster /assets/img_archive/canvas_version_history_changelog.png %}){: style="max-width:85%" }
 
 ### Descarte de versões
 

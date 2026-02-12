@@ -1,6 +1,6 @@
 ---
-nav_title: Téléchargement d’un modèle d’e-mail HTML
-article_title: Téléchargement d’un modèle d’e-mail HTML
+nav_title: "Télécharger un modèle d'e-mail HTML"
+article_title: Télécharger un modèle d’e-mail HTML
 page_order: 2
 description: "Le présent article de référence explique comment créer, gérer et réparer un modèle d’e-mail HTML à l’aide du tableau de bord de Braze."
 tool:
@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Téléchargement d’un modèle d’e-mail HTML
+# Télécharger un modèle d'e-mail HTML
 
 > Le tableau de bord de Braze vous permet de télécharger vos propres modèles d’e-mail HTML et de les enregistrer pour une utilisation ultérieure dans vos campagnes. Vous pouvez également [créer un modèle d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/email_template/) à l'aide de notre éditeur.
 
@@ -29,7 +29,7 @@ Tout d'abord, vous devez créer votre modèle d'e-mail HTML. Il doit s'agir d'un
 
 Allez dans la section **Modèles** > **Modèles d'e-mail**.
 
-### Étape 2 : Ouvrir le téléchargeur
+### Étape 2 : Ouvrir le téléchargeur
 
 Dans la section **Type de modèle**, sélectionnez **Editeur HTML** et descendez jusqu'à la section **Démarrer à partir d'un modèle HTML de base.** Sélectionnez **Depuis le fichier**.
 
@@ -64,7 +64,7 @@ Si vous apportez des modifications à un modèle existant, ces modifications ne 
 
 Pour utiliser votre e-mail dans une campagne API, vous avez besoin de `email_template_id`, qui se trouve au bas des modèles d’e-mails créés dans Braze.
 
-![Section de l'identifiant API d'un modèle d'e-mail HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
+![Section Identifiant API d'un modèle d'e-mail HTML.]({% image_buster /assets/img_archive/email_template_id.png %}){: style="max-width:50%;"}
 
 ## Gestion des modèles d’e-mail
 

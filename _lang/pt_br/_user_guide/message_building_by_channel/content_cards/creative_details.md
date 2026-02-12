@@ -11,12 +11,12 @@ tool: Media
 
 # Detalhes criativos para cartões de conteúdo
 
-> A personalização dos cartões de conteúdo e do feed em que eles estão localizados não pode ser feita durante o processo de criação da campanha - você deve trabalhar com seus engenheiros e desenvolvedores para criar e personalizar seus cartões. Para obter detalhes técnicos, visite nossa [documentação para desenvolvedores]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
+> A personalização dos cartões de conteúdo e do feed em que eles estão localizados não pode ser feita durante o processo de criação da campanha - você deve trabalhar com seus engenheiros e desenvolvedores para criar e personalizar seus cartões. Para detalhes técnicos, visite nossa [documentação do desenvolvedor]({{site.baseurl}}/developer_guide/getting_started/customization_overview).
 
 ## Tipos de cartão de conteúdo
 
 {% tabs %}
-{% tab Clássico %}
+{% tab Classic %}
 
 O cartão clássico é ótimo para envio de mensagens e notificações padrão ou até mesmo para categorizar visualmente as mensagens com ícones. A imagem é opcional, mas deve estar em uma proporção de 1:1.
 
@@ -31,11 +31,11 @@ O cartão clássico é ótimo para envio de mensagens e notificações padrão o
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 {% endtab %}
-{% tab Imagem legendada %}
+{% tab Captioned Image %}
 
 O cartão de imagem legendada é uma ótima maneira de exibir e atrair a atenção para conteúdos importantes, como uma grande venda ou um novo recurso do app.
 
-![Imagem de um cartão Captioned Image com detalhes recomendados e um exemplo de cartão Captioned Image]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
+![Imagem de um cartão de Imagem Legendada com detalhes recomendados e um exemplo de cartão de Imagem Legendada]({% image_buster /assets/img/content_card_captioned.png %}){: style="max-width:90%;border:0;"}
 
 | Capacidade do cartão | Informações |
 | --- | ---|
@@ -46,11 +46,11 @@ O cartão de imagem legendada é uma ótima maneira de exibir e atrair a atenç�
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 {% endtab %}
-{% tab Somente imagem %}
+{% tab Image-only %}
 
-Se quiser ter mais controle criativo, o cartão somente para imagens é ideal para você. Crie sua imagem usando qualquer ferramenta de sua preferência e faça upload da imagem para esse tipo de cartão.
+Se você deseja mais controle criativo, o cartão somente de imagem é para você. Crie sua imagem usando qualquer ferramenta que você preferir e faça upload da imagem para este tipo de cartão.
 
-![Imagem de um cartão de conteúdo somente de imagem com detalhes recomendados e um exemplo somente de imagem]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
+![Imagem de um Cartão de Conteúdo somente de imagem com detalhes recomendados e um exemplo somente de imagem]({% image_buster /assets/img/content_card_banner.png %}){: style="max-width:45%;border:0;"}
 
 | Capacidade do cartão | Informações |
 | --- | ---|
@@ -63,13 +63,13 @@ Se quiser ter mais controle criativo, o cartão somente para imagens é ideal pa
 
 ## Detalhes criativos globais {#general}
 
-Os cartões de conteúdo vêm com grande funcionalidade desde o início. No momento, a estilização do cartão não pode ser feita nativamente em sua conta Braze, mas você pode estilizar seu cartão de conteúdo por tipo e o feed do cartão de conteúdo durante a integração. Para saber mais, consulte [Personalização de cartões de conteúdo]({{site.baseurl}}/developer_guide/content_cards/).
+Os cartões de conteúdo vêm com grande funcionalidade desde o início. No momento, a estilização do cartão não pode ser feita nativamente em sua conta Braze, mas você pode estilizar seu cartão de conteúdo por tipo e o feed do cartão de conteúdo durante a integração. Consulte [Personalizando Cartões de Conteúdo]({{site.baseurl}}/developer_guide/content_cards/) para saber mais.
 
 ### Comportamento de demissão
 
 Para um usuário descartar um cartão, ele pode passar o dedo no celular ou usar a função `close X`, conforme mostrado na captura de tela a seguir. O endereço `x` aparecerá ao passar o mouse somente para o SDK Web.
 
-![Imagem que mostra os comportamentos de descarte de cartão por deslizar ou fechar]({% image_buster /assets/img/dismissal-cc.png %})
+![Imagem que mostra os comportamentos de passar o dedo ou fechar o descarte de um cartão]({% image_buster /assets/img/dismissal-cc.png %})
 
 Se um usuário tiver descartado todos os seus cartões ou se você não tiver empurrado nenhuma nova atualização, o feed do usuário geralmente terá a seguinte aparência:
 

@@ -12,7 +12,7 @@ page_order: 1.5
 
 ## A propos des analyses prédictives du désabonnement (si utilisées comme analyses prédictives du taux d'attrition)
 
-Dès que la prédiction est terminée et que cette page est remplie, vous pouvez passer à l'utilisation des [filtres]({{site.baseurl}}/user_guide/brazeai/predictive_suite/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Mais, si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
+Dès que la prédiction est terminée et que cette page est remplie, vous pouvez passer à l'utilisation des [filtres]({{site.baseurl}}/user_guide/brazeai/predictive_churn/messaging_users/#filters) dans les segments ou les campagnes pour commencer à utiliser les résultats du modèle. Mais, si vous voulez de l’aide pour décider qui cibler et pourquoi, cette page peut le faire en fonction de l’exactitude historique du modèle et de vos propres objectifs commerciaux. 
 
 Telles sont les composantes de l'analyse/analyse prédictive du désabonnement (qui constituent l'analyse prévisionnelle du taux d'attrition) :
 

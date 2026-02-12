@@ -1,0 +1,38 @@
+<div class="gitedit_div">
+    <a href="{{site.github_baseurl}}{{page.relative_path }}" class="extignore" target="_blank"> <img src="{{site.baseurl}}/assets/img/{{site.github_icon}}" alt="Github" />{{ site.data.i18n[site.language]['edit_github'] | デフォルト："GitHubでこのページを編集する" }}。 </a>
+</div>
+
+<div id="feedback">
+    {%- if include.title -%}}。
+    <div id="feedback_title">{{ include.title | upcase }}. </div>
+    {%- else -%} {%- else -%} {%- else -%} {%- else -%}
+    <div id="feedback_title"> {{ site.data.i18n[site.language]['helpful'] | default：「このページは役に立ったか？｝ </div>
+    {%- endif -%} {%- endif -%} {%- endif -%} {%- endif -%}
+
+    <div id="feedback_answer">
+      <ul class="list-inline rating-list">
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Helpful" title="とても役に立った"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Helpful" title="役に立つ"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Somewhat Helpful" title="やや役に立つ"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Unhelpful" title="役に立たない"></i></li>
+        <li class="inline-star" tabindex="0"><i class="fas fa-star" data-value="Very Unhelpful" title="非常に役に立たなかった"></i></li>
+      </ul>
+    </div>
+    <div id="feedback_comment_div">
+        <div>
+            <textarea id="feedback_comment" placeholder="どうすればこのページを改善できるか？"></textarea>
+        </div>
+        <button type="submit" name="submit_feedback" value="フィードバックを提出" class="btn btn-black" id="feedback_submit_button" role="button">する フィードバックを提出する </button>
+
+    </div>
+    <div id="feedback_msg">
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+    var feedback_site = '{{site.baseurl}}{{page.url}}';
+    var feedback_article_title = '{{page.article_title}}';
+    var feedback_nav_title = '{{page.nav_title}}';
+</script>

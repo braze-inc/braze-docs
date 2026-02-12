@@ -17,14 +17,14 @@ Este artigo o guiará por um caso de uso do modelo **Back In Stock**, que foi pr
 
 Para usar esse modelo com sucesso, você precisará do seguinte:
 
-- Um [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) com informações sobre seu item
-- As [notificações de falta de estoque]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/#how-back-in-stock-notifications-work) devem ser configuradas para o item sobre o qual deseja enviar mensagens aos usuários
+- Um [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) com informações sobre seu item
+- As [notificações de falta de estoque]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/#how-back-in-stock-notifications-work) devem ser configuradas para o item sobre o qual deseja enviar mensagens aos usuários
 
 ## Adaptar o modelo às suas necessidades
 
 Digamos que estejamos trabalhando para a PantsLabyrinth, uma varejista de roupas direto ao consumidor, especializada em slacks, jeans, culotes e muitos outros tipos de calças. Podemos usar o modelo de volta ao estoque para notificar os clientes em vários canais quando um par de jeans popular, o Classic Straight Leg, estiver de volta ao estoque.
 
-Antes de criar o Canva, configuramos um [catálogo]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog) que contém informações sobre nosso estoque de calças de perna reta e configuramos [notificações de falta de estoque]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/catalogs/catalog_triggers/back_in_stock_notifications/#setting-up-back-in-stock-notifications) para o jeans Classic Straight Leg. Fizemos com que os usuários se inscrevessem para receber notificações depois de realizar o evento personalizado de favoritar o jeans Classic Straight Leg no app.
+Antes de criar o Canva, configuramos um [catálogo]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog) que contém informações sobre nosso estoque de calças de perna reta e configuramos [notificações de falta de estoque]({{site.baseurl}}/user_guide/data/activation/catalogs/catalog_triggers/back_in_stock_notifications/#setting-up-back-in-stock-notifications) para o jeans Classic Straight Leg. Fizemos com que os usuários se inscrevessem para receber notificações depois de realizar o evento personalizado de favoritar o jeans Classic Straight Leg no app.
 
 Para acessar o modelo em estoque, ao criar um novo Canvas, selecione **Usar um modelo de Canvas** > **Modelos de Braze**. Em seguida, ao lado de **Back in Stock**, selecione **Apply Template (Aplicar modelo)**. Agora, podemos examinar o modelo para adequá-lo às nossas necessidades.
 
@@ -41,13 +41,13 @@ Vamos ajustar os detalhes do Canva para refletir nosso objetivo.
 3\. Atualize a descrição para explicar que esse Canva contém envio de mensagens personalizadas.
 4\. Adicione a tag **Back in Stock**, que está aninhada sob a tag **Promotional**, para que possamos filtrá-la na página inicial do Canva. 
 
-!["Configurar Detalhes do Canva" etapa com um nome de Canva de "De Volta em Estoque - Perna Reta Clássica" e uma breve descrição do Canva.]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
+![Etapa "Set Up Canvas Details" (Configurar detalhes da tela) com um nome de tela "Back in Stock - Classic Straight Leg" (De volta ao estoque - Perna reta clássica) e uma breve descrição da tela.]({% image_buster /assets/img/canvas_templates/back_in_stock_1.png %})
 
 ### Etapa 2: Atribuir eventos de conversão
 
 Altere o **evento de conversão primária - A** para **Make a specific purchase (Fazer uma compra específica)** e selecione **Classic Straight Leg (Perna reta clássica)** como o nome do produto.
 
-!["Atribuir Eventos de Conversão" seção para o tipo de evento de conversão de compra do produto Perna Reta Clássica com um prazo de conversão de 7 dias.]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
+![Seção "Atribuir eventos de conversão" para o tipo de evento de conversão de compra do produto Classic Straight Leg com um prazo de conversão de 7 dias.]({% image_buster /assets/img/canvas_templates/back_in_stock_2.png %})
 
 ### Etapa 3: Adaptar o cronograma de entrada
 
@@ -57,12 +57,12 @@ Faremos dois ajustes nesta etapa:
 
 1. Selecione o catálogo que inclui informações sobre nossos jeans Classic Straight Leg, que chamamos de "Straight Leg Pants". 
 
-!["Cronograma de Entrada" etapa para um Canva baseado em ação.]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
+!["Cronograma de Entrada" etapa para um canva baseado em ação.]({% image_buster /assets/img/canvas_templates/back_in_stock_3.png %})
 
 {: start="2"}
 2\. Defina a **Hora de início (obrigatório)** para a data e hora de início desejadas.
 
-!["Janela de Entrada" seção com um horário de início em 2 de janeiro de 2025 às 12h.]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
+![Seção "Janela de Entrada" com um horário de início em 2 de janeiro de 2025 às 12h.]({% image_buster /assets/img/canvas_templates/back_in_stock_4.png %})
 
 ### Etapa 4: Selecione o público-alvo
 
@@ -71,23 +71,23 @@ Definiremos nosso público-alvo como os usuários que, em nossa opinião, têm m
 1. Selecione nosso segmento-alvo, "Favorited - Classic Straight Leg Jeans", que consiste em usuários que favoritaram nosso jeans Classic Straight Leg em nosso app ou site.
 2. Selecione um filtro para incluir usuários que compraram "Jeans" mais de "0" vezes.
 
-!["Público-Alvo" etapa com o segmento de "Favoritado - Jeans Perna Reta Clássica".]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
+![Etapa "Público-alvo" com o segmento "Favorited - Classic Straight Leg Jeans".]({% image_buster /assets/img/canvas_templates/back_in_stock_5.png %})
 
 {: start="3"}
 3\. Ajuste os controles de entrada para permitir que os usuários entrem novamente no Canvas após a duração máxima do Canvas, para evitar a probabilidade de os usuários dispararem a mesma etapa simultaneamente.
 
-!["Controles de Entrada" seção com uma caixa de seleção para permitir que os usuários reentrem neste Canva com uma duração máxima do Canva.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
+![Seção "Controles de entrada" com uma caixa de seleção para permitir que os usuários entrem novamente nesse Canvas com uma duração máxima do Canvas.]({% image_buster /assets/img/canvas_templates/back_in_stock_6.png %})
 
 {: start="4"}
 4\. Ajuste os critérios de saída para remover os usuários que realizaram o evento personalizado de desfavorecer o jeans Classic Straight Leg.
 
-!["Critérios de Saída" seção com uma exceção para usuários que realizam o evento personalizado de "Desfavoritado".]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
+![Seção "Critérios de saída" com uma exceção para usuários que realizam o evento personalizado de "Desfavorecido".]({% image_buster /assets/img/canvas_templates/back_in_stock_7.png %})
 
 ### Etapa 5: Selecione suas configurações de envio
 
 Manteremos as configurações padrão de inscrição, para que enviemos apenas aos usuários que se inscreveram ou aceitaram receber mensagens ou notificações, e ignoraremos as outras configurações (limite de frequência, horário de silêncio e grupos de teste).
 
-!["Configurações de Envio" etapa direcionando usuários que estão inscritos ou optaram por participar.]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
+![Etapa "Send Settings" (Configurações de envio) direcionando os usuários inscritos ou com aceitação.]({% image_buster /assets/img/canvas_templates/back_in_stock_8.png %})
 
 ### Etapa 6: Personalize sua tela
 
@@ -99,14 +99,14 @@ Você pode usar as [propriedades de entrada do Canvas]({{site.baseurl}}/user_gui
 
 Começaremos nossa personalização percorrendo cada etapa do Message para atualizar o conteúdo.
 
-1. Substitua `!!YOURCATALOGHERE!!` pelo nome do nosso catálogo ("Straight_Leg_Pants").
+1. Substitua `!!YOURCATALOGHERE!!` pelo nome do nosso catálogo (“Straight_Leg_Pants”).
 2. Substitua `[0]` pelo número de índice do jeans Classic Straight Leg, que é "9", porque o jeans é o décimo item na matriz `items` do nosso catálogo. (As matrizes são indexadas a zero no Liquid, portanto, o primeiro item é `0` e não `1`).
 3. Repita as etapas 1 e 2 para todas as etapas restantes do Message, inclusive:
     - A mensagem "In-Product Msg & E-mail" que é enviada após a postergação de um dia
     - As mensagens "Push+Email Alert" que são enviadas aos usuários que não fizeram uma compra
 4. Atualize a etapa Jornadas de ação selecionando o grupo de ação **Comprar**. Em seguida, selecione **Fazer uma compra específica** e escolha o jeans Classic Straight Leg como produto.
 
-![Etapa do Canva de Push Móvel com uma mensagem notificando os usuários que um produto está de volta em estoque.]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
+![Etapa do canva do Mobile Push com uma mensagem notificando os usuários de que um produto está de volta ao estoque.]({% image_buster /assets/img/canvas_templates/back_in_stock_9.png %})
 
 ### Etapa 7: Teste e inicie seu Canva
 

@@ -23,7 +23,7 @@ Este artigo não se destina a fornecer, nem pode ser considerado como aconselham
 
 Em geral, recomendamos que use seu bom senso ao enviar mensagens SMS, MMS ou RCS. O Braze, assim como nossos parceiros de envio, possui verificações que impedem a maioria dos abusos de SMS, MMS e RCS.
 
-Há seis regras que você deve seguir:
+Use as seguintes regras ao enviar mensagens:
 
 1. **Obtenha o consentimento explícito dos usuários antes de enviar-lhes SMS, MMS ou RCS.** Sempre que os usuários fornecem consentimento, é sua responsabilidade registrar, atualizar e manter essas informações em um banco de dados de usuários em conformidade. De acordo com as diretrizes legais básicas, as informações mais importantes que você precisa reter em relação ao consentimento são:
   - A hora e a data em que o usuário deu o consentimento
@@ -33,7 +33,7 @@ Há seis regras que você deve seguir:
 
 2. **Comunique claramente os tipos de SMS, MMS ou RCS que você enviará**. Os usuários devem entender quais mensagens devem esperar de sua marca nesse canal e os tipos de informações ou ofertas que receberão. Indique explicitamente o objetivo de suas futuras campanhas, a frequência das mensagens e lembre os usuários de que as taxas de mensagens/dados se aplicam.<br><br>
 
-3. **Mantenha as informações essenciais atualizadas e visíveis**. Certifique-se de que a versão mais atualizada dos Termos e Condições de sua marca e a Política de Privacidade do SMS/MMS/RCS Marketing estejam claramente visíveis e facilmente acessíveis em sua página de aceitação.<br><br>
+3. **Mantenha as informações essenciais atualizadas e visíveis**. Certifique-se de que a versão mais atualizada dos Termos e Condições de sua marca e a Política de Privacidade de Marketing por SMS/MMS/RCS estejam claramente visíveis e facilmente acessíveis em sua página de aceitação.<br><br>
 
 4. **Envie SMS, MMS ou RCS somente para números de telefone obtidos legalmente e com aceitação**. Como parte do planejamento da migração técnica, certifique-se de que sua equipe entenda o mecanismo para vincular os status de aceitação a cada perfil de usuário em sua plataforma de engajamento com clientes.<br><br>
 
@@ -48,8 +48,8 @@ O RCS é um espaço emergente e em evolução. Estados, países e outros órgão
 {% endalert %}
 
 - **Compreender a sobreposição regulatória:** Como o RCS e o SMS compartilham muitas semelhanças, aplicam-se as mesmas leis, regulamentos e políticas da operadora. Isso inclui as regras da TCPA para a coleta de aceitação e as diretrizes da CTIA (como a SHAFT).
-- **Transferência de consentimento:** A orientação do setor é que o consentimento seja transferido entre SMS e RCS **para o mesmo tipo de envio de mensagens (como promocionais ou transacionais)**, se o usuário já tiver fornecido aceitação para receber esse tipo de mensagem. Por outro lado, se o usuário não tiver optado por receber SMS promocionais, você não deve começar a enviar RCS promocionais sem coletar a aceitação desse tipo de envio de mensagens.
-- **Atualizar políticas e isenções de responsabilidade:** Recomenda-se atualizar os Termos de Serviço e a Política de Privacidade de seu celular para incluir referências ao RCS. Também é recomendável que suas campanhas de aceitação incluam linguagem sobre RCS, além de SMS.
+- **Consentimentos:** Trabalhe com sua equipe jurídica para avaliar se é necessário obter consentimentos adicionais para enviar RCS aos seus usuários de SMS existentes.
+- **Atualizar políticas e isenções de responsabilidade:** Recomenda-se atualizar seus Termos de Serviço para Dispositivos Móveis & Política de Privacidade para incluir referências ao RCS. Também é recomendável que suas campanhas de aceitação incluam linguagem sobre RCS, além de SMS.
 
 ## Recursos
 

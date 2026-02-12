@@ -1,7 +1,7 @@
 ---
 nav_title: FAQ
 article_title: FAQ sur les e-mails
-page_order: 14
+page_order: 15
 description: "Cette page fournit des réponses aux questions fréquemment posées sur les communications par e-mail."
 channel: email
 
@@ -22,16 +22,8 @@ Notez que cette déduplication se produit si les utilisateurs ciblés sont inclu
 Les campagnes déclenchées par l'API dédupliqueront ou enverront des messages dédupliqués en fonction de l'endroit où l’audience est définie. En résumé, les e-mails dupliqués doivent être directement ciblés comme des `user_ids` séparés dans l'appel API afin de recevoir plusieurs détails. Voici trois scénarios possibles pour les campagnes déclenchées par une API :
 
 - **Scénario 1 : E-mails dupliqués dans le segment cible :** Si le même e-mail apparaît dans plusieurs profils d'utilisateurs regroupés dans les filtres d'audience du tableau de bord pour une campagne déclenchée par l'API, un seul des profils recevra l'e-mail.
-- **Scénario 2 : E-mails dupliqués dans différents `user_ids` dans l’objet Destinataires :** Si le même e-mail apparaît dans plusieurs `External_user_IDs` référencés par l'objet `recipients`, l'e-mail sera envoyé deux fois.
-- **Scénario 3 : E-mails dupliqués en raison d'identifiants utilisateur en double dans l'objet Destinataires :** Si vous essayez d’ajouter le même profil utilisateur deux fois, seul un des profils recevra l’e-mail.
-
-### Comment vérifier si une adresse e-mail est déjà associée à un utilisateur ?
-
-Avant de créer un utilisateur via l'API ou le SDK, appelez le point de terminaison [`/users/export/ids`]({{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/) et spécifiez l'adresse `email_address` de l'utilisateur. S'il renvoie un profil utilisateur, cela signifie que l'utilisateur de Braze est déjà associé à cette adresse e-mail.
-
-Nous vous recommandons vivement de rechercher des adresses e-mail uniques lors de la création de nouveaux utilisateurs et d'éviter de transmettre ou d'importer des utilisateurs ayant la même adresse e-mail. Dans le cas contraire, vous risquez d'avoir des conséquences imprévues sur l'envoi de messages, le ciblage, la création de rapports et d'autres fonctionnalités.
-
-Par exemple, supposons que vous ayez des profils en double, mais que certains événements et attributs personnalisés ne se trouvent que sur un seul profil. Lorsque vous essayez de déclencher des campagnes ou des Canvases avec plusieurs critères, Braze ne peut pas identifier l'utilisateur comme éligible parce qu'il y a deux profils utilisateur. Par ailleurs, si une campagne cible une adresse e-mail partagée par deux utilisateurs, la page **Recherche d'utilisateurs** indiquera que les deux profils utilisateurs ont reçu la campagne.
+- **Scénario 2 : E-mails dupliqués dans différents `user_ids` dans l’objet Destinataires :** Si le même e-mail apparaît dans plusieurs `External_user_IDs` référencés par l'objet `recipients``, l'e-mail sera envoyé deux fois.
+- **Scénario 3 : Dupliquer les e-mails en raison d’user_ids en double dans l’objet Destinataires :** Si vous essayez d’ajouter le même profil utilisateur deux fois, seul un des profils recevra l’e-mail.
 
 ### Les mises à jour de mes paramètres de messagerie sortante s'appliqueront-elles rétroactivement ?
 
@@ -79,21 +71,6 @@ Il se peut que vous ne voyiez aucun e-mail ouvert ou cliqué si votre domaine de
 Certains éléments d'un e-mail, par exemple la longueur excessive du message ou le nombre de points d'exclamation, sont susceptibles de déclencher des réponses de sécurité par e-mail. Ces réponses peuvent avoir un impact sur les rapports, la réputation de l’adresse IP et peuvent entraîner des désabonnements d'utilisateurs. 
 
 Pour les meilleures pratiques sur la façon de gérer ces réponses, consultez [Gestion des augmentations des taux de clics]({{site.baseurl}}/help/help_articles/email/open_rates/).
-
-### Comment supprimer une adresse e-mail de la liste de rebond ou de spam ?
-
-Vous pouvez supprimer les e-mails renvoyés et les e-mails figurant sur la liste des spams à l'aide des endpoints suivants :
-- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
-- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)
-
-### Comment vérifier le groupe d’abonnement e-mail d’un utilisateur ?
-
-- **Profil de l'utilisateur :** Les profils d'utilisateurs individuels peuvent être consultés via le tableau de bord Braze depuis la page [Rechercher des utilisateurs]({{site.baseurl}}/user_guide/engagement_tools/segments/user_profiles/#access-profiles). Là, vous pouvez faire une recherche dans les profils utilisateur par adresse e-mail, numéro de téléphone ou ID utilisateur externe. Lorsqu'on est dans un profil utilisateur, sous l'onglet Engagement, on peut voir les groupes d'abonnement par e-mail d'un utilisateur.
-- **API REST :** Les profils d'utilisateurs individuels du groupe d'abonnement peuvent être consultés par l'[endpoint de liste des groupes d'abonnement des utilisateurs]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_groups/) ou l'[endpoint de liste du statut du groupe d'abonnement des utilisateurs]({{site.baseurl}}/api/endpoints/subscription_groups/get_list_user_subscription_group_status/) en utilisant l'API REST de Braze. 
-
-### Comment puis-je mettre à jour le groupe d'abonnement par e-mail d'un utilisateur ?
-
-Les utilisateurs ne pourront plus entrer dans le Canvas et aucun message supplémentaire ne sera envoyé. Pour les campagnes et les Canvas par e-mail, le bouton d’arrêt ne signifie pas que les envois s’arrêteront immédiatement. En effet, une fois que les demandes d’envoi sont envoyées, il est impossible d’empêcher leur livraison à l’utilisateur.
 
 ### Braze peut-il suivre les liens de désabonnement comptabilisés dans la métrique "Désabonnement" ?
 

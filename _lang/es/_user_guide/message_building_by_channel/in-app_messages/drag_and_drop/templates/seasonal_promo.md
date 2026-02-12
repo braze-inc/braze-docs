@@ -10,7 +10,7 @@ description: "En esta página se explica cómo utilizar el editor de arrastrar y
 
 > Utiliza el editor de arrastrar y soltar mensajes dentro de la aplicación para promocionar una oferta de temporada o un trato para impulsar la interacción de los usuarios.
 
-{% multi_lang_include drag_and_drop/templates.md section='Requisitos SDK' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## Crear una promoción de temporada con una imagen de fondo
 
@@ -22,7 +22,7 @@ Cuando crees un mensaje dentro de la aplicación arrastrando y soltando, selecci
 
 ### Paso 2: Configura tus estilos de mensaje
 
-{% multi_lang_include drag_and_drop/templates.md section='estilo del mensaje' %}
+{% multi_lang_include drag_and_drop/templates.md section='message style' %}
 
 ### Paso 3: Personaliza tu componente botón
 
@@ -40,7 +40,7 @@ Personaliza el aspecto de tu promoción de temporada utilizando los [componentes
 
 ## Analizar los resultados
 
-{% multi_lang_include drag_and_drop/templates.md section='informes' %}
+{% multi_lang_include drag_and_drop/templates.md section='reporting' %}
 
 
 

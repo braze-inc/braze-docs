@@ -6,7 +6,7 @@ page_type: reference
 description: "Tudo o que você faz na plataforma Braze acontece em um espaço de trabalho. Este artigo descreve como eles funcionam e quais considerações importantes devem ser levadas em conta ao planejar seus espaços de trabalho no Braze."
 ---
 
-# Primeiros passos: Espaços de trabalho
+# Comece agora: Espaços de trabalho
 
 Tudo o que você faz na plataforma Braze acontece em um espaço de trabalho. Os espaços de trabalho funcionam como silos separados de dados e permitem que você mantenha marcas ou atividades diferentes separadas. Várias versões do seu site ou app móvel podem enviar dados para o mesmo espaço de trabalho. Referimo-nos aos diferentes sites e aplicativos que são coletados em um espaço de trabalho como "instâncias do app".
 
@@ -178,7 +178,7 @@ A tabela a seguir descreve os benefícios e as desvantagens dessas duas abordage
         <td>É garantido que os atributos e eventos personalizados sejam específicos de uma instância do app.</td>
         <td>Não é possível rastrear o comportamento do usuário nos espaços de trabalho.<br><br><b>Dica:</b> Você pode utilizar vários conectores Currents para fazer isso.</td>
         <td>Pode rastrear o comportamento do usuário em todas as instâncias do app no espaço de trabalho.</td>
-        <td>Atributos e eventos personalizados se aplicariam a todas as instâncias do app, o que poderia dificultar a identificação de quais dados de um perfil de usuário são relevantes para qual instância do app. Por exemplo, "date_of_parking" é relevante para o App 1 ou para o App 2? Para combater isso, certifique-se de usar convenções de nomenclatura bem estruturadas.</td>
+        <td>Atributos e eventos personalizados se aplicariam a todas as instâncias do app, o que poderia dificultar a identificação de quais dados de um perfil de usuário são relevantes para qual instância do app. Por exemplo, o site "date_of_parking" é relevante para o App 1 ou para o App 2? Para combater isso, certifique-se de usar convenções de nomenclatura bem estruturadas.</td>
     </tr>
     <tr>
         <td>Limite de frequência</td>
@@ -205,7 +205,7 @@ A tabela a seguir descreve os benefícios e as desvantagens dessas duas abordage
         <td>Duplicação de conteúdo</td>
         <td>N/D</td>
         <td>Não é possível duplicar segmentos, campanhas push ou de cartão de conteúdo ou Canvas em espaços de trabalho.</td>
-        <td>É possível [duplicar campanhas nos espaços de trabalho]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) para os seguintes canais compatíveis: SMS, mensagens no app, e-mail, modelos de e-mail e Blocos de Conteúdo. <br><br>Pode duplicar segmentos, campanhas e Canvas para reutilizar conteúdo de uma instância do app para outra.</td>
+        <td>Pode duplicar campanhas em workspaces]({{site.baseurl}}/user_guide/engagement_tools/messaging_fundamentals/copying_across_workspaces/) para os seguintes canais compatíveis: SMS, mensagens no app, e-mail, modelos de e-mail e Blocos de Conteúdo. <br><br>Pode duplicar segmentos, campanhas e Canvas para reutilizar conteúdo de uma instância do app para outra.</td>
         <td>N/D</td>
     </tr>
     <tr>
@@ -240,5 +240,5 @@ Você deve ter mais de um usuário do Braze com permissões de administrador par
 
 ## Próximas etapas
 
-Depois de determinar o plano do espaço de trabalho, é hora de criar o espaço de trabalho e adicionar instâncias do app. Para obter etapas, consulte [Criação e gerenciamento de espaços de trabalho]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
+Depois de determinar o plano do espaço de trabalho, é hora de criar o espaço de trabalho e adicionar instâncias do app. Para obter etapas, consulte [Criar e gerenciar espaços de trabalho]({{site.baseurl}}/user_guide/administrative/app_settings/workspaces/).
 

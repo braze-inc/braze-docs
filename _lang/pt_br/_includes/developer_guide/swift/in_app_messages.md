@@ -3,7 +3,7 @@
 ## Tipos de mensagens
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Ativação de mensagens no app
@@ -22,7 +22,7 @@ AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()
 ```
 
 {% endtab %}
-{% tab OBJECTIVE C %}
+{% tab OBJECTIVE-C %}
 
 ```objc
 AppDelegate.braze.inAppMessagePresenter = [[BrazeInAppMessageUI alloc] init];

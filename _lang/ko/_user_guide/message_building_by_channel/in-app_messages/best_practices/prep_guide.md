@@ -25,7 +25,7 @@ channel: in-app messages
 - 사용자가 메시지를 어디에 표시하기를 원하나요? 웹 앱? 모바일 앱?
 - 어떤 이벤트가 이 메시지를 트리거해야 하나요?
 - 이전 버전의 앱을 사용하는 사용자가 있나요? 그렇다면 메시지의 일부 요소를 보지 못할 수도 있습니다.
-- 이 메시지를 작성하는 기기 유형은 무엇인가요? **미리보기** 상자 또는 **테스트** 탭을 사용하여 메시지를 미리 볼 수 있다는 점을 기억하세요. 자세한 내용은 [테스트]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/)를 참조하세요.
+- 이 메시지를 작성하는 기기 유형은 무엇인가요? **미리보기** 상자 또는 **테스트** 탭을 사용하여 메시지를 미리 볼 수 있다는 점을 기억하세요. 자세한 내용은 [테스트]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_messages/)를 참조하세요.
 
 ## 콘텐츠 고려 사항
 

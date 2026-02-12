@@ -1,5 +1,5 @@
 ---
-nav_title: Mensagens no app do Push Primer
+nav_title: Mensagens no app com cartilha push
 article_title: Mensagens no app do Push Primer
 page_order: 1
 page_type: reference
@@ -22,10 +22,10 @@ Esse recurso requer [o comportamento ao clicar em um botão](#button-actions), q
 
 {% sdk_min_versions swift:5.4.0 android:21.0.0 web:4.0.3 %}
 
-Além disso, observe os seguintes detalhes específicos da plataforma:
+Além disso, note os seguintes detalhes específicos da plataforma:
 
 {% tabs local %}
-{% tab Android %}
+{% tab android %}
 |Versão do sistema operacional|Informações adicionais|
 \|----------|----------------------|
 | **Android 12 e versões anteriores** A implementação de primers push não é recomendada porque o push é aceito por padrão. |
@@ -107,7 +107,7 @@ Depois de adicionar o texto do botão, especifique o comportamento ao clicar em 
 - **Botão 1:** Defina essa opção como "Fechar mensagem". Esse é seu botão secundário ou a opção "Not now" (Agora não).
 - **Botão 2:** Defina essa opção como "Request Push Permission" (Solicitar permissão de push). Esse é o botão principal ou a opção "Permitir notificações".
 
-![Criador de mensagens no app com dois botões: "Allow notifications" (Permitir notificações) e "Not now" (Não agora).]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
+![Criador de mensagens no app com dois botões: "Permitir notificações" e "Agora não".]({% image_buster /assets/img_archive/push_primer_button_behavior.png %})
 
 ## Etapa 4: Programação de entrega
 
@@ -119,7 +119,11 @@ Embora o momento ideal varie, o Braze sugere esperar até que um usuário conclu
 
 ## Etapa 5: Usuários-alvo
 
-Como o objetivo de uma campanha de mensagens push é solicitar que os usuários aceitem o envio de mensagens, não é recomendável direcionar os usuários que já aceitaram. Para isso, adicione um segmento ou filtro em que `Push Subscription Status is not Opted In`.
+O objetivo de uma campanha de push primer é solicitar aos usuários em qualquer dispositivo em que eles ainda não tenham concedido permissões de push. Isso pode incluir usuários de primeira viagem ou usuários existentes que adquirem um novo dispositivo ou reinstalam seu aplicativo. Para direcionar corretamente sua campanha de push primer, adicione um filtro onde `Foreground Push Enabled For App is false`. Esse filtro identifica instalações de aplicativos individuais que ainda não têm aceitação de notificações por push em primeiro plano.
+
+{% alert important %}
+O uso de um filtro no nível do usuário, como `Push Subscription Status is not Opted In`, excluirá os usuários que já têm pedido de aceitação em outro dispositivo, impedindo-os de receber o prompt em seu novo dispositivo.
+{% endalert %}
 
 Além disso, você pode decidir quais segmentos adicionais considera mais apropriados. Por exemplo, você pode direcionar usuários que concluíram uma segunda compra, usuários que acabaram de criar uma conta para se tornarem membros ou até mesmo usuários que visitam seu app mais de duas vezes por semana. O direcionamento de usuários para esses segmentos cruciais aumenta a probabilidade de aceitação e capacitação de usuários por push.
 

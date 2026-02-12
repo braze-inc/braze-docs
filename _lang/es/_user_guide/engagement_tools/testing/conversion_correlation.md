@@ -21,7 +21,7 @@ Para cada campaña, Braze comprueba una lista de atributos y comportamientos de 
 
 Para ejecutar un análisis de correlación de conversiones, seleccione el evento de conversión de interés en el menú desplegable.
 
-![Panel de correlación de conversiones que muestra un ejemplo con "Seleccionar un evento de conversión" establecido en "Evento de conversión primaria - A" con la configuración de evento como "Realizada la compra en 12 horas (Cualquier producto)".]({% image_buster /assets/img/convcorr.png %})
+![Panel de Correlación de Conversiones que muestra un ejemplo con "Seleccionar un evento de conversión" establecido en "Evento de Conversión Principal - A" con la Configuración de Evento como "Realizada Compra en 12 horas (Cualquier producto)".]({% image_buster /assets/img/convcorr.png %})
 
 ## ¿Qué se comprueba?
 

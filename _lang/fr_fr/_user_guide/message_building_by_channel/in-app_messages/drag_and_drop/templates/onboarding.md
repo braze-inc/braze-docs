@@ -14,7 +14,7 @@ description: "Cette page explique comment accueillir les nouveaux utilisateurs, 
 
 ## Créer un flux d'onboarding
 
-### Étape 1 : Choisissez votre modèle
+### Étape 1 : Choisissez votre modèle
 
 Lorsque vous créez un message in-app par glisser-déposer, sélectionnez **Flux d'onboarding** pour votre modèle, puis sélectionnez **Créer un message.** Ce modèle est pris en charge à la fois pour les applications mobiles et les navigateurs web.
 

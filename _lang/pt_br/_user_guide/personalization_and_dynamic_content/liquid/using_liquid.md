@@ -6,9 +6,9 @@ description: "Este artigo de referência fornece uma visão geral dos casos de u
 search_rank: 2
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"}Usando Liquid
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/path/dynamic-personalization-with-liquid){: style="float:right;width:120px;border:0;" class="noimgborder"} Usando Liquid
 
-> Este artigo mostrará como usar uma variedade de atribuições do usuário para inserir dinamicamente informações pessoais no envio de mensagens.
+> Este artigo mostra como é possível usar uma variedade de atribuições do usuário para inserir dinamicamente informações pessoais no envio de mensagens.
 
 O Liquid é uma linguagem de modelo de código aberto desenvolvida pela Shopify e escrita em Ruby. Você pode usá-lo no Braze para extrair dados do perfil do usuário para suas mensagens e personalizar esses dados. Por exemplo, é possível usar Liquid tags para criar mensagens condicionais, como o envio de ofertas diferentes com base na data de aniversário da inscrição de um usuário. Além disso, os filtros podem manipular dados, como formatar a data de registro de um usuário a partir de um carimbo de data/hora em um formato mais legível, como "15 de janeiro de 2022". Para obter mais detalhes sobre a sintaxe do Liquid e seus recursos, consulte [Tags de personalização compatíveis]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -35,6 +35,10 @@ Ou...
 ```
 Hi Valued User, thanks for using the App!
 ```
+
+{% alert important %}
+Os comentários HTML (`<!-- -->`) são removidos antes que qualquer Liquid seja lido, portanto, as tags Liquid dentro de comentários HTML **não** são renderizadas em sua mensagem. Para uma renderização adequada, certifique-se de que todas as tags Liquid que deseja usar estejam fora dos comentários HTML.
+{% endalert %}
 
 ## Valores suportados para substituição
 
@@ -79,6 +83,20 @@ Você pode inserir tags digitando duas chaves abertas `{{` em qualquer mensagem,
 
 Se estiver usando uma tag personalizada, poderá copiar e colar a tag em qualquer mensagem que desejar.
 
+#### Exceções para colchetes duplos
+
+Ao usar uma tag dentro de outra tag Liquid, como `{% assign %}` ou `{% if %}`, você pode usar colchetes duplos ou nenhum colchete. Somente quando a tag está sozinha é que ela deve ser colocada entre colchetes duplos. Para simplificar, você sempre pode usar colchetes duplos. 
+
+Todas as tags a seguir estão corretas:
+
+```liquid
+{% if custom_attribute.${Number_Game_Attended} == 1 %}
+{% if {{custom_attribute.${Number_Game_Attended}}} == 1 %}
+
+{% assign value_one = {{custom_attribute.${one}}} %}
+{% assign value_one = custom_attribute.${one} %}
+```
+
 {% endraw %}
 
 {% alert note %}
@@ -98,7 +116,7 @@ Você pode inserir variáveis pré-formatadas com padrões por meio do modal **A
 
 O modal inserirá o Liquid com o valor padrão especificado no ponto em que o cursor estava. O ponto de inserção também é especificado pela caixa de prévia, que tem o texto antes e depois. Se um bloco de texto for destacado, o texto destacado será substituído.
 
-![Um GIF do modal Add Personalization que mostra o usuário inserindo "fellow traveler" como um valor padrão e o modal substituindo o texto destacado "name" no criador pelo snippet Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
+![Um GIF do modal Add Personalization que mostra o usuário inserindo "fellow traveler" como um valor padrão e o modal substituindo o texto destacado "name" no criador pelo snippet do Liquid.]({% image_buster /assets/img_archive/insert_var_shot.gif %})
 
 ### Atribuindo variáveis
 

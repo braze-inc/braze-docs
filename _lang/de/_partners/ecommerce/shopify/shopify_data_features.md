@@ -5,7 +5,7 @@ description: "Dieser referenzierte Artikel behandelt die Shopify Daten Features.
 page_type: partner
 search_tag: Partner
 alias: /shopify_data_features/
-page_order: 3
+page_order: 4
 ---
 
 # Shopify Daten Features
@@ -14,8 +14,12 @@ page_order: 3
 
 ## Tracking von Shopify-Ereignissen
 
+Die Shopify Integration nutzt die [vom E-Commerce empfohlenen Ereignisse]({{site.baseurl}}/user_guide/data/custom_data/recommended_events/ecommerce_events/), um die wichtigsten Einkaufsgewohnheiten zu erfassen. Beispiele für die Umsetzung und Marketing-Strategien, die diese Ereignisse nutzen, finden Sie in den [E-Commerce Anwendungsfällen]({{site.baseurl}}/user_guide/engagement_tools/canvas/ideas_and_strategies/ecommerce_use_cases/).
+
+{% multi_lang_include alerts/important_alerts.md alert='Shopify customer create' %}
+
 {% tabs %}
-{% tab Beispiel Payload %}
+{% tab Example Payload %}
 {% subtabs global %}
 {% subtab Product viewed %}
 ```json
@@ -396,7 +400,7 @@ page_order: 3
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Shopify Ereignisse %}
+{% tab Shopify events %}
 {% subtabs global %}
 {% subtab Product viewed %}
 **Veranstaltung**: `ecommerce.product_viewed`<br>
@@ -465,7 +469,7 @@ Weitere Informationen darüber, wie Sie eine Liquid `for` -Schleife einrichten, 
 {% subtab Checkout started %}
 **Veranstaltung**: `ecommerce.checkout_started`<br>
 **Typ**: Empfohlene Veranstaltung<br>
-**Ausgelöst**: Wenn eine Kund:in ihren Warenkorb hinzufügt, entfernt oder aktualisiert<br>
+**Ausgelöst**: Wenn ein Nutzer:in auf die Kassenseite navigiert<br>
 **Anwendungsfälle**: Abbruch der Kaufabwicklung
 
 Für Abandoned Checkout Canvase müssen Sie zunächst den folgenden Liquid-Tag verwenden:
@@ -508,21 +512,21 @@ Dann können Sie die folgenden Liquid-Tags in Ihre Nachricht einfügen, um die P
 {% raw %}
 | Variable | Liquid Template |
 \|-------------------------|-----------------------------------------------------|
-| cart_id                 | `{{event_properties.${cart_id}}}`                   |
+| cart_id | `{{event_properties.${cart_id}}}` |
 | currency                | `{{event_properties.${currency}}}`                  |
 | discounts               | `{{event_properties.${discounts}}}`                 |
-| order_id                | `{{event_properties.${order_id}}}`                  |
-| product_id              | `{{event_properties.${products}[0].product_id}}`   |
-| product_name            | `{{event_properties.${products}[0].product_name}}` |
-| variant_id              | `{{event_properties.${products}[0].variant_id}}`   |
+| order_id | `{{event_properties.${order_id}}}` |
+| product_id | `{{event_properties.${products}[0].product_id}}` |
+| product_name | `{{event_properties.${products}[0].product_name}}` |
+| variant_id | `{{event_properties.${products}[0].variant_id}}` |
 | quantity                | `{{event_properties.${products}[0].quantity}}`     |
 | sku                     | `{{event_properties.${products}[0].metadata.sku}}` |
-| total_discounts         | `{{event_properties.${total_discounts}}}`           |
-| order_status_url        | `{{event_properties.${metadata}.order_status_url}}` |
-| order_number            | `{{event_properties.${metadata}.order_number}}`     |
+| total_discounts | `{{event_properties.${total_discounts}}}` |
+| order_status_url | `{{event_properties.${metadata}.order_status_url}}` |
+| order_number | `{{event_properties.${metadata}.order_number}}` |
 | tags                    | `{{event_properties.${metadata}.tags}}`             |
-| referring_site          | `{{event_properties.${metadata}.referring_site}}`   |
-| payment_gateway_names    | `{{event_properties.${metadata}.payment_gateway_names}}` |
+| referring_site | `{{event_properties.${metadata}.referring_site}}` |
+| payment_gateway_names | `{{event_properties.${metadata}.payment_gateway_names}}` |
 {: .reset-br-td-1 .reset-br-td-2 role="presentation" }
 {% endraw %}
 
@@ -739,7 +743,7 @@ Der Webhook "Kasse abgeschlossen" von Shopify enthält keine Produkt-URLs oder B
 {% endraw %}
 
 {% alert note %}
-Die Shopify-Integration unterstützt derzeit nicht das Auffüllen des [Kauf-Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) von Braze. Folglich sollten Kauf-Filter, Liquid-Tags, aktionsbasierte Trigger und Analytics das Ereignis ecommerce.order_placed verwenden.
+Die Shopify-Integration unterstützt derzeit nicht das Auffüllen des [Kauf-Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events#purchase-events) von Braze. Infolgedessen sollten Kauf-Filter, Liquid-Tags, aktionsbasierte Trigger und Analytics das Ereignis `ecommerce.order_placed` verwenden.
 {% endalert %}
 
 {% endsubtab %}
@@ -748,8 +752,9 @@ Die Shopify-Integration unterstützt derzeit nicht das Auffüllen des [Kauf-Even
 {% endtabs %}
 
 ## Unterstützte angepasste Attribute von Shopify
+
 {% tabs local %}
-{% tab Beispiel Payload %}
+{% tab Example Payload %}
 {% subtabs %}
 {% subtab Shopify Tags %}
 ```json
@@ -770,7 +775,7 @@ Die Shopify-Integration unterstützt derzeit nicht das Auffüllen des [Kauf-Even
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Shopify Angepasste Attribute %}
+{% tab Shopify Custom Attributes %}
 | Attribut Name | Beschreibung |
 | --- | --- |
 | `shopify_total_spent` | Der Gesamtbetrag, den der Kunde im Verlauf seiner Bestellung ausgegeben hat. |
@@ -781,15 +786,24 @@ Die Shopify-Integration unterstützt derzeit nicht das Auffüllen des [Kauf-Even
 | `shopify_province` | Die Provinz der Kund:in aus ihrer Standardadresse. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
+{% alert important %}
+Ein bekanntes Problem mit der aktuellen Shopify API Version verhindert, dass das Attribut `shopify_last_order_name` Nutzer:in korrekt ausgefüllt wird. Die Auswirkungen auf die Nutzer:innen sind wie folgt:<br><br>
+
+- **Bestehende Nutzer:innen:** Für jeden Nutzer:innen, der bereits einen Wert für `shopify_last_order_name` hat, bleibt dieser Wert persistent, wird aber bei nachfolgenden Bestellungen nicht aktualisiert.
+- **Neue Nutzer:innen:** Für neue Nutzer:innen wird das Feld nicht ausgefüllt und bleibt leer oder null.
+
+Diese Seite wird aktualisiert, sobald Shopify dieses Problem behoben hat.
+{% endalert %}
+
 ### Liquid Personalisierung
 
 Um eine Liquid-Personalisierung für Ihre angepassten Attribute in Shopify hinzuzufügen, wählen Sie **\+ Personalisierung**. Wählen Sie dann als Personalisierungstyp **angepasste Attribute** aus.
 
-![Der Bereich "Personalisierung hinzufügen" mit dem erweiterten Dropdown-Menü "Attribute".]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
+![Der Bereich "Personalisierung hinzufügen" mit der erweiterten Dropdown-Liste "Attribute".]({% image_buster /assets/img/Shopify/add_personalization_2.png %}){: style="max-width:40%;"}
 
 Nachdem Sie Ihr angepasstes Attribut ausgewählt haben, geben Sie einen Standardattribut ein und kopieren das Liquid Snippet in Ihre Nachricht.
 
-![Einfügen eines Liquid-Snippets in eine Nachricht.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
+![Einfügen eines Liquid Snippets in eine Nachricht.]({% image_buster /assets/img/Shopify/copy_liquid_snippet.png %})
 {% endtab %}
 {% endtabs %}
 
@@ -822,13 +836,13 @@ Wenn Sie die Integration mit einer angepassten externen ID planen (entweder für
 
 1. Aktivieren Sie das historische Backfill im Schritt **Tracking der Shopify Daten**.
 
-![Der Schritt "Tracking von Shopify Daten" der Shopify Integration zeigt die ausgewählte historische Auffüllung an.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
+![Der Schritt "Tracking von Shopify Daten" der Shopify Integration zeigt die ausgewählten historischen Backfills.]({% image_buster /assets/img/Shopify/historical_data_backfill_sync.png %})
 
 {: start="2"}
 
 2. Nachdem Sie Ihre Integration eingerichtet haben, beginnt Braze mit der ersten Synchronisierung der Daten. Sie können den Fortschritt auf dem Tab **Shopify Daten** Ihrer Integrationseinstellungen überwachen. 
 
-![Die Seite mit den Einstellungen für die Shopify Integration mit einer Anzeige, die anzeigt, dass die Ereignisse aktiv synchronisiert werden.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
+![Die Seite mit den Einstellungen für die Shopify Integration mit einer Drehscheibe, die anzeigt, dass die Ereignisse aktiv synchronisiert werden.]({% image_buster /assets/img/Shopify/historical_data_backfill_syncing.png %})
 
 ### Synchronisierte Daten 
 

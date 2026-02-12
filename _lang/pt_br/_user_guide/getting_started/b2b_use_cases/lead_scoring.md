@@ -1,12 +1,12 @@
 ---
 nav_title: Pontuação de leads
-article_title: Criação de um fluxo de trabalho de pontuação de leads
+article_title: Criar um fluxo de trabalho de pontuação de leads
 page_order: 1
 page_type: reference
 description: "Saiba como usar a Braze para fazer pontuação simples de leads, pontuação externa de leads e transferências de leads."
 ---
 
-# Criação de um fluxo de trabalho de pontuação de leads
+# Criar um fluxo de trabalho de pontuação de leads
 
 > Este caso de uso demonstra como você pode usar o Braze para atualizar as pontuações de leads dos usuários em tempo real e entregar automaticamente os leads às suas equipes de vendas.
 
@@ -43,7 +43,7 @@ Há duas etapas principais para criar um fluxo de trabalho de pontuação de lea
 
 Todos os usuários são elegíveis para a pontuação de leads, portanto, é possível adicionar regras específicas da empresa sobre quem pontuar, selecionando os [segmentos]({{site.baseurl}}/user_guide/engagement_tools/segments/) de usuários a serem direcionados e aplicando [filtros]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) adicionais. Por exemplo, é possível excluir colaboradores, usuários que já são clientes e similares. 
 
-![Etapa 3 da criação de uma tela com opções para selecionar segmentos e filtros para restringir o público-alvo.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
+![Etapa 3 da criação de um canva com opções para selecionar segmentos e filtros para restringir o público-alvo.]({% image_buster /assets/img/b2b/step_3_simple.png %}){: style="max-width:80%;"}
 
 #### Etapa 3b: Definir a reelegibilidade do Canvas
 
@@ -54,7 +54,7 @@ Em **Controles de entrada**, faça o seguinte:
 - Selecione **Specified Window (Janela especificada**).
 - Defina a reelegibilidade como "0" **segundos**.
 
-![Seção "Controles de entrada" que tem seleções para "Permitir que os usuários entrem novamente neste Canva" em uma "Janela especificada" de 0 segundos.]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
+![Seção "Controles de entrada" que tem seleções para "Permitir que os usuários entrem novamente neste canva" em uma "Janela especificada" de 0 segundos.]({% image_buster /assets/img/b2b/entry_controls_simple.png %}){: style="max-width:80%;"}
 
 #### Etapa 3c: Atualizar configurações de envio
 
@@ -62,7 +62,7 @@ Dada a natureza operacional desse Canva e o fato de que nenhuma mensagem será e
 
 Em **Subscription Settings (Configurações de inscrição**), para **Send to these users (Enviar para esses usuários):** selecione **todos os usuários, inclusive os que cancelaram inscrição**. 
 
-![Etapa 4 da criação de um Canva para definir as opções de envio de mensagens.]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
+![Etapa 4 da criação de um canva para definir as opções de envio de mensagens.]({% image_buster /assets/img/b2b/step_4_simple.png %}){: style="max-width:80%;"}
 
 ### Etapa 4: Crie seu canva
 
@@ -83,13 +83,13 @@ Adicione os seguintes grupos à sua jornada de ação:
 - **Grupo 3:** Todos os eventos que contam para um decréscimo de 1 ponto.
 - **Todos os demais:** As jornadas de ação permitem definir a janela para esperar e ver se um usuário executa uma ação, antes de colocá-lo em um grupo "todos os outros". Para a pontuação de leads, essa é uma oportunidade de diminuir a pontuação por "inatividade".
 
-![Jornada de ação contendo grupos de ação para adicionar um ponto, cinco pontos e dez pontos; subtrair um ponto e dez pontos; e "Todos os outros".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %})
+![Jornada de ação contendo grupos de ação para adicionar um ponto, cinco pontos e dez pontos; subtrair um ponto e dez pontos; e "Todos os outros".]({% image_buster /assets/img/b2b/action_paths_selected_simple.png %}){: style="max-width:20%;"}
 
 #### Etapa 4c: Configure cada grupo para incluir os eventos relevantes
 
 Em cada Action Group, selecione **Select trigger (Selecionar gatilho** ) e escolha o evento que adicionará o número de pontos para esse Action Group específico. Adicione mais disparadores para incluir todos os eventos que aumentarão a pontuação do lead em um. Por exemplo, um usuário pode aumentar sua pontuação em um quando iniciar uma sessão em qualquer app ou realizar um evento personalizado (como registrar-se ou participar de um webinar). 
 
-![Grupo de ação para adicionar um ponto com os disparadores de "Iniciar sessão em qualquer app" e "Realizar evento personalizado".]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
+![Grupo de ações para adicionar um ponto com os disparos de "Iniciar sessão em qualquer app" e "Executar evento personalizado".]({% image_buster /assets/img/b2b/action_groups_simple.png %}){: style="max-width:80%;"}
 
 #### Etapa 4d: Adicionar usuário Etapas de atualização
 
@@ -126,7 +126,7 @@ Você pode integrar o Braze com seus modelos de dados internos, incluindo modelo
 #### Data warehouse integrado na nuvem
 
 {% tabs %}
-{% tab Braze como uma fonte de dados %}
+{% tab Braze as a data source %}
 
 Como sua ferramenta de marketing, o Braze contém dados extremamente relevantes que podem complementar o modelo interno de pontuação de leads da sua equipe. 
 
@@ -136,7 +136,7 @@ Por exemplo, os dados de engajamento com mensagens (como aberturas e cliques de 
 - [Compartilhamento seguro de dados da Snowflake]({{site.baseurl}}/partners/data_and_analytics/data_warehouses/snowflake/)
 
 {% endtab %}
-{% tab Braze como um destino %}
+{% tab Braze as a destination %}
 
 Depois que suas equipes internas criarem e executarem seu modelo de pontuação de leads, você poderá puxar esses dados de volta para o Braze para poder segmentar e direcionar melhor os leads para o envio de mensagens relevantes. Você pode fazer isso com a [Ingestão de dados para nuvem da Braze]({{site.baseurl}}/user_guide/data/cloud_ingestion/overview/). 
 
@@ -182,11 +182,11 @@ Para atualizar o registro do lead no Salesforce com o status do lead da Braze, r
 
 | Cabeçalho | Conteúdo |
 | --- | --- |
-| Autorização | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar um token, [configure um app conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para o fluxo de credenciais do cliente OAuth 2.0 e, em seguida, use o conteúdo conectado para recuperar o portador da Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_e89edb42-6e03-4e87-8b1b-c95f4270a549/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
+| Autorização | {% raw %}`Bearer {{result.access_token}}`{% endraw %}<br><br>Para recuperar um token, [configure um app conectado](https://help.salesforce.com/s/articleView?id=sf.connected_app_client_credentials_setup.htm&type=5) para o fluxo de credenciais do cliente OAuth 2.0 e, em seguida, use o conteúdo conectado para recuperar o portador da Salesforce: <br><br>{% raw %}<code>{% connected_content <mem_40dd6e71-96d8-4e5a-b7ce-5e32d0bbb170/>[instance].my.salesforce.com/services/oauth2/token <br>:method post <br> :body client_id=[client_id]_mem_amp_client_secret=[client_secret]_mem_amp_grant_type=client_credentials <br>:save result %}{% endraw %} <br> Bearer {% raw %}{{result.access_token}}</code>{% endraw %} |
 | Content_Type | application/json |
 {: .reset-td-br-1 reset-td-br-2}
 
-![Webhook sendo criado com um URL de webhook do Salesforce, método PATCH HTTP, corpo da solicitação de texto bruto e cabeçalhos de solicitação.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
+![Webhook sendo criado com um URL de webhook do Salesforce, método HTTP PATCH, corpo de solicitação de texto bruto e cabeçalhos de solicitação.]({% image_buster /assets/img/b2b/webhook.png %}){: style="max-width:80%;"}
 
 #### Etapa 2b: Agendar envios de webhooks
 
@@ -200,7 +200,7 @@ Na etapa **Schedule Delivery**, selecione o seguinte:
 
 Na etapa de **direcionamento de públicos**, inclua um filtro que exclua usuários cujos status de lead já estejam em MQL ou além, como "`lead_status` `is none of` `MQL`".
 
-![As opções de direcionamento do webhook com o filtro de "lead_status" não são "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
+![As opções de direcionamento do webhook com o filtro de “lead_status” não são "MQL".]({% image_buster /assets/img/b2b/step_3_webhook.png %}){: style="max-width:80%;"}
 
 ### Etapa 3: Campanha de lançamento
 

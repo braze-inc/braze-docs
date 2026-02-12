@@ -1,6 +1,6 @@
 ---
 nav_title: Segment data
-article_title: Viewing and Understanding Segment Data
+article_title: View and Understand Segment Data
 page_order: 4
 page_type: reference
 description: "This page explains the segments section of your Braze dashboard, and includes a summary of the statistics provided."
@@ -16,7 +16,7 @@ tool:
 
 ## Accessing data about your segments and membership
 
-The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Creating a Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and select the name of a segment to edit and view its data. To learn how to create a segment, check out [Create a Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment).
 
 ![Segments page]({% image_buster /assets/img_archive/segments.png %})
 

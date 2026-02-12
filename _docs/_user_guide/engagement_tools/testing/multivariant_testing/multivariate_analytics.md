@@ -78,7 +78,7 @@ The relationships between custom events and message preferences are displayed in
 
 ![]({% image_buster /assets/img_archive/ab_analytics_pv_3.png %})
 
-If the test can't find a meaningful relationship between custom events and variant preferences, the test will fall back to a session-based analysis method.
+If the test can't find a meaningful relationship between custom events and path preferences, the test falls back to a session-based analysis method, and no custom event data tables are shown.
 
 {% details Fallback analysis method %}
 
@@ -91,7 +91,7 @@ These characteristics are:
 - **Frequency:** How often they have sessions
 - **Tenure:** How long they have been a user
 
-For example, the test may find that most users prefer Variant A, but users who had a session about 3–12 days ago, have between 1–12 days between sessions, and were created in the last 67–577 days tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
+For example, the test may find that most users prefer Variant A, but users who had a session about 3-12 days ago, have between 1-12 days between sessions, and were created in the last 67-577 days tend to prefer Variant B. Therefore, users in that subpopulation received Variant B in the second send, while the rest received Variant A.
 
 ![The User Characteristics table, which shows which users are predicted to prefer Variant A and Variant B based on the three buckets they fall in for recency, frequency, and tenure.]({% image_buster /assets/img_archive/ab_analytics_pv_initial_test_2.png %})
 
@@ -158,6 +158,10 @@ For example, let's say a campaign has a target audience of 200 users at launch, 
 The 100 users in the variant receive the in-app message payload, and 50 of them perform the trigger action and see the in-app message. The 100 users in the control group are only tracked if they perform the campaign's trigger action, and 75 of them perform the trigger action and log an impression but don't see the in-app message.
 
 Despite the initial 50/50 split, the unique impressions logged aren't balanced. The variant group has 50 impressions, while the control group has 75 impressions.
+
+### In-app message delays 
+
+For triggered in-app message campaigns that include delayed displays, control group impressions will be recorded when the end user would have originally received the in-app message. For example, if a campaign is set to delay the display by one hour, control group impressions will not be logged until the one-hour delay has passed. This helps with the accurate tracking of impressions related to the intended timing of the message delivery.
 
 ## Recommended follow-ups {#recommended-follow-ups}
 

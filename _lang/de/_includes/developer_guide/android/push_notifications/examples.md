@@ -12,7 +12,7 @@ Sie können über die [`IBrazeNotificationFactory`](https://braze-inc.github.io/
 
 In diesem Abschnitt werden Sie Partner von Superb Owl, dem Moderator einer neuen Spielshow, in der Teams zur Rettung von Wildtieren gegeneinander antreten, um zu sehen, wer die meisten Eulen retten kann. Sie möchten in ihrer Android App Live-Update-Benachrichtigungen nutzen, um den Status eines laufenden Spiels anzuzeigen und dynamische Updates der Benachrichtigung in Echtzeit vorzunehmen.
 
-![Das Live Update, das Superb Owl zeigen möchte, zeigt ein laufendes Spiel zwischen 'Wild Bird Fund' und 'Owl Rescue'. Es läuft das vierte Viertel und der Spielstand ist 2:4, wobei OWL in Führung liegt.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
+![Das Live Update, das Superb Owl zeigen möchte, zeigt ein laufendes Spiel zwischen 'Wild Bird Fund' und 'Owl Rescue'. Es ist jetzt das vierte Viertel und der Spielstand ist 2:4 mit OWL in Führung.]({% image_buster /assets/img/android/android-live-activity-superb-owl-example.jpg %}){: style="max-width:65%;"}
 
 ### Schritt 1: Ein angepasstes Layout hinzufügen
 
@@ -30,7 +30,7 @@ Sie können ein oder mehrere angepasste RemoteView-Layouts für Benachrichtigung
 Erstellen Sie in jeder XML-Datei ein angepasstes Layout. Superb Owl hat die folgenden Layouts für ihre eingeklappten und erweiterten RemoteView-Layouts erstellt:
 
 {% tabs local %}
-{% tab  Beispiel: Zusammengeklapptes Layout %}
+{% tab  Example: Collapsed layout %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -48,8 +48,8 @@ Erstellen Sie in jeder XML-Datei ein angepasstes Layout. Superb Owl hat die folg
 ```
 {% endtab %}
 
-Beispiel: {% tab  Erweitertes Layout %}
-{% details Zeigen Sie den Beispielcode %}
+{% tab Example: Expanded layout %}
+{% details Show the sample code %}
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -139,7 +139,7 @@ Erstellen Sie in Ihrer Anwendung eine neue Datei namens `MyCustomNotificationFac
 
 Im folgenden Beispiel hat Superb Owl eine angepasste Benachrichtigungsfabrik erstellt, um ein RemoteView-Layout für laufende Spiele anzuzeigen. Im [nächsten Schritt](#android_step-3-map-custom-data) erstellen Sie eine neue Methode namens `getTeamInfo`, um die Daten eines Teams auf die Aktivität abzubilden.
 
-{% details Zeigen Sie den Beispielcode %}
+{% details Show the sample code %}
 ```kotlin
 import android.app.Notification
 import android.widget.RemoteViews
@@ -293,7 +293,7 @@ Auch wenn curl-Befehle für Tests hilfreich sind, empfehlen wir, diesen Aufruf i
 | `messages.android_push.title` | Der Titel der Nachricht. Standardmäßig wird dies nicht für die Live-Benachrichtigungen der angepassten Benachrichtigungsfabrik verwendet, aber es kann als Fallback verwendet werden.                                                                                                    |
 | `messages.android_push.alert` | Der Text der Nachricht. Standardmäßig wird dies nicht für die Live-Benachrichtigungen der angepassten Benachrichtigungsfabrik verwendet, aber es kann als Fallback verwendet werden.                                                                                                     |
 | `messages.extra`              | Schlüssel-Wert-Paare, die die angepasste Benachrichtigungsfabrik für Live-Benachrichtigungen verwendet. Sie können diesem Wert einen beliebigen String zuweisen. Im obigen Beispiel wird jedoch `live_updates` verwendet, um festzustellen, ob es sich um eine Standard- oder eine Live-Push-Benachrichtigung handelt.  |
-| `ASSIGNED_NOTIFICATION_ID`    | Die ID der Benachrichtigung, die Sie der Live-Benachrichtigung des gewählten Nutzers:innen zuweisen möchten. Die ID muss für dieses Spiel eindeutig sein und muss verwendet werden, um [ihre bestehende Benachrichtigung](#android_step-4-update-data-with-the-braze-rest-api) später [zu aktualisieren](#android_step-4-update-data-with-the-braze-rest-api). |
+| `ASSIGNED_NOTIFICATION_ID`    | Die ID der Benachrichtigung, die Sie der Live-Benachrichtigung des gewählten Nutzers:innen zuweisen möchten. Die ID muss für dieses Spiel eindeutig sein und muss verwendet werden, um [ihre bestehende Benachrichtigung später zu aktualisieren](#android_step-4-update-data-with-the-braze-rest-api). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation"}
 
 ### Schritt 6: Aktivität aktualisieren
@@ -304,8 +304,8 @@ Um die bestehende RemoteView-Benachrichtigung mit neuen Daten zu aktualisieren, 
 
 Push-Benachrichtigungen können benutzerspezifische Informationen innerhalb einer angepassten Ansichtshierarchie anzeigen. Im folgenden Beispiel wird ein API-Trigger verwendet, um eine personalisierte Push-Benachrichtigung an einen Nutzer:in zu senden, damit dieser seinen aktuellen Fortschritt nach Abschluss einer bestimmten Aufgabe in der App verfolgen kann.
 
-![Personalisiertes Push Dashboard Beispiel]({% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}){: style="max-width:65%;border:0"}
+![Personalisiertes Push-Dashboard Beispiel]({% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}){: style="max-width:65%;border:0"}
 
 Um einen personalisierten Push im Dashboard einzurichten, registrieren Sie die spezifische Kategorie, die angezeigt werden soll, und legen dann alle relevanten Nutzer:innen-Attribute fest, die Sie mit Liquid anzeigen möchten.
 
-![Personalisiertes Push Dashboard Beispiel]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}
+![Personalisiertes Push-Dashboard Beispiel]({% image_buster /assets/img/push_implementation_guide/push5.png %}){: style="max-width:60%;"}

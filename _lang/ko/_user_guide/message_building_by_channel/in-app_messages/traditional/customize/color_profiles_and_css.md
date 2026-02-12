@@ -24,7 +24,7 @@ HEX 색상 코드를 입력하거나 색상 상자를 클릭하고 색상 선택
 
 ### 색상 프로필 관리
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) templates! 템플릿에서 템플릿 및 크리에이티브 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요 [ & 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## CSS 템플릿 {#in-app-message-templates}
 
@@ -84,7 +84,7 @@ CSS 템플릿의 이름을 지정하고 태그를 지정한 다음 기본 템플
 
 ### CSS 템플릿 관리
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/managing_templates/) templates! 템플릿에서 템플릿 및 크리에이티브 콘텐츠를 만들고 관리하는 방법에 대해 자세히 알아보세요 [ & 미디어]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## CSS를 사용한 모달(웹 전용) {#web-modal-css}
 

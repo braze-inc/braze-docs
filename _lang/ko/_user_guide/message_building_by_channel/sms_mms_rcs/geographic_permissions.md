@@ -18,13 +18,13 @@ alias: /geographic_permissions/
 
 관리자인 경우 허용 목록에 있는 국가를 구성할 수 있습니다. 국가 허용 목록은 [구독 그룹]({{site.baseurl}}/sms_rcs_subscription_groups/) 수준에서 구성됩니다. **오디언스** > **구독**으로 이동하여 SMS, MMS 또는 RCS 구독 그룹을 선택하여 액세스할 수 있습니다. 허용 목록은 **지리적 권한** 아래에 있습니다.
 
-![여러 국가가 "국가 허용 목록"에 선택된 관리자를 위한 편집 가능한 SMS 지리적 권한 섹션입니다.]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
+!["국가 허용 목록"에서 여러 국가가 선택된 관리자를 위한 편집 가능한 SMS 지리적 권한 섹션입니다.]({% image_buster /assets/img/sms/sms_geographic_permissions.png %}){: style="max-width:80%;"}
 
 ### 국가 선택
 
 드롭다운을 사용하여 허용 목록에 국가를 추가하십시오. 가장 일반적인 SMS 및 RCS 국가가 상단에 표시되며, 다른 국가들은 아래에 표시됩니다. 텍스트 필드에 입력하여 국가를 검색할 수도 있습니다.
 
-![가장 일반적인 국가가 상단에 표시되는 '국가 허용 목록' 드롭다운.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
+![가장 일반적인 국가가 상단에 표시되는 "국가 허용 목록" 드롭다운입니다.]({% image_buster /assets/img/sms/allowlist_dropdown.png %}){: style="max-width:80%;"}
 
 이전에 선택한 국가를 제거하려면 해당 상자 옆의 상자를 지우세요.
 
@@ -38,7 +38,7 @@ alias: /geographic_permissions/
 
 특정 국가는 SMS 및 RCS 트래픽 펌핑의 위험이 더 높습니다. 이들 국가는 국가 드롭다운에서 **고위험** 태그로 표시됩니다.
 
-![아제르바이잔에 "높은 위험" 태그가 있는 국가 드롭다운입니다.]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
+![아제르바이잔이 '고위험' 태그가 있는 국가 드롭다운이 표시됩니다.]({% image_buster /assets/img/sms/high_risk.png %}){: style="max-width:80%;"}
 
 이들 국가에서 발송을 허용하려면, 해당 국가가 허용 목록에 추가되기 전에 먼저 그러한 위험을 인지해야 합니다.
 
@@ -52,5 +52,5 @@ alias: /geographic_permissions/
 
 차단된 전송으로 인해 중단된 메시지는 **중단된 메시지 오류**로 표시되며 "수신자의 전화번호가 차단된 국가에 있습니다"라는 메시지가 표시됩니다.
 
-![전화번호가 차단된 국가에 있어 차단된 여러 SMS 전송을 보여주는 중단 로그입니다.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
+![차단된 국가에 전화번호가 있어 차단된 여러 SMS 전송이 표시된 중단 로그입니다.]({% image_buster /assets/img/sms/abort_log.png %}){: style="max-width:80%;"}
 

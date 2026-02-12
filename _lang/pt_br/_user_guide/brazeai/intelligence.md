@@ -3,14 +3,14 @@ nav_title: Intelligence Suite
 article_title: Sobre o Braze Intelligence Suite
 page_order: 1
 search_rank: 12
-description: "O Intelligence Suite da Braze ajuda a automatizar a tomada de decisões com insights baseados em dados. Do tempo de entrega aos testes multivariantes, as marcas podem usar essas ferramentas e recursos para criar experiências dinâmicas e entre canais que otimizam em escala."
+description: "O Braze Intelligence Suite automatiza a tomada de decisões com insights baseados em dados. Do tempo de entrega aos testes multivariantes, as marcas podem usar essas ferramentas e recursos para criar experiências dinâmicas e entre canais que otimizam em escala."
 tool:
   - Dashboard
 ---
 
 # O Intelligence Suite
 
-> O Intelligence Suite da Braze ajuda a automatizar a tomada de decisões com insights baseados em dados. Do tempo de entrega aos testes multivariantes, as marcas podem usar essas ferramentas e recursos para criar experiências dinâmicas e entre canais que otimizam em escala. O Intelligence Suite é composto por três recursos principais: Intelligent Timing, Canal Inteligente e Seleção Inteligente.
+> O Braze Intelligence Suite automatiza a tomada de decisões com insights baseados em dados. Do tempo de entrega aos testes multivariantes, as marcas podem usar essas ferramentas e recursos para criar experiências dinâmicas e entre canais que otimizam em escala. O Intelligence Suite é composto por três principais recursos: Intelligent Timing, Canal Inteligente e Seleção Inteligente.
 
 ## Casos de uso
 

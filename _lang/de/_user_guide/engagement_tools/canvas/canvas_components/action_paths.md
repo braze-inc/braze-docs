@@ -1,5 +1,5 @@
 ---
-nav_title: Aktionspfade 
+nav_title: Aktions-Pfade
 article_title: Aktionspfade 
 alias: /action_paths/
 page_order: 0.1
@@ -12,16 +12,16 @@ tool: Canvas
 
 > Mit den Aktionspfaden in Canvas können Sie Ihre Benutzer auf der Grundlage ihrer Aktionen sortieren. 
 
-Mit Aktionspfaden können Sie:
+![Ein Aktions-Pfad-Schritt in einer Canvas-Nutzer:innen-Reise.]({% image_buster /assets/img/canvas_actionpath.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
-![Ein Aktions-Pfad-Schritt als erster Schritt in einer Canvas-Nutzer:innen-Reise.][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Mit Aktionspfaden können Sie:
 
 * Passen Sie Nutzerpfade auf der Grundlage einer bestimmten Aktion an, einschließlich Customer-Engagement-Events und angepasste Events
 * Binden Sie Nutzer:innen für eine bestimmte Zeitspanne, um ihren nächsten Pfad auf der Grundlage ihrer Aktionen während dieses Zeitraums zu priorisieren
 
-## Einen Aktionspfad erstellen
+## Einen Aktions-Pfad erstellen
 
-Um einen Aktionspfad zu erstellen, fügen Sie eine Komponente zu Ihrem Canvas hinzu. Ziehen Sie die Komponente per Drag & Drop aus der Seitenleiste oder wählen Sie die Schaltfläche <i class="fas fa-plus-circle"></i> plus am unteren Rand eines Schritts und wählen Sie **Aktionspfade**. 
+Um einen Aktionspfad zu erstellen, fügen Sie eine Komponente zu Ihrem Canvas hinzu. Ziehen Sie die Komponente per Drag & Drop aus der Seitenleiste oder wählen Sie die Schaltfläche <i class="fas fa-plus-circle"></i> plus am unteren Rand eines Schritts und wählen Sie **Aktionspfade**.
 
 ### Aktionseinstellungen
 
@@ -29,41 +29,43 @@ Legen Sie in den **Aktionseinstellungen** das **Bewertungsfenster** fest, um zu 
 
 In den **Aktionseinstellungen** können Sie auch die Rangfolge für Ihre Komponenten aktivieren, indem Sie den Schalter **Benutzer in Rangfolge vorziehen** einschalten.
 
-![Die Aktionseinstellungen mit einem Bewertungsfenster von 1 Tag.][4]
+![Die Aktionseinstellungen mit einem Bewertungsfenster von 1 Tag.]({% image_buster /assets/img/actionpath_settings.png %})
 
-In der Standardeinstellung ist **Ranking** ausgeschaltet. Wenn ein:e Nutzer:in den Aktionspfad aufruft und das mit einer Aktionsgruppe verbundene Trigger-Event ausführt, wird er sofort durch die entsprechende Aktionsgruppe geführt. Wenn ein Benutzer kein Trigger-Ereignis auslöst, rückt er am Ende des Bewertungszeitraums in die Standardgruppe **Alle anderen** vor.
+In der Standardeinstellung ist **Ranking** ausgeschaltet. Wenn ein Nutzer:innen den Aktions-Pfad betritt und das mit einer Aktionsgruppe verbundene Trigger-Ereignis ausführt, bringt er sofort die entsprechende Aktionsgruppe voran. Wenn ein Nutzer:innen kein triggerndes Ereignis auslöst, bringt er am Ende des Auswertungszeitraums die Standardgruppe **Alle anderen** voran.
 
-Wenn **Nutzer:innen nach Rangfolge vorbringen** aktiviert ist, bedeutet dies, dass die **Rangfolge** eingeschaltet ist. Alle Nutzer:innen werden also bis zum Ende des Testzeitraums gebunden. Am Ende des Bewertungszeitraums durchlaufen die Nutzer:innen in der Aktionsgruppe mit der höchsten Priorität, für die sie am Ende des Bewertungszeitraums in Frage kommen. Nutzer:innen, die während des Bewertungsfensters keine der Aktionen durchführen, durchlaufen die Standardgruppe **Alle anderen**.
+Wenn **Nutzer:innen nach Rangfolge vorbringen** aktiviert ist, bedeutet dies, dass die **Rangfolge** eingeschaltet ist. Alle Nutzer:innen werden also bis zum Ende des Bewertungsfensters gehalten. Am Ende des Bewertungszeitraums bringen die Nutzer:innen die Aktionsgruppe mit der höchsten Priorität voran, für die sie am Ende des Bewertungsfensters in Frage kommen. Nutzer:innen, die während des Bewertungsfensters keine der Aktionen ausführen, bringen den Fortschritt in der Standardgruppe **Alle anderen** voran.
+
+Beachten Sie, dass Sie einen Aktions-Pfad triggern können, wenn sich ein verschachteltes angepasstes Attribut-Objekt ändert, aber nicht für Arrays verschachtelter angepasster Attribute oder Änderungen an Objekt-Array-Datentypen.
 
 #### In-App-Nachrichten
 
-Beachten Sie, dass der oder die Nutzer:in zwei Sitzungsstarts durchführen muss, um die In-App-Nachricht zu erhalten, wenn der Aktionsgruppen-Trigger eine Sitzung startet und der nächste Schritt eine In-App-Nachricht ist. Die erste Sitzung ordnet den oder die Nutzer:in der App-Gruppe innerhalb des Aktionspfads zu, und die zweite Sitzung triggert die In-App-Nachricht.
+Beachten Sie, dass der Nutzer:innen zwei Sitzungsstarts durchführen muss, um die In-App-Nachricht zu erhalten, wenn der Aktionsgruppen-Trigger eine Sitzung startet und der nächste Schritt eine In-App-Nachricht ist. Die erste Sitzung ordnet den oder die Nutzer:in der App-Gruppe innerhalb des Aktionspfads zu, und die zweite Sitzung triggert die In-App-Nachricht.
 
 #### Beispiel für den Ranglistenstatus
 
 Nehmen wir an, Sie haben einen Aktionspfad mit einem Bewertungszeitraum von einem Tag und zwei Aktionsgruppen: Gruppe 1 und Gruppe 2. Gruppe 1 hat das Trigger-Event „Sitzung starten“ und Gruppe 2 hat „Kauf tätigen“. Wenn **Ranking** aktiviert ist, werden alle Benutzer im Aktionspfad einen Tag lang "festgehalten". Wenn ein:e Nutzer:in eine Sitzung begonnen und einen Kauf getätigt hat, steigt er oder sie am Ende des Tages in den Pfad mit dem höchsten Rang auf. In diesem Fall würde der Benutzer in Gruppe 1 aufsteigen. 
 
-Wenn im vorangegangenen Beispiel das **Ranking** ausgeschaltet ist und ein Benutzer eines der Trigger-Ereignisse ("Sitzung starten" oder "Kauf tätigen") ausführt, wird dieser Benutzer in der entsprechenden Aktionsgruppe basierend auf der Trigger-Aktion befördert.
+Wenn im vorangegangenen Beispiel das **Ranking** ausgeschaltet ist und ein Nutzer eines der triggernden Ereignisse ("Sitzung starten" oder "Kauf-Event") ausführt, wird dieser Nutzer:innen auf der Grundlage der triggernden Aktion in der entsprechenden Aktionsgruppe vorangebracht.
 
-Beachten Sie, dass sich die Entry-Eigenschaften von Canvas von den Event-Eigenschaften unterscheiden. Canvas-Eingabeeigenschaften sind Eigenschaften aus dem Ereignis, das den Canvas ausgelöst hat. Diese Eigenschaften können nur im ersten vollständigen Schritt eines Canvas verwendet werden, wenn Sie den ursprünglichen Canvas-Workflow verwenden. Bei der Verwendung von Canvas Flow werden persistente Entry-Eigenschaften aktiviert und ermöglichen die Wiederverwendung der Entry-Eigenschaften im gesamten Canvas. Event-Eigenschaften hingegen haben ihren Ursprung in einem Event oder einer Aktion, die im Workflow des Nutzers oder der Nutzerin stattfindet.
+Beachten Sie, dass sich die Entry-Eigenschaften von Canvas von den Event-Eigenschaften unterscheiden. Canvas-Eingabeeigenschaften sind Eigenschaften aus dem Ereignis, das den Canvas ausgelöst hat. Diese Eigenschaften können nur im ersten vollständigen Schritt eines Canvas verwendet werden, wenn Sie den ursprünglichen Canvas-Workflow verwenden. Bei der Verwendung von Canvas sind persistente Eingangs-Eigenschaften zulässig und ermöglichen die Wiederverwendung der Eingangs-Eigenschaften im gesamten Canvas. Event-Eigenschaften hingegen haben ihren Ursprung in einem Event oder einer Aktion, die im Workflow des Nutzers oder der Nutzerin stattfindet.
 
 ### Aktionsgruppen
 
-Fügen Sie einen oder mehrere Trigger hinzu, um Ihre Aktionsgruppen zu definieren. Hier können Sie eine Reihe von Triggern auswählen, z. B. wenn Nutzer:innen:
+Fügen Sie einen oder mehrere Trigger hinzu, um Ihre Aktionsgruppen zu definieren. Hier können Sie eine Reihe von Auslösern auswählen, z.B. wenn Nutzer:innen:
 
 - Einen Kauf tätigen
 - Eine Sitzung beginnen
 - Ein [angepasstes Event]({{site.baseurl}}/user_guide/data/custom_data/custom_events/) durchführen
 - Ein Konversions-Event durchführen
 - E-Mail-Adresse hinzufügen
-- Ändern eines angepassten Attributwerts (nicht verschachtelte angepasste Attribute)
+- Ändern Sie den Wert eines angepassten Attributs (einschließlich Arrays, aber nicht verschachtelte angepasste Attribute). Dazu gehört das erstmalige Hinzufügen eines neuen Attributs mit einem Wert zu einem Nutzerprofil (wenn das Attribut vorher nicht vorhanden war).
 - Ihren Abonnementstatus oder den Status Ihrer Abonnementgruppe aktualisieren
 - Interaktion mit einer Kampagne oder Inhaltskarte
 - Einen Standort eingeben
 - Ein Geofence triggern
 - Eine eingehende SMS oder WhatsApp-Nachricht senden
 
-![Eine Aktionsgruppe namens "Gruppe 1" für Nutzer:innen, die einen Kauf tätigen.][3]
+![Eine Aktionsgruppe namens "Gruppe 1" für Nutzer:innen, die einen Kauf tätigen.]({% image_buster /assets/img/actionpath_group.png %})
 
 In jeder Aktionsgruppeneinstellung haben Sie außerdem die Möglichkeit, das Kontrollkästchen **Ich möchte, dass diese Gruppe den Canvas verlässt** auszuwählen. Das bedeutet, dass die Nutzer:innen dieser Gruppe den Canvas am Ende des Bewertungszeitraums verlassen.
 
@@ -73,13 +75,8 @@ Wenn Nutzer:innen einen Aktions-Pfad mehrfach eingeben und gleichzeitig mehrere 
 
 | Ranglistenstatus | Aktion Pfad Verhalten |
 |---|--------------|
-| **Aus** | Wenn eine relevante Aktion ausgeführt wird, dedupliziert Braze-Entrys und rückt den frühesten Entry sofort in der entsprechenden Aktionsgruppe nach vorne. <br><br/> Wenn eine relevante Aktion nicht durchgeführt wird, werden alle Entrys am Ende des entsprechenden Bewertungsfensters nach vorne gerückt. Es findet keine Deduplizierung statt. |
-| **Ein** | Alle Entrys werden am Ende des jeweiligen Bewertungsfensters nach vorne gerückt. Es findet keine Deduplizierung statt. |
+| **Aus** | Wenn eine relevante Aktion ausgeführt wird, dedupliziert Braze die Einträge und bringt den frühesten Eintrag sofort in der entsprechenden Aktionsgruppe voran. <br><br/> Wenn eine relevante Aktion nicht durchgeführt wird, werden alle Eingänge am Ende des entsprechenden Bewertungsfensters vorgebracht. Es findet keine Deduplizierung statt. |
+| **Ein** | Alle Eingänge werden am Ende des jeweiligen Auswertungsfensters vorgebracht. Es findet keine Deduplizierung statt. |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 Beachten Sie, dass die Ranglisten [nach dem Start]({{site.baseurl}}/post-launch_edits/) nicht [mehr geändert werden können]({{site.baseurl}}/post-launch_edits/).
-
-
-[1]: {% image_buster /assets/img/canvas_actionpath.png %}
-[3]: {% image_buster /assets/img/actionpath_group.png %}
-[4]: {% image_buster /assets/img/actionpath_settings.png %} 

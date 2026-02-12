@@ -1,6 +1,6 @@
 ---
-nav_title: Criação de campanhas
-article_title: Criação de campanhas
+nav_title: Criar campanhas
+article_title: Criar campanhas
 layout: dev_guide
 guide_top_header: "Criação de campanhas"
 guide_top_text: "Esta landing page contém recursos para a criação de suas campanhas. Depois de criar seus <a href='/docs/user_guide/engagement_tools/segments/'>segmentos</a>, use os recursos aqui para configurar sua campanha e conhecer as diferentes opções disponíveis.<br><br>Também recomendamos que você confira nosso curso do Braze Learning sobre <a href='https://learning.braze.com/campaign-setup-delivery-targeting-conversions'>configuração de campanhas</a>."
@@ -12,7 +12,7 @@ description: "Esta landing page contém recursos para a criação de suas campan
 
 guide_featured_title: "Artigos de seção"
 guide_featured_list:
-  - name: Criação de uma campanha
+  - name: Criar uma campanha
     link: /docs/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/
     image: /assets/img/braze_icons/list.svg
   - name: Agendamento da sua campanha
@@ -24,7 +24,7 @@ guide_featured_list:
 
 guide_menu_title: "Additional resources"
 guide_menu_list:
-  - name: Assistente de Copywriting de IA
+  - name: Assistente de Copywriting com IA
     link: /docs/user_guide/brazeai/generative_ai/copywriting/
     image: /assets/img/braze_icons/edit-05.svg
   - name: Fluxo de aprovação

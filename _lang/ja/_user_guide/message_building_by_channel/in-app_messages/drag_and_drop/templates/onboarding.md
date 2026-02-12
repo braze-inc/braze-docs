@@ -1,5 +1,5 @@
 ---
-nav_title: "オンボーディングの流れ"
+nav_title: "オンボーディングフロー"
 article_title: オンボーディングの流れ
 alias: "/onboarding_flow/"
 page_order: 0
@@ -10,7 +10,7 @@ description: "このページでは、魅力的なアクションプランを使
 
 > **オンボーディングフローの**アプリ内メッセージテンプレートを使用して、キャンペーン戦略に役立つユーザー属性、インサイト、嗜好を収集しよう。 
 
-{% multi_lang_include drag_and_drop/templates.md section='SDKの要件' %}
+{% multi_lang_include drag_and_drop/templates.md section='SDK requirements' %}
 
 ## オンボーディングフローを作成する
 
@@ -18,9 +18,9 @@ description: "このページでは、魅力的なアクションプランを使
 
 ドラッグ＆ドロップのアプリ内メッセージを作成するときには、テンプレートに [**オンボーディングフロー**] を選択し、[**メッセージを作成**] を選択します。このテンプレートは、モバイルアプリとWebブラウザの両方でサポートされています。
 
-![オンボーディングフローのテンプレートを使ったアプリ内メッセージエディター。]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
+![アプリ内メッセージエディターとオンボーディングフローテンプレート。]({% image_buster /assets/img/drag_and_drop/templates/onboarding_editor.png %})
 
-### ステップ2:メッセージスタイルを設定する
+### ステップ 2:メッセージスタイルを設定する
 
 {% multi_lang_include drag_and_drop/templates.md section='message style' %}
 

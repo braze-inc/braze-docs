@@ -1,5 +1,5 @@
 ---
-nav_title: Tratamiento de palabras clave
+nav_title: Procesamiento de palabras clave
 article_title: Tratamiento de palabras clave
 page_order: 6
 layout: dev_guide

@@ -1,5 +1,5 @@
 ---
-nav_title: "Números de teléfono de usuario"
+nav_title: "Números de teléfono de los usuarios"
 article_title: Números de teléfono de usuarios de SMS
 page_order: 7
 description: "Este artículo de referencia trata sobre el formato de los números de teléfono SMS, cómo importar números de teléfono y cómo añadir usuarios a grupos de suscripción SMS."

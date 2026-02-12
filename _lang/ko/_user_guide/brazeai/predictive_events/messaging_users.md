@@ -1,6 +1,6 @@
 ---
-nav_title: 메시징 사용자
-article_title: 예측 이벤트에 대한 사용자 타겟팅
+nav_title: 사용자 메시징하기
+article_title: 예측 이벤트를 위한 사용자 타겟팅
 description: "이 참고 문서에서는 이벤트 예측을 만든 후 필터 구현 및 전략적 고려 사항과 같은 잠재적인 다음 단계에 대해 설명합니다."
 page_order: 1.2
 
@@ -20,7 +20,7 @@ page_order: 1.2
 
 또한 캠페인, 캔버스 또는 세그먼트에서 '이벤트 가능성 점수' 및 '이벤트 가능성 카테고리' 필터를 사용하여 Braze의 다른 필터를 사용하는 것과 마찬가지로 가능성 점수 또는 카테고리에 따라 사용자를 타겟팅할 수 있습니다.
 
-![오디언스를 정의할 때 사용할 수 있는 필터에는 가능성 카테고리 및 가능성 점수가 포함됩니다.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
+![오디언스를 정의할 때 사용할 수 있는 필터에는 가능성 카테고리 및 가능성 점수가 있습니다.]({% image_buster /assets/img_archive/predictive_event_filters.png %})
 
 ## 전략적 고려 사항 {#strategy}
 

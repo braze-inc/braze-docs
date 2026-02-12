@@ -7,15 +7,15 @@ page_type: reference
 search_rank: 7
 ---
 
-# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"}Soporte de Braze
+# [![Curso de Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/the-braze-support-portal/){: style="float:right;width:120px;border:0;" class="noimgborder"} Soporte de Braze
 
 ## Accede al portal de soporte
 
 Para ponerte en contacto con el equipo de soporte de Braze, navega hasta el panel de Braze. En el panel, selecciona **Asistencia** > **Obtener ayuda**.
 
-![El desplegable "Soporte" con la opción de obtener ayuda.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
+![El desplegable "Asistencia" con la opción de obtener ayuda.]({% image_buster /assets/img_archive/get_help.png %}){: style="max-width:60%;"}
 
-Dependiendo de tus permisos Braze y de si eres un contacto de soporte designado (premium), se te redirigirá al portal de soporte Braze, donde puedes enviar y seguir casos, o a nuestro formulario de soporte estándar. Si no estás seguro de ser un contacto de soporte de Braze, ponte en contacto con el administrador de Braze de tu empresa, el director de éxito de Braze o el propietario de la cuenta.
+Dependiendo de tus permisos Braze y de si eres un contacto de soporte designado, se te dirigirá al portal de soporte Braze, donde puedes enviar y seguir casos, o a nuestro formulario de soporte estándar. Si no estás seguro de ser un contacto de soporte de Braze, ponte en contacto con el administrador de Braze de tu empresa, el director de éxito de Braze o el propietario de la cuenta.
 
 ## Añadir contactos de asistencia designados
 
@@ -26,9 +26,7 @@ Los contactos de soporte designados pueden acceder a todos los casos de soporte 
 3. En el menú, selecciona **Editar** para ser redirigido a la página **Editar usuario**.
 4. Marca la casilla de verificación de **Establecer este usuario como contacto de soporte designado para el portal de soporte de Braze**.
 
-![La casilla de verificación para configurar a un usuario como contacto de soporte designado.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
-
-El número de contactos de soporte designados que puedes establecer depende de tu límite de contactos. Ponte en contacto con tu administrador del éxito del cliente para obtener más información.
+![La casilla para configurar a un usuario como contacto de soporte designado.]({% image_buster /assets/img_archive/designated_support_contact.png %}){: style="max-width:70%;"}
 
 ### Obtener acceso
 
@@ -90,3 +88,6 @@ Selecciona el nivel de gravedad adecuado para ayudarnos a asignar los recursos a
 Marcar un problema como "Crítico" significa que tu instancia de producción no funciona y que todo el trabajo en Braze se ha detenido.
 {% endalert %}
 
+## Solución de problemas de acceso
+
+Si recibes un error al iniciar sesión en el portal de soporte de Braze, como `Check your entry`, asegúrate de que has seguido el enlace del correo electrónico de bienvenida para establecer una contraseña para el portal. Si ya lo has hecho o has podido entrar en el portal, crea un ticket de soporte.

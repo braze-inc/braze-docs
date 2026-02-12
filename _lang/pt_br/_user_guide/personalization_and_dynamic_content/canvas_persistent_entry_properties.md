@@ -1,5 +1,5 @@
 ---
-title: Propriedades de entrada persistente do canvas
+nav_title: Propriedades de entrada persistente do canva
 article_title: Propriedades de entrada persistente do canvas
 page_order: 6
 layout: redirect

@@ -27,7 +27,7 @@ tool:
 
 세그먼트의 이름은 "경과된 사용자 - 2주"와 같이 기억에 남는 이름을 지정합니다. 매주 반복되도록 캠페인을 설정하고 있으므로 세그먼트에서 최소 1주일 동안 캡처된 사용자가 있는지 확인해야 합니다. 그렇기 때문에 2~3주 전에 마지막으로 앱을 사용한 사용자를 선정했습니다.
 
-## 2단계: 캠페인 만들기
+## 2단계: 캠페인을 생성하세요
 
 Next, click **Create Campaign** and choose the type of campaign we will be sending to this segment. in this example, we'll create a new [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message).
 

@@ -28,13 +28,13 @@ Intelligent Selection funciona mejor en campañas que se envían más de una vez
 ## Requisitos previos
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 Antes de añadir Intelligent Selection a tu campaña, asegúrate de que has configurado todo correctamente:
 
 - Tu campaña se envía de forma periódica. No se admiten campañas de envío único.
 - Has añadido al menos dos variantes de mensaje.
 - Has definido un evento de conversión para medir el rendimiento entre variantes.
-- El plazo para volver a ser elegible es de 24 horas o más. No se admiten ventanas más cortas, ya que afectarían a la integridad de la variante de control. Para saber más, consulta [las FAQ sobre Inteligencia]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
+- El plazo para volver a ser elegible es de 24 horas o más. No se admiten ventanas más cortas, ya que afectarían a la integridad de la variante de control. Para saber más, consulta [estas FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/intelligent_selection/#why-is-re-eligibility-in-less-than-24-hours-not-available-when-combined-with-intelligent-selection).
 {% endtab %}
 
 {% tab Canvas %}
@@ -49,7 +49,7 @@ Para utilizar Intelligent Selection en un Canvas, confirma lo siguiente:
 Puedes añadir Intelligent Selection a tus campañas y Lienzos.
 
 {% tabs %}
-{% tab Campaña %}
+{% tab Campaign %}
 Intelligent Selection puede añadirse a cualquier campaña multienvío en el paso **Audiencias objetivo** del compositor de campañas Braze. Las campañas que sólo se envían una vez no pueden aprovechar esta característica.
 
 {% alert note %}
@@ -80,7 +80,15 @@ En la mayoría de los casos, Intelligent Selection elegirá una de las variantes
 Es posible que la Intelligent Selection deje de optimizar sin elegir un único ganador claro. Intelligent Selection deja de optimizar cuando tiene un 95% de confianza en que continuar el experimento no mejorará la tasa de conversión en más de un 1% de su tasa actual.
 {% endalert %}
 
-## Preguntas más frecuentes (FAQ) {#faq}
+## Distribución de variantes de Intelligent Selection
+
+Intelligent Selection basa su distribución de variantes en el estado actual de las conversiones de campaña. Sólo determina las distribuciones finales tras el periodo de entrenamiento. 
+
+Esto significa que durante las primeras fases de la campaña, tanto el 99% como el 1% de Intelligent Selection pueden recibir envíos aproximadamente iguales, pero los porcentajes finales para la asignación de variantes pueden establecerse en 99%-1%.
+
+Si no quieres que Intelligent Selection envíe 50/50 durante las primeras fases de la campaña, te recomendamos que utilices una prueba A/B tradicional con variantes fijas.
+
+## Preguntas más frecuentes {#faq}
 
 ### ¿Por qué no se puede volver a ser elegible en menos de 24 horas cuando se combina con Intelligent Selection?
 

@@ -18,13 +18,13 @@ description: "Este artigo de referência aborda a mensagem e os requisitos de de
 
 ## Especificações da imagem
 
-{% multi_lang_include image_specs.md variable_name='mensagens no app' %}
+{% multi_lang_include image_specs.md variable_name='in-app messages' %}
 
 ## Telas maiores
 
 Em um navegador de tablet ou desktop, uma mensagem modal no app ainda ficará no centro da tela do aplicativo, conforme mostrado na captura de tela a seguir.
 
-![Mensagem modal no app como apareceria em uma tela grande. Da mesma forma que as telas de telefone, a mensagem fica no centro da tela.]({% image_buster /assets/img/modal-large-viewport.png %}){: style="max-width: 800px; border: none;"}
+![Mensagem modal no app como apareceria em uma tela grande. Da mesma forma que nas telas dos telefones, a mensagem fica no centro da tela.]({% image_buster /assets/img/modal-large-viewport.png %}){: style="max-width: 800px; border: none;"}
 
 
 

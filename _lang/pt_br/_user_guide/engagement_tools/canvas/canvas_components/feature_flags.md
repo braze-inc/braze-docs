@@ -1,5 +1,5 @@
 ---
-nav_title: Feature Flags
+nav_title: Feature Flag
 article_title: Feature Flags
 page_order: 8
 page_type: reference
@@ -31,7 +31,7 @@ As propriedades em uma etapa do Canva podem ser alteradas após o lançamento e 
 
 Ao criar um sinalizador de recurso, você especifica as propriedades padrão. Ao configurar uma etapa do Canva do sinalizador de recurso, é possível manter os valores padrão ou substituir os valores para os usuários que entrarem nessa etapa.
 
-![Um sinalizador de recurso "Central de Preferências" com "String" como a propriedade, "url" como a chave da propriedade e um valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
+![Um sinalizador de recurso "Central de Preferências" com "String" como propriedade, "url" como chave de propriedade e um valor.]({% image_buster /assets/img/feature_flags/feature_flags_canvas_details.png %}){: style="max-width:90%"}
 
 Acesse **Envio de mensagens** > **Feature Flags** para editar, adicionar ou remover propriedades adicionais.
 

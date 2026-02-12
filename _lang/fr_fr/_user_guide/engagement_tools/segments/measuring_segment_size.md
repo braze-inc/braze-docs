@@ -1,6 +1,6 @@
 ---
-nav_title: Mesure de la taille des segments
-article_title: Mesure de la taille des segments
+nav_title: Mesurer la taille des segments
+article_title: Mesurer la taille des segments
 page_order: 5
 page_type: reference
 tool: 
@@ -22,11 +22,11 @@ Chaque segment affiche le nombre total d’utilisateurs qui sont membres de ce s
 
 Il est possible que le nombre total d’utilisateurs diffère du nombre d’utilisateurs pouvant être atteints par chaque canal. En outre, tous les canaux ne sont pas répertoriés dans le tableau des utilisateurs joignables. Par exemple, les cartes de contenu, les webhooks et WhatsApp n'apparaissent pas dans la répartition. Cela signifie que le nombre total d'utilisateurs joignables peut être supérieur à la somme des utilisateurs de chaque canal affiché.
 
-![Un tableau affichant le nombre total d'utilisateurs joignables, ventilé par utilisateurs joignables par e-mail, iOS push, Android push, web push et Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %}).
+![Un tableau affichant le nombre total d'utilisateurs joignables, réparti entre les utilisateurs joignables par e-mail, iOS push, Android push, web push et Kindle push.]({% image_buster /assets/img_archive/segmenter_reachable_users.png %})
 
 Pour qu’un utilisateur soit indiqué comme pouvant être atteint par un canal donné, il doit avoir à la fois :
-* Une adresse e-mail valide ou un jeton de poussée associé à leur profil ; et
-* Être abonné ou inscrit à votre application.
+* Une adresse e-mail valide ou un jeton de poussée associé à leur profil, et
+* S'est abonné à votre application.
 
 Un utilisateur donné peut appartenir à plusieurs groupes d’utilisateurs atteignables. Par exemple, un utilisateur peut disposer d’une adresse e-mail valide et d’un jeton de notification push Android valide et être abonné aux deux, mais ne pas avoir de jeton de notification push associé. L'écart entre le nombre total d'utilisateurs joignables et la somme des différents canaux correspond au nombre d'utilisateurs qui se sont qualifiés pour le segment mais qui ne sont pas joignables par ces canaux de communication.
 
@@ -40,7 +40,7 @@ Braze fournit les statistiques suivantes sur la taille des segments.
 
 Pour chaque groupe de filtres, vous pouvez afficher le nombre estimé d'utilisateurs joignables. Sélectionnez **Développer les statistiques d’entonnoir supplémentaires** pour afficher la répartition entre les différents canaux.
 
-![Un groupe interne avec un filtre pour les utilisateurs qui ont eu exactement un nombre de sessions.]({% image_buster /assets/img_archive/segment_filter_stats.png %}){: style="max-width:80%;"}
+![Un groupe de filtres avec un filtre pour les utilisateurs qui ont eu exactement un nombre de sessions.]({% image_buster /assets/img_archive/segment_filter_stats.png %}){: style="max-width:80%;"}
 
 ## Estimation du nombre d'utilisateurs joignables
 
@@ -63,7 +63,7 @@ Les segments de très petite taille auront une fourchette d'estimation qui compr
 
 Pour afficher le nombre d'utilisateurs joignables pour chaque canal de communication, sélectionnez **Afficher la répartition** dans le panneau **Utilisateurs joignables**. Elle affiche certains des canaux de communication les plus fréquemment utilisés (tels que le push web ou l'e-mail) et le nombre d'utilisateurs joignables pour ces canaux spécifiques. 
 
-L'indicateur " _Total"_ représente les utilisateurs uniques. Par exemple, si un utilisateur a à la fois Android push et iOS push, il sera comptabilisé pour ces deux lignes, mais ne comptera que pour un seul utilisateur dans la ligne _Total._ 
+L'indicateur " _Total"_ représente les utilisateurs uniques. Par exemple, si un utilisateur a à la fois Android push et iOS push, il sera comptabilisé pour ces deux lignes, mais ne comptera que pour un seul utilisateur dans la ligne _Total._
 
 Toutefois, il est possible que le nombre total d'utilisateurs soit différent de la somme des utilisateurs joignables par chaque canal, car un même utilisateur peut appartenir à différents groupes d'utilisateurs joignables. Par exemple, un utilisateur peut disposer d’une adresse e-mail valide et d’un jeton de notification push Android valide et être abonné aux deux, mais ne pas avoir de jeton de notification push associé. 
 
@@ -75,6 +75,17 @@ Pour qu'un utilisateur soit répertorié comme étant joignable via un certain c
 - Une adresse e-mail valide ou un jeton de poussée associé à leur profil, et
 - S'est abonné à votre application.
 
+#### Application de filtres pour les utilisateurs atteignables spécifiques à un canal
+
+Les filtres suivants sont appliqués pour chaque canal lors de la détermination des utilisateurs joignables.
+
+| Canal | Filtre |
+| --- | --- |
+| E-mail | L'**e-mail disponible** est vrai. |
+| Notification push | L'**option "Foreground Push Enabled" (poussée d'avant-plan activée** ) est vraie. |
+| SMS | **Subscription groups** est n'importe quel groupe d'abonnement SMS. Le **numéro de téléphone invalide** est faux. |
+{: .reset-td-br-1 .reset-td-br-2 role="presentation" }
+
 ## Calculer des statistiques exactes 
 
 Pour obtenir un décompte précis du nombre d'utilisateurs dans votre segmentation, sélectionnez **Calculer les statistiques exactes** dans le volet **Utilisateurs joignables**.
@@ -83,13 +94,17 @@ Pour actualiser les statistiques d'un calcul effectué précédemment, sélectio
 
 Notez que la précision d'un calcul n'est que de 99,999 % ou plus. Ainsi, pour les grands segments, vous pouvez remarquer de légères variations - même en calculant des statistiques exactes - ce qui est un comportement normal. En outre, les résultats des statistiques exactes sont mis en cache pendant 24 heures, à moins que vous ne modifiiez votre segment, auquel cas vous pouvez recalculer les statistiques exactes.
 
+{% alert note %}
+Les segments divisés de manière égale par des [numéros de compartiment aléatoires]({{site.baseurl}}/user_guide/engagement_tools/testing/random_bucket_numbers/) n'auront pas la même taille. Par exemple, si vous créez un segment avec le filtre **Random Bucket # less than 5000** et un segment avec le filtre **Random Bucket # at least 5000**, il est possible et prévisible que la taille des segments varie de quelques points de pourcentage. Cela s'explique par des situations telles que la suppression d'utilisateurs inactifs ou l'impossibilité de joindre des utilisateurs.
+{% endalert %}
+
 ![Le panneau "Utilisateurs joignables" avec une option pour afficher la répartition.]({% image_buster /assets/img_archive/reachable_users_breakdown.png %})
 
 Les statistiques au niveau de chaque filtre seront toujours estimées, même si vous calculez des statistiques exactes. **Calculer les statistiques exactes** ne calcule les statistiques exactes qu'au niveau du segment, et non au niveau du filtre ou du groupe de filtres. Ce calcul peut prendre quelques minutes. Les grands espaces de travail, en particulier, peuvent nécessiter des périodes plus longues pour effectuer les calculs. Vous pouvez suivre vos progrès sur la barre de progression dans le panneau des **utilisateurs joignables**. Lorsqu'un calcul doit durer plus de cinq minutes, Braze vous envoie les résultats par e-mail. 
 
 Braze donne la priorité à un calcul à la fois par espace de travail, de sorte que l'exécution de plusieurs calculs à la fois entraînera des retards. Vous pouvez sélectionner **Afficher la file d'attente des calculs** pour voir quels segments sont en avance sur le vôtre, leur état d'avancement et leur initiateur, et avoir une idée du moment où votre calcul pourrait être prioritaire.
 
-![Une file d'attente de calcul avec un calcul.]({% image_buster /assets/img_archive/calculation_queue.png %})
+![Une file d'attente de calcul avec un seul calcul.]({% image_buster /assets/img_archive/calculation_queue.png %})
 
 Vous pouvez annuler un calcul de statistiques exactes en sélectionnant **Annuler.** Cela peut être utile s'il y a plusieurs calculs dans la file d'attente et que vous souhaitez donner la priorité à un autre calcul. 
 
@@ -99,9 +114,11 @@ Vous pouvez annuler un calcul de statistiques exactes en sélectionnant **Annule
 
 Pour tous les segments, vous pouvez consulter un graphique de l'historique des membres qui indique le nombre estimé de membres du segment pour chaque jour. Ce graphique montre comment la taille de votre segmentation a évolué dans le temps. Utilisez la liste déroulante pour filtrer l’appartenance au segment par plage de dates.
 
-![Utilisez le menu déroulant "Historique de l'adhésion" pour filtrer l'adhésion à un segment par plage de dates.]({% image_buster /assets/img_archive/historical_membership2.png %})
+![Utilisez la liste déroulante Historique des inscriptions pour filtrer l’appartenance au segment par plage de dates.]({% image_buster /assets/img_archive/historical_membership2.png %})
 
 L'objectif de ce graphique étant de vous donner une idée de l'évolution globale du nombre de membres d'un segment, le nombre de jours est une estimation, de la même manière que la taille du segment est une estimation avant que vous ne sélectionniez **Calculer les statistiques exactes**. Et comme ce graphique présente des estimations, il est possible que la taille de votre segment apparaisse comme "0" dans ce graphique, même si sa taille réelle (qui peut être déterminée après avoir sélectionné **Calculer les statistiques exactes**) n'est pas "0". Il est particulièrement probable que le graphique affiche une estimation de "0" si votre segmentation est très petite par rapport à la taille de la population de votre espace de travail.
+
+Par exemple, disons que votre espace de travail contient 100 millions d'utilisateurs et que votre segmentation compte environ 700 utilisateurs. Il est possible que certains jours, aucun utilisateur ne se trouve dans le segment et qu'aucun utilisateur n'entre dans la plage de compartiments aléatoires utilisée pour l'estimation historique du nombre de membres, ce qui se traduit par un nombre de membres égal à 0 pour un jour donné.
 
 Braze estime le nombre de membres d'un segment en interrogeant un sous-ensemble de vos utilisateurs, puis en extrapolant ces résultats à l'ensemble de votre audience. Cela signifie que les résultats du graphique ne fournissent qu'une estimation du nombre de membres du segment ce jour-là, et qu'ils devraient également fluctuer d'un jour à l'autre parce qu'un échantillon différent d'utilisateurs peut être interrogé pour cette estimation chaque jour.
 

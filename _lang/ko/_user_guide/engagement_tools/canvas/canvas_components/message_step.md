@@ -11,29 +11,30 @@ tool: Canvas
 
 # 메시지 
 
-> 메시지 단계를 사용하면 캔버스 흐름에서 원하는 위치에 독립형 메시지를 추가할 수 있습니다.
+> 메시지 단계를 사용하면 캔버스에서 원하는 위치에 독립형 메시지를 추가할 수 있습니다.
 
-![A Message step named "Lunch promo" using the push channel.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+![푸시 채널을 사용하는 "점심 프로모션"이라는 메시지 단계입니다.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
-## Creating a message
+## 메시지 생성
 
 메시지 컴포넌트를 만들려면 먼저 캔버스에 스텝을 추가합니다. Drag and drop the component from the sidebar, or select the <i class="fas fa-plus-circle"></i> plus button at the bottom of a step and select **Message**. 
 
 ### Step 1: Select your messaging channel
 
 You can select from the following messaging channels: 
-- Content Cards
+- 배너(얼리 액세스 중)
+- 콘텐츠 카드
 - Email
 - LINE
-- Push notifications
+- 푸시 알림
 - SMS/MMS/RCS
-- In-app messages 
+- 인앱 메시지
 - Webhook
 - WhatsApp
 
-![A list of available messaging channels to select for the Message step.]({% image_buster /assets/img/canvas_components/message_step2.png %})
+![메시지 단계에 선택할 수 있는 메시징 채널 목록입니다.]({% image_buster /assets/img/canvas_components/message_step2.png %})
 
-### Step 2: 배달 설정 편집
+### 2단계: 배달 설정 편집
 
 Next, you can edit settings for Intelligent Delivery, Quiet Hours overrides, and delivery validation.
 
@@ -47,7 +48,7 @@ Next, you can edit settings for Intelligent Delivery, Quiet Hours overrides, and
 
 배달 유효성 검사는 메시지 전송 시 대상 그룹이 배달 기준을 충족하는지 확인하기 위한 추가 확인 기능을 제공합니다. 이 설정은 방해금지 시간, Intelligent Timing 또는 사용량 제한이 활성화된 경우에 권장됩니다. 세그먼트 또는 추가 필터를 추가하여 메시지 전송 시 유효성을 검사할 수 있습니다. 사용자가 메시지 단계에 대해 설정된 전달 유효성 검사를 충족하지 못하면 해당 단계에서 캔버스를 종료합니다.
 
-![메시지 구성 요소 설정을 위한 전달 설정 탭입니다. 방해금지 시간을 사용하도록 설정하고 Intelligent Timing 사용 확인란을 선택하면 최적의 시간에 메시지를 전달할 수 있습니다. Delivery Validations are enabled to validate the audience at message send.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
+![메시지 구성 요소 설정을 위한 전달 설정 탭입니다. 방해금지 시간을 사용하도록 설정하고 Intelligent Timing 사용 확인란을 선택하면 최적의 시간에 메시지를 전달할 수 있습니다. 전달 유효성 검사는 메시지 전송 시 수신자의 유효성을 검사하는 기능입니다.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
 ## How users advance
 
@@ -98,7 +99,7 @@ You can't use `event_properties` in the lead Message step. 대신 `canvas_entry_
 
 {% details Expand for original Canvas editor %}
 
-As of February 28, 2023, you can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
+You can no longer create or duplicate Canvases using the original editor. This section is available for reference only.
 
 - `event_properties` can't be used in scheduled full steps. However, you can use `event_properties` in the first full step of an action-based Canvas, even if the full step is scheduled.
 - `canvas_entry_properties` can be referenced only in the first full step of a Canvas.
@@ -116,8 +117,8 @@ As of February 28, 2023, you can no longer create or duplicate Canvases using th
 | _Proceeded to Next Step_ | 캔버스에서 다음 단계로 진행된 항목 수입니다. |
 | _Sends_ | 해당 단계가 보낸 총 메시지 수입니다. 캔버스 자격이 다시 부여되고 사용자가 메시지 단계를 두 번 입력하면 두 개의 항목이 기록됩니다. |
 | _Unique Recipients_ | 이 단계에서 메시지를 받은 사용자 수입니다. |
-| _Primary Conversion Event_ | Braze 캠페인에서 수신한 메시지와 상호작용하거나 메시지를 본 후 정의된 이벤트가 발생한 횟수입니다. 캠페인을 구축할 때 이 이벤트를 정의합니다. |
-| _Revenue_ | 설정된 주요 전환 기간 내에 캠페인 수신자로부터 발생한 총 매출(달러)입니다. |
+| _Primary Conversion Event_ | Braze 캠페인에서 받은 메시지를 보고 상호작용한 후 정의된 이벤트가 발생한 횟수입니다. 캠페인을 구축할 때 이 이벤트를 정의합니다. |
+| _Revenue_ | 설정된 주요 전환 창 내에서 캠페인 수신자로부터의 총 매출(달러 기준). |
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 
 

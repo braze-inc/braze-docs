@@ -14,11 +14,11 @@ description: "Este artículo de referencia cubre los requisitos de diseño y men
 
 > Los modales aparecen en el centro de la pantalla del dispositivo con una superposición de pantalla que le ayuda a destacarse de su aplicación en segundo plano. Son perfectos para sugerir de forma no tan sutil que el usuario aproveche una oferta o sorteo.
 
-![Dos mensajes modales en la aplicación, uno al lado del otro, detallando las recomendaciones de imagen y texto. Consulte las secciones siguientes para obtener más información.]({% image_buster /assets/img/modal-spec.png %}){: style="max-width: 801px; border: none;"}
+![Dos mensajes modales en la aplicación, uno al lado del otro, detallando las recomendaciones de imagen y texto. Para más detalles, consulta las secciones siguientes.]({% image_buster /assets/img/modal-spec.png %}){: style="max-width: 801px; border: none;"}
 
 ## Especificaciones de imagen
 
-{% multi_lang_include image_specs.md variable_name='mensajes in-app' %}
+{% multi_lang_include image_specs.md variable_name='in-app messages' %}
 
 ## Pantallas más grandes
 

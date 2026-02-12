@@ -1,12 +1,12 @@
 ---
 nav_title: Abortar o envio de mensagens
-article_title: Abortar o envio de mensagens Liquid
+article_title: Envio de mensagens do Liquid Abort
 page_order: 7
 description: "Este artigo de referência aborda o cancelamento de mensagens Liquid e alguns exemplos de casos de uso."
 
 ---
 
-# Abortar o envio de mensagens
+# Envio de mensagens de cancelamento
 
 > Opcionalmente, é possível usar a tag `abort_message("optional reason for aborting")` Liquid message nas condicionais para impedir o envio de mensagens a um usuário. Este artigo de referência lista alguns exemplos de como esse recurso pode ser usado em campanhas de marketing.
 

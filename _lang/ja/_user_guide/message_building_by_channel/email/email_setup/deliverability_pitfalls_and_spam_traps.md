@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"}配信の落とし穴とスパムトラップ
+# [![Brazeラーニングコース]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability){: style="float:right;width:120px;border:0;" class="noimgborder"} 配信性の落とし穴とスパムの罠
 
 以下のスパムトラップは、メール配信に影響を与える可能性がある：
 
@@ -32,3 +32,9 @@ channel: email
 {% alert tip %}
 Brazeのカスタマーサクセスチームとデリバビリティチームは、お客様がベストプラクティスに従って世界中でデリバビリティを最大化できるようにサポートする。
 {% endalert %}
+
+## バウンスリストやスパムリストからメールアドレスを削除する
+
+バウンスメールやBrazeスパムリストのメールは、以下のエンドポイントで削除できる：
+- [`/email/bounce/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_hard_bounces)
+- [`/email/spam/remove`]({{site.baseurl}}/api/endpoints/email/post_remove_spam)

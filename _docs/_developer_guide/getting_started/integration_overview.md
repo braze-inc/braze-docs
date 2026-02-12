@@ -128,6 +128,10 @@ The Braze SDK provides two critical pieces of functionality: it collects and syn
 When fully integrated with your app or site, the Braze SDK offers a completely-realized level of marketing sophistication. If you defer integrating the Braze SDK, some of the functionality described in the documentation will not be available.
 {% endalert %}
 
+{% alert note %}
+To add an additional layer of security, you can enable [SDK Authentication]({{site.baseurl}}/developer_guide/sdk_integration/authentication/) to prevent unauthorized SDK requests. This feature is available across all major platforms including Web, iOS, Android, React Native, Flutter, Unity, Cordova, .NET MAUI (Xamarin), and Expo.
+{% endalert %}
+
 During SDK implementation, you will:
 
 * Write SDK integration code for each platform you want to support.
@@ -225,9 +229,9 @@ You will track updates to the Braze platform via the Braze [GitHub](https://gith
 
 ## SDK rate limits 
 
-### Monthly Active Users CY 24-25 
+### Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU  
 
-For customers who have purchased Monthly Active Users - CY 24-25, Braze enforces server-side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and to maintain fast, reliable service. 
+For customers who have purchased Monthly Active Users CY 24-25, Universal MAU, Web MAU, and Mobile MAU , Braze enforces server-side rate limits on API requests used by our SDKs to update sessions, user attributes, events, and other user profile data. This is to ensure platform stability and to maintain fast, reliable service. 
 
 * Hourly rate limits are set according to the expected SDK traffic on your account, which may correspond to the number of monthly active users (MAU) you have purchased, industry, seasonality, or other factors. When the hourly rate limit is reached, Braze will throttle requests until the next hour.
 * All rate limited requests are automatically retried by the SDK.

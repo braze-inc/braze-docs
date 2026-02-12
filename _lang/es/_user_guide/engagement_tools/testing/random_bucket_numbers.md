@@ -13,11 +13,19 @@ tool:
 
 # Números de contenedor aleatorio
 
-> Un número de cubo aleatorio es un atributo de usuario que puede utilizarse para crear segmentos de usuarios aleatorios distribuidos uniformemente. Cuando se crea un perfil de usuario en Braze, a ese usuario se le asigna automáticamente un número de cubo aleatorio entre 0 y 9999 (ambos inclusive). Puedes utilizar estos segmentos para probar la eficacia de varias campañas o Canvases en grupos de usuarios a lo largo del tiempo.
+> Un número de cubo aleatorio es un atributo de usuario que puede utilizarse para crear segmentos de usuarios aleatorios distribuidos uniformemente. 
 
 ## Resumen
 
-Los números de contenedor aleatorios se utilizan en tu grupo de control global: un grupo de usuarios que no reciben campañas ni Canvases. Braze selecciona aleatoriamente múltiples rangos de números de cubos aleatorios e incluye usuarios de esos cubos seleccionados. 
+Cuando se crea un perfil de usuario en Braze, a ese usuario se le asigna automáticamente un número de cubo aleatorio entre 0 y 9999 (ambos inclusive). Puedes utilizar estos segmentos para probar la eficacia de varias campañas o Canvases en grupos de usuarios a lo largo del tiempo.
+
+### Uso del grupo de control global
+
+Los números de contenedor aleatorios se utilizan en tu grupo de control global: un grupo de usuarios que no reciben campañas ni Canvases. Braze selecciona aleatoriamente múltiples rangos de números de cubos aleatorios e incluye usuarios de esos cubos seleccionados. Se asignan números de contenedor aleatorios sin ponderación ni consideración de los números asignados recientemente. 
+
+{% alert note %}
+Cuando se elimina un usuario y se vuelve a crear, se le asigna un número de contenedor aleatorio diferente porque se le considera un usuario nuevo.
+{% endalert %}
 
 Si tienes configurado un grupo de control global y quieres utilizar números de contenedor aleatorios para otros casos de uso, consulta [Cosas que debes tener en cuenta]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/#things-to-watch-for).
 
@@ -33,7 +41,7 @@ Si quieres segmentar a los usuarios para realizar pruebas dentro de una sola cam
 
 Al [crear un segmento]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), añade el filtro "N.º de contenedor aleatorio". A continuación, especifica un número o rango de números para incluirlos en tu segmento.
 
-![Un filtro de segmento para números de contenedor aleatorios no superiores a "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
+![Un filtro de segmentos para números de contenedor aleatorios no superiores a "3000".]({% image_buster /assets/img_archive/random_buckets_filterexample.png %})
 
 Puede utilizar este tipo de segmentos si desea realizar una prueba de tres variantes diferentes e incluir también un grupo de control. Considere el siguiente ejemplo de plan para crear segmentos de igual tamaño para tres variantes y un grupo de control:
 

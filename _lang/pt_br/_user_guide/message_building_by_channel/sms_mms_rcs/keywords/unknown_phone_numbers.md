@@ -1,6 +1,6 @@
 ---
-nav_title: Como lidar com números de telefone desconhecidos
-article_title: Como lidar com números de telefone desconhecidos
+nav_title: Lidar com números de telefone desconhecidos
+article_title: Lidar com Números de Telefone Desconhecidos
 page_order: 4
 description: "Este artigo de referência cobre como o Braze processa números de telefone desconhecidos de novos usuários."
 page_type: reference
@@ -11,7 +11,7 @@ channel:
   
 ---
 
-# Lidando com números de telefone desconhecidos - novos usuários
+# Lidar com números de telefone desconhecidos - novos usuários
 
 > Você pode descobrir que, depois de configurar SMS, MMS e RCS com o Braze, você recebe mensagens de usuários desconhecidos. As etapas a seguir descrevem como um usuário e um número não identificados são processados.
 

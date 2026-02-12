@@ -54,7 +54,7 @@ Braze で [**設定**] > [**API キー**] の順に移動します。[**新し�
 
 ### ステップ2:actionable.me チームに情報を提供する
 
-統合を完了するには、REST API キーと [REST エンドポイント URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) を actionable.me オペレーションチームに提供する必要があります。その後 actionable.me が接続を確立し、設定完了後に連絡を取り、インサイトの共有を開始します。
+統合を完了するには、REST API キーと[REST エンドポイント URL]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)をactionable.me オペレーション・チームに提供する必要がある。actionable.me が接続を確立し、セットアップ完了後に連絡を取り、インサイトの共有を開始する。
 
 ![actionable.me 運営チームが設定するactionable.me 「プラットフォームの追加」ページ。]({% image_buster /assets/img/actionableme/image2.png %})
 

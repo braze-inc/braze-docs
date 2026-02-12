@@ -14,7 +14,7 @@ description: "Cet article de référence couvre les balises du tableau de bord d
 
 Vous pouvez ajouter des balises lors de la création ou de la modification d’une campagne, d’un Canvas ou d’un segment. Cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** sous le nom de l'engagement et sélectionnez une étiquette existante, ou commencez à taper pour ajouter une nouvelle étiquette.
 
-![Ajout d'étiquettes lors de la création d'une campagne.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
+![Ajout de tags lors de la création d'une campagne.]({% image_buster /assets/img_archive/tags_add_tag.png %}){: style="max-width:60%;" }
 
 {% alert important %}
 Vous pouvez ajouter jusqu'à 175 tags à une campagne, un Canvas ou un segment.
@@ -24,7 +24,7 @@ Vous pouvez ajouter jusqu'à 175 tags à une campagne, un Canvas ou un segment.
 
 Vous pouvez également ajouter des étiquettes à plusieurs campagnes, canevas ou segments en sélectionnant plusieurs engagements et en sélectionnant <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As.**
 
-![Ajout d'étiquettes à plusieurs campagnes en même temps.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
+![Ajout de tags à plusieurs campagnes en même temps.]({% image_buster /assets/img_archive/tags_apply_multiple.gif %})
 
 {% alert important %}
 Lorsque vous utilisez le marquage en bloc pour appliquer une nouvelle étiquette à plusieurs campagnes qui ont déjà des étiquettes différentes, chaque campagne sélectionnée recevra la nouvelle étiquette, et toutes les étiquettes présentes sur une campagne seront appliquées à toutes les autres campagnes sélectionnées, même si ces étiquettes ne leur étaient pas associées à l'origine.
@@ -34,7 +34,7 @@ Lorsque vous utilisez le marquage en bloc pour appliquer une nouvelle étiquette
 
 Les tags définis sur une campagne, un Canvas ou un segment sont visibles sur la page de détails près du nom de l'engagement. Ils apparaissent également dans les analyses/analytiques de la campagne (s'ils sont utilisés comme adjectifs).
 
-![Tags affichés sur la page d'analyse de la campagne.]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
+![Tags affichés sur la page d'analyse/analytique de la campagne (si utilisés comme adjectifs).]({% image_buster /assets/img_archive/tag_details_page.png %}){: style="max-width:60%;" }
 
 ### Filtrage par étiquette
 
@@ -54,7 +54,7 @@ Cette fonctionnalité est actuellement disponible en accès anticipé. Si vous s
 
 Vous pouvez utiliser les mêmes balises sur les campagnes, les Canvas et les segments. Pour renommer, supprimer ou ajouter des tags de manière efficace dans votre tableau de bord, accédez à **Paramètres** > **Gestion des tags**.
 
-![Onglet Tags de la page Gérer les paramètres.]({% image_buster /assets/img_archive/tags_view.png %})
+![onglet Tags de la page Gérer les paramètres.]({% image_buster /assets/img_archive/tags_view.png %})
 
 Pour une meilleure organisation des balises, elles peuvent être insérées sous une balise parent. Toutes les balises de vacances peuvent par exemple être insérées sous une `Holidays`balise parent, ou toutes les balises liées à une étape de l’entonnoir marketing sous une balise parent`Funnel`. 
 
@@ -100,7 +100,10 @@ table td {
 
 ## Cas d’utilisation
 
-Vous cherchez de l’inspiration sur la façon d’exploiter les balises pour gérer le cycle de vie de votre messagerie ? Voici quelques exemples d’utilisation courante :
+Vous cherchez de l’inspiration sur la façon d’exploiter les balises pour gérer le cycle de vie de votre messagerie ? Voici quelques cas d'utilisation courants.
+
+{% tabs %}
+{% tab Throttling %}
 
 ### Étranglement
 
@@ -110,6 +113,12 @@ Limitez la fréquence à laquelle vos clients reçoivent des campagnes d’un ce
 <br>`OR`<br>
 `Has not received campaign` avec balise `Promo`
 
+{% endtab %}
+{% tab Reporting %}
+
 ### Reporting
 
 Configurez un Engagement Report pour garder un œil sur le volume de toutes les campagnes avec une certaine balise. Par exemple, si vous souhaitez surveiller toutes vos campagnes push, vous pouvez ajouter une étiquette telle que `Push Reporting` à ces campagnes, puis implémenter un [rapport d'engagement]({{site.baseurl}}/user_guide/data_and_analytics/reporting/engagement_reports/#automatically-select-campaigns-or-canvases) qui vous enverra chaque jour un rapport sur ces campagnes étiquetées.
+
+{% endtab %}
+{% endtabs %}

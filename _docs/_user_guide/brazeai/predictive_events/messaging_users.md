@@ -1,6 +1,6 @@
 ---
 nav_title: Messaging users
-article_title: Targeting Users for Predictive Events
+article_title: Target Users for Predictive Events
 description: "This reference article covers potential next steps after you have created an event prediction, such as filter implementation and strategic considerations."
 page_order: 1.2
 

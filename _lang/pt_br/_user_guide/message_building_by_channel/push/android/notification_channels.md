@@ -35,7 +35,7 @@ Somente os usuários com permissões que incluem "gerenciar apps" poderão geren
 
 O Android requer um canal válido para exibir notificações por push no nível 26 da API (Android O) ou posterior. O SDK da Braze para Android 2.1.0 inclui um canal padrão chamado "Geral", que será criado e usado se você não especificar canais adicionais no dashboard ou se tentar enviar para um canal inválido. Você pode renomear esse rótulo no SDK e fornecer uma descrição do canal. Recomendamos que considere essa possibilidade para proporcionar uma melhor experiência ao usuário.  
 
-Depois que um canal é adicionado ao seu aplicativo, você pode aceitar removê-lo. No entanto, os consumidores sempre poderão ver o número de canais que você [removed].[3] O dashboard do Braze não inclui suporte para a criação programática de canais - os canais devem ser criados e definidos no código do seu aplicativo para proporcionar uma experiência perfeita.
+Depois que um canal é adicionado ao seu aplicativo, você pode aceitar removê-lo. No entanto, os consumidores sempre poderão ver o número de canais que você [removeu].[3] O dashboard do Braze não inclui suporte para a criação programática de canais - os canais devem ser criados e definidos no código do seu aplicativo para proporcionar uma experiência perfeita.
 
 Novamente, recomendamos que você coordene com sua equipe de engenharia para garantir uma transição perfeita para o direcionamento do Android O.
 

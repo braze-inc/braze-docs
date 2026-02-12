@@ -33,7 +33,7 @@ Dans Braze, l’une des conditions de concurrence les plus courantes se produit 
 1. Un utilisateur est créé ;
 2. Le même utilisateur est immédiatement ciblé par un message, effectue un événement personnalisé ou enregistre un attribut personnalisé.
 
-Cependant, dans certains cas, le deuxième événement se déclenchera d’abord. Cela signifie qu'un message tente d'être envoyé à un utilisateur qui n'existe pas encore. Par conséquent, l'utilisateur ne le reçoit jamais. Cela s'applique également aux événements ou aux attributs, lorsque l'événement ou l'attribut tente d'être enregistré dans un profil utilisateur qui n'a pas encore été créé.
+Toutefois, dans certains cas, c'est le second événement qui se déclenche en premier. Cela signifie qu'un message tente d'être envoyé à un utilisateur qui n'existe pas encore. Par conséquent, l'utilisateur ne le reçoit jamais. Cela s'applique également aux événements ou aux attributs, lorsque l'événement ou l'attribut tente d'être enregistré dans un profil utilisateur qui n'a pas encore été créé.
 
 ### Bonnes pratiques
 
@@ -47,6 +47,10 @@ Vous pouvez également ajouter ce délai dans le [SDK de Braze]({{site.baseurl}}
 
 ## Scénario 2 : Utiliser plusieurs endpoints API
 
+{% alert important %}
+Nous utilisons un traitement asynchrone pour maximiser la vitesse et la flexibilité. Cela signifie que lorsque des appels API nous sont envoyés séparément, nous ne pouvons pas garantir qu'ils sont traités dans l'ordre où ils ont été envoyés.
+{% endalert %}
+
 Il existe quelques scénarios dans lesquels plusieurs endpoints d'API peuvent également entraîner cette condition de concurrence, par exemple :
 
 - Utiliser des endpoints API distincts pour créer des utilisateurs et déclencher des Canvases ou des campagnes.
@@ -55,7 +59,7 @@ Il existe quelques scénarios dans lesquels plusieurs endpoints d'API peuvent é
 Lorsque les informations de l'utilisateur sont envoyées à Braze à l'aide de l'[endpoint`/users/track` ]({{site.baseurl}}/api/endpoints/user_data/post_user_track), leur traitement peut parfois prendre quelques secondes. Cela signifie que lorsque des demandes sont simultanément adressées à `/users/track` et à des endpoints de messages tels que `/campaign/trigger/send`, il n'est pas garanti que les informations relatives à l'utilisateur soient mises à jour avant l'envoi d'un message.
 
 {% alert note %}
-Si les attributs de l'utilisateur et les événements sont envoyés dans la même demande (à partir de `/users/track` ou du SDK), Braze traitera les attributs avant les événements ou la tentative d'envoi d'un message.
+Si les attributs de l'utilisateur et les événements sont envoyés dans la même demande (à partir de `/users/track` ou du SDK), Braze traite les attributs avant les événements ou la tentative d'envoi d'un message.
 {% endalert %}
 
 ### Bonnes pratiques
@@ -70,7 +74,7 @@ Si vous envoyez une demande API de messages planifiés, ces demandes doivent êt
 
 Au lieu d'utiliser plusieurs endpoints, vous pouvez inclure les [attributs de l'utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object#object-body) et les [propriétés du déclencheur]({{site.baseurl}}/api/objects_filters/trigger_properties_object) dans un seul appel API en utilisant l'[endpoint`campaign/trigger/send` ]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns). 
 
-Lorsque ces objets sont inclus dans le déclencheur, les attributs sont traités en premier, avant que le message ne soit déclenché, ce qui élimine les conditions de concurrence potentielles. Notez que les propriétés du déclencheur ne mettent pas à jour le profil utilisateur, mais sont utilisées uniquement dans le contexte du message.
+Lorsque ces objets sont inclus dans le déclencheur, les attributs sont traités en premier, avant que le message ne soit déclenché, ce qui élimine les éventuelles conditions de concurrence. Notez que les propriétés du déclencheur ne mettent pas à jour le profil utilisateur, mais sont utilisées uniquement dans le contexte du message.
 
 #### Utilisez le POST : Suivi des utilisateurs (synchro) endpoint
 
@@ -117,4 +121,10 @@ Dans ce cas, vous pouvez mettre en œuvre un délai de déclenchement dans une c
 ```
 {% endraw %}
 
+#### Confirmer la façon dont les données des utilisateurs sont gérées
 
+En cas de condition de concurrence lors de l'évaluation de l'entrée dans le Canvas, les utilisateurs peuvent entrer dans un Canvas qu'ils n'étaient pas censés entrer. Par exemple, le profil de l'utilisateur pourrait être défini pour être inclus dans l'audience et mis à jour ultérieurement après que le Canvas a mis en file d'attente les utilisateurs pour qu'ils ne soient plus éligibles dans l'audience. 
+
+Si un utilisateur déclenche l'événement d'entrée dans le canvas plusieurs fois au cours de la même seconde, Braze n'autorise qu'une seule entrée pour cette seconde (même si la réentrée est activée). Cela permet d'éviter les entrées en double, de sorte que le nombre total d'entrées dans les Canvas peut être inférieur au nombre total d'événements déclencheurs.
+
+Nous vous recommandons de confirmer comment les données des utilisateurs sont gérées et mises à jour, en particulier quand et comment des attributs spécifiques sont mis à jour, par exemple par SDK, API, API par lots et d'autres méthodes. Cela peut aider à identifier et à clarifier la raison pour laquelle un utilisateur est entré dans une campagne ou un Canvas par rapport au moment où le profil de l'utilisateur a été mis à jour.

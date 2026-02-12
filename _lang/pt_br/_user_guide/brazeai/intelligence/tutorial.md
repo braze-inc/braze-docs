@@ -1,6 +1,6 @@
 ---
 nav_title: "Tutorial: Restaurante de serviço rápido"
-article_title: Tutorial do Intelligence Suite
+article_title: Tutorial da Suite de Inteligência
 page_order: 10
 search_rank: 12
 description: "Novo na suíte de inteligência Braze? Comece com este tutorial."
@@ -8,9 +8,9 @@ tool:
   - Dashboard
 ---
 
-# Tutorial do Intelligence Suite
+# Tutorial da Suite de Inteligência
 
-> Novo no Braze Intelligence Suite? Comece com este tutorial! Para saber mais sobre informações gerais, consulte [Intelligence Suite]({{site.baseurl}}/user_guide/brazeai/intelligence/).
+> Novo na Suite de Inteligência Braze? Comece com este tutorial! Para mais informações gerais, veja [Suite de Inteligência]({{site.baseurl}}/user_guide/brazeai/intelligence/).
 
 ## Tutorial: Restaurante de serviço rápido
 

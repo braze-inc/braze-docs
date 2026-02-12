@@ -34,7 +34,7 @@ Chaque journal est divisé en plusieurs sections, qui peuvent inclure :
 
 Sélectionnez l'icône **Développer les données** pour afficher les données JSON brutes de ce journal spécifique.
 
-![L'"icône d'expansion des données" à côté d'un journal spécifique.]({% image_buster /assets/img_archive/expand_data.png %})
+![L'"icône de développement des données" à côté d'un journal spécifique.]({% image_buster /assets/img_archive/expand_data.png %})
 
 Les journaux d’événements utilisateurs resteront dans le tableau de bord pendant 30 jours après leur enregistrement.
 

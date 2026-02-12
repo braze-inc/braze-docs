@@ -68,7 +68,7 @@ You've launched your Canvas! Now, what? Use this checklist to see how you can re
 
 ### Many entries, but few sends
 
-For example, let's say that you've noticed a disparity between your number of messages sent versus total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
+For example, let's say that you've noticed a disparity between your number of messages sent and the total entries. You can identify and uncover areas to adjust your Canvas by checking these key areas.
 
 #### Entry audience
 
@@ -76,7 +76,7 @@ If you're using a scheduled send campaign, double-check your target audience by 
 
 #### First component of the Canvas
 
-Review any audience filters, action triggers, or segments used in the beginning components of your Canvas. Are there any misspellings, or too-strict conditions that are preventing your Canvas from starting off right? Are you using "Equals" when you should be using "Matches Regex"?
+Review any audience filters, action triggers, or segments used in the beginning components of your Canvas. Are there any misspellings or too-strict conditions that are preventing your Canvas from starting off right? Are you using "Equals" when you should be using "Matches Regex"?
 
 #### Canvas control group 
 
@@ -88,7 +88,7 @@ If you aren’t seeing any entry data for your Canvas, the reason that users may
 
 If you're using action-based entry in your entry schedule, check that you haven't used the same trigger action here as in your **Target Audience**. A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't enter the Canvas.
 
-Additionally, check that the selected segment has users in it by reviewing the **Target Population** table in the **Target Audience** settings. If this number is low, see how you can adjust your entry settings, or review your selected segments or filters for any errors.
+Additionally, check that the selected segment has users in it by reviewing the **Target Population** table in the **Target Audience** settings. If this number is low, see how you can adjust your entry settings or review your selected segments or filters for any errors.
 
 ### Unexpected drop-off between steps
 
@@ -99,7 +99,7 @@ Next, it's important to identify these settings that can affect when and if mess
 - Quiet Hours
 - Delivery validations
 
-In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligence FAQ]({{site.baseurl}}/user_guide/brazeai/intelligence/faqs/).
+In general, choose either Intelligent Timing or Quiet Hours for your Canvas, not both. The same suggestion applies to use either Intelligent Timing or [rate limiting]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/), not both. For more information on how to best use the Intelligence Suite, read our [Intelligent Suite use cases]({{site.baseurl}}/user_guide/brazeai/intelligence/#use-cases).
 
 ### Suspicious send volumes between paths
 

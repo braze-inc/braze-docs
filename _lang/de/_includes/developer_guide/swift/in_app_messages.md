@@ -3,7 +3,7 @@
 ## Nachrichtentypen
 
 {% tabs %}
-{% multi_lang_include developer_guide/_shared/push_notifications/message_types/swift.md %}
+{% multi_lang_include developer_guide/_shared/in_app_messages/message_types/swift.md %}
 {% endtabs %}
 
 ## Aktivieren von In-App-Nachrichten
@@ -15,7 +15,7 @@ Damit Braze In-App-Nachrichten anzeigen kann, erstellen Sie eine Implementierung
 Beachten Sie, dass Sie die Bibliothek `BrazeUI` importieren müssen, um auf die Klasse `BrazeInAppMessageUI` zuzugreifen.
 
 {% tabs %}
-{% tab schnell %}
+{% tab swift %}
 
 ```swift
 AppDelegate.braze?.inAppMessagePresenter = BrazeInAppMessageUI()

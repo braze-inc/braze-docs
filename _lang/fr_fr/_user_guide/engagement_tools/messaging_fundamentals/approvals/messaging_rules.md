@@ -14,12 +14,8 @@ description: "Cette page explique comment utiliser les règles d'envoi de messag
 
 Les règles d'envoi des messages s'appliquent à un espace de travail et sont constituées d'un type de message et d'un nombre maximum d'utilisateurs joignables.
 
-- **Type de message :** Définit le type de message auquel la règle sera appliquée : campagne, Canvas, ou à la fois Canvas et campagnes.
-- **Nombre maximum d'utilisateurs joignables :** Détermine la taille de l'audience qui nécessitera une approbation supplémentaire.
-
-### Types d'envois de messages partagés et nombre maximal d'utilisateurs atteignables
-
-Deux règles peuvent exister avec le même nombre d'utilisateurs joignables pour le même type de message. Par exemple, vous pouvez définir un maximum de 10 000 utilisateurs pour Canvas et de 10 000 utilisateurs pour Canvas et les campagnes. 
+- **Type de message :** Définit le type de message auquel la règle s'applique : campagne, Canvas, ou à la fois Canvas et campagnes.
+- **Nombre maximum d'utilisateurs joignables :** Détermine la taille de l'audience qui nécessite une approbation supplémentaire.
 
 ### Séparer les approbateurs
 
@@ -30,7 +26,7 @@ Deux règles peuvent partager le même maximum d'utilisateurs, ce qui vous perme
 
 ### Pas de chevauchement des utilisateurs joignables
 
-Vous ne pouvez pas définir de règles avec un nombre d'utilisateurs qui se chevauchent pour le même type de message. Par exemple, la règle d'envoi de messages suivante **ne peut pas** être définie : 
+Pour éviter toute confusion, vous ne pouvez pas définir des règles identiques avec un nombre d'utilisateurs qui se chevauchent pour le même type de message et les mêmes approbateurs. Par exemple, la règle d'envoi de messages suivante **ne peut pas** être définie : 
 
 - Règle C pour les canvas avec un maximum de 10 000 utilisateurs 
 - Règle D pour les canvas avec un maximum de 1 000 000 d'utilisateurs
@@ -62,10 +58,10 @@ Sélectionnez **Autoriser le lancement avec approbation.** Ensuite, pour **Avec 
 
 Notez les détails suivants sur l'envoi de messages avec approbation :
 
-- Si le maximum est atteint et qu'un approbateur est sélectionné, l'utilisateur de Braze disposant de l'autorisation d'approbation pourra sélectionner **Approuvé** dans le menu déroulant d'approbation de l'**audience cible.** 
-- Si le maximum est atteint et qu'une approbation n'est pas sélectionnée, le Canvas ou la campagne ne pourra pas être lancé.
+- Si le maximum est atteint et qu'un approbateur est sélectionné, l'utilisateur de Braze disposant de l'autorisation d'approbation peut sélectionner **Approuvé** dans le menu déroulant d'approbation de l'**audience cible.** 
+- Si le maximum est atteint et qu'un approbateur n'est pas sélectionné, le canvas ou la campagne ne peut pas être lancé.
 
-![L'étape du canvas qui montre que vous avez besoin d'une approbation pour lancer le processus.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
+![L'étape "Résumé" du flux de travail Canvas qui montre que vous avez besoin d'une approbation pour lancer le processus.]({% image_buster /assets/img/non_approver_banner.png %}){: style="max-width:90%;"}
 
 ## Foire aux questions
 

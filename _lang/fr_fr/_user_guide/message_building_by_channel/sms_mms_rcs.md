@@ -9,7 +9,7 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS, MMS et RCS"
-guide_top_text: "Les SMS (Short Messaging Service), MMS (Multimedia Messaging Service) et RCS (Rich Communication Services) offrent un moyen plus direct d'atteindre vos utilisateurs que la plupart des autres canaux de communication, car ils utilisent leur numéro de téléphone, ce qui vous permet de les joindre en temps réel. Consultez les rubriques suivantes pour commencer à utiliser les SMS, MMS ou RCS de Braze !<br><br>Vous n’êtes pas prêts pour les sujets suivants ? Rendez-vous sur notre ensemble de <a href='/docs/sms_setup/'>configurations SMS</a> pour vous familiariser au fonctionnement des SMS dans Braze. <br><br>**SMS, MMS et RCS ne sont disponibles que dans certaines offres de Braze. Pour démarrer, contactez votre gestionnaire de compte ou votre gestionnaire du succès des clients.**"
+guide_top_text: "Les SMS (Short Messaging Service), MMS (Multimedia Messaging Service) et RCS (Rich Communication Services) offrent un moyen plus direct d'atteindre vos utilisateurs que la plupart des autres canaux de communication, car ils utilisent leur numéro de téléphone, ce qui vous permet de les joindre en temps réel. Consultez les rubriques suivantes pour commencer à utiliser les SMS, MMS ou RCS de Braze !<br><br>Vous n’êtes pas prêts pour les sujets suivants ? Rendez-vous sur notre ensemble de <a href='/docs/about_sms/'>configurations SMS</a> pour vous familiariser au fonctionnement des SMS dans Braze. <br><br>**La disponibilité des MMS, MMS et RCS dépend de votre offre Braze. Contactez votre gestionnaire de compte ou votre responsable satisfaction client pour commencer.**."
 description: "Cette page d'atterrissage abrite les SMS (Short Messaging Service), les MMS (Multimedia Messaging Service) et les RCS (Rich Communication Services). Ces services offrent des moyens plus directs d’atteindre vos utilisateurs que la majorité des autres canaux de communication étant donné qu’ils utilisent leur téléphone personnel pour les atteindre en temps réel."
 
 guide_featured_title: "Articles généraux"
@@ -41,6 +41,9 @@ guide_featured_list:
 - name: "Reporting"
   link: /docs/sms_mms_rcs_reporting/
   image: /assets/img/braze_icons/phone-02.svg
+- name: "Filtrage des clics des robots SMS et RCS"
+  link: /docs/sms_rcs_bot_click_filtering/
+  image: /assets/img/braze_icons/phone-02.svg
 - name: "Calculateurs de facturation"
   link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg
@@ -53,8 +56,11 @@ guide_menu_list:
 - name: "À propos des SMS"
   link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "Configuration de SMS"
-  link: /docs/sms_setup/
+- name: "Conditions générales SMS"
+  link: /docs/sms_terms_to_know/
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "Envoi de message SMS"
+  link: /docs/sms_message_sending/
   image: /assets/img/braze_icons/phone-02.svg
 - name: "Création d'un message SMS"
   link: /docs/create_sms_message/

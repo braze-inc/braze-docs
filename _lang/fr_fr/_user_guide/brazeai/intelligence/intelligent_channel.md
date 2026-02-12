@@ -6,7 +6,7 @@ description: "Le filtre de canal intelligent sélectionne la partie de votre aud
 search_rank: 11
 ---
 
-# [![Cours d’apprentissage Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"}Filtre de canal intelligent
+# [![Cours d'apprentissage de Braze]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/most-engaged-channel){: style="float:right;width:120px;border:0;" class="noimgborder"} Filtre du canal intelligent
 
 > Le filtre `Intelligent Channel` (précédemment `Most Engaged`) sélectionne la partie de votre audience pour laquelle le canal d'envoi de messages sélectionné est leur "meilleur" canal. 
 
@@ -16,7 +16,7 @@ search_rank: 11
 
 Dans ce cas, « le meilleur » signifie le canal qui a la plus forte probabilité d’engagement, compte tenu de l’historique de l’utilisateur. Vous pouvez sélectionner l’e-mail, le SMS, WhatsApp, les notifications push Web ou mobile (incluant tout système d’exploitation ou appareil mobile disponible) en tant que canal.
 
-Le canal intelligent calcule le taux d’engagement pour chaque utilisateur pour chacun des trois canaux en prenant le rapport entre les interactions avec le message (ouverture ou clics) et le nombre de messages reçus au cours des six derniers mois d’activité. Les canaux disponibles sont classés selon leurs taux d’engagement respectifs et le canal ayant le rapport le plus élevé est considéré être celui avec « Le plus d’interactions » pour cet utilisateur. 
+Le canal intelligent calcule le taux d'engagement de chaque utilisateur pour chacun des canaux disponibles en prenant le rapport entre les interactions avec les messages (ouvertures ou clics) et le nombre de messages reçus au cours des six derniers mois d'activité. Les canaux disponibles sont classés selon leurs taux d’engagement respectifs et le canal ayant le rapport le plus élevé est considéré être celui avec « Le plus d’interactions » pour cet utilisateur. 
 
 Chaque fois qu’un message est envoyé à un utilisateur ou qu’un utilisateur interagit avec un message, le rapport d’engagement est recalculé en quelques secondes. Un utilisateur ne peut être compté comme ayant interagi avec un message qu'une seule fois (par exemple, une ouverture et un clic sur le même e-mail feront que ce message sera marqué comme ayant été engagé une seule fois, et non deux). 
 
@@ -28,13 +28,13 @@ Pour calculer le taux d'engagement du canal SMS, activez le [raccourcissement de
 
 ## Option « Données insuffisantes »
 
-Pour que Braze détermine quel canal est « le meilleur », il doit posséder assez de données. Cela signifie qu’un utilisateur doit avoir reçu trois messages au minimum sur au moins deux des trois canaux disponibles. Les messages n’ont pas nécessairement besoin d’avoir été ouverts. 
+Pour que Braze détermine quel canal est « le meilleur », il doit posséder assez de données. Cela signifie qu'un utilisateur doit avoir reçu au moins trois messages par canal sur au moins deux des trois canaux disponibles. Les messages n’ont pas nécessairement besoin d’avoir été ouverts. 
 
 Si les utilisateurs n’ont pas reçu suffisamment de messages sur les différents canaux, ces utilisateurs basculeront dans l’option « Données insuffisantes » de ce filtre. Cela vous permet d’utiliser n’importe lequel des trois canaux de communication disponibles pour cibler ces utilisateurs.
 
 Supposons par exemple que vous souhaitiez que les utilisateurs qui préfèrent des messages de notification push en reçoivent et que les utilisateurs qui ne disposent pas de données suffisantes reçoivent le même message de notification push. Dans ce cas, vous pourriez définir le filtre du canal intelligent sur **Mobile push** et utiliser **OR** pour ajouter un second filtre du canal intelligent défini sur **Not Enough Data.** Une campagne séparée avec le filtre de canal intelligent réglé sur l’envoi par e-mail peut traiter les utilisateurs qui préfèrent recevoir un e-mail.
 
-![Filtres de canaux intelligents pour le push mobile ou pas assez de données.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
+![Filtres de canal intelligents pour le push mobile ou les données insuffisantes.]({% image_buster /assets/img/intelligent_example.png %}){:style="border:none"}
 
 {% alert note %}
 Les campagnes et les étapes du canvas qui ignorent la [limite de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) ne seront pas prises en compte par le canal intelligent et ne pourront pas contribuer aux exigences en matière de données.

@@ -14,7 +14,7 @@ channel:
 
 A Apple oferece um prompt nativo, introduzido com o iOS 10.3, que permite que os usuários avaliem os apps dentro do próprio aplicativo. Se quiser solicitar classificações de app de usuários usando uma mensagem no app no iOS, você deve usar o prompt nativo, pois a Apple não permite prompts de avaliação personalizados (consulte [Diretrizes de avaliação da App Store](https://developer.apple.com/app-store/review/guidelines/#code-of-conduct), seção 5.6.1).
 
-De acordo com as diretrizes da Apple, os avisos de revisão de aplicativos podem ser exibidos a um usuário até três vezes por ano, portanto, qualquer campanha de revisão de aplicativos deve aproveitar o [limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Os usuários também podem optar por não ver os pedidos de aceitação de aplicativos totalmente nas configurações do aplicativo. Para obter mais informações sobre as classificações da App Store, consulte o artigo da Apple sobre [classificações, resenhas e respostas](https://developer.apple.com/app-store/ratings-and-reviews/).
+De acordo com as diretrizes da Apple, os avisos de revisão de aplicativos podem ser exibidos a um usuário até três vezes por ano, portanto, qualquer campanha de revisão de aplicativos deve aproveitar o [limite de frequência]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/). Os usuários também podem optar por não ver os prompts de avaliação de aplicativos completamente nas configurações de seus aplicativos. Para obter mais informações sobre as classificações da App Store, consulte o artigo da Apple sobre [classificações, resenhas e respostas](https://developer.apple.com/app-store/ratings-and-reviews/).
 
 ## Usar o Braze para pedir avaliações de app aos usuários
 
@@ -24,7 +24,7 @@ Embora a Apple exija o uso do prompt nativo, você ainda pode aproveitar as camp
 
 Com essa abordagem, você deseja incentivar os usuários a visitar a App Store para adicionar uma avaliação. Para fazer isso, crie uma campanha de mensagens no app que [faça deep linking]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) para a App Store.
 
-![Duas telas de celular lado a lado. A primeira é uma mensagem no app que pede ao usuário para avaliar o aplicativo na App Store. O segundo é a página do App Store iOS para esse app.]({% image_buster /assets/img_archive/app_store_app_review.png %})
+![Duas telas de celular lado a lado. A primeira é uma mensagem no app que pede ao usuário para avaliar o aplicativo na App Store. A segunda é a página da App Store do iOS para esse app.]({% image_buster /assets/img_archive/app_store_app_review.png %})
 
 ### Abordagem 2: Escorvamento suave
 
@@ -32,7 +32,7 @@ Se não quiser que os usuários saiam do seu app, você pode primeiramente dar a
 
 Para obter informações detalhadas, consulte o [prompt de revisão da Custom App Store]({{site.baseurl}}/developer_guide/in_app_messages/customization/#swift_customizing-the-app-store-review-prompt).
 
-![Duas mensagens no app lado a lado. A primeira prepara o usuário para avaliar o app, perguntando se ele tem um momento para avaliar o aplicativo. O segundo é a mensagem de revisão nativa do App Store iOS, exibindo uma escala de cinco estrelas que o usuário pode selecionar para avaliar o app.]({% image_buster /assets/img_archive/prime_app_review.png %})
+![Duas mensagens no app lado a lado. A primeira prepara o usuário para avaliar o app, perguntando se ele tem um momento para avaliar o aplicativo. A segunda é a mensagem nativa de avaliação da App Store do iOS, que exibe uma escala de cinco estrelas que o usuário pode selecionar para avaliar o app.]({% image_buster /assets/img_archive/prime_app_review.png %})
 
 Os usuários enviarão uma classificação por meio do prompt de avaliação nativo da App Store e poderão escrever e enviar uma avaliação sem sair do app.
 

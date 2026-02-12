@@ -11,7 +11,7 @@ tool: Canvas
 
 # Mensagem 
 
-> As etapas de mensagens permitem que você adicione uma mensagem independente onde quiser no Canvas Flow.
+> As etapas de mensagens permitem que você adicione uma mensagem independente onde quiser no seu Canva.
 
 ![Uma etapa de mensagem chamada "Promoção de almoço" usando o canal de envio de mensagens.]({% image_buster /assets/img/canvas_components/message_step1.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
 
@@ -22,12 +22,13 @@ Para criar um componente Message, primeiro adicione uma etapa do canva. Arraste 
 ### Etapa 1: Selecione seu canal de envio de mensagens
 
 Você pode selecionar entre os seguintes canais de envio de mensagens: 
+- Banners (em acesso antecipado)
 - Cartões de conteúdo
 - E-mail
 - LINE
 - Notificações por push
 - SMS/MMS/RCS
-- Mensagem no app 
+- Mensagem no app
 - Webhook
 - WhatsApp
 
@@ -47,7 +48,7 @@ Selecione **Usar Intelligent Timing** na guia **Configurações de entrega**. Aq
 
 As validações de entrega fornecem uma verificação adicional para confirmar que seu público atende aos critérios de entrega no envio de mensagens. Essa configuração é recomendada se o Horário de silêncio, o Intelligent Timing ou o limite de frequência estiverem ativados. Você pode adicionar um segmento ou filtros adicionais para validar no momento em que a mensagem é enviada. Se um usuário não atender às validações de entrega definidas para uma etapa de mensagens, ele sairá do canva na etapa.
 
-![A guia Configurações de entrega para as configurações do componente Mensagem. O Horário de silêncio está ativado, e a caixa de seleção Usar Intelligent Timing está marcada para entregar a mensagem em um horário ideal. As validações de entrega são ativadas para validar o público no envio de mensagens.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
+![A guia Configurações de entrega para as configurações do componente Mensagem. O Horário de silêncio está ativado, e a caixa de seleção Usar Intelligent Timing está marcada para entregar a mensagem em um horário ideal. As validações de entrega são ativadas para validar o público no envio da mensagem.]({% image_buster /assets/img/canvas_components/message_step4.png %}){: style="max-width:90%;"}
 
 ## Como os usuários avançam
 
@@ -96,13 +97,13 @@ Na primeira etapa de mensagem após uma jornada de ação, você pode usar `even
 Não é possível usar `event_properties` na etapa de envio de mensagens. Em vez disso, você deve usar `canvas_entry_properties` ou adicionar uma etapa de jornadas de ação com o evento correspondente antes da etapa de mensagem que inclui `event_properties`.
 {% endalert %}
 
-{% details Expandir para o editor original do Canva %}
+{% details Expand for original Canvas editor %}
 
-A partir de 28 de fevereiro de 2023, não será mais possível criar ou duplicar canvas usando o editor original. Esta seção está disponível apenas para referência.
+Não é mais possível criar ou duplicar Canvas usando o editor original. Esta seção está disponível apenas para referência.
 
 - `event_properties` não pode ser usado em etapas completas programadas. No entanto, você pode usar `event_properties` na primeira etapa completa de um Canva baseado em ação, mesmo que a etapa completa esteja programada.
 - `canvas_entry_properties` pode ser referenciado somente na primeira etapa completa de um Canvas.
-- Especificamente para canais de envio de mensagens no app, o `canvas_entry_properties` pode ser referenciado no editor do Canvas original se as propriedades de entrada persistente estiverem ativadas como parte do acesso antecipado anterior.
+- Especificamente para os canais de envio de mensagens no app, o `canvas_entry_properties` pode ser referenciado no editor do Canvas original se as propriedades de entrada persistente estiverem ativadas como parte do acesso antecipado anterior.
 
 {% enddetails %}
 

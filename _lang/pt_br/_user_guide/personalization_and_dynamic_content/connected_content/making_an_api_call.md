@@ -6,7 +6,7 @@ description: "Este artigo de referência aborda como fazer uma chamada à API Co
 search_rank: 2
 ---
 
-# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %}](https://learning.braze.com/connected-content) ){: style="float:right;width:120px;border:0;" class="noimgborder"}Fazer uma chamada da API de conteúdo conectado
+# [![Curso do Braze Learning]({% image_buster /assets/img/bl_icon3.png %})](https://learning.braze.com/connected-content){: style="float:right;width:120px;border:0;" class="noimgborder"} Fazer uma chamada à API de conteúdo conectado
 
 > Use o Connected Content para inserir qualquer informação acessível pela API diretamente nas mensagens enviadas aos usuários. Você pode extrair conteúdo diretamente de seu servidor da Web ou de APIs acessíveis publicamente.<br><br>Esta página aborda como fazer chamadas à Connected Content API, casos de uso avançados da Connected Content, tratamento de erros e muito mais.
 
@@ -57,6 +57,10 @@ Se as solicitações ao host de destino forem interrompidas pelo detector de hos
 
 Se achar que a detecção de host não saudável pode estar causando problemas, entre em contato com o [suporte da Braze]({{site.baseurl}}/support_contact/).
 
+{% alert note %}
+Você pode permitir que URLs específicos da lista sejam usados para o Connected Content. Para acessar esse recurso, entre em contato com o gerente de sucesso do cliente.
+{% endalert %}
+
 {% alert tip %}
 Visite [Solução de problemas de solicitações de webhook e Connected Content]({{site.baseurl}}/help/help_articles/api/webhook_connected_content_errors#unhealthy-host-detection) para saber mais sobre como solucionar problemas de códigos de erro comuns.
 {% endalert %}
@@ -69,7 +73,7 @@ Os sistemas Braze podem fazer a mesma chamada à API Connected Content mais de u
 
 ## Coisas para saber
 
-* A Braze não cobra pelas chamadas de API e não será contabilizada em sua cota de dados.
+* O Braze não cobra por chamadas de API e não será contabilizado em seu uso de pontos de dados.
 * Há um limite de 1 MB para as respostas do Connected Content.
 * As chamadas do Connected Content ocorrerão quando a mensagem for enviada, exceto no caso de mensagens no app, que farão essa chamada quando a mensagem for visualizada.
 * As chamadas de Connected Content não seguem redirecionamentos.
@@ -78,13 +82,17 @@ Os sistemas Braze podem fazer a mesma chamada à API Connected Content mais de u
 
 ### Usando a autenticação básica
 
-Se o URL exigir autenticação básica, a Braze poderá gerar uma credencial de autenticação básica para você usar em sua chamada de API. Você pode gerenciar as credenciais de autenticação básica existentes e adicionar novas credenciais em **Settings** > **Connected Content**.
+Se o URL exigir autenticação básica, o Braze poderá armazenar uma credencial de autenticação básica para você usar em sua chamada à API. Você pode gerenciar as credenciais de autenticação básica existentes e adicionar novas credenciais em **Settings** > **Connected Content**.
 
-![As configurações de "Connected Content" no dashboard do Braze.]({% image_buster /assets/img_archive/basic_auth_mgmt.png %})
+![As configurações do Connected Content no dashboard do Braze.]({% image_buster /assets/img/connected_content/basic_auth_mgmt.png %})
 
-Para adicionar uma nova credencial, selecione **Adicionar credencial**. Dê um nome à sua credencial e digite o nome de usuário e a senha.
+Para adicionar uma nova credencial, selecione **Adicionar credencial** > **Autenticação básica**. 
 
-![A janela 'Create New Credential' (Criar nova credencial) com a opção de inserir um nome, um nome de usuário e uma senha.]({% image_buster /assets/img_archive/basic_auth_token.png %}){: style="max-width:30%" }
+![Menu suspenso "Adicionar credencial" com a opção de usar autenticação básica ou autenticação de token.]({% image_buster /assets/img/connected_content/add_credential_button.png %}){: style="max-width:60%"}
+
+Dê um nome à sua credencial e digite o nome de usuário e a senha.
+
+![A janela "Create New Credential" (Criar nova credencial) com a opção de inserir um nome, nome de usuário e senha.]({% image_buster /assets/img/connected_content/basic_auth_token.png %}){: style="max-width:60%"}
 
 Em seguida, você pode usar essa credencial de autenticação básica em suas chamadas de API fazendo referência ao nome do token:
 
@@ -100,18 +108,21 @@ Se você excluir uma credencial, lembre-se de que todas as chamadas de conteúdo
 
 ### Uso de autenticação por token
 
-Ao usar o conteúdo conectado na Braze, você poderá descobrir que certas APIs exigem um token em vez de um nome de usuário e senha. Incluído na chamada a seguir está um trecho de código para fazer referência e modelar suas mensagens.
+Ao usar o conteúdo conectado na Braze, você poderá descobrir que certas APIs exigem um token em vez de um nome de usuário e senha. O Braze também pode armazenar credenciais que contêm valores de cabeçalho de autenticação de token.
+
+Para adicionar uma credencial que contenha valores de token, selecione **Adicionar credencial** > **Autenticação de token**. Em seguida, adicione os pares de valores-chave para seus cabeçalhos de chamada de API e o domínio permitido.
+
+![Um exemplo de token "token_credential_abc" com detalhes de autenticação de token.]({% image_buster /assets/img/connected_content/token_auth.png %}){: style="max-width:60%"}
+
+Em seguida, você pode usar essa credencial em suas chamadas de API fazendo referência ao nome da credencial:
 
 {% raw %}
 ```
 {% assign campaign_name="New Year Sale" %}
 {% connected_content
-     https://your_API_link_here/
+     https://api.endpoint.com/your_path
      :method post
-     :headers {
-       "X-App-Id": "YOUR-APP-ID",
-       "X-App-Token": "YOUR-APP-TOKEN"
-     }
+     :auth_credentials token_credential_abc
      :body campaign={{campaign_name}}&customer={{${user_id}}}&channel=Braze
      :content_type application/json
      :save publication
@@ -132,9 +143,9 @@ O exemplo a seguir ilustra a recuperação e o salvamento de um token de acesso 
 {% connected_content
      https://your_API_access_token_endpoint_here/
      :method post
+     :auth_credentials access_token_credential_abc
      :headers {
-       "Content-Type": "YOUR-CONTENT-TYPE",
-       "Authorization": "Bearer YOUR-APP-TOKEN"
+       "Content-Type": "YOUR-CONTENT-TYPE"
      }
      :cache_max_age 900
      :save token_response
@@ -160,15 +171,36 @@ Depois que o token é salvo, ele pode ser modelado dinamicamente na chamada subs
 ```
 {% endraw %}
 
+### Edição de credenciais
+
+Você pode editar o nome da credencial para os tipos de autenticação.
+
+- Para autenticação básica, é possível atualizar o nome de usuário e a senha. Note que a senha inserida anteriormente não estará visível.
+- Para a autenticação de token, você pode atualizar os pares de valores-chave do cabeçalho e o domínio permitido. Observe que os valores de cabeçalho definidos anteriormente não estarão visíveis.
+
+![A opção de editar credenciais.]({% image_buster /assets/img/connected_content/edit_credentials.png %}){: style="max-width:60%"}
+
 ## Lista de permissões de IP de conteúdo conectado
 
-Quando uma mensagem usando Conteúdo Conectado é enviada pelo Braze, os servidores do Braze automaticamente fazem solicitações de rede aos servidores de nossos clientes ou de terceiros para extrair dados. Com a lista de permissões de IP, você pode verificar se as solicitações de conteúdo conectado estão realmente vindo da Braze, acrescentando uma camada adicional de segurança.
+Quando uma mensagem usando Conteúdo Conectado é enviada pelo Braze, os servidores do Braze automaticamente fazem solicitações de rede aos servidores de nossos clientes ou de terceiros para extrair dados. Com a lista de permissões de IP, você pode verificar se as solicitações de Connected Content estão realmente vindo do Braze, adicionando uma camada de segurança.
 
 A Braze enviará solicitações de conteúdo conectado dos seguintes intervalos de IP. Os intervalos listados são automática e dinamicamente adicionados a quaisquer chaves de API que tenham sido aceitas para a listagem de permissões. 
 
-A Braze tem um conjunto reservado de IPs usados para todos os serviços, sendo que nem todos estão ativos em um determinado momento. Isso foi projetado para que a Braze envie de um data center diferente ou faça manutenção, se necessário, sem afetar os clientes. A Braze poderá usar um, um subconjunto ou todos os seguintes IPs listados ao fazer solicitações de conteúdo conectado.
+A Braze tem um conjunto reservado de IPs usados para todos os serviços, sendo que nem todos estão ativos em um determinado momento. Isso foi projetado para que a Braze possa enviar de um data center diferente ou fazer manutenção, se necessário, sem afetar os clientes. A Braze poderá usar um, um subconjunto ou todos os seguintes IPs listados ao fazer solicitações de conteúdo conectado.
 
 {% multi_lang_include data_centers.md datacenters='ips' %}
+
+### `User-Agent` cabeçalho
+
+O Braze inclui um cabeçalho `User-Agent` em todas as solicitações de Connected Content e webhook que é semelhante ao seguinte:
+
+```text
+Braze Sender 75e404755ae1270441f07eb238f0faf25e44dfdc
+```
+
+{% alert tip %}
+Lembre-se de que o valor do hash muda regularmente. Se você estiver filtrando o tráfego por `User-Agent`, permita todos os valores que começam com `Braze Sender`.
+{% endalert %}
 
 ## Solução de problemas
 
@@ -194,7 +226,11 @@ O Connected Content não tem seu próprio limite de frequência. Em vez disso, o
 ### O que é comportamento de cache?
 
 Por padrão, as solicitações POST não são armazenadas em cache. No entanto, você pode adicionar o parâmetro `:cache_max_age` para forçar a chamada POST para o cache.
+
 O armazenamento em cache pode ajudar a reduzir as chamadas duplicadas do Connected Content. No entanto, não é garantido que isso sempre resulte em uma única chamada de Connected Content por usuário.
 
+### Qual é o comportamento padrão do Connected Content HTTP? 
 
-[16]: [success@braze.com](mailto:success@braze.com)
+{% multi_lang_include connected_content.md section='default behavior' %}
+
+{% multi_lang_include connected_content.md section='http post' %}

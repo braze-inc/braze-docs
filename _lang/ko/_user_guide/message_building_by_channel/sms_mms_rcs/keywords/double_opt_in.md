@@ -12,7 +12,7 @@ channel:
 
 # 이중 옵트인
 
-> 더블 옵트인 기능은 사용자가 SMS, MMS 또는 RCS 메시지를 받을 수 있도록 하기 전에 명시적으로 옵트인 의사를 확인하도록 요구할 수 있게 해줍니다. 이는 채널에 참여할 가능성이 있는 사용자 또는 이미 참여하고 있는 사용자에게 초점을 맞추고, 준수 모범 사례를 따르는 데 도움이 됩니다.
+> 이중 옵트인 기능은 사용자가 SMS, MMS 또는 RCS 메시지를 받을 수 있도록 하기 전에 명시적으로 옵트인 의도를 확인해야 합니다. 이는 참여한 사용자에게 메시징을 집중하고 준수 모범 사례를 지원합니다.
 
 더블 옵트인이 활성화되면, 사용자는 캠페인이나 캔버스에서 메시지를 받을 수 있도록 하기 전에 명시적인 동의를 요청하는 메시지를 받습니다. 
 
@@ -26,13 +26,13 @@ channel:
 
 사용자가 전화번호를 제공하면, 동의를 요청하는 메시지가 전송됩니다.
 
-![브랜드 문자 메시지의 스크린샷, "BRAND 문자 업데이트에 오신 것을 환영합니다!" 최신 제안을 위해 주당 1개의 메시지. "Y"라고 답장하여 옵트인합니다."Y"라고 답장하는 사용자와 "감사합니다!"라고 응답하는 브랜드. 이제 BRAND 알림을 수신하도록 옵트인했습니다. 여기 첫 구매 시 10% 할인 코드 SMS10이 있습니다!"]({% image_buster /assets/img/double_opt_in_outbound.png %}){:style="max-width:40%;"}
+![브랜드 문자 메시지의 스크린샷, "BRAND 문자 업데이트에 오신 것을 환영합니다!" 최신 제안을 위해 주당 1개의 메시지. "Y"라고 답장하여 옵트인합니다."Y"라고 답장하는 사용자와 "감사합니다!"라고 응답하는 브랜드. 이제 BRAND 알림을 수신하도록 옵트인했습니다. 여기 첫 구매 시 10% 할인을 위한 프로모션 코드 SMS10이 있습니다!"]({% image_buster /assets/img/double_opt_in_outbound.png %}){:style="max-width:40%;"}
 
 ### 인바운드
 
 사용자가 옵트인 키워드를 포함한 메시지를 보내면, 동의를 요청하는 메시지가 전송됩니다.
 
-![사용자가 "JOIN"을 보내고 "우리 SMS 프로그램에 가입하려면 Y를 회신하세요."라는 응답을 받는 수신 SMS 메시지의 스크린샷. 주 3회 메시지, 언제든지 STOP을 입력하여 중지할 수 있으며, 그 후 "Y"를 다시 입력하십시오.]({% image_buster /assets/img/double_opt_in_inbound.png %}){:style="max-width:40%;"}
+![사용자가 "JOIN"을 보내고 "우리 SMS 프로그램에 가입하려면 Y를 회신하세요."라는 응답을 받는 수신 SMS 메시지의 스크린샷. 주당 3개의 메시지, 언제든지 STOP을 문자로 보내 STOP, 그런 다음 "Y"로 문자 회신.]({% image_buster /assets/img/double_opt_in_inbound.png %}){:style="max-width:40%;"}
 
 ## 더블 옵트인 활성화
 
@@ -45,16 +45,16 @@ channel:
 | 카테고리   |    필드    | 설명   
 | ----------- |----------- |---------------- 
 | 옵트인 안내 | 키워드 | 사용자가 옵트인 의도를 나타내기 위해 문자로 보낼 수 있는 키워드입니다. `START`은(는) 필수 키워드입니다. 이 옵트인 안내는 [구독 소스](#subscription-sources) 섹션에 나열된 소스에 의해 구독 상태가 업데이트될 때 사용자에게도 전송됩니다.
-| | 회신 메시지 | 이것은 사용자가 옵트인 키워드(예: "이 번호로부터 메시지를 받으려면 Y로 회신하십시오.")를 문자로 보낸 후 받게 되는 초기 응답입니다. 메시지 및 데이터 요금이 적용될 수 있습니다."
+| | 회신 메시지 | 이것은 사용자가 옵트인 키워드(예: "이 번호로부터 메시지를 받으려면 Y로 회신하십시오.")를 문자로 보낸 후 받게 되는 초기 응답입니다. Msg&Data 요금이 적용될 수 있습니다.” )
 | 이중 옵트인 확인 | 키워드 | 이것들은 사용자가 옵트인 의도를 확인하기 위해 응답할 수 있는 키워드입니다. 적어도 하나의 키워드가 필요합니다. 이 키워드는 **옵트인 안내 응답 메시지** 필드에 지정해야 합니다.
 | | 회신 메시지 | 이는 사용자가 명시적으로 옵트인을 확인한 후 받게 되는 확인 응답입니다. 사용자의 구독 그룹 상태는 `Subscribed`로 설정됩니다.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 role="presentation" }
 
 사용자가 옵트인 안내를 받으면, 옵트인 의도를 확인하는 데 30일이 있습니다. 사용자가 30일 후에 가입하려면, 더블 옵트인 워크플로를 다시 시작하기 위해 옵트인 키워드를 문자로 보내야 합니다.
 
-![구성 가능한 필드는 두 개의 섹션, 옵트인 안내 및 더블 옵트인 확인으로 나뉘며, 각 섹션에는 키워드 및 응답 메시지 필드가 있습니다.]({% image_buster /assets/img/double_opt_in_fields.png %})
+![구성 가능한 필드는 옵트인 안내 및 더블 옵트인 확인의 두 섹션으로 나뉘며, 각 섹션에는 키워드 및 회신 메시지 필드가 있습니다.]({% image_buster /assets/img/double_opt_in_fields.png %})
 
-## 구독 그룹 상태
+## Subscription group status
 
 사용자가 더블 옵트인 워크플로를 완료한 후에만 그들의 [subscription group status]({{site.baseurl}}/sms_rcs_subscription_groups/)가 `Subscribed`로 업데이트됩니다. 사용자가 워크플로를 시작하지만 완료하지 않으면, 그들은 `Unsubscribed` 상태로 남아 해당 구독 그룹에서 메시지를 받을 수 없습니다.
 
@@ -69,7 +69,7 @@ channel:
 소스    | 더블 옵트인 등록 행동   
 ----------- | -----------
 SDK | 사용자는 Braze SDK를 통해 구독할 때 자동으로 이중 옵트인 워크플로에 들어갑니다.
-REST API | 사용자는 구독 상태가 `/subscription/status/set`, `/v2/subscription/status/set` 또는 `/users/track`을 통해 설정되고 선택적 매개변수 `use_double_opt_in_logic`가 `true`로 전달될 때 워크플로에 들어갈 수 있습니다 (예: [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "subscribed", "use_double_opt_in_logic": true}]). 이 매개변수가 생략되면 사용자는 이중 옵트인 워크플로에 들어가지 않습니다.
+REST API | 사용자는 구독 상태가 `/subscription/status/set`, `/v2/subscription/status/set` 또는 `/users/track`을 통해 설정되고 선택적 매개변수 `use_double_opt_in_logic`가 `true`로 전달될 때 워크플로우에 입력될 수 있습니다 (예: [{"subscription_group_id" : "subscription_group_identifier", "subscription_state" : "구독됨", "use_double_opt_in_logic": true}]). 이 매개변수가 생략되면 사용자는 이중 옵트인 워크플로에 들어가지 않습니다.
 Shopify | 사용자의 구독 상태가 Shopify 통합에 의해 설정될 때 사용자는 이중 옵트인 워크플로에 들어가지 않습니다.
 사용자 가져오기 | 사용자의 구독 상태가 사용자 가져오기에 의해 설정될 때 사용자는 이중 옵트인 워크플로에 들어가지 않습니다.
 [환경설정 센터]({{site.baseurl}}/user_guide/message_building_by_channel/email/preference_center) | 사용자는 선호 센터를 통해 구독할 때 자동으로 이중 옵트인 워크플로에 들어갑니다.

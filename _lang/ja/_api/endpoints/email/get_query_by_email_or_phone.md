@@ -1,5 +1,5 @@
 ---
-nav_title: "取得:メールアドレスまたは電話番号でサブスクリプションの状態をリストする"
+nav_title: "取得:サブスクリプションの状態をEメールアドレスまたは電話番号でリストする"
 article_title: "取得:メールアドレスまたは電話番号でサブスクリプションの状態をリストする"
 search_tag: Endpoint
 page_order: 2
@@ -19,7 +19,7 @@ description: "この記事では、メールアドレスまたは電話番号を
 
 ## リクエストパラメーター
 
-| パラメーター | required | データ型 | 説明 |
+| パラメーター | 必須かどうか | データ型 | 説明 |
 | --- | --- | --- | --- |
 | `email` | はい | 文字列 | ユーザーのメールアドレス （最低1個、最大50個のアドレスを含むこと）。 |
 | `phone` | はい | 文字列 | ユーザーの電話番号 （最低1個、最大50個の電話番号を含むこと）。これは、E.164 形式で指定することをお勧めします。 |
@@ -36,8 +36,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/users/subscriptions
 エントリは降順で表示されます。
 
 ```json
-Content-Type: application/json
-Authorization: Bearer YOUR-REST-API-KEY
 {
   "emails": [
     {

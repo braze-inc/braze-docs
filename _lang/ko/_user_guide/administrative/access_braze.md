@@ -11,18 +11,15 @@ description: "이 랜딩 페이지에는 Braze 계정 또는 대시보드에 액
 
 guide_featured_title: "섹션 기사"
 guide_featured_list:
-- name: Navigating Braze
-  link: /docs/user_guide/administrative/access_braze/navigation/
-  image: /assets/img/braze_icons/list.svg
-- name: 대시보드 검색
-  link: /docs/user_guide/administrative/access_braze/global_search/
-  image: /assets/img/braze_icons/search-sm.svg
+- name: 계정에 액세스
+  link: /docs/user_guide/administrative/access_braze/accessing_your_account/
+  image: /assets/img/braze_icons/user-circle.svg
+- name: Braze 대시보드
+  link: /docs/user_guide/administrative/access_braze/braze_dashboard/
+  image: /assets/img/braze_icons/browser.svg
 - name: API 및 SDK 엔드포인트
   link: /docs/user_guide/administrative/access_braze/sdk_endpoints/
   image: /assets/img/braze_icons/navigation-pointer-01.svg
-- name: 계정 액세스하기
-  link: /docs/user_guide/administrative/access_braze/accessing_your_account/
-  image: /assets/img/braze_icons/user-circle.svg
 - name: 언어 설정
   link: /docs/user_guide/administrative/access_braze/language/
   image: /assets/img/braze_icons/globe-04.svg

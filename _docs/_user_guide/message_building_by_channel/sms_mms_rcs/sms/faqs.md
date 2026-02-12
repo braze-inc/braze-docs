@@ -81,7 +81,7 @@ Some downsides to this approach include:
 
 ### How do you allowlist URLs for SMS?
 
-Before sending SMS messages containing URLs to users in certain countries (for example, Sweden or Nordic countries), you must get these URLs registered with the carrier. Reach out to your Braze customer service manager to help. This process will take around five days.  
+Before sending SMS messages containing URLs to users in certain countries (for example, Sweden or Nordic countries), you must get these URLs registered with the carrier. Contact your Braze customer service manager to help. This process will take around five days.  
 
 ### What happens if multiple users have the same phone number?
 
@@ -102,6 +102,8 @@ If you receive a "START" or "STOP" keyword from the shared phone number, all use
 If you stagger your users into a Canvas and have different schedule times for each Canvas component, you can send a user with the same email or phone duplicate messages. 
 {% endalert %}
 
+To prevent unnecessarily large updates, Braze will update a maximum of 100 user profiles that share an identifier when a subscription update is made. If more than 100 user profiles share the same phone number, not all profiles will be updated.
+
 ### Will SMS event properties capture keywords in a sentence?
 
 For a keyword to be recognized within a sentence, (for example, "please stop texting me"), you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256; otherwise, there is no character limit.
@@ -118,7 +120,7 @@ You can find your `app_id` by navigating to **Settings** > **App Settings** and 
 
 ### How will I be billed for SMS?
 
-Besides the charges for short and long codes, Braze provides an allotment of SMS messages for different countries. That is, we work with you to set a certain number of message segments for different countries, which you'll use to send SMS campaigns. Billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. Your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help keep you informed. For further questions regarding overages, reach out to your Braze representative.
+Besides the charges for short and long codes, Braze provides an allotment of SMS messages for different countries. That is, we work with you to set a certain number of message segments for different countries, which you'll use to send SMS campaigns. Billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. Your account manager will contact you to let you know if you are close to reaching your maximum, providing relevant reports to help keep you informed. For further questions regarding overages, contact your Braze representative.
 
 ### If a message is sent to a landline, will the message still count toward my SMS send count?
 
@@ -131,4 +133,4 @@ In other countries:
 
 ### If a user is opted out and sends a keyword to our short and long code, do they receive the response we configured for that keyword in Braze?
 
-If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), they will not receive the response for that keyword. 
+If a user is opted out and sends a keyword from one of the [default keyword categories]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/optin_optout/), they will receive the response for that keyword. If a user is opted out and sends a [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms_mms_rcs/keywords/keyword_handling/), they will not receive the response for that keyword.

@@ -1,6 +1,6 @@
 ---
-nav_title: Editar la campaña después del lanzamiento
-article_title: Editar la campaña después del lanzamiento
+nav_title: Edita tu campaña después del lanzamiento
+article_title: Edita tu campaña después del lanzamiento
 page_order: 1
 tool: Campaigns
 page_type: reference
@@ -8,7 +8,7 @@ description: "Este artículo de referencia ofrece una visión general del result
 
 ---
 
-# Editar la campaña después del lanzamiento
+# Edita tu campaña después del lanzamiento
 
 > Este artículo ofrece una visión general del resultado de editar ciertos aspectos de una campaña tras su lanzamiento.
 
@@ -34,7 +34,7 @@ Si necesita realizar cambios en una campaña después de su lanzamiento, tenga e
 
 ### Contenido del mensaje
 
-Cualquier cambio en el contenido de los mensajes (incluidos títulos, cuerpos e imágenes) surtirá efecto inmediatamente al guardarlos para todos los envíos de mensajes en adelante. No es posible modificar el contenido de los mensajes que ya han sido enviados.
+Cualquier cambio en el contenido de los mensajes (incluyendo títulos, cuerpos e imágenes) surtirá efecto inmediatamente al guardarlos para todos los envíos de mensajes en adelante. No es posible modificar el contenido de los mensajes que ya han sido enviados.
 
 ### Programación y audiencia
 

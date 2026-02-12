@@ -22,7 +22,7 @@ Non, les groupes de contrôle dans les campagnes sont destinés aux messages à 
 
 ### Comment puis-je commencer à tester et optimiser les campagnes ?
 
-Les campagnes multivariées et l’exécution de Canvas avec plusieurs variantes sont un excellent moyen de commencer ! Par exemple, vous pouvez lancer une [campagne multivariée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour tester un message qui a différentes copies ou lignes d'objet. Les toiles comportant plusieurs variantes peuvent permettre de tester des flux de travail entiers.
+Les campagnes multivariées et l’exécution de Canvas avec plusieurs variantes sont un excellent moyen de commencer ! Par exemple, vous pouvez lancer une [campagne multivariée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour tester un message avec différentes copies ou lignes d'objet. Les toiles comportant plusieurs variantes peuvent permettre de tester des flux de travail entiers.
 
 ### Pourquoi le taux d’ouverture de ma campagne a-t-il baissé ?
 
@@ -37,6 +37,12 @@ Par défaut, les campagnes vérifient les filtres d’audience lors de l’entr�
 Une explication possible pourrait être que la campagne ou Canvas a activé la rééligibilité, ce qui signifie que les utilisateurs qui se qualifient pour le segment et les paramètres de réception/distribution seront en mesure de recevoir le message plus d'une fois. Si la rééligibilité n’est pas activée, l’explication probable de la différence entre les envois et les destinataires uniques peut venir des utilisateurs ayant plusieurs appareils, sur plusieurs plates-formes, associés à leurs profils. 
 
 Par exemple, si vous avez un Canvas qui dispose à la fois d’une notification push iOS et Web, un utilisateur donné possédant à la fois un téléphone et un ordinateur de bureau peut recevoir plus d’un message.
+
+### Pourquoi le nombre de conversions peut-il dépasser le nombre d'utilisateurs uniques pour les campagnes multicanal ?
+
+Pour les campagnes multicanal, Braze comptabilise les conversions par canal, et non par utilisateur. Lorsqu'un utilisateur effectue une action de conversion unique dans la fenêtre de conversion, Braze attribue cette conversion à chaque canal dont l'utilisateur a reçu un message. Cela signifie que si un utilisateur reçoit des messages sur plusieurs canaux (par exemple, à la fois par e-mail et par push) et qu'il se convertit, Braze comptabilise plusieurs conversions, une pour chaque canal. Par conséquent, le nombre total de conversions peut dépasser le nombre d'utilisateurs uniques qui se sont convertis.
+
+Par exemple, si une campagne multicanale envoie à la fois un e-mail et une notification push à un utilisateur, et que cet utilisateur effectue une action de conversion après avoir reçu les deux messages et dans la fenêtre de conversion, Braze comptabilise cela comme deux conversions, l'une attribuée à l'e-mail et l'autre au push, même s'il s'agit d'une seule action effectuée par le même utilisateur.
 
 ### Pourquoi ma campagne a-t-elle une plus petite base d’utilisateurs accessible que le segment que j’utilise pour cette campagne ?
 
@@ -137,6 +143,14 @@ Sélectionner l'option **Adresses e-mail d'exportation CSV** ne téléchargera q
 
 Oui, utilisez le filtre `api_id:YOUR_API_ID` sur la page **Campagnes** pour rechercher une campagne par son identifiant API. Pour en savoir plus, reportez-vous à [Rechercher des campagnes]({{site.baseurl}}/user_guide/engagement_tools/campaigns/managing_campaigns/search_campaigns/).
 
+### Pourquoi les espaces blancs apparaissent-ils différemment dans les champs de saisie et dans le texte affiché ? 
+
+La gestion des espaces blancs diffère entre les champs de saisie et les composants de texte affichés en raison du style CSS. Dans les composants de texte avec le CSS par défaut `white-space: normal`, plusieurs espaces consécutifs se réduisent en un seul espace lors de l'affichage. Il s'agit d'un comportement HTML standard pour le texte rendu. 
+
+Les champs de saisie conservent les espaces multiples exactement comme vous les saisissez, car vous devez voir et modifier l'espacement exact pour une saisie précise des données. Cela signifie qu'un texte comportant plusieurs espaces peut apparaître différemment lorsqu'il est affiché dans un champ de saisie (où tous les espaces sont préservés) et lorsqu'il est affiché dans d'autres parties du tableau de bord (où le CSS peut réduire les espaces multiples). 
+
+Par exemple, si vous saisissez un nom de campagne ou un paramètre UTM avec plusieurs espaces dans un champ de saisie, vous voyez tous les espaces préservés. Toutefois, lorsque ce même texte apparaît dans les résultats de recherche, les listes de campagne ou d'autres composants textuels, plusieurs espaces peuvent apparaître comme un seul espace en raison de la gestion des espaces blancs par le CSS. 
+
 ### Quelle est la différence entre les campagnes API et les campagnes déclenchées par l'API ?
 
 Les campagnes déclenchées par API vous permettent de gérer le texte de la campagne, les tests multivariés et les règles de rééligibilité dans le tableau de bord de Braze, tout en déclenchant la réception/distribution de ce contenu à partir de vos propres serveurs et systèmes. Ces messages peuvent également contenir des données supplémentaires à intégrer en temps réel dans les messages.
@@ -169,6 +183,6 @@ Les campagnes déclenchées par l'API et par le serveur sont idéales pour trait
 
 | Avantages | Considérations | 
 | ---- | ---- |
-| • N’utilise pas de points de données<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement | • Ne vous permet pas de créer un segment d’utilisateurs éligibles au message dans les propriétés de la charge utile JSON<br><br>\- Impossible de voir les charges utiles JSON entrantes avec le **journal d'activité des messages**|
+| \- N'enregistre pas de points de données<br><br>• Les éléments de personnalisation sont compris dans les propriétés de l’événement | • Ne vous permet pas de créer un segment d’utilisateurs éligibles au message dans les propriétés de la charge utile JSON<br><br>\- Impossible de voir les charges utiles JSON entrantes avec le **journal d'activité des messages**|
 {: .reset-td-br-1 .reset-td-br-2 role="presentation" }
 

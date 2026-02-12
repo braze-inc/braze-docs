@@ -1,5 +1,5 @@
 ---
-nav_title: 캠페인 예약하기
+nav_title: Schedule your campaign
 article_title: 캠페인 예약하기
 layout: dev_guide
 page_order: 3

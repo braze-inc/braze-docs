@@ -4,6 +4,7 @@ article_title: Groupes d’abonnement WhatsApp
 page_order: 1
 description: "Cet article décrit les groupes d’abonnement WhatsApp, quels états d’abonnement sont proposés et comment les groupes d’abonnement sont définis."
 page_type: reference
+alias: /whatsapp_subscription_groups/
 channel:
   - WhatsApp
  
@@ -47,7 +48,7 @@ Quelles que soient les méthodes d'abonnement et de désabonnement que vous util
 
 - Créez un [webhook Braze à Braze]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/braze_to_braze_webhooks/#things-to-know) qui met à jour le statut de l'abonnement via l'API REST, comme dans l'exemple suivant :
 
-![Webhook composer avec un message en utilisant la méthode POST.]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
+![Composer un webhook avec un message en utilisant la méthode POST.]({% image_buster /assets/img/whatsapp/whatsapp118.png %}){: style="max-width:90%;"}
 
 Pour éviter les conditions de concurrence, tout envoi de messages de suivi après le webhook doit être contenu dans un second Canvas qui est déclenché par les résultats du premier Canvas (par exemple, un utilisateur est entré dans une variation du Canvas et fait partie d'un groupe d'abonnement WhatsApp).
 
@@ -75,7 +76,7 @@ Pour éviter les conditions de concurrence, tout envoi de messages de suivi apr�
 	}
 	```
 
-![Étape de mise à jour de l'utilisateur avec une étape d'éditeur JSON avancé.]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
+![L'étape de mise à jour de l'utilisateur avec une étape d'éditeur JSON avancé.]({% image_buster /assets/img/whatsapp/whatsapp_json_editor.png %}){: style="max-width:90%;"}
 
 {% alert note %}
 La mise à jour du statut d’abonnement d'un utilisateur peut prendre jusqu'à 60 secondes.

@@ -9,12 +9,12 @@ channel:
   - RCS
 search_rank: 3
 guide_top_header: "SMS, MMS e RCS"
-guide_top_text: "SMS (Serviço de Mensagens Curtas), MMS (Serviço de Mensagens Multimídia) e RCS (Serviços de Comunicação Ricos) oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de mensagens, pois utilizam o número de telefone deles, permitindo que você os alcance em tempo real. Confira os seguintes tópicos para começar com Braze SMS, MMS ou RCS!<br><br>Não está preparado para nenhum dos tópicos a seguir? Acesse nossa coleção de <a href='/docs/sms_setup/'>configurações de SMS</a> para conhecer o SMS no Braze. <br><br>**SMS, MMS e RCS estão disponíveis apenas em pacotes selecionados do Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar."
-description: "Esta landing page é o lar do SMS (Serviço de Mensagens Curtas), MMS (Serviço de Mensagens Multimídia) e RCS (Serviços de Comunicação Ricos). Esses serviços oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de envio de mensagens, pois utilizam o número de telefone deles, permitindo que você entre em contato com eles em tempo real."
+guide_top_text: "SMS (Short Messaging Service), MMS (Multimedia Messaging Service) e RCS (Rich Communication Services) oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de envio de mensagens, pois utilizam o número de telefone deles, permitindo que você os alcance em tempo real. Dê uma olhada nos tópicos a seguir para começar a usar o Braze SMS, MMS ou RCS!<br><br>Não está preparado para nenhum dos tópicos a seguir? Acesse nossa coleção de <a href='/docs/about_sms/'>configurações de SMS</a> para conhecer o SMS no Braze. <br><br>**A disponibilidade de SMS, MMS e RCS depende de seu pacote Braze. Entre em contato com seu gerente de conta ou gerente de sucesso do cliente para começar.**"
+description: "Essa landing page contém SMS (Short Messaging Service), MMS (Multimedia Messaging Service) e RCS (Rich Communication Services). Esses serviços oferecem uma maneira mais direta de alcançar seus usuários do que a maioria dos outros canais de envio de mensagens, pois utilizam o número de telefone deles, permitindo que você entre em contato com eles em tempo real."
 
 guide_featured_title: "Artigos gerais"
 guide_featured_list:
-- name: "Leis e Regulamentações"
+- name: "Leis e regulamentos"
   link: /docs/sms_mms_rcs_laws/
   image: /assets/img/braze_icons/briefcase-02.svg
 - name: "Grupos de inscrições"
@@ -41,7 +41,10 @@ guide_featured_list:
 - name: "Relatórios"
   link: /docs/sms_mms_rcs_reporting/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "Calculadoras de Cobrança"
+- name: "Filtragem de cliques de bots de SMS e RCS"
+  link: /docs/sms_rcs_bot_click_filtering/
+  image: /assets/img/braze_icons/phone-02.svg
+- name: "Calculadoras de faturamento"
   link: /docs/sms_rcs_billing_calculators/
   image: /assets/img/braze_icons/calculator.svg
 - name: "Painel de Uso de Mensagens"
@@ -53,10 +56,13 @@ guide_menu_list:
 - name: "Sobre a SMS"
   link: /docs/about_sms/
   image: /assets/img/braze_icons/check-square-broken.svg
-- name: "Configuração de SMS"
-  link: /docs/sms_setup/
+- name: "Termos importantes de SMS"
+  link: /docs/sms_terms_to_know/
+  image: /assets/img/braze_icons/book-closed.svg
+- name: "Envio de mensagens SMS"
+  link: /docs/sms_message_sending/
   image: /assets/img/braze_icons/phone-02.svg
-- name: "Criando uma Mensagem SMS"
+- name: "Criação de um envio de mensagens SMS"
   link: /docs/create_sms_message/
   image: /assets/img/braze_icons/table.svg
 - name: "Perguntas frequentes sobre SMS"
@@ -83,10 +89,10 @@ guide_menu_list2:
 
 guide_menu_title3: "RCS"
 guide_menu_list3:
-- name: "Sobre RCS"
+- name: "Sobre a RCS"
   link: /docs/about_rcs/
   image: /assets/img/braze_icons/brush-02.svg
-- name: "Criando uma Campanha RCS"
+- name: "Criação de uma campanha RCS"
   link: /docs/create_rcs_message/
   image: /assets/img/braze_icons/table.svg
 - name: "Configuração do RCS"

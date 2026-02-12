@@ -18,7 +18,7 @@ description: "Esta página de referência aborda como usar o editor de arrastar 
 
 Ao criar uma mensagem no app do tipo arrastar e soltar, selecione **Inscrição para e-mail com desconto de boas-vindas** para o modelo e, em seguida, selecione **Montar mensagem**. Esse modelo é compatível tanto com apps móveis quanto com navegadores da Web.
 
-![O editor de mensagens no app com o modelo para um formulário de envio de e-mail com desconto.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
+![O editor de mensagens no app com o modelo de um formulário de envio de e-mail com desconto.]({% image_buster /assets/img/drag_and_drop/templates/email_capture_discount.png %})
 
 ### Etapa 2: Configure seus estilos de mensagens
 

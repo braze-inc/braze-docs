@@ -14,19 +14,19 @@ channel: email
 
 ## 온보딩
 
-사용자가 온보딩할 때 유용한 팁을 제공하여 사용자가 시작할 수 있도록 돕고 가장 필수적인 기능만 소개하세요. 사용자가 가입한 후에는 항상 환영 이메일을 보내세요. 다음은 간단한 클릭 유도 문안을 포함하고 사용자에게 거래에 대해 알려주는 LivingSocial의 예시입니다:
+사용자가 온보딩할 때 유용한 팁을 제공하여 사용자가 시작할 수 있도록 돕고 가장 필수적인 기능만 소개하세요. 사용자가 가입한 후에는 항상 환영 이메일을 보내세요. 다음은 LivingSocial의 예로, 명확한 행동 촉구가 포함되어 있으며 사용자에게 거래에 대해 알립니다:
 
-![Onboarding email sent from LivingSocial that welcomes new users.]({% image_buster /assets/img_archive/Livingsocial_email.png %}){: style="max-width:70%;"}
+![신규 사용자를 환영하는 리빙소셜에서 보낸 온보딩 이메일입니다.]({% image_buster /assets/img_archive/Livingsocial_email.png %}){: style="max-width:70%;"}
 
 그러나 사용자가 아직 앱에 익숙하지 않은 경우 너무 많은 정보는 압도적이고 혼란스러울 수 있습니다! 앱에 대한 자세한 정보를 소개할 때 설명서 링크를 제공하고 사용자에게 지원을 받을 수 있는 방법을 알려주는 것이 도움이 될 수 있습니다.
 
 ## 영업 및 프로모션
 
-콘텐츠는 할인 및 판매 정보, 혜택 지속 기간 등 프로모션의 가치를 전달해야 합니다. 그래픽을 제공하는 것은 홍보하는 모든 제품을 설명할 수 있는 좋은 방법입니다. 이메일이 복잡해져 사용자가 필수 콘텐츠에 집중하지 못하는 일이 없도록 문구를 간결하고 단순하게 작성하세요. 클릭 유도 문안을 명확하게 작성하고 수신자가 프로모션에 즉시 참여할 수 있는 쉬운 방법을 제공하세요.
+콘텐츠는 할인 및 판매 정보, 혜택 지속 기간 등 프로모션의 가치를 전달해야 합니다. 그래픽을 제공하는 것은 홍보하는 모든 제품을 설명할 수 있는 좋은 방법입니다. 복사본을 간결하고 집중적으로 유지하여 이메일을 혼잡하게 만들지 않고 사용자에게 필수 콘텐츠에서 주의를 분산시키지 않도록 하세요. 클릭 유도 문안을 명확하게 작성하고 수신자가 프로모션에 즉시 참여할 수 있는 쉬운 방법을 제공하세요.
 
 특정 제품을 추천할 때는 사용자가 좋아할 만한 선별된 개인적인 제안으로 제시하세요. 기간 한정 혜택을 홍보하는 경우 사용자에게 반드시 알려주세요! Ideeli는 이 이메일에서 긴박감을 잘 전달합니다:
 
-![Ideeli에서 사용자에게 기간 한정 혜택을 알리는 프로모션 이메일을 보냅니다. 큰 배너에는 "자정(EDT)에 종료됩니다"라는 텍스트가 표시됩니다. 6시간 플래시 세일. 서두르세요! These amazing finds won't last long."]({% image_buster /assets/img_archive/Ideeli_email.png %}){: style="max-width:70%;"}
+![Ideeli에서 사용자에게 기간 한정 혜택을 알리는 프로모션 이메일을 보냅니다. 큰 배너에는 "자정(EDT)에 종료됩니다"라는 텍스트가 표시됩니다. 6시간 플래시 세일. 서두르세요! 이 놀라운 발견은 오래 가지 않을 것입니다."]({% image_buster /assets/img_archive/Ideeli_email.png %}){: style="max-width:70%;"}
 
 ## 트랜잭션
 
@@ -35,9 +35,9 @@ channel: email
 - 배송 확인 및 배송에 대해 질문할 수 있는 방법을 제공합니다.
 - 강요하지 않고 의견을 구하기 위해 피드백 요청하기
 
-방금 사용자에게 서비스를 제공했기 때문에 사용자는 자신의 생각을 공유할 가능성이 더 높을 수 있습니다. 다음은 Restaurant.com에서 보낸 이메일의 예입니다:
+사용자에게 서비스를 제공했기 때문에 그들이 자신의 생각을 공유할 가능성이 더 높습니다. 다음은 Restaurant.com에서 보낸 이메일의 예입니다:
 
-![사용자에게 피드백을 요청하는 트랜잭션 이메일(Restaurants.com)이 전송됩니다. 이메일에는 "모든 것을 알려주세요! REDACTED에서 즐거운 식사와 경험을 하셨기를 바랍니다. 최고의 서비스, 음식, 전반적인 경험을 제공하기 위해 최선을 다할 수 있도록 잠시 시간을 내어 피드백을 보내주시기 바랍니다. 여러분의 의견은 우리에게 매우 소중하며 여러분의 의견에 감사드립니다." The call to action reads "Take Survey".]({% image_buster /assets/img_archive/Restaurant_email.png %}){: style="max-width:80%;"}
+![사용자에게 피드백을 요청하는 트랜잭션 이메일(Restaurants.com)이 전송됩니다. 이메일에는 "모든 것을 알려주세요! REDACTED에서 즐거운 식사와 경험을 하셨기를 바랍니다. 최고의 서비스, 음식, 전반적인 경험을 제공하기 위해 최선을 다할 수 있도록 잠시 시간을 내어 피드백을 보내주시기 바랍니다. 여러분의 의견은 우리에게 매우 소중하며 여러분의 의견에 감사드립니다." 클릭 유도 문안은 "설문조사 참여"입니다.]({% image_buster /assets/img_archive/Restaurant_email.png %}){: style="max-width:80%;"}
 
 ## 리텐션
 
@@ -48,15 +48,15 @@ channel: email
 
 사용자가 여전히 소중하다는 것을 보여주기 위해 메시지를 개인화하세요. 예를 들어, Rue La La는 보존 이메일을 CEO의 메모로 구성합니다.
 
-![고객에게 리텐션 이메일이 발송되며, 여기에는 Rue La La CEO의 개인화된 메시지가 포함되어 있습니다. 이메일에는 "그냥 간단한 인사말입니다. Rue의 CEO로서 저는 회원들과 소통하는 것을 좋아합니다. 대부분 Rue를 얼마나 좋아하는지 말해줍니다. (그리고 저희도 영광입니다.) 하지만 아직은 느끼지 못하는 것 같습니다... 아직은요. 여기서는 교묘하게 말하지 않겠습니다. 디자이너 가방이든, 새 청바지든, 집에 어울리는 멋진 물건이든, 사이트를 둘러보고 마음에 드는 제품을 찾을 수 있도록 25달러 크레딧을 드립니다. 여기서부터 루의 사랑을 느끼실 수 있을 거라 믿습니다. Enjoy!"]({% image_buster /assets/img_archive/Ruelala_email.png %}){: style="max-width:80%;"}
+![고객에게 리텐션 이메일이 발송되며, 여기에는 Rue La La CEO의 개인화된 메시지가 포함되어 있습니다. 이메일에는 "그냥 간단한 인사말입니다. Rue의 CEO로서 저는 회원들과 소통하는 것을 좋아합니다. 대부분 Rue를 얼마나 좋아하는지 말해줍니다. (그리고 저희도 영광입니다.) 하지만 아직은 느끼지 못하는 것 같습니다... 아직은요. 여기서는 교묘하게 말하지 않겠습니다. 디자이너 가방이든, 새 청바지든, 집에 어울리는 멋진 물건이든, 사이트를 둘러보고 마음에 드는 제품을 찾을 수 있도록 25달러 크레딧을 드립니다. 여기서부터 루의 사랑을 느끼실 수 있을 거라 믿습니다. 즐기세요!"]({% image_buster /assets/img_archive/Ruelala_email.png %}){: style="max-width:80%;"}
 
 ## 소셜
 
-이메일은 수신자를 소셜 미디어 플랫폼으로 안내하여 소셜 팬층을 구축하는 데 도움이 됩니다. 사용자가 쉽게 연결할 수 있도록 이메일에 소셜 미디어 계정 링크를 포함하세요.
+이메일은 수신자를 소셜 미디어 플랫폼으로 안내하여 소셜 팬층을 구축할 수 있습니다. 사용자 연결을 간소화하기 위해 소셜 미디어 계정에 대한 링크를 포함하세요.
 
 재미있게 만드세요! 사진 콘테스트를 진행하거나 해시태그를 홍보하거나 경품을 제공하는 것도 좋습니다. 다음은 사진 챌린지 참여에 대한 보상을 제공하는 Hailo의 이메일입니다:
 
-![Social email example from Hailo that notifies their users to participate in a photo challenge.]({% image_buster /assets/img_archive/Hailo_social_email.png %}){: style="max-width:70%;"}
+![사용자에게 사진 챌린지 참여를 알리는 Hailo의 소셜 이메일 예시입니다.]({% image_buster /assets/img_archive/Hailo_social_email.png %}){: style="max-width:70%;"}
 
 ## 업데이트
 
@@ -64,6 +64,6 @@ channel: email
 
 기능에 대한 설명이나 데모가 필요한 경우 메시지에 링크를 포함하세요. 다음은 Allrecipes.com 의 예입니다:
 
-![사용자에게 새로운 기능을 알리는 Allrecipes의 업데이트 중심 이메일 예시입니다. 이메일 상단에는 "너무. 많은. 비밀번호. 비밀번호에 지치셨나요? 충분히 이해합니다." The email body directs users to sign in with Facebook or Google plus, with a call to action of "See How".]({% image_buster /assets/img_archive/Allrecipes_email.png %}){: style="max-width:70%;"}
+![사용자에게 새로운 기능을 알리는 Allrecipes의 업데이트 중심 이메일 예시입니다. 이메일 상단에는 "너무. 많은. 비밀번호. 비밀번호에 지치셨나요? 충분히 이해합니다." 이메일 본문에는 "방법 보기"라는 클릭 유도 문안과 함께 사용자에게 Facebook 또는 Google 플러스로 로그인하도록 안내합니다.]({% image_buster /assets/img_archive/Allrecipes_email.png %}){: style="max-width:70%;"}
 
 

@@ -19,7 +19,7 @@ description: "Este artículo de referencia contiene información importante para
 
 Para acceder a esta página, vaya a **Configuración** > **Configuración de administración** > **Información de contacto**.
 
-En esta página puede gestionar la información de contacto y la zona horaria de su empresa. Asegúrate de pulsar **Guardar** antes de salir de la página.
+En esta página puede gestionar la información de contacto y la zona horaria de su empresa. Asegúrate de seleccionar **Guardar** antes de salir de la página.
 
 ## Consecuencias del cambio de huso horario
 

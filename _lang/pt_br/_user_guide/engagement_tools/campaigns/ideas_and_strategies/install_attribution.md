@@ -23,7 +23,7 @@ Depois que o usuário instala o app, você pode começar a segmentá-lo com base
 
 ### Integração personalizada
 
-Agora que você tem mais informações sobre o usuário, pode personalizar o processo de integração dele. Isso pode ser tão simples quanto alterar as imagens em suas mensagens para que se ajustem às preferências do usuário ou tão complexo quanto criar uma integração de usuário exclusiva para cada anúncio que possa levar a uma instalação. Para dimensionar uma sequência de mensagens totalmente abrangente que possa levar em consideração o comportamento do usuário, consulte nossa documentação sobre o [Canva]({{site.baseurl}}/developer_guide/rest_api/messaging/#canvas).
+Agora que você tem mais informações sobre o usuário, pode personalizar o processo de integração dele. Isso pode ser tão simples quanto alterar as imagens em suas mensagens para que se ajustem às preferências do usuário ou tão complexo quanto criar uma integração de usuário exclusiva para cada anúncio que possa levar a uma instalação. Para escalar uma sequência de mensagens totalmente abrangente que pode levar em consideração o comportamento do usuário, consulte nossa documentação sobre [canva]({{site.baseurl}}/developer_guide/rest_api/messaging/#canvas).
 
 ### Dados de referência do anúncio
 

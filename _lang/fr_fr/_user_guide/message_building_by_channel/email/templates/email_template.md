@@ -1,6 +1,6 @@
 ---
-nav_title: Création d’un modèle d’e-mail
-article_title: Création d’un modèle d’e-mail
+nav_title: "Créer un modèle d'e-mail"
+article_title: Créer un modèle d’e-mail
 page_order: 0
 description: "Le présent article de référence explique comment créer, personnaliser et gérer des modèles d’e-mail."
 tool:
@@ -11,7 +11,7 @@ alias: "/dnd/email_template/"
 search_rank: 1
 ---
 
-# Création d’un modèle d’e-mail
+# Créer un modèle d'e-mail
 
 > Le tableau de bord de Braze est doté d’un éditeur de modèles d’e-mails qui vous permet de créer des e-mails personnalisés et attrayants et de les enregistrer pour une utilisation ultérieure dans les campagnes. Vous pouvez également télécharger votre propre [modèle d'e-mail HTML.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/)
 
@@ -19,13 +19,13 @@ search_rank: 1
 
 Allez dans **Modèles** > **Modèles d'e-mail**.
 
-## Étape 2 : Sélectionnez votre expérience en matière de modification 
+## Étape 2 : Sélectionnez votre expérience en matière de modification 
 
 Choisissez entre l'**éditeur par glisser-déposer** et l'**éditeur HTML** pour votre expérience d'édition. 
 
 Ensuite, vous pouvez choisir parmi les modèles prédéfinis de Braze, créer un nouveau modèle ou modifier un modèle existant (simple ou [mobile responsive]({{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates)).
 
-![Un modèle d'e-mail pour les soldes de printemps d'une entreprise, avec des options permettant de sélectionner l'éditeur glisser-déposer ou l'éditeur HTML, ou de choisir parmi les modèles de Braze.]({% image_buster /assets/img/email_templates/template2.png %})
+![Un modèle d'e-mail pour les soldes de printemps d'une entreprise avec des options permettant de sélectionner l'éditeur par glisser-déposer ou l'éditeur HTML, ou de choisir parmi les modèles de Braze.]({% image_buster /assets/img/email_templates/template2.png %})
 
 {% alert note %}
 Tous les modèles HTML personnalisés existants devront être recréés à l'aide de l'éditeur par glisser-déposer.
@@ -43,7 +43,7 @@ Lors de la création de votre modèle d'e-mail, si vous n'incluez pas de lien de
 
 Les erreurs d'e-mail sont présentées dans l'onglet **Composer** du flux de travail du message. Les erreurs vous empêchent de progresser. Les « Avertissements » indiquent des rappels pour vous aider à suivre les meilleures pratiques. Selon votre entreprise, vous pouvez choisir de les ignorer.
 
-![Liste d'erreurs et d'avertissements d'un exemple d'e-mail.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
+![Liste des erreurs et des avertissements d'un exemple d'e-mail.]({% image_buster /assets/img/dnd_compose_error.png %}){: style="float:right;max-width:40%;margin-left:15px;"}
 
 Voici une liste d’erreurs prises en compte dans notre éditeur :
 
@@ -69,7 +69,7 @@ Vous aimeriez savoir à quoi ressemblent vos e-mails pour vos utilisateurs en mo
 
 Lorsque vous êtes prêt pour une dernière vérification, sélectionnez **Tester l'envoi** et envoyez un message test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s'affiche correctement sur une variété d'appareils et de clients de messagerie.
 
-![Exemple d'e-mail à envoyer à des fins de test.]({% image_buster /assets/img_archive/newEmailTest.png %})
+![Exemple d’aperçu d’e-mail à envoyer pour test.]({% image_buster /assets/img_archive/newEmailTest.png %})
 
 Si vous rencontrez des problèmes avec votre modèle ou si vous souhaitez y apporter des modifications, sélectionnez **Modifier l'e-mail** pour revenir à l'éditeur.
 
@@ -103,7 +103,7 @@ Vous pouvez collaborer et commenter les modèles d'e-mail dans l'éditeur par gl
 
 Une fois votre modèle enregistré, les utilisateurs peuvent voir des icônes sur les commentaires non traités. Sélectionnez **Résoudre** pour résoudre ces commentaires.
 
-![Un commentaire de modèle d'e-mail qui se lit comme suit : "Ça m'a l'air bien".]({% image_buster /assets/img/email_templates/template_comment.png %})
+![Un commentaire sur un modèle d'e-mail qui dit "Ça me paraît bien".]({% image_buster /assets/img/email_templates/template_comment.png %})
 
 Pour obtenir des réponses aux questions fréquemment posées sur les modèles d'e-mail, consultez notre [FAQ sur les modèles.]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/)
 
