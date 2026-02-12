@@ -72,8 +72,6 @@ For each docs update:
 For each file that is changed in `_docs`, create a branch with the naming convention: `cursor-<pagename>-update-<ddmmyyyy>`  
 Example: `cursor-liquid_use_cases-update-02112026`  
 
-Cursor handles this automatically and consistently.
-
 ---
 
 ## Step 6: Commit and push changes
@@ -83,6 +81,35 @@ Stage and commit all changes in `_docs` with a meaningful message derived from t
 
 ## Step 7: Generate the PR for each branch
 
-1. Create each PR with the naming conventin: `[SA] update summary`
+Create each PR with the naming conventin: `[SA] update summary`
 Example: `[SA] Add FAQ entry about machine opens vs other opens`
-2. In the description, along with a summary of the update, include the source of the update, including the URLs of the specific Salesforce tickets the changes come from. 
+
+Cursor fills out the PR automatically:
+
+```text
+# Changes
+* [Cursor analyzes code changes and lists them]
+* List of changes to help the reviewer understand the scope
+* List the Salesforce case numbers that were addressed in the update
+
+
+## Step 8: Assign Reviewers Based Code Ownership where possible
+Cursor identifies team members based on the CODEOWNERS file. If no owner is found for that file, assign to @braze-inc/docs-team
+
+
+## Source Code References
+
+| Resource | Path |
+|----------|------|
+| Docs repo | (current repo) |
+| Main product | `../platform` |
+
+
+## Example Prompt
+
+```
+@support-analyzer.mdc Analyze the CSV file in _data/ and draft docs updates.
+Focus on [specific product area] if applicable.
+```
+
+<!-- export from Looker https://braze.looker.com/x/qB0GXtyFV4YjUdsMKFgf85 -->
