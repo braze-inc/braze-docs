@@ -68,6 +68,10 @@ For Snowflake, data sharing happens between a [data provider](https://docs.snowf
 If you delete and recreate a share in the Braze dashboard, you must drop the previously-created database and recreate it using `CREATE DATABASE <name> FROM SHARE <provider_account>.<share_name>` to query the inbound share.
 {% endalert %}
 
+{% alert tip %}
+If you have multiple workspaces sharing data to the same Snowflake account, see the [Snowflake Data Sharing FAQs]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/snowflake/faqs/) for guidance on managing multi-workspace configurations.
+{% endalert %}
+
 ## Usage and visualization
 
 After the data share is provisioned, you will need to create a database from the incoming data share, making all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. However, keep in mind that the shared data is read-only and can only be queried but not modified or deleted in any way.
