@@ -47,13 +47,9 @@ Context steps process users in batches to optimize performance. When users enter
 
 This means:
 
-- **Parallel batch processing:** Multiple batches of 1,000 users are processed simultaneously, allowing large audiences to be handled efficiently.
-- **Sequential processing within batches:** Within each batch, users are processed one after another. If your Context step includes [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call) calls, each user's Connected Content request must complete before the next user in that batch is processed.
-- **Independent batch progression:** Each batch progresses independently. When a batch completes processing, those users advance to the next step immediately, even if other batches are still processing. This means users from different batches may reach subsequent steps at different times.
-
-**Example:** If 3,500 users enter a Context step with Connected Content that takes 650ms per user:
-- Braze creates approximately 4 batches of users (for example, three batches of 1,000 users and one batch of 500 users).
-- Each batch processes users sequentially, so a batch of 1,000 users takes approximately 10–11 minutes (1,000 × 650ms, assuming sequential processing with no overhead).
+**Example**: If 3,500 users enter a Context step with Connected Content that takes 650ms per user:
+- Braze creates 4 batches of users (1,000, 1,000, 1,000, and 500 users in this example).
+- Each batch processes users sequentially, so a batch of 1,000 users takes approximately 10.8 minutes (650 seconds; 1,000 × 650ms).
 - Batches complete at different times, so users trickle into the next step as their batch finishes.
 - The first users may reach the next step several minutes before the last users, depending on batch size and Connected Content response times.
 
@@ -100,6 +96,8 @@ When referencing context variables, always use the format {% raw %}`{{context.${
 ### Context variable filters
 
 You can create filters using context variables in [Audience Paths]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/audience_paths) and [Decision Split]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split) steps. For filter setup, comparison logic, and advanced examples, see [Context variables reference]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/context_variables/#context-variable-filters).
+
+{% multi_lang_include alerts/important_alerts.md alert='time filter types' %}
 
 ## Previewing user paths
 

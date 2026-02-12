@@ -133,8 +133,8 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
-- name: Tinyclues
-  url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
+- name: Splio
+  url: /docs/partners/splio/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
 - name: RevenueCat
@@ -388,4 +388,10 @@ valid_partner_list:
   url: /docs/partners/dots.eco/
 - name: Mailizio
   url: /docs/partners/mailizio/
+- name: OpenAI
+  url: /docs/partners/openai/
+- name: Google Gemini
+  url: /docs/partners/gemini/
+- name: Anthropic
+  url: /docs/partners/anthropic/
 ---
