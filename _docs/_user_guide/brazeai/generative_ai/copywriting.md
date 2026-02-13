@@ -30,7 +30,7 @@ To customize your copy further, you can:
 - **Apply brand guidelines:** After [generating brand guidelines with BrazeAI<sup>TM</sup>]({{site.baseurl}}/user_guide/brazeai/generative_ai/brand_guidelines), you can use them to help generate your copy.
 - **Choose a tone:** Each tone will generate copy in a different style. Choose the tone that best matches your brand voice.
   
-Selecting a tone adds a style instruction to the prompt sent to OpenAI, so the exact output can vary by input, channel length, brand guidelines, and the model. 
+  Selecting a tone adds a style instruction to the prompt sent to OpenAI, so the exact output can vary by input, channel length, brand guidelines, and the model. 
   
   Here's what each tone is intended to do by default:
   - **Formal:** More professional and polished wording. Full sentences, more courteous language, minimal slang.
