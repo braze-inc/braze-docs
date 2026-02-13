@@ -61,7 +61,7 @@ For Canvases with an action trigger like "change in custom attribute value," Bra
 
 Test users enter the preview even if they aren't eligible in real life. If they aren't eligible, you can see why they haven't met the criteria. When a test user enters the preview, we assume the test user has met the target audience criteria and performed the action trigger criteria. For example, for a Canvas that uses custom events in the entry criteria, the test user is assumed to have performed the custom event as expected in the entry criteria. However, if the same custom event is used elsewhere in the Canvas (like in the exit criteria), consider how this might impact your user path.
 
-Events, API triggers, custom attributes, and Canvas entry properties are not applied based on the Canvas entry. They won’t affect the outcomes of subsequent steps. The test run simulates the user journey without applying these elements to change the actual user profile or the flow of the Canvas.
+Events, API triggers, custom attributes, and Canvas entry properties that are assumed to let a test user enter the Canvas are not written to the actual user profile and do not persist beyond the test run. Within the preview, only changes made by supported Canvas steps and actions a test user takes in earlier steps can affect subsequent steps in the flow.
 
 ### Consideration
 
