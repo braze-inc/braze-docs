@@ -466,7 +466,7 @@ Update `YOUR-APP-IDENTIFIER-API-KEY` and `YOUR-BRAZE-ENDPOINT` with the correct 
 
 ### Logging
 
-For a centralized overview across all platforms, see [Verbose logging]({{site.baseurl}}/developer_guide/verbose_logging). To learn how to interpret log output, see [Reading verbose logs]({{site.baseurl}}/developer_guide/verbose_log_reading).
+For a centralized overview across all platforms, see [Verbose logging]({{site.baseurl}}/developer_guide/sdk_integration/verbose_logging). To learn how to interpret log output, see [Reading verbose logs]({{site.baseurl}}/developer_guide/sdk_integration/reading_verbose_logs).
 
 #### Log levels
 
