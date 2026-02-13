@@ -13,7 +13,7 @@ Before you start, make sure you've [enabled verbose logging]({{site.baseurl}}/de
 
 ## Sessions
 
-Sessions are the foundation of Braze analytics and message delivery. Many messaging features—including in-app messages and Content Cards—depend on a valid session starting before they can function. If sessions aren't logging correctly, investigate this first.
+Sessions are the foundation of Braze analytics and message delivery. Many messaging features—including in-app messages and Content Cards—depend on a valid session starting before they can function. If sessions aren't logging correctly, investigate this first. For more information, see [Track sessions]({{site.baseurl}}/developer_guide/analytics/tracking_sessions).
 
 ### Key log entries
 
