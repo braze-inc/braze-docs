@@ -118,7 +118,7 @@ Registering for Firebase Cloud Messaging token using sender id: <SENDER_ID>
 
 Verify the following:
 
-- `com_appboy_firebase_cloud_messaging_registration_enabled` is `true`.
+- `com_braze_firebase_cloud_messaging_registration_enabled` is `true`.
 - The FCM sender ID matches your Firebase project.
 
 A common error is `SENDER_ID_MISMATCH`, which means the configured sender ID doesn't match your Firebase project.
