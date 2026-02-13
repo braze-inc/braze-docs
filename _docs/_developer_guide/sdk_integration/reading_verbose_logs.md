@@ -177,7 +177,7 @@ Opening '<URL>':
 {% tab Android %}
 
 ```
-AppboyFirebaseMessagingService: Got Remote Message from FCM
+BrazeFirebaseMessagingService: Got Remote Message from FCM
 ```
 
 Followed by the push payload and display logs. For deep links, look for the Deep Link Delegate or `UriAction` entries.
