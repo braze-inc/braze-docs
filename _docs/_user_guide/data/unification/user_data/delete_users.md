@@ -77,7 +77,7 @@ Braze sends a confirmation email with the number of profiles pending deletion.
 
 To continue with the deletion, log in to Braze and confirm the deletion request.
 
-If you don't confirm within the time frame shown in the email, the deletion request expires and won't proceed.
+If you don't confirm within the time frame shown in the email, the deletion request expires and doesn't proceed.
 
 ## Canceling segment deletions {#cancel}
 
