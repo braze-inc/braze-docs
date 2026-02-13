@@ -30,13 +30,91 @@ Content Card properties such as `title`, `cardDescription`, `imageUrl`, etc., ar
 {% tabs %}
 {% tab web %}
 
-Braze’s default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause Content Cards to appear 800 px wide:
+The default styles for Braze Content Cards are defined in CSS within the Braze SDK. By overriding selected styles in your application, you can customize the standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following example override causes Content Cards to appear 800 px wide:
 
 ``` css
 body .ab-feed {
   width: 800px;
 }
 ```
+
+The following additional Web styling examples are from the [Braze Content Cards demo](https://github.com/sornocure/braze-content-card-demo/blob/main/css/style.css):
+
+```css
+/* Card image treatment */
+.img-fluid {
+  width: 100%;
+  max-width: 275px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Card/container layout */
+.island {
+  padding: 1rem;
+  margin: 12px;
+  background-color: #fff;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
+  border-radius: 3px;
+  overflow: auto; 
+}
+
+/* Utility classes */
+.hidden {
+  opacity: 0;
+}
+
+.confirm {
+  color: green;
+}
+
+/* Form/input styling used by the demo */
+.inputfield {
+  font-family: "BerninaSans", "Open Sans", sans-serif;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  height: 32px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 11px;
+  padding-right: 11px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 32px;
+  line-height: -moz-block-height;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+  color: #454646; }
+```
+
+Common selectors you can target include:
+
+- `.ab-feed` (feed container)
+- `.ab-unread-indicator` (unread state indicator)
+- `.ab-pinned-indicator` (pinned icon container)
+
+{% alert note %}
+The CSS examples on this page are not exhaustive. Additional styling options and [selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors) exist beyond the examples shown here.<br><br>
+You can apply common CSS patterns (for example, typography, spacing, borders, shadows, transitions, responsive media queries, and theme-based styling) to customize the default feed. For examples of reusable patterns, see the [MDN CSS layout cookbook](https://developer.mozilla.org/en-US/docs/Web/CSS/Layout_cookbook).
+{% endalert %}
+
+For a public styling example, see the [Braze Content Cards demo app CSS](https://github.com/sornocure/braze-content-card-demo/blob/main/css/style.css).
 
 {% endtab %}
 {% tab android %}
