@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Nexla
 
-> A [Nexla](https://www.nexla.com) é líder em operações de dados unificados e é uma das principais fornecedoras da Gartner em 2021. A plataforma Nexla fornece ferramentas para a criação de fluxos de dados escaláveis, proporcionando operações de dados governadas, colaboração e agilidade para equipes de negócios e de dados. As equipes que trabalham com dados obtêm uma experiência unificada com pouco ou nenhum código para integrar, transformar, provisionar e monitorar dados para qualquer caso de uso. 
+> A [Nexla](https://www.nexla.com) é líder em operações de dados unificados e é uma das principais fornecedoras da Gartner em 2021. A plataforma Nexla fornece ferramentas para a criação de fluxos de dados escaláveis, proporcionando operações de dados governadas, colaboração e agilidade para as equipes de negócios e de dados. As equipes que trabalham com dados obtêm uma experiência unificada com pouco ou nenhum código para integrar, transformar, provisionar e monitorar dados para qualquer caso de uso. 
 
 A integração Braze e Nexla permite que os clientes que usam o [Currents]({{site.baseurl}}/user_guide/data/braze_currents/setting_up_currents/) aproveitem o Nexla para extrair, transformar e carregar dados do data lake em outros locais em um formato personalizado, tornando os dados facilmente acessíveis em todo o seu ecossistema.
 
